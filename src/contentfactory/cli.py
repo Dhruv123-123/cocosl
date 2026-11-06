@@ -212,6 +212,16 @@ def cmd_insights(args):
     _print(report(f.db, brand=args.brand, days=args.days))
 
 
+def cmd_import(args):
+    f = _factory(args)
+    items = json.loads(Path(args.file).read_text())
+    for item in items[: args.limit or None]:
+        pid = f.import_script(args.brand, item["script"], item["format"], item.get("pillar", ""),
+                              item.get("idea_angle", ""), render=not args.no_render)
+        post = f.db.get("posts", pid)
+        print(f"post #{pid} [{post['format']}/{post['status']}] {post['title']}")
+
+
 def cmd_niche(args):
     from .niche import score_niche
     for n in args.niches:
@@ -343,6 +353,13 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--days", type=int, default=30)
     s.add_argument("--rescore", action="store_true", help="feed results back into idea scores")
     s.set_defaults(func=cmd_insights)
+
+    s = sub.add_parser("import", help="load ready-written scripts (JSON list) as posts for review")
+    s.add_argument("file")
+    s.add_argument("--brand", required=True)
+    s.add_argument("--limit", type=int, default=0)
+    s.add_argument("--no-render", action="store_true")
+    s.set_defaults(func=cmd_import)
 
     s = sub.add_parser("niche", help="score niche candidates (ad value, demand, risk, saturation)")
     s.add_argument("niches", nargs="+")

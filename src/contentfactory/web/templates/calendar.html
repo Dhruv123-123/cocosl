@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block title %}Calendar{% endblock %}
+{% block content %}
+<div class="page-head">
+  <div><h1>Calendar</h1><p class="muted">Next 14 days · times in {{ tz }}{% if due %} · <strong style="color:var(--warn)">{{ due }} due now</strong>{% endif %}</p></div>
+  <form method="post" action="/publish/due" class="inline">
+    <button class="btn btn-primary" type="submit"
+      data-confirm="{{ 'Record due posts as dry runs?' if dry_run else 'Publish all due posts to the live platforms now?' }}">
+      {{ 'Run due (dry run)' if dry_run else 'Publish due now' }}</button>
+  </form>
+</div>
+
+{% if approved %}
+<div class="card">
+  <div class="card-head"><h2>Approved, not scheduled</h2></div>
+  <ul class="list">
+    {% for p in approved %}
+    <li><span class="grow"><a href="/posts/{{ p.id }}">{{ p.title or 'Post #' ~ p.id }}</a> <span class="small muted">{{ p.brand }} · {{ p.format }}</span></span>
+      <form class="inline" method="post" action="/posts/{{ p.id }}/schedule"><button class="btn btn-sm btn-primary" type="submit">Schedule next slot</button></form></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+<div class="card section">
+  {% if days %}
+  {% for label, pubs in days %}
+  <section class="day">
+    <h3>{{ label }}</h3>
+    {% for p in pubs %}
+    <div class="slot">
+      <span class="time {{ 'due' if is_due(p) }}">{{ p.scheduled_at|localtime(tz, '%H:%M') }}</span>
+      <span style="min-width:0"><a href="/posts/{{ p.post_id }}">{{ p.title or 'Post #' ~ p.post_id }}</a><br>
+        <span class="small muted">{{ p.brand }} · {{ p.format }}{% if p.account %} · {{ p.account }}{% endif %}{% if p.error %} · <span style="color:var(--block)">{{ p.error|truncate(80) }}</span>{% endif %}</span></span>
+      <span class="pill-row">{{ m.platform(p.platform) }}{{ m.status(p.status) }}</span>
+    </div>
+    {% endfor %}
+  </section>
+  {% endfor %}
+  {% else %}
+  <div class="empty">Nothing on the calendar for the next two weeks.</div>
+  {% endif %}
+</div>
+{% endblock %}

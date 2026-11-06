@@ -1,0 +1,1887 @@
+[
+  {
+    "format": "short",
+    "pillar": "budgeting systems that actually stick",
+    "idea_angle": "Split checking into a 'bills' account and a 'spending' account so fixed costs can never be accidentally spent.",
+    "script": {
+      "title": "The two-account trick that stops overdrafts",
+      "hook": "If you keep checking your balance before buying lunch, your accounts are set up wrong.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "If you keep checking your balance before buying lunch, your accounts are set up wrong.",
+          "on_screen_text": "Checking your balance before lunch?",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes nervously peeking at a giant bank balance meter next to a sandwich. No text, no logos, no real people."
+        },
+        {
+          "heading": "The problem",
+          "narration": "One checking account mixes rent money with fun money, so every purchase feels like a guess.",
+          "on_screen_text": "Rent money and fun money in one pile",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single jar overflowing with mixed coins labeled only by color, rent house icon and coffee cup icon tangled together. No text, no logos, no real people."
+        },
+        {
+          "heading": "The fix",
+          "narration": "Open a second, fee-free checking account. Account one is Bills. Account two is Spending.",
+          "on_screen_text": "Account 1: Bills. Account 2: Spending.",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two tidy jars side by side, one with a house icon and one with a shopping bag icon, the small round green piggy bank mascot with big eyes between them. No text, no logos, no real people."
+        },
+        {
+          "heading": "How to fund it",
+          "narration": "Add up your fixed monthly bills. Say rent, phone, insurance and subscriptions total $1,450. Split that across your paychecks and auto-transfer it into Bills every payday.",
+          "on_screen_text": "Fixed bills ÷ paychecks = auto-transfer",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with two highlighted paydays and arrows carrying coins into the house jar. No text, no logos, no real people."
+        },
+        {
+          "heading": "Spend freely",
+          "narration": "Whatever lands in Spending is yours for groceries, gas and life. No mental math, no surprise overdraft.",
+          "on_screen_text": "Whatever's in Spending is safe to spend",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes relaxed in a cafe chair holding a coffee, shopping-bag jar half full. No text, no logos, no real people."
+        },
+        {
+          "heading": "Buffer",
+          "narration": "Keep one extra week of bills sitting in Bills as a cushion for timing gaps.",
+          "on_screen_text": "Add a one-week cushion",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small cushion pillow under the house jar. No text, no logos, no real people."
+        },
+        {
+          "heading": "Takeaway",
+          "narration": "Two accounts, one automatic transfer, and you stop budgeting in your head.",
+          "on_screen_text": "Two accounts. One transfer.",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes giving a thumbs up beside the two jars connected by an arrow. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Follow for one money move a week.",
+      "caption": "Mixing rent money and fun money in one checking account is why every purchase feels risky.\n\nFix: a Bills account (auto-funded every payday with your fixed costs ÷ number of paychecks) and a Spending account for everything else. Keep one week of bills as a cushion. Use a no-fee, no-minimum account for the second one.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "budgetingtips",
+        "checkingaccount",
+        "overdraftfees",
+        "moneysystems",
+        "paydayroutine",
+        "personalfinance20s",
+        "moneymadesimple"
+      ],
+      "description": "A two-account checking setup that keeps fixed bills separate from spending money, with a worked example and a one-week buffer.",
+      "thumbnail_text": "Stop overdrafting",
+      "sources": [
+        "https://www.consumerfinance.gov/consumer-tools/bank-accounts/",
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-overdraft-and-how-do-overdraft-fees-work-en-1047/"
+      ],
+      "claims_to_verify": [
+        "Example bills total of $1,450 is illustrative, not an average",
+        "Many banks and credit unions offer checking with no monthly fee or minimum balance (confirm before recommending)"
+      ]
+    }
+  },
+  {
+    "format": "short",
+    "pillar": "budgeting systems that actually stick",
+    "idea_angle": "Monthly category budgets break in week three; convert flexible spending into one weekly number instead.",
+    "script": {
+      "title": "Budget weekly, not monthly",
+      "hook": "Your budget doesn't fail in month one. It fails in week three.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "Your budget doesn't fail in month one. It fails in week three.",
+          "on_screen_text": "Budgets die in week three",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes looking at a calendar with week three circled and wilting. No text, no logos, no real people."
+        },
+        {
+          "heading": "Why",
+          "narration": "Monthly categories feel huge on the first and empty by the twentieth, and you can't tell when you're overspending until it's too late.",
+          "on_screen_text": "Monthly feels rich, then broke",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tall stack of coins on day 1 shrinking to a single coin by day 20 on a calendar strip. No text, no logos, no real people."
+        },
+        {
+          "heading": "The switch",
+          "narration": "Take everything flexible: groceries, eating out, gas, shopping. Say that's $1,000 a month.",
+          "on_screen_text": "Total your flexible spending",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. grocery bag, fuel can, takeout box and shopping bag icons flowing into one basket. No text, no logos, no real people."
+        },
+        {
+          "heading": "The math",
+          "narration": "Multiply by twelve, divide by fifty-two. That's about $230 a week.",
+          "on_screen_text": "$1,000 × 12 ÷ 52 ≈ $230/week",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a basket of coins split into seven small even piles on a weekly planner. No text, no logos, no real people."
+        },
+        {
+          "heading": "Run it",
+          "narration": "Every Monday, move $230 to your spending account or card. When it's gone, the week is done. Leftovers roll forward.",
+          "on_screen_text": "Reload every Monday",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes refilling a small wallet on a Monday sunrise. No text, no logos, no real people."
+        },
+        {
+          "heading": "Takeaway",
+          "narration": "One number, checked once a week, beats twelve categories you never look at.",
+          "on_screen_text": "One weekly number wins",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a single large coin proudly. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Follow for one money move a week.",
+      "caption": "Monthly budgets look fine on the 1st and fall apart by the 20th.\n\nAdd up flexible spending (groceries, eating out, gas, shopping), multiply by 12, divide by 52. $1,000/month ≈ $230/week. Reload it every Monday; leftovers roll forward.\n\nWant this set up for you? The 20-Minute Budget template (Notion + Sheets) is in the link in bio.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "weeklybudget",
+        "budgetingforbeginners",
+        "spendingplan",
+        "moneyhabits",
+        "budgettemplate",
+        "moneymadesimple"
+      ],
+      "description": "Convert monthly flexible spending into a single weekly number: $1,000 × 12 ÷ 52 ≈ $230 per week.",
+      "thumbnail_text": "Budget weekly instead",
+      "sources": [
+        "https://www.consumerfinance.gov/consumer-tools/money-as-you-grow/",
+        "https://www.consumerfinance.gov/about-us/blog/budgeting-how-to-create-a-budget-and-stick-with-it/"
+      ],
+      "claims_to_verify": [
+        "$1,000 × 12 ÷ 52 = $230.77 (rounded to $230)"
+      ]
+    }
+  },
+  {
+    "format": "short",
+    "pillar": "first-time investing basics (index funds, retirement accounts)",
+    "idea_angle": "Fear of locking money away stops people from opening a Roth IRA; contributions (not earnings) can be withdrawn.",
+    "script": {
+      "title": "Roth IRA money isn't locked away",
+      "hook": "The reason you haven't opened a Roth IRA is probably wrong.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "The reason you haven't opened a Roth IRA is probably wrong.",
+          "on_screen_text": "Scared to lock money away?",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes hesitating in front of a vault door with a padlock. No text, no logos, no real people."
+        },
+        {
+          "heading": "The myth",
+          "narration": "Most people think retirement money is stuck until you're sixty.",
+          "on_screen_text": "\"It's stuck until 60\"",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an hourglass with a tiny piggy bank trapped inside, cartoonish and soft. No text, no logos, no real people."
+        },
+        {
+          "heading": "The rule",
+          "narration": "With a Roth IRA, the money you contribute can come back out at any time, without tax or penalty.",
+          "on_screen_text": "Contributions can come back out",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes lifting coins back out of an open vault door. No text, no logos, no real people."
+        },
+        {
+          "heading": "The catch",
+          "narration": "That's contributions only. Pull out the growth early and you can owe income tax plus a ten percent penalty, with some exceptions.",
+          "on_screen_text": "Earnings have stricter rules",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a plant growing out of a pile of coins with a gentle caution sign shape (no words). No text, no logos, no real people."
+        },
+        {
+          "heading": "Example",
+          "narration": "Put in $3,000, it grows to $3,400. You could take back the $3,000. The $400 should stay.",
+          "on_screen_text": "Put in $3,000 → can take $3,000",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two stacks of coins, a large one sliding out of a vault and a small sprout stack staying in. No text, no logos, no real people."
+        },
+        {
+          "heading": "Takeaway",
+          "narration": "It's not an emergency fund, but the door isn't welded shut. You need earned income, and there are income limits, so check irs.gov.",
+          "on_screen_text": "Not locked. Just better left alone.",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes closing the vault door gently and walking away calmly. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Follow for one money move a week.",
+      "caption": "Roth IRA contributions (the dollars you put in) can be withdrawn anytime without tax or penalty. Earnings are different: take them out early and you may owe income tax plus a 10% penalty, unless an exception applies.\n\nThat makes starting less scary, but it still shouldn't double as your emergency fund. Eligibility needs earned income and has income limits.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "rothira",
+        "retirementsavings",
+        "investingforbeginners",
+        "ira",
+        "taxadvantaged",
+        "moneyin20s",
+        "moneymadesimple"
+      ],
+      "description": "Roth IRA contributions can be withdrawn tax- and penalty-free; earnings follow stricter rules (age 59½ and the five-year rule, with exceptions).",
+      "thumbnail_text": "Roth money isn't stuck",
+      "sources": [
+        "https://www.irs.gov/retirement-plans/roth-iras",
+        "https://www.irs.gov/publications/p590b",
+        "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits"
+      ],
+      "claims_to_verify": [
+        "Roth IRA regular contributions can be withdrawn at any time tax- and penalty-free (IRS Pub 590-B ordering rules)",
+        "Early withdrawal of Roth earnings can be subject to income tax plus 10% additional tax, with exceptions (age 59½, five-year rule)",
+        "Roth IRA eligibility requires taxable compensation and is subject to MAGI income limits"
+      ]
+    }
+  },
+  {
+    "format": "short",
+    "pillar": "first-time investing basics (index funds, retirement accounts)",
+    "idea_angle": "Not contributing enough to get the full 401(k) match is turning down part of your pay; worked example on a $50k salary.",
+    "script": {
+      "title": "The raise you're ignoring: your 401(k) match",
+      "hook": "There's a good chance part of your salary is sitting unclaimed.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "There's a good chance part of your salary is sitting unclaimed.",
+          "on_screen_text": "Unclaimed salary?",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes finding an envelope of coins tucked behind a desk. No text, no logos, no real people."
+        },
+        {
+          "heading": "The setup",
+          "narration": "Lots of employers match 401(k) contributions. A common formula is fifty percent of what you put in, up to six percent of your pay.",
+          "on_screen_text": "Common: 50% match up to 6%",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two hands of different shapes (abstract, not human faces) each dropping coins into one jar. No text, no logos, no real people."
+        },
+        {
+          "heading": "The math",
+          "narration": "On a $50,000 salary, you contribute six percent: $3,000 a year. Your employer adds $1,500.",
+          "on_screen_text": "You: $3,000. Employer: +$1,500",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big stack and a half-size stack of coins merging into one jar. No text, no logos, no real people."
+        },
+        {
+          "heading": "The mistake",
+          "narration": "Contribute only three percent and you get just $750 of match. The other $750 is gone for that year.",
+          "on_screen_text": "Contribute 3% → lose $750",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes watching coins float away like balloons. No text, no logos, no real people."
+        },
+        {
+          "heading": "Check two things",
+          "narration": "Find your plan's exact match formula and its vesting schedule, which decides when the match is fully yours.",
+          "on_screen_text": "Check: match formula + vesting",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a checklist clipboard with two big check circles. No text, no logos, no real people."
+        },
+        {
+          "heading": "Takeaway",
+          "narration": "Log into your benefits portal this week and set your contribution to at least the full match.",
+          "on_screen_text": "Get the full match first",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes pressing a large green button on a laptop. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Follow for one money move a week.",
+      "caption": "Common 401(k) match: 50% of what you contribute, up to 6% of pay. On $50k, contributing 6% ($3,000) gets you $1,500 from your employer. Contributing 3% gets $750, and the rest isn't added for that year.\n\nYour plan's formula may differ, so check your plan documents and the vesting schedule.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "401k",
+        "employermatch",
+        "retirementplanning",
+        "firstjob",
+        "benefits",
+        "investingforbeginners",
+        "moneymadesimple"
+      ],
+      "description": "Worked example of a 50%-up-to-6% employer match on a $50,000 salary, plus why vesting matters.",
+      "thumbnail_text": "Free 401(k) money",
+      "sources": [
+        "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-vesting",
+        "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/publications/what-you-should-know-about-your-retirement-plan"
+      ],
+      "claims_to_verify": [
+        "50% match up to 6% of pay is a common formula (illustrative; plans vary)",
+        "$50,000 × 6% = $3,000; 50% match = $1,500; at 3% contribution match = $750",
+        "Employer contributions may be subject to a vesting schedule; employee contributions are always 100% vested"
+      ]
+    }
+  },
+  {
+    "format": "short",
+    "pillar": "first-time investing basics (index funds, retirement accounts)",
+    "idea_angle": "Same index, different price tag: a 0.03% vs 1% expense ratio turns $10,000 into about $75k vs $57k over 30 years.",
+    "script": {
+      "title": "The fee that eats $18,000",
+      "hook": "Two funds can own the exact same stocks and leave you with very different money.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "Two funds can own the exact same stocks and leave you with very different money.",
+          "on_screen_text": "Same stocks. Different result.",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two identical baskets of fruit, one with a small mouse quietly nibbling. No text, no logos, no real people."
+        },
+        {
+          "heading": "Expense ratio",
+          "narration": "The difference is the expense ratio: the yearly fee a fund takes as a percentage of your balance.",
+          "on_screen_text": "Expense ratio = yearly fee",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tiny percent-sign-shaped creature carrying away a coin each year (no letters). No text, no logos, no real people."
+        },
+        {
+          "heading": "Example",
+          "narration": "Invest $10,000 for thirty years. Assume seven percent a year before fees, as a hypothetical.",
+          "on_screen_text": "$10,000 · 30 years · 7% hypothetical",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes planting a coin seed in a garden plot. No text, no logos, no real people."
+        },
+        {
+          "heading": "Cheap fund",
+          "narration": "At a 0.03 percent fee, you end up with about $75,000.",
+          "on_screen_text": "0.03% fee → ~$75,000",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tall healthy coin tree. No text, no logos, no real people."
+        },
+        {
+          "heading": "Pricey fund",
+          "narration": "At a one percent fee, about $57,000. Roughly $18,000 less for owning the same thing.",
+          "on_screen_text": "1% fee → ~$57,000",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shorter coin tree next to the tall one, with a gap between their heights. No text, no logos, no real people."
+        },
+        {
+          "heading": "Takeaway",
+          "narration": "Before you buy any fund, search its name plus 'expense ratio'. For a broad index fund, low single-digit hundredths of a percent is common.",
+          "on_screen_text": "Check the expense ratio first",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes using a magnifying glass on a fund fact sheet with only shapes and bars. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Follow for one money move a week.",
+      "caption": "Expense ratios look tiny, but they compound. Hypothetical: $10,000 for 30 years at 7%/yr before fees.\n0.03% fee → about $75,000\n1% fee → about $57,000\n\nReturns aren't promised and real markets don't go up 7% every year, but the fee drag is real either way. Check the fund's expense ratio on its fact sheet before you buy.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "expenseratio",
+        "indexfunds",
+        "investingfees",
+        "investingforbeginners",
+        "mutualfunds",
+        "etfs",
+        "moneymadesimple"
+      ],
+      "description": "How a 0.03% vs 1% expense ratio changes a hypothetical $10,000 over 30 years (about $75k vs $57k at 7% gross). Illustration only.",
+      "thumbnail_text": "1% costs $18,000",
+      "sources": [
+        "https://www.investor.gov/financial-tools-calculators/calculators/mutual-fund-analyzer",
+        "https://www.investor.gov/introduction-investing/investing-basics/glossary/expense-ratio",
+        "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"
+      ],
+      "claims_to_verify": [
+        "$10,000 × (1.0697)^30 ≈ $75,485; $10,000 × (1.06)^30 ≈ $57,435 (simple net-of-fee approximation)",
+        "Broad index funds commonly have expense ratios of a few hundredths of a percent (check current fund fact sheets)",
+        "7% annual return is a hypothetical assumption, not a forecast"
+      ]
+    }
+  },
+  {
+    "format": "short",
+    "pillar": "credit scores and debt payoff",
+    "idea_angle": "Paying in full on the due date can still report high utilization because issuers usually report the statement balance.",
+    "script": {
+      "title": "Paid in full, score still dropped?",
+      "hook": "You paid your card in full and your credit score still dipped. Here's why.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "You paid your card in full and your credit score still dipped. Here's why.",
+          "on_screen_text": "Paid in full. Score dipped?",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes confused, looking at a gauge needle that slipped slightly. No text, no logos, no real people."
+        },
+        {
+          "heading": "Two dates",
+          "narration": "Your card has two dates: the statement closing date and the due date, usually a few weeks apart.",
+          "on_screen_text": "Statement date ≠ due date",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with two different days circled in green and mustard. No text, no logos, no real people."
+        },
+        {
+          "heading": "What's reported",
+          "narration": "Most issuers report the balance on your statement to the credit bureaus, even if you pay it off later.",
+          "on_screen_text": "The statement balance gets reported",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an envelope flying from a card-shaped building to three abstract tower shapes. No text, no logos, no real people."
+        },
+        {
+          "heading": "Example",
+          "narration": "Spend $1,800 on a $2,000 limit and that statement shows ninety percent utilization, even though you'll pay it in full.",
+          "on_screen_text": "$1,800 / $2,000 = 90% used",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fuel-gauge style meter almost full. No text, no logos, no real people."
+        },
+        {
+          "heading": "The fix",
+          "narration": "Make a payment a few days before the statement closes, so a smaller balance gets reported. Then pay the rest by the due date.",
+          "on_screen_text": "Pay before the statement closes",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes dropping coins into a card slot before a calendar page flips. No text, no logos, no real people."
+        },
+        {
+          "heading": "Takeaway",
+          "narration": "Utilization only reflects recent balances, so this is fixable fast. Never miss the due date, though. That's the part that really hurts.",
+          "on_screen_text": "Never miss the due date",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes smiling beside a meter with a low reading. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Follow for one money move a week.",
+      "caption": "Card issuers usually report your statement balance to the bureaus, not what you owe after paying. Spend $1,800 on a $2,000 limit and you can show 90% utilization even if you pay in full.\n\nFix: pay down before the statement closing date, then pay the rest by the due date. Utilization is based on recent balances, so it recovers quickly. Paying on time matters most.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "creditscore",
+        "creditutilization",
+        "creditcardtips",
+        "buildcredit",
+        "creditscoretips",
+        "moneymadesimple"
+      ],
+      "description": "Why your credit score can dip even when you pay in full: issuers usually report the statement balance. Pay before the statement date to lower reported utilization.",
+      "thumbnail_text": "Pay BEFORE the statement",
+      "sources": [
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-utilization-rate-en-1997/",
+        "https://www.myfico.com/credit-education/credit-scores/amount-of-debt",
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-statement-balance-en-1966/"
+      ],
+      "claims_to_verify": [
+        "Most card issuers report the statement balance to credit bureaus around the statement closing date (practice varies by issuer)",
+        "Credit utilization is a large factor in common scoring models and reflects recent reported balances",
+        "Payment history is the most heavily weighted FICO score factor"
+      ]
+    }
+  },
+  {
+    "format": "short",
+    "pillar": "credit scores and debt payoff",
+    "idea_angle": "A credit freeze is free at all three bureaus, doesn't hurt your score, and takes about 15 minutes; how to thaw it when you apply.",
+    "script": {
+      "title": "Freeze your credit for free tonight",
+      "hook": "Anyone with your Social Security number can try to open credit in your name. You can make that much harder for free.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "Anyone with your Social Security number can try to open credit in your name. You can make that much harder for free.",
+          "on_screen_text": "Block fake accounts for $0",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding an ice cube shaped like a padlock. No text, no logos, no real people."
+        },
+        {
+          "heading": "What it is",
+          "narration": "A credit freeze stops lenders from pulling your credit report, so most new accounts can't be opened.",
+          "on_screen_text": "Freeze = no new credit pulls",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a frosted file cabinet with a snowflake on the drawer. No text, no logos, no real people."
+        },
+        {
+          "heading": "Cost",
+          "narration": "Since 2018, federal law makes freezing and unfreezing free at Equifax, Experian and TransUnion.",
+          "on_screen_text": "Free at all 3 bureaus",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three simple building shapes each with a small snowflake on top. No text, no logos, no real people."
+        },
+        {
+          "heading": "Score",
+          "narration": "It doesn't affect your credit score, and your existing cards keep working.",
+          "on_screen_text": "Your score isn't affected",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes swiping a plain card at a register while a snowflake floats nearby. No text, no logos, no real people."
+        },
+        {
+          "heading": "Applying later",
+          "narration": "Applying for an apartment or card? Lift it temporarily online. Requests online or by phone have to be honored within an hour.",
+          "on_screen_text": "Thaw it when you apply",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a padlock-shaped ice cube melting slightly under a small sun. No text, no logos, no real people."
+        },
+        {
+          "heading": "Takeaway",
+          "narration": "Make an account with each bureau, freeze, and save the logins somewhere safe.",
+          "on_screen_text": "3 accounts. 3 freezes. Done.",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes checking three boxes on a clipboard. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Follow for one money move a week.",
+      "caption": "A credit freeze is free at Equifax, Experian and TransUnion, doesn't change your score, and doesn't affect cards you already have. It makes it much harder for someone to open new credit in your name.\n\nFreeze at all three. When you need credit (apartment, loan, new card), lift it temporarily online, then refreeze.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "creditfreeze",
+        "identitytheft",
+        "creditreport",
+        "fraudprevention",
+        "moneysafety",
+        "financialliteracy",
+        "moneymadesimple"
+      ],
+      "description": "How to freeze your credit at all three bureaus for free, why it doesn't hurt your score, and how to lift it when applying for credit.",
+      "thumbnail_text": "Freeze your credit",
+      "sources": [
+        "https://consumer.ftc.gov/articles/what-know-about-credit-freezes-fraud-alerts",
+        "https://www.consumerfinance.gov/ask-cfpb/what-does-it-mean-to-put-a-security-freeze-on-my-credit-report-en-1341/",
+        "https://www.usa.gov/credit-freeze"
+      ],
+      "claims_to_verify": [
+        "Credit freezes and lifts are free at all three nationwide bureaus under federal law effective September 2018",
+        "A freeze does not affect credit scores and does not block existing creditors",
+        "Bureaus must lift a freeze within one hour for online or phone requests"
+      ]
+    }
+  },
+  {
+    "format": "short",
+    "pillar": "credit scores and debt payoff",
+    "idea_angle": "Minimum-ish payments on a $3,000 card at 22% APR: $60/month takes 11+ years and $5,200 interest; $150/month takes ~2 years and ~$770.",
+    "script": {
+      "title": "$60 vs $150 on a $3,000 card",
+      "hook": "Paying $60 a month on a $3,000 card balance costs you more in interest than the balance itself.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "Paying $60 a month on a $3,000 card balance costs you more in interest than the balance itself.",
+          "on_screen_text": "$3,000 card. $60 a month.",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes carrying a heavy backpack of coins up a long hill. No text, no logos, no real people."
+        },
+        {
+          "heading": "The setup",
+          "narration": "Say the card charges twenty-two percent APR, and you stop using it.",
+          "on_screen_text": "22% APR · no new charges",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a credit card shape put away in a drawer. No text, no logos, no real people."
+        },
+        {
+          "heading": "$60 a month",
+          "narration": "At $60 a month, it takes about 137 months, over eleven years, and roughly $5,200 in interest.",
+          "on_screen_text": "$60/mo → 11+ years, ~$5,200 interest",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a very long winding road with tiny mile markers. No text, no logos, no real people."
+        },
+        {
+          "heading": "$150 a month",
+          "narration": "At $150 a month: about 26 months and roughly $770 in interest.",
+          "on_screen_text": "$150/mo → ~2 years, ~$770",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short straight road ending at a finish flag. No text, no logos, no real people."
+        },
+        {
+          "heading": "Where to find it",
+          "narration": "Your statement has a minimum payment warning box showing how long the minimum takes. Read it once. It's motivating.",
+          "on_screen_text": "Read your statement's warning box",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes reading a document with a highlighted box shape (no text). No text, no logos, no real people."
+        },
+        {
+          "heading": "Takeaway",
+          "narration": "Pick a fixed payment you can sustain, automate it, and add to it whenever you can.",
+          "on_screen_text": "Fixed payment. Automated.",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes setting a gear-shaped automation dial. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Follow for one money move a week.",
+      "caption": "$3,000 card balance at 22% APR, no new charges:\n$60/month → ~137 months, ~$5,200 interest\n$150/month → ~26 months, ~$770 interest\n\nYour statement includes a minimum payment warning showing how long minimums take. Choose a fixed amount you can actually keep up, automate it, and increase it when you can.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "creditcarddebt",
+        "debtpayoff",
+        "minimumpayment",
+        "apr",
+        "debtfree",
+        "personalfinancetips",
+        "moneymadesimple"
+      ],
+      "description": "Worked example: a $3,000 credit card balance at 22% APR paid at $60/month vs $150/month.",
+      "thumbnail_text": "$5,200 vs $770",
+      "sources": [
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-minimum-payment-on-a-credit-card-en-50/",
+        "https://www.consumerfinance.gov/consumer-tools/credit-cards/",
+        "https://www.federalreserve.gov/releases/g19/current/default.htm"
+      ],
+      "claims_to_verify": [
+        "Amortization: $3,000 at 22% APR (monthly compounding) paid $60/mo ≈ 137 months and ≈ $5,207 interest; $150/mo ≈ 26 months and ≈ $771 interest",
+        "22% APR is a realistic card rate (check current Fed G.19 average)",
+        "Credit card statements must include a minimum payment warning showing payoff time (CARD Act)"
+      ]
+    }
+  },
+  {
+    "format": "short",
+    "pillar": "money apps and tools, honestly compared",
+    "idea_angle": "What 'FDIC insured' on a high-yield savings app actually covers, and the fintech-vs-bank catch.",
+    "script": {
+      "title": "Is your savings app actually insured?",
+      "hook": "That savings app paying a nice rate might not be a bank.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "That savings app paying a nice rate might not be a bank.",
+          "on_screen_text": "Is your savings app a bank?",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes squinting at a phone screen that shows only shapes and a coin icon. No text, no logos, no real people."
+        },
+        {
+          "heading": "The coverage",
+          "narration": "FDIC insurance covers deposits up to $250,000 per depositor, per insured bank, per ownership category, if the bank fails.",
+          "on_screen_text": "$250k per depositor, per bank",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sturdy umbrella shielding a stack of coins from rain. No text, no logos, no real people."
+        },
+        {
+          "heading": "The catch",
+          "narration": "Many apps aren't banks. They hold your money at a partner bank. Insurance protects you if that bank fails, not if the app company does.",
+          "on_screen_text": "App ≠ bank",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small kiosk standing in front of a large columned bank building, a bridge between them. No text, no logos, no real people."
+        },
+        {
+          "heading": "How to check",
+          "narration": "Find the partner bank's name in the app's fine print, then look it up in FDIC BankFind.",
+          "on_screen_text": "Look up the bank in BankFind",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes with a magnifying glass over a building with columns. No text, no logos, no real people."
+        },
+        {
+          "heading": "Pick well",
+          "narration": "Prefer accounts held directly at an insured bank or credit union, with no monthly fees and easy transfers out.",
+          "on_screen_text": "Insured. No fees. Easy exits.",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three checkmark tiles beside a savings jar. No text, no logos, no real people."
+        },
+        {
+          "heading": "Takeaway",
+          "narration": "A high rate is nice. Knowing exactly who holds your money is better.",
+          "on_screen_text": "Know who holds your money",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes hugging a savings jar under an umbrella. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Follow for one money move a week.",
+      "caption": "FDIC insurance covers up to $250,000 per depositor, per insured bank, per ownership category, if the bank fails. Many savings apps aren't banks; they hold deposits at partner banks. Coverage applies to that bank failing, not the app.\n\nCheck the partner bank's name in the app's disclosures and look it up in FDIC BankFind (credit unions: NCUA).\n\nThe high-yield savings account in our link in bio is an affiliate link: we may earn a commission if you open and fund an account, at no extra cost to you. Compare rates and terms yourself first.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "highyieldsavings",
+        "hysa",
+        "fdic",
+        "emergencyfund",
+        "savingsaccount",
+        "bankingtips",
+        "moneymadesimple"
+      ],
+      "description": "What FDIC insurance covers ($250,000 per depositor, per insured bank, per ownership category) and why fintech apps that aren't banks are different.",
+      "thumbnail_text": "Is it really insured?",
+      "sources": [
+        "https://www.fdic.gov/resources/deposit-insurance",
+        "https://banks.data.fdic.gov/bankfind-suite/bankfind",
+        "https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance",
+        "https://ncua.gov/consumers/share-insurance-coverage"
+      ],
+      "claims_to_verify": [
+        "FDIC standard maximum deposit insurance amount is $250,000 per depositor, per insured bank, per ownership category",
+        "FDIC insurance covers insured bank failure only, not failure of a non-bank fintech company",
+        "Confirm the affiliate HYSA is held at an FDIC-insured bank before posting"
+      ]
+    }
+  },
+  {
+    "format": "short",
+    "pillar": "money apps and tools, honestly compared",
+    "idea_angle": "Three free bank alerts (low balance, large transaction, payment due) that replace daily balance-checking anxiety.",
+    "script": {
+      "title": "Set these 3 bank alerts today",
+      "hook": "You don't need a budgeting app to stop money surprises. You need three alerts.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "You don't need a budgeting app to stop money surprises. You need three alerts.",
+          "on_screen_text": "3 alerts > 1 app",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes wearing a tiny bell around its neck. No text, no logos, no real people."
+        },
+        {
+          "heading": "Alert one",
+          "narration": "A low-balance alert. Set it at your average weekly spending, so you get warned while there's still time to move money.",
+          "on_screen_text": "1. Low balance",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gauge with the needle near a highlighted low zone and a bell icon. No text, no logos, no real people."
+        },
+        {
+          "heading": "Alert two",
+          "narration": "A large-transaction alert, around fifty or a hundred dollars. It catches fraud and impulse buys the moment they happen.",
+          "on_screen_text": "2. Large transaction",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big coin rolling past a bell that rings. No text, no logos, no real people."
+        },
+        {
+          "heading": "Alert three",
+          "narration": "A payment-due alert on every card and loan, five days before the due date. A single payment that's thirty days late can hit your credit report.",
+          "on_screen_text": "3. Payment due (5 days out)",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar page with a bell on the corner. No text, no logos, no real people."
+        },
+        {
+          "heading": "Where",
+          "narration": "All three usually live in your bank or card app under settings, notifications or alerts. They're free.",
+          "on_screen_text": "Settings → Alerts",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes tapping a gear icon on a phone with shapes only. No text, no logos, no real people."
+        },
+        {
+          "heading": "Takeaway",
+          "narration": "Ten minutes of setup and your accounts start telling you what's happening instead of you guessing.",
+          "on_screen_text": "Let your accounts warn you",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes relaxing while three small bells sit on a shelf. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Follow for one money move a week.",
+      "caption": "Three free alerts most banks and card issuers offer:\n1. Low balance (set it at about a week of spending)\n2. Large transaction ($50–$100)\n3. Payment due, 5 days before each due date\n\nLook under Settings → Notifications/Alerts in your app. It takes about ten minutes.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "bankingtips",
+        "moneyapps",
+        "fraudalerts",
+        "budgetinghacks",
+        "latepayments",
+        "moneyorganization",
+        "moneymadesimple"
+      ],
+      "description": "Three free alerts (low balance, large transaction, payment due) that prevent overdrafts, catch fraud early and avoid late payments.",
+      "thumbnail_text": "3 alerts, zero surprises",
+      "sources": [
+        "https://www.consumerfinance.gov/consumer-tools/bank-accounts/",
+        "https://www.consumerfinance.gov/ask-cfpb/how-long-does-negative-information-remain-on-my-credit-report-en-323/"
+      ],
+      "claims_to_verify": [
+        "Late payments are generally reported to credit bureaus once 30 or more days past due",
+        "Most major banks and card issuers offer free customizable alerts (confirm wording is not overstated)"
+      ]
+    }
+  },
+  {
+    "format": "short",
+    "pillar": "budgeting systems that actually stick",
+    "idea_angle": "Irregular yearly costs (registration, gifts, renewals) aren't emergencies; turn each into a monthly sinking fund.",
+    "script": {
+      "title": "That 'surprise' bill was on the calendar",
+      "hook": "Car registration isn't an emergency. It shows up every single year.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "Car registration isn't an emergency. It shows up every single year.",
+          "on_screen_text": "Not an emergency. Just annual.",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes surprised by an envelope-shaped bill popping out of a calendar. No text, no logos, no real people."
+        },
+        {
+          "heading": "The pattern",
+          "narration": "Registration, renewal fees, holiday gifts, the yearly subscription: predictable, just not monthly. So they wreck monthly budgets.",
+          "on_screen_text": "Predictable, just not monthly",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with small icons on random months: car, gift box, umbrella, phone. No text, no logos, no real people."
+        },
+        {
+          "heading": "List them",
+          "narration": "Scroll last year's bank statements and list every cost that didn't happen monthly.",
+          "on_screen_text": "List last year's irregular costs",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes unrolling a long receipt-shaped scroll with only lines. No text, no logos, no real people."
+        },
+        {
+          "heading": "Divide by 12",
+          "narration": "Add them up and divide by twelve. Say they total $1,800 a year. That's $150 a month, which is a lot easier to plan around.",
+          "on_screen_text": "$1,800 ÷ 12 = $150/mo",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a large coin split into twelve slices like a pie. No text, no logos, no real people."
+        },
+        {
+          "heading": "Automate it",
+          "narration": "Auto-transfer $150 into a separate savings bucket every month. Many banks let you nickname buckets, like 'Car' or 'Gifts'.",
+          "on_screen_text": "Auto-save it monthly",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. several small labeled-by-icon jars receiving coins from a pipe. No text, no logos, no real people."
+        },
+        {
+          "heading": "Takeaway",
+          "narration": "When the bill comes, the money's already there, waiting. No panic, no credit card. That's a sinking fund.",
+          "on_screen_text": "The money's already waiting",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes calmly paying a bill from a full jar. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Follow for one money move a week.",
+      "caption": "Irregular costs aren't emergencies. List last year's non-monthly expenses (registration, renewals, gifts, annual subscriptions), total them and divide by 12. $1,800/year = $150/month.\n\nAuto-transfer that into a separate savings bucket. When the bill shows up, it's already covered.\n\nWant this set up for you? The 20-Minute Budget template (Notion + Sheets) is in the link in bio.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "sinkingfunds",
+        "budgetingtips",
+        "irregularexpenses",
+        "savingsgoals",
+        "zerobasedbudget",
+        "moneymadesimple"
+      ],
+      "description": "Sinking funds explained: total your irregular annual costs, divide by 12, and automate the monthly transfer.",
+      "thumbnail_text": "Sinking funds 101",
+      "sources": [
+        "https://www.consumerfinance.gov/about-us/blog/budgeting-how-to-create-a-budget-and-stick-with-it/"
+      ],
+      "claims_to_verify": [
+        "$1,800 ÷ 12 = $150 (illustrative total, not an average)"
+      ]
+    }
+  },
+  {
+    "format": "short",
+    "pillar": "first-time investing basics (index funds, retirement accounts)",
+    "idea_angle": "A target-date fund is a legit one-fund start for a beginner IRA; the two catches are fees and stacking it with other funds.",
+    "script": {
+      "title": "The one-fund retirement option",
+      "hook": "If picking investments is why you haven't started, one fund can handle most of it.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "If picking investments is why you haven't started, one fund can handle most of it.",
+          "on_screen_text": "Too many choices?",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes overwhelmed by a wall of identical doors. No text, no logos, no real people."
+        },
+        {
+          "heading": "What it is",
+          "narration": "A target-date fund holds a mix of stock and bond index funds, built around the year you expect to retire, like 2065 or 2070.",
+          "on_screen_text": "One fund, built around a year",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single basket holding smaller baskets of different colors. No text, no logos, no real people."
+        },
+        {
+          "heading": "How it moves",
+          "narration": "It starts mostly in stocks and gradually shifts toward bonds as that year gets closer. That path is called the glide path.",
+          "on_screen_text": "Shifts toward bonds over time",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gentle slope with a paper airplane gliding down from green to cream. No text, no logos, no real people."
+        },
+        {
+          "heading": "Catch one",
+          "narration": "Fees vary a lot between providers. Check the expense ratio before you choose one.",
+          "on_screen_text": "Catch 1: check the fee",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small price-tag shape hanging off a basket. No text, no logos, no real people."
+        },
+        {
+          "heading": "Catch two",
+          "narration": "It's designed to be your whole portfolio. Pair it with five other funds and you scramble the mix it was built to manage.",
+          "on_screen_text": "Catch 2: don't stack it",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a neat basket being buried under a pile of extra baskets. No text, no logos, no real people."
+        },
+        {
+          "heading": "Takeaway",
+          "narration": "It can still lose value, and it's not a promise. But one low-cost fund you actually own beats a perfect plan you never start.",
+          "on_screen_text": "Started beats perfect",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes placing one basket on a shelf and smiling. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Follow for one money move a week.",
+      "caption": "Target-date funds hold a mix of stock and bond funds and gradually shift toward bonds as the target year approaches. For a beginner, one fund can be the whole plan.\n\nTwo catches: fees differ a lot by provider (check the expense ratio), and stacking it with lots of other funds undoes the mix it manages for you. They can lose value, including near the target date.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "targetdatefund",
+        "retirementinvesting",
+        "rothira",
+        "401k",
+        "investingforbeginners",
+        "indexinvesting",
+        "moneymadesimple"
+      ],
+      "description": "What a target-date fund is, how its glide path works, and the two mistakes to avoid: high fees and stacking it with other funds.",
+      "thumbnail_text": "One fund, done",
+      "sources": [
+        "https://www.investor.gov/introduction-investing/investing-basics/glossary/target-date-funds",
+        "https://www.sec.gov/investor/alerts/tdf.htm",
+        "https://www.investor.gov/introduction-investing/investing-basics/glossary/expense-ratio"
+      ],
+      "claims_to_verify": [
+        "Target-date funds shift asset allocation toward bonds/conservative investments as the target date approaches (glide path)",
+        "Target-date funds are not guaranteed and can lose money, including near and after the target date (SEC investor bulletin)",
+        "2065/2070 vintages exist at major providers (verify current availability)"
+      ]
+    }
+  },
+  {
+    "format": "short",
+    "pillar": "credit scores and debt payoff",
+    "idea_angle": "Closing an old no-fee card can raise utilization and shorten average age; utilization math with a $4,000 limit.",
+    "script": {
+      "title": "Don't cancel that old card yet",
+      "hook": "Closing a credit card you never use can actually lower your score.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "Closing a credit card you never use can actually lower your score.",
+          "on_screen_text": "Closing a card can hurt?",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes about to cut a card with oversized scissors, pausing. No text, no logos, no real people."
+        },
+        {
+          "heading": "Utilization",
+          "narration": "Scores look at how much of your total credit limit you're using. Closing a card shrinks that total.",
+          "on_screen_text": "Less total limit = higher %",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pie shape where one slice is removed and the remaining filled portion looks bigger. No text, no logos, no real people."
+        },
+        {
+          "heading": "Example",
+          "narration": "You carry $2,000 across cards with $10,000 in total limits: twenty percent. Close an old $4,000 card and it jumps to about thirty-three percent.",
+          "on_screen_text": "20% → 33% overnight",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two meters side by side, the second needle noticeably higher. No text, no logos, no real people."
+        },
+        {
+          "heading": "Age",
+          "narration": "Closed accounts in good standing can stay on your report for years, but eventually they drop off, and your history can look younger.",
+          "on_screen_text": "Old accounts help your history",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an old tree with rings next to a young sapling. No text, no logos, no real people."
+        },
+        {
+          "heading": "When to close",
+          "narration": "There are good reasons: a high annual fee you can't get downgraded, or you can't trust yourself with it. Ask about a no-fee version first.",
+          "on_screen_text": "Annual fee? Ask to downgrade",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes on a phone call, speech bubble with only a downward arrow. No text, no logos, no real people."
+        },
+        {
+          "heading": "Takeaway",
+          "narration": "No fee and no temptation? Put one small recurring charge on it with autopay, and keep it open.",
+          "on_screen_text": "Small charge + autopay",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes placing a tiny coin on a card with a looping arrow. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Follow for one money move a week.",
+      "caption": "Closing a card reduces your total available credit, which can raise utilization. $2,000 balance on $10,000 of limits = 20%. Close a $4,000-limit card and it's ~33%.\n\nIf it has no annual fee, consider keeping it open with one small recurring charge on autopay. If it has a fee, ask the issuer about a no-fee version before closing.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "creditcards",
+        "creditscore",
+        "creditutilization",
+        "credithistory",
+        "buildcredit",
+        "moneymadesimple"
+      ],
+      "description": "Why closing an unused credit card can lower your score (utilization and account age), with a worked example and when closing still makes sense.",
+      "thumbnail_text": "Keep the old card?",
+      "sources": [
+        "https://www.myfico.com/credit-education/whats-in-your-credit-score",
+        "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-utilization-rate-en-1997/",
+        "https://www.experian.com/blogs/ask-experian/credit-education/report-basics/how-long-do-closed-accounts-stay-on-credit-report/"
+      ],
+      "claims_to_verify": [
+        "$2,000/$10,000 = 20%; $2,000/$6,000 ≈ 33%",
+        "Closed accounts in good standing generally remain on credit reports for up to about 10 years",
+        "Issuers may close inactive accounts; a small recurring charge keeps the account active (policies vary)"
+      ]
+    }
+  },
+  {
+    "format": "short",
+    "pillar": "money apps and tools, honestly compared",
+    "idea_angle": "A 10-minute subscription audit using a bank-statement search, sorted by 'use it weekly / monthly / forgot'.",
+    "script": {
+      "title": "Find your forgotten subscriptions in 10 minutes",
+      "hook": "Search your bank statement for one word and you'll probably find money leaking.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "Search your bank statement for one word and you'll probably find money leaking.",
+          "on_screen_text": "Money leaking monthly?",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes noticing a slow drip of coins from a pipe. No text, no logos, no real people."
+        },
+        {
+          "heading": "Step one",
+          "narration": "Open your card and bank apps. Search for words like 'monthly', 'subscription', 'renewal' or 'auto-pay', over the last ninety days.",
+          "on_screen_text": "Search 90 days of statements",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass sliding over a long statement made of lines and shapes. No text, no logos, no real people."
+        },
+        {
+          "heading": "Step two",
+          "narration": "List every recurring charge, including the yearly ones that only hit once.",
+          "on_screen_text": "List every recurring charge",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a clipboard filling with small icons: music note, play button, cloud, dumbbell. No text, no logos, no real people."
+        },
+        {
+          "heading": "Step three",
+          "narration": "Sort them: use it weekly, use it monthly, or forgot it existed.",
+          "on_screen_text": "Weekly · Monthly · Forgot",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three bins in green, cream and mustard. No text, no logos, no real people."
+        },
+        {
+          "heading": "Step four",
+          "narration": "Cancel the 'forgot' pile today. For the monthly pile, check for a cheaper plan, or rotate: keep one streaming service at a time.",
+          "on_screen_text": "Cancel 'forgot'. Rotate the rest.",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes tossing shapes from the third bin into a recycling bin. No text, no logos, no real people."
+        },
+        {
+          "heading": "Takeaway",
+          "narration": "Put a calendar reminder to repeat this every three months. Free trials have a way of becoming forever.",
+          "on_screen_text": "Repeat every 3 months",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a small repeat-arrow on every third page. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Follow for one money move a week.",
+      "caption": "10-minute subscription audit:\n1. Search 90 days of bank/card statements for monthly, subscription, renewal, auto-pay\n2. List every recurring charge (including annual ones)\n3. Sort: use weekly / use monthly / forgot it existed\n4. Cancel the forgot pile, downgrade or rotate the rest\n\nSet a reminder to repeat every three months.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "subscriptions",
+        "budgetingtips",
+        "savemoney",
+        "moneyaudit",
+        "frugalliving",
+        "moneyapps",
+        "moneymadesimple"
+      ],
+      "description": "A four-step, 10-minute subscription audit using your own bank and card statements, no extra app required.",
+      "thumbnail_text": "Subscription audit",
+      "sources": [
+        "https://consumer.ftc.gov/articles/free-trial-offers-and-subscriptions",
+        "https://www.consumerfinance.gov/consumer-tools/bank-accounts/"
+      ],
+      "claims_to_verify": [
+        "Statement search terms vary by bank; generic advice only (no specific figures to verify)"
+      ]
+    }
+  },
+  {
+    "format": "carousel",
+    "pillar": "budgeting systems that actually stick",
+    "idea_angle": "A fixed 20-minute monthly 'money date' agenda with timed steps, so budgeting becomes a calendar habit rather than willpower.",
+    "script": {
+      "title": "The 20-minute monthly money date",
+      "hook": "Budgeting isn't a personality trait. It's a 20-minute meeting with yourself.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "Budgeting isn't a personality trait. It's a 20-minute meeting once a month.",
+          "on_screen_text": "Your budget is a 20-minute meeting",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes sitting at a small cafe table with a laptop and a timer. No text, no logos, no real people."
+        },
+        {
+          "heading": "Book it",
+          "narration": "Put a recurring event on your calendar the day after your first paycheck of the month. Treat it like a dentist appointment you can't skip.",
+          "on_screen_text": "Book it after payday",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar page with a recurring loop arrow on one day. No text, no logos, no real people."
+        },
+        {
+          "heading": "Minutes 0–5",
+          "narration": "Open every account in one sitting: checking, savings, cards, loans. Write down each balance. Just look, no judging.",
+          "on_screen_text": "0–5 min: look at every balance",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a row of simple account cards with blank number bars. No text, no logos, no real people."
+        },
+        {
+          "heading": "Minutes 5–10",
+          "narration": "Compare last month's spending to your plan. Find the one category that ran over the most, and ask why, not who to blame.",
+          "on_screen_text": "5–10 min: find the one leak",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bar chart with one bar taller than its line marker. No text, no logos, no real people."
+        },
+        {
+          "heading": "Minutes 10–15",
+          "narration": "Set next month's numbers: fixed bills, savings transfer, weekly spending amount, sinking funds. Adjust the leaky category to something realistic.",
+          "on_screen_text": "10–15 min: set next month",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes turning dials on a simple control panel. No text, no logos, no real people."
+        },
+        {
+          "heading": "Minutes 15–18",
+          "narration": "Check upcoming one-offs: birthdays, renewals, travel. Move money into sinking funds now, before they arrive.",
+          "on_screen_text": "15–18 min: scan for one-offs",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a telescope pointed at a calendar with small gift and plane icons. No text, no logos, no real people."
+        },
+        {
+          "heading": "Minutes 18–20",
+          "narration": "Pick one money move for the month. Raise your 401(k) by one percent, call about a fee, or add $25 to savings. Just one.",
+          "on_screen_text": "18–20 min: choose one move",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding up a single shining coin. No text, no logos, no real people."
+        },
+        {
+          "heading": "Make it pleasant",
+          "narration": "Pair it with something you like: your favorite coffee, a playlist, a walk after. You're building a habit, not running an audit.",
+          "on_screen_text": "Add coffee. Keep it short.",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coffee cup steaming beside a closed laptop and headphones. No text, no logos, no real people."
+        },
+        {
+          "heading": "Save this",
+          "narration": "Save this so the agenda's ready for your next money date. The 20-Minute Budget template, linked in bio, has it built in.",
+          "on_screen_text": "Save this for your next money date",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes waving next to a bookmark ribbon shape. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Save this for your next money date. Follow for one money move a week.",
+      "caption": "Budgeting sticks when it's a short recurring appointment, not a mood. Agenda:\n0–5 min: open every account, note balances\n5–10: find the category that ran over\n10–15: set next month's numbers\n15–18: scan for one-off costs\n18–20: pick one money move\n\nWant this set up for you? The 20-Minute Budget template (Notion + Sheets) is in the link in bio.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "budgetingtips",
+        "moneydate",
+        "monthlybudget",
+        "budgetroutine",
+        "budgettemplate",
+        "notiontemplate",
+        "moneymadesimple"
+      ],
+      "description": "A timed 20-minute monthly budgeting agenda: review balances, find the leak, set next month, plan one-offs, choose one money move.",
+      "thumbnail_text": "20-minute money date",
+      "sources": [
+        "https://www.consumerfinance.gov/about-us/blog/budgeting-how-to-create-a-budget-and-stick-with-it/",
+        "https://www.consumerfinance.gov/consumer-tools/money-as-you-grow/"
+      ],
+      "claims_to_verify": [
+        "No numeric claims; confirm product name/price ($12) and link before posting"
+      ]
+    }
+  },
+  {
+    "format": "carousel",
+    "pillar": "budgeting systems that actually stick",
+    "idea_angle": "An 8-week plan to a $1,000 starter emergency fund at $125/week, with specific places the money comes from.",
+    "script": {
+      "title": "$1,000 emergency fund in 8 weeks",
+      "hook": "$1,000 in 8 weeks is $125 a week. Here's where it can come from.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "A starter emergency fund turns a flat tire from a crisis into an errand. $1,000 in 8 weeks is $125 a week.",
+          "on_screen_text": "$1,000 in 8 weeks = $125/week",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing proudly next to a jar labeled only with a shield icon. No text, no logos, no real people."
+        },
+        {
+          "heading": "Why $1,000 first",
+          "narration": "It's not the final goal. Three to six months of expenses is the usual target. But a first $1,000 covers a lot of common surprises and breaks the credit-card cycle.",
+          "on_screen_text": "Starter fund first, full fund later",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small jar in front of a much larger jar on a shelf. No text, no logos, no real people."
+        },
+        {
+          "heading": "Where it lives",
+          "narration": "Separate from checking, in a savings account at an insured bank. High-yield savings accounts often pay far more than a standard savings account.",
+          "on_screen_text": "Separate account, insured bank",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar under an umbrella, away from a busy wallet. No text, no logos, no real people."
+        },
+        {
+          "heading": "Week 1–2",
+          "narration": "Sell two things you haven't used in a year: old phone, gaming gear, furniture, clothes. Many people find $100–$300 sitting in a closet.",
+          "on_screen_text": "Weeks 1–2: sell what you don't use",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a cardboard box with a headset, a lamp and a jacket. No text, no logos, no real people."
+        },
+        {
+          "heading": "Week 3–4",
+          "narration": "Pause two subscriptions and one delivery habit for a month. Move the exact amount you would have spent on the same day.",
+          "on_screen_text": "Weeks 3–4: pause, then transfer",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pause symbol over a takeout bag, arrow toward a jar. No text, no logos, no real people."
+        },
+        {
+          "heading": "Week 5–6",
+          "narration": "Pick up one extra shift, a weekend gig or a few hours of freelance work, and send all of it to savings before it hits spending.",
+          "on_screen_text": "Weeks 5–6: one extra income burst",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes wearing a tiny work apron carrying coins. No text, no logos, no real people."
+        },
+        {
+          "heading": "Week 7–8",
+          "narration": "Round up: if you're $40 short, cut one dinner out and move the difference. Close the gap on purpose.",
+          "on_screen_text": "Weeks 7–8: close the gap",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a puzzle with one last piece clicking in. No text, no logos, no real people."
+        },
+        {
+          "heading": "Rules for using it",
+          "narration": "Use it for real surprises: car repair, medical bill, urgent travel. Not for sales. After using it, refill it before anything else.",
+          "on_screen_text": "Surprises only. Refill after use.",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a small wrench and a bandage icon floating above. No text, no logos, no real people."
+        },
+        {
+          "heading": "Save this",
+          "narration": "Save this and screenshot the weekly plan. Your future self with a flat tire says thanks.",
+          "on_screen_text": "Save this. Start week one today.",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes saluting next to a bookmark ribbon. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Save this and start week one today. Follow for one money move a week.",
+      "caption": "$1,000 starter emergency fund in 8 weeks = $125/week:\nWeeks 1–2: sell unused stuff\nWeeks 3–4: pause subscriptions and move that exact amount\nWeeks 5–6: one extra shift or gig, straight to savings\nWeeks 7–8: close the gap on purpose\n\nKeep it in a separate savings account at an insured bank, and refill it after you use it.\n\nThe high-yield savings account in our link in bio is an affiliate link: we may earn a commission if you open and fund an account, at no extra cost to you. Compare rates and terms yourself first.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "emergencyfund",
+        "savingschallenge",
+        "hysa",
+        "highyieldsavings",
+        "savemoney",
+        "moneyin20s",
+        "moneymadesimple"
+      ],
+      "description": "An 8-week plan to save a $1,000 starter emergency fund ($125/week), where to keep it, and rules for using it.",
+      "thumbnail_text": "$1,000 in 8 weeks",
+      "sources": [
+        "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+        "https://www.fdic.gov/resources/deposit-insurance",
+        "https://www.fdic.gov/national-rates-and-rate-caps"
+      ],
+      "claims_to_verify": [
+        "Common guidance: emergency fund of 3–6 months of expenses",
+        "High-yield savings accounts often pay well above the FDIC national average savings rate (check current national rate)",
+        "$100–$300 from selling unused items is illustrative, not a statistic"
+      ]
+    }
+  },
+  {
+    "format": "carousel",
+    "pillar": "first-time investing basics (index funds, retirement accounts)",
+    "idea_angle": "Roth vs Traditional IRA decided by one question (is your tax rate likely higher now or later?), with early-career defaults.",
+    "script": {
+      "title": "Roth or Traditional IRA? One question",
+      "hook": "Roth vs Traditional comes down to one question: pay the tax now, or later?",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "Roth vs Traditional IRA sounds complicated. It mostly comes down to one question: pay the tax now, or later?",
+          "on_screen_text": "Roth or Traditional? Now or later?",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing at a fork in a path with two signposts showing a sun and a moon. No text, no logos, no real people."
+        },
+        {
+          "heading": "Traditional",
+          "narration": "You may get a tax deduction now. The money grows, and withdrawals in retirement are taxed as income.",
+          "on_screen_text": "Traditional: break now, tax later",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin entering a jar with a small discount tag, then exiting through a toll gate. No text, no logos, no real people."
+        },
+        {
+          "heading": "Roth",
+          "narration": "No deduction now. The money grows, and qualified withdrawals in retirement are tax-free.",
+          "on_screen_text": "Roth: tax now, tax-free later",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin passing a toll gate first, then flowing freely out of a jar. No text, no logos, no real people."
+        },
+        {
+          "heading": "The question",
+          "narration": "If you expect your tax rate to be higher later than it is now, Roth tends to win. If lower later, Traditional tends to win.",
+          "on_screen_text": "Higher tax later? Lean Roth.",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance scale with a sun on one side and a moon on the other. No text, no logos, no real people."
+        },
+        {
+          "heading": "Early career",
+          "narration": "Many people in their 20s are in a lower bracket than they'll be at their peak earning years, which is why Roth is a common choice early on.",
+          "on_screen_text": "Lower bracket now → Roth is common",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small step at the bottom of a staircase, a tiny plant on it. No text, no logos, no real people."
+        },
+        {
+          "heading": "Same limit",
+          "narration": "The yearly limit is shared across both. For 2026 it's $7,500 if you're under 50, combined across all your IRAs.",
+          "on_screen_text": "2026 limit: $7,500 combined (under 50)",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. one jar split into two halves of different colors. No text, no logos, no real people."
+        },
+        {
+          "heading": "Fine print",
+          "narration": "Roth has income limits. A Traditional deduction can be reduced if you have a workplace plan and higher income. Check the IRS tables for your situation.",
+          "on_screen_text": "Check income limits on irs.gov",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes reading a long scroll of table-like lines. No text, no logos, no real people."
+        },
+        {
+          "heading": "Deadline",
+          "narration": "You can make 2026 contributions until the tax filing deadline in April 2027.",
+          "on_screen_text": "2026 contributions: until April 2027",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar flipping from one year to the next with a coin in between. No text, no logos, no real people."
+        },
+        {
+          "heading": "Save this",
+          "narration": "Not sure? Splitting between both is a reasonable hedge. Save this before you open your IRA.",
+          "on_screen_text": "Unsure? Split it. Save this.",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding two coins, one in each hand, next to a bookmark. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Save this before you open your IRA. Follow for one money move a week.",
+      "caption": "Traditional IRA: possible deduction now, taxed when you withdraw in retirement.\nRoth IRA: no deduction now, qualified withdrawals tax-free.\n\nExpect a higher tax rate later? Roth tends to come out ahead. Lower later? Traditional. The annual limit is shared across both, Roth has income limits, and 2026 contributions can be made until the April 2027 filing deadline.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "rothira",
+        "traditionalira",
+        "ira",
+        "retirementplanning",
+        "taxes",
+        "investingforbeginners",
+        "moneymadesimple"
+      ],
+      "description": "How to choose between a Roth and Traditional IRA by comparing your tax rate now vs later, plus the 2026 limit, income limits and deadline.",
+      "thumbnail_text": "Roth or Traditional?",
+      "sources": [
+        "https://www.irs.gov/retirement-plans/traditional-and-roth-iras",
+        "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits",
+        "https://www.irs.gov/retirement-plans/ira-deduction-limits",
+        "https://www.irs.gov/publications/p590a"
+      ],
+      "claims_to_verify": [
+        "2026 IRA contribution limit is $7,500 for those under 50 (IRS announced Nov 2025; combined across Traditional and Roth IRAs)",
+        "2026 IRA contributions may be made until the 2027 tax filing deadline (normally April 15, 2027)",
+        "Roth IRA contributions are subject to MAGI income limits; Traditional IRA deductibility phases out for those covered by a workplace plan above certain incomes",
+        "Qualified Roth IRA distributions are tax-free"
+      ]
+    }
+  },
+  {
+    "format": "carousel",
+    "pillar": "first-time investing basics (index funds, retirement accounts)",
+    "idea_angle": "What you actually own when you buy an index fund, explained via S&P 500 vs total market, ETF vs mutual fund, and what it can't do.",
+    "script": {
+      "title": "What you actually own in an index fund",
+      "hook": "When you buy an index fund, you're buying a tiny slice of hundreds or thousands of companies.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "When you buy one share of an index fund, you own a tiny slice of hundreds or thousands of companies.",
+          "on_screen_text": "One share, thousands of companies",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a single slice cut from a giant mosaic of tiny squares. No text, no logos, no real people."
+        },
+        {
+          "heading": "The index",
+          "narration": "An index is a list with rules. The S&P 500 tracks about 500 large US companies. A total market index tracks thousands of US companies, large and small.",
+          "on_screen_text": "An index is a list with rules",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a long scroll of small icons arranged in neat rows. No text, no logos, no real people."
+        },
+        {
+          "heading": "The fund",
+          "narration": "An index fund simply buys what's on the list, in the same proportions, without a manager trying to guess winners. That's why fees can be very low.",
+          "on_screen_text": "The fund copies the list",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a photocopier shape copying a grid of icons. No text, no logos, no real people."
+        },
+        {
+          "heading": "Diversification",
+          "narration": "If one company tanks, it's a small piece of the whole. You're betting on the market broadly, not on one name.",
+          "on_screen_text": "One bad apple, small dent",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big basket of apples with one small bruised apple. No text, no logos, no real people."
+        },
+        {
+          "heading": "ETF vs mutual fund",
+          "narration": "Same idea, different wrapper. ETFs trade like a stock during the day. Mutual funds price once at day's end and often allow exact dollar amounts.",
+          "on_screen_text": "ETF or mutual fund: same idea",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two different gift boxes holding the same item. No text, no logos, no real people."
+        },
+        {
+          "heading": "What it can't do",
+          "narration": "It can't skip downturns. Index funds fall when the market falls, sometimes a lot, and past returns don't predict future ones.",
+          "on_screen_text": "It still drops in downturns",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gentle hill line with a dip, a small umbrella shape over the piggy. No text, no logos, no real people."
+        },
+        {
+          "heading": "What to check",
+          "narration": "Before buying: what index it tracks, the expense ratio, and any minimum investment. That's most of the homework.",
+          "on_screen_text": "Check: index, fee, minimum",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a three-item checklist with green check circles. No text, no logos, no real people."
+        },
+        {
+          "heading": "Where to hold it",
+          "narration": "Inside a Roth IRA or 401(k) for retirement goals, or a regular brokerage account for other long-term goals. Not for money you need this year.",
+          "on_screen_text": "Long-term money only",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes placing a basket on a high shelf labeled with a calendar icon. No text, no logos, no real people."
+        },
+        {
+          "heading": "Save this",
+          "narration": "Save this for when you place your first order.",
+          "on_screen_text": "Save this for your first order",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to a bookmark ribbon. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Save this for your first order. Follow for one money move a week.",
+      "caption": "An index fund buys everything on a rules-based list (like the S&P 500 or a total US market index), so one share spreads your money across hundreds or thousands of companies, usually at low cost.\n\nIt still falls when markets fall. Before buying, check: which index, the expense ratio, any minimum. Use it for long-term money, not this year's rent.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "indexfunds",
+        "sp500",
+        "totalmarket",
+        "etfs",
+        "investingforbeginners",
+        "diversification",
+        "moneymadesimple"
+      ],
+      "description": "What an index fund is, what you own, ETF vs mutual fund, its limits, and three things to check before you buy.",
+      "thumbnail_text": "Index funds, explained",
+      "sources": [
+        "https://www.investor.gov/introduction-investing/investing-basics/glossary/index-funds",
+        "https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-funds-etfs",
+        "https://www.investor.gov/introduction-investing/investing-basics/save-and-invest/diversify-your-investments"
+      ],
+      "claims_to_verify": [
+        "The S&P 500 tracks about 500 large US companies (actual constituent count is slightly above 500 due to share classes)",
+        "Total US stock market indexes hold thousands of companies",
+        "ETFs trade intraday; mutual funds are priced once per day at NAV"
+      ]
+    }
+  },
+  {
+    "format": "carousel",
+    "pillar": "credit scores and debt payoff",
+    "idea_angle": "Audit your credit report like an auditor: 7 specific line items to check, using free weekly reports, and how to dispute.",
+    "script": {
+      "title": "Check your credit report like an auditor",
+      "hook": "Your credit report can contain mistakes. Here are 7 things to check.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "Your credit report can have mistakes in it, and you're the one who has to catch them. Here are seven things to check.",
+          "on_screen_text": "7 things to check on your report",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes wearing tiny reading glasses with a magnifying glass. No text, no logos, no real people."
+        },
+        {
+          "heading": "Get it free",
+          "narration": "AnnualCreditReport.com is the official site for free reports from Equifax, Experian and TransUnion. They're available every week.",
+          "on_screen_text": "Free weekly reports, all 3 bureaus",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three simple document stacks side by side. No text, no logos, no real people."
+        },
+        {
+          "heading": "1. Your details",
+          "narration": "Names, addresses and employers. An address you never lived at can be a sign of mixed files or fraud.",
+          "on_screen_text": "1. Names and addresses",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a house icon with a small question mark shape (no letters). No text, no logos, no real people."
+        },
+        {
+          "heading": "2. Unknown accounts",
+          "narration": "Every account listed should be one you opened. Unfamiliar ones need a closer look right away.",
+          "on_screen_text": "2. Accounts you don't recognize",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stack of cards with one odd-colored card sticking out. No text, no logos, no real people."
+        },
+        {
+          "heading": "3. Payment marks",
+          "narration": "Look for late payments you don't think were late. Compare against your own bank records.",
+          "on_screen_text": "3. Late marks that look wrong",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with one day marked by a red dot. No text, no logos, no real people."
+        },
+        {
+          "heading": "4–5. Balances and limits",
+          "narration": "Check balances and credit limits are right. A missing limit can make your utilization look higher than it is.",
+          "on_screen_text": "4–5. Balances and limits",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a meter next to a card shape. No text, no logos, no real people."
+        },
+        {
+          "heading": "6–7. Inquiries and collections",
+          "narration": "Hard inquiries you didn't authorize, and collections you don't recognize or already paid, both deserve a dispute.",
+          "on_screen_text": "6–7. Inquiries and collections",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small knocking hand shape at a door, and a folder with a paperclip. No text, no logos, no real people."
+        },
+        {
+          "heading": "How to dispute",
+          "narration": "File with the bureau online and include documents. It's also smart to contact the company that reported it. Bureaus generally have about 30 days to investigate.",
+          "on_screen_text": "Dispute with documents",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes sliding a folder through a mail slot. No text, no logos, no real people."
+        },
+        {
+          "heading": "Save this",
+          "narration": "Report and score are different things. Your report is free, and it's the source your score is built from. Save this for your check.",
+          "on_screen_text": "Save this for your report check",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to a bookmark ribbon. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Save this for your report check. Follow for one money move a week.",
+      "caption": "Free credit reports from all three bureaus are available weekly at AnnualCreditReport.com (the official site). Check: personal info, unknown accounts, late marks, balances, credit limits, hard inquiries, collections.\n\nDispute errors with the bureau, with documents, and contact the company that reported it. Bureaus generally have about 30 days to investigate.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "creditreport",
+        "creditrepair",
+        "annualcreditreport",
+        "creditscore",
+        "identitytheft",
+        "financialliteracy",
+        "moneymadesimple"
+      ],
+      "description": "A 7-point credit report checklist using free weekly reports from AnnualCreditReport.com, plus how to dispute errors.",
+      "thumbnail_text": "Audit your credit report",
+      "sources": [
+        "https://www.annualcreditreport.com",
+        "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+        "https://consumer.ftc.gov/articles/free-credit-reports",
+        "https://consumer.ftc.gov/articles/disputing-errors-your-credit-reports"
+      ],
+      "claims_to_verify": [
+        "Free weekly credit reports from all three nationwide bureaus are available at AnnualCreditReport.com (made permanent in 2023)",
+        "Credit bureaus generally must investigate disputes within 30 days (FCRA; can be 45 in some cases)",
+        "AnnualCreditReport.com is the only federally authorized source for free reports under federal law"
+      ]
+    }
+  },
+  {
+    "format": "carousel",
+    "pillar": "credit scores and debt payoff",
+    "idea_angle": "Avalanche vs snowball run on the same three debts with $200 extra/month: avalanche saves ~$106 but snowball gives a first win 12 months sooner.",
+    "script": {
+      "title": "Avalanche vs snowball, with real math",
+      "hook": "Same three debts, same $200 extra a month. The two methods differ by about $106.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "Avalanche vs snowball gets argued online like a sport. Here's the actual math on the same three debts.",
+          "on_screen_text": "Avalanche vs snowball: the real math",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing between a snowball and a small mountain with a rolling rock. No text, no logos, no real people."
+        },
+        {
+          "heading": "The debts",
+          "narration": "Store card: $900 at 18 percent, credit card: $4,200 at 27 percent, personal loan: $6,500 at 9 percent. Minimums total $350, plus $200 extra each month.",
+          "on_screen_text": "$900 · $4,200 · $6,500 + $200 extra",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three stacks of different heights each with a small tag shape. No text, no logos, no real people."
+        },
+        {
+          "heading": "Avalanche",
+          "narration": "Put the extra on the highest interest rate first: the 27 percent card. Then the next highest.",
+          "on_screen_text": "Avalanche: highest rate first",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a rock rolling down from the tallest peak. No text, no logos, no real people."
+        },
+        {
+          "heading": "Snowball",
+          "narration": "Put the extra on the smallest balance first: the $900 store card. Then the next smallest.",
+          "on_screen_text": "Snowball: smallest balance first",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small snowball growing as it rolls. No text, no logos, no real people."
+        },
+        {
+          "heading": "Result",
+          "narration": "Both finish in about 25 months. Avalanche pays about $1,850 in interest, snowball about $1,950. A difference of roughly $106.",
+          "on_screen_text": "Avalanche saves ~$106 here",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two finish flags at the same distance, one coin pile slightly larger. No text, no logos, no real people."
+        },
+        {
+          "heading": "The twist",
+          "narration": "Snowball clears its first debt in month 5. Avalanche's first payoff comes around month 17. That's a long time to wait for a win.",
+          "on_screen_text": "Snowball's first win: month 5 vs 17",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes celebrating early with confetti on a calendar. No text, no logos, no real people."
+        },
+        {
+          "heading": "How to choose",
+          "narration": "With big rate gaps or large balances, avalanche usually saves more. If you need early momentum to stay consistent, snowball's small extra cost can be worth it.",
+          "on_screen_text": "Big rate gap → avalanche",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance scale with a coin on one side and a small trophy on the other. No text, no logos, no real people."
+        },
+        {
+          "heading": "The real rule",
+          "narration": "Either method beats minimum payments only. Paying minimums alone on these same debts takes about 46 months and roughly $4,300 in interest.",
+          "on_screen_text": "Any plan beats minimums",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a long winding road next to a short straight one. No text, no logos, no real people."
+        },
+        {
+          "heading": "Save this",
+          "narration": "Save this and plug in your own numbers before you pick.",
+          "on_screen_text": "Save this. Run your numbers.",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes with a calculator and a bookmark ribbon. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Save this and run your own numbers. Follow for one money move a week.",
+      "caption": "Same debts ($900 at 18%, $4,200 at 27%, $6,500 at 9%), same $200 extra per month:\nAvalanche: ~25 months, ~$1,850 interest, first debt gone month 17\nSnowball: ~25 months, ~$1,950 interest, first debt gone month 5\nMinimums only: ~46 months, ~$4,300 interest\n\nPick the one you'll stick with. The math gap is often smaller than the internet makes it sound.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "debtavalanche",
+        "debtsnowball",
+        "debtpayoff",
+        "creditcarddebt",
+        "debtfreejourney",
+        "moneymath",
+        "moneymadesimple"
+      ],
+      "description": "Avalanche vs snowball on the same three debts with $200 extra per month: total interest, payoff time and when the first debt disappears.",
+      "thumbnail_text": "Avalanche vs snowball",
+      "sources": [
+        "https://www.consumerfinance.gov/about-us/blog/how-to-reduce-your-debt/",
+        "https://www.consumerfinance.gov/consumer-tools/debt-collection/"
+      ],
+      "claims_to_verify": [
+        "Simulation (monthly compounding, minimums $30/$110/$210 + $200 extra): avalanche 25 months, $1,848 interest, first payoff month 17; snowball 25 months, $1,954 interest, first payoff month 5; minimums only 46 months, $4,326 interest",
+        "Debts and rates are hypothetical illustrations"
+      ]
+    }
+  },
+  {
+    "format": "carousel",
+    "pillar": "money apps and tools, honestly compared",
+    "idea_angle": "Budgeting app vs spreadsheet vs notebook compared on cost, effort, accuracy and what breaks, with a 'who it fits' verdict for each.",
+    "script": {
+      "title": "App vs spreadsheet vs notebook",
+      "hook": "The best budgeting tool is the one you'll open next month. Here's an honest comparison.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "The best budgeting tool is the one you'll still open next month. Here's an honest comparison of the three options.",
+          "on_screen_text": "App, spreadsheet or notebook?",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes looking at a phone, a laptop and a paper notebook on a table. No text, no logos, no real people."
+        },
+        {
+          "heading": "Apps: pros",
+          "narration": "Budgeting apps can pull in transactions automatically and categorize them. Least manual work, good for busy people.",
+          "on_screen_text": "Apps: automatic, low effort",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with small gear shapes and arrows flowing in. No text, no logos, no real people."
+        },
+        {
+          "heading": "Apps: cons",
+          "narration": "Most good ones charge a subscription. Bank connections break sometimes. And free apps can shut down: Mint closed in 2024.",
+          "on_screen_text": "Apps: subscriptions, sync issues",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a small broken chain link icon. No text, no logos, no real people."
+        },
+        {
+          "heading": "Spreadsheets: pros",
+          "narration": "Free or cheap, fully customizable, and you own the data. Typing in transactions forces you to notice them.",
+          "on_screen_text": "Spreadsheets: free and flexible",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop showing a simple grid of colored cells (no text). No text, no logos, no real people."
+        },
+        {
+          "heading": "Spreadsheets: cons",
+          "narration": "Manual entry takes about ten minutes a week. Skip two weeks and catching up feels awful.",
+          "on_screen_text": "Spreadsheets: needs a weekly habit",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a growing pile of paper receipts beside a laptop. No text, no logos, no real people."
+        },
+        {
+          "heading": "Notebook: pros",
+          "narration": "Zero setup, zero tech, very visible. Great for a weekly cash or spending number.",
+          "on_screen_text": "Notebook: simplest possible",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an open notebook with simple lines and a pencil. No text, no logos, no real people."
+        },
+        {
+          "heading": "Notebook: cons",
+          "narration": "No math done for you, no history, and it's hard to see trends across months.",
+          "on_screen_text": "Notebook: no trends, no math",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a notebook with pages fluttering away. No text, no logos, no real people."
+        },
+        {
+          "heading": "Who it fits",
+          "narration": "Hate manual work: app. Want control and no subscription: spreadsheet. Just starting and want one weekly number: notebook.",
+          "on_screen_text": "Pick by personality, not features",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three paths leading to the phone, the laptop and the notebook. No text, no logos, no real people."
+        },
+        {
+          "heading": "Save this",
+          "narration": "Save this. If you choose the spreadsheet route, The 20-Minute Budget template in our bio does the setup for you.",
+          "on_screen_text": "Save this before you pick",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to a bookmark ribbon. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Save this before you pick a tool. Follow for one money move a week.",
+      "caption": "App: automatic, low effort, usually a subscription, sync can break.\nSpreadsheet: free, flexible, you own the data, needs ~10 min/week.\nNotebook: simplest, but no math or trends.\n\nPick based on what you'll actually keep doing, not on features.\n\nGoing the spreadsheet route? The 20-Minute Budget template (Notion + Sheets) is in the link in bio. It's our own product.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "budgetingapp",
+        "budgetspreadsheet",
+        "budgettemplate",
+        "moneyapps",
+        "budgetingforbeginners",
+        "notiontemplate",
+        "moneymadesimple"
+      ],
+      "description": "An honest comparison of budgeting apps, spreadsheets and notebooks: cost, effort, what breaks, and who each fits.",
+      "thumbnail_text": "App vs sheet vs paper",
+      "sources": [
+        "https://www.consumerfinance.gov/about-us/blog/budgeting-how-to-create-a-budget-and-stick-with-it/",
+        "https://www.consumerfinance.gov/personal-financial-data-rights/"
+      ],
+      "claims_to_verify": [
+        "Intuit shut down the Mint budgeting app in 2024 (March 2024)",
+        "Most full-featured budgeting apps charge a subscription (general statement; no specific prices quoted)",
+        "Spreadsheet upkeep of ~10 minutes/week is an estimate"
+      ]
+    }
+  },
+  {
+    "format": "carousel",
+    "pillar": "money apps and tools, honestly compared",
+    "idea_angle": "Opening a first brokerage/IRA account screen by screen, including the step people miss: money sits in cash until you actually buy.",
+    "script": {
+      "title": "Opening your first investment account",
+      "hook": "Lots of people 'invest' for a year and later find their money sitting in cash.",
+      "segments": [
+        {
+          "heading": "Hook",
+          "narration": "A surprising number of people deposit money into an investment account and never actually buy anything. Here's every screen, so that's not you.",
+          "on_screen_text": "Deposited isn't the same as invested",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes looking puzzled at a jar of coins sitting next to an unopened basket. No text, no logos, no real people."
+        },
+        {
+          "heading": "Pick the account type",
+          "narration": "For retirement, a Roth or Traditional IRA. For other long-term goals, an individual taxable brokerage account. You can have both.",
+          "on_screen_text": "Step 1: IRA or taxable account",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two doors, one with a palm tree icon and one with a house icon. No text, no logos, no real people."
+        },
+        {
+          "heading": "Your details",
+          "narration": "You'll be asked for your Social Security number, address, date of birth and employment info. That's normal; brokerages are required to verify identity.",
+          "on_screen_text": "Step 2: SSN and ID checks are normal",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an ID card shape with a blank photo square and a checkmark. No text, no logos, no real people."
+        },
+        {
+          "heading": "Trusted contact",
+          "narration": "You'll often be asked for a trusted contact. It's optional, and it lets the firm reach someone if they suspect fraud or can't reach you.",
+          "on_screen_text": "Step 3: trusted contact (optional)",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two simple speech bubble shapes connected by a dotted line. No text, no logos, no real people."
+        },
+        {
+          "heading": "Link your bank",
+          "narration": "Connect your checking account and transfer money in. Transfers can take a few business days to settle.",
+          "on_screen_text": "Step 4: link bank, transfer",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bridge carrying coins from a bank building to a basket. No text, no logos, no real people."
+        },
+        {
+          "heading": "The step people miss",
+          "narration": "Your deposit usually lands in a cash or money market position. You have to actually place an order for the fund you chose.",
+          "on_screen_text": "Step 5: actually buy the fund",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes pressing a big buy button with a basket icon. No text, no logos, no real people."
+        },
+        {
+          "heading": "Automate",
+          "narration": "Set up a recurring transfer and, where offered, automatic investing into that fund. Check the account a month later to confirm it bought.",
+          "on_screen_text": "Step 6: automate and confirm",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a looping arrow around a calendar and basket. No text, no logos, no real people."
+        },
+        {
+          "heading": "Protection",
+          "narration": "SIPC protects up to $500,000, including up to $250,000 in cash, if a member brokerage fails. It does not protect against investments losing value.",
+          "on_screen_text": "SIPC covers firm failure, not losses",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an umbrella over a basket while a gentle wavy line moves below. No text, no logos, no real people."
+        },
+        {
+          "heading": "Save this",
+          "narration": "Save this and keep it open while you sign up.",
+          "on_screen_text": "Save this for sign-up day",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to a bookmark ribbon. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Save this for sign-up day. Follow for one money move a week.",
+      "caption": "Opening your first investment account:\n1. Choose IRA (retirement) or taxable brokerage\n2. SSN, address and employment questions are normal\n3. Trusted contact is optional but useful\n4. Link your bank and transfer\n5. Actually buy your fund: deposits usually sit in cash until you do\n6. Automate, then confirm a month later\n\nSIPC covers a member firm failing, not market losses.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "brokerageaccount",
+        "rothira",
+        "investingforbeginners",
+        "firsttimeinvestor",
+        "indexfunds",
+        "sipc",
+        "moneymadesimple"
+      ],
+      "description": "Screen-by-screen guide to opening your first IRA or brokerage account, including buying the fund after you deposit, and what SIPC does and doesn't cover.",
+      "thumbnail_text": "Did you actually invest?",
+      "sources": [
+        "https://www.sipc.org/for-investors/what-sipc-protects",
+        "https://www.investor.gov/introduction-investing/investing-basics/how-stock-markets-work/opening-brokerage-account",
+        "https://www.finra.org/investors/insights/trusted-contact"
+      ],
+      "claims_to_verify": [
+        "SIPC protection up to $500,000 per customer, including a $250,000 limit for cash, when a member broker-dealer fails; it does not cover investment losses",
+        "Brokerages are required to collect identity information (Customer Identification Program) and to ask for a trusted contact (FINRA Rule 4512), which customers may decline",
+        "Deposits typically go to a cash sweep or money market settlement fund until an order is placed (varies by broker)"
+      ]
+    }
+  },
+  {
+    "format": "long",
+    "pillar": "first-time investing basics (index funds, retirement accounts)",
+    "idea_angle": "A start-to-finish walkthrough for investing $100/month from age 25: order of operations, account choice, fund choice, automation, and surviving the first downturn.",
+    "script": {
+      "title": "How to start investing with $100 a month (complete beginner walkthrough)",
+      "hook": "A hundred dollars a month doesn't sound like investing. Over forty years, it can quietly become one of the biggest things you own.",
+      "segments": [
+        {
+          "heading": "Intro",
+          "narration": "A hundred dollars a month doesn't sound like investing. It sounds like a phone bill. But money invested in your twenties gets the one thing nobody can buy later: time. In this video we'll go from zero to an automated investing setup, in the order that actually makes sense. What to do before you invest, which account to open, what to buy inside it, how to automate it, and what to do the first time the market drops and your balance turns red. No individual company bets, no predictions, and no promises about returns. Just the setup that most people wish someone had shown them at twenty-two.",
+          "on_screen_text": "Investing $100 a month, start to finish",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing at the start of a long, gently winding garden path at sunrise. No text, no logos, no real people."
+        },
+        {
+          "heading": "Why time matters",
+          "narration": "Here's a hypothetical to show the shape of it. Invest $100 a month for forty years, and assume an average of seven percent a year. You'd put in $48,000, and the account would be worth roughly $262,000. Start ten years later, same $100, same assumption, and you'd put in $36,000 and end up around $122,000. Ten fewer years cost more than half the result, because the growth in the final decades is growth on growth. Real markets don't deliver a smooth seven percent, and returns aren't promised. But the lesson holds: starting small and early usually beats starting big and late.",
+          "on_screen_text": "40 years ≈ $262k · 30 years ≈ $122k",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two coin trees, one planted earlier and much taller than the other, same-size watering cans. No text, no logos, no real people."
+        },
+        {
+          "heading": "Before you invest",
+          "narration": "Two things come first. One: a starter emergency fund, even just $1,000 in a separate savings account, so a car repair doesn't land on a credit card. Two: deal with high-interest debt. If a credit card charges twenty-plus percent, paying it down is a known return of that rate, which is very hard to beat with investing. Lower-rate debt, like many federal student loans, is different; plenty of people invest while paying those on schedule. The order isn't moral. It's math: protect against surprises, kill the expensive debt, then grow.",
+          "on_screen_text": "Starter fund, then expensive debt",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three stepping stones: a small jar, a broken chain, then a sprouting plant. No text, no logos, no real people."
+        },
+        {
+          "heading": "Step one: the match",
+          "narration": "If your employer offers a 401(k) match, that's usually the first place your money goes. A common formula is a fifty percent match on contributions up to six percent of pay. On a $45,000 salary, contributing six percent is $2,700 a year, and the employer adds $1,350. That's an immediate fifty percent on that money before any market movement. Log into your benefits portal, find the match formula, and set your contribution to at least that level. Also check the vesting schedule, which says how long you need to stay before the employer's money is fully yours. Your own contributions are always yours.",
+          "on_screen_text": "Get the full 401(k) match first",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two jars pouring into one larger jar, a small gift bow on the second stream. No text, no logos, no real people."
+        },
+        {
+          "heading": "Step two: the Roth IRA",
+          "narration": "No match, or already getting it? A Roth IRA is a strong next step for many people early in their careers. You contribute money you've already paid tax on, it grows, and qualified withdrawals in retirement are tax-free. The 2026 limit is $7,500 if you're under fifty, so $100 a month, or $1,200 a year, fits easily. You need earned income, and there are income limits, so check the IRS page for the current numbers. You open a Roth IRA at a brokerage, not at your job, and it takes about fifteen minutes online.",
+          "on_screen_text": "Then a Roth IRA",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes opening a small door in a garden wall with a sun icon above it. No text, no logos, no real people."
+        },
+        {
+          "heading": "What to buy",
+          "narration": "This is where people freeze, so keep it boring. Two simple options. A target-date index fund with a year near when you'd turn sixty-five: one fund that holds stocks and bonds and gets more conservative over time. Or a broad total-market or S&P 500 index fund, which spreads your money across hundreds or thousands of companies. Either way, look up the expense ratio. Broad index funds from large providers often charge a few hundredths of a percent a year. If a fund charges one percent or more for the same kind of index exposure, keep looking. One or two funds is plenty. You don't need a collection.",
+          "on_screen_text": "Keep it boring: one or two index funds",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single basket holding a mosaic of tiny squares, beside a small price tag. No text, no logos, no real people."
+        },
+        {
+          "heading": "Automate it",
+          "narration": "Now remove yourself from the process. Set an automatic transfer of $100 from checking to your IRA the day after payday. Then, if your brokerage offers it, set automatic investing into your chosen fund, so the cash doesn't just sit there. That last part matters: depositing money and buying a fund are two different steps, and plenty of people discover months later that their money was parked in cash. After the first month, open the account and confirm you see shares of the fund, not just a cash balance. Then stop checking every day. Once a month is plenty.",
+          "on_screen_text": "Automate transfer AND purchase",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gentle conveyor belt carrying coins from a wallet into a basket. No text, no logos, no real people."
+        },
+        {
+          "heading": "Your first downturn",
+          "narration": "At some point your balance will drop, maybe a lot. Broad stock markets have fallen twenty percent or more several times in recent decades, and they will again. When that happens, your automatic $100 is buying shares at lower prices, which is the plan working, not failing. The common mistake is selling after a drop, locking in the loss, and buying back after prices recover. Decide now, while things are calm, that you'll leave long-term money alone. If a balance drop would truly wreck you, that money probably belonged in savings, not stocks.",
+          "on_screen_text": "Drops happen. Keep buying.",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding an umbrella calmly while a wavy line dips and rises behind. No text, no logos, no real people."
+        },
+        {
+          "heading": "Growing past $100",
+          "narration": "A hundred dollars is a starting line, not a ceiling. The easiest way to grow it is to tie increases to events. Every raise, bump your contribution by half the raise. Every January, add one percent to your 401(k). When a debt is paid off, redirect that payment into investing. Many 401(k) plans offer an automatic yearly increase you can switch on in about a minute. You barely feel each step, but over a few years $100 a month can turn into $300 or $500 without a dramatic budget overhaul.",
+          "on_screen_text": "Raise it with every raise",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a staircase of coin stacks, each step slightly higher. No text, no logos, no real people."
+        },
+        {
+          "heading": "Mistakes to skip",
+          "narration": "A few traps catch beginners. Chasing whatever went up most last year; past performance doesn't predict next year. Owning eight funds that hold the same companies. Checking the app daily and reacting to noise. Pulling money out of a Roth IRA for non-emergencies, which costs you years of growth even when it's allowed. And leaving deposits uninvested in cash. None of these need special knowledge to avoid. They need a simple plan you set up once and a little patience.",
+          "on_screen_text": "Avoid the five common traps",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. five small pitfalls along a path, with the mascot walking around them on stepping stones. No text, no logos, no real people."
+        },
+        {
+          "heading": "Recap",
+          "narration": "Here's the whole thing on one screen. Build a starter emergency fund. Pay down high-interest debt. Get your full 401(k) match. Open a Roth IRA if you're eligible. Pick one or two low-cost index funds. Automate both the transfer and the purchase. Leave it alone when markets drop. Increase it whenever your income goes up. That's it. Not exciting, and that's the point. Everything here is education, not personal advice, so check the details against your own situation and the official sources in the description.",
+          "on_screen_text": "Fund · debt · match · Roth · automate",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes at the end of the garden path, looking back at a row of tidy plants. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Follow for one money move a week.",
+      "caption": "Start-to-finish: investing $100/month.\n1. Starter emergency fund\n2. Pay down high-interest debt\n3. Get the full 401(k) match\n4. Roth IRA if eligible\n5. One or two low-cost index funds\n6. Automate the transfer AND the purchase\n7. Don't sell in downturns\n8. Increase with every raise\n\nHypothetical: $100/month for 40 years at 7%/yr ≈ $262k from $48k contributed. Returns aren't promised; markets go down too.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "investingforbeginners",
+        "rothira",
+        "401k",
+        "indexfunds",
+        "compoundinterest",
+        "moneyin20s",
+        "retirementsavings",
+        "moneymadesimple"
+      ],
+      "description": "Everything you need to start investing with $100 a month, in the right order: emergency fund, high-interest debt, 401(k) match, Roth IRA, choosing a low-cost index fund, automation, and handling your first market drop.\n\nChapters\n0:00 Investing $100 a month\n0:40 Why time matters\n1:25 Before you invest\n2:05 Step one: the match\n2:55 Step two: the Roth IRA\n3:35 What to buy\n4:25 Automate it\n5:05 Your first downturn\n5:45 Growing past $100\n6:20 Mistakes to skip\n6:55 Recap\n\nExamples are hypothetical and for education only; returns are not promised. Not financial advice.\n\nSources: irs.gov (Roth IRA and IRA limits), investor.gov (compound interest calculator, index funds), irs.gov (vesting).",
+      "thumbnail_text": "$100/month, done right",
+      "sources": [
+        "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator",
+        "https://www.irs.gov/retirement-plans/roth-iras",
+        "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits",
+        "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-vesting",
+        "https://www.investor.gov/introduction-investing/investing-basics/glossary/index-funds",
+        "https://www.sipc.org/for-investors/what-sipc-protects"
+      ],
+      "claims_to_verify": [
+        "$100/month for 40 years at 7%/yr (monthly compounding) ≈ $262,481 from $48,000 contributed; 30 years ≈ $121,997 from $36,000",
+        "2026 IRA contribution limit $7,500 for under 50",
+        "Roth IRA requires taxable compensation; MAGI income limits apply",
+        "Common 401(k) match example: 50% up to 6%; $45,000 × 6% = $2,700, match $1,350",
+        "Employee 401(k) contributions are always 100% vested",
+        "Broad US stock market has declined 20%+ multiple times in recent decades (e.g., 2000–02, 2008–09, 2020, 2022)",
+        "Broad index funds from large providers often charge a few hundredths of a percent"
+      ]
+    }
+  },
+  {
+    "format": "long",
+    "pillar": "budgeting systems that actually stick",
+    "idea_angle": "A day-by-day 30-day reset for a 20-something who feels behind: see the numbers, fix fixed costs, set a weekly number, triage debt, start the fund, protect credit.",
+    "script": {
+      "title": "Feel behind on money? A 30-day reset plan",
+      "hook": "Feeling behind with money is common. The fix isn't a dramatic overhaul. It's thirty days of small, specific moves.",
+      "segments": [
+        {
+          "heading": "Intro",
+          "narration": "If you feel behind on money, you're in big company. Maybe friends seem to have savings, investments, a plan, and you've got a vague sense of dread every time you open your banking app. Here's the thing: 'behind' usually isn't a number problem first. It's a visibility problem. You can't fix what you avoid looking at. So this is a thirty-day reset. Each week has a focus, and each day's task takes under thirty minutes. By day thirty, you'll know your numbers, have a spending system, a debt plan, a starter emergency fund under way, and a retirement account switched on.",
+          "on_screen_text": "A 30-day money reset",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing at the bottom of a short, friendly staircase with four landings. No text, no logos, no real people."
+        },
+        {
+          "heading": "Days 1–3: see it all",
+          "narration": "Day one: list every account. Checking, savings, every credit card, student loans, car loan, buy-now-pay-later plans, retirement accounts from old jobs. Day two: write the balance and interest rate next to each one. Day three: subtract what you owe from what you have. That number is your net worth, and in your twenties it's often negative, especially with student loans. That's okay. It's a starting point, not a grade. The goal of these three days is only this: no more mystery. Most people find the real number is less scary than the fog they'd been carrying around.",
+          "on_screen_text": "Days 1–3: list every account",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tidy table covered with simple account cards laid out in a row. No text, no logos, no real people."
+        },
+        {
+          "heading": "Days 4–7: watch, don't change",
+          "narration": "For the next four days, just track spending. Every purchase, written down or screenshotted, no changes yet. You're collecting real data instead of guessing. On day seven, also pull your free credit reports from AnnualCreditReport.com, the official site, and skim them for accounts you don't recognize or late payments that look wrong. Your report is the raw material for your credit score, and errors do happen. Reading it takes twenty minutes and costs nothing. End the week with a short note: what surprised you most?",
+          "on_screen_text": "Days 4–7: track and check reports",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small notebook filling with simple icons: coffee cup, bus, grocery bag. No text, no logos, no real people."
+        },
+        {
+          "heading": "Week 2: shrink fixed costs",
+          "narration": "Week two is about fixed costs, because cutting one recurring bill pays off every month without any willpower. Day eight: do a subscription audit. Search ninety days of statements for recurring charges and cancel anything you forgot existed. Day nine: call or chat with your phone carrier and car insurer and ask what lower plans or discounts exist. Quotes from two competitors give you leverage. Day ten: set up two checking accounts, one for bills that's auto-funded on payday, and one for everything else. Fixed costs handled once can stay handled.",
+          "on_screen_text": "Week 2: cut recurring costs once",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pair of scissors trimming a long chain of small recurring loops. No text, no logos, no real people."
+        },
+        {
+          "heading": "Week 2: one weekly number",
+          "narration": "Day eleven: take your take-home pay, subtract fixed bills, subtract what you want to save, and what's left is flexible spending. Multiply that monthly amount by twelve and divide by fifty-two. That's your weekly spending number. Day twelve: move that amount to your spending account every Monday. Day thirteen and fourteen: live on it and notice what happens. Most people overspend in a predictable place, like delivery or weekend plans. You don't have to be perfect. You just need one number that tells you, mid-week, whether you're fine.",
+          "on_screen_text": "Week 2: one weekly spending number",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes refilling a small wallet on a Monday morning. No text, no logos, no real people."
+        },
+        {
+          "heading": "Week 3: a debt plan",
+          "narration": "Day fifteen: put all debts in a list from highest interest rate to lowest. Day sixteen: turn on autopay for at least the minimum on every single one, so you never miss a payment, since payment history is the biggest factor in most credit scores. Day seventeen: choose a method for extra money. Avalanche, highest rate first, saves the most interest. Snowball, smallest balance first, gets faster wins. Either beats paying minimums only. For federal student loans, use the Loan Simulator on studentaid.gov to see repayment plans that fit your income, because the options have changed recently.",
+          "on_screen_text": "Week 3: autopay minimums, pick a method",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a row of chain links, the first one opening, a calendar with autopay loop arrows. No text, no logos, no real people."
+        },
+        {
+          "heading": "Week 3: start the cushion",
+          "narration": "Days eighteen to twenty-one: open a separate savings account for emergencies at an insured bank or credit union. High-yield savings accounts often pay far more interest than a standard account at a big bank; check that it's FDIC or NCUA insured and has no monthly fee. Then set an automatic transfer, even $25 a week. The first goal is $1,000. The long-term goal is three to six months of essential expenses. This fund is what stops the next surprise from becoming new credit card debt, which is how a lot of people stay stuck.",
+          "on_screen_text": "Week 3: start a $1,000 cushion",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar under an umbrella, slowly filling with a steady drip of coins. No text, no logos, no real people."
+        },
+        {
+          "heading": "Week 4: switch on retirement",
+          "narration": "Day twenty-two: log into your benefits portal. If there's a 401(k) match, set your contribution to at least the amount that gets the full match. Day twenty-three: track down old 401(k)s from previous jobs and make sure you know where they are. Days twenty-four and twenty-five: if you have no workplace plan, or already get the match, look at opening a Roth IRA, and choose a low-cost target-date or broad index fund inside it. Even $50 a month counts. You're not trying to catch up in one month. You're making sure time starts working on your side.",
+          "on_screen_text": "Week 4: match first, then IRA",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small seedling being planted in a pot beside a watering can. No text, no logos, no real people."
+        },
+        {
+          "heading": "Week 4: protect what you built",
+          "narration": "Days twenty-six and twenty-seven: freeze your credit at Equifax, Experian and TransUnion. It's free, doesn't affect your score, and you can lift it temporarily when you apply for something. Day twenty-eight: set up three alerts in your bank and card apps: low balance, large transaction, and payment due five days ahead. Day twenty-nine: write down where every account lives and store passwords in a password manager. Protection isn't exciting, but one stolen identity or missed payment can undo months of progress.",
+          "on_screen_text": "Week 4: freeze credit, set alerts",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes placing a snowflake-shaped lock on a filing cabinet, small bells on a shelf. No text, no logos, no real people."
+        },
+        {
+          "heading": "Day 30: your first money date",
+          "narration": "Day thirty: do your first monthly money date. Twenty minutes. Open every account, compare this month's spending to your weekly number, adjust next month, and choose one new move. Then rerun your net worth from day three. It might have barely moved, and that's fine. What changed is that you now have systems: bills that pay themselves, a number to spend, a debt plan on autopay, a cushion that's growing and retirement money that's invested. Feeling behind fades when you can see the system working.",
+          "on_screen_text": "Day 30: first monthly money date",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes at a cafe table with a timer and a coffee, smiling at a simple chart. No text, no logos, no real people."
+        },
+        {
+          "heading": "Recap",
+          "narration": "Here's the thirty days in one breath. Week one: list every account and track spending without judging. Week two: cut recurring costs, split your accounts and set a weekly spending number. Week three: autopay every minimum, pick a payoff method and start a separate emergency fund. Week four: get your 401(k) match, consider a Roth IRA, freeze your credit and turn on alerts. Then a twenty-minute money date every month. Comparing yourself to other people's highlight reels won't move your numbers. These steps will. And if you slip for a week, you don't restart from zero; you just pick up at the next day on the list.",
+          "on_screen_text": "See it · simplify · plan · protect",
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing on the top landing of the staircase, waving. No text, no logos, no real people."
+        }
+      ],
+      "cta": "Follow for one money move a week.",
+      "caption": "Feel behind? A 30-day reset:\nWeek 1: list every account, track spending, check your credit reports\nWeek 2: cut recurring costs, split checking, set a weekly spending number\nWeek 3: autopay minimums, choose avalanche or snowball, start a $1,000 cushion\nWeek 4: get the 401(k) match, consider a Roth IRA, freeze credit, set alerts\nDay 30: your first 20-minute money date\n\nThe high-yield savings account in our link in bio is an affiliate link: we may earn a commission if you open and fund an account, at no extra cost to you. Compare rates and terms yourself first.\n\nWant this set up for you? The 20-Minute Budget template (Notion + Sheets) is in the link in bio.\n\nFollow for one money move a week.",
+      "hashtags": [
+        "moneyreset",
+        "budgetingforbeginners",
+        "debtpayoff",
+        "emergencyfund",
+        "financialwellness",
+        "moneyin20s",
+        "budgettemplate",
+        "moneymadesimple"
+      ],
+      "description": "A practical 30-day plan for anyone who feels behind on money: see your numbers, cut fixed costs, set a weekly spending number, build a debt plan, start an emergency fund, switch on retirement savings, and protect your credit.\n\nChapters\n0:00 A 30-day money reset\n0:40 Days 1–3: see it all\n1:25 Days 4–7: watch, don't change\n2:05 Week 2: shrink fixed costs\n2:50 Week 2: one weekly number\n3:35 Week 3: a debt plan\n4:20 Week 3: start the cushion\n5:05 Week 4: switch on retirement\n5:50 Week 4: protect what you built\n6:30 Day 30: your first money date\n7:10 Recap\n\nEducation only, not financial advice. Links in bio include an affiliate link (high-yield savings) and our own budget template.",
+      "thumbnail_text": "Behind? 30-day reset",
+      "sources": [
+        "https://www.annualcreditreport.com",
+        "https://studentaid.gov/loan-simulator/",
+        "https://www.fdic.gov/resources/deposit-insurance",
+        "https://consumer.ftc.gov/articles/what-know-about-credit-freezes-fraud-alerts",
+        "https://www.myfico.com/credit-education/whats-in-your-credit-score",
+        "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+        "https://www.irs.gov/retirement-plans/roth-iras"
+      ],
+      "claims_to_verify": [
+        "Free weekly credit reports at AnnualCreditReport.com",
+        "Payment history is the largest factor in FICO scores (about 35%)",
+        "Federal student loan repayment options changed under 2025 legislation; Loan Simulator reflects current plans (verify wording is current as of posting)",
+        "Credit freezes are free and don't affect scores",
+        "Emergency fund guidance of 3–6 months of essential expenses",
+        "High-yield savings accounts often pay well above big-bank standard savings rates (check FDIC national rate)"
+      ]
+    }
+  }
+]

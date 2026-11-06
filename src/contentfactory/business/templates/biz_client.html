@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% block title %}{{ client.name }}{% endblock %}
+{% block content %}
+{% include "biz_nav.html" %}
+<p><a href="/business/clients">&larr; Clients</a></p>
+<h1>{{ client.name }}
+  <span class="badge {{ 'badge-ok' if client.status == 'won' else 'badge-block' if client.status in ('lost', 'churned') else 'badge-warn' }}">{{ client.status }}</span>
+  {% if client.meta.opted_out %}<span class="badge badge-block">opted out</span>{% endif %}
+</h1>
+<p class="muted">
+  {% if client.contact_name %}{{ client.contact_name }} · {% endif %}
+  {% if client.email %}{{ client.email }} · {% endif %}
+  {% if client.website %}<a href="{{ client.website if client.website.startswith('http') else 'https://' ~ client.website }}" rel="noopener" target="_blank">{{ client.website }}</a> · {% endif %}
+  {% if client.niche %}{{ client.niche }} · {% endif %}paid to date {{ revenue_cents|money }}
+</p>
+
+<div class="grid">
+  <div class="card">
+    <h2>Status</h2>
+    <form method="post" action="/business/clients/{{ client.id }}/status">
+      <div class="form-row"><select name="status">{% for s in statuses %}<option value="{{ s }}" {{ 'selected' if s == client.status }}>{{ s }}</option>{% endfor %}</select></div>
+      <div class="form-row"><input type="text" name="note" placeholder="Note (optional)"></div>
+      <div class="form-row"><label>Next follow-up <input type="date" name="follow_up" value="{{ client.meta.next_follow_up or '' }}"></label></div>
+      <button class="btn btn-primary">Update</button>
+    </form>
+    <form method="post" action="/business/clients/{{ client.id }}/note" style="margin-top:14px">
+      <div class="form-row"><textarea name="text" rows="2" placeholder="Add a note"></textarea></div>
+      <button class="btn">Add note</button>
+    </form>
+    <h3>Notes</h3>
+    <pre class="email">{{ client.notes or "No notes yet." }}</pre>
+    {% if client.meta.history %}
+    <details><summary class="muted">History</summary>
+      <ul>{% for h in client.meta.history %}<li>{{ h.at }}: {{ h.get('from', '') }} &rarr; {{ h.status }}</li>{% endfor %}</ul>
+    </details>
+    {% endif %}
+  </div>
+
+  <div class="card">
+    <h2>Pitch draft</h2>
+    {% if draft %}
+      <p><strong>{{ draft.subject }}</strong> <span class="muted">({{ draft.created_at }}{% if draft.exported %}, exported{% endif %})</span></p>
+      <pre class="email">{{ draft.body }}</pre>
+      <details><summary>Follow-up</summary><pre class="email">{{ draft.follow_up }}</pre></details>
+    {% else %}
+      <p class="muted">No draft yet.</p>
+    {% endif %}
+    <form method="post" action="/business/clients/{{ client.id }}/pitch" class="inline-form"><button class="btn btn-primary">{{ 'Redraft' if draft else 'Draft pitch' }}</button></form>
+    {% if not client.meta.opted_out %}
+    <form method="post" action="/business/clients/{{ client.id }}/optout" class="inline-form"><button class="btn">Record opt-out</button></form>
+    {% endif %}
+    <p class="muted">Drafts only. Send from your own mail client after reviewing.</p>
+
+    <details style="margin-top:12px"><summary>Edit details</summary>
+      <form method="post" action="/business/clients/{{ client.id }}/update">
+        {% for field in ["name", "contact_name", "email", "website", "niche"] %}
+        <div class="form-row"><label>{{ field.replace('_', ' ')|capitalize }} <input type="text" name="{{ field }}" value="{{ client[field] or '' }}"></label></div>
+        {% endfor %}
+        <button class="btn">Save</button>
+      </form>
+    </details>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Orders</h2>
+  {% if orders %}
+  <table class="table">
+    <tr><th>#</th><th>Package</th><th>Price</th><th>Status</th><th>Due</th><th></th></tr>
+    {% for o in orders %}
+    <tr>
+      <td>{{ o.id }}</td><td>{{ o.package }}</td><td>{{ o.price_cents|money }}</td>
+      <td><span class="badge {{ 'badge-ok' if o.status == 'paid' else 'badge-block' if o.status == 'cancelled' else 'badge-warn' }}">{{ o.status }}</span></td>
+      <td>{{ o.due_date or '' }}</td>
+      <td>
+        <form method="post" action="/business/orders/{{ o.id }}/status" class="inline-form">
+          <input type="hidden" name="back" value="/business/clients/{{ client.id }}">
+          <select name="status">{% for s in order_statuses %}<option {{ 'selected' if s == o.status }}>{{ s }}</option>{% endfor %}</select>
+          <button class="btn">Set</button>
+        </form>
+        <form method="post" action="/business/orders/{{ o.id }}/invoice" class="inline-form"><button class="btn">Invoice</button></form>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}<p class="muted">No orders yet.</p>{% endif %}
+
+  <h3>New order</h3>
+  <form method="post" action="/business/clients/{{ client.id }}/orders">
+    <div class="form-row">
+      <select name="package">{% for key, p in packages.items() %}<option value="{{ key }}">{{ p.name }}: {{ p.price_cents|money }}{{ '/mo' if p.recurring }} ({{ p.videos }} videos)</option>{% endfor %}</select>
+    </div>
+    <div class="form-row">
+      {% for key, a in addons.items() if key != 'rush' %}
+      <label style="display:inline-block;margin-right:12px"><input type="checkbox" name="addons" value="{{ key }}"> {{ a.name }} (+{{ a.price_cents|money }}{{ '/video' if a.per_video }})</label>
+      {% endfor %}
+      <label style="display:inline-block"><input type="checkbox" name="rush" value="1"> Rush (+{{ addons['rush'].percent }}%)</label>
+    </div>
+    <div class="form-row"><input type="text" name="product" placeholder="Product to feature"></div>
+    <div class="form-row"><textarea name="notes" rows="2" placeholder="Brief notes"></textarea></div>
+    <button class="btn btn-primary">Create order</button>
+  </form>
+</div>
+
+<div class="card">
+  <h2>Invoices</h2>
+  {% if invoices %}
+  <table class="table">
+    <tr><th>Number</th><th>Total</th><th>Status</th><th>Due</th><th></th></tr>
+    {% for i in invoices %}
+    <tr>
+      <td><a href="/business/invoices/{{ i.id }}" target="_blank">{{ i.number }}</a></td>
+      <td>{{ i.total_cents|money(i.currency) }}</td>
+      <td><span class="badge {{ 'badge-ok' if i.status == 'paid' else 'badge-block' if i.status == 'void' else 'badge-warn' }}">{{ i.status }}</span></td>
+      <td>{{ i.due_at or '' }}</td>
+      <td>
+        {% for action in (["sent", "paid", "void"] if i.status in ("draft", "sent") else []) + ["save"] %}
+        <form method="post" action="/business/invoices/{{ i.id }}/{{ action }}" class="inline-form">
+          <input type="hidden" name="back" value="/business/clients/{{ client.id }}">
+          <button class="btn {{ 'btn-primary' if action == 'paid' }}">{{ {'sent': 'Mark sent', 'paid': 'Mark paid', 'void': 'Void', 'save': 'Save HTML/PDF'}[action] }}</button>
+        </form>
+        {% endfor %}
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}<p class="muted">No invoices yet. Create one from an order.</p>{% endif %}
+</div>
+{% endblock %}

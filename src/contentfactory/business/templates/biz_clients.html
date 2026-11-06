@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Clients{% endblock %}
+{% block content %}
+{% include "biz_nav.html" %}
+<h1>UGC clients</h1>
+<p class="muted">Pipeline for the AI UGC ad service. Outreach is drafts only: export them, review, and send from your own mail client.</p>
+
+{% if due %}
+<div class="card">
+  <h2>Follow-ups due ({{ due|length }})</h2>
+  <table class="table">
+    <tr><th>Client</th><th>Status</th><th>Due</th></tr>
+    {% for c in due %}
+    <tr><td><a href="/business/clients/{{ c.id }}">{{ c.name }}</a></td><td><span class="badge badge-warn">{{ c.status }}</span></td><td>{{ c.meta.next_follow_up }}</td></tr>
+    {% endfor %}
+  </table>
+</div>
+{% endif %}
+
+<div class="board" style="margin:16px 0">
+  {% for st in statuses %}
+  <div class="col">
+    <h3><span>{{ st }}</span><span class="muted">{{ board[st]|length }}</span></h3>
+    {% for c in board[st] %}
+    <a class="chip" href="/business/clients/{{ c.id }}">{{ c.name }}<small>{{ c.niche or c.website or c.email }}</small></a>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>
+
+<div class="grid">
+  <div class="card">
+    <h2>Add client</h2>
+    <form method="post" action="/business/clients">
+      <div class="form-row"><label>Business name <input type="text" name="name" required></label></div>
+      <div class="form-row"><label>Contact name <input type="text" name="contact_name"></label></div>
+      <div class="form-row"><label>Email <input type="text" name="email" type="email"></label></div>
+      <div class="form-row"><label>Website <input type="text" name="website"></label></div>
+      <div class="form-row"><label>Niche <input type="text" name="niche"></label></div>
+      <div class="form-row"><label>Notes <textarea name="notes" rows="2"></textarea></label></div>
+      <button class="btn btn-primary">Add</button>
+    </form>
+  </div>
+  <div class="card">
+    <h2>Import leads (CSV)</h2>
+    <p class="muted">Columns: name, website, email, niche (optional: contact_name, notes). Use contacts businesses publish themselves. Duplicates (same email or domain) are skipped.</p>
+    <form method="post" action="/business/clients/import" enctype="multipart/form-data">
+      <div class="form-row"><input type="file" name="file" accept=".csv,text/csv" required></div>
+      <button class="btn">Import</button>
+    </form>
+    <h2 style="margin-top:20px">Outreach drafts</h2>
+    <form method="post" action="/business/pitches/draft-all" class="inline-form"><button class="btn">Draft pitches for new leads</button></form>
+    <form method="post" action="/business/pitches/export" class="inline-form"><button class="btn">Export drafts (.eml + CSV)</button></form>
+    <p class="muted">Nothing is ever sent from here. Every draft includes your identity, postal address and an opt-out line (CAN-SPAM).</p>
+  </div>
+</div>
+{% endblock %}

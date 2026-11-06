@@ -80,9 +80,32 @@ class Factory:
             self.check(post_id)
         return post_id
 
+    def import_script(self, brand_slug: str, script: dict, fmt: str, pillar: str = "", angle: str = "",
+                      render: bool = True, source: str = "import") -> int:
+        """Load a hand-written or externally written script as a post for review."""
+        from .schemas import Script
+        brand = self.brand(brand_slug)
+        sc = Script.model_validate(script)
+        idea_id = self.db.insert("ideas", {"brand": brand.slug, "title": sc.title, "angle": angle,
+                                           "format": fmt, "pillar": pillar, "source": source, "status": "used"})
+        affiliate_slugs = [a.slug or a.name for a in brand.affiliates
+                           if any(k.lower() in (sc.caption + sc.title).lower() for k in a.keywords)]
+        post_id = self.db.insert("posts", {
+            "brand": brand.slug, "idea_id": idea_id, "format": fmt, "status": "scripted",
+            "title": sc.title, "script": sc.model_dump(), "caption": sc.caption, "hashtags": sc.hashtags,
+            "disclosure": brand.ai_disclosure, "meta": {"affiliate_slugs": affiliate_slugs, "llm": source,
+                                                         "human_edited": True},
+        })
+        self.db.log("post.imported", "post", post_id, {"source": source})
+        if render:
+            self.render(post_id)
+        else:
+            self.check(post_id)
+        return post_id
+
     def render(self, post_id: int) -> dict:
         from .media import render_post
-        post = self.db.get("posts", post_id)
+        post = self._post(post_id)
         brand = self.brand(post["brand"])
         try:
             assets = render_post(self.settings, brand, post)
@@ -97,7 +120,7 @@ class Factory:
         return assets
 
     def check(self, post_id: int) -> dict:
-        post = self.db.get("posts", post_id)
+        post = self._post(post_id)
         brand = self.brand(post["brand"])
         result = summarize(run_content_checks(self.db, brand, post))
         status = "blocked" if result["status"] == "block" else "in_review"
@@ -106,10 +129,16 @@ class Factory:
         self.db.update("posts", post_id, {"checks": result, "status": status})
         return result
 
+    def _post(self, post_id: int) -> dict:
+        post = self.db.get("posts", post_id)
+        if not post:
+            raise KeyError(f"No post #{post_id}")
+        return post
+
     # ------------------------------------------------------------------ review
     def edit(self, post_id: int, *, caption: str | None = None, script: dict | None = None,
              title: str | None = None, rerender: bool = False, actor: str = "human") -> None:
-        post = self.db.get("posts", post_id)
+        post = self._post(post_id)
         changes: dict = {}
         if caption is not None:
             changes["caption"] = caption
@@ -128,7 +157,7 @@ class Factory:
             self.check(post_id)
 
     def approve(self, post_id: int, actor: str = "human", notes: str = "") -> None:
-        post = self.db.get("posts", post_id)
+        post = self._post(post_id)
         if post["status"] == "blocked":
             raise PermissionError("Post is blocked by a guardrail; fix it and re-check before approving")
         if post["status"] not in ("in_review", "rendered", "scripted", "approved"):
@@ -137,6 +166,7 @@ class Factory:
         self.db.log("post.approved", "post", post_id, {"notes": notes}, actor=actor)
 
     def reject(self, post_id: int, reason: str = "", actor: str = "human") -> None:
+        self._post(post_id)
         self.db.update("posts", post_id, {"status": "rejected", "review_notes": reason})
         self.db.log("post.rejected", "post", post_id, {"reason": reason}, actor=actor)
 
@@ -144,7 +174,7 @@ class Factory:
     def schedule(self, post_id: int, platforms: list[str] | None = None,
                  at: datetime | None = None) -> list[int]:
         from .scheduler import next_slot
-        post = self.db.get("posts", post_id)
+        post = self._post(post_id)
         if post["status"] != "approved":
             raise PermissionError("Only approved posts can be scheduled")
         brand = self.brand(post["brand"])
@@ -204,6 +234,14 @@ class Factory:
             "SELECT * FROM publications WHERE status = 'queued' AND scheduled_at <= ? AND attempts < ? ORDER BY scheduled_at",
             [now.isoformat(), max_attempts])
         results = []
+        if due and not self.settings.dry_run:
+            from .publish.tokens import refresh_long_lived, refresh_tiktok_if_needed
+            try:
+                if any(p["platform"] == "tiktok" for p in due):
+                    refresh_tiktok_if_needed(self.settings)
+                refresh_long_lived(self.settings)
+            except Exception as e:  # a failed refresh surfaces as a publish error below
+                self.db.log("tokens.refresh_failed", "", None, {"error": str(e)})
         for pub in due:
             post = self.db.get("posts", pub["post_id"])
             if post["status"] not in ("scheduled", "published"):
@@ -258,7 +296,10 @@ class Factory:
         produced = []
         # Don't pile up an unreviewable queue: cap at 2 days of production.
         room = max(0, n_produce * 2 - (pending or 0))
-        for idea in top_ideas(self.db, brand, limit=min(n_produce, room)):
+        limit = min(n_produce, room)
+        queue = top_ideas(self.db, brand, limit=limit, status="approved")
+        queue += top_ideas(self.db, brand, limit=limit - len(queue), status="new") if len(queue) < limit else []
+        for idea in queue:
             try:
                 produced.append(self.produce(idea["id"]))
             except Exception as e:

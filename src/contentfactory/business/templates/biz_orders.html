@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block title %}Orders{% endblock %}
+{% block content %}
+{% include "biz_nav.html" %}
+<h1>Orders &amp; invoices</h1>
+
+<div class="card">
+  <h2>Packages</h2>
+  <table class="table">
+    <tr><th>Package</th><th>Price</th><th>Videos</th><th>Hooks/video</th><th>Revisions</th><th>Turnaround</th><th>Usage incl.</th></tr>
+    {% for key, p in packages.items() %}
+    <tr><td><strong>{{ p.name }}</strong><br><span class="muted">{{ p.description }}</span></td>
+      <td>{{ p.price_cents|money }}{{ '/mo' if p.recurring }}</td><td>{{ p.videos }}</td><td>{{ p.hooks_per_video }}</td>
+      <td>{{ p.revisions }}</td><td>{{ p.turnaround_days }} days</td><td>{{ p.usage_days }} days organic</td></tr>
+    {% endfor %}
+  </table>
+  <p class="muted">Add-ons: {% for key, a in addons.items() %}{{ a.name }} ({{ (a.percent ~ '%') if a.percent else (a.price_cents|money) ~ ('/video' if a.per_video else '') }}){{ ', ' if not loop.last }}{% endfor %}</p>
+</div>
+
+<div class="card">
+  <h2>Orders</h2>
+  <p>Filter:
+    <a href="/business/orders" class="badge {{ 'badge-ok' if not status }}">all</a>
+    {% for s in statuses %}<a href="/business/orders?status={{ s }}" class="badge {{ 'badge-ok' if s == status }}">{{ s }}</a> {% endfor %}
+  </p>
+  {% if orders %}
+  <table class="table">
+    <tr><th>#</th><th>Client</th><th>Package</th><th>Price</th><th>Status</th><th>Due</th><th>Next</th></tr>
+    {% for o in orders %}
+    <tr>
+      <td>{{ o.id }}</td>
+      <td><a href="/business/clients/{{ o.client_id }}">{{ o.client_name }}</a></td>
+      <td>{{ o.package }}{% if o.brief.product %}<br><span class="muted">{{ o.brief.product }}</span>{% endif %}</td>
+      <td>{{ o.price_cents|money }}</td>
+      <td><span class="badge {{ 'badge-ok' if o.status == 'paid' else 'badge-block' if o.status == 'cancelled' else 'badge-warn' }}">{{ o.status }}</span></td>
+      <td>{{ o.due_date or '' }}</td>
+      <td>
+        {% for nxt in flow[o.status]|sort %}
+        <form method="post" action="/business/orders/{{ o.id }}/status" class="inline-form">
+          <input type="hidden" name="status" value="{{ nxt }}"><button class="btn {{ 'btn-primary' if nxt == 'paid' }}">{{ nxt }}</button>
+        </form>
+        {% endfor %}
+        <form method="post" action="/business/orders/{{ o.id }}/invoice" class="inline-form"><button class="btn">Invoice</button></form>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td colspan="6">
+        {% for a in o.brief.ad_scripts or [] %}
+        <details><summary>Ad script {{ loop.index }}: {{ a.script.hook }}</summary>
+          <p class="muted">{{ a.script.concept }}</p>
+          <ol>{% for seg in a.script.segments %}<li><strong>{{ seg.on_screen_text }}</strong>: {{ seg.narration }}</li>{% endfor %}</ol>
+          <p>CTA: {{ a.script.cta }} · <span class="badge badge-ok">{{ a.script.on_screen_disclosure }}</span></p>
+          <p class="muted">Alt hooks: {{ a.script.variations|join(' | ') }}</p>
+        </details>
+        {% endfor %}
+        {% if o.status not in ('paid', 'cancelled') %}
+        <details><summary class="muted">Write an ad script</summary>
+          <form method="post" action="/business/orders/{{ o.id }}/ad-script">
+            <div class="form-row"><input type="text" name="product" placeholder="Product" value="{{ o.brief.product or '' }}" required></div>
+            <div class="form-row"><input type="text" name="benefits" placeholder="Benefits, comma separated"></div>
+            <div class="form-row inline-row"><input type="text" name="audience" placeholder="Audience"> <input type="text" name="offer" placeholder="Offer"> <input type="text" name="cta" placeholder="CTA"></div>
+            <div class="form-row"><select name="style"><option>spokesperson</option><option>demo</option><option>explainer</option></select></div>
+            <button class="btn">Write script</button>
+            <span class="muted">Spokesperson/demo only: scripts with first-person testimonials are rejected.</span>
+          </form>
+        </details>
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}<p class="muted">No orders{{ ' in ' ~ status if status }}.</p>{% endif %}
+</div>
+
+<div class="card">
+  <h2>Invoices</h2>
+  {% if invoices %}
+  <table class="table">
+    <tr><th>Number</th><th>Client</th><th>Total</th><th>Status</th><th>Due</th><th></th></tr>
+    {% for i in invoices %}
+    <tr>
+      <td><a href="/business/invoices/{{ i.id }}" target="_blank">{{ i.number }}</a></td>
+      <td><a href="/business/clients/{{ i.client_id }}">{{ i.client_name }}</a></td>
+      <td>{{ i.total_cents|money(i.currency) }}</td>
+      <td><span class="badge {{ 'badge-ok' if i.status == 'paid' else 'badge-block' if i.status == 'void' or i.id in overdue else 'badge-warn' }}">{{ 'overdue' if i.id in overdue else i.status }}</span></td>
+      <td>{{ i.due_at or '' }}</td>
+      <td>
+        {% for action in (["sent", "paid", "void"] if i.status in ("draft", "sent") else []) + ["save"] %}
+        <form method="post" action="/business/invoices/{{ i.id }}/{{ action }}" class="inline-form">
+          <button class="btn {{ 'btn-primary' if action == 'paid' }}">{{ {'sent': 'Mark sent', 'paid': 'Mark paid', 'void': 'Void', 'save': 'Save HTML/PDF'}[action] }}</button>
+        </form>
+        {% endfor %}
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}<p class="muted">No invoices yet.</p>{% endif %}
+</div>
+{% endblock %}

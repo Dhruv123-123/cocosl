@@ -147,3 +147,13 @@ def test_niche_and_brand_generation(factory):
     data, slug = generate_brand(factory.llm, "home espresso", "new coffee nerds")
     write_brand(factory.settings.brands_dir, data, slug)
     assert slug in load_brands(factory.settings.brands_dir)
+
+
+def test_write_env(tmp_path, monkeypatch):
+    from contentfactory.publish.tokens import write_env
+    env = tmp_path / ".env"
+    env.write_text("A=1\nYT_REFRESH_TOKEN=old\n")
+    write_env(env, {"YT_REFRESH_TOKEN": "new=val", "B": "2"})
+    text = env.read_text()
+    assert "YT_REFRESH_TOKEN=new=val" in text and "A=1" in text and "B=2" in text
+    monkeypatch.delenv("B", raising=False)

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Affiliate links{% endblock %}
+{% block content %}
+{% include "biz_nav.html" %}
+<h1>Affiliate links</h1>
+<p class="muted">Tracked links: <code>{{ base or '' }}/go/&lt;slug&gt;?p=&lt;post id&gt;&amp;s=&lt;platform&gt;</code>.
+  {% if not base %}Set FACTORY_LINK_BASE_URL to the public address of this server's /go route.{% endif %}
+  Captions with a tracked link get a disclosure appended automatically when they lack one.</p>
+
+<div class="card">
+  <form method="post" action="/business/affiliates/sync" class="inline-form"><button class="btn btn-primary">Sync from brand files</button></form>
+  {% if links %}
+  <table class="table">
+    <tr><th>Slug</th><th>Name</th><th>Brand</th><th>Commission</th><th>Clicks</th><th>Destination</th></tr>
+    {% for l in links %}
+    <tr><td><code>/go/{{ l.slug }}</code></td><td>{{ l.name }}</td><td>{{ l.brand }}</td><td>{{ l.commission }}</td><td>{{ l.clicks }}</td>
+      <td class="muted">{{ l.url }}</td></tr>
+    {% endfor %}
+  </table>
+  {% else %}<p class="muted">No links yet.</p>{% endif %}
+</div>
+
+<div class="grid">
+  <div class="card">
+    <h2>Add link</h2>
+    <form method="post" action="/business/affiliates/add">
+      <div class="form-row inline-row"><input type="text" name="name" placeholder="Name" required> <input type="text" name="slug" placeholder="slug (optional)"></div>
+      <div class="form-row"><input type="text" name="url" placeholder="https://merchant.example/?ref=you" required style="width:100%"></div>
+      <div class="form-row"><select name="brand"><option value="">(any brand)</option>{% for b in brands %}<option>{{ b }}</option>{% endfor %}</select>
+        <input type="text" name="commission" placeholder="Commission"></div>
+      <button class="btn">Save</button>
+    </form>
+  </div>
+  <div class="card">
+    <h2>Clicks by post</h2>
+    <table class="table">
+      <tr><th>Slug</th><th>Post</th><th>Platform</th><th>Clicks</th></tr>
+      {% for r in by_post %}<tr><td>{{ r.slug }}</td><td>{{ ('#' ~ r.post_id) if r.post_id else '—' }}</td><td>{{ r.platform or '—' }}</td><td>{{ r.clicks }}</td></tr>
+      {% else %}<tr><td class="muted" colspan="4">No clicks yet.</td></tr>{% endfor %}
+    </table>
+  </div>
+</div>
+{% endblock %}
