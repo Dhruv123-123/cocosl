@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="{{ brand.language or 'en' }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ brand.name }} · links</title>
+<meta name="description" content="{{ brand.promise or brand.niche }}">
+<meta property="og:title" content="{{ brand.name }}">
+<meta property="og:description" content="{{ brand.promise or brand.niche }}">
+<meta name="theme-color" content="{{ t.dark }}">
+<style>
+:root{--bg:{{ t.dark }};--fg:{{ t.light }};--a:{{ t.accent }};--a2:{{ t.accent2 }};--ai:{{ t.accent_ink }};
+--card:{{ t.card }};--line:{{ t.line }};--muted:{{ t.muted }};--at:{{ t.accent_text }}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;min-height:100vh;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+background:radial-gradient(120% 60% at 50% 0%,color-mix(in srgb,var(--a) 22%,var(--bg)) 0%,var(--bg) 60%) fixed,var(--bg);
+color:var(--fg);line-height:1.45}
+.wrap{max-width:480px;margin:0 auto;padding:40px 16px calc(32px + env(safe-area-inset-bottom))}
+.head{text-align:center}
+.avatar{width:112px;height:112px;border-radius:50%;display:block;margin:0 auto 14px;box-shadow:0 0 0 4px var(--bg),0 0 0 6px var(--a)}
+.avatar.mono{display:flex;align-items:center;justify-content:center;background:var(--a);color:var(--ai);font-weight:900;font-size:40px}
+h1{font-size:26px;margin:0 0 6px;letter-spacing:-.01em}
+.promise{margin:0 auto 14px;color:var(--muted);max-width:34ch}
+.socials{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
+.socials a{font-size:13px;font-weight:600;color:var(--fg);text-decoration:none;border:1px solid var(--line);
+padding:6px 12px;border-radius:999px}
+.socials a:hover{border-color:var(--a)}
+.signup{background:var(--a);color:var(--ai);border-radius:20px;padding:20px;margin:0 0 26px}
+.signup h2{margin:0 0 4px;font-size:19px}
+.signup p{margin:0 0 14px;font-size:14px;opacity:.85}
+.signup form{display:flex;gap:8px;flex-wrap:wrap}
+.signup input[type=email]{flex:1 1 200px;min-width:0;font:inherit;font-size:16px;padding:12px 14px;border-radius:12px;
+border:2px solid transparent;background:#fff;color:#111}
+.signup input[type=email]:focus{outline:none;border-color:var(--bg)}
+.signup button{font:inherit;font-weight:700;font-size:16px;padding:12px 18px;border:0;border-radius:12px;
+background:var(--bg);color:var(--fg);cursor:pointer;flex:0 0 auto}
+.signup small{display:block;margin-top:10px;font-size:12px;opacity:.75}
+.hp{position:absolute!important;left:-10000px;width:1px;height:1px;overflow:hidden}
+h3{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:26px 4px 10px}
+.links{display:flex;flex-direction:column;gap:10px}
+.link{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:16px;background:var(--card);
+border:1px solid var(--line);color:var(--fg);text-decoration:none;transition:transform .12s,border-color .12s}
+.link:hover{transform:translateY(-1px);border-color:var(--a)}
+.link .t{flex:1;font-weight:600}
+.link .m{font-size:12px;color:var(--muted);white-space:nowrap}
+.link .p{font-size:13px;font-weight:700;color:var(--ai);background:var(--a);padding:3px 10px;border-radius:999px}
+.note{font-size:12px;color:var(--muted);margin:8px 4px 0}
+footer{margin-top:34px;text-align:center;font-size:12px;color:var(--muted)}
+footer p{margin:6px 0}
+@media (prefers-reduced-motion:reduce){.link{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="head">
+    {% if avatar %}<img class="avatar" src="{{ avatar }}" alt="{{ brand.name }} logo" width="112" height="112">
+    {% else %}<div class="avatar mono" aria-hidden="true">{{ initials }}</div>{% endif %}
+    <h1>{{ brand.name }}</h1>
+    <p class="promise">{{ (brand.promise or brand.niche)|sentence }}</p>
+    {% if socials %}<nav class="socials" aria-label="Social profiles">
+      {% for s in socials %}<a href="{{ s.url }}" rel="me noopener" target="_blank">{{ s.label }}</a>{% endfor %}
+    </nav>{% endif %}
+  </header>
+
+  <section class="signup" aria-labelledby="signup-h">
+    <h2 id="signup-h">Free: {{ magnet.title }}</h2>
+    <p>{{ magnet.pitch }} One useful email a week.</p>
+    <form method="post" action="{{ subscribe_url }}">
+      <label class="hp" aria-hidden="true">Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+      <input type="hidden" name="source" value="link-page">
+      <input type="email" name="email" required autocomplete="email" inputmode="email" placeholder="you@example.com" aria-label="Email address">
+      <button type="submit">Send it</button>
+    </form>
+    <small>We'll email you a confirmation link first. Unsubscribe anytime with one click.</small>
+  </section>
+
+  {% if posts %}
+  <h3>Latest</h3>
+  <div class="links">
+    {% for p in posts %}<a class="link" href="{{ p.url }}" target="_blank" rel="noopener"><span class="t">{{ p.title }}</span><span class="m">{{ p.platform }}</span></a>{% endfor %}
+  </div>
+  {% endif %}
+
+  {% if products %}
+  <h3>Guides &amp; templates</h3>
+  <div class="links">
+    {% for p in products %}<a class="link" href="{{ p.url }}" target="_blank" rel="noopener"><span class="t">{{ p.name }}</span>{% if p.price %}<span class="p">{{ p.price }}</span>{% endif %}</a>{% endfor %}
+  </div>
+  {% endif %}
+
+  {% if affiliates %}
+  <h3>Tools I recommend</h3>
+  <div class="links">
+    {% for a in affiliates %}<a class="link" href="{{ a.url }}" target="_blank" rel="sponsored noopener"><span class="t">{{ a.name }}</span><span class="m">affiliate</span></a>{% endfor %}
+  </div>
+  <p class="note">{{ affiliate_note }}</p>
+  {% endif %}
+
+  <footer>
+    <p>{{ brand.ai_disclosure }}</p>
+    <p>AI-assisted content · reviewed by a human before publishing.</p>
+    <p>&copy; {{ year }} {{ brand.name }}</p>
+  </footer>
+</div>
+</body>
+</html>

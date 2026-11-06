@@ -77,8 +77,21 @@ def _include_business(app: FastAPI) -> None:
         return
     app.include_router(router)
     app.include_router(public_router)
-    app.state.public_paths = [r.path_regex for r in public_router.routes if hasattr(r, "path_regex")]
+    app.state.public_paths += [r.path_regex for r in public_router.routes if hasattr(r, "path_regex")]
     app.state.business_enabled = True
+
+
+def _include_funnel(app: FastAPI) -> None:
+    """Mount the funnel (link page, signups, webhooks) when installed."""
+    try:
+        from ..funnel.routes import public_router, router
+    except ImportError:
+        app.state.funnel_enabled = False
+        return
+    app.include_router(router)
+    app.include_router(public_router)
+    app.state.public_paths += [r.path_regex for r in public_router.routes if hasattr(r, "path_regex")]
+    app.state.funnel_enabled = True
 
 
 def create_app(factory: Factory | None = None) -> FastAPI:
@@ -106,6 +119,7 @@ def create_app(factory: Factory | None = None) -> FastAPI:
     app.include_router(api.router)
     app.include_router(pages.router)
     _include_business(app)
+    _include_funnel(app)
 
     app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
     factory.settings.output_dir.mkdir(parents=True, exist_ok=True)
