@@ -1,0 +1,59 @@
+# Template: copy to brands/<your-slug>.yaml and edit. Files starting with _ are ignored.
+name: Money Made Simple
+niche: practical personal finance tools for people in their 20s
+audience: students and early-career workers who feel behind on money
+promise: one money move you can make this week, explained in under a minute
+pillars:
+  - budgeting systems that actually stick
+  - first-time investing basics (index funds, retirement accounts)
+  - credit scores and debt payoff
+  - money apps and tools, honestly compared
+formats: [short, carousel, long]
+seed_topics:
+  - high yield savings account
+  - roth ira for beginners
+  - credit score
+  - budgeting app
+  - index funds
+  - student loans
+avoid_topics:
+  - crypto pumps
+  - individual stock picks
+  - get rich quick
+subreddits: [personalfinance, povertyfinance, financialindependence]
+hashtags: [personalfinance, moneytips, budgeting, investingforbeginners, financialliteracy, moneymadesimple]
+cta: Follow for one money move a week.
+link_in_bio: https://example.com/links
+voice:
+  tone: calm, specific, slightly dry humour, zero hype
+  persona: a friend who works in finance and hates jargon
+  tts_voice: ""          # your own cloned voice or a licensed stock voice id
+  banned_phrases: ["financial freedom overnight", "this one trick", "guaranteed returns"]
+visual:
+  palette: ["#0b1d13", "#f4f1e8", "#2fbf71", "#f2b134"]
+  font: Inter
+  image_style: warm flat vector illustration, muted greens and cream, simple shapes, no text, no logos
+  mascot: a small round green piggy bank character with big eyes (original design)
+  watermark: "@moneymadesimple"
+cadence:
+  shorts_per_week: 5
+  long_per_week: 1
+  carousels_per_week: 3
+  max_posts_per_day_per_platform: 2
+  post_times: ["12:30", "19:00"]
+  timezone: America/New_York
+accounts:
+  - {platform: instagram, handle: "@moneymadesimple", formats: [short, carousel, image]}
+  - {platform: youtube, handle: "@moneymadesimple", formats: [short, long]}
+  - {platform: tiktok, handle: "@moneymadesimple", formats: [short]}
+affiliates:
+  - name: Example HYSA
+    url: https://example.com/go/hysa
+    slug: hysa
+    keywords: [savings account, hysa, emergency fund]
+    commission: "$50 per funded account"
+products:
+  - {name: "The 20-Minute Budget (Notion + Sheets template)", url: "https://example.gumroad.com/l/budget", price: 12}
+ai_disclosure: "Visuals and voice made with AI tools. Script written and fact-checked by a human. Not financial advice."
+realistic_synthetic_media: false
+require_human_review: true

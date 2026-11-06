@@ -1,0 +1,219 @@
+{
+  "name": "Content Factory schedule",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 7 * * *"
+            }
+          ]
+        }
+      },
+      "name": "Every morning 07:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{$env.FACTORY_URL}}/api/daily",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{$env.DASHBOARD_TOKEN}}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 600000
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\"brand\": \"money-made-simple\"}"
+      },
+      "name": "Daily run (ideas + produce for review)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        260,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 10
+            }
+          ]
+        }
+      },
+      "name": "Every 10 minutes",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{$env.FACTORY_URL}}/api/publish/due",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{$env.DASHBOARD_TOKEN}}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 600000
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{}"
+      },
+      "name": "Publish due posts",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        260,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 6
+            }
+          ]
+        }
+      },
+      "name": "Every 6 hours",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{$env.FACTORY_URL}}/api/metrics/collect",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{$env.DASHBOARD_TOKEN}}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 600000
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{}"
+      },
+      "name": "Collect metrics",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        260,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "={{$env.FACTORY_URL}}/api/posts?status=in_review",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{$env.DASHBOARD_TOKEN}}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 600000
+        }
+      },
+      "name": "Count posts waiting for review",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        520,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Every morning 07:00": {
+      "main": [
+        [
+          {
+            "node": "Daily run (ideas + produce for review)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Daily run (ideas + produce for review)": {
+      "main": [
+        [
+          {
+            "node": "Count posts waiting for review",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Every 10 minutes": {
+      "main": [
+        [
+          {
+            "node": "Publish due posts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Every 6 hours": {
+      "main": [
+        [
+          {
+            "node": "Collect metrics",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {},
+  "active": false
+}

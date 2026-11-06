@@ -1,0 +1,39 @@
+# Second example: a history explainer channel. Long-form pays ~10-50x more per view than Shorts,
+# so this brand leads with long videos and cuts Shorts and carousels from them.
+name: Tiny Histories
+niche: surprising origin stories of everyday objects and habits
+audience: curious adults who like learning in short bursts
+promise: the hidden story behind something you use every day
+pillars:
+  - origins of everyday objects
+  - inventions that almost failed
+  - weird laws and customs and why they exist
+formats: [long, short, carousel]
+seed_topics: [history of the fork, why keyboards are qwerty, origin of the sandwich, history of coffee, why we shake hands]
+avoid_topics: [conspiracy theories, war atrocities as entertainment]
+subreddits: [todayilearned, history, AskHistorians]
+hashtags: [history, tinyhistories, didyouknow, historyfacts, origins]
+cta: Follow for one tiny history every day.
+voice:
+  tone: warm, curious, a little wry
+  persona: a museum guide who loves the weird footnotes
+visual:
+  palette: ["#1d1a16", "#efe6d2", "#c2552d", "#3e6b73"]
+  image_style: vintage engraving style illustration, sepia and teal, paper texture, no text
+  watermark: "@tinyhistories"
+cadence:
+  shorts_per_week: 5
+  long_per_week: 1
+  carousels_per_week: 2
+  max_posts_per_day_per_platform: 1
+  post_times: ["17:00"]
+  timezone: America/New_York
+accounts:
+  - {platform: youtube, handle: "@tinyhistories", formats: [long, short]}
+  - {platform: instagram, handle: "@tinyhistories", formats: [short, carousel]}
+affiliates: []
+products:
+  - {name: "Tiny Histories: 50 Origin Stories (PDF)", url: "https://example.gumroad.com/l/tiny", price: 9}
+ai_disclosure: "Illustrations and narration made with AI tools. Researched and written by a human; sources in the description."
+realistic_synthetic_media: false
+require_human_review: true
