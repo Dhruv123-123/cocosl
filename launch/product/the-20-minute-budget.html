@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 20-Minute Budget</title>
+<style>
+  :root{
+    --ink:#0b1d13; --cream:#f4f1e8; --green:#2fbf71; --green-d:#1e8a50; --gold:#f2b134;
+    --muted:#4b5a51; --line:#d9d3c3; --paper:#fffdf8; --tint:#eaf6ef; --gold-t:#fdf3dd;
+  }
+  @page{ size: Letter; margin:0; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#cfc9ba; color:var(--ink);
+    font-family:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size:10.2pt; line-height:1.48; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:8.5in; height:11in; margin:24px auto; background:var(--paper); position:relative;
+    padding:0.7in 0.85in 0.85in; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,.18);
+    page-break-after:always; break-after:page; }
+  .page:last-child{ page-break-after:auto; break-after:auto; }
+  @media print{ html,body{ background:none; } .page{ margin:0; box-shadow:none; } }
+
+  .folio{ position:absolute; left:0.85in; right:0.85in; bottom:0.45in; display:flex;
+    justify-content:space-between; font-size:8pt; color:var(--muted); border-top:1px solid var(--line); padding-top:6px; }
+
+  h1,h2,h3,h4{ font-family:"Inter Display","Inter",system-ui,sans-serif; line-height:1.15; margin:0; }
+  h2{ font-size:24pt; font-weight:800; letter-spacing:-.02em; margin-bottom:6px; }
+  h3{ font-size:13pt; font-weight:700; margin:18px 0 6px; }
+  h4{ font-size:10.5pt; font-weight:700; margin:12px 0 4px; }
+  p{ margin:0 0 9px; }
+  .kicker{ text-transform:uppercase; letter-spacing:.14em; font-size:8pt; font-weight:700; color:var(--green-d); margin-bottom:6px; }
+  .lede{ font-size:11.5pt; color:var(--muted); margin-bottom:12px; }
+  ul,ol{ margin:0 0 10px; padding-left:20px; } li{ margin-bottom:4px; }
+  strong{ font-weight:700; }
+  .num{ font-variant-numeric:tabular-nums; }
+
+  .box{ border-radius:10px; padding:12px 16px; margin:12px 0; }
+  .box.tip{ background:var(--tint); border-left:4px solid var(--green); }
+  .box.warn{ background:var(--gold-t); border-left:4px solid var(--gold); }
+  .box.dark{ background:var(--ink); color:var(--cream); }
+  .box.dark .kicker{ color:var(--gold); }
+  .box p:last-child, .box ul:last-child{ margin-bottom:0; }
+
+  table{ width:100%; border-collapse:collapse; margin:8px 0 12px; font-size:9.5pt; }
+  th{ text-align:left; font-weight:700; background:var(--cream); border-bottom:2px solid var(--ink); padding:5px 8px; }
+  td{ border-bottom:1px solid var(--line); padding:4px 8px; }
+  td.r, th.r{ text-align:right; font-variant-numeric:tabular-nums; }
+  tr.total td{ font-weight:800; border-top:2px solid var(--ink); border-bottom:none; background:var(--tint); }
+  tr.sub td{ font-weight:700; background:#f7f4ec; }
+
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .grid4{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:14px 0; }
+  .card{ border:1.5px solid var(--ink); border-radius:12px; padding:12px; background:#fff; }
+  .card .big{ font-size:20pt; font-weight:800; font-family:"Inter Display","Inter",sans-serif; }
+  .card .lbl{ font-size:8pt; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); font-weight:700; }
+  .pill{ display:inline-block; background:var(--green); color:#fff; font-weight:700; border-radius:999px; padding:1px 9px; font-size:8.5pt; }
+  .step{ display:flex; gap:12px; margin:10px 0; }
+  .step .n{ flex:0 0 30px; height:30px; border-radius:50%; background:var(--ink); color:var(--cream);
+    display:flex; align-items:center; justify-content:center; font-weight:800; }
+  .step .b{ flex:1; }
+  .timer{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin:12px 0 16px; border:1.5px solid var(--ink); border-radius:12px; overflow:hidden; }
+  .timer div{ padding:10px 12px; border-right:1.5px solid var(--ink); background:#fff; }
+  .timer div:last-child{ border-right:none; }
+  .timer .t{ font-weight:800; font-size:16pt; color:var(--green-d); }
+  .timer .h{ font-weight:700; font-size:9.5pt; }
+  .timer .d{ font-size:8.5pt; color:var(--muted); }
+  .formula{ font-family:"JetBrains Mono", ui-monospace, monospace; background:var(--ink); color:var(--cream);
+    padding:10px 14px; border-radius:8px; font-size:10pt; margin:10px 0; }
+  .check li{ list-style:none; position:relative; padding-left:4px; }
+  .check{ padding-left:22px; }
+  .check li::before{ content:""; position:absolute; left:-20px; top:3px; width:12px; height:12px; border:1.5px solid var(--ink); border-radius:3px; }
+  .faq h4{ margin-top:12px; }
+  .blank td{ height:24px; }
+  .toc{ list-style:none; padding:0; margin:12px 0; }
+  .toc li{ display:flex; border-bottom:1px dotted var(--line); padding:6px 0; margin:0; font-size:11pt; }
+  .toc li span:first-child{ flex:1; } .toc li span:last-child{ font-weight:700; }
+
+  /* cover */
+  .cover{ background:var(--ink); color:var(--cream); padding:0.9in; }
+  .cover .tag{ color:var(--gold); letter-spacing:.2em; text-transform:uppercase; font-weight:700; font-size:9pt; }
+  .cover h1{ font-size:58pt; font-weight:900; letter-spacing:-.035em; line-height:.95; margin:24px 0 18px; }
+  .cover h1 em{ font-style:normal; color:var(--green); }
+  .cover .sub{ font-size:15pt; max-width:5.2in; color:#cfd8cf; line-height:1.4; }
+  .cover .clock{ position:absolute; right:0.9in; bottom:1.4in; width:3.1in; height:3.1in; }
+  .cover .bottom{ position:absolute; left:0.9in; right:0.9in; bottom:0.8in; display:flex; justify-content:space-between; align-items:flex-end; font-size:9pt; color:#aab8ad; }
+  .cover .chips{ display:flex; gap:8px; flex-wrap:wrap; margin-top:28px; }
+  .cover .chips span{ border:1px solid #3c5446; border-radius:999px; padding:5px 12px; font-size:9pt; color:var(--cream); }
+</style>
+</head>
+<body>
+
+<!-- ============ 1. COVER ============ -->
+<section class="page cover">
+  <div class="tag">Money Made Simple &middot; Guide + Spreadsheet</div>
+  <h1>The<br><em>20-Minute</em><br>Budget</h1>
+  <p class="sub">A budget you set up once in an evening, then run in twenty minutes a week. One weekly spending number. No apps to babysit, no tracking every coffee.</p>
+  <div class="chips"><span>Setup in ~60 min</span><span>20 min a week</span><span>Debt payoff planner</span><span>Works with any bank</span></div>
+  <svg class="clock" viewBox="0 0 200 200" aria-hidden="true">
+    <circle cx="100" cy="100" r="92" fill="none" stroke="#2fbf71" stroke-width="6"/>
+    <path d="M100 100 L100 8 A92 92 0 0 1 179.7 146 Z" fill="#2fbf71" opacity=".9"/>
+    <circle cx="100" cy="100" r="70" fill="#0b1d13"/>
+    <text x="100" y="98" text-anchor="middle" font-family="Inter Display, Inter, sans-serif" font-weight="900" font-size="44" fill="#f4f1e8">20</text>
+    <text x="100" y="124" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="13" letter-spacing="3" fill="#f2b134">MINUTES</text>
+  </svg>
+  <div class="bottom"><span>Edition 1.0</span><span>Educational content. Not financial advice.</span></div>
+</section>
+
+<!-- ============ 2. CONTENTS ============ -->
+<section class="page">
+  <div class="kicker">Start here</div>
+  <h2>What's inside</h2>
+  <p class="lede">Read pages 3 to 7 once, set up the spreadsheet, then keep page 8 handy. That's the whole system.</p>
+  <ul class="toc">
+    <li><span>1. The idea: one number per week</span><span>3</span></li>
+    <li><span>2. Setup, steps 1 to 3: money in, bills out</span><span>4</span></li>
+    <li><span>3. Setup, steps 4 to 6: funds, goals, your weekly number</span><span>5</span></li>
+    <li><span>4. Worked example: Maya's month, with real numbers</span><span>6</span></li>
+    <li><span>5. Making it automatic: accounts and payday flow</span><span>7</span></li>
+    <li><span>6. The weekly 20-minute routine</span><span>8</span></li>
+    <li><span>7. The monthly reset (also 20 minutes)</span><span>9</span></li>
+    <li><span>8. Paying off debt: avalanche vs snowball</span><span>10</span></li>
+    <li><span>9. Common pitfalls and how to fix them</span><span>11</span></li>
+    <li><span>10. Variations: irregular income, couples, tight months</span><span>12</span></li>
+    <li><span>11. FAQ</span><span>13</span></li>
+    <li><span>12. Printable one-page worksheet</span><span>14</span></li>
+  </ul>
+  <h3>How to use the spreadsheet</h3>
+  <p>The template that came with this guide (<strong>20-Minute-Budget-Template.xlsx</strong>) has five tabs that match the chapters: <strong>Setup</strong>, <strong>Monthly Plan</strong>, <strong>Weekly Check-in</strong>, <strong>Sinking Funds</strong> and <strong>Debt Payoff</strong>. It opens in Excel, Google Sheets (File &rarr; Import &rarr; Upload) and Apple Numbers.</p>
+  <ul>
+    <li><strong>Yellow cells</strong> are inputs. Type over them.</li>
+    <li><strong>White cells</strong> calculate themselves. Leave them alone.</li>
+    <li>It comes filled in with the worked example from page 6, so you can see how it behaves before you clear it and add your own numbers.</li>
+  </ul>
+  <div class="box warn">
+    <div class="kicker" style="color:#9a6a00">Please read</div>
+    <p>This guide is general education about organising your own money. It is not financial, tax, legal or investment advice, and it doesn't know your situation. The example person and numbers are made up for illustration. If you're dealing with collections, bankruptcy, tax debt or anything that feels unmanageable, a non-profit credit counsellor (in the US, look for an NFCC member agency) is a good, low-cost next step.</p>
+  </div>
+  <div class="folio"><span>The 20-Minute Budget</span><span>2</span></div>
+</section>
+
+<!-- ============ 3. THE IDEA ============ -->
+<section class="page">
+  <div class="kicker">Chapter 1</div>
+  <h2>The idea: one number per week</h2>
+  <p class="lede">Most budgets fail for a boring reason: they ask you to make dozens of tiny decisions every day. This one asks for one decision a month and one check-in a week.</p>
+  <p>Every dollar of take-home pay goes into one of four lines. Three of them are decided once a month and then run on autopilot. Only the fourth needs your attention during the month, and it's a single number.</p>
+  <div class="grid4">
+    <div class="card"><div class="lbl">Line 1</div><div class="big">Bills</div><p style="font-size:9pt;margin:4px 0 0">Fixed, recurring costs: rent, utilities, phone, insurance, minimum debt payments, subscriptions.</p></div>
+    <div class="card"><div class="lbl">Line 2</div><div class="big">Funds</div><p style="font-size:9pt;margin:4px 0 0">"Sinking funds": money set aside monthly for costs that are predictable but not monthly (car repairs, gifts, renewals).</p></div>
+    <div class="card"><div class="lbl">Line 3</div><div class="big">Goals</div><p style="font-size:9pt;margin:4px 0 0">Emergency savings, extra debt payments, investing. You pay these first, not with whatever is left.</p></div>
+    <div class="card" style="background:var(--tint);border-color:var(--green-d)"><div class="lbl">Line 4</div><div class="big">Weekly</div><p style="font-size:9pt;margin:4px 0 0">Everything else: groceries, gas, eating out, fun, little stuff. One amount per week. Spend it however you like.</p></div>
+  </div>
+  <h3>Why a weekly number works</h3>
+  <ul>
+    <li><strong>A week is short enough to steer.</strong> If you overspend on Tuesday, you see it by Sunday and adjust. With a monthly number, you find out on the 28th.</li>
+    <li><strong>One number is easy to remember.</strong> "I have $61 left this week" is something you can actually hold in your head at the checkout.</li>
+    <li><strong>No category policing.</strong> Groceries vs. eating out vs. fun all come out of the same weekly pot. You decide the trade-offs in the moment, which is where they really happen anyway.</li>
+    <li><strong>Overspending is contained.</strong> A bad week can't eat your rent, because rent was never in the weekly pot.</li>
+  </ul>
+  <h3>The rule that makes it work</h3>
+  <div class="box dark">
+    <p style="font-size:12pt;margin:0"><strong>Bills, Funds and Goals are paid first and automatically. You only ever look at the Weekly number.</strong> If the Weekly number is too small to live on, you change the plan at the monthly reset, not mid-week.</p>
+  </div>
+  <p>This is a version of zero-based budgeting (every dollar gets a job) combined with "pay yourself first". Neither idea is new. What's different is that the day-to-day part is shrunk down to a single figure and a twenty-minute weekly habit.</p>
+  <div class="folio"><span>The 20-Minute Budget</span><span>3</span></div>
+</section>
+
+<!-- ============ 4. SETUP 1-3 ============ -->
+<section class="page">
+  <div class="kicker">Chapter 2 &middot; One evening, about 60 minutes</div>
+  <h2>Setup, steps 1 to 3</h2>
+  <p class="lede">Grab your last two months of bank and card statements. You'll use them to find real numbers instead of guesses.</p>
+
+  <div class="step"><div class="n">1</div><div class="b">
+    <h4 style="margin-top:4px">Find your monthly take-home pay</h4>
+    <p>Use what actually lands in your account after tax and deductions, not your salary. In the spreadsheet's <strong>Setup</strong> tab, choose how often you're paid and enter one typical paycheck. It converts to a monthly figure for you:</p>
+    <table style="width:auto;min-width:60%">
+      <tr><th>Paid&hellip;</th><th class="r">Monthly take-home =</th></tr>
+      <tr><td>Weekly</td><td class="r">paycheck &times; 52 &divide; 12</td></tr>
+      <tr><td>Every two weeks</td><td class="r">paycheck &times; 26 &divide; 12</td></tr>
+      <tr><td>Twice a month</td><td class="r">paycheck &times; 2</td></tr>
+      <tr><td>Monthly</td><td class="r">paycheck</td></tr>
+    </table>
+    <p>If your income varies (freelance, tips, commission), use your <strong>lowest normal month</strong> from the last six. See page 12 for how to handle the extra.</p>
+  </div></div>
+
+  <div class="step"><div class="n">2</div><div class="b">
+    <h4 style="margin-top:4px">List every fixed bill</h4>
+    <p>Go through your statements line by line and write down every cost that repeats monthly at roughly the same amount. Include:</p>
+    <ul>
+      <li>Housing: rent or mortgage, renters/home insurance, HOA</li>
+      <li>Utilities: power, water, gas, internet, phone</li>
+      <li>Transport: car payment, car insurance, transit pass</li>
+      <li><strong>Minimum</strong> payments on every debt (extra payments go in Goals)</li>
+      <li>Subscriptions and memberships. Cancel the ones you'd forgotten about while you're here.</li>
+    </ul>
+    <p>For bills that wobble (power in summer vs. winter), use a slightly high average so you're not short in the expensive months.</p>
+  </div></div>
+
+  <div class="step"><div class="n">3</div><div class="b">
+    <h4 style="margin-top:4px">Add up the bills and sanity-check</h4>
+    <p>Enter them in the <strong>Monthly Plan</strong> tab. The sheet totals them and shows what share of take-home pay they eat. There's no magic percentage, but if bills are above roughly 60% of take-home, your weekly number will feel tight and the biggest wins will come from the bills themselves (housing, car, phone plan, insurance quotes), not from skipping lattes.</p>
+  </div></div>
+
+  <div class="box tip"><strong>Shortcut:</strong> search your statements for words like "monthly", "subscription", "renewal", "membership" and "autopay". It catches most recurring charges in a few minutes.</div>
+  <div class="folio"><span>The 20-Minute Budget</span><span>4</span></div>
+</section>
+
+<!-- ============ 5. SETUP 4-6 ============ -->
+<section class="page">
+  <div class="kicker">Chapter 3</div>
+  <h2>Setup, steps 4 to 6</h2>
+  <p class="lede">Now plan for the expenses that usually wreck budgets, decide what you're paying yourself, and find your weekly number.</p>
+
+  <div class="step"><div class="n">4</div><div class="b">
+    <h4 style="margin-top:4px">Set up sinking funds</h4>
+    <p>Look back over the last 12 months for costs that didn't come every month but were completely predictable: car repairs and registration, holidays and birthdays, annual subscriptions, medical copays, clothes, travel, pet costs. Each one becomes a <strong>fund</strong>.</p>
+    <div class="formula">monthly amount = expected yearly cost &divide; 12</div>
+    <p>Or, for a specific dated cost: <em>cost &divide; months until it's due</em>. The <strong>Sinking Funds</strong> tab does this math and tracks each fund's balance and progress.</p>
+  </div></div>
+
+  <div class="step"><div class="n">5</div><div class="b">
+    <h4 style="margin-top:4px">Choose your Goals and pay them first</h4>
+    <p>A sensible order for most people (adjust for your situation):</p>
+    <ol>
+      <li><strong>Starter emergency fund</strong> of one month of bills. It's what stops a flat tyre turning into new card debt.</li>
+      <li><strong>Extra payments on high-interest debt</strong> (anything around 8% APR or more). Chapter 8 compares two ways to do it.</li>
+      <li><strong>Grow the emergency fund</strong> toward 3 to 6 months of bills.</li>
+      <li><strong>Long-term investing</strong>, starting with any employer retirement match you'd otherwise leave on the table.</li>
+    </ol>
+    <p>Pick an amount you can keep up every month. Consistency beats ambition here. You can raise it at any monthly reset.</p>
+  </div></div>
+
+  <div class="step"><div class="n">6</div><div class="b">
+    <h4 style="margin-top:4px">Calculate your weekly number</h4>
+    <div class="formula">monthly pool = take-home &minus; bills &minus; funds &minus; goals<br>weekly number = monthly pool &times; 12 &divide; 52 &nbsp;(round down)</div>
+    <p>Why &times;12&divide;52 instead of &divide;4? Because a month is about 4.33 weeks, not 4. Dividing by 4 quietly hands you an extra week of spending money you don't have, and that's exactly the shortfall people hit in five-week months. Rounding down leaves a few dollars of buffer.</p>
+    <p>The <strong>Monthly Plan</strong> tab does this and turns red if the pool is negative, which means you've planned more than you earn and need to trim Goals or Funds first, then Bills.</p>
+  </div></div>
+  <div class="box warn"><strong>Is the weekly number livable?</strong> It has to cover groceries, gas and everything fun. If it isn't realistic, don't pretend. Lower a Goal for now and raise it once a bill goes down or a debt is paid off. A plan you abandon in week two saves nothing.</div>
+  <div class="folio"><span>The 20-Minute Budget</span><span>5</span></div>
+</section>
+
+<!-- ============ 6. WORKED EXAMPLE ============ -->
+<section class="page">
+  <div class="kicker">Chapter 4 &middot; Example (fictional)</div>
+  <h2>Maya's month, in real numbers</h2>
+  <p class="lede">Maya is 26, rents a one-bed, has a car loan, some student debt and two smaller debts she'd like gone. She takes home <strong>$3,500 a month</strong>. This is the same example pre-filled in the spreadsheet.</p>
+  <div class="grid2">
+    <div>
+      <table>
+        <tr><th>Line 1 &middot; Bills</th><th class="r">Monthly</th></tr>
+        <tr><td>Rent</td><td class="r">$1,250</td></tr>
+        <tr><td>Renters + car insurance</td><td class="r">$140</td></tr>
+        <tr><td>Utilities</td><td class="r">$120</td></tr>
+        <tr><td>Internet</td><td class="r">$55</td></tr>
+        <tr><td>Phone</td><td class="r">$45</td></tr>
+        <tr><td>Subscriptions (3)</td><td class="r">$35</td></tr>
+        <tr><td>Car loan minimum</td><td class="r">$210</td></tr>
+        <tr><td>Student loan minimum</td><td class="r">$180</td></tr>
+        <tr><td>Credit card minimum</td><td class="r">$60</td></tr>
+        <tr><td>Personal loan minimum</td><td class="r">$55</td></tr>
+        <tr class="sub"><td>Bills total</td><td class="r">$2,150</td></tr>
+      </table>
+    </div>
+    <div>
+      <table>
+        <tr><th>Line 2 &middot; Funds</th><th class="r">Yearly</th><th class="r">Monthly</th></tr>
+        <tr><td>Car maintenance</td><td class="r">$480</td><td class="r">$40</td></tr>
+        <tr><td>Gifts &amp; holidays</td><td class="r">$600</td><td class="r">$50</td></tr>
+        <tr><td>Travel</td><td class="r">$480</td><td class="r">$40</td></tr>
+        <tr><td>Clothing</td><td class="r">$360</td><td class="r">$30</td></tr>
+        <tr><td>Medical / copays</td><td class="r">$300</td><td class="r">$25</td></tr>
+        <tr><td>Annual renewals</td><td class="r">$180</td><td class="r">$15</td></tr>
+        <tr class="sub"><td>Funds total</td><td class="r">$2,400</td><td class="r">$200</td></tr>
+      </table>
+      <table>
+        <tr><th>Line 3 &middot; Goals</th><th class="r">Monthly</th></tr>
+        <tr><td>Emergency fund</td><td class="r">$200</td></tr>
+        <tr><td>Extra debt payment</td><td class="r">$150</td></tr>
+        <tr class="sub"><td>Goals total</td><td class="r">$350</td></tr>
+      </table>
+    </div>
+  </div>
+  <table>
+    <tr><th>Line 4 &middot; The weekly number</th><th class="r">Amount</th></tr>
+    <tr><td>Take-home pay</td><td class="r">$3,500.00</td></tr>
+    <tr><td>&minus; Bills &minus; Funds &minus; Goals ($2,150 + $200 + $350)</td><td class="r">&minus;$2,700.00</td></tr>
+    <tr class="sub"><td>Monthly pool</td><td class="r">$800.00</td></tr>
+    <tr><td>&times; 12 &divide; 52</td><td class="r">$184.62</td></tr>
+    <tr class="total"><td>Maya's weekly number (rounded down)</td><td class="r">$184 / week</td></tr>
+  </table>
+  <p>That $184 covers groceries (about $85 a week for her), gas (about $35), and leaves roughly $64 for eating out, coffee, fun and odds and ends. Rounding down from $184.62 leaves about $2.67 a month in checking as a small buffer. If she gets to the end of a week with money left, she can roll it into next week or sweep it to savings at the monthly reset.</p>
+  <div class="box tip"><strong>Notice what's not here:</strong> no separate "dining out" or "entertainment" categories to police. Maya decides those trade-offs inside $184, week by week.</div>
+  <div class="folio"><span>The 20-Minute Budget</span><span>6</span></div>
+</section>
+
+<!-- ============ 7. AUTOMATION ============ -->
+<section class="page">
+  <div class="kicker">Chapter 5</div>
+  <h2>Making it automatic</h2>
+  <p class="lede">The fewer decisions you make by hand, the less willpower the budget needs. Two or three accounts and a few scheduled transfers do most of the work.</p>
+  <h3>The simple account setup</h3>
+  <table>
+    <tr><th>Account</th><th>What lives there</th><th>How money gets in</th></tr>
+    <tr><td><strong>Bills checking</strong><br><span style="color:var(--muted);font-size:8.5pt">(your current account)</span></td><td>Paycheck lands here. Bills come out on autopay.</td><td>Direct deposit</td></tr>
+    <tr><td><strong>Savings</strong><br><span style="color:var(--muted);font-size:8.5pt">(ideally high-yield, FDIC/NCUA insured)</span></td><td>Sinking funds + emergency fund. Track each fund's balance in the spreadsheet, or use your bank's "buckets" feature if it has one.</td><td>Automatic transfer on payday</td></tr>
+    <tr><td><strong>Weekly spending</strong><br><span style="color:var(--muted);font-size:8.5pt">(a second checking account or a debit card)</span></td><td>Just the weekly number. When it's gone, the week is done.</td><td>Automatic weekly transfer</td></tr>
+  </table>
+  <p>The separate spending account is optional but powerful: your balance <em>is</em> your remaining weekly number, so you don't have to calculate anything at the checkout. Many banks let you open a second checking account for free in a few minutes. If you prefer to use a credit card for rewards, pay it off in full every week during your check-in so it behaves like debit.</p>
+
+  <h3>Maya's payday flow (paid monthly on the 1st)</h3>
+  <div class="step"><div class="n">1</div><div class="b"><strong>1st:</strong> $3,500 lands in bills checking.</div></div>
+  <div class="step"><div class="n">2</div><div class="b"><strong>1st:</strong> auto-transfer $400 to savings (Funds $200 + emergency fund $200). Extra debt payment of $150 is scheduled straight to the credit card.</div></div>
+  <div class="step"><div class="n">3</div><div class="b"><strong>Every Friday:</strong> auto-transfer $184 to the weekly spending account.</div></div>
+  <div class="step"><div class="n">4</div><div class="b"><strong>Through the month:</strong> bills ($2,150) come out on autopay from bills checking.</div></div>
+  <div class="box warn"><strong>Five-Friday months:</strong> this happens a few times a year. Because the weekly number was calculated with &times;12&divide;52, the year evens out, but the cash timing doesn't. Keep a small buffer (Maya keeps $300) in bills checking so the fifth transfer never bounces. The <strong>Setup</strong> tab has a buffer field to remind you.</div>
+  <h3>If you're paid every two weeks</h3>
+  <p>Split each transfer in half and schedule it on each payday. Twice a year you'll get a "third paycheck" month. Don't let it vanish into spending: decide at the monthly reset where it goes (a goal, a fund, or a one-time treat you've planned for).</p>
+  <div class="folio"><span>The 20-Minute Budget</span><span>7</span></div>
+</section>
+
+<!-- ============ 8. WEEKLY ROUTINE ============ -->
+<section class="page">
+  <div class="kicker">Chapter 6 &middot; Keep this page handy</div>
+  <h2>The weekly 20-minute routine</h2>
+  <p class="lede">Same day, same time, every week. Sunday evening or Friday lunch both work. Put it in your calendar as a recurring event and set a 20-minute timer.</p>
+  <div class="timer">
+    <div><div class="t">0&ndash;5</div><div class="h">Look</div><div class="d">Open bank + card apps. Note balances.</div></div>
+    <div><div class="t">5&ndash;10</div><div class="h">Log</div><div class="d">Enter this week's spending total.</div></div>
+    <div><div class="t">10&ndash;15</div><div class="h">Check</div><div class="d">Bills, funds, anything odd.</div></div>
+    <div><div class="t">15&ndash;20</div><div class="h">Decide</div><div class="d">One move for next week.</div></div>
+  </div>
+  <h4>Minutes 0&ndash;5 &middot; Look</h4>
+  <p>Open your accounts. Note the weekly spending account balance (or add up this week's purchases). If you used a credit card for weekly spending, pay it off now.</p>
+  <h4>Minutes 5&ndash;10 &middot; Log</h4>
+  <p>In the <strong>Weekly Check-in</strong> tab, type one number: how much you spent from the weekly pot this week. The sheet shows what's left and your running total for the month. You don't need to categorise every purchase. If one purchase surprised you, write it in the notes column.</p>
+  <h4>Minutes 10&ndash;15 &middot; Check</h4>
+  <ul class="check">
+    <li>Did every bill due this week actually go out, at the amount you expected?</li>
+    <li>Did the payday transfers to savings and funds happen?</li>
+    <li>Any charges you don't recognise? (Dispute them now, not in three months.)</li>
+    <li>Did you spend from a sinking fund? Update its balance in the Sinking Funds tab.</li>
+  </ul>
+  <h4>Minutes 15&ndash;20 &middot; Decide one thing</h4>
+  <p>Pick <strong>one</strong> small move based on what you just saw. Examples:</p>
+  <ul>
+    <li>Under budget? Roll the leftover into next week, or move it to a goal.</li>
+    <li>Over budget? Next week's number is lower by the overspend. Plan one cheap week (the "make-up week").</li>
+    <li>Big week coming (birthday, trip)? Decide now which fund covers it.</li>
+    <li>Saw a subscription you don't use? Cancel it before you close the app.</li>
+  </ul>
+  <div class="box tip"><strong>Missed a week?</strong> Don't try to reconstruct it. Log the total spent across both weeks against both allowances and carry on. The habit matters more than perfect records.</div>
+  <div class="folio"><span>The 20-Minute Budget</span><span>8</span></div>
+</section>
+
+<!-- ============ 9. MONTHLY RESET ============ -->
+<section class="page">
+  <div class="kicker">Chapter 7</div>
+  <h2>The monthly reset</h2>
+  <p class="lede">Once a month, a few days before payday, spend twenty minutes setting next month's plan. This is the only time the plan changes.</p>
+  <div class="timer">
+    <div><div class="t">0&ndash;5</div><div class="h">Review</div><div class="d">How did the weeks go?</div></div>
+    <div><div class="t">5&ndash;10</div><div class="h">Adjust</div><div class="d">Bills and funds for next month.</div></div>
+    <div><div class="t">10&ndash;15</div><div class="h">Assign</div><div class="d">Goals and leftovers.</div></div>
+    <div><div class="t">15&ndash;20</div><div class="h">Confirm</div><div class="d">Transfers + new weekly number.</div></div>
+  </div>
+  <h4>Review</h4>
+  <p>Look at the Weekly Check-in tab. Were you consistently under, over, or roughly on target? Two or more over-budget weeks in a row usually means the weekly number is unrealistic, not that you're bad at this.</p>
+  <h4>Adjust</h4>
+  <ul>
+    <li>Any bill changing next month (rent increase, promo rate ending, debt paid off)? Update the Monthly Plan.</li>
+    <li>Any known one-off costs next month (wedding, annual renewal)? Make sure the right fund has enough, or add a new fund.</li>
+  </ul>
+  <h4>Assign</h4>
+  <ul>
+    <li>Leftover weekly money from this month: roll it forward, or send it to a goal. Decide; don't let it drift.</li>
+    <li>If a debt was paid off, its old minimum payment rolls into the next debt (this is what makes payoff speed up).</li>
+    <li>Got a raise or extra income? Decide its split now: a common choice is half to goals, half to the weekly number.</li>
+  </ul>
+  <h4>Confirm</h4>
+  <p>Check the Monthly Plan shows a pool of zero or more and note the new weekly number. If it changed, update the automatic transfer amount in your bank app before you close the spreadsheet.</p>
+  <h3>Your monthly reset checklist</h3>
+  <ul class="check">
+    <li>Weekly check-ins reviewed and leftover money assigned</li>
+    <li>Monthly Plan updated: bills, funds, goals</li>
+    <li>Pool is $0 or more and new weekly number noted</li>
+    <li>Automatic transfers match the plan</li>
+    <li>Sinking Funds and Debt Payoff balances updated from statements</li>
+  </ul>
+  <div class="folio"><span>The 20-Minute Budget</span><span>9</span></div>
+</section>
+
+<!-- ============ 10. DEBT ============ -->
+<section class="page">
+  <div class="kicker">Chapter 8</div>
+  <h2>Paying off debt: avalanche vs snowball</h2>
+  <p class="lede">Both methods pay the minimum on every debt and throw all extra money at one target. When the target is gone, its minimum "rolls" onto the next one. They only differ in the order.</p>
+  <div class="grid2">
+    <div class="card"><div class="lbl">Avalanche</div><h3 style="margin:4px 0">Highest interest rate first</h3><p style="margin:0;font-size:9.5pt">Mathematically cheapest. Best if you'll stick with it even when the first win takes a while.</p></div>
+    <div class="card"><div class="lbl">Snowball</div><h3 style="margin:4px 0">Smallest balance first</h3><p style="margin:0;font-size:9.5pt">Costs a bit more interest, but you clear a debt sooner. Best if quick wins keep you motivated.</p></div>
+  </div>
+  <h3>Maya's debts</h3>
+  <table>
+    <tr><th>Debt</th><th class="r">Balance</th><th class="r">APR</th><th class="r">Minimum</th><th class="r">Avalanche order</th><th class="r">Snowball order</th></tr>
+    <tr><td>Credit card</td><td class="r">$2,400</td><td class="r">24.9%</td><td class="r">$60</td><td class="r">1</td><td class="r">2</td></tr>
+    <tr><td>Personal loan</td><td class="r">$1,200</td><td class="r">11.0%</td><td class="r">$55</td><td class="r">2</td><td class="r">1</td></tr>
+    <tr><td>Car loan</td><td class="r">$6,500</td><td class="r">7.9%</td><td class="r">$210</td><td class="r">3</td><td class="r">3</td></tr>
+    <tr><td>Student loan</td><td class="r">$14,000</td><td class="r">5.5%</td><td class="r">$180</td><td class="r">4</td><td class="r">4</td></tr>
+    <tr class="sub"><td>Total</td><td class="r">$24,100</td><td></td><td class="r">$505</td><td></td><td></td></tr>
+  </table>
+  <h3>What the extra $150 a month does</h3>
+  <p>The spreadsheet's Debt Payoff tab simulates month by month. With $505 of minimums plus Maya's $150 extra ($655 a month total, rolling each freed-up minimum forward):</p>
+  <table>
+    <tr><th>Plan</th><th class="r">First debt gone</th><th class="r">Debt-free in</th><th class="r">Total interest</th></tr>
+    <tr><td>Minimums only ($505/mo, with rollover)</td><td class="r">month 25</td><td class="r">58 months</td><td class="r">$5,017</td></tr>
+    <tr><td>Snowball ($655/mo)</td><td class="r">month 7</td><td class="r">42 months</td><td class="r">$3,128</td></tr>
+    <tr class="total"><td>Avalanche ($655/mo)</td><td class="r">month 14</td><td class="r">42 months</td><td class="r">$2,992</td></tr>
+  </table>
+  <p>Two things to notice. First, the extra $150 matters far more than the method: it cuts about 16 months and roughly $1,900&ndash;2,000 of interest either way. Second, avalanche saves Maya about $136 over snowball, but snowball gives her a win seven months earlier. Both are good choices. <strong>The best method is the one you'll keep doing.</strong></p>
+  <div class="box warn">These figures come from a simple monthly simulation (interest = APR &divide; 12 on each balance, each month). Real lenders calculate interest daily and may apply payments differently, so your statements won't match to the dollar. Use it for planning, not as a payoff quote.</div>
+  <div class="folio"><span>The 20-Minute Budget</span><span>10</span></div>
+</section>
+
+<!-- ============ 11. PITFALLS ============ -->
+<section class="page">
+  <div class="kicker">Chapter 9</div>
+  <h2>Common pitfalls, and the fix</h2>
+  <p class="lede">Almost every budget that fails hits one of these. None of them mean you're bad with money.</p>
+  <table>
+    <tr><th style="width:38%">Pitfall</th><th>Fix</th></tr>
+    <tr><td><strong>Weekly number based on wishful thinking</strong><br><span style="font-size:8.5pt;color:var(--muted)">"I'll spend $40 a week on groceries now."</span></td><td>Use last month's real spending as the starting point and cut 10%, not 50%. Tighten again next month if it went fine.</td></tr>
+    <tr><td><strong>Dividing by 4 instead of 4.33</strong></td><td>Always &times;12&divide;52. Dividing by 4 creates a hidden shortfall of about 8% every month.</td></tr>
+    <tr><td><strong>Forgetting irregular costs</strong><br><span style="font-size:8.5pt;color:var(--muted)">Car registration, annual subscriptions, holidays.</span></td><td>That's what sinking funds are for. If one surprises you, add a fund for it at the next reset.</td></tr>
+    <tr><td><strong>Raiding the emergency fund for non-emergencies</strong></td><td>Ask: was it unexpected, necessary and urgent? If not all three, it belonged in a sinking fund or the weekly number.</td></tr>
+    <tr><td><strong>Changing the plan mid-month</strong></td><td>Overspend in week 2 = cheaper week 3. Plan changes happen only at the monthly reset. This one rule stops most spirals.</td></tr>
+    <tr><td><strong>Skipping check-ins after a bad week</strong></td><td>The bad weeks are when the check-in matters most. Do a 5-minute version: log the number, decide one thing, close the laptop.</td></tr>
+    <tr><td><strong>Tracking too much</strong></td><td>You don't need to categorise every purchase. One weekly total is the system working as designed.</td></tr>
+    <tr><td><strong>Zero buffer in checking</strong></td><td>Keep a small cushion (often $100&ndash;500) so timing quirks never cause overdraft fees.</td></tr>
+    <tr><td><strong>Saving nothing until debt is gone</strong></td><td>A starter emergency fund first keeps surprises from going back on the card. Then go hard on debt.</td></tr>
+    <tr><td><strong>Ignoring the big three</strong></td><td>Housing, transport and insurance usually dwarf everything else. One renegotiated bill beats months of willpower.</td></tr>
+    <tr><td><strong>No fun money</strong></td><td>A budget with zero joy gets abandoned. Leave room in the weekly number for something you enjoy.</td></tr>
+  </table>
+  <div class="box dark">
+    <div class="kicker">The 3-month check</div>
+    <p>Every third reset, ask one bigger question: <em>which single bill could I lower?</em> Get one new insurance quote, check one phone plan, or ask one lender about a lower rate. One phone call that saves $40 a month adds up to $480 a year, with no ongoing willpower required.</p>
+  </div>
+  <div class="folio"><span>The 20-Minute Budget</span><span>11</span></div>
+</section>
+
+<!-- ============ 12. VARIATIONS ============ -->
+<section class="page">
+  <div class="kicker">Chapter 10</div>
+  <h2>Variations</h2>
+  <p class="lede">The four lines stay the same. These tweaks adapt the setup to different situations.</p>
+  <h3>Irregular or freelance income</h3>
+  <ol>
+    <li>Build the plan on your <strong>lowest normal month</strong> from the last six (ignore true outliers).</li>
+    <li>All income goes into a holding account first. On the 1st, "pay" yourself the baseline amount into bills checking, like a salary.</li>
+    <li>Anything above baseline stays in the holding account until the monthly reset. Then split it: first top up a 1&ndash;2 month income buffer, then goals.</li>
+    <li>If you're self-employed, set aside money for taxes from every payment before anything else. A tax professional can tell you the right percentage for your situation.</li>
+  </ol>
+  <h3>Couples</h3>
+  <ul>
+    <li><strong>Shared bills, separate weekly numbers</strong> works well for most couples: contribute to a joint account for Bills, shared Funds and shared Goals (in proportion to income if incomes differ), then each person gets their own weekly number with no questions asked.</li>
+    <li>Do the monthly reset together. Do the weekly check-in separately or together, whichever you'll actually keep doing.</li>
+  </ul>
+  <h3>A tight month (or a tight season)</h3>
+  <ul>
+    <li>Pause Goals temporarily before you cut groceries to unrealistic levels. Keep paying all minimums.</li>
+    <li>Look at Bills first: call providers about hardship programs, payment-date changes or cheaper plans.</li>
+    <li>If minimums alone are more than you can pay, contact your lenders before you miss a payment, and consider a non-profit credit counsellor.</li>
+  </ul>
+  <h3>Very high or very simple incomes</h3>
+  <p>If bills are low and income is comfortable, you can stop logging the weekly number entirely once you trust it. Keep the monthly reset, and automate Goals generously. If money is very tight, the weekly check-in becomes more useful, not less. Consider twice-weekly check-ins of 5 minutes each.</p>
+  <div class="box tip"><strong>Cash lovers:</strong> withdraw the weekly number in cash on transfer day. Physical cash makes the remaining amount impossible to ignore.</div>
+  <div class="folio"><span>The 20-Minute Budget</span><span>12</span></div>
+</section>
+
+<!-- ============ 13. FAQ ============ -->
+<section class="page faq">
+  <div class="kicker">Chapter 11</div>
+  <h2>FAQ</h2>
+  <h4>Is this really only 20 minutes a week?</h4>
+  <p>After setup, yes for most people. The first two or three check-ins might take 30 minutes while you learn where things are. Setup itself takes about an hour, more if you have many accounts.</p>
+  <h4>Do I need the spreadsheet?</h4>
+  <p>No, the method works on paper (page 14 is a printable worksheet). The spreadsheet just does the maths and the debt simulation for you.</p>
+  <h4>Does it work with Google Sheets or Numbers?</h4>
+  <p>Yes. In Google Sheets use File &rarr; Import &rarr; Upload, or open the .xlsx from Google Drive. Formulas and dropdowns carry over. Numbers opens it directly.</p>
+  <h4>Where do groceries go?</h4>
+  <p>In the weekly number. That's deliberate: it's the biggest flexible cost, so it's where your weekly decisions have the most effect.</p>
+  <h4>What if I go over my weekly number?</h4>
+  <p>Next week's number is reduced by the overspend. If it keeps happening, raise the weekly number at the next monthly reset and lower something else. Don't take it from bills or the emergency fund.</p>
+  <h4>Should I pay off debt or save first?</h4>
+  <p>A common approach is a small starter emergency fund first, then focus on high-interest debt, then build savings further. Your situation (job stability, interest rates, employer match) may change the right answer, which is a good question for a fee-only financial planner.</p>
+  <h4>Avalanche or snowball?</h4>
+  <p>Avalanche usually costs less in interest; snowball usually gives you a win sooner. Run both in the Debt Payoff tab and pick the one you'll stick with.</p>
+  <h4>Can I use a budgeting app with this?</h4>
+  <p>Sure. Many apps can show you a weekly spend total, which makes the 5-minute "Log" step even quicker. The method doesn't depend on any app.</p>
+  <h4>What if I'm paid in a different currency?</h4>
+  <p>The method and spreadsheet work in any currency. Change the currency format of the cells if you'd like a different symbol.</p>
+  <h4>Is this financial advice?</h4>
+  <p>No. It's a general organising method and a tool. For decisions about investments, taxes, debt relief or anything specific to you, talk to a qualified professional.</p>
+  <div class="folio"><span>The 20-Minute Budget</span><span>13</span></div>
+</section>
+
+<!-- ============ 14. WORKSHEET ============ -->
+<section class="page">
+  <div class="kicker">Print me</div>
+  <h2>One-page worksheet</h2>
+  <p style="color:var(--muted)">Month: ____________________ &nbsp;&nbsp; Take-home pay: $____________</p>
+  <div class="grid2">
+    <table class="blank">
+      <tr><th>Bills</th><th class="r" style="width:35%">$ / month</th></tr>
+      <tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr>
+      <tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr>
+      <tr class="sub"><td>Total bills</td><td></td></tr>
+    </table>
+    <div>
+      <table class="blank">
+        <tr><th>Funds</th><th class="r" style="width:35%">$ / month</th></tr>
+        <tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr>
+        <tr class="sub"><td>Total funds</td><td></td></tr>
+      </table>
+      <table class="blank">
+        <tr><th>Goals</th><th class="r" style="width:35%">$ / month</th></tr>
+        <tr><td></td><td></td></tr><tr><td></td><td></td></tr>
+        <tr class="sub"><td>Total goals</td><td></td></tr>
+      </table>
+    </div>
+  </div>
+  <table>
+    <tr><th>The weekly number</th><th class="r" style="width:30%">$</th></tr>
+    <tr class="blank"><td>Take-home &minus; bills &minus; funds &minus; goals = monthly pool</td><td></td></tr>
+    <tr class="blank"><td>Monthly pool &times; 12 &divide; 52 = weekly number (round down)</td><td></td></tr>
+  </table>
+  <table class="blank">
+    <tr><th>Week</th><th class="r">Allowance</th><th class="r">Spent</th><th class="r">Left</th><th>One decision</th></tr>
+    <tr><td>1</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>2</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>3</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>4</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>5</td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <p style="font-size:8.5pt;color:var(--muted);margin-top:14px">&copy; Money Made Simple. Licensed for personal use by the purchaser; please don't resell or redistribute. Educational content only, not financial, tax, legal or investment advice. The example person and figures in this guide are fictional and for illustration only.</p>
+  <div class="folio"><span>The 20-Minute Budget</span><span>14</span></div>
+</section>
+
+</body>
+</html>

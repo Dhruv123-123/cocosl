@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Video Ad Studio</title>
+<meta name="description" content="Short-form vertical video ads for small brands, made with clearly labeled AI presenters. From $249 for 4 ads.">
+<script>
+  /* =========================================================
+     EDIT THESE AND NOTHING ELSE. Everything on the page updates.
+     ========================================================= */
+  const STUDIO = {
+    name:      "Your Studio Name",          // e.g. "Northlight Ads"
+    email:     "hello@yourdomain.com",      // where enquiries go
+    owner:     "Your Name",                 // shown in the footer
+    location:  "City, Country",             // optional; "" to hide
+    portfolio: ""                           // optional link to sample ads, e.g. a Google Drive or Vimeo showcase
+  };
+</script>
+<style>
+  :root{
+    --bg:#0c0f14; --bg2:#121722; --card:#161c29; --line:#263044; --text:#eef1f7; --muted:#9aa5bb;
+    --accent:#7cf0c5; --accent2:#ffcf5c; --accent-ink:#06261a; --danger:#ff8b8b;
+    --radius:18px;
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg:#f7f6f2; --bg2:#ffffff; --card:#ffffff; --line:#e3e0d6; --text:#121722; --muted:#5b6476;
+      --accent:#0f9d6e; --accent2:#b77900; --accent-ink:#ffffff;
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+  h1,h2,h3{line-height:1.12;margin:0 0 .5em;letter-spacing:-.02em}
+  h1{font-size:clamp(2.1rem,7vw,3.8rem);font-weight:850}
+  h2{font-size:clamp(1.6rem,4.5vw,2.4rem);font-weight:800}
+  h3{font-size:1.15rem;font-weight:750}
+  p{margin:0 0 1em}
+  .muted{color:var(--muted)}
+  .eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+  section{padding:64px 0;border-top:1px solid var(--line)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:999px;font-weight:700;text-decoration:none;border:1.5px solid var(--accent);transition:transform .15s}
+  .btn:hover{transform:translateY(-1px)}
+  .btn.primary{background:var(--accent);color:var(--accent-ink)}
+  .btn.ghost{color:var(--text);border-color:var(--line)}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-weight:850;letter-spacing:-.02em;text-decoration:none;display:flex;align-items:center;gap:8px}
+  .logo i{width:22px;height:22px;border-radius:7px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:inline-block}
+  nav .links{display:none;gap:22px;font-size:.92rem}
+  nav .links a{text-decoration:none;color:var(--muted)} nav .links a:hover{color:var(--text)}
+  nav .btn{padding:9px 16px;font-size:.9rem}
+  @media(min-width:760px){nav .links{display:flex}}
+
+  /* hero */
+  .hero{padding:56px 0 64px;border-top:none}
+  .hero-grid{display:grid;gap:40px;align-items:center}
+  @media(min-width:860px){.hero-grid{grid-template-columns:1.15fr .85fr}}
+  .hero .lead{font-size:1.15rem;color:var(--muted);max-width:36ch}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 18px}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;font-size:.85rem}
+  .badges span{border:1px solid var(--line);border-radius:999px;padding:5px 12px;color:var(--muted)}
+  .phones{display:flex;gap:14px;justify-content:center}
+  .phone{width:44%;max-width:200px;aspect-ratio:9/16;border-radius:26px;border:2px solid var(--line);background:var(--card);position:relative;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+  .phone:nth-child(2){transform:translateY(28px)}
+  .phone .scene{position:absolute;inset:0;background:radial-gradient(120% 70% at 50% 30%,color-mix(in srgb,var(--accent) 35%,transparent),transparent 60%),linear-gradient(180deg,var(--bg2),var(--card))}
+  .phone:nth-child(2) .scene{background:radial-gradient(120% 70% at 50% 30%,color-mix(in srgb,var(--accent2) 40%,transparent),transparent 60%),linear-gradient(180deg,var(--bg2),var(--card))}
+  .phone .cap{position:absolute;left:10px;right:10px;bottom:58px;font-weight:800;font-size:.95rem;line-height:1.2;text-align:center;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+  .phone .ai{position:absolute;top:12px;left:10px;font-size:.62rem;font-weight:700;background:rgba(0,0,0,.55);color:#fff;border-radius:6px;padding:3px 7px;letter-spacing:.03em}
+  .phone .bar{position:absolute;left:14px;right:14px;bottom:24px;height:4px;border-radius:4px;background:var(--line)}
+  .phone .bar::after{content:"";position:absolute;left:0;top:0;bottom:0;width:38%;border-radius:4px;background:var(--accent)}
+  .phone .head{position:absolute;left:50%;top:26%;width:46%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:color-mix(in srgb,var(--text) 14%,transparent)}
+  .phone .body{position:absolute;left:50%;top:50%;width:76%;height:30%;transform:translateX(-50%);border-radius:50% 50% 0 0;background:color-mix(in srgb,var(--text) 10%,transparent)}
+
+  /* cards */
+  .grid{display:grid;gap:16px}
+  @media(min-width:700px){.grid.c2{grid-template-columns:1fr 1fr}.grid.c3{grid-template-columns:repeat(3,1fr)}.grid.c4{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:980px){.grid.c4{grid-template-columns:repeat(4,1fr)}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .card .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent);font-weight:800;margin-bottom:12px}
+
+  /* pricing */
+  .price-card{display:flex;flex-direction:column}
+  .price-card.featured{border:2px solid var(--accent);position:relative}
+  .price-card.featured .tag{position:absolute;top:-12px;left:22px;background:var(--accent);color:var(--accent-ink);font-size:.75rem;font-weight:800;border-radius:999px;padding:3px 10px}
+  .price{font-size:2.6rem;font-weight:850;letter-spacing:-.03em;margin:4px 0}
+  .price small{font-size:1rem;font-weight:600;color:var(--muted)}
+  .price-card ul{list-style:none;padding:0;margin:12px 0 22px;flex:1}
+  .price-card li{padding:7px 0 7px 26px;position:relative;border-bottom:1px dashed var(--line);font-size:.95rem}
+  .price-card li::before{content:"";position:absolute;left:2px;top:13px;width:12px;height:7px;border-left:2.5px solid var(--accent);border-bottom:2.5px solid var(--accent);transform:rotate(-45deg)}
+  .addons{margin-top:22px}
+  .addons table{width:100%;border-collapse:collapse;font-size:.95rem}
+  .addons td{padding:12px 4px;border-bottom:1px solid var(--line)}
+  .addons td:last-child{text-align:right;font-weight:700;white-space:nowrap}
+
+  /* steps */
+  .steps{counter-reset:s;display:grid;gap:14px}
+  @media(min-width:860px){.steps{grid-template-columns:repeat(4,1fr)}}
+  .steps .card::before{counter-increment:s;content:counter(s,decimal-leading-zero);display:block;font-weight:850;font-size:1.6rem;color:var(--accent);margin-bottom:6px}
+
+  /* honesty block */
+  .honest{background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 14%,var(--card)),var(--card));}
+  .honest ul{padding-left:20px;margin:0}
+  .honest li{margin-bottom:8px}
+
+  /* faq */
+  details{border-bottom:1px solid var(--line);padding:16px 0}
+  summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--accent);font-size:1.4rem;line-height:1}
+  details[open] summary::after{content:"\2212"}
+  details p{margin:10px 0 0;color:var(--muted)}
+
+  /* form */
+  form{display:grid;gap:14px}
+  @media(min-width:700px){form .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}}
+  label{display:grid;gap:6px;font-size:.9rem;font-weight:600}
+  input,select,textarea{font:inherit;color:var(--text);background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+  textarea{min-height:120px;resize:vertical}
+  .fineprint{font-size:.82rem;color:var(--muted)}
+  footer{border-top:1px solid var(--line);padding:32px 0 48px;font-size:.88rem;color:var(--muted)}
+  footer .wrap{display:grid;gap:10px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top"><i></i><span data-studio="name">Your Studio Name</span></a>
+    <div class="links"><a href="#work">What you get</a><a href="#pricing">Pricing</a><a href="#process">Process</a><a href="#ai">About the AI</a><a href="#faq">FAQ</a></div>
+    <a class="btn primary" href="#contact">Free sample</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">AI video ad studio</span>
+      <h1>Scroll-stopping product ads, without booking a shoot.</h1>
+      <p class="lead">Vertical 15&ndash;30 second spokesperson and product-demo ads for TikTok, Reels and Shorts. Made with AI presenters, written by a human, and always labeled as AI.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#contact">Get a free sample ad</a>
+        <a class="btn ghost" href="#pricing">See pricing</a>
+      </div>
+      <div class="badges"><span>From $249 for 4 ads</span><span>Delivered in 7 days</span><span>Hook variants for testing</span><span>Clearly disclosed AI</span></div>
+    </div>
+    <div class="phones" aria-hidden="true">
+      <div class="phone"><div class="scene"></div><div class="head"></div><div class="body"></div><span class="ai">AI-generated presenter</span><div class="cap">3 reasons it belongs in your gym bag</div><div class="bar"></div></div>
+      <div class="phone"><div class="scene"></div><div class="head"></div><div class="body"></div><span class="ai">AI-generated presenter</span><div class="cap">Watch it fold flat in two seconds</div><div class="bar"></div></div>
+    </div>
+  </div>
+</header>
+
+<section id="work">
+  <div class="wrap">
+    <span class="eyebrow">What you get</span>
+    <h2>Ads built to be tested, not just admired.</h2>
+    <p class="muted" style="max-width:60ch">Paid social rewards brands that test lots of creative. Studio shoots make that expensive. We write the script, generate the presenter and voice, edit with captions and your product footage, and hand you ready-to-upload files.</p>
+    <div class="grid c4">
+      <div class="card"><div class="ic">9:16</div><h3>Native vertical</h3><p class="muted">1080&times;1920, 15&ndash;30 seconds, burned-in captions, safe zones respected for TikTok, Reels and Shorts.</p></div>
+      <div class="card"><div class="ic">A/B</div><h3>Hook variants</h3><p class="muted">Different first 3 seconds on the same ad, so you find out what stops the scroll for your audience.</p></div>
+      <div class="card"><div class="ic">&#9998;</div><h3>Human-written scripts</h3><p class="muted">Every script is written and checked by a person, based on your real product facts and claims you can back up.</p></div>
+      <div class="card"><div class="ic">AI</div><h3>Labeled, always</h3><p class="muted">Every ad carries an on-screen "AI-generated" label. No fake customers, no invented reviews.</p></div>
+    </div>
+    <h3 style="margin-top:36px">Formats we make</h3>
+    <div class="grid c3">
+      <div class="card"><h3>Spokesperson</h3><p class="muted">An AI presenter explains what the product is, who it's for and why it's different, like a brand ambassador talking to camera.</p></div>
+      <div class="card"><h3>Product demo</h3><p class="muted">Your product in action, using footage or photos you supply, with voiceover and captions walking through features step by step.</p></div>
+      <div class="card"><h3>Offer &amp; promo</h3><p class="muted">Launches, bundles, seasonal sales. Short, direct ads built around one clear offer and call to action.</p></div>
+    </div>
+    <p class="muted" style="margin-top:18px" id="portfolio-line">Want to see examples? <a href="#contact">Ask for a free sample ad</a> made for one of your own products.</p>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <span class="eyebrow">Pricing</span>
+    <h2>Simple packages. No contracts on the first order.</h2>
+    <p class="muted">Prices in USD. 50% to start, 50% on delivery.</p>
+    <div class="grid c3" style="margin-top:26px">
+      <div class="card price-card">
+        <h3>Starter</h3>
+        <div class="price">$249</div>
+        <p class="muted">For trying AI ads on one product.</p>
+        <ul>
+          <li>4 ads, 15&ndash;30s, 9:16</li>
+          <li>1 hook per ad</li>
+          <li>Captions + AI disclosure label</li>
+          <li>1 revision round</li>
+          <li>Delivered in 7 days</li>
+          <li>Organic use on your own channels; paid-ads use for 30 days</li>
+        </ul>
+        <a class="btn ghost" href="#contact" data-pkg="Starter">Start with Starter</a>
+      </div>
+      <div class="card price-card featured">
+        <span class="tag">Best for testing</span>
+        <h3>Growth</h3>
+        <div class="price">$449</div>
+        <p class="muted">For brands running paid social.</p>
+        <ul>
+          <li>8 ads, 15&ndash;30s, 9:16</li>
+          <li>3 hook variants per ad (24 files)</li>
+          <li>Captions + AI disclosure label</li>
+          <li>2 revision rounds</li>
+          <li>Delivered in 10 days</li>
+          <li>Organic use on your own channels; paid-ads use for 90 days</li>
+        </ul>
+        <a class="btn primary" href="#contact" data-pkg="Growth">Choose Growth</a>
+      </div>
+      <div class="card price-card">
+        <h3>Monthly retainer</h3>
+        <div class="price">$799<small>/month</small></div>
+        <p class="muted">Fresh creative every month.</p>
+        <ul>
+          <li>12 ads per month</li>
+          <li>3 hook variants per ad</li>
+          <li>Monthly creative report + refresh plan</li>
+          <li>2 revision rounds per batch</li>
+          <li>Delivered across the month</li>
+          <li>Organic use on your own channels; paid-ads use for 180 days per batch</li>
+          <li>Cancel with 30 days' notice</li>
+        </ul>
+        <a class="btn ghost" href="#contact" data-pkg="Monthly retainer">Talk about a retainer</a>
+      </div>
+    </div>
+    <div class="card addons">
+      <h3>Add-ons</h3>
+      <table>
+        <tr><td>Paid-ads usage rights, extra 90 days</td><td>+$100</td></tr>
+        <tr><td>Rush delivery (48 hours)</td><td>+$75</td></tr>
+        <tr><td>Extra hook variant (per ad)</td><td>+$25</td></tr>
+        <tr><td>Translated subtitles, one language (per ad)</td><td>+$15</td></tr>
+        <tr><td>Raw project files</td><td>+$75</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <span class="eyebrow">Process</span>
+    <h2>From brief to files in about a week.</h2>
+    <div class="steps" style="margin-top:22px">
+      <div class="card"><h3>Brief</h3><p class="muted">A 10-minute form: your product, audience, offer, claims you can substantiate, and any footage or photos you have.</p></div>
+      <div class="card"><h3>Scripts</h3><p class="muted">You approve every script and hook before anything is produced. Nothing gets made that you haven't read.</p></div>
+      <div class="card"><h3>Production</h3><p class="muted">AI presenter and voice, your product footage, captions, music from licensed libraries, and the AI label.</p></div>
+      <div class="card"><h3>Delivery</h3><p class="muted">MP4 files named and organised by hook, plus suggested captions. Revisions per your package.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="ai">
+  <div class="wrap">
+    <div class="card honest">
+      <span class="eyebrow">How we use AI (read this)</span>
+      <h2>Honest ads are the only kind worth running.</h2>
+      <div class="grid c2">
+        <ul>
+          <li><strong>Presenters and voices are AI-generated.</strong> They are not real people and are not your customers.</li>
+          <li><strong>Every ad is labeled</strong> with an on-screen "AI-generated" notice. We also recommend using each platform's own AI-content label when you post.</li>
+          <li><strong>No fake testimonials or reviews.</strong> Presenters never say they bought, used or were cured by your product. They present it, like a spokesperson.</li>
+        </ul>
+        <ul>
+          <li><strong>No real people's likeness or voices</strong> unless you supply a written licence from that person.</li>
+          <li><strong>Claims must be true.</strong> We only script claims you can back up. We won't write health cures, guaranteed results or income claims.</li>
+          <li><strong>Your product is real.</strong> Demos use your own footage or photos, so viewers see what they'll actually get.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap" style="max-width:820px">
+    <span class="eyebrow">FAQ</span>
+    <h2>Questions</h2>
+    <details><summary>Are the people in the ads real?</summary><p>No. Presenters and voices are generated with AI tools, and every ad shows an on-screen "AI-generated" label. We don't present them as real customers, and they never claim to have used your product.</p></details>
+    <details><summary>Why not "UGC" from real creators?</summary><p>Real creator content is great, and if you can afford lots of it, do it. AI ads are a faster, cheaper way to test many angles and hooks. Many brands use AI ads to find winning messages, then brief human creators on what works.</p></details>
+    <details><summary>Will platforms allow AI ads?</summary><p>Yes, when they're disclosed and follow normal ad policies. TikTok, Meta and YouTube all have rules for AI-generated or altered content; labeling the ad and using the platform's AI label when you upload keeps you on the right side of them. You're responsible for your ad account and final targeting.</p></details>
+    <details><summary>What do you need from me?</summary><p>Your product page, a few photos or short phone clips of the product (unboxing, in use, close-ups), your offer, and the claims you can substantiate. If you have no footage, we can work from product photos.</p></details>
+    <details><summary>Can I run these as paid ads?</summary><p>Yes. Organic use on your own channels is included with no time limit. Paid-ads use is included for 30 days (Starter), 90 days (Growth) or 180 days per batch (Retainer), and you can extend it 90 days at a time for $100.</p></details>
+    <details><summary>Do you guarantee sales or ROAS?</summary><p>No, and be wary of anyone who does. Results depend on your product, offer, targeting and budget. What we promise is on-time, on-brief, well-made creative that's built for testing.</p></details>
+    <details><summary>What's the free sample?</summary><p>One short ad (one hook, up to 20 seconds) for one of your products, made from your public product page. It's yours to keep for organic use. If you like it, it's credited against your first package. No obligation.</p></details>
+    <details><summary>How do payment and revisions work?</summary><p>50% upfront to book your slot, 50% on delivery via invoice (card or bank transfer). Revisions cover edits to script, captions, pacing and visuals within the approved brief; a brand-new concept counts as a new ad.</p></details>
+    <details><summary>Who owns the ads?</summary><p>Once paid in full, you own the final edited videos, subject to the usage terms of your package and the licences of the tools and music used. Details are in our simple service agreement, which you'll see before paying.</p></details>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap" style="max-width:820px">
+    <span class="eyebrow">Contact</span>
+    <h2>Get a free sample ad</h2>
+    <p class="muted">Tell us about your product. We reply within one business day. This form opens your email app with the details filled in; nothing is stored on this site.</p>
+    <form id="lead-form" class="card">
+      <div class="two">
+        <label>Your name<input name="name" required autocomplete="name"></label>
+        <label>Email<input name="email" type="email" required autocomplete="email"></label>
+      </div>
+      <div class="two">
+        <label>Brand / business<input name="brand" required></label>
+        <label>Website or product link<input name="url" type="url" placeholder="https://"></label>
+      </div>
+      <label>Interested in
+        <select name="pkg">
+          <option>Free sample ad</option><option>Starter ($249)</option><option>Growth ($449)</option><option>Monthly retainer ($799/mo)</option><option>Not sure yet</option>
+        </select>
+      </label>
+      <label>Anything we should know?<textarea name="msg" placeholder="Which product, who it's for, where you'll run the ads..."></textarea></label>
+      <button class="btn primary" type="submit">Send enquiry</button>
+      <p class="fineprint">Prefer plain email? Write to <a data-studio-mail href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong data-studio="name">Your Studio Name</strong> &middot; <span data-studio="owner">Your Name</span><span data-studio-loc></span> &middot; <a data-studio-mail href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></div>
+    <div>All ads we produce use AI-generated presenters and/or voices and are labeled as such. We do not create fake reviews or testimonials. Mockups on this page are illustrations.</div>
+    <div>&copy; <span id="yr"></span> <span data-studio="name">Your Studio Name</span>.</div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    document.title = STUDIO.name + " · AI Video Ad Studio";
+    document.querySelectorAll('[data-studio]').forEach(function(el){ el.textContent = STUDIO[el.getAttribute('data-studio')] || ''; });
+    document.querySelectorAll('[data-studio-mail]').forEach(function(el){ el.textContent = STUDIO.email; el.href = 'mailto:' + STUDIO.email; });
+    document.querySelectorAll('[data-studio-loc]').forEach(function(el){ el.textContent = STUDIO.location ? ' · ' + STUDIO.location : ''; });
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    if (STUDIO.portfolio) {
+      document.getElementById('portfolio-line').innerHTML = 'See example ads: <a href="' + encodeURI(STUDIO.portfolio) + '" target="_blank" rel="noopener">view the sample reel</a>, or <a href="#contact">ask for a free sample</a> made for your product.';
+    }
+    var form = document.getElementById('lead-form');
+    document.querySelectorAll('[data-pkg]').forEach(function(a){
+      a.addEventListener('click', function(){
+        var want = a.getAttribute('data-pkg');
+        Array.prototype.forEach.call(form.pkg.options, function(o){ if (o.text.indexOf(want) === 0) form.pkg.value = o.value; });
+      });
+    });
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var f = form.elements;
+      var subject = 'Enquiry: ' + f.pkg.value + ' for ' + f.brand.value;
+      var body = 'Name: ' + f.name.value + '\nEmail: ' + f.email.value + '\nBrand: ' + f.brand.value +
+                 '\nLink: ' + f.url.value + '\nInterested in: ' + f.pkg.value + '\n\n' + f.msg.value;
+      window.location.href = 'mailto:' + STUDIO.email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    });
+  })();
+</script>
+</body>
+</html>
