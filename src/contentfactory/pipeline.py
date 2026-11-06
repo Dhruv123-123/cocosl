@@ -23,6 +23,15 @@ from .llm import LLM
 from .writer import write_with_review
 
 
+def _affiliates_in(brand: BrandProfile, caption: str, title: str) -> tuple[list[str], list[str]]:
+    """(offers whose link is actually in the caption, offers that would fit by keyword)."""
+    present = [a.slug or a.name for a in brand.affiliates
+               if a.url in caption or (a.slug and f"/go/{a.slug}" in caption)]
+    text = f"{caption} {title}".lower()
+    fits = [a.slug or a.name for a in brand.affiliates if any(k.lower() in text for k in a.keywords)]
+    return present, fits
+
+
 @dataclass
 class Factory:
     settings: Settings
@@ -63,13 +72,13 @@ class Factory:
         for s in sources:
             if s.url and s.url not in script.sources:
                 script.sources.append(s.url)
-        affiliate_slugs = [a.slug or a.name for a in brand.affiliates
-                           if any(k.lower() in (script.caption + script.title).lower() for k in a.keywords)]
+        affiliate_slugs, affiliate_ideas = _affiliates_in(brand, script.caption, script.title)
         post_id = self.db.insert("posts", {
             "brand": brand.slug, "idea_id": idea_id, "format": idea["format"], "status": "scripted",
             "title": script.title, "script": script.model_dump(), "caption": script.caption,
             "hashtags": script.hashtags, "disclosure": brand.ai_disclosure,
             "meta": {"editor": verdict.model_dump(), "affiliate_slugs": affiliate_slugs,
+                     "affiliate_suggestions": affiliate_ideas,
                      "llm": self.llm.provider},
         })
         self.db.update("ideas", idea_id, {"status": "used"})
@@ -88,12 +97,11 @@ class Factory:
         sc = Script.model_validate(script)
         idea_id = self.db.insert("ideas", {"brand": brand.slug, "title": sc.title, "angle": angle,
                                            "format": fmt, "pillar": pillar, "source": source, "status": "used"})
-        affiliate_slugs = [a.slug or a.name for a in brand.affiliates
-                           if any(k.lower() in (sc.caption + sc.title).lower() for k in a.keywords)]
+        affiliate_slugs, affiliate_ideas = _affiliates_in(brand, sc.caption, sc.title)
         post_id = self.db.insert("posts", {
             "brand": brand.slug, "idea_id": idea_id, "format": fmt, "status": "scripted",
             "title": sc.title, "script": sc.model_dump(), "caption": sc.caption, "hashtags": sc.hashtags,
-            "disclosure": brand.ai_disclosure, "meta": {"affiliate_slugs": affiliate_slugs, "llm": source,
+            "disclosure": brand.ai_disclosure, "meta": {"affiliate_slugs": affiliate_slugs, "affiliate_suggestions": affiliate_ideas, "llm": source,
                                                          "human_edited": True},
         })
         self.db.log("post.imported", "post", post_id, {"source": source})

@@ -1,0 +1,18 @@
+# Replace the domains, point their DNS A records at your server, then:
+#   docker compose -f docker-compose.yml -f deploy/docker-compose.caddy.yml up -d
+# Caddy fetches HTTPS certificates automatically.
+
+# Dashboard + public link page (/l/<brand>), tracked links (/go/<slug>),
+# signups, and Stripe/Gumroad webhooks.
+studio.example.com {
+	encode gzip
+	reverse_proxy app:8000
+}
+
+# Rendered media for Instagram/Threads/TikTok to fetch. Set
+# PUBLIC_MEDIA_BASE_URL=https://media.example.com
+media.example.com {
+	root * /srv/media
+	file_server
+	header Access-Control-Allow-Origin *
+}
