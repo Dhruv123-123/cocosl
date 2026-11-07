@@ -72,6 +72,8 @@ def export(factory, brand_slug: str, platform: str = "kit", days: int = 7, upcom
         "- [ ] Any affiliate or product mention keeps its disclosure; the AI disclosure line stays\n"
         + ("- [ ] Links point at localhost: set your public site URL (see .env.example) and run this again\n"
            if "localhost" in html else "")
+        + ("- [ ] Custom HTML templates don't add the unsubscribe link: paste {$unsubscribe} in a link, or use the "
+           "HTML block of a drag-and-drop template (its footer has the link and your address)\n" if platform == "sender" else "")
         + "- [ ] Send a test to yourself, then send or schedule it in the platform\n")
     factory.db.log("newsletter.exported", "newsletter_draft", draft_id, {"platform": platform, "dir": str(out)})
     return {"dir": out, "draft_id": draft_id, "posts": n_posts, "subject": d["subject"]}
