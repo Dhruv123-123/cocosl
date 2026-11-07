@@ -47,8 +47,8 @@ const RULES = [
     /\b(bitcoin|btc|usdt|tether|crypto ?(atm|wallet|currency)?|ethereum|wallet address)\b/i],
   ['p2p-payment', 15, 'Wants payment through Zelle, Cash App, Venmo or a wire', 'These payments are like cash: once sent, they are very hard to get back. Only pay people you know in person.',
     /\b(zelle|cash ?app|venmo|wire transfer|western union|moneygram|money order)\b/i],
-  ['code-request', 35, 'Asks you to share a verification code', 'Never read or forward a one-time code to anyone. It is how scammers take over your accounts.',
-    /\b(send|share|give|read|tell|forward|provide|confirm)\b[^.!?\n]{0,25}\b(code|otp|pin|passcode|c[oó]digo)\b/i,
+  ['code-request', 60, 'Asks you to share a verification code', 'Never read or forward a one-time code to anyone. It is how scammers take over your accounts.',
+    /(?<!\b(not|n't|never|nunca|no)\s)\b(send|share|give|read|tell|forward|provide|confirm)\b[^.!?\n]{0,25}\b(code|otp|pin|passcode|c[oó]digo)\b/i,
     /\b(code|otp|c[oó]digo)\b[^.!?\n]{0,30}\b(sent|texted) (to )?you\b[^.!?\n]{0,40}\b(send|share|tell|read)\b/i],
   ['credentials', 25, 'Asks for a password, PIN, SSN or card number', 'Real companies never ask for your full password, PIN or Social Security number by text or email.',
     /\b(social security( number)?|ssn|full card number|card number|cvv|pin number|password|login details|bank details|routing number|n[uú]mero de seguro social)\b/i],
@@ -59,7 +59,7 @@ const RULES = [
   ['prize', 25, 'You "won" something you never entered', 'You can\'t win a lottery or sweepstakes you didn\'t enter, and real prizes never require a fee.',
     /\b(you('ve| have)? won|winner|congratulations|claim your (prize|reward|gift)|lottery|sweepstakes|selected to receive|free (iphone|gift)|ganaste|premio)\b/i],
   ['delivery', 15, 'Package delivery problem with a fee or link', 'USPS, UPS and FedEx don\'t text you asking for a redelivery fee. Track packages in the carrier\'s own app or website.',
-    /\b(package|parcel|shipment|delivery)\b[^.!?\n]{0,60}\b(on hold|failed|unable|pending|incomplete address|redeliver|fee|customs)\b/i],
+    /\b(package|parcel|shipment|delivery)\b[^.!?\n]{0,100}\b(on hold|failed|unable|pending|incomplete address|redeliver|fee|customs|cannot be delivered|could not be delivered|undeliverable)\b/i],
   ['toll', 25, 'Unpaid toll text', 'Unpaid-toll texts are one of the most common scams right now. Check your account only in your toll agency\'s official app or site.',
     /\b(unpaid|outstanding|overdue)\b[^.!?\n]{0,30}\b(toll|tolls|e-?z ?pass|sunpass|fastrak|toll ?bill)\b/i, /\b(e-?z ?pass|sunpass|fastrak|txtag|peach pass)\b/i],
   ['refund', 20, 'Unexpected refund or overpayment', 'Fake refunds and "overpayments" end with you sending money back. Check your account directly, not through the message.',
@@ -79,12 +79,14 @@ const RULES = [
     /\breply\s+["']?(y|yes|1)["']?\b[^.!?\n]{0,80}\b(link|activate|reopen|click)\b/i, /\b(reopen|re-open) (this|the) (message|sms|text)\b/i],
   ['move-chat', 15, 'Wants to move the chat to WhatsApp, Telegram or Signal', 'Scammers move you off the platform so its fraud protection and reports can\'t reach them.',
     /\b(whats ?app|telegram|signal app|wechat|kik)\b/i],
+  ['fraud-alert-callback', 20, 'A "fraud alert" that says an agent will call you', 'Fake fraud alerts set up a call from a "fraud agent" who talks you into moving money. Hang up and call the number on your card.',
+    /\b(agent|specialist|representative|department|team) will (call|contact|reach out to) you\b/i, /\b(fraud (alert|department)|did you (attempt|authorize|authorise|make) (a|this))\b[^.!?\n]{0,80}\b(zelle|wire|transfer|payment)\b/i],
   ['generic-greeting', 8, 'Generic greeting instead of your name', 'Companies you have an account with usually use your name.',
     /\b(dear (customer|user|client|member|account holder|valued)|estimado cliente)\b/i],
   ['verify-account', 15, 'Asks you to "verify" or "confirm" your account through a link', 'Go to the company\'s app or type its website yourself instead of using the link.',
     /\b(verify|confirm|update|validate|unlock|restore)\b[^.!?\n]{0,25}\b(your )?(account|identity|information|details|payment|billing|card)\b/i],
   ['secrecy', 20, 'Tells you to keep it secret or not tell your bank', 'Being told not to tell anyone, including your bank, is a classic sign of a scam.',
-    /\b(don'?t|do not) (tell|inform|contact|mention)\b[^.!?\n]{0,30}\b(anyone|bank|family|police|teller)\b/i, /\b(keep (this|it) (confidential|secret|between us))\b/i],
+    /\b(don'?t|do not) (tell|inform|contact|mention|share (this|it))\b[^.!?\n]{0,30}\b(anyone|bank|family|police|teller)\b/i, /\b(keep (this|it) (confidential|secret|between us))\b/i],
   ['romance-money', 20, 'Someone you met online needs money', 'Never send money or crypto to someone you have only met online, however long you\'ve talked.',
     /\b(stuck|stranded|customs|hospital|emergency|plane ticket|visa)\b[^.!?\n]{0,60}\b(send|need|borrow|wire|help)\b[^.!?\n]{0,30}\b(money|\$\d+|funds|cash)\b/i],
   ['government', 15, 'Claims to be the IRS, Social Security, Medicare or another agency', 'The IRS and SSA contact you by mail first. They never demand payment by text, gift card or crypto.',
@@ -203,7 +205,7 @@ function emailSenderIssues(sender) {
 
 const CATEGORIES = [
   ['toll', 'Unpaid toll scam'], ['delivery', 'Fake delivery notice'], ['government', 'Government impersonation'],
-  ['remote-access', 'Tech support scam'], ['tech-support', 'Tech support or fake subscription scam'], ['investment', 'Investment / crypto scam'],
+  ['remote-access', 'Tech support scam'], ['tech-support', 'Tech support or fake subscription scam'], ['fraud-alert-callback', 'Fake bank fraud alert'], ['investment', 'Investment / crypto scam'],
   ['job', 'Job or task scam'], ['prize', 'Prize or lottery scam'], ['wrong-number', 'Wrong-number / romance opener'],
   ['romance-money', 'Romance scam'], ['refund', 'Refund or overpayment scam'], ['code-request', 'Account takeover attempt'],
   ['gift-card', 'Gift card payment scam'], ['verify-account', 'Phishing (fake account alert)'],
@@ -238,7 +240,7 @@ export function analyzeMessage(text, { sender = '' } = {}) {
   if (riskyLink && signals.some((s) => ['urgency', 'threat', 'delivery', 'toll', 'verify-account', 'refund', 'prize'].includes(s.id))) raw += 10;
   // Known scam scripts: these pairs together are much stronger than either alone.
   const has = (id) => signals.some((s) => s.id === id);
-  const COMBOS = [['investment', 'crypto-payment'], ['job', 'move-chat'], ['wrong-number', 'investment'], ['government', 'gift-card'], ['tech-support', 'remote-access'], ['romance-money', 'crypto-payment']];
+  const COMBOS = [['investment', 'crypto-payment'], ['job', 'move-chat'], ['wrong-number', 'investment'], ['government', 'gift-card'], ['government', 'threat'], ['fraud-alert-callback', 'secrecy'], ['fraud-alert-callback', 'p2p-payment'], ['tech-support', 'remote-access'], ['romance-money', 'crypto-payment']];
   for (const [a, b] of COMBOS) if (has(a) && has(b)) raw += 15;
   const score = Math.max(0, Math.min(100, Math.round(raw)));
   const level = score >= 60 ? 'high' : score >= 30 ? 'medium' : 'low';

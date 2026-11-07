@@ -1,5 +1,6 @@
 import config from './config.js';
 import { analyzeMessage } from './lib/scan.js';
+import { setupSignup } from './signup.js';
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
@@ -71,24 +72,14 @@ document.querySelectorAll('[data-example]').forEach((b) => b.addEventListener('c
   check();
 }));
 
-// Email signup (same behaviour as the calculators).
-(function signup() {
-  const form = document.querySelector('form.signup');
-  const e = config.email;
-  document.querySelector('.signup-pitch').textContent = e.pitch;
-  if (e.provider === 'none') { form.parentElement.hidden = true; return; }
-  if (e.provider !== 'netlify') { form.removeAttribute('data-netlify'); form.action = e.action || '#'; form.querySelector('input[type=email]').name = e.emailField || 'email'; }
-  form.addEventListener('submit', async (ev) => {
-    ev.preventDefault();
-    if (form.website.value) return;
-    if (e.provider !== 'netlify' && !e.action) { alert('Email signup is not connected yet: set email.action in config.js.'); return; }
-    const btn = form.querySelector('button'); btn.disabled = true; btn.textContent = 'Sending…';
-    try {
-      await fetch(e.provider === 'netlify' ? '/' : form.action, { method: 'POST', mode: e.provider === 'netlify' ? 'same-origin' : 'no-cors', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() });
-      location.href = e.thanksUrl;
-    } catch { form.submit(); }
-  });
-})();
+setupSignup();
+
+const fromGuide = new URLSearchParams(location.hash.slice(1)).get('m');
+if (fromGuide) {
+  $('#message').value = fromGuide;
+  history.replaceState(null, '', location.pathname + location.search);
+  check();
+}
 
 if (config.analytics.plausibleDomain) {
   const s = document.createElement('script'); s.defer = true; s.dataset.domain = config.analytics.plausibleDomain; s.src = 'https://plausible.io/js/script.js'; document.head.append(s);

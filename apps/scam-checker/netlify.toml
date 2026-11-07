@@ -1,3 +1,4 @@
 # Deploy on its own: Netlify > Add new site > Import > base directory apps/scam-checker
 [build]
   publish = "."
+  command = "node build.mjs"
