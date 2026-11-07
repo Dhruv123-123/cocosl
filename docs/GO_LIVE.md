@@ -149,6 +149,7 @@ Money Made Simple is posting, not before.
 ## Stage 5 · Website and email funnel (≈ 1 h 30 min)
 
 Needs PR #4 merged. Turns followers into an email list that sees the products 3 times.
+The one-page version, with every blank and what happens until it's filled, is `site/SITE_START_HERE.md`.
 
 - [ ] Netlify > Add new site > Import from GitHub > `cocosl`. It reads `netlify.toml`; click Deploy, rename the
       site. Forms > Enable form detection, redeploy. 15 min
@@ -165,8 +166,8 @@ Needs PR #4 merged. Turns followers into an email list that sees the products 3 
 - [ ] Put `https://your-site/links/` in every profile's link in bio. 5 min
 - [ ] Submit `sitemap.xml` to Google Search Console and Bing Webmaster Tools. 10 min
 - [ ] Scheduled articles: Netlify > Build hooks > add one, then put its URL in the GitHub secret
-      `NETLIFY_BUILD_HOOK`. The scheduled rebuild only deploys on days something publishes (about 69 days in
-      2027), and pushes that don't touch `site/` are skipped. 5 min
+      `NETLIFY_BUILD_HOOK`. The scheduled rebuild only deploys on days something publishes (8–13 a month,
+      69 in 2027, about 120–195 of Netlify's 300 free credits), and pushes that don't touch `site/` are skipped. 5 min
 - [ ] Optional 7-day Money Basics course (PR #4): `factory sequence-export money-made-simple --sequence
       money-basics --for sender`, then turn that automation on in your provider (signup source
       `money-basics-7-days`). 15 min
@@ -234,7 +235,8 @@ brand properly before starting the next.
 Order (suggested by `research/scouting/two-brand-launch-plan.md` on PR #2, which replaces the 1099 + MMS week-1
 order in `launch-playbook.md`): **9b Scam Decoded and 9a free apps in week 2** (Mon Nov 23; the scam checker is
 the Scam site's lead tool), Scam posts at half cadence from week 3. **Brand 3 is 9d 1099 Money**, and only when
-all five gates below pass (checked at the end of week 8, around Jan 10). **9c Dinero Simple comes last**, once a
+all five gates below pass (checked at the end of week 8, around Jan 10). When they pass, set `launch_stage` to
+`"brand-3"` in `site/site.json` so the homepage lists 1099 Money next to Scam Decoded. **9c Dinero Simple comes last**, once a
 paid Spanish reviewer is booked.
 
 Brand-3 gates (all five must pass):
