@@ -59,6 +59,15 @@ export default {
     pitch: 'Every moving cost in one sheet with estimate vs actual, plus what\'s still to pay. Click "Copy rows" here and paste into its "Planner paste" tab at cell B7. Google Sheets and Excel.',
     pitchEs: 'Todos los costos de la mudanza en una hoja, estimado contra real y lo que falta pagar. Copia las filas aquí y pégalas en la pestaña "Planner paste", celda B7. Google Sheets y Excel.',
   },
+  // Sinking Funds Sheet (products thread, PR #6). Same layout as this page's export: funds at A5, deposits at K5.
+  // Shown on sinking-funds.html once the URL is live; until then that page offers Money Dashboard Pro.
+  sinkingTemplate: {
+    name: 'Sinking Funds Sheet', nameEs: 'Hoja de fondos de ahorro',
+    price: '$7',
+    url: 'https://REPLACE_ME.gumroad.com/l/sinking-funds-sheet', // TODO: real link once Dhruv lists it
+    pitch: 'Every fund, its goal date and what to save each month, updated as you log deposits. Paste your funds at A5 and what you\'ve saved at K5. Google Sheets and Excel.',
+    pitchEs: 'Cada fondo, su fecha meta y cuánto ahorrar al mes, al día con cada depósito. Pega tus fondos en A5 y lo ahorrado en K5. Google Sheets y Excel.',
+  },
   // Paid add-on shown on Rate My Budget (Gumroad, Stripe Payment Link or a Calendly paid booking).
   review: {
     name: 'Personal budget review',

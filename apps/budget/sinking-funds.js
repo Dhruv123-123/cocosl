@@ -102,8 +102,9 @@ for (const [btn, area] of [['#copy-funds', '#t-funds'], ['#copy-deposits', '#t-d
 }
 $('#csv').addEventListener('click', () => download(T.file, plannerCsv(plan(state.funds, today, { perPay: state.perPay }), lang), 'text/csv'));
 
-const p = config.sheetTemplate;
-if (p && live(p.url)) {
+// The standalone Sinking Funds Sheet when it's listed, otherwise Money Dashboard Pro (both take the same paste).
+const p = [config.sinkingTemplate, config.sheetTemplate].find((x) => x && live(x.url));
+if (p) {
   $('#upsell').innerHTML = `<h3>${esc(es ? p.nameEs : p.name)} (${esc(p.price)})</h3><p>${esc(es ? p.pitchEs : p.pitch)}</p><a class="btn small" href="${esc(p.url)}">${es ? 'Ver la plantilla' : 'Get the template'}</a>`;
   $('#upsell').hidden = false;
 }
