@@ -58,5 +58,9 @@
       "buy_url": "https://example.gumroad.com/l/spot-it-stop-it",
       "cover": "/img/teams-cover.png"
     }
-  ]
+  ],
+  "analytics": {
+    "plausible_domain": "scamdecoded.netlify.app",
+    "plausible_src": "https://plausible.io/js/script.outbound-links.tagged-events.js"
+  }
 }

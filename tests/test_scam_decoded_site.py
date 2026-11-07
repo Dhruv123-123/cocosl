@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1] / "sites" / "scam-decoded"
 
 def build(tmp_path, monkeypatch, **env):
     monkeypatch.setenv("SITE_OUT", str(tmp_path / "public"))
-    for k in ("SITE_URL", "URL", "EMAIL_PROVIDER", "EMAIL_FORM_ACTION", "SCAM_CHECKER_URL"):
+    for k in ("SITE_URL", "URL", "EMAIL_PROVIDER", "EMAIL_FORM_ACTION", "SCAM_CHECKER_URL", "PLAUSIBLE_DOMAIN", "PLAUSIBLE_SRC"):
         monkeypatch.delenv(k, raising=False)
     for k, v in env.items():
         monkeypatch.setenv(k, v)
@@ -75,3 +75,20 @@ def test_product_ladder_pages_and_upsells(tmp_path, monkeypatch):
     assert "/parents/" in seq[-1]["html"] and "/teams/" in seq[-1]["html"]
     sitemap = (out / "sitemap.xml").read_text()
     assert "/parents/" in sitemap and "/teams/" in sitemap
+
+
+def test_plausible_snippet_and_click_tags(tmp_path, monkeypatch):
+    _, out = build(tmp_path, monkeypatch)
+    pages = [p for p in out.rglob("*.html") if "emails" not in p.parts or p.name == "index.html"]
+    snippet = ('<script defer data-domain="scamdecoded.netlify.app" '
+               'src="https://plausible.io/js/script.outbound-links.tagged-events.js"></script>')
+    for p in pages:
+        assert snippet in p.read_text(), p
+    for slug in ("kit", "parents", "teams"):
+        html = (out / slug / "index.html").read_text()
+        buttons = re.findall(r'<a class="button([^"]*)" href="https://example\.gumroad', html)
+        assert buttons and all("plausible-event-name=Product+Click" in b for b in buttons), slug
+    # email bodies never carry scripts
+    assert not any("<script" in p.read_text() for p in out.rglob("email.html"))
+    _, out2 = build(tmp_path / "b", monkeypatch, PLAUSIBLE_DOMAIN="")
+    assert "plausible.io" not in (out2 / "index.html").read_text()

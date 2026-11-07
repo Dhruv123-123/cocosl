@@ -43,3 +43,9 @@ Email links are absolute (they use `url` / `SITE_URL`).
    or `factory` need the form action (or set `EMAIL_PROVIDER` / `EMAIL_FORM_ACTION`).
 4. `contact_email` and `url` (or `SITE_URL`).
 5. Set the email tool to send the 7 emails on days 0, 1, 3, 5, 7, 10, 14 after sign-up.
+6. Analytics: every page loads Plausible (`script.outbound-links.tagged-events.js`, see `docs/UTM.md`
+   section 3). The domain is `analytics.plausible_domain` in `site.json` (or `PLAUSIBLE_DOMAIN`; set it
+   empty to build without analytics, `PLAUSIBLE_SRC` for a self-hosted script). Buy buttons send
+   `Product Click` and affiliate links (any `affiliates[].url` used in page text) send `Affiliate Click`
+   with `rel="sponsored"`. Add both goals in Plausible. Outbound links, like the checker, are counted
+   automatically. Email bodies carry no script.

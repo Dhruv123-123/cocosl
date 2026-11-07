@@ -44,7 +44,30 @@ def load_config() -> dict:
         cfg["email"]["action"] = os.environ["EMAIL_FORM_ACTION"]
     if os.environ.get("SCAM_CHECKER_URL"):
         cfg["scam_checker"]["url"] = os.environ["SCAM_CHECKER_URL"]
+    an = cfg.setdefault("analytics", {})
+    if "PLAUSIBLE_DOMAIN" in os.environ:  # set it to "" to build without analytics
+        an["plausible_domain"] = os.environ["PLAUSIBLE_DOMAIN"]
+    if os.environ.get("PLAUSIBLE_SRC"):
+        an["plausible_src"] = os.environ["PLAUSIBLE_SRC"]
+    if an.get("plausible_domain"):
+        src = an.get("plausible_src") or "https://plausible.io/js/script.outbound-links.tagged-events.js"
+        cfg["analytics_snippet"] = (f'<script defer data-domain="{html.escape(an["plausible_domain"])}" '
+                                    f'src="{html.escape(src)}"></script>')
     return cfg
+
+
+PRODUCT_CLICK = "plausible-event-name=Product+Click"
+AFFILIATE_CLICK = "plausible-event-name=Affiliate+Click"
+
+
+def store_links() -> set[str]:
+    links = {CFG["product"]["buy_url"]}
+    links |= {p.get("buy_url", "") for p in CFG.get("ladder", [])}
+    return {x for x in links if x}
+
+
+def affiliate_links() -> set[str]:
+    return {a.get("url", "") for a in CFG.get("affiliates", []) if isinstance(a, dict) and a.get("url")}
 
 
 def is_placeholder(link: str) -> bool:
@@ -99,6 +122,10 @@ def inline(s: str) -> str:
 
     def link(m):
         href = m.group(2)
+        if href in affiliate_links():
+            return f'<a href="{esc(href)}" rel="sponsored" class="{AFFILIATE_CLICK}">{m.group(1)}</a>'
+        if href in store_links():
+            return f'<a href="{esc(href)}" class="{PRODUCT_CLICK}">{m.group(1)}</a>'
         return f'<a href="{esc(u(href))}">{m.group(1)}</a>'
     return re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", link, s)
 
@@ -321,7 +348,7 @@ def kit() -> str:
     <p class="kicker">Our own product · {price(p)}</p>
     <h1>{esc(p['name'])}</h1>
     <p class="lede">Scammers now clone voices, fake caller ID and know your parents' address from data breaches. This kit turns one 15-minute family conversation into a plan everyone follows when a scary call comes in.</p>
-    <p><a class="button" href="{esc(buy)}">Get the kit for {price(p)}</a></p>
+    <p><a class="button {PRODUCT_CLICK}" href="{esc(buy)}">Get the kit for {price(p)}</a></p>
     <p class="small">Printable PDF, {p['pages']} pages, US Letter. {p['refund_days']}-day refund, no hoops.</p>
   </div>
   <img class="cover" src="{u('/img/kit-cover.png')}" alt="Cover of {esc(p['name'])}" width="306" height="396">
@@ -336,7 +363,7 @@ def kit() -> str:
   <ul><li>Most of the facts are free online, and we say so. The kit saves you turning them into a plan your family will follow.</li>
   <li>No product can promise you'll never be scammed. This one helps your family slow down and check.</li>
   <li>General education, not legal or financial advice.</li></ul>
-  <p><a class="button" href="{esc(buy)}">Get the kit for {price(p)}</a></p>
+  <p><a class="button {PRODUCT_CLICK}" href="{esc(buy)}">Get the kit for {price(p)}</a></p>
   {checker_box()}
   <div class="product">
     <img src="{u('/img/parents-cover.png')}" alt="Cover of Protect Your Parents" width="170" height="220" loading="lazy">
@@ -386,7 +413,7 @@ def parents_page() -> str:
     <p class="kicker">Our own product · {price(p)}</p>
     <h1>{esc(p['name'])}</h1>
     <p class="lede">Your parents answer the phone. Scammers know it. This {p['pages']}-page guide walks you through three short visits that make them much harder to scam, without making them feel foolish.</p>
-    <p><a class="button" href="{esc(buy)}">Get the guide for {price(p)}</a></p>
+    <p><a class="button {PRODUCT_CLICK}" href="{esc(buy)}">Get the guide for {price(p)}</a></p>
     {code}
     <p class="small">Printable PDF, US Letter. {CFG['product']['refund_days']}-day refund.</p>
   </div>
@@ -401,7 +428,7 @@ def parents_page() -> str:
   <ul><li>No guide can promise your parents will never be scammed. This one helps them slow down and check.</li>
   <li>Phone menus change with updates; the guide tells you what to look for, not just where to tap.</li>
   <li>General education, not legal or financial advice.</li></ul>
-  <p><a class="button" href="{esc(buy)}">Get the guide for {price(p)}</a></p>
+  <p><a class="button {PRODUCT_CLICK}" href="{esc(buy)}">Get the guide for {price(p)}</a></p>
 </section>"""
 
 
@@ -423,7 +450,7 @@ def teams_page() -> str:
     <p class="kicker">For small businesses · {price(p)}</p>
     <h1>Spot It, Stop It: scam awareness training for your team</h1>
     <p class="lede">Most scams that hit small businesses don't hack anything. They ask a person to pay an invoice, change bank details, buy gift cards or read out a code. Run a 45-minute session yourself, no security background needed.</p>
-    <p><a class="button" href="{esc(buy)}">Get the training pack for {price(p)}</a></p>
+    <p><a class="button {PRODUCT_CLICK}" href="{esc(buy)}">Get the training pack for {price(p)}</a></p>
     <p class="small">One organization, any number of employees. Zip download: PPTX, PDF.</p>
   </div>
   <img class="cover" src="{u(p['cover'])}" alt="Title slide of the Spot It, Stop It training deck" width="400" height="225">
@@ -437,7 +464,7 @@ def teams_page() -> str:
   <ul><li>Training reduces risk; it can't remove it. The policy template and the verify rule do the heavy lifting.</li>
   <li>It doesn't make you "compliant" with any specific law, standard or insurer. The attendance log helps you keep records.</li>
   <li>General education, not legal, compliance or financial advice.</li></ul>
-  <p><a class="button" href="{esc(buy)}">Get the training pack for {price(p)}</a></p>
+  <p><a class="button {PRODUCT_CLICK}" href="{esc(buy)}">Get the training pack for {price(p)}</a></p>
 </section>"""
 
 
