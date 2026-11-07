@@ -17,6 +17,8 @@ Paste the message or link you're not sure about. The checker looks for the patte
 
 It runs a set of plain rules, the same red flags we teach in our videos: rush, threats, secrecy, unusual ways to pay, requests for codes, and web addresses that borrow a brand's name. It is a second opinion and can't promise a message is safe, so when in doubt, contact the company on a number you found yourself.
 
+Already typed your details into a site, or got a data breach notice? Work through the [data breach checklist](/breached/).
+
 Want to know the patterns before the next message arrives? Get the free checklist:
 
 {{signup:checker-page}}

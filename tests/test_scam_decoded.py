@@ -200,7 +200,7 @@ def _load_originality(name):
 def test_originality_formats_render_to_html(tmp_path, monkeypatch):
     b = _load_originality("build")
     F = b.F
-    assert len(F.WALKTHROUGHS) == len(F.QUIZZES) == 7 and len(F.CHARTS) == 4
+    assert len(F.WALKTHROUGHS) == len(F.QUIZZES) == 8 and len(F.CHARTS) == 4
     for w in F.WALKTHROUGHS:
         page, secs = b.walkthrough_html(w)
         assert 35 <= secs <= 75 and page.count('class="b ') == len(w["messages"])
@@ -308,3 +308,42 @@ def test_weeks_27_30_may_content_rotates_formats():
             assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
     plan = (CONTENT.parent / "POSTING_PLAN_WEEKS_27-30.md").read_text()
     assert all(f"#{n} " in plan for n in range(len(items)))
+
+
+def test_tax_2027_pack_covers_tax_scams_on_free_saturdays():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    items = json.loads((CONTENT.parent / "tax-2027.json").read_text())
+    assert len(items) == 12
+    assert {i["topic"] for i in items} == {"IRS impersonation", "fake preparers", "refund-theft texts", "IP PIN"}
+    dates = [i["post_on"] for i in items]
+    assert dates == sorted(dates) and dates[0] >= "2027-01-15" and dates[-1] <= "2027-04-15"
+    import datetime as dt
+    assert all(dt.date.fromisoformat(d[:10]).weekday() == 5 for d in dates)
+    videos = [i for i in items if i["format"] != "carousel"]
+    assert all(a["look"] != b["look"] for a, b in zip(videos, videos[1:])), "two videos in a row look alike"
+    earlier, taken = set(), set()
+    for name in ("content.json", "weeks-3-6.json", "weeks-7-12.json", "weeks-13-21.json", "weeks-22-26.json",
+                 "tiktok-minute-cuts.json", "holiday-2026.json", "weeks-27-30.json"):
+        for i in json.loads((CONTENT.parent / name).read_text()):
+            earlier.add(i["script"]["title"])
+            if i.get("post_on"):
+                taken.add(i["post_on"][:10])
+    assert not taken & {d[:10] for d in dates}, "a tax post lands on a day another plan already uses"
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        words = sum(len(s.narration.split()) for s in sc.segments)
+        if item["platforms"] == ["tiktok"]:
+            assert 165 <= words <= 230 and "No AI voice" in item["original_element"], sc.title
+            assert any(s.heading == "Pause" for s in sc.segments), sc.title
+        elif item["format"] == "short":
+            assert 60 <= words <= 120, sc.title
+        assert sc.title not in earlier and any(ch.isdigit() for ch in sc.hook)
+        assert sc.sources and sc.claims_to_verify and item["original_element"]
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        text = G.script_text(item["script"])
+        assert "checker" in sc.caption and "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+    plan = (CONTENT.parent / "POSTING_PLAN_TAX_2027.md").read_text()
+    assert all(f"#{n} " in plan for n in range(12))

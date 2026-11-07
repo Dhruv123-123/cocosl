@@ -62,3 +62,10 @@ footer .small{color:#9aa8b6}
 .verdict.low{background:#fff9e8;border-color:#e0c060}.verdict.none{background:#e6f6f4;border-color:var(--teal)}
 .flags li{margin-bottom:10px}.flags span{color:#24364a}
 .reads li{margin-bottom:6px}
+.breach-steps{list-style:none;padding:0;counter-reset:step}
+.breach-steps>li{counter-increment:step;border:1px solid var(--line,#dde3e8);border-radius:12px;padding:14px 16px;margin:0 0 12px;background:#fff}
+.breach-steps>li>label{display:flex;gap:10px;align-items:flex-start;cursor:pointer;font-size:1.05em}
+.breach-steps>li>label::before{content:counter(step);flex:0 0 26px;height:26px;border-radius:50%;background:var(--teal-d);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px}
+.breach-steps input{margin-top:6px;width:18px;height:18px;flex:0 0 18px}
+.breach-steps>li:has(input:checked){opacity:.6}
+.breach-steps>li p,.breach-steps>li ul{margin:8px 0 0 36px}

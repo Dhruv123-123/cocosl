@@ -210,3 +210,19 @@ def test_holiday_parents_guide_opt_in_and_seniors_upsell(tmp_path, monkeypatch):
     assert "$7" in seniors and "etsy" in seniors
     assert "/holiday/thanks/" in (out / "robots.txt").read_text()
     assert "/holiday/</loc>" in (out / "sitemap.xml").read_text()
+
+
+def test_breach_checklist_page_is_static_and_links_official_sites():
+    import re
+    html = (ROOT / "public" / "breached" / "index.html").read_text()
+    scripts = re.findall(r"<script[^>]*>", html)
+    assert all("plausible.io" in s for s in scripts), "the breach page must not run its own scripts"
+    assert "fetch(" not in html and "XMLHttpRequest" not in html
+    for url in ("https://haveibeenpwned.com/", "https://www.identitytheft.gov/databreach",
+                "https://www.annualcreditreport.com/", "get-an-identity-protection-pin"):
+        assert url in html, url
+    for bureau in ("equifax.com", "experian.com", "transunion.com"):
+        assert bureau in html
+    assert html.count('type="checkbox"') == 8
+    assert '/breached/' in (ROOT / "public" / "checker" / "index.html").read_text()
+    assert '/breached/' in (ROOT / "public" / "scams" / "index.html").read_text()

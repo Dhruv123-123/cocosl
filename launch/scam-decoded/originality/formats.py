@@ -125,6 +125,22 @@ WALKTHROUGHS = [
          ("And fourth: keep it quiet. Secrecy stops a coworker from saying, wait, that's a scam.", 6),
          ("So call your boss on the number you already have, or walk over to her desk. Never send gift card codes by text.", 7)],
   do="Call your boss on a number you already have. Never text gift card codes."),
+ dict(id="w8-irs-refund-text", title="The 'IRS refund' text with a QR code, walked through", app="Messages", sender="+1 (555) 014-1040",
+  messages=[("in", "IRS NOTICE: Your 2026 federal refund of $2,318.00 is pending verification. Scan the QR code or visit "
+                   "irs-refund-verify-●●●●.com within 48 hours to avoid cancellation."),
+            ("in", "[QR code image]"),
+            ("in", "You will need your SSN, date of birth and bank routing number to release the payment.")],
+  flags=[(0, "IRS NOTICE", "The IRS doesn't text you out of the blue about refunds"),
+         (0, "within 48 hours", "A deadline, so you don't check"),
+         (0, "irs-refund-verify-●●●●.com", "Not IRS.gov"),
+         (2, "SSN, date of birth and bank routing number", "Everything needed to steal your refund")],
+  steps=[("Tax season text number one. It says your refund is pending, with a QR code. Let's take it apart.", 5),
+         ("First, it says IRS. The IRS doesn't start contact about your refund by text.", 5),
+         ("Second, forty-eight hours or it's cancelled. Refunds don't expire like that.", 5),
+         ("Third, the link and the QR code go to a site that isn't I R S dot gov.", 5),
+         ("Fourth, it wants your Social Security number, birthday and bank details. That's everything a thief needs to file in your name.", 7),
+         ("Check refunds only at I R S dot gov slash refunds, typed yourself. Forward the text to 7726, and report it to phishing at I R S dot gov.", 8)],
+  do="Check IRS.gov/refunds yourself. Report to phishing@irs.gov."),
 ]
 
 # ------------------------------------------------------------------ quizzes
@@ -182,6 +198,14 @@ QUIZZES = [
          ("by gift card or Zelle", "Gift cards and payment apps: no real charity asks for these"),
          ("holiday-relief-●●●●.xyz", "A new site with an odd ending, not a charity you can look up")],
   fix="Look the charity up yourself at Give.org or Charity Navigator, and give on its own site by card or check."),
+ dict(id="q8-ghost-preparer", kind="text", sender="Fast Refund Tax Pros", title="Spot the red flags: the 'max refund' tax preparer ad",
+  message="BIGGEST REFUNDS IN TOWN! We charge 20% of your refund, no upfront cost. Just sign here and we'll fill in the rest. "
+          "Same-day cash advance. No PTIN needed, we're licensed by experience.",
+  flags=[("20% of your refund", "A fee based on your refund size"),
+         ("Just sign here and we'll fill in the rest", "Never sign a blank or incomplete return"),
+         ("Same-day cash advance", "A pitch to get you in the door"),
+         ("No PTIN needed", "Paid preparers must have a PTIN and sign the return")],
+  fix="Use a preparer with a PTIN who signs your return, or free IRS-certified help (VITA, TCE). You're responsible for what's filed."),
 ]
 
 # ------------------------------------------------------------------ charts (real FTC data)

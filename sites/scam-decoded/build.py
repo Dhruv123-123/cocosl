@@ -322,7 +322,7 @@ def layout(*, title: str, description: str, path: str, body: str, noindex: bool 
 <main>{body}</main>
 <footer><div class="wrap">
 <p>{socials}</p>
-<p><a href="{u('/parents/')}">Protect Your Parents</a> · <a href="{u('/teams/')}">Training for teams</a> · <a href="{u('/newsletter/')}">Weekly Scam Alert</a> · <a href="{u('/compare/')}">Tools compared</a> · <a href="{u('/scams/')}">Scam explainers</a></p>
+<p><a href="{u('/parents/')}">Protect Your Parents</a> · <a href="{u('/teams/')}">Training for teams</a> · <a href="{u('/newsletter/')}">Weekly Scam Alert</a> · <a href="{u('/compare/')}">Tools compared</a> · <a href="{u('/scams/')}">Scam explainers</a> · <a href="{u('/breached/')}">Data breach checklist</a></p>
 <p><a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/privacy/')}">Privacy</a> · {esc(CFG['contact_email'])}</p>
 <p class="small">{esc(CFG['disclaimer'])} {esc(CFG['ai_disclosure'])}</p>
 </div></footer>
