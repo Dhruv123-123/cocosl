@@ -88,6 +88,16 @@ for (const [name, viewport] of [['desktop', { width: 1280, height: 900 }], ['pho
     console.log(name, 'invoice-template/', good ? 'ok' : 'FAIL', { total, left, wide, errors });
     if (shots) await page.screenshot({ path: `${shots}/${name}-invoice.png`, fullPage: true });
   }
+  // S corp calculator: the default ($100K profit, $60K salary, $3K costs) is the month-1 video example: a near wash.
+  await page.goto(url + 's-corp-calculator/');
+  {
+    const big = await page.locator('#result .big').textContent();
+    const wide = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
+    const good = big === "$76/year" && !wide && !errors.length;
+    if (!good) failed = true;
+    console.log(name, 's-corp-calculator/', good ? 'ok' : 'FAIL', { big, wide, errors });
+    if (shots) await page.screenshot({ path: `${shots}/${name}-scorp.png`, fullPage: true });
+  }
   // Driver mileage page: the result renders from URL inputs and nothing overflows.
   await page.goto(url + 'mileage/?earnings=30000&miles=15000&deliveries=3000');
   {
@@ -102,8 +112,11 @@ for (const [name, viewport] of [['desktop', { width: 1280, height: 900 }], ['pho
     await page.goto(url + slug);
     const found = await page.locator(sel).count();
     const wide = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
-    const pdf = slug.includes('thanks') ? (await fetch(new URL(await page.getAttribute(sel, 'href'), page.url()))).status : 200;
-    const good = found === 1 && !wide && pdf === 200 && !errors.length;
+    // Every download link on the thanks page (calendar + bonus checklist) must resolve.
+    const hrefs = slug.includes('thanks') ? await page.locator(sel).evaluateAll((as) => as.map((a) => a.href)) : [];
+    const codes = await Promise.all(hrefs.map(async (h) => (await fetch(h)).status));
+    const pdf = codes.every((c) => c === 200) ? 200 : codes.find((c) => c !== 200);
+    const good = found === (slug.includes('thanks') ? 2 : 1) && !wide && pdf === 200 && !errors.length;
     if (!good) failed = true;
     console.log(name, slug, good ? 'ok' : 'FAIL', { found, wide, pdf, errors });
     if (shots) await page.screenshot({ path: `${shots}/${name}-${slug.replace(/\//g, '_')}.png`, fullPage: true });

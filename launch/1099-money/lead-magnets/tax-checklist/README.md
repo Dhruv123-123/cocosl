@@ -7,10 +7,10 @@ year-end and tax-time documents. Same facts and dates as the 2027 Freelancer Tax
   `node launch/1099-money/lead-magnets/tax-checklist/build_pdf.mjs` (needs Playwright; it fails if any
   page's content runs into the footer).
 - Output: `apps/freelance-tax/downloads/freelancer-tax-checklist.pdf`, deployed with the site at
-  `/downloads/freelancer-tax-checklist.pdf`. **Nothing links to it yet.**
+  `/downloads/freelancer-tax-checklist.pdf`. Linked as a **bonus on the calendar download page** (`free/thanks/`).
 
 **Ways to use it (your call):**
-1. A bonus on the calendar download page (`free/thanks/`), so every new subscriber gets both.
+1. ~~A bonus on the calendar download page~~ Done.
 2. Its own opt-in on the deduction finder or invoice template, tagged `source=tax-checklist`, to see
    which magnet converts better.
 3. A B2B extra for coworking spaces and associations (`../../b2b/`).

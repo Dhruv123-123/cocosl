@@ -8,6 +8,7 @@
 | `q4/`, `lib/q4.js` | January 15 (Q4) estimated payment calculator: the Jan 15, 2027 amount, the catch-up share for missed quarters, the file-by-Feb-1 alternative, what's left for April |
 | `rate-calculator/`, `lib/rate.js` | Freelance rate calculator: take-home + health + retirement + costs → profit needed after 2026 SE and income tax → hourly floor, day rate, revenue per month, set-aside %. Same method as the paid kit's Rate Calculator sheet ($55K take-home → $75/hour) |
 | `invoice-template/`, `lib/invoice.js` | Free invoice template: fill in, see what's missing, print or save as PDF. Due date written out from the terms, deposit and optional late-fee line, next-number button; draft kept in localStorage only. Links to the invoice tracker (`config.tools.invoiceTracker`, apps/freelance-invoices on PR #8) and the Rate & Contract Kit once their URLs are live |
+| `s-corp-calculator/`, `lib/scorp.js` | S corp or not?: sole proprietor vs S corp at your profit, salary and running costs (2026 FICA, wage base, FUTA, QBI on profit after salary), the profit where it starts to pay off at your salary share, sources cited. Flags results above $200K single / $250K joint |
 | `mileage/`, `lib/mileage.js` | Gig-driver mileage deduction calculator (72.5¢/mile for 2026): tax saved by logged miles, set-aside per payout and per delivery, own log vs the app's miles |
 | `how-we-make-money/` | Built from `config.js`: our products (and whether each is on sale), affiliate partners whose links are live, sponsors (`disclosures.sponsors`, none yet), what we don't do for money, how AI is used, what we collect. Linked from every footer. Pinned-post versions: `launch/1099-money/distribution/PINNED_POSTS.md` |
 | `about/` | Who writes the site, how pages are made (AI-assisted, sourced, dated), how it makes money |
@@ -45,7 +46,7 @@ Same layout as the other apps (plain HTML/CSS/JS, no build step). The math in `l
 ```bash
 cd apps/freelance-tax
 npm test              # unit tests (Node 20+, no dependencies)
-npm run smoke         # Chromium at desktop + phone width: calculator, rate-calculator/, invoice-template/, mileage/, compare pages, free/, free/thanks/ (needs Playwright)
+npm run smoke         # Chromium at desktop + phone width: calculator, rate-calculator/, invoice-template/, s-corp-calculator/, mileage/, compare pages, free/, free/thanks/ (needs Playwright)
 node tools/build-pages.mjs   # regenerate compare/, about/ and sitemap.xml after editing tools/compare-data.mjs
 node tools/seo-audit.mjs     # near-duplicate check: shared wording between pages (fails over 50%)
 ```

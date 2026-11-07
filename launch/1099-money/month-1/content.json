@@ -2825,7 +2825,7 @@
     },
     {
      "heading": "Numbers",
-     "narration": "Let's put rough numbers on the S corp. Say your profit is a hundred thousand dollars. As a sole proprietor, self-employment tax is about fourteen thousand one hundred. As an S corp paying yourself a sixty thousand dollar salary, payroll taxes on that salary are about nine thousand two hundred, employer and employee halves together. That's roughly five thousand dollars of difference before costs. Then subtract payroll software, the extra business return, state fees and a bookkeeper or accountant, which can easily be two to four thousand a year. And the income tax side shifts a little too. So the real saving here might be one to three thousand, not the ten thousand people promise online.",
+     "narration": "Let's put rough numbers on the S corp. Say your profit is a hundred thousand dollars. As a sole proprietor, self-employment tax is about fourteen thousand one hundred. As an S corp paying yourself a sixty thousand dollar salary, payroll taxes on that salary are about nine thousand two hundred, employer and employee halves together. That's roughly five thousand dollars of difference before costs. Then subtract payroll software, the extra business return, state fees and a bookkeeper or accountant, which can easily be two to four thousand a year. And the income tax side shifts a little too. And there's a catch most posts skip: your income tax goes up by around two thousand, because you lose the deduction for half of self-employment tax and the twenty percent QBI deduction only applies to the profit left after your salary. So the real result here is somewhere between losing about seven hundred dollars and saving about nine hundred, not the ten thousand people promise online.",
      "on_screen_text": "$100K profit: ~$5K gross saving, less costs",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two coin stacks with a few coins removed from one for fees. No text, no logos, no real people."
     },
@@ -2894,7 +2894,7 @@
     "freelancetips",
     "1099money"
    ],
-   "description": "What sole proprietorships, single-member LLCs and S corp elections change for a US freelancer.\n\nChapters\n0:00 Sole prop · LLC · S corp\n0:29 Default: sole proprietor\n0:48 3 LLC myths\n1:19 LLC: same taxes by default\n1:33 LLC: liability, not tax\n1:51 Insurance does what an LLC can't\n2:22 Keep it separate or lose the shield\n2:52 Fees vary by state\n3:06 S corp: salary + profit\n3:23 $100K profit: ~$5K gross saving, less costs\n4:07 Salary = what you'd pay someone else\n4:41 Costs + 'reasonable salary'\n5:01 Retirement · QBI · health · payroll filings\n5:33 Partners → partnership return + K-1s\n6:06 When to switch\n6:26 LLC → EIN → bank → (Form 2553 by Mar 15)\n6:58 3 questions: risk · profit · paperwork\n7:31 3 costly mistakes\n8:00 Recap\n\nSources: irs.gov (LLC, S corporations, reasonable compensation), sba.gov (business structures), California FTB.\n\nSome links are affiliate links; we may earn a commission at no extra cost to you. Educational only, not tax, legal or financial advice.",
+   "description": "What sole proprietorships, single-member LLCs and S corp elections change for a US freelancer.\n\nChapters\n0:00 Sole prop · LLC · S corp\n0:29 Default: sole proprietor\n0:48 3 LLC myths\n1:19 LLC: same taxes by default\n1:33 LLC: liability, not tax\n1:51 Insurance does what an LLC can't\n2:22 Keep it separate or lose the shield\n2:52 Fees vary by state\n3:06 S corp: salary + profit\n3:23 $100K profit: ~$5K gross saving, less costs\n4:25 Salary = what you'd pay someone else\n4:59 Costs + 'reasonable salary'\n5:19 Retirement · QBI · health · payroll filings\n5:51 Partners → partnership return + K-1s\n6:24 When to switch\n6:44 LLC → EIN → bank → (Form 2553 by Mar 15)\n7:16 3 questions: risk · profit · paperwork\n7:49 3 costly mistakes\n8:18 Recap\n\nSources: irs.gov (LLC, S corporations, reasonable compensation), sba.gov (business structures), California FTB.\n\nSome links are affiliate links; we may earn a commission at no extra cost to you. Educational only, not tax, legal or financial advice.",
    "thumbnail_text": "LLC vs S corp",
    "sources": [
     "https://www.irs.gov/businesses/small-businesses-self-employed/limited-liability-company-llc",
@@ -2907,7 +2907,8 @@
     "California $800 minimum",
     "$100K SE tax ≈ $14,130 vs FICA on $60K salary = $9,180",
     "Form 2553 due by Mar 15 for calendar-year effect",
-    "Chapter timestamps must match final edit"
+    "Chapter timestamps must match final edit",
+    "$100K profit, $60K salary, $2K–$4K costs: S corp −$750 to +$900 vs sole prop once the lost half-SE deduction and smaller QBI are counted (apps/freelance-tax/lib/scorp.js)"
    ]
   },
   "format_style": "comparison",
