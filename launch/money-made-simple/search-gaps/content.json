@@ -1,0 +1,587 @@
+[
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Net worth is one of the most-searched money terms. How to calculate yours in four lines, with a fictional 27-year-old whose number is negative, and why that's normal early on.",
+  "script": {
+   "title": "Net worth: how to calculate yours in 4 lines",
+   "hook": "Your net worth is one number, and it takes 4 lines to find it. Here's how.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Your net worth is one number, and it takes four lines to find it. Here's how.",
+     "on_screen_text": "Net worth in 4 lines",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a single page with four lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Line 1",
+     "narration": "Line one: everything you own that has a cash value. Checking, savings, retirement accounts, and what your car would sell for today.",
+     "on_screen_text": "1. What you own",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar, a small car and a piggy bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "Line 2",
+     "narration": "Line two: everything you owe. Card balances, car loan, student loans, anything else with a balance.",
+     "on_screen_text": "2. What you owe",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stack of bills. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lines 3 and 4",
+     "narration": "Line three: subtract. Line four: the date. Fictional example: own nineteen thousand, owe twenty-seven thousand. Net worth: minus eight thousand.",
+     "on_screen_text": "Fictional: $19k − $27k = −$8k",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale tipping slightly. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule",
+     "narration": "Negative is common in your twenties. The point isn't the number. It's whether it goes up from here.",
+     "on_screen_text": "Watch the direction",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow pointing up. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "How to calculate your net worth (fictional example):\nOwn: cash $3,200 + retirement $9,800 + car $6,000 = $19,000\nOwe: card $1,400 + car loan $7,600 + student loans $18,000 = $27,000\nNet worth: −$8,000\n\nNegative is common early on. Recalculate every 3 months and watch the direction.\n\nFictional example for illustration, not a real person.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "networth",
+    "personalfinance",
+    "moneytips",
+    "budgeting",
+    "financialgoals",
+    "moneymadesimple"
+   ],
+   "description": "How to calculate your net worth in four lines, with a fictional example.",
+   "thumbnail_text": "Your net worth",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/money-as-you-grow/"
+   ],
+   "claims_to_verify": [
+    "Fictional example (label on screen)",
+    "3,200 + 9,800 + 6,000 = 19,000; 1,400 + 7,600 + 18,000 = 27,000; 19,000 − 27,000 = −8,000"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "The numbers",
+    "narration": "In our example: cash thirty-two hundred, retirement ninety-eight hundred, car six thousand. Owed: a card at fourteen hundred, a car loan at seventy-six hundred, and eighteen thousand in student loans.",
+    "on_screen_text": "Own $19,000 · owe $27,000",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two columns of coins. No text, no logos, no real people."
+   },
+   {
+    "heading": "Car value",
+    "narration": "Use what the car would sell for today, not what you paid. Most cars lose value every year, so this line usually shrinks.",
+    "on_screen_text": "Car: today's value",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a car with a price tag. No text, no logos, no real people."
+   },
+   {
+    "heading": "Don't count",
+    "narration": "Leave out things you'd never sell, like your clothes or your phone. Keep it to things with a real cash value.",
+    "on_screen_text": "Skip everyday stuff",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a small cross. No text, no logos, no real people."
+   },
+   {
+    "heading": "Every 3 months",
+    "narration": "Recalculate every three months, same day each time. Paying down the card and adding to savings both move the number up.",
+    "on_screen_text": "Every 3 months",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with four ticks. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "on-screen-calculation"
+ },
+ {
+  "format": "short",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "What is a good credit score? On the common FICO scale (300-850), 670-739 is generally 'good', 740-799 'very good', 800+ 'exceptional'. Plus why there's no single score.",
+  "script": {
+   "title": "What is a good credit score? The 5 FICO ranges",
+   "hook": "Most scores run from 300 to 850. Here's where 'good' starts, and why you have more than one score.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Most credit scores run from three hundred to eight fifty. Here's where good starts, and why you have more than one score.",
+     "on_screen_text": "300 to 850: where's 'good'?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a dial from 300 to 850. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ranges",
+     "narration": "On the common FICO scale: below five eighty is poor, five eighty to six sixty-nine is fair, six seventy to seven thirty-nine is good.",
+     "on_screen_text": "<580 · 580–669 · 670–739",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a dial with three colored bands. No text, no logos, no real people."
+    },
+    {
+     "heading": "Top",
+     "narration": "Seven forty to seven ninety-nine is very good, and eight hundred and up is exceptional.",
+     "on_screen_text": "740–799 · 800+",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the dial's top bands highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "More than one",
+     "narration": "You don't have one score. Different lenders use different models and different bureaus, so your numbers can differ by a few points or more.",
+     "on_screen_text": "Several scores, not one",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small dials side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule",
+     "narration": "Pay every bill on time and keep card balances low. Those two habits move every version of the score.",
+     "on_screen_text": "On time · low balances",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar tick and a small card. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "What is a good credit score?\nOn the common FICO scale (300–850):\nBelow 580: poor\n580–669: fair\n670–739: good\n740–799: very good\n800+: exceptional\n\nYou have several scores (different models and bureaus). The two habits that move all of them: pay on time, keep card balances low.\n\nRanges are FICO's; other models use different cut-offs. Educational, not financial advice.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "creditscore",
+    "credittips",
+    "fico",
+    "personalfinance",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "What counts as a good credit score, using FICO's ranges.",
+   "thumbnail_text": "What's a good score?",
+   "sources": [
+    "https://www.myfico.com/credit-education/what-is-a-credit-score",
+    "https://www.experian.com/blogs/ask-experian/credit-education/score-basics/what-is-a-good-credit-score/",
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-score-en-315/"
+   ],
+   "claims_to_verify": [
+    "FICO ranges: <580 poor, 580–669 fair, 670–739 good, 740–799 very good, 800+ exceptional (myFICO/Experian)",
+    "No single score: CFPB"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Why it matters",
+    "narration": "The range matters most when you borrow. A better score can mean a lower rate on a car loan or mortgage, which adds up over years of payments.",
+    "on_screen_text": "Better score → lower rate",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a loan document with a smaller number. No text, no logos, no real people."
+   },
+   {
+    "heading": "What counts most",
+    "narration": "For FICO, payment history is the biggest factor, about thirty-five percent, and amounts owed are about thirty percent.",
+    "on_screen_text": "35% history · 30% owed",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pie chart with two big slices. No text, no logos, no real people."
+   },
+   {
+    "heading": "Check free",
+    "narration": "You can see your credit reports free every week at AnnualCreditReport dot com. Many banks and card apps also show a free score.",
+    "on_screen_text": "Free reports weekly",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a report. No text, no logos, no real people."
+   },
+   {
+    "heading": "Not instant",
+    "narration": "Scores change as new information is reported, usually monthly, so give a new habit a few months before you judge it.",
+    "on_screen_text": "Give it a few months",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with three pages. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "explainer"
+ },
+ {
+  "format": "short",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Best high yield savings rates this month: a repeatable dated format. How to compare a standard savings rate with high-yield accounts, using the FDIC national rate and $5,000 at illustrative rates.",
+  "script": {
+   "title": "Best high-yield savings rates: how to check this month's",
+   "hook": "Your savings could be earning $20 a year or $200 on the same $5,000. Here's how to check this month's rates.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Your savings could be earning twenty dollars a year or two hundred on the same five thousand. Here's how to check this month's rates.",
+     "on_screen_text": "$20 or $200 on $5,000?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes two jars, one fuller. No text, no logos, no real people."
+    },
+    {
+     "heading": "Baseline",
+     "narration": "Start with the FDIC's national average savings rate. It's published every month, and it's well under one percent.",
+     "on_screen_text": "FDIC national rate: under 1%",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small chart on a page. No text, no logos, no real people."
+    },
+    {
+     "heading": "Compare",
+     "narration": "Then look at what online high-yield accounts pay this month. Illustrative math: at point four percent, five thousand earns about twenty dollars a year. At four percent, about two hundred.",
+     "on_screen_text": "0.4% ≈ $20 · 4% ≈ $200",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calculator with two results. No text, no logos, no real people."
+    },
+    {
+     "heading": "Check",
+     "narration": "Before you switch: is it at an FDIC-insured bank, are there monthly fees, and is there a minimum balance?",
+     "on_screen_text": "Insured · no fees · no minimum",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a checklist with three boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule",
+     "narration": "Rates are variable and can drop after a Fed decision, so recheck every few months.",
+     "on_screen_text": "Recheck every few months",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a circle. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "How to check high-yield savings rates this month:\n1. FDIC national average savings rate (fdic.gov, updated monthly): the baseline\n2. Compare online high-yield accounts' current APY\n3. Check: FDIC-insured, no monthly fee, no minimum\n\nIllustrative: $5,000 at 0.4% ≈ $20 a year; at 4% ≈ $200. Rates are variable and change.\n\nEducational, not financial advice.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "highyieldsavings",
+    "savingsaccount",
+    "savingmoney",
+    "personalfinance",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "How to compare this month's high-yield savings rates against the FDIC national average.",
+   "thumbnail_text": "Savings rates this month",
+   "sources": [
+    "https://www.fdic.gov/national-rates-and-rate-caps",
+    "https://www.fdic.gov/resources/deposit-insurance",
+    "https://banks.data.fdic.gov/bankfind-suite/bankfind"
+   ],
+   "claims_to_verify": [
+    "DATED: before each posting, check the FDIC national savings rate (fdic.gov) and the top online APYs on the day; keep 0.4% and 4% only if they're still representative",
+    "5,000 × 0.004 = 20; × 0.04 = 200",
+    "FDIC $250,000 per depositor, per bank, per ownership category"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Where to look",
+    "narration": "The FDIC page lists national rates for savings, money market and CDs. For high-yield accounts, compare several public rate tables, not just one ad.",
+    "on_screen_text": "Compare more than one table",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small tables. No text, no logos, no real people."
+   },
+   {
+    "heading": "Fintech apps",
+    "narration": "If the account is in an app, find the partner bank in the fine print and look it up in FDIC BankFind. Insurance covers the bank failing, not the app.",
+    "on_screen_text": "Check the partner bank",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a phone. No text, no logos, no real people."
+   },
+   {
+    "heading": "Moving money",
+    "narration": "Opening one usually takes about fifteen minutes. Link your checking, move a test amount, then move the rest once it shows up.",
+    "on_screen_text": "Test transfer first",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow between two jars. No text, no logos, no real people."
+   },
+   {
+    "heading": "Rate drops",
+    "narration": "A great rate today isn't locked. If the account drops well below the others, moving again is allowed and normal.",
+    "on_screen_text": "Not locked in",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a dial turning down. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "real-numbers"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "IRS Free File / how to file taxes for free: the three IRS-backed free routes (Free File guided software under an income limit, Free File Fillable Forms for any income, and VITA free help), for late January.",
+  "script": {
+   "title": "IRS Free File: 3 ways to file your taxes for free",
+   "hook": "There are 3 IRS-backed ways to file your taxes for free. Most people qualify for at least one.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "There are three IRS-backed ways to file your taxes for free. Most people qualify for at least one.",
+     "on_screen_text": "3 free ways to file",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a tax form with a small tick. No text, no logos, no real people."
+    },
+    {
+     "heading": "Free File",
+     "narration": "One: IRS Free File guided software, from partner companies, if your income is under a limit the IRS sets each year. Start from IRS dot gov, not an ad.",
+     "on_screen_text": "1. Free File: start at IRS.gov",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fillable forms",
+     "narration": "Two: Free File Fillable Forms, for any income. It's the paper forms online, with basic math, and no step-by-step help.",
+     "on_screen_text": "2. Fillable Forms: any income",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an online form. No text, no logos, no real people."
+    },
+    {
+     "heading": "VITA",
+     "narration": "Three: VITA, free help from IRS-certified volunteers, for people under an income limit, people with disabilities and limited English speakers.",
+     "on_screen_text": "3. VITA: free volunteer help",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two people at a table with a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule",
+     "narration": "Check this year's income limits on IRS dot gov, and watch for upsells: start from the IRS page so you land on the free version.",
+     "on_screen_text": "Start from IRS.gov",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pointer at a web page. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "IRS Free File: 3 ways to file your taxes for free\n1. IRS Free File guided software: if your income is under this year's IRS limit. Start from IRS.gov so you land on the free version.\n2. Free File Fillable Forms: any income, no step-by-step help.\n3. VITA: free help from IRS-certified volunteers (income limits apply).\n\nCheck this year's limits and opening date on IRS.gov. Educational, not tax advice.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "taxes",
+    "irsfreefile",
+    "taxseason",
+    "filetaxes",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "The three IRS-backed ways to file your taxes for free.",
+   "thumbnail_text": "File free: 3 ways",
+   "sources": [
+    "https://www.irs.gov/filing/irs-free-file-do-your-taxes-for-free",
+    "https://www.irs.gov/e-file-providers/free-file-fillable-forms",
+    "https://www.irs.gov/individuals/free-tax-return-preparation-for-qualifying-taxpayers"
+   ],
+   "claims_to_verify": [
+    "DATED: confirm the 2027 Free File opening date and AGI limit on IRS.gov before posting (reported as $89,000 for the 2026 season)",
+    "VITA eligibility and income limit (IRS)",
+    "Fillable Forms: any income (IRS)"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Ads",
+    "narration": "Search ads for free filing sometimes lead to a paid version. Starting from the IRS Free File page sends you to the offer that's actually free if you qualify.",
+    "on_screen_text": "Ads can lead to paid",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a warning sign on a search result. No text, no logos, no real people."
+   },
+   {
+    "heading": "State return",
+    "narration": "Some Free File offers include a free state return and some don't. Check before you start, so there's no surprise charge at the end.",
+    "on_screen_text": "Check the state return",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a second form. No text, no logos, no real people."
+   },
+   {
+    "heading": "What to gather",
+    "narration": "Have your W-2s or 1099s, last year's adjusted gross income, and your bank details for a direct-deposit refund.",
+    "on_screen_text": "W-2s · last year's AGI · bank",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a folder with three papers. No text, no logos, no real people."
+   },
+   {
+    "heading": "Deadline",
+    "narration": "The usual deadline is April fifteenth. Filing early also gets a refund to you sooner and gives an identity thief less time to file first.",
+    "on_screen_text": "Usually April 15",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with 15 circled. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "explainer"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "How much house can I afford? The 28/36 guideline worked on a fictional $6,000 gross monthly income with a $400 car payment, plus the upfront cash most people forget.",
+  "script": {
+   "title": "How much house can I afford? The 28/36 math",
+   "hook": "On $6,000 a month before tax, the 28/36 guideline puts your housing at about $1,680. Here's the math.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "On six thousand a month before tax, the twenty-eight thirty-six guideline puts your housing at about sixteen eighty. Here's the math.",
+     "on_screen_text": "$6,000/mo → ≈ $1,680 housing",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a small house on a scale. No text, no logos, no real people."
+    },
+    {
+     "heading": "28",
+     "narration": "Twenty-eight: housing, meaning mortgage, property tax and insurance, at about twenty-eight percent of gross monthly income. Six thousand times point two eight is sixteen eighty.",
+     "on_screen_text": "28% × $6,000 = $1,680",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calculator with a house icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "36",
+     "narration": "Thirty-six: all debt payments, including housing, at about thirty-six percent. That's twenty-one sixty. With a four-hundred-dollar car payment, housing can be up to seventeen sixty.",
+     "on_screen_text": "36% = $2,160 − $400 car",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two stacked bars. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lower wins",
+     "narration": "Use the lower of the two: sixteen eighty. Lenders may approve more, but that doesn't mean the budget can carry it.",
+     "on_screen_text": "Use the lower: $1,680",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pointer at the smaller bar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cash",
+     "narration": "Then add the upfront cash: the down payment plus closing costs, often a few percent of the price. Fictional numbers; it's a guideline, not a rule.",
+     "on_screen_text": "+ down payment + closing",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a key. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "How much house can I afford? The 28/36 guideline (fictional example):\nGross income: $6,000 a month\n28% for housing (mortgage, taxes, insurance): $1,680\n36% for all debts: $2,160 − $400 car = $1,760\nUse the lower: about $1,680 a month\n\nPlus: down payment and closing costs, often a few percent of the price. A guideline, not a rule; lenders may approve more than your budget can carry.\n\nFictional example. Educational, not financial advice.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "homebuying",
+    "firsttimehomebuyer",
+    "mortgage",
+    "personalfinance",
+    "budgeting",
+    "moneymadesimple"
+   ],
+   "description": "The 28/36 guideline for how much house you can afford, worked on a fictional income.",
+   "thumbnail_text": "How much house?",
+   "sources": [
+    "https://www.consumerfinance.gov/owning-a-home/",
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-to-income-ratio-en-1791/",
+    "https://www.consumerfinance.gov/owning-a-home/closing-disclosure/"
+   ],
+   "claims_to_verify": [
+    "28/36 is a common lender guideline, not a law (CFPB on DTI)",
+    "6,000 × 0.28 = 1,680; × 0.36 = 2,160; − 400 = 1,760; lower = 1,680",
+    "Closing costs often a few percent of price (CFPB)"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Take-home check",
+    "narration": "Check it against take-home pay too. If sixteen eighty is more than about a third of what actually lands in your account, the month will feel tight.",
+    "on_screen_text": "Check take-home too",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paycheck next to a house. No text, no logos, no real people."
+   },
+   {
+    "heading": "Hidden costs",
+    "narration": "Owning adds costs renting doesn't: repairs, maintenance, maybe HOA fees. Many people set aside one to two percent of the home's value a year.",
+    "on_screen_text": "Repairs: 1–2% a year",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small toolbox. No text, no logos, no real people."
+   },
+   {
+    "heading": "Rate matters",
+    "narration": "The same monthly payment buys less house when rates are higher. Ask lenders for a Loan Estimate, so you can compare the full cost side by side.",
+    "on_screen_text": "Compare Loan Estimates",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two forms side by side. No text, no logos, no real people."
+   },
+   {
+    "heading": "Emergency fund",
+    "narration": "Keep an emergency fund after closing. Using every dollar for the down payment leaves nothing for the first broken water heater.",
+    "on_screen_text": "Keep a cushion after",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar beside a house. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "on-screen-calculation"
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Net worth worksheet as a carousel: what to list as assets and debts, the subtraction, and the 3-month check, with a fictional example.",
+  "script": {
+   "title": "How to calculate your net worth (worksheet)",
+   "hook": "How to calculate your net worth: a 6-step worksheet",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "How to calculate your net worth: a 6-step worksheet",
+     "on_screen_text": "Net worth worksheet",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1",
+     "narration": "List cash: checking, savings, any money market account.",
+     "on_screen_text": "1. Cash accounts",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2",
+     "narration": "List investments and retirement: 401(k), IRA, brokerage, HSA.",
+     "on_screen_text": "2. Investments + retirement",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small plant in a pot. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3",
+     "narration": "List things you'd sell: car at today's value. Skip clothes, phones and furniture.",
+     "on_screen_text": "3. Car at today's value",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a car with a tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 4",
+     "narration": "List every debt with a balance: cards, car loan, student loans, personal loans.",
+     "on_screen_text": "4. Every debt balance",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stack of bills. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 5",
+     "narration": "Fictional example: own $19,000, owe $27,000. Net worth: −$8,000. Negative is common early on.",
+     "on_screen_text": "Fictional: $19k − $27k = −$8k",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 6",
+     "narration": "Write the date. Redo it every 3 months and track the direction, not the size.",
+     "on_screen_text": "Redo every 3 months",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with four ticks. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "How to calculate your net worth:\n1. Cash accounts\n2. Investments and retirement\n3. Car at today's value (skip everyday stuff)\n4. Every debt balance\n5. Own − owe = net worth\n6. Date it, redo every 3 months\n\nFictional example: $19,000 − $27,000 = −$8,000.\n\nFictional example for illustration.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "networth",
+    "personalfinance",
+    "moneytips",
+    "financialgoals",
+    "budgeting",
+    "moneymadesimple"
+   ],
+   "description": "A six-step net worth worksheet.",
+   "thumbnail_text": "Net worth worksheet",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/money-as-you-grow/"
+   ],
+   "claims_to_verify": [
+    "Fictional example; 19,000 − 27,000 = −8,000"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Pin-ready carousel twin of the rent pin: how much house can I afford, using 28/36 on a fictional $6,000 gross income, plus upfront and ongoing costs.",
+  "script": {
+   "title": "How much house can I afford? A 5-step check",
+   "hook": "How much house can I afford? A 5-step check",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "How much house can I afford? A 5-step check",
+     "on_screen_text": "How much house?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1",
+     "narration": "Gross monthly income. Fictional example: $6,000.",
+     "on_screen_text": "1. Gross: $6,000/mo",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paycheck. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2",
+     "narration": "28% for housing (mortgage, taxes, insurance): $1,680.",
+     "on_screen_text": "2. 28% = $1,680",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a house icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3",
+     "narration": "36% for all debts: $2,160. Minus a $400 car payment: $1,760. Use the lower: $1,680.",
+     "on_screen_text": "3. 36% − debts: use the lower",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two bars. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 4",
+     "narration": "Upfront cash: down payment plus closing costs, often a few percent of the price.",
+     "on_screen_text": "4. Down payment + closing",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a key. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 5",
+     "narration": "Ongoing: repairs (often 1–2% of value a year), HOA, and an emergency fund left after closing.",
+     "on_screen_text": "5. Repairs · HOA · cushion",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a toolbox. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "How much house can I afford? (fictional example)\n1. Gross income: $6,000 a month\n2. 28% for housing: $1,680\n3. 36% for all debts: $2,160 − $400 car = $1,760 → use $1,680\n4. Upfront: down payment + closing costs\n5. Ongoing: repairs, HOA, emergency fund\n\nA common guideline, not a rule. Fictional example. Educational, not financial advice.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "homebuying",
+    "firsttimehomebuyer",
+    "mortgage",
+    "budgeting",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "A five-step check for how much house you can afford.",
+   "thumbnail_text": "How much house?",
+   "sources": [
+    "https://www.consumerfinance.gov/owning-a-home/",
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-to-income-ratio-en-1791/",
+    "https://www.consumerfinance.gov/owning-a-home/closing-disclosure/"
+   ],
+   "claims_to_verify": [
+    "6,000 × 0.28 = 1,680; × 0.36 = 2,160; − 400 = 1,760",
+    "28/36 is a guideline (CFPB)"
+   ]
+  }
+ }
+]

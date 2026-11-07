@@ -67,6 +67,8 @@ factory triage                                # everything waiting on you, most 
 
 # Make and review content
 factory import launch/money-made-simple/content.json --brand money-made-simple
+factory pack export --brand money-made-simple --file launch/money-made-simple/month-1/content.json \
+  --start 2026-11-21 --days 30 --out month-1/   # content.json → per-platform posting calendar + ready-to-post folders
 factory daily --brand money-made-simple       # ideas + 2 drafts into review (never auto-approves)
 factory review-gate [list|pass|require|send-back]   # draft → native_review → legal_review → approved
 factory approve 12 --yes-i-checked --schedule
@@ -80,7 +82,6 @@ factory launch-check                          # red/yellow/green: links, placeho
 # Schedule and post
 factory reslot [--yes]                        # queued posts onto the current slots, zero collisions
 factory export-week <brand> --weeks 4         # one zip per week, posting order, captions ready to paste
-factory pack export --brand <slug> --file content.json --start 2026-11-21 --days 30 --out month-1/   # content.json → posting calendar + ready-to-post folders
 factory channels export --brand <slug> --config channels/config.json --out channels/   # Pinterest pins, X/Threads threads, newsletter issues
 factory manual [build|copy <pub>|done <pub> --url]   # TikTok + Pinterest post-by-hand packages
 factory publish                               # post what's due (dry run until FACTORY_DRY_RUN=0)
@@ -100,10 +101,6 @@ factory doctor [--online | --offline]         # is this install ready?
 factory backup --archive [--with-media]       # one dated zip; `factory restore <zip>` lists first
 scripts/smoke_fresh_clone.sh                  # fresh clone → install → render one post per brand → launch-check
 ```
-
-With `--days 0`, `pack export` renders the whole file as an undated library, grouped by format (used for `launch/money-made-simple/evergreen/`).
-
-`factory channels export --brand <slug> --config <channels/config.json> --out channels/` repurposes the packs into Pinterest pins (images + bulk-upload CSV), weekly newsletter issues and X/Threads text threads (see `launch/money-made-simple/channels/config.json`).
 
 `factory --help` lists everything. Run it in production with `docker compose up -d`.
 
