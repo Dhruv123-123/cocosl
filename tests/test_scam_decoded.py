@@ -513,3 +513,28 @@ def test_every_long_video_has_an_original_element():
     assert len(paths) == len(set(paths)) and all(p.startswith("footage/scam-decoded/") for p in paths)
     shots = (Path(long_originals.__file__).parent / "LONG_VIDEO_RECORDINGS.md").read_text()
     assert all(p in shots for p in paths)
+
+
+def test_long_videos_follow_a_worked_example():
+    """Originality audit: long videos under 800 words read as templated. Each one carries a worked example."""
+    import glob
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "launch" / "scam-decoded"))
+    from long_examples import examples
+    table = examples()
+    longs = []
+    for f in sorted(glob.glob(str(Path(__file__).resolve().parents[1] / "launch" / "scam-decoded" / "*.json"))):
+        data = json.loads(Path(f).read_text())
+        if isinstance(data, list):
+            longs += [i for i in data if isinstance(i, dict) and i.get("format") == "long"]
+    for it in longs:
+        sc = it["script"]
+        words = sum(len(s["narration"].split()) for s in sc["segments"])
+        assert words >= 800, (sc["title"], words)
+        heads = [s["heading"] for s in sc["segments"]]
+        assert len(heads) == len(set(heads)), sc["title"]
+        chapters = [l.split(" ", 1)[1] for l in sc["description"].splitlines() if re.match(r"^\d+:\d\d ", l)]
+        example = [v for k, v in table.items() if sc["title"].startswith(k)]
+        assert example or words >= 900, sc["title"]
+        for h, *_ in (example[0][1] if example else []):
+            assert h in heads and (not chapters or h in chapters), (sc["title"], h)
