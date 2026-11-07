@@ -64,6 +64,20 @@ const en = {
   planTitle: (strategy) => `My debt-free plan (${strategy === 'avalanche' ? 'avalanche: highest APR first' : 'snowball: smallest balance first'})`,
   planIntro: (a) => `Pay ${money(a.budget)} a month in total. Debt-free in ${duration(a.months)}, with ${money(a.totalInterest)} of interest. Tick each month when it's paid.`,
   planMonth: 'Month', planPaid: 'Paid', planLeft: 'left', planFooter: 'Made with the free debt payoff calculator. Estimates assume your APRs and minimums stay the same.',
+  fees: {
+    name: 'Fund name', category: 'Type', er: 'Expense ratio (%)', balance: 'Your balance ($)',
+    categories: { 'us-stock': 'US stock', 'intl-stock': 'International stock', bond: 'Bond', 'target-date': 'Target date', stable: 'Stable value or cash', other: 'Other' },
+    defaults: [['S&P 500 Index', 'us-stock', 0.04, 18000], ['Large Cap Growth (active)', 'us-stock', 0.82, 12000], ['International Index', 'intl-stock', 0.08, 6000], ['Target Date 2055', 'target-date', 0.65, 9000]],
+    result: (r) => `<p class="big">${money(r.yearlyFees)} a year in fund fees</p>
+      <p>Your average expense ratio is <b>${r.avgExpenseRatio}%</b> on ${money(r.total)}.</p>
+      <p>Over ${r.years} years, fees could take about <b>${money(r.feeDrag)}</b> out of your balance: ${money(r.endWithFees)} instead of ${money(r.endNoFees)}.</p>`,
+    table: (rows) => `<table class="fees"><thead><tr><th>Fund</th><th>Fee</th><th>A year</th></tr></thead><tbody>${rows}</tbody></table>`,
+    cheaper: (name, er) => `Lower-cost option of the same type in your plan: ${name} (${er}%)`,
+    gap: (r) => (r.lowestCostGap > 1
+      ? `<p>If each fund cost the same as the lowest-cost fund of its type in your plan, you'd have about <b>${money(r.lowestCostGap)}</b> more after ${r.years} years. That isn't a reason to switch on its own: compare what the funds hold first.</p>`
+      : '<p>You already hold the lowest-cost fund of each type you entered.</p>'),
+    note: 'Estimate: same return every year, contributions split like your balances, fund expense ratios only (not plan admin fees). Education, not investment advice.',
+  },
   nextStep: 'Next step', affiliateNote: 'Affiliate link: we may earn a commission at no cost to you.', getIt: 'Get it',
   copied: 'Link copied', copyPrompt: 'Copy this link', sending: 'Sending…', notConnected: 'Email signup is not connected yet: set email.action in config.js.',
 };
@@ -128,6 +142,20 @@ const es = {
   planTitle: (strategy) => `Mi plan para salir de deudas (${strategy === 'avalanche' ? 'avalancha: APR más alta primero' : 'bola de nieve: saldo más chico primero'})`,
   planIntro: (a) => `Paga ${money(a.budget)} al mes en total. Sin deudas en ${duration(a.months, 'es')}, con ${money(a.totalInterest)} de intereses. Marca cada mes cuando lo pagues.`,
   planMonth: 'Mes', planPaid: 'Pagado', planLeft: 'queda', planFooter: 'Hecho con la calculadora gratis para pagar deudas. Son estimaciones que suponen que tus tasas y mínimos no cambian.',
+  fees: {
+    name: 'Nombre del fondo', category: 'Tipo', er: 'Expense ratio (%)', balance: 'Tu saldo ($)',
+    categories: { 'us-stock': 'Acciones de EE. UU.', 'intl-stock': 'Acciones internacionales', bond: 'Bonos', 'target-date': 'Fecha objetivo', stable: 'Valor estable o efectivo', other: 'Otro' },
+    defaults: [['Índice S&P 500', 'us-stock', 0.04, 18000], ['Crecimiento grande (activo)', 'us-stock', 0.82, 12000], ['Índice internacional', 'intl-stock', 0.08, 6000], ['Fecha objetivo 2055', 'target-date', 0.65, 9000]],
+    result: (r) => `<p class="big">${money(r.yearlyFees)} al año en comisiones de fondos</p>
+      <p>Tu expense ratio promedio es <b>${r.avgExpenseRatio}%</b> sobre ${money(r.total)}.</p>
+      <p>En ${r.years} años, las comisiones te podrían quitar unos <b>${money(r.feeDrag)}</b>: tendrías ${money(r.endWithFees)} en vez de ${money(r.endNoFees)}.</p>`,
+    table: (rows) => `<table class="fees"><thead><tr><th>Fondo</th><th>Comisión</th><th>Al año</th></tr></thead><tbody>${rows}</tbody></table>`,
+    cheaper: (name, er) => `Opción más barata del mismo tipo en tu plan: ${name} (${er}%)`,
+    gap: (r) => (r.lowestCostGap > 1
+      ? `<p>Si cada fondo costara lo mismo que el más barato de su tipo en tu plan, tendrías unos <b>${money(r.lowestCostGap)}</b> más en ${r.years} años. Eso solo no es razón para cambiarte: primero compara qué tiene cada fondo.</p>`
+      : '<p>Ya tienes el fondo más barato de cada tipo que ingresaste.</p>'),
+    note: 'Estimación: mismo rendimiento cada año, aportes repartidos como tus saldos y solo el expense ratio de los fondos (no los costos de administración del plan). Es educación, no asesoría de inversión.',
+  },
   nextStep: 'Siguiente paso', affiliateNote: 'Enlace de afiliado: podemos ganar una comisión sin costo para ti.', getIt: 'Obtenerlo',
   copied: 'Enlace copiado', copyPrompt: 'Copia este enlace', sending: 'Enviando…', notConnected: 'El registro por correo aún no está conectado: configura email.action en config.js.',
 };

@@ -2,6 +2,7 @@
 // keeps inputs in the URL so results can be shared, and shows the right offer.
 import config from './config.js';
 import * as calc from './lib/calc.js';
+import { analyzeFees } from './lib/fees.js';
 import { money, isLiveUrl, escapeHtml } from './lib/format.js';
 import { TEXT } from './lib/text.js';
 import { initTracking, withUtm } from './lib/track.js';
@@ -86,6 +87,34 @@ function readDebts(form) {
     apr: Number(row.querySelector('[name=apr]').value),
     minPayment: Number(row.querySelector('[name=minPayment]').value),
   }));
+}
+
+function fundRow(f = ['', 'us-stock', '', '']) {
+  const [name, category, er, balance] = f;
+  const row = document.createElement('div');
+  row.className = 'debt-row fund-row';
+  const opts = Object.entries(T.fees.categories).map(([k, v]) => `<option value="${k}"${k === category ? ' selected' : ''}>${v}</option>`).join('');
+  row.innerHTML = `
+    <label>${T.fees.name}<input name="name" value="${escapeHtml(name)}" maxlength="50"></label>
+    <label>${T.fees.category}<select name="category">${opts}</select></label>
+    <label>${T.fees.er}<input name="er" type="number" min="0" max="5" step="any" value="${er}" required></label>
+    <label>${T.fees.balance}<input name="balance" type="number" min="0" step="any" value="${balance}" required></label>
+    <button type="button" class="link remove" aria-label="${F.removeAria}">${F.remove}</button>`;
+  row.querySelector('.remove').addEventListener('click', () => { row.remove(); run(); });
+  return row;
+}
+
+function readFunds(form) {
+  return [...form.querySelectorAll('.fund-row')].map((row) => [
+    row.querySelector('[name=name]').value.trim(), row.querySelector('[name=category]').value,
+    row.querySelector('[name=er]').value, row.querySelector('[name=balance]').value]);
+}
+
+function renderFees(form) {
+  const funds = readFunds(form).map(([name, category, er, balance]) => ({ name, category, expenseRatio: er === '' ? NaN : Number(er), balance: balance === '' ? NaN : Number(balance) }));
+  const r = analyzeFees(funds, { monthly: Number(form.monthly.value || 0), years: Number(form.years.value || 30), annualReturn: Number(form.annualReturn.value || 0) });
+  const rows = r.funds.map((f) => `<tr><td>${escapeHtml(f.name)}${f.cheaperInCategory ? `<small>${escapeHtml(T.fees.cheaper(f.cheaperInCategory.name, f.cheaperInCategory.expenseRatio))}</small>` : ''}</td><td>${f.expenseRatio}%</td><td>${money(f.yearlyFee, 2)}</td></tr>`).join('');
+  return T.fees.result(r) + T.fees.table(rows) + T.fees.gap(r) + `<p class="note">${T.fees.note}</p>`;
 }
 
 function renderDebt(form) {
@@ -211,6 +240,20 @@ function mountCalculator(id) {
       } catch (err) { out.innerHTML = `<p class="error">${escapeHtml(err.message)}</p>`; }
     };
     offers.innerHTML = offerHtml('debt');
+  } else if (id === '401k-fees') {
+    const rows = $('#funds');
+    let initial = T.fees.defaults;
+    try { if (qs.get('f')) initial = JSON.parse(qs.get('f')); } catch { /* bad share link: use defaults */ }
+    initial.slice(0, 20).forEach((f) => rows.append(fundRow(f)));
+    for (const k of ['monthly', 'years', 'annualReturn']) if (qs.get(k)) form[k].value = qs.get(k);
+    $('#add-fund').addEventListener('click', () => { rows.append(fundRow()); });
+    run = () => {
+      try {
+        out.innerHTML = renderFees(form);
+        writeUrl({ f: JSON.stringify(readFunds(form)), monthly: form.monthly.value, years: form.years.value, annualReturn: form.annualReturn.value });
+      } catch (err) { out.innerHTML = `<p class="error">${escapeHtml(err.message)}</p>`; }
+    };
+    offers.innerHTML = offerHtml('fees');
   } else {
     const spec = CALCS[id];
     const holder = $('#fields');
@@ -262,7 +305,7 @@ if (embedded) {
 }
 
 const id = document.body.dataset.calc;
-if (id === 'debt-payoff' || CALCS[id]) mountCalculator(id);
+if (id === 'debt-payoff' || id === '401k-fees' || CALCS[id]) mountCalculator(id);
 setupSignup();
 setupAnalytics();
 for (const a of document.querySelectorAll('[data-brand]')) a.textContent = config.brand;

@@ -82,8 +82,10 @@ function render() {
 function upsell(reason) {
   $('#license-msg').textContent = reason || '';
   $('#pro-features').innerHTML = config.proFeatures.map((f) => `<li>${esc(f)}</li>`).join('');
-  const links = Object.values(config.pricing).filter((p) => live(p.url));
+  const inStore = (config.distribution || 'web') !== 'web';
+  const links = inStore ? [] : Object.values(config.pricing).filter((p) => live(p.url));
   $('#buy').innerHTML = links.map((p) => `<a class="btn" href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.label)}</a>`).join('');
+  $('#no-checkout').textContent = inStore ? 'Already have Pro? Enter your license key below.' : "Checkout isn't connected yet (set pricing links in config.js).";
   $('#no-checkout').hidden = links.length > 0;
   $('#upgrade').showModal();
 }

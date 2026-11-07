@@ -91,4 +91,18 @@ export const pagesEs = [
       ['¿Puedo hacer las dos?', 'Sí. Dividir los aportes es una forma razonable de cubrirte si no sabes cómo serán tus impuestos. Revisa los límites de ingreso y aporte del IRS para el año.'],
     ],
   },
+  {
+    slug: '401k-fees',
+    title: 'Revisa las comisiones de tu 401(k) en dólares',
+    h1: 'Revisa las comisiones de tu 401(k)',
+    tile: 'Comisiones del 401(k)',
+    description: 'Ingresa los fondos de tu 401(k) y sus expense ratios. Mira cuánto pagas de comisiones al año, cuánto te podrían quitar en 30 años y cuál es el fondo más barato de cada tipo en tu propio plan.',
+    intro: 'Copia cada fondo, su expense ratio y tu saldo del aviso de comisiones o del sitio web de tu plan. Convertimos los porcentajes en dólares.',
+    faq: [
+      ['¿Dónde encuentro el expense ratio?', 'En el aviso anual de comisiones de tu plan (el aviso 404a-5) o en el sitio web de tu 401(k), junto a cada fondo. Aparece como porcentaje, por ejemplo 0.04% o 0.85%.'],
+      ['¿Qué es un expense ratio bueno?', 'Los fondos indexados amplios suelen costar menos de 0.10% al año, y muchos fondos administrados activamente cuestan de 0.50% a 1% o más. Una comisión más alta tiene que recuperarse con mejores rendimientos, y la mayoría de los fondos no lo logra a largo plazo.'],
+      ['¿Me cambio al fondo más barato?', 'No de forma automática. Compara fondos del mismo tipo y revisa qué tiene cada uno y cómo encaja en tu plan. Esta herramienta muestra costos; no te dice qué comprar. Si tienes dudas, tu plan o un asesor fiduciario de tarifa fija te pueden ayudar.'],
+      ['¿Hay otras comisiones en el 401(k)?', 'Muchas veces sí: costos de administración del plan, a veces una cantidad fija en dólares. Tu aviso de comisiones los detalla. Esta herramienta solo cubre el expense ratio de los fondos.'],
+    ],
+  },
 ];

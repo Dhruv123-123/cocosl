@@ -38,3 +38,5 @@ Effort is for Claude to build; "your part" is what only Dhruv can do (accounts, 
 - **Credit card rewards optimizer**: needs constant offer data upkeep and issuer affiliate approval, which usually requires existing traffic.
 
 Also built from the scouting thread's ranked list (research/scouting/software-ideas.md): #1 bill negotiation tracker (`budget/bills.html`) and #2 the 0% / deferred-interest countdown (`budget/deals.html`), both as Budget Pro features.
+
+Also built from that list: #4 medical bill letters (`medical-bills/`) and #10 the 401(k) fee checker (`money-calculators/401k-fees/`). App store packaging notes for the budget app: `budget/STORES.md` (nothing submitted).

@@ -26,6 +26,9 @@ const checks = [
     await page.click('[data-print=avalanche]');
   }],
   ['/money-calculators/compound-interest/', '#result .big'],
+  ['/money-calculators/401k-fees/', '#result table.fees'],
+  ['/money-calculators/es/401k-fees/', '#result table.fees'],
+  ['/medical-bills/', '#plan b', async (page) => { await page.fill('[name=patient]', 'Jordan Lee'); await page.fill('[name=provider]', 'Riverside General'); await page.fill('[name=account]', 'RG-1'); await page.check('[name=haveItemized]'); await page.check('#extra-form [name=errors][value=duplicate]'); }],
   ['/money-calculators/emergency-fund/', '#result .big'],
   ['/money-calculators/savings-interest/', '#result .big'],
   ['/money-calculators/credit-card-minimum/', '#result .big'],

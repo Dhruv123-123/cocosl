@@ -1,6 +1,6 @@
 // Offline support: cache the app shell, network-first so updates arrive when online.
-const CACHE = 'budget-v5';
-const SHELL = ['./', 'index.html', 'style.css', 'app.js', 'config.js', 'lib/budget.js', 'lib/plans.js', 'lib/license.js', 'lib/recurring.js', 'subscriptions.html', 'subscriptions.js', 'rate.html', 'rate.js', 'lib/rate.js', 'lib/track.js', 'lib/dates.js', 'lib/ics.js', 'lib/bills.js', 'lib/promos.js', 'page.js', 'bills.html', 'bills.js', 'deals.html', 'deals.js', 'icon.svg', 'manifest.webmanifest'];
+const CACHE = 'budget-v6';
+const SHELL = ['./', 'index.html', 'style.css', 'app.js', 'config.js', 'lib/budget.js', 'lib/plans.js', 'lib/license.js', 'lib/recurring.js', 'subscriptions.html', 'subscriptions.js', 'rate.html', 'rate.js', 'lib/rate.js', 'lib/track.js', 'lib/dates.js', 'lib/ics.js', 'lib/bills.js', 'lib/promos.js', 'page.js', 'icon-192.png', 'icon-512.png', 'bills.html', 'bills.js', 'deals.html', 'deals.js', 'icon.svg', 'manifest.webmanifest'];
 self.addEventListener('install', (e) => e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting())));
 self.addEventListener('activate', (e) => e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())));
 self.addEventListener('fetch', (e) => {

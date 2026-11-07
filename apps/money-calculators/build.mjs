@@ -17,7 +17,7 @@ const L = {
     signupTitle: `Free: ${esc(config.email.leadMagnet)}`, formName: config.email.formName, emailPh: 'you@example.com', send: 'Send it to me', emailLabel: 'Email',
     signupNote: 'One useful email a week. Unsubscribe in one click.', honeypot: 'Leave this empty',
     footer: ['Educational tools, not financial, tax or investment advice. Results are estimates from the numbers you enter. Check current rules and rates with the official source before acting.', 'Your numbers stay in your browser; nothing you type into a calculator is sent anywhere. Some links are affiliate links.'],
-    all: 'All calculators', addDebt: '+ Add a debt', extra: 'Extra each month on top of minimums ($)', share: 'Copy a link to these numbers', questions: 'Questions', more: 'More calculators',
+    all: 'All calculators', addDebt: '+ Add a debt', addFund: '+ Add a fund', feeMonthly: 'Added each month, you and employer ($)', feeYears: 'Years until retirement', feeReturn: 'Yearly return before fees (%)', extra: 'Extra each month on top of minimums ($)', share: 'Copy a link to these numbers', questions: 'Questions', more: 'More calculators',
     indexTitle: 'Free Money Calculators', indexH1: 'Free money calculators', indexLede: 'Plain-English calculators for the money questions we get most. No sign-up, and your numbers never leave your browser.',
     indexDesc: 'Free debt payoff, compound interest, emergency fund, savings, credit card and Roth vs Traditional calculators.',
   },
@@ -26,7 +26,7 @@ const L = {
     signupTitle: esc(config.email.es.title), formName: config.email.es.formName, emailPh: 'tu@ejemplo.com', send: 'Suscribirme', emailLabel: 'Correo',
     signupNote: 'Un correo útil por semana. Cancela con un clic.', honeypot: 'Deja esto vacío',
     footer: ['Herramientas educativas, no asesoría financiera, fiscal ni de inversión. Los resultados son estimaciones con los números que ingresas. Revisa las reglas y tasas actuales con la fuente oficial antes de actuar.', 'Tus números se quedan en tu navegador; nada de lo que escribes se envía a ningún lado. Algunos enlaces son de afiliado.'],
-    all: 'Todas las calculadoras', addDebt: '+ Agregar una deuda', extra: 'Extra cada mes además de los mínimos ($)', share: 'Copiar un enlace con estos números', questions: 'Preguntas', more: 'Más calculadoras',
+    all: 'Todas las calculadoras', addDebt: '+ Agregar una deuda', addFund: '+ Agregar un fondo', feeMonthly: 'Aporte mensual, tuyo y de tu empleador ($)', feeYears: 'Años hasta tu jubilación', feeReturn: 'Rendimiento anual antes de comisiones (%)', extra: 'Extra cada mes además de los mínimos ($)', share: 'Copiar un enlace con estos números', questions: 'Preguntas', more: 'Más calculadoras',
     indexTitle: 'Calculadoras de dinero gratis', indexH1: 'Calculadoras de dinero gratis', indexLede: 'Calculadoras sencillas para las preguntas de dinero más comunes. Sin registro, y tus números nunca salen de tu navegador.',
     indexDesc: 'Calculadoras gratis para pagar deudas, interés compuesto, fondo de emergencia, ahorro, tarjeta de crédito y Roth vs Tradicional.',
   },
@@ -93,7 +93,13 @@ function calcPage(p, lang) {
     ? `<div id="debts"></div>
        <button type="button" id="add-debt" class="link">${t.addDebt}</button>
        <label>${t.extra}<input name="extra" type="number" min="0" step="any" value="150"></label>`
-    : '<div id="fields" class="grid"></div>';
+    : p.slug === '401k-fees'
+      ? `<div id="funds"></div>
+       <button type="button" id="add-fund" class="link">${t.addFund}</button>
+       <div class="grid"><label>${t.feeMonthly}<input name="monthly" type="number" min="0" step="any" value="500"></label>
+       <label>${t.feeYears}<input name="years" type="number" min="1" max="60" step="1" value="30"></label>
+       <label>${t.feeReturn}<input name="annualReturn" type="number" min="0" max="15" step="any" value="7"></label></div>`
+      : '<div id="fields" class="grid"></div>';
   const faq = p.faq.map(([q, a]) => `<h3>${esc(q)}</h3><p>${esc(a)}</p>`).join('\n');
   const body = `
 <h1>${esc(p.h1)}</h1>

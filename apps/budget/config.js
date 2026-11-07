@@ -34,6 +34,9 @@ export default {
   },
   // Privacy-friendly analytics (Plausible, no cookies). Set the domain to turn it on. See docs/UTM.md.
   analytics: { plausibleDomain: '' },
+  // 'web' (default), 'play' or 'appstore'. Store builds hide the web checkout links, because
+  // both stores require their own billing for in-app digital purchases. See STORES.md.
+  distribution: 'web',
   verifyEndpoint: '/api/verify-license',
   proFeatures: [
     'Unlimited categories',

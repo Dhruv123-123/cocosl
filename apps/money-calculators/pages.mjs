@@ -85,4 +85,18 @@ export const pages = [
       ['Can I do both?', 'Yes. Splitting contributions is a reasonable hedge when you are unsure about future tax rates. Check the IRS income and contribution limits for the year.'],
     ],
   },
+  {
+    slug: '401k-fees',
+    title: '401(k) Fee Checker: What Your Funds Cost in Dollars',
+    h1: '401(k) fee checker',
+    tile: '401(k) fee checker',
+    description: 'Enter the funds in your 401(k) and their expense ratios. See what you pay in fees each year, how much fees could take over 30 years, and the lowest-cost fund in each category in your own plan.',
+    intro: 'Copy each fund, its expense ratio and your balance from your plan\'s fee disclosure or website. We turn percentages into dollars.',
+    faq: [
+      ['Where do I find my expense ratios?', 'In your plan\'s yearly fee disclosure (often called the 404a-5 notice), or on your 401(k) website next to each fund. It is shown as a percent, like 0.04% or 0.85%.'],
+      ['What is a good expense ratio?', 'Broad index funds often cost under 0.10% a year, while many actively managed funds cost 0.50% to 1% or more. A higher fee has to be earned back by better returns, and most funds don\'t manage that over long periods.'],
+      ['Should I switch to the cheapest fund?', 'Not automatically. Compare funds in the same category, and look at what each one holds and how it fits your plan. This tool shows costs; it doesn\'t tell you what to buy. If you have questions, your plan provider or a fee-only fiduciary adviser can help.'],
+      ['Are there other 401(k) fees?', 'Often yes: plan administration and recordkeeping fees, sometimes charged as a flat dollar amount. Your fee disclosure lists them. This checker covers fund expense ratios only.'],
+    ],
+  },
 ];

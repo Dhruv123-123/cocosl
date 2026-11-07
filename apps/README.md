@@ -13,6 +13,8 @@ HTML, CSS and JavaScript, no framework, no build step needed) and deploy free.
 | **Subscription finder** (upload a bank CSV, see every recurring charge and its yearly cost) | Money Made Simple | Free tool → budget app and Pro upsell, email list | `budget/subscriptions.html` |
 | **Bill negotiation tracker** (bills, promo end dates, call scripts, call log, "saved this year"; finds bills in a bank CSV) | Money Made Simple | Budget Pro feature (free: 3 bills, Pro: every bill + calendar reminders), Bill Cut Kit upsell | `budget/bills.html` |
 | **0% deal countdown** (deferred-interest and 0% APR deals: payment that clears it a month early, back-dated interest if you miss) | Money Made Simple | Free calculator for search traffic; Pro saves every deal + calendar reminders | `budget/deals.html` |
+| **Medical bill letters** (guided form → itemized bill request, billing error dispute, financial assistance request, No Surprises Act letter; print, copy or download) | Money Made Simple | Free tool → email list; optional $19 letter pack (config link) | `medical-bills/` |
+| **401(k) fee checker** (funds and expense ratios → fees in dollars, 30-year drag, lowest-cost fund per category in your own plan; EN/ES) | Money Made Simple | Free SEO tool → email list. Never recommends a fund | `money-calculators/401k-fees/` |
 | **Calculadoras en español**: all 7 calculators in Spanish with hreflang links | Money Made Simple / Dinero Simple | Spanish search traffic, Spanish email list | `money-calculators/es/` |
 | **¿Es una estafa?** Spanish checker (Dinero Simple audience): Spanish scam patterns and fully translated results | Scam Shield | Same offers, Spanish scam-alert list | `scam-checker/es/` |
 | **Link checker** ("Is this website legit?", EN `scam-checker/link/` + ES `scam-checker/es/enlace/`): look-alike spellings, brand on the wrong domain, risky endings | Scam Shield | Search traffic → checker, list, affiliates | `scam-checker/link/` |
@@ -27,7 +29,7 @@ one serverless function that checks budget-app license keys.
 
 ```bash
 cd apps
-npm test            # 105 unit tests, Node 20+, no dependencies
+npm test            # 116 unit tests, Node 20+, no dependencies
 npm run smoke       # opens every page in Chromium at desktop and phone width, and loads the extension (needs Playwright)
 ```
 
