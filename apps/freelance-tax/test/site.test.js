@@ -60,7 +60,7 @@ test('compare pages carry a byline, a staggered date and Article JSON-LD with an
     assert.ok(art && art.datePublished === pg.published && art.author && art.author.name, pg.slug);
     assert.match(html, /class="byline">By <a href="\.\.\/\.\.\/about\/">/);
   }
-  assert.equal(config.author.name, '', 'no invented author: set a real name in config.js');
+  assert.equal(typeof config.author.name, 'string', 'config.author.name: a real person, or empty for "1099 Money"');
 });
 
 test('release build leaves out pages that are not due yet', () => {

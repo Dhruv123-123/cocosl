@@ -140,6 +140,7 @@ or present it plainly as a suggestion.
 
 - **Make the original elements.** Charts can come from `media/charts.py`; the screen recordings and the four
   human segments need a person. A long video without its element shouldn't go up.
-- **Re-render the packs** for any batch you haven't recorded yet: the re-formatted Shorts have new on-screen
-  text and beats. The month 5 and driver packs in project files were refreshed with this pass.
+- **Packs:** all seven packs (launch, months 1–5, drivers) were re-rendered after this pass with 0 blocks,
+  and the copies in project files replaced. Anything already recorded from an old pack needs the new
+  script for the 36 re-formatted Shorts.
 - **Vary the look too:** a different card layout every few videos, and some licensed B-roll.
