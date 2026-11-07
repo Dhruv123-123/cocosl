@@ -74,9 +74,14 @@ def synthesize_segments(settings: Settings, brand: BrandProfile, texts: list[str
                 path = out_dir / f"seg-{i:02d}.wav"
                 provider.last_words = None
                 provider.speak(text, path)
+                seg_words = provider.last_words
+                if name != "silent":
+                    lead = trim_silence(path)
+                    if lead and seg_words:
+                        seg_words = [(w, max(0.0, a - lead), max(0.0, b - lead)) for w, a, b in seg_words]
                 paths.append(path)
                 durs.append(probe(path)["duration"])
-                words.append(provider.last_words)
+                words.append(seg_words)
             res = TTSResult(name, provider.tool, paths, durs, notes, words)
             if any(words):
                 res.timing = name
@@ -88,6 +93,63 @@ def synthesize_segments(settings: Settings, brand: BrandProfile, texts: list[str
                 raise ProviderError(f"TTS provider '{name}' failed: {e}") from e
             notes.append(f"tts {name} failed, fell through: {str(e)[:200]}")
     raise ProviderError("No TTS provider succeeded: " + "; ".join(notes))
+
+
+def _speech_bounds_energy(samples, rate: int, threshold_db: float = -42.0, win: float = 0.01):
+    """(first, last) speech sample by RMS energy in 10 ms windows; None if it's all quiet."""
+    import math
+    n = max(1, int(rate * win))
+    limit = 32768 * 10 ** (threshold_db / 20)
+    loud = []
+    for i in range(0, len(samples), n):
+        chunk = samples[i:i + n]
+        if chunk and math.sqrt(sum(x * x for x in chunk) / len(chunk)) > limit:
+            loud.append(i)
+    return (loud[0], min(len(samples), loud[-1] + n)) if loud else None
+
+
+def _speech_bounds_silero(path: Path, rate: int):
+    """Silero VAD (MIT) when installed and FACTORY_VAD=silero: more robust than energy on breaths/noise."""
+    from silero_vad import get_speech_timestamps, load_silero_vad, read_audio
+    ts = get_speech_timestamps(read_audio(str(path), sampling_rate=16000), load_silero_vad(), sampling_rate=16000)
+    if not ts:
+        return None
+    k = rate / 16000
+    return int(ts[0]["start"] * k), int(ts[-1]["end"] * k)
+
+
+def trim_silence(path: Path, pad: float = 0.08) -> float:
+    """Cut dead air at the start and end of a voiced segment (FACTORY_TRIM_SILENCE=0 to keep it).
+    Returns how many seconds were removed from the start, so word timings can be shifted."""
+    if os.environ.get("FACTORY_TRIM_SILENCE", "1") == "0":
+        return 0.0
+    from array import array
+    try:
+        with wave.open(str(path)) as w:
+            rate, width, channels = w.getframerate(), w.getsampwidth(), w.getnchannels()
+            raw = w.readframes(w.getnframes())
+        if width != 2 or channels != 1:
+            return 0.0
+        samples = array("h", raw)
+        bounds = None
+        if os.environ.get("FACTORY_VAD", "").lower() == "silero":
+            try:
+                bounds = _speech_bounds_silero(path, rate)
+            except Exception:
+                bounds = None
+        bounds = bounds or _speech_bounds_energy(samples, rate)
+        if not bounds:
+            return 0.0
+        start = max(0, bounds[0] - int(pad * rate))
+        end = min(len(samples), bounds[1] + int(pad * rate))
+        if start == 0 and end == len(samples):
+            return 0.0
+        with wave.open(str(path), "wb") as w:
+            w.setnchannels(1); w.setsampwidth(2); w.setframerate(rate)  # noqa: E702
+            w.writeframes(samples[start:end].tobytes())
+        return start / rate
+    except (wave.Error, OSError, EOFError):
+        return 0.0
 
 
 def align_with_whisper(res: TTSResult) -> None:
