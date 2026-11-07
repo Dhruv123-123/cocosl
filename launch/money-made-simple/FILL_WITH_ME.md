@@ -11,7 +11,7 @@
 - **No results claims.** Say "this is how the sheet works", not "this sheet will get you out of debt". No income or savings promises. The guardrail word list applies to the captions too.
 - **Product disclosure:** every caption ends "Our own product: we make money if you buy it." Turn on TikTok's commercial content toggle ("Your brand").
 - **The AI label isn't needed** for a clip with no AI visuals or voice. If AI text-to-speech is added over it, turn the label on and keep the caption line "Voice made with AI."
-- **Platform:** TikTok only, at 19:00 on the posting day (the Short takes 12:30). Instagram, YouTube and Facebook are already at the 2-a-day cap, but TikTok has a spare slot on Thursdays. Check the combined calendar first, because the Dec 31 savings-challenge finale is also a Thursday, so that week's clip moves to Fri Jan 1.
+- **Platform:** TikTok only, at 19:00 on the posting day (that day's Short is on TikTok at 18:00). Instagram, YouTube and Facebook are already at the 2-a-day cap, but TikTok has a spare slot on Thursdays. Check the combined calendar first, because the Dec 31 savings-challenge finale is also a Thursday, so that week's clip moves to Fri Jan 1.
 
 ## Filming setup (5 minutes)
 

@@ -425,3 +425,46 @@ def test_rate_my_budget_items_are_labelled():
             assert set(sub) <= {"id", "consent_version", "consented_on", "confirmed_on"}
         else:
             assert "Fictional" in cap and real_label not in cap, it["script"]["title"]
+
+
+def test_each_platform_posts_at_its_own_time(factory):
+    """Cadence.platform_times: TikTok 18:00, Pinterest 11:00, YouTube Shorts 12:30; long pins 11:30 and
+    TikTok-only videos 19:00 (brand file), the rest at post_times. Rows, CSV and ICS split by time."""
+    from contentfactory.pack import plan_markdown, write_calendar_files
+    brand = factory.brand("money-made-simple")
+    items = _items(MONTHS[0])
+    slots, _ = plan(brand, items, date(2026, 11, 21), 30)
+    want = {("short", "tiktok"): "18:00", ("short", "youtube"): "12:30", ("short", "instagram"): "12:30",
+            ("short", "facebook"): "12:30", ("carousel", "pinterest"): "11:00", ("carousel", "instagram"): "19:00",
+            ("long", "pinterest"): "11:30", ("long", "youtube"): "19:00"}
+    seen = set()
+    for s in slots:
+        for p in s.platforms:
+            if (s.fmt, p) in want:
+                assert s.at(p).strftime("%H:%M") == want[(s.fmt, p)], (s.fmt, p, s.at(p))
+                seen.add((s.fmt, p))
+    assert seen == set(want)
+    md = plan_markdown(brand, items, slots, [], date(2026, 11, 21), 30)
+    assert "| 18:00 | tiktok |" in md and "| 11:00 | pinterest |" in md
+    out = factory.settings.home / "cal"
+    out.mkdir()
+    write_calendar_files(brand, slots, out)
+    rows = (out / "calendar.csv").read_text().splitlines()[1:]
+    assert len(rows) == sum(len(s.groups()) for s in slots) > len(slots)
+    assert (out / "calendar.ics").read_text().count("BEGIN:VEVENT") == len(rows)
+    ch = _items(CHALLENGE)
+    mid, _ = plan(brand, ch[:1], date(2026, 11, 15), 1, {"mid": "sun"})
+    assert mid[0].at("tiktok").strftime("%H:%M") == "19:00"
+
+
+def test_one_platform_never_gets_two_posts_at_one_minute(factory):
+    """Inside one plan a taken minute moves to the platform's next time, then the brand's other post times."""
+    brand = factory.brand("money-made-simple")
+    brand.cadence.platform_times["tiktok:mid"] = ["18:00"]  # same minute as the TikTok Short
+    short = next(i for i in _items(MONTHS[0]) if i["format"] == "short")
+    slots, leftover = plan(brand, [short, _items(CHALLENGE)[0]], date(2026, 11, 22), 1, {"short": "sun", "mid": "sun"})
+    assert not leftover and len(slots) == 2
+    tiktok = sorted(s.at("tiktok").strftime("%H:%M") for s in slots if "tiktok" in s.platforms)
+    assert tiktok == ["12:30", "18:00"] or tiktok == ["18:00", "19:00"]
+    taken = [(p, s.at(p)) for s in slots for p in s.platforms]
+    assert len(taken) == len(set(taken))

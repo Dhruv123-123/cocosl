@@ -3,7 +3,7 @@
 Window: Wed Jul 21 – Fri Aug 20, 2027. All times America/New_York.
 22 shorts, 23 carousels, 0 long videos.
 
-**Sundays (long video, YouTube and Pinterest, 19:00):** Jul 25, Aug 1, Aug 8 and Aug 15 are Money Basics parts 7–10 (launch/money-made-simple/youtube-money-basics/), exported in the Money Basics pack. This month adds no long videos of its own.
+**Sundays (long video, YouTube 19:00, Pinterest pin 11:30):** Jul 25, Aug 1, Aug 8 and Aug 15 are Money Basics parts 7–10 (launch/money-made-simple/youtube-money-basics/), exported in the Money Basics pack. This month adds no long videos of its own.
 
 **Theme and formats:** back-to-school (teacher supplies, packed lunches, fall sports, textbooks), college (a freshman semester budget, student cards, move-in costs, 529 plans), teens and money, hurricane season (deductibles, flood insurance), daycare costs, the Sep 15 third-quarter estimated tax date for freelancers, Labor Day and fall sinking funds. The Shorts mix seven formats: 4 Rate My Budget (#34–37, all fictional), 4 on-screen calculations, 3 myth vs fact, 3 common questions, 3 countdowns, 3 real-numbers walk-throughs and 2 explainers. No two Shorts in a row share a format. Every Short has a 55–90s TikTok cut.
 

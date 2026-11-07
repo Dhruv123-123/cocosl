@@ -53,6 +53,17 @@ class Slot:
     tags: list[str] = field(default_factory=list)
     folder: str = ""
     post_id: int | None = None
+    times: dict[str, datetime] = field(default_factory=dict)  # platform -> its own local post time
+
+    def at(self, platform: str) -> datetime:
+        return self.times.get(platform, self.when)
+
+    def groups(self) -> list[tuple[datetime, list[str]]]:
+        """(time, platforms) rows, earliest first: one row per distinct platform time."""
+        rows: dict[datetime, list[str]] = {}
+        for p in self.platforms:
+            rows.setdefault(self.at(p), []).append(p)
+        return sorted(rows.items())
 
     @property
     def label(self) -> str:
@@ -128,6 +139,27 @@ def plan(brand: BrandProfile, items: list[dict], start: date, days: int,
                 keep.append(p)
         s.platforms = keep
 
+    # Each platform posts at its own time (Cadence.platform_times, "platform:format" first). A platform with
+    # no entry keeps the format's default (shorts early, the rest late). Never two posts on one platform at
+    # the same minute: a taken time moves to the platform's next listed time, then the brand's other post
+    # times, then 30 minutes later.
+    taken: set[tuple[str, datetime]] = set()
+    for s in sorted(slots, key=lambda s: (s.when, FORMATS.index(s.fmt))):
+        d = s.when.date()
+        for p in s.platforms:
+            own = brand.cadence.platform_times.get(f"{p}:{s.fmt}") or brand.cadence.platform_times.get(p)
+            wanted = list(own) if own else [at[s.fmt]]
+            wanted += [t for t in times if t not in wanted]
+            pick = next((w for w in (local(d, t) for t in wanted) if (p, w) not in taken), None)
+            if pick is None:
+                pick = local(d, wanted[0])
+                while (p, pick) in taken:
+                    pick += timedelta(minutes=30)
+            taken.add((p, pick))
+            s.times[p] = pick
+        if s.times:
+            s.when = min(s.times.values())
+
     for s in slots:
         sc = items[s.index]["script"]
         s.title = sc["title"]
@@ -168,8 +200,8 @@ def caption_txt(brand: BrandProfile, item: dict, slot: Slot | None) -> str:
     tags = " ".join(f"#{t.lstrip('#')}" for t in sc.get("hashtags", []))
     lines = [sc["title"], f"Format: {item['format']}"]
     if slot:
-        lines.append(f"Post: {slot.when.strftime('%a %b %d, %Y %H:%M')} {brand.cadence.timezone} "
-                     f"→ {', '.join(slot.platforms)}")
+        lines.append(f"Post: {slot.when.strftime('%a %b %d, %Y')} {brand.cadence.timezone} → "
+                     + "; ".join(f"{', '.join(ps)} {w.strftime('%H:%M')}" for w, ps in slot.groups()))
     lines += ["", "--- CAPTION (paste as-is) ---", sc["caption"].strip(), "", brand.ai_disclosure.strip(), "", tags, ""]
     if item["format"] == "long" and sc.get("description"):
         lines += ["--- YOUTUBE DESCRIPTION ---", sc["description"].strip(), "", brand.ai_disclosure.strip(), ""]
@@ -189,6 +221,12 @@ def caption_txt(brand: BrandProfile, item: dict, slot: Slot | None) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
+def times_rule(brand: BrandProfile) -> str:
+    pt = brand.cadence.platform_times
+    return ", ".join(f"{k.replace(':', ' ')}s at {' / '.join(v)}" if ":" in k else f"{k} at {' / '.join(v)}"
+                     for k, v in sorted(pt.items())) or "none set"
+
+
 def plan_markdown(brand: BrandProfile, items: list[dict], slots: list[Slot], leftover: list[int],
                   start: date, days: int) -> str:
     end = start + timedelta(days=days - 1)
@@ -200,9 +238,11 @@ def plan_markdown(brand: BrandProfile, items: list[dict], slots: list[Slot], lef
            + (f", {counts['mid']} TikTok-only videos." if counts["mid"] else "."), "",
            "Rules this plan follows:",
            f"- At most {brand.cadence.max_posts_per_day_per_platform} posts per platform per day (brand cap).",
-           f"- Shorts go to {', '.join(platforms_for(brand, 'short')) or 'no account'} at the first post time; "
+           f"- Shorts go to {', '.join(platforms_for(brand, 'short')) or 'no account'}; "
            f"carousels to {', '.join(platforms_for(brand, 'carousel')) or 'no account'} and long videos to "
-           f"{', '.join(platforms_for(brand, 'long')) or 'no account'} at the last post time.",
+           f"{', '.join(platforms_for(brand, 'long')) or 'no account'}. Each platform posts at its own time: "
+           + times_rule(brand) + ". Shorts otherwise go at the first post time and everything else at the last. "
+           "No platform has two posts at the same minute.",
            "- Before each post: human review in the dashboard, tick every line under CHECK BEFORE POSTING, keep the "
            "AI disclosure in the caption and set the platform AI-label toggle where required.",
            "- Revenue pieces are marked: **affiliate** (has the affiliate disclosure) and **product** (mentions the "
@@ -210,8 +250,9 @@ def plan_markdown(brand: BrandProfile, items: list[dict], slots: list[Slot], lef
            "| Day | Time | Platform(s) | Folder | Format | Piece |", "|---|---|---|---|---|---|"]
     for s in slots:
         tag = f" · **{' + '.join(s.tags)}**" if s.tags else ""
-        out.append(f"| {s.label} | {s.when.strftime('%H:%M')} | {', '.join(s.platforms)} | {s.folder or '—'} "
-                   f"| {s.fmt} | {s.title}{tag} |")
+        for w, ps in s.groups() or [(s.when, [])]:
+            out.append(f"| {s.label} | {w.strftime('%H:%M')} | {', '.join(ps)} | {s.folder or '—'} "
+                       f"| {s.fmt} | {s.title}{tag} |")
     if leftover:
         out += ["", "Spare pieces (not scheduled; use them if a post is pulled in review):", ""]
         out += [f"- {items[i]['format']}: {items[i]['script']['title']}" for i in leftover]
@@ -223,18 +264,20 @@ def write_calendar_files(brand: BrandProfile, slots: list[Slot], out: Path) -> N
         w = csv.writer(fh)
         w.writerow(["day", "date", "time", "timezone", "format", "platforms", "title", "revenue", "folder"])
         for s in slots:
-            w.writerow([s.day, s.when.date().isoformat(), s.when.strftime("%H:%M"), brand.cadence.timezone, s.fmt,
-                        "; ".join(s.platforms), s.title, "; ".join(s.tags), s.folder])
+            for when, ps in s.groups() or [(s.when, [])]:
+                w.writerow([s.day, when.date().isoformat(), when.strftime("%H:%M"), brand.cadence.timezone, s.fmt,
+                            "; ".join(ps), s.title, "; ".join(s.tags), s.folder])
     stamp = datetime.now(ZoneInfo("UTC")).strftime("%Y%m%dT%H%M%SZ")
     ics = ["BEGIN:VCALENDAR", "VERSION:2.0", f"PRODID:-//contentfactory//{brand.slug}//EN"]
     for s in slots:
-        utc = s.when.astimezone(ZoneInfo("UTC"))
-        summary = f"Post {s.fmt}: {s.title}".replace(",", "\\,").replace(";", "\\;")
-        ics += ["BEGIN:VEVENT", f"UID:{brand.slug}-{utc.strftime('%Y%m%dT%H%M')}-{s.index}@contentfactory",
-                f"DTSTAMP:{stamp}", f"DTSTART:{utc.strftime('%Y%m%dT%H%M%SZ')}",
-                f"DTEND:{(utc + timedelta(minutes=15)).strftime('%Y%m%dT%H%M%SZ')}",
-                f"SUMMARY:{summary}",
-                f"DESCRIPTION:{', '.join(s.platforms)} · folder {s.folder}".replace(",", "\\,"), "END:VEVENT"]
+        for when, ps in s.groups() or [(s.when, [])]:
+            utc = when.astimezone(ZoneInfo("UTC"))
+            summary = f"Post {s.fmt}: {s.title}".replace(",", "\\,").replace(";", "\\;")
+            ics += ["BEGIN:VEVENT", f"UID:{brand.slug}-{utc.strftime('%Y%m%dT%H%M')}-{s.index}@contentfactory",
+                    f"DTSTAMP:{stamp}", f"DTSTART:{utc.strftime('%Y%m%dT%H%M%SZ')}",
+                    f"DTEND:{(utc + timedelta(minutes=15)).strftime('%Y%m%dT%H%M%SZ')}",
+                    f"SUMMARY:{summary}",
+                    f"DESCRIPTION:{', '.join(ps)} · folder {s.folder}".replace(",", "\\,"), "END:VEVENT"]
     ics.append("END:VCALENDAR")
     (out / "calendar.ics").write_text("\r\n".join(ics) + "\r\n")
 

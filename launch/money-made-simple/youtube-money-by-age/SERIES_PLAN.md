@@ -6,7 +6,7 @@ A five-part long-form series that goes decade by decade, from your 20s to your 6
 - **No specific securities, funds, tickers or providers** are named or shown anywhere. Target-date funds, 529 plans, HSAs and term life are named only as categories.
 - **Original element per video:** every part has a worked-example chart on its chart chapter, with the chart note saying the numbers are fictional or hypothetical.
 - **Yearly limits aren't quoted on screen.** Catch-up, IRA, HSA and earnings-test limits change most years, so the narration sends viewers to IRS.gov and SSA.gov. The Social Security percentages (70% at 62, 124% at 70 for a full retirement age of 67) and the RMD age of 75 for people born in 1960 or later are rules, not yearly figures, but check them in the month of posting.
-- **Schedule:** Sundays at 19:00 ET, **Oct 17 – Nov 14, 2027**, on YouTube and Pinterest.
+- **Schedule:** Sundays at 19:00 ET, **Oct 17 – Nov 14, 2027**, on YouTube (19:00) with a Pinterest pin at 11:30.
 - **Examples** (Maya, Priya and Dev, Chris, Denise, Ray) are fictional and labelled. There are no income promises or testimonials.
 
 | # | Sunday | Title | Format | Original element | Status |

@@ -45,6 +45,11 @@ cadence:
   carousels_per_week: 3
   max_posts_per_day_per_platform: 2
   post_times: ["12:30", "19:00"]
+  # Merged over the defaults (TikTok 18:00, Pinterest 11:00, YouTube Shorts 12:30). Packs are planned one
+  # at a time, so two formats that can share a day on one platform get different minutes: TikTok-only
+  # videos keep 19:00 (the Short is at 18:00) and Sunday long-video pins go at 11:30 (holiday carousels
+  # take 11:00).
+  platform_times: {"tiktok:mid": ["19:00"], "pinterest:long": ["11:30"]}
   timezone: America/New_York
 accounts:
   - {platform: instagram, handle: "@moneymadesimple", formats: [short, carousel, image]}

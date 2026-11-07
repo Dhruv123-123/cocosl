@@ -3,7 +3,7 @@
 Window: Tue Sep 21 – Wed Oct 20, 2027. All times America/New_York.
 22 shorts, 22 carousels, 0 long videos.
 
-**Sundays (long video, YouTube and Pinterest, 19:00):** Sep 26, Oct 3 and Oct 10 are Your First $1,000 Invested parts 4–6 (launch/money-made-simple/youtube-first-1000/). Oct 17 is Money Moves by Age part 1, "Money in Your 20s" (launch/money-made-simple/youtube-money-by-age/). Both series are exported in their own packs. This month adds no long videos of its own.
+**Sundays (long video, YouTube 19:00, Pinterest pin 11:30):** Sep 26, Oct 3 and Oct 10 are Your First $1,000 Invested parts 4–6 (launch/money-made-simple/youtube-first-1000/). Oct 17 is Money Moves by Age part 1, "Money in Your 20s" (launch/money-made-simple/youtube-money-by-age/). Both series are exported in their own packs. This month adds no long videos of its own.
 
 **Theme and formats:** the Oct 15 extended tax filing deadline, Cybersecurity Awareness Month (account security, phishing, credit freezes, safe money transfers), Medicare open enrollment (Oct 15 – Dec 7), Q4 money tasks before Dec 31, workplace open enrollment, early holiday planning, Social Security claiming basics, and medical bills. The Shorts mix seven formats: 4 Rate My Budget (#42–45, all fictional), 4 on-screen calculations, 3 myth vs fact, 3 common questions, 3 countdowns, 3 real-numbers walk-throughs and 2 explainers. No two Shorts in a row share a format. Every Short has a 55–90s TikTok cut. Investing posts carry the risk line, and none of them names a fund or provider.
 
