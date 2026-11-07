@@ -46,6 +46,12 @@ const checks = [
   ['/scam-checker/link/', '#result .score', async (page) => { await page.click('[data-url*=paypa1]'); }],
   ['/scam-checker/es/enlace/', '#result .score', async (page) => { await page.click('[data-url*=usps]'); }],
   ['/scam-checker/scams/', '.tiles'],
+  ['/scam-checker/es/estafas/', '.tiles'],
+  ['/scam-checker/es/estafas/mensaje-peaje-sin-pagar/', '#result', async (page) => {
+    await page.fill('#guide-msg', 'URGENTE: tiene un saldo de peaje pendiente de $4.15, pague ahora en ezpass-pagos.top o tendrá un cargo por mora');
+    await page.click('#guide-check button');
+    await page.waitForURL(/scam-checker\/es\/$/);
+  }],
   ['/scam-checker/scams/toll-text-scam/', '#result', async (page) => {
     await page.fill('#guide-msg', 'URGENT: unpaid toll of $4.15, pay at ezpass-help.top now or face a late fee');
     await page.click('#guide-check button');

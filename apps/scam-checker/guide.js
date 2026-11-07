@@ -15,10 +15,11 @@ form?.addEventListener('submit', (e) => {
   location.href = `${root}#m=${encodeURIComponent(text.slice(0, 4000))}`;
 });
 
-const offers = config.offers.filter((o) => o.showWhen.includes('high') && live(o.url));
+const es = document.documentElement.lang.startsWith('es');
+const offers = config.offers.filter((o) => o.showWhen.includes('high') && live(o.url)).map((o) => (es && o.es ? { ...o, ...o.es } : o));
 const box = document.querySelector('#offers');
 if (box && offers.length) {
-  box.innerHTML = `<h2>Protect yourself next time</h2>${offers.map((o) => `<div class="offer"><b>${esc(o.title)}</b><p>${esc(o.blurb)}</p><a class="btn small" href="${esc(o.url)}" rel="sponsored noopener" target="_blank">${esc(o.label)}</a></div>`).join('')}<p class="tiny">Affiliate links: we may earn a commission at no cost to you.</p>`;
+  box.innerHTML = `<h2>${es ? 'Protégete la próxima vez' : 'Protect yourself next time'}</h2>${offers.map((o) => `<div class="offer"><b>${esc(o.title)}</b><p>${esc(o.blurb)}</p><a class="btn small" href="${esc(o.url)}" rel="sponsored noopener" target="_blank">${esc(o.label)}</a></div>`).join('')}<p class="tiny">${es ? 'Enlaces de afiliado: podemos ganar una comisión sin costo para ti.' : 'Affiliate links: we may earn a commission at no cost to you.'}</p>`;
   box.hidden = false;
 }
 setupSignup(root);

@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { scams } from '../scams.mjs';
+import { scamsEs } from '../scams-es.mjs';
 import { analyzeMessage } from '../lib/scan.js';
 
 test('every scam guide example is flagged high risk by the checker', () => {
@@ -30,4 +31,21 @@ test('real one-time-code texts that warn you not to share stay low', () => {
     'WhatsApp code 123-456. Never share this code with anyone.',
     'Your Bank of America code is 559201. We will never call to ask for it. Don\'t share it.',
   ]) assert.equal(analyzeMessage(msg).level, 'low', msg);
+});
+
+test('every Spanish guide example is flagged high risk and matches an English guide', () => {
+  const en = new Set(scams.map((s) => s.slug));
+  const slugs = new Set();
+  for (const s of scamsEs) {
+    const r = analyzeMessage(s.example);
+    assert.equal(r.level, 'high', `${s.slug} scored ${r.score}`);
+    assert.ok(en.has(s.en), `${s.slug} points to missing English guide ${s.en}`);
+    assert.match(s.slug, /^[a-z0-9-]+$/);
+    assert.ok(!slugs.has(s.slug), `duplicate ${s.slug}`);
+    slugs.add(s.slug);
+    for (const k of ['title', 'h1', 'short', 'description', 'example', 'real', 'check']) assert.ok(s[k], `${s.slug}.${k}`);
+    assert.ok(s.signs.length >= 3 && s.sources.length >= 1, s.slug);
+    assert.ok(s.description.length <= 200, `${s.slug} description too long`);
+  }
+  assert.equal(scamsEs.length, scams.length, 'every English guide has a Spanish version');
 });
