@@ -9,6 +9,7 @@ buy_url: https://example.gumroad.com/l/debt-free-date
 buy_label: Get the planner
 guarantee: Instant download. If it isn't for you, email us within 14 days for a full refund. No forms, no hoops.
 image: /img/product-debt-free-date-planner.png
+thumb: /img/product-debt-free-date-planner-card.jpg
 order: 3
 status: coming-soon
 includes: [Planner for Excel / Google Sheets / Numbers, Up to 10 debts with avalanche / snowball / custom order, Balance transfer and consolidation loan calculators, 10-page guide with call scripts and a printable payoff tracker]

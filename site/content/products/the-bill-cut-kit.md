@@ -9,6 +9,7 @@ buy_url: https://example.gumroad.com/l/bill-cut-kit
 buy_label: Get the kit for $5
 guarantee: Instant download. If it isn't for you, email us within 14 days for a full refund. No forms, no hoops.
 image: /img/product-bill-cut-kit.png
+thumb: /img/product-bill-cut-kit-card.jpg
 order: 6
 status: coming-soon
 includes: [9-page PDF guide with a printable audit worksheet, Tracker for Excel / Google Sheets / Numbers, 7 word-for-word negotiation scripts, Yearly savings worked out for you]

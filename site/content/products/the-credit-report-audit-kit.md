@@ -9,6 +9,7 @@ buy_url: https://example.gumroad.com/l/credit-audit-kit
 buy_label: Get the kit
 guarantee: Instant download. If it isn't for you, email us within 14 days for a full refund. No forms, no hoops.
 image: /img/product-credit-report-audit-kit.png
+thumb: /img/product-credit-report-audit-kit-card.jpg
 order: 5
 status: coming-soon
 includes: [12-page PDF guide with a 90-day plan, 3 letter templates (bureau / lender / goodwill), Tracker with dispute due dates and a utilization calculator, Step-by-step credit freeze at all three bureaus]

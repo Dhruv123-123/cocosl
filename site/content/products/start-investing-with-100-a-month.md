@@ -9,6 +9,7 @@ buy_url: https://example.gumroad.com/l/start-investing
 buy_label: Get the guide + calculators
 guarantee: Instant download. If it isn't for you, email us within 14 days for a full refund. No forms, no hoops.
 image: /img/product-investing-starter-kit.png
+thumb: /img/product-investing-starter-kit-card.jpg
 order: 4
 status: coming-soon
 includes: [12-page plain-English PDF guide, 6 calculators: growth / fees / 401(k) match / Roth vs Traditional / contributions, Order-of-operations checklist, Printable one-page investing plan]

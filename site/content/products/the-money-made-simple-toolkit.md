@@ -9,6 +9,7 @@ buy_url: https://example.gumroad.com/l/toolkit
 buy_label: Get all five kits
 guarantee: Instant download. If it isn't for you, email us within 14 days for a full refund. No forms, no hoops.
 image: /img/product-money-toolkit-bundle.png
+thumb: /img/product-money-toolkit-bundle-card.jpg
 order: 2
 status: coming-soon
 includes: [5 PDF guides (about 60 pages), 5 spreadsheets for Excel / Google Sheets / Numbers, Start Here map with a 30-day plan, Saves $23 vs buying separately]
