@@ -34,6 +34,7 @@ Put each approved link in the brand YAML under `affiliates` (name, url, slug, ke
 | `ANTHROPIC_API_KEY` | console.anthropic.com → API keys. Without it the factory writes placeholder drafts. |
 | Voice: `ELEVENLABS_API_KEY` + `ELEVENLABS_VOICE_ID` | Clone **your own** voice (or pick a licensed library voice). Never clone someone else's. |
 | or `OPENAI_API_KEY` | Uses OpenAI TTS (and gpt-image-1 for images). |
+| or Kokoro (free, local, recommended) | `docker compose --profile voice up -d kokoro`, set `KOKORO_URL=http://localhost:8880/v1` (or `http://kokoro:8880/v1` inside compose). Kokoro's model and voices are Apache-2.0, so narration is safe to monetize. |
 | or Piper (free, local) | `pip install piper-tts`, download a voice, set `PIPER_MODEL=/path/voice.onnx`. |
 | Images: `COMFYUI_URL` or `OPENAI_API_KEY` or `REPLICATE_API_TOKEN` | Without one, the factory uses its built-in abstract art (fine for carousels). |
 | Music: `FACTORY_MUSIC_DIR` | A folder of tracks you have a licence for (YouTube Audio Library, Epidemic, etc.). Keep the licences. |

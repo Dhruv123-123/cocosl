@@ -117,3 +117,14 @@ def test_spanish_content_matches_english_structure():
         assert item["format"] == src["format"]
         assert len(item["script"]["segments"]) == len(src["script"]["segments"])
         assert "green piggy" not in json.dumps(item)
+
+
+def test_kokoro_uses_a_spanish_voice_for_a_spanish_brand(monkeypatch):
+    from contentfactory.config import Settings
+    from contentfactory.media import tts
+    monkeypatch.setenv("KOKORO_VOICE", "am_michael")  # an English override must not leak into Spanish
+    monkeypatch.delenv("KOKORO_VOICE_ES", raising=False)
+    settings = Settings.load()
+    assert tts.Kokoro(settings, _es())._voice() == "ef_dora"
+    monkeypatch.setenv("KOKORO_VOICE_ES", "em_alex")
+    assert tts.Kokoro(settings, _es())._voice() == "em_alex"
