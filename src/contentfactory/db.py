@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS publications (
   post_id INTEGER NOT NULL REFERENCES posts(id),
   platform TEXT NOT NULL,
   account TEXT DEFAULT '',
-  status TEXT NOT NULL DEFAULT 'queued',  -- queued | publishing | published | failed | dry_run
+  status TEXT NOT NULL DEFAULT 'queued',  -- queued | publishing | published | failed | dry_run | needs_check | cancelled
   scheduled_at TEXT,
   remote_id TEXT DEFAULT '',
   url TEXT DEFAULT '',
@@ -62,7 +62,8 @@ CREATE TABLE IF NOT EXISTS publications (
   attempts INTEGER DEFAULT 0,
   published_at TEXT,
   meta TEXT DEFAULT '{}',
-  created_at TEXT NOT NULL
+  created_at TEXT NOT NULL,
+  updated_at TEXT
 );
 CREATE INDEX IF NOT EXISTS pubs_status ON publications(status, scheduled_at);
 
@@ -217,14 +218,26 @@ class DB:
         self.path = str(path)
         if self.path != ":memory:":
             Path(self.path).parent.mkdir(parents=True, exist_ok=True)
-        self.conn = sqlite3.connect(self.path, check_same_thread=False)
+        # app, worker and renderer are separate processes on one file: wait for locks instead of failing
+        self.conn = sqlite3.connect(self.path, check_same_thread=False, timeout=30)
         self.conn.row_factory = sqlite3.Row
         self.conn.execute("PRAGMA foreign_keys = ON")
+        self.conn.execute("PRAGMA busy_timeout = 30000")
         self.conn.execute("PRAGMA journal_mode = WAL") if self.path != ":memory:" else None
         self.lock = threading.RLock()
         with self.lock:
             self.conn.executescript(SCHEMA)
+            self._migrate()
             self.conn.commit()
+
+    # Columns added after the first release; existing databases get them on open.
+    MIGRATIONS = [("publications", "updated_at", "TEXT")]
+
+    def _migrate(self) -> None:
+        for table, col, decl in self.MIGRATIONS:
+            have = {r[1] for r in self.conn.execute(f"PRAGMA table_info({table})")}
+            if col not in have:
+                self.conn.execute(f"ALTER TABLE {table} ADD COLUMN {col} {decl}")
 
     # -- low level -----------------------------------------------------------
     @staticmethod
