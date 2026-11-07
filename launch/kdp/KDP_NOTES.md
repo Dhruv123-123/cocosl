@@ -1,9 +1,12 @@
-# 2027 Budget Planner: KDP paperback notes
+# KDP paperbacks: notes
 
-Everything needed to publish the planner as an Amazon KDP paperback. **Nothing has been uploaded or submitted.**
+Three low-content paperbacks: the **2027 Budget Planner**, the **Debt Payoff Journal** and the **52-Week Savings
+Challenge Log**. Everything needed to publish them on Amazon KDP is here. The two journals are covered in their own section at the end, and the
+specs and the AI disclosure answers below apply to all three. **Nothing has been uploaded or submitted.**
 
 ```
-python launch/kdp/build_kdp.py          # → launch/kdp/dist/ (git-ignored)
+python launch/kdp/build_kdp.py                        # all three → launch/kdp/dist/ (git-ignored)
+python launch/kdp/build_kdp.py --only debt-journal    # or planner / savings-log
 ```
 
 | File | What it is |
@@ -84,3 +87,34 @@ Before answering, read KDP's own content guidelines on AI in Help > Content Guid
 - No fake reviews, no review swaps, and no "bestseller" claims.
 - Next year: run `python launch/kdp/build_kdp.py --year 2028` by mid-August 2027, recheck the holidays and tax dates,
   and upload it as a new book. Don't edit the 2027 one.
+
+## The two journals
+
+Both have original interiors (not adapted from the Etsy printables), are undated so they sell all year, and use the same
+specs, rules and AI-disclosure answers as above (text: yes, images: yes, translations: no).
+
+| | Debt Payoff Journal | 52-Week Savings Challenge Log |
+|---|---|---|
+| Files | `Debt-Payoff-Journal-KDP-Interior.pdf`, `-KDP-Cover.pdf` | `52-Week-Savings-Log-KDP-Interior.pdf`, `-KDP-Cover.pdf` |
+| Pages / spine | 60 pages, spine 0.1351 in, cover 17.3851 x 11.25 in | 64 pages, spine 0.1441 in, cover 17.3941 x 11.25 in |
+| Inside | My debts, payoff order (snowball / avalanche / own), 100-block countdown, milestones, find-extra-money worksheet, then 12 months of: balances, payment log, weekly check-ins, a journal prompt. A debt-free page and a look back | Plan tables (classic, reverse, custom: both plans total $1,378), a colour-in year chart, 52 weekly pages (amount, running total, where it came from, no-spend days, a win) with a progress strip, 4 quarter reviews and a year in review |
+| Title | Debt Payoff Journal | 52-Week Savings Challenge Log |
+| Subtitle | A 12-Month Debt Tracker and Payment Log with Weekly Check-Ins, 8.5 x 11 | A Weekly Money Saving Challenge Tracker, Classic or Reverse $1,378, 8.5 x 11 |
+| Keywords | debt payoff tracker · debt snowball journal · credit card payoff log · debt free planner · loan payment tracker · bill payment log book · personal finance journal | 52 week savings challenge · money saving challenge book · savings tracker journal · savings goal log · cash savings planner · budget savings book · no spend challenge tracker |
+| Category | Self-Help > Personal Finance (or Business & Money > Personal Finance > Budgeting) | same |
+| Price | about $8.99 to $10.99 | about $8.99 to $10.99 |
+| Best season | January (resolutions), then steady; second bump March | Late December to January (savings challenge searches roughly triple in January) |
+
+Description, debt journal:
+
+> Pay it off. Write it down. Watch it shrink. This undated twelve-month journal walks you through paying off credit cards,
+> loans and everything in between: list your debts, choose snowball or avalanche, colour a 100-block countdown, and log
+> balances, payments and weekly check-ins, with a journal prompt every month. 60 pages, 8.5 x 11 in. An organising tool,
+> not financial advice.
+
+Description, savings log:
+
+> Save a little every week and watch it add up. One page for every week of the 52-week money challenge: your amount,
+> the running total, where the money came from, no-spend days and a win, plus classic and reverse plan tables (both
+> reach $1,378), a colour-in year chart and quarter reviews. Undated, 64 pages, 8.5 x 11 in. An organising tool, not
+> financial advice.

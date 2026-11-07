@@ -132,3 +132,14 @@ def test_kdp_book_specs():
     w, h = K.cover_size(n)
     assert abs(w - (0.25 + 17 + n * 0.002252)) < 1e-3 and h == 11.25
     assert "Not financial" not in K.cover_html(2027, n) and "not financial advice" in K.cover_html(2027, n)
+
+
+def test_kdp_journals():
+    import build_kdp as K
+    for key in ("debt-journal", "savings-log"):
+        pages = K.book_pages(key)
+        assert len(pages) % 4 == 0 and 24 <= len(pages) <= 150 and "Copyright" in pages[1]
+        assert not any("Etsy" in p for p in pages)
+    log = K.book_pages("savings-log")
+    assert sum('Week <em>' in p for p in log) == 52 and sum("Quarter <em>" in p for p in log) == 4
+    assert sum(range(1, 53)) == 1378
