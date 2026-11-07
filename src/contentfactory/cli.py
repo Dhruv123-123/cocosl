@@ -232,11 +232,27 @@ def cmd_insights(args):
 
 
 def cmd_import(args):
+    """Safe to re-run: scripts already imported are skipped, and ones whose render never finished
+    (an interrupted run) are rendered again instead of duplicated."""
+    import os
+    if args.queue:
+        os.environ["RENDER_QUEUE"] = "1"
     f = _factory(args)
     items = json.loads(Path(args.file).read_text())
     for item in items[: args.limit or None]:
-        pid = f.import_script(args.brand, item["script"], item["format"], item.get("pillar", ""),
-                              item.get("idea_angle", ""), render=not args.no_render)
+        title = (item.get("script") or {}).get("title", "")
+        existing = None if args.force else f.db.one(
+            "SELECT id, status FROM posts WHERE brand = ? AND title = ? AND status != 'rejected' ORDER BY id DESC",
+            [args.brand, title])
+        if existing and existing["status"] in ("scripted", "failed") and not args.no_render:
+            f._render_or_queue(existing["id"], True)
+            pid = existing["id"]
+        elif existing:
+            print(f"post #{existing['id']} [{existing['status']}] {title}: already imported, skipped")
+            continue
+        else:
+            pid = f.import_script(args.brand, item["script"], item["format"], item.get("pillar", ""),
+                                  item.get("idea_angle", ""), render=not args.no_render)
         post = f.db.get("posts", pid)
         print(f"post #{pid} [{post['format']}/{post['status']}] {post['title']}")
 
@@ -393,6 +409,8 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--brand", required=True)
     s.add_argument("--limit", type=int, default=0)
     s.add_argument("--no-render", action="store_true")
+    s.add_argument("--queue", action="store_true", help="hand renders to the render queue instead of waiting")
+    s.add_argument("--force", action="store_true", help="import even if a post with the same title exists")
     s.set_defaults(func=cmd_import)
 
     s = sub.add_parser("niche", help="score niche candidates (ad value, demand, risk, saturation)")
@@ -429,7 +447,7 @@ def _extend(sub) -> None:
     """Optional command groups that live in their own modules."""
     for mod in ("contentfactory.business.cli", "contentfactory.publish.cli", "contentfactory.funnel.cli",
                 "contentfactory.community.cli", "contentfactory.site",
-                "contentfactory.renderq", "contentfactory.doctor"):
+                "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup"):
         try:
             module = __import__(mod, fromlist=["register"])
         except ImportError:
