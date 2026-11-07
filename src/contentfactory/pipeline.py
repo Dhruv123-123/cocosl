@@ -194,6 +194,8 @@ class Factory:
             raise ValueError(f"Can't approve a post in status {post['status']}")
         if self.render_pending(post_id):
             raise PermissionError("Post is still waiting in the render queue; review it once it has rendered")
+        from .review import check_can_approve
+        check_can_approve(post, self.brands().get(post["brand"]))
         self.db.update("posts", post_id, {"status": "approved", "review_notes": notes})
         self.db.log("post.approved", "post", post_id, {"notes": notes}, actor=actor)
 
