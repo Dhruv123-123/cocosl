@@ -1025,5 +1025,516 @@
    "detail": "A coverage map chart for the fictional 27-year-old renter: five policies as shields (covered, not needed yet, gap), with the gap showing two deductibles at once exceeding savings",
    "chapter": "The coverage map"
   }
+ },
+ {
+  "format": "long",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "A sample credit card statement read top to bottom on screen: statement vs current balance, minimum payment, due date, the minimum payment warning box, the interest charge, fees, and how to dispute a charge, ending with an autopay setup that avoids interest.",
+  "series": "money-basics",
+  "series_part": 9,
+  "content_id": "yt-basics-09",
+  "search_terms": [
+   "how to read a credit card statement",
+   "statement balance vs current balance",
+   "credit card grace period",
+   "how to avoid credit card interest"
+  ],
+  "thumbnail_alt": "Credit card statement, explained",
+  "script": {
+   "title": "How to Read a Credit Card Statement (and Never Pay Interest)",
+   "hook": "There are 2 balances on your credit card statement, and paying the wrong one can cost you interest. Let's read a statement line by line.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "There are two balances on your credit card statement, and paying the wrong one can cost you interest. Let's read a statement line by line. A credit card statement is packed with numbers, and most people look at just one: the minimum payment. That's the most expensive habit in personal finance. In this video we'll go through a sample statement on screen, section by section, using a fictional card with a twenty-four percent APR. You'll learn which balance to pay, how the grace period works, what the minimum payment warning box is telling you, how interest is calculated, and how to dispute a charge. Then we'll set up autopay so you never pay interest on purchases again.",
+     "on_screen_text": "Read the whole statement",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a long statement with a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "The summary box",
+     "narration": "Start with the account summary, usually at the top of page one. You'll see the previous balance, payments and credits, new purchases, any fees, interest charged, and the new balance. This is the story of the month in one box. Read it like a receipt. Did any payments you made show up? Are there purchases you don't recognise? Was there a fee or interest you didn't expect? For our sample: previous balance, one thousand two hundred. Payment, one thousand two hundred. New purchases, eight hundred forty-five. Fees and interest, zero. New balance, eight hundred forty-five dollars. That last number is the statement balance, and it's the one that matters most.",
+     "on_screen_text": "Previous · payments · purchases · new balance",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple summary box with five lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Statement balance vs current balance",
+     "narration": "Now the two balances. The statement balance is what you owed when the billing cycle closed: eight hundred forty-five dollars in our example. The current balance, which you'll see in your card's app, includes everything since then, including purchases made after the statement closed. Here's the key point. To avoid interest on purchases, you generally need to pay the statement balance in full by the due date. You don't need to pay the current balance. Paying more is fine, of course, but paying the statement balance in full each month is what keeps your grace period working. Paying only part of it means interest starts.",
+     "on_screen_text": "Pay the STATEMENT balance in full",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two numbers side by side, one circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Due date and grace period",
+     "narration": "The payment due date is printed clearly near the summary. Card issuers are generally required to give you at least twenty-one days between when the statement is sent and when payment is due. That window is the grace period. If you pay the full statement balance by then, purchases made during the cycle generally cost you no interest at all. If you don't, you usually lose the grace period, and interest can start on new purchases from the day you make them, until you pay in full again. That's why one month of carrying a balance can cost more than people expect. And note the due time, often five p.m. on the due date, depending on your card.",
+     "on_screen_text": "At least 21 days · pay in full = no interest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a 21-day bracket. No text, no logos, no real people."
+    },
+    {
+     "heading": "The minimum payment",
+     "narration": "Next, the minimum payment. It's the smallest amount you can pay to avoid a late fee and a late mark on your credit. Issuers calculate it differently, but it's often a small percentage of the balance plus interest and fees, with a floor of something like twenty-five to forty dollars. In our example it's thirty-five dollars. Always pay at least the minimum, on time, every month. Late payments can mean fees, a penalty APR on some cards, and damage to your credit score if the payment is thirty or more days late. But paying only the minimum when you carry a balance is how debt drags on for years. Which brings us to the most useful box on the statement.",
+     "on_screen_text": "Minimum = avoids late fees, not interest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small coin next to a much larger stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "The minimum payment warning box",
+     "narration": "Look for a box titled something like minimum payment warning. It's required by federal law, and it shows two scenarios for your current balance. First: if you only pay the minimum each month, how long it will take to pay off, and what it will cost in total. Second: how much you'd need to pay each month to clear it in three years, and how much that would save. On a large balance, the minimum-only line can show many years and thousands of dollars in interest. This box is the clearest picture you'll get of what carrying a balance really costs. If you have a balance, read it every month and aim for the three-year number or better.",
+     "on_screen_text": "Read the warning box every month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a highlighted box on a statement page. No text, no logos, no real people."
+    },
+    {
+     "heading": "How interest is calculated",
+     "narration": "If you do carry a balance, here's how the interest charge is usually calculated. The card takes your APR and divides it by three hundred sixty-five to get a daily rate. Twenty-four percent becomes about point zero six six percent a day. It then works out your average daily balance for the cycle, multiplies by the daily rate and the number of days. On an average daily balance of two thousand dollars over a thirty-day cycle, that's about thirty-nine dollars and fifty cents. You'll see the result in an interest charge calculation section, often broken out by purchases, balance transfers and cash advances, which can have different rates.",
+     "on_screen_text": "$2,000 × 24% ÷ 365 × 30 ≈ $39.50",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a small coin on each day. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fees to watch",
+     "narration": "Then the fees section. Common ones are late fees, foreign transaction fees, often around three percent of purchases made abroad or with foreign merchants, cash advance fees, balance transfer fees and annual fees. Cash advances are especially expensive: there's usually a fee, a higher APR, and no grace period, so interest starts right away. If you see a fee you didn't expect, call the issuer and ask politely whether it can be waived, especially a first late fee. Many issuers will remove a one-time late fee for a customer with a good history. It takes five minutes and it's often worth it.",
+     "on_screen_text": "Late · foreign · cash advance · annual",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a few small tags hanging from a card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Spot errors and dispute charges",
+     "narration": "Read the transaction list every month, ideally in your card's app every week. Look for charges you don't recognise, double charges, subscriptions you cancelled, and refunds that never arrived. If something is wrong, contact the merchant first if it's a simple mistake. If that doesn't work, or it's fraud, dispute it with your card issuer. Under federal billing error rules, you generally have sixty days from the statement date to dispute a billing error in writing, though many issuers let you start in the app. For suspected fraud, call right away and ask for a new card number. Credit cards generally give you stronger protection than debit cards, which is one more reason to check your statement.",
+     "on_screen_text": "Dispute errors within 60 days",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a list with one item circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Screen recording: set up autopay",
+     "narration": "Let's finish with the setup that makes interest a non-issue. In this screen recording, we're in a demo card account. Go to payments, then autopay. Choose the statement balance, not the minimum and not a fixed amount. Choose the bank account it pulls from, and make sure that account always has enough to cover your typical monthly spending. Turn on alerts for statement ready, payment due, and large transactions. Now every month, the full statement balance is paid on time automatically, and you get a nudge to review the statement. If you're paying down an existing balance, set autopay for at least the minimum as a safety net, and make extra payments on top.",
+     "on_screen_text": "Autopay: statement balance",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone screen with a payments menu and a toggle. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. The summary box tells the month's story. The statement balance is what you need to pay in full by the due date to avoid interest; the current balance includes newer purchases. You get at least twenty-one days of grace period. The minimum payment avoids late fees, not interest. The minimum payment warning box shows exactly what carrying a balance costs. Interest is calculated daily from your average balance. Watch for fees, especially cash advances, and dispute errors within sixty days. Then set autopay to the statement balance. Next in the Money Basics series: renting versus buying a home, with the real monthly math.",
+     "on_screen_text": "Statement balance · grace · warning box · autopay",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a neat statement with a check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Your credit card statement, line by line: which balance to pay, how the grace period works, the minimum payment warning box, how interest is calculated, and setting autopay so you never pay interest on purchases.\n\nExamples are hypothetical and for education only. Card terms vary. Not financial advice.",
+   "hashtags": [
+    "creditcards",
+    "creditcardstatement",
+    "creditcarddebt",
+    "personalfinance",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "How to read a credit card statement, line by line, on a sample statement: the summary, statement vs current balance, the grace period and due date, the minimum payment, the minimum payment warning box, how interest is calculated, fees, disputes, and a screen recording of setting autopay to the statement balance.\n\nChapters\n0:00 Intro\n0:48 The summary box\n1:33 Statement balance vs current balance\n2:17 Due date and grace period\n3:06 The minimum payment\n3:55 The minimum payment warning box\n4:44 How interest is calculated\n5:28 Fees to watch\n6:11 Spot errors and dispute charges\n6:59 Screen recording: set up autopay\n7:46 Recap\n\nLinks\nHow credit scores work: https://moneymadesimple.netlify.app/blog/how-credit-scores-work/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-09\nDebt avalanche vs snowball: https://moneymadesimple.netlify.app/blog/debt-avalanche-vs-snowball/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-09\nBalance transfer cards compared: https://moneymadesimple.netlify.app/compare/best-balance-transfer-cards/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-09\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-09\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script written and fact-checked by a human.",
+   "thumbnail_text": "Pay THIS balance",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/credit-cards/",
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
+    "https://consumer.ftc.gov/articles/using-credit-cards-and-disputing-charges"
+   ],
+   "claims_to_verify": [
+    "Statements generally mailed/delivered at least 21 days before the due date (CARD Act)",
+    "Minimum payment warning box required by federal law",
+    "Billing error disputes generally within 60 days of the statement",
+    "2,000 × 24% ÷ 365 × 30 ≈ 39.45",
+    "Foreign transaction fees often ~3%"
+   ],
+   "title_variants": [
+    "Statement Balance vs Current Balance: Your Credit Card Statement, Explained",
+    "The 1 Box on Your Credit Card Statement Everyone Should Read"
+   ],
+   "hook_variants": [
+    "Your statement tells you exactly how to never pay credit card interest. Most people skip that part.",
+    "Minimum payment, statement balance, current balance: which one do you actually pay?"
+   ]
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Screen recording in a demo card account: setting autopay to the statement balance, choosing the funding account and turning on statement, due-date and large-transaction alerts",
+   "chapter": "Screen recording: set up autopay"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A fictional $1,800 rental vs a $350,000 home with 20% down at an example 6.5%, compared over 5 and 10 years with every unrecoverable cost counted on both sides, plus the investment growth on the renter's down payment. Ends close, which is the point.",
+  "series": "money-basics",
+  "series_part": 10,
+  "content_id": "yt-basics-10",
+  "search_terms": [
+   "rent vs buy",
+   "is renting throwing money away",
+   "true cost of owning a home",
+   "rent or buy calculator"
+  ],
+  "thumbnail_alt": "Rent vs buy, 5 and 10 years",
+  "script": {
+   "title": "Renting vs Buying a Home: The Real Monthly Math",
+   "hook": "Rent at $1,800 vs a $350,000 home. We counted every cost over 5 and 10 years, and the answer is closer than most people think.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Rent at eighteen hundred dollars versus a three-hundred-fifty-thousand-dollar home. We counted every cost over five and ten years, and the answer is closer than most people think. You've probably heard that renting is throwing money away. It's one of the most repeated lines in personal finance, and it skips half the math. Owners spend money they never get back too: mortgage interest, property taxes, insurance, maintenance and the costs of buying and selling. In this video we'll compare a fictional renter and a fictional buyer, side by side, with every cost on screen. The numbers are examples, so swap in your own. But the method works anywhere, and it'll help you decide when buying makes sense for you.",
+     "on_screen_text": "Rent vs buy: every cost",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing between a small apartment and a small house. No text, no logos, no real people."
+    },
+    {
+     "heading": "The two people",
+     "narration": "Meet our two fictional people. Both earn the same and have eighty thousand five hundred dollars saved. The renter pays eighteen hundred a month for a nice two-bedroom, plus about fifteen dollars for renters insurance, and expects rent to rise about three percent a year. The buyer finds a similar home for three hundred fifty thousand dollars, puts twenty percent down, which is seventy thousand, and pays about ten thousand five hundred in closing costs, around three percent. They take a thirty-year fixed mortgage of two hundred eighty thousand at an example rate of six point five percent. The renter keeps the eighty thousand five hundred invested instead.",
+     "on_screen_text": "Same savings · two choices",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two small figures, one with a key and one with a lease. No text, no logos, no real people."
+    },
+    {
+     "heading": "The real monthly cost of owning",
+     "narration": "The mortgage payment, principal and interest, comes to about one thousand seven hundred seventy dollars a month. That's the number mortgage calculators show first. But it isn't the cost of owning. Add property tax, an example three hundred fifty a month. Homeowners insurance, about one hundred fifty. And maintenance: a common rule of thumb is to budget about one percent of the home's value per year, which is about two hundred ninety-two a month. That brings the real monthly cost to about two thousand five hundred sixty dollars, before any HOA fees. Compared with eighteen hundred fifteen for the renter, the owner is paying about seven hundred forty-five more each month, at least at first.",
+     "on_screen_text": "$1,770 P&I + $350 + $150 + $292 ≈ $2,562",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a house with four small coin stacks beside it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Unrecoverable costs: the fair comparison",
+     "narration": "The fair comparison isn't rent versus mortgage. It's money you never get back on each side. For the renter, that's rent and renters insurance. For the owner, it's mortgage interest, not principal, because principal builds equity you keep. Plus property tax, insurance, maintenance, closing costs to buy, and eventually selling costs, often around six percent of the sale price. On the other side, the owner gains if the home goes up in value. In our example we'll assume three percent a year. And the renter gains from investing the down payment and the monthly difference, at an assumed five percent a year. These assumptions are not predictions, which is exactly why the result can flip.",
+     "on_screen_text": "Compare money you never get back",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two scales, each with a small pile of coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Five years: the numbers",
+     "narration": "Over five years, here's how it adds up. The owner pays about eighty-eight thousand dollars in interest, twenty-one thousand in property tax, nine thousand in insurance, seventeen thousand five hundred in maintenance, plus ten thousand five hundred to buy and about twenty-four thousand to sell. The home rises in value by about fifty-six thousand, which offsets part of that. Net unrecoverable cost: about one hundred fifteen thousand dollars. The renter pays about one hundred sixteen thousand in rent and insurance. But their invested savings and the monthly difference grow by about twenty-eight thousand dollars. Net cost: about eighty-seven thousand. At five years in this example, renting comes out ahead by around twenty-eight thousand.",
+     "on_screen_text": "5 yrs: owner ≈ $115K · renter ≈ $87K",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two bar charts side by side, the renter's shorter. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ten years: closer",
+     "narration": "Now stretch it to ten years. Buying and selling costs are spread over more years, and each mortgage payment shifts slowly from interest toward principal. The owner's net unrecoverable cost is about one hundred eighty-three thousand. The renter's rent has risen every year, to about two hundred forty-nine thousand in total, but their investments have grown by about seventy-three thousand, for a net cost of about one hundred seventy-six thousand. At ten years, the two are within about seven thousand dollars of each other. Change the home's growth from three percent to four, or the mortgage rate by one point, and the winner flips. That's the honest answer: it depends, and time is the biggest factor.",
+     "on_screen_text": "10 yrs: ≈ $183K vs ≈ $176K",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two bar charts almost the same height. No text, no logos, no real people."
+    },
+    {
+     "heading": "The chart: when does buying win?",
+     "narration": "Here's the chart from our example, plotting each person's net cost year by year. Owning starts far behind because of closing costs, then slowly closes the gap as the interest share of the payment falls and the home's value rises. In this example it gets close to even around year ten, and pulls ahead around year twelve if prices keep rising. That's where the common rule of thumb comes from: don't buy unless you plan to stay at least five years, and ideally longer. If you might move for a job in two or three years, the buying and selling costs alone can wipe out any gain from owning. Renting also gives you flexibility, which has real value even if it's hard to put a number on it.",
+     "on_screen_text": "Stay 5+ years, ideally longer",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a line chart with two lines converging. No text, no logos, no real people."
+    },
+    {
+     "heading": "What the math doesn't capture",
+     "narration": "Some things don't fit neatly in a spreadsheet. Owning gives you stability, control over your space, and protection from rent increases, since a fixed-rate mortgage payment doesn't rise, though taxes and insurance can. It's also a kind of forced savings: paying principal every month builds equity even if you'd never invest on your own. Renting gives you flexibility, no surprise roof repair bills, and the freedom to move for a better job. Many renters don't actually invest the difference, and in that case owning usually wins more clearly. Be honest about which person you'd be. The math only works if you do the investing part.",
+     "on_screen_text": "Stability vs flexibility",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a house with roots next to a small suitcase. No text, no logos, no real people."
+    },
+    {
+     "heading": "Before you buy: a checklist",
+     "narration": "If you're leaning toward buying, a quick checklist. Have an emergency fund separate from your down payment, because the first year of owning often brings surprise costs. Get pre-approved so you know your real budget, and look at the total monthly cost, not just principal and interest. Aim for a total housing cost you'd be comfortable with even if your income dipped. Budget for closing costs and moving. Check whether you qualify for first-time buyer programs in your state, which can help with down payment or closing costs. And get the home inspected. Our renting and housing pages linked below go into more detail.",
+     "on_screen_text": "Emergency fund · total cost · inspection",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short checklist next to a small house. No text, no logos, no real people."
+    },
+    {
+     "heading": "Questions to ask before you decide",
+     "narration": "Before you decide, ask yourself five questions. One: how long will I realistically stay in this area? Under five years, renting usually wins in examples like this one. Two: is my job stable, and is my emergency fund in place after the down payment? Three: what does a similar home rent for nearby, compared with the full monthly cost of owning, not just the mortgage? Four: am I ready for repairs, which often run one to two percent of the home's value a year? Five: would buying stretch my budget so far that I'd stop saving for retirement? If any answer is shaky, renting while you save is a perfectly good plan. Run the numbers with your own rent, price and rate, because local markets differ a lot.",
+     "on_screen_text": "5 questions before you buy",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a checklist with five small boxes next to a house. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. Renting isn't throwing money away, and owning isn't free either. Compare unrecoverable costs on both sides: rent and insurance for the renter, and interest, taxes, insurance, maintenance and transaction costs for the owner. The real monthly cost of owning in our example was about twenty-five sixty, not the seventeen seventy mortgage payment. At five years, renting came out ahead. At ten, they were nearly even, and small changes in assumptions flip the result. The longer you stay, the better owning tends to look. Plug in your own numbers before you decide. Next in the Money Basics series: how to negotiate your bills and your salary.",
+     "on_screen_text": "Compare unrecoverable costs · time matters",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing between the apartment and house, shrugging kindly. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Renting vs buying, with every cost counted on both sides. In our fictional example, renting wins at 5 years and they're nearly even at 10. Small changes in assumptions flip it.\n\nAll numbers are hypothetical and the growth rates are assumptions, not predictions. Not financial advice.",
+   "hashtags": [
+    "rentvsbuy",
+    "homebuying",
+    "renting",
+    "realestate",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "Renting vs buying a home with the real math: a fictional $1,800 rental vs a $350,000 home with 20% down at an example 6.5%, comparing every unrecoverable cost and the renter's investment growth over 5 and 10 years, with a year-by-year chart. All assumptions are illustrative.\n\nChapters\n0:00 Intro\n0:48 The two people\n1:33 The real monthly cost of owning\n2:20 Unrecoverable costs: the fair comparison\n3:08 Five years: the numbers\n3:55 Ten years: closer\n4:43 The chart: when does buying win?\n5:35 What the math doesn't capture\n6:19 Before you buy: a checklist\n7:02 Questions to ask before you decide\n7:55 Recap\n\nLinks\nExample budget on a $75,000 salary: https://moneymadesimple.netlify.app/budget/75000-salary/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-10\nHow to build an emergency fund: https://moneymadesimple.netlify.app/blog/how-to-build-an-emergency-fund/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-10\nHow to start investing with $100 a month: https://moneymadesimple.netlify.app/blog/how-to-start-investing-with-100-a-month/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-10\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-10\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script written and fact-checked by a human.",
+   "thumbnail_text": "Renting = wasted money?",
+   "sources": [
+    "https://www.consumerfinance.gov/owning-a-home/",
+    "https://www.consumerfinance.gov/renters/",
+    "https://www.hud.gov/topics/buying_a_home"
+   ],
+   "claims_to_verify": [
+    "$280K at 6.5%/30 yrs: P&I ≈ $1,769.79",
+    "5 yrs: interest ≈ $88.3K; owner net ≈ $114.9K; rent ≈ $115.6K; renter growth ≈ $28.3K",
+    "10 yrs: owner net ≈ $183.1K; rent ≈ $249.4K; renter growth ≈ $73.0K; renter net ≈ $176.4K",
+    "Assumptions: 3% home growth, 3% rent growth, 5% investment return, 1% maintenance, 3% buy / 6% sell costs"
+   ],
+   "title_variants": [
+    "Is Renting Really Throwing Money Away? We Ran 5 and 10 Years",
+    "Rent vs Buy: The Costs Nobody Puts in the Mortgage Calculator"
+   ],
+   "hook_variants": [
+    "Renting isn't throwing money away, and owning isn't either. Here's what each one really costs.",
+    "Your mortgage payment isn't the cost of owning. Here's the real monthly number."
+   ]
+  },
+  "format_style": "real-numbers",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "A year-by-year chart from the video's own model of the owner's and renter's net unrecoverable cost, showing renting ahead at year 5 and the lines nearly meeting at year 10",
+   "chapter": "The chart: when does buying win?"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Common questions about negotiating, answered with scripts: lowering internet, phone and insurance bills (role-played call on camera), what to say when they say no, and preparing for a raise conversation (role-played on camera).",
+  "series": "money-basics",
+  "series_part": 11,
+  "content_id": "yt-basics-11",
+  "search_terms": [
+   "how to negotiate bills",
+   "how to lower internet bill",
+   "how to ask for a raise",
+   "salary negotiation tips"
+  ],
+  "thumbnail_alt": "Negotiation scripts",
+  "script": {
+   "title": "How to Negotiate Your Bills and Your Salary (Scripts Included)",
+   "hook": "Common question: does calling to lower a bill actually work? Often, yes. Here are the exact words, for 3 bills and 1 raise.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Common question: does calling to lower a bill actually work? Often, yes. Here are the exact words, for three bills and one raise. Negotiating feels awkward for most people, which is exactly why it works: companies expect most customers never to ask. In this video we'll answer the questions people ask most about negotiating, with scripts you can copy. First, recurring bills: internet, phone and insurance. Then the bigger one: asking for a raise. Two chapters are role-played on camera, so you can hear how it sounds. Nothing here is a trick. It's just asking clearly, with information, and being willing to wait for a better answer.",
+     "on_screen_text": "3 bills + 1 raise",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a phone and a small notepad. No text, no logos, no real people."
+    },
+    {
+     "heading": "Which bills can you negotiate?",
+     "narration": "Which bills can you actually negotiate? The best candidates are services with competitors and retention teams: internet, cable, mobile phone plans, car and renters insurance, and some subscriptions. Medical bills can often be negotiated too, especially if you ask for an itemized bill or a payment plan. Credit card interest rates and late fees are worth asking about. Things that are usually fixed: rent mid-lease, utilities like electricity and water in most areas, and taxes. Start with your highest recurring bill that has a competitor. A thirty-dollar monthly reduction is three hundred sixty dollars a year, from one phone call.",
+     "on_screen_text": "Internet · phone · insurance · cards",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short list of bills with small arrows. No text, no logos, no real people."
+    },
+    {
+     "heading": "Before you call: 10 minutes of prep",
+     "narration": "Before you call, ten minutes of prep. Find your current bill and plan details: speed, data, coverage, what you pay now, and how long you've been a customer. Then look up what competitors charge new customers for something similar, and what your own provider offers new customers. Write down one specific number you'd be happy with. Pick a time when you're not rushed. And decide your walk-away point: what you'll do if they won't move, whether that's switching, downgrading or trying again in a few months. Having a real alternative is what makes the call work.",
+     "on_screen_text": "Know your bill · competitor price · your number",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a notepad with three short lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "On camera: the internet bill call",
+     "narration": "This chapter is a role-played call, on camera, with the host as the customer. Here's the script. Hi, I've been a customer for three years, and my bill has gone up to eighty-five dollars a month. I've seen new-customer offers around fifty-five for similar speeds, including from another provider in my area. I'd like to stay, but I need the price to be closer to that. What can you do? If the first person can't help: I understand. Could you transfer me to the team that handles cancellations or retention? Then repeat the same thing, calmly. When they make an offer, ask: how long does that price last, and what will it go to afterwards? Get it confirmed in writing.",
+     "on_screen_text": "\"I'd like to stay, but…\"",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a host at a desk on a phone call with a notepad. No text, no logos, no real people."
+    },
+    {
+     "heading": "When they say no",
+     "narration": "What if they say no? First, ask what options do exist: a smaller plan, a loyalty discount, a promotion that starts next month, or bundling. Second, be willing to switch. If a competitor really is cheaper for similar service, switching is the negotiation. Third, set a reminder to call again in three to six months, since offers change. And be polite the whole way. The person on the phone usually didn't set the price, and being kind tends to get better results. Don't threaten to cancel unless you're prepared to, because sometimes they'll just process it.",
+     "on_screen_text": "No? Ask options · switch · call again",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a small phone icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Phone and insurance scripts",
+     "narration": "Two more quick scripts. Mobile phone: I'm reviewing my bills. I'm on the unlimited plan at seventy dollars, but I use about eight gigabytes a month. What lower plan fits that, and are there any discounts for autopay? Insurance: My policy renews next month. I've had no claims, and I'm comparing quotes. Can you check for any discounts I'm not getting, like bundling, paying in full, or a safe driver discount? And what would it cost with a higher deductible? For insurance, get at least two outside quotes with identical coverage first. Sometimes the best move is simply switching to a cheaper plan that fits how you actually use it.",
+     "on_screen_text": "Match the plan to your real use",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone and a small shield side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Salary: why it matters most",
+     "narration": "Now salary, which matters far more than any bill. A raise compounds: every future raise is often a percentage of your current pay, and retirement contributions and employer matches are too. A three-thousand-dollar raise at age twenty-five is three thousand dollars a year for every year after, before any further raises. Over a career, the gap between people who ask and people who don't can be very large. Yet many people never ask, especially early in their careers. You don't have to be aggressive. You need preparation, a specific number, and good timing.",
+     "on_screen_text": "A raise compounds",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small staircase of coins rising over years. No text, no logos, no real people."
+    },
+    {
+     "heading": "Preparing for a raise conversation",
+     "narration": "Here's how to prepare. One: list your results with numbers where you can, like projects delivered, money saved, customers helped, or new responsibilities you've taken on. Two: research market pay for your role, level and city using salary surveys and job postings that list pay ranges. Three: pick a specific number or a narrow range, based on that research. Four: time it well. Ask a few weeks before budgets or reviews are set, not right after a bad quarter. Five: book a meeting specifically for this, rather than bringing it up in passing. Write a one-page summary you can share.",
+     "on_screen_text": "Results · market data · a number · timing",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a one-page summary on a clipboard. No text, no logos, no real people."
+    },
+    {
+     "heading": "On camera: the raise conversation",
+     "narration": "This chapter is role-played on camera. Here's the script. Thanks for making time. I'd like to talk about my compensation. Over the past year, I've taken over the client onboarding process, cut setup time by about a third, and trained two new team members. Based on market data for this role in our area, I'm asking for an increase to sixty-two thousand. Then stop talking, and let them respond. If they say the budget is tight: I understand. What would need to happen for this to be possible, and can we agree on a date to revisit it? If money truly isn't available now, ask about other things: a title change, training, extra time off, or a written review date.",
+     "on_screen_text": "State results · state the number · pause",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two people at a small table, one with a clipboard. No text, no logos, no real people."
+    },
+    {
+     "heading": "Common mistakes",
+     "narration": "A few mistakes to avoid. Apologising for asking, or starting with I know this is awkward. Asking without a number, which lets the other side pick one. Comparing yourself to a coworker by name. Threatening to quit unless you'd really accept that outcome. And accepting a verbal promise without a follow-up. After any negotiation, send a short email summarising what was agreed and when. For bills, check the next statement to make sure the new price actually applied. For a raise, check your next pay stub. Small follow-ups protect the result.",
+     "on_screen_text": "No apology · a number · follow up in writing",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a few small warning signs next to an email icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Where to start this week",
+     "narration": "So where do you start this week? Pick one bill, not five. Choose the largest recurring bill that has a competitor, usually internet, phone or insurance. Block twenty minutes on your calendar. Do the ten minutes of prep, make the call, and write down what happened, including the name of the person you spoke with and any offer number. If you save money, move that amount into savings automatically, so the win actually shows up somewhere. Next month, pick the next bill. For salary, start a simple results file today, and add one line every time you finish something worth mentioning. By your next review, you'll have the evidence ready instead of trying to remember a whole year at once.",
+     "on_screen_text": "1 bill this week · a results file today",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with one circled day and a small folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. Many bills can be negotiated, especially internet, phone, insurance and card rates. Prepare with your current bill, competitor prices and a specific number. Ask clearly, ask for retention if needed, and get offers in writing. If they say no, ask about options, be ready to switch, and try again in a few months. For salary, prepare results, market data, a number and good timing, then state it and pause. Follow up everything in writing. The link below goes to our guide on finding and cancelling forgotten subscriptions. Next, the last episode of Money Basics: your first money plan, all on one page.",
+     "on_screen_text": "Prepare · ask · follow up",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a phone and a small trophy. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Scripts to negotiate internet, phone and insurance bills, plus how to prepare for and ask for a raise, with two role-played conversations.\n\nExamples are hypothetical. Results vary by provider and employer. Not financial or career advice.",
+   "hashtags": [
+    "negotiation",
+    "lowerbills",
+    "salarynegotiation",
+    "raise",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "How to negotiate bills and your salary, with scripts: which bills can be negotiated, ten minutes of prep, a role-played internet bill call, what to do when they say no, phone and insurance scripts, and a role-played raise conversation with preparation steps.\n\nChapters\n0:00 Intro\n0:44 Which bills can you negotiate?\n1:25 Before you call: 10 minutes of prep\n2:05 On camera: the internet bill call\n2:55 When they say no\n3:35 Phone and insurance scripts\n4:20 Salary: why it matters most\n4:59 Preparing for a raise conversation\n5:40 On camera: the raise conversation\n6:30 Common mistakes\n7:08 Where to start this week\n7:57 Recap\n\nLinks\nFind and cancel forgotten subscriptions: https://moneymadesimple.netlify.app/blog/find-and-cancel-subscriptions/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-11\nExample budget on a $60,000 salary: https://moneymadesimple.netlify.app/budget/60000-salary/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-11\nMoney tools: https://moneymadesimple.netlify.app/blog/money-tools/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-11\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-11\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script written and fact-checked by a human.",
+   "thumbnail_text": "Say this to lower bills",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/",
+    "https://www.bls.gov/oes/",
+    "https://www.dol.gov/agencies/wb"
+   ],
+   "claims_to_verify": [
+    "$30/month × 12 = $360/year",
+    "Results vary; offers change",
+    "Example salary numbers"
+   ],
+   "title_variants": [
+    "\"Can You Lower My Bill?\" The Exact Words to Use",
+    "Negotiating for Beginners: Bills, Then a Raise"
+   ],
+   "hook_variants": [
+    "Two phone calls and one meeting can be worth hundreds a year. Here's what to say.",
+    "Negotiating feels awkward. Scripts make it easy. Here are four."
+   ]
+  },
+  "format_style": "question-reply",
+  "original_element": {
+   "type": "human-segment",
+   "detail": "Two role-played conversations filmed on camera with the host: a call to lower an $85 internet bill, and a raise conversation using results, market data and a specific number",
+   "chapter": "On camera: the internet bill call"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "The series finale: a one-page money plan filled in on screen for a fictional 26-year-old, pulling from every Money Basics episode: take-home, the money map, debt order, emergency fund target, retirement rate, tax check, insurance and net worth review dates, plus the weekly spending number.",
+  "series": "money-basics",
+  "series_part": 12,
+  "content_id": "yt-basics-12",
+  "search_terms": [
+   "financial plan template",
+   "how to make a money plan",
+   "personal finance plan for beginners",
+   "one page financial plan"
+  ],
+  "thumbnail_alt": "One-page money plan",
+  "script": {
+   "title": "Your First Money Plan: Everything on One Page",
+   "hook": "8 numbers on 1 page. That's a complete money plan. Let's fill one in for a 26-year-old, using everything from this series.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "8 numbers on 1 page. That's a complete money plan. Let's fill one in for a 26-year-old, using everything from this series. Over the last eleven episodes of Money Basics, we covered pay stubs, where money lives, interest, taxes, net worth, index funds, cars, insurance, credit card statements, renting versus buying and negotiating. Each one is a piece. Today we put the pieces together into a single page you can stick on your fridge or pin in your notes app. Our example is a fictional person called Jordan, twenty-six, renting, with a student loan and a small credit card balance. As we go, fill in your own page. You'll finish this video with a plan, not just more information.",
+     "on_screen_text": "8 numbers · 1 page",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a single sheet of paper with eight empty boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 1: take-home pay",
+     "narration": "Number one: monthly take-home pay. From the pay stub episode, this is net pay, not salary. Jordan earns fifty-five thousand dollars, paid every two weeks, and takes home about fifteen hundred twenty-eight per paycheck. One paycheck times twenty-six, divided by twelve, is about three thousand three hundred ten dollars a month. That's box one. Every other number on the page has to fit inside it. If your income varies, use your lowest normal month from the past six. While you're at it, note the date of your next three-paycheck month. That extra paycheck gets a job later in the plan.",
+     "on_screen_text": "1. Take-home: $3,310/mo",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paycheck with a circled number. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 2: fixed bills",
+     "narration": "Number two: fixed monthly bills. Rent, utilities, phone, insurance, transportation, groceries, minimum debt payments and subscriptions. Jordan's rent is twelve hundred, utilities and internet are one forty, phone forty-five, car insurance one twenty, gas and transit one fifty, groceries three fifty, the student loan minimum two hundred twenty, and subscriptions thirty-five. Total: two thousand two hundred sixty dollars. From the negotiating episode, Jordan called the internet provider and cut twenty-five a month, which is already included. That's box two. Take-home minus bills leaves one thousand and fifty dollars to plan.",
+     "on_screen_text": "2. Bills: $2,260 → $1,050 left",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short stack of bills next to a coin pile. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 3: the money map",
+     "narration": "Number three is really a map, from the where-your-money-should-live episode. Checking holds one month of bills and spending plus a three-hundred-dollar cushion. A high-yield savings account holds the emergency fund. A second savings bucket holds sinking funds. And a Roth IRA and the 401(k) hold long-term money. On the page, Jordan writes the account name for each job, so every dollar has a home. The map doesn't change month to month, which is the point. Once it's set up with automatic transfers the day after payday, the plan mostly runs itself.",
+     "on_screen_text": "3. Map: checking · savings · funds · retirement",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small map with four labelled boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 4: the debt order",
+     "narration": "Number four: the debt order. Jordan has a fourteen-hundred-dollar credit card balance at twenty-four percent and a student loan at five percent. From the interest episode, the card is costing far more, so it goes first. Jordan puts two hundred fifty a month extra toward it, on top of the minimum, which clears it in about six months. After that, the two hundred fifty rolls into savings, not the student loan, because at five percent, building the emergency fund and investing matter more for now. From the statement episode, autopay is set to the statement balance for all new spending, so no new balance builds up.",
+     "on_screen_text": "4. Card first: +$250/mo → ~6 months",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short path with a flag at the end. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 5: the emergency fund target",
+     "narration": "Number five: the emergency fund target. A starter fund of one thousand dollars first, then three months of essential expenses. Jordan's essentials are about two thousand two hundred sixty a month, so three months is about sixty-eight hundred. Jordan has twelve hundred saved, so the gap is about fifty-six hundred. After the card is paid off, two hundred fifty a month plus the two extra paychecks a year closes most of that in about a year and a half. From the insurance episode, the target is also set so Jordan could cover two deductibles at once without borrowing. That's box five: sixty-eight hundred dollars, with a target date.",
+     "on_screen_text": "5. Emergency fund: $6,800 target",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a line marking the target. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 6: the retirement rate",
+     "narration": "Number six: the retirement savings rate. Jordan's employer matches fifty percent of contributions up to six percent of salary, so Jordan contributes six percent to get the full match. That's about two hundred seventy-five dollars a month from Jordan, plus about one hundred thirty-seven from the employer. From the index funds episode, it's invested in a low-cost target-date fund, and Jordan checked the expense ratio. The plan says: raise the rate by one percent every year, and with every raise, until reaching about fifteen percent including the match. Investing involves risk, but time is on Jordan's side. That's box six: six percent now, plus one percent each year.",
+     "on_screen_text": "6. Retirement: 6% + match, +1%/yr",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small plant with a staircase beside it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 7: the weekly spending number",
+     "narration": "Number seven: the weekly spending number. Here's the math. Take-home, three thousand three hundred ten. Minus bills, twenty-two sixty. Minus the extra card payment, two fifty. Minus sinking funds for gifts, car repairs and travel, one hundred fifty. That leaves six hundred fifty dollars a month for everything else: eating out, fun, clothes, the random stuff. Six hundred fifty times twelve, divided by fifty-two, is about one hundred fifty dollars a week. That's the number Jordan checks every Sunday. When it's gone, the week's done. It's guilt-free, because everything important on the page has already been paid.",
+     "on_screen_text": "7. Weekly: ≈ $150",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a weekly calendar with a small coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 8: net worth, and two review dates",
+     "narration": "Number eight: net worth, from episode five. Jordan's assets are about fourteen thousand, mostly the 401(k), savings and the car at resale value. Debts are about twenty-three thousand. Net worth: minus nine thousand. That's normal at this stage. The plan has two review dates on the page: January and July. On each date, Jordan spends thirty minutes updating net worth, checking the tax withholding estimator from the pay stub and tax episodes, reviewing insurance, and checking whether any bill can be negotiated down. If the net worth number is rising, the plan is working, whatever the month-to-month budget felt like.",
+     "on_screen_text": "8. Net worth: −$9,000 · review Jan + Jul",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with two circled months and a rising line. No text, no logos, no real people."
+    },
+    {
+     "heading": "The finished page",
+     "narration": "Here's Jordan's finished page, all on screen. One: take-home, three thousand three hundred ten. Two: bills, twenty-two sixty. Three: the money map, with account names. Four: the card first, plus two fifty a month. Five: emergency fund target, sixty-eight hundred. Six: retirement, six percent plus the match, rising one percent a year. Seven: weekly spending, about one fifty. Eight: net worth, minus nine thousand, with January and July review dates. Every automatic transfer is listed at the bottom with its date. That's it. Not a forty-page plan. One page that fits on a fridge, and that Jordan can actually follow.",
+     "on_screen_text": "The whole plan on one page",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a finished one-page plan with eight filled boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "What to do when life changes",
+     "narration": "One more thing: the page is meant to change. When something big happens, like a raise, a new job, a move, a new partner or a new baby, update the page that week, not at the next review date. Start with box one, take-home pay, and work down. A raise means box six goes up first, before spending adjusts. A move means box two changes, and the weekly number follows. If money gets tight, protect the essentials, keep minimum payments current, pause extra debt payments before stopping retirement contributions entirely, and lower the weekly number for a while. Then rebuild. A plan that bends is far more useful than a perfect plan you abandon after one hard month.",
+     "on_screen_text": "Life changes? Update the page",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a one-page plan with a pencil making small edits. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap and thank you",
+     "narration": "That's the end of Money Basics. To recap the plan: take-home, bills, a money map, a debt order, an emergency fund target, a retirement rate, a weekly number, and net worth with two review dates. If you fill in just this page today, you'll be ahead of most people, not because you're perfect, but because you have a plan you can follow. Every earlier episode goes deeper on each box, and they're linked in the description and the playlist. The free seven-day money reset in the description walks you through building your first page one step a day. Thanks for watching the whole series. Subscribe for one money system a week.",
+     "on_screen_text": "Fill in your page today",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes waving next to a pinned one-page plan. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "The Money Basics finale: a complete money plan in 8 numbers on 1 page, filled in for a fictional 26-year-old using every episode in the series.\n\nExamples are hypothetical and for education only. Investing involves risk. Not financial advice.",
+   "hashtags": [
+    "financialplan",
+    "budgeting",
+    "personalfinance",
+    "moneygoals",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "The Money Basics finale: a one-page money plan filled in on screen for a fictional 26-year-old, using every episode in the series. Eight numbers: take-home, bills, the money map, debt order, emergency fund target, retirement rate, weekly spending number and net worth, with two review dates.\n\nChapters\n0:00 Intro\n0:49 Number 1: take-home pay\n1:30 Number 2: fixed bills\n2:08 Number 3: the money map\n2:46 Number 4: the debt order\n3:29 Number 5: the emergency fund target\n4:14 Number 6: the retirement rate\n4:59 Number 7: the weekly spending number\n5:39 Number 8: net worth, and two review dates\n6:21 The finished page\n7:02 What to do when life changes\n7:51 Recap and thank you\n\nLinks\nThe free 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-12\nHow to make a budget you'll keep: https://moneymadesimple.netlify.app/blog/how-to-make-a-budget-you-will-keep/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-12\nExample budget on a $55,000 salary: https://moneymadesimple.netlify.app/budget/55000-salary/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-12\nSinking funds explained: https://moneymadesimple.netlify.app/blog/sinking-funds-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-12\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-12\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script written and fact-checked by a human.",
+   "thumbnail_text": "Your money plan. 1 page.",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/",
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+    "https://www.irs.gov/retirement-plans/401k-plans"
+   ],
+   "claims_to_verify": [
+    "1,528 × 26 ÷ 12 ≈ 3,311",
+    "1200+140+45+120+150+350+220+35 = 2,260",
+    "3,310 − 2,260 = 1,050",
+    "$1,400 at 24% paying ~$250 extra + minimum ≈ 5–6 months",
+    "2,260 × 3 ≈ 6,800",
+    "6% of $55K ÷ 12 = $275; 50% match ≈ $137.50",
+    "1,050 − 250 − 150 = 650; 650 × 12 ÷ 52 ≈ 150"
+   ],
+   "title_variants": [
+    "The One-Page Money Plan (Money Basics Finale)",
+    "Put It All Together: A Complete Money Plan in 8 Numbers"
+   ],
+   "hook_variants": [
+    "You've learned the pieces. Now let's put them on one page you'll actually use.",
+    "A money plan doesn't need 40 pages. It needs 8 numbers and 2 dates."
+   ]
+  },
+  "format_style": "on-screen-calculation",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "The one-page money plan for the fictional Jordan, filled in box by box on screen with the video's own numbers (take-home $3,310 through net worth −$9,000) and the automatic transfers listed underneath",
+   "chapter": "The finished page"
+  }
  }
 ]
