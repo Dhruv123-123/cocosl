@@ -90,6 +90,13 @@ Never guess an address, buy a list or scrape a directory.
   December 2027 for the monthly products, so a new client has at least 3 months ready on day one. Keep
   writing credit union weeks 13+ from `credit-union-alert/CONTENT_CALENDAR.md`, 2 issues ahead.
 
+## Good timing for pilots
+
+- **National Consumer Protection Week, Feb 28 to Mar 6, 2027** ([consumer.ftc.gov/ncpw](https://consumer.ftc.gov/ncpw)):
+  the FTC's week for talking about scams. Offer credit unions and libraries a pilot that starts that week. The
+  credit union issue for Mar 2 (government imposters) fits it, and Scam Decoded's NCPW week (PR #9) has 5 more
+  FTC-sourced alerts. The FTC posts its NCPW materials in January.
+
 ## Not ready yet
 
 - **Spanish edition** (`credit-union-alert/es/`): it needs a native-speaker review before you offer it.
