@@ -273,6 +273,7 @@ def cmd_import(args):
             f._render_or_queue(existing["id"], True)
             pid = existing["id"]
         elif existing:
+            _pack_date(f, existing["id"], item.get("date"))
             print(f"post #{existing['id']} [{existing['status']}] {title}: already imported, skipped")
             continue
         else:
@@ -283,8 +284,28 @@ def cmd_import(args):
             pid = f.import_script(args.brand, script, item["format"], item.get("pillar", ""),
                                   item.get("idea_angle", ""), render=not args.no_render)
         _pack_review(f, pid, item.get("review"))
+        _pack_date(f, pid, item.get("date"))
         post = f.db.get("posts", pid)
         print(f"post #{pid} [{post['format']}/{post['status']}] {post['title']}")
+
+
+def _pack_date(f, pid: int, value) -> None:
+    """A pack item's "date": "YYYY-MM-DD" (its day in the posting plan). Scheduling then uses that day's
+    slots instead of the next free one, so the calendar matches the plan (LAUNCH_WEEK.md). A past date
+    is ignored at scheduling time. Re-running import adds dates to posts already imported."""
+    if not value:
+        return
+    from datetime import date as _date
+    try:
+        day = _date.fromisoformat(str(value)[:10]).isoformat()
+    except ValueError:
+        print(f"  post #{pid}: date '{value}' isn't YYYY-MM-DD, ignored")
+        return
+    post = f.db.get("posts", pid)
+    meta = dict(post.get("meta") or {})
+    if meta.get("plan_date") != day:
+        meta["plan_date"] = day
+        f.db.update("posts", pid, {"meta": meta})
 
 
 def _pack_review(f, pid: int, value) -> None:

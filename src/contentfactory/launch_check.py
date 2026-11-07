@@ -205,7 +205,20 @@ def run(factory, days: int = 14, online: bool = False, now: datetime | None = No
         for url, problem in _online(set(real_urls)).items():
             slug, where = real_urls[url]
             rep.add("red", slug, where, f"{url} {problem}")
+    _drop_paused(factory, rep)
     return rep
+
+
+def _drop_paused(factory, rep: Report) -> None:
+    """Two-brand launch: a paused brand with nothing scheduled isn't checked (its placeholders aren't news).
+    A paused brand with posts still queued is checked as usual, because those posts would still go out."""
+    from .launchmode import in_play
+    for slug, c in rep.checked.items():
+        if c.get("scheduled", 0) or in_play(factory, slug):
+            continue
+        c["paused"] = True
+        rep.findings = [f for f in rep.findings if f.brand != slug]
+        rep.reminders = [r for r in rep.reminders if not r.startswith(f"{slug}:")]
 
 
 ORIGINALITY_MIN_LONGS, ORIGINALITY_MIN_VIDEOS = 3, 10  # too few videos and the score means nothing
@@ -233,6 +246,9 @@ def render_text(rep: Report, days: int) -> str:
     icon = {"green": "GREEN", "yellow": "YELLOW", "red": "RED"}[rep.status]
     lines = [f"Launch check: {icon}", ""]
     for slug, c in rep.checked.items():
+        if c.get("paused"):
+            lines.append(f"{slug}: paused (launch mode), nothing scheduled: not checked")
+            continue
         mine = [f for f in rep.findings if f.brand == slug]
         worst = max((LEVELS[f.level] for f in mine), default=0)
         lines.append(f"{slug}: {['green', 'yellow', 'red'][worst]} · {c.get('scheduled', 0)} publication(s) in the "
