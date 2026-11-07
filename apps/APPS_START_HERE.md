@@ -80,3 +80,9 @@ npm test
 - Nothing marked `REPLACE_ME` should be visible anywhere. If a buy button is showing, its link is filled.
 
 Before going live, also skim `NATIVE_REVIEW_ES.md` (Spanish pages a native speaker should check).
+
+## Every week or two
+
+Refresh Scam Shield's offline phishing list (credits in `THIRD_PARTY.md`):
+`node scam-checker/tools/refresh-blocklist.mjs && node tools/build-app-shell.mjs && npm test`, then commit.
+The test fails if the file grows past 420 KB.
