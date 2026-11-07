@@ -25,6 +25,7 @@ PAGES = {
     # articles (free)
     "art-impuestos": ("Dónde hacer tus impuestos: gratis, con programa o con preparador", "/blog/donde-hacer-tus-impuestos/"),
     "art-itin-banco": ("Cuenta de banco y tarjeta con ITIN", "/blog/cuenta-y-tarjeta-con-itin/"),
+    "art-envios": ("Remitly, Wise o Xoom: cuál conviene para mandar dinero", "/blog/remitly-wise-o-xoom/"),
 }
 PAID = {"recortar", "presupuesto", "fecha", "invertir", "paquete"}
 

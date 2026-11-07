@@ -73,6 +73,14 @@ CHARTS = {
         "Semana 3: empieza el colchón": _c("line", "$25 a la semana hasta $1,000", ["Sem 10", "Sem 20", "Sem 30", "Sem 40"],
                                            [250, 500, 750, 1000], note="Ejemplo: transferencia automática de $25 cada semana"),
     },
+    "l-impuestos-trabajador": {
+        "Las dos mitades": _c("bars", "Seguro Social y Medicare con $20,000", ["Con W-2 (tu parte)", "Con 1099 (las dos)"],
+                              [1530, 2826], note="Ejemplo: 7.65% contra 15.3% sobre 92.35% de la ganancia neta"),
+    },
+    "l-envios-del-ano": {
+        "Cada cuándo": _c("bars", "Comisiones de un año", ["Cada semana", "Cada mes"], [208, 48],
+                          note="Ejemplo: comisión fija de $4 por envío"),
+    },
 }
 
 ORIGINAL = {
@@ -86,6 +94,8 @@ ORIGINAL = {
     "l-banco-sin-cargos": "Graba la pantalla del buscador de cuentas Bank On certificadas (joinbankon.org), filtrando por tu código postal",
     "Cómo empezar a invertir con $100 al mes (guía completa para principiantes)": "Graba la pantalla de una calculadora pública de interés compuesto (Investor.gov) con $100 al mes y 7%",
     "¿Sientes que vas atrasado con tu dinero? Un plan de 30 días": "Graba la pantalla de El Presupuesto con números de ejemplo: el número semanal de la semana 2",
+    "l-impuestos-trabajador": "Graba la pantalla del calculador de retenciones del IRS (irs.gov) en español, sin poner datos reales, mostrando dónde está el paso de dos trabajos",
+    "l-envios-del-ano": "Graba la pantalla cotizando el mismo envío de $300 con dos métodos de entrega (depósito y efectivo) en una app, sin iniciar sesión",
 }
 
 

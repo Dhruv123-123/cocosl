@@ -182,7 +182,8 @@ def test_every_dinero_long_video_has_an_original_element():
     from contentfactory.config import load_brand
     brand = load_brand(ROOT / "brands", "dinero-simple")
     longs = 0
-    for f in ("content.json", "content-month-1.json", "content-month-2.json", "content-month-3.json", "content-month-4.json"):
+    for f in ("content.json", "content-month-1.json", "content-month-2.json", "content-month-3.json", "content-month-4.json",
+              "content-month-5.json"):
         for it in json.loads((DS / f).read_text()):
             if it["format"] != "long":
                 continue
@@ -194,4 +195,39 @@ def test_every_dinero_long_video_has_an_original_element():
                 if seg.get("chart"):
                     assert any(c.startswith(f"Chart '{seg['chart']['title']}'") for c in s["claims_to_verify"])
             assert "--- ORIGINAL ELEMENT" in caption_text(brand, it)
-    assert longs == 10
+    assert longs == 12
+
+
+def test_month5_plan_is_complete_and_flags_itin_pieces_for_an_attorney():
+    items = json.loads((DS / "content-month-5.json").read_text())
+    fmts = [i["format"] for i in items]
+    assert fmts.count("short") == 14 and fmts.count("carousel") == 8 and fmts.count("long") == 2
+    plan = (DS / "POSTING_PLAN_MONTH_5.md").read_text()
+    review = (DS / "REVIEW_CHECKLIST_MONTH_5.md").read_text()
+    itin = 0
+    for i in items:
+        s = i["script"]
+        assert s["title"] in plan and s["title"] in review and s["claims_to_verify"], i["key"]
+        text = " ".join([s["caption"]] + [g["narration"] + " " + g["on_screen_text"] for g in s["segments"]]).lower()
+        if "itin" in text:
+            itin += 1
+            assert s["claims_to_verify"][0].startswith("ATTORNEY REVIEW"), i["key"]
+        if "inmigra" in s["caption"].lower():
+            assert "abogado de inmigración con licencia" in s["caption"], i["key"]
+        assert not any(b in text for b in ("remitly", "western union", "xoom", "wise ")), i["key"]
+    assert itin >= 4
+    rows = [r for r in plan.splitlines() if r.startswith("| ") and " abr |" in r]
+    assert len(rows) == 24 and len({(r.split("|")[1], r.split("|")[2]) for r in rows}) == 24
+
+
+def test_newsletter_has_six_linkless_issues_and_is_current():
+    sys.path.insert(0, str(DS / "newsletter"))
+    import build_newsletter
+    assert len(build_newsletter.ISSUES) == 6
+    assert (DS / "NEWSLETTER.md").read_text() == build_newsletter.build()
+    for i in build_newsletter.ISSUES:
+        build_newsletter.check(i)  # raises on a link outside a placeholder
+        assert (DS / "newsletter" / "issues" / f"{i['n']:02d}-{i['slug']}.md").read_text() == build_newsletter.paste(i)
+    assert "[ENLACE: darse de baja]" in build_newsletter.FOOTER and "[DIRECCIÓN POSTAL" in build_newsletter.FOOTER
+    with pytest.raises(SystemExit):
+        build_newsletter.check({**build_newsletter.ISSUES[0], "body": "Visita irs.gov hoy"})
