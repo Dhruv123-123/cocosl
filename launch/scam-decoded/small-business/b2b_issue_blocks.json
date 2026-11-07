@@ -41,8 +41,14 @@
     "alt": "Scam Watch: a past-due bill nobody ordered? Match it to a real order, ask who approved it, report fakes."
    },
    "sources": [
-    "https://consumer.ftc.gov/consumer-alerts/2026/05/run-small-business-pay-your-bills-not-scammers",
-    "https://www.ftc.gov/business-guidance/resources/scams-your-small-business-guide-business"
+    {
+     "name": "FTC: Run a small business? Pay your bills, not scammers (May 2026)",
+     "url": "https://consumer.ftc.gov/consumer-alerts/2026/05/run-small-business-pay-your-bills-not-scammers"
+    },
+    {
+     "name": "FTC: Scams and your small business",
+     "url": "https://www.ftc.gov/business-guidance/resources/scams-your-small-business-guide-business"
+    }
    ]
   },
   {
@@ -84,8 +90,14 @@
     "alt": "Scam Watch: removed from Google? Hang up. Google doesn't call to threaten you. Verifying a listing is free."
    },
    "sources": [
-    "https://www.ftc.gov/business-guidance/blog/2018/05/ftc-challenges-robocallers-false-threat-small-businesses-will-be-removed-google",
-    "https://www.ftc.gov/business-guidance/resources/scams-your-small-business-guide-business"
+    {
+     "name": "FTC: Robocallers' false threat that small businesses will be removed from Google (2018)",
+     "url": "https://www.ftc.gov/business-guidance/blog/2018/05/ftc-challenges-robocallers-false-threat-small-businesses-will-be-removed-google"
+    },
+    {
+     "name": "FTC: Scams and your small business",
+     "url": "https://www.ftc.gov/business-guidance/resources/scams-your-small-business-guide-business"
+    }
    ]
   },
   {
@@ -127,8 +139,14 @@
     "alt": "Scam Watch: a domain bill in the mail? Check the real registrar account first. Watch for .org vs .com."
    },
    "sources": [
-    "https://www.ftc.gov/news-events/news/press-releases/2010/08/ftc-halts-cross-border-domain-name-registration-scam",
-    "https://consumer.ftc.gov/consumer-alerts/2026/05/run-small-business-pay-your-bills-not-scammers"
+    {
+     "name": "FTC halts domain name registration scam (2010)",
+     "url": "https://www.ftc.gov/news-events/news/press-releases/2010/08/ftc-halts-cross-border-domain-name-registration-scam"
+    },
+    {
+     "name": "FTC: Run a small business? Pay your bills, not scammers (May 2026)",
+     "url": "https://consumer.ftc.gov/consumer-alerts/2026/05/run-small-business-pay-your-bills-not-scammers"
+    }
    ]
   }
  ]

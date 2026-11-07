@@ -1,4 +1,4 @@
-"""Content for "Scam Decoded for Seniors", a large-print printable pack ($7, Etsy).
+"""Content for "Scam Decoded for Seniors", a large-print printable pack ($7, Gumroad; Etsy edition withdrawn under Etsy's Oct 2026 AI-guide rule).
 
 Everything printed lives here so the booklet, fridge checklist and wallet cards stay in sync.
 All example calls, texts, names and numbers in examples are fictional. The official numbers in

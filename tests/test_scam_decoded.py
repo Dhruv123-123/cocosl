@@ -457,9 +457,12 @@ def test_how_the_scam_actually_worked_series():
     root = CONTENT.parent
     import sys
     sys.path.insert(0, str(root / "how-it-worked"))
-    from series import OUTLINE
-    from parts_4_8 import PARTS_4_8
-    from series import PARTS as P13
+    try:  # how-it-worked/ has its own build.py: don't leave it where `import build` would find it
+        from series import OUTLINE
+        from parts_4_8 import PARTS_4_8
+        from series import PARTS as P13
+    finally:
+        sys.path.remove(str(root / "how-it-worked"))
     PARTS = P13 + PARTS_4_8
     assert [o["part"] for o in OUTLINE] == list(range(1, 9))
     assert all(o["source"].startswith("https://") and ("justice.gov" in o["source"] or "ftc.gov" in o["source"]) for o in OUTLINE)
@@ -598,13 +601,9 @@ def test_parents_printable_kit_and_listing(tmp_path, monkeypatch):
     assert all(any(h in u for h in ("ftc.gov", "fbi.gov", "ic3.gov", "ojp.gov", "justice.gov")) for _, u in mod.SOURCES)
     assert "guarantee" not in html_text.lower()
     listing = (kit / "LISTING.md").read_text()
-    assert "[PRICE]" in listing and "## Etsy" in listing and "## Gumroad" in listing
-    title = listing.split("**Title (13 words):**\n")[1].split("\n")[0]
-    assert len(title.split()) == 13 and len(title) <= 140
-    tags = re.findall(r"^\| \d+ \| ([a-z ]+) \| (\d+) \|$", listing, flags=re.M)
-    assert len(tags) == 13 and len({t for t, _ in tags}) == 13
-    assert all(len(t) <= 20 and len(t) == int(n) for t, n in tags)
-    assert "How it's made" in listing and "Personal use only" in listing
+    assert "[PRICE]" in listing and "## Gumroad" in listing
+    assert "## Etsy" not in listing and "Gumroad only" in listing  # Etsy's Oct 2026 AI-guide rule
+    assert "Personal use only" in listing
 
 
 def test_small_business_series_feeds_site_alerts_and_b2b_blocks():
@@ -615,7 +614,7 @@ def test_small_business_series_feeds_site_alerts_and_b2b_blocks():
     assert [b["key"] for b in data["blocks"]] == ["fake-invoices", "google-listing-calls", "domain-renewal-notices"]
     for b in data["blocks"]:
         assert keys <= set(b) and b["promise"] is False and "made-up" in b["example_label"]
-        assert all("ftc.gov" in u for u in b["sources"])
+        assert all("ftc.gov" in s["url"] and s["name"] for s in b["sources"])
         body = json.dumps({k: v for k, v in b.items() if k not in ("explainer", "key")}).lower()
         assert "scamdecoded" not in body and "guarantee" not in body and "http" not in json.dumps(b["steps"])
         article = next((site / "articles").glob(f"*-{b['key']}.md")).read_text()
@@ -623,3 +622,165 @@ def test_small_business_series_feeds_site_alerts_and_b2b_blocks():
         alert = next((site / "alerts").glob(f"*-{b['key']}*.md"), None) or next(
             p for p in (site / "alerts").glob("*.md") if f"explainer: {b['key']}" in p.read_text())
         assert "flags:" in alert.read_text()
+
+
+def test_valentines_pack_new_romance_angles_in_free_slots():
+    import datetime as dt
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    root = CONTENT.parent
+    items = json.loads((root / "valentines-2027.json").read_text())
+    assert len(items) == 8
+    dates = [i["post_on"] for i in items]
+    assert dates == sorted(dates) and "2027-02-01" <= dates[0] and dates[-1] <= "2027-02-14 23:59"
+    assert {i["topic"] for i in items} >= {"pig butchering", "fake military", "crypto romance"}
+    # taken: every dated pack, plus the weeks 13-21 plan (Shorts/TikTok 12:00, carousels 19:30, long 10:00)
+    taken, earlier = set(), set()
+    for f in root.glob("*.json"):
+        if f.name == "valentines-2027.json":
+            continue
+        data = json.loads(f.read_text())
+        for i in data if isinstance(data, list) else []:
+            if isinstance(i, dict) and "script" in i:
+                earlier.add(i["script"]["title"])
+                if i.get("post_on"):
+                    taken.add(i["post_on"])
+    for line in (root / "POSTING_PLAN_WEEKS_13-21.md").read_text().splitlines():
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        m = re.match(r"\w{3} Feb (\d+)$", cells[0]) if len(cells) == 5 else None
+        if m:
+            day = f"2027-02-{int(m.group(1)):02d}"
+            for col, time in ((1, "12:00"), (2, "12:00"), (3, "19:30"), (4, "10:00")):
+                if cells[col]:
+                    taken.add(f"{day} {time}")
+    assert not taken & set(dates), taken & set(dates)
+    videos = [i for i in items if i["format"] != "carousel"]
+    assert all(a["look"] != b["look"] for a, b in zip(videos, videos[1:]))
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        words = sum(len(s.narration.split()) for s in sc.segments)
+        if item["format"] == "short":
+            assert 60 <= words <= 120 and len(sc.title) <= 60, sc.title
+        assert sc.title not in earlier and any(ch.isdigit() for ch in sc.hook.split(".")[0][:60])
+        assert sc.claims_to_verify and item["original_element"] and len(sc.hashtags) <= 5
+        assert all("ftc.gov" in u or "ic3.gov" in u for u in sc.sources), sc.title
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        text = G.script_text(item["script"])
+        assert "checker" in sc.caption and "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+    plan = (root / "POSTING_PLAN_VALENTINES_2027.md").read_text()
+    assert all(f"#{n} " in plan for n in range(8))
+
+
+def test_scam_watch_weekly_issues_from_alert_cards():
+    import datetime as dt
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("scam_watch", CONTENT.parent / "scam-watch" / "build.py")
+    sw = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(sw)
+    import sys
+    had_build = sys.modules.get("build")
+    issues = sw.build()
+    # the site's build.py must not shadow another site's `build` module (MMS tests import it by that name)
+    assert sys.modules.get("build") is had_build
+    assert not any(p.rstrip("/").endswith("sites/scam-decoded") for p in sys.path)
+    saved = json.loads((CONTENT.parent / "scam-watch" / "issues.json").read_text())["issues"]
+    assert [i["id"] for i in saved] == [i["id"] for i in issues], "issues.json is stale: run scam-watch/build.py"
+    assert len(issues) >= 11 and issues[0]["send_date"] == "2026-11-16"
+    keys = {"id", "n", "send_date", "deliver_by", "source", "topic", "subject", "preheader", "headline", "example_label",
+            "example", "explain", "tell", "promise", "steps", "quick_hits", "job", "lobby", "social", "brief", "sources"}
+    for i in issues:
+        assert set(i) == keys
+        assert dt.date.fromisoformat(i["send_date"]).weekday() == 0
+        assert dt.date.fromisoformat(i["deliver_by"]) < dt.date.fromisoformat(i["send_date"])
+        assert len(i["steps"]) == 3 and len(i["lobby"]["bullets"]) == 3 and "made-up" in i["example_label"]
+        assert all(s["name"] and s["url"].startswith("https://") for s in i["sources"])
+        member = json.dumps({k: v for k, v in i.items() if k not in ("source", "sources", "id")}).lower()
+        assert "scamdecoded" not in member and "scam decoded" not in member and "guarantee" not in member
+    # the week with the urgent toll alert leads with it
+    jan11 = next(i for i in issues if i["send_date"] == "2027-01-11")
+    assert "toll" in jan11["headline"].lower()
+
+
+def test_spring_pack_betting_travel_student_aid_in_free_slots():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    root = CONTENT.parent
+    items = json.loads((root / "spring-2027.json").read_text())
+    assert len(items) == 11
+    dates = [i["post_on"] for i in items]
+    assert dates == sorted(dates) and "2027-03-01" <= dates[0] and dates[-1] <= "2027-04-30 23:59"
+    assert {i["thread"] for i in items} == {"sports betting", "spring travel", "student aid"}
+    # taken: every dated pack, plus the weeks 13-21 and 22-26 plan tables (Shorts/TikTok 12:00, carousels 19:30, long 10:00)
+    taken, earlier = set(), set()
+    for f in root.glob("*.json"):
+        if f.name == "spring-2027.json":
+            continue
+        data = json.loads(f.read_text())
+        for i in data if isinstance(data, list) else []:
+            if isinstance(i, dict) and "script" in i:
+                earlier.add(i["script"]["title"])
+                if i.get("post_on"):
+                    taken.add(i["post_on"])
+    months = {"Mar": 3, "Apr": 4}
+    for name in ("POSTING_PLAN_WEEKS_13-21.md", "POSTING_PLAN_WEEKS_22-26.md"):
+        for line in (root / name).read_text().splitlines():
+            cells = [c.strip() for c in line.strip().strip("|").split("|")]
+            m = re.match(r"\w{3} (Mar|Apr) (\d+)$", cells[0]) if len(cells) == 5 else None
+            if m:
+                day = f"2027-{months[m.group(1)]:02d}-{int(m.group(2)):02d}"
+                for col, time in ((1, "12:00"), (2, "12:00"), (3, "19:30"), (4, "10:00")):
+                    if cells[col]:
+                        taken.add(f"{day} {time}")
+    assert not taken & set(dates), taken & set(dates)
+    assert all(a["look"] != b["look"] for a, b in zip(items, items[1:]))
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        words = sum(len(s.narration.split()) for s in sc.segments)
+        assert 60 <= words <= 120 and len(sc.title) <= 60, sc.title
+        assert sc.title not in earlier and any(ch.isdigit() for ch in sc.hook.split(".")[0][:60])
+        assert sc.claims_to_verify and item["original_element"] and len(sc.hashtags) <= 5
+        assert all("ftc.gov" in u or "bbb.org" in u for u in sc.sources), sc.title
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        text = G.script_text(item["script"])
+        assert "checker" in sc.caption and "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+    plan = (root / "POSTING_PLAN_SPRING_2027.md").read_text()
+    assert all(f"#{n} " in plan for n in range(11))
+
+
+def test_red_flags_printables_are_etsy_safe_signage(tmp_path):
+    import importlib.util
+    folder = CONTENT.parent / "product" / "red-flags-printables"
+    spec = importlib.util.spec_from_file_location("red_flags", folder / "build.py")
+    rf = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(rf)
+    out = rf.main(["--no-pdf", "--out", str(tmp_path / "dist")])
+    names = sorted(p.name for p in out.iterdir())
+    assert len(names) == 6 and all(n.endswith(".html") for n in names)
+    assert {"Letter", "A4", "11x17", "18x24"} == set(rf.SIZES) and len(rf.POSTERS) == 6 and len(rf.CARDS) == 10
+    # signage, not a guide: short lines only, every poster sourced, no guide/kit in the product name
+    assert not re.search(r"\b(guide|kit|workbook|course)\b", rf.NAME, re.I)
+    for kicker, head, flags, bottom, sources in rf.POSTERS:
+        assert len(flags) == 5 and sources and all("ftc.gov" in u or "ic3.gov" in u for u in sources)
+        assert all(len(f.split()) <= 7 and len(d.split()) <= 9 for f, d in flags), head
+        assert len(bottom.split()) <= 14
+    for kind, flags, move in rf.CARDS:
+        assert len(flags) == 3 and all(len(f.split()) <= 6 for f in flags) and len(move.split()) <= 8, kind
+    html = (out / "Scam-Red-Flags-Posters-18x24.html").read_text()
+    assert "size:18in 24in" in html and html.count("class='page poster'") == 6 and "Where these red flags" in html
+    assert "scamdecoded." not in html.lower() and "guarantee" not in html.lower()
+    cards = (out / "Scam-Red-Flags-Wallet-Cards-A4.html").read_text()
+    assert cards.count("class='card'") == 10 and cards.count("class='card back'") == 10
+    # Etsy playbook: title under 15 words, 13 tags of 20 characters or fewer, how it's made, no links in the Etsy copy
+    listing = (folder / "LISTING.md").read_text()
+    etsy = listing.split("## Etsy", 1)[1].split("## Gumroad", 1)[0]
+    title = re.search(r"\*\*Title:\*\* (.+)", etsy).group(1)
+    assert len(title.split()) < 15 and title.startswith("Scam Red Flags Posters")
+    tags = [t.strip() for t in re.search(r"\*\*Tags \(13\):\*\* (.+?)\n\n", etsy, re.S).group(1).replace("\n", " ").split(",")]
+    assert len(tags) == 13 and len(set(tags)) == 13 and all(len(t) <= 20 for t in tags), tags
+    assert "How it's made" in etsy and "Personal use only" in etsy and "not legal, financial" in etsy
+    assert "http" not in etsy and "scamdecoded." not in etsy.lower()
+    assert all(f"mockup-0{i}" in listing for i in (1, 2, 3))

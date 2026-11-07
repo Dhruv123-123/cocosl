@@ -15,9 +15,23 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-import build as B
-
 HERE = Path(__file__).resolve().parent
+
+
+def site_build():
+    """The site's build.py under its own module name, so it never shadows another site's `build` module."""
+    import importlib.util
+    import sys
+    name = "scam_decoded_site_build"
+    if name not in sys.modules:
+        spec = importlib.util.spec_from_file_location(name, HERE / "build.py")
+        mod = importlib.util.module_from_spec(spec)
+        sys.modules[name] = mod
+        spec.loader.exec_module(mod)
+    return sys.modules[name]
+
+
+B = site_build()
 OUT = HERE.parent.parent / "launch" / "scam-decoded" / "alert-cards"
 W, H, M = 1080, 1350, 64
 NAVY, CREAM, TEAL, AMBER, MUTED, RED, PINK, INK = ("#0d1b2a", "#f4f1ea", "#2ec4b6", "#ff9f1c", "#9fb0c0", "#d7263d",
@@ -100,7 +114,7 @@ def message_block(d, y, words, f, width, x0, lh) -> int:
 
 
 def card(a: dict) -> Image.Image:
-    for scale in (1.0, 0.94, 0.88, 0.82, 0.76):
+    for scale in (1.24, 1.16, 1.08, 1.0, 0.94, 0.88, 0.82, 0.76):  # largest text that fits
         im = Image.new("RGB", (W, H), NAVY)
         d = ImageDraw.Draw(im)
         label, bg, fg = B.SEVERITY[a["severity"]]
@@ -154,6 +168,27 @@ def caption(a: dict) -> str:
             f"Source: {a['source_title']} ({a['source_url']}). The example on the card is made up.\n\n"
             "Not sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends "
             "nothing anywhere.\n\n" + " ".join("#" + h for h in HASHTAGS))
+
+
+def draft_card(path: Path) -> Path:
+    """Card for a draft alert (new_alert.py --text), written to alert-cards/drafts/ for review."""
+    if not B.CFG:
+        B.CFG = B.load_config()
+    a, _ = B.parse_front_matter(path.read_text())
+    a["slug"] = re.sub(r"^\d+-", "", path.stem)
+    a["flag_list"] = [x.strip() for x in str(a.get("flags", "")).split("|") if x.strip()]
+    for n in (1, 2, 3):
+        for k in ("tell", "do"):
+            a.setdefault(f"{k}_{n}", "")
+    a["severity"] = a.get("severity") if a.get("severity") in B.SEVERITY else "warning"
+    (OUT / "drafts").mkdir(parents=True, exist_ok=True)
+    out = OUT / "drafts" / f"{a['alert_date']}-{a['slug']}.png"
+    im = card(a)
+    d = ImageDraw.Draw(im)
+    d.rectangle((W - 360, 0, W, 96), fill=RED)  # can't be mistaken for a reviewed card
+    d.text((W - M, 48), "DRAFT · NOT CHECKED", font=font("Bold", 26), fill="white", anchor="rm")
+    im.save(out, optimize=True)
+    return out
 
 
 def main() -> list[Path]:

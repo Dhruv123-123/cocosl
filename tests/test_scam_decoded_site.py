@@ -207,7 +207,7 @@ def test_holiday_parents_guide_opt_in_and_seniors_upsell(tmp_path, monkeypatch):
     thanks = (out / "holiday" / "thanks" / "index.html").read_text()
     assert f'/downloads/{cfg["holiday_guide"]["file"]}' in thanks and 'href="/seniors/"' in thanks and "noindex" in thanks
     seniors = (out / "seniors" / "index.html").read_text()
-    assert "$7" in seniors and "etsy" in seniors
+    assert "$7" in seniors and "gumroad" in seniors and "etsy" not in seniors  # Etsy AI-guide rule
     assert "/holiday/thanks/" in (out / "robots.txt").read_text()
     assert "/holiday/</loc>" in (out / "sitemap.xml").read_text()
 
@@ -346,10 +346,16 @@ def test_scam_alert_of_the_day_cards(tmp_path, monkeypatch):
     monkeypatch.setattr(mc, "OUT", tmp_path)
     paths = mc.main()
     alerts = mc.B.alert_items()
-    assert len(paths) == len(alerts) >= 12 and all(a["flag_list"] for a in alerts)
+    assert len(paths) == len(alerts) >= 52 and all(a["flag_list"] for a in alerts)
     days = [dt.date.fromisoformat(str(a["alert_date"])) for a in alerts]
-    run = [d for d in days if dt.date(2026, 11, 16) <= d <= dt.date(2026, 11, 27)]
-    assert len(run) == 10 and all(d.weekday() < 5 for d in run), "two full weeks of weekday cards"
+    assert len(set(days)) == len(days), "two alerts on one day"
+    d, missing = dt.date(2026, 11, 16), []
+    while d <= dt.date(2027, 1, 29):  # every weekday has a card, except Dec 24-25 and Jan 1
+        if d.weekday() < 5 and d.strftime("%m-%d") not in ("12-24", "12-25", "01-01") and d not in days:
+            missing.append(d)
+        d += dt.timedelta(days=1)
+    assert not missing, missing
+    assert all(d.weekday() < 5 for d in days)
     for a in alerts:
         assert len(a["flag_list"]) == 3 and all(f in a["example"] for f in a["flag_list"])
         assert any(h in a["source_url"] for h in ("ftc.gov", "ic3.gov", "fbi.gov", "bbb.org", "irs.gov"))
@@ -369,6 +375,40 @@ def test_scam_alert_of_the_day_cards(tmp_path, monkeypatch):
     big = dict(alerts[0], tell_1=" ".join(["word"] * 400))
     with pytest.raises(SystemExit, match="too much text"):
         mc.card(big)
+
+
+def test_new_alert_drafts_from_a_pasted_message(tmp_path, monkeypatch):
+    import shutil
+    import sys
+    monkeypatch.syspath_prepend(str(ROOT))
+    spec = importlib.util.spec_from_file_location("new_alert", ROOT / "new_alert.py")
+    na = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(na)
+    alerts = tmp_path / "alerts"
+    shutil.copytree(ROOT / "content" / "alerts", alerts)
+    monkeypatch.setattr(na, "ALERTS", alerts)
+    import make_alert_cards
+    monkeypatch.setattr(make_alert_cards, "OUT", tmp_path / "cards")
+    msg = ("TOLL NOTICE: you owe $6.75 for unpaid tolls. Pay within 24 hours to avoid a $50 penalty: "
+           "toll-paycenter-help.top/pay")
+    monkeypatch.setattr(sys, "argv", ["new_alert.py", "--text", msg])
+    dest = na.main()
+    meta, _ = make_alert_cards.B.parse_front_matter(dest.read_text())
+    assert meta["status"] == "draft" and meta["explainer"] == "toll-texts"
+    assert meta["alert_date"] == "2027-02-01"  # next free weekday after the Jan 29 card
+    flags = [f.strip() for f in meta["flags"].split("|")]
+    assert len(flags) == 3 and all(f in msg for f in flags) and any(".top" in f for f in flags)
+    assert meta["source_url"].startswith("https://") and meta["tell_1"] and meta["do_3"]
+    assert list((tmp_path / "cards" / "drafts").glob("*.png"))
+    # drafts never reach the site until someone deletes the status line
+    monkeypatch.setattr(make_alert_cards.B, "CONTENT", tmp_path)
+    assert all(a["slug"] != dest.stem.split("-", 1)[1] for a in make_alert_cards.B.alert_items())
+    assert na.guess_type("Grandma it's me, I'm in jail, I need bail") == "family-emergency-scams"
+    assert na.guess_type("Hey, are we still on for dinner?") == "lookalike-links"
+    empty = tmp_path / "empty"
+    empty.mkdir()
+    monkeypatch.setattr(na, "ALERTS", empty)
+    assert na.next_free_weekday("2026-12-23") == "2026-12-28"  # skips Dec 24-25 and the weekend
 
 
 def test_could_you_spot_it_quiz_and_share_cards(tmp_path, monkeypatch):

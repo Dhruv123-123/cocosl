@@ -5,7 +5,8 @@
 The public explainers live on the Scam Decoded site (/scams/fake-invoices/, /scams/google-listing-calls/,
 /scams/domain-renewal-notices/), with matching alerts and alert-of-the-day cards (Nov 30 - Dec 2 2026).
 This file writes the same three topics as issue blocks in the schema PR #13's white-label newsletters use
-(launch/b2b/*/issues.json: subject, preheader, headline, example, explain, tell, steps, quick_hits, job, lobby, social),
+(launch/b2b/*/issues.json: subject, preheader, headline, example, explain, tell, steps, quick_hits, job, lobby, social,
+sources as {name, url}),
 so that thread can drop them into the employer and freelancer editions. No ids or dates: the B2B calendar assigns those.
 No product links, affiliates or Scam Decoded links in the blocks, matching the B2B rules. Examples are made up.
 """
@@ -45,7 +46,8 @@ BLOCKS = [
   "social": {"caption": "Scam Watch: fake invoices for SEO, tech support or domain services nobody ordered, often stamped \"past due\". "
                         "Match every bill to a real order before it's paid. Report fakes at ReportFraud.ftc.gov.",
              "alt": "Scam Watch: a past-due bill nobody ordered? Match it to a real order, ask who approved it, report fakes."},
-  "sources": [FTC_INVOICES, FTC_GUIDE]},
+  "sources": [{"name": "FTC: Run a small business? Pay your bills, not scammers (May 2026)", "url": FTC_INVOICES},
+              {"name": "FTC: Scams and your small business", "url": FTC_GUIDE}]},
  {"key": "google-listing-calls", "explainer": "/scams/google-listing-calls/",
   "topic": "\"Your business will be removed from Google\" robocalls",
   "subject": "Scam Watch: the \"removed from Google\" robocall",
@@ -70,7 +72,8 @@ BLOCKS = [
   "social": {"caption": "Scam Watch: robocalls say a business will be removed from Google unless it pays to \"verify\". The FTC says "
                         "verifying a Google listing is free and Google doesn't call to threaten you. Hang up; don't press 1.",
              "alt": "Scam Watch: removed from Google? Hang up. Google doesn't call to threaten you. Verifying a listing is free."},
-  "sources": [FTC_GOOGLE, FTC_GUIDE]},
+  "sources": [{"name": "FTC: Robocallers' false threat that small businesses will be removed from Google (2018)", "url": FTC_GOOGLE},
+              {"name": "FTC: Scams and your small business", "url": FTC_GUIDE}]},
  {"key": "domain-renewal-notices", "explainer": "/scams/domain-renewal-notices/",
   "topic": "Domain \"renewal\" notices that aren't from your registrar",
   "subject": "Scam Watch: the domain notice that isn't your registrar",
@@ -95,7 +98,8 @@ BLOCKS = [
   "social": {"caption": "Scam Watch: domain \"expiration notices\" that look like a bill from your web company but sell a \"listing\" "
                         "instead. Check the renewal date inside your real registrar account, and turn on auto-renew.",
              "alt": "Scam Watch: a domain bill in the mail? Check the real registrar account first. Watch for .org vs .com."},
-  "sources": [FTC_DOMAIN, FTC_INVOICES]},
+  "sources": [{"name": "FTC halts domain name registration scam (2010)", "url": FTC_DOMAIN},
+              {"name": "FTC: Run a small business? Pay your bills, not scammers (May 2026)", "url": FTC_INVOICES}]},
 ]
 
 

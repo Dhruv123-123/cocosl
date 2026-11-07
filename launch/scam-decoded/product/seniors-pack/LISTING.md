@@ -1,8 +1,10 @@
-# Scam Decoded for Seniors: Etsy listing kit
+# Scam Decoded for Seniors: Gumroad listing kit
 
-A $7 large-print digital download. Copy and paste into Etsy, then replace anything in `[brackets]`. Don't publish until Dhruv has checked the PDFs.
+**Gumroad only.** Etsy's 22 Oct 2026 rule bans AI-generated functional guides (instructions buyers rely on must be the seller's own work), and this pack was drafted with AI help, so the Etsy edition is withdrawn. It can go back on Etsy only if Dhruv rewrites it as his own work.
 
-## Files to upload (Etsy allows up to 5 digital files)
+A $7 large-print digital download. Copy and paste into Gumroad, then replace anything in `[brackets]`. Don't publish until Dhruv has checked the PDFs.
+
+## Files to upload
 
 | File | What it is |
 |---|---|
@@ -14,20 +16,20 @@ Rebuild with `python3 build.py`. All the wording lives in `seniors_content.py`.
 
 ## Price
 
-- **$7.** Etsy charges a $0.20 listing fee, a 6.5% transaction fee and payment processing (about 3% + $0.25 in the US). That leaves roughly $5.85 per sale; check Etsy's current fees.
+- **$7.** Gumroad takes 10% + $0.50 per sale on direct sales (check gumroad.com/pricing), so about $5.80.
 - An optional sale price at launch is fine, but only as a real, time-limited sale.
 
-## Title (140 characters max)
+## Name
 
-Scam Decoded for Seniors, Large Print Scam Awareness Guide, Printable Fridge Checklist and Wallet Card, Elderly Parent Gift, Phone Scam PDF
+Scam Decoded for Seniors: large-print scam awareness pack (fridge checklist + wallet cards)
 
-## Tags (13, each 20 characters max)
+## Tags
 
-scam awareness · large print · senior safety · elderly parent gift · fraud prevention · phone scam · fridge checklist · wallet card · grandparent gift · printable guide · caregiver resource · elder fraud · scam prevention
+scam awareness, large print, seniors, elder fraud, caregiver
 
-## Category and attributes
+## Summary line
 
-Paper & Party Supplies › Paper › Stationery, or Books, Movies & Music › Books › Guide books. Type: digital download. Who made it: I did. What is it: a finished product.
+A 13-page large-print guide, a fridge checklist and 8 wallet cards, to print and go through with a parent or grandparent.
 
 ## Description
 
@@ -54,11 +56,10 @@ Paper & Party Supplies › Paper › Stationery, or Books, Movies & Music › Bo
 >
 > Made by Scam Decoded, which decodes one scam a day in plain English. [Instagram / YouTube handle]
 
-## Etsy rules to follow
+## Rules to follow
 
-- **Creativity standards:** Etsy requires sellers to say whether AI tools helped. The text and layout were drafted with AI and checked by a human, so add this line to the end of the description: "Designed by Scam Decoded with help from AI tools; every page is human-reviewed." Check Etsy's current Creativity Standards before listing.
-- No "guaranteed", no fake reviews, and no claims that it "stops all scams".
-- Thumbnails: page 1 cover, a spread of pages 2–3, the fridge checklist, and the wallet cards. Export with `pdftoppm -r 150 -png`.
+- **Say how it's made:** end the description with "Designed by Scam Decoded with help from AI tools; every page is human-reviewed."
+- **Not on Etsy** (see the top of this file).
 
 ## Upsells
 
