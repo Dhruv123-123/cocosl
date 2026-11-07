@@ -69,7 +69,11 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
                                reserve_bottom=0.22 if fmt == "long" else 0.36)  # caption zone
     lines = [(s.narration or s.on_screen_text or s.heading).strip() for s in segments]
     heads = [s.on_screen_text for s in segments]
-    images = [r.path for r in imgs]
+    from .looks import choose, compose
+    look = post.get("look") or choose(post.get("_recent_looks") or [], seed=int(post.get("id") or 0))
+    images = [r.path if (i < len(segments) and segments[i].chart) else
+              compose(r.path, size, look["layout"], palette, work / f"look-{i:02d}.png")
+              for i, r in enumerate(imgs)]
     if script.cta and _norm(script.cta) not in _norm(" ".join(lines)):
         lines.append(script.cta)
         heads.append(brand.name)
@@ -102,7 +106,7 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     srt = out / "captions.srt"
     write_srt(cues, srt)
     music = pick_music(f"{brand.slug}:{post.get('id')}:{script.title}")
-    spec = VideoSpec(fmt, size, palette, brand.visual.font, brand.visual.watermark, opts)
+    spec = VideoSpec(fmt, size, palette, brand.visual.font, brand.visual.watermark, opts, look=look)
     video = out / "video.mp4"
     duration = assemble(spec, beats, cues, audio, video, work, music=music, voiced=tts.provider != "silent")
     duration = probe(video)["duration"] or duration
@@ -144,7 +148,7 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
                                "user-supplied via FACTORY_MUSIC_DIR; keep the licence on file"))
     return {"video": video, "audio": audio, "captions_srt": srt, "images": [r.path for r in imgs], "slides": [],
             "thumbnail": thumb, "thumbnail_variants": [thumb, *variants], "duration": round(duration, 3),
-            "chapters": chapters.build(starts, duration) if fmt == "long" else [], "provenance": prov}
+            "chapters": chapters.build(starts, duration) if fmt == "long" else [], "look": look, "provenance": prov}
 
 
 # ---------------------------------------------------------------- slides
