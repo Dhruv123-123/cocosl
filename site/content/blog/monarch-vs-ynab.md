@@ -14,6 +14,8 @@ Monarch Money and YNAB are the two budgeting apps people most often pay for. The
 
 *Based on each company's published features and prices, checked in November 2026. Check both pricing pages before subscribing.*
 
+Also weighing Rocket Money? See the three-way **[Rocket Money vs YNAB vs Monarch](/compare/rocket-money-vs-ynab-vs-monarch/)**. This page goes deeper on the two paid budgeting apps.
+
 ## Side by side
 
 | | Monarch Money | YNAB |
@@ -44,10 +46,10 @@ Monarch Money and YNAB are the two budgeting apps people most often pay for. The
 
 Both offer trials. Start one, give it two honest weeks with a weekly check-in, and only then decide. Don't run both at once; you'll compare features instead of building a habit.
 
-- [Try Monarch Money](/go/monarch/)
-- [Try YNAB](/go/ynab/)
+- [Try Monarch Money](aff:monarch)
+- [Try YNAB](aff:ynab)
 
-Full reviews: [Monarch Money](/blog/monarch-money-review/) · [YNAB](/blog/ynab-review/) · [all budgeting apps compared](/blog/best-budgeting-apps/).
+Full reviews: [Monarch Money](/blog/monarch-money-review/) · [YNAB](/blog/ynab-review/) · [all budgeting apps compared](/compare/best-budgeting-apps/).
 
 ## Common questions
 

@@ -14,6 +14,8 @@ Monarch Money is a paid budgeting and net-worth app. Link your bank, card, loan 
 
 *How we review: this is based on Monarch's published features and pricing, checked in November 2026. We haven't been paid for this review. Check the current price before subscribing.*
 
+Comparing apps? See **[Rocket Money vs YNAB vs Monarch](/compare/rocket-money-vs-ynab-vs-monarch/)** and our **[budgeting apps comparison](/compare/best-budgeting-apps/)**.
+
 ## The short version
 
 | | |
@@ -49,7 +51,7 @@ Monarch Money is a paid budgeting and net-worth app. Link your bank, card, loan 
 
 ## Our verdict
 
-If you'll use it weekly, and especially if you share money with a partner, [Monarch](/go/monarch/) is one of the most complete budgeting apps available. Use the trial to link every account and run one weekly check-in. If you haven't opened it by week two, a simple spreadsheet will serve you better and costs nothing.
+If you'll use it weekly, and especially if you share money with a partner, [Monarch](aff:monarch) is one of the most complete budgeting apps available. Use the trial to link every account and run one weekly check-in. If you haven't opened it by week two, a simple spreadsheet will serve you better and costs nothing.
 
 ## Common questions
 

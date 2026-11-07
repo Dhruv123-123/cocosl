@@ -15,6 +15,8 @@ Betterment is a robo-adviser: you answer a few questions, and it invests your mo
 
 *How we review: based on Betterment's published pricing and Form CRS, checked in November 2026. We haven't been paid for this review. General education, not investment advice. Investing involves risk, including loss of principal.*
 
+Comparing robo-advisers? See our **[robo-advisor comparison](/compare/best-robo-advisors/)**.
+
 ## The short version
 
 | | |
@@ -53,11 +55,11 @@ A single low-cost target-date or total-market index fund at a large brokerage do
 
 ## Betterment vs other robo-advisers
 
-See our [robo-adviser comparison](/blog/best-robo-advisors-for-beginners/) for Betterment, Wealthfront, Fidelity Go and Schwab side by side.
+See our [robo-adviser comparison](/compare/best-robo-advisors/) for Betterment, Wealthfront, Fidelity Go and Schwab side by side.
 
 ## Our verdict
 
-[Betterment](/go/betterment/) is a solid, low-cost way to invest hands-off, as long as you avoid the small-balance trap: either set up recurring deposits that meet its condition, or wait until your balance makes the fee small.
+[Betterment](aff:betterment) is a solid, low-cost way to invest hands-off, as long as you avoid the small-balance trap: either set up recurring deposits that meet its condition, or wait until your balance makes the fee small.
 
 *Betterment is an SEC-registered investment adviser. Check its Form CRS and look it up at adviserinfo.sec.gov. Past performance doesn't predict future results.*
 

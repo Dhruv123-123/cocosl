@@ -15,6 +15,8 @@ Empower Personal Dashboard (the free tool that used to be called Personal Capita
 
 *How we review: based on Empower's published features and disclosures, checked in November 2026. We haven't been paid for this review. This is general education, not investment advice.*
 
+Comparing robo-advisers and paid advice? See our **[robo-advisor comparison](/compare/best-robo-advisors/)**.
+
 ## The short version
 
 | | |
@@ -37,7 +39,7 @@ Empower Personal Dashboard (the free tool that used to be called Personal Capita
 ## What to know before signing up
 
 - **The advice upsell.** Empower's paid management charges an annual fee on assets it manages. You don't have to use it. If an adviser contacts you, it's fine to say no, and you can ask what the total yearly fee would be in dollars.
-- **Budgeting is light.** For a real budget, pair it with a spreadsheet or [another app](/blog/best-budgeting-apps/).
+- **Budgeting is light.** For a real budget, pair it with a spreadsheet or [another app](/compare/best-budgeting-apps/).
 - **Data sharing.** You're linking a lot of accounts. Use a strong password and two-factor login.
 
 ## If you do talk to an adviser
@@ -46,7 +48,7 @@ Ask three questions: what's the total annual fee in dollars on my balance, are y
 
 ## Our verdict
 
-The free [Empower Personal Dashboard](/go/empower/) is one of the best free tools for tracking investments and net worth, especially for the fee check. Use it for that, and treat the advisory pitch as optional.
+The free [Empower Personal Dashboard](aff:empower) is one of the best free tools for tracking investments and net worth, especially for the fee check. Use it for that, and treat the advisory pitch as optional.
 
 *Investing involves risk, including loss of principal. Past performance doesn't predict future results.*
 

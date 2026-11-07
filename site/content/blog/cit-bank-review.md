@@ -14,6 +14,8 @@ CIT Bank is an online bank that's a division of First Citizens Bank. Its Platinu
 
 *How we review: based on CIT Bank's published account terms, checked in November 2026. We haven't been paid for this review and haven't opened the account. Check the current rate table before opening.*
 
+Comparing banks? See our **[high-yield savings comparison](/compare/best-high-yield-savings-accounts/)**.
+
 ## The short version
 
 | | |
@@ -42,11 +44,11 @@ CIT Bank is an online bank that's a division of First Citizens Bank. Its Platinu
 
 ## If you have less than $5,000
 
-Look for an account that pays its best rate on any balance, such as [Ally Bank](/blog/ally-bank-review/), or compare options in our [high-yield savings guide](/blog/best-high-yield-savings-accounts/). Once you pass $5,000, CIT is worth another look.
+Look for an account that pays its best rate on any balance, such as [Ally Bank](/blog/ally-bank-review/), or compare options in our [high-yield savings guide](/compare/best-high-yield-savings-accounts/). Once you pass $5,000, CIT is worth another look.
 
 ## Our verdict
 
-[CIT Bank Platinum Savings](/go/cit/) is a good home for an established emergency fund. It's the wrong account for the first $1,000. Read the rate tiers and pick based on the balance you actually have.
+[CIT Bank Platinum Savings](aff:cit) is a good home for an established emergency fund. It's the wrong account for the first $1,000. Read the rate tiers and pick based on the balance you actually have.
 
 ## Common questions
 

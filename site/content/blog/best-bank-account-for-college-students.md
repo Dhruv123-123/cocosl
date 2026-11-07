@@ -25,17 +25,17 @@ Your first bank account should be boring: free, insured, and impossible to accid
 
 | | Type | Monthly fee | Notes |
 |---|---|---|---|
-| [Capital One 360 Checking](/go/capital-one/) | Bank, Member FDIC | None | No overdraft fees; some branches and cafés |
-| [Ally Interest Checking](/go/ally/) | Online bank, Member FDIC | None | No minimums; pair with Ally savings buckets |
-| [SoFi Checking and Savings](/go/sofi/) | Online bank, Member FDIC | None | Best rate needs direct deposit, which many students don't have yet |
-| [Chime](/go/chime/) | Fintech app; deposits held at partner banks | None | Fee-free overdraft buffer for eligible users; not a bank itself |
+| [Capital One 360 Checking](aff:capital_one) | Bank, Member FDIC | None | No overdraft fees; some branches and cafés |
+| [Ally Interest Checking](aff:ally) | Online bank, Member FDIC | None | No minimums; pair with Ally savings buckets |
+| [SoFi Checking and Savings](aff:sofi) | Online bank, Member FDIC | None | Best rate needs direct deposit, which many students don't have yet |
+| [Chime](aff:chime) | Fintech app; deposits held at partner banks | None | Fee-free overdraft buffer for eligible users; not a bank itself |
 | Your local or campus credit union | Credit union, NCUA | Often none for students | Often the most forgiving with fees; check ATM coverage |
 
 ## Mistakes that cost students money
 
 - **Keeping the account your parents opened at 15.** Youth accounts can convert into fee-charging accounts when you turn 18 or 24. Check.
 - **Opting in to overdraft "protection".** It can mean a fee each time. Decline it, or pick an account that doesn't charge one.
-- **No savings account at all.** Even $20 a week into a separate [high-yield savings account](/blog/best-high-yield-savings-accounts/) builds a buffer for textbooks and flights home.
+- **No savings account at all.** Even $20 a week into a separate [high-yield savings account](/compare/best-high-yield-savings-accounts/) builds a buffer for textbooks and flights home.
 - **Signing up on campus for a card you don't need.** Your first credit card is a separate decision. [How credit scores work](/blog/how-credit-scores-work/).
 
 ## A simple setup

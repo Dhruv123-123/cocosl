@@ -7,7 +7,6 @@ pillar: money-tools
 keyword: best tax software for simple returns
 read_minutes: 6
 product: the-20-minute-budget
-affiliate: yes
 sources: [https://www.irs.gov/filing/irs-free-file-do-your-taxes-for-free, https://www.irs.gov/individuals/free-tax-return-preparation-for-qualifying-taxpayers, https://www.freetaxusa.com/prices, https://www.taxact.com/]
 ---
 A "simple" return usually means W-2 income, maybe some interest, student loan interest and the standard deduction. If that's you, filing should cost little or nothing. The trick is starting in the right place, because many "free" products charge as soon as your return has one extra form.
@@ -28,8 +27,8 @@ The IRS Direct File pilot wasn't offered for the 2026 filing season. Check IRS.g
 
 | | Federal | State | Note |
 |---|---|---|---|
-| [FreeTaxUSA](/go/freetaxusa/) | Free, including freelance income | A fee per state (about $15–$16 last season) | Best value if you don't qualify for free options. [Our review](/blog/freetaxusa-review/) |
-| [TaxAct](/go/taxact/) | Free tier for simple returns | Extra on paid tiers | Paid tiers add more forms and support; check what the free tier covers |
+| [FreeTaxUSA](https://www.freetaxusa.com/) | Free, including freelance income | A fee per state (about $15–$16 last season) | Best value if you don't qualify for free options. [Our review](/blog/freetaxusa-review/) |
+| [TaxAct](https://www.taxact.com/) | Free tier for simple returns | Extra on paid tiers | Paid tiers add more forms and support; check what the free tier covers |
 
 ## How to avoid paying by accident
 

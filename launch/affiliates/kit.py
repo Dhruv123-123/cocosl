@@ -212,11 +212,11 @@ def build_csv(path):
     with open(path, "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["program", "brand", "network", "apply_url", "tier", "payout_note", "status", "applied_on",
-                    "decision_on", "tracking_link", "go_slug", "notes"])
+                    "decision_on", "tracking_link", "site_program", "notes"])
         for p in PROGRAMS:
             for b in p["brands"]:
                 w.writerow([p["name"], BRANDS[b]["name"], p["network"], p["apply"], p["tier"], p["payout"],
-                            "not applied", "", "", "", p.get("go", ""), ""])
+                            "not applied", "", "", "", p.get("go", "").replace("-", "_"), ""])
 
 
 def build_html():

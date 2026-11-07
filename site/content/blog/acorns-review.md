@@ -15,6 +15,8 @@ Acorns is an investing app built around round-ups: every time you buy something,
 
 *How we review: based on Acorns' published pricing and disclosures, checked in November 2026. We haven't been paid for this review. General education, not investment advice. Investing involves risk, including loss of principal.*
 
+Comparing ways to automate investing? See our **[robo-advisor comparison](/compare/best-robo-advisors/)**.
+
 ## The short version
 
 | | |
@@ -50,12 +52,12 @@ Compare that with a typical low-cost index fund, whose yearly cost is often well
 ## Cheaper ways to automate investing
 
 - A **target-date index fund** at a large brokerage, with an automatic monthly transfer.
-- A **robo-adviser** with a percentage fee instead of a flat one. [Compare robo-advisers](/blog/best-robo-advisors-for-beginners/).
+- A **robo-adviser** with a percentage fee instead of a flat one. [Compare robo-advisers](/compare/best-robo-advisors/).
 - Our step-by-step: [start investing with $100 a month](/blog/how-to-start-investing-with-100-a-month/).
 
 ## Our verdict
 
-[Acorns](/go/acorns/) is a good habit-builder for complete beginners who'll also add regular deposits. If you'll only invest spare change, the flat fee makes it an expensive habit. Run the maths with your expected balance first.
+[Acorns](aff:acorns) is a good habit-builder for complete beginners who'll also add regular deposits. If you'll only invest spare change, the flat fee makes it an expensive habit. Run the maths with your expected balance first.
 
 *Acorns Advisers, LLC is an SEC-registered investment adviser. Past performance doesn't predict future results.*
 

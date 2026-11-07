@@ -14,6 +14,8 @@ Ally Bank is one of the longest-running online banks in the US. It's not usually
 
 *How we review: based on Ally's published terms, checked in November 2026. We haven't been paid for this review and haven't tested the account. Check the current rates on Ally's site.*
 
+Comparing banks? See our **[high-yield savings comparison](/compare/best-high-yield-savings-accounts/)**.
+
 ## The short version
 
 | | |
@@ -46,11 +48,11 @@ Ally Bank is one of the longest-running online banks in the US. It's not usually
 
 - **Higher rate on a $5,000+ balance:** [CIT Bank](/blog/cit-bank-review/).
 - **Checking and savings with direct deposit:** [SoFi](/blog/sofi-review/).
-- **Full checklist:** [how to pick a high-yield savings account](/blog/best-high-yield-savings-accounts/).
+- **Full checklist:** [how to pick a high-yield savings account](/compare/best-high-yield-savings-accounts/).
 
 ## Our verdict
 
-If you want one online bank that's easy to live with, [Ally](/go/ally/) is a safe default, and the buckets feature is genuinely useful. If you only care about the top rate, compare first.
+If you want one online bank that's easy to live with, [Ally](aff:ally) is a safe default, and the buckets feature is genuinely useful. If you only care about the top rate, compare first.
 
 ## Common questions
 

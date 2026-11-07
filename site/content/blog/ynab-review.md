@@ -14,6 +14,8 @@ YNAB (short for You Need a Budget) is a budgeting app with a strong opinion: you
 
 *How we review: based on YNAB's published method, features and pricing, checked in November 2026. We haven't been paid for this review. Prices change, so check YNAB's pricing page.*
 
+Comparing apps? See **[Rocket Money vs YNAB vs Monarch](/compare/rocket-money-vs-ynab-vs-monarch/)** and our **[budgeting apps comparison](/compare/best-budgeting-apps/)**.
+
 ## The short version
 
 | | |
@@ -57,7 +59,7 @@ The method is free on YNAB's website. The app makes it easier to follow.
 
 ## Our verdict
 
-If money feels out of control and you're willing to do the work for a month, [YNAB](/go/ynab/) is one of the most effective budgeting methods around, and the 34-day trial is long enough to know. If you're a student, check the free-year offer first. If you want to see everything without much effort, choose a different tool.
+If money feels out of control and you're willing to do the work for a month, [YNAB](aff:ynab) is one of the most effective budgeting methods around, and the 34-day trial is long enough to know. If you're a student, check the free-year offer first. If you want to see everything without much effort, choose a different tool.
 
 ## Common questions
 

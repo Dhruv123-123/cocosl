@@ -14,6 +14,8 @@ If you have no credit history, it's hard to get the credit that builds one. Self
 
 *How we review: based on Self's published terms and plans, checked in November 2026, and CFPB guidance on credit-builder loans. We haven't been paid for this review and haven't tested the account. Check the current plans, fees and APR before signing up.*
 
+Comparing Self with secured cards and other credit builders? See our **[credit-builder comparison](/compare/best-credit-builder-cards/)**.
+
 ## How it works
 
 1. You pick a plan: a monthly payment (Self's plans have ranged from about $25 to $150 a month) for a set term, often 12–24 months.
@@ -43,13 +45,13 @@ There's usually a **one-time administrative fee** and an **interest rate (APR)**
 | Secured credit card | Usually no annual fee; a refundable deposit | Use it for one small bill, pay in full each month |
 | Become an authorised user | Free | On a responsible family member's card |
 | Credit union credit-builder loan | Often lower cost | Ask your local credit union |
-| [Kikoff](/go/kikoff/) | Low monthly fee | A small credit line for use in its own store; check terms |
+| [Kikoff](https://kikoff.com/) | Low monthly fee | A small credit line for use in its own store; check terms |
 
 [How credit scores work](/blog/how-credit-scores-work/) explains what actually moves your score: on-time payments and low utilisation come first.
 
 ## Our verdict
 
-[Self](/go/self/) can be a useful first step if you have no credit and can't get a secured card, and if you're certain you can make every payment. Read the total cost, pick the smallest plan that works, and check whether a secured card or credit union loan would do the same job for less.
+[Self](aff:self) can be a useful first step if you have no credit and can't get a secured card, and if you're certain you can make every payment. Read the total cost, pick the smallest plan that works, and check whether a secured card or credit union loan would do the same job for less.
 
 ## Common questions
 

@@ -14,6 +14,8 @@ Aura is an all-in-one identity theft protection service: credit monitoring acros
 
 *How we review: based on Aura's published plans and features, checked in November 2026. We haven't been paid for this review and haven't tested the service. Check the current plans before buying.*
 
+For how Aura stacks up against LifeLock, Identity Guard and the free steps, see our **[identity theft protection comparison](/compare/best-identity-theft-protection/)**.
+
 ## What you can do for free first
 
 Before paying anyone, do these. They take under an hour:
@@ -52,7 +54,7 @@ Aura sells individual, couple and family plans, usually cheapest when billed ann
 
 ## Our verdict
 
-Do the free steps first. If you want ongoing monitoring, insurance and a team to call, especially for a family, [Aura](/go/aura/) bundles it in one app. If you're an individual who has frozen your credit, you may not need it.
+Do the free steps first. If you want ongoing monitoring, insurance and a team to call, especially for a family, [Aura](aff:aura) bundles it in one app. If you're an individual who has frozen your credit, you may not need it.
 
 ## Common questions
 

@@ -14,6 +14,8 @@ SoFi Checking and Savings is a combined checking and savings account from SoFi B
 
 *How we review: based on SoFi's published terms and fee schedule, checked in November 2026. We haven't been paid for this review and haven't tested the account. Rates and conditions change; read SoFi's current terms.*
 
+Comparing banks? See our **[high-yield savings comparison](/compare/best-high-yield-savings-accounts/)**.
+
 ## The short version
 
 | | |
@@ -46,11 +48,11 @@ SoFi Checking and Savings is a combined checking and savings account from SoFi B
 
 - **No conditions on the rate:** [Ally Bank](/blog/ally-bank-review/).
 - **Larger balance ($5,000+):** [CIT Bank Platinum Savings](/blog/cit-bank-review/).
-- **Full comparison:** [how to pick a high-yield savings account](/blog/best-high-yield-savings-accounts/).
+- **Full comparison:** [how to pick a high-yield savings account](/compare/best-high-yield-savings-accounts/).
 
 ## Our verdict
 
-If you can point a paycheck at it, [SoFi Checking and Savings](/go/sofi/) is a strong, fee-free all-in-one account from a chartered bank. If you can't meet the deposit condition, a bank with a single flat rate is simpler.
+If you can point a paycheck at it, [SoFi Checking and Savings](aff:sofi) is a strong, fee-free all-in-one account from a chartered bank. If you can't meet the deposit condition, a bank with a single flat rate is simpler.
 
 ## Common questions
 

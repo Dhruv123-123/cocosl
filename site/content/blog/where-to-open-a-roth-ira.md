@@ -28,7 +28,7 @@ Decided a [Roth IRA is right for you](/blog/roth-vs-traditional-ira/)? Opening o
 | Who picks investments | You | The service |
 | Typical cost | No account fee; you pay the funds' expense ratios | A yearly advisory fee (often 0.25%) plus fund costs |
 | Best for | People happy to choose one or two index funds | People who want it fully done for them |
-| Examples | [Fidelity](/go/fidelity/), [Charles Schwab](/go/schwab/), Vanguard | [Betterment](/go/betterment/), [Wealthfront](/go/wealthfront/) |
+| Examples | [Fidelity](https://www.fidelity.com/retirement-ira/roth-ira), [Charles Schwab](aff:schwab), Vanguard | [Betterment](aff:betterment), [Wealthfront](aff:wealthfront) |
 
 What to look for at either: no account or inactivity fees, no minimum to open, a wide choice of low-cost index funds, and the ability to set up automatic monthly contributions. Most large brokerages tick all four. Some of the links above are affiliate links and some aren't; it doesn't change the list.
 

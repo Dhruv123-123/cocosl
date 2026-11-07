@@ -12,6 +12,8 @@ sources: [https://www.fdic.gov/resources/deposit-insurance, https://www.investor
 ---
 You've got savings and you want it earning something. The three usual choices are a high-yield savings account, a money market account and a CD. All three can be insured bank deposits. They differ in how easy the money is to reach and how the rate works.
 
+Settled on a high-yield savings account? See our **[high-yield savings comparison](/compare/best-high-yield-savings-accounts/)**.
+
 ## The quick comparison
 
 | | High-yield savings | Money market account | CD |
@@ -24,7 +26,7 @@ You've got savings and you want it earning something. The three usual choices ar
 
 ## High-yield savings accounts
 
-The simplest option. Money in, interest paid monthly, transfer out when you need it. The rate floats with the market, so it can fall as well as rise. For an emergency fund, this is the default choice for most people. [How to pick one](/blog/best-high-yield-savings-accounts/).
+The simplest option. Money in, interest paid monthly, transfer out when you need it. The rate floats with the market, so it can fall as well as rise. For an emergency fund, this is the default choice for most people. [How to pick one](/compare/best-high-yield-savings-accounts/).
 
 ## Money market accounts
 
@@ -49,7 +51,7 @@ Many people end up with two: a HYSA for the emergency fund and a CD or two for d
 
 ## Accounts to compare
 
-Most online banks offer all three. [Ally](/go/ally/), [CIT Bank](/go/cit/) and [Capital One 360](/go/capital-one/) all publish savings, money market and CD rates on their sites, so you can compare like for like in one place. We haven't opened these accounts; check live rates and terms before choosing.
+Most online banks offer all three. [Ally](aff:ally), [CIT Bank](aff:cit) and [Capital One 360](aff:capital_one) all publish savings, money market and CD rates on their sites, so you can compare like for like in one place. We haven't opened these accounts; check live rates and terms before choosing.
 
 ## Common questions
 

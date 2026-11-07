@@ -1,17 +1,19 @@
 ---
-title: The best budgeting apps, matched to how you actually handle money
-seo_title: Best budgeting apps (2026): free and paid options compared by what you need
-description: There's no single best budgeting app, only the best one for your problem. Five popular apps compared on price, method and effort, plus the free options.
+title: How to choose a budgeting app: start with what's going wrong
+seo_title: How to choose a budgeting app: match the app to your money problem (2026)
+description: Don't pick a budgeting app by its feature list. Name your money problem first, then match it to the app built for it, and run a two-week trial that tells you if it's working.
 date: 2026-11-07
 pillar: money-tools
-keyword: best budgeting apps
+keyword: how to choose a budgeting app
 read_minutes: 7
 product: the-20-minute-budget
 affiliate: yes
 compliance: review
 sources: [https://www.ynab.com/pricing, https://www.monarchmoney.com/pricing, https://www.rocketmoney.com/learn/personal-finance/how-much-does-rocket-money-cost, https://www.empower.com/personal-investors/personal-dashboard, https://www.consumerfinance.gov/personal-financial-data-rights/]
 ---
-Most "best budgeting app" lists rank apps by features. That's backwards. The right app depends on *what's going wrong* with your money right now. Start there.
+Most people pick a budgeting app from a feature list, then stop opening it a month later. A better way is to start from *what's going wrong* with your money right now, and pick the app built for that problem.
+
+For the full side-by-side of prices and features, see our **[budgeting apps comparison](/compare/best-budgeting-apps/)** and **[Rocket Money vs YNAB vs Monarch](/compare/rocket-money-vs-ynab-vs-monarch/)**. This guide is about choosing.
 
 *Based on each app's published features and prices, checked in November 2026. Commissions never change our picks, and we always say who an app isn't for.*
 
@@ -19,10 +21,10 @@ Most "best budgeting app" lists rank apps by features. That's backwards. The rig
 
 | Your problem | App to try | Price (check current) | Why |
 |---|---|---|---|
-| "I run out before payday" | [YNAB](/go/ynab/) | $109/year, 34-day trial | Every dollar gets a job before you spend it |
-| "My money is scattered everywhere" | [Monarch Money](/go/monarch/) | About $99.99/year | All accounts and net worth in one view, great for couples |
-| "I'm paying for stuff I forgot about" | [Rocket Money](/go/rocket-money/) | Free; Premium about $7–$14/month | Finds recurring charges, can cancel them for you |
-| "I want to track investments and net worth, free" | [Empower Personal Dashboard](/go/empower/) | Free | Strong investment and retirement tracking |
+| "I run out before payday" | [YNAB](aff:ynab) | $109/year, 34-day trial | Every dollar gets a job before you spend it |
+| "My money is scattered everywhere" | [Monarch Money](aff:monarch) | About $99.99/year | All accounts and net worth in one view, great for couples |
+| "I'm paying for stuff I forgot about" | [Rocket Money](aff:rocket_money) | Free; Premium about $7–$14/month | Finds recurring charges, can cancel them for you |
+| "I want to track investments and net worth, free" | [Empower Personal Dashboard](aff:empower) | Free | Strong investment and retirement tracking |
 | "I don't want to link my bank" | A spreadsheet | Free | Private, simple, forces you to look |
 
 ## The apps in a sentence
@@ -48,6 +50,9 @@ If you have a few accounts and under about 25 transactions a week, a free spread
 *Empower offers investment advisory services. Investing involves risk, including loss of principal.*
 
 ## Common questions
+
+### How do I know if a budgeting app is working?
+If you're opening it at least once a week and you can say your weekly spending number without looking, it's working. If not by week two, switch or cancel.
 
 ### What is the best free budgeting app?
 Rocket Money's free tier is good for spending and subscriptions; Empower's free dashboard is good for net worth. For a full budget at no cost, a spreadsheet is hard to beat.

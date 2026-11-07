@@ -7,7 +7,6 @@ pillar: money-tools
 keyword: freetaxusa review
 read_minutes: 6
 product: the-20-minute-budget
-affiliate: yes
 sources: [https://www.freetaxusa.com/, https://www.freetaxusa.com/prices, https://www.irs.gov/filing/irs-free-file-do-your-taxes-for-free, https://www.irs.gov/individuals/free-tax-return-preparation-for-qualifying-taxpayers]
 ---
 FreeTaxUSA is an online tax-prep service whose federal return is free for most situations, including freelance income, rental income and itemised deductions, which other "free" products often charge for. You pay a modest fee for a state return and for optional extras.
@@ -49,7 +48,7 @@ The IRS Direct File pilot wasn't offered for the 2026 filing season; check IRS.g
 
 ## Our verdict
 
-For most people who can do their own return, [FreeTaxUSA](/go/freetaxusa/) is one of the best-value options, especially if you have freelance income. Check VITA and IRS Free File first if your income qualifies; they can make the state return free too. Comparison: [tax software for simple returns](/blog/best-tax-software-for-simple-returns/).
+For most people who can do their own return, [FreeTaxUSA](https://www.freetaxusa.com/) is one of the best-value options, especially if you have freelance income. Check VITA and IRS Free File first if your income qualifies; they can make the state return free too. Comparison: [tax software for simple returns](/blog/best-tax-software-for-simple-returns/).
 
 ## Common questions
 

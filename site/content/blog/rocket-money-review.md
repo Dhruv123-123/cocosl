@@ -14,6 +14,8 @@ Rocket Money is a money app best known for one job: finding the subscriptions yo
 
 *How we review: we haven't been paid for this review and we didn't test every feature hands-on. It's based on Rocket Money's published features and pricing, checked in November 2026. Prices change, so check the app before paying.*
 
+Comparing apps? See **[Rocket Money vs YNAB vs Monarch](/compare/rocket-money-vs-ynab-vs-monarch/)**. Only interested in lowering bills? See **[bill negotiation services vs doing it yourself](/compare/best-bill-negotiation-services/)**.
+
 ## The short version
 
 | | Free | Premium |
@@ -46,11 +48,11 @@ Rocket Money is a money app best known for one job: finding the subscriptions yo
 2. Highlight anything that repeats.
 3. Cancel what you don't use, and set a reminder for anything on a free trial.
 
-That's the method in our [subscription audit guide](/blog/find-and-cancel-subscriptions/). If you'd rather the app do the searching, the free version of [Rocket Money](/go/rocket-money/) covers the finding part.
+That's the method in our [subscription audit guide](/blog/find-and-cancel-subscriptions/). If you'd rather the app do the searching, the free version of [Rocket Money](aff:rocket_money) covers the finding part.
 
 ## Rocket Money vs other budgeting apps
 
-Rocket Money is strongest at subscriptions and alerts. If budgeting is the main job, [Monarch](/blog/monarch-money-review/) and [YNAB](/blog/ynab-review/) are built more around planning. See our [budgeting apps comparison](/blog/best-budgeting-apps/).
+Rocket Money is strongest at subscriptions and alerts. If budgeting is the main job, [Monarch](/blog/monarch-money-review/) and [YNAB](/blog/ynab-review/) are built more around planning. See our [budgeting apps comparison](/compare/best-budgeting-apps/).
 
 ## Our verdict
 
