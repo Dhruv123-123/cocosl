@@ -292,3 +292,19 @@ def test_whisper_model_follows_brand_language(monkeypatch):
     res = TTSResult("x", "x", [], [], [], [])
     align_with_whisper(res, "es")
     assert "English-only" in res.notes[0]
+
+
+def test_stock_broll_beat(media_env):
+    import json as _json
+    settings, brand = media_env
+    clip = settings.home / "footage" / "money-made-simple" / "stock" / "b.mp4"
+    clip.parent.mkdir(parents=True, exist_ok=True)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", "testsrc=s=720x1280:d=3",
+                    "-pix_fmt", "yuv420p", str(clip)], check=True)
+    clip.with_suffix(".json").write_text(_json.dumps({"provider": "pexels", "author": "Ana", "license": "Pexels License",
+                                                      "page": "https://pexels.com/v/1", "query": "groceries"}))
+    post = make_post(8, "short", 3)
+    post["script"]["segments"][1]["broll"] = "footage/money-made-simple/stock/b.mp4"
+    assets = render_post(settings, brand, post)
+    lic = [p for p in assets["provenance"] if p["source"] == "licensed" and p["tool"] == "pexels"]
+    assert lic and "Ana" in str(lic[0])

@@ -6,6 +6,7 @@ is for, how it sounds, how it looks, where it posts and how it makes money.
 """
 from __future__ import annotations
 
+import hashlib
 import os
 import re
 from dataclasses import dataclass, field
@@ -257,6 +258,27 @@ class BrandProfile(BaseModel):
         return next((a for a in self.accounts if a.platform == platform and a.enabled), None)
 
 
+_BRAND_CACHE: dict[Path, tuple[str, BrandProfile]] = {}
+_YAML_LOADER = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
+
+
+def _load_brand_file(path: Path) -> BrandProfile:
+    """Parse and validate one brand file, cached until its text changes.
+
+    Pages and checks ask for the brands once per post; parsing the YAML every time made the
+    dashboard take seconds with a few hundred posts. Callers get their own copy, so changing
+    one in memory never leaks into the next call."""
+    text = path.read_text()
+    key = hashlib.sha1(text.encode()).hexdigest()
+    hit = _BRAND_CACHE.get(path)
+    if hit is None or hit[0] != key:
+        data = yaml.load(text, Loader=_YAML_LOADER) or {}
+        data.setdefault("slug", path.stem)
+        hit = (key, BrandProfile.model_validate(data))
+        _BRAND_CACHE[path] = hit
+    return hit[1].model_copy(deep=True)
+
+
 def load_brands(brands_dir: Path) -> dict[str, BrandProfile]:
     brands: dict[str, BrandProfile] = {}
     if not brands_dir.exists():
@@ -264,9 +286,7 @@ def load_brands(brands_dir: Path) -> dict[str, BrandProfile]:
     for path in sorted(brands_dir.glob("*.y*ml")):
         if path.name.startswith("_"):
             continue
-        data = yaml.safe_load(path.read_text()) or {}
-        data.setdefault("slug", path.stem)
-        brand = BrandProfile.model_validate(data)
+        brand = _load_brand_file(path.resolve())
         brands[brand.slug] = brand
     return brands
 
