@@ -28,6 +28,17 @@ export default {
     pitch: 'A printable kit for the whole family: the red flags to watch for, what to say when a scammer calls, and what to do in the first hour if it happens.',
   },
 
+  // B2B: the $99 "Spot It, Stop It" team training pack (content-factory/scam-decoded/products/team-training/).
+  // Offered on the vendor payment check (vendor/). Hidden while the URL contains REPLACE_ME.
+  teamPack: {
+    name: 'Spot It, Stop It: scam training for small teams',
+    price: '$99',
+    url: 'https://REPLACE_ME.gumroad.com/l/spot-it-stop-it',
+    pitch: 'A 20-minute training pack for your staff: slides, a guide, a quiz, a certificate and the "Verify before you pay" poster.',
+  },
+  // Netlify form for the vendor check's free poster sign-up (business leads, kept apart from the weekly alert list).
+  vendorForm: 'vendor-check',
+
 
   // Plausible (no cookies). Set the domain to turn on page views, outbound clicks and the
   // Affiliate Click / Product Click / Signup events. Optional plausibleHost for self-hosting. See docs/UTM.md.

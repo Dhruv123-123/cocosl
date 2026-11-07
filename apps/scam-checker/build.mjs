@@ -271,7 +271,7 @@ write('scams/index.html', index());
 for (const s of scams) write(`scams/${s.slug}/index.html`, guide(s));
 write('es/estafas/index.html', indexEs());
 for (const s of scamsEs) write(`es/estafas/${s.slug}/index.html`, guideEs(s));
-const urls = ['', 'es/', 'link/', 'family/', 'es/enlace/', 'scams/', ...scams.map((s) => `scams/${s.slug}/`), 'es/estafas/', ...scamsEs.map((s) => `es/estafas/${s.slug}/`)];
+const urls = ['', 'es/', 'link/', 'family/', 'vendor/', 'es/enlace/', 'scams/', ...scams.map((s) => `scams/${s.slug}/`), 'es/estafas/', ...scamsEs.map((s) => `es/estafas/${s.slug}/`)];
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${base}/${u}</loc></url>`).join('\n')}\n</urlset>\n`);
 write('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${base}/sitemap.xml\n`);
 console.log(`Built ${scams.length + 1} English and ${scamsEs.length + 1} Spanish scam guide pages`);

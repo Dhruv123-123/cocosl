@@ -68,3 +68,18 @@ select{font:inherit;border:1px solid var(--line);border-radius:10px;padding:11px
 .tag{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:1px 8px}
 .plain{padding-left:18px}.plain li{margin-bottom:6px}
 @media print{.top,footer,#member-form,.row .link{display:none}.card{border:0;padding:0}}
+
+/* Vendor payment check */
+.grid2{display:grid;gap:12px;grid-template-columns:1fr}
+@media (min-width:640px){.grid2{grid-template-columns:1fr 1fr}}
+.grid2 label{display:flex;flex-direction:column;gap:4px;font-size:14px;font-weight:600}
+.grid2 input,#biz,.signup select{font:inherit;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);width:100%;min-width:0}
+.signup select{flex:1 1 180px;width:auto}
+.pick{display:flex;flex-direction:row;gap:10px;align-items:flex-start;padding:6px 0;font-size:15px;font-weight:400}
+.pick input{margin-top:4px;width:auto;flex:none}
+.flag-list{display:grid;grid-template-columns:1fr;gap:0 16px}
+@media (min-width:640px){.flag-list{grid-template-columns:1fr 1fr}}
+#vendor-form h2{font-size:19px;margin:18px 0 8px}
+#vendor-form h2:first-child{margin-top:0}
+.policy{white-space:pre-wrap;background:var(--bg);border-radius:10px;padding:14px;font:14px/1.5 ui-monospace,Menlo,monospace;overflow-wrap:anywhere}
+@media print{body.print-policy main>*{display:none!important}body.print-policy main>section:has(#policy){display:block!important;border:0}body.print-policy section:has(#policy)>:not(#policy),body.print-policy header,body.print-policy footer{display:none!important}}
