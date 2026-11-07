@@ -1,0 +1,207 @@
+{
+  "_about": "Spanish (es-US) edition of Scam Watch issues 1-3 (../issues.json). MACHINE-ADAPTED FROM ENGLISH. NOT REVIEWED BY A NATIVE SPEAKER. Register: usted. Group leader talk (brief) stays in English. Do not deliver until REVIEW_CHECKLIST.md is signed off.",
+  "reviewed": "not yet (native review pending)",
+  "issues": [
+    {
+      "id": "2027-01",
+      "n": 1,
+      "send_date": "2027-01-04",
+      "deliver_by": "2026-12-14",
+      "source": "Scam Decoded for Seniors: 'The grandchild in trouble' call, golden rules 1-2, hang-up lines; Spanish adaptation of the English issue 2027-01",
+      "topic": "La llamada del nieto en apuros (y las voces hechas con inteligencia artificial)",
+      "subject": "Alerta de Estafas: la llamada del nieto en apuros",
+      "preheader": "La voz puede sonar igualita. Una palabra secreta en familia la detiene.",
+      "headline": "\"Abuela, soy yo. Estoy en problemas.\"",
+      "example_label": "Así suena (ejemplo inventado)",
+      "example": "\"Abuela, soy yo. Choqué el carro y estoy en la estación de policía. Por favor, no le digas a mi mamá. Un abogado te va a llamar por lo de la fianza.\"",
+      "explain": [
+        "Quien llama suena angustiado y con prisa. Luego un \"abogado\" o un \"policía\" le pide dinero para la fianza o para trámites, muchas veces en efectivo, tarjetas de regalo o una transferencia. A veces mandan a alguien a recoger el efectivo a su puerta.",
+        "Hoy los estafadores pueden copiar una voz de un video corto de internet. Aunque suene igualita a la de su nieto, puede que no sea él."
+      ],
+      "tell": "Prisa + secreto + una forma rara de pagar = estafa. Una emergencia de verdad puede esperar 5 minutos mientras usted devuelve la llamada.",
+      "steps": [
+        "**Cuelgue.** Llame a su nieto, o a sus papás, al número que usted ya tiene.",
+        "**Nunca pague** con tarjetas de regalo, transferencias, criptomonedas o efectivo entregado a un mensajero. Solo los estafadores piden eso.",
+        "**¿Ya pagó?** Llame a su banco de inmediato y después a la Línea contra el Fraude a Personas Mayores: 1-833-372-8311."
+      ],
+      "quick_hits": [
+        "**Escojan una palabra secreta en familia** que solo ustedes conozcan. Si quien llama no la sabe, cuelgue.",
+        "**\"No le digas a mi mamá\"** es la forma en que el estafador evita que usted verifique. Siempre cuénteselo a alguien."
+      ],
+      "job": "Este mes, escoja una palabra secreta con su familia y dígasela a sus hijos y nietos. Anótela en un lugar privado, no en la pantalla de su celular.",
+      "promise": false,
+      "lobby": {
+        "kicker": "Alerta de Estafas",
+        "headline": "¿\"Abuela, estoy en problemas\"? Cuelgue y devuelva la llamada.",
+        "bullets": [
+          "Las voces se pueden falsificar.",
+          "Llame al número que usted ya tiene.",
+          "Nunca pague con tarjetas de regalo ni efectivo."
+        ]
+      },
+      "social": {
+        "caption": "Alerta de Estafas: alguien llama con la voz igualita a la de su nieto, dice que está en problemas y le pide que no le cuente a nadie. Cuelgue y llame a su nieto al número que usted ya tiene. Las voces se pueden copiar con inteligencia artificial. Nunca pague con tarjetas de regalo, transferencias ni efectivo por mensajero. ¿Preguntas? {{HELP_LINE_SHORT}}.",
+        "alt": "Alerta de Estafas: ¿Abuela, estoy en problemas? Cuelgue y devuelva la llamada. Las voces se pueden falsificar. Llame al número que usted ya tiene. Nunca pague con tarjetas de regalo ni efectivo."
+      },
+      "brief": {
+        "Open with": "\"Has anyone here had a call from someone saying they were family and needed money?\" Let 2 or 3 people share.",
+        "Teach": "Read the made-up example out loud. Ask: what were the warning signs? (Hurry, secret, unusual payment.)",
+        "Practise": "Have pairs practise the hang-up line: \"I'm going to call you back on the number I have.\"",
+        "Close with": "Hand out the large-print sheet and ask everyone to pick a family safe word this week."
+      },
+      "sources": [
+        {
+          "name": "FTC: Scammers use AI to enhance their family emergency schemes (en inglés)",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes"
+        },
+        {
+          "name": "FTC en español: estafas y cómo reportarlas",
+          "url": "https://consumidor.ftc.gov"
+        },
+        {
+          "name": "FTC: Scammers use fake emergencies to steal your money (en inglés)",
+          "url": "https://consumer.ftc.gov/articles/scammers-use-fake-emergencies-steal-your-money"
+        },
+        {
+          "name": "Departamento de Justicia: Línea Nacional contra el Fraude a Personas Mayores (en inglés)",
+          "url": "https://ovc.ojp.gov/program/elder-fraud-abuse/national-elder-fraud-hotline"
+        }
+      ],
+      "review": "pending: native es-US read + Spanish URL check (see REVIEW_CHECKLIST.md)"
+    },
+    {
+      "id": "2027-02",
+      "n": 2,
+      "send_date": "2027-02-01",
+      "deliver_by": "2027-01-11",
+      "source": "Scam Decoded for Seniors: 'Online' section (romance warning signs) and newsletter #12 (Valentine's); Spanish adaptation of the English issue 2027-02",
+      "topic": "Estafas románticas en el Día de San Valentín",
+      "subject": "Alerta de Estafas: cuando un amor por internet necesita dinero",
+      "preheader": "Tres señales de una estafa romántica, y qué hacer si le está pasando a alguien que usted conoce.",
+      "headline": "Cuando un amor por internet necesita dinero",
+      "example_label": "Así suena (ejemplo inventado)",
+      "example": "\"Nunca había sentido esto por nadie, mi amor. Quiero ir a verte, pero mi cuenta del banco está congelada mientras trabajo en el extranjero. ¿Me ayudas con el boleto de avión? Te lo pago el día que llegue.\"",
+      "explain": [
+        "Los estafadores románticos pasan semanas o meses ganándose su confianza, muchas veces en Facebook, en sitios de citas o en juegos. Dicen que trabajan lejos: en una plataforma petrolera, en el ejército o como médicos en otro país.",
+        "Luego aparece un problema que solo se arregla con dinero: un boleto, una cuenta del hospital, pagos de aduana o una inversión \"segura\"."
+      ],
+      "tell": "Alguien que solo conoce por internet, que pronto le dice que le ama, que nunca puede verle ni hacer videollamada, y que luego necesita dinero.",
+      "steps": [
+        "**Nunca mande dinero ni tarjetas de regalo** a alguien que no conoce en persona.",
+        "**Hable con alguien de confianza** antes de mandar cualquier cosa. Los estafadores quieren tenerle solo para ellos.",
+        "**Reporte el perfil** al sitio o la aplicación, y reporte la estafa en ReporteFraude.ftc.gov o al 1-877-382-4357."
+      ],
+      "quick_hits": [
+        "**Busque su foto.** Un familiar o alguien de la biblioteca le puede ayudar a ver si las fotos son de otra persona.",
+        "**No es su culpa.** Son delincuentes profesionales. Es normal sentir vergüenza, y contárselo a alguien es lo que lo detiene."
+      ],
+      "job": "Si conoce a alguien que se siente solo o que enviudó hace poco, llámele esta semana. Los estafadores buscan a quien nadie más le habla.",
+      "promise": false,
+      "lobby": {
+        "kicker": "Alerta de Estafas",
+        "headline": "¿Se conocieron por internet y pide dinero? Es estafa.",
+        "bullets": [
+          "Dice \"te amo\" muy rápido.",
+          "Nunca puede verle ni hacer videollamada.",
+          "Después necesita dinero."
+        ]
+      },
+      "social": {
+        "caption": "Alerta de Estafas para San Valentín: si alguien que solo conoce por internet le dice que le ama, nunca puede verle ni hacer videollamada, y luego necesita dinero, es una estafa. Nunca mande dinero ni tarjetas de regalo a alguien que no conoce en persona. Primero hable con alguien de confianza. ¿Preguntas? {{HELP_LINE_SHORT}}.",
+        "alt": "Alerta de Estafas: ¿se conocieron por internet y pide dinero? Es estafa. Dice te amo muy rápido. Nunca puede verle ni hacer videollamada. Después necesita dinero."
+      },
+      "brief": {
+        "Open with": "\"Valentine's Day is this month. Today we'll talk about a scam that targets kind, caring people.\"",
+        "Teach": "Read the made-up message. Ask the group to spot the 3 warning signs.",
+        "Discuss": "\"What would you say to a friend who told you about a new online sweetheart who needs money?\" Stress kindness, not blame.",
+        "Close with": "Hand out the sheet. Remind everyone that the Elder Fraud Hotline (1-833-372-8311) is free."
+      },
+      "sources": [
+        {
+          "name": "FTC: Romance scams (en inglés)",
+          "url": "https://consumer.ftc.gov/romance-scams"
+        },
+        {
+          "name": "FTC: Romance scammers love... to take your money (feb. 2024, en inglés)",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2024/02/romance-scammers-love-take-your-money"
+        },
+        {
+          "name": "FTC en español: estafas y cómo reportarlas",
+          "url": "https://consumidor.ftc.gov"
+        },
+        {
+          "name": "Departamento de Justicia: Línea Nacional contra el Fraude a Personas Mayores (en inglés)",
+          "url": "https://ovc.ojp.gov/program/elder-fraud-abuse/national-elder-fraud-hotline"
+        }
+      ],
+      "review": "pending: native es-US read + Spanish URL check (see REVIEW_CHECKLIST.md)"
+    },
+    {
+      "id": "2027-03",
+      "n": 3,
+      "send_date": "2027-03-01",
+      "deliver_by": "2027-02-08",
+      "source": "Scam Decoded for Seniors: 'The government' call, official numbers list; newsletter #15 (government imposters); Spanish adaptation of the English issue 2027-03",
+      "topic": "Llamadas falsas del Seguro Social y de Medicare",
+      "subject": "Alerta de Estafas: el Seguro Social no le amenaza",
+      "preheader": "Las agencias del gobierno no llaman para amenazarle ni para exigirle pagos.",
+      "headline": "\"Su número de Seguro Social ha sido suspendido.\"",
+      "example_label": "Así suena (ejemplo inventado)",
+      "example": "\"Le habla un oficial de la Administración del Seguro Social. Su número fue usado en un delito y ha sido suspendido. Oprima 1 ahora o se emitirá una orden de arresto en su contra.\"",
+      "explain": [
+        "Los estafadores se hacen pasar por el Seguro Social, Medicare o el IRS. Dicen que su número está suspendido, que sus beneficios se van a cancelar o que le van a arrestar. Luego le piden que confirme su número o que pague una \"multa\".",
+        "Una versión de Medicare le ofrece una \"tarjeta nueva\", equipo médico gratis o una prueba gratis, y le pide su número de Medicare."
+      ],
+      "tell": "Las agencias del gobierno de verdad no llaman para amenazarle, y nunca le piden pagar con tarjetas de regalo, transferencias, criptomonedas o efectivo.",
+      "steps": [
+        "**Cuelgue.** No oprima ningún botón.",
+        "**Llame usted a la agencia** a su número real: Seguro Social 1-800-772-1213, Medicare 1-800-633-4227 (1-800-MEDICARE). Los dos atienden en español.",
+        "**Cuide su número de Medicare** como si fuera una tarjeta de crédito. Déselo solo a su médico, su farmacia o su seguro."
+      ],
+      "quick_hits": [
+        "**El identificador de llamadas puede mentir.** Puede mostrar \"Seguro Social\" o un número real del gobierno. Eso no significa nada.",
+        "**También por carta:** una carta de verdad no le pide pagar con tarjetas de regalo. Si tiene dudas, llame a los números de arriba."
+      ],
+      "job": "Escriba los números reales del Seguro Social y de Medicare en una tarjeta junto a su teléfono. Cuando una llamada diga que es de ellos, use su tarjeta, no el número que le den.",
+      "promise": false,
+      "lobby": {
+        "kicker": "Alerta de Estafas",
+        "headline": "El Seguro Social no le amenaza.",
+        "bullets": [
+          "Cuelgue. No oprima botones.",
+          "Llame usted al 1-800-772-1213.",
+          "Cuide su número de Medicare."
+        ]
+      },
+      "social": {
+        "caption": "Alerta de Estafas: alguien llama y dice que su número de Seguro Social está suspendido o que le van a arrestar. Es una estafa. Las agencias del gobierno no llaman para amenazarle ni piden tarjetas de regalo. Cuelgue y llame usted al Seguro Social al 1-800-772-1213. ¿Preguntas? {{HELP_LINE_SHORT}}.",
+        "alt": "Alerta de Estafas: el Seguro Social no le amenaza. Cuelgue y no oprima botones. Llame usted al 1-800-772-1213. Cuide su número de Medicare."
+      },
+      "brief": {
+        "Open with": "\"Raise your hand if you've had a call that said it was from Social Security or Medicare.\" (Most hands go up.)",
+        "Teach": "Read the made-up example. Point out the threat, the hurry and the button to press.",
+        "Practise": "Everyone writes the two real numbers on a card or on the back of their sheet.",
+        "Close with": "\"When in doubt, hang up and call the number you wrote down.\""
+      },
+      "sources": [
+        {
+          "name": "Administración del Seguro Social: estafas (en español)",
+          "url": "https://www.ssa.gov/espanol/estafas/"
+        },
+        {
+          "name": "FTC: Scammers impersonate the Social Security Administration (abr. 2025, en inglés)",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2025/04/scammers-impersonate-social-security-administration"
+        },
+        {
+          "name": "FTC en español: estafas y cómo reportarlas",
+          "url": "https://consumidor.ftc.gov"
+        },
+        {
+          "name": "Departamento de Justicia: Línea Nacional contra el Fraude a Personas Mayores (en inglés)",
+          "url": "https://ovc.ojp.gov/program/elder-fraud-abuse/national-elder-fraud-hotline"
+        }
+      ],
+      "review": "pending: native es-US read + Spanish URL check (see REVIEW_CHECKLIST.md)"
+    }
+  ]
+}

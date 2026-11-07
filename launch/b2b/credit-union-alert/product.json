@@ -1,0 +1,37 @@
+{
+  "_about": "Labels and formats for the Weekly Scam Alert for credit unions. Read by ../build.py.",
+  "series": "Weekly Scam Alert",
+  "unit": "week",
+  "labels": {
+    "eyebrow": "This week's scam",
+    "tell": "The tell",
+    "promise": "Our promise",
+    "steps": "What to do",
+    "hits": "Quick hits",
+    "job": "Your 5-minute job this week",
+    "brief": "Staff huddle brief",
+    "screen": "Lobby screen and poster",
+    "post": "Social post (Facebook, Instagram, LinkedIn, Nextdoor)"
+  },
+  "cta": "Not sure about a call, text or email? Call us at **{{CU_PHONE}}** or the number on the back of your card.",
+  "visual_footer": "Not sure? Call us at **{{CU_PHONE}}** or the number on your card.",
+  "disclaimer": "This alert is general information to help you spot scams. It isn't legal, tax or financial advice.",
+  "visuals": [
+    "social",
+    "lobby",
+    "poster"
+  ],
+  "not_in_essentials": [
+    "poster"
+  ],
+  "tokens": [
+    "{{CU_NAME}}",
+    "{{CU_SHORT}}",
+    "{{CU_PHONE}}",
+    "{{CU_NEVER_ASK}}",
+    "{{CU_ADDRESS}}",
+    "{{CU_INSURANCE_STATEMENT}}",
+    "{{UNSUBSCRIBE_LINK}}"
+  ],
+  "promise_token": "{{CU_NEVER_ASK}}"
+}

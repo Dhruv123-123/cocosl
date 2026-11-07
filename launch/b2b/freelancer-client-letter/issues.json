@@ -1,0 +1,710 @@
+{
+  "_about": "Master content for the white-label freelancer client newsletter, monthly. Built from 1099 Money content (see each issue's source). Education only; the firm reviews every issue and applies the rules to each client. [text](url) and **bold** only.",
+  "reviewed": "2026-11-07",
+  "issues": [
+    {
+      "id": "2027-01",
+      "n": 1,
+      "send_date": "2027-01-05",
+      "deliver_by": "2026-12-22",
+      "source": "1099 Money Shorts #06 (no 1099, still taxable), #08 (the Jan 15 deadline) and carousel #04 (2027 tax calendar)",
+      "topic": "January: the Jan 15 payment and why fewer 1099s are coming",
+      "subject": "Two January dates every freelancer needs",
+      "preheader": "The last 2026 estimated payment is due Jan 15. And your 1099s may not tell the whole story.",
+      "headline": "January: one payment, and fewer forms",
+      "explain": [
+        "The fourth estimated tax payment for 2026 is due **Friday, January 15, 2027**. If you've been paying quarterly, this one closes out the year.",
+        "You'll also start getting 1099 forms from clients and payment apps. For payments made in 2026, a client generally has to send a 1099-NEC only once they've paid you **$2,000** in the year (it used to be $600), and payment apps send a 1099-K only after **$20,000 and 200 transactions**. So many freelancers will get fewer forms than last year."
+      ],
+      "tell": "All your business income is taxable, whether or not a form shows up. The forms are paperwork, not permission.",
+      "promise": false,
+      "steps": [
+        "**Make the Jan 15 payment** if you've been paying quarterly, through [IRS.gov/payments](https://www.irs.gov/payments). Not sure what you owe? Call us at {{FIRM_PHONE}} before the 15th, not after.",
+        "**Start an income list** for 2026 if you don't have one: every client, every payment, from your invoices or bank deposits. When forms arrive, check them against it.",
+        "**Upload forms as they arrive** to {{CLIENT_PORTAL}}, so nothing's missing when we prepare your return."
+      ],
+      "quick_hits": [
+        "**Your state may have its own estimated payment due the same day.** We'll tell you if yours does.",
+        "**The IRS doesn't text or email you out of the blue** about your account or a refund. Delete those messages and type IRS.gov yourself."
+      ],
+      "job": "Make a folder (paper or on your computer) called \"2026 taxes\" and put every 1099, receipt and statement in it as it comes.",
+      "lobby": {
+        "kicker": "Freelancer taxes",
+        "headline": "No 1099? It's still income.",
+        "bullets": [
+          "2026 estimated tax due Jan 15.",
+          "1099-NEC now starts at $2,000.",
+          "Keep your own income list."
+        ]
+      },
+      "social": {
+        "caption": "Freelancers: your last 2026 estimated tax payment is due Jan 15. And this year you may get fewer 1099s, because clients now generally send a 1099-NEC only after paying you $2,000 (it was $600). The income is still taxable either way, so keep your own list. Questions? Call {{FIRM_PHONE}}.",
+        "alt": "{{FIRM_SHORT}}: No 1099? It's still income. 2026 estimated tax due Jan 15. 1099-NEC now starts at $2,000. Keep your own income list."
+      },
+      "brief": {
+        "Clients may ask": "\"I didn't get a 1099 from one client. Do I still report it?\"",
+        "What to say": "\"Yes, all business income goes on the return. Send us your own list or bank deposits and we'll match it.\"",
+        "Watch for": "Clients who relied on 1099s to know their income last year: 2026 forms will be missing more often under the $2,000 and $20,000 thresholds."
+      },
+      "sources": [
+        {
+          "name": "IRS: About Form 1099-NEC",
+          "url": "https://www.irs.gov/forms-pubs/about-form-1099-nec"
+        },
+        {
+          "name": "IRS: Understanding your Form 1099-K",
+          "url": "https://www.irs.gov/businesses/understanding-your-form-1099-k"
+        },
+        {
+          "name": "IRS: Estimated taxes",
+          "url": "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes"
+        },
+        {
+          "name": "IRS: Make a payment",
+          "url": "https://www.irs.gov/payments"
+        }
+      ]
+    },
+    {
+      "id": "2027-02",
+      "n": 2,
+      "send_date": "2027-02-02",
+      "deliver_by": "2027-01-19",
+      "source": "1099 Money carousel #11 (9 expenses to track), Shorts #14 (home office), #15 (car log) and #17 (phone bill)",
+      "topic": "February: what to bring for your return",
+      "subject": "Your tax appointment checklist (freelancer edition)",
+      "preheader": "The 8 things that make a self-employed return faster, and the deductions that need records.",
+      "headline": "Your return, minus the scramble",
+      "explain": [
+        "A self-employed return takes longer than a W-2 return because your expenses are your own records, not a form someone sends you. The more you bring in one go, the faster and cheaper it is to prepare.",
+        "Deductions need records. A car, a home office or a phone bill can all count, but only the business part, and only if you can show how you worked it out."
+      ],
+      "tell": "If you can't show it, you can't deduct it. A rough log now beats a perfect guess in April.",
+      "promise": true,
+      "steps": [
+        "**Gather the 8 things** below and upload them to {{CLIENT_PORTAL}} in one go.",
+        "**Add up business miles** from your calendar, mileage app or notes if you used your car for work. Business miles only; the commute to a regular workplace doesn't count.",
+        "**Book your appointment** for February or March: {{BOOKING_LINK}}. Late March and April fill up fast."
+      ],
+      "quick_hits": [
+        "**The 8 things:** your income list and any 1099s; business bank and card statements; receipts for equipment and software; mileage log; home office size and your home's total size; health insurance premiums you paid; retirement contributions (SEP, Solo 401(k), IRA); and any estimated payments you made in 2026, with dates.",
+        "**Phone and internet:** only the business share counts. Tell us your rough percentage and how you got it."
+      ],
+      "job": "Open your bank app and download your 2026 statements as PDFs. It's the single most useful thing you can send us.",
+      "lobby": {
+        "kicker": "Tax season",
+        "headline": "Bring these and your return goes faster.",
+        "bullets": [
+          "Income list and every 1099.",
+          "Statements, receipts, mileage log.",
+          "Estimated payments, with dates."
+        ]
+      },
+      "social": {
+        "caption": "Freelancer tax checklist: your income list and 1099s, business bank and card statements, receipts, your mileage log, home office measurements, health insurance premiums, retirement contributions, and the estimated payments you made. Bring them all at once and your return is faster and simpler. Book a time: {{BOOKING_LINK}}",
+        "alt": "{{FIRM_SHORT}}: Bring these and your return goes faster. Income list and every 1099. Statements, receipts, mileage log. Estimated payments, with dates."
+      },
+      "brief": {
+        "Clients may ask": "\"Can I just deduct my whole phone bill and my car?\"",
+        "What to say": "\"Only the business share, and we need to see how you worked it out. A mileage log or a month of notes is enough to start.\"",
+        "Watch for": "Missing estimated-payment dates: ask clients to check IRS Online Account rather than guess."
+      },
+      "sources": [
+        {
+          "name": "IRS Publication 334: Tax Guide for Small Business",
+          "url": "https://www.irs.gov/publications/p334"
+        },
+        {
+          "name": "IRS: Home office deduction",
+          "url": "https://www.irs.gov/businesses/small-businesses-self-employed/home-office-deduction"
+        },
+        {
+          "name": "IRS: Standard mileage rates",
+          "url": "https://www.irs.gov/tax-professionals/standard-mileage-rates"
+        },
+        {
+          "name": "IRS: Your online account",
+          "url": "https://www.irs.gov/payments/your-online-account"
+        }
+      ]
+    },
+    {
+      "id": "2027-03",
+      "n": 3,
+      "send_date": "2027-03-02",
+      "deliver_by": "2027-02-16",
+      "source": "1099 Money Shorts #10 (safe harbor), #18 (quarterly taxes with one real number) and carousel #07 (quarterly payment in 5 steps)",
+      "topic": "March: set up 2027's quarterly payments before April",
+      "subject": "The rule that takes the guesswork out of quarterly taxes",
+      "preheader": "The first 2027 estimated payment is due April 15. Here's how to make it boring.",
+      "headline": "Quarterly taxes, without the guessing",
+      "explain": [
+        "The first estimated payment for 2027 is due **April 15**, the same day as your 2026 return. The other three are **June 15**, **September 15** and **January 15, 2028**.",
+        "There's a rule that makes the amount easier. It's called the safe harbor: if you pay at least **100% of last year's total tax** (110% if last year's adjusted gross income was over $150,000), split across the four dates and paid on time, you generally avoid the underpayment penalty, even if you earn more this year. You still owe any balance in April."
+      ],
+      "tell": "Pay on time, pay enough of last year's tax, and set the rest aside. Quarterly taxes should be boring.",
+      "promise": false,
+      "steps": [
+        "**Let us work out your 2027 payments** when we finish your 2026 return. We'll give you four amounts and four dates.",
+        "**Open a separate savings account** for taxes, if you don't have one, and move a share of every payment you receive into it.",
+        "**Put the four dates in your calendar** now: Apr 15, Jun 15, Sep 15 and Jan 15."
+      ],
+      "quick_hits": [
+        "**Income changed a lot?** If this year will be much lower or higher, tell us. The safe harbor isn't always the cheapest choice.",
+        "**Pay online** at [IRS.gov/payments](https://www.irs.gov/payments) and keep the confirmation. Your state may want its own payments too."
+      ],
+      "job": "Find last year's total tax on your 2025 return (Form 1040) and write it down. That number is where your 2027 plan starts.",
+      "lobby": {
+        "kicker": "Quarterly taxes",
+        "headline": "Make quarterly taxes boring.",
+        "bullets": [
+          "Due Apr 15, Jun 15, Sep 15, Jan 15.",
+          "Safe harbor: 100% of last year's tax.",
+          "Set a share of every payment aside."
+        ]
+      },
+      "social": {
+        "caption": "Freelancers: your first 2027 estimated tax payment is due April 15, along with your return. The safe harbor rule helps: pay at least 100% of last year's total tax (110% if your income was over $150,000) across the four dates, on time, and you generally avoid the underpayment penalty. Want your four amounts worked out? Call {{FIRM_PHONE}}.",
+        "alt": "{{FIRM_SHORT}}: Make quarterly taxes boring. Due Apr 15, Jun 15, Sep 15, Jan 15. Safe harbor: 100% of last year's tax. Set a share of every payment aside."
+      },
+      "brief": {
+        "Clients may ask": "\"Can't I just pay it all in April?\"",
+        "What to say": "\"You can, but you may owe an underpayment penalty. Four on-time payments based on last year's tax usually avoid it. We'll work out the amounts with your return.\"",
+        "Watch for": "High earners (AGI over $150,000, or $75,000 married filing separately) need 110%, not 100%."
+      },
+      "sources": [
+        {
+          "name": "IRS: Estimated taxes",
+          "url": "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes"
+        },
+        {
+          "name": "IRS: Underpayment of estimated tax by individuals penalty",
+          "url": "https://www.irs.gov/payments/underpayment-of-estimated-tax-by-individuals-penalty"
+        },
+        {
+          "name": "IRS: About Form 1040-ES",
+          "url": "https://www.irs.gov/forms-pubs/about-form-1040-es"
+        }
+      ]
+    },
+    {
+      "id": "2027-04",
+      "n": 4,
+      "send_date": "2027-04-06",
+      "deliver_by": "2027-03-23",
+      "source": "1099 Money Shorts #22 (extension isn't more time to pay), #10 (safe harbor)",
+      "topic": "April: the April 15 deadline and extensions",
+      "subject": "An extension gives you more time to file, not to pay",
+      "preheader": "April 15 is two deadlines for freelancers. Here's how to handle both.",
+      "headline": "April 15 is two deadlines",
+      "explain": [
+        "For self-employed people, April 15 is the deadline to file your 2026 return and pay what you owe, **and** the date of your first estimated payment for 2027.",
+        "If you need more time, an extension (Form 4868) moves the filing deadline to October 15. It doesn't move the payment deadline. Tax not paid by April 15 can bring interest and penalties."
+      ],
+      "tell": "Extend the paperwork if you need to, but pay what you expect to owe by April 15.",
+      "steps": [
+        "**Send us anything still missing** this week, through {{CLIENT_PORTAL}}.",
+        "**Need an extension?** Tell us now. We'll estimate what you owe so you can pay it with the extension.",
+        "**Pay your first 2027 estimate** by April 15 too. We'll give you the amount."
+      ],
+      "quick_hits": [
+        "**Can't pay it all?** File and pay what you can. The IRS has payment plans, and penalties for not filing are usually larger than for not paying.",
+        "**Pay online** at [IRS.gov/payments](https://www.irs.gov/payments) and keep the confirmation."
+      ],
+      "job": "Check {{CLIENT_PORTAL}} for anything we've asked for, and upload it today.",
+      "promise": true,
+      "lobby": {
+        "kicker": "April 15",
+        "headline": "Two deadlines on one day.",
+        "bullets": [
+          "File (or extend) your 2026 return.",
+          "Pay what you owe.",
+          "Make your first 2027 payment."
+        ]
+      },
+      "social": {
+        "caption": "Freelancers: April 15 is two deadlines. File your 2026 return (or an extension) and pay what you owe, and make your first 2027 estimated payment. An extension gives you more time to file, not to pay. Questions? Call {{FIRM_PHONE}}.",
+        "alt": "{{FIRM_SHORT}}: Two deadlines on one day. File or extend your 2026 return. Pay what you owe. Make your first 2027 payment."
+      },
+      "brief": {
+        "Clients may ask": "\"If I file an extension, can I pay later?\"",
+        "What to say": "\"The extension only covers the paperwork. We'll estimate what you owe so you can pay it by April 15 and avoid most penalties and interest.\"",
+        "Watch for": "Clients who think an extension delays the first 2027 estimated payment. It doesn't."
+      },
+      "sources": [
+        {
+          "name": "IRS: Get an extension to file your tax return",
+          "url": "https://www.irs.gov/filing/get-an-extension-to-file-your-tax-return"
+        },
+        {
+          "name": "IRS: Estimated taxes",
+          "url": "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes"
+        },
+        {
+          "name": "IRS: Payment plans",
+          "url": "https://www.irs.gov/payments/payment-plans-installment-agreements"
+        }
+      ]
+    },
+    {
+      "id": "2027-05",
+      "n": 5,
+      "send_date": "2027-05-04",
+      "deliver_by": "2027-04-20",
+      "source": "1099 Money Shorts #04 (one account for the business), carousel #12 (receipts that hold up)",
+      "topic": "May: a separate account and records that hold up",
+      "subject": "The 20-minute setup that makes next tax season easier",
+      "preheader": "A separate account for your business money, and a simple way to keep receipts.",
+      "headline": "Make next tax season easier now",
+      "explain": [
+        "With last year's return done, May is the best month to make next year easier. Two habits do most of the work.",
+        "**Keep business money separate.** A separate checking account (and card, if you use one) for your freelance income and expenses makes your records clear. **Keep records of what you spend.** The IRS expects you to be able to show what each deduction was for."
+      ],
+      "tell": "If it's business, it goes through the business account and the receipt gets saved.",
+      "steps": [
+        "**Open a separate account** for your freelance money, if you don't have one. Many banks offer free accounts.",
+        "**Save receipts as you go:** snap a photo and put it in one folder, with a note on what it was for.",
+        "**Every month or so,** upload your statements to {{CLIENT_PORTAL}} or keep them in one place."
+      ],
+      "quick_hits": [
+        "**How long to keep records?** Generally at least 3 years after you file, longer in some cases. Ask us what applies to you.",
+        "**Paid by app?** Payment app records count, but they don't say what the purchase was for. Add a note."
+      ],
+      "job": "Make one folder on your phone called \"Receipts 2027\" and add the first one today.",
+      "promise": false,
+      "lobby": {
+        "kicker": "Recordkeeping",
+        "headline": "Make next tax season easier now.",
+        "bullets": [
+          "Separate business account.",
+          "Save every receipt with a note.",
+          "Upload statements monthly."
+        ]
+      },
+      "social": {
+        "caption": "Freelancers: make next tax season easier now. Keep business money in a separate account, snap and save every receipt with a note on what it was for, and keep your statements in one place. Want help setting up? Call {{FIRM_PHONE}}.",
+        "alt": "{{FIRM_SHORT}}: Make next tax season easier now. Separate business account. Save every receipt with a note. Upload statements monthly."
+      },
+      "brief": {
+        "Clients may ask": "\"Do I need a business account if I'm just a sole proprietor?\"",
+        "What to say": "\"It's not required, but it makes your records much clearer and saves time at tax time. We recommend it.\"",
+        "Watch for": "Clients mixing personal and business spending on one card. Offer a bookkeeping check-in."
+      },
+      "sources": [
+        {
+          "name": "IRS: Recordkeeping",
+          "url": "https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping"
+        },
+        {
+          "name": "IRS: Publication 583, Starting a business and keeping records",
+          "url": "https://www.irs.gov/publications/p583"
+        },
+        {
+          "name": "IRS: How long should I keep records?",
+          "url": "https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records"
+        }
+      ]
+    },
+    {
+      "id": "2027-06",
+      "n": 6,
+      "send_date": "2027-06-01",
+      "deliver_by": "2027-05-18",
+      "source": "1099 Money Shorts #18 (quarterly taxes with one real number), #11 (the short second quarter)",
+      "topic": "June: the June 15 payment",
+      "subject": "Your second estimated payment is due June 15",
+      "preheader": "The second quarter is only two months long, so it sneaks up.",
+      "headline": "June 15 comes fast",
+      "explain": [
+        "Your second 2027 estimated payment is due **June 15**. It covers income from April and May, which is why it feels like it comes right after the first one.",
+        "If you're using the safe harbor amount we worked out, pay the same as in April. If your income has changed a lot, let us know and we'll check the number."
+      ],
+      "tell": "Same amount, on time. Put it in your calendar now.",
+      "steps": [
+        "**Pay by June 15** at IRS.gov/payments, using the amount from your plan.",
+        "**Check your state:** many states have their own estimated payments on similar dates.",
+        "**Income up or down a lot?** Call {{FIRM_PHONE}} and we'll update the next two amounts."
+      ],
+      "quick_hits": [
+        "**Set a reminder** for September 15 while you're at it.",
+        "**Keep a tax savings account** and move a share of each payment you get into it, so the money is there."
+      ],
+      "job": "Put June 15, September 15 and January 15 in your phone calendar with the payment amount.",
+      "promise": false,
+      "lobby": {
+        "kicker": "Estimated taxes",
+        "headline": "June 15: second payment due.",
+        "bullets": [
+          "It covers April and May.",
+          "Pay the amount from your plan.",
+          "Check your state's dates too."
+        ]
+      },
+      "social": {
+        "caption": "Freelancers: your second 2027 estimated tax payment is due June 15. It covers April and May, so it comes fast. Pay the amount from your plan at IRS.gov/payments, and check your state's dates too. Income changed? Call {{FIRM_PHONE}}.",
+        "alt": "{{FIRM_SHORT}}: June 15, second payment due. It covers April and May. Pay the amount from your plan. Check your state's dates too."
+      },
+      "brief": {
+        "Clients may ask": "\"Can I skip June and pay double in September?\"",
+        "What to say": "\"Each payment is due on its own date. Paying late can bring an underpayment penalty, even if you catch up later.\"",
+        "Watch for": "Clients whose income jumped this year. They may want to raise payments even if safe harbor protects them from the penalty."
+      },
+      "sources": [
+        {
+          "name": "IRS: Estimated taxes",
+          "url": "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes"
+        },
+        {
+          "name": "IRS: Pay online (Direct Pay and other options)",
+          "url": "https://www.irs.gov/payments"
+        }
+      ]
+    },
+    {
+      "id": "2027-07",
+      "n": 7,
+      "send_date": "2027-07-06",
+      "deliver_by": "2027-06-22",
+      "source": "1099 Money Shorts #14 (the home office test), carousel #09 (simplified method)",
+      "topic": "July: the home office deduction",
+      "subject": "Do you qualify for the home office deduction?",
+      "preheader": "Two tests, two ways to figure it, and the mistake that's easy to make.",
+      "headline": "The home office deduction",
+      "explain": [
+        "If you use part of your home for your business, you may be able to deduct some of the costs. The space generally has to be used **regularly and exclusively** for business, and be your main place of business or where you meet clients.",
+        "**Exclusively** matters: a desk in a guest room you also use for guests, or the kitchen table, usually doesn't count. There are two ways to figure the deduction: the simplified method ($5 a square foot, up to 300 square feet) or the regular method, based on actual expenses."
+      ],
+      "tell": "A space used only for work, regularly, can count. A space you share with daily life usually doesn't.",
+      "steps": [
+        "**Measure the space** you use only for work, and the total size of your home.",
+        "**Keep a few photos** of the space and a note of how you use it.",
+        "**Keep your home bills** (rent or mortgage interest, utilities, insurance) in your records. We'll work out which method is better."
+      ],
+      "quick_hits": [
+        "**Employees working from home** generally can't take this deduction. It's for self-employed income.",
+        "**Selling your home later?** The regular method can have tax effects then. We'll factor that in."
+      ],
+      "job": "Measure your workspace and your home, and send us the two numbers through {{CLIENT_PORTAL}}.",
+      "promise": false,
+      "lobby": {
+        "kicker": "Home office",
+        "headline": "Does your workspace count?",
+        "bullets": [
+          "Used regularly and only for work.",
+          "Measure it.",
+          "Keep your home bills."
+        ]
+      },
+      "social": {
+        "caption": "Freelancers: the home office deduction generally needs a space used regularly and only for your business. The simplified method is $5 a square foot, up to 300 square feet. Measure your space, keep your home bills, and we'll pick the better method. Questions? Call {{FIRM_PHONE}}.",
+        "alt": "{{FIRM_SHORT}}: Does your workspace count? Used regularly and only for work. Measure it. Keep your home bills."
+      },
+      "brief": {
+        "Clients may ask": "\"I work from my kitchen table. Can I deduct it?\"",
+        "What to say": "\"Usually not, because the space has to be used only for business. Let's talk about what else you can deduct.\"",
+        "Watch for": "Clients with W-2 jobs plus freelance work: the deduction applies only to the self-employment side."
+      },
+      "sources": [
+        {
+          "name": "IRS: Home office deduction",
+          "url": "https://www.irs.gov/businesses/small-businesses-self-employed/home-office-deduction"
+        },
+        {
+          "name": "IRS: Simplified option for home office deduction",
+          "url": "https://www.irs.gov/businesses/small-businesses-self-employed/simplified-option-for-home-office-deduction"
+        },
+        {
+          "name": "IRS: Publication 587, Business use of your home",
+          "url": "https://www.irs.gov/publications/p587"
+        }
+      ]
+    },
+    {
+      "id": "2027-08",
+      "n": 8,
+      "send_date": "2027-08-03",
+      "deliver_by": "2027-07-20",
+      "source": "1099 Money driver mileage page and Shorts #16 (the log that holds up)",
+      "topic": "August: your car and the mileage log",
+      "subject": "The mileage log that holds up",
+      "preheader": "What to write down each trip, and the miles that don't count.",
+      "headline": "Keep a mileage log that holds up",
+      "explain": [
+        "If you drive for your business, you can usually deduct either the IRS standard mileage rate or your actual car costs. Either way, you need a record of your business miles.",
+        "A good log shows the **date, where you went, why, and how many miles**. Driving from home to a regular workplace is commuting, which generally isn't deductible. Trips to clients, supply runs and between job sites usually count."
+      ],
+      "tell": "No log, no deduction. Write it down when you drive, not in April.",
+      "steps": [
+        "**Pick one way to log**: a notebook in the car, a note on your phone, or a mileage app.",
+        "**Write down your odometer reading** now and on December 31.",
+        "**Keep gas, repair and insurance receipts** too. We'll compare the two methods for you."
+      ],
+      "quick_hits": [
+        "**The IRS sets the standard mileage rate** each year. We'll use the right one for 2027.",
+        "**Rideshare and delivery drivers:** the app's mileage figure may not match your full business miles. Your own log is better."
+      ],
+      "job": "Take a photo of your odometer today, and start logging this week's trips.",
+      "promise": false,
+      "lobby": {
+        "kicker": "Mileage",
+        "headline": "No log, no deduction.",
+        "bullets": [
+          "Date, place, purpose, miles.",
+          "Commuting doesn't count.",
+          "Photo your odometer now."
+        ]
+      },
+      "social": {
+        "caption": "Freelancers who drive for work: keep a mileage log with the date, where you went, why and how many miles. Commuting generally doesn't count. Take a photo of your odometer today and on Dec 31. Questions? Call {{FIRM_PHONE}}.",
+        "alt": "{{FIRM_SHORT}}: No log, no deduction. Date, place, purpose, miles. Commuting doesn't count. Photo your odometer now."
+      },
+      "brief": {
+        "Clients may ask": "\"Can I deduct my drive to my office?\"",
+        "What to say": "\"That's usually commuting, which isn't deductible. Trips from there to clients or job sites usually are.\"",
+        "Watch for": "Clients choosing actual expenses in year one: the choice can limit later years. Check before filing."
+      },
+      "sources": [
+        {
+          "name": "IRS: Standard mileage rates",
+          "url": "https://www.irs.gov/tax-professionals/standard-mileage-rates"
+        },
+        {
+          "name": "IRS: Publication 463, Travel, gift and car expenses",
+          "url": "https://www.irs.gov/publications/p463"
+        }
+      ]
+    },
+    {
+      "id": "2027-09",
+      "n": 9,
+      "send_date": "2027-09-07",
+      "deliver_by": "2027-08-24",
+      "source": "1099 Money Shorts #18 (quarterly payments); Scam Decoded small-business blocks (fake invoices); IRS impersonation warnings",
+      "topic": "September: the Sept 15 payment, and IRS scams",
+      "subject": "Sept 15 is your third payment. And the IRS doesn't text.",
+      "preheader": "Your third 2027 estimated payment, plus the scams that copy the IRS and your vendors.",
+      "headline": "Third payment, and two scams to skip",
+      "explain": [
+        "Your third 2027 estimated payment is due **September 15**. Pay the amount from your plan, unless your income has changed a lot.",
+        "Around payment dates, scammers pretend to be the IRS: a call, text or email says you owe and must pay now, by gift card, payment app or crypto. Others send fake invoices for services nobody ordered."
+      ],
+      "tell": "The IRS usually contacts you first by mail, and never demands payment by gift card, payment app or crypto.",
+      "steps": [
+        "**Pay by September 15** at IRS.gov/payments, the only way you need.",
+        "**Got a call or text from \"the IRS\"?** Don't pay, don't click. Call us at {{FIRM_PHONE}} and we'll check your account.",
+        "**Match every invoice** to a real order before you pay it."
+      ],
+      "quick_hits": [
+        "**Got a real IRS letter?** Send us a photo through {{CLIENT_PORTAL}} before you reply.",
+        "**Report IRS impersonation** to the Treasury Inspector General for Tax Administration (TIGTA)."
+      ],
+      "job": "Put January 15 in your calendar for your last 2027 payment.",
+      "promise": true,
+      "lobby": {
+        "kicker": "Estimated taxes",
+        "headline": "Sept 15: third payment due.",
+        "bullets": [
+          "Pay at IRS.gov/payments.",
+          "The IRS doesn't text for payment.",
+          "Got a letter? Send it to us."
+        ]
+      },
+      "social": {
+        "caption": "Freelancers: your third 2027 estimated payment is due September 15. Pay at IRS.gov/payments. And be careful: the IRS doesn't text you demanding payment, and never asks for gift cards or crypto. Got a call or letter? Call {{FIRM_PHONE}} first.",
+        "alt": "{{FIRM_SHORT}}: Sept 15, third payment due. Pay at IRS.gov/payments. The IRS doesn't text for payment. Got a letter? Send it to us."
+      },
+      "brief": {
+        "Clients may ask": "\"I got a text saying I owe the IRS. Is it real?\"",
+        "What to say": "\"Almost certainly not. Don't click. We can check your IRS account, and the IRS usually starts with a letter.\"",
+        "Watch for": "Clients who already paid a scammer: help them report it to TIGTA and the FTC, and watch for identity theft."
+      },
+      "sources": [
+        {
+          "name": "IRS: Tax scams and consumer alerts",
+          "url": "https://www.irs.gov/newsroom/tax-scams-consumer-alerts"
+        },
+        {
+          "name": "IRS: Estimated taxes",
+          "url": "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes"
+        },
+        {
+          "name": "TIGTA: Report IRS impersonation scams",
+          "url": "https://www.tigta.gov/reportcrime-misconduct"
+        }
+      ]
+    },
+    {
+      "id": "2027-10",
+      "n": 10,
+      "send_date": "2027-10-05",
+      "deliver_by": "2027-09-21",
+      "source": "1099 Money Shorts #25 (retirement when you're your own boss), carousel #17",
+      "topic": "October: retirement plans for the self-employed",
+      "subject": "You're your own boss. Who's funding your retirement?",
+      "preheader": "Three common plans for self-employed people, and why to ask before December.",
+      "headline": "Retirement when you're your own boss",
+      "explain": [
+        "Without an employer plan, it's up to you. The good news: self-employed people have options that can lower this year's tax and build savings.",
+        "Common choices include a **SEP IRA**, a **solo 401(k)** and a **SIMPLE IRA**. They differ in how much you can put in, the paperwork, and the deadlines for setting them up. Some must be set up before the end of the year to count for this year."
+      ],
+      "tell": "Ask in October, not April. Some plans have year-end deadlines.",
+      "steps": [
+        "**Tell us if you want to save for retirement** this year, and roughly how much you could put in.",
+        "**We'll compare the plans** for your income and situation.",
+        "**Book a time** before the end of November: {{BOOKING_LINK}}"
+      ],
+      "quick_hits": [
+        "**Have employees?** The rules change. Let us know.",
+        "**Already have a plan?** Check that the contributions you make match what we agreed."
+      ],
+      "job": "Write down roughly how much you could save for retirement this year, even if it's small, and bring it to our call.",
+      "promise": false,
+      "lobby": {
+        "kicker": "Retirement",
+        "headline": "Your own boss? Fund your own retirement.",
+        "bullets": [
+          "SEP IRA, solo 401(k), SIMPLE.",
+          "Some need setting up by year-end.",
+          "Ask us by November."
+        ]
+      },
+      "social": {
+        "caption": "Freelancers: you can fund your own retirement and lower your tax. SEP IRAs, solo 401(k)s and SIMPLE IRAs each have different limits and deadlines, and some must be set up before year-end. Ask us by November: {{BOOKING_LINK}}",
+        "alt": "{{FIRM_SHORT}}: Your own boss? Fund your own retirement. SEP IRA, solo 401(k), SIMPLE. Some need setting up by year-end. Ask us by November."
+      },
+      "brief": {
+        "Clients may ask": "\"Which plan should I open?\"",
+        "What to say": "\"It depends on your income, whether you have employees and how much you want to save. Let's book 20 minutes and compare.\"",
+        "Watch for": "Year-end set-up deadlines and the current year's contribution limits. Confirm both on IRS.gov before advising."
+      },
+      "sources": [
+        {
+          "name": "IRS: Retirement plans for self-employed people",
+          "url": "https://www.irs.gov/retirement-plans/retirement-plans-for-self-employed-people"
+        },
+        {
+          "name": "IRS: Publication 560, Retirement plans for small business",
+          "url": "https://www.irs.gov/publications/p560"
+        }
+      ]
+    },
+    {
+      "id": "2027-11",
+      "n": 11,
+      "send_date": "2027-11-02",
+      "deliver_by": "2027-10-19",
+      "source": "1099 Money Shorts #27 (health insurance when you're self-employed)",
+      "topic": "November: health insurance open enrollment",
+      "subject": "Health insurance for next year: check your dates now",
+      "preheader": "Marketplace open enrollment starts November 1, and the deadline may be sooner than you think.",
+      "headline": "Health insurance for next year",
+      "explain": [
+        "If you buy your own health insurance, open enrollment for next year's Marketplace plans starts **November 1**. End dates vary by state, and they've changed in recent years, so check yours now at HealthCare.gov or your state's marketplace.",
+        "Self-employed people can often deduct health insurance premiums for themselves and their family, with some limits. And your expected income matters: it's used to work out any help with premiums."
+      ],
+      "tell": "Check your state's deadline this week, and use a realistic income estimate.",
+      "steps": [
+        "**Look up your state's open enrollment dates** at HealthCare.gov.",
+        "**Estimate next year's income** carefully. Ask us if you're unsure: {{FIRM_PHONE}}.",
+        "**Keep your premium records** and Form 1095-A, if you get one. We'll need them for your return."
+      ],
+      "quick_hits": [
+        "**Income changed during the year?** Update your Marketplace application so your premium help stays right.",
+        "**HSA-eligible plan?** A Health Savings Account may be worth asking about."
+      ],
+      "job": "Put your state's open enrollment deadline in your calendar today.",
+      "promise": false,
+      "lobby": {
+        "kicker": "Health insurance",
+        "headline": "Open enrollment starts Nov 1.",
+        "bullets": [
+          "Check your state's deadline.",
+          "Estimate income carefully.",
+          "Keep premium records."
+        ]
+      },
+      "social": {
+        "caption": "Freelancers: open enrollment for next year's Marketplace health plans starts November 1, and end dates vary by state. Check yours at HealthCare.gov, estimate your income carefully, and keep your premium records. Questions? Call {{FIRM_PHONE}}.",
+        "alt": "{{FIRM_SHORT}}: Open enrollment starts Nov 1. Check your state's deadline. Estimate income carefully. Keep premium records."
+      },
+      "brief": {
+        "Clients may ask": "\"What income should I put on my Marketplace application?\"",
+        "What to say": "\"Your best estimate of next year's household income. We can help you estimate it from this year's numbers.\"",
+        "Watch for": "Clients with big income swings: premium tax credits are reconciled on the return, which can mean paying some back."
+      },
+      "sources": [
+        {
+          "name": "HealthCare.gov: Open enrollment",
+          "url": "https://www.healthcare.gov/quick-guide/dates-and-deadlines/"
+        },
+        {
+          "name": "IRS: Self-employed health insurance deduction (Form 7206)",
+          "url": "https://www.irs.gov/forms-pubs/about-form-7206"
+        },
+        {
+          "name": "IRS: Premium tax credit",
+          "url": "https://www.irs.gov/affordable-care-act/individuals-and-families/the-premium-tax-credit-the-basics"
+        }
+      ]
+    },
+    {
+      "id": "2027-12",
+      "n": 12,
+      "send_date": "2027-12-07",
+      "deliver_by": "2027-11-23",
+      "source": "1099 Money Shorts #20 (W-9s before you pay), 1099 threshold explainer",
+      "topic": "December: year-end checklist and W-9s",
+      "subject": "Five things to do before December 31",
+      "preheader": "W-9s from anyone you paid, receipts in one place, and the Jan 15 payment.",
+      "headline": "Your year-end checklist",
+      "explain": [
+        "A few minutes in December saves a lot of time in January. If you paid other contractors for your business, you may need to send them a Form 1099-NEC by **January 31**. For payments made in 2026 and later, that generally applies when you paid someone **$2,000 or more** in the year.",
+        "To fill in the form, you need their legal name, address and taxpayer ID from a Form W-9. It's much easier to ask now than in late January."
+      ],
+      "tell": "Get a W-9 before you pay a contractor, and finish your records before the holidays.",
+      "steps": [
+        "**Ask for a W-9** from any contractor you paid $2,000 or more this year, if you don't have one.",
+        "**Pull your records together:** statements, receipts, mileage log and 1099s you expect to receive.",
+        "**Your last 2027 estimated payment** is due January 15. We'll confirm the amount."
+      ],
+      "quick_hits": [
+        "**Thinking of buying equipment** before year-end to lower your tax? Talk to us first. It's not always the best move.",
+        "**Paid contractors through a card or payment app?** Those payments are usually reported by the payment company, not by you. Ask us."
+      ],
+      "job": "List everyone you paid for work this year, with the total for each. Send it to us through {{CLIENT_PORTAL}}.",
+      "promise": true,
+      "lobby": {
+        "kicker": "Year-end",
+        "headline": "Five things before Dec 31.",
+        "bullets": [
+          "Get W-9s from contractors.",
+          "Gather your records.",
+          "Jan 15: last payment."
+        ]
+      },
+      "social": {
+        "caption": "Freelancers: before December 31, get a W-9 from any contractor you paid $2,000 or more (Form 1099-NEC is due Jan 31), pull your records together, and plan your last 2027 estimated payment for January 15. Questions? Call {{FIRM_PHONE}}.",
+        "alt": "{{FIRM_SHORT}}: Five things before Dec 31. Get W-9s from contractors. Gather your records. Jan 15: last payment."
+      },
+      "brief": {
+        "Clients may ask": "\"Do I need to send a 1099 to my web designer?\"",
+        "What to say": "\"If you paid them $2,000 or more this year for your business, and not by card or payment app, you probably do. Send us their W-9 and we'll check.\"",
+        "Watch for": "The 1099-NEC threshold changed to $2,000 for payments made from 2026 on. Older guidance online still says $600."
+      },
+      "sources": [
+        {
+          "name": "IRS: About Form 1099-NEC",
+          "url": "https://www.irs.gov/forms-pubs/about-form-1099-nec"
+        },
+        {
+          "name": "IRS: About Form W-9",
+          "url": "https://www.irs.gov/forms-pubs/about-form-w-9"
+        },
+        {
+          "name": "IRS: Estimated taxes",
+          "url": "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes"
+        }
+      ]
+    }
+  ]
+}

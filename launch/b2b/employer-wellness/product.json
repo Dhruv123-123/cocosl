@@ -1,0 +1,23 @@
+{
+  "_about": "Labels and formats for the monthly employee financial-wellness newsletter (Money Made Simple at Work). Read by ../build.py.",
+  "series": "Money Made Simple at Work",
+  "unit": "month",
+  "labels": {
+    "eyebrow": "This month's money topic",
+    "tell": "The one thing to remember",
+    "promise": "From HR",
+    "steps": "Do it this month",
+    "hits": "Good to know",
+    "job": "Your 10-minute task",
+    "brief": "Manager talking points",
+    "screen": "Breakroom screen and flyer",
+    "post": "Intranet, Teams or Slack post"
+  },
+  "cta": "Questions about your benefits? Contact **{{BENEFITS_CONTACT}}**. Something weighing on you? {{EAP_LINE}}",
+  "visual_footer": "Questions about your benefits? Contact **{{BENEFITS_CONTACT}}**.",
+  "disclaimer": "This newsletter is general education, not personal financial, tax, legal or investment advice. For advice about your situation, talk to a qualified professional.",
+  "visuals": ["social", "lobby", "poster"],
+  "not_in_essentials": ["poster"],
+  "tokens": ["{{EMPLOYER_NAME}}", "{{EMPLOYER_SHORT}}", "{{BENEFITS_CONTACT}}", "{{BENEFITS_PORTAL}}", "{{RETIREMENT_PLAN}}", "{{MATCH_LINE}}", "{{EAP_LINE}}", "{{HR_NOTE}}"],
+  "promise_token": "{{HR_NOTE}}"
+}

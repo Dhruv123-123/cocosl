@@ -1,0 +1,21 @@
+{
+  "_about": "Renders the master pack with every brand slot visible as a token.",
+  "slug": "placeholders-es",
+  "name": "{{ORG_NAME}}",
+  "initials": "LOGO",
+  "logo": "",
+  "color": "#3B4A5A",
+  "accent": "#E0A526",
+  "tier": "single",
+  "tokens": {
+    "ORG_SHORT": "{{ORG_SHORT}}",
+    "HELP_LINE": "{{HELP_LINE}}",
+    "HELP_LINE_SHORT": "{{HELP_LINE_SHORT}}"
+  },
+  "promise": "",
+  "footer_lines": [
+    "{{ORG_FOOTER}}"
+  ],
+  "unsubscribe": "",
+  "credit_line": ""
+}

@@ -1,0 +1,4 @@
+client_slug,issue_id,version,delivered_at,reviewer,decision,decided_at,evidence,member_send_date,notes
+example-client,TEMPLATE,v1,2027-01-12 09:00,"Jane Example, Compliance Officer",approved,2027-01-14 15:20,"Email reply, subject ""Your branded preview: Weekly Scam Alert""",,"EXAMPLE ROW: delete before use. Footer insurance line changed before approval."
+example-client,2027-02-a,v1,2027-01-26 09:00,"Jane Example, Compliance Officer",changes,2027-01-29 11:05,"Email reply, subject ""Weekly Scam Alert 2027-02-a""",,EXAMPLE ROW: asked to remove one sentence.
+example-client,2027-02-a,v2,2027-02-01 10:30,"Jane Example, Compliance Officer",approved,2027-02-01 14:00,"Email reply, subject ""Re: 2027-02-a v2""",2027-02-02,EXAMPLE ROW

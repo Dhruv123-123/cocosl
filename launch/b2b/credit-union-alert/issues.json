@@ -1,0 +1,725 @@
+{
+  "_about": "Master content for the white-label Weekly Scam Alert. Tokens like {{CU_SHORT}} are filled per credit union by build.py from a brand file. Each issue is rewritten for a credit union audience from Scam Decoded research (source_issue = the Scam Decoded newsletter issue it draws on). No affiliate links, no product mentions, no Scam Decoded links in any member-facing text. [text](url) and **bold** are the only formatting.",
+  "reviewed": "2026-11-07",
+  "issues": [
+    {
+      "id": "2027-01-a",
+      "n": 1,
+      "send_date": "2027-01-05",
+      "deliver_by": "2026-12-29",
+      "source": "Scam Decoded newsletter #22 (breach follow-ups) and the fraud-call research behind it",
+      "topic": "Fake fraud department calls that ask for a code",
+      "subject": "Scam alert: if \"we\" call asking for a code, hang up",
+      "preheader": "Scammers pretend to be our fraud team. One rule stops them.",
+      "headline": "The fake fraud department call",
+      "example_label": "What it sounds like (made-up example)",
+      "example": "\"Hi, this is the fraud department at {{CU_SHORT}}. We just stopped a $482 charge at an electronics store. To block it, I'm sending a code to your phone. Can you read it back to me?\"",
+      "explain": [
+        "The caller ID may even show our name. Caller ID is easy to fake.",
+        "That code isn't for blocking anything. It's the code that lets someone sign in to your account or approve a payment. Once you read it out, they can get in. Another version asks you to move your money to a \"safe account\" to protect it. There is no such thing."
+      ],
+      "tell": "Anyone who asks you to read back a code, give your password or PIN, or move money to keep it safe is not us.",
+      "promise": true,
+      "steps": [
+        "**Hang up.** Then call us at {{CU_PHONE}} or the number on the back of your card. If it was really us, we'll still be there.",
+        "**Already shared a code or moved money?** Call us right away at {{CU_PHONE}}. The sooner we know, the more we can try to do.",
+        "**Report it** at [ReportFraud.ftc.gov](https://reportfraud.ftc.gov). It helps track who's behind these calls."
+      ],
+      "quick_hits": [
+        "**A text first, then a call:** a text asks \"Did you make this purchase? Reply YES or NO\", then a \"fraud agent\" calls. Don't trust the call because of the text. Hang up and call us.",
+        "**\"Don't tell the branch\":** if a caller tells you to keep it secret from our staff, that's a scam every time."
+      ],
+      "job": "Save {{CU_PHONE}} in your phone as \"{{CU_SHORT}} (real number)\", and tell one family member the rule: we never ask you to read back a code.",
+      "lobby": {
+        "kicker": "Scam alert",
+        "headline": "We will never ask you to read back a code.",
+        "bullets": [
+          "Caller ID can be faked.",
+          "Hang up. Call the number on your card.",
+          "No real \"safe account\" exists."
+        ]
+      },
+      "social": {
+        "caption": "Scam alert: someone calls from \"the {{CU_SHORT}} fraud department\" and asks you to read back a code we just texted you. Hang up. That code lets them into your account. We will never ask you to read back a code, give your PIN or move money to a \"safe account\". If you're not sure, call us at {{CU_PHONE}} or the number on the back of your card.",
+        "alt": "Scam alert from {{CU_SHORT}}: we will never ask you to read back a code. Caller ID can be faked. Hang up and call the number on your card. There is no real safe account."
+      },
+      "brief": {
+        "Members may ask": "\"Did you just call me about a charge?\"",
+        "What to say": "\"We never ask members to read back a code or move money to a safe account. Let's look at your account together right now.\"",
+        "Escalate": "If they shared a code or moved money: follow our fraud procedure today, check recent sign-ins and payees, and help them change their password."
+      },
+      "sources": [
+        {
+          "name": "FTC: Got a call about fraud activity on your bank account? It could be a scammer (Jun 2024)",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2024/06/got-call-about-fraud-activity-your-bank-account-it-could-be-scammer"
+        },
+        {
+          "name": "FTC: What's a verification code and why would someone ask me for it? (Mar 2024)",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2024/03/whats-verification-code-why-would-someone-ask-me-it"
+        },
+        {
+          "name": "FTC: Did someone tell you to move or transfer your money? It could be a scam (Jan 2024)",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2024/01/did-someone-tell-you-move-or-transfer-your-money-it-could-be-scam"
+        },
+        {
+          "name": "FTC: imposter scams were the most-reported fraud in 2025, with over $3.5 billion lost (Mar 2026)",
+          "url": "https://www.ftc.gov/news-events/news/press-releases/2026/03/ftc-testifies-joint-economic-committee-agencys-efforts-combat-fraud"
+        }
+      ]
+    },
+    {
+      "id": "2027-01-b",
+      "n": 2,
+      "send_date": "2027-01-12",
+      "deliver_by": "2027-01-05",
+      "source": "Scam Decoded newsletter #8 (new-year job scams)",
+      "topic": "Task job scams and the fake check that comes with them",
+      "subject": "Scam alert: the job that pays you, then asks you to pay",
+      "preheader": "January job scams, the check that bounces, and when to call us first.",
+      "headline": "The job that asks you to pay",
+      "example_label": "What it looks like (made-up example)",
+      "example": "\"Hi! I'm a recruiter with a digital marketing agency. Flexible remote work, 60 to 90 minutes a day rating products, $300 to $800 a day. Interested? Message me on WhatsApp.\"",
+      "explain": [
+        "The first small payouts are real, to build trust. Then your \"account\" goes negative and you have to deposit money, often in crypto, to unlock your earnings. That money doesn't come back.",
+        "Another version mails you a check to buy equipment from their \"vendor\". The money can show up in your account before the check clears. When it bounces days later, you owe back what you spent or sent."
+      ],
+      "tell": "A real job never asks you to pay, deposit or buy anything to get paid, and never sends you a check to pass money on to someone else.",
+      "promise": false,
+      "steps": [
+        "**Don't reply.** Look the company up yourself and apply through its real careers page.",
+        "**Got a check from a new employer, buyer or stranger?** Call us at {{CU_PHONE}} before you spend or send any of it. We'd much rather answer a question than help clean up a bounced check.",
+        "**Already paid?** Stop, even if they say one more deposit releases your money. Report it at [ReportFraud.ftc.gov](https://reportfraud.ftc.gov)."
+      ],
+      "quick_hits": [
+        "**Interviews by text only:** real employers meet you by video or in person.",
+        "**\"Receive money and forward it\":** a job that has you move money through your account is moving stolen money, and you can be held responsible."
+      ],
+      "job": "Forward this to the person in your life who's job hunting right now.",
+      "lobby": {
+        "kicker": "Scam alert",
+        "headline": "A real job never asks you to pay to get paid.",
+        "bullets": [
+          "No deposits to unlock earnings.",
+          "A check to send money on will bounce.",
+          "Ask us before you spend a check from a stranger."
+        ]
+      },
+      "social": {
+        "caption": "Job hunting this January? Watch for the \"task job\": big pay for liking videos or rating products, then a deposit to unlock your earnings. Or a check to buy equipment from their vendor, which bounces after you've sent the money. A real job never asks you to pay to get paid. Got a check from someone new? Call us at {{CU_PHONE}} before you spend it.",
+        "alt": "Scam alert from {{CU_SHORT}}: a real job never asks you to pay to get paid. No deposits to unlock earnings. A check to send money on will bounce. Ask us before you spend a check from a stranger."
+      },
+      "brief": {
+        "Members may ask": "\"When will this check clear? My new job sent it for equipment.\"",
+        "What to say": "\"Funds showing as available doesn't mean the check is good. Can you tell me about the job? A check you're asked to send part of somewhere else is a common scam.\"",
+        "Escalate": "Follow our deposit hold and fraud procedures. If the member already sent money, note who it went to and how."
+      },
+      "sources": [
+        {
+          "name": "FTC: Job Scams",
+          "url": "https://consumer.ftc.gov/articles/job-scams"
+        },
+        {
+          "name": "FTC: That job offer text is probably a scam (Apr 2026)",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2026/04/job-offer-text-probably-scam"
+        },
+        {
+          "name": "FTC: How To Spot, Avoid, and Report Fake Check Scams",
+          "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams"
+        },
+        {
+          "name": "FTC: How to avoid work-from-home job scams (Jun 2025)",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2025/06/how-avoid-work-home-job-scams"
+        }
+      ]
+    },
+    {
+      "id": "2027-01-c",
+      "n": 3,
+      "send_date": "2027-01-19",
+      "deliver_by": "2027-01-12",
+      "source": "Scam Decoded newsletter #9 (wrong-number texts that turn into crypto investing)",
+      "topic": "Wrong-number texts that turn into crypto \"investments\"",
+      "subject": "Scam alert: the wrong number that wants to be friends",
+      "preheader": "How a polite text turns into a crypto investment, and the rule that ends it.",
+      "headline": "The wrong number that becomes an investment",
+      "example_label": "What it looks like (made-up example)",
+      "example": "\"Hi Emma, are we still on for dinner Saturday? ... Oh sorry, wrong number! You seem nice though. Where are you based?\"",
+      "explain": [
+        "This one is patient. Weeks of friendly chat later, your new friend mentions how well they're doing on a crypto trading site and offers to show you how.",
+        "The site shows your balance growing. When you try to take money out, there's a \"tax\" or \"fee\" to pay first. The balance was never real, and the fees keep coming."
+      ],
+      "tell": "Anyone you've only met online who brings up investing, on a site or app they picked, is running a scam. A fee to withdraw your own money means there's no money.",
+      "promise": false,
+      "steps": [
+        "**Don't invest** through a link or app sent by someone you met online. Delete and block wrong-number texts instead of replying.",
+        "**About to buy crypto or send a wire for an investment?** Call us at {{CU_PHONE}} first, or stop by a branch. Talking it through with someone you trust is the best protection there is.",
+        "**Already invested?** Stop paying fees. Report it to the FBI at [IC3.gov](https://www.ic3.gov) and the FTC at [ReportFraud.ftc.gov](https://reportfraud.ftc.gov)."
+      ],
+      "quick_hits": [
+        "**\"Recovery\" services** that promise to get your crypto back for a fee are often the same scammers coming back for more.",
+        "**Check before you invest:** you can look up an adviser or firm for free at [Investor.gov](https://www.investor.gov)."
+      ],
+      "job": "Don't reply to any wrong-number texts this week. Delete and block. It's the cheapest scam protection there is.",
+      "lobby": {
+        "kicker": "Scam alert",
+        "headline": "Met online? Don't invest with them.",
+        "bullets": [
+          "Don't reply to wrong-number texts.",
+          "A fee to withdraw means there's no money.",
+          "Talk to us before you buy crypto or wire money."
+        ]
+      },
+      "social": {
+        "caption": "It starts with \"Sorry, wrong number!\" and a friendly chat that lasts weeks. Then your new friend shows you a crypto site where your money seems to grow, until you try to withdraw and there's a fee. Don't invest with anyone you've only met online. About to buy crypto or send a wire for an investment? Talk to us first at {{CU_PHONE}}.",
+        "alt": "Scam alert from {{CU_SHORT}}: met online? Don't invest with them. Don't reply to wrong-number texts. A fee to withdraw means there's no money. Talk to us before you buy crypto or wire money."
+      },
+      "brief": {
+        "Members may ask": "\"I need to send a wire to my trading account. It's urgent, there's a fee to release my profits.\"",
+        "What to say": "\"Can I ask how you found this platform? Fees to release profits are a common sign of an investment scam. Let's take a minute before we send anything.\"",
+        "Escalate": "Follow our elder and vulnerable adult procedures where they apply, and our wire and crypto-purchase fraud checks."
+      },
+      "sources": [
+        {
+          "name": "FBI: Operation Level Up (cryptocurrency investment fraud)",
+          "url": "https://www.fbi.gov/how-we-can-help-you/victim-services/national-crimes-and-victim-resources/operation-level-up"
+        },
+        {
+          "name": "FBI: How the FBI is saving victims from cryptocurrency investment fraud",
+          "url": "https://www.fbi.gov/news/stories/operation-level-up-how-the-fbi-is-saving-victims-from-cryptocurrency-investment-fraud"
+        },
+        {
+          "name": "FBI IC3 public service announcement on cryptocurrency investment fraud (Oct 2022)",
+          "url": "https://www.ic3.gov/PSA/2022/psa221003"
+        },
+        {
+          "name": "SEC Investor.gov: check an adviser or firm",
+          "url": "https://www.investor.gov"
+        }
+      ]
+    },
+    {
+      "id": "2027-01-d",
+      "n": 4,
+      "send_date": "2027-01-26",
+      "deliver_by": "2027-01-19",
+      "source": "Scam Decoded newsletter #11 and #13 (IRS season texts, refund send-backs)",
+      "topic": "Fake IRS texts and refund scams at the start of tax season",
+      "subject": "Scam alert: the IRS isn't texting you",
+      "preheader": "Tax season fakes are out. One rule beats all of them.",
+      "headline": "The IRS isn't texting you",
+      "example_label": "What it looks like (made-up example)",
+      "example": "\"IRS: Your online account has been suspended. Verify your identity within 24 hours to release your refund: [link]\"",
+      "explain": [
+        "The link opens a copy of a real sign-in page. It takes your login, then asks for a photo of your driver's license \"to confirm it's you\". With both, someone can file a tax return in your name or get into your real account."
+      ],
+      "tell": "The IRS doesn't text or email you out of the blue about your refund or your account. Any message like this is fake, however official it looks.",
+      "promise": false,
+      "steps": [
+        "**Don't tap the link.** To check your real account, type **IRS.gov** into your browser yourself.",
+        "**Already entered your details?** Change that password now and follow the steps at the IRS's [Identity Theft Central](https://www.irs.gov/identity-theft-central). If you shared card or account numbers, call us at {{CU_PHONE}}.",
+        "**Report it.** Forward the text to **7726** (SPAM), then report it to the IRS using [these steps](https://www.irs.gov/help/report-fraud/report-fake-irs-treasury-or-tax-related-emails-and-messages)."
+      ],
+      "quick_hits": [
+        "**\"We sent your refund by mistake\":** if a refund you didn't expect lands in your account and someone asks you to send it back to them, don't. Call us first.",
+        "**The arrest call:** the real IRS doesn't threaten arrest or demand gift cards or crypto. Hang up."
+      ],
+      "job": "Get a free IRS Identity Protection PIN. It stops anyone else filing a return with your Social Security number. Start at [IRS.gov's Identity Theft Central](https://www.irs.gov/identity-theft-central) and make sure the address is irs.gov.",
+      "lobby": {
+        "kicker": "Tax season scam alert",
+        "headline": "The IRS isn't texting you.",
+        "bullets": [
+          "Don't tap tax links in texts.",
+          "Type IRS.gov yourself.",
+          "Unexpected refund and a send-it-back call? Ask us first."
+        ]
+      },
+      "social": {
+        "caption": "Tax season scam alert: a text says your IRS account is suspended and you must verify your identity to get your refund. It's fake. The IRS doesn't text you out of the blue about refunds. Don't tap. Type IRS.gov yourself. And if an unexpected refund lands in your account with a call asking you to send it back, call us first at {{CU_PHONE}}.",
+        "alt": "Tax season scam alert from {{CU_SHORT}}: the IRS isn't texting you. Don't tap tax links in texts. Type IRS.gov yourself. Unexpected refund and a send-it-back call? Ask us first."
+      },
+      "brief": {
+        "Members may ask": "\"The IRS deposited a refund by mistake and says I have to send it back by gift card or wire.\"",
+        "What to say": "\"The IRS won't ask you to send a refund back that way. Let's not send anything yet and look at where this deposit came from.\"",
+        "Escalate": "Check the deposit source, follow our fraud and account-takeover procedures, and point the member to IRS.gov for the real return process."
+      },
+      "sources": [
+        {
+          "name": "IRS: Report fake IRS, Treasury or tax-related emails and messages",
+          "url": "https://www.irs.gov/help/report-fraud/report-fake-irs-treasury-or-tax-related-emails-and-messages"
+        },
+        {
+          "name": "IRS: Identity Theft Central",
+          "url": "https://www.irs.gov/identity-theft-central"
+        },
+        {
+          "name": "IRS: If you were scammed",
+          "url": "https://www.irs.gov/help/tax-scams/if-you-were-scammed"
+        },
+        {
+          "name": "IRS: A deeper dive into the Dirty Dozen",
+          "url": "https://www.irs.gov/newsroom/a-deeper-dive-into-the-dirty-dozen-taxpayers-stay-alert-in-peak-filing-season"
+        }
+      ]
+    },
+    {
+      "id": "2027-02-a",
+      "n": 5,
+      "send_date": "2027-02-02",
+      "deliver_by": "2027-01-26",
+      "source": "Scam Decoded newsletter #10 (Data Privacy Day: fake breach settlements, three locks)",
+      "topic": "Fake data breach settlements, and 3 free locks",
+      "subject": "Scam alert: the data breach \"settlement\" that wants your account number",
+      "preheader": "Breach letters, fake claim pages, and 3 free locks that protect you either way.",
+      "headline": "The breach settlement that pays scammers",
+      "example_label": "What it looks like (made-up example)",
+      "example": "\"You may be owed up to $1,200 from a data breach settlement. Confirm your identity and the account where you'd like your payment deposited: [link]\"",
+      "explain": [
+        "Real data breaches happen, and some do end in real settlements. Scammers copy them: a text or email says you're owed money, then asks for your account number, card number or Social Security number \"to send your payment\".",
+        "A real settlement never needs your password, PIN or a one-time code, and never charges a fee to pay you."
+      ],
+      "tell": "Anyone who asks for your login, a code or a fee before paying you a settlement isn't paying you anything.",
+      "promise": true,
+      "steps": [
+        "**Don't use the link.** If you think a settlement is real, search for it yourself and check the official claim site named in court notices, or ask us.",
+        "**Lock 3 doors for free:** freeze your credit at the three credit bureaus, turn on two-step sign-in for online banking, and switch on card alerts in our app.",
+        "**Shared a number or code?** Call us right away at {{CU_PHONE}} so we can protect your account. Then report it at [IdentityTheft.gov](https://www.identitytheft.gov)."
+      ],
+      "quick_hits": [
+        "**A credit freeze is free** and doesn't hurt your credit score. You can lift it for a day when you apply for a loan.",
+        "**W-2 season:** the same tricks show up as \"HR\" emails asking you to confirm your direct deposit. Check with your employer by phone."
+      ],
+      "job": "Turn on card alerts and two-step sign-in in our app today. It takes five minutes and you'll know about any charge within seconds.",
+      "lobby": {
+        "kicker": "Scam alert",
+        "headline": "A real settlement never asks for your PIN.",
+        "bullets": [
+          "Don't use links in breach texts.",
+          "Freeze your credit for free.",
+          "Turn on card alerts today."
+        ]
+      },
+      "social": {
+        "caption": "Scam alert: a text says you're owed money from a data breach settlement and asks for your account number or a code to pay you. Don't use the link. A real settlement never needs your PIN, password or a code. Three free locks help either way: a credit freeze, two-step sign-in and card alerts. Questions? Call us at {{CU_PHONE}}.",
+        "alt": "Scam alert from {{CU_SHORT}}: a real settlement never asks for your PIN. Don't use links in breach texts. Freeze your credit for free. Turn on card alerts today."
+      },
+      "brief": {
+        "Members may ask": "\"I got a letter about a data breach. Is my account at risk?\"",
+        "What to say": "\"Let's turn on card alerts and two-step sign-in together right now. A credit freeze is free too, and we can show you where to do it.\"",
+        "Escalate": "If the member shared card or login details: follow our card-compromise and account-takeover procedures today."
+      },
+      "sources": [
+        {
+          "name": "FTC: IdentityTheft.gov",
+          "url": "https://www.identitytheft.gov"
+        },
+        {
+          "name": "FTC: What to know about credit freezes and fraud alerts",
+          "url": "https://consumer.ftc.gov/articles/what-know-about-credit-freezes-and-fraud-alerts"
+        }
+      ]
+    },
+    {
+      "id": "2027-02-b",
+      "n": 6,
+      "send_date": "2027-02-09",
+      "deliver_by": "2027-02-02",
+      "source": "Scam Decoded newsletter #12 (Valentine's: the gift card favor)",
+      "topic": "Romance scams and the gift card favor",
+      "subject": "Scam alert: when a new online friend asks for gift cards",
+      "preheader": "Valentine's week is busy for romance scammers. Three signs, and how to help someone you love.",
+      "headline": "The sweetheart who needs a favor",
+      "example_label": "What it looks like (made-up example)",
+      "example": "\"I'm stuck overseas and my card isn't working here. Could you pick up two $200 gift cards for me and send me a photo of the back? I'll pay you back next week, I promise. ❤️\"",
+      "explain": [
+        "Romance scammers spend weeks building trust on social media, dating apps or games. They always have a reason they can't meet or video chat: working on an oil rig, deployed overseas, a doctor abroad.",
+        "Then comes a favor only money can fix. Gift cards are a favorite because once you share the numbers on the back, the money is gone."
+      ],
+      "tell": "Someone you've only met online who can't meet in person and then needs money is running a scam. Nobody real asks for a photo of the back of a gift card.",
+      "promise": false,
+      "steps": [
+        "**Never send money, gift cards or crypto** to someone you haven't met in person.",
+        "**About to send a wire or buy big gift cards for someone you met online?** Talk to us first at {{CU_PHONE}}. We see these every week and we won't judge.",
+        "**Report the profile** to the app or site, and report the scam at [ReportFraud.ftc.gov](https://reportfraud.ftc.gov)."
+      ],
+      "quick_hits": [
+        "**Search their photo:** a reverse image search often shows the pictures belong to someone else.",
+        "**It's not your fault.** These are organized criminals. Telling someone is how it stops."
+      ],
+      "job": "If someone you love is newly single or widowed, call them this week. Scammers look for people no one else is talking to.",
+      "lobby": {
+        "kicker": "Scam alert",
+        "headline": "Never send gift cards to an online sweetheart.",
+        "bullets": [
+          "Can't meet or video chat? Red flag.",
+          "Gift cards for a \"favor\" are a scam.",
+          "Talk to us before you send money."
+        ]
+      },
+      "social": {
+        "caption": "Valentine's week scam alert: a new online sweetheart can't meet in person or video chat, then needs a favor: gift cards, a wire, crypto. It's a scam. Nobody real asks for a photo of the back of a gift card. About to send money to someone you met online? Talk to us first at {{CU_PHONE}}.",
+        "alt": "Scam alert from {{CU_SHORT}}: never send gift cards to an online sweetheart. Can't meet or video chat? Red flag. Gift cards for a favor are a scam. Talk to us before you send money."
+      },
+      "brief": {
+        "Members may ask": "\"I need to send money to my partner overseas. It's urgent.\"",
+        "What to say": "\"Have you met in person or on video? I ask because we see a lot of romance scams this time of year. Let's take a minute before we send anything.\"",
+        "Escalate": "Follow our elder and vulnerable adult procedures where they apply, and our wire and gift card fraud checks."
+      },
+      "sources": [
+        {
+          "name": "FTC: What to know about romance scams",
+          "url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams"
+        },
+        {
+          "name": "FTC: Avoiding and reporting gift card scams",
+          "url": "https://consumer.ftc.gov/articles/avoiding-and-reporting-gift-card-scams"
+        }
+      ]
+    },
+    {
+      "id": "2027-02-c",
+      "n": 7,
+      "send_date": "2027-02-16",
+      "deliver_by": "2027-02-09",
+      "source": "Scam Decoded newsletter #14 (\"Hi Mom, this is my new number\")",
+      "topic": "\"Hi Mom, this is my new number\"",
+      "subject": "Scam alert: \"Hi Mom, this is my new number\"",
+      "preheader": "Six texts from hello to a bill paid by P2P, and the two-minute fix.",
+      "headline": "The new number that needs a bill paid",
+      "example_label": "What it looks like (made-up example)",
+      "example": "\"Hi Mom, I dropped my phone in the sink 😩 this is my new number. Can you save it? Also I need to pay a bill today and my banking app won't work on the new phone, can you send it for me? I'll pay you back tonight.\"",
+      "explain": [
+        "It starts friendly and familiar. Within a few texts there's a bill that has to be paid today, by a payment app or transfer to an account you don't recognize.",
+        "Money sent by a person-to-person app or transfer is very hard to get back once it's gone."
+      ],
+      "tell": "A \"new number\" plus an urgent payment to someone else's account is a scam until you've heard your child's real voice on their old number.",
+      "promise": false,
+      "steps": [
+        "**Call the old number.** If they really have a new phone, they can still prove it by calling or texting from a number you know, or by a video call.",
+        "**Agree a family code word** that only your family knows, for any text or call asking for money.",
+        "**Already sent money?** Call us right away at {{CU_PHONE}}. The sooner we know, the more we can try to do."
+      ],
+      "quick_hits": [
+        "**The same trick works on grandparents and on bosses:** \"It's me, I'm in a meeting, I need gift cards for a client.\"",
+        "**Only send P2P payments to people you know**, on a number or email you already had."
+      ],
+      "job": "Pick a family code word tonight and text it to your kids and parents. Don't use anything that's on social media.",
+      "lobby": {
+        "kicker": "Scam alert",
+        "headline": "\"New number\" and needs money? Call the old one.",
+        "bullets": [
+          "Check with a call you place.",
+          "Agree a family code word.",
+          "Only send P2P to people you know."
+        ]
+      },
+      "social": {
+        "caption": "Scam alert: a text says \"Hi Mom, this is my new number\" and soon asks you to pay a bill for them by payment app or transfer. Call your child on the number you already have before you send anything. A family code word helps too. Already sent money? Call us right away at {{CU_PHONE}}.",
+        "alt": "Scam alert from {{CU_SHORT}}: new number and needs money? Call the old one. Check with a call you place. Agree a family code word. Only send P2P to people you know."
+      },
+      "brief": {
+        "Members may ask": "\"My daughter got a new phone and needs me to pay a bill. Can you help me send it?\"",
+        "What to say": "\"Have you talked to her on the phone? Let's call her old number together first. This exact text is a common scam.\"",
+        "Escalate": "If money was already sent: follow our P2P and wire recall procedures and record the receiving account details."
+      },
+      "sources": [
+        {
+          "name": "FTC: Scammers use fake emergencies to steal your money",
+          "url": "https://consumer.ftc.gov/articles/scammers-use-fake-emergencies-steal-your-money"
+        },
+        {
+          "name": "FTC: Mobile payment apps: how to avoid a scam when you use one",
+          "url": "https://consumer.ftc.gov/articles/mobile-payment-apps-how-avoid-scam-when-you-use-one"
+        }
+      ]
+    },
+    {
+      "id": "2027-02-d",
+      "n": 8,
+      "send_date": "2027-02-23",
+      "deliver_by": "2027-02-16",
+      "source": "Scam Decoded newsletter #20 (the preparer who takes a cut of your refund)",
+      "topic": "Ghost tax preparers",
+      "subject": "Scam alert: the tax preparer who won't sign your return",
+      "preheader": "Three things a real preparer always does, and where your refund should land.",
+      "headline": "The preparer who takes a cut and vanishes",
+      "example_label": "What it looks like (made-up example)",
+      "example": "\"Bigger refund guaranteed! We file for you, no paperwork needed. Fee comes out of your refund. Just sign here, we'll handle the rest.\"",
+      "explain": [
+        "The IRS calls them ghost preparers. They prepare your return for a fee but won't sign it as the paid preparer, sometimes invent credits to inflate your refund, or route the refund through their own account.",
+        "If the return is wrong, you're the one who owes the tax, the penalties and the interest."
+      ],
+      "tell": "A real paid preparer signs your return with their PTIN and has your refund go to your own account. If they won't, walk away.",
+      "promise": false,
+      "steps": [
+        "**Ask for their PTIN** (Preparer Tax Identification Number). Every paid preparer must have one and must sign your return.",
+        "**Have your refund deposited into your own account here.** Never into the preparer's account, and never on a prepaid card they hand you.",
+        "**Read before you sign.** Never sign a blank return or one with numbers you don't understand. Get a copy."
+      ],
+      "quick_hits": [
+        "**Free help exists:** IRS Free File and VITA sites help many people file for free. Search for them on IRS.gov.",
+        "**Refund going somewhere strange?** If a preparer asks for our routing number for \"their processing account\", call us first at {{CU_PHONE}}."
+      ],
+      "job": "Before your appointment, write down your account and routing number for direct deposit. They're in our app under account details.",
+      "lobby": {
+        "kicker": "Tax season scam alert",
+        "headline": "A real preparer signs your return.",
+        "bullets": [
+          "Ask for their PTIN.",
+          "Refund goes to your account.",
+          "Never sign a blank return."
+        ]
+      },
+      "social": {
+        "caption": "Tax season scam alert: a ghost preparer charges a fee but won't sign your return, promises a bigger refund, or sends it to their own account. A real paid preparer signs with their PTIN and your refund goes to your account. Questions about direct deposit? Call us at {{CU_PHONE}}.",
+        "alt": "Tax season scam alert from {{CU_SHORT}}: a real preparer signs your return. Ask for their PTIN. Refund goes to your account. Never sign a blank return."
+      },
+      "brief": {
+        "Members may ask": "\"My tax preparer needs a routing number for their account. Is that normal?\"",
+        "What to say": "\"Your refund should come straight to your own account here. Let me give you your own routing and account numbers.\"",
+        "Escalate": "If a refund arrives for someone who isn't on the account, follow our ACH return procedures."
+      },
+      "sources": [
+        {
+          "name": "IRS: Be informed, not fooled by ghost preparers and tax credit scams",
+          "url": "https://www.irs.gov/newsroom/be-informed-not-fooled-by-ghost-preparers-and-tax-credit-scams"
+        },
+        {
+          "name": "IRS: Choosing a tax professional",
+          "url": "https://www.irs.gov/tax-professionals/choosing-a-tax-professional"
+        }
+      ]
+    },
+    {
+      "id": "2027-03-a",
+      "n": 9,
+      "send_date": "2027-03-02",
+      "deliver_by": "2027-02-23",
+      "source": "Scam Decoded newsletter #15 (Slam the Scam Day: government imposters)",
+      "topic": "Government imposters: Social Security numbers don't get \"suspended\"",
+      "subject": "Scam alert: your Social Security number isn't \"suspended\"",
+      "preheader": "Government imposters, the \"safe account\" trick, and the rule that beats them.",
+      "headline": "The government call that ends at a \"safe account\"",
+      "example_label": "What it looks like (made-up example)",
+      "example": "\"This is Officer Daniels with the Social Security Administration. Your number was linked to a crime and has been suspended. To protect your savings, you must move them to a secure government account today.\"",
+      "explain": [
+        "Scammers pretend to be Social Security, the IRS, Medicare, the FTC or a local sheriff. They threaten arrest or frozen benefits, then tell you to move money to a \"safe\" account, buy gift cards, or hand cash to a courier.",
+        "No government agency will ever do that. And neither will we."
+      ],
+      "tell": "Nobody real tells you to move your money to keep it safe. Not the government, not your bank, not us.",
+      "promise": true,
+      "steps": [
+        "**Hang up.** Then call the agency yourself on a number you look up, like Social Security at 1-800-772-1213.",
+        "**Before moving money because someone told you to,** call us at {{CU_PHONE}}. We'll help you check.",
+        "**Report it** to the Social Security inspector general at [oig.ssa.gov](https://oig.ssa.gov) and at [ReportFraud.ftc.gov](https://reportfraud.ftc.gov)."
+      ],
+      "quick_hits": [
+        "**Caller ID lies.** It can show a real government name or number.",
+        "**Slam the Scam Day** is run each March by Social Security's inspector general; it's a good day to tell one person this rule."
+      ],
+      "job": "Tell one older relative this week: \"No real agency or bank ever asks you to move money to keep it safe.\"",
+      "lobby": {
+        "kicker": "Scam alert",
+        "headline": "No one real asks you to move money to keep it safe.",
+        "bullets": [
+          "Government agencies don't threaten arrest.",
+          "Hang up and call the agency yourself.",
+          "Call us before moving money."
+        ]
+      },
+      "social": {
+        "caption": "Scam alert: a caller says your Social Security number is suspended and you must move your savings to a \"safe\" government account. It's a scam. No real agency or bank ever asks you to move money to keep it safe. Hang up, and call us at {{CU_PHONE}} before moving any money.",
+        "alt": "Scam alert from {{CU_SHORT}}: no one real asks you to move money to keep it safe. Government agencies don't threaten arrest. Hang up and call the agency yourself. Call us before moving money."
+      },
+      "brief": {
+        "Members may ask": "\"Social Security told me to move my savings to a protected account.\"",
+        "What to say": "\"That's a scam we see a lot. No government agency, and not us, will ever ask you to move money to protect it. Let's not move anything today.\"",
+        "Escalate": "Follow our elder and vulnerable adult procedures, and our large-withdrawal and wire checks. Note the caller's details."
+      },
+      "sources": [
+        {
+          "name": "Social Security Administration: Protect yourself from scams",
+          "url": "https://www.ssa.gov/scam/"
+        },
+        {
+          "name": "SSA Office of the Inspector General",
+          "url": "https://oig.ssa.gov"
+        },
+        {
+          "name": "FTC: Did someone tell you to move or transfer your money? It could be a scam",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2024/01/did-someone-tell-you-move-or-transfer-your-money-it-could-be-scam"
+        }
+      ]
+    },
+    {
+      "id": "2027-03-b",
+      "n": 10,
+      "send_date": "2027-03-09",
+      "deliver_by": "2027-03-02",
+      "source": "Scam Decoded newsletter #16 (spring break rentals and March Madness)",
+      "topic": "Spring break rentals and March Madness \"sure wins\"",
+      "subject": "Scam alert: the half-price beach house",
+      "preheader": "Fake rentals, betting \"tips\" that can't lose, and the safe way to pay for travel.",
+      "headline": "The rental that's too good to be true",
+      "example_label": "What it looks like (made-up example)",
+      "example": "\"Beach house, sleeps 8, spring break week, $900! Owner is out of the country so we can't show it, but send the deposit by Zelle today to hold it. Lots of interest!\"",
+      "explain": [
+        "Scammers copy real listings, lower the price, and ask for a deposit by P2P app, wire or gift card. You arrive to find the house belongs to someone else, or doesn't exist.",
+        "March Madness brings its own version: paid \"insider picks\" or betting groups that guarantee wins, then ask for more money to unlock bigger payouts."
+      ],
+      "tell": "A deal that must be paid today, by P2P, wire or gift card, to someone you can't meet is a scam. Nobody can guarantee a win.",
+      "promise": false,
+      "steps": [
+        "**Pay for travel with a credit card** through the booking site, never by P2P or wire to a stranger.",
+        "**Search the address** and the owner's name. If the same photos show up under another name or price, walk away.",
+        "**Already sent a deposit?** Call us right away at {{CU_PHONE}} and report it at [ReportFraud.ftc.gov](https://reportfraud.ftc.gov)."
+      ],
+      "quick_hits": [
+        "**\"Owner is overseas, can't show it\"** is the classic line.",
+        "**Guaranteed picks** don't exist. If someone sells certainty, they're selling a scam."
+      ],
+      "job": "If you're booking a trip this spring, use a card with fraud protection and keep every receipt and message.",
+      "lobby": {
+        "kicker": "Scam alert",
+        "headline": "Rental deposit by Zelle? Walk away.",
+        "bullets": [
+          "Pay for travel by card.",
+          "Search the address and photos.",
+          "No one can guarantee a win."
+        ]
+      },
+      "social": {
+        "caption": "Spring break scam alert: a half-price rental wants a deposit by Zelle, wire or gift card today, and the owner can't show it. It's a scam. Pay for travel by card through the booking site. And no one can guarantee a March Madness win. Sent money already? Call us at {{CU_PHONE}}.",
+        "alt": "Scam alert from {{CU_SHORT}}: rental deposit by Zelle? Walk away. Pay for travel by card. Search the address and photos. No one can guarantee a win."
+      },
+      "brief": {
+        "Members may ask": "\"I need to send a deposit for a vacation rental by Zelle. What's the limit?\"",
+        "What to say": "\"Have you seen it booked through a site with protections? P2P deposits to people we don't know are a common rental scam. A card is safer.\"",
+        "Escalate": "If money was already sent: follow our P2P fraud procedure and record the recipient's details."
+      },
+      "sources": [
+        {
+          "name": "FTC: Rental listing scams",
+          "url": "https://consumer.ftc.gov/articles/rental-listing-scams"
+        },
+        {
+          "name": "FTC: Mobile payment apps: how to avoid a scam when you use one",
+          "url": "https://consumer.ftc.gov/articles/mobile-payment-apps-how-avoid-scam-when-you-use-one"
+        }
+      ]
+    },
+    {
+      "id": "2027-03-c",
+      "n": 11,
+      "send_date": "2027-03-16",
+      "deliver_by": "2027-03-09",
+      "source": "Scam Decoded newsletter #17 (student loan forgiveness fees)",
+      "topic": "Student loan forgiveness fees",
+      "subject": "Scam alert: \"you qualify for forgiveness, $499 to apply\"",
+      "preheader": "Student loan help is free. The fee is the scam, and so is asking for your FSA ID.",
+      "headline": "The forgiveness fee",
+      "example_label": "What it looks like (made-up example)",
+      "example": "\"Great news! Under the new program your student loans qualify for forgiveness. Spots are limited. Pay the $499 processing fee today and send us your FSA ID so we can file for you.\"",
+      "explain": [
+        "Student loan rules change often, and every change brings a wave of calls, texts and ads offering to \"handle it for you\" for a fee.",
+        "The help is real, but it's free from your loan servicer and the Department of Education. Scammers also ask for your FSA ID, which lets them change your contact details and redirect your account."
+      ],
+      "tell": "You never have to pay for help with federal student loans, and you should never give anyone your FSA ID.",
+      "promise": false,
+      "steps": [
+        "**Go to StudentAid.gov** or call your loan servicer directly. Both are free.",
+        "**Never share your FSA ID** or sign a form giving a company power of attorney over your loans.",
+        "**Paid a company already?** Call us at {{CU_PHONE}} to stop future payments, then report it at [ReportFraud.ftc.gov](https://reportfraud.ftc.gov)."
+      ],
+      "quick_hits": [
+        "**Monthly \"service\" fees** taken from your account are a common next step. Check your statements for new recurring charges.",
+        "**Parents:** this targets you too if you have Parent PLUS loans."
+      ],
+      "job": "Look up who your federal loan servicer is on StudentAid.gov and save their real number in your phone.",
+      "lobby": {
+        "kicker": "Scam alert",
+        "headline": "Student loan help is free.",
+        "bullets": [
+          "Never pay a forgiveness fee.",
+          "Never share your FSA ID.",
+          "Use StudentAid.gov or your servicer."
+        ]
+      },
+      "social": {
+        "caption": "Scam alert: \"your student loans qualify for forgiveness, $499 to apply.\" Student loan help is free from StudentAid.gov and your servicer. Never pay a fee, and never share your FSA ID. Seeing a new monthly charge from a loan \"service\"? Call us at {{CU_PHONE}}.",
+        "alt": "Scam alert from {{CU_SHORT}}: student loan help is free. Never pay a forgiveness fee. Never share your FSA ID. Use StudentAid.gov or your servicer."
+      },
+      "brief": {
+        "Members may ask": "\"There's a monthly charge from a student loan company. Can you stop it?\"",
+        "What to say": "\"Yes, let's look at it. Federal student loan help is free, so a monthly fee is often a sign of a debt relief scam.\"",
+        "Escalate": "Follow our stop-payment and unauthorized ACH procedures."
+      },
+      "sources": [
+        {
+          "name": "Federal Student Aid: Avoid student aid scams",
+          "url": "https://studentaid.gov/resources/scams"
+        },
+        {
+          "name": "FTC: Don't pay for help with your federal student loans",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2023/08/dont-pay-help-your-federal-student-loans"
+        }
+      ]
+    },
+    {
+      "id": "2027-03-d",
+      "n": 12,
+      "send_date": "2027-03-23",
+      "deliver_by": "2027-03-16",
+      "source": "New issue (no Scam Decoded source): FTC and FBI warnings on unpaid toll texts",
+      "topic": "Unpaid toll texts",
+      "subject": "Scam alert: you don't owe that $6.99 toll",
+      "preheader": "The text that says you owe a toll is after your card number. Here's how to check for real.",
+      "headline": "The toll you don't owe",
+      "example_label": "What it looks like (made-up example)",
+      "example": "\"FINAL NOTICE: You have an unpaid toll balance of $6.99. Pay now to avoid a $50 late fee and suspension of your license: [link]\"",
+      "explain": [
+        "The amount is small on purpose. The link goes to a fake payment page that takes your card number and sometimes a code from your phone.",
+        "These texts go to people who have never driven a toll road."
+      ],
+      "tell": "A text that threatens fees and asks you to pay a toll through a link is a scam. Check your toll account by typing the real website yourself.",
+      "promise": false,
+      "steps": [
+        "**Don't tap the link** and don't reply. Delete it.",
+        "**Check for yourself:** if you use toll roads, type your toll agency's website into your browser, or call the number on your statement.",
+        "**Already entered your card?** Call us at {{CU_PHONE}} to block the card and watch for charges."
+      ],
+      "quick_hits": [
+        "**Forward scam texts to 7726** (SPAM) to help your carrier block them.",
+        "**Same trick, different name:** \"undelivered package\" and \"unpaid parking\" texts work the same way."
+      ],
+      "job": "Turn on card alerts in our app if you haven't, so any charge from a fake page shows up on your phone right away.",
+      "lobby": {
+        "kicker": "Scam alert",
+        "headline": "You don't owe that toll.",
+        "bullets": [
+          "Don't tap toll links in texts.",
+          "Check by typing the real site.",
+          "Entered your card? Call us."
+        ]
+      },
+      "social": {
+        "caption": "Scam alert: a text says you owe a small toll and threatens a late fee. The link is a fake payment page that steals card numbers. Don't tap it. If you use toll roads, check your account by typing the real website yourself. Entered your card? Call us at {{CU_PHONE}} to block it.",
+        "alt": "Scam alert from {{CU_SHORT}}: you don't owe that toll. Don't tap toll links in texts. Check by typing the real site. Entered your card? Call us."
+      },
+      "brief": {
+        "Members may ask": "\"I paid a toll through a text link and now there's a strange charge.\"",
+        "What to say": "\"Let's block that card now and send you a new one. Those toll texts are a common scam.\"",
+        "Escalate": "Follow our card-compromise procedure: block, reissue, review recent transactions."
+      },
+      "sources": [
+        {
+          "name": "FTC: Got a text about unpaid tolls? It's probably a scam",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2025/01/got-text-about-unpaid-tolls-its-probably-scam"
+        },
+        {
+          "name": "FBI Internet Crime Complaint Center (IC3)",
+          "url": "https://www.ic3.gov"
+        }
+      ]
+    }
+  ]
+}

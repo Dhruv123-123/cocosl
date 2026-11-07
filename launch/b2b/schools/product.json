@@ -1,0 +1,23 @@
+{
+  "_about": "Labels and formats for Money Made Simple for Schools: a weekly 10-minute financial literacy mini-lesson for high school teachers and college advisors, aligned to the 2021 National Standards for Personal Financial Education. Read by ../build.py.",
+  "series": "Money Made Simple for Schools",
+  "unit": "week",
+  "labels": {
+    "eyebrow": "This week's money lesson",
+    "tell": "The big idea",
+    "promise": "A note from your school",
+    "steps": "Class activity (10 minutes)",
+    "hits": "Talk about it",
+    "job": "Exit ticket",
+    "brief": "Teacher notes",
+    "screen": "Class slide and student handout",
+    "post": "Google Classroom or LMS post"
+  },
+  "cta": "Money questions? Talk to **{{HELP_CONTACT}}**.",
+  "visual_footer": "Money questions? Talk to **{{HELP_CONTACT}}**.",
+  "disclaimer": "General financial education for students, not financial advice. Aligned to the 2021 National Standards for Personal Financial Education. All examples are made up.",
+  "visuals": ["lobby", "poster", "social"],
+  "not_in_essentials": ["poster"],
+  "tokens": ["{{SCHOOL_NAME}}", "{{SCHOOL_SHORT}}", "{{HELP_CONTACT}}", "{{SCHOOL_NOTE}}"],
+  "promise_token": "{{SCHOOL_NOTE}}"
+}

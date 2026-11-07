@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Money Made Simple at Work</title>
+<!-- One-page sales sheet. Fill the 3 {{YOUR_...}} tokens, then run python3 build.py (writes out/sales-sheet.pdf)
+     (or open in a browser and Print > Save as PDF, Letter, no margins, background graphics on). -->
+<style>
+@page{size:8.5in 11in;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;color:#17202a;background:#fff}
+.page{width:8.5in;height:10.98in;overflow:hidden;padding:.45in .5in .4in;display:flex;flex-direction:column}
+.top{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:4px solid #E0A526;padding-bottom:10px}
+.brand{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#2E6B4F}
+h1{font-size:30px;line-height:1.1;margin-top:4px}
+.sub{font-size:14px;color:#41505e;margin-top:6px;max-width:5.2in;line-height:1.4}
+.tag{background:#2E6B4F;color:#fff;font-size:12px;font-weight:700;padding:8px 10px;border-radius:6px;text-align:center;line-height:1.35}
+.cols{display:flex;gap:22px;margin-top:14px}
+.col{flex:1}
+h2{font-size:15px;color:#2E6B4F;margin:12px 0 6px;text-transform:uppercase;letter-spacing:.04em}
+p,li{font-size:12.5px;line-height:1.45}
+ul,ol{padding-left:17px}
+li{margin-bottom:4px}
+table{width:100%;border-collapse:collapse;margin-top:6px}
+th,td{font-size:12px;padding:7px 6px;text-align:left;vertical-align:top;border-bottom:1px solid #dfe4e9}
+th{background:#f1f4f7;font-size:12px}
+.price{font-size:20px;font-weight:800;color:#2E6B4F}
+.pilot{margin-top:12px;background:#fff6dc;border-left:5px solid #E0A526;padding:10px 12px;font-size:13px;line-height:1.45}
+.foot{margin-top:auto;display:flex;justify-content:space-between;font-size:11.5px;color:#41505e;border-top:1px solid #dfe4e9;padding-top:8px}
+.check li{list-style:none;position:relative;padding-left:2px}
+.check li:before{content:"✓";position:absolute;left:-15px;color:#2E6B4F;font-weight:700}
+</style></head><body><div class="page">
+<div class="top">
+  <div><div class="brand">Money Made Simple · for employers</div>
+  <h1>A monthly money newsletter, under your brand</h1>
+  <p class="sub">Plain-English financial wellness for your employees: one useful topic a month, ready to send from HR, post on your intranet and show in the breakroom. Your logo, your benefits details, your contact. No employee data ever reaches us.</p></div>
+  <div class="tag">Delivered 2 weeks early<br>for HR review</div>
+</div>
+<div class="cols">
+<div class="col">
+  <h2>Why now</h2>
+  <p>Money stress follows people to work. A monthly nudge to use the benefits you already pay for (the retirement match, the EAP, the withholding check) is the cheapest wellness program there is.</p>
+  <h2>Each month you get</h2>
+  <ul class="check"><li><b>Employee email</b>: HTML and plain text, about 350 words</li><li><b>Intranet, Teams or Slack post</b> with a 1080×1080 image</li><li><b>Breakroom screen slide</b> (1920×1080)</li><li><b>Sources page</b>: IRS, DOL, CFPB, FTC and SEC links</li></ul>
+  <h2>How it works</h2>
+  <ol><li>Send your logo, colors, benefits contact, portal name and your exact match wording, once.</li><li>We deliver each issue 2 weeks before it goes out.</li><li>HR or your broker reviews and edits anything.</li><li>You send it and post it on your own channels.</li></ol>
+</div>
+<div class="col">
+  <h2>Plans</h2>
+  <table>
+    <tr><th>Plan</th><th>Best for</th><th>Per month</th></tr>
+    <tr><td><b>Starter</b><br>Email, intranet post, screen slide, sources</td><td>Up to 100 employees</td><td class="price">$59</td></tr><tr><td><b>Growth</b><br>Starter plus a printable breakroom flyer and manager talking points</td><td>100 to 499</td><td class="price">$129</td></tr><tr><td><b>Plus</b><br>Growth plus a Spanish edition and 2 custom issues a year (open enrollment, a new benefit)</td><td>500+</td><td class="price">$249</td></tr>
+  </table>
+  <p style="margin-top:6px">Monthly, cancel with 30 days' notice. Pay yearly and get 2 months free. Invoiced; ACH or card. Benefits brokers: ask about a partner rate for your clients.</p>
+  <div class="pilot"><b>Founding pilot:</b> the first 3 employers get <b>2 months free</b>, then keep their founding price for 12 months. No contract for the pilot.</div>
+  <h2>Built for review</h2>
+  <ul class="check"><li>Education only: never recommends funds, accounts or amounts</li><li>No employee data, tracking pixels, ads or affiliate links</li><li>Plan details come only from your wording</li><li>Text version and alt text for accessibility</li></ul>
+</div>
+</div>
+<h2>What it looks like (sample, fictional organization)</h2>
+<div style="display:flex;gap:14px;align-items:flex-start;margin-top:4px">
+  <img src="out/sample-outfitters/month-4-2027-04/lobby.png" style="width:2.84in;height:1.6in;border:1px solid #dfe4e9">
+  <img src="out/sample-outfitters/month-1-2027-01/social.png" style="width:1.24in;height:1.6in;border:1px solid #dfe4e9;object-fit:cover;object-position:top">
+  <p style="font-size:11.5px;color:#41505e;flex:1">April's breakroom slide and January's intranet image from the free sample pack.</p>
+</div>
+<div class="foot" style="margin-top:12px">
+  <div><b>{{YOUR_NAME}}</b> · {{YOUR_EMAIL}} · {{YOUR_PHONE}}</div>
+  <div>Ask for the free 3-month sample pack.</div>
+</div>
+</div></body></html>

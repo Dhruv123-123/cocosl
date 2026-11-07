@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Freelancer Money Notes for CPA and bookkeeping firms</title>
+<!-- One-page sales sheet. Fill the 3 {{YOUR_...}} tokens, then run python3 build.py (writes out/sales-sheet.pdf)
+     (or open in a browser and Print > Save as PDF, Letter, no margins, background graphics on). -->
+<style>
+@page{size:8.5in 11in;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;color:#17202a;background:#fff}
+.page{width:8.5in;height:10.98in;overflow:hidden;padding:.45in .5in .4in;display:flex;flex-direction:column}
+.top{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:4px solid #E0A526;padding-bottom:10px}
+.brand{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#2E6B4F}
+h1{font-size:30px;line-height:1.1;margin-top:4px}
+.sub{font-size:14px;color:#41505e;margin-top:6px;max-width:5.2in;line-height:1.4}
+.tag{background:#2E6B4F;color:#fff;font-size:12px;font-weight:700;padding:8px 10px;border-radius:6px;text-align:center;line-height:1.35}
+.cols{display:flex;gap:22px;margin-top:14px}
+.col{flex:1}
+h2{font-size:15px;color:#2E6B4F;margin:12px 0 6px;text-transform:uppercase;letter-spacing:.04em}
+p,li{font-size:12.5px;line-height:1.45}
+ul,ol{padding-left:17px}
+li{margin-bottom:4px}
+table{width:100%;border-collapse:collapse;margin-top:6px}
+th,td{font-size:12px;padding:7px 6px;text-align:left;vertical-align:top;border-bottom:1px solid #dfe4e9}
+th{background:#f1f4f7;font-size:12px}
+.price{font-size:20px;font-weight:800;color:#2E6B4F}
+.pilot{margin-top:12px;background:#fff6dc;border-left:5px solid #E0A526;padding:10px 12px;font-size:13px;line-height:1.45}
+.foot{margin-top:auto;display:flex;justify-content:space-between;font-size:11.5px;color:#41505e;border-top:1px solid #dfe4e9;padding-top:8px}
+.check li{list-style:none;position:relative;padding-left:2px}
+.check li:before{content:"✓";position:absolute;left:-15px;color:#2E6B4F;font-weight:700}
+</style></head><body><div class="page">
+<div class="top">
+  <div><div class="brand">1099 Money · for accounting firms</div>
+  <h1>A monthly newsletter for your freelance clients, under your name</h1>
+  <p class="sub">Plain-English money and tax reminders for your self-employed and 1099 clients, timed to the dates that matter: estimated payments, document season, year-end. Your logo, your phone number, your booking link. Ready for you to review and send.</p></div>
+  <div class="tag">Delivered 2 weeks early<br>for your review</div>
+</div>
+<div class="cols">
+<div class="col">
+  <h2>Why it pays for itself</h2>
+  <p>Freelance clients who make their estimated payments, keep a mileage log and upload everything in February are faster to prepare and less likely to call in April with a penalty notice. One month of reminders that does that for a handful of clients covers the year.</p>
+  <h2>Each month you get</h2>
+  <ul class="check"><li><b>Client email</b>: HTML and plain text, about 350 words, with your booking link</li><li><b>Social post</b> with a 1080×1080 image</li><li><b>Printable client handout</b> (Standard and Plus)</li><li><b>Notes for your team</b>: the question clients will ask and what to say</li><li><b>Sources page</b>: IRS links for every rule we mention</li></ul>
+  <h2>How it works</h2>
+  <ol><li>Send your logo, colors, phone, booking link and client portal name, once.</li><li>We deliver each issue 2 weeks before it goes out.</li><li>You review it, edit anything, and approve.</li><li>You send it from your own email platform. Your client list never comes to us.</li></ol>
+</div>
+<div class="col">
+  <h2>Plans</h2>
+  <table>
+    <tr><th>Plan</th><th>Includes</th><th>Per month</th></tr>
+    <tr><td><b>Essentials</b></td><td>Email, social post, sources</td><td class="price">$39</td></tr>
+    <tr><td><b>Standard</b></td><td>Essentials plus the printable handout and team notes</td><td class="price">$79</td></tr>
+    <tr><td><b>Plus</b></td><td>Standard plus 2 custom issues a year (your topic, your deadline) and local exclusivity in your town</td><td class="price">$129</td></tr>
+  </table>
+  <p style="margin-top:6px">Monthly, cancel with 30 days' notice. Pay yearly and get 2 months free. Invoiced; ACH or card.</p>
+  <div class="pilot"><b>Founding pilot:</b> the first 3 firms get <b>2 months free</b>, then keep their founding price for 12 months. No contract for the pilot.</div>
+  <h2>Built for a firm's name</h2>
+  <ul class="check"><li>Education only: no advice for anyone's situation; every issue sends clients back to you</li><li>Every rule linked to IRS.gov; 2026 and 2027 figures checked at delivery</li><li>No client data, tracking pixels, ads or affiliate links</li><li>Plain-text version and alt text for accessibility</li></ul>
+</div>
+</div>
+<h2>What it looks like (sample, fictional firm)</h2>
+<div style="display:flex;gap:14px;align-items:flex-start;margin-top:4px">
+  <img src="out/sample-ledger/month-1-2027-01/social.png" style="width:1.6in;height:1.6in;border:1px solid #dfe4e9">
+  <img src="out/sample-ledger/month-3-2027-03/social.png" style="width:1.6in;height:1.6in;border:1px solid #dfe4e9">
+  <p style="font-size:11.5px;color:#41505e;flex:1">January and March social images from the free 3-month sample pack: the Jan 15 payment and the new 1099 thresholds, then setting up 2027's quarterly payments.</p>
+</div>
+<div class="foot" style="margin-top:12px">
+  <div><b>{{YOUR_NAME}}</b> · {{YOUR_EMAIL}} · {{YOUR_PHONE}}</div>
+  <div>Ask for the free 3-month sample pack.</div>
+</div>
+</div></body></html>

@@ -1,0 +1,39 @@
+{
+  "_about": "Spanish (es-US) edition of Scam Watch: issues 1-3, a library add-on and the Spanish option for credit-union-sponsored sites. MACHINE-ADAPTED: needs a fluent es-US reviewer before any client sees it (REVIEW_CHECKLIST.md). Read by ../../build.py.",
+  "series": "Alerta de Estafas",
+  "unit": "month",
+  "large_print": true,
+  "labels": {
+    "eyebrow": "La estafa de este mes",
+    "tell": "La señal de alerta",
+    "promise": "Recuerde",
+    "steps": "Qué hacer",
+    "hits": "También este mes",
+    "job": "Una tarea para este mes",
+    "brief": "Group leader's 10-minute talk (English, for the leader; Spanish version on request)",
+    "screen": "Volante para el tablero y diapositiva para pantalla",
+    "post": "Publicación de Facebook",
+    "sources": "Fuentes"
+  },
+  "cta": "¿Preguntas? {{HELP_LINE}} Si tiene 60 años o más y perdió dinero por una estafa, llame gratis a la Línea Nacional contra el Fraude a Personas Mayores: **1-833-372-8311**.",
+  "visual_footer": "¿Preguntas? {{HELP_LINE_SHORT}} · Fraude a mayores: **1-833-372-8311**",
+  "disclaimer": "Esta hoja es información general para ayudarle a reconocer estafas. No es asesoría legal ni financiera. Puede copiarla y compartirla libremente.",
+  "visuals": [
+    "social",
+    "lobby",
+    "poster",
+    "handout"
+  ],
+  "not_in_essentials": [
+    "social"
+  ],
+  "tokens": [
+    "{{ORG_NAME}}",
+    "{{ORG_SHORT}}",
+    "{{HELP_LINE}}",
+    "{{HELP_LINE_SHORT}}",
+    "{{ORG_FOOTER}}"
+  ],
+  "promise_token": "(the organization's own one-line reminder, optional)",
+  "lang": "es"
+}

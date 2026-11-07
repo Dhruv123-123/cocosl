@@ -1,0 +1,295 @@
+{
+  "_about": "5 member alerts for National Consumer Protection Week, Mon Mar 1 to Fri Mar 5 2027, delivered to the credit union by Feb 15. Topics and order match Scam Decoded's NCPW 2027 pack (alerts #53-#57); the copy is separate and never names Scam Decoded. Read by ../build.py.",
+  "reviewed": "2026-11-07",
+  "issues": [
+    {
+      "id": "2027-ncpw-1",
+      "n": 1,
+      "send_date": "2027-03-01",
+      "deliver_by": "2027-02-15",
+      "source": "Lined up with Scam Decoded's NCPW 2027 alert #53; copy written separately for white label",
+      "topic": "Scam \"recovery\" offers that charge a fee",
+      "subject": "Consumer Protection Week: nobody can sell you your money back",
+      "preheader": "Day 1 of 5. After a scam, the next call often offers to recover your money, for a fee.",
+      "headline": "The second scam: \"we can get your money back\"",
+      "example_label": "What it looks like (made-up example)",
+      "example": "\"Our records show you lost $3,200 to an investment scam. As a fund recovery office we can return it within 10 days. A $350 processing fee is due today by gift card.\"",
+      "explain": [
+        "It's National Consumer Protection Week, and all week we're covering one scam a day and the rights that protect you.",
+        "People who have already lost money to a scam often get a second call: someone who knows what happened offers to get the money back, for a fee up front. Scammers share lists of past victims, and the caller may claim to be a government office, a law firm or a nonprofit."
+      ],
+      "tell": "Government agencies and real organizations don't ask for money to help you get a refund.",
+      "promise": "Never pay upfront for a refund or help with a refund. Real government agencies won't ask you for money or account numbers to get a refund, and won't promise you'll get your money back.",
+      "steps": [
+        "**Never pay upfront** for a refund or help with a refund. Hang up.",
+        "**Check for yourself:** look up the agency's number on its own website and call it. Don't use the number the caller gave you.",
+        "**Lost money to a scam?** Call us at {{CU_PHONE}}, and report it at [ReportFraud.ftc.gov](https://reportfraud.ftc.gov). Reporting is free."
+      ],
+      "quick_hits": [
+        "**Payment by gift card, crypto or wire** for a \"fee\" is a sure sign.",
+        "**This week:** one alert a day, Monday to Friday. Share them with someone you care about."
+      ],
+      "job": "Save our number, {{CU_PHONE}}, in your phone as \"My credit union (real)\".",
+      "lobby": {
+        "kicker": "Consumer Protection Week",
+        "headline": "Nobody can sell you your money back.",
+        "bullets": [
+          "Recovery fees are a scam.",
+          "Call the agency yourself.",
+          "Report it free at ReportFraud.ftc.gov."
+        ]
+      },
+      "social": {
+        "caption": "Consumer Protection Week, day 1: after a scam, a second caller offers to recover your money for a fee. Government agencies and real organizations don't charge to help you get a refund. Hang up, and call us at {{CU_PHONE}}.",
+        "alt": "Consumer Protection Week from {{CU_SHORT}}: nobody can sell you your money back. Recovery fees are a scam. Call the agency yourself. Report it free at ReportFraud.ftc.gov."
+      },
+      "brief": {
+        "Members may ask": "\"Someone says they can get back the money I lost. Is that real?\"",
+        "What to say": "\"Real agencies don't charge to help with a refund. Let's not pay anything. We'll help you report it and look at what we can do on your account.\"",
+        "Escalate": "Repeat victims: follow our elder and vulnerable adult procedures where they apply, and note the caller's details."
+      },
+      "sources": [
+        {
+          "name": "FTC: Refund and recovery scams",
+          "url": "https://consumer.ftc.gov/articles/refund-and-recovery-scams"
+        },
+        {
+          "name": "FTC: National Consumer Protection Week",
+          "url": "https://consumer.ftc.gov/ncpw"
+        }
+      ]
+    },
+    {
+      "id": "2027-ncpw-2",
+      "n": 2,
+      "send_date": "2027-03-02",
+      "deliver_by": "2027-02-15",
+      "source": "Lined up with Scam Decoded's NCPW 2027 alert #54; copy written separately for white label",
+      "topic": "Calls from \"the FTC\"",
+      "subject": "Consumer Protection Week: the real FTC won't call to demand money",
+      "preheader": "Day 2 of 5. Scammers use the FTC's name, badge numbers and all.",
+      "headline": "A call from \"the FTC\" that wants money",
+      "example_label": "What it looks like (made-up example)",
+      "example": "\"This is Agent Morris, FTC badge 4471. Your Social Security number was used in a fraud case. To protect your funds, we need to verify your bank account and move your savings today.\"",
+      "explain": [
+        "During Consumer Protection Week, scammers like to pose as the agency that runs it. They say they're from the Federal Trade Commission, give a badge number, and claim you've won a prize, your account is at risk, or you owe money.",
+        "The FTC says it will never call you to demand money, will never threaten you with arrest, and will never promise you a prize. It won't ask you to move money, either."
+      ],
+      "tell": "No government agency calls to demand payment, threaten arrest, or tell you to move your money.",
+      "promise": true,
+      "steps": [
+        "**Hang up.** Caller ID can show a real government name.",
+        "**Never move money or share a code** because a caller says so. Call us first at {{CU_PHONE}}.",
+        "**Report the call** at [ReportFraud.ftc.gov](https://reportfraud.ftc.gov)."
+      ],
+      "quick_hits": [
+        "**Badge numbers and case numbers** are easy to make up.",
+        "**Real agencies** contact you by mail first in most cases."
+      ],
+      "job": "Tell one family member today: \"The government never calls to make you pay or move money.\"",
+      "lobby": {
+        "kicker": "Consumer Protection Week",
+        "headline": "The FTC won't call to demand money.",
+        "bullets": [
+          "Hang up on \"agents\".",
+          "Never move money for a caller.",
+          "Call us first."
+        ]
+      },
+      "social": {
+        "caption": "Consumer Protection Week, day 2: a caller says they're from the FTC, gives a badge number, and wants money or your bank details. The FTC won't demand money, threaten you or promise a prize. Hang up, and call us at {{CU_PHONE}}.",
+        "alt": "Consumer Protection Week from {{CU_SHORT}}: the FTC won't call to demand money. Hang up on agents. Never move money for a caller. Call us first."
+      },
+      "brief": {
+        "Members may ask": "\"The FTC called and said my account is compromised.\"",
+        "What to say": "\"That's a known scam. The FTC doesn't call to move money. Let's check your account together and make sure nothing has changed.\"",
+        "Escalate": "If the member moved money or shared a code: follow our fraud procedure today."
+      },
+      "sources": [
+        {
+          "name": "FTC: The FTC won't demand money, threaten you, or promise you a prize",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2023/07/ftc-wont-demand-money-threaten-you-or-promise-you-prize"
+        },
+        {
+          "name": "FTC: How to avoid a government impersonation scam",
+          "url": "https://consumer.ftc.gov/articles/how-avoid-government-impersonation-scam"
+        }
+      ]
+    },
+    {
+      "id": "2027-ncpw-3",
+      "n": 3,
+      "send_date": "2027-03-03",
+      "deliver_by": "2027-02-15",
+      "source": "Lined up with Scam Decoded's NCPW 2027 alert #55; copy written separately for white label",
+      "topic": "Free trials that only cost shipping",
+      "subject": "Consumer Protection Week: the \"free\" trial that bills you every month",
+      "preheader": "Day 3 of 5. Just pay shipping, then a monthly charge you never agreed to.",
+      "headline": "The free trial that isn't",
+      "example_label": "What it looks like (made-up example)",
+      "example": "\"Try it free! Just pay $4.95 shipping.\" Fourteen days later: $89.95. Then $89.95 every month after that.",
+      "explain": [
+        "Some \"free trial\" offers for creams, supplements or gadgets sign you up for monthly charges, buried in the fine print. Canceling can be hard on purpose.",
+        "You have options: you can dispute charges you didn't agree to, and we can help you stop them."
+      ],
+      "tell": "If a free trial asks for your card, find the cancel terms before you enter it.",
+      "promise": false,
+      "steps": [
+        "**Read the terms before you enter your card:** how long the trial lasts, what it costs after, and how to cancel.",
+        "**Put the trial's end date in your phone** the day you sign up.",
+        "**Seeing a charge you didn't agree to?** Call us at {{CU_PHONE}}. We can help you dispute it and block future charges."
+      ],
+      "quick_hits": [
+        "**Check your statements** once a month for repeating charges you don't recognize.",
+        "**Turn on card alerts** in our app, so a surprise charge shows up right away."
+      ],
+      "job": "Open our app and look for any repeating charge you don't recognize.",
+      "lobby": {
+        "kicker": "Consumer Protection Week",
+        "headline": "\"Free\" trial? Read the cancel terms.",
+        "bullets": [
+          "Know what it costs after.",
+          "Set a reminder to cancel.",
+          "We can help dispute charges."
+        ]
+      },
+      "social": {
+        "caption": "Consumer Protection Week, day 3: \"free\" trials that only cost shipping can turn into monthly charges. Read the cancel terms before you enter your card, and set a reminder. Charged without agreeing? Call us at {{CU_PHONE}}.",
+        "alt": "Consumer Protection Week from {{CU_SHORT}}: free trial? Read the cancel terms. Know what it costs after. Set a reminder to cancel. We can help dispute charges."
+      },
+      "brief": {
+        "Members may ask": "\"I keep getting charged for something I only tried once.\"",
+        "What to say": "\"Let's look at the charges and start a dispute where it applies. We can also block that merchant on your card.\"",
+        "Escalate": "Follow our card dispute and stop-payment procedures."
+      },
+      "sources": [
+        {
+          "name": "FTC: Free trials and tribulations",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2019/09/free-trials-and-tribulations"
+        },
+        {
+          "name": "FTC: How to stop subscriptions you never ordered",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2023/05/how-stop-subscriptions-you-never-ordered"
+        }
+      ]
+    },
+    {
+      "id": "2027-ncpw-4",
+      "n": 4,
+      "send_date": "2027-03-04",
+      "deliver_by": "2027-02-15",
+      "source": "Lined up with Scam Decoded's NCPW 2027 alert #56; copy written separately for white label",
+      "topic": "Debt collectors who threaten arrest",
+      "subject": "Consumer Protection Week: a debt collector can't threaten you with arrest",
+      "preheader": "Day 4 of 5. Your rights when a collector calls, real or fake.",
+      "headline": "The collector who threatens jail",
+      "example_label": "What it looks like (made-up example)",
+      "example": "\"This is the legal department. You owe $1,740 on an old payday loan. If you don't pay today by debit card, a warrant will be issued for your arrest.\"",
+      "explain": [
+        "Real debt collectors have to follow the law. They can't threaten arrest or violence, use abusive language, or lie about who they are or what you owe. Fake collectors break all of those rules, and sometimes they're collecting a debt you don't owe at all.",
+        "Within 5 days of first contacting you, a real collector must tell you, in writing, the creditor and the amount you owe. You then have 30 days to dispute the debt."
+      ],
+      "tell": "A collector who threatens arrest, refuses to give a mailing address or wants payment today by gift card or wire is a red flag.",
+      "promise": true,
+      "steps": [
+        "**Ask for the collector's name, company, address and phone.** Within 5 days a real collector must send you the creditor and the amount in writing. A fake one often won't.",
+        "**Don't pay or confirm bank details** on that first call.",
+        "**Report abusive or fake collectors** to the CFPB or at ReportFraud.ftc.gov. Questions about a payment? Call us at {{CU_PHONE}}."
+      ],
+      "quick_hits": [
+        "**Don't recognize the debt?** You have 30 days from that notice to dispute it in writing.",
+        "**Check your credit reports** for free at AnnualCreditReport.com to see what's really there."
+      ],
+      "job": "Write down the questions to ask any collector: name, company, address, amount, and the original creditor.",
+      "lobby": {
+        "kicker": "Consumer Protection Week",
+        "headline": "A collector can't threaten arrest.",
+        "bullets": [
+          "Ask for details in writing.",
+          "Don't pay on the first call.",
+          "Report abusive collectors."
+        ]
+      },
+      "social": {
+        "caption": "Consumer Protection Week, day 4: debt collectors can't threaten arrest or lie about what you owe. Ask for the details in writing before you pay anything. Unsure? Call us at {{CU_PHONE}}.",
+        "alt": "Consumer Protection Week from {{CU_SHORT}}: a collector can't threaten arrest. Ask for details in writing. Don't pay on the first call. Report abusive collectors."
+      },
+      "brief": {
+        "Members may ask": "\"A collector says I'll be arrested if I don't pay today.\"",
+        "What to say": "\"That's not allowed, and it's a sign it may be a scam. Let's not pay today. Ask them for the debt details in writing.\"",
+        "Escalate": "If the member already paid by card: follow our card dispute and fraud procedures."
+      },
+      "sources": [
+        {
+          "name": "FTC: Fake and abusive debt collectors",
+          "url": "https://consumer.ftc.gov/articles/fake-abusive-debt-collectors"
+        },
+        {
+          "name": "CFPB: What is an unfair, deceptive or abusive practice by a debt collector?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-an-unfair-deceptive-or-abusive-practice-by-a-debt-collector-en-1401/"
+        },
+        {
+          "name": "FTC: Getting calls from a debt collector? You have rights",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2025/05/getting-calls-debt-collector-you-have-rights"
+        }
+      ]
+    },
+    {
+      "id": "2027-ncpw-5",
+      "n": 5,
+      "send_date": "2027-03-05",
+      "deliver_by": "2027-02-15",
+      "source": "Lined up with Scam Decoded's NCPW 2027 alert #57; copy written separately for white label",
+      "topic": "Credit repair that wants money up front",
+      "subject": "Consumer Protection Week: credit repair can't charge you first",
+      "preheader": "Day 5 of 5. Nobody can legally remove accurate negative information, and you can fix errors yourself for free.",
+      "headline": "The $499 credit \"fix\"",
+      "example_label": "What it looks like (made-up example)",
+      "example": "\"We'll raise your score 100 points in 30 days and wipe your late payments. One-time setup fee: $499, due today.\"",
+      "explain": [
+        "Credit repair companies can't legally charge you before they've done the work. And no one can legally remove negative information from your credit report if it's accurate and current.",
+        "If your report has a mistake, you can dispute it yourself with the credit bureaus, for free."
+      ],
+      "tell": "Anyone who wants payment before they help, or promises to erase accurate history, is breaking the rules.",
+      "promise": false,
+      "steps": [
+        "**Never pay up front** for credit repair.",
+        "**Get your free credit reports** at AnnualCreditReport.com and check them for mistakes.",
+        "**Dispute errors yourself** with the credit bureau, free. Want help reading your report or building credit? Call us at {{CU_PHONE}}."
+      ],
+      "quick_hits": [
+        "**Negative information fades** over time on its own.",
+        "**That's the week:** five scams and the rights that beat them. Share them with someone you care about."
+      ],
+      "job": "Pull one free credit report this week and look for anything you don't recognize.",
+      "lobby": {
+        "kicker": "Consumer Protection Week",
+        "headline": "Credit repair can't charge you first.",
+        "bullets": [
+          "No one can erase accurate history.",
+          "Free reports: AnnualCreditReport.com.",
+          "Dispute errors yourself, free."
+        ]
+      },
+      "social": {
+        "caption": "Consumer Protection Week, day 5: credit repair companies can't charge before they help, and no one can legally remove accurate, current negative information. Check your free reports and dispute errors yourself. Questions? Call us at {{CU_PHONE}}.",
+        "alt": "Consumer Protection Week from {{CU_SHORT}}: credit repair can't charge you first. No one can erase accurate history. Free reports at AnnualCreditReport.com. Dispute errors yourself, free."
+      },
+      "brief": {
+        "Members may ask": "\"Should I pay a company to fix my credit?\"",
+        "What to say": "\"You can't be charged before they do the work, and no one can remove accurate information. Let's look at your free report together and talk about building credit.\"",
+        "Escalate": "Offer a credit counseling appointment or our credit-builder options per our policy, never as a sales push."
+      },
+      "sources": [
+        {
+          "name": "FTC: Fixing your credit FAQs",
+          "url": "https://consumer.ftc.gov/articles/fixing-your-credit-faqs"
+        },
+        {
+          "name": "FTC: Free credit reports",
+          "url": "https://consumer.ftc.gov/articles/free-credit-reports"
+        }
+      ]
+    }
+  ]
+}

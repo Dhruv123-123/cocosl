@@ -1,0 +1,24 @@
+{
+  "_about": "FICTIONAL demo firm for the sample pack. 555-01xx numbers and example.com are reserved for fiction. Copy to clients/<slug>.json for a real client.",
+  "slug": "sample-ledger",
+  "name": "Sample Ledger & Tax Co.",
+  "initials": "SL",
+  "logo": "",
+  "color": "#24507A",
+  "accent": "#E8A33D",
+  "tier": "standard",
+  "tokens": {
+    "FIRM_NAME": "Sample Ledger & Tax Co.",
+    "FIRM_SHORT": "Sample Ledger",
+    "FIRM_PHONE": "(555) 010-0193",
+    "BOOKING_LINK": "example.com/book",
+    "CLIENT_PORTAL": "your Sample Ledger client portal"
+  },
+  "promise": "We'll never ask you to email or text your Social Security number, bank login or tax documents. Upload them only through your client portal, and call us if a message claiming to be from us asks for them.",
+  "footer_lines": [
+    "Sample Ledger & Tax Co. \u00b7 200 Main Street \u00b7 Anytown, ID 83000",
+    "You're getting this because you're a client of Sample Ledger & Tax Co."
+  ],
+  "unsubscribe": "[Your email platform's unsubscribe link goes here]",
+  "credit_line": ""
+}

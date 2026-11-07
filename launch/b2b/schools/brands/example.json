@@ -1,0 +1,22 @@
+{
+  "_about": "FICTIONAL demo school for the sample pack. 555-01xx numbers and example.org are reserved for fiction. Copy to clients/<slug>.json for a real client.",
+  "slug": "sample-valley-high",
+  "name": "Sample Valley High School",
+  "initials": "SV",
+  "logo": "",
+  "color": "#1F5F4A",
+  "accent": "#F2B134",
+  "tier": "standard",
+  "tokens": {
+    "SCHOOL_NAME": "Sample Valley High School",
+    "SCHOOL_SHORT": "Sample Valley High",
+    "HELP_CONTACT": "Ms. Rivera in Room 114, or the counseling office at (555) 010-0177"
+  },
+  "promise": "Every lesson here is for learning, not selling. Nobody from our school will ever ask you for a bank login, a Social Security number or money by text or DM.",
+  "footer_lines": [
+    "Sample Valley High School · 100 School Road · Anytown, MT 59000",
+    "Shared with students in Personal Finance and Advisory classes."
+  ],
+  "unsubscribe": "",
+  "credit_line": ""
+}

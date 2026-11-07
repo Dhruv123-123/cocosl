@@ -1,0 +1,25 @@
+{
+  "_about": "FICTIONAL co-branded sample for the broker partner kit: the fictional employer's newsletter, with a credit line for a fictional benefits broker (Sample Benefits Group). 555-01xx numbers and example.com are reserved for fiction.",
+  "slug": "sample-outfitters-broker-cobrand",
+  "name": "Sample Outfitters Co.",
+  "initials": "SO",
+  "logo": "",
+  "color": "#2E6B4F",
+  "accent": "#F0B429",
+  "tier": "growth",
+  "tokens": {
+    "EMPLOYER_NAME": "Sample Outfitters Co.",
+    "EMPLOYER_SHORT": "Sample Outfitters",
+    "BENEFITS_CONTACT": "the People team at benefits@example.com or ext. 0142",
+    "BENEFITS_PORTAL": "the benefits portal",
+    "RETIREMENT_PLAN": "401(k)",
+    "MATCH_LINE": "Sample Outfitters matches 100% of the first 4% of pay you put in.",
+    "EAP_LINE": "Our Employee Assistance Program offers free, confidential financial counseling: call (555) 010-0177."
+  },
+  "promise": "Sample Outfitters will never ask you for your benefits or payroll password by email or text. Make changes only in the benefits portal.",
+  "footer_lines": [
+    "Sent by the People team at Sample Outfitters Co. to all employees."
+  ],
+  "unsubscribe": "",
+  "credit_line": "Provided to Sample Outfitters employees by Sample Benefits Group, your benefits advisor \u00b7 (555) 010-0188"
+}

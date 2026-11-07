@@ -1,0 +1,39 @@
+{
+  "_about": "Spanish (es-US) edition of the Weekly Scam Alert, for Plus-tier clients. Read by ../../build.py. MACHINE-ADAPTED: needs a fluent es-US reviewer before any client sees it (see REVIEW_CHECKLIST.md).",
+  "series": "Alerta de Estafas Semanal",
+  "unit": "week",
+  "labels": {
+    "eyebrow": "La estafa de esta semana",
+    "tell": "La señal",
+    "promise": "Nuestra promesa",
+    "steps": "Qué hacer",
+    "hits": "En breve",
+    "job": "Su tarea de 5 minutos esta semana",
+    "brief": "Staff huddle brief (English, for staff)",
+    "screen": "Pantalla del vestíbulo y póster",
+    "post": "Publicación en redes (Facebook, Instagram, LinkedIn, Nextdoor)",
+    "sources": "Fuentes"
+  },
+  "cta": "¿No está seguro de una llamada, mensaje de texto o correo? Llámenos al **{{CU_PHONE}}** o al número que aparece al reverso de su tarjeta.",
+  "visual_footer": "¿Tiene dudas? Llámenos al **{{CU_PHONE}}** o al número de su tarjeta.",
+  "disclaimer": "Esta alerta es información general para ayudarle a reconocer estafas. No es asesoría legal, fiscal ni financiera.",
+  "visuals": [
+    "social",
+    "lobby",
+    "poster"
+  ],
+  "not_in_essentials": [
+    "poster"
+  ],
+  "tokens": [
+    "{{CU_NAME}}",
+    "{{CU_SHORT}}",
+    "{{CU_PHONE}}",
+    "{{CU_NEVER_ASK}}",
+    "{{CU_ADDRESS}}",
+    "{{CU_INSURANCE_STATEMENT}}",
+    "{{UNSUBSCRIBE_LINK}}"
+  ],
+  "promise_token": "{{CU_NEVER_ASK}}",
+  "lang": "es"
+}
