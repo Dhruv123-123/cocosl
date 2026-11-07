@@ -112,6 +112,17 @@ CHARTS = {
                           [2450, 3650], note="Ejemplo: primer mes, depósito y $50 de solicitud",
                           said="dos mil cuatrocientos cincuenta"),
     },
+    "l-familia-aqui-y-alla": {
+        "La cuenta": _c("bars", "Los $3,000 de Ana al mes",
+                        ["Renta", "Comida", "Transporte", "Servicios", "Familia", "Colchón", "Lo demás"],
+                        [1200, 600, 300, 200, 300, 200, 200], note="Ejemplo inventado; tu número será otro",
+                        said="mil doscientos"),
+    },
+    "l-retiro-tarde": {
+        "El ejemplo": _c("bars", "$200 al mes por 20 años", ["Lo que pone", "Con 6% al año (ejemplo)"],
+                         [48000, 92400], note="Ejemplo, no una promesa; las inversiones suben y bajan",
+                         said="cuarenta y ocho mil"),
+    },
     "l-seguro-de-vida": {
         "El costo": _c("bars", "Al mes por $250,000 de cobertura", ["A plazo (20 años)", "Permanente"], [20, 250],
                        note="Ejemplo ilustrativo; tu precio depende de edad y salud"),
@@ -138,6 +149,8 @@ ORIGINAL = {
     "l-tu-sueldo-completo": "Graba la pantalla de una libreta de horas en el celular (una nota con fechas, entrada, comida y salida) junto a un talón de pago de ejemplo con la línea de 'overtime' marcada",
     "l-primer-ano": "Graba la pantalla del buscador de cooperativas de MyCreditUnion.gov y de la página de seguro de depósitos de la FDIC en español (sin poner datos)",
     "l-rentar": "Graba la pantalla de un video de ejemplo recorriendo un departamento vacío cuarto por cuarto, y la nota con la lista de daños con fecha que se manda al administrador",
+    "l-familia-aqui-y-alla": "Graba la pantalla creando dos apartados de ahorro, 'Familia' y 'Emergencia familia', con transferencia mensual en una app de banco de demostración, y la nota compartida de los hermanos con números de ejemplo",
+    "l-retiro-tarde": "Graba la pantalla de la calculadora de interés compuesto de Investor.gov con $200 al mes, 20 años y 6%, y la página de ssa.gov en español donde se abre la cuenta de mi Seguro Social (sin iniciar sesión)",
     "l-seguro-de-vida": "Graba la pantalla del buscador de licencias de agentes de seguros de la página del departamento de seguros de un estado (sin datos personales)",
 }
 

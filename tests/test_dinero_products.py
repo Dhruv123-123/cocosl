@@ -201,7 +201,7 @@ def test_every_dinero_long_video_has_an_original_element():
     longs = 0
     for f in ("content.json", "content-month-1.json", "content-month-2.json", "content-month-3.json", "content-month-4.json",
               "content-month-5.json", "content-month-6.json", "content-month-7.json", "content-month-8.json",
-              "content-month-9.json"):
+              "content-month-9.json", "content-month-10.json"):
         for it in json.loads((DS / f).read_text()):
             if it["format"] != "long":
                 continue
@@ -213,7 +213,7 @@ def test_every_dinero_long_video_has_an_original_element():
                 if seg.get("chart"):
                     assert any(c.startswith(f"Chart '{seg['chart']['title']}'") for c in s["claims_to_verify"])
             assert "--- ORIGINAL ELEMENT" in caption_text(brand, it)
-    assert longs == 20
+    assert longs == 22
 
 
 def test_month5_plan_is_complete_and_flags_itin_pieces_for_an_attorney():
@@ -328,8 +328,8 @@ def test_month6_plan_is_complete():
     assert len(rows) == 24 and len({(r.split("|")[1], r.split("|")[2]) for r in rows}) == 24
 
 
-@pytest.mark.parametrize("month, tag, itin", [(7, " jun |", 0), (8, " jul |", 6), (9, " ago |", 3)])
-def test_months_7_to_9_plans_are_complete(month, tag, itin):
+@pytest.mark.parametrize("month, tag, itin", [(7, " jun |", 0), (8, " jul |", 6), (9, " ago |", 3), (10, " sep |", 9)])
+def test_months_7_to_10_plans_are_complete(month, tag, itin):
     items = json.loads((DS / f"content-month-{month}.json").read_text())
     fmts = [i["format"] for i in items]
     assert fmts.count("short") == 14 and fmts.count("carousel") == 8 and fmts.count("long") == 2
@@ -512,3 +512,18 @@ def test_month9_renting_pieces_carry_a_legal_check_and_name_nobody():
         if "inmigra" in text:
             assert "abogado de inmigración con licencia" in text and "notario" in text, i["key"]
         assert not any(b in text for b in ("venmo", "zelle", "cash app", "paypal", "chime", "wells fargo")), i["key"]
+
+
+def test_month10_flags_immigration_and_names_no_provider():
+    """Month 10 talks about immigration status (work injuries, family plans, notaries, ITIN retirement): every such
+    piece carries ATTORNEY REVIEW and sends people to a licensed attorney, never a notario."""
+    items = json.loads((DS / "content-month-10.json").read_text())
+    for i in items:
+        s = i["script"]
+        text = " ".join([s["caption"]] + [g["narration"] for g in s["segments"]]).lower()
+        if "migratori" in text or "itin" in text:
+            assert s["claims_to_verify"][0].startswith("ATTORNEY REVIEW"), i["key"]
+            assert "abogado" in text, i["key"]
+        assert not any(b in text for b in ("remitly", "western union", "fidelity", "vanguard", "schwab", "metlife")), i["key"]
+    longs = [i for i in items if i["format"] == "long"]
+    assert all(sum(len(g["narration"].split()) for g in i["script"]["segments"]) >= 900 for i in longs)
