@@ -11,7 +11,7 @@
 - **No results claims.** Say "this is how the sheet works", not "this sheet will get you out of debt". No income or savings promises. The guardrail word list applies to the captions too.
 - **Product disclosure:** every caption ends "Our own product: we make money if you buy it." Turn on TikTok's commercial content toggle ("Your brand").
 - **The AI label isn't needed** for a clip with no AI visuals or voice. If AI text-to-speech is added over it, turn the label on and keep the caption line "Voice made with AI."
-- **Platform:** TikTok only, at 12:30 on the posting day. Instagram, YouTube and Facebook are already at the 2-a-day cap, but TikTok has a spare slot on Thursdays. Check the combined calendar first, because the Dec 31 savings-challenge finale is also a Thursday, so that week's clip moves to Fri Jan 1.
+- **Platform:** TikTok only, at 19:00 on the posting day (the Short takes 12:30). Instagram, YouTube and Facebook are already at the 2-a-day cap, but TikTok has a spare slot on Thursdays. Check the combined calendar first, because the Dec 31 savings-challenge finale is also a Thursday, so that week's clip moves to Fri Jan 1.
 
 ## Filming setup (5 minutes)
 
@@ -22,7 +22,7 @@
 
 ## The eight clips
 
-| # | Post (TikTok, 12:30) | Sheet | Hook (on screen, first second) | What the hands write | End card |
+| # | Post (TikTok, 19:00) | Sheet | Hook (on screen, first second) | What the hands write | End card |
 |---|---|---|---|---|---|
 | 1 | Thu Dec 3, 2026 | Bill Payment Tracker ($4) | "Every bill in December, on one page" | Rent $1,400, phone $45, internet $60, car insurance $120, streaming $16 → tick "paid" on 3 of them; total $1,641 | "3 of 5 paid. The sheet is in my shop." |
 | 2 | Thu Dec 10 | Debt Payoff Coloring Tracker ($4), 100-squares page | "Coloring in $200 of card debt" | Write a fictional $2,000 card at the top (each square = 1% = $20), then shade 10 squares; balance goes $2,000 → $1,800 | "$1,800 to go. The sheet is in my shop." |
