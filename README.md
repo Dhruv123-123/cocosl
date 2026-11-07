@@ -77,6 +77,7 @@ factory backup --archive [--with-media]       # one dated zip: database, brands,
 factory restore <archive.zip> [--yes]        # lists first; --yes restores and keeps what it replaced
 factory sequence-export <brand> --for sender  # welcome emails as a Sender automation: one folder per step + CHECKLIST
 factory subscribers-export <brand> --for sender  # two CSVs (already welcomed / not) in Sender's date format
+factory reslot [--brand] [--yes]             # move queued posts onto current slots (TikTok 18:00, Pinterest 11:00, Shorts 12:30); zero collisions
 scripts/smoke_fresh_clone.sh                 # fresh clone → install → init → doctor → render one post per brand → launch-check
 factory ui                                   # one local page (127.0.0.1 only): calendar, review queue, recordings, launch check
 factory manual [build|copy <pub>|done <pub> --url]  # TikTok + Pinterest post-by-hand packages

@@ -260,12 +260,21 @@ class Factory:
             raise PermissionError("Media check failed: " + "; ".join(map(str, stop)))
         # Work out every slot first so a cadence block can't leave a half-scheduled post behind.
         plan = []
-        for platform in targets:
+        from .scheduler import platform_cap_reached
+        for platform in list(targets):
             slot = at or next_slot(self.db, brand, platform, fmt=post["format"])
+            cap = platform_cap_reached(self.db, brand, platform, post["format"], slot)
+            if cap is not None:
+                if platforms:
+                    raise PermissionError(f"{platform} already has {cap} {post['format']} post(s) that week (platform_weekly_caps)")
+                self.db.log("post.skipped_cap", "post", post_id, {"platform": platform, "cap": cap})
+                continue
             cadence = check_cadence(self.db, brand, platform, slot)
             if cadence.level == "block":
                 raise PermissionError(cadence.message)
             plan.append((platform, slot))
+        if not plan:
+            raise ValueError("Every platform for this post is at its weekly cap; nothing scheduled")
         pub_ids = []
         for platform, slot in plan:
             acct = brand.account(platform)
