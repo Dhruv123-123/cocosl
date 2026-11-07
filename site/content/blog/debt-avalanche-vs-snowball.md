@@ -1,7 +1,7 @@
 ---
 title: Debt avalanche vs snowball, with the real maths
-seo_title: Debt avalanche vs snowball: which saves more? (worked example)
-description: Same three debts, same $200 extra a month. Avalanche saved about $106 in interest; snowball cleared its first debt 12 months sooner. Here's how to pick the method you'll stick with.
+seo_title: "Debt avalanche vs snowball: which saves more?"
+description: "Same three debts, same $200 extra a month: avalanche saved about $106 in interest; snowball cleared its first debt 12 months sooner."
 date: 2026-11-07
 pillar: credit-and-debt
 keyword: debt avalanche vs snowball

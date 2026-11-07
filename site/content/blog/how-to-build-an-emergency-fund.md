@@ -1,7 +1,7 @@
 ---
 title: How to build a $1,000 emergency fund in 8 weeks
-seo_title: How to build an emergency fund: $1,000 in 8 weeks ($125 a week)
-description: A starter emergency fund turns a flat tire from a crisis into an errand. Here's an 8-week, $125-a-week plan, where to keep the money, and the rules for using it.
+seo_title: "How to build an emergency fund: $1,000 in 8 weeks"
+description: "A starter emergency fund turns a flat tire from a crisis into an errand. An 8-week, $125-a-week plan, where to keep the money, and when to use it."
 date: 2026-11-07
 pillar: budgeting
 keyword: how to build an emergency fund

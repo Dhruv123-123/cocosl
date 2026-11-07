@@ -1,7 +1,7 @@
 ---
 title: How to make a budget you'll actually keep (the weekly-number method)
-seo_title: How to make a budget you'll actually keep: the weekly spending number method
-description: Most budgets die in week three. Here's a simple four-line budget built around one weekly spending number, with a worked example and a 20-minute weekly check-in.
+seo_title: "How to make a budget you'll actually keep"
+description: "Most budgets die in week three. A simple four-line budget built around one weekly spending number, with a worked example and a weekly check-in."
 date: 2026-11-07
 pillar: budgeting
 keyword: how to make a budget

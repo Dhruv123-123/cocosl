@@ -1071,3 +1071,46 @@ def test_ai_guide_kits_are_gumroad_only_and_goal_pages_show_the_etsy_bundles(tmp
                          ("freelance", "freelance-budget-bundle"), ("saving", "savings-challenge-pack")):
         assert shop[bundle]["bundle"] and shop[bundle]["stores"] == ["etsy"], bundle
         assert shop[bundle]["name"] in (out / "shop" / goal / "index.html").read_text(), goal
+
+
+def test_seo_basics_on_every_article_and_qa_page(tmp_path):
+    """Title <= 60 chars, description 50-155, one H1, canonical, alt on every image (non-empty inside the article
+    text), and FAQPage schema wherever there's a "## Common questions" section."""
+    import html as h_
+    import json
+    out = _build(tmp_path, "https://example.org", BLOG_SHOW_SCHEDULED="1")
+    pages = [(f"blog/{p.stem}", p) for p in (SITE / "content" / "blog").glob("*.md")]
+    pages += [(p.stem, p) for p in (SITE / "content" / "pages").glob("*.md")]
+    pages += [("money-basics", SITE / "content" / "money-basics.md")]
+    assert len(pages) > 100
+    for route, src in pages:
+        h = (out / route / "index.html").read_text()
+        title = h_.unescape(re.search(r"<title>(.*?)</title>", h, re.S).group(1))
+        desc = h_.unescape(re.search(r'<meta name="description" content="([^"]*)"', h).group(1))
+        assert len(title) <= 60, (route, len(title), title)
+        assert 50 <= len(desc) <= 155, (route, len(desc))
+        assert len(re.findall(r"<h1[\s>]", h)) == 1, route
+        assert '<link rel="canonical"' in h, route
+        for img in re.findall(r"<img\b[^>]*>", h):
+            assert re.search(r'\salt="', img), (route, img)
+        prose = re.search(r'<div class="prose">(.*?)</div>\s*</article>', h, re.S)
+        for img in re.findall(r"<img\b[^>]*>", prose.group(1) if prose else ""):
+            assert not re.search(r'\salt=""', img), (route, img)
+        if "## Common questions" in src.read_text():
+            blocks = [json.loads(b) for b in re.findall(r'<script type="application/ld\+json">(.*?)</script>', h, re.S)]
+            flat = [x for b in blocks for x in (b if isinstance(b, list) else [b])]
+            faq = [x for x in flat if x.get("@type") == "FAQPage"]
+            assert faq and len(faq[0]["mainEntity"]) >= 3, route
+
+
+def test_scheduled_rebuild_only_deploys_on_days_something_goes_live():
+    import subprocess
+    tool = SITE / "tools" / "due_today.py"
+    yes = subprocess.run([sys.executable, str(tool), "2027-07-01"], capture_output=True, text=True)
+    assert yes.returncode == 0 and "how-to-negotiate-a-medical-bill" in yes.stdout
+    no = subprocess.run([sys.executable, str(tool), "2027-07-02"], capture_output=True, text=True)
+    assert no.returncode == 1
+    assert subprocess.run([sys.executable, str(tool), "2026-12-26"], capture_output=True).returncode == 0  # new-year live
+    wf = (SITE.parent / ".github" / "workflows" / "netlify-rebuild.yml").read_text()
+    assert "due_today.py" in wf and "steps.due.outputs.due == 'yes'" in wf
+    assert 'ignore = "if [ -n \\"$INCOMING_HOOK_URL\\" ]' in (SITE.parent / "netlify.toml").read_text()

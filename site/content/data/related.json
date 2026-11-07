@@ -210,6 +210,7 @@
   "how-to-build-an-emergency-fund": {
    "related": [
     "how-much-emergency-fund-do-i-need",
+    "how-to-set-a-savings-goal",
     "how-to-handle-a-job-loss-financially",
     "sinking-funds-explained",
     "how-to-make-a-budget-you-will-keep",
@@ -253,6 +254,7 @@
   "how-to-open-a-high-yield-savings-account": {
    "related": [
     "how-to-build-an-emergency-fund",
+    "how-to-automate-your-savings",
     "sinking-funds-explained",
     "high-yield-savings-vs-money-market",
     "is-my-savings-app-fdic-insured"
@@ -407,6 +409,7 @@
   "how-to-save-for-a-house-down-payment": {
    "related": [
     "high-yield-savings-vs-money-market",
+    "short-term-vs-long-term-savings-goals",
     "how-to-open-a-high-yield-savings-account",
     "how-to-build-an-emergency-fund",
     "sinking-funds-explained"
@@ -957,6 +960,33 @@
     "health-insurance-explained",
     "how-to-build-an-emergency-fund",
     "first-job-401k-setup"
+   ],
+   "tool": "budget"
+  },
+  "how-to-set-a-savings-goal": {
+   "related": [
+    "how-much-emergency-fund-do-i-need",
+    "sinking-funds-explained",
+    "how-to-make-a-budget-you-will-keep",
+    "no-spend-challenge"
+   ],
+   "tool": "budget"
+  },
+  "how-to-automate-your-savings": {
+   "related": [
+    "how-to-set-a-savings-goal",
+    "how-to-open-a-high-yield-savings-account",
+    "how-to-avoid-overdraft-fees",
+    "sinking-funds-explained"
+   ],
+   "tool": "budget"
+  },
+  "short-term-vs-long-term-savings-goals": {
+   "related": [
+    "how-to-set-a-savings-goal",
+    "cds-explained",
+    "how-to-save-for-a-house-down-payment",
+    "how-to-build-an-emergency-fund"
    ],
    "tool": "budget"
   }

@@ -1,6 +1,6 @@
 ---
 title: CIT Bank Platinum Savings: great if you have $5,000 saved
-seo_title: CIT Bank Platinum Savings: what to know about the $5,000 tier
+seo_title: "CIT Bank Platinum Savings: the $5,000 tier explained"
 description: CIT Platinum Savings has paid a top rate on balances of $5,000 or more. Who it suits, what to watch, and picks for smaller balances.
 date: 2026-12-03
 pillar: money-tools

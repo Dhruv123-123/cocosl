@@ -184,8 +184,10 @@ Each weekly issue is a Markdown file in `content/newsletter/` (front matter: `is
 
 An issue only goes public on a build on or after its `date`, so write ahead, send it from your email provider
 that day, and let the site catch up. Netlify rebuilds only on a push, so add a build hook and save it as the
-repo secret `NETLIFY_BUILD_HOOK`; `.github/workflows/netlify-rebuild.yml` pings it every Thursday. The
-GitHub Pages workflow has the same weekly schedule. Preview scheduled issues locally with
+repo secret `NETLIFY_BUILD_HOOK`; `.github/workflows/netlify-rebuild.yml` checks every morning with
+`python3 site/tools/due_today.py` and pings it only when an article, issue or landing page goes live that day
+(about 6 deploys a month for 2027, against the free plan's 300 credits at 15 per deploy). `netlify.toml`'s
+`ignore` rule also skips deploys for pushes that don't touch `site/`, while build-hook builds always run. Preview scheduled issues locally with
 `NEWSLETTER_SHOW_SCHEDULED=1 python3 site/build.py`, or pretend it's another day with `BUILD_DATE=2026-11-20`.
 
 Seven issues are written and scheduled (weekly, Nov 12 to Dec 24, 2026). They aren't in the welcome sequence; send
@@ -281,6 +283,17 @@ refund estimator and the debt payoff calculator (with its chart) load live throu
 `embed.js`, and the 52-week savings challenge shows as a card with a button. They use `site.json > apps_url`
 (still the placeholder `https://mms-tools.netlify.app`) and disappear if it's emptied. Map more articles in
 `articles`, or place one by hand with `{{embed:<key>}}`.
+
+### America Saves Week and the SEO checks
+
+`/america-saves-week/` (content/pages/america-saves-week.md) is a five-day plan for America Saves Week, April 5 to
+9, 2027, linking the three articles dated April 6, 7 and 9 and the Start page. Update the dates each year from
+americasaves.org. Pages in content/pages/ can now set `seo_title`, and a "## Common questions" section on any
+page gets FAQ schema. `test_seo_basics_on_every_article_and_qa_page` checks every article and page: title up to
+60 characters, description 50 to 155, one H1, a canonical link, alt on every image, and FAQ schema.
+
+The Money Basics course emails are in `brands/sequences/money-made-simple.money-basics.yaml`; build the Sender
+automation with `factory sequence-export money-made-simple --sequence money-basics --for sender`.
 
 ### The tools hub (/tools/) and internal links
 

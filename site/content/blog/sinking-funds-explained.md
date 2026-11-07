@@ -1,7 +1,7 @@
 ---
 title: Sinking funds: how to stop "surprise" expenses wrecking your budget
 seo_title: Sinking funds explained (with examples and a simple setup)
-description: Car registration isn't an emergency; it happens every year. Sinking funds turn predictable irregular costs into small monthly amounts. Here's how to set them up.
+description: "Car registration isn't an emergency; it happens every year. Sinking funds turn predictable irregular costs into small monthly amounts. How to set them up."
 date: 2026-11-07
 pillar: budgeting
 keyword: sinking funds

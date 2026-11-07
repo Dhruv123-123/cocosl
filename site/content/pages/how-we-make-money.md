@@ -1,6 +1,6 @@
 ---
 title: How we make money
-description: "Money Made Simple is free to read. Here's exactly how it pays for itself: our own products, affiliate links and, later, labelled sponsors. Plus what we never do."
+description: "Money Made Simple is free to read. How it pays for itself: our own products, affiliate links and, later, labelled sponsors. Plus what we never do."
 updated: 2026-11-07
 ---
 Everything on this site is free to read, and the email is free too. It costs money to run, so here is how it pays for itself, in plain words. There are three ways, and none of them changes what an article says.

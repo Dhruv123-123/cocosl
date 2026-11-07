@@ -1194,7 +1194,11 @@ def build() -> list[str]:
     for pg in pages:
         path = f"/{pg['slug']}/"
         body_html, _ = markdown(pg["body"], shortcode_factory(products, f"page-{pg['slug']}"))
-        write(path, layout(title=pg["title"], description=pg.get("description", pg["title"]), path=path,
+        faq = extract_faq(pg["body"])  # pages with a "## Common questions" section get FAQ rich results too
+        ld = [{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}] if faq else None
+        write(path, layout(title=pg.get("seo_title", pg["title"]), description=pg.get("description", pg["title"]), path=path,
+                           jsonld=ld,
                            body=f'<article class="wrap article"><h1>{esc(pg["title"])}</h1><div class="prose">{body_html}</div></article>'))
         urls.append((path, pg.get("updated", date.today().isoformat())))
 
