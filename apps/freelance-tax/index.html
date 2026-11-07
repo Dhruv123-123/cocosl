@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quarterly Estimated Tax Calculator for Freelancers (2026) | 1099 Money</title>
+<meta name="description" content="Free 2026 quarterly estimated tax calculator for freelancers and 1099 workers: self-employment tax, income tax, the safe harbor, what to pay by each deadline and how much to set aside.">
+<link rel="canonical" href="https://1099money.netlify.app/">
+<meta property="og:title" content="Quarterly Estimated Tax Calculator for Freelancers (2026)">
+<meta property="og:description" content="What to pay the IRS by each deadline, with self-employment tax and the safe harbor built in. Free, private, no signup.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://1099money.netlify.app/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#14213d">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Quarterly estimated tax calculator for freelancers","url":"https://1099money.netlify.app/","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who has to pay quarterly estimated taxes?","acceptedAnswer":{"@type":"Answer","text":"Generally, anyone who expects to owe $1,000 or more when they file, after withholding and credits. Most freelancers with steady income do."}},{"@type":"Question","name":"When are quarterly estimated taxes due for 2026?","acceptedAnswer":{"@type":"Answer","text":"April 15, June 15 and September 15, 2026, and January 15, 2027. A date on a weekend or holiday moves to the next business day."}},{"@type":"Question","name":"What is the safe harbor?","acceptedAnswer":{"@type":"Answer","text":"If you pay at least 100% of last year's total tax (110% if last year's AGI was over $150,000) in four on-time installments, you generally avoid the underpayment penalty even if you owe more this year."}},{"@type":"Question","name":"How much should a freelancer set aside for taxes?","acceptedAnswer":{"@type":"Answer","text":"Federal tax on $60,000 of freelance profit is about 20% for a single filer in 2026, before state tax, which is why 25-30% is a common set-aside. This calculator works out your own rate."}}]}</script>
+</head>
+<body>
+<header class="top"><a class="logo" href="./"><span class="mark">1M</span> <span data-brand>1099 Money</span></a>
+<span class="home">Free tools for freelancers</span></header>
+<main>
+
+<h1>Quarterly estimated tax calculator</h1>
+<p class="lede">For US freelancers, creators and side hustlers. See what to pay the IRS by the next deadline, your full-year bill, and how much of every payment to set aside. 2026 tax year.</p>
+
+<div class="layout">
+  <form id="calc-form" class="card" autocomplete="off" onsubmit="return false">
+    <div class="grid">
+      <label>Expected profit this year ($)<input name="profit" inputmode="decimal" value="60000"><small>Freelance income minus business expenses, for the whole year.</small></label>
+      <label>Filing status<select name="status"><option value="single">Single</option><option value="mfj">Married filing jointly</option></select></label>
+      <label>Next payment<select name="nextQuarter"><option value="1">Q1 · Apr 15, 2026</option><option value="2">Q2 · Jun 15, 2026</option><option value="3">Q3 · Sep 15, 2026</option><option value="4">Q4 · Jan 15, 2027</option><option value="5">All deadlines passed</option></select></label>
+      <label>Estimated payments already made this year ($)<input name="paidSoFar" inputmode="decimal" value="0"></label>
+      <details class="more-fields" open><summary>Last year (for the safe harbor)</summary>
+        <label>Last year's total tax ($)<input name="priorYearTax" inputmode="decimal" value="0"><small>Form 1040, "total tax" line. 0 if you don't know.</small></label>
+        <label>Last year's AGI ($)<input name="priorYearAgi" inputmode="decimal" value="0"></label>
+      </details>
+      <details class="more-fields"><summary>Also have a W-2 job?</summary>
+        <label>Expected W-2 wages this year ($)<input name="w2Wages" inputmode="decimal" value="0"></label>
+        <label>Federal withholding from that job ($)<input name="withholding" inputmode="decimal" value="0"></label>
+      </details>
+      <label>State income tax, rough rate (%)<input name="stateRate" inputmode="decimal" value="0"><small>0 if your state has no income tax. Used only for the set-aside.</small></label>
+    </div>
+    <button type="button" id="share" class="link">Copy a link to these numbers</button>
+  </form>
+  <section class="card result" aria-live="polite"><div id="result"></div><div id="offers"></div></section>
+</div>
+
+<section class="card signup-box">
+  <h2>Never miss a deadline</h2>
+  <p class="signup-pitch"></p>
+  <form class="signup" name="tax-calculator-signup" method="POST" data-netlify="true" netlify-honeypot="website">
+    <input type="hidden" name="form-name" value="tax-calculator-signup">
+    <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <label class="sr" for="signup-email">Email</label>
+    <input id="signup-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+    <button class="btn">Remind me</button>
+  </form>
+  <p class="tiny">Four reminders a year plus one short email a week. Unsubscribe in one click.</p>
+</section>
+
+<section class="faq"><h2>Questions</h2>
+<h3>Who has to pay quarterly estimated taxes?</h3><p>Generally, anyone who expects to owe $1,000 or more when they file, after withholding and credits. Nobody withholds tax from freelance payments, so most freelancers with steady income do.</p>
+<h3>When are they due?</h3><p>For 2026 income: April 15, June 15 and September 15, 2026, and January 15, 2027. The periods are uneven on purpose (3, 2, 3 and 4 months). Pay at irs.gov/payments with IRS Direct Pay or your IRS Online Account, and choose the right tax year.</p>
+<h3>What is the safe harbor?</h3><p>Pay at least 100% of last year's total tax (110% if last year's AGI was over $150,000) in four on-time installments and you generally avoid the underpayment penalty, even if this year's bill is bigger. You still owe the rest when you file. Enter last year's tax above and the calculator compares both methods.</p>
+<h3>What is self-employment tax?</h3><p>Social Security and Medicare, both the employee and employer halves: 15.3% on 92.35% of your net profit (the 12.4% Social Security part stops at the $184,500 wage base for 2026). Half of it is deductible when figuring income tax.</p>
+<h3>How much should I set aside?</h3><p>On $60,000 of profit a single filer owes about $12,000 in 2026 federal tax, roughly 20%, before state tax. That's why 25–30% is a common set-aside. The result above gives your own number.</p>
+<h3>What doesn't this handle?</h3><p>Itemized deductions, tax credits, capital gains, S corps, high incomes above the QBI threshold (around $200,000 single), and the annualized method for lumpy income. For those, use Form 1040-ES or a tax professional.</p>
+</section>
+</main>
+<footer>
+<p>Educational tool, not tax, legal or financial advice. Results are estimates from the numbers you enter, using 2026 federal figures (IRS Rev. Proc. 2025-32, SSA wage base). Check irs.gov before acting.</p>
+<p>Your numbers stay in your browser; nothing you type is sent anywhere. Some links may be affiliate links.</p>
+<p><span data-brand>1099 Money</span> · get paid, keep more, never fear April.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

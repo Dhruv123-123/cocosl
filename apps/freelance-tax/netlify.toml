@@ -1,0 +1,3 @@
+# Deploy this folder on its own: Netlify > Add new site > Import > base directory apps/freelance-tax
+[build]
+  publish = "."
