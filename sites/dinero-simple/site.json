@@ -130,6 +130,7 @@
     "blog_title": "Artículos: presupuesto, invertir, crédito y herramientas de dinero",
     "blog_description": "Guías en español claro para latinos en EE. UU.: presupuestos que sí funcionan, cómo empezar a invertir, puntaje de crédito, salir de deudas y apps de dinero, con los números a la vista.",
     "blog_h1": "Artículos",
+    "blog_empty": "Muy pronto vas a encontrar artículos aquí.",
     "blog_dek": "Una idea por artículo, bien explicada y con los números a la vista. Elige un tema:",
     "pillar_title": "{label}: artículos",
     "pillar_description": "Todos los artículos de {site} sobre {label_lower}.",
@@ -291,5 +292,12 @@
         "como-funciona-el-puntaje-de-credito"
       ]
     }
-  ]
+  ],
+  "hold": {
+    "enabled": false,
+    "_note": "Lean launch (see the reviewer brief): only El Presupuesto de 20 Minutos, the core pages and emails 1-3 go live. Set enabled to true to hold the rest, and remove names as they pass native review.",
+    "blog": ["*"],
+    "products": ["el-kit-para-recortar-gastos", "tu-fecha-sin-deudas", "empieza-a-invertir-con-100-al-mes", "el-paquete-dinero-simple"],
+    "emails": ["fondos-de-prevision", "oferta-presupuesto-20-minutos", "avalancha-bola-de-nieve", "puntaje-de-credito", "empezar-a-invertir", "preguntas-antes-de-comprar", "que-sigue"]
+  }
 }

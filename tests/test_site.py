@@ -163,3 +163,34 @@ def test_go_links_redirect_home_until_the_affiliate_url_is_set(tmp_path):
     art = (out / "blog" / "cuenta-y-tarjeta-con-itin" / "index.html").read_text()
     assert 'class="partner"' in art and 'href="/go/tarjeta-itin/"' in art
     assert "/go/tarjeta-itin/ https://aff.example/x 302!" in (out / "_redirects").read_text()
+
+
+def test_hold_keeps_unreviewed_pages_off_without_breaking_links(tmp_path):
+    site = tmp_path / "ds"
+    shutil.copytree(DS, site, ignore=shutil.ignore_patterns("public"))
+    cfg = json.loads((site / "site.json").read_text())
+    assert cfg["hold"]["enabled"] is False  # off until Dhruv chooses the lean launch
+    cfg["hold"]["enabled"] = True
+    (site / "site.json").write_text(json.dumps(cfg, ensure_ascii=False))
+    out = _build(tmp_path / "b", "https://example.org", SITE_ROOT=str(site))
+    assert (out / "products" / "el-presupuesto-de-20-minutos" / "index.html").is_file()
+    for slug in cfg["hold"]["products"]:
+        assert not (out / "products" / slug).exists()
+    assert not any((out / "blog" / f.stem).exists() for f in (DS / "content" / "blog").glob("*.md"))
+    assert "Muy pronto" in (out / "blog" / "index.html").read_text()
+    seq = json.loads((out / "emails" / "sequence.json").read_text())
+    assert [e["order"] for e in seq] == [1, 2, 3]
+    broken = []
+    for page in out.rglob("*.html"):
+        for ref in re.findall(r'(?:href|src)="([^"#]+)', page.read_text()):
+            if ref.startswith("https://example.org/"):
+                ref = ref[len("https://example.org"):]
+            if ref.startswith(("http://", "https://", "mailto:", "data:")):
+                continue
+            target = out / ref.lstrip("/")
+            if not (target.is_file() or (target / "index.html").is_file()):
+                broken.append(f"{page.relative_to(out)} -> {ref}")
+    assert not broken, broken
+    for e in seq:
+        for ref in re.findall(r'href="https://example\.org(/[^"#?]*)', e["html"]):
+            assert (out / ref.lstrip("/")).is_file() or (out / ref.lstrip("/") / "index.html").is_file(), ref

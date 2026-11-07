@@ -76,7 +76,7 @@ UI_EN: dict = {
     "blog_title": "Articles: budgeting, investing basics, credit and money tools",
     "blog_description": "Plain-English guides for students and early-career workers: budgeting that sticks, "
                         "first-time investing, credit scores, debt payoff and money apps, with the maths shown.",
-    "blog_h1": "Articles", "blog_dek": "One idea per article, explained properly, with the numbers shown. Pick a topic:",
+    "blog_h1": "Articles", "blog_empty": "New articles are on the way.", "blog_dek": "One idea per article, explained properly, with the numbers shown. Pick a topic:",
     "pillar_title": "{label}: articles", "pillar_description": "Every {site} article on {label_lower}.",
     "products": "Products", "preview_alt": "{title} preview",
     "not_on_sale": "Not on sale yet. Join the free email and you'll hear the day it opens.",
@@ -189,6 +189,8 @@ def inline(s: str) -> str:
 
     def link(m):
         text, href = m.group(1), m.group(2)
+        if held_path(href):
+            return text  # the target is on hold (site.json "hold"): keep the words, drop the link
         ext = href.startswith("http") and urlparse(href).netloc not in CFG["url"]
         rel = ' rel="noopener"' if ext else ""
         cls = ""
@@ -316,11 +318,35 @@ def extract_faq(md: str) -> list[tuple[str, str]]:
 
 
 # ------------------------------------------------------------------- content
+HOLD_PATHS = {"blog": "/blog/{}/", "products": "/products/{}/", "emails": "/emails/{}/"}
+
+
+def is_held(kind: str, slug: str) -> bool:
+    """site.json "hold": {"enabled": true, "blog": [...], "products": [...], "emails": [...]} keeps unreviewed
+    pieces off the site (and out of the email export) without deleting them. "*" holds a whole kind."""
+    h = CFG.get("hold") or {}
+    if not h.get("enabled"):
+        return False
+    names = h.get(kind, [])
+    return "*" in names or slug in names
+
+
+def held_path(href: str) -> bool:
+    path = urlparse(href).path if href.startswith("http") and urlparse(href).netloc in CFG.get("url", "") else href
+    for kind, pattern in HOLD_PATHS.items():
+        prefix = pattern.split("{}")[0]
+        if path.startswith(prefix) and len(path) > len(prefix):
+            return is_held(kind, path[len(prefix):].strip("/").split("/")[0])
+    return False
+
+
 def load_dir(name: str) -> list[dict]:
     items = []
     for p in sorted((CONTENT / name).glob("*.md")):
         meta, body = parse_front_matter(p.read_text())
         meta.setdefault("slug", re.sub(r"^\d+-", "", p.stem))
+        if is_held(name, meta["slug"]):
+            continue
         meta["body"] = body
         meta["file"] = p.name
         items.append(meta)
@@ -578,6 +604,7 @@ def build() -> list[str]:
     urls: list[tuple[str, str]] = []
 
     posts = sorted(load_dir("blog"), key=lambda p: p["date"], reverse=True)
+    newest = posts[0]["date"] if posts else date.today().isoformat()  # the whole blog can be on hold
     products_list = [p for p in load_dir("products") if p.get("status") != "draft"]
     products_list.sort(key=lambda p: int(p.get("order", 99)))
     products = {p["slug"]: p for p in products_list}
@@ -649,6 +676,8 @@ def build() -> list[str]:
 
     # ---- blog index (+ one page per pillar)
     def post_list(items):
+        if not items:
+            return f'<li class="post"><p>{esc(T("blog_empty"))}</p></li>'
         return "".join(f"""<li class="post">
   <p class="post-pillar">{esc(pillars.get(x.get('pillar', ''), ''))}</p>
   <h2><a href="{u(f"/blog/{x['slug']}/")}">{esc(x['title'])}</a></h2>
@@ -665,7 +694,7 @@ def build() -> list[str]:
   <p class="chips">{chips}</p>
   <ul class="posts">{post_list(posts)}</ul>
 </section>"""))
-    urls.append(("/blog/", posts[0]["date"]))
+    urls.append(("/blog/", newest))
     for key, label in pillars.items():
         items = [x for x in posts if x.get("pillar") == key]
         path = f"/blog/{key}/"
@@ -677,7 +706,7 @@ def build() -> list[str]:
   <p class="chips">{chips}</p>
   <ul class="posts">{post_list(items)}</ul>
 </section>"""))
-        urls.append((path, items[0]["date"] if items else posts[0]["date"]))
+        urls.append((path, items[0]["date"] if items else newest))
 
     # ---- products
     for p in products_list:
@@ -802,6 +831,16 @@ def build() -> list[str]:
     pillar_cards = "".join(
         f'<a class="pillar" href="{u(f"/blog/{k}/")}"><span class="pillar-n">{esc(T("n_articles", n=len([x for x in posts if x.get("pillar") == k])))}</span><strong>{esc(v)}</strong></a>'
         for k, v in pillars.items())
+    articles_html = f"""<section class="wrap">
+  <h2 class="section-h">{esc(T('home_topics'))}</h2>
+  <div class="pillars">{pillar_cards}</div>
+</section>
+<section class="wrap">
+  <h2 class="section-h">{esc(T('home_latest'))}</h2>
+  <ul class="posts grid">{latest}</ul>
+  <p><a class="btn ghost" href="{u('/blog/')}">{esc(T('home_all'))}</a></p>
+</section>
+""" if posts else ""  # no article sections while the whole blog is on hold
     home_ld = [org_ld(), {"@context": "https://schema.org", "@type": "WebSite", "name": CFG["name"],
                           "url": CFG["url"] + "/"}]
     write("/", layout(
@@ -818,16 +857,7 @@ def build() -> list[str]:
     <img class="cover" src="{u('/img/lead-magnet-cover.png')}" alt="{esc(T('cover_of', title=lm['title']))}" width="300" height="388">
   </div>
 </section>
-<section class="wrap">
-  <h2 class="section-h">{esc(T('home_topics'))}</h2>
-  <div class="pillars">{pillar_cards}</div>
-</section>
-<section class="wrap">
-  <h2 class="section-h">{esc(T('home_latest'))}</h2>
-  <ul class="posts grid">{latest}</ul>
-  <p><a class="btn ghost" href="{u('/blog/')}">{esc(T('home_all'))}</a></p>
-</section>
-<section class="band">
+{articles_html}<section class="band">
   <div class="wrap">
     <h2 class="section-h">{esc(T('home_tools'))}</h2>
     <div class="product-grid">{''.join(product_card(p) for p in products_list)}</div>
@@ -840,7 +870,7 @@ def build() -> list[str]:
     {''.join(f'<div><h3>{esc(h)}</h3><p>{esc(t)}</p></div>' for h, t in T('home_promise'))}
   </div>
 </section>"""))
-    urls.append(("/", posts[0]["date"]))
+    urls.append(("/", newest))
 
     # ---- 404
     (OUT / "404.html").write_text(layout(

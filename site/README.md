@@ -116,6 +116,7 @@ Tip: add a rule that skips emails 5, 9 and the product line of 10 for people who
 - [ ] `site.json` > `email` provider (step 2).
 - [ ] Optional analytics: paste a privacy-friendly snippet (e.g. Plausible, GoatCounter, Cloudflare Web Analytics) into `site.json` > `analytics_snippet`.
   For Plausible, set `plausible_domain` instead: it loads the outbound-links + tagged-events script and tags buy buttons (`Product Click`), affiliate links (`Affiliate Click`) and signups (`Signup`). `utm_emails: true` adds UTM to the site links in the exported emails.
+- [ ] Optional: `hold` keeps pieces off the site without deleting them, for example until they pass review: `{"enabled": true, "blog": ["*"], "products": [slugs], "emails": [slugs]}`. Held pages aren't built, held emails leave `sequence.json`, and links to them render as plain text. `sites/dinero-simple/site.json` has the lean-launch hold ready, with `enabled: false`.
 - [ ] Only set `sale_price` on a product while a launch price is actually running. No fake countdowns.
 - [ ] Submit `https://<your-site>/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
 - [ ] Proofread the facts: every article lists its sources. Contribution limits and rates change; re-check
