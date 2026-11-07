@@ -1,4 +1,4 @@
-"""The static website in site/ builds, and every internal link and asset resolves."""
+"""Dinero Simple website (sites/dinero-simple/build.py)."""
 import json
 import os
 import re
@@ -10,61 +10,15 @@ from urllib.parse import urlparse
 
 import pytest
 
-SITE = Path(__file__).resolve().parents[1] / "site"
+DS = Path(__file__).resolve().parents[1] / "sites" / "dinero-simple"
 
 
 def _build(tmp_path, url, **env):
     out = tmp_path / "public"
     e = {**os.environ, "SITE_OUT": str(out), "SITE_URL": url, **env}
     e.pop("URL", None)
-    subprocess.run([sys.executable, str(SITE / "build.py")], check=True, env=e, capture_output=True)
+    subprocess.run([sys.executable, str(DS / "build.py")], check=True, env=e, capture_output=True)
     return out
-
-
-@pytest.mark.parametrize("url", ["https://example.org", "https://someone.github.io/cocosl"])
-def test_site_builds_and_links_resolve(tmp_path, url):
-    out = _build(tmp_path, url)
-    base = urlparse(url).path.rstrip("/")
-    pages = list(out.rglob("*.html"))
-    assert len(pages) > 30
-    broken = []
-    for page in pages:
-        html = page.read_text()
-        for ref in re.findall(r'(?:href|src)="([^"#]+)', html):
-            if ref.startswith(("http://", "https://", "mailto:", "data:")):
-                continue
-            assert ref.startswith(base + "/"), f"{page}: link {ref} misses base path {base!r}"
-            target = out / ref[len(base) + 1:]
-            if not (target.is_file() or (target / "index.html").is_file()):
-                broken.append(f"{page.relative_to(out)} -> {ref}")
-    assert not broken, broken
-
-
-def test_seo_and_funnel_basics(tmp_path):
-    out = _build(tmp_path, "https://example.org")
-    home = (out / "index.html").read_text()
-    assert 'rel="canonical" href="https://example.org/"' in home
-    assert 'data-netlify="true"' in home  # default provider captures emails on Netlify
-    art = (out / "blog" / "debt-avalanche-vs-snowball" / "index.html").read_text()
-    assert '"@type": "Article"' in art and '"@type": "FAQPage"' in art
-    sitemap = (out / "sitemap.xml").read_text()
-    assert "/emails/" not in sitemap and "/free/thanks/" not in sitemap
-    assert (out / "downloads" / "the-7-day-money-reset.pdf").stat().st_size > 50_000
-    seq = json.loads((out / "emails" / "sequence.json").read_text())
-    assert [e["order"] for e in seq] == list(range(1, 11))
-    assert all("https://example.org/" in e["html"] for e in seq)  # absolute links in emails
-
-
-def test_email_provider_switch(tmp_path):
-    out = _build(tmp_path, "https://example.org", EMAIL_PROVIDER="kit",
-                 EMAIL_FORM_ACTION="https://app.kit.com/forms/123/subscriptions")
-    home = (out / "index.html").read_text()
-    assert 'action="https://app.kit.com/forms/123/subscriptions"' in home
-    assert 'name="email_address"' in home and "data-netlify" not in home
-
-
-# ---- second brand / second language: sites/dinero-simple reuses build.py via SITE_ROOT
-DS = Path(__file__).resolve().parents[1] / "sites" / "dinero-simple"
 
 
 @pytest.mark.parametrize("url", ["https://example.org", "https://someone.github.io/dinero"])
@@ -130,10 +84,6 @@ def test_plausible_events_and_email_utm(tmp_path):
     mail = (out / "emails" / "avalancha-bola-de-nieve" / "email.txt").read_text()
     assert "/products/el-presupuesto-de-20-minutos/?utm_source=newsletter&utm_medium=email&utm_campaign=welcome-d" in mail
     assert ".pdf?utm" not in " ".join(p.read_text() for p in (out / "emails").rglob("email.*"))
-    # The English site has no Plausible domain set, so no script and no event classes.
-    en = _build(tmp_path / "en", "https://example.org")
-    home = (en / "index.html").read_text()
-    assert "plausible" not in home.lower() and "utm_" not in (en / "emails" / "sequence.json").read_text()
 
 
 def test_dinero_youtube_descriptions_carry_utm_links():

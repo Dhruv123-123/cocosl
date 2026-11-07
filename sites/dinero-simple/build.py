@@ -1,21 +1,21 @@
 #!/usr/bin/env python3
-"""Build the Money Made Simple static site (or another brand's, with SITE_ROOT; see sites/).
+"""Build the Dinero Simple static site into sites/dinero-simple/public/.
 
-Standard library only, so it runs anywhere Python 3.9+ exists (your laptop,
-Netlify's build image, GitHub Actions) with no installs.
+Standard library only, so it runs anywhere Python 3.9+ exists (your laptop, Netlify's build image,
+GitHub Actions) with no installs. It started as a copy of the Money Made Simple site generator (PR #4)
+and is kept separate so the two sites can change independently.
 
-    python3 site/build.py                     # writes site/public/
-    SITE_URL=https://example.com python3 site/build.py
-    python3 site/build.py --serve             # build, then preview on http://localhost:8080
-    SITE_ROOT=sites/dinero-simple python3 site/build.py   # build another brand's site (its own
-                                              # site.json, content/ and static/; UI text from site.json "ui")
+    python3 sites/dinero-simple/build.py                 # writes sites/dinero-simple/public/
+    SITE_URL=https://example.com python3 sites/dinero-simple/build.py
+    python3 sites/dinero-simple/build.py --serve         # build, then preview on http://localhost:8080
+    SITE_ROOT=/path/to/copy python3 sites/dinero-simple/build.py   # build a copy of this folder (tests)
 
-Content lives in site/content/ as Markdown with a small front-matter block:
+Content lives in content/ as Markdown with a small front-matter block:
   blog/*.md      articles   (title, description, date, pillar, keyword, read_minutes)
-  products/*.md  products   (title, price, buy_url, ... see the existing file)
-  pages/*.md     plain pages (about, privacy, disclosures, terms)
+  products/*.md  products   (title, price, buy_url, ... see the existing files)
+  pages/*.md     plain pages (about, privacy, disclosures, terms, calculators, glossary)
   emails/*.md    the welcome / nurture sequence (rendered to public/emails/ for preview)
-Settings (site URL, email provider, social links) are in site/site.json.
+Settings (site URL, email provider, social links, UI text) are in site.json.
 """
 from __future__ import annotations
 
@@ -33,7 +33,7 @@ from urllib.parse import urlencode, urlparse
 ROOT = Path(os.environ.get("SITE_ROOT") or Path(__file__).resolve().parent).resolve()
 CONTENT = ROOT / "content"
 STATIC = ROOT / "static"
-SHARED_STATIC = Path(__file__).resolve().parent / "static"  # style.css and site.js live here for every site
+SHARED_STATIC = Path(__file__).resolve().parent / "static"  # style.css and site.js (copied when SITE_ROOT is elsewhere)
 OUT = Path(os.environ.get("SITE_OUT") or ROOT / "public")
 
 

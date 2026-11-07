@@ -4,27 +4,29 @@
 > the whole site, the lead-magnet PDF and all 10 emails before the site goes live or the email automation
 > is switched on. Use `launch/dinero-simple/REVIEW_CHECKLIST.md` (website and email sections).
 
-The same generator as the English site (`site/build.py`), pointed at this folder:
+Built by this folder's own `build.py` (standard library only). It started as a copy of the English site's
+generator in PR #4 and is kept separate so the two sites never conflict:
 
 ```
-SITE_ROOT=sites/dinero-simple python3 site/build.py            # writes sites/dinero-simple/public/
-SITE_ROOT=sites/dinero-simple python3 site/build.py --serve    # preview on http://localhost:8080
+python3 sites/dinero-simple/build.py            # writes sites/dinero-simple/public/
+python3 sites/dinero-simple/build.py --serve    # preview on http://localhost:8080
 ```
 
 | Path | What it is |
 |---|---|
+| `build.py` | The generator: articles, products, pages, `/links/`, `/go/` redirects, emails, sitemap, RSS |
 | `site.json` | Brand, URL, colours, email provider, lead magnet, pinned link-in-bio articles, and the `ui` block with every interface string in Spanish |
-| `content/blog/` | 13 articles adapted from the English site (Spanish slugs and keywords, US terms kept in English and explained) |
-| `content/products/` | El Presupuesto de 20 Minutos ($12) |
-| `content/pages/` | Quiénes somos, Transparencia, Privacidad, Términos |
+| `content/blog/` | 16 articles, mostly adapted from the English site (Spanish slugs and keywords, US terms kept in English and explained) |
+| `content/products/` | Five products, $5 to $29 |
+| `content/pages/` | Quiénes somos, Cómo ganamos dinero, Transparencia, Privacidad, Términos, the two calculators, and the glossary (built from `launch/dinero-simple/glossary/`) |
 | `content/emails/` | 10-email welcome sequence over 21 days (same schedule as English) |
 | `lead-magnet/` | "Tu dinero en orden en 7 días" (HTML source, 10 Letter pages) |
-| `static/` | Images in the coral/teal palette and the lead-magnet PDF. CSS and JS are shared from `site/static/` |
+| `static/` | Images in the coral/teal palette and the lead-magnet PDF. plus `style.css` and `site.js` |
 | `tools/make_assets.py` | Re-renders the PDF, cover, product image and share image (Python Playwright) |
 | `netlify.toml` | For a second Netlify site with Base directory `sites/dinero-simple` |
 | `public/` | Built site, committed so it can be dragged onto Netlify Drop |
 
-Pages: home, `/blog/` + 4 topic pages, 13 articles, `/products/`, the product page, `/free/` (lead magnet),
+Pages: home, `/blog/` + 4 topic pages, 16 articles, `/products/`, five product pages, `/free/` (lead magnet),
 `/free/thanks/`, **`/links/` (link-in-bio page for @dinerosimple)**, about and legal pages, 404, sitemap, RSS,
 and `/emails/` (unlinked, noindexed preview of the sequence, with copy-paste HTML and text per email).
 

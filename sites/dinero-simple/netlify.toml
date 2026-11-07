@@ -1,7 +1,7 @@
 # Second Netlify site for Dinero Simple. In Netlify: Add new site > Import > pick cocosl,
 # then set Base directory to "sites/dinero-simple" (Netlify then reads this file, not the root one).
 [build]
-  command = "SITE_ROOT=. python3 ../../site/build.py"
+  command = "python3 build.py"
   publish = "public"
 
 [build.environment]

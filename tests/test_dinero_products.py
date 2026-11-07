@@ -253,7 +253,7 @@ def test_remittance_calculator_page_builds_and_is_linked(tmp_path):
     import subprocess
     site = tmp_path / "site"
     shutil.copytree(ROOT / "sites" / "dinero-simple", site, ignore=shutil.ignore_patterns("public"))
-    subprocess.run([sys.executable, str(ROOT / "site" / "build.py")], check=True, capture_output=True,
+    subprocess.run([sys.executable, str(ROOT / "sites" / "dinero-simple" / "build.py")], check=True, capture_output=True,
                    env={**__import__("os").environ, "SITE_ROOT": str(site)})
     page = (site / "public" / "calculadora-de-envios" / "index.html").read_text()
     for needle in ('id="rc-amount"', 'id="rc-market"', "rc-prov-t", "A * (M - R) / M", "A * 0.01"):
