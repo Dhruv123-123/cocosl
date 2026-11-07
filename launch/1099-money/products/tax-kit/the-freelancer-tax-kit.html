@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Freelancer Tax Kit</title>
+<style>
+  :root{
+    --ink:#14213d; --cream:#f7f3ea; --green:#3cc6a0; --green-d:#1f8f72; --gold:#ff7a45;
+    --muted:#4d566b; --line:#d9d3c3; --paper:#fffdf8; --tint:#e8f7f2; --gold-t:#ffece3;
+  }
+  @page{ size: Letter; margin:0; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#c9cbd3; color:var(--ink);
+    font-family:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size:10.2pt; line-height:1.48; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:8.5in; height:11in; margin:24px auto; background:var(--paper); position:relative;
+    padding:0.7in 0.85in 0.85in; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,.18);
+    page-break-after:always; break-after:page; }
+  .page:last-child{ page-break-after:auto; break-after:auto; }
+  @media print{ html,body{ background:none; } .page{ margin:0; box-shadow:none; } }
+
+  .folio{ position:absolute; left:0.85in; right:0.85in; bottom:0.45in; display:flex;
+    justify-content:space-between; font-size:8pt; color:var(--muted); border-top:1px solid var(--line); padding-top:6px; }
+
+  h1,h2,h3,h4{ font-family:"Inter Display","Inter",system-ui,sans-serif; line-height:1.15; margin:0; }
+  h2{ font-size:24pt; font-weight:800; letter-spacing:-.02em; margin-bottom:6px; }
+  h3{ font-size:13pt; font-weight:700; margin:18px 0 6px; }
+  h4{ font-size:10.5pt; font-weight:700; margin:12px 0 4px; }
+  p{ margin:0 0 9px; }
+  .kicker{ text-transform:uppercase; letter-spacing:.14em; font-size:8pt; font-weight:700; color:var(--green-d); margin-bottom:6px; }
+  .lede{ font-size:11.5pt; color:var(--muted); margin-bottom:12px; }
+  ul,ol{ margin:0 0 10px; padding-left:20px; } li{ margin-bottom:4px; }
+  strong{ font-weight:700; }
+  .num{ font-variant-numeric:tabular-nums; }
+
+  .box{ border-radius:10px; padding:12px 16px; margin:12px 0; }
+  .box.tip{ background:var(--tint); border-left:4px solid var(--green); }
+  .box.warn{ background:var(--gold-t); border-left:4px solid var(--gold); }
+  .box.dark{ background:var(--ink); color:var(--cream); }
+  .box.dark .kicker{ color:var(--gold); }
+  .box p:last-child, .box ul:last-child{ margin-bottom:0; }
+
+  table{ width:100%; border-collapse:collapse; margin:8px 0 12px; font-size:9.5pt; }
+  th{ text-align:left; font-weight:700; background:var(--cream); border-bottom:2px solid var(--ink); padding:5px 8px; }
+  td{ border-bottom:1px solid var(--line); padding:4px 8px; }
+  td.r, th.r{ text-align:right; font-variant-numeric:tabular-nums; }
+  tr.total td{ font-weight:800; border-top:2px solid var(--ink); border-bottom:none; background:var(--tint); }
+  tr.sub td{ font-weight:700; background:#f3f0e8; }
+
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .grid4{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:14px 0; }
+  .card{ border:1.5px solid var(--ink); border-radius:12px; padding:12px; background:#fff; }
+  .card .big{ font-size:20pt; font-weight:800; font-family:"Inter Display","Inter",sans-serif; }
+  .card .lbl{ font-size:8pt; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); font-weight:700; }
+  .pill{ display:inline-block; background:var(--green); color:#fff; font-weight:700; border-radius:999px; padding:1px 9px; font-size:8.5pt; }
+  .step{ display:flex; gap:12px; margin:10px 0; }
+  .step .n{ flex:0 0 30px; height:30px; border-radius:50%; background:var(--ink); color:var(--cream);
+    display:flex; align-items:center; justify-content:center; font-weight:800; }
+  .step .b{ flex:1; }
+  .timer{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin:12px 0 16px; border:1.5px solid var(--ink); border-radius:12px; overflow:hidden; }
+  .timer div{ padding:10px 12px; border-right:1.5px solid var(--ink); background:#fff; }
+  .timer div:last-child{ border-right:none; }
+  .timer .t{ font-weight:800; font-size:16pt; color:var(--green-d); }
+  .timer .h{ font-weight:700; font-size:9.5pt; }
+  .timer .d{ font-size:8.5pt; color:var(--muted); }
+  .formula{ font-family:"JetBrains Mono", ui-monospace, monospace; background:var(--ink); color:var(--cream);
+    padding:10px 14px; border-radius:8px; font-size:10pt; margin:10px 0; }
+  .check li{ list-style:none; position:relative; padding-left:4px; }
+  .check{ padding-left:22px; }
+  .check li::before{ content:""; position:absolute; left:-20px; top:3px; width:12px; height:12px; border:1.5px solid var(--ink); border-radius:3px; }
+  .faq h4{ margin-top:12px; }
+  .blank td{ height:24px; }
+  .toc{ list-style:none; padding:0; margin:12px 0; }
+  .toc li{ display:flex; border-bottom:1px dotted var(--line); padding:6px 0; margin:0; font-size:11pt; }
+  .toc li span:first-child{ flex:1; } .toc li span:last-child{ font-weight:700; }
+
+  /* cover */
+  .cover{ background:var(--ink); color:var(--cream); padding:0.9in; }
+  .cover .tag{ color:var(--gold); letter-spacing:.2em; text-transform:uppercase; font-weight:700; font-size:9pt; }
+  .cover h1{ font-size:58pt; font-weight:900; letter-spacing:-.035em; line-height:.95; margin:24px 0 18px; }
+  .cover h1 em{ font-style:normal; color:var(--green); }
+  .cover .sub{ font-size:15pt; max-width:5.2in; color:#c9d0de; line-height:1.4; }
+  .cover .clock{ position:absolute; right:0.9in; bottom:1.4in; width:3.1in; height:3.1in; }
+  .cover .bottom{ position:absolute; left:0.9in; right:0.9in; bottom:0.8in; display:flex; justify-content:space-between; align-items:flex-end; font-size:9pt; color:#9aa5bd; }
+  .cover .chips{ display:flex; gap:8px; flex-wrap:wrap; margin-top:28px; }
+  .cover .chips span{ border:1px solid #33456b; border-radius:999px; padding:5px 12px; font-size:9pt; color:var(--cream); }
+</style>
+</head>
+<body>
+<section class="page cover">
+  <div class="tag">1099 Money &middot; Freelancer Tax Kit</div>
+  <h1>Your freelance<br><em>tax year,</em><br>handled.</h1>
+  <p class="sub">Know what to set aside, what to pay the IRS each quarter, and what to have ready at filing time. One spreadsheet, three printables, one plan.</p>
+  <div class="chips"><span>Quarterly Tax Tracker</span><span>2027 Tax Calendar</span><span>Tax Checklist</span><span>Tax Jar Tracker</span></div>
+  <div class="bottom"><span>Edition 2027.1 &middot; 2026 federal tax figures</span><span>Educational content. Not tax or legal advice.</span></div>
+</section>
+
+<section class="page">
+  <div class="kicker">Start here</div>
+  <h2>What's inside, and the order to use it</h2>
+  <p class="lede">Everything in this kit is about one job: never being surprised by a freelance tax bill. Set it up in about 30 minutes.</p>
+  <table>
+    <tr><th>File</th><th>What it does</th><th>When you use it</th></tr>
+    <tr><td><strong>2-Quarterly-Tax-Tracker</strong><br>spreadsheet + 10-page guide</td><td>Logs income, expenses and miles, and shows a suggested payment before each IRS deadline, with the safe harbor built in</td><td>Setup once, then 15 minutes a month</td></tr>
+    <tr><td><strong>3-Tax-Calendar-2027</strong><br>printable PDF</td><td>Every federal deadline for 2027, month by month, with what each one is for</td><td>Pin it up in January</td></tr>
+    <tr><td><strong>4-Tax-Checklist</strong><br>printable PDF</td><td>What to do in your first weeks, every month, each quarter and at filing time</td><td>Tick it off as you go</td></tr>
+    <tr><td><strong>5-Tax-Jar-Tracker</strong><br>printable PDF</td><td>A one-page log for moving a share of every client payment into tax savings</td><td>Every time a client pays</td></tr>
+  </table>
+  <h3>Your first 30 minutes</h3>
+  <ol>
+    <li><strong>Tracker, Setup tab (5 min).</strong> Filing status, state set-aside, and last year's total tax from your return.</li>
+    <li><strong>Pick your set-aside percentage (5 min).</strong> The tracker's set-aside check gives you a starting point. Write it at the top of the Tax Jar Tracker.</li>
+    <li><strong>Log this year so far (15 min).</strong> Income and expenses by month is enough to start; add detail later.</li>
+    <li><strong>Put the next deadline in your calendar (5 min).</strong> Use the Tax Calendar, and schedule the payment in IRS Direct Pay if you know the amount.</li>
+  </ol>
+  <div class="box tip"><p><strong>The three printables are also free.</strong> They're the same files 1099 Money gives away to email subscribers. This kit puts them in one download with the tracker so everything lives in one folder.</p></div>
+  <div class="folio"><span>The Freelancer Tax Kit</span><span>2</span></div>
+</section>
+
+<section class="page">
+  <div class="kicker">The yearly rhythm</div>
+  <h2>How it runs all year</h2>
+  <h3>Every client payment</h3>
+  <p>Move your set-aside percentage into a separate tax savings account the day the money lands, and log it on the Tax Jar Tracker.</p>
+  <h3>Once a month (15 minutes)</h3>
+  <ul><li>Log income, expenses and business miles in the tracker.</li><li>Check the set-aside line: is your tax savings keeping up with the estimate?</li><li>Tick the monthly items on the checklist.</li></ul>
+  <h3>Before each deadline</h3>
+  <table>
+    <tr><th>Payment</th><th>Covers</th><th>Due (2027)</th></tr>
+    <tr><td>1st</td><td>Jan 1 – Mar 31</td><td>Apr 15</td></tr>
+    <tr><td>2nd</td><td>Apr 1 – May 31</td><td>Jun 15</td></tr>
+    <tr><td>3rd</td><td>Jun 1 – Aug 31</td><td>Sep 15</td></tr>
+    <tr><td>4th</td><td>Sep 1 – Dec 31</td><td>Jan 18, 2028</td></tr>
+  </table>
+  <p>Open the tracker's Quarterly tab, pay the suggested payment from your tax savings, type what you paid, and the rest of the year updates.</p>
+  <h3>At filing time</h3>
+  <p>The checklist's filing section lists what to gather. The tracker's totals give you your income, expenses by category and miles for Schedule C.</p>
+  <div class="box warn"><p>Federal tax figures are for the 2026 tax year. Check your state's rules, and use a tax professional for anything unusual. Educational tools, not tax, legal or financial advice. 14-day refunds, no questions asked.</p></div>
+  <div class="folio"><span>The Freelancer Tax Kit</span><span>3</span></div>
+</section>
+</body>
+</html>

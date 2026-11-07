@@ -25,6 +25,7 @@ COUPLES = "couples/content.json"
 DRIVERS = "drivers/content.json"
 YT6 = "youtube-6wk/content.json"
 JAR = "jar-challenge/content.json"
+MONTH8 = "month-8/content.json"
 
 
 def test_brand_loads_with_placeholder_affiliates(factory):
@@ -38,7 +39,7 @@ def test_brand_loads_with_placeholder_affiliates(factory):
 import pytest
 
 
-@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5]), (MONTH4, [22, 13, 4]), (MONTH5, [22, 13, 5]), (MONTH6, [22, 14, 4]), (MONTH7, [23, 13, 0]), (COUPLES, [6, 3, 1]), (DRIVERS, [10, 0, 0]), (YT6, [0, 0, 6]), (JAR, [10, 1, 0])])
+@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5]), (MONTH4, [22, 13, 4]), (MONTH5, [22, 13, 5]), (MONTH6, [22, 14, 4]), (MONTH7, [23, 13, 0]), (COUPLES, [6, 3, 1]), (DRIVERS, [10, 0, 0]), (YT6, [0, 0, 6]), (JAR, [10, 1, 0]), (MONTH8, [22, 14, 4])])
 def test_content_is_valid(factory, name, counts):
     from contentfactory.schemas import Script
     brand = factory.brand("1099-money")
@@ -506,3 +507,42 @@ def test_recordings_list_covers_every_long_waiting_on_footage_in_date_order():
     assert dates == sorted(dates)
     assert shots.count("- **Footage path:**") == 14
     assert "nothing submitted" in shots.lower()
+
+
+def test_month_8_runs_jul_19_to_aug_18_after_the_couples_week(factory):
+    earlier = {i["script"]["title"].lower() for n in ("content.json", MONTH1, MONTH2, MONTH3, MONTH4, MONTH5, MONTH6, MONTH7, COUPLES, DRIVERS, YT6, JAR)
+               for i in _items(n)}
+    month = _items(MONTH8)
+    assert not earlier & {i["script"]["title"].lower() for i in month}
+    slots, leftover = plan(factory.brand("1099-money"), month, date(2027, 7, 19), 31)
+    assert not leftover
+    assert {s.when.date() for s in slots} == {date(2027, 7, 19) + timedelta(days=k) for k in range(31)}
+    longs = {s.when.date(): month[s.index] for s in slots if s.fmt == "long"}
+    assert sorted(longs) == [date(2027, 7, 25), date(2027, 8, 1), date(2027, 8, 8), date(2027, 8, 15)]
+    for it in longs.values():  # every long passes the original-element check with its chart
+        assert it["original_element"]["type"] == "worked-example-chart"
+        assert any(s.get("chart") and s["heading"] == it["original_element"]["chapter"] for s in it["script"]["segments"])
+    assert "September 15" in longs[date(2027, 8, 15)]["script"]["title"]
+    shorts = [i for i in month if i["format"] == "short"]
+    assert all(a["format_style"] != b["format_style"] for a, b in zip(shorts, shorts[1:]))
+    text = " ".join(s["narration"] + " " + s["on_screen_text"] for i in month for s in i["script"]["segments"])
+    for figure in ("$3,874", "$1,857", "$7,115", "$12,037", "$8,478", "$615", "$720", "$1,320", "$55,000"):
+        assert figure in text or figure in " ".join(i["script"]["caption"] for i in month), figure
+    assert "Jan 15, 2028" not in text and "Jan 18, 2028" in text  # Jan 15, 2028 is a Saturday; Jan 17 is MLK Day
+
+
+def test_freelancer_tax_kit_listing_bundles_only_existing_products_honestly():
+    etsy = (LAUNCH / "etsy" / "freelancer-tax-kit.md").read_text()
+    gum = (LAUNCH / "products" / "tax-kit" / "LISTING.md").read_text()
+    for text in (etsy, gum):
+        assert "[PRICE]" in text  # placeholder until Dhruv picks the price
+        assert "free" in text and "not tax, legal or financial advice" in text
+        assert not re.search(r"\bworth \$|\$\d+ value", text.replace('"worth $X"', "").replace('"a $60 value"', ""))
+    tags = re.search(r"\*\*Tags\*\*.*?\n(.+)\n", etsy).group(1).split(" · ")
+    assert len(tags) == 13 and all(len(t.strip("`")) <= 20 for t in tags)
+    assert len(re.search(r"\*\*Title\*\*.*\n(.+)\n", etsy).group(1)) <= 140
+    for f in ("freelancer-tax-calendar-2027.pdf", "freelancer-tax-checklist.pdf", "tax-jar-tracker.pdf"):
+        assert (ROOT / "apps" / "freelance-tax" / "downloads" / f).exists()
+    assert (LAUNCH / "product" / "Quarterly-Tax-Tracker.xlsx").exists()
+    start = (LAUNCH / "products" / "tax-kit" / "the-freelancer-tax-kit.html").read_text()
+    assert "Jan 18, 2028" in start and "also free" in start

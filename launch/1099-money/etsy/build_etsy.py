@@ -1,4 +1,4 @@
-"""Build Etsy-ready versions of the three 1099 Money products.
+"""Build Etsy-ready versions of the four 1099 Money products.
 
     python launch/1099-money/etsy/build_etsy.py [out_dir]
     (default out_dir: /mnt/project-files/content-factory/etsy/1099-money)
@@ -31,6 +31,9 @@ TRACKER = BRAND / "product"
 KIT = BRAND / "products" / "rate-contract-kit"
 BUNDLE = BRAND / "products" / "bundle"
 CALENDAR = ROOT / "apps" / "freelance-tax" / "downloads" / "freelancer-tax-calendar-2027.pdf"
+CHECKLIST = CALENDAR.with_name("freelancer-tax-checklist.pdf")
+JAR = CALENDAR.with_name("tax-jar-tracker.pdf")
+TAXKIT = BRAND / "products" / "tax-kit"
 
 # Gumroad wording -> Etsy wording (keeps buyers on Etsy, per Etsy's fee-avoidance rules).
 ETSY_SWAPS = [
@@ -266,6 +269,41 @@ def build(out_root: Path) -> dict[str, list[Path]]:
                       pages[0], pages, sheet, "Excel, Google Sheets, Numbers · Word, Google Docs · PDF", d / "images", tmp)
         shutil.copy(HERE / "freelancer-money-bundle.md", d / "LISTING-ETSY.md")
         made["bundle"] = sorted(files.iterdir()) + imgs
+
+        # ---------------- tax kit ([PRICE]): the tracker + the three free tax printables
+        d = out_root / "freelancer-tax-kit"
+        files = d / "files"
+        files.mkdir(parents=True, exist_ok=True)
+        stage = tmp / "taxkit"
+        for sub, src in (("2-Quarterly-Tax-Tracker", None), ("3-Tax-Calendar-2027", CALENDAR),
+                         ("4-Tax-Checklist", CHECKLIST), ("5-Tax-Jar-Tracker", JAR)):
+            (stage / sub).mkdir(parents=True)
+            if src is not None:
+                shutil.copy(src, stage / sub)
+        for f in (out_root / "quarterly-tax-tracker" / "files").iterdir():
+            shutil.copy(f, stage / "2-Quarterly-Tax-Tracker")
+        start = files / "1-Start-Here.pdf"
+        if not html_to_pdf(TAXKIT / "the-freelancer-tax-kit.html", start):
+            raise SystemExit("tax kit: could not print the Start Here PDF")
+        zip_dir(stage, files / "Freelancer-Tax-Kit.zip", "Freelancer-Tax-Kit")
+        pages = page_pngs(start, tmp, "tk") + page_pngs(CALENDAR, tmp, "tkc")[:1] + page_pngs(JAR, tmp, "tkj")[:1]
+        tsheet = sheet_png(TRACKER / "Quarterly-Tax-Tracker.xlsx", "Suggested payment", tmp, "tkx")
+        imgs = images("The Freelancer Tax Kit",
+                      "Tracker + 3 printables", "Freelancer<br><em>Tax</em><br>Kit",
+                      ["Tax tracker", "2027 calendar", "Checklist", "Tax jar log"],
+                      ["The Quarterly Tax Tracker (spreadsheet + 10-page guide)",
+                       "The 2027 Freelancer Tax Calendar (printable)",
+                       "The Freelancer Tax Checklist (printable)",
+                       "The Tax Jar Tracker: log every set-aside (printable)",
+                       "3-page start guide: set up in about 30 minutes"],
+                      ["Open 1-Start-Here.pdf",
+                       "Fill in the tracker's Setup tab",
+                       "Print the calendar, checklist and jar log",
+                       "Before each deadline, pay the Suggested payment"],
+                      pages[0], [pages[0]] + pages[-2:], tsheet, "Excel, Google Sheets, Numbers (.xlsx) · PDF printables",
+                      d / "images", tmp)
+        shutil.copy(HERE / "freelancer-tax-kit.md", d / "LISTING-ETSY.md")
+        made["taxkit"] = sorted(files.iterdir()) + imgs
         flush(tmp)
     shutil.copy(HERE / "README.md", out_root / "README.md")
     return made
