@@ -102,7 +102,9 @@ def test_spanish_site_is_in_spanish(tmp_path):
 def test_free_tools_hidden_until_their_url_is_set(tmp_path):
     out = _build(tmp_path, "https://example.org", SITE_ROOT=str(DS))
     html = " ".join(p.read_text() for p in out.rglob("*.html"))
-    assert "REPLACE_ME" not in html and 'class="free-tool' not in html
+    assert "REPLACE_ME" not in html and "apps.example.org" not in html and "scam-checker" not in html
+    # a tool that is a page of the site itself (base "site") is always live
+    assert 'href="/calculadora-de-envios/"' in (out / "links" / "index.html").read_text()
 
     site = tmp_path / "ds"
     shutil.copytree(DS, site, ignore=shutil.ignore_patterns("public"))

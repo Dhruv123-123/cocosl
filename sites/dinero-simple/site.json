@@ -201,6 +201,15 @@
   },
   "free_tools": [
     {
+      "name": "Calculadora de envíos de dinero",
+      "base": "site",
+      "path": "/calculadora-de-envios/",
+      "short": "Compara comisión más tipo de cambio y mira cuánto llega allá. Tú escribes las tarifas; no sale nada de tu celular.",
+      "posts": [
+        "remitly-wise-o-xoom"
+      ]
+    },
+    {
       "name": "¿Es una estafa? Verificador gratis",
       "base": "scam_checker",
       "path": "/",

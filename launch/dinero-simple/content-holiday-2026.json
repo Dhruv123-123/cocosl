@@ -1,0 +1,662 @@
+[
+ {
+  "key": "h-precio-inflado",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Black Friday 'was $199, now $99' often compares to a price nobody paid; check the price history or the price in October before believing the discount.",
+  "script": {
+   "title": "El 'antes $199' que nunca costó $199",
+   "hook": "Ese 'antes 199, ahora 99' puede ser mentira. Así lo compruebas en un minuto.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Ese 'antes 199, ahora 99' puede ser mentira. Así lo compruebas en un minuto.",
+     "on_screen_text": "'Antes $199, ahora $99'. ¿Seguro?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf squinting at a big price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "El truco",
+     "narration": "Muchas tiendas comparan contra un precio de lista que casi nadie pagó. Así el descuento se ve enorme.",
+     "on_screen_text": "El 'antes' puede ser un precio que nadie pagó",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a price tag with a crossed-out number. No text, no logos, no real people."
+    },
+    {
+     "heading": "Compruébalo",
+     "narration": "Busca el producto en otras dos tiendas, o usa una extensión de historial de precios, y mira cuánto costaba en octubre.",
+     "on_screen_text": "Busca cuánto costaba en octubre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a small line chart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Regla",
+     "narration": "Si en octubre ya costaba 110, el descuento de verdad son 11 dólares, no 100.",
+     "on_screen_text": "Compara contra el precio real, no el de la etiqueta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two price tags side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y el mejor descuento sigue siendo lo que no estaba en tu lista.",
+     "on_screen_text": "El mejor descuento es lo que no compras",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf putting an item back on a shelf. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Ese 'antes $199, ahora $99' puede compararse contra un precio que casi nadie pagó. Antes de comprar: busca el producto en otras dos tiendas o en un historial de precios y mira cuánto costaba en octubre. Si ya costaba $110, el descuento real son $11.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "blackfriday",
+    "viernesnegro",
+    "compras",
+    "ahorro",
+    "dinerosimple"
+   ],
+   "description": "Cómo saber si un descuento de Black Friday es real.",
+   "thumbnail_text": "¿De verdad costaba eso?",
+   "sources": [
+    "https://consumidor.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "Reference-price ('was') comparisons can use list prices few people paid (FTC guides on former-price comparisons)",
+    "Example arithmetic: $110 - $99 = $11"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "hc-trampas-black-friday",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Five Black Friday traps in the fine print: fake reference prices, store-card deferred interest, short return windows and restocking fees, 'limited stock' timers, and buy-now-pay-later stacking.",
+  "script": {
+   "title": "Black Friday: 5 trampas en la letra chica",
+   "hook": "Guárdalo antes del viernes: las 5 trampas que no salen en el anuncio.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo antes del viernes.",
+     "on_screen_text": "Black Friday: 5 trampas en la letra chica",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a magnifying glass over a receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Compara contra el precio de octubre, no contra la etiqueta.",
+     "on_screen_text": "1. El 'antes' que nadie pagó",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a crossed-out price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Si no pagas todo a tiempo, te cobran los intereses de todos los meses.",
+     "on_screen_text": "2. 'Sin intereses' si pagas a tiempo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a hidden sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Revisa los días para devolver y si cobran por reabastecer.",
+     "on_screen_text": "3. Devoluciones cortas y con cargo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a box with a small price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "La prisa es la trampa. Si lo necesitas, mañana sigue habiendo.",
+     "on_screen_text": "4. El reloj de 'quedan 3'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a ticking timer. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Cada uno es chico. Juntos, en enero, no.",
+     "on_screen_text": "5. Varios 'paga en 4' a la vez",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. four small receipts stacking up. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Con tu número de diciembre, no con el del anuncio.",
+     "on_screen_text": "Compra solo lo de tu lista",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf checking a short list. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Black Friday, 5 trampas en la letra chica:\n1. El 'antes' que nadie pagó.\n2. 'Sin intereses' con intereses diferidos: si no pagas todo a tiempo, te cobran los de todos los meses.\n3. Devoluciones cortas o con cargo por reabastecer.\n4. El reloj de 'quedan 3'.\n5. Varios 'paga en 4' a la vez.\nCompra solo lo de tu lista.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "blackfriday",
+    "viernesnegro",
+    "compras",
+    "deudas",
+    "dinerosimple"
+   ],
+   "description": "Cinco trampas de Black Friday que no salen en el anuncio.",
+   "thumbnail_text": "5 trampas",
+   "sources": [
+    "https://consumidor.ftc.gov/",
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Deferred-interest promotions charge all accrued interest if the balance isn't paid in full by the end of the promo (CFPB)",
+    "Restocking fees and return windows vary by store"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "h-intereses-diferidos",
+  "format": "mid",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Store-card 'no interest if paid in full in 12 months' is deferred interest: miss by one dollar and all the interest from day one lands at once. Worked example and how to use it safely.",
+  "script": {
+   "title": "'Sin intereses por 12 meses': la trampa de los intereses diferidos",
+   "hook": "'Sin intereses si pagas en 12 meses' no es lo mismo que 'cero por ciento'. La diferencia te puede costar cientos.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "'Sin intereses si pagas en 12 meses' no es lo mismo que 'cero por ciento'. La diferencia te puede costar cientos.",
+     "on_screen_text": "'Sin intereses' no es 'cero por ciento'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a store sign with a small asterisk. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "En muchas tarjetas de tienda esto se llama interés diferido. Los intereses sí corren desde el primer día, solo que no te los cobran todavía.",
+     "on_screen_text": "Se llama interés diferido",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a clock ticking behind a curtain. No text, no logos, no real people."
+    },
+    {
+     "heading": "La trampa",
+     "narration": "Si al final del plazo te falta aunque sea un dólar, te cobran todos los intereses de los doce meses, de golpe.",
+     "on_screen_text": "Si te falta un dólar, te cobran todo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small coin tipping a big stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "Ejemplo: compras una tele de mil dólares con una tarjeta al treinta por ciento. Pagas ochenta al mes y en el mes doce te faltan cuarenta.",
+     "on_screen_text": "Una tele de $1,000 al 30%",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a TV with a small price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "El golpe",
+     "narration": "Esos cuarenta no son lo único que pagas: te pueden cargar unos ciento setenta dólares de intereses acumulados, aunque casi terminaste.",
+     "on_screen_text": "Te pueden cargar unos $170 de intereses",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with a big number. No text, no logos, no real people."
+    },
+    {
+     "heading": "Diferencia",
+     "narration": "Una tarjeta con cero por ciento de verdad no hace eso: si te falta algo, solo empiezan a cobrarte intereses sobre lo que queda. Las dos se anuncian casi igual, por eso hay que leer.",
+     "on_screen_text": "Un 0% de verdad no hace eso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two cards side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo usarla",
+     "narration": "Si ya la tienes, divide el total entre once, no entre doce, y pon pago automático. Así terminas un mes antes.",
+     "on_screen_text": "Divide entre 11, no entre 12",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with month 11 circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lee",
+     "narration": "Antes de firmar, busca en la letra chica 'deferred interest' o 'si no pagas el saldo completo'.",
+     "on_screen_text": "Busca 'deferred interest' en la letra chica",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over fine print. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Ninguna tele vale una sorpresa de ciento setenta dólares el próximo diciembre.",
+     "on_screen_text": "La tele no vale la sorpresa de diciembre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf turning off a TV calmly. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "'Sin intereses si pagas en 12 meses' muchas veces es interés diferido: si al final te falta aunque sea $1, te cobran los intereses de todo el año. Ejemplo: tele de $1,000 al 30%, pagas $80 al mes y te faltan $40 en el mes 12: te pueden cargar unos $170 de intereses. Si ya la tienes: divide el total entre 11 y pon pago automático. Busca 'deferred interest' en la letra chica.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "blackfriday",
+    "tarjetadecredito",
+    "intereses",
+    "deudas",
+    "dinerosimple"
+   ],
+   "description": "Cómo funcionan los intereses diferidos de las tarjetas de tienda.",
+   "thumbnail_text": "¿Sin intereses?",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Deferred interest: all interest accrued from purchase date is charged if the promo balance isn't paid in full (CFPB)",
+    "Example arithmetic (approximate): $1,000 at 30% APR paid down $80/month accrues roughly $168 in interest (2.5% a month on balances 1,000 down to 120) over 12 months; check with a calculator before posting"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "h-tres-preguntas-compra",
+  "format": "image",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "One image to screenshot before checkout: three questions (was it on my list, would I buy it at full price, can I pay it this month without a card balance).",
+  "script": {
+   "title": "3 preguntas antes de pagar",
+   "hook": "Tómale captura antes de pagar.",
+   "segments": [
+    {
+     "heading": "Imagen",
+     "narration": "",
+     "on_screen_text": "¿Estaba en mi lista? ¿Lo compraría sin descuento? ¿Lo pago este mes?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a shopping bag and a short checklist. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tómale captura antes de pagar este Black Friday:\n1. ¿Estaba en mi lista antes de ver el anuncio?\n2. ¿Lo compraría sin el descuento?\n3. ¿Lo puedo pagar completo este mes, sin dejar saldo en la tarjeta?\nSi una respuesta es 'no', espera un día.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "blackfriday",
+    "compras",
+    "presupuesto",
+    "ahorro",
+    "dinerosimple"
+   ],
+   "description": "Tres preguntas antes de pagar en Black Friday.",
+   "thumbnail_text": "3 preguntas",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "No numeric claims"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "h-envio-a-tiempo",
+  "format": "mid",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Send December remittances by mid-month: cash-pickup lines, reduced hours on Dec 24-25 and 31-Jan 1 on both sides, bank holidays that delay deposits, and the family's own travel; compare the amount received and keep the receipt.",
+  "script": {
+   "title": "Tu envío de diciembre: mándalo antes del 15",
+   "hook": "Si mandas dinero para las fiestas, el día que lo mandas importa casi tanto como dónde.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si mandas dinero para las fiestas, el día que lo mandas importa casi tanto como dónde.",
+     "on_screen_text": "El día que mandas también cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a December calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Filas",
+     "narration": "La última semana antes de Navidad, los lugares de pago tienen filas largas, y el 24, el 25, el 31 y el 1 muchos cierran temprano o no abren, aquí y allá.",
+     "on_screen_text": "La última semana, filas y horarios cortos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a long line in front of a small shop. No text, no logos, no real people."
+    },
+    {
+     "heading": "Depósitos",
+     "narration": "Si el dinero va a una cuenta de banco, los días festivos pueden retrasar el depósito al siguiente día hábil.",
+     "on_screen_text": "Los depósitos pueden esperar al día hábil",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank with a closed sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tu familia",
+     "narration": "Y tu familia también necesita el dinero antes: para comprar, para viajar al pueblo, para la cena.",
+     "on_screen_text": "Tu familia también viaja y compra antes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a family packing a small bag. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "Por eso la regla es sencilla: mándalo antes del 15 de diciembre, y en un solo envío si puedes.",
+     "on_screen_text": "Mándalo antes del 15 de diciembre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with the 15 circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Compara",
+     "narration": "Antes de pagar, compara cuánto llega allá en dos o tres servicios, a la misma hora. En diciembre todos anuncian promociones; el número que importa sigue siendo cuánto llega. Una comisión de cero con un tipo de cambio malo puede salir más cara que una comisión de cinco dólares.",
+     "on_screen_text": "Compara cuánto llega, también en diciembre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three phones side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paga bien",
+     "narration": "Paga desde tu cuenta o con débito. En efectivo hay un impuesto de uno por ciento, y con tarjeta de crédito puede contar como adelanto en efectivo.",
+     "on_screen_text": "Desde tu cuenta, no en efectivo ni con crédito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank with an arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recibo",
+     "narration": "Guarda el recibo. Si algo sale mal, tienes 180 días para reportar el error.",
+     "on_screen_text": "Guarda el recibo hasta junio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt in a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Mándalo temprano, y las fiestas las disfrutas tú también.",
+     "on_screen_text": "Lo mandas temprano y disfrutas tú también",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf relaxing with a cup of hot chocolate. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu envío de diciembre: mándalo antes del 15. La última semana hay filas, el 24, 25, 31 y 1 muchos lugares cierran temprano (aquí y allá), y los depósitos pueden esperar al día hábil. Compara cuánto llega en 2 o 3 servicios, paga desde tu cuenta (no en efectivo ni con crédito) y guarda el recibo: tienes 180 días para reportar errores.\n\nLa calculadora gratis de envíos está en el enlace de la bio. Lo que escribes no sale de tu celular.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "remesas",
+    "navidad",
+    "envios",
+    "familia",
+    "dinerosimple"
+   ],
+   "description": "Cuándo mandar tu envío de diciembre para que llegue a tiempo.",
+   "thumbnail_text": "Antes del 15",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Holiday hours and deposit timing vary by provider and country",
+    "1% excise tax on cash-funded remittances from Jan 1, 2026",
+    "180 days to report remittance errors (Remittance Rule)",
+    "The calculator page is live before this posts"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "h-calculadora-envios",
+  "format": "image",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "One image announcing the free Spanish remittance calculator: type the amount, the market rate and what each service shows, and see the real cost (fee + exchange-rate markup) and what arrives.",
+  "script": {
+   "title": "Calcula cuánto llega antes de mandar",
+   "hook": "La comisión es solo la mitad del costo.",
+   "segments": [
+    {
+     "heading": "Imagen",
+     "narration": "",
+     "on_screen_text": "Comisión + tipo de cambio = lo que de verdad pagas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a phone that shows a simple calculator. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "La comisión es solo la mitad del costo de tu envío. La otra mitad está en el tipo de cambio. Hicimos una calculadora gratis en español: escribes cuánto mandas, el tipo de cambio del mercado y lo que te muestra cada servicio, y te dice cuánto pagas de verdad y cuánto llega allá. No guardamos nada: lo que escribes no sale de tu celular.\n\nLa calculadora gratis de envíos está en el enlace de la bio. Lo que escribes no sale de tu celular.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "remesas",
+    "envios",
+    "calculadora",
+    "familia",
+    "dinerosimple"
+   ],
+   "description": "La calculadora gratis de Dinero Simple para comparar envíos.",
+   "thumbnail_text": "Calculadora gratis",
+   "sources": [],
+   "claims_to_verify": [
+    "The calculator page is live at /calculadora-de-envios/ before this posts"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "h-tope-intercambio",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Set the gift exchange (intercambio / amigo secreto) cap out loud before names are drawn, and say 'up to', not 'around'; it saves money and awkwardness.",
+  "script": {
+   "title": "Ponle tope al intercambio antes del sorteo",
+   "hook": "El intercambio de regalos se pone caro en el momento que nadie dice el tope.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "El intercambio de regalos se pone caro en el momento que nadie dice el tope.",
+     "on_screen_text": "Sin tope, el intercambio se pone caro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small wrapped gift. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuándo",
+     "narration": "Dilo antes de sacar los papelitos, no después. Después nadie quiere ser el que pide menos.",
+     "on_screen_text": "Dilo antes de sacar los papelitos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bowl with folded papers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Y di 'hasta veinticinco', no 'como veinticinco'. 'Como' siempre termina en cuarenta.",
+     "on_screen_text": "'Hasta 25', no 'como 25'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two price tags, one bigger. No text, no logos, no real people."
+    },
+    {
+     "heading": "Varios",
+     "narration": "Si estás en tres intercambios, el de la familia, el del trabajo y el de los amigos, súmalos antes de decir que sí.",
+     "on_screen_text": "¿Tres intercambios? Súmalos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three small gifts in a row. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Un tope claro es menos gasto y cero pena para todos.",
+     "on_screen_text": "Un tope claro, cero pena",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf smiling at a group. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El intercambio de regalos se pone caro cuando nadie dice el tope. Dilo antes del sorteo, y di 'hasta $25', no 'como $25'. Si estás en varios intercambios, súmalos antes de decir que sí.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "intercambio",
+    "amigosecreto",
+    "navidad",
+    "presupuesto",
+    "dinerosimple"
+   ],
+   "description": "Cómo ponerle tope al intercambio de regalos.",
+   "thumbnail_text": "Tope al intercambio",
+   "sources": [],
+   "claims_to_verify": [
+    "No numeric claims (the $25 is an example)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "hc-posada-entre-todos",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Hosting a posada together without fights over money: a shared list, assign by category not by guess, one person collects, a per-family cost, and what to do with leftovers and extra money.",
+  "script": {
+   "title": "La posada entre todos: cómo dividir sin pleitos",
+   "hook": "Guárdalo para el chat de la familia.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo para el chat de la familia.",
+     "on_screen_text": "La posada entre todos, sin pleitos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a piñata and a list. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Comida, bebidas, piñata, aguinaldos, desechables, renta de sillas.",
+     "on_screen_text": "1. Una lista compartida",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a shared checklist on a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Mejor 'tú las bebidas' que 'trae algo'. Así no llegan cinco ensaladas.",
+     "on_screen_text": "2. Cada familia, una categoría",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. boxes labeled with icons. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "La renta del lugar o las sillas se divide en partes iguales.",
+     "on_screen_text": "3. Lo grande, entre todos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a chair split into equal parts. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Y manda foto de los recibos al chat.",
+     "on_screen_text": "4. Una persona junta el dinero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone showing a receipt photo. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Ejemplo: $240 de renta y sillas entre 6 familias son $40.",
+     "on_screen_text": "5. Un número por familia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calculator with 40. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Para la del año que viene.",
+     "on_screen_text": "6. Lo que sobra, se reparte o se guarda",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small jar with a ribbon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Comparte esto en el chat.",
+     "on_screen_text": "Cuentas claras, posada en paz",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at a festive table. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "La posada entre todos, sin pleitos:\n1. Una lista compartida.\n2. Cada familia, una categoría (no 'trae algo').\n3. Lo grande (lugar, sillas) en partes iguales.\n4. Una persona junta el dinero y manda foto de los recibos.\n5. Un número por familia: $240 entre 6 son $40.\n6. Lo que sobra, para la del año que viene.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "posada",
+    "posadas",
+    "navidad",
+    "familia",
+    "dinerosimple"
+   ],
+   "description": "Cómo organizar y dividir los gastos de una posada.",
+   "thumbnail_text": "Posada entre todos",
+   "sources": [],
+   "claims_to_verify": [
+    "Example arithmetic: $240 / 6 = $40"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "h-rifa-falsa",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "The fake Christmas raffle: 'you won' a truck or a canasta in a raffle you never entered, and you must pay shipping or taxes to claim it. Real prizes don't charge to collect.",
+  "script": {
+   "title": "'Ganaste la rifa navideña': si te piden pagar, es estafa",
+   "hook": "Si ganaste una rifa en la que nunca participaste, no ganaste nada.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si ganaste una rifa en la que nunca participaste, no ganaste nada.",
+     "on_screen_text": "¿Ganaste una rifa que no compraste?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a phone with confetti on screen. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo llega",
+     "narration": "Llega por WhatsApp o Facebook: una camioneta, una canasta navideña, dinero en efectivo.",
+     "on_screen_text": "Llega por WhatsApp o Facebook",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a gift box message. No text, no logos, no real people."
+    },
+    {
+     "heading": "La trampa",
+     "narration": "Para cobrar, te piden pagar el envío, un impuesto o un 'trámite'. Ahí está la estafa.",
+     "on_screen_text": "Para cobrar, te piden pagar algo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a gift box with a price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Regla",
+     "narration": "Un premio de verdad no te cobra por entregarse.",
+     "on_screen_text": "Un premio de verdad no cobra por entregarse",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a crossed-out dollar sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Bloquea el número, repórtalo y avísale al chat de la familia.",
+     "on_screen_text": "Bloquea, reporta y avisa en el chat",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf blocking a contact. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "'Ganaste la rifa navideña', pero nunca compraste boleto. Para 'cobrar' te piden pagar el envío, un impuesto o un trámite. Un premio de verdad no te cobra por entregarse. Bloquea, repórtalo a la FTC (en español) y avísale al chat de la familia.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "estafas",
+    "rifa",
+    "navidad",
+    "whatsapp",
+    "dinerosimple"
+   ],
+   "description": "La estafa de la rifa navideña falsa.",
+   "thumbnail_text": "Rifa falsa",
+   "sources": [
+    "https://consumidor.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "FTC: legitimate prizes don't require payment to collect"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "hc-estafas-whatsapp",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Five December scams that arrive on WhatsApp in Spanish: the fake raffle, the 'new number' relative, the boss asking for gift cards, the online tanda run by a stranger, and the hometown charity collection with no name behind it.",
+  "script": {
+   "title": "5 estafas de diciembre que llegan por WhatsApp",
+   "hook": "Guárdalo y mándaselo al chat de la familia.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo y mándalo al chat de la familia.",
+     "on_screen_text": "5 estafas de diciembre por WhatsApp",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a phone with a warning sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Si te piden pagar para cobrar, es estafa.",
+     "on_screen_text": "1. 'Ganaste la rifa'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a gift box with a price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Llama al número de siempre antes de mandar un dólar.",
+     "on_screen_text": "2. 'Mamá, cambié de número'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a new number and a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Ningún jefe pide regalos en tarjetas por mensaje.",
+     "on_screen_text": "3. 'Tu jefe' pide tarjetas de regalo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. gift cards with an X. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Solo con gente que conoces en persona. Y anota todo.",
+     "on_screen_text": "4. La tanda de un desconocido",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a circle of coins with one missing. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Pregunta quién organiza y a qué cuenta va. Si nadie sabe, no.",
+     "on_screen_text": "5. La colecta para el pueblo sin nombre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a donation box with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Regla",
+     "narration": "Si hay prisa y piden dinero, para y llama.",
+     "on_screen_text": "Prisa + dinero = para",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a stop sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y repórtalos a la FTC, en español.",
+     "on_screen_text": "Reenvía los mensajes de estafa al 7726",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf forwarding a message. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "5 estafas de diciembre que llegan por WhatsApp:\n1. 'Ganaste la rifa' (y hay que pagar para cobrar).\n2. 'Mamá, cambié de número' (llama al de siempre).\n3. 'Tu jefe' pide tarjetas de regalo.\n4. La tanda de un desconocido.\n5. La colecta para el pueblo sin nombre ni cuenta clara.\nRegla: prisa + dinero = para y llama. Los mensajes de texto de estafa se reenvían al 7726.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "estafas",
+    "whatsapp",
+    "navidad",
+    "familia",
+    "dinerosimple"
+   ],
+   "description": "Cinco estafas de diciembre que llegan por WhatsApp.",
+   "thumbnail_text": "Estafas por WhatsApp",
+   "sources": [
+    "https://consumidor.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "Gift-card payment requests are a common scam sign (FTC)",
+    "7726 accepts forwarded spam texts (carrier short code; SMS, not WhatsApp)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ }
+]

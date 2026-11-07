@@ -464,10 +464,14 @@ def shortcode_factory(products: dict, source: str):
 def free_tools() -> list[dict]:
     """site.json "free_tools": links to the free web apps (calculators, scam checker). Each tool names a
     base ("calculators" or "scam_checker", set in site.json "tool_urls") and a path. A tool is shown only
-    once its base URL is real (set, and without REPLACE_ME), so nothing points at an undeployed app."""
+    once its base URL is real (set, and without REPLACE_ME), so nothing points at an undeployed app.
+    base "site" means a page of this site itself, which is always shown."""
     bases = CFG.get("tool_urls", {})
     out = []
     for t in CFG.get("free_tools", []):
+        if t.get("base") == "site":  # a tool that is a page of this site (e.g. /calculadora-de-envios/): always live
+            out.append({**t, "href": u(t.get("path", "/"))})
+            continue
         base = (bases.get(t.get("base", ""), "") or "").rstrip("/")
         if not base or "REPLACE_ME" in base:
             continue

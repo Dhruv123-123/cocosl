@@ -48,7 +48,7 @@ def caption_text(brand: BrandProfile, item: dict) -> str:
         out += ["", "Sources:", *sc.sources]
     if fmt == "long" and sc.description.strip():
         out += ["", "--- YOUTUBE DESCRIPTION (paste as-is; re-time chapters after voicing) ---", sc.description.strip()]
-    if fmt in ("short", "long"):
+    if fmt in ("short", "mid", "long"):
         out += ["", "--- NARRATION SCRIPT ---", *[s.narration for s in sc.segments if s.narration]]
         if sc.cta and sc.cta not in " ".join(s.narration for s in sc.segments):
             out.append(sc.cta)

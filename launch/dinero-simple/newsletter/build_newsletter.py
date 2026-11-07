@@ -41,7 +41,7 @@ def build() -> str:
         check(i)
     out = [f"""# Dinero Simple: the weekly newsletter (first {len(ISSUES)} issues)
 
-Six Spanish issues for subscribers who have finished the 10-email welcome sequence. One a week, same day and time (Thursday morning works for this audience). Each has one idea, "el número de la semana", one thing to do this week and one scam to watch for. Paste-ready copies with the footer are in `issues/`.
+Spanish issues for subscribers who have finished the 10-email welcome sequence. Issues 1–6 are evergreen; issue 7 is the 2026 holiday issue (send it Nov 30 – Dec 3, ahead of the evergreen ones if the list is live by then). One a week, same day and time (Thursday morning works for this audience). Each has one idea, "el número de la semana", one thing to do this week and one scam to watch for. Paste-ready copies with the footer are in `issues/`.
 
 ## Rules before sending
 

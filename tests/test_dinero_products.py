@@ -223,7 +223,7 @@ def test_month5_plan_is_complete_and_flags_itin_pieces_for_an_attorney():
 def test_newsletter_has_six_linkless_issues_and_is_current():
     sys.path.insert(0, str(DS / "newsletter"))
     import build_newsletter
-    assert len(build_newsletter.ISSUES) == 6
+    assert len(build_newsletter.ISSUES) == 7
     assert (DS / "NEWSLETTER.md").read_text() == build_newsletter.build()
     for i in build_newsletter.ISSUES:
         build_newsletter.check(i)  # raises on a link outside a placeholder
@@ -231,3 +231,32 @@ def test_newsletter_has_six_linkless_issues_and_is_current():
     assert "[ENLACE: darse de baja]" in build_newsletter.FOOTER and "[DIRECCIÓN POSTAL" in build_newsletter.FOOTER
     with pytest.raises(SystemExit):
         build_newsletter.check({**build_newsletter.ISSUES[0], "body": "Visita irs.gov hoy"})
+
+
+def test_holiday_pack_rotates_formats_and_never_takes_a_month1_slot():
+    items = json.loads((DS / "content-holiday-2026.json").read_text())
+    fmts = [i["format"] for i in items]
+    assert len(items) == 10 and {"short", "mid", "carousel", "image"} <= set(fmts)
+    assert all(a != b for a, b in zip(fmts, fmts[1:])), "no two pieces in a row share a format"
+    plan = (DS / "POSTING_PLAN_HOLIDAY_2026.md").read_text()
+    slots = lambda text: {(r.split("|")[1].strip(), r.split("|")[2].strip()) for r in text.splitlines()  # noqa: E731
+                          if r.startswith("| ") and (" nov |" in r or " dic |" in r)}
+    assert len(slots(plan)) == 10 and not slots(plan) & slots((DS / "POSTING_PLAN_MONTH_1.md").read_text())
+    for i in items:
+        if i["format"] == "mid":
+            words = sum(len(s["narration"].split()) for s in i["script"]["segments"])
+            assert 190 <= words <= 250 and 8 <= len(i["script"]["segments"]) <= 11, i["key"]
+
+
+def test_remittance_calculator_page_builds_and_is_linked(tmp_path):
+    import shutil
+    import subprocess
+    site = tmp_path / "site"
+    shutil.copytree(ROOT / "sites" / "dinero-simple", site, ignore=shutil.ignore_patterns("public"))
+    subprocess.run([sys.executable, str(ROOT / "site" / "build.py")], check=True, capture_output=True,
+                   env={**__import__("os").environ, "SITE_ROOT": str(site)})
+    page = (site / "public" / "calculadora-de-envios" / "index.html").read_text()
+    for needle in ('id="rc-amount"', 'id="rc-market"', "rc-prov-t", "A * (M - R) / M", "A * 0.01"):
+        assert needle in page, needle
+    assert "fetch(" not in page and "XMLHttpRequest" not in page  # no scraping, nothing leaves the browser
+    assert "/calculadora-de-envios/" in (site / "public" / "links" / "index.html").read_text()
