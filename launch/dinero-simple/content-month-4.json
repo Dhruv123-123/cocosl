@@ -67,7 +67,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4-tarjeta-asegurada",
@@ -134,7 +135,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4-prestamo-constructor",
@@ -201,7 +203,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4-usuario-autorizado",
@@ -268,7 +271,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4-renta-al-credito",
@@ -335,7 +339,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4-disputa-error",
@@ -403,7 +408,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4-cuenta-sin-ssn",
@@ -471,7 +477,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4-sobregiro",
@@ -539,7 +546,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4-cambiar-cheques",
@@ -607,7 +615,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4-cooperativa",
@@ -676,7 +685,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4-prorroga",
@@ -745,7 +755,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4-estimados",
@@ -813,7 +824,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4-lo-que-no-cuenta",
@@ -880,7 +892,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4-cargos-del-banco",
@@ -947,7 +960,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4c-credito-desde-cero",
@@ -1027,7 +1041,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4c-preguntas-tarjeta-asegurada",
@@ -1100,7 +1115,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4c-disputa-paso-a-paso",
@@ -1181,7 +1197,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4c-cuenta-sin-ssn",
@@ -1261,7 +1278,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4c-cargos-evitables",
@@ -1340,7 +1358,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4c-antes-del-15-abril",
@@ -1423,7 +1442,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4c-mitos-puntaje",
@@ -1503,7 +1523,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m4c-banco-o-cooperativa",
@@ -1584,7 +1605,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "l-credito-desde-cero",
@@ -1725,7 +1747,8 @@
    "title_variants": [],
    "hook_variants": [],
    "original_element": "Graba la pantalla de AnnualCreditReport.com mostrando dónde se piden los tres reportes gratis (sin poner datos)"
-  }
+  },
+  "phase": 2
  },
  {
   "key": "l-banco-sin-cargos",
@@ -1867,6 +1890,7 @@
    "title_variants": [],
    "hook_variants": [],
    "original_element": "Graba la pantalla del buscador de cuentas Bank On certificadas (joinbankon.org), filtrando por tu código postal"
-  }
+  },
+  "phase": 2
  }
 ]

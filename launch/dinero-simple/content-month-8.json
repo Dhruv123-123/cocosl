@@ -56,7 +56,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m8-tanda-riesgos",
@@ -117,7 +118,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m8-tanda-segura",
@@ -176,7 +178,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m8-circulo-de-prestamo",
@@ -238,7 +241,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "m8-oportunidad-de-negocio",
@@ -300,7 +305,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m8-negocio-cuenta-aparte",
@@ -361,7 +367,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m8-ein-con-itin",
@@ -424,7 +431,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "m8-casa-enganche",
@@ -487,7 +496,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m8-preaprobacion",
@@ -548,7 +558,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m8-hipoteca-con-itin",
@@ -613,7 +624,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "m8-regreso-a-clases",
@@ -672,7 +685,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m8-comida-escolar-gratis",
@@ -734,7 +748,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m8-estafa-de-renta",
@@ -795,7 +810,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m8-permisos-negocio",
@@ -857,7 +873,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m8c-4-de-julio",
@@ -928,7 +945,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m8c-tanda-segura",
@@ -1007,7 +1025,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m8c-oportunidad-de-negocio",
@@ -1086,7 +1105,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m8c-negocio-primeros-pasos",
@@ -1167,7 +1187,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m8c-costos-de-comprar-casa",
@@ -1247,7 +1268,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m8c-preguntas-al-prestamista",
@@ -1328,7 +1350,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "m8c-regreso-a-clases",
@@ -1407,7 +1431,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m8c-estafa-de-renta",
@@ -1486,7 +1511,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "l-tanda",
@@ -1624,7 +1650,9 @@
    "title_variants": [],
    "hook_variants": [],
    "original_element": "Graba la pantalla de una hoja de cálculo sencilla con la lista de la tanda (nombres de ejemplo, montos, fechas y turnos) y una foto de la lista en un chat de grupo"
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "l-primera-casa",
@@ -1774,6 +1802,8 @@
    "title_variants": [],
    "hook_variants": [],
    "original_element": "Graba la pantalla de la Estimación del préstamo de ejemplo de la CFPB (la versión en español) marcando la tasa, el APR y los gastos de cierre"
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  }
 ]

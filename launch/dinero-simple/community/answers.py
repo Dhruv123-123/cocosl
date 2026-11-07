@@ -45,7 +45,7 @@ Por ley, el servicio te tiene que dar un recibo con lo que pagaste, el tipo de c
 A.append(("impuestos", "Si declaro impuestos con ITIN, ¿se entera inmigración?",
 """Esta pregunta es muy importante y no tiene una respuesta igual para todos, así que te digo lo que sí sé y a quién preguntarle.
 
-Por años, la información de impuestos ha estado protegida por ley y el IRS no la compartía con inmigración salvo casos muy específicos. En 2025 el IRS firmó un acuerdo para compartir cierta información con el Departamento de Seguridad Nacional, y hay demandas en corte sobre eso. La situación puede cambiar.
+Las reglas sobre qué datos se comparten entre agencias han cambiado y siguen en las cortes, así que no te voy a dar una respuesta general: eso lo tiene que ver alguien con tu caso enfrente. Hay consultas gratis o de bajo costo: busca la lista de proveedores gratuitos del Departamento de Justicia (EOIR).
 
 Lo que te recomiendo:
 - Si tienes un caso de inmigración abierto o te preocupa tu situación, habla primero con un abogado de inmigración con licencia o con un representante acreditado por el Departamento de Justicia. No con un notario.

@@ -56,7 +56,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7-salario-robado",
@@ -119,7 +120,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7-horas-extra",
@@ -182,7 +184,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7-anota-tus-horas",
@@ -243,7 +246,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7-pago-en-efectivo",
@@ -304,7 +308,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7-1099-o-w2",
@@ -367,7 +372,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7-impuesto-estimado-junio",
@@ -429,7 +435,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7-dia-del-padre",
@@ -488,7 +495,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7-seguro-de-vida-plazo",
@@ -549,7 +557,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7-plan-de-retiro-seguro",
@@ -612,7 +621,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7-seguro-de-renta",
@@ -674,7 +684,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7-seguro-carro-minimo",
@@ -735,7 +746,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7-cambiar-cheques",
@@ -799,7 +811,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7-choque-que-hacer",
@@ -860,7 +873,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7c-mitad-de-ano",
@@ -937,7 +951,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7c-cobrar-tu-salario",
@@ -1019,7 +1034,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7c-horas-extra",
@@ -1099,7 +1115,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7c-impuesto-estimado",
@@ -1172,7 +1189,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7c-dia-del-padre",
@@ -1243,7 +1261,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7c-seguro-de-vida",
@@ -1317,7 +1336,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7c-seguros-basicos",
@@ -1392,7 +1412,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m7c-si-chocas",
@@ -1471,7 +1492,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "l-tu-sueldo-completo",
@@ -1615,7 +1637,8 @@
    "title_variants": [],
    "hook_variants": [],
    "original_element": "Graba la pantalla de una libreta de horas en el celular (una nota con fechas, entrada, comida y salida) junto a un talón de pago de ejemplo con la línea de 'overtime' marcada"
-  }
+  },
+  "phase": 2
  },
  {
   "key": "l-seguro-de-vida",
@@ -1757,6 +1780,7 @@
    "title_variants": [],
    "hook_variants": [],
    "original_element": "Graba la pantalla del buscador de licencias de agentes de seguros de la página del departamento de seguros de un estado (sin datos personales)"
-  }
+  },
+  "phase": 2
  }
 ]

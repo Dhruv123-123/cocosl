@@ -1,5 +1,7 @@
 # Dinero Simple: holiday pack posting plan (Nov 20 – Dec 31, 2026)
 
+> **PHASE 2: DO NOT POST.** Nothing in this plan is part of the lean launch (`POSTING_PLAN_LEAN.md`). It stays unposted until each piece passes native-speaker review (and attorney review where it is flagged) and Dhruv moves it into a live calendar.
+
 10 extra posts for the holidays: 3 Shorts, 2 TikTok mids (65–90 s), 3 carousels and 2 single images. They fill the gaps month 1 leaves (`POSTING_PLAN_MONTH_1.md`), so no slot is used twice. Month 1 already covers the 72-hour rule, the gift list, remittance rights, the 1% cash tax, the cost of hosting a posada and the 'paquete' text; this pack does not repeat them.
 
 Formats rotate so no two days in a row look alike, which matters for YouTube's and TikTok's 'inauthentic' and 'unoriginal' rules: the mids are TikTok only, the single images go to Instagram and Facebook only.

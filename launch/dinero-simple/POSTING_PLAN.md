@@ -1,5 +1,7 @@
 # Dinero Simple: 14-day launch posting plan
 
+> **PHASE 2: DO NOT POST.** Nothing in this plan is part of the lean launch (`POSTING_PLAN_LEAN.md`). It stays unposted until each piece passes native-speaker review (and attorney review where it is flagged) and Dhruv moves it into a live calendar.
+
 Same order and spacing as the Money Made Simple plan, so the two brands can launch side by side (shift the dates to your real start day). Times America/New_York (brand `post_times`: 12:30 and 20:00, a little later in the evening than the English brand). The two long-form videos go to YouTube at 20:00 on the two Sundays, like the English plan.
 
 Rules: nothing goes out until a fluent Spanish speaker has signed off the piece (`REVIEW_CHECKLIST.md`), the facts in its caption.txt are checked, and the link in bio has the Spanish template and an HYSA affiliate link with Spanish-language support.

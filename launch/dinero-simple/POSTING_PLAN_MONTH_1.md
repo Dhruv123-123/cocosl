@@ -1,5 +1,7 @@
 # Dinero Simple: month 1 posting plan (Nov 21 – Dec 31, 2026)
 
+> **PHASE 2: DO NOT POST.** Nothing in this plan is part of the lean launch (`POSTING_PLAN_LEAN.md`). It stays unposted until each piece passes native-speaker review (and attorney review where it is flagged) and Dhruv moves it into a live calendar.
+
 Picks up the day after the 14-day launch plan ends. 20 Shorts, 10 carousels and 2 long videos, all written in Spanish for this audience (not translated): the holidays, Black Friday, aguinaldo and year-end bonuses, sending money to family (fees, the 1% cash tax from 2026, your rights), the cuesta de enero and New Year.
 
 Rules: nothing goes out until a fluent Spanish speaker has signed off the piece (`month-1/REVIEW_CHECKLIST.md`) and the facts under CHECK BEFORE POSTING in its caption.txt are confirmed. Times America/New_York. Quiet stretch Dec 18–27 on purpose (holiday week, low effort); post only if you want to.

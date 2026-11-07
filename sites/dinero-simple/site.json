@@ -326,10 +326,11 @@
     }
   ],
   "hold": {
-    "enabled": false,
-    "_note": "Lean launch (see the reviewer brief): only El Presupuesto de 20 Minutos, the core pages and emails 1-3 go live. Set enabled to true to hold the rest, and remove names as they pass native review.",
+    "enabled": true,
+    "_note": "Lean launch (launch/dinero-simple/lean/LEAN_LAUNCH.md): only the core pages, the freebie and El Kit para Recortar Gastos are live. Remove a name here once that piece has passed native review (and attorney review where flagged). Rebuild with lean_launch.py, which rewrites this block.",
     "blog": ["*"],
-    "products": ["el-kit-para-recortar-gastos", "tu-fecha-sin-deudas", "empieza-a-invertir-con-100-al-mes", "el-paquete-dinero-simple"],
-    "emails": ["fondos-de-prevision", "oferta-presupuesto-20-minutos", "avalancha-bola-de-nieve", "puntaje-de-credito", "empezar-a-invertir", "preguntas-antes-de-comprar", "que-sigue"]
+    "products": ["el-paquete-dinero-simple", "el-presupuesto-de-20-minutos", "empieza-a-invertir-con-100-al-mes", "tu-fecha-sin-deudas"],
+    "emails": ["*"],
+    "pages": ["calculadora-de-envios", "calculadora-de-sueldo", "como-ganamos-dinero", "credito-sin-seguro-social", "glosario"]
   }
 }

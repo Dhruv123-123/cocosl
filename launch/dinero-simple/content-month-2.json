@@ -66,7 +66,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2-estado-de-diciembre",
@@ -135,7 +136,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2-lista-de-deudas",
@@ -203,7 +205,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2-pruebas-gratis",
@@ -272,7 +275,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2-primer-talon",
@@ -340,7 +344,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2-bajar-la-tasa",
@@ -409,7 +414,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2-reporte-gratis-semanal",
@@ -481,7 +487,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2-ira-hasta-abril",
@@ -552,7 +559,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2-itin-vence",
@@ -624,7 +632,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2-w2-1-feb",
@@ -694,7 +703,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2-vita-gratis",
@@ -765,7 +775,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2-1099-trabajos",
@@ -837,7 +848,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2-reembolso-cuando-llega",
@@ -909,7 +921,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2-reembolso-con-trabajo",
@@ -977,7 +990,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2c-fondos-2027",
@@ -1062,7 +1076,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2c-lista-de-deudas",
@@ -1142,7 +1157,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2c-que-pagar-primero",
@@ -1230,7 +1246,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2c-recorte-de-enero",
@@ -1317,7 +1334,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2c-calendario-impuestos",
@@ -1402,7 +1420,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2c-ayuda-gratis-impuestos",
@@ -1493,7 +1512,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2c-reembolso-en-4",
@@ -1580,7 +1600,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m2c-antes-de-invertir",
@@ -1663,7 +1684,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "l-plan-2027",
@@ -1795,7 +1817,8 @@
    "title_variants": [],
    "hook_variants": [],
    "original_element": "Graba la pantalla llenando la hoja de gastos sorpresa de El Presupuesto con números de ejemplo"
-  }
+  },
+  "phase": 2
  },
  {
   "key": "l-impuestos-2027",
@@ -1929,6 +1952,7 @@
    "title_variants": [],
    "hook_variants": [],
    "original_element": "Graba la pantalla de la página '¿Dónde está mi reembolso?' de irs.gov en español (sin poner datos)"
-  }
+  },
+  "phase": 2
  }
 ]

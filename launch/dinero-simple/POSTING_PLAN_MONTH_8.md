@@ -1,5 +1,7 @@
 # Dinero Simple: month 8 posting plan (July 2027)
 
+> **PHASE 2: DO NOT POST.** Nothing in this plan is part of the lean launch (`POSTING_PLAN_LEAN.md`). It stays unposted until each piece passes native-speaker review (and attorney review where it is flagged) and Dhruv moves it into a live calendar.
+
 14 Shorts, 8 carousels and 2 long videos. July opens with the 4th of July cookout as a cooperacha. Then **tandas**: the real risks, how to make one safer, and nonprofit lending circles that also build credit. Then "business opportunities" that are really recruiting (the FTC's multi-level marketing warnings), and **starting a small business the right way**: a separate account, a free EIN (also with an ITIN), local permits and cottage-food rules. Then **first steps to a home**: the down payment myth, preapproval, ITIN mortgages, closing costs and the questions to ask any lender. July ends with back-to-school, free school meals and rental listing scams.
 
 Mon/Wed/Fri 12:30 for Shorts, 20:00 for carousels, Sunday 20:00 for the long videos, plus one Short on Thu Jul 1. Times America/New_York.

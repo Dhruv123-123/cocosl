@@ -1,5 +1,7 @@
 # Dinero Simple: scam series posting plan (Jan 4 – Feb 16, 2027)
 
+> **PHASE 2: DO NOT POST.** Nothing in this plan is part of the lean launch (`POSTING_PLAN_LEAN.md`). It stays unposted until each piece passes native-speaker review (and attorney review where it is flagged) and Dhruv moves it into a live calendar.
+
 19 pieces about scams, written in Spanish: 13 Shorts and 6 carousels. About half are adapted from Scam Decoded (the fake bank call, the code readback, task jobs, 7726, the credit freeze, red flags, the first 60 minutes, questions before sending money, scams aimed at parents). The rest are new and target scams aimed at Spanish speakers: notario fraud, immigration impostors (fake USCIS calls, sold forms, the visa lottery, fake bonds), remittance scams, money mules, virtual kidnapping and ghost tax preparers.
 
 It starts after month 1 ends and runs at three a week (Tue and Thu Shorts at 12:30, Sat carousel at 20:00, America/New_York) alongside the regular posts. It also works as a standalone series. The ghost preparer Short goes first because tax season opens in late January.

@@ -14,7 +14,7 @@ Highest-risk facts this month (check these first): the workers' compensation and
 ### 02. Si te lastimas en el trabajo: 3 pasos
 - [ ] Native Spanish read (screen, caption, narration)
 - [ ] ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions immigration status)
-- [ ] LEGAL CHECK: most states' workers' compensation laws cover undocumented workers; a few states differ or courts have limited some benefits
+- [ ] LEGAL CHECK: no longer says who workers' comp covers by immigration status; it sends the viewer to the state office and the standard DERECHOS_ESTADO line (src/safe_lines.py)
 - [ ] LEGAL CHECK: injury-reporting deadlines are set by each state (often 30 days or less)
 
 ### 03. ¿Tienes días de enfermedad pagados? Revisa esto
@@ -81,7 +81,7 @@ Highest-risk facts this month (check these first): the workers' compensation and
 ### 16. Si te lastimas en el trabajo: la lista
 - [ ] Native Spanish read (screen, caption, narration)
 - [ ] ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions immigration status)
-- [ ] LEGAL CHECK: most states' workers' comp covers undocumented workers; reporting deadlines vary by state
+- [ ] LEGAL CHECK: reporting deadlines vary by state; the piece no longer says who is covered by immigration status (standard line DERECHOS_ESTADO, src/safe_lines.py)
 
 ### 17. Dónde va la ayuda a tu familia en tu presupuesto
 - [ ] Native Spanish read (screen, caption, narration)

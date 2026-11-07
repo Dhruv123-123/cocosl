@@ -64,7 +64,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "e-formularios-gratis",
@@ -129,7 +130,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "e-loteria-de-visas",
@@ -194,7 +196,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "e-fianza-falsa",
@@ -260,7 +263,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "e-secuestro-virtual",
@@ -326,7 +330,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "e-envio-retenido",
@@ -391,7 +396,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "e-mula-de-dinero",
@@ -455,7 +461,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "e-banco-falso",
@@ -519,7 +526,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "e-codigo-whatsapp",
@@ -584,7 +592,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "e-trabajo-que-cobra",
@@ -649,7 +658,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "e-7726",
@@ -714,7 +724,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "e-congela-tu-credito",
@@ -780,7 +791,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "e-preparador-fantasma",
@@ -845,7 +857,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "ec-notario-o-abogado",
@@ -935,7 +948,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "ec-estafas-de-inmigracion",
@@ -1018,7 +1032,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "ec-5-senales",
@@ -1100,7 +1115,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "ec-primeros-60-minutos",
@@ -1190,7 +1206,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "ec-6-preguntas-envio",
@@ -1270,7 +1287,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "ec-estafas-a-tus-papas",
@@ -1360,6 +1378,7 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  }
 ]

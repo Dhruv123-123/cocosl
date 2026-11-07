@@ -1,5 +1,7 @@
 # Dinero Simple: month 4 posting plan (March 2027)
 
+> **PHASE 2: DO NOT POST.** Nothing in this plan is part of the lean launch (`POSTING_PLAN_LEAN.md`). It stays unposted until each piece passes native-speaker review (and attorney review where it is flagged) and Dhruv moves it into a live calendar.
+
 14 Shorts, 8 carousels and 2 long videos. After two months of taxes, March turns to credit and banking from zero, with or without a Social Security number: credit with an ITIN, secured cards, credit-builder loans, authorized users, rent reporting, disputes, opening an account with an ITIN or matrícula, overdraft, check-cashing and bank fees, banks versus credit unions. The month ends with the April 15 stretch (extension, estimated taxes and a checklist).
 
 No other series runs in March, so the month uses Mon/Wed/Fri at 12:30 for Shorts, 20:00 for carousels, and Sunday 20:00 for the long videos. Times America/New_York.

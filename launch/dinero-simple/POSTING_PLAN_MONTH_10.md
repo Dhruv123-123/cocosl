@@ -1,5 +1,7 @@
 # Dinero Simple: month 10 posting plan (September 2027)
 
+> **PHASE 2: DO NOT POST.** Nothing in this plan is part of the lean launch (`POSTING_PLAN_LEAN.md`). It stays unposted until each piece passes native-speaker review (and attorney review where it is flagged) and Dhruv moves it into a live calendar.
+
 14 Shorts, 8 carousels and 2 long videos. September is **"Tu familia, aquí y allá"**, the money of families living between two countries, with Hispanic Heritage Month starting Sep 15. It opens around Labor Day with **rights at work**: getting hurt on the job and paid sick days. Then **helping family without going broke**: a fixed family line, saying "este mes no puedo", splitting the parents' needs among siblings, fiestas patrias on a budget and money talks with the kids. Then **a family emergency plan** and why a US notary is not a lawyer. It ends with **retirement when you start late**: Social Security credits, an IRA with an ITIN and retiring in your home country.
 
 Mon/Wed/Fri 12:30 for Shorts, 20:00 for carousels, Sunday 20:00 for the long videos, plus one Short on Sun Sep 5 (Labor Day weekend). Times America/New_York.

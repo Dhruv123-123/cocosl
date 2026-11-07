@@ -1,5 +1,7 @@
 # Dinero Simple: month 5 posting plan (April 2027)
 
+> **PHASE 2: DO NOT POST.** Nothing in this plan is part of the lean launch (`POSTING_PLAN_LEAN.md`). It stays unposted until each piece passes native-speaker review (and attorney review where it is flagged) and Dhruv moves it into a live calendar.
+
 14 Shorts, 8 carousels and 2 long videos. The first half of April is taxes for workers before Thursday April 15: W-2 or 1099 (with numbers), expenses, cash pay, the new tips and overtime deductions (which need a valid SSN), two jobs, filing with an ITIN, and the last week. The second half, when refunds arrive, is sending money home for less: how much and how often, how to pay, how the family receives it, the 1% cash tax, your rights and the transfer-number scam.
 
 Mon/Wed/Fri at 12:30 for Shorts, 20:00 for carousels, Sunday 20:00 for the long videos (plus one Short on Wed Apr 7 at 20:00 and Sun Apr 11 at 12:30). Times America/New_York.

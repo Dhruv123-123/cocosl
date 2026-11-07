@@ -325,8 +325,8 @@ HOLD_PATHS = {"blog": "/blog/{}/", "products": "/products/{}/", "emails": "/emai
 
 
 def is_held(kind: str, slug: str) -> bool:
-    """site.json "hold": {"enabled": true, "blog": [...], "products": [...], "emails": [...]} keeps unreviewed
-    pieces off the site (and out of the email export) without deleting them. "*" holds a whole kind."""
+    """site.json "hold": {"enabled": true, "blog": [...], "products": [...], "emails": [...], "pages": [...]} keeps
+    unreviewed pieces off the site (and out of the email export) without deleting them. "*" holds a whole kind."""
     h = CFG.get("hold") or {}
     if not h.get("enabled"):
         return False
@@ -336,6 +336,9 @@ def is_held(kind: str, slug: str) -> bool:
 
 def held_path(href: str) -> bool:
     path = urlparse(href).path if href.startswith("http") and urlparse(href).netloc in CFG.get("url", "") else href
+    path = path.split("#")[0].split("?")[0]
+    if path.startswith("/") and path.strip("/") and "/" not in path.strip("/") and is_held("pages", path.strip("/")):
+        return True  # a top-level page such as /glosario/ that is on hold
     for kind, pattern in HOLD_PATHS.items():
         prefix = pattern.split("{}")[0]
         if path.startswith(prefix) and len(path) > len(prefix):
@@ -472,7 +475,9 @@ def free_tools() -> list[dict]:
     bases = CFG.get("tool_urls", {})
     out = []
     for t in CFG.get("free_tools", []):
-        if t.get("base") == "site":  # a tool that is a page of this site (e.g. /calculadora-de-envios/): always live
+        if t.get("base") == "site":  # a page of this site (e.g. /calculadora-de-envios/): live unless on hold
+            if held_path(t.get("path", "/")):
+                continue
             out.append({**t, "href": u(t.get("path", "/"))})
             continue
         base = (bases.get(t.get("base", ""), "") or "").rstrip("/")
@@ -530,7 +535,8 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
     soc = " · ".join(f'<a href="{esc(h)}" rel="me noopener">{esc(n)}</a>' for n, h in CFG["socials"].items())
     analytics = CFG.get("analytics_snippet", "") + plausible_snippet()
     # site.json "footer_links": [[label, path], ...] adds pages such as a "how we make money" page to the footer.
-    extra_foot = "".join(f' · <a href="{esc(u(h))}">{esc(t)}</a>' for t, h in CFG.get("footer_links", []))
+    extra_foot = "".join(f' · <a href="{esc(u(h))}">{esc(t)}</a>' for t, h in CFG.get("footer_links", [])
+                         if not held_path(h))
     return f"""<!doctype html>
 <html lang="{esc(T('lang'))}">
 <head>
@@ -915,6 +921,7 @@ def build() -> list[str]:
         (OUT / "emails" / e["slug"] / "email.txt").write_text(text)
     CFG["_absolute_links"] = False
     CFG.pop("_utm", None)
+    (OUT / "emails").mkdir(parents=True, exist_ok=True)  # every email can be on hold
     (OUT / "emails" / "sequence.json").write_text(json.dumps(export, indent=2, ensure_ascii=False))
     write("/emails/", layout(title="Email sequence preview", path="/emails/", noindex=True, description="Preview",
                              body=f'<section class="wrap"><h1>Welcome and nurture sequence</h1><p class="dek">Preview only (not linked, not indexed). Copy these into your email provider; see site/README.md.</p><div class="table"><table><thead><tr><th>#</th><th>Send</th><th>Subject</th><th>Job</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div></section>'))

@@ -70,7 +70,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3-itin-no-es-permiso",
@@ -139,7 +140,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3-itin-dependientes",
@@ -211,7 +213,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3-por-que-declarar",
@@ -282,7 +285,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3-estado-civil",
@@ -353,7 +357,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3-reembolso-a-tu-cuenta",
@@ -424,7 +429,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3-divide-tu-reembolso",
@@ -494,7 +500,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3-guarda-copias",
@@ -563,7 +570,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3-pin-de-proteccion",
@@ -632,7 +640,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3-ya-declararon-con-tu-numero",
@@ -704,7 +713,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3-tu-estado-tambien",
@@ -775,7 +785,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3-carta-del-irs",
@@ -846,7 +857,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3-debes-y-no-alcanza",
@@ -917,7 +929,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3-ajusta-tu-w4",
@@ -987,7 +1000,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3c-primer-itin",
@@ -1076,7 +1090,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3c-mitos-itin",
@@ -1160,7 +1175,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3c-documentos-itin",
@@ -1243,7 +1259,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3c-estado-civil",
@@ -1326,7 +1343,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3c-robo-de-identidad-fiscal",
@@ -1415,7 +1433,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3c-antes-de-firmar",
@@ -1508,7 +1527,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3c-carta-del-irs",
@@ -1597,7 +1617,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m3c-si-debes",
@@ -1688,7 +1709,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "l-itin-guia",
@@ -1772,7 +1794,7 @@
     },
     {
      "heading": "Privacidad",
-     "narration": "Mucha gente pregunta si el IRS comparte su información con inmigración. Por años la respuesta fue que casi nunca, pero desde 2025 hay un acuerdo entre el IRS y el Departamento de Seguridad Nacional que permite compartir ciertos datos en casos específicos, y hay demandas en la corte sobre ese acuerdo. Las reglas pueden cambiar. Si te preocupa tu caso, habla con un abogado de inmigración con licencia o con un representante acreditado por el Departamento de Justicia antes de declarar, y nunca con un notario.",
+     "narration": "Mucha gente pregunta qué pasa con sus datos cuando declara. Esa respuesta depende de tu caso, y no te la puede dar un video. Si te preocupa, antes de declarar pregúntale a un abogado de inmigración con licencia o a un representante acreditado por el Departamento de Justicia, nunca a un notario. Hay consultas gratis o de bajo costo: busca la lista de proveedores gratuitos en justice.gov/eoir.",
      "on_screen_text": "¿Y la información? Pregúntale a un abogado",
      "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small scale next to a law book. No text, no logos, no real people."
     },
@@ -1822,7 +1844,8 @@
    "title_variants": [],
    "hook_variants": [],
    "original_element": "Graba la pantalla de la página del formulario W-7 en irs.gov en español, mostrando dónde se descarga"
-  }
+  },
+  "phase": 2
  },
  {
   "key": "l-si-debes-o-carta",
@@ -1962,6 +1985,7 @@
    "title_variants": [],
    "hook_variants": [],
    "original_element": "Graba la pantalla de la página de planes de pago de irs.gov en español (sin iniciar sesión)"
-  }
+  },
+  "phase": 2
  }
 ]

@@ -75,6 +75,7 @@ products:
 # REVISIÓN NATIVA PENDIENTE: wording follows main's accurate-disclosure fix (scripts are drafted with AI help).
 ai_disclosure: "Imágenes y voz hechas con herramientas de IA. Guion redactado con ayuda de IA y verificado por una persona. No es asesoría financiera."
 scripts_by: ai_assisted   # or person, only if a person writes the scripts (then ai_disclosure may say so)
+review_stages: [native_review]   # every Dinero Simple post needs a fluent-speaker read before it can be approved (`factory review-gate`); ITIN/immigration items add legal_review in their pack
 realistic_synthetic_media: false
 require_human_review: true
 # Hand-written bios (a fluent speaker should still check them). Limits: IG/Threads 150, TikTok 80, X 160, YouTube ~1000.

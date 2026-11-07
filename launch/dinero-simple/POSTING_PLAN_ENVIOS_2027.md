@@ -1,5 +1,7 @@
 # Dinero Simple: "Mandar dinero a casa" (Tuesdays, Mar 2 – Apr 6, 2027)
 
+> **PHASE 2: DO NOT POST.** Nothing in this plan is part of the lean launch (`POSTING_PLAN_LEAN.md`). It stays unposted until each piece passes native-speaker review (and attorney review where it is flagged) and Dhruv moves it into a live calendar.
+
 For Spanish-first adults and recent arrivals: scouting's creator landscape (`research/scouting/dinero-simple-creator-landscape.md` on PR #2) found nobody in Spanish posts steadily on this, and that our packs leaned heavily on investing. The real cost of sending money home: the fee plus the exchange-rate markup, the 1% federal tax on cash-funded transfers, how to compare fairly and your rights. Every post sends people to the site's free calculator (`/calculadora-de-envios/`).
 
 6 posts: 4 Shorts and 2 carousel(s), one a week on a day no other Dinero Simple plan uses. 0 mention the ITIN and carry ATTORNEY REVIEW.

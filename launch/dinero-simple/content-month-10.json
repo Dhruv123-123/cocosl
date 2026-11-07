@@ -64,7 +64,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m10-lesion-en-el-trabajo",
@@ -101,8 +102,8 @@
     },
     {
      "heading": "Tu derecho",
-     "narration": "En la mayoría de los estados, la compensación laboral cubre a los trabajadores sin importar su situación migratoria.",
-     "on_screen_text": "La compensación laboral cubre a casi todos",
+     "narration": "La compensación laboral es un seguro del trabajo, y lo que cubre lo decide cada estado.",
+     "on_screen_text": "Pregunta qué te cubre en tu estado",
      "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a generic state office. No text, no logos, no real people."
     },
     {
@@ -113,7 +114,7 @@
     }
    ],
    "cta": "Síguenos para un paso de dinero cada semana.",
-   "caption": "Si te lastimas en el trabajo:\n1. Avisa a tu jefe por escrito, lo antes posible (cada estado pone un plazo).\n2. Ve al médico y di que pasó en el trabajo.\n3. Guarda fotos, nombres de testigos, fechas y recibos.\nEn la mayoría de los estados, la compensación laboral cubre a los trabajadores sin importar su situación migratoria. Pregunta gratis en la oficina de tu estado o a ayuda legal.\n\nLas reglas cambian por estado. Información general, no es asesoría legal.\nPara cualquier pregunta sobre tu situación migratoria, habla con un abogado de inmigración con licencia o un representante acreditado, nunca con un notario.\n\nSíguenos para un paso de dinero cada semana.",
+   "caption": "Si te lastimas en el trabajo:\n1. Avisa a tu jefe por escrito, lo antes posible (cada estado pone un plazo).\n2. Ve al médico y di que pasó en el trabajo.\n3. Guarda fotos, nombres de testigos, fechas y recibos.\n\nLas reglas cambian por estado. Información general, no es asesoría legal.\nTus derechos aquí dependen de tu estado: pregunta gratis en la oficina de tu estado o en una organización de ayuda legal, y si tu duda es migratoria, consulta a un abogado de inmigración con licencia o a un representante acreditado (lista gratis en justice.gov/eoir).\n\nSíguenos para un paso de dinero cada semana.",
    "hashtags": [
     "diadeltrabajo",
     "derechoslaborales",
@@ -129,12 +130,14 @@
    ],
    "claims_to_verify": [
     "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions immigration status)",
-    "LEGAL CHECK: most states' workers' compensation laws cover undocumented workers; a few states differ or courts have limited some benefits",
+    "LEGAL CHECK: no longer says who workers' comp covers by immigration status; it sends the viewer to the state office and the standard DERECHOS_ESTADO line (src/safe_lines.py)",
     "LEGAL CHECK: injury-reporting deadlines are set by each state (often 30 days or less)"
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "m10-dias-de-enfermedad",
@@ -201,7 +204,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m10-linea-familia",
@@ -268,7 +272,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m10-decir-que-no",
@@ -335,7 +340,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m10-hermanos-cooperan",
@@ -402,7 +408,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m10-fiestas-patrias",
@@ -467,7 +474,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m10-hablar-con-hijos",
@@ -534,7 +542,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m10-plan-familiar",
@@ -604,7 +613,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "m10-poder-notarial",
@@ -673,7 +684,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "m10-creditos-seguro-social",
@@ -740,7 +753,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m10-retiro-con-itin",
@@ -809,7 +823,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "m10-retiro-en-tu-pais",
@@ -877,7 +893,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m10-cuenta-para-hijos",
@@ -944,7 +961,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m10c-cuatro-conversaciones",
@@ -1015,7 +1033,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m10c-lesion-en-el-trabajo",
@@ -1064,13 +1083,13 @@
     },
     {
      "heading": "Cierre",
-     "narration": "En la mayoría, cubre sin importar tu situación migratoria.",
+     "narration": "Pregunta gratis en la oficina de compensación laboral de tu estado qué te cubre.",
      "on_screen_text": "Pregunta gratis en la oficina de tu estado",
      "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a generic state office. No text, no logos, no real people."
     }
    ],
    "cta": "Síguenos para un paso de dinero cada semana.",
-   "caption": "Si te lastimas en el trabajo:\n1. Avisa por escrito, lo antes posible.\n2. Al médico, y di que fue en el trabajo.\n3. Fotos, testigos y fechas.\n4. Guarda cada recibo médico.\n5. No firmes lo que no entiendes.\nPregunta gratis en la oficina de compensación laboral de tu estado. En la mayoría de los estados cubre sin importar tu situación migratoria.\n\nLas reglas cambian por estado. Información general, no es asesoría legal.\nPara cualquier pregunta sobre tu situación migratoria, habla con un abogado de inmigración con licencia o un representante acreditado, nunca con un notario.\n\nSíguenos para un paso de dinero cada semana.",
+   "caption": "Si te lastimas en el trabajo:\n1. Avisa por escrito, lo antes posible.\n2. Al médico, y di que fue en el trabajo.\n3. Fotos, testigos y fechas.\n4. Guarda cada recibo médico.\n5. No firmes lo que no entiendes.\nPregunta gratis en la oficina de compensación laboral de tu estado.\n\nLas reglas cambian por estado. Información general, no es asesoría legal.\nTus derechos aquí dependen de tu estado: pregunta gratis en la oficina de tu estado o en una organización de ayuda legal, y si tu duda es migratoria, consulta a un abogado de inmigración con licencia o a un representante acreditado (lista gratis en justice.gov/eoir).\n\nSíguenos para un paso de dinero cada semana.",
    "hashtags": [
     "diadeltrabajo",
     "derechoslaborales",
@@ -1085,11 +1104,13 @@
    ],
    "claims_to_verify": [
     "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions immigration status)",
-    "LEGAL CHECK: most states' workers' comp covers undocumented workers; reporting deadlines vary by state"
+    "LEGAL CHECK: reporting deadlines vary by state; the piece no longer says who is covered by immigration status (standard line DERECHOS_ESTADO, src/safe_lines.py)"
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "m10c-presupuesto-familia",
@@ -1160,7 +1181,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m10c-plan-hermanos",
@@ -1231,7 +1253,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m10c-fiestas-patrias",
@@ -1302,7 +1325,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m10c-plan-familiar",
@@ -1376,7 +1400,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "m10c-retiro-tarde",
@@ -1452,7 +1478,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "m10c-retiro-fuera",
@@ -1525,7 +1553,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "l-familia-aqui-y-alla",
@@ -1658,7 +1687,9 @@
    "title_variants": [],
    "hook_variants": [],
    "original_element": "Graba la pantalla creando dos apartados de ahorro, 'Familia' y 'Emergencia familia', con transferencia mensual en una app de banco de demostración, y la nota compartida de los hermanos con números de ejemplo"
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "l-retiro-tarde",
@@ -1785,6 +1816,8 @@
    "title_variants": [],
    "hook_variants": [],
    "original_element": "Graba la pantalla de la calculadora de interés compuesto de Investor.gov con $200 al mes, 20 años y 6%, y la página de ssa.gov en español donde se abre la cuenta de mi Seguro Social (sin iniciar sesión)"
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  }
 ]

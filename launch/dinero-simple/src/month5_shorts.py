@@ -6,6 +6,7 @@ from month1_shorts_a import CTA, PRODUCT as PRESUPUESTO
 from month2_shorts import IMPUESTOS, NOT_TAX_ADVICE
 from month3_shorts import LEGAL
 from month4_shorts import APPS
+from safe_lines import DATOS
 
 ITEMS = [
 dict(
@@ -117,17 +118,17 @@ dict(
     thumbnail_text="¿Miedo de declarar?",
     segments=[
         ("Gancho", "¿Miedo de declarar? No decidas solo", "Mucha gente con ITIN tiene miedo de declarar este año. Antes de decidir, escucha esto.", "M sitting at a table with a worried look"),
-        ("Lo que pasó", "Hay un acuerdo de datos, y hay demandas", "En 2025 el IRS firmó un acuerdo para compartir cierta información con inmigración, y hay demandas en las cortes. Las reglas pueden cambiar.", "a document with a question mark and a small gavel"),
+        ("Tu caso", "Depende de tu caso, no de un video", "Lo que te conviene depende de tu caso, y eso no lo sabe un video ni un vecino.", "a document with a question mark and a small gavel"),
         ("El otro lado", "No declarar también tiene costos", "Pero no declarar también tiene costos: multas, intereses, y puede afectarte más adelante.", "a scale with weights on both sides"),
         ("Qué hacer", "Habla con un abogado con licencia", "Por eso, no lo decidas por un video ni por un vecino. Habla con un abogado de inmigración con licencia o un representante acreditado.", "a small office door with a scale icon"),
-        ("Dónde", "Hay consultas gratis o de bajo costo", "Muchas organizaciones sin fines de lucro dan consultas gratis o de bajo costo.", "a community center with an open door"),
+        ("Dónde", "Lista gratis: justice.gov/eoir", "Hay consultas gratis o de bajo costo. Busca la lista de proveedores gratuitos en justice.gov/eoir.", "a community center with an open door"),
         ("Cierre", "Nunca un notario", "Y nunca un notario: en Estados Unidos no es abogado.", "M shaking head at a stamp"),
     ],
-    caption="Si tienes ITIN y miedo de declarar este año, no lo decidas solo. En 2025 el IRS firmó un acuerdo para compartir cierta información con las autoridades de inmigración, y hay casos en las cortes; las reglas pueden cambiar. No declarar también tiene costos (multas, intereses y efectos más adelante). " + LEGAL + " Muchas organizaciones sin fines de lucro dan consultas gratis o de bajo costo. Esto es información general, no asesoría legal ni fiscal.\n\n" + CTA,
+    caption="Si tienes ITIN y miedo de declarar este año, no lo decidas solo. " + DATOS + " No declarar también tiene costos (multas, intereses y efectos más adelante). Esto es información general, no asesoría legal ni fiscal.\n\n" + CTA,
     hashtags=["itin", "impuestos", "inmigrantes", "abogado", "dinerosimple"],
     description="Si tienes miedo de declarar con ITIN, habla primero con un abogado de inmigración con licencia.",
     sources=["https://www.irs.gov/es/individuals/individual-taxpayer-identification-number"],
-    claims=["HIGH RISK, ATTORNEY SIGN-OFF REQUIRED: status of the 2025 IRS-ICE data-sharing agreement and its litigation the week this posts; cut the piece if a licensed immigration attorney has doubts",
+    claims=["ATTORNEY REVIEW: the piece no longer explains the IRS data-sharing agreement; it only sends the viewer to a licensed attorney or accredited representative (standard line DATOS in src/safe_lines.py). Check the justice.gov/eoir link",
             "Failure-to-file penalty and interest apply when a return is required and not filed"],
 ),
 dict(

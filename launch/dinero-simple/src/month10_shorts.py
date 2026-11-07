@@ -5,6 +5,7 @@
 from month1_shorts_a import CTA, PRODUCT as PRESUPUESTO
 from month2_shorts import DEUDA, IMPUESTOS as PRESUPUESTO_P
 from month4_shorts import APPS, NOT_ADVICE
+from safe_lines import DERECHOS_ESTADO
 
 FAMILIA = "Serie 'Tu familia, aquí y allá': el dinero de las familias que viven entre dos países."
 LABORAL = "Las reglas cambian por estado. Información general, no es asesoría legal."
@@ -46,14 +47,14 @@ dict(
         ("Paso 1", "1. Avisa a tu jefe por escrito, ya", "Uno: avísale a tu jefe por escrito, ese mismo día si puedes. Cada estado pone un plazo.", "a text message to a supervisor"),
         ("Paso 2", "2. Ve al médico y di que fue en el trabajo", "Dos: ve al médico y di que pasó en el trabajo, para que quede en tu expediente.", "a clinic check-in"),
         ("Paso 3", "3. Guarda todo: fotos, nombres, fechas", "Tres: guarda todo: fotos, nombres de testigos, fechas y recibos.", "a phone album named 'Trabajo'"),
-        ("Tu derecho", "La compensación laboral cubre a casi todos", "En la mayoría de los estados, la compensación laboral cubre a los trabajadores sin importar su situación migratoria.", "a generic state office"),
+        ("Tu derecho", "Pregunta qué te cubre en tu estado", "La compensación laboral es un seguro del trabajo, y lo que cubre lo decide cada estado.", "a generic state office"),
         ("Cierre", "Pregunta gratis en tu estado", "Si te dicen que no aplica, pregunta gratis en la oficina de compensación laboral de tu estado o a ayuda legal.", "a phone call"),
     ],
-    caption="Si te lastimas en el trabajo:\n1. Avisa a tu jefe por escrito, lo antes posible (cada estado pone un plazo).\n2. Ve al médico y di que pasó en el trabajo.\n3. Guarda fotos, nombres de testigos, fechas y recibos.\nEn la mayoría de los estados, la compensación laboral cubre a los trabajadores sin importar su situación migratoria. Pregunta gratis en la oficina de tu estado o a ayuda legal.\n\n" + LABORAL + "\n" + ABOGADO + "\n\n" + CTA,
+    caption="Si te lastimas en el trabajo:\n1. Avisa a tu jefe por escrito, lo antes posible (cada estado pone un plazo).\n2. Ve al médico y di que pasó en el trabajo.\n3. Guarda fotos, nombres de testigos, fechas y recibos.\n\n" + LABORAL + "\n" + DERECHOS_ESTADO + "\n\n" + CTA,
     hashtags=TAGS_TRABAJO,
     description="Qué hacer si te lastimas en el trabajo: los 3 primeros pasos.",
     sources=["https://www.dol.gov/agencies/owcp/wc", "https://www.lsc.gov/"],
-    claims=["LEGAL CHECK: most states' workers' compensation laws cover undocumented workers; a few states differ or courts have limited some benefits",
+    claims=["LEGAL CHECK: no longer says who workers' comp covers by immigration status; it sends the viewer to the state office and the standard DERECHOS_ESTADO line (src/safe_lines.py)",
             "LEGAL CHECK: injury-reporting deadlines are set by each state (often 30 days or less)"],
 ),
 dict(

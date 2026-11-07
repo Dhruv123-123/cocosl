@@ -39,7 +39,7 @@ Highest-risk facts this month (check these first): the 2025 IRS-ICE data-sharing
 ### 06. ¿Miedo de declarar con ITIN? No lo decidas solo
 - [ ] Native Spanish read (screen, caption, narration)
 - [ ] ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)
-- [ ] HIGH RISK, ATTORNEY SIGN-OFF REQUIRED: status of the 2025 IRS-ICE data-sharing agreement and its litigation the week this posts; cut the piece if a licensed immigration attorney has doubts
+- [ ] ATTORNEY REVIEW: the piece no longer explains the IRS data-sharing agreement; it only sends the viewer to a licensed attorney or accredited representative (standard line DATOS in src/safe_lines.py). Check the justice.gov/eoir link
 - [ ] Failure-to-file penalty and interest apply when a return is required and not filed
 
 ### 07. Propinas: lo nuevo en tus impuestos

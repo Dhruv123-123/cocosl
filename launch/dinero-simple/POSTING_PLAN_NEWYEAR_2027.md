@@ -1,5 +1,7 @@
 # Dinero Simple: New Year pack posting plan (January 2027)
 
+> **PHASE 2: DO NOT POST.** Nothing in this plan is part of the lean launch (`POSTING_PLAN_LEAN.md`). It stays unposted until each piece passes native-speaker review (and attorney review where it is flagged) and Dhruv moves it into a live calendar.
+
 8 extra posts for January: 2 TikTok mids (65–90 s), 2 single images, 2 carousels and 2 Shorts. January is already full: month 2 (`POSTING_PLAN_MONTH_2.md`) has 24 pieces on the yearly plan, debts, the first pay stub, the W-2, free tax help and refunds, and the scam series runs Tue/Thu 12:30 and Sat 20:00. So this pack is small. It only uses empty 20:00 slots (plus Sun Jan 24 at 12:30), never more than two posts a day on one platform, and it takes new angles:
 
 - **Propósitos:** why money resolutions die by February, and a one-line resolution template.

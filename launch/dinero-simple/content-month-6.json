@@ -59,7 +59,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6-regalo-que-sirve",
@@ -118,7 +119,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6-graduacion-cuenta",
@@ -179,7 +181,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6-factura-medica",
@@ -242,7 +245,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6-deuda-medica-credito",
@@ -304,7 +308,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6-carro-precio-total",
@@ -365,7 +370,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6-vin-gratis",
@@ -428,7 +434,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6-yo-yo",
@@ -490,7 +497,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6-primer-trabajo-teen",
@@ -551,7 +559,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6-roth-para-jovenes",
@@ -613,7 +622,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6-boletos-falsos",
@@ -674,7 +684,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6-campamento-credito",
@@ -736,7 +747,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6-calor-luz",
@@ -798,7 +810,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6-deposito-renta",
@@ -859,7 +872,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6c-10-de-mayo",
@@ -930,7 +944,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6c-factura-medica",
@@ -1011,7 +1026,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6c-antes-de-comprar-carro",
@@ -1098,7 +1114,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6c-letrero-ventana",
@@ -1173,7 +1190,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6c-primer-trabajo",
@@ -1247,7 +1265,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6c-viaje-a-casa",
@@ -1327,7 +1346,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6c-verano-ninos",
@@ -1403,7 +1423,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m6c-deposito-de-renta",
@@ -1483,7 +1504,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "l-carro-usado",
@@ -1622,7 +1644,9 @@
    "title_variants": [],
    "hook_variants": [],
    "original_element": "Graba la pantalla del buscador de llamados a reparación de la NHTSA con un VIN de ejemplo (no el tuyo), y la Guía del comprador en español de la FTC"
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "l-viaje-a-casa",
@@ -1763,6 +1787,7 @@
    "title_variants": [],
    "hook_variants": [],
    "original_element": "Graba la pantalla creando un apartado de ahorro llamado 'Viaje' con transferencia semanal en una app de banco de demostración"
-  }
+  },
+  "phase": 2
  }
 ]

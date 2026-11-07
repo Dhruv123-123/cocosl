@@ -1,5 +1,7 @@
 # Dinero Simple: month 9 posting plan (August 2027)
 
+> **PHASE 2: DO NOT POST.** Nothing in this plan is part of the lean launch (`POSTING_PLAN_LEAN.md`). It stays unposted until each piece passes native-speaker review (and attorney review where it is flagged) and Dhruv moves it into a live calendar.
+
 14 Shorts, 8 carousels and 2 long videos. August is **"Tu primer año"**, the money basics nobody explains when you have just arrived: documents safe, an insured account (with a passport, consular ID or ITIN where accepted), how debit and credit cards protect you, payment apps as cash, the real price (sales tax and tips), utility deposits without a credit history, a first-year folder, a $500 emergency fund and community health centers. The second half is **renting without getting ripped off**: the lease, the deposit, repairs in writing, tenant rights and eviction basics.
 
 Mon/Wed/Fri 12:30 for Shorts, 20:00 for carousels, Sunday 20:00 for the long videos, plus the opening Short on Sun Aug 1. Times America/New_York.

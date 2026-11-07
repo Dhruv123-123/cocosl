@@ -66,7 +66,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m5-pago-en-efectivo",
@@ -128,7 +129,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m5-gastos-de-trabajo",
@@ -190,7 +192,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m5-ultima-semana",
@@ -255,7 +258,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m5-itin-15-abril",
@@ -319,7 +323,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "m5-itin-y-miedo",
@@ -337,9 +343,9 @@
      "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sitting at a table with a worried look. No text, no logos, no real people."
     },
     {
-     "heading": "Lo que pasó",
-     "narration": "En 2025 el IRS firmó un acuerdo para compartir cierta información con inmigración, y hay demandas en las cortes. Las reglas pueden cambiar.",
-     "on_screen_text": "Hay un acuerdo de datos, y hay demandas",
+     "heading": "Tu caso",
+     "narration": "Lo que te conviene depende de tu caso, y eso no lo sabe un video ni un vecino.",
+     "on_screen_text": "Depende de tu caso, no de un video",
      "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a document with a question mark and a small gavel. No text, no logos, no real people."
     },
     {
@@ -356,8 +362,8 @@
     },
     {
      "heading": "Dónde",
-     "narration": "Muchas organizaciones sin fines de lucro dan consultas gratis o de bajo costo.",
-     "on_screen_text": "Hay consultas gratis o de bajo costo",
+     "narration": "Hay consultas gratis o de bajo costo. Busca la lista de proveedores gratuitos en justice.gov/eoir.",
+     "on_screen_text": "Lista gratis: justice.gov/eoir",
      "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a community center with an open door. No text, no logos, no real people."
     },
     {
@@ -368,7 +374,7 @@
     }
    ],
    "cta": "Síguenos para un paso de dinero cada semana.",
-   "caption": "Si tienes ITIN y miedo de declarar este año, no lo decidas solo. En 2025 el IRS firmó un acuerdo para compartir cierta información con las autoridades de inmigración, y hay casos en las cortes; las reglas pueden cambiar. No declarar también tiene costos (multas, intereses y efectos más adelante). Si te preocupa tu caso migratorio, habla con un abogado de inmigración con licencia o con un representante acreditado por el Departamento de Justicia, no con un notario. Muchas organizaciones sin fines de lucro dan consultas gratis o de bajo costo. Esto es información general, no asesoría legal ni fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "caption": "Si tienes ITIN y miedo de declarar este año, no lo decidas solo. Si te preocupa qué pasa con tus datos al declarar o al abrir una cuenta, esa decisión depende de tu caso: pregúntale primero a un abogado de inmigración con licencia o a un representante acreditado. Hay consultas gratis en justice.gov/eoir (lista de proveedores gratuitos). No declarar también tiene costos (multas, intereses y efectos más adelante). Esto es información general, no asesoría legal ni fiscal.\n\nSíguenos para un paso de dinero cada semana.",
    "hashtags": [
     "itin",
     "impuestos",
@@ -383,12 +389,14 @@
    ],
    "claims_to_verify": [
     "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
-    "HIGH RISK, ATTORNEY SIGN-OFF REQUIRED: status of the 2025 IRS-ICE data-sharing agreement and its litigation the week this posts; cut the piece if a licensed immigration attorney has doubts",
+    "ATTORNEY REVIEW: the piece no longer explains the IRS data-sharing agreement; it only sends the viewer to a licensed attorney or accredited representative (standard line DATOS in src/safe_lines.py). Check the justice.gov/eoir link",
     "Failure-to-file penalty and interest apply when a return is required and not filed"
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "m5-propinas",
@@ -452,7 +460,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "m5-horas-extra",
@@ -515,7 +525,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m5-dos-trabajos",
@@ -576,7 +587,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m5-reembolso-y-remesa",
@@ -637,7 +649,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m5-envio-con-tarjeta",
@@ -699,7 +712,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m5-como-recibe",
@@ -760,7 +774,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m5-numero-de-envio",
@@ -822,7 +837,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m5-numero-fijo",
@@ -883,7 +899,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m5c-w2-o-1099",
@@ -957,7 +974,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m5c-trabajo-por-tu-cuenta",
@@ -1039,7 +1057,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m5c-propinas-y-extras",
@@ -1115,7 +1134,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "m5c-semana-del-15",
@@ -1191,7 +1212,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "m5c-itin-temporada",
@@ -1273,7 +1296,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "m5c-envio-barato",
@@ -1354,7 +1379,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m5c-numero-de-envio",
@@ -1435,7 +1461,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m5c-remesa-en-presupuesto",
@@ -1508,7 +1535,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "l-impuestos-trabajador",
@@ -1642,7 +1670,9 @@
    "title_variants": [],
    "hook_variants": [],
    "original_element": "Graba la pantalla del calculador de retenciones del IRS (irs.gov) en español, sin poner datos reales, mostrando dónde está el paso de dos trabajos"
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "l-envios-del-ano",
@@ -1779,6 +1809,7 @@
    "title_variants": [],
    "hook_variants": [],
    "original_element": "Graba la pantalla cotizando el mismo envío de $300 con dos métodos de entrega (depósito y efectivo) en una app, sin iniciar sesión"
-  }
+  },
+  "phase": 2
  }
 ]

@@ -65,7 +65,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "regla-72-horas",
@@ -131,7 +132,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "compra-ahora-paga-despues",
@@ -200,7 +202,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "bono-con-menos",
@@ -271,7 +274,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "plan-aguinaldo",
@@ -339,7 +343,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "remesas-tipo-de-cambio",
@@ -409,7 +414,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "remesas-derechos",
@@ -481,7 +487,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "remesas-impuesto-1",
@@ -552,7 +559,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "remesas-juntar-envios",
@@ -620,7 +628,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "tanda-segura",
@@ -688,7 +697,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "regalos-por-persona",
@@ -754,7 +764,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "posada-anfitrion",
@@ -820,7 +831,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "viaje-de-diciembre",
@@ -886,7 +898,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "estafa-paquete",
@@ -956,7 +969,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "tarjeta-de-tienda",
@@ -1025,7 +1039,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "cuesta-de-enero",
@@ -1091,7 +1106,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "proposito-automatico",
@@ -1157,7 +1173,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "401k-enero",
@@ -1226,7 +1243,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "carpeta-de-impuestos",
@@ -1297,7 +1315,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "fsa-diciembre",
@@ -1368,7 +1387,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "c-plan-de-regalos",
@@ -1446,7 +1466,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "c-antes-de-mandar-dinero",
@@ -1535,7 +1556,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "c-aguinaldo",
@@ -1616,7 +1638,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "c-black-friday",
@@ -1696,7 +1719,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "c-estafas-de-temporada",
@@ -1778,7 +1802,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "c-cuesta-de-enero",
@@ -1856,7 +1881,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "c-12-uvas",
@@ -1937,7 +1963,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "c-revision-del-ano",
@@ -2015,7 +2042,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "c-carpeta-impuestos",
@@ -2099,7 +2127,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "c-tanda-o-ahorro",
@@ -2179,7 +2208,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "l-mandar-dinero",
@@ -2322,7 +2352,8 @@
    "title_variants": [],
    "hook_variants": [],
    "original_element": "Graba la pantalla comparando cuánto recibe tu familia por $300 en dos apps de envío, el mismo día (sin iniciar sesión, solo el cotizador)"
-  }
+  },
+  "phase": 2
  },
  {
   "key": "l-diciembre-sin-deudas",
@@ -2462,6 +2493,7 @@
    "title_variants": [],
    "hook_variants": [],
    "original_element": "Graba la pantalla abriendo un apartado de ahorro llamado 'Diciembre' en una app de banco de demostración, o la hoja del presupuesto con el total de diciembre"
-  }
+  },
+  "phase": 2
  }
 ]

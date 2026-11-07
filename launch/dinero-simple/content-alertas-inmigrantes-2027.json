@@ -67,7 +67,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "a-formulario-gratis",
@@ -137,7 +139,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "a-trabajo-con-visa",
@@ -207,7 +211,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "a-abogado-falso",
@@ -277,7 +283,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "a-pagina-falsa",
@@ -347,7 +355,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "a-prestamo-sin-ss",
@@ -416,7 +426,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "ac-senales-inmigracion",
@@ -497,6 +508,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  }
 ]

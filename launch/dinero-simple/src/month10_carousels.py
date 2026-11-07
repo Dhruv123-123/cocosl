@@ -2,6 +2,7 @@
 from month1_shorts_a import CTA, PRODUCT as PRESUPUESTO
 from month2_shorts import IMPUESTOS as PRESUPUESTO_P
 from month4_shorts import APPS, NOT_ADVICE
+from safe_lines import DERECHOS_ESTADO
 from month10_shorts import ABOGADO, FAMILIA, LABORAL, TAGS_FAMILIA, TAGS_RETIRO, TAGS_TRABAJO
 
 ITEMS = [
@@ -39,13 +40,13 @@ dict(
         ("3", "3. Fotos, testigos y fechas", "En tu celular, el mismo día.", "a phone album"),
         ("4", "4. Guarda cada recibo médico", "Y cada día que no pudiste trabajar.", "receipts in a folder"),
         ("5", "5. No firmes lo que no entiendes", "Pide una copia y pregunta primero.", "a document with a question mark"),
-        ("Cierre", "Pregunta gratis en la oficina de tu estado", "En la mayoría, cubre sin importar tu situación migratoria.", "a generic state office"),
+        ("Cierre", "Pregunta gratis en la oficina de tu estado", "Pregunta gratis en la oficina de compensación laboral de tu estado qué te cubre.", "a generic state office"),
     ],
-    caption="Si te lastimas en el trabajo:\n1. Avisa por escrito, lo antes posible.\n2. Al médico, y di que fue en el trabajo.\n3. Fotos, testigos y fechas.\n4. Guarda cada recibo médico.\n5. No firmes lo que no entiendes.\nPregunta gratis en la oficina de compensación laboral de tu estado. En la mayoría de los estados cubre sin importar tu situación migratoria.\n\n" + LABORAL + "\n" + ABOGADO + "\n\n" + CTA,
+    caption="Si te lastimas en el trabajo:\n1. Avisa por escrito, lo antes posible.\n2. Al médico, y di que fue en el trabajo.\n3. Fotos, testigos y fechas.\n4. Guarda cada recibo médico.\n5. No firmes lo que no entiendes.\nPregunta gratis en la oficina de compensación laboral de tu estado.\n\n" + LABORAL + "\n" + DERECHOS_ESTADO + "\n\n" + CTA,
     hashtags=TAGS_TRABAJO,
     description="La lista de qué hacer si te lastimas en el trabajo.",
     sources=["https://www.dol.gov/agencies/owcp/wc"],
-    claims=["LEGAL CHECK: most states' workers' comp covers undocumented workers; reporting deadlines vary by state"],
+    claims=["LEGAL CHECK: reporting deadlines vary by state; the piece no longer says who is covered by immigration status (standard line DERECHOS_ESTADO, src/safe_lines.py)"],
 ),
 dict(
     key="m10c-presupuesto-familia", format="carousel", pillar=PRESUPUESTO_P,

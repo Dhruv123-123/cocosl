@@ -1,5 +1,7 @@
 # Dinero Simple: "Alerta de estafa" for immigrants (Saturdays, Mar 6 – Apr 17, 2027)
 
+> **PHASE 2: DO NOT POST.** Nothing in this plan is part of the lean launch (`POSTING_PLAN_LEAN.md`). It stays unposted until each piece passes native-speaker review (and attorney review where it is flagged) and Dhruv moves it into a live calendar.
+
 For Spanish-first adults and recent arrivals: scouting's creator landscape (`research/scouting/dinero-simple-creator-landscape.md` on PR #2) found nobody in Spanish posts steadily on this, and that our packs leaned heavily on investing. Scams aimed at immigrants in the Scam Decoded style (PR #9): a calm hook with a number, the fake message as a made-up screenshot with numbered callouts on the red flags, what to do, and where to report. They add to the January scam series (`POSTING_PLAN_ESTAFAS.md`) without repeating it.
 
 7 posts: 6 Shorts and 1 carousel(s), one a week on a day no other Dinero Simple plan uses. 0 mention the ITIN and carry ATTORNEY REVIEW.

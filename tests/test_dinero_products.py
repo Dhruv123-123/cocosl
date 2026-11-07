@@ -275,6 +275,9 @@ def test_remittance_calculator_page_builds_and_is_linked(tmp_path):
     import subprocess
     site = tmp_path / "site"
     shutil.copytree(ROOT / "sites" / "dinero-simple", site, ignore=shutil.ignore_patterns("public"))
+    cfg = json.loads((site / "site.json").read_text())
+    cfg["hold"]["enabled"] = False  # the calculator is phase 2: build the full site
+    (site / "site.json").write_text(json.dumps(cfg, ensure_ascii=False))
     subprocess.run([sys.executable, str(ROOT / "sites" / "dinero-simple" / "build.py")], check=True, capture_output=True,
                    env={**__import__("os").environ, "SITE_ROOT": str(site)})
     page = (site / "public" / "calculadora-de-envios" / "index.html").read_text()
@@ -569,10 +572,15 @@ def test_review_packets_cover_every_post_and_every_attorney_flag():
     b = _load(DS / "review" / "build_packets.py", "build_packets")
     r = b.build()
     items = [it for _, files in b.CONTENT_PARTS for f in files for it in json.loads((DS / f).read_text())]
-    assert sum(1 for e in r["P"].entries if e["source"].endswith(".json")) == len(items)
+    assert sum(1 for e in r["P"].entries if e["source"].startswith("launch/dinero-simple/content")) == len(items)
     flagged = sum(1 for it in items if it["script"]["claims_to_verify"][0].startswith("ATTORNEY REVIEW"))
-    assert sum(1 for e in r["A"] if e["claims"] and e["claims"][0].startswith("ATTORNEY REVIEW")) == flagged
-    assert all(b.IMMIGRATION_RE.search(" ".join(e["chunks"])) or e["claims"][0].startswith("ATTORNEY") for e in r["A"])
+    # every flagged piece is either read by the attorney or listed as covered by the standard lines (approved once)
+    def is_flagged(e):
+        return bool(e["claims"]) and e["claims"][0].startswith("ATTORNEY REVIEW")
+    assert sum(1 for e in r["A"] if is_flagged(e)) + len(r["covered"]) == flagged
+    std = list(b.standard_lines().values())
+    assert all(b.IMMIGRATION_RE.search(b.legal_text(c, std)) for e in r["A"] for c in e["chunks"])
+    assert set(std) <= set(r["standard"])
     for k in ("native", "attorney"):
         lo, hi = r[k]["hours"]
         assert 0 < lo < hi
@@ -590,3 +598,70 @@ def test_etsy_safe_printables_have_no_instructions_and_fit_etsy():
         text = " ".join(p["pages"]())
         assert not guide.search(re.sub(r"<[^>]+>", " ", text)), p["slug"]
     assert b.PRICE == "[PRICE]"
+
+
+LEAN = DS / "lean" / "lean_launch.py"
+
+
+def test_lean_launch_review_fits_the_budget_and_holds_the_whole_lean_set():
+    """The lean packets cover exactly the lean set and stay inside about 10-15 native hours and 3 attorney hours."""
+    pytest.importorskip("yaml")
+    b = _load(DS / "review" / "build_packets.py", "build_packets")
+    L = _load(LEAN, "lean_launch")
+    r = b.build_lean()
+    assert r["native"]["hours"][1] <= 15 and r["native"]["hours"][0] >= 8
+    assert r["attorney"]["hours"][1] <= 3
+    assert not r["P"].missing
+    titles = " ".join(e["title"] for e in r["P"].entries)
+    for it in L.lean_items():
+        assert it["script"]["title"] in titles
+    for page in L.SITE_PAGES:
+        assert f"página · {page}" in titles
+    assert "Tu dinero en orden en 7 días (PDF)" in titles
+    assert sum(1 for e in r["P"].entries if e["title"].startswith("Correos de bienvenida · día")) == 5
+    assert all(f"producto · {p}" in titles for p in L.PRODUCTS) and all(f"Imprimible · {p}" in titles for p in L.PRINTABLES)
+    assert len(L.lean_items()) == len(L.CALENDAR) and {w for w, *_ in L.CALENDAR} == {1, 2, 3, 4}
+    assert all(it["format"] in ("short", "carousel") for it in L.lean_items())  # no long videos in the lean launch
+
+
+def test_everything_outside_the_lean_launch_is_phase_2_and_gated():
+    """Nothing unreviewed can publish: every other posting plan says DO NOT POST, every pack item carries its phase,
+    flagged items carry the legal_review gate, the brand requires native_review, and the site hold matches."""
+    yaml = pytest.importorskip("yaml")
+    L = _load(LEAN, "lean_launch")
+    lean = L.lean_titles()
+    for f in DS.glob("POSTING_PLAN*.md"):
+        text = f.read_text()
+        if f.name == "POSTING_PLAN_LEAN.md":
+            rows = [r.split(" | ")[-1].rstrip(" |") for r in text.splitlines() if r.startswith("| Semana")]
+            assert set(rows) == lean and L.PHASE2_MARK not in text
+        else:
+            assert L.PHASE2_MARK in text.split("\n\n", 2)[1], f"{f.name}: run lean/lean_launch.py after the month builders"
+    phase1 = set()
+    for f in DS.glob("content*.json"):
+        for it in json.loads(f.read_text()):
+            assert it.get("phase") in (1, 2), f"{f.name}: run lean/lean_launch.py"
+            if it["phase"] == 1:
+                phase1.add(it["script"]["title"])
+            assert (it.get("review") == "legal_review") == L.is_attorney_flagged(it), it["script"]["title"]
+    assert phase1 == lean
+    assert json.loads((DS / "content-lean.json").read_text()) == L.lean_items()
+    brand = yaml.safe_load((ROOT / "brands" / "dinero-simple.yaml").read_text())
+    assert "native_review" in brand["review_stages"]
+    site = json.loads((ROOT / "sites" / "dinero-simple" / "site.json").read_text())
+    assert site["hold"] == L.site_hold() and site["hold"]["enabled"] is True
+
+
+def test_risky_immigration_lines_are_now_referrals():
+    """Lines that explained IRS data sharing or who is covered by immigration status were rewritten into the standard
+    "consult a lawyer, free help here" lines (src/safe_lines.py), so no piece states those rules itself."""
+    import importlib
+    sys.path.insert(0, str(DS / "src"))
+    safe = importlib.import_module("safe_lines")
+    risky = re.compile(r"acuerdo (para|entre el IRS)[^.]{0,80}compartir|IRS no la compart|sin importar (tu|su) situación migratoria", re.I)
+    texts = [f.read_text() for f in DS.glob("content*.json")] + [(DS / "ANSWER_BANK.md").read_text()]
+    assert not any(risky.search(t) for t in texts)
+    joined = " ".join(texts)
+    assert safe.DATOS in joined and safe.DERECHOS_ESTADO in joined
+    for line in safe.STANDARD.values():
+        assert "justice.gov/eoir" in line and "licencia" in line  # official free-help link, licensed lawyers only

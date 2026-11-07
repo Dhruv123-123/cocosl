@@ -64,7 +64,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m9-efectivo-en-casa",
@@ -134,7 +135,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "m9-debito-o-credito",
@@ -203,7 +206,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m9-apps-de-pago",
@@ -272,7 +276,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m9-impuesto-de-ventas",
@@ -342,7 +347,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m9-propinas",
@@ -410,7 +416,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m9-luz-sin-historial",
@@ -478,7 +485,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m9-carpeta-de-papeles",
@@ -545,7 +553,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m9-antes-de-firmar",
@@ -613,7 +622,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m9-fotos-al-entrar",
@@ -680,7 +690,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m9-reparaciones",
@@ -748,7 +759,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m9-desalojo",
@@ -817,7 +829,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m9-clinica-comunitaria",
@@ -885,7 +898,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m9-colchon-primer-ano",
@@ -952,7 +966,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m9c-primer-mes",
@@ -1025,7 +1040,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m9c-abrir-cuenta",
@@ -1100,7 +1116,9 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "m9c-tarjeta-robada",
@@ -1174,7 +1192,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m9c-precio-real",
@@ -1247,7 +1266,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m9c-contrato-de-renta",
@@ -1320,7 +1340,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m9c-depositos",
@@ -1393,7 +1414,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m9c-derechos-inquilino",
@@ -1468,7 +1490,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "m9c-colchon",
@@ -1541,7 +1564,8 @@
    ],
    "title_variants": [],
    "hook_variants": []
-  }
+  },
+  "phase": 2
  },
  {
   "key": "l-primer-ano",
@@ -1688,7 +1712,9 @@
    "title_variants": [],
    "hook_variants": [],
    "original_element": "Graba la pantalla del buscador de cooperativas de MyCreditUnion.gov y de la página de seguro de depósitos de la FDIC en español (sin poner datos)"
-  }
+  },
+  "phase": 2,
+  "review": "legal_review"
  },
  {
   "key": "l-rentar",
@@ -1821,6 +1847,7 @@
    "title_variants": [],
    "hook_variants": [],
    "original_element": "Graba la pantalla de un video de ejemplo recorriendo un departamento vacío cuarto por cuarto, y la nota con la lista de daños con fecha que se manda al administrador"
-  }
+  },
+  "phase": 2
  }
 ]

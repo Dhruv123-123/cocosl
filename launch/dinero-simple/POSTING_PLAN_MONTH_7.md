@@ -1,5 +1,7 @@
 # Dinero Simple: month 7 posting plan (June 2027)
 
+> **PHASE 2: DO NOT POST.** Nothing in this plan is part of the lean launch (`POSTING_PLAN_LEAN.md`). It stays unposted until each piece passes native-speaker review (and attorney review where it is flagged) and Dhruv moves it into a live calendar.
+
 14 Shorts, 8 carousels and 2 long videos. June opens with the midyear money check. Then **getting paid every dollar you work for**: overtime with a worked example, your own record of hours, cash pay, contractor vs employee, and how to claim unpaid wages (free, confidential, and the federal law protects workers whatever their immigration status). Then the **June 15 estimated tax payment** for people who work for themselves, **Father's Day** (Sun Jun 20), cashing checks vs a free account, and **plain insurance**: term life, the "plan de retiro" that is really insurance, renter's and car insurance, and what to do after a crash.
 
 Mon/Wed/Fri 12:30 for Shorts, 20:00 for carousels, Sunday 20:00 for the long videos, plus one Short on Tue Jun 1. Times America/New_York.

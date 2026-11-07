@@ -1,5 +1,7 @@
 # Dinero Simple: month 3 posting plan (February 2027)
 
+> **PHASE 2: DO NOT POST.** Nothing in this plan is part of the lean launch (`POSTING_PLAN_LEAN.md`). It stays unposted until each piece passes native-speaker review (and attorney review where it is flagged) and Dhruv moves it into a live calendar.
+
 14 Shorts, 8 carousels and 2 long videos for tax season, centred on filing with an ITIN: what an ITIN is and isn't, the first W-7, documents, dependents, filing status, getting the refund into your own account, the IP PIN and tax identity theft, IRS letters, owing and payment plans, and the W-4.
 
 The scam series (`POSTING_PLAN_ESTAFAS.md`) runs until Tue Feb 16 on Tue and Thu at 12:30 and Sat at 20:00, so month 3 uses the other slots until then. Times America/New_York.

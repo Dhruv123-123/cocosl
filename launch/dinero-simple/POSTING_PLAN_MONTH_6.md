@@ -1,5 +1,7 @@
 # Dinero Simple: month 6 posting plan (May 2027)
 
+> **PHASE 2: DO NOT POST.** Nothing in this plan is part of the lean launch (`POSTING_PLAN_LEAN.md`). It stays unposted until each piece passes native-speaker review (and attorney review where it is flagged) and Dhruv moves it into a live calendar.
+
 14 Shorts, 8 carousels and 2 long videos. May opens with Mother's Day (Sun May 9 in the US, Mon May 10 in Mexico and much of Latin America): the remittance by May 5 and gifts without debt. Then medical bills and medical debt on credit reports, buying a used car (total price, free VIN checks, the window sticker, yo-yo financing), teens' first summer jobs (W-4, custodial Roth IRA), the trip home and fake ticket sellers, the kids' summer (SUN Bucks, free meals, the day-camp credit), the summer electric bill and getting the rent deposit back.
 
 Mon/Wed/Fri 12:30 for Shorts, 20:00 for carousels, Sunday 20:00 for the long videos, plus one Short on Sat May 1. Times America/New_York.

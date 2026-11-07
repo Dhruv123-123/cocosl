@@ -1,5 +1,7 @@
 # Dinero Simple: month 2 posting plan (January 2027)
 
+> **PHASE 2: DO NOT POST.** Nothing in this plan is part of the lean launch (`POSTING_PLAN_LEAN.md`). It stays unposted until each piece passes native-speaker review (and attorney review where it is flagged) and Dhruv moves it into a live calendar.
+
 14 Shorts, 8 carousels and 2 long videos, written in Spanish for this audience. January's theme is starting the year in order: the December card statement, a debt list, the yearly 'surprise' costs, cutting bills, and the 2027 tax season (W-2, ITIN, free help through VITA, refunds and what to do with them).
 
 It runs alongside the scam series (`POSTING_PLAN_ESTAFAS.md`), which keeps Tue and Thu at 12:30 and Sat at 20:00, so month 2 uses the other slots. The tax pieces go out before the scam series' ghost-preparer and IRS pieces, so they back each other up. Times America/New_York.

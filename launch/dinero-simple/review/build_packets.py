@@ -36,7 +36,7 @@ ATTORNEY_WPH = (1500, 2500)    # legal-accuracy read of short passages, words pe
 ATTORNEY_SETUP_H = 1.0         # reading the brief and the claims list once
 
 IMMIGRATION_RE = re.compile(r"\bitin\b|migratori|inmigraci|notari|uscis|\bvisas?\b|deport|consular|consulado|"
-                            r"detenid|fianza|asilo|green card|residencia|ciudadan|acreditad|w-7", re.I)
+                            r"detenid|\bfianza|asilo|green card|residencia|ciudadan|acreditad|w-7", re.I)
 CHUNK_WORDS = 170
 REPEAT_MIN = 4
 
@@ -130,6 +130,87 @@ class Packets:
         self.add(part, title, str(path.relative_to(ROOT)), text)
 
 
+FREEBIE = ROOT / "sites" / "dinero-simple" / "lead-magnet" / "tu-dinero-en-orden-en-7-dias.html"
+SITE_JSON = ROOT / "sites" / "dinero-simple" / "site.json"
+SITE_TEXT_KEYS = ("tagline", "description", "pillars", "email", "lead_magnet", "footer_links", "disclaimer",
+                  "ai_disclosure", "ui", "free_tools")
+
+
+def _strings(x, skip=("base", "path", "posts", "pillars", "provider", "action", "email_field", "file")):
+    if isinstance(x, str):
+        if x.strip() and not x.startswith(("/", "http")):
+            yield x
+    elif isinstance(x, dict):
+        for k, v in x.items():
+            if not k.startswith("_") and k not in skip:
+                yield from _strings(v, skip)
+    elif isinstance(x, list):
+        for v in x:
+            yield from _strings(v, skip)
+
+
+def add_site_text(P: "Packets", part: str, tools: bool = True) -> None:
+    """The words the site template itself shows (site.json): tagline, buttons, form notes, footer, tool names."""
+    cfg = json.loads(SITE_JSON.read_text())
+    lines = []
+    for k in SITE_TEXT_KEYS:
+        if k == "free_tools" and not tools:
+            continue
+        if k == "pillars":
+            lines += [p["name"] if isinstance(p, dict) else str(p) for p in cfg.get(k, [])]
+            continue
+        lines += list(_strings(cfg.get(k)))
+    P.add(part, "Sitio web · textos de la plantilla (botones, formularios, pie)", "sites/dinero-simple/site.json",
+          "\n".join(dict.fromkeys(lines)))
+
+
+def add_sequence(P: "Packets", part: str) -> None:
+    import yaml
+    seq = yaml.safe_load((ROOT / "brands" / "sequences" / "dinero-simple.yaml").read_text())
+    lm = seq.get("lead_magnet") or {}
+    P.add(part, "Correos de bienvenida · guía gratis (lista)", "brands/sequences/dinero-simple.yaml",
+          "\n".join([lm.get("title", ""), lm.get("pitch", "")] + [f"{s['heading']}: " + " · ".join(s["items"])
+                                                                  for s in lm.get("sections", [])]))
+    for st in seq.get("steps", []):
+        P.add(part, f"Correos de bienvenida · día {st['day_offset']}", "brands/sequences/dinero-simple.yaml",
+              "\n".join([f"Asunto: {st['subject']}", f"Vista previa: {st.get('preheader', '')}",
+                         f"Botón: {st.get('cta_label', '')}", strip_md(st["body_markdown"])]))
+    P.add(part, "Correos de bienvenida · pie y página de venta", "brands/sequences/dinero-simple.yaml",
+          "\n".join([seq.get("footer_note", "")] + [strip_md(json.dumps(p, ensure_ascii=False)) for p in seq.get("products", [])]))
+
+
+LEAN_PART = "Lanzamiento ligero · todo lo que sale primero"
+
+
+def gather_lean() -> "Packets":
+    """Only what goes live in the lean launch (launch/dinero-simple/lean/lean_launch.py)."""
+    sys.path.insert(0, str(DS / "lean"))
+    import lean_launch as L
+    import yaml
+    P = Packets()
+    brand = yaml.safe_load((ROOT / "brands" / "dinero-simple.yaml").read_text())
+    bios = "\n".join(f"{k}: {v}" for k, v in (brand.get("bios") or {}).items())
+    P.add(LEAN_PART, "Marca: bios, aviso de IA y llamado a la acción", "brands/dinero-simple.yaml",
+          "\n".join([bios, f"Aviso de IA: {brand.get('ai_disclosure', '')}", f"Llamado a la acción: {brand.get('cta', '')}"]))
+    add_site_text(P, LEAN_PART, tools=False)
+    for page in L.SITE_PAGES:
+        P.add_file(LEAN_PART, f"Sitio web · página · {page}", SITE / "pages" / f"{page}.md")
+    P.add_file(LEAN_PART, "Guía gratis · Tu dinero en orden en 7 días (PDF)", FREEBIE, "html")
+    add_sequence(P, LEAN_PART)
+    for slug, dist in L.PRODUCTS.items():
+        P.add_file(LEAN_PART, f"Sitio web · producto · {slug}", SITE / "products" / f"{slug}.md")
+        P.add_file(LEAN_PART, f"Producto (PDF) · {dist}", DS / "products" / "dist" / dist / f"{dist}.html", "html")
+    for slug in L.PRINTABLES:
+        d = DS / "imprimibles" / "dist" / slug
+        P.add_file(LEAN_PART, f"Imprimible · {slug} · anuncio", d / "LISTING.md")
+        P.add_file(LEAN_PART, f"Imprimible · {slug}", d / f"{slug}.html", "html")
+    for n, (week, day, time, pos) in enumerate(L.CALENDAR, 1):
+        it = L.launch_items()[pos - 1]
+        P.add(LEAN_PART, f"Semana {week} · {day} · {it['format']} · {it['script']['title']}",
+              "launch/dinero-simple/content-lean.json", item_text(it), it["script"].get("claims_to_verify"))
+    return P
+
+
 def gather() -> Packets:
     P = Packets()
     p1 = CONTENT_PARTS[0][0]
@@ -142,17 +223,9 @@ def gather() -> Packets:
     for sub in ("pages", "products", "emails", "blog"):
         for f in sorted((SITE / sub).glob("*.md")):
             P.add_file(p1, f"Sitio web · {sub} · {f.stem}", f)
-    seq = yaml.safe_load((ROOT / "brands" / "sequences" / "dinero-simple.yaml").read_text())
-    lm = seq.get("lead_magnet") or {}
-    P.add(p1, "Correos de bienvenida · guía gratis (lista)", "brands/sequences/dinero-simple.yaml",
-          "\n".join([lm.get("title", ""), lm.get("pitch", "")] + [f"{s['heading']}: " + " · ".join(s["items"])
-                                                                  for s in lm.get("sections", [])]))
-    for st in seq.get("steps", []):
-        P.add(p1, f"Correos de bienvenida · día {st['day_offset']}", "brands/sequences/dinero-simple.yaml",
-              "\n".join([f"Asunto: {st['subject']}", f"Vista previa: {st.get('preheader', '')}",
-                         f"Botón: {st.get('cta_label', '')}", strip_md(st["body_markdown"])]))
-    P.add(p1, "Correos de bienvenida · pie y página de venta", "brands/sequences/dinero-simple.yaml",
-          "\n".join([seq.get("footer_note", "")] + [strip_md(json.dumps(p, ensure_ascii=False)) for p in seq.get("products", [])]))
+    add_site_text(P, p1)
+    P.add_file(p1, "Guía gratis · Tu dinero en orden en 7 días (PDF)", FREEBIE, "html")
+    add_sequence(P, p1)
     for slug in ("recorte-de-gastos", "fecha-sin-deudas", "invertir-con-100", "paquete"):
         P.add_file(p1, f"Producto · {slug}", DS / "products" / "dist" / slug / f"{slug}.html", "html")
     P.add_file(p1, "Producto · El Presupuesto de 20 Minutos", DS / "product" / "el-presupuesto-de-20-minutos.html", "html")
@@ -232,7 +305,7 @@ def table_rows(prefix: str, idx: int, e: dict, claims: bool = False) -> str:
     return head + rows
 
 
-def native_html(P: Packets, repeats: list[str], est: dict) -> str:
+def native_html(P: Packets, repeats: list[str], est: dict, lean: bool = False) -> str:
     parts, out, idx = [], [], 0
     rep = "".join(f'<tr><td class="n">R-{i}</td><td class="t">{esc(r)}</td><td class="c"><span class="ok"></span>OK '
                   f'&nbsp; <span class="ok"></span>Cambiar:</td></tr>' for i, r in enumerate(repeats, 1))
@@ -251,10 +324,14 @@ def native_html(P: Packets, repeats: list[str], est: dict) -> str:
     out.append("</table>")
     parts_list = "".join(f"<li>{esc(k)}: {v['entries']} piezas, {v['words']:,} palabras, {v['hours'][0]}–{v['hours'][1]} horas</li>"
                          for k, v in est["parts"].items())
+    title = "Revisión de español nativo" + (" · lanzamiento ligero" if lean else "")
+    scope = ("Solo lo que sale primero (el lanzamiento ligero): las páginas básicas del sitio, la guía gratis, los 5 "
+             "correos de bienvenida, 2 productos y 4 semanas de publicaciones. Lo demás espera a una segunda ronda."
+             if lean else "Todo el texto en español de Dinero Simple, en un solo documento numerado: publicaciones y "
+             "videos, sitio web, correos, guías gratis y productos.")
     cover = f"""<section class="cover"><div class="meta">Dinero Simple · paquete de revisión</div>
-      <h1>Revisión de español nativo</h1>
-      <p>Todo el texto en español de Dinero Simple, en un solo documento numerado: publicaciones y videos, sitio web,
-      correos, guías gratis y productos. Todo lo escribió una máquina; necesitamos que suene natural para latinos en
+      <h1>{title}</h1>
+      <p>{scope} Todo lo escribió una máquina; necesitamos que suene natural para latinos en
       Estados Unidos (registro de tú, español latinoamericano neutro con un toque mexicano-americano).</p>
       <div class="box"><strong>Cómo revisar.</strong> Marca <em>OK</em> o <em>Cambiar</em> en cada fila y escribe tu cambio en
       la columna de comentarios (o en un PDF con comentarios). Las frases que se repiten en muchas publicaciones se revisan una
@@ -265,29 +342,84 @@ def native_html(P: Packets, repeats: list[str], est: dict) -> str:
       <p><strong>Tamaño:</strong> {est['entries']} piezas, {est['rows']} filas, {est['words']:,} palabras.
       <strong>Tiempo estimado:</strong> {est['hours'][0]}–{est['hours'][1]} horas ({NATIVE_WPH[0]:,}–{NATIVE_WPH[1]:,} palabras por hora).</p>
       <ul>{parts_list}</ul></section>"""
-    return (f'<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Revisión de español nativo</title>'
+    return (f'<!doctype html><html lang="es"><head><meta charset="utf-8"><title>{title}</title>'
             f"<style>{CSS}</style></head><body>{cover}<h2>Frases que se repiten · {len(repeats)}</h2><table><tr><th style='width:0.62in'>#</th>"
             f"<th>Frase</th><th style='width:2.5in'>Comentarios</th></tr>{rep}</table>{''.join(out)}</body></html>")
 
 
-def attorney_entries(P: Packets) -> list[dict]:
-    out = []
+SENTENCE = re.compile(r"(?<=[.!?:])\s+|\n")
+# A "referral" sentence only sends the reader to a lawyer or accredited representative (and away from notarios);
+# it states no immigration rule. The attorney approves each distinct wording once, in the standard-lines section.
+REFERRAL = re.compile(r"abogad|representante|organizaci[oó]n", re.I)
+REFERRAL_HOW = re.compile(r"licencia|acreditad|ayuda legal|justice\.gov|colegio de abogados", re.I)
+NOT_REFERRAL = re.compile(r"compart|acuerdo|afecta|riesgo|deport|\bICE\b|detenid|fianza|green card|residencia|"
+                          r"ciudadan|visa|uscis|asilo|permiso|itin|w-7|consular|consulado|poder|tutela|hijos", re.I)
+
+
+def standard_lines() -> dict[str, str]:
+    sys.path.insert(0, str(DS / "src"))
+    import safe_lines
+    return dict(safe_lines.STANDARD)
+
+
+def is_referral(sentence: str) -> bool:
+    return bool(REFERRAL.search(sentence) and REFERRAL_HOW.search(sentence) and not NOT_REFERRAL.search(sentence))
+
+
+def legal_text(chunk: str, standard: list[str]) -> str:
+    """What is left of a chunk for the attorney once the standard lines and referral sentences are taken out."""
+    for line in standard:
+        chunk = chunk.replace(line, " ")
+    chunk = re.sub(r"\[R-\d+\]", " ", chunk)
+    return " ".join(x for x in SENTENCE.split(chunk) if x.strip() and not is_referral(x))
+
+
+def attorney_entries(P: Packets, repeats: list[str] | None = None) -> tuple[list[dict], list[dict], list[str]]:
+    """(entries to read, flagged entries fully covered by the standard lines, the standard lines to approve once).
+
+    A paragraph goes to the attorney only if, after the standard lines and plain referral sentences are taken out,
+    it still mentions the ITIN, immigration status, notarios, visas or consulates. Pieces flagged ATTORNEY REVIEW keep
+    their flag; the attorney reads their matching paragraphs, and a flagged piece with none left is listed as covered."""
+    std = list(standard_lines().values())
+    referrals = {}
+    for e in P.entries:
+        for c in e["chunks"]:
+            for x in SENTENCE.split(c):
+                x = x.strip()
+                if x and is_referral(x) and IMMIGRATION_RE.search(x) and x not in std:
+                    referrals.setdefault(x, None)
+    imm_repeats = [r for r in (repeats or []) if IMMIGRATION_RE.search(r) and not is_referral(r)]
+    out, covered = [], []
     for e in P.entries:
         flagged = bool(e["claims"]) and e["claims"][0].startswith("ATTORNEY REVIEW")
-        keep = [c for c in e["chunks"] if IMMIGRATION_RE.search(c)]
-        if flagged:
-            keep = e["chunks"]
+        keep = [c for c in e["chunks"] if IMMIGRATION_RE.search(legal_text(c, std))]
         if keep:
             out.append({**e, "chunks": keep})
-    return out
+        elif flagged:
+            covered.append(e)
+    return out, covered, std + imm_repeats + list(referrals)
 
 
-def attorney_html(A: list[dict], est: dict) -> str:
+def attorney_html(A: list[dict], est: dict, lean: bool = False, standard: list[str] | None = None,
+                  covered: list[dict] | None = None) -> str:
+    std_rows = "".join(f'<tr><td class="n">S-{i}</td><td class="t">{esc(x)}</td><td class="c"><span class="ok"></span>OK '
+                       f'&nbsp; <span class="ok"></span>Change:</td></tr>' for i, x in enumerate(standard or [], 1))
+    cov = "".join(f"<li>{esc(e['title'])} <span class='src'>· {esc(e['source'])}</span></li>" for e in covered or [])
+    extra = (f'<h2>Standard lines · approve once ({len(standard or [])})</h2><p class="meta">Lines that only send the reader '
+             f'to a licensed attorney or accredited representative, and the few repeated status lines. Each wording is '
+             f'reviewed here once; in the passages below they are taken out.</p><table><tr><th style="width:0.62in">#</th>'
+             f'<th>Spanish text</th><th style="width:2.5in">Comments</th></tr>{std_rows}</table>')
+    if cov:
+        extra += (f'<h2>Flagged pieces covered by the standard lines ({len(covered)})</h2><p class="meta">Flagged ATTORNEY '
+                  f'REVIEW, but their only immigration content is a standard line above. Listed so nothing is skipped '
+                  f'silently.</p><ul>{cov}</ul>')
+    scope = ("This is the lean-launch packet: only what goes live first (core site pages, the free 7-day guide, five "
+             "welcome emails, two products and four weeks of posts). " if lean else "")
     body = "".join(table_rows("A", i, e, claims=True) for i, e in enumerate(A, 1))
     return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Attorney review packet</title>
       <style>{CSS}</style></head><body><section class="cover"><div class="meta">Dinero Simple · review packet</div>
-      <h1>Immigration attorney review</h1>
-      <p>Dinero Simple is a Spanish-language personal finance brand for US Hispanic adults, many of them recent arrivals.
+      <h1>Immigration attorney review{" · lean launch" if lean else ""}</h1>
+      <p>{scope}Dinero Simple is a Spanish-language personal finance brand for US Hispanic adults, many of them recent arrivals.
       This packet holds every passage that mentions the ITIN, immigration status, notarios, visas or consulates: whole pieces
       that we flagged ATTORNEY REVIEW, and the individual paragraphs elsewhere that touch these topics. The text is in
       Spanish, so it needs a Spanish-reading licensed immigration attorney or DOJ-accredited representative.</p>
@@ -299,7 +431,7 @@ def attorney_html(A: list[dict], est: dict) -> str:
       <p><strong>Size:</strong> {est['entries']} pieces, {est['rows']} rows, {est['words']:,} words. <strong>Estimated time:</strong>
       {est['hours'][0]}–{est['hours'][1]} hours ({ATTORNEY_WPH[0]:,}–{ATTORNEY_WPH[1]:,} words per hour, plus {ATTORNEY_SETUP_H:g} hour
       to read this brief and set up).</p></section>
-      <h2>Passages to review</h2><table><tr><th style="width:0.62in">#</th><th>Spanish text</th>
+      {extra}<h2>Passages to review</h2><table><tr><th style="width:0.62in">#</th><th>Spanish text</th>
       <th style="width:2.5in">Comments</th></tr>{body}</table></body></html>"""
 
 
@@ -309,12 +441,29 @@ def estimate(entries: list[dict], wph, setup=0.0, repeats=None) -> dict:
             "hours": hours(w, wph, setup)}
 
 
-def summary_md(est_n: dict, est_a: dict, n_repeats: int, missing: list[str]) -> str:
+def summary_md(est_n: dict, est_a: dict, n_repeats: int, missing: list[str], lean: dict | None = None) -> str:
     parts = "\n".join(f"| {k} | {v['entries']} | {v['words']:,} | {v['hours'][0]}–{v['hours'][1]} |"
                       for k, v in est_n["parts"].items())
     miss = "\n".join(f"- `{m}`" for m in missing) or "- none"
-    return f"""# Dinero Simple review packets
+    lean_rows = ""
+    if lean:
+        ln, la = lean["native"], lean["attorney"]
+        lean_rows = f"""
+## Lean launch first (send these two now)
 
+Only what goes live first: core site pages, the free 7-day guide, the 5 welcome emails, El Kit para Recortar
+Gastos, the Registro de Cuentas y Pagos printable and 4 weeks of posts (`lean/LEAN_LAUNCH.md`). Everything else is
+phase 2 and stays off until the full packets below are done.
+
+| Packet | Pieces | Rows | Words | Estimated hours |
+|---|---|---|---|---|
+| `Lean-Revision-Espanol-Nativo.pdf` | {ln['entries']} | {ln['rows']} | {ln['words']:,} | {ln['hours'][0]}–{ln['hours'][1]} |
+| `Lean-Attorney-Review-Packet.pdf` | {la['entries']} | {la['rows']} | {la['words']:,} | {la['hours'][0]}–{la['hours'][1]} |
+
+## Full packets (phase 2)
+"""
+    return f"""# Dinero Simple review packets
+{lean_rows}
 Two PDFs to hand off, built by `python3 launch/dinero-simple/review/build_packets.py --pdf` (they are in project files
 `content-factory/dinero-simple/review-packets/`). Rebuild them after any copy change so the numbering matches.
 
@@ -359,33 +508,43 @@ def to_pdf(src: Path, out: Path) -> None:
     subprocess.run(["node", "-e", js], check=True, env={**os.environ, "NODE_PATH": "/opt/node22/lib/node_modules"})
 
 
-def build() -> dict:
-    P = gather()
+def build(P: Packets | None = None) -> dict:
+    P = P or gather()
     repeats = number(P)
     est_n = estimate(P.entries, NATIVE_WPH, repeats=repeats)
     est_n["parts"] = {}
     for part in dict.fromkeys(e["part"] for e in P.entries):
         es = [e for e in P.entries if e["part"] == part]
-        est_n["parts"][part] = estimate(es, NATIVE_WPH, repeats=repeats if part == CONTENT_PARTS[0][0] else None)
-    A = attorney_entries(P)
-    est_a = estimate(A, ATTORNEY_WPH, ATTORNEY_SETUP_H)
-    return {"P": P, "repeats": repeats, "native": est_n, "attorney": est_a, "A": A}
+        est_n["parts"][part] = estimate(es, NATIVE_WPH, repeats=repeats if part in (CONTENT_PARTS[0][0], LEAN_PART) else None)
+    A, covered, standard = attorney_entries(P, repeats)
+    est_a = estimate(A, ATTORNEY_WPH, ATTORNEY_SETUP_H, repeats=standard)
+    est_a["standard"], est_a["covered"] = len(standard), len(covered)
+    return {"P": P, "repeats": repeats, "native": est_n, "attorney": est_a, "A": A, "covered": covered,
+            "standard": standard}
+
+
+def build_lean() -> dict:
+    return build(gather_lean())
 
 
 def main() -> None:
-    b = build()
     DIST.mkdir(exist_ok=True)
-    (DIST / "Revision-Espanol-Nativo.html").write_text(native_html(b["P"], b["repeats"], b["native"]))
-    (DIST / "Attorney-Review-Packet.html").write_text(attorney_html(b["A"], b["attorney"]))
-    (HERE / "REVIEW_PACKETS.md").write_text(summary_md(b["native"], b["attorney"], len(b["repeats"]), b["P"].missing))
+    b, lean = build(), build_lean()
+    for prefix, x in (("", b), ("Lean-", lean)):
+        (DIST / f"{prefix}Revision-Espanol-Nativo.html").write_text(native_html(x["P"], x["repeats"], x["native"], lean=bool(prefix)))
+        (DIST / f"{prefix}Attorney-Review-Packet.html").write_text(
+            attorney_html(x["A"], x["attorney"], lean=bool(prefix), standard=x["standard"], covered=x["covered"]))
+    (HERE / "REVIEW_PACKETS.md").write_text(summary_md(b["native"], b["attorney"], len(b["repeats"]), b["P"].missing + lean["P"].missing, lean))
     if "--pdf" in sys.argv:
         for name in ("Revision-Espanol-Nativo", "Attorney-Review-Packet"):
-            to_pdf(DIST / f"{name}.html", DIST / f"{name}.pdf")
-    for k in ("native", "attorney"):
-        e = b[k]
-        print(f"{k}: {e['entries']} pieces, {e['rows']} rows, {e['words']:,} words, {e['hours'][0]}-{e['hours'][1]} h")
-    if b["P"].missing:
-        print("missing:", *b["P"].missing, sep="\n  ")
+            for prefix in ("", "Lean-"):
+                to_pdf(DIST / f"{prefix}{name}.html", DIST / f"{prefix}{name}.pdf")
+    for label, x in (("full", b), ("lean", lean)):
+        for k in ("native", "attorney"):
+            e = x[k]
+            print(f"{label} {k}: {e['entries']} pieces, {e['rows']} rows, {e['words']:,} words, {e['hours'][0]}-{e['hours'][1]} h")
+    if b["P"].missing or lean["P"].missing:
+        print("missing:", *(b["P"].missing + lean["P"].missing), sep="\n  ")
 
 
 if __name__ == "__main__":

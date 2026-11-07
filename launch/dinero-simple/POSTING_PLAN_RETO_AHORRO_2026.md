@@ -1,5 +1,7 @@
 # Dinero Simple: "Reto de diciembre: $10 al día" posting plan (Nov 30 – Dec 28, 2026)
 
+> **PHASE 2: DO NOT POST.** Nothing in this plan is part of the lean launch (`POSTING_PLAN_LEAN.md`). It stays unposted until each piece passes native-speaker review (and attorney review where it is flagged) and Dhruv moves it into a live calendar.
+
 A savings challenge the viewer does *with* us: set aside $10 a day for 28 days, Nov 30 to Dec 27. That comes to $280 in the example, or $140 at $5 a day and $56 at $2. Why: PR #2's scouting (`research/scouting/finance-formats-nov-2026.md`) found the savings-challenge hook had about 6x the reach of other hook types on finance TikTok, and Dinero Simple had none.
 
 7 posts: 3 Shorts, 1 TikTok mid (65–90 s), 2 carousels and 1 single image. Day 1, a tracker to save, a check-in every Sunday, and a finale on what to do with the money. They use only free slots next to month 1 (`POSTING_PLAN_MONTH_1.md`) and the holiday pack, never more than two posts a day on one platform, and formats rotate so no two in a row look alike.

@@ -1,5 +1,7 @@
 # Dinero Simple: "Crédito sin Seguro Social" (Thursdays, Mar 4 – Apr 15, 2027)
 
+> **PHASE 2: DO NOT POST.** Nothing in this plan is part of the lean launch (`POSTING_PLAN_LEAN.md`). It stays unposted until each piece passes native-speaker review (and attorney review where it is flagged) and Dhruv moves it into a live calendar.
+
 For Spanish-first adults and recent arrivals: scouting's creator landscape (`research/scouting/dinero-simple-creator-landscape.md` on PR #2) found nobody in Spanish posts steadily on this, and that our packs leaned heavily on investing. Six Shorts, one step each, from the ITIN to a growing credit history, then a summary carousel. Every post offers the free guide (lead magnet, `credito/`, also on the site at `/credito-sin-seguro-social/`).
 
 7 posts: 6 Shorts and 1 carousel(s), one a week on a day no other Dinero Simple plan uses. 7 mention the ITIN and carry ATTORNEY REVIEW.
