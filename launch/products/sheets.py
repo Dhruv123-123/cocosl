@@ -335,13 +335,14 @@ def build_credit_audit(path: Path) -> Path:
 N_DEBTS, N_MONTHS = 10, 360
 
 
-def build_debt_planner(path: Path) -> Path:
+def build_debt_planner(path: Path, extras: bool = True, hook=None) -> Path:
+    """extras=False leaves out the Balance Transfer and Consolidation tabs; hook(wb, plan_total_row) runs before saving."""
     from openpyxl.chart import LineChart, Reference
 
     wb = Workbook()
     d = _sheet(wb, "Plan", "Your debt-free date",
                "List your debts, pick a method, set your extra payment. Everything else is worked out for you.",
-               widths={"B": 22, "C": 13, "D": 10, "E": 13, "F": 12, "G": 10, "H": 13, "I": 14, "J": 14,
+               widths={"B": 34, "C": 13, "D": 10, "E": 13, "F": 12, "G": 10, "H": 13, "I": 14, "J": 14,
                        "K": 14, "L": 15, "M": 4},
                first=True)
     _label(d, "B5", "Method")
@@ -433,67 +434,68 @@ def build_debt_planner(path: Path) -> Path:
 
     _build_schedule(wb, first, last)
 
-    # Balance transfer check
-    b = _sheet(wb, "Balance Transfer", "Is a balance transfer worth it?",
-               "Compares paying a card as it is vs moving it to a promo-rate card with a transfer fee.", tab=GOLD,
-               widths={"B": 40, "C": 16, "D": 50})
-    inputs = [("Balance to move", 3000, MONEY0), ("Current APR %", 24.9, PCT), ("What you can pay each month", 200, MONEY0),
-              ("Transfer fee %", 3, PCT), ("Promo APR %", 0, PCT), ("Promo length (months)", 15, "0"),
-              ("APR after the promo ends %", 27.99, PCT)]
-    for i, (lab, v, fmt) in enumerate(inputs):
-        _label(b, f"B{5 + i}", lab, bold=False)
-        _inp(b[f"C{5 + i}"], v, fmt)
-    rows = [
-        ("Stay put: months to pay off", '=IF(C7<=C5*C6/1200,"Never",NPER(C6/1200,-C7,C5))', "0.0"),
-        ("Stay put: interest", '=IF(ISNUMBER(C13),C7*C13-C5,"Never")', MONEY),
-        ("Transfer: fee", "=C5*C8/100", MONEY),
-        ("Transfer: balance left when the promo ends", "=MAX(0,-FV(C9/1200,C10,-C7,C5+C15))", MONEY),
-        ("Transfer: months to pay off", '=IF(C16<=0,NPER(C9/1200,-C7,C5+C15),IF(C7<=C16*C11/1200,"Never",C10+NPER(C11/1200,-C7,C16)))', "0.0"),
-        ("Transfer: total cost (fee + interest)", '=IF(ISNUMBER(C17),C7*C17-C5,"Never")', MONEY),
-        ("You save by transferring", '=IF(AND(ISNUMBER(C14),ISNUMBER(C18)),C14-C18,"")', MONEY),
-        ("Monthly payment to clear it inside the promo", "=IF(C9=0,(C5+C15)/C10,PMT(C9/1200,C10,-(C5+C15)))", MONEY),
-    ]
-    for i, (lab, f, fmt) in enumerate(rows):
-        r = 13 + i
-        _label(b, f"B{r}", lab, bold=(r in (19, 20)))
-        _calc(b[f"C{r}"], f, fmt, bold=(r in (19, 20)))
-    _total_row(b, 19, 2, 3)
-    b["D19"] = '=IF(N(C19)>0,"Worth it, IF you stop adding new spending to either card.","Not worth it at this payment.")'
-    b["B22"] = ("Check before you apply: the exact fee, how long the promo lasts, whether the promo needs a minimum "
-                "payment every month, and the rate on new purchases. Applying is a hard credit inquiry.")
-    b["B22"].font = Font(name="Inter", size=9, italic=True, color="4B5A51")
-    _foot(b, 24)
+    if extras:
+        # Balance transfer check
+        b = _sheet(wb, "Balance Transfer", "Is a balance transfer worth it?",
+                   "Compares paying a card as it is vs moving it to a promo-rate card with a transfer fee.", tab=GOLD,
+                   widths={"B": 40, "C": 16, "D": 50})
+        inputs = [("Balance to move", 3000, MONEY0), ("Current APR %", 24.9, PCT), ("What you can pay each month", 200, MONEY0),
+                  ("Transfer fee %", 3, PCT), ("Promo APR %", 0, PCT), ("Promo length (months)", 15, "0"),
+                  ("APR after the promo ends %", 27.99, PCT)]
+        for i, (lab, v, fmt) in enumerate(inputs):
+            _label(b, f"B{5 + i}", lab, bold=False)
+            _inp(b[f"C{5 + i}"], v, fmt)
+        rows = [
+            ("Stay put: months to pay off", '=IF(C7<=C5*C6/1200,"Never",NPER(C6/1200,-C7,C5))', "0.0"),
+            ("Stay put: interest", '=IF(ISNUMBER(C13),C7*C13-C5,"Never")', MONEY),
+            ("Transfer: fee", "=C5*C8/100", MONEY),
+            ("Transfer: balance left when the promo ends", "=MAX(0,-FV(C9/1200,C10,-C7,C5+C15))", MONEY),
+            ("Transfer: months to pay off", '=IF(C16<=0,NPER(C9/1200,-C7,C5+C15),IF(C7<=C16*C11/1200,"Never",C10+NPER(C11/1200,-C7,C16)))', "0.0"),
+            ("Transfer: total cost (fee + interest)", '=IF(ISNUMBER(C17),C7*C17-C5,"Never")', MONEY),
+            ("You save by transferring", '=IF(AND(ISNUMBER(C14),ISNUMBER(C18)),C14-C18,"")', MONEY),
+            ("Monthly payment to clear it inside the promo", "=IF(C9=0,(C5+C15)/C10,PMT(C9/1200,C10,-(C5+C15)))", MONEY),
+        ]
+        for i, (lab, f, fmt) in enumerate(rows):
+            r = 13 + i
+            _label(b, f"B{r}", lab, bold=(r in (19, 20)))
+            _calc(b[f"C{r}"], f, fmt, bold=(r in (19, 20)))
+        _total_row(b, 19, 2, 3)
+        b["D19"] = '=IF(N(C19)>0,"Worth it, IF you stop adding new spending to either card.","Not worth it at this payment.")'
+        b["B22"] = ("Check before you apply: the exact fee, how long the promo lasts, whether the promo needs a minimum "
+                    "payment every month, and the rate on new purchases. Applying is a hard credit inquiry.")
+        b["B22"].font = Font(name="Inter", size=9, italic=True, color="4B5A51")
+        _foot(b, 24)
 
-    # Consolidation loan check
-    c = _sheet(wb, "Consolidation", "Would a consolidation loan help?",
-               "Compares one fixed-rate loan with your current plan (from the Plan tab).", tab=GOLD,
-               widths={"B": 42, "C": 16, "D": 46})
-    cin = [("Amount of debt to consolidate", f"=Plan!C{t}", MONEY0), ("Loan APR %", 12.5, PCT),
-           ("Loan term (months)", 48, "0"), ("Origination fee %", 4, PCT)]
-    for i, (lab, v, fmt) in enumerate(cin):
-        _label(c, f"B{5 + i}", lab, bold=False)
-        _inp(c[f"C{5 + i}"], v, fmt)
-    c["D5"] = "Linked to your Plan total. Type a number to override."
-    crow = [
-        ("Loan size so the fee is covered", "=C5/(1-C8/100)", MONEY),
-        ("Monthly loan payment", "=PMT(C6/1200,C7,-C10)", MONEY),
-        ("Loan: total interest + fee", "=C11*C7-C5", MONEY),
-        ("Loan: months to debt-free", "=C7", "0"),
-        ("Current plan: total interest", f"=Plan!J{t}", MONEY),
-        ("Current plan: months to debt-free", f"=Plan!C{s + 2}", "0"),
-        ("Current plan: monthly payment", f"=Plan!C{s + 1}", MONEY),
-        ("Loan saves you (interest)", "=IF(ISNUMBER(C14),C14-C12,\"\")", MONEY),
-    ]
-    for i, (lab, f, fmt) in enumerate(crow):
-        r = 10 + i
-        _label(c, f"B{r}", lab, bold=(r == 17))
-        _calc(c[f"C{r}"], f, fmt, bold=(r == 17))
-    _total_row(c, 17, 2, 3)
-    c["D17"] = '=IF(N(C17)>0,"Cheaper than your current plan.","Your current plan is cheaper. Keep going.")'
-    c["B19"] = ("A loan only helps if the cards stay paid off. Watch for prepayment penalties, and compare the "
-                "APR (which includes fees) across a few lenders. Pre-qualification usually uses a soft inquiry.")
-    c["B19"].font = Font(name="Inter", size=9, italic=True, color="4B5A51")
-    _foot(c, 21)
+        # Consolidation loan check
+        c = _sheet(wb, "Consolidation", "Would a consolidation loan help?",
+                   "Compares one fixed-rate loan with your current plan (from the Plan tab).", tab=GOLD,
+                   widths={"B": 42, "C": 16, "D": 46})
+        cin = [("Amount of debt to consolidate", f"=Plan!C{t}", MONEY0), ("Loan APR %", 12.5, PCT),
+               ("Loan term (months)", 48, "0"), ("Origination fee %", 4, PCT)]
+        for i, (lab, v, fmt) in enumerate(cin):
+            _label(c, f"B{5 + i}", lab, bold=False)
+            _inp(c[f"C{5 + i}"], v, fmt)
+        c["D5"] = "Linked to your Plan total. Type a number to override."
+        crow = [
+            ("Loan size so the fee is covered", "=C5/(1-C8/100)", MONEY),
+            ("Monthly loan payment", "=PMT(C6/1200,C7,-C10)", MONEY),
+            ("Loan: total interest + fee", "=C11*C7-C5", MONEY),
+            ("Loan: months to debt-free", "=C7", "0"),
+            ("Current plan: total interest", f"=Plan!J{t}", MONEY),
+            ("Current plan: months to debt-free", f"=Plan!C{s + 2}", "0"),
+            ("Current plan: monthly payment", f"=Plan!C{s + 1}", MONEY),
+            ("Loan saves you (interest)", "=IF(ISNUMBER(C14),C14-C12,\"\")", MONEY),
+        ]
+        for i, (lab, f, fmt) in enumerate(crow):
+            r = 10 + i
+            _label(c, f"B{r}", lab, bold=(r == 17))
+            _calc(c[f"C{r}"], f, fmt, bold=(r == 17))
+        _total_row(c, 17, 2, 3)
+        c["D17"] = '=IF(N(C17)>0,"Cheaper than your current plan.","Your current plan is cheaper. Keep going.")'
+        c["B19"] = ("A loan only helps if the cards stay paid off. Watch for prepayment penalties, and compare the "
+                    "APR (which includes fees) across a few lenders. Pre-qualification usually uses a soft inquiry.")
+        c["B19"].font = Font(name="Inter", size=9, italic=True, color="4B5A51")
+        _foot(c, 21)
 
     # Progress tracker + chart
     p = _sheet(wb, "Progress", "Progress tracker",
@@ -519,6 +521,8 @@ def build_debt_planner(path: Path) -> Path:
     p.add_chart(chart, "H5")
     _foot(p, 44)
 
+    if hook:
+        hook(wb, t)
     wb.move_sheet("Schedule", offset=len(wb.sheetnames) - 1 - wb.sheetnames.index("Schedule"))
     wb.save(path)
     return path

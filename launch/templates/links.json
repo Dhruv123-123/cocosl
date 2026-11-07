@@ -1,0 +1,13 @@
+{
+  "_how": "Paste each link once it exists (see SETUP.md), then rebuild: python launch/templates/build_templates.py",
+  "sheet_budget": "TODO: Google Sheets link ending in /copy",
+  "sheet_debt": "TODO: Google Sheets link ending in /copy",
+  "sheet_savings": "TODO: Google Sheets link ending in /copy",
+  "notion_budget": "TODO: published Notion page link (Duplicate as template on)",
+  "notion_debt": "TODO: published Notion page link (Duplicate as template on)",
+  "notion_savings": "TODO: published Notion page link (Duplicate as template on)",
+  "notion_hq": "TODO: published Notion page link (Duplicate as template on)",
+  "notion_starter": "TODO: published Notion page link (Duplicate as template on)",
+  "store": "TODO: your Gumroad store URL",
+  "newsletter": "TODO: your newsletter sign-up URL"
+}
