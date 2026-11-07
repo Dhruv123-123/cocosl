@@ -64,7 +64,7 @@ def test_caption_txt_has_disclosures(factory):
 
 def test_export_writes_pack(factory, tmp_path):
     from contentfactory.pack import export
-    items = [i for i in _items() if i["format"] == "carousel"][:1] + [i for i in _items() if i["format"] == "short"][:1]
+    items = [i for i in _items() if i["format"] == "carousel"][:1] + [i for i in _items() if i["format"] == "short" and not i.get("tiktok_extra")][:1]
     res = export(factory, "money-made-simple", items, tmp_path / "pack", date(2026, 11, 21), 3)
     out = tmp_path / "pack"
     assert res["posts"] == 2 and res["block"] == 0
@@ -185,3 +185,52 @@ def test_youtube_series_is_long_form_and_tagged():
         text = " ".join([sc["hook"], sc["caption"], sc["description"]] + [s["narration"] for s in sc["segments"]])
         for pat in HYPE_PATTERNS + TESTIMONIAL_PATTERNS:
             assert not re.search(pat, text, re.I), (sc["title"], pat)
+
+
+HOLIDAY = ROOT / "launch" / "money-made-simple" / "holiday-2026"
+# (part, start, days): part 1 covers Nov 20 – Dec 19, part 2 Dec 21 – Dec 31 (Dec 20 is full in month 1).
+HOLIDAY_PARTS = [("part-1", date(2026, 11, 20), 30), ("part-2", date(2026, 12, 21), 11)]
+HOLIDAY_DAYS = {"short": "wed,sun", "carousel": "sun"}
+
+
+def test_holiday_addon_fills_open_days_only(factory):
+    """The holiday add-on posts only where months 1–2 leave room under the per-platform daily cap."""
+    brand = factory.brand("money-made-simple")
+    others = {i["script"]["title"].lower() for p in MONTHS + [EVERGREEN, SERIES] for i in _items(p)}
+    busy = {}
+
+    def count(slots):
+        for s in slots:
+            for p in s.platforms:
+                busy[(s.when.date(), p)] = busy.get((s.when.date(), p), 0) + 1
+
+    count(plan(brand, _items(MONTHS[0]), date(2026, 11, 21), 30)[0])
+    count(plan(brand, _items(ROOT / "launch" / "money-made-simple" / "month-2" / "content.json"),
+               date(2026, 12, 21), 31, {"carousel": "mon,tue,wed,thu,fri"})[0])
+    titles = []
+    for part, start, days in HOLIDAY_PARTS:
+        items = _items(HOLIDAY / part / "content.json")
+        titles += [i["script"]["title"].lower() for i in items]
+        for it in (i for i in items if i["format"] == "short"):
+            assert it["format_style"]
+            assert est_seconds([s["narration"] for s in it["script"]["segments"]]) <= 50
+            assert 55 <= est_seconds([s["narration"] for s in tiktok_segments(it)]) <= 90
+            assert any(ch.isdigit() for ch in it["script"]["hook"])
+            if "fictional" in it["idea_angle"].lower():
+                assert "Fictional example" in it["script"]["caption"]
+        slots, leftover = plan(brand, items, start, days, HOLIDAY_DAYS)
+        assert not leftover
+        count(slots)
+        styles = [items[s.index]["format_style"] for s in slots if s.fmt == "short"]
+        assert all(a != b for a, b in zip(styles, styles[1:]))
+    assert len(titles) == len(set(titles)) and not others & set(titles)
+    assert max(busy.values()) <= brand.cadence.max_posts_per_day_per_platform
+
+
+def test_month1_tiktok_long_cuts():
+    shorts = [i for i in _items(MONTHS[0]) if i["format"] == "short" and i.get("tiktok_extra")]
+    assert len(shorts) >= 11
+    for it in shorts:
+        cut = [s["narration"] for s in tiktok_segments(it)]
+        assert 65 <= est_seconds(cut) <= 90
+        assert cut[-1] == it["script"]["segments"][-1]["narration"]

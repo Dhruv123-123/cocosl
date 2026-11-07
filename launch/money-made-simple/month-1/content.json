@@ -59,7 +59,39 @@
    ]
   },
   "hook_template": "stop-doing",
-  "format_style": "explainer"
+  "format_style": "explainer",
+  "tiktok_extra": [
+   {
+    "heading": "Your number",
+    "narration": "Not sure where to set the threshold? Look at your last three impulse buys. Set the number just below the smallest one you regret.",
+    "on_screen_text": "Set it below your regrets",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small dial. No text, no logos, no real people."
+   },
+   {
+    "heading": "Why it works",
+    "narration": "Stores design checkout to be fast on purpose. Saved cards, one-click buttons and free-shipping bars all shorten the time between wanting and paying.",
+    "on_screen_text": "Checkout is built to be fast",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a cart with a lightning bolt. No text, no logos, no real people."
+   },
+   {
+    "heading": "Make it easy",
+    "narration": "Make waiting easy: remove saved cards from shopping sites, and log out of store apps for the holiday season.",
+    "on_screen_text": "Remove saved cards",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card with a cross. No text, no logos, no real people."
+   },
+   {
+    "heading": "Next day",
+    "narration": "Next day, most carts look different. You'll still buy some things, and you'll feel good about those.",
+    "on_screen_text": "Tomorrow, decide calmly",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sunrise over a cart. No text, no logos, no real people."
+   },
+   {
+    "heading": "Track it",
+    "narration": "Keep a note of what you skipped and how much. By January it's a satisfying number.",
+    "on_screen_text": "Track what you skipped",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a list. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
@@ -129,7 +161,27 @@
     "Opening a card usually involves a hard inquiry"
    ]
   },
-  "format_style": "explainer"
+  "format_style": "explainer",
+  "tiktok_extra": [
+   {
+    "heading": "The math",
+    "narration": "Example: twenty percent off a two-hundred-dollar order saves forty dollars. Carry that two hundred for a year at near thirty percent and the interest is about sixty.",
+    "on_screen_text": "Save $40 · pay ~$60 interest",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two coin stacks compared. No text, no logos, no real people."
+   },
+   {
+    "heading": "Pressure",
+    "narration": "Cashiers are often asked to offer the card. A simple 'no thanks' is enough. You don't need a reason.",
+    "on_screen_text": "'No thanks' is enough",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble. No text, no logos, no real people."
+   },
+   {
+    "heading": "If you do",
+    "narration": "If you do open one, set autopay for the full statement balance, and put the promo end date in your calendar.",
+    "on_screen_text": "Autopay in full + calendar",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a pin. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
@@ -338,7 +390,39 @@
    ]
   },
   "hook_template": "question-you-asked",
-  "format_style": "question-reply"
+  "format_style": "question-reply",
+  "tiktok_extra": [
+   {
+    "heading": "Debit risk",
+    "narration": "If a plan pulls from debit and your balance is low that day, you could pay a late fee and an overdraft fee for one payment. Link a card you pay in full, or keep a buffer.",
+    "on_screen_text": "Keep a buffer",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small cushion under a coin. No text, no logos, no real people."
+   },
+   {
+    "heading": "Stacking",
+    "narration": "Here's how stacking looks. Four plans at fifty dollars each, all due the same week, is two hundred dollars, on top of rent and groceries.",
+    "on_screen_text": "4 plans × $50 = $200/week",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four small calendars. No text, no logos, no real people."
+   },
+   {
+    "heading": "Returns",
+    "narration": "Returned something? The plan may keep charging until the refund is processed. Keep paying, and follow up.",
+    "on_screen_text": "Returns can lag",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a box with a clock. No text, no logos, no real people."
+   },
+   {
+    "heading": "Calendar",
+    "narration": "Put every payment date in your calendar the moment you check out.",
+    "on_screen_text": "Calendar every date",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with pins. No text, no logos, no real people."
+   },
+   {
+    "heading": "Better",
+    "narration": "If you're reaching for pay later for a gift, a cheaper gift paid in cash is usually the kinder choice for January you.",
+    "on_screen_text": "Cheaper gift, cash",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small gift with a coin. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
@@ -406,7 +490,39 @@
    ]
   },
   "hook_template": "the-one-question",
-  "format_style": "explainer"
+  "format_style": "explainer",
+  "tiktok_extra": [
+   {
+    "heading": "Not about money",
+    "narration": "And remember, people rarely remember the price. They remember that you thought of them. A note with the gift goes a long way.",
+    "on_screen_text": "Add a note",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card with a heart. No text, no logos, no real people."
+   },
+   {
+    "heading": "Shop early",
+    "narration": "Buying early, with your list, is how you avoid paying for rush shipping in the last week.",
+    "on_screen_text": "Shop early",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a gift. No text, no logos, no real people."
+   },
+   {
+    "heading": "Forgotten",
+    "narration": "Add a line for wrapping, cards and shipping. That's often thirty to fifty dollars people forget.",
+    "on_screen_text": "Wrapping + shipping line",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. wrapping paper and a stamp. No text, no logos, no real people."
+   },
+   {
+    "heading": "Talk",
+    "narration": "Big family? Suggest a gift exchange or a price limit early. Most people are relieved someone asked.",
+    "on_screen_text": "Suggest a limit early",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two speech bubbles. No text, no logos, no real people."
+   },
+   {
+    "heading": "Track",
+    "narration": "Write what you actually spend next to each name. Over on one? Take it from another name on purpose.",
+    "on_screen_text": "Track spent vs budget",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list with coins. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
@@ -541,7 +657,33 @@
    ]
   },
   "hook_template": "myth-check",
-  "format_style": "myth-vs-fact"
+  "format_style": "myth-vs-fact",
+  "tiktok_extra": [
+   {
+    "heading": "New cards",
+    "narration": "Opening several new cards in a short time is different. That can lower your average account age and look riskier to lenders.",
+    "on_screen_text": "Many new cards = different",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. several cards fanned out. No text, no logos, no real people."
+   },
+   {
+    "heading": "Freeze",
+    "narration": "Not applying for anything? A free credit freeze stops new accounts being opened in your name. Lift it when you need to apply.",
+    "on_screen_text": "Freeze when not applying",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lock on a report. No text, no logos, no real people."
+   },
+   {
+    "heading": "Check",
+    "narration": "Check your reports for inquiries you don't recognize. That can be an early sign of identity theft.",
+    "on_screen_text": "Spot unknown inquiries",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a report. No text, no logos, no real people."
+   },
+   {
+    "heading": "Bottom line",
+    "narration": "Shopping for a better rate is usually worth a few temporary points. Shop within a short window.",
+    "on_screen_text": "Rate shop in a short window",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small calendar. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
@@ -675,7 +817,33 @@
    ]
   },
   "hook_template": "free-money-left",
-  "format_style": "explainer"
+  "format_style": "explainer",
+  "tiktok_extra": [
+   {
+    "heading": "Find it",
+    "narration": "Not sure what's eligible? Many FSA providers have a list on their site or app. Search before you buy.",
+    "on_screen_text": "Check your provider's list",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a list. No text, no logos, no real people."
+   },
+   {
+    "heading": "Receipts",
+    "narration": "Keep receipts. Some FSA cards ask you to prove a purchase was eligible later.",
+    "on_screen_text": "Keep receipts",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a receipt. No text, no logos, no real people."
+   },
+   {
+    "heading": "Book now",
+    "narration": "Eye exams and dental cleanings fill up in December. Book this week if you need one.",
+    "on_screen_text": "Book appointments now",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a tooth. No text, no logos, no real people."
+   },
+   {
+    "heading": "HSA is different",
+    "narration": "Have an HSA instead? That money generally rolls over and stays yours, so there's no year-end rush.",
+    "on_screen_text": "HSA rolls over",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with an arrow. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
@@ -803,7 +971,33 @@
    ]
   },
   "hook_template": "tonight-in-minutes",
-  "format_style": "on-screen-calculation"
+  "format_style": "on-screen-calculation",
+  "tiktok_extra": [
+   {
+    "heading": "No luck?",
+    "narration": "If they won't move, ask whether you qualify for any balance transfer offers, or a hardship plan if money is tight. Write down who you spoke to and when.",
+    "on_screen_text": "Ask about other options",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a notebook and a phone. No text, no logos, no real people."
+   },
+   {
+    "heading": "Script",
+    "narration": "Keep it short: 'I've been a customer for two years and always pay on time. Other cards are offering lower rates. Can you lower my APR?'",
+    "on_screen_text": "Use a short script",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a speech bubble. No text, no logos, no real people."
+   },
+   {
+    "heading": "Best time",
+    "narration": "It tends to work better with a good payment history, so call after a few on-time months.",
+    "on_screen_text": "Call after on-time months",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with check marks. No text, no logos, no real people."
+   },
+   {
+    "heading": "Then",
+    "narration": "If it works, put the savings toward the balance. Fifteen dollars a month extra pays it down faster.",
+    "on_screen_text": "Put savings on the balance",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin going into a card. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
@@ -866,7 +1060,39 @@
    ]
   },
   "hook_template": "myth-check",
-  "format_style": "myth-vs-fact"
+  "format_style": "myth-vs-fact",
+  "tiktok_extra": [
+   {
+    "heading": "Timing",
+    "narration": "A December change shows up on your first January paychecks, so you start the new year with the right amount coming out.",
+    "on_screen_text": "Fix now, right in January",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a paycheck. No text, no logos, no real people."
+   },
+   {
+    "heading": "Refund plan",
+    "narration": "Prefer a refund anyway? That's fine. Just choose the size on purpose.",
+    "on_screen_text": "Refund size: on purpose",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small dial. No text, no logos, no real people."
+   },
+   {
+    "heading": "Owe instead?",
+    "narration": "The opposite problem matters too. If you owed a lot last April, the estimator can raise withholding so you don't again.",
+    "on_screen_text": "Owed last year? Adjust",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with an arrow. No text, no logos, no real people."
+   },
+   {
+    "heading": "Two jobs",
+    "narration": "Two jobs or a working spouse is the most common reason withholding is off. The estimator handles that.",
+    "on_screen_text": "2 jobs? Use the estimator",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two buildings. No text, no logos, no real people."
+   },
+   {
+    "heading": "Side income",
+    "narration": "Side income with no withholding can be covered by extra withholding at your main job instead of quarterly payments.",
+    "on_screen_text": "Cover side income",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop and a paycheck. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
@@ -1005,7 +1231,27 @@
    ]
   },
   "hook_template": "x-vs-y-real-math",
-  "format_style": "explainer"
+  "format_style": "explainer",
+  "tiktok_extra": [
+   {
+    "heading": "Check",
+    "narration": "Check whether the promo rate applies to transfers only, and when the transfer has to happen to qualify.",
+    "on_screen_text": "Read the promo terms",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a document with a magnifying glass. No text, no logos, no real people."
+   },
+   {
+    "heading": "Credit",
+    "narration": "A new card means a hard inquiry, usually a small, temporary dip. Worth it if the math works.",
+    "on_screen_text": "Small inquiry dip",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a report with a tiny dip. No text, no logos, no real people."
+   },
+   {
+    "heading": "Autopay",
+    "narration": "Set autopay for the monthly number you worked out, not the minimum. Minimums won't clear it before the promo ends.",
+    "on_screen_text": "Autopay your number",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small gear and a card. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
@@ -1398,7 +1644,33 @@
    ]
   },
   "hook_template": "myth-check",
-  "format_style": "myth-vs-fact"
+  "format_style": "myth-vs-fact",
+  "tiktok_extra": [
+   {
+    "heading": "Rebalance",
+    "narration": "Once a year, check your mix still matches your plan. A target-date fund does this for you.",
+    "on_screen_text": "Check your mix yearly",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale with two baskets. No text, no logos, no real people."
+   },
+   {
+    "heading": "Emergency fund",
+    "narration": "The real protection is an emergency fund, so you never have to sell during a drop to pay a bill.",
+    "on_screen_text": "Emergency fund = protection",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small umbrella over a jar. No text, no logos, no real people."
+   },
+   {
+    "heading": "Stop checking",
+    "narration": "Checking every day makes drops feel worse. Many long-term investors check a few times a year.",
+    "on_screen_text": "Check less often",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone face down. No text, no logos, no real people."
+   },
+   {
+    "heading": "Risk",
+    "narration": "Investing does involve risk, and past patterns don't promise future results. That's why time and diversification matter.",
+    "on_screen_text": "Risk is real · time helps",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a basket of many small items. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
