@@ -15,7 +15,7 @@ We don't do overhauls. We do **one money move a week**: one specific thing you c
 
 ## How it's made
 
-We use AI tools to help with visuals, voice and first drafts. A human chooses every topic, checks every number against primary sources (the IRS, CFPB, FDIC, FTC and Investor.gov) and approves each article, video and email before it goes out. Every article lists its sources.
+We use AI tools to help with visuals, voice and first drafts. A human chooses every topic, checks every number against primary sources (the IRS, CFPB, FDIC, FTC and Investor.gov) and approves each article, video and email before it goes out. Every article lists its sources. [Who edits the site](/about/editor/).
 
 ## What we won't do
 

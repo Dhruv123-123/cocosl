@@ -1,8 +1,8 @@
 ---
-title: Ally Bank review: the simple online bank with savings buckets
-seo_title: Ally Bank review: savings buckets, fees and who it suits
+title: Ally Bank: what to know about the online bank with savings buckets
+seo_title: Ally Bank: savings buckets, fees and who it suits
 description: Ally is an online bank with no minimums, no monthly fees and savings buckets for each goal. What's good and what to watch.
-date: 2026-11-07
+date: 2026-11-27
 pillar: money-tools
 keyword: ally bank review
 read_minutes: 6
@@ -12,7 +12,7 @@ sources: [https://www.ally.com/bank/online-savings-account/, https://www.ally.co
 ---
 Ally Bank is one of the longest-running online banks in the US. It's not usually the single highest rate on the market, but it's simple: no minimum to open, no monthly fees, and tools that make saving for several goals easy.
 
-*How we review: based on Ally's published terms, checked in November 2026. We haven't been paid for this review and haven't tested the account. Check the current rates on Ally's site.*
+*How we wrote this: based on Ally's published terms, checked in November 2026. We haven't been paid for this overview and haven't tested the account. Check the current rates on Ally's site.*
 
 Comparing banks? See our **[high-yield savings comparison](/compare/best-high-yield-savings-accounts/)**.
 

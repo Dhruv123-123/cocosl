@@ -2,7 +2,7 @@
 title: Are robo-advisers worth it? The fee maths over 30 years
 seo_title: Are robo-advisors worth it? The fee maths over 30 years
 description: A robo-adviser's yearly fee looks tiny but compounds. What it costs over decades and the three cases where it's worth paying.
-date: 2026-11-07
+date: 2026-11-09
 pillar: investing
 keyword: are robo advisors worth it
 read_minutes: 7
@@ -28,7 +28,7 @@ Illustration with assumed numbers (not a prediction): you invest $300 a month fo
 
 That difference is the price of 30 years of automatic investing, rebalancing and the app. It can be worth paying. It's just bigger than "0.25%" suggests. Fund expense ratios come on top in both cases. [Why fees compound](/blog/expense-ratios-explained/).
 
-Watch for **flat monthly fees** on small balances too: $4 a month on a $1,000 balance is 4.8% a year. [Our Betterment review](/blog/betterment-review/) runs those numbers.
+Watch for **flat monthly fees** on small balances too: $4 a month on a $1,000 balance is 4.8% a year. [Our Betterment overview](/blog/betterment-review/) runs those numbers.
 
 For the side-by-side of Betterment, Wealthfront, Schwab and Vanguard (fees, minimums, account types), see our **[robo-advisor comparison](/compare/best-robo-advisors/)**.
 

@@ -2,7 +2,7 @@
 title: The cheapest ways to file a simple tax return (start with the free ones)
 seo_title: Cheapest way to file a simple tax return (free first)
 description: For a simple return you may pay nothing. VITA, IRS Free File, FreeTaxUSA and TaxAct compared, and how to avoid surprise fees.
-date: 2026-11-07
+date: 2026-12-15
 pillar: money-tools
 keyword: best tax software for simple returns
 read_minutes: 6
@@ -28,7 +28,7 @@ The IRS Direct File pilot wasn't offered for the 2026 filing season. Check IRS.g
 
 | | Federal | State | Note |
 |---|---|---|---|
-| [FreeTaxUSA](/go/freetaxusa/) | Free, including freelance income | A fee per state (about $15–$16 last season) | Best value if you don't qualify for free options. [Our review](/blog/freetaxusa-review/) |
+| [FreeTaxUSA](/go/freetaxusa/) | Free, including freelance income | A fee per state (about $15–$16 last season) | Best value if you don't qualify for free options. [Our overview](/blog/freetaxusa-review/) |
 | [TaxAct](/go/taxact/) | Free tier for simple returns | Extra on paid tiers | Paid tiers add more forms and support; check what the free tier covers |
 
 ## How to avoid paying by accident

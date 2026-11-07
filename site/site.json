@@ -15,6 +15,12 @@
     "TikTok": "https://www.tiktok.com/@moneymadesimple"
   },
   "contact_email": "hello@example.com",
+  "editor": {
+    "_note": "The person who edits and fact-checks every article. Replace name and bio with the real editor (true statements only, no credentials they don't have), then set placeholder to false: articles then name them as author.",
+    "name": "The Money Made Simple editor",
+    "placeholder": true,
+    "bio": "This page will introduce the person who edits Money Made Simple: who they are, why they write about money, and what they do and don't have expertise in. Until then, here's what the editor does on every page."
+  },
   "email": {
     "provider": "netlify",
     "action": "",

@@ -2,7 +2,7 @@
 title: High-yield savings vs money market account vs CD: which one for your savings?
 seo_title: High-yield savings vs money market vs CD, explained
 description: Three insured places for cash, three trade-offs. What each is, when each wins, and why a money market fund is different.
-date: 2026-11-07
+date: 2026-11-26
 pillar: money-tools
 keyword: high yield savings vs money market
 read_minutes: 6

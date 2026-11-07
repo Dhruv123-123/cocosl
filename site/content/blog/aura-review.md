@@ -1,8 +1,8 @@
 ---
-title: Aura review: is identity theft protection worth paying for?
-seo_title: Aura review: is identity theft protection worth it?
+title: Aura: is identity theft protection worth paying for?
+seo_title: Aura identity protection: is it worth paying for?
 description: What Aura's credit monitoring, insurance and security tools add, what you can do yourself for free, and who should pay.
-date: 2026-11-07
+date: 2026-12-08
 pillar: credit-and-debt
 keyword: aura identity theft protection review
 read_minutes: 7
@@ -12,7 +12,7 @@ sources: [https://www.aura.com/, https://www.aura.com/pricing, https://www.ident
 ---
 Aura is an all-in-one identity theft protection service: credit monitoring across all three bureaus, alerts if your details show up in data breaches, identity theft insurance, and security tools like a VPN and antivirus. The honest question isn't "is Aura good" but **"do you need to pay for this at all?"** Some of the most powerful protections are free.
 
-*How we review: based on Aura's published plans and features, checked in November 2026. We haven't been paid for this review and haven't tested the service. Check the current plans before buying.*
+*How we wrote this: based on Aura's published plans and features, checked in November 2026. We haven't been paid for this overview and haven't tested the service. Check the current plans before buying.*
 
 For how Aura stacks up against LifeLock, Identity Guard and the free steps, see our **[identity theft protection comparison](/compare/best-identity-theft-protection/)**.
 

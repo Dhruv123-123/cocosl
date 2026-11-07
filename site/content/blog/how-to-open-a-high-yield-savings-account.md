@@ -2,7 +2,7 @@
 title: How to move your savings to a high-yield account in 15 minutes
 seo_title: How to open a high-yield savings account in 15 minutes
 description: Step by step: what to check, how to link and transfer, how long it takes, and the setup that keeps your emergency fund growing.
-date: 2026-11-07
+date: 2026-11-12
 pillar: money-tools
 keyword: how to open a high yield savings account
 read_minutes: 6
@@ -47,7 +47,7 @@ Rates move with the economy, so plug in today's numbers. The point is the size o
 - **Chasing every rate change.** Moving accounts for 0.1% isn't worth your time. Check the rate twice a year.
 - **Keeping the HYSA one tap away from spending.** A separate bank from your checking adds a helpful day of friction.
 
-Want a specific bank? Our reviews: [SoFi](/blog/sofi-review/), [CIT Bank](/blog/cit-bank-review/), [Ally](/blog/ally-bank-review/). Weighing a CD or money market account instead? [Here's the difference](/blog/high-yield-savings-vs-money-market/).
+Want a specific bank? Our overviews: [SoFi](/blog/sofi-review/), [CIT Bank](/blog/cit-bank-review/), [Ally](/blog/ally-bank-review/). Weighing a CD or money market account instead? [Here's the difference](/blog/high-yield-savings-vs-money-market/).
 
 ## Common questions
 

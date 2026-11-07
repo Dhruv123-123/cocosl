@@ -2,7 +2,7 @@
 title: Best credit-builder cards and tools for no or thin credit
 seo_title: Best credit-builder cards (Nov 2026): secured cards vs credit-builder accounts compared
 description: Secured cards, credit-builder cards and credit-builder loans compared by deposit, fees, credit check and upgrade path, plus the rules that actually build a score.
-date: 2026-11-07
+date: 2026-11-23
 as_of: November 7, 2026
 short: Credit-builder cards
 order: 3

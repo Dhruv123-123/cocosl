@@ -1,8 +1,8 @@
 ---
-title: Acorns review: round-ups are a great habit, but check the fee maths
-seo_title: Acorns review: round-ups, fees and the small-balance catch
+title: Acorns: round-ups are a great habit, but check the fee maths
+seo_title: Acorns explained: round-ups, fees and the small-balance catch
 description: Acorns invests your spare change for a flat monthly fee. How the tiers work, why the fee hurts small balances, and who it suits.
-date: 2026-11-07
+date: 2026-12-11
 pillar: investing
 keyword: acorns review
 read_minutes: 6
@@ -13,7 +13,7 @@ sources: [https://www.acorns.com/pricing/, https://www.acorns.com/disclosures/, 
 ---
 Acorns is an investing app built around round-ups: every time you buy something, it rounds up to the nearest dollar and invests the spare change. It's a clever way to start a habit. The cost is a **flat monthly subscription**, which is expensive as a percentage on a small balance.
 
-*How we review: based on Acorns' published pricing and disclosures, checked in November 2026. We haven't been paid for this review. General education, not investment advice. Investing involves risk, including loss of principal.*
+*How we wrote this: based on Acorns' published pricing and disclosures, checked in November 2026. We haven't been paid for this overview. General education, not investment advice. Investing involves risk, including loss of principal.*
 
 Comparing ways to automate investing? See our **[robo-advisor comparison](/compare/best-robo-advisors/)**.
 

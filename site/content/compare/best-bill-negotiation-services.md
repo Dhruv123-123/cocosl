@@ -2,7 +2,7 @@
 title: Bill negotiation services vs doing it yourself (with scripts)
 seo_title: Bill negotiation services compared: Rocket Money vs DIY calls (with scripts)
 description: Bill negotiation services take a cut of what they save you. Here's how the fee works, which bills they can and can't lower, and the free scripts to do it yourself in 15 minutes.
-date: 2026-11-07
+date: 2026-11-30
 as_of: November 7, 2026
 short: Bill negotiation
 order: 5

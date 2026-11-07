@@ -14,7 +14,7 @@ SITE = Path(__file__).resolve().parents[1] / "site"
 
 def _build(tmp_path, url, **env):
     out = tmp_path / "public"
-    e = {**os.environ, "SITE_OUT": str(out), "SITE_URL": url, **env}
+    e = {**os.environ, "SITE_OUT": str(out), "SITE_URL": url, "BLOG_SHOW_SCHEDULED": "1", **env}
     e.pop("URL", None)
     subprocess.run([sys.executable, str(SITE / "build.py")], check=True, env=e, capture_output=True)
     return out
@@ -225,7 +225,7 @@ def test_salary_and_city_pages(tmp_path):
     assert round(pseo.take_home(rules, 80000, "NY", "nyc")["local"], 2) == 2665.89
     assert pseo.take_home(rules, 80000, "TX")["state"] == 0
     assert round(pseo.take_home(rules, 60000, "PA", "philadelphia")["local"], 2) == round(60000 * 0.03735, 2)
-    assert len(cdata["cities"]) == 25 and len(pseo.SALARIES) == 20
+    assert len(cdata["cities"]) == 25 and len(pseo.SALARIES) == 8
 
     out = _build(tmp_path, "https://example.org")
     sitemap = (out / "sitemap.xml").read_text()
@@ -241,7 +241,7 @@ def test_salary_and_city_pages(tmp_path):
         assert len(main.split()) > 600, f"{p} is thin"
         bodies.append(set(main.split()))
     # No two pages are near-duplicates: compare word sets pairwise within each family.
-    for fam in (bodies[:20], bodies[20:]):
+    for fam in (bodies[:8], bodies[8:]):
         for i in range(len(fam)):
             for j in range(i + 1, len(fam)):
                 assert len(fam[i] & fam[j]) / len(fam[i] | fam[j]) < 0.9
@@ -249,6 +249,21 @@ def test_salary_and_city_pages(tmp_path):
     assert "$1,530" in austin and "no state income tax" in austin
     sf = (out / "cost-of-living" / "san-francisco" / "index.html").read_text()
     assert "the highest of the 25 largest US cities" in sf
+    # Each salary page has its own hand-written example; each city its own sourced local fact.
+    for s in pseo.SALARIES:
+        h = (out / "budget" / f"{s}-salary" / "index.html").read_text()
+        assert 'id="example"' in h
+        th = pseo.take_home(rules, s)["month"]
+        ex = pseo.load_examples()[s]
+        assert pseo.money(th) in ex, f"worked example for {s} doesn't match the take-home maths ({pseo.money(th)})"
+    for c in cdata["cities"]:
+        h = (out / "cost-of-living" / c["slug"] / "index.html").read_text()
+        assert c["local_fact"]["source"].replace("&", "&amp;") in h and 'id="getting-around"' in h
+    # Retired salary URLs redirect to the nearest band, with a real 301 on Netlify.
+    rd = (out / "_redirects").read_text()
+    for old, new in pseo.SALARY_REDIRECTS.items():
+        assert f"/budget/{old}-salary/ /budget/{new}-salary/ 301!" in rd
+        assert f"/budget/{old}-salary/" not in sitemap
     assert (out / "budget" / "index.html").exists() and (out / "cost-of-living" / "index.html").exists()
 
 
@@ -278,19 +293,46 @@ def test_shop_and_debt_pages(tmp_path):
     assert 'href="/shop/"' in (out / "index.html").read_text()  # nav
 
     sitemap = (out / "sitemap.xml").read_text()
-    bodies = []
+    h = (out / "debt-payoff" / "index.html").read_text()
+    assert 'id="debt-calc"' in h and "/debt-calc.js" in h and '"@type": "FAQPage"' in h
+    for t in pseo.EXAMPLES:
+        assert f'id="example-{t}"' in h
+    assert "$2,931" in h and "$3,005" in h  # the $15k example, same numbers as payoff()
+    rd = (out / "_redirects").read_text()
     for t in pseo.DEBT_LEVELS:
-        p = out / "debt-payoff" / f"{t}-debt" / "index.html"
-        h = p.read_text()
-        assert "/calculators/debt-payoff/?d=" in h and '"@type": "FAQPage"' in h
-        assert f"/debt-payoff/{t}-debt/" in sitemap
-        assert "Avalanche" in h and "Snowball" in h and "End of year 1" in h
-        main = re.sub(r"<[^>]+>", " ", h[h.index("<h1"):h.index('class="disclaimer"')])
-        assert len(main.split()) > 600, p
-        bodies.append(set(main.split()))
-    for i in range(len(bodies)):
-        for j in range(i + 1, len(bodies)):
-            assert len(bodies[i] & bodies[j]) / len(bodies[i] | bodies[j]) < 0.9
+        assert f"/debt-payoff/{t}-debt/ /debt-payoff/ 301!" in rd and f"/debt-payoff/{t}-debt/" not in sitemap
+    # The in-page calculator (static/debt-calc.js) gives the same answer as pseo.payoff().
+    js = (SITE / "static" / "debt-calc.js").read_text()
+    assert "function payoff(" in js and "b.apr - a.apr" in js
+
+
+def test_scheduled_articles_stay_hidden_until_their_date(tmp_path):
+    out = _build(tmp_path, "https://example.org", BUILD_DATE="2026-11-07", BLOG_SHOW_SCHEDULED="0")
+    assert (out / "blog" / "debt-avalanche-vs-snowball" / "index.html").exists()
+    assert not (out / "blog" / "ynab-review" / "index.html").exists()  # dated 2026-11-13
+    sitemap = (out / "sitemap.xml").read_text()
+    assert "/blog/ynab-review/" not in sitemap
+    # Links to a scheduled article render as plain text, so nothing 404s in between.
+    for page in out.rglob("*.html"):
+        assert 'href="/blog/ynab-review/"' not in page.read_text(), page
+    later = _build(tmp_path / "later", "https://example.org", BUILD_DATE="2026-12-31", BLOG_SHOW_SCHEDULED="0")
+    assert (later / "blog" / "ynab-review" / "index.html").exists()
+    dates = [build_meta_date(f) for f in (SITE / "content" / "blog").glob("*.md")]
+    assert len(set(dates)) >= 15  # not all on one day
+
+
+def build_meta_date(f):
+    import re as _re
+    return _re.search(r"^date: (.+)$", f.read_text(), _re.M).group(1)
+
+
+def test_editor_byline_and_overviews(tmp_path):
+    out = _build(tmp_path, "https://example.org")
+    art = (out / "blog" / "ynab-review" / "index.html").read_text()
+    assert 'href="/about/editor/"' in art and (out / "about" / "editor" / "index.html").exists()
+    for f in (SITE / "content" / "blog").glob("*-review.md"):
+        title = re.search(r"^title: (.+)$", f.read_text(), re.M).group(1)
+        assert "review" not in title.lower(), f"{f.name}: untested products are overviews, not reviews"
 
 
 def test_email_capture_ab_test(tmp_path):

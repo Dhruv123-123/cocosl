@@ -2,7 +2,7 @@
 title: Identity theft protection services: what you get for the money (and the free version)
 seo_title: Best identity theft protection (Nov 2026): Aura vs LifeLock vs Identity Guard vs free options
 description: What paid identity theft protection actually does, what it can't do, and how Aura, LifeLock, Identity Guard and Experian compare with the free steps that prevent most new-account fraud.
-date: 2026-11-07
+date: 2026-12-07
 as_of: November 7, 2026
 short: Identity theft protection
 order: 6

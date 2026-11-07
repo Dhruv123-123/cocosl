@@ -1,8 +1,8 @@
 ---
-title: FreeTaxUSA review: free federal filing that's actually free
-seo_title: FreeTaxUSA review: is the free federal return free?
+title: FreeTaxUSA: free federal filing that's actually free
+seo_title: FreeTaxUSA: is the free federal return really free?
 description: FreeTaxUSA files federal returns free, including freelance income, and charges a small state fee. What's included and what isn't.
-date: 2026-11-07
+date: 2026-12-17
 pillar: money-tools
 keyword: freetaxusa review
 read_minutes: 6
@@ -12,7 +12,7 @@ sources: [https://www.freetaxusa.com/, https://www.freetaxusa.com/prices, https:
 ---
 FreeTaxUSA is an online tax-prep service whose federal return is free for most situations, including freelance income, rental income and itemised deductions, which other "free" products often charge for. You pay a modest fee for a state return and for optional extras.
 
-*How we review: based on FreeTaxUSA's published pricing and features for the most recent filing season, checked in November 2026. We haven't been paid for this review. Prices for next season may change; check the pricing page. Not tax advice.*
+*How we wrote this: based on FreeTaxUSA's published pricing and features for the most recent filing season, checked in November 2026. We haven't been paid for this overview. Prices for next season may change; check the pricing page. Not tax advice.*
 
 ## The short version
 

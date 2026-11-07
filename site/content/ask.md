@@ -17,7 +17,7 @@ Gross pay is your salary before anything comes out. Take-home (net) pay is what 
 
 Budget from take-home, never from gross: the gap is usually 15–30%.
 
-**Work out yours:** [take-home pay calculator](calc:take-home-pay) · [budgets for 20 salaries](/budget/)
+**Work out yours:** [take-home pay calculator](calc:take-home-pay) · [budgets for 8 salary levels](/budget/)
 
 ### How do I budget when I'm paid every two weeks?
 
@@ -77,7 +77,7 @@ As a ceiling it's a reasonable guide; as a target it often isn't possible in big
 
 If you're over 30%, the budget still works if the rest is tight: no car payment, little debt, and savings that are automatic. Over 40% of gross is where most people run out of room for anything else. Roommates, a longer commute, or a cheaper neighbourhood are the levers that move the number most.
 
-**See the numbers:** [rent that fits 20 salaries](/budget/) · [one-bedroom rents in 25 cities](/cost-of-living/)
+**See the numbers:** [rent that fits each salary](/budget/) · [one-bedroom rents in 25 cities](/cost-of-living/)
 
 ### How much house can I afford on my salary?
 
@@ -135,7 +135,7 @@ Your account stays in good standing, but the balance can take many years to clea
 
 Your statement has a "Minimum Payment Warning" box showing how long minimums would take and what paying it off in three years would cost each month. That second number is a good starting target. Even a fixed $50 on top of the minimum shortens the payoff by a lot.
 
-**See the difference:** [debt payoff timelines](/debt-payoff/) · [$10,000 of debt, three ways](/debt-payoff/10000-debt/)
+**See the difference:** [debt payoff timelines](/debt-payoff/) · [$15,000 of debt, worked out](/debt-payoff/#example-15000)
 
 ### Should I use my savings to pay off a credit card?
 

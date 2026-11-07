@@ -5,7 +5,7 @@ name: Website (weekly Netlify rebuild)
 # then save its URL as the repo secret NETLIFY_BUILD_HOOK. Without the secret this job does nothing.
 on:
   schedule:
-    - cron: "0 14 * * 4"
+    - cron: "0 13 * * *"  # daily, so scheduled articles go live on their date
   workflow_dispatch:
 
 permissions: {}

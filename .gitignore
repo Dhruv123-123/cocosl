@@ -13,3 +13,4 @@ node_modules/
 build/
 dist/
 !site/content/data/
+site/pins/library/

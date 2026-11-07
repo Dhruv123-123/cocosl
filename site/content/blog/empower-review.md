@@ -1,8 +1,8 @@
 ---
-title: Empower Personal Dashboard review: free net-worth tracking, with a sales pitch attached
-seo_title: Empower Personal Dashboard review: free, with a pitch
+title: Empower Personal Dashboard: free net-worth tracking, with a sales pitch attached
+seo_title: Empower Personal Dashboard: what's free, and the pitch
 description: Empower's free dashboard tracks every account and flags investment fees. What it does well and how the paid-advice upsell works.
-date: 2026-11-07
+date: 2026-12-14
 pillar: investing
 keyword: empower personal dashboard review
 read_minutes: 6
@@ -13,7 +13,7 @@ sources: [https://www.empower.com/personal-investors/personal-dashboard, https:/
 ---
 Empower Personal Dashboard (the free tool that used to be called Personal Capital) links your bank, card, retirement and brokerage accounts and shows your whole net worth in one place. It's free because Empower also sells paid investment management, and it will offer it to you.
 
-*How we review: based on Empower's published features and disclosures, checked in November 2026. We haven't been paid for this review. This is general education, not investment advice.*
+*How we wrote this: based on Empower's published features and disclosures, checked in November 2026. We haven't been paid for this overview. This is general education, not investment advice.*
 
 Comparing robo-advisers and paid advice? See our **[robo-advisor comparison](/compare/best-robo-advisors/)**.
 

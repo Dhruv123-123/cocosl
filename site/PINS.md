@@ -1,6 +1,7 @@
 # Pinterest pins: 10 designs for the highest-value pages
 
-Rendered PNGs: `site/pins/` (made by `python3 site/tools/make_pins.py`, with `pins.csv` for upload).
+Rendered PNGs: `site/pins/` (made by `python3 site/tools/make_pins.py`, with `pins.csv` for upload). `--all` adds two
+designs for every shop product, comparison and article plus a 60-day posting schedule (`pins/schedule.csv`).
 
 Written Nov 7, 2026. Every number below comes from the page it links to (2026 tax figures, single filer, no
 state income tax, unless the pin says otherwise). If a page's numbers change, change the pin.
@@ -126,13 +127,13 @@ Boards to create: **Budgeting for beginners**, **Saving money tips**, **Debt pay
 ## 8. Salary hub: rent on your salary
 
 - **Links to:** `/budget/` · campaign `pin-budget-hub-1` · board: Budgeting for beginners
-- **Pin title:** How much rent can you afford? 20 salaries, real 2026 numbers
+- **Pin title:** How much rent can you afford? Real 2026 numbers by salary
 - **Image text:** headline "How much rent fits your salary?" · three rows "$50k → $1,250/mo · $60k → $1,500/mo ·
-  $75k → $1,875/mo" · note "30% of gross pay. Take-home, budgets and cities for 20 salaries →"
+  $75k → $1,875/mo" · note "30% of gross pay. Take-home, budgets and city rents for your salary →"
 - **Layout:** paper background, ink headline 92 px. Three wide rows (ink cards, 840 × 170 px) with the salary in
   paper 56 px on the left and the rent in gold 64 px on the right. Note under the cards in muted 32 px.
 - **Description:** The 30% rule in real dollars, plus take-home pay, a monthly plan and the big cities where a
-  one-bedroom fits, for 20 salaries from $25,000 to $200,000.
+  one-bedroom fits, from $30,000 to $200,000.
 - **Alt text:** Rent at 30% of gross pay: $1,250 a month on $50,000, $1,500 on $60,000, $1,875 on $75,000.
 
 ## 9. Shop: The Money Made Simple Toolkit

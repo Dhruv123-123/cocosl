@@ -113,6 +113,8 @@ def inline(s: str) -> str:
             return aff_link(href[4:], text)
         href = CFG.get("blog_redirects", {}).get(href.rstrip("/").rsplit("/", 1)[-1], href) \
             if href.startswith("/blog/") else href
+        if href.split("#")[0] in UNPUBLISHED:  # scheduled, not live yet: keep the words, drop the link
+            return text
         ext = href.startswith("http") and urlparse(href).netloc not in CFG["url"]
         rel = ' rel="noopener"' if ext else ""
         if "sponsored" in href or "/go/" in href:
@@ -127,6 +129,7 @@ def inline(s: str) -> str:
 
 
 AFF_USED: list[str] = []
+UNPUBLISHED: set[str] = set()  # paths of scheduled articles/comparisons not live at this build
 
 
 def aff_link(key: str, text: str) -> str:
@@ -419,7 +422,7 @@ def img_dims(image: str) -> str:
 
 def article_og(item: dict, section: str) -> dict:
     return {"article:published_time": item["date"], "article:modified_time": item.get("updated", item["date"]),
-            "article:author": CFG["name"], "article:section": section}
+            "article:author": editor()["name"], "article:section": section}
 
 
 def layout(*, title: str, description: str, path: str, body: str, og_type: str = "website",
@@ -493,6 +496,27 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
 """
 
 
+def editor() -> dict:
+    """site.json > editor: the person who edits and checks the site. placeholder: true until a real name is set."""
+    e = CFG.get("editor", {})
+    return {"name": e.get("name", f"The {CFG['name']} editor"), "placeholder": e.get("placeholder", True),
+            "bio": e.get("bio", ""), "path": "/about/editor/"}
+
+
+def author_ld() -> dict:
+    """Article author: the named editor once there is one, the organisation while the name is a placeholder."""
+    e = editor()
+    if e["placeholder"]:
+        return {"@type": "Organization", "name": CFG["name"], "url": CFG["url"] + "/"}
+    return {"@type": "Person", "name": e["name"], "url": absu(e["path"]),
+            "worksFor": {"@type": "Organization", "name": CFG["name"]}}
+
+
+def byline() -> str:
+    e = editor()
+    return f'Edited and fact-checked by <a href="{u(e["path"])}">{esc(e["name"])}</a>'
+
+
 def org_ld() -> dict:
     return {"@context": "https://schema.org", "@type": "Organization", "name": CFG["name"],
             "url": CFG["url"] + "/", "logo": absu("/img/logo.png"), "sameAs": list(CFG["socials"].values())}
@@ -520,9 +544,18 @@ def build() -> list[str]:
     urls: list[tuple[str, str]] = []
 
     redirects = CFG.get("blog_redirects", {})
-    posts = sorted((p for p in load_dir("blog") if p["slug"] not in redirects and p.get("status") != "draft"),
-                   key=lambda p: (p["date"], p.get("order", "")), reverse=True)
-    comps_by_slug = {c["slug"]: c for c in load_dir("compare")}
+    # Scheduled publishing: an article or comparison dated after the build date isn't built yet, and links to it
+    # render as plain text until it is (BUILD_DATE overrides today; BLOG_SHOW_SCHEDULED=1 builds everything).
+    build_day = os.environ.get("BUILD_DATE") or date.today().isoformat()
+    show_sched = os.environ.get("BLOG_SHOW_SCHEDULED") == "1"
+    live = lambda x: show_sched or str(x["date"]) <= build_day  # noqa: E731
+    all_posts = [p for p in load_dir("blog") if p["slug"] not in redirects and p.get("status") != "draft"]
+    all_comps = load_dir("compare")
+    UNPUBLISHED.clear()
+    UNPUBLISHED.update(f"/blog/{p['slug']}/" for p in all_posts if not live(p))
+    UNPUBLISHED.update(f"/compare/{c['slug']}/" for c in all_comps if not live(c))
+    posts = sorted((p for p in all_posts if live(p)), key=lambda p: (str(p["date"]), p.get("order", "")), reverse=True)
+    comps_by_slug = {c["slug"]: c for c in all_comps if live(c)}
     products_list = [p for p in load_dir("products") if p.get("status") != "draft"]
     products_list.sort(key=lambda p: int(p.get("order", 99)))
     products = {p["slug"]: p for p in products_list}
@@ -546,7 +579,7 @@ def build() -> list[str]:
             "description": p["description"], "datePublished": p["date"],
             "dateModified": p.get("updated", p["date"]), "mainEntityOfPage": absu(path),
             "image": absu(p.get("image", "/img/og-default.png")),
-            "author": {"@type": "Organization", "name": CFG["name"], "url": CFG["url"] + "/"},
+            "author": author_ld(),
             "publisher": org_ld(), "keywords": p.get("keyword", "")},
             {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
                 {"@type": "ListItem", "position": 1, "name": "Home", "item": CFG["url"] + "/"},
@@ -571,7 +604,7 @@ def build() -> list[str]:
   <p class="crumbs"><a href="{u('/')}">Home</a> / <a href="{u('/blog/')}">Articles</a> / <span>{esc(pillars.get(p.get('pillar', ''), 'Guide'))}</span></p>
   <h1>{esc(p['title'])}</h1>
   <p class="dek">{esc(p['description'])}</p>
-  <p class="meta">{fmt_date(p['date'])}{updated} · {esc(p.get('read_minutes', '6'))} min read · Reviewed by a human editor</p>
+  <p class="meta">{fmt_date(p['date'])}{updated} · {esc(p.get('read_minutes', '6'))} min read · {byline()}</p>
   {aff}
   {toc_html}
   <div class="prose">
@@ -590,7 +623,7 @@ def build() -> list[str]:
         urls.append((path, p.get("updated", p["date"])))
 
     # ---- comparison pages (affiliate)
-    comps = sorted(load_dir("compare"), key=lambda c: int(c.get("order", 99)))
+    comps = sorted((c for c in all_comps if live(c)), key=lambda c: int(c.get("order", 99)))
     for c in comps:
         path = f"/compare/{c['slug']}/"
         AFF_USED.clear()
@@ -617,7 +650,7 @@ def build() -> list[str]:
                "description": c["description"], "datePublished": c["date"],
                "dateModified": c.get("updated", c["date"]), "mainEntityOfPage": absu(path),
                "image": absu("/img/og-default.png"),
-               "author": {"@type": "Organization", "name": CFG["name"], "url": CFG["url"] + "/"},
+               "author": author_ld(),
                "publisher": org_ld()}]
         if faq:
             ld.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
@@ -633,6 +666,7 @@ def build() -> list[str]:
   <p class="dek">{esc(c['description'])}</p>
   {disclosure}
   {asof}
+  <p class="meta">{fmt_date(c['date'])} · {byline()}</p>
   {toc_html}
   <div class="prose">
 {body_html}
@@ -765,6 +799,27 @@ def build() -> list[str]:
                            body=f'<article class="wrap article"><h1>{esc(pg["title"])}</h1><div class="prose">{body_html}</div></article>'))
         urls.append((path, pg.get("updated", date.today().isoformat())))
 
+    # ---- the editor: who checks the articles (site.json > editor). Placeholder until a real name is set.
+    ed = editor()
+    if ed["placeholder"]:
+        print("warning: site.json > editor is a placeholder; set a real name and bio before launch", file=sys.stderr)
+    ed_bio = markdown(ed["bio"])[0] if ed["bio"] else ""
+    write(ed["path"], layout(
+        title=f"About the editor · {CFG['name']}", description=f"Who edits and fact-checks {CFG['name']}, and how.",
+        path=ed["path"], jsonld=[org_ld()] + ([] if ed["placeholder"] else [{
+            "@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": author_ld()}]),
+        body=f"""<article class="wrap article"><p class="crumbs"><a href="{u('/')}">Home</a> / <a href="{u('/about/')}">About</a> / <span>Editor</span></p>
+<h1>{esc(ed["name"])}</h1>
+<div class="prose">{ed_bio}
+<h2>What the editor does</h2>
+<ul><li>Chooses every topic and approves every article and comparison before it's published.</li>
+<li>Checks every number, rate and fee against the source listed at the bottom of the page, and re-checks comparison pages on the date shown at the top.</li>
+<li>Reads every page that was drafted with AI help line by line, including titles, descriptions and alt text, and rewrites what isn't right.</li>
+<li>Decides which products we mention. Affiliate relationships never decide a recommendation (<a href="{u('/disclosures/')}">how we handle affiliate links</a>).</li></ul>
+<p>Spotted a mistake? Email {esc(CFG.get("contact_email", ""))} and it'll be fixed, with the correction noted on the page.</p>
+</div></article>"""))
+    urls.append((ed["path"], date.today().isoformat()))
+
     # ---- resources: every tool, with its affiliate slot status
     cats: dict[str, list[str]] = {}
     for key, pr in CFG["programs"].items():
@@ -772,7 +827,8 @@ def build() -> list[str]:
         href = pr["affiliate_url"] if paid else pr["site"]
         rel = 'rel="sponsored noopener" class="plausible-event-name=Affiliate+Click"' if paid else 'rel="noopener nofollow"'
         tag = '<span class="tag aff">affiliate</span>' if paid else '<span class="tag">no affiliation</span>'
-        cmp = (f' · <a href="{u(f"/compare/{pr["compare"]}/")}">compared here</a>' if pr.get("compare") else "")
+        cmp = (f' · <a href="{u(f"/compare/{pr["compare"]}/")}">compared here</a>'
+               if pr.get("compare") and f"/compare/{pr['compare']}/" not in UNPUBLISHED else "")
         cats.setdefault(pr.get("category", "Other"), []).append(
             f'<li><a href="{esc(href)}" {rel} data-program="{esc(key)}"><strong>{esc(pr["name"])}</strong></a> {tag}'
             f'<br><span>{esc(pr.get("blurb", ""))}{cmp}</span></li>')
@@ -988,13 +1044,14 @@ def build() -> list[str]:
 
     # ---- data-driven pages: budget by salary + cost of living by city (pseo.py)
     import pseo
-    urls += pseo.build_pseo({"CFG": CFG, "u": u, "absu": absu, "layout": layout, "write": write, "org_ld": org_ld,
+    extra_redirects: list[tuple[str, str]] = []  # (old path, new path) from merged data pages
+    urls += pseo.build_pseo({"CFG": CFG, "markdown": markdown, "author_ld": author_ld, "redirects": extra_redirects, "u": u, "absu": absu, "layout": layout, "write": write, "org_ld": org_ld,
                              "magnet_box": magnet_box, "product_card": product_card,
                              "product": products_list[0] if products_list else None,
                              "today": os.environ.get("BUILD_DATE") or date.today().isoformat()})
     _shop = {i["slug"]: i for i in json.loads((CONTENT / "shop.json").read_text())["items"]} \
         if (CONTENT / "shop.json").exists() else {}
-    urls += pseo.build_debt({"CFG": CFG, "u": u, "absu": absu, "layout": layout, "write": write, "org_ld": org_ld,
+    urls += pseo.build_debt({"CFG": CFG, "markdown": markdown, "author_ld": author_ld, "redirects": extra_redirects, "u": u, "absu": absu, "layout": layout, "write": write, "org_ld": org_ld,
                              "magnet_box": magnet_box, "product_card": product_card, "product": None, "shop": _shop,
                              "today": os.environ.get("BUILD_DATE") or date.today().isoformat(),
                              "as_of": fmt_date(os.environ.get("BUILD_DATE") or date.today().isoformat())})
@@ -1024,7 +1081,7 @@ def build() -> list[str]:
         ld = [{"@context": "https://schema.org", "@type": "Article", "headline": n["title"],
                "description": n["description"], "datePublished": str(n["date"]), "mainEntityOfPage": absu(path),
                "image": absu("/img/og-default.png"),
-               "author": {"@type": "Organization", "name": CFG["name"], "url": CFG["url"] + "/"},
+               "author": author_ld(),
                "publisher": org_ld(), "isPartOf": {"@type": "Periodical", "name": f"{CFG['name']} newsletter",
                                                     "url": absu("/newsletter/")}},
               {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
@@ -1045,7 +1102,7 @@ def build() -> list[str]:
         write(path, layout(title=n.get("seo_title", n["title"]), description=n["description"], path=path,
                            body=body, og_type="article", jsonld=ld, extra_head=nl_feed_link,
                            og={"article:published_time": str(n["date"]), "article:section": "Newsletter",
-                               "article:author": CFG["name"]}))
+                               "article:author": editor()["name"]}))
         urls.append((path, str(n["date"])))
     if issues:
         listing = '<ul class="posts">' + "".join(f"""<li class="post">
@@ -1096,7 +1153,15 @@ def build() -> list[str]:
 <meta http-equiv="refresh" content="0; url={esc(u(new))}"><title>Moved</title></head>
 <body><p>This page moved to <a href="{esc(u(new))}">{esc(target)}</a>.</p></body></html>
 """)
-        rules.append(f"{u(f'/blog/{old}/')} {u(new)} 301")
+        rules.append(f"{u(f'/blog/{old}/')} {u(new)} 301!")
+    for old, new in extra_redirects:
+        target = absu(new)
+        write(old, f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="robots" content="noindex"><link rel="canonical" href="{esc(target)}">
+<meta http-equiv="refresh" content="0; url={esc(u(new))}"><title>Moved</title></head>
+<body><p>This page moved to <a href="{esc(u(new))}">{esc(target)}</a>.</p></body></html>
+""")
+        rules.append(f"{u(old)} {u(new)} 301!")  # ! = redirect even though the stub file exists
     (OUT / "_redirects").write_text("\n".join(rules) + "\n")
 
     # ---- sitemap, robots, feed

@@ -2,7 +2,7 @@
 title: How to choose a budgeting app: start with what's going wrong
 seo_title: How to choose a budgeting app: start with the problem
 description: Name your money problem first, match it to the app built for it, then run a two-week trial that shows whether it's working.
-date: 2026-11-07
+date: 2026-11-16
 pillar: money-tools
 keyword: how to choose a budgeting app
 read_minutes: 7
@@ -29,10 +29,10 @@ For the full side-by-side of prices and features, see our **[budgeting apps comp
 
 ## The apps in a sentence
 
-- **YNAB:** the most effective at changing habits, and the most work. [Review](/blog/ynab-review/).
-- **Monarch Money:** the best all-round dashboard, no free tier. [Review](/blog/monarch-money-review/).
-- **Rocket Money:** best for subscriptions and alerts, budgeting is secondary. [Review](/blog/rocket-money-review/).
-- **Empower Personal Dashboard:** free, investment-first, with sales calls about paid advice. [Review](/blog/empower-review/).
+- **YNAB:** the most effective at changing habits, and the most work. [Overview](/blog/ynab-review/).
+- **Monarch Money:** the best all-round dashboard, no free tier. [Overview](/blog/monarch-money-review/).
+- **Rocket Money:** best for subscriptions and alerts, budgeting is secondary. [Overview](/blog/rocket-money-review/).
+- **Empower Personal Dashboard:** free, investment-first, with sales calls about paid advice. [Overview](/blog/empower-review/).
 
 Can't decide between the top two? [Rocket Money vs YNAB vs Monarch](/compare/rocket-money-vs-ynab-vs-monarch/).
 

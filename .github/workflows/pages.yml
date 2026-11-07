@@ -9,7 +9,7 @@ on:
     paths: ["site/**", ".github/workflows/pages.yml"]
   workflow_dispatch:
   schedule:  # weekly rebuild so newsletter issues dated in the future publish on their send date
-    - cron: "0 14 * * 4"
+    - cron: "0 13 * * *"  # daily, so scheduled articles go live on their date
 
 permissions:
   contents: read

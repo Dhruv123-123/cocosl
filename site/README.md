@@ -193,15 +193,20 @@ them to everyone on the list.
 
 ## Budget by salary and cost of living by city
 
-`pseo.py` builds 47 pages from two data files, so every number on them is computed, not typed:
+`pseo.py` builds 35 pages from data files, so every table on them is computed, not typed:
 
-- `/budget/<salary>-salary/` for 20 salaries ($25k to $200k) plus the `/budget/` hub: 2026 take-home pay
-  (federal maths identical to the take-home pay calculator), Texas / North Carolina / California / NYC
-  side by side, a four-line monthly plan, which of the 25 cities' rents fit, emergency fund and 401(k) maths,
-  bracket explanation, FAQ schema.
+- `/budget/<salary>-salary/` for 8 salary bands ($30k, $40k, $50k, $60k, $75k, $100k, $150k, $200k) plus the
+  `/budget/` hub: 2026 take-home pay (federal maths identical to the take-home pay calculator), Texas / North
+  Carolina / California / NYC side by side, a four-line monthly plan, which of the 25 cities' rents fit,
+  emergency fund and 401(k) maths, bracket explanation, FAQ schema. **Each page also has a hand-written worked
+  example** from `content/budget-examples.md` (one `## <salary>` section each; the build fails if one is
+  missing, and a test checks each example quotes the page's own take-home figure). These were 20 pages until
+  Nov 2026; the scouting audit (PR #2) found 99% shared wording between neighbours, so the other 12 URLs now
+  301 to the nearest band (`pseo.SALARY_REDIRECTS`, written to `_redirects`).
 - `/cost-of-living/<city>/` for the 25 largest US cities plus the `/cost-of-living/` hub: HUD fair market
   rent, salary needed at 30% of gross, take-home after state and city tax at six salaries, a monthly budget,
-  rank against the other 24 cities, FAQ schema and sources.
+  rank against the other 24 cities, a sourced local transit fact ("Getting around", from
+  `cities.json > local_fact`, checked Nov 7, 2026: fares change, so re-check yearly), FAQ schema and sources.
 
 Every page links to the take-home pay calculator (PR #8), pre-filled with the page's salary and state rate.
 Set its address in `site.json` > `calculators_url` (default `https://moneymadesimple.netlify.app/calculators`,
@@ -227,7 +232,15 @@ and FAQs, so the build stays free of near-duplicates. Tokens in answers: `{month
 
 `python3 tools/make_pins.py` renders the 10 designs in `PINS.md` to `pins/NN-<campaign>.png` (1000×1500) and
 writes `pins/pins.csv` with each pin's title, description, alt text, board and tracked link, ready for Pinterest's
-bulk upload or to paste by hand. The $50k numbers come from `pseo.py`; re-run after the tax data or shop prices
+bulk upload or to paste by hand.
+
+`python3 tools/make_pins.py --all --start YYYY-MM-DD` also renders two designs (A: dark, headline + one-line
+pitch; B: light, gold headline block + what's inside) for every shop product, comparison and article, 196 more
+pins in `pins/library/` (not committed; they're in the project files), and writes `pins/schedule.csv`: 60 days
+of fresh pins, 1 a day for two weeks, then 2, then 3 (what the scouting audit recommends for a new account), each
+page's design B at least 14 days after its A, and never before the page is live. Pins that don't fit in 60 days
+are listed at the end, undated, as the backlog. All text on a pin comes from its page's title, description and
+headings, so re-run it after editing a page. The $50k numbers come from `pseo.py`; re-run after the tax data or shop prices
 change. Needs Playwright and Chromium (`pip install playwright && python -m playwright install chromium`).
 
 ## Shop
@@ -244,14 +257,34 @@ separately. Every buy button sends a Plausible `Product Click` with `product` an
   URLs in `site.json`, and paste exact listing links into `shop.json` as `url` (Gumroad) or `etsy_url`;
   the import tool keeps links you've pasted.
 
-## Debt payoff timelines
+## Debt payoff calculator
 
-`/debt-payoff/<amount>-debt/` for $2,500 to $50,000 (10 pages) plus the `/debt-payoff/` hub, built by
-`pseo.py`. Each page uses a hypothetical mix of cards and loans (bigger amounts add a personal loan, car loan
-and student loan) and simulates both strategies month by month with the same maths as the calculators' debt
-payoff tool: results at five payment levels, which debt is cleared when, a yearly balance schedule, the monthly
-payment for debt-free in two or three years, and FAQ schema. The "Run these numbers" button opens the debt payoff
-calculator pre-filled with the page's debts.
+`/debt-payoff/` is one page: an in-page calculator (`static/debt-calc.js`, up to six debts, avalanche vs snowball,
+same maths as `pseo.payoff()` and the calculators' debt tool; runs in the browser, nothing is sent) and three
+worked examples ($5k, $15k, $30k) with hand-written notes from `content/debt-examples.md`. Each example has a
+button that loads it into the calculator. The ten per-amount pages it replaced (Nov 2026, after the scouting
+audit) 301 to it.
+
+## Scheduled publishing and the editor
+
+**Articles and comparisons go live on their `date`.** A page dated after the build date isn't built, isn't in the
+sitemap or feed, and links to it from other pages render as plain text until it is (so nothing 404s in between).
+16 pages went out on Nov 7, 2026: every article the email sequence or the page templates link to, plus the four
+comparisons the first pins point at. The other 24 are dated 4 a week through Dec 18. The deploy workflows rebuild
+daily at 13:00 UTC so each one appears on its day. `BUILD_DATE=YYYY-MM-DD` builds as of a date;
+`BLOG_SHOW_SCHEDULED=1` builds everything (the tests use it). To publish a new article, give it the day it
+should go out.
+
+**The 12 product pages are overviews, not reviews**: their titles no longer say "review", because they're based
+on published features and pricing, not hands-on testing. URLs are unchanged. If you test one for real (sign up,
+use it, screenshots), you can call that one a review again.
+
+**Editor:** `site.json > editor` names the person who edits and fact-checks the site. It's a placeholder ("The
+Money Made Simple editor", `placeholder: true`) until there's a real name; the build prints a warning while it
+is. Articles and comparisons show "Edited and fact-checked by <name>" linking to `/about/editor/`, which lists
+what the editor checks. Once you set a real name and a true, short bio and set `placeholder` to false, article
+schema names that person as the author. The byline is a promise: only keep it if someone really does check each
+page before it goes out.
 
 ## Email-capture A/B test
 

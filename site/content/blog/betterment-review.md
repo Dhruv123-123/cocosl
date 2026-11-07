@@ -1,8 +1,8 @@
 ---
-title: Betterment review: the hands-off way to invest, and what it costs
-seo_title: Betterment review: fees, the $4 minimum and who it suits
+title: Betterment: the hands-off way to invest, and what it costs
+seo_title: Betterment: fees, the $4 minimum and who it suits
 description: Betterment builds and rebalances an index-fund portfolio for you. How its fees work, including on small balances, and when to DIY.
-date: 2026-11-07
+date: 2026-12-10
 pillar: investing
 keyword: betterment review
 read_minutes: 7
@@ -13,7 +13,7 @@ sources: [https://www.betterment.com/pricing, https://www.betterment.com/legal/f
 ---
 Betterment is a robo-adviser: you answer a few questions, and it invests your money in a diversified portfolio of low-cost index funds, then rebalances it for you. It's one of the oldest and largest in the US. The main thing to understand is the fee, especially on small balances.
 
-*How we review: based on Betterment's published pricing and Form CRS, checked in November 2026. We haven't been paid for this review. General education, not investment advice. Investing involves risk, including loss of principal.*
+*How we wrote this: based on Betterment's published pricing and Form CRS, checked in November 2026. We haven't been paid for this overview. General education, not investment advice. Investing involves risk, including loss of principal.*
 
 Comparing robo-advisers? See our **[robo-advisor comparison](/compare/best-robo-advisors/)**.
 

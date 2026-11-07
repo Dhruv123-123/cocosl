@@ -2,7 +2,7 @@
 title: Where to open a Roth IRA: a step-by-step for your first one
 seo_title: Where to open a Roth IRA: brokerage or robo-adviser?
 description: Open a Roth IRA in about 20 minutes. How to choose where, the 2026 limit, what to invest in, and the step people skip.
-date: 2026-11-07
+date: 2026-12-04
 pillar: investing
 keyword: where to open a roth ira
 read_minutes: 7

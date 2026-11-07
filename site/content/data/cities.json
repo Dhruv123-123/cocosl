@@ -19,7 +19,13 @@
    "br2": 2971,
    "fy": 2027,
    "src": "fy2027",
-   "local": "nyc"
+   "local": "nyc",
+   "local_fact": {
+    "text": "Subway and local bus fares are capped at $35 a week with OMNY tap-to-pay since January 2026 (the $3 fare), which replaced the 30-day MetroCard: about $150 a month if you ride every week.",
+    "source": "https://www.mta.info/press-release/mta-board-adopts-fare-and-toll-increases-take-effect-january-2026",
+    "source_name": "MTA, fare changes adopted for January 2026",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "los-angeles",
@@ -29,7 +35,13 @@
    "br1": 2402,
    "br2": 2964,
    "fy": 2027,
-   "src": "fy2027"
+   "src": "fy2027",
+   "local_fact": {
+    "text": "LA Metro caps fares at $18 for seven days with a TAP card (base fare $1.75), so riding every day costs about $78 a month.",
+    "source": "https://www.taptogo.net/New-Simpler-Fares-Coming-to-Metro-on-July-1",
+    "source_name": "LA Metro / TAP, fare capping",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "chicago",
@@ -39,7 +51,13 @@
    "br1": 1780,
    "br2": 2011,
    "fy": 2027,
-   "src": "fy2027"
+   "src": "fy2027",
+   "local_fact": {
+    "text": "A CTA 30-day pass is $85 in 2026, up from $75.",
+    "source": "https://www.cbsnews.com/chicago/news/cta-announces-fare-pass-hike-2026",
+    "source_name": "CBS Chicago, CTA 2026 fare and pass changes",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "houston",
@@ -49,7 +67,13 @@
    "br1": 1261,
    "br2": 1497,
    "fy": 2027,
-   "src": "fy2027"
+   "src": "fy2027",
+   "local_fact": {
+    "text": "Houston METRO doesn't sell a monthly pass, but local bus and rail fares are $1.25 and cap at $3 a day, so even daily riding stays under about $90 a month.",
+    "source": "https://transitunlimited.org/Houston_METRO_fares",
+    "source_name": "Houston METRO fares (transitunlimited.org)",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "phoenix",
@@ -59,7 +83,13 @@
    "br1": 1493,
    "br2": 1734,
    "fy": 2027,
-   "src": "fy2027"
+   "src": "fy2027",
+   "local_fact": {
+    "text": "A Valley Metro 31-day pass for local bus and light rail is $64.",
+    "source": "https://transitunlimited.org/Valley_Metro_fares",
+    "source_name": "Valley Metro fares (transitunlimited.org)",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "philadelphia",
@@ -70,7 +100,13 @@
    "br2": 1860,
    "fy": 2027,
    "src": "fy2027",
-   "local": "philadelphia"
+   "local": "philadelphia",
+   "local_fact": {
+    "text": "A SEPTA monthly TransPass (bus, subway, trolley) is $116 since the September 2025 fare increase, up from $96.",
+    "source": "https://www.inquirer.com/transportation/septa-fare-increase-monthly-passes-20250819.html",
+    "source_name": "Philadelphia Inquirer, SEPTA monthly pass increase",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "san-antonio",
@@ -80,7 +116,13 @@
    "br1": 1196,
    "br2": 1441,
    "fy": 2027,
-   "src": "fy2027_tx"
+   "src": "fy2027_tx",
+   "local_fact": {
+    "text": "A VIA 31-day pass is $38, one of the cheapest big-city transit passes in the country.",
+    "source": "https://www.viainfo.net/rates",
+    "source_name": "VIA Metropolitan Transit, fares",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "san-diego",
@@ -90,7 +132,13 @@
    "br1": 2335,
    "br2": 2823,
    "fy": 2027,
-   "src": "fy2027"
+   "src": "fy2027",
+   "local_fact": {
+    "text": "An MTS adult monthly pass is $85 from October 1, 2026 (up from $72), with a further rise to $95 planned for fall 2027.",
+    "source": "https://timesofsandiego.com/transportation/2026/09/30/mts-nctd-fares-rise-oct-1/",
+    "source_name": "Times of San Diego, MTS and NCTD fare increase",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "dallas",
@@ -100,7 +148,13 @@
    "br1": 1536,
    "br2": 1807,
    "fy": 2027,
-   "src": "fy2027"
+   "src": "fy2027",
+   "local_fact": {
+    "text": "A DART local monthly pass is $126 after the 2025 fare restructure ($63 reduced fare).",
+    "source": "https://dart.org/fare/general-fares-and-overview/2025-fare-restructure",
+    "source_name": "DART, 2025 fare restructure",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "jacksonville",
@@ -110,7 +164,13 @@
    "br1": 1421,
    "br2": 1694,
    "fy": 2027,
-   "src": "fy2027"
+   "src": "fy2027",
+   "local_fact": {
+    "text": "A JTA adult 31-day bus pass is $65.",
+    "source": "https://www.jtafla.com/fares",
+    "source_name": "JTA, fares",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "fort-worth",
@@ -120,7 +180,13 @@
    "br1": 1481,
    "br2": 1745,
    "fy": 2027,
-   "src": "fy2027"
+   "src": "fy2027",
+   "local_fact": {
+    "text": "A Trinity Metro local 31-day pass is $60.",
+    "source": "https://www.transit.wiki/Trinity_Metro_fares",
+    "source_name": "Trinity Metro fares (transit.wiki)",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "san-jose",
@@ -130,7 +196,13 @@
    "br1": 2778,
    "br2": 3272,
    "fy": 2027,
-   "src": "fy2027"
+   "src": "fy2027",
+   "local_fact": {
+    "text": "A VTA adult monthly pass is $90 on Clipper.",
+    "source": "https://www.vta.gov/fares",
+    "source_name": "VTA, fares",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "austin",
@@ -140,7 +212,13 @@
    "br1": 1530,
    "br2": 1817,
    "fy": 2027,
-   "src": "fy2027_tx"
+   "src": "fy2027_tx",
+   "local_fact": {
+    "text": "CapMetro local fares cap at $41.25 for a calendar month: after 17 capped days with the Umo app or a reloadable card, the rest of the month is free.",
+    "source": "https://capmetro.org/fares-passes",
+    "source_name": "CapMetro, fares and passes",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "charlotte",
@@ -150,7 +228,13 @@
    "br1": 1640,
    "br2": 1785,
    "fy": 2027,
-   "src": "fy2027_se"
+   "src": "fy2027_se",
+   "local_fact": {
+    "text": "A CATS monthly unlimited pass for local bus and light rail is $88.",
+    "source": "https://www.charlottenc.gov/CATS/Fares-Passes",
+    "source_name": "CATS, fares and passes",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "columbus",
@@ -161,7 +245,13 @@
    "br2": 1602,
    "fy": 2027,
    "src": "fy2027_oh",
-   "local": "columbus"
+   "local": "columbus",
+   "local_fact": {
+    "text": "COTA caps adult fares at $62 a calendar month (and $4.50 a day) when you pay with the Transit app or a COTA Smartcard; a 31-day pass is the same $62.",
+    "source": "https://www.cota.com/fares/",
+    "source_name": "COTA, fares",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "indianapolis",
@@ -172,7 +262,13 @@
    "br2": 1536,
    "fy": 2027,
    "src": "fy2027",
-   "local": "marion_county"
+   "local": "marion_county",
+   "local_fact": {
+    "text": "IndyGo dropped its 31-day pass in its January 2026 fare change; with a MyKey card, fares cap at $24.75 a week instead.",
+    "source": "https://weeklyview.net/2025/08/28/indygo-fares-set-to-increase-in-2026/",
+    "source_name": "Weekly View, IndyGo 2026 fare changes",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "san-francisco",
@@ -182,7 +278,13 @@
    "br1": 3003,
    "br2": 3697,
    "fy": 2027,
-   "src": "fy2027"
+   "src": "fy2027",
+   "local_fact": {
+    "text": "A Muni-only adult monthly pass on Clipper is $86 (since July 2025); it doesn't cover BART.",
+    "source": "https://www.sfmta.com/ru/node/43937",
+    "source_name": "SFMTA, Muni fare changes effective July 1, 2025",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "seattle",
@@ -192,7 +294,13 @@
    "br1": 2180,
    "br2": 2549,
    "fy": 2027,
-   "src": "fy2027"
+   "src": "fy2027",
+   "local_fact": {
+    "text": "King County Metro's adult fare is $3.00 since September 2025, which makes the matching monthly ORCA PugetPass $108.",
+    "source": "https://kingcountymetro.blog/2025/07/28/king-county-metro-water-taxi-and-seattle-streetcar-adult-fares-change-sept-1-2025/",
+    "source_name": "King County Metro, adult fares change Sept. 1, 2025",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "denver",
@@ -202,7 +310,13 @@
    "br1": 1831,
    "br2": 2169,
    "fy": 2027,
-   "src": "fy2027"
+   "src": "fy2027",
+   "local_fact": {
+    "text": "An RTD monthly pass is $88 for local service (the $2.75 three-hour fare level).",
+    "source": "https://www.metro-magazine.com/news/rtd-board-of-directors-approves-new-fare-structure",
+    "source_name": "Metro Magazine, RTD fare structure",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "oklahoma-city",
@@ -212,7 +326,13 @@
    "br1": 1017,
    "br2": 1244,
    "fy": 2026,
-   "src": "fy2026"
+   "src": "fy2026",
+   "local_fact": {
+    "text": "The OKC Streetcar downtown has been free to ride since August 7, 2026 (EMBARK buses still charge a fare).",
+    "source": "https://www.embarkok.com/streetcar/buy-passes?ft=adult",
+    "source_name": "EMBARK, OKC Streetcar passes",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "nashville",
@@ -222,7 +342,13 @@
    "br1": 1650,
    "br2": 1798,
    "fy": 2027,
-   "src": "fy2027_se"
+   "src": "fy2027_se",
+   "local_fact": {
+    "text": "WeGo local bus fares cap at $65 for a full calendar month with QuickTicket or contactless payment.",
+    "source": "https://wegotransit.com/buy/ticket-types",
+    "source_name": "WeGo Public Transit, ticket types",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "washington-dc",
@@ -232,7 +358,13 @@
    "br1": 2204,
    "br2": 2438,
    "fy": 2027,
-   "src": "fy2027"
+   "src": "fy2027",
+   "local_fact": {
+    "text": "WMATA's monthly unlimited Metrorail and Metrobus pass starts at $72; longer rail commutes need a higher price level (up to $216).",
+    "source": "https://www.wmata.com/fares/Monthly-Pass/",
+    "source_name": "WMATA, monthly pass",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "el-paso",
@@ -242,7 +374,13 @@
    "br1": 969,
    "br2": 1146,
    "fy": 2027,
-   "src": "fy2027_tx"
+   "src": "fy2027_tx",
+   "local_fact": {
+    "text": "A Sun Metro adult monthly pass is $48.",
+    "source": "https://sunmetro.net/fares/fares-and-passes/",
+    "source_name": "Sun Metro, fares and passes",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "las-vegas",
@@ -252,7 +390,13 @@
    "br1": 1478,
    "br2": 1735,
    "fy": 2026,
-   "src": "fy2026"
+   "src": "fy2026",
+   "local_fact": {
+    "text": "An RTC residential 30-day bus pass is $65 (as listed in October 2026); Strip routes are priced separately.",
+    "source": "https://www.thepricer.org/how-much-does-the-deuce-bus-in-las-vegas-cost/",
+    "source_name": "ThePricer, RTC bus fares (Oct 2026)",
+    "checked": "2026-11-07"
+   }
   },
   {
    "slug": "boston",
@@ -262,7 +406,13 @@
    "br1": 2518,
    "br2": 3008,
    "fy": 2027,
-   "src": "fy2027"
+   "src": "fy2027",
+   "local_fact": {
+    "text": "An MBTA Monthly LinkPass (subway and local bus) is $90.",
+    "source": "https://mbta.com/fares_and_passes/subway/",
+    "source_name": "MBTA, subway fares and passes",
+    "checked": "2026-11-07"
+   }
   }
  ]
 }

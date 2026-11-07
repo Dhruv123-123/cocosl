@@ -1,8 +1,8 @@
 ---
-title: SoFi Checking and Savings review: good rate, with one condition to read
-seo_title: SoFi Checking and Savings review: read the APY terms
+title: SoFi Checking and Savings: what to know, including the one condition to read
+seo_title: SoFi Checking and Savings: what to know about the APY
 description: SoFi is a chartered bank with no account fees and a competitive rate, but the top rate has conditions. What to check first.
-date: 2026-11-07
+date: 2026-12-01
 pillar: money-tools
 keyword: sofi checking and savings review
 read_minutes: 6
@@ -12,7 +12,7 @@ sources: [https://www.sofi.com/banking/, https://www.sofi.com/banking/fdic/, htt
 ---
 SoFi Checking and Savings is a combined checking and savings account from SoFi Bank, N.A. It's popular because it pairs no account fees with a savings rate well above most big banks. The thing to understand before you open it is **what you need to do to get the top rate**.
 
-*How we review: based on SoFi's published terms and fee schedule, checked in November 2026. We haven't been paid for this review and haven't tested the account. Rates and conditions change; read SoFi's current terms.*
+*How we wrote this: based on SoFi's published terms and fee schedule, checked in November 2026. We haven't been paid for this overview and haven't tested the account. Rates and conditions change; read SoFi's current terms.*
 
 Comparing banks? See our **[high-yield savings comparison](/compare/best-high-yield-savings-accounts/)**.
 

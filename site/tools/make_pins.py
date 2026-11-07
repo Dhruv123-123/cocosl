@@ -18,6 +18,7 @@ import html
 import json
 import os
 import sys
+from datetime import date, timedelta
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -51,6 +52,10 @@ body{font-family:Inter,system-ui,sans-serif;position:relative;overflow:hidden;
 .mark{width:56px;height:56px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-weight:900;font-size:22px;letter-spacing:-.02em}
 .foot{position:absolute;left:60px;right:60px;bottom:140px;font-size:28px;font-weight:600;opacity:.75}
 .body{position:absolute;left:60px;right:60px;top:170px;bottom:200px;display:flex;flex-direction:column;gap:36px}
+.kick{font-size:32px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.light .kick{color:var(--green-d)}
+.dek{font-size:38px;font-weight:500;line-height:1.3;opacity:.85}
+.spacer{flex:1}
 h1{font-weight:850;letter-spacing:-.035em;line-height:1.03}
 .sub{font-size:42px;font-weight:600;line-height:1.2}
 .btn{align-self:flex-start;border-radius:999px;padding:24px 40px;font-size:40px;font-weight:800}
@@ -92,6 +97,9 @@ ICONS = {  # simple line icons, ink stroke
     "bag": '<path d="M18 32h60l-6 54H24z"/><path d="M34 32a14 14 0 0128 0"/><path d="M14 14l68 68"/>',
     "bingo": '<rect x="10" y="10" width="76" height="76" rx="8"/><path d="M35 10v76M61 10v76M10 35h76M10 61h76"/>',
     "die": '<rect x="14" y="14" width="68" height="68" rx="14"/><circle cx="34" cy="34" r="5"/><circle cx="62" cy="62" r="5"/><circle cx="48" cy="48" r="5"/>',
+    "list": '<rect x="16" y="10" width="64" height="76" rx="8"/><path d="M30 32h36M30 48h36M30 64h22"/>',
+    "chart": '<path d="M10 84h76"/><path d="M14 72l20-26 18 14 30-40"/><path d="M66 20h16v16"/>',
+    "grid": '<rect x="10" y="10" width="34" height="34" rx="6"/><rect x="52" y="10" width="34" height="34" rx="6"/><rect x="10" y="52" width="34" height="34" rx="6"/><rect x="52" y="52" width="34" height="34" rx="6"/>',
     "jar": '<path d="M28 16h40v12l8 10v42a8 8 0 01-8 8H28a8 8 0 01-8-8V38l8-10z"/><path d="M20 54h56"/>',
 }
 
@@ -104,7 +112,16 @@ def icon(name):
 def page(theme: str, body: str) -> str:
     return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><style>{CSS}</style></head>'
             f'<body class="{theme}"><div class="brand"><span class="mark">MS</span>Money Made Simple</div>'
-            f'<div class="body">{body}</div><div class="foot">{esc(DOMAIN)}</div></body></html>')
+            f'<div class="body">{body}</div><div class="foot">{esc(DOMAIN)}</div>{FIT}</body></html>')
+
+
+FIT = """<script>window.fitPin = () => { const b = document.querySelector('.body'), h = b.querySelector('.fit');
+  if (!h) return; let s = parseFloat(getComputedStyle(h).fontSize);
+  const over = () => [...b.children].some(e => e.getBoundingClientRect().bottom > b.getBoundingClientRect().bottom + 1);
+  const art = b.querySelector('img.art'); let w = art ? art.width : 0;
+  while (art && over() && w > 300) { w -= 20; art.style.width = art.style.height = w + 'px'; }
+  while (over() && s > 54) { s -= 4; h.style.fontSize = s + 'px'; }
+  const d = b.querySelector('.dek'); if (d && over()) d.remove(); }</script>"""
 
 
 def img_data(path: Path) -> str:
@@ -182,12 +199,12 @@ def pins() -> list[dict]:
             f'<div class="bar">{bar}</div><div class="legend">{legend}</div>'
             f'<p style="font-size:28px;opacity:.75">*{RULES["tax_year"]}, single filer, no state income tax. Estimate.</p>')))
     P.append(dict(slug="budget-hub-1", path="/budget/", board="Budgeting for beginners",
-        title=f"How much rent can you afford? 20 salaries, real {RULES['tax_year']} numbers",
-        desc="The 30% rule in real dollars, plus take-home pay, a monthly plan and the big cities where a one-bedroom fits, for 20 salaries from $25,000 to $200,000.",
+        title=f"How much rent can you afford? Real {RULES['tax_year']} numbers by salary",
+        desc="The 30% rule in real dollars, plus take-home pay, a monthly plan and the big cities where a one-bedroom fits, from $30,000 to $200,000.",
         alt="Rent at 30% of gross pay: $1,250 a month on $50,000, $1,500 on $60,000, $1,875 on $75,000.",
         html=page("light", '<h1 style="font-size:96px">How much rent fits your salary?</h1><div class="rows">' + "".join(
                 f'<div class="row"><b>${s // 1000}k</b><em>{money(s * 0.3 / 12)}/mo</em></div>' for s in (50000, 60000, 75000))
-            + '</div><p class="note">30% of gross pay. Take-home, budgets and city rents for 20 salaries →</p>')))
+            + '</div><p class="note">30% of gross pay. Take-home, budgets and city rents for your salary →</p>')))
     P.append(dict(slug="shop-toolkit-1", path="/shop/#bundles", board="Budget printables",
         title=f"5 money kits in one: budget, bills, credit, debt and investing (${kit['price']:g})",
         desc="All five Money Made Simple guide-and-spreadsheet kits in one download, with a Start Here map and a 30-day plan that uses all five. Excel, Google Sheets or Numbers. One payment, no subscription.",
@@ -215,31 +232,241 @@ def pins() -> list[dict]:
     return P
 
 
+# ------------------------------------------------------------------------------------------ library pins
+# One page -> two designs: A (dark, headline + one-line pitch) and B (light, gold headline block + what's
+# inside). Pages: every shop product, Compare page and article. Text comes from each page's own front matter
+# and headings, so a pin never says something its page doesn't.
+import re  # noqa: E402
+
+sys.path.insert(0, str(SITE))
+GENERIC_H2 = {"common questions", "our verdict", "the short version", "alternatives", "sources", "side by side",
+              "the quick comparison", "the bottom line", "faq", "related", "the verdict"}
+BOARDS = {"budgeting": ("Budgeting for beginners", "Saving money tips"),
+          "credit-and-debt": ("Debt payoff", "Budgeting for beginners"),
+          "investing": ("Investing for beginners", "Money apps and tools"),
+          "money-tools": ("Money apps and tools", "Budgeting for beginners")}
+KIND = {"kit": "Guide + spreadsheet kit", "sheets": "Google Sheets template", "notion": "Notion template",
+        "printable": "Printable · Letter + A4 PDF"}
+GROUP_ICON = {"budget": "calendar", "savings": "jar", "debt": "chart", "trackers": "list"}
+SHOP_BOARD = {"savings": "Saving money tips", "debt": "Debt payoff"}
+
+
+def split_title(t: str) -> tuple[str, str]:
+    """'YNAB review: is it worth $109?' -> ('YNAB review', 'Is it worth $109?'); no colon -> ('', title)."""
+    if ": " in t:
+        k, h = t.split(": ", 1)
+        if len(k) <= 34:
+            return k, h[:1].upper() + h[1:]
+    return "", t
+
+
+def first_sentence(s: str, n: int = 150) -> str:
+    s = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", re.sub(r"[*_`]", "", s)).strip()
+    m = re.match(r"(.+?[.!?])(\s|$)", s)
+    s = m.group(1) if m else s
+    return s if len(s) <= n else s[:n].rsplit(" ", 1)[0] + "…"
+
+
+def bullets(md: str, kind: str) -> list[str]:
+    hs = [re.sub(r"[*_`]|\[|\]\([^)]*\)", "", h).strip() for h in re.findall(r"^## (.+)$", md, re.M)]
+    hs = [re.sub(r"^Step \d+:\s*", "", h) for h in hs if h.lower() not in GENERIC_H2]
+    hs = [h[:1].upper() + h[1:] for h in hs if 6 <= len(h) <= 44][:3]
+    if len(hs) >= 2:
+        return hs
+    return {"review": ["How it works", "What it costs", "Who should skip it"],
+            "compare": ["What each one costs", "Side-by-side features", "Who each one is NOT for"]}.get(
+        kind, ["The short version", "The maths, shown", "What to do next"])
+
+
+def tracked(path: str, campaign: str) -> str:
+    base, _, frag = path.partition("#")
+    return (CFG["url"] + base + "?utm_source=pinterest&utm_medium=social&utm_campaign=" + campaign
+            + ("#" + frag if frag else ""))
+
+
+def design_a(kicker, headline, dek, cta, art=""):
+    return page("dark", (f'<p class="kick">{esc(kicker)}</p>' if kicker else "")
+                + f'<h1 class="fit" style="font-size:100px">{esc(headline)}</h1>'
+                + (f'<p class="dek">{esc(dek)}</p>' if dek else "") + '<div class="spacer"></div>' + art + '<div class="spacer"></div>'
+                + f'<div class="btn gold">{esc(cta)} →</div>')
+
+
+def design_b(kicker, headline, items, cta, tag=""):
+    return page("light", '<div style="background:var(--gold);border-radius:32px;padding:48px 44px">'
+                + (f'<p class="kick" style="color:var(--ink);margin-bottom:14px">{esc(kicker)}</p>' if kicker else "")
+                + f'<h1 class="fit" style="font-size:92px">{esc(headline)}</h1></div><div class="spacer"></div>'
+                + '<div class="ticks" style="font-size:44px;gap:30px">' + "".join(f"<div><i>✓</i>{esc(t)}</div>" for t in items) + "</div>"
+                + '<div class="spacer"></div><div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">'
+                + f'<div class="btn ink">{esc(cta)} →</div>'
+                + (f'<div class="pill" style="background:var(--goldt)">{esc(tag)}</div>' if tag else "") + "</div>")
+
+
+def library() -> list[dict]:
+    import build
+    redirects = CFG.get("blog_redirects", {})
+    out = []
+
+    def add(slug, kind, path, board2, title, desc, alt_subject, html_a, html_b, priority, live=None):
+        for v, h in (("a", html_a), ("b", html_b)):
+            camp = f"pin-{slug}-{v}"
+            out.append(dict(slug=f"{slug}-{v}", page=slug, variant=v, kind=kind, path=path, board=board2[0],
+                            board2=board2[1], title=title[:100], desc=desc[:500],
+                            alt=f"Pin {('A' if v == 'a' else 'B')} for {alt_subject}: \"{title[:90]}\"",
+                            html=h, link=tracked(path, camp), priority=priority, live=str(live or "")))
+
+    for f in sorted((SITE / "content" / "compare").glob("*.md")):
+        meta, md = build.parse_front_matter(f.read_text())
+        k, h = split_title(meta["title"])
+        slug = "compare-" + f.stem
+        add(slug, "compare", f"/compare/{f.stem}/", ("Money apps and tools", "Budgeting for beginners")
+            if "credit" not in f.stem and "balance" not in f.stem else ("Debt payoff", "Money apps and tools"),
+            meta["title"], meta["description"], "a comparison page",
+            design_a(k or "Compared honestly", h, first_sentence(meta["description"]), "See the comparison"),
+            design_b(meta.get("short", "Compared"), h, bullets(md, "compare"), "Compare them"), 1, meta["date"])
+    for f in sorted((SITE / "content" / "blog").glob("*.md")):
+        if f.stem in redirects:
+            continue
+        meta, md = build.parse_front_matter(f.read_text())
+        if meta.get("status") == "draft":
+            continue
+        k, h = split_title(meta["title"])
+        kind = "review" if f.stem.endswith("-review") else "article"
+        mins = meta.get("read_minutes")
+        add(f.stem, kind, f"/blog/{f.stem}/", BOARDS.get(meta.get("pillar"), BOARDS["budgeting"]),
+            meta["title"], meta["description"], "an article",
+            design_a(k or CFG.get("pillars", {}).get(meta.get("pillar"), ""), h,
+                     first_sentence(meta["description"]), "Read it" + (f" in {mins} min" if mins else "")),
+            design_b(k or "Plain-English guide", h, bullets(md, kind), "Read the guide"), 3, meta["date"])
+    for it in json.loads((SITE / "content" / "shop.json").read_text())["items"]:
+        price = f"${it['price']:g}" if it["price"] else "Free"
+        label = "Bundle" if it.get("bundle") else KIND.get(it["kind"], "Download")
+        if it.get("image"):
+            art = (f'<img src="{img_data(SITE / "static" / it["image"].lstrip("/"))}" class="art" style="width:440px;height:440px;'
+                   'border-radius:20px;align-self:center;transform:rotate(-3deg);box-shadow:0 30px 60px rgba(0,0,0,.35)">')
+        else:
+            art = ('<div style="align-self:center;width:300px;height:300px;border-radius:40px;background:var(--goldt);'
+                   f'display:grid;place-items:center">{icon(GROUP_ICON.get(it.get("group"), "list"))}</div>')
+            art = art.replace('<svg viewBox', '<svg style="width:170px;height:170px" viewBox')
+        pitch = first_sentence(it.get("blurb", ""), 160)
+        board = SHOP_BOARD.get(it.get("group"), "Budget printables")
+        inc = [label, "One payment, no subscription", "Instant download"] if it["kind"] != "printable" else \
+            ["Letter + A4 PDF", "Print at home or fill on a tablet", "Instant download"]
+        if it.get("separately"):
+            inc[1] = f"${it['separately']:g} if bought separately"
+        add("shop-" + it["slug"], "shop", f"/shop/#item-{it['slug']}", (board, "Budget printables"
+            if board != "Budget printables" else "Budgeting for beginners"),
+            f"{it['name']} ({price.lower() if price == 'Free' else price})", it.get("blurb", it["name"]), f"the {it['name']}",
+            design_a(f"{label} · {price}", it["name"], pitch, "Get it in the shop", art),
+            design_b(label, it["name"], inc, "See it in the shop", price),
+            0 if it.get("bundle") or it["kind"] == "kit" else 2)
+    return out
+
+
+RAMP = [(14, 1), (16, 2), (30, 3)]  # (days, new pins a day): 1 a day for two weeks, then 2, then 3 (days 31-60)
+B_GAP = 14  # days between a page's design A and design B
+
+
+def schedule(featured: list[dict], lib: list[dict], start: date) -> list[dict]:
+    """60 days of fresh pins at 1-3 a day (no re-pins of the same image). Featured pins go first, then each page's
+    design A, mixing kits/bundles, comparisons, printables and articles; design B follows at least B_GAP days later.
+    A pin is never scheduled before its page's publish date (articles and comparisons are released over six
+    weeks). Pins that don't fit in 60 days are listed after, undated, as the backlog for the next run."""
+    times = {1: ["12:00"], 2: ["09:00", "19:00"], 3: ["08:00", "13:00", "20:00"]}
+    queues: dict[int, list] = {}
+    for p in lib:
+        if p["variant"] == "a":
+            queues.setdefault(p["priority"], []).append(p)
+    order = []
+    while any(queues.values()):  # round-robin: 0 kits/bundles, 1 compare, 2 printables, 3 articles
+        for k in sorted(queues):
+            if queues[k]:
+                order.append(queues[k].pop(0))
+    b_of = {p["page"]: p for p in lib if p["variant"] == "b"}
+    pending = [dict(p, live="") for p in featured] + order
+    posted_a: dict[str, date] = {}
+    rows, day = [], 0
+    for span, per_day in RAMP:
+        for _ in range(span):
+            d = start + timedelta(days=day)
+            day += 1
+            todays = []
+            for p in list(pending):
+                if len(todays) == per_day:
+                    break
+                if p.get("live") and date.fromisoformat(p["live"]) > d:
+                    continue  # page not published yet
+                if p.get("variant") == "b" and (d - posted_a[p["page"]]).days < B_GAP:
+                    continue
+                todays.append(p)
+                pending.remove(p)
+                if p.get("variant") == "a":
+                    posted_a[p["page"]] = d
+                    pending.append(b_of[p["page"]])  # B goes to the back of the queue
+            for t, p in zip(times[per_day], todays):
+                rows.append(_row(p, d.isoformat(), t))
+    rows += [_row(p, "", "") for p in pending]
+    return rows
+
+
+def _row(p: dict, d: str, t: str) -> dict:
+    return {"date": d, "time_et": t, "file": p["file"], "board": p["board"], "title": p["title"],
+            "description": p["desc"], "alt_text": p["alt"], "link": p["link"],
+            "page_live": p.get("live") or ""}
+
+
+def render(pg, items: list[dict], out: Path) -> None:
+    for p in items:
+        pg.set_content(p["html"], wait_until="load")
+        pg.evaluate("() => window.fitPin && window.fitPin()")
+        over = pg.evaluate("""() => { const b = document.querySelector('.body'), r = b.getBoundingClientRect();
+            return [...b.querySelectorAll('*')].some(e => e.getBoundingClientRect().bottom > r.bottom + 1) }""")
+        if over:
+            raise SystemExit(f"pin {p['slug']}: content runs past the safe area")
+        pg.screenshot(path=str(out / p["file"]), clip={"x": 0, "y": 0, "width": 1000, "height": 1500})
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=str(SITE / "pins"))
-    out = Path(ap.parse_args().out)
+    ap.add_argument("--all", action="store_true", help="also render a pin pair for every shop product, Compare "
+                    "page and article into <out>/library/, and write <out>/schedule.csv")
+    ap.add_argument("--start", default=(date.today() + timedelta(days=1)).isoformat(), help="schedule day 1")
+    ap.add_argument("--no-render", action="store_true", help="write the CSVs only")
+    a = ap.parse_args()
+    out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
-    from playwright.sync_api import sync_playwright
-    exe = os.environ.get("CHROMIUM_PATH") or ("/opt/pw-browsers/chromium" if Path("/opt/pw-browsers/chromium").exists() else None)
     P = pins()
-    with sync_playwright() as pw:
-        b = pw.chromium.launch(**({"executable_path": exe} if exe else {}))
-        pg = b.new_page(viewport={"width": 1000, "height": 1500}, device_scale_factor=1)
-        for n, p in enumerate(P, 1):
-            pg.set_content(p["html"], wait_until="load")
-            over = pg.evaluate("""() => { const b = document.querySelector('.body'), r = b.getBoundingClientRect();
-                return [...b.querySelectorAll('*')].some(e => e.getBoundingClientRect().bottom > r.bottom + 1) }""")
-            if over:
-                raise SystemExit(f"pin {p['slug']}: content runs past the safe area")
-            pg.screenshot(path=str(out / f"{n:02d}-{p['slug']}.png"), clip={"x": 0, "y": 0, "width": 1000, "height": 1500})
-        b.close()
+    for n, p in enumerate(P, 1):
+        p["file"] = f"{n:02d}-{p['slug']}.png"
+    L = library() if a.all else []
+    for p in L:
+        p["file"] = f"library/{p['slug']}.png"
+    if not a.no_render:
+        from playwright.sync_api import sync_playwright
+        exe = os.environ.get("CHROMIUM_PATH") or ("/opt/pw-browsers/chromium" if Path("/opt/pw-browsers/chromium").exists() else None)
+        (out / "library").mkdir(exist_ok=True) if L else None
+        with sync_playwright() as pw:
+            b = pw.chromium.launch(**({"executable_path": exe} if exe else {}))
+            for start in range(0, len(P) + len(L), 40):  # fresh page every 40 pins keeps memory flat
+                pg = b.new_page(viewport={"width": 1000, "height": 1500}, device_scale_factor=1)
+                render(pg, (P + L)[start:start + 40], out)
+                pg.close()
+            b.close()
     with (out / "pins.csv").open("w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["file", "title", "description", "alt_text", "board", "link"])
-        for n, p in enumerate(P, 1):
-            w.writerow([f"{n:02d}-{p['slug']}.png", p["title"], p["desc"], p["alt"], p["board"], p["link"]])
-    print(f"{len(P)} pins -> {out}")
+        for p in P + L:
+            w.writerow([p["file"], p["title"], p["desc"], p["alt"], p["board"], p["link"]])
+    if L:
+        rows = schedule(P, L, date.fromisoformat(a.start))
+        with (out / "schedule.csv").open("w", newline="") as f:
+            w = csv.DictWriter(f, fieldnames=list(rows[0]))
+            w.writeheader()
+            w.writerows(rows)
+        dated = [r for r in rows if r["date"]]
+        print(f"schedule: {len(dated)} pins from {dated[0]['date']} to {dated[-1]['date']}, "
+              f"{len(rows) - len(dated)} in the backlog")
+    print(f"{len(P) + len(L)} pins -> {out}")
 
 
 if __name__ == "__main__":
