@@ -32,13 +32,16 @@ Put each approved link in the brand YAML under `affiliates` (name, url, slug, ke
 | Value | How |
 |---|---|
 | `ANTHROPIC_API_KEY` | console.anthropic.com → API keys. Without it the factory writes placeholder drafts. |
-| Voice: `ELEVENLABS_API_KEY` + `ELEVENLABS_VOICE_ID` | Clone **your own** voice (or pick a licensed library voice). Never clone someone else's. |
+| Voice, free: **Kokoro** (`KOKORO_URL`) | Easiest free option and sounds natural. On your server: `docker compose --profile kokoro up -d` and set `KOKORO_URL=http://kokoro:8880`. On a laptop: `docker run -p 8880:8880 ghcr.io/remsky/kokoro-fastapi-cpu:v0.2.4` and `KOKORO_URL=http://localhost:8880`. Pick a voice with `KOKORO_VOICE` (e.g. `af_heart`, `am_michael`, `bf_emma`). These are synthetic stock voices, so the AI-voice disclosure stays on. |
+| or your own cloned voice: `ELEVENLABS_API_KEY` + `ELEVENLABS_VOICE_ID` | Clone **your own** voice (or pick a licensed library voice). Never clone someone else's. |
 | or `OPENAI_API_KEY` | Uses OpenAI TTS (and gpt-image-1 for images). |
 | or Piper (free, local) | `pip install piper-tts`, download a voice, set `PIPER_MODEL=/path/voice.onnx`. |
 | Images: `COMFYUI_URL` or `OPENAI_API_KEY` or `REPLICATE_API_TOKEN` | Without one, the factory uses its built-in abstract art (fine for carousels). |
 | Music: `FACTORY_MUSIC_DIR` | A folder of tracks you have a licence for (YouTube Audio Library, Epidemic, etc.). Keep the licences. |
 
-After adding a voice, re-render the launch batch: `factory rerender <id>` for each short (or the Re-render button).
+After adding a voice, re-voice everything that was rendered silent in one go: `factory renderq revoice`
+(add `--include-approved` for approved posts; they go back to review). With Docker the `renderer` service
+picks the jobs up by itself; without it run `factory renderq run`. `factory status` shows progress.
 
 ## 5. Social accounts (create these by hand, one per platform for the brand)
 

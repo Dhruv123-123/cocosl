@@ -115,8 +115,33 @@ def overview(request: Request, factory: Factory = Depends(get_factory)) -> HTMLR
         counts=queries.status_counts(factory), k=queries.kpis(factory),
         upcoming=queries.upcoming(factory), activity=queries.activity(factory, 12),
         blocked=queries.blocked_posts(factory), creds=queries.credentials(factory),
-        llm_provider=factory.llm.provider, tz=queries.display_tz(factory),
+        llm_provider=factory.llm.provider, tz=queries.display_tz(factory), ops=_ops(factory),
     )
+
+
+def _ops(factory: Factory) -> dict | None:
+    try:
+        from ..health import system_status
+        return system_status(factory)
+    except Exception:  # the overview must never fail because of the ops panel
+        return None
+
+
+@router.post("/publications/{pub_id}/resolve")
+def publication_resolve(pub_id: int, request: Request, action: str = Form(...), url: str = Form(""),
+                        factory: Factory = Depends(get_factory)):
+    factory.resolve_publication(pub_id, action, url=url.strip())
+    return back(request, "/", msg=f"Publication #{pub_id}: {action}")
+
+
+@router.post("/schedule/all")
+def schedule_all(request: Request, factory: Factory = Depends(get_factory)):
+    res = factory.schedule_approved()
+    msg = f"Scheduled {len(res['scheduled'])} post(s)"
+    if res["skipped"]:
+        return back(request, "/calendar", err=msg + "; skipped: " + "; ".join(
+            f"#{k} {v}" for k, v in res["skipped"].items())[:400])
+    return back(request, "/calendar", msg=msg)
 
 
 # --------------------------------------------------------------------------- ideas

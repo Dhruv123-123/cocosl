@@ -16,4 +16,6 @@ ENV FACTORY_HOME=/app \
     PYTHONUNBUFFERED=1
 VOLUME ["/data"]
 EXPOSE 8000
+HEALTHCHECK --interval=60s --timeout=10s --start-period=30s --retries=3 \
+  CMD python -c "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=5).status == 200 else 1)"
 CMD ["factory", "serve", "--host", "0.0.0.0", "--port", "8000"]
