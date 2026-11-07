@@ -79,7 +79,9 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
         heads.append(brand.name)
         images.append(images[-1])
 
-    tts = synthesize_segments(settings, brand, lines, work / "voice")
+    from .tts import human_voice
+    tts = human_voice(settings, brand, post.get("id"), lines, work / "voice") \
+        or synthesize_segments(settings, brand, lines, work / "voice")
     beats, cues, slots, t, starts, owned = [], [], [], 0.0, [], []
     seg_words = tts.words or [None] * len(lines)
     from .charts import render_chart_clip
@@ -131,7 +133,8 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     for v in variants:
         prov.append(provenance(str(v), "rendered", "pillow", "thumbnail variant"))
         prov.append(provenance(str(v.with_suffix(".jpg")), "rendered", "pillow", "thumbnail variant (JPEG)"))
-    prov.append(provenance(str(audio), "generated", tts.tool, " ".join(lines), provider=tts.provider,
+    prov.append(provenance(str(audio), "own" if tts.provider == "human" else "generated", tts.tool, " ".join(lines),
+                           provider=tts.provider,
                            note="Voice must be your own or licensed."))
     prov.append(provenance(str(srt), "rendered", "contentfactory.captions",
                            note="word timing from the voice" if tts.timing != "estimated"

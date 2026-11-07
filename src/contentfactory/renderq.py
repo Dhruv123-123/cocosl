@@ -204,7 +204,48 @@ def run_forever(poll_seconds: int = 20) -> None:
             time.sleep(poll_seconds)
 
 
+def use_own_voice(factory: Factory, post_id: int, files: list) -> int | None:
+    """Copy the owner's recording(s) into the post's voice slot and queue a re-render."""
+    import shutil
+    from pathlib import Path
+
+    from .media.tts import VOICE_EXTS
+    post = factory._post(post_id)
+    if post["format"] not in ("short", "long"):
+        raise ValueError(f"Post #{post_id} is a {post['format']}; only videos have narration")
+    if post["status"] in LOCKED_STATUSES:
+        raise ValueError(f"Post #{post_id} is {post['status']}; unschedule it first")
+    files = [Path(f) for f in files]
+    for f in files:
+        if not f.is_file() or f.suffix.lower() not in VOICE_EXTS:
+            raise ValueError(f"{f}: not an audio file ({', '.join(VOICE_EXTS)})")
+    base = factory.settings.home / "voice" / post["brand"] / f"post-{post_id}"
+    base.parent.mkdir(parents=True, exist_ok=True)
+    for old in [base, *[base.with_suffix(e) for e in VOICE_EXTS]]:  # replace any earlier take
+        if old.is_dir():
+            shutil.rmtree(old)
+        elif old.is_file():
+            old.unlink()
+    if len(files) == 1:
+        shutil.copy2(files[0], base.with_suffix(files[0].suffix.lower()))
+    else:
+        base.mkdir()
+        for i, f in enumerate(files):
+            shutil.copy2(f, base / f"{i:02d}{f.suffix.lower()}")
+    factory.db.log("post.own_voice", "post", post_id, {"files": len(files)})
+    return enqueue(factory, post_id, reason="own voice", priority=5)
+
+
 def register(sub, factory_fn) -> None:
+    v = sub.add_parser("voice", help="use your own recorded narration for a video (re-renders it)")
+    v.add_argument("post_id", type=int)
+    v.add_argument("files", nargs="+", help="one take, or one file per script line in order")
+
+    def own_voice(a):
+        job = use_own_voice(factory_fn(a), a.post_id, a.files)
+        print(f"Saved. Re-render queued (job {job})." if job else "Saved; the post is already queued.")
+    v.set_defaults(func=own_voice)
+
     q = sub.add_parser("renderq", help="render queue: re-voice posts, render in a separate process")
     qs = q.add_subparsers(dest="renderq_cmd", required=True)
 
