@@ -741,3 +741,61 @@ def test_vs_comparison_pages_have_placeholders_and_disclosure(tmp_path):
         assert f"https://example.org/compare/{slug}/" in (out / "sitemap.xml").read_text()
     # review articles point at their head-to-head page
     assert "/compare/ally-vs-marcus/" in (out / "blog" / "ally-bank-review" / "index.html").read_text()
+
+
+NEW_MAR_ARTICLES = ["tax-deductions-vs-tax-credits", "self-employment-tax-explained", "how-to-fill-out-a-w-4",
+                    "what-to-do-if-you-cant-pay-your-taxes", "standard-deduction-vs-itemizing", "earned-income-tax-credit",
+                    "ira-contribution-before-tax-deadline", "how-to-file-a-tax-extension"]
+
+
+def test_march_tax_articles_are_long_dated_and_linked(tmp_path):
+    sys.path.insert(0, str(SITE))
+    import build
+    dates = []
+    for slug in NEW_MAR_ARTICLES:
+        meta, body = build.parse_front_matter((SITE / "content" / "blog" / f"{slug}.md").read_text())
+        prose = re.sub(r"<!--.*?-->", "", body, flags=re.S)
+        assert len(prose.split()) >= 1500, (slug, len(prose.split()))
+        assert "## A worked example" in prose and "fictional" in prose, slug
+        assert str(meta["date"]).startswith("2027-03"), slug
+        assert len(meta["seo_title"]) <= 60 and len(meta["description"]) <= 155, slug
+        assert any("irs.gov" in s for s in meta["sources"]), slug  # tax-season figures cite the IRS
+        dates.append(str(meta["date"]))
+    assert len(set(dates)) == 8
+    late = _build(tmp_path, "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2027-03-31")
+    for s in NEW_MAR_ARTICLES:
+        assert (late / "blog" / s / "index.html").exists(), s
+
+
+def test_start_hub_routes_by_goal_and_fills_in_as_articles_publish(tmp_path):
+    import json
+    goals = json.loads((SITE / "content" / "data" / "start.json").read_text())["goals"]
+    assert [g["id"] for g in goals] == ["debt", "saving", "first-job", "freelance"]
+    now = _build(tmp_path, "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2026-11-07")
+    h = (now / "start" / "index.html").read_text()
+    for g in goals:
+        sys.path.insert(0, str(SITE))
+        import build
+        anchor = build.slug_id(g["heading"])
+        assert f'href="#{anchor}"' in h and f'id="{anchor}"' in h, anchor
+    assert h.count('class="start-reading"') == 4
+    # scheduled articles stay out of the reading lists until their date, then join them
+    assert "/blog/self-employment-tax-explained/" not in h
+    later = _build(tmp_path / "later", "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2027-03-31")
+    assert 'href="/blog/self-employment-tax-explained/"' in (later / "start" / "index.html").read_text()
+
+
+def test_best_of_digest_pulls_latest_articles_at_build_time(tmp_path):
+    import json
+    out = _build(tmp_path, "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2027-02-26")
+    d = out / "emails" / "digest"
+    data = json.loads((d / "digest.json").read_text())
+    assert data["subject"] == "The best of Money Made Simple, February 2027"
+    assert data["articles"][0] == "https://example.org/blog/how-to-lower-your-grocery-bill/"  # newest first
+    assert len(data["articles"]) == 5 and all(a.startswith("https://example.org/blog/") for a in data["articles"])
+    html = (d / "email.html").read_text()
+    assert 'href="https://example.org/blog/how-to-lower-your-grocery-bill/"' in html and "{{" not in html
+    txt = (d / "email.txt").read_text()
+    assert "1. How to lower your grocery bill" in txt and "{{" not in txt
+    assert 'name="robots" content="noindex' in (d / "index.html").read_text()
+    assert "/emails/digest/" not in (out / "sitemap.xml").read_text()

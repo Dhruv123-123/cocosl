@@ -286,3 +286,9 @@ th{background:var(--tint)}
 .money-facts{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
 .tool-list{padding-left:20px}
 .tool-list li{margin:8px 0}
+.goals .goal h2{font-size:20px}
+.start-reading{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:4px 18px 10px;margin:16px 0 28px}
+.start-reading h3{font-size:16px;margin:14px 0 6px}
+.start-reading ul{margin:0 0 6px;padding-left:20px}
+.posts.grid.goals{grid-template-columns:repeat(2,1fr)}
+@media (max-width:640px){.posts.grid.goals{grid-template-columns:1fr}}

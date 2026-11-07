@@ -501,8 +501,115 @@ def shortcode_factory(products: dict, source: str):
             return money_shop_summary()
         if name == "money:partners":
             return money_partners()
+        if name.startswith("start:"):
+            return start_hub(name.split(":", 1)[1])
+        if name.startswith("digest:"):
+            return digest_list(name.split(":", 1)[1])
         return ""
     return sc
+
+
+LIVE_POSTS: list[dict] = []  # published articles, newest first (set by build())
+LIVE_COMPS: list[dict] = []  # published comparison pages, newest first (set by build())
+
+
+def digest_picks(meta: dict) -> dict:
+    """What the "best of" digest (content/digest.md) shows at this build: pinned articles first, then the newest
+    published ones, up to 'count'; plus the newest published comparison page."""
+    by_slug = {p["slug"]: p for p in LIVE_POSTS}
+    pinned = [by_slug[s] for s in meta.get("pinned", []) if s in by_slug]
+    rest = [p for p in LIVE_POSTS if p not in pinned]
+    arts = (pinned + rest)[:int(meta.get("count", 5))]
+    return {"articles": arts, "compare": LIVE_COMPS[:1]}
+
+
+DIGEST_META: dict = {}
+
+
+def digest_list(which: str) -> str:
+    picks = digest_picks(DIGEST_META)
+    if which == "latest":
+        return "<ol>" + "".join(
+            f'<li><p><a href="{u(f"/blog/{p["slug"]}/")}"><strong>{esc(p["title"])}</strong></a><br>'
+            f'{esc(p["description"])}</p></li>' for p in picks["articles"]) + "</ol>"
+    if which == "compare":
+        return "".join(f'<p><a href="{u(f"/compare/{c["slug"]}/")}"><strong>{esc(c["title"])}</strong></a><br>'
+                       f'{esc(c["description"])}</p>' for c in picks["compare"])
+    raise SystemExit(f"Unknown digest shortcode 'digest:{which}' (use digest:latest or digest:compare).")
+
+
+def digest_text(body: str) -> str:
+    """Plain-text version of the digest: shortcodes become numbered lists with full URLs."""
+    picks = digest_picks(DIGEST_META)
+    lines = []
+    for i, p in enumerate(picks["articles"], 1):
+        lines.append(f"{i}. {p['title']}\n   {p['description']}\n   " + absu("/blog/" + p["slug"] + "/"))
+    latest = "\n".join(lines)
+    comp = "\n".join(f"{c['title']}\n{c['description']}\n" + absu("/compare/" + c["slug"] + "/")
+                     for c in picks["compare"])
+    text = body.replace("{{digest:latest}}", latest).replace("{{digest:compare}}", comp)
+    text = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", lambda m: f"{m.group(1)} ({absu(m.group(2))})", text)
+    return re.sub(r"\*\*(.+?)\*\*", r"\1", text).strip() + "\n"
+
+
+def build_digest() -> None:
+    """content/digest.md -> /emails/digest/ (noindex preview), email.html, email.txt and digest.json, filled with
+    the newest published articles at build time. Paste into your email provider when you send a digest."""
+    f = CONTENT / "digest.md"
+    if not f.exists():
+        return
+    meta, body = parse_front_matter(f.read_text())
+    DIGEST_META.clear()
+    DIGEST_META.update(meta)
+    month = datetime.strptime(os.environ.get("BUILD_DATE") or date.today().isoformat(), "%Y-%m-%d").strftime("%B %Y")
+    e = {"subject": meta["subject"].replace("{month}", month), "preheader": meta.get("preheader", "").replace("{month}", month)}
+    sc = shortcode_factory({}, "digest")
+    preview_html, _ = markdown(body, sc)
+    write("/emails/digest/", layout(title=f"Digest: {e['subject']}", path="/emails/digest/", noindex=True,
+                                    description="Email digest preview", body=f"""<article class="wrap article email-preview">
+  <p class="crumbs"><a href="{u('/emails/')}">Emails</a> · best-of digest, filled at build time</p>
+  <p class="meta"><strong>Subject:</strong> {esc(e['subject'])}<br><strong>Preview text:</strong> {esc(e['preheader'])}</p>
+  <div class="email-body prose">{preview_html}</div>
+</article>"""))
+    CFG["_absolute_links"] = True
+    html, _ = markdown(body, sc)
+    CFG["_absolute_links"] = False
+    text = digest_text(body)
+    picks = digest_picks(meta)
+    (OUT / "emails" / "digest" / "email.html").write_text(email_html(e, html))
+    (OUT / "emails" / "digest" / "email.txt").write_text(text)
+    (OUT / "emails" / "digest" / "digest.json").write_text(json.dumps({
+        "subject": e["subject"], "preheader": e["preheader"], "html": html, "text": text,
+        "articles": [absu(f"/blog/{p['slug']}/") for p in picks["articles"]],
+        "compare": [absu(f"/compare/{c['slug']}/") for c in picks["compare"]]}, indent=2, ensure_ascii=False))
+
+
+def load_start() -> dict:
+    f = CONTENT / "data" / "start.json"
+    return json.loads(f.read_text()) if f.exists() else {"goals": []}
+
+
+def start_hub(which: str) -> str:
+    """/start/ hub. {{start:goals}} = the goal picker (cards linking to each goal's section);
+    {{start:<goal id>}} = that goal's reading list: the first published articles from content/data/start.json,
+    so the hub fills in as scheduled articles go live, plus its tools and comparisons."""
+    goals = load_start()["goals"]
+    if which == "goals":
+        cards = "".join(
+            f'<li class="post goal"><p class="post-pillar">{esc(g["kicker"])}</p>'
+            f'<h2><a href="#{slug_id(g["heading"])}">{esc(g["label"])}</a></h2><p>{esc(g["blurb"])}</p></li>'
+            for g in goals)
+        return f'<ul class="posts grid goals" aria-label="Pick your goal">{cards}</ul>'
+    g = next((x for x in goals if x["id"] == which), None)
+    if not g:
+        raise SystemExit(f"Unknown Start here goal '{which}'. Add it to content/data/start.json.")
+    by_slug = {p["slug"]: p for p in LIVE_POSTS}
+    picks = [by_slug[s] for s in g["articles"] if s in by_slug][:int(g.get("show", 4))]
+    items = "".join(f'<li><a href="{u(f"/blog/{p["slug"]}/")}">{esc(p["title"])}</a></li>' for p in picks)
+    extras = [(t, h) for t, h in g.get("links", []) if h not in UNPUBLISHED][:3]
+    more = "".join(f'<li><a href="{u(h)}">{esc(t)}</a></li>' for t, h in extras)
+    return (f'<div class="start-reading"><h3>Read next</h3><ul>{items}</ul>'
+            + (f'<h3>Tools and comparisons</h3><ul>{more}</ul>' if more else "") + "</div>")
 
 
 def money_shop_summary() -> str:
@@ -733,6 +840,8 @@ def build() -> list[str]:
     if (CONTENT / "new-year.md").exists() and not new_year_live():
         UNPUBLISHED.add("/new-year/")
     posts = sorted((p for p in all_posts if live(p)), key=lambda p: (str(p["date"]), p.get("order", "")), reverse=True)
+    LIVE_POSTS[:] = posts
+    LIVE_COMPS[:] = sorted((c for c in all_comps if live(c)), key=lambda c: str(c["date"]), reverse=True)
     comps_by_slug = {c["slug"]: c for c in all_comps if live(c)}
     products_list = [p for p in load_dir("products") if p.get("status") != "draft"]
     products_list.sort(key=lambda p: int(p.get("order", 99)))
@@ -1226,6 +1335,8 @@ def build() -> list[str]:
     (OUT / "emails" / "sequence.json").write_text(json.dumps(export, indent=2, ensure_ascii=False))
     write("/emails/", layout(title="Email sequence preview", path="/emails/", noindex=True, description="Preview",
                              body=f'<section class="wrap"><h1>Welcome and nurture sequence</h1><p class="dek">Preview only (not linked, not indexed). Copy these into your email provider; see site/README.md.</p><div class="table" tabindex="0"><table><thead><tr><th>#</th><th>Send</th><th>Subject</th><th>Job</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div></section>'))
+
+    build_digest()
 
     # ---- data-driven pages: budget by salary + cost of living by city (pseo.py)
     import pseo

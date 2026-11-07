@@ -90,6 +90,7 @@
   },
   "best-tax-software-for-simple-returns": {
    "related": [
+    "how-to-file-a-tax-extension",
     "how-to-file-taxes-for-the-first-time",
     "what-to-do-with-your-tax-refund",
     "401k-match-explained",
@@ -281,6 +282,7 @@
   },
   "roth-vs-traditional-ira": {
    "related": [
+    "ira-contribution-before-tax-deadline",
     "401k-match-explained",
     "how-to-start-investing-with-100-a-month",
     "expense-ratios-explained",
@@ -402,6 +404,7 @@
   },
   "what-to-do-with-your-tax-refund": {
    "related": [
+    "how-to-fill-out-a-w-4",
     "how-to-build-an-emergency-fund",
     "debt-avalanche-vs-snowball",
     "roth-vs-traditional-ira",
@@ -411,6 +414,7 @@
   },
   "how-to-file-taxes-for-the-first-time": {
    "related": [
+    "tax-deductions-vs-tax-credits",
     "what-to-do-with-your-tax-refund",
     "best-tax-software-for-simple-returns",
     "how-to-budget-with-irregular-income",
@@ -438,6 +442,7 @@
   },
   "how-to-budget-with-irregular-income": {
    "related": [
+    "self-employment-tax-explained",
     "how-to-stop-living-paycheck-to-paycheck",
     "sinking-funds-explained",
     "how-to-file-taxes-for-the-first-time",
@@ -478,6 +483,78 @@
     "50-30-20-rule",
     "how-to-stop-living-paycheck-to-paycheck",
     "find-and-cancel-subscriptions"
+   ],
+   "tool": "budget"
+  },
+  "tax-deductions-vs-tax-credits": {
+   "related": [
+    "standard-deduction-vs-itemizing",
+    "earned-income-tax-credit",
+    "how-to-file-taxes-for-the-first-time",
+    "ira-contribution-before-tax-deadline"
+   ],
+   "tool": "budget"
+  },
+  "self-employment-tax-explained": {
+   "related": [
+    "how-to-budget-with-irregular-income",
+    "how-to-file-a-tax-extension",
+    "tax-deductions-vs-tax-credits",
+    "sinking-funds-explained"
+   ],
+   "tool": "budget"
+  },
+  "how-to-fill-out-a-w-4": {
+   "related": [
+    "what-to-do-with-your-tax-refund",
+    "how-to-file-taxes-for-the-first-time",
+    "self-employment-tax-explained",
+    "first-job-401k-setup"
+   ],
+   "tool": "budget"
+  },
+  "what-to-do-if-you-cant-pay-your-taxes": {
+   "related": [
+    "how-to-file-a-tax-extension",
+    "how-to-fill-out-a-w-4",
+    "debt-avalanche-vs-snowball",
+    "how-credit-card-interest-works"
+   ],
+   "tool": "debt"
+  },
+  "standard-deduction-vs-itemizing": {
+   "related": [
+    "tax-deductions-vs-tax-credits",
+    "how-to-save-for-a-house-down-payment",
+    "how-to-file-taxes-for-the-first-time",
+    "best-tax-software-for-simple-returns"
+   ],
+   "tool": "budget"
+  },
+  "earned-income-tax-credit": {
+   "related": [
+    "tax-deductions-vs-tax-credits",
+    "what-to-do-with-your-tax-refund",
+    "how-to-file-taxes-for-the-first-time",
+    "how-to-build-an-emergency-fund"
+   ],
+   "tool": "budget"
+  },
+  "ira-contribution-before-tax-deadline": {
+   "related": [
+    "roth-vs-traditional-ira",
+    "where-to-open-a-roth-ira",
+    "tax-deductions-vs-tax-credits",
+    "how-to-start-investing-with-100-a-month"
+   ],
+   "tool": "budget"
+  },
+  "how-to-file-a-tax-extension": {
+   "related": [
+    "what-to-do-if-you-cant-pay-your-taxes",
+    "self-employment-tax-explained",
+    "how-to-file-taxes-for-the-first-time",
+    "best-tax-software-for-simple-returns"
    ],
    "tool": "budget"
   }

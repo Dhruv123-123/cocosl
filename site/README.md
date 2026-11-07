@@ -426,3 +426,18 @@ Same rules as the rest of the factory (`docs/COMPLIANCE.md`): affiliate links la
 in the footer and on `/disclosures/`, no testimonials until real buyers give permission, no income or
 return promises (all projections are labelled hypothetical), "not financial advice" on every page and email,
 honest refund policy, unsubscribe and postal address in every email.
+
+## Start here hub (/start/)
+
+`content/pages/start.md` routes new visitors by goal: **pay off debt, build savings, first job, freelance**. `{{start:goals}}` draws the goal cards; `{{start:<id>}}` draws each goal's "Read next" list and its tools and comparisons. The lists come from `content/data/start.json`: each goal lists article slugs best first, and the page shows the first published ones (4 by default), so scheduled articles join the hub automatically on their publish date. To add a goal, add it to `start.json` and add a `## <heading>` section with its shortcode to `start.md` (the heading must match `heading` in the JSON, since it's the card's anchor).
+
+## "Best of" email digest
+
+`content/digest.md` is the digest template. At every build it's filled with the newest published articles (`count`, default 5; slugs in `pinned` go first) and the newest comparison page, and written to:
+
+- `/emails/digest/` — a noindex preview page;
+- `/emails/digest/email.html` — inline-styled HTML to paste into your email provider;
+- `/emails/digest/email.txt` — the plain-text version;
+- `/emails/digest/digest.json` — subject, preheader, html, text and the URLs used.
+
+`{month}` in the subject or preheader becomes the build month ("The best of Money Made Simple, March 2027"). To send one: run the build (or let the daily rebuild run), open the preview, copy `email.html` into a new broadcast, and send. Nothing is sent automatically.

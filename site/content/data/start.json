@@ -1,0 +1,25 @@
+{
+ "_readme": "Goals on /start/ (content/pages/start.md). Each goal's reading list shows the first 'show' PUBLISHED articles from 'articles' (best first), so scheduled articles join the hub on their publish date. 'links' are tools and comparisons, hidden while unpublished. 'heading' must match the goal's ## heading in start.md (it's the card's anchor).",
+ "goals": [
+  {"id": "debt", "label": "Pay off debt", "heading": "Pay off debt", "kicker": "Debt",
+   "blurb": "Card balances, loans or a tax bill: the order to pay, and how to pay less interest.",
+   "show": 4,
+   "articles": ["debt-avalanche-vs-snowball", "how-credit-card-interest-works", "debt-consolidation-explained", "how-credit-scores-work", "what-to-do-if-you-cant-pay-your-taxes", "how-to-dispute-a-credit-report-error", "how-to-stop-living-paycheck-to-paycheck"],
+   "links": [["Debt payoff calculator", "/debt-payoff/"], ["Balance transfer vs personal loan", "/compare/balance-transfer-vs-personal-loan/"], ["Best balance transfer cards", "/compare/best-balance-transfer-cards/"], ["Credit-builder cards and tools", "/compare/best-credit-builder-cards/"]]},
+  {"id": "saving", "label": "Build savings", "heading": "Build savings", "kicker": "Saving",
+   "blurb": "An emergency fund, sinking funds for known costs, and where to keep the money.",
+   "show": 4,
+   "articles": ["how-to-build-an-emergency-fund", "sinking-funds-explained", "how-to-open-a-high-yield-savings-account", "high-yield-savings-vs-money-market", "car-repair-sinking-fund", "how-to-save-for-a-house-down-payment", "what-to-do-with-your-tax-refund", "how-to-lower-your-grocery-bill"],
+   "links": [["Best high-yield savings accounts", "/compare/best-high-yield-savings-accounts/"], ["High-yield savings vs CDs", "/compare/high-yield-savings-vs-cds/"], ["Ally vs Marcus", "/compare/ally-vs-marcus/"]]},
+  {"id": "first-job", "label": "Start your first job", "heading": "Start your first job", "kicker": "First job",
+   "blurb": "Your W-4, your 401(k) match, your first budget and your first tax return.",
+   "show": 4,
+   "articles": ["401k-match-explained", "first-job-401k-setup", "how-to-fill-out-a-w-4", "how-to-make-a-budget-you-will-keep", "roth-vs-traditional-ira", "how-to-file-taxes-for-the-first-time", "hsa-vs-fsa", "50-30-20-rule", "how-to-start-investing-with-100-a-month"],
+   "links": [["Budget by salary", "/budget/"], ["City budgets", "/cost-of-living/"], ["Best budgeting apps", "/compare/best-budgeting-apps/"]]},
+  {"id": "freelance", "label": "Freelance or side income", "heading": "Freelance or side income", "kicker": "Freelance",
+   "blurb": "Steady pay from uneven income, what to set aside for tax, and how to file.",
+   "show": 4,
+   "articles": ["how-to-budget-with-irregular-income", "self-employment-tax-explained", "how-to-file-a-tax-extension", "tax-deductions-vs-tax-credits", "sinking-funds-explained", "how-to-build-an-emergency-fund", "how-to-make-a-budget-you-will-keep"],
+   "links": [["FreeTaxUSA vs TaxAct", "/compare/freetaxusa-vs-taxact/"], ["YNAB vs EveryDollar", "/compare/ynab-vs-everydollar/"], ["Best high-yield savings accounts", "/compare/best-high-yield-savings-accounts/"]]}
+ ]
+}
