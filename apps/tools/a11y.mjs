@@ -29,7 +29,9 @@ const server = createServer(async (req, res) => {
 
 const only = process.argv.includes('--only') ? process.argv[process.argv.indexOf('--only') + 1] : '';
 const hubPages = (dir) => cardsFromHub(readFileSync(join(root, dir, 'index.html'), 'utf8')).map((c) => new URL(c.u, `http://x/${dir ? `${dir}/` : ''}`).pathname);
-const pages = [...new Set(['/', '/es/', ...hubPages(''), ...hubPages('es')])].filter((p) => p.includes(only));
+// Embedded widgets in partner styles: the top three calculators, forced light and dark, a dark and a light accent.
+const EMBEDS = ['take-home-pay', 'debt-payoff', 'emergency-fund'].flatMap((c) => [`/money-calculators/${c}/?embed=1&theme=light&accent=1f3a8a`, `/money-calculators/es/${c}/?embed=1&theme=dark&accent=ffd166`]);
+const pages = [...new Set(['/', '/es/', ...hubPages(''), ...hubPages('es'), '/money-calculators/embed/', ...EMBEDS])].filter((p) => p.includes(only));
 
 await new Promise((r) => server.listen(0, r));
 const base = `http://127.0.0.1:${server.address().port}`;

@@ -139,7 +139,22 @@ const checks = [
   }],
   ['/money-calculators/es/rent-vs-buy/', '#result .big'],
   ['/money-calculators/compound-interest/?embed=1', '.embed-credit'],
-  ['/money-calculators/embed/', '#embed-form', async (page) => { await page.waitForSelector('#e-preview iframe'); }],
+  ['/money-calculators/embed/', '#embed-form', async (page) => {
+    await page.waitForSelector('#e-preview iframe');
+    if (!/Most popular/.test(await page.innerHTML('#e-calc'))) throw new Error('top 3 group');
+    await page.selectOption('#e-calc', 'take-home-pay');
+    await page.fill('#e-licence', 'demo');
+    await page.dispatchEvent('#e-licence', 'change');
+    if (!/data-licence="demo"/.test(await page.inputValue('#e-code'))) throw new Error('licence in code');
+    const frame = page.frameLocator('#e-preview iframe').last();
+    await frame.locator('.partner-cta .btn').waitFor();
+    if (await frame.locator('.embed-credit a').count()) throw new Error('licensed embed should drop the credit link');
+  }],
+  ['/money-calculators/debt-payoff/?embed=1&accent=1f3a8a&theme=dark&radius=4', '#result .big', async (page) => {
+    const v = await page.evaluate(() => [getComputedStyle(document.documentElement).getPropertyValue('--gold').trim(), getComputedStyle(document.querySelector('[data-print=avalanche]')).color]);
+    if (v[0] !== '#1f3a8a' || v[1] !== 'rgb(255, 255, 255)') throw new Error(`accent ${v}`);
+    if (!(await page.locator('.embed-credit a').count())) throw new Error('free embed keeps the credit');
+  }],
   ['/money-calculators/es/debt-payoff/', '#result .chart-axis'],
   ['/money-calculators/debt-payoff/', '#result .chart-axis', async (page) => {
     if ((await page.locator('#result svg.chart path').count()) !== 2) throw new Error('two strategy lines');

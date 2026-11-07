@@ -11,6 +11,7 @@ import { analyzeFees } from './lib/fees.js';
 import { money, isLiveUrl, escapeHtml } from './lib/format.js';
 import { TEXT } from './lib/text.js';
 import { initTracking, withUtm } from './lib/track.js';
+import { embedOptions } from './lib/embed-options.js';
 
 const $ = (sel, root = document) => root.querySelector(sel);
 
@@ -360,13 +361,25 @@ function mountCalculator(id) {
 const params = new URLSearchParams(location.search);
 const embedded = params.get('embed') === '1';
 if (embedded) {
-  document.documentElement.classList.add('embed');
+  const opt = embedOptions(params, document.referrer, config.embed);
+  const root = document.documentElement;
+  root.classList.add('embed');
+  if (opt.theme !== 'auto') root.classList.add(`theme-${opt.theme}`);
+  if (opt.accent) { root.style.setProperty('--gold', opt.accent); root.style.setProperty('--accent-ink', opt.accentInk); }
+  if (opt.radius !== null) root.style.setProperty('--radius', `${opt.radius}px`);
+  if (opt.licenceProblem) console.warn(`Calculator licence not applied (${opt.licenceProblem === 'domain' ? 'this site is not on the licence' : 'unknown key'}).`);
   const credit = document.createElement('p');
   credit.className = 'embed-credit';
   const href = withUtm(location.href.split('?')[0], { source: 'embed', medium: 'referral', campaign: document.body.dataset.calc || 'calculator' });
-  credit.innerHTML = params.get('brand') === '0' && config.embed.allowUnbranded
-    ? ''
-    : `<a href="${href}" target="_blank" rel="noopener">${lang === 'es' ? 'Calculadora gratis de' : 'Free calculator by'} ${escapeHtml(config.brand)}</a>`;
+  credit.innerHTML = opt.showCredit
+    ? `<a href="${href}" target="_blank" rel="noopener">${lang === 'es' ? 'Calculadora gratis de' : 'Free calculator by'} ${escapeHtml(config.brand)}</a>`
+    : '';
+  if (opt.cta) {
+    const box = document.createElement('div');
+    box.className = 'partner-cta';
+    box.innerHTML = `<a class="btn" href="${escapeHtml(opt.cta.url)}" target="_top" rel="noopener">${escapeHtml(opt.cta.label)}</a>${opt.partner ? `<p class="tiny">${lang === 'es' ? 'De' : 'From'} ${escapeHtml(opt.partner)}</p>` : ''}`;
+    document.querySelector('main').append(box);
+  }
   document.querySelector('main').append(credit);
   const post = () => parent.postMessage({ type: 'mms-calc-height', id: params.get('frame') || '', height: document.documentElement.scrollHeight }, '*');
   new ResizeObserver(post).observe(document.body);

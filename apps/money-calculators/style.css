@@ -74,6 +74,14 @@ footer{color:var(--muted);font-size:13px;padding-top:24px;padding-bottom:40px;bo
 .embed main{padding:0}
 .embed .layout{margin:0}
 .embed-credit{font-size:12px;color:var(--muted);text-align:right;margin:6px 0 0}
+.embed .btn:not(.ghost),.embed .badge-mini{color:var(--accent-ink,#0b1d13)}
+.embed .card{border-radius:var(--radius,16px)}.embed input,.embed select{border-radius:min(var(--radius,10px),10px)}
+.embed.theme-light{--ink:#0b1d13;--paper:#f4f1e8;--card:#fffdf7;--muted:#5b6b61;--line:#ddd6c4;--green-text:#17804a;color-scheme:light}
+.embed.theme-light a:not(.btn),.embed.theme-light a:not(.btn):visited{color:inherit}
+.embed.theme-dark{--paper:#0b1d13;--card:#12291b;--ink:#f4f1e8;--muted:#a9b8ae;--line:#24412f;--green-text:#2fbf71;color-scheme:dark}
+.embed.theme-dark a:not(.btn){color:#9cc4ff}
+.embed.theme-light body,.embed.theme-dark body{background:var(--paper);padding:8px}
+.partner-cta{text-align:center;margin:12px 0 0}.partner-cta .tiny{margin:4px 0 0}
 select,textarea{font:inherit;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--paper);color:var(--ink);width:100%}
 #embed-form label{margin-bottom:12px}
 .per{font-size:16px;color:var(--muted);font-weight:600}

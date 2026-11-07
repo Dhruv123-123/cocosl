@@ -141,7 +141,9 @@ const thanks = `<!doctype html>
 `;
 
 function embedPage() {
-  const opts = pages.map((p) => `<option value="${p.slug}">${esc(p.h1)}</option>`).join('');
+  const TOP = ['take-home-pay', 'debt-payoff', 'emergency-fund'];
+  const opt = (p) => `<option value="${p.slug}">${esc(p.h1)}</option>`;
+  const opts = `<optgroup label="Most popular">${TOP.map((t) => opt(pages.find((p) => p.slug === t))).join('')}</optgroup><optgroup label="More calculators">${pages.filter((p) => !TOP.includes(p.slug)).map(opt).join('')}</optgroup>`;
   const body = `
 <h1>Add a free calculator to your site</h1>
 <p class="lede">Bloggers, financial coaches, credit unions and schools can embed any of our calculators for free. It resizes itself, works on phones, sets no cookies, and keeps your readers on your page.</p>
@@ -149,6 +151,10 @@ function embedPage() {
   <form id="embed-form" class="card">
     <label>Calculator<select id="e-calc">${opts}</select></label>
     <label>Language<select id="e-lang"><option value="en">English</option><option value="es">Español</option></select></label>
+    <label>Button colour<input id="e-accent" type="color" value="#f2b134"></label>
+    <label>Theme<select id="e-theme"><option value="">Match the reader's device</option><option value="light">Always light</option><option value="dark">Always dark</option></select></label>
+    <label>Corner roundness<select id="e-radius"><option value="">Rounded (default)</option><option value="8">Slightly rounded</option><option value="0">Square</option></select></label>
+    <label>Licence key (white-label partners only)<input id="e-licence" placeholder="Leave blank for the free version" autocomplete="off"></label>
     <label>Paste this where you want it
       <textarea id="e-code" rows="5" readonly></textarea></label>
     <button type="button" class="btn small" id="e-copy">Copy code</button>
@@ -158,24 +164,27 @@ function embedPage() {
 </div>
 <section class="card">
   <h2>For credit unions, banks and financial coaches</h2>
-  <p>Want the calculators in your colours, without our link, and pointing to your own products (savings accounts, loans, coaching)? A white-label licence covers all six calculators in English and Spanish, with updates, for a flat monthly fee.</p>
-  <ul><li>Your brand colours and logo</li><li>No credit link, your own call-to-action under every result</li><li>English and Spanish versions</li><li>Hosted for you, or as files for your web team</li></ul>
+  <p>Want the calculators in your colours, without our link, and pointing to your own products (savings accounts, loans, coaching)? A white-label licence covers every calculator in English and Spanish, with updates, for a flat monthly fee.</p>
+  <ul><li>Your brand colour, theme and corner style</li><li>No credit link, and your own button under every result</li><li>English and Spanish versions</li><li>Locked to your domains, hosted for you, or as files for your web team</li></ul>
   <p><a class="btn" href="${esc(config.embed.licenceUrl)}">Ask about a licence</a></p>
 </section>
 <script type="module">
   const $ = (s) => document.querySelector(s);
   const base = new URL('../', location.href).href;
+  const attr = (k, v) => (v ? ' data-' + k + '="' + String(v).replace(/[^a-zA-Z0-9#-]/g, '') + '"' : '');
   function update() {
-    const code = '<div class="mms-calc" data-calc="' + $('#e-calc').value + '" data-lang="' + $('#e-lang').value + '"></div>\\n<script src="' + base + 'embed.js" async><\\/script>';
+    const accent = $('#e-accent').value.toLowerCase() === '#f2b134' ? '' : $('#e-accent').value;
+    const div = '<div class="mms-calc" data-calc="' + $('#e-calc').value + '" data-lang="' + $('#e-lang').value + '"' + attr('accent', accent) + attr('theme', $('#e-theme').value) + attr('radius', $('#e-radius').value) + attr('licence', $('#e-licence').value.trim()) + '></div>';
+    const code = div + '\\n<script src="' + base + 'embed.js" async><\\/script>';
     $('#e-code').value = code;
-    $('#e-preview').innerHTML = '<div class="mms-calc" data-calc="' + $('#e-calc').value + '" data-lang="' + $('#e-lang').value + '"></div>';
+    $('#e-preview').innerHTML = div;
     const s = document.createElement('script'); s.src = base + 'embed.js?' + Date.now(); document.body.append(s);
   }
-  $('#e-calc').addEventListener('change', update); $('#e-lang').addEventListener('change', update);
+  for (const id of ['#e-calc', '#e-lang', '#e-accent', '#e-theme', '#e-radius', '#e-licence']) $(id).addEventListener('change', update);
   $('#e-copy').addEventListener('click', async () => { try { await navigator.clipboard.writeText($('#e-code').value); $('#e-copy').textContent = 'Copied'; } catch { $('#e-code').select(); } });
   update();
 </script>`;
-  return layout({ lang: 'en', slug: 'embed', title: 'Free Money Calculators for Your Website', description: 'Embed free debt payoff, compound interest, emergency fund, savings, credit card and Roth vs Traditional calculators on your site. White-label licences for credit unions and coaches.', body });
+  return layout({ lang: 'en', slug: 'embed', title: 'Free Money Calculators for Your Website', description: 'Embed free paycheck, debt payoff, emergency fund and other money calculators on your site, in your colours. White-label licences for credit unions and coaches.', body });
 }
 
 const write = (rel, text) => { const f = join(root, rel); mkdirSync(dirname(f), { recursive: true }); writeFileSync(f, text); };

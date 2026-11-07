@@ -99,8 +99,11 @@ Nothing here takes a payment by itself, and nothing goes live until you paste in
 
 `money-calculators/embed/` lets any site embed a calculator with two lines of HTML (`embed.js` makes a
 self-resizing iframe; no cookies). Free embeds carry a "Free calculator by Money Made Simple" link, so each
-one is a backlink. For paying licensees (credit unions, coaches), set `embed.allowUnbranded: true` and give
-them `data-brand="0"`, or deploy a copy with their colours. Set `embed.licenceUrl` to your contact link.
+one is a backlink. Partners can set `data-accent`, `data-theme`, `data-radius` and starting `data-values`.
+White-label licensees go in `embed.licensees` (`{ key, name, domains, cta }`): their `data-licence="KEY"` drops
+the credit link and shows their own button, on their domains only (checked from the referrer; the `demo` key works
+on localhost for the builder preview). Pricing and spec: the "Calculator widgets: pricing and spec" doc.
+Set `embed.licenceUrl` to your contact link.
 
 ## Browser extension
 

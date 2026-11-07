@@ -74,6 +74,12 @@ export default {
     showOffers: false,
     allowUnbranded: false,
     licenceUrl: 'mailto:hello@example.com?subject=Calculator%20licence',
+    // White-label licensees: { key, name, domains: ['example-cu.org'], cta: { label, url } }.
+    // Their embeds (data-licence="KEY") drop the credit link and show their own button, on their domains only.
+    // The demo key works on localhost so the embed page can preview it; leave it in.
+    licensees: [
+      { key: 'demo', name: 'Demo Credit Union', domains: ['localhost', '127.0.0.1'], cta: { label: 'Open a savings account', url: 'https://example.org/savings' } },
+    ],
   },
 
   // Plausible (no cookies). Set the domain to turn on page views, outbound clicks and the
