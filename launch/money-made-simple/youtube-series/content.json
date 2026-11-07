@@ -320,7 +320,24 @@
      "heading": "Goal two: how much you really need",
      "narration": "Once your high-interest debt is under control, the next goal is three to six months of essential expenses. Notice it's essentials, not your full income. Rent, utilities, groceries, insurance, transportation, minimum debt payments, phone. In our example, that's two thousand dollars a month. So three months is six thousand dollars, and six months is twelve thousand. Which end should you aim for? Lean toward three months if you have a stable job, two incomes in the household, and no dependents. Lean toward six months or more if you're self-employed, work on commission, are the only income for your household, or work in an industry with frequent layoffs. If six thousand sounds huge, remember you're not doing it this month. You're building it a little every payday.",
      "on_screen_text": "3–6 months of essentials",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a row of six small calendars, three of them highlighted. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a row of six small calendars, three of them highlighted. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Emergency fund targets",
+      "labels": [
+       "Starter",
+       "3 months",
+       "6 months"
+      ],
+      "values": [
+       1000,
+       6000,
+       12000
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "$2,000 a month of essentials, example"
+     }
     },
     {
      "heading": "Where to keep it",
@@ -438,7 +455,28 @@
      "heading": "Factor 2: amounts owed (30%)",
      "narration": "The second biggest factor is amounts owed, about thirty percent. The key idea here is credit utilization: how much of your available credit card limit you're using. If you have a thousand dollar limit and a three hundred dollar balance, your utilization is thirty percent. A common guideline is to keep it under thirty percent, and people with the highest scores often stay under ten. Here's what most people don't know: utilization is usually based on the balance your card reports, which is often your statement balance, even if you pay in full every month. So if you want a lower reported balance before applying for a loan, pay the card down before the statement closes. And unlike late payments, utilization has no long memory. Pay it down, and your score can recover quickly.",
      "on_screen_text": "Use under 30% of your limit",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a credit card next to a simple bar filled one third of the way. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a credit card next to a simple bar filled one third of the way. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "What a FICO score is made of",
+      "labels": [
+       "Payment history",
+       "Amounts owed",
+       "History length",
+       "New credit",
+       "Credit mix"
+      ],
+      "values": [
+       35,
+       30,
+       15,
+       10,
+       10
+      ],
+      "unit_prefix": "",
+      "unit_suffix": "%",
+      "note": "Approximate weights"
+     }
     },
     {
      "heading": "Factors 3 to 5",
@@ -975,7 +1013,22 @@
      "heading": "The math in dollars",
      "narration": "Let's make it concrete with our hypothetical. You have five thousand dollars in savings. At half a percent APY, after one year you'd earn about twenty-five dollars. At four percent APY, you'd earn about two hundred dollars. That's a hundred and seventy-five dollars more, for doing nothing except choosing a different account. At ten thousand dollars, the difference would be about three hundred and fifty a year. It's not life-changing money, but it's real money, and it keeps coming every year. It's also a way to protect your savings from inflation. If prices rise three percent and your savings earns almost nothing, your money is quietly losing buying power. A better rate doesn't always beat inflation, but it narrows the gap.",
      "on_screen_text": "$5,000: ~$25 vs ~$200 a year",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two coin stacks side by side, one much taller. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two coin stacks side by side, one much taller. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$5,000 for one year",
+      "labels": [
+       "0.5% APY",
+       "4% APY"
+      ],
+      "values": [
+       25,
+       200
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Hypothetical rates; APYs vary"
+     }
     },
     {
      "heading": "Is it safe?",

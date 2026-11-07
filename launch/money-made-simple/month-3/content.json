@@ -4116,7 +4116,22 @@
      "heading": "Splitting: 3 ways",
      "narration": "Three ways to split. Fifty-fifty: simple, fair when incomes are close. By income: each pays the same percentage of their pay. All in one pot: everything joint, decided together. Example by income: one takes home forty-two hundred, the other twenty-eight hundred. That's sixty and forty. With twenty-four hundred of shared bills, they pay fourteen-forty and nine-sixty, and both keep about two-thirds of their pay.",
      "on_screen_text": "50/50 · by income · one pot",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three seesaws in a row. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three seesaws in a row. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$2,400 of shared bills, split by income",
+      "labels": [
+       "Partner A ($4,200)",
+       "Partner B ($2,800)"
+      ],
+      "values": [
+       1440,
+       960
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "60/40 by take-home, fictional"
+     }
     },
     {
      "heading": "Accounts",

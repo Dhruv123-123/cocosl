@@ -2913,7 +2913,28 @@
      "heading": "The five factors",
      "narration": "FICO scores are built from five categories. Payment history is about thirty-five percent: do you pay on time? Amounts owed are about thirty percent, mostly how much of your credit limits you're using. Length of credit history is about fifteen percent. New credit, meaning recent applications, is about ten percent. And credit mix, the variety of account types, is about ten percent. Notice the first two add up to sixty-five percent. Two habits drive most of your score: pay on time and keep balances low.",
      "on_screen_text": "35 / 30 / 15 / 10 / 10",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pie chart with five slices, the two biggest glowing. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pie chart with five slices, the two biggest glowing. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "What a FICO score is made of",
+      "labels": [
+       "Payment history",
+       "Amounts owed",
+       "History length",
+       "New credit",
+       "Credit mix"
+      ],
+      "values": [
+       35,
+       30,
+       15,
+       10,
+       10
+      ],
+      "unit_prefix": "",
+      "unit_suffix": "%",
+      "note": "Approximate weights"
+     }
     },
     {
      "heading": "Payment history",
@@ -3198,7 +3219,30 @@
      "heading": "9. Sinking funds",
      "narration": "Move nine: turn that list into sinking funds. Divide each cost by the number of months until it's due and set up an automatic transfer to a separate savings account. Six hundred dollars of travel in June, starting in January, is a hundred dollars a month. Now those costs come from savings instead of a credit card.",
      "on_screen_text": "9. Start sinking funds",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a row of small jars, each filling at its own pace. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a row of small jars, each filling at its own pace. No text, no logos, no real people.",
+     "chart": {
+      "kind": "line",
+      "title": "$600 June trip, saved from January",
+      "labels": [
+       "Jan",
+       "Feb",
+       "Mar",
+       "Apr",
+       "May",
+       "Jun"
+      ],
+      "values": [
+       100,
+       200,
+       300,
+       400,
+       500,
+       600
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "$100 a month, example"
+     }
     },
     {
      "heading": "10. Three goals",

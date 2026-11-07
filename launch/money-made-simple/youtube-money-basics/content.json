@@ -63,7 +63,30 @@
      "heading": "Net pay",
      "narration": "Now subtract everything. Two thousand one hundred fifteen, minus one hundred twenty-seven to the 401(k), minus eighty-five for health insurance, minus one hundred fifty-five in Social Security and Medicare, minus about one hundred fifty federal and seventy state. That leaves about one thousand five hundred and twenty-eight dollars. That's net pay, your take-home, and it's about seventy-two percent of gross. This is the number your budget runs on. Paid every two weeks? Multiply by twenty-six and divide by twelve for a monthly figure: about three thousand three hundred and ten dollars. Not two paychecks times two. Twenty-six divided by twelve. That small difference is why two months a year feel richer than the rest.",
      "on_screen_text": "Net ≈ $1,528 · ≈ $3,310/month",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small coin stack left after the pie is sliced. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small coin stack left after the pie is sliced. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Where a $2,115 paycheck goes",
+      "labels": [
+       "401(k)",
+       "Health insurance",
+       "Social Security + Medicare",
+       "Federal tax",
+       "State tax",
+       "Net pay"
+      ],
+      "values": [
+       127,
+       85,
+       155,
+       150,
+       70,
+       1528
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Fictional $55,000 pay stub"
+     }
     },
     {
      "heading": "The year-to-date column",
@@ -196,7 +219,26 @@
      "heading": "The money map",
      "narration": "Here's the whole map for our eight thousand dollars. Three thousand in checking: one month of bills and spending plus a cushion. Three thousand five hundred in high-yield savings: the emergency fund. One thousand in a one-year CD: the trip fund with a fixed date. Five hundred in a Roth IRA: long-term money. Notice the logic. Money you need soonest sits in the most accessible place. Money you won't touch for decades sits where it can grow. And every dollar has a job. If your numbers are smaller, the map still works. It just has fewer boxes. The first box is always checking with a cushion, and the second is always an emergency fund.",
      "on_screen_text": "$3,000 · $3,500 · $1,000 · $500",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple map with four labelled boxes and arrows. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple map with four labelled boxes and arrows. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "A money map for $8,000",
+      "labels": [
+       "Checking",
+       "High-yield savings",
+       "1-year CD",
+       "Roth IRA"
+      ],
+      "values": [
+       3000,
+       3500,
+       1000,
+       500
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Fictional example"
+     }
     },
     {
      "heading": "Is my money safe? FDIC and NCUA",
@@ -603,7 +645,22 @@
      "heading": "Build the sheet",
      "narration": "Now let's build the actual sheet. Column A is the account name. Column B is the type: asset or debt. Column C is today's balance. At the bottom, one formula adds up the assets, another adds up the debts, and a third subtracts debts from assets. For our person: thirty-one thousand four hundred minus thirty-four thousand four hundred. Net worth: minus three thousand dollars. Then add a new column each time you update it, every six months, with the date at the top. After a year you'll have three columns side by side, and the bottom row tells the story. That's the whole tool. No app required, though many budgeting apps can calculate this automatically if you link your accounts.",
      "on_screen_text": "Assets $31,400 − debts $34,400 = −$3,000",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple spreadsheet with three columns and a total row. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple spreadsheet with three columns and a total row. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Net worth, fictional example",
+      "labels": [
+       "Assets",
+       "Debts"
+      ],
+      "values": [
+       31400,
+       34400
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Net worth = assets − debts = −$3,000 (fictional)"
+     }
     },
     {
      "heading": "Negative is normal",
@@ -885,7 +942,22 @@
      "heading": "Step 1: keep the loan short",
      "narration": "Step one, the final check: keep the loan as short as you can afford. On a twelve-thousand-dollar loan at eight percent, a forty-eight month loan costs about two thousand and sixty dollars in interest, at about two hundred ninety-three a month. Stretch it to seventy-two months and the payment drops to about two hundred ten, but interest rises to about three thousand one hundred fifty. And with a long loan, you can owe more than the car is worth for years, which is a problem if it's totalled or you need to sell. A bigger down payment helps too. If the shorter loan doesn't fit your budget, the car may be too expensive.",
      "on_screen_text": "48 mo: ~$2,060 interest · 72 mo: ~$3,150",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two roads, one short and one long, with coins along them. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two roads, one short and one long, with coins along them. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Interest on $12,000 at 8%",
+      "labels": [
+       "48 months",
+       "72 months"
+      ],
+      "values": [
+       2060,
+       3150
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Example loan"
+     }
     },
     {
      "heading": "After you buy",
@@ -1154,7 +1226,22 @@
      "heading": "How interest is calculated",
      "narration": "If you do carry a balance, here's how the interest charge is usually calculated. The card takes your APR and divides it by three hundred sixty-five to get a daily rate. Twenty-four percent becomes about point zero six six percent a day. It then works out your average daily balance for the cycle, multiplies by the daily rate and the number of days. On an average daily balance of two thousand dollars over a thirty-day cycle, that's about thirty-nine dollars and fifty cents. You'll see the result in an interest charge calculation section, often broken out by purchases, balance transfers and cash advances, which can have different rates.",
      "on_screen_text": "$2,000 × 24% ÷ 365 × 30 ≈ $39.50",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a small coin on each day. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a small coin on each day. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "One month of interest at 24% APR",
+      "labels": [
+       "Avg daily balance",
+       "Interest (30 days)"
+      ],
+      "values": [
+       2000,
+       39.5
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "24% ÷ 365 × 30 days, example"
+     }
     },
     {
      "heading": "Fees to watch",
@@ -1427,7 +1514,22 @@
      "heading": "Salary: why it matters most",
      "narration": "Now salary, which matters far more than any bill. A raise compounds: every future raise is often a percentage of your current pay, and retirement contributions and employer matches are too. A three-thousand-dollar raise at age twenty-five is three thousand dollars a year for every year after, before any further raises. Over a career, the gap between people who ask and people who don't can be very large. Yet many people never ask, especially early in their careers. You don't have to be aggressive. You need preparation, a specific number, and good timing.",
      "on_screen_text": "A raise compounds",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small staircase of coins rising over years. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small staircase of coins rising over years. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "One year of one ask",
+      "labels": [
+       "Lower internet bill ($30/mo)",
+       "A $3,000 raise"
+      ],
+      "values": [
+       360,
+       3000
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Examples from this video"
+     }
     },
     {
      "heading": "Preparing for a raise conversation",

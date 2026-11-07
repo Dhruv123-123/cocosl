@@ -3240,7 +3240,24 @@
      "heading": "Real numbers: refund",
      "narration": "Now the real numbers. You got a three thousand dollar refund and want it closer to zero. Run the free IRS Tax Withholding Estimator. If it says you're over-withholding by about that much, it will suggest entries that shrink it, roughly a hundred and fifteen dollars more per biweekly paycheck.",
      "on_screen_text": "$3,000 ÷ 26 ≈ $115/paycheck",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calculator next to a paycheck. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calculator next to a paycheck. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "A $3,000 refund, spread out",
+      "labels": [
+       "Yearly refund",
+       "Per month",
+       "Per biweekly paycheck"
+      ],
+      "values": [
+       3000,
+       250,
+       115
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Example; run the IRS estimator for yours"
+     }
     },
     {
      "heading": "Real numbers: owing",
