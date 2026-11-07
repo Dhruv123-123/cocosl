@@ -29,7 +29,7 @@ def b2b(tmp_path, monkeypatch):
     """A scratch copy of launch/b2b (without built output) with build, deliver, outreach_dates and paperwork
     imported from it, and the image renderer switched off."""
     root = tmp_path / "b2b"
-    shutil.copytree(B2B, root, ignore=shutil.ignore_patterns("out", "clients", "dist", "node_modules", "*.zip", "*.pdf", "PIPELINE.*"))
+    shutil.copytree(B2B, root, ignore=shutil.ignore_patterns("out", "clients", "dist", "node_modules", "*.zip", "*.pdf", "PIPELINE.*", "reviews"))
     monkeypatch.syspath_prepend(str(root))
     mods = {}
     for name in ("build", "deliver", "outreach_dates", "paperwork"):
@@ -340,3 +340,31 @@ def test_pipeline_xlsx(b2b, tmp_path):
     assert wb.sheetnames == ["How to use", "Summary", "Pipeline", "Stages"]
     assert wb["Pipeline"]["P2"].value.startswith("=")
     sys.modules.pop("pipeline_tracker", None)
+
+
+def test_monthly_review_appends_to_weekly_review(b2b, tmp_path, monkeypatch):
+    root, _ = b2b
+    for name in ("pipeline_tracker", "b2b_review"):
+        sys.modules.pop(name, None)
+    pt = importlib.import_module("pipeline_tracker")
+    rows = pt.rows()
+    rows[0].update(stage="Replied", last_contact="2026-12-01", next_step="send sample", next_step_date="2026-12-02")
+    with open(root / "PIPELINE.csv", "w", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=pt.COLS)
+        w.writeheader()
+        w.writerows(rows)
+    br = importlib.import_module("b2b_review")
+    r = br.collect("2026-12", dt.date(2026, 12, 27))
+    assert r["logged"] == 1 and r["planned"] > 0
+    assert any(x["prospect"] == rows[0]["prospect"] for x in r["overdue"])
+    md = br.to_markdown(r)
+    assert md.startswith("## B2B monthly review: 2026-12") and "| Freelancer Money Notes |" in md
+    weekly = tmp_path / "2026-12-27.md"
+    weekly.write_text("# Weekly review\n\nstuff\n")
+    for _ in range(2):  # appending twice replaces the section instead of duplicating it
+        monkeypatch.setattr(sys, "argv", ["b2b_review.py", "--month", "2026-12", "--today", "2026-12-27", "--append-to", str(weekly)])
+        br.main()
+    text = weekly.read_text()
+    assert text.startswith("# Weekly review") and text.count("## B2B monthly review: 2026-12") == 1
+    for name in ("pipeline_tracker", "b2b_review"):
+        sys.modules.pop(name, None)

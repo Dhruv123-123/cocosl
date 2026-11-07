@@ -64,6 +64,9 @@ calendar changes. `OUTREACH_DATES_OWN_INBOX.md` is the second-inbox alternative,
 - `python3 pipeline_tracker.py` → `PIPELINE.csv` + `PIPELINE.xlsx`: every prospect from `OUTREACH_DATES.csv` with
   stage, planned follow-ups, next step, deal value and expected value (value × stage chance), plus a per-offer
   summary. Re-running keeps the stage, dates, values and notes you've typed in `PIPELINE.csv`.
+- `MONTHLY_REVIEW.md` + `python3 b2b_review.py`: the monthly check, added to the bottom of `factory weekly-review`'s
+  Sunday page with `--append-to`.
+- `freelancer-client-letter/FIRST_20_DRAFTS.md`: personalised drafts for the first 20 accounting-firm sends (Dec 1–10).
 - `OBJECTIONS.md`: the top 10 objections for each offer, with short, honest answers.
 - `python3 site/business_pages.py` → `site/static/business/` at the repo root: one landing page each for Scam
   Watch, accounting firms, the Consumer Protection Week package and schools, served at `/business/<slug>/` on the

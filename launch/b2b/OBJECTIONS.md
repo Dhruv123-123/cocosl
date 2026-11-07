@@ -54,7 +54,7 @@ Prices are in each offer's README and sales sheet. "Sample" means the 3-issue `o
 | 1 | "We have an EAP / financial wellness vendor." | "Then this can push people toward it. Each issue points employees to the benefits you already pay for, and you add your EAP's contact line." |
 | 2 | "Employees ignore HR email." | "It's short, practical and about their money, not policy. It also comes as a Teams/Slack post and a breakroom flyer." |
 | 3 | "We can't give financial advice." | "It doesn't. It's general education with a line saying so, sourced to .gov pages, and it never recommends products." |
-| 4 | "Legal/benefits has to review it." | "Each issue arrives a week early with sources and a compliance note. Change anything." |
+| 4 | "Legal/benefits has to review it." | "Each issue arrives 2 weeks early with sources and a compliance note. Change anything." |
 | 5 | "No budget." | "Plans start at $59 a month. The first 3 employers get 2 months free." |
 | 6 | "We're too small." | "Starter is $59 a month for up to 100 people. If that's still too much for your size, your benefits broker may be able to offer it across several clients." |
 | 7 | "Will you see employee data?" | "No. You send it. We never get names or emails." |
@@ -81,9 +81,9 @@ Prices are in each offer's README and sales sheet. "Sample" means the 3-issue `o
 
 | # | Objection | Answer |
 |---|---|---|
-| 1 | "We're slammed until April." | "That's why it's written to need no changes and arrives a week early. If now's bad, I'll check back after Apr 19." Then don't email them during tax season. |
+| 1 | "We're slammed until April." | "That's why it's written to need no changes and arrives 2 weeks early. If now's bad, I'll check back after Apr 19." Then don't email them during tax season. |
 | 2 | "We already send a newsletter." | "Then you know the time it takes. This one is just for your 1099 clients, timed to estimated payments and document season." |
-| 3 | "We can't risk wrong tax info under our name." | "Every number links to IRS.gov, you see it a week early, and it says plainly that it's general information and to ask you for advice." |
+| 3 | "We can't risk wrong tax info under our name." | "Every number links to IRS.gov, you see it 2 weeks early, and it says plainly that it's general information and to ask you for advice." |
 | 4 | "Our clients won't read it." | "It's short, dated to their deadlines, and comes with a printable handout you can include with engagement letters." |
 | 5 | "It'll bring us more questions." | "Often fewer: it answers the same questions every January and tells clients what to bring." |
 | 6 | "What do you get out of 1099 Money?" | "I run it, and I say so. Your clients' details never go to it, and the newsletter doesn't promote it." |

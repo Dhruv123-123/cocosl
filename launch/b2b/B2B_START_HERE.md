@@ -33,7 +33,7 @@ already sends a client newsletter, and move the next one up.
 | Wed Dec 9 | Email 1: Atticus Accounting (ID) · Bookkeeping by CHOICE (ID) |
 | Thu Dec 10 | Email 1: Elite Accounting (ID) · Kane Tax & Accounting (ID) |
 
-That's 20 emails: 12 first emails and 8 follow-ups. From Fri Dec 11, follow `OUTREACH_DATES.md` day by day. Follow-up 1 is in
+That's 20 emails: 12 first emails and 8 follow-ups. **Drafts for all 20, personalised from each firm's public info: `freelancer-client-letter/FIRST_20_DRAFTS.md`.** From Fri Dec 11, follow `OUTREACH_DATES.md` day by day. Follow-up 1 is in
 `freelancer-client-letter/README.md`; follow-up 2 (day 10) is in `TAX_SEASON_LEAD_IN.md`. If someone replies,
 skip their later rows.
 
@@ -51,4 +51,4 @@ skip their later rows.
 **Every email carries your name, your mailing address and an opt-out line.** Don't add links or attachments
 to a first email, don't guess an address, and don't buy a list.
 
-Track every send and reply in `PIPELINE.xlsx` (`python3 pipeline_tracker.py`), and use `OBJECTIONS.md` for pushback.
+Track every send and reply in `PIPELINE.xlsx` (`python3 pipeline_tracker.py`), and use `OBJECTIONS.md` for pushback. Last Sunday of each month: `MONTHLY_REVIEW.md`.
