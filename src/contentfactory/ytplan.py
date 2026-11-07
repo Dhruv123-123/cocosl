@@ -192,7 +192,8 @@ def studio_todos(factory, days: int = 7) -> list[dict]:
         b = brands.get(r["brand"])
         if r["format"] == "long":
             pl = sc.get("playlist") or (playlist_of({"pillar": r["pillar"], "script": sc}, playlists_for(b)) if b else "")
-            todo = f"Import the end screen (left tile: next in the series) and add to playlist “{pl}”"
+            todo = (f"Import the end screen (left tile: next in the series), add to playlist “{pl}”, and start "
+                    "Test & compare with thumbnails A, B, C (test-and-compare/ in the post's folder)")
         elif r["format"] in ("short", "mid"):
             rel = sc.get("related_video")
             todo = f"Set related video: “{rel}”" if rel else "Set related video: the long video this Short leads into"
