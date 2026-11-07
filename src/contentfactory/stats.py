@@ -93,7 +93,8 @@ def _read(path: Path) -> list[dict]:
         dialect = csv.Sniffer().sniff(sample, delimiters=",;\t")
     except csv.Error:
         dialect = csv.excel
-    return [{(k or "").strip().lower(): (v or "").strip() for k, v in row.items()}
+    # a ragged row (an unquoted comma in a title) puts the extras under None as a list: drop them
+    return [{(k or "").strip().lower(): (v if isinstance(v, str) else "").strip() for k, v in row.items() if k is not None}
             for row in csv.DictReader(io.StringIO(text), dialect=dialect)]
 
 

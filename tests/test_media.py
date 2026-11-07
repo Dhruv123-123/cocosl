@@ -79,6 +79,12 @@ def test_render_video(media_env, tmp_path, fmt, size):
         assert len(variants) == 3 and variants[0] == assets["thumbnail"]
         assert all((settings.output_dir / v).is_file() and (settings.output_dir / v[:-4]).with_suffix(".jpg").is_file()
                    for v in variants)
+        tc = assets["test_compare"]  # A/B/C for YouTube Test & compare
+        assert [p.rsplit("/", 1)[1] for p in tc] == ["A.jpg", "B.jpg", "C.jpg"]
+        assert all((settings.output_dir / p).stat().st_size < 2 * 1024 * 1024 for p in tc)
+        from PIL import Image as _I
+        a, b = (_I.open(settings.output_dir / tc[i]).convert("L").resize((64, 36)) for i in (0, 1))
+        assert sum(abs(x - y) for x, y in zip(a.getdata(), b.getdata())) / (64 * 36) > 8  # visibly different
     srt = (settings.output_dir / assets["captions_srt"]).read_text()
     assert "Follow for one" in srt and "-->" in srt
     if slate:  # no captions run into the end slate
