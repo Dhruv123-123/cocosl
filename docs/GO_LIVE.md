@@ -1,7 +1,7 @@
 # Go live: the one checklist
 
-Written 2026-11-07 for Dhruv and refreshed through the evening (last pass 09:50 UTC: PRs #1–#12 and `main` at
-`d56189e`; newer `main` commits may need each PR to bring it in again). This merges every "only you can do this" step from `docs/CREDENTIALS.md`, `docs/QUICKSTART.md`,
+Written 2026-11-07 for Dhruv and refreshed through the evening (last pass 11:05 UTC: all 12 PRs and `main` at
+`ceb9613`). This merges every "only you can do this" step from `docs/CREDENTIALS.md`, `docs/QUICKSTART.md`,
 `docs/DEPLOY.md`, `launch/LAUNCH_DAY.md`, `launch/VERIFY_BEFORE_POSTING.md`, the open PRs, the commits on `main`
 and the project files in `content-factory/`, with the duplicates removed. Everything else is already built.
 
@@ -36,8 +36,8 @@ Each one has a default, so nothing waits on these. Change a default only if you 
 Merge in this order (details and current blockers in [PR merge order](#pr-merge-order) at the bottom):
 **#1 → #3 → #2 → #4 → #5 → #6 → #8 → #12 → #11 → #9 → #10 → #7.**
 
-- [ ] Merge the ones marked ✅ in that order on GitHub (≈ 2 min each). Right now that's **#1, #3, #2, #4, #5,
-      #6, #8, #12, #11, #7**: checked together on top of `main`, all tests pass. Skip the rest until GitHub shows them
+- [ ] Merge the ones marked ✅ in that order on GitHub (≈ 2 min each). Right now that's **all twelve: #1, #3, #2, #4, #5,
+      #6, #8, #12, #11, #9, #10, #7**: checked together on top of `main`, all tests pass. Skip the rest until GitHub shows them
       green; the threads that opened them are fixing them. 15 min
 
 ---
@@ -781,12 +781,13 @@ scratch copy and running the full test suite.
 | 5 | **#5** Months 1–8, channels, affiliate kit | ✅ safe | |
 | 6 | **#6** Products, Etsy, KDP, ebook | ✅ safe (fixed) | |
 | 7 | **#8** Web apps | ✅ safe (test clash fixed, tested at `12634b8`) | |
-| 8 | **#9** Scam Decoded | ⏳ nearly | merges cleanly; needs `main` again to regenerate `docs/COMMANDS.md` for `launch-pack`. Merge after #11 |
-| 9 | **#11** Dinero Simple | ✅ safe (tested at `0562072`) | merge after #12 |
-| 10 | **#10** 1099 Money | ⏳ nearly | already contains `main`, #5 and #9; re-checked once those settle. Merge last |
+| 8 | **#9** Scam Decoded | ✅ safe (tested at `c7bd9da`) | merge after #11 |
+| 9 | **#11** Dinero Simple | ✅ safe (tested at `a9a5219`) | merge after #12 |
+| 10 | **#10** 1099 Money | ✅ safe (tested at `b464661`) | merge after #9; it already contains #5 and #9 |
 | 11 | **#12** Ad studio portfolio + listing-video page | ✅ safe | |
 | 12 | **#7** This checklist | ✅ safe | docs only |
 
-**Safe to merge now, in order: #1, #3, #2, #4, #5, #6, #8, #12, #11, #7.** These ten were merged
-together on top of `main` and the full test suite passed. Then #9 once its test fix lands, and #10 last.
+**Safe to merge now, in order: #1, #3, #2, #4, #5, #6, #8, #12, #11, #9, #10, #7.** All twelve were
+merged together on top of `main` (`ceb9613`) and the full test suite passed. `docs/COMMANDS.md` is
+regenerated on `main` once after the merges (the pipeline thread does it).
 If a new PR lands, merge it after these unless its description says otherwise.
