@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fondos de ahorro: cuánto guardar al mes para los gastos que sabes que vienen | Dinero Simple</title>
+<meta name="description" content="Anota los gastos grandes que sabes que vienen, como el seguro del carro, las fiestas y las reparaciones, y ve cuánto guardar cada mes y en cada cheque. Se pega directo en el Tablero de dinero Pro. Gratis, privado y sin registrarte.">
+<meta property="og:title" content="Guarda un poco cada mes para los gastos grandes que sabes que vienen">
+<meta property="og:description" content="Anota los gastos grandes que sabes que vienen, como el seguro del carro, las fiestas y las reparaciones, y ve cuánto guardar cada mes y en cada cheque. Se pega directo en el Tablero de dinero Pro. Gratis, privado y sin registrarte.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="alternate" hreflang="en" href="sinking-funds.html">
+<link rel="alternate" hreflang="es" href="fondos-ahorro.html">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Fondos de ahorro","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Qué es un fondo de ahorro?", "acceptedAnswer": {"@type": "Answer", "text": "Dinero que guardas poco a poco para un gasto que sabes que viene. En vez de buscar $900 para el seguro del carro en un solo mes, guardas $150 al mes durante seis meses."}}, {"@type": "Question", "name": "¿Dónde guardo mis fondos?", "acceptedAnswer": {"@type": "Answer", "text": "En una cuenta de ahorro aparte de tu cuenta de cheques, de preferencia de alto rendimiento. Muchos bancos en línea te dejan abrir varios \"sobres\" con nombre dentro de una sola cuenta."}}, {"@type": "Question", "name": "¿Cómo se calcula «guardar al mes»?", "acceptedAnswer": {"@type": "Answer", "text": "Lo que falta dividido entre los meses que quedan, contando el mes de la fecha. Si la fecha ya llegó, muestra todo lo que falta. Es la misma cuenta que usa la pestaña Fondos de ahorro del Tablero de dinero Pro."}}]}</script>
+<script type="module" src="lib/embed-page.js"></script>
+</head>
+<body class="sf">
+<header class="top">
+  <a class="logo" href="../" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Fondos de ahorro</span></a>
+  <a class="badge" href="sinking-funds.html" hreflang="en" lang="en">English</a>
+</header>
+<main>
+  <h1 class="page-title">Guarda un poco cada mes para los gastos grandes que sabes que vienen</h1>
+  <p class="lede">El seguro del carro cada seis meses, las fiestas, las llantas nuevas: no son sorpresas, aunque se sientan así. Agrega cada uno con lo que cuesta y para cuándo, y calculamos cuánto guardar cada mes y en cada cheque. Se guarda solo en este navegador.</p>
+
+  <form id="fund-form" class="card deal-form">
+    <h2 class="full">Agrega un fondo</h2>
+    <label class="full">Para qué es<input name="name" maxlength="60" autocomplete="off"></label>
+    <label>Cuánto necesitas ($)<input name="target" type="number" min="1" step="1" inputmode="decimal"></label>
+    <label>Para cuándo<input name="due" type="date"></label>
+    <label>Ya ahorrado ($)<input name="saved" type="number" min="0" step="1" inputmode="decimal" placeholder="0"></label>
+    <div class="full row"><button class="btn" type="submit">Agregar fondo</button><span id="form-msg" class="tiny" role="alert"></span></div>
+    <div class="full"><b class="tiny">Ideas para empezar</b><div class="chips" id="ideas"></div></div>
+  </form>
+
+  <section class="card" aria-labelledby="h-plan">
+    <h2 id="h-plan">Tu plan</h2>
+    <label>Te pagan<select id="per-pay"></select></label>
+    <div id="stats" class="stats" aria-live="polite"></div>
+    <p id="next" aria-live="polite"></p>
+    <ul id="funds" class="funds"></ul>
+  </section>
+
+  <section class="card" id="export" hidden>
+    <h2>Pásalo al Tablero de dinero Pro</h2>
+    <p>Abre la pestaña Fondos de ahorro. Haz clic en la celda A5 y pega tus fondos; haz clic en la celda K5 y pega lo que ya tienes ahorrado. La hoja mantiene el plan al día cuando anotas cada depósito.</p>
+    <label for="t-funds" class="sr-only">Copiar fondos (pegar en A5)</label><textarea id="t-funds" rows="3" readonly></textarea>
+    <label for="t-deposits" class="sr-only">Copiar lo ahorrado (pegar en K5)</label><textarea id="t-deposits" rows="2" readonly></textarea>
+    <div class="row" style="margin-top:10px"><button id="copy-funds" class="btn small" type="button">Copiar fondos (pegar en A5)</button><button id="copy-deposits" class="btn ghost small" type="button">Copiar lo ahorrado (pegar en K5)</button><button id="csv" class="btn ghost small" type="button">Descargar en CSV</button></div>
+    <p id="copy-msg" class="tiny" aria-live="polite"></p>
+    <div class="offer-box" id="upsell" hidden></div>
+  </section>
+
+  <section class="card faq">
+    <h3>¿Qué es un fondo de ahorro?</h3>
+    <p>Dinero que guardas poco a poco para un gasto que sabes que viene. En vez de buscar $900 para el seguro del carro en un solo mes, guardas $150 al mes durante seis meses.</p>
+    <h3>¿Dónde guardo mis fondos?</h3>
+    <p>En una cuenta de ahorro aparte de tu cuenta de cheques, de preferencia de alto rendimiento. Muchos bancos en línea te dejan abrir varios &quot;sobres&quot; con nombre dentro de una sola cuenta.</p>
+    <h3>¿Cómo se calcula «guardar al mes»?</h3>
+    <p>Lo que falta dividido entre los meses que quedan, contando el mes de la fecha. Si la fecha ya llegó, muestra todo lo que falta. Es la misma cuenta que usa la pestaña Fondos de ahorro del Tablero de dinero Pro.</p>
+  </section>
+</main>
+<footer><p><a href="../es/">Todas las herramientas</a> · <a href="plan-quincena.html">Plan de tu cheque</a> · <a href="tablero-dinero.html">Tablero de dinero</a> · No es asesoría financiera. Nada de lo que escribes sale de tu navegador. Hecho por Dinero Simple.</p></footer>
+<script type="module" src="sinking-funds.js"></script>
+</body>
+</html>

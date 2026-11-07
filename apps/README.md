@@ -151,3 +151,13 @@ See `IDEAS.md` for what to build next.
   and skips if they're missing. All 60 page checks passed on 2026-11-07, after colour contrast fixes.
 
 Spanish pages: every one is on `NATIVE_REVIEW_ES.md` for a native speaker's check (a test enforces it). Paid template cards on both hubs come from `products.js` and stay "coming soon" until the checkout link in `budget/config.js` is real.
+
+## Accessibility and speed checks
+
+- `node tools/a11y.mjs` runs axe-core (contrast, labels, ARIA) on every hub-linked page, light and dark.
+- `node tools/audit.mjs` checks the same pages at phone width: page weight (under 350 KB, no third-party requests), load time, image sizes, tap targets of at least 24 px, a focus ring on every Tab stop, and the page basics.
+- `shared/test/page-basics.test.js` runs on every `npm test` over every HTML page: lang, title, zoomable viewport, image alt and size, a label for every field, no third-party scripts.
+
+## Money Toolkit (offline download)
+
+`tools/toolkit.mjs` lists the 45 tools in the paid offline bundle; `tools/build-toolkit.mjs` builds it (needs esbuild). See `launch/money-toolkit/README.md`.

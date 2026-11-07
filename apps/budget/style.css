@@ -35,7 +35,7 @@ table.plan{width:100%;border-collapse:collapse;margin-top:10px;table-layout:fixe
 .bar{height:5px;background:var(--line);border-radius:9px;overflow:hidden;margin-top:4px}
 .bar span{display:block;height:100%;background:var(--green)}
 .bar span.over{background:var(--neg)}
-.x{background:none;border:0;color:var(--muted);cursor:pointer;font-size:16px;padding:0 4px;opacity:.6}
+.x{background:none;border:0;color:var(--muted);cursor:pointer;font-size:16px;padding:0 4px;opacity:.6;min-width:28px;min-height:28px}
 .x:hover{opacity:1;color:var(--neg)}
 .inline-form{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .inline-form input{flex:1 1 140px}
@@ -289,3 +289,20 @@ label.inline select{width:auto}
 .plan-group legend{font-weight:700;padding:0 4px}
 .plan-left{position:sticky;bottom:0;background:var(--card);border:2px solid var(--gold);border-radius:14px;padding:10px 14px;margin-top:6px}
 .plan-left p{margin:0}.plan-left.ok{border-color:var(--green)}.plan-left.bad{border-color:var(--neg)}
+/* Sinking-funds planner */
+.sf .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.sf .chip{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:6px 12px;cursor:pointer}
+.sf .chip:hover,.sf .chip:focus-visible{border-color:var(--gold)}
+.sf .funds{list-style:none;padding:0;margin:0}
+.sf .fund{border-top:1px solid var(--line);padding:12px 0}
+.sf .fund-top{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.sf .fund-top h3{margin:0;font-size:17px;overflow-wrap:anywhere}
+.sf .fund .bar{height:8px}.sf .fund .bar i{display:block;height:100%;background:var(--green)}
+.sf .fund.late .bar i{background:var(--neg)}
+.sf .fund label.inline{flex-direction:row;align-items:center;gap:6px;font-weight:600}
+.sf .fund label.inline input{width:110px}
+.sf .warn-text{color:var(--neg);font-weight:600}
+.sf textarea{font:13px/1.4 ui-monospace,Menlo,Consolas,monospace;width:100%;border-radius:10px;border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:8px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* Tap targets: every summary at least 24px tall (WCAG 2.2 target size) */
+summary{padding:4px 0;min-height:24px}

@@ -51,9 +51,9 @@
   <section class="card">
     <h2>3. Goals</h2>
     <form id="goal-form" class="inline-form">
-      <input id="goal-name" placeholder="Goal, e.g. Emergency fund" maxlength="40" required>
-      <input id="goal-target" type="number" min="1" step="any" placeholder="Target $" required>
-      <input id="goal-saved" type="number" min="0" step="any" placeholder="Saved so far $">
+      <input id="goal-name" aria-label="Goal name" placeholder="Goal, e.g. Emergency fund" maxlength="40" required>
+      <input id="goal-target" aria-label="Target amount" type="number" min="1" step="any" placeholder="Target $" required>
+      <input id="goal-saved" aria-label="Saved so far" type="number" min="0" step="any" placeholder="Saved so far $">
       <input id="goal-deadline" type="month" required aria-label="Deadline">
       <button class="btn small" type="submit">Add goal</button>
     </form>

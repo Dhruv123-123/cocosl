@@ -21,6 +21,7 @@ const SAVE = [
   { u: '../budget/tablero-dinero.html', t: 'Tablero de dinero en hoja de cálculo', d: 'Sube el CSV de tu banco y descarga una hoja de cálculo para Google Sheets o Excel: cada gasto en su categoría y lo que entra, gastas y te sobra cada mes. Tu archivo no sale de tu navegador.' },
   { u: '../budget/reto-ahorro.html', t: 'Reto de ahorro de 52 semanas', d: 'Ahorra $1 más cada semana y junta $1,378 en un año, o pon tu propia meta. Marca cada semana, recibe recordatorios e imprime la tabla.' },
   { u: '../budget/plan-quincena.html', t: 'Presupuesto 50/30/20 y base cero', d: 'Escribe cuánto recibes en cada pago y arma tu presupuesto del mes con la regla 50/30/20 y un plan base cero donde cada dólar tiene un trabajo. Pasa directo al tablero de dinero.' },
+  { u: '../budget/fondos-ahorro.html', t: 'Fondos de ahorro', d: 'Anota los gastos grandes que sabes que vienen, como el seguro del carro o las fiestas, y ve cuánto guardar cada mes y en cada cheque. Se pega en el Tablero de dinero Pro.' },
 ];
 const calcs = pagesEs.map((p) => ({ u: `../money-calculators/es/${p.slug}/`, t: p.tile || p.h1, d: p.description }));
 const card = (c) => `      <a class="card${c.feature ? ' feature' : ''}" href="${esc(c.u)}"><span class="tag free">Gratis</span><h3>${esc(c.t)}</h3><p>${esc(c.d)}</p></a>`;

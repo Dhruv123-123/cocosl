@@ -233,6 +233,20 @@ const checks = [
     await page.waitForURL(/money-dashboard\.html/);
     if ((await page.inputValue('[data-budget=dining]')) !== '500') throw new Error('plan did not reach the dashboard budgets');
   }],
+  ['/budget/sinking-funds.html', '#funds .fund', async (page) => {
+    await page.click('#ideas [data-i="0"]');
+    await page.fill('[name=saved]', '150');
+    await page.click('#fund-form button[type=submit]');
+    await page.fill('[name=name]', 'Trip'); await page.fill('[name=target]', '1200');
+    const d = new Date(); await page.fill('[name=due]', `${d.getFullYear() + 1}-${String(d.getMonth() + 1).padStart(2, '0')}-28`);
+    await page.click('#fund-form button[type=submit]');
+    if ((await page.locator('#funds .fund').count()) !== 2) throw new Error('two funds');
+    if (!/Car insurance\t900\t/.test(await page.inputValue('#t-funds'))) throw new Error('tsv');
+    if (!/\tCar insurance\t150/.test(await page.inputValue('#t-deposits'))) throw new Error('deposits');
+    await page.reload();
+    if ((await page.locator('#funds .fund').count()) !== 2) throw new Error('not saved');
+  }],
+  ['/budget/fondos-ahorro.html', '#ideas .chip'],
   ['/budget/plan-quincena.html', '#split li', async (page) => {
     if (!/Necesidades/.test(await page.textContent('#split'))) throw new Error('es split');
   }],
