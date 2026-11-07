@@ -37,7 +37,8 @@ def make_post(post_id: int, fmt: str, n: int) -> dict:
 
 @pytest.fixture
 def media_env(home, monkeypatch):
-    for key in ("OPENAI_API_KEY", "ELEVENLABS_API_KEY", "REPLICATE_API_TOKEN", "COMFYUI_URL", "PIPER_MODEL",
+    for key in ("OPENAI_API_KEY", "ELEVENLABS_API_KEY", "REPLICATE_API_TOKEN", "COMFYUI_URL", "PIPER_MODEL", "KOKORO_URL",
+                "OPENAI_TTS_BASE_URL",
                 "FACTORY_MUSIC_DIR"):
         monkeypatch.delenv(key, raising=False)
     settings = Settings.load(home)
@@ -135,3 +136,61 @@ def test_string_id_and_output_subdir(media_env):
     post["meta"] = {"output_subdir": "../escape"}
     with pytest.raises(Exception):
         render_post(settings, brand, post)
+
+
+# --------------------------------------------------------------------------- Kokoro / OpenAI-compatible TTS
+def _fake_speech(calls):
+    import io
+    import wave
+
+    def handler(url, headers=None, json=None, timeout=None):
+        calls.append({"url": url, "headers": headers or {}, "json": json})
+        buf = io.BytesIO()
+        with wave.open(buf, "wb") as w:
+            w.setnchannels(1)
+            w.setsampwidth(2)
+            w.setframerate(24000)
+            w.writeframes(b"\x00\x00" * 12000)
+        import httpx
+        return httpx.Response(200, content=buf.getvalue())
+    return handler
+
+
+def test_kokoro_used_first_in_auto_when_configured(media_env, monkeypatch, tmp_path):
+    from contentfactory.media import tts
+    settings, brand = media_env
+    settings.tts_provider = "auto"
+    calls = []
+    monkeypatch.setenv("KOKORO_URL", "http://localhost:8880/v1/")
+    monkeypatch.setenv("KOKORO_VOICE", "am_michael")
+    monkeypatch.setattr(tts.httpx, "post", _fake_speech(calls))
+    res = tts.synthesize_segments(settings, brand, ["One money move.", "Two."], tmp_path / "a")
+    assert res.provider == "kokoro" and res.tool == "kokoro:kokoro"
+    assert [c["url"] for c in calls] == ["http://localhost:8880/v1/audio/speech"] * 2
+    assert calls[0]["json"]["model"] == "kokoro" and calls[0]["json"]["voice"] == "am_michael"
+    assert "Authorization" not in calls[0]["headers"] and "instructions" not in calls[0]["json"]
+    assert all(p.exists() for p in res.paths) and res.durations[0] > 0.4
+
+
+def test_kokoro_skipped_without_url(media_env, tmp_path):
+    from contentfactory.media import tts
+    settings, brand = media_env
+    assert not tts.Kokoro(settings, brand).available()
+    with pytest.raises(tts.ProviderError):
+        tts.Kokoro(settings, brand).speak("hi", tmp_path / "x.wav")
+
+
+def test_openai_tts_base_url_override(media_env, monkeypatch, tmp_path):
+    from contentfactory.media import tts
+    settings, brand = media_env
+    settings.tts_provider = "openai"
+    calls = []
+    monkeypatch.setenv("OPENAI_TTS_BASE_URL", "http://tts.local:9000/v1")
+    monkeypatch.setenv("OPENAI_TTS_MODEL", "tts-1")
+    monkeypatch.setattr(tts.httpx, "post", _fake_speech(calls))
+    res = tts.synthesize_segments(settings, brand, ["Hello there."], tmp_path / "b")
+    assert calls[0]["url"] == "http://tts.local:9000/v1/audio/speech" and res.tool == "openai:tts-1"
+    assert "Authorization" not in calls[0]["headers"]  # local server, no key needed
+    monkeypatch.delenv("OPENAI_TTS_BASE_URL")
+    with pytest.raises(tts.ProviderError):  # the real OpenAI endpoint still needs a key
+        tts.OpenAITTS(settings, brand).speak("hi", tmp_path / "c.wav")

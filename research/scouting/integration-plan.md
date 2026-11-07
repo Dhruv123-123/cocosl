@@ -3,7 +3,10 @@
 Each item names the file it touches, the repo it uses, and rough effort. None of these change the
 compliance guardrails in `docs/COMPLIANCE.md`; several strengthen them.
 
-## 1. Free local voice via Kokoro-FastAPI (unblocks the 16 videos waiting on a voice)
+## 1. Free local voice via Kokoro-FastAPI (unblocks the 16 videos waiting on a voice) — done
+
+**Shipped:** `kokoro` TTS provider (first in auto order when `KOKORO_URL` is set), `OPENAI_TTS_BASE_URL`
+for any OpenAI-compatible server, and a `kokoro` service under the `voice` compose profile.
 
 - **Repo:** remsky/Kokoro-FastAPI (Apache-2.0; Kokoro-82M weights Apache-2.0).
 - **Why:** The launch pack has 16 scripts in `videos-need-voice/`. ElevenLabs costs money and needs a
@@ -16,7 +19,10 @@ compliance guardrails in `docs/COMPLIANCE.md`; several strengthen them.
   (or any Kokoro voice). Add a `kokoro` service to `docker-compose.yml`.
 - **Effort:** about 1 hour including a test. **Licence risk:** none.
 
-## 2. Trial Reels in the Instagram publisher
+## 2. Trial Reels in the Instagram publisher — done
+
+**Shipped:** set `IG_TRIAL_REELS=SS_PERFORMANCE` (or `MANUAL`) and every Reel goes out as a Trial Reel;
+the publish result records `trial_reel: true`.
 
 - **API:** `trial_params={"graduation_strategy": "SS_PERFORMANCE"}` on a `REELS` container
   ([docs](https://developers.facebook.com/documentation/instagram-platform/instagram-graph-api/reference/ig-user/media)).

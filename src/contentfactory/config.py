@@ -37,7 +37,7 @@ class Settings:
     llm_provider: str = "auto"  # auto | anthropic | offline
     anthropic_model: str = "claude-opus-5-5"
     anthropic_effort: str = "medium"
-    tts_provider: str = "auto"  # auto | piper | espeak | elevenlabs | openai | silent
+    tts_provider: str = "auto"  # auto | kokoro | piper | espeak | elevenlabs | openai | silent
     image_provider: str = "auto"  # auto | comfyui | openai | replicate | cards
     public_media_base_url: str = ""  # where rendered files are reachable over HTTPS (needed by Instagram)
     dry_run: bool = True  # never call publishing APIs unless explicitly turned off

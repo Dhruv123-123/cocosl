@@ -1,10 +1,13 @@
 """Text to speech, one audio file per script segment.
 
 Providers (settings.tts_provider; "auto" tries them in this order):
+  kokoro     - local Kokoro-FastAPI server (free, Apache-2.0 voices), KOKORO_URL e.g.
+               http://localhost:8880/v1; voice from KOKORO_VOICE (default af_heart)
   piper      - local `piper` CLI, model path in PIPER_MODEL (.onnx)
   espeak     - local `espeak-ng` / `espeak` (robotic, but free and offline)
   elevenlabs - REST API, ELEVENLABS_API_KEY; voice id from brand.voice.tts_voice or ELEVENLABS_VOICE_ID
-  openai     - REST API, OPENAI_API_KEY; gpt-4o-mini-tts (falls back to tts-1)
+  openai     - REST API, OPENAI_API_KEY; gpt-4o-mini-tts (falls back to tts-1).
+               OPENAI_TTS_BASE_URL points it at any OpenAI-compatible server instead
   silent     - near-silent room tone sized to the words at brand.voice.words_per_minute
 
 Voice rights: clone only your own voice or a voice you hold a licence for.
@@ -30,7 +33,7 @@ import httpx
 from ..config import BrandProfile, Settings
 from .util import MediaError, ProviderError, ffmpeg, probe, seed_of, word_count
 
-ORDER = ["piper", "espeak", "elevenlabs", "openai", "silent"]
+ORDER = ["kokoro", "piper", "espeak", "elevenlabs", "openai", "silent"]
 SAMPLE_RATE = 44100
 HTTP_TIMEOUT = httpx.Timeout(90.0, connect=10.0)
 
@@ -162,30 +165,84 @@ class ElevenLabs(Provider):
 
 class OpenAITTS(Provider):
     tool = "openai"
-    URL = "https://api.openai.com/v1/audio/speech"
+    DEFAULT_BASE = "https://api.openai.com/v1"
+
+    @property
+    def base(self) -> str:
+        return (os.environ.get("OPENAI_TTS_BASE_URL") or self.DEFAULT_BASE).rstrip("/")
+
+    @property
+    def url(self) -> str:
+        return f"{self.base}/audio/speech"
+
+    def _key(self) -> str:
+        return os.environ.get("OPENAI_API_KEY", "")
 
     def available(self) -> bool:
-        return bool(os.environ.get("OPENAI_API_KEY"))
+        return bool(self._key())
+
+    def _models(self) -> list[str]:
+        return list(dict.fromkeys([os.environ.get("OPENAI_TTS_MODEL", "gpt-4o-mini-tts"), "tts-1"]))
+
+    def _voice(self) -> str:
+        return os.environ.get("OPENAI_TTS_VOICE", "alloy")
 
     def speak(self, text: str, out: Path) -> None:
-        key = os.environ.get("OPENAI_API_KEY", "")
-        if not key:
+        key = self._key()
+        if not key and self.base == self.DEFAULT_BASE:
             raise ProviderError("OpenAI TTS needs OPENAI_API_KEY")
-        voice = os.environ.get("OPENAI_TTS_VOICE", "alloy")
+        headers = {"Authorization": f"Bearer {key}"} if key else {}
         last = None
-        for model in dict.fromkeys([os.environ.get("OPENAI_TTS_MODEL", "gpt-4o-mini-tts"), "tts-1"]):
-            body = {"model": model, "input": _clean(text), "voice": voice, "response_format": "wav"}
+        models = self._models()
+        for model in models:
+            body = {"model": model, "input": _clean(text), "voice": self._voice(), "response_format": "wav"}
             if model.startswith("gpt-4o"):
                 body["instructions"] = f"Tone: {self.brand.voice.tone}. Speak naturally, like {self.brand.voice.persona}."
-            resp = httpx.post(self.URL, headers={"Authorization": f"Bearer {key}"}, json=body, timeout=HTTP_TIMEOUT)
-            if resp.status_code in (400, 404) and model != "tts-1":
+            resp = httpx.post(self.url, headers=headers, json=body, timeout=HTTP_TIMEOUT)
+            if resp.status_code in (400, 404) and model != models[-1]:
                 last = resp
                 continue
-            _raise_for(resp, "OpenAI TTS")
-            self.tool = f"openai:{model}"
+            _raise_for(resp, self.label)
+            self.tool = f"{self.name}:{model}"
             _to_wav(resp.content, ".wav", out)
             return
-        _raise_for(last, "OpenAI TTS")
+        _raise_for(last, self.label)
+
+    name, label = "openai", "OpenAI TTS"
+
+
+class Kokoro(OpenAITTS):
+    """Kokoro-82M through Kokoro-FastAPI's OpenAI-compatible endpoint.
+
+    Run it with `docker compose --profile voice up -d kokoro` (or
+    `docker run -p 8880:8880 ghcr.io/remsky/kokoro-fastapi-cpu`) and set
+    KOKORO_URL=http://localhost:8880/v1. Free, local, and the model and voices are
+    Apache-2.0, so the narration is safe to monetize. Voices: af_heart, af_bella,
+    am_michael, bf_emma ... (blend with "af_heart+af_bella").
+    """
+    tool = "kokoro"
+    name, label = "kokoro", "Kokoro TTS"
+
+    @property
+    def base(self) -> str:
+        return os.environ.get("KOKORO_URL", "").rstrip("/")
+
+    def _key(self) -> str:
+        return ""
+
+    def available(self) -> bool:
+        return bool(self.base)
+
+    def _models(self) -> list[str]:
+        return ["kokoro"]
+
+    def _voice(self) -> str:
+        return os.environ.get("KOKORO_VOICE", "af_heart")
+
+    def speak(self, text: str, out: Path) -> None:
+        if not self.base:
+            raise ProviderError("Kokoro TTS needs KOKORO_URL, e.g. http://localhost:8880/v1")
+        super().speak(text, out)
 
 
 class Silent(Provider):
@@ -217,7 +274,7 @@ def write_room_tone(out: Path, seconds: float, seed: int = 0, level_db: float = 
         w.writeframes(bytes(frames))
 
 
-PROVIDERS = {"piper": Piper, "espeak": Espeak, "elevenlabs": ElevenLabs, "openai": OpenAITTS, "silent": Silent}
+PROVIDERS = {"kokoro": Kokoro, "piper": Piper, "espeak": Espeak, "elevenlabs": ElevenLabs, "openai": OpenAITTS, "silent": Silent}
 
 
 # ---------------------------------------------------------------- helpers
