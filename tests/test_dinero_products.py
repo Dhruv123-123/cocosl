@@ -3,7 +3,6 @@ import importlib.util
 import json
 from pathlib import Path
 
-import openpyxl
 import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -11,6 +10,7 @@ DS = ROOT / "launch" / "dinero-simple"
 
 
 def _build_module():
+    pytest.importorskip("openpyxl")  # optional: only the product builders need it (CI installs core deps only)
     spec = importlib.util.spec_from_file_location("ds_products_build", DS / "products" / "build.py")
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
@@ -24,6 +24,7 @@ def _build_module():
 def test_spanish_workbooks_are_fully_translated(tmp_path, slug, tabs):
     build = _build_module()
     product = next(p for p in build.PRODUCTS if p["slug"] == slug)
+    import openpyxl
     out = build.build_xlsx(product, tmp_path / product["xlsx"])  # raises on any untranslated label
     wb = openpyxl.load_workbook(out)
     assert wb.sheetnames == tabs
@@ -55,3 +56,16 @@ def test_month1_plan_is_complete():
     plan = (DS / "POSTING_PLAN_MONTH_1.md").read_text()
     for i in items:
         assert i["key"] in plan or i["script"]["title"] in plan, i["key"]
+
+
+def test_scam_series_is_complete_and_points_to_real_help():
+    items = json.loads((DS / "content-estafas.json").read_text())
+    fmts = [i["format"] for i in items]
+    assert fmts.count("short") == 13 and fmts.count("carousel") == 6
+    plan = (DS / "POSTING_PLAN_ESTAFAS.md").read_text()
+    for i in items:
+        assert i["script"]["title"] in plan, i["key"]
+        assert i["script"]["claims_to_verify"], i["key"]
+    text = json.dumps(items, ensure_ascii=False)
+    # The immigration pieces send people to a licensed attorney or accredited representative, never a notario.
+    assert "abogado con licencia" in text and "acreditado" in text
