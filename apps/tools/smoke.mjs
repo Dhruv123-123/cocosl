@@ -49,6 +49,14 @@ const checks = [
     await page.click('#guide-check button');
     await page.waitForURL(/scam-checker\/$/);
   }],
+  ['/ad-script-builder/', '.script td.voice', async (page) => {
+    await page.fill('[name=brand]', 'Hollowick');
+    await page.fill('[name=product]', 'Cedar & Smoke candle');
+    await page.fill('[name=fact1]', 'wooden wick that crackles while it burns all evening long');
+    await page.fill('[name=fact2]', 'hand-poured soy wax');
+    await page.click('#builder button[type=submit]');
+    await page.click('#another');
+  }],
   ['/budget/subscriptions.html', '#results', async (page) => { await page.click('#sample'); }],
   ['/budget/rate.html', '#rate-result .grade', async (page) => { await page.click('#rate-form button'); }],
   ['/budget/', '#summary', async (page) => {

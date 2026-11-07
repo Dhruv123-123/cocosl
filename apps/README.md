@@ -1,6 +1,6 @@
 # Apps
 
-Three small web apps that earn money without needing an audience first. They pull in search traffic,
+Small web apps that earn money without needing an audience first. They pull in search traffic,
 capture emails and route people to affiliate offers and paid upgrades. All are static sites (plain
 HTML, CSS and JavaScript, no framework, no build step needed) and deploy free.
 
@@ -14,6 +14,7 @@ HTML, CSS and JavaScript, no framework, no build step needed) and deploy free.
 | **Calculadoras en español**: all 7 calculators in Spanish with hreflang links | Money Made Simple / Dinero Simple | Spanish search traffic, Spanish email list | `money-calculators/es/` |
 | **¿Es una estafa?** Spanish checker (Dinero Simple audience): Spanish scam patterns and fully translated results | Scam Shield | Same offers, Spanish scam-alert list | `scam-checker/es/` |
 | **Scam guides**: 12 search pages (USPS, toll, IRS, Amazon...) feeding the checker | Scam Shield | Search traffic → checker, list, affiliates | `scam-checker/scams/` |
+| **Video ad script builder** for small product brands: hook, shot list, voiceover, on-screen text, 3 test hooks, caption, plus a lint for fake-testimonial and health-claim wording. No AI calls, so it's free to run | AI Ad Studio | Free-sample request form (Netlify Forms `ad-sample-request`) → inbound leads for the $249 Starter package | `ad-script-builder/` |
 | **Browser extension** (Chrome/Edge): check a text or link from the right-click menu or toolbar, optional red badge on look-alike sites, English and Spanish | Scam Shield | Free; drives people to the site, kit and list. Chrome Web Store listing is its own discovery channel | `scam-extension/` |
 
 Privacy is a selling point for all three: nothing the user types is sent anywhere. The only server code is
@@ -23,7 +24,7 @@ one serverless function that checks budget-app license keys.
 
 ```bash
 cd apps
-npm test            # 78 unit tests, Node 20+, no dependencies
+npm test            # 85 unit tests, Node 20+, no dependencies
 npm run smoke       # opens every page in Chromium at desktop and phone width, and loads the extension (needs Playwright)
 ```
 

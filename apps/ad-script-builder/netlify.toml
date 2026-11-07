@@ -1,0 +1,4 @@
+# Deploy on its own: Netlify > Add new site > Import > base directory apps/ad-script-builder.
+# Free-sample requests land in Site > Forms > ad-sample-request (turn on form detection once).
+[build]
+  publish = "."

@@ -16,7 +16,7 @@ Effort is for Claude to build; "your part" is what only Dhruv can do (accounts, 
 | 8 | ✅ Built (free score + submissions form; $19 review is a config link): **"Rate My Budget" paid review**: user submits numbers, Claude drafts a review, a human checks it, PDF back in 48h | Money Made Simple | $19 per review; also feeds the content series | 1–2 days | Approves each review |
 | 9 | ✅ Built (free; `scam-extension/`, ready to upload): **Scam Shield browser extension** that checks links before you click | Scam Shield | Freemium; family plan $2/month | 3–4 days | Chrome Web Store account ($5) and publishing |
 | 10 | ✅ Built by the Scam Decoded launch as the Family Scam-Proofing Kit (`launch/scam-decoded/product/`); the checker links to it: **Family Scam Safety Kit** (the $9 product the checker already links to): fridge checklist, call scripts, "verify before you pay" card | Scam Shield | $9 on Gumroad | Half a day | Gumroad listing |
-| 11 | **Self-serve ad script generator** for small brands from the ad studio lead list | AI Ad Studio | $29 one-off pack, upsell to the $249 video package | 2 days | Stripe account |
+| 11 | ✅ Built (free builder + free-sample lead form; no paid pack yet): **Self-serve ad script generator** for small brands from the ad studio lead list | AI Ad Studio | $29 one-off pack, upsell to the $249 video package | 2 days | Stripe account |
 | 12 | ✅ Built (free, print to PDF): **Debt payoff plan PDF** from the calculator (a printable month-by-month plan) | Money Made Simple | $5 one-off or a Budget Pro perk | Half a day | None |
 
 ## Why this order
