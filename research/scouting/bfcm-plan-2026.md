@@ -73,7 +73,7 @@ sense at a glance.
 | MMS | **Money Sheets Bundle** and **Notion Money HQ**: $5 off | Gumroad | Code `BF5`, on those two only | $19 → $14 |
 | MMS | **2027 Budget Planner / 2027 Money HQ**: **no discount** | Etsy, Gumroad | Promote it as "start 2027 with it". Dated products sell best now through January; the catalog already says to "drop the price after Jan 31" | $12, $24 |
 | Scam Decoded | **Family Scam-Proofing Kit**: no discount; position it as **a gift** ("send it to your parents before the holidays") with a "buy for someone" note in the listing | Gumroad | Holiday scam content (Nov 21-Dec 18) points to it | $9 |
-| Scam Decoded | **Protect Your Parents guide + Family Kit bundle** (new Gumroad bundle) | Gumroad | Bundle vs separately ($38 → $29) | $29 |
+| Scam Decoded | **Family Bundle** (Family Kit + Protect Your Parents), already planned in `LADDER.md` (PR #9) | Gumroad | Bundle vs separately ($9 + $29 = $38 → $32). No extra code needed | $32 |
 | 1099 Money | **Freelancer Money Bundle**: $10 off with code `YEAREND10`, 27 Nov-6 Dec | Gumroad, Etsy | Tie it to the "set up 2027 before 1 Jan" and Black Friday write-off maths posts | $49 → $39 |
 | 1099 Money | **2027 Freelancer Tax-Year Planner**: no discount | Etsy, Gumroad | Dated: sells into January | $12 |
 | Dinero Simple | **None.** Products launch about 7 Dec after native review | — | December remittance and aguinaldo push instead | — |
@@ -124,5 +124,5 @@ footer and postal address (`state-of-the-business.md` stage 1).
 
 1. Run a sale at all this year? With listings only 1-3 weeks old, the honest options are codes and bundles.
    Skipping BFCM entirely and putting the effort into January is also reasonable.
-2. Should the product thread create the two new bundles (Scam Decoded "Protect Your Parents + Family Kit" at
-   $29; the 1099 year-end code)?
+2. Should the product thread create the Scam Decoded Family Bundle ($32, already in its ladder) and the 1099
+   `YEAREND10` code before 16 Nov?
