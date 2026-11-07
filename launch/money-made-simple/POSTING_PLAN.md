@@ -43,6 +43,8 @@ After Day 14: check which pillar's posts earned the most saves and follows, and 
 
 ## Days 15–28: weeks 3–4 (steady cadence)
 
+> **Swap-ins, not the main schedule.** The month-1 pack (`launch/money-made-simple/month-1/`, Nov 21 – Dec 20) is the plan from Day 15 on. Use the pieces below to fill gaps or replace a month-1 post; never run both schedules on the same days.
+
 Window: Sat Nov 21 – Fri Dec 4, 2026. Source: `content-weeks-3-4.json` (index `#n` = position in that file, 0-based; 14 shorts, 8 carousels, 2 long-form).
 
 From Day 15 the plan drops back to the brand cadence: **5 shorts, 3 carousels, 1 long per week** (18 posts across the two weeks). The other 6 pieces are banked as swap-ins (see below). Same slots as before: shorts at 12:30 to TikTok + YouTube Shorts + Instagram Reels, carousels at 19:00 to Instagram, long-form at 19:00 to YouTube on Sundays. No day goes above 2 posts per platform.
