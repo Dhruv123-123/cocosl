@@ -6,6 +6,8 @@
 | 1 | The Family Scam-Proofing Kit | $9 | Families; the impulse buy | `family-scam-proofing-kit.html`, `LISTING.md` |
 | 2 | Protect Your Parents | $29 | Adult children helping parents | `protect-your-parents/` |
 | 3 | Spot It, Stop It team training pack | $99 | Small-business owners, office managers, HR | `team-training/` |
+| Side | Scam Decoded for Seniors (large print, Etsy) | $7 | Older adults; gift from adult children | `seniors-pack/` |
+| Side | Community talks (libraries, senior centers, churches) | $0–$300 | Venues; drives pack sales and email sign-ups | `speaking-kit/` |
 
 ## Upsell path
 
@@ -31,5 +33,7 @@ Only run launch codes while they're actually true. No fake scarcity anywhere.
 ```bash
 cd launch/scam-decoded/product
 python3 -c "from pathlib import Path; from contentfactory.business.pdf import html_to_pdf; html_to_pdf(Path('protect-your-parents/protect-your-parents.html'), Path('protect-your-parents/Protect-Your-Parents.pdf'))"
+cd seniors-pack && python3 build.py && cd ..   # large-print booklet, fridge checklist, wallet cards
+cd speaking-kit && python3 build.py && cd ..   # talk deck (PPTX + PDF), handout, pricing sheet
 cd team-training && python3 build.py      # slides (PPTX + PDF via LibreOffice), guide, quiz, key, certificate, poster
 ```

@@ -77,3 +77,44 @@ def test_b2b_outreach_kit_is_complete_and_unsent():
         text = p.read_text()
         assert text.count('Reply "no thanks"') == 3, p.name
         assert "{Pack link}" in text and "compliant" not in text.lower(), p.name
+
+
+def test_seniors_large_print_pack(tmp_path, monkeypatch):
+    pack = PRODUCT / "seniors-pack"
+    build = _load("seniors_build", pack / "build.py")
+    monkeypatch.setattr(build, "DIST", tmp_path / "dist")
+    monkeypatch.setattr(sys, "argv", ["build.py", "--no-pdf"])
+    build.main()
+    booklet = (tmp_path / "dist" / "Scam-Decoded-for-Seniors.html").read_text()
+    assert booklet.count('class="page') == 13
+    assert "font-size:16pt" in booklet  # large print
+    for name in ("Fridge-Checklist", "Wallet-Cards"):
+        assert (tmp_path / "dist" / f"{name}.html").exists()
+    assert (tmp_path / "dist" / "Wallet-Cards.html").read_text().count("class='card'") == 16
+    for f in ("Scam-Decoded-for-Seniors", "Fridge-Checklist", "Wallet-Cards"):
+        assert (pack / "dist" / f"{f}.pdf").stat().st_size > 20_000
+    listing = (pack / "LISTING.md").read_text()
+    assert "$7" in listing and "guarantee" not in listing.lower().replace('no "guaranteed"', "")
+    assert "1-833-372-8311" in booklet and "AI" in listing
+
+
+def test_speaking_kit_deck_handout_pitch_pricing(tmp_path, monkeypatch):
+    pytest.importorskip("pptx")
+    from pptx import Presentation
+    kit = PRODUCT / "speaking-kit"
+    build = _load("speaking_build", kit / "build.py")
+    assert sum(s["minutes"] for s in build.T.SLIDES) == 45
+    assert sum(1 for s in build.T.SLIDES if s["kind"] == "scenario") == 3
+    monkeypatch.setattr(build, "DIST", tmp_path / "dist")
+    monkeypatch.setattr(sys, "argv", ["build.py", "--no-pdf"])
+    build.main()
+    deck = Presentation(tmp_path / "dist" / "Dont-Get-Scammed-Talk.pptx")
+    assert len(deck.slides) == len(build.T.SLIDES)
+    assert all(s.notes_slide.notes_text_frame.text.strip() for s in deck.slides)
+    assert "Don't Get Scammed" in deck.slides[0].shapes[1].text_frame.text
+    sheet = (tmp_path / "dist" / "Pricing-Sheet.html").read_text()
+    for price in ("$150", "$300", "$0"):
+        assert price in sheet
+    assert "1-833-372-8311" in (tmp_path / "dist" / "Handout.html").read_text()
+    pitches = (kit / "PITCH_EMAILS.md").read_text()
+    assert pitches.count("**Subject:**") == 4 and "not sent" in pitches
