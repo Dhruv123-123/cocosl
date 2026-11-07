@@ -1,6 +1,6 @@
 # What could go wrong: an honest risk memo for the whole business
 
-Written 2026-11-07 for Dhruv. **Docs only.** It pulls together the risks found across 55 research files
+Written 2026-11-07 for Dhruv. **Docs only.** It pulls together the risks found across the 55 research files
 and adds the FTC review rule and the Copyright Office's AI ruling. Each risk gets a likelihood and an
 impact (our judgment), what would trigger it, and what's already in place or still needed. Nothing here
 is legal advice. Section 4 lists the risks that need a lawyer's read (`spanish-and-legal-review-options.md`
