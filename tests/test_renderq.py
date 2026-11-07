@@ -78,3 +78,14 @@ def test_voice_ready_reflects_tts_setting(factory, monkeypatch):
     monkeypatch.setattr(factory.settings, "tts_provider", "kokoro")
     monkeypatch.setenv("KOKORO_URL", "http://kokoro:8880")
     assert renderq.voice_ready(factory, "money-made-simple")
+
+
+def test_two_renderers_never_take_the_same_job(factory, silent_post, monkeypatch):
+    from contentfactory.config import Settings
+    from contentfactory.pipeline import Factory
+    other = Factory.create(Settings.load(factory.settings.home))          # second process, same database file
+    renderq.enqueue(factory, silent_post, reason="manual")
+    now = renderq._now()
+    a = renderq._claim(factory, now)
+    b = renderq._claim(other, now)
+    assert a is not None and b is None

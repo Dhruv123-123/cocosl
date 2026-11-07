@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>{{ magnet.title }}</title>
+<style>
+:root{--ink:{{ t.dark }};--paper:{{ t.light }};--a:{{ t.accent }};--ai:{{ t.accent_ink }}}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.5}
+header{background:var(--ink);color:var(--paper);padding:32px 16px}
+header div,main{max-width:720px;margin:0 auto}
+h1{margin:0;font-size:28px}
+header p{margin:6px 0 0;opacity:.8}
+main{padding:16px}
+h2{font-size:18px;margin:28px 0 8px;border-bottom:3px solid var(--a);display:inline-block}
+ul{list-style:none;padding:0;margin:0}
+li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid rgba(0,0,0,.08)}
+li::before{content:"";flex:0 0 20px;height:20px;border:2px solid var(--ink);border-radius:5px;margin-top:2px}
+.print{display:inline-block;margin:24px 0;background:var(--a);color:var(--ai);font-weight:700;border:0;
+padding:12px 18px;border-radius:12px;font:inherit;cursor:pointer}
+footer{max-width:720px;margin:0 auto;padding:16px;font-size:12px;opacity:.7}
+@media print{.print{display:none}header{background:none;color:var(--ink);padding:0 0 12px}}
+</style>
+</head>
+<body>
+<header><div><h1>{{ magnet.title }}</h1><p>{{ (brand.promise or brand.niche)|sentence }}</p></div></header>
+<main>
+  {% for s in sections %}
+  <h2>{{ s.heading }}</h2>
+  <ul>{% for item in s['items'] %}<li>{{ item }}</li>{% endfor %}</ul>
+  {% endfor %}
+  <button class="print" onclick="window.print()">Print / save as PDF</button>
+</main>
+<footer>{{ brand.name }} · {{ brand.ai_disclosure }} General information only, not personalised advice.</footer>
+</body>
+</html>

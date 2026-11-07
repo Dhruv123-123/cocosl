@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block title %}Review{% endblock %}
+{% block refresh %}{% endblock %}
+{% block content %}
+<div class="page-head">
+  <div><h1>Review queue</h1><p class="muted">{{ items|length }} post{{ 's' if items|length != 1 }} waiting. Watch it, fix the caption, fact-check every claim, then approve.</p></div>
+  {% if brands|length > 1 %}
+  <div class="tabs" style="margin:0"><a href="/review" class="{{ 'active' if not brand }}">All</a>{% for slug, b in brands.items() %}<a href="/review?brand={{ slug }}" class="{{ 'active' if slug == brand }}">{{ b.name }}</a>{% endfor %}</div>
+  {% endif %}
+</div>
+
+{% if not items %}
+<div class="card empty">Nothing to review. <a href="/ideas">Produce an idea</a> to fill the queue.</div>
+{% endif %}
+
+<div class="stack">
+{% for it in items %}
+{% set p = it.post %}
+<article class="card review-card" id="post-{{ p.id }}">
+  <div class="rc-head">
+    <h2><a href="/posts/{{ p.id }}" style="color:inherit">{{ p.title or 'Untitled' }}</a></h2>
+    <span class="pill-row">{{ m.status(p.status) }}<span class="badge">{{ p.format }}</span><span class="badge">{{ p.brand }}</span>
+      {% if it.job %}<span class="badge status-running">{{ it.job.kind }} {{ it.job.status }}</span>{% endif %}</span>
+  </div>
+
+  <div class="rc-body">
+    <div class="rc-media">{{ m.media(p, it.assets) }}</div>
+
+    <div class="rc-main stack">
+      {% if p.status == 'blocked' %}
+      <div class="banner banner-block" style="margin:0"><strong>Blocked by a guardrail.</strong> Fix the caption or script below; saving re-runs the checks.</div>
+      {% endif %}
+
+      <form method="post" action="/posts/{{ p.id }}/edit">
+        <div class="form-row"><label for="title-{{ p.id }}">Title</label>
+          <input id="title-{{ p.id }}" type="text" name="title" value="{{ p.title }}" maxlength="200"></div>
+        <div class="form-row"><label for="caption-{{ p.id }}">Caption</label>
+          <textarea id="caption-{{ p.id }}" name="caption" rows="5">{{ p.caption }}</textarea>
+          <span class="small muted">Posted with: {{ p.disclosure }} {% for h in p.hashtags or [] %}#{{ h|replace('#', '') }} {% endfor %}</span></div>
+        <button class="btn" type="submit">Save &amp; re-check</button>
+      </form>
+
+      <div>
+        <h3>Guardrails {% if it.check_status %}{{ m.level(it.check_status) }}{% endif %}</h3>
+        {{ m.checks_list(it.checks) }}
+      </div>
+
+      <details>
+        <summary>Script ({{ (it.script.segments or [])|length }} beats)</summary>
+        {{ m.segments(it.script) }}
+        {% if it.script.sources %}<p class="small"><strong>Sources:</strong> {% for s in it.script.sources %}{% if s.startswith('http') %}<a href="{{ s }}" target="_blank" rel="noopener noreferrer">{{ s|truncate(60) }}</a>{% else %}{{ s }}{% endif %}{% if not loop.last %} · {% endif %}{% endfor %}</p>{% endif %}
+      </details>
+
+      <details {{ 'open' if (it.editor.problems or []) }}>
+        <summary>Editor critique</summary>
+        {{ m.editor_block(it.editor) }}
+      </details>
+    </div>
+  </div>
+
+  <div class="rc-actions">
+    <form method="post" action="/posts/{{ p.id }}/approve" data-claims-form>
+      {% if it.claims %}
+      <div class="claims">
+        <div class="card-head" style="margin-bottom:4px"><h3>Fact-check before approving</h3><span class="small muted" data-claims-count>{{ it.claims|length }} to check</span></div>
+        {% for c in it.claims %}
+        <label class="check-label"><input type="checkbox" name="verified" value="{{ loop.index0 }}"> <span>{{ c }}</span></label>
+        {% endfor %}
+      </div>
+      {% endif %}
+      <div class="form-row mt" style="margin-bottom:10px">
+        <input type="text" name="notes" placeholder="Review notes (optional)" aria-label="Review notes">
+      </div>
+      <div class="btn-row">
+        {% if it.render_queued %}
+        <button class="btn btn-primary" type="submit" disabled title="Waiting in the render queue">Rendering…</button>
+        {% elif p.status == 'blocked' %}
+        <button class="btn btn-primary" type="submit" disabled title="Blocked posts can't be approved">Approve &amp; schedule</button>
+        {% else %}
+        <button class="btn btn-primary" type="submit" name="and_schedule" value="1" data-needs-claims>Approve &amp; schedule</button>
+        <button class="btn" type="submit" data-needs-claims>Approve only</button>
+        {% endif %}
+        <button class="btn" type="submit" formaction="/posts/{{ p.id }}/rerender" formnovalidate {{ 'disabled' if it.job or it.render_queued }}>Re-render</button>
+      </div>
+    </form>
+    <details class="mt">
+      <summary class="small" style="color:var(--block)">Reject…</summary>
+      <form method="post" action="/posts/{{ p.id }}/reject" class="form-row inline-row" style="margin:0">
+        <input type="text" name="reason" required placeholder="Why? (e.g. weak hook, wrong numbers)" aria-label="Reject reason" style="flex:1 1 220px">
+        <button class="btn btn-danger" type="submit">Reject</button>
+      </form>
+    </details>
+  </div>
+</article>
+{% endfor %}
+</div>
+
+{% if failed %}
+<div class="card section">
+  <div class="card-head"><h2>Failed renders</h2></div>
+  <ul class="list">
+    {% for p in failed %}
+    <li><span class="grow"><a href="/posts/{{ p.id }}">{{ p.title or 'Post #' ~ p.id }}</a><br><span class="small muted">{{ p.review_notes|truncate(160) }}</span></span>
+      <form class="inline" method="post" action="/posts/{{ p.id }}/rerender"><button class="btn btn-sm" type="submit">Retry render</button></form></li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+{% endblock %}

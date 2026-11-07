@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block title %}Settings{% endblock %}
+{% block content %}
+<div class="page-head"><div><h1>Settings</h1><p class="muted">Read-only. Change these in <code>.env</code> and <code>brands/*.yaml</code>, then restart.</p></div></div>
+
+<div class="grid grid-2">
+  <div class="card">
+    <div class="card-head"><h2>Runtime</h2></div>
+    <table class="table">
+      <tr><th>Publishing</th><td>{% if s.dry_run %}<span class="badge badge-warn">dry run</span> nothing is sent to platforms{% else %}<span class="badge badge-ok">live</span> real API calls{% endif %}</td></tr>
+      <tr><th>LLM</th><td><strong>{{ llm_provider }}</strong>{% if llm_provider != 'offline' %} · {{ llm_model }} · effort {{ s.anthropic_effort }}{% else %} <span class="muted small">(placeholder writer; set ANTHROPIC_API_KEY for real scripts)</span>{% endif %}</td></tr>
+      <tr><th>Voice</th><td>{{ s.tts_provider }}</td></tr>
+      <tr><th>Images</th><td>{{ s.image_provider }}</td></tr>
+      <tr><th>Dashboard auth</th><td>{% if s.dashboard_token %}<span class="badge badge-ok">token</span>{% else %}<span class="badge badge-warn">localhost only</span>{% endif %}</td></tr>
+      <tr><th>Media URL</th><td>{{ s.public_media_base_url or '—' }}</td></tr>
+      <tr><th>Database</th><td class="mono">{{ s.db_path }}</td></tr>
+      <tr><th>Output</th><td class="mono">{{ s.output_dir }}</td></tr>
+      <tr><th>Brands dir</th><td class="mono">{{ s.brands_dir }}</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h2>Environment checklist</h2></div>
+    <ul class="list">
+      {% for key, ok, why in env %}
+      <li><span class="grow"><code>{{ key }}</code><br><span class="small muted">{{ why }}</span></span>
+        {% if ok %}<span class="badge badge-ok">set</span>{% else %}<span class="badge">not set</span>{% endif %}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h2>Platform credentials</h2></div>
+    <ul class="list">
+      {% for platform, c in creds.items() %}
+      <li><span class="grow"><strong>{{ platform }}</strong>
+        {% if c.missing %}<br><span class="small muted">{% for k in c.missing %}<code>{{ k }}</code> {% endfor %}</span>{% endif %}
+        {% if c.error %}<br><span class="small muted">{{ c.error|truncate(120) }}</span>{% endif %}</span>
+        {% if c.ready %}<span class="badge badge-ok">ready</span>{% elif c.error %}<span class="badge">n/a</span>{% else %}<span class="badge badge-warn">missing</span>{% endif %}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<h2 class="section">Brands</h2>
+{% if brand_errors %}<div class="banner banner-block">{{ brand_errors }}</div>{% endif %}
+<div class="grid grid-2">
+  {% for slug, b in brands.items() %}
+  <div class="card">
+    <div class="card-head"><h2>{{ b.name }}</h2><span class="badge">{{ slug }}</span></div>
+    <p class="small">{{ b.niche }}<br><span class="muted">for {{ b.audience }}</span></p>
+    <table class="table small">
+      <tr><th>Formats</th><td>{{ b.formats|join(', ') }}</td></tr>
+      <tr><th>Accounts</th><td><span class="pill-row">{% for a in b.accounts %}{{ m.platform(a.platform ~ ' ' ~ a.handle) }}{% endfor %}</span></td></tr>
+      <tr><th>Cadence</th><td>{{ b.cadence.shorts_per_week }} shorts, {{ b.cadence.carousels_per_week }} carousels, {{ b.cadence.long_per_week }} long / week · max {{ b.cadence.max_posts_per_day_per_platform }}/day/platform · {{ b.cadence.post_times|join(', ') }} {{ b.cadence.timezone }}</td></tr>
+      <tr><th>Affiliates</th><td>{{ b.affiliates|map(attribute='name')|join(', ') or '—' }}</td></tr>
+      <tr><th>Human review</th><td>{% if b.require_human_review %}<span class="badge badge-ok">required</span>{% else %}<span class="badge badge-warn">off</span>{% endif %}</td></tr>
+      <tr><th>Realistic AI</th><td>{{ 'yes (AI label is mandatory)' if b.realistic_synthetic_media else 'no' }}</td></tr>
+      <tr><th>Disclosure</th><td>{{ b.ai_disclosure }}</td></tr>
+    </table>
+    {% if brand_files.get(slug) %}
+    <details class="mt"><summary>YAML</summary><pre>{{ brand_files[slug] }}</pre></details>
+    {% endif %}
+  </div>
+  {% else %}
+  <div class="card empty">No brands loaded from {{ s.brands_dir }}.</div>
+  {% endfor %}
+</div>
+{% endblock %}
