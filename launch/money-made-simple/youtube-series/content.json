@@ -57,7 +57,26 @@
      "heading": "Step 5: the number you can actually spend",
      "narration": "Now the best part. Take your income and subtract the first three numbers. Thirty-two hundred, minus twenty-three seventy-five in essentials, minus three hundred in savings, minus one hundred in sinking funds. That leaves four hundred and twenty-five dollars. That's number four: your flexible spending. Eating out, clothes, hobbies, a night out, the random stuff. The magic here is that this number is guilt-free. Your bills are covered. Your savings already happened. Your irregular costs are handled. So anything inside the four twenty-five is yours to spend however you want, without a spreadsheet and without guilt. Now divide it by four and a bit. That's roughly a hundred dollars a week. If you remember only one number from this budget, make it this one. A hundred a week. You'll check it every Sunday.",
      "on_screen_text": "$425 guilt-free = ~$100/week",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes relaxing in a café with a small coffee, a weekly calendar beside it. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes relaxing in a café with a small coffee, a weekly calendar beside it. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$3,200 take-home, four numbers",
+      "labels": [
+       "Essentials",
+       "Savings",
+       "Sinking funds",
+       "Flexible spending"
+      ],
+      "values": [
+       2375,
+       300,
+       100,
+       425
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "/mo",
+      "note": "Fictional example"
+     }
     },
     {
      "heading": "What if the numbers don't work?",
@@ -119,7 +138,8 @@
    "hook_variants": [
     "You don't need 40 categories. You need 4 numbers. Here's the whole budget in 20 minutes.",
     "$3,200 a month comes in. Let's give every dollar a job before it disappears."
-   ]
+   ],
+   "original_element": "worked-example-chart: The four-number budget filled in live on screen from the $3,200 example, ending at $425 (about $100 a week) (chapter \"Step 5: the number you can actually spend\")"
   },
   "format_style": "walkthrough",
   "original_element": {
@@ -174,7 +194,22 @@
      "heading": "Side by side",
      "narration": "So here they are side by side. Snowball: first debt gone in month five, debt-free in month twenty-four, about seventeen ninety-two in interest. Avalanche: first debt gone in month nineteen, debt-free in month twenty-four, about fourteen sixty-five in interest. The difference is three hundred and twenty-seven dollars over two years, about fourteen dollars a month. That's real money, but it's probably smaller than you expected. And here's the thing the debate usually misses. Both of these beat the default, which is paying minimums and spending whatever's left. The biggest decision isn't snowball versus avalanche. It's deciding on a fixed monthly debt number, and sticking to it every single month. Picking either method and following it is the win.",
      "on_screen_text": "Avalanche saves $327. Snowball wins 14 months sooner.",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple two-column chart with two bars of slightly different heights. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple two-column chart with two bars of slightly different heights. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Interest paid over 24 months",
+      "labels": [
+       "Snowball",
+       "Avalanche"
+      ],
+      "values": [
+       1792,
+       1465
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "The video's own simulation"
+     }
     },
     {
      "heading": "When the difference gets big",
@@ -235,7 +270,8 @@
    "hook_variants": [
     "Same $7,800 of debt. Same $400 a month. Two methods. Here's the real difference.",
     "The math says avalanche. Your brain might say snowball. Here's how to choose."
-   ]
+   ],
+   "original_element": "worked-example-chart: Month-by-month payoff chart from the video's own simulation: snowball vs avalanche balances, payoff months 5/14/24 vs 19/21/24 (chapter \"Side by side\")"
   },
   "format_style": "real-numbers",
   "original_element": {
@@ -352,7 +388,8 @@
    "hook_variants": [
     "What counts as an emergency, how much to save, and where to put it, in 10 minutes.",
     "Your emergency fund's job isn't to grow. It's to be there. Here's how to build one."
-   ]
+   ],
+   "original_element": "screen-recording: Screen recording of the FDIC BankFind tool checking a bank's insurance (any public bank) and setting a recurring transfer in a demo banking screen (chapter \"Where to keep it\")"
   },
   "format_style": "walkthrough",
   "original_element": {
@@ -474,7 +511,8 @@
    "hook_variants": [
     "Checking your own score doesn't hurt it. Here's what does, factor by factor.",
     "No credit, bad credit, or just confused? Here's how the score is really built."
-   ]
+   ],
+   "original_element": "screen-recording: Screen recording of AnnualCreditReport.com and the dispute page of one bureau (no personal data), plus a utilization bar chart (chapter \"Check and dispute your report free\")"
   },
   "format_style": "myth-vs-fact",
   "original_element": {
@@ -529,7 +567,24 @@
      "heading": "What $100 a month can become",
      "narration": "Let's look at the hypothetical math. If you invest a hundred dollars a month and earn an average of seven percent a year, here's roughly what you'd have. After ten years, about seventeen thousand three hundred dollars, from twelve thousand you put in. After twenty years, about fifty-two thousand, from twenty-four thousand put in. After thirty years, about a hundred and twenty-two thousand, from thirty-six thousand put in. Notice how the growth speeds up. In the last ten years, the account grows by about seventy thousand dollars. That's compounding: your returns start earning returns. Important reminder: real markets don't give you seven percent every year. Some years are up twenty, some are down twenty or more. This is an illustration, not a forecast. But the pattern is the point. Time does most of the work.",
      "on_screen_text": "10y ≈ $17k · 20y ≈ $52k · 30y ≈ $122k",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a curved line chart rising slowly then faster, the small round green piggy bank mascot with big eyes pointing at the end. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a curved line chart rising slowly then faster, the small round green piggy bank mascot with big eyes pointing at the end. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$100 a month at 7%",
+      "labels": [
+       "10 years",
+       "20 years",
+       "30 years"
+      ],
+      "values": [
+       17300,
+       52000,
+       122000
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Hypothetical 7% a year, not a forecast"
+     }
     },
     {
      "heading": "Why fees matter",
@@ -593,7 +648,8 @@
    "hook_variants": [
     "You don't need thousands to start investing. You need $100 and the right order.",
     "Investing for beginners in 10 minutes: what to do first, where, and what to buy."
-   ]
+   ],
+   "original_element": "worked-example-chart: Growth curve for $100/month at a hypothetical 7% (10, 20, 30 years) and the 0.03% vs 1% fee gap, drawn from the script's numbers (chapter \"What $100 a month can become\")"
   },
   "format_style": "on-screen-calculation",
   "original_element": {
@@ -636,7 +692,26 @@
      "heading": "The $1,000 example",
      "narration": "Here's the example that makes it click. Say you have a thousand dollars of income to put toward retirement, and your tax rate is twenty percent, both now and in retirement. With a traditional IRA, you contribute the full thousand pre-tax. Say it grows four times over the years, to four thousand. When you withdraw, you pay twenty percent tax, so you keep thirty-two hundred. With a Roth IRA, you pay twenty percent tax first, so only eight hundred goes in. It grows four times, to thirty-two hundred, and you withdraw it all tax-free. Thirty-two hundred. Exactly the same. That's the key insight. When your tax rate is the same now and later, Roth and traditional end up equal. So the whole decision comes down to one thing: will your tax rate be higher or lower later?",
      "on_screen_text": "Same tax rate = same result",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two equal stacks of coins on a balanced scale. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two equal stacks of coins on a balanced scale. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$1,000 of income, 20% tax now and later",
+      "labels": [
+       "Traditional: in",
+       "Traditional: after tax",
+       "Roth: in",
+       "Roth: after growth"
+      ],
+      "values": [
+       1000,
+       3200,
+       800,
+       3200
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Grows 4x, illustrative"
+     }
     },
     {
      "heading": "The one question",
@@ -713,7 +788,8 @@
    "hook_variants": [
     "The whole Roth vs traditional debate comes down to 1 question. Here it is.",
     "Pay tax now, or pay it later? That's the entire difference. Here's how to choose."
-   ]
+   ],
+   "original_element": "worked-example-chart: The $1,000 Roth vs traditional side-by-side: $1,000 → $4,000 → $3,200 vs $800 → $3,200 (chapter \"The $1,000 example\")"
   },
   "format_style": "on-screen-calculation",
   "original_element": {
@@ -756,7 +832,24 @@
      "heading": "Match formula 1: 50% up to 6%",
      "narration": "Let's decode the most common formula: fifty percent match up to six percent of salary. It means your employer adds fifty cents for every dollar you contribute, on the first six percent of your pay. With a fifty thousand dollar salary, six percent is three thousand dollars a year. Your employer adds half of that: fifteen hundred dollars. If you only contribute three percent, fifteen hundred dollars, your employer adds seven fifty. You just left seven hundred and fifty dollars of free money behind. If you contribute ten percent, the match is still fifteen hundred, because the match stops at six percent. Your extra contributions are still good for your retirement, they just don't get matched. So the magic number for this formula is six percent.",
      "on_screen_text": "50% up to 6% = $1,500 on $50k",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple bar split into a filled part and a matching smaller bar. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple bar split into a filled part and a matching smaller bar. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Match on a $50,000 salary",
+      "labels": [
+       "You put in 3%",
+       "You put in 6%",
+       "You put in 10%"
+      ],
+      "values": [
+       750,
+       1500,
+       1500
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "50% match up to 6%, example"
+     }
     },
     {
      "heading": "Match formula 2: 100% up to 4%",
@@ -832,7 +925,8 @@
    "hook_variants": [
     "\"50% up to 6%.\" Here's what your 401(k) match actually means, in dollars.",
     "Skipping your 401(k) match is like turning down a raise. Here's how it works."
-   ]
+   ],
+   "original_element": "worked-example-chart: Match chart for the $50,000 salary: 50%-up-to-6% vs 100%-up-to-4%, with the per-paycheck cost (chapter \"Match formula 1: 50% up to 6%\")"
   },
   "format_style": "on-screen-calculation",
   "original_element": {
@@ -856,7 +950,7 @@
   ],
   "thumbnail_alt": "Is it safe?",
   "script": {
-   "title": "High-Yield Savings Accounts Explained: Are They Safe, and Are They Worth It?",
+   "title": "High-Yield Savings Accounts Explained: Are They Safe and Worth It?",
    "hook": "$5,000 at a hypothetical 4% APY earns about $200 a year. At 0.5%, about $25. Here's what's different.",
    "segments": [
     {
@@ -951,7 +1045,8 @@
    "hook_variants": [
     "Same savings, same bank insurance, 8x the interest. Here's how high-yield savings works.",
     "Is a high-yield savings account actually safe? Here are the 3 things to check."
-   ]
+   ],
+   "original_element": "screen-recording: Screen recording of FDIC BankFind, plus a $5,000 interest bar chart at 0.5% vs 4% (hypothetical) (chapter \"Is it safe?\")"
   },
   "format_style": "explainer",
   "original_element": {
@@ -1070,7 +1165,8 @@
    "hook_variants": [
     "A budgeting app won't fix your budget. Picking the right method will. Here's how.",
     "Free spreadsheet or paid app? Answer 3 questions and you'll know."
-   ]
+   ],
+   "original_element": "human-segment: Dhruv records 'Try it for 30 days' in his own voice, saying truthfully which method he uses (or that he's choosing one now) (chapter \"Try it for 30 days\")"
   },
   "format_style": "question-reply",
   "original_element": {
@@ -1094,7 +1190,7 @@
   ],
   "thumbnail_alt": "The minimum payment trap",
   "script": {
-   "title": "How to Pay Off Credit Card Debt Fast (The Minimum Payment Trap, in Real Numbers)",
+   "title": "How to Pay Off Credit Card Debt Fast: The Minimum Payment Trap",
    "hook": "$5,000 at 24%, paying only the minimum: about 19 years and $8,887 in interest. Here's the faster way out.",
    "segments": [
     {
@@ -1119,7 +1215,26 @@
      "heading": "Fix the payment",
      "narration": "Here's the simplest fix: pick a fixed payment and keep paying it, even as the minimum drops. If you just keep paying the same hundred and fifty dollars you paid in month one, the balance is gone in about fifty-six months, under five years, with about thirty-three hundred dollars of interest. That's less than half the interest of the minimum-only plan. At two hundred dollars a month, it's gone in thirty-six months, with about two thousand in interest. At three hundred, twenty-one months and about eleven hundred. At four hundred, fifteen months and about eight hundred. See the pattern? Every extra dollar you add early on saves a lot of interest. So set your autopay to a fixed amount, not the minimum. That single setting changes everything.",
      "on_screen_text": "$200 a month → 36 months",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a staircase where each higher step is shorter. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a staircase where each higher step is shorter. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Months to pay off $5,000 at 24%",
+      "labels": [
+       "$150/mo",
+       "$200/mo",
+       "$300/mo",
+       "$400/mo"
+      ],
+      "values": [
+       56,
+       36,
+       21,
+       15
+      ],
+      "unit_prefix": "",
+      "unit_suffix": " mo",
+      "note": "The video's own simulation"
+     }
     },
     {
      "heading": "Step 1: stop the balance growing",
@@ -1189,7 +1304,8 @@
    "hook_variants": [
     "Your minimum payment is designed to keep you paying. Here's the real math, and the way out.",
     "Same $5,000 of debt: 19 years, or 3 years. The difference is one number."
-   ]
+   ],
+   "original_element": "worked-example-chart: Payoff-time chart for $5,000 at 24%: minimum vs $150, $200, $300, $400 a month, from the script's simulation (chapter \"Fix the payment\")"
   },
   "format_style": "real-numbers",
   "original_element": {
@@ -1213,7 +1329,7 @@
   ],
   "thumbnail_alt": "Sinking funds, explained",
   "script": {
-   "title": "Sinking Funds Explained: Stop 'Surprise' Expenses From Wrecking Your Budget",
+   "title": "Sinking Funds Explained: Stop 'Surprise' Expenses Wrecking Budgets",
    "hook": "$3,000 a year of 'surprise' expenses is really $250 a month. Here's how to stop them wrecking your budget.",
    "segments": [
     {
@@ -1238,7 +1354,32 @@
      "heading": "Step 2: do the math",
      "narration": "Step two: add it up and divide by twelve. In our fictional example: car maintenance, six hundred a year. Car registration, a hundred and twenty. Holidays and birthdays, six hundred. Medical and dental, three hundred. Annual subscriptions, a hundred and fifty. One trip, nine hundred. Clothes, three hundred and thirty. That adds up to three thousand dollars a year. Divide by twelve: two hundred and fifty dollars a month. If you're paid every two weeks, that's about a hundred and fifteen per paycheck. That might look like a lot. But you were already spending this money every year. It was just hitting all at once, usually on a credit card. Now it's planned. If two fifty is too much right now, start with the most important categories, like car and medical.",
      "on_screen_text": "$3,000 a year ÷ 12 = $250 a month",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple list adding up to one total, divided into twelve small boxes. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple list adding up to one total, divided into twelve small boxes. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$3,000 a year of irregular costs",
+      "labels": [
+       "Car upkeep",
+       "Registration",
+       "Holidays",
+       "Medical",
+       "Subscriptions",
+       "Trip",
+       "Clothes"
+      ],
+      "values": [
+       600,
+       120,
+       600,
+       300,
+       150,
+       900,
+       330
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Fictional example: $3,000 ÷ 12 = $250/mo"
+     }
     },
     {
      "heading": "Step 3: where to keep it",
@@ -1305,7 +1446,8 @@
    "hook_variants": [
     "Car repairs, gifts and annual fees aren't surprises. They're on a calendar. Here's the fix.",
     "If your budget breaks every few months, this is probably why."
-   ]
+   ],
+   "original_element": "worked-example-chart: The $3,000-a-year irregular costs list turning into twelve $250 monthly bars (chapter \"Step 2: do the math\")"
   },
   "format_style": "walkthrough",
   "original_element": {
@@ -1427,7 +1569,8 @@
    "hook_variants": [
     "The best identity theft protection is free and takes 15 minutes. Here's how to set it up.",
     "Freezing your credit doesn't hurt your score. Here's what it actually does."
-   ]
+   ],
+   "original_element": "screen-recording: Screen recording of each bureau's official freeze page (landing pages only, no personal data entered) (chapter \"Step by step: Equifax, Experian, TransUnion\")"
   },
   "format_style": "walkthrough",
   "original_element": {

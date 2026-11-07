@@ -3126,7 +3126,26 @@
      "heading": "The split",
      "narration": "So: seven hundred to savings, fifteen hundred to the card, three hundred to the car fund, three hundred for fun. Twenty-eight hundred, all assigned. Use Form 8888 when you file to split it automatically, or move it the day it lands.",
      "on_screen_text": "$700 · $1,500 · $300 · $300",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four jars in a row. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four jars in a row. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "A $2,800 refund, all assigned",
+      "labels": [
+       "Savings",
+       "Credit card",
+       "Car fund",
+       "Fun"
+      ],
+      "values": [
+       700,
+       1500,
+       300,
+       300
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Example plan"
+     }
     },
     {
      "heading": "If no debt",
@@ -3169,7 +3188,8 @@
     "Fictional example",
     "$2,200 × 24% ÷ 12 ≈ $44; $1,500 off → ~$30/month less",
     "$2,800 ÷ 12 ≈ $233"
-   ]
+   ],
+   "original_element": "worked-example-chart: Waterfall chart of the $2,800 refund flowing into buffer, debt, sinking funds and a treat (chapter \"The split\")"
   },
   "format_style": "real-numbers",
   "original_element": {
@@ -3255,7 +3275,8 @@
     "$3,000 ÷ 26 ≈ $115",
     "$900 ÷ 26 ≈ $35",
     "Step 2 guidance per IRS W-4 instructions"
-   ]
+   ],
+   "original_element": "screen-recording: Screen recording of the IRS Tax Withholding Estimator with made-up inputs, ending on the suggested W-4 entries (chapter \"Real numbers: refund\")"
   },
   "format_style": "myth-vs-fact",
   "original_element": {
@@ -3306,7 +3327,26 @@
      "heading": "The pattern",
      "narration": "Look at the ranking and the pattern is the same at every step: no plan until the money arrived. The order that fixes it doesn't change. Buffer first, then high-rate debt, then the costs you can see coming, then one planned treat, decided before the money lands.",
      "on_screen_text": "Buffer · debt · known costs · treat",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four steps going up. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four steps going up. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Money each fix gives a job",
+      "labels": [
+       "#4 the phone",
+       "#3 the couch",
+       "#2 the trip",
+       "#1 the tax bill"
+      ],
+      "values": [
+       1500,
+       5500,
+       3000,
+       5200
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Fictional examples: savings, debt and tax set aside"
+     }
     },
     {
      "heading": "Your turn",
@@ -3335,13 +3375,14 @@
    "claims_to_verify": [
     "Fictional examples (label on screen)",
     "Same figures as shorts #13–#16"
-   ]
+   ],
+   "original_element": "worked-example-chart: Podium graphic ranking the four fictional refund plans with each one's cost of doing nothing (chapter \"The pattern\")"
   },
   "format_style": "countdown",
   "original_element": {
    "type": "worked-example-chart",
    "detail": "Podium graphic ranking the four fictional refund plans with each one's cost of doing nothing",
-   "chapter": "Number 1: the tax bill"
+   "chapter": "The pattern"
   }
  },
  {
@@ -3436,7 +3477,8 @@
     "21-day and 6-week guidance (IRS)",
     "PATH Act hold for EITC/ACTC",
     "Treasury Offset Program"
-   ]
+   ],
+   "original_element": "screen-recording: Screen recording of Where's My Refund on IRS.gov (logged-out, entry screen only) and the IRS2Go app's status screen (chapter \"How it works\")"
   },
   "format_style": "explainer",
   "original_element": {

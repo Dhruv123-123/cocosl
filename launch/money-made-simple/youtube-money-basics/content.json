@@ -122,7 +122,8 @@
    "hook_variants": [
     "Your paycheck is about 28% smaller than your salary math. Here's every line that takes a slice.",
     "Most people never read their pay stub. Ten minutes with it can save you hundreds a year."
-   ]
+   ],
+   "original_element": "screen-recording: Screen recording of the free IRS Tax Withholding Estimator filled in with the video's fictional $55,000 pay stub, showing the refund-or-owe result and the W-4 suggestion (chapter \"Check your withholding\")"
   },
   "format_style": "walkthrough",
   "original_element": {
@@ -254,7 +255,8 @@
    "hook_variants": [
     "Your checking account is probably holding money that should be somewhere else. Here's the map.",
     "5 places to keep money, one rule for each. Let's sort $8,000."
-   ]
+   ],
+   "original_element": "human-segment: The host on camera, setting up a named emergency-fund bucket and a day-after-payday transfer in a real banking app (balances and account numbers blurred) (chapter \"On camera: set up your first two boxes\")"
   },
   "format_style": "real-numbers",
   "original_element": {
@@ -333,7 +335,21 @@
      "heading": "Time: the biggest number",
      "narration": "Time is the most powerful number in this whole video. Let's say someone invests two hundred dollars a month, and the investments grow at seven percent a year on average. That rate is an assumption for illustration, not a promise. Real returns go up and down, sometimes by a lot. Over thirty years, two hundred a month is seventy-two thousand dollars put in. At seven percent compounded monthly, the balance would be about two hundred forty-four thousand. Most of that is growth, not deposits. Now start ten years later and invest for twenty years instead: about one hundred four thousand. Waiting ten years cost more than half the ending balance, even though only twenty-four thousand fewer dollars went in.",
      "on_screen_text": "$200/mo · 30 yrs ≈ $244K · 20 yrs ≈ $104K",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two growth curves, one starting earlier and rising much higher. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two growth curves, one starting earlier and rising much higher. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$200 a month at 7%",
+      "labels": [
+       "Start now (30 yrs)",
+       "Start 10 yrs later (20 yrs)"
+      ],
+      "values": [
+       243994,
+       104185
+      ],
+      "unit_prefix": "$",
+      "note": "7% a year compounded monthly, illustrative, not a promise"
+     }
     },
     {
      "heading": "Putting it together",
@@ -381,7 +397,8 @@
    "hook_variants": [
     "Interest is the same math whether you're earning it or paying it. Let's do both on screen.",
     "$3,000 at 24%: here's exactly what it costs per day, per month and per year."
-   ]
+   ],
+   "original_element": "worked-example-chart: Two charts built from the video's own numbers: $1,000 at 5% simple vs compound over 30 years, and $200 a month at an assumed 7% starting at year 0 vs year 10 (chapter \"Time: the biggest number\")"
   },
   "format_style": "on-screen-calculation",
   "original_element": {
@@ -430,7 +447,23 @@
      "heading": "Climbing the staircase",
      "narration": "Now climb. The first twelve thousand dollars at ten percent is twelve hundred dollars of tax. The rest, twenty-two thousand five hundred, sits on the twelve percent step: that's twenty-seven hundred. Our person never reaches the twenty-two percent step at all. Total federal income tax: about thirty-nine hundred dollars. Their top bracket, which is called the marginal rate, is twelve percent. But their effective rate, total tax divided by salary, is about seven percent. Thirty-nine hundred divided by fifty-five thousand. That's a long way from the twenty-two percent people often assume. When someone says their tax rate, ask whether they mean the top step or the average.",
      "on_screen_text": "$1,200 + $2,700 = $3,900 · ~7% effective",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a staircase with coins on the bottom two steps. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a staircase with coins on the bottom two steps. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Tax on $34,500 taxable income",
+      "labels": [
+       "10% step",
+       "12% step",
+       "Total"
+      ],
+      "values": [
+       1200,
+       2700,
+       3900
+      ],
+      "unit_prefix": "$",
+      "note": "Example from the video; brackets change yearly"
+     }
     },
     {
      "heading": "Myth 2: a raise can lower your take-home",
@@ -508,7 +541,8 @@
    "hook_variants": [
     "Your tax bracket isn't your tax rate. Here's the staircase that explains why.",
     "5 things people get wrong about income tax, explained with simple numbers."
-   ]
+   ],
+   "original_element": "worked-example-chart: An animated tax staircase chart from the video's own example: $34,500 of taxable income filling the 10% and 12% steps, with marginal and effective rates labelled (chapter \"Climbing the staircase\")"
   },
   "format_style": "myth-vs-fact",
   "original_element": {
@@ -632,7 +666,8 @@
    "hook_variants": [
     "One number tells you if your money is actually moving forward. It takes 10 minutes to find.",
     "Your budget shows a month. Your net worth shows the whole picture. Let's build it."
-   ]
+   ],
+   "original_element": "screen-recording: Screen recording of the net worth spreadsheet being built from scratch with the video's fictional numbers: three columns, three formulas, ending at −$3,000 with a second dated column added (chapter \"Build the sheet\")"
   },
   "format_style": "walkthrough",
   "original_element": {
@@ -693,7 +728,21 @@
      "heading": "Fee drag: the 30-year chart",
      "narration": "Same investor, same deposits, two funds. Two hundred dollars a month for thirty years, and let's assume the investments themselves return seven percent a year on average. That's an assumption for illustration, not a promise, and real returns jump around. Fund A charges zero point zero three percent, so the investor keeps about six point nine seven percent. Fund B charges one percent, so they keep about six percent. Seventy-two thousand dollars goes in either way. After thirty years, Fund A grows to about two hundred forty-three thousand. Fund B grows to about two hundred one thousand. The difference is about forty-two thousand dollars, from a fee that looked like one percent. That's why the expense ratio is the first number to check.",
      "on_screen_text": "0.03% → ~$243K · 1% → ~$201K",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two growth curves that start together and slowly separate. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two growth curves that start together and slowly separate. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$200 a month for 30 years",
+      "labels": [
+       "Fund A (0.03% fee)",
+       "Fund B (1% fee)"
+      ],
+      "values": [
+       242555,
+       200903
+      ],
+      "unit_prefix": "$",
+      "note": "7% assumed return before fees, illustrative"
+     }
     },
     {
      "heading": "Diversification and risk",
@@ -756,7 +805,8 @@
    "hook_variants": [
     "Instead of picking stocks, you can own a slice of hundreds of companies at once. That's an index fund.",
     "Index funds explained in plain English: what they are, the main types, and the one number to check."
-   ]
+   ],
+   "original_element": "worked-example-chart: A 30-year fee-drag chart from the video's own numbers: $200 a month at an assumed 7%, with a 0.03% fee reaching about $243K and a 1% fee about $201K (chapter \"Fee drag: the 30-year chart\")"
   },
   "format_style": "explainer",
   "original_element": {
@@ -887,7 +937,8 @@
    "hook_variants": [
     "The monthly payment is how dealers win. The out-the-door price is how you do.",
     "Buying your first car? Do these 7 things in this order."
-   ]
+   ],
+   "original_element": "human-segment: The host on camera filling in an out-the-door price worksheet by hand for the fictional $14,000 used car, then crossing out two add-ons worth $2,000 (chapter \"On camera: the out-the-door worksheet\")"
   },
   "format_style": "countdown",
   "original_element": {
@@ -958,9 +1009,27 @@
     },
     {
      "heading": "The coverage map",
-     "narration": "Here's the coverage map for our fictional person. Health: employer plan, deductible within savings. Auto: higher liability limits, one-thousand-dollar collision deductible. Renters: replacement cost, about eighteen dollars a month. Disability: long-term through work, plus a small top-up. Life: not needed yet, beyond the free employer policy. The gap we found: no umbrella of savings big enough for two deductibles at once, so the emergency fund goal goes up. That's the point of mapping it out. You see the risks that are covered, the ones that aren't, and where your savings have to fill the gap.",
+     "narration": "Here's the coverage map for our fictional person. Health: employer plan, deductible within savings. Auto: higher liability limits, one-thousand-dollar collision deductible. Renters: replacement cost, about eighteen dollars a month. Disability: long-term through work, plus a small top-up. Life: not needed yet, beyond the free employer policy. The gap we found: they have two thousand dollars saved. The health deductible is fifteen hundred and the car deductible is one thousand, so two claims at once would be twenty-five hundred, more than their savings. So the emergency fund goal goes up. That's the point of mapping it out. You see the risks that are covered, the ones that aren't, and where your savings have to fill the gap.",
      "on_screen_text": "Covered · not needed yet · gap",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple map with five labelled shields, one dashed. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple map with five labelled shields, one dashed. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Savings vs two deductibles",
+      "labels": [
+       "Savings",
+       "Health deductible",
+       "Car deductible",
+       "Both at once"
+      ],
+      "values": [
+       2000,
+       1500,
+       1000,
+       2500
+      ],
+      "unit_prefix": "$",
+      "note": "Fictional 27-year-old renter"
+     }
     },
     {
      "heading": "How to compare quotes",
@@ -997,7 +1066,7 @@
     "personalfinance",
     "moneymadesimple"
    ],
-   "description": "Insurance basics for adults: premium vs deductible, then health, auto, renters or homeowners, disability and life insurance, mapped onto a fictional 27-year-old renter's risks, with how to compare quotes and when you don't need life insurance yet.\n\nChapters\n0:00 Intro\n0:49 How insurance works: premium vs deductible\n1:34 1. Health insurance\n2:14 2. Auto insurance\n2:58 3. Renters or home insurance\n3:40 4. Disability insurance\n4:22 5. Life insurance, and when you don't need it\n5:09 The coverage map\n5:48 How to compare quotes\n6:25 Insurance you probably don't need\n7:08 Where to start this week\n7:50 Recap\n\nLinks\nHow to build an emergency fund: https://moneymadesimple.netlify.app/blog/how-to-build-an-emergency-fund/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-08\nSinking funds explained: https://moneymadesimple.netlify.app/blog/sinking-funds-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-08\nExample budget on a $50,000 salary: https://moneymadesimple.netlify.app/budget/50000-salary/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-08\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-08\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script written and fact-checked by a human.",
+   "description": "Insurance basics for adults: premium vs deductible, then health, auto, renters or homeowners, disability and life insurance, mapped onto a fictional 27-year-old renter's risks, with how to compare quotes and when you don't need life insurance yet.\n\nChapters\n0:00 Intro\n0:49 How insurance works: premium vs deductible\n1:34 1. Health insurance\n2:14 2. Auto insurance\n2:58 3. Renters or home insurance\n3:40 4. Disability insurance\n4:22 5. Life insurance, and when you don't need it\n5:09 The coverage map\n5:57 How to compare quotes\n6:33 Insurance you probably don't need\n7:16 Where to start this week\n7:58 Recap\n\nLinks\nHow to build an emergency fund: https://moneymadesimple.netlify.app/blog/how-to-build-an-emergency-fund/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-08\nSinking funds explained: https://moneymadesimple.netlify.app/blog/sinking-funds-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-08\nExample budget on a $50,000 salary: https://moneymadesimple.netlify.app/budget/50000-salary/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-08\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-08\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script written and fact-checked by a human.",
    "thumbnail_text": "5 policies. 1 you may skip.",
    "sources": [
     "https://www.healthcare.gov/",
@@ -1017,7 +1086,8 @@
    "hook_variants": [
     "Insurance is just paying a little now so one bad day doesn't cost you everything. Here's what to cover first.",
     "The insurance most people forget isn't life insurance. It's the one that protects your paycheck."
-   ]
+   ],
+   "original_element": "worked-example-chart: A coverage map chart for the fictional 27-year-old renter: five policies as shields (covered, not needed yet, gap), with the gap showing two deductibles at once exceeding savings (chapter \"The coverage map\")"
   },
   "format_style": "list",
   "original_element": {
@@ -1142,7 +1212,8 @@
    "hook_variants": [
     "Your statement tells you exactly how to never pay credit card interest. Most people skip that part.",
     "Minimum payment, statement balance, current balance: which one do you actually pay?"
-   ]
+   ],
+   "original_element": "screen-recording: Screen recording in a demo card account: setting autopay to the statement balance, choosing the funding account and turning on statement, due-date and large-transaction alerts (chapter \"Screen recording: set up autopay\")"
   },
   "format_style": "walkthrough",
   "original_element": {
@@ -1209,7 +1280,29 @@
      "heading": "The chart: when does buying win?",
      "narration": "Here's the chart from our example, plotting each person's net cost year by year. Owning starts far behind because of closing costs, then slowly closes the gap as the interest share of the payment falls and the home's value rises. In this example it gets close to even around year ten, and pulls ahead around year twelve if prices keep rising. That's where the common rule of thumb comes from: don't buy unless you plan to stay at least five years, and ideally longer. If you might move for a job in two or three years, the buying and selling costs alone can wipe out any gain from owning. Renting also gives you flexibility, which has real value even if it's hard to put a number on it.",
      "on_screen_text": "Stay 5+ years, ideally longer",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a line chart with two lines converging. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a line chart with two lines converging. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Net unrecoverable cost",
+      "labels": [
+       "Own 5 yrs",
+       "Rent 5 yrs",
+       "Own 10 yrs",
+       "Rent 10 yrs",
+       "Own 15 yrs",
+       "Rent 15 yrs"
+      ],
+      "values": [
+       115000,
+       87000,
+       183000,
+       176000,
+       232000,
+       271000
+      ],
+      "unit_prefix": "$",
+      "note": "Fictional example: 3% home growth, 6.5% rate, 3% rent rises"
+     }
     },
     {
      "heading": "What the math doesn't capture",
@@ -1266,7 +1359,8 @@
    "hook_variants": [
     "Renting isn't throwing money away, and owning isn't either. Here's what each one really costs.",
     "Your mortgage payment isn't the cost of owning. Here's the real monthly number."
-   ]
+   ],
+   "original_element": "worked-example-chart: A year-by-year chart from the video's own model of the owner's and renter's net unrecoverable cost, showing renting ahead at year 5 and the lines nearly meeting at year 10 (chapter \"The chart: when does buying win?\")"
   },
   "format_style": "real-numbers",
   "original_element": {
@@ -1395,7 +1489,8 @@
    "hook_variants": [
     "Two phone calls and one meeting can be worth hundreds a year. Here's what to say.",
     "Negotiating feels awkward. Scripts make it easy. Here are four."
-   ]
+   ],
+   "original_element": "human-segment: Two role-played conversations filmed on camera with the host: a call to lower an $85 internet bill, and a raise conversation using results, market data and a specific number (chapter \"On camera: the internet bill call\")"
   },
   "format_style": "question-reply",
   "original_element": {
@@ -1480,7 +1575,26 @@
      "heading": "The finished page",
      "narration": "Here's Jordan's finished page, all on screen. One: take-home, three thousand three hundred ten. Two: bills, twenty-two sixty. Three: the money map, with account names. Four: the card first, plus two fifty a month. Five: emergency fund target, sixty-eight hundred. Six: retirement, six percent plus the match, rising one percent a year. Seven: weekly spending, about one fifty. Eight: net worth, minus nine thousand, with January and July review dates. Every automatic transfer is listed at the bottom with its date. That's it. Not a forty-page plan. One page that fits on a fridge, and that Jordan can actually follow.",
      "on_screen_text": "The whole plan on one page",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a finished one-page plan with eight filled boxes. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a finished one-page plan with eight filled boxes. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Jordan's $3,310 a month",
+      "labels": [
+       "Bills",
+       "Extra to card",
+       "Sinking funds",
+       "Weekly spending"
+      ],
+      "values": [
+       2260,
+       250,
+       150,
+       650
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "/mo",
+      "note": "Fictional example"
+     }
     },
     {
      "heading": "What to do when life changes",
@@ -1528,7 +1642,8 @@
    "hook_variants": [
     "You've learned the pieces. Now let's put them on one page you'll actually use.",
     "A money plan doesn't need 40 pages. It needs 8 numbers and 2 dates."
-   ]
+   ],
+   "original_element": "worked-example-chart: The one-page money plan for the fictional Jordan, filled in box by box on screen with the video's own numbers (take-home $3,310 through net worth −$9,000) and the automatic transfers listed underneath (chapter \"The finished page\")"
   },
   "format_style": "on-screen-calculation",
   "original_element": {

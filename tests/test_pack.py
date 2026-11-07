@@ -83,7 +83,8 @@ def test_export_writes_pack(factory, tmp_path):
                                               ("month-4", date(2027, 2, 21), 28),
                                               ("month-5", date(2027, 3, 21), 31),
                                               ("month-6", date(2027, 4, 21), 30),
-                                              ("month-7", date(2027, 5, 21), 31)])
+                                              ("month-7", date(2027, 5, 21), 31),
+                                              ("month-8", date(2027, 6, 21), 30)])
 def test_tiktok_cuts_and_series(factory, month, start, days):
     items = _items(ROOT / "launch" / "money-made-simple" / month / "content.json")
     shorts = [i for i in items if i["format"] == "short"]
@@ -301,3 +302,34 @@ def test_myth_vs_math_saturdays_fit_under_the_cap(factory):
     assert not leftover and all(s.when.weekday() == 5 for s in slots)
     count(slots)
     assert max(busy.values()) <= brand.cadence.max_posts_per_day_per_platform
+
+
+CHALLENGE = ROOT / "launch" / "money-made-simple" / "savings-challenge" / "content.json"
+
+
+def test_savings_challenge_is_tiktok_only_weekly_and_labelled(factory):
+    brand = factory.brand("money-made-simple")
+    items = _items(CHALLENGE)
+    assert [i["series_part"] for i in items] == list(range(1, 9))
+    for it in items:
+        sc = it["script"]
+        assert it["format"] == "mid" and 65 <= est_seconds([s["narration"] for s in sc["segments"]]) <= 90
+        assert "not a promise" in sc["caption"] and any(ch.isdigit() for ch in sc["hook"])
+        assert all(len(s["on_screen_text"].split()) < 12 for s in sc["segments"])
+    assert "$300 of $300" in items[-1]["script"]["caption"]
+    slots, leftover = plan(brand, items[:7], date(2026, 11, 15), 43, {"mid": "sun"})
+    assert not leftover and all(s.when.weekday() == 6 and s.platforms == ["tiktok"] for s in slots)
+    slots, leftover = plan(brand, items[7:], date(2026, 12, 31), 1, {"mid": "thu"})
+    assert not leftover and slots[0].platforms == ["tiktok"]
+
+
+def test_chart_element_videos_carry_a_real_chart():
+    from contentfactory.schemas import ChartSpec
+    files = MONTHS + [SERIES, ROOT / "launch" / "money-made-simple" / "youtube-money-basics" / "content.json"]
+    longs = [i for p in files for i in _items(p) if i["format"] == "long"]
+    charted = [i for i in longs if i["original_element"]["type"] == "worked-example-chart"]
+    assert len(charted) >= 20
+    for it in charted:
+        seg = next(s for s in it["script"]["segments"] if s["heading"] == it["original_element"]["chapter"])
+        ChartSpec(**seg["chart"])
+    assert all(i["script"].get("original_element") for i in longs)

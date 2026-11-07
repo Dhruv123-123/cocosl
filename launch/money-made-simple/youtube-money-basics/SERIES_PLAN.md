@@ -5,6 +5,7 @@ This is the evergreen follow-up to the first 12-part series (launch/money-made-s
 - **All 12 parts are written**, in `content.json`, at 8–10 minutes each. Each one has chapters, UTM-tagged links (`utm_campaign=yt-basics-NN`) and the AI and education lines in the description. Each also has a commission note wherever a /compare/ page is linked.
 - **Evergreen:** no dated facts. Tax brackets in part 4 are simplified, round illustrative numbers, labelled that way, so the video doesn't go out of date.
 - **Original element per video**, against YouTube's inauthentic-content risk: across the 12 parts that's 6 worked-example charts, 3 screen recordings and 3 human segments. The human segments need the host on camera (parts 2, 7 and 11).
+- **Review check status:** the six chart videos (parts 3, 4, 6, 8, 10 and 12) carry a real chart on their chart chapter, drawn from the video's own numbers, so they pass the original-element check. The six footage videos (parts 1, 2, 5, 7, 9 and 11) show as **blocked** in CHECKS.md until the screen recording or on-camera clip is recorded and added to that chapter's `footage` field. That block is deliberate: a planned element only counts once it's in the video.
 - **Schedule:** Sundays at 19:00 ET, starting **Jun 13, 2027**, which fills the two empty month-7 Sundays (Jun 13 and 20), then weekly through Aug 29.
 - **Examples** are fictional and labelled. There are no income promises or testimonials, and every investing mention carries a risk note.
 

@@ -3706,7 +3706,8 @@
     "$3,200 − $1,850 − $160 = $1,190 ≈ $275/week",
     "$600 ÷ 6 = $100",
     "Avalanche saves the most interest (math), snowball gives faster wins"
-   ]
+   ],
+   "original_element": "human-segment: Dhruv records the 'When it breaks' chapter on camera or as his own voice: one honest, true restart tip (chapter \"When it breaks\")"
   },
   "format_style": "walkthrough",
   "original_element": {
@@ -3775,7 +3776,30 @@
      "heading": "Patterns",
      "narration": "Notice the pattern. None of these people had an income problem first. They had a system problem: money with no job gets spent, and costs with no plan go on a card. The fixes were the same three moves every time: automate savings first, give irregular costs a home, and make the hard number visible.",
      "on_screen_text": "Same 3 fixes every time",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small gears turning together. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small gears turning together. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Scores before and after the fix",
+      "labels": [
+       "New grad: before",
+       "New grad: after",
+       "Couple: before",
+       "Couple: after",
+       "Freelancer: before",
+       "Freelancer: after"
+      ],
+      "values": [
+       4,
+       8,
+       5,
+       8,
+       3,
+       8
+      ],
+      "unit_prefix": "",
+      "unit_suffix": "/10",
+      "note": "Fictional budgets, out of 10"
+     }
     },
     {
      "heading": "Your turn",
@@ -3806,13 +3830,14 @@
     "$210/$3,100 ≈ 6.8%",
     "Couple split: 63.3%/36.7%; both keep ~57% after bills",
     "~25% freelance tax set-aside is a rough rule of thumb"
-   ]
+   ],
+   "original_element": "worked-example-chart: Scorecard chart: the five questions as bars for each fictional budget, before and after the fix (chapter \"Patterns\")"
   },
   "format_style": "scorecard",
   "original_element": {
    "type": "worked-example-chart",
    "detail": "Scorecard chart: the five questions as bars for each fictional budget, before and after the fix",
-   "chapter": "The scorecard"
+   "chapter": "Patterns"
   }
  },
  {
@@ -3917,7 +3942,8 @@
     "Filing deadline April 15, 2027 (confirm)",
     "Extension to file ≠ extension to pay",
     "IP PIN open to anyone who verifies identity (confirm)"
-   ]
+   ],
+   "original_element": "screen-recording: Screen recording of the IRS Free File landing page and the 'Do you need to file?' interactive tool (chapter \"Free filing\")"
   },
   "format_style": "walkthrough",
   "original_element": {
@@ -3956,7 +3982,24 @@
      "heading": "Self-employment tax",
      "narration": "Now the surprise. At a regular job, your employer pays half of Social Security and Medicare and withholds the other half. When you work for yourself, you pay both halves: self-employment tax, fifteen point three percent of your net earnings, roughly. Example: if you net ten thousand from deliveries after expenses, self-employment tax is around fourteen hundred, before any income tax. You do get to deduct half of it when figuring income tax, which softens it a little.",
      "on_screen_text": "Self-employment tax ≈ 15.3%",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin tower with two thin slices peeled off. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin tower with two thin slices peeled off. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$10,000 net from side work",
+      "labels": [
+       "Net earnings",
+       "Self-employment tax",
+       "Half you can deduct"
+      ],
+      "values": [
+       10000,
+       1413,
+       706
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "15.3% on 92.35% of net earnings, illustrative"
+     }
     },
     {
      "heading": "Quarterly payments",
@@ -4029,7 +4072,8 @@
     "Safe harbor 100% / 110% if AGI > $150K",
     "Quarterly due dates (Apr 15, Jun 15, Sep 15, Jan 15)",
     "25–30% set-aside is a rule of thumb"
-   ]
+   ],
+   "original_element": "worked-example-chart: Chart: the video's side-income example split into set-aside, self-employment tax and income tax (chapter \"Self-employment tax\")"
   },
   "format_style": "explainer",
   "original_element": {

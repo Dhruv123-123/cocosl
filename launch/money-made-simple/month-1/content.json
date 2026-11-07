@@ -2781,9 +2781,28 @@
     },
     {
      "heading": "Four categories",
-     "narration": "Now split that total into four categories. One: gifts. Two: travel, door to door, including gas, parking, rideshares to the airport and the pet sitter. Three: food and hosting, like groceries for a big meal, the dish you bring to a potluck, drinks. Four: extras. This is the category people forget: outfits for parties, decorations, tips for building staff or the mail carrier, the white elephant gift, the ugly sweater. Give each one a number. If they add up to more than your total, shrink the biggest one first, because that's where the room usually is.",
+     "narration": "Now split that total into four categories. One: gifts. Two: travel, door to door, including gas, parking, rideshares to the airport and the pet sitter. Three: food and hosting, like groceries for a big meal, the dish you bring to a potluck, drinks. Four: extras. This is the category people forget: outfits for parties, decorations, tips for building staff or the mail carrier, the white elephant gift, the ugly sweater. Give each one a number. On a six-hundred-dollar total, that might be three hundred for gifts, one twenty for travel, one twenty for food and hosting, and sixty for extras. If they add up to more than your total, shrink the biggest one first, because that's where the room usually is.",
      "on_screen_text": "Step 2: four categories",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four envelopes in a row with small icons: a gift, a suitcase, a pie and a string of lights. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four envelopes in a row with small icons: a gift, a suitcase, a pie and a string of lights. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "A $600 holiday plan",
+      "labels": [
+       "Gifts",
+       "Travel",
+       "Food + hosting",
+       "Extras"
+      ],
+      "values": [
+       300,
+       120,
+       120,
+       60
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Example split"
+     }
     },
     {
      "heading": "Per-person gifts",
@@ -2860,7 +2879,8 @@
     "Fair Credit Billing Act $50 liability cap",
     "$300 / 12 = $25 example is illustrative",
     "Template has a holiday section (confirm before saying so, or cut the line)"
-   ]
+   ],
+   "original_element": "worked-example-chart: The four-category holiday budget chart built from the video's $600 example, filled in live (chapter \"Four categories\")"
   },
   "format_style": "walkthrough",
   "original_element": {
@@ -2972,7 +2992,8 @@
     "Bureaus generally have 30 days to investigate disputes (FCRA)",
     "Top scorers often use under 10% utilization (general claim; confirm source)",
     "~6 months of history to generate a FICO score"
-   ]
+   ],
+   "original_element": "screen-recording: Screen recording of AnnualCreditReport.com: requesting all three reports and where the account list sits (no personal data on screen) (chapter \"Check your reports\")"
   },
   "format_style": "explainer",
   "original_element": {
@@ -3003,9 +3024,26 @@
     },
     {
      "heading": "The match",
-     "narration": "Many employers match part of what you put in. A common example: they match fifty percent of your contributions up to six percent of your salary. On a fifty-thousand-dollar salary, if you put in six percent, three thousand dollars, they add fifteen hundred. That's an instant fifty percent return on that money, before any investment growth. So step one, always: contribute at least enough to get the full match. Check your plan's exact formula in the benefits portal; they vary a lot.",
+     "narration": "Many employers match part of what you put in. A common example: they match fifty percent of your contributions up to six percent of your salary. On a fifty-thousand-dollar salary, if you put in six percent, three thousand dollars, they add fifteen hundred. Put in three percent and they add seven fifty. Put in ten percent and it's still fifteen hundred, because the match stops at six. That's an instant fifty percent return on that money, before any investment growth. So step one, always: contribute at least enough to get the full match. Check your plan's exact formula in the benefits portal; they vary a lot.",
      "on_screen_text": "Step 1: get the full match",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two coins dropping in, a second smaller coin following each one. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two coins dropping in, a second smaller coin following each one. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Match on a $50,000 salary",
+      "labels": [
+       "You put in 3%",
+       "You put in 6%",
+       "You put in 10%"
+      ],
+      "values": [
+       750,
+       1500,
+       1500
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Employer match: 50% up to 6% (example)"
+     }
     },
     {
      "heading": "Traditional vs Roth",
@@ -3084,7 +3122,8 @@
     "Early withdrawal: income tax + 10% penalty under 59½ (exceptions exist)",
     "Saving ~15% including match is a common guideline (attribute as a rule of thumb)",
     "Index fund expense ratios often well under 0.25%"
-   ]
+   ],
+   "original_element": "worked-example-chart: Match chart: the video's salary example at 3%, 6% and 10% contribution showing where the match stops (chapter \"The match\")"
   },
   "format_style": "walkthrough",
   "original_element": {
@@ -3207,7 +3246,8 @@
     "IRA and HSA contributions for a tax year allowed until the filing deadline (confirm April 2027 date)",
     "Credit freezes free and don't affect scores",
     "$600 / 6 months = $100 example"
-   ]
+   ],
+   "original_element": "screen-recording: Screen recording of the IRS Tax Withholding Estimator start page and a credit freeze page (test inputs only) (chapter \"3. Withholding\")"
   },
   "format_style": "countdown",
   "original_element": {

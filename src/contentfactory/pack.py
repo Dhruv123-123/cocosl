@@ -36,7 +36,9 @@ DEFAULT_DAYS = {
     "short": ["mon", "tue", "thu", "fri", "sat"],
     "carousel": ["mon", "wed", "fri"],
     "long": ["sun"],
+    "mid": ["sun"],  # TikTok-only 65-90 s video (accounts whose formats include "mid")
 }
+FORMATS = ("short", "carousel", "long", "mid")
 AFFILIATE_RE = re.compile(r"affiliate link|commission", re.I)
 
 
@@ -89,7 +91,7 @@ def plan(brand: BrandProfile, items: list[dict], start: date, days: int,
     tz = ZoneInfo(brand.cadence.timezone)
     times = brand.cadence.post_times or ["12:30", "19:00"]
     early, late = times[0], times[-1]
-    at = {"short": early, "carousel": late, "long": late}
+    at = {"short": early, "carousel": late, "long": late, "mid": late}
     weekdays = {fmt: parse_days(day_spec.get(fmt), fmt) for fmt in DEFAULT_DAYS}
     cap = brand.cadence.max_posts_per_day_per_platform
 
@@ -101,7 +103,7 @@ def plan(brand: BrandProfile, items: list[dict], start: date, days: int,
     slots: list[Slot] = []
     for n in range(days):
         d = start + timedelta(days=n)
-        for fmt in ("short", "carousel", "long"):
+        for fmt in FORMATS:
             if d.weekday() in weekdays[fmt] and queues[fmt]:
                 slots.append(Slot(n + 1, local(d, at[fmt]), fmt, platforms_for(brand, fmt), queues[fmt].pop(0)))
 
@@ -111,7 +113,7 @@ def plan(brand: BrandProfile, items: list[dict], start: date, days: int,
         if n + 1 in used_days:
             continue
         d = start + timedelta(days=n)
-        for fmt in ("short", "carousel", "long"):
+        for fmt in FORMATS:
             if queues[fmt]:
                 slots.append(Slot(n + 1, local(d, at[fmt]), fmt, platforms_for(brand, fmt), queues[fmt].pop(0)))
 
@@ -180,7 +182,7 @@ def caption_txt(brand: BrandProfile, item: dict, slot: Slot | None) -> str:
         cut = [s["narration"] for s in tiktok_segments(item)]
         lines += ["", f"--- NARRATION: Reels / Shorts cut (~{est_seconds(base)}s) ---"] + base
         lines += ["", f"--- NARRATION: TikTok cut (~{est_seconds(cut)}s, adds a worked example) ---"] + cut
-    elif item["format"] in ("short", "long"):
+    elif item["format"] in ("short", "long", "mid"):
         lines += ["", "--- NARRATION SCRIPT ---"] + [s["narration"] for s in sc["segments"]]
     else:
         lines += ["", "--- SLIDE TEXT ---"] + [f"{i + 1}. {s['on_screen_text']}" for i, s in enumerate(sc["segments"])]
@@ -194,11 +196,13 @@ def plan_markdown(brand: BrandProfile, items: list[dict], slots: list[Slot], lef
     out = [f"# {brand.name}: {days}-day posting plan", "",
            f"Window: {start.strftime('%a %b')} {start.day} – {end.strftime('%a %b')} {end.day}, {end.year}. "
            f"All times {brand.cadence.timezone}.",
-           f"{counts['short']} shorts, {counts['carousel']} carousels, {counts['long']} long videos.", "",
+           f"{counts['short']} shorts, {counts['carousel']} carousels, {counts['long']} long videos"
+           + (f", {counts['mid']} TikTok-only videos." if counts["mid"] else "."), "",
            "Rules this plan follows:",
            f"- At most {brand.cadence.max_posts_per_day_per_platform} posts per platform per day (brand cap).",
-           "- Shorts go to every account that takes shorts at the first post time; carousels to Instagram and long "
-           "videos to YouTube at the last post time.",
+           f"- Shorts go to {', '.join(platforms_for(brand, 'short')) or 'no account'} at the first post time; "
+           f"carousels to {', '.join(platforms_for(brand, 'carousel')) or 'no account'} and long videos to "
+           f"{', '.join(platforms_for(brand, 'long')) or 'no account'} at the last post time.",
            "- Before each post: human review in the dashboard, tick every line under CHECK BEFORE POSTING, keep the "
            "AI disclosure in the caption and set the platform AI-label toggle where required.",
            "- Revenue pieces are marked: **affiliate** (has the affiliate disclosure) and **product** (mentions the "
@@ -321,13 +325,15 @@ def register(sub, factory_from_args) -> None:
     p.add_argument("--short-days", help="weekdays for shorts, e.g. mon,tue,thu,fri,sat")
     p.add_argument("--carousel-days", help="weekdays for carousels, e.g. mon,wed,fri")
     p.add_argument("--long-days", help="weekdays for long videos, e.g. sun")
+    p.add_argument("--mid-days", help="weekdays for TikTok-only 65-90 s videos, e.g. sun")
     p.add_argument("--render-video", action="store_true", help="render full videos (needs a voice for narration)")
 
     def run(args):
         f = factory_from_args(args)
         items = json.loads(Path(args.file).read_text())
         start = date.fromisoformat(args.start)
-        spec = {"short": args.short_days, "carousel": args.carousel_days, "long": args.long_days}
+        spec = {"short": args.short_days, "carousel": args.carousel_days, "long": args.long_days,
+                "mid": args.mid_days}
         if args.action == "plan":
             brand = f.brand(args.brand)
             slots, leftover = plan(brand, items, start, args.days, spec)

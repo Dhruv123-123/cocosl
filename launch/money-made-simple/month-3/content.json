@@ -3754,7 +3754,24 @@
      "heading": "Step 4",
      "narration": "Step four: add them up. Twelve forty plus thirty-seven eighty is five thousand twenty dollars of federal income tax. Divide by sixty thousand and the effective rate is about eight point four percent. This person's top bracket is twelve percent, but they pay eight point four percent overall.",
      "on_screen_text": "Total ≈ $5,020 · effective ≈ 8.4%",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small coin pile next to a big one with a percent tag. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small coin pile next to a big one with a percent tag. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Tax on a $60,000 salary",
+      "labels": [
+       "10% bucket",
+       "12% bucket",
+       "Total federal tax"
+      ],
+      "values": [
+       1240,
+       3780,
+       5020
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "2026 single filer, standard deduction, example"
+     }
     },
     {
      "heading": "The raise myth",
@@ -3818,13 +3835,14 @@
     "$1,240 + $3,780 = $5,020; 5,020/60,000 = 8.37%",
     "$3,600 × 12% = $432",
     "Bonus supplemental withholding flat rate (22%) note kept general"
-   ]
+   ],
+   "original_element": "worked-example-chart: Bracket staircase chart for the $60K example, layer by layer, with the effective rate marked (chapter \"Step 4\")"
   },
   "format_style": "on-screen-calculation",
   "original_element": {
    "type": "worked-example-chart",
    "detail": "Bracket staircase chart for the $60K example, layer by layer, with the effective rate marked",
-   "chapter": "Step 1"
+   "chapter": "Step 4"
   }
  },
  {
@@ -3881,7 +3899,30 @@
      "heading": "Pattern",
      "narration": "Pattern across all three: none of them needed to give up small pleasures first. The teacher needed a calendar fix, the retail worker needed due dates moved, and the ninety-thousand earner needed to shrink the two biggest bills. Find your biggest structural problem before cutting coffee.",
      "on_screen_text": "Fix structure before coffee",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big gear and a tiny cup. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big gear and a tiny cup. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Scores before and after the fix",
+      "labels": [
+       "Teacher: before",
+       "Teacher: after",
+       "Retail: before",
+       "Retail: after",
+       "$90K renter: before",
+       "$90K renter: after"
+      ],
+      "values": [
+       3,
+       8,
+       3,
+       7,
+       5,
+       8
+      ],
+      "unit_prefix": "",
+      "unit_suffix": "/10",
+      "note": "Fictional budgets, out of 10"
+     }
     },
     {
      "heading": "Your turn",
@@ -3913,13 +3954,14 @@
     "$105 × 12 = $1,260",
     "$700 × 12 = $8,400",
     "Scores here may differ slightly from the Shorts versions (long-form uses the full rubric); align before posting"
-   ]
+   ],
+   "original_element": "worked-example-chart: Side-by-side spending bars for the three fictional budgets with the fix applied (chapter \"Pattern\")"
   },
   "format_style": "rate-my-budget",
   "original_element": {
    "type": "worked-example-chart",
    "detail": "Side-by-side spending bars for the three fictional budgets with the fix applied",
-   "chapter": "Budget 1"
+   "chapter": "Pattern"
   }
  },
  {
@@ -3958,7 +4000,26 @@
      "heading": "Real math",
      "narration": "Real math. Fifty thousand salary, twelve percent bracket, a fifty-percent match up to six percent. Putting six percent, three thousand, into the 401(k) gets fifteen hundred from the employer and saves about three hundred sixty of federal tax. Three thousand of your money becomes forty-five hundred invested, at a paycheck cost of about twenty-six forty. That's hard to beat anywhere.",
      "on_screen_text": "$3,000 in → $4,500 invested",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small pile turning into a bigger pile. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small pile turning into a bigger pile. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "6% into the 401(k) on $50,000",
+      "labels": [
+       "Your contribution",
+       "Employer match",
+       "Federal tax saved",
+       "Paycheck cost"
+      ],
+      "values": [
+       3000,
+       1500,
+       360,
+       2640
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "12% bracket, 50% match up to 6%, example"
+     }
     },
     {
      "heading": "Roth vs traditional",
@@ -4015,7 +4076,8 @@
     "HSA payroll contributions exempt from FICA (cafeteria plan)",
     "Roth IRA contribution withdrawals tax/penalty-free",
     "Traditional IRA deductibility depends on income and workplace plan coverage"
-   ]
+   ],
+   "original_element": "worked-example-chart: Account-order chart: the same $500 a month routed through 401(k) match, HSA and IRA, with the tax effect of each (chapter \"Real math\")"
   },
   "format_style": "real-numbers",
   "original_element": {
@@ -4116,7 +4178,8 @@
     "4,200/7,000 = 60%; $2,400 × 60% = $1,440; both keep ~66%",
     "Community property states treat some marital debts differently",
     "'Couples who talk about money regularly fight about it less' is general; soften or cite before posting"
-   ]
+   ],
+   "original_element": "human-segment: Dhruv records the 'Money date' chapter in his own voice, with his real check-in routine if he has one, or a plainly-stated suggestion (chapter \"Money date\")"
   },
   "format_style": "question-reply",
   "original_element": {
