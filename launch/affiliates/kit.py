@@ -79,7 +79,7 @@ BRANDS = {
                 "US, many of them first-generation or bilingual. We publish short videos, carousels and a newsletter "
                 "in Spanish on budgeting, building a credit history with no credit, emergency savings, bank "
                 "accounts, taxes and sending money abroad, always showing the full cost (fees plus exchange rate). "
-                "Every post is reviewed by a native Spanish speaker before publishing. Affiliate links are labelled "
+                "Spanish copy is checked against official IRS, CFPB and FTC Spanish-language sources, and we're adding a native-speaker review before full launch. Affiliate links are labelled "
                 "(#publicidad), AI-assisted production is disclosed, and we don't promote crypto or high-risk "
                 "products.",
         "audience": "US-based Spanish-first and bilingual adults, roughly 18–40. [ADD REAL DEMOGRAPHICS]",

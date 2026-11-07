@@ -4,7 +4,7 @@
     "pillar": "budgeting systems that actually stick",
     "idea_angle": "Split checking into a 'bills' account and a 'spending' account so fixed costs can never be accidentally spent.",
     "script": {
-      "title": "The two-account trick that stops overdrafts",
+      "title": "Stop overdraft fees: the two-account trick",
       "hook": "If you keep checking your balance before buying lunch, your accounts are set up wrong.",
       "segments": [
         {
@@ -71,7 +71,10 @@
         "Example bills total of $1,450 is illustrative, not an average",
         "Many banks and credit unions offer checking with no monthly fee or minimum balance (confirm before recommending)"
       ],
-      "related_video": "Feel behind on money? A 30-day reset plan"
+      "related_video": "How to get your finances in order: a 30-day money reset",
+      "title_variants": [
+        "The two-account trick that stops overdrafts"
+      ]
     }
   },
   {
@@ -138,7 +141,7 @@
       "claims_to_verify": [
         "$1,000 × 12 ÷ 52 = $230.77 (rounded to $230)"
       ],
-      "related_video": "Feel behind on money? A 30-day reset plan"
+      "related_video": "How to get your finances in order: a 30-day money reset"
     }
   },
   {
@@ -146,7 +149,7 @@
     "pillar": "first-time investing basics (index funds, retirement accounts)",
     "idea_angle": "Fear of locking money away stops people from opening a Roth IRA; contributions (not earnings) can be withdrawn.",
     "script": {
-      "title": "Roth IRA money isn't locked away",
+      "title": "Can you withdraw from a Roth IRA? Your contributions, yes",
       "hook": "The reason you haven't opened a Roth IRA is probably wrong.",
       "segments": [
         {
@@ -209,7 +212,10 @@
         "Early withdrawal of Roth earnings can be subject to income tax plus 10% additional tax, with exceptions (age 59½, five-year rule)",
         "Roth IRA eligibility requires taxable compensation and is subject to MAGI income limits"
       ],
-      "related_video": "How to start investing with $100 a month (complete beginner walkthrough)"
+      "related_video": "How to start investing with $100 a month (complete beginner walkthrough)",
+      "title_variants": [
+        "Roth IRA money isn't locked away"
+      ]
     }
   },
   {
@@ -217,7 +223,7 @@
     "pillar": "first-time investing basics (index funds, retirement accounts)",
     "idea_angle": "Not contributing enough to get the full 401(k) match is turning down part of your pay; worked example on a $50k salary.",
     "script": {
-      "title": "The raise you're ignoring: your 401(k) match",
+      "title": "401(k) match explained: the raise you're ignoring",
       "hook": "There's a good chance part of your salary is sitting unclaimed.",
       "segments": [
         {
@@ -279,7 +285,10 @@
         "$50,000 × 6% = $3,000; 50% match = $1,500; at 3% contribution match = $750",
         "Employer contributions may be subject to a vesting schedule; employee contributions are always 100% vested"
       ],
-      "related_video": "How to start investing with $100 a month (complete beginner walkthrough)"
+      "related_video": "How to start investing with $100 a month (complete beginner walkthrough)",
+      "title_variants": [
+        "The raise you're ignoring: your 401(k) match"
+      ]
     }
   },
   {
@@ -287,7 +296,7 @@
     "pillar": "first-time investing basics (index funds, retirement accounts)",
     "idea_angle": "Same index, different price tag: a 0.03% vs 1% expense ratio turns $10,000 into about $75k vs $57k over 30 years.",
     "script": {
-      "title": "The fee that eats $18,000",
+      "title": "The expense ratio that eats $18,000",
       "hook": "Two funds can own the exact same stocks and leave you with very different money.",
       "segments": [
         {
@@ -350,7 +359,10 @@
         "Broad index funds commonly have expense ratios of a few hundredths of a percent (check current fund fact sheets)",
         "7% annual return is a hypothetical assumption, not a forecast"
       ],
-      "related_video": "How to start investing with $100 a month (complete beginner walkthrough)"
+      "related_video": "How to start investing with $100 a month (complete beginner walkthrough)",
+      "title_variants": [
+        "The fee that eats $18,000"
+      ]
     }
   },
   {
@@ -358,7 +370,7 @@
     "pillar": "credit scores and debt payoff",
     "idea_angle": "Paying in full on the due date can still report high utilization because issuers usually report the statement balance.",
     "script": {
-      "title": "Paid in full, score still dropped?",
+      "title": "Why did my credit score drop after paying in full?",
       "hook": "You paid your card in full and your credit score still dipped. Here's why.",
       "segments": [
         {
@@ -420,7 +432,10 @@
         "Credit utilization is a large factor in common scoring models and reflects recent reported balances",
         "Payment history is the most heavily weighted FICO score factor"
       ],
-      "related_video": "Feel behind on money? A 30-day reset plan"
+      "related_video": "How to get your finances in order: a 30-day money reset",
+      "title_variants": [
+        "Paid in full, score still dropped?"
+      ]
     }
   },
   {
@@ -491,7 +506,7 @@
         "A freeze does not affect credit scores and does not block existing creditors",
         "Bureaus must lift a freeze within one hour for online or phone requests"
       ],
-      "related_video": "Feel behind on money? A 30-day reset plan"
+      "related_video": "How to get your finances in order: a 30-day money reset"
     }
   },
   {
@@ -499,7 +514,7 @@
     "pillar": "credit scores and debt payoff",
     "idea_angle": "Minimum-ish payments on a $3,000 card at 22% APR: $60/month takes 11+ years and $5,200 interest; $150/month takes ~2 years and ~$770.",
     "script": {
-      "title": "$60 vs $150 on a $3,000 card",
+      "title": "Minimum payment vs $150 on a $3,000 card",
       "hook": "Paying $60 a month on a $3,000 card balance costs you more in interest than the balance itself.",
       "segments": [
         {
@@ -562,7 +577,10 @@
         "22% APR is a realistic card rate (check current Fed G.19 average)",
         "Credit card statements must include a minimum payment warning showing payoff time (CARD Act)"
       ],
-      "related_video": "Feel behind on money? A 30-day reset plan"
+      "related_video": "How to get your finances in order: a 30-day money reset",
+      "title_variants": [
+        "$60 vs $150 on a $3,000 card"
+      ]
     }
   },
   {
@@ -570,7 +588,7 @@
     "pillar": "money apps and tools, honestly compared",
     "idea_angle": "What 'FDIC insured' on a high-yield savings app actually covers, and the fintech-vs-bank catch.",
     "script": {
-      "title": "Is your savings app actually insured?",
+      "title": "Is your savings app FDIC insured? Check in 1 minute",
       "hook": "That savings app paying a nice rate might not be a bank.",
       "segments": [
         {
@@ -634,7 +652,10 @@
         "FDIC insurance covers insured bank failure only, not failure of a non-bank fintech company",
         "Confirm the affiliate HYSA is held at an FDIC-insured bank before posting"
       ],
-      "related_video": "Feel behind on money? A 30-day reset plan"
+      "related_video": "How to get your finances in order: a 30-day money reset",
+      "title_variants": [
+        "Is your savings app actually insured?"
+      ]
     }
   },
   {
@@ -642,7 +663,7 @@
     "pillar": "money apps and tools, honestly compared",
     "idea_angle": "Three free bank alerts (low balance, large transaction, payment due) that replace daily balance-checking anxiety.",
     "script": {
-      "title": "Set these 3 bank alerts today",
+      "title": "3 bank alerts to turn on today",
       "hook": "You don't need a budgeting app to stop money surprises. You need three alerts.",
       "segments": [
         {
@@ -703,7 +724,10 @@
         "Late payments are generally reported to credit bureaus once 30 or more days past due",
         "Most major banks and card issuers offer free customizable alerts (confirm wording is not overstated)"
       ],
-      "related_video": "Feel behind on money? A 30-day reset plan"
+      "related_video": "How to get your finances in order: a 30-day money reset",
+      "title_variants": [
+        "Set these 3 bank alerts today"
+      ]
     }
   },
   {
@@ -711,7 +735,7 @@
     "pillar": "budgeting systems that actually stick",
     "idea_angle": "Irregular yearly costs (registration, gifts, renewals) aren't emergencies; turn each into a monthly sinking fund.",
     "script": {
-      "title": "That 'surprise' bill was on the calendar",
+      "title": "Sinking funds: the 'surprise' bill was on the calendar",
       "hook": "Car registration isn't an emergency. It shows up every single year.",
       "segments": [
         {
@@ -769,7 +793,10 @@
       "claims_to_verify": [
         "$1,800 ÷ 12 = $150 (illustrative total, not an average)"
       ],
-      "related_video": "Feel behind on money? A 30-day reset plan"
+      "related_video": "How to get your finances in order: a 30-day money reset",
+      "title_variants": [
+        "That 'surprise' bill was on the calendar"
+      ]
     }
   },
   {
@@ -777,7 +804,7 @@
     "pillar": "first-time investing basics (index funds, retirement accounts)",
     "idea_angle": "A target-date fund is a legit one-fund start for a beginner IRA; the two catches are fees and stacking it with other funds.",
     "script": {
-      "title": "The one-fund retirement option",
+      "title": "Target date funds: the one-fund retirement option",
       "hook": "If picking investments is why you haven't started, one fund can handle most of it.",
       "segments": [
         {
@@ -840,7 +867,10 @@
         "Target-date funds are not guaranteed and can lose money, including near and after the target date (SEC investor bulletin)",
         "2065/2070 vintages exist at major providers (verify current availability)"
       ],
-      "related_video": "How to start investing with $100 a month (complete beginner walkthrough)"
+      "related_video": "How to start investing with $100 a month (complete beginner walkthrough)",
+      "title_variants": [
+        "The one-fund retirement option"
+      ]
     }
   },
   {
@@ -848,7 +878,7 @@
     "pillar": "credit scores and debt payoff",
     "idea_angle": "Closing an old no-fee card can raise utilization and shorten average age; utilization math with a $4,000 limit.",
     "script": {
-      "title": "Don't cancel that old card yet",
+      "title": "Should you close an old credit card? Not yet",
       "hook": "Closing a credit card you never use can actually lower your score.",
       "segments": [
         {
@@ -910,7 +940,10 @@
         "Closed accounts in good standing generally remain on credit reports for up to about 10 years",
         "Issuers may close inactive accounts; a small recurring charge keeps the account active (policies vary)"
       ],
-      "related_video": "Feel behind on money? A 30-day reset plan"
+      "related_video": "How to get your finances in order: a 30-day money reset",
+      "title_variants": [
+        "Don't cancel that old card yet"
+      ]
     }
   },
   {
@@ -918,7 +951,7 @@
     "pillar": "money apps and tools, honestly compared",
     "idea_angle": "A 10-minute subscription audit using a bank-statement search, sorted by 'use it weekly / monthly / forgot'.",
     "script": {
-      "title": "Find your forgotten subscriptions in 10 minutes",
+      "title": "How to find and cancel forgotten subscriptions",
       "hook": "Search your bank statement for one word and you'll probably find money leaking.",
       "segments": [
         {
@@ -978,7 +1011,10 @@
       "claims_to_verify": [
         "Statement search terms vary by bank; generic advice only (no specific figures to verify)"
       ],
-      "related_video": "Feel behind on money? A 30-day reset plan"
+      "related_video": "How to get your finances in order: a 30-day money reset",
+      "title_variants": [
+        "Find your forgotten subscriptions in 10 minutes"
+      ]
     }
   },
   {
@@ -1820,7 +1856,7 @@
     "pillar": "budgeting systems that actually stick",
     "idea_angle": "A day-by-day 30-day reset for a 20-something who feels behind: see the numbers, fix fixed costs, set a weekly number, triage debt, start the fund, protect credit.",
     "script": {
-      "title": "Feel behind on money? A 30-day reset plan",
+      "title": "How to get your finances in order: a 30-day money reset",
       "hook": "Feeling behind with money is common. The fix isn't a dramatic overhaul. It's thirty days of small, specific moves.",
       "segments": [
         {
@@ -1940,7 +1976,10 @@
         "Emergency fund guidance of 3–6 months of essential expenses",
         "High-yield savings accounts often pay well above big-bank standard savings rates (check FDIC national rate)"
       ],
-      "original_element": "worked-example-chart: Bar chart of the fictional Jordan's day-3 accounts: $4,300 in checking, savings and retirement vs $17,200 owed on a card and a student loan, a net worth of −$12,900 (chapter \"Days 1–3: see it all\")"
+      "original_element": "worked-example-chart: Bar chart of the fictional Jordan's day-3 accounts: $4,300 in checking, savings and retirement vs $17,200 owed on a card and a student loan, a net worth of −$12,900 (chapter \"Days 1–3: see it all\")",
+      "title_variants": [
+        "Feel behind on money? A 30-day reset plan"
+      ]
     },
     "original_element": {
       "type": "worked-example-chart",
