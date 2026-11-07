@@ -62,6 +62,36 @@
      "narration": "If you spot something, call 1-800-MEDICARE and report it, or report it to the inspector general's hotline. Keep the statement. And remember the rule for every one of these calls: never give your Medicare number to anyone who contacted you. Your doctor already has it. Nobody else needs it on the phone.",
      "on_screen_text": "If you spot fraud",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam or screen recording; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "George and the health fair",
+     "narration": "Let's follow one made-up case to the statement. George, seventy-three, stops at a table at a community health fair. A friendly woman offers a free genetic cheek swab for cancer risk, covered by Medicare, and asks for his Medicare card to fill in the form. He hands it over. A few weeks later, a knee brace he never asked for arrives in the mail.",
+     "on_screen_text": "A free cheek swab, made up",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: an older man at a folding table at a health fair, a cheek swab kit and a clipboard. No text, no logos, no real people."
+    },
+    {
+     "heading": "The statement",
+     "narration": "When his Medicare Summary Notice comes, George reads it with his daughter, the way this video suggests. Two lines stand out: a genetic test billed for thousands of dollars, ordered by a doctor he's never met, and a knee brace from a supplier he's never heard of. His own doctor never ordered either.",
+     "on_screen_text": "Lines he doesn't recognise",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a printed statement on a kitchen table with two lines highlighted, a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "What they do",
+     "narration": "They call 1-800-MEDICARE, read out the two lines, and report it. They also report it to the inspector general's hotline and keep the statement and the brace box. George refuses any more deliveries, and from then on, his rule is simple: only a test or equipment his own doctor orders. His number was used, but catching it on the statement helps stop more billing in his name.",
+     "on_screen_text": "Call 1-800-MEDICARE, keep proof",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: an older man and his daughter on a call, a box marked return to sender. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why the swab was the scam",
+     "narration": "Why does a free swab cost so much? Because the test isn't the product. George's Medicare number is. Once the scammers have it, they can bill Medicare for expensive tests and equipment in his name, often using a doctor who never saw him. If Medicare denies those claims because his own doctor didn't order them, a bill can even come back to him. So the free test is really a form to collect his number.",
+     "on_screen_text": "The swab was the trap",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a Medicare-style card with a hook on it, a stack of bills behind. No text, no logos, no real people."
+    },
+    {
+     "heading": "The plan-switch call",
+     "narration": "A month later, in a different scam, a caller tells George he qualifies for a grocery allowance if he switches plans today, and he just needs to confirm his Medicare number. He says no, hangs up, and calls the number on his own plan card to ask. His plan says it didn't call. Two scams, one rule: nobody who calls him first gets his Medicare number.",
+     "on_screen_text": "Then: 'switch plans, get a grocery card'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: an older man on a phone shaking his head, a grocery bag icon crossed out. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
@@ -73,7 +103,7 @@
     "mothersday",
     "scamdecoded"
    ],
-   "description": "Five Medicare scams, why your Medicare number is the prize, and how to spot fraud on a Medicare statement.\n\nChapters\n0:00 Why your number\n0:30 Free genetic tests\n1:03 Free braces\n1:26 The new card call\n1:46 Plan switch pressure\n2:12 Fake fraud department\n2:28 Read the statement\n2:59 If you spot fraud\n\nExamples are fictional.",
+   "description": "Five Medicare scams, why your Medicare number is the prize, and how to spot fraud on a Medicare statement.\n\nChapters\n0:00 Why your number\n0:30 Free genetic tests\n1:03 Free braces\n1:26 The new card call\n1:46 Plan switch pressure\n2:12 Fake fraud department\n2:28 Read the statement\n2:59 If you spot fraud\n3:20 George and the health fair\n3:45 The statement\n4:06 What they do\n4:33 Why the swab was the scam\n5:03 The plan-switch call\n\nExamples are fictional.",
    "thumbnail_text": "Medicare scams: 5 to know",
    "sources": [
     "https://oig.hhs.gov/fraud/consumer-alerts/fraud-alert-genetic-testing-scam",
@@ -738,6 +768,48 @@
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam or screen recording; see original_element No text, no logos, no real people."
     },
     {
+     "heading": "Maya's first summer",
+     "narration": "Let's follow one made-up graduate through her first summer, because these scams often come together. Maya finishes college in May. In one June week she gets a chat-app job offer for a remote data role, an email saying she's won a scholarship for grad school she never applied for, and finds an apartment listing in her new city that's three hundred dollars under everything else.",
+     "on_screen_text": "June: 3 offers in 1 week",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a young woman in a cap and gown photo on a shelf, a laptop with three message windows. No text, no logos, no real people."
+    },
+    {
+     "heading": "The job",
+     "narration": "The job comes first. A recruiter interviews her entirely by text and offers the role two hours later, at a salary well above what her classmates are getting. The next day, onboarding asks for her Social Security number, a photo of her driver's license, and her bank login 'to set up direct deposit'. A real employer asks for tax forms after a real offer, and never for a bank login. She checks the company's own careers page, typed in herself: no such role.",
+     "on_screen_text": "Hired in 2 hours, by text",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a chat window showing a fast job offer, a careers page with no matching listing. No text, no logos, no real people."
+    },
+    {
+     "heading": "The scholarship and the apartment",
+     "narration": "The scholarship wants a ninety-five dollar processing fee. Real scholarships don't make you pay to receive them, so she deletes it. The apartment landlord is out of the country and wants a deposit by payment app before she can see it. She asks a friend in that city to visit the address. The friend finds people already living there, who've never heard of the listing.",
+     "on_screen_text": "Pay $95 to claim? No.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a fee request email crossed out, a friend standing outside an apartment door holding a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "What she did right",
+     "narration": "What made Maya hard to scam wasn't knowing every trick. Before the search started she froze her credit, turned on bank alerts, and set one rule for the summer: no money and no ID numbers to anyone she hasn't verified on her own. Three scams in one week, zero dollars lost. And she signed up for the real job fair her college career office runs every July.",
+     "on_screen_text": "Setup first, then the search",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a young woman with a checklist on a phone, a padlock icon and a calendar with a job fair circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "If she'd sent the ID",
+     "narration": "And if she had already sent her Social Security number and license photo? The same day: freeze credit at all three bureaus if it isn't already, report it at IdentityTheft dot gov for a recovery plan, watch bank and card alerts closely, and consider an IRS Identity Protection PIN so nobody can file a return with her number. It's fixable, and faster is better.",
+     "on_screen_text": "Already sent ID? Do this today",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a short checklist on a phone, three padlocks and a shield icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "The FAFSA fee",
+     "narration": "One more that hits grads heading to grad school: a website that charges eighty dollars to 'file your FAFSA for you'. The FAFSA is free on the official studentaid dot gov site, typed in yourself. Maya's brother almost paid one of these. The tell is the same as the scholarship fee: paying to get money that's supposed to be free.",
+     "on_screen_text": "Free form, paid 'service'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a laptop showing a paid form service crossed out next to a free official form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Her 10-minute setup",
+     "narration": "Here's exactly what Maya did in May, in ten minutes. Credit freezes at Equifax, Experian and TransUnion, free. Transaction alerts on her bank and card. A unique password and two-step sign-in on her email, because email resets everything else. And a note in her phone: no money and no ID numbers to anyone I haven't verified myself. That note is what she read when the job offer came.",
+     "on_screen_text": "What she set up in May",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a phone note with a short rule, three padlock icons, a credit card with an alert bell. No text, no logos, no real people."
+    },
+    {
      "heading": "Your 10-minute setup",
      "narration": "Now the setup. Freeze your credit at Equifax, Experian and TransUnion. It's free. Turn on alerts for every bank and card transaction. Put a strong, unique password and two-step sign-in on your email. And make one rule: you never pay to get a job, an apartment or a scholarship. That rule alone beats most of this list.",
      "on_screen_text": "Your 10-minute setup",
@@ -753,7 +825,7 @@
     "firstapartment",
     "scamdecoded"
    ],
-   "description": "Six scams aimed at new graduates, and a 10-minute setup that protects your money before your first paycheck.\n\nChapters\n0:00 Why grads\n0:20 The chat interview\n0:39 The equipment check\n1:02 Onboarding identity theft\n1:20 Scholarship fees\n1:38 The apartment\n1:58 Pay to play\n2:08 Your 10-minute setup\n\nExamples are fictional.",
+   "description": "Six scams aimed at new graduates, and a 10-minute setup that protects your money before your first paycheck.\n\nChapters\n0:00 Why grads\n0:20 The chat interview\n0:39 The equipment check\n1:02 Onboarding identity theft\n1:20 Scholarship fees\n1:38 The apartment\n1:58 Pay to play\n2:08 Maya's first summer\n2:34 The job\n3:08 The scholarship and the apartment\n3:34 What she did right\n4:00 If she'd sent the ID\n4:26 The FAFSA fee\n4:50 Her 10-minute setup\n5:17 Your 10-minute setup\n\nExamples are fictional.",
    "thumbnail_text": "New grad scam guide",
    "sources": [
     "https://consumer.ftc.gov/consumer-alerts/2026/04/job-offer-text-probably-scam",
@@ -1451,6 +1523,42 @@
      "narration": "If a veteran in your family already paid a pension poacher or gave out their details, contact VA, report it to the VA inspector general, and report it to the FTC at report fraud dot f t c dot gov. And thank you, to everyone who served, and everyone who looks out for them.",
      "on_screen_text": "If it happened",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam or screen recording; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "Frank's lunch seminar",
+     "narration": "Let's follow one made-up case. Frank is eighty-two and served two tours. He gets an invitation to a free lunch seminar on veterans' benefits at a local restaurant. The speaker is warm, calls everyone sir, and says many veterans are missing out on a pension they qualify for. Afterwards he offers Frank a private meeting to 'restructure' his savings so he'll qualify.",
+     "on_screen_text": "A free lunch and a promise",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: an older veteran at a restaurant table with a free lunch, a speaker with a slideshow. No text, no logos, no real people."
+    },
+    {
+     "heading": "The pitch",
+     "narration": "At the meeting, the adviser says Frank's savings are too high for the pension, so he should move them into an annuity the adviser sells, and the adviser's firm will file the VA claim for a fee. It sounds like help. But moving savings this way can lock up the money for years, may not make him eligible, and can even affect other benefits he relies on.",
+     "on_screen_text": "'Move your savings, we'll file'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a document with a pen and a dotted signature line, a pie chart of savings being moved. No text, no logos, no real people."
+    },
+    {
+     "heading": "Free help instead",
+     "narration": "Frank's daughter looks up VA's accreditation search together with him. The adviser isn't accredited. They find a veterans service organization nearby with an accredited representative, who reviews his situation for free. Frank doesn't qualify for that pension, and moving his savings wouldn't have changed it in a way that helped him. He'd have paid fees and lost access to his own money for nothing.",
+     "on_screen_text": "Accredited rep: free",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a veteran and his daughter meeting a friendly representative at an office desk. No text, no logos, no real people."
+    },
+    {
+     "heading": "The Memorial Day call",
+     "narration": "Two weeks later, before Memorial Day, a caller asks Frank for a pledge to a veterans' charity with a name close to a big one he's heard of. He says he only gives to charities he looks up himself, and he gives on the charity's own website instead. The caller pushes, then hangs up. That push is the tell. Real charities are happy for you to check and give later.",
+     "on_screen_text": "A charity call: look it up first",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: an older man on a landline shaking his head politely, a laptop showing a charity website. No text, no logos, no real people."
+    },
+    {
+     "heading": "If he'd signed",
+     "narration": "If Frank had signed and paid, the steps are: contact VA about the claim, report the adviser to the VA inspector general and to his state's attorney general, report it at ReportFraud dot FTC dot gov, and talk to an accredited representative about what can still be undone. Families can help most by being at the second meeting, the one where the paperwork is.",
+     "on_screen_text": "Already signed? Call VA and the IG",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a phone call to an office, a folder of documents, a supportive hand on an older man's shoulder. No text, no logos, no real people."
+    },
+    {
+     "heading": "The fake soldier",
+     "narration": "The same summer, Frank's granddaughter matches with 'Sergeant Mike' on a dating app. He's deployed, can't video call, and after a month needs four hundred dollars for a leave request so he can come home to meet her. Frank tells her what the VA and the Army say: service members don't pay for leave, and real soldiers can talk to family. She does a reverse image search; the photos belong to a real soldier with a different name.",
+     "on_screen_text": "And for his granddaughter: 'Sgt. Mike'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a young woman looking at a dating profile of a soldier, a reverse image search result. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
@@ -1462,7 +1570,7 @@
     "vapension",
     "scamdecoded"
    ],
-   "description": "Four scams aimed at veterans and military families, and where to get free, accredited help with VA benefits.\n\nChapters\n0:00 Why veterans\n0:18 Pension poaching\n0:47 Free help\n1:06 Impostor VA calls\n1:24 Fake charities\n1:47 Fake soldiers\n2:10 Your checklist\n2:28 If it happened\n\nExamples are fictional.",
+   "description": "Four scams aimed at veterans and military families, and where to get free, accredited help with VA benefits.\n\nChapters\n0:00 Why veterans\n0:18 Pension poaching\n0:47 Free help\n1:06 Impostor VA calls\n1:24 Fake charities\n1:47 Fake soldiers\n2:10 Your checklist\n2:28 If it happened\n2:50 Frank's lunch seminar\n3:15 The pitch\n3:42 Free help instead\n4:07 The Memorial Day call\n4:35 If he'd signed\n5:01 The fake soldier\n\nExamples are fictional.",
    "thumbnail_text": "Veteran scams: 4 to know",
    "sources": [
     "https://benefits.va.gov/BENEFITS/factsheets/limitedincome/pension-poaching.pdf",
@@ -2132,6 +2240,48 @@
      "narration": "If you paid a fake agent or a fake host, call your card company the same day and dispute the charge, then report it to the FTC at report fraud dot f t c dot gov. Then go and enjoy your summer.",
      "on_screen_text": "If it happened",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam or screen recording; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "The Lee family road trip",
+     "narration": "Let's follow one made-up road trip from booking to home. In May, the Lees search for a lake hotel, and the first result is an ad with the hotel's photos and a rate eighty dollars lower than everywhere else. They check the web address before paying and it's a booking site with a similar name, not the hotel. They close it and book on the hotel's own site, on a credit card.",
+     "on_screen_text": "Day 1: the booking",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a family at a laptop with a lake hotel photo, a web address with a highlighted wrong letter. No text, no logos, no real people."
+    },
+    {
+     "heading": "Day 2: the pump",
+     "narration": "On the drive, at a quiet gas station off the highway, Mr. Lee wiggles the card reader, the way this video shows. It shifts and the pump's security seal looks broken. He drives to a pump nearer the store, taps his card instead of swiping, and mentions the loose reader to the cashier.",
+     "on_screen_text": "A loose card reader",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a hand gently testing a card reader at a gas pump, a broken seal sticker. No text, no logos, no real people."
+    },
+    {
+     "heading": "Day 4: the cancelled flight",
+     "narration": "Mrs. Lee's mother is flying in to join them. A text says her flight is cancelled and gives a number to rebook. Her mother calls Mrs. Lee first instead, because that's the family rule. They open the airline's app together. The flight is on time. The number in the text wasn't the airline's.",
+     "on_screen_text": "Mom's flight: a fake text",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: an older woman at an airport gate calling her daughter, an airline app showing on time. No text, no logos, no real people."
+    },
+    {
+     "heading": "Day 6: the prize",
+     "narration": "On the last day, a call says the family won a free cruise from a survey they took at a rest stop. They just need to pay two hundred forty-nine dollars in port fees. Their twelve-year-old says, 'You don't pay for a prize.' They hang up. Four scams in six days, and the whole defense was the checklist: type the address, check the pump, get numbers from the app, and never pay to collect a prize.",
+     "on_screen_text": "'Free cruise, pay port fees'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a family in a car laughing, a phone on speaker with a cruise ship icon crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "What it could have cost",
+     "narration": "Add it up. The lookalike booking site might have taken around six hundred dollars with no room at the end. A skimmer could have copied a card for fraud charges. The fake rebooking line often charges a few hundred dollars and takes a booking code. The cruise prize, two hundred forty-nine. Not one of those needed expert knowledge to stop. They needed a habit, and a family that uses it.",
+     "on_screen_text": "Could have lost: about $1,200",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a jar labelled saved with a few bills, a car parked by a lake at sunset. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rental they didn't book",
+     "narration": "Before they settled on the hotel, the Lees had found a lake cabin for half the going rate. The host replied in minutes and asked them to pay by wire to skip platform fees. They searched the photos and found the same cabin on the real platform, under a different host, at the normal price. They reported the fake listing. Rule of thumb: stay on the platform, pay on the platform, and use a credit card.",
+     "on_screen_text": "A lake cabin at half price",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a lake cabin photo duplicated with two different prices, one crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "If it had happened",
+     "narration": "And if one had slipped through? Call the card company the same day and dispute the charge. Report it at ReportFraud dot FTC dot gov. If you gave a booking code to a fake agent, check the booking in the airline's app. If you typed a password into a lookalike site, change it, and the same password anywhere else. Most travel scams are recoverable only if you move fast.",
+     "on_screen_text": "Same day: card, report, passwords",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a phone call to a card company, a checklist with three items, a suitcase. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
@@ -2143,7 +2293,7 @@
     "roadtrip",
     "scamdecoded"
    ],
-   "description": "Five summer travel scams, and the booking and payment habits that beat them.\n\nChapters\n0:00 Why summer\n0:14 Flight canceled texts\n0:39 Lookalike booking sites\n1:00 Fake rentals\n1:21 Skimmers\n1:40 Free trip offers\n1:53 Your checklist\n2:11 If it happened\n\nExamples are fictional.",
+   "description": "Five summer travel scams, and the booking and payment habits that beat them.\n\nChapters\n0:00 Why summer\n0:14 Flight canceled texts\n0:39 Lookalike booking sites\n1:00 Fake rentals\n1:21 Skimmers\n1:40 Free trip offers\n1:53 Your checklist\n2:11 If it happened\n2:28 The Lee family road trip\n2:56 Day 2: the pump\n3:18 Day 4: the cancelled flight\n3:39 Day 6: the prize\n4:09 What it could have cost\n4:37 The rental they didn't book\n5:08 If it had happened\n\nExamples are fictional.",
    "thumbnail_text": "Summer travel scams",
    "sources": [
     "https://consumer.ftc.gov/consumer-alerts/2024/07/scammers-impersonate-airline-customer-service-representatives",
