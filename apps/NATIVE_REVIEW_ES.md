@@ -73,3 +73,5 @@ Also Spanish, outside the site: the **Caja de herramientas de dinero** offline e
 file (`budget/lib/moneycal.js`), the Tablero de dinero Pro spreadsheet and its Empieza aquí PDF
 (`launch/dashboard-pro/text.py`, `listing.py`), and the Scam Decoded extension's Spanish messages
 (`scam-extension/_locales/es/`).
+
+Also review (added Nov 7): the Spanish affiliate box copy in `shared/offers.js` (`COPY.*.es` and the label/disclosure), shown on the Spanish budget tools.

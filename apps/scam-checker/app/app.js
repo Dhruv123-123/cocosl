@@ -3,6 +3,7 @@
 // the only requests are this site's own files, which ../sw.js saves for offline.
 import { rememberAppHome } from '../lib/app-home.js';
 import { mountOptin } from '../lib/optin.js';
+import { mountOffer } from '../lib/offers.js';
 import { QUESTIONS, verdict, VERDICT_TEXT, QUIZ, quizScore, PLACES, SITUATIONS, STATE_AGS, AG_DIRECTORY, agFor } from '../lib/scamapp.js';
 import { cardModel, shareCard } from '../lib/sharecard.js';
 
@@ -114,4 +115,4 @@ function report() {
 }
 
 ({ home, checklist, quiz, report })[page]?.();
-if (page !== 'home') mountOptin({ app: 'scam-checker', page: `app-${page}` });
+if (page !== 'home') { mountOptin({ app: 'scam-checker', page: `app-${page}` }); mountOffer({ app: 'scam-checker', page: `app-${page}` }); }

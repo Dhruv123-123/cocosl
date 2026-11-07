@@ -56,6 +56,11 @@ Site 2 gives Scam Shield its own domain, which is what the brand needs.
 - `scam-checker/config.js`: Scam-Proof Kit and Spot It Stop It links, plus the three protection
   partner links (identity, password manager, VPN).
 - `freelance-invoices/config.js` (site 3): rate and contract kit link.
+- `shared/offers.js` > `OFFERS.links`: one tracking link per affiliate category (identity protection,
+  password manager, VPN, high-yield savings, 1099 write-off app, credit monitoring, balance transfer), then
+  `node tools/sync-shared.mjs`. Each link turns on a labelled "Affiliate link" box under the matching free
+  tools (`PLACEMENT` in the same file says which). Add `?offers=preview` to any page to see it. To switch the
+  boxes off: `OFFERS.enabled = false`, or list a page in `OFFERS.off`.
 
 **Optional:**
 - `analytics.plausibleDomain` in each `config.js`: the domain registered in Plausible. Blank means no analytics script.

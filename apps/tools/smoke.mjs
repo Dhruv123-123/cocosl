@@ -497,6 +497,14 @@ const checks = [
     await page.reload();
     if (!(await page.isChecked('[data-id=spotify]'))) throw new Error('quick audit not saved');
   }],
+  ['/budget/sinking-funds.html?offers=preview', '#mms-offer', async (page) => {
+    const t = await page.textContent('#mms-offer');
+    if (!/Affiliate link/.test(t) || !/high-yield savings/i.test(t)) throw new Error(`offer box: ${t}`);
+    if (await page.evaluate(() => !!document.querySelector('#mms-offer ~ main, footer ~ #mms-offer'))) throw new Error('offer box should sit under the tool, above the footer');
+  }],
+  ['/freelance-invoices/app/quarterly.html?offers=preview', '#mms-offer', async (page) => { if (!/write-offs/.test(await page.textContent('#mms-offer'))) throw new Error('1099 offer'); }],
+  ['/scam-checker/scams/toll-text-scam/?offers=preview', '#mms-offer', async (page) => { if (!/identity/i.test(await page.textContent('#mms-offer'))) throw new Error('guide offer'); }],
+  ['/medical-bills/?offers=preview', 'h1', async (page) => { if (await page.locator('#mms-offer').count()) throw new Error('no offers on medical bill pages'); }],
   ['/budget/bills.html', '#bills .bill', async (page) => { await page.fill('#b-name', 'Internet'); await page.fill('#b-monthly', '80'); await page.click('#bill-form button'); }],
   ['/budget/deals.html', '#result .countdown', async (page) => { await page.fill('[name=balance]', '400'); await page.fill('[name=end]', '2030-01-15'); await page.fill('[name=apr]', '29.99'); await page.fill('[name=payment]', '50'); await page.click('#deal-form button[type=submit]'); }],
   ['/budget/rate.html', '#rate-result .grade', async (page) => { await page.click('#rate-form button'); }],

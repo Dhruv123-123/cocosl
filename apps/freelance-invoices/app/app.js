@@ -3,6 +3,7 @@
 // Everything stays in this browser (localStorage); ../sw.js saves the pages for offline.
 import { rememberAppHome } from '../lib/app-home.js';
 import { mountOptin } from '../lib/optin.js';
+import { mountOffer } from '../lib/offers.js';
 import { estimate, normalizeTrip, mileageSummary, mileageCsv, deductionsFor, WHO, YEARS } from '../lib/ten99.js';
 
 const $ = (s) => document.querySelector(s);
@@ -120,4 +121,4 @@ function deductions() {
 }
 
 ({ home, quarterly, mileage, deductions })[page]?.();
-if (page !== 'home') mountOptin({ app: 'freelance-invoices', page: `app-${page}` });
+if (page !== 'home') { mountOptin({ app: 'freelance-invoices', page: `app-${page}` }); mountOffer({ app: 'freelance-invoices', page: `app-${page}` }); }
