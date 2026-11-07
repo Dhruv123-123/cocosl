@@ -2,6 +2,7 @@
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -96,3 +97,22 @@ def test_spanish_site_is_in_spanish(tmp_path):
         assert english not in text, english
     seq = json.loads((out / "emails" / "sequence.json").read_text())
     assert len(seq) == 10 and all("Dinero Simple" in e["text"] for e in seq)
+
+
+def test_free_tools_hidden_until_their_url_is_set(tmp_path):
+    out = _build(tmp_path, "https://example.org", SITE_ROOT=str(DS))
+    html = " ".join(p.read_text() for p in out.rglob("*.html"))
+    assert "REPLACE_ME" not in html and 'class="free-tool' not in html
+
+    site = tmp_path / "ds"
+    shutil.copytree(DS, site, ignore=shutil.ignore_patterns("public"))
+    cfg = json.loads((site / "site.json").read_text())
+    cfg["tool_urls"] = {"calculators": "https://apps.example.org/money-calculators/es",
+                        "scam_checker": "https://apps.example.org/scam-checker/es"}
+    (site / "site.json").write_text(json.dumps(cfg, ensure_ascii=False))
+    out = _build(tmp_path / "b", "https://example.org", SITE_ROOT=str(site))
+    links = (out / "links" / "index.html").read_text()
+    assert "Herramientas gratis" in links and 'href="https://apps.example.org/scam-checker/es/"' in links
+    art = (out / "blog" / "avalancha-o-bola-de-nieve" / "index.html").read_text()
+    assert 'href="https://apps.example.org/money-calculators/es/debt-payoff/"' in art
+    assert (out / "products" / "el-paquete-dinero-simple" / "index.html").is_file()

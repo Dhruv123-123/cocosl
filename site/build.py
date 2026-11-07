@@ -98,6 +98,8 @@ UI_EN: dict = {
     "links_title": "Links", "links_free": "Free: {title}", "links_products": "Guides and templates",
     "links_articles": "Popular articles", "links_tools": "Tools we recommend", "affiliate": "affiliate",
     "links_aff_note": "Affiliate links: we may earn a commission at no extra cost to you.",
+    "links_free_tools": "Free tools", "free_tool": "Free tool", "free_tool_open": "Open it",
+    "home_free_tools": "Free calculators and checkers",
     "home_title": "{site}: one money move a week, explained simply",
     "home_kicker": "For students and early-career workers",
     "home_h1": "Feel behind on money? Start with one move this week.",
@@ -386,6 +388,25 @@ def shortcode_factory(products: dict, source: str):
     return sc
 
 
+def free_tools() -> list[dict]:
+    """site.json "free_tools": links to the free web apps (calculators, scam checker). Each tool names a
+    base ("calculators" or "scam_checker", set in site.json "tool_urls") and a path. A tool is shown only
+    once its base URL is real (set, and without REPLACE_ME), so nothing points at an undeployed app."""
+    bases = CFG.get("tool_urls", {})
+    out = []
+    for t in CFG.get("free_tools", []):
+        base = (bases.get(t.get("base", ""), "") or "").rstrip("/")
+        if not base or "REPLACE_ME" in base:
+            continue
+        out.append({**t, "href": base + "/" + t.get("path", "").lstrip("/")})
+    return out
+
+
+def free_tool_links(tools: list[dict], cls: str = "lb-link") -> str:
+    return "".join(f'<a class="{cls}" href="{esc(t["href"])}" rel="noopener"><span>{esc(t["name"])}</span></a>'
+                   for t in tools)
+
+
 def layout(*, title: str, description: str, path: str, body: str, og_type: str = "website",
            jsonld: list | None = None, image: str = "/img/og-default.png", noindex: bool = False,
            extra_head: str = "") -> str:
@@ -523,6 +544,12 @@ def build() -> list[str]:
         updated = f' · {esc(T("updated"))} {fmt_date(p["updated"])}' if p.get("updated") else ""
         aff = (f'<p class="aff-note">{esc(T("aff_note"))} <a href="{u("/disclosures/")}">{esc(T("aff_how"))}</a>.</p>'
                if p.get("affiliate") == "yes" else "")
+        tool = next((t for t in free_tools() if p["slug"] in t.get("posts", [])), None) or next(
+            (t for t in free_tools() if p.get("pillar") in t.get("pillars", [])), None)
+        tool_box = (f'<aside class="free-tool"><p class="kicker">{esc(T("free_tool"))}</p>'
+                    f'<p><strong>{esc(tool["name"])}</strong>: {esc(tool.get("short", ""))}</p>'
+                    f'<a class="btn ghost" href="{esc(tool["href"])}" rel="noopener">{esc(T("free_tool_open"))}</a></aside>'
+                    if tool else "")
         body = f"""<article class="wrap article">
   <p class="crumbs"><a href="{u('/')}">{esc(T('home'))}</a> / <a href="{u('/blog/')}">{esc(T('articles'))}</a> / <span>{esc(pillars.get(p.get('pillar', ''), T('guide')))}</span></p>
   <h1>{esc(p['title'])}</h1>
@@ -535,7 +562,7 @@ def build() -> list[str]:
   </div>
   {sources}
   <p class="disclaimer">{esc(CFG['disclaimer'])}</p>
-  {magnet_box(f"blog-{p['slug']}-end")}
+  {tool_box}{magnet_box(f"blog-{p['slug']}-end")}
   {f'<section class="next"><h2>{esc(T("tool_for_this"))}</h2>{product_card(prod)}</section>' if prod else ''}
   <section class="next"><h2>{esc(T('read_next'))}</h2><ul class="related">{rel_html}</ul></section>
 </article>"""
@@ -686,6 +713,7 @@ def build() -> list[str]:
   <p class="dek">{esc(CFG['tagline'])}</p>
   <div class="lb-signup"><h2>{esc(T('links_free', title=lm['title']))}</h2><p>{esc(lm['short'])}</p>{email_form('link-in-bio', T('form_button_short'), compact=True)}</div>
   <h2 class="lb-h">{esc(T('links_products'))}</h2>{links}
+  {f'<h2 class="lb-h">{esc(T("links_free_tools"))}</h2>{free_tool_links(free_tools())}' if free_tools() else ''}
   {f'<h2 class="lb-h">{esc(T("links_tools"))}</h2>{aff}<p class="small">{esc(T("links_aff_note"))}</p>' if aff else ''}
 </section>"""))
     urls.append(("/links/", date.today().isoformat()))
@@ -727,6 +755,7 @@ def build() -> list[str]:
     <div class="product-grid">{''.join(product_card(p) for p in products_list)}</div>
   </div>
 </section>
+{f'<section class="wrap"><h2 class="section-h">{esc(T("home_free_tools"))}</h2><div class="free-tools">{free_tool_links(free_tools(), "free-tool-link")}</div></section>' if free_tools() else ''}
 <section class="wrap promise">
   <h2 class="section-h">{esc(T('home_how'))}</h2>
   <div class="three">

@@ -20,6 +20,7 @@ def _build_module():
 @pytest.mark.parametrize("slug,tabs", [
     ("recorte-de-gastos", ["Resumen", "Revisión", "Registro de llamadas"]),
     ("fecha-sin-deudas", ["Plan", "Transferencia", "Consolidación", "Avance", "Calendario"]),
+    ("invertir-con-100", ["Orden", "Crecimiento", "Comisiones", "Match 401k", "Roth o Traditional", "Aportaciones"]),
 ])
 def test_spanish_workbooks_are_fully_translated(tmp_path, slug, tabs):
     build = _build_module()

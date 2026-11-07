@@ -84,3 +84,13 @@ Choices to confirm: "Quiénes somos" for About, "Transparencia" for Disclosures,
 ## Facts to re-check (same as English, plus Spanish-only ones)
 
 Every `caption.txt` lists its own facts under CHECK BEFORE POSTING. The Spanish pack adds three: the "statements are in English" claim (videos/14), the Spanish/English app menu names (videos/10) and whether to mention ITIN for brokerage accounts (carousels/22). The 2026 IRA limit ($7,500) and other numbers are unchanged from the English pack and need the same check.
+
+## Product ladder (launch/dinero-simple/products/, sites/dinero-simple/content/products/)
+
+- [ ] El Kit para Recortar Gastos ($5): guide, tracker and listing (see `products/recorte-de-gastos/LISTING.md`)
+- [ ] Tu Fecha Sin Deudas ($17): guide, planner and listing
+- [ ] Empieza a Invertir con $100 al Mes ($19): 12-page guide, calculators and listing. Re-check every 2026 limit against IRS.gov, and check the ITIN line on page 8.
+- [ ] El Paquete Dinero Simple ($29): 3-page map and listing
+- [ ] The four new product pages on the Spanish site
+- [ ] Discount codes created: RECORTE5, FECHA5, INVERTIR5, plus the bundle upgrade-code process
+- [ ] Free-tool names and descriptions in `sites/dinero-simple/site.json` (`free_tools`) match the wording of the deployed PR #8 apps

@@ -5,6 +5,8 @@
 
 * El Kit para Recortar Gastos ($5)   <- The Bill Cut Kit
 * Tu Fecha Sin Deudas ($17)          <- The Debt-Free Date Planner
+* Empieza a Invertir con $100 al Mes ($19) <- Start Investing With $100 a Month
+* El Paquete Dinero Simple ($29)     <- the four Spanish kits together (no Spanish credit audit kit yet)
 
 The English originals live in launch/products/ on branch claude/project-thread-uqg0ro. The guides
 are rewritten in Spanish (recorte-de-gastos/guide.html, fecha-sin-deudas/guide.html); the workbooks
@@ -39,12 +41,25 @@ PRODUCTS = [
     {"slug": "fecha-sin-deudas", "name": "Tu Fecha Sin Deudas", "price": 17,
      "pdf": "Tu-Fecha-Sin-Deudas.pdf", "xlsx": "Tu-Fecha-Sin-Deudas.xlsx",
      "builder": "build_debt_planner", "zip": "Tu-Fecha-Sin-Deudas.zip", "tag": "Guía + hoja de cálculo"},
+    {"slug": "invertir-con-100", "name": "Empieza a Invertir con $100 al Mes", "price": 19,
+     "pdf": "Empieza-a-Invertir-con-100-al-Mes.pdf", "xlsx": "Invertir-Calculadoras.xlsx",
+     "builder": "build_investing", "zip": "Empieza-a-Invertir-con-100-al-Mes.zip", "tag": "Guía + calculadoras"},
+    {"slug": "paquete", "name": "El Paquete Dinero Simple", "price": 29,
+     "pdf": "Empieza-Aqui-Mapa-del-Paquete.pdf", "zip": "El-Paquete-Dinero-Simple.zip", "tag": "Los 4 kits",
+     "bundle": ["recorte-de-gastos", "presupuesto-20-minutos", "fecha-sin-deudas", "invertir-con-100"]},
 ]
+
+# Already built elsewhere (launch/dinero-simple/product/): goes into the bundle as-is.
+EXISTING = {"presupuesto-20-minutos": {"name": "El Presupuesto de 20 Minutos", "dir": HERE.parent / "product",
+                                       "files": ["El-Presupuesto-de-20-Minutos.pdf",
+                                                 "Presupuesto-20-Minutos-Plantilla.xlsx"]}}
 
 SHEETS = {
     "Summary": "Resumen", "Audit": "Revisión", "Negotiation Log": "Registro de llamadas",
     "Plan": "Plan", "Balance Transfer": "Transferencia", "Consolidation": "Consolidación",
     "Progress": "Avance", "Schedule": "Calendario",
+    "Order Checklist": "Orden", "Growth": "Crecimiento", "Fee Drag": "Comisiones", "401k Match": "Match 401k",
+    "Roth vs Traditional": "Roth o Traditional", "Contributions": "Aportaciones",
 }
 
 # Values that formulas and dropdowns compare against: translated everywhere at once.
@@ -56,6 +71,10 @@ VALUES = {
     "Investing": "Invertir", "Sinking fund": "Fondo de previsión",
     "Avalanche": "Avalancha", "Snowball": "Bola de nieve", "Custom": "Mi orden",
     **{f"Debt {i}": f"Deuda {i}" for i in range(1, 11)},
+    # investing kit: account types and step status (dropdowns + formulas)
+    "401(k) / 403(b)": "401(k) / 403(b)", "Roth IRA": "Roth IRA", "Traditional IRA": "Traditional IRA", "HSA": "HSA",
+    "Taxable brokerage": "Cuenta normal", "Not started": "Sin empezar", "In progress": "En proceso",
+    "Done": "Listo", "Not applicable": "No aplica", "Roth": "Roth", "Traditional": "Traditional",
 }
 
 FORMULA_TEXT = {
@@ -65,6 +84,10 @@ FORMULA_TEXT = {
     "Worth it, IF you stop adding new spending to either card.":
         "Conviene, SI dejas de hacer compras nuevas con las dos tarjetas.",
     "Your current plan is cheaper. Keep going.": "Tu plan actual sale más barato. Síguele.",
+    " of ": " de ", "IRA total within the limit": "Total de IRA dentro del límite", "No limit": "Sin límite",
+    "Over the combined IRA limit!": "¡Te pasaste del límite combinado de IRA!",
+    "Raise your contribution: this is part of your pay.": "Sube tu aportación: esto es parte de tu sueldo.",
+    "Same": "Igual", "You get the full match.": "Recibes el match completo.",
 }
 
 FOOT_ES = ("Herramienta educativa, no es asesoría financiera, de impuestos, legal ni de inversión. El ejemplo es "
@@ -164,10 +187,70 @@ LABELS = {
     "Transfer: fee": "Transferencia: comisión", "Transfer: months to pay off": "Transferencia: meses para pagar",
     "Transfer: total cost (fee + interest)": "Transferencia: costo total (comisión + interés)",
     "What you can pay each month": "Lo que puedes pagar cada mes", "Would a consolidation loan help?": "¿Te ayuda un préstamo de consolidación?",
-    "You save by transferring": "Ahorras al transferir", "Your debt-free date": "Tu fecha sin deudas", "Your plan": "Tu plan",
+    "You save by transferring": "Ahorras al transferir",
+    # ---- Empieza a Invertir con $100 al Mes
+    "#": "#", "$100/month to Roth IRA": "$100 al mes a la Roth IRA",
+    "...on contributions up to (% of salary)": "...en aportaciones hasta (% del sueldo)",
+    "401(k) / 403(b) up to the full employer match": "401(k) / 403(b) hasta el match completo",
+    "Account": "Cuenta", "After your chosen years": "Después de los años que elegiste",
+    "An illustration using an assumed average return. Real returns vary and can be negative.":
+        "Una ilustración con un rendimiento promedio supuesto. Los rendimientos reales cambian y pueden ser negativos.",
+    "Assumed average yearly return %": "Rendimiento anual promedio supuesto %",
+    "Assumed yearly return %": "Rendimiento anual supuesto %",
+    "Assumed yearly return before fees %": "Rendimiento anual supuesto antes de comisiones %",
+    "Better choice with these numbers": "Mejor opción con estos números",
+    "Check IRS.gov for the current year and catch-up amounts if you're 50+.":
+        "Revisa IRS.gov para el año en curso y las aportaciones adicionales si tienes 50 o más.",
+    "Contribute at least this % to get it all": "Aporta por lo menos este % para recibirlo todo",
+    "Contributing 4% = full match": "Aportar 4% = match completo", "Employer adds per year": "Tu empleador pone al año",
+    "Employer matches (% of what you put in)": "Tu empleador iguala (% de lo que pones)", "Ending value": "Valor final",
+    "Expected tax rate in retirement %": "Tasa de impuestos esperada en el retiro %",
+    "Full emergency fund: 3-6 months of essentials": "Fondo de emergencia completo: 3-6 meses de gastos básicos",
+    "Fund A": "Fondo A", "Fund B": "Fondo B", "Goes into the account each year": "Entra a la cuenta cada año",
+    "Growth so far": "Crecimiento hasta ahora", "HSA, if you have a high-deductible health plan": "HSA, si tienes seguro médico con deducible alto",
+    "HYSA": "Ahorro de alto rendimiento",
+    "How much free money your employer adds, and whether you're leaving any behind.":
+        "Cuánto dinero gratis pone tu empleador, y si estás dejando algo en la mesa.",
+    "IRA limit is shared: Roth + Traditional together. HSA figure is self-only coverage.":
+        "El límite de IRA es compartido: Roth + Traditional juntas. La cifra de HSA es para cobertura individual.",
+    "IRA: Roth or Traditional": "IRA: Roth o Traditional", "Increase the monthly amount each year by %": "Sube la cantidad mensual cada año en %",
+    "Log each deposit. Totals are checked against the yearly limits (2026 figures; update each year).":
+        "Anota cada depósito. Los totales se comparan con los límites anuales (cifras de 2026; actualízalas cada año).",
+    "Lost to the higher fee": "Perdido por la comisión más alta", "Match you're leaving on the table": "Match que estás dejando ir",
+    "Maximum match available": "Match máximo disponible", "Monthly amount": "Cantidad al mes",
+    "Monthly compounding. No fees, taxes or inflation. Max 50 years. Not a prediction or a promise.":
+        "Interés compuesto mensual. Sin comisiones, impuestos ni inflación. Máximo 50 años. No es una predicción ni una promesa.",
+    "Monthly investment": "Inversión mensual", "More in the 401(k), beyond the match": "Más al 401(k), por arriba del match",
+    "Note": "Nota", "Pay off high-interest debt (above ~8-10%)": "Paga las deudas caras (más de ~8-10%)",
+    "Per paycheck to reach that (26 paychecks)": "Por cheque para llegar (26 cheques)",
+    "Pre-tax money you can set aside per year": "Dinero antes de impuestos que puedes apartar al año",
+    "Put in (total)": "Lo que pusiste (total)", "Room left": "Te queda", "Roth or Traditional?": "¿Roth o Traditional?",
+    "Same deposits, same market, two different yearly fees.": "Mismos depósitos, mismo mercado, dos comisiones anuales distintas.",
+    "Same pre-tax money, two tax treatments. The one that wins depends on tax rates now vs later.":
+        "El mismo dinero antes de impuestos, dos tratamientos. Cuál gana depende de tu tasa de impuestos hoy contra después.",
+    "Simplified: assumes the Traditional tax saving is invested too, yearly compounding, flat tax rates. Ignores income limits, state tax and employer matches. Illustration only.":
+        "Simplificado: supone que el ahorro de impuestos de la Traditional también se invierte, interés compuesto anual y tasas fijas. No considera límites de ingreso, impuesto estatal ni match. Solo para ilustrar.",
+    "Simplified: the fee is subtracted from the yearly return. Illustration only.":
+        "Simplificado: la comisión se resta del rendimiento anual. Solo para ilustrar.",
+    "So far": "Hasta ahora",
+    "Some matches 'vest' over a few years: if you leave before then, you may keep only part. Check your plan.":
+        "Algunos match tardan unos años en ser tuyos ('vesting'): si te vas antes, quizá solo te quedas con una parte. Revisa tu plan.",
+    "Starter emergency fund ($500-$1,000)": "Fondo de emergencia inicial ($500-$1,000)", "Starting amount": "Cantidad inicial",
+    "Status": "Estado", "Step": "Paso", "Steps done": "Pasos listos", "Store card gone; credit card next": "Tarjeta de tienda pagada; sigue la tarjeta de crédito",
+    "Tax when you withdraw": "Impuestos al sacar", "Taxable brokerage account": "Cuenta de inversión normal (con impuestos)",
+    "This year's contributions": "Aportaciones de este año", "Value (end of year)": "Valor (fin de año)",
+    "Value at retirement (before tax)": "Valor al retiro (antes de impuestos)", "What a fund's fee costs you": "Lo que te cuesta la comisión de un fondo",
+    "What regular investing might grow to": "Cuánto podría crecer invertir cada mes", "What you keep": "Lo que te queda",
+    "Where each dollar goes first": "A dónde va cada dólar primero",
+    "Work down the list. Mark each step as you get to it. (Guide, chapter 2.)": "Ve bajando por la lista. Marca cada paso cuando llegues. (Guía, capítulo 2.)",
+    "Year": "Año", "Yearly fee (expense ratio) %": "Comisión anual (expense ratio) %", "Yearly limit": "Límite anual",
+    "Years": "Años", "Years until retirement": "Años para tu retiro", "You contribute (% of salary)": "Tú aportas (% del sueldo)",
+    "You put in": "Pusiste", "You put in per year": "Pones al año", "Your employer match": "El match de tu empleador",
+    "Your tax rate now %": "Tu tasa de impuestos hoy %", "Your yearly salary": "Tu sueldo anual",
+    "e.g. '100% up to 4%', or '50% up to 6%'. Check your plan documents.": "Ej.: '100% hasta 4%' o '50% hasta 6%'. Revisa los documentos de tu plan.", "Your debt-free date": "Tu fecha sin deudas", "Your plan": "Tu plan",
 }
 
-CHARTS = {"Total debt: plan": ("Deuda total: plan", "Saldo")}
+CHARTS = {"Total debt: plan": ("Deuda total: plan", "Saldo"), "Put in vs growth": ("Lo que pones vs. crecimiento", None)}
 
 
 def _quoted(formula: str) -> str:
@@ -212,7 +295,9 @@ def translate(wb: openpyxl.Workbook, title: str) -> None:
             # openpyxl keeps the title as rich text; rebuild it from our map.
             en = "".join(r.t for p in ch.title.tx.rich.p for r in (p.r or [])) if ch.title else ""
             if en in CHARTS:
-                ch.title, ch.y_axis.title = CHARTS[en]
+                ch.title = CHARTS[en][0]
+                if CHARTS[en][1]:
+                    ch.y_axis.title = CHARTS[en][1]
             elif en:
                 missing.add(f"chart title: {en}")
     if missing:
@@ -352,21 +437,35 @@ def main() -> int:
         jobs.append({"src": str(html), "pdf": str(d / p["pdf"])})
         for name, w, h in (("cover.png", 1280, 720), ("cover-square.png", 600, 600)):
             jobs.append({"html": cover_html(p, w, h), "w": w, "h": h, "out": str(d / name)})
-        build_xlsx(p, d / p["xlsx"])
+        if p.get("xlsx"):
+            build_xlsx(p, d / p["xlsx"])
         shutil.copy(HERE / p["slug"] / "LISTING.md", d / "LISTING.md")
     for r in render(jobs):
         if r["overflow"]:
             failures.append(f'{Path(r["src"]).name}: content overflows on pages {r["overflow"]}')
     if args.check:
-        for p in PRODUCTS:
+        for p in (p for p in PRODUCTS if p.get("xlsx")):
             bad = recalc_check(out_root / p["slug"] / p["xlsx"])
             if bad:
                 failures.append(f'{p["xlsx"]}: {len(bad)} formula errors, e.g. {bad[:5]}')
     for p in PRODUCTS:
         d = out_root / p["slug"]
+        files = [(d / p["pdf"], p["pdf"])] + ([(d / p["xlsx"], p["xlsx"])] if p.get("xlsx") else [])
+        for idx, slug in enumerate(p.get("bundle", []), start=1):
+            if slug in EXISTING:
+                e = EXISTING[slug]
+                files += [(e["dir"] / f, f"{idx}. {e['name']}/{f}") for f in e["files"]]
+                continue
+            o = next(x for x in PRODUCTS if x["slug"] == slug)
+            files += [(out_root / slug / o["pdf"], f"{idx}. {o['name'].replace('$', '')}/{o['pdf']}"),
+                      (out_root / slug / o["xlsx"], f"{idx}. {o['name'].replace('$', '')}/{o['xlsx']}")]
+        missing = [str(f) for f, _ in files if not f.exists()]
+        if missing:
+            failures.append(f'{p["zip"]}: missing {missing}')
+            continue
         with zipfile.ZipFile(d / p["zip"], "w", zipfile.ZIP_DEFLATED) as z:
-            z.write(d / p["pdf"], p["pdf"])
-            z.write(d / p["xlsx"], p["xlsx"])
+            for f, arc in files:
+                z.write(f, arc)
     for f in failures:
         print("FAIL", f)
     print(f"built {len(PRODUCTS)} product(s) into {out_root}")

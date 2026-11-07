@@ -31,9 +31,9 @@ and `/emails/` (unlinked, noindexed preview of the sequence, with copy-paste HTM
 ## Before going live
 
 1. Native-speaker review (see the checklist). Fix wording in the `.md` files and `site.json`, then rebuild.
-2. Replace placeholders: `url`, `contact_email`, the Gumroad `buy_url`, social URLs, and add a postal address
+2. Replace placeholders: `url`, `contact_email`, the five Gumroad `buy_url`s (in `content/products/`), social URLs, and add a postal address
    in your email provider (CAN-SPAM).
 3. Point the email form at a **separate Spanish list** (`email.provider` / `email.action`), so Spanish subscribers
    get the Spanish sequence.
 4. Set the brand's `link_in_bio` in `brands/dinero-simple.yaml` to `<url>/links/`.
-5. Optional: once PR #8 is live, link the Spanish calculators (`/money-calculators/es/`) and scam checker.
+5. Once PR #8's apps are deployed, set `tool_urls.calculators` and `tool_urls.scam_checker` in `site.json`, then rebuild. For example: `https://YOUR-APPS-SITE/money-calculators/es` and `https://YOUR-APPS-SITE/scam-checker/es`. The 9 entries in `free_tools` cover the scam checker, link checker, scam guides and 6 calculators. They then appear on `/links/` ("Herramientas gratis"), on the home page, and as a box on matching articles. While those URLs still contain `REPLACE_ME`, nothing is shown.

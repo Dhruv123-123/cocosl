@@ -173,6 +173,109 @@
     ],
     "nf_title": "Página no encontrada",
     "nf_h1": "Esta página se nos perdió.",
-    "nf_dek": "Prueba con los <a href=\"{blog}\">artículos</a> o descarga la <a href=\"{free}\">guía gratis</a>."
-  }
+    "nf_dek": "Prueba con los <a href=\"{blog}\">artículos</a> o descarga la <a href=\"{free}\">guía gratis</a>.",
+    "links_free_tools": "Herramientas gratis",
+    "free_tool": "Herramienta gratis",
+    "free_tool_open": "Ábrela",
+    "home_free_tools": "Calculadoras y verificadores gratis"
+  },
+  "tool_urls": {
+    "calculators": "https://REPLACE_ME/money-calculators/es",
+    "scam_checker": "https://REPLACE_ME/scam-checker/es",
+    "_note": "Set these to the deployed PR #8 apps (e.g. https://YOUR-APPS-SITE/money-calculators/es). Until then every free-tool link stays hidden."
+  },
+  "free_tools": [
+    {
+      "name": "¿Es una estafa? Verificador gratis",
+      "base": "scam_checker",
+      "path": "/",
+      "short": "Pega el mensaje, el correo o el DM y te dice qué señales de estafa tiene. Lo que pegas no sale de tu navegador.",
+      "posts": [
+        "como-congelar-tu-credito",
+        "mi-app-esta-asegurada-por-la-fdic"
+      ]
+    },
+    {
+      "name": "¿Este sitio web es confiable?",
+      "base": "scam_checker",
+      "path": "/enlace/",
+      "short": "Revisa un enlace antes de abrirlo: nombres parecidos, marcas en el dominio equivocado y terminaciones raras.",
+      "posts": []
+    },
+    {
+      "name": "Estafas que circulan ahora",
+      "base": "scam_checker",
+      "path": "/estafas/",
+      "short": "12 guías de estafas comunes, cada una con su verificador.",
+      "posts": []
+    },
+    {
+      "name": "Calculadora para pagar deudas",
+      "base": "calculators",
+      "path": "/debt-payoff/",
+      "short": "Avalancha contra bola de nieve con tus deudas, y la fecha en que terminas.",
+      "posts": [
+        "avalancha-o-bola-de-nieve"
+      ],
+      "pillars": [
+        "credito-y-deudas"
+      ]
+    },
+    {
+      "name": "Calculadora de interés compuesto",
+      "base": "calculators",
+      "path": "/compound-interest/",
+      "short": "Cuánto podría crecer lo que inviertes cada mes.",
+      "posts": [
+        "invertir-con-100-al-mes",
+        "comisiones-de-los-fondos"
+      ],
+      "pillars": [
+        "invertir"
+      ]
+    },
+    {
+      "name": "Calculadora Roth vs Tradicional",
+      "base": "calculators",
+      "path": "/roth-vs-traditional/",
+      "short": "Cuál te deja más con tu tasa de impuestos de hoy y la del retiro.",
+      "posts": [
+        "roth-ira-o-traditional-ira",
+        "match-del-401k"
+      ]
+    },
+    {
+      "name": "Calculadora de fondo de emergencia",
+      "base": "calculators",
+      "path": "/emergency-fund/",
+      "short": "Cuánto necesitas y en cuánto tiempo llegas.",
+      "posts": [
+        "fondo-de-emergencia"
+      ]
+    },
+    {
+      "name": "Calculadora de salario neto (2026)",
+      "base": "calculators",
+      "path": "/take-home-pay/",
+      "short": "Cuánto te llega de verdad después de impuestos, para armar tu presupuesto.",
+      "posts": [
+        "como-hacer-un-presupuesto",
+        "fondos-de-prevision",
+        "cancelar-suscripciones",
+        "app-o-hoja-de-calculo"
+      ],
+      "pillars": [
+        "presupuesto"
+      ]
+    },
+    {
+      "name": "Calculadora del pago mínimo de la tarjeta",
+      "base": "calculators",
+      "path": "/credit-card-minimum/",
+      "short": "Cuánto tardas y cuánto interés pagas si solo pagas el mínimo.",
+      "posts": [
+        "como-funciona-el-puntaje-de-credito"
+      ]
+    }
+  ]
 }

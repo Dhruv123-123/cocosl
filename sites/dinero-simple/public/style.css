@@ -204,3 +204,12 @@ th{background:var(--tint)}
   .hero{padding:32px 0 40px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* free web tools (site.json "free_tools"; hidden until their URL is set) */
+.free-tool{background:var(--tint);border-left:4px solid var(--green-d);border-radius:var(--radius);padding:16px 20px;margin:28px 0}
+.free-tool .kicker{margin:0 0 4px}
+.free-tool p{margin:0 0 12px}
+.free-tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.free-tool-link{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;
+  color:var(--ink);font-weight:600;text-decoration:none}
+.free-tool-link:hover{border-color:var(--green-d)}

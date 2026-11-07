@@ -2,7 +2,7 @@
 
 Spanish edition of The Debt-Free Date Planner. Copy-paste listing for Gumroad, Stan Store or Lemon Squeezy. **A fluent Spanish speaker must read the guide, the spreadsheet and this listing before it goes live.** Replace anything in `[brackets]`.
 
-**Role in the line:** $17 core product for the debt audience. Bought after El Presupuesto de 20 Minutos or El Kit para Recortar Gastos. The English edition upsells an investing kit and a $39 bundle; those don't exist in Spanish yet, so the last page points to the free blog post *Cómo invertir con $100 al mes* and back to the $12 budget and $5 kit.
+**Role in the line:** $17 core product for the debt audience. Bought after El Presupuesto de 20 Minutos or El Kit para Recortar Gastos. The last page points to Empieza a Invertir con $100 al Mes ($19, code FECHA5 for $5 off) and El Paquete Dinero Simple ($29).
 
 ## Files to upload
 
@@ -14,9 +14,8 @@ Spanish edition of The Debt-Free Date Planner. Copy-paste listing for Gumroad, S
 
 ## Before you publish
 
-- [ ] Create discount code **FECHA5** ($5 off El Presupuesto de 20 Minutos). The guide's last page promises it.
+- [ ] Create discount code **FECHA5** ($5 off Empieza a Invertir con $100 al Mes). The guide's last page promises it.
 - [ ] Put your store link where the guide says `[el enlace de tu tienda]` (page 10) and rebuild, or leave it generic.
-- [ ] Check that the blog post *Cómo invertir con $100 al mes* is live on the Spanish site.
 - [ ] Native-speaker read of every page, the workbook labels, dropdowns and result sentences.
 - [ ] Re-check the federal student loan box (page 6): repayment rules changed in 2025–2026.
 
@@ -69,7 +68,7 @@ salir de deudas, plan de pagos, avalancha, bola de nieve, tarjetas de crédito, 
 > 2. Abre la hoja, mira el ejemplo de Andrea, borra las celdas amarillas y escribe tus deudas.
 > 3. Pon tu fecha sin deudas donde la veas todos los días.
 >
-> ¿Buscas de dónde sacar el pago extra? El Presupuesto de 20 Minutos te ayuda, y por comprar este planificador tienes $5 de descuento con el código **FECHA5**: [enlace]
+> Cuando pagues tu última deuda, Empieza a Invertir con $100 al Mes te dice qué hacer con ese dinero, y por comprar este planificador tienes $5 de descuento con el código **FECHA5**: [enlace]
 > ¿Preguntas? Contesta este correo. El equipo de Dinero Simple
 
 ## Aviso legal

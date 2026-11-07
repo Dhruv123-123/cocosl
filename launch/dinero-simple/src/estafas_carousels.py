@@ -1,6 +1,6 @@
 # Dinero Simple: scam carousels in Spanish. Some are adapted from Scam Decoded and some are new.
 # Segment tuples use the same shape as the other files: (heading, on_screen, body text, scene).
-from estafas_shorts import CTA
+from estafas_shorts import CHECKER, CTA
 
 ITEMS = [
 dict(
@@ -45,7 +45,7 @@ dict(
         ("6", "6. 'Te saco el permiso más rápido'", "Nadie puede adelantar tu caso por un pago extra.", "a stopwatch with a coin slot and a red X"),
         ("Regla", "Prisa + pago raro = cuelga", "Revisa tu caso tú mismo en uscis.gov con tu número de recibo.", "M hanging up a phone calmly"),
     ],
-    caption="6 estafas que usan la palabra 'inmigración': 1) la llamada 'de USCIS' que cobra, 2) te venden formularios que son gratis, 3) 'ganaste la lotería de visas', 4) la fianza urgente por app o tarjeta de regalo, 5) sitios que parecen oficiales pero no terminan en .gov, 6) 'te saco el permiso más rápido'.\n\nRevisa tu caso tú mismo en uscis.gov con tu número de recibo. Repórtalo en ReporteFraude.ftc.gov, en español.\n\n" + CTA,
+    caption="6 estafas que usan la palabra 'inmigración': 1) la llamada 'de USCIS' que cobra, 2) te venden formularios que son gratis, 3) 'ganaste la lotería de visas', 4) la fianza urgente por app o tarjeta de regalo, 5) sitios que parecen oficiales pero no terminan en .gov, 6) 'te saco el permiso más rápido'.\n\nRevisa tu caso tú mismo en uscis.gov con tu número de recibo. Repórtalo en ReporteFraude.ftc.gov, en español.\n\n" + CHECKER + "\n\n" + CTA,
     hashtags=["inmigracion", "uscis", "estafas", "fraude", "comunidadlatina", "dinerosimple"],
     description="Seis estafas comunes que usan trámites de inmigración, y la regla para reconocerlas.",
     sources=["https://www.uscis.gov/es/evitar-estafas", "https://travel.state.gov/content/travel/en/us-visas/immigrate/diversity-visa-program-entry.html"],
@@ -69,7 +69,7 @@ dict(
         ("5", "5. El pedido: tarjeta, código o dinero", "Ese es todo el punto del mensaje.", "a card, a code and a coin in a row"),
         ("Qué hacer", "2 o más señales: no toques nada", "Abre la app oficial o escribe tú la página. Reenvía al 7726 y bórralo.", "M forwarding a message with a calm face"),
     ],
-    caption="5 señales en un solo mensaje de estafa: 1) no lo esperabas, 2) una cuenta regresiva, 3) una amenaza o un premio, 4) un enlace que no buscaste tú, 5) te piden tarjeta, código o dinero.\n\n¿Dos o más? No toques nada. Abre la app oficial o escribe tú la página. Reenvía el mensaje al 7726 y bórralo.\n\n" + CTA,
+    caption="5 señales en un solo mensaje de estafa: 1) no lo esperabas, 2) una cuenta regresiva, 3) una amenaza o un premio, 4) un enlace que no buscaste tú, 5) te piden tarjeta, código o dinero.\n\n¿Dos o más? No toques nada. Abre la app oficial o escribe tú la página. Reenvía el mensaje al 7726 y bórralo.\n\n" + CHECKER + "\n\n" + CTA,
     hashtags=["estafas", "mensajes", "fraude", "seguridad", "comunidadlatina", "dinerosimple"],
     description="Cinco señales para reconocer un mensaje de estafa.",
     sources=["https://consumidor.ftc.gov/articulos/como-evitar-una-estafa", "https://consumidor.ftc.gov/articulos/como-reconocer-y-reportar-mensajes-de-texto-no-deseados"],
@@ -117,7 +117,7 @@ dict(
         ("6", "6. ¿Me daría pena decirle a mi banco?", "Esa pena es tu alarma.", "a small bell ringing"),
         ("Cierre", "Guárdalo para la próxima prisa", "Si te late que es urgente, léelo antes de enviar.", "M pausing with a hand over a send button"),
     ],
-    caption="6 preguntas antes de mandarle dinero a quien sea:\n1) ¿Me buscaron ellos primero?\n2) ¿Hay fecha límite?\n3) ¿Me pidieron que no le diga a nadie?\n4) ¿Es un pago difícil de revertir?\n5) ¿Nunca lo he visto en persona?\n6) ¿Me daría pena decirle a mi banco?\n\nUn 'sí' no prueba una estafa, pero significa: para y verifica antes de enviar.\n\n" + CTA,
+    caption="6 preguntas antes de mandarle dinero a quien sea:\n1) ¿Me buscaron ellos primero?\n2) ¿Hay fecha límite?\n3) ¿Me pidieron que no le diga a nadie?\n4) ¿Es un pago difícil de revertir?\n5) ¿Nunca lo he visto en persona?\n6) ¿Me daría pena decirle a mi banco?\n\nUn 'sí' no prueba una estafa, pero significa: para y verifica antes de enviar.\n\n" + CHECKER + "\n\n" + CTA,
     hashtags=["remesas", "enviardinero", "estafas", "fraude", "comunidadlatina", "dinerosimple"],
     description="Seis preguntas para hacerte antes de mandar dinero.",
     sources=["https://consumidor.ftc.gov/articulos/como-evitar-una-estafa"],

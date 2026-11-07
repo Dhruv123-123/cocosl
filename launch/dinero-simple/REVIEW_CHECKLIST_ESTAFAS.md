@@ -5,6 +5,7 @@ Every piece needs two things before it is posted. First, a fluent Spanish speake
 Check these first, because getting them wrong could hurt someone:
 - Immigration pieces (notario, USCIS forms, visa lottery, bond, the 6 scams carousel, the who-can-help carousel). Confirm each official URL and rule is current. Keep the wording general. Never say what someone should file or whether their case is safe. The last slide of the who-can-help carousel says the FTC form doesn't ask for immigration status, so confirm that before posting.
 - Virtual kidnapping and the fake bond. Keep the tone calm and not graphic, and use the current FBI and ICE pages.
+- Six captions end with a line sending people to "nuestro verificador de estafas gratis (enlace en la bio)": 7726, envío retenido, código de WhatsApp, 6 estafas de inmigración, 5 señales, 6 preguntas. Post that line only once the Spanish scam checker (PR #8) is deployed and `tool_urls` in `sites/dinero-simple/site.json` is set, so the link-in-bio page actually shows it. Otherwise delete the line before posting.
 - Expected guardrail warning: the brand rules avoid 'cripto', and two pieces (the task-job Short and the 6 preguntas carousel) mention crypto as a scam payment method. That's a warning, not a promotion, so it stays, but the reviewer should confirm.
 - The money mule Short. It says 'casi siempre' (almost always), not 'siempre' (always). Keep that hedge.
 

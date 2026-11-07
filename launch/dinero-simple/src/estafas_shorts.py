@@ -4,6 +4,8 @@
 # Each segment is a tuple: (heading, on_screen_text, narration, scene). Every word needs a native-speaker review.
 CTA = "Síguenos y mándaselo a alguien de tu familia."
 REPORT = "Repórtalo en ReporteFraude.ftc.gov, en español."
+# Only post this line once the Spanish scam checker (PR #8, apps/scam-checker/es/) is live and linked in the bio.
+CHECKER = "¿Te llegó algo raro? Pégalo en nuestro verificador de estafas gratis (enlace en la bio)."
 
 ITEMS = [
 dict(
@@ -189,7 +191,7 @@ dict(
          "Y si un envío de verdad tiene un error, la ley te da 180 días para reportarlo con la compañía, gratis.",
          "a calendar with a small shield"),
     ],
-    caption="Si te piden pagar una comisión para 'liberar' un envío de dinero, es estafa. Igual si te escribe un 'agente de soporte' en redes después de que te quejaste de un envío.\n\nHabla con tu servicio de envíos solo desde su app o el número de su sitio oficial. Si un envío real tuvo un error, tienes 180 días para reportarlo con la compañía. " + REPORT + "\n\n" + CTA,
+    caption="Si te piden pagar una comisión para 'liberar' un envío de dinero, es estafa. Igual si te escribe un 'agente de soporte' en redes después de que te quejaste de un envío.\n\nHabla con tu servicio de envíos solo desde su app o el número de su sitio oficial. Si un envío real tuvo un error, tienes 180 días para reportarlo con la compañía. " + REPORT + "\n\n" + CHECKER + "\n\n" + CTA,
     hashtags=["remesas", "enviardinero", "estafas", "fraude", "comunidadlatina", "dinerosimple"],
     description="Las estafas del envío 'retenido' y del soporte falso en redes, y cómo protegerte.",
     sources=["https://www.consumerfinance.gov/rules-policy/regulations/1005/33/", "https://consumidor.ftc.gov/articulos/estafas-de-servicios-de-inmigracion"],
@@ -281,7 +283,7 @@ dict(
          "Hoy mismo, activa la verificación en dos pasos en la configuración de WhatsApp. Te toma un minuto.",
          "M tapping a settings icon with a small shield"),
     ],
-    caption="'Te llegó un código mío por error, ¿me lo pasas?' Ese código abre TU cuenta en otro teléfono, y con ella le piden dinero a tus contactos. Muchas veces el mensaje viene de la cuenta robada de un amigo.\n\nNadie de verdad necesita tu código. Hoy mismo: WhatsApp → Configuración → Cuenta → Verificación en dos pasos.\n\n" + CTA,
+    caption="'Te llegó un código mío por error, ¿me lo pasas?' Ese código abre TU cuenta en otro teléfono, y con ella le piden dinero a tus contactos. Muchas veces el mensaje viene de la cuenta robada de un amigo.\n\nNadie de verdad necesita tu código. Hoy mismo: WhatsApp → Configuración → Cuenta → Verificación en dos pasos.\n\n" + CHECKER + "\n\n" + CTA,
     hashtags=["whatsapp", "estafas", "seguridad", "fraude", "comunidadlatina", "dinerosimple"],
     description="La estafa del código de WhatsApp 'enviado por error' y cómo proteger tu cuenta.",
     sources=["https://faq.whatsapp.com/1278661612895630", "https://consumidor.ftc.gov/articulos/como-reconocer-y-evitar-las-estafas-de-phishing"],
@@ -344,7 +346,7 @@ dict(
          "Reenvía y borra. Diez segundos, y a lo mejor a la próxima persona ya no le llega.",
          "M tossing a crumpled message into a small bin"),
     ],
-    caption="¿Te llegó un mensaje de estafa? Mantén presionado el mensaje → Reenviar → 7726. Es gratis y le avisa a tu compañía de celular para que lo bloquee. No contestes, ni siquiera 'STOP'. Luego bórralo.\n\nSi diste datos o dinero, " + REPORT + "\n\n" + CTA,
+    caption="¿Te llegó un mensaje de estafa? Mantén presionado el mensaje → Reenviar → 7726. Es gratis y le avisa a tu compañía de celular para que lo bloquee. No contestes, ni siquiera 'STOP'. Luego bórralo.\n\nSi diste datos o dinero, repórtalo en ReporteFraude.ftc.gov, en español." + "\n\n" + CHECKER + "\n\n" + CTA,
     hashtags=["estafas", "spam", "mensajes", "seguridad", "comunidadlatina", "dinerosimple"],
     description="Cómo reportar mensajes de estafa gratis reenviándolos al 7726.",
     sources=["https://www.fcc.gov/consumers/guides/stop-unwanted-robocalls-and-texts", "https://consumidor.ftc.gov/articulos/como-reconocer-y-reportar-mensajes-de-texto-no-deseados"],

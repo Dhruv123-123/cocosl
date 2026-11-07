@@ -30,4 +30,4 @@ Source: `launch/dinero-simple/content-estafas.json`. Folder numbers match the re
 | sáb 13 feb | 20:00 | Instagram + TikTok (carousel) | carousels/17-… | carousel | ¿Te estafaron? Los primeros 60 minutos, en orden |
 | mar 16 feb | 12:30 | TikTok + YouTube Shorts + Instagram Reels | videos/03-… | short | La lotería de visas: gratis y sin correos de 'ganaste' |
 
-Once PR #8's Spanish scam checker is deployed (`/scam-checker/es/` and the link checker at `es/enlace/`), add its link to the captions of the 5 señales, 6 preguntas and 60 minutos carousels.
+Six captions already point to "nuestro verificador de estafas gratis (enlace en la bio)". That's PR #8's Spanish scam checker. Once it's deployed, set `tool_urls` in `sites/dinero-simple/site.json`, rebuild the site, and the checker, link checker, scam guides and calculators appear on the link-in-bio page, the home page and the matching articles. Until then, delete that caption line before posting.
