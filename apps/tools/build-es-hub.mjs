@@ -20,6 +20,7 @@ const SAVE = [
   { u: '../budget/bill-calendar/es.html', t: 'Calendario de pagos', d: 'Agrega cada recibo una vez y ve todas las fechas de pago del mes en un calendario. Márcalos al pagar y manda recordatorios a tu teléfono. Funciona sin internet.' },
   { u: '../budget/tablero-dinero.html', t: 'Tablero de dinero en hoja de cálculo', d: 'Sube el CSV de tu banco y descarga una hoja de cálculo para Google Sheets o Excel: cada gasto en su categoría y lo que entra, gastas y te sobra cada mes. Tu archivo no sale de tu navegador.' },
   { u: '../budget/reto-ahorro.html', t: 'Reto de ahorro de 52 semanas', d: 'Ahorra $1 más cada semana y junta $1,378 en un año, o pon tu propia meta. Marca cada semana, recibe recordatorios e imprime la tabla.' },
+  { u: '../budget/plan-quincena.html', t: 'Presupuesto 50/30/20 y base cero', d: 'Escribe cuánto recibes en cada pago y arma tu presupuesto del mes con la regla 50/30/20 y un plan base cero donde cada dólar tiene un trabajo. Pasa directo al tablero de dinero.' },
 ];
 const calcs = pagesEs.map((p) => ({ u: `../money-calculators/es/${p.slug}/`, t: p.tile || p.h1, d: p.description }));
 const card = (c) => `      <a class="card${c.feature ? ' feature' : ''}" href="${esc(c.u)}"><span class="tag free">Gratis</span><h3>${esc(c.t)}</h3><p>${esc(c.d)}</p></a>`;

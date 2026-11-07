@@ -31,6 +31,7 @@ Do the **first three** first: they are the most-used tools and the ones Dinero S
 | `es/index.html` (hub) | `tools/build-es-hub.mjs` | needs review |
 | `es/apps.html` (instala las apps) | `tools/build-apps-page.mjs` (the `es` text block) | needs review |
 | `budget/bill-calendar/es.html` (calendario de pagos) | `es.html`, `budget/bill-calendar/app.js` (`es` text), `manifest-es.webmanifest` | needs review |
+| `budget/plan-quincena.html` (de tu cheque a tu presupuesto) | `plan-quincena.html`, `budget/paycheck-plan.js` (`es` text) | needs review |
 | `budget/tablero-dinero.html` (tablero de dinero) | `tablero-dinero.html`, `budget/money-dashboard.js`, `budget/lib/dashboard.js` (category names, sheet text) | needs review |
 | `money-calculators/es/index.html` | `money-calculators/pages-es.mjs` | needs review |
 | `money-calculators/es/take-home-pay/` | `pages-es.mjs`, `lib/text-extra.js` | needs review |

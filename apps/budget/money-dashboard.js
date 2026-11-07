@@ -8,6 +8,7 @@ import { importBankCsv } from './lib/budget.js';
 import { parseStatement } from './lib/statement.js';
 import { CATEGORIES, buildDashboard, workbookSheets, catName, labels } from './lib/dashboard.js';
 import { buildXlsx } from './lib/xlsx.js';
+import { parsePlanCsv, PLAN_STORE } from './lib/paycheck-plan.js';
 import { $, esc, store, live } from './page.js';
 
 const es = document.documentElement.lang.startsWith('es');
@@ -32,6 +33,7 @@ const T = es ? {
   times: (n) => `${n} vez${n === 1 ? '' : 'es'}`,
   pick: 'Elige', more: (n) => `y ${n} más en la hoja.`,
   dropped: (n) => `El archivo tiene ${n} mes${n === 1 ? '' : 'es'} más antiguos; la hoja muestra los últimos 12.`,
+  planLoaded: 'Cargamos tu plan en los presupuestos. Ahora agrega el CSV de tu banco.',
   sample: 'Datos de ejemplo', pasted: 'Texto pegado', filesWord: (n) => (n === 1 ? '1 archivo' : `${n} archivos`),
   saved: (f) => `Listo: se descargó ${f}. Ábrelo en Google Sheets (Archivo > Importar) o en Excel.`,
   reset: '¿Olvidar las categorías que elegiste?',
@@ -48,6 +50,7 @@ const T = es ? {
   times: (n) => `${n} time${n === 1 ? '' : 's'}`,
   pick: 'Pick one', more: (n) => `and ${n} more in the sheet.`,
   dropped: (n) => `Your file has ${n} older month${n === 1 ? '' : 's'}; the sheet shows the latest 12.`,
+  planLoaded: 'Your plan is loaded as the budgets. Now add your bank CSV.',
   sample: 'Sample data', pasted: 'Pasted text', filesWord: (n) => (n === 1 ? '1 file' : `${n} files`),
   saved: (f) => `Done: ${f} downloaded. Open it in Google Sheets (File > Import) or Excel.`,
   reset: 'Forget the categories you picked?',
@@ -155,8 +158,14 @@ $('#download').addEventListener('click', () => {
 async function readFiles(list) {
   const files = [...(list || [])].filter(Boolean);
   if (!files.length) return;
-  const results = await Promise.all(files.map(async (f) => { const text = await f.text(); const r = importBankCsv(text); return r.error ? parseStatement(text, { today }) : r; }));
-  load(results, T.filesWord(files.length));
+  const texts = await Promise.all(files.map((f) => f.text()));
+  // A budget plan CSV from the paycheck planner fills in the budgets instead of being read as transactions.
+  const plans = texts.map(parsePlanCsv).filter(Boolean);
+  for (const plan of plans) setBudgets(plan);
+  const banks = texts.filter((t) => !parsePlanCsv(t));
+  if (!banks.length) { $('#file-msg').textContent = T.planLoaded; return; }
+  const results = banks.map((text) => { const r = importBankCsv(text); return r.error ? parseStatement(text, { today }) : r; });
+  load(results, T.filesWord(banks.length));
 }
 $('#file').addEventListener('change', (e) => readFiles(e.target.files));
 const drop = $('#drop');
@@ -167,8 +176,16 @@ $('#sample').addEventListener('click', () => load([importBankCsv(sampleCsv())], 
 $('#paste-form').addEventListener('submit', (ev) => { ev.preventDefault(); load([parseStatement($('#paste').value, { today })], T.pasted); });
 
 // Budget inputs for the spreadsheet's Budget column (optional).
-$('#budgets').innerHTML = CATEGORIES.filter((c) => c.group === 'spend' && c.key !== 'other').slice(0, 12)
+$('#budgets').innerHTML = CATEGORIES.filter((c) => (c.group === 'spend' && c.key !== 'other') || c.group === 'save')
   .map((c) => `<label>${esc(catName(c.key, lang))}<input type="number" min="0" step="1" inputmode="decimal" data-budget="${c.key}" placeholder="$"></label>`).join('');
+function setBudgets(plan) {
+  for (const [k, v] of Object.entries(plan || {})) {
+    const input = document.querySelector(`[data-budget="${k}"]`);
+    if (input && Number(v) > 0) { input.value = v; budgets[k] = Number(v); }
+  }
+}
+// A plan made in the paycheck planner on this site fills in the budgets.
+try { setBudgets(JSON.parse(store.get(PLAN_STORE) || '{}')?.amounts); } catch { /* no plan */ }
 
 const p = config.sheetTemplate;
 if (p && live(p.url)) {

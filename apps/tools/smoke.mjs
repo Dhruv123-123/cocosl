@@ -219,6 +219,40 @@ const checks = [
   ['/money-calculators/es/tax-refund/', '#result .big', async (page) => {
     if (!/Reembolso estimado/.test(await page.textContent('#result .big'))) throw new Error('es refund');
   }],
+  ['/budget/paycheck-plan.html', '#budgets label', async (page) => {
+    await page.fill('[name=pay]', '1600'); await page.selectOption('[name=freq]', 'biweekly');
+    if (!/\$3,200/.test(await page.textContent('#income'))) throw new Error('monthly');
+    await page.click('#use-split');
+    if (!/Every dollar has a job/.test(await page.textContent('#left'))) throw new Error(`zero-based: ${await page.textContent('#left')}`);
+    await page.fill('[data-cat=dining]', '500');
+    if (!/more than you earn/.test(await page.textContent('#left'))) throw new Error('over');
+    const [dl] = await Promise.all([page.waitForEvent('download'), page.click('#csv')]);
+    const csv = await (await import('node:fs/promises')).readFile(await dl.path(), 'utf8');
+    if (!/^Category,Monthly budget/.test(csv) || !/Eating out & delivery,500/.test(csv)) throw new Error('csv');
+    await page.click('#to-dashboard');
+    await page.waitForURL(/money-dashboard\.html/);
+    if ((await page.inputValue('[data-budget=dining]')) !== '500') throw new Error('plan did not reach the dashboard budgets');
+  }],
+  ['/budget/plan-quincena.html', '#split li', async (page) => {
+    if (!/Necesidades/.test(await page.textContent('#split'))) throw new Error('es split');
+  }],
+  ['/freelance-invoices/rate.html', '#result .big-num', async (page) => {
+    if (!/\$110/.test(await page.textContent('#result .big-num'))) throw new Error(`default rate ${await page.textContent('#result .big-num')}`);
+    await page.fill('[name=current]', '50');
+    if (!/short/.test(await page.textContent('#result'))) throw new Error('current rate');
+  }],
+  ['/embed.html', '#h-plans', async (page) => {
+    await page.selectOption('#tool', 'scam-checker');
+    await page.selectOption('#lang', 'es');
+    if (!/data-tool="scam-checker\/es\/"/.test(await page.inputValue('#code'))) throw new Error('snippet');
+    await page.locator('#preview').scrollIntoViewIfNeeded();
+    const frame = page.frameLocator('#preview iframe');
+    await frame.locator('.mms-credit').waitFor();
+    if (await frame.locator('header.top').isVisible()) throw new Error('header shown in embed');
+    if (!/Scam Shield/.test(await frame.locator('.mms-credit').textContent())) throw new Error('credit');
+    await page.selectOption('#tool', 'calc:debt-payoff');
+    if (!/mms-calc/.test(await page.inputValue('#code'))) throw new Error('calc snippet');
+  }],
   ['/apps.html', '#apps .app', async (page) => {
     if ((await page.locator('#apps .app').count()) !== 4) throw new Error('four apps');
     for (const src of await page.locator('#apps img').evaluateAll((els) => els.map((e) => e.complete && e.naturalWidth))) if (!src) throw new Error('icon did not load');

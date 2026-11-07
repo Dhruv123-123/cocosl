@@ -276,3 +276,16 @@ label.inline select{width:auto}
 @media (max-width:420px){.days .cell{min-height:50px;padding:3px}.days .cell .sum{font-size:11px}}
 .billcal .link{background:none;border:0;color:var(--muted);font:inherit;text-decoration:underline;cursor:pointer;padding:8px 0}
 .billcal .bill-rows .link{padding:4px 8px;text-decoration:none;color:var(--ink)}
+/* Paycheck-to-budget planner */
+.pp .big{font-size:20px;margin:0 0 6px}
+.pp .error{color:var(--neg);font-weight:600;margin:0}
+.split{display:grid;gap:12px;grid-template-columns:1fr}
+@media (min-width:760px){.split{grid-template-columns:repeat(3,1fr)}}
+.split-col{border:1px solid var(--line);border-radius:14px;padding:12px}
+.split-col h3{margin:0;font-size:17px;display:flex;justify-content:space-between;gap:8px}
+.split-col ul{list-style:none;margin:8px 0 0;padding:0}
+.split-col li{display:flex;justify-content:space-between;gap:8px;padding:5px 0;border-top:1px solid var(--line);font-size:15px}
+.plan-group{border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin:0 0 12px;display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));min-width:0}
+.plan-group legend{font-weight:700;padding:0 4px}
+.plan-left{position:sticky;bottom:0;background:var(--card);border:2px solid var(--gold);border-radius:14px;padding:10px 14px;margin-top:6px}
+.plan-left p{margin:0}.plan-left.ok{border-color:var(--green)}.plan-left.bad{border-color:var(--neg)}

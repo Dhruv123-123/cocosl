@@ -100,6 +100,8 @@ Nothing here takes a payment by itself, and nothing goes live until you paste in
 
 ## Embeds and licences
 
+`embed.html` (built by `tools/build-embed-page.mjs`) makes the snippet for every calculator and for the other tools in its `TOOLS` list, which load through `embed.js` and run `lib/embed-page.js` (from `shared/`). Its plan prices ($0, $29 and $99 a month) are **drafts** for Dhruv to set; payment is still the contact link.
+
 `money-calculators/embed/` lets any site embed a calculator with two lines of HTML (`embed.js` makes a
 self-resizing iframe; no cookies). Free embeds carry a "Free calculator by Money Made Simple" link, so each
 one is a backlink. Partners can set `data-accent`, `data-theme`, `data-radius` and starting `data-values`.
