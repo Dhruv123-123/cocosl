@@ -209,21 +209,53 @@ class Factory:
                                 if a.enabled and post["format"] in a.formats]
         if not targets:
             raise ValueError(f"No enabled account in {brand.slug} accepts format '{post['format']}'")
-        pub_ids = []
+        # Work out every slot first so a cadence block can't leave a half-scheduled post behind.
+        plan = []
         for platform in targets:
             slot = at or next_slot(self.db, brand, platform)
             cadence = check_cadence(self.db, brand, platform, slot)
             if cadence.level == "block":
                 raise PermissionError(cadence.message)
+            plan.append((platform, slot))
+        pub_ids = []
+        for platform, slot in plan:
             acct = brand.account(platform)
             pub_ids.append(self.db.insert("publications", {
                 "post_id": post_id, "platform": platform, "account": acct.handle if acct else "",
                 "status": "queued", "scheduled_at": slot.isoformat(),
             }))
-        self.db.update("posts", post_id, {"status": "scheduled", "scheduled_at": min(
-            self.db.get("publications", p)["scheduled_at"] for p in pub_ids)})
+        self.db.update("posts", post_id, {"status": "scheduled", "scheduled_at": min(s for _, s in plan).isoformat()})
         self.db.log("post.scheduled", "post", post_id, {"publications": pub_ids})
         return pub_ids
+
+    def unschedule(self, post_id: int, actor: str = "human") -> int:
+        """Cancel a post's queued publications and put it back to approved. Returns how many were cancelled."""
+        post = self._post(post_id)
+        if post["status"] != "scheduled":
+            raise ValueError(f"Post #{post_id} is {post['status']}, not scheduled")
+        cur = self.db.execute("UPDATE publications SET status = 'cancelled', error = 'unscheduled', updated_at = ? "
+                              "WHERE post_id = ? AND status = 'queued'", [now_iso(), post_id])
+        live = self.db.scalar("SELECT COUNT(*) FROM publications WHERE post_id = ? AND status IN "
+                              "('publishing','published','dry_run','needs_check')", [post_id])
+        self.db.update("posts", post_id, {"status": "published" if live else "approved", "scheduled_at": None})
+        self.db.log("post.unscheduled", "post", post_id, {"cancelled": cur.rowcount}, actor=actor)
+        return cur.rowcount or 0
+
+    def schedule_approved(self, brand: str | None = None, limit: int | None = None) -> dict:
+        """Put every approved, rendered post into the next free slots (oldest approval first).
+        Posts that can't be scheduled are reported, not raised."""
+        sql, params = "SELECT id FROM posts WHERE status = 'approved'", []
+        if brand:
+            sql += " AND brand = ?"
+            params.append(brand)
+        out: dict = {"scheduled": {}, "skipped": {}}
+        for row in self.db.query(sql + " ORDER BY updated_at, id", params)[: limit or None]:
+            try:
+                pubs = self.schedule(row["id"])
+                out["scheduled"][row["id"]] = [self.db.get("publications", p)["scheduled_at"] for p in pubs]
+            except (PermissionError, ValueError, RuntimeError) as e:
+                out["skipped"][row["id"]] = str(e)
+        return out
 
     # ------------------------------------------------------------------ publish
     def build_request(self, post: dict, platform: str):
@@ -276,6 +308,16 @@ class Factory:
                 self.db.update("publications", pub["id"], {
                     "status": "failed", "error": f"post status {post['status'] if post else 'missing'}"})
                 continue
+            late_hours = float(os.environ.get("PUBLISH_LATE_HOURS", "6") or 0)
+            if late_hours and pub["scheduled_at"] < (now - timedelta(hours=late_hours)).isoformat():
+                # The worker was down: don't dump a backlog all at once (that reads as spam). Move it on.
+                from .scheduler import next_slot
+                slot = next_slot(self.db, self.brand(post["brand"]), pub["platform"], after=now)
+                self.db.update("publications", pub["id"], {"scheduled_at": slot.isoformat()})
+                self.db.log("publication.rescheduled_late", "publication", pub["id"],
+                            {"was": pub["scheduled_at"], "now": slot.isoformat()})
+                results.append({"publication": pub["id"], "status": "rescheduled", "at": slot.isoformat()})
+                continue
             if self.db.one("SELECT id FROM publications WHERE post_id = ? AND platform = ? AND id != ? "
                            "AND status = 'published'", [pub["post_id"], pub["platform"], pub["id"]]):
                 self.db.update("publications", pub["id"], {"status": "cancelled",
@@ -321,6 +363,32 @@ class Factory:
             "if it is live, mark it published; if not, requeue it.' WHERE status = 'publishing' "
             "AND COALESCE(updated_at, created_at) < ?", [cutoff])
         return cur.rowcount or 0
+
+    def resolve_publication(self, pub_id: int, action: str, url: str = "", actor: str = "human") -> None:
+        """Human decision on an interrupted (needs_check) or failed publication:
+        'live' = it did go out (record it), 'requeue' = try again at the next free slot, 'drop' = give up."""
+        pub = self.db.get("publications", pub_id)
+        if not pub:
+            raise KeyError(f"No publication #{pub_id}")
+        if pub["status"] not in ("needs_check", "failed"):
+            raise ValueError(f"Publication #{pub_id} is {pub['status']}; only needs_check or failed can be resolved")
+        if action == "live":
+            self.db.update("publications", pub_id, {"status": "published", "url": url or pub["url"],
+                                                    "published_at": pub["published_at"] or now_iso(), "error": ""})
+            self.db.update("posts", pub["post_id"], {"status": "published"})
+        elif action == "requeue":
+            from .scheduler import next_slot
+            post = self._post(pub["post_id"])
+            slot = next_slot(self.db, self.brand(post["brand"]), pub["platform"])
+            self.db.update("publications", pub_id, {"status": "queued", "attempts": 0, "error": "",
+                                                    "scheduled_at": slot.isoformat()})
+            if post["status"] != "published":
+                self.db.update("posts", post["id"], {"status": "scheduled"})
+        elif action == "drop":
+            self.db.update("publications", pub_id, {"status": "cancelled"})
+        else:
+            raise ValueError("action must be live, requeue or drop")
+        self.db.log(f"publication.resolved_{action}", "publication", pub_id, {"url": url}, actor=actor)
 
     # ------------------------------------------------------------------ analytics
     def collect_metrics(self) -> int:

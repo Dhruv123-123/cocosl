@@ -63,6 +63,7 @@ factory revenue report
 factory auth youtube | tiktok | meta        # connect accounts
 factory renderq revoice                     # re-voice silent renders once KOKORO_URL (or another voice) is set
 factory status                              # credentials, queues, worker heartbeat, anything needing you
+factory doctor [--online]                   # is this install ready to make and post content?
 ```
 
 `factory --help` lists everything. Run it in production with `docker compose up -d`.

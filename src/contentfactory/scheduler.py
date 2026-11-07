@@ -16,7 +16,7 @@ def _parse_hhmm(s: str) -> time:
 def taken_slots(db: DB, brand: str, platform: str) -> set[str]:
     rows = db.query(
         """SELECT p.scheduled_at FROM publications p JOIN posts s ON s.id = p.post_id
-           WHERE s.brand = ? AND p.platform = ? AND p.status IN ('queued','publishing','published','dry_run')
+           WHERE s.brand = ? AND p.platform = ? AND p.status IN ('queued','publishing','published','dry_run','needs_check')
            AND p.scheduled_at IS NOT NULL""",
         [brand, platform],
     )

@@ -24,6 +24,10 @@ services:
     command: ["python", "-m", "contentfactory.worker"]
     environment:
       RENDER_QUEUE: "1"
+    healthcheck:
+      test: ["CMD", "python", "-m", "contentfactory.health", "worker"]
+      interval: 5m
+      start_period: 2m
     restart: unless-stopped
 
   renderer:
@@ -33,6 +37,9 @@ services:
       - ./data:/data
       - ./brands:/app/brands
     command: ["python", "-m", "contentfactory.renderq"]
+    healthcheck:
+      test: ["CMD", "python", "-m", "contentfactory.health"]
+      interval: 5m
     restart: unless-stopped
 
   # Optional: serve rendered media over HTTPS for Instagram/Threads.

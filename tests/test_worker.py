@@ -83,3 +83,18 @@ def test_status_reports_alerts(factory):
     c = TestClient(create_app(factory), client=("203.0.113.9", 4000), headers={"Authorization": "Bearer t"})
     body = c.get("/api/status").json()
     assert "render_queue" in body and "publications" in body
+
+
+def test_status_flags_missing_media_and_disconnected_platform(factory, fake_render):
+    from contentfactory.health import system_status
+    idea = factory.ideas("money-made-simple", n=2, online=False)[0]
+    pid = factory.produce(idea)
+    factory.approve(pid)
+    factory.schedule(pid)
+    assert not any("media files are missing" in a for a in system_status(factory)["alerts"])
+    post = factory.db.get("posts", pid)
+    f = post["assets"].get("video") or post["assets"]["slides"][0]
+    (factory.settings.output_dir / f).unlink()
+    assert any("media files are missing" in a for a in system_status(factory)["alerts"])
+    factory.settings.dry_run = False
+    assert any("isn't connected" in a for a in system_status(factory)["alerts"])
