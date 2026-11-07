@@ -69,3 +69,32 @@ def test_other_brand_configs(factory, tmp_path, brand):
         pytest.skip(f"{brand} packs not merged yet")
     res = channels.export(factory, brand, cfg_path, tmp_path, render=False)
     assert res["pins"] == 60 and res["issues"] == 12 and res["block"] == 0 and res["warn"] == 0
+
+
+def test_store_links_tagged():
+    from contentfactory.channels import tag_url
+    site = "https://moneymadesimple.netlify.app"
+    g = tag_url("https://me.gumroad.com/l/budget", "pinterest", "social", "pin-budget-1", site)
+    assert g == "https://me.gumroad.com/l/budget?utm_source=pinterest&utm_medium=social&utm_campaign=pin-budget-1"
+    s = tag_url("https://buy.stripe.com/abc?prefilled_email=x#top", "newsletter", "email", "newsletter-03", site)
+    assert s == ("https://buy.stripe.com/abc?prefilled_email=x&utm_source=newsletter&utm_medium=email"
+                 "&utm_campaign=newsletter-03&client_reference_id=newsletter__email__newsletter-03#top")
+    assert tag_url(site + "/blog/x/", "x", "social", "t", site).endswith("?utm_source=x&utm_medium=social&utm_campaign=t")
+    aff = "https://sofi.sjv.io/abc123"
+    assert tag_url(aff, "pinterest", "social", "p", site) == aff  # affiliate links stay untouched
+    tagged = g
+    assert tag_url(tagged, "x", "social", "other", site) == tagged  # never override existing UTM
+
+
+def test_export_has_no_untagged_links(factory, tmp_path):
+    import re
+    from contentfactory.channels import is_store_link
+    out = tmp_path / "out"
+    channels.export(factory, "money-made-simple", CONFIG, out, render=False)
+    untagged = []
+    for f in out.rglob("*"):
+        if f.suffix in {".csv", ".txt", ".html", ".md", ".json"}:
+            for url in re.findall(r"https?://[^\s\"'<>(),\]\\]+", f.read_text()):
+                if (is_store_link(url) or "moneymadesimple.netlify.app" in url) and "utm_source=" not in url:
+                    untagged.append(f"{f.name}: {url}")
+    assert not untagged, untagged[:5]

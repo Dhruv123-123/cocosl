@@ -75,12 +75,40 @@ def check_text(brand, text: str, *, needs_ai: bool = True) -> list[dict]:
 
 
 # ---------------------------------------------------------------- links
+STORE_HOSTS = ("gumroad.com", "gum.co", "buy.stripe.com")
+
+
+def _host(url: str) -> str:
+    m = re.match(r"https?://([^/?#]+)", url or "", re.I)
+    return m.group(1).split("@")[-1].split(":")[0].lower() if m else ""
+
+
+def is_store_link(url: str) -> bool:
+    h = _host(url)
+    return any(h == x or h.endswith("." + x) for x in STORE_HOSTS)
+
+
+def tag_url(url: str, source: str, medium: str, campaign: str, site: str = "") -> str:
+    """UTM-tag our own site and Gumroad/Stripe checkout links (docs/UTM.md). Anything else, such as
+    affiliate links, is returned untouched. Stripe drops utm_* at checkout, so Stripe links also get
+    client_reference_id=<source>__<medium>__<campaign>. Existing UTM is never overridden."""
+    own = bool(site) and _host(url) == _host(site)
+    if not url or not (own or is_store_link(url)) or "utm_source=" in url:
+        return url
+    clean = lambda v: re.sub(r"[^A-Za-z0-9-]+", "-", str(v).strip().lower()).strip("-")[:60] or "na"
+    base, _, frag = url.partition("#")
+    q = f"utm_source={clean(source)}&utm_medium={clean(medium)}&utm_campaign={clean(campaign)}"
+    h = _host(url)
+    if (h == "buy.stripe.com" or h.endswith(".buy.stripe.com")) and "client_reference_id=" not in base:
+        q += "&client_reference_id=" + "__".join(clean(v) for v in (source, medium, campaign))
+    return base + ("&" if "?" in base else "?") + q + ("#" + frag if frag else "")
+
+
 @dataclass
 class Links:
     site: str
     articles: dict  # slug -> {title, keywords}
     products: dict  # slug -> {name, url}
-    utm: str = "utm_source={src}&utm_medium=social&utm_campaign={camp}"
     min_score: int = 3
     free_path: str = "/free/"
     free_label: str = "The free download"
@@ -95,9 +123,7 @@ class Links:
             base = self.site + self.free_path
         else:
             base = target
-        if not base.startswith(self.site):  # leave store links clean; Gumroad keeps its own stats
-            return base
-        return f"{base}?{self.utm.format(src=src, camp=camp).replace('medium=social', 'medium=' + medium)}"
+        return tag_url(base, src, medium, camp, self.site)
 
     def label(self, target: str) -> str:
         kind, _, slug = target.partition(":")
