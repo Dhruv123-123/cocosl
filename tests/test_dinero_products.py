@@ -706,3 +706,19 @@ def test_reviewer_kit_test_is_from_the_lean_set_and_matches_its_key():
     chan = (DS / "CHANNEL_RESERVATION.md").read_text()
     brand = (ROOT / "brands" / "dinero-simple.yaml").read_text()
     assert "@dinerosimple" in brand and "`@dinerosimple`" in chan and "Upload nothing" in chan
+
+
+def test_start_here_points_at_real_files_and_current_blanks():
+    """DINERO_START_HERE.md lists every blank: each file it names exists, and each placeholder it quotes is still there."""
+    doc = (DS / "DINERO_START_HERE.md").read_text()
+    for rel in ("CHANNEL_RESERVATION.md", "reviewer/JOB_POST.md", "reviewer/RUBRIC.md", "reviewer/WORKFLOW.md",
+                "lean/LEAN_LAUNCH.md", "POSTING_PLAN_LEAN.md", "review/REVIEW_PACKETS.md"):
+        assert f"`{rel}`" in doc and (DS / rel).exists(), rel
+    kit = (ROOT / "sites" / "dinero-simple" / "content" / "products" / "el-kit-para-recortar-gastos.md").read_text()
+    seq = (ROOT / "brands" / "sequences" / "dinero-simple.yaml").read_text()
+    site = json.loads((ROOT / "sites" / "dinero-simple" / "site.json").read_text())
+    for blank, where in (("https://example.gumroad.com/l/recortar-gastos", kit),
+                         ("https://example.com/credito-sin-seguro-social/", seq),
+                         ("hola@example.com", site["contact_email"]), (site["url"].removeprefix("https://"), site["url"])):
+        if blank in where:  # still a placeholder: the page must list it (drop the row once it's filled)
+            assert blank in doc, blank
