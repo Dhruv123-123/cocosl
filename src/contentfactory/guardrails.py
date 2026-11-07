@@ -80,7 +80,7 @@ def check_originality(db: DB, brand: str, text: str, exclude_post_id: int | None
     """Compare against this brand's last 200 posts. YouTube's 'inauthentic
     content' rule targets videos with only superficial differences."""
     rows = db.query(
-        "SELECT id, script FROM posts WHERE brand = ? AND id != ? ORDER BY id DESC LIMIT 200",
+        "SELECT id, script FROM posts WHERE brand = ? AND id != ? AND status != 'rejected' ORDER BY id DESC LIMIT 200",
         [brand, exclude_post_id or -1],
     )
     mine = shingles(text)

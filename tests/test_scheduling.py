@@ -63,3 +63,13 @@ def test_unschedule_returns_post_to_approved(factory, fake_render):
     assert factory.unschedule(pid) >= 1
     assert factory.db.get("posts", pid)["status"] == "approved"
     assert factory.schedule(pid)                           # can be rescheduled
+
+
+def test_rejected_duplicate_does_not_block_originality(factory, fake_render):
+    idea = factory.ideas("money-made-simple", n=2, online=False)[0]
+    a = factory.produce(idea, render=False)
+    script = factory.db.get("posts", a)["script"]
+    b = factory.import_script("money-made-simple", script, factory.db.get("posts", a)["format"], render=False)
+    assert factory.db.get("posts", b)["status"] == "blocked"
+    factory.reject(a, "duplicate")
+    assert factory.check(b)["status"] != "block"
