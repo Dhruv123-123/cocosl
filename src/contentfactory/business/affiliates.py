@@ -74,7 +74,8 @@ def with_utm(url: str, **utm: str) -> str:
     return urlunsplit(parts._replace(query=urlencode(query)))
 
 
-def resolve_click(db: DB, slug: str, post_id: int | str | None = None, platform: str = "") -> str | None:
+def resolve_click(db: DB, slug: str, post_id: int | str | None = None, platform: str = "",
+                  utm: dict | None = None) -> str | None:
     """Count a click and return the destination URL with UTM params, or None if unknown."""
     link = db.one("SELECT * FROM affiliate_links WHERE slug = ?", [slug.lower()])
     if not link:
@@ -83,8 +84,12 @@ def resolve_click(db: DB, slug: str, post_id: int | str | None = None, platform:
     pid = int(post_id) if str(post_id or "").isdigit() else None
     platform = re.sub(r"[^a-z0-9_-]", "", (platform or "").lower())[:20]
     db.log("affiliate.click", "affiliate_link", link["id"], {"slug": slug, "post_id": pid, "platform": platform})
-    return with_utm(link["url"], source=platform or link["brand"] or "contentfactory", medium="social",
-                    campaign=link["slug"], content=f"post-{pid}" if pid else "")
+    clean = lambda v: re.sub(r"[^A-Za-z0-9_.-]", "", str(v or ""))[:60]  # noqa: E731
+    utm = {k.removeprefix("utm_"): clean(v) for k, v in (utm or {}).items() if clean(v)}
+    params = {"source": platform or link["brand"] or "contentfactory", "medium": "social",
+              "campaign": link["slug"], "content": f"post-{pid}" if pid else ""}
+    params.update({k: v for k, v in utm.items() if k in params or k == "term"})
+    return with_utm(link["url"], **params)
 
 
 def clicks_by_post(db: DB, slug: str | None = None) -> list[dict]:

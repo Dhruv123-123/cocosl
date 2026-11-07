@@ -28,6 +28,7 @@ import httpx
 from ..config import BrandProfile
 from ..db import DB
 from ..publish.base import MissingCredentials
+from . import attribution
 
 REVENUE_SOURCES = {"affiliate", "adsense", "creator_fund", "sponsorship", "ugc", "product", "other"}
 DEFAULT_TOLERANCE = 300
@@ -92,6 +93,9 @@ def record_revenue(db: DB, *, source: str, amount_cents: int, currency: str, bra
         if brand:  # e.g. charge.succeeded (no metadata) arrived before checkout.session.completed
             db.execute("UPDATE revenue SET brand = ? WHERE source = ? AND external_id = ? AND brand = ''",
                        [brand, source, external_id])
+        if "utm_" in note:  # the event carrying attribution arrived second: keep its UTM
+            db.execute("UPDATE revenue SET note = ? WHERE source = ? AND external_id = ? AND note NOT LIKE '%utm_%'",
+                       [note[:500], source, external_id])
         return None
 
 
@@ -125,12 +129,14 @@ def handle_stripe_event(db: DB, event: dict) -> dict:
     if not amount:
         return {"recorded": False, "reason": "zero amount"}
     meta = obj.get("metadata") or {}
+    utm = {**attribution.parse_client_reference(obj.get("client_reference_id") or ""),
+           **attribution.utm_from_mapping(meta)}
     pi = obj.get("payment_intent")
     pi = pi.get("id") if isinstance(pi, dict) else pi
     ext = f"stripe:{pi or obj.get('id') or event.get('id')}"
     row = record_revenue(db, source=meta.get("source", "product"), amount_cents=int(amount),
                          currency=obj.get("currency", "usd"), brand=meta.get("brand", ""), external_id=ext,
-                         note=f"Stripe {etype}: {name}"[:200], date=_date(obj.get("created") or event.get("created")))
+                         note=f"Stripe {etype}: {name}"[:200] + attribution.note_suffix(utm), date=_date(obj.get("created") or event.get("created")))
     db.log("funnel.stripe_event", "revenue", row, {"type": etype, "event": event.get("id"), "duplicate": row is None})
     return {"recorded": row is not None, "revenue_id": row, "external_id": ext,
             "reason": "" if row else "duplicate"}
@@ -161,7 +167,8 @@ def handle_gumroad_ping(db: DB, form: dict, brands: dict[str, BrandProfile], bra
 
     Fields used (Gumroad Ping, form-encoded): sale_id, price (cents),
     currency, product_name, permalink / product_permalink, refunded, test,
-    sale_timestamp. TODO: re-check names against Gumroad's current Ping docs
+    sale_timestamp, url_params (UTM from the product URL, stored in the
+    revenue note for attribution). TODO: re-check names against Gumroad's current Ping docs
     (https://gumroad.com/ping) when going live; unknown fields are ignored."""
     sale_id = str(form.get("sale_id", "")).strip()
     if not sale_id:
@@ -185,7 +192,8 @@ def handle_gumroad_ping(db: DB, form: dict, brands: dict[str, BrandProfile], bra
     ts = str(form.get("sale_timestamp", ""))[:10]
     row = record_revenue(db, source="product", amount_cents=cents, currency=str(form.get("currency", "usd")),
                          brand=brand, external_id=f"gumroad:{sale_id}",
-                         note=f"Gumroad: {form.get('product_name', permalink)}"[:200],
+                         note=f"Gumroad: {form.get('product_name', permalink)}"[:200]
+                         + attribution.note_suffix(attribution.utm_from_mapping(form)),
                          date=ts if len(ts) == 10 and ts[4] == "-" else datetime.now(timezone.utc).date().isoformat())
     db.log("funnel.gumroad_ping", "revenue", row, {"sale_id": sale_id, "duplicate": row is None})
     return {"recorded": row is not None, "revenue_id": row, "reason": "" if row else "duplicate"}

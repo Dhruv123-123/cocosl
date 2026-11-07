@@ -5,9 +5,50 @@
 <h1>UGC clients</h1>
 <p class="muted">Pipeline for the AI UGC ad service. Outreach is drafts only: export them, review, and send from your own mail client.</p>
 
+<div class="card" id="today">
+  <div class="card-head">
+    <h2>Today: {{ outreach.count }} email{{ '' if outreach.count == 1 else 's' }} to send</h2>
+    <span class="muted">{{ outreach.date }}</span>
+  </div>
+  {% if outreach.count == 0 and not outreach.to_draft %}
+  <p class="muted">Nothing due. Import leads or draft pitches below. After you send a pitch, press "Mark sent" and follow-ups get scheduled for +3 and +7 days.</p>
+  {% endif %}
+  {% for item in outreach.follow_ups %}{% set c = item.client %}
+  <details class="today-item">
+    <summary><span class="badge badge-warn">follow-up {{ item.step }}/2</span> <strong>{{ c.name }}</strong> <span class="muted">{{ c.email }}{% if item.days_late > 0 %} · {{ item.days_late }} day{{ 's' if item.days_late > 1 }} late{% endif %}</span></summary>
+    <p><strong>Subject:</strong> {{ item.subject }}</p>
+    <pre class="email">{{ item.body }}</pre>
+    <div class="btn-row">
+      <a class="btn" href="{{ mailto(c, item.subject, item.body) }}">Open in mail app</a>
+      <form method="post" action="/business/clients/{{ c.id }}/sent" class="inline-form"><input type="hidden" name="back" value="/business/clients"><button class="btn btn-primary">Mark sent</button></form>
+      <a class="btn" href="/business/clients/{{ c.id }}">Client</a>
+    </div>
+  </details>
+  {% endfor %}
+  {% for item in outreach.first_touch %}{% set c = item.client %}
+  <details class="today-item">
+    <summary><span class="badge badge-info">first pitch</span> <strong>{{ c.name }}</strong> <span class="muted">{{ c.email }}</span></summary>
+    <p><strong>Subject:</strong> {{ item.subject }}</p>
+    <pre class="email">{{ item.body }}</pre>
+    <div class="btn-row">
+      <a class="btn" href="{{ mailto(c, item.subject, item.body) }}">Open in mail app</a>
+      <form method="post" action="/business/clients/{{ c.id }}/sent" class="inline-form"><input type="hidden" name="back" value="/business/clients"><button class="btn btn-primary">Mark sent</button></form>
+      <a class="btn" href="/business/clients/{{ c.id }}">Client</a>
+    </div>
+  </details>
+  {% endfor %}
+  {% if outreach.to_draft %}
+  <p class="muted" style="margin-top:10px">{{ outreach.to_draft|length }} lead{{ 's' if outreach.to_draft|length > 1 }} with no draft yet:
+    {% for item in outreach.to_draft[:8] %}<a href="/business/clients/{{ item.client.id }}">{{ item.client.name }}</a>{{ ', ' if not loop.last }}{% endfor %}{{ '…' if outreach.to_draft|length > 8 }}.
+    Use "Draft pitches for new leads" below.</p>
+  {% endif %}
+  <p class="muted" style="font-size:.85rem;margin-top:8px">Nothing is sent from here. "Open in mail app" fills a draft in your own email; send it, then press "Mark sent". Follow-ups stop automatically when a client replies, wins, is lost or opts out.</p>
+</div>
+<style>.today-item{border-top:1px solid rgba(127,127,127,.2);padding:10px 0}.today-item summary{cursor:pointer;display:flex;gap:8px;align-items:center;flex-wrap:wrap}</style>
+
 {% if due %}
 <div class="card">
-  <h2>Follow-ups due ({{ due|length }})</h2>
+  <h2>Other follow-ups due ({{ due|length }})</h2>
   <table class="table">
     <tr><th>Client</th><th>Status</th><th>Due</th></tr>
     {% for c in due %}

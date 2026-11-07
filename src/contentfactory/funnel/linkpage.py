@@ -48,7 +48,7 @@ def public_env() -> jinja2.Environment:
 
 
 def slugify(text: str) -> str:
-    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:48] or "link"
+    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:48].rstrip("-") or "link"
 
 
 # ---------------------------------------------------------------- data
@@ -114,13 +114,24 @@ def _price(value) -> str:
     return f"${v:,.0f}" if v == int(v) else f"${v:,.2f}"
 
 
-def products(db: DB, brand: BrandProfile) -> list[dict]:
-    """Brand YAML products plus listed products from the business `products` table."""
-    out, urls = [], set()
+def products(db: DB, brand: BrandProfile, *, settings: Settings | None = None, base_url: str | None = None,
+             utm: dict | None = None) -> list[dict]:
+    """Brand YAML products plus listed products from the business `products` table.
+
+    Each entry: {name, url (checkout), price, slug, page_url, raw}. page_url is
+    the sales page (/p/<brand>/<slug>) with UTM params from `utm`
+    ({source, medium, campaign}; campaign defaults to the product slug)."""
+    from .attribution import with_utm
+    from .brandfunnel import launch_state
+    from .salespage import _overrides, product_slug
+    base = (base_url or public_url(settings)).rstrip("/")
+    utm = utm or {}
+    raw: list[dict] = []
+    urls: set[str] = set()
     for p in brand.products:
-        if p.get("url"):
+        if p.get("url") and p["url"] not in urls:
             urls.add(p["url"])
-            out.append({"name": p.get("name", "Product"), "url": p["url"], "price": _price(p.get("price"))})
+            raw.append(dict(p))
     try:
         rows = db.query("SELECT name, url, price_cents FROM products WHERE brand = ? AND status = 'listed' "
                         "AND url != '' ORDER BY id DESC", [brand.slug])
@@ -129,7 +140,19 @@ def products(db: DB, brand: BrandProfile) -> list[dict]:
     for r in rows:
         if r["url"] not in urls:
             urls.add(r["url"])
-            out.append({"name": r["name"], "url": r["url"], "price": _price((r["price_cents"] or 0) / 100)})
+            raw.append({"name": r["name"], "url": r["url"], "price": (r["price_cents"] or 0) / 100})
+    out = []
+    for p in raw:
+        slug = product_slug(settings, brand, p)
+        page = with_utm(f"{base}/p/{brand.slug}/{slug}", utm.get("source", ""), utm.get("medium", ""),
+                        utm.get("campaign", "") or (slug if utm else ""))
+        o = _overrides(settings, brand, p)
+        price = str(o.get("price") or _price(p.get("price")))
+        launch = launch_state({**o, "price": price})
+        out.append({"name": o.get("name") or p.get("name", "Product"), "url": p["url"],
+                    "price": launch["launch_price"] if launch["active"] else price,
+                    "regular_price": price if launch["active"] else "",
+                    "slug": slug, "page_url": page, "raw": p})
     return out
 
 
@@ -144,16 +167,27 @@ def sync_affiliate_links(db: DB, brand: BrandProfile) -> list[dict]:
     return out
 
 
-def lead_magnet(brand: BrandProfile) -> dict:
-    """The freebie offered at signup: a free product if the brand lists one,
-    otherwise a starter checklist generated from the brand pillars."""
+def lead_magnet(brand: BrandProfile, settings: Settings | None = None) -> dict:
+    """The freebie offered at signup: the `lead_magnet` in the brand's funnel
+    file (brands/sequences/<brand>.yaml) if there is one, else a free product
+    the brand lists, else a starter checklist generated from the pillars."""
+    from .brandfunnel import load_funnel
+    cfg = load_funnel(settings, brand.slug)
+    lm = cfg.get("lead_magnet") or {}
+    welcome = " Then a short welcome series and one useful email a week." if cfg.get("steps") else ""
+    if lm.get("title"):
+        return {"kind": "checklist" if not lm.get("url") else "product", "title": lm["title"],
+                "url": lm.get("url", ""), "pitch": lm.get("pitch") or f"Get {lm['title']} free when you join.",
+                "after": welcome or " One useful email a week."}
     free = next((p for p in brand.products if _price(p.get("price")) == "Free" and p.get("url")), None)
     if free:
         return {"kind": "product", "title": free.get("name", "Free download"), "url": free["url"],
-                "pitch": f"Get {free.get('name', 'the free download')} when you join."}
+                "pitch": f"Get {free.get('name', 'the free download')} when you join.",
+                "after": welcome or " One useful email a week."}
     title = f"The {brand.name} Starter Checklist"
     return {"kind": "checklist", "title": title, "url": "",
-            "pitch": "A free one-page checklist to get you started, sent when you join the weekly email."}
+            "pitch": "A free one-page checklist to get you started, sent when you join the weekly email.",
+            "after": welcome or " One useful email a week."}
 
 
 class ChecklistSection(BaseModel):
@@ -188,6 +222,10 @@ def lead_magnet_path(settings: Settings, brand: BrandProfile) -> Path:
 def ensure_lead_magnet(settings: Settings, brand: BrandProfile, llm=None, *, refresh: bool = False) -> Checklist:
     """Write the checklist lead magnet once (LLM when available, offline
     fallback otherwise) and cache it next to the link page."""
+    from .brandfunnel import load_funnel
+    sections = (load_funnel(settings, brand.slug).get("lead_magnet") or {}).get("sections")
+    if sections:  # hand-written checklist in the funnel file wins (no LLM, no cache)
+        return Checklist.model_validate({"sections": sections})
     path = lead_magnet_path(settings, brand)
     if path.exists() and not refresh:
         try:
@@ -214,13 +252,16 @@ def ensure_lead_magnet(settings: Settings, brand: BrandProfile, llm=None, *, ref
 # ---------------------------------------------------------------- render
 def link_page_context(settings: Settings, db: DB, brand: BrandProfile, base_url: str | None = None) -> dict:
     base = (base_url or public_url(settings)).rstrip("/")
+    from .attribution import with_utm
     affiliates = sync_affiliate_links(db, brand)
+    utm = {"source": "linkpage", "medium": "bio"}
     return {
         "brand": brand, "t": theme(brand), "avatar": avatar_data_uri(settings, brand),
         "initials": _initials(brand.name), "socials": socials(brand), "posts": latest_posts(db, brand.slug),
-        "products": products(db, brand),
-        "affiliates": [{"name": a["name"], "url": f"{base}/go/{a['slug']}"} for a in affiliates],
-        "affiliate_note": AFFILIATE_NOTE, "magnet": lead_magnet(brand),
+        "products": products(db, brand, settings=settings, base_url=base, utm=utm),
+        "affiliates": [{"name": a["name"], "url": with_utm(f"{base}/go/{a['slug']}?s=linkpage", campaign=a["slug"],
+                                                           **utm)} for a in affiliates],
+        "affiliate_note": AFFILIATE_NOTE, "magnet": lead_magnet(brand, settings),
         "subscribe_url": f"{base}/subscribe/{brand.slug}", "base": base, "year": now_iso()[:4],
     }
 
@@ -238,7 +279,7 @@ def build_link_page(settings: Settings, brand: BrandProfile, db: DB | None = Non
                     base_url: str | None = None, llm=None) -> Path:
     """Write output/<slug>/site/index.html (and the cached lead magnet
     checklist) and return the page path."""
-    if lead_magnet(brand)["kind"] == "checklist":
+    if lead_magnet(brand, settings)["kind"] == "checklist":
         ensure_lead_magnet(settings, brand, llm)
     own = db is None
     db = db or DB(settings.db_path)
@@ -264,4 +305,4 @@ def render_message(brand: BrandProfile | None, title: str, body: str, *, button:
 def render_checklist(settings: Settings, brand: BrandProfile, llm=None) -> str:
     checklist = ensure_lead_magnet(settings, brand, llm)
     return public_env().get_template("freebie.html").render(
-        brand=brand, t=theme(brand), magnet=lead_magnet(brand), sections=[s.model_dump() for s in checklist.sections])
+        brand=brand, t=theme(brand), magnet=lead_magnet(brand, settings), sections=[s.model_dump() for s in checklist.sections])

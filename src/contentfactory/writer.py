@@ -69,6 +69,8 @@ def _offline_script(brand: BrandProfile, title: str, angle: str, fmt: str) -> Sc
         hashtags=tags, description=f"{title}. {angle}.",
         thumbnail_text=" ".join(topic.split()[:4]),
         sources=[], claims_to_verify=[f"Check every example in '{title}' before publishing"],
+        title_variants=[f"{topic}: the short version", f"What I'd tell a friend about {topic.lower()}"],
+        hook_variants=[f"Quick one about {topic.lower()}.", f"Nobody explains {topic.lower()} like this."],
     )
 
 
@@ -86,7 +88,8 @@ Angle: {angle}
 {('Editor notes: ' + notes) if notes else ''}
 
 Caption: write it for Instagram/TikTok (value first, then CTA). If you mention an affiliate offer,
-the caption must say it's an affiliate link. Hashtags: specific, not generic spam."""
+the caption must say it's an affiliate link. Hashtags: specific, not generic spam.
+Also give 2-3 title_variants and 2-3 hook_variants that test genuinely different angles (not synonyms)."""
     return llm.structured(Script, system=SYSTEM, prompt=prompt, purpose=f"script:{fmt}",
                           offline=lambda: _offline_script(brand, title, angle, fmt))
 

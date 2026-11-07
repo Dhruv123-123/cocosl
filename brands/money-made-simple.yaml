@@ -54,7 +54,7 @@ affiliates:
     keywords: [savings account, hysa, emergency fund]
     commission: "$50 per funded account"
 products:
-  - {name: "The 20-Minute Budget (Notion + Sheets template)", url: "https://example.gumroad.com/l/budget", price: 12}
+  - {name: "The 20-Minute Budget (guide + Excel/Sheets/Numbers template)", slug: 20-minute-budget, url: "https://example.gumroad.com/l/budget", price: 12}
 ai_disclosure: "Visuals and voice made with AI tools. Script written and fact-checked by a human. Not financial advice."
 realistic_synthetic_media: false
 require_human_review: true
