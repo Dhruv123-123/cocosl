@@ -82,6 +82,9 @@ factory recordings                           # posts waiting on your voice or a 
 factory ui                                   # one local page (127.0.0.1 only): calendar, review queue, recordings, launch check
 factory manual [build|copy <pub>|done <pub> --url]  # TikTok + Pinterest post-by-hand packages
 factory numbers <post id>  (or --text "...")  # recompute loan, payoff, growth and federal tax figures (numpy-financial, Tax-Calculator)
+factory youtube-plan --brand <slug> [--write]   # playlists, end screens, Shorts related videos -> launch/<slug>/YOUTUBE_PLAN.md
+factory report --html                         # weekly one-page HTML per brand from imported stats: best/worst posts, next topics
+factory triage [--save]                       # everything waiting on you across brands, most urgent first
 factory brand new <slug> --name ... --import  # scaffold a brand: YAML, caps, voice/footage folders, 3 sample posts
 factory brand remove <slug> --yes            # undo a scaffold (refuses if anything is scheduled or published)
 factory launch-check [--online]             # red/yellow/green: links, UTM tags, placeholders, disclosures, caption limits
