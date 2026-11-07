@@ -124,9 +124,13 @@ def _publishing(f: Factory, online: bool) -> list[Result]:
     multi = len(f.brands()) > 1
     for slug, b in f.brands().items():
         status = credential_status(f.settings.for_brand(slug))
+        from .manual import is_manual
         for platform in sorted({a.platform for a in b.accounts if a.enabled}):
-            missing = status.get(platform, [])
             name = f"{slug}/{platform}" if multi else platform
+            if is_manual(platform):
+                res.append(Result(name, "ok", "post by hand (packages in output/manual; no keys needed)"))
+                continue
+            missing = status.get(platform, [])
             res.append(Result(name, "ok" if not missing else ("warn" if f.settings.dry_run else "fail"),
                               "connected" if not missing else f"missing {', '.join(missing)} (docs/CREDENTIALS.md)"))
             if platform == "youtube" and not missing:

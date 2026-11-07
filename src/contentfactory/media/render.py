@@ -151,16 +151,22 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
         texts += [_short_words(t) for t in [*script.title_variants, script.title] if _short_words(t)]
         texts = list(dict.fromkeys(texts))
         arts = [images[min(i, len(images) - 1)] for i in (len(images) // 2, len(images) - 1)]
-        for k, (art, text) in enumerate(zip(arts, (texts[1:] + texts)[:2]), start=1):
+        for k, (art, text, style) in enumerate(zip(arts, (texts[1:] + texts)[:2], ("right", "band")), start=1):
             variants.append(render_thumbnail(art, text, palette, brand.visual.font, brand.visual.watermark,
-                                             out / f"thumbnail-{k + 1}.png"))
+                                             out / f"thumbnail-{k + 1}.png", style=style))
     if sig and "thumbnail" in sig["where"]:
         for v in (thumb, *variants):
             stamp(v, sig, palette, brand.visual.font)
+    test_compare = []
+    if fmt == "long" and variants:  # three distinct looks, ready for YouTube's Test & compare
+        from .thumbnail import test_compare_set
+        test_compare = test_compare_set([thumb, *variants], out / "test-and-compare")
     prov = _image_provenance(imgs)
     for v in variants:
         prov.append(provenance(str(v), "rendered", "pillow", "thumbnail variant"))
         prov.append(provenance(str(v.with_suffix(".jpg")), "rendered", "pillow", "thumbnail variant (JPEG)"))
+    for v in test_compare:
+        prov.append(provenance(str(v), "rendered", "pillow", "YouTube Test & compare thumbnail (under 2 MB)"))
     prov.append(provenance(str(audio), "own" if tts.provider == "human" else "generated", tts.tool, " ".join(lines),
                            provider=tts.provider,
                            note="Voice must be your own or licensed."))
@@ -180,7 +186,7 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     return {"video": video, "audio": audio, "captions_srt": srt, "images": [r.path for r in imgs], "slides": [],
             "thumbnail": thumb, "thumbnail_variants": [thumb, *variants], "duration": round(duration, 3),
             "chapters": chapters.build(starts, duration) if fmt == "long" else [], "look": look,
-            "end_slate_seconds": slate_s,
+            "end_slate_seconds": slate_s, "test_compare": test_compare,
             "signature": sig["device"] if sig else None, "provenance": prov}
 
 
@@ -317,6 +323,8 @@ def _relativize(assets: dict, build: Path, final: Path, root: Path) -> dict:
     out["slides"] = [rel(p) for p in assets.get("slides", [])]
     if assets.get("thumbnail_variants"):
         out["thumbnail_variants"] = [rel(p) for p in assets["thumbnail_variants"]]
+    if assets.get("test_compare"):
+        out["test_compare"] = [rel(p) for p in assets["test_compare"]]
     out["provenance"] = [{**e, "path": rel(e["path"])} for e in assets.get("provenance", [])]
     return out
 
