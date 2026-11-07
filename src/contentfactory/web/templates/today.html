@@ -1,11 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Today<script>
-document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', async () => {
-  try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = 'Copied'; }
-  catch (e) { prompt('Copy the caption:', b.dataset.copy); }
-}));
-</script>
-{% endblock %}
+{% block title %}Today{% endblock %}
 {% block content %}
 <div class="page-head">
   <div><h1>Today</h1><p class="muted">Everything that needs you, in one place · {{ now }}</p></div>
@@ -83,6 +77,13 @@ document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click'
   {% else %}<p class="muted">Nothing scheduled in the next 7 days.</p>{% endif %}
 </div>
 <script>
+document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = 'Copied'; }
+  catch (e) { prompt('Copy the caption:', b.dataset.copy); }
+}));
+</script>
+{% endblock %}
+{% block scripts %}<script>
 document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', async () => {
   try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = 'Copied'; }
   catch (e) { prompt('Copy the caption:', b.dataset.copy); }

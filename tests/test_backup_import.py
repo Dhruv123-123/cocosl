@@ -42,3 +42,52 @@ def test_import_is_rerunnable(home, monkeypatch, fake_render, tmp_path):
     fac = Factory.create(Settings.load(home))
     rows = fac.db.query("SELECT id, status, assets FROM posts WHERE title = 'Rerun me'")
     assert len(rows) == 1
+
+
+def test_archive_and_restore(factory, tmp_path):
+    import json
+    import zipfile
+    from pathlib import Path
+
+    from contentfactory.backup import backup_archive, restore_archive
+    home = factory.settings.home
+    (home / "voice" / "money-made-simple").mkdir(parents=True, exist_ok=True)
+    (home / "voice" / "money-made-simple" / "post-1.wav").write_bytes(b"take")
+    (home / "data").mkdir(exist_ok=True)
+    (home / "data" / "scorecard-manual.yaml").write_text("x: 1\n")
+    pid = factory.db.insert("posts", {"brand": "money-made-simple", "format": "short", "status": "approved", "title": "Keep me",
+                                      "caption": "", "script": {}, "hashtags": [], "disclosure": "", "meta": {}, "assets": {}})
+    z = backup_archive(factory, tmp_path / "b")
+    names = zipfile.ZipFile(z).namelist()
+    assert "MANIFEST.json" in names and "voice/money-made-simple/post-1.wav" in names
+    assert "data/scorecard-manual.yaml" in names and ".env" not in names
+    assert any(n.startswith("brands/") for n in names)
+    m = json.loads(zipfile.ZipFile(z).read("MANIFEST.json"))
+    assert m["posts"] >= 1
+
+    # restore into a fresh home
+    new = tmp_path / "new"
+    rep = restore_archive(new, z)
+    assert not rep["restored"] and not (new / "voice").exists()
+    rep = restore_archive(new, z, yes=True)
+    assert rep["restored"] and (new / "voice/money-made-simple/post-1.wav").read_bytes() == b"take"
+    import sqlite3
+    con = sqlite3.connect(new / m["db"])
+    assert con.execute("SELECT title FROM posts WHERE id = ?", [pid]).fetchone()[0] == "Keep me"
+    con.close()
+    (new / "data" / "scorecard-manual.yaml").write_text("changed")
+    rep = restore_archive(new, z, yes=True)
+    assert rep["saved_to"] and (new / "data" / "scorecard-manual.yaml").read_text() == "x: 1\n"
+    assert any(p.read_text() == "changed" for p in Path(rep["saved_to"]).rglob("scorecard-manual.yaml"))
+
+
+def test_restore_refuses_unsafe(tmp_path):
+    import zipfile
+    import pytest
+    from contentfactory.backup import restore_archive
+    bad = tmp_path / "bad.zip"
+    with zipfile.ZipFile(bad, "w") as z:
+        z.writestr("MANIFEST.json", "{}")
+        z.writestr("../evil.txt", "x")
+    with pytest.raises(ValueError):
+        restore_archive(tmp_path / "h", bad, yes=True)
