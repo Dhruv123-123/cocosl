@@ -15,7 +15,8 @@ money-basics-7-days (see research/scouting/sender-setup-guide.md on PR #2), clic
 HTML Sender gives you into `sender_form` above, on one line, including its <script> tag. (Sender's help says to put
 its script before </head>; if the form doesn't appear from the page body, add a head slot to build.py.) While `sender_form` is REPLACE_ME, the page
 shows the site's normal signup form with source=money-basics-7-days, so no signups are lost.
-The day titles must match the 7 emails in Sender; keep them in step if the emails change. -->
+The 7 emails are in brands/sequences/money-made-simple.money-basics.yaml (export them for Sender with
+`factory sequence-export money-made-simple --sequence money-basics`); keep the day titles in step. -->
 
 ## What's in the seven emails
 
