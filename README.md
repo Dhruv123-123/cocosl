@@ -52,60 +52,52 @@ its content files into a postable folder with
 
 ## Everyday commands
 
+All 81 commands, grouped, are in [docs/COMMANDS.md](docs/COMMANDS.md) (generated from the CLI, so it's always
+current). The ones you'll use most:
+
 ```bash
-factory daily --brand money-made-simple     # ideas + 2 drafts into the review queue (never auto-approves)
-factory review                              # what's waiting
-factory approve 12 --yes-i-checked --schedule
-factory publish                             # post what's due (dry run until FACTORY_DRY_RUN=0)
-factory insights --brand money-made-simple --rescore
-factory repurpose 15                        # long video → Shorts + carousel
+# Your routine (about an hour a day, two brands)
+factory today --15min                         # the daily routine with today's real items
+factory ui                                    # local dashboard (127.0.0.1): Today, review queue, /review/fast keyboard review
+factory time log 20 --what review             # log your minutes; `factory time` shows the week vs the one-hour limit
+factory weekly-review --save                  # Sunday one-pager: scorecard, time, brand-3 gates, next week's queue, what's blocked on you
+factory keyword-check go                      # one sitting: confirm each scheduled title's search phrase in the search box
+factory launch-mode two-brand                 # today / reslot / scorecard show only MMS + Scam Decoded
+factory triage                                # everything waiting on you, most urgent first
+
+# Make and review content
 factory import launch/money-made-simple/content.json --brand money-made-simple
-factory pack export --brand money-made-simple --file launch/money-made-simple/month-1/content.json \
-  --start 2026-11-21 --days 30 --out month-1/     # content.json → posting calendar + ready-to-post folders
-factory clients import --file leads.csv && factory pitch draft && factory pitch export
-factory order create --client 3 --package starter && factory order invoice --id 1
-factory revenue report
-factory auth youtube | tiktok | meta        # connect accounts
-factory renderq revoice                     # re-voice silent renders once KOKORO_URL (or another voice) is set
-factory status                              # credentials, queues, worker heartbeat, anything needing you
-factory doctor [--online | --offline]       # is this install ready? --offline: fresh-laptop check, no network
-factory preflight --scheduled               # check queued media against each platform's limits (runs automatically too)
-factory cleanup --older-than 60 [--yes]     # free disk from posts live everywhere 60+ days (lists unless --yes)
-factory voice 12 take.m4a                   # your own narration for post 12 (one take, or one file per line); re-renders it
-factory recordings                           # posts waiting on your voice or a screen recording, soonest first
-factory batch-record [--days 21] [--minutes 45]  # group all recordings into sessions: shot list + teleprompter each
-factory batch-record attach <session folder>    # link recorded screen files into their posts' beats
-factory today --15min [--save]               # your daily routine (GO_LIVE R6) with today's real items
-factory export-week <brand> [--weeks 4] [--manual-only]  # one zip per week, posting order, captions ready to paste
-factory scorecard [--save] [--manual-template]  # GO_LIVE R8 weekly scorecard from your imports, stop/change/watch flags
-factory backup --archive [--with-media]       # one dated zip: database, brands, packs, recordings, notes
-factory restore <archive.zip> [--yes]        # lists first; --yes restores and keeps what it replaced
-factory sequence-export <brand> --for sender  # welcome emails as a Sender automation: one folder per step + CHECKLIST
-factory subscribers-export <brand> --for sender  # two CSVs (already welcomed / not) in Sender's date format
-factory reslot [--brand] [--yes]             # move queued posts onto current slots (TikTok 18:00, Pinterest 11:00, Shorts 12:30); zero collisions
-factory review-gate [list|pass|require|send-back]  # draft → native_review → legal_review → approved; only approved posts schedule or export
-# dashboard: /review/fast — keyboard review (A approve, R reject, E edit, 1-9 tick claims, J/K next) and approve-a-week
-factory launch-mode [two-brand|all]          # two-brand launch: today, reslot and scorecard show MMS + Scam Decoded only
-factory scorecard --gate                     # the five brand-3 gates (time, clean accounts, thresholds, queue, list growth)
-factory time [log <minutes> --what routine]  # weekly time used vs the one-hour-a-day limit (also a form on Today)
-factory broll <post> [--apply]               # optional Pexels/Pixabay B-roll (free keys), max 1 beat in 3, logo-free, credited
-scripts/smoke_fresh_clone.sh                 # fresh clone → install → init → doctor → render one post per brand → launch-check
-factory ui                                   # one local page (127.0.0.1 only): calendar, review queue, recordings, launch check
-factory manual [build|copy <pub>|done <pub> --url]  # TikTok + Pinterest post-by-hand packages
-factory numbers <post id>  (or --text "...")  # recompute loan, payoff, growth and federal tax figures (numpy-financial, Tax-Calculator)
-factory youtube-plan --brand <slug> [--write]   # playlists, end screens, Shorts related videos -> launch/<slug>/YOUTUBE_PLAN.md
-factory report --html                         # weekly one-page HTML per brand from imported stats: best/worst posts, next topics
-factory triage [--save]                       # everything waiting on you across brands, most urgent first
-factory challenge new --brand <slug> --days 30 [--kind ladder|fixed|envelope|no-spend] --import   # daily tracker posts + printable tracker
-factory whitelabel <brand> --client client.json [--posts 1,2]   # rebrand a batch for a B2B client (name, colours, links)
-factory audit-originality [--packs]           # per-channel YouTube inauthentic-content risk score (exit 2 on high)
-factory newsletter --brand <slug> --for kit|sender [--upcoming]   # a week of posts as a draft email (never sent)
-factory brand new <slug> --name ... --import  # scaffold a brand: YAML, caps, voice/footage folders, 3 sample posts
-factory brand remove <slug> --yes            # undo a scaffold (refuses if anything is scheduled or published)
-factory launch-check [--online]             # red/yellow/green: links, UTM tags, placeholders, disclosures, caption limits, originality risk
-factory stats import --brand <slug> *.csv   # YouTube Studio / TikTok / Plausible exports → weekly scorecard (`factory stats`)
-factory repurpose 12 --text-only              # blog post, newsletter section, 3 pins and a thread as drafts from a published long video
-factory calendar --export output/calendar  # all brands: calendar.ics + calendar.html, flags caps and collisions
+factory daily --brand money-made-simple       # ideas + 2 drafts into review (never auto-approves)
+factory review-gate [list|pass|require|send-back]   # draft → native_review → legal_review → approved
+factory approve 12 --yes-i-checked --schedule
+factory batch-record                          # recordings grouped into sessions: shot list + teleprompter
+factory voice 12 take.m4a                     # your own narration for post 12
+factory broll 12 [--apply]                    # optional Pexels/Pixabay B-roll (free keys), max 1 beat in 3, credited
+factory audit-originality --packs             # YouTube inauthentic-content risk per channel
+factory launch-check                          # red/yellow/green: links, placeholders, disclosures, caption limits
+
+# Schedule and post
+factory reslot [--yes]                        # queued posts onto the current slots, zero collisions
+factory export-week <brand> --weeks 4         # one zip per week, posting order, captions ready to paste
+factory pack export --brand <slug> --file content.json --start 2026-11-21 --days 30 --out month-1/   # content.json → posting calendar + ready-to-post folders
+factory channels export --brand <slug> --config channels/config.json --out channels/   # Pinterest pins, X/Threads threads, newsletter issues
+factory manual [build|copy <pub>|done <pub> --url]   # TikTok + Pinterest post-by-hand packages
+factory publish                               # post what's due (dry run until FACTORY_DRY_RUN=0)
+
+# Measure
+factory stats import --brand <slug> *.csv     # YouTube Studio / TikTok / Plausible exports
+factory scorecard [--save] [--gate]           # weekly scorecard with stop/change flags; --gate: the five brand-3 gates
+factory report --html                         # weekly business report + one-page HTML per brand
+
+# Email
+factory sequence-export <brand> --for sender  # welcome emails as a Sender automation
+factory subscribers-export <brand> --for sender
+factory newsletter --brand <slug> --for kit|sender   # a week of posts as a draft email (never sent)
+
+# Setup and upkeep
+factory doctor [--online | --offline]         # is this install ready?
+factory backup --archive [--with-media]       # one dated zip; `factory restore <zip>` lists first
+scripts/smoke_fresh_clone.sh                  # fresh clone → install → render one post per brand → launch-check
 ```
 
 With `--days 0`, `pack export` renders the whole file as an undated library, grouped by format (used for `launch/money-made-simple/evergreen/`).

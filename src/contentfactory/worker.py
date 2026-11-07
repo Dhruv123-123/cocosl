@@ -126,6 +126,14 @@ class Worker:
             return False
         return not self._ran_since("worker.report", "", self._local_midnight_utc(local))
 
+    def weekly_review_due(self, now: datetime) -> bool:
+        from .weekly_review import due_at
+        brands = list(self.factory.brands().values())
+        local = now.astimezone(_zone(brands[0].cadence.timezone) if brands else timezone.utc)
+        if local.weekday() != 6 or (local.hour, local.minute) < due_at():
+            return False
+        return not self._ran_since("worker.weekly_review", "", self._local_midnight_utc(local))
+
     def _mark(self, action: str, entity: str, now: datetime) -> None:
         self.factory.db.insert("audit_log", {"ts": now.replace(microsecond=0).isoformat(), "actor": "worker",
                                              "action": action, "entity": entity, "detail": {}})
@@ -179,6 +187,11 @@ class Worker:
             self._mark("worker.report", "", now)
             ran["report"] = self._step("report", save_report, self.factory)
             log.info("weekly report: %s", ran["report"])
+        if self._step("weekly_review_due", self.weekly_review_due, now):
+            from .weekly_review import save as save_review
+            self._mark("worker.weekly_review", "", now)
+            res = self._step("weekly_review", save_review, self.factory, now.date())
+            ran["weekly_review"] = str(res[0]) if res else None
         self.heartbeat(now, ran)
         return ran
 
