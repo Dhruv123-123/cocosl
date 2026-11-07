@@ -323,6 +323,20 @@ LISTINGS += _more_listings()
 import seo  # noqa: E402  (titles, tags and attributes from the Nov 2026 SEO pass)
 seo.apply(LISTINGS)
 
+# Scheduled price changes from Jan 1 2027 (scouting's template-pricing-jan-2027.md, PR #2): $3 singles to $4 (the Etsy
+# median for "savings challenge"), the 12-challenge pack $8 to $10. Today's price stays until then; nothing shows a
+# "was" price. Change them in Etsy on Jan 1 (and Gumroad, where the same product is sold).
+from datetime import date as _date  # noqa: E402
+JAN1_DATE = _date(2027, 1, 1)
+JAN1 = {"savings-challenge-pack": 10.0}
+for it in LISTINGS:
+    if it["price"] == 3:
+        JAN1[it["slug"]] = 4.0
+    if it["slug"] in JAN1:
+        it["jan1_price"] = JAN1[it["slug"]]
+        if _date.today() >= JAN1_DATE:  # rebuilt on or after Jan 1: the new price is the price
+            it["price"] = it.pop("jan1_price")
+
 for it in LISTINGS:
     it.setdefault("category", GUIDE_CAT if it["kind"] == "product" else PRINT_CAT)
     good = _good_to_know_dated(it["year"], 2 * len(it["variants"])) if it.get("dated") else None
@@ -330,6 +344,15 @@ for it in LISTINGS:
 BY_SLUG = {it["slug"]: it for it in LISTINGS}
 
 STOP = set("and or for the a an to of with your in on by".split())
+
+
+def _jan1_line(it: dict) -> str:
+    if "jan1_price" not in it:
+        return ""
+    j = fees(it["jan1_price"])
+    return (f"\n**From Jan 1 2027: ${it['jan1_price']:.2f}** (scheduled, from scouting's January pricing check). On Jan 1, edit "
+            f"the price in Etsy; no sale, no crossed-out price. You'd then keep about ${j['net']:.2f} a sale.\n")
+
 
 
 def _title_problems(slug: str, title: str, tags: list[str]) -> list[str]:
@@ -396,7 +419,7 @@ thumbnail) and the files listed under "Digital files".
 
 ## Price
 ${it['price']:.2f}. Etsy fees per sale about ${f['total']:.2f} (listing $0.20, transaction ${f['transaction']:.2f}, processing ${f['processing']:.2f}), so you keep about **${f['net']:.2f}**.
-
+{_jan1_line(it)}
 ## Listing details
 - **Type:** Digital files
 - **Who made it:** I did. **What is it:** A finished product. **When was it made:** the most recent range

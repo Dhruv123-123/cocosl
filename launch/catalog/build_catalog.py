@@ -62,6 +62,8 @@ def etsy_rows() -> list[dict]:
             date, src, note = "Week of Nov 9; featured from Jan 25", "calendar", "Tax-season item."
         else:
             date, src, note = "Week of Nov 9 (with the shop)", "proposed", ""
+        if "jan1_price" in it:
+            note = (note + f" From Jan 1 2027: {money(it['jan1_price'])} (scheduled).").strip()
         out.append(row("Money Made Simple", it["name"], "Etsy", money(it["price"]), base, base + "LISTING.md", date, src, note))
     return out
 
@@ -184,11 +186,11 @@ OTHER_BRANCHES = [
      "scam-decoded/products/team-training/LISTING.md", "Before the B2B outreach starts (Tue Nov 10)", "proposed", "PR #9. Code TEAMLAUNCH."),
     # 1099 Money, PR #10 (branch claude/project-thread-7o0kyt)
     ("1099 Money", "The Quarterly Tax Tracker", "Gumroad", "$15", "1099-money/product-quarterly-tax-tracker/",
-     "1099-money/product-quarterly-tax-tracker/LISTING.md", "Mon Nov 16 (brand launch day 1)", "proposed", "PR #10. Code LAUNCH ($9 for 7 days)."),
+     "1099-money/product-quarterly-tax-tracker/LISTING.md", "Mon Nov 16 (brand launch day 1)", "proposed", "PR #10. Code LAUNCH ($9 for 7 days). Scouting suggests $17 for the 2027 edition from Jan 1 (PR #10 decides)."),
     ("1099 Money", "The Rate & Contract Kit", "Gumroad", "$29", "1099-money/products/rate-contract-kit/",
      "1099-money/products/rate-contract-kit/LISTING.md", "Week of Nov 16", "proposed", "PR #10. Codes LAUNCH, TRACKER5, KIT29."),
     ("1099 Money", "The Freelancer Money Bundle", "Gumroad", "$49", "1099-money/products/bundle/",
-     "1099-money/products/bundle/LISTING.md", "Week of Nov 16", "proposed", "PR #10. Codes LAUNCH, TRACKER15, KIT29."),
+     "1099-money/products/bundle/LISTING.md", "Week of Nov 16", "proposed", "PR #10. Codes LAUNCH, TRACKER15, KIT29. Scouting suggests $39, or $49 with a \"worth $59 separately\" line, from Jan 1 (PR #10 decides)."),
     ("1099 Money", "The Quarterly Tax Tracker", "Etsy", "$15", "etsy/1099-money/quarterly-tax-tracker/files/",
      "etsy/1099-money/quarterly-tax-tracker/LISTING-ETSY.md", "Week of Nov 16", "proposed", "PR #10. Etsy edition."),
     ("1099 Money", "The Rate & Contract Kit", "Etsy", "$29", "etsy/1099-money/rate-and-contract-kit/files/",

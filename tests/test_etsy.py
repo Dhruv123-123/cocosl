@@ -170,3 +170,13 @@ def test_scouting_etsy_fixes():
     first = mockgen.etsy_set(o, pages, 2000, 1500)[0][1]
     assert "<h1" not in first and "Savings Bingo" not in first      # no text on the first photo
     assert round(2000 * mockgen.ETSY_SCALE) == 2700 and round(1500 * mockgen.ETSY_SCALE) == 2025
+
+
+def test_january_prices_are_scheduled_not_applied():
+    """Scouting's Jan 2027 pricing: $3 singles to $4 and the 12-challenge pack to $10, from Jan 1 only."""
+    import listings
+    jan = {it["slug"]: it for it in listings.LISTINGS if "jan1_price" in it}
+    assert len(jan) == 36 and jan["savings-challenge-pack"]["jan1_price"] == 10
+    assert all(it["price"] == 3 and it["jan1_price"] == 4 for s, it in jan.items() if s != "savings-challenge-pack")
+    md = listings.listing_md(jan["savings-bingo"])
+    assert "From Jan 1 2027: $4.00" in md and "was" not in md.lower().split("## listing details")[0]

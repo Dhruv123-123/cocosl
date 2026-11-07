@@ -125,8 +125,8 @@ JAN_STEPS = [
 
 
 # Scouting's template-pricing-jan-2027.md (PR #2): proposed prices from Jan 1 2027, after the codes end. Waiting on
-# Dhruv's decision; current prices stay until then. Etsy and Gumroad stay equal. (brand, product, from, to, why)
-JAN1_PRICES_STATUS = "proposed, waiting on Dhruv"
+# nothing: today's prices stay until Jan 1, then Dhruv edits each price (no sale, no "was" price). Etsy and Gumroad stay equal. (brand, product, from, to, why)
+JAN1_PRICES_STATUS = "scheduled for Jan 1 2027"
 JAN1_PRICES = [
     ("Money Made Simple", "Every $3 Etsy printable (35 listings)", "$3", "$4",
      "Etsy median for \"savings challenge\" is $4; adds about $0.90 net per sale."),
@@ -239,6 +239,10 @@ Etsy searches for "budget planner" peak in January, so this is the bigger push, 
     out.append(f"\n**Prices from Jan 1 ({JAN1_PRICES_STATUS})**, from scouting's `template-pricing-jan-2027.md`. No January "
                "discounts on tax products.\n\n| Brand | Product | Now | From Jan 1 | Why |\n|---|---|---|---|---|")
     out += [f"| {b} | {p} | {a} | {n} | {w} |" for b, p, a, n, w in JAN1_PRICES]
+    jan = {it["slug"]: it.get("jan1_price", it["price"]) for it in listings}
+    after = [(names[sl]["name"], sum(jan[x] for x in names[sl]["bundle"]), jan[sl]) for sl in sep]
+    out.append("\nOn or after Jan 1, rebuild (`python launch/etsy/build_etsy.py`, then this catalog): the build switches to the "
+               "new prices by itself, including the \"bought separately\" lines: " + "; ".join(f"{n}: ${t:,.0f} separately, ${p:,.0f} together" for n, t, p in after) + ".")
     return "\n".join(out) + "\n"
 
 

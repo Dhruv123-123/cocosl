@@ -19,14 +19,14 @@ submitted anywhere.
 |---|---|---|---|---|---|---|---|
 | Monthly Budget Planner | Etsy | $6 | `etsy/monthly-budget-planner/` | `etsy/monthly-budget-planner/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
 | Paycheck Budget Planner | Etsy | $4 | `etsy/paycheck-budget-planner/` | `etsy/paycheck-budget-planner/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| Savings Challenge Tracker | Etsy | $3 | `etsy/savings-challenge-tracker/` | `etsy/savings-challenge-tracker/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. |
-| 52-Week Savings Challenge | Etsy | $3 | `etsy/52-week-savings-challenge/` | `etsy/52-week-savings-challenge/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. |
+| Savings Challenge Tracker | Etsy | $3 | `etsy/savings-challenge-tracker/` | `etsy/savings-challenge-tracker/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. From Jan 1 2027: $4 (scheduled). |
+| 52-Week Savings Challenge | Etsy | $3 | `etsy/52-week-savings-challenge/` | `etsy/52-week-savings-challenge/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. From Jan 1 2027: $4 (scheduled). |
 | Bill Payment Tracker | Etsy | $4 | `etsy/bill-payment-tracker/` | `etsy/bill-payment-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
 | Sinking Funds Tracker | Etsy | $4 | `etsy/sinking-funds-tracker/` | `etsy/sinking-funds-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
 | Debt Payoff Coloring Tracker | Etsy | $4 | `etsy/debt-payoff-coloring-tracker/` | `etsy/debt-payoff-coloring-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| Monthly Expense Tracker | Etsy | $3 | `etsy/monthly-expense-tracker/` | `etsy/monthly-expense-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| No-Spend Challenge | Etsy | $3 | `etsy/no-spend-challenge/` | `etsy/no-spend-challenge/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. |
-| Subscription Tracker | Etsy | $3 | `etsy/subscription-tracker/` | `etsy/subscription-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Monthly Expense Tracker | Etsy | $3 | `etsy/monthly-expense-tracker/` | `etsy/monthly-expense-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
+| No-Spend Challenge | Etsy | $3 | `etsy/no-spend-challenge/` | `etsy/no-spend-challenge/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. From Jan 1 2027: $4 (scheduled). |
+| Subscription Tracker | Etsy | $3 | `etsy/subscription-tracker/` | `etsy/subscription-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
 | The Bill Cut Kit | Etsy | $5 | `etsy/bill-cut-kit/` | `etsy/bill-cut-kit/LISTING.md` | Week of Nov 9 (with the shop) | proposed | Etsy edition: no Gumroad codes or links. |
 | The 20-Minute Budget | Etsy | $12 | `etsy/20-minute-budget/` | `etsy/20-minute-budget/LISTING.md` | Week of Nov 9 (with the shop) | proposed | Etsy edition: no Gumroad codes or links. |
 | The Credit Report Audit Kit | Etsy | $9 | `etsy/credit-report-audit-kit/` | `etsy/credit-report-audit-kit/LISTING.md` | Week of Nov 9 (with the shop) | proposed | Etsy edition: no Gumroad codes or links. |
@@ -34,38 +34,38 @@ submitted anywhere.
 | Start Investing With $100 a Month | Etsy | $19 | `etsy/investing-starter-kit/` | `etsy/investing-starter-kit/LISTING.md` | Week of Nov 9 (with the shop) | proposed | Etsy edition: no Gumroad codes or links. |
 | Printable Budget Binder (all 10 printables) | Etsy | $12 | `etsy/budget-binder-bundle/` | `etsy/budget-binder-bundle/LISTING.md` | Week of Nov 9; code BF25 Nov 27-30 | calendar | Black Friday: code only, no crossed-out price (see the BFCM section). |
 | The Money Made Simple Toolkit | Etsy | $39 | `etsy/money-toolkit-bundle/` | `etsy/money-toolkit-bundle/LISTING.md` | Week of Nov 9 (with the shop) | proposed | Etsy edition: no Gumroad codes or links. |
-| 100 Envelope Challenge | Etsy | $3 | `etsy/100-envelope-challenge/` | `etsy/100-envelope-challenge/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. |
-| 26-Paycheck Savings Challenge | Etsy | $3 | `etsy/paycheck-savings-challenge/` | `etsy/paycheck-savings-challenge/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. |
-| 30-Day Savings Challenge | Etsy | $3 | `etsy/30-day-savings-challenge/` | `etsy/30-day-savings-challenge/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. |
-| Roll & Save Dice Savings Challenge | Etsy | $3 | `etsy/roll-and-save-challenge/` | `etsy/roll-and-save-challenge/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. |
-| Spare Change Jar Tracker | Etsy | $3 | `etsy/spare-change-jar-tracker/` | `etsy/spare-change-jar-tracker/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. |
-| Savings Bingo | Etsy | $3 | `etsy/savings-bingo/` | `etsy/savings-bingo/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. |
-| Travel Fund Tracker | Etsy | $3 | `etsy/travel-fund-tracker/` | `etsy/travel-fund-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| Emergency Fund Tracker | Etsy | $3 | `etsy/emergency-fund-tracker/` | `etsy/emergency-fund-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| Home Fund Brick Tracker | Etsy | $3 | `etsy/home-fund-tracker/` | `etsy/home-fund-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| Holiday Savings Planner | Etsy | $3 | `etsy/holiday-savings-planner/` | `etsy/holiday-savings-planner/LISTING.md` | Week of Nov 9 (pin it) | calendar | Peaks before Thanksgiving. |
-| Weekly Budget Planner | Etsy | $3 | `etsy/weekly-budget-planner/` | `etsy/weekly-budget-planner/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| Zero-Based Budget Worksheet | Etsy | $3 | `etsy/zero-based-budget-worksheet/` | `etsy/zero-based-budget-worksheet/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| 50/30/20 Budget Worksheet | Etsy | $3 | `etsy/50-30-20-budget-worksheet/` | `etsy/50-30-20-budget-worksheet/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| Cash Envelope Trackers | Etsy | $3 | `etsy/cash-envelope-trackers/` | `etsy/cash-envelope-trackers/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| Daily Spending Log | Etsy | $3 | `etsy/daily-spending-log/` | `etsy/daily-spending-log/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| Grocery Budget Tracker | Etsy | $3 | `etsy/grocery-budget-tracker/` | `etsy/grocery-budget-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| Irregular Income Budget | Etsy | $3 | `etsy/irregular-income-budget/` | `etsy/irregular-income-budget/LISTING.md` | Week of Nov 9; featured from Jan 25 | calendar | Tax-season item. |
-| Utility Bill Tracker | Etsy | $3 | `etsy/utility-bill-tracker/` | `etsy/utility-bill-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| Car Expense Tracker | Etsy | $3 | `etsy/car-expense-tracker/` | `etsy/car-expense-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| Financial Goals Planner | Etsy | $3 | `etsy/financial-goals-planner/` | `etsy/financial-goals-planner/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| Net Worth Tracker | Etsy | $3 | `etsy/net-worth-tracker/` | `etsy/net-worth-tracker/LISTING.md` | Week of Nov 9; featured from Jan 25 | calendar | Tax-season item. |
-| Monthly Money Review | Etsy | $3 | `etsy/monthly-money-review/` | `etsy/monthly-money-review/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| Credit Card Payoff Tracker | Etsy | $3 | `etsy/credit-card-payoff-tracker/` | `etsy/credit-card-payoff-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| Debt Snowball Worksheet | Etsy | $3 | `etsy/debt-snowball-worksheet/` | `etsy/debt-snowball-worksheet/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| Debt Mountain Coloring Chart | Etsy | $3 | `etsy/debt-mountain-coloring-chart/` | `etsy/debt-mountain-coloring-chart/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| Loan Payoff Tracker | Etsy | $3 | `etsy/loan-payoff-tracker/` | `etsy/loan-payoff-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| Savings Account Register | Etsy | $3 | `etsy/savings-account-register/` | `etsy/savings-account-register/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| Checking Account Register | Etsy | $3 | `etsy/checking-account-register/` | `etsy/checking-account-register/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
-| Gift Budget Planner | Etsy | $3 | `etsy/gift-budget-planner/` | `etsy/gift-budget-planner/LISTING.md` | Week of Nov 9 (pin it) | calendar | Peaks before Thanksgiving. |
-| Side Hustle Income Tracker | Etsy | $3 | `etsy/side-hustle-income-tracker/` | `etsy/side-hustle-income-tracker/LISTING.md` | Week of Nov 9; featured from Jan 25 | calendar | Tax-season item. |
+| 100 Envelope Challenge | Etsy | $3 | `etsy/100-envelope-challenge/` | `etsy/100-envelope-challenge/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. From Jan 1 2027: $4 (scheduled). |
+| 26-Paycheck Savings Challenge | Etsy | $3 | `etsy/paycheck-savings-challenge/` | `etsy/paycheck-savings-challenge/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. From Jan 1 2027: $4 (scheduled). |
+| 30-Day Savings Challenge | Etsy | $3 | `etsy/30-day-savings-challenge/` | `etsy/30-day-savings-challenge/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. From Jan 1 2027: $4 (scheduled). |
+| Roll & Save Dice Savings Challenge | Etsy | $3 | `etsy/roll-and-save-challenge/` | `etsy/roll-and-save-challenge/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. From Jan 1 2027: $4 (scheduled). |
+| Spare Change Jar Tracker | Etsy | $3 | `etsy/spare-change-jar-tracker/` | `etsy/spare-change-jar-tracker/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. From Jan 1 2027: $4 (scheduled). |
+| Savings Bingo | Etsy | $3 | `etsy/savings-bingo/` | `etsy/savings-bingo/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. From Jan 1 2027: $4 (scheduled). |
+| Travel Fund Tracker | Etsy | $3 | `etsy/travel-fund-tracker/` | `etsy/travel-fund-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
+| Emergency Fund Tracker | Etsy | $3 | `etsy/emergency-fund-tracker/` | `etsy/emergency-fund-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
+| Home Fund Brick Tracker | Etsy | $3 | `etsy/home-fund-tracker/` | `etsy/home-fund-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
+| Holiday Savings Planner | Etsy | $3 | `etsy/holiday-savings-planner/` | `etsy/holiday-savings-planner/LISTING.md` | Week of Nov 9 (pin it) | calendar | Peaks before Thanksgiving. From Jan 1 2027: $4 (scheduled). |
+| Weekly Budget Planner | Etsy | $3 | `etsy/weekly-budget-planner/` | `etsy/weekly-budget-planner/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
+| Zero-Based Budget Worksheet | Etsy | $3 | `etsy/zero-based-budget-worksheet/` | `etsy/zero-based-budget-worksheet/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
+| 50/30/20 Budget Worksheet | Etsy | $3 | `etsy/50-30-20-budget-worksheet/` | `etsy/50-30-20-budget-worksheet/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
+| Cash Envelope Trackers | Etsy | $3 | `etsy/cash-envelope-trackers/` | `etsy/cash-envelope-trackers/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
+| Daily Spending Log | Etsy | $3 | `etsy/daily-spending-log/` | `etsy/daily-spending-log/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
+| Grocery Budget Tracker | Etsy | $3 | `etsy/grocery-budget-tracker/` | `etsy/grocery-budget-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
+| Irregular Income Budget | Etsy | $3 | `etsy/irregular-income-budget/` | `etsy/irregular-income-budget/LISTING.md` | Week of Nov 9; featured from Jan 25 | calendar | Tax-season item. From Jan 1 2027: $4 (scheduled). |
+| Utility Bill Tracker | Etsy | $3 | `etsy/utility-bill-tracker/` | `etsy/utility-bill-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
+| Car Expense Tracker | Etsy | $3 | `etsy/car-expense-tracker/` | `etsy/car-expense-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
+| Financial Goals Planner | Etsy | $3 | `etsy/financial-goals-planner/` | `etsy/financial-goals-planner/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
+| Net Worth Tracker | Etsy | $3 | `etsy/net-worth-tracker/` | `etsy/net-worth-tracker/LISTING.md` | Week of Nov 9; featured from Jan 25 | calendar | Tax-season item. From Jan 1 2027: $4 (scheduled). |
+| Monthly Money Review | Etsy | $3 | `etsy/monthly-money-review/` | `etsy/monthly-money-review/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
+| Credit Card Payoff Tracker | Etsy | $3 | `etsy/credit-card-payoff-tracker/` | `etsy/credit-card-payoff-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
+| Debt Snowball Worksheet | Etsy | $3 | `etsy/debt-snowball-worksheet/` | `etsy/debt-snowball-worksheet/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
+| Debt Mountain Coloring Chart | Etsy | $3 | `etsy/debt-mountain-coloring-chart/` | `etsy/debt-mountain-coloring-chart/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
+| Loan Payoff Tracker | Etsy | $3 | `etsy/loan-payoff-tracker/` | `etsy/loan-payoff-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
+| Savings Account Register | Etsy | $3 | `etsy/savings-account-register/` | `etsy/savings-account-register/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
+| Checking Account Register | Etsy | $3 | `etsy/checking-account-register/` | `etsy/checking-account-register/LISTING.md` | Week of Nov 9 (with the shop) | proposed | From Jan 1 2027: $4 (scheduled). |
+| Gift Budget Planner | Etsy | $3 | `etsy/gift-budget-planner/` | `etsy/gift-budget-planner/LISTING.md` | Week of Nov 9 (pin it) | calendar | Peaks before Thanksgiving. From Jan 1 2027: $4 (scheduled). |
+| Side Hustle Income Tracker | Etsy | $3 | `etsy/side-hustle-income-tracker/` | `etsy/side-hustle-income-tracker/LISTING.md` | Week of Nov 9; featured from Jan 25 | calendar | Tax-season item. From Jan 1 2027: $4 (scheduled). |
 | 2027 Budget Planner | Etsy | $12 | `etsy/2027-budget-planner/` | `etsy/2027-budget-planner/LISTING.md` | Week of Nov 9 (list first) | calendar | Dated: 4 PDFs (Sun/Mon start x Letter/A4). Drop the price after Jan 31. |
-| Savings Challenge Pack (12 printables) | Etsy | $8 | `etsy/savings-challenge-pack/` | `etsy/savings-challenge-pack/LISTING.md` | Week of Nov 9; code BF25 Nov 27-30 | calendar | Black Friday: code only, no crossed-out price (see the BFCM section). |
+| Savings Challenge Pack (12 printables) | Etsy | $8 | `etsy/savings-challenge-pack/` | `etsy/savings-challenge-pack/LISTING.md` | Week of Nov 9; code BF25 Nov 27-30 | calendar | Black Friday: code only, no crossed-out price (see the BFCM section). From Jan 1 2027: $10 (scheduled). |
 | Mega Budget Bundle (all 40 printables) | Etsy | $19 | `etsy/mega-budget-bundle/` | `etsy/mega-budget-bundle/LISTING.md` | Week of Nov 9; code BF25 Nov 27-30 | calendar | Black Friday: code only, no crossed-out price (see the BFCM section). |
 | The 20-Minute Budget | Gumroad | $12 | `products/20-minute-budget/` | `products/20-minute-budget/LISTING.md` | Week of Nov 16; featured Jan 4 | calendar | Create the discount codes in launch/products/UPSELL_PATH.md first; replace [your store link] and rebuild. |
 | The Bill Cut Kit | Gumroad | $5 | `products/bill-cut-kit/` | `products/bill-cut-kit/LISTING.md` | Week of Nov 16; featured Jan 25 | calendar | Create the discount codes in launch/products/UPSELL_PATH.md first; replace [your store link] and rebuild. |
@@ -129,9 +129,9 @@ submitted anywhere.
 |---|---|---|---|---|---|---|---|
 | 2027 Freelancer Tax-Year Planner (printable) | Etsy + Gumroad | $12 | `brands/1099-money/freelancer-tax-planner-2027/` | `brands/1099-money/freelancer-tax-planner-2027/LISTING.md` | Week of Nov 16, with the brand launch (dated 2027: list early) | proposed | Sold as the paper companion to the Quarterly Tax Tracker (the brand's spreadsheet). My sheet and bundle were merged away (see Merged). Needs the brand's own Etsy shop (or a section in an existing one). |
 | Schedule C Setup Pack for TaxHacker | Gumroad (Etsy optional) | $12 | `brands/1099-money-taxhacker/schedule-c-setup-pack/` | `brands/1099-money-taxhacker/schedule-c-setup-pack/LISTING.md` | After a live TaxHacker test; target week of Jan 4 (year-end packets and Q4 estimates) | proposed | BLOCKER before listing: install TaxHacker 0.8.5 with made-up receipts, add these categories and fields, run 30 sample receipts through it, export the CSV and paste it into the packet. Fix any prompt that sorts badly, and confirm the menu names in the guide. Until then it is untested in a live install. Only for TaxHacker users (a self-hosted receipt app, MIT, not affiliated): categories, fields and a sheet that reads its CSV. Points non-users to the Quarterly Tax Tracker. Etsy is optional. |
-| The Quarterly Tax Tracker | Gumroad | $15 | `1099-money/product-quarterly-tax-tracker/` | `1099-money/product-quarterly-tax-tracker/LISTING.md` | Mon Nov 16 (brand launch day 1) | proposed | PR #10. Code LAUNCH ($9 for 7 days). |
+| The Quarterly Tax Tracker | Gumroad | $15 | `1099-money/product-quarterly-tax-tracker/` | `1099-money/product-quarterly-tax-tracker/LISTING.md` | Mon Nov 16 (brand launch day 1) | proposed | PR #10. Code LAUNCH ($9 for 7 days). Scouting suggests $17 for the 2027 edition from Jan 1 (PR #10 decides). |
 | The Rate & Contract Kit | Gumroad | $29 | `1099-money/products/rate-contract-kit/` | `1099-money/products/rate-contract-kit/LISTING.md` | Week of Nov 16 | proposed | PR #10. Codes LAUNCH, TRACKER5, KIT29. |
-| The Freelancer Money Bundle | Gumroad | $49 | `1099-money/products/bundle/` | `1099-money/products/bundle/LISTING.md` | Week of Nov 16 | proposed | PR #10. Codes LAUNCH, TRACKER15, KIT29. |
+| The Freelancer Money Bundle | Gumroad | $49 | `1099-money/products/bundle/` | `1099-money/products/bundle/LISTING.md` | Week of Nov 16 | proposed | PR #10. Codes LAUNCH, TRACKER15, KIT29. Scouting suggests $39, or $49 with a "worth $59 separately" line, from Jan 1 (PR #10 decides). |
 | The Quarterly Tax Tracker | Etsy | $15 | `etsy/1099-money/quarterly-tax-tracker/files/` | `etsy/1099-money/quarterly-tax-tracker/LISTING-ETSY.md` | Week of Nov 16 | proposed | PR #10. Etsy edition. |
 | The Rate & Contract Kit | Etsy | $29 | `etsy/1099-money/rate-and-contract-kit/files/` | `etsy/1099-money/rate-and-contract-kit/LISTING-ETSY.md` | Week of Nov 16 | proposed | PR #10. Etsy edition. |
 | The Freelancer Money Bundle | Etsy | $49 | `etsy/1099-money/freelancer-money-bundle/files/` | `etsy/1099-money/freelancer-money-bundle/LISTING-ETSY.md` | Week of Nov 16 | proposed | PR #10. Etsy edition. |
@@ -243,7 +243,7 @@ Featured on Etsy (in order): 2027 Budget Planner, Monthly Budget Planner, Mega B
 
 After Jan 31, swap the tags back if their views fell, and keep them if not.
 
-**Prices from Jan 1 (proposed, waiting on Dhruv)**, from scouting's `template-pricing-jan-2027.md`. No January discounts on tax products.
+**Prices from Jan 1 (scheduled for Jan 1 2027)**, from scouting's `template-pricing-jan-2027.md`. No January discounts on tax products.
 
 | Brand | Product | Now | From Jan 1 | Why |
 |---|---|---|---|---|
@@ -252,6 +252,8 @@ After Jan 31, swap the tags back if their views fell, and keep them if not.
 | Money Made Simple | The Debt-Free Date Planner | $17 | $17 (keep) | Above the debt-tracker median, so the first line says "a PDF guide plus a spreadsheet" (done). |
 | 1099 Money | The Quarterly Tax Tracker (2027 edition) | $15 | $17 | PR #10's product: its thread decides. |
 | 1099 Money | The Freelancer Money Bundle | $49 | $39, or keep $49 with a "worth $59 separately" line | PR #10's product: its thread decides. |
+
+On or after Jan 1, rebuild (`python launch/etsy/build_etsy.py`, then this catalog): the build switches to the new prices by itself, including the "bought separately" lines: Printable Budget Binder (all 10 printables): $42 separately, $12 together; The Money Made Simple Toolkit: $62 separately, $39 together; Savings Challenge Pack (12 printables): $48 separately, $10 together; Mega Budget Bundle (all 40 printables): $162 separately, $19 together.
 
 
 ## Merged or retired (6), reversible
