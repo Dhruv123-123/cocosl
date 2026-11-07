@@ -71,7 +71,7 @@ export const pagesEs = [
     h1: 'Calculadora de salario neto (2026)',
     tile: 'Salario neto',
     description: 'Mira cuánto te queda por cheque después del impuesto federal 2026, Seguro Social, Medicare, impuesto estatal y aportes al 401(k) o seguro médico.',
-    intro: 'Pon tu salario y tus deducciones antes de impuestos. Aplicamos los tramos federales 2026, la deducción estándar, Seguro Social y Medicare, más tu tasa estatal.',
+    intro: 'Elige tu estado y pon tu salario. Aplicamos los tramos federales 2026, la deducción estándar, Seguro Social, Medicare y los tramos, deducción y exenciones 2026 de tu estado. Todo se calcula en tu navegador.',
     faq: [
       ['¿Por qué mi cheque es menor que el salario dividido entre los pagos?', 'Primero se descuentan el impuesto federal, el Seguro Social (6.2%), Medicare (1.45%), el impuesto estatal y cualquier deducción antes de impuestos.'],
       ['¿Un 401(k) baja mis impuestos?', 'Los aportes tradicionales (antes de impuestos) al 401(k) bajan tu impuesto federal y casi siempre el estatal, pero no el Seguro Social ni Medicare. Los aportes Roth no bajan el impuesto de hoy.'],

@@ -15,6 +15,8 @@ HTML, CSS and JavaScript, no framework, no build step needed) and deploy free.
 | **0% deal countdown** (deferred-interest and 0% APR deals: payment that clears it a month early, back-dated interest if you miss) | Money Made Simple | Free calculator for search traffic; Pro saves every deal + calendar reminders | `budget/deals.html` |
 | **Credit dispute tracker** (30-day bureau clocks, replies, next steps, calendar reminders; tracking only, no letters) | Money Made Simple | Free tool for search traffic; deliberately no paid features, which keeps it clear of credit repair law | `budget/disputes.html` |
 | **Net worth snapshot** (own vs owe, dated snapshots and trend, PDF made in the browser, CSV, backup; localStorage only) | Money Made Simple | Free tool with a Budget Pro upsell slot | `budget/networth.html` |
+| **Can I afford this?** (a car, a phone or anything big: cash vs loan vs buy now, pay later; all-in price with tax, fees and trade-in, monthly fit against what's left after bills, 20/4/10 car checks, months to save; localStorage only) | Money Made Simple | Free search tool ("how much car can I afford"), Budget Pro upsell slot, links to the paycheck calculator | `budget/afford.html` |
+| **Paycheck calculator by state** (2026 federal brackets plus every state's and DC's 2026 brackets, standard deduction and exemptions, hardcoded from the Tax Foundation table with sources cited in `lib/state-tax-2026.js`; no API calls; custom-rate fallback) | Money Made Simple | Free SEO calculator, high-search "paycheck calculator [state]" | `money-calculators/take-home-pay/` |
 | **Holiday spending planner** (gift list, per-person budgets, total cap, extras, BNPL true cost and monthly schedule; localStorage only) | Money Made Simple | Free seasonal tool for the /holiday/ page, Budget Pro upsell slot | `budget/holiday.html` |
 | **Installable tools hub** (manifest, offline service worker `sw.js`, add-to-home-screen banner with iOS instructions) | All brands | The hub at `index.html` works as an app; tools you've opened work offline | `index.html`, `sw.js`, `install.js` |
 | **Freelance invoice tracker** (status per invoice, late fees under your own terms, 5 polite reminder emails, calendar and CSV) | 1099 Money | Free tool; upsell slot for the $29 Rate & Contract Kit (invoice templates), email list form `freelance-invoices` | `freelance-invoices/` |
@@ -46,6 +48,9 @@ npm run smoke       # opens every page in Chromium at desktop and phone width, a
 
 **One site for everything (quickest):** Netlify > Add new site > Import from GitHub > `cocosl` >
 base directory `apps`. You get `/money-calculators/`, `/budget/` and `/scam-checker/` on one URL.
+Use its own address, not the Money Made Simple site's: name it **`mms-tools`** (so `https://mms-tools.netlify.app`).
+The main site already uses `/budget/` for its budget-by-salary pages, and it links to these tools through `apps_url` in its `site.json`.
+`siteUrl` in each app's `config.js` is only the "Made by" link back to the main site, so it stays as is. If you pick a different name, update `apps_url` on the site.
 
 **One site per brand (better for SEO and branding):** create three Netlify sites with base directories
 `apps/money-calculators`, `apps/scam-checker` and `apps/budget`. Each has its own `netlify.toml`.

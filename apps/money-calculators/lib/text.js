@@ -4,6 +4,21 @@
 // It needs a native speaker's read before promotion (see apps/README.md).
 import { money, duration } from './format.js';
 
+const pct1 = (x) => `${Math.round(x * 1000) / 10}%`;
+// The state paragraph under the take-home table (only when a state was picked from the list).
+function stateLine(r) {
+  const s = r.stateInfo;
+  if (!s) return '';
+  if (s.none) return `<p><b>${s.name}</b> doesn't tax wages, so nothing comes out for state income tax.${s.note ? ` ${s.note}` : ''}</p>`;
+  return `<p>In <b>${s.name}</b> your top state rate is <b>${s.marginal}%</b>, about ${pct1(r.effectiveState)} of your salary overall.${s.note ? ` ${s.note}` : s.local ? ' Some cities or counties here add a local income tax, which is not included.' : ''}</p>`;
+}
+function stateLineEs(r) {
+  const s = r.stateInfo;
+  if (!s) return '';
+  if (s.none) return `<p><b>${s.name}</b> no cobra impuesto sobre el salario.</p>`;
+  return `<p>En <b>${s.name}</b> tu tasa estatal más alta es <b>${s.marginal}%</b>, cerca del ${pct1(r.effectiveState)} de tu salario en total.${s.local ? ' Algunas ciudades o condados agregan un impuesto local que no está incluido.' : ''}</p>`;
+}
+
 const en = {
   fields: {
     initial: 'Starting amount ($)', monthly: 'Added each month ($)', annualRate: 'Yearly return (%)', years: 'Years',
@@ -11,7 +26,7 @@ const en = {
     balance: 'Balance ($)', monthlyDeposit: 'Added each month ($)', hyApy: 'High-yield APY (%)', compareApy: 'Your current APY (%)', months: 'Months',
     cardBalance: 'Card balance ($)', apr: 'APR (%)', minPercent: 'Minimum: % of balance + interest', minFloor: 'Minimum payment floor ($)', fixedPayment: 'What if you paid each month ($)',
     annualContribution: 'Yearly contribution, before tax ($)', currentRate: 'Your tax bracket now (%)', retirementRate: 'Expected tax rate in retirement (%)', yearsToWithdraw: 'Years until you withdraw', annualReturn: 'Yearly return (%)',
-    salary: 'Yearly salary ($)', pretax401k: 'Pre-tax 401(k) per year ($)', pretaxHealth: 'Pre-tax health premiums per year ($)', stateRate: 'State income tax, effective (%)', payPeriods: 'Paychecks per year', filing: 'Filing status', single: 'Single', married: 'Married filing jointly',
+    salary: 'Yearly salary ($)', pretax401k: 'Pre-tax 401(k) per year ($)', pretaxHealth: 'Pre-tax health premiums per year ($)', stateRate: 'Custom state tax rate (%)', state: 'State you live in', stateCustom: 'Enter my own rate', payPeriods: 'Paychecks per year', filing: 'Filing status', single: 'Single', married: 'Married filing jointly',
     debtName: 'Name', debtBalance: 'Balance ($)', debtApr: 'APR (%)', debtMin: 'Minimum ($)', remove: 'Remove', removeAria: 'Remove this debt',
   },
   dur: (m) => duration(m, 'en'),
@@ -40,11 +55,12 @@ const en = {
       <tr><td>Federal income tax</td><td>${money(r.federal)}</td></tr>
       <tr><td>Social Security</td><td>${money(r.socialSecurity)}</td></tr>
       <tr><td>Medicare</td><td>${money(r.medicare)}</td></tr>
-      <tr><td>State income tax</td><td>${money(r.state)}</td></tr>
+      <tr><td>${r.stateInfo ? `${r.stateInfo.name} income tax` : 'State income tax'}</td><td>${money(r.state)}</td></tr>
       <tr><td>Pre-tax 401(k) and health</td><td>${money(r.pretax401k + r.pretaxHealth)}</td></tr>
     </tbody></table>
     <p>Your top federal bracket is <b>${Math.round(r.marginal * 100)}%</b>, but you pay about ${Math.round(r.effectiveFederal * 1000) / 10}% of your salary in federal income tax overall.</p>
-    <p class="note">Estimate for tax year 2026 using the standard deduction. It doesn't include credits (like the child tax credit), local taxes, or your exact W-4. States without a wage tax: Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, Wyoming.</p>`,
+    ${stateLine(r)}
+    <p class="note">Estimate for tax year 2026 using the standard deduction. It doesn't include credits (like the child tax credit), local taxes, or your exact W-4. State figures come from the <a href="https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/" target="_blank" rel="noopener">Tax Foundation's 2026 state tables</a>; federal figures from the IRS. States without a wage tax: Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, Wyoming.</p>`,
   roth: (r) => {
     const head = r.winner === 'tie' ? "It's a tie" : r.winner === 'roth' ? 'Roth comes out ahead' : 'Traditional comes out ahead';
     return `<p class="big">${head}</p>
@@ -91,7 +107,7 @@ const es = {
     balance: 'Saldo ($)', monthlyDeposit: 'Depósito mensual ($)', hyApy: 'APY de alto rendimiento (%)', compareApy: 'Tu APY actual (%)', months: 'Meses',
     cardBalance: 'Saldo de la tarjeta ($)', apr: 'Tasa anual APR (%)', minPercent: 'Mínimo: % del saldo + intereses', minFloor: 'Pago mínimo base ($)', fixedPayment: '¿Y si pagaras cada mes? ($)',
     annualContribution: 'Aporte anual, antes de impuestos ($)', currentRate: 'Tu tasa de impuestos hoy (%)', retirementRate: 'Tasa esperada al jubilarte (%)', yearsToWithdraw: 'Años hasta retirar', annualReturn: 'Rendimiento anual (%)',
-    salary: 'Salario anual ($)', pretax401k: '401(k) antes de impuestos al año ($)', pretaxHealth: 'Seguro médico antes de impuestos al año ($)', stateRate: 'Impuesto estatal efectivo (%)', payPeriods: 'Cheques de pago al año', filing: 'Estado civil para impuestos', single: 'Soltero/a', married: 'Casados, declaración conjunta',
+    salary: 'Salario anual ($)', pretax401k: '401(k) antes de impuestos al año ($)', pretaxHealth: 'Seguro médico antes de impuestos al año ($)', stateRate: 'Tasa estatal propia (%)', state: 'Estado donde vives', stateCustom: 'Escribir mi propia tasa', payPeriods: 'Cheques de pago al año', filing: 'Estado civil para impuestos', single: 'Soltero/a', married: 'Casados, declaración conjunta',
     debtName: 'Nombre', debtBalance: 'Saldo ($)', debtApr: 'APR (%)', debtMin: 'Mínimo ($)', remove: 'Quitar', removeAria: 'Quitar esta deuda',
   },
   dur: (m) => duration(m, 'es'),
@@ -120,11 +136,12 @@ const es = {
       <tr><td>Impuesto federal sobre la renta</td><td>${money(r.federal)}</td></tr>
       <tr><td>Seguro Social</td><td>${money(r.socialSecurity)}</td></tr>
       <tr><td>Medicare</td><td>${money(r.medicare)}</td></tr>
-      <tr><td>Impuesto estatal</td><td>${money(r.state)}</td></tr>
+      <tr><td>${r.stateInfo ? `Impuesto estatal (${r.stateInfo.name})` : 'Impuesto estatal'}</td><td>${money(r.state)}</td></tr>
       <tr><td>401(k) y seguro médico antes de impuestos</td><td>${money(r.pretax401k + r.pretaxHealth)}</td></tr>
     </tbody></table>
     <p>Tu tramo federal más alto es <b>${Math.round(r.marginal * 100)}%</b>, pero en total pagas cerca del ${Math.round(r.effectiveFederal * 1000) / 10}% de tu salario en impuesto federal.</p>
-    <p class="note">Estimación para el año fiscal 2026 con la deducción estándar. No incluye créditos (como el crédito por hijos), impuestos locales ni tu W-4 exacto. Estados sin impuesto al salario: Alaska, Florida, Nevada, New Hampshire, Dakota del Sur, Tennessee, Texas, Washington y Wyoming.</p>`,
+    ${stateLineEs(r)}
+    <p class="note">Estimación para el año fiscal 2026 con la deducción estándar. No incluye créditos (como el crédito por hijos), impuestos locales ni tu W-4 exacto. Los datos estatales vienen de las <a href="https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/" target="_blank" rel="noopener">tablas estatales 2026 de Tax Foundation</a>; los federales, del IRS. Estados sin impuesto al salario: Alaska, Florida, Nevada, New Hampshire, Dakota del Sur, Tennessee, Texas, Washington y Wyoming.</p>`,
   roth: (r) => {
     const head = r.winner === 'tie' ? 'Empate' : r.winner === 'roth' ? 'Gana la Roth' : 'Gana la Tradicional';
     return `<p class="big">${head}</p>

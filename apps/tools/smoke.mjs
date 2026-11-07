@@ -37,6 +37,13 @@ const checks = [
   ['/money-calculators/roth-vs-traditional/', '#result .big'],
   ['/money-calculators/take-home-pay/', '#result .big'],
   ['/money-calculators/es/take-home-pay/', '#result .big'],
+  ['/money-calculators/take-home-pay/', '#result .big', async (page) => {
+    await page.selectOption('[name=state]', 'CA');
+    if (await page.locator('[name=stateRate]').isVisible()) throw new Error('custom rate box should hide once a state is picked');
+    if (!/California income tax/.test(await page.textContent('#result'))) throw new Error('state row missing');
+    await page.selectOption('[name=state]', 'TX');
+    if (!/doesn't tax wages/.test(await page.textContent('#result'))) throw new Error('no-tax state line missing');
+  }],
   ['/money-calculators/es/', '.tiles'],
   ['/money-calculators/compound-interest/?embed=1', '.embed-credit'],
   ['/money-calculators/embed/', '#embed-form', async (page) => { await page.waitForSelector('#e-preview iframe'); }],
@@ -92,6 +99,14 @@ const checks = [
     await page.fill('#cap', '800');
     await page.fill('#person-form [name=name]', 'Sam'); await page.fill('#person-form [name=budget]', '200'); await page.click('#person-form button');
     await page.fill('#gift-form [name=item]', 'Headphones'); await page.fill('#gift-form [name=price]', '249.99'); await page.selectOption('#g-pay', 'bnpl'); await page.click('#gift-form button[type=submit]');
+  }],
+  ['/budget/afford.html', '#compare table', async (page) => {
+    await page.fill('[name=savings]', '8000'); await page.fill('[name=keepSaved]', '3000');
+    await page.fill('[name=takeHome]', '4500'); await page.fill('[name=bills]', '3000');
+    if (!/Not yet/.test(await page.textContent('#verdict'))) throw new Error('car verdict');
+    await page.selectOption('#kind', 'phone');
+    if (!/Yes, if you pay cash/.test(await page.textContent('#verdict'))) throw new Error('phone verdict');
+    if (await page.locator('[name=tradeIn]').isVisible()) throw new Error('trade-in shown for a phone');
   }],
   ['/budget/disputes.html', '#disputes .dispute', async (page) => { await page.fill('[name=item]', 'Metro Bank Card'); await page.click('#dispute-form button[type=submit]'); await page.selectOption('[data-outcome] select', 'verified'); await page.click('[data-outcome] button'); }],
   ['/scam-checker/vendor/', '#result .score', async (page) => { await page.click('#example'); }],

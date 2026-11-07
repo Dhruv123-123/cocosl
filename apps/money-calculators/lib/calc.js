@@ -261,6 +261,7 @@ export function rothVsTraditional({ annualContribution, currentRate, retirementR
 }
 
 import { STANDARD_DEDUCTION, BRACKETS, SOCIAL_SECURITY, MEDICARE } from './tax2026.js';
+import { stateIncomeTax } from './state-tax-2026.js';
 
 /** Federal income tax on taxable income using the brackets for the filing status. */
 export function federalIncomeTax(taxable, filing = 'single') {
@@ -278,7 +279,8 @@ export function federalIncomeTax(taxable, filing = 'single') {
  * Estimated take-home pay for a W-2 salary. Pre-tax 401(k) lowers income tax but not FICA;
  * pre-tax health premiums (cafeteria plan) lower both. State tax is a flat effective rate you enter.
  */
-export function takeHomePay({ salary, filing = 'single', pretax401k = 0, pretaxHealth = 0, stateRate = 0, payPeriods = 26 }) {
+// state: a two-letter code from lib/state-tax-2026.js, or 'custom' (or empty) to use a flat stateRate % of AGI.
+export function takeHomePay({ salary, filing = 'single', pretax401k = 0, pretaxHealth = 0, stateRate = 0, payPeriods = 26, state = 'custom' }) {
   salary = num(salary, 'Salary', { max: 1e8 });
   if (!['single', 'married'].includes(filing)) throw new RangeError('Filing status must be single or married');
   pretax401k = num(pretax401k, '401(k) contribution', { max: salary });
@@ -291,11 +293,14 @@ export function takeHomePay({ salary, filing = 'single', pretax401k = 0, pretaxH
   const federal = federalIncomeTax(taxable, filing);
   const socialSecurity = round2(Math.min(ficaWages, SOCIAL_SECURITY.wageBase) * SOCIAL_SECURITY.rate);
   const medicare = round2(ficaWages * MEDICARE.rate + Math.max(0, ficaWages - MEDICARE.additionalThreshold[filing]) * MEDICARE.additionalRate);
-  const state = round2(agi * (stateRate / 100));
-  const takeHome = round2(salary - pretax401k - pretaxHealth - federal - socialSecurity - medicare - state);
+  const useTable = state && state !== 'custom';
+  const stateInfo = useTable ? stateIncomeTax(state, { wages: salary, filing, pretax401k, pretaxHealth }) : null;
+  const stateTax = useTable ? stateInfo.tax : round2(agi * (stateRate / 100));
+  const takeHome = round2(salary - pretax401k - pretaxHealth - federal - socialSecurity - medicare - stateTax);
   const marginal = (BRACKETS[filing].find(([upper]) => taxable <= upper) || [0, 0.37])[1];
   return {
-    salary, taxable: round2(taxable), federal, socialSecurity, medicare, state, pretax401k, pretaxHealth, takeHome,
+    salary, taxable: round2(taxable), federal, socialSecurity, medicare, state: stateTax, stateInfo, pretax401k, pretaxHealth, takeHome,
+    effectiveState: salary ? stateTax / salary : 0,
     perPaycheck: round2(takeHome / payPeriods), perMonth: round2(takeHome / 12),
     effectiveFederal: salary ? federal / salary : 0, marginal,
   };

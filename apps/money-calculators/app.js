@@ -2,6 +2,7 @@
 // keeps inputs in the URL so results can be shared, and shows the right offer.
 import config from './config.js';
 import * as calc from './lib/calc.js';
+import { STATE_OPTIONS } from './lib/state-tax-2026.js';
 import { analyzeFees } from './lib/fees.js';
 import { money, isLiveUrl, escapeHtml } from './lib/format.js';
 import { TEXT } from './lib/text.js';
@@ -63,7 +64,7 @@ const CALCS = {
   'take-home-pay': {
     cta: 'hysa',
     fields: [['salary', F.salary, 60000], ['pretax401k', F.pretax401k, 3000], ['pretaxHealth', F.pretaxHealth, 0], ['stateRate', F.stateRate, 4, 0.1], ['payPeriods', F.payPeriods, 26]],
-    select: ['filing', F.filing, [['single', F.single], ['married', F.married]]],
+    select: [['filing', F.filing, [['single', F.single], ['married', F.married]]], ['state', F.state, [['custom', F.stateCustom], ...STATE_OPTIONS]]],
     render: (v) => T.takeHome(v, calc.takeHomePay(v)),
   },
   'roth-vs-traditional': {
@@ -275,15 +276,20 @@ function mountCalculator(id) {
       holder.insertAdjacentHTML('beforeend',
         `<label>${label}<input name="${name}" type="number" step="${step}" min="0" value="${escapeHtml(val)}" inputmode="decimal"></label>`);
     }
-    if (spec.select) {
-      const [name, label, options] = spec.select;
+    // One select ([name, label, options]) or several ([[name, label, options], ...]), shown above the number fields.
+    const selects = !spec.select ? [] : Array.isArray(spec.select[0]) ? spec.select : [spec.select];
+    for (const [name, label, options] of [...selects].reverse()) {
       const cur = qs.get(name) || options[0][0];
-      holder.insertAdjacentHTML('afterbegin', `<label>${label}<select name="${name}">${options.map(([val, txt]) => `<option value="${val}"${val === cur ? ' selected' : ''}>${txt}</option>`).join('')}</select></label>`);
+      holder.insertAdjacentHTML('afterbegin', `<label>${label}<select name="${name}">${options.map(([val, txt]) => `<option value="${val}"${val === cur ? ' selected' : ''}>${escapeHtml(txt)}</option>`).join('')}</select></label>`);
     }
+    // Take-home pay: the custom rate box only matters when no state is picked.
+    const syncState = () => { const st = form.state, rate = form.stateRate; if (st && rate) rate.closest('label').hidden = st.value !== 'custom'; };
+    syncState();
     run = () => {
       try {
         const v = readValues(form, spec.fields);
-        if (spec.select) v[spec.select[0]] = form[spec.select[0]].value;
+        for (const [name] of selects) v[name] = form[name].value;
+        syncState();
         out.innerHTML = spec.render(v);
         writeUrl(Object.fromEntries(Object.entries(v).filter(([, x]) => x !== undefined)));
       } catch (err) { out.innerHTML = `<p class="error">${escapeHtml(err.message)}</p>`; }
