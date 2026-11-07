@@ -559,3 +559,19 @@ def test_primer_ano_workbook_is_gumroad_only_and_current():
     assert listing == b.gumroad() and "[PRICE]" in listing and "Gumroad only" in listing
     assert (DS / "REVIEW_CHECKLIST_PRIMER_ANO.md").read_text() == b.review_doc()
     assert not any(x in text.lower() for x in ("remitly", "western union", "zelle", "venmo", "chime"))
+
+
+def test_review_packets_cover_every_post_and_every_attorney_flag():
+    """The native packet holds every post/video script; the attorney packet holds every piece flagged ATTORNEY
+    REVIEW plus any other passage that mentions the ITIN or immigration; hour estimates are positive ranges."""
+    pytest.importorskip("yaml")
+    b = _load(DS / "review" / "build_packets.py", "build_packets")
+    r = b.build()
+    items = [it for _, files in b.CONTENT_PARTS for f in files for it in json.loads((DS / f).read_text())]
+    assert sum(1 for e in r["P"].entries if e["source"].endswith(".json")) == len(items)
+    flagged = sum(1 for it in items if it["script"]["claims_to_verify"][0].startswith("ATTORNEY REVIEW"))
+    assert sum(1 for e in r["A"] if e["claims"] and e["claims"][0].startswith("ATTORNEY REVIEW")) == flagged
+    assert all(b.IMMIGRATION_RE.search(" ".join(e["chunks"])) or e["claims"][0].startswith("ATTORNEY") for e in r["A"])
+    for k in ("native", "attorney"):
+        lo, hi = r[k]["hours"]
+        assert 0 < lo < hi
