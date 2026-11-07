@@ -2598,13 +2598,19 @@
   "idea_angle": "December guide: the year-end moves that actually matter for freelancers, and the ones that don't.",
   "script": {
    "title": "Year-end tax moves for freelancers (and the ones to skip)",
-   "hook": "December is when freelancers get the worst tax advice of the year: buy a car, buy a laptop, write everything off. Some year-end moves really do lower your bill. Most of the popular ones just move money from you to a store. Here's how to tell the difference, with twenty twenty-six numbers. Education, not tax advice.",
+   "hook": "December is when freelancers get the worst tax advice of the year: buy a car, buy a laptop, write everything off. Some year-end moves really do lower your bill. Most of the popular ones just move money from you to a store. Here's how to tell the difference, with twenty twenty-six numbers. Education, not tax advice. We'll start with where you stand, then six moves worth considering and the ones to skip.",
    "segments": [
     {
      "heading": "Intro",
-     "narration": "December is when freelancers get the worst tax advice of the year: buy a car, buy a laptop, write everything off. Some year-end moves really do lower your bill. Most of the popular ones just move money from you to a store. Here's how to tell the difference, with twenty twenty-six numbers. Education, not tax advice.",
+     "narration": "December is when freelancers get the worst tax advice of the year: buy a car, buy a laptop, write everything off. Some year-end moves really do lower your bill. Most of the popular ones just move money from you to a store. Here's how to tell the difference, with twenty twenty-six numbers. Education, not tax advice. We'll start with where you stand, then six moves worth considering and the ones to skip.",
      "on_screen_text": "Year-end moves that matter",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes under a December calendar holding a short checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "Where you stand",
+     "narration": "Before any move, know where you stand. Take your profit so far this year, add what you realistically expect to collect in December, and work out the full-year tax with our calculator or your tracker. Then compare it with what you've paid in estimates and what's in your tax savings account. That one number, how much you'll still owe, decides which of the moves below are worth your time. If you're already short, the best year-end move is simply saving more before January fifteenth.",
+     "on_screen_text": "Know your full-year number first",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes studying a gauge on a coral vault. No text, no logos, no real people."
     },
     {
      "heading": "Write-off math",
@@ -2614,15 +2620,27 @@
     },
     {
      "heading": "Timing",
-     "narration": "That's why the real year-end move is timing, not spending. If you were going to buy a laptop in February anyway, buying it and starting to use it in December moves the deduction a year earlier. If you weren't going to buy it, don't.",
+     "narration": "That's why the real year-end move is timing, not spending. If you were going to buy a laptop in February anyway, buying it and starting to use it in December moves the deduction a year earlier. If you weren't going to buy it, don't. The same goes for supplies, upgrades and repairs. Make a short list of what the business genuinely needs in the next two or three months, check the cash in your business account after setting aside tax, and only then decide what to buy now.",
      "on_screen_text": "Timing, not spending",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a box moving from February to December. No text, no logos, no real people."
+    },
+    {
+     "heading": "Equipment rules",
+     "narration": "If you are buying equipment, three rules. It has to be placed in service, meaning set up and used for the business, by December thirty-first. Buying it on the thirtieth and leaving it in the box doesn't count. You deduct only the business share, so a laptop used seventy percent for work is a seventy percent deduction. And small items, generally up to twenty-five hundred dollars each, can usually be written off right away as supplies if you follow that election. Bigger items can usually be written off in year one too, but keep the receipt and note how you use it.",
+     "on_screen_text": "In service by Dec 31 · business % only",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop on a desk, switched on, with a calendar showing Dec 31. No text, no logos, no real people."
     },
     {
      "heading": "Invoices",
      "narration": "Second, invoice timing. Most freelancers use the cash method: income counts when you receive it. A payment that arrives January second is next year's income. Don't play games with clients' payment dates, but don't rush to collect a December invoice if it suits you to receive it in January either.",
      "on_screen_text": "Received in Jan = next year",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an invoice crossing into January. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pay bills",
+     "narration": "A related timing move on the expense side: bills. On the cash method, an expense counts when you pay it. Charges on a credit card count when you make the charge, not when you pay the card. So paying your January software renewal or your accountant's invoice on December twenty-ninth moves the deduction into this year. Again, only for things you'd pay anyway. And don't prepay a year or more in advance just for the deduction; the rules generally limit prepaid expenses to benefits that don't extend beyond twelve months.",
+     "on_screen_text": "Expenses count when paid (card = when charged)",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar page with a coin moving from January to December. No text, no logos, no real people."
     },
     {
      "heading": "Retirement",
@@ -2632,9 +2650,15 @@
     },
     {
      "heading": "Estimate",
-     "narration": "Fourth, update your estimate. Take your profit so far, add what you expect in December, and work out the full-year bill. That tells you how big the January fifteenth payment needs to be, and whether your tax savings will cover the April balance.",
+     "narration": "Fourth, update your estimate. Take your profit so far, add what you expect in December, and work out the full-year bill. That tells you how big the January fifteenth payment needs to be, and whether your tax savings will cover the April balance. If the January number looks scary, remember you can make extra payments any time before then, and anything you pay now is money you won't need to find in April. Even a partial top-up helps.",
      "on_screen_text": "Size the Jan 15 payment",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calculator and a January page. No text, no logos, no real people."
+    },
+    {
+     "heading": "Jan 15 math",
+     "narration": "Here's a quick example of sizing that January payment. Say last year's total tax was sixty-five hundred dollars and you've paid sixteen twenty-five in April, June and September. Under the safe harbor, January is another sixteen twenty-five, and you're generally protected from the penalty. But if this year's real tax is about twelve thousand, you'll still owe about fifty-five hundred more in April. So the safe harbor protects you from the penalty, not from the bill. Your tax savings account needs to cover both.",
+     "on_screen_text": "Safe harbor: $1,625 now, ~$5,500 in April",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four coin stacks and a larger one waiting in April. No text, no logos, no real people."
     },
     {
      "heading": "Health",
@@ -2643,10 +2667,34 @@
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a medical shield and a calendar. No text, no logos, no real people."
     },
     {
+     "heading": "Big year or small",
+     "narration": "Here's the thinking behind all this timing. If you expect a bigger income next year, deductions are worth more next year and income is taxed more next year, so you'd rather pull income into this year and push deductions out. If this was your big year, do the opposite: pull deductions in and let late payments land in January. Most freelancers don't know which way next year will go, and that's fine. When in doubt, don't contort anything; just make sure nothing you need slips through the cracks.",
+     "on_screen_text": "Big year now? Pull deductions in",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a seesaw tilting between two calendar pages. No text, no logos, no real people."
+    },
+    {
      "heading": "Paperwork",
      "narration": "Sixth, paperwork. If you paid another freelancer two thousand dollars or more directly this year, ask for their W-9 now so you can send a 1099-NEC by February first. And catch up your income and expense logs while December is quiet.",
      "on_screen_text": "W-9s + logs",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a stack of forms and a ledger. No text, no logos, no real people."
+    },
+    {
+     "heading": "Next year",
+     "narration": "And use the quiet week between Christmas and New Year to set up next year. A separate tax savings account if you don't have one. A set-aside percentage based on this year's real numbers. New logs for income, expenses and miles. And a photo of your car's odometer on December thirty-first, because your mileage log starts with that number. Twenty minutes of setup now saves you a weekend next January.",
+     "on_screen_text": "Set up next year in 20 minutes",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes placing a new notebook next to three jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "Records",
+     "narration": "And one unglamorous move that pays off more than any purchase: get your records straight before the year closes. Go through November and December's business bank and card statements. Label anything unclear while you still remember what it was. Make sure every business expense paid from a personal card is logged. Add up your miles. When January comes, you'll be able to size the last payment in ten minutes and start your return with real numbers instead of guesses.",
+     "on_screen_text": "Label every line before Jan 1",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes labeling lines on a long bank statement. No text, no logos, no real people."
+    },
+    {
+     "heading": "Charity",
+     "narration": "A quick note on charity, because December is when people ask. Donations from your business aren't business expenses for a sole proprietor; they're personal charitable contributions. Under the newer rules, people who take the standard deduction can deduct a limited amount of cash gifts starting in twenty twenty-six, so check the current limit. If you itemize, they work as before. Give because you care about the cause, and keep the receipt either way.",
+     "on_screen_text": "Business donations = personal gifts",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small heart dropping into a jar. No text, no logos, no real people."
     },
     {
      "heading": "Skip",
@@ -2656,7 +2704,7 @@
     },
     {
      "heading": "Recap",
-     "narration": "Recap: time purchases you needed anyway, know when income counts, fund retirement, size the January payment, sort health insurance, and collect W-9s. The free calculator in the description does the January math. Subscribe for one freelancer money move a week.",
+     "narration": "Recap: time purchases you needed anyway, know when income counts, fund retirement, size the January payment, sort health insurance, and collect W-9s. The free calculator in the description does the January math. Pick the two or three that apply to you this week, put them on your calendar, and ignore the rest. You don't need every move; you need the right ones done before the thirty-first. Subscribe for one freelancer money move a week.",
      "on_screen_text": "Recap",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes ticking six boxes. No text, no logos, no real people."
     }
@@ -2671,7 +2719,7 @@
     "smallbusinesstips",
     "1099money"
    ],
-   "description": "Year-end tax moves for US freelancers in December 2026, with the math on deductions.\n\nChapters\n0:00 Year-end moves that matter\n0:22 $1,000 deduction ≈ $230 saved\n0:47 Timing, not spending\n1:05 Received in Jan = next year\n1:25 SEP · Solo 401(k) · IRA\n1:50 Size the Jan 15 payment\n2:07 Health plan by Dec 15\n2:22 W-9s + logs\n2:39 Skip: the 'loopholes'\n2:59 Recap\n\nFree quarterly tax calculator: https://1099money.netlify.app/\nThe Quarterly Tax Tracker: https://example.gumroad.com/l/quarterly-tax-tracker\n\nSources: irs.gov (Pub 334, SEP, IRA limits, 1099-NEC, estimated taxes), healthcare.gov.\n\nEducational only, not tax, legal or financial advice. Figures are 2026 federal; check your state.",
+   "description": "Year-end tax moves for US freelancers in December 2026, with the math on deductions.\n\nChapters\n0:00 Year-end moves that matter\n0:28 Know your full-year number first\n1:00 $1,000 deduction ≈ $230 saved\n1:26 Timing, not spending\n2:00 In service by Dec 31 · business % only\n2:39 Received in Jan = next year\n2:59 Expenses count when paid (card = when charged)\n3:34 SEP · Solo 401(k) · IRA\n3:59 Size the Jan 15 payment\n4:30 Safe harbor: $1,625 now, ~$5,500 in April\n5:02 Health plan by Dec 15\n5:17 Big year now? Pull deductions in\n5:51 W-9s + logs\n6:07 Set up next year in 20 minutes\n6:35 Label every line before Jan 1\n7:05 Business donations = personal gifts\n7:34 Skip: the 'loopholes'\n7:54 Recap\n\nFree quarterly tax calculator: https://1099money.netlify.app/\nThe Quarterly Tax Tracker: https://example.gumroad.com/l/quarterly-tax-tracker\n\nSources: irs.gov (Pub 334, SEP, IRA limits, 1099-NEC, estimated taxes), healthcare.gov.\n\nEducational only, not tax, legal or financial advice. Figures are 2026 federal; check your state.",
    "thumbnail_text": "Year-end tax moves",
    "sources": [
     "https://www.irs.gov/publications/p334",
@@ -2685,6 +2733,8 @@
     "Deduction savings from lib/tax.js",
     "12-month rule for prepaid expenses",
     "All 2026 limits as in shorts",
+    "De minimis safe harbor $2,500 per item",
+    "2026 non-itemizer charitable deduction limit",
     "Chapter timestamps must match final edit"
    ]
   }
@@ -2695,19 +2745,25 @@
   "idea_angle": "Sole proprietor vs LLC vs S corp explained with what changes for taxes, liability and cost.",
   "script": {
    "title": "LLC, S corp or sole proprietor? What actually changes",
-   "hook": "Every new freelancer gets told to form an LLC, and every freelancer earning decent money gets told to become an S corp. Both can be right. Both are often wrong. Here's what each one actually changes, so you can decide on purpose. Education only; state rules vary.",
+   "hook": "Every new freelancer gets told to form an LLC, and every freelancer earning decent money gets told to become an S corp. Both can be right. Both are often wrong. Here's what each one actually changes, so you can decide on purpose. Education only; state rules vary. We'll cover the myths, liability and insurance, real S corp numbers, the reasonable salary rule, side effects, and the order to do things in if you decide to switch.",
    "segments": [
     {
      "heading": "Intro",
-     "narration": "Every new freelancer gets told to form an LLC, and every freelancer earning decent money gets told to become an S corp. Both can be right. Both are often wrong. Here's what each one actually changes, so you can decide on purpose. Education only; state rules vary.",
+     "narration": "Every new freelancer gets told to form an LLC, and every freelancer earning decent money gets told to become an S corp. Both can be right. Both are often wrong. Here's what each one actually changes, so you can decide on purpose. Education only; state rules vary. We'll cover the myths, liability and insurance, real S corp numbers, the reasonable salary rule, side effects, and the order to do things in if you decide to switch.",
      "on_screen_text": "Sole prop · LLC · S corp",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes standing before three simple buildings. No text, no logos, no real people."
     },
     {
      "heading": "Sole prop",
-     "narration": "The default is the sole proprietorship. You start one the moment you take paid work under your own name. No filing needed. You report profit on Schedule C and pay self-employment tax. Your business and personal assets aren't legally separate.",
+     "narration": "The default is the sole proprietorship. You start one the moment you take paid work under your own name. No filing needed. You report profit on Schedule C and pay self-employment tax. Your business and personal assets aren't legally separate. For most new freelancers, that's perfectly fine.",
      "on_screen_text": "Default: sole proprietor",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a single small building. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myths",
+     "narration": "Let's clear up three myths before going further. Myth one: an LLC lets you deduct more. It doesn't; the same expenses are deductible as a sole proprietor. Myth two: an LLC means you don't pay self-employment tax. By default you pay exactly the same. Myth three: you need an LLC to look professional or to open a business bank account. Many banks open business accounts for sole proprietors, and clients care about your work, your contract and your invoices, not your entity.",
+     "on_screen_text": "3 LLC myths",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three small speech bubbles crossed out. No text, no logos, no real people."
     },
     {
      "heading": "LLC taxes",
@@ -2722,6 +2778,18 @@
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a wall between a briefcase and a house. No text, no logos, no real people."
     },
     {
+     "heading": "Insurance",
+     "narration": "Since we're talking about protection: for most solo freelancers, the real risk isn't business debt, it's a client claiming your work caused them a loss. That's what professional liability insurance, sometimes called errors and omissions, is for. And if clients visit you or you work on their premises, general liability covers injuries and damage. An LLC can't do either of those jobs. For a lot of freelancers, a decent insurance policy is a better first step than forming an entity.",
+     "on_screen_text": "Insurance does what an LLC can't",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a shield with a small umbrella. No text, no logos, no real people."
+    },
+    {
+     "heading": "Separate",
+     "narration": "If you do form an LLC, the protection only holds up if you treat it as separate. That means a separate bank account, contracts signed in the LLC's name, and not paying personal bills from the business account. Mixing money is the classic way people lose the liability shield in court. It's also how they lose track of deductions. The good news is that separate accounts are a good idea whether you form an LLC or not.",
+     "on_screen_text": "Keep it separate or lose the shield",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two jars with a clear wall between them. No text, no logos, no real people."
+    },
+    {
      "heading": "LLC cost",
      "narration": "LLCs cost money. Every state charges a filing fee, many require an annual report, and some charge an annual fee or tax. California's minimum is eight hundred dollars a year. Check your state before you form one.",
      "on_screen_text": "Fees vary by state",
@@ -2734,16 +2802,58 @@
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin stack split in two. No text, no logos, no real people."
     },
     {
+     "heading": "Numbers",
+     "narration": "Let's put rough numbers on the S corp. Say your profit is a hundred thousand dollars. As a sole proprietor, self-employment tax is about fourteen thousand one hundred. As an S corp paying yourself a sixty thousand dollar salary, payroll taxes on that salary are about nine thousand two hundred, employer and employee halves together. That's roughly five thousand dollars of difference before costs. Then subtract payroll software, the extra business return, state fees and a bookkeeper or accountant, which can easily be two to four thousand a year. And the income tax side shifts a little too. So the real saving here might be one to three thousand, not the ten thousand people promise online.",
+     "on_screen_text": "$100K profit: ~$5K gross saving, less costs",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two coin stacks with a few coins removed from one for fees. No text, no logos, no real people."
+    },
+    {
+     "heading": "Reasonable",
+     "narration": "That salary is the part people get wrong. The IRS expects an S corp owner who works in the business to pay themselves reasonable compensation: roughly what you'd pay someone else to do your job. You can't pay yourself ten thousand dollars and take ninety thousand as distributions. Look at what employees in your field and area earn, document how you chose the number, and expect a CPA to push back if it's low. The lower the salary, the bigger the saving looks, and the bigger the risk.",
+     "on_screen_text": "Salary = what you'd pay someone else",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a balance scale with a paycheck on one side. No text, no logos, no real people."
+    },
+    {
      "heading": "S corp cost",
      "narration": "The costs: payroll software, a separate business tax return, usually an accountant, sometimes state taxes, and the salary must be reasonable for your work. The saving only beats the cost once profit is well above that salary. Run the numbers with a CPA before electing, and plan for the extra paperwork.",
      "on_screen_text": "Costs + 'reasonable salary'",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three receipts in a row. No text, no logos, no real people."
     },
     {
+     "heading": "Side effects",
+     "narration": "There are side effects worth knowing. Your retirement contributions as an S corp are based on your salary, not your whole profit, so a low salary can limit them. The qualified business income deduction is figured differently. Health insurance has to go through payroll to be deductible for an owner. And you'll be filing payroll reports every quarter. None of that is a deal-breaker, but each one is a reason to run the numbers with a professional who sees your whole picture.",
+     "on_screen_text": "Retirement · QBI · health · payroll filings",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four small icons on a checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "Multi-member",
+     "narration": "One more structure to know about: if you go into business with a partner, things change. A multi-member LLC is taxed as a partnership by default, which means a separate partnership return and a Schedule K-1 for each owner. Each partner still pays self-employment tax on their share. Partnerships need a written agreement covering who owns what, how profits are split and what happens if someone leaves. If you're thinking of teaming up, get that agreement in place before the money starts coming in.",
+     "on_screen_text": "Partners → partnership return + K-1s",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two small mascots holding one shared folder. No text, no logos, no real people."
+    },
+    {
      "heading": "When",
      "narration": "A simple rule of thumb: start as a sole proprietor with a separate business account and good records. Add an LLC when you have something to protect or a client requires it. Consider an S corp when your profit is high and steady and a CPA shows the saving after costs.",
      "on_screen_text": "When to switch",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small plant growing taller in stages. No text, no logos, no real people."
+    },
+    {
+     "heading": "How to switch",
+     "narration": "If you decide to switch, the order is usually: form the LLC with your state, get a free EIN from the IRS, open a business bank account in the LLC's name, and update your contracts and W-9s. For an S corp, file Form twenty-five fifty-three. To have it apply from the start of a calendar year, it's generally due by March fifteenth of that year. You can change structure as your business grows, so you don't need to get this perfect on day one.",
+     "on_screen_text": "LLC → EIN → bank → (Form 2553 by Mar 15)",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a short path with four stepping stones. No text, no logos, no real people."
+    },
+    {
+     "heading": "Decide",
+     "narration": "So how do you actually decide? Ask three questions. First: what could go wrong that would cost me personally, and would an LLC or insurance address it? Second: is my profit high and steady enough that an S corp saves money after all its costs, according to someone who has seen my numbers? Third: am I ready for the extra paperwork? If the answers are not really, not yet and no, stay a sole proprietor with separate accounts and good records, and revisit next year.",
+     "on_screen_text": "3 questions: risk · profit · paperwork",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a checklist with three question marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mistakes",
+     "narration": "And the three most expensive mistakes we see. Forming an S corp at forty thousand of profit, where the costs eat the saving. Forming an LLC in another state, like Delaware or Wyoming, when you live and work somewhere else, and then paying fees in both states. And forming any entity but continuing to mix personal and business money, which undoes the protection you paid for. All three are avoidable with an hour of planning.",
+     "on_screen_text": "3 costly mistakes",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three small crossed-out icons. No text, no logos, no real people."
     },
     {
      "heading": "Recap",
@@ -2762,7 +2872,7 @@
     "freelancetips",
     "1099money"
    ],
-   "description": "What sole proprietorships, single-member LLCs and S corp elections change for a US freelancer.\n\nChapters\n0:00 Sole prop · LLC · S corp\n0:18 Default: sole proprietor\n0:34 LLC: same taxes by default\n0:48 LLC: liability, not tax\n1:05 Fees vary by state\n1:20 S corp: salary + profit\n1:37 Costs + 'reasonable salary'\n1:57 When to switch\n2:17 Recap\n\nSources: irs.gov (LLC, S corporations, reasonable compensation), sba.gov (business structures), California FTB.\n\nSome links are affiliate links; we may earn a commission at no extra cost to you. Educational only, not tax, legal or financial advice.",
+   "description": "What sole proprietorships, single-member LLCs and S corp elections change for a US freelancer.\n\nChapters\n0:00 Sole prop · LLC · S corp\n0:29 Default: sole proprietor\n0:48 3 LLC myths\n1:19 LLC: same taxes by default\n1:33 LLC: liability, not tax\n1:51 Insurance does what an LLC can't\n2:22 Keep it separate or lose the shield\n2:52 Fees vary by state\n3:06 S corp: salary + profit\n3:23 $100K profit: ~$5K gross saving, less costs\n4:07 Salary = what you'd pay someone else\n4:41 Costs + 'reasonable salary'\n5:01 Retirement · QBI · health · payroll filings\n5:33 Partners → partnership return + K-1s\n6:06 When to switch\n6:26 LLC → EIN → bank → (Form 2553 by Mar 15)\n6:58 3 questions: risk · profit · paperwork\n7:31 3 costly mistakes\n8:00 Recap\n\nSources: irs.gov (LLC, S corporations, reasonable compensation), sba.gov (business structures), California FTB.\n\nSome links are affiliate links; we may earn a commission at no extra cost to you. Educational only, not tax, legal or financial advice.",
    "thumbnail_text": "LLC vs S corp",
    "sources": [
     "https://www.irs.gov/businesses/small-businesses-self-employed/limited-liability-company-llc",
@@ -2773,6 +2883,8 @@
     "Disregarded entity default",
     "Reasonable compensation",
     "California $800 minimum",
+    "$100K SE tax ≈ $14,130 vs FICA on $60K salary = $9,180",
+    "Form 2553 due by Mar 15 for calendar-year effect",
     "Chapter timestamps must match final edit"
    ]
   }
@@ -2783,13 +2895,19 @@
   "idea_angle": "How to set a freelance rate from a target income, working backwards through taxes, benefits and unbilled time.",
   "script": {
    "title": "How to set your freelance rate (with the tax math)",
-   "hook": "Most freelancers pick a rate by looking at what other people charge. Then they find out in April that it doesn't cover taxes, health insurance or the weeks they couldn't bill. Let's work backwards from what you want to take home, with twenty twenty-six numbers. Illustrative, not advice.",
+   "hook": "Most freelancers pick a rate by looking at what other people charge. Then they find out in April that it doesn't cover taxes, health insurance or the weeks they couldn't bill. Let's work backwards from what you want to take home, with twenty twenty-six numbers. Illustrative, not advice. We'll go step by step: take-home, benefits, taxes, revenue, real billable hours, and then a sanity check, a side-hustle example, and how and when to raise your rate.",
    "segments": [
     {
      "heading": "Intro",
-     "narration": "Most freelancers pick a rate by looking at what other people charge. Then they find out in April that it doesn't cover taxes, health insurance or the weeks they couldn't bill. Let's work backwards from what you want to take home, with twenty twenty-six numbers. Illustrative, not advice.",
+     "narration": "Most freelancers pick a rate by looking at what other people charge. Then they find out in April that it doesn't cover taxes, health insurance or the weeks they couldn't bill. Let's work backwards from what you want to take home, with twenty twenty-six numbers. Illustrative, not advice. We'll go step by step: take-home, benefits, taxes, revenue, real billable hours, and then a sanity check, a side-hustle example, and how and when to raise your rate.",
      "on_screen_text": "Set your rate backwards",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a price tag and a calculator. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why backwards",
+     "narration": "Why work backwards? Because a rate copied from someone else carries their costs, their hours and their life, not yours. One designer might charge seventy-five an hour with a spouse's health plan and full-time clients. Another charging the same might be losing money once insurance and empty weeks are counted. Your rate has to pay for your life, your taxes and your downtime. So we start from your life and build up to the rate, then check it against the market at the end.",
+     "on_screen_text": "Your costs ≠ their costs",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two identical price tags on very different-sized backpacks. No text, no logos, no real people."
     },
     {
      "heading": "Target",
@@ -2799,9 +2917,15 @@
     },
     {
      "heading": "Costs",
-     "narration": "Add what an employer used to pay for: health insurance, say six thousand a year, retirement, say five thousand, and business costs like software and equipment, say six thousand.",
+     "narration": "Add what an employer used to pay for: health insurance, say six thousand a year, retirement, say five thousand, and business costs like software and equipment, say six thousand. If you're not sure about these, look at what you actually spent last year, and remember that an employer's health plan is often worth several hundred dollars a month.",
      "on_screen_text": "+ health, retirement, business costs",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three small stacks added. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tax detail",
+     "narration": "Here's where that eighty-four thousand comes from. On eighty-four thousand of profit, a single filer in twenty twenty-six pays about eleven thousand nine hundred in self-employment tax and about five thousand seven hundred in income tax, after the standard deduction and the twenty percent qualified business income deduction. That's about seventeen thousand six hundred in total, which leaves about sixty-six thousand four hundred. Notice that the tax is about twenty-one percent of profit. That's the number to plan with, not your bracket.",
+     "on_screen_text": "$84K → ~$17,570 federal → ~$66,430 left",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin stack with a slice taken off the top. No text, no logos, no real people."
     },
     {
      "heading": "Taxes",
@@ -2811,9 +2935,21 @@
     },
     {
      "heading": "Revenue",
-     "narration": "So revenue needs to be about ninety thousand: eighty-four thousand profit plus six thousand of business costs.",
+     "narration": "So revenue needs to be about ninety thousand: eighty-four thousand profit plus six thousand of business costs. If your business costs are higher, like equipment for a photographer or software for a developer, the revenue target rises one for one.",
      "on_screen_text": "Revenue ≈ $90K",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a tall coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Non-billable",
+     "narration": "The billable hours step is where most rates go wrong, so let's slow down. A full-time freelancer's week includes finding clients, writing proposals, email, invoicing, bookkeeping, learning, and fixing the computer. That's often ten to twenty hours a week nobody pays for. New freelancers spend even more of their time selling. If you assume thirty-five billable hours a week, you'll set a rate that only works in your best weeks. Track your time for two weeks, honestly, and you'll find your real number.",
+     "on_screen_text": "10–20 unpaid hours a week",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a clock with part of its face shaded grey. No text, no logos, no real people."
+    },
+    {
+     "heading": "Time off",
+     "narration": "And the weeks. Forty-eight working weeks assumes four weeks off for holidays, vacation and sick days combined. No employer is paying for those weeks now. If you want more time off, or you know your work slows down every summer or December, use fewer weeks. Forty-four weeks at twenty-five hours is eleven hundred hours, and the same ninety thousand target becomes about eighty-two dollars an hour.",
+     "on_screen_text": "Fewer weeks → higher rate",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with several weeks shaded mint. No text, no logos, no real people."
     },
     {
      "heading": "Hours",
@@ -2823,9 +2959,27 @@
     },
     {
      "heading": "Rate",
-     "narration": "Ninety thousand divided by twelve hundred is seventy-five dollars an hour. That's the floor for this target, not the goal.",
+     "narration": "Ninety thousand divided by twelve hundred is seventy-five dollars an hour. That's the floor for this target, not the goal. If you're currently charging fifty, you now know you're working below your target, and by how much. That's not a reason to panic; it's a reason to plan your next rate increase and the clients you'll raise first.",
      "on_screen_text": "Rate floor: $75/hour",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Packages",
+     "narration": "Many freelancers do better moving away from hourly altogether. A package, like a brand identity with three logo concepts and two rounds of revisions, lets you charge for the result. As you get faster, you earn more per hour instead of less. Price each package from your hourly floor and an honest hours estimate, then adjust for the value to the client. Put the scope in writing, including what's not included, so extra work becomes a paid change, not a favor.",
+     "on_screen_text": "Packages: charge for the result",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a neatly wrapped box with a price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Market check first",
+     "narration": "Before we go on, a word on the market rate. Look at what experienced people in your niche charge, not what beginners on marketplace sites post. Ask peers directly; many will share ranges. Check job boards for what employers pay salaried staff to do the same work, then remember a freelancer needs well above the equivalent hourly wage to cover the costs we added. If your floor is above what the market pays for your current offer, the answer is usually a sharper niche, not a lower rate.",
+     "on_screen_text": "Compare with experienced peers",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a row of price tags of different heights. No text, no logos, no real people."
+    },
+    {
+     "heading": "Deposits",
+     "narration": "Protect your rate from slow payers too. Ask new clients for a deposit, often twenty-five to fifty percent up front for projects. Set payment terms in writing, like fourteen days, and send invoices with a pay-now link. Add a late fee clause if your contract allows it. A client who pays in ninety days is effectively paying you less, because you're covering the gap. Clear terms filter out the clients who were going to be trouble anyway.",
+     "on_screen_text": "Deposits · terms · pay-now links",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an invoice with a mint check mark and a small clock. No text, no logos, no real people."
     },
     {
      "heading": "Project",
@@ -2834,14 +2988,32 @@
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a project box with a tag. No text, no logos, no real people."
     },
     {
+     "heading": "Side hustle",
+     "narration": "A quick second example for side hustlers. Say you have a full-time job in the twenty-two percent bracket and want fifteen thousand dollars extra after tax. Self-employment tax plus income tax on side income at that bracket is roughly thirty percent federal. So you'd need about twenty-one thousand five hundred of profit. At ten hours a week for forty-six weeks, that's four hundred sixty hours, or about forty-seven dollars an hour, before any business costs. Call it fifty. Illustrative, but it shows why side-hustle rates need a tax cushion.",
+     "on_screen_text": "Side hustle: ~$21.5K profit → ~$47/hour",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small briefcase next to a smaller coin stack. No text, no logos, no real people."
+    },
+    {
      "heading": "Check",
-     "narration": "Then sanity-check against the market. If you're far below it, raise your rate. If you're far above, narrow your niche or improve your offer so the price makes sense.",
+     "narration": "Then sanity-check against the market. If you're far below it, raise your rate. If you're far above, narrow your niche or improve your offer so the price makes sense. And remember the market is wide. The same work is priced very differently for a local shop and for a funded startup, so the client you choose matters as much as the rate you set.",
      "on_screen_text": "Check the market",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a balance scale. No text, no logos, no real people."
     },
     {
+     "heading": "Raise",
+     "narration": "Finally, rates aren't set once. Review yours every year, ideally in January. Your costs rise, your skills improve, and your tax bill goes up with your income. Give existing clients notice, usually thirty to sixty days, and a clear new rate. Raise rates for new clients first if you're nervous. And add a minimum project size or a deposit, so small jobs and slow payers don't quietly drag your real hourly rate down.",
+     "on_screen_text": "Review every January · deposits · minimums",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a price tag being nudged upward on a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Talk money",
+     "narration": "Last, how to say your rate. State it plainly, once, with no apology: my rate for this is four thousand five hundred. Then stop talking. If they push back, offer a smaller scope at a lower price rather than the same work for less. Have your floor in mind and be willing to walk away from projects below it. Every client at a rate that doesn't work takes the place of one that does.",
+     "on_screen_text": "Say it once. Then stop talking.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes standing calmly with a price tag. No text, no logos, no real people."
+    },
+    {
      "heading": "Recap",
-     "narration": "Recap: start from take-home pay, add benefits and costs, gross up for tax, divide by billable hours, not total hours. Subscribe for one freelancer money move a week.",
+     "narration": "Recap: start from take-home pay, add benefits and costs, gross up for tax, divide by billable hours, not total hours. Run these numbers with your own figures this week. It takes twenty minutes with a calculator, and you'll walk into every client conversation knowing exactly where your floor is and why. Subscribe for one freelancer money move a week.",
      "on_screen_text": "Recap",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes adjusting a price tag upward. No text, no logos, no real people."
     }
@@ -2856,7 +3028,7 @@
     "selfemployed",
     "1099money"
    ],
-   "description": "A worked method to set a freelance hourly rate from a take-home target, including 2026 federal taxes.\n\nChapters\n0:00 Set your rate backwards\n0:19 Target: $55K take-home\n0:26 + health, retirement, business costs\n0:37 ≈ $84K profit needed\n0:56 Revenue ≈ $90K\n1:03 1,200 billable hours\n1:18 Rate floor: $75/hour\n1:27 Project price = hours × rate + margin\n1:35 Check the market\n1:47 Recap\n\nFree quarterly tax calculator: https://1099money.netlify.app/\n\nIllustrative example. Educational only, not tax, legal or financial advice.",
+   "description": "A worked method to set a freelance hourly rate from a take-home target, including 2026 federal taxes.\n\nChapters\n0:00 Set your rate backwards\n0:29 Your costs ≠ their costs\n1:02 Target: $55K take-home\n1:09 + health, retirement, business costs\n1:31 $84K → ~$17,570 federal → ~$66,430 left\n2:03 ≈ $84K profit needed\n2:22 Revenue ≈ $90K\n2:38 10–20 unpaid hours a week\n3:10 Fewer weeks → higher rate\n3:36 1,200 billable hours\n3:50 Rate floor: $75/hour\n4:13 Packages: charge for the result\n4:45 Compare with experienced peers\n5:19 Deposits · terms · pay-now links\n5:48 Project price = hours × rate + margin\n5:57 Side hustle: ~$21.5K profit → ~$47/hour\n6:31 Check the market\n6:56 Review every January · deposits · minimums\n7:25 Say it once. Then stop talking.\n7:53 Recap\n\nFree quarterly tax calculator: https://1099money.netlify.app/\n\nIllustrative example. Educational only, not tax, legal or financial advice.",
    "thumbnail_text": "Set your rate",
    "sources": [
     "https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes"
@@ -2864,6 +3036,8 @@
    "claims_to_verify": [
     "$84K profit → ≈ $66,430 after federal (single 2026)",
     "$55K + $6K health + $5K retirement = $66K ≈ $66.4K",
+    "$84K: SE ≈ $11,869, IT ≈ $5,701, total ≈ $17,570",
+    "Side hustle ≈ 30% marginal federal at 22% bracket; $15K/0.695 ≈ $21.5K; ÷ 460 h ≈ $47",
     "Chapter timestamps must match final edit"
    ]
   }
@@ -2874,11 +3048,11 @@
   "idea_angle": "A freelancer's January-to-April tax season plan, week by week.",
   "script": {
    "title": "Your freelancer tax season plan: January to April",
-   "hook": "Tax season for freelancers isn't one deadline. It's four months with three dates that matter. Here's the plan, week by week, so April is boring. Education, not tax advice.",
+   "hook": "Tax season for freelancers isn't one deadline. It's four months with three dates that matter. Here's the plan, week by week, so April is boring. Education, not tax advice. We'll go through January's payment and how to size it, the forms that arrive and the ones you owe, closing the books, finding missed deductions, choosing software or a pro, retirement decisions, what to do if you can't pay, and how to start next year right.",
    "segments": [
     {
      "heading": "Intro",
-     "narration": "Tax season for freelancers isn't one deadline. It's four months with three dates that matter. Here's the plan, week by week, so April is boring. Education, not tax advice.",
+     "narration": "Tax season for freelancers isn't one deadline. It's four months with three dates that matter. Here's the plan, week by week, so April is boring. Education, not tax advice. We'll go through January's payment and how to size it, the forms that arrive and the ones you owe, closing the books, finding missed deductions, choosing software or a pro, retirement decisions, what to do if you can't pay, and how to start next year right.",
      "on_screen_text": "Tax season, Jan to April",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a four-month calendar strip. No text, no logos, no real people."
     },
@@ -2889,28 +3063,70 @@
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a January page with a coin. No text, no logos, no real people."
     },
     {
+     "heading": "Which method",
+     "narration": "To choose your January number quickly: if your income this year was about the same or higher than last year, the safe harbor is usually the smaller payment, a quarter of last year's total tax. If your income dropped, ninety percent of this year's tax spread over the year may be smaller. Our calculator compares both. Either way, after paying, check what's left in your tax savings against your expected April balance, and top it up through February and March if it's short.",
+     "on_screen_text": "Income up? Safe harbor. Down? Run both.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two cards, one coral and one mint, on a scale. No text, no logos, no real people."
+    },
+    {
      "heading": "Forms",
      "narration": "By February first: your 1099-NEC and 1099-K forms arrive. Match every one to your income log. Ask for corrections now, not in April. And if you paid contractors, your own 1099-NECs are due the same day.",
      "on_screen_text": "Feb 1: forms in and out",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a mailbox with forms. No text, no logos, no real people."
     },
     {
+     "heading": "Forms out",
+     "narration": "Also around February first, the forms you owe. If you paid another freelancer or contractor two thousand dollars or more directly in twenty twenty-six, send them a ten ninety-nine NEC and file it with the IRS by February first. Card and payment-platform payments are reported by the platform, not you. You'll need their W-9, so request it in early January. The IRS has a free online system for filing these forms, and many filing services charge a few dollars per form.",
+     "on_screen_text": "Paid $2,000+ to a contractor? Feb 1",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes handing a form to another small mascot. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mismatches",
+     "narration": "When you match forms to your income log, expect differences. A payment sent in December but received in January belongs to next year for you. A ten ninety-nine K shows gross amounts, before fees. A refund you gave a client might not be reflected. Write a one-line note for each difference. If a form is simply wrong, email the payer with your records and ask for a corrected one. If it doesn't arrive in time, report the right amount and keep your proof.",
+     "on_screen_text": "Note every difference",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a ledger and a form with a small connecting line. No text, no logos, no real people."
+    },
+    {
      "heading": "February",
-     "narration": "February: close the books. Final income total, expenses by category, mileage total, home office measurements, health insurance premiums, retirement contributions. Your tracker or accounting app should give you these in one sitting.",
+     "narration": "February: close the books. Final income total, expenses by category, mileage total, home office measurements, health insurance premiums, retirement contributions. Your tracker or accounting app should give you these in one sitting. Expect it to take one long afternoon if your logs are up to date, or a weekend if they aren't.",
      "on_screen_text": "February: close the books",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a ledger being closed. No text, no logos, no real people."
     },
     {
+     "heading": "Deductions",
+     "narration": "While closing the books, do one deliberate pass for missed deductions. Payment processor fees, the business share of your phone and internet, software subscriptions, business miles plus parking and tolls, a home office if you qualify, the business part of last year's tax preparation fee, health insurance premiums and HSA contributions. At sixty thousand of profit, every thousand dollars of business expenses you find saves about two hundred thirty dollars of federal tax.",
+     "on_screen_text": "One pass for missed deductions",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a magnifying glass over a long receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "Software or pro",
+     "narration": "Then decide who files. Tax software works well for one simple business with clean records. A CPA or enrolled agent is worth it for S corps, several businesses, big purchases, rental property, or an IRS letter. Either way, the business part of the fee is deductible next year. If your income is lower, check whether you qualify for IRS Free File or free volunteer tax help. Book a preparer by February; good ones fill up by March.",
+     "on_screen_text": "Software vs pro: decide by February",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a fork in a path with two signposts. No text, no logos, no real people."
+    },
+    {
      "heading": "March",
-     "narration": "March: file, or hand it to your preparer. Filing in March gives you time to fix surprises and get any refund early. Decide on a SEP IRA contribution before you file, because it changes the numbers.",
+     "narration": "March: file, or hand it to your preparer. Filing in March gives you time to fix surprises and get any refund early. Decide on a SEP IRA contribution before you file, because it changes the numbers. If you're due a refund, filing early gets it to you sooner. If you owe, filing early still helps, because you can schedule the payment for April fifteenth and keep the money in savings until then.",
      "on_screen_text": "March: file early",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with a check mark. No text, no logos, no real people."
     },
     {
+     "heading": "Retirement",
+     "narration": "Before you file, make one retirement decision. If you want to contribute to a SEP IRA for twenty twenty-six, you can open and fund it up to your filing deadline, including extensions, but you need the amount on your return. A traditional IRA contribution for twenty twenty-six, up to seventy-five hundred dollars, or eighty-six hundred if you're fifty or older, can be made until April fifteenth. Either one lowers your income tax. Decide the amount, then file.",
+     "on_screen_text": "SEP / IRA: decide before you file",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a plant pot with coins as soil. No text, no logos, no real people."
+    },
+    {
      "heading": "Balance",
-     "narration": "If you owe a balance, pay it by April fifteenth, from the tax savings account. If you can't pay it all, file on time anyway and pay what you can. Penalties for not filing are much bigger than for not paying.",
+     "narration": "If you owe a balance, pay it by April fifteenth, from the tax savings account. If you can't pay it all, file on time anyway and pay what you can. Penalties for not filing are much bigger than for not paying. Check the account balance in March, so there's time to top it up.",
      "on_screen_text": "Apr 15: pay the balance",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coral vault opening. No text, no logos, no real people."
+    },
+    {
+     "heading": "Records",
+     "narration": "While you're in tax mode, decide what to keep. Keep your return, the forms, your income and expense logs, mileage log and receipts for at least three years after you file, longer for anything tied to equipment you're still using. Digital copies are fine. A folder per year, backed up, is enough. If the IRS ever sends a letter asking about something, you'll answer it in minutes.",
+     "on_screen_text": "Keep 3+ years, digital is fine",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a row of yearly folders with a small lock. No text, no logos, no real people."
     },
     {
      "heading": "Extension",
@@ -2919,14 +3135,38 @@
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a stopwatch with a coin that didn't move. No text, no logos, no real people."
     },
     {
+     "heading": "Can't pay",
+     "narration": "If your return shows a balance you can't fully pay, file on time anyway and pay as much as you can by April fifteenth. Then set up an IRS payment plan online; for many balances it takes minutes. Interest and a smaller late-payment penalty keep running, so pay it down quickly. What you should never do is skip filing, because the failure-to-file penalty is far bigger. And use the experience to set a higher set-aside percentage for this year.",
+     "on_screen_text": "Can't pay: file, pay some, payment plan",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a row of small coins stretched across months. No text, no logos, no real people."
+    },
+    {
+     "heading": "State",
+     "narration": "Don't forget your state. If it has an income tax, you'll file a state return and probably owe state estimated payments for the new year too, often on the same dates as the federal ones. Software usually carries your federal numbers over. Check your state's website for its own deadlines, payment portal and any city tax.",
+     "on_screen_text": "State return + state estimates",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a map outline next to a second form. No text, no logos, no real people."
+    },
+    {
      "heading": "Q1",
      "narration": "Also April fifteenth: your first estimated payment for twenty twenty-seven. Your new safe harbor is this year's total tax. Update your tracker's setup now.",
      "on_screen_text": "Apr 15: Q1 for 2027",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a new calendar page. No text, no logos, no real people."
     },
     {
+     "heading": "Next year",
+     "narration": "Finally, set up the new year while everything is fresh. Your twenty twenty-six total tax becomes your twenty twenty-seven safe harbor: divide it by four for each quarterly payment if you use that method. Work out your new set-aside percentage from this year's actual tax divided by profit, plus your state. Put the twenty twenty-seven dates in your calendar: April fifteenth, June fifteenth, September fifteenth, and January eighteenth, twenty twenty-eight, because January fifteenth falls on a weekend and the seventeenth is a holiday. Confirm it when the IRS publishes the new form.",
+     "on_screen_text": "2027: safe harbor ÷ 4 · new % · new dates",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a fresh calendar with four coral dots. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mindset",
+     "narration": "One last thing. Tax season feels stressful mostly because of surprises. Every step in this plan exists to move the surprise earlier, to January or February, when you can still do something about it. If you follow it once, next year's version takes half the time, and the year after that, it's routine. That's the goal: boring, predictable, done.",
+     "on_screen_text": "Move the surprise earlier",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes relaxing with a cup of tea. No text, no logos, no real people."
+    },
+    {
      "heading": "Recap",
-     "narration": "Recap: January fifteenth payment, forms by February first, books closed in February, file in March, pay by April fifteenth, and start the new year's estimates. The Quarterly Tax Tracker in the description handles the logs and the math. Subscribe for one freelancer money move a week.",
+     "narration": "Recap: January fifteenth payment, forms by February first, books closed in February, file in March, pay by April fifteenth, and start the new year's estimates. The Quarterly Tax Tracker in the description handles the logs and the math. Put each of these steps in your calendar now, with a reminder a few days before, so tax season runs on a schedule instead of on stress. Subscribe for one freelancer money move a week.",
      "on_screen_text": "Recap",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four calendar pages checked. No text, no logos, no real people."
     }
@@ -2941,7 +3181,7 @@
     "1099",
     "1099money"
    ],
-   "description": "A month-by-month January to April tax season plan for US freelancers filing 2026 returns.\n\nChapters\n0:00 Tax season, Jan to April\n0:11 Jan 15: Q4 payment\n0:27 Feb 1: forms in and out\n0:41 February: close the books\n0:54 March: file early\n1:09 Apr 15: pay the balance\n1:25 Extension ≠ more time to pay\n1:36 Apr 15: Q1 for 2027\n1:46 Recap\n\nThe Quarterly Tax Tracker: https://example.gumroad.com/l/quarterly-tax-tracker\n\nSources: irs.gov (estimated taxes, Pub 505, 1099-NEC, extensions, failure-to-file vs failure-to-pay penalties).\n\nEducational only, not tax, legal or financial advice.",
+   "description": "A month-by-month January to April tax season plan for US freelancers filing 2026 returns.\n\nChapters\n0:00 Tax season, Jan to April\n0:29 Jan 15: Q4 payment\n0:44 Income up? Safe harbor. Down? Run both.\n1:16 Feb 1: forms in and out\n1:31 Paid $2,000+ to a contractor? Feb 1\n2:02 Note every difference\n2:34 February: close the books\n2:55 One pass for missed deductions\n3:23 Software vs pro: decide by February\n3:53 March: file early\n4:21 SEP / IRA: decide before you file\n4:51 Apr 15: pay the balance\n5:12 Keep 3+ years, digital is fine\n5:38 Extension ≠ more time to pay\n5:49 Can't pay: file, pay some, payment plan\n6:20 State return + state estimates\n6:42 Apr 15: Q1 for 2027\n6:52 2027: safe harbor ÷ 4 · new % · new dates\n7:27 Move the surprise earlier\n7:50 Recap\n\nThe Quarterly Tax Tracker: https://example.gumroad.com/l/quarterly-tax-tracker\n\nSources: irs.gov (estimated taxes, Pub 505, 1099-NEC, extensions, failure-to-file vs failure-to-pay penalties).\n\nEducational only, not tax, legal or financial advice.",
    "thumbnail_text": "Tax season plan",
    "sources": [
     "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
@@ -2952,6 +3192,9 @@
    "claims_to_verify": [
     "Failure-to-file penalty larger than failure-to-pay (5% vs 0.5% per month)",
     "Pub 505 Jan 31 file-and-pay exception",
+    "2026 IRA $7,500 / $8,600",
+    "Q4 2027 due Jan 18, 2028",
+    "IRS online payment plan availability",
     "Chapter timestamps must match final edit"
    ]
   }

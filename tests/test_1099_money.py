@@ -15,6 +15,7 @@ def _items(name="content.json"):
 
 
 MONTH1 = "month-1/content.json"
+MONTH2 = "month-2/content.json"
 
 
 def test_brand_loads_with_placeholder_affiliates(factory):
@@ -28,7 +29,7 @@ def test_brand_loads_with_placeholder_affiliates(factory):
 import pytest
 
 
-@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4])])
+@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4])])
 def test_content_is_valid(factory, name, counts):
     from contentfactory.schemas import Script
     brand = factory.brand("1099-money")
@@ -47,6 +48,10 @@ def test_content_is_valid(factory, name, counts):
         if it["format"] == "short":
             words = sum(len(s.narration.split()) for s in sc.segments)
             assert words <= 160, (sc.title, words)  # under ~60s at 160 wpm
+        if it["format"] == "long" and name != "content.json":
+            words = sum(len(s.narration.split()) for s in sc.segments)
+            seconds = words / 160 * 60 + len(sc.segments)  # 160 wpm + a beat per chapter (as in the chapter maker)
+            assert seconds >= 485, (sc.title, seconds)  # 8+ minutes, so YouTube allows mid-roll ads
 
 
 def test_month_1_has_no_repeat_titles_and_fills_30_days(factory):
@@ -56,6 +61,15 @@ def test_month_1_has_no_repeat_titles_and_fills_30_days(factory):
     slots, leftover = plan(factory.brand("1099-money"), month, date(2026, 11, 30), 30)
     assert not leftover
     assert {s.day for s in slots} == set(range(1, 31))
+
+
+def test_month_2_has_no_repeat_titles_and_fills_31_days(factory):
+    earlier = {i["script"]["title"].lower() for i in _items() + _items(MONTH1)}
+    month = _items(MONTH2)
+    assert not earlier & {i["script"]["title"].lower() for i in month}
+    slots, leftover = plan(factory.brand("1099-money"), month, date(2026, 12, 30), 31)
+    assert not leftover
+    assert {s.day for s in slots} == set(range(1, 32))
 
 
 def test_two_week_plan_fits_and_respects_cap(factory):
