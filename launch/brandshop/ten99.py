@@ -301,6 +301,13 @@ LISTINGS = [
          hook="The printable planner and the spreadsheet together: paper for the desk, a sheet that does the sums ($26 separately)."),
 ]
 
+# The sheet overlaps 1099 Money's Quarterly Tax Tracker ($15, PR #10), so it isn't listed: the planner is sold as the
+# paper companion to that tracker. Reverse by removing a slug here.
+RETIRED = {
+    "freelancer-tax-sheet-2027": "Merged into The Quarterly Tax Tracker ($15, PR #10), the brand's spreadsheet. This planner is now the paper companion to it.",
+    "freelancer-tax-bundle-2027": "Retired with the sheet. The Freelancer Money Bundle ($49, PR #10) is the brand's bundle; the cross-sell map recommends the planner after the tracker.",
+}
+
 _GET = {"print": PRINT_GET, "sheet": SHEET_GET, "bundle": PRINT_GET[:1] + SHEET_GET[:2]}
 _HOW = {"print": ["Print the pages (Letter or A4), or write on them in a PDF app.", "Log each payment and expense as it happens.",
                   "Total the quarter before each due date and record what you paid."],
@@ -310,6 +317,7 @@ _HOW = {"print": ["Print the pages (Letter or A4), or write on them in a PDF app
 _FILES = {"print": "PDFs in US Letter and A4", "sheet": "an .xlsx workbook and a one-page Start Here PDF",
           "bundle": "the printable PDFs and the .xlsx workbook"}
 for _it in LISTINGS:
+    _it["status"] = "retired" if _it["slug"] in RETIRED else "active"
     _it["category"] = CAT if _it["kind"] != "sheet" else "Paper & Party Supplies > Paper > Calendars & Planners (digital)"
     _it["description"] = __import__("shop").etsy_description(_it["hook"], _GET[_it["kind"]], _HOW[_it["kind"]], GOOD, DISCLOSURE)
     _it["gumroad"] = _gumroad(_it["hook"], _GET[_it["kind"]], _it["price"], _FILES[_it["kind"]])

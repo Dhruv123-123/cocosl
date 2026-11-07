@@ -436,7 +436,31 @@ LISTINGS = [
          hook="Everything in one download: the 11-page Family Scam-Safety Kit, the six fridge cards and the caller ID script cards, for less than buying them separately ($18)."),
 ]
 
-_GET = {"family-scam-safety-kit": KIT_GET, "scam-fridge-cards": CARDS_GET, "caller-id-script-card": CALLER_GET,
+# Merged into the card set, Nov 7 2026 (see RETIRED). Reverse by deleting the slug from RETIRED.
+CARDSET_GET = ["7 cards, 6 x 4 in: the six fridge cards (Stop. Is it a scam? / Gift cards are for gifts / Hang up. Look up. Call back. / Our safe word / Who I call first / Never share a code) and the caller ID script card",
+               "A large-print phone-side page with seven things to say, word for word",
+               "A sheet of 8 wallet cards (3.5 x 2 in)",
+               "One card per page (for photo or card printing), and Letter and A4 sheets with cut lines"]
+LISTINGS.append(dict(
+    slug="scam-card-set", name="Scam Decoded Card Set", price=6.00, kind="cards",
+    title="Scam Warning Cards Printable, Fridge Cards, Phone Script Card and Wallet Cards for Seniors",
+    tags=["scam awareness", "fridge cards", "senior safety", "elderly parents", "phone scam",
+          "wallet card", "large print", "caregiver gift", "scam prevention", "printable cards",
+          "family safe word", "gift card scam", "elder care"],
+    attributes={"Occasion": "None", "Holiday": "None", "Paper size": "US Letter, A4", "File type": "PDF",
+                "Primary colour": "Blue", "Secondary colour": "Orange", "Orientation": "Landscape"},
+    hook="Cards only, no reading: seven bold cards for the fridge and the phone table, a large-print script for what to say on a suspicious call, and wallet cards. Made to sit next to the Family Scam-Proofing Kit and the large-print seniors guide."))
+
+# Products from this module that overlap with Scam Decoded's existing ladder (PR #9) and are not listed. Each says
+# where it went, so the choice can be reversed by removing the slug here.
+RETIRED = {
+    "family-scam-safety-kit": "Merged into The Family Scam-Proofing Kit ($9, PR #9), which covers the same plan, lockdown, decoder and incident log. Pages only this kit had (before-you-pay check, how to talk about it, monthly check) are worth adding to that kit.",
+    "scam-fridge-cards": "Merged into the Scam Decoded Card Set ($6).",
+    "caller-id-script-card": "Merged into the Scam Decoded Card Set ($6), which is cards only, so it no longer overlaps the 13-page large-print seniors guide ($7, PR #9).",
+    "scam-safety-bundle": "Retired with the kit. The card set is recommended after the kit and the seniors guide instead (see the cross-sell map).",
+}
+
+_GET = {"scam-card-set": CARDSET_GET, "family-scam-safety-kit": KIT_GET, "scam-fridge-cards": CARDS_GET, "caller-id-script-card": CALLER_GET,
         "scam-safety-bundle": ["Family Scam-Safety Kit (11 pages)"] + CARDS_GET[:1] + CALLER_GET}
 _HOW = {"kit": ["Print the pages you need.", "Fill in the safety plan and trusted numbers together.",
                 "Keep \"If it happens\" where everyone can find it, and do the monthly check."],
@@ -444,6 +468,7 @@ _HOW = {"kit": ["Print the pages you need.", "Fill in the safety plan and truste
                   "Cut on the dashed lines.", "Put them where the phone and the mail are: the fridge, the desk, the wallet."],
         "bundle": ["Unzip the download.", "Fill in the kit together.", "Print the cards and put them by the phone and on the fridge."]}
 for _it in LISTINGS:
+    _it["status"] = "retired" if _it["slug"] in RETIRED else "active"
     _it["category"] = CAT
     _it["description"] = __import__("shop").etsy_description(_it["hook"], _GET[_it["slug"]], _HOW[_it["kind"]], GOOD, DISCLOSURE)
     _it["gumroad"] = _gumroad(_it["hook"], _GET[_it["slug"]], _it["price"])

@@ -30,6 +30,7 @@ SIZES = shop.SIZES
 
 # Shorter cover lines for the mockups, where the listing name or the hook's first sentence doesn't fit or says too little.
 MOCK = {
+    "scam-card-set": ("Scam Decoded Card Set", "Seven bold cards, a large-print phone script and wallet cards. Cards only, no reading."),
     "family-scam-safety-kit": ("Family Scam-Safety Kit", "Red flags, a family plan and what to do if it happens, in 11 printable pages."),
     "scam-fridge-cards": ("Scam Fridge Cards", "Six bold cards, one rule each, for the fridge or the desk."),
     "caller-id-script-card": ("Caller ID Script Card", "What to say when a suspicious call comes in, in large print."),
@@ -91,6 +92,12 @@ def scam_jobs(out: Path, work: Path) -> tuple[list[dict], dict[str, list[Path]]]
         add("caller-id-script-card", f"Caller-ID-Script-Card-{size}",
             doc(B, [("page", SD.caller_id_large()), ("page sheet", SD.card_sheets([SD.caller_id_card()] * 2)[0]),
                     ("page sheet", SD.wallet_sheet())], "Caller ID Script Card", w, h, pn, CARD_EXTRA))
+    for size, (w, h, pn) in SIZES.items():
+        add("scam-card-set", f"Scam-Card-Set-{size}",
+            doc(B, [("page sheet", x) for x in SD.card_sheets(SD.fridge_cards() + [SD.caller_id_card()])]
+                + [("page", SD.caller_id_large()), ("page sheet", SD.wallet_sheet())], "Scam Decoded Card Set", w, h, pn, CARD_EXTRA))
+    add("scam-card-set", "Scam-Card-Set-4x6",
+        doc(B, as_pages(SD.fridge_cards() + [SD.caller_id_card()]), "Scam Decoded Card Set 4x6", "6in", "4in", "6in 4in", CARD_EXTRA))
     add("scam-fridge-cards", "Scam-Fridge-Cards-4x6",
         doc(B, as_pages(SD.fridge_cards()), "Scam Fridge Cards 4x6", "6in", "4in", "6in 4in", CARD_EXTRA))
     add("caller-id-script-card", "Caller-ID-Script-Card-4x6",
@@ -122,7 +129,8 @@ def dinero_jobs(out: Path, work: Path) -> tuple[list[dict], dict[str, list[Path]
 
 
 def review_checklist(mod, files: dict[str, list[Path]]) -> str:
-    rows = "\n".join(f"| {it['name']} | `{it['slug']}/` | {', '.join(f'`{x}`' for x in it['files'])} | | |" for it in mod.LISTINGS)
+    rows = "\n".join(f"| {it['name']} | `{it['slug']}/` | {', '.join(f'`{x}`' for x in it['files'])} | | |" for it in mod.LISTINGS
+                     if it.get("status", "active") == "active")
     return f"""# Revisión nativa: Dinero Simple, productos para Etsy y Gumroad
 
 **Nothing here can be listed until this is signed.** A fluent Spanish speaker reads every listed item: the Etsy title,
@@ -239,7 +247,8 @@ def main() -> int:
         for r in build_etsy.run_jobs(jobs):
             if r["overflow"]:
                 failures.append(f'{Path(r["out"]).name}: overflow on pages {r["overflow"]}')
-        if key == "scam-decoded":
+        active = [it for it in mod.LISTINGS if it.get("status", "active") == "active"]
+        if key == "scam-decoded" and any(it["slug"] == "scam-safety-bundle" for it in active):
             b = out / "scam-safety-bundle"
             b.mkdir(parents=True, exist_ok=True)
             files["scam-safety-bundle"] = [zip_bundle(b / "Family-Scam-Safety-Bundle.zip",
@@ -251,20 +260,24 @@ def main() -> int:
                                                    [p for s in ("presupuesto-familiar", "registro-de-envios", "construir-credito") for p in files[s]])]
             if a.check:
                 failures += recalc_check(files["registro-de-envios"][-1])
-        else:
-            b = out / "freelancer-tax-bundle-2027"
-            b.mkdir(parents=True, exist_ok=True)
-            files["freelancer-tax-bundle-2027"] = [zip_bundle(b / "2027-Freelancer-Tax-Bundle.zip",
-                                                              files["freelancer-tax-planner-2027"] + files["freelancer-tax-sheet-2027"])]
+        elif key == "1099-money":
+            if any(it["slug"] == "freelancer-tax-bundle-2027" for it in active):
+                b = out / "freelancer-tax-bundle-2027"
+                b.mkdir(parents=True, exist_ok=True)
+                files["freelancer-tax-bundle-2027"] = [zip_bundle(b / "2027-Freelancer-Tax-Bundle.zip",
+                                                                  files["freelancer-tax-planner-2027"] + files["freelancer-tax-sheet-2027"])]
             if a.check:
                 failures += recalc_check(files["freelancer-tax-sheet-2027"][0])
-        for it in mod.LISTINGS:
+        for it in mod.LISTINGS:  # a retired listing leaves no upload folder behind (its pages still render and are checked)
+            if it not in active and (out / it["slug"]).exists():
+                shutil.rmtree(out / it["slug"])
+        for it in active:
             it["files"] = [p.name for p in files[it["slug"]]]
             if not (1 <= len(it["files"]) <= 5) or any(p.stat().st_size > 20 * 1024 * 1024 for p in files[it["slug"]]):
                 failures.append(f"{it['slug']}: Etsy allows 1-5 files of 20 MB each")
         if not a.no_mockups:
             with mod.BRAND.mockup_theme() as mg:
-                for it in mod.LISTINGS:
+                for it in active:
                     d = out / it["slug"]
                     pdfs = [p for p in files.get(it["slug"], []) if p.suffix == ".pdf" and "A4" not in p.name]
                     if it["kind"] == "bundle":
@@ -286,12 +299,12 @@ def main() -> int:
                         o.update(chips=ES["chips"][it["kind"]], footer=ES["footer"], text=ES["text"], steps=ES["steps"])
                     mg.generate(o, hero, d, sizes=("etsy", "gumroad", "square", "pin"), run=build_etsy.run_jobs,
                                 inside_pages=pages[:10])
-        for it in mod.LISTINGS:
+        for it in active:
             (out / it["slug"] / "LISTING.md").write_text(shop.listing_md(it, mod.BRAND))
         with open(out / "listings.csv", "w", newline="") as fh:
             w = csv.writer(fh)
             w.writerow(["slug", "title", "price", "tags", "files", "review"])
-            for it in mod.LISTINGS:
+            for it in active:
                 w.writerow([it["slug"], it["title"], f"{it['price']:.2f}", ", ".join(it["tags"]), " | ".join(it["files"]),
                             it.get("review", "")])
         if mod.BRAND.review:

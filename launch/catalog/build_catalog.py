@@ -68,6 +68,8 @@ def etsy_rows() -> list[dict]:
 
 def gumroad_rows() -> list[dict]:
     cat = json.loads((LAUNCH / "products" / "catalog.json").read_text())["products"]
+    # The 20-Minute Budget predates the product line (launch/product/), so it isn't in catalog.json.
+    cat = [{"slug": "20-minute-budget", "name": "The 20-Minute Budget", "price": 12}] + cat
     feature = {"20-minute-budget": "featured Jan 4", "debt-free-date-planner": "featured Jan 4",
                "credit-report-audit-kit": "featured Jan 25", "bill-cut-kit": "featured Jan 25",
                "money-toolkit-bundle": "on sale Nov 27-30"}
@@ -130,17 +132,18 @@ def brandshop_rows() -> list[dict]:
     dates = {"scam-decoded": ("Week of Nov 16 (holiday-scam season runs Nov 21-Dec 18)", "proposed"),
              "1099-money": ("Week of Nov 16, with the brand launch (dated 2027: list early)", "proposed"),
              "dinero-simple": ("After native review; target week of Dec 7 (December remittance and aguinaldo season)", "proposed")}
-    overlap = {
-        "family-scam-safety-kit": "OVERLAP: same $9 slot as The Family Scam-Proofing Kit (PR #9). Suggest Gumroad/site funnel keeps the Scam-Proofing Kit and Etsy gets this one.",
-        "caller-id-script-card": "OVERLAP: close to the $7 Scam Decoded for Seniors pack (PR #9, wallet cards + fridge checklist). Pick one for Etsy, or bundle them.",
-        "scam-fridge-cards": "Pairs with the seniors pack; keep the wording distinct from its fridge checklist.",
-        "freelancer-tax-sheet-2027": "OVERLAP: the $15 Quarterly Tax Tracker (PR #10) is also a sheet. Suggest keeping that one and selling this planner printable beside it.",
-        "freelancer-tax-bundle-2027": "Depends on the sheet decision above.",
+    differ = {
+        "scam-card-set": "Cards only (no guide), so it sits beside the Scam-Proofing Kit and the seniors guide rather than competing with them. Replaces the fridge cards, caller ID card, my kit and my bundle (see Merged).",
+        "freelancer-tax-planner-2027": "Sold as the paper companion to the Quarterly Tax Tracker (the brand's spreadsheet). My sheet and bundle were merged away (see Merged).",
+        "presupuesto-familiar": "Different from El Presupuesto de 20 Minutos ($12, a guide plus a spreadsheet): this is a printable household binder for the whole family.",
+        "paquete-familia": "Different from El Paquete Dinero Simple ($29, the four guide kits): this bundles the three printables.",
     }
     for key, mod, plat in (("scam-decoded", SD, "Etsy + Gumroad"), ("1099-money", T, "Etsy + Gumroad"), ("dinero-simple", DS, "Etsy + Gumroad")):
         d, src = dates[key]
         for it in mod.LISTINGS:
-            note = overlap.get(it["slug"], "")
+            if it.get("status", "active") != "active":
+                continue
+            note = differ.get(it["slug"], "")
             if key == "dinero-simple":
                 note = ("NATIVE REVIEW PENDING: sign brands/dinero-simple/REVIEW_CHECKLIST_ES.md first. " + note).strip()
             if key != "dinero-simple" and "Etsy" in plat:
@@ -193,6 +196,15 @@ for _n, _p, _g, _e in _DS:
                            "After native review", "proposed", "PR #11. NATIVE REVIEW PENDING. Etsy edition."))
 
 
+def merged_rows() -> list[dict]:
+    """Products built but deliberately not listed because they overlapped another product. Reverse in the module."""
+    import scam_decoded as SD
+    import ten99 as T
+    return [dict(brand=mod.BRAND.name, product=it["name"], price=money(it["price"]), why=mod.RETIRED[it["slug"]],
+                 undo=f"remove \"{it['slug']}\" from RETIRED in launch/brandshop/{mod.__name__}.py and rebuild")
+            for mod in (SD, T) for it in mod.LISTINGS if it["slug"] in mod.RETIRED]
+
+
 def all_rows() -> list[dict]:
     rows = etsy_rows() + gumroad_rows() + template_rows() + poster_rows() + book_rows() + brandshop_rows()
     rows += [row(*r) for r in OTHER_BRANCHES]
@@ -213,7 +225,8 @@ submitted anywhere.
   Each `LISTING.md` has the title, tags, price, description and the files to upload.
 - **Launch** dates marked *calendar* come from the [launch calendar]({CALENDAR}); *proposed* ones are suggestions that
   follow the same logic (dated products first, gifts before the holiday cutoffs, everything live by mid-December).
-- **Overlaps** between brands' products are flagged in the notes: decide those before listing either one.
+- **No near-duplicates:** where two threads built overlapping products, one was merged into the other or clearly
+  differentiated. Each choice is in the notes and in "Merged or retired" at the end, with how to undo it.
 - Dinero Simple is blocked on a fluent Spanish speaker's review; nothing in Spanish goes up before that.
 - Regenerate after changing a price or name: `python launch/catalog/build_catalog.py`. Also as `PRODUCTS_CATALOG.csv`.
 """]
@@ -223,6 +236,11 @@ submitted anywhere.
         for r in br:
             out.append("| " + " | ".join(esc(r[k]) if k not in ("files", "listing") else f"`{esc(r[k])}`"
                                          for k in ("product", "platform", "price", "files", "listing", "launch", "date_source", "notes")) + " |")
+    m = merged_rows()
+    out.append(f"\n## Merged or retired ({len(m)}), reversible\n\nBuilt, checked and kept in the repo, but not listed, so the "
+               "catalog has no near-duplicates. These were default choices; undo any of them as shown.\n\n"
+               "| Brand | Product | Price | Why | To undo |\n|---|---|---|---|---|")
+    out += [f"| {r['brand']} | {r['product']} | {r['price']} | {esc(r['why'])} | {esc(r['undo'])} |" for r in m]
     return "\n".join(out) + "\n"
 
 

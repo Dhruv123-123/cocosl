@@ -1,18 +1,19 @@
 # Products catalog: every product, every brand
 
-One sheet to list from. **113 listings** (Money Made Simple 81, Scam Decoded 9, 1099 Money 9, Dinero Simple 14). Nothing in this list has been uploaded, listed or
+One sheet to list from. **109 listings** (Money Made Simple 82, Scam Decoded 6, 1099 Money 7, Dinero Simple 14). Nothing in this list has been uploaded, listed or
 submitted anywhere.
 
 - **Files** and **Listing copy** paths are inside the project files folder `content-factory/` (the upload-ready copies).
   Each `LISTING.md` has the title, tags, price, description and the files to upload.
 - **Launch** dates marked *calendar* come from the [launch calendar](https://claude.ai/artifact/MoXNajcfVEBSaFXESAyPRp); *proposed* ones are suggestions that
   follow the same logic (dated products first, gifts before the holiday cutoffs, everything live by mid-December).
-- **Overlaps** between brands' products are flagged in the notes: decide those before listing either one.
+- **No near-duplicates:** where two threads built overlapping products, one was merged into the other or clearly
+  differentiated. Each choice is in the notes and in "Merged or retired" at the end, with how to undo it.
 - Dinero Simple is blocked on a fluent Spanish speaker's review; nothing in Spanish goes up before that.
 - Regenerate after changing a price or name: `python launch/catalog/build_catalog.py`. Also as `PRODUCTS_CATALOG.csv`.
 
 
-## Money Made Simple (81)
+## Money Made Simple (82)
 
 | Product | Platform | Price | Files | Listing copy | Launch | Date | Notes |
 |---|---|---|---|---|---|---|---|
@@ -66,6 +67,7 @@ submitted anywhere.
 | 2027 Budget Planner | Etsy | $12 | `etsy/2027-budget-planner/` | `etsy/2027-budget-planner/LISTING.md` | Week of Nov 9 (list first) | calendar | Dated: 4 PDFs (Sun/Mon start x Letter/A4). Drop the price after Jan 31. |
 | Savings Challenge Pack (12 printables) | Etsy | $8 | `etsy/savings-challenge-pack/` | `etsy/savings-challenge-pack/LISTING.md` | Week of Nov 9; on sale Nov 27-30 (25% off) | calendar | Black Friday sale is bundles only. |
 | Mega Budget Bundle (all 40 printables) | Etsy | $19 | `etsy/mega-budget-bundle/` | `etsy/mega-budget-bundle/LISTING.md` | Week of Nov 9; on sale Nov 27-30 (25% off) | calendar | Black Friday sale is bundles only. |
+| The 20-Minute Budget | Gumroad | $12 | `products/20-minute-budget/` | `products/20-minute-budget/LISTING.md` | Week of Nov 16; featured Jan 4 | calendar | Create the discount codes in launch/products/UPSELL_PATH.md first; replace [your store link] and rebuild. |
 | The Bill Cut Kit | Gumroad | $5 | `products/bill-cut-kit/` | `products/bill-cut-kit/LISTING.md` | Week of Nov 16; featured Jan 25 | calendar | Create the discount codes in launch/products/UPSELL_PATH.md first; replace [your store link] and rebuild. |
 | The Credit Report Audit Kit | Gumroad | $9 | `products/credit-report-audit-kit/` | `products/credit-report-audit-kit/LISTING.md` | Week of Nov 16; featured Jan 25 | calendar | Create the discount codes in launch/products/UPSELL_PATH.md first; replace [your store link] and rebuild. |
 | The Debt-Free Date Planner | Gumroad | $17 | `products/debt-free-date-planner/` | `products/debt-free-date-planner/LISTING.md` | Week of Nov 16; featured Jan 4 | calendar | Create the discount codes in launch/products/UPSELL_PATH.md first; replace [your store link] and rebuild. |
@@ -98,27 +100,22 @@ submitted anywhere.
 | Money Made Simple (Kindle ebook) | Amazon KDP | $8.99 | `ebook/Money-Made-Simple.epub, ebook/Money-Made-Simple-Kindle-Cover.jpg` | `ebook/KDP_NOTES.md` | Submit week of Nov 30 | calendar | Decide the author name. Off Gumroad while in KDP Select. |
 | Money Made Simple (paperback) | Amazon KDP | $14.99 | `ebook/Money-Made-Simple-Paperback-*.pdf` | `ebook/KDP_NOTES.md` | Submit week of Nov 30, publish week of Dec 14 | calendar | Order the proof first. |
 
-## Scam Decoded (9)
+## Scam Decoded (6)
 
 | Product | Platform | Price | Files | Listing copy | Launch | Date | Notes |
 |---|---|---|---|---|---|---|---|
-| Family Scam-Safety Kit | Etsy + Gumroad | $9 | `brands/scam-decoded/family-scam-safety-kit/` | `brands/scam-decoded/family-scam-safety-kit/LISTING.md` | Week of Nov 16 (holiday-scam season runs Nov 21-Dec 18) | proposed | OVERLAP: same $9 slot as The Family Scam-Proofing Kit (PR #9). Suggest Gumroad/site funnel keeps the Scam-Proofing Kit and Etsy gets this one. Needs the brand's own Etsy shop (or a section in an existing one). |
-| Scam Fridge Card Set | Etsy + Gumroad | $5 | `brands/scam-decoded/scam-fridge-cards/` | `brands/scam-decoded/scam-fridge-cards/LISTING.md` | Week of Nov 16 (holiday-scam season runs Nov 21-Dec 18) | proposed | Pairs with the seniors pack; keep the wording distinct from its fridge checklist. Needs the brand's own Etsy shop (or a section in an existing one). |
-| Caller ID Script Card for Seniors | Etsy + Gumroad | $4 | `brands/scam-decoded/caller-id-script-card/` | `brands/scam-decoded/caller-id-script-card/LISTING.md` | Week of Nov 16 (holiday-scam season runs Nov 21-Dec 18) | proposed | OVERLAP: close to the $7 Scam Decoded for Seniors pack (PR #9, wallet cards + fridge checklist). Pick one for Etsy, or bundle them. Needs the brand's own Etsy shop (or a section in an existing one). |
-| Family Scam-Safety Bundle | Etsy + Gumroad | $12 | `brands/scam-decoded/scam-safety-bundle/` | `brands/scam-decoded/scam-safety-bundle/LISTING.md` | Week of Nov 16 (holiday-scam season runs Nov 21-Dec 18) | proposed | Needs the brand's own Etsy shop (or a section in an existing one). |
+| Scam Decoded Card Set | Etsy + Gumroad | $6 | `brands/scam-decoded/scam-card-set/` | `brands/scam-decoded/scam-card-set/LISTING.md` | Week of Nov 16 (holiday-scam season runs Nov 21-Dec 18) | proposed | Cards only (no guide), so it sits beside the Scam-Proofing Kit and the seniors guide rather than competing with them. Replaces the fridge cards, caller ID card, my kit and my bundle (see Merged). Needs the brand's own Etsy shop (or a section in an existing one). |
 | The Family Scam-Proofing Kit | Gumroad (site funnel) | $9 | `scam-decoded/product-family-scam-proofing-kit/` | `scam-decoded/product-family-scam-proofing-kit/LISTING.md` | With the brand launch (posting plan Day 1 is Sat Nov 7) | proposed | PR #9. Funnel emails and the scam checker sell this kit. Code LAUNCH ($5 for 7 days, only while true). |
 | Protect Your Parents (guide) | Gumroad | $29 | `scam-decoded/products/protect-your-parents/` | `scam-decoded/products/protect-your-parents/LISTING.md` | Week of Nov 16 | proposed | PR #9. Codes KITPARENTS, GUIDEKIT, LAUNCH. |
 | Scam Decoded for Seniors (large print) | Etsy | $7 | `scam-decoded/products/seniors-pack/` | `scam-decoded/products/seniors-pack/LISTING.md` | Week of Nov 16 | proposed | PR #9. See the caller ID card overlap. |
 | Seniors pack group print license | Gumroad | $49 (+$19 per extra site) | `scam-decoded/products/seniors-pack/` | `scam-decoded/products/seniors-pack/GROUP_LICENSE_LISTING.md` | When the first talk is booked | proposed | PR #9. For libraries and senior centers. |
 | Spot It, Stop It team training pack | Gumroad | $99 | `scam-decoded/products/team-training/` | `scam-decoded/products/team-training/LISTING.md` | Before the B2B outreach starts (Tue Nov 10) | proposed | PR #9. Code TEAMLAUNCH. |
 
-## 1099 Money (9)
+## 1099 Money (7)
 
 | Product | Platform | Price | Files | Listing copy | Launch | Date | Notes |
 |---|---|---|---|---|---|---|---|
-| 2027 Freelancer Tax-Year Planner (printable) | Etsy + Gumroad | $12 | `brands/1099-money/freelancer-tax-planner-2027/` | `brands/1099-money/freelancer-tax-planner-2027/LISTING.md` | Week of Nov 16, with the brand launch (dated 2027: list early) | proposed | Needs the brand's own Etsy shop (or a section in an existing one). |
-| 2027 Freelancer Tax Tracker (Google Sheets) | Etsy + Gumroad | $14 | `brands/1099-money/freelancer-tax-sheet-2027/` | `brands/1099-money/freelancer-tax-sheet-2027/LISTING.md` | Week of Nov 16, with the brand launch (dated 2027: list early) | proposed | OVERLAP: the $15 Quarterly Tax Tracker (PR #10) is also a sheet. Suggest keeping that one and selling this planner printable beside it. Needs the brand's own Etsy shop (or a section in an existing one). |
-| 2027 Freelancer Tax Bundle (printable + Sheets) | Etsy + Gumroad | $19 | `brands/1099-money/freelancer-tax-bundle-2027/` | `brands/1099-money/freelancer-tax-bundle-2027/LISTING.md` | Week of Nov 16, with the brand launch (dated 2027: list early) | proposed | Depends on the sheet decision above. Needs the brand's own Etsy shop (or a section in an existing one). |
+| 2027 Freelancer Tax-Year Planner (printable) | Etsy + Gumroad | $12 | `brands/1099-money/freelancer-tax-planner-2027/` | `brands/1099-money/freelancer-tax-planner-2027/LISTING.md` | Week of Nov 16, with the brand launch (dated 2027: list early) | proposed | Sold as the paper companion to the Quarterly Tax Tracker (the brand's spreadsheet). My sheet and bundle were merged away (see Merged). Needs the brand's own Etsy shop (or a section in an existing one). |
 | The Quarterly Tax Tracker | Gumroad | $15 | `1099-money/product-quarterly-tax-tracker/` | `1099-money/product-quarterly-tax-tracker/LISTING.md` | Mon Nov 16 (brand launch day 1) | proposed | PR #10. Code LAUNCH ($9 for 7 days). |
 | The Rate & Contract Kit | Gumroad | $29 | `1099-money/products/rate-contract-kit/` | `1099-money/products/rate-contract-kit/LISTING.md` | Week of Nov 16 | proposed | PR #10. Codes LAUNCH, TRACKER5, KIT29. |
 | The Freelancer Money Bundle | Gumroad | $49 | `1099-money/products/bundle/` | `1099-money/products/bundle/LISTING.md` | Week of Nov 16 | proposed | PR #10. Codes LAUNCH, TRACKER15, KIT29. |
@@ -130,10 +127,10 @@ submitted anywhere.
 
 | Product | Platform | Price | Files | Listing copy | Launch | Date | Notes |
 |---|---|---|---|---|---|---|---|
-| El Presupuesto Familiar | Etsy + Gumroad | $9 | `brands/dinero-simple/presupuesto-familiar/` | `brands/dinero-simple/presupuesto-familiar/LISTING.md` | After native review; target week of Dec 7 (December remittance and aguinaldo season) | proposed | NATIVE REVIEW PENDING: sign brands/dinero-simple/REVIEW_CHECKLIST_ES.md first. |
+| El Presupuesto Familiar | Etsy + Gumroad | $9 | `brands/dinero-simple/presupuesto-familiar/` | `brands/dinero-simple/presupuesto-familiar/LISTING.md` | After native review; target week of Dec 7 (December remittance and aguinaldo season) | proposed | NATIVE REVIEW PENDING: sign brands/dinero-simple/REVIEW_CHECKLIST_ES.md first. Different from El Presupuesto de 20 Minutos ($12, a guide plus a spreadsheet): this is a printable household binder for the whole family. |
 | El Registro de Envíos | Etsy + Gumroad | $7 | `brands/dinero-simple/registro-de-envios/` | `brands/dinero-simple/registro-de-envios/LISTING.md` | After native review; target week of Dec 7 (December remittance and aguinaldo season) | proposed | NATIVE REVIEW PENDING: sign brands/dinero-simple/REVIEW_CHECKLIST_ES.md first. |
 | La Lista para Construir tu Crédito | Etsy + Gumroad | $6 | `brands/dinero-simple/construir-credito/` | `brands/dinero-simple/construir-credito/LISTING.md` | After native review; target week of Dec 7 (December remittance and aguinaldo season) | proposed | NATIVE REVIEW PENDING: sign brands/dinero-simple/REVIEW_CHECKLIST_ES.md first. |
-| El Paquete de la Familia | Etsy + Gumroad | $16 | `brands/dinero-simple/paquete-familia/` | `brands/dinero-simple/paquete-familia/LISTING.md` | After native review; target week of Dec 7 (December remittance and aguinaldo season) | proposed | NATIVE REVIEW PENDING: sign brands/dinero-simple/REVIEW_CHECKLIST_ES.md first. |
+| El Paquete de la Familia | Etsy + Gumroad | $16 | `brands/dinero-simple/paquete-familia/` | `brands/dinero-simple/paquete-familia/LISTING.md` | After native review; target week of Dec 7 (December remittance and aguinaldo season) | proposed | NATIVE REVIEW PENDING: sign brands/dinero-simple/REVIEW_CHECKLIST_ES.md first. Different from El Paquete Dinero Simple ($29, the four guide kits): this bundles the three printables. |
 | El Kit para Recortar Gastos | Gumroad | $5 | `dinero-simple/products/recorte-de-gastos/` | `dinero-simple/products/recorte-de-gastos/LISTING.md` | After native review (reviewer brief: cheapest path launches El Presupuesto first) | proposed | PR #11. NATIVE REVIEW PENDING. Codes RECORTE5, FECHA5, INVERTIR5. |
 | El Kit para Recortar Gastos | Etsy | $5 | `etsy/dinero-simple/recorte-de-gastos/` | `etsy/dinero-simple/recorte-de-gastos/LISTING.md` | After native review | proposed | PR #11. NATIVE REVIEW PENDING. Etsy edition. |
 | El Presupuesto de 20 Minutos | Gumroad | $12 | `dinero-simple/product/` | `dinero-simple/product/LISTING.md` | After native review (reviewer brief: cheapest path launches El Presupuesto first) | proposed | PR #11. NATIVE REVIEW PENDING. Codes RECORTE5, FECHA5, INVERTIR5. |
@@ -144,3 +141,16 @@ submitted anywhere.
 | Empieza a Invertir con $100 al Mes | Etsy | $19 | `etsy/dinero-simple/invertir-con-100/` | `etsy/dinero-simple/invertir-con-100/LISTING.md` | After native review | proposed | PR #11. NATIVE REVIEW PENDING. Etsy edition. |
 | El Paquete Dinero Simple | Gumroad | $29 | `dinero-simple/products/paquete/` | `dinero-simple/products/paquete/LISTING.md` | After native review (reviewer brief: cheapest path launches El Presupuesto first) | proposed | PR #11. NATIVE REVIEW PENDING. Codes RECORTE5, FECHA5, INVERTIR5. |
 | El Paquete Dinero Simple | Etsy | $29 | `etsy/dinero-simple/paquete/` | `etsy/dinero-simple/paquete/LISTING.md` | After native review | proposed | PR #11. NATIVE REVIEW PENDING. Etsy edition. |
+
+## Merged or retired (6), reversible
+
+Built, checked and kept in the repo, but not listed, so the catalog has no near-duplicates. These were default choices; undo any of them as shown.
+
+| Brand | Product | Price | Why | To undo |
+|---|---|---|---|---|
+| Scam Decoded | Family Scam-Safety Kit | $9 | Merged into The Family Scam-Proofing Kit ($9, PR #9), which covers the same plan, lockdown, decoder and incident log. Pages only this kit had (before-you-pay check, how to talk about it, monthly check) are worth adding to that kit. | remove "family-scam-safety-kit" from RETIRED in launch/brandshop/scam_decoded.py and rebuild |
+| Scam Decoded | Scam Fridge Card Set | $5 | Merged into the Scam Decoded Card Set ($6). | remove "scam-fridge-cards" from RETIRED in launch/brandshop/scam_decoded.py and rebuild |
+| Scam Decoded | Caller ID Script Card for Seniors | $4 | Merged into the Scam Decoded Card Set ($6), which is cards only, so it no longer overlaps the 13-page large-print seniors guide ($7, PR #9). | remove "caller-id-script-card" from RETIRED in launch/brandshop/scam_decoded.py and rebuild |
+| Scam Decoded | Family Scam-Safety Bundle | $12 | Retired with the kit. The card set is recommended after the kit and the seniors guide instead (see the cross-sell map). | remove "scam-safety-bundle" from RETIRED in launch/brandshop/scam_decoded.py and rebuild |
+| 1099 Money | 2027 Freelancer Tax Tracker (Google Sheets) | $14 | Merged into The Quarterly Tax Tracker ($15, PR #10), the brand's spreadsheet. This planner is now the paper companion to it. | remove "freelancer-tax-sheet-2027" from RETIRED in launch/brandshop/ten99.py and rebuild |
+| 1099 Money | 2027 Freelancer Tax Bundle (printable + Sheets) | $19 | Retired with the sheet. The Freelancer Money Bundle ($49, PR #10) is the brand's bundle; the cross-sell map recommends the planner after the tracker. | remove "freelancer-tax-bundle-2027" from RETIRED in launch/brandshop/ten99.py and rebuild |

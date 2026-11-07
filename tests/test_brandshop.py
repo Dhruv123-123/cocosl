@@ -109,4 +109,34 @@ def test_products_catalog_covers_every_brand():
     assert all("NATIVE REVIEW" in r["notes"] for r in rows if r["brand"] == "Dinero Simple")
     names = {r["product"] for r in rows}
     for mod in (SD, T, DS):
-        assert {it["name"] for it in mod.LISTINGS} <= names
+        active = {it["name"] for it in mod.LISTINGS if it["status"] == "active"} if hasattr(mod, "RETIRED") else \
+            {it["name"] for it in mod.LISTINGS}
+        assert active <= names
+    # no near-duplicates: every retired product says where it went, and none of them is listed
+    merged = C.merged_rows()
+    assert {m["product"] for m in merged} == {it["name"] for mod in (SD, T) for it in mod.LISTINGS if it["slug"] in mod.RETIRED}
+    assert all(m["why"] and "RETIRED" in m["undo"] for m in merged)
+    assert not ({m["product"] for m in merged} & names)
+    assert "The 20-Minute Budget" in names
+
+
+def test_scam_card_set_replaces_the_overlaps():
+    cs = next(it for it in SD.LISTINGS if it["slug"] == "scam-card-set")
+    assert cs["status"] == "active" and cs["price"] == 6
+    assert set(SD.RETIRED) == {"family-scam-safety-kit", "scam-fridge-cards", "caller-id-script-card", "scam-safety-bundle"}
+    assert set(T.RETIRED) == {"freelancer-tax-sheet-2027", "freelancer-tax-bundle-2027"}
+
+
+def test_gumroad_storefront_kit():
+    sys.path.insert(0, str(SHOP.parents[0] / "storefront"))
+    import build_storefront as S
+    assert S.problems() == []
+    prods = S.gumroad_products()
+    assert set(prods) == set(S.BRANDS)
+    for brand, rows in prods.items():
+        b = S.BRANDS[brand]
+        assert len(b["bio"]) <= 160 and ("not" in b["bio"].lower() or "no es" in b["bio"].lower())
+        md = S.storefront_md(brand, rows)
+        assert "Nothing here has been set up" in md
+        assert ("NATIVE REVIEW PENDING" in md) == (brand == "Dinero Simple")
+    assert "CROSS_SELL" not in S.cross_sell_md(prods) and all(r["product"] in S.cross_sell_md(prods) for rs in prods.values() for r in rs)

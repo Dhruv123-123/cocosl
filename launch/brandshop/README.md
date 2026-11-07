@@ -12,17 +12,18 @@ fails on page overflow, Etsy title/tag limits, banned wording, off-Etsy links, o
 
 | Brand | Listing | Price | Files |
 |---|---|---|---|
-| Scam Decoded | Family Scam-Safety Kit | $9 | 11 pages, Letter + A4 |
-| Scam Decoded | Scam Fridge Card Set | $5 | 6 cards: 4x6 and two-per-sheet Letter + A4 |
-| Scam Decoded | Caller ID Script Card for Seniors | $4 | Large-print page, 4x6 card, 8 wallet cards per sheet |
-| Scam Decoded | Family Scam-Safety Bundle | $12 | All of the above (zip) |
+| Scam Decoded | Scam Decoded Card Set | $6 | 6 fridge cards + caller ID script card (4x6), large-print phone page, 8 wallet cards; Letter + A4 |
 | 1099 Money | 2027 Freelancer Tax-Year Planner | $12 | 25 pages, Letter + A4 |
-| 1099 Money | 2027 Freelancer Tax Tracker (Sheets) | $14 | .xlsx (opens in Google Sheets, Excel, Numbers) + start-here PDF |
-| 1099 Money | 2027 Freelancer Tax Bundle | $19 | Planner + tracker (zip) |
 | Dinero Simple | El Presupuesto Familiar | $9 | 12 pages, Carta + A4 |
 | Dinero Simple | El Registro de Envíos | $7 | 7 pages, Carta + A4, plus a remittance workbook (.xlsx) |
 | Dinero Simple | La Lista para Construir tu Crédito | $6 | 8 pages, Carta + A4 |
 | Dinero Simple | El Paquete de la Familia | $16 | All three (zip) |
+
+**Merged to avoid near-duplicates (Nov 7 2026, reversible).** The 11-page Family Scam-Safety Kit, the fridge cards,
+the caller ID card and their $12 bundle overlapped Scam Decoded's Family Scam-Proofing Kit and large-print seniors
+pack (PR #9), so the cards became one cards-only Card Set and the rest is not listed. The 2027 tax sheet and its bundle
+overlapped 1099 Money's Quarterly Tax Tracker (PR #10), so the planner is sold as its paper companion. Each module's
+`RETIRED` dict says why; remove a slug from it and rebuild to list it again. The pages still render and are checked.
 
 **Dinero Simple is Spanish and needs a fluent speaker's review before anything is listed.** Every `LISTING.md` opens
 with a NATIVE REVIEW PENDING banner, `listings.csv` has a `review` column, and the build writes
