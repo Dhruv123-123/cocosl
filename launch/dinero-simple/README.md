@@ -22,6 +22,10 @@ The Spanish-language sister brand of Money Made Simple, for US Hispanic viewers.
 | `WHATSAPP_CHANNEL.md` | WhatsApp Channel kit: setup, name and description, posting rules, growing it by hand, and 30 days of messages (with polls). Links appear only as `[ENLACE: ...]` placeholders. Sources in `whatsapp/messages.py`, built by `whatsapp/build_whatsapp.py` |
 | `content-reto-ahorro-2026.json`, `POSTING_PLAN_RETO_AHORRO_2026.md`, `REVIEW_CHECKLIST_RETO_AHORRO_2026.md` | "Reto de diciembre: $10 al día" (Nov 30 – Dec 28, 2026): a 7-post savings challenge done with the viewer (day 1, a tracker, Sunday check-ins, a finale), in free slots next to month 1 and the holiday pack. Numbers are examples, never promises. Sources in `src/reto_ahorro_2026.py`, built by `src/build_reto.py` |
 | `GLOSSARY_REVIEW.md` | Review checklist for the site's 50-term glossary (`/glosario/`), built from `glossary/terms.py` by `glossary/build_glossary.py` |
+| `content-month-7.json`, `POSTING_PLAN_MONTH_7.md`, `REVIEW_CHECKLIST_MONTH_7.md` | Month 7 (June 2027): 14 shorts, 8 carousels and 2 long videos ("Tu sueldo completo", "Seguro de vida") on unpaid wages and overtime, insurance, a mid-year check and Father's Day without debt. Sources in `src/month7_*.py`, built by `src/build_month7.py` |
+| `content-month-8.json`, `POSTING_PLAN_MONTH_8.md`, `REVIEW_CHECKLIST_MONTH_8.md` | Month 8 (July 2027): 14 shorts, 8 carousels and 2 long videos ("La tanda", "Tu primera casa"). 6 pieces mention the ITIN and carry ATTORNEY REVIEW. Sources in `src/month8_*.py`, built by `src/build_month8.py` |
+| `GUIA_IMPUESTOS_2027.md`, `REVIEW_CHECKLIST_IMPUESTOS_2027.md` | "Temporada de impuestos 2027": a free family guide for filing tax year 2026 with an ITIN or a W-2 (12 sections and a one-page checklist), with a printable PDF. Every ITIN section is flagged ATTORNEY REVIEW; a tax pro checks every figure. Source `impuestos/guia.py`, built by `impuestos/build_guia.py --pdf` (PDF lands in the gitignored `impuestos/dist/`) |
+| `REVIEW_CHECKLIST_MAYORES.md` | "Estafas: guía para papás y abuelos": the Spanish large-print edition of the Scam Decoded seniors pack (15-page booklet, fridge list, wallet cards), with the notario, detained-relative, virtual-kidnapping and remittance-code scams added. Source `mayores/contenido.py`, built by `mayores/build_mayores.py --pdf` |
 | `NEWSLETTER.md`, `newsletter/issues/` | The weekly Spanish newsletter: 6 evergreen issues plus the 2026 holiday issue (#7), with no links in the body (`[ENLACE: ...]` placeholders), A/B subjects and review boxes. Sources in `newsletter/issues.py`, built by `newsletter/build_newsletter.py` |
 | `src/originals.py` | The original element for every long video (a chart of its own numbers and a suggested screen recording). A new long video must be added here or its build fails |
 | `ANSWER_BANK.md` | 30 Spanish answers for Quora and Facebook groups, with no links, plus posting rules. Sources in `community/answers.py`, built by `community/build_answers.py` |
@@ -42,6 +46,8 @@ factory pack launch/dinero-simple/content-month-1.json --brand dinero-simple --o
 python launch/dinero-simple/products/build.py --check
 python launch/dinero-simple/src/build_estafas.py
 python launch/dinero-simple/src/build_month2.py
+python launch/dinero-simple/impuestos/build_guia.py --pdf
+python launch/dinero-simple/mayores/build_mayores.py --pdf
 ```
 
 Also adapted: the two long-form videos (`videos/23`, `videos/24`), and the website, link-in-bio page, lead magnet and 10-email sequence in `sites/dinero-simple/` (see its README). Visual prompts, sources and fact-check lists stay in English on purpose so the operator can check them.

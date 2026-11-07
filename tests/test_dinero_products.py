@@ -397,3 +397,42 @@ def test_reto_de_ahorro_series_fits_the_december_calendar_and_promises_nothing()
         if i["format"] == "mid":
             words = sum(len(s["narration"].split()) for s in i["script"]["segments"])
             assert 190 <= words <= 250 and 8 <= len(i["script"]["segments"]) <= 11
+
+
+def _load(path: Path, name: str):
+    spec = importlib.util.spec_from_file_location(name, path)
+    mod = importlib.util.module_from_spec(spec)
+    sys.path.insert(0, str(path.parent))
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def test_tax_guide_matches_its_source_and_flags_every_itin_section():
+    b = _load(DS / "impuestos" / "build_guia.py", "build_guia")
+    b.check()
+    assert (DS / "GUIA_IMPUESTOS_2027.md").read_text() == b.markdown_doc()
+    assert (DS / "REVIEW_CHECKLIST_IMPUESTOS_2027.md").read_text() == b.review_doc()
+    review = b.review_doc()
+    for s in b.SECTIONS:
+        if "ITIN" in s["title"] + s["body"]:
+            assert f"{s['title']} · **ATTORNEY REVIEW**" in review, s["id"]
+    text = b.markdown_doc().lower()
+    assert "http://" not in text and "https://" not in text
+    assert "notario" not in text or "no es abogado" in text or "nunca" in text
+
+
+def test_seniors_guide_is_large_print_spanish_and_flags_immigration():
+    b = _load(DS / "mayores" / "build_mayores.py", "build_mayores")
+    C = b.C
+    assert (DS / "REVIEW_CHECKLIST_MAYORES.md").read_text() == b.review_doc()
+    review = b.review_doc()
+    assert "Native-speaker review" in review and "ATTORNEY REVIEW" in review
+    for title, _, _, attorney in C.CALLS:
+        if attorney:
+            assert f"{title} · **ATTORNEY REVIEW**" in review
+    assert "DOJ" in C.ATTORNEY_LINE and "notario no es abogado" in C.ATTORNEY_LINE.lower()
+    booklet = b.doc(C.TITLE, b.booklet())
+    assert 'lang="es"' in booklet and C.ATTORNEY_LINE.split(".")[0] in booklet
+    assert "1-833-372-8311" in booklet and "1-877-382-4357" in booklet
+    assert len(b.booklet()) == 15
+    assert "font-size:16pt" in b.LARGE
