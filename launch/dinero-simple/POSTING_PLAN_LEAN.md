@@ -4,7 +4,7 @@ The only posting plan that is phase 1. 12 Shorts and 2 carousels from the evergr
 
 Weeks are relative: week 1 starts the Monday after the lean native review is back (for example lunes 30 de noviembre de 2026). Times America/New_York.
 
-Rules: post a piece only after the native reviewer has signed it off in `review/dist/Lean-Revision-Espanol-Nativo.pdf` and the facts under CHECK BEFORE POSTING in its caption.txt are confirmed. Record the review in the factory with `factory review-language <id> --by NAME`.
+Rules: post a piece only after the native reviewer has signed it off in `review/dist/Lean-Revision-Espanol-Nativo.pdf` and the facts under CHECK BEFORE POSTING in its caption.txt are confirmed. Record the review in the factory with `factory review-gate pass <id> native_review --by NAME`.
 
 Source: `launch/dinero-simple/content-lean.json` (built by `lean/lean_launch.py`). Folder numbers match the rendered pack in project files `content-factory/dinero-simple/lean-launch/`.
 

@@ -140,4 +140,4 @@ Nothing here posts or sends on its own: publishing is a dry run until FACTORY_DR
 | Command | What it does |
 |---|---|
 | `factory handoff-pack` | export a content.json as a hand-off folder (slides, thumbnails, captions) |
-| `factory review-language` | record that a fluent speaker checked a non-English post |
+| `factory review-language` | older name for `review-gate pass <id> native_review` (records the fluent speaker) |

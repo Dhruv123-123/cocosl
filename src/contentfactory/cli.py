@@ -534,7 +534,7 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--force", action="store_true")
     s.set_defaults(func=cmd_new_brand)
 
-    s = sub.add_parser("review-language", help="record that a fluent speaker checked a non-English post")
+    s = sub.add_parser("review-language", help="older name for `review-gate pass <id> native_review` (records the fluent speaker)")
     s.add_argument("id", type=int)
     s.add_argument("--by", required=True, help="reviewer's name")
     s.set_defaults(func=cmd_review_language)

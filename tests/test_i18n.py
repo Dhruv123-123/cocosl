@@ -73,6 +73,19 @@ def test_language_review_gate(factory, fake_render):
     factory.mark_language_reviewed(pid, "Ana")
     checks = {c["name"]: c for c in factory.db.get("posts", pid)["checks"]["checks"]}
     assert checks["language_review"]["level"] == "ok"
+    from contentfactory.review import passed
+    assert passed(factory.db.get("posts", pid))["native_review"]["by"] == "Ana"  # one sign-off covers the gate too
+
+
+def test_review_gate_pass_clears_the_language_warning(factory, fake_render):
+    from contentfactory.review import pass_stage
+    item = json.loads((ROOT / "launch" / "dinero-simple" / "content.json").read_text())[0]
+    pid = factory.import_script("dinero-simple", item["script"], item["format"])
+    pass_stage(factory, pid, "native_review", by="Ana")
+    factory.check(pid)
+    checks = {c["name"]: c for c in factory.db.get("posts", pid)["checks"]["checks"]}
+    assert checks["language_review"]["level"] == "ok"
+    assert "review-gate pass" in __import__("contentfactory.guardrails", fromlist=["x"]).check_language_review.__doc__
 
 
 def test_english_posts_have_no_language_check(factory, fake_render):

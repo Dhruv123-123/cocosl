@@ -152,16 +152,18 @@ def check_banned(brand: BrandProfile, text: str) -> Check:
 
 def check_language_review(brand: BrandProfile, post: dict) -> Check | None:
     """Non-English copy is machine-written in a language the operator may not read:
-    a fluent speaker must sign it off (meta.native_review = their name) before it goes out."""
+    a fluent speaker must sign it off before it goes out. The review gate's native_review pass
+    (`factory review-gate pass <id> native_review --by NAME`) counts, as does the older meta.native_review."""
     if i18n.is_english(brand):
         return None
     meta = post.get("meta") or {}
-    reviewer = str(meta.get("native_review") or "").strip()
+    gate = ((meta.get("review") or {}).get("passed") or {}).get("native_review") or {}
+    reviewer = str(meta.get("native_review") or gate.get("by") or "").strip()
     if reviewer:
         return Check("language_review", "ok", f"{i18n.locale_of(brand)} copy reviewed by {reviewer}")
     return Check("language_review", "warn",
                  f"{i18n.locale_of(brand)} copy needs a native-speaker review before posting "
-                 "(record it with `factory review-language <id> --by NAME`)")
+                 "(record it with `factory review-gate pass <id> native_review --by NAME`)")
 
 
 def check_assets_licensed(assets: dict) -> Check:

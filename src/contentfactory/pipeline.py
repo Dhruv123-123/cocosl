@@ -249,6 +249,11 @@ class Factory:
         meta["native_review_at"] = now_iso()
         self.db.update("posts", post_id, {"meta": meta})
         self.db.log("post.language_reviewed", "post", post_id, {"reviewer": reviewer}, actor=actor)
+        # Same sign-off as the review gate's native_review, so one command covers both.
+        from . import review
+        brand = self.brands().get(post["brand"])
+        if "native_review" in review.pending(self._post(post_id), brand):
+            review.pass_stage(self, post_id, "native_review", by=reviewer, actor=actor)
         return self.check(post_id)
 
     def reject(self, post_id: int, reason: str = "", actor: str = "human") -> None:
