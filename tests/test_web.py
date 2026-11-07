@@ -103,6 +103,7 @@ def factory(tmp_path, monkeypatch) -> Factory:
                 "FACTORY_HOME", "ANTHROPIC_API_KEY"):
         monkeypatch.delenv(key, raising=False)
     monkeypatch.setenv("FACTORY_LLM", "offline")
+    monkeypatch.setenv("FACTORY_PREFLIGHT", "0")  # placeholder media
     shutil.copytree(ROOT / "brands", tmp_path / "brands")
     import contentfactory.media as media
     monkeypatch.setattr(media, "render_post", fake_render)
@@ -133,6 +134,7 @@ def test_post_detail_and_404(client, factory):
     assert r.status_code == 200
     assert "HYSA rates are around 4% APY" in r.text
     assert f"/media/posts/1/video.mp4" in r.text
+    assert "Platform check" in r.text and "video file is missing" in r.text  # placeholder media isn't on disk
     assert client.get("/posts/9999").status_code == 404
 
 

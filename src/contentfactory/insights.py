@@ -6,8 +6,10 @@ the factory makes more of what works and less of what doesn't.
 """
 from __future__ import annotations
 
+import math
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
+from statistics import median
 
 from .db import DB
 
@@ -69,20 +71,58 @@ def report(db: DB, brand: str | None = None, days: int = 30) -> dict:
     }
 
 
+def relative(rows: list[dict]) -> list[dict]:
+    """Add `rel`: views vs. the median on the same platform (a TikTok view isn't a YouTube view)."""
+    by_platform: dict = defaultdict(list)
+    for r in rows:
+        by_platform[r["platform"]].append(r["views"] or 0)
+    med = {p: median(v) for p, v in by_platform.items()}
+    for r in rows:
+        r["rel"] = ((r["views"] or 0) + 1) / (med[r["platform"]] + 1)
+    return rows
+
+
+def _geo(xs) -> float:
+    xs = list(xs)
+    return math.exp(sum(math.log(x) for x in xs) / len(xs)) if xs else 1.0
+
+
 def score_multipliers(db: DB, brand: str, min_posts: int = 3) -> dict[str, dict[str, float]]:
-    """Relative performance per format and pillar (1.0 = average). Groups with
+    """Relative performance per format and pillar (1.0 = typical), measured against each
+    platform's median so a platform with big raw numbers doesn't skew it. Groups with
     too little data stay neutral so one viral fluke doesn't steer everything."""
-    rows = latest_metrics(db, days=120, brand=brand)
-    if not rows:
-        return {"format": {}, "pillar": {}}
-    overall = sum(r["views"] or 0 for r in rows) / len(rows) or 1
-    out: dict[str, dict[str, float]] = {}
+    rows = relative(latest_metrics(db, days=120, brand=brand))
+    out: dict[str, dict[str, float]] = {"format": {}, "pillar": {}}
     for key in ("format", "pillar"):
-        out[key] = {}
-        for g in rollup(rows, key):
-            if g["posts"] >= min_posts:
-                out[key][g[key]] = round(max(0.5, min(2.0, g["avg_views"] / overall)), 2)
+        groups: dict = defaultdict(list)
+        for r in rows:
+            groups[r.get(key) or "unknown"].append(r["rel"])
+        for k, rels in groups.items():
+            if len(rels) >= min_posts:
+                out[key][k] = round(max(0.5, min(2.0, _geo(rels))), 2)
     return out
+
+
+def winners_prompt(db: DB, brand: str, min_posts: int = 3, settle_days: int = 3) -> str:
+    """'What worked / what flopped' with real titles, for the idea prompt. Empty until there's data.
+    Posts younger than `settle_days` are left out: their numbers are still climbing."""
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=settle_days)).isoformat()
+    rows = relative([r for r in latest_metrics(db, days=120, brand=brand)
+                     if (r["published_at"] or r["scheduled_at"] or "") <= cutoff])
+    posts: dict = {}
+    for r in rows:
+        posts.setdefault(r["post_id"], {"title": r["title"], "format": r["format"], "pillar": r["pillar"],
+                                        "rels": []})["rels"].append(r["rel"])
+    if len(posts) < min_posts:
+        return ""
+    ranked = sorted(({**p, "x": round(_geo(p["rels"]), 1)} for p in posts.values()), key=lambda p: -p["x"])
+    lines = ["How past posts did (views vs. this channel's usual on each platform):"]
+    lines += [f"- {p['x']}x: {p['title']} ({p['format']}, {p['pillar'] or 'no pillar'})" for p in ranked[:5]]
+    if len(ranked) > 5:
+        lines.append("Underperformed:")
+        lines += [f"- {p['x']}x: {p['title']} ({p['format']})" for p in ranked[-3:]]
+    lines.append("Lean toward what worked, but keep variety: new angles, not copies of the winners' titles.")
+    return "\n".join(lines)
 
 
 def rescore_backlog(db: DB, brand: str) -> int:

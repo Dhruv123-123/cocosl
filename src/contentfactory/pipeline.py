@@ -11,9 +11,11 @@ unless the brand explicitly sets require_human_review: false.
 """
 from __future__ import annotations
 
+import os
+
 import traceback
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from .config import BrandProfile, Settings, load_brand, load_brands
@@ -83,10 +85,7 @@ class Factory:
         })
         self.db.update("ideas", idea_id, {"status": "used"})
         self.db.log("post.scripted", "post", post_id, {"idea": idea_id, "editor_score": verdict.score})
-        if render:
-            self.render(post_id)
-        else:
-            self.check(post_id)
+        self._render_or_queue(post_id, render)
         return post_id
 
     def import_script(self, brand_slug: str, script: dict, fmt: str, pillar: str = "", angle: str = "",
@@ -105,11 +104,19 @@ class Factory:
                                                          "human_edited": True},
         })
         self.db.log("post.imported", "post", post_id, {"source": source})
-        if render:
+        self._render_or_queue(post_id, render)
+        return post_id
+
+    def _render_or_queue(self, post_id: int, render: bool) -> None:
+        """Render now, or (RENDER_QUEUE=1, as in docker-compose) hand it to the renderer process."""
+        if render and os.environ.get("RENDER_QUEUE", "0") == "1":
+            self.check(post_id)
+            from .renderq import enqueue
+            enqueue(self, post_id, reason="new")
+        elif render:
             self.render(post_id)
         else:
             self.check(post_id)
-        return post_id
 
     def render(self, post_id: int) -> dict:
         from .media import render_post
@@ -170,8 +177,31 @@ class Factory:
             raise PermissionError("Post is blocked by a guardrail; fix it and re-check before approving")
         if post["status"] not in ("in_review", "rendered", "scripted", "approved"):
             raise ValueError(f"Can't approve a post in status {post['status']}")
+        if self.render_pending(post_id):
+            raise PermissionError("Post is still waiting in the render queue; review it once it has rendered")
         self.db.update("posts", post_id, {"status": "approved", "review_notes": notes})
         self.db.log("post.approved", "post", post_id, {"notes": notes}, actor=actor)
+
+    def choose_thumbnail(self, post_id: int, index: int, actor: str = "human") -> str:
+        """Use thumbnail variant `index` (0 = the original) as the post's thumbnail."""
+        post = self._post(post_id)
+        if post["status"] in ("scheduled", "published"):
+            raise PermissionError("The thumbnail is already on its way to the platforms; unschedule first")
+        assets = dict(post.get("assets") or {})
+        variants = assets.get("thumbnail_variants") or []
+        if not 0 <= index < len(variants):
+            raise ValueError(f"Post #{post_id} has {len(variants)} thumbnail option(s)")
+        assets["thumbnail"] = variants[index]
+        self.db.update("posts", post_id, {"assets": assets})
+        self.db.log("post.thumbnail_chosen", "post", post_id, {"thumbnail": variants[index]}, actor=actor)
+        return variants[index]
+
+    def render_pending(self, post_id: int) -> bool:
+        try:
+            return bool(self.db.one("SELECT id FROM render_jobs WHERE post_id = ? AND status IN ('queued','running')",
+                                    [post_id]))
+        except Exception:  # queue table not created yet
+            return False
 
     def reject(self, post_id: int, reason: str = "", actor: str = "human") -> None:
         self._post(post_id)
@@ -185,26 +215,65 @@ class Factory:
         post = self._post(post_id)
         if post["status"] != "approved":
             raise PermissionError("Only approved posts can be scheduled")
+        assets = post.get("assets") or {}
+        if not (assets.get("slides") if post["format"] == "carousel" else assets.get("video")):
+            raise PermissionError("Post has no rendered media yet; render it before scheduling")
         brand = self.brand(post["brand"])
         targets = platforms or [a.platform for a in brand.accounts
                                 if a.enabled and post["format"] in a.formats]
         if not targets:
             raise ValueError(f"No enabled account in {brand.slug} accepts format '{post['format']}'")
-        pub_ids = []
+        from .publish.preflight import blocking, check_post
+        stop = blocking(check_post(self, post, targets), self.settings.dry_run)
+        if stop:
+            raise PermissionError("Media check failed: " + "; ".join(map(str, stop)))
+        # Work out every slot first so a cadence block can't leave a half-scheduled post behind.
+        plan = []
         for platform in targets:
-            slot = at or next_slot(self.db, brand, platform)
+            slot = at or next_slot(self.db, brand, platform, fmt=post["format"])
             cadence = check_cadence(self.db, brand, platform, slot)
             if cadence.level == "block":
                 raise PermissionError(cadence.message)
+            plan.append((platform, slot))
+        pub_ids = []
+        for platform, slot in plan:
             acct = brand.account(platform)
             pub_ids.append(self.db.insert("publications", {
                 "post_id": post_id, "platform": platform, "account": acct.handle if acct else "",
                 "status": "queued", "scheduled_at": slot.isoformat(),
             }))
-        self.db.update("posts", post_id, {"status": "scheduled", "scheduled_at": min(
-            self.db.get("publications", p)["scheduled_at"] for p in pub_ids)})
+        self.db.update("posts", post_id, {"status": "scheduled", "scheduled_at": min(s for _, s in plan).isoformat()})
         self.db.log("post.scheduled", "post", post_id, {"publications": pub_ids})
         return pub_ids
+
+    def unschedule(self, post_id: int, actor: str = "human") -> int:
+        """Cancel a post's queued publications and put it back to approved. Returns how many were cancelled."""
+        post = self._post(post_id)
+        if post["status"] != "scheduled":
+            raise ValueError(f"Post #{post_id} is {post['status']}, not scheduled")
+        cur = self.db.execute("UPDATE publications SET status = 'cancelled', error = 'unscheduled', updated_at = ? "
+                              "WHERE post_id = ? AND status = 'queued'", [now_iso(), post_id])
+        live = self.db.scalar("SELECT COUNT(*) FROM publications WHERE post_id = ? AND status IN "
+                              "('publishing','published','dry_run','needs_check')", [post_id])
+        self.db.update("posts", post_id, {"status": "published" if live else "approved", "scheduled_at": None})
+        self.db.log("post.unscheduled", "post", post_id, {"cancelled": cur.rowcount}, actor=actor)
+        return cur.rowcount or 0
+
+    def schedule_approved(self, brand: str | None = None, limit: int | None = None) -> dict:
+        """Put every approved, rendered post into the next free slots (oldest approval first).
+        Posts that can't be scheduled are reported, not raised."""
+        sql, params = "SELECT id FROM posts WHERE status = 'approved'", []
+        if brand:
+            sql += " AND brand = ?"
+            params.append(brand)
+        out: dict = {"scheduled": {}, "skipped": {}}
+        for row in self.db.query(sql + " ORDER BY updated_at, id", params)[: limit or None]:
+            try:
+                pubs = self.schedule(row["id"])
+                out["scheduled"][row["id"]] = [self.db.get("publications", p)["scheduled_at"] for p in pubs]
+            except (PermissionError, ValueError, RuntimeError) as e:
+                out["skipped"][row["id"]] = str(e)
+        return out
 
     # ------------------------------------------------------------------ publish
     def build_request(self, post: dict, platform: str):
@@ -226,11 +295,16 @@ class Factory:
             for p in [*(assets.get("slides") or []), *(assets.get("images") or []), assets.get("video"), assets.get("thumbnail")]:
                 if p:
                     public[str(out / p)] = f"{base}/{p}"
-        description = "\n\n".join(x for x in [script.get("description", ""), disclosure] if x)
+        body = script.get("description", "")
+        if post["format"] == "long" and assets.get("chapters"):
+            from .media.chapters import with_chapters
+            body = with_chapters(body, assets["chapters"])
+        description = "\n\n".join(x for x in [body, disclosure] if x)
         return PublishRequest(
             platform=platform, brand=brand, settings=self.settings, format=post["format"],
             title=post.get("title", ""), caption=caption, description=description, tags=tags,
             video_path=video, image_paths=images, thumbnail_path=thumb, public_urls=public,
+            captions_path=out / assets["captions_srt"] if assets.get("captions_srt") else None,
             ai_generated=True, realistic_synthetic=brand.realistic_synthetic_media,
             has_paid_promotion=bool((post.get("meta") or {}).get("sponsored")),
         )
@@ -238,49 +312,133 @@ class Factory:
     def publish_due(self, now: datetime | None = None, max_attempts: int = 3) -> list[dict]:
         from .publish import PublishError, get_publisher
         now = now or datetime.now(timezone.utc)
+        self.flag_interrupted(now)
         due = self.db.query(
             "SELECT * FROM publications WHERE status = 'queued' AND scheduled_at <= ? AND attempts < ? ORDER BY scheduled_at",
             [now.isoformat(), max_attempts])
         results = []
         if due and not self.settings.dry_run:
             from .publish.tokens import refresh_long_lived, refresh_tiktok_if_needed
-            try:
-                if any(p["platform"] == "tiktok" for p in due):
-                    refresh_tiktok_if_needed(self.settings)
-                refresh_long_lived(self.settings)
-            except Exception as e:  # a failed refresh surfaces as a publish error below
-                self.db.log("tokens.refresh_failed", "", None, {"error": str(e)})
+            brands_due: dict[str, set] = {}
+            for p in due:
+                b = self.db.scalar("SELECT brand FROM posts WHERE id = ?", [p["post_id"]]) or ""
+                brands_due.setdefault(b, set()).add(p["platform"])
+            for b, platforms in brands_due.items():
+                scoped = self.settings.for_brand(b)
+                try:
+                    if "tiktok" in platforms:
+                        refresh_tiktok_if_needed(scoped)
+                    refresh_long_lived(scoped)
+                except Exception as e:  # a failed refresh surfaces as a publish error below
+                    self.db.log("tokens.refresh_failed", "", None, {"error": str(e), "brand": b})
         for pub in due:
             post = self.db.get("posts", pub["post_id"])
-            if post["status"] not in ("scheduled", "published"):
-                self.db.update("publications", pub["id"], {"status": "failed", "error": f"post status {post['status']}"})
-                continue
-            publisher = get_publisher(pub["platform"], self.settings)
-            self.db.update("publications", pub["id"], {"status": "publishing", "attempts": pub["attempts"] + 1})
-            try:
-                res = publisher.publish(self.build_request(post, pub["platform"]))
-                status = "dry_run" if res.raw.get("dry_run") else "published"
+            if not post or post["status"] not in ("scheduled", "published"):
                 self.db.update("publications", pub["id"], {
-                    "status": status, "remote_id": res.remote_id, "url": res.url,
-                    "published_at": now_iso(), "meta": res.raw, "error": ""})
-                self.db.update("posts", post["id"], {"status": "published"})
-                self.db.log(f"publication.{status}", "publication", pub["id"], {"platform": pub["platform"], "url": res.url})
-                results.append({"publication": pub["id"], "status": status, "url": res.url})
-            except PublishError as e:
-                retry = e.retryable and pub["attempts"] + 1 < max_attempts
-                self.db.update("publications", pub["id"], {"status": "queued" if retry else "failed", "error": str(e)})
-                self.db.log("publication.failed", "publication", pub["id"], {"error": str(e), "retry": retry})
-                results.append({"publication": pub["id"], "status": "failed", "error": str(e)})
+                    "status": "failed", "error": f"post status {post['status'] if post else 'missing'}"})
+                continue
+            late_hours = float(os.environ.get("PUBLISH_LATE_HOURS", "6") or 0)
+            if late_hours and pub["scheduled_at"] < (now - timedelta(hours=late_hours)).isoformat():
+                # The worker was down: don't dump a backlog all at once (that reads as spam). Move it on.
+                from .scheduler import next_slot
+                slot = next_slot(self.db, self.brand(post["brand"]), pub["platform"], after=now)
+                self.db.update("publications", pub["id"], {"scheduled_at": slot.isoformat()})
+                self.db.log("publication.rescheduled_late", "publication", pub["id"],
+                            {"was": pub["scheduled_at"], "now": slot.isoformat()})
+                results.append({"publication": pub["id"], "status": "rescheduled", "at": slot.isoformat()})
+                continue
+            if self.db.one("SELECT id FROM publications WHERE post_id = ? AND platform = ? AND id != ? "
+                           "AND status = 'published'", [pub["post_id"], pub["platform"], pub["id"]]):
+                self.db.update("publications", pub["id"], {"status": "cancelled",
+                                                           "error": "already published on this platform"})
+                continue
+            from .publish.preflight import blocking, check
+            stop = blocking(check(post, pub["platform"], self.settings.output_dir,
+                                  self.settings.public_media_base_url), self.settings.dry_run)
+            if stop:  # media changed or vanished since scheduling: fail clearly instead of half-uploading
+                err = "Media check failed: " + "; ".join(map(str, stop))
+                self.db.update("publications", pub["id"], {"status": "failed", "error": err[:1000],
+                                                           "updated_at": now_iso()})
+                self.db.log("publication.failed", "publication", pub["id"], {"error": err[:1000], "retry": False})
+                results.append({"publication": pub["id"], "status": "failed", "error": err, "retry": False})
+                continue
+            # Claim it atomically so a second process (dashboard "publish now") can't post it twice.
+            cur = self.db.execute("UPDATE publications SET status = 'publishing', attempts = attempts + 1, "
+                                  "updated_at = ? WHERE id = ? AND status = 'queued'", [now_iso(), pub["id"]])
+            if not cur.rowcount:
+                continue
+            attempts = pub["attempts"] + 1
+            try:
+                publisher = get_publisher(pub["platform"], self.settings.for_brand(post["brand"]))
+                res = publisher.publish(self.build_request(post, pub["platform"]))
+            except Exception as e:  # PublishError, network errors, bad files: never leave it 'publishing'
+                retryable = getattr(e, "retryable", isinstance(e, (OSError, TimeoutError))
+                                    or type(e).__module__.startswith("httpx"))
+                retry = bool(retryable) and attempts < max_attempts
+                err = str(e) if isinstance(e, PublishError) else f"{type(e).__name__}: {e}"
+                upd = {"status": "queued" if retry else "failed", "error": err[:1000]}
+                if retry:  # back off 5, 10, 15... minutes
+                    upd["scheduled_at"] = (now + timedelta(minutes=5 * attempts)).isoformat()
+                self.db.update("publications", pub["id"], upd)
+                self.db.log("publication.failed", "publication", pub["id"], {"error": err[:1000], "retry": retry})
+                results.append({"publication": pub["id"], "status": "failed", "error": err, "retry": retry})
+                continue
+            status = "dry_run" if res.raw.get("dry_run") else "published"
+            self.db.update("publications", pub["id"], {
+                "status": status, "remote_id": res.remote_id, "url": res.url,
+                "published_at": now_iso(), "meta": res.raw, "error": ""})
+            self.db.update("posts", post["id"], {"status": "published"})
+            self.db.log(f"publication.{status}", "publication", pub["id"], {"platform": pub["platform"], "url": res.url})
+            results.append({"publication": pub["id"], "status": status, "url": res.url})
         return results
+
+    def flag_interrupted(self, now: datetime | None = None, minutes: int = 30) -> int:
+        """A publication stuck in 'publishing' means the process died mid-upload. It may or may not be
+        live, so it is never retried automatically: it's marked needs_check for a human to look at."""
+        now = now or datetime.now(timezone.utc)
+        cutoff = (now - timedelta(minutes=minutes)).replace(microsecond=0).isoformat()
+        cur = self.db.execute(
+            "UPDATE publications SET status = 'needs_check', error = 'Interrupted mid-publish. Check the platform: "
+            "if it is live, mark it published; if not, requeue it.' WHERE status = 'publishing' "
+            "AND COALESCE(updated_at, created_at) < ?", [cutoff])
+        return cur.rowcount or 0
+
+    def resolve_publication(self, pub_id: int, action: str, url: str = "", actor: str = "human") -> None:
+        """Human decision on an interrupted (needs_check) or failed publication:
+        'live' = it did go out (record it), 'requeue' = try again at the next free slot, 'drop' = give up."""
+        pub = self.db.get("publications", pub_id)
+        if not pub:
+            raise KeyError(f"No publication #{pub_id}")
+        if pub["status"] not in ("needs_check", "failed"):
+            raise ValueError(f"Publication #{pub_id} is {pub['status']}; only needs_check or failed can be resolved")
+        if action == "live":
+            self.db.update("publications", pub_id, {"status": "published", "url": url or pub["url"],
+                                                    "published_at": pub["published_at"] or now_iso(), "error": ""})
+            self.db.update("posts", pub["post_id"], {"status": "published"})
+        elif action == "requeue":
+            from .scheduler import next_slot
+            post = self._post(pub["post_id"])
+            slot = next_slot(self.db, self.brand(post["brand"]), pub["platform"])
+            self.db.update("publications", pub_id, {"status": "queued", "attempts": 0, "error": "",
+                                                    "scheduled_at": slot.isoformat()})
+            if post["status"] != "published":
+                self.db.update("posts", post["id"], {"status": "scheduled"})
+        elif action == "drop":
+            self.db.update("publications", pub_id, {"status": "cancelled"})
+        else:
+            raise ValueError("action must be live, requeue or drop")
+        self.db.log(f"publication.resolved_{action}", "publication", pub_id, {"url": url}, actor=actor)
 
     # ------------------------------------------------------------------ analytics
     def collect_metrics(self) -> int:
         from .publish import get_publisher
-        pubs = self.db.query("SELECT * FROM publications WHERE status = 'published' AND remote_id != ''")
+        pubs = self.db.query("SELECT p.*, s.brand FROM publications p JOIN posts s ON s.id = p.post_id "
+                             "WHERE p.status = 'published' AND p.remote_id != ''")
         n = 0
         for pub in pubs:
             try:
-                snap = get_publisher(pub["platform"], self.settings, dry_run=False).fetch_metrics(pub["remote_id"])
+                snap = get_publisher(pub["platform"], self.settings.for_brand(pub["brand"]),
+                                     dry_run=False).fetch_metrics(pub["remote_id"])
             except Exception as e:
                 self.db.log("metrics.failed", "publication", pub["id"], {"error": str(e)})
                 continue

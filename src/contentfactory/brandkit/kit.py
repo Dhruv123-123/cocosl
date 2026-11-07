@@ -204,7 +204,7 @@ def style_sheet_png(pal: Palette, brand: BrandProfile, letters: str) -> Image.Im
     y += 56
     fam = font_family_name()
     d.text((m, y), f"{fam} Display Black", font=font(72, "Black"), fill=ink)
-    d.text((m, y + 96), f"Headlines, thumbnails, on-screen text", font=font(30, "Regular", False), fill=soft)
+    d.text((m, y + 96), "Headlines, thumbnails, on-screen text", font=font(30, "Regular", False), fill=soft)
     d.text((m + 760, y + 14), f"{fam} Medium", font=font(52, "Medium", False), fill=ink)
     d.text((m + 760, y + 96), "Captions, body copy, subtitles", font=font(30, "Regular", False), fill=soft)
     y += 200

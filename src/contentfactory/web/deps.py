@@ -27,10 +27,12 @@ NAV = [
     ("Review", "/review"),
     ("Calendar", "/calendar"),
     ("Published", "/published"),
+    ("Inbox", "/inbox"),
     ("Revenue", "/business/revenue"),
     ("Clients", "/business/clients"),
     ("Products", "/business/products"),
     ("Funnel", "/funnel"),
+    ("Report", "/report"),
     ("Settings", "/settings"),
 ]
 

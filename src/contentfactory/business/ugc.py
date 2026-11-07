@@ -186,6 +186,12 @@ def set_client_status(db: DB, client_id: int, status: str, note: str = "",
         meta["next_follow_up"] = add_days(today(), FOLLOW_UP_DAYS[status])
     else:
         meta.pop("next_follow_up", None)
+    cad = meta.get("cadence")
+    if cad and not cad.get("stopped") and status not in ("lead", "contacted"):
+        cad["stopped"] = f"status: {status}"  # replied / negotiating / won / lost: no more automatic nudges
+        for st in cad.get("steps", []):
+            if st.get("status") == "pending":
+                st["status"] = "cancelled"
     changes: dict[str, Any] = {"status": status, "meta": meta}
     if note:
         changes["notes"] = _append_note(client["notes"], f"[{status}] {note}")
@@ -261,6 +267,8 @@ def create_order(db: DB, client_id: int, package: str, *, addons: list[str] | tu
         "due_date": due_date or add_days(today(), q["turnaround_days"]),
     })
     db.log("order.created", "order", oid, {"client": client_id, "package": package, "total": q["total_cents"]})
+    from .onboarding import setup_order  # questionnaire state + delivery checklist
+    setup_order(db, oid)
     return oid
 
 
@@ -367,29 +375,58 @@ and that this is an ad."""
 
 
 def _offline_ad(b: AdBrief) -> AdScript:
+    """Template ad used without an LLM. The beat structure follows `b.style`
+    (spokesperson, demo, or offer/explainer) so concepts for one product differ."""
     name = b.product
-    benefits = b.benefits or [f"it makes {b.audience or 'your day'} simpler"]
+    who = b.audience or "anyone short on time"
+    benefits = b.benefits or ["a simpler routine"]
     feature = (b.features or [f"a clean design built for {b.audience or 'everyday use'}"])[0]
-    beats = [
-        ("Hook", f"Here's why people are talking about {name}.", f"Meet {name}"[:60],
-         f"close-up of {name} on a clean bright surface"),
-        ("Problem", f"If you're {b.audience or 'busy'}, you know the usual options take too long.",
-         "The usual way is slow", "hands sorting through cluttered alternatives, soft daylight"),
-        ("Demo", f"Watch: {name} gives you {feature}.", "See it in action",
-         f"hands demonstrating {name}, step by step"),
-        ("Benefit", f"The point is simple: {benefits[0]}.", benefits[0][:60],
-         f"{name} in use in a tidy everyday setting"),
-        ("CTA", f"{b.offer + '. ' if b.offer else ''}{b.cta or 'Tap the link to shop'}.",
-         (b.cta or "Shop now")[:60], f"{name} product shot with empty space for a button"),
-    ]
+    cta = b.cta or "Tap the link to shop"
+    style = (b.style or "spokesperson").lower()
+    if style == "demo":
+        concept = f"Hands-on demo of {name}: one problem, solved on camera step by step."
+        beats = [
+            ("Hook", f"Watch what {name} does.", "Watch this",
+             f"{name} centred on a plain surface, hands entering frame"),
+            ("Step 1", f"Step one: {feature}.", feature[:60], f"hands showing the first step with {name}"),
+            ("Step 2", f"Step two: {benefits[0]}.", benefits[0][:60], f"close-up of {name} in use"),
+            ("Result", f"That's {name}, start to finish.", "Start to finish", f"{name} after use, tidy setting"),
+            ("CTA", f"{b.offer + '. ' if b.offer else ''}{cta}.", cta[:60], f"{name} product shot with space for a button"),
+        ]
+        variations = [f"Here's {name} in two steps.", "There's an easier way to do this.",
+                      f"Here's {name}, start to finish."]
+    elif style in ("offer", "explainer", "promo"):
+        offer = b.offer or f"{name} is available now"
+        concept = f"Offer-led explainer for {name}: who it's for, what you get, and one clear offer."
+        beats = [
+            ("Hook", f"Quick one for {who}.", f"For {who}"[:60],
+             f"bright lifestyle scene that suits {who}"),
+            ("What it is", f"{name} is {feature}.", "What it is", f"{name} on a clean background"),
+            ("Why it matters", f"Why it matters: {benefits[0]}.", benefits[0][:60], f"{name} in an everyday setting"),
+            ("Offer", f"{offer}.", offer[:60], f"offer card next to {name}"),
+            ("CTA", f"{cta}.", cta[:60], f"{name} with space for a button"),
+        ]
+        variations = [f"{offer}. Here's what you get.", f"Who {name} is for, in 15 seconds.",
+                      f"Before you scroll past {name}, read this."]
+    else:
+        concept = f"Spokesperson demo for {name}: show the product solving one clear problem."
+        beats = [
+            ("Hook", f"Here's what {name} actually does.", f"Meet {name}"[:60],
+             f"close-up of {name} on a clean bright surface"),
+            ("Problem", f"If you're {b.audience or 'busy'}, you know the usual options take too long.",
+             "The usual way is slow", "hands sorting through cluttered alternatives, soft daylight"),
+            ("Demo", f"Watch: {name} gives you {feature}.", "See it in action",
+             f"hands demonstrating {name}, step by step"),
+            ("Benefit", f"The point is simple: {benefits[0]}.", benefits[0][:60],
+             f"{name} in use in a tidy everyday setting"),
+            ("CTA", f"{b.offer + '. ' if b.offer else ''}{cta}.", cta[:60],
+             f"{name} product shot with empty space for a button"),
+        ]
+        variations = [f"Stop scrolling if you need {benefits[0]}.", f"This is {name}. Here's what it does.",
+                      f"3 seconds to see why {name} works differently."]
     segs = [Segment(heading=h, narration=n, on_screen_text=o, visual_prompt=v) for h, n, o, v in beats]
-    return AdScript(
-        concept=f"Spokesperson demo for {name}: show the product solving one clear problem.",
-        hook=segs[0].narration, segments=segs, cta=b.cta or "Tap the link to shop",
-        on_screen_disclosure=_default_disclosure(b),
-        variations=[f"Stop scrolling if you need {benefits[0]}.", f"This is {name}. Here's what it does.",
-                    f"3 seconds to see why {name} works differently."],
-    )
+    return AdScript(concept=concept, hook=segs[0].narration, segments=segs, cta=cta,
+                    on_screen_disclosure=_default_disclosure(b), variations=variations)
 
 
 def _default_disclosure(b: AdBrief) -> str:
@@ -467,17 +504,21 @@ def ad_brand_profile(brand_like: BrandProfile | dict | str) -> BrandProfile:
 
 
 def render_ad(settings, brand_like: BrandProfile | dict | str, ad_script: AdScript,
-              order_id: int | None = None, variation: int | None = None) -> dict:
+              order_id: int | None = None, variation: int | None = None,
+              output_subdir: str | None = None, headline_disclosure: bool = True) -> dict:
     """Build a post-like dict (format 'short') that `media.render_post` can render.
 
     `variation` swaps the hook for `ad_script.variations[variation]`. Nothing is
-    rendered or stored here; see `render_ad_video` for the media call."""
+    rendered or stored here; see `render_ad_video` for the media call.
+    `headline_disclosure=False` leaves the first headline alone: use it when the
+    disclosure is shown for the whole ad another way (e.g. brand.visual.watermark)."""
     brand = ad_brand_profile(brand_like)
     hook = ad_script.variations[variation] if variation is not None else ad_script.hook
     segments = [s.model_dump() for s in ad_script.segments]
     if segments:
         segments[0]["narration"] = hook if variation is not None else segments[0]["narration"]
-        segments[0]["on_screen_text"] = f"{segments[0]['on_screen_text']} · {ad_script.on_screen_disclosure}"
+        if headline_disclosure:
+            segments[0]["on_screen_text"] = f"{segments[0]['on_screen_text']} · {ad_script.on_screen_disclosure}"
     title = f"{brand.name} ad: {ad_script.concept[:60]}"
     script = {
         "title": title, "hook": hook, "segments": segments, "cta": ad_script.cta,
@@ -485,7 +526,7 @@ def render_ad(settings, brand_like: BrandProfile | dict | str, ad_script: AdScri
         "description": ad_script.concept, "thumbnail_text": " ".join(hook.split()[:4]),
         "sources": [], "claims_to_verify": ["Client must confirm every product claim in this ad"],
     }
-    sub = f"ugc/{brand.slug}/order-{order_id}" if order_id else f"ugc/{brand.slug}"
+    sub = output_subdir or (f"ugc/{brand.slug}/order-{order_id}" if order_id else f"ugc/{brand.slug}")
     return {
         "id": None, "brand": brand.slug, "format": "short", "status": "scripted", "title": title,
         "script": script, "caption": script["caption"], "hashtags": ["ad"],
@@ -498,9 +539,11 @@ def render_ad(settings, brand_like: BrandProfile | dict | str, ad_script: AdScri
 
 
 def render_ad_video(settings, brand_like: BrandProfile | dict | str, ad_script: AdScript,
-                    order_id: int | None = None, variation: int | None = None) -> dict:
+                    order_id: int | None = None, variation: int | None = None,
+                    output_subdir: str | None = None, headline_disclosure: bool = True) -> dict:
     """Render the ad with the media module (imported lazily). Returns its assets dict."""
     from ..media import render_post
-    post = render_ad(settings, brand_like, ad_script, order_id=order_id, variation=variation)
+    post = render_ad(settings, brand_like, ad_script, order_id=order_id, variation=variation,
+                     output_subdir=output_subdir, headline_disclosure=headline_disclosure)
     post["id"] = f"order{order_id or 0}-v{variation if variation is not None else 0}"
     return render_post(settings, ad_brand_profile(brand_like), post)

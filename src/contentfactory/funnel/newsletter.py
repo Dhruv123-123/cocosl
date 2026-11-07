@@ -89,14 +89,19 @@ def week_posts(db: DB, brand: str, since: str, until: str, limit: int = 8) -> li
     return list(posts.values())[:limit]
 
 
-def pick_mention(db: DB, brand: BrandProfile, base_url: str, when: datetime) -> dict | None:
-    """Rotate weekly through the brand's products and affiliate offers."""
+def pick_mention(db: DB, brand: BrandProfile, base_url: str, when: datetime, settings=None) -> dict | None:
+    """Rotate weekly through the brand's products and affiliate offers.
+    Links carry utm_source=newsletter, utm_medium=email, utm_campaign=digest-<yyyy-mm-dd>."""
+    from .attribution import with_utm
+    campaign = f"digest-{when.date().isoformat()}"
+    utm = {"source": "newsletter", "medium": "email", "campaign": campaign}
     options: list[dict] = []
-    for p in products(db, brand):
-        options.append({"kind": "product", "name": p["name"], "url": p["url"], "cta": f"Get {p['name']}"[:60],
+    for p in products(db, brand, settings=settings, base_url=base_url, utm=utm):
+        options.append({"kind": "product", "name": p["name"], "url": p["page_url"], "cta": f"Get {p['name']}"[:60],
                         "disclosure": "This is my own product; buying it supports the newsletter."})
     for a in sync_affiliate_links(db, brand):
-        options.append({"kind": "affiliate", "name": a["name"], "url": f"{base_url}/go/{a['slug']}",
+        options.append({"kind": "affiliate", "name": a["name"],
+                        "url": with_utm(f"{base_url}/go/{a['slug']}?s=email", **utm),
                         "cta": f"Check out {a['name']}"[:60], "disclosure": AFFILIATE_NOTE})
     if not options:
         return None
@@ -149,7 +154,7 @@ def draft_digest(factory, brand, days: int = 7, *, base_url: str | None = None) 
     since = (now - timedelta(days=days)).isoformat()
     base = mailer.public_url(factory.settings, base_url or "")
     posts = week_posts(db, b.slug, since, now.isoformat())
-    mention = pick_mention(db, b, base, now)
+    mention = pick_mention(db, b, base, now, factory.settings)
     copy = factory.llm.structured(DigestCopy, system=SYSTEM, prompt=_prompt(b, posts, mention),
                                   offline=lambda: offline_copy(b, posts, mention), purpose="funnel.digest",
                                   max_tokens=4000)
@@ -272,10 +277,10 @@ def send_confirmation(factory, brand: BrandProfile, subscriber: dict, *, base_ur
     confirm_url = f"{base}/confirm/{subscriber['token']}"
     unsub = f"{base}/unsubscribe/{subscriber['token']}"
     from .linkpage import lead_magnet
-    magnet = lead_magnet(brand)
+    magnet = lead_magnet(brand, factory.settings)
     address = mailer.business_address() or MISSING_ADDRESS
     text = (f"Hi!\n\nPlease confirm you want emails from {brand.name}:\n\n{confirm_url}\n\n"
-            f"Once confirmed you'll get {magnet['title']} right away, then one email a week.\n"
+            f"Once confirmed you'll get {magnet['title']} right away.{magnet.get('after', '')}\n"
             f"If you didn't sign up, ignore this email and you won't hear from us again.\n\n"
             f"--\n{brand.name} · {address}\nUnsubscribe: {unsub}\n")
     t = _email_theme(brand)

@@ -41,6 +41,7 @@
         </form>
         {% endfor %}
         <form method="post" action="/business/orders/{{ o.id }}/invoice" class="inline-form"><button class="btn">Invoice</button></form>
+        <a class="btn" href="/business/orders/{{ o.id }}/brief">Brief{% if o.brief.questionnaire and o.brief.questionnaire.status == 'complete' %} ✓{% endif %}</a>
       </td>
     </tr>
     <tr>

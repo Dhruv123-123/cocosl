@@ -39,11 +39,16 @@ def _table(rows: list[dict], cols: list[str]) -> None:
 def cmd_init(args):
     home = Path(args.home or ".").resolve()
     pkg_root = Path(__file__).resolve().parents[2]
+    examples = Path(__file__).resolve().parent / "examples"  # shipped in the wheel for pip installs
     (home / "brands").mkdir(parents=True, exist_ok=True)
     example_brand = pkg_root / "brands" / "money-made-simple.yaml"
+    if not example_brand.exists():
+        example_brand = examples / "money-made-simple.yaml"
     if example_brand.exists() and not any((home / "brands").glob("*.yaml")):
         shutil.copy(example_brand, home / "brands" / example_brand.name)
     env_example = pkg_root / ".env.example"
+    if not env_example.exists():
+        env_example = examples / "env.example"
     if env_example.exists() and not (home / ".env").exists():
         shutil.copy(env_example, home / ".env")
     s = Settings.load(home)
@@ -64,6 +69,15 @@ def cmd_status(args):
     print("\nPlatform credentials:")
     for platform, missing in credential_status(f.settings).items():
         print(f"  {platform:10s} {'ready' if not missing else 'missing ' + ', '.join(missing)}")
+    from .health import system_status
+    st = system_status(f)
+    print("\nPublications: " + (", ".join(f"{k}={v}" for k, v in st["publications"].items()) or "none"))
+    rq = {k: v for k, v in st["render_queue"].items() if k != "recent_failures" and v}
+    print("Render queue: " + (", ".join(f"{k}={v}" for k, v in rq.items()) or "empty"))
+    hb = st["worker"]["heartbeat"]
+    print("Worker: " + (f"last tick {st['worker']['minutes_since']} min ago" if hb else "not running"))
+    for a in st["alerts"]:
+        print(f"  ! {a}")
 
 
 def cmd_brands(args):
@@ -162,6 +176,16 @@ def cmd_reject(args):
 
 def cmd_schedule(args):
     f = _factory(args)
+    if args.all:
+        res = f.schedule_approved(brand=args.brand)
+        for pid, slots in res["scheduled"].items():
+            print(f"#{pid}: {', '.join(slots)}")
+        for pid, why in res["skipped"].items():
+            print(f"#{pid}: skipped ({why})")
+        print(f"{len(res['scheduled'])} scheduled, {len(res['skipped'])} skipped")
+        return
+    if args.id is None:
+        raise ValueError("give a post id, or --all")
     at = datetime.fromisoformat(args.at) if args.at else None
     for p in f.schedule(args.id, platforms=args.platform or None, at=at):
         pub = f.db.get("publications", p)
@@ -213,11 +237,27 @@ def cmd_insights(args):
 
 
 def cmd_import(args):
+    """Safe to re-run: scripts already imported are skipped, and ones whose render never finished
+    (an interrupted run) are rendered again instead of duplicated."""
+    import os
+    if args.queue:
+        os.environ["RENDER_QUEUE"] = "1"
     f = _factory(args)
     items = json.loads(Path(args.file).read_text())
     for item in items[: args.limit or None]:
-        pid = f.import_script(args.brand, item["script"], item["format"], item.get("pillar", ""),
-                              item.get("idea_angle", ""), render=not args.no_render)
+        title = (item.get("script") or {}).get("title", "")
+        existing = None if args.force else f.db.one(
+            "SELECT id, status FROM posts WHERE brand = ? AND title = ? AND status != 'rejected' ORDER BY id DESC",
+            [args.brand, title])
+        if existing and existing["status"] in ("scripted", "failed") and not args.no_render:
+            f._render_or_queue(existing["id"], True)
+            pid = existing["id"]
+        elif existing:
+            print(f"post #{existing['id']} [{existing['status']}] {title}: already imported, skipped")
+            continue
+        else:
+            pid = f.import_script(args.brand, item["script"], item["format"], item.get("pillar", ""),
+                                  item.get("idea_angle", ""), render=not args.no_render)
         post = f.db.get("posts", pid)
         print(f"post #{pid} [{post['format']}/{post['status']}] {post['title']}")
 
@@ -234,6 +274,15 @@ def cmd_new_brand(args):
     data, slug = generate_brand(f.llm, args.niche, args.audience or "", args.platform)
     path = write_brand(f.settings.brands_dir, data, args.slug or slug, overwrite=args.force)
     print(f"Wrote {path}. Edit it, then: factory ideas generate --brand {args.slug or slug}")
+
+
+def cmd_report(args):
+    from .reports import save_report, to_markdown, weekly_report
+    f = _factory(args)
+    if args.save:
+        print(save_report(f))
+    else:
+        print(to_markdown(weekly_report(f)))
 
 
 def cmd_serve(args):
@@ -316,11 +365,17 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--reason")
     s.set_defaults(func=cmd_reject)
 
-    s = sub.add_parser("schedule", help="schedule an approved post")
-    s.add_argument("id", type=int)
+    s = sub.add_parser("schedule", help="schedule an approved post (or --all approved posts)")
+    s.add_argument("id", type=int, nargs="?")
     s.add_argument("--platform", action="append")
     s.add_argument("--at")
+    s.add_argument("--all", action="store_true", help="fill the calendar with every approved, rendered post")
+    s.add_argument("--brand")
     s.set_defaults(func=cmd_schedule)
+
+    s = sub.add_parser("unschedule", help="cancel a scheduled post's queued publications (back to approved)")
+    s.add_argument("id", type=int)
+    s.set_defaults(func=lambda a: print(f"cancelled {_factory(a).unschedule(a.id)} publication(s)"))
 
     s = sub.add_parser("rerender", help="re-render a post's media")
     s.add_argument("id", type=int)
@@ -359,6 +414,8 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--brand", required=True)
     s.add_argument("--limit", type=int, default=0)
     s.add_argument("--no-render", action="store_true")
+    s.add_argument("--queue", action="store_true", help="hand renders to the render queue instead of waiting")
+    s.add_argument("--force", action="store_true", help="import even if a post with the same title exists")
     s.set_defaults(func=cmd_import)
 
     s = sub.add_parser("niche", help="score niche candidates (ad value, demand, risk, saturation)")
@@ -373,6 +430,10 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--platform", action="append")
     s.add_argument("--force", action="store_true")
     s.set_defaults(func=cmd_new_brand)
+
+    s = sub.add_parser("report", help="weekly business report: money, content, funnel, pipeline, next actions")
+    s.add_argument("--save", action="store_true", help="write to output/reports/")
+    s.set_defaults(func=cmd_report)
 
     s = sub.add_parser("serve", help="run the dashboard")
     s.add_argument("--host", default="127.0.0.1")
@@ -389,7 +450,10 @@ def build_parser() -> argparse.ArgumentParser:
 
 def _extend(sub) -> None:
     """Optional command groups that live in their own modules."""
-    for mod in ("contentfactory.business.cli", "contentfactory.publish.cli", "contentfactory.funnel.cli"):
+    for mod in ("contentfactory.business.cli", "contentfactory.publish.cli", "contentfactory.funnel.cli",
+                "contentfactory.community.cli", "contentfactory.site",
+                "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup",
+                "contentfactory.publish.preflight"):
         try:
             module = __import__(mod, fromlist=["register"])
         except ImportError:

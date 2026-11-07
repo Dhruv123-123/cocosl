@@ -72,6 +72,11 @@ def test_render_video(media_env, tmp_path, fmt, size):
     assert abs(info["duration"] - assets["duration"]) < 0.5
     assert len(assets["images"]) == 3 and assets["slides"] == []
     assert probe(settings.output_dir / assets["thumbnail"])["width"] == 1280
+    if fmt == "long":
+        variants = assets["thumbnail_variants"]
+        assert len(variants) == 3 and variants[0] == assets["thumbnail"]
+        assert all((settings.output_dir / v).is_file() and (settings.output_dir / v[:-4]).with_suffix(".jpg").is_file()
+                   for v in variants)
     srt = (settings.output_dir / assets["captions_srt"]).read_text()
     assert "Follow for one" in srt and "-->" in srt
     video_prov = next(p for p in assets["provenance"] if p["path"] == assets["video"])
@@ -135,3 +140,61 @@ def test_string_id_and_output_subdir(media_env):
     post["meta"] = {"output_subdir": "../escape"}
     with pytest.raises(Exception):
         render_post(settings, brand, post)
+
+
+def _chart_post(post_id: int, fmt: str, n: int) -> dict:
+    post = make_post(post_id, fmt, n)
+    post["script"]["segments"][1]["chart"] = dict(kind="bars", title="Interest on $10,000 for a year",
+                                                  labels=["Big bank", "High yield"], values=[10, 420],
+                                                  unit_prefix="$", note="Example rates; check yours")
+    return post
+
+
+def test_chart_segment_is_drawn_not_generated(media_env, monkeypatch):
+    settings, brand = media_env
+    import contentfactory.media.render as r
+    prompts = []
+    real = r.generate_images
+    monkeypatch.setattr(r, "generate_images", lambda s, b, ps, *a, **k: prompts.extend(ps) or real(s, b, ps, *a, **k))
+    assets = render_post(settings, brand, _chart_post(5, "carousel", 3))
+    _check_provenance(assets, settings)
+    assert "coins growing like plants" not in prompts and len(prompts) == 2
+    chart = next(p for p in assets["provenance"] if p.get("provider") == "chart")
+    assert chart["source"] == "rendered" and "420" in chart["prompt"]
+    from PIL import Image
+    assert Image.open(settings.output_dir / assets["slides"][1]).size == (1080, 1350)
+
+
+def test_chart_clip_used_in_video_when_available(media_env, monkeypatch):
+    settings, brand = media_env
+    import contentfactory.media.charts as charts
+    calls = []
+
+    def fake_clip(spec, size, palette, out, seconds=3.0):
+        calls.append((spec.title, size))
+        out.parent.mkdir(parents=True, exist_ok=True)
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", f"color=c=red:s={size[0]}x{size[1]}:d=1",
+                        "-pix_fmt", "yuv420p", str(out)], check=True)
+        return out
+    monkeypatch.setattr(charts, "render_chart_clip", fake_clip)
+    assets = render_post(settings, brand, _chart_post(6, "short", 3))
+    assert calls == [("Interest on $10,000 for a year", (1080, 1920))]
+    assert probe(settings.output_dir / assets["video"])["duration"] > 5
+
+
+def test_render_chart_sizes_and_line(media_env, tmp_path):
+    from PIL import Image, ImageStat
+
+    from contentfactory.media.charts import _fmt, render_chart, render_chart_clip
+    from contentfactory.media.util import Palette
+    from contentfactory.schemas import ChartSpec
+    _, brand = media_env
+    pal = Palette.from_brand(brand)
+    spec = ChartSpec(kind="line", title="$1,000 at 7% for 10 years", labels=[f"Y{i}" for i in range(11)],
+                     values=[round(1000 * 1.07 ** i, 2) for i in range(11)], unit_prefix="$")
+    for size in [(1080, 1920), (1920, 1080), (1080, 1350)]:
+        out = render_chart(spec, size, pal, brand.visual.font, tmp_path / f"c{size[0]}x{size[1]}.png")
+        img = Image.open(out)
+        assert img.size == size and ImageStat.Stat(img.convert("L")).stddev[0] > 5
+    assert _fmt(12_345, "$", "") == "$12k" and _fmt(1.5, "", "%") == "1.50%" and _fmt(2_500_000, "", "") == "2.5M"
+    assert render_chart_clip(spec, (1080, 1920), pal, tmp_path / "x.mp4") is None  # FACTORY_CHARTS unset

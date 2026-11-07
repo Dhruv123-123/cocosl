@@ -157,3 +157,37 @@ def test_write_env(tmp_path, monkeypatch):
     text = env.read_text()
     assert "YT_REFRESH_TOKEN=new=val" in text and "A=1" in text and "B=2" in text
     monkeypatch.delenv("B", raising=False)
+
+
+def test_weekly_report(factory, fake_render):
+    from contentfactory.reports import save_report, to_markdown, weekly_report
+    idea = factory.ideas("money-made-simple", n=2, online=False)[0]
+    factory.produce(idea)
+    factory.db.insert("revenue", {"date": __import__("datetime").date.today().isoformat(), "source": "ugc",
+                                  "amount_cents": 24900})
+    r = weekly_report(factory)
+    assert r["money"]["revenue_week"] == 24900 and r["content"]["in_review"] == 1
+    md = to_markdown(r)
+    assert "Review 1 post" in md and "$249.00" in md
+    assert save_report(factory).endswith(".md")
+
+
+def test_weekly_report_posted_platforms_and_campaigns(factory, fake_render):
+    from datetime import date, datetime, timedelta, timezone
+
+    from contentfactory.reports import to_markdown, weekly_report
+    idea = factory.ideas("money-made-simple", n=2, online=False)[0]
+    pid = factory.produce(idea)
+    factory.approve(pid)
+    (pub,) = factory.schedule(pid, platforms=["youtube"])
+    factory.publish_due(datetime.now(timezone.utc) + timedelta(days=3))
+    factory.db.execute("UPDATE publications SET status='published', url='https://youtu.be/x', published_at=? WHERE id=?",
+                       [datetime.now(timezone.utc).isoformat(), pub])
+    factory.db.insert("metrics", {"publication_id": pub, "captured_at": datetime.now(timezone.utc).isoformat(),
+                                  "views": 1500, "likes": 40, "link_clicks": 12})
+    factory.db.insert("revenue", {"date": date.today().isoformat(), "source": "product", "brand": "money-made-simple",
+                                  "amount_cents": 1200, "note": "Gumroad | utm_source=youtube utm_campaign=budget-launch"})
+    r = weekly_report(factory)
+    md = to_markdown(r)
+    assert "money-made-simple · youtube: 1 post(s); 1,500 views, 40 likes, 12 link clicks" in md
+    assert "budget-launch: 1 sale(s), $12.00 (from youtube)" in md

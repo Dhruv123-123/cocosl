@@ -320,6 +320,9 @@ def test_affiliate_links_and_disclosure(factory):
     assert "utm_content=post-12" in url and "utm_campaign=hysa" in url
     assert affiliates.resolve_click(db, "nope") is None
     assert db.one("SELECT clicks FROM affiliate_links WHERE slug = 'hysa'")["clicks"] == 1
+    tagged = affiliates.resolve_click(db, "hysa", platform="tiktok",
+                                      utm={"utm_campaign": "launch<x>", "utm_term": "hysa", "utm_bogus": "1"})
+    assert "utm_campaign=launchx" in tagged and "utm_term=hysa" in tagged and "bogus" not in tagged
     assert affiliates.clicks_by_post(db)[0]["post_id"] == 12
     assert affiliates.with_utm("https://x.example/?utm_source=keep", source="new").count("utm_source") == 1
 

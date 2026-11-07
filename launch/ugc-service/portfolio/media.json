@@ -1,0 +1,52 @@
+{
+  "trailsip": {
+    "video": "videos/trailsip.mp4",
+    "poster": "posters/trailsip.jpg",
+    "captions": "videos/trailsip.srt",
+    "duration": 18.9,
+    "width": 1080,
+    "height": 1920,
+    "label": "AI-generated \u00b7 Ad",
+    "bytes": 4986158
+  },
+  "lumen-and-loaf": {
+    "video": "videos/lumen-and-loaf.mp4",
+    "poster": "posters/lumen-and-loaf.jpg",
+    "captions": "videos/lumen-and-loaf.srt",
+    "duration": 23.4,
+    "width": 1080,
+    "height": 1920,
+    "label": "AI-generated \u00b7 Ad",
+    "bytes": 6264097
+  },
+  "hound-and-hollow": {
+    "video": "videos/hound-and-hollow.mp4",
+    "poster": "posters/hound-and-hollow.jpg",
+    "captions": "videos/hound-and-hollow.srt",
+    "duration": 17.7,
+    "width": 1080,
+    "height": 1920,
+    "label": "AI-generated \u00b7 Ad",
+    "bytes": 5095890
+  },
+  "deskline": {
+    "video": "videos/deskline.mp4",
+    "poster": "posters/deskline.jpg",
+    "captions": "videos/deskline.srt",
+    "duration": 13.7,
+    "width": 1080,
+    "height": 1920,
+    "label": "AI-generated \u00b7 Ad",
+    "bytes": 3619833
+  },
+  "fern-street-studio": {
+    "video": "videos/fern-street-studio.mp4",
+    "poster": "posters/fern-street-studio.jpg",
+    "captions": "videos/fern-street-studio.srt",
+    "duration": 20.0,
+    "width": 1080,
+    "height": 1920,
+    "label": "AI-generated \u00b7 Ad",
+    "bytes": 6001684
+  }
+}
