@@ -4,7 +4,7 @@
   "pillar": "money apps and tools, honestly compared",
   "idea_angle": "Worked numbers: $5,000 parked at 0.01% APY earns about 50 cents a year; at an illustrative 3.5% APY it earns about $175. Same money, same safety if both are insured.",
   "script": {
-   "title": "Your savings account pays you 50 cents",
+   "title": "Your savings account pays 50 cents: switch to high-yield",
    "hook": "Five thousand dollars in a big-bank savings account can earn you about fifty cents a year.",
    "segments": [
     {
@@ -68,7 +68,10 @@
     "$5,000 x 0.01% = $0.50; $5,000 x 3.5% = $175 (simple one-year estimate, ignoring compounding within the year)",
     "Confirm the affiliate HYSA is held at an FDIC-insured bank and has no monthly fee before posting"
    ],
-   "related_video": "High-yield savings accounts, explained properly"
+   "related_video": "High-yield savings accounts, explained properly",
+   "title_variants": [
+    "Your savings account pays you 50 cents"
+   ]
   }
  },
  {
@@ -145,7 +148,7 @@
   "pillar": "budgeting systems that actually stick",
   "idea_angle": "'Save what's left' fails because nothing is left. Schedule the savings transfer for the morning after payday so it leaves before spending starts; start at 1-5% and raise it each month.",
   "script": {
-   "title": "Why there's never anything left to save",
+   "title": "How to save money when there's never anything left",
    "hook": "If you save whatever's left at the end of the month, you'll save zero. Here's why.",
    "segments": [
     {
@@ -206,7 +209,10 @@
     "2% of $3,000 = $60 (illustrative)",
     "Product line: the 20-Minute Budget pays Goals first (matches the guide's wording)"
    ],
-   "related_video": "Build your whole budget in one evening (step by step)"
+   "related_video": "How to make a budget (step by step, in one evening)",
+   "title_variants": [
+    "Why there's never anything left to save"
+   ]
   }
  },
  {
@@ -275,7 +281,7 @@
     "50/30/20 is a commonly cited guideline (popularized by Elizabeth Warren and Amelia Warren Tyagi's 'All Your Worth', 2005), not an official standard",
     "$3,200 x 50/30/20 = $1,600 / $960 / $640 (arithmetic)"
    ],
-   "related_video": "Build your whole budget in one evening (step by step)"
+   "related_video": "How to make a budget (step by step, in one evening)"
   }
  },
  {
@@ -346,7 +352,7 @@
     "Late payments that are reported can stay on a credit report for up to 7 years",
     "'First-time fee waiver requests are often approved' is anecdotal industry practice, not a guarantee; keep the softened wording"
    ],
-   "related_video": "Build your whole budget in one evening (step by step)"
+   "related_video": "How to make a budget (step by step, in one evening)"
   }
  },
  {
@@ -354,7 +360,7 @@
   "pillar": "credit scores and debt payoff",
   "idea_angle": "The grace-period trap: carry even part of a balance past the due date and most cards start charging interest on new purchases from the day you make them, until you pay in full again.",
   "script": {
-   "title": "Why your card charged interest on today's coffee",
+   "title": "Why was I charged interest? Losing your grace period",
    "hook": "Paid most of your card bill and still got charged interest on stuff you just bought? This is why.",
    "segments": [
     {
@@ -416,7 +422,10 @@
     "On many cards, carrying a balance removes the grace period on new purchases until the balance is paid in full; terms vary by issuer",
     "Some issuers require paying in full for two consecutive cycles to restore the grace period (varies)"
    ],
-   "related_video": "Build your whole budget in one evening (step by step)"
+   "related_video": "How to make a budget (step by step, in one evening)",
+   "title_variants": [
+    "Why your card charged interest on today's coffee"
+   ]
   }
  },
  {
@@ -486,7 +495,7 @@
     "Balance transfer fees are commonly 3%-5% of the amount transferred; promo lengths vary",
     "Savings of ≈ $650 = $775 interest avoided - $120 fee (assumes balance paid off within the promo and no new purchases)"
    ],
-   "related_video": "Build your whole budget in one evening (step by step)"
+   "related_video": "How to make a budget (step by step, in one evening)"
   }
  },
  {
@@ -494,7 +503,7 @@
   "pillar": "credit scores and debt payoff",
   "idea_angle": "Federal student loans: signing up for automatic payments with your servicer usually cuts the interest rate by 0.25 percentage points. On $30,000 at 6% that's up to about $75 in the first year for a five-minute form.",
   "script": {
-   "title": "The free student loan rate cut",
+   "title": "Student loan autopay discount: the free rate cut",
    "hook": "There's a five-minute form that lowers your federal student loan interest rate. Most people never fill it out.",
    "segments": [
     {
@@ -556,7 +565,10 @@
     "$30,000 x 0.25% = $75 per year on the full balance; actual savings are slightly lower as the balance falls",
     "Not all private lenders offer an autopay discount; amounts vary"
    ],
-   "related_video": "Build your whole budget in one evening (step by step)"
+   "related_video": "How to make a budget (step by step, in one evening)",
+   "title_variants": [
+    "The free student loan rate cut"
+   ]
   }
  },
  {
@@ -564,7 +576,7 @@
   "pillar": "budgeting systems that actually stick",
   "idea_angle": "A $55,000 salary is not $4,583 a month to spend: after federal tax, Social Security and Medicare (7.65%), state tax and benefits, take-home is often closer to $3,600-$3,900. Budget from the deposit, not the offer letter.",
   "script": {
-   "title": "Why $55k isn't $4,583 a month",
+   "title": "$55k a year: how much a month after taxes?",
    "hook": "Fifty-five thousand dollars divided by twelve is $4,583. That is not what lands in your account.",
    "segments": [
     {
@@ -626,7 +638,10 @@
     "Employee FICA rate is 7.65% (6.2% Social Security + 1.45% Medicare); 7.65% x $55,000 = $4,207.50",
     "Take-home range of ≈ $3,600-$3,900/month is a rough estimate for a single filer using the 2026 standard deduction; it varies a lot by state, pre-tax benefits and withholding. Re-check with a paycheck calculator before posting"
    ],
-   "related_video": "Build your whole budget in one evening (step by step)"
+   "related_video": "How to make a budget (step by step, in one evening)",
+   "title_variants": [
+    "Why $55k isn't $4,583 a month"
+   ]
   }
  },
  {
@@ -694,7 +709,7 @@
    "claims_to_verify": [
     "$3,000 raise ≈ $250/month gross; ≈ $190/month after tax is an illustrative estimate assuming roughly 25% combined tax; varies by bracket and state"
    ],
-   "related_video": "Build your whole budget in one evening (step by step)"
+   "related_video": "How to make a budget (step by step, in one evening)"
   }
  },
  {
@@ -772,7 +787,7 @@
   "pillar": "budgeting systems that actually stick",
   "idea_angle": "The 72-hour rule for wants over a set amount (say $50): put it in the cart, close the tab, and buy only if you still want it in three days and it fits this week's number. Timed for Black Friday.",
   "script": {
-   "title": "The 72-hour cart rule",
+   "title": "How to stop impulse buying: the 72-hour rule",
    "hook": "Before you buy anything over fifty dollars this week, try this. It costs nothing.",
    "segments": [
     {
@@ -833,7 +848,10 @@
     "No factual claims beyond general advice; $50 threshold is illustrative",
     "If posting near Black Friday (Nov 27, 2026), confirm date reference in any on-screen copy"
    ],
-   "related_video": "Build your whole budget in one evening (step by step)"
+   "related_video": "How to make a budget (step by step, in one evening)",
+   "title_variants": [
+    "The 72-hour cart rule"
+   ]
   }
  },
  {
@@ -841,7 +859,7 @@
   "pillar": "budgeting systems that actually stick",
   "idea_angle": "Holiday spending plan in November: pick a total, divide by the weeks left until your last shopping day, and move that amount weekly into a gifts sinking fund. $420 over 7 weeks = $60/week.",
   "script": {
-   "title": "Pay for December in November",
+   "title": "Holiday budget: pay for December in November",
    "hook": "December doesn't wreck budgets. Not planning for it in November does.",
    "segments": [
     {
@@ -902,7 +920,10 @@
     "$420 / 7 weeks = $60 (arithmetic; adjust the weeks count to the actual posting date)",
     "Product line: 'Funds' (sinking funds) is line 2 of the 20-Minute Budget (matches the guide)"
    ],
-   "related_video": "Build your whole budget in one evening (step by step)"
+   "related_video": "How to make a budget (step by step, in one evening)",
+   "title_variants": [
+    "Pay for December in November"
+   ]
   }
  },
  {
@@ -1681,7 +1702,7 @@
   "pillar": "budgeting systems that actually stick",
   "idea_angle": "Build a complete budget in one evening with the four-line system (Bills, Funds, Goals, Weekly): what to gather, how to find true take-home, a fully worked fictional example, automation, the first check-in, and what to do when week one goes wrong.",
   "script": {
-   "title": "Build your whole budget in one evening (step by step)",
+   "title": "How to make a budget (step by step, in one evening)",
    "hook": "Most people don't fail at budgeting because they're bad with money. They fail because the budget they picked asks for fifty small decisions a day, and nobody has the energy for that after work. Tonight we'll build one that asks for one decision a month and a twenty-minute check-in once a week. You'll need about an hour, your last two months of bank and card statements, and something to write on. By the end you'll have four numbers that cover every dollar you earn, and one of them is the only number you'll think about day to day. We'll use a made-up person, Sam, so you can see real math.",
    "segments": [
     {
@@ -1724,7 +1745,26 @@
      "heading": "Step 5: your weekly number",
      "narration": "Line four is the one you'll actually live with. Take home pay, minus Bills, minus Funds, minus Goals. For Sam that's $3,000 minus $1,650, minus $250, minus $300, which leaves $800 a month. To turn that into a weekly number, multiply by twelve and divide by fifty-two. That's about $184 a week. Groceries, eating out, coffee, fun, a birthday drink, a random lamp: all of it comes out of $184. There are no categories inside it to police. Sam decides the trade-offs at the checkout, which is where those decisions really happen anyway. When the week's money is gone, the week is done.",
      "on_screen_text": "Line 4, Weekly: ≈ $184",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single wallet resting on a small seven-day calendar strip. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single wallet resting on a small seven-day calendar strip. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Sam's $3,000 take-home, four lines",
+      "labels": [
+       "Bills",
+       "Funds",
+       "Goals",
+       "Weekly spending (monthly)"
+      ],
+      "values": [
+       1650,
+       250,
+       300,
+       800
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "/mo",
+      "note": "Fictional example; $800 × 12 ÷ 52 ≈ $184 a week"
+     }
     },
     {
      "heading": "Step 6: make it automatic",
@@ -1781,7 +1821,16 @@
     "$800 x 12 / 52 = $184.62; overspend $230 - $184 = $46; $184 - $46 = $138 (arithmetic)",
     "'Bills above about 60% of take-home' is the product guide's rule of thumb, not an official standard",
     "Sam is fictional; say so on screen"
+   ],
+   "original_element": "worked-example-chart: Bar chart of the fictional Sam's four budget lines from the video: Bills $1,650, Funds $250, Goals $300, leaving $800 a month (≈ $184 a week) (chapter \"Step 5: your weekly number\")",
+   "title_variants": [
+    "Build your whole budget in one evening (step by step)"
    ]
+  },
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Bar chart of the fictional Sam's four budget lines from the video: Bills $1,650, Funds $250, Goals $300, leaving $800 a month (≈ $184 a week)",
+   "chapter": "Step 5: your weekly number"
   }
  },
  {
@@ -1808,7 +1857,22 @@
      "heading": "The numbers",
      "narration": "Let's make it concrete with an emergency fund of $6,000. At a rate of 0.01% APY, which some large banks still pay on basic savings, that earns about sixty cents a year. At an illustrative 3.5% APY, the same $6,000 earns roughly $210 in a year, if the rate stays there. Add $200 a month for a year at that rate and you'd put in $2,400 and earn about forty dollars of interest on top. None of this will make you rich, and it isn't meant to. The point is that money you're keeping safe anyway shouldn't lose ground for no reason.",
      "on_screen_text": "$6,000: 60¢ vs ≈ $210",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two jars, one with a single coin and one with a modest stack, on a balance scale. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two jars, one with a single coin and one with a modest stack, on a balance scale. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Interest on $6,000 for a year",
+      "labels": [
+       "Basic savings at 0.01% APY",
+       "High-yield at 3.5% APY (illustrative)"
+      ],
+      "values": [
+       0.6,
+       210
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Illustrative rate; savings rates are variable"
+     }
     },
     {
      "heading": "APY and compounding",
@@ -1889,7 +1953,13 @@
     "Treasury bill interest is exempt from state and local income tax",
     "Savings rates generally move with the Federal Reserve's policy rate (general relationship, not exact)",
     "Confirm the affiliate HYSA is FDIC-insured with no monthly fee before posting"
-   ]
+   ],
+   "original_element": "worked-example-chart: Bar chart of a year's interest on a $6,000 emergency fund: about $0.60 at 0.01% APY vs about $210 at an illustrative 3.5% APY (chapter \"The numbers\")"
+  },
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Bar chart of a year's interest on a $6,000 emergency fund: about $0.60 at 0.01% APY vs about $210 at an illustrative 3.5% APY",
+   "chapter": "The numbers"
   }
  }
 ]

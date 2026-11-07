@@ -544,8 +544,8 @@ def build_parser() -> argparse.ArgumentParser:
 def _extend(sub) -> None:
     """Optional command groups that live in their own modules."""
     for mod in ("contentfactory.business.cli", "contentfactory.publish.cli", "contentfactory.funnel.cli",
-                "contentfactory.community.cli", "contentfactory.site",
-                "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup",
+                "contentfactory.community.cli", "contentfactory.site", "contentfactory.pack",
+                "contentfactory.channels", "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup",
                 "contentfactory.publish.preflight", "contentfactory.cleanup",
                 "contentfactory.planner", "contentfactory.launch_check", "contentfactory.stats",
                 "contentfactory.scaffold", "contentfactory.manual", "contentfactory.numbercheck", "contentfactory.ytplan", "contentfactory.triage", "contentfactory.challenge", "contentfactory.whitelabel", "contentfactory.originality", "contentfactory.newsletter_export", "contentfactory.batch_record", "contentfactory.routine", "contentfactory.export_week", "contentfactory.scorecard", "contentfactory.sequence_export", "contentfactory.scheduler", "contentfactory.review", "contentfactory.launchmode", "contentfactory.timelog", "contentfactory.media.stock", "contentfactory.keywords", "contentfactory.weekly_review", "contentfactory.media.motion"):

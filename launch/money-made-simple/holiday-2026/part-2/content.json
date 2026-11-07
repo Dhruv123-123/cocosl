@@ -1,0 +1,375 @@
+[
+ {
+  "format": "short",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Viewer-style question: I overspent on the holidays, now what? Three steps before the January statement.",
+  "script": {
+   "title": "\"I overspent on the holidays. Now what?\" Common question",
+   "hook": "Common question: I overspent on the holidays. Now what? 3 steps before January.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Common question: I overspent on the holidays. Now what? Here are 3 steps before January.",
+     "on_screen_text": "Q: Overspent. Now what?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a shopping bag with a sigh. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "One: add it up. Every card, every pay-later plan, with due dates. A real number is less scary than a vague one.",
+     "on_screen_text": "1. Add up the real total",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list with a calculator. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Two: stop the bleeding. Pause extra spending until the total is covered.",
+     "on_screen_text": "2. Pause extra spending",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stop sign over a bag. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Three: pick a payoff plan. Highest interest first saves the most, smallest balance first builds momentum.",
+     "on_screen_text": "3. Pick a payoff order",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two paths. No text, no logos, no real people."
+    },
+    {
+     "heading": "Answer",
+     "narration": "And return anything you don't love while the windows are open.",
+     "on_screen_text": "Return what you don't love",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a box with an arrow. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "\"I overspent on the holidays. Now what?\"\n1. Add up every card and pay-later plan, with due dates\n2. Pause extra spending until it's covered\n3. Choose a payoff order: highest rate first, or smallest balance first\n+ Return what you don't love while you still can\n\nFollow for one money move a week.",
+   "hashtags": [
+    "holidaydebt",
+    "debtpayoff",
+    "budgeting",
+    "creditcards",
+    "moneyquestions",
+    "moneymadesimple"
+   ],
+   "description": "A viewer-style question about overspending on the holidays.",
+   "thumbnail_text": "Overspent? 3 steps",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/credit-cards/",
+    "https://www.consumerfinance.gov/"
+   ],
+   "claims_to_verify": [
+    "Avalanche saves the most interest; snowball builds momentum"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Call",
+    "narration": "Big balance at a high rate? A quick call asking for a lower APR sometimes works, especially if you've always paid on time.",
+    "on_screen_text": "Ask for a lower APR",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a percent sign. No text, no logos, no real people."
+   },
+   {
+    "heading": "Minimums",
+    "narration": "Always pay at least the minimum on everything, so a late fee doesn't add to the problem.",
+    "on_screen_text": "Never miss a minimum",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a check mark. No text, no logos, no real people."
+   },
+   {
+    "heading": "Plan",
+    "narration": "Divide the total by the months you want to be done in. That's your monthly payoff number.",
+    "on_screen_text": "Total ÷ months = target",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big division sign. No text, no logos, no real people."
+   },
+   {
+    "heading": "Talk",
+    "narration": "If it's shared money, talk to your partner early. It's an easier conversation now than at the statement.",
+    "on_screen_text": "Talk early",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two speech bubbles. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "question-reply"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Countdown of five money moves to make before December 31, 2026, ending with the most valuable.",
+  "script": {
+   "title": "Before Dec 31: 5 money moves, counting down",
+   "hook": "5 money moves before December 31, counting down to the most valuable.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Five money moves before December thirty-first, counting down to the most valuable.",
+     "on_screen_text": "Before Dec 31: 5 → 1",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a calendar with a countdown. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Five: cancel subscriptions you didn't use this year.",
+     "on_screen_text": "5. Cancel unused subscriptions",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a cross. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Four: check your credit report for free.",
+     "on_screen_text": "4. Check your credit report",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a report with a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Three: spend any use-it-or-lose-it FSA money on things you need.",
+     "on_screen_text": "3. Use your FSA",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a first-aid kit. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Two: write next year's holiday number and divide by twelve.",
+     "on_screen_text": "2. Next year's holiday fund",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "And one: raise your retirement contribution by one percent for next year. Small now, big over time.",
+     "on_screen_text": "1. +1% retirement",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small staircase. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Before December 31:\n5. Cancel unused subscriptions\n4. Check your credit report (free at AnnualCreditReport.com)\n3. Use any use-it-or-lose-it FSA money\n2. Set next year's holiday number ÷ 12\n1. Raise retirement contributions 1% for next year\n\nNot financial advice.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "yearend",
+    "newyear",
+    "moneychecklist",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "A countdown of five money moves before December 31.",
+   "thumbnail_text": "Before Dec 31",
+   "sources": [
+    "https://consumer.ftc.gov/articles/how-cancel-subscriptions",
+    "https://www.annualcreditreport.com/",
+    "https://www.healthcare.gov/have-job-based-coverage/flexible-spending-accounts/",
+    "https://www.irs.gov/retirement-plans/401k-plans"
+   ],
+   "claims_to_verify": [
+    "Free credit reports at AnnualCreditReport.com",
+    "FSA rules vary by plan"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Bonus",
+    "narration": "Bonus: update your W-4 if anything changed this year, like a new job or a side income.",
+    "on_screen_text": "Bonus: W-4 check",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a pencil. No text, no logos, no real people."
+   },
+   {
+    "heading": "Documents",
+    "narration": "Start a 2026 tax folder now. Forms start arriving in January.",
+    "on_screen_text": "Start a tax folder",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a folder with a label. No text, no logos, no real people."
+   },
+   {
+    "heading": "Celebrate",
+    "narration": "And write down one money win from this year. Progress is easier to keep when you notice it.",
+    "on_screen_text": "Note one win",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a star on a calendar. No text, no logos, no real people."
+   },
+   {
+    "heading": "Pick one",
+    "narration": "Can't do all five? Pick one this week. The one percent raise takes five minutes and keeps paying for decades.",
+    "on_screen_text": "Pick one this week",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single check mark. No text, no logos, no real people."
+   },
+   {
+    "heading": "Calendar",
+    "narration": "Put the others in your calendar for the first week of January, so they actually happen.",
+    "on_screen_text": "Calendar the rest",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with pins. No text, no logos, no real people."
+   },
+   {
+    "heading": "Subscriptions",
+    "narration": "For subscriptions, go through your card statement line by line. Most people find at least one they forgot.",
+    "on_screen_text": "Scan your statement",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a statement with a magnifying glass. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "countdown"
+ },
+ {
+  "format": "short",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Explainer: how to prepare for the January credit card statement after the holidays.",
+  "script": {
+   "title": "January statement shock: a 3-step plan",
+   "hook": "The holiday credit card statement lands in January. A 3-step plan before it does.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "The holiday credit card statement lands in January. Here's a 3-step plan before it does.",
+     "on_screen_text": "January statement: 3 steps",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes an envelope with a card. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Log in now and see the balance so far. The statement number won't be a surprise.",
+     "on_screen_text": "1. Check the balance now",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a card. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Find the statement due date and set a reminder three days before.",
+     "on_screen_text": "2. Reminder 3 days early",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a bell. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Pay the full statement balance if you can. That's the amount that avoids interest on most cards.",
+     "on_screen_text": "3. Pay statement in full",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin going to a card. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "January statement plan:\n1. Check your balance now\n2. Note the due date; set a reminder 3 days early\n3. Pay the full statement balance if you can, which avoids interest on most cards\n\nCan't pay it all? Pay as much as you can, at least the minimum, and make a payoff plan.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "creditcards",
+    "holidaydebt",
+    "newyear",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "A three-step plan before the January credit card statement.",
+   "thumbnail_text": "January statement plan",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/credit-cards/"
+   ],
+   "claims_to_verify": [
+    "Grace period applies when paid in full on most cards"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Can't pay all",
+    "narration": "Can't pay it all? Pay as much as you can above the minimum. Interest is charged on what's left.",
+    "on_screen_text": "Pay as much as you can",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin stack being split. No text, no logos, no real people."
+   },
+   {
+    "heading": "Autopay",
+    "narration": "Set autopay for at least the minimum, so a busy January doesn't cause a late fee.",
+    "on_screen_text": "Autopay the minimum",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small gear and a card. No text, no logos, no real people."
+   },
+   {
+    "heading": "Freeze",
+    "narration": "Then do a no-spend week in early January to give your budget room to catch up.",
+    "on_screen_text": "No-spend week",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a padlock over a bag. No text, no logos, no real people."
+   },
+   {
+    "heading": "Plan",
+    "narration": "Divide whatever's left by three months, and make that your payoff target.",
+    "on_screen_text": "Leftover ÷ 3 = target",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with three jars. No text, no logos, no real people."
+   },
+   {
+    "heading": "Balance transfer",
+    "narration": "Big balance at a high rate? A balance transfer card can help, but only if the fee is smaller than the interest and you can pay it off before the promo ends.",
+    "on_screen_text": "Transfer only if the math works",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two cards with an arrow. No text, no logos, no real people."
+   },
+   {
+    "heading": "Pay later",
+    "narration": "Used pay-later plans too? Add those dates next to the card due date, so January has no surprises.",
+    "on_screen_text": "Add pay-later dates",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with small cards. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "explainer"
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "The year-end money checklist: eight boxes to tick before December 31, 2026.",
+  "script": {
+   "title": "Year-end money checklist: 8 boxes before Dec 31",
+   "hook": "Year-end money checklist: 8 boxes before Dec 31.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Year-end money checklist: 8 boxes before Dec 31.",
+     "on_screen_text": "Year-end checklist",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Use any use-it-or-lose-it FSA money.",
+     "on_screen_text": "1. FSA",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a first-aid kit. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Check your retirement contributions for the year.",
+     "on_screen_text": "2. Retirement contributions",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small plant. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Keep receipts for any charitable donations.",
+     "on_screen_text": "3. Donation receipts",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a receipt with a heart. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Cancel unused subscriptions.",
+     "on_screen_text": "4. Subscriptions",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a cross. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Check your free credit report.",
+     "on_screen_text": "5. Credit report",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a report. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Update your W-4 if anything changed.",
+     "on_screen_text": "6. W-4",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "7",
+     "narration": "Start a tax folder for January forms.",
+     "on_screen_text": "7. Tax folder",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "8",
+     "narration": "Set next year's holiday fund: total ÷ 12.",
+     "on_screen_text": "8. Holiday fund ÷ 12",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with jars. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Year-end checklist (by Dec 31, 2026):\n1. Use FSA money\n2. Check retirement contributions\n3. Keep donation receipts\n4. Cancel unused subscriptions\n5. Check your free credit report\n6. Update your W-4 if needed\n7. Start a tax folder\n8. Next year's holiday fund ÷ 12\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "yearend",
+    "moneychecklist",
+    "newyear",
+    "taxes",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "An eight-box money checklist before December 31.",
+   "thumbnail_text": "Year-end checklist",
+   "sources": [
+    "https://www.healthcare.gov/have-job-based-coverage/flexible-spending-accounts/",
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-401k-and-profit-sharing-plan-contribution-limits",
+    "https://www.annualcreditreport.com/",
+    "https://consumer.ftc.gov/articles/how-cancel-subscriptions"
+   ],
+   "claims_to_verify": [
+    "FSA rules vary by plan"
+   ]
+  }
+ }
+]

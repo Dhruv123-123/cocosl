@@ -1,0 +1,1757 @@
+[
+ {
+  "format": "long",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A fictional $55,000 salary's every-two-weeks pay stub, read top to bottom: gross pay, pre-tax deductions, FICA, federal and state withholding, net pay, and the year-to-date column, plus how to check your withholding.",
+  "series": "money-basics",
+  "series_part": 1,
+  "content_id": "yt-basics-01",
+  "search_terms": [
+   "how to read a pay stub",
+   "pay stub explained",
+   "paycheck deductions explained",
+   "gross vs net pay"
+  ],
+  "thumbnail_alt": "Every pay stub line",
+  "script": {
+   "title": "How to Read Your Pay Stub: Every Line Explained",
+   "hook": "$2,115 on the offer letter's math. $1,528 in the bank. Let's read every line of the pay stub in between.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "$2,115 on the offer letter's math. $1,528 in the bank. Let's read every line of the pay stub in between. If you've ever looked at your first paycheck and wondered where a quarter of it went, this video is for you. We're going to read a pay stub top to bottom, using a fictional example: someone earning fifty-five thousand dollars a year, paid every two weeks. Every line has a reason, and once you know what each one means, you can spot mistakes, check that your benefits are set up right, and know exactly what you have to budget with. Grab your own most recent pay stub if you can. Most employers put them in a payroll app or website. You'll get more out of this if you follow along with your real numbers.",
+     "on_screen_text": "Every line of your pay stub",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding up a long paper pay stub with a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "The top: who, when and how much",
+     "narration": "Start at the top. You'll see your name, your employer, and usually the last few digits of your Social Security number. Check those are right. Then the pay period, which is the two weeks this check covers, and the pay date, when the money actually lands. Next to that you'll often see your pay rate. For a salaried worker on fifty-five thousand, paid every two weeks, that's fifty-five thousand divided by twenty-six paychecks: two thousand one hundred fifteen dollars and thirty-eight cents. For hourly workers, you'll see hours times rate instead, plus any overtime at time and a half. If the hours look wrong, this is where you catch it. Payroll mistakes happen, and the person who catches them is usually you.",
+     "on_screen_text": "$55,000 ÷ 26 = $2,115.38",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the top of a pay stub with a name, dates and a small calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Gross pay",
+     "narration": "The first big number is gross pay. That's what you earned before anything came out: two thousand one hundred fifteen dollars in our example. It's the number your salary is based on, and it's the number people quote when they talk about income. But you can't spend gross pay. Think of it as the whole pie before anyone takes a slice. Everything below this line on the stub is a slice. Some slices are your choice, like retirement savings. Some are required, like taxes. And some, like health insurance, are a mix: you chose the plan, but the cost is set. Let's go through them in the order most stubs list them, starting with the ones that come out before tax.",
+     "on_screen_text": "Gross: $2,115.38",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a whole pie with a coin on top. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pre-tax deductions",
+     "narration": "Pre-tax deductions come out before income tax is calculated, which means they lower the income you're taxed on. The two most common are retirement contributions and health insurance. In our example, six percent goes to a traditional 401(k). Six percent of two thousand one hundred fifteen is one hundred twenty-six dollars and ninety-two cents. Health, dental and vision premiums come to eighty-five dollars. Here's a detail most people miss. The 401(k) contribution lowers your income tax, but not your Social Security and Medicare tax. Health premiums taken through your employer's plan usually lower both. So on our stub, income tax is calculated on about one thousand nine hundred and three dollars, while Social Security and Medicare are calculated on about two thousand and thirty.",
+     "on_screen_text": "401(k) $126.92 · health $85",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two slices cut from the pie before a tax label. No text, no logos, no real people."
+    },
+    {
+     "heading": "Social Security and Medicare",
+     "narration": "Next is FICA, which is Social Security and Medicare together. Social Security is six point two percent and Medicare is one point four five percent, so seven point six five percent combined. These fund the programs you'll draw from later in life. On our stub, seven point six five percent of about two thousand and thirty dollars is about one hundred fifty-five dollars. Two things to know. Social Security stops being taken once your wages for the year pass a yearly limit, which is well above most people's pay. And very high earners pay an extra Medicare tax above two hundred thousand dollars. For almost everyone watching, though, it's a flat seven point six five percent, every paycheck, and it isn't something you can change with a form.",
+     "on_screen_text": "FICA: 7.65% ≈ $155",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two small jars labelled with a shield and a cross. No text, no logos, no real people."
+    },
+    {
+     "heading": "Federal income tax withholding",
+     "narration": "Then federal income tax. This line is different from the others because it's an estimate. Your employer withholds an amount based on the W-4 form you filled out when you started, and the goal is to come close to the tax you'll actually owe for the year. In our example it's about one hundred fifty dollars. If too much is withheld, you get the extra back as a refund when you file. If too little, you owe in April. A big refund feels nice, but it means you lent the government your money for free all year. A big bill can be a shock. The aim is somewhere close to zero. And unlike FICA, you control this one, by updating your W-4 any time.",
+     "on_screen_text": "Federal withholding ≈ $150",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a small dial on it. No text, no logos, no real people."
+    },
+    {
+     "heading": "State and local taxes",
+     "narration": "Next, state income tax, and in some places local or city tax too. In our example, about seventy dollars goes to state tax. If you live in a state with no income tax, this line won't be there. Some states also take small amounts for things like disability insurance or paid family leave. If you moved states this year, or you live in one state and work in another, check that the right state is listed. That's one of the most common payroll errors, and it can mean filing in two states to sort it out. If you work remotely, make sure your employer has your home address, not just the office address.",
+     "on_screen_text": "State ≈ $70 (varies by state)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a map with a small coin on one state. No text, no logos, no real people."
+    },
+    {
+     "heading": "Net pay",
+     "narration": "Now subtract everything. Two thousand one hundred fifteen, minus one hundred twenty-seven to the 401(k), minus eighty-five for health insurance, minus one hundred fifty-five in Social Security and Medicare, minus about one hundred fifty federal and seventy state. That leaves about one thousand five hundred and twenty-eight dollars. That's net pay, your take-home, and it's about seventy-two percent of gross. This is the number your budget runs on. Paid every two weeks? Multiply by twenty-six and divide by twelve for a monthly figure: about three thousand three hundred and ten dollars. Not two paychecks times two. Twenty-six divided by twelve. That small difference is why two months a year feel richer than the rest.",
+     "on_screen_text": "Net ≈ $1,528 · ≈ $3,310/month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small coin stack left after the pie is sliced. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Where a $2,115 paycheck goes",
+      "labels": [
+       "401(k)",
+       "Health insurance",
+       "Social Security + Medicare",
+       "Federal tax",
+       "State tax",
+       "Net pay"
+      ],
+      "values": [
+       127,
+       85,
+       155,
+       150,
+       70,
+       1528
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Fictional $55,000 pay stub"
+     }
+    },
+    {
+     "heading": "The year-to-date column",
+     "narration": "Most stubs have a second column labelled YTD, for year to date. It adds up every line since January. This column is quietly useful. It's how you check whether you're on track to hit your 401(k) goal for the year, or whether you're near the Social Security wage limit if you earn a lot. It's also a good mistake detector. If your YTD federal tax is zero halfway through the year, something is wrong with your W-4. And when you change jobs mid-year, the YTD totals from both employers tell you whether you've over-contributed to retirement or overpaid Social Security, which can happen with two employers.",
+     "on_screen_text": "YTD = since January 1",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a second column of numbers with a small calendar on top. No text, no logos, no real people."
+    },
+    {
+     "heading": "Check your withholding",
+     "narration": "Here's the ten-minute task that turns this video into money. Go to the IRS Tax Withholding Estimator on IRS dot gov. It's free and it doesn't need your Social Security number. Have this pay stub and last year's tax return open. Enter your pay, your YTD withholding, and any other income, like a side hustle. The tool tells you whether you're on track for a refund or a bill, and exactly what to put on a new W-4 if you want to change it. Then give the new W-4 to HR, or update it in your payroll app. Do this after any big change: a new job, a raise, marriage, a baby, or starting side income. And do it once a year anyway.",
+     "on_screen_text": "IRS Tax Withholding Estimator",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop showing a simple form and a check mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Five pay stub mistakes to check",
+     "narration": "Before we wrap up, five things to check on every new stub. One: the wrong pay rate or missing hours. Two: a benefit you didn't choose, or one you did that isn't there, like a 401(k) contribution that never started. Three: the wrong state, especially after a move. Four: your employer match. It may show on the stub or only in your 401(k) account, but it should be arriving. And five: your filing status and allowances, if your stub shows them. If anything looks off, email payroll or HR the same week, and keep a copy. Fixing it early is easy. Fixing it at tax time is not.",
+     "on_screen_text": "5 things to check",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short checklist next to a pay stub. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. Gross pay is what you earn: two thousand one hundred fifteen dollars in our example. Pre-tax deductions, like the 401(k) and health insurance, come out first and lower your taxable income. Social Security and Medicare take seven point six five percent. Federal and state withholding are estimates you can adjust with your W-4. What's left is net pay: about fifteen twenty-eight, or about seventy-two percent. Budget from that, using twenty-six paychecks divided by twelve. Then spend ten minutes with the IRS withholding estimator. The free seven-day money reset in the description starts with finding this exact number. Next in the Money Basics series: where your money should live, checking, savings and everything in between.",
+     "on_screen_text": "Gross → deductions → net",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a neatly folded pay stub, smiling. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Every line on your pay stub, explained with a fictional $55,000 salary: gross pay, 401(k), health insurance, FICA, withholding, and the $1,528 that actually lands.\n\nExamples are hypothetical and for education only. Not financial or tax advice.",
+   "hashtags": [
+    "paystub",
+    "paycheck",
+    "taxes",
+    "firstjob",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "How to read your pay stub, line by line. We walk through a fictional $55,000 salary paid every two weeks: gross pay, pre-tax 401(k) and health deductions, Social Security and Medicare, federal and state withholding, net pay and the year-to-date column, then check withholding with the free IRS estimator.\n\nChapters\n0:00 Intro\n0:55 The top: who, when and how much\n1:45 Gross pay\n2:35 Pre-tax deductions\n3:26 Social Security and Medicare\n4:19 Federal income tax withholding\n5:10 State and local taxes\n5:56 Net pay\n6:44 The year-to-date column\n7:27 Check your withholding\n8:18 Five pay stub mistakes to check\n9:03 Recap\n\nLinks\nFind your real take-home: how to make a budget you'll keep: https://moneymadesimple.netlify.app/blog/how-to-make-a-budget-you-will-keep/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-01\nExample budget on a $55,000 salary: https://moneymadesimple.netlify.app/budget/55000-salary/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-01\n401(k) match explained: https://moneymadesimple.netlify.app/blog/401k-match-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-01\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-01\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "Where did my paycheck go?",
+   "sources": [
+    "https://www.irs.gov/individuals/tax-withholding-estimator",
+    "https://www.irs.gov/taxtopics/tc751",
+    "https://www.ssa.gov/oact/cola/cbb.html"
+   ],
+   "claims_to_verify": [
+    "$55,000 ÷ 26 = $2,115.38",
+    "FICA 6.2% + 1.45% = 7.65%; 7.65% × ($2,115.38 − $85) ≈ $155.32",
+    "Section 125 health premiums generally reduce FICA wages; traditional 401(k) does not",
+    "2115.38 − 126.92 − 85 − 155.32 − 150 − 70 ≈ 1,528",
+    "1,528 × 26 ÷ 12 ≈ 3,311",
+    "Additional Medicare tax 0.9% above $200,000"
+   ],
+   "title_variants": [
+    "Where Did My Paycheck Go? Every Pay Stub Line, Explained",
+    "Your First Pay Stub, Line by Line ($2,115 Example)"
+   ],
+   "hook_variants": [
+    "Your paycheck is about 28% smaller than your salary math. Here's every line that takes a slice.",
+    "Most people never read their pay stub. Ten minutes with it can save you hundreds a year."
+   ],
+   "original_element": "screen-recording: Screen recording of the free IRS Tax Withholding Estimator filled in with the video's fictional $55,000 pay stub, showing the refund-or-owe result and the W-4 suggestion (chapter \"Check your withholding\")"
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Screen recording of the free IRS Tax Withholding Estimator filled in with the video's fictional $55,000 pay stub, showing the refund-or-owe result and the W-4 suggestion",
+   "chapter": "Check your withholding"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A money map for a fictional $8,000: which dollars belong in checking, high-yield savings, a money market account, a CD or a brokerage account, and the insurance and access rules behind each choice.",
+  "series": "money-basics",
+  "series_part": 2,
+  "content_id": "yt-basics-02",
+  "search_terms": [
+   "checking vs savings",
+   "money market account vs savings",
+   "what is a cd",
+   "where to keep money"
+  ],
+  "thumbnail_alt": "$8,000 money map",
+  "script": {
+   "title": "Checking, Savings, Money Market or CD? Where Your Money Should Live",
+   "hook": "Got $8,000 sitting in checking? Let's map where each dollar should actually live, in 5 accounts.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Got eight thousand dollars sitting in checking? Let's map where each dollar should actually live, in five accounts. A lot of people keep everything in one checking account because it's easy. That works, until it doesn't: the emergency fund gets spent on a weekend away, or thousands sit earning almost nothing. Today we'll look at the five places most people keep money, what each is good at, and the one question that decides where a dollar goes: when will I need it? We'll sort a fictional eight thousand dollars as we go. By the end you'll have a simple money map you can copy, and you'll know the safety rules that matter, like what insurance actually covers.",
+     "on_screen_text": "5 accounts · 1 question",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing at a small crossroads with five signposts. No text, no logos, no real people."
+    },
+    {
+     "heading": "The one question: when do you need it?",
+     "narration": "Every account trades off three things: how fast you can get the money, how much it earns, and how much risk it carries. You can't have all three at the top. Checking is instant but earns little. A CD earns more but locks money away. Investments can grow the most but can drop in value. So instead of asking which account is best, ask when you'll need each dollar. This week? Checking. In an emergency, any day? Savings you can reach in a day or two. On a known date next year? A CD might fit. Not for five years or more? That's where investing comes in. Time is the sorting rule.",
+     "on_screen_text": "Need it when?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a timeline with a small calendar, a clock and a growing plant. No text, no logos, no real people."
+    },
+    {
+     "heading": "Checking: the hub",
+     "narration": "Checking is your hub. Paychecks land here, bills and your debit card come out of here. It's built for movement, not for growing money, so most checking accounts pay little or no interest. How much should it hold? A simple rule: one month of bills and spending, plus a small cushion, maybe a few hundred dollars, so a bill that comes early doesn't overdraw you. In our example, monthly bills and spending are about two thousand five hundred, plus a five-hundred-dollar cushion. So three thousand stays in checking. Everything above that is doing nothing in checking and should move. And look for a checking account with no monthly fee, which most online banks and many credit unions offer.",
+     "on_screen_text": "Checking: 1 month + cushion = $3,000",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a central hub with arrows coming in and going out. No text, no logos, no real people."
+    },
+    {
+     "heading": "High-yield savings: the emergency fund",
+     "narration": "Next, a high-yield savings account. This is where your emergency fund lives. It pays much more interest than a typical big-bank savings account, the money is still easy to reach, usually within a day or two, and it's federally insured at an insured bank. That slight delay is actually a feature. It's just far enough away that you won't spend it on a whim, but close enough for a real emergency. In our example, three thousand five hundred goes here. That's the starter emergency fund, working toward three months of essentials. Keep it at a different bank from your checking if that helps you leave it alone. Rates change, so compare a few, and avoid accounts with monthly fees.",
+     "on_screen_text": "High-yield savings: $3,500",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a shield and a small upward arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Money market accounts",
+     "narration": "A money market account is a cousin of savings. It's a bank or credit union deposit account, insured the same way, and it often pays similar interest to a high-yield savings account. The difference is that some money market accounts let you write checks or use a debit card, and some need a higher minimum balance. They're useful if you want a savings-like rate but occasionally need to pay a big bill straight from the account. One thing to watch: a money market account is not the same as a money market fund. A fund is an investment you buy through a brokerage. It's generally low risk, but it isn't covered by bank deposit insurance. Same name, different product.",
+     "on_screen_text": "Account (insured) ≠ fund (investment)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two similar boxes, one with a shield, one without. No text, no logos, no real people."
+    },
+    {
+     "heading": "CDs: money with a date",
+     "narration": "A certificate of deposit, or CD, is a deal: you leave money with the bank for a set time, like six months or a year, and they pay a fixed rate. It's insured like savings. CDs fit money you'll need on a known date: a car you'll buy next spring, or tuition due in August. You lock in the rate even if rates fall. The catch is the early withdrawal penalty, often a few months of interest, if you take it out before the date. So never put your emergency fund in a CD. In our example, one thousand dollars set aside for a trip next year goes into a one-year CD. Some people build a ladder of CDs with different end dates so money comes free regularly.",
+     "on_screen_text": "CD: $1,000 · known date",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small safe with a calendar on the door. No text, no logos, no real people."
+    },
+    {
+     "heading": "Brokerage and retirement: the long-term money",
+     "narration": "The fifth place is for money you won't need for at least five years: retirement accounts like a 401(k) or IRA, and a regular brokerage account. This is where investing happens, in things like broad index funds. Over long periods, diversified investments have historically grown more than savings accounts, but they can drop sharply along the way, sometimes for years, and there are no promises. That's why only long-term money belongs here. In our example, the last five hundred dollars opens a Roth IRA, invested in a target-date fund. And if this person's job offers a 401(k) match, that comes first. Brokerage accounts aren't covered by bank deposit insurance, though SIPC protects you if the brokerage itself fails, not against market losses.",
+     "on_screen_text": "5+ years → invest: $500",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small plant growing out of a coin jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "The money map",
+     "narration": "Here's the whole map for our eight thousand dollars. Three thousand in checking: one month of bills and spending plus a cushion. Three thousand five hundred in high-yield savings: the emergency fund. One thousand in a one-year CD: the trip fund with a fixed date. Five hundred in a Roth IRA: long-term money. Notice the logic. Money you need soonest sits in the most accessible place. Money you won't touch for decades sits where it can grow. And every dollar has a job. If your numbers are smaller, the map still works. It just has fewer boxes. The first box is always checking with a cushion, and the second is always an emergency fund.",
+     "on_screen_text": "$3,000 · $3,500 · $1,000 · $500",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple map with four labelled boxes and arrows. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "A money map for $8,000",
+      "labels": [
+       "Checking",
+       "High-yield savings",
+       "1-year CD",
+       "Roth IRA"
+      ],
+      "values": [
+       3000,
+       3500,
+       1000,
+       500
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Fictional example"
+     }
+    },
+    {
+     "heading": "Is my money safe? FDIC and NCUA",
+     "narration": "Now safety. At an FDIC-insured bank, deposits are insured up to two hundred fifty thousand dollars per depositor, per bank, per ownership category. Credit unions have the same level of coverage through the NCUA. That covers checking, savings, money market accounts and CDs. It does not cover investments like stocks, funds or crypto, even if you buy them through a bank's app. A few practical checks. Use the FDIC's BankFind tool to confirm a bank is insured. With some apps, your money is held at a partner bank, so check which one. And if you ever hold more than two hundred fifty thousand dollars, spread it across banks or ownership categories. For most people, the limit is far above what they hold.",
+     "on_screen_text": "$250,000 per depositor, per bank, per category",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bank building with a large shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Labels and automatic transfers",
+     "narration": "Two tricks make the map work on autopilot. First, labels. Many banks let you open several savings accounts or buckets and name them: emergency, car, trip, gifts. Named money is much harder to spend by accident than a lump sum called savings. Second, automatic transfers. Set a transfer from checking to each bucket for the day after payday. Then the map refills itself. If your bank charges for extra accounts, a simple spreadsheet tracking how much of one savings account belongs to each goal works too. Check in once a month to make sure every transfer ran.",
+     "on_screen_text": "Name it · automate it",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. small labelled jars filling from one tap. No text, no logos, no real people."
+    },
+    {
+     "heading": "Common mistakes",
+     "narration": "A few mistakes to avoid. Keeping your emergency fund in checking, where it slowly gets spent. Putting it in investments, where it might be down twenty percent the week you need it. Locking it in a CD with a penalty. Chasing tiny rate differences by moving banks every few months, which usually isn't worth the hassle for small balances. Paying monthly fees, which can wipe out the interest you earn. And forgetting about old accounts. If you've got a forgotten savings account from college, check it's still yours, and consider consolidating. Simple and boring is the goal here.",
+     "on_screen_text": "6 money-map mistakes",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a few small warning signs around a map. No text, no logos, no real people."
+    },
+    {
+     "heading": "On camera: set up your first two boxes",
+     "narration": "Let's finish with the part that matters most: doing it. This chapter is filmed on camera, with the host setting up two boxes in a real banking app, with balances and account numbers blurred. Step one: open a second savings account or bucket and name it emergency fund. Step two: schedule a recurring transfer from checking for the day after payday. Even twenty-five dollars is fine to start. Step three: write your checking cushion number on a sticky note, so you know when there's extra to move. That's it. Setting up just these two boxes this week beats planning a perfect five-account system you never start. Next in the Money Basics series: how interest really works, APR, APY and compounding, with the numbers on screen.",
+     "on_screen_text": "Set up 2 boxes this week",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a host's desk with a phone and two labelled jars. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Checking, high-yield savings, money market, CD or investing? We sort a fictional $8,000 by when it's needed, plus the FDIC rules that keep it safe.\n\nExamples are hypothetical and for education only. Not financial advice.",
+   "hashtags": [
+    "savingsaccount",
+    "checkingaccount",
+    "emergencyfund",
+    "personalfinance",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Checking, savings, money market accounts, CDs and investing accounts explained with a simple money map. We sort a fictional $8,000 by when it's needed, cover FDIC and NCUA insurance limits, and set up named buckets with automatic transfers.\n\nChapters\n0:00 Intro\n0:48 The one question: when do you need it?\n1:34 Checking: the hub\n2:23 High-yield savings: the emergency fund\n3:12 Money market accounts\n4:01 CDs: money with a date\n4:54 Brokerage and retirement: the long-term money\n5:44 The money map\n6:31 Is my money safe? FDIC and NCUA\n7:21 Labels and automatic transfers\n8:02 Common mistakes\n8:42 On camera: set up your first two boxes\n\nLinks\nHigh-yield savings accounts compared: https://moneymadesimple.netlify.app/compare/best-high-yield-savings-accounts/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-02\nHow to build an emergency fund: https://moneymadesimple.netlify.app/blog/how-to-build-an-emergency-fund/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-02\nRoth vs Traditional IRA: https://moneymadesimple.netlify.app/blog/roth-vs-traditional-ira/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-02\nSinking funds explained: https://moneymadesimple.netlify.app/blog/sinking-funds-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-02\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-02\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "Where should your money live?",
+   "sources": [
+    "https://www.fdic.gov/resources/deposit-insurance",
+    "https://ncua.gov/consumers/share-insurance-coverage",
+    "https://www.sipc.org/for-investors/what-sipc-protects",
+    "https://www.consumerfinance.gov/consumer-tools/bank-accounts/"
+   ],
+   "claims_to_verify": [
+    "FDIC: $250,000 per depositor, per insured bank, per ownership category",
+    "NCUA same coverage level",
+    "Money market funds are not FDIC-insured",
+    "SIPC covers brokerage failure, not market losses",
+    "3,000 + 3,500 + 1,000 + 500 = 8,000"
+   ],
+   "title_variants": [
+    "Where Should Your Money Live? 5 Accounts, Explained",
+    "Checking vs Savings vs CD: A Simple Money Map"
+   ],
+   "hook_variants": [
+    "Your checking account is probably holding money that should be somewhere else. Here's the map.",
+    "5 places to keep money, one rule for each. Let's sort $8,000."
+   ],
+   "original_element": "human-segment: The host on camera, setting up a named emergency-fund bucket and a day-after-payday transfer in a real banking app (balances and account numbers blurred) (chapter \"On camera: set up your first two boxes\")"
+  },
+  "format_style": "real-numbers",
+  "original_element": {
+   "type": "human-segment",
+   "detail": "The host on camera, setting up a named emergency-fund bucket and a day-after-payday transfer in a real banking app (balances and account numbers blurred)",
+   "chapter": "On camera: set up your first two boxes"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Interest from both sides with numbers worked out on screen: simple vs compound, APR vs APY, daily credit card interest on $3,000, savings at 4%, the rule of 72, and $200 a month for 30 years at an assumed 7%.",
+  "series": "money-basics",
+  "series_part": 3,
+  "content_id": "yt-basics-03",
+  "search_terms": [
+   "apr vs apy",
+   "how compound interest works",
+   "how credit card interest works",
+   "rule of 72"
+  ],
+  "thumbnail_alt": "Interest, both sides",
+  "script": {
+   "title": "APR vs APY and Compound Interest, Explained With Real Numbers",
+   "hook": "24% APR on a credit card actually works out to about 27% a year. Here's how interest really works, from both sides.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "24% APR on a credit card actually works out to about 27% a year. Here's how interest really works, from both sides. Interest is the price of money over time. When you borrow, you pay it. When you save or invest, you earn it. The math is exactly the same in both directions, and once you see it, a lot of financial decisions get simpler: which debt to pay first, whether a savings rate is any good, and why starting to invest early matters so much. We'll do every calculation on screen, with simple numbers, so you can follow along with a calculator. No formulas to memorise. Just four ideas: simple interest, compounding, APR versus APY, and time.",
+     "on_screen_text": "Interest: both sides",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a coin that is split into two halves, one going in and one going out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Simple interest",
+     "narration": "Start with simple interest. You borrow or deposit an amount, called the principal, and interest is a percentage of that principal each year. A thousand dollars at five percent simple interest earns fifty dollars a year. After three years, that's one hundred fifty, and the balance is eleven hundred fifty. The interest never earns interest of its own. Simple interest shows up in some car loans and personal loans, where each payment covers that month's interest first and the rest reduces the principal. It's easy to calculate and predictable. But most savings accounts, investments and credit cards don't work this way. They compound, and that changes everything over time.",
+     "on_screen_text": "$1,000 × 5% = $50 a year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin stack growing by the same small step each year. No text, no logos, no real people."
+    },
+    {
+     "heading": "Compound interest",
+     "narration": "Compound interest means you earn interest on your interest. A thousand dollars at five percent earns fifty in year one, so you have one thousand and fifty. In year two you earn five percent of one thousand and fifty, which is fifty-two fifty. In year three, about fifty-five. The steps keep getting bigger. After ten years, simple interest would give you fifteen hundred. Compounding yearly gives you about sixteen hundred and twenty-nine. After thirty years, it's about forty-three hundred versus twenty-five hundred. Same rate, same starting amount. The only difference is that the interest stays in and works. This is the engine behind long-term saving, and, in reverse, behind debt that seems to grow on its own.",
+     "on_screen_text": "10 yrs: $1,500 simple vs $1,629 compound",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two staircases, one with steps that keep getting taller. No text, no logos, no real people."
+    },
+    {
+     "heading": "APR vs APY",
+     "narration": "Now the two labels you see everywhere. APR is the annual percentage rate. It's the yearly rate before compounding. APY is the annual percentage yield. It's what you actually earn or pay in a year once compounding is included. Banks advertise APY on savings, because it's the bigger number. Lenders advertise APR on loans and cards, because it's the smaller one. The more often interest compounds, the bigger the gap. A savings account at four percent APR compounded daily has an APY of about four point zero eight percent. A small difference. But a credit card at twenty-four percent APR, compounded daily, works out to about twenty-seven point one percent a year if the balance just sits there. That's the gap the hook was about.",
+     "on_screen_text": "4% APR → 4.08% APY · 24% APR → ~27.1%",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two price tags, one slightly bigger than the other. No text, no logos, no real people."
+    },
+    {
+     "heading": "Credit card interest, day by day",
+     "narration": "Here's how a credit card actually charges you. It takes the APR and divides by three hundred sixty-five to get a daily rate. Twenty-four percent divided by three sixty-five is about point zero six six percent a day. On a three-thousand-dollar balance, that's about one dollar and ninety-seven cents a day, or roughly fifty-nine dollars over a thirty-day month. And each day's interest is added to the balance, so tomorrow's interest is calculated on a slightly bigger number. The good news: most cards have a grace period. If you pay the full statement balance by the due date every month, you usually pay no interest on purchases at all. The interest only starts when you carry a balance.",
+     "on_screen_text": "$3,000 × 24% ÷ 365 ≈ $1.97/day",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small calendar with one coin dropping each day. No text, no logos, no real people."
+    },
+    {
+     "heading": "The minimum payment trap",
+     "narration": "That's why minimum payments are so expensive. Many cards set the minimum at roughly one percent of the balance plus that month's interest, with a floor of around twenty-five to forty dollars. On our three thousand dollars, the first minimum might be about ninety dollars, and almost sixty of that is interest. As the balance falls, the minimum falls too, so you pay less and less principal and it drags on for years. Your statement is required to show how long minimum-only payments would take and what they'd cost in total. Look for that box. Paying a fixed amount instead, say two hundred a month on that three thousand, clears it in about a year and a half instead of many years.",
+     "on_screen_text": "Min ≈ $90 · ~$60 is interest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin stack shrinking very slowly on a long path. No text, no logos, no real people."
+    },
+    {
+     "heading": "Interest working for you: savings",
+     "narration": "Now the good side. Put five thousand dollars in a high-yield savings account at four percent APY and you earn about two hundred dollars in the first year, with no risk to the balance at an insured bank. In a typical account paying zero point zero one percent, the same five thousand earns about fifty cents. Same money, same safety, wildly different result. Rates on savings change as interest rates in the economy change, so four percent won't last forever. But the gap between a good savings account and a poor one has been large for years. If your emergency fund is in an account earning almost nothing, moving it is one of the easiest wins in personal finance.",
+     "on_screen_text": "$5,000 × 4% ≈ $200 vs $0.50",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two jars, one filling much faster than the other. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule of 72",
+     "narration": "Here's a shortcut worth remembering: the rule of seventy-two. Divide seventy-two by an interest rate, and you get roughly how many years it takes money to double. At four percent, seventy-two divided by four is eighteen years. At eight percent, about nine years. It works for debt too, which is the scary part. At twenty-four percent, an unpaid balance roughly doubles in three years. Seventy-two divided by twenty-four. It's an estimate, not exact math, but it's close enough to make quick decisions. Any time you see a rate, try it. It turns a percentage that feels abstract into a number of years you can picture.",
+     "on_screen_text": "72 ÷ rate ≈ years to double",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin splitting into two with a small clock beside it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Time: the biggest number",
+     "narration": "Time is the most powerful number in this whole video. Let's say someone invests two hundred dollars a month, and the investments grow at seven percent a year on average. That rate is an assumption for illustration, not a promise. Real returns go up and down, sometimes by a lot. Over thirty years, two hundred a month is seventy-two thousand dollars put in. At seven percent compounded monthly, the balance would be about two hundred forty-four thousand. Most of that is growth, not deposits. Now start ten years later and invest for twenty years instead: about one hundred four thousand. Waiting ten years cost more than half the ending balance, even though only twenty-four thousand fewer dollars went in.",
+     "on_screen_text": "$200/mo · 30 yrs ≈ $244K · 20 yrs ≈ $104K",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two growth curves, one starting earlier and rising much higher. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$200 a month at 7%",
+      "labels": [
+       "Start now (30 yrs)",
+       "Start 10 yrs later (20 yrs)"
+      ],
+      "values": [
+       243994,
+       104185
+      ],
+      "unit_prefix": "$",
+      "note": "7% a year compounded monthly, illustrative, not a promise"
+     }
+    },
+    {
+     "heading": "Putting it together",
+     "narration": "So what do you do with this? Three things. One: pay off high-interest debt first. A credit card at twenty-four percent is costing you more than almost any investment is likely to earn, so every extra dollar there is a strong move. Two: keep your emergency fund somewhere that actually pays interest, like a high-yield savings account at an insured bank. Three: if you're investing for the long term, start as early as you can, even with a small amount, because time does the heavy lifting. And whenever you compare rates, compare APY to APY for savings, and APR to APR for loans, so you're comparing like with like.",
+     "on_screen_text": "Pay high APR · earn high APY · start early",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes pointing at three short steps on a board. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. Simple interest is a flat percentage of the principal. Compound interest earns interest on interest, and the steps get bigger over time. APR is the rate before compounding. APY includes it, so a twenty-four percent card is about twenty-seven percent in practice. Credit cards charge daily, but paying the full statement balance usually means zero interest. The rule of seventy-two tells you roughly how long money, or debt, takes to double. And time is the biggest number of all. The links below go to our high-yield savings comparison and our guide to paying off credit card debt. Next in the Money Basics series: how taxes work, brackets, withholding and refunds, explained without the jargon.",
+     "on_screen_text": "Simple · compound · APR/APY · 72 · time",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to a neat board with five small icons. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "APR vs APY, compound interest, daily credit card interest and the rule of 72, with every number worked out on screen.\n\nExamples are hypothetical and for education only. The 7% return is an assumption, not a promise; investing involves risk. Not financial advice.",
+   "hashtags": [
+    "compoundinterest",
+    "apr",
+    "creditcards",
+    "savings",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "How interest really works, with every number worked out on screen: simple vs compound interest, APR vs APY, how credit cards charge daily interest on a $3,000 balance, savings at 4%, the rule of 72, and why time matters most (illustrated at an assumed 7%).\n\nChapters\n0:00 Intro\n0:48 Simple interest\n1:33 Compound interest\n2:22 APR vs APY\n3:13 Credit card interest, day by day\n4:02 The minimum payment trap\n4:52 Interest working for you: savings\n5:41 The rule of 72\n6:25 Time: the biggest number\n7:14 Putting it together\n7:59 Recap\n\nLinks\nHigh-yield savings accounts compared: https://moneymadesimple.netlify.app/compare/best-high-yield-savings-accounts/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-03\nDebt avalanche vs snowball: https://moneymadesimple.netlify.app/blog/debt-avalanche-vs-snowball/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-03\nHow to start investing with $100 a month: https://moneymadesimple.netlify.app/blog/how-to-start-investing-with-100-a-month/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-03\nBalance transfer cards compared: https://moneymadesimple.netlify.app/compare/best-balance-transfer-cards/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-03\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-03\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "24% APR = 27%?",
+   "sources": [
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-loans-interest-rate-and-its-apr-en-733/",
+    "https://www.consumerfinance.gov/consumer-tools/credit-cards/",
+    "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"
+   ],
+   "claims_to_verify": [
+    "(1 + 0.04/365)^365 − 1 ≈ 4.08%",
+    "(1 + 0.24/365)^365 − 1 ≈ 27.1%",
+    "3000 × 0.24 ÷ 365 ≈ 1.97/day; × 30 ≈ 59",
+    "1000 × 1.05^10 ≈ 1,629; × 1.05^30 ≈ 4,322",
+    "$200/mo at 7%/12 for 360 months ≈ $244K; 240 months ≈ $104K",
+    "Minimum payment formulas vary by issuer",
+    "$3,000 at 24% paying $200/month ≈ 18 months"
+   ],
+   "title_variants": [
+    "How Interest Actually Works (APR, APY, Compounding)",
+    "Why a 24% Card Really Costs You 27%: Interest Explained"
+   ],
+   "hook_variants": [
+    "Interest is the same math whether you're earning it or paying it. Let's do both on screen.",
+    "$3,000 at 24%: here's exactly what it costs per day, per month and per year."
+   ],
+   "original_element": "worked-example-chart: Two charts built from the video's own numbers: $1,000 at 5% simple vs compound over 30 years, and $200 a month at an assumed 7% starting at year 0 vs year 10 (chapter \"Time: the biggest number\")"
+  },
+  "format_style": "on-screen-calculation",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Two charts built from the video's own numbers: $1,000 at 5% simple vs compound over 30 years, and $200 a month at an assumed 7% starting at year 0 vs year 10",
+   "chapter": "Time: the biggest number"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Myths about income tax checked one by one, built around a fictional $55,000 earner and simplified round-number brackets: the staircase, marginal vs effective rate, deductions vs credits, and why refunds happen.",
+  "series": "money-basics",
+  "series_part": 4,
+  "content_id": "yt-basics-04",
+  "search_terms": [
+   "how tax brackets work",
+   "how income tax works",
+   "marginal vs effective tax rate",
+   "why did i get a tax refund"
+  ],
+  "thumbnail_alt": "The $55,000 tax staircase",
+  "script": {
+   "title": "How Income Tax Works: Brackets, Withholding and Refunds for Beginners",
+   "hook": "Myth: a raise can push you into a higher bracket and shrink your paycheck. Here are 5 tax myths, checked with one $55,000 example.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Myth: a raise can push you into a higher bracket and shrink your paycheck. Here are 5 tax myths, checked with one fifty-five-thousand-dollar example. Income tax confuses almost everyone, and a lot of that confusion costs people money: turning down overtime, panicking about refunds, or missing credits they qualify for. In this video we'll use one fictional person earning fifty-five thousand dollars, and simplified, round-number tax brackets so the math is easy to follow. Real brackets and amounts change every year, so check IRS dot gov for the current ones. The ideas, though, stay the same year after year. We'll go myth by myth, and by the end you'll be able to estimate your own tax on the back of an envelope.",
+     "on_screen_text": "5 tax myths · 1 example",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a simple tax form with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 1: all your income is taxed at your bracket",
+     "narration": "Myth one: if you're in the twenty-two percent bracket, all your income is taxed at twenty-two percent. It isn't. US income tax is a staircase. Each step has its own rate, and only the income on that step is taxed at that rate. For our example, imagine simplified brackets: ten percent on the first twelve thousand dollars of taxable income, twelve percent on income from twelve thousand up to fifty thousand, and twenty-two percent above fifty thousand. Your income fills the steps from the bottom up. The first twelve thousand is taxed at ten percent no matter how much you earn. Only the dollars that reach the top step are taxed at the top rate.",
+     "on_screen_text": "Tax is a staircase, not a single rate",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a staircase with three steps of different colours. No text, no logos, no real people."
+    },
+    {
+     "heading": "Taxable income: the standard deduction",
+     "narration": "Before we climb the stairs, we need taxable income, which is smaller than salary. Start with fifty-five thousand. Subtract pre-tax retirement contributions, say six percent to a traditional 401(k): about thirty-three hundred. Subtract pre-tax health premiums: about twenty-two hundred a year. Then subtract the standard deduction, a flat amount most people take instead of itemizing. For our simplified example, let's use fifteen thousand. Fifty-five thousand, minus thirty-three hundred, minus twenty-two hundred, minus fifteen thousand leaves about thirty-four thousand five hundred of taxable income. That's the number that climbs the staircase, not fifty-five thousand. This alone surprises most people.",
+     "on_screen_text": "$55,000 → ~$34,500 taxable",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a large coin stack shrinking through three filters. No text, no logos, no real people."
+    },
+    {
+     "heading": "Climbing the staircase",
+     "narration": "Now climb. The first twelve thousand dollars at ten percent is twelve hundred dollars of tax. The rest, twenty-two thousand five hundred, sits on the twelve percent step: that's twenty-seven hundred. Our person never reaches the twenty-two percent step at all. Total federal income tax: about thirty-nine hundred dollars. Their top bracket, which is called the marginal rate, is twelve percent. But their effective rate, total tax divided by salary, is about seven percent. Thirty-nine hundred divided by fifty-five thousand. That's a long way from the twenty-two percent people often assume. When someone says their tax rate, ask whether they mean the top step or the average.",
+     "on_screen_text": "$1,200 + $2,700 = $3,900 · ~7% effective",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a staircase with coins on the bottom two steps. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Tax on $34,500 taxable income",
+      "labels": [
+       "10% step",
+       "12% step",
+       "Total"
+      ],
+      "values": [
+       1200,
+       2700,
+       3900
+      ],
+      "unit_prefix": "$",
+      "note": "Example from the video; brackets change yearly"
+     }
+    },
+    {
+     "heading": "Myth 2: a raise can lower your take-home",
+     "narration": "Myth two: a raise can push you into a higher bracket and lower your take-home pay. Because of the staircase, it can't, at least not through income tax brackets. Say our person gets a raise that pushes taxable income from thirty-four thousand five hundred to fifty-two thousand. The first fifty thousand is still taxed exactly as before. Only the two thousand above fifty thousand is taxed at twenty-two percent, which is four hundred forty dollars. They still keep seventy-eight cents of every one of those top dollars, before state tax and FICA. A raise always means more money after income tax. The only situations where earning more can cost you are things like losing eligibility for some benefits or credits, which is a different issue.",
+     "on_screen_text": "Only the new dollars hit the new step",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a raise arrow going up the staircase, with coins still on the lower steps. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 3: deductions and credits are the same",
+     "narration": "Myth three: deductions and credits are the same thing. They're not, and the difference is big. A deduction lowers your taxable income. If you're on the twelve percent step, a one-thousand-dollar deduction saves you about one hundred twenty dollars. A credit lowers your tax bill directly, dollar for dollar. A one-thousand-dollar credit saves you a thousand dollars. Some credits are even refundable, which means you can get money back even if you owe no tax. Examples of credits include the child tax credit, the earned income tax credit and education credits. Rules and amounts change, so check IRS dot gov. But when you hear credit, think dollar for dollar.",
+     "on_screen_text": "Deduction: −taxable income · credit: −tax",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two tools, one a pair of scissors and one an eraser. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 4: a refund is a bonus",
+     "narration": "Myth four: a big refund means you did taxes well. A refund just means more was withheld from your paychecks during the year than you actually owed. Your employer withholds tax based on your W-4, and at filing time you settle up. Our person owes about thirty-nine hundred in federal tax. If thirty-four hundred was withheld, they'll owe five hundred when they file. If forty-nine hundred was withheld, they'll get about a thousand back. It's the same tax bill either way. A refund is your own money, returned with no interest. If you'd rather have it during the year, the IRS withholding estimator can help you adjust your W-4. If you like the forced savings of a refund, that's a valid choice too, as long as it's on purpose.",
+     "on_screen_text": "Refund = overpaid during the year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an envelope returning coins to a small jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 5: filing is always expensive",
+     "narration": "Myth five: you have to pay to file. Many people can file their federal return for free. IRS Free File partners with tax software companies to offer free filing to people under an income limit. There are free fillable forms for anyone comfortable doing it themselves. And the IRS's free volunteer programs, VITA and TCE, help people with lower incomes, people with disabilities, older adults and people who speak limited English. Watch out for free versions that charge for state returns or push upgrades. Start at IRS dot gov, not a search ad, so you land on the genuine free options.",
+     "on_screen_text": "Free File · free forms · VITA",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a small free tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Payroll taxes and state tax",
+     "narration": "Two more pieces finish the picture. First, payroll taxes: Social Security and Medicare, seven point six five percent of wages, taken from every paycheck. They aren't part of the bracket staircase and there's no refund of them for most people. On fifty-five thousand, that's around four thousand dollars a year, more than this person's federal income tax. Second, state income tax, which most states have, with their own brackets or a flat rate. A handful of states have no income tax on wages at all. So when you estimate your total tax, add three things: federal income tax from the staircase, payroll tax, and your state's tax.",
+     "on_screen_text": "Federal + payroll + state",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small jars side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Your back-of-envelope estimate",
+     "narration": "Here's how to estimate your own tax in five minutes. One: start with your salary and subtract pre-tax retirement and health contributions. Two: subtract the standard deduction for your filing status, from IRS dot gov. Three: climb the current brackets step by step. Four: subtract any credits you expect. Five: compare the result with the year-to-date federal withholding on your latest pay stub. If withholding is way above your estimate, expect a refund. If it's way below, expect to owe, and consider adjusting your W-4 now rather than in April. It won't be perfect, but it's usually close enough to avoid surprises.",
+     "on_screen_text": "Salary → taxable → stairs → credits → compare",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small envelope with a few lines of math on the back. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. Income tax is a staircase: only the dollars on each step are taxed at that step's rate. Taxable income is much lower than salary, after pre-tax contributions and the standard deduction. Your marginal rate is your top step; your effective rate is the average, often far lower. A raise always means more after-tax money from brackets. Deductions lower taxable income; credits lower tax dollar for dollar. A refund means you overpaid. And many people can file for free. The brackets in this video were simplified, so check IRS dot gov for the real ones. Next in the Money Basics series: net worth, and how to calculate yours in ten minutes.",
+     "on_screen_text": "Staircase · taxable · marginal vs effective · credits · refunds",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing at the top of a small, tidy staircase. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Five income tax myths, checked with one fictional $55,000 earner and simplified brackets: the staircase, marginal vs effective rate, deductions vs credits, refunds and free filing.\n\nExamples use simplified, illustrative brackets; check IRS.gov for current figures. Not tax advice.",
+   "hashtags": [
+    "taxes",
+    "taxbrackets",
+    "taxrefund",
+    "personalfinance",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "How income tax works for beginners, with five common myths checked against one fictional $55,000 earner and simplified, round-number brackets: the bracket staircase, taxable income and the standard deduction, marginal vs effective rate, deductions vs credits, refunds and free filing.\n\nChapters\n0:00 Intro\n0:50 Myth 1: all your income is taxed at your bracket\n1:37 Taxable income: the standard deduction\n2:18 Climbing the staircase\n3:02 Myth 2: a raise can lower your take-home\n3:54 Myth 3: deductions and credits are the same\n4:39 Myth 4: a refund is a bonus\n5:32 Myth 5: filing is always expensive\n6:14 Payroll taxes and state tax\n6:58 Your back-of-envelope estimate\n7:41 Recap\n\nLinks\nThe free 7-day money reset (start with your real take-home): https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-04\nExample budget on a $55,000 salary: https://moneymadesimple.netlify.app/budget/55000-salary/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-04\nRoth vs Traditional IRA: https://moneymadesimple.netlify.app/blog/roth-vs-traditional-ira/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-04\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-04\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "Your bracket isn't your rate",
+   "sources": [
+    "https://www.irs.gov/filing/federal-income-tax-rates-and-brackets",
+    "https://www.irs.gov/taxtopics/tc551",
+    "https://www.irs.gov/filing/free-file-do-your-federal-taxes-for-free",
+    "https://www.irs.gov/individuals/free-tax-return-preparation-for-qualifying-taxpayers"
+   ],
+   "claims_to_verify": [
+    "Brackets and standard deduction are simplified illustrations, not current law",
+    "55,000 − 3,300 − 2,200 − 15,000 = 34,500",
+    "12,000 × 10% = 1,200; 22,500 × 12% = 2,700; total 3,900",
+    "3,900 ÷ 55,000 ≈ 7.1%",
+    "2,000 × 22% = 440",
+    "FICA 7.65% × ~$52,800 FICA wages ≈ $4,040"
+   ],
+   "title_variants": [
+    "Will a Raise Put You in a Higher Tax Bracket? (How Taxes Really Work)",
+    "Tax Brackets Explained: The $55,000 Staircase"
+   ],
+   "hook_variants": [
+    "Your tax bracket isn't your tax rate. Here's the staircase that explains why.",
+    "5 things people get wrong about income tax, explained with simple numbers."
+   ],
+   "original_element": "worked-example-chart: An animated tax staircase chart from the video's own example: $34,500 of taxable income filling the 10% and 12% steps, with marginal and effective rates labelled (chapter \"Climbing the staircase\")"
+  },
+  "format_style": "myth-vs-fact",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "An animated tax staircase chart from the video's own example: $34,500 of taxable income filling the 10% and 12% steps, with marginal and effective rates labelled",
+   "chapter": "Climbing the staircase"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A net worth sheet built live for a fictional 26-year-old with a negative net worth: what counts as an asset, what to leave out, how to value a car, and why the six-month trend matters more than the number.",
+  "series": "money-basics",
+  "series_part": 5,
+  "content_id": "yt-basics-05",
+  "search_terms": [
+   "how to calculate net worth",
+   "net worth for beginners",
+   "negative net worth",
+   "net worth tracker"
+  ],
+  "thumbnail_alt": "Net worth sheet, live",
+  "script": {
+   "title": "Net Worth: How to Calculate Yours in 10 Minutes",
+   "hook": "Minus $3,000. That's the net worth of the person we're building a sheet for today, and it's a perfectly normal place to start.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Minus three thousand dollars. That's the net worth of the person we're building a sheet for today, and it's a perfectly normal place to start. A budget tells you what happens in a month. Net worth tells you where you stand overall, and whether you're moving forward over time. It's one number: everything you own, minus everything you owe. In this video we'll build a net worth sheet live, for a fictional twenty-six-year-old with student loans, a car loan and a small credit card balance. You'll see what to count, what to leave out, how to value the tricky stuff, and how to track it in ten minutes every six months. Open a blank spreadsheet or grab a piece of paper and follow along.",
+     "on_screen_text": "Net worth = own − owe",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a balance scale with coins on one side and bills on the other. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why net worth matters",
+     "narration": "Why bother? Because income alone can fool you. Someone earning a hundred thousand dollars a year who spends all of it and carries debt can be further behind than someone earning fifty thousand who saves steadily. Net worth captures the result of every decision at once: paying down debt raises it, saving raises it, and borrowing for things that lose value lowers it. It's also the number that keeps you motivated during the slow middle stretch of paying off debt, when the monthly budget feels the same but the bigger picture is quietly improving. You don't need to check it often. Twice a year is plenty. What matters is the direction.",
+     "on_screen_text": "Income ≠ progress",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two people with different paychecks and very different scales. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1: list your assets",
+     "narration": "Step one: list what you own that has real money value. Start with cash: checking and savings. Then retirement accounts like a 401(k) or IRA, and any brokerage account. Use the current balance from each app or statement. Then big things you could sell, like a car. For our fictional person: checking, twenty-four hundred dollars. Savings, five thousand. 401(k), ninety-eight hundred. Roth IRA, thirty-two hundred. That's twenty thousand four hundred in financial assets. We'll add the car in a moment, because it needs its own rule. Write each one on its own line with the date, so you can compare next time.",
+     "on_screen_text": "Cash + retirement + investments",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short list of labelled jars with small numbers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2: value the tricky stuff",
+     "narration": "Now the car. The mistake people make is writing down what they paid. A car is worth what you could sell it for today, which is usually much less. Look up the private-sale value on a car pricing site, and if you want to be conservative, use the trade-in value instead. Our person's car is worth about eleven thousand dollars on resale. So total assets come to thirty-one thousand four hundred. What about furniture, clothes, a laptop or a phone? Leave them out. They're hard to value, they lose value quickly, and adding them makes the number look better without making you any better off. A home, if you own one, goes in at a realistic sale value, not the price you hope for.",
+     "on_screen_text": "Car = resale value · skip the furniture",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a car with a small price tag that is smaller than the original. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3: list every debt",
+     "narration": "Step three: list everything you owe, using the current payoff balances. Student loans, car loans, credit cards, personal loans, buy-now-pay-later plans, money owed to family, and a mortgage if you have one. For credit cards, use the current balance, not the minimum payment. Our person owes twenty-four thousand on student loans, eighty-five hundred on the car loan, and nineteen hundred on a credit card. Total debts: thirty-four thousand four hundred. While you're here, note each interest rate next to the balance. You'll want those when you decide what to pay off first, and having them in one place is surprisingly useful.",
+     "on_screen_text": "Debts: $34,400 (note the rates)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stack of bills with small percent tags. No text, no logos, no real people."
+    },
+    {
+     "heading": "Build the sheet",
+     "narration": "Now let's build the actual sheet. Column A is the account name. Column B is the type: asset or debt. Column C is today's balance. At the bottom, one formula adds up the assets, another adds up the debts, and a third subtracts debts from assets. For our person: thirty-one thousand four hundred minus thirty-four thousand four hundred. Net worth: minus three thousand dollars. Then add a new column each time you update it, every six months, with the date at the top. After a year you'll have three columns side by side, and the bottom row tells the story. That's the whole tool. No app required, though many budgeting apps can calculate this automatically if you link your accounts.",
+     "on_screen_text": "Assets $31,400 − debts $34,400 = −$3,000",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple spreadsheet with three columns and a total row. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Net worth, fictional example",
+      "labels": [
+       "Assets",
+       "Debts"
+      ],
+      "values": [
+       31400,
+       34400
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Net worth = assets − debts = −$3,000 (fictional)"
+     }
+    },
+    {
+     "heading": "Negative is normal",
+     "narration": "Let's talk about that minus sign. A negative net worth in your twenties is extremely common, mostly because of student loans. It doesn't mean you're failing. It means you invested in your education or bought a car before you had savings, and you're early in the process of paying it back. What matters is whether the number is rising. If our person pays down about four hundred dollars a month of debt and saves three hundred, net worth goes up by roughly seven hundred a month before any investment growth or the car losing value. Within six months, minus three thousand could be close to plus one thousand. That's real progress, even if the budget feels the same month to month.",
+     "on_screen_text": "Negative early is common · watch the trend",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a line chart rising from below zero toward the axis. No text, no logos, no real people."
+    },
+    {
+     "heading": "What moves the number",
+     "narration": "Here's what pushes net worth up: paying down debt principal, saving, investing, and your investments growing. Here's what pulls it down: new debt, spending savings, investments falling, and things like cars losing value over time. Notice that paying off a credit card and saving money have the same effect on net worth. Both add the payment to your side of the scale. That's why paying off high-interest debt is such a strong move. Also notice what doesn't help: buying something nice on a payment plan. The item usually loses value faster than the debt shrinks, so net worth drops even if the monthly payment feels fine.",
+     "on_screen_text": "Up: pay down, save, invest · down: new debt",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. arrows pushing a scale up and down. No text, no logos, no real people."
+    },
+    {
+     "heading": "How often to check",
+     "narration": "How often should you update it? Every six months is a good rhythm. January and July work well for most people. Checking weekly is a mistake, especially once you have investments, because markets move every day and you'll see noise instead of progress. Put two dates in your calendar right now, and make it a fifteen-minute job: open each account, update the balance, check the bottom row. If you want a single motivating number on your fridge, use the change since last time rather than the total. Plus three thousand eight hundred since January feels better and is more useful than staring at one big figure.",
+     "on_screen_text": "Every 6 months · track the change",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with two circled months. No text, no logos, no real people."
+    },
+    {
+     "heading": "Common mistakes",
+     "narration": "A few mistakes to avoid. Counting things at purchase price instead of resale value. Forgetting small debts like a buy-now-pay-later plan or money owed to a friend. Comparing your net worth with people online, many of whom are older, earn more, or aren't telling the full story. Leaving out retirement accounts because the money feels far away. They count. And panicking when the number dips because the market fell. Short dips are normal for investments, which is exactly why we only check twice a year. Your net worth is your scoreboard against your past self, nobody else.",
+     "on_screen_text": "Compare with past you, not others",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes looking in a mirror next to a small chart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. Net worth is everything you own minus everything you owe. List cash, retirement and investment accounts at today's balance. Value a car at what you could sell it for, and leave out furniture and gadgets. List every debt at its payoff balance, with the rate. Subtract, and write the date at the top. Our fictional person started at minus three thousand, which is normal, and can be positive within months by paying down debt and saving. Update it every six months and watch the change. The links below go to our debt payoff guide and our emergency fund guide. Next in the Money Basics series: index funds, explained for complete beginners.",
+     "on_screen_text": "Own − owe · every 6 months",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small chart that rises over time. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Net worth = what you own minus what you owe. We build the sheet live for a fictional 26-year-old who starts at −$3,000, and show why the six-month trend matters more than the number.\n\nExamples are hypothetical and for education only. Not financial advice.",
+   "hashtags": [
+    "networth",
+    "personalfinance",
+    "debtpayoff",
+    "moneytips",
+    "budgeting",
+    "moneymadesimple"
+   ],
+   "description": "How to calculate your net worth in 10 minutes, built live on a fictional 26-year-old: listing assets, valuing a car at resale, skipping furniture, listing debts with rates, building a simple sheet, and why a negative net worth early on is normal as long as the six-month trend rises.\n\nChapters\n0:00 Intro\n0:51 Why net worth matters\n1:37 Step 1: list your assets\n2:19 Step 2: value the tricky stuff\n3:10 Step 3: list every debt\n3:52 Build the sheet\n4:41 Negative is normal\n5:31 What moves the number\n6:15 How often to check\n6:59 Common mistakes\n7:39 Recap\n\nLinks\nDebt avalanche vs snowball: https://moneymadesimple.netlify.app/blog/debt-avalanche-vs-snowball/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-05\nHow to build an emergency fund: https://moneymadesimple.netlify.app/blog/how-to-build-an-emergency-fund/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-05\nBudgeting apps compared (some track net worth automatically): https://moneymadesimple.netlify.app/compare/best-budgeting-apps/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-05\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-05\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "Negative net worth? Normal.",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/",
+    "https://www.investor.gov/introduction-investing/getting-started/assessing-your-risk-tolerance",
+    "https://www.consumerfinance.gov/consumer-tools/auto-loans/"
+   ],
+   "claims_to_verify": [
+    "2,400 + 5,000 + 9,800 + 3,200 + 11,000 = 31,400",
+    "24,000 + 8,500 + 1,900 = 34,400",
+    "31,400 − 34,400 = −3,000",
+    "Fictional example"
+   ],
+   "title_variants": [
+    "What's Your Net Worth? A 10-Minute Walkthrough",
+    "Negative Net Worth at 25? Here's Why That's Normal (and What to Track)"
+   ],
+   "hook_variants": [
+    "One number tells you if your money is actually moving forward. It takes 10 minutes to find.",
+    "Your budget shows a month. Your net worth shows the whole picture. Let's build it."
+   ],
+   "original_element": "screen-recording: Screen recording of the net worth spreadsheet being built from scratch with the video's fictional numbers: three columns, three formulas, ending at −$3,000 with a second dated column added (chapter \"Build the sheet\")"
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Screen recording of the net worth spreadsheet being built from scratch with the video's fictional numbers: three columns, three formulas, ending at −$3,000 with a second dated column added",
+   "chapter": "Build the sheet"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "What an index fund is, index vs active, the main kinds (total market, S&P 500, international, bonds, target-date), and a fee-drag chart showing $200 a month for 30 years at an assumed 7% with a 0.03% vs a 1% fee. No fund picks.",
+  "series": "money-basics",
+  "series_part": 6,
+  "content_id": "yt-basics-06",
+  "search_terms": [
+   "index funds explained",
+   "what is an index fund",
+   "index fund vs mutual fund",
+   "expense ratio explained"
+  ],
+  "thumbnail_alt": "Fee drag over 30 years",
+  "script": {
+   "title": "Index Funds Explained for Complete Beginners",
+   "hook": "A 1% fee sounds tiny. On $200 a month for 30 years, it can cost about $42,000. Here's how index funds work, and why fees matter so much.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "A one percent fee sounds tiny. On two hundred dollars a month for thirty years, it can cost about forty-two thousand dollars. Here's how index funds work, and why fees matter so much. If you've heard people say just buy index funds, and nodded without being sure what that means, this is the video. We'll cover what a fund is, what makes an index fund different, the main kinds you'll see in a 401(k) or brokerage account, and the one number on a fund's page that matters most. We won't recommend specific funds, and nothing here is a promise about returns. Investing involves risk. The goal is that you understand what you're choosing.",
+     "on_screen_text": "Index funds, plain English",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a basket filled with many tiny different items. No text, no logos, no real people."
+    },
+    {
+     "heading": "What a fund is",
+     "narration": "Start with a fund. A fund pools money from lots of investors and buys a collection of investments, like stocks or bonds. When you buy a share of the fund, you own a small slice of everything inside it. That's the main advantage: with one purchase, even a small one, you can own pieces of hundreds or thousands of companies. You'll see two main structures. Mutual funds are bought and sold once a day at the day's closing price. ETFs, or exchange-traded funds, trade during the day like a stock. For long-term investors who just buy and hold, the difference matters much less than what the fund holds and what it costs.",
+     "on_screen_text": "1 share = a slice of everything",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a large basket with a small slice being lifted out. No text, no logos, no real people."
+    },
+    {
+     "heading": "What makes it an index fund",
+     "narration": "An index is simply a list of investments chosen by a rule. The S&P 500, for example, is a list of about five hundred large US companies. An index fund buys everything on the list, in the same proportions, and doesn't try to pick winners. That's called passive investing. The alternative is an actively managed fund, where a manager picks investments they think will do better than the market. Active funds usually charge higher fees for that work. And here's the key evidence: S&P's own long-running SPIVA reports have found that most actively managed large US stock funds trailed the S&P 500 over fifteen-year periods. Picking winners is hard, and the fees make it harder.",
+     "on_screen_text": "Index follows · active tries to beat",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list on a clipboard next to a basket that matches it. No text, no logos, no real people."
+    },
+    {
+     "heading": "The main kinds you'll see",
+     "narration": "Here are the main kinds of index funds you'll see. A total US stock market fund holds thousands of US companies, large and small. An S&P 500 fund holds about five hundred large US companies. An international fund holds companies outside the US. A bond index fund holds many bonds, which are loans to governments and companies, and usually moves up and down less than stocks. And a target-date fund is a fund of funds: it mixes stock and bond index funds, and slowly shifts toward bonds as its target year, usually your rough retirement year, gets closer. In many 401(k) plans, the target-date fund is the default. For beginners, it's often the simplest one-fund choice.",
+     "on_screen_text": "Total market · S&P 500 · international · bonds · target-date",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. five small baskets in a row, each a different shape. No text, no logos, no real people."
+    },
+    {
+     "heading": "The one number: expense ratio",
+     "narration": "Now the most important number on any fund's page: the expense ratio. It's the yearly fee, as a percentage of what you have invested, taken out automatically. You never get a bill. It just quietly reduces your return. Broad index funds from large providers often charge somewhere around zero point zero three to zero point two percent a year. Actively managed funds often charge much more, sometimes around one percent or higher. On ten thousand dollars, zero point zero three percent is three dollars a year. One percent is a hundred dollars a year. That doesn't sound like much, but fees compound just like returns do, in the wrong direction. Let's see what that looks like over a career.",
+     "on_screen_text": "Expense ratio = the yearly fee",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small coin being skimmed off the top of a growing pile. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fee drag: the 30-year chart",
+     "narration": "Same investor, same deposits, two funds. Two hundred dollars a month for thirty years, and let's assume the investments themselves return seven percent a year on average. That's an assumption for illustration, not a promise, and real returns jump around. Fund A charges zero point zero three percent, so the investor keeps about six point nine seven percent. Fund B charges one percent, so they keep about six percent. Seventy-two thousand dollars goes in either way. After thirty years, Fund A grows to about two hundred forty-three thousand. Fund B grows to about two hundred one thousand. The difference is about forty-two thousand dollars, from a fee that looked like one percent. That's why the expense ratio is the first number to check.",
+     "on_screen_text": "0.03% → ~$243K · 1% → ~$201K",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two growth curves that start together and slowly separate. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$200 a month for 30 years",
+      "labels": [
+       "Fund A (0.03% fee)",
+       "Fund B (1% fee)"
+      ],
+      "values": [
+       242555,
+       200903
+      ],
+      "unit_prefix": "$",
+      "note": "7% assumed return before fees, illustrative"
+     }
+    },
+    {
+     "heading": "Diversification and risk",
+     "narration": "Index funds spread your money across many companies, which is called diversification. If one company fails, it's a tiny part of the fund. But diversification doesn't remove market risk. When the whole market falls, index funds fall with it. Broad stock markets have had drops of thirty percent or more, and recoveries have sometimes taken years. That's why stock index funds are for money you won't need for at least five years, and why your emergency fund belongs in savings, not in the market. Bond funds and target-date funds can soften the swings, at the cost of usually lower long-term growth. There's no free lunch, just tradeoffs you choose on purpose.",
+     "on_screen_text": "Diversified still carries risk",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a basket on a gently rocking boat. No text, no logos, no real people."
+    },
+    {
+     "heading": "How to actually buy one",
+     "narration": "How do you actually buy one? If you have a 401(k), you already can. Log in, look at the fund list, and check the expense ratios. Many plans have a target-date fund and a few low-cost index funds. If you have an IRA or a brokerage account, search for the kind of fund you want, like total stock market index, and compare the expense ratios of a few options from large providers. Then set up an automatic monthly purchase. Buying a fixed amount every month, whatever the market is doing, is called dollar-cost averaging. It takes the guesswork out of timing, and it's how most people invest from their paycheck anyway.",
+     "on_screen_text": "401(k) list · IRA search · automate it",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a small recurring calendar icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Common mistakes",
+     "narration": "A few common mistakes. Owning five funds that all hold the same companies, which looks diversified but isn't. Checking the balance every day and selling during a drop. Chasing whichever fund did best last year. Ignoring fees, especially in older 401(k) plans with expensive options. And putting money in an IRA without choosing an investment, so it sits in cash for years. That last one is surprisingly common. After you contribute, check that the money actually bought the fund you picked. Simple, low-cost, automatic and left alone beats clever for most people.",
+     "on_screen_text": "Overlap · panic · chasing · fees · cash",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. five small warning signs along a path. No text, no logos, no real people."
+    },
+    {
+     "heading": "How much to put in",
+     "narration": "A common question: how much should go into index funds, and in what order? A typical sequence looks like this. First, a starter emergency fund in savings. Second, enough in your 401(k) to get the full employer match, which is often the best return available anywhere. Third, pay off high-interest debt like credit cards. Fourth, build the emergency fund to a few months of expenses. Then increase retirement contributions, often toward around fifteen percent of income including any match, through a 401(k), an IRA, or both. The exact order can vary with your situation. But notice that index funds come after the safety net, not before it. Money you might need next year doesn't belong in the stock market.",
+     "on_screen_text": "Safety net first, then invest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short staircase with a jar on the bottom step and a plant at the top. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. A fund pools money to buy many investments, so one share gives you a slice of all of them. An index fund follows a list, like the S&P 500, instead of trying to beat it, and usually charges much less. The main kinds are total market, S&P 500, international, bonds and target-date. The expense ratio is the first number to check: in our example, a one percent fee cost about forty-two thousand dollars over thirty years compared with zero point zero three percent. Diversification still leaves market risk, so only invest money you won't need for years. Next in the Money Basics series: how to buy your first car without overpaying.",
+     "on_screen_text": "Fund · index · kinds · fees · risk",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small basket and a tiny fee tag. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Index funds explained: what they are, the main kinds, and why the expense ratio matters. In our example a 1% fee costs about $42,000 over 30 years vs 0.03%.\n\nExamples use an assumed 7% return for illustration. Investing involves risk, including loss. Not financial advice.",
+   "hashtags": [
+    "indexfunds",
+    "investingforbeginners",
+    "expenseratio",
+    "retirement",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "Index funds explained for complete beginners: what a fund is, index vs actively managed funds, the main kinds (total market, S&P 500, international, bonds, target-date), the expense ratio, and a 30-year fee-drag chart at an assumed 7% showing how a 1% fee compares with 0.03%. No fund recommendations.\n\nChapters\n0:00 Intro\n0:46 What a fund is\n1:33 What makes it an index fund\n2:20 The main kinds you'll see\n3:08 The one number: expense ratio\n3:57 Fee drag: the 30-year chart\n4:48 Diversification and risk\n5:34 How to actually buy one\n6:19 Common mistakes\n6:58 How much to put in\n7:47 Recap\n\nLinks\nExpense ratios explained: https://moneymadesimple.netlify.app/blog/expense-ratios-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-06\nHow to start investing with $100 a month: https://moneymadesimple.netlify.app/blog/how-to-start-investing-with-100-a-month/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-06\nRobo-advisors compared: https://moneymadesimple.netlify.app/compare/best-robo-advisors/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-06\n401(k) match explained: https://moneymadesimple.netlify.app/blog/401k-match-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-06\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-06\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "1% fee = $42K?",
+   "sources": [
+    "https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-1",
+    "https://www.spglobal.com/spdji/en/research-insights/spiva/",
+    "https://www.investor.gov/financial-tools-calculators/calculators/mutual-fund-analyzer"
+   ],
+   "claims_to_verify": [
+    "$200/mo, 360 months: at 6.97%/12 ≈ $243K; at 6.0%/12 ≈ $201K; difference ≈ $42K",
+    "SPIVA: most active US large-cap funds underperformed the S&P 500 over 15 years (check latest report)",
+    "Typical broad index expense ratios ~0.03–0.2%",
+    "Assumed 7% is illustrative"
+   ],
+   "title_variants": [
+    "What Is an Index Fund? (Explained Simply, With Real Numbers)",
+    "Why a 1% Fee Can Cost You $42,000: Index Funds Explained"
+   ],
+   "hook_variants": [
+    "Instead of picking stocks, you can own a slice of hundreds of companies at once. That's an index fund.",
+    "Index funds explained in plain English: what they are, the main types, and the one number to check."
+   ],
+   "original_element": "worked-example-chart: A 30-year fee-drag chart from the video's own numbers: $200 a month at an assumed 7%, with a 0.03% fee reaching about $243K and a 1% fee about $201K (chapter \"Fee drag: the 30-year chart\")"
+  },
+  "format_style": "explainer",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "A 30-year fee-drag chart from the video's own numbers: $200 a month at an assumed 7%, with a 0.03% fee reaching about $243K and a 1% fee about $201K",
+   "chapter": "Fee drag: the 30-year chart"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Seven steps for a first car, counted down from budget to signing: total cost of ownership, pre-approval, used vs new, a pre-purchase inspection, the out-the-door price worksheet (filled in on camera), add-ons to decline and the long-loan trap.",
+  "series": "money-basics",
+  "series_part": 7,
+  "content_id": "yt-basics-07",
+  "search_terms": [
+   "how to buy a used car",
+   "first car buying tips",
+   "out the door price",
+   "car loan pre approval"
+  ],
+  "thumbnail_alt": "Out-the-door price",
+  "script": {
+   "title": "How to Buy Your First Car Without Overpaying (7 Steps)",
+   "hook": "7 steps to buy your first car without overpaying, counting down to the one most people skip: the out-the-door price.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "7 steps to buy your first car without overpaying, counting down to the one most people skip: the out-the-door price. A car is usually the second-biggest purchase people make, and for a first car it's often the biggest yet. It's also where a lot of people end up with a payment that squeezes their budget for six years. The good news is that most overpaying comes from doing things in the wrong order: falling in love with a car before setting a budget, or negotiating the monthly payment instead of the price. We'll go through seven steps, from budget to signing. Our example is a fictional buyer looking at a used car listed at fourteen thousand dollars.",
+     "on_screen_text": "7 steps, in order",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a car key with a small checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 7: set a total budget, not a payment",
+     "narration": "Step seven, the starting point: decide what you can afford in total, not per month. Include the car payment, insurance, gas or charging, maintenance, registration and parking. One common guideline is to keep total car costs around ten to fifteen percent of take-home pay. On a take-home of thirty-five hundred dollars, that's roughly three hundred fifty to five hundred twenty-five a month for everything, not just the loan. Insurance alone can be a hundred fifty or more for a young driver. So before you shop, get an insurance quote for the kind of car you're considering. Two cars at the same price can cost very different amounts to insure and repair.",
+     "on_screen_text": "Total car costs ≈ 10–15% of take-home",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small pie chart with a car-shaped slice. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 6: get pre-approved",
+     "narration": "Step six: get pre-approved for a loan before you visit a dealer. Apply with your bank or a credit union, which often offer good auto loan rates. Pre-approval tells you the rate and the maximum you can borrow, and it turns you into a cash buyer at the dealership: you're negotiating the car's price, not the financing. If the dealer offers a lower rate, great, take it. But now you have something to compare against. Several loan applications within a short window, often around two weeks, are usually treated as one inquiry for credit scoring, so shopping around for a rate is fine.",
+     "on_screen_text": "Pre-approval = a rate to beat",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a document with a check mark and a small bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 5: new, used or certified",
+     "narration": "Step five: decide between new, used and certified pre-owned. New cars lose value fastest in the first few years. Used cars cost less upfront but may need more repairs. Certified pre-owned cars are used cars inspected by the manufacturer's dealers, usually with an extended warranty, and they cost a bit more than regular used. For many first-time buyers, a reliable used car a few years old hits the sweet spot: someone else absorbed the steepest drop in value, and there's plenty of life left. Look up reliability ratings and common problems for the exact model and year, and check the vehicle history report for accidents and title issues.",
+     "on_screen_text": "New · used · certified pre-owned",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small cars side by side with different tags. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 4: inspect before you buy",
+     "narration": "Step four: get a pre-purchase inspection for any used car. Take it to an independent mechanic you choose, not one the seller recommends. It often costs about a hundred to two hundred dollars and can uncover problems worth thousands. If the seller won't allow an inspection, walk away. At a dealership, look for the Buyers Guide sticker on the window, which federal rules require on used cars. It tells you whether the car comes with a warranty or is sold as is. Also take a proper test drive: highway, city, braking, parking. Turn the radio off and listen.",
+     "on_screen_text": "Independent inspection · Buyers Guide",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a mechanic looking under a car with a flashlight. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3: negotiate the out-the-door price",
+     "narration": "Step three is the one most people skip: negotiate the out-the-door price. That's the total you'll pay, including the car's price, sales tax, title and registration, and every dealer fee. Ask for it in writing, by email if you can, from more than one dealer. Never negotiate the monthly payment. A dealer can hit any monthly number by stretching the loan to seventy-two or eighty-four months, which costs you more in interest. If a salesperson asks what monthly payment you want, the answer is: I'm focused on the out-the-door price. Let's fill in the worksheet for our example on camera.",
+     "on_screen_text": "Negotiate the OUT-THE-DOOR price",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single price tag with several smaller tags attached. No text, no logos, no real people."
+    },
+    {
+     "heading": "On camera: the out-the-door worksheet",
+     "narration": "This chapter is filmed on camera, with the host filling in an out-the-door worksheet by hand for our fictional car. Listed price: fourteen thousand. Negotiated price after comparing two other dealers: thirteen thousand two hundred. Sales tax at an example seven percent: about nine hundred twenty-four dollars. Title and registration: about two hundred fifty. Dealer documentation fee: three hundred ninety-nine, which varies a lot by state. Total out-the-door: about fourteen thousand seven hundred seventy-three dollars. Then the host crosses out two add-ons that were on the first quote: a twelve-hundred-dollar paint protection package and an eight-hundred-dollar extended warranty. Those two lines alone would have added two thousand dollars.",
+     "on_screen_text": "OTD ≈ $14,773 · add-ons crossed out",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a desk with a handwritten worksheet and a pen. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2: decline the extras",
+     "narration": "Step two: in the finance office, decline the extras you didn't plan for. Common ones are extended warranties, paint and fabric protection, VIN etching, nitrogen-filled tyres and pre-paid maintenance. Some can be useful, like gap insurance if you're putting very little down, but you can often buy those cheaper elsewhere, including from your own insurer or credit union. Read every line of the contract before you sign. Check that the price, rate and loan length match what you agreed. If something new appears, ask what it is, and ask for it to be removed. You're allowed to take time and say no.",
+     "on_screen_text": "Read every line · decline what you didn't plan",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a contract with several items crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1: keep the loan short",
+     "narration": "Step one, the final check: keep the loan as short as you can afford. On a twelve-thousand-dollar loan at eight percent, a forty-eight month loan costs about two thousand and sixty dollars in interest, at about two hundred ninety-three a month. Stretch it to seventy-two months and the payment drops to about two hundred ten, but interest rises to about three thousand one hundred fifty. And with a long loan, you can owe more than the car is worth for years, which is a problem if it's totalled or you need to sell. A bigger down payment helps too. If the shorter loan doesn't fit your budget, the car may be too expensive.",
+     "on_screen_text": "48 mo: ~$2,060 interest · 72 mo: ~$3,150",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two roads, one short and one long, with coins along them. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Interest on $12,000 at 8%",
+      "labels": [
+       "48 months",
+       "72 months"
+      ],
+      "values": [
+       2060,
+       3150
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Example loan"
+     }
+    },
+    {
+     "heading": "After you buy",
+     "narration": "After you buy, a few quick jobs. Set up autopay for the loan, and if you can, pay a little extra toward principal each month. Add the car to your insurance before you drive it home. Put the maintenance schedule from the owner's manual in your calendar, because regular oil changes and tyre rotations prevent the big repairs. And start a small car sinking fund, even thirty or forty dollars a month, for tyres, brakes and surprises. When the loan is paid off, keep sending the same payment into savings. That's how your next car gets paid for in cash.",
+     "on_screen_text": "Autopay · insurance · maintenance · sinking fund",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a car parked next to a small labelled jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Private sellers",
+     "narration": "Buying from a private seller instead of a dealer can save money, but you take on more of the work. Ask for maintenance records and the title, and check that the name on the title matches the seller's ID. Run the vehicle history report yourself using the VIN. Still get the independent inspection. Meet in a safe public place, or at the mechanic's shop. Pay with a cashier's check or a bank transfer at your bank, not cash in a parking lot, and get a signed bill of sale. Then handle the title transfer, sales tax and registration at your state's motor vehicle office, which you'd otherwise pay through the dealer.",
+     "on_screen_text": "Private sale: title, history, inspection, safe payment",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two people shaking hands next to a car and a document. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap the seven steps. Seven: set a total monthly budget for all car costs, around ten to fifteen percent of take-home. Six: get pre-approved, so you have a rate to beat. Five: choose new, used or certified, and check reliability and history. Four: get an independent inspection. Three: negotiate the out-the-door price in writing, never the monthly payment. Two: decline extras you didn't plan for, and read every line. One: keep the loan short. Our fictional buyer saved about two thousand dollars just by crossing out two add-ons. Next in the Money Basics series: insurance basics, and the five policies most adults need.",
+     "on_screen_text": "Budget → pre-approve → inspect → OTD → short loan",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a car key and a neat checklist. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Seven steps to buy your first car without overpaying, including the out-the-door price worksheet filled in on camera. Our fictional buyer saved about $2,000 by declining two add-ons.\n\nExamples are hypothetical and for education only. Fees and taxes vary by state. Not financial advice.",
+   "hashtags": [
+    "carbuying",
+    "firstcar",
+    "usedcar",
+    "carloan",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "How to buy your first car without overpaying, in seven steps: a total budget, pre-approval, new vs used vs certified, an independent inspection, negotiating the out-the-door price (worksheet filled in on camera for a fictional $14,000 used car), declining add-ons, and keeping the loan short.\n\nChapters\n0:00 Intro\n0:48 Step 7: set a total budget, not a payment\n1:34 Step 6: get pre-approved\n2:16 Step 5: new, used or certified\n3:01 Step 4: inspect before you buy\n3:42 Step 3: negotiate the out-the-door price\n4:23 On camera: the out-the-door worksheet\n5:08 Step 2: decline the extras\n5:50 Step 1: keep the loan short\n6:37 After you buy\n7:18 Private sellers\n8:04 Recap\n\nLinks\nExample budget on a $45,000 salary: https://moneymadesimple.netlify.app/budget/45000-salary/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-07\nSinking funds explained: https://moneymadesimple.netlify.app/blog/sinking-funds-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-07\nHow credit scores work: https://moneymadesimple.netlify.app/blog/how-credit-scores-work/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-07\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-07\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "Negotiate THIS number",
+   "sources": [
+    "https://consumer.ftc.gov/articles/buying-used-car-dealer",
+    "https://www.consumerfinance.gov/consumer-tools/auto-loans/",
+    "https://www.ftc.gov/legal-library/browse/rules/used-car-rule"
+   ],
+   "claims_to_verify": [
+    "13,200 × 7% = 924; 13,200 + 924 + 250 + 399 = 14,773",
+    "$12,000 at 8%: 48 mo ≈ $293/mo, ~$2,060 interest; 72 mo ≈ $210/mo, ~$3,150 interest",
+    "FTC Used Car Rule requires a Buyers Guide on dealer used cars",
+    "Rate-shopping window treated as one inquiry (often ~14–45 days depending on score model)",
+    "Doc fees vary by state"
+   ],
+   "title_variants": [
+    "First Car? 7 Steps So You Don't Overpay",
+    "The Out-the-Door Price: How to Buy a Used Car Without Getting Played"
+   ],
+   "hook_variants": [
+    "The monthly payment is how dealers win. The out-the-door price is how you do.",
+    "Buying your first car? Do these 7 things in this order."
+   ],
+   "original_element": "human-segment: The host on camera filling in an out-the-door price worksheet by hand for the fictional $14,000 used car, then crossing out two add-ons worth $2,000 (chapter \"On camera: the out-the-door worksheet\")"
+  },
+  "format_style": "countdown",
+  "original_element": {
+   "type": "human-segment",
+   "detail": "The host on camera filling in an out-the-door price worksheet by hand for the fictional $14,000 used car, then crossing out two add-ons worth $2,000",
+   "chapter": "On camera: the out-the-door worksheet"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Five policies most adults should understand (health, auto, renters or home, disability, life), mapped onto a fictional 27-year-old renter's risks, plus deductibles vs premiums and how to compare quotes.",
+  "series": "money-basics",
+  "series_part": 8,
+  "content_id": "yt-basics-08",
+  "search_terms": [
+   "what insurance do i need",
+   "insurance basics",
+   "disability insurance explained",
+   "do i need life insurance"
+  ],
+  "thumbnail_alt": "Insurance coverage map",
+  "script": {
+   "title": "Insurance Basics: The 5 Policies Most Adults Need",
+   "hook": "5 insurance policies most adults need, and 1 that a lot of 27-year-olds don't need yet. Let's map them onto one person's real risks.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "5 insurance policies most adults need, and 1 that a lot of 27-year-olds don't need yet. Let's map them onto one person's real risks. Insurance can feel like paying for nothing, until the day it pays for everything. The idea is simple: you pay a predictable amount, called a premium, so that a rare but expensive event, like a hospital stay, a car accident or a fire, doesn't wipe out your savings or put you in debt. In this video we'll go through the five policies most adults should understand, using a fictional twenty-seven-year-old who rents an apartment, drives to work, and has no kids. For each one: what it covers, when you need it, and what to check.",
+     "on_screen_text": "5 policies · 1 person's risks",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small umbrella over a coin jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "How insurance works: premium vs deductible",
+     "narration": "First, two words that decide what you pay. The premium is what you pay every month or year to keep the policy. The deductible is what you pay out of pocket when you make a claim, before insurance starts paying. They move in opposite directions. A higher deductible means a lower premium, and a lower deductible means a higher premium. The right choice depends on your savings. A good rule: never choose a deductible larger than you could pay from your emergency fund tomorrow. If you have five thousand saved, a twenty-five-hundred-dollar deductible might be fine. If you have five hundred, it isn't, even if the premium is cheaper.",
+     "on_screen_text": "Premium ↔ deductible",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a seesaw with a small coin on one end and a bigger coin on the other. No text, no logos, no real people."
+    },
+    {
+     "heading": "1. Health insurance",
+     "narration": "One: health insurance. Medical bills are one of the most common causes of serious debt, and even one emergency room visit can cost thousands. Most people get coverage through an employer, a parent's plan until age twenty-six, the Health Insurance Marketplace at HealthCare dot gov, or Medicaid. When comparing plans, look at three numbers: the premium, the deductible, and the out-of-pocket maximum, which is the most you'd pay in a year for covered care. Also check that your doctors and prescriptions are covered. Our twenty-seven-year-old picks their employer's mid-level plan, with a deductible they could cover from savings.",
+     "on_screen_text": "Premium · deductible · out-of-pocket max",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shield with a small medical cross. No text, no logos, no real people."
+    },
+    {
+     "heading": "2. Auto insurance",
+     "narration": "Two: auto insurance, required in almost every state if you drive. The most important part is liability coverage, which pays for injuries and damage you cause to other people. State minimum limits are often very low compared with what a serious accident can cost, so many people choose higher limits for a modest increase in premium. Collision and comprehensive cover damage to your own car. If your car is older and worth little, you might drop those. If you have a car loan, the lender usually requires them. Our example person raises liability limits above the state minimum and keeps a one-thousand-dollar deductible on collision.",
+     "on_screen_text": "Liability first · minimums are low",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a car with a shield over it. No text, no logos, no real people."
+    },
+    {
+     "heading": "3. Renters or home insurance",
+     "narration": "Three: renters or homeowners insurance. Your landlord's policy covers the building, not your belongings or your liability. Renters insurance covers your stuff against things like fire and theft, includes liability if someone is hurt in your place, and pays for somewhere to stay if your apartment becomes unlivable after a covered event. It's often around fifteen to twenty dollars a month, though prices vary. Ask for replacement cost coverage, so you're paid what it costs to buy new. Flood and earthquake are usually separate. Homeowners insurance is the same idea, plus the building itself, and a mortgage lender will require it.",
+     "on_screen_text": "Your stuff + liability + a place to stay",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small apartment with an umbrella over it. No text, no logos, no real people."
+    },
+    {
+     "heading": "4. Disability insurance",
+     "narration": "Four: disability insurance, the one most people forget. For someone at the start of their career, the most valuable financial asset isn't savings. It's decades of future paychecks. Disability insurance replaces part of your income, commonly around sixty percent, if illness or injury stops you working. Many employers offer short-term and long-term disability, sometimes free. Check your benefits portal for it. Long-term coverage is the one that protects against the big risk. If your employer doesn't offer it, individual policies exist, though they cost more. Our twenty-seven-year-old discovers their employer includes long-term disability at no cost, and adds a small optional top-up.",
+     "on_screen_text": "Protect your paycheck",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paycheck under a small shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "5. Life insurance, and when you don't need it",
+     "narration": "Five: life insurance. Its job is to replace your income for people who depend on it: a partner, children, or anyone relying on your paycheck. If nobody depends on your income, like our single twenty-seven-year-old with no kids, you often don't need it yet, beyond any small free policy from work. When you do need it, term life insurance is the simple, lower-cost option for most families. It covers you for a set period, like twenty or thirty years, while kids are growing up or the mortgage is being paid. Be cautious if someone pushes a complex policy that's also sold as an investment. Ask what it costs, and compare with plain term.",
+     "on_screen_text": "Dependents? Term life · no dependents? Often not yet",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small family silhouette next to a shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "The coverage map",
+     "narration": "Here's the coverage map for our fictional person. Health: employer plan, deductible within savings. Auto: higher liability limits, one-thousand-dollar collision deductible. Renters: replacement cost, about eighteen dollars a month. Disability: long-term through work, plus a small top-up. Life: not needed yet, beyond the free employer policy. The gap we found: they have two thousand dollars saved. The health deductible is fifteen hundred and the car deductible is one thousand, so two claims at once would be twenty-five hundred, more than their savings. So the emergency fund goal goes up. That's the point of mapping it out. You see the risks that are covered, the ones that aren't, and where your savings have to fill the gap.",
+     "on_screen_text": "Covered · not needed yet · gap",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple map with five labelled shields, one dashed. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Savings vs two deductibles",
+      "labels": [
+       "Savings",
+       "Health deductible",
+       "Car deductible",
+       "Both at once"
+      ],
+      "values": [
+       2000,
+       1500,
+       1000,
+       2500
+      ],
+      "unit_prefix": "$",
+      "note": "Fictional 27-year-old renter"
+     }
+    },
+    {
+     "heading": "How to compare quotes",
+     "narration": "How to compare quotes. Get at least three for auto and renters, with identical coverage limits and deductibles, so you're comparing like with like. Ask about discounts: bundling auto and renters, good driving, paying the year upfront, safety features. Check the insurer's complaint record through your state's insurance department. And review every policy once a year, or after a big change: a new car, a move, a marriage, a baby. Rates change, and loyalty isn't always rewarded. Shopping around every year or two is often worth an hour.",
+     "on_screen_text": "3 quotes · same limits · review yearly",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three documents side by side with a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "Insurance you probably don't need",
+     "narration": "Just as important: insurance you probably don't need. Extended warranties on small electronics and appliances are often expensive relative to the chance of a claim, and your credit card may already extend the manufacturer's warranty. Rental car coverage at the counter may duplicate your own auto policy or card benefits. Flight insurance sold at the airport usually duplicates coverage you already have. Phone insurance can make sense for an expensive phone you're likely to break, but compare the monthly cost with the deductible. The general rule: insure against costs that would seriously hurt you, and self-insure the small stuff with your emergency fund.",
+     "on_screen_text": "Insure big risks · self-insure small ones",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big umbrella over a house and a tiny one over a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Where to start this week",
+     "narration": "If this feels like a lot, here's where to start this week. Log in to your employer's benefits portal and write down what you already have: health plan, any life insurance, short- and long-term disability. Many people find coverage they didn't know about. Then check your auto policy's liability limits on the declarations page, and get one quote with higher limits. If you rent and have no renters insurance, get two quotes. That's three small tasks, about an hour in total, and they close the biggest gaps for most people. Put a reminder in your calendar to review everything once a year.",
+     "on_screen_text": "Benefits portal · auto limits · renters quote",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a short three-item checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. Premium is what you pay to keep a policy; the deductible is what you pay when you claim, and it should never be more than you could pay from savings. Health insurance protects against huge medical bills. Auto liability protects other people from you, and state minimums are low. Renters insurance covers your stuff and your liability for little money. Disability insurance protects your paycheck, and it's often available through work. And life insurance is for people who depend on your income, usually as simple term coverage. The link below goes to our emergency fund guide. Next in the Money Basics series: how to read a credit card statement.",
+     "on_screen_text": "Health · auto · renters · disability · life",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes under a large umbrella with five small icons. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Health, auto, renters, disability and life insurance, mapped onto one fictional 27-year-old renter, plus premiums vs deductibles and how to compare quotes.\n\nExamples are hypothetical and for education only. Coverage varies by policy and state. Not insurance or financial advice.",
+   "hashtags": [
+    "insurance",
+    "rentersinsurance",
+    "healthinsurance",
+    "disabilityinsurance",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "Insurance basics for adults: premium vs deductible, then health, auto, renters or homeowners, disability and life insurance, mapped onto a fictional 27-year-old renter's risks, with how to compare quotes and when you don't need life insurance yet.\n\nChapters\n0:00 Intro\n0:49 How insurance works: premium vs deductible\n1:34 1. Health insurance\n2:14 2. Auto insurance\n2:58 3. Renters or home insurance\n3:40 4. Disability insurance\n4:22 5. Life insurance, and when you don't need it\n5:09 The coverage map\n5:57 How to compare quotes\n6:33 Insurance you probably don't need\n7:16 Where to start this week\n7:58 Recap\n\nLinks\nHow to build an emergency fund: https://moneymadesimple.netlify.app/blog/how-to-build-an-emergency-fund/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-08\nSinking funds explained: https://moneymadesimple.netlify.app/blog/sinking-funds-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-08\nExample budget on a $50,000 salary: https://moneymadesimple.netlify.app/budget/50000-salary/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-08\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-08\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "5 policies. 1 you may skip.",
+   "sources": [
+    "https://www.healthcare.gov/",
+    "https://content.naic.org/consumer",
+    "https://www.ssa.gov/disability"
+   ],
+   "claims_to_verify": [
+    "Dependent coverage on a parent's plan generally to age 26",
+    "Long-term disability commonly replaces ~60% of income",
+    "Renters insurance often ~$15–20/month; varies",
+    "State minimum liability limits vary"
+   ],
+   "title_variants": [
+    "Which Insurance Do You Actually Need? (5 Policies, Explained)",
+    "Insurance for Beginners: Health, Auto, Renters, Disability and Life"
+   ],
+   "hook_variants": [
+    "Insurance is just paying a little now so one bad day doesn't cost you everything. Here's what to cover first.",
+    "The insurance most people forget isn't life insurance. It's the one that protects your paycheck."
+   ],
+   "original_element": "worked-example-chart: A coverage map chart for the fictional 27-year-old renter: five policies as shields (covered, not needed yet, gap), with the gap showing two deductibles at once exceeding savings (chapter \"The coverage map\")"
+  },
+  "format_style": "list",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "A coverage map chart for the fictional 27-year-old renter: five policies as shields (covered, not needed yet, gap), with the gap showing two deductibles at once exceeding savings",
+   "chapter": "The coverage map"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "A sample credit card statement read top to bottom on screen: statement vs current balance, minimum payment, due date, the minimum payment warning box, the interest charge, fees, and how to dispute a charge, ending with an autopay setup that avoids interest.",
+  "series": "money-basics",
+  "series_part": 9,
+  "content_id": "yt-basics-09",
+  "search_terms": [
+   "how to read a credit card statement",
+   "statement balance vs current balance",
+   "credit card grace period",
+   "how to avoid credit card interest"
+  ],
+  "thumbnail_alt": "Credit card statement, explained",
+  "script": {
+   "title": "How to Read a Credit Card Statement (and Never Pay Interest)",
+   "hook": "There are 2 balances on your credit card statement, and paying the wrong one can cost you interest. Let's read a statement line by line.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "There are two balances on your credit card statement, and paying the wrong one can cost you interest. Let's read a statement line by line. A credit card statement is packed with numbers, and most people look at just one: the minimum payment. That's the most expensive habit in personal finance. In this video we'll go through a sample statement on screen, section by section, using a fictional card with a twenty-four percent APR. You'll learn which balance to pay, how the grace period works, what the minimum payment warning box is telling you, how interest is calculated, and how to dispute a charge. Then we'll set up autopay so you never pay interest on purchases again.",
+     "on_screen_text": "Read the whole statement",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a long statement with a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "The summary box",
+     "narration": "Start with the account summary, usually at the top of page one. You'll see the previous balance, payments and credits, new purchases, any fees, interest charged, and the new balance. This is the story of the month in one box. Read it like a receipt. Did any payments you made show up? Are there purchases you don't recognise? Was there a fee or interest you didn't expect? For our sample: previous balance, one thousand two hundred. Payment, one thousand two hundred. New purchases, eight hundred forty-five. Fees and interest, zero. New balance, eight hundred forty-five dollars. That last number is the statement balance, and it's the one that matters most.",
+     "on_screen_text": "Previous · payments · purchases · new balance",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple summary box with five lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Statement balance vs current balance",
+     "narration": "Now the two balances. The statement balance is what you owed when the billing cycle closed: eight hundred forty-five dollars in our example. The current balance, which you'll see in your card's app, includes everything since then, including purchases made after the statement closed. Here's the key point. To avoid interest on purchases, you generally need to pay the statement balance in full by the due date. You don't need to pay the current balance. Paying more is fine, of course, but paying the statement balance in full each month is what keeps your grace period working. Paying only part of it means interest starts.",
+     "on_screen_text": "Pay the STATEMENT balance in full",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two numbers side by side, one circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Due date and grace period",
+     "narration": "The payment due date is printed clearly near the summary. Card issuers are generally required to give you at least twenty-one days between when the statement is sent and when payment is due. That window is the grace period. If you pay the full statement balance by then, purchases made during the cycle generally cost you no interest at all. If you don't, you usually lose the grace period, and interest can start on new purchases from the day you make them, until you pay in full again. That's why one month of carrying a balance can cost more than people expect. And note the due time, often five p.m. on the due date, depending on your card.",
+     "on_screen_text": "At least 21 days · pay in full = no interest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a 21-day bracket. No text, no logos, no real people."
+    },
+    {
+     "heading": "The minimum payment",
+     "narration": "Next, the minimum payment. It's the smallest amount you can pay to avoid a late fee and a late mark on your credit. Issuers calculate it differently, but it's often a small percentage of the balance plus interest and fees, with a floor of something like twenty-five to forty dollars. In our example it's thirty-five dollars. Always pay at least the minimum, on time, every month. Late payments can mean fees, a penalty APR on some cards, and damage to your credit score if the payment is thirty or more days late. But paying only the minimum when you carry a balance is how debt drags on for years. Which brings us to the most useful box on the statement.",
+     "on_screen_text": "Minimum = avoids late fees, not interest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small coin next to a much larger stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "The minimum payment warning box",
+     "narration": "Look for a box titled something like minimum payment warning. It's required by federal law, and it shows two scenarios for your current balance. First: if you only pay the minimum each month, how long it will take to pay off, and what it will cost in total. Second: how much you'd need to pay each month to clear it in three years, and how much that would save. On a large balance, the minimum-only line can show many years and thousands of dollars in interest. This box is the clearest picture you'll get of what carrying a balance really costs. If you have a balance, read it every month and aim for the three-year number or better.",
+     "on_screen_text": "Read the warning box every month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a highlighted box on a statement page. No text, no logos, no real people."
+    },
+    {
+     "heading": "How interest is calculated",
+     "narration": "If you do carry a balance, here's how the interest charge is usually calculated. The card takes your APR and divides it by three hundred sixty-five to get a daily rate. Twenty-four percent becomes about point zero six six percent a day. It then works out your average daily balance for the cycle, multiplies by the daily rate and the number of days. On an average daily balance of two thousand dollars over a thirty-day cycle, that's about thirty-nine dollars and fifty cents. You'll see the result in an interest charge calculation section, often broken out by purchases, balance transfers and cash advances, which can have different rates.",
+     "on_screen_text": "$2,000 × 24% ÷ 365 × 30 ≈ $39.50",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a small coin on each day. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "One month of interest at 24% APR",
+      "labels": [
+       "Avg daily balance",
+       "Interest (30 days)"
+      ],
+      "values": [
+       2000,
+       39.5
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "24% ÷ 365 × 30 days, example"
+     }
+    },
+    {
+     "heading": "Fees to watch",
+     "narration": "Then the fees section. Common ones are late fees, foreign transaction fees, often around three percent of purchases made abroad or with foreign merchants, cash advance fees, balance transfer fees and annual fees. Cash advances are especially expensive: there's usually a fee, a higher APR, and no grace period, so interest starts right away. If you see a fee you didn't expect, call the issuer and ask politely whether it can be waived, especially a first late fee. Many issuers will remove a one-time late fee for a customer with a good history. It takes five minutes and it's often worth it.",
+     "on_screen_text": "Late · foreign · cash advance · annual",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a few small tags hanging from a card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Spot errors and dispute charges",
+     "narration": "Read the transaction list every month, ideally in your card's app every week. Look for charges you don't recognise, double charges, subscriptions you cancelled, and refunds that never arrived. If something is wrong, contact the merchant first if it's a simple mistake. If that doesn't work, or it's fraud, dispute it with your card issuer. Under federal billing error rules, you generally have sixty days from the statement date to dispute a billing error in writing, though many issuers let you start in the app. For suspected fraud, call right away and ask for a new card number. Credit cards generally give you stronger protection than debit cards, which is one more reason to check your statement.",
+     "on_screen_text": "Dispute errors within 60 days",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a list with one item circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Screen recording: set up autopay",
+     "narration": "Let's finish with the setup that makes interest a non-issue. In this screen recording, we're in a demo card account. Go to payments, then autopay. Choose the statement balance, not the minimum and not a fixed amount. Choose the bank account it pulls from, and make sure that account always has enough to cover your typical monthly spending. Turn on alerts for statement ready, payment due, and large transactions. Now every month, the full statement balance is paid on time automatically, and you get a nudge to review the statement. If you're paying down an existing balance, set autopay for at least the minimum as a safety net, and make extra payments on top.",
+     "on_screen_text": "Autopay: statement balance",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone screen with a payments menu and a toggle. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. The summary box tells the month's story. The statement balance is what you need to pay in full by the due date to avoid interest; the current balance includes newer purchases. You get at least twenty-one days of grace period. The minimum payment avoids late fees, not interest. The minimum payment warning box shows exactly what carrying a balance costs. Interest is calculated daily from your average balance. Watch for fees, especially cash advances, and dispute errors within sixty days. Then set autopay to the statement balance. Next in the Money Basics series: renting versus buying a home, with the real monthly math.",
+     "on_screen_text": "Statement balance · grace · warning box · autopay",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a neat statement with a check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Your credit card statement, line by line: which balance to pay, how the grace period works, the minimum payment warning box, how interest is calculated, and setting autopay so you never pay interest on purchases.\n\nExamples are hypothetical and for education only. Card terms vary. Not financial advice.",
+   "hashtags": [
+    "creditcards",
+    "creditcardstatement",
+    "creditcarddebt",
+    "personalfinance",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "How to read a credit card statement, line by line, on a sample statement: the summary, statement vs current balance, the grace period and due date, the minimum payment, the minimum payment warning box, how interest is calculated, fees, disputes, and a screen recording of setting autopay to the statement balance.\n\nChapters\n0:00 Intro\n0:48 The summary box\n1:33 Statement balance vs current balance\n2:17 Due date and grace period\n3:06 The minimum payment\n3:55 The minimum payment warning box\n4:44 How interest is calculated\n5:28 Fees to watch\n6:11 Spot errors and dispute charges\n6:59 Screen recording: set up autopay\n7:46 Recap\n\nLinks\nHow credit scores work: https://moneymadesimple.netlify.app/blog/how-credit-scores-work/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-09\nDebt avalanche vs snowball: https://moneymadesimple.netlify.app/blog/debt-avalanche-vs-snowball/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-09\nBalance transfer cards compared: https://moneymadesimple.netlify.app/compare/best-balance-transfer-cards/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-09\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-09\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "Pay THIS balance",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/credit-cards/",
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
+    "https://consumer.ftc.gov/articles/using-credit-cards-and-disputing-charges"
+   ],
+   "claims_to_verify": [
+    "Statements generally mailed/delivered at least 21 days before the due date (CARD Act)",
+    "Minimum payment warning box required by federal law",
+    "Billing error disputes generally within 60 days of the statement",
+    "2,000 × 24% ÷ 365 × 30 ≈ 39.45",
+    "Foreign transaction fees often ~3%"
+   ],
+   "title_variants": [
+    "Statement Balance vs Current Balance: Your Credit Card Statement, Explained",
+    "The 1 Box on Your Credit Card Statement Everyone Should Read"
+   ],
+   "hook_variants": [
+    "Your statement tells you exactly how to never pay credit card interest. Most people skip that part.",
+    "Minimum payment, statement balance, current balance: which one do you actually pay?"
+   ],
+   "original_element": "screen-recording: Screen recording in a demo card account: setting autopay to the statement balance, choosing the funding account and turning on statement, due-date and large-transaction alerts (chapter \"Screen recording: set up autopay\")"
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Screen recording in a demo card account: setting autopay to the statement balance, choosing the funding account and turning on statement, due-date and large-transaction alerts",
+   "chapter": "Screen recording: set up autopay"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A fictional $1,800 rental vs a $350,000 home with 20% down at an example 6.5%, compared over 5 and 10 years with every unrecoverable cost counted on both sides, plus the investment growth on the renter's down payment. Ends close, which is the point.",
+  "series": "money-basics",
+  "series_part": 10,
+  "content_id": "yt-basics-10",
+  "search_terms": [
+   "rent vs buy",
+   "is renting throwing money away",
+   "true cost of owning a home",
+   "rent or buy calculator"
+  ],
+  "thumbnail_alt": "Rent vs buy, 5 and 10 years",
+  "script": {
+   "title": "Renting vs Buying a Home: The Real Monthly Math",
+   "hook": "Rent at $1,800 vs a $350,000 home. We counted every cost over 5 and 10 years, and the answer is closer than most people think.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Rent at eighteen hundred dollars versus a three-hundred-fifty-thousand-dollar home. We counted every cost over five and ten years, and the answer is closer than most people think. You've probably heard that renting is throwing money away. It's one of the most repeated lines in personal finance, and it skips half the math. Owners spend money they never get back too: mortgage interest, property taxes, insurance, maintenance and the costs of buying and selling. In this video we'll compare a fictional renter and a fictional buyer, side by side, with every cost on screen. The numbers are examples, so swap in your own. But the method works anywhere, and it'll help you decide when buying makes sense for you.",
+     "on_screen_text": "Rent vs buy: every cost",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing between a small apartment and a small house. No text, no logos, no real people."
+    },
+    {
+     "heading": "The two people",
+     "narration": "Meet our two fictional people. Both earn the same and have eighty thousand five hundred dollars saved. The renter pays eighteen hundred a month for a nice two-bedroom, plus about fifteen dollars for renters insurance, and expects rent to rise about three percent a year. The buyer finds a similar home for three hundred fifty thousand dollars, puts twenty percent down, which is seventy thousand, and pays about ten thousand five hundred in closing costs, around three percent. They take a thirty-year fixed mortgage of two hundred eighty thousand at an example rate of six point five percent. The renter keeps the eighty thousand five hundred invested instead.",
+     "on_screen_text": "Same savings · two choices",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two small figures, one with a key and one with a lease. No text, no logos, no real people."
+    },
+    {
+     "heading": "The real monthly cost of owning",
+     "narration": "The mortgage payment, principal and interest, comes to about one thousand seven hundred seventy dollars a month. That's the number mortgage calculators show first. But it isn't the cost of owning. Add property tax, an example three hundred fifty a month. Homeowners insurance, about one hundred fifty. And maintenance: a common rule of thumb is to budget about one percent of the home's value per year, which is about two hundred ninety-two a month. That brings the real monthly cost to about two thousand five hundred sixty dollars, before any HOA fees. Compared with eighteen hundred fifteen for the renter, the owner is paying about seven hundred forty-five more each month, at least at first.",
+     "on_screen_text": "$1,770 P&I + $350 + $150 + $292 ≈ $2,562",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a house with four small coin stacks beside it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Unrecoverable costs: the fair comparison",
+     "narration": "The fair comparison isn't rent versus mortgage. It's money you never get back on each side. For the renter, that's rent and renters insurance. For the owner, it's mortgage interest, not principal, because principal builds equity you keep. Plus property tax, insurance, maintenance, closing costs to buy, and eventually selling costs, often around six percent of the sale price. On the other side, the owner gains if the home goes up in value. In our example we'll assume three percent a year. And the renter gains from investing the down payment and the monthly difference, at an assumed five percent a year. These assumptions are not predictions, which is exactly why the result can flip.",
+     "on_screen_text": "Compare money you never get back",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two scales, each with a small pile of coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Five years: the numbers",
+     "narration": "Over five years, here's how it adds up. The owner pays about eighty-eight thousand dollars in interest, twenty-one thousand in property tax, nine thousand in insurance, seventeen thousand five hundred in maintenance, plus ten thousand five hundred to buy and about twenty-four thousand to sell. The home rises in value by about fifty-six thousand, which offsets part of that. Net unrecoverable cost: about one hundred fifteen thousand dollars. The renter pays about one hundred sixteen thousand in rent and insurance. But their invested savings and the monthly difference grow by about twenty-eight thousand dollars. Net cost: about eighty-seven thousand. At five years in this example, renting comes out ahead by around twenty-eight thousand.",
+     "on_screen_text": "5 yrs: owner ≈ $115K · renter ≈ $87K",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two bar charts side by side, the renter's shorter. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ten years: closer",
+     "narration": "Now stretch it to ten years. Buying and selling costs are spread over more years, and each mortgage payment shifts slowly from interest toward principal. The owner's net unrecoverable cost is about one hundred eighty-three thousand. The renter's rent has risen every year, to about two hundred forty-nine thousand in total, but their investments have grown by about seventy-three thousand, for a net cost of about one hundred seventy-six thousand. At ten years, the two are within about seven thousand dollars of each other. Change the home's growth from three percent to four, or the mortgage rate by one point, and the winner flips. That's the honest answer: it depends, and time is the biggest factor.",
+     "on_screen_text": "10 yrs: ≈ $183K vs ≈ $176K",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two bar charts almost the same height. No text, no logos, no real people."
+    },
+    {
+     "heading": "The chart: when does buying win?",
+     "narration": "Here's the chart from our example, plotting each person's net cost year by year. Owning starts far behind because of closing costs, then slowly closes the gap as the interest share of the payment falls and the home's value rises. In this example it gets close to even around year ten, and pulls ahead around year twelve if prices keep rising. That's where the common rule of thumb comes from: don't buy unless you plan to stay at least five years, and ideally longer. If you might move for a job in two or three years, the buying and selling costs alone can wipe out any gain from owning. Renting also gives you flexibility, which has real value even if it's hard to put a number on it.",
+     "on_screen_text": "Stay 5+ years, ideally longer",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a line chart with two lines converging. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Net unrecoverable cost",
+      "labels": [
+       "Own 5 yrs",
+       "Rent 5 yrs",
+       "Own 10 yrs",
+       "Rent 10 yrs",
+       "Own 15 yrs",
+       "Rent 15 yrs"
+      ],
+      "values": [
+       115000,
+       87000,
+       183000,
+       176000,
+       232000,
+       271000
+      ],
+      "unit_prefix": "$",
+      "note": "Fictional example: 3% home growth, 6.5% rate, 3% rent rises"
+     }
+    },
+    {
+     "heading": "What the math doesn't capture",
+     "narration": "Some things don't fit neatly in a spreadsheet. Owning gives you stability, control over your space, and protection from rent increases, since a fixed-rate mortgage payment doesn't rise, though taxes and insurance can. It's also a kind of forced savings: paying principal every month builds equity even if you'd never invest on your own. Renting gives you flexibility, no surprise roof repair bills, and the freedom to move for a better job. Many renters don't actually invest the difference, and in that case owning usually wins more clearly. Be honest about which person you'd be. The math only works if you do the investing part.",
+     "on_screen_text": "Stability vs flexibility",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a house with roots next to a small suitcase. No text, no logos, no real people."
+    },
+    {
+     "heading": "Before you buy: a checklist",
+     "narration": "If you're leaning toward buying, a quick checklist. Have an emergency fund separate from your down payment, because the first year of owning often brings surprise costs. Get pre-approved so you know your real budget, and look at the total monthly cost, not just principal and interest. Aim for a total housing cost you'd be comfortable with even if your income dipped. Budget for closing costs and moving. Check whether you qualify for first-time buyer programs in your state, which can help with down payment or closing costs. And get the home inspected. Our renting and housing pages linked below go into more detail.",
+     "on_screen_text": "Emergency fund · total cost · inspection",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short checklist next to a small house. No text, no logos, no real people."
+    },
+    {
+     "heading": "Questions to ask before you decide",
+     "narration": "Before you decide, ask yourself five questions. One: how long will I realistically stay in this area? Under five years, renting usually wins in examples like this one. Two: is my job stable, and is my emergency fund in place after the down payment? Three: what does a similar home rent for nearby, compared with the full monthly cost of owning, not just the mortgage? Four: am I ready for repairs, which often run one to two percent of the home's value a year? Five: would buying stretch my budget so far that I'd stop saving for retirement? If any answer is shaky, renting while you save is a perfectly good plan. Run the numbers with your own rent, price and rate, because local markets differ a lot.",
+     "on_screen_text": "5 questions before you buy",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a checklist with five small boxes next to a house. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. Renting isn't throwing money away, and owning isn't free either. Compare unrecoverable costs on both sides: rent and insurance for the renter, and interest, taxes, insurance, maintenance and transaction costs for the owner. The real monthly cost of owning in our example was about twenty-five sixty, not the seventeen seventy mortgage payment. At five years, renting came out ahead. At ten, they were nearly even, and small changes in assumptions flip the result. The longer you stay, the better owning tends to look. Plug in your own numbers before you decide. Next in the Money Basics series: how to negotiate your bills and your salary.",
+     "on_screen_text": "Compare unrecoverable costs · time matters",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing between the apartment and house, shrugging kindly. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Renting vs buying, with every cost counted on both sides. In our fictional example, renting wins at 5 years and they're nearly even at 10. Small changes in assumptions flip it.\n\nAll numbers are hypothetical and the growth rates are assumptions, not predictions. Not financial advice.",
+   "hashtags": [
+    "rentvsbuy",
+    "homebuying",
+    "renting",
+    "realestate",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "Renting vs buying a home with the real math: a fictional $1,800 rental vs a $350,000 home with 20% down at an example 6.5%, comparing every unrecoverable cost and the renter's investment growth over 5 and 10 years, with a year-by-year chart. All assumptions are illustrative.\n\nChapters\n0:00 Intro\n0:48 The two people\n1:33 The real monthly cost of owning\n2:20 Unrecoverable costs: the fair comparison\n3:08 Five years: the numbers\n3:55 Ten years: closer\n4:43 The chart: when does buying win?\n5:35 What the math doesn't capture\n6:19 Before you buy: a checklist\n7:02 Questions to ask before you decide\n7:55 Recap\n\nLinks\nExample budget on a $75,000 salary: https://moneymadesimple.netlify.app/budget/75000-salary/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-10\nHow to build an emergency fund: https://moneymadesimple.netlify.app/blog/how-to-build-an-emergency-fund/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-10\nHow to start investing with $100 a month: https://moneymadesimple.netlify.app/blog/how-to-start-investing-with-100-a-month/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-10\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-10\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "Renting = wasted money?",
+   "sources": [
+    "https://www.consumerfinance.gov/owning-a-home/",
+    "https://www.consumerfinance.gov/renters/",
+    "https://www.hud.gov/topics/buying_a_home"
+   ],
+   "claims_to_verify": [
+    "$280K at 6.5%/30 yrs: P&I ≈ $1,769.79",
+    "5 yrs: interest ≈ $88.3K; owner net ≈ $114.9K; rent ≈ $115.6K; renter growth ≈ $28.3K",
+    "10 yrs: owner net ≈ $183.1K; rent ≈ $249.4K; renter growth ≈ $73.0K; renter net ≈ $176.4K",
+    "Assumptions: 3% home growth, 3% rent growth, 5% investment return, 1% maintenance, 3% buy / 6% sell costs"
+   ],
+   "title_variants": [
+    "Is Renting Really Throwing Money Away? We Ran 5 and 10 Years",
+    "Rent vs Buy: The Costs Nobody Puts in the Mortgage Calculator"
+   ],
+   "hook_variants": [
+    "Renting isn't throwing money away, and owning isn't either. Here's what each one really costs.",
+    "Your mortgage payment isn't the cost of owning. Here's the real monthly number."
+   ],
+   "original_element": "worked-example-chart: A year-by-year chart from the video's own model of the owner's and renter's net unrecoverable cost, showing renting ahead at year 5 and the lines nearly meeting at year 10 (chapter \"The chart: when does buying win?\")"
+  },
+  "format_style": "real-numbers",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "A year-by-year chart from the video's own model of the owner's and renter's net unrecoverable cost, showing renting ahead at year 5 and the lines nearly meeting at year 10",
+   "chapter": "The chart: when does buying win?"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Common questions about negotiating, answered with scripts: lowering internet, phone and insurance bills (role-played call on camera), what to say when they say no, and preparing for a raise conversation (role-played on camera).",
+  "series": "money-basics",
+  "series_part": 11,
+  "content_id": "yt-basics-11",
+  "search_terms": [
+   "how to negotiate bills",
+   "how to lower internet bill",
+   "how to ask for a raise",
+   "salary negotiation tips"
+  ],
+  "thumbnail_alt": "Negotiation scripts",
+  "script": {
+   "title": "How to Negotiate Your Bills and Your Salary (Scripts Included)",
+   "hook": "Common question: does calling to lower a bill actually work? Often, yes. Here are the exact words, for 3 bills and 1 raise.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Common question: does calling to lower a bill actually work? Often, yes. Here are the exact words, for three bills and one raise. Negotiating feels awkward for most people, which is exactly why it works: companies expect most customers never to ask. In this video we'll answer the questions people ask most about negotiating, with scripts you can copy. First, recurring bills: internet, phone and insurance. Then the bigger one: asking for a raise. Two chapters are role-played on camera, so you can hear how it sounds. Nothing here is a trick. It's just asking clearly, with information, and being willing to wait for a better answer.",
+     "on_screen_text": "3 bills + 1 raise",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a phone and a small notepad. No text, no logos, no real people."
+    },
+    {
+     "heading": "Which bills can you negotiate?",
+     "narration": "Which bills can you actually negotiate? The best candidates are services with competitors and retention teams: internet, cable, mobile phone plans, car and renters insurance, and some subscriptions. Medical bills can often be negotiated too, especially if you ask for an itemized bill or a payment plan. Credit card interest rates and late fees are worth asking about. Things that are usually fixed: rent mid-lease, utilities like electricity and water in most areas, and taxes. Start with your highest recurring bill that has a competitor. A thirty-dollar monthly reduction is three hundred sixty dollars a year, from one phone call.",
+     "on_screen_text": "Internet · phone · insurance · cards",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short list of bills with small arrows. No text, no logos, no real people."
+    },
+    {
+     "heading": "Before you call: 10 minutes of prep",
+     "narration": "Before you call, ten minutes of prep. Find your current bill and plan details: speed, data, coverage, what you pay now, and how long you've been a customer. Then look up what competitors charge new customers for something similar, and what your own provider offers new customers. Write down one specific number you'd be happy with. Pick a time when you're not rushed. And decide your walk-away point: what you'll do if they won't move, whether that's switching, downgrading or trying again in a few months. Having a real alternative is what makes the call work.",
+     "on_screen_text": "Know your bill · competitor price · your number",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a notepad with three short lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "On camera: the internet bill call",
+     "narration": "This chapter is a role-played call, on camera, with the host as the customer. Here's the script. Hi, I've been a customer for three years, and my bill has gone up to eighty-five dollars a month. I've seen new-customer offers around fifty-five for similar speeds, including from another provider in my area. I'd like to stay, but I need the price to be closer to that. What can you do? If the first person can't help: I understand. Could you transfer me to the team that handles cancellations or retention? Then repeat the same thing, calmly. When they make an offer, ask: how long does that price last, and what will it go to afterwards? Get it confirmed in writing.",
+     "on_screen_text": "\"I'd like to stay, but…\"",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a host at a desk on a phone call with a notepad. No text, no logos, no real people."
+    },
+    {
+     "heading": "When they say no",
+     "narration": "What if they say no? First, ask what options do exist: a smaller plan, a loyalty discount, a promotion that starts next month, or bundling. Second, be willing to switch. If a competitor really is cheaper for similar service, switching is the negotiation. Third, set a reminder to call again in three to six months, since offers change. And be polite the whole way. The person on the phone usually didn't set the price, and being kind tends to get better results. Don't threaten to cancel unless you're prepared to, because sometimes they'll just process it.",
+     "on_screen_text": "No? Ask options · switch · call again",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a small phone icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Phone and insurance scripts",
+     "narration": "Two more quick scripts. Mobile phone: I'm reviewing my bills. I'm on the unlimited plan at seventy dollars, but I use about eight gigabytes a month. What lower plan fits that, and are there any discounts for autopay? Insurance: My policy renews next month. I've had no claims, and I'm comparing quotes. Can you check for any discounts I'm not getting, like bundling, paying in full, or a safe driver discount? And what would it cost with a higher deductible? For insurance, get at least two outside quotes with identical coverage first. Sometimes the best move is simply switching to a cheaper plan that fits how you actually use it.",
+     "on_screen_text": "Match the plan to your real use",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone and a small shield side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Salary: why it matters most",
+     "narration": "Now salary, which matters far more than any bill. A raise compounds: every future raise is often a percentage of your current pay, and retirement contributions and employer matches are too. A three-thousand-dollar raise at age twenty-five is three thousand dollars a year for every year after, before any further raises. Over a career, the gap between people who ask and people who don't can be very large. Yet many people never ask, especially early in their careers. You don't have to be aggressive. You need preparation, a specific number, and good timing.",
+     "on_screen_text": "A raise compounds",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small staircase of coins rising over years. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "One year of one ask",
+      "labels": [
+       "Lower internet bill ($30/mo)",
+       "A $3,000 raise"
+      ],
+      "values": [
+       360,
+       3000
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Examples from this video"
+     }
+    },
+    {
+     "heading": "Preparing for a raise conversation",
+     "narration": "Here's how to prepare. One: list your results with numbers where you can, like projects delivered, money saved, customers helped, or new responsibilities you've taken on. Two: research market pay for your role, level and city using salary surveys and job postings that list pay ranges. Three: pick a specific number or a narrow range, based on that research. Four: time it well. Ask a few weeks before budgets or reviews are set, not right after a bad quarter. Five: book a meeting specifically for this, rather than bringing it up in passing. Write a one-page summary you can share.",
+     "on_screen_text": "Results · market data · a number · timing",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a one-page summary on a clipboard. No text, no logos, no real people."
+    },
+    {
+     "heading": "On camera: the raise conversation",
+     "narration": "This chapter is role-played on camera. Here's the script. Thanks for making time. I'd like to talk about my compensation. Over the past year, I've taken over the client onboarding process, cut setup time by about a third, and trained two new team members. Based on market data for this role in our area, I'm asking for an increase to sixty-two thousand. Then stop talking, and let them respond. If they say the budget is tight: I understand. What would need to happen for this to be possible, and can we agree on a date to revisit it? If money truly isn't available now, ask about other things: a title change, training, extra time off, or a written review date.",
+     "on_screen_text": "State results · state the number · pause",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two people at a small table, one with a clipboard. No text, no logos, no real people."
+    },
+    {
+     "heading": "Common mistakes",
+     "narration": "A few mistakes to avoid. Apologising for asking, or starting with I know this is awkward. Asking without a number, which lets the other side pick one. Comparing yourself to a coworker by name. Threatening to quit unless you'd really accept that outcome. And accepting a verbal promise without a follow-up. After any negotiation, send a short email summarising what was agreed and when. For bills, check the next statement to make sure the new price actually applied. For a raise, check your next pay stub. Small follow-ups protect the result.",
+     "on_screen_text": "No apology · a number · follow up in writing",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a few small warning signs next to an email icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Where to start this week",
+     "narration": "So where do you start this week? Pick one bill, not five. Choose the largest recurring bill that has a competitor, usually internet, phone or insurance. Block twenty minutes on your calendar. Do the ten minutes of prep, make the call, and write down what happened, including the name of the person you spoke with and any offer number. If you save money, move that amount into savings automatically, so the win actually shows up somewhere. Next month, pick the next bill. For salary, start a simple results file today, and add one line every time you finish something worth mentioning. By your next review, you'll have the evidence ready instead of trying to remember a whole year at once.",
+     "on_screen_text": "1 bill this week · a results file today",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with one circled day and a small folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. Many bills can be negotiated, especially internet, phone, insurance and card rates. Prepare with your current bill, competitor prices and a specific number. Ask clearly, ask for retention if needed, and get offers in writing. If they say no, ask about options, be ready to switch, and try again in a few months. For salary, prepare results, market data, a number and good timing, then state it and pause. Follow up everything in writing. The link below goes to our guide on finding and cancelling forgotten subscriptions. Next, the last episode of Money Basics: your first money plan, all on one page.",
+     "on_screen_text": "Prepare · ask · follow up",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a phone and a small trophy. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Scripts to negotiate internet, phone and insurance bills, plus how to prepare for and ask for a raise, with two role-played conversations.\n\nExamples are hypothetical. Results vary by provider and employer. Not financial or career advice.",
+   "hashtags": [
+    "negotiation",
+    "lowerbills",
+    "salarynegotiation",
+    "raise",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "How to negotiate bills and your salary, with scripts: which bills can be negotiated, ten minutes of prep, a role-played internet bill call, what to do when they say no, phone and insurance scripts, and a role-played raise conversation with preparation steps.\n\nChapters\n0:00 Intro\n0:44 Which bills can you negotiate?\n1:25 Before you call: 10 minutes of prep\n2:05 On camera: the internet bill call\n2:55 When they say no\n3:35 Phone and insurance scripts\n4:20 Salary: why it matters most\n4:59 Preparing for a raise conversation\n5:40 On camera: the raise conversation\n6:30 Common mistakes\n7:08 Where to start this week\n7:57 Recap\n\nLinks\nFind and cancel forgotten subscriptions: https://moneymadesimple.netlify.app/blog/find-and-cancel-subscriptions/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-11\nExample budget on a $60,000 salary: https://moneymadesimple.netlify.app/budget/60000-salary/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-11\nMoney tools: https://moneymadesimple.netlify.app/blog/money-tools/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-11\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-11\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "Say this to lower bills",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/",
+    "https://www.bls.gov/oes/",
+    "https://www.dol.gov/agencies/wb"
+   ],
+   "claims_to_verify": [
+    "$30/month × 12 = $360/year",
+    "Results vary; offers change",
+    "Example salary numbers"
+   ],
+   "title_variants": [
+    "\"Can You Lower My Bill?\" The Exact Words to Use",
+    "Negotiating for Beginners: Bills, Then a Raise"
+   ],
+   "hook_variants": [
+    "Two phone calls and one meeting can be worth hundreds a year. Here's what to say.",
+    "Negotiating feels awkward. Scripts make it easy. Here are four."
+   ],
+   "original_element": "human-segment: Two role-played conversations filmed on camera with the host: a call to lower an $85 internet bill, and a raise conversation using results, market data and a specific number (chapter \"On camera: the internet bill call\")"
+  },
+  "format_style": "question-reply",
+  "original_element": {
+   "type": "human-segment",
+   "detail": "Two role-played conversations filmed on camera with the host: a call to lower an $85 internet bill, and a raise conversation using results, market data and a specific number",
+   "chapter": "On camera: the internet bill call"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "The series finale: a one-page money plan filled in on screen for a fictional 26-year-old, pulling from every Money Basics episode: take-home, the money map, debt order, emergency fund target, retirement rate, tax check, insurance and net worth review dates, plus the weekly spending number.",
+  "series": "money-basics",
+  "series_part": 12,
+  "content_id": "yt-basics-12",
+  "search_terms": [
+   "financial plan template",
+   "how to make a money plan",
+   "personal finance plan for beginners",
+   "one page financial plan"
+  ],
+  "thumbnail_alt": "One-page money plan",
+  "script": {
+   "title": "Your First Money Plan: Everything on One Page",
+   "hook": "8 numbers on 1 page. That's a complete money plan. Let's fill one in for a 26-year-old, using everything from this series.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "8 numbers on 1 page. That's a complete money plan. Let's fill one in for a 26-year-old, using everything from this series. Over the last eleven episodes of Money Basics, we covered pay stubs, where money lives, interest, taxes, net worth, index funds, cars, insurance, credit card statements, renting versus buying and negotiating. Each one is a piece. Today we put the pieces together into a single page you can stick on your fridge or pin in your notes app. Our example is a fictional person called Jordan, twenty-six, renting, with a student loan and a small credit card balance. As we go, fill in your own page. You'll finish this video with a plan, not just more information.",
+     "on_screen_text": "8 numbers · 1 page",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a single sheet of paper with eight empty boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 1: take-home pay",
+     "narration": "Number one: monthly take-home pay. From the pay stub episode, this is net pay, not salary. Jordan earns fifty-five thousand dollars, paid every two weeks, and takes home about fifteen hundred twenty-eight per paycheck. One paycheck times twenty-six, divided by twelve, is about three thousand three hundred ten dollars a month. That's box one. Every other number on the page has to fit inside it. If your income varies, use your lowest normal month from the past six. While you're at it, note the date of your next three-paycheck month. That extra paycheck gets a job later in the plan.",
+     "on_screen_text": "1. Take-home: $3,310/mo",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paycheck with a circled number. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 2: fixed bills",
+     "narration": "Number two: fixed monthly bills. Rent, utilities, phone, insurance, transportation, groceries, minimum debt payments and subscriptions. Jordan's rent is twelve hundred, utilities and internet are one forty, phone forty-five, car insurance one twenty, gas and transit one fifty, groceries three fifty, the student loan minimum two hundred twenty, and subscriptions thirty-five. Total: two thousand two hundred sixty dollars. From the negotiating episode, Jordan called the internet provider and cut twenty-five a month, which is already included. That's box two. Take-home minus bills leaves one thousand and fifty dollars to plan.",
+     "on_screen_text": "2. Bills: $2,260 → $1,050 left",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short stack of bills next to a coin pile. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 3: the money map",
+     "narration": "Number three is really a map, from the where-your-money-should-live episode. Checking holds one month of bills and spending plus a three-hundred-dollar cushion. A high-yield savings account holds the emergency fund. A second savings bucket holds sinking funds. And a Roth IRA and the 401(k) hold long-term money. On the page, Jordan writes the account name for each job, so every dollar has a home. The map doesn't change month to month, which is the point. Once it's set up with automatic transfers the day after payday, the plan mostly runs itself.",
+     "on_screen_text": "3. Map: checking · savings · funds · retirement",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small map with four labelled boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 4: the debt order",
+     "narration": "Number four: the debt order. Jordan has a fourteen-hundred-dollar credit card balance at twenty-four percent and a student loan at five percent. From the interest episode, the card is costing far more, so it goes first. Jordan puts two hundred fifty a month extra toward it, on top of the minimum, which clears it in about six months. After that, the two hundred fifty rolls into savings, not the student loan, because at five percent, building the emergency fund and investing matter more for now. From the statement episode, autopay is set to the statement balance for all new spending, so no new balance builds up.",
+     "on_screen_text": "4. Card first: +$250/mo → ~6 months",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short path with a flag at the end. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 5: the emergency fund target",
+     "narration": "Number five: the emergency fund target. A starter fund of one thousand dollars first, then three months of essential expenses. Jordan's essentials are about two thousand two hundred sixty a month, so three months is about sixty-eight hundred. Jordan has twelve hundred saved, so the gap is about fifty-six hundred. After the card is paid off, two hundred fifty a month plus the two extra paychecks a year closes most of that in about a year and a half. From the insurance episode, the target is also set so Jordan could cover two deductibles at once without borrowing. That's box five: sixty-eight hundred dollars, with a target date.",
+     "on_screen_text": "5. Emergency fund: $6,800 target",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a line marking the target. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 6: the retirement rate",
+     "narration": "Number six: the retirement savings rate. Jordan's employer matches fifty percent of contributions up to six percent of salary, so Jordan contributes six percent to get the full match. That's about two hundred seventy-five dollars a month from Jordan, plus about one hundred thirty-seven from the employer. From the index funds episode, it's invested in a low-cost target-date fund, and Jordan checked the expense ratio. The plan says: raise the rate by one percent every year, and with every raise, until reaching about fifteen percent including the match. Investing involves risk, but time is on Jordan's side. That's box six: six percent now, plus one percent each year.",
+     "on_screen_text": "6. Retirement: 6% + match, +1%/yr",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small plant with a staircase beside it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 7: the weekly spending number",
+     "narration": "Number seven: the weekly spending number. Here's the math. Take-home, three thousand three hundred ten. Minus bills, twenty-two sixty. Minus the extra card payment, two fifty. Minus sinking funds for gifts, car repairs and travel, one hundred fifty. That leaves six hundred fifty dollars a month for everything else: eating out, fun, clothes, the random stuff. Six hundred fifty times twelve, divided by fifty-two, is about one hundred fifty dollars a week. That's the number Jordan checks every Sunday. When it's gone, the week's done. It's guilt-free, because everything important on the page has already been paid.",
+     "on_screen_text": "7. Weekly: ≈ $150",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a weekly calendar with a small coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 8: net worth, and two review dates",
+     "narration": "Number eight: net worth, from episode five. Jordan's assets are about fourteen thousand, mostly the 401(k), savings and the car at resale value. Debts are about twenty-three thousand. Net worth: minus nine thousand. That's normal at this stage. The plan has two review dates on the page: January and July. On each date, Jordan spends thirty minutes updating net worth, checking the tax withholding estimator from the pay stub and tax episodes, reviewing insurance, and checking whether any bill can be negotiated down. If the net worth number is rising, the plan is working, whatever the month-to-month budget felt like.",
+     "on_screen_text": "8. Net worth: −$9,000 · review Jan + Jul",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with two circled months and a rising line. No text, no logos, no real people."
+    },
+    {
+     "heading": "The finished page",
+     "narration": "Here's Jordan's finished page, all on screen. One: take-home, three thousand three hundred ten. Two: bills, twenty-two sixty. Three: the money map, with account names. Four: the card first, plus two fifty a month. Five: emergency fund target, sixty-eight hundred. Six: retirement, six percent plus the match, rising one percent a year. Seven: weekly spending, about one fifty. Eight: net worth, minus nine thousand, with January and July review dates. Every automatic transfer is listed at the bottom with its date. That's it. Not a forty-page plan. One page that fits on a fridge, and that Jordan can actually follow.",
+     "on_screen_text": "The whole plan on one page",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a finished one-page plan with eight filled boxes. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Jordan's $3,310 a month",
+      "labels": [
+       "Bills",
+       "Extra to card",
+       "Sinking funds",
+       "Weekly spending"
+      ],
+      "values": [
+       2260,
+       250,
+       150,
+       650
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "/mo",
+      "note": "Fictional example"
+     }
+    },
+    {
+     "heading": "What to do when life changes",
+     "narration": "One more thing: the page is meant to change. When something big happens, like a raise, a new job, a move, a new partner or a new baby, update the page that week, not at the next review date. Start with box one, take-home pay, and work down. A raise means box six goes up first, before spending adjusts. A move means box two changes, and the weekly number follows. If money gets tight, protect the essentials, keep minimum payments current, pause extra debt payments before stopping retirement contributions entirely, and lower the weekly number for a while. Then rebuild. A plan that bends is far more useful than a perfect plan you abandon after one hard month.",
+     "on_screen_text": "Life changes? Update the page",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a one-page plan with a pencil making small edits. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap and thank you",
+     "narration": "That's the end of Money Basics. To recap the plan: take-home, bills, a money map, a debt order, an emergency fund target, a retirement rate, a weekly number, and net worth with two review dates. If you fill in just this page today, you'll be ahead of most people, not because you're perfect, but because you have a plan you can follow. Every earlier episode goes deeper on each box, and they're linked in the description and the playlist. The free seven-day money reset in the description walks you through building your first page one step a day. Thanks for watching the whole series. Subscribe for one money system a week.",
+     "on_screen_text": "Fill in your page today",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes waving next to a pinned one-page plan. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "The Money Basics finale: a complete money plan in 8 numbers on 1 page, filled in for a fictional 26-year-old using every episode in the series.\n\nExamples are hypothetical and for education only. Investing involves risk. Not financial advice.",
+   "hashtags": [
+    "financialplan",
+    "budgeting",
+    "personalfinance",
+    "moneygoals",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "The Money Basics finale: a one-page money plan filled in on screen for a fictional 26-year-old, using every episode in the series. Eight numbers: take-home, bills, the money map, debt order, emergency fund target, retirement rate, weekly spending number and net worth, with two review dates.\n\nChapters\n0:00 Intro\n0:49 Number 1: take-home pay\n1:30 Number 2: fixed bills\n2:08 Number 3: the money map\n2:46 Number 4: the debt order\n3:29 Number 5: the emergency fund target\n4:14 Number 6: the retirement rate\n4:59 Number 7: the weekly spending number\n5:39 Number 8: net worth, and two review dates\n6:21 The finished page\n7:02 What to do when life changes\n7:51 Recap and thank you\n\nLinks\nThe free 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-12\nHow to make a budget you'll keep: https://moneymadesimple.netlify.app/blog/how-to-make-a-budget-you-will-keep/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-12\nExample budget on a $55,000 salary: https://moneymadesimple.netlify.app/budget/55000-salary/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-12\nSinking funds explained: https://moneymadesimple.netlify.app/blog/sinking-funds-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-12\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-12\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "Your money plan. 1 page.",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/",
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+    "https://www.irs.gov/retirement-plans/401k-plans"
+   ],
+   "claims_to_verify": [
+    "1,528 × 26 ÷ 12 ≈ 3,311",
+    "1200+140+45+120+150+350+220+35 = 2,260",
+    "3,310 − 2,260 = 1,050",
+    "$1,400 at 24% paying ~$250 extra + minimum ≈ 5–6 months",
+    "2,260 × 3 ≈ 6,800",
+    "6% of $55K ÷ 12 = $275; 50% match ≈ $137.50",
+    "1,050 − 250 − 150 = 650; 650 × 12 ÷ 52 ≈ 150"
+   ],
+   "title_variants": [
+    "The One-Page Money Plan (Money Basics Finale)",
+    "Put It All Together: A Complete Money Plan in 8 Numbers"
+   ],
+   "hook_variants": [
+    "You've learned the pieces. Now let's put them on one page you'll actually use.",
+    "A money plan doesn't need 40 pages. It needs 8 numbers and 2 dates."
+   ],
+   "original_element": "worked-example-chart: The one-page money plan for the fictional Jordan, filled in box by box on screen with the video's own numbers (take-home $3,310 through net worth −$9,000) and the automatic transfers listed underneath (chapter \"The finished page\")"
+  },
+  "format_style": "on-screen-calculation",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "The one-page money plan for the fictional Jordan, filled in box by box on screen with the video's own numbers (take-home $3,310 through net worth −$9,000) and the automatic transfers listed underneath",
+   "chapter": "The finished page"
+  }
+ }
+]
