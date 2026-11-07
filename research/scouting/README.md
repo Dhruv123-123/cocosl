@@ -62,6 +62,7 @@ official Business Discovery API (see `watchlist.py`).
 | [`state-of-the-business.md`](state-of-the-business.md) | One page for Dhruv: what is built, the 8 decisions blocked on him, and the top 5 actions in order |
 | [`actual-budget-tutorials.md`](actual-budget-tutorials.md) | 6 screen-recording scripts with shot lists for an "Actual Budget + The 20-Minute Budget" MMS series, the licence and naming check (MIT, nominative use, no logo in our art), how the plan maps onto Actual, and the starter-file bonus |
 | [`instagram-growth-2026.md`](instagram-growth-2026.md) | Instagram growth for faceless finance in late 2026: originality rules on carousels (Apr 2026), the 5-hashtag cap, sends per reach, Trial Reels eligibility, collabs, broadcast channels, and 5 factory changes |
+| [`youtube-seo-playbook.md`](youtube-seo-playbook.md) | YouTube SEO for Shorts and long videos: search vs browse for new channels, titles, descriptions, chapters, end screens, playlists, related-video links; every brand pack checked, and 6 factory changes |
 | [`hooks.md`](hooks.md) | 30 hook templates, now used by the writer (`src/contentfactory/hooks_library.json`) |
 | [`repos.csv`](repos.csv) | Raw repo metadata pulled 2026-11-07 |
 | [`watchlist.csv`](watchlist.csv), [`watchlist.py`](watchlist.py) | Accounts to watch, and a script that snapshots their public follower and engagement numbers through the official Business Discovery API |

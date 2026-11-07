@@ -1,6 +1,6 @@
 # State of the business: one page for Dhruv
 
-As of **2026-11-07, 06:30 UTC**. Nothing has been posted, sent, charged or signed up for. Every step that
+As of **2026-11-07, 06:50 UTC** (merge status from `GO_LIVE.md`'s 06:30 UTC check). Nothing has been posted, sent, charged or signed up for. Every step that
 touches the outside world is yours to press. The full step-by-step checklist is `docs/GO_LIVE.md` (PR #7);
 this page is the short version and adds the open decisions from the scouting research (PR #2).
 
@@ -13,7 +13,7 @@ this page is the short version and adds the open decisions from the scouting res
 | **Products** | Six Money Made Simple products ($5-39), plus product ladders for Scam Decoded and 1099 Money, Etsy listings and printables | PRs #6, #9, #10 |
 | **Ad studio** (fastest money) | A portfolio, a $49/$99 listing-video order page, and written leads and pitches | PR #12, `docs/GO_LIVE.md` stage 2 |
 | **Money plan** | Financial model, affiliate application kit, and 20 affiliate articles | PRs #3, #5 |
-| **Research** | 21 research files: platform rules, email tool, launch playbook, API access, sponsors, competitors, open-source tools | PR #2 |
+| **Research** | 24 research files: platform rules, email tool, launch playbook, API access, sponsors, competitors, open-source tools, Instagram growth, YouTube SEO, Actual Budget tutorials | PR #2 |
 
 **12 pull requests are open and none are merged yet.** `docs/GO_LIVE.md` lists a merge order. PR #2 is now
 up to date with `main` and passes its tests.
@@ -22,7 +22,7 @@ up to date with `main` and passes its tests.
 
 | # | Decision | Recommendation | Why it blocks |
 |---|---|---|---|
-| 1 | **Merge the PRs** (#1 → #3 → #2 → #4 → #5 → #6 → #8 → #9 → #11 → #10 → #12 → #7) | Merge the ones GitHub shows green, in that order | Most of the work above isn't on `main` until you do |
+| 1 | **Merge the PRs** (#1 → #3 → #2 → #4 → #5 → #6 → #8 → #9 → #11 → #10 → #12 → #7) | **Safe now, in this order: #1, #3, #2, #4, #8, #12, #7.** They were merged together on top of `main` and all tests passed (`GO_LIVE.md`, 06:30 UTC check). Hold #5, #6, #9, #11 and #10 until GitHub shows them green; their threads are fixing conflicts | Most of the work above isn't on `main` until you do |
 | 2 | **Brand names**: Scam Decoded (not "Scam Shield", which is a T-Mobile trademark)? Keep "Money Made Simple" (a crowded name)? | Yes to Scam Decoded. Keep MMS as a content brand, but don't trademark it | Domains, handles and the email setup all wait on the names |
 | 3 | **Domains**: did you register `1099money.com` or `getmoneymadesimple.com`? If not, buy the free alternatives | `mymoneymadesimple.com`, `getscamdecoded.com`, `the1099money.com`, `eldinerosimple.com` (unregistered on 7 Nov) | Email authentication, Search Console and the Pinterest claim all need the final domain |
 | 4 | **Email tool**: Kit's free plan no longer runs welcome sequences | **Sender Free** (2,500 subscribers and full automations free), or Kit Creator at $33/mo per brand | The welcome sequences carry the day-7 product pitch |
@@ -33,8 +33,9 @@ up to date with `main` and passes its tests.
 
 ## Top 5 actions, in order
 
-1. **Merge the green PRs in the `GO_LIVE.md` order.** About 15 minutes. Then the other threads can fix the
-   rest against one `main`.
+1. **Merge #1, #3, #2, #4, #8, #12 and #7, in that order.** About 15 minutes. The other five (#5, #6, #9,
+   #11, #10) have conflicts or failing site tests that their threads are fixing; merge them after, in the
+   `GO_LIVE.md` order, once GitHub shows them green.
 2. **Set up identity and payments** (`GO_LIVE.md` stage 1): business email with 2FA, a postal address you're OK
    publishing (CAN-SPAM requires one), and Gumroad and Stripe verified with payout and tax forms. About 1 hour
    15 minutes, and verification can take a day or two, so start tonight.
