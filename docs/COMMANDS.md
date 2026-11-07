@@ -35,6 +35,8 @@ Nothing here posts or sends on its own: publishing is a dry run until FACTORY_DR
 | `factory rerender` | re-render a post's media |
 | `factory renderq` | render queue: re-voice posts, render in a separate process |
 | `factory brandkit` | profile picture, banners, highlight covers, style sheet, bios |
+| `factory pack` | plan or export a ready-to-post content pack from a content.json |
+| `factory channels` | repurpose content packs into Pinterest pins, newsletters and text threads |
 
 ## Review
 
