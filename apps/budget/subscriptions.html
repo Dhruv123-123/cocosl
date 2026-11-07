@@ -3,23 +3,47 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Free Subscription Audit: Find Every Recurring Charge in Your Bank Statement | Money Made Simple</title>
-<meta name="description" content="Upload your bank or card CSV, or paste your statement, and see every subscription and recurring charge, what it costs a year, and which prices went up. Private: your file never leaves your browser.">
+<title>Free Subscription Audit: What Do Your Subscriptions Cost a Year? | Money Made Simple</title>
+<meta name="description" content="Tick the subscriptions you pay for, or upload a bank CSV, and see what they cost a year. How to cancel Netflix, Spotify, Amazon Prime and 27 more, from each company's own help pages. Free, private, no sign-up.">
 <meta property="og:title" content="Find every subscription you're paying for">
 <meta property="og:description" content="Upload a bank CSV or paste a statement, see every recurring charge and its yearly cost. Runs in your browser.">
 <meta name="theme-color" content="#0b1d13">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Subscription finder","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Subscription audit","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 </head>
 <body>
 <header class="top">
-  <a class="logo" href="./" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Subscription finder</span></a>
+  <a class="logo" href="./" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Subscription audit</span></a>
   <a class="badge" href="./">Budget app</a>
 </header>
 <main>
-  <h1 class="page-title">What are you still paying for?</h1>
-  <p class="lede">Download the last 3 to 12 months of transactions from your bank or card as a CSV and drop it here, or paste them from your statement. We list every charge that repeats, what it costs a year, and which ones went up. Nothing leaves this browser.</p>
+  <h1 class="page-title">What do your subscriptions really cost a year?</h1>
+  <p class="lede">Tick the ones you pay for and see the yearly total, with how to cancel each one. Then upload a bank statement to catch the ones you forgot. Nothing leaves this browser.</p>
+
+  <section class="card" aria-labelledby="h-quick">
+    <h2 id="h-quick">1. Quick audit: tick what you pay for</h2>
+    <label class="inline guess">First, a guess: what do you think you spend a month? ($)<input id="guess" type="number" min="0" step="1" inputmode="decimal" placeholder="50"></label>
+    <p class="tiny">Prices are typical US prices, checked <span id="checked"></span>. Change any of them to what you pay.</p>
+    <div id="services" class="svc-groups"></div>
+    <details class="import"><summary>Add one that isn't listed</summary>
+      <form id="add-form" class="inline-form">
+        <input id="add-name" aria-label="Name" placeholder="Name, e.g. Gym" maxlength="40">
+        <input id="add-price" aria-label="Price" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Price">
+        <select id="add-per" aria-label="How often"><option value="month">a month</option><option value="year">a year</option></select>
+        <button class="btn small" type="submit">Add</button>
+      </form>
+    </details>
+  </section>
+  <section id="aha" class="card aha" aria-live="polite" hidden></section>
+  <section id="cancel" class="card" hidden>
+    <h2>How to cancel the ones you ticked</h2>
+    <p class="tiny">Steps and links from each company's own help or account pages. Subscribed on an iPhone or Android? Then cancel in <a href="https://support.apple.com/en-us/118428" target="_blank" rel="noopener">Apple subscriptions</a> or <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener">Google Play</a>.</p>
+    <div id="cancel-list"></div>
+  </section>
+
+  <h2 class="page-title" style="font-size:22px;margin-top:28px">2. Find the ones you forgot</h2>
+  <p>Download the last 3 to 12 months of transactions from your bank or card as a CSV and drop it here, or paste them from your statement. We list every charge that repeats, what it costs a year, and which ones went up.</p>
 
   <section class="card">
     <label class="drop" id="drop">

@@ -17,6 +17,14 @@ const server = createServer(async (req, res) => {
   catch { res.writeHead(404); res.end('not found'); }
 });
 
+// Click a share button and check it saves a 1080 x 1080 PNG (headless Chromium can't share files, so it downloads).
+async function sharePng(page, button) {
+  const [dl] = await Promise.all([page.waitForEvent('download', { timeout: 5000 }), page.click(button)]);
+  const file = await dl.path();
+  const buf = await readFile(file);
+  if (buf.readUInt32BE(0) !== 0x89504e47 || buf.readUInt32BE(16) !== 1080 || buf.readUInt32BE(20) !== 1080) throw new Error(`share card is not a 1080 PNG (${dl.suggestedFilename()})`);
+}
+
 const checks = [
   // [path, selector that must contain text after load, optional action]
   ['/', 'h1'],
@@ -286,6 +294,7 @@ const checks = [
   ['/scam-checker/app/quiz.html', '#score h2', async (page) => {
     for (let i = 0; i < 10; i++) await page.click(`button[data-i="${i}"][data-a="1"]`);
     if (!/You got \d+ of 10/.test(await page.textContent('#score'))) throw new Error('score');
+    await sharePng(page, '#share-score');
   }],
   ['/scam-checker/app/report.html', '#advice .first', async (page) => {
     await page.click('#situations [data-s=text]');
@@ -475,7 +484,19 @@ const checks = [
     await page.click('#builder button[type=submit]');
     await page.click('#another');
   }],
-  ['/budget/subscriptions.html', '#results', async (page) => { await page.click('#sample'); }],
+  ['/budget/subscriptions.html', '#results', async (page) => { await page.click('#sample'); await sharePng(page, '[data-share=csv]'); }],
+  ['/budget/subscriptions.html', '#aha .aha-big', async (page) => {
+    await page.fill('#guess', '10');
+    await page.check('[data-id=netflix]');
+    await page.fill('[data-price=spotify]', '12');
+    const big = await page.textContent('#aha .aha-big');
+    if (!/\$383\.88 a year/.test(big)) throw new Error(`quick audit total: ${big}`);
+    if (!/3\.2x your guess/.test(await page.textContent('#aha'))) throw new Error('guess line');
+    if ((await page.locator('#cancel-list .cancel-item').count()) !== 2) throw new Error('cancel steps');
+    await sharePng(page, '[data-share=quick]');
+    await page.reload();
+    if (!(await page.isChecked('[data-id=spotify]'))) throw new Error('quick audit not saved');
+  }],
   ['/budget/bills.html', '#bills .bill', async (page) => { await page.fill('#b-name', 'Internet'); await page.fill('#b-monthly', '80'); await page.click('#bill-form button'); }],
   ['/budget/deals.html', '#result .countdown', async (page) => { await page.fill('[name=balance]', '400'); await page.fill('[name=end]', '2030-01-15'); await page.fill('[name=apr]', '29.99'); await page.fill('[name=payment]', '50'); await page.click('#deal-form button[type=submit]'); }],
   ['/budget/rate.html', '#rate-result .grade', async (page) => { await page.click('#rate-form button'); }],

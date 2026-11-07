@@ -4,6 +4,7 @@
 import { rememberAppHome } from '../lib/app-home.js';
 import { mountOptin } from '../lib/optin.js';
 import { QUESTIONS, verdict, VERDICT_TEXT, QUIZ, quizScore, PLACES, SITUATIONS, STATE_AGS, AG_DIRECTORY, agFor } from '../lib/scamapp.js';
+import { cardModel, shareCard } from '../lib/sharecard.js';
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
@@ -65,7 +66,17 @@ function quiz() {
     if (s.done) {
       const level = s.right >= 9 ? 'low' : s.right >= 7 ? 'medium' : 'high';
       $('#score').className = `card verdict ${level}`;
-      $('#score').innerHTML = `<h2>You got ${s.right} of ${s.total}</h2><p>${s.right >= 9 ? 'Sharp eyes. Share this quiz with someone who\'d get fooled.' : 'Scammers are good at this. The red flags to remember: pressure, a link to log in or pay, and payment by gift card, crypto or wire.'}</p><p><a href="checklist.html">Use the checklist on a real message</a></p>`;
+      $('#score').innerHTML = `<h2>You got ${s.right} of ${s.total}</h2><p>${s.right >= 9 ? 'Sharp eyes. Share this quiz with someone who\'d get fooled.' : 'Scammers are good at this. The red flags to remember: pressure, a link to log in or pay, and payment by gift card, crypto or wire.'}</p><p><a href="checklist.html">Use the checklist on a real message</a></p>
+        <p class="row"><button id="share-score" class="btn" type="button">Share my score</button><span id="share-msg" class="tiny" role="status"></span></p><p class="tiny">Makes a picture with your score to post or send. Nothing else is on it.</p>`;
+      $('#share-score').addEventListener('click', async (ev) => {
+        ev.target.disabled = true;
+        try {
+          const how = await shareCard(cardModel('quiz', s, `${location.host}${location.pathname}`), { filename: 'scam-quiz-score.png', title: 'Scam or real?', text: `I spotted ${s.right} of ${s.total} scams. Can you beat me?` });
+          $('#share-msg').textContent = how === 'downloaded' ? 'Saved the picture. Post it anywhere.' : how === 'shared' ? 'Shared.' : '';
+          try { window.plausible?.('Share', { props: { app: 'scam-checker', page: 'quiz', how } }); } catch { /* analytics off */ }
+        } catch { $('#share-msg').textContent = "Couldn't make the picture in this browser."; }
+        ev.target.disabled = false;
+      });
     }
   };
   $('#quiz').addEventListener('click', (e) => {

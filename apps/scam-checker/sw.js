@@ -2,8 +2,8 @@
 // Offline support for the Scam Shield site and app (scope: this folder). Pages are network first, so
 // people get updates online and the saved copy offline; files are served from the cache at once.
 // Nothing anyone types is cached, and only GETs to this site are touched.
-const VERSION = 'scam-shield-a8460fecb2cd';
-const SHELL = ["./", "app.js", "app/", "app/app.css", "app/app.js", "app/checklist.html", "app/icon-192.png", "app/icon-512.png", "app/icon-maskable-512.png", "app/manifest.webmanifest", "app/quiz.html", "app/report.html", "config.js", "es/", "es/enlace/", "family.js", "family/", "guide.js", "lib/app-home.js", "lib/blocklist.js", "lib/embed-page.js", "lib/family.js", "lib/i18n.js", "lib/optin.js", "lib/scamapp.js", "lib/scan.js", "lib/site.js", "lib/track.js", "link.js", "link/", "privacy.html", "scams/", "signup.js", "style.css"];
+const VERSION = 'scam-shield-795105b00c20';
+const SHELL = ["./", "app.js", "app/", "app/app.css", "app/app.js", "app/checklist.html", "app/icon-192.png", "app/icon-512.png", "app/icon-maskable-512.png", "app/manifest.webmanifest", "app/quiz.html", "app/report.html", "config.js", "es/", "es/enlace/", "family.js", "family/", "guide.js", "lib/app-home.js", "lib/blocklist.js", "lib/embed-page.js", "lib/family.js", "lib/i18n.js", "lib/optin.js", "lib/scamapp.js", "lib/scan.js", "lib/sharecard.js", "lib/site.js", "lib/track.js", "link.js", "link/", "privacy.html", "scams/", "signup.js", "style.css"];
 
 self.addEventListener('install', (e) => e.waitUntil(caches.open(VERSION).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting())));
 self.addEventListener('activate', (e) => e.waitUntil(
