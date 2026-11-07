@@ -109,3 +109,36 @@ test('payoff schedule: payments add up and balances reach zero', () => {
   close(totalPaid, 3000 + 8000 + 600 + r.totalInterest, 0.5);
   assert.equal(debtPayoff(debts).schedule, undefined);
 });
+
+import { federalIncomeTax, takeHomePay } from '../lib/calc.js';
+
+test('2026 federal brackets', () => {
+  assert.equal(federalIncomeTax(0), 0);
+  assert.equal(federalIncomeTax(12400), 1240);
+  // 1240 + 12% of (50,400 - 12,400) = 1240 + 4560
+  assert.equal(federalIncomeTax(50400), 5800);
+  assert.equal(federalIncomeTax(60000), 5800 + 0.22 * 9600);
+  assert.equal(federalIncomeTax(100800, 'married'), 2480 + 0.12 * 76000);
+});
+
+test('take-home pay for a $60k single salary', () => {
+  const r = takeHomePay({ salary: 60000, filing: 'single', pretax401k: 3000, stateRate: 4, payPeriods: 26 });
+  // taxable = 60000 - 3000 - 16100 = 40900 -> 1240 + 0.12 * 28500 = 4660
+  assert.equal(r.taxable, 40900);
+  assert.equal(r.federal, 4660);
+  assert.equal(r.socialSecurity, 3720);
+  assert.equal(r.medicare, 870);
+  assert.equal(r.state, 2280);
+  assert.equal(r.takeHome, 60000 - 3000 - 4660 - 3720 - 870 - 2280);
+  assert.equal(r.marginal, 0.12);
+  close(r.perPaycheck, r.takeHome / 26, 0.01);
+});
+
+test('Social Security stops at the wage base; additional Medicare starts at $200k single', () => {
+  const r = takeHomePay({ salary: 300000 });
+  assert.equal(r.socialSecurity, round(184500 * 0.062));
+  assert.equal(r.medicare, round(300000 * 0.0145 + 100000 * 0.009));
+  assert.throws(() => takeHomePay({ salary: 50000, filing: 'hoh' }), RangeError);
+});
+
+function round(n) { return Math.round(n * 100) / 100; }

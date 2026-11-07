@@ -62,6 +62,18 @@ export const pages = [
     ],
   },
   {
+    slug: 'take-home-pay',
+    title: 'Take-Home Pay Calculator 2026: Salary After Taxes',
+    h1: 'Take-home pay calculator (2026)',
+    description: 'See what a salary pays per paycheck after 2026 federal income tax, Social Security, Medicare, state tax and pre-tax 401(k) or health premiums.',
+    intro: 'Enter your salary and pre-tax deductions. We apply the 2026 federal brackets, the standard deduction, Social Security and Medicare, plus your state rate.',
+    faq: [
+      ['Why is my paycheck smaller than salary divided by paychecks?', 'Federal income tax, Social Security (6.2%), Medicare (1.45%), state tax and any pre-tax deductions all come out first.'],
+      ['Does a 401(k) lower my taxes?', 'Traditional (pre-tax) 401(k) contributions lower your federal and usually state income tax, but not Social Security or Medicare. Roth 401(k) contributions don\'t lower today\'s tax.'],
+      ['What is my tax bracket?', 'Your bracket is the rate on your last dollar of taxable income. Lower slices of income are taxed at lower rates, so your overall (effective) rate is lower than your bracket.'],
+    ],
+  },
+  {
     slug: 'roth-vs-traditional',
     title: 'Roth vs Traditional IRA and 401(k) Calculator',
     h1: 'Roth vs Traditional calculator',

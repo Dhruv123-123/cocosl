@@ -45,6 +45,12 @@ const CALCS = {
       return T.cc(r.minimumOnly, fixed);
     },
   },
+  'take-home-pay': {
+    cta: 'hysa',
+    fields: [['salary', F.salary, 60000], ['pretax401k', F.pretax401k, 3000], ['pretaxHealth', F.pretaxHealth, 0], ['stateRate', F.stateRate, 4, 0.1], ['payPeriods', F.payPeriods, 26]],
+    select: ['filing', F.filing, [['single', F.single], ['married', F.married]]],
+    render: (v) => T.takeHome(v, calc.takeHomePay(v)),
+  },
   'roth-vs-traditional': {
     cta: 'brokerage',
     fields: [['annualContribution', F.annualContribution, 6000], ['currentRate', F.currentRate, 22], ['retirementRate', F.retirementRate, 15], ['years', F.yearsToWithdraw, 35], ['annualReturn', F.annualReturn, 7, 0.1]],
@@ -216,9 +222,15 @@ function mountCalculator(id) {
       holder.insertAdjacentHTML('beforeend',
         `<label>${label}<input name="${name}" type="number" step="${step}" min="0" value="${escapeHtml(val)}" inputmode="decimal"></label>`);
     }
+    if (spec.select) {
+      const [name, label, options] = spec.select;
+      const cur = qs.get(name) || options[0][0];
+      holder.insertAdjacentHTML('afterbegin', `<label>${label}<select name="${name}">${options.map(([val, txt]) => `<option value="${val}"${val === cur ? ' selected' : ''}>${txt}</option>`).join('')}</select></label>`);
+    }
     run = () => {
       try {
         const v = readValues(form, spec.fields);
+        if (spec.select) v[spec.select[0]] = form[spec.select[0]].value;
         out.innerHTML = spec.render(v);
         writeUrl(Object.fromEntries(Object.entries(v).filter(([, x]) => x !== undefined)));
       } catch (err) { out.innerHTML = `<p class="error">${escapeHtml(err.message)}</p>`; }

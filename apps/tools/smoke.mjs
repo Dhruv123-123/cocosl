@@ -30,6 +30,8 @@ const checks = [
   ['/money-calculators/savings-interest/', '#result .big'],
   ['/money-calculators/credit-card-minimum/', '#result .big'],
   ['/money-calculators/roth-vs-traditional/', '#result .big'],
+  ['/money-calculators/take-home-pay/', '#result .big'],
+  ['/money-calculators/es/take-home-pay/', '#result .big'],
   ['/money-calculators/es/', '.tiles'],
   ['/money-calculators/compound-interest/?embed=1', '.embed-credit'],
   ['/money-calculators/embed/', '#embed-form', async (page) => { await page.waitForSelector('#e-preview iframe'); }],

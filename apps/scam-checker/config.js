@@ -19,13 +19,15 @@ export default {
     { id: 'vpn', title: 'Threat protection on public Wi-Fi', blurb: 'Some VPNs block known scam and malware sites before they load.', label: 'Compare VPN plans', es: { title: 'Protección en Wi-Fi público', blurb: 'Algunas VPN bloquean sitios de estafa y malware conocidos antes de que carguen.', label: 'Comparar VPN' }, url: 'https://REPLACE_ME/nordvpn', showWhen: ['low', 'medium'] },
   ],
 
-  // Paid product: a printable family scam-safety kit (sell on Gumroad / Stripe Payment Link).
+  // Paid product: the brand's $9 Family Scam-Proofing Kit (built in launch/scam-decoded/product/, PR #9).
+  // Paste its live Gumroad URL here; the offer stays hidden while the URL contains REPLACE_ME.
   product: {
-    name: 'Family Scam Safety Kit',
+    name: 'The Family Scam-Proofing Kit',
     price: '$9',
-    url: 'https://REPLACE_ME.gumroad.com/l/family-scam-kit',
-    pitch: 'Printable fridge checklist, a "verify before you pay" card for parents and grandparents, and scripts for what to say when a scammer calls.',
+    url: 'https://REPLACE_ME.gumroad.com/l/scam-proof-kit',
+    pitch: 'A printable kit for the whole family: the red flags to watch for, what to say when a scammer calls, and what to do in the first hour if it happens.',
   },
+
 
   analytics: { plausibleDomain: '' },
 };

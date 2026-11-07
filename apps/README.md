@@ -7,7 +7,7 @@ HTML, CSS and JavaScript, no framework, no build step needed) and deploy free.
 | App | Brand | How it earns | Folder |
 |---|---|---|---|
 | **Money calculators** (6 tools) | Money Made Simple | SEO traffic → email list, HYSA / brokerage / debt affiliates, The 20-Minute Budget product | `money-calculators/` |
-| **Is this a scam?** message checker | Scam Shield | Identity protection, password manager and VPN affiliates, weekly scam-alert list, $9 Family Scam Safety Kit | `scam-checker/` |
+| **Is this a scam?** message checker | Scam Shield | Identity protection, password manager and VPN affiliates, weekly scam-alert list, $9 Family Scam-Proofing Kit | `scam-checker/` |
 | **The 20-Minute Budget** web app | Money Made Simple | Freemium: Pro at $3/month or $29 once via Gumroad or Stripe | `budget/` |
 | **Rate My Budget** (8 numbers → score, grade, 3 next moves; anonymous submissions for the video series) | Money Made Simple | Budget app upsell, $19 personal review, content for the "Rate My Budget" series | `budget/rate.html` |
 | **Subscription finder** (upload a bank CSV, see every recurring charge and its yearly cost) | Money Made Simple | Free tool → budget app and Pro upsell, email list | `budget/subscriptions.html` |
@@ -22,7 +22,7 @@ one serverless function that checks budget-app license keys.
 
 ```bash
 cd apps
-npm test            # 67 unit tests, Node 20+, no dependencies
+npm test            # 70 unit tests, Node 20+, no dependencies
 npm run smoke       # opens every page in Chromium at desktop and phone width (needs Playwright)
 ```
 
@@ -49,7 +49,7 @@ Every link containing `REPLACE_ME` is hidden automatically, so the apps are safe
    Brokerage and adviser offers are marked `complianceReview: true`: check FINRA 2210 / SEC Marketing Rule
    before turning them on (see `research/`).
 3. **Products.** Set `product.url` to the Gumroad or Stripe Payment Link for The 20-Minute Budget and the
-   Family Scam Safety Kit.
+   Family Scam-Proofing Kit.
 4. **Budget app Pro.**
    - Gumroad: make two products (monthly membership and one-time), tick "Generate a unique license key",
      put the checkout links in `budget/config.js`, and set the env var `GUMROAD_PRODUCT_ID` on Netlify.
@@ -72,8 +72,10 @@ them `data-brand="0"`, or deploy a copy with their colours. Set `embed.licenceUr
 
 ## Renaming the scam brand
 
-The brand name and domain live in `scam-checker/config.js`. To rename everywhere (pages, guides, kit PDF):
+The brand name and domain live in `scam-checker/config.js`. To rename everywhere (pages and guides):
 `node scam-checker/rename-brand.mjs "Scam Decoded" scamdecoded.netlify.app`.
+The checker sells the brand's Family Scam-Proofing Kit (`launch/scam-decoded/product/`); set its URL in
+`scam-checker/config.js` > `product.url`.
 
 ## Notes and limits
 

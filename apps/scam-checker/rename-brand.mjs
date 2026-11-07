@@ -1,4 +1,4 @@
-// Rename the scam brand everywhere in one go, then rebuild the guide pages and the kit PDF.
+// Rename the scam brand everywhere in one go, then rebuild the guide pages.
 //   node scam-checker/rename-brand.mjs "Scam Decoded" scamdecoded.netlify.app
 // Replaces the current name (config.js `brand`) and domain (config.js `siteUrl`) in every
 // page, script and doc in this folder.
@@ -33,5 +33,3 @@ for (const f of files) {
 }
 console.log(`Renamed "${oldName}" to "${newName}"${newDomain ? ` and ${oldDomain} to ${newDomain}` : ''} in ${changed} files.`);
 execFileSync(process.execPath, [join(root, 'build.mjs')], { stdio: 'inherit' });
-try { execFileSync(process.execPath, [join(root, 'kit', 'build-pdf.mjs')], { stdio: 'inherit' }); }
-catch { console.log('Kit PDF not rebuilt (needs Playwright). Run node scam-checker/kit/build-pdf.mjs where it is installed.'); }
