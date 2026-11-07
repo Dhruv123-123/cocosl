@@ -452,7 +452,8 @@ def _extend(sub) -> None:
     """Optional command groups that live in their own modules."""
     for mod in ("contentfactory.business.cli", "contentfactory.publish.cli", "contentfactory.funnel.cli",
                 "contentfactory.community.cli", "contentfactory.site",
-                "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup"):
+                "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup",
+                "contentfactory.publish.preflight"):
         try:
             module = __import__(mod, fromlist=["register"])
         except ImportError:
