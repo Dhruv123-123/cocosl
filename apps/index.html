@@ -55,7 +55,8 @@
 {"@type":"ListItem","position":36,"name":"Quarterly tax set-aside app for freelancers","url":"freelance-invoices/set-aside/"},
 {"@type":"ListItem","position":37,"name":"Money dashboard spreadsheet maker","url":"budget/money-dashboard.html"},
 {"@type":"ListItem","position":38,"name":"Bill due date calendar","url":"budget/bill-calendar/"},
-{"@type":"ListItem","position":39,"name":"Calculator widgets for your website","url":"money-calculators/embed/"}
+{"@type":"ListItem","position":39,"name":"Calculator widgets for your website","url":"money-calculators/embed/"},
+{"@type":"ListItem","position":40,"name":"Remittance cost calculator","url":"money-calculators/remittance-cost/"}
 ]}</script>
 <style>
 :root{--ink:#0b1d13;--paper:#f4f1e8;--card:#fffdf7;--line:#ddd6c4;--muted:#5b6b61;--gold:#f2b134;--green:#2fbf71}
@@ -112,6 +113,7 @@ div.card.product{display:flex;flex-direction:column;background:var(--card);borde
   <p class="lede">Calculators, a budget app, letters that lower bills, and a scam checker. No sign-up, and everything you type stays in your browser.</p>
   <div id="install" class="install" hidden>
     <p id="install-text">Add these tools to your home screen. They open like an app, and the ones you've used work offline.</p>
+    <p class="tiny-note"><a href="apps.html">All the apps you can install</a></p>
     <div class="row"><button id="install-btn" class="btn" type="button">Install</button><button id="install-later" class="link" type="button">Not now</button></div>
   </div>
   <form id="search-form" class="search" role="search">
@@ -162,6 +164,7 @@ div.card.product{display:flex;flex-direction:column;background:var(--card);borde
     <div class="grid">
       <a class="card" href="money-calculators/debt-payoff/"><h3>Debt payoff: avalanche vs snowball</h3><p>Your debt-free date, total interest, a chart of both plans side by side and a printable payoff plan.</p></a>
       <a class="card" href="money-calculators/tax-refund/"><h3>Tax refund estimator 2026</h3><p>Your federal refund or what you owe, from your W-2: 2026 brackets, the $2,200 child credit and the new tips, overtime and senior deductions.</p></a>
+      <a class="card" href="money-calculators/remittance-cost/"><h3>Sending money abroad: real cost</h3><p>Fee, the markup hidden in the exchange rate and the new 1% cash tax: see how much really arrives. Only your numbers, no provider data. In English and Spanish.</p></a>
       <a class="card" href="money-calculators/credit-card-minimum/"><h3>Credit card minimum payment</h3><p>How long minimum payments take and what they cost.</p></a>
       <a class="card" href="money-calculators/emergency-fund/"><h3>Emergency fund</h3><p>Your target based on how steady your job is, and a month-by-month timeline to reach it.</p></a>
       <a class="card" href="money-calculators/savings-interest/"><h3>High-yield savings</h3><p>The interest your savings earn at today's rates.</p></a>
@@ -214,7 +217,7 @@ div.card.product{display:flex;flex-direction:column;background:var(--card);borde
     </div>
   </aside>
 </main>
-<footer><p>Not financial or legal advice. Private by design: no accounts, and the tools run in your browser. Made by Money Made Simple and Scam Shield.</p></footer>
+<footer><p>Not financial or legal advice. Private by design: no accounts, and the tools run in your browser. Made by Money Made Simple and Scam Shield. <a href="apps.html">Install the apps</a>.</p></footer>
 <script type="module">
 import config from './budget/config.js';
 import { initTracking } from './budget/lib/track.js';

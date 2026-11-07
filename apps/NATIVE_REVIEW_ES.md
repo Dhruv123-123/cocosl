@@ -29,6 +29,7 @@ Do the **first three** first: they are the most-used tools and the ones Dinero S
 | Page | Text lives in | Status |
 |---|---|---|
 | `es/index.html` (hub) | `tools/build-es-hub.mjs` | needs review |
+| `es/apps.html` (instala las apps) | `tools/build-apps-page.mjs` (the `es` text block) | needs review |
 | `budget/bill-calendar/es.html` (calendario de pagos) | `es.html`, `budget/bill-calendar/app.js` (`es` text), `manifest-es.webmanifest` | needs review |
 | `budget/tablero-dinero.html` (tablero de dinero) | `tablero-dinero.html`, `budget/money-dashboard.js`, `budget/lib/dashboard.js` (category names, sheet text) | needs review |
 | `money-calculators/es/index.html` | `money-calculators/pages-es.mjs` | needs review |
@@ -41,6 +42,7 @@ Do the **first three** first: they are the most-used tools and the ones Dinero S
 | `money-calculators/es/student-loans/` | `pages-es.mjs` | needs review |
 | `money-calculators/es/rent-vs-buy/` | `pages-es.mjs` | needs review |
 | `money-calculators/es/401k-fees/` | `pages-es.mjs` | needs review |
+| `money-calculators/es/remittance-cost/` (envíos de dinero) | `pages-es.mjs`, `lib/text-extra.js` EXTRA.es `rf`, `remit` | needs review |
 | `money-calculators/es/gracias/` | `pages-es.mjs` | needs review |
 | `scam-checker/es/index.html` (¿es una estafa?) | `scam-checker/` i18n (`lib/i18n.js`) | needs review |
 | `scam-checker/es/enlace/` | `scam-checker/lib/i18n.js` | needs review |

@@ -66,6 +66,12 @@ export default {
       blurb: 'You are entitled to free weekly credit reports at AnnualCreditReport.com. Score tracking apps can alert you to changes.',
       url: 'https://REPLACE_ME/credit',
     },
+    remit: {
+      es: { label: 'Comparar empresas de envío de dinero', blurb: 'Compara al menos dos empresas con la misma cantidad el mismo día. Mira cuánto llega, no solo la comisión.' },
+      label: 'Compare money transfer providers',
+      blurb: 'Compare at least two providers with the same amount on the same day. Look at how much arrives, not just the fee.',
+      url: 'https://REPLACE_ME/remit',
+    },
   },
 
   // Embeddable widgets (see /embed/). The credit link back to you is the point of the free tier:

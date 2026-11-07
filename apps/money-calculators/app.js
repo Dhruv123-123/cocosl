@@ -8,6 +8,7 @@ import { rentVsBuy } from './lib/rent-vs-buy.js';
 import { estimateRefund } from './lib/refund.js';
 import { EXTRA } from './lib/text-extra.js';
 import { analyzeFees } from './lib/fees.js';
+import { remittanceCost } from './lib/remit.js';
 import { money, isLiveUrl, escapeHtml } from './lib/format.js';
 import { TEXT } from './lib/text.js';
 import { initTracking, withUtm } from './lib/track.js';
@@ -97,6 +98,12 @@ const CALCS = {
       ['tips', XF.trTips, 0], ['overtime', XF.trOvertime, 0], ['seniors', XF.trSeniors, 0]],
     select: ['filing', XF.trFiling, [['single', XF.trSingle], ['married', XF.trMarried], ['hoh', XF.trHoh]]],
     render: (v) => X.refund(estimateRefund(v)) + budgetProBox('tax-refund'),
+  },
+  'remittance-cost': {
+    cta: 'remit',
+    fields: [['amount', X.rf.amount, 300], ['fee', X.rf.fee, 4.99, 0.01], ['feePct', X.rf.feePct, 0, 0.01], ['midRate', X.rf.midRate, 0, 0.0001], ['quotedRate', X.rf.quotedRate, 0, 0.0001], ['markupPct', X.rf.markupPct, 2, 0.01], ['perYear', X.rf.perYear, 12]],
+    select: [['feeMode', X.rf.feeMode, [['top', X.rf.top], ['inside', X.rf.inside]]], ['pay', X.rf.pay, [['bank', X.rf.bank], ['cash', X.rf.cash]]]],
+    render: (v) => X.remit(remittanceCost(v, X.rf.errors)),
   },
   'roth-vs-traditional': {
     cta: 'brokerage',

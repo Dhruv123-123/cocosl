@@ -91,6 +91,21 @@ export const pages = [
     ],
   },
   {
+    slug: 'remittance-cost',
+    title: 'Remittance Cost Calculator: Fees, Exchange-Rate Markup and the 1% Tax',
+    h1: 'Remittance cost calculator: how much really arrives',
+    tile: 'Sending money abroad',
+    description: 'See the real cost of sending money to family abroad: the fee, the markup hidden in the exchange rate, and the new 1% federal tax on cash transfers. Uses only the numbers you type, no provider data.',
+    intro: 'Type the amount, the fee and either the provider\'s exchange rate or its markup, plus the market rate for the same day. We show how much arrives, what the transfer really costs and what that adds up to in a year.',
+    faq: [
+      ['What is an exchange-rate markup?', 'Providers often give you fewer pesos (or quetzales, rupees, pesos filipinos) per dollar than the market rate and keep the difference. It is a fee you never see on the receipt. To find it, compare the provider\'s rate with the market rate on the same day: (market rate minus their rate) divided by the market rate.'],
+      ['Where do I find the market rate?', 'Search for the currency pair (for example "USD to MXN") on the day you send. That mid-market rate is what banks trade at. Check it right before you pay, because rates move every minute.'],
+      ['What is the 1% remittance tax?', 'From January 1, 2026, transfers abroad paid with cash, a money order or a cashier\'s check carry a 1% federal excise tax (Internal Revenue Code section 4475). Transfers paid from a US bank account or with a US debit or credit card are exempt. The provider collects it when you pay.'],
+      ['What must the provider tell me?', 'Under the CFPB remittance rule, before you pay the provider must show the fees, the exchange rate, any taxes it collects and the amount that will arrive. You get a receipt, and you can usually cancel within 30 minutes for a full refund. If the money does not arrive, the provider must investigate when you report it within 180 days.'],
+      ['Is cheaper always better?', 'Mostly, but also check how fast the money arrives, how your family picks it up (bank deposit, cash pickup or mobile wallet) and whether the provider is licensed in your state.'],
+    ],
+  },
+  {
     slug: 'roth-vs-traditional',
     title: 'Roth vs Traditional IRA and 401(k) Calculator',
     h1: 'Roth vs Traditional calculator',

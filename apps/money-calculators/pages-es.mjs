@@ -92,6 +92,21 @@ export const pagesEs = [
     ],
   },
   {
+    slug: 'remittance-cost',
+    title: 'Calculadora de envíos de dinero: comisión, tipo de cambio y el impuesto de 1%',
+    h1: 'Calculadora de envíos de dinero: cuánto llega de verdad',
+    tile: 'Envíos de dinero',
+    description: 'Mira cuánto te cuesta de verdad mandar dinero a tu familia: la comisión, el margen escondido en el tipo de cambio y el nuevo impuesto federal de 1% a envíos en efectivo. Solo usa los números que escribes, sin datos de empresas.',
+    intro: 'Escribe la cantidad, la comisión y el tipo de cambio de la empresa o su margen, más el tipo de cambio del mercado del mismo día. Te mostramos cuánto llega, cuánto te cuesta el envío y cuánto suma en un año.',
+    faq: [
+      ['¿Qué es el margen en el tipo de cambio?', 'Muchas empresas te dan menos pesos (o quetzales, lempiras, pesos dominicanos) por dólar que el tipo de cambio del mercado y se quedan con la diferencia. Es un cobro que no aparece como comisión. Para calcularlo, compara su tipo de cambio con el del mercado el mismo día: (tipo del mercado menos el de ellos) dividido entre el tipo del mercado.'],
+      ['¿Dónde veo el tipo de cambio del mercado?', 'Busca la pareja de monedas (por ejemplo "USD a MXN") el día que envías. Ese tipo de cambio medio es al que cambian los bancos entre sí. Revísalo justo antes de pagar, porque cambia cada minuto.'],
+      ['¿Qué es el impuesto de 1% a los envíos?', 'Desde el 1 de enero de 2026, los envíos al extranjero pagados en efectivo, giro postal o cheque de caja pagan un impuesto federal de 1% (sección 4475 del Código de Impuestos Internos). Si pagas desde una cuenta de banco de EE. UU. o con tarjeta de débito o crédito de EE. UU., no se cobra. La empresa lo cobra cuando pagas.'],
+      ['¿Qué me tiene que decir la empresa?', 'Según la regla de envíos de dinero de la CFPB, antes de que pagues la empresa debe mostrarte las comisiones, el tipo de cambio, los impuestos que cobra y la cantidad que va a llegar. Te da un recibo, y casi siempre puedes cancelar dentro de 30 minutos y recibir todo tu dinero. Si el dinero no llega, la empresa tiene que investigar si lo reportas dentro de 180 días.'],
+      ['¿Lo más barato siempre es lo mejor?', 'Casi siempre, pero revisa también qué tan rápido llega, cómo lo recibe tu familia (depósito en banco, retiro en efectivo o billetera en el celular) y si la empresa tiene licencia en tu estado.'],
+    ],
+  },
+  {
     slug: 'roth-vs-traditional',
     title: 'Calculadora Roth vs Tradicional (IRA y 401(k))',
     h1: 'Calculadora Roth vs Tradicional',

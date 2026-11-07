@@ -1,4 +1,4 @@
-// Labels and result text for the student loan chooser, rent vs buy, tax refund estimator and debt chart, in English and Spanish.
+// Labels and result text for the student loan chooser, rent vs buy, tax refund estimator, remittance cost and debt chart, in English and Spanish.
 import { money } from './format.js';
 
 const yrs = (m, es) => {
@@ -70,6 +70,33 @@ export const EXTRA = {
         ${r.eitcMaybe ? `<p>You may also qualify for the Earned Income Tax Credit, worth up to $8,231 for 2026, which would add to your refund. It isn't included here. Check with the <a href="${EITC_URL}" target="_blank" rel="noopener">IRS EITC Assistant</a>.</p>` : ''}
         <p class="note">Estimate for the 2026 tax year (the return you file in early 2027), using the standard deduction. It leaves out itemizing, the EITC, education and other credits, self-employment tax and state tax. The tips and overtime deductions shrink above $150,000 of income ($300,000 joint), and the senior deduction above $75,000 ($150,000 joint); their phase-out rates come from the law, so check the final IRS forms. ${TR_SOURCES(false)}</p>`;
     },
+    rf: {
+      amount: 'Amount you send ($)', fee: 'Transfer fee ($)', feePct: 'Percentage fee, if any (%)', midRate: 'Market exchange rate (per $1)', quotedRate: "Provider's exchange rate (per $1, optional)",
+      markupPct: 'Exchange-rate markup, if you know it (%)', perYear: 'Transfers a year',
+      feeMode: 'The fee is', top: 'Paid on top of the amount', inside: 'Taken out of the amount',
+      pay: 'You pay with', bank: 'Bank account, debit or credit card', cash: 'Cash, money order or cashier\'s check',
+      errors: { amount: 'Enter the amount to send.', fee: 'Enter the fee (0 if none).', rate: 'Enter rates as numbers, like 18.45.', markup: 'Use a markup between 0% and 50%.', perYear: 'Use 0 to 52 transfers a year.' },
+    },
+    remit(r) {
+      const fx = (n) => n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      const rows = [
+        `<tr><td>You pay</td><td>${money(r.paid, 2)}</td></tr>`,
+        r.fees ? `<tr><td>Fees</td><td>${money(r.fees, 2)}</td></tr>` : '',
+        r.markupCost ? `<tr><td>Hidden in the exchange rate (${r.markupPct}% markup)</td><td>${money(r.markupCost, 2)}</td></tr>` : '',
+        r.tax ? `<tr><td>1% federal tax on cash transfers</td><td>${money(r.tax, 2)}</td></tr>` : '',
+        `<tr><td><b>Total cost</b></td><td><b>${money(r.totalCost, 2)}</b> (${r.costPct.toFixed(1)}%)</td></tr>`,
+      ].join('');
+      const head = r.arrives !== null ? `<p class="big">${fx(r.arrives)} arrive</p><p>For ${money(r.paid, 2)} paid, at an exchange rate of ${fx(r.effRate)} per dollar.</p>`
+        : `<p class="big">${money(r.arrivesUsd, 2)} arrives</p><p>Valued in dollars at the market rate. Add the market rate to see it in the other currency.</p>`;
+      return `${head}
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Where the money goes"><table class="split-table"><tbody>${rows}</tbody></table></div>
+        ${r.lost ? `<p>With no fee, markup or tax, ${money(r.paid, 2)} would be <b>${fx(r.ideal)}</b> at the market rate: <b>${fx(r.lost)}</b> more for your family.</p>` : ''}
+        ${r.markupPct === 0 && r.midRate === 0 ? '<p>No markup entered. Most providers have one: compare their rate with the market rate on the same day and enter both above.</p>' : ''}
+        ${r.perYear ? `<p>Sending ${r.perYear} times a year at this cost: <b>${money(r.yearCost, 0)}</b> a year.</p>` : ''}
+        <p>${r.overTarget ? 'That is more than 3%, the cost the United Nations says remittances should get down to. Compare at least two providers with the same amount on the same day.' : 'That is under 3%, the cost the United Nations says remittances should get down to. A good deal.'}</p>
+        ${r.cash ? '<p>Paying from a bank account or with a US debit or credit card avoids the 1% federal tax that applies to cash, money order and cashier\'s check transfers since 2026.</p>' : ''}
+        <p class="note">Only the numbers you type are used: no provider data. Providers in the US must show the fee, the exchange rate and the amount that arrives before you pay, and you can usually cancel within 30 minutes (CFPB remittance rule). The 1% tax applies to transfers paid with cash, a money order or a cashier's check from January 1, 2026 (Internal Revenue Code section 4475).</p>`;
+    },
     debtChart: (start, months) => `Total debt falls from ${start} to $0 in ${yrs(months)}`, debtLegendA: 'Avalanche', debtLegendS: 'Snowball', debtChartTitle: 'Total balance over time', debtChartNow: 'Now', debtSame: 'Same order here, so the lines overlap.', debtChartEnd: (m) => `${yrs(m)}`,
   },
   es: {
@@ -123,6 +150,33 @@ export const EXTRA = {
         ${r.owesMuch ? `<p>Para no deber el próximo año, sube tu retención con el <a href="${W4_URL}" target="_blank" rel="noopener">estimador de retenciones del IRS</a>.</p>` : ''}
         ${r.eitcMaybe ? `<p>También podrías calificar para el Crédito por Ingreso del Trabajo (EITC), de hasta $8,231 en 2026, que aumentaría tu reembolso. No está incluido aquí. Revísalo con el <a href="${EITC_URL}" target="_blank" rel="noopener">asistente del EITC del IRS</a>.</p>` : ''}
         <p class="note">Estimación para el año fiscal 2026 (la declaración que presentas a inicios de 2027), con la deducción estándar. No incluye deducciones detalladas, el EITC, créditos de educación u otros, impuesto de trabajo por cuenta propia ni impuesto estatal. Las deducciones por propinas y horas extra bajan con ingresos de más de $150,000 ($300,000 en conjunta), y la de mayores de 65 con más de $75,000 ($150,000 en conjunta); sus tasas de reducción vienen de la ley, así que revisa los formularios finales del IRS. ${TR_SOURCES(true)}</p>`;
+    },
+    rf: {
+      amount: 'Cantidad que envías ($)', fee: 'Comisión del envío ($)', feePct: 'Comisión en porcentaje, si hay (%)', midRate: 'Tipo de cambio del mercado (por $1)', quotedRate: 'Tipo de cambio de la empresa (por $1, opcional)',
+      markupPct: 'Margen en el tipo de cambio, si lo sabes (%)', perYear: 'Envíos al año',
+      feeMode: 'La comisión se', top: 'Paga aparte, además de la cantidad', inside: 'Descuenta de la cantidad',
+      pay: 'Pagas con', bank: 'Cuenta de banco, tarjeta de débito o crédito', cash: 'Efectivo, giro postal o cheque de caja',
+      errors: { amount: 'Escribe la cantidad que vas a enviar.', fee: 'Escribe la comisión (0 si no hay).', rate: 'Escribe el tipo de cambio como número, por ejemplo 18.45.', markup: 'Usa un margen entre 0% y 50%.', perYear: 'Usa de 0 a 52 envíos al año.' },
+    },
+    remit(r) {
+      const fx = (n) => n.toLocaleString('es-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      const rows = [
+        `<tr><td>Tú pagas</td><td>${money(r.paid, 2)}</td></tr>`,
+        r.fees ? `<tr><td>Comisiones</td><td>${money(r.fees, 2)}</td></tr>` : '',
+        r.markupCost ? `<tr><td>Escondido en el tipo de cambio (margen de ${r.markupPct}%)</td><td>${money(r.markupCost, 2)}</td></tr>` : '',
+        r.tax ? `<tr><td>Impuesto federal de 1% a envíos en efectivo</td><td>${money(r.tax, 2)}</td></tr>` : '',
+        `<tr><td><b>Costo total</b></td><td><b>${money(r.totalCost, 2)}</b> (${r.costPct.toFixed(1)}%)</td></tr>`,
+      ].join('');
+      const head = r.arrives !== null ? `<p class="big">Llegan ${fx(r.arrives)}</p><p>Por ${money(r.paid, 2)} que pagas, a un tipo de cambio de ${fx(r.effRate)} por dólar.</p>`
+        : `<p class="big">Llegan ${money(r.arrivesUsd, 2)}</p><p>En dólares, al tipo de cambio del mercado. Agrega el tipo de cambio del mercado para verlo en la otra moneda.</p>`;
+      return `${head}
+        <div class="table-scroll" tabindex="0" role="region" aria-label="A dónde se va el dinero"><table class="split-table"><tbody>${rows}</tbody></table></div>
+        ${r.lost ? `<p>Sin comisión, margen ni impuesto, ${money(r.paid, 2)} serían <b>${fx(r.ideal)}</b> al tipo de cambio del mercado: <b>${fx(r.lost)}</b> más para tu familia.</p>` : ''}
+        ${r.markupPct === 0 && r.midRate === 0 ? '<p>No escribiste un margen. Casi todas las empresas tienen uno: compara su tipo de cambio con el del mercado el mismo día y escribe los dos arriba.</p>' : ''}
+        ${r.perYear ? `<p>Si envías ${r.perYear} veces al año con este costo: <b>${money(r.yearCost, 0)}</b> al año.</p>` : ''}
+        <p>${r.overTarget ? 'Es más del 3%, el costo al que las Naciones Unidas dicen que deberían bajar los envíos. Compara al menos dos empresas con la misma cantidad el mismo día.' : 'Es menos del 3%, el costo al que las Naciones Unidas dicen que deberían bajar los envíos. Buen precio.'}</p>
+        ${r.cash ? '<p>Si pagas desde una cuenta de banco o con tarjeta de débito o crédito de EE. UU., no pagas el impuesto federal de 1% que se cobra desde 2026 a los envíos en efectivo, giro postal o cheque de caja.</p>' : ''}
+        <p class="note">Solo usamos los números que escribes: no hay datos de ninguna empresa. En EE. UU. la empresa debe mostrarte la comisión, el tipo de cambio y la cantidad que llega antes de que pagues, y casi siempre puedes cancelar dentro de 30 minutos (regla de envíos de dinero de la CFPB). El impuesto de 1% aplica a envíos pagados en efectivo, giro postal o cheque de caja desde el 1 de enero de 2026 (sección 4475 del Código de Impuestos Internos).</p>`;
     },
     debtChart: (start, months) => `La deuda total baja de ${start} a $0 en ${yrs(months, true)}`, debtLegendA: 'Avalancha', debtLegendS: 'Bola de nieve', debtChartTitle: 'Saldo total con el tiempo', debtChartNow: 'Hoy', debtSame: 'Aquí el orden es el mismo, así que las líneas se enciman.', debtChartEnd: (m) => `${yrs(m, true)}`,
   },

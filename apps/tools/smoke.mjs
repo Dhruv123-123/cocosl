@@ -219,14 +219,44 @@ const checks = [
   ['/money-calculators/es/tax-refund/', '#result .big', async (page) => {
     if (!/Reembolso estimado/.test(await page.textContent('#result .big'))) throw new Error('es refund');
   }],
+  ['/apps.html', '#apps .app', async (page) => {
+    if ((await page.locator('#apps .app').count()) !== 4) throw new Error('four apps');
+    for (const src of await page.locator('#apps img').evaluateAll((els) => els.map((e) => e.complete && e.naturalWidth))) if (!src) throw new Error('icon did not load');
+    const m = await (await page.request.get(new URL('manifest.webmanifest', page.url()).href)).json();
+    if (!m.icons?.length) throw new Error('hub manifest');
+  }],
+  ['/es/apps.html', '#apps .app', async (page) => {
+    if (!/Calendario de pagos/.test(await page.textContent('#apps'))) throw new Error('es bill calendar');
+    if (!/En inglés/.test(await page.textContent('#apps'))) throw new Error('english-only tag');
+  }],
+  ['/money-calculators/remittance-cost/', '#result .big', async (page) => {
+    await page.fill('[name=amount]', '300'); await page.fill('[name=fee]', '5'); await page.fill('[name=midRate]', '18.5');
+    await page.fill('[name=quotedRate]', '0'); await page.fill('[name=markupPct]', '2'); await page.fill('[name=perYear]', '12');
+    await page.waitForFunction(() => /5,439\.00 arrive/.test(document.querySelector('#result .big')?.textContent || ''));
+    if (!/\$132 a year/.test(await page.textContent('#result'))) throw new Error('year cost');
+    await page.selectOption('[name=pay]', 'cash');
+    await page.waitForFunction(() => /1% federal tax/.test(document.querySelector('#result').textContent));
+  }],
+  ['/money-calculators/es/remittance-cost/', '#result .big', async (page) => {
+    if (!/Llegan/.test(await page.textContent('#result .big'))) throw new Error('es remit');
+  }],
   ['/money-calculators/es/compound-interest/', '#result .big'],
   ['/money-calculators/es/credit-card-minimum/', '#result .big'],
   ['/scam-checker/', '#result', async (page) => {
+    const outside = []; const local = (u) => /^(https?:\/\/(127\.0\.0\.1|localhost)[:/]|data:|blob:)/.test(u);
+    page.on('request', (r) => { if (!local(r.url())) outside.push(r.url()); });
     await page.fill('#message', 'USPS: Your package is on hold due to an unpaid fee of $1.99. Pay now at https://usps-redelivery.top/pay or it will be returned.');
     await page.click('#check');
+    await page.waitForTimeout(300);
+    if (outside.length) throw new Error(`checking a message called out: ${outside.join(', ')}`);
   }],
   ['/scam-checker/es/', '#result', async (page) => { await page.click('[data-example=toll]'); }],
-  ['/scam-checker/link/', '#result .score', async (page) => { await page.click('[data-url*=paypa1]'); }],
+  ['/scam-checker/link/', '#result .score', async (page) => {
+    const outside = []; page.on('request', (r) => { if (!/^(https?:\/\/(127\.0\.0\.1|localhost)[:/]|data:|blob:)/.test(r.url())) outside.push(r.url()); });
+    await page.click('[data-url*=paypa1]');
+    await page.waitForTimeout(300);
+    if (outside.length) throw new Error(`checking a link called out: ${outside.join(', ')}`);
+  }],
   ['/scam-checker/es/enlace/', '#result .score', async (page) => { await page.click('[data-url*=usps]'); }],
   ['/scam-checker/scams/', '.tiles'],
   ['/scam-checker/es/estafas/', '.tiles'],

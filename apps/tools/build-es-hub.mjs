@@ -78,7 +78,7 @@ ${SCAMS.map(card).join('\n')}
     </div>
   </aside>
 </main>
-<footer><p>No es asesoría financiera ni legal. Privado por diseño: sin cuentas, y las herramientas funcionan en tu navegador.</p></footer>
+<footer><p>No es asesoría financiera ni legal. Privado por diseño: sin cuentas, y las herramientas funcionan en tu navegador. <a href="apps.html">Instala las apps</a>.</p></footer>
 <script type="module">
 import config from '../budget/config.js';
 import { showProducts } from '../products.js';
