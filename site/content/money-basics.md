@@ -1,7 +1,7 @@
 ---
 title: "Money Basics in 7 days"
 seo_title: "Money Basics in 7 days: a free email course"
-description: "Seven free emails, one a day. Each one is one money idea with the numbers shown and one task that takes under 20 minutes: your real take-home pay, bills, an emergency fund, debt, credit and investing."
+description: "Seven free emails, one a day: one money idea with the numbers shown and one task under 20 minutes, from take-home pay to debt, credit and investing."
 updated: 2026-11-07
 course_source: money-basics-7-days
 sender_form: REPLACE_ME
