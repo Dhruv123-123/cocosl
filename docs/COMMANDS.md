@@ -31,6 +31,7 @@ Nothing here posts or sends on its own: publishing is a dry run until FACTORY_DR
 | `factory recordings` | posts waiting on your voice or a screen recording, soonest first |
 | `factory batch-record` | group everything waiting on your voice or screen into recording sessions: shot list + teleprompter per session |
 | `factory broll` | optional Pexels / Pixabay B-roll for up to 1 beat in 3 (free keys; plan unless --apply) |
+| `factory motion` | optional HyperFrames motion cards for number beats (max 1 in 4; FACTORY_MOTION=hyperframes, Node 22+; plan unless --write/--apply) |
 | `factory numbers` | recompute the loan, growth and tax figures a post states |
 | `factory rerender` | re-render a post's media |
 | `factory renderq` | render queue: re-voice posts, render in a separate process |
