@@ -1,4 +1,6 @@
-# Fact-check: the first 14 days (launch `content.json`, 24 pieces)
+# Fact-check: the launch set (`content.json`, 24 pieces)
+
+With Day 1 on Mon Nov 16, only launch Days 1–4 post before the dated packs take over (see `LAUNCH_WEEK.md`). The rest of the launch set becomes swap-ins, so it's all checked here. Month 1 and the holiday add-on, which fill Days 5–14, were checked against their own claims when they were written.
 
 Checked 2026-11-07. Every number was recomputed in Python. Every rule or legal claim is matched to the official page that states it. The verdicts are:
 
