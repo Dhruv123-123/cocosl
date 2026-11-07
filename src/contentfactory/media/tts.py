@@ -1,9 +1,12 @@
 """Text to speech, one audio file per script segment.
 
 Providers (settings.tts_provider; "auto" tries them in this order):
-  kokoro     - local Kokoro-FastAPI server (free, Apache-2.0 voices), KOKORO_URL e.g.
-               http://localhost:8880/v1; voice follows the brand language (KOKORO_VOICE_<LANG>, e.g.
-               KOKORO_VOICE_ES, or KOKORO_VOICE for English; defaults af_heart / ef_dora)
+  kokoro     - Kokoro-82M (Apache-2.0 open weights, free, natural voices). Either a
+               Kokoro-FastAPI server at KOKORO_URL (OpenAI-compatible /v1/audio/speech;
+               `docker compose --profile kokoro up`), or the local `kokoro` Python
+               package (pip install "contentfactory[kokoro]"). Voice: brand.voice.tts_voice
+               if it is a Kokoro id like af_heart, else a voice in the brand language: KOKORO_VOICE
+               for English (default af_heart), KOKORO_VOICE_<LANG> otherwise (Spanish: ef_dora)
   piper      - local `piper` CLI, model from brand.voice.piper_model, PIPER_MODEL_<LANG> (e.g.
                PIPER_MODEL_ES) or, for English brands, PIPER_MODEL (.onnx)
   espeak     - local `espeak-ng` / `espeak` (robotic, but free and offline); voice follows the
@@ -25,6 +28,7 @@ from __future__ import annotations
 
 import os
 import random
+import re
 import shutil
 import struct
 import wave
@@ -102,6 +106,89 @@ class Provider:
 
     def speak(self, text: str, out: Path) -> None:
         raise NotImplementedError
+
+
+KOKORO_VOICE_RE = re.compile(r"^[abefhijpz][fm]_[a-z]+$")
+
+
+class Kokoro(Provider):
+    """Kokoro-82M via a Kokoro-FastAPI server (KOKORO_URL) or the local `kokoro` package."""
+    tool = "kokoro"
+    _pipelines: dict = {}
+
+    # Kokoro picks the language from the voice prefix (a/b = English, e = Spanish), so an English
+    # voice must never read a Spanish script.
+    DEFAULT_VOICES = {"en": "af_heart", "es": "ef_dora"}
+
+    def voice(self) -> str:
+        v = (self.brand.voice.tts_voice or "").strip()
+        if KOKORO_VOICE_RE.match(v):
+            return v
+        lang = i18n.lang_of(self.brand)
+        if lang == "en":
+            return os.environ.get("KOKORO_VOICE", "af_heart")
+        return os.environ.get(f"KOKORO_VOICE_{lang.upper()}") or self.DEFAULT_VOICES.get(lang, "af_heart")
+
+    def speed(self) -> float:
+        try:
+            return float(os.environ.get("KOKORO_SPEED", "") or 1.0)
+        except ValueError:
+            return 1.0
+
+    @staticmethod
+    def _url() -> str:
+        return os.environ.get("KOKORO_URL", "").rstrip("/")
+
+    @staticmethod
+    def _local() -> bool:
+        import importlib.util
+        return importlib.util.find_spec("kokoro") is not None and os.environ.get("KOKORO_LOCAL", "1") != "0"
+
+    def available(self) -> bool:
+        return bool(self._url()) or self._local()
+
+    def speak(self, text: str, out: Path) -> None:
+        if self._url():
+            return self._speak_http(text, out)
+        if self._local():
+            return self._speak_local(text, out)
+        raise ProviderError("Kokoro needs KOKORO_URL (a Kokoro-FastAPI server) or the `kokoro` package installed")
+
+    def _speak_http(self, text: str, out: Path) -> None:
+        body = {"model": os.environ.get("KOKORO_MODEL", "kokoro"), "input": _clean(text), "voice": self.voice(),
+                "response_format": "wav", "speed": self.speed()}
+        headers = {"Authorization": f"Bearer {os.environ['KOKORO_API_KEY']}"} if os.environ.get("KOKORO_API_KEY") else {}
+        try:
+            resp = httpx.post(f"{self._url()}/v1/audio/speech", json=body, headers=headers, timeout=HTTP_TIMEOUT)
+        except httpx.HTTPError as e:
+            raise ProviderError(f"Kokoro server at {self._url()} unreachable: {e}") from e
+        _raise_for(resp, "Kokoro")
+        self.tool = f"kokoro:{self.voice()}"
+        _to_wav(resp.content, ".wav", out)
+
+    def _speak_local(self, text: str, out: Path) -> None:
+        try:
+            import numpy as np
+            from kokoro import KPipeline
+        except Exception as e:  # torch/espeak missing, etc.
+            raise ProviderError(f"local kokoro failed to load: {e}") from e
+        voice = self.voice()
+        lang = voice[0]
+        if lang not in self._pipelines:
+            self._pipelines[lang] = KPipeline(lang_code=lang)
+        chunks = [np.asarray(audio, dtype="float32") for _, _, audio in
+                  self._pipelines[lang](_clean(text), voice=voice, speed=self.speed())]
+        if not chunks:
+            raise ProviderError("kokoro returned no audio")
+        pcm = (np.clip(np.concatenate(chunks), -1, 1) * 32767).astype("<i2").tobytes()
+        tmp = out.with_suffix(".k24.wav")
+        with wave.open(str(tmp), "wb") as w:
+            w.setnchannels(1); w.setsampwidth(2); w.setframerate(24000); w.writeframes(pcm)  # noqa: E702
+        try:
+            _to_wav(tmp.read_bytes(), ".wav", out)
+        finally:
+            tmp.unlink(missing_ok=True)
+        self.tool = f"kokoro-local:{voice}"
 
 
 class Piper(Provider):
@@ -226,47 +313,6 @@ class OpenAITTS(Provider):
         _raise_for(last, self.label)
 
     name, label = "openai", "OpenAI TTS"
-
-
-class Kokoro(OpenAITTS):
-    """Kokoro-82M through Kokoro-FastAPI's OpenAI-compatible endpoint.
-
-    Run it with `docker compose --profile voice up -d kokoro` (or
-    `docker run -p 8880:8880 ghcr.io/remsky/kokoro-fastapi-cpu`) and set
-    KOKORO_URL=http://localhost:8880/v1. Free, local, and the model and voices are
-    Apache-2.0, so the narration is safe to monetize. Voices: af_heart, af_bella,
-    am_michael, bf_emma ... (blend with "af_heart+af_bella").
-    """
-    tool = "kokoro"
-    name, label = "kokoro", "Kokoro TTS"
-
-    @property
-    def base(self) -> str:
-        return os.environ.get("KOKORO_URL", "").rstrip("/")
-
-    def _key(self) -> str:
-        return ""
-
-    def available(self) -> bool:
-        return bool(self.base)
-
-    def _models(self) -> list[str]:
-        return ["kokoro"]
-
-    # Kokoro picks the language from the voice prefix (a/b = English, e = Spanish), so an English
-    # voice must never read a Spanish script.
-    DEFAULT_VOICES = {"en": "af_heart", "es": "ef_dora"}
-
-    def _voice(self) -> str:
-        lang = i18n.lang_of(self.brand)
-        if lang == "en":
-            return os.environ.get("KOKORO_VOICE", "af_heart")
-        return os.environ.get(f"KOKORO_VOICE_{lang.upper()}") or self.DEFAULT_VOICES.get(lang, "af_heart")
-
-    def speak(self, text: str, out: Path) -> None:
-        if not self.base:
-            raise ProviderError("Kokoro TTS needs KOKORO_URL, e.g. http://localhost:8880/v1")
-        super().speak(text, out)
 
 
 class Silent(Provider):

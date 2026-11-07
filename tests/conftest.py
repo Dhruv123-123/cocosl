@@ -17,6 +17,7 @@ def home(tmp_path, monkeypatch):
     monkeypatch.setenv("FACTORY_TTS", "silent")
     monkeypatch.setenv("FACTORY_IMAGES", "cards")
     monkeypatch.setenv("FACTORY_DRY_RUN", "1")
+    monkeypatch.setenv("PUBLISH_LATE_HOURS", "0")  # tests jump the clock ahead; the late guard has its own test
     monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
     shutil.copytree(ROOT / "brands", tmp_path / "brands")
     return tmp_path
@@ -36,7 +37,11 @@ def fake_render(monkeypatch):
         d = settings.output_dir / brand.slug / f"post-{post['id']}"
         d.mkdir(parents=True, exist_ok=True)
         (d / "video.mp4").write_bytes(b"\x00")
-        return {"video": f"{brand.slug}/post-{post['id']}/video.mp4", "images": [], "slides": [],
+        carousel = post.get("format") == "carousel"
+        if carousel:
+            (d / "slide-01.png").write_bytes(b"\x00")
+        return {"video": None if carousel else f"{brand.slug}/post-{post['id']}/video.mp4", "images": [],
+                "slides": [f"{brand.slug}/post-{post['id']}/slide-01.png"] if carousel else [],
                 "thumbnail": None, "audio": None, "captions_srt": None, "duration": 30.0,
                 "provenance": [{"path": "video.mp4", "source": "rendered", "tool": "test", "prompt": "", "license": ""}]}
     import contentfactory.media.render as r

@@ -125,6 +125,6 @@ def test_kokoro_uses_a_spanish_voice_for_a_spanish_brand(monkeypatch):
     monkeypatch.setenv("KOKORO_VOICE", "am_michael")  # an English override must not leak into Spanish
     monkeypatch.delenv("KOKORO_VOICE_ES", raising=False)
     settings = Settings.load()
-    assert tts.Kokoro(settings, _es())._voice() == "ef_dora"
+    assert tts.Kokoro(settings, _es()).voice() == "ef_dora"
     monkeypatch.setenv("KOKORO_VOICE_ES", "em_alex")
-    assert tts.Kokoro(settings, _es())._voice() == "em_alex"
+    assert tts.Kokoro(settings, _es()).voice() == "em_alex"

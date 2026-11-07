@@ -103,6 +103,11 @@ class Cadence(BaseModel):
     max_posts_per_day_per_platform: int = 2
     post_times: list[str] = Field(default_factory=lambda: ["12:30", "18:30"])  # local times
     timezone: str = "America/New_York"
+    # Worker settings for this brand (multi-brand runner)
+    daily_at: str = ""            # local HH:MM for the daily ideas+drafts run; "" = DAILY_AT env (07:00)
+    daily_ideas: int = 8
+    daily_drafts: int = 2         # posts drafted into the review queue per day
+    paused: bool = False          # true = the worker skips this brand's daily run (publishing still runs)
 
 
 class AffiliateOffer(BaseModel):

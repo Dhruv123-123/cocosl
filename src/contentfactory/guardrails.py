@@ -100,7 +100,7 @@ def check_originality(db: DB, brand: str, text: str, exclude_post_id: int | None
     """Compare against this brand's last 200 posts. YouTube's 'inauthentic
     content' rule targets videos with only superficial differences."""
     rows = db.query(
-        "SELECT id, script FROM posts WHERE brand = ? AND id != ? ORDER BY id DESC LIMIT 200",
+        "SELECT id, script FROM posts WHERE brand = ? AND id != ? AND status != 'rejected' ORDER BY id DESC LIMIT 200",
         [brand, exclude_post_id or -1],
     )
     mine = shingles(text)
@@ -175,14 +175,23 @@ def check_assets_licensed(assets: dict) -> Check:
 
 def check_cadence(db: DB, brand: BrandProfile, platform: str, when: datetime) -> Check:
     """Keep posting volume human-scale. Floods of near-identical uploads are
-    exactly what spam classifiers look for."""
-    day_start = when.astimezone(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
-    day_end = day_start + timedelta(days=1)
+    exactly what spam classifiers look for. Days are the brand's local days,
+    the same days the scheduler fills."""
+    from zoneinfo import ZoneInfo
+    try:
+        tz = ZoneInfo(brand.cadence.timezone)
+    except Exception:
+        tz = timezone.utc
+    local = when.astimezone(tz)
+    day_start = local.replace(hour=0, minute=0, second=0, microsecond=0)
+    day_end = (day_start + timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
     n = db.scalar(
         """SELECT COUNT(*) FROM publications p JOIN posts s ON s.id = p.post_id
-           WHERE s.brand = ? AND p.platform = ? AND p.status IN ('queued','publishing','published')
+           WHERE s.brand = ? AND p.platform = ?
+           AND p.status IN ('queued','publishing','published','dry_run','needs_check')
            AND p.scheduled_at >= ? AND p.scheduled_at < ?""",
-        [brand.slug, platform, day_start.isoformat(), day_end.isoformat()],
+        [brand.slug, platform, day_start.astimezone(timezone.utc).isoformat(),
+         day_end.astimezone(timezone.utc).isoformat()],
     ) or 0
     cap = brand.cadence.max_posts_per_day_per_platform
     if n >= cap:

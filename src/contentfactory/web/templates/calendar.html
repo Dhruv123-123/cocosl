@@ -13,7 +13,8 @@
 
 {% if approved %}
 <div class="card">
-  <div class="card-head"><h2>Approved, not scheduled</h2></div>
+  <div class="card-head"><h2>Approved, not scheduled</h2>
+    <form class="inline" method="post" action="/schedule/all"><button class="btn btn-sm btn-primary" type="submit">Schedule all</button></form></div>
   <ul class="list">
     {% for p in approved %}
     <li><span class="grow"><a href="/posts/{{ p.id }}">{{ p.title or 'Post #' ~ p.id }}</a> <span class="small muted">{{ p.brand }} · {{ p.format }}</span></span>

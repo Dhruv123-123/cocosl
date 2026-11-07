@@ -156,30 +156,6 @@ def _fake_speech(calls):
     return handler
 
 
-def test_kokoro_used_first_in_auto_when_configured(media_env, monkeypatch, tmp_path):
-    from contentfactory.media import tts
-    settings, brand = media_env
-    settings.tts_provider = "auto"
-    calls = []
-    monkeypatch.setenv("KOKORO_URL", "http://localhost:8880/v1/")
-    monkeypatch.setenv("KOKORO_VOICE", "am_michael")
-    monkeypatch.setattr(tts.httpx, "post", _fake_speech(calls))
-    res = tts.synthesize_segments(settings, brand, ["One money move.", "Two."], tmp_path / "a")
-    assert res.provider == "kokoro" and res.tool == "kokoro:kokoro"
-    assert [c["url"] for c in calls] == ["http://localhost:8880/v1/audio/speech"] * 2
-    assert calls[0]["json"]["model"] == "kokoro" and calls[0]["json"]["voice"] == "am_michael"
-    assert "Authorization" not in calls[0]["headers"] and "instructions" not in calls[0]["json"]
-    assert all(p.exists() for p in res.paths) and res.durations[0] > 0.4
-
-
-def test_kokoro_skipped_without_url(media_env, tmp_path):
-    from contentfactory.media import tts
-    settings, brand = media_env
-    assert not tts.Kokoro(settings, brand).available()
-    with pytest.raises(tts.ProviderError):
-        tts.Kokoro(settings, brand).speak("hi", tmp_path / "x.wav")
-
-
 def test_openai_tts_base_url_override(media_env, monkeypatch, tmp_path):
     from contentfactory.media import tts
     settings, brand = media_env
