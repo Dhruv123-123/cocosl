@@ -144,7 +144,7 @@ a time (first lines, niche, offer) based on replies.
 
 ## Ready-to-post content (Money Made Simple)
 
-Disclosure goes on both: *"Visuals and voice made with AI tools. Script written and fact-checked by a human.
+Disclosure goes on both: *"Visuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.
 Not financial advice."* (from the brand YAML). The product is yours, so say so plainly.
 
 ### Post 1: Short / Reel / TikTok (~40s)
