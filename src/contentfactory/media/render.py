@@ -102,6 +102,9 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
         if own:
             clip, chart = own, None  # the person's own recording beats any generated visual
             owned.append(own)
+        elif not chart and i < len(segments) and (getattr(segments[i], "motion", "") or "").strip() \
+                and (settings.home / segments[i].motion).is_file():
+            clip = settings.home / segments[i].motion  # our own motion card (factory motion)
         elif not chart and i < len(segments) and (getattr(segments[i], "broll", "") or "").strip():
             stock_clip = settings.home / segments[i].broll
             if stock_clip.is_file():
