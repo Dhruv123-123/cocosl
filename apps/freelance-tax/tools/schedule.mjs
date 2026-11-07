@@ -10,6 +10,7 @@ export const releases = {
   '': LAUNCH, 'free/': LAUNCH, 'free/thanks/': LAUNCH, 'compare/': LAUNCH, 'about/': LAUNCH, 'q4/': LAUNCH,
   ...Object.fromEntries(pages.map((p) => [`compare/${p.slug}/`, p.published])),
   'mileage/': '2026-12-21',
+  'deduction-finder/': '2026-12-28',
 };
 
 export const released = (path, today) => (releases[path] || LAUNCH) <= today;

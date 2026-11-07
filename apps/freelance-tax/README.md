@@ -4,6 +4,7 @@
 |---|---|
 | `/` | Quarterly estimated tax calculator |
 | `compare/` | Hub + 5 comparison pages: freelancer banking, tax software, invoicing tools, S corp services, health insurance |
+| `deduction-finder/`, `lib/deductions.js` | Deduction finder: 18 yes/no questions → a personal list of 2026 freelance deductions (rule, where it goes, source), what each $100 saves, print to PDF, and an email opt-in (Netlify form `deduction-finder`, with the ticked items in a hidden `deductions` field) |
 | `q4/`, `lib/q4.js` | January 15 (Q4) estimated payment calculator: the Jan 15, 2027 amount, the catch-up share for missed quarters, the file-by-Feb-1 alternative, what's left for April |
 | `mileage/`, `lib/mileage.js` | Gig-driver mileage deduction calculator (72.5¢/mile for 2026): tax saved by logged miles, set-aside per payout and per delivery, own log vs the app's miles |
 | `about/` | Who writes the site, how pages are made (AI-assisted, sourced, dated), how it makes money |

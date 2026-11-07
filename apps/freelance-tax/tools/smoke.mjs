@@ -42,6 +42,17 @@ for (const [name, viewport] of [['desktop', { width: 1280, height: 900 }], ['pho
     console.log(name, slug, good ? 'ok' : 'FAIL', { cards, placeholder, wide, errors });
     if (shots) await page.screenshot({ path: `${shots}/${name}-${slug.replace(/\//g, '_')}.png`, fullPage: true });
   }
+  // Deduction finder: answers from the URL produce the list, and the signup carries them.
+  await page.goto(url + 'deduction-finder/?yes=home-office,car,health&profit=60000');
+  {
+    const found = await page.locator('.found article').count();
+    const hidden = await page.inputValue('input[name=deductions]');
+    const wide = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
+    const good = found === 5 && hidden === 'home-office,car,health' && !wide && !errors.length;
+    if (!good) failed = true;
+    console.log(name, 'deduction-finder/', good ? 'ok' : 'FAIL', { found, hidden, wide, errors });
+    if (shots) await page.screenshot({ path: `${shots}/${name}-deduction-finder.png`, fullPage: true });
+  }
   // January 15 page: the payment renders from URL inputs and nothing overflows.
   await page.goto(url + 'q4/?profit=60000&paidSoFar=4875&priorYearTax=6500&priorYearAgi=52000');
   {

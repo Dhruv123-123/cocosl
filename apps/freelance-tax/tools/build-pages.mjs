@@ -181,7 +181,7 @@ ${editor}
   return ['about/', shell({ title: 'About 1099 Money: How These Pages Are Made', description: 'What 1099 Money is, how its tax pages and calculators are made and checked, and how the site makes money.', path: 'about/', pre, body, ld, current: 'about/' })];
 }
 
-const ALL_PATHS = ['', 'q4/', 'mileage/', 'free/', 'compare/', ...pages.map((p) => `compare/${p.slug}/`), 'about/'];
+const ALL_PATHS = ['', 'q4/', 'deduction-finder/', 'mileage/', 'free/', 'compare/', ...pages.map((p) => `compare/${p.slug}/`), 'about/'];
 
 // today: null builds every page (the committed files); a YYYY-MM-DD builds only what's due by then.
 export function build(today = null) {

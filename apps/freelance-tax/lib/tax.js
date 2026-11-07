@@ -49,15 +49,16 @@ export function incomeTax(taxable, status = 'single') {
 const n = (x) => (Number.isFinite(+x) ? Math.max(0, +x) : 0);
 
 // Full-year federal tax on freelance profit (plus optional W-2 wages).
-export function federalTax({ profit = 0, status = 'single', w2Wages = 0 } = {}) {
-  profit = n(profit); w2Wages = n(w2Wages);
+// aboveLine: other adjustments to income (SE health insurance, IRA/SEP, HSA), which lower income tax only.
+export function federalTax({ profit = 0, status = 'single', w2Wages = 0, aboveLine = 0 } = {}) {
+  profit = n(profit); w2Wages = n(w2Wages); aboveLine = n(aboveLine);
   status = status === 'mfj' ? 'mfj' : 'single';
   const T = TABLES;
   const netEarnings = profit * T.netEarningsFactor < 400 ? 0 : profit * T.netEarningsFactor;
   const ssBase = Math.min(netEarnings, Math.max(0, T.ssWageBase - w2Wages));
   const seTax = ssBase * T.ssRate + netEarnings * T.medicareRate;
   const halfSe = seTax / 2;
-  const agi = profit - halfSe + w2Wages;
+  const agi = Math.max(0, profit - halfSe + w2Wages - aboveLine);
   const std = T.standardDeduction[status];
   const preQbi = Math.max(0, agi - std);
   const qbi = Math.min(T.qbiRate * Math.max(0, profit - halfSe), T.qbiRate * preQbi);
