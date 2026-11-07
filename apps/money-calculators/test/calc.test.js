@@ -98,3 +98,14 @@ test('Roth vs Traditional: equal tax rates tie, lower rate later favors Traditio
   const roth = rothVsTraditional({ annualContribution: 6000, currentRate: 12, retirementRate: 24, years: 30 });
   assert.equal(roth.winner, 'roth');
 });
+
+test('payoff schedule: payments add up and balances reach zero', () => {
+  const r = debtPayoff(debts, { extra: 200, strategy: 'avalanche', schedule: true });
+  assert.equal(r.schedule.length, r.months);
+  assert.deepEqual(r.names, ['Card A', 'Car', 'Store card']);
+  for (const row of r.schedule.slice(0, -1)) close(row.payments.reduce((a, b) => a + b, 0), r.budget, 0.05);
+  assert.deepEqual(r.schedule.at(-1).balances, [0, 0, 0]);
+  const totalPaid = r.schedule.reduce((s, row) => s + row.payments.reduce((a, b) => a + b, 0), 0);
+  close(totalPaid, 3000 + 8000 + 600 + r.totalInterest, 0.5);
+  assert.equal(debtPayoff(debts).schedule, undefined);
+});

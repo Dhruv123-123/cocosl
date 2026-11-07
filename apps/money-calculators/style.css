@@ -50,3 +50,18 @@ input:focus{outline:2px solid var(--gold);outline-offset:1px}
 .faq h3{margin-bottom:4px}
 footer{color:var(--muted);font-size:13px;padding-top:24px;padding-bottom:40px;border-top:1px solid var(--line);margin-top:40px}
 .nav{display:flex;gap:14px}
+
+.btn.ghost{background:none;border:1px solid var(--line);color:var(--ink)}
+.btn.small{padding:8px 14px;font-size:14px}
+.print-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+#print-plan{display:none}
+@media print{
+  body{background:#fff;color:#000}
+  body>*:not(#print-plan){display:none!important}
+  #print-plan{display:block;font-size:11px}
+  #print-plan h1{font-size:18px;margin:0 0 6px}
+  #print-plan table{width:100%;border-collapse:collapse}
+  #print-plan th,#print-plan td{border:1px solid #bbb;padding:3px 5px;text-align:left;vertical-align:top}
+  #print-plan small{display:block;color:#555;font-size:9px}
+  #print-plan tr{break-inside:avoid}
+}

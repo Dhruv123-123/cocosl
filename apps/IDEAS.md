@@ -17,7 +17,7 @@ Effort is for Claude to build; "your part" is what only Dhruv can do (accounts, 
 | 9 | **Scam Shield browser extension** that checks links before you click | Scam Shield | Freemium; family plan $2/month | 3–4 days | Chrome Web Store account ($5) and publishing |
 | 10 | **Family Scam Safety Kit** (the $9 product the checker already links to): fridge checklist, call scripts, "verify before you pay" card | Scam Shield | $9 on Gumroad | Half a day | Gumroad listing |
 | 11 | **Self-serve ad script generator** for small brands from the ad studio lead list | AI Ad Studio | $29 one-off pack, upsell to the $249 video package | 2 days | Stripe account |
-| 12 | **Debt payoff plan PDF** from the calculator (a printable month-by-month plan) | Money Made Simple | $5 one-off or a Budget Pro perk | Half a day | None |
+| 12 | ✅ Built (free, print to PDF): **Debt payoff plan PDF** from the calculator (a printable month-by-month plan) | Money Made Simple | $5 one-off or a Budget Pro perk | Half a day | None |
 
 ## Why this order
 

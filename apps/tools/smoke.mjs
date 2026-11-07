@@ -21,7 +21,10 @@ const checks = [
   // [path, selector that must contain text after load, optional action]
   ['/', 'h1'],
   ['/money-calculators/', '.tiles'],
-  ['/money-calculators/debt-payoff/', '#result .big'],
+  ['/money-calculators/debt-payoff/', '#print-plan h1', async (page) => {
+    await page.evaluate(() => { window.print = () => {}; });
+    await page.click('[data-print=avalanche]');
+  }],
   ['/money-calculators/compound-interest/', '#result .big'],
   ['/money-calculators/emergency-fund/', '#result .big'],
   ['/money-calculators/savings-interest/', '#result .big'],

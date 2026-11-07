@@ -46,6 +46,10 @@ const en = {
     <div class="two"><div><h3>Avalanche (highest APR first)</h3><p>${money(a.totalInterest)} interest, ${duration(a.months)}</p>${listA}</div>
     <div><h3>Snowball (smallest balance first)</h3><p>${money(s.totalInterest)} interest, ${duration(s.months)}</p>${listS}</div></div>`,
   defaultDebts: ['Credit card', 'Store card', 'Car loan'],
+  printAva: 'Print my avalanche plan', printSnow: 'Print my snowball plan',
+  planTitle: (strategy) => `My debt-free plan (${strategy === 'avalanche' ? 'avalanche: highest APR first' : 'snowball: smallest balance first'})`,
+  planIntro: (a) => `Pay ${money(a.budget)} a month in total. Debt-free in ${duration(a.months)}, with ${money(a.totalInterest)} of interest. Tick each month when it's paid.`,
+  planMonth: 'Month', planPaid: 'Paid', planLeft: 'left', planFooter: 'Made with the free debt payoff calculator. Estimates assume your APRs and minimums stay the same.',
   nextStep: 'Next step', affiliateNote: 'Affiliate link: we may earn a commission at no cost to you.', getIt: 'Get it',
   copied: 'Link copied', copyPrompt: 'Copy this link', sending: 'Sending…', notConnected: 'Email signup is not connected yet: set email.action in config.js.',
 };
@@ -94,6 +98,10 @@ const es = {
     <div class="two"><div><h3>Avalancha (APR más alta primero)</h3><p>${money(a.totalInterest)} de intereses, ${duration(a.months, 'es')}</p>${listA}</div>
     <div><h3>Bola de nieve (saldo más chico primero)</h3><p>${money(s.totalInterest)} de intereses, ${duration(s.months, 'es')}</p>${listS}</div></div>`,
   defaultDebts: ['Tarjeta de crédito', 'Tarjeta de tienda', 'Préstamo de auto'],
+  printAva: 'Imprimir mi plan avalancha', printSnow: 'Imprimir mi plan bola de nieve',
+  planTitle: (strategy) => `Mi plan para salir de deudas (${strategy === 'avalanche' ? 'avalancha: APR más alta primero' : 'bola de nieve: saldo más chico primero'})`,
+  planIntro: (a) => `Pague ${money(a.budget)} al mes en total. Sin deudas en ${duration(a.months, 'es')}, con ${money(a.totalInterest)} de intereses. Marque cada mes cuando lo pague.`,
+  planMonth: 'Mes', planPaid: 'Pagado', planLeft: 'queda', planFooter: 'Hecho con la calculadora gratis para pagar deudas. Son estimaciones que suponen que sus tasas y mínimos no cambian.',
   nextStep: 'Siguiente paso', affiliateNote: 'Enlace de afiliado: podemos ganar una comisión sin costo para usted.', getIt: 'Obtenerlo',
   copied: 'Enlace copiado', copyPrompt: 'Copie este enlace', sending: 'Enviando…', notConnected: 'El registro por correo aún no está conectado: configure email.action en config.js.',
 };

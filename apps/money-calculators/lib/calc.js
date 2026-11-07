@@ -56,7 +56,7 @@ function cloneDebts(debts) {
  * (sum of minimums + extra). Freed-up minimums roll into the target debt.
  * strategy: 'avalanche' (highest APR first) or 'snowball' (smallest balance first).
  */
-export function debtPayoff(debts, { extra = 0, strategy = 'avalanche' } = {}) {
+export function debtPayoff(debts, { extra = 0, strategy = 'avalanche', schedule = false } = {}) {
   const list = cloneDebts(debts);
   extra = num(extra, 'Extra payment');
   if (!['avalanche', 'snowball'].includes(strategy)) throw new RangeError('Unknown strategy');
@@ -69,6 +69,7 @@ export function debtPayoff(debts, { extra = 0, strategy = 'avalanche' } = {}) {
   let month = 0;
   let totalInterest = 0;
   const paidOffMonth = {};
+  const rows = [];
   while (list.some((d) => d.balance > 0.005)) {
     month++;
     if (month > MAX_MONTHS) {
@@ -83,10 +84,12 @@ export function debtPayoff(debts, { extra = 0, strategy = 'avalanche' } = {}) {
     }
     // 2. Pay minimums on every open debt.
     let available = budget;
+    const paid = list.map(() => 0);
     for (const d of list) {
       if (d.balance <= 0) continue;
       const pay = Math.min(d.minPayment, d.balance, available);
       d.balance -= pay;
+      paid[d.index] += pay;
       available -= pay;
     }
     // 3. Everything left goes to the target debts in strategy order.
@@ -96,8 +99,10 @@ export function debtPayoff(debts, { extra = 0, strategy = 'avalanche' } = {}) {
       if (live.balance <= 0) continue;
       const pay = Math.min(live.balance, available);
       live.balance -= pay;
+      paid[live.index] += pay;
       available -= pay;
     }
+    if (schedule) rows.push({ month, payments: paid.map(round2), balances: list.map((d) => round2(Math.max(0, d.balance))) });
     for (const d of list) {
       if (d.balance <= 0.005 && paidOffMonth[d.name] === undefined) {
         d.balance = 0;
@@ -113,6 +118,7 @@ export function debtPayoff(debts, { extra = 0, strategy = 'avalanche' } = {}) {
     budget: round2(budget),
     order: order.map((d) => d.name),
     paidOff: order.map((d) => ({ name: d.name, month: paidOffMonth[d.name] })),
+    ...(schedule ? { names: list.map((d) => d.name), schedule: rows } : {}),
   };
 }
 

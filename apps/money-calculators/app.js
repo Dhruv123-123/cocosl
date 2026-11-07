@@ -88,7 +88,23 @@ function renderDebt(form) {
   const { avalanche: a, snowball: s } = c;
   if (!a.feasible) return T.debtInfeasible;
   const list = (r) => `<ol>${r.paidOff.map((p) => `<li>${T.debtPaidIn(escapeHtml(p.name), p.month)}</li>`).join('')}</ol>`;
-  return T.debt(a, s, T.debtVerdict(c), list(a), list(s));
+  const printBtns = `<div class="row print-row"><button type="button" class="btn small" data-print="avalanche">${T.printAva}</button><button type="button" class="btn small ghost" data-print="snowball">${T.printSnow}</button></div>`;
+  return T.debt(a, s, T.debtVerdict(c), list(a), list(s)) + printBtns;
+}
+
+function printPlan(strategy) {
+  const form = $('#calc-form');
+  const r = calc.debtPayoff(readDebts(form), { extra: Number(form.extra.value || 0), strategy, schedule: true });
+  if (!r.feasible) return;
+  const now = new Date();
+  const label = (m) => new Date(now.getFullYear(), now.getMonth() + m, 1).toLocaleDateString(lang === 'es' ? 'es-US' : 'en-US', { month: 'short', year: 'numeric' });
+  const head = r.names.map((n) => `<th>${escapeHtml(n)}</th>`).join('');
+  const body = r.schedule.map((row) => `<tr><td>☐ ${label(row.month)}</td>${row.payments.map((p, i) => `<td>${p ? money(p, 2) : ''}<small>${row.balances[i] ? `${money(row.balances[i])} ${T.planLeft}` : row.payments[i] ? '✓' : ''}</small></td>`).join('')}</tr>`).join('');
+  let box = $('#print-plan');
+  if (!box) { box = document.createElement('section'); box.id = 'print-plan'; document.body.append(box); }
+  box.innerHTML = `<h1>${T.planTitle(strategy)}</h1><p>${T.planIntro(r)}</p>
+    <table><thead><tr><th>${T.planMonth}</th>${head}</tr></thead><tbody>${body}</tbody></table><p class="tiny">${T.planFooter}</p>`;
+  window.print();
 }
 
 // ---------- shared UI ----------
@@ -208,6 +224,7 @@ function mountCalculator(id) {
     offers.innerHTML = offerHtml(spec.cta);
   }
   form.addEventListener('input', run);
+  out.addEventListener('click', (e) => { const b = e.target.closest('[data-print]'); if (b) printPlan(b.dataset.print); });
   form.addEventListener('submit', (e) => { e.preventDefault(); run(); });
   $('#share')?.addEventListener('click', async () => {
     try { await navigator.clipboard.writeText(location.href); $('#share').textContent = T.copied; }
