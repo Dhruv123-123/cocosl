@@ -308,6 +308,16 @@ class Factory:
                 self.db.update("publications", pub["id"], {
                     "status": "failed", "error": f"post status {post['status'] if post else 'missing'}"})
                 continue
+            late_hours = float(os.environ.get("PUBLISH_LATE_HOURS", "6") or 0)
+            if late_hours and pub["scheduled_at"] < (now - timedelta(hours=late_hours)).isoformat():
+                # The worker was down: don't dump a backlog all at once (that reads as spam). Move it on.
+                from .scheduler import next_slot
+                slot = next_slot(self.db, self.brand(post["brand"]), pub["platform"], after=now)
+                self.db.update("publications", pub["id"], {"scheduled_at": slot.isoformat()})
+                self.db.log("publication.rescheduled_late", "publication", pub["id"],
+                            {"was": pub["scheduled_at"], "now": slot.isoformat()})
+                results.append({"publication": pub["id"], "status": "rescheduled", "at": slot.isoformat()})
+                continue
             if self.db.one("SELECT id FROM publications WHERE post_id = ? AND platform = ? AND id != ? "
                            "AND status = 'published'", [pub["post_id"], pub["platform"], pub["id"]]):
                 self.db.update("publications", pub["id"], {"status": "cancelled",

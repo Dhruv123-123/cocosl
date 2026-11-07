@@ -250,13 +250,16 @@ def calendar_page(request: Request, factory: Factory = Depends(get_factory)) -> 
 @router.post("/publish/due")
 def publish_due(request: Request, factory: Factory = Depends(get_factory)):
     results = factory.publish_due()
+    moved = sum(1 for r in results if r["status"] == "rescheduled")
+    results = [r for r in results if r["status"] != "rescheduled"]
     ok = sum(1 for r in results if r["status"] != "failed")
     failed = len(results) - ok
     word = "recorded (dry run)" if factory.settings.dry_run else "published"
     if failed:
         return back(request, "/calendar", err=f"{ok} {word}, {failed} failed: "
                     + "; ".join(r.get("error", "")[:120] for r in results if r["status"] == "failed")[:400])
-    return back(request, "/calendar", msg=f"{ok} publication(s) {word}" if results else "Nothing due right now")
+    note = f"; {moved} overdue post(s) moved to the next free slot" if moved else ""
+    return back(request, "/calendar", msg=(f"{ok} publication(s) {word}" if results else "Nothing due right now") + note)
 
 
 @router.get("/published")
