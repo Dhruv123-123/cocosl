@@ -17,7 +17,7 @@ B={
   etsy={"C":3,"B":15,"O":60}, etsy_net=5.0, etsy_season={2:1.3},
   clicks={"C":20,"B":200,"O":1500}, conv=0.015, payout={"C":20,"B":25,"O":30}, aff_start=3, aff_season={},
   view_season={}, club=None,
-  b2b=dict(cu={"C":0,"B":3,"O":6}, cu_price=99, cu_paid_from=8, team={"C":0,"B":1,"O":4}, team_from=4, team_net=90)),
+  b2b=dict(cu={"C":0,"B":0,"O":0}, cu_price=99, cu_paid_from=8, team={"C":0,"B":1,"O":4}, team_from=4, team_net=90)),  # credit unions moved to the B2B scenario below
 "1099 Money":dict(
   views={"C":2000,"B":15000,"O":90000}, watch=5.0, rpm={"C":8,"B":10,"O":14},
   subs={"C":200,"B":1800,"O":9000}, per_sub={"C":0.8,"B":1.5,"O":2.2},
@@ -40,7 +40,8 @@ def run(name,p,s):
         v=p["views"][s]*r*p["view_season"].get(m,1)
         cum_hours+=v*p["watch"]/60
         yt=0
-        if ypp is None and cum_hours>=8000 and m>=4: ypp=m  # threshold applies from Feb 2027 (m4)
+        need=4000 if m<4 else 8000  # 4,000 hours until 31 Jan 2027, 8,000 for new applicants from 1 Feb 2027 (m4)
+        if ypp is None and cum_hours>=need: ypp=m
         if ypp and m>ypp: yt=v/1000*p["rpm"][s]
         subs=p["subs"][s]*r; new=subs-prev_subs; prev_subs=subs
         prod=0 if m<p.get("product_start",1) else new*p["per_sub"][s]
@@ -82,3 +83,36 @@ for s in S:
         rows=out[(name,s)][0]
         sums=[sum(r[k] for r in rows) for k in keys]
         print(f"| {name} | "+" | ".join(f"{x:,.0f}" for x in sums)+f" | **{sum(sums):,.0f}** | {tot(rows[-1]):,.0f} |")
+
+# ---------------------------------------------------------------------------
+# B2B scenario (PR #13): white-label packs sold by cold email that Dhruv sends by hand.
+# Funnel per email: yes-to-pilot rate -> 2 free months -> pilot-to-paid rate -> monthly churn.
+B2B_PRODUCTS={
+  "Weekly Scam Alert (credit unions)": dict(price=99, start=2),     # $49/$99/$149 tiers, middle tier as average
+  "Money Made Simple at Work (employers)": dict(price=89, start=3), # $59/$129/$249; small employers skew to Starter
+  "Scam Watch (libraries, senior centers, AAAs)": dict(price=35+150/12, start=2), # $19/$59 mix + one $150 talk a year
+}
+B2B_SC={
+  "C": dict(sends=10, yes=0.0025, convert=0.25, churn=0.04),
+  "B": dict(sends=20, yes=0.01, convert=0.40, churn=0.03),
+  "O": dict(sends=40, yes=0.03, convert=0.60, churn=0.02),
+}
+PILOT=2
+def b2b_run(prod,s):
+    q=B2B_SC[s]; paid=[0.0]*13; rev=[]; pilots_started=[0.0]*13
+    for m in range(1,13):
+        if m>=prod["start"]: pilots_started[m]=q["sends"]*q["yes"]
+        new_paid=pilots_started[m-PILOT]*q["convert"] if m-PILOT>=1 else 0
+        paid[m]=paid[m-1]*(1-q["churn"])+new_paid
+        rev.append(paid[m]*prod["price"])
+    return rev,paid[12],sum(pilots_started)
+print("\n## B2B scenario")
+for s in S:
+    print(f"\n### B2B {s}: sends/month per product {B2B_SC[s]['sends']}, yes {B2B_SC[s]['yes']:.2%}, pilot-to-paid {B2B_SC[s]['convert']:.0%}")
+    print("| Product | "+" | ".join(MONTHS)+" | Year 1 | Paying at month 12 | Pilots started |"); print("|---|"+"---:|"*15)
+    allm=[0]*12
+    for name,prod in B2B_PRODUCTS.items():
+        rev,p12,pil=b2b_run(prod,s)
+        for i,x in enumerate(rev): allm[i]+=x
+        print(f"| {name} | "+" | ".join(f"{x:,.0f}" for x in rev)+f" | **{sum(rev):,.0f}** | {p12:.1f} | {pil:.1f} |")
+    print("| **All B2B** | "+" | ".join(f"**{x:,.0f}**" for x in allm)+f" | **{sum(allm):,.0f}** | | |")

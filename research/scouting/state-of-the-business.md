@@ -13,7 +13,7 @@ this page is the short version and adds the open decisions from the scouting res
 | **Products** | Six Money Made Simple products ($5-39), plus product ladders for Scam Decoded and 1099 Money, Etsy listings and printables | PRs #6, #9, #10 |
 | **Ad studio** (fastest money) | A portfolio, a $49/$99 listing-video order page, and written leads and pitches | PR #12, `docs/GO_LIVE.md` stage 2 |
 | **Money plan** | Financial model, affiliate application kit, and 20 affiliate articles | PRs #3, #5 |
-| **Research** | 31 research files: platform rules, email tool, launch playbook, API access, sponsors, competitors, open-source tools, Instagram growth, YouTube SEO, Actual Budget tutorials, forkable apps, product ideas, a receipt tracker plan, Nov 2026 formats, a Black Friday plan, a YouTube policy review, a revenue model by brand | PR #2 |
+| **Research** | 31 research files: platform rules, email tool, launch playbook, API access, sponsors, competitors, open-source tools, Instagram growth, YouTube SEO, Actual Budget tutorials, forkable apps, product ideas, a receipt tracker plan, Nov 2026 formats, a Black Friday plan, a YouTube policy review, a revenue model by brand with a B2B scenario | PR #2 |
 
 **12 pull requests are open and none are merged yet.** `docs/GO_LIVE.md` lists a merge order. PR #2 is now
 up to date with `main` and passes its tests.
@@ -64,10 +64,14 @@ From `revenue-model-2027.md` (all four brands, after platform fees, ad studio no
 
 | | Conservative | Base | Optimistic |
 |---|---:|---:|---:|
-| Month 12 (Oct 2027) | about $200/mo | about $3,100/mo | about $23,000/mo |
-| Year 1 | about $1,300 | about $18,500 | about $140,000 |
+| Content, month 12 (Oct 2027) | about $200/mo | about $2,800/mo | about $22,600/mo |
+| Content, year 1 | about $1,300 | about $17,600 | about $138,000 |
+| B2B packs (PR #13), year 1 | about $50 | about $700 | about $6,700 |
 
 - **Products are the biggest line** in every case. YouTube Shorts pays $0 (10M views per 90 days needed),
-  and YouTube long-form ads are $0 in year 1 in the conservative and base cases (8,000 watch hours needed).
+  and YouTube long-form ads are $0 in year 1 in the conservative and base cases: new YPP applicants need
+  8,000 watch hours from 1 Feb 2027 (YouTube blog, 10 Aug 2026; it's 4,000 until then).
+- **B2B cold email closes slowly:** public benchmarks put it near 1 paying customer per 350 emails. The base
+  case (1 per 250) gives about 2 paying organizations by Oct 2027. Referrals from partners are the lever.
 - What moves it most: products and email live at launch, affiliate approvals, long-video watch time, and
-  the credit-union emails you send.
+  the B2B emails you send.
