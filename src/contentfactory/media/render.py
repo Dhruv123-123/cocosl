@@ -12,7 +12,7 @@ from pathlib import Path
 
 from ..config import BrandProfile, Settings
 from ..schemas import Script, Segment
-from .captions import time_segment, write_srt
+from .captions import time_segment, time_segment_words, write_srt
 from .carousel import SlideKit, SlideText, render_carousel
 from .images import generate_images
 from .thumbnail import render_thumbnail
@@ -74,10 +74,14 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
 
     tts = synthesize_segments(settings, brand, lines, work / "voice")
     beats, cues, slots, t = [], [], [], 0.0
+    seg_words = tts.words or [None] * len(lines)
     for i, (line, head, img, dur) in enumerate(zip(lines, heads, images, tts.durations)):
         slot = max(MIN_BEAT, dur + (TAIL if i == len(lines) - 1 else GAP))
         beats.append(Beat(img, head, t, slot))
-        cues += time_segment(line, t + LEAD, max(0.4, dur - LEAD))
+        if seg_words[i]:
+            cues += time_segment_words(line, t, dur, seg_words[i])
+        else:
+            cues += time_segment(line, t + LEAD, max(0.4, dur - LEAD))
         slots.append(slot)
         t += slot
 
@@ -101,7 +105,9 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     prov = _image_provenance(imgs)
     prov.append(provenance(str(audio), "generated", tts.tool, " ".join(lines), provider=tts.provider,
                            note="Voice must be your own or licensed."))
-    prov.append(provenance(str(srt), "rendered", "contentfactory.captions", note="timing estimated from audio length"))
+    prov.append(provenance(str(srt), "rendered", "contentfactory.captions",
+                           note="word timing from the voice" if tts.timing != "estimated"
+                           else "timing estimated from audio length", timing=tts.timing))
     prov.append(provenance(str(thumb), "rendered", "pillow", script.thumbnail_text))
     prov.append(provenance(str(thumb.with_suffix(".jpg")), "rendered", "pillow", script.thumbnail_text,
                            note="JPEG copy for APIs that require JPEG"))

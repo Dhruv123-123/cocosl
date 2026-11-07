@@ -41,6 +41,9 @@ SAMPLE_RATE = 44100
 HTTP_TIMEOUT = httpx.Timeout(90.0, connect=10.0)
 
 
+Word = tuple[str, float, float]  # (word, start, end) in seconds from the segment start
+
+
 @dataclass
 class TTSResult:
     provider: str
@@ -48,6 +51,9 @@ class TTSResult:
     paths: list[Path]
     durations: list[float]
     notes: list[str] = field(default_factory=list)
+    # Per segment: real word timings when the voice (Kokoro) or an aligner (whisper) gave them, else None
+    words: list[list[Word] | None] = field(default_factory=list)
+    timing: str = "estimated"  # estimated | kokoro | whisper
 
 
 def synthesize_segments(settings: Settings, brand: BrandProfile, texts: list[str], out_dir: Path) -> TTSResult:
@@ -63,18 +69,47 @@ def synthesize_segments(settings: Settings, brand: BrandProfile, texts: list[str
         if wanted == "auto" and not provider.available():
             continue
         try:
-            paths, durs = [], []
+            paths, durs, words = [], [], []
             for i, text in enumerate(texts):
                 path = out_dir / f"seg-{i:02d}.wav"
+                provider.last_words = None
                 provider.speak(text, path)
                 paths.append(path)
                 durs.append(probe(path)["duration"])
-            return TTSResult(name, provider.tool, paths, durs, notes)
+                words.append(provider.last_words)
+            res = TTSResult(name, provider.tool, paths, durs, notes, words)
+            if any(words):
+                res.timing = name
+            elif name != "silent":
+                align_with_whisper(res)
+            return res
         except (ProviderError, MediaError, httpx.HTTPError) as e:
             if wanted != "auto":
                 raise ProviderError(f"TTS provider '{name}' failed: {e}") from e
             notes.append(f"tts {name} failed, fell through: {str(e)[:200]}")
     raise ProviderError("No TTS provider succeeded: " + "; ".join(notes))
+
+
+def align_with_whisper(res: TTSResult) -> None:
+    """Optional forced timing: FACTORY_ALIGN=whisper with faster-whisper installed transcribes each
+    segment with word timestamps. Silently does nothing otherwise."""
+    if os.environ.get("FACTORY_ALIGN", "").lower() != "whisper":
+        return
+    try:
+        from faster_whisper import WhisperModel
+    except Exception:
+        res.notes.append("FACTORY_ALIGN=whisper but faster-whisper isn't installed; caption timing estimated")
+        return
+    try:
+        model = WhisperModel(os.environ.get("WHISPER_MODEL", "base.en"), device="cpu", compute_type="int8")
+        out = []
+        for path in res.paths:
+            segs, _ = model.transcribe(str(path), word_timestamps=True, vad_filter=False)
+            out.append([(w.word.strip(), float(w.start), float(w.end)) for sg in segs for w in (sg.words or [])
+                        if w.word.strip()] or None)
+        res.words, res.timing = out, "whisper"
+    except Exception as e:
+        res.notes.append(f"whisper alignment failed, caption timing estimated: {str(e)[:160]}")
 
 
 def concat_narration(paths: list[Path], slots: list[float], out: Path) -> None:
@@ -92,6 +127,7 @@ def concat_narration(paths: list[Path], slots: list[float], out: Path) -> None:
 # ---------------------------------------------------------------- providers
 class Provider:
     tool = ""
+    last_words: list | None = None  # set by speak() when the voice returns word timestamps
 
     def __init__(self, settings: Settings, brand: BrandProfile):
         self.settings, self.brand = settings, brand
@@ -144,6 +180,8 @@ class Kokoro(Provider):
         body = {"model": os.environ.get("KOKORO_MODEL", "kokoro"), "input": _clean(text), "voice": self.voice(),
                 "response_format": "wav", "speed": self.speed()}
         headers = {"Authorization": f"Bearer {os.environ['KOKORO_API_KEY']}"} if os.environ.get("KOKORO_API_KEY") else {}
+        if os.environ.get("KOKORO_TIMESTAMPS", "1") != "0" and self._speak_captioned(body, headers, out):
+            return
         try:
             resp = httpx.post(f"{self._url()}/v1/audio/speech", json=body, headers=headers, timeout=HTTP_TIMEOUT)
         except httpx.HTTPError as e:
@@ -151,6 +189,28 @@ class Kokoro(Provider):
         _raise_for(resp, "Kokoro")
         self.tool = f"kokoro:{self.voice()}"
         _to_wav(resp.content, ".wav", out)
+
+    def _speak_captioned(self, body: dict, headers: dict, out: Path) -> bool:
+        """Kokoro-FastAPI's captioned endpoint returns audio plus word timestamps, so captions can follow
+        the voice exactly. Any problem (older server, other response shape) falls back to plain speech."""
+        import base64
+        try:
+            resp = httpx.post(f"{self._url()}/dev/captioned_speech", json={**body, "stream": False,
+                              "return_timestamps": True}, headers=headers, timeout=HTTP_TIMEOUT)
+            if resp.status_code != 200 or "json" not in resp.headers.get("content-type", ""):
+                return False
+            data = resp.json()
+            audio = base64.b64decode(data.get("audio") or "")
+            words = [(str(w.get("word", "")).strip(), float(w["start_time"]), float(w["end_time"]))
+                     for w in data.get("timestamps") or [] if str(w.get("word", "")).strip()]
+        except Exception:
+            return False
+        if not audio:
+            return False
+        _to_wav(audio, ".wav", out)
+        self.tool = f"kokoro:{self.voice()}"
+        self.last_words = words or None
+        return True
 
     def _speak_local(self, text: str, out: Path) -> None:
         try:
@@ -162,8 +222,16 @@ class Kokoro(Provider):
         lang = voice[0]
         if lang not in self._pipelines:
             self._pipelines[lang] = KPipeline(lang_code=lang)
-        chunks = [np.asarray(audio, dtype="float32") for _, _, audio in
-                  self._pipelines[lang](_clean(text), voice=voice, speed=self.speed())]
+        chunks, words, offset = [], [], 0.0
+        for result in self._pipelines[lang](_clean(text), voice=voice, speed=self.speed()):
+            audio = np.asarray(result[2] if isinstance(result, tuple) else result.audio, dtype="float32")
+            for tok in getattr(result, "tokens", None) or []:  # newer kokoro: per-token timestamps
+                st, en = getattr(tok, "start_ts", None), getattr(tok, "end_ts", None)
+                if st is not None and en is not None and str(getattr(tok, "text", "")).strip():
+                    words.append((tok.text, offset + float(st), offset + float(en)))
+            chunks.append(audio)
+            offset += len(audio) / 24000
+        self.last_words = [w for w in words if any(ch.isalnum() for ch in w[0])] or None
         if not chunks:
             raise ProviderError("kokoro returned no audio")
         pcm = (np.clip(np.concatenate(chunks), -1, 1) * 32767).astype("<i2").tobytes()
