@@ -1578,6 +1578,14 @@ def build() -> list[str]:
     (OUT / "_headers").write_text("".join(f"{u(p)}\n  Cache-Control: {v}\n" for p, v in [
         ("/img/*", week), ("/downloads/*", week), ("/*.css", hour), ("/*.js", hour)]))
 
+    # ---- self-contained B2B pages (B2B thread, PR #13): static/business/<slug>/index.html are copied as-is with
+    # static/; static/business/manifest.json ([{slug, title, description, updated?}]) puts them in the sitemap.
+    biz = STATIC / "business" / "manifest.json"
+    if biz.exists():
+        for b in json.loads(biz.read_text()):
+            if (OUT / "business" / b["slug"] / "index.html").exists():
+                urls.append((f"/business/{b['slug']}/", str(b.get("updated", date.today().isoformat()))))
+
     # ---- sitemap, robots, feed
     sm = "".join(f"<url><loc>{esc(absu(p))}</loc><lastmod>{d}</lastmod></url>" for p, d in urls)
     (OUT / "sitemap.xml").write_text(
