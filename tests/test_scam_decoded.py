@@ -605,3 +605,21 @@ def test_parents_printable_kit_and_listing(tmp_path, monkeypatch):
     assert len(tags) == 13 and len({t for t, _ in tags}) == 13
     assert all(len(t) <= 20 and len(t) == int(n) for t, n in tags)
     assert "How it's made" in listing and "Personal use only" in listing
+
+
+def test_small_business_series_feeds_site_alerts_and_b2b_blocks():
+    site = ROOT / "sites" / "scam-decoded" / "content"
+    data = json.loads((CONTENT.parent / "small-business" / "b2b_issue_blocks.json").read_text())
+    keys = {"topic", "subject", "preheader", "headline", "example_label", "example", "explain", "tell", "steps",
+            "quick_hits", "job", "promise", "lobby", "social", "sources"}
+    assert [b["key"] for b in data["blocks"]] == ["fake-invoices", "google-listing-calls", "domain-renewal-notices"]
+    for b in data["blocks"]:
+        assert keys <= set(b) and b["promise"] is False and "made-up" in b["example_label"]
+        assert all("ftc.gov" in u for u in b["sources"])
+        body = json.dumps({k: v for k, v in b.items() if k not in ("explainer", "key")}).lower()
+        assert "scamdecoded" not in body and "guarantee" not in body and "http" not in json.dumps(b["steps"])
+        article = next((site / "articles").glob(f"*-{b['key']}.md")).read_text()
+        assert f"path: {b['explainer']}" in article and "ftc.gov" in article and "## The tell" in article
+        alert = next((site / "alerts").glob(f"*-{b['key']}*.md"), None) or next(
+            p for p in (site / "alerts").glob("*.md") if f"explainer: {b['key']}" in p.read_text())
+        assert "flags:" in alert.read_text()

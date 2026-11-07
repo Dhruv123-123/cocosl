@@ -82,15 +82,17 @@ def message_block(d, y, words, f, width, x0, lh) -> int:
         x += wl
     for ln in lines:
         x = x0
-        for w, k, first in ln:
+        for j, (w, k, first) in enumerate(ln):
+            joined = k and j + 1 < len(ln) and ln[j + 1][1] == k  # highlight runs on through the space
             if first:
                 badge(d, x, y + 3, k)
                 x += 40
             wl = d.textlength(w, font=f)
             sp = d.textlength(" ", font=f)
             if k:
-                d.rectangle((x - 3, y + 2, x + wl + 3, y + lh - 6), fill=PINK)
-                d.line((x - 3, y + lh - 6, x + wl + 3, y + lh - 6), fill=RED, width=3)
+                end = x + wl + (sp if joined else 3)
+                d.rectangle((x - 3, y + 2, end, y + lh - 6), fill=PINK)
+                d.line((x - 3, y + lh - 6, end, y + lh - 6), fill=RED, width=3)
             d.text((x, y), w, font=f, fill=INK)
             x += wl + sp
         y += lh

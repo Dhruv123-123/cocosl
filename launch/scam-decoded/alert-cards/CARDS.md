@@ -18,6 +18,9 @@ Gaps: the plan has a card only on days with an alert. Write the next alert a few
 | Wed Nov 25 | 08:30 | watch | Fake charities ahead of Giving Tuesday | `2026-11-25-giving-tuesday-fake-charities.png` |
 | Thu Nov 26 | 08:30 | warning | The loud "your computer is infected" pop-up | `2026-11-26-tech-support-pop-ups.png` |
 | Fri Nov 27 | 08:30 | watch | "Your personal info is for sale on the dark web" emails | `2026-11-27-dark-web-info-for-sale-emails.png` |
+| Mon Nov 30 | 08:30 | warning | Past-due invoices for services your business never ordered | `2026-11-30-fake-past-due-invoices.png` |
+| Tue Dec 1 | 08:30 | watch | Robocalls saying your business will vanish from Google | `2026-12-01-google-listing-robocalls.png` |
+| Wed Dec 2 | 08:30 | watch | Domain "expiration notices" that aren't from your registrar | `2026-12-02-domain-renewal-notices.png` |
 | Tue Dec 8 | 08:30 | watch | Fake "fraud team" calls after a data breach | `2026-12-08-breach-fraud-team-calls.png` |
 | Tue Jan 12 | 08:30 | urgent | "Unpaid toll" texts are back | `2027-01-12-unpaid-toll-texts.png` |
 
@@ -197,6 +200,60 @@ The giveaways: 1) A scary claim from a company you never signed up with. 2) A li
 What to do: Don't click. If you're worried, change passwords on the sites you use and turn on two-step sign-in.
 
 Source: FTC: Did you get an email saying your personal info is for sale on the dark web? (https://consumer.ftc.gov/consumer-alerts/2022/09/did-you-get-email-saying-your-personal-info-sale-dark-web). The example on the card is made up.
+
+Not sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.
+
+#scamalert #scamawareness #fraudprevention #staysafeonline #scamdecoded
+```
+
+### 2026-11-30: Past-due invoices for services your business never ordered
+
+Image: `2026-11-30-fake-past-due-invoices.png`
+
+```
+Scam alert: Past-due invoices for services your business never ordered.
+
+The giveaways: 1) A "final" or "past due" notice for a bill you never got a first copy of. 2) Services like SEO, tech support or domain listings that nobody remembers buying. 3) A deadline and a collections threat to rush whoever opens the mail.
+
+What to do: Match the invoice to a real order or contract. No match, no payment.
+
+Source: FTC: Run a small business? Pay your bills, not scammers (https://consumer.ftc.gov/consumer-alerts/2026/05/run-small-business-pay-your-bills-not-scammers). The example on the card is made up.
+
+Not sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.
+
+#scamalert #scamawareness #fraudprevention #staysafeonline #scamdecoded
+```
+
+### 2026-12-01: Robocalls saying your business will vanish from Google
+
+Image: `2026-12-01-google-listing-robocalls.png`
+
+```
+Scam alert: Robocalls saying your business will vanish from Google.
+
+The giveaways: 1) A recorded "final notice" about your listing. 2) A threat that customers won't find you, or you'll be marked closed. 3) A fee to verify or to rank first. The FTC says verifying a listing is free.
+
+What to do: Hang up. Don't press 1.
+
+Source: FTC: Robocallers' false threat that small businesses will be "removed" from Google (https://www.ftc.gov/business-guidance/blog/2018/05/ftc-challenges-robocallers-false-threat-small-businesses-will-be-removed-google). The example on the card is made up.
+
+Not sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.
+
+#scamalert #scamawareness #fraudprevention #staysafeonline #scamdecoded
+```
+
+### 2026-12-02: Domain "expiration notices" that aren't from your registrar
+
+Image: `2026-12-02-domain-renewal-notices.png`
+
+```
+Scam alert: Domain "expiration notices" that aren't from your registrar.
+
+The giveaways: 1) The name is a close variant of yours, like .org instead of .com. 2) The small print sells a "listing" or "search submission", not your registration. 3) It warns you'll lose your website if you don't pay this sender.
+
+What to do: Sign in to your real registrar account and check the renewal date there.
+
+Source: FTC halts domain name registration scam (https://www.ftc.gov/news-events/news/press-releases/2010/08/ftc-halts-cross-border-domain-name-registration-scam). The example on the card is made up.
 
 Not sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.
 
