@@ -8,6 +8,7 @@ keyword: how to start investing with 100 dollars
 read_minutes: 9
 product: the-20-minute-budget
 sources: [https://www.investor.gov/introduction-investing/getting-started/assessing-your-risk-tolerance, https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator, https://www.irs.gov/retirement-plans/roth-iras, https://www.finra.org/investors/learn-to-invest/types-investments/investment-funds/target-date-funds]
+howto: steps
 ---
 A hundred dollars a month doesn't sound like investing. It sounds like a phone bill. But money invested in your twenties gets the one thing nobody can buy later: time.
 

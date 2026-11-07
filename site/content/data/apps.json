@@ -1,0 +1,212 @@
+{
+ "_readme": "Tools on the separate apps site (site.json > apps_url, PR #8 apps/). 'articles': article slugs that link the tool in their 'Free tools for this' box (at most 2 apps tools per article are shown). /tools/ lists every tool by group. Hidden when apps_url is empty.",
+ "tools": [
+  {
+   "key": "take-home-pay",
+   "group": "Paychecks and taxes",
+   "title": "Paycheck calculator by state",
+   "path": "/money-calculators/take-home-pay/",
+   "blurb": "take-home pay after 2026 federal and state tax, for all 50 states and DC.",
+   "articles": [
+    "401k-match-explained",
+    "roth-vs-traditional-ira",
+    "best-tax-software-for-simple-returns",
+    "freetaxusa-review",
+    "how-to-make-a-budget-you-will-keep"
+   ]
+  },
+  {
+   "key": "roth-vs-traditional",
+   "group": "Paychecks and taxes",
+   "title": "Roth vs traditional calculator",
+   "path": "/money-calculators/roth-vs-traditional/",
+   "blurb": "compare Roth and traditional IRA or 401(k) contributions at your tax rates.",
+   "articles": [
+    "roth-vs-traditional-ira",
+    "where-to-open-a-roth-ira"
+   ]
+  },
+  {
+   "key": "afford",
+   "group": "Spending and big purchases",
+   "title": "Can I afford it?",
+   "path": "/budget/afford.html",
+   "blurb": "a car, a phone or anything big: cash vs loan vs buy now, pay later, and how it fits your month.",
+   "articles": [
+    "how-to-make-a-budget-you-will-keep",
+    "sinking-funds-explained"
+   ]
+  },
+  {
+   "key": "subscriptions",
+   "group": "Spending and big purchases",
+   "title": "Subscription audit",
+   "path": "/budget/subscriptions.html",
+   "blurb": "find every recurring charge in a bank statement and what it costs a year.",
+   "articles": [
+    "find-and-cancel-subscriptions",
+    "rocket-money-review"
+   ]
+  },
+  {
+   "key": "bills",
+   "group": "Spending and big purchases",
+   "title": "Bill negotiation tracker",
+   "path": "/budget/bills.html",
+   "blurb": "bills, promo end dates and call scripts to lower them yourself.",
+   "articles": []
+  },
+  {
+   "key": "deals",
+   "group": "Spending and big purchases",
+   "title": "0% deal countdown",
+   "path": "/budget/deals.html",
+   "blurb": "the payment that clears a 0% or deferred-interest deal in time.",
+   "articles": []
+  },
+  {
+   "key": "emergency-fund",
+   "group": "Saving",
+   "title": "Emergency fund calculator",
+   "path": "/money-calculators/emergency-fund/",
+   "blurb": "how much to save and how long it takes at your pace.",
+   "articles": [
+    "how-to-build-an-emergency-fund",
+    "high-yield-savings-vs-money-market",
+    "how-to-open-a-high-yield-savings-account",
+    "is-my-savings-app-fdic-insured"
+   ]
+  },
+  {
+   "key": "savings-interest",
+   "group": "Saving",
+   "title": "High-yield savings calculator",
+   "path": "/money-calculators/savings-interest/",
+   "blurb": "how much interest a savings account pays on your balance.",
+   "articles": [
+    "ally-bank-review",
+    "cit-bank-review",
+    "sofi-review"
+   ]
+  },
+  {
+   "key": "student-loans",
+   "group": "Debt and credit",
+   "title": "Student loan repayment chooser",
+   "path": "/money-calculators/student-loans/",
+   "blurb": "compare 2026 federal repayment plans on your balance and income.",
+   "articles": [
+    "best-bank-account-for-college-students",
+    "debt-avalanche-vs-snowball"
+   ]
+  },
+  {
+   "key": "credit-card-minimum",
+   "group": "Debt and credit",
+   "title": "Credit card minimum payment calculator",
+   "path": "/money-calculators/credit-card-minimum/",
+   "blurb": "how long minimum payments take and what they cost.",
+   "articles": [
+    "how-credit-scores-work",
+    "self-credit-builder-review"
+   ]
+  },
+  {
+   "key": "disputes",
+   "group": "Debt and credit",
+   "title": "Credit dispute tracker",
+   "path": "/budget/disputes.html",
+   "blurb": "track 30-day credit bureau deadlines for a report error.",
+   "articles": [
+    "how-to-freeze-your-credit",
+    "aura-review"
+   ]
+  },
+  {
+   "key": "medical-bills",
+   "group": "Debt and credit",
+   "title": "Medical bill letters",
+   "path": "/medical-bills/",
+   "blurb": "request an itemized bill, dispute an error or ask for financial assistance.",
+   "articles": []
+  },
+  {
+   "key": "debt-letters",
+   "group": "Debt and credit",
+   "title": "Debt collector letters",
+   "path": "/medical-bills/debt.html",
+   "blurb": "debt validation and stop-contact letters.",
+   "articles": []
+  },
+  {
+   "key": "rent-vs-buy",
+   "group": "Investing and net worth",
+   "title": "Rent vs buy calculator",
+   "path": "/money-calculators/rent-vs-buy/",
+   "blurb": "owning costs vs renting and investing the difference, with the break-even year.",
+   "articles": []
+  },
+  {
+   "key": "networth",
+   "group": "Investing and net worth",
+   "title": "Net worth tracker",
+   "path": "/budget/networth.html",
+   "blurb": "what you own minus what you owe, with dated snapshots and a trend.",
+   "articles": [
+    "empower-review",
+    "monarch-money-review",
+    "how-to-start-investing-with-100-a-month"
+   ]
+  },
+  {
+   "key": "compound-interest",
+   "group": "Investing and net worth",
+   "title": "Compound interest calculator",
+   "path": "/money-calculators/compound-interest/",
+   "blurb": "how monthly contributions grow over time.",
+   "articles": [
+    "are-robo-advisors-worth-it",
+    "acorns-review",
+    "betterment-review"
+   ]
+  },
+  {
+   "key": "401k-fees",
+   "group": "Investing and net worth",
+   "title": "401(k) fee checker",
+   "path": "/money-calculators/401k-fees/",
+   "blurb": "what your funds' expense ratios cost in dollars.",
+   "articles": [
+    "expense-ratios-explained"
+   ]
+  },
+  {
+   "key": "budget-app",
+   "group": "Budgeting",
+   "title": "The 20-Minute Budget app",
+   "path": "/budget/",
+   "blurb": "a free, private budget app that runs in your browser.",
+   "articles": [
+    "budgeting-app-vs-spreadsheet",
+    "how-to-choose-a-budgeting-app",
+    "ynab-review"
+   ]
+  },
+  {
+   "key": "rate",
+   "group": "Budgeting",
+   "title": "Rate My Budget",
+   "path": "/budget/rate.html",
+   "blurb": "a budget score in 2 minutes and three next moves.",
+   "articles": []
+  },
+  {
+   "key": "holiday",
+   "group": "Budgeting",
+   "title": "Holiday spending planner",
+   "path": "/budget/holiday.html",
+   "blurb": "gift list, per-person budgets and the real cost of pay-in-4.",
+   "articles": []
+  }
+ ]
+}

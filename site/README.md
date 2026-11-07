@@ -300,6 +300,23 @@ this" box. A test fails if a new article has no entry.
 Set `apps_url` to `""` to hide the link (or override it with env `APPS_URL`), and update it if the Netlify site
 gets a different name.
 
+## Free tools (/tools/) and apps-site links
+
+`content/data/apps.json` lists the tools on the separate apps site (`site.json > apps_url`, PR #8), each with a
+group and the article slugs that should link it. Articles show up to two of them under "Free tools for this", next to
+their site tool from `related.json`. Salary pages link the paycheck-by-state, afford-it and emergency-fund tools, city
+pages link rent-vs-buy, paycheck and afford-it, and /debt-payoff/ links card-minimum, student-loan and afford-it.
+/tools/ lists the site's own tools, then every apps tool by group. With `apps_url` empty, every apps link disappears.
+
+## Structured data
+
+- Every indexed page gets a BreadcrumbList. A page's own one wins; otherwise it's built from the visible
+  `<p class="crumbs">` trail, or Home > page title.
+- FAQPage comes from any "## Common questions" section, plus /ask/.
+- HowTo is added to step-by-step articles that set `howto:` in front matter. Its value is the section whose numbered
+  list or `###` sub-headings are the steps, or `steps` for `## Step N:` headings. Add `howto_time: PT20M` if the
+  article says how long it takes. Six articles use it.
+
 ## Page speed (Core Web Vitals)
 
 Lighthouse on Nov 7 2026 scored 100 for performance, accessibility and SEO on 11 key pages, both mobile and desktop.

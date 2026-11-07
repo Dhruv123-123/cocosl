@@ -8,6 +8,8 @@ keyword: how to find subscriptions
 read_minutes: 5
 product: the-20-minute-budget
 sources: [https://www.ftc.gov/legal-library/browse/statutes/restore-online-shoppers-confidence-act, https://support.apple.com/en-us/118428, https://support.google.com/googleplay/answer/7018481]
+howto: steps
+howto_time: PT10M
 ---
 Subscriptions are designed to be easy to start and easy to forget. A free trial converts, a price goes up a dollar, a yearly renewal lands on a card you rarely check. Individually they're small. Together they're often one of the easiest monthly savings you'll find.
 

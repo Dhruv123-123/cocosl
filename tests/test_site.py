@@ -579,3 +579,55 @@ def test_how_we_make_money_page(tmp_path):
     e.pop("URL", None)
     subprocess.run([sys.executable, str(site2 / "build.py")], check=True, env=e, capture_output=True)
     assert "Affiliate partners right now:</strong> SoFi." in (tmp_path / "p2" / "how-we-make-money" / "index.html").read_text()
+
+
+def _ld(html_text):
+    return [json.loads(m) for m in re.findall(r'<script type="application/ld\+json">(.*?)</script>', html_text, re.S)]
+
+
+@pytest.mark.parametrize("url", ["https://example.org", "https://someone.github.io/cocosl"])
+def test_breadcrumbs_on_every_indexed_page(tmp_path, url):
+    out = _build(tmp_path, url)
+    for page in out.rglob("index.html"):
+        h = page.read_text()
+        if "/emails/" in str(page) or 'content="noindex"' in h or 'http-equiv="refresh"' in h or "<html" not in h or page == out / "index.html":
+            continue
+        crumbs = [x for x in _ld(h) if x.get("@type") == "BreadcrumbList"]
+        assert len(crumbs) == 1, page
+        items = crumbs[0]["itemListElement"]
+        assert items[0]["item"] == url + "/" and len(items) >= 2, page
+        assert all(i["item"].startswith(url + "/") for i in items), page
+
+
+def test_howto_and_faq_schema(tmp_path):
+    out = _build(tmp_path, "https://example.org")
+    ask = _ld((out / "ask" / "index.html").read_text())
+    assert any(x["@type"] == "FAQPage" for x in ask)
+    for slug, n in [("find-and-cancel-subscriptions", 4), ("how-to-make-a-budget-you-will-keep", 6),
+                    ("sinking-funds-explained", 5), ("how-to-open-a-high-yield-savings-account", 7),
+                    ("how-to-freeze-your-credit", 3), ("how-to-start-investing-with-100-a-month", 7)]:
+        how = [x for x in _ld((out / "blog" / slug / "index.html").read_text()) if x["@type"] == "HowTo"]
+        assert len(how) == 1 and len(how[0]["step"]) == n, slug
+        assert all(s["name"] and s["text"] and "**" not in s["text"] and "](" not in s["text"] for s in how[0]["step"])
+
+
+def test_apps_tools_linked_and_tools_page(tmp_path):
+    out = _build(tmp_path, "https://example.org", APPS_URL="https://tools.example.net")
+    tools = (out / "tools" / "index.html").read_text()
+    data = json.loads((SITE / "content" / "data" / "apps.json").read_text())["tools"]
+    for t in data:
+        assert f'href="https://tools.example.net{t["path"]}"' in tools, t["key"]
+    for k in ("take-home-pay", "afford", "student-loans", "rent-vs-buy", "networth", "emergency-fund"):
+        assert any(t["key"] == k for t in data)
+    ef = (out / "blog" / "how-to-build-an-emergency-fund" / "index.html").read_text()
+    assert "https://tools.example.net/money-calculators/emergency-fund/" in ef
+    assert "https://tools.example.net/money-calculators/take-home-pay/" in (out / "budget" / "50000-salary" / "index.html").read_text()
+    assert "https://tools.example.net/money-calculators/rent-vs-buy/" in (out / "cost-of-living" / "houston" / "index.html").read_text()
+    assert 'href="/tools/"' in (out / "index.html").read_text()
+    # every article that the data names gets the link, and at most 2 apps tools per article
+    for page in (out / "blog").glob("*/index.html"):
+        assert page.read_text().count('href="https://tools.example.net') <= 2, page
+    # without an apps site, nothing points at it
+    out2 = _build(tmp_path / "noapps", "https://example.org", APPS_URL="")
+    assert not any("tools.example.net" in p.read_text() for p in out2.rglob("*.html"))
+    assert (out2 / "tools" / "index.html").is_file()

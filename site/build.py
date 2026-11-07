@@ -392,11 +392,80 @@ def related_for(p: dict, posts: list[dict]) -> tuple[list[dict], dict | None]:
     return related, data["tools"].get(entry.get("tool", ""))
 
 
-def tool_box(t: dict | None) -> str:
-    if not t:
+def howto_ld(p: dict, path: str) -> dict | None:
+    """HowTo schema for step-by-step articles. Front matter `howto:` names the section whose numbered list or
+    ### sub-headings are the steps, or `steps` for '## Step N: ...' headings across the article."""
+    sec = p.get("howto")
+    if not sec:
+        return None
+    md = re.sub(r"<!--.*?-->", "", p["body"], flags=re.S)
+    clean = lambda s: " ".join(re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", re.sub(r"\*\*?|`", "", s)).split())
+    steps: list[tuple[str, str]] = []
+    if sec == "steps":
+        for h, txt in re.findall(r"^## (Step \d+:[^\n]*)\n+(.*?)(?=^## |\Z)", md, re.S | re.M):
+            first = next((b for b in txt.strip().split("\n\n") if not b.startswith(("#", "|"))), "")
+            steps.append((clean(h.split(":", 1)[1]), clean(first)))
+    else:
+        m = re.search(rf"^## {re.escape(sec)}[^\n]*\n(.*?)(?=^## |\Z)", md, re.S | re.M)
+        if not m:
+            raise SystemExit(f"{p['slug']}: howto section '{sec}' not found")
+        part = m.group(1)
+        subs = re.findall(r"^### (?:\d+\.\s*)?([^\n]+)\n+(.*?)(?=^### |\Z)", part, re.S | re.M)
+        if subs:
+            steps = [(clean(h), clean(t.strip().split("\n\n")[0])) for h, t in subs]
+        else:
+            for item in re.findall(r"^\d+\. (.+)$", part, re.M):
+                lead = re.match(r"\*\*(.+?)\*\*[:.]?\s*(.*)", item)
+                steps.append((clean(lead.group(1)).rstrip(":."), clean(lead.group(2)) or clean(lead.group(1)))
+                             if lead else (clean(item)[:80], clean(item)))
+    if len(steps) < 2:
+        raise SystemExit(f"{p['slug']}: howto found {len(steps)} steps")
+    ld = {"@context": "https://schema.org", "@type": "HowTo", "name": p["title"], "description": p["description"],
+          "url": absu(path),
+          "step": [{"@type": "HowToStep", "position": i + 1, "name": n, "text": t or n}
+                   for i, (n, t) in enumerate(steps)]}
+    if p.get("howto_time"):
+        ld["totalTime"] = p["howto_time"]
+    return ld
+
+
+def apps_base() -> str:
+    return (os.environ["APPS_URL"] if "APPS_URL" in os.environ else CFG.get("apps_url", "")).rstrip("/")
+
+
+def load_apps() -> list[dict]:
+    """content/data/apps.json: tools on the separate apps site. Empty when apps_url isn't set."""
+    f = CONTENT / "data" / "apps.json"
+    if not apps_base() or not f.exists():
+        return []
+    return json.loads(f.read_text())["tools"]
+
+
+def apps_li(t: dict) -> str:
+    return (f'<li><a href="{esc(apps_base() + t["path"])}"><strong>{esc(t["title"])}</strong></a>: '
+            f'{esc(t["blurb"])}</li>')
+
+
+def apps_tools_html(keys: list[str], heading: str = "More free tools") -> str:
+    """A list of apps-site tools by key, for data pages (salary, city). Empty when apps_url isn't set."""
+    by = {t["key"]: t for t in load_apps()}
+    items = [by[k] for k in keys if k in by]
+    if not items:
         return ""
-    return (f'<section class="next tool-box"><h2>Free tool for this</h2><p><a href="{u(t["path"])}"><strong>'
-            f'{esc(t["title"])}</strong></a>: {esc(t["blurb"])}</p></section>')
+    return f'<section class="next tool-box"><h2>{esc(heading)}</h2><ul class="related">{"".join(apps_li(t) for t in items)}</ul></section>'
+
+
+def tool_box(t: dict | None, slug: str = "") -> str:
+    """'Free tools for this': the article's site tool (related.json) plus up to 2 apps-site tools (apps.json)."""
+    apps = [a for a in load_apps() if slug and slug in a.get("articles", [])][:2]
+    items = []
+    if t:
+        items.append(f'<li><a href="{u(t["path"])}"><strong>{esc(t["title"])}</strong></a>: {esc(t["blurb"])}</li>')
+    items += [apps_li(a) for a in apps]
+    if not items:
+        return ""
+    head = "Free tools for this" if len(items) > 1 else "Free tool for this"
+    return f'<section class="next tool-box"><h2>{head}</h2><ul class="related">{"".join(items)}</ul></section>'
 
 
 def product_card(p: dict) -> str:
@@ -492,6 +561,28 @@ def article_og(item: dict, section: str) -> dict:
             "article:author": editor()["name"], "article:section": section}
 
 
+def auto_breadcrumbs(path: str, title: str, body: str, jsonld: list, noindex: bool) -> dict | None:
+    """BreadcrumbList for every indexed page that doesn't define its own: built from the visible
+    <p class="crumbs"> trail when there is one (Home is added if missing), else Home > the page's h1."""
+    if noindex or path == "/" or any(isinstance(x, dict) and x.get("@type") == "BreadcrumbList" for x in jsonld):
+        return None
+    strip = lambda h: html.unescape(re.sub(r"<[^>]+>", "", h)).strip()
+    origin = "{0.scheme}://{0.netloc}".format(urlparse(CFG["url"]))
+    trail: list[tuple[str, str]] = []
+    m = re.search(r'<p class="crumbs">(.*?)</p>', body, re.S)
+    if m:
+        trail = [(strip(t), origin + h if h.startswith("/") else h)
+                 for h, t in re.findall(r'<a href="([^"]+)"[^>]*>(.*?)</a>', m.group(1))]
+    if not trail or trail[0][1] != CFG["url"] + "/":
+        trail.insert(0, ("Home", CFG["url"] + "/"))
+    h1 = re.search(r"<h1[^>]*>(.*?)</h1>", body, re.S)
+    last = strip(h1.group(1)) if h1 else title
+    if trail[-1][1] != absu(path):
+        trail.append((last, absu(path)))
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "name": n, "item": url} for i, (n, url) in enumerate(trail)]}
+
+
 def layout(*, title: str, description: str, path: str, body: str, og_type: str = "website",
            jsonld: list | None = None, image: str = "/img/og-default.png", noindex: bool = False,
            extra_head: str = "", og: dict | None = None) -> str:
@@ -503,8 +594,12 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
         f'<a href="{u(href)}"{" aria-current=page" if path.startswith(href) and href != "/" else ""}>{esc(t)}</a>'
         for t, href in [("Start here", "/start/"), ("Articles", "/blog/"), ("Compare", "/compare/"),
                         ("Shop", "/shop/"), ("Free reset", "/free/")])
+    jsonld = list(jsonld or [])
+    crumbs = auto_breadcrumbs(path, title, body, jsonld, noindex)
+    if crumbs:
+        jsonld.append(crumbs)
     ld = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>'
-                 for x in (jsonld or []))
+                 for x in jsonld)
     soc = " · ".join(f'<a href="{esc(h)}" rel="me noopener">{esc(n)}</a>' for n, h in CFG["socials"].items())
     analytics = plausible_tag() + CFG.get("analytics_snippet", "")
     return f"""<!doctype html>
@@ -551,7 +646,7 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
   <div class="wrap">
     <p class="foot-brand"><strong>{esc(CFG['name'])}</strong> · {esc(CFG['tagline'])}</p>
     <p>{soc}</p>
-    <p><a href="{u('/about/')}">About</a> · <a href="{u('/resources/')}">Resources</a> · <a href="{u('/quiz/')}">Money quiz</a> · <a href="{u('/budget/')}">Budget by salary</a> · <a href="{u('/cost-of-living/')}">City budgets</a> · <a href="{u('/debt-payoff/')}">Debt payoff</a> · <a href="{u('/ask/')}">Money questions</a> · <a href="{u('/holiday/')}">Holiday money</a> · <a href="{u('/shop/')}">Shop</a> · <a href="{u('/privacy/')}">Privacy</a> · <a href="{u('/how-we-make-money/')}">How we make money</a> · <a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/terms/')}">Terms</a> · <a href="{u('/links/')}">Links</a> · <a href="{u('/newsletter/')}">Newsletter</a> · <a href="{u('/feed.xml')}">RSS</a></p>
+    <p><a href="{u('/about/')}">About</a> · <a href="{u('/tools/')}">Free tools</a> · <a href="{u('/resources/')}">Resources</a> · <a href="{u('/quiz/')}">Money quiz</a> · <a href="{u('/budget/')}">Budget by salary</a> · <a href="{u('/cost-of-living/')}">City budgets</a> · <a href="{u('/debt-payoff/')}">Debt payoff</a> · <a href="{u('/ask/')}">Money questions</a> · <a href="{u('/holiday/')}">Holiday money</a> · <a href="{u('/shop/')}">Shop</a> · <a href="{u('/privacy/')}">Privacy</a> · <a href="{u('/how-we-make-money/')}">How we make money</a> · <a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/terms/')}">Terms</a> · <a href="{u('/links/')}">Links</a> · <a href="{u('/newsletter/')}">Newsletter</a> · <a href="{u('/feed.xml')}">RSS</a></p>
     <p class="small">{esc(CFG['disclaimer'])}</p>
     <p class="small">{esc(CFG['ai_disclosure'])}</p>
     <p class="small">&copy; {date.today().year} {esc(CFG['name'])}</p>
@@ -657,6 +752,9 @@ def build() -> list[str]:
             ld.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
                 {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}}
                 for q, a in faq]})
+        how = howto_ld(p, path)
+        if how:
+            ld.append(how)
         rel_html = "".join(
             f'<li><a href="{u(f"/blog/{x["slug"]}/")}">{esc(x["title"])}</a></li>' for x in related)
         sources = ""
@@ -682,7 +780,7 @@ def build() -> list[str]:
   <p class="disclaimer">{esc(CFG['disclaimer'])}</p>
   {compare_box(p['slug'], comps_by_slug)}
   {magnet_box(f"blog-{p['slug']}-end")}
-  {tool_box(tool)}
+  {tool_box(tool, p['slug'])}
   {f'<section class="next"><h2>Template for this</h2>{product_card(prod)}</section>' if prod else ''}
   <section class="next"><h2>Read next</h2><ul class="related">{rel_html}</ul></section>
 </article>"""
@@ -1114,13 +1212,13 @@ def build() -> list[str]:
     # ---- data-driven pages: budget by salary + cost of living by city (pseo.py)
     import pseo
     extra_redirects: list[tuple[str, str]] = []  # (old path, new path) from merged data pages
-    urls += pseo.build_pseo({"CFG": CFG, "markdown": markdown, "author_ld": author_ld, "redirects": extra_redirects, "u": u, "absu": absu, "layout": layout, "write": write, "org_ld": org_ld,
+    urls += pseo.build_pseo({"CFG": CFG, "markdown": markdown, "author_ld": author_ld, "apps_tools": apps_tools_html, "redirects": extra_redirects, "u": u, "absu": absu, "layout": layout, "write": write, "org_ld": org_ld,
                              "magnet_box": magnet_box, "product_card": product_card,
                              "product": products_list[0] if products_list else None,
                              "today": os.environ.get("BUILD_DATE") or date.today().isoformat()})
     _shop = {i["slug"]: i for i in json.loads((CONTENT / "shop.json").read_text())["items"]} \
         if (CONTENT / "shop.json").exists() else {}
-    urls += pseo.build_debt({"CFG": CFG, "markdown": markdown, "author_ld": author_ld, "redirects": extra_redirects, "u": u, "absu": absu, "layout": layout, "write": write, "org_ld": org_ld,
+    urls += pseo.build_debt({"CFG": CFG, "markdown": markdown, "author_ld": author_ld, "apps_tools": apps_tools_html, "redirects": extra_redirects, "u": u, "absu": absu, "layout": layout, "write": write, "org_ld": org_ld,
                              "magnet_box": magnet_box, "product_card": product_card, "product": None, "shop": _shop,
                              "today": os.environ.get("BUILD_DATE") or date.today().isoformat(),
                              "as_of": fmt_date(os.environ.get("BUILD_DATE") or date.today().isoformat())})
@@ -1128,6 +1226,7 @@ def build() -> list[str]:
     urls += build_ask(_shop, pseo)
     urls += build_holiday(_shop)
     urls += build_new_year()
+    urls += build_tools()
 
     # ---- newsletter archive: content/newsletter/*.md, one page per issue that has gone out.
     # An issue dated in the future stays unpublished until a build on or after its date
@@ -1391,6 +1490,46 @@ def build_new_year() -> list[tuple[str, str]]:
     return [("/new-year/", updated)]
 
 
+def build_tools() -> list[tuple[str, str]]:
+    """/tools/: every free tool. Site tools (related.json > tools) first, then the apps site's tools by group
+    (apps.json, shown only when apps_url is set)."""
+    site_tools = load_related()["tools"]
+    apps = load_apps()
+    site_li = "".join(f'<li><a href="{u(t["path"])}"><strong>{esc(t["title"])}</strong></a>: {esc(t["blurb"])}</li>'
+                      for t in site_tools.values())
+    groups: dict[str, list[dict]] = {}
+    for t in apps:
+        groups.setdefault(t["group"], []).append(t)
+    apps_html = "".join(f'<h2>{esc(g)}</h2><ul class="tool-list">{"".join(apps_li(t) for t in ts)}</ul>'
+                        for g, ts in groups.items())
+    intro_apps = (f'<p>The calculators and trackers below run on our tools site, '
+                  f'<a href="{esc(apps_base())}/">{esc(urlparse(apps_base()).netloc)}</a>. What you type stays in '
+                  'your browser unless you choose to send it to us (for example, a budget for review).</p>' if apps else "")
+    items = [(t["title"], absu(t["path"])) for t in site_tools.values()] + [(t["title"], apps_base() + t["path"]) for t in apps]
+    ld = [{"@context": "https://schema.org", "@type": "ItemList", "name": f"Free money tools from {CFG['name']}",
+           "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "url": url}
+                               for i, (n, url) in enumerate(items)]}, org_ld()]
+    body = f"""<article class="wrap article tools-page">
+  <p class="crumbs"><a href="{u('/')}">Home</a> / <span>Free tools</span></p>
+  <h1>Free money tools</h1>
+  <p class="dek">Calculators, planners and checklists for budgets, debt, saving and taxes. All free.</p>
+  <div class="prose">
+  <h2>On this site</h2>
+  <ul class="tool-list">{site_li}
+  <li><a href="{u('/free/')}"><strong>The 7-Day Money Reset</strong></a>: a free printable plan for your first week.</li></ul>
+  {intro_apps}
+  {apps_html}
+  <h2>Printables and templates</h2>
+  <p>Planners, trackers and spreadsheets, some free, are in the <a href="{u('/shop/')}">Shop</a>.</p>
+  </div>
+</article>"""
+    write("/tools/", layout(title=f"Free money tools and calculators · {CFG['name']}", path="/tools/", body=body,
+                            description="Free budget, debt, savings and paycheck calculators and planners: budget by "
+                                        "salary, debt payoff, take-home pay by state, emergency fund and more.",
+                            jsonld=ld))
+    return [("/tools/", date.today().isoformat())]
+
+
 def build_holiday(shop: dict) -> list[tuple[str, str]]:
     """/holiday/: Black Friday traps, a holiday budget, BNPL rules and the year-end checklist (content/holiday.md),
     with the free printable Year-End Money Checklist as the email opt-in (thanks page: /holiday/thanks/)."""
@@ -1510,7 +1649,7 @@ def product_hero_img(p: dict) -> str:
 def holiday_planner_url() -> str:
     """The apps' holiday spending planner (apps/budget/holiday.html, PR #8). It deploys as its own Netlify site, so
     the link appears once site.json > apps_url is set to that site's address (or env APPS_URL)."""
-    base = (os.environ["APPS_URL"] if "APPS_URL" in os.environ else CFG.get("apps_url", "")).rstrip("/")
+    base = apps_base()
     return f"{base}/budget/holiday.html" if base else ""
 
 

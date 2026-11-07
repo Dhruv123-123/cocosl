@@ -369,6 +369,7 @@ def build_pseo(ctx: dict) -> list[tuple[str, str]]:
   </div>
   {notes_block()}
   <nav class="pager" aria-label="Other salaries">{pager}</nav>
+  {ctx["apps_tools"](["take-home-pay", "afford", "emergency-fund"]) if "apps_tools" in ctx else ""}
   {magnet_box(f"budget-{s}")}
   {f'<section class="next"><h2>Tool for this</h2>{product_card(prod)}</section>' if prod else ''}
 </article>"""
@@ -524,6 +525,7 @@ def build_pseo(ctx: dict) -> list[tuple[str, str]]:
 <li><a href="{esc(c['local_fact']['source'])}" rel="noopener">{esc(c['local_fact']['source_name'])}</a></li></ul>
   </div>
   {notes_block()}
+  {ctx["apps_tools"](["rent-vs-buy", "take-home-pay", "afford"]) if "apps_tools" in ctx else ""}
   {magnet_box(f"col-{c['slug']}")}
 </article>"""
         write(path, layout(title=seo_title, description=desc, path=path, body=body, og_type="article",
@@ -745,7 +747,8 @@ def build_debt(ctx: dict) -> list[tuple[str, str]]:
 {faq_html(faq)}
   </div>
   <p class="disclaimer">Example debts, rates and payments are hypothetical. Interest is calculated monthly at the APR shown, with on-time payments, no new charges, fees or rate changes. Card minimums are held at their starting amount. {esc(cfg['disclaimer'])}</p>
-  {magnet_box("debt-payoff")}
+   {ctx["apps_tools"](["credit-card-minimum", "student-loans", "afford"]) if "apps_tools" in ctx else ""}
+   {magnet_box("debt-payoff")}
 </article>
 <script src="{u('/debt-calc.js')}" defer></script>"""
     ld = [{"@context": "https://schema.org", "@type": "WebApplication", "name": title, "description": desc,

@@ -8,6 +8,7 @@ keyword: how to open a high yield savings account
 read_minutes: 6
 product: the-20-minute-budget
 sources: [https://www.fdic.gov/resources/deposit-insurance, https://banks.data.fdic.gov/bankfind-suite/bankfind, https://www.fdic.gov/national-rates-and-rate-caps, https://www.consumerfinance.gov/ask-cfpb/what-is-a-savings-account-en-915/]
+howto: Step by step
 ---
 If your savings sit in the account your bank gave you by default, they may be earning close to nothing. Moving them to a high-yield savings account (HYSA) takes about 15 minutes, and you don't have to close anything.
 
