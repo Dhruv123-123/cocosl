@@ -11,6 +11,7 @@ The Spanish-language sister brand of Money Made Simple, for US Hispanic viewers.
 | `product/` | El Presupuesto de 20 Minutos: guide (HTML + PDF), spreadsheet, store listing |
 | `POSTING_PLAN.md` | 14-day plan, mirroring the English one |
 | `content-month-1.json`, `POSTING_PLAN_MONTH_1.md`, `REVIEW_CHECKLIST_MONTH_1.md` | Month 1 after launch (Nov 21 – Dec 31): 20 Shorts, 10 carousels, 2 long videos on the holidays, aguinaldo, sending money home, the cuesta de enero and New Year. Sources in `src/month1_*.py`, built by `src/build_month1.py` |
+| `content-estafas.json`, `POSTING_PLAN_ESTAFAS.md`, `REVIEW_CHECKLIST_ESTAFAS.md` | Scam series (Jan 4 – Feb 16, 2027): 13 Shorts + 6 carousels. Some are adapted from Scam Decoded, and some are new on notario fraud, immigration impostors, remittance scams, money mules, virtual kidnapping and ghost tax preparers. Sources in `src/estafas_*.py`, built by `src/build_estafas.py` |
 | `products/` | Spanish editions of the $5 Bill Cut Kit (*El Kit para Recortar Gastos*) and the $17 Debt-Free Date Planner (*Tu Fecha Sin Deudas*): guides, translated workbooks, covers, listings. `python launch/dinero-simple/products/build.py --check` |
 | `REVIEW_CHECKLIST.md` | What the native-speaker reviewer checks, and the translation choices to confirm |
 
@@ -24,6 +25,7 @@ factory pack launch/dinero-simple/content.json --brand dinero-simple --out outpu
 python launch/dinero-simple/src/build_month1.py
 factory pack launch/dinero-simple/content-month-1.json --brand dinero-simple --out output/dinero-simple-month-1
 python launch/dinero-simple/products/build.py --check
+python launch/dinero-simple/src/build_estafas.py
 ```
 
 Also adapted: the two long-form videos (`videos/23`, `videos/24`), and the website, link-in-bio page, lead magnet and 10-email sequence in `sites/dinero-simple/` (see its README). Visual prompts, sources and fact-check lists stay in English on purpose so the operator can check them.
