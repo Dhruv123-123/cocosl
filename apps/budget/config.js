@@ -37,11 +37,11 @@ export default {
   },
   // Upsell on the Money Dashboard maker (money-dashboard.html, tablero-dinero.html). Hidden while the link has REPLACE_ME.
   sheetTemplate: {
-    name: 'Money Dashboard Pro template', nameEs: 'Plantilla Tablero de dinero Pro',
+    name: 'Money Dashboard Pro', nameEs: 'Tablero de dinero Pro',
     price: '$12',
     url: 'https://REPLACE_ME.gumroad.com/l/money-dashboard-pro',
-    pitch: 'The same spreadsheet with a yearly view, budget alerts, a debt payoff tab and charts that fill in as you add months. Google Sheets and Excel.',
-    pitchEs: 'La misma hoja con vista anual, alertas de presupuesto, una pestaña para pagar deudas y gráficas que se llenan al agregar meses. Google Sheets y Excel.',
+    pitch: 'The version you keep using: paste each month in and get 12-month trends, budget vs actual in red and green, sinking funds and charts. Google Sheets and Excel.',
+    pitchEs: 'La versión para usar cada mes: pega tus movimientos y ve tendencias de 12 meses, presupuesto vs real, fondos de ahorro y gráficas. Google Sheets y Excel.',
   },
   // Paid add-on shown on Rate My Budget (Gumroad, Stripe Payment Link or a Calendly paid booking).
   review: {
