@@ -9,7 +9,7 @@ links stay as placeholders, and nothing was bought.
 |---|---|---|---|---|
 | `credit-union-alert/` | Weekly Scam Alert | Credit unions | $49 / $99 / $149 a month | Weekly |
 | `employer-wellness/` | Money Made Simple at Work | Employer HR and benefits teams (and benefits brokers) | $59 / $129 / $249 a month | Monthly |
-| `community-scam-watch/` | Scam Watch (large print) | Public libraries, senior centers, Area Agencies on Aging | $19 / $59 a month, talks $150 | Monthly |
+| `community-scam-watch/` | Scam Watch (large print) | Public libraries, senior centers, Area Agencies on Aging | $19 one site, $49 for 2–4, $12 a location for 5–20, quote 21+; CU-sponsored $99 for 5 sites; talks $150 | Monthly |
 | `freelancer-client-letter/` | Freelancer Money Notes | Small CPA, tax and bookkeeping firms, for their 1099 clients | $39 / $79 / $129 a month | Monthly |
 
 The first three folders each have: `product.json` (labels, call to action, formats), `issues.json` (4 sample issues),

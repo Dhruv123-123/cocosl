@@ -4,8 +4,12 @@ A monthly, white-label scam-awareness pack for older adults, printed and posted 
 senior centers and Area Agencies on Aging under their own name. Built from the Scam Decoded for
 Seniors pack (the `/seniors/` product: golden rules, calls to hang up on, official numbers).
 
-**$19 a month for one location, $59 for a system** (up to 10 branches, or every center in an Area
-Agency on Aging region). In-person or online talks are $150 each (from the speaking kit). Annual plans
+**$19 a month for one location; $49 for 2 to 4 locations; $12 a location for 5 to 20 (10 locations is
+$120); quote from $250 for 21+ or a whole Area Agency on Aging region.** A local credit union can also
+**sponsor** it: $99 a month covers up to 5 libraries or centers, marked "brought to you by [credit
+union]" (sold with the Weekly Scam Alert). In-person or online talks are $150 each (from the speaking kit).
+Pricing follows the scouting note `research/scouting/b2b-library-tier-note.md` (PR #2): pitch the $19
+plan to programming or outreach budgets, because small libraries' e-resource budgets are tiny. Annual plans
 get 2 months free and include the Scam Decoded for Seniors group print license ($49 value). Two months
 free for the first 3 organizations.
 

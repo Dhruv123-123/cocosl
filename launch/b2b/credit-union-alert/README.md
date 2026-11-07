@@ -24,6 +24,7 @@ Nothing was bought.
 | `PROSPECTS.csv` + `PROSPECTS.md` | 60 credit unions from NCUA call report data (Q2 2026): batch 1 in MT/ID/OR/WA, batch 2 in WY/UT/CO. |
 | `CONTENT_CALENDAR.md` + `.csv` | 12 weeks of planned issues after the samples (member sends Feb 2 to Apr 20 2027), with delivery, fact-check and write-by dates, Scam Decoded source issue and official sources. |
 | `es/` | Spanish edition of the 4 samples (Plus tier), in Dinero Simple's style using usted. **Not yet reviewed by a native speaker**: see `es/REVIEW_CHECKLIST.md`. |
+| Sponsored Scam Watch | Add-on for any plan: **$99 a month** to sponsor Scam Watch (the large-print monthly in `../community-scam-watch/`) at up to 5 local libraries or senior centers, marked "brought to you by [credit union]". Same build: a Scam Watch brand file per location with the credit union's name in `credit_line`. That line prints on the email edition today; make it print on the handout and flyer too before the first sponsored sale. |
 | `onboarding/` | First-client kit: kickoff email series, brand intake form (PDF), approval workflow and sign-off log, invoice template with `{{PAYMENT_LINK}}` (PDF). |
 | `DELIVERY_WORKFLOW.md` | How each weekly issue is picked, written, checked, built, delivered and corrected; client onboarding. |
 

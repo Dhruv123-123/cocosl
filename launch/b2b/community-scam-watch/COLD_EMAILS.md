@@ -79,13 +79,14 @@ Every reply below goes out with the same signature as email 1: your name, `{Your
 
 - **"Send the sample."** Attach `out/sample-county-library.zip` and `out/sales-sheet.pdf`. Offer a
   branded version: ask for their logo, color and the help line to print.
-- **"What does it cost?"** $19 a month for one location, $59 for a system (up to 10 branches or a whole
-  AAA region), or yearly with 2 months free. Talks are $150 each.
+- **"What does it cost?"** $19 a month for one location, $49 for 2 to 4, $12 a location for 5 to
+  20, and a quote from $250 for bigger systems or a whole AAA region; yearly gets 2 months free. No
+  budget? Offer to find a local credit union to sponsor it (the $99 sponsored plan). Talks are $150 each.
 - **"We need a purchase order / W-9."** "No problem. I can invoice yearly, and nothing renews without
   your OK."
 - **"We get free materials from AARP / the FTC already."** "Those are great; we point to them too.
   This is a fresh topic every month, ready to print with your name on it, plus a talk guide, so staff
   don't have to put it together."
 - **"Can you come and give a talk?"** Quote $150 (speaking kit), or include one free talk with an
-  annual System plan if you want to close the sale. **Your call.**
+  annual System or Large system plan if you want to close the sale. **Your call.**
 - **"No thanks."** "Understood, I won't write again." Mark it and stop.
