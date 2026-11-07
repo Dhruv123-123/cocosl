@@ -7,130 +7,136 @@ Nothing here posts or sends on its own: publishing is a dry run until FACTORY_DR
 
 | Command | What it does |
 |---|---|
+| `factory keyword-check` | scheduled titles whose search phrase isn't confirmed in the search box yet (scouting's keyword sheets); mark them yes/no |
+| `factory launch-mode` | two-brand launch: show only MMS + Scam Decoded in today/reslot/scorecard |
+| `factory serve` | run the dashboard |
+| `factory time` | log your minutes and see the week against the one-hour-a-day limit |
 | `factory today` | your daily routine (GO_LIVE R6) with today's real items |
 | `factory triage` | everything waiting on you across brands: due posts, review flags, recordings, placeholders, missing keys |
-| `factory time` | log your minutes and see the week against the one-hour-a-day limit |
-| `factory weekly-review` | Sunday one-pager: scorecard, time used, brand-3 gates, next week's queue, and everything blocked on you |
-| `factory launch-mode` | two-brand launch: show only MMS + Scam Decoded in today/reslot/scorecard |
-| `factory keyword-check` | scheduled titles whose search phrase isn't confirmed in the search box yet (scouting's keyword sheets); mark them yes/no |
 | `factory ui` | local dashboard (127.0.0.1 only): calendar, review queue, recordings, launch check |
-| `factory serve` | run the dashboard |
+| `factory weekly-review` | Sunday one-pager: scorecard, time used, brand-3 gates, next week's queue, and everything blocked on you |
 
 ## Make content
 
 | Command | What it does |
 |---|---|
-| `factory ideas` | generate or list ideas |
-| `factory idea` | set an idea's status |
-| `factory produce` | script + render ideas into posts for review |
-| `factory daily` | one scheduled tick: ideas, production, publishing, metrics |
-| `factory import` | load ready-written scripts (JSON list) as posts for review |
-| `factory repurpose` | cut a long post into standalone Shorts + a carousel; --text adds blog, newsletter, pin and thread drafts |
-| `factory challenge` | multi-day savings challenge: daily posts + printable tracker |
-| `factory voice` | use your own recorded narration for a video (re-renders it) |
-| `factory recordings` | posts waiting on your voice or a screen recording, soonest first |
 | `factory batch-record` | group everything waiting on your voice or screen into recording sessions: shot list + teleprompter per session |
-| `factory broll` | optional Pexels / Pixabay B-roll for up to 1 beat in 3 (free keys; plan unless --apply) |
-| `factory numbers` | recompute the loan, growth and tax figures a post states |
-| `factory rerender` | re-render a post's media |
-| `factory renderq` | render queue: re-voice posts, render in a separate process |
 | `factory brandkit` | profile picture, banners, highlight covers, style sheet, bios |
-| `factory launch-pack` | export a postable launch pack (slides, thumbnails, captions, brand kit) |
+| `factory broll` | optional Pexels / Pixabay B-roll for up to 1 beat in 3 (free keys; plan unless --apply) |
+| `factory challenge` | multi-day savings challenge: daily posts + printable tracker |
+| `factory daily` | one scheduled tick: ideas, production, publishing, metrics |
+| `factory idea` | set an idea's status |
+| `factory ideas` | generate or list ideas |
+| `factory import` | load ready-written scripts (JSON list) as posts for review |
+| `factory motion` | optional HyperFrames motion cards for number beats (max 1 in 4; FACTORY_MOTION=hyperframes, Node 22+; plan unless --write/--apply) |
+| `factory numbers` | recompute the loan, growth and tax figures a post states |
+| `factory produce` | script + render ideas into posts for review |
+| `factory recordings` | posts waiting on your voice or a screen recording, soonest first |
+| `factory renderq` | render queue: re-voice posts, render in a separate process |
+| `factory repurpose` | cut a long post into standalone Shorts + a carousel; --text adds blog, newsletter, pin and thread drafts |
+| `factory rerender` | re-render a post's media |
+| `factory voice` | use your own recorded narration for a video (re-renders it) |
 
 ## Review
 
 | Command | What it does |
 |---|---|
-| `factory review` | list the review queue or show one post |
-| `factory review-gate` | review status per post (draft, native_review, legal_review, approved); pass, require or send back a review |
 | `factory approve` | approve a post (optionally schedule it) |
-| `factory reject` | reject a post |
 | `factory audit-originality` | per-channel YouTube inauthentic-content risk score |
 | `factory launch-check` | one red/yellow/green report: links, UTM, placeholders, disclosures, caption limits (posts nothing) |
 | `factory preflight` | check posts' media against each platform's limits (posts nothing) |
+| `factory reject` | reject a post |
+| `factory review` | list the review queue or show one post |
+| `factory review-gate` | review status per post (draft, native_review, legal_review, approved); pass, require or send back a review |
 
 ## Schedule and post
 
 | Command | What it does |
 |---|---|
+| `factory calendar` | upcoming publications |
+| `factory export-week` | one zip per week: every scheduled post in posting order, captions ready to paste, for posting by hand |
+| `factory manual` | post-by-hand packages (TikTok, Pinterest): list, copy caption, mark posted |
+| `factory publish` | publish everything that is due |
+| `factory reslot` | move queued posts onto the current posting slots (per-platform times, caps); lists the plan unless --yes |
 | `factory schedule` | schedule an approved post (or --all approved posts) |
 | `factory unschedule` | cancel a scheduled post's queued publications (back to approved) |
-| `factory reslot` | move queued posts onto the current posting slots (per-platform times, caps); lists the plan unless --yes |
-| `factory calendar` | upcoming publications |
-| `factory publish` | publish everything that is due |
-| `factory manual` | post-by-hand packages (TikTok, Pinterest): list, copy caption, mark posted |
-| `factory export-week` | one zip per week: every scheduled post in posting order, captions ready to paste, for posting by hand |
 | `factory youtube-plan` | playlists, end screens and Shorts related videos for a pack (set by hand in Studio) |
 
 ## Measure
 
 | Command | What it does |
 |---|---|
-| `factory metrics` | pull metrics for published posts |
-| `factory stats` | weekly scorecard from YouTube Studio / TikTok / Plausible CSV exports (no API) |
-| `factory scorecard` | GO_LIVE R8 weekly scorecard filled from your imports, with stop/change/watch flags |
-| `factory insights` | what's working: by format, pillar, platform, hour |
-| `factory report` | weekly business report: money, content, funnel, pipeline, next actions |
 | `factory funnel` | views -> clicks -> subscribers -> sales per brand |
+| `factory insights` | what's working: by format, pillar, platform, hour |
+| `factory metrics` | pull metrics for published posts |
+| `factory report` | weekly business report: money, content, funnel, pipeline, next actions |
+| `factory scorecard` | GO_LIVE R8 weekly scorecard filled from your imports, with stop/change/watch flags |
+| `factory stats` | weekly scorecard from YouTube Studio / TikTok / Plausible CSV exports (no API) |
 
 ## Email and site
 
 | Command | What it does |
 |---|---|
-| `factory sequences` | send due welcome-sequence emails (dry run unless --confirm) |
-| `factory sequence-check` | validate a brand's welcome sequence and show per-step counts |
-| `factory sequence-preview` | render every welcome email to .html/.eml for review |
-| `factory sequence-export` | the welcome sequence as an automation to build in Sender (never sends) |
-| `factory subscribers-export` | CSV of confirmed subscribers (Beehiiv/ConvertKit import) |
+| `factory comments` | comment inbox: collect and draft replies (you send them in /inbox) |
 | `factory digest` | draft the weekly newsletter from recent posts |
 | `factory digest-send` | send a newsletter draft (dry run unless --confirm) |
-| `factory newsletter` | a week's posts as a draft email to paste into Kit or Sender (never sent) |
 | `factory linkpage` | build the static link-in-bio page for a brand |
+| `factory newsletter` | a week's posts as a draft email to paste into Kit or Sender (never sent) |
 | `factory salespage` | build static sales pages for a brand's products |
+| `factory sequence-check` | validate a brand's welcome sequence and show per-step counts |
+| `factory sequence-export` | the welcome sequence as an automation to build in Sender (never sends) |
+| `factory sequence-preview` | render every welcome email to .html/.eml for review |
+| `factory sequences` | send due welcome-sequence emails (dry run unless --confirm) |
 | `factory site` | export all public pages as a static site |
-| `factory comments` | comment inbox: collect and draft replies (you send them in /inbox) |
+| `factory subscribers-export` | CSV of confirmed subscribers (Beehiiv/ConvertKit import) |
 
 ## Money
 
 | Command | What it does |
 |---|---|
-| `factory revenue` | record or import revenue, show P&L and goal progress |
 | `factory expense` | record a cost (llm, gpu, tts, stock, software, ads, other) |
 | `factory links` | affiliate links: sync from brand files, list with clicks |
-| `factory product` | outline and build a digital product (HTML + PDF) |
 | `factory payment-link` | create a Stripe Payment Link for a brand product |
+| `factory product` | outline and build a digital product (HTML + PDF) |
+| `factory revenue` | record or import revenue, show P&L and goal progress |
 
 ## Ad studio and B2B
 
 | Command | What it does |
 |---|---|
-| `factory clients` | UGC clients: list, add, import leads, status, follow-ups |
-| `factory pitch` | draft outreach emails (never sends) and export them |
-| `factory proposal` | build a 3-page client proposal (HTML + PDF) with concepts and pricing |
-| `factory order` | create or advance a client order |
-| `factory invoice` | list, render, mark sent or paid |
 | `factory ad` | write (and optionally render) a spokesperson/demo ad for a client product |
+| `factory clients` | UGC clients: list, add, import leads, status, follow-ups |
+| `factory invoice` | list, render, mark sent or paid |
+| `factory order` | create or advance a client order |
+| `factory pitch` | draft outreach emails (never sends) and export them |
 | `factory portfolio` | render the sample-ad portfolio (fictional brands) and its gallery page |
+| `factory proposal` | build a 3-page client proposal (HTML + PDF) with concepts and pricing |
 | `factory whitelabel` | rebrand a content batch for a client (B2B): their name, colours, links |
 
 ## Brands
 
 | Command | What it does |
 |---|---|
-| `factory brands` | list brand profiles |
 | `factory brand` | scaffold or remove a brand |
-| `factory niche` | score niche candidates (ad value, demand, risk, saturation) |
+| `factory brands` | list brand profiles |
 | `factory new-brand` | draft a brand profile YAML for a niche |
+| `factory niche` | score niche candidates (ad value, demand, risk, saturation) |
 
 ## Setup and upkeep
 
 | Command | What it does |
 |---|---|
-| `factory init` | create .env, brands/ and the database |
-| `factory status` | providers, dry-run state, credentials |
-| `factory doctor` | check this install can make and post content (posts nothing) |
 | `factory auth` | connect a platform account (writes tokens to .env) |
 | `factory backup` | consistent copy of the database (safe while everything runs) |
-| `factory restore` | restore a `factory backup --archive` zip (lists first; --yes restores) |
 | `factory cleanup` | free disk space from old published posts (lists unless --yes) |
 | `factory demo` | offline end-to-end demo that renders sample posts |
+| `factory doctor` | check this install can make and post content (posts nothing) |
+| `factory init` | create .env, brands/ and the database |
+| `factory restore` | restore a `factory backup --archive` zip (lists first; --yes restores) |
+| `factory status` | providers, dry-run state, credentials |
+
+## More commands
+
+| Command | What it does |
+|---|---|
+| `factory launch-pack` | export a postable launch pack (slides, thumbnails, captions, brand kit) |

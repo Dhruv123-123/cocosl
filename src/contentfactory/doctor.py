@@ -122,7 +122,13 @@ def _publishing(f: Factory, online: bool) -> list[Result]:
                   "ON: nothing is posted" if f.settings.dry_run else "OFF: approved posts go live on schedule")]
     used = {a.platform for b in f.brands().values() for a in b.accounts if a.enabled}
     multi = len(f.brands()) > 1
+    from .launchmode import in_play
     for slug, b in f.brands().items():
+        if not in_play(f, slug) and not f.db.scalar(
+                "SELECT COUNT(*) FROM publications p JOIN posts s ON s.id = p.post_id "
+                "WHERE s.brand = ? AND p.status IN ('queued', 'manual')", [slug]):
+            res.append(Result(slug, "ok", "paused (launch mode), nothing scheduled: accounts not checked"))
+            continue
         status = credential_status(f.settings.for_brand(slug))
         from .manual import is_manual
         for platform in sorted({a.platform for a in b.accounts if a.enabled}):

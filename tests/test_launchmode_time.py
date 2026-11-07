@@ -61,3 +61,15 @@ def test_gate(factory, monkeypatch):
     text = scorecard.gate_text(gates, ["money-made-simple"], 58)
     assert "[PASS] time" in text and "Not yet" in text and "Too early" not in text
     assert (factory.settings.home / "data" / "scorecard-history" / f"{mon}-money-made-simple.json").is_file()
+
+
+def test_paused_brands_not_checked(factory):
+    from contentfactory.launch_check import render_text, run
+    launchmode.set_mode(factory, "two-brand")
+    rep = run(factory)
+    assert rep.checked["tiny-histories"].get("paused") and not [f for f in rep.findings if f.brand == "tiny-histories"]
+    assert "tiny-histories: paused (launch mode)" in render_text(rep, 14)
+    assert not rep.checked["money-made-simple"].get("paused")
+    from contentfactory.doctor import _publishing
+    rows = {r.name: r for r in _publishing(factory, online=False)}
+    assert "paused" in rows["tiny-histories"].message
