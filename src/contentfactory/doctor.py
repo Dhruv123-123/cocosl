@@ -136,11 +136,29 @@ def _worker(f: Factory) -> Result:
     return Result("worker", "ok" if mins < 15 else "fail", f"last tick {mins:.0f} min ago")
 
 
+def _queued_media(f: Factory) -> Result:
+    from .publish.preflight import check
+    rows = f.db.query("SELECT p.*, pub.platform AS _platform FROM publications pub JOIN posts p ON p.id = pub.post_id "
+                      "WHERE pub.status = 'queued'")
+    bad = []
+    for r in rows:
+        r["assets"] = f.db.get("posts", r["id"])["assets"]
+        for i in check(r, r["_platform"], f.settings.output_dir, f.settings.public_media_base_url):
+            if i.level == "block" and not (f.settings.dry_run and "PUBLIC_MEDIA_BASE_URL" in i.message):
+                bad.append(f"#{r['id']} {i}")
+    if not rows:
+        return Result("queued media", "ok", "nothing queued")
+    if bad:
+        return Result("queued media", "fail", f"{len(bad)} problem(s), e.g. {bad[0]} (factory preflight --scheduled)")
+    return Result("queued media", "ok", f"{len(rows)} queued publication(s) pass platform limits")
+
+
 def run_checks(f: Factory, online: bool = False, voice: bool = True) -> list[Result]:
     out = [_ffmpeg(), *_storage(f), *_brands(f), _llm(f)]
     if voice:
         out.append(_voice(f))
     out += _publishing(f, online)
+    out.append(_queued_media(f))
     out.append(_worker(f))
     if online and os.environ.get("KOKORO_URL"):
         import httpx

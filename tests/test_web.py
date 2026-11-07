@@ -103,6 +103,7 @@ def factory(tmp_path, monkeypatch) -> Factory:
                 "FACTORY_HOME", "ANTHROPIC_API_KEY"):
         monkeypatch.delenv(key, raising=False)
     monkeypatch.setenv("FACTORY_LLM", "offline")
+    monkeypatch.setenv("FACTORY_PREFLIGHT", "0")  # placeholder media
     shutil.copytree(ROOT / "brands", tmp_path / "brands")
     import contentfactory.media as media
     monkeypatch.setattr(media, "render_post", fake_render)

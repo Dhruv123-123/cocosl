@@ -91,6 +91,10 @@ Angle: {angle}
 Caption: write it for Instagram/TikTok (value first, then CTA). If you mention an affiliate offer,
 the caption must say it's an affiliate link. Hashtags: specific, not generic spam.
 Also give 2-3 title_variants and 2-3 hook_variants that test genuinely different angles (not synonyms).
+Charts: when a beat compares numbers (fees, interest, a balance over time), you may give that segment a
+`chart` (kind "bars" or "line", 2-12 values, short labels). It is drawn exactly from your numbers, so use
+illustrative round figures, say "example" in its note, and list each chart's figures in claims_to_verify.
+At most two charts per script; leave `chart` out everywhere else.
 {hook_patterns(brand, title, fmt)}"""
     return llm.structured(Script, system=SYSTEM, prompt=prompt, purpose=f"script:{fmt}",
                           offline=lambda: _offline_script(brand, title, angle, fmt))
