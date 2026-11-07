@@ -882,3 +882,48 @@ def test_news_hook_shorts_nov_2026_in_free_noon_slots():
         assert "checker" in sc.caption and "guarantee" not in text.lower()
         for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
             assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+
+
+def test_moving_season_pack_and_renting_checklist():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    root = CONTENT.parent
+    items = json.loads((root / "moving-season-2027.json").read_text())
+    assert len(items) == 12 and sum(i["format"] == "carousel" for i in items) == 2
+    dates = [i["post_on"] for i in items]
+    assert dates == sorted(dates) and dates[0] > "2027-07-03 23:59"  # after the last planned week (weeks 31-34)
+    taken, earlier = set(), set()
+    for f in root.glob("*.json"):
+        if f.name == "moving-season-2027.json":
+            continue
+        data = json.loads(f.read_text())
+        for i in data if isinstance(data, list) else []:
+            if isinstance(i, dict) and "script" in i:
+                earlier.add(i["script"]["title"])
+                if i.get("post_on"):
+                    taken.add(i["post_on"])
+    assert not taken & set(dates)
+    videos = [i for i in items if i["format"] == "short"]
+    assert all(a["look"] != b["look"] for a, b in zip(videos, videos[1:]))
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        if item["format"] == "short":
+            assert 60 <= sum(len(s.narration.split()) for s in sc.segments) <= 120 and len(sc.title) <= 60
+        assert sc.title not in earlier and any(ch.isdigit() for ch in sc.hook.split(".")[0][:60])
+        assert sc.claims_to_verify and len(sc.hashtags) <= 5
+        assert all("ftc.gov" in u or "fmcsa.dot.gov" in u for u in sc.sources), sc.title
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        assert "checker" in sc.caption and "checklist" in sc.caption  # every post points to the free /renting/ checklist
+        text = G.script_text(item["script"])
+        assert "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+    site = root.parent.parent / "sites" / "scam-decoded"
+    cfg = json.loads((site / "site.json").read_text())["renting_checklist"]
+    pdf = site / "static" / "downloads" / cfg["file"]
+    assert pdf.read_bytes()[:4] == b"%PDF"
+    html = (site / "lead-magnet" / "renting-safely-checklist.html").read_text()
+    assert html.count('class="page"') == 1 and "ReportFraud.ftc.gov" in html and "FMCSA" in html
+    page = (site / "content" / "pages" / "renting.md").read_text()
+    assert "{{signup:renting-checklist|" in page and "/renting/thanks/" in page
+    assert "{{download:renting_checklist}}" in (site / "content" / "pages" / "renting-thanks.md").read_text()
