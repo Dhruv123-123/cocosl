@@ -1,0 +1,1002 @@
+[
+ {
+  "format": "long",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Part 1 of the 'first $1,000 invested' series: four boxes to tick before investing (starter emergency fund, high-interest debt, employer match, a goal with a time horizon), with a chart comparing a 24% card with a hypothetical 7% return.",
+  "series": "first-1000-invested",
+  "series_part": 1,
+  "content_id": "yt-invest-01",
+  "search_terms": [
+   "should i invest 1000 dollars",
+   "how to start investing",
+   "invest or pay off debt",
+   "investing for beginners"
+  ],
+  "thumbnail_alt": "Investing readiness checklist",
+  "script": {
+   "title": "Before You Invest Your First $1,000: The 4-Box Checklist",
+   "hook": "You've got $1,000 and you want to invest it. Before you do, tick these 4 boxes. Box 3 is free money.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "You've got a thousand dollars and you want to invest it. Before you do, tick these four boxes. Box three is free money. This is part one of a six-part series called Your First One Thousand Dollars Invested. Over six videos we'll go from getting ready, to choosing an account, to picking a simple fund, to what happens when the market drops, to opening the account on screen. Nothing in this series is a recommendation to buy any specific investment. It's a walkthrough of how it works, so you can make your own decisions with your own numbers. Today is about readiness, because the order you do things in matters more than which fund you pick.",
+     "on_screen_text": "4 boxes before you invest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a checklist with four empty boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why order matters",
+     "narration": "Why does order matter? Because investing is for money you won't need for years. If you invest money you'll need next month, a bad week in the market can force you to sell at a loss. And if you invest while carrying a high-interest balance, the interest can quietly cost more than your investments are likely to earn. So we start with the boring boxes. Each one protects the next. By the end of this video, you'll know whether your first thousand should be invested now, or whether one of these boxes comes first.",
+     "on_screen_text": "Each box protects the next",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four boxes stacked like steps. No text, no logos, no real people."
+    },
+    {
+     "heading": "Box 1: a starter emergency fund",
+     "narration": "Box one: a starter emergency fund. Before investing, have somewhere between five hundred and a thousand dollars in a separate savings account for surprises: a car repair, a vet bill, a last-minute flight. Without it, the first surprise goes on a card, or you sell investments at a bad time. This doesn't have to be the full three to six months of expenses yet. That can grow alongside your investing. But a starter fund means your investments can stay invested when life happens. If this box is empty, your first thousand has a job already. It's your starter fund.",
+     "on_screen_text": "Box 1: $500–$1,000 starter fund",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a small umbrella. No text, no logos, no real people."
+    },
+    {
+     "heading": "Box 2: high-interest debt",
+     "narration": "Box two: high-interest debt. Credit cards often charge twenty percent or more. Paying off a card at twenty-four percent is like earning twenty-four percent on that money, with no risk. No investment reliably does that. So if you carry a card balance, paying it down usually comes before investing beyond any employer match. Lower-rate debts, like many student loans or car loans, are different. Those can be paid on schedule while you invest. The line people often use is around eight percent: above it, pay it down first; below it, it's a judgment call.",
+     "on_screen_text": "Box 2: pay off high-rate cards first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a credit card with a percent sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "The chart: card vs investing",
+     "narration": "Here's that on a chart. One thousand dollars sitting on a card at twenty-four percent costs about two hundred forty dollars of interest over a year. The same thousand invested at a hypothetical seven percent might grow by about seventy dollars in a year, and that's not promised. Real returns go up and down, and some years are negative. So paying off the card wins by roughly one hundred seventy dollars in this example, with no risk at all. That's why box two comes before investing for most people.",
+     "on_screen_text": "Card: −$240 · invested: +$70 (hypothetical)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two bars, one tall red and one small green. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$1,000 for one year",
+      "labels": [
+       "Card interest at 24%",
+       "Hypothetical growth at 7%"
+      ],
+      "values": [
+       240,
+       70
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "7% is illustrative, not a forecast"
+     }
+    },
+    {
+     "heading": "Box 3: the employer match",
+     "narration": "Box three is free money: an employer match. If your job offers a 401(k) or similar plan with a match, contributing enough to get the full match is often the best first investment you can make. A common formula is fifty percent of what you put in, up to six percent of your salary. That's an immediate fifty percent added to your money, before any investment growth. Many people put the match ahead of paying off moderate-rate debt, because it's so valuable. Check your plan's exact formula and any vesting schedule in your benefits portal.",
+     "on_screen_text": "Box 3: get the full match",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin and a second coin added by a hand. No text, no logos, no real people."
+    },
+    {
+     "heading": "Box 4: a goal and a timeline",
+     "narration": "Box four: a goal with a timeline. Investing in stock funds makes the most sense for money you won't need for at least five years, and ideally much longer. Retirement is the classic example. A house down payment in two years is not, because a market drop right before you buy could cut your down payment. So write down what this thousand is for, and when you'll need it. Long-term goal? Investing can fit. Short-term goal? A high-yield savings account or a CD is usually the better home.",
+     "on_screen_text": "Box 4: 5+ years away?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a long arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "What if a box is empty?",
+     "narration": "What if one of the boxes is empty? Then that box gets your money first. That's not a delay; it's the plan working. A starter fund takes many people a few months. A card balance might take a year. During that time you can still learn, open accounts, and even invest small amounts through your employer to get the match. When the boxes are ticked, your first thousand can go in without worrying that you'll need it back next month.",
+     "on_screen_text": "Empty box? It goes first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single empty box with an arrow pointing to it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Your risk comfort",
+     "narration": "One more thing to think about before part two: how you'd feel if your thousand dropped to seven hundred for a while. That happens in stock markets, sometimes for months or years. If that would make you sell in a panic, it's worth knowing now. There are simpler, steadier options, like target-date funds, that we'll look at in part three. Being honest about your comfort with ups and downs is part of being ready, and there's no wrong answer.",
+     "on_screen_text": "Could you watch $1,000 become $700?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small line chart dipping and recovering. No text, no logos, no real people."
+    },
+    {
+     "heading": "A quick self-check",
+     "narration": "Here's a quick way to check where you are. Grab your last bank statement and your card statements. Write down three numbers: what's in savings, what you owe on any card and at what interest rate, and whether your job offers a match. That takes about ten minutes. Those three numbers answer boxes one, two and three on their own. Box four is a question only you can answer: what is this money for? Once you have the four answers on paper, the next step is usually obvious.",
+     "on_screen_text": "3 numbers + 1 question",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a notepad with three short lines and a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Example: Sam, fictional",
+     "narration": "Let's run a fictional example. Sam has twelve hundred dollars in checking, nothing in savings, a four-hundred-dollar card balance at twenty-two percent, and a job with a fifty percent match. Sam's plan: pay off the four hundred first. Move six hundred into savings as a starter fund. Then contribute enough from each paycheck to get the full match, and put the last two hundred toward the next goal. Sam isn't investing the whole thousand today, and that's the point. Every box gets ticked in the right order.",
+     "on_screen_text": "Sam: card → starter fund → match",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fictional character with three labelled jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "What about inflation?",
+     "narration": "A fair question: isn't cash losing value to inflation while you tick these boxes? A little, yes. If prices rise three percent in a year, a thousand dollars in a zero-interest account buys about thirty dollars less. That's one reason your starter fund belongs in a high-yield savings account, which can earn more than a regular checking account. But a few months of slower progress is a small cost compared with selling investments at a loss, or paying twenty-four percent on a card. Readiness first still wins.",
+     "on_screen_text": "Starter fund in high-yield savings",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small jar with a thermometer. No text, no logos, no real people."
+    },
+    {
+     "heading": "Learning while you wait",
+     "narration": "If you're still working through the boxes, use the time well. Learn the words you'll see in the next five videos: expense ratio, index fund, Roth, target-date. Look up your employer's plan and its fund list. Open a high-yield savings account for your starter fund. None of that costs anything, and when you're ready to invest, you'll know exactly what to do. Many people find that the waiting period is when they build the habits that make investing work later.",
+     "on_screen_text": "Learn the terms · look up your plan",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a book with a small coin bookmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap the four boxes. One: a starter emergency fund of five hundred to a thousand dollars. Two: no high-interest card debt, since paying off twenty-four percent beats a hypothetical seven. Three: get your full employer match if you have one. Four: a goal at least five years away. Ticked all four? Then you're ready for part two, where we choose the right account for your first thousand: a 401(k), an IRA, or a regular brokerage account. The checklist is linked below.",
+     "on_screen_text": "4 boxes ticked? Part 2 next",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a checklist with four ticks. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Before you invest your first $1,000: a starter emergency fund, no high-interest debt, the full employer match, and a goal 5+ years away.\n\nReturns shown are hypothetical. Investing involves risk. Not financial advice.",
+   "hashtags": [
+    "investing",
+    "investingforbeginners",
+    "first1000",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "Part 1 of Your First $1,000 Invested: four boxes to tick before investing — a starter emergency fund, no high-interest debt, the full employer match, and a goal at least five years away — with a chart comparing a 24% card with a hypothetical 7% return.\n\nChapters\n0:00 Intro\n0:47 Why order matters\n1:27 Box 1: a starter emergency fund\n2:08 Box 2: high-interest debt\n2:47 The chart: card vs investing\n3:24 Box 3: the employer match\n4:03 Box 4: a goal and a timeline\n4:40 What if a box is empty?\n5:14 Your risk comfort\n5:47 A quick self-check\n6:23 Example: Sam, fictional\n7:00 What about inflation?\n7:36 Learning while you wait\n8:09 Recap\n\nLinks\nHow to build an emergency fund: https://moneymadesimple.netlify.app/blog/how-to-build-an-emergency-fund/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-01\nDebt avalanche vs snowball: https://moneymadesimple.netlify.app/blog/debt-avalanche-vs-snowball/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-01\n401(k) match explained: https://moneymadesimple.netlify.app/blog/401k-match-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-01\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-01\n\nInvesting involves risk, including the possible loss of money you invest. Past performance doesn't predict future results. Returns shown are hypothetical illustrations, not forecasts.\nExamples are hypothetical and for education only. Not financial, tax or investment advice. We don't recommend specific securities.\nVisuals and voice made with AI tools. Script written and fact-checked by a human.",
+   "thumbnail_text": "4 boxes before you invest",
+   "sources": [
+    "https://www.investor.gov/introduction-investing",
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+    "https://www.irs.gov/retirement-plans/401k-plans"
+   ],
+   "claims_to_verify": [
+    "$1,000 × 24% = $240 interest a year",
+    "$1,000 × 7% = $70 (hypothetical)",
+    "50% match up to 6% is a common example formula",
+    "~8% debt threshold is a rule of thumb"
+   ],
+   "title_variants": [
+    "Ready to Invest $1,000? Check These 4 Boxes First",
+    "Your First $1,000 Invested, Part 1: Are You Ready?"
+   ],
+   "hook_variants": [
+    "Investing your first $1,000 is exciting. Four boxes first.",
+    "The first $1,000 you invest should go in last. Here's why."
+   ],
+   "original_element": "worked-example-chart: Bar chart from the video's own numbers: $1,000 on a 24% card costs about $240 a year vs about $70 of hypothetical growth at 7% (chapter \"The chart: card vs investing\")"
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Bar chart from the video's own numbers: $1,000 on a 24% card costs about $240 a year vs about $70 of hypothetical growth at 7%",
+   "chapter": "The chart: card vs investing"
+  },
+  "compliance_review": [
+   "Hypothetical 7% return: labelled illustrative on screen and in the description",
+   "'Paying off 24% is like earning 24%': framed as an equivalence, no investment return promised",
+   "~8% debt threshold presented as a rule of thumb, not advice",
+   "Employer match formula is an example; viewers told to check their own plan"
+  ]
+ },
+ {
+  "format": "long",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Part 2: the account comes before the investment. 401(k) with a match, Roth or traditional IRA, and a taxable brokerage account compared for a first $1,000, with a chart of day-one dollars invested.",
+  "series": "first-1000-invested",
+  "series_part": 2,
+  "content_id": "yt-invest-02",
+  "search_terms": [
+   "401k vs roth ira",
+   "where to invest first 1000",
+   "roth ira vs brokerage account",
+   "what account should i invest in"
+  ],
+  "thumbnail_alt": "Investment account comparison",
+  "script": {
+   "title": "Where to Put Your First $1,000: 401(k), IRA or Brokerage?",
+   "hook": "Your first $1,000 can go into 3 kinds of account. One of them can turn it into $1,500 on day one.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Your first thousand dollars can go into three kinds of account. One of them can turn it into fifteen hundred on day one. This is part two of Your First One Thousand Dollars Invested. Last time we ticked four boxes to make sure you're ready. Today, before we pick any fund, we pick the account, because the account decides how your money is taxed and what rules apply. Think of the account as the container, and the fund as what goes inside it. A good fund in the wrong container can cost you, and the right container can add free money.",
+     "on_screen_text": "Account first, fund second",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to three labelled boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Account 1: the 401(k)",
+     "narration": "Account one: a workplace plan, like a 401(k), or a 403(b) if you work for a school or nonprofit. Money goes in straight from your paycheck. With a traditional 401(k), contributions come out before income tax, so your taxable income drops. Many plans also offer a Roth option, where you pay tax now and withdrawals in retirement are generally tax-free. The big advantage is the employer match. The downsides: you're limited to the funds your plan offers, and taking money out before about age fifty-nine and a half usually means taxes and a penalty, with some exceptions.",
+     "on_screen_text": "401(k): paycheck · match · plan's funds",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paycheck with an arrow into a box. No text, no logos, no real people."
+    },
+    {
+     "heading": "The match on a chart",
+     "narration": "Here's the day-one difference on a chart. Put a thousand dollars into a 401(k) with a fifty percent match, and the employer adds five hundred, so fifteen hundred is invested on day one. Put a thousand into a Roth IRA or a regular brokerage account, and a thousand is invested. That five hundred is the reason the match usually comes first. It's not investment growth; it's part of your pay you only get by contributing. Check whether the match vests over time, since leaving early can mean losing part of it.",
+     "on_screen_text": "401(k) + match: $1,500 on day one",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three bars, one taller than the others. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Day-one dollars invested",
+      "labels": [
+       "401(k) with 50% match",
+       "Roth IRA",
+       "Taxable brokerage"
+      ],
+      "values": [
+       1500,
+       1000,
+       1000
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Example: $1,000 contributed"
+     }
+    },
+    {
+     "heading": "Account 2: the IRA",
+     "narration": "Account two: an individual retirement account, or IRA, which you open yourself at a brokerage. You choose from almost any fund. A Roth IRA uses money you've already paid tax on, and qualified withdrawals in retirement are tax-free, including the growth. A traditional IRA may give you a tax deduction now, depending on your income and whether you have a workplace plan, and withdrawals are taxed later. There's a yearly contribution limit, set by the IRS, and Roth IRAs have income limits. Check IRS dot gov for this year's numbers.",
+     "on_screen_text": "IRA: you choose the funds · yearly limit",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small box with a key. No text, no logos, no real people."
+    },
+    {
+     "heading": "Roth contributions can come back",
+     "narration": "One Roth detail that matters for a first thousand: the money you contribute, not the growth, can generally be withdrawn at any time without tax or penalty. That makes a Roth IRA a bit more flexible than people think. It's still best treated as long-term money, because once you take contributions out, you can't put them back beyond the yearly limit. But it means your first thousand isn't locked away forever if a real emergency hits. The growth is different, and has rules about age and how long the account has been open.",
+     "on_screen_text": "Roth contributions: usually withdrawable",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a box with an arrow going in and a smaller arrow out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Account 3: a taxable brokerage",
+     "narration": "Account three: a regular taxable brokerage account. No contribution limits, no age rules, and you can withdraw any time. The trade-off is tax: you may pay tax on dividends each year, and on gains when you sell. This account fits goals that aren't retirement, like money you'll need in seven or ten years, or for investing beyond your retirement accounts. For a very first thousand, most people are better served by the match or an IRA first, because of the tax advantages.",
+     "on_screen_text": "Taxable: flexible · taxed yearly + on sale",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an open box with a small receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "A simple order",
+     "narration": "So here's a common order for a first thousand. One: if your employer matches, contribute enough to get the full match. Two: then consider a Roth IRA, especially if your income is modest now, since you pay tax at today's rate. Three: if you've done both, or your goal isn't retirement, a taxable brokerage account. This order isn't a rule, and everyone's situation is different. But it's how many people think about it, and it puts free money and tax breaks first.",
+     "on_screen_text": "Match → Roth IRA → taxable",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three steps going up. No text, no logos, no real people."
+    },
+    {
+     "heading": "Roth or traditional?",
+     "narration": "Roth or traditional is a big question on its own. The short version: if you expect your tax rate to be higher later, Roth often makes sense. If you expect it to be lower later, traditional can. Early in a career, many people's tax rate is lower than it will be, which is why Roth is popular for beginners. But nobody knows future tax rates for certain. Some people split contributions between both to hedge. We have a whole video on Roth versus traditional, linked below.",
+     "on_screen_text": "Higher tax later? Roth often fits",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale with two boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Common mistakes",
+     "narration": "Three common mistakes. One: putting money in an IRA and never investing it. Money in an IRA can sit in cash until you choose a fund. We'll fix that in part six. Two: contributing more than the yearly limit, which can mean a penalty. Three: cashing out a 401(k) when you change jobs, instead of rolling it over. That usually triggers taxes and a penalty, and loses years of growth. Your account choice is only the start; the follow-through is what counts.",
+     "on_screen_text": "Invest it · stay under the limit · roll over",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small warning signs. No text, no logos, no real people."
+    },
+    {
+     "heading": "No match? Start here",
+     "narration": "What if your job doesn't offer a 401(k), or doesn't match? Then box three doesn't apply, and the order changes. Many people in that situation start with an IRA, since it has tax advantages and you choose the funds. If you're self-employed or freelance, there are retirement accounts made for you, like a SEP IRA or a solo 401(k), which can allow larger contributions. Those have their own rules, so check IRS dot gov or ask a tax professional before opening one.",
+     "on_screen_text": "No match? IRA first, or SEP / solo 401(k)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single box with a key and a laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "Opening more than one account",
+     "narration": "Can you have more than one of these at the same time? Yes. Many people have a 401(k) through work and an IRA they opened themselves, and later a taxable account too. The IRA limit is separate from the 401(k) limit, although your workplace plan can affect whether a traditional IRA contribution is tax-deductible. For a first thousand, though, keep it simple. One account, funded and invested, beats three accounts with a little cash sitting in each.",
+     "on_screen_text": "One account, invested, is enough to start",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three boxes, one glowing. No text, no logos, no real people."
+    },
+    {
+     "heading": "Example: Priya, fictional",
+     "narration": "A fictional example. Priya earns forty-five thousand dollars a year. Her employer matches fifty percent up to six percent of salary. Six percent of forty-five thousand is twenty-seven hundred dollars a year, about two hundred twenty-five a month, and the match adds about thirteen fifty a year on top. Priya's first thousand goes into her 401(k) through her paycheck over four or five months. Once that's running, she opens a Roth IRA for anything extra. Same idea as the order: match first.",
+     "on_screen_text": "6% of $45,000 = $2,700 · match ≈ $1,350",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fictional character with a paycheck and a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Where to open an IRA",
+     "narration": "Where do you open an IRA? At a brokerage or a robo-advisor. Look for no account fees, no minimum to open, and a choice of low-cost index or target-date funds. Most large providers offer all three. The opening process is usually online and takes about fifteen minutes. We'll walk through it step by step in part six. We won't tell you which provider to choose, but our guide on where to open a Roth IRA, linked below, compares what to look for. Whichever you pick, you can move an IRA to another provider later through a transfer, usually without tax, so the choice isn't permanent.",
+     "on_screen_text": "No fees · no minimum · low-cost funds",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a small box on screen. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. A 401(k) comes from your paycheck and can add an employer match, like five hundred on top of your thousand. An IRA is one you open yourself, with a yearly limit, and a Roth IRA grows tax-free for retirement. A taxable brokerage account is flexible but taxed along the way. A common order: match first, then a Roth IRA, then taxable. Next, in part three, we choose what goes inside the account: index funds, target-date funds or a robo-advisor.",
+     "on_screen_text": "Match · Roth · taxable",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to three ticked boxes. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "401(k), IRA or brokerage? Where to put your first $1,000, and why the match usually comes first.\n\nExamples are hypothetical. Contribution and income limits change yearly: check IRS.gov. Investing involves risk. Not financial or tax advice.",
+   "hashtags": [
+    "rothira",
+    "401k",
+    "investingforbeginners",
+    "first1000",
+    "moneymadesimple"
+   ],
+   "description": "Part 2 of Your First $1,000 Invested: the account comes before the fund. A 401(k) with a match, a Roth or traditional IRA, and a taxable brokerage account compared, with a chart of day-one dollars invested and a common order for a first $1,000.\n\nChapters\n0:00 Intro\n0:41 Account 1: the 401(k)\n1:22 The match on a chart\n2:00 Account 2: the IRA\n2:37 Roth contributions can come back\n3:16 Account 3: a taxable brokerage\n3:50 A simple order\n4:24 Roth or traditional?\n5:00 Common mistakes\n5:35 No match? Start here\n6:09 Opening more than one account\n6:41 Example: Priya, fictional\n7:16 Where to open an IRA\n7:59 Recap\n\nLinks\nRoth vs traditional IRA: https://moneymadesimple.netlify.app/blog/roth-vs-traditional-ira/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-02\n401(k) match explained: https://moneymadesimple.netlify.app/blog/401k-match-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-02\nHow to start investing with $100 a month: https://moneymadesimple.netlify.app/blog/how-to-start-investing-with-100-a-month/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-02\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-02\n\nInvesting involves risk, including the possible loss of money you invest. Past performance doesn't predict future results. Returns shown are hypothetical illustrations, not forecasts.\nExamples are hypothetical and for education only. Not financial, tax or investment advice. We don't recommend specific securities.\nVisuals and voice made with AI tools. Script written and fact-checked by a human.",
+   "thumbnail_text": "Where your first $1,000 goes",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/individual-retirement-arrangements-iras",
+    "https://www.irs.gov/retirement-plans/401k-plans",
+    "https://www.investor.gov/introduction-investing"
+   ],
+   "claims_to_verify": [
+    "$1,000 + 50% match = $1,500",
+    "Roth contributions (not earnings) generally withdrawable tax- and penalty-free",
+    "Early 401(k) withdrawals before 59½ generally taxed + 10% penalty, with exceptions",
+    "IRA limits and Roth income limits change yearly"
+   ],
+   "title_variants": [
+    "401(k), Roth IRA or Brokerage: Where Your First $1,000 Goes",
+    "Your First $1,000 Invested, Part 2: Pick the Account"
+   ],
+   "hook_variants": [
+    "The account matters before the fund. Here are your 3 options.",
+    "401(k), IRA or brokerage? A simple order for your first $1,000."
+   ],
+   "original_element": "worked-example-chart: Day-one dollars invested: $1,500 in a 401(k) with a 50% match vs $1,000 in a Roth IRA or taxable account (chapter \"The match on a chart\")"
+  },
+  "format_style": "explainer",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Day-one dollars invested: $1,500 in a 401(k) with a 50% match vs $1,000 in a Roth IRA or taxable account",
+   "chapter": "The match on a chart"
+  },
+  "compliance_review": [
+   "Tax rules (Roth withdrawals, early-withdrawal penalty, IRA deductibility) are summaries: verify against current IRS guidance",
+   "No specific limits quoted on screen: viewers sent to IRS.gov for current figures",
+   "'A common order' framed as general practice, not a recommendation",
+   "Vesting caveat included with the match"
+  ]
+ },
+ {
+  "format": "long",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Part 3: three simple, diversified options for a first $1,000 — a broad index fund, a target-date fund and a robo-advisor — compared by how they work and what they cost, with a 30-year fee chart on a $1,000 lump sum.",
+  "series": "first-1000-invested",
+  "series_part": 3,
+  "content_id": "yt-invest-03",
+  "search_terms": [
+   "index fund vs target date fund",
+   "robo advisor vs index fund",
+   "best way to invest 1000",
+   "what to invest in first"
+  ],
+  "thumbnail_alt": "Fund fee comparison",
+  "script": {
+   "title": "Index Fund, Target-Date Fund or Robo-Advisor for Your First $1,000?",
+   "hook": "Three simple ways to invest your first $1,000. Over 30 years, the fee alone could be a $1,800 difference.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Three simple ways to invest your first thousand dollars. Over thirty years, the fee alone could be an eighteen-hundred-dollar difference. This is part three of Your First One Thousand Dollars Invested. You've checked you're ready, and you've picked the account. Now: what goes inside it. We're not picking individual stocks in this series. For most beginners, a single diversified fund is simpler and spreads risk across many companies. Today we compare three options: a broad index fund, a target-date fund, and a robo-advisor. We won't name specific funds or providers. Instead we'll look at how each works and what each costs.",
+     "on_screen_text": "3 simple options",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to three jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why one diversified fund",
+     "narration": "Why a fund instead of a few stocks? A single company can drop sharply, or even go out of business. A broad fund holds hundreds or thousands of companies, so no single one can sink you. It still carries risk: when the whole market falls, the fund falls too. But diversification removes the risk of one bad pick. For a first thousand, that's the most important protection you can have, and it costs very little.",
+     "on_screen_text": "Many companies, not one",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a basket holding many small coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Option 1: a broad index fund",
+     "narration": "Option one: a broad index fund, or an index ETF. It simply tracks a market index, like the whole US stock market. Because nobody's picking stocks, the fees can be tiny, sometimes around zero point zero three percent a year. That's thirty cents a year on a thousand dollars. The catch: it's usually all stocks, so it goes up and down with the market. You decide whether to add a bond fund for steadiness, and you rebalance yourself. It's the cheapest option, and it asks a little more of you.",
+     "on_screen_text": "Index fund: lowest fees · you manage the mix",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single jar with a small percent sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Option 2: a target-date fund",
+     "narration": "Option two: a target-date fund. You pick the fund with the year closest to when you expect to retire, like a 2060 fund. Inside, it holds a mix of stock and bond index funds, and it gradually shifts toward bonds as that year approaches. It rebalances for you. It's a one-fund, set-it-and-forget-it option, which is why many 401(k) plans use it as the default. Fees vary a lot; many low-cost ones are around zero point one percent, but some charge much more. Always check the expense ratio.",
+     "on_screen_text": "Target-date: one fund · automatic mix",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a calendar label. No text, no logos, no real people."
+    },
+    {
+     "heading": "Option 3: a robo-advisor",
+     "narration": "Option three: a robo-advisor. You answer questions about your goals and risk comfort, and it builds and manages a portfolio of low-cost funds for you, rebalancing automatically. Some add features like goal tracking. The cost is an advisory fee, often around zero point two five percent a year, plus the fees of the funds inside. Some have minimums; many don't. It's the most hands-off of the three, and you pay a little more for that. If you'd never rebalance on your own, that can be worth it.",
+     "on_screen_text": "Robo: fully managed · small extra fee",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small robot holding a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "The fee chart: 30 years",
+     "narration": "Here's what fees do over time. Take a thousand dollars, invested once, at a hypothetical seven percent a year before fees, for thirty years. At zero point zero three percent, it grows to about seventy-five hundred. At zero point one two percent, about seventy-three sixty. At a quarter percent total, about seventy-one hundred. And at one percent, about fifty-seven hundred. The difference between the cheapest and the one-percent fund is about eighteen hundred dollars, from the same thousand. Returns are illustrative, not a forecast, but the fee effect is real.",
+     "on_screen_text": "$7,548 vs $5,743 over 30 years",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four bars stepping down. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$1,000 once, 30 years, 7% before fees",
+      "labels": [
+       "0.03% fee",
+       "0.12% fee",
+       "0.25% fee",
+       "1% fee"
+      ],
+      "values": [
+       7548,
+       7360,
+       7096,
+       5743
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Hypothetical return, not a forecast"
+     }
+    },
+    {
+     "heading": "How to choose",
+     "narration": "So how do you choose? If you want the lowest cost and you're comfortable picking a mix and rebalancing once a year, a broad index fund fits. If you want one fund that handles the mix for you, a target-date fund fits, especially inside a 401(k). If you want everything automated, including goals and rebalancing, a robo-advisor fits. All three can be reasonable. What matters more than which you pick is that it's diversified, low-cost, and that you keep investing.",
+     "on_screen_text": "Cost · simplicity · hands-off",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three paths meeting at one flag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Check the expense ratio",
+     "narration": "Whichever you choose, check one number: the expense ratio, the yearly fee as a percentage. You'll find it on the fund's page or fact sheet. In your 401(k), the plan's fund list shows it. As a rough guide, broad index funds are often well under zero point two percent. If you see one percent or more for a simple index or target-date fund, compare alternatives. Also check for account fees, trading fees, and any minimum investment.",
+     "on_screen_text": "Find the expense ratio first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fact sheet with a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "What we didn't cover",
+     "narration": "What about individual stocks, crypto, or the fund your friend swears by? This series is about a simple, diversified start, not about chasing returns. Some people add small, separate amounts for those later, with money they could afford to lose. But a first thousand is about building the habit and the foundation. We'll also never tell you a specific fund to buy. Your plan's options and your own goals decide that.",
+     "on_screen_text": "Simple first · no tips",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small path with one signpost. No text, no logos, no real people."
+    },
+    {
+     "heading": "Stocks, bonds and the mix",
+     "narration": "A quick word on the mix of stocks and bonds, since all three options handle it differently. Stock funds have historically grown more over long periods, but they swing more. Bond funds usually swing less and grow less. A mix of the two, like ninety percent stocks and ten percent bonds for someone decades from retirement, softens the ups and downs. Target-date funds and robo-advisors set this mix for you. With a single index fund, you set it yourself, or simply choose a fund that already includes both.",
+     "on_screen_text": "More stocks: more growth, more swings",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two jars, one tall and wobbly, one short and steady. No text, no logos, no real people."
+    },
+    {
+     "heading": "Inside a 401(k)",
+     "narration": "If your first thousand is going into a 401(k), your choices are limited to the plan's list. Look for an index fund, often labelled with words like 'index' or 'total market', and check the target-date funds. If your plan put you in a default fund automatically, it's often a target-date fund. Check its expense ratio. If the plan has no low-cost options, still take the match; the match usually outweighs higher fees. You can roll the money to an IRA with more choice when you leave the job.",
+     "on_screen_text": "In a 401(k): pick from the plan's list",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short list with one line highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "One fund is enough",
+     "narration": "Do you need several funds? For a first thousand, usually not. A single total-market index fund, or a single target-date fund, already holds thousands of companies. Adding a second or third fund that holds the same companies doesn't add much diversification, and it makes the account harder to manage. Some people add an international fund or a bond fund later. But many long-term investors keep it to one, two or three funds for decades. Simple is a feature, not a shortcut. Fewer funds also means fewer decisions when the market moves, and fewer chances to second-guess yourself. If you ever want to add more, you can do it later, slowly, with a clear reason for each new fund.",
+     "on_screen_text": "One broad fund can be enough",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single jar holding a small globe. No text, no logos, no real people."
+    },
+    {
+     "heading": "Minimums and fractional shares",
+     "narration": "Two practical details. First, minimums. Some mutual funds require a minimum first investment, sometimes one thousand or three thousand dollars. ETFs usually don't, but you buy them by the share, which can be more than a few hundred dollars each. Second, fractional shares. Many brokerages now let you buy part of a share with any dollar amount, so your whole thousand gets invested, not just the part that buys whole shares. Check both before you choose, so your money isn't left sitting in cash.",
+     "on_screen_text": "Check minimums · use fractional shares",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin cut into small slices. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. One diversified fund is a strong start. A broad index fund has the lowest fees, often around zero point zero three percent, and you manage the mix. A target-date fund handles the mix for you in one fund. A robo-advisor manages everything for a small extra fee, often around a quarter percent. Over thirty years, fees can mean about eighteen hundred dollars of difference on a single thousand. Next, part four: what actually happens to your first thousand when the market drops.",
+     "on_screen_text": "Diversified · low-cost · keep going",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a jar with a small upward arrow. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Index fund, target-date fund or robo-advisor for your first $1,000? How each works and what each costs, with a 30-year fee chart.\n\nReturns shown are hypothetical. We don't recommend specific funds. Investing involves risk. Not financial advice.",
+   "hashtags": [
+    "indexfunds",
+    "roboadvisor",
+    "investingforbeginners",
+    "first1000",
+    "moneymadesimple"
+   ],
+   "description": "Part 3 of Your First $1,000 Invested: a broad index fund, a target-date fund and a robo-advisor compared by how they work and what they cost, with a 30-year chart of fees on a $1,000 lump sum at a hypothetical 7%.\n\nChapters\n0:00 Intro\n0:41 Why one diversified fund\n1:13 Option 1: a broad index fund\n1:50 Option 2: a target-date fund\n2:27 Option 3: a robo-advisor\n3:03 The fee chart: 30 years\n3:41 How to choose\n4:14 Check the expense ratio\n4:46 What we didn't cover\n5:16 Stocks, bonds and the mix\n5:52 Inside a 401(k)\n6:29 One fund is enough\n7:18 Minimums and fractional shares\n7:53 Recap\n\nLinks\nExpense ratios explained: https://moneymadesimple.netlify.app/blog/expense-ratios-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-03\nBest robo-advisors, compared: https://moneymadesimple.netlify.app/compare/best-robo-advisors/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-03\nHow to start investing with $100 a month: https://moneymadesimple.netlify.app/blog/how-to-start-investing-with-100-a-month/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-03\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-03\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nInvesting involves risk, including the possible loss of money you invest. Past performance doesn't predict future results. Returns shown are hypothetical illustrations, not forecasts.\nExamples are hypothetical and for education only. Not financial, tax or investment advice. We don't recommend specific securities.\nVisuals and voice made with AI tools. Script written and fact-checked by a human.",
+   "thumbnail_text": "$1,800 in fees?",
+   "sources": [
+    "https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-funds-etfs",
+    "https://www.investor.gov/introduction-investing/getting-started/working-investment-professional/robo-advisers",
+    "https://www.finra.org/investors/insights/target-date-funds"
+   ],
+   "claims_to_verify": [
+    "1000 × 1.0697^30 ≈ 7,548",
+    "1000 × 1.0688^30 ≈ 7,360",
+    "1000 × 1.0675^30 ≈ 7,096",
+    "1000 × 1.06^30 ≈ 5,743",
+    "Fee levels quoted are typical ranges, not specific products"
+   ],
+   "title_variants": [
+    "Your First $1,000 Invested, Part 3: Pick a Simple Fund",
+    "3 Simple Ways to Invest $1,000 (and What Each Costs)"
+   ],
+   "hook_variants": [
+    "Index fund, target-date fund or robo-advisor? The real costs, side by side.",
+    "You don't need to pick stocks. Here are 3 simple options."
+   ],
+   "original_element": "worked-example-chart: 30-year fee chart on a $1,000 lump sum at a hypothetical 7%: 0.03% ≈ $7,548, 0.12% ≈ $7,360, 0.25% ≈ $7,096, 1% ≈ $5,743 (chapter \"The fee chart: 30 years\")"
+  },
+  "format_style": "real-numbers",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "30-year fee chart on a $1,000 lump sum at a hypothetical 7%: 0.03% ≈ $7,548, 0.12% ≈ $7,360, 0.25% ≈ $7,096, 1% ≈ $5,743",
+   "chapter": "The fee chart: 30 years"
+  },
+  "compliance_review": [
+   "Fee levels are described as typical ranges; no fund, ticker or provider named",
+   "Links to /compare/best-robo-advisors/, which may carry affiliate links: commission disclosure in description; check the page is fair and balanced",
+   "30-year growth uses a hypothetical 7%: labelled on the chart and in narration",
+   "Robo-advisor and target-date descriptions are general; features vary by provider"
+  ]
+ },
+ {
+  "format": "long",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Part 4: three myths about market drops (you lose money the moment it falls, you should sell and wait, drops are rare) set against what usually happens, with a hypothetical line chart of $1,000 falling to $700 and recovering.",
+  "series": "first-1000-invested",
+  "series_part": 4,
+  "content_id": "yt-invest-04",
+  "search_terms": [
+   "what happens to my money if the stock market crashes",
+   "should i sell when the market drops",
+   "stock market drop beginner",
+   "market crash myths"
+  ],
+  "thumbnail_alt": "Market drop and recovery chart",
+  "script": {
+   "title": "What Happens to Your First $1,000 When the Market Drops?",
+   "hook": "Your first $1,000 could drop to $700. Here are 3 myths about market drops, and what usually happens next.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Your first thousand dollars could drop to seven hundred. Here are three myths about market drops, and what usually happens next. This is part four of Your First One Thousand Dollars Invested. So far you've ticked the readiness boxes, chosen an account, and picked a simple, diversified fund. Now for the part nobody enjoys: the day you open your account and see red. If you invest in stocks for long enough, that day will come. It might come in your first month. Knowing what a drop looks like before it happens is one of the best protections a new investor can have.",
+     "on_screen_text": "The day your account shows red",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes looking at a small screen with a red arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Drops are normal",
+     "narration": "First, some context. Stock markets go down regularly. Small dips of five or ten percent happen often, sometimes more than once a year. Bigger drops of twenty percent or more, often called bear markets, have happened many times over the past century. Some recovered within months; some took several years. None of that tells us what will happen next time. But it does mean a drop isn't a sign that you did something wrong. It's part of what investing in stocks involves, and it's the reason stocks are for money you won't need for years.",
+     "on_screen_text": "Drops happen regularly",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a long wavy line with several dips. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 1: you lose money the moment it falls",
+     "narration": "Myth one: when the market falls, you've lost money. Fact: your account value has dropped, but you still own the same number of fund shares. If your thousand bought ten shares, and the price falls, you still own ten shares. The loss becomes permanent when you sell at the lower price. If you hold, the shares can recover when prices recover, although that isn't promised and can take years. This is why the readiness boxes from part one matter. With an emergency fund, you're less likely to be forced to sell at the bottom.",
+     "on_screen_text": "Same shares · lower price for now",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. ten small coins with a price tag dipping. No text, no logos, no real people."
+    },
+    {
+     "heading": "The chart: a hypothetical drop",
+     "narration": "Here's a hypothetical example on a chart. You invest a thousand dollars. A few months later, the market falls thirty percent, and your account shows seven hundred. Six months after that, it's at eight hundred twenty. After a year, nine hundred fifty. After eighteen months, one thousand eighty. After two years, eleven hundred sixty. This is an illustration, not a forecast. Real recoveries can be faster, slower, or take many years. But it shows why the seven-hundred-dollar day is a moment, not the end of the story, for someone who holds.",
+     "on_screen_text": "$1,000 → $700 → $1,160 (hypothetical)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a line falling then rising past where it started. No text, no logos, no real people.",
+     "chart": {
+      "kind": "line",
+      "title": "Hypothetical $1,000 through a 30% drop",
+      "labels": [
+       "Start",
+       "The drop",
+       "+6 months",
+       "+12 months",
+       "+18 months",
+       "+24 months"
+      ],
+      "values": [
+       1000,
+       700,
+       820,
+       950,
+       1080,
+       1160
+      ],
+      "unit_prefix": "$",
+      "note": "Illustration only, not a forecast. Real recoveries vary and can take years"
+     }
+    },
+    {
+     "heading": "Myth 2: sell now and buy back later",
+     "narration": "Myth two: you should sell when it drops, and buy back in when things look better. Fact: that means getting two decisions right, when to sell and when to buy back, and both are very hard. Some of the market's biggest up days have historically come close to its worst days, often while the news still looks bad. Missing just a few of those days can drag down long-term results a lot. Many investors who sell in a panic end up buying back at a higher price than they sold for, locking in the loss.",
+     "on_screen_text": "Two hard calls, not one",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two arrows pointing in opposite directions. No text, no logos, no real people."
+    },
+    {
+     "heading": "What the seller's $1,000 looks like",
+     "narration": "Let's use the same hypothetical. An investor sells at seven hundred, waits until things feel safer, and buys back when the account would have been at nine hundred fifty. Their seven hundred buys fewer shares than they had before. When the holder's account reaches eleven hundred sixty, the seller's is around eight hundred fifty. Same fund, same market, very different result, just from the timing of one decision. Again, this is hypothetical. But it's why many long-term investors choose to hold through drops.",
+     "on_screen_text": "Holder ~$1,160 · seller ~$850 (hypothetical)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two small jars, one fuller than the other. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 3: a drop means stocks are broken",
+     "narration": "Myth three: if the market's down a lot, it's broken, and you should stop investing. Fact: if you keep investing a fixed amount each month, a drop means that amount buys more shares at a lower price. When prices recover, those shares recover too. That's one reason many people keep their automatic contributions running during downturns, especially in a 401(k). It doesn't remove the risk, and nobody knows how long a downturn will last. But stopping contributions at the bottom means buying fewer shares when they're cheapest.",
+     "on_screen_text": "Same $100 buys more shares",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin buying a bigger pile of small shares. No text, no logos, no real people."
+    },
+    {
+     "heading": "What to actually do",
+     "narration": "So what do you actually do when your account drops? A simple plan. One: don't make decisions on the day of a big drop. Wait at least a few days. Two: check your timeline. If you won't need this money for five years or more, nothing has changed. Three: keep automatic contributions going if you can afford to. Four: if you genuinely can't sleep, your mix may be too aggressive. Consider a fund with more bonds, like a target-date fund with an earlier date, and change it calmly, not in a panic.",
+     "on_screen_text": "Wait · check timeline · keep contributing",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calm checklist with four lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Don't watch it daily",
+     "narration": "One more habit that helps: check your investment account less often. Looking every day makes normal ups and downs feel bigger than they are, and makes it more tempting to act. Many long-term investors check once a month or once a quarter. Turn off price alerts on your phone if they stress you out. Your fund doesn't need you to watch it. The work you do is in the setup: the right account, a diversified fund, automatic contributions, and a timeline that matches the money.",
+     "on_screen_text": "Check monthly, not daily",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a muted bell. No text, no logos, no real people."
+    },
+    {
+     "heading": "Example: Jordan, fictional",
+     "narration": "A fictional example. Jordan invests a thousand dollars in a broad index fund in January. By March, the market has dropped, and the account shows seven hundred eighty. Jordan's first instinct is to sell. Instead, Jordan reads the three-line plan from part six: the money is for retirement, decades away; the fund is diversified; and the plan says wait and keep contributing. Jordan's hundred dollars a month keeps going in. A year later, the balance is above where it started, though it could easily have taken longer.",
+     "on_screen_text": "Jordan: reads the plan · keeps going",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fictional character reading a small notebook. No text, no logos, no real people."
+    },
+    {
+     "heading": "When selling can make sense",
+     "narration": "Is selling ever the right call? Sometimes. If your goal has moved closer, say you'll need the money in a year, moving it to something steadier can make sense, ideally gradually, and not on the worst day. If you invested money you actually need now, that's a sign to rebuild the emergency fund first. And rebalancing, moving some money from stocks to bonds to keep your chosen mix, is a planned sale, not a panic. The difference is having a reason other than the drop itself.",
+     "on_screen_text": "Sell for a reason, not for the drop",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small signpost with two arrows. No text, no logos, no real people."
+    },
+    {
+     "heading": "Bonds and the bumpy ride",
+     "narration": "This is where the stock and bond mix from part three earns its keep. A fund with some bonds usually falls less in a stock market drop, because bonds often move differently from stocks, though not always. For a beginner who isn't sure how they'll feel, a slightly more conservative mix can be the difference between holding and selling. A mix you can stick with through a drop may do better for you than a more aggressive one you abandon halfway down.",
+     "on_screen_text": "A mix you can hold through a drop",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two lines, one dipping less than the other. No text, no logos, no real people."
+    },
+    {
+     "heading": "The news isn't a plan",
+     "narration": "During a drop, headlines get loud. Predictions about what happens next are everywhere, and they often disagree. Nobody can reliably tell you when a drop will end. So instead of reacting to the news, go back to the things you control: your timeline, your mix, your contributions and your fees. If something important in your own life has changed, like a job loss, adjust your plan for that reason. The market's mood on any given day isn't a reason by itself.",
+     "on_screen_text": "Control the controllables",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a newspaper with a small calm face beside it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap the three myths. One: a drop isn't a loss until you sell; you still own the same shares. Two: selling and buying back later means getting two hard decisions right, and many investors buy back higher. Three: a drop doesn't mean stop investing; your monthly amount buys more shares while prices are low. In our hypothetical, a thousand fell to seven hundred and recovered to eleven sixty over two years, but real markets can take longer. Next, part five: should you invest your thousand all at once, or a little each month?",
+     "on_screen_text": "Hold · don't time it · keep going",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small umbrella over a jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Your first $1,000 could drop to $700. Three myths about market drops, and a simple plan for when it happens.\n\nThe chart is hypothetical, not a forecast. Recoveries can take years. Investing involves risk, including loss. Not financial advice.",
+   "hashtags": [
+    "stockmarket",
+    "investingforbeginners",
+    "first1000",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "Part 4 of Your First $1,000 Invested: three myths about market drops — you lose money the moment it falls, you should sell and buy back later, and a drop means stop investing — with a hypothetical chart of $1,000 falling to $700 and recovering, and a simple plan for the day your account shows red.\n\nChapters\n0:00 Intro\n0:42 Drops are normal\n1:21 Myth 1: you lose money the moment it falls\n2:00 The chart: a hypothetical drop\n2:38 Myth 2: sell now and buy back later\n3:18 What the seller's $1,000 looks like\n3:53 Myth 3: a drop means stocks are broken\n4:29 What to actually do\n5:07 Don't watch it daily\n5:43 Example: Jordan, fictional\n6:19 When selling can make sense\n6:55 Bonds and the bumpy ride\n7:29 The news isn't a plan\n8:03 Recap\n\nLinks\nInvesting guides: https://moneymadesimple.netlify.app/blog/investing/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-04\nHow to start investing with $100 a month: https://moneymadesimple.netlify.app/blog/how-to-start-investing-with-100-a-month/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-04\nHow to build an emergency fund: https://moneymadesimple.netlify.app/blog/how-to-build-an-emergency-fund/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-04\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-04\n\nInvesting involves risk, including the possible loss of money you invest. Past performance doesn't predict future results. Returns shown are hypothetical illustrations, not forecasts.\nExamples are hypothetical and for education only. Not financial, tax or investment advice. We don't recommend specific securities.\nVisuals and voice made with AI tools. Script written and fact-checked by a human.",
+   "thumbnail_text": "$1,000 → $700?",
+   "sources": [
+    "https://www.investor.gov/introduction-investing/investing-basics/what-risk",
+    "https://www.finra.org/investors/insights/market-volatility",
+    "https://www.sec.gov/about/reports-publications/investorpubsassetallocationhtm"
+   ],
+   "claims_to_verify": [
+    "Hypothetical path 1000 → 700 → 820 → 950 → 1080 → 1160",
+    "Seller: 700 buys 700/950 of original shares ≈ 73.7%; × 1160 ≈ $855",
+    "Large up days often cluster near large down days (historical observation, verify source)",
+    "Bear market = 20%+ drop (common definition)"
+   ],
+   "title_variants": [
+    "Your First $1,000 Invested, Part 4: When the Market Drops",
+    "3 Market Crash Myths That Make Beginners Lose Money"
+   ],
+   "hook_variants": [
+    "The market will drop at some point after you invest. Here's what that looks like.",
+    "Selling after a drop is the most common beginner mistake. Here's why."
+   ],
+   "original_element": "worked-example-chart: Hypothetical line chart of $1,000 falling 30% to $700 and recovering to $1,160 over two years, with the seller's path compared in narration (chapter \"The chart: a hypothetical drop\")"
+  },
+  "format_style": "myth-vs-fact",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Hypothetical line chart of $1,000 falling 30% to $700 and recovering to $1,160 over two years, with the seller's path compared in narration",
+   "chapter": "The chart: a hypothetical drop"
+  },
+  "compliance_review": [
+   "Recovery path is hypothetical: labelled on the chart, in narration and in the caption; narration says recoveries can take years",
+   "Historical claims ('biggest up days near worst days', frequency of dips) are general: confirm wording against a FINRA/SEC source before posting",
+   "Holding through drops described as what many investors choose, not a recommendation; the 'can't sleep' step points to a calmer mix",
+   "No market prediction or timing advice"
+  ]
+ },
+ {
+  "format": "long",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Part 5: lump sum vs dollar-cost averaging worked out on screen with $1,000 over 10 months in two hypothetical markets (steady rise, dip then recovery), with a chart of the four results and when each approach tends to fit.",
+  "series": "first-1000-invested",
+  "series_part": 5,
+  "content_id": "yt-invest-05",
+  "search_terms": [
+   "lump sum vs dollar cost averaging",
+   "should i invest all at once",
+   "dollar cost averaging explained",
+   "invest 1000 at once or monthly"
+  ],
+  "thumbnail_alt": "Lump sum vs monthly investing comparison",
+  "script": {
+   "title": "Invest $1,000 All at Once or $100 a Month? The Math",
+   "hook": "A $1,000 lump sum, or $100 a month for 10 months? Here it is worked out on screen in 2 kinds of market.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "A thousand dollars all at once, or a hundred dollars a month for ten months? We'll work it out on screen in two kinds of market. This is part five of Your First One Thousand Dollars Invested. You have your account and your fund. Now the question is timing: do you put the whole thousand in today, or spread it out? Spreading it out has a name: dollar-cost averaging. Both approaches are reasonable. Today we'll do the math in two hypothetical markets, so you can see what each one does and choose the one that fits you.",
+     "on_screen_text": "All at once vs $100 a month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding one big coin and ten small coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "The two approaches",
+     "narration": "First, the two approaches. A lump sum means investing the whole thousand on day one. Dollar-cost averaging means investing the same amount on a schedule, here a hundred dollars at the start of each month for ten months, whatever the price. The money waiting to be invested sits in savings in the meantime. Note that if you invest from your paycheck every month, like in a 401(k), you're already dollar-cost averaging, because that's when you have the money. Today's question is only about money you already have in hand.",
+     "on_screen_text": "Lump sum · or $100 × 10 months",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. one big arrow vs ten small arrows. No text, no logos, no real people."
+    },
+    {
+     "heading": "Market 1: a steady rise",
+     "narration": "Market one: a steady rise. Imagine the fund goes up one percent every month for ten months. That's hypothetical and smoother than real markets. The lump sum: one thousand times one point zero one, ten times over, is about eleven hundred five dollars. Dollar-cost averaging: the first hundred gets ten months of growth, the second gets nine, and so on, down to one month for the last hundred. Add them up and you get about one thousand fifty-seven. The lump sum wins by about forty-eight dollars, because more money was invested for longer while prices rose.",
+     "on_screen_text": "Rising: lump ≈ $1,105 · monthly ≈ $1,057",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calculator next to a line going up. No text, no logos, no real people."
+    },
+    {
+     "heading": "Market 2: a dip, then a recovery",
+     "narration": "Market two: a dip, then a recovery. Now the fund falls three percent a month for five months, then rises three percent a month for five months. The lump sum falls and climbs back, ending at about nine hundred ninety-six dollars, almost exactly where it started. Dollar-cost averaging: the early hundreds buy at falling prices, and the later ones buy near the bottom. When prices recover, those cheaper shares grow. The total comes to about one thousand seventy-six. This time monthly wins by about eighty dollars.",
+     "on_screen_text": "Dip: lump ≈ $996 · monthly ≈ $1,076",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calculator next to a V-shaped line. No text, no logos, no real people."
+    },
+    {
+     "heading": "The chart: four results",
+     "narration": "Here are all four on one chart. In the rising market, lump sum about eleven hundred five, monthly about ten fifty-seven. In the dip-then-recovery market, lump sum about nine ninety-six, monthly about ten seventy-six. So which is better? It depends on what the market does next, and nobody knows that in advance. These are hypothetical returns, chosen to show how each approach behaves, not predictions of what any fund will do.",
+     "on_screen_text": "Rising: lump wins · dip: monthly wins",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four bars in two pairs. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$1,000 after 10 months",
+      "labels": [
+       "Rising: all at once",
+       "Rising: $100 a month",
+       "Dip then recovery: all at once",
+       "Dip then recovery: $100 a month"
+      ],
+      "values": [
+       1105,
+       1057,
+       996,
+       1076
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Hypothetical returns, not forecasts"
+     }
+    },
+    {
+     "heading": "What history tends to show",
+     "narration": "Over long periods, markets have risen more often than they've fallen, though there have been long stretches where they didn't. Because of that, several studies have found that a lump sum has come out ahead more often than not, simply because the money is invested longer. But not always. And when the lump sum loses, it can feel worse, because you invested everything right before a drop. Past results don't predict the future, but that's the trade-off: lump sum has tended to win more often; monthly can reduce regret.",
+     "on_screen_text": "Lump sum has tended to win more often",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale tipping slightly to one side. No text, no logos, no real people."
+    },
+    {
+     "heading": "The regret factor",
+     "narration": "That regret factor matters more than people admit. If you'd invest a thousand dollars all at once, watch it drop to eight hundred the next month, and then sell in a panic, dollar-cost averaging is probably better for you, even if the math favours a lump sum on average. Remember part four: the biggest risk for beginners is often selling during a drop. Spreading your first thousand over a few months can make the first drop easier to sit through. The best approach is the one you'll stick with.",
+     "on_screen_text": "Pick the one you'll stick with",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes with a calm face beside a small dip. No text, no logos, no real people."
+    },
+    {
+     "heading": "A middle path",
+     "narration": "There's also a middle path. Some people invest half on day one and spread the rest over three to six months. Others pick a short window, like three monthly amounts instead of ten. A shorter window keeps more money invested sooner, while still softening the impact of a drop right after you start. Whatever you choose, write the plan down and set the transfers up automatically, so you're not making a new decision each month based on the news.",
+     "on_screen_text": "Half now, half over 3–6 months",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. one medium coin and three small coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Where the waiting money sits",
+     "narration": "If you do spread it out, keep the waiting money somewhere safe and earning interest, like a high-yield savings account, not in your checking account where it's easy to spend. Some brokerage accounts also hold uninvested cash in a sweep account or money market fund. Check what it earns, because some pay almost nothing. That's a detail we'll come back to in part six, because it catches a lot of new investors out.",
+     "on_screen_text": "Waiting money: high-yield savings",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small jar labelled for waiting coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "How the calculation works",
+     "narration": "Here's exactly how the monthly calculation works, so you can try it with your own numbers. At the start of each month, add a hundred dollars. Then apply that month's return to the whole balance. In the rising market, month one: a hundred, times one point zero one, is a hundred and one. Month two: add a hundred to get two hundred and one, times one point zero one, about two hundred and three. Keep going for ten months. A spreadsheet does this in a minute, and you can test any market you like.",
+     "on_screen_text": "Add $100 · apply the month · repeat",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a spreadsheet with ten rows. No text, no logos, no real people."
+    },
+    {
+     "heading": "Example: Alex, fictional",
+     "narration": "A fictional example. Alex gets a thousand-dollar bonus and wants to invest it in a Roth IRA. Alex is nervous about investing it all right before a drop. So Alex invests four hundred today and sets up two hundred a month for three months. That's a short window: most of the money is invested within a quarter, and if the market dips in the meantime, the later amounts buy at lower prices. It's a written plan, set up automatically, so Alex doesn't have to decide again each month.",
+     "on_screen_text": "Alex: $400 now · $200 × 3 months",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fictional character with one coin and three small coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fees and trading costs",
+     "narration": "One thing to check before splitting your money into many small purchases: trading costs. Most large brokerages now charge no commission to buy ETFs or their own mutual funds, so ten purchases cost the same as one. But some funds or accounts still charge a fee per trade, or a transaction fee for funds from other companies. If each hundred-dollar purchase costs a few dollars, that's a big percentage. Check your provider's fee schedule, and if trades aren't free, use fewer, larger purchases.",
+     "on_screen_text": "Check per-trade fees first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small receipt next to a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "What about a windfall?",
+     "narration": "The same question comes up with bigger amounts: an inheritance, a bonus, or the proceeds from selling something. The math works the same way. A lump sum has tended to come out ahead more often over long periods, and spreading it out can reduce regret if a drop comes right after you invest. With a larger amount, it's also worth talking to a fee-only financial planner, who charges a set fee rather than earning commissions, especially if taxes are involved. They can help you weigh the timing against your goals and the rest of your finances, which a general video can't do.",
+     "on_screen_text": "Bigger amount? Same trade-off",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a large coin next to a small calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. A lump sum puts the whole thousand in at once; dollar-cost averaging spreads it out, like a hundred a month for ten months. In a steadily rising hypothetical market, the lump sum ended near eleven hundred five against ten fifty-seven. In a dip-then-recovery market, monthly ended near ten seventy-six against nine ninety-six. A lump sum has tended to come out ahead more often, but monthly can make the first drop easier to stick through. Next is the final part: opening your account and making your first investment, step by step.",
+     "on_screen_text": "Both work · pick one you'll keep",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a calendar with ten ticks. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "$1,000 all at once, or $100 a month for 10 months? The math in a rising market and in a dip-then-recovery market.\n\nReturns shown are hypothetical, not forecasts. Investing involves risk. Not financial advice.",
+   "hashtags": [
+    "dollarcostaveraging",
+    "investingforbeginners",
+    "first1000",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "Part 5 of Your First $1,000 Invested: lump sum vs dollar-cost averaging worked out on screen with $1,000 over 10 months in two hypothetical markets — a steady rise (lump ≈ $1,105, monthly ≈ $1,057) and a dip then recovery (lump ≈ $996, monthly ≈ $1,076) — and how to choose.\n\nChapters\n0:00 Intro\n0:40 The two approaches\n1:17 Market 1: a steady rise\n1:57 Market 2: a dip, then a recovery\n2:33 The chart: four results\n3:03 What history tends to show\n3:40 The regret factor\n4:17 A middle path\n4:50 Where the waiting money sits\n5:21 How the calculation works\n6:00 Example: Alex, fictional\n6:36 Fees and trading costs\n7:11 What about a windfall?\n7:53 Recap\n\nLinks\nHow to start investing with $100 a month: https://moneymadesimple.netlify.app/blog/how-to-start-investing-with-100-a-month/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-05\nHigh-yield savings vs money market: https://moneymadesimple.netlify.app/blog/high-yield-savings-vs-money-market/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-05\nInvesting guides: https://moneymadesimple.netlify.app/blog/investing/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-05\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-05\n\nInvesting involves risk, including the possible loss of money you invest. Past performance doesn't predict future results. Returns shown are hypothetical illustrations, not forecasts.\nExamples are hypothetical and for education only. Not financial, tax or investment advice. We don't recommend specific securities.\nVisuals and voice made with AI tools. Script written and fact-checked by a human.",
+   "thumbnail_text": "All at once or monthly?",
+   "sources": [
+    "https://www.investor.gov/introduction-investing/investing-basics/glossary/dollar-cost-averaging",
+    "https://www.finra.org/investors/insights/dollar-cost-averaging",
+    "https://www.investor.gov/introduction-investing"
+   ],
+   "claims_to_verify": [
+    "1000 × 1.01^10 ≈ 1,104.62",
+    "Σ 100 × 1.01^k, k=1..10 ≈ 1,056.68",
+    "1000 × 0.97^5 × 1.03^5 ≈ 995.51",
+    "Monthly in dip scenario ≈ 1,076.35 (contribution at start of month, then the month's return)",
+    "'Studies found lump sum ahead more often' — cite a specific study (e.g. Vanguard research) before posting"
+   ],
+   "title_variants": [
+    "Lump Sum vs Dollar-Cost Averaging With $1,000",
+    "Your First $1,000 Invested, Part 5: All at Once or Monthly?"
+   ],
+   "hook_variants": [
+    "Lump sum or monthly? The answer depends on the market, and on you.",
+    "Dollar-cost averaging, explained with $1,000 and a calculator."
+   ],
+   "original_element": "worked-example-chart: Lump sum vs $100 a month for 10 months in two hypothetical markets: rising 1% a month (≈ $1,105 vs ≈ $1,057) and down 3% a month for 5 months then up 3% for 5 (≈ $996 vs ≈ $1,076) (chapter \"The chart: four results\")"
+  },
+  "format_style": "on-screen-calculation",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Lump sum vs $100 a month for 10 months in two hypothetical markets: rising 1% a month (≈ $1,105 vs ≈ $1,057) and down 3% a month for 5 months then up 3% for 5 (≈ $996 vs ≈ $1,076)",
+   "chapter": "The chart: four results"
+  },
+  "compliance_review": [
+   "Both market paths are hypothetical: labelled on the chart, in narration and caption",
+   "'Studies have found lump sum ahead more often': needs a named, linked source in the description before posting, or soften the line",
+   "Presented as two reasonable approaches; no recommendation of one for the viewer",
+   "Past performance disclaimer spoken in narration and in the description"
+  ]
+ },
+ {
+  "format": "long",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Part 6, the finale: seven steps counting down from choosing a provider to setting up automatic contributions, with the common mistake of leaving money uninvested shown on a chart ($1,000 at 0.01% vs a hypothetical 4% cash rate vs 7% invested).",
+  "series": "first-1000-invested",
+  "series_part": 6,
+  "content_id": "yt-invest-06",
+  "search_terms": [
+   "how to open a brokerage account",
+   "how to buy an index fund",
+   "how to open a roth ira",
+   "first investment step by step"
+  ],
+  "thumbnail_alt": "Steps to open an investment account",
+  "script": {
+   "title": "How to Open a Brokerage Account and Invest Your First $1,000",
+   "hook": "Seven steps from $1,000 in your bank to your first investment. Step 4 is where most beginners get stuck.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Seven steps from a thousand dollars in your bank to your first investment. Step four is where most beginners get stuck. This is part six, the final part of Your First One Thousand Dollars Invested. We've covered readiness, the account type, the fund, market drops and timing. Today we put it all together, counting down from step seven to step one. We won't name or show a specific provider, because the screens differ and we don't recommend one. But the steps are the same almost everywhere, and most people can finish them in about fifteen minutes.",
+     "on_screen_text": "7 steps · about 15 minutes",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to a laptop with a checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 7: choose a provider",
+     "narration": "Step seven: choose where to open the account. If it's a 401(k), you don't choose; it's your employer's plan, and you enrol through the benefits portal. For an IRA or brokerage account, compare a few large, well-known providers on three things: no account fees or minimums, low-cost index or target-date funds available, and an easy app. Check that the provider is a member of SIPC, which protects against the brokerage itself failing, though not against investment losses. Our comparison page is linked below.",
+     "on_screen_text": "Step 7: no fees · low-cost funds · SIPC",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three doors with small check marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 6: open the account",
+     "narration": "Step six: open the account. You'll pick the type, like Roth IRA, traditional IRA, or individual brokerage, and fill in your details: name, address, date of birth, Social Security number and employment information. That's normal and required by law for investment accounts. You'll answer a few questions about your experience and goals. Answer honestly; they don't stop you investing. You'll also name a beneficiary, the person who would receive the account if something happened to you. Don't skip that one.",
+     "on_screen_text": "Step 6: pick the type · add a beneficiary",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a small pen. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 5: fund it",
+     "narration": "Step five: fund it. Link your bank account and transfer your thousand dollars. Some providers verify the link with two tiny deposits, which can take a day or two. The transfer itself usually takes one to three business days to settle. If you're dollar-cost averaging from part five, transfer the first amount and set the rest to repeat automatically. At this point, your money is in the account. But here's the catch, and the reason step four exists: it is not invested yet.",
+     "on_screen_text": "Step 5: link your bank · transfer",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow from a bank to a laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 4: actually invest it",
+     "narration": "Step four, the one where beginners get stuck: actually buy the fund. Money that arrives in a brokerage or IRA usually sits as cash until you place an order. Many people open an IRA, fund it, and think they're investing, when the money has been sitting in cash for months or even years. To fix it, search for the fund you chose by its name or ticker, choose buy, and enter the dollar amount. With many providers you can buy fractional shares, so the whole thousand gets invested.",
+     "on_screen_text": "Step 4: deposited ≠ invested",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar of coins with a buy button beside it. No text, no logos, no real people."
+    },
+    {
+     "heading": "The chart: cash vs invested",
+     "narration": "Here's what that mistake can cost over a year. A thousand dollars left in a cash sweep paying zero point zero one percent earns about ten cents. If the cash option pays a hypothetical four percent, about forty dollars. And invested in a stock fund at a hypothetical seven percent, about seventy dollars, though that's not promised and can be negative in a down year. Over decades, the gap between staying in cash and being invested becomes very large. So check your balance after you buy: it should show your fund, not just cash.",
+     "on_screen_text": "Cash 0.01%: $0.10 · invested: ~$70 (hypothetical)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three bars, one tiny. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$1,000 for one year",
+      "labels": [
+       "Cash at 0.01%",
+       "Cash at 4% (hypothetical)",
+       "Invested at 7% (hypothetical)"
+      ],
+      "values": [
+       0.1,
+       40,
+       70
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "4% and 7% are illustrative, not forecasts"
+     }
+    },
+    {
+     "heading": "Step 3: market or limit order",
+     "narration": "Step three: choose the order type. For a mutual fund, you just enter a dollar amount, and it buys at the end-of-day price. For an ETF, which trades like a stock during the day, you'll see market and limit orders. A market order buys at the current price. A limit order buys only at your price or better. For a broad, heavily traded index ETF during normal market hours, either is fine for most beginners. Avoid placing orders right at the opening bell, when prices can jump around more.",
+     "on_screen_text": "Step 3: dollar amount or market order",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small order ticket. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2: set up automatic investing",
+     "narration": "Step two: automate the next contribution. Set a recurring transfer from your bank, for example fifty or a hundred dollars a month, and, where available, turn on automatic investing, so each deposit buys your fund without you logging in. Also check that dividends are set to reinvest, so the payouts buy more shares. This step turns a one-time thousand into a habit, which matters far more over time than the first deposit itself.",
+     "on_screen_text": "Step 2: auto-transfer + auto-invest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a repeating arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1: write down your plan",
+     "narration": "Step one, the last step: write down your plan in three lines. What the money is for and when you'll need it. The fund you chose and why. And what you'll do when the market drops, from part four: wait, check your timeline, keep contributing. Keep that note with your account details. When the market is down twenty percent and the headlines are loud, reading your own plan, written calmly today, is one of the most useful things you can do.",
+     "on_screen_text": "Step 1: 3-line plan · read it in a drop",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small notebook with three lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Choosing the fund you picked",
+     "narration": "When you search for your fund in step four, you'll see a fund page with a few key numbers. Check the expense ratio, from part three. Check what it holds: a total-market or S and P five hundred index fund should list hundreds of companies. For a target-date fund, check the year in its name. Look at the minimum investment if it's a mutual fund. And ignore last year's return, which tells you very little about next year. Those few checks take a minute or two. If anything looks different from what you expected, like a much higher fee or a sales charge, stop and compare before you buy. There's no rush; the market will be open again tomorrow.",
+     "on_screen_text": "Check: fee · holdings · year · minimum",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fund page with a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "Example: Riley, fictional",
+     "narration": "A fictional example. Riley opens a Roth IRA on a Saturday, links a bank account, and transfers a thousand dollars. The money settles on Tuesday. Riley searches for the target-date fund closest to their retirement year, checks that the expense ratio is low, and buys a thousand dollars' worth. The account now shows the fund, not cash. Riley sets up a hundred dollars a month with automatic investing, turns on dividend reinvestment, and writes a three-line plan. Total time: about twenty minutes over four days.",
+     "on_screen_text": "Riley: open → fund → buy → automate",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fictional character with a laptop and a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Security basics",
+     "narration": "Protect the account from the start. Use a strong, unique password and turn on two-factor authentication, preferably with an authenticator app rather than text messages. Never share login codes with anyone who calls, texts or emails you, even if they say they're from the brokerage. Real providers don't ask for your password or codes. And bookmark the real website, so you never log in through a link in a message. Investment accounts are a common target for scams.",
+     "on_screen_text": "Unique password · 2-factor · no code sharing",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a small padlock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Taxes and statements",
+     "narration": "A note on taxes. In a 401(k) or IRA, you usually don't report each year's growth. In a taxable brokerage account, you may get a tax form each year listing dividends and any gains from selling. The provider sends it, usually by mid-February, and you include it with your tax return. Keep your login details and statements safe. If you're unsure about the tax side of any account, a tax professional or the IRS website can help.",
+     "on_screen_text": "Taxable account: a tax form each year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an envelope with a small form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap: the whole series",
+     "narration": "Let's recap the whole series. Part one: tick the four boxes, from an emergency fund to a long-term goal. Part two: choose the account, often the match first, then a Roth IRA. Part three: choose a simple, low-cost, diversified fund. Part four: expect drops, and don't sell in a panic. Part five: lump sum or monthly, pick the one you'll stick with. And today: open the account, fund it, and make sure the money is actually invested. Thanks for watching all six. The full checklist is linked below.",
+     "on_screen_text": "Ready · account · fund · hold · timing · invest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small plant growing from a jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "7 steps from $1,000 in your bank to your first investment, including the step most beginners miss: actually buying the fund.\n\nReturns shown are hypothetical. We don't recommend specific providers or funds. Investing involves risk. Not financial advice.",
+   "hashtags": [
+    "rothira",
+    "investingforbeginners",
+    "first1000",
+    "brokerage",
+    "moneymadesimple"
+   ],
+   "description": "Part 6 of Your First $1,000 Invested: seven steps counting down from choosing a provider to writing a three-line plan, including the common mistake of leaving deposits uninvested, shown on a chart ($1,000 at 0.01% vs a hypothetical 4% cash rate vs a hypothetical 7% invested).\n\nChapters\n0:00 Intro\n0:39 Step 7: choose a provider\n1:14 Step 6: open the account\n1:48 Step 5: fund it\n2:22 Step 4: actually invest it\n2:59 The chart: cash vs invested\n3:38 Step 3: market or limit order\n4:15 Step 2: set up automatic investing\n4:46 Step 1: write down your plan\n5:20 Choosing the fund you picked\n6:09 Example: Riley, fictional\n6:44 Security basics\n7:17 Taxes and statements\n7:49 Recap: the whole series\n\nLinks\nWhere to open a Roth IRA: https://moneymadesimple.netlify.app/blog/where-to-open-a-roth-ira/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-06\nBest robo-advisors, compared: https://moneymadesimple.netlify.app/compare/best-robo-advisors/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-06\nExpense ratios explained: https://moneymadesimple.netlify.app/blog/expense-ratios-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-06\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-invest-06\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nInvesting involves risk, including the possible loss of money you invest. Past performance doesn't predict future results. Returns shown are hypothetical illustrations, not forecasts.\nExamples are hypothetical and for education only. Not financial, tax or investment advice. We don't recommend specific securities.\nVisuals and voice made with AI tools. Script written and fact-checked by a human.",
+   "thumbnail_text": "Is your $1,000 invested?",
+   "sources": [
+    "https://www.investor.gov/introduction-investing/investing-basics/how-stock-markets-work/opening-brokerage-account",
+    "https://www.sipc.org/for-investors/what-sipc-protects",
+    "https://www.investor.gov/introduction-investing/investing-basics/how-stock-markets-work/types-orders"
+   ],
+   "claims_to_verify": [
+    "$1,000 × 0.01% = $0.10",
+    "$1,000 × 4% = $40 (hypothetical cash rate)",
+    "$1,000 × 7% = $70 (hypothetical)",
+    "SIPC covers brokerage failure, not market losses",
+    "Deposits in IRAs/brokerages usually sit in cash until invested (varies by provider)"
+   ],
+   "title_variants": [
+    "Your First $1,000 Invested, Part 6: Open the Account, Step by Step",
+    "7 Steps to Make Your First Investment (Without Leaving It in Cash)"
+   ],
+   "hook_variants": [
+    "Opening an investment account takes about 15 minutes. Here's every step.",
+    "Your money's in the account. Is it actually invested? Step 4."
+   ],
+   "original_element": "worked-example-chart: One year on $1,000: about $0.10 in cash at 0.01%, about $40 at a hypothetical 4% cash rate, about $70 invested at a hypothetical 7% (chapter \"The chart: cash vs invested\")"
+  },
+  "format_style": "countdown",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "One year on $1,000: about $0.10 in cash at 0.01%, about $40 at a hypothetical 4% cash rate, about $70 invested at a hypothetical 7%",
+   "chapter": "The chart: cash vs invested"
+  },
+  "compliance_review": [
+   "No provider named or shown on screen; any screen recording must use a generic mock-up, not a real brokerage's interface or logo",
+   "Links to /compare/best-robo-advisors/, which may carry affiliate links: commission disclosure in description; check the page is fair and balanced",
+   "SIPC description is a summary: confirm wording against sipc.org",
+   "Order-type guidance is general education, not trading advice"
+  ]
+ }
+]

@@ -271,6 +271,36 @@ def test_money_basics_series_parts_are_long_form_and_tagged():
             assert not re.search(pat, text, re.I), (sc["title"], pat)
 
 
+FIRST_1000 = ROOT / "launch" / "money-made-simple" / "youtube-first-1000" / "content.json"
+
+
+def test_first_1000_investing_series_is_compliance_ready():
+    import re
+    from contentfactory.guardrails import HYPE_PATTERNS, TESTIMONIAL_PATTERNS
+    from contentfactory.schemas import ChartSpec
+    items = _items(FIRST_1000)
+    others = {i["script"]["title"].lower() for p in MONTHS + [EVERGREEN, SERIES, BASICS] for i in _items(p)}
+    assert [i["series_part"] for i in items] == list(range(1, 7))
+    assert len({i["format_style"] for i in items}) == 6
+    for it in items:
+        sc = it["script"]
+        words = sum(len(s["narration"].split()) for s in sc["segments"])
+        assert 1200 <= words <= 1800, (sc["title"], words)
+        assert sc["title"].lower() not in others and len(sc["title"]) <= 70
+        assert sc["segments"][0]["narration"].split()[0] == sc["hook"].split()[0]
+        assert it["content_id"].startswith("yt-invest-") and f"utm_campaign={it['content_id']}" in sc["description"]
+        assert "possible loss of money" in sc["description"] and "hypothetical" in sc["description"]
+        assert "don't recommend specific securities" in sc["description"]
+        if "/compare/" in sc["description"]:
+            assert "commission" in sc["description"]
+        assert len(it["compliance_review"]) >= 3
+        seg = next(s for s in sc["segments"] if s["heading"] == it["original_element"]["chapter"])
+        assert re.search(r"hypothetical|illustrat|example", ChartSpec(**seg["chart"]).note, re.I)
+        text = " ".join([sc["hook"], sc["caption"], sc["description"]] + [s["narration"] for s in sc["segments"]])
+        for pat in HYPE_PATTERNS + TESTIMONIAL_PATTERNS:
+            assert not re.search(pat, text, re.I), (sc["title"], pat)
+
+
 MYTH_VS_MATH = ROOT / "launch" / "money-made-simple" / "myth-vs-math" / "content.json"
 
 
@@ -326,7 +356,7 @@ def test_savings_challenge_is_tiktok_only_weekly_and_labelled(factory):
 
 def test_chart_element_videos_carry_a_real_chart():
     from contentfactory.schemas import ChartSpec
-    files = MONTHS + [SERIES, ROOT / "launch" / "money-made-simple" / "youtube-money-basics" / "content.json"]
+    files = MONTHS + [SERIES, BASICS, FIRST_1000]
     longs = [i for p in files for i in _items(p) if i["format"] == "long"]
     charted = [i for i in longs if i["original_element"]["type"] == "worked-example-chart"]
     assert len(charted) >= 20
