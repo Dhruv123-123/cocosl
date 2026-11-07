@@ -27,7 +27,7 @@ def candidates(factory, older_than_days: int) -> list[dict]:
     rows = factory.db.query(
         """SELECT p.* FROM posts p WHERE p.status = 'published'
            AND NOT EXISTS (SELECT 1 FROM publications q WHERE q.post_id = p.id
-                           AND q.status IN ('queued', 'publishing', 'needs_check'))
+                           AND q.status IN ('queued', 'publishing', 'needs_check', 'manual'))
            AND (SELECT MAX(published_at) FROM publications q WHERE q.post_id = p.id AND q.status = 'published') < ?
            ORDER BY p.id""", [cutoff])
     out = []

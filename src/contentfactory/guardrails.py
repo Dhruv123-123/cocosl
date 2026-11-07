@@ -188,7 +188,7 @@ def check_cadence(db: DB, brand: BrandProfile, platform: str, when: datetime) ->
     n = db.scalar(
         """SELECT COUNT(*) FROM publications p JOIN posts s ON s.id = p.post_id
            WHERE s.brand = ? AND p.platform = ?
-           AND p.status IN ('queued','publishing','published','dry_run','needs_check')
+           AND p.status IN ('queued','publishing','published','dry_run','needs_check','manual')
            AND p.scheduled_at >= ? AND p.scheduled_at < ?""",
         [brand.slug, platform, day_start.astimezone(timezone.utc).isoformat(),
          day_end.astimezone(timezone.utc).isoformat()],
@@ -287,6 +287,9 @@ def run_content_checks(db: DB, brand: BrandProfile, post: dict) -> list[Check]:
     checks.append(check_sameness(db, brand.slug, post))
     if (orig := check_original_element(post)) is not None:
         checks.append(orig)
+    from .numbercheck import as_check, check_script
+    if (nums := as_check(check_script(script, caption))) is not None:
+        checks.append(nums)
     unverified = script.get("claims_to_verify") or []
     if unverified:
         checks.append(Check("fact_check", "warn", f"{len(unverified)} claim(s) need a human fact-check"))

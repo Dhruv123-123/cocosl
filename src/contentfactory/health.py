@@ -32,6 +32,8 @@ def system_status(factory: Factory, now: datetime | None = None) -> dict:
         alerts.append(f"Worker last ticked {age:.0f} min ago: it may be down.")
     for step, err in (hb or {}).get("errors", {}).items():
         alerts.append(f"Worker step '{step}' failing: {err}")
+    if pubs.get("manual"):
+        alerts.append(f"{pubs['manual']} post(s) to post by hand are due (TikTok): see Today.")
     if needs_check:
         alerts.append(f"{len(needs_check)} publication(s) were interrupted mid-upload: check the platform.")
     if not factory.settings.dry_run:

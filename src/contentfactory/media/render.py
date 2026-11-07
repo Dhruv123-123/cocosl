@@ -74,6 +74,11 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     images = [r.path if (i < len(segments) and segments[i].chart) else
               compose(r.path, size, look["layout"], palette, work / f"look-{i:02d}.png")
               for i, r in enumerate(imgs)]
+    from .signature import resolve, stamp
+    sig = resolve(brand)
+    thumb_art = images[0]
+    if sig and "intro" in sig["where"] and images:  # the brand's one constant, on the opening frame
+        images[0] = stamp(images[0], sig, palette, brand.visual.font, work / "intro-signature.png")
     if script.cta and _norm(script.cta) not in _norm(" ".join(lines)):
         lines.append(script.cta)
         heads.append(brand.name)
@@ -120,8 +125,8 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     if fmt == "mid" and not 61 <= duration <= 95:
         notes.append(f"WARNING: TikTok cut runs {duration:.1f}s; aim for 65-90s (TikTok's Creator Rewards "
                      "only count videos over a minute).")
-    thumb = render_thumbnail(images[0], script.thumbnail_text or script.title, palette, brand.visual.font,
-                             brand.visual.watermark, out / "thumbnail.png")
+    thumb = render_thumbnail(thumb_art, script.thumbnail_text or script.title,
+                             palette, brand.visual.font, brand.visual.watermark, out / "thumbnail.png")
 
     variants = []
     if fmt == "long":  # A/B candidates for YouTube: different art and wording; pick one on the post page
@@ -132,6 +137,9 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
         for k, (art, text) in enumerate(zip(arts, (texts[1:] + texts)[:2]), start=1):
             variants.append(render_thumbnail(art, text, palette, brand.visual.font, brand.visual.watermark,
                                              out / f"thumbnail-{k + 1}.png"))
+    if sig and "thumbnail" in sig["where"]:
+        for v in (thumb, *variants):
+            stamp(v, sig, palette, brand.visual.font)
     prov = _image_provenance(imgs)
     for v in variants:
         prov.append(provenance(str(v), "rendered", "pillow", "thumbnail variant"))
@@ -154,7 +162,8 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
                                "user-supplied via FACTORY_MUSIC_DIR; keep the licence on file"))
     return {"video": video, "audio": audio, "captions_srt": srt, "images": [r.path for r in imgs], "slides": [],
             "thumbnail": thumb, "thumbnail_variants": [thumb, *variants], "duration": round(duration, 3),
-            "chapters": chapters.build(starts, duration) if fmt == "long" else [], "look": look, "provenance": prov}
+            "chapters": chapters.build(starts, duration) if fmt == "long" else [], "look": look,
+            "signature": sig["device"] if sig else None, "provenance": prov}
 
 
 # ---------------------------------------------------------------- slides
@@ -178,11 +187,11 @@ def _render_slides(settings: Settings, brand: BrandProfile, script: Script, fmt:
     for i, seg in enumerate(segments):  # a chart slide is the chart itself (it carries its own title)
         if seg.chart and i < len(slides):
             save_png_and_jpeg(Image.open(imgs[i].path).convert("RGB"), Path(slides[i]))
-    variants = []
+    from .signature import resolve, stamp
+    sig = resolve(brand)
+    if sig and "cover" in sig["where"] and slides and not segments[0].chart:
+        stamp(Path(slides[0]), sig, Palette.from_brand(brand), brand.visual.font)
     prov = _image_provenance(imgs)
-    for v in variants:
-        prov.append(provenance(str(v), "rendered", "pillow", "thumbnail variant"))
-        prov.append(provenance(str(v.with_suffix(".jpg")), "rendered", "pillow", "thumbnail variant (JPEG)"))
     for p, t in zip(slides, texts):
         prov.append(provenance(str(p), "rendered", "pillow", t.headline))
         prov.append(provenance(str(p.with_suffix(".jpg")), "rendered", "pillow", t.headline,
@@ -190,7 +199,8 @@ def _render_slides(settings: Settings, brand: BrandProfile, script: Script, fmt:
     if fmt == "carousel" and len(slides) > 20:
         prov[-1]["notes"] = ["WARNING: Instagram carousels allow at most 20 items"]
     return {"video": None, "audio": None, "captions_srt": None, "images": [r.path for r in imgs],
-            "slides": slides, "thumbnail": None, "duration": 0.0, "provenance": prov}
+            "slides": slides, "thumbnail": None, "duration": 0.0,
+            "signature": sig["device"] if sig else None, "provenance": prov}
 
 
 # ---------------------------------------------------------------- helpers
