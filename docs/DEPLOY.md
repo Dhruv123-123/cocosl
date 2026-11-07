@@ -22,7 +22,7 @@ Health: `docker compose exec app factory status` (or `GET /api/status` with your
 last tick, the publishing and render queues, and anything that needs you, such as an upload that was
 interrupted (marked `needs_check` and never retried automatically, so nothing posts twice).
 
-Backups: everything lives in `data/` (SQLite + rendered media). A nightly `tar czf` of it to cloud storage is enough.
+Backups: set `BACKUP_DIR=/data/backups` (or a mounted bucket) and the worker takes a consistent database backup every day, keeping 14 (`factory backup` does one now). Rendered media in `data/output` can be re-rendered, but sync it to cloud storage too if you want instant restores.
 
 No server yet? Everything also runs on a laptop: `factory serve`, `python -m contentfactory.worker` and
 `python -m contentfactory.renderq` (or leave `RENDER_QUEUE` unset to render inline).
