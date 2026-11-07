@@ -173,3 +173,39 @@ def test_affiliate_articles_merged_without_duplicates(tmp_path):
             continue
         for old in cfg["blog_redirects"]:
             assert f'href="/blog/{old}/"' not in page.read_text(), page
+
+
+def test_newsletter_archive_hides_scheduled_issues(tmp_path):
+    out = _build(tmp_path, "https://example.org", BUILD_DATE="2026-11-01")
+    archive = (out / "newsletter" / "index.html").read_text()
+    assert "No issues yet. The first one goes out on November 12, 2026." in archive
+    assert not (out / "newsletter" / "holiday-spending-number").exists()
+    assert "/newsletter/holiday-spending-number/" not in (out / "sitemap.xml").read_text()
+    feed = (out / "newsletter" / "feed.xml").read_text()
+    assert "<item>" not in feed
+    # paste-ready email copies exist for every issue, with absolute links
+    mail = (out / "emails" / "newsletter" / "raise-401k-one-percent" / "email.html").read_text()
+    assert 'href="https://example.org/blog/401k-match-explained/"' in mail
+    assert "/newsletter/" in (out / "index.html").read_text()  # footer link
+
+
+def test_newsletter_archive_and_feed_after_send_date(tmp_path):
+    import xml.etree.ElementTree as ET
+    out = _build(tmp_path, "https://example.org/sub", BUILD_DATE="2026-11-20")
+    archive = (out / "newsletter" / "index.html").read_text()
+    assert "Pick your holiday number" in archive and "Raise your retirement contribution" in archive
+    assert "Read your credit reports" not in archive  # Nov 26 issue not out yet
+    issue = (out / "newsletter" / "raise-401k-one-percent" / "index.html").read_text()
+    assert 'href="/sub/newsletter/holiday-spending-number/"' in issue  # pager to the older issue
+    assert '"@type": "Article"' in issue and 'application/rss+xml' in issue
+    root = ET.parse(out / "newsletter" / "feed.xml").getroot()
+    items = root.findall("./channel/item")
+    assert [i.findtext("link") for i in items] == [
+        "https://example.org/sub/newsletter/raise-401k-one-percent/",
+        "https://example.org/sub/newsletter/holiday-spending-number/"]
+    enc = items[0].find("{http://purl.org/rss/1.0/modules/content/}encoded").text
+    assert "401(k)" in enc
+    assert "https://example.org/sub/newsletter/raise-401k-one-percent/" in (out / "sitemap.xml").read_text()
+    r = subprocess.run([sys.executable, str(SITE / "tools" / "check_site.py"), "--dir", str(out)],
+                       capture_output=True, text=True)
+    assert r.returncode == 0, r.stdout

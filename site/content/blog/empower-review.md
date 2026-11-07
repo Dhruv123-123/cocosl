@@ -1,7 +1,7 @@
 ---
 title: Empower Personal Dashboard review: free net-worth tracking, with a sales pitch attached
-seo_title: Empower Personal Dashboard review (2026): what's free, the fee check, and the sales calls
-description: Empower's free dashboard tracks every account and flags hidden investment fees. What it does well, how the paid advice upsell works, and who should use it.
+seo_title: Empower Personal Dashboard review: free, with a pitch
+description: Empower's free dashboard tracks every account and flags investment fees. What it does well and how the paid-advice upsell works.
 date: 2026-11-07
 pillar: investing
 keyword: empower personal dashboard review
@@ -14,6 +14,8 @@ sources: [https://www.empower.com/personal-investors/personal-dashboard, https:/
 Empower Personal Dashboard (the free tool that used to be called Personal Capital) links your bank, card, retirement and brokerage accounts and shows your whole net worth in one place. It's free because Empower also sells paid investment management, and it will offer it to you.
 
 *How we review: based on Empower's published features and disclosures, checked in November 2026. We haven't been paid for this review. This is general education, not investment advice.*
+
+Comparing robo-advisers and paid advice? See our **[robo-advisor comparison](/compare/best-robo-advisors/)**.
 
 ## The short version
 
@@ -37,7 +39,7 @@ Empower Personal Dashboard (the free tool that used to be called Personal Capita
 ## What to know before signing up
 
 - **The advice upsell.** Empower's paid management charges an annual fee on assets it manages. You don't have to use it. If an adviser contacts you, it's fine to say no, and you can ask what the total yearly fee would be in dollars.
-- **Budgeting is light.** For a real budget, pair it with a spreadsheet or [another app](/blog/best-budgeting-apps/).
+- **Budgeting is light.** For a real budget, pair it with a spreadsheet or [another app](/compare/best-budgeting-apps/).
 - **Data sharing.** You're linking a lot of accounts. Use a strong password and two-factor login.
 
 ## If you do talk to an adviser

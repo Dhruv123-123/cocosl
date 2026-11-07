@@ -1,7 +1,7 @@
 ---
 title: Self credit builder review: how it works, what it costs, and cheaper ways to build credit
-seo_title: Self Credit Builder review (2026): fees, interest, and whether it's worth it
-description: Self lets you build credit by paying into a small loan that's saved for you. How it works, the real cost in fees and interest, who it helps, and free alternatives.
+seo_title: Self credit builder review: fees, interest, worth it?
+description: Self builds credit with a small loan saved for you. How it works, its real cost in fees and interest, and cheaper alternatives.
 date: 2026-11-07
 pillar: credit-and-debt
 keyword: self credit builder review
@@ -13,6 +13,8 @@ sources: [https://www.self.inc/, https://www.self.inc/pricing, https://www.consu
 If you have no credit history, it's hard to get the credit that builds one. Self is one way around that: it's a **credit-builder loan**. You make monthly payments into a savings account you can't touch yet, Self reports those payments to the credit bureaus, and at the end you get the money back, minus fees and interest.
 
 *How we review: based on Self's published terms and plans, checked in November 2026, and CFPB guidance on credit-builder loans. We haven't been paid for this review and haven't tested the account. Check the current plans, fees and APR before signing up.*
+
+Comparing Self with secured cards and other credit builders? See our **[credit-builder comparison](/compare/best-credit-builder-cards/)**.
 
 ## How it works
 

@@ -1,7 +1,7 @@
 ---
 title: High-yield savings vs money market account vs CD: which one for your savings?
-seo_title: High-yield savings vs money market account vs CD (plain-English comparison)
-description: Three insured places to keep cash, three different trade-offs. What each one is, when each wins, and why a money market account isn't the same as a money market fund.
+seo_title: High-yield savings vs money market vs CD, explained
+description: Three insured places for cash, three trade-offs. What each is, when each wins, and why a money market fund is different.
 date: 2026-11-07
 pillar: money-tools
 keyword: high yield savings vs money market
@@ -11,6 +11,8 @@ affiliate: yes
 sources: [https://www.fdic.gov/resources/deposit-insurance, https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-1, https://www.consumerfinance.gov/ask-cfpb/what-is-a-certificate-of-deposit-cd-en-917/, https://www.consumerfinance.gov/ask-cfpb/what-is-a-money-market-account-en-1027/]
 ---
 You've got savings and you want it earning something. The three usual choices are a high-yield savings account, a money market account and a CD. All three can be insured bank deposits. They differ in how easy the money is to reach and how the rate works.
+
+Settled on a high-yield savings account? See our **[high-yield savings comparison](/compare/best-high-yield-savings-accounts/)**.
 
 ## The quick comparison
 
@@ -24,7 +26,7 @@ You've got savings and you want it earning something. The three usual choices ar
 
 ## High-yield savings accounts
 
-The simplest option. Money in, interest paid monthly, transfer out when you need it. The rate floats with the market, so it can fall as well as rise. For an emergency fund, this is the default choice for most people. [How to pick one](/blog/best-high-yield-savings-accounts/).
+The simplest option. Money in, interest paid monthly, transfer out when you need it. The rate floats with the market, so it can fall as well as rise. For an emergency fund, this is the default choice for most people. [How to pick one](/compare/best-high-yield-savings-accounts/).
 
 ## Money market accounts
 

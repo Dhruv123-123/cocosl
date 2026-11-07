@@ -8,6 +8,8 @@ on:
     branches: [main]
     paths: ["site/**", ".github/workflows/pages.yml"]
   workflow_dispatch:
+  schedule:  # weekly rebuild so newsletter issues dated in the future publish on their send date
+    - cron: "0 14 * * 4"
 
 permissions:
   contents: read

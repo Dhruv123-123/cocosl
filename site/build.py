@@ -450,7 +450,7 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
   <div class="wrap">
     <p class="foot-brand"><strong>{esc(CFG['name'])}</strong> · {esc(CFG['tagline'])}</p>
     <p>{soc}</p>
-    <p><a href="{u('/about/')}">About</a> · <a href="{u('/resources/')}">Resources</a> · <a href="{u('/quiz/')}">Money quiz</a> · <a href="{u('/privacy/')}">Privacy</a> · <a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/terms/')}">Terms</a> · <a href="{u('/links/')}">Links</a> · <a href="{u('/feed.xml')}">RSS</a></p>
+    <p><a href="{u('/about/')}">About</a> · <a href="{u('/resources/')}">Resources</a> · <a href="{u('/quiz/')}">Money quiz</a> · <a href="{u('/privacy/')}">Privacy</a> · <a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/terms/')}">Terms</a> · <a href="{u('/links/')}">Links</a> · <a href="{u('/newsletter/')}">Newsletter</a> · <a href="{u('/feed.xml')}">RSS</a></p>
     <p class="small">{esc(CFG['disclaimer'])}</p>
     <p class="small">{esc(CFG['ai_disclosure'])}</p>
     <p class="small">&copy; {date.today().year} {esc(CFG['name'])}</p>
@@ -943,6 +943,92 @@ def build() -> list[str]:
     (OUT / "emails" / "sequence.json").write_text(json.dumps(export, indent=2, ensure_ascii=False))
     write("/emails/", layout(title="Email sequence preview", path="/emails/", noindex=True, description="Preview",
                              body=f'<section class="wrap"><h1>Welcome and nurture sequence</h1><p class="dek">Preview only (not linked, not indexed). Copy these into your email provider; see site/README.md.</p><div class="table"><table><thead><tr><th>#</th><th>Send</th><th>Subject</th><th>Job</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div></section>'))
+
+    # ---- newsletter archive: content/newsletter/*.md, one page per issue that has gone out.
+    # An issue dated in the future stays unpublished until a build on or after its date
+    # (BUILD_DATE=YYYY-MM-DD overrides "today"; NEWSLETTER_SHOW_SCHEDULED=1 previews them locally).
+    today = os.environ.get("BUILD_DATE") or date.today().isoformat()
+    show_all = os.environ.get("NEWSLETTER_SHOW_SCHEDULED") == "1"
+    all_issues = [n for n in load_dir("newsletter") if n.get("status") != "draft"]
+    issues = sorted((n for n in all_issues if show_all or str(n["date"]) <= today),
+                    key=lambda n: str(n["date"]), reverse=True)
+    scheduled = sorted((n for n in all_issues if n not in issues), key=lambda n: str(n["date"]))
+    nl_feed_link = f'<link rel="alternate" type="application/rss+xml" title="{esc(CFG["name"])} newsletter" href="{u("/newsletter/feed.xml")}">'
+    nl_html: dict[str, str] = {}
+    for i, n in enumerate(issues):
+        path = f"/newsletter/{n['slug']}/"
+        body_html, _ = markdown(n["body"], shortcode_factory(products, f"newsletter-{n['slug']}"))
+        nl_html[n["slug"]] = body_html
+        newer = issues[i - 1] if i > 0 else None
+        older = issues[i + 1] if i + 1 < len(issues) else None
+        pager = "".join(
+            f'<a href="{u(f"/newsletter/{x["slug"]}/")}">{lbl}: {esc(x["title"])}</a>'
+            for lbl, x in (("Older", older), ("Newer", newer)) if x)
+        ld = [{"@context": "https://schema.org", "@type": "Article", "headline": n["title"],
+               "description": n["description"], "datePublished": str(n["date"]), "mainEntityOfPage": absu(path),
+               "image": absu("/img/og-default.png"),
+               "author": {"@type": "Organization", "name": CFG["name"], "url": CFG["url"] + "/"},
+               "publisher": org_ld(), "isPartOf": {"@type": "Periodical", "name": f"{CFG['name']} newsletter",
+                                                    "url": absu("/newsletter/")}},
+              {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+                  {"@type": "ListItem", "position": 1, "name": "Home", "item": CFG["url"] + "/"},
+                  {"@type": "ListItem", "position": 2, "name": "Newsletter", "item": absu("/newsletter/")},
+                  {"@type": "ListItem", "position": 3, "name": n["title"], "item": absu(path)}]}]
+        body = f"""<article class="wrap article">
+  <p class="crumbs"><a href="{u('/')}">Home</a> / <a href="{u('/newsletter/')}">Newsletter</a> / <span>Issue {esc(str(n.get('issue', '')))}</span></p>
+  <h1>{esc(n['title'])}</h1>
+  <p class="meta">Issue {esc(str(n.get('issue', '')))} · Sent {fmt_date(str(n['date']))}</p>
+  <div class="prose">
+{body_html}
+  </div>
+  <p class="disclaimer">{esc(CFG['disclaimer'])}</p>
+  <nav class="pager" aria-label="More issues">{pager}</nav>
+  {magnet_box(f"newsletter-{n['slug']}-end")}
+</article>"""
+        write(path, layout(title=n.get("seo_title", n["title"]), description=n["description"], path=path,
+                           body=body, og_type="article", jsonld=ld, extra_head=nl_feed_link,
+                           og={"article:published_time": str(n["date"]), "article:section": "Newsletter",
+                               "article:author": CFG["name"]}))
+        urls.append((path, str(n["date"])))
+    if issues:
+        listing = '<ul class="posts">' + "".join(f"""<li class="post">
+  <p class="post-pillar">Issue {esc(str(n.get('issue', '')))} · {fmt_date(str(n['date']))}</p>
+  <h2><a href="{u(f"/newsletter/{n['slug']}/")}">{esc(n['title'])}</a></h2>
+  <p>{esc(n['description'])}</p>
+</li>""" for n in issues) + "</ul>"
+    else:
+        first = f" The first one goes out on {fmt_date(str(scheduled[0]['date']))}." if scheduled else ""
+        listing = (f'<p class="empty">No issues yet.{first} Sign up below and it lands in your inbox; '
+                   'every issue is posted here afterwards.</p>')
+    write("/newsletter/", layout(
+        title="The newsletter: one money move a week",
+        description=f"Every past issue of the {CFG['name']} newsletter: one specific, plain-English money move a "
+                    "week. Read the archive or get the next one by email.",
+        path="/newsletter/", extra_head=nl_feed_link, jsonld=[org_ld()], body=f"""<section class="wrap">
+  <h1>The newsletter</h1>
+  <p class="dek">One email a week, one specific money move, about five minutes to do. No hype, no stock picks. Subscribers also get the free 7-Day Money Reset. Prefer a feed reader? <a href="{u('/newsletter/feed.xml')}">RSS</a>.</p>
+  {listing}
+  {magnet_box("newsletter-archive")}
+</section>"""))
+    urls.append(("/newsletter/", str(issues[0]["date"]) if issues else today))
+    nl_items = "".join(f"""<item><title>{esc(n['title'])}</title><link>{absu(f"/newsletter/{n['slug']}/")}</link>
+<guid isPermaLink="true">{absu(f"/newsletter/{n['slug']}/")}</guid><pubDate>{datetime.strptime(str(n['date']), '%Y-%m-%d').replace(tzinfo=timezone.utc).strftime('%a, %d %b %Y 00:00:00 +0000')}</pubDate>
+<description>{esc(n['description'])}</description><content:encoded><![CDATA[{nl_html[n['slug']].replace(']]>', ']]]]><![CDATA[>')}]]></content:encoded></item>""" for n in issues)
+    (OUT / "newsletter" / "feed.xml").write_text(f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
+<title>{esc(CFG['name'])} newsletter</title><link>{absu('/newsletter/')}</link>
+<atom:link href="{absu('/newsletter/feed.xml')}" rel="self" type="application/rss+xml"/>
+<description>One money move a week from {esc(CFG['name'])}.</description><language>en-us</language>{nl_items}</channel></rss>
+""")
+    # Paste-ready copies for the email provider (every issue, scheduled ones included).
+    CFG["_absolute_links"] = True
+    for n in all_issues:
+        body_abs, _ = markdown(n["body"])
+        d = OUT / "emails" / "newsletter" / n["slug"]
+        d.mkdir(parents=True, exist_ok=True)
+        (d / "email.html").write_text(email_html({"subject": n.get("subject", n["title"]),
+                                                  "preheader": n.get("preheader", "")}, body_abs))
+    CFG["_absolute_links"] = False
 
     # ---- redirects for retired blog slugs (stub page everywhere, real 301 on Netlify)
     rules = []

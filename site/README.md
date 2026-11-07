@@ -156,8 +156,10 @@ reads for article and product rich pins: claim the domain in Pinterest, then ric
 
 ## Affiliate articles from the content thread
 
-16 review and "best of" articles from PR #5 are in `content/blog/` (see `AFFILIATE_ARTICLES.md` for the
-pre-publish checklist). They link out through `/go/<slug>/` redirect pages made from `go-links.json`.
+19 review and how-to articles from the content thread are in `content/blog/` (this PR is now the only copy;
+see `AFFILIATE_ARTICLES.md` for the pre-publish checklist). Three of them (how to open a high-yield savings
+account, how to choose a budgeting app, are robo-advisors worth it) target "how to" keywords so they feed the
+comparison pages instead of competing with them. They link out through `/go/<slug>/` redirect pages made from `go-links.json`.
 
 - **One place for approved links:** paste a tracking link into `go-links.json` > `affiliate_url` and run
   `python3 site/tools/make_go_links.py`. The build also copies it into the matching `site.json` program, so
@@ -168,6 +170,26 @@ pre-publish checklist). They link out through `/go/<slug>/` redirect pages made 
   stub elsewhere).
 - **Cross-links:** `site.json` > `article_compare` adds a "Compare your options" box to an article and a
   "Go deeper" list on the comparison page.
+
+## Newsletter archive
+
+Each weekly issue is a Markdown file in `content/newsletter/` (front matter: `issue`, `date` = send date,
+`title`, optional `seo_title`, `description`, `subject`, `preheader`). The build makes:
+
+- `/newsletter/`: the archive (an honest "first issue goes out on ..." note until one has been sent), with signup.
+- `/newsletter/<slug>/`: one page per issue, with older/newer links, Article JSON-LD and the signup box.
+- `/newsletter/feed.xml`: RSS 2.0 with the full issue in `content:encoded`, for feed readers and for
+  RSS-to-email (Kit, MailerLite and Buttondown can all send from a feed). The articles feed stays at `/feed.xml`.
+- `public/emails/newsletter/<slug>/email.html`: a paste-ready email of every issue, scheduled ones included.
+
+An issue only goes public on a build on or after its `date`, so write ahead, send it from your email provider
+that day, and let the site catch up. Netlify rebuilds only on a push, so add a build hook and save it as the
+repo secret `NETLIFY_BUILD_HOOK`; `.github/workflows/netlify-rebuild.yml` pings it every Thursday. The
+GitHub Pages workflow has the same weekly schedule. Preview scheduled issues locally with
+`NEWSLETTER_SHOW_SCHEDULED=1 python3 site/build.py`, or pretend it's another day with `BUILD_DATE=2026-11-20`.
+
+Three issues are written and scheduled (Nov 12, 19 and 26, 2026). They aren't in the welcome sequence; send
+them to everyone on the list.
 
 ## Deploy check
 

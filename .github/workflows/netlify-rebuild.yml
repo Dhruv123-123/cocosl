@@ -1,0 +1,22 @@
+name: Website (weekly Netlify rebuild)
+# Netlify only rebuilds on a push, so a newsletter issue dated in the future (site/content/newsletter/)
+# would stay hidden until the next commit. This pings a Netlify build hook every Thursday instead.
+# One-time setup: Netlify > Site configuration > Build & deploy > Build hooks > Add build hook,
+# then save its URL as the repo secret NETLIFY_BUILD_HOOK. Without the secret this job does nothing.
+on:
+  schedule:
+    - cron: "0 14 * * 4"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Netlify build
+        env:
+          HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then echo "NETLIFY_BUILD_HOOK not set; skipping."; exit 0; fi
+          curl -fsS -X POST -d '{}' "$HOOK"

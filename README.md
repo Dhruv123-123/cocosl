@@ -49,10 +49,11 @@ contract template and the launch-day plan.
 
 ## Website and email funnel
 
-`site/` is the brand's static website: home, 13 SEO articles, product pages, a free lead magnet
-(The 7-Day Money Reset PDF), a link-in-bio page and a 10-email welcome sequence that sells the products.
-It deploys free to Netlify (`netlify.toml`) or GitHub Pages (`.github/workflows/pages.yml`).
-See **`site/README.md`**.
+`site/` is the brand's static website: home, 32 SEO articles, 8 comparison pages, product pages, a quiz,
+a newsletter archive with RSS, a free lead magnet (The 7-Day Money Reset PDF), a link-in-bio page and a
+10-email welcome sequence that sells the products. It deploys free to Netlify (`netlify.toml`) or GitHub
+Pages (`.github/workflows/pages.yml`). See **`site/README.md`**. **`docs/SITES.md`** is the plan for running
+every brand's site from this one builder, with per-brand Netlify, domain and Plausible steps.
 
 ## Everyday commands
 

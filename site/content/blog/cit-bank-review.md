@@ -1,7 +1,7 @@
 ---
 title: CIT Bank Platinum Savings review: great if you have $5,000 saved
-seo_title: CIT Bank Platinum Savings review (2026): the $5,000 tier, fees and alternatives
-description: CIT Bank's Platinum Savings has paid a top-tier rate, but only on balances of $5,000 or more. Who it suits, what to watch, and better picks for smaller balances.
+seo_title: CIT Bank Platinum Savings review: the $5,000 tier
+description: CIT Platinum Savings has paid a top rate on balances of $5,000 or more. Who it suits, what to watch, and picks for smaller balances.
 date: 2026-11-07
 pillar: money-tools
 keyword: cit bank review
@@ -13,6 +13,8 @@ sources: [https://www.cit.com/cit-bank/platinum-savings, https://www.cit.com/cit
 CIT Bank is an online bank that's a division of First Citizens Bank. Its Platinum Savings account is often near the top of high-yield savings comparisons, with one important condition: **the high rate has applied to balances of $5,000 or more.** Below that, the rate is much lower.
 
 *How we review: based on CIT Bank's published account terms, checked in November 2026. We haven't been paid for this review and haven't opened the account. Check the current rate table before opening.*
+
+Comparing banks? See our **[high-yield savings comparison](/compare/best-high-yield-savings-accounts/)**.
 
 ## The short version
 
@@ -42,7 +44,7 @@ CIT Bank is an online bank that's a division of First Citizens Bank. Its Platinu
 
 ## If you have less than $5,000
 
-Look for an account that pays its best rate on any balance, such as [Ally Bank](/blog/ally-bank-review/), or compare options in our [high-yield savings guide](/blog/best-high-yield-savings-accounts/). Once you pass $5,000, CIT is worth another look.
+Look for an account that pays its best rate on any balance, such as [Ally Bank](/blog/ally-bank-review/), or compare options in our [high-yield savings guide](/compare/best-high-yield-savings-accounts/). Once you pass $5,000, CIT is worth another look.
 
 ## Our verdict
 

@@ -1,7 +1,7 @@
 ---
 title: Acorns review: round-ups are a great habit, but check the fee maths
-seo_title: Acorns review (2026): subscription tiers, round-ups and the small-balance fee problem
-description: Acorns invests your spare change automatically. The monthly fee is simple but expensive on small balances. How the tiers work, the maths, and who it suits.
+seo_title: Acorns review: round-ups, fees and the small-balance catch
+description: Acorns invests your spare change for a flat monthly fee. How the tiers work, why the fee hurts small balances, and who it suits.
 date: 2026-11-07
 pillar: investing
 keyword: acorns review
@@ -14,6 +14,8 @@ sources: [https://www.acorns.com/pricing/, https://www.acorns.com/disclosures/, 
 Acorns is an investing app built around round-ups: every time you buy something, it rounds up to the nearest dollar and invests the spare change. It's a clever way to start a habit. The cost is a **flat monthly subscription**, which is expensive as a percentage on a small balance.
 
 *How we review: based on Acorns' published pricing and disclosures, checked in November 2026. We haven't been paid for this review. General education, not investment advice. Investing involves risk, including loss of principal.*
+
+Comparing ways to automate investing? See our **[robo-advisor comparison](/compare/best-robo-advisors/)**.
 
 ## The short version
 
@@ -50,7 +52,7 @@ Compare that with a typical low-cost index fund, whose yearly cost is often well
 ## Cheaper ways to automate investing
 
 - A **target-date index fund** at a large brokerage, with an automatic monthly transfer.
-- A **robo-adviser** with a percentage fee instead of a flat one. [Compare robo-advisers](/blog/best-robo-advisors-for-beginners/).
+- A **robo-adviser** with a percentage fee instead of a flat one. [Compare robo-advisers](/compare/best-robo-advisors/).
 - Our step-by-step: [start investing with $100 a month](/blog/how-to-start-investing-with-100-a-month/).
 
 ## Our verdict

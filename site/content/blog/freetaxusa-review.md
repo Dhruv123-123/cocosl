@@ -1,7 +1,7 @@
 ---
 title: FreeTaxUSA review: free federal filing that's actually free
-seo_title: FreeTaxUSA review (2026): what's free, what the state return costs, and who it's for
-description: FreeTaxUSA files federal returns for free, including freelance income, and charges a small fee for state. What's included, what's not, and when another option is better.
+seo_title: FreeTaxUSA review: is the free federal return free?
+description: FreeTaxUSA files federal returns free, including freelance income, and charges a small state fee. What's included and what isn't.
 date: 2026-11-07
 pillar: money-tools
 keyword: freetaxusa review

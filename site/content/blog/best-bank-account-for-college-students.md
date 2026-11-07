@@ -1,7 +1,7 @@
 ---
 title: The best bank account for college students: what actually matters
-seo_title: Best bank accounts for college students (2026): no fees, no overdraft traps
-description: A student account should cost nothing, never surprise you with overdraft fees and help you start saving. The four checks, options worth comparing, and the mistakes to avoid.
+seo_title: Best bank account for college students: what matters
+description: A student account should be free, never hit you with overdraft fees and help you save. The four checks and options to compare.
 date: 2026-11-07
 pillar: money-tools
 keyword: best bank account for college students
@@ -35,7 +35,7 @@ Your first bank account should be boring: free, insured, and impossible to accid
 
 - **Keeping the account your parents opened at 15.** Youth accounts can convert into fee-charging accounts when you turn 18 or 24. Check.
 - **Opting in to overdraft "protection".** It can mean a fee each time. Decline it, or pick an account that doesn't charge one.
-- **No savings account at all.** Even $20 a week into a separate [high-yield savings account](/blog/best-high-yield-savings-accounts/) builds a buffer for textbooks and flights home.
+- **No savings account at all.** Even $20 a week into a separate [high-yield savings account](/compare/best-high-yield-savings-accounts/) builds a buffer for textbooks and flights home.
 - **Signing up on campus for a card you don't need.** Your first credit card is a separate decision. [How credit scores work](/blog/how-credit-scores-work/).
 
 ## A simple setup

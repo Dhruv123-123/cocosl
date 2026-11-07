@@ -1,7 +1,7 @@
 ---
 title: The cheapest ways to file a simple tax return (start with the free ones)
-seo_title: Best tax software for simple returns (2026): free options first, then cheap ones
-description: If your return is simple, you may not need to pay anything. VITA, IRS Free File, FreeTaxUSA and TaxAct compared, plus how to avoid paying for a "free" product by accident.
+seo_title: Cheapest way to file a simple tax return (free first)
+description: For a simple return you may pay nothing. VITA, IRS Free File, FreeTaxUSA and TaxAct compared, and how to avoid surprise fees.
 date: 2026-11-07
 pillar: money-tools
 keyword: best tax software for simple returns

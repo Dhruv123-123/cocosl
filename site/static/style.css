@@ -233,3 +233,6 @@ th{background:var(--tint)}
   .hero{padding:32px 0 40px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.pager{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin:28px 0}
+.pager a{font-weight:600}
+.empty{padding:18px 20px;border:1px dashed var(--line,#d9d3c3);border-radius:12px}
