@@ -10,7 +10,7 @@ has the $35 route).
 
 | # | Risk | Likelihood | Impact | The one thing to do |
 |---|---|---|---|---|
-| 1 | **Burnout / not enough time.** Four brands, each needing about 15 minutes of replies a day, on top of reviews, uploads by hand (TikTok) and listings | **High** | **High**: everything stops | **Launch two brands, not four** (1099 Money and MMS first, `launch-playbook.md`). Add a brand only when the first two run in under an hour a day for 4 weeks |
+| 1 | **Burnout / not enough time.** Four brands, each needing about 15 minutes of replies a day, on top of reviews, uploads by hand (TikTok) and listings | **High** | **High**: everything stops | **Launch two brands, not four:** MMS and Scam Decoded first (`two-brand-launch-plan.md`, which replaces the earlier 1099 + MMS order). Add a brand only when the first two run in under an hour a day for 4 weeks |
 | 2 | **A platform restricts or ends an account** for unoriginal or mass-produced content | Medium | High | One original element per long video (`youtube-policy-review-nov-2026.md`); never reupload across accounts; check Account Status weekly |
 | 3 | **A misleading money claim** (a wrong number, "guaranteed", an FDIC-insured fintech, an ITIN statement) | Medium | High (complaints, FTC exposure, lost trust) | `claims_to_verify` in every sequence and pack; link the official source; the lawyer's read on the ITIN and credit pages |
 | 4 | **Undisclosed affiliate links or fake social proof** | Low (if the rules are followed) | **High**: the FTC review rule allows up to **$51,744 per violation** | Disclosure beside every affiliate mention (in Spanish for Dinero Simple), and no bought followers, reviews or likes, ever |
@@ -48,7 +48,7 @@ has the $35 route).
 | Someone else's copyright in our videos | Music, fonts, stock clips, other creators' videos | Licensed fonts only; Pexels and Pixabay terms (`free-tools-round4.md`); Stitch or Remix only through the platforms' own tools; a `credits.json` per video |
 | Non-commercial model weights | F5-TTS, MusicGen and ctc-forced-aligner's MMS model are non-commercial (`pipeline-tools-round3.md`) | Kokoro (Apache-2.0) for voice; the avoid list in each tools file |
 | Copyleft code in the product | AGPL or GPL tools vendored into anything we sell or host | The avoid lists (etro, clips-studio, OpenMontage); TaxHacker is MIT, so the receipt-tracker pack keeps its notices (`receipt-tracker-plan.md`) |
-| **AI disclosure wording is wrong** | Every brand's caption says "Script written and fact-checked by a human", but the scripts are AI-drafted (`ai-disclosure-rules-nov-2026.md`) | Change it to "drafted with AI help and fact-checked by a person". **This is the one open item that's simply untrue today.** Dhruv's call, but it should be fixed before launch |
+| ~~AI disclosure wording is wrong~~ **Fixed on main** | The captions used to say "Script written and fact-checked by a human", but the scripts are AI-drafted (`ai-disclosure-rules-nov-2026.md`) | **Done in commit a57f479:** `brands/money-made-simple.yaml` now reads "Script drafted with AI help and fact-checked by a person" with `scripts_by: ai_assisted`. Check the other brand files say the same when their PRs merge |
 
 ## 4. Business and operational risk
 
@@ -64,7 +64,8 @@ has the $35 route).
 ## 5. What to decide before launch (in order)
 
 1. **Launch two brands or four?** The research supports two.
-2. **Fix the AI-disclosure wording** in the brand files.
+2. ~~Fix the AI-disclosure wording~~ **Done on main (a57f479).** Just confirm the Scam Decoded, 1099 Money
+   and Dinero brand files match when their PRs merge.
 3. **Move or rewrite the ~15 Etsy guide listings** affected by Etsy's AI rule.
 4. **Book one $35 lawyer consult** for the Dinero ITIN and credit pages, when Dinero resumes.
 5. **Get a PO box or virtual mailbox** for the CAN-SPAM footer (the address must be real).

@@ -5,6 +5,10 @@ Written 2026-11-07. **Docs only.** It brings together the platform AI rules scat
 `pinterest-seo.md` (Pinterest). It adds Facebook, Etsy's **new 22 Oct 2026 rules**, Gumroad and Amazon KDP,
 and then checks the publishers in `src/contentfactory/publish/` and the listing copy on the project drive.
 
+
+> **Update 2026-11-07:** Gap 1 is fixed for Money Made Simple on main (commit a57f479: "Script drafted with AI
+> help and fact-checked by a person", `scripts_by: ai_assisted`). The other brands get the same line as their PRs merge.
+
 ## TL;DR: four gaps
 
 1. **Our caption disclosure says something that isn't true.** Every brand's `ai_disclosure` says "Script
