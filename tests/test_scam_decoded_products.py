@@ -1,0 +1,120 @@
+import importlib.util
+import sys
+from pathlib import Path
+
+import pytest
+
+PRODUCT = Path(__file__).resolve().parents[1] / "launch" / "scam-decoded" / "product"
+TRAINING = PRODUCT / "team-training"
+
+
+def _load(name, path):
+    sys.path.insert(0, str(path.parent))
+    try:
+        spec = importlib.util.spec_from_file_location(name, path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        return mod
+    finally:
+        sys.path.remove(str(path.parent))
+
+
+def test_training_content_is_consistent():
+    c = _load("training_content", TRAINING / "content.py")
+    assert sum(s["minutes"] for s in c.SLIDES) == 45
+    assert all(s["notes"].strip() for s in c.SLIDES)
+    assert len(c.QUIZ) == 12
+    for q, opts, ans, why in c.QUIZ:
+        assert len(opts) == 4 and 0 <= ans < 4 and why
+    assert sum(1 for s in c.SLIDES if s["kind"] == "scenario") == 3
+    # example domains in mock emails must be reserved, never real
+    for s in c.SLIDES:
+        if s["kind"] == "email":
+            assert s["email"]["sender"].rstrip(">").endswith(".example")
+
+
+def test_training_pack_builds_editable_deck(tmp_path, monkeypatch):
+    pytest.importorskip("pptx")
+    from pptx import Presentation
+    build = _load("training_build", TRAINING / "build.py")
+    monkeypatch.setattr(build, "DIST", tmp_path / "dist")
+    monkeypatch.setattr(sys, "argv", ["build.py", "--no-pdf"])
+    build.main()
+    deck = Presentation(tmp_path / "dist" / "Spot-It-Stop-It-Slides.pptx")
+    assert len(deck.slides) == len(build.C.SLIDES)
+    assert all(s.notes_slide.notes_text_frame.text.strip() for s in deck.slides)
+    guide = (tmp_path / "dist" / "Facilitator-Guide.html").read_text()
+    report_slide = next(i for i, s in enumerate(build.C.SLIDES, 1) if s["kind"] == "report")
+    assert f"Slide {report_slide} · Reporting" in guide
+    for name in ("Quiz", "Answer-Key", "Certificate", "Poster-Verify-Before-You-Pay"):
+        assert (tmp_path / "dist" / f"{name}.html").exists()
+
+
+def test_parents_guide_and_listings():
+    html = (PRODUCT / "protect-your-parents" / "protect-your-parents.html").read_text()
+    assert html.count('class="page') == 20
+    assert (PRODUCT / "protect-your-parents" / "Protect-Your-Parents.pdf").stat().st_size > 50_000
+    ladder = (PRODUCT / "LADDER.md").read_text()
+    for code in ("KITPARENTS", "GUIDEKIT", "TEAMLAUNCH"):
+        assert code in ladder
+    assert "KITPARENTS" in (PRODUCT / "LISTING.md").read_text()
+    for listing in (PRODUCT / "protect-your-parents" / "LISTING.md", TRAINING / "LISTING.md", PRODUCT / "LISTING.md"):
+        assert "guarantee" not in listing.read_text().lower()
+
+
+def test_b2b_outreach_kit_is_complete_and_unsent():
+    import csv
+    kit = PRODUCT.parent / "b2b"
+    leads = list(csv.DictReader(open(kit / "leads_research.csv")))
+    assert len(leads) == 75
+    assert len({r["email"].lower() for r in leads}) == 75
+    assert all(r["email_source_url"].startswith("http") for r in leads)
+    tracker = list(csv.DictReader(open(kit / "TRACKER.csv")))
+    assert all(r["status"] == "not sent" and not r["email1_sent"] for r in tracker)
+    pitches = sorted((kit / "pitches").glob("*.md"))
+    assert len(pitches) == 75
+    for p in pitches:
+        text = p.read_text()
+        assert text.count('Reply "no thanks"') == 3, p.name
+        assert "{Pack link}" in text and "compliant" not in text.lower(), p.name
+
+
+def test_seniors_large_print_pack(tmp_path, monkeypatch):
+    pack = PRODUCT / "seniors-pack"
+    build = _load("seniors_build", pack / "build.py")
+    monkeypatch.setattr(build, "DIST", tmp_path / "dist")
+    monkeypatch.setattr(sys, "argv", ["build.py", "--no-pdf"])
+    build.main()
+    booklet = (tmp_path / "dist" / "Scam-Decoded-for-Seniors.html").read_text()
+    assert booklet.count('class="page') == 13
+    assert "font-size:16pt" in booklet  # large print
+    for name in ("Fridge-Checklist", "Wallet-Cards"):
+        assert (tmp_path / "dist" / f"{name}.html").exists()
+    assert (tmp_path / "dist" / "Wallet-Cards.html").read_text().count("class='card'") == 16
+    for f in ("Scam-Decoded-for-Seniors", "Fridge-Checklist", "Wallet-Cards"):
+        assert (pack / "dist" / f"{f}.pdf").stat().st_size > 20_000
+    listing = (pack / "LISTING.md").read_text()
+    assert "$7" in listing and "guarantee" not in listing.lower().replace('no "guaranteed"', "")
+    assert "1-833-372-8311" in booklet and "AI" in listing
+
+
+def test_speaking_kit_deck_handout_pitch_pricing(tmp_path, monkeypatch):
+    pytest.importorskip("pptx")
+    from pptx import Presentation
+    kit = PRODUCT / "speaking-kit"
+    build = _load("speaking_build", kit / "build.py")
+    assert sum(s["minutes"] for s in build.T.SLIDES) == 45
+    assert sum(1 for s in build.T.SLIDES if s["kind"] == "scenario") == 3
+    monkeypatch.setattr(build, "DIST", tmp_path / "dist")
+    monkeypatch.setattr(sys, "argv", ["build.py", "--no-pdf"])
+    build.main()
+    deck = Presentation(tmp_path / "dist" / "Dont-Get-Scammed-Talk.pptx")
+    assert len(deck.slides) == len(build.T.SLIDES)
+    assert all(s.notes_slide.notes_text_frame.text.strip() for s in deck.slides)
+    assert "Don't Get Scammed" in deck.slides[0].shapes[1].text_frame.text
+    sheet = (tmp_path / "dist" / "Pricing-Sheet.html").read_text()
+    for price in ("$150", "$300", "$0"):
+        assert price in sheet
+    assert "1-833-372-8311" in (tmp_path / "dist" / "Handout.html").read_text()
+    pitches = (kit / "PITCH_EMAILS.md").read_text()
+    assert pitches.count("**Subject:**") == 4 and "not sent" in pitches

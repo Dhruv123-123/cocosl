@@ -10,8 +10,7 @@
    "image": "/img/shop/bill-cut-kit.jpg",
    "bundle": false,
    "stores": [
-    "gumroad",
-    "etsy"
+    "gumroad"
    ]
   },
   {
@@ -23,8 +22,7 @@
    "image": "/img/shop/the-20-minute-budget.jpg",
    "bundle": false,
    "stores": [
-    "gumroad",
-    "etsy"
+    "gumroad"
    ],
    "page": "/products/the-20-minute-budget/"
   },
@@ -37,8 +35,7 @@
    "image": "/img/shop/credit-report-audit-kit.jpg",
    "bundle": false,
    "stores": [
-    "gumroad",
-    "etsy"
+    "gumroad"
    ]
   },
   {
@@ -50,8 +47,7 @@
    "image": "/img/shop/debt-free-date-planner.jpg",
    "bundle": false,
    "stores": [
-    "gumroad",
-    "etsy"
+    "gumroad"
    ]
   },
   {
@@ -63,8 +59,7 @@
    "image": "/img/shop/investing-starter-kit.jpg",
    "bundle": false,
    "stores": [
-    "gumroad",
-    "etsy"
+    "gumroad"
    ]
   },
   {
@@ -77,8 +72,7 @@
    "bundle": true,
    "separately": 62,
    "stores": [
-    "gumroad",
-    "etsy"
+    "gumroad"
    ]
   },
   {
@@ -705,6 +699,48 @@
     "etsy"
    ],
    "image": "/img/shop/mega-budget-bundle.jpg"
+  },
+  {
+   "slug": "debt-payoff-bundle",
+   "name": "Debt Payoff Bundle",
+   "kind": "printable",
+   "group": "debt",
+   "price": 8.0,
+   "blurb": "The five debt printables in one download: a payoff tracker for each credit card and loan, a snowball worksheet, and two charts to colour in as the balance falls.",
+   "bundle": true,
+   "separately": 16,
+   "stores": [
+    "etsy"
+   ],
+   "image": "/img/shop/debt-payoff-bundle.jpg"
+  },
+  {
+   "slug": "first-paycheck-budget-bundle",
+   "name": "First Paycheck Budget Bundle",
+   "kind": "printable",
+   "group": "budget",
+   "price": 9.0,
+   "blurb": "Six printables for your first real paychecks: give each paycheck a job, try the 50/30/20 split, track bills and spending, and write down what you're saving for.",
+   "bundle": true,
+   "separately": 20,
+   "stores": [
+    "etsy"
+   ],
+   "image": "/img/shop/first-paycheck-budget-bundle.jpg"
+  },
+  {
+   "slug": "freelance-budget-bundle",
+   "name": "Freelance Budget Bundle",
+   "kind": "printable",
+   "group": "budget",
+   "price": 10.0,
+   "blurb": "Seven printables for uneven income: pay yourself a steady amount, log side-hustle income, track expenses and bills, fill sinking funds and an emergency fund, and review each month.",
+   "bundle": true,
+   "separately": 23,
+   "stores": [
+    "etsy"
+   ],
+   "image": "/img/shop/freelance-budget-bundle.jpg"
   }
  ]
 }

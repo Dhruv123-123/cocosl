@@ -1,0 +1,43 @@
+---
+issue: 20
+send_date: 2027-04-08
+subject: Scam Alert #20: the preparer who takes a cut of your refund
+preheader: A week to Tax Day. Three things a real preparer always does.
+---
+Hi,
+
+One week to Tax Day, and the last-minute preparers are out. Most are fine. Some are what the IRS calls ghost preparers.
+
+## This week's scam: the ghost preparer
+
+**Spotted this week (fictional example):** *"BIGGEST REFUNDS IN TOWN! Same-day cash advance. Just sign here and we'll fill in the rest. Fee: 20% of your refund."*
+
+A ghost preparer does your return but won't sign it as the paid preparer. Some invent credits to inflate the refund, take their fee out of it, or send the refund to their own account. When the IRS catches the made-up credits, you owe the money back, because you signed.
+
+## The tell
+
+**A preparer who won't sign, has no PTIN, or charges a percentage of your refund.** Paid preparers must have a PTIN and sign the return.
+
+## What to do
+
+1. Ask for the preparer's PTIN, and check that they sign the return and give you a copy.
+2. Never sign a blank or incomplete return, and make sure the refund goes to your own bank account.
+3. Report a preparer you think is crooked to the IRS (search "report a return preparer" on IRS.gov).
+
+## Quick hits
+
+- **"Already filed in your name":** if your e-filed return is rejected because your Social Security number was used, follow the IRS identity theft steps and file on paper.
+- **"Dependent already claimed":** sometimes it's a family mix-up, sometimes identity theft. Next year, a child can have their own IP PIN.
+- **W-2 requests at work:** a "CEO" emailing payroll for every employee's W-2 is a classic. Call before you send.
+
+## Your 5-minute job this week
+
+Pull out last year's return and check the preparer section: is it signed, with a PTIN? If not, use someone else this year.
+
+## From Scam Decoded
+
+Worried your Social Security number is already out there? Our free [data breach checklist](/breached/) walks through the credit freeze and the IRS IP PIN, with the official links.
+
+The Scam Decoded team
+
+P.S. Using a preparer for the first time? Reply and tell us what they asked for. We'll tell you if anything's odd.

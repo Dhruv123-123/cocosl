@@ -1,0 +1,23 @@
+{
+  "id": "/",
+  "name": "Free Money and Safety Tools",
+  "short_name": "Money Tools",
+  "description": "Calculators, a private budget app, bill and credit trackers, letters and a scam checker. Works offline for the tools you've opened.",
+  "start_url": "./?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f1e8",
+  "theme_color": "#0b1d13",
+  "categories": ["finance", "productivity", "utilities"],
+  "icons": [
+    { "src": "budget/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "budget/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "budget/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Budget", "url": "budget/", "icons": [{ "src": "budget/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Is this a scam?", "url": "scam-checker/", "icons": [{ "src": "budget/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Holiday planner", "url": "budget/holiday.html", "icons": [{ "src": "budget/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Invoice tracker", "url": "freelance-invoices/", "icons": [{ "src": "budget/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

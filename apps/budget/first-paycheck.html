@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>First Paycheck Checklist for New Grads: W-4, 401(k) Match, Emergency Fund, Budget | Money Made Simple</title>
+<meta name="description" content="Starting your first full-time job? A free step-by-step guide: what to put on your W-4, how much to put in your 401(k) to get the full match, how to start an emergency fund, and a simple budget for your first paycheck.">
+<meta property="og:title" content="Your first paycheck, set up right">
+<meta property="og:description" content="W-4, 401(k) match, emergency fund and a budget, one step at a time. Free and private.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Set up your first paycheck","step":[
+{"@type":"HowToStep","name":"Fill in your W-4","text":"Give your filing status in Step 1. Use Step 2 only if you have two jobs or a working spouse, Step 3 for dependents and Step 4 for other income. Sign Step 5."},
+{"@type":"HowToStep","name":"Get the full 401(k) match","text":"Contribute at least the percentage of salary your employer matches. A match is an instant return on your money."},
+{"@type":"HowToStep","name":"Start an emergency fund","text":"Save a starter fund of $1,000, then one month and then three months of essentials in a high-yield savings account."},
+{"@type":"HowToStep","name":"Pick a way to budget","text":"Try 50/30/20 (needs, wants, savings), pay yourself first, or a zero-based budget."},
+{"@type":"HowToStep","name":"The other first-job forms","text":"Choose a health plan, split direct deposit, plan for student loans, put cards on autopay and name beneficiaries."}
+]}</script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="./" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>First paycheck</span></a>
+  <span class="badge">Free</span>
+</header>
+<main>
+  <h1 class="page-title">Your first paycheck, set up right</h1>
+  <p class="lede">Five steps for your first full-time job. It takes about 20 minutes, and you can stop and come back: your answers and progress stay in this browser.</p>
+
+  <section class="card">
+    <label class="inline">Your yearly salary ($) <input id="salary" inputmode="decimal" placeholder="55000"></label>
+    <div id="progress" class="progress" aria-live="polite"></div>
+  </section>
+
+  <ol class="guide" id="guide">
+    <li class="card step" id="step-w4">
+      <h2><span class="num">1</span> Fill in your W-4</h2>
+      <p>The W-4 tells your employer how much tax to hold back. Answer four questions and we'll tell you what to fill in.</p>
+      <form id="w4" class="deal-form">
+        <label>How many jobs do you have? <select name="jobs"><option value="one">Just this one</option><option value="two">Two or more</option></select></label>
+        <label>Are you married? <select name="married"><option value="no">No</option><option value="yes">Yes, my spouse doesn't work</option><option value="spouse-works">Yes, and my spouse works</option></select></label>
+        <label>Children under 17 <input name="kids" type="number" min="0" max="20" value="0"></label>
+        <label>Other dependents <input name="otherDeps" type="number" min="0" max="20" value="0"></label>
+        <label>Side income (freelance, gig work)? <select name="side"><option value="no">No</option><option value="yes">Yes</option></select></label>
+        <label class="side-only" hidden>About how much a year ($) <input name="sideIncome" inputmode="decimal" placeholder="6000"></label>
+      </form>
+      <ol id="w4-out" class="w4-steps"></ol>
+      <label class="pick done-box"><input type="checkbox" data-done="w4"> <span>I've handed in my W-4</span></label>
+    </li>
+
+    <li class="card step" id="step-match">
+      <h2><span class="num">2</span> Get the full 401(k) match</h2>
+      <p>If your employer matches your 401(k), not taking it means turning down part of your pay. Check your benefits guide for the match.</p>
+      <form id="match" class="deal-form">
+        <label>Employer puts in (cents per dollar you save) <input name="matchPct" inputmode="decimal" value="50"></label>
+        <label>On what you save up to (% of salary) <input name="upToPct" inputmode="decimal" value="6"></label>
+        <label>Paychecks a year <select name="payPeriods"><option value="26">26 (every two weeks)</option><option value="24">24 (twice a month)</option><option value="12">12 (monthly)</option><option value="52">52 (weekly)</option></select></label>
+      </form>
+      <div id="match-out" aria-live="polite"></div>
+      <label class="pick done-box"><input type="checkbox" data-done="match"> <span>I've set my 401(k) contribution</span></label>
+    </li>
+
+    <li class="card step" id="step-cushion">
+      <h2><span class="num">3</span> Start an emergency fund</h2>
+      <p>A cushion keeps a car repair or a gap between jobs off your credit card. Keep it in a high-yield savings account, separate from checking.</p>
+      <label class="inline">Monthly essentials: rent, food, bills, transport, minimum debt payments ($) <input id="essentials" inputmode="decimal" placeholder="2200"></label>
+      <div id="cushion-out" aria-live="polite"></div>
+      <label class="pick done-box"><input type="checkbox" data-done="cushion"> <span>I've opened a savings account and set up an automatic transfer</span></label>
+    </li>
+
+    <li class="card step" id="step-budget">
+      <h2><span class="num">4</span> Pick a way to budget</h2>
+      <p>Wait for your first paycheck and use the real number. Or estimate it with the <a id="paycheck-link" href="../money-calculators/take-home-pay/">paycheck calculator by state</a>.</p>
+      <label class="inline">Take-home pay a month ($) <input id="takehome" inputmode="decimal" placeholder="3500"></label>
+      <div id="budget-out" aria-live="polite"></div>
+      <label class="pick done-box"><input type="checkbox" data-done="budget"> <span>I've picked a budget and set it up</span></label>
+    </li>
+
+    <li class="card step" id="step-extras">
+      <h2><span class="num">5</span> The other first-job forms</h2>
+      <ul id="extras" class="checklist"></ul>
+      <label class="pick done-box"><input type="checkbox" data-done="extras"> <span>All sorted</span></label>
+    </li>
+  </ol>
+
+  <section id="finish" class="card pro-slot">
+    <h2>Keep it going</h2>
+    <p>Track your first months in the free <a href="./">20-Minute Budget</a>. Budget Pro adds unlimited goals, every past and future month and bank CSV import. Once a year, take the <a href="checkup.html">annual money checkup</a>.</p>
+    <div class="row"><a class="btn small" href="./" data-upgrade="first-paycheck-app">Open the budget app</a><a class="btn ghost small" href="pricing.html?from=first-paycheck" data-upgrade="first-paycheck">See Budget Pro</a></div>
+  </section>
+</main>
+<footer><p><a href="./">Budget</a> · <a href="checkup.html">Annual money checkup</a> · Not financial or tax advice. Nothing you type is sent anywhere. Made by <a id="site-link" href="#">Money Made Simple</a>.</p></footer>
+<script type="module" src="first-paycheck.js"></script>
+</body>
+</html>

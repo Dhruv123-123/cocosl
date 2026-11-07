@@ -313,8 +313,9 @@ def test_goal_progress(db, monkeypatch):
 def test_affiliate_links_and_disclosure(factory):
     db = factory.db
     res = affiliates.sync_from_brands(db, factory.brands())
-    assert res["added"] == ["hysa"]
-    assert affiliates.sync_from_brands(db, factory.brands())["updated"] == ["hysa"]
+    slugs = {"hysa", "aura", "1password", "nordvpn"}  # money-made-simple + scam-decoded
+    assert set(res["added"]) == slugs
+    assert set(affiliates.sync_from_brands(db, factory.brands())["updated"]) == slugs
     url = affiliates.resolve_click(db, "hysa", post_id="12", platform="instagram")
     assert url.startswith("https://example.com/go/hysa?") and "utm_source=instagram" in url
     assert "utm_content=post-12" in url and "utm_campaign=hysa" in url

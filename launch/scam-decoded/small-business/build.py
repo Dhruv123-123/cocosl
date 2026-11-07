@@ -1,0 +1,120 @@
+"""Small-business scam series: fake invoices, Google listing robocalls, domain renewal notices.
+
+    python3 build.py   ->  b2b_issue_blocks.json
+
+The public explainers live on the Scam Decoded site (/scams/fake-invoices/, /scams/google-listing-calls/,
+/scams/domain-renewal-notices/), with matching alerts and alert-of-the-day cards (Nov 30 - Dec 2 2026).
+This file writes the same three topics as issue blocks in the schema PR #13's white-label newsletters use
+(launch/b2b/*/issues.json: subject, preheader, headline, example, explain, tell, steps, quick_hits, job, lobby, social,
+sources as {name, url}),
+so that thread can drop them into the employer and freelancer editions. No ids or dates: the B2B calendar assigns those.
+No product links, affiliates or Scam Decoded links in the blocks, matching the B2B rules. Examples are made up.
+"""
+import json
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+FTC_INVOICES = "https://consumer.ftc.gov/consumer-alerts/2026/05/run-small-business-pay-your-bills-not-scammers"
+FTC_GUIDE = "https://www.ftc.gov/business-guidance/resources/scams-your-small-business-guide-business"
+FTC_GOOGLE = ("https://www.ftc.gov/business-guidance/blog/2018/05/"
+              "ftc-challenges-robocallers-false-threat-small-businesses-will-be-removed-google")
+FTC_DOMAIN = "https://www.ftc.gov/news-events/news/press-releases/2010/08/ftc-halts-cross-border-domain-name-registration-scam"
+
+BLOCKS = [
+ {"key": "fake-invoices", "explainer": "/scams/fake-invoices/",
+  "topic": "Fake invoices for things nobody ordered",
+  "subject": "Scam Watch: the past-due invoice nobody ordered",
+  "preheader": "No purchase order, no payment. One rule stops most fake bills.",
+  "headline": "The bill for something your business never bought",
+  "example_label": "What it looks like (made-up example)",
+  "example": "\"FINAL NOTICE: Invoice #44871, Search Optimization Services, $489.00. This account is 30 days past due. Pay today to avoid collections.\"",
+  "explain": ["Scammers send invoices for things like search optimization, tech support or domain services that nobody ordered. Some "
+              "look like they come from a company you know. Many say \"past due\" or \"final notice\" so whoever opens the mail pays "
+              "it quickly to be safe.",
+              "Some arrive by email with a link or attachment. Those are often phishing, aimed at getting into the company's "
+              "accounts rather than collecting the fee."],
+  "tell": "If nobody can point to the order or contract, it isn't a bill. It's a request for money.",
+  "steps": ["**Match every invoice** to a real order, contract or person who asked for it before it's paid.",
+            "**Follow the approval steps** your company already has, even when a notice says \"final\".",
+            "**Report it.** Forward phishing emails to reportphishing@apwg.org and report fake invoices at ReportFraud.ftc.gov."],
+  "quick_hits": ["**Got products you never ordered?** The FTC says you can keep unordered merchandise for free.",
+                 "**Unknown vendor?** Search its name with \"scam\" or \"complaint\" before anyone pays."],
+  "job": "Find out who approves invoices where you work, and what to do with a bill you don't recognize. Save that person's name in your phone.",
+  "promise": False,
+  "lobby": {"kicker": "Scam Watch", "headline": "A \"past due\" bill nobody ordered? Don't pay it yet.",
+            "bullets": ["Match it to a real order.", "Ask who approved it.", "Report fakes at ReportFraud.ftc.gov."]},
+  "social": {"caption": "Scam Watch: fake invoices for SEO, tech support or domain services nobody ordered, often stamped \"past due\". "
+                        "Match every bill to a real order before it's paid. Report fakes at ReportFraud.ftc.gov.",
+             "alt": "Scam Watch: a past-due bill nobody ordered? Match it to a real order, ask who approved it, report fakes."},
+  "sources": [{"name": "FTC: Run a small business? Pay your bills, not scammers (May 2026)", "url": FTC_INVOICES},
+              {"name": "FTC: Scams and your small business", "url": FTC_GUIDE}]},
+ {"key": "google-listing-calls", "explainer": "/scams/google-listing-calls/",
+  "topic": "\"Your business will be removed from Google\" robocalls",
+  "subject": "Scam Watch: the \"removed from Google\" robocall",
+  "preheader": "Verifying a Google listing is free, and Google doesn't call to threaten you.",
+  "headline": "\"Final notice: your Google listing will be marked closed\"",
+  "example_label": "What it sounds like (made-up example)",
+  "example": "\"Final notice: your Google business listing is not verified and will be marked permanently closed. Press 1 now to speak with a listing specialist.\"",
+  "explain": ["A recording says your business will disappear from Google or be marked closed. Press 1 and a salesperson charges "
+              "for \"verification\", then sells a monthly plan to get you to the top of search results.",
+              "The FTC took action against companies running this pitch. It says they weren't connected to Google, the threats "
+              "were false, and they charged $300 to $700 for verification that is free."],
+  "tell": "Google doesn't call to threaten your listing, and verifying one is free.",
+  "steps": ["**Hang up.** Don't press 1; it only marks your number as one that answers.",
+            "**Check the listing yourself** by signing in to the Google Business Profile.",
+            "**Already paid?** Dispute the charge with the card company and cancel any monthly billing."],
+  "quick_hits": ["**No one can promise the top search result.** Treat that promise as a red flag.",
+                 "**Report the call** at ReportFraud.ftc.gov."],
+  "job": "If you answer the phone at work, agree with your manager on one line for these calls: \"We don't buy over the phone. Please send it in writing.\"",
+  "promise": False,
+  "lobby": {"kicker": "Scam Watch", "headline": "\"Removed from Google\"? Hang up.",
+            "bullets": ["Google doesn't call to threaten you.", "Verifying a listing is free.", "Don't press 1."]},
+  "social": {"caption": "Scam Watch: robocalls say a business will be removed from Google unless it pays to \"verify\". The FTC says "
+                        "verifying a Google listing is free and Google doesn't call to threaten you. Hang up; don't press 1.",
+             "alt": "Scam Watch: removed from Google? Hang up. Google doesn't call to threaten you. Verifying a listing is free."},
+  "sources": [{"name": "FTC: Robocallers' false threat that small businesses will be removed from Google (2018)", "url": FTC_GOOGLE},
+              {"name": "FTC: Scams and your small business", "url": FTC_GUIDE}]},
+ {"key": "domain-renewal-notices", "explainer": "/scams/domain-renewal-notices/",
+  "topic": "Domain \"renewal\" notices that aren't from your registrar",
+  "subject": "Scam Watch: the domain notice that isn't your registrar",
+  "preheader": "Check the renewal date inside your real registrar account before paying.",
+  "headline": "The website bill that isn't from your web company",
+  "example_label": "What it looks like (made-up example)",
+  "example": "\"DOMAIN NAME EXPIRATION NOTICE for yourbusiness.org. Annual website address listing and search submission: $89. Failure to pay may result in loss of your online presence.\"",
+  "explain": ["Letters and emails that look like a bill from the company that runs your website address. The FTC stopped one "
+              "group that sent notices like these: they looked like they came from the real registrar, sometimes used a "
+              "close variant of the name, and sold a \"listing\" with search optimization.",
+              "The FTC says most people who paid got no domain registration at all."],
+  "tell": "Your real registrar is the one whose account you sign in to. A bill from anyone else isn't a renewal.",
+  "steps": ["**Sign in to the real registrar account** and check the renewal date there.",
+            "**Turn on auto-renew** with that registrar, so a scary letter can't rush anyone.",
+            "**Already paid?** Call the card company or bank to dispute it, and report it at ReportFraud.ftc.gov."],
+  "quick_hits": ["**Look at the ending:** .org on a notice for a .com business is a giveaway.",
+                 "**Small print matters:** \"listing\" or \"search submission\" means it isn't your registration."],
+  "job": "Ask who pays for your company's website address, and pass on one rule: domain bills only get paid inside the registrar account.",
+  "promise": False,
+  "lobby": {"kicker": "Scam Watch", "headline": "A domain bill in the mail? Check the real account first.",
+            "bullets": ["It may not be your registrar.", "Watch for .org vs .com.", "Pay only inside the registrar account."]},
+  "social": {"caption": "Scam Watch: domain \"expiration notices\" that look like a bill from your web company but sell a \"listing\" "
+                        "instead. Check the renewal date inside your real registrar account, and turn on auto-renew.",
+             "alt": "Scam Watch: a domain bill in the mail? Check the real registrar account first. Watch for .org vs .com."},
+  "sources": [{"name": "FTC halts domain name registration scam (2010)", "url": FTC_DOMAIN},
+              {"name": "FTC: Run a small business? Pay your bills, not scammers (May 2026)", "url": FTC_INVOICES}]},
+]
+
+
+def main():
+    data = {"_about": "Small-business scam topics as issue blocks for the B2B white-label newsletters (PR #13): the employer "
+                      "edition and the freelancer client letter. Same schema as launch/b2b/*/issues.json, minus id, n, "
+                      "send_date and deliver_by, which the B2B calendar sets. Sources are public FTC pages, checked Nov 2026. "
+                      "No product, affiliate or Scam Decoded links; examples are made up.",
+            "reviewed": "2026-11-07", "blocks": BLOCKS}
+    for b in BLOCKS:
+        assert len(b["steps"]) == 3 and len(b["lobby"]["bullets"]) == 3 and b["sources"]
+        assert "scamdecoded" not in json.dumps({k: v for k, v in b.items() if k != "explainer"}).lower()
+    (HERE / "b2b_issue_blocks.json").write_text(json.dumps(data, indent=1, ensure_ascii=False) + "\n")
+    print(f"wrote {len(BLOCKS)} blocks")
+
+
+if __name__ == "__main__":
+    main()

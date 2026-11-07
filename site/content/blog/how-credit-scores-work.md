@@ -1,6 +1,6 @@
 ---
 title: How credit scores actually work (and why paying in full can still drop yours)
-seo_title: How credit scores work: the 5 factors, utilization and the statement date
+seo_title: "How credit scores work: the 5 factors explained"
 description: The five things that move a FICO score, why your score can dip even when you pay in full, and why closing an old card can hurt. Plain English, no myths.
 date: 2026-11-07
 pillar: credit-and-debt

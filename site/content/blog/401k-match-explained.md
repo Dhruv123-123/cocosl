@@ -1,7 +1,7 @@
 ---
 title: The raise you're ignoring: how a 401(k) match works
-seo_title: 401(k) match explained: how much to contribute to get the full match
-description: A common 401(k) match is 50% of what you contribute, up to 6% of pay. Here's how matches work, how vesting works, and how to check you're getting all of it.
+seo_title: "401(k) match explained: how to get the full match"
+description: "A common 401(k) match is 50% of what you contribute, up to 6% of pay. How matches and vesting work, and how to check you're getting all of it."
 date: 2026-11-07
 pillar: investing
 keyword: 401k match explained

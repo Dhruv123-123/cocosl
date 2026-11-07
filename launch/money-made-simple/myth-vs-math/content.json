@@ -1,0 +1,897 @@
+[
+ {
+  "format": "carousel",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Myth vs Math #1: one common money claim tested with the arithmetic. Tests whether a 0% store card promo is really free.",
+  "script": {
+   "title": "Myth vs Math: is 0% for 12 months really free?",
+   "hook": "Myth vs Math #1: \"0% for 12 months is always free\"",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Myth vs Math #1: \"0% for 12 months is always free\"",
+     "on_screen_text": "0% isn't always 0%",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth",
+     "narration": "The myth: 0% for 12 months is always free. Let's check it with arithmetic.",
+     "on_screen_text": "MYTH: 0% isn't always 0%",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 1",
+     "narration": "A $1,200 TV on a store card: 'no interest if paid in full in 12 months.' That's deferred interest.",
+     "on_screen_text": "$1,200 · deferred interest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a TV with a small tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 2",
+     "narration": "You pay $90 a month. After 12 months, $1,080 is paid and $120 is left.",
+     "on_screen_text": "$90 × 12 = $1,080 · $120 left",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin stack with a small gap. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 3",
+     "narration": "Interest at an example 26.99% is charged back to day one on the whole $1,200: roughly $175.",
+     "on_screen_text": "Back-charged ≈ $175",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar flipping back. No text, no logos, no real people."
+    },
+    {
+     "heading": "Verdict",
+     "narration": "It's free only if you clear every dollar in time. Miss by $120, pay about $175.",
+     "on_screen_text": "Free only if paid in FULL",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance scale tipping. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "Divide the price by 11, not 12, and pay that. $1,200 ÷ 11 ≈ $110 a month.",
+     "on_screen_text": "Price ÷ 11 = your payment",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small card with a check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Deferred interest (\"no interest if paid in full\") isn't the same as 0% APR. Leave $120 unpaid and interest can be charged on the full purchase back to day one: about $175 in this example at 26.99%.\n\nPay price ÷ 11 each month to finish early.\n\nMyth vs Math is a weekly series: one claim, the numbers that test it.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "deferredinterest",
+    "storecards",
+    "blackfriday",
+    "creditcards",
+    "mythvsmath",
+    "moneymadesimple"
+   ],
+   "description": "Tests whether a 0% store card promo is really free.",
+   "thumbnail_text": "0% isn't always 0%",
+   "sources": [
+    "https://www.consumerfinance.gov/about-us/blog/watch-out-for-deferred-interest-offers/",
+    "https://www.consumerfinance.gov/consumer-tools/credit-cards/"
+   ],
+   "claims_to_verify": [
+    "Interest estimate: average balance ~$645 over 12 months × 26.99% ≈ $174",
+    "Example terms"
+   ]
+  },
+  "series": "Myth vs Math",
+  "format_style": "myth-vs-math"
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Myth vs Math #2: one common money claim tested with the arithmetic. Tests whether an extended warranty is worth its price.",
+  "script": {
+   "title": "Myth vs Math: does the extended warranty pay off?",
+   "hook": "Myth vs Math #2: \"an extended warranty pays for itself\"",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Myth vs Math #2: \"an extended warranty pays for itself\"",
+     "on_screen_text": "Warranty: $200 for $40",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth",
+     "narration": "The myth: an extended warranty pays for itself. Let's check it with arithmetic.",
+     "on_screen_text": "MYTH: Warranty: $200 for $40",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 1",
+     "narration": "An $800 laptop. Checkout offers a 3-year warranty for $200.",
+     "on_screen_text": "$800 laptop · $200 warranty",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 2",
+     "narration": "Suppose 1 in 10 laptops need a $400 repair in years 2–3 (an assumption for this example).",
+     "on_screen_text": "10% × $400 = $40 expected",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. ten laptops, one with a wrench. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 3",
+     "narration": "Expected repair cost: $40. Warranty price: $200. The store keeps the difference.",
+     "on_screen_text": "Pay $200 to cover $40",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale tipping toward the store. No text, no logos, no real people."
+    },
+    {
+     "heading": "Verdict",
+     "narration": "For most electronics, the warranty costs more than the repairs it's likely to cover.",
+     "on_screen_text": "Usually doesn't pay off",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance scale tipping. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "Check your card's purchase protection first, and self-insure small items with savings.",
+     "on_screen_text": "Card coverage + savings first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small card with a check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Extended warranty math (example assumptions): $200 warranty vs a 10% chance of a $400 repair = $40 expected cost. Warranties are priced to profit. Check manufacturer and card coverage first.\n\nMyth vs Math is a weekly series: one claim, the numbers that test it.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "extendedwarranty",
+    "blackfriday",
+    "shoppingtips",
+    "consumertips",
+    "mythvsmath",
+    "moneymadesimple"
+   ],
+   "description": "Tests whether an extended warranty is worth its price.",
+   "thumbnail_text": "Warranty: $200 for $40",
+   "sources": [
+    "https://consumer.ftc.gov/articles/warranties"
+   ],
+   "claims_to_verify": [
+    "Failure rate and repair cost are illustrative assumptions",
+    "10% × 400 = 40"
+   ]
+  },
+  "series": "Myth vs Math",
+  "format_style": "myth-vs-math"
+ },
+ {
+  "format": "carousel",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Myth vs Math #3: one common money claim tested with the arithmetic. Tests whether paying only the minimum is fine.",
+  "script": {
+   "title": "Myth vs Math: are minimum payments really fine?",
+   "hook": "Myth vs Math #3: \"minimum payments are fine if you pay on time\"",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Myth vs Math #3: \"minimum payments are fine if you pay on time\"",
+     "on_screen_text": "Minimums aren't fine",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth",
+     "narration": "The myth: minimum payments are fine if you pay on time. Let's check it with arithmetic.",
+     "on_screen_text": "MYTH: Minimums aren't fine",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 1",
+     "narration": "$3,000 on a card at 24%. The minimum: about 1% plus interest, around $90 to start.",
+     "on_screen_text": "$3,000 · 24% · ~$90 minimum",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card with a small coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 2",
+     "narration": "Of that first $90, about $60 is interest. Only about $30 reduces the balance.",
+     "on_screen_text": "$60 interest · $30 principal",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin cut into two unequal parts. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 3",
+     "narration": "Paying a fixed $200 instead clears it in about 18 months, with about $600 interest.",
+     "on_screen_text": "$200/mo → ~18 months",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short path with a flag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Verdict",
+     "narration": "On time protects your credit, not your wallet. Minimum-only can take many years.",
+     "on_screen_text": "On time ≠ cheap",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance scale tipping. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "Pay a fixed amount, not the minimum. Your statement shows the minimum-only cost: read that box.",
+     "on_screen_text": "Fixed amount > minimum",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small card with a check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Minimum payment math (example): $3,000 at 24%, first minimum ~$90 with ~$60 of it interest. A fixed $200/month clears it in ~18 months with ~$600 interest. Your statement's minimum payment warning shows your own numbers.\n\nMyth vs Math is a weekly series: one claim, the numbers that test it.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "creditcarddebt",
+    "minimumpayment",
+    "debtpayoff",
+    "creditcards",
+    "mythvsmath",
+    "moneymadesimple"
+   ],
+   "description": "Tests whether paying only the minimum is fine.",
+   "thumbnail_text": "Minimums aren't fine",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/credit-cards/"
+   ],
+   "claims_to_verify": [
+    "3000 × 24% ÷ 12 = 60",
+    "$200/mo at 24%: n ≈ 18, total interest ≈ $600",
+    "Minimum formulas vary by issuer"
+   ]
+  },
+  "series": "Myth vs Math",
+  "format_style": "myth-vs-math"
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Myth vs Math #4: one common money claim tested with the arithmetic. Tests whether small daily spending is the main money problem.",
+  "script": {
+   "title": "Myth vs Math: are lattes really the problem?",
+   "hook": "Myth vs Math #4: \"lattes are why you're broke\"",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Myth vs Math #4: \"lattes are why you're broke\"",
+     "on_screen_text": "Latte vs big 3",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth",
+     "narration": "The myth: lattes are why you're broke. Let's check it with arithmetic.",
+     "on_screen_text": "MYTH: Latte vs big 3",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 1",
+     "narration": "$5 a day on coffee, every workday: $1,250 a year.",
+     "on_screen_text": "$5 × 250 = $1,250/yr",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coffee cup with coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 2",
+     "narration": "Rent $150 a month higher than needed: $1,800 a year.",
+     "on_screen_text": "$150 × 12 = $1,800/yr",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a house with coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 3",
+     "narration": "A car payment $200 higher than needed: $2,400 a year.",
+     "on_screen_text": "$200 × 12 = $2,400/yr",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a car with coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Verdict",
+     "narration": "Small habits add up, but housing, transport and food usually matter far more.",
+     "on_screen_text": "The big 3 beat the latte",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance scale tipping. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "Cut the big three first. Then keep the small joys you actually value.",
+     "on_screen_text": "Big 3 first, then the small stuff",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small card with a check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Coffee: $1,250/year. Rent $150 too high: $1,800/year. Car payment $200 too high: $2,400/year (examples).\n\nSmall spending adds up, but housing, transport and food usually move the needle most. Fix those, then keep the treats you value.\n\nMyth vs Math is a weekly series: one claim, the numbers that test it.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "budgeting",
+    "coffee",
+    "frugal",
+    "spending",
+    "mythvsmath",
+    "moneymadesimple"
+   ],
+   "description": "Tests whether small daily spending is the main money problem.",
+   "thumbnail_text": "Latte vs big 3",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "5 × 250 = 1,250",
+    "150 × 12 = 1,800",
+    "200 × 12 = 2,400"
+   ]
+  },
+  "series": "Myth vs Math",
+  "format_style": "myth-vs-math"
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Myth vs Math #5: one common money claim tested with the arithmetic. Tests whether a small weekly lottery habit is harmless.",
+  "script": {
+   "title": "Myth vs Math: is $10 a week on the lottery harmless?",
+   "hook": "Myth vs Math #5: \"$10 a week on lottery tickets is harmless\"",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Myth vs Math #5: \"$10 a week on lottery tickets is harmless\"",
+     "on_screen_text": "1 in 292 million",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth",
+     "narration": "The myth: $10 a week on lottery tickets is harmless. Let's check it with arithmetic.",
+     "on_screen_text": "MYTH: 1 in 292 million",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 1",
+     "narration": "$10 a week is $520 a year.",
+     "on_screen_text": "$10 × 52 = $520",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small ticket with a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 2",
+     "narration": "Powerball jackpot odds: about 1 in 292 million per play.",
+     "on_screen_text": "1 in 292,201,338",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a huge crowd with one dot. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 3",
+     "narration": "Saved instead, $520 a year for 10 years is $5,200 before any interest.",
+     "on_screen_text": "$520 × 10 = $5,200",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar filling up. No text, no logos, no real people."
+    },
+    {
+     "heading": "Verdict",
+     "narration": "$10 for fun is a choice. $10 as a plan is a near-certain loss.",
+     "on_screen_text": "Fun budget, not a plan",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance scale tipping. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "If you play, budget it as entertainment. Never as savings.",
+     "on_screen_text": "Entertainment line only",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small card with a check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Lottery math: $10/week = $520/year. Powerball jackpot odds are about 1 in 292.2 million per play. Over 10 years, $5,200 saved instead (before interest).\n\nIf you play, put it in the fun budget, never the savings plan.\n\nMyth vs Math is a weekly series: one claim, the numbers that test it.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "lottery",
+    "budgeting",
+    "savingmoney",
+    "moneyhabits",
+    "mythvsmath",
+    "moneymadesimple"
+   ],
+   "description": "Tests whether a small weekly lottery habit is harmless.",
+   "thumbnail_text": "1 in 292 million",
+   "sources": [
+    "https://www.powerball.com/powerball-prize-chart"
+   ],
+   "claims_to_verify": [
+    "Powerball jackpot odds 1 in 292,201,338",
+    "10 × 52 = 520"
+   ]
+  },
+  "series": "Myth vs Math",
+  "format_style": "myth-vs-math"
+ },
+ {
+  "format": "carousel",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Myth vs Math #6: one common money claim tested with the arithmetic. Tests the myth that carrying a credit card balance helps your score.",
+  "script": {
+   "title": "Myth vs Math: does carrying a balance help your credit?",
+   "hook": "Myth vs Math #6: \"carrying a balance helps your credit score\"",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Myth vs Math #6: \"carrying a balance helps your credit score\"",
+     "on_screen_text": "Balance ≠ better score",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth",
+     "narration": "The myth: carrying a balance helps your credit score. Let's check it with arithmetic.",
+     "on_screen_text": "MYTH: Balance ≠ better score",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 1",
+     "narration": "A $500 balance on a $5,000 limit is 10% utilization, whether you pay in full or not.",
+     "on_screen_text": "$500 ÷ $5,000 = 10%",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card with a small bar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 2",
+     "narration": "Carry that $500 at 22% and you pay about $9 a month in interest.",
+     "on_screen_text": "$500 × 22% ÷ 12 ≈ $9/mo",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small coin dropping each month. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 3",
+     "narration": "Pay in full by the due date: same on-time history, $0 interest.",
+     "on_screen_text": "Pay in full = $0 interest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card with a check mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Verdict",
+     "narration": "Carrying a balance costs interest and adds nothing a paid-in-full card doesn't.",
+     "on_screen_text": "Costs money, no score bonus",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance scale tipping. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "Use the card, pay the full statement balance, every month.",
+     "on_screen_text": "Use it. Pay it in full.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small card with a check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Credit utilization uses the balance reported on your statement. Paying in full by the due date still shows usage and on-time payments, with $0 interest. Carrying $500 at 22% costs ~$9/month for no score benefit.\n\nMyth vs Math is a weekly series: one claim, the numbers that test it.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "creditscore",
+    "creditcards",
+    "creditmyths",
+    "personalfinance",
+    "mythvsmath",
+    "moneymadesimple"
+   ],
+   "description": "Tests the myth that carrying a credit card balance helps your score.",
+   "thumbnail_text": "Balance ≠ better score",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/"
+   ],
+   "claims_to_verify": [
+    "500 × 22% ÷ 12 ≈ 9.17",
+    "Utilization based on reported balance"
+   ]
+  },
+  "series": "Myth vs Math",
+  "format_style": "myth-vs-math"
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Myth vs Math #7: one common money claim tested with the arithmetic. Tests whether saving is possible on a small salary.",
+  "script": {
+   "title": "Myth vs Math: can you really not save on a small salary?",
+   "hook": "Myth vs Math #7: \"you can't save on a small salary\"",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Myth vs Math #7: \"you can't save on a small salary\"",
+     "on_screen_text": "$20 a week = $1,040",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth",
+     "narration": "The myth: you can't save on a small salary. Let's check it with arithmetic.",
+     "on_screen_text": "MYTH: $20 a week = $1,040",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 1",
+     "narration": "$20 a week is $1,040 a year: a starter emergency fund.",
+     "on_screen_text": "$20 × 52 = $1,040",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small jar with a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 2",
+     "narration": "Every payday, $25 moved automatically: $650 a year if paid every two weeks.",
+     "on_screen_text": "$25 × 26 = $650",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small arrow into a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 3",
+     "narration": "One $15 subscription cancelled: $180 a year.",
+     "on_screen_text": "$15 × 12 = $180",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a cross. No text, no logos, no real people."
+    },
+    {
+     "heading": "Verdict",
+     "narration": "Small amounts build the habit and a real cushion. The amount can grow later.",
+     "on_screen_text": "Small still counts",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance scale tipping. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "Pick an amount you won't miss, automate it on payday, raise it with every raise.",
+     "on_screen_text": "Automate it · raise it later",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small card with a check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Small amounts add up: $20/week = $1,040/year; $25 per biweekly paycheck = $650/year; one cancelled $15 subscription = $180/year.\n\nIf money is truly short, focus on essentials first. Saving starts when there's even a little room.\n\nMyth vs Math is a weekly series: one claim, the numbers that test it.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "savingmoney",
+    "emergencyfund",
+    "budgeting",
+    "lowincome",
+    "mythvsmath",
+    "moneymadesimple"
+   ],
+   "description": "Tests whether saving is possible on a small salary.",
+   "thumbnail_text": "$20 a week = $1,040",
+   "sources": [
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
+   ],
+   "claims_to_verify": [
+    "20 × 52 = 1,040",
+    "25 × 26 = 650",
+    "15 × 12 = 180"
+   ]
+  },
+  "series": "Myth vs Math",
+  "format_style": "myth-vs-math"
+ },
+ {
+  "format": "carousel",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Myth vs Math #8: one common money claim tested with the arithmetic. Tests whether a 1% higher retirement contribution matters.",
+  "script": {
+   "title": "Myth vs Math: does 1% more for retirement matter?",
+   "hook": "Myth vs Math #8: \"saving 1% more won't make a difference\"",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Myth vs Math #8: \"saving 1% more won't make a difference\"",
+     "on_screen_text": "1% = $47K?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth",
+     "narration": "The myth: saving 1% more won't make a difference. Let's check it with arithmetic.",
+     "on_screen_text": "MYTH: 1% = $47K?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 1",
+     "narration": "1% of a $50,000 salary is $500 a year, about $42 a month.",
+     "on_screen_text": "1% of $50K = $500/yr",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 2",
+     "narration": "Invested for 30 years at an assumed 7% a year (not a promise): about $47,000.",
+     "on_screen_text": "$500/yr · 30 yrs · 7% ≈ $47K",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small plant growing tall. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 3",
+     "narration": "Pre-tax 401(k) contributions cost less than $42 in take-home, because tax comes out later.",
+     "on_screen_text": "Take-home drops by less",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paycheck with a small slice. No text, no logos, no real people."
+    },
+    {
+     "heading": "Verdict",
+     "narration": "1% is small today and large over decades, even with ups and downs.",
+     "on_screen_text": "1% now ≈ $47K later",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance scale tipping. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "Raise your contribution 1% now, and again with each raise.",
+     "on_screen_text": "+1% now, +1% each raise",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small card with a check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "1% more (example): $500/year on $50K. At an assumed 7% average return for 30 years, about $47,000. That's an illustration, not a promise. Investing involves risk.\n\nIncrease 1% now and with each raise.\n\nMyth vs Math is a weekly series: one claim, the numbers that test it.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "401k",
+    "retirementsavings",
+    "investing",
+    "compoundinterest",
+    "mythvsmath",
+    "moneymadesimple"
+   ],
+   "description": "Tests whether a 1% higher retirement contribution matters.",
+   "thumbnail_text": "1% = $47K?",
+   "sources": [
+    "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator",
+    "https://www.irs.gov/retirement-plans/401k-plans"
+   ],
+   "claims_to_verify": [
+    "500 × ((1.07^30 − 1) ÷ 0.07) ≈ 47,230",
+    "7% is an assumption"
+   ]
+  },
+  "series": "Myth vs Math",
+  "format_style": "myth-vs-math"
+ },
+ {
+  "format": "carousel",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Myth vs Math #9: one common money claim tested with the arithmetic. Tests whether you need $10,000 to start investing.",
+  "script": {
+   "title": "Myth vs Math: do you need $10,000 to start investing?",
+   "hook": "Myth vs Math #9: \"you need $10,000 to start investing\"",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Myth vs Math #9: \"you need $10,000 to start investing\"",
+     "on_screen_text": "$10K to start?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth",
+     "narration": "The myth: you need $10,000 to start investing. Let's check it with arithmetic.",
+     "on_screen_text": "MYTH: $10K to start?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 1",
+     "narration": "Many brokerages have no minimum, and many funds can be bought in fractional shares.",
+     "on_screen_text": "No minimum · fractional shares",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tiny slice of a basket. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 2",
+     "narration": "$50 a month is $600 a year. Over 10 years, that's $6,000 put in.",
+     "on_screen_text": "$50 × 12 × 10 = $6,000",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small calendar with coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 3",
+     "narration": "At an assumed 6% a year (not a promise), that could grow to about $8,200.",
+     "on_screen_text": "≈ $8,200 at an assumed 6%",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small line rising. No text, no logos, no real people."
+    },
+    {
+     "heading": "Verdict",
+     "narration": "You don't need a big lump sum. Starting small and early is how most people begin.",
+     "on_screen_text": "Start with $50",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance scale tipping. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "Emergency fund and high-interest debt first. Then automate a small monthly amount.",
+     "on_screen_text": "Safety net first, then automate",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small card with a check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "You don't need $10,000. Many brokerages have no minimums and offer fractional shares. $50/month for 10 years = $6,000 in; at an assumed 6% average, about $8,200. Investing involves risk, including loss.\n\nBuild a starter emergency fund and clear high-interest debt first.\n\nMyth vs Math is a weekly series: one claim, the numbers that test it.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "investingforbeginners",
+    "indexfunds",
+    "investing",
+    "personalfinance",
+    "mythvsmath",
+    "moneymadesimple"
+   ],
+   "description": "Tests whether you need $10,000 to start investing.",
+   "thumbnail_text": "$10K to start?",
+   "sources": [
+    "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"
+   ],
+   "claims_to_verify": [
+    "$50/mo, 120 months at 6%/12 ≈ $8,190",
+    "6% is an assumption"
+   ]
+  },
+  "series": "Myth vs Math",
+  "format_style": "myth-vs-math"
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Myth vs Math #10: one common money claim tested with the arithmetic. Tests whether a big tax refund is free money.",
+  "script": {
+   "title": "Myth vs Math: is a big tax refund free money?",
+   "hook": "Myth vs Math #10: \"a big tax refund is free money\"",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Myth vs Math #10: \"a big tax refund is free money\"",
+     "on_screen_text": "Refund = your money",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth",
+     "narration": "The myth: a big tax refund is free money. Let's check it with arithmetic.",
+     "on_screen_text": "MYTH: Refund = your money",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 1",
+     "narration": "A $3,000 refund means about $250 extra was withheld every month last year.",
+     "on_screen_text": "$3,000 ÷ 12 = $250/mo",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paycheck with a small slice. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 2",
+     "narration": "That's money you lent the government, interest-free, for up to 12 months.",
+     "on_screen_text": "0% interest loan to the IRS",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an envelope with a clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 3",
+     "narration": "In a 4% savings account, $250 a month for a year earns about $55.",
+     "on_screen_text": "≈ $55 of interest missed",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a small upward arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Verdict",
+     "narration": "A refund is your own money, returned late. Not a bonus.",
+     "on_screen_text": "Your money, late",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance scale tipping. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "Prefer it monthly? Adjust your W-4 with the IRS estimator. Prefer the lump sum? That's OK, on purpose.",
+     "on_screen_text": "Choose it on purpose",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small card with a check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "A $3,000 refund ≈ $250/month over-withheld. In a 4% savings account that could have earned ~$55. If you'd rather have it monthly, the IRS Tax Withholding Estimator helps adjust your W-4. If you like the forced savings, choose it on purpose.\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nMyth vs Math is a weekly series: one claim, the numbers that test it.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "taxrefund",
+    "taxseason",
+    "w4",
+    "taxes",
+    "mythvsmath",
+    "moneymadesimple"
+   ],
+   "description": "Tests whether a big tax refund is free money.",
+   "thumbnail_text": "Refund = your money",
+   "sources": [
+    "https://www.irs.gov/individuals/tax-withholding-estimator"
+   ],
+   "claims_to_verify": [
+    "250/month at 4% for 12 months ≈ $55",
+    "3000 ÷ 12 = 250"
+   ]
+  },
+  "series": "Myth vs Math",
+  "format_style": "myth-vs-math"
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Myth vs Math #11: one common money claim tested with the arithmetic. Tests whether a raise can lower your take-home through tax brackets.",
+  "script": {
+   "title": "Myth vs Math: can a raise lower your take-home?",
+   "hook": "Myth vs Math #11: \"a raise can push you into a higher bracket and cut your pay\"",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Myth vs Math #11: \"a raise can push you into a higher bracket and cut your pay\"",
+     "on_screen_text": "Raise ≠ less pay",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth",
+     "narration": "The myth: a raise can push you into a higher bracket and cut your pay. Let's check it with arithmetic.",
+     "on_screen_text": "MYTH: Raise ≠ less pay",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 1",
+     "narration": "Example brackets (simplified): 12% up to $50,000 of taxable income, 22% above it.",
+     "on_screen_text": "12% to $50K · 22% above",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a two-step staircase. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 2",
+     "narration": "A raise takes taxable income from $49,000 to $52,000. Only $2,000 lands on the 22% step.",
+     "on_screen_text": "Only $2,000 at 22%",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin on the top step. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 3",
+     "narration": "Extra federal income tax: $120 + $440 = $560. You keep about $2,440 of the $3,000 raise before payroll and state tax.",
+     "on_screen_text": "Keep ~$2,440 of $3,000",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin stack with a small slice. No text, no logos, no real people."
+    },
+    {
+     "heading": "Verdict",
+     "narration": "Only the dollars above each line are taxed at the higher rate. A raise always means more after income tax.",
+     "on_screen_text": "Raise = more money",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance scale tipping. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "Take the raise. Then raise your savings rate with part of it.",
+     "on_screen_text": "Take it · save part of it",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small card with a check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Brackets are a staircase: only income above each line is taxed at the higher rate. In this simplified example, a $3,000 raise adds $560 of federal income tax ($1,000 × 12% + $2,000 × 22%). You keep about $2,440 before payroll and state tax. Check IRS.gov for current brackets.\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nMyth vs Math is a weekly series: one claim, the numbers that test it.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "taxbrackets",
+    "raise",
+    "taxes",
+    "salary",
+    "mythvsmath",
+    "moneymadesimple"
+   ],
+   "description": "Tests whether a raise can lower your take-home through tax brackets.",
+   "thumbnail_text": "Raise ≠ less pay",
+   "sources": [
+    "https://www.irs.gov/filing/federal-income-tax-rates-and-brackets"
+   ],
+   "claims_to_verify": [
+    "Simplified illustrative brackets",
+    "1,000 × 12% + 2,000 × 22% = 560"
+   ]
+  },
+  "series": "Myth vs Math",
+  "format_style": "myth-vs-math"
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Myth vs Math #12: one common money claim tested with the arithmetic. Tests whether renting is throwing money away.",
+  "script": {
+   "title": "Myth vs Math: is renting really throwing money away?",
+   "hook": "Myth vs Math #12: \"paying rent is throwing money away\"",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Myth vs Math #12: \"paying rent is throwing money away\"",
+     "on_screen_text": "Rent vs own: real costs",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth",
+     "narration": "The myth: paying rent is throwing money away. Let's check it with arithmetic.",
+     "on_screen_text": "MYTH: Rent vs own: real costs",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 1",
+     "narration": "Owning a $350,000 home with 20% down: a $280,000 loan at an example 6.5%.",
+     "on_screen_text": "$350K home · $280K at 6.5%",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a house with a key. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 2",
+     "narration": "First-year costs you never get back: about $1,517/mo interest, $350 tax, $150 insurance, $292 maintenance.",
+     "on_screen_text": "≈ $2,309/mo unrecoverable",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four small coin stacks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math 3",
+     "narration": "Compare: rent for a similar place, an example $1,800 a month, plus about $15 renters insurance.",
+     "on_screen_text": "Rent ≈ $1,815/mo",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an apartment with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Verdict",
+     "narration": "Owners 'throw away' money too: interest, taxes, insurance and repairs. It depends on prices and how long you stay.",
+     "on_screen_text": "Both have unrecoverable costs",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance scale tipping. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "Compare unrecoverable costs, not rent vs mortgage. Plan to stay 5+ years before buying.",
+     "on_screen_text": "Compare like with like",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small card with a check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Rent vs own (example): $350K home, $280K at 6.5%. First-year unrecoverable costs ≈ $1,517/mo interest + $350 property tax + $150 insurance + $292 maintenance (1%/yr) ≈ $2,309/mo, vs ~$1,815 rent + renters insurance. Owning builds equity and may appreciate; renting keeps the down payment free to invest. It depends on prices and time.\n\nExample numbers only.\n\nMyth vs Math is a weekly series: one claim, the numbers that test it.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "rentvsbuy",
+    "renting",
+    "homebuying",
+    "housing",
+    "mythvsmath",
+    "moneymadesimple"
+   ],
+   "description": "Tests whether renting is throwing money away.",
+   "thumbnail_text": "Rent vs own: real costs",
+   "sources": [
+    "https://www.consumerfinance.gov/owning-a-home/",
+    "https://www.consumerfinance.gov/renters/"
+   ],
+   "claims_to_verify": [
+    "280,000 × 6.5% ÷ 12 ≈ 1,517",
+    "350,000 × 1% ÷ 12 ≈ 292",
+    "Example tax and insurance"
+   ]
+  },
+  "series": "Myth vs Math",
+  "format_style": "myth-vs-math"
+ }
+]

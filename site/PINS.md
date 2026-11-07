@@ -165,6 +165,9 @@ Boards to create: **Budgeting for beginners**, **Saving money tips**, **Debt pay
 
 ---
 
-**Posting order:** start with 7, 1, 4 and 9 (one per board), then one new pin a day. Pins 7 and 8 can be
+**Posting order:** follow `pins/schedule.csv`. It starts Mon Nov 30 2026 (week 3 after launch Day 1, per
+`launch/money-made-simple/LAUNCH_WEEK.md` on PR #5) with that file's eight site pins: the quiz, then the freeze,
+401(k) match, emergency fund, sinking funds, subscriptions, investing with $100 and expense ratios articles.
+The same page never gets two pins within 7 days. Pins 7 and 8 can be
 repeated for other salaries (`/budget/<salary>-salary/`) by swapping the numbers from that page; keep the
 footnote.

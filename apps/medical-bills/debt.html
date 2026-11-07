@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Debt Validation Letter and Stop-Contact Letter Builder | Money Made Simple</title>
+<meta name="description" content="Free debt collector letters: dispute a debt and ask the collector to prove it (debt validation), or tell them to stop contacting you. Built in your browser. Not legal advice.">
+<meta property="og:title" content="A debt collector contacted you. Ask them to prove it.">
+<meta property="og:description" content="Debt validation and stop-contact letters, filled in for you. Private: nothing leaves your browser.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is a debt validation letter?","acceptedAnswer":{"@type":"Answer","text":"A letter telling a debt collector you dispute the debt and asking them to show who the original creditor was, how the amount was worked out, and that they can collect it. If you dispute in writing within the 30-day period in the collector's validation notice, the collector must stop collecting until it sends you verification."}},
+{"@type":"Question","name":"Does a stop-contact letter make the debt go away?","acceptedAnswer":{"@type":"Answer","text":"No. The collector must stop contacting you, with limited exceptions, but the debt still exists. The collector or creditor can still sue you or report the debt to credit bureaus."}},
+{"@type":"Question","name":"Should I pay a debt collector right away?","acceptedAnswer":{"@type":"Answer","text":"Not before you've checked the debt is yours and the amount is right. In some states, a payment or a written promise to pay can restart the time limit for being sued on an old debt. If you're sued, respond to the court by the deadline, even if you think the debt is wrong."}}
+]}</script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" data-site href="https://moneymadesimple.netlify.app"><span class="mark">MS</span><span>Debt collector letters</span></a>
+</header>
+<main>
+  <h1 class="page-title">A debt collector contacted you. Ask them to prove it.</h1>
+  <p class="lede">Collectors sometimes chase the wrong person, the wrong amount or a debt that's too old. Fill in the details from their letter and we'll write a letter for you to check, print and mail. Nothing you type leaves this browser.</p>
+  <p class="notice"><b>Not legal advice.</b> These letters are general information. If you've been sued, or the debt is large, talk to a legal aid office or a consumer lawyer: many give free first consultations.</p>
+
+  <section class="card">
+    <h2>1. Which letter?</h2>
+    <div id="tabs" class="tabs" role="tablist"></div>
+    <p id="about" class="tiny"></p>
+  </section>
+
+  <section class="card">
+    <h2>2. Details from their letter</h2>
+    <form id="details" class="grid" autocomplete="on">
+      <label>Your name <input name="name" autocomplete="name" required></label>
+      <label>Your mailing address <input name="address" autocomplete="street-address" placeholder="Street, city, state, ZIP"></label>
+      <label>Collector's name <input name="collector" required></label>
+      <label>Collector's mailing address <input name="collectorAddress" placeholder="From their letter"></label>
+      <label>Their account or reference number <input name="reference" required></label>
+      <label>Original creditor they name (if any) <input name="creditor"></label>
+      <label>Amount they say you owe ($) <input name="amount" inputmode="decimal"></label>
+      <label>Date on their letter <input name="noticeDate" placeholder="October 28, 2026"></label>
+      <fieldset class="full" id="limits"><legend>Optional limits on contact (validation letter)</legend></fieldset>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2>3. Your letter</h2>
+    <p id="letter-msg" class="error" aria-live="polite"></p>
+    <textarea id="letter" rows="24" spellcheck="true" aria-label="Your letter (you can edit it)"></textarea>
+    <div class="row">
+      <button id="copy" class="btn small" type="button">Copy</button>
+      <button id="print" class="btn small ghost" type="button">Print</button>
+      <button id="download" class="btn small ghost" type="button">Download .txt</button>
+    </div>
+    <p class="tiny">Read it and change anything that isn't right before you send it.</p>
+  </section>
+
+  <section class="card">
+    <h2>Before and after you send it</h2>
+    <ul class="checks">
+      <li><b>Timing:</b> the collector's first letter (the validation notice) gives a date. Dispute in writing by then: the collector must stop collecting until it verifies the debt. You can still dispute after that date, but those protections may not apply.</li>
+      <li><b>Mail it</b> by certified mail with a return receipt, keep a copy, and note the date.</li>
+      <li><b>Don't pay or promise to pay</b> until you've checked the debt is yours and the amount is right. In some states, a payment on an old debt can restart the time limit for being sued.</li>
+      <li><b>Check your credit reports</b> for free at AnnualCreditReport.com and dispute anything that's wrong with the bureau.</li>
+      <li><b>If you're sued,</b> respond to the court by the deadline on the papers, even if you think the debt is wrong. Ignoring it usually means losing automatically.</li>
+      <li><b>Problems with a collector?</b> You can submit a complaint to the CFPB at consumerfinance.gov/complaint or to your state attorney general.</li>
+    </ul>
+  </section>
+
+  <section class="card faq">
+    <h2>Questions</h2>
+    <h3>What is a debt validation letter?</h3>
+    <p>A letter telling a debt collector you dispute the debt and asking them to show who the original creditor was, how the amount was worked out, and that they can collect it. If you dispute in writing within the 30-day period in the collector's validation notice, the collector must stop collecting until it sends you verification.</p>
+    <h3>Does a stop-contact letter make the debt go away?</h3>
+    <p>No. The collector must stop contacting you, with limited exceptions, but the debt still exists. The collector or creditor can still sue you or report the debt to credit bureaus. Many people send the validation letter first.</p>
+    <h3>Is it a medical bill?</h3>
+    <p>Ask the hospital or provider for an itemized bill and about financial assistance too: <a href="./">medical bill letters</a>.</p>
+  </section>
+</main>
+<footer><p>General information, not legal advice. Debt collection rules differ by state, and the federal rules mainly cover third-party collectors, not the original lender. Nothing you type is sent anywhere. Made by <a data-site href="https://moneymadesimple.netlify.app">Money Made Simple</a>.</p></footer>
+<script type="module" src="debt.js"></script>
+</body>
+</html>

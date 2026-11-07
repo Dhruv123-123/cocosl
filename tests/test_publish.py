@@ -164,6 +164,43 @@ def test_instagram_reel_happy_path(settings, brand, files, ig_env):
     assert len(r.find("GET", "/C1")) == 2
 
 
+@pytest.mark.parametrize("value, expected", [("SS_PERFORMANCE", "SS_PERFORMANCE"), ("manual", "MANUAL"),
+                                             ("1", "SS_PERFORMANCE"), ("", None)])
+def test_instagram_trial_reels(settings, brand, files, ig_env, monkeypatch, value, expected):
+    import json as _json
+    monkeypatch.setenv("IG_TRIAL_REELS", value)
+    r = (Router()
+         .add("POST", "/1789/media_publish", {"id": "M1"})
+         .add("POST", "/1789/media", {"id": "C1"})
+         .add("GET", "/C1", {"status_code": "FINISHED"})
+         .add("GET", "/M1", {"permalink": "https://www.instagram.com/reel/abc/"}))
+    pub = InstagramPublisher(settings, transport=r.transport, sleep=noop_sleep)
+    res = pub.publish(make_req(brand, settings, "instagram", "short", files))
+    create = form(r.find("POST", "/1789/media")[0])
+    if expected:
+        assert _json.loads(create["trial_params"]) == {"graduation_strategy": expected}
+    else:
+        assert "trial_params" not in create
+    assert res.raw["trial_reel"] is bool(expected)
+
+
+def test_instagram_trial_reels_not_on_carousels_and_bad_value(settings, brand, files, ig_env, monkeypatch):
+    monkeypatch.setenv("IG_TRIAL_REELS", "SS_PERFORMANCE")
+    ids = iter(["K1", "K2", "K3", "P1"])
+    r = (Router()
+         .add("POST", "/1789/media_publish", {"id": "M2"})
+         .add("POST", "/1789/media", lambda q: {"id": next(ids)})
+         .add("GET", "fields=status_code", {"status_code": "FINISHED"})
+         .add("GET", "/M2", {"permalink": "https://www.instagram.com/p/x/"}))
+    pub = InstagramPublisher(settings, transport=r.transport, sleep=noop_sleep)
+    pub.publish(make_req(brand, settings, "instagram", "carousel", files))
+    assert all("trial_params" not in form(c) for c in r.find("POST", "/1789/media"))
+    monkeypatch.setenv("IG_TRIAL_REELS", "sometimes")
+    with pytest.raises(PublishError):
+        InstagramPublisher(settings, transport=Router().transport, sleep=noop_sleep).publish(
+            make_req(brand, settings, "instagram", "short", files))
+
+
 def test_instagram_carousel_children_then_parent(settings, brand, files, ig_env):
     ids = iter(["K1", "K2", "K3", "P1"])
     r = (Router()

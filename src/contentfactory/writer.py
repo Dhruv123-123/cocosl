@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from . import i18n
 from .config import BrandProfile
+from .hooks import prompt_block as hook_patterns
 from .llm import LLM
 from .schemas import ChartSpec, ReviewVerdict, Script, Segment
 
@@ -56,7 +57,9 @@ SYSTEM = (
     "omit); list every factual claim that needs checking in claims_to_verify; list every computed money figure (loan payment, "
     "interest, payoff time, growth, federal or payroll tax) in calcs with its inputs so it is recomputed; never write first-person "
     "product testimonials ('I used this and...'); no real people's likeness in visual prompts; no "
-    "logos or brand marks in visual prompts; no text inside visual prompts; no engagement bait."
+    "logos or brand marks in visual prompts; no text inside visual prompts; no engagement bait. "
+    "The first line must contain a specific number, a named mistake, or an age/situation; no greetings, "
+    "no 'This app...' or 'POV' openers. Every number shown on screen goes into claims_to_verify."
 )
 
 
@@ -114,7 +117,8 @@ Also give 2-3 title_variants and 2-3 hook_variants that test genuinely different
 Charts: when a beat compares numbers (fees, interest, a balance over time), you may give that segment a
 `chart` (kind "bars" or "line", 2-12 values, short labels). It is drawn exactly from your numbers, so use
 illustrative round figures, say "example" in its note, and list each chart's figures in claims_to_verify.
-At most two charts per script; leave `chart` out everywhere else."""
+At most two charts per script; leave `chart` out everywhere else.
+{hook_patterns(brand, title, fmt)}"""
     return llm.structured(Script, system=SYSTEM, prompt=prompt, purpose=f"script:{fmt}",
                           offline=lambda: _offline_script(brand, title, angle, fmt))
 

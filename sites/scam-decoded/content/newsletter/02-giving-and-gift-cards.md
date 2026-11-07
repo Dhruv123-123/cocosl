@@ -1,0 +1,44 @@
+---
+issue: 2
+send_date: 2026-12-03
+subject: Scam Alert #2: thanks for a donation you never made
+preheader: Fake charity texts after Giving Tuesday, the boss who needs gift cards, and a 5-second check at the gift card rack.
+---
+Hi,
+
+Giving Tuesday was this week, and the year-end giving season runs to December 31. It's also the busiest time of year for gift cards. Scammers love both, because they're generous habits that move money fast.
+
+## This week's scam: the "thanks for your pledge" text
+
+**Spotted this week (fictional example):** *"Thank you for your generous pledge last year! Families in need are counting on you again this season. Renew your $75 gift today by gift card or Zelle: holiday-relief-●●●●.xyz"*
+
+You don't remember the pledge, but you don't want to seem stingy either. That doubt is the trick. There's no pledge and no charity.
+
+## The tell
+
+**Pressure to give today, by gift card, payment app, wire or crypto.** Real charities welcome your gift next week too, and they take credit cards and checks.
+
+## What to do
+
+1. Look the charity up yourself. Check it at [Give.org](https://give.org/) or [Charity Navigator](https://www.charitynavigator.org/), and use the [IRS Tax Exempt Organization Search](https://apps.irs.gov/app/eos/) if you want the tax deduction.
+2. Give on the charity's own website, by credit card or check.
+3. Already paid? Call your card issuer or payment app now, and report it at [ReportFraud.ftc.gov](https://reportfraud.ftc.gov/).
+
+## Quick hits
+
+- **Your "boss" texts asking for gift cards for the team:** they can't talk, they want photos of the codes, and they want it kept quiet. Walk to their desk or call their real number. It's a scam every time.
+- **Buying gift cards as presents?** Check the packaging isn't torn and the PIN isn't scratched or re-stuck, or buy from behind the counter. Keep the receipt with the card.
+- **Paid a scammer with a gift card?** Call the gift card company right away, using the number on the card or its website, and ask for a refund. The faster you call, the better your chances.
+
+## Your 5-minute job this week
+
+Tell one older relative the rule that covers half of all holiday scams: **gift cards are for gifts.** Anyone who asks you to pay with one, for anything else, is a scammer. Our [gift card explainer](/scams/gift-card-scams/) is short enough to forward.
+
+## From Scam Decoded
+
+Got a message you're not sure about? Paste it into our free [scam checker](/checker/). It flags the red flags in seconds, right on your device, and points you to the matching explainer.
+
+Happy holidays,
+Scam Decoded
+
+P.S. Seen a fake charity appeal this month? Reply and tell me who it claimed to be. I'll warn everyone else in a future issue.

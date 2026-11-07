@@ -17,6 +17,7 @@ SLIDE_SIZE = (1080, 1350)
 THUMB_SIZE = (1280, 720)
 ASPECTS = {"short": "9:16", "mid": "9:16", "long": "16:9", "carousel": "4:5", "image": "4:5"}
 SHORT_MAX_SECONDS = 90.0
+TIKTOK_CUT_MAX_SECONDS = 180.0  # TikTok-only cuts aim for 60-90s; warn only when far over
 
 
 class MediaError(RuntimeError):

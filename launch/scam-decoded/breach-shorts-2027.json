@@ -1,0 +1,313 @@
+[
+ {
+  "format": "short",
+  "pillar": "identity theft and credit freezes",
+  "platforms": [
+   "instagram",
+   "youtube"
+  ],
+  "post_on": "2027-04-17 12:00",
+  "topic": "data breach",
+  "look": "screen recording",
+  "original_element": "Dhruv scrolls through scamdecoded.netlify.app/breached/ on his own phone, ticking the boxes as he talks.",
+  "idea_angle": "Breach checklist push: The order to work through after a data breach notice, from our free checklist.",
+  "script": {
+   "title": "Got a data breach letter? 8 steps, in the right order",
+   "hook": "8 steps after a data breach letter, and the order matters more than you'd think.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Eight steps after a data breach letter, and the order matters. Here's the list I use.",
+     "on_screen_text": "8 steps. In order.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv's screen: the breach checklist page No text, no logos, no real people."
+    },
+    {
+     "heading": "First",
+     "narration": "First, find out what leaked: email and password, card, bank account, or Social Security number. Each one needs different steps.",
+     "on_screen_text": "1. What leaked?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv's screen: step 1 ticked No text, no logos, no real people."
+    },
+    {
+     "heading": "Then",
+     "narration": "Change the password and anywhere you reused it, and turn on two-step sign-in. Card exposed? Call the bank. Social Security number? Freeze your credit at all three bureaus, and get an IRS IP PIN.",
+     "on_screen_text": "Passwords, bank, freeze, IP PIN",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv's screen: steps 3 to 6 No text, no logos, no real people."
+    },
+    {
+     "heading": "Last",
+     "narration": "Then the official steps at identity theft dot gov, and one warning: the scam follow-ups. The whole list is free, link in bio.",
+     "on_screen_text": "Free checklist: link in bio",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a checklist No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "A breach letter says what leaked, but not what to do first. Here's the order.\n\nFree data breach checklist, 8 steps with links to the official sites: link in bio (scamdecoded.netlify.app/breached). Not sure about a follow-up message? Paste it into our free scam checker.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "databreach",
+    "identitytheft",
+    "creditfreeze",
+    "privacy",
+    "scamdecoded"
+   ],
+   "description": "The order to work through after a data breach notice, from our free checklist. Checklist: https://scamdecoded.netlify.app/breached/",
+   "thumbnail_text": "Breach letter? 8 steps",
+   "sources": [
+    "https://www.identitytheft.gov/databreach",
+    "https://consumer.ftc.gov/consumer-alerts/2022/10/have-you-been-affected-data-breach-read",
+    "https://consumer.ftc.gov/consumer-alerts/2025/09/get-credit-freeze-stop-identity-thieves"
+   ],
+   "claims_to_verify": [
+    "IdentityTheft.gov lists steps for each type of exposed information (FTC)",
+    "A credit freeze is free (FTC)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "identity theft and credit freezes",
+  "platforms": [
+   "instagram",
+   "youtube"
+  ],
+  "post_on": "2027-04-24 12:00",
+  "topic": "data breach",
+  "look": "face cam",
+  "original_element": "Dhruv on camera, acting out the call with his own phone; illustrated beat for the code.",
+  "idea_angle": "Breach checklist push: The fake fraud team call that follows data breach news, and what to do instead.",
+  "script": {
+   "title": "'Your account was in the breach': 1 call to hang up on",
+   "hook": "1 call comes a few days after breach news, from your 'bank's fraud team'. Hang up.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "One call, a few days after a breach is in the news. This is your bank's fraud team. Your account was in the breach.",
+     "on_screen_text": "'Your account was in the breach'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv on camera holding a phone No text, no logos, no real people."
+    },
+    {
+     "heading": "The ask",
+     "narration": "We need to secure it now. Read me the code we just texted you. That code signs them in as you.",
+     "on_screen_text": "'Read me the code'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone with a six-digit code No text, no logos, no real people."
+    },
+    {
+     "heading": "The tell",
+     "narration": "Your bank won't ask for a code, a password or your PIN, and won't ask you to move money to keep it safe.",
+     "on_screen_text": "Banks don't ask for codes",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a bank with a red X over a code No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Hang up and call the number on your card. Then do the breach checklist. It's free, link in bio.",
+     "on_screen_text": "Call the number on your card",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes hanging up a phone No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "Breach in the news, then a call: 'Your account was in the breach. Read me the code we just sent so we can secure it.' That's the scammer, using the news.\n\nFree data breach checklist, 8 steps with links to the official sites: link in bio (scamdecoded.netlify.app/breached). Not sure about a follow-up message? Paste it into our free scam checker.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "databreach",
+    "bankscam",
+    "fraudalert",
+    "phonescam",
+    "scamdecoded"
+   ],
+   "description": "The fake fraud team call that follows data breach news, and what to do instead. Checklist: https://scamdecoded.netlify.app/breached/",
+   "thumbnail_text": "'Fraud team' calling? Hang up.",
+   "sources": [
+    "https://consumer.ftc.gov/consumer-alerts/2022/10/have-you-been-affected-data-breach-read",
+    "https://www.identitytheft.gov/databreach"
+   ],
+   "claims_to_verify": [
+    "Scammers use data breach news to contact people pretending to help (FTC)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "identity theft and credit freezes",
+  "platforms": [
+   "instagram",
+   "youtube"
+  ],
+  "post_on": "2027-05-01 12:00",
+  "topic": "data breach",
+  "look": "walkthrough",
+  "original_element": "Walkthrough of a fictional settlement text with the flags lighting up, in the originality/render.mjs style.",
+  "idea_angle": "Breach checklist push: The fake breach settlement text, and how to find a real settlement.",
+  "script": {
+   "title": "Breach settlement with a $25 fee? 0 real claims charge you",
+   "hook": "$412 from a data breach settlement, after a $25 processing fee. Real claims don't charge you.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Four hundred twelve dollars from a data breach settlement. Just pay a twenty-five dollar processing fee.",
+     "on_screen_text": "'$412, after a $25 fee'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough: a text with a payout amount No text, no logos, no real people."
+    },
+    {
+     "heading": "The catch",
+     "narration": "The link goes to a lookalike claim page that takes your card, and often your Social Security number to 'confirm' you.",
+     "on_screen_text": "The link takes your card",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough: a fake claim form No text, no logos, no real people."
+    },
+    {
+     "heading": "The tell",
+     "narration": "A real settlement doesn't charge a fee to file a claim. Find it through the court notice or a news story, not a text.",
+     "on_screen_text": "Real claims cost $0",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a court building with a $0 tag No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Delete the text. Then do the breach checklist, because the real breach still happened. Link in bio.",
+     "on_screen_text": "Delete it. Do the checklist.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a phone No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "Big breaches often end in real settlements, and scammers copy them. A real claim form doesn't charge a fee.\n\nFree data breach checklist, 8 steps with links to the official sites: link in bio (scamdecoded.netlify.app/breached). Not sure about a follow-up message? Paste it into our free scam checker.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "databreach",
+    "classaction",
+    "settlement",
+    "textscam",
+    "scamdecoded"
+   ],
+   "description": "The fake breach settlement text, and how to find a real settlement. Checklist: https://scamdecoded.netlify.app/breached/",
+   "thumbnail_text": "Settlement fee? No.",
+   "sources": [
+    "https://consumer.ftc.gov/consumer-alerts/2022/10/have-you-been-affected-data-breach-read",
+    "https://www.identitytheft.gov/databreach"
+   ],
+   "claims_to_verify": [
+    "Scammers use breach news to send fake offers and links (FTC)",
+    "Legitimate class action settlements don't charge a fee to file a claim"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "identity theft and credit freezes",
+  "platforms": [
+   "instagram",
+   "youtube"
+  ],
+  "post_on": "2027-05-08 12:00",
+  "topic": "data breach",
+  "look": "illustrated",
+  "original_element": "Illustrated beats: two padlocks, one on a credit report and one on a tax form.",
+  "idea_angle": "Breach checklist push: A credit freeze and an IRS IP PIN: the two free locks after an SSN breach.",
+  "script": {
+   "title": "SSN in a breach? 2 free locks to turn on today",
+   "hook": "2 free locks protect you when your Social Security number shows up in a breach.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Two free locks, when your Social Security number shows up in a breach letter.",
+     "on_screen_text": "SSN leaked? 2 free locks",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding two padlocks No text, no logos, no real people."
+    },
+    {
+     "heading": "Lock 1",
+     "narration": "A credit freeze, at Equifax, Experian and TransUnion. It's free, it doesn't hurt your score, and it stops new accounts in your name.",
+     "on_screen_text": "1. Freeze your credit",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a padlock on a credit report No text, no logos, no real people."
+    },
+    {
+     "heading": "Lock 2",
+     "narration": "An IRS identity protection PIN. Six digits, free, and nobody can e-file a federal return with your number without it.",
+     "on_screen_text": "2. Get an IP PIN",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a padlock on a tax form No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Both links are on our free breach checklist, with the other six steps. Link in bio.",
+     "on_screen_text": "Both links: breach checklist",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes giving a thumbs up No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "If a breach letter says your Social Security number was exposed, two free locks do most of the work.\n\nFree data breach checklist, 8 steps with links to the official sites: link in bio (scamdecoded.netlify.app/breached). Not sure about a follow-up message? Paste it into our free scam checker.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "databreach",
+    "ssn",
+    "creditfreeze",
+    "ippin",
+    "scamdecoded"
+   ],
+   "description": "A credit freeze and an IRS IP PIN: the two free locks after an SSN breach. Checklist: https://scamdecoded.netlify.app/breached/",
+   "thumbnail_text": "SSN leaked? 2 free locks",
+   "sources": [
+    "https://consumer.ftc.gov/consumer-alerts/2025/09/get-credit-freeze-stop-identity-thieves",
+    "https://www.irs.gov/identity-theft-fraud-scams/get-an-identity-protection-pin",
+    "https://www.identitytheft.gov/databreach"
+   ],
+   "claims_to_verify": [
+    "A credit freeze is free and stops new accounts being opened in your name (FTC)",
+    "An IRS IP PIN stops others e-filing a federal return with your SSN (IRS)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "identity theft and credit freezes",
+  "platforms": [
+   "instagram",
+   "youtube"
+  ],
+  "post_on": "2027-05-15 12:00",
+  "topic": "data breach",
+  "look": "quiz pause",
+  "original_element": "Quiz format with a real 3-second pause card; the answer beat shows haveibeenpwned.com typed into a browser.",
+  "idea_angle": "Breach checklist push: The 'your info is on the dark web' email, and the free way to check.",
+  "script": {
+   "title": "'Your data is on the dark web': real alert or sales pitch?",
+   "hook": "1 email says your data is on the dark web. Pause: real alert or sales pitch?",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "One email. Your personal information was found on the dark web. Scan now to see what's exposed.",
+     "on_screen_text": "'Found on the dark web'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. an email with a skull icon No text, no logos, no real people."
+    },
+    {
+     "heading": "Pause",
+     "narration": "Pause. Real alert, or sales pitch? Decide before I tell you.",
+     "on_screen_text": "Pause: real or pitch?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a full-screen countdown card No text, no logos, no real people."
+    },
+    {
+     "heading": "Answer",
+     "narration": "Usually a pitch, or a phishing link. The FTC warns about these emails. You can check your own email address for free at have I been pwned dot com, typed in yourself.",
+     "on_screen_text": "Check free, typed yourself",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a browser with haveibeenpwned.com No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "If it finds breaches, our free checklist says what to do next, step by step. Link in bio.",
+     "on_screen_text": "Next steps: breach checklist",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a checklist No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "The FTC warns about emails saying your personal info is for sale on the dark web. Many want you to click, pay or install something. You can check your email address for free.\n\nFree data breach checklist, 8 steps with links to the official sites: link in bio (scamdecoded.netlify.app/breached). Not sure about a follow-up message? Paste it into our free scam checker.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "darkweb",
+    "databreach",
+    "phishing",
+    "privacy",
+    "scamdecoded"
+   ],
+   "description": "The 'your info is on the dark web' email, and the free way to check. Checklist: https://scamdecoded.netlify.app/breached/",
+   "thumbnail_text": "Dark web alert? Pause.",
+   "sources": [
+    "https://consumer.ftc.gov/consumer-alerts/2022/09/did-you-get-email-saying-your-personal-info-sale-dark-web",
+    "https://haveibeenpwned.com/"
+   ],
+   "claims_to_verify": [
+    "Scammers send emails claiming your info is for sale on the dark web (FTC)",
+    "Have I Been Pwned lets you check your email address against known breaches for free"
+   ]
+  }
+ }
+]

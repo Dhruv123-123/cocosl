@@ -1,6 +1,6 @@
 ---
 title: Budgeting app vs spreadsheet vs notebook: an honest comparison
-seo_title: Budgeting app vs spreadsheet vs notebook: which is best for you?
+seo_title: "Budgeting app vs spreadsheet vs notebook: which is best?"
 description: The best budgeting tool is the one you'll still open next month. Honest pros and cons of apps, spreadsheets and paper, and how to choose in two minutes.
 date: 2026-11-07
 pillar: money-tools

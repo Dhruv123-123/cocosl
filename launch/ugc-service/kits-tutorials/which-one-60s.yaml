@@ -1,0 +1,22 @@
+# Tutorial 5 in TUTORIALS.md: "Which one do I need?", about a minute. For the bundle page and pinned on TikTok.
+id: which-one-60s
+title: "Which kit do I need?"
+size: [1920, 1080]
+palette: ["#16181d", "#f6efe6", "#e9b949"]
+footage_dir: footage/which-one-60s
+beats:
+  - image: bun-hook.png
+    say: "Three tools for shops that don't want to film."
+  - footage: bun-listing.mp4
+    say: "Listing videos for Etsy and your shop: the listing video kit."
+    seconds: 7
+  - footage: bun-pin.mp4
+    say: "Pins and video pins: the pin maker."
+    seconds: 6
+  - footage: bun-sea.mp4
+    say: "Holiday sale posts, from Valentine's to Black Friday: the seasonal sale kit."
+    seconds: 7
+  - image: bun-choose.png
+    say: "Want all three? Get the bundle. Just trying it out? Start with the free lite maker."
+  - image: bun-end.png
+    say: "The links are on this page."

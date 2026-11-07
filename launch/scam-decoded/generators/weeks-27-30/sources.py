@@ -1,0 +1,47 @@
+# All URLs checked Nov 7 2026 via search results on the official sites.
+OIG_GENETIC = "https://oig.hhs.gov/fraud/consumer-alerts/fraud-alert-genetic-testing-scam"
+FTC_DNA = "https://consumer.ftc.gov/consumer-alerts/2019/07/medicare-does-not-give-out-dna-kits"
+OIG_BRACE = "https://oig.hhs.gov/fraud/consumer-alerts/alerts/bracescam.asp"
+MEDICARE_FRAUD = "https://www.medicare.gov/publications/10111-protecting-yourself-from-fraud.pdf"
+MEDICARE_4RS = "https://www.medicare.gov/publications/11610-4rs-for-fighting-medicare-fraud.pdf"
+FTC_HEALTH = "https://consumer.ftc.gov/articles/spot-health-insurance-scams"
+FTC_GRAND_DOOR = "https://www.consumer.ftc.gov/blog/2021/04/dont-open-your-door-grandparent-scams"
+IC3_COURIER = "https://www.ic3.gov/PSA/2021/PSA210729"
+FTC_EMERG = "https://consumer.ftc.gov/articles/scammers-use-fake-emergencies-steal-your-money"
+FTC_AI_VOICE = "https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes"
+
+FTC_JOB_TEXT = "https://consumer.ftc.gov/consumer-alerts/2026/04/job-offer-text-probably-scam"
+FTC_TELEGRAM = "https://consumer.ftc.gov/consumer-alerts/2023/07/job-offer-through-telegram-messenger-not-so-fast"
+FTC_SSN_WA = "https://consumer.ftc.gov/consumer-alerts/2024/08/dont-send-your-social-security-number-employer-whatsapp-its-scam"
+FTC_STUDENT_JOBS = "https://consumer.ftc.gov/consumer-alerts/2025/05/college-students-avoid-scammers-while-you-job-hunt"
+FTC_JOBS = "https://consumer.ftc.gov/articles/job-scams"
+FTC_CHECKS = "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams"
+FTC_SCHOLAR = "https://consumer.ftc.gov/articles/how-avoid-scholarship-and-financial-aid-scams"
+FTC_SCHOOL = "https://consumer.ftc.gov/articles/paying-school-and-avoiding-scams"
+FTC_RENTAL = "https://consumer.ftc.gov/articles/rental-listing-scams"
+FTC_RENTAL_ALERT = "https://consumer.ftc.gov/consumer-alerts/2024/07/avoiding-rental-listing-scams"
+FTC_RENTAL_DATA = ("https://ftc.gov/news-events/data-visualizations/data-spotlight/2025/12/"
+                   "rental-scams-hit-home-65-million-reported-losses")
+
+VA_POACH = "https://benefits.va.gov/BENEFITS/factsheets/limitedincome/pension-poaching.pdf"
+VAOIG_POACH = "https://vaoig.gov/sites/default/files/document/2025-06/pension_poaching_fraud_alert_june_2025_final_to_50p.pdf"
+VA_NEWS_POACH = "https://news.va.gov/111196/prevent-pension-poaching-fraud-protect-benefits/"
+VA_REP = "https://www.va.gov/get-help-from-accredited-representative/"
+VA_ACCRED = "https://www.va.gov/ogc/apps/accreditation/"
+FTC_VET_BENEFITS = "https://consumer.ftc.gov/articles/veterans-pension-and-disability-benefits"
+FTC_VET_CHARITY = ("https://consumer.ftc.gov/articles/"
+                   "what-know-donating-help-first-responders-active-duty-military-veterans-and-their-families")
+FTC_CHARITY = "https://consumer.ftc.gov/articles/giving-charity"
+FTC_MIL_ROMANCE = "https://consumer.ftc.gov/consumer-alerts/2023/07/military-consumers-and-romance-scams"
+ARMY_ROMANCE = ("https://www.army.mil/article/271189/"
+                "three_scams_that_commonly_target_the_military_romance_frauds_sextortion_and_impersonation")
+FTC_ROMANCE = "https://consumer.ftc.gov/articles/what-know-about-romance-scams"
+
+FTC_AIRLINE = "https://consumer.ftc.gov/consumer-alerts/2024/07/scammers-impersonate-airline-customer-service-representatives"
+FTC_TRAVEL = "https://consumer.ftc.gov/articles/avoid-scams-when-you-travel"
+FTC_TRAVEL_2026 = "https://consumer.ftc.gov/consumer-alerts/2026/06/how-avoid-travel-scam-summer"
+FTC_SKIM = "https://consumer.ftc.gov/consumer-alerts/2018/08/watch-out-card-skimming-gas-pump"
+FBI_SKIM = "https://www.fbi.gov/how-we-can-help-you/common-frauds-and-scams/skimming"
+REPORT = "https://reportfraud.ftc.gov/"
+SPOT = ("https://www.ftc.gov/news-events/data-visualizations/data-spotlight/2026/04/"
+        "reported-losses-scams-social-media-eight-times-higher-2020")

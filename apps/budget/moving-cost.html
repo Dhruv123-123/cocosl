@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moving Cost Calculator: Truck, Movers, Deposits and Every Other Cost | Money Made Simple</title>
+<meta name="description" content="Work out what your move will really cost: truck or movers, gas, packing, storage, travel, deposits, overlap rent and time off work. Get starting estimates, swap in quotes, track what you paid and export to CSV. Free, private, no sign-up.">
+<meta property="og:title" content="What will your move really cost?">
+<meta property="og:description" content="Work out what your move will really cost: truck or movers, gas, packing, storage, travel, deposits, overlap rent and time off work. Get starting estimates, swap in quotes, track what you paid and export to CSV. Free, private, no sign-up.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="alternate" hreflang="en" href="moving-cost.html">
+<link rel="alternate" hreflang="es" href="costo-mudanza.html">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Moving cost", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does it cost to move?", "acceptedAnswer": {"@type": "Answer", "text": "It depends most on distance, how much stuff you have and whether you hire movers. A local move with a rented truck can stay in the hundreds; a long move with full-service movers often runs into the thousands. The costs people forget are the deposit, a few days of paying two rents and time off work."}}, {"@type": "Question", "name": "Are these estimates accurate?", "acceptedAnswer": {"@type": "Answer", "text": "They're rules of thumb so you have somewhere to start, not quotes. Get at least three written quotes from movers or truck companies and type them in. The assumptions are listed on the page."}}, {"@type": "Question", "name": "How do I avoid moving scams?", "acceptedAnswer": {"@type": "Answer", "text": "Use movers with a USDOT number for interstate moves and check it on the FMCSA website. Be wary of a quote far below the others, a large cash deposit, or a quote given without seeing your things."}}]}</script>
+<script type="module" src="lib/embed-page.js"></script>
+</head>
+<body class="sf wd">
+<header class="top">
+  <a class="logo" href="../" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Moving cost</span></a>
+  <a class="badge" href="costo-mudanza.html" hreflang="es" lang="es">Español</a>
+</header>
+<main>
+  <h1 class="page-title">What will your move really cost?</h1>
+  <p class="lede">Movers are only part of it. Deposits, a few days of double rent, gas, hotels and time off work add up. Tell us about the move for starting estimates, then swap in real quotes as you get them. Saved in this browser only.</p>
+
+  <form id="trip" class="card deal-form">
+    <h2 class="full">About the move</h2>
+    <label>Distance (miles)<input name="miles" type="number" min="0" step="1" inputmode="numeric" placeholder="25"></label>
+    <label>Home size<select name="size"><option value="studio">Studio</option><option value="1br">1 bedroom</option><option value="2br">2 bedrooms</option><option value="3br">3 bedrooms</option><option value="4br">4+ bedrooms</option></select></label>
+    <label class="full">How you&#x27;re moving<select name="method"><option value="diy">Rent a truck and do it yourself</option><option value="container">Moving container or pod</option><option value="movers">Full-service movers</option></select></label>
+    <label>Cars you&#x27;re driving there<input name="cars" type="number" min="0" max="5" step="1" inputmode="numeric"></label>
+    <label>People traveling<input name="people" type="number" min="1" max="10" step="1" inputmode="numeric"></label>
+    <label>New monthly rent ($)<input name="newRent" type="number" min="0" step="10" inputmode="decimal"></label>
+    <label>Deposit (months of rent)<input name="depositMonths" type="number" min="0" max="3" step="0.5" inputmode="decimal"></label>
+    <label>Days paying two rents<input name="overlapDays" type="number" min="0" max="60" step="1" inputmode="numeric"></label>
+    <label>Months of storage<input name="storageMonths" type="number" min="0" max="24" step="1" inputmode="numeric"></label>
+    <label>Unpaid days off work<input name="daysOff" type="number" min="0" max="30" step="1" inputmode="numeric"></label>
+    <label>Your pay for a day ($)<input name="dayPay" type="number" min="0" step="10" inputmode="decimal"></label>
+    <div class="full row"><button class="btn" type="submit">Fill in starting estimates</button><span id="fill-msg" class="tiny" role="status"></span></div>
+    <p id="assume" class="tiny full"></p>
+  </form>
+
+  <section class="card" aria-labelledby="h-plan">
+    <h2 id="h-plan">Your moving budget</h2>
+    <label class="inline">Saved for the move so far ($)<input id="saved" type="number" min="0" step="1" inputmode="decimal"></label>
+    <div id="stats" class="stats" aria-live="polite"></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-cats">
+    <h2 id="h-cats">Costs</h2>
+    <p class="tiny">Each cost shows what&#x27;s left to pay, or how far over your estimate the real cost came in.</p>
+    <ul id="cats" class="funds"></ul>
+  </section>
+
+  <section class="card" id="export" hidden>
+    <h2>Put it in your spreadsheet</h2>
+    <p>Copy the rows and paste them into the &quot;Planner paste&quot; tab of the Moving Budget Sheet at cell B7 (Category, Estimate, Actual, Paid), or download a CSV for Google Sheets or Excel.</p>
+    <label for="t-rows" class="sr-only">Rows to paste into the spreadsheet</label><textarea id="t-rows" rows="4" readonly></textarea>
+    <div class="row" style="margin-top:10px"><button id="copy" class="btn small" type="button">Copy rows</button><button id="csv" class="btn ghost small" type="button">Download as CSV</button></div>
+    <p id="copy-msg" class="tiny" aria-live="polite"></p>
+    <div class="offer-box" id="upsell" hidden></div>
+  </section>
+
+  <section class="card faq">
+    <h3>How much does it cost to move?</h3>
+    <p>It depends most on distance, how much stuff you have and whether you hire movers. A local move with a rented truck can stay in the hundreds; a long move with full-service movers often runs into the thousands. The costs people forget are the deposit, a few days of paying two rents and time off work.</p>
+    <h3>Are these estimates accurate?</h3>
+    <p>They&#x27;re rules of thumb so you have somewhere to start, not quotes. Get at least three written quotes from movers or truck companies and type them in. The assumptions are listed on the page.</p>
+    <h3>How do I avoid moving scams?</h3>
+    <p>Use movers with a USDOT number for interstate moves and check it on the FMCSA website. Be wary of a quote far below the others, a large cash deposit, or a quote given without seeing your things.</p>
+  </section>
+</main>
+<footer><p><a href="../">All free tools</a> · <a href="sinking-funds.html">Sinking funds</a> · <a href="split-bills.html">Split bills</a> · Not financial advice. Nothing you type leaves this browser. Made by Money Made Simple.</p></footer>
+<script type="module" src="moving-cost.js"></script>
+</body>
+</html>

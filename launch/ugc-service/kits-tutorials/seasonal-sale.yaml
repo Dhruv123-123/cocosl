@@ -1,0 +1,29 @@
+# Tutorial 3 in TUTORIALS.md: Seasonal Sale Kit, about 2½ minutes.
+id: seasonal-sale
+title: "Holiday sale posts from your photos"
+size: [1920, 1080]
+palette: ["#16181d", "#fbf1f1", "#c2324e"]
+footage_dir: footage/seasonal-sale
+beats:
+  - footage: sea-hook.mp4
+    say: "Valentine's Day to Black Friday, plus Easter, Father's Day and back to school. One tool, three styles each."
+  - footage: sea-open.mp4
+    say: "Open the seasonal sale maker and add your photos."
+  - footage: sea-style.mp4
+    say: "Pick the season, then the style. Sale reveal shows your offer and the end date."
+  - footage: sea-offer.mp4
+    say: "Type the offer exactly as it runs, and the real end date with a time zone."
+  - footage: sea-honest.mp4
+    say: "The maker won't save until you tick this box. If you show a 'was' price, it has to be one you actually charged."
+  - footage: sea-export.mp4
+    say: "Square video, vertical video, or an image."
+  - footage: sea-gift.mp4
+    say: "No sale? Gift idea needs no discount: who it's for, and an order-by date that matches your shipping."
+  - footage: sea-lastcall.mp4
+    say: "Last call is only for the real final hours of a sale. Don't extend it."
+  - footage: sea-colours.mp4
+    say: "Each season has its own colours, or pick yours."
+  - image: sea-guide.png
+    say: "The guide has the key dates and a posting plan: gift ideas first, then the reveal, then last call."
+  - image: sea-etsy.png
+    say: "If you sell on Etsy, set the same sale up in Etsy's own sales tool, so the listing shows the same discount."

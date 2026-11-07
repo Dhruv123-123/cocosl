@@ -48,7 +48,10 @@ only you can do: payouts, accounts, API keys).
 
 Ready-made launch material lives in `launch/`: two weeks of scripts for the example finance brand,
 a sellable product (guide PDF + spreadsheet), the ad studio's website, rate card, pitch templates,
-contract template and the launch-day plan.
+contract template and the launch-day plan. `launch/scam-decoded/` is a second brand (scam and identity-theft
+explainers) with Shorts, 60–90s TikTok cuts routed by platform, carousels and a printable product; turn any of
+its content files into a postable folder with
+`factory launch-pack launch/scam-decoded/content.json --brand scam-decoded --out dist/scam-decoded`.
 
 ## Website and email funnel
 
@@ -75,6 +78,8 @@ factory triage                                # everything waiting on you, most 
 
 # Make and review content
 factory import launch/money-made-simple/content.json --brand money-made-simple
+factory pack export --brand money-made-simple --file launch/money-made-simple/month-1/content.json \
+  --start 2026-11-21 --days 30 --out month-1/   # content.json → per-platform posting calendar + ready-to-post folders
 factory daily --brand money-made-simple       # ideas + 2 drafts into review (never auto-approves)
 factory review-gate [list|pass|require|send-back]   # draft → native_review → legal_review → approved
 factory approve 12 --yes-i-checked --schedule

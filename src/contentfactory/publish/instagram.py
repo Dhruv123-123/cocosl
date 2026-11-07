@@ -4,7 +4,8 @@ Docs used:
 - Content publishing (containers, media_publish, status_code polling, limits):
   https://developers.facebook.com/docs/instagram-platform/content-publishing
 - IG User media params (media_type, share_to_feed, cover_url, is_carousel_item,
-  children <=10, caption <=2200 chars / 5 hashtags (since Dec 2025; was 30), is_ai_generated):
+  children <=10, caption <=2200 chars / 5 hashtags (since Dec 2025; was 30), is_ai_generated,
+  trial_params for Trial Reels via IG_TRIAL_REELS=SS_PERFORMANCE|MANUAL):
   https://developers.facebook.com/documentation/instagram-platform/instagram-graph-api/reference/ig-user/media
 - Media insights (views, reach, likes, comments, shares, saved, total_interactions,
   ig_reels_avg_watch_time, ...; `impressions` deprecated for media after 2024-07-02):
@@ -27,6 +28,7 @@ Setup / review:
 """
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 from ._http import GRAPH_API_VERSION, HttpPublisher, public_url
@@ -37,6 +39,7 @@ from .oauth import instagram_login_refresh_token, meta_long_lived_user_token  # 
 CAPTION_MAX = 2200
 HASHTAG_MAX = 5  # Instagram caps hashtags at 5 per post or Reel since Dec 2025
 CAROUSEL_MIN, CAROUSEL_MAX = 2, 10
+TRIAL_STRATEGIES = ("SS_PERFORMANCE", "MANUAL")
 REEL_METRICS = ["views", "reach", "likes", "comments", "shares", "saved", "total_interactions",
                 "ig_reels_avg_watch_time", "ig_reels_video_view_total_time"]
 FEED_METRICS = ["views", "reach", "likes", "comments", "shares", "saved", "total_interactions",
@@ -96,6 +99,17 @@ class InstagramPublisher(HttpPublisher):
             return {"is_ai_generated": "true"}
         return {}
 
+    def _trial(self) -> dict:
+        """Trial Reels: shown to non-followers first (IG_TRIAL_REELS=SS_PERFORMANCE or MANUAL)."""
+        raw = (self.settings.env("IG_TRIAL_REELS", "") or "").strip().upper()
+        if raw in ("", "0", "FALSE", "NO", "OFF"):
+            return {}
+        strategy = "SS_PERFORMANCE" if raw in ("1", "TRUE", "YES", "ON", "AUTO") else raw
+        if strategy not in TRIAL_STRATEGIES:
+            raise PublishError(f"instagram: IG_TRIAL_REELS must be one of {', '.join(TRIAL_STRATEGIES)} "
+                               f"(or blank), got {raw!r}", retryable=False)
+        return {"trial_params": json.dumps({"graduation_strategy": strategy})}
+
     def _need_url(self, req: PublishRequest, path: Path | None, kind: str) -> str:
         if path is None:
             raise PublishError(f"instagram: no {kind} file to publish", retryable=False)
@@ -138,7 +152,7 @@ class InstagramPublisher(HttpPublisher):
         children: list[str] = []
         if req.format == "short":
             payload = {"media_type": "REELS", "video_url": self._need_url(req, req.video_path, "video"),
-                       "caption": caption, "share_to_feed": "true", **self._ai_flag(req)}
+                       "caption": caption, "share_to_feed": "true", **self._ai_flag(req), **self._trial()}
             if req.thumbnail_path and (cover := _jpeg_url(req.public_urls, req.thumbnail_path)):
                 payload["cover_url"] = cover
             container = self._post(f"{user}/media", "create reel container", **payload)["id"]
@@ -171,6 +185,7 @@ class InstagramPublisher(HttpPublisher):
         return PublishResult(remote_id=media_id, url=permalink, raw={
             "container_id": container, "children": children, "format": req.format,
             "caption_chars": len(caption), "graph_version": GRAPH_API_VERSION,
+            "trial_reel": req.format == "short" and bool(self._trial()),
             "trimmed_caption": caption != req.caption.strip()})
 
     # ------------------------------------------------------------------ metrics

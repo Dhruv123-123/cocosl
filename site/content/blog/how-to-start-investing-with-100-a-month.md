@@ -1,6 +1,6 @@
 ---
 title: How to start investing with $100 a month (complete beginner walkthrough)
-seo_title: How to start investing with $100 a month: a step-by-step beginner guide
+seo_title: "How to start investing with $100 a month"
 description: What to do before you invest, which account to open, what to buy inside it, how to automate it, and what to do the first time the market drops.
 date: 2026-11-07
 pillar: investing

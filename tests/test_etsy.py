@@ -1,0 +1,227 @@
+"""Etsy listings stay inside Etsy's limits, and the printables render without errors."""
+import sys
+from pathlib import Path
+
+ETSY = Path(__file__).resolve().parents[1] / "launch" / "etsy"
+sys.path.insert(0, str(ETSY))
+
+import listings  # noqa: E402
+import printables  # noqa: E402
+import printables_more  # noqa: E402
+
+
+def test_listings_follow_etsy_limits():
+    assert listings.validate() == []
+    assert len(listings.LISTINGS) == 51 and len(listings.OFF_ETSY) == 6  # guide kits are Gumroad only
+    for it in listings.LISTINGS:
+        assert len(it["title"]) <= 140 and len(it["tags"]) == 13
+        assert "DIGITAL DOWNLOAD" in it["description"] and "How it's made" in it["description"]
+
+
+def test_every_printable_has_a_listing_and_pages():
+    for slug, build in {**printables.PRINTABLES, **printables_more.MORE}.items():
+        pages = build()
+        assert len(pages) >= (3 if slug in printables.PRINTABLES else 2), slug
+        assert listings.BY_SLUG[slug]["kind"] == "printable"
+        assert all("moneymadesimple" in p for p in pages)
+
+
+def test_printable_prices_are_low_cost():
+    prices = [it["price"] for it in listings.LISTINGS if it["kind"] == "printable" and not it.get("dated") and not it.get("digital") and not it.get("standalone")]
+    assert len(prices) == 40 and all(3 <= p <= 8 for p in prices)
+    binder = listings.BY_SLUG["budget-binder-bundle"]
+    assert binder["price"] < sum(listings.BY_SLUG[s]["price"] for s in binder["bundle"])
+
+
+def test_savings_tiles_add_up_exactly():
+    for target in printables.TILE_SETS:
+        assert sum(printables.tiles_for(target)) == target
+
+
+def test_fees_math():
+    f = listings.fees(10.0)
+    assert f["total"] == round(0.20 + 0.65 + 0.55, 2) and f["net"] == round(10 - f["total"], 2)
+
+
+def test_new_printables_are_new_and_bundled():
+    assert len(printables_more.MORE) == 30
+    assert not set(printables_more.MORE) & set(printables.PRINTABLES)
+    mega = listings.BY_SLUG["mega-budget-bundle"]
+    every = [x["slug"] for x in listings.LISTINGS if x["kind"] == "printable" and not x.get("dated") and not x.get("digital") and not x.get("standalone")]
+    assert sorted(mega["bundle"]) == sorted(every) and len(every) == 40
+    for b in ("mega-budget-bundle", "savings-challenge-pack", "budget-binder-bundle"):
+        it = listings.BY_SLUG[b]
+        assert it["price"] < sum(listings.BY_SLUG[s]["price"] for s in it["bundle"])
+
+
+def test_new_challenges_add_up():
+    assert sum(printables_more.BINGO[1000]) == 1000 and sum(printables_more.BINGO[2000]) == 2000
+    assert len(printables_more.BINGO[1000]) == 24
+    for target, pattern in printables_more.THIRTY_DAY.items():
+        days = printables_more._days(pattern, target)
+        assert len(days) == 30 and sum(days) == target
+    assert sum(range(1, 101)) == 5050 and sum(range(1, 51)) == 1275
+    for goal, per_check in printables_more.PAYCHECK_GOALS:
+        assert per_check * 26 == goal
+
+
+def test_mockgen_layouts_render_html():
+    sys.path.insert(0, str(ETSY))
+    import mockgen
+    pages = [Path("/tmp/a.png"), Path("/tmp/b.png"), Path("/tmp/c.png")]
+    o = dict(title="Savings Bingo", price=3, label="Printable", chips=["Instant download"], brand="MMS")
+    for size, (w, h) in mockgen.SIZES.items():
+        doc = mockgen.hero(o, pages, w, h)
+        assert f"width:{w}px;height:{h}px" in doc.replace(" ", "") or f"width:{w}px" in doc
+        assert "Savings Bingo" in doc and "$3" in doc
+    assert "40 items" in mockgen.inside(o, pages, 2000, 1500, count=40)
+
+
+def test_2027_planner_dates_are_right():
+    import calendar as cal
+    from datetime import date
+    import planner_2027 as P
+    k = P.key_dates(2027)
+    assert date(2027, 1, 18) in k and date(2027, 5, 31) in k and date(2027, 9, 6) in k and date(2027, 11, 25) in k
+    assert "Tax Day" in k[date(2027, 4, 15)] and len(P.build(2027)) == 48
+    for start, first in (("sun", 6), ("mon", 0)):
+        for m in range(1, 13):
+            weeks = P._weeks(2027, m, start)
+            assert all(wk[0].weekday() == first for wk in weeks)
+            assert sum(d.month == m for wk in weeks for d in wk) == cal.monthrange(2027, m)[1]
+    it = listings.BY_SLUG["2027-budget-planner"]
+    assert it["dated"] and it["price"] == 12 and len(it["variants"]) * 2 <= 5
+    assert "2027-budget-planner" not in listings.BY_SLUG["mega-budget-bundle"]["bundle"]
+
+
+def test_seo_covers_every_listing():
+    import seo
+    assert set(seo.S) == set(listings.BY_SLUG) | {it["slug"] for it in listings.OFF_ETSY}
+    for it in listings.LISTINGS:
+        assert len(it["title"].split()) <= 15 and it["title"] == seo.TITLE_FIX.get(it["slug"], seo.S[it["slug"]][0])
+        assert it["attributes"]["Primary color"] and len(it["tags"]) == 13
+        assert "Attributes" in listings.listing_md(it)
+    assert "debt snowball" in listings.BY_SLUG["debt-snowball-worksheet"]["tags"]
+
+
+def test_pod_posters_copy_and_layout():
+    import sys as _s
+    _s.path.insert(0, str(Path(__file__).resolve().parents[1] / "launch" / "pod"))
+    import posters
+    import build_pod
+    assert len(posters.POSTERS) == 10 and len({p["slug"] for p in posters.POSTERS}) == 10
+    for p in posters.POSTERS:
+        assert len(p["title"]) <= 140 and len(p["title"].split()) <= 15
+        assert len(p["tags"]) == 13 and len(set(p["tags"])) == 13 and all(len(t) <= 20 for t in p["tags"])
+        d = posters.description(p)
+        assert "production partner" in d and "not financial advice" in d and "AI" in d
+        for k in posters.RATIOS:
+            h = build_pod.poster_html(p, k)
+            assert '<div class="chart">' in h and "please don't resell" not in h
+
+
+def test_kdp_book_specs():
+    import sys as _s
+    _s.path.insert(0, str(Path(__file__).resolve().parents[1] / "launch" / "kdp"))
+    import build_kdp as K
+    for year in (2027, 2028):
+        pages = K.interior_pages(year)
+        assert len(pages) % 4 == 0 and 24 <= len(pages) <= 150
+        assert not any("Etsy" in p or "resell" in p for p in pages)
+    n = len(K.interior_pages(2027))
+    w, h = K.cover_size(n)
+    assert abs(w - (0.25 + 17 + n * 0.002252)) < 1e-3 and h == 11.25
+    assert "Not financial" not in K.cover_html(2027, n) and "not financial advice" in K.cover_html(2027, n)
+
+
+def test_kdp_journals():
+    import build_kdp as K
+    for key in ("debt-journal", "savings-log"):
+        pages = K.book_pages(key)
+        assert len(pages) % 4 == 0 and 24 <= len(pages) <= 150 and "Copyright" in pages[1]
+        assert not any("Etsy" in p for p in pages)
+    log = K.book_pages("savings-log")
+    assert sum('Week <em>' in p for p in log) == 52 and sum("Quarter <em>" in p for p in log) == 4
+    assert sum(range(1, 53)) == 1378
+
+
+def test_dated_planner_listing_is_consistent():
+    """The 2027 planner says it's dated (never "undated") and counts the four PDFs it ships."""
+    import listings as L
+    d = L.BY_SLUG["2027-budget-planner"]["description"]
+    assert "undated" not in d.lower() and "Two PDFs" not in d
+    assert "Dated for 2027" in d and "4 PDFs" in d
+
+
+def test_scouting_etsy_fixes():
+    """research/scouting/etsy-seo-playbook.md (PR #2): first line names the item, no repeated title words,
+    multi-word tags, a clean first photo and 7 photos at 2700x2025."""
+    import listings
+    import mockgen
+    for it in listings.LISTINGS:
+        first = it["description"].split("\n")[0]
+        assert first.startswith(f"This {it['name'].split(' (')[0].removeprefix('The ')} is "), it["slug"]
+        assert "google sheets" not in it["tags"] or it["kind"] == "printable"
+    assert listings.validate() == []
+    pages = [Path("/x/p1.png"), Path("/x/p2.png"), Path("/x/p3.png")]
+    o = dict(title="Savings Bingo", price=3, chips=["Instant download"])
+    names = [n for n, _ in mockgen.etsy_set(o, pages, 2000, 1500)]
+    assert names[0] == "mockup-01-clean" and len(names) == 7
+    first = mockgen.etsy_set(o, pages, 2000, 1500)[0][1]
+    assert "<h1" not in first and "Savings Bingo" not in first      # no text on the first photo
+    assert round(2000 * mockgen.ETSY_SCALE) == 2700 and round(1500 * mockgen.ETSY_SCALE) == 2025
+
+
+def test_january_prices_are_scheduled_not_applied():
+    """Scouting's Jan 2027 pricing: $3 singles to $4 and the 12-challenge pack to $10, from Jan 1 only."""
+    import listings
+    jan = {it["slug"]: it for it in listings.LISTINGS if "jan1_price" in it}
+    assert len(jan) == 36 and jan["savings-challenge-pack"]["jan1_price"] == 10
+    assert all(it["price"] == 3 and it["jan1_price"] == 4 for s, it in jan.items() if s != "savings-challenge-pack")
+    md = listings.listing_md(jan["savings-bingo"])
+    assert "From Jan 1 2027: $4.00" in md and "was" not in md.lower().split("## listing details")[0]
+
+
+def test_digital_planner_links_point_at_real_pages_and_it_is_undated():
+    import re
+    import digital_planner as DP
+    pages = DP.pages()
+    ids = [p[0] for p in pages]
+    assert len(ids) == len(set(ids))
+    for pid, page in zip(ids, DP.build()):
+        targets = re.findall(r'href="#([^"]+)"', page)
+        assert set(targets) <= set(ids), (pid, set(targets) - set(ids))
+        assert not re.search(r'href="(?!#)', page), pid          # no links out of the file
+        assert not re.search(r"\b20\d\d\b", page), pid           # undated
+        if pid != "cover":
+            assert len(targets) >= 19, pid                       # the tab bar plus month links on every page
+    assert listings.BY_SLUG["digital-budget-planner"]["slug"] not in listings.BY_SLUG["mega-budget-bundle"]["bundle"]
+
+
+def test_couples_pack_is_seasonal_and_adds_up():
+    import couples_pack as CP
+    it = listings.BY_SLUG["couples-money-date-pack"]
+    assert it["seasonal"] == "Valentine's Day" and it["kind"] == "printable"
+    assert it["slug"] not in listings.BY_SLUG["mega-budget-bundle"]["bundle"]
+    assert CP.HEART_GOAL == 500 and len(CP.HEARTS) == 50 and len(CP.pages()) == 9
+    assert all("moneymadesimple" in p for p in CP.pages())
+
+
+def test_life_planner_says_it_is_not_legal_and_holds_no_passwords():
+    import life_planner as LP
+    pages = LP.pages()
+    assert len(pages) == 15 and all("Not a legal document" in p for p in pages)
+    text = " ".join(pages).lower()
+    assert ">password" not in text and "password:" not in text and "never write passwords here" in text
+    it = listings.BY_SLUG["if-something-happens-planner"]
+    assert "isn't a legal document" in it["description"] and it["slug"] not in listings.BY_SLUG["mega-budget-bundle"]["bundle"]
+
+
+def test_moving_planner_matches_the_sheet_and_the_calculator():
+    import moving_planner as MP
+    sys.path.insert(0, str(ETSY.parent / "templates"))
+    import moving_sheet as MS
+    calc = ["Movers or truck rental", "Fuel and mileage", "Packing supplies", "Storage", "Travel and lodging",
+            "Deposits (new place)", "Overlap rent", "Utility setup", "Cleaning", "Time off work", "Buffer"]
+    assert MP.CATEGORIES == MS.CATEGORIES == calc and MP.UTILITIES == MS.UTILITIES
+    assert len(MP.pages()) == 10 and listings.BY_SLUG["moving-planner"]["standalone"]

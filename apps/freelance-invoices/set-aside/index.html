@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quarterly Tax Set-Aside App for Freelancers: How Much to Save From Each Payment | 1099 Money</title>
+<meta name="description" content="A free home-screen app for 1099 freelancers. Log each payment and see how much to move to tax savings, your next IRS estimated tax due date and what to send each quarter. Works offline. Nothing leaves your phone.">
+<meta property="og:title" content="How much of this payment should I save for taxes?">
+<meta property="og:description" content="Log a payment, see what to set aside and when the IRS wants it. Free, offline, private.">
+<meta name="theme-color" content="#14213d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Set-Aside">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"1099 Tax Set-Aside","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body class="widget-app">
+<header class="top">
+  <a class="logo" href="../" style="color:inherit;text-decoration:none"><span class="mark">1099</span><span>Tax set-aside</span></a>
+  <button id="install" class="badge" type="button" hidden>Install</button>
+</header>
+<main>
+  <h1 class="sr">Quarterly tax set-aside for freelancers</h1>
+  <section id="widget" class="card widget" aria-live="polite"></section>
+
+  <form id="paid" class="card got-paid" autocomplete="off">
+    <h2>I got paid</h2>
+    <div class="got-row">
+      <label>Amount ($) <input id="amount" name="amount" inputmode="decimal" placeholder="1,500" required></label>
+      <label>Date <input name="date" type="date" required></label>
+    </div>
+    <label>Client (optional) <input name="client" maxlength="60"></label>
+    <button class="btn" type="submit">Work out my set-aside</button>
+    <p id="move" class="move" aria-live="polite"></p>
+  </form>
+
+  <section class="card">
+    <div class="row" style="justify-content:space-between"><h2 style="margin:0">Quarters</h2><label class="inline">Tax year <select id="year"></select></label></div>
+    <div id="quarters"></div>
+    <p class="tiny">Pay with <a href="https://www.irs.gov/payments/direct-pay" target="_blank" rel="noopener">IRS Direct Pay</a> (choose "Estimated tax" and Form 1040-ES), then enter what you sent. Many states want quarterly payments too.</p>
+  </section>
+
+  <section class="card">
+    <h2>Payments this year</h2>
+    <ul id="list" class="tx-list"></ul>
+    <div class="row" style="margin-top:10px"><button id="csv" class="btn ghost small" type="button">Download CSV</button></div>
+  </section>
+
+  <details class="card" id="settings-card">
+    <summary><b>Your set-aside rate</b> <span id="rate-sum" class="tiny"></span></summary>
+    <form id="settings" class="deal-form" style="margin-top:10px">
+      <label>Federal tax bracket <select name="bracket"></select></label>
+      <label>State income tax rate (%) <input name="stateRate" inputmode="decimal" placeholder="0"></label>
+      <label>Share of income spent on business costs (%) <input name="costsPct" inputmode="decimal"></label>
+      <label>Or use your own rate (%) <input name="override" inputmode="decimal" placeholder="Leave blank to use ours"></label>
+      <label>Last year's total tax, Form 1040 line 24 ($) <input name="lastYearTax" inputmode="decimal" placeholder="Optional"></label>
+      <label class="pick"><input type="checkbox" name="highIncome"> <span>Last year's AGI was over $150,000</span></label>
+      <p id="rate-detail" class="tiny full"></p>
+    </form>
+  </details>
+
+  <section class="card faq">
+    <h2>Questions</h2>
+    <h3>How is the set-aside worked out?</h3>
+    <p>Self-employment tax is 15.3% on 92.35% of your profit. Income tax uses your bracket after half of self-employment tax and the 20% qualified business income deduction. We add your state rate and take off your business costs. It's a rule of thumb that runs a little high for most people, which is the safe side.</p>
+    <h3>Do I have to pay quarterly?</h3>
+    <p>Usually, if you expect to owe $1,000 or more for the year after withholding. Paying at least 100% of last year's tax across the four dates (110% if your income was over $150,000) protects you from the underpayment penalty, even if you owe more in April. See IRS Form 1040-ES.</p>
+    <h3>Can I put this on my home screen?</h3>
+    <p>Yes. On Android, tap Install (or Add to Home screen in the browser menu). On iPhone, tap Share, then Add to Home Screen. It opens like an app and works offline. Long-press the icon on Android for a "Got paid" shortcut.</p>
+  </section>
+</main>
+<footer><p><a href="../">Invoices</a> · <a href="../side-hustle.html">Side hustle profit</a> · General information, not tax advice. Nothing you enter leaves this device. Made by <a data-site href="https://1099money.netlify.app">1099 Money</a>.</p></footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

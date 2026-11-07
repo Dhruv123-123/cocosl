@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>1099 Money App: Quarterly Taxes, Mileage Log and Deductions for Freelancers</title>
+<meta name="description" content="A free app for 1099 workers: quarterly estimated tax with 2026 and 2027 IRS due dates, a mileage log that exports to CSV, and a deduction checklist. Works offline, no account, nothing leaves your phone.">
+<meta property="og:title" content="1099 Money">
+<meta property="og:description" content="A free app for 1099 workers: quarterly estimated tax with 2026 and 2027 IRS due dates, a mileage log that exports to CSV, and a deduction checklist. Works offline, no account, nothing leaves your phone.">
+<meta name="theme-color" content="#14213d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="1099 Money">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="home">
+<header class="top"><a class="logo" href="./"><span class="mark" aria-hidden="true" style="background:#ff7a45;color:#14213d;font-size:11px;font-weight:800">1099</span><span>1099 Money</span></a></header>
+<main>
+  <h1>1099 Money</h1>
+  <p class="lede">Taxes for freelancers, drivers and side hustlers, without the dread. Everything works offline and stays on this device.</p>
+  <ul class="tiles">
+    <li><a class="tile" href="quarterly.html"><span class="ico" aria-hidden="true">🗓️</span><b>Quarterly tax</b><small>What to pay and when, 2026 and 2027</small></a></li>
+    <li><a class="tile" href="mileage.html"><span class="ico" aria-hidden="true">🚗</span><b>Mileage log</b><small>Log trips, export CSV</small></a></li>
+    <li><a class="tile" href="deductions.html"><span class="ico" aria-hidden="true">🧾</span><b>Deductions</b><small>Checklist of write-offs</small></a></li>
+    <li><a class="tile" href="../set-aside/"><span class="ico" aria-hidden="true">🏦</span><b>Tax set-aside</b><small>Save from each payment</small></a></li>
+    <li><a class="tile" href="../side-hustle.html"><span class="ico" aria-hidden="true">📊</span><b>Real hourly pay</b><small>After fees, miles and tax</small></a></li>
+    <li><a class="tile" href="../"><span class="ico" aria-hidden="true">📨</span><b>Invoices</b><small>Track who owes you</small></a></li>
+  </ul>
+<p class="note"><b>Not tax advice.</b> These are planning estimates from IRS rules for 2026 and 2027. Your real tax depends on your whole return. Check with a tax professional or the IRS before you file or pay.</p>
+  <p id="status" class="status" role="status"><span class="dot" aria-hidden="true"></span><span id="status-text">Getting ready for offline…</span></p>
+  <div id="install" class="card install" hidden><p id="install-text">Add 1099 Money to your home screen. It opens like an app and works with no signal.</p><button id="install-btn" class="btn" type="button">Add to home screen</button></div>
+  <ul class="promises"><li>No account, no sign-up</li><li>Works offline once it's saved</li><li>Your numbers stay on this device</li></ul>
+</main>
+<footer><p><a href="../">Invoice tracker</a> · <a href="../set-aside/">Tax set-aside</a> · Not tax advice. Made by 1099 Money.</p></footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

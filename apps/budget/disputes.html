@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Credit Dispute Tracker: 30-Day Bureau Deadlines, Free | Money Made Simple</title>
+<meta name="description" content="Track your credit report disputes with Equifax, Experian and TransUnion: the 30-day investigation clock, what each bureau said, and what to do next. Free, no sign-up, nothing leaves your browser.">
+<meta property="og:title" content="Disputed something on your credit report? Track the 30-day clock.">
+<meta property="og:description" content="Free tracker for credit report disputes: deadlines, bureau replies and next steps. Private: runs in your browser.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Credit dispute tracker","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How long does a credit bureau have to answer a dispute?","acceptedAnswer":{"@type":"Answer","text":"Generally 30 days from when it receives your dispute. It can be 45 days if you disputed after getting your free annual credit report, and up to 15 days longer if you send more information during the investigation. The bureau then has 5 business days to send you the results."}},
+{"@type":"Question","name":"Do I need to pay a credit repair company to dispute?","acceptedAnswer":{"@type":"Answer","text":"No. Disputing errors with Equifax, Experian and TransUnion is free, and you can do it yourself online, by mail or by phone. No company can legally remove accurate, timely information from your report."}},
+{"@type":"Question","name":"What if the bureau says the item is verified?","acceptedAnswer":{"@type":"Answer","text":"You can ask how it was verified, dispute directly with the lender or collector, add a statement of up to 100 words to your file, or submit a complaint to the CFPB."}}
+]}</script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="./" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Credit dispute tracker</span></a>
+  <span class="badge">Free</span>
+</header>
+<main>
+  <h1 class="page-title">Disputed something on your credit report? Track the clock.</h1>
+  <p class="lede">Credit bureaus generally have 30 days to investigate a dispute. Log each one here to see its deadline, what the bureau said, and what to do next. Everything stays in this browser.</p>
+  <p class="notice"><b>Free, and tracking only.</b> This isn't a credit repair service and doesn't write letters. Disputing errors is free: start at <a href="https://www.annualcreditreport.com" target="_blank" rel="noopener">AnnualCreditReport.com</a> for your free reports, then use each bureau's dispute page. Nobody can legally remove accurate, up-to-date information.</p>
+
+  <section id="stats" class="stats" aria-live="polite"></section>
+
+  <section class="card">
+    <h2>Log a dispute</h2>
+    <form id="dispute-form" class="deal-form">
+      <label>Sent to <select name="target" id="f-target"></select></label>
+      <label>Item you disputed <input name="item" maxlength="80" required placeholder="Account name on the report"></label>
+      <label>Lender or collector named on the item <input name="furnisher" maxlength="80" placeholder="Optional"></label>
+      <label>Reason <select name="reason" id="f-reason"></select></label>
+      <label>How you sent it <select name="method" id="f-method"></select></label>
+      <label>Date you sent it <input name="sent" type="date" required></label>
+      <label>Date they received it <input name="received" type="date"><small class="tiny">From online confirmation or certified mail tracking. Blank: we estimate.</small></label>
+      <label>Confirmation number <input name="confirmation" maxlength="60" placeholder="Optional"></label>
+      <label class="pick full"><input type="checkbox" name="extended"> I disputed after getting my free annual report, or sent them more information later (the clock may be up to 45 days)</label>
+      <label class="full">Notes <input name="notes" maxlength="500" placeholder="What you sent, who you spoke to"></label>
+      <div class="row full"><button class="btn" type="submit">Add to my tracker</button></div>
+    </form>
+    <p id="form-msg" class="tiny" aria-live="polite"></p>
+  </section>
+
+  <section class="card">
+    <div class="head"><h2>My disputes</h2><span class="tiny">Most urgent first</span></div>
+    <div id="disputes"></div>
+    <div class="row" style="margin-top:12px">
+      <button id="ics" class="btn small" type="button">Add deadlines to my calendar</button>
+      <button id="backup" class="btn ghost small" type="button">Download my data</button>
+      <label class="btn ghost small file">Restore<input id="restore" type="file" accept="application/json,.json" hidden></label>
+    </div>
+    <p id="data-msg" class="tiny" aria-live="polite"></p>
+  </section>
+
+  <section class="card">
+    <h2>Where to dispute (free)</h2>
+    <ul id="where" class="checks"></ul>
+    <p class="tiny">Dispute with every bureau that shows the error: they don't share disputes with each other. Identity theft? Report it at IdentityTheft.gov first; the recovery plan it gives you lets the bureaus block those items.</p>
+  </section>
+
+  <section class="card faq">
+    <h2>Questions</h2>
+    <h3>How long does a credit bureau have to answer a dispute?</h3>
+    <p>Generally 30 days from when it receives your dispute. It can be 45 days if you disputed after getting your free annual credit report, and up to 15 days longer if you send more information during the investigation. The bureau then has 5 business days to send you the results.</p>
+    <h3>Do I need to pay a credit repair company to dispute?</h3>
+    <p>No. Disputing errors with Equifax, Experian and TransUnion is free, and you can do it yourself online, by mail or by phone. No company can legally remove accurate, timely information from your report.</p>
+    <h3>What if the bureau says the item is verified?</h3>
+    <p>You can ask how it was verified, dispute directly with the lender or collector, add a statement of up to 100 words to your file, or submit a complaint to the CFPB.</p>
+  </section>
+</main>
+<footer><p>General information, not legal advice. Deadlines shown are estimates based on the federal Fair Credit Reporting Act; your state may add protections. Nothing you type is sent anywhere. <a href="./">Budget</a> · <a href="bills.html">Bill tracker</a>. Made by <a id="site-link" href="#">Money Made Simple</a>.</p></footer>
+<script type="module" src="disputes.js"></script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 ---
 title: How to freeze your credit for free (and check your report like an auditor)
-seo_title: How to freeze your credit for free at all 3 bureaus, plus a credit report checklist
-description: A credit freeze is free by law and makes it much harder for someone to open credit in your name. How to freeze at Equifax, Experian and TransUnion, how to thaw it, and 7 things to check on your report.
+seo_title: "How to freeze your credit for free at all 3 bureaus"
+description: "A credit freeze is free and makes it much harder to open credit in your name. How to freeze and thaw it at all three bureaus, and what to check."
 date: 2026-11-07
 pillar: credit-and-debt
 keyword: how to freeze your credit

@@ -1,0 +1,10 @@
+# Deploy the committed public/ folder as-is (drag-and-drop works too), or let Netlify rebuild it.
+[build]
+  base = "sites/scam-decoded"
+  publish = "public"
+  command = "python3 build.py"
+
+[[headers]]
+  for = "/emails/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"

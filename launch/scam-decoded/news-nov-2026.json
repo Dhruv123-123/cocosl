@@ -1,0 +1,318 @@
+[
+ {
+  "format": "short",
+  "pillar": "online shopping and marketplace scams",
+  "platforms": [
+   "instagram",
+   "youtube"
+  ],
+  "post_on": "2026-11-22 12:00",
+  "topic": "ghost tapping",
+  "look": "walkthrough",
+  "original_element": "Phone walkthrough: a mock card reader screen showing the merchant name and amount, with the two things to read circled.",
+  "idea_angle": "In the news, Nov 2026: ghost tapping. Tap-to-pay scams at markets, crowds and fake charity stands, from the BBB.",
+  "script": {
+   "title": "Ghost tapping scam: check 1 screen before you tap",
+   "hook": "1 tap at a holiday market, and a $15 box of cookies turns into a $1,500 charge.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "A holiday market. A stand selling cookies, fifteen dollars, tap here. You tap without looking. Later your bank app shows fifteen hundred.",
+     "on_screen_text": "$15 cookies... $1,500 charge?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a card reader at a market stall No text, no logos, no real people."
+    },
+    {
+     "heading": "How",
+     "narration": "The BBB says fake stands and charity collectors ask you to tap, then charge far more than they said. In crowds, someone may brush past with a reader.",
+     "on_screen_text": "Fake stands. Fake charities. Crowds.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a crowded market with a hidden reader No text, no logos, no real people."
+    },
+    {
+     "heading": "The check",
+     "narration": "Before you tap, read two things on the reader's screen: the business name and the amount. No screen, or they won't show you? Don't tap.",
+     "on_screen_text": "Read the name and the amount",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a terminal screen with two circles No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Turn on alerts for every charge, and swipe or insert if anything feels off. Charged wrong? Call your bank on the number on your card.",
+     "on_screen_text": "Alerts on. Swipe if unsure.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a phone with an alert No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "Tap-to-pay is fast, and that's what these scams count on. The BBB warns about fake stands and charity collectors who charge your card far more than they said, and people who brush past you in a crowd. The $15 example here is made up.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "ghosttapping",
+    "taptopay",
+    "holidayshopping",
+    "scamalert",
+    "scamdecoded"
+   ],
+   "description": "Tap-to-pay scams at markets, crowds and fake charity stands, from the BBB.",
+   "thumbnail_text": "Check the screen. Then tap.",
+   "sources": [
+    "https://www.bbb.org/article/scams/32343-bbb-scam-alert-what-is-ghost-tapping-how-to-spot-and-avoid-tap-to-pay-scams"
+   ],
+   "claims_to_verify": [
+    "BBB: fraudsters run fake stands at events and markets and ask for tap payments",
+    "BBB: fake charity collectors ask for a small donation and charge much more",
+    "BBB: check the merchant's name and amount on the terminal before tapping; set up transaction alerts",
+    "BBB: an RFID-blocking wallet or sleeve can help stop wireless skimming; swipe or insert when in doubt"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "text and email scams, decoded",
+  "platforms": [
+   "instagram",
+   "youtube"
+  ],
+  "post_on": "2026-11-28 12:00",
+  "topic": "sweepstakes fees",
+  "look": "face cam",
+  "original_element": "Face-to-camera explainer holding a printed 'prize check' with the fee line circled.",
+  "idea_angle": "In the news, Nov 2026: sweepstakes fees. Scammers using the names of well-known sweepstakes and charities, from the FTC's October 2026 alert.",
+  "script": {
+   "title": "Sweepstakes scam: 0 real prizes make you pay a fee",
+   "hook": "1 call says you won a famous sweepstakes, and 1 small fee will release the check.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Giving Tuesday week, and the phone says a famous sweepstakes name. You've won. Just pay a small fee and the check ships today.",
+     "on_screen_text": "'You won. Just pay the fee.'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone showing a famous-looking caller ID No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "The FTC is blunt: the moment someone tells you to pay to claim a prize, it's a scam. Real sweepstakes are free and by chance.",
+     "on_screen_text": "Pay to claim? It's a scam.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a prize check with a fee stamped on it No text, no logos, no real people."
+    },
+    {
+     "heading": "The trick",
+     "narration": "Caller ID can be faked to show a real company or charity name, and scammers borrow real charity names too, so the name proves nothing.",
+     "on_screen_text": "Caller ID proves nothing",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone screen with a mask No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Hang up. Never pay to get a prize. Want to give this week? Look the charity up yourself, past the ads at the top of the search.",
+     "on_screen_text": "Never pay to win. Look it up.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes hanging up a phone No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "Scammers use the names of famous sweepstakes and charities, and caller ID can show a real name. The FTC: the moment someone tells you to pay to claim your prize, you're dealing with a scam.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "sweepstakes",
+    "prizescam",
+    "givingtuesday",
+    "scamalert",
+    "scamdecoded"
+   ],
+   "description": "Scammers using the names of well-known sweepstakes and charities, from the FTC's October 2026 alert.",
+   "thumbnail_text": "You won? Then why pay?",
+   "sources": [
+    "https://consumer.ftc.gov/consumer-alerts/2026/10/spot-scammers-impersonating-well-known-charities-and-sweepstakes"
+   ],
+   "claims_to_verify": [
+    "FTC: the moment someone tells you to pay to claim your prize, it's a scam",
+    "FTC: legitimate sweepstakes are free and by chance",
+    "FTC: don't trust caller ID, even if it shows a real agency or company name",
+    "FTC: scammers use real charity names or ones that sound similar"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "text and email scams, decoded",
+  "platforms": [
+   "instagram",
+   "youtube"
+  ],
+  "post_on": "2026-11-29 12:00",
+  "topic": "impostor ads",
+  "look": "screen recording",
+  "original_element": "Screen recording of a search page: the sponsored result's address next to the real one, typed in by hand.",
+  "idea_angle": "In the news, Nov 2026: impostor ads. Ads that impersonate businesses and government agencies, from the FTC's November 2026 alert.",
+  "script": {
+   "title": "Impostor ads: 1 sponsored result that isn't the company",
+   "hook": "1 search, 1 ad at the top with the right logo, and it's not the company at all.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Cyber Monday tomorrow. You search for a big store's support line. The top result has the logo, the colors, the name. It's an ad.",
+     "on_screen_text": "Top result. Right logo. An ad.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a search page with a sponsored result No text, no logos, no real people."
+    },
+    {
+     "heading": "What's going on",
+     "narration": "The FTC says scammers pay for ads that pose as well-known businesses and government agencies, in feeds, search results and shopping sites.",
+     "on_screen_text": "FTC: scammers buy impostor ads",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a stack of ad cards with masks No text, no logos, no real people."
+    },
+    {
+     "heading": "The check",
+     "narration": "Look at the web address under the ad. One letter off, an extra word, an odd ending? Skip it. Type the real address yourself.",
+     "on_screen_text": "Read the address. Type it yourself.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. an address bar with one letter circled No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Report impostor ads at ReportFraud.ftc.gov. The FTC is also asking for public comments on platform rules until November thirtieth.",
+     "on_screen_text": "Report it: ReportFraud.ftc.gov",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes pointing at a report button No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "The FTC says scammers pay for ads that pose as well-known businesses and government agencies, in social feeds, search results and shopping sites, hoping you'll think they're the real thing. Skip the ads and go to the real site yourself. The FTC is taking public comments on platform rules until Nov 30.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "scamads",
+    "cybermonday",
+    "onlineshopping",
+    "scamalert",
+    "scamdecoded"
+   ],
+   "description": "Ads that impersonate businesses and government agencies, from the FTC's November 2026 alert.",
+   "thumbnail_text": "Right logo. Wrong company.",
+   "sources": [
+    "https://consumer.ftc.gov/consumer-alerts/2026/11/tell-ftc-about-imposter-ads-online",
+    "https://consumer.ftc.gov/consumer-alerts/2026/10/spot-scammers-impersonating-well-known-charities-and-sweepstakes"
+   ],
+   "claims_to_verify": [
+    "FTC: scammers pose as well-known businesses or government agencies in ads in feeds, search results and shopping platforms",
+    "FTC: scammers pay for ad placement and people are losing big money",
+    "FTC: comments on possible platform rules due Nov 30, 2026 (check the Federal Register link)",
+    "FTC: don't rely on the first search results you see; paid ads can lead to fake information"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "Medicare and health scams",
+  "platforms": [
+   "instagram",
+   "youtube"
+  ],
+  "post_on": "2026-12-03 12:00",
+  "topic": "open enrollment ads",
+  "look": "data chart",
+  "original_element": "A data-chart beat: 'what the ad says' vs 'what the plan covers', drawn as two bars, then the HealthCare.gov address.",
+  "idea_angle": "In the news, Nov 2026: open enrollment ads. Health insurance ads and robocalls during open enrollment, from the FTC's October 2026 alert.",
+  "script": {
+   "title": "Open enrollment scam: 1 site to start at, not an ad",
+   "hook": "1 open enrollment season, a flood of health plan ads, and 1 safe place to start.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Open enrollment. Ads everywhere: full coverage, ninety-nine a month, call now. Some of them aren't what they say.",
+     "on_screen_text": "'Full coverage, $99, call now'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone feed full of insurance ads No text, no logos, no real people."
+    },
+    {
+     "heading": "What the FTC sees",
+     "narration": "Plans that promise comprehensive coverage but pay for little, and medical discount cards sold as if they were insurance.",
+     "on_screen_text": "'Comprehensive'? Or a discount card?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. two bars, one tall, one tiny No text, no logos, no real people."
+    },
+    {
+     "heading": "The calls",
+     "narration": "And a recorded voice selling a health plan? The FTC says those robocalls are illegal, so whoever's behind one isn't someone to buy from.",
+     "on_screen_text": "Recorded sales call = illegal",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone with a robot voice icon No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Start at HealthCare.gov, typed in yourself, or call the Marketplace Call Center. Report bad ads at ReportFraud.ftc.gov.",
+     "on_screen_text": "Start at HealthCare.gov",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes typing an address No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "Open enrollment brings a flood of health plan ads, calls and texts. The FTC warns about plans that promise 'comprehensive' coverage but offer limited benefits, discount cards sold as insurance, and ads that look like they're from the government. Start at HealthCare.gov, and check the deadline there.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "openenrollment",
+    "healthinsurance",
+    "healthcare",
+    "scamalert",
+    "scamdecoded"
+   ],
+   "description": "Health insurance ads and robocalls during open enrollment, from the FTC's October 2026 alert.",
+   "thumbnail_text": "Start at HealthCare.gov",
+   "sources": [
+    "https://consumer.ftc.gov/consumer-alerts/2026/10/seeing-lots-ads-health-insurance-plans-during-open-enrollment-read"
+   ],
+   "claims_to_verify": [
+    "FTC: some plans promise comprehensive health insurance but offer limited benefits",
+    "FTC: medical discount cards are sometimes sold as if they were health insurance",
+    "FTC: prerecorded robocalls marketing health insurance are illegal",
+    "FTC: start at HealthCare.gov or call the Marketplace Call Center at 1-800-318-2596"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "online shopping and marketplace scams",
+  "platforms": [
+   "instagram",
+   "youtube"
+  ],
+  "post_on": "2026-12-06 12:00",
+  "topic": "fake online stores",
+  "look": "illustrated",
+  "original_element": "Illustrated two-search sequence: the store name + 'scam', then the store name + 'complaint', with results drawn as cards.",
+  "idea_angle": "In the news, Nov 2026: fake online stores. Checking an unfamiliar online store before you buy, from the FTC's online shopping advice.",
+  "script": {
+   "title": "Fake online store scam: 2 searches before a late gift",
+   "hook": "1 shop you've never heard of has the sold-out gift, and 2 searches tell you if it's real.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Two weeks to go. Every store is sold out of the gift, except one you've never heard of, with free shipping and a padlock.",
+     "on_screen_text": "Sold out everywhere... but here?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a shopping site with a padlock and a gift No text, no logos, no real people."
+    },
+    {
+     "heading": "Search 1 and 2",
+     "narration": "Before you pay, the FTC says search the store's name plus the word scam, then plus complaint. Read what other buyers say.",
+     "on_screen_text": "Search: name + scam, name + complaint",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. two search bars No text, no logos, no real people."
+    },
+    {
+     "heading": "Not proof",
+     "narration": "A padlock isn't proof. The FTC says scammers can encrypt sites too, and some star ratings are fake.",
+     "on_screen_text": "Padlock? Stars? Not proof.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a padlock with a question mark No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Pay by credit card, which best protects you if it goes wrong. Gift cards only? Close the tab.",
+     "on_screen_text": "Credit card. Never gift cards.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes closing a browser tab No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "A shop you've never heard of has the gift everyone else sold out of. Before you pay, the FTC suggests searching the store's name with 'complaint' or 'scam', and paying by credit card, which best protects you if something goes wrong. A padlock doesn't prove a store is real.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "onlineshopping",
+    "fakestore",
+    "holidaygifts",
+    "scamalert",
+    "scamdecoded"
+   ],
+   "description": "Checking an unfamiliar online store before you buy, from the FTC's online shopping advice.",
+   "thumbnail_text": "Never heard of the shop?",
+   "sources": [
+    "https://consumer.ftc.gov/articles/online-shopping"
+   ],
+   "claims_to_verify": [
+    "FTC: search the product or company name plus 'complaint' or 'scam'",
+    "FTC: some reviews and ratings are fake or misleading",
+    "FTC: scammers know how to encrypt sites too (https isn't proof)",
+    "FTC: paying by credit card best protects you; never buy from sellers who insist on gift cards"
+   ]
+  }
+ }
+]

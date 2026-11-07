@@ -1,0 +1,1635 @@
+[
+ {
+  "format": "long",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A full beginner budget built live on a fictional $3,200 take-home, using four numbers instead of forty categories, plus the weekly check-in that keeps it alive.",
+  "series": "youtube-long-form",
+  "series_part": 1,
+  "content_id": "yt-series-01",
+  "search_terms": [
+   "how to make a budget",
+   "budgeting for beginners",
+   "how to budget money",
+   "monthly budget example"
+  ],
+  "thumbnail_alt": "Budget in 20 minutes",
+  "script": {
+   "title": "How to Make a Budget That Actually Works (Step by Step for Beginners)",
+   "hook": "Most budgets fail by week 3. This one uses 4 numbers, and we'll build it live on a $3,200 paycheck.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Most budgets fail by week three. Not because people are bad with money, but because the budget was built like a tax form: forty categories, a spreadsheet with colors, and a plan that falls apart the first time you buy lunch. Today we're building a budget the other way. Four numbers. It takes about twenty minutes, and we'll build it live on a real-looking example: a take-home pay of thirty-two hundred dollars a month. By the end, you'll know exactly what you can spend this week without guessing, and you'll have a ten-minute weekly habit that keeps it working. Grab your banking app and a note on your phone. You'll want your own numbers ready as we go. And quick note: the person in this example is fictional, so swap in your own figures as we go.",
+     "on_screen_text": "A budget with 4 numbers",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small notepad with four empty boxes, cheerful. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why most budgets fail",
+     "narration": "Here's what usually goes wrong. People start with what they wish they spent, not what they actually spend. They write down two hundred dollars for food when the real number is four hundred and fifty, and by the middle of the month the budget is already broken. Then they feel guilty, stop opening the spreadsheet, and the whole thing quietly dies. The second problem is too much detail. If you have separate lines for coffee, lunch, snacks and takeout, every purchase becomes a decision about which box it goes in. That's exhausting. A budget only works if it's easier to follow than to ignore. So our rules are simple. Start with real numbers from your last month. Use as few categories as possible. And make the most important parts automatic, so they happen even when you're busy or tired.",
+     "on_screen_text": "Real numbers. Few categories. Automatic.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tangled spreadsheet with too many boxes next to a calm simple list. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1: your real take-home pay",
+     "narration": "Step one is the number that actually lands in your account. Not your salary. Your take-home pay, after taxes, retirement contributions and health insurance come out. Open your banking app and look at your last two paychecks. If you're paid every two weeks, add two paychecks together and that's your normal month. Some months you'll get three paychecks. Don't build your budget on those. Treat the third paycheck as a bonus you'll give a job when it arrives. If your income changes month to month, from tips, gigs or commissions, use your lowest month from the past six months as your budget number. Anything above that is extra. For our example, the take-home is thirty-two hundred dollars a month. That's the only income number we'll use from here on.",
+     "on_screen_text": "Take-home, not salary",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paycheck envelope with a smaller amount sliding out of it, the small round green piggy bank mascot with big eyes pointing at it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2: the bills that must get paid",
+     "narration": "Step two: list every bill that has to get paid no matter what. Rent, utilities, phone, insurance, transportation, minimum debt payments, and groceries. Yes, groceries go here, because you have to eat. Pull the real numbers from last month's statement. In our example, rent is twelve hundred and fifty. Utilities and phone are one sixty. Insurance is one twenty. The car and gas come to two twenty. Groceries are four hundred. The student loan payment is one eighty. And subscriptions are forty-five. Add it up and you get two thousand three hundred and seventy-five dollars. That's number one: essentials. While you're in your statements, check the subscriptions line. Most people find at least one they forgot they had. Cancel it now, while you're thinking about it, not later.",
+     "on_screen_text": "Essentials: $2,375",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short stack of bills with a house, a lightbulb and a shopping basket icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3: pay yourself first",
+     "narration": "Step three is the one most budgets skip. Before you spend anything on fun, decide what goes to savings, and make it automatic. In our example, three hundred dollars a month goes to savings, split across the two paychecks, so a hundred and fifty each payday. Schedule the transfer for the day after payday, not the same day, so a late deposit never bounces it. If three hundred feels impossible right now, start with twenty-five. The amount matters less than the habit. Where does it go? If you don't have an emergency fund yet, this is it. Start with a goal of one thousand dollars, then build toward a few months of essentials. If your job offers a 401(k) match, make sure you're getting the full match too, because that's money you'd otherwise leave on the table. That's number two: savings, three hundred.",
+     "on_screen_text": "Savings first: $300",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes dropping coins into a jar labelled with a small arrow, morning sun. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 4: sinking funds for the expenses you forget",
+     "narration": "Step four fixes the thing that breaks most budgets in month two: expenses that don't come every month. Car repairs. Birthdays and holidays. The annual software subscription. The dentist. They feel like surprises, but they're not. They're just on a different calendar. So we set aside a little every month for them. That's called a sinking fund. Here's how. Write down every irregular expense you can remember from the last year and roughly what it cost. Add it up and divide by twelve. In our example, the car needs about six hundred a year in repairs and maintenance, and gifts are about six hundred. That's twelve hundred a year, so one hundred dollars a month. Move it to a separate savings account, or a labelled bucket if your bank offers them. That's number three: sinking funds, one hundred.",
+     "on_screen_text": "Sinking funds: $100/month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a few circled dates and small labelled jars beneath it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 5: the number you can actually spend",
+     "narration": "Now the best part. Take your income and subtract the first three numbers. Thirty-two hundred, minus twenty-three seventy-five in essentials, minus three hundred in savings, minus one hundred in sinking funds. That leaves four hundred and twenty-five dollars. That's number four: your flexible spending. Eating out, clothes, hobbies, a night out, the random stuff. The magic here is that this number is guilt-free. Your bills are covered. Your savings already happened. Your irregular costs are handled. So anything inside the four twenty-five is yours to spend however you want, without a spreadsheet and without guilt. Now divide it by four and a bit. That's roughly a hundred dollars a week. If you remember only one number from this budget, make it this one. A hundred a week. You'll check it every Sunday.",
+     "on_screen_text": "$425 guilt-free = ~$100/week",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes relaxing in a café with a small coffee, a weekly calendar beside it. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$3,200 take-home, four numbers",
+      "labels": [
+       "Essentials",
+       "Savings",
+       "Sinking funds",
+       "Flexible spending"
+      ],
+      "values": [
+       2375,
+       300,
+       100,
+       425
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "/mo",
+      "note": "Fictional example"
+     }
+    },
+    {
+     "heading": "What if the numbers don't work?",
+     "narration": "Sometimes you do the math and the last number is negative. Essentials plus savings are already more than you bring home. That's not a failure. That's information, and it's the most useful thing a budget can tell you. Here's the order to fix it. First, look at the big three: housing, transportation and food. That's where most of the money goes, and small changes there beat cutting every coffee. Can you cook four more dinners a month? Refinance the car? Get a roommate at your next lease? Second, call your providers. Phone, internet and insurance can often be lowered just by asking or shopping around. Third, if you're still short, lower savings temporarily to twenty-five dollars, but keep the transfer running. And if your income simply doesn't cover essentials, the answer is earning more, not budgeting harder.",
+     "on_screen_text": "Negative? Fix the big 3 first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance scale with a house, a car and a grocery bag on one side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Make it automatic",
+     "narration": "A budget you have to remember to follow won't survive a busy month. So let's automate it. Set your bills to autopay from checking, at least the minimum on every card and loan, so you never pay a late fee. Schedule your savings transfer for the day after each payday. Schedule your sinking fund transfer the same way. Now your checking account has one job: hold your bills and your weekly spending money. Some people go one step further and move the flexible money to a separate account or a debit card with a weekly top-up. That way the balance you see is exactly what you can spend. You don't need an app for any of this. Your bank's built-in scheduled transfers do the job for free. If you do like apps, we compared the popular budgeting apps on our site, linked below.",
+     "on_screen_text": "Bills, savings, sinking funds: all automatic",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small pipes carrying coins from one big tank into three smaller tanks. No text, no logos, no real people."
+    },
+    {
+     "heading": "The 10-minute Sunday check-in",
+     "narration": "Here's the habit that keeps the whole thing alive: a ten-minute money check-in once a week. Same day, same time. Sunday evening works for most people. Open your bank app and look at three things. One: how much of this week's hundred dollars did you spend? Two: did any bill or subscription surprise you? Three: what's coming up next week that needs money, like a birthday or a car registration? That's it. If you went over this week, you don't need to feel bad. Just spend a little less next week. If you came in under, let it roll over or move it to savings. Once a month, add five minutes to update your sinking funds and check that every automatic transfer actually ran. This tiny habit is the difference between a budget that lasts a month and one that lasts for years.",
+     "on_screen_text": "10 minutes. Every Sunday.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes on a sofa with a phone and a cup of tea, a small checklist of three items. No text, no logos, no real people."
+    },
+    {
+     "heading": "Common mistakes",
+     "narration": "A few mistakes to avoid. Mistake one: budgeting your salary instead of take-home pay. Always use what actually lands. Mistake two: forgetting irregular expenses. That's what sinking funds fix. Mistake three: no money for fun. If your budget has zero flexible spending, you'll break it, so keep at least a small amount that's guilt-free. Mistake four: quitting after one bad week. Everyone overspends sometimes. A budget isn't a test you pass or fail. It's a plan you adjust. And mistake five: tracking every dollar forever. Tracking for one month is great for learning where your money goes, but after that, the automatic system does most of the work. You only need to watch your weekly number.",
+     "on_screen_text": "5 budget mistakes",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. five small warning signs along a winding path, the small round green piggy bank mascot with big eyes stepping around them. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. One: find your real take-home pay. In our example, thirty-two hundred. Two: list your essential bills from real statements. Twenty-three seventy-five. Three: pay yourself first, automatically. Three hundred. Four: add sinking funds for the expenses you forget. One hundred. What's left is your guilt-free spending, four twenty-five a month, about a hundred a week. Then automate everything and check in for ten minutes every Sunday. If you want help doing this with your own numbers, the free seven-day money reset in the description walks you through it one small step a day. And if you want to see what this budget looks like at your exact salary, we've got example budgets for different incomes on our site. Links are below.",
+     "on_screen_text": "Take-home → bills → savings → sinking → spend",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing proudly next to four filled boxes on a board. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "A budget that actually works uses 4 numbers, not 40 categories. We build one live on a fictional $3,200 take-home: essentials, savings, sinking funds, and guilt-free spending.\n\nExamples are hypothetical and for education only. Not financial advice.",
+   "hashtags": [
+    "budgeting",
+    "howtobudget",
+    "budgetingforbeginners",
+    "personalfinance",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "How to make a budget that actually works, step by step for beginners. We build a full budget live on a fictional $3,200 monthly take-home using just four numbers: essentials, savings, sinking funds and guilt-free spending, then set up the 10-minute weekly check-in that keeps it working.\n\nChapters\n0:00 Intro\n0:56 Why most budgets fail\n1:53 Step 1: your real take-home pay\n2:46 Step 2: the bills that must get paid\n3:39 Step 3: pay yourself first\n4:37 Step 4: sinking funds for the expenses you forget\n5:34 Step 5: the number you can actually spend\n6:28 What if the numbers don't work?\n7:25 Make it automatic\n8:23 The 10-minute Sunday check-in\n9:22 Common mistakes\n10:10 Recap\n\nLinks\nStep-by-step guide: how to make a budget you'll keep: https://moneymadesimple.netlify.app/blog/how-to-make-a-budget-you-will-keep/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-01\nExample budget on a $50,000 salary: https://moneymadesimple.netlify.app/budget/50000-salary/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-01\nBudgeting apps compared: https://moneymadesimple.netlify.app/compare/best-budgeting-apps/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-01\nSinking funds explained: https://moneymadesimple.netlify.app/blog/sinking-funds-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-01\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-01\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "4 numbers. That's the budget.",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/",
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+    "https://www.consumer.ftc.gov/articles/how-cancel-subscriptions"
+   ],
+   "claims_to_verify": [
+    "Fictional example: $3,200 take-home; essentials $2,375 = 1250+160+120+220+400+180+45",
+    "$3,200 − $2,375 − $300 − $100 = $425 (about $100/week)",
+    "Sinking funds $1,200/yr ÷ 12 = $100/month"
+   ],
+   "title_variants": [
+    "How to Make a Budget in 20 Minutes (Real Example)",
+    "Budgeting for Beginners: The 4-Number Budget"
+   ],
+   "hook_variants": [
+    "You don't need 40 categories. You need 4 numbers. Here's the whole budget in 20 minutes.",
+    "$3,200 a month comes in. Let's give every dollar a job before it disappears."
+   ],
+   "original_element": "worked-example-chart: The four-number budget filled in live on screen from the $3,200 example, ending at $425 (about $100 a week) (chapter \"Step 5: the number you can actually spend\")"
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "The four-number budget filled in live on screen from the $3,200 example, ending at $425 (about $100 a week)",
+   "chapter": "Step 5: the number you can actually spend"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Both payoff methods run month by month on the same fictional $7,800 of debt and $400 a month: avalanche saves $327 in interest, snowball gives the first win 14 months sooner. How to pick, and a hybrid.",
+  "series": "youtube-long-form",
+  "series_part": 2,
+  "content_id": "yt-series-02",
+  "search_terms": [
+   "debt snowball vs avalanche",
+   "debt avalanche method",
+   "debt snowball method",
+   "how to pay off debt fast"
+  ],
+  "thumbnail_alt": "$327 difference",
+  "script": {
+   "title": "Debt Snowball vs Avalanche: We Ran the Real Numbers",
+   "hook": "Snowball or avalanche? We ran both on $7,800 of debt. One saves $327. The other wins 14 months sooner.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Snowball or avalanche? They're the two most popular ways to pay off debt, and people argue about them constantly. So instead of arguing, we ran both, month by month, on the exact same debt. Three debts, seventy-eight hundred dollars in total, and four hundred dollars a month to throw at them. One method saved three hundred and twenty-seven dollars in interest. The other gave the first win fourteen months sooner. By the end of this video you'll know exactly how each one works, what the real difference is, and how to pick the one you'll actually stick with, because the best payoff plan is the one you don't quit. The example is fictional, but the math is real, and you can rerun it with your own numbers using the free calculator linked below.",
+     "on_screen_text": "Same debt. Two methods.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two paths up a small hill, one with a snowball, one with a gentle rockslide. No text, no logos, no real people."
+    },
+    {
+     "heading": "The example debts",
+     "narration": "Here's our example. Debt one: a credit card with forty-five hundred dollars at twenty-four percent APR, with a minimum payment of one thirty-five. Debt two: a store card with eight hundred dollars at eighteen percent, minimum thirty. Debt three: a personal loan with twenty-five hundred dollars at ten percent, minimum eighty. Add up the minimums and you get two forty-five a month. Our example person can afford four hundred a month for debt. So every month, they pay every minimum, and the extra one fifty-five goes to one target debt. When that debt is gone, its minimum rolls into the next target. That rolling is what makes both methods work. The only difference between snowball and avalanche is which debt gets the extra money first.",
+     "on_screen_text": "$7,800 debt · $400/month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three stacked cards of different sizes with small percent signs. No text, no logos, no real people."
+    },
+    {
+     "heading": "How the snowball works",
+     "narration": "The debt snowball targets the smallest balance first, no matter the interest rate. In our example, that's the eight hundred dollar store card. All the extra money goes there. Because the balance is small, it disappears fast: paid off in month five. Then that thirty dollar minimum plus the extra rolls onto the next smallest, the personal loan, which is gone by month fourteen. Then everything piles onto the big credit card, which is paid off in month twenty-four. Total interest paid: about seventeen hundred and ninety-two dollars. The point of the snowball isn't math. It's motivation. You see a debt disappear in five months, you feel progress, and that feeling keeps you going. For a lot of people, especially if you've tried and quit before, that early win matters more than anything.",
+     "on_screen_text": "Smallest balance first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small snowball rolling downhill and growing, the small round green piggy bank mascot with big eyes cheering. No text, no logos, no real people."
+    },
+    {
+     "heading": "How the avalanche works",
+     "narration": "The debt avalanche targets the highest interest rate first. In our example, that's the twenty-four percent credit card. It's also the biggest balance, so it takes a while: it's paid off in month nineteen. Then the money rolls to the eighteen percent store card, gone in month twenty-one, and finally the ten percent loan, done in month twenty-four. Total interest paid: about fourteen hundred and sixty-five dollars. Same finish line, month twenty-four, but three hundred and twenty-seven dollars less in interest. The avalanche always costs the least, because every extra dollar goes to the debt that's costing you the most. The tradeoff is that your first win can take a long time. In our example, nineteen months with no debt fully gone. That's where people sometimes lose motivation.",
+     "on_screen_text": "Highest rate first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gentle cascade of coins knocking down the tallest block first. No text, no logos, no real people."
+    },
+    {
+     "heading": "Side by side",
+     "narration": "So here they are side by side. Snowball: first debt gone in month five, debt-free in month twenty-four, about seventeen ninety-two in interest. Avalanche: first debt gone in month nineteen, debt-free in month twenty-four, about fourteen sixty-five in interest. The difference is three hundred and twenty-seven dollars over two years, about fourteen dollars a month. That's real money, but it's probably smaller than you expected. And here's the thing the debate usually misses. Both of these beat the default, which is paying minimums and spending whatever's left. The biggest decision isn't snowball versus avalanche. It's deciding on a fixed monthly debt number, and sticking to it every single month. Picking either method and following it is the win.",
+     "on_screen_text": "Avalanche saves $327. Snowball wins 14 months sooner.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple two-column chart with two bars of slightly different heights. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Interest paid over 24 months",
+      "labels": [
+       "Snowball",
+       "Avalanche"
+      ],
+      "values": [
+       1792,
+       1465
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "The video's own simulation"
+     }
+    },
+    {
+     "heading": "When the difference gets big",
+     "narration": "The gap between the two methods grows in a few situations. One: when there's a big difference in interest rates, like a thirty percent card and a five percent car loan. Two: when the high-rate debt is also large. Three: when the payoff takes many years. In those cases, snowball can cost you thousands more, not hundreds. On the other hand, if all your debts have similar rates, the difference almost disappears, and you might as well take the motivation of the snowball. So before you choose, run your own numbers. Put your balances, rates and monthly amount into the free debt payoff calculator linked below. It'll show you both methods with your real debts in about a minute. If the gap is small, choose snowball. If it's large, think hard about avalanche.",
+     "on_screen_text": "Big rate gaps = big difference",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tall stack of coins next to a short stack, a magnifying glass between them. No text, no logos, no real people."
+    },
+    {
+     "heading": "Which one should you pick?",
+     "narration": "Here's a simple way to decide. Pick snowball if you've tried paying off debt before and stopped, if you have several small balances you could knock out quickly, or if seeing progress is what keeps you motivated. Pick avalanche if you're a numbers person who stays motivated by a spreadsheet, if you have a high-rate debt that's clearly costing you the most, or if the calculator shows a big gap. And if you're not sure, there's a hybrid. Knock out one tiny debt first for a quick win, something you can clear in a month or two. Then switch to avalanche for everything else. You get the early motivation and most of the savings. There's no wrong answer here, as long as the extra payment keeps happening every month.",
+     "on_screen_text": "Pick the one you'll stick to",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes at a fork in a path, holding a small compass. No text, no logos, no real people."
+    },
+    {
+     "heading": "Make either method faster",
+     "narration": "Whichever you choose, here's how to speed it up. First, lower the rates. Call your card company and ask for a lower APR. It takes a few minutes, and sometimes it works. If you have good credit, a zero percent balance transfer card can pause interest for a year or more, though most charge a three to five percent fee. Check that the fee is smaller than the interest you'd save, and that you can pay it off before the promo ends. We compare balance transfer cards on our site. Second, find extra money. Every raise, tax refund or side income can go straight to your target debt. Even an extra fifty dollars a month shortens the timeline noticeably. Third, stop adding new debt. Take the card out of your phone's wallet until you're done.",
+     "on_screen_text": "Lower the rate. Add extra. Stop new debt.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a card being removed from it, coins flowing to a target. No text, no logos, no real people."
+    },
+    {
+     "heading": "Protect your plan",
+     "narration": "One more thing before you start: keep a small emergency buffer. If your car breaks down and you have zero savings, that repair goes right back on the credit card, and it feels like all your progress just vanished. So before going all-in on debt, build a starter emergency fund of five hundred to a thousand dollars. It's not exciting, but it's what keeps one bad week from undoing six months of work. Then automate your minimum payments so you never pay a late fee or take a credit score hit, and set up the extra payment to go out automatically, right after payday. Finally, write down your debt-free date and put it somewhere you'll see it. Watching that date get closer is surprisingly powerful.",
+     "on_screen_text": "Starter buffer first: $500–$1,000",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small umbrella sheltering a jar of coins from rain. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. Both methods pay every minimum, put extra money on one target debt, and roll payments forward as each debt disappears. Snowball targets the smallest balance first, for faster wins. Avalanche targets the highest rate first, for the lowest total interest. In our fictional example with seventy-eight hundred dollars of debt and four hundred a month, avalanche saved three hundred and twenty-seven dollars, and snowball cleared the first debt fourteen months sooner. Both finished in month twenty-four. Run your own numbers, choose the method you'll stick with, keep a starter emergency fund, and automate the payments. The free debt payoff guide and calculator are linked in the description, along with our balance transfer comparison.",
+     "on_screen_text": "Choose one. Automate it. Finish.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes crossing a finish line ribbon, confetti in muted greens. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Snowball vs avalanche on the same fictional $7,800 of debt at $400/month:\nAvalanche: ~$1,465 interest, first debt gone month 19.\nSnowball: ~$1,792 interest, first debt gone month 5.\nBoth debt-free in month 24.\n\nExamples are hypothetical and for education only. Not financial advice.",
+   "hashtags": [
+    "debtfree",
+    "debtsnowball",
+    "debtavalanche",
+    "payoffdebt",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "Debt snowball vs debt avalanche, with real month-by-month math. We run both methods on the same fictional $7,800 of debt and $400 a month: avalanche saves $327 in interest, snowball clears the first debt 14 months sooner. Here's how each works, when the gap gets big, and how to pick.\n\nChapters\n0:00 Intro\n0:54 The example debts\n1:46 How the snowball works\n2:40 How the avalanche works\n3:33 Side by side\n4:22 When the difference gets big\n5:17 Which one should you pick?\n6:10 Make either method faster\n7:05 Protect your plan\n7:57 Recap\n\nLinks\nDebt avalanche vs snowball: the full guide: https://moneymadesimple.netlify.app/blog/debt-avalanche-vs-snowball/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-02\nBalance transfer cards compared: https://moneymadesimple.netlify.app/compare/best-balance-transfer-cards/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-02\nHow credit scores work: https://moneymadesimple.netlify.app/blog/how-credit-scores-work/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-02\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-02\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "Snowball vs Avalanche: real math",
+   "sources": [
+    "https://www.consumerfinance.gov/about-us/blog/how-to-reduce-your-debt/",
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-balance-transfer-fee-en-35/"
+   ],
+   "claims_to_verify": [
+    "Fictional debts: $4,500 @24% min $135; $800 @18% min $30; $2,500 @10% min $80; $400/month total",
+    "Simulated monthly: snowball interest ≈$1,792, payoffs months 5/14/24; avalanche ≈$1,465, months 19/21/24",
+    "Balance transfer fees typically 3–5%"
+   ],
+   "title_variants": [
+    "Snowball or Avalanche? Which Debt Payoff Method Saves More",
+    "How to Pay Off Debt Fast: Snowball vs Avalanche With Real Math"
+   ],
+   "hook_variants": [
+    "Same $7,800 of debt. Same $400 a month. Two methods. Here's the real difference.",
+    "The math says avalanche. Your brain might say snowball. Here's how to choose."
+   ],
+   "original_element": "worked-example-chart: Month-by-month payoff chart from the video's own simulation: snowball vs avalanche balances, payoff months 5/14/24 vs 19/21/24 (chapter \"Side by side\")"
+  },
+  "format_style": "real-numbers",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Month-by-month payoff chart from the video's own simulation: snowball vs avalanche balances, payoff months 5/14/24 vs 19/21/24",
+   "chapter": "Side by side"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "How much to save (starter $1,000, then 3–6 months of essentials, worked on a fictional $2,000/month), where to keep it (insured high-yield savings), how to build it on a tight budget, and the rules for using it.",
+  "series": "youtube-long-form",
+  "series_part": 3,
+  "content_id": "yt-series-03",
+  "search_terms": [
+   "how to build an emergency fund",
+   "how much emergency fund",
+   "emergency fund",
+   "where to keep emergency fund"
+  ],
+  "thumbnail_alt": "Emergency fund math",
+  "script": {
+   "title": "How to Build an Emergency Fund (Even on a Tight Budget)",
+   "hook": "$1,000 is the first goal. Then 3 months of essentials. Here's how to get there on a tight budget.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "An emergency fund is the most boring thing in personal finance, and it's also the one that changes your life the most. It's the difference between a car repair being an annoying week and a car repair being three months of credit card debt. In this video we'll cover how much you actually need, using simple math, where to keep it so it's safe and still earns something, how to build it even when money is tight, and the rules for when to use it. We'll start with a first goal of one thousand dollars, and then build toward three to six months of essential expenses. We'll use a fictional example with two thousand dollars a month in essentials, so you can follow the math with your own numbers.",
+     "on_screen_text": "The boring account that changes everything",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small umbrella over a jar of coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "What an emergency fund is for",
+     "narration": "An emergency fund is money you set aside for things that are urgent, necessary and unexpected. Your car breaks down and you need it for work. You lose your job or your hours get cut. A medical bill you didn't see coming. Your phone dies and you need one to work. What it's not for: a sale, a vacation, or holiday gifts. Those are planned expenses, and they belong in sinking funds, which we cover in another video. The point of the emergency fund is to break the cycle where every surprise goes on a credit card. Once you have it, an emergency becomes a transfer instead of a crisis. And there's a real mental health benefit too. Knowing you have a cushion makes every other money decision calmer.",
+     "on_screen_text": "Urgent. Necessary. Unexpected.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a toolbox, a medical cross and a car wrench next to a small safe. No text, no logos, no real people."
+    },
+    {
+     "heading": "Goal one: a starter fund",
+     "narration": "Your first goal is a starter emergency fund of five hundred to one thousand dollars. That covers a lot of the most common surprises, like a car repair, a vet visit or an urgent trip. If you have high-interest credit card debt, this is where you pause the emergency fund and switch to paying down debt, because a twenty-four percent card costs more than your savings will earn. But don't skip the starter fund. Without it, any surprise goes back on the card and undoes your debt progress. How fast can you get there? At fifty dollars a week, you hit a thousand in about twenty weeks, roughly five months. At twenty-five a week, about ten months. Pick a number that works, automate it, and let it run.",
+     "on_screen_text": "Starter: $500–$1,000",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small piggy bank filling up, a progress bar beside it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Goal two: how much you really need",
+     "narration": "Once your high-interest debt is under control, the next goal is three to six months of essential expenses. Notice it's essentials, not your full income. Rent, utilities, groceries, insurance, transportation, minimum debt payments, phone. In our example, that's two thousand dollars a month. So three months is six thousand dollars, and six months is twelve thousand. Which end should you aim for? Lean toward three months if you have a stable job, two incomes in the household, and no dependents. Lean toward six months or more if you're self-employed, work on commission, are the only income for your household, or work in an industry with frequent layoffs. If six thousand sounds huge, remember you're not doing it this month. You're building it a little every payday.",
+     "on_screen_text": "3–6 months of essentials",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a row of six small calendars, three of them highlighted. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Emergency fund targets",
+      "labels": [
+       "Starter",
+       "3 months",
+       "6 months"
+      ],
+      "values": [
+       1000,
+       6000,
+       12000
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "$2,000 a month of essentials, example"
+     }
+    },
+    {
+     "heading": "Where to keep it",
+     "narration": "Where you keep your emergency fund matters. It needs to be safe, separate and accessible. Safe means a federally insured account. At a bank, that's FDIC insurance, and at a credit union, it's NCUA insurance, generally up to two hundred and fifty thousand dollars per depositor, per institution, per ownership category. Separate means not in your checking account, where it's too easy to spend by accident. Accessible means you can get to it within a day or two. Not invested in the stock market, because emergencies often happen when markets are down. For most people, a high-yield savings account at an insured bank is the best home. It pays much more than a typical savings account, and you can still transfer money out quickly. We compare high-yield savings accounts on our site, linked below.",
+     "on_screen_text": "Safe. Separate. Accessible.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small vault with a shield icon, connected to a phone by a dotted line. No text, no logos, no real people."
+    },
+    {
+     "heading": "How to build it on a tight budget",
+     "narration": "What if your budget feels like it has nothing left? Here are four ways to find the money. One: start embarrassingly small. Ten or twenty dollars per paycheck, scheduled automatically. Small amounts build the habit, and the habit is what grows. Two: use windfalls. A tax refund, a bonus, a birthday check, or money from selling things you don't use. Put at least half straight into the fund. Three: cancel one subscription and redirect it. If you cut a fifteen dollar streaming service, set up a fifteen dollar transfer the same day, so the money doesn't just disappear into spending. Four: when you pay off a debt, keep paying it to yourself. That car payment or card minimum you're used to sending out can now go into savings. You won't miss money you were already living without.",
+     "on_screen_text": "Small. Windfalls. Redirect. Roll over.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four small coin streams flowing into one jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Make it automatic",
+     "narration": "The single best thing you can do is make it automatic. In your bank app, set a recurring transfer from checking to your emergency savings for the day after each payday. The day after, so a late paycheck doesn't cause an overdraft. Then, and this is important, don't link a debit card to that savings account, and don't keep it on your home screen. A little friction helps. Some people even keep their emergency fund at a different bank from their checking, so it takes a day to move money. That one-day delay is enough to stop impulse spending, but still fast enough for a real emergency. Set it up once and you never have to think about it again. Check it at your monthly money check-in to make sure it's still running.",
+     "on_screen_text": "Automatic transfer, day after payday",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small conveyor belt carrying coins from one building to another. No text, no logos, no real people."
+    },
+    {
+     "heading": "When to use it, and how to refill it",
+     "narration": "When something happens, ask three questions. Is it urgent? Is it necessary? Is it unexpected? If the answer to all three is yes, use the fund without guilt. That's exactly what it's for. People sometimes put an emergency on a credit card to protect their savings, and then pay interest on it for months. Don't do that. The money is there to be used. After you use it, pause any extra goals and refill the fund first. If you spent eight hundred dollars, set a plan to rebuild it over the next few months, maybe by temporarily redirecting your flexible spending. And if something isn't an emergency but you still want it, like a trip or a new laptop, that's a sinking fund goal. Start saving for it separately.",
+     "on_screen_text": "Urgent + necessary + unexpected = use it",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a checklist with three ticks next to an open jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Common mistakes",
+     "narration": "A few common mistakes. Keeping it in checking, where it slowly gets spent. Investing it in stocks or crypto, where it might be down twenty percent the day you need it. Waiting to start until you can save a big amount. Using it for planned expenses like holidays, and then having nothing when the real emergency comes. And the opposite mistake: holding so much in emergency savings that you skip your 401(k) match or keep high-interest debt around. Once you're past six months or so, extra cash usually works harder somewhere else. And make sure it's actually insured. Some apps hold money through partner banks, and the details matter. We wrote a guide on checking if your savings app is FDIC insured, linked below.",
+     "on_screen_text": "Not in checking. Not in stocks.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a few small warning signs next to a calm savings jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. An emergency fund is for things that are urgent, necessary and unexpected. Start with five hundred to a thousand dollars. Then, once high-interest debt is handled, build toward three to six months of essential expenses. In our example, that's six to twelve thousand dollars. Keep it in an insured, separate, accessible account, like a high-yield savings account. Automate a transfer the day after every payday, even if it's small, and add windfalls. Use it without guilt when you need it, then refill it first. It's boring. It works. If you want a simple plan for your first week, the free seven-day money reset is in the description, plus our high-yield savings comparison and the full emergency fund guide.",
+     "on_screen_text": "Start with $1,000. Build to 3–6 months.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes sitting calmly on a full jar of coins under a small umbrella. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Emergency fund, simple version:\n1. Starter: $500–$1,000\n2. Then 3–6 months of essentials (fictional example: $2,000/month → $6,000–$12,000)\n3. Keep it insured, separate and accessible\n4. Automate it the day after payday\n\nExamples are hypothetical and for education only. Not financial advice.",
+   "hashtags": [
+    "emergencyfund",
+    "savingmoney",
+    "budgeting",
+    "highyieldsavings",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "How to build an emergency fund, even on a tight budget. How much you need (a $1,000 starter, then 3–6 months of essentials, worked on a fictional $2,000 a month), where to keep it, four ways to find the money, and the rules for using and refilling it.\n\nChapters\n0:00 Intro\n0:53 What an emergency fund is for\n1:46 Goal one: a starter fund\n2:38 Goal two: how much you really need\n3:30 Where to keep it\n4:25 How to build it on a tight budget\n5:22 Make it automatic\n6:16 When to use it, and how to refill it\n7:10 Common mistakes\n8:01 Recap\n\nLinks\nHow to build an emergency fund: the full guide: https://moneymadesimple.netlify.app/blog/how-to-build-an-emergency-fund/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-03\nHigh-yield savings accounts compared: https://moneymadesimple.netlify.app/compare/best-high-yield-savings-accounts/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-03\nIs my savings app FDIC insured?: https://moneymadesimple.netlify.app/blog/is-my-savings-app-fdic-insured/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-03\nHow to open a high-yield savings account: https://moneymadesimple.netlify.app/blog/how-to-open-a-high-yield-savings-account/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-03\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-03\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "$1,000 first. Then this.",
+   "sources": [
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+    "https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance",
+    "https://ncua.gov/consumers/share-insurance-coverage"
+   ],
+   "claims_to_verify": [
+    "FDIC/NCUA standard coverage $250,000 per depositor, per insured institution, per ownership category",
+    "$50/week × 20 weeks = $1,000",
+    "Fictional $2,000/month essentials → 3 months $6,000, 6 months $12,000"
+   ],
+   "title_variants": [
+    "How Much Should Be in Your Emergency Fund? (Simple Math)",
+    "Emergency Fund 101: How Much, Where to Keep It, How to Build It Fast"
+   ],
+   "hook_variants": [
+    "What counts as an emergency, how much to save, and where to put it, in 10 minutes.",
+    "Your emergency fund's job isn't to grow. It's to be there. Here's how to build one."
+   ],
+   "original_element": "screen-recording: Screen recording of the FDIC BankFind tool checking a bank's insurance (any public bank) and setting a recurring transfer in a demo banking screen (chapter \"Where to keep it\")"
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Screen recording of the FDIC BankFind tool checking a bank's insurance (any public bank) and setting a recurring transfer in a demo banking screen",
+   "chapter": "Where to keep it"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "The five FICO factors and their weights, what actually moves a score (on-time payments, utilization), what barely matters, how to build credit from zero, and how to read and dispute a report for free.",
+  "series": "youtube-long-form",
+  "series_part": 4,
+  "content_id": "yt-series-04",
+  "search_terms": [
+   "how credit scores work",
+   "how to raise credit score",
+   "how to build credit",
+   "credit utilization"
+  ],
+  "thumbnail_alt": "Credit score, explained",
+  "script": {
+   "title": "How Credit Scores Actually Work (and How to Raise Yours)",
+   "hook": "5 factors make up your credit score, and 2 of them are 65% of it. Here's what actually moves the number.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Your credit score affects your apartment application, your car loan rate, your insurance in many states, and sometimes even your phone plan. But most people have no idea how it's calculated, so they worry about the wrong things. In this video we'll go through the five factors that make up a FICO score, the score most lenders use, and how much each one counts. Two of them make up sixty-five percent of the score, and those are where you should spend your energy. Then we'll cover how to build credit from zero, how to recover from mistakes, and how to check and fix your credit report for free. No paid services needed. Everything here you can do yourself in an afternoon.",
+     "on_screen_text": "What actually moves your score",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes looking at a simple gauge dial with a needle pointing upward. No text, no logos, no real people."
+    },
+    {
+     "heading": "Score vs report",
+     "narration": "First, a quick difference that confuses a lot of people. Your credit report is the record: every account you have, your balances, your payment history, and any collections. It's kept by three credit bureaus, Equifax, Experian and TransUnion. Your credit score is a number calculated from that report. FICO scores and VantageScore are the two main brands, and most FICO scores run from three hundred to eight fifty. Because there are three bureaus and several scoring models, you actually have many scores, and they won't match exactly. That's normal. What matters is the trend and the range, not the exact number. And checking your own score or report is a soft inquiry. It never hurts your score, so check as often as you want.",
+     "on_screen_text": "Report = record. Score = math.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a folder of papers next to a single number badge. No text, no logos, no real people."
+    },
+    {
+     "heading": "Factor 1: payment history (35%)",
+     "narration": "The biggest factor is payment history, about thirty-five percent of a FICO score. Simply put: do you pay on time? One late payment can hurt a lot, especially if your score is high. But here's an important detail. Lenders generally don't report a payment as late to the credit bureaus until it's at least thirty days past due. So if you miss a due date by a few days, pay it immediately. You'll probably owe a late fee, but it may never show up on your report. The fix for this factor is simple: set up autopay for at least the minimum payment on every card and loan. You can always pay more manually. Autopay just makes sure you never miss. That one setting protects the biggest part of your score.",
+     "on_screen_text": "On time = 35%",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with every date checked off, the small round green piggy bank mascot with big eyes giving a thumbs up. No text, no logos, no real people."
+    },
+    {
+     "heading": "Factor 2: amounts owed (30%)",
+     "narration": "The second biggest factor is amounts owed, about thirty percent. The key idea here is credit utilization: how much of your available credit card limit you're using. If you have a thousand dollar limit and a three hundred dollar balance, your utilization is thirty percent. A common guideline is to keep it under thirty percent, and people with the highest scores often stay under ten. Here's what most people don't know: utilization is usually based on the balance your card reports, which is often your statement balance, even if you pay in full every month. So if you want a lower reported balance before applying for a loan, pay the card down before the statement closes. And unlike late payments, utilization has no long memory. Pay it down, and your score can recover quickly.",
+     "on_screen_text": "Use under 30% of your limit",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a credit card next to a simple bar filled one third of the way. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "What a FICO score is made of",
+      "labels": [
+       "Payment history",
+       "Amounts owed",
+       "History length",
+       "New credit",
+       "Credit mix"
+      ],
+      "values": [
+       35,
+       30,
+       15,
+       10,
+       10
+      ],
+      "unit_prefix": "",
+      "unit_suffix": "%",
+      "note": "Approximate weights"
+     }
+    },
+    {
+     "heading": "Factors 3 to 5",
+     "narration": "The last three factors are smaller. Length of credit history is about fifteen percent: how old your accounts are on average, and how long since your oldest account was opened. That's why closing your oldest card can sometimes hurt a little. New credit is about ten percent: recent applications and hard inquiries. For most people, one hard inquiry drops a score by less than five points, and it only counts in FICO scores for twelve months. Credit mix is the last ten percent: having different kinds of credit, like a card and an installment loan. You should never take out a loan just to improve your mix. These factors matter, but they move slowly. Focus on the big two, paying on time and keeping balances low, and these mostly take care of themselves.",
+     "on_screen_text": "Age 15% · New 10% · Mix 10%",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small blocks of different heights beside two tall blocks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Building credit from zero",
+     "narration": "If you have no credit history at all, you're not bad with credit. You're just invisible to the scoring models. Here are the common ways to start. A secured credit card: you put down a deposit, often a couple hundred dollars, and that becomes your limit. Use it for one small bill, like a streaming subscription, set it to autopay in full, and never carry a balance. A credit-builder loan: you make monthly payments into a locked account, and the lender reports those payments. At the end, you get the money back, minus any interest and fees. Being added as an authorized user on a family member's card with a long, clean history can also help, as long as they pay on time. Most people can build a FICO score within about six months of activity.",
+     "on_screen_text": "No history ≠ bad credit",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tiny sprout growing out of a credit card shaped plant pot. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recovering from mistakes",
+     "narration": "If your credit has taken some hits, the good news is that time is on your side. Most negative items, like late payments and collections, can stay on your report for up to seven years, but their impact fades much sooner as you add on-time history. Here's the recovery order. One: get current on everything. Stop new late payments first. Two: pay down card balances to lower utilization. That's the fastest lever you have. Three: don't close old accounts unless they have an annual fee you can't justify. Four: be careful with anyone who promises to remove accurate negative information for a fee. The FTC warns about credit repair scams. Anything a credit repair company can legally do, like disputing errors, you can do yourself, free.",
+     "on_screen_text": "Get current. Pay down. Wait.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a path going uphill with small flags marking steps. No text, no logos, no real people."
+    },
+    {
+     "heading": "Check and dispute your report free",
+     "narration": "Check your credit report from all three bureaus for free at AnnualCreditReport dot com. That's the official site, and you can now get free reports weekly. Look for accounts you don't recognize, late payments you know you made on time, wrong balances, or old debts that should have aged off. Errors are more common than you'd think. If you find one, file a dispute directly with the bureau that shows it. You can do it online. Explain what's wrong and include copies of any proof, like a bank statement showing the payment. The bureau generally has thirty days to investigate. And if you see accounts you didn't open, that could be identity theft. Report it at IdentityTheft dot gov and consider freezing your credit. We have a whole video on that.",
+     "on_screen_text": "Free reports: AnnualCreditReport.com",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a document with one line highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myths that waste your time",
+     "narration": "A few myths to drop. Myth: you need to carry a balance to build credit. False. Paying in full every month builds credit just as well, and you pay zero interest. Myth: checking your score hurts it. False. Your own checks are soft inquiries. Myth: your income affects your score. It doesn't. Income isn't in your credit report, though lenders may ask for it separately. Myth: closing a card always helps. Usually it doesn't, because you lose available credit and possibly account age. And myth: you need to pay a company to fix your credit. You don't. Disputing errors is free, and the habits that raise your score, on-time payments and low balances, are free too.",
+     "on_screen_text": "Myths: carry a balance, checking hurts",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a few speech bubbles with crossed-out question marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. Your report is the record, and your score is the math. Payment history is about thirty-five percent, and amounts owed are about thirty percent, so autopay every minimum and keep card balances low, ideally under thirty percent of your limits. Account age, new credit and mix make up the rest and move slowly. To build from zero, use a secured card or credit-builder loan responsibly. To recover, get current, pay down balances and give it time. And check your reports for free at AnnualCreditReport dot com, disputing any errors yourself. Our full guide to how credit scores work is in the description, along with our comparison of credit-builder cards if you're starting from scratch.",
+     "on_screen_text": "On time + low balances = most of it",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to a gauge dial with the needle in the green zone. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "The 5 parts of a FICO score:\n1. Payment history ~35%\n2. Amounts owed ~30%\n3. Length of history ~15%\n4. New credit ~10%\n5. Credit mix ~10%\n\nAutopay every minimum and keep balances low. Free reports at AnnualCreditReport.com.\n\nEducational, not financial advice.",
+   "hashtags": [
+    "creditscore",
+    "buildcredit",
+    "credittips",
+    "creditreport",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "How credit scores actually work, factor by factor: payment history (about 35%), amounts owed (about 30%), length of history, new credit and credit mix. Plus how to build credit from zero, recover from mistakes, and check and dispute your credit report for free.\n\nChapters\n0:00 Intro\n0:49 Score vs report\n1:41 Factor 1: payment history (35%)\n2:34 Factor 2: amounts owed (30%)\n3:30 Factors 3 to 5\n4:24 Building credit from zero\n5:20 Recovering from mistakes\n6:12 Check and dispute your report free\n7:06 Myths that waste your time\n7:54 Recap\n\nLinks\nHow credit scores work: the full guide: https://moneymadesimple.netlify.app/blog/how-credit-scores-work/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-04\nCredit-builder cards compared: https://moneymadesimple.netlify.app/compare/best-credit-builder-cards/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-04\nSelf credit builder review: https://moneymadesimple.netlify.app/blog/self-credit-builder-review/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-04\nHow to freeze your credit: https://moneymadesimple.netlify.app/blog/how-to-freeze-your-credit/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-04\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-04\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "65% of your score is this",
+   "sources": [
+    "https://www.myfico.com/credit-education/whats-in-your-credit-score",
+    "https://www.annualcreditreport.com/",
+    "https://consumer.ftc.gov/articles/disputing-errors-your-credit-reports",
+    "https://consumer.ftc.gov/articles/fixing-your-credit-faqs"
+   ],
+   "claims_to_verify": [
+    "FICO weights: 35/30/15/10/10",
+    "Most FICO scores range 300–850",
+    "Late payments generally reported at 30+ days past due",
+    "Hard inquiry usually <5 points, counts 12 months in FICO",
+    "Most negative items up to 7 years",
+    "Free weekly reports at AnnualCreditReport.com",
+    "Bureaus generally have 30 days to investigate a dispute"
+   ],
+   "title_variants": [
+    "How to Raise Your Credit Score: The 5 Factors Explained",
+    "Credit Scores Explained Simply: What Matters and What Doesn't"
+   ],
+   "hook_variants": [
+    "Checking your own score doesn't hurt it. Here's what does, factor by factor.",
+    "No credit, bad credit, or just confused? Here's how the score is really built."
+   ],
+   "original_element": "screen-recording: Screen recording of AnnualCreditReport.com and the dispute page of one bureau (no personal data), plus a utilization bar chart (chapter \"Check and dispute your report free\")"
+  },
+  "format_style": "myth-vs-fact",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Screen recording of AnnualCreditReport.com and the dispute page of one bureau (no personal data), plus a utilization bar chart",
+   "chapter": "Check and dispute your report free"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "What to do before investing, which account to open first, what to buy (broad index funds or target-date funds), a hypothetical $100/month at 7% over 10–30 years, why fees matter, and how to automate it.",
+  "series": "youtube-long-form",
+  "series_part": 5,
+  "content_id": "yt-series-05",
+  "search_terms": [
+   "how to start investing",
+   "investing for beginners",
+   "how to invest 100 dollars",
+   "index funds for beginners"
+  ],
+  "thumbnail_alt": "Start investing with $100",
+  "script": {
+   "title": "How to Start Investing With $100 a Month (Beginner's Guide)",
+   "hook": "$100 a month for 30 years at a hypothetical 7% is about $122,000. Here's exactly how to start.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "You don't need thousands of dollars to start investing. Most brokerages let you start with very little, and many let you buy fractions of a share. In this video we'll go through exactly how to start with a hundred dollars a month: what to do before you invest, which account to open first, what to actually buy, why fees matter so much, and how to automate the whole thing so you don't have to think about it. We'll also look at a hypothetical example. A hundred dollars a month, at an average seven percent return, for thirty years, comes to about a hundred and twenty-two thousand dollars. That's not a promise. Investing involves risk, and real returns go up and down. But it shows why starting early, even small, matters so much.",
+     "on_screen_text": "Start with $100 a month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes planting a small seed in a pot with a coin-shaped leaf. No text, no logos, no real people."
+    },
+    {
+     "heading": "Before you invest",
+     "narration": "Before you invest your first dollar, check three things. One: are you getting your full 401(k) match at work? If your employer matches contributions, that's often an instant fifty or one hundred percent return on that money, which is very hard to beat. Contribute at least enough to get the full match. Two: do you have high-interest debt? If you have a credit card at twenty-four percent, every dollar you pay down saves you a sure twenty-four percent in interest, and investments are never certain. So high-rate debt usually comes first. Three: do you have a starter emergency fund? Even five hundred to a thousand dollars means a surprise expense won't force you to sell investments at a bad time. Got those three? You're ready.",
+     "on_screen_text": "Match → high-rate debt → buffer",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three stepping stones leading to a small tree. No text, no logos, no real people."
+    },
+    {
+     "heading": "Which account first",
+     "narration": "Next, where should your hundred dollars go? Think of an account as a container, and the investments as what you put inside it. If you're already getting your 401(k) match, a common next step is a Roth IRA. You put in money you've already paid tax on, it can grow, and qualified withdrawals in retirement are tax-free. There are income limits and an annual contribution limit, so check the IRS page for this year's numbers. If you want money you can use before retirement, a regular taxable brokerage account works too, with no contribution limits but no special tax breaks. Many beginners do both over time. We have a full video comparing Roth and traditional IRAs, and a guide on where to open a Roth IRA, both linked below.",
+     "on_screen_text": "Account = container",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two simple containers, one with a small leaf symbol, one plain. No text, no logos, no real people."
+    },
+    {
+     "heading": "What to buy: index funds",
+     "narration": "Now, what goes inside the container? For most beginners, the simple answer is a broad, low-cost index fund. An index fund holds a small piece of many companies at once, like the five hundred large US companies in the S and P five hundred, or the whole US stock market, or the whole world. Instead of trying to pick the winning company, you own a little of all of them. That spreads out your risk, and historically, broad index funds have outperformed most professional fund managers over long periods, mostly because they're so cheap. Another simple option is a target-date fund. You pick the fund with the year closest to when you'll retire, and it automatically holds a mix of stocks and bonds, getting more conservative as that year gets closer. One fund, done.",
+     "on_screen_text": "Own a little of everything",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a basket holding many tiny different-shaped building blocks. No text, no logos, no real people."
+    },
+    {
+     "heading": "What $100 a month can become",
+     "narration": "Let's look at the hypothetical math. If you invest a hundred dollars a month and earn an average of seven percent a year, here's roughly what you'd have. After ten years, about seventeen thousand three hundred dollars, from twelve thousand you put in. After twenty years, about fifty-two thousand, from twenty-four thousand put in. After thirty years, about a hundred and twenty-two thousand, from thirty-six thousand put in. Notice how the growth speeds up. In the last ten years, the account grows by about seventy thousand dollars. That's compounding: your returns start earning returns. Important reminder: real markets don't give you seven percent every year. Some years are up twenty, some are down twenty or more. This is an illustration, not a forecast. But the pattern is the point. Time does most of the work.",
+     "on_screen_text": "10y ≈ $17k · 20y ≈ $52k · 30y ≈ $122k",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a curved line chart rising slowly then faster, the small round green piggy bank mascot with big eyes pointing at the end. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$100 a month at 7%",
+      "labels": [
+       "10 years",
+       "20 years",
+       "30 years"
+      ],
+      "values": [
+       17300,
+       52000,
+       122000
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Hypothetical 7% a year, not a forecast"
+     }
+    },
+    {
+     "heading": "Why fees matter",
+     "narration": "Fees are the one thing in investing you actually control, and they matter more than they look. Funds charge an annual fee called an expense ratio. A broad index fund might charge three hundredths of a percent. Some actively managed funds charge one percent or more. One percent sounds tiny. But using the same hypothetical, a hundred a month for thirty years, a fund that charges three hundredths of a percent would leave you with about a hundred and twenty-one thousand. A fund that charges one percent would leave you with about a hundred thousand. That's a difference of around twenty thousand dollars, just from fees. So before you buy any fund, look up its expense ratio. We have a full explainer on expense ratios linked below.",
+     "on_screen_text": "1% fee ≈ $20,000 over 30 years",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two similar plants, one with a small bug nibbling its leaves. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step by step: getting started",
+     "narration": "Here's how to actually do it. Step one: pick a brokerage. Look for no account minimum, no trading fees on the funds you want, fractional shares, and automatic investing. We compare beginner options on our site. Step two: open the account, a Roth IRA or a regular brokerage account. You'll need your Social Security number and bank details, and it takes about fifteen minutes. Step three: link your checking account and set up an automatic transfer of a hundred dollars a month, the day after payday. Step four: set up automatic investing into your chosen fund, like a total market index fund or a target-date fund. This is the step people miss. Money sitting in the account as cash isn't invested. Step five: don't touch it. Check once a month, not once a day.",
+     "on_screen_text": "Pick → open → fund → auto-invest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short staircase of five steps with a small flag at the top. No text, no logos, no real people."
+    },
+    {
+     "heading": "When the market drops",
+     "narration": "At some point, your investments will drop, maybe ten percent, maybe much more. This is normal and expected. It's not a sign you did something wrong. The biggest mistake beginners make is panic-selling during a drop. Selling turns a temporary dip into a permanent loss, and then you have to guess when to buy back in. If you're investing for decades, drops can actually work in your favor, because your automatic hundred dollars buys more shares when prices are lower. So decide now, before it happens, what you'll do. Write it down: when the market drops twenty percent, I keep my automatic investments running. And if you can't stand the swings, it might be a sign you need a more conservative mix, like a target-date fund with more bonds.",
+     "on_screen_text": "Drops are part of the plan",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gentle wavy line trending upward, the small round green piggy bank mascot with big eyes surfing it calmly. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mistakes to avoid",
+     "narration": "Quick list of beginner mistakes. Waiting until you have a lot of money. Starting small now beats starting big later. Trying to pick the next big stock based on social media. Most professionals can't do this consistently either. Paying high fees without noticing. Check expense ratios. Forgetting to actually invest the cash in your account. Turn on automatic investing. Investing your emergency fund. That money needs to be safe and available. Checking your account every day. It makes normal swings feel scary. And stopping your contributions after a drop. That's exactly when steady investing helps the most. Avoid these, and you're ahead of most people.",
+     "on_screen_text": "Start small. Stay cheap. Stay put.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short checklist with crossed-out traps beside a calm path. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. Before investing, get your 401(k) match, handle high-interest debt and build a starter emergency fund. Then choose your container: a Roth IRA is a common first choice, or a regular brokerage account. Inside it, buy a broad, low-cost index fund or a target-date fund. Watch your fees, because a one percent fee can cost around twenty thousand dollars over thirty years in our example. Automate a hundred dollars a month and automatic investing, then leave it alone, especially when the market drops. A hundred dollars a month at a hypothetical seven percent could become about a hundred and twenty-two thousand in thirty years. Our full guide to investing with a hundred a month and our robo-advisor comparison are in the description. Investing involves risk, including loss of principal.",
+     "on_screen_text": "Match, debt, buffer, then $100/month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes watering a small tree that has grown taller. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Start investing with $100/month:\n1. Get your 401(k) match\n2. Pay down high-rate debt\n3. Keep a starter emergency fund\n4. Open a Roth IRA or brokerage account\n5. Buy a low-cost index or target-date fund\n6. Automate it\n\nHypothetical: $100/month at 7% for 30 years ≈ $122,000. Not a forecast. Investing involves risk, including loss of principal. Not financial advice.",
+   "hashtags": [
+    "investingforbeginners",
+    "indexfunds",
+    "rothira",
+    "howtoinvest",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "How to start investing with $100 a month: what to do first (401(k) match, high-rate debt, a starter buffer), which account to open, what to buy (broad index funds or target-date funds), why fees matter, and how to automate it. Includes a hypothetical $100/month at 7% over 10, 20 and 30 years. Investing involves risk.\n\nChapters\n0:00 Intro\n0:54 Before you invest\n1:45 Which account first\n2:38 What to buy: index funds\n3:34 What $100 a month can become\n4:29 Why fees matter\n5:21 Step by step: getting started\n6:16 When the market drops\n7:10 Mistakes to avoid\n7:53 Recap\n\nLinks\nHow to start investing with $100 a month: https://moneymadesimple.netlify.app/blog/how-to-start-investing-with-100-a-month/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-05\nRobo-advisors compared: https://moneymadesimple.netlify.app/compare/best-robo-advisors/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-05\nExpense ratios explained: https://moneymadesimple.netlify.app/blog/expense-ratios-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-05\nWhere to open a Roth IRA: https://moneymadesimple.netlify.app/blog/where-to-open-a-roth-ira/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-05\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-05\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "$100/month → $122k?",
+   "sources": [
+    "https://www.investor.gov/introduction-investing/investing-basics/save-and-invest/start-investing",
+    "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator",
+    "https://www.irs.gov/retirement-plans/roth-iras",
+    "https://www.spglobal.com/spdji/en/research-insights/spiva/"
+   ],
+   "claims_to_verify": [
+    "Hypothetical $100/month, 7%/yr compounded monthly: 10y ≈$17,308; 20y ≈$52,093; 30y ≈$121,997",
+    "Same at 6.97% ≈$121,277 vs 6% ≈$100,452 (fee drag ≈$20,800)",
+    "SPIVA: most active funds underperform their benchmark over long periods",
+    "Roth IRA income and contribution limits: check current IRS page"
+   ],
+   "title_variants": [
+    "Investing for Beginners: Start With $100 a Month",
+    "What $100 a Month Can Turn Into (and Exactly How to Start)"
+   ],
+   "hook_variants": [
+    "You don't need thousands to start investing. You need $100 and the right order.",
+    "Investing for beginners in 10 minutes: what to do first, where, and what to buy."
+   ],
+   "original_element": "worked-example-chart: Growth curve for $100/month at a hypothetical 7% (10, 20, 30 years) and the 0.03% vs 1% fee gap, drawn from the script's numbers (chapter \"What $100 a month can become\")"
+  },
+  "format_style": "on-screen-calculation",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Growth curve for $100/month at a hypothetical 7% (10, 20, 30 years) and the 0.03% vs 1% fee gap, drawn from the script's numbers",
+   "chapter": "What $100 a month can become"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Pay tax now or later: a worked $1,000 example showing the two are equal when tax rates match, then the one question that decides it (tax rate now vs later), the rules that matter (limits, income limits, withdrawals) and when splitting makes sense.",
+  "series": "youtube-long-form",
+  "series_part": 6,
+  "content_id": "yt-series-06",
+  "search_terms": [
+   "roth vs traditional ira",
+   "roth ira explained",
+   "traditional ira",
+   "should i get a roth ira"
+  ],
+  "thumbnail_alt": "Tax now or later?",
+  "script": {
+   "title": "Roth vs Traditional IRA: Which One Should You Pick?",
+   "hook": "Roth or traditional? $1,000 in each, same 20% tax rate, and they end up exactly equal. So here's what decides it.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Roth or traditional? It's one of the most common questions people ask when they start saving for retirement, and the internet makes it sound much more complicated than it is. Here's the short version. A traditional IRA usually means you skip tax now and pay it later. A Roth IRA means you pay tax now and skip it later. That's the core difference. In this video, we'll run a simple example with a thousand dollars that shows why the two can end up exactly equal, and then the one question that breaks the tie. Then we'll cover the rules that actually matter: contribution limits, income limits, and the surprisingly flexible way Roth contributions can be withdrawn. This is general education, not tax advice, so check the details for your own situation.",
+     "on_screen_text": "Tax now or tax later?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding two envelopes, one marked with a small sun, one with a moon. No text, no logos, no real people."
+    },
+    {
+     "heading": "How each one works",
+     "narration": "Let's define them properly. With a traditional IRA, your contributions may be tax-deductible, which lowers your taxable income this year. The money grows without yearly taxes, and when you withdraw in retirement, the withdrawals are taxed as ordinary income. Whether you can deduct your contribution depends on your income and whether you or your spouse have a retirement plan at work. With a Roth IRA, you contribute money you've already paid tax on. There's no deduction today. But the money grows, and qualified withdrawals in retirement, generally after age fifty-nine and a half and once the account has been open at least five years, are completely tax-free. Both have the same annual contribution limit, and that limit is shared, so it's the total across all your IRAs. Check the IRS site for this year's number.",
+     "on_screen_text": "Traditional: deduct now. Roth: tax-free later.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two simple jars, one with a coin entering, one with a coin leaving. No text, no logos, no real people."
+    },
+    {
+     "heading": "The $1,000 example",
+     "narration": "Here's the example that makes it click. Say you have a thousand dollars of income to put toward retirement, and your tax rate is twenty percent, both now and in retirement. With a traditional IRA, you contribute the full thousand pre-tax. Say it grows four times over the years, to four thousand. When you withdraw, you pay twenty percent tax, so you keep thirty-two hundred. With a Roth IRA, you pay twenty percent tax first, so only eight hundred goes in. It grows four times, to thirty-two hundred, and you withdraw it all tax-free. Thirty-two hundred. Exactly the same. That's the key insight. When your tax rate is the same now and later, Roth and traditional end up equal. So the whole decision comes down to one thing: will your tax rate be higher or lower later?",
+     "on_screen_text": "Same tax rate = same result",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two equal stacks of coins on a balanced scale. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$1,000 of income, 20% tax now and later",
+      "labels": [
+       "Traditional: in",
+       "Traditional: after tax",
+       "Roth: in",
+       "Roth: after growth"
+      ],
+      "values": [
+       1000,
+       3200,
+       800,
+       3200
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Grows 4x, illustrative"
+     }
+    },
+    {
+     "heading": "The one question",
+     "narration": "So here's the one question. Do you expect your tax rate to be higher now, or higher in retirement? If your tax rate is lower now than you expect it to be later, Roth usually wins, because you pay tax at today's lower rate. This is common for people early in their careers, in their first jobs, or in a lower income year, like after a job change or during school. If your tax rate is higher now than you expect later, traditional usually wins, because you take the deduction at today's higher rate and pay tax later at a lower one. This is more common for people at their peak earning years. Nobody knows future tax rates for sure. But if you're young and just starting out, many people lean Roth.",
+     "on_screen_text": "Lower tax now? Lean Roth.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a seesaw with a small coin on one end and a bigger coin on the other. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rules that matter: limits",
+     "narration": "A few rules to know. The annual contribution limit applies to all your IRAs combined, and people fifty and older can contribute a bit more as a catch-up. You also need earned income, like wages or self-employment income, at least equal to what you contribute. Roth IRAs have income limits. If your income is above a certain level, the amount you can contribute directly is reduced, and eventually phased out. Traditional IRAs don't have an income limit to contribute, but the deduction can be limited if you have a workplace plan. These numbers change, often every year, so we're not putting them on screen as if they're permanent. Check the IRS pages linked in the description for the current limits before you contribute.",
+     "on_screen_text": "Check this year's limits at IRS.gov",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small ruler and a calendar next to a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "The Roth flexibility",
+     "narration": "Here's a Roth feature that surprises a lot of people. Your contributions to a Roth IRA, the money you put in, can generally be withdrawn at any time, without tax or penalty. It's the earnings that have rules. Withdraw earnings before age fifty-nine and a half, or before the account has been open five years, and you may owe tax and a ten percent penalty, with some exceptions. That flexibility makes a Roth a little less scary for people who worry about locking money away. But be careful. A Roth is not a good emergency fund. Every dollar you withdraw is a dollar that stops growing, and you can't simply put it back later beyond the annual limit. Think of it as a backup, not a plan. Keep your emergency fund separate.",
+     "on_screen_text": "Contributions: withdraw anytime. Earnings: rules.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a small door at the bottom, a few coins next to it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Roth 401(k) vs traditional 401(k)",
+     "narration": "The same idea applies at work. Many employers offer both a traditional 401(k) and a Roth 401(k). Traditional contributions lower your taxable income now; Roth contributions are after tax and qualified withdrawals are tax-free later. The same one question applies: is your tax rate likely higher now or later? A few differences from IRAs. 401(k) contribution limits are much higher than IRA limits. Roth 401(k)s don't have the income limits that Roth IRAs do. And employer matching contributions have traditionally gone in pre-tax, though newer rules let some plans offer Roth matches. Whatever you choose, the most important thing is to contribute at least enough to get the full match. That matters more than the Roth versus traditional choice.",
+     "on_screen_text": "Same question at work",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an office building with two doors and a small sign of a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Can't decide? Split it.",
+     "narration": "If you really can't decide, you can split. Put some money in Roth and some in traditional. This gives you what's called tax diversification. In retirement, you'll have some money that's taxed when you take it out, and some that isn't, which gives you flexibility to manage your taxes year by year. For example, you might use a traditional 401(k) at work to get the match and lower today's taxes, and a Roth IRA on the side. Or split your 401(k) contributions half and half. There's no penalty for having both. And don't let this decision stop you from starting. The difference between Roth and traditional is usually much smaller than the difference between saving and not saving.",
+     "on_screen_text": "Unsure? Do both.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two small plants growing side by side in one window box. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mistakes to avoid",
+     "narration": "A few IRA mistakes to avoid. One: putting money in and never investing it. When you contribute to an IRA, the money often lands as cash inside the account. You still need to choose an investment, like a target-date fund or a broad index fund, or it just sits there. Two: contributing more than the limit, or contributing to a Roth when your income is over the limit. Excess contributions can trigger a six percent penalty for each year they stay in the account, so if it happens, contact your provider to fix it. Three: missing the deadline. You can usually make contributions for a given tax year until the tax filing deadline the following spring, generally in mid-April, so it's not too late in January. Four: overthinking it for months. Picking either account and starting this year beats waiting for the perfect answer. You can always change your approach next year.",
+     "on_screen_text": "Invest it. Mind the limit. Don't wait.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short checklist with four ticks next to a small jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. Traditional means a possible deduction now, taxes later. Roth means taxes now, qualified withdrawals tax-free later. When your tax rate is the same now and later, they come out equal, like our thousand dollar example where both ended at thirty-two hundred. So the one question is: will your tax rate be higher now or later? Lower now, lean Roth. Higher now, lean traditional. Unsure, split. Check the current contribution and income limits on the IRS site. Remember Roth contributions can be withdrawn, but keep a separate emergency fund. And always grab your full 401(k) match first. Our full Roth versus traditional guide and where to open a Roth IRA are linked below. This is education, not tax advice.",
+     "on_screen_text": "Tax now vs later. That's it.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding both envelopes with a calm smile. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Roth vs traditional in one example (hypothetical, 20% tax now and later, money grows 4x):\nTraditional: $1,000 → $4,000 → $3,200 after tax\nRoth: $800 after tax → $3,200 tax-free\nEqual. The tiebreaker: is your tax rate higher now or later?\n\nCheck current IRS limits. Educational, not tax advice. Investing involves risk.",
+   "hashtags": [
+    "rothira",
+    "traditionalira",
+    "retirementsavings",
+    "401k",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "Roth vs traditional IRA, explained with a simple $1,000 example that shows why both can end up equal, and the one question that decides it: is your tax rate higher now or later? Plus contribution and income limits, Roth withdrawal rules, Roth vs traditional 401(k), and splitting. Educational, not tax advice.\n\nChapters\n0:00 Intro\n0:53 How each one works\n1:49 The $1,000 example\n2:45 The one question\n3:40 Rules that matter: limits\n4:30 The Roth flexibility\n5:25 Roth 401(k) vs traditional 401(k)\n6:14 Can't decide? Split it.\n7:02 Mistakes to avoid\n8:05 Recap\n\nLinks\nRoth vs traditional IRA: the full guide: https://moneymadesimple.netlify.app/blog/roth-vs-traditional-ira/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-06\nWhere to open a Roth IRA: https://moneymadesimple.netlify.app/blog/where-to-open-a-roth-ira/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-06\n401(k) match explained: https://moneymadesimple.netlify.app/blog/401k-match-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-06\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-06\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "Roth or Traditional? 1 question",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/roth-iras",
+    "https://www.irs.gov/retirement-plans/traditional-iras",
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits",
+    "https://www.irs.gov/retirement-plans/roth-comparison-chart"
+   ],
+   "claims_to_verify": [
+    "$1,000 × 4 × 0.8 = $3,200 = $800 × 4",
+    "Qualified Roth withdrawals: age 59½ and 5-year rule",
+    "Roth contributions withdrawable anytime without tax/penalty; earnings may incur tax + 10% penalty",
+    "IRA limit shared across all IRAs; catch-up at 50+; earned income required",
+    "Some plans may offer Roth employer matches (SECURE 2.0)"
+   ],
+   "title_variants": [
+    "Roth IRA vs Traditional IRA Explained With Real Numbers",
+    "Roth or Traditional? Answer One Question and You'll Know"
+   ],
+   "hook_variants": [
+    "The whole Roth vs traditional debate comes down to 1 question. Here it is.",
+    "Pay tax now, or pay it later? That's the entire difference. Here's how to choose."
+   ],
+   "original_element": "worked-example-chart: The $1,000 Roth vs traditional side-by-side: $1,000 → $4,000 → $3,200 vs $800 → $3,200 (chapter \"The $1,000 example\")"
+  },
+  "format_style": "on-screen-calculation",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "The $1,000 Roth vs traditional side-by-side: $1,000 → $4,000 → $3,200 vs $800 → $3,200",
+   "chapter": "The $1,000 example"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "How common match formulas work with a fictional $50,000 salary ($1,500 and $2,000 matches), what it costs per paycheck, vesting, what to invest in inside the plan, fees, and what happens when you leave a job.",
+  "series": "youtube-long-form",
+  "series_part": 7,
+  "content_id": "yt-series-07",
+  "search_terms": [
+   "401k match explained",
+   "how does 401k match work",
+   "401k for beginners",
+   "how much to put in 401k"
+  ],
+  "thumbnail_alt": "401(k) match, decoded",
+  "script": {
+   "title": "401(k) Match Explained: Don't Leave Free Money on the Table",
+   "hook": "On a $50,000 salary, a typical match is $1,500 a year. Here's how to make sure you get every dollar.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "If your job offers a 401(k) match and you're not getting all of it, you're turning down part of your pay. It's one of the few times in personal finance where you get free money just for showing up. But match formulas are written in a confusing way, like fifty percent up to six percent, and a lot of people either contribute too little or don't realize the money isn't fully theirs yet. In this video, we'll translate match formulas into real dollars using a fictional fifty thousand dollar salary, show what it actually costs from each paycheck, explain vesting, and cover what to invest in once the money is in there. By the end, you'll know exactly what number to set in your benefits portal.",
+     "on_screen_text": "Your match = part of your pay",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small gift box with a coin on top. No text, no logos, no real people."
+    },
+    {
+     "heading": "What a 401(k) is",
+     "narration": "A 401(k) is a retirement account through your employer. Money comes out of your paycheck automatically and gets invested. With a traditional 401(k), contributions come out before income tax, which lowers your taxable income today, and you pay tax when you withdraw in retirement. Many plans also offer a Roth 401(k), where you contribute after tax and qualified withdrawals later are tax-free. The annual contribution limit for a 401(k) is much higher than for an IRA, and it changes most years, so check the current number on the IRS site. The match is extra money your employer adds based on what you contribute. If you contribute nothing, you usually get no match at all. That's the part people miss.",
+     "on_screen_text": "Paycheck → invested automatically",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paycheck with a small slice flowing into a growing plant pot. No text, no logos, no real people."
+    },
+    {
+     "heading": "Match formula 1: 50% up to 6%",
+     "narration": "Let's decode the most common formula: fifty percent match up to six percent of salary. It means your employer adds fifty cents for every dollar you contribute, on the first six percent of your pay. With a fifty thousand dollar salary, six percent is three thousand dollars a year. Your employer adds half of that: fifteen hundred dollars. If you only contribute three percent, fifteen hundred dollars, your employer adds seven fifty. You just left seven hundred and fifty dollars of free money behind. If you contribute ten percent, the match is still fifteen hundred, because the match stops at six percent. Your extra contributions are still good for your retirement, they just don't get matched. So the magic number for this formula is six percent.",
+     "on_screen_text": "50% up to 6% = $1,500 on $50k",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple bar split into a filled part and a matching smaller bar. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Match on a $50,000 salary",
+      "labels": [
+       "You put in 3%",
+       "You put in 6%",
+       "You put in 10%"
+      ],
+      "values": [
+       750,
+       1500,
+       1500
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "50% match up to 6%, example"
+     }
+    },
+    {
+     "heading": "Match formula 2: 100% up to 4%",
+     "narration": "Another common formula: one hundred percent match up to four percent. Your employer matches dollar for dollar on the first four percent of your salary. On fifty thousand, four percent is two thousand dollars, and your employer adds another two thousand. That's an instant one hundred percent return on that money before it's even invested. The magic number here is four percent. Some companies use tiers, like one hundred percent on the first three percent and fifty percent on the next two. Whatever your formula, the question is always the same: what's the smallest contribution that gets the full match? You can find your plan's formula in your benefits portal, the plan's summary documents, or by asking HR. Write that percentage down. It's the most important number in your plan.",
+     "on_screen_text": "Find your magic number",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a key labelled with a percent sign next to a small lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "What it costs per paycheck",
+     "narration": "Here's the part that makes it easier to say yes. Contributing six percent of a fifty thousand dollar salary is three thousand dollars a year. If you're paid every two weeks, that's twenty-six paychecks, so about one hundred and fifteen dollars per paycheck. But because traditional contributions come out before income tax, your take-home pay drops by less than that. In a twelve percent federal tax bracket, it might be closer to a hundred dollars per paycheck, depending on your state taxes. So in our example, you give up roughly a hundred dollars per paycheck, and you get a hundred and fifteen invested, plus fifteen hundred a year from your employer. If six percent feels impossible right now, start with whatever you can, and increase it by one percent every time you get a raise.",
+     "on_screen_text": "6% ≈ $115 per paycheck",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small paycheck stub with a slice taken out, a smaller slice returned. No text, no logos, no real people."
+    },
+    {
+     "heading": "Vesting: when the match becomes yours",
+     "narration": "Now the fine print. Money you contribute from your paycheck is always one hundred percent yours. But your employer's match may come with a vesting schedule, which means you earn ownership of it over time. With cliff vesting, you own zero percent of the match until a set date, then all of it at once, and that can be up to three years. With graded vesting, you own a bit more each year, reaching full ownership by year six at the latest. Some employers vest immediately. Why does this matter? If you're thinking about leaving a job, check your vested balance first. If you're a couple of months from a vesting date, it might be worth waiting, or negotiating with your new employer to cover what you'd lose.",
+     "on_screen_text": "Your money: always yours. Match: may vest.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small staircase with a coin on each step, getting fuller. No text, no logos, no real people."
+    },
+    {
+     "heading": "What to invest in",
+     "narration": "Here's a mistake that's more common than you'd think: money goes into the 401(k), but it's sitting in a cash or money market option, not really invested. Log in and check what your contributions are actually buying. Many plans default to a target-date fund, which holds a mix of stocks and bonds based on the year you'll retire. For many people, that's a reasonable, simple choice. If your plan has a low-cost index fund, like an S and P five hundred or total market fund, that's another common pick. Look at each fund's expense ratio. Some 401(k) funds charge one percent or more, and over decades that adds up to a lot. If your plan's choices are expensive, still get the match, then consider putting extra savings into an IRA where you choose the funds.",
+     "on_screen_text": "Check what it's actually buying",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a small basket of building blocks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Changing jobs",
+     "narration": "When you leave a job, your vested 401(k) money doesn't disappear. You usually have a few options. Leave it in the old plan, if the plan allows it. Roll it into your new employer's 401(k). Or roll it into an IRA, where you have more control over the investments. What you generally want to avoid is cashing it out. If you take the money as cash before retirement age, you'll usually owe income tax plus a ten percent early withdrawal penalty, with some exceptions, and you lose years of growth. If you do a rollover, ask for a direct rollover, where the money goes straight from one account to the other. That avoids withholding headaches. And keep a list of every old plan, so nothing gets lost over the years.",
+     "on_screen_text": "Roll it over. Don't cash it out.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin rolling along a path from one building to another. No text, no logos, no real people."
+    },
+    {
+     "heading": "Common mistakes",
+     "narration": "Quick list of 401(k) mistakes. Not contributing enough to get the full match. Assuming your money is invested when it's sitting in cash. Ignoring fund fees. Cashing out when you change jobs. Forgetting to update your beneficiary. And borrowing from your 401(k) for non-emergencies. A 401(k) loan might look cheap, but if you leave your job, the balance may be due quickly, and the money you borrowed misses out on growth. One more: forgetting to increase contributions. Many plans offer automatic escalation, which raises your contribution by one percent each year. Turn it on once, and your savings rate grows without you having to remember.",
+     "on_screen_text": "Full match, invested, low fees",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short checklist with five ticks next to a growing plant. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. A 401(k) match is part of your pay, and you usually only get it if you contribute. Translate your formula into dollars. With fifty percent up to six percent on fifty thousand, contribute six percent and get fifteen hundred a year. With one hundred percent up to four percent, contribute four percent and get two thousand. Check your vesting schedule before you leave a job. Make sure your money is actually invested, often in a target-date or low-cost index fund, and watch the fees. When you change jobs, roll it over rather than cashing out. And turn on automatic escalation if your plan has it. Our full 401(k) match guide and expense ratio explainer are linked in the description.",
+     "on_screen_text": "Contribute enough for the full match",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding an open gift box full of coins. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "401(k) match math (fictional $50,000 salary):\n50% up to 6% → contribute 6% ($3,000), get $1,500\n100% up to 4% → contribute 4% ($2,000), get $2,000\n\nCheck vesting before you leave a job, and make sure the money is actually invested.\n\nExamples are hypothetical. Investing involves risk. Not financial advice.",
+   "hashtags": [
+    "401k",
+    "retirementsavings",
+    "employermatch",
+    "investingforbeginners",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "How a 401(k) match works, in real dollars: the 50%-up-to-6% and 100%-up-to-4% formulas on a fictional $50,000 salary, what it costs per paycheck, vesting, choosing investments inside the plan, fees, and what to do when you change jobs.\n\nChapters\n0:00 Intro\n0:51 What a 401(k) is\n1:41 Match formula 1: 50% up to 6%\n2:32 Match formula 2: 100% up to 4%\n3:26 What it costs per paycheck\n4:21 Vesting: when the match becomes yours\n5:14 What to invest in\n6:10 Changing jobs\n7:03 Common mistakes\n7:47 Recap\n\nLinks\n401(k) match explained: the full guide: https://moneymadesimple.netlify.app/blog/401k-match-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-07\nExpense ratios explained: https://moneymadesimple.netlify.app/blog/expense-ratios-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-07\nRoth vs traditional IRA: https://moneymadesimple.netlify.app/blog/roth-vs-traditional-ira/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-07\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-07\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "Free money: $1,500/year",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/401k-plans",
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-vesting",
+    "https://www.dol.gov/agencies/ebsa/about-ebsa/our-activities/resource-center/publications/a-look-at-401k-plan-fees",
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/rollovers-of-retirement-plan-and-ira-distributions"
+   ],
+   "claims_to_verify": [
+    "$50,000 × 6% = $3,000 → 50% match $1,500; × 4% = $2,000 → 100% match $2,000",
+    "$3,000 ÷ 26 ≈ $115 per paycheck",
+    "Cliff vesting max 3 years; graded max 6 years (for matching contributions)",
+    "Early withdrawal: income tax + 10% penalty, with exceptions"
+   ],
+   "title_variants": [
+    "How a 401(k) Match Works (With Real Paycheck Math)",
+    "401(k) for Beginners: Match, Vesting, and What to Pick"
+   ],
+   "hook_variants": [
+    "\"50% up to 6%.\" Here's what your 401(k) match actually means, in dollars.",
+    "Skipping your 401(k) match is like turning down a raise. Here's how it works."
+   ],
+   "original_element": "worked-example-chart: Match chart for the $50,000 salary: 50%-up-to-6% vs 100%-up-to-4%, with the per-paycheck cost (chapter \"Match formula 1: 50% up to 6%\")"
+  },
+  "format_style": "on-screen-calculation",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Match chart for the $50,000 salary: 50%-up-to-6% vs 100%-up-to-4%, with the per-paycheck cost",
+   "chapter": "Match formula 1: 50% up to 6%"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "What a high-yield savings account is, APY vs APR, a hypothetical $5,000 at 4% vs 0.5%, safety (FDIC/NCUA and partner-bank apps), variable rates, taxes on interest, transfer times, and how to pick and open one.",
+  "series": "youtube-long-form",
+  "series_part": 8,
+  "content_id": "yt-series-08",
+  "search_terms": [
+   "high yield savings account",
+   "what is a high yield savings account",
+   "are high yield savings accounts safe",
+   "hysa explained"
+  ],
+  "thumbnail_alt": "Is it safe?",
+  "script": {
+   "title": "High-Yield Savings Accounts Explained: Are They Safe and Worth It?",
+   "hook": "$5,000 at a hypothetical 4% APY earns about $200 a year. At 0.5%, about $25. Here's what's different.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "If your savings is sitting in the same big-bank account you opened years ago, there's a good chance it's earning almost nothing. A high-yield savings account is the same basic idea, a safe place for cash, but it pays much more interest. In this video we'll cover what a high-yield savings account is, how to read the rate, what the difference looks like in dollars, whether it's actually safe, and how to open one. We'll use a hypothetical example: five thousand dollars at four percent APY earns about two hundred dollars in a year. The same five thousand at half a percent earns about twenty-five. Rates change all the time, so these numbers are illustrations, not quotes. But the gap between the two is the reason this account exists.",
+     "on_screen_text": "Same cash, more interest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to two jars, one with a few coins, one overflowing. No text, no logos, no real people."
+    },
+    {
+     "heading": "What it is",
+     "narration": "A high-yield savings account is a savings account that pays a higher interest rate than a typical savings account. They're often offered by online banks and some credit unions. Because online banks don't run big branch networks, they can often pay more. That's the main trade-off. You usually can't walk into a branch, and you might not be able to deposit cash easily. But you can open the account online in a few minutes, link it to your checking account, and move money back and forth. It's not an investment account. Your balance doesn't go up and down with the stock market. It just earns interest, usually paid monthly. That's what makes it a great home for an emergency fund and short-term savings goals.",
+     "on_screen_text": "A savings account, just better paid",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small online-bank building made of a phone screen. No text, no logos, no real people."
+    },
+    {
+     "heading": "How to read the rate",
+     "narration": "When you compare accounts, look for the APY, which stands for annual percentage yield. APY includes the effect of compounding, meaning you earn interest on your interest, so it shows what you'd actually earn over a year if the rate stayed the same. Here's the important detail: savings rates are variable. The bank can change the rate at any time, and they often move along with the Federal Reserve's interest rate decisions. So a high rate today isn't locked in. Also watch out for teaser rates that only apply for a few months, rates that only apply up to a certain balance, or rates that require a minimum monthly deposit. The best accounts have a solid ongoing rate, no monthly fee, and no minimum balance.",
+     "on_screen_text": "APY · variable · watch the fine print",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small dial labelled with a percent symbol that can turn. No text, no logos, no real people."
+    },
+    {
+     "heading": "The math in dollars",
+     "narration": "Let's make it concrete with our hypothetical. You have five thousand dollars in savings. At half a percent APY, after one year you'd earn about twenty-five dollars. At four percent APY, you'd earn about two hundred dollars. That's a hundred and seventy-five dollars more, for doing nothing except choosing a different account. At ten thousand dollars, the difference would be about three hundred and fifty a year. It's not life-changing money, but it's real money, and it keeps coming every year. It's also a way to protect your savings from inflation. If prices rise three percent and your savings earns almost nothing, your money is quietly losing buying power. A better rate doesn't always beat inflation, but it narrows the gap.",
+     "on_screen_text": "$5,000: ~$25 vs ~$200 a year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two coin stacks side by side, one much taller. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$5,000 for one year",
+      "labels": [
+       "0.5% APY",
+       "4% APY"
+      ],
+      "values": [
+       25,
+       200
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Hypothetical rates; APYs vary"
+     }
+    },
+    {
+     "heading": "Is it safe?",
+     "narration": "This is the most common question, and it's the right one to ask. At a bank, look for FDIC insurance. At a credit union, look for NCUA insurance. Both generally protect deposits up to two hundred and fifty thousand dollars per depositor, per insured institution, per ownership category, if the institution fails. Here's where it gets tricky. Some popular apps aren't banks. They partner with one or more banks that hold your money. Your money can still be FDIC insured, but only if the app's records are accurate and the money is actually at an insured bank. So check three things: the name of the bank that holds your money, that the bank is FDIC insured using the FDIC's BankFind tool, and how the app describes its coverage. Our guide on checking if your savings app is FDIC insured is linked below.",
+     "on_screen_text": "FDIC or NCUA: check the bank's name",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shield icon in front of a small vault. No text, no logos, no real people."
+    },
+    {
+     "heading": "Taxes and transfers",
+     "narration": "Two practical details. First, interest is taxable income. If you earn ten dollars or more in interest in a year, your bank will usually send you a form 1099-INT, and you report it on your tax return. Even if you don't get a form, the interest is still taxable. So that two hundred dollars of interest might be more like a hundred and sixty after taxes, depending on your bracket. Still much better than twenty-five. Second, transfers take time. Moving money from an online savings account to your checking account at another bank usually takes one to three business days. That's fine for most emergencies, and that small delay actually helps stop impulse spending. Some banks also limit how many withdrawals you can make each month, so check the account terms.",
+     "on_screen_text": "Interest is taxable · transfers take 1–3 days",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small tax form and a calendar with three days circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "HYSA vs other options",
+     "narration": "How does a high-yield savings account compare to other places for cash? A regular savings account at a big bank is easy, but often pays very little. A money market account is similar to a high-yield savings account, sometimes with check-writing or a debit card, and it's FDIC insured at a bank. Don't confuse it with a money market fund, which is an investment held at a brokerage and isn't FDIC insured. A certificate of deposit, or CD, locks your money for a set term, like six months or a year, usually at a fixed rate, with a penalty if you withdraw early. CDs can work for money you won't need until a specific date. For an emergency fund, flexibility matters most, which is why a high-yield savings account is usually the best fit.",
+     "on_screen_text": "HYSA vs money market vs CD",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small containers: a jar, a box with a small lock, and a basket. No text, no logos, no real people."
+    },
+    {
+     "heading": "How to pick and open one",
+     "narration": "Here's a quick checklist for picking an account. FDIC or NCUA insured, with the bank's name clearly listed. A competitive APY that isn't just a short promo. No monthly fees and no minimum balance. Easy transfers to and from your checking account. And a good mobile app. We compare high-yield savings accounts on our site if you want a starting point. Opening one usually takes about ten minutes. You'll need your Social Security number, a government ID, and your checking account details to link. Make a first deposit, then set up an automatic transfer for the day after each payday. Finally, give the account a nickname, like emergency fund or car fund. It sounds small, but naming your savings makes you less likely to spend it.",
+     "on_screen_text": "Insured · good APY · no fees · easy transfers",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short checklist next to a phone showing a simple savings screen. No text, no logos, no real people."
+    },
+    {
+     "heading": "Common questions",
+     "narration": "A few common questions. Can you lose money in a high-yield savings account? Not from market swings. The balance doesn't go up and down like an investment. The main risk is having money at an institution that isn't insured, or holding more than the insurance limit at one bank. Will opening one hurt your credit? Opening a savings account generally doesn't involve a hard credit inquiry, though some banks check your banking history through a service like ChexSystems. Should you keep switching banks to chase the highest rate? Usually not worth it for small differences. A few tenths of a percent on five thousand dollars is only a few dollars a year, and every switch takes time and creates a chance for mistakes. Pick a solid account with a competitive rate and no fees, and only move if your rate falls far behind. Can you have more than one? Yes. Many people keep one for emergencies and one for goals.",
+     "on_screen_text": "Market risk? No. Rate chasing? Rarely worth it.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a few speech bubbles with small question marks and simple answers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. A high-yield savings account is an insured savings account that pays a higher rate, often at an online bank. Compare accounts by APY, and remember the rate is variable. In our hypothetical, five thousand dollars earns about two hundred a year at four percent, versus about twenty-five at half a percent. It's safe when the money is at an FDIC or NCUA insured institution, so always check the actual bank's name. Interest is taxable, and transfers take a few business days. It's the best home for most emergency funds and short-term goals. Our high-yield savings comparison, how-to guide and FDIC checking guide are all linked in the description.",
+     "on_screen_text": "Insured. Higher APY. Easy access.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes sitting on a tall stack of coins under a small shield. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "High-yield savings in 4 lines:\n• Same insured savings, higher APY (often at online banks)\n• Hypothetical $5,000: ~$200/yr at 4% vs ~$25 at 0.5%\n• Check FDIC/NCUA and the actual bank's name\n• Rates are variable; interest is taxable\n\nRates are illustrations, not quotes. Not financial advice.",
+   "hashtags": [
+    "highyieldsavings",
+    "savingsaccount",
+    "emergencyfund",
+    "savingmoney",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "High-yield savings accounts explained: what they are, how to read APY, what a higher rate means in dollars (a hypothetical $5,000 at 4% vs 0.5%), whether they're safe (FDIC/NCUA and partner-bank apps), taxes on interest, transfer times, and how to pick and open one. Rates are variable and change often.\n\nChapters\n0:00 Intro\n0:53 What it is\n1:44 How to read the rate\n2:35 The math in dollars\n3:25 Is it safe?\n4:23 Taxes and transfers\n5:17 HYSA vs other options\n6:12 How to pick and open one\n7:04 Common questions\n8:10 Recap\n\nLinks\nHigh-yield savings accounts compared: https://moneymadesimple.netlify.app/compare/best-high-yield-savings-accounts/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-08\nHow to open a high-yield savings account: https://moneymadesimple.netlify.app/blog/how-to-open-a-high-yield-savings-account/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-08\nIs my savings app FDIC insured?: https://moneymadesimple.netlify.app/blog/is-my-savings-app-fdic-insured/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-08\nHigh-yield savings vs money market: https://moneymadesimple.netlify.app/blog/high-yield-savings-vs-money-market/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-08\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-08\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "Your savings could earn 8x",
+   "sources": [
+    "https://www.fdic.gov/resources/deposit-insurance/understanding-deposit-insurance",
+    "https://banks.data.fdic.gov/bankfind-suite/bankfind",
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-savings-account-and-a-money-market-deposit-account-en-1015/",
+    "https://www.irs.gov/forms-pubs/about-form-1099-int"
+   ],
+   "claims_to_verify": [
+    "Hypothetical: $5,000 × 4% ≈ $200; × 0.5% = $25; $10,000 difference ≈ $350",
+    "FDIC/NCUA $250,000 per depositor, per insured institution, per ownership category",
+    "1099-INT usually issued at $10+ interest",
+    "Money market funds are not FDIC insured"
+   ],
+   "title_variants": [
+    "What Is a High-Yield Savings Account? (and How to Open One)",
+    "Your Savings Could Earn 8x More. High-Yield Savings, Explained"
+   ],
+   "hook_variants": [
+    "Same savings, same bank insurance, 8x the interest. Here's how high-yield savings works.",
+    "Is a high-yield savings account actually safe? Here are the 3 things to check."
+   ],
+   "original_element": "screen-recording: Screen recording of FDIC BankFind, plus a $5,000 interest bar chart at 0.5% vs 4% (hypothetical) (chapter \"Is it safe?\")"
+  },
+  "format_style": "explainer",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Screen recording of FDIC BankFind, plus a $5,000 interest bar chart at 0.5% vs 4% (hypothetical)",
+   "chapter": "Is it safe?"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Three tracking methods (bank's built-in tools, spreadsheet, paid app) compared on cost, effort and what each is good at; the three main app styles; privacy; and three questions that pick the right one.",
+  "series": "youtube-long-form",
+  "series_part": 9,
+  "content_id": "yt-series-09",
+  "search_terms": [
+   "best budgeting app",
+   "budgeting app vs spreadsheet",
+   "how to track spending",
+   "do i need a budgeting app"
+  ],
+  "thumbnail_alt": "3 questions decide it",
+  "script": {
+   "title": "Budgeting App vs Spreadsheet: Which One Should You Use?",
+   "hook": "3 ways to track a budget: your bank app, a spreadsheet, or a paid app. Here's who each one is for.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Should you use a budgeting app or a spreadsheet? Or neither? People spend a lot of time choosing the perfect tool and very little time actually budgeting. So in this video we'll make the choice quick. We'll compare three methods: the tools already built into your bank's app, a simple spreadsheet, and a paid budgeting app. For each one, we'll cover what it costs, how much effort it takes, and who it's best for. Then we'll go through the main styles of budgeting apps, because they're not all trying to do the same thing, and what to know about privacy before you connect your accounts. At the end, three questions will tell you which one fits you. And remember, the best tool is the one you'll actually open every week.",
+     "on_screen_text": "Pick the tool you'll actually open",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing between a phone, a grid sheet and a small bank building. No text, no logos, no real people."
+    },
+    {
+     "heading": "Option 1: your bank's built-in tools",
+     "narration": "Option one costs nothing and you already have it: your bank's app. Many banking apps now automatically sort your spending into categories, show monthly totals, and let you set alerts, like a notification when your balance drops below a certain amount, or when a big purchase posts. Some banks also let you create separate savings buckets, which is great for sinking funds. The upside: zero setup and nothing new to learn. The downside: it only sees accounts at that bank. If you have a credit card somewhere else, or a partner with a separate account, you only get part of the picture. And category sorting can be messy. This option is best for people with simple finances who use one main bank, and who mostly need to keep an eye on one weekly spending number.",
+     "on_screen_text": "Free, already installed",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone showing a simple pie chart, a small bell alert icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Option 2: a spreadsheet",
+     "narration": "Option two is a spreadsheet. Google Sheets or Excel. It's free, completely flexible, and you own your data. You decide the categories, the layout and how detailed it gets. The downside is effort. Most people enter transactions by hand, or download them from the bank, and that takes regular time. If you miss a couple of weeks, it's easy to fall behind and give up. The trick to making a spreadsheet work is keeping it simple. Don't track every coffee. Track the four numbers from our budgeting video: essentials, savings, sinking funds and flexible spending. Update it once a week during your money check-in. A spreadsheet is best for people who like seeing their own numbers, want full control, or don't want to connect bank logins to another company.",
+     "on_screen_text": "Free, flexible, more effort",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple grid with four highlighted rows, a pencil beside it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Option 3: a paid budgeting app",
+     "narration": "Option three is a dedicated budgeting app. Most of the popular ones charge a monthly or annual subscription, and prices change, so check the current price before signing up, and look for a free trial. What you're paying for is automation and a full picture. These apps connect to all your accounts, banks, credit cards, loans, investments, and pull everything into one place. They categorize transactions, track goals, and show trends over time. Some help you plan every dollar in advance. The upside is that it saves time and shows everything together. The downside is the cost, and the fact that automation can make you passive. If you never look at the app, it doesn't help. A paid app is best for people with several accounts, couples combining finances, or anyone who wants to spend less time on manual tracking.",
+     "on_screen_text": "Automatic, full picture, costs money",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with several small account icons flowing into one chart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Not all apps do the same thing",
+     "narration": "Budgeting apps fall into a few styles, and picking the right style matters more than picking the brand. Style one: zero-based budgeting. You give every dollar a job before you spend it. These apps are very hands-on, and they work best for people who want to change their habits. YNAB is a well-known example. Style two: tracking and planning. These pull in everything, show net worth, spending trends and goals, and are good for couples or people with many accounts. Monarch is an example. Style three: subscription and bill tools. These focus on finding recurring charges, helping you cancel subscriptions, and sometimes negotiating bills, with a budget on the side. Rocket Money is an example. We compared these three side by side on our site, linked below.",
+     "on_screen_text": "Plan every dollar · track it all · cut bills",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three different shaped tools on a workbench, a hammer, a ruler, scissors. No text, no logos, no real people."
+    },
+    {
+     "heading": "Privacy and security",
+     "narration": "Before connecting a budgeting app to your bank, know what you're agreeing to. Most apps connect through a data aggregator, a company that securely pulls your transactions using your bank's permission system. This access is usually read-only, which means the app can see your transactions but can't move your money. Still, you're sharing sensitive data, so a few tips. Use a strong, unique password and turn on two-factor authentication for the app. Read the privacy policy, especially whether they sell or share data for advertising. Check how to delete your account and data if you stop using it. And when you cancel an app, also revoke its access in your bank's connected apps settings. If none of this feels comfortable, that's a good reason to choose a spreadsheet or your bank's built-in tools.",
+     "on_screen_text": "Read-only, two-factor, check the policy",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small padlock and a shield next to a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "The three questions",
+     "narration": "Here are three questions to pick your method. Question one: how many accounts do you have? If it's one bank and maybe one card, your bank's tools or a spreadsheet are probably enough. If it's five or more, an app saves real time. Question two: how much time will you actually spend each week? If the honest answer is five minutes, choose the most automatic option. If you enjoy tinkering, a spreadsheet might be fun. Question three: what's your goal? If you want to change your spending habits, a hands-on zero-based app or a weekly spreadsheet works well. If you want to see everything in one place, a tracking app fits. If you mostly want to cut recurring bills, a subscription tool is the one. Then try it for one full month before deciding.",
+     "on_screen_text": "Accounts? Time? Goal?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding up three fingers, a small question mark above. No text, no logos, no real people."
+    },
+    {
+     "heading": "Making any method work",
+     "narration": "Whatever you choose, these habits make it work. Keep your categories few. Four to eight is plenty. Pick one weekly check-in time and protect it. Ten minutes, same day every week. Watch one key number, your weekly flexible spending, rather than staring at every chart. And if you're paying for an app, use the free trial to test it, set a calendar reminder before it renews, and ask yourself after a month whether it actually changed anything. If an app costs more than it saves you, cancel it. A tool should make your money system easier, not become another bill. And don't switch tools every few weeks. Most budgeting progress comes from consistency, not from finding the perfect app.",
+     "on_screen_text": "Few categories. One weekly check-in.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple weekly calendar with one day circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Try it for 30 days",
+     "narration": "Here's a simple way to test a method before committing. Pick one, and give it thirty days. In week one, set it up: connect your accounts or build your sheet, and create your four main categories. In week two, do your first ten-minute check-in. Look at what you've spent, and fix any transactions that landed in the wrong category. In week three, use it to make one real decision, like whether you can afford a dinner out this weekend. In week four, ask yourself three honest questions. Did I actually open it every week? Did it help me make better decisions? Is it worth what it costs, in money and in time? If the answer is yes, keep going. If it's no, switch methods, but give the new one thirty days too. And if you're on a free trial, set a reminder two days before it ends, so you decide on purpose instead of being charged by default.",
+     "on_screen_text": "30 days: set up, check in, decide",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a four-week calendar with one small tick in each week. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. There are three ways to track a budget. Your bank's built-in tools are free and easy, but only see one bank. A spreadsheet is free and flexible, but takes more effort. A paid budgeting app is automatic and shows everything together, but costs money and can make you passive. Apps come in different styles: zero-based planning, tracking everything, or cutting bills. Before connecting accounts, check privacy and security. Then answer three questions: how many accounts, how much time, and what's your goal. Our comparison of Rocket Money, YNAB and Monarch, and our guide to choosing a budgeting app, are linked in the description, along with the free seven-day money reset to get started.",
+     "on_screen_text": "Bank app · spreadsheet · paid app",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes sitting with a phone and a notebook, relaxed. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "3 ways to track a budget:\n1. Your bank's app: free, one bank only\n2. Spreadsheet: free, flexible, more effort\n3. Paid app: automatic, full picture, costs money\n\nPick by: how many accounts, how much time, and your goal.\n\nApp prices change; check current pricing. Some links on our comparison pages are affiliate links and we may earn a commission. Not financial advice.",
+   "hashtags": [
+    "budgetingapp",
+    "budgeting",
+    "moneyapps",
+    "budgetspreadsheet",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "Budgeting app vs spreadsheet vs your bank's built-in tools: what each costs, how much effort it takes, and who it's best for. Plus the three styles of budgeting apps, privacy and security tips, and three questions that pick the right method. App prices change, so check current pricing.\n\nChapters\n0:00 Intro\n0:53 Option 1: your bank's built-in tools\n1:49 Option 2: a spreadsheet\n2:42 Option 3: a paid budgeting app\n3:39 Not all apps do the same thing\n4:31 Privacy and security\n5:26 The three questions\n6:21 Making any method work\n7:10 Try it for 30 days\n8:15 Recap\n\nLinks\nRocket Money vs YNAB vs Monarch: https://moneymadesimple.netlify.app/compare/rocket-money-vs-ynab-vs-monarch/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-09\nBudgeting apps compared: https://moneymadesimple.netlify.app/compare/best-budgeting-apps/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-09\nBudgeting app vs spreadsheet: the full guide: https://moneymadesimple.netlify.app/blog/budgeting-app-vs-spreadsheet/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-09\nHow to choose a budgeting app: https://moneymadesimple.netlify.app/blog/how-to-choose-a-budgeting-app/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-09\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-09\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "App or spreadsheet?",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/",
+    "https://www.consumerfinance.gov/rules-policy/final-rules/required-rulemaking-on-personal-financial-data-rights/",
+    "https://www.ynab.com/",
+    "https://www.monarchmoney.com/",
+    "https://www.rocketmoney.com/"
+   ],
+   "claims_to_verify": [
+    "Aggregator access is typically read-only",
+    "App styles and examples current as of review date",
+    "App pricing changes: verify before publishing"
+   ],
+   "title_variants": [
+    "Best Way to Track Your Budget: App, Spreadsheet, or Neither?",
+    "Do You Need a Budgeting App? An Honest Comparison"
+   ],
+   "hook_variants": [
+    "A budgeting app won't fix your budget. Picking the right method will. Here's how.",
+    "Free spreadsheet or paid app? Answer 3 questions and you'll know."
+   ],
+   "original_element": "human-segment: Dhruv records 'Try it for 30 days' in his own voice, saying truthfully which method he uses (or that he's choosing one now) (chapter \"Try it for 30 days\")"
+  },
+  "format_style": "question-reply",
+  "original_element": {
+   "type": "human-segment",
+   "detail": "Dhruv records 'Try it for 30 days' in his own voice, saying truthfully which method he uses (or that he's choosing one now)",
+   "chapter": "Try it for 30 days"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "A fictional $5,000 balance at 24%: minimum payments take about 19 years and $8,887 in interest; a fixed $200 takes 3 years and $2,001; then the plan: stop new charges, fix the payment, lower the rate (call or balance transfer), find extra money, and protect the plan.",
+  "series": "youtube-long-form",
+  "series_part": 10,
+  "content_id": "yt-series-10",
+  "search_terms": [
+   "how to pay off credit card debt",
+   "pay off credit card debt fast",
+   "minimum payment",
+   "balance transfer"
+  ],
+  "thumbnail_alt": "The minimum payment trap",
+  "script": {
+   "title": "How to Pay Off Credit Card Debt Fast: The Minimum Payment Trap",
+   "hook": "$5,000 at 24%, paying only the minimum: about 19 years and $8,887 in interest. Here's the faster way out.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Credit card debt is expensive, and the minimum payment makes it feel cheaper than it is. In this video, we'll look at the real math on a fictional five thousand dollar balance at twenty-four percent APR, and compare three ways to pay it: the minimum, a fixed payment, and a zero percent balance transfer. The minimum payment version takes about nineteen years and costs almost nine thousand dollars in interest. A fixed two hundred dollars a month takes three years and costs about two thousand. Then we'll go through a step-by-step plan to get out faster: how to stop the balance growing, how to lower your interest rate, where to find extra money, and how to protect your progress so one bad month doesn't undo it.",
+     "on_screen_text": "$5,000 at 24%: the real math",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes looking at a long winding road next to a short straight one. No text, no logos, no real people."
+    },
+    {
+     "heading": "How credit card interest works",
+     "narration": "First, how interest actually works. Your APR, annual percentage rate, is divided into a daily rate, and interest is charged on your balance every day. On five thousand dollars at twenty-four percent, that's about a hundred dollars of interest in the first month. Here's the key: if you pay your full statement balance by the due date, most cards charge no interest on purchases at all. That's called the grace period. But once you carry a balance, you usually lose that grace period, and new purchases may start collecting interest right away. So the goal is to get back to paying in full every month. Until then, every dollar of balance is costing you roughly two cents a month at twenty-four percent.",
+     "on_screen_text": "24% APR ≈ $100/month on $5,000",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small meter ticking up with tiny coins dripping out. No text, no logos, no real people."
+    },
+    {
+     "heading": "The minimum payment trap",
+     "narration": "Now the minimum payment. Card companies often calculate it as the interest for the month plus one percent of the balance, with a small floor. On our five thousand dollar balance, that's about a hundred and fifty dollars in month one. The problem is that as your balance shrinks, the minimum shrinks too. So you pay less and less each month, and it takes forever. In our example, paying only the minimum takes about two hundred and thirty-four months, nearly twenty years, and costs about eighty-eight hundred and eighty-seven dollars in interest. That's more than the original balance. Your statement actually shows a minimum payment warning box with an estimate like this for your real balance. Look at it. It's one of the most useful lines on the statement.",
+     "on_screen_text": "Minimum only: ~19.5 years, ~$8,887",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a very long calendar unrolling off the edge of a table. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix the payment",
+     "narration": "Here's the simplest fix: pick a fixed payment and keep paying it, even as the minimum drops. If you just keep paying the same hundred and fifty dollars you paid in month one, the balance is gone in about fifty-six months, under five years, with about thirty-three hundred dollars of interest. That's less than half the interest of the minimum-only plan. At two hundred dollars a month, it's gone in thirty-six months, with about two thousand in interest. At three hundred, twenty-one months and about eleven hundred. At four hundred, fifteen months and about eight hundred. See the pattern? Every extra dollar you add early on saves a lot of interest. So set your autopay to a fixed amount, not the minimum. That single setting changes everything.",
+     "on_screen_text": "$200 a month → 36 months",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a staircase where each higher step is shorter. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Months to pay off $5,000 at 24%",
+      "labels": [
+       "$150/mo",
+       "$200/mo",
+       "$300/mo",
+       "$400/mo"
+      ],
+      "values": [
+       56,
+       36,
+       21,
+       15
+      ],
+      "unit_prefix": "",
+      "unit_suffix": " mo",
+      "note": "The video's own simulation"
+     }
+    },
+    {
+     "heading": "Step 1: stop the balance growing",
+     "narration": "The plan starts with stopping the balance from growing. You can't fill a bathtub with the drain open. Take the card out of your phone's digital wallet and remove it from saved payment info in online stores. Use a debit card or cash for everyday spending while you pay it down. Look at your last three statements and find what's being charged to the card every month. Move subscriptions and bills to your checking account. If the card has been covering a gap between your income and expenses, that's the real problem to solve, and the budget video in this series walks you through finding that gap. And build a small buffer, even five hundred dollars, so a surprise doesn't go back on the card.",
+     "on_screen_text": "Stop new charges first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bathtub with the drain plug being put back in. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2: lower the rate",
+     "narration": "Step two: lower your interest rate. Option one is to simply ask. Call the number on the back of your card, say you've been a customer for a while, you pay on time, and you're comparing balance transfer offers, and ask if they can lower your APR. It doesn't always work, but it costs nothing to try. Option two is a zero percent balance transfer card. You move the balance to a new card with zero percent interest for a promo period, often twelve to twenty-one months. Most charge a transfer fee of three to five percent. On our five thousand dollars, a three percent fee is a hundred and fifty dollars. Then you'd pay about three forty-three a month to clear it in fifteen months. Total cost: about a hundred and fifty, instead of thousands.",
+     "on_screen_text": "Call and ask. Or 0% transfer.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone call bubble and a small arrow moving a coin to another card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Balance transfer rules",
+     "narration": "Balance transfers can be powerful, but they have rules. You usually need good credit to qualify. Check the fee and compare it to the interest you'd otherwise pay. Know exactly when the promo ends, and divide the transferred balance by the number of promo months, so you know your real monthly payment. Any balance left after the promo starts collecting the regular APR, which is often high. Don't use the new card for purchases unless the card's terms are clear about how those are charged. And don't run the old card back up. That's how people end up with two balances. If you can't qualify for a transfer, a fixed-rate personal loan at a lower rate is another option, but compare the total cost, including any origination fee.",
+     "on_screen_text": "Fee < interest saved? Payoff before promo ends?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with an end date circled, and a small checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3: find extra money",
+     "narration": "Step three: find extra money for the payment. Start with recurring costs, since one cut keeps saving every month. Review subscriptions, call your phone and internet providers, and shop your insurance. Put any windfalls toward the card: tax refunds, bonuses, cash gifts, money from selling things you don't use. If you get a raise, send at least half of it to the debt before you get used to the bigger paycheck. And if you have more than one debt, use either the avalanche method, highest interest rate first, or the snowball method, smallest balance first. We have a whole video comparing both with real math. Whatever you choose, every extra dollar should have a specific target, not just go into checking and disappear.",
+     "on_screen_text": "Cut recurring. Use windfalls. Target it.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. several small coin streams converging on one target. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 4: protect your plan",
+     "narration": "Step four: protect your plan. Set autopay for your fixed payment amount, so you never miss a payment or pay a late fee. Late payments also hurt your credit score, and payment history is the biggest factor. Write down your debt-free date. In our example, at two hundred a month, it's thirty-six months from now. Put it in your calendar. Check your progress once a month at your money check-in, and celebrate milestones, like the first thousand dollars paid off, in a small, cheap way. And if you're overwhelmed, with multiple cards past due or debt collectors calling, consider a nonprofit credit counseling agency. Look for one that's accredited, and be careful of debt settlement companies that charge big upfront fees.",
+     "on_screen_text": "Autopay. Debt-free date. Milestones.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes marking a date on a calendar with a small star. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. On a fictional five thousand dollar balance at twenty-four percent, paying only the minimum takes about nineteen and a half years and costs about eighty-eight hundred in interest. A fixed two hundred a month takes three years and about two thousand. A zero percent balance transfer with a three percent fee could cost about a hundred and fifty, if you clear it before the promo ends. The plan: stop new charges, set a fixed autopay amount, lower the rate by calling or transferring, find extra money with a specific target, and protect the plan with a buffer and a debt-free date. Our balance transfer card comparison and our snowball versus avalanche guide are linked in the description.",
+     "on_screen_text": "Fixed payment + lower rate + no new charges",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes cutting a ribbon at the end of a short road. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Fictional $5,000 at 24% APR:\nMinimum only (interest + 1%): ~234 months, ~$8,887 interest\nFixed $200/month: 36 months, ~$2,001\n0% transfer, 3% fee, 15 months: ~$150 fee, ~$343/month\n\nExamples are hypothetical and for education only. Not financial advice.",
+   "hashtags": [
+    "creditcarddebt",
+    "debtfree",
+    "payoffdebt",
+    "balancetransfer",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "How to pay off credit card debt fast, with real numbers on a fictional $5,000 balance at 24% APR: minimum payments (about 19.5 years and $8,887 in interest) vs fixed payments vs a 0% balance transfer, plus a four-step plan to get out faster and stay out.\n\nChapters\n0:00 Intro\n0:51 How credit card interest works\n1:42 The minimum payment trap\n2:35 Fix the payment\n3:27 Step 1: stop the balance growing\n4:19 Step 2: lower the rate\n5:14 Balance transfer rules\n6:07 Step 3: find extra money\n6:58 Step 4: protect your plan\n7:48 Recap\n\nLinks\nBalance transfer cards compared: https://moneymadesimple.netlify.app/compare/best-balance-transfer-cards/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-10\nDebt avalanche vs snowball: https://moneymadesimple.netlify.app/blog/debt-avalanche-vs-snowball/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-10\nHow credit scores work: https://moneymadesimple.netlify.app/blog/how-credit-scores-work/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-10\nFind and cancel subscriptions: https://moneymadesimple.netlify.app/blog/find-and-cancel-subscriptions/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-10\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-10\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "19 years vs 3 years",
+   "sources": [
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-balance-transfer-fee-en-35/",
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-the-minimum-payment-warning-on-my-credit-card-statement-en-1793/",
+    "https://consumer.ftc.gov/articles/how-get-out-debt"
+   ],
+   "claims_to_verify": [
+    "Simulated: $5,000 @24%, min = interest + 1% (floor $25): 234 months, ≈$8,887 interest",
+    "Fixed $150: 56 mo ≈$3,322; $200: 36 mo ≈$2,001; $300: 21 mo ≈$1,143; $400: 15 mo ≈$812",
+    "3% of $5,000 = $150; $5,150 ÷ 15 ≈ $343",
+    "Statements include a minimum payment warning (CARD Act)"
+   ],
+   "title_variants": [
+    "$5,000 of Credit Card Debt: Minimum Payments vs a Plan",
+    "How to Get Out of Credit Card Debt: A Step-by-Step Plan"
+   ],
+   "hook_variants": [
+    "Your minimum payment is designed to keep you paying. Here's the real math, and the way out.",
+    "Same $5,000 of debt: 19 years, or 3 years. The difference is one number."
+   ],
+   "original_element": "worked-example-chart: Payoff-time chart for $5,000 at 24%: minimum vs $150, $200, $300, $400 a month, from the script's simulation (chapter \"Fix the payment\")"
+  },
+  "format_style": "real-numbers",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Payoff-time chart for $5,000 at 24%: minimum vs $150, $200, $300, $400 a month, from the script's simulation",
+   "chapter": "Fix the payment"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Why budgets break in month two, how to list a year of irregular costs (a fictional $3,000 → $250/month), where to keep the money, the catch-up plan for an expense due soon, and how sinking funds differ from an emergency fund.",
+  "series": "youtube-long-form",
+  "series_part": 11,
+  "content_id": "yt-series-11",
+  "search_terms": [
+   "sinking funds",
+   "sinking funds explained",
+   "irregular expenses budget",
+   "how to save for christmas"
+  ],
+  "thumbnail_alt": "Sinking funds, explained",
+  "script": {
+   "title": "Sinking Funds Explained: Stop 'Surprise' Expenses Wrecking Budgets",
+   "hook": "$3,000 a year of 'surprise' expenses is really $250 a month. Here's how to stop them wrecking your budget.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "If your budget works for a month or two and then suddenly falls apart, there's a good chance it's not your spending. It's the expenses that don't happen every month. The car registration. The holiday gifts. The annual subscription that renews in March. The dentist. These feel like surprises, so they go on a credit card, and the budget breaks. But they're not really surprises. They're on a different calendar. In this video, we'll cover sinking funds, the simple system that turns those irregular expenses into a small, steady monthly amount. We'll work through a fictional example where three thousand dollars a year of irregular costs becomes two hundred and fifty a month, and set it up step by step.",
+     "on_screen_text": "Not surprises. Just a different calendar.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a calendar with several dates circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "What a sinking fund is",
+     "narration": "A sinking fund is money you save a little at a time for a specific, expected expense. You know it's coming, you roughly know how much it'll be, and you know about when. So instead of paying it all at once from one paycheck, you spread it out. If you know you'll spend six hundred dollars on holiday gifts in December, you save fifty a month starting in January. When December comes, the money is waiting, and your regular budget doesn't feel a thing. The name comes from an old finance term for money set aside to pay off a debt over time. But for us, it's just a labelled pile of money with a job. You can have one sinking fund or several, like car, gifts, travel and medical.",
+     "on_screen_text": "Save a little now for a known cost later",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a row of small labelled jars filling at the same pace. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1: list the year",
+     "narration": "Step one: list every irregular expense from the last year. Go through your bank and credit card statements month by month, and look for anything that isn't a normal monthly bill. Common ones include car maintenance and repairs, car registration and inspection, holiday and birthday gifts, medical and dental costs, annual subscriptions and memberships, travel, back-to-school costs, clothes, pet care, and home or renter's insurance if you pay it yearly. Don't forget the small ones. A seventy dollar annual fee is still seventy dollars that wasn't in your budget. If you're not sure how much something costs, estimate on the high side. Being a little over is much better than being short when the bill arrives.",
+     "on_screen_text": "Check 12 months of statements",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stack of statements with a magnifying glass over one line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2: do the math",
+     "narration": "Step two: add it up and divide by twelve. In our fictional example: car maintenance, six hundred a year. Car registration, a hundred and twenty. Holidays and birthdays, six hundred. Medical and dental, three hundred. Annual subscriptions, a hundred and fifty. One trip, nine hundred. Clothes, three hundred and thirty. That adds up to three thousand dollars a year. Divide by twelve: two hundred and fifty dollars a month. If you're paid every two weeks, that's about a hundred and fifteen per paycheck. That might look like a lot. But you were already spending this money every year. It was just hitting all at once, usually on a credit card. Now it's planned. If two fifty is too much right now, start with the most important categories, like car and medical.",
+     "on_screen_text": "$3,000 a year ÷ 12 = $250 a month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple list adding up to one total, divided into twelve small boxes. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$3,000 a year of irregular costs",
+      "labels": [
+       "Car upkeep",
+       "Registration",
+       "Holidays",
+       "Medical",
+       "Subscriptions",
+       "Trip",
+       "Clothes"
+      ],
+      "values": [
+       600,
+       120,
+       600,
+       300,
+       150,
+       900,
+       330
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Fictional example: $3,000 ÷ 12 = $250/mo"
+     }
+    },
+    {
+     "heading": "Step 3: where to keep it",
+     "narration": "Step three: decide where the money lives. The best place is a separate savings account, ideally a high-yield savings account at an insured bank, so it earns a bit of interest while it waits. Many online banks let you create multiple savings buckets or sub-accounts with names, like car, gifts and travel. That's perfect for sinking funds, because you can see exactly how much is set aside for each one. If your bank doesn't offer buckets, you can use one savings account and track the split in a simple note or spreadsheet. What you shouldn't do is leave sinking fund money in your checking account. It'll look like spending money, and it'll quietly disappear. Keep it separate from your emergency fund too.",
+     "on_screen_text": "Separate, named buckets",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. several small labelled boxes inside one larger safe. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 4: automate it",
+     "narration": "Step four: automate it. Set up a recurring transfer from checking to your sinking funds the day after each payday. If your bank has buckets, you can often set up automatic transfers into each bucket. If not, move the total and track it. Then, when an expense comes up, pay it from checking and move the matching amount back from the sinking fund. That way your weekly spending number stays intact. One more tip: put each expected date in your calendar with a reminder a month before. When the car registration reminder pops up, you'll already know the money is there, and you won't have to think about it. That's the goal: boring, predictable money.",
+     "on_screen_text": "Auto-transfer the day after payday",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small conveyor belt dropping coins into several labelled jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "Catching up on something due soon",
+     "narration": "What if an expense is coming up soon, and you haven't saved for it? Say holidays are three months away and you need six hundred dollars. You can't save fifty a month for twelve months anymore. So divide what you need by the time you have: six hundred over three months is two hundred a month. If that's too much, you have two options. Lower the target, by setting a smaller gift budget this year. Or find temporary money, by reducing your flexible spending for a few months or using a windfall. Then, the day after the expense, start next year's fund at the normal rate. Next year, you'll be on the regular schedule, and it'll be easy. Everyone starts sinking funds a little behind. That's normal.",
+     "on_screen_text": "Due soon? Divide by the months left.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short calendar with three months highlighted and a coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sinking funds vs emergency fund",
+     "narration": "People often mix up sinking funds and emergency funds, so here's the difference. An emergency fund is for things that are urgent, necessary and unexpected, like losing your job or a sudden medical bill. You don't know if or when they'll happen. A sinking fund is for things you know are coming, like gifts, registration or a planned trip. Keep them separate. If you use your emergency fund for holidays, it won't be there when a real emergency hits. And if your car needs a repair, that might come from your car sinking fund first, then your emergency fund if it's bigger than expected. Having both is what makes a budget feel calm. You've planned for what you know and protected yourself from what you don't.",
+     "on_screen_text": "Known costs vs true emergencies",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two jars side by side, one with a calendar icon, one with an umbrella. No text, no logos, no real people."
+    },
+    {
+     "heading": "Common mistakes",
+     "narration": "A few sinking fund mistakes. Mistake one: too many funds. If you have fifteen tiny buckets, it gets confusing fast. Start with three to five, like car, gifts, medical and travel, and combine the rest into one called annual stuff. Mistake two: forgetting to update the amounts. Prices change, and your life changes. Once a year, maybe in January, look back at what you actually spent in each category and adjust the monthly amount. Mistake three: raiding one fund for another. Borrowing from the travel fund to cover gifts just moves the problem. If a fund is regularly short, raise its monthly amount. Mistake four: treating every want as a sinking fund. Sinking funds are for expected costs, not a wishlist. And mistake five: giving up because the total looks big. You don't have to fund everything at once. Start with the categories that would hurt most, then add more as your budget allows.",
+     "on_screen_text": "3–5 funds. Update yearly. No raiding.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a few small jars, two being combined into one larger jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. Budgets usually break because of irregular expenses, not monthly ones. A sinking fund saves a little each month for a known future cost. List every irregular expense from the last year, add it up, and divide by twelve. In our fictional example, three thousand a year becomes two hundred and fifty a month. Keep it in a separate, insured savings account, ideally with named buckets. Automate the transfer the day after payday. If something is due soon, divide what you need by the months left. And keep sinking funds separate from your emergency fund. Our full sinking funds guide and our high-yield savings comparison are linked in the description, along with the free seven-day money reset.",
+     "on_screen_text": "List → divide by 12 → automate",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing beside a row of full labelled jars. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Sinking funds, step by step:\n1. List a year of irregular costs (car, gifts, medical, annual fees, travel)\n2. Add it up and divide by 12 (fictional: $3,000 → $250/month)\n3. Keep it in separate, named savings buckets\n4. Automate it the day after payday\n\nExamples are hypothetical. Not financial advice.",
+   "hashtags": [
+    "sinkingfunds",
+    "budgeting",
+    "savingmoney",
+    "budgettips",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "Sinking funds explained: why budgets break on irregular expenses, how to list a year of them (a fictional $3,000 becomes $250 a month), where to keep the money, how to automate it, how to catch up on something due soon, and how sinking funds differ from an emergency fund.\n\nChapters\n0:00 Intro\n0:49 What a sinking fund is\n1:43 Step 1: list the year\n2:30 Step 2: do the math\n3:24 Step 3: where to keep it\n4:15 Step 4: automate it\n5:02 Catching up on something due soon\n5:54 Sinking funds vs emergency fund\n6:46 Common mistakes\n7:49 Recap\n\nLinks\nSinking funds explained: the full guide: https://moneymadesimple.netlify.app/blog/sinking-funds-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-11\nHow to make a budget you'll keep: https://moneymadesimple.netlify.app/blog/how-to-make-a-budget-you-will-keep/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-11\nHigh-yield savings accounts compared: https://moneymadesimple.netlify.app/compare/best-high-yield-savings-accounts/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-11\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-11\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "'Surprise' bills = $250/month",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/",
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
+   ],
+   "claims_to_verify": [
+    "Fictional: 600+120+600+300+150+900+330 = $3,000 ÷ 12 = $250",
+    "$250 × 12 ÷ 26 ≈ $115 per paycheck",
+    "$600 ÷ 3 = $200/month catch-up"
+   ],
+   "title_variants": [
+    "How to Save for Irregular Expenses (Sinking Funds, Step by Step)",
+    "The Budget Fix Nobody Talks About: Sinking Funds"
+   ],
+   "hook_variants": [
+    "Car repairs, gifts and annual fees aren't surprises. They're on a calendar. Here's the fix.",
+    "If your budget breaks every few months, this is probably why."
+   ],
+   "original_element": "worked-example-chart: The $3,000-a-year irregular costs list turning into twelve $250 monthly bars (chapter \"Step 2: do the math\")"
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "The $3,000-a-year irregular costs list turning into twelve $250 monthly bars",
+   "chapter": "Step 2: do the math"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "What a credit freeze does and doesn't do, step by step at all 3 bureaus, how to thaw it for an application, freeze vs fraud alert vs paid monitoring, freezing a child's credit, and what to do if your identity is already stolen.",
+  "series": "youtube-long-form",
+  "series_part": 12,
+  "content_id": "yt-series-12",
+  "search_terms": [
+   "how to freeze your credit",
+   "credit freeze",
+   "freeze credit equifax experian transunion",
+   "identity theft protection"
+  ],
+  "thumbnail_alt": "Freeze your credit",
+  "script": {
+   "title": "How to Freeze Your Credit (Free, 15 Minutes, All 3 Bureaus)",
+   "hook": "A credit freeze is free, takes about 15 minutes, and blocks most new-account fraud. Here's how, at all 3 bureaus.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "If someone steals your personal information, one of the most common things they'll try is opening new credit in your name: a credit card, a phone plan, a loan. A credit freeze is one of the best ways to stop that, and it's free. Freezing your credit at all three bureaus takes about fifteen minutes, and it doesn't affect your credit score. In this video we'll cover what a freeze does and doesn't do, how to set it up step by step at Equifax, Experian and TransUnion, how to lift it temporarily when you need to apply for something, and how it compares to fraud alerts and paid identity protection. We'll also cover freezing a child's credit, and what to do if your identity has already been stolen.",
+     "on_screen_text": "Free · 15 minutes · all 3 bureaus",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small padlock next to three simple file cabinets. No text, no logos, no real people."
+    },
+    {
+     "heading": "What a freeze does",
+     "narration": "When a lender gets a credit application, they usually check your credit report first. A credit freeze, sometimes called a security freeze, blocks most new lenders from seeing your report. And if they can't see your report, they generally won't approve new credit. So even if a thief has your name, birthday and Social Security number, they'll have a hard time opening new accounts. Here's what a freeze doesn't do. It doesn't affect your credit score. It doesn't stop you from using your existing cards and loans. It doesn't stop your current lenders from checking your account, and it doesn't stop you from checking your own report. And it doesn't protect against fraud on accounts you already have, like a stolen card number. For that, you'll still want to watch your statements.",
+     "on_screen_text": "Blocks new accounts. Score unaffected.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small door with a lock in front of a file cabinet. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why freeze now",
+     "narration": "Why freeze now, before anything happens? Because data breaches are common, and many people's information has already been exposed somewhere, whether they know it or not. A freeze is preventive. It's much easier to stop someone from opening an account than to clean up after they have. It's also free by federal law. Since twenty-eighteen, the three nationwide credit bureaus have been required to let you freeze and unfreeze your credit for free. And it's especially worth doing if you're not planning to apply for new credit soon. If you're not buying a car, renting a new apartment or applying for a card in the next few months, there's very little downside. When you do need to apply, you just lift it for a few days.",
+     "on_screen_text": "Free by law since 2018",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a small shield over it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step by step: Equifax, Experian, TransUnion",
+     "narration": "Here's how to do it. You need to freeze at each of the three bureaus separately: Equifax, Experian and TransUnion. A freeze at one doesn't apply to the others. Go directly to each bureau's official website. Type the address yourself, don't click links in emails or texts. Look for the credit freeze or security freeze page. You'll create an account, verify your identity with your name, address, date of birth and Social Security number, and answer some questions. Then you place the freeze. Online, a freeze generally takes effect very quickly. You can also freeze by phone or mail. Some bureaus will offer paid products along the way. You don't need them for a freeze. Do all three in one sitting. It takes about five minutes each.",
+     "on_screen_text": "Freeze at all 3 separately",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small file cabinets, each getting a small padlock in turn. No text, no logos, no real people."
+    },
+    {
+     "heading": "Keep your login safe",
+     "narration": "When you set up each freeze, you'll get a way to manage it: usually an online account, and sometimes a PIN. This is how you'll lift the freeze later. Store it somewhere safe, like a password manager. Use a strong, unique password for each bureau account, and turn on two-factor authentication if it's offered. Don't reuse a password you've used anywhere else. If a thief could log in to your bureau account, they could lift your freeze. It's also a good idea to write down which bureaus you've frozen and the date, in a note with your other important financial info. If you lose access, you can usually still verify your identity and regain control, but having it saved makes it much faster.",
+     "on_screen_text": "Save logins in a password manager",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small key going into a safe next to a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "How to lift it when you apply",
+     "narration": "When you need to apply for credit, like a car loan, apartment, credit card or new phone plan, you'll need to lift the freeze temporarily. Ask the lender which bureau they'll check. If they know, you only need to lift that one. If they're not sure, lift all three. Log in to the bureau's site and choose a temporary lift, often called a thaw, with a start and end date. Give yourself a few days to a week. By law, online and phone requests to lift a freeze must be processed within an hour, so you can usually do it right before you apply. When the end date passes, the freeze goes back on automatically. There's no fee to lift or replace it. Some people also have to lift it for certain job background checks.",
+     "on_screen_text": "Thaw for a few days, then auto-refreeze",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a padlock opening briefly next to a small calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Freeze vs fraud alert vs paid monitoring",
+     "narration": "You'll hear about a few other options, so here's how they compare. A fraud alert is free too. It tells lenders to take extra steps to verify your identity before opening credit. A standard fraud alert lasts one year, and you only need to contact one bureau, which tells the other two. If you're a victim of identity theft, you can get an extended alert for seven years. A fraud alert is weaker than a freeze, because lenders can still see your report. Paid identity theft protection services monitor your credit and the web, and often offer insurance and help with recovery. Some people find those helpful. But the freeze itself is free, and it's the strongest prevention for new credit. We compare identity theft protection services on our site.",
+     "on_screen_text": "Freeze > fraud alert. Monitoring is optional.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three shields of different sizes, the largest labelled with a lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Kids, and extra freezes",
+     "narration": "Two extras. First, children's credit. Kids usually don't have a credit report, which makes them attractive targets, because fraud can go unnoticed for years. Parents and guardians can request a free freeze for a child under sixteen at each bureau. It usually needs to be done by mail or with extra documents, like a birth certificate. Second, there are other reporting companies you can freeze too, if you want extra protection. For example, ChexSystems tracks bank account history, which matters if someone tries to open a bank account in your name. And the NCTUE is used by some phone, cable and utility companies. These are optional. The three main credit bureaus are where you should start.",
+     "on_screen_text": "Kids under 16 can be frozen too",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small padlock on a tiny piggy bank next to a bigger one. No text, no logos, no real people."
+    },
+    {
+     "heading": "If your identity is already stolen",
+     "narration": "If you find accounts you didn't open, or a debt collector calls about a debt that isn't yours, act quickly. Go to IdentityTheft dot gov. That's the official Federal Trade Commission site. It walks you through a personal recovery plan and creates an identity theft report. Freeze your credit at all three bureaus if you haven't already. Contact the companies where fraudulent accounts were opened, and tell them the account isn't yours. Check your credit reports at AnnualCreditReport dot com and dispute any fraudulent accounts with each bureau. Change your passwords, starting with your email and bank. And be careful of anyone who contacts you offering to fix it for a fee. You can do the recovery yourself, for free.",
+     "on_screen_text": "IdentityTheft.gov · freeze · dispute",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short checklist next to a small shield and a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. A credit freeze blocks most new lenders from seeing your report, which makes it hard for thieves to open accounts in your name. It's free, it doesn't hurt your score, and your existing accounts keep working. Freeze at Equifax, Experian and TransUnion separately, directly on their official sites, and keep the logins in a password manager. When you apply for credit, lift it temporarily, and it'll refreeze on its own. A fraud alert is a lighter option, and paid monitoring is optional. You can also freeze a child's credit. And if your identity is already stolen, start at IdentityTheft dot gov. Our step-by-step freeze guide and our identity theft protection comparison are linked in the description.",
+     "on_screen_text": "Freeze all 3. Thaw when you apply.",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes relaxing next to three locked file cabinets. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Credit freeze in 4 lines:\n• Free by federal law at Equifax, Experian and TransUnion\n• Freeze each one separately, on the official site\n• Doesn't hurt your score; existing cards keep working\n• Lift it temporarily when you apply for credit\n\nAlready a victim? Start at IdentityTheft.gov.\n\nEducational, not legal or financial advice.",
+   "hashtags": [
+    "creditfreeze",
+    "identitytheft",
+    "fraudprevention",
+    "credittips",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "How to freeze your credit for free at Equifax, Experian and TransUnion in about 15 minutes: what a freeze does and doesn't do, step by step, how to lift it when you apply, freeze vs fraud alert vs paid monitoring, freezing a child's credit, and what to do if your identity is already stolen.\n\nChapters\n0:00 Intro\n0:52 What a freeze does\n1:47 Why freeze now\n2:38 Step by step: Equifax, Experian, TransUnion\n3:31 Keep your login safe\n4:21 How to lift it when you apply\n5:17 Freeze vs fraud alert vs paid monitoring\n6:10 Kids, and extra freezes\n6:58 If your identity is already stolen\n7:48 Recap\n\nLinks\nHow to freeze your credit: step by step: https://moneymadesimple.netlify.app/blog/how-to-freeze-your-credit/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-12\nIdentity theft protection compared: https://moneymadesimple.netlify.app/compare/best-identity-theft-protection/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-12\nAura review: https://moneymadesimple.netlify.app/blog/aura-review/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-12\nHow credit scores work: https://moneymadesimple.netlify.app/blog/how-credit-scores-work/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-12\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-series-12\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "Free. 15 minutes. Do it.",
+   "sources": [
+    "https://consumer.ftc.gov/articles/what-know-about-credit-freezes-fraud-alerts",
+    "https://www.identitytheft.gov/",
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-freeze-or-security-freeze-on-my-credit-report-en-1341/",
+    "https://www.equifax.com/personal/credit-report-services/credit-freeze/",
+    "https://www.experian.com/freeze/center.html",
+    "https://www.transunion.com/credit-freeze"
+   ],
+   "claims_to_verify": [
+    "Freezes and thaws free at the 3 nationwide bureaus since Sept 2018",
+    "Online/phone freeze within 1 business day; lift within 1 hour (by law)",
+    "Fraud alert 1 year; extended alert 7 years for ID theft victims",
+    "Parents can freeze for children under 16",
+    "Freeze doesn't affect credit score or existing accounts"
+   ],
+   "title_variants": [
+    "Credit Freeze Step by Step: The Free Way to Block Identity Theft",
+    "Freeze Your Credit Before You Need To. Here's How"
+   ],
+   "hook_variants": [
+    "The best identity theft protection is free and takes 15 minutes. Here's how to set it up.",
+    "Freezing your credit doesn't hurt your score. Here's what it actually does."
+   ],
+   "original_element": "screen-recording: Screen recording of each bureau's official freeze page (landing pages only, no personal data entered) (chapter \"Step by step: Equifax, Experian, TransUnion\")"
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Screen recording of each bureau's official freeze page (landing pages only, no personal data entered)",
+   "chapter": "Step by step: Equifax, Experian, TransUnion"
+  }
+ }
+]

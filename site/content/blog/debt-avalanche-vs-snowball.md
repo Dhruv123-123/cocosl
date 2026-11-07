@@ -1,7 +1,7 @@
 ---
 title: Debt avalanche vs snowball, with the real maths
-seo_title: Debt avalanche vs snowball: which saves more? (worked example)
-description: Same three debts, same $200 extra a month. Avalanche saved about $106 in interest; snowball cleared its first debt 12 months sooner. Here's how to pick the method you'll stick with.
+seo_title: "Debt avalanche vs snowball: which saves more?"
+description: "Same three debts, same $200 extra a month: avalanche saved about $106 in interest; snowball cleared its first debt 12 months sooner."
 date: 2026-11-07
 pillar: credit-and-debt
 keyword: debt avalanche vs snowball
@@ -38,7 +38,7 @@ Three hypothetical debts, $200 a month extra on top of the minimums:
 |---|---|---|---|
 | **Avalanche** | about 25 months | about **$1,850** | month 17 |
 | **Snowball** | about 25 months | about **$1,950** | **month 5** |
-| Minimums only | about 46 months | about $4,300 | |
+| Minimums only (no extra) | about 89 months | about $6,700 | |
 
 *Simulation with monthly compounding, minimums held constant, $200 extra a month. Hypothetical numbers for illustration.*
 
@@ -46,7 +46,7 @@ What jumps out:
 
 1. **The interest gap is about $106.** Real, but smaller than the internet makes it sound.
 2. **Snowball's first win comes a full year earlier.** Month 5 vs month 17 is a long time to wait for any visible progress.
-3. **Either method beats minimums by a mile**: roughly 21 months sooner and about $2,400 less interest.
+3. **Either method beats minimums by a mile**: roughly 64 months (over five years) sooner and about $4,800 less interest.
 
 ## So which should you pick?
 

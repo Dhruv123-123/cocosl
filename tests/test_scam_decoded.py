@@ -1,0 +1,960 @@
+import json
+import re
+from pathlib import Path
+
+import pytest
+
+ROOT = Path(__file__).resolve().parents[1]
+CONTENT = ROOT / "launch" / "scam-decoded" / "content.json"
+
+
+def _items():
+    return json.loads(CONTENT.read_text())
+
+
+def test_scam_decoded_content_is_valid_and_routed(factory):
+    from contentfactory.schemas import Script
+    brand = factory.brand("scam-decoded")
+    items = _items()
+    shorts = [i for i in items if i["format"] == "short"]
+    assert len([i for i in items if i["format"] == "carousel"]) == 8
+    assert len([i for i in shorts if i["platforms"] == ["tiktok"]]) == 14
+    assert len([i for i in shorts if "tiktok" not in i["platforms"]]) == 14
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        assert any(ch.isdigit() for ch in sc.hook), sc.hook          # hooks open with a number
+        assert sc.claims_to_verify and sc.sources
+        for p in item.get("platforms", []):
+            assert brand.account(p)
+        words = sum(len(s.narration.split()) for s in sc.segments)
+        if item.get("platforms") == ["tiktok"]:
+            assert 150 <= words <= 230, sc.title                     # 60-90s TikTok cut
+        elif item["format"] == "short":
+            assert 60 <= words <= 120, sc.title                      # 30-45s Reel/Short
+
+
+def test_platform_pinned_posts_only_schedule_to_their_platform(factory, fake_render):
+    item = next(i for i in _items() if i.get("platforms") == ["tiktok"])
+    pid = factory.import_script("scam-decoded", item["script"], "short", platforms=["tiktok"])
+    assert factory.db.get("posts", pid)["meta"]["platforms"] == ["tiktok"]
+    factory.approve(pid)
+    pubs = [factory.db.get("publications", p) for p in factory.schedule(pid)]
+    assert [p["platform"] for p in pubs] == ["tiktok"]
+
+    other = next(i for i in _items() if i.get("platforms") == ["instagram", "youtube"])
+    pid2 = factory.import_script("scam-decoded", other["script"], "short", platforms=other["platforms"])
+    factory.approve(pid2)
+    assert sorted(factory.db.get("publications", p)["platform"] for p in factory.schedule(pid2)) == \
+        ["instagram", "youtube"]
+
+
+def test_unknown_platform_is_rejected(factory):
+    item = _items()[0]
+    with pytest.raises(ValueError):
+        factory.import_script("scam-decoded", item["script"], "short", render=False, platforms=["myspace"])
+
+
+def test_build_pack_writes_postable_folders(factory, tmp_path):
+    from contentfactory.launch_pack import build_pack
+    items = _items()
+    subset = [items[0], items[14], items[28]]           # a short, its TikTok cut, a carousel
+    content = tmp_path / "content.json"
+    content.write_text(json.dumps(subset))
+    (tmp_path / "lead-magnet.json").write_text((CONTENT.parent / "lead-magnet.json").read_text())
+    out = tmp_path / "pack"
+    res = build_pack(factory, "scam-decoded", content, out)
+    assert len(res["items"]) == 3
+    short_dir = out / "videos-need-voice" / "01-gift-card-scam-3-ways-only-scammers-ask-to-be-paid"
+    assert (short_dir / "thumbnail.jpg").exists()
+    cap = (short_dir / "caption.txt").read_text()
+    assert "Platforms: instagram, youtube" in cap and "CHECK BEFORE POSTING" in cap
+    assert "All example messages, names and numbers are fictional" in cap
+    tiktok = next((out / "videos-need-voice").glob("02-*-tiktok"))
+    assert "Platforms: tiktok" in (tiktok / "caption.txt").read_text()
+    slides = sorted((out / "carousels").glob("03-*/slide-*.jpg"))
+    assert len(slides) == 9
+    assert (out / "brand-kit" / "bio-pack.txt").exists()
+    assert (out / "link-in-bio-page" / "index.html").exists()
+    magnet = json.loads((out / "link-in-bio-page" / "lead-magnet.json").read_text())
+    assert magnet["sections"][0]["heading"] == "Tonight (10 minutes)"
+    assert "| 1 | short | tiktok |" in (out / "CONTENTS.md").read_text()
+
+
+def test_weeks_3_6_content_is_valid_and_routed(factory):
+    from contentfactory.schemas import Script
+    brand = factory.brand("scam-decoded")
+    items = json.loads((CONTENT.parent / "weeks-3-6.json").read_text())
+    formats = [i["format"] for i in items]
+    assert formats.count("carousel") == 8 and formats.count("long") == 4
+    assert len([i for i in items if i.get("platforms") == ["tiktok"]]) == 12
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        assert any(ch.isdigit() for ch in sc.hook), sc.hook
+        assert sc.claims_to_verify and sc.sources
+        assert all(brand.account(p) for p in item.get("platforms", []))
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments), sc.title
+
+
+def test_weeks_7_12_content_is_valid_and_routed(factory):
+    from contentfactory.schemas import Script
+    brand = factory.brand("scam-decoded")
+    items = json.loads((CONTENT.parent / "weeks-7-12.json").read_text())
+    formats = [i["format"] for i in items]
+    assert formats.count("carousel") == 12 and formats.count("long") == 6
+    tiktok = [i for i in items if i.get("platforms") == ["tiktok"]]
+    shorts = [i for i in items if i.get("platforms") == ["instagram", "youtube"]]
+    assert len(tiktok) == len(shorts) == 18
+    words = lambda i: sum(len(s["narration"].split()) for s in i["script"]["segments"])
+    assert all(60 <= words(i) <= 120 for i in shorts)
+    assert all(150 <= words(i) <= 230 for i in tiktok)
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        assert any(ch.isdigit() for ch in sc.hook), sc.hook
+        assert sc.claims_to_verify and sc.sources
+        assert all(brand.account(p) for p in item.get("platforms", []))
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments), sc.title
+        assert "guarantee" not in (sc.caption + " ".join(s.narration for s in sc.segments)).lower()
+
+
+def test_weeks_13_21_content_is_valid_routed_and_new(factory):
+    from contentfactory.schemas import Script
+    brand = factory.brand("scam-decoded")
+    items = json.loads((CONTENT.parent / "weeks-13-21.json").read_text())
+    formats = [i["format"] for i in items]
+    assert formats.count("carousel") == 16 and formats.count("long") == 8
+    tiktok = [i for i in items if i.get("platforms") == ["tiktok"]]
+    shorts = [i for i in items if i.get("platforms") == ["instagram", "youtube"]]
+    assert len(tiktok) == len(shorts) == 24
+    words = lambda i: sum(len(s["narration"].split()) for s in i["script"]["segments"])
+    assert all(60 <= words(i) <= 120 for i in shorts)
+    assert all(150 <= words(i) <= 230 for i in tiktok)
+    earlier = set()
+    for name in ("content.json", "weeks-3-6.json", "weeks-7-12.json"):
+        earlier |= {i["script"]["title"] for i in json.loads((CONTENT.parent / name).read_text())}
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        assert sc.title not in earlier, sc.title
+        assert any(ch.isdigit() for ch in sc.hook), sc.hook
+        assert sc.claims_to_verify and sc.sources
+        assert all(brand.account(p) for p in item.get("platforms", []))
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments), sc.title
+        assert "guarantee" not in (sc.caption + " ".join(s.narration for s in sc.segments)).lower()
+    sext = [i for i in items if "sextortion" in i["script"]["hashtags"]]
+    assert sext and all("988" in (i["script"]["caption"] + i["script"]["description"] + " ".join(
+        s["narration"] for s in i["script"]["segments"])) for i in sext)
+
+
+def test_weeks_22_26_april_content_is_valid_and_new(factory):
+    from contentfactory.schemas import Script
+    brand = factory.brand("scam-decoded")
+    items = json.loads((CONTENT.parent / "weeks-22-26.json").read_text())
+    formats = [i["format"] for i in items]
+    assert formats.count("carousel") == 10 and formats.count("long") == 5
+    tiktok = [i for i in items if i.get("platforms") == ["tiktok"]]
+    shorts = [i for i in items if i.get("platforms") == ["instagram", "youtube"]]
+    assert len(tiktok) == len(shorts) == 15
+    words = lambda i: sum(len(s["narration"].split()) for s in i["script"]["segments"])
+    assert all(60 <= words(i) <= 120 for i in shorts)
+    assert all(150 <= words(i) <= 230 for i in tiktok)
+    earlier = set()
+    for name in ("content.json", "weeks-3-6.json", "weeks-7-12.json", "weeks-13-21.json"):
+        earlier |= {i["script"]["title"] for i in json.loads((CONTENT.parent / name).read_text())}
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        assert sc.title not in earlier, sc.title
+        assert any(ch.isdigit() for ch in sc.hook), sc.hook
+        assert sc.claims_to_verify and sc.sources
+        assert all(brand.account(p) for p in item.get("platforms", []))
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments), sc.title
+        assert "guarantee" not in (sc.caption + " ".join(s.narration for s in sc.segments)).lower()
+    affiliate = [i for i in items if "comparison (link in bio)" in i["script"]["caption"]]
+    assert affiliate and all("affiliate" in i["script"]["caption"] for i in affiliate)
+    plan = (CONTENT.parent / "POSTING_PLAN_WEEKS_22-26.md").read_text()
+    assert all(f"#{n} " in plan for n in range(len(items)))
+
+
+def test_answer_bank_has_30_link_free_drafts():
+    bank = (CONTENT.parent / "distribution" / "ANSWER_BANK.md").read_text()
+    drafts = re.findall(r"^### ([QF]\d+)\.", bank, re.M)
+    assert len(drafts) == 30 and len(set(drafts)) == 30
+    assert sum(d.startswith("Q") for d in drafts) == 18
+    assert not re.search(r"https?://|www\.", bank)
+    assert "guarantee" not in bank.lower() and "Nothing has been posted" in bank
+    assert "DM me" not in bank.replace('No "DM me"', "").replace('(No "DM me".', "")
+
+
+def _load_originality(name):
+    import importlib.util
+    import sys
+    d = CONTENT.parent / "originality"
+    sys.path.insert(0, str(d))
+    try:
+        spec = importlib.util.spec_from_file_location(f"originality_{name}", d / f"{name}.py")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        return mod
+    finally:
+        sys.path.remove(str(d))
+
+
+def test_originality_formats_render_to_html(tmp_path, monkeypatch):
+    b = _load_originality("build")
+    F = b.F
+    assert len(F.WALKTHROUGHS) == len(F.QUIZZES) == 8 and len(F.CHARTS) == 4
+    for w in F.WALKTHROUGHS:
+        page, secs = b.walkthrough_html(w)
+        assert 35 <= secs <= 75 and page.count('class="b ') == len(w["messages"])
+        assert all(f'id="f{n}"' in page for n in range(1, len(w["flags"]) + 1)), w["id"]
+        assert "555-01" in page or "●" in page
+    for q in F.QUIZZES:
+        slides = b.quiz_slides(q)
+        assert len(slides) == len(q["flags"]) + 3
+        assert all(f'data-i="{n}"' in slides[0] for n in range(1, len(q["flags"]) + 1)), q["id"]
+    for c in F.CHARTS:
+        assert len(c["labels"]) == len(c["values"]) == len(c["value_labels"])
+        assert c["url"].startswith("https://www.ftc.gov/") and "Source:" in b.chart_slide(c)
+    text = (CONTENT.parent / "originality" / "formats.py").read_text()
+    assert "NORTON" not in text.upper()
+
+
+def test_tiktok_minute_cuts_clear_one_minute_and_are_new():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    items = json.loads((CONTENT.parent / "tiktok-minute-cuts.json").read_text())
+    assert len(items) == 10 and all(i["platforms"] == ["tiktok"] for i in items)
+    earlier = {}
+    for name in ("content.json", "weeks-3-6.json", "weeks-7-12.json", "weeks-13-21.json", "weeks-22-26.json"):
+        for i in json.loads((CONTENT.parent / name).read_text()):
+            earlier[i["script"]["title"]] = G.shingles(G.script_text(i["script"]))
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        words = sum(len(s.narration.split()) for s in sc.segments)
+        assert 165 <= words <= 230, (sc.title, words)  # 66-92 s at 150 wpm
+        assert sc.title not in earlier and any(ch.isdigit() for ch in sc.hook)
+        assert item["original_element"] and "No AI voice" in item["original_element"]
+        assert any("pause" in s.heading.lower() or "quiz" in s.heading.lower() or "Pause" in s.narration
+                   for s in sc.segments), sc.title
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        assert sc.sources and sc.claims_to_verify and "guarantee" not in G.script_text(item["script"]).lower()
+        mine = G.shingles(G.script_text(item["script"]))
+        assert max(G.jaccard(mine, v) for v in earlier.values()) < 0.25, sc.title
+    plan = (CONTENT.parent / "ORIGINALITY_PASS.md").read_text()
+    assert all(i["script"]["title"] in plan for i in items)
+
+
+def test_holiday_2026_pack_ten_posts_rotating_formats():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    items = json.loads((CONTENT.parent / "holiday-2026.json").read_text())
+    assert len(items) == 10
+    kinds = [(i["format"], tuple(i["platforms"])) for i in items]
+    assert all(a != b for a, b in zip(kinds, kinds[1:])), "two posts in a row share a format"
+    topics = {i["topic"] for i in items}
+    assert topics == {"delivery", "charity", "gift cards", "marketplace"}
+    dates = [i["post_on"] for i in items]
+    assert dates == sorted(dates) and dates[0] >= "2026-11-09" and dates[-1] <= "2026-12-31"
+    earlier = set()
+    for name in ("content.json", "weeks-3-6.json", "weeks-7-12.json", "weeks-13-21.json", "weeks-22-26.json",
+                 "tiktok-minute-cuts.json"):
+        earlier |= {i["script"]["title"] for i in json.loads((CONTENT.parent / name).read_text())}
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        words = sum(len(s.narration.split()) for s in sc.segments)
+        if item["platforms"] == ["tiktok"]:
+            assert 165 <= words <= 230, sc.title
+        elif item["format"] == "short":
+            assert 60 <= words <= 120, sc.title
+        assert sc.title not in earlier and any(ch.isdigit() for ch in sc.hook)
+        assert sc.sources and sc.claims_to_verify and item["original_element"]
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        assert "checker" in sc.caption and "guarantee" not in G.script_text(item["script"]).lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(G.script_text(item["script"]), pats, "x", "warn", "x").level == "ok", sc.title
+    plan = (CONTENT.parent / "POSTING_PLAN_HOLIDAY_2026.md").read_text()
+    assert all(f"#{n} " in plan for n in range(10))
+
+
+def test_weeks_27_30_may_content_rotates_formats():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    items = json.loads((CONTENT.parent / "weeks-27-30.json").read_text())
+    fmt = lambda f, p=None: [i for i in items if i["format"] == f and (p is None or i["platforms"] == p)]
+    assert len(fmt("long")) == 4 and len(fmt("carousel")) == 8
+    assert len(fmt("short", ["tiktok"])) == len(fmt("short", ["instagram", "youtube"])) == 12
+    dates = [i["post_on"] for i in items]
+    assert dates == sorted(dates) and dates[0].startswith("2027-05-09") and dates[-1] < "2027-06-06"
+    videos = [i for i in items if i["format"] != "carousel"]
+    assert all(a["look"] != b["look"] for a, b in zip(videos, videos[1:])), "two videos in a row look alike"
+    earlier = set()
+    for name in ("content.json", "weeks-3-6.json", "weeks-7-12.json", "weeks-13-21.json", "weeks-22-26.json",
+                 "tiktok-minute-cuts.json", "holiday-2026.json"):
+        earlier |= {i["script"]["title"] for i in json.loads((CONTENT.parent / name).read_text())}
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        words = sum(len(s.narration.split()) for s in sc.segments)
+        if item["platforms"] == ["tiktok"]:
+            assert 165 <= words <= 230 and "No AI voice" in item["original_element"], sc.title
+            assert any(s.heading == "Pause" for s in sc.segments), sc.title
+        elif item["format"] == "short":
+            assert 60 <= words <= 120, sc.title
+        if item["format"] == "long":
+            assert item["original_element"] and "Chapters" in sc.description
+        assert sc.title not in earlier and any(ch.isdigit() for ch in sc.hook)
+        assert sc.sources and sc.claims_to_verify
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        text = G.script_text(item["script"])
+        assert "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+    plan = (CONTENT.parent / "POSTING_PLAN_WEEKS_27-30.md").read_text()
+    assert all(f"#{n} " in plan for n in range(len(items)))
+
+
+def test_tax_2027_pack_covers_tax_scams_on_free_saturdays():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    items = json.loads((CONTENT.parent / "tax-2027.json").read_text())
+    assert len(items) == 12
+    assert {i["topic"] for i in items} == {"IRS impersonation", "fake preparers", "refund-theft texts", "IP PIN"}
+    dates = [i["post_on"] for i in items]
+    assert dates == sorted(dates) and dates[0] >= "2027-01-15" and dates[-1] <= "2027-04-15"
+    import datetime as dt
+    assert all(dt.date.fromisoformat(d[:10]).weekday() == 5 for d in dates)
+    videos = [i for i in items if i["format"] != "carousel"]
+    assert all(a["look"] != b["look"] for a, b in zip(videos, videos[1:])), "two videos in a row look alike"
+    earlier, taken = set(), set()
+    for name in ("content.json", "weeks-3-6.json", "weeks-7-12.json", "weeks-13-21.json", "weeks-22-26.json",
+                 "tiktok-minute-cuts.json", "holiday-2026.json", "weeks-27-30.json"):
+        for i in json.loads((CONTENT.parent / name).read_text()):
+            earlier.add(i["script"]["title"])
+            if i.get("post_on"):
+                taken.add(i["post_on"][:10])
+    assert not taken & {d[:10] for d in dates}, "a tax post lands on a day another plan already uses"
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        words = sum(len(s.narration.split()) for s in sc.segments)
+        if item["platforms"] == ["tiktok"]:
+            assert 165 <= words <= 230 and "No AI voice" in item["original_element"], sc.title
+            assert any(s.heading == "Pause" for s in sc.segments), sc.title
+        elif item["format"] == "short":
+            assert 60 <= words <= 120, sc.title
+        assert sc.title not in earlier and any(ch.isdigit() for ch in sc.hook)
+        assert sc.sources and sc.claims_to_verify and item["original_element"]
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        text = G.script_text(item["script"])
+        assert "checker" in sc.caption and "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+    plan = (CONTENT.parent / "POSTING_PLAN_TAX_2027.md").read_text()
+    assert all(f"#{n} " in plan for n in range(12))
+
+
+def test_holiday_season_pack_fills_free_tuesday_thursday_noon_slots():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    import datetime as dt
+    items = json.loads((CONTENT.parent / "holiday-season-2026.json").read_text())
+    assert len(items) == 10
+    dates = [i["post_on"] for i in items]
+    assert dates == sorted(dates) and dates[0] >= "2026-11-23" and dates[-1] <= "2026-12-31 23:59"
+    assert all(d.endswith("12:00") and dt.date.fromisoformat(d[:10]).weekday() in (1, 3) for d in dates)
+    assert {i["format"] for i in items} == {"short", "carousel"}
+    videos = [i for i in items if i["format"] != "carousel"]
+    assert all(a["look"] != b["look"] for a, b in zip(videos, videos[1:])), "two videos in a row look alike"
+    earlier, taken = set(), set()
+    for f in CONTENT.parent.glob("*.json"):
+        if f.name == "holiday-season-2026.json":
+            continue
+        data = json.loads(f.read_text())
+        for i in data if isinstance(data, list) else []:
+            if isinstance(i, dict) and "script" in i:
+                earlier.add(i["script"]["title"])
+                if i.get("post_on"):
+                    taken.add(i["post_on"])
+    assert not taken & set(dates), "a holiday post lands on a slot another plan already uses"
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        words = sum(len(s.narration.split()) for s in sc.segments)
+        if item["format"] == "short":
+            assert 60 <= words <= 120 and len(sc.title) <= 60, sc.title
+        assert sc.title not in earlier and any(ch.isdigit() for ch in sc.hook.split(".")[0][:60])
+        assert sc.sources and sc.claims_to_verify and item["original_element"]
+        assert all(any(h in u for h in ("ftc.gov", "bbb.org", "fbi.gov", "ic3.gov")) for u in sc.sources), sc.title
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments) and len(sc.hashtags) <= 5
+        text = G.script_text(item["script"])
+        assert "checker" in sc.caption and "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+    plan = (CONTENT.parent / "POSTING_PLAN_HOLIDAY_SEASON_2026.md").read_text()
+    assert all(f"#{n} " in plan for n in range(10))
+
+
+def test_weeks_31_34_june_content_rotates_formats():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    items = json.loads((CONTENT.parent / "weeks-31-34.json").read_text())
+    fmt = lambda f, p=None: [i for i in items if i["format"] == f and (p is None or i["platforms"] == p)]
+    assert len(fmt("long")) == 4 and len(fmt("carousel")) == 8
+    assert len(fmt("short", ["tiktok"])) == len(fmt("short", ["instagram", "youtube"])) == 12
+    dates = [i["post_on"] for i in items]
+    assert dates == sorted(dates) and dates[0].startswith("2027-06-06") and dates[-1] < "2027-07-04"
+    videos = [i for i in items if i["format"] != "carousel"]
+    assert all(a["look"] != b["look"] for a, b in zip(videos, videos[1:])), "two videos in a row look alike"
+    earlier = set()
+    for name in ("content.json", "weeks-3-6.json", "weeks-7-12.json", "weeks-13-21.json", "weeks-22-26.json",
+                 "tiktok-minute-cuts.json", "holiday-2026.json", "weeks-27-30.json", "tax-2027.json"):
+        earlier |= {i["script"]["title"] for i in json.loads((CONTENT.parent / name).read_text())}
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        words = sum(len(s.narration.split()) for s in sc.segments)
+        if item["platforms"] == ["tiktok"]:
+            assert 165 <= words <= 230 and "No AI voice" in item["original_element"], sc.title
+            assert any(s.heading == "Pause" for s in sc.segments), sc.title
+        elif item["format"] == "short":
+            assert 60 <= words <= 120, sc.title
+        if item["format"] == "long":
+            assert item["original_element"] and "Chapters" in sc.description
+        assert sc.title not in earlier and any(ch.isdigit() for ch in sc.hook)
+        assert sc.sources and sc.claims_to_verify
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        text = G.script_text(item["script"])
+        assert "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+    plan = (CONTENT.parent / "POSTING_PLAN_WEEKS_31-34.md").read_text()
+    assert all(f"#{n} " in plan for n in range(len(items)))
+
+
+def test_breach_shorts_promote_the_checklist_on_free_saturdays():
+    import datetime as dt
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    items = json.loads((CONTENT.parent / "breach-shorts-2027.json").read_text())
+    assert len(items) == 5 and all(a["look"] != b["look"] for a, b in zip(items, items[1:]))
+    earlier, taken = set(), set()
+    for name in ("content.json", "weeks-3-6.json", "weeks-7-12.json", "weeks-13-21.json", "weeks-22-26.json",
+                 "tiktok-minute-cuts.json", "holiday-2026.json", "weeks-27-30.json", "tax-2027.json", "weeks-31-34.json"):
+        for i in json.loads((CONTENT.parent / name).read_text()):
+            earlier.add(i["script"]["title"])
+            if i.get("post_on"):
+                taken.add(i["post_on"][:10])
+    for item in items:
+        assert dt.date.fromisoformat(item["post_on"][:10]).weekday() == 5 and item["post_on"][:10] not in taken
+        sc = Script.model_validate(item["script"])
+        assert 60 <= sum(len(s.narration.split()) for s in sc.segments) <= 120, sc.title
+        assert sc.title not in earlier and any(ch.isdigit() for ch in sc.hook)
+        assert sc.sources and sc.claims_to_verify and item["original_element"]
+        assert "/breached" in sc.caption and "checker" in sc.caption
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        text = G.script_text(item["script"])
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+
+
+def test_how_the_scam_actually_worked_series():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    root = CONTENT.parent
+    import sys
+    sys.path.insert(0, str(root / "how-it-worked"))
+    try:  # how-it-worked/ has its own build.py: don't leave it where `import build` would find it
+        from series import OUTLINE
+        from parts_4_8 import PARTS_4_8
+        from series import PARTS as P13
+    finally:
+        sys.path.remove(str(root / "how-it-worked"))
+    PARTS = P13 + PARTS_4_8
+    assert [o["part"] for o in OUTLINE] == list(range(1, 9))
+    assert all(o["source"].startswith("https://") and ("justice.gov" in o["source"] or "ftc.gov" in o["source"]) for o in OUTLINE)
+    items = json.loads((root / "how-it-worked.json").read_text())
+    assert [i["part"] for i in items] == list(range(1, 9)) and all(i["format"] == "long" for i in items)
+    taken = set()
+    for name in ("weeks-22-26.json", "weeks-27-30.json", "weeks-31-34.json"):
+        taken |= {i["post_on"][:10] for i in json.loads((root / name).read_text()) if i.get("post_on")}
+    for item, part in zip(items, PARTS):
+        assert item["post_on"][:10] not in taken
+        sc = Script.model_validate(item["script"])
+        assert 450 <= sum(len(s.narration.split()) for s in sc.segments) <= 900, sc.title
+        assert sc.playlist == "How the scam actually worked" and any(ch.isdigit() for ch in sc.hook)
+        assert "Chapters" in sc.description and sc.segments[-1].heading == "Three checks"
+        assert "Case board" in item["original_element"] and "no AI voice" in item["original_element"]
+        assert len(sc.sources) >= 2 and len(sc.claims_to_verify) >= 3
+        assert (root / "how-it-worked" / "out" / f"{part['slug']}.html").exists()
+        text = G.script_text(item["script"])
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+    for n in (0, 4, 5):  # parts with open charges say so
+        assert "presumed innocent" in G.script_text(items[n]["script"]), n
+
+
+def test_every_short_title_fits_60_characters():
+    long = []
+    for f in sorted(CONTENT.parent.glob("*.json")):
+        data = json.loads(f.read_text())
+        if not isinstance(data, list):
+            continue
+        long += [(f.name, i["script"]["title"]) for i in data
+                 if isinstance(i, dict) and i.get("format") == "short" and len(i["script"]["title"]) > 60]
+    assert not long, long
+
+
+def test_every_post_uses_at_most_5_hashtags():
+    over = []
+    for f in sorted(CONTENT.parent.glob("*.json")):
+        data = json.loads(f.read_text())
+        if isinstance(data, list):
+            over += [(f.name, i["script"]["title"]) for i in data
+                     if isinstance(i, dict) and "script" in i and len(i["script"].get("hashtags", [])) > 5]
+    assert not over, over[:5]
+
+
+def test_newsletter_cut_pack():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    items = json.loads((CONTENT.parent / "newsletter-cuts.json").read_text())
+    assert len(items) == 10 and all(a["look"] != b["look"] for a, b in zip(items, items[1:]))
+    slots = set()
+    for name in ("weeks-13-21.json", "weeks-22-26.json", "weeks-27-30.json", "weeks-31-34.json", "holiday-2026.json",
+                 "tax-2027.json", "breach-shorts-2027.json"):
+        slots |= {i["post_on"] for i in json.loads((CONTENT.parent / name).read_text()) if i.get("post_on")}
+    news = CONTENT.parent.parent.parent / "sites" / "scam-decoded" / "content" / "newsletter"
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        issue = next(news.glob(f"{item['newsletter_issue']:02d}-*.md")).read_text()
+        assert f"send_date: {item['post_on'][:10]}" in issue and item["post_on"] not in slots
+        assert len(sc.hashtags) <= 5 and item["platforms"] == ["instagram", "tiktok"]
+        assert "no AI voice" in item["original_element"] and sc.sources and sc.claims_to_verify
+        assert 60 <= sum(len(s.narration.split()) for s in sc.segments) <= 120, sc.title
+        assert any(ch.isdigit() for ch in sc.hook) and "Scam Alert" in sc.caption
+        text = G.script_text(item["script"])
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+
+
+def test_every_long_video_has_an_original_element():
+    """YouTube's inauthentic-content rule: each long video needs a chart of its own numbers or Dhruv's footage."""
+    import glob
+    import sys
+    from contentfactory.guardrails import check_original_element
+    from contentfactory.schemas import Script
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "launch" / "scam-decoded"))
+    import long_originals
+    longs = []
+    for f in sorted(glob.glob(str(Path(__file__).resolve().parents[1] / "launch" / "scam-decoded" / "*.json"))):
+        data = json.loads(Path(f).read_text())
+        if isinstance(data, list):
+            longs += [i for i in data if isinstance(i, dict) and i.get("format") == "long"]
+    assert len(longs) >= 39
+    paths = []
+    for it in longs:
+        assert check_original_element(it).level == "ok", it["script"]["title"]
+        Script(**it["script"])
+        assert it["script"]["original_element"]
+        paths += [s["footage"] for s in it["script"]["segments"] if s.get("footage")]
+        if it["script"].get("playlist") == "How the scam actually worked":
+            assert any(s.get("chart") for s in it["script"]["segments"])
+    assert len(paths) == len(set(paths)) and all(p.startswith("footage/scam-decoded/") for p in paths)
+    shots = (Path(long_originals.__file__).parent / "LONG_VIDEO_RECORDINGS.md").read_text()
+    assert all(p in shots for p in paths)
+
+
+def test_long_videos_follow_a_worked_example():
+    """Originality audit: long videos under 800 words read as templated. Each one carries a worked example."""
+    import glob
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "launch" / "scam-decoded"))
+    from long_examples import examples
+    table = examples()
+    longs = []
+    for f in sorted(glob.glob(str(Path(__file__).resolve().parents[1] / "launch" / "scam-decoded" / "*.json"))):
+        data = json.loads(Path(f).read_text())
+        if isinstance(data, list):
+            longs += [i for i in data if isinstance(i, dict) and i.get("format") == "long"]
+    for it in longs:
+        sc = it["script"]
+        words = sum(len(s["narration"].split()) for s in sc["segments"])
+        assert words >= 800, (sc["title"], words)
+        heads = [s["heading"] for s in sc["segments"]]
+        assert len(heads) == len(set(heads)), sc["title"]
+        chapters = [l.split(" ", 1)[1] for l in sc["description"].splitlines() if re.match(r"^\d+:\d\d ", l)]
+        example = [v for k, v in table.items() if sc["title"].startswith(k)]
+        assert example or words >= 900, sc["title"]
+        for h, *_ in (example[0][1] if example else []):
+            assert h in heads and (not chapters or h in chapters), (sc["title"], h)
+
+
+def test_parents_printable_kit_and_listing(tmp_path, monkeypatch):
+    import importlib.util
+    import re
+    kit = CONTENT.parent / "product" / "parents-printable-kit"
+    spec = importlib.util.spec_from_file_location("parents_kit", kit / "build.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    monkeypatch.setattr(mod, "DIST", tmp_path)
+    monkeypatch.setattr("sys.argv", ["build.py", "--no-pdf"])
+    mod.main()
+    html_text = (tmp_path / "Scam-Proof-Your-Parents-Kit.html").read_text()
+    assert html_text.count('<section class="page') == 9
+    assert len(mod.SCRIPTS) == 8 and sum(len(v) for v in mod.CHECKLIST.values()) == 15
+    for word in ("code word", "Fridge", "checklist", "personal use only", "not legal or financial advice"):
+        assert word.lower() in html_text.lower(), word
+    assert all(any(h in u for h in ("ftc.gov", "fbi.gov", "ic3.gov", "ojp.gov", "justice.gov")) for _, u in mod.SOURCES)
+    assert "guarantee" not in html_text.lower()
+    listing = (kit / "LISTING.md").read_text()
+    assert "[PRICE]" in listing and "## Gumroad" in listing
+    assert "## Etsy" not in listing and "Gumroad only" in listing  # Etsy's Oct 2026 AI-guide rule
+    assert "Personal use only" in listing
+
+
+def test_small_business_series_feeds_site_alerts_and_b2b_blocks():
+    site = ROOT / "sites" / "scam-decoded" / "content"
+    data = json.loads((CONTENT.parent / "small-business" / "b2b_issue_blocks.json").read_text())
+    keys = {"topic", "subject", "preheader", "headline", "example_label", "example", "explain", "tell", "steps",
+            "quick_hits", "job", "promise", "lobby", "social", "sources"}
+    assert [b["key"] for b in data["blocks"]] == ["fake-invoices", "google-listing-calls", "domain-renewal-notices"]
+    for b in data["blocks"]:
+        assert keys <= set(b) and b["promise"] is False and "made-up" in b["example_label"]
+        assert all("ftc.gov" in s["url"] and s["name"] for s in b["sources"])
+        body = json.dumps({k: v for k, v in b.items() if k not in ("explainer", "key")}).lower()
+        assert "scamdecoded" not in body and "guarantee" not in body and "http" not in json.dumps(b["steps"])
+        article = next((site / "articles").glob(f"*-{b['key']}.md")).read_text()
+        assert f"path: {b['explainer']}" in article and "ftc.gov" in article and "## The tell" in article
+        alert = next((site / "alerts").glob(f"*-{b['key']}*.md"), None) or next(
+            p for p in (site / "alerts").glob("*.md") if f"explainer: {b['key']}" in p.read_text())
+        assert "flags:" in alert.read_text()
+
+
+def test_valentines_pack_new_romance_angles_in_free_slots():
+    import datetime as dt
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    root = CONTENT.parent
+    items = json.loads((root / "valentines-2027.json").read_text())
+    assert len(items) == 8
+    dates = [i["post_on"] for i in items]
+    assert dates == sorted(dates) and "2027-02-01" <= dates[0] and dates[-1] <= "2027-02-14 23:59"
+    assert {i["topic"] for i in items} >= {"pig butchering", "fake military", "crypto romance"}
+    # taken: every dated pack, plus the weeks 13-21 plan (Shorts/TikTok 12:00, carousels 19:30, long 10:00)
+    taken, earlier = set(), set()
+    for f in root.glob("*.json"):
+        if f.name == "valentines-2027.json":
+            continue
+        data = json.loads(f.read_text())
+        for i in data if isinstance(data, list) else []:
+            if isinstance(i, dict) and "script" in i:
+                earlier.add(i["script"]["title"])
+                if i.get("post_on"):
+                    taken.add(i["post_on"])
+    for line in (root / "POSTING_PLAN_WEEKS_13-21.md").read_text().splitlines():
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        m = re.match(r"\w{3} Feb (\d+)$", cells[0]) if len(cells) == 5 else None
+        if m:
+            day = f"2027-02-{int(m.group(1)):02d}"
+            for col, time in ((1, "12:00"), (2, "12:00"), (3, "19:30"), (4, "10:00")):
+                if cells[col]:
+                    taken.add(f"{day} {time}")
+    assert not taken & set(dates), taken & set(dates)
+    videos = [i for i in items if i["format"] != "carousel"]
+    assert all(a["look"] != b["look"] for a, b in zip(videos, videos[1:]))
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        words = sum(len(s.narration.split()) for s in sc.segments)
+        if item["format"] == "short":
+            assert 60 <= words <= 120 and len(sc.title) <= 60, sc.title
+        assert sc.title not in earlier and any(ch.isdigit() for ch in sc.hook.split(".")[0][:60])
+        assert sc.claims_to_verify and item["original_element"] and len(sc.hashtags) <= 5
+        assert all("ftc.gov" in u or "ic3.gov" in u for u in sc.sources), sc.title
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        text = G.script_text(item["script"])
+        assert "checker" in sc.caption and "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+    plan = (root / "POSTING_PLAN_VALENTINES_2027.md").read_text()
+    assert all(f"#{n} " in plan for n in range(8))
+
+
+def test_scam_watch_weekly_issues_from_alert_cards():
+    import datetime as dt
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("scam_watch", CONTENT.parent / "scam-watch" / "build.py")
+    sw = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(sw)
+    import sys
+    had_build = sys.modules.get("build")
+    issues = sw.build()
+    # the site's build.py must not shadow another site's `build` module (MMS tests import it by that name)
+    assert sys.modules.get("build") is had_build
+    assert not any(p.rstrip("/").endswith("sites/scam-decoded") for p in sys.path)
+    saved = json.loads((CONTENT.parent / "scam-watch" / "issues.json").read_text())["issues"]
+    assert [i["id"] for i in saved] == [i["id"] for i in issues], "issues.json is stale: run scam-watch/build.py"
+    assert len(issues) >= 11 and issues[0]["send_date"] == "2026-11-16"
+    keys = {"id", "n", "send_date", "deliver_by", "source", "topic", "subject", "preheader", "headline", "example_label",
+            "example", "explain", "tell", "promise", "steps", "quick_hits", "job", "lobby", "social", "brief", "sources"}
+    for i in issues:
+        assert set(i) == keys
+        assert dt.date.fromisoformat(i["send_date"]).weekday() == 0
+        assert dt.date.fromisoformat(i["deliver_by"]) < dt.date.fromisoformat(i["send_date"])
+        assert len(i["steps"]) == 3 and len(i["lobby"]["bullets"]) == 3 and "made-up" in i["example_label"]
+        assert all(s["name"] and s["url"].startswith("https://") for s in i["sources"])
+        member = json.dumps({k: v for k, v in i.items() if k not in ("source", "sources", "id")}).lower()
+        assert "scamdecoded" not in member and "scam decoded" not in member and "guarantee" not in member
+    # the week with the urgent toll alert leads with it
+    jan11 = next(i for i in issues if i["send_date"] == "2027-01-11")
+    assert "toll" in jan11["headline"].lower()
+
+
+def test_spring_pack_betting_travel_student_aid_in_free_slots():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    root = CONTENT.parent
+    items = json.loads((root / "spring-2027.json").read_text())
+    assert len(items) == 11
+    dates = [i["post_on"] for i in items]
+    assert dates == sorted(dates) and "2027-03-01" <= dates[0] and dates[-1] <= "2027-04-30 23:59"
+    assert {i["thread"] for i in items} == {"sports betting", "spring travel", "student aid"}
+    # taken: every dated pack, plus the weeks 13-21 and 22-26 plan tables (Shorts/TikTok 12:00, carousels 19:30, long 10:00)
+    taken, earlier = set(), set()
+    for f in root.glob("*.json"):
+        if f.name == "spring-2027.json":
+            continue
+        data = json.loads(f.read_text())
+        for i in data if isinstance(data, list) else []:
+            if isinstance(i, dict) and "script" in i:
+                earlier.add(i["script"]["title"])
+                if i.get("post_on"):
+                    taken.add(i["post_on"])
+    months = {"Mar": 3, "Apr": 4}
+    for name in ("POSTING_PLAN_WEEKS_13-21.md", "POSTING_PLAN_WEEKS_22-26.md"):
+        for line in (root / name).read_text().splitlines():
+            cells = [c.strip() for c in line.strip().strip("|").split("|")]
+            m = re.match(r"\w{3} (Mar|Apr) (\d+)$", cells[0]) if len(cells) == 5 else None
+            if m:
+                day = f"2027-{months[m.group(1)]:02d}-{int(m.group(2)):02d}"
+                for col, time in ((1, "12:00"), (2, "12:00"), (3, "19:30"), (4, "10:00")):
+                    if cells[col]:
+                        taken.add(f"{day} {time}")
+    assert not taken & set(dates), taken & set(dates)
+    assert all(a["look"] != b["look"] for a, b in zip(items, items[1:]))
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        words = sum(len(s.narration.split()) for s in sc.segments)
+        assert 60 <= words <= 120 and len(sc.title) <= 60, sc.title
+        assert sc.title not in earlier and any(ch.isdigit() for ch in sc.hook.split(".")[0][:60])
+        assert sc.claims_to_verify and item["original_element"] and len(sc.hashtags) <= 5
+        assert all("ftc.gov" in u or "bbb.org" in u for u in sc.sources), sc.title
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        text = G.script_text(item["script"])
+        assert "checker" in sc.caption and "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+    plan = (root / "POSTING_PLAN_SPRING_2027.md").read_text()
+    assert all(f"#{n} " in plan for n in range(11))
+
+
+def test_red_flags_printables_are_etsy_safe_signage(tmp_path):
+    import importlib.util
+    folder = CONTENT.parent / "product" / "red-flags-printables"
+    spec = importlib.util.spec_from_file_location("red_flags", folder / "build.py")
+    rf = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(rf)
+    out = rf.main(["--no-pdf", "--out", str(tmp_path / "dist")])
+    names = sorted(p.name for p in out.iterdir())
+    assert len(names) == 6 and all(n.endswith(".html") for n in names)
+    assert {"Letter", "A4", "11x17", "18x24"} == set(rf.SIZES) and len(rf.POSTERS) == 6 and len(rf.CARDS) == 10
+    # signage, not a guide: short lines only, every poster sourced, no guide/kit in the product name
+    assert not re.search(r"\b(guide|kit|workbook|course)\b", rf.NAME, re.I)
+    for kicker, head, flags, bottom, sources in rf.POSTERS:
+        assert len(flags) == 5 and sources and all("ftc.gov" in u or "ic3.gov" in u for u in sources)
+        assert all(len(f.split()) <= 7 and len(d.split()) <= 9 for f, d in flags), head
+        assert len(bottom.split()) <= 14
+    for kind, flags, move in rf.CARDS:
+        assert len(flags) == 3 and all(len(f.split()) <= 6 for f in flags) and len(move.split()) <= 8, kind
+    html = (out / "Scam-Red-Flags-Posters-18x24.html").read_text()
+    assert "size:18in 24in" in html and html.count("class='page poster'") == 6 and "Where these red flags" in html
+    assert "scamdecoded." not in html.lower() and "guarantee" not in html.lower()
+    cards = (out / "Scam-Red-Flags-Wallet-Cards-A4.html").read_text()
+    assert cards.count("class='card'") == 10 and cards.count("class='card back'") == 10
+    # Etsy playbook: title under 15 words, 13 tags of 20 characters or fewer, how it's made, no links in the Etsy copy
+    listing = (folder / "LISTING.md").read_text()
+    etsy = listing.split("## Etsy", 1)[1].split("## Gumroad", 1)[0]
+    title = re.search(r"\*\*Title:\*\* (.+)", etsy).group(1)
+    assert len(title.split()) < 15 and title.startswith("Scam Red Flags Posters")
+    tags = [t.strip() for t in re.search(r"\*\*Tags \(13\):\*\* (.+?)\n\n", etsy, re.S).group(1).replace("\n", " ").split(",")]
+    assert len(tags) == 13 and len(set(tags)) == 13 and all(len(t) <= 20 for t in tags), tags
+    assert "How it's made" in etsy and "Personal use only" in etsy and "not legal, financial" in etsy
+    assert "http" not in etsy and "scamdecoded." not in etsy.lower()
+    assert all(f"mockup-0{i}" in listing for i in (1, 2, 3))
+
+
+def test_ncpw_pack_alerts_carousels_and_long_video():
+    import datetime as dt
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    root = CONTENT.parent
+    items = json.loads((root / "ncpw-2027.json").read_text())
+    assert [i["format"] for i in items] == ["carousel", "carousel", "long"]
+    dates = [i["post_on"] for i in items]
+    assert "2027-02-28" <= dates[0][:10] and dates[-1][:10] <= "2027-03-06"  # NCPW 2027: Feb 28 - Mar 6
+    taken, earlier = set(), set()
+    for f in root.glob("*.json"):
+        if f.name == "ncpw-2027.json":
+            continue
+        data = json.loads(f.read_text())
+        for i in data if isinstance(data, list) else []:
+            if isinstance(i, dict) and "script" in i:
+                earlier.add(i["script"]["title"])
+                if i.get("post_on"):
+                    taken.add(i["post_on"])
+    for line in (root / "POSTING_PLAN_WEEKS_13-21.md").read_text().splitlines():
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        m = re.match(r"\w{3} (Feb|Mar) (\d+)$", cells[0]) if len(cells) == 5 else None
+        if m:
+            day = f"2027-{2 if m.group(1) == 'Feb' else 3:02d}-{int(m.group(2)):02d}"
+            for col, time in ((1, "12:00"), (2, "12:00"), (3, "19:30"), (4, "10:00")):
+                if cells[col]:
+                    taken.add(f"{day} {time}")
+    assert not taken & set(dates), taken & set(dates)
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        assert sc.title not in earlier and sc.claims_to_verify and len(sc.hashtags) <= 5
+        assert all("ftc.gov" in u for u in sc.sources), sc.title
+        assert item["topic"] != "consumer rights" or "https://consumer.ftc.gov/ncpw" in sc.sources
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        text = G.script_text(item["script"])
+        assert "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+    long = items[-1]
+    assert sum(len(s["narration"].split()) for s in long["script"]["segments"]) >= 800
+    assert any(s.get("footage") for s in long["script"]["segments"]) and "Maya" in json.dumps(long)
+    assert long["script"]["title"] in (root / "LONG_VIDEO_RECORDINGS.md").read_text()
+    # one alert a day, Mon Mar 1 - Fri Mar 5, each from an FTC page
+    alerts = sorted((root.parent.parent / "sites" / "scam-decoded" / "content" / "alerts").glob("5[3-7]-*.md"))
+    days = []
+    for f in alerts:
+        meta = dict(l.split(": ", 1) for l in f.read_text().split("---")[1].strip().splitlines() if ": " in l)
+        assert "ftc.gov" in meta["source_url"] and len(meta["flags"].split("|")) == 3
+        days.append(meta["alert_date"])
+    assert days == [f"2027-03-0{d}" for d in range(1, 6)]
+    plan = (root / "POSTING_PLAN_NCPW_2027.md").read_text()
+    assert all(f"#{n} " in plan for n in range(3)) and plan.count("`5") == 5
+
+
+def test_news_hook_shorts_nov_2026_in_free_noon_slots():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    root = CONTENT.parent
+    items = json.loads((root / "news-nov-2026.json").read_text())
+    assert len(items) == 5 and {i["topic"] for i in items} >= {"ghost tapping", "impostor ads", "open enrollment ads"}
+    dates = [i["post_on"] for i in items]
+    taken, earlier = set(), set()
+    for f in root.glob("*.json"):
+        if f.name == "news-nov-2026.json":
+            continue
+        data = json.loads(f.read_text())
+        for i in data if isinstance(data, list) else []:
+            if isinstance(i, dict) and "script" in i:
+                earlier.add(i["script"]["title"])
+                if i.get("post_on"):
+                    taken.add(i["post_on"])
+    months = {"Nov": "2026-11", "Dec": "2026-12"}
+    for name in ("POSTING_PLAN_WEEKS_3-6.md", "POSTING_PLAN.md"):
+        for line in (root / name).read_text().splitlines():
+            cells = [c.strip() for c in line.strip().strip("|").split("|")]
+            m = re.search(r"\w{3} (Nov|Dec) (\d+)", cells[0]) if len(cells) >= 4 else None
+            if m:
+                day = f"{months[m.group(1)]}-{int(m.group(2)):02d}"
+                for col, time in ((1, "12:00"), (2, "12:00"), (3, "19:30")):
+                    if cells[col]:
+                        taken.add(f"{day} {time}")
+                if len(cells) == 5 and cells[4]:
+                    taken.add(f"{day} 10:00")
+    assert not taken & set(dates), taken & set(dates)
+    assert all(a["look"] != b["look"] for a, b in zip(items, items[1:]))
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        words = sum(len(s.narration.split()) for s in sc.segments)
+        assert 60 <= words <= 120 and len(sc.title) <= 60 and sc.title not in earlier, sc.title
+        assert any(ch.isdigit() for ch in sc.hook.split(".")[0][:60]) and len(sc.hashtags) <= 5
+        assert sc.claims_to_verify and all("ftc.gov" in u or "bbb.org" in u for u in sc.sources)
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        text = G.script_text(item["script"])
+        assert "checker" in sc.caption and "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+
+
+def test_moving_season_pack_and_renting_checklist():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    root = CONTENT.parent
+    items = json.loads((root / "moving-season-2027.json").read_text())
+    assert len(items) == 12 and sum(i["format"] == "carousel" for i in items) == 2
+    dates = [i["post_on"] for i in items]
+    assert dates == sorted(dates) and dates[0] > "2027-07-03 23:59"  # after the last planned week (weeks 31-34)
+    taken, earlier = set(), set()
+    for f in root.glob("*.json"):
+        if f.name == "moving-season-2027.json":
+            continue
+        data = json.loads(f.read_text())
+        for i in data if isinstance(data, list) else []:
+            if isinstance(i, dict) and "script" in i:
+                earlier.add(i["script"]["title"])
+                if i.get("post_on"):
+                    taken.add(i["post_on"])
+    assert not taken & set(dates)
+    videos = [i for i in items if i["format"] == "short"]
+    assert all(a["look"] != b["look"] for a, b in zip(videos, videos[1:]))
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        if item["format"] == "short":
+            assert 60 <= sum(len(s.narration.split()) for s in sc.segments) <= 120 and len(sc.title) <= 60
+        assert sc.title not in earlier and any(ch.isdigit() for ch in sc.hook.split(".")[0][:60])
+        assert sc.claims_to_verify and len(sc.hashtags) <= 5
+        assert all("ftc.gov" in u or "fmcsa.dot.gov" in u for u in sc.sources), sc.title
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        assert "checker" in sc.caption and "checklist" in sc.caption  # every post points to the free /renting/ checklist
+        text = G.script_text(item["script"])
+        assert "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+    site = root.parent.parent / "sites" / "scam-decoded"
+    cfg = json.loads((site / "site.json").read_text())["renting_checklist"]
+    pdf = site / "static" / "downloads" / cfg["file"]
+    assert pdf.read_bytes()[:4] == b"%PDF"
+    html = (site / "lead-magnet" / "renting-safely-checklist.html").read_text()
+    assert html.count('class="page"') == 1 and "ReportFraud.ftc.gov" in html and "FMCSA" in html
+    page = (site / "content" / "pages" / "renting.md").read_text()
+    assert "{{signup:renting-checklist|" in page and "/renting/thanks/" in page
+    assert "{{download:renting_checklist}}" in (site / "content" / "pages" / "renting-thanks.md").read_text()
+
+
+def test_launch_week_plan_is_current_and_fact_checked():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("scam_decoded_launch_week", CONTENT.parent / "generators" / "launch-week" / "build.py")
+    lw = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(lw)
+    content, longs = lw.load()
+    keys = lw.checks(content, longs)      # looks, cadence, bios, a verdict for every claim
+    assert (CONTENT.parent / "LAUNCH_WEEK.md").read_text() == lw.render(content, longs, keys), \
+        "LAUNCH_WEEK.md is stale: run generators/launch-week/build.py"
+    # scouting's keyword sheet: the scam's name leads the retitled launch posts
+    renames = json.loads((CONTENT.parent / "launch-renames.json").read_text())
+    for n, r in renames.items():
+        sc = content[int(n)]["script"]
+        assert sc["title"] == r["new"] and len(sc["title"]) <= 60 and r["old"] in sc["title_variants"]
+    text = json.dumps(content)
+    for gone in ("3 seconds of audio", "tells them your number is live", "Both let you freeze for free"):
+        assert gone not in text, gone
+
+
+def test_launch_recording_session_is_current():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("scam_decoded_launch_rec", CONTENT.parent / "generators" / "launch-week" / "recordings.py")
+    rec = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(rec)
+    s = rec.plan()
+    rec.check(s)                       # <= 30 minutes, setup order, long-video paths match LONG_VIDEO_RECORDINGS.md
+    for name, text in rec.files(s).items():
+        assert (CONTENT.parent / "launch-recording" / name).read_text() == text, f"{name} stale: run recordings.py"
+    assert {"Channel trailer"} <= {t["title"] for t in s["tasks"]}

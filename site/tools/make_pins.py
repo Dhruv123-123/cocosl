@@ -205,7 +205,7 @@ def pins() -> list[dict]:
         html=page("light", '<h1 style="font-size:96px">How much rent fits your salary?</h1><div class="rows">' + "".join(
                 f'<div class="row"><b>${s // 1000}k</b><em>{money(s * 0.3 / 12)}/mo</em></div>' for s in (50000, 60000, 75000))
             + '</div><p class="note">30% of gross pay. Take-home, budgets and city rents for your salary →</p>')))
-    P.append(dict(slug="shop-toolkit-1", path="/shop/#bundles", board="Budget printables",
+    P.append(dict(slug="shop-toolkit-1", path="/shop/money-toolkit-bundle/", board="Budget printables",
         title=f"5 money kits in one: budget, bills, credit, debt and investing (${kit['price']:g})",
         desc="All five Money Made Simple guide-and-spreadsheet kits in one download, with a Start Here map and a 30-day plan that uses all five. Excel, Google Sheets or Numbers. One payment, no subscription.",
         alt=f"The Money Made Simple Toolkit cover with five kits listed and a ${kit['price']:g} price tag.",
@@ -217,7 +217,7 @@ def pins() -> list[dict]:
                 f'<div><i style="width:20px;height:20px;background:var(--gold)"></i>{t}</div>' for t in [
                     "Bill Cut Kit", "20-Minute Budget", "Credit Report Audit", "Debt-Free Date Planner",
                     "Start Investing With $100 a Month"]) + "</div>")))
-    P.append(dict(slug="shop-savings-pack-1", path="/shop/#bundles", board="Budget printables",
+    P.append(dict(slug="shop-savings-pack-1", path="/shop/savings-challenge-pack/", board="Budget printables",
         title=f"12 printable savings challenges in one pack (${pack['price']:g})",
         desc="Make saving a habit (and a bit of a game): every savings challenge from the shop in one printable pack, from the 52-week challenge to savings bingo. Letter and A4 PDFs.",
         alt="Six tiles showing printable savings challenges, including 52-week, 100 envelopes and savings bingo.",
@@ -353,7 +353,7 @@ def library() -> list[dict]:
             ["Letter + A4 PDF", "Print at home or fill on a tablet", "Instant download"]
         if it.get("separately"):
             inc[1] = f"${it['separately']:g} if bought separately"
-        add("shop-" + it["slug"], "shop", f"/shop/#item-{it['slug']}", (board, "Budget printables"
+        add("shop-" + it["slug"], "shop", it.get("page") or f"/shop/{it['slug']}/", (board, "Budget printables"
             if board != "Budget printables" else "Budgeting for beginners"),
             f"{it['name']} ({price.lower() if price == 'Free' else price})", it.get("blurb", it["name"]), f"the {it['name']}",
             design_a(f"{label} · {price}", it["name"], pitch, "Get it in the shop", art),
@@ -364,6 +364,18 @@ def library() -> list[dict]:
 
 RAMP = [(14, 1), (16, 2), (30, 3)]  # (days, new pins a day): 1 a day for two weeks, then 2, then 3 (days 31-60)
 B_GAP = 14  # days between a page's design A and design B
+URL_GAP = 7  # days between any two pins that link to the same page (scouting's Pinterest playbook)
+DAY1 = date(2026, 11, 16)  # launch Day 1 in launch/money-made-simple/LAUNCH_WEEK.md (PR #5); site pins start in week 3
+# LAUNCH_WEEK.md's "start with these site pins", in its order: they go first in the schedule.
+LAUNCH_LEAD = ["/quiz/", "/blog/how-to-freeze-your-credit/", "/blog/401k-match-explained/",
+               "/blog/how-to-build-an-emergency-fund/", "/blog/sinking-funds-explained/",
+               "/blog/find-and-cancel-subscriptions/", "/blog/how-to-start-investing-with-100-a-month/",
+               "/blog/expense-ratios-explained/"]
+
+
+def _page(p: dict) -> str:
+    """The page a pin links to, without the domain or UTM tags."""
+    return urlparse(p["link"]).path
 
 
 def schedule(featured: list[dict], lib: list[dict], start: date) -> list[dict]:
@@ -383,7 +395,15 @@ def schedule(featured: list[dict], lib: list[dict], start: date) -> list[dict]:
                 order.append(queues[k].pop(0))
     b_of = {p["page"]: p for p in lib if p["variant"] == "b"}
     pending = [dict(p, live="") for p in featured] + order
+    lead = []
+    for path in LAUNCH_LEAD:  # first pin for each launch page, in LAUNCH_WEEK's order
+        hit = next((p for p in pending if _page(p) == path and p.get("variant", "a") == "a"), None)
+        if hit:
+            pending.remove(hit)
+            lead.append(hit)
+    pending = lead + pending
     posted_a: dict[str, date] = {}
+    last_url: dict[str, date] = {}
     rows, day = [], 0
     for span, per_day in RAMP:
         for _ in range(span):
@@ -397,8 +417,11 @@ def schedule(featured: list[dict], lib: list[dict], start: date) -> list[dict]:
                     continue  # page not published yet
                 if p.get("variant") == "b" and (d - posted_a[p["page"]]).days < B_GAP:
                     continue
+                if _page(p) in last_url and (d - last_url[_page(p)]).days < URL_GAP:
+                    continue
                 todays.append(p)
                 pending.remove(p)
+                last_url[_page(p)] = d
                 if p.get("variant") == "a":
                     posted_a[p["page"]] = d
                     pending.append(b_of[p["page"]])  # B goes to the back of the queue
@@ -430,7 +453,8 @@ def main() -> None:
     ap.add_argument("--out", default=str(SITE / "pins"))
     ap.add_argument("--all", action="store_true", help="also render a pin pair for every shop product, Compare "
                     "page and article into <out>/library/, and write <out>/schedule.csv")
-    ap.add_argument("--start", default=(date.today() + timedelta(days=1)).isoformat(), help="schedule day 1")
+    ap.add_argument("--start", default=(DAY1 + timedelta(days=14)).isoformat(),
+                    help="first pin date (default: week 3 after launch Day 1, as LAUNCH_WEEK.md says)")
     ap.add_argument("--no-render", action="store_true", help="write the CSVs only")
     a = ap.parse_args()
     out = Path(a.out)

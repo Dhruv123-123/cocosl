@@ -4,6 +4,10 @@
   base = "site"
   command = "python3 build.py && python3 tools/check_site.py"
   publish = "public"
+  # Skip deploys for pushes that don't touch the site (each production deploy costs 15 of the free plan's 300
+  # monthly credits). Build-hook builds (the scheduled rebuild) always run: Netlify sets INCOMING_HOOK_URL for them.
+  # Exit 1 = build, exit 0 = skip. Runs from the base directory (site/).
+  ignore = "if [ -n \"$INCOMING_HOOK_URL\" ]; then exit 1; fi; git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ../netlify.toml"
 
 [build.environment]
   PYTHON_VERSION = "3.12"

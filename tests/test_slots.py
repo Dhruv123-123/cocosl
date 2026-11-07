@@ -17,7 +17,8 @@ def test_platform_times_defaults(factory):
     assert b.cadence.times_for("tiktok", "short") == ["18:00"]
     assert b.cadence.times_for("pinterest", "carousel") == ["11:00"]
     assert b.cadence.times_for("youtube", "short") == ["12:30"]
-    assert b.cadence.times_for("youtube", "long") == b.cadence.post_times
+    assert b.cadence.times_for("youtube", "long") == ["19:00"]  # brand file pins long videos to 19:00 (DRY_RUN D2)
+    assert b.cadence.times_for("youtube", "carousel") == b.cadence.post_times
     ny = ZoneInfo("America/New_York")
     after = datetime(2026, 11, 23, 8, 0, tzinfo=ny)
     assert next_slot(factory.db, b, "tiktok", after=after, fmt="short").astimezone(ny).strftime("%H:%M") == "18:00"

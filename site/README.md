@@ -1,5 +1,7 @@
 # Money Made Simple website and email funnel
 
+**New here? Read [`SITE_START_HERE.md`](SITE_START_HERE.md) first:** the Netlify setup, the blanks to fill in, and when the site deploys.
+
 A complete static site for the brand, a free lead magnet, and a 10-email welcome and nurture sequence
 that sells the products. No server, no database, no monthly cost: it deploys free to Netlify or GitHub Pages.
 
@@ -184,8 +186,10 @@ Each weekly issue is a Markdown file in `content/newsletter/` (front matter: `is
 
 An issue only goes public on a build on or after its `date`, so write ahead, send it from your email provider
 that day, and let the site catch up. Netlify rebuilds only on a push, so add a build hook and save it as the
-repo secret `NETLIFY_BUILD_HOOK`; `.github/workflows/netlify-rebuild.yml` pings it every Thursday. The
-GitHub Pages workflow has the same weekly schedule. Preview scheduled issues locally with
+repo secret `NETLIFY_BUILD_HOOK`; `.github/workflows/netlify-rebuild.yml` checks every morning with
+`python3 site/tools/due_today.py` and pings it only when an article, issue or landing page goes live that day
+(8 to 13 deploys a month on the current schedule, so 120 to 195 credits, against the free plan's 300 credits at 15 per deploy). `netlify.toml`'s
+`ignore` rule also skips deploys for pushes that don't touch `site/`, while build-hook builds always run. Preview scheduled issues locally with
 `NEWSLETTER_SHOW_SCHEDULED=1 python3 site/build.py`, or pretend it's another day with `BUILD_DATE=2026-11-20`.
 
 Seven issues are written and scheduled (weekly, Nov 12 to Dec 24, 2026). They aren't in the welcome sequence; send
@@ -234,11 +238,12 @@ and FAQs, so the build stays free of near-duplicates. Tokens in answers: `{month
 writes `pins/pins.csv` with each pin's title, description, alt text, board and tracked link, ready for Pinterest's
 bulk upload or to paste by hand.
 
-`python3 tools/make_pins.py --all --start YYYY-MM-DD` also renders two designs (A: dark, headline + one-line
-pitch; B: light, gold headline block + what's inside) for every shop product, comparison and article, 196 more
+`python3 tools/make_pins.py --all` (optionally `--start YYYY-MM-DD`; the default is week 3 after launch Day 1, Nov 30 2026) also renders two designs (A: dark, headline + one-line
+pitch; B: light, gold headline block + what's inside) for every shop product, comparison and article, 346 more
 pins in `pins/library/` (not committed; they're in the project files), and writes `pins/schedule.csv`: 60 days
 of fresh pins, 1 a day for two weeks, then 2, then 3 (what the scouting audit recommends for a new account), each
-page's design B at least 14 days after its A, and never before the page is live. Pins that don't fit in 60 days
+page's design B at least 14 days after its A, no two pins for the same page within 7 days, LAUNCH_WEEK.md's eight
+site pins (quiz plus seven articles) first, and never before the page is live. Pins that don't fit in 60 days
 are listed at the end, undated, as the backlog. All text on a pin comes from its page's title, description and
 headings, so re-run it after editing a page. The $50k numbers come from `pseo.py`; re-run after the tax data or shop prices
 change. Needs Playwright and Chromium (`pip install playwright && python -m playwright install chromium`).
@@ -256,6 +261,58 @@ separately. Every buy button sends a Plausible `Product Click` with `product` an
   `site.json > stores.gumroad` + `/l/<slug>`, Etsy items to `stores.etsy` + a shop search. Set the two store
   URLs in `site.json`, and paste exact listing links into `shop.json` as `url` (Gumroad) or `etsy_url`;
   the import tool keeps links you've pasted.
+
+### Template cards in articles
+
+`content/data/placements.json > articles` maps every article slug to one or two shop item slugs, best first.
+The first item is drawn as a "Our template" card straight after the article's `## A worked example` section
+(or before `## Common questions` if there isn't one); the second shows under "More templates for this" at the
+end, in place of the old single product card. You can also place a card anywhere by hand with
+`{{template:<item-slug>}}`. Cards use the same buy buttons as the shop, so they share its placeholder store
+links and its `Product Click` event. A test checks every article has an entry and every slug is in `shop.json`.
+
+### A page for each product (/shop/<slug>/)
+
+Every item in `shop.json` gets its own page with the cover, price, buy buttons, what you get, the bundle it's
+in (or what's inside a bundle, when the bundle's blurb names its items), the free guides it goes with, and
+Product schema (price, USD, and the store link as the offer URL). An item with `page` (the 20-Minute Budget)
+uses that landing page instead. Shop cards, template cards in articles, /ask/ and pins link to these pages.
+Buy links are the same placeholders as the shop until the store URLs are set.
+
+### Tools from the apps site inside articles
+
+`content/data/embeds.json` puts an apps-site tool (PR #8) right after an article's worked example: the tax
+refund estimator and the debt payoff calculator (with its chart) load live through the apps site's
+`embed.js`, and the 52-week savings challenge shows as a card with a button. They use `site.json > apps_url`
+(still the placeholder `https://mms-tools.netlify.app`) and disappear if it's emptied. Map more articles in
+`articles`, or place one by hand with `{{embed:<key>}}`.
+
+### America Saves Week and the SEO checks
+
+`/america-saves-week/` (content/pages/america-saves-week.md) is a five-day plan for America Saves Week, April 5 to
+9, 2027, linking the three articles dated April 6, 7 and 9 and the Start page. Update the dates each year from
+americasaves.org. Pages in content/pages/ can now set `seo_title`, and a "## Common questions" section on any
+page gets FAQ schema. `test_seo_basics_on_every_article_and_qa_page` checks every article and page: title up to
+60 characters, description 50 to 155, one H1, a canonical link, alt on every image, and FAQ schema.
+
+The Money Basics course emails are in `brands/sequences/money-made-simple.money-basics.yaml`; build the Sender
+automation with `factory sequence-export money-made-simple --sequence money-basics --for sender`.
+
+### The tools hub (/tools/) and internal links
+
+`/tools/` is the "Money Made Simple tools" page: every tool in `apps.json > tools`, grouped, plus
+`apps.json > upcoming` for tools not shipped yet (shown as "coming soon" with no link; move one into `tools`
+with its `path` when it lands). Every article also ends its template box with a link to its goal's shop page
+(`placements.json > article_goals`, else the first `start.json` goal that lists it, else its pillar). A test
+checks each article links 2+ published articles on its own date, renders 2+ `/blog/` links and a goal shop
+link, and that no article is an orphan: when you add an article, add it to `related.json` for 1–2 older ones.
+
+### Shop pages per goal (/shop/debt/, /shop/saving/, /shop/first-job/, /shop/freelance/)
+
+`placements.json > goals` lists each goal's title, intro and items. Each page starts with the free guides for
+that goal (the first published articles from `start.json`), then the templates, then links to the other goals.
+`/shop/` shows a "By goal" row, and each `/start/` goal links to its shop page. To add a goal, add it to both
+`start.json` and `placements.json` with the same `id`.
 
 ## Debt payoff calculator
 
@@ -316,6 +373,17 @@ pages link rent-vs-buy, paycheck and afford-it, and /debt-payoff/ links card-min
 - HowTo is added to step-by-step articles that set `howto:` in front matter. Its value is the section whose numbered
   list or `###` sub-headings are the steps, or `steps` for `## Step N:` headings. Add `howto_time: PT20M` if the
   article says how long it takes. Six articles use it.
+
+## Search Console and the sitemap check
+
+`public/sitemap.xml` lists every indexable page that's live on the build date. `robots.txt` points to it and blocks
+only the email previews and thank-you pages. `tools/check_site.py` (the deploy check) now fails if the sitemap
+isn't valid XML, lists a missing, redirected, noindex or off-site URL, or leaves out an indexable page, or if
+robots.txt has no `Sitemap:` line or blocks a listed URL.
+
+To verify the site in Google Search Console, put the `content` value of Google's meta tag in
+`site.json > search_verification > google` (Bing's goes in `bing`), or set env `GOOGLE_SITE_VERIFICATION`. The
+home page then carries the tag. Setup steps for Dhruv: the "Google Search Console setup: Money Made Simple" doc.
 
 ## Page speed (Core Web Vitals)
 
@@ -415,3 +483,18 @@ Same rules as the rest of the factory (`docs/COMPLIANCE.md`): affiliate links la
 in the footer and on `/disclosures/`, no testimonials until real buyers give permission, no income or
 return promises (all projections are labelled hypothetical), "not financial advice" on every page and email,
 honest refund policy, unsubscribe and postal address in every email.
+
+## Start here hub (/start/)
+
+`content/pages/start.md` routes new visitors by goal: **pay off debt, build savings, first job, freelance**. `{{start:goals}}` draws the goal cards; `{{start:<id>}}` draws each goal's "Read next" list and its tools and comparisons. The lists come from `content/data/start.json`: each goal lists article slugs best first, and the page shows the first published ones (4 by default), so scheduled articles join the hub automatically on their publish date. To add a goal, add it to `start.json` and add a `## <heading>` section with its shortcode to `start.md` (the heading must match `heading` in the JSON, since it's the card's anchor).
+
+## "Best of" email digest
+
+`content/digest.md` is the digest template. At every build it's filled with the newest published articles (`count`, default 5; slugs in `pinned` go first) and the newest comparison page, and written to:
+
+- `/emails/digest/` — a noindex preview page;
+- `/emails/digest/email.html` — inline-styled HTML to paste into your email provider;
+- `/emails/digest/email.txt` — the plain-text version;
+- `/emails/digest/digest.json` — subject, preheader, html, text and the URLs used.
+
+`{month}` in the subject or preheader becomes the build month ("The best of Money Made Simple, March 2027"). To send one: run the build (or let the daily rebuild run), open the preview, copy `email.html` into a new broadcast, and send. Nothing is sent automatically.

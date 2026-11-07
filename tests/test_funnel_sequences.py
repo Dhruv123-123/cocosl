@@ -63,8 +63,11 @@ def _kinds(factory, sid):
 def test_money_made_simple_sequence_is_valid(factory):
     b = factory.brand(BRAND)
     seq = sequences.load_sequence(factory.settings, BRAND)
-    assert [s.day_offset for s in seq.steps] == [0, 1, 2, 3, 4, 5, 6, 9]
+    assert [s.day_offset for s in seq.steps] == [0, 1, 2, 3, 4, 5, 6, 7, 9]
     assert sequences.validate_sequence(factory.settings, b) == []
+    day7 = next(s for s in seq.steps if s.day_offset == 7)  # leads with the bundle, the $5 kit as the fallback
+    assert seq.links[day7.cta_url_key] == "product:money-toolkit-bundle"
+    assert "{link:bill_cut_page}" in day7.body_markdown and "$62" in day7.body_markdown
     assert linkpage.lead_magnet(b, factory.settings)["title"] == "The 7-Day Money Reset Checklist"
     checklist = linkpage.ensure_lead_magnet(factory.settings, b)
     assert len(checklist.sections) == 7 and checklist.sections[0].heading.startswith("Day 1")
@@ -95,7 +98,7 @@ def test_launch_price_only_while_true(factory):
     b = factory.brand(BRAND)
     seq = sequences.load_sequence(factory.settings, BRAND)
     fake = {"id": 0, "token": "tok", "email": "x@example.com"}
-    d6, d9 = seq.steps[6], seq.steps[7]
+    d6, d9 = seq.steps[6], seq.steps[-1]
     during = sequences.render_step(factory.settings, b, seq, d6, fake, base="https://x.com", now=BEFORE_LAUNCH_END)
     after = sequences.render_step(factory.settings, b, seq, d6, fake, base="https://x.com", now=AFTER_LAUNCH_END)
     assert "$7" in during["text"] and "LAUNCH" in during["text"] and "November 14" in during["text"]
@@ -165,7 +168,7 @@ def test_stale_steps_are_skipped_not_burst(factory):
     t0 = datetime(2026, 10, 1, 9, tzinfo=timezone.utc)
     a = _sub(factory, "old@example.com", confirmed_at=t0)
     r = sequences.run_sequences(factory, now=t0 + timedelta(days=60))
-    assert r["dry_run"] == 0 and r["skipped"] == 8
+    assert r["dry_run"] == 0 and r["skipped"] == 9
     assert {s for _, s in _kinds(factory, a["id"])} == {"dry_skipped"}
     # day 6 due 2 days ago (within max_late_days) is still sent, older ones skipped
     b = _sub(factory, "mid@example.com", confirmed_at=t0)
@@ -227,7 +230,7 @@ def test_confirm_route_triggers_welcome_email(client, factory):
 
 def test_preview_sequence(factory):
     paths = sequences.preview_sequence(factory, BRAND, now=BEFORE_LAUNCH_END)
-    assert len(paths) == 8 and all(p.exists() and p.with_suffix(".eml").exists() for p in paths)
+    assert len(paths) == 9 and all(p.exists() and p.with_suffix(".eml").exists() for p in paths)
     store.ensure_schema(factory.db)
     assert factory.db.scalar("SELECT COUNT(*) FROM emails_sent") == 0
 

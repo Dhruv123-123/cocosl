@@ -1,0 +1,200 @@
+from sources import *
+
+
+def _cap5(tags):
+    """Instagram allows 5 hashtags: drop the generic #scamalert first, keep #scamdecoded."""
+    tags = [t for t in tags if t != "scamalert"] if len(tags) > 5 else list(tags)
+    return tags if len(tags) <= 5 else [t for t in tags if t != "scamdecoded"][:4] + ["scamdecoded"]
+
+
+def car(pillar, angle, title, hook, thumb, hashtags, description, caption, sources, claims, segs):
+    hashtags = _cap5(hashtags)
+    return dict(pillar=pillar, angle=angle, title=title, hook=hook, thumb=thumb, hashtags=hashtags,
+                description=description, caption=caption, sources=sources, claims=claims, segs=segs)
+
+
+def slides(cover, items, save, cover_vis=None, save_vis=None):
+    cover_vis = cover_vis or f"{MASCOT} holding a sign with a checklist"
+    out = [("Hook", "", cover, cover_vis)]
+    for i, (narr, ost, vis) in enumerate(items, 1):
+        out.append((str(i), narr, ost, vis))
+    out.append(("Save this", save, "Save it. Share it.", save_vis or f"{MASCOT} giving a thumbs up"))
+    return out
+
+
+CAROUSELS = [
+# wk 22
+car(P_TEXT, "Four facts about filing extensions before April 15, so nobody pays a site for a free form or misses the payment deadline.",
+ "Filing a tax extension: 4 facts before April 15",
+ "4 facts about tax extensions that save you money, and 1 that surprises people.",
+ "Tax extension: 4 facts",
+ ["taxday", "taxextension", "irs", "taxes", "moneytips", "scamdecoded"],
+ "Four facts about filing a tax extension: it's free, it's more time to file, not to pay, and where to do it.",
+ ("Running late on taxes? 4 facts:\n1. It's free\n2. It's more time to file, not to pay\n3. Start at IRS.gov\n"
+  "4. File by the deadline even if you can't pay"),
+ [IRS_EXT, IRS_4868, IRS_LASTMIN],
+ ["Form 4868 gives an automatic extension to file", "An extension to file is not an extension to pay", "Extensions can be filed free through IRS Free File"],
+ slides("Tax extension: 4 facts", [
+  ("An extension is free. Form 4868 through IRS Free File or your tax software. No site needs to charge you.", "1. It's free", "a form with a free tag"),
+  ("It's more time to file, usually to October. It's not more time to pay. Tax owed is still due in April.", "2. File later, pay now", "a calendar with two dates"),
+  ("Start at IRS.gov, typed yourself. Lookalike sites buy search ads and collect your Social Security number.", "3. Start at IRS.gov", "an address bar"),
+  ("Can't pay it all? File or extend anyway, then look at a payment plan. It keeps penalties lower.", "4. Can't pay? Still file", "a payment plan calendar"),
+ ], "Save this for April, and send it to the friend who always files late.", f"{MASCOT} with a calendar")),
+car(P_TEXT, "A Tax Day lockdown checklist: six steps that protect you from the scams that peak around April 15.",
+ "Your Tax Day lockdown: 6 steps in 20 minutes",
+ "6 steps, 20 minutes, and next tax season's scammers get nothing.",
+ "Tax Day lockdown",
+ ["taxday", "irs", "identitytheft", "taxscam", "moneytips", "scamdecoded"],
+ "Six quick steps around Tax Day that protect you from refund theft and IRS imposters.",
+ "Six steps, about 20 minutes, for Tax Day week. Do one tonight.",
+ [IPPIN, IDT, IRS_KNOW, FREEZE],
+ ["The IRS Identity Protection PIN is free and stops others filing with your SSN", "The IRS doesn't initiate contact by text or email about refunds",
+  "Credit freezes are free"],
+ slides("Tax Day lockdown: 6 steps", [
+  ("Get an IRS Identity Protection PIN. Free, and nobody else can file with your Social Security number.", "1. Get an IP PIN", "a PIN pad with a shield"),
+  ("Create your IRS online account, so you can check balances and letters yourself.", "2. Open your IRS account", "a laptop with a sign-in screen"),
+  ("Keep a copy of this year's return somewhere safe, offline or encrypted.", "3. Save your return safely", "a folder in a lockbox"),
+  ("Shred tax papers you don't need. Keep what your tax pro says to keep.", "4. Shred the extras", "a shredder with paper"),
+  ("Freeze your credit at all three bureaus. Free, and you can lift it any time.", "5. Freeze your credit", "three padlocks"),
+  ("Make a family rule: 'IRS' texts, calls and DMs get ignored. We check IRS.gov ourselves.", "6. One family rule", "a family around a table"),
+ ], "Save it, and do step 1 tonight.", f"{MASCOT} with a checklist")),
+# wk 23
+car(P_TEXT, "What the real IRS does after April 15, so the post-deadline fakes stand out.",
+ "After April 15: 4 things the real IRS does (and doesn't)",
+ "4 things the IRS really does after Tax Day. A text with a link isn't 1 of them.",
+ "After Tax Day: real vs fake",
+ ["taxday", "irs", "taxrefund", "taxscam", "moneytips", "scamdecoded"],
+ "What really happens after you file: refunds, letters, payment plans, and what the IRS never does.",
+ "After you file, the scams don't stop. Here's what the real IRS does next, so the fakes stand out.",
+ [IRS_REFUNDS, IRS_KNOW, IRS_NOTICE, IRS_LASTMIN],
+ ["The IRS sends notices by mail", "Refund status is on IRS.gov/refunds", "The IRS offers payment plans"],
+ slides("After Tax Day: real vs fake", [
+  ("Refunds: most arrive within weeks of e-filing. Check status at IRS.gov/refunds. No fee, ever.", "Refunds: IRS.gov/refunds, no fee", "a refund check with a clock"),
+  ("Questions about your return come by letter, with a notice number you can look up.", "Questions: by letter", "an envelope with a notice number"),
+  ("Owe money? It offers payment plans on IRS.gov. It doesn't demand gift cards or crypto.", "Owe? Payment plans", "a calendar with payments"),
+  ("It doesn't text or email out of the blue about refunds, penalties or 'verification'.", "Never: a surprise text", "a crossed-out phone"),
+ ], "Save this, and check anything 'IRS' by typing IRS.gov yourself.", f"{MASCOT} at a mailbox")),
+car(P_TEXT, "Free and low-cost real options for people who owe tax, before they reach for a 'tax relief' ad.",
+ "Owe the IRS this year? 5 real options before you call an ad",
+ "5 real options if you owe the IRS, and 4 of them are on IRS.gov.",
+ "Owe the IRS? 5 options",
+ ["taxday", "irs", "taxdebt", "moneytips", "personalfinance", "scamdecoded"],
+ "Real ways to handle a tax bill you can't pay in full, and the 'relief' ads to be careful with.",
+ ("Owe more than you can pay? Before you call a 'tax relief' ad, look at these. Most are on IRS.gov, and some are free help."),
+ [IRS_LASTMIN, TAX_RELIEF, IRS_KNOW],
+ ["The IRS offers short-term and long-term payment plans", "The FTC warns some tax relief companies charge big upfront fees",
+  "The Taxpayer Advocate Service is free"],
+ slides("Owe the IRS? 5 options", [
+  ("File on time anyway. Not filing usually costs more than filing and owing.", "1. File on time anyway", "a form being submitted"),
+  ("Short-term payment plan: extra time to pay in full, set up on IRS.gov.", "2. Short-term plan", "a short calendar"),
+  ("Long-term payment plan: monthly payments, set up on IRS.gov.", "3. Monthly payment plan", "a long calendar"),
+  ("Stuck or facing hardship? The Taxpayer Advocate Service is free and independent within the IRS.", "4. Taxpayer Advocate: free", "a helping hand"),
+  ("Hiring help? The FTC warns about 'relief' firms that charge big fees up front and promise to settle for pennies.", "5. Careful with 'relief' ads", "a price tag with a warning"),
+ ], "Save this, and don't let a tax bill rush you into a bad deal.")),
+# wk 24
+car(P_SECURITY, "A five-step password spring clean, starting with email, that most people can finish in an evening.",
+ "Password spring clean: 5 steps in 1 evening",
+ "5 steps to spring clean your passwords, starting with the 1 account that matters most.",
+ "Password spring clean",
+ ["passwords", "cybersecurity", "springcleaning", "passwordmanager", "2fa", "scamdecoded"],
+ "A five-step evening plan to clean up your passwords, starting with email. Includes affiliate disclosure.",
+ ("One evening, 5 steps:\n1. Email first\n2. A password manager\n3. Unique passwords for money accounts\n4. Two-step sign-in\n"
+  "5. Close old accounts\n\n" + PWM),
+ [PASSWORDS, HACKED, PROTECT_INFO],
+ ["Use unique passwords for each account (FTC)", "Password managers can create and store strong passwords (FTC)", "Two-factor authentication adds protection"],
+ slides("Password spring clean: 5 steps", [
+  ("Start with email. A long, unique password there, because it resets everything else.", "1. Email first", "an envelope with a key"),
+  ("Get a password manager. Free ones exist. It makes and remembers unique passwords.", "2. Get a password manager", "a vault with many keys"),
+  ("Change bank, phone carrier and shopping passwords so each one is unique.", "3. Unique for money accounts", "a bank, a phone, a cart"),
+  ("Turn on two-step sign-in for email, bank and phone carrier.", "4. Turn on two-step", "a phone with a lock"),
+  ("Close accounts you don't use any more. Fewer accounts, fewer leaks.", "5. Close old accounts", "a door closing"),
+ ], "Save this for the weekend. Start with step 1 tonight.")),
+car(P_SECURITY, "The kinds of two-step sign-in ranked from good to best, so people pick something rather than nothing.",
+ "Two-step sign-in, ranked: 4 kinds from good to best",
+ "4 kinds of two-step sign-in. Any 1 of them beats none.",
+ "2-step sign-in, ranked",
+ ["2fa", "cybersecurity", "passkeys", "accountsecurity", "techtips", "scamdecoded"],
+ "Text codes, authenticator apps, passkeys and security keys, ranked, plus the one rule that matters for all of them.",
+ "Any two-step sign-in beats none. Here's how the main kinds compare, and the 1 rule for all of them.",
+ [PASSWORDS, HACKED, PROTECT_INFO],
+ ["Two-factor authentication makes accounts harder to take over", "Never share one-time codes with anyone"],
+ slides("2-step sign-in, ranked", [
+  ("Good: text message codes. Better than nothing, but a SIM swap can steal them.", "Good: text codes", "a phone with a text code"),
+  ("Better: an authenticator app. Codes live on your phone, not in your texts.", "Better: an authenticator app", "an app with rotating numbers"),
+  ("Great: passkeys. Your phone or computer signs you in with your face, finger or PIN. Hard to phish.", "Great: passkeys", "a fingerprint on a phone"),
+  ("Best for high-risk accounts: a physical security key you plug in or tap.", "Best: a security key", "a small key fob"),
+  ("For all of them: never read a code to anyone who contacted you. Nobody legit asks.", "Never share a code", "a crossed-out speech bubble"),
+ ], "Save this, and turn on any of them for your email tonight.")),
+# wk 25
+car(P_HOME, "Six questions to ask any contractor before hiring, especially after spring storms.",
+ "6 questions to ask any contractor before you hire them",
+ "6 questions for any contractor. A good 1 answers all of them happily.",
+ "6 contractor questions",
+ ["homerepair", "contractor", "homeowner", "springstorms", "moneytips", "scamdecoded"],
+ "Six questions that separate good contractors from storm chasers and door-knockers.",
+ "Before anyone touches your roof, driveway or gutters, ask these 6. Good contractors won't mind.",
+ [CONTRACTOR, HOME_REPAIR, WEATHER],
+ ["Check contractor licenses and get written estimates (FTC)", "Avoid large upfront cash payments (FTC)", "Get a written contract"],
+ slides("6 contractor questions", [
+  ("Are you licensed and insured here? Then check the license yourself with your state or city.", "1. Licensed and insured?", "a license card"),
+  ("Can I have a written estimate? Get at least three for the same job.", "2. Written estimate?", "an estimate sheet"),
+  ("How do you want to be paid? Stages as work is done, not big cash up front.", "3. How do I pay?", "a progress bar with payments"),
+  ("Who pulls the permits? A good contractor knows which ones are needed.", "4. Who gets permits?", "a permit document"),
+  ("Can I call two recent customers? Local references beat online stars.", "5. Two references?", "a phone and two faces"),
+  ("What's in the written contract: start date, end date, materials, warranty?", "6. What's in the contract?", "a contract with checkboxes"),
+ ], "Save this for storm season.")),
+car(P_HOME, "How the FTC's Cooling-Off Rule works for door-to-door and in-home sales, and what it doesn't cover.",
+ "Signed something at your door? The 3-day Cooling-Off Rule, explained",
+ "3 days. That's how long you may have to cancel many sales made at your door.",
+ "3-day Cooling-Off Rule",
+ ["doortodoor", "consumerrights", "homeowner", "ftc", "moneytips", "scamdecoded"],
+ "What the FTC's Cooling-Off Rule covers, how to cancel, and what it doesn't apply to.",
+ ("Signed a contract at your kitchen table and regretting it? The FTC's Cooling-Off Rule may give you 3 days to cancel. "
+  "Here's how it works. Check the FTC page for the details that apply to you."),
+ [COOLING, HOME_REPAIR],
+ ["The Cooling-Off Rule gives three days to cancel certain sales made at home or at temporary locations (FTC)",
+  "Sellers must tell you about your right to cancel and give you cancellation forms", "Some sales are excluded from the rule"],
+ slides("3-day Cooling-Off Rule", [
+  ("What it is: an FTC rule that gives you three days to cancel many sales made at your home or at a temporary location.", "What: 3 days to cancel", "a calendar with 3 days"),
+  ("The seller must tell you about it and give you cancellation forms.", "They must tell you", "a form handed over"),
+  ("To cancel: sign and send the cancellation form before midnight of the third business day. Keep proof.", "Cancel in writing, keep proof", "an envelope with a stamp"),
+  ("Not covered: some purchases, like many under a small minimum or certain emergency repairs. Check the FTC page.", "Some sales aren't covered", "an asterisk"),
+  ("Better still: never sign on the doorstep. Say, 'Leave it with me, I'll read it tonight.'", "Best: don't sign on the spot", "a closed door"),
+ ], "Save this, and share it with a homeowner.")),
+# wk 26
+car(P_FAMILY, "Seven scams that most often target older adults, as a quick swipe for Older Americans Month.",
+ "7 scams aimed at older adults, and the 1-line fix for each",
+ "7 scams aimed at older adults, with a 1-line fix for each. Swipe and share.",
+ "7 scams aimed at older adults",
+ ["olderamericansmonth", "seniors", "eldercare", "familysafety", "scamalert", "scamdecoded"],
+ "Seven common scams aimed at older adults, each with a one-line fix. Includes our own product mention.",
+ ("For Older Americans Month: 7 scams aimed at older adults, and a 1-line fix for each.\n\n" + SENIORS),
+ [EMERG, GOV, MEDICARE, TECH, ROMANCE, PRIZE, GIFTCARDS],
+ ["Scammers impersonate family, government, Medicare and tech support (FTC)", "If you have to pay to get a prize, it's a scam (FTC)",
+  "Never send money to someone you've only met online"],
+ slides("7 scams aimed at older adults", [
+  ("The grandchild in trouble. Fix: hang up and call them on the number you have.", "Grandchild in trouble", "a crying emoji on a phone"),
+  ("Social Security or the IRS on the phone. Fix: they don't threaten you. Hang up.", "Government on the phone", "an official seal on a phone"),
+  ("'Your new Medicare card.' Fix: Medicare doesn't call for your number.", "Medicare card call", "a health card"),
+  ("The computer pop-up. Fix: never call the number on the screen.", "Computer pop-up", "a red warning screen"),
+  ("The online sweetheart who needs money. Fix: never send money to someone you've only met online.", "Online sweetheart", "a heart with a dollar sign"),
+  ("'You've won.' Fix: if you have to pay, it's not a prize.", "'You've won'", "a giant check"),
+  ("The bank's 'fraud department'. Fix: call the number on your card.", "Bank 'fraud department'", "a bank card and phone"),
+ ], "Save this, and share it with a parent or grandparent.")),
+car(P_FAMILY, "What to put next to an older parent's phone: a short list that makes the safe choice the easy one.",
+ "What to put by Mom and Dad's phone: 5 things",
+ "5 things to put by a parent's phone. Number 1 takes 2 minutes.",
+ "By the phone: 5 things",
+ ["eldercare", "seniors", "family", "phonescam", "familysafety", "scamdecoded"],
+ "Five things to tape by an older parent's phone so they can check before they pay.",
+ ("Put these by the phone, and the safe choice becomes the easy one.\n\n" + SENIORS),
+ [EMERG, GOV, SCAMMED],
+ ["Scammers create urgency and ask for unusual payments (FTC)", "Call back on a number you look up yourself"],
+ slides("By the phone: 5 things", [
+  ("Your number, in big print, with 'Call me before you pay anyone'.", "1. 'Call me before you pay'", "a sticky note with a phone number"),
+  ("Their bank's number, copied from the back of their card.", "2. Their bank's real number", "a card and a note"),
+  ("The family safe word, written somewhere only they'll see.", "3. The safe word", "a note in a drawer"),
+  ("A hang-up line: 'I'll call you back on the number I have.'", "4. A hang-up line", "a speech bubble"),
+  ("Three rules: no gift cards, no codes, no strangers on the computer.", "5. Three rules", "three checkmarks"),
+ ], "Save this, print it, and tape it up on your next visit.")),
+]

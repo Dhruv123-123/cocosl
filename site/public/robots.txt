@@ -3,4 +3,5 @@ Disallow: /emails/
 Disallow: /free/thanks/
 Disallow: /holiday/thanks/
 Disallow: /new-year/thanks/
+Disallow: /money-basics/thanks/
 Sitemap: https://moneymadesimple.netlify.app/sitemap.xml

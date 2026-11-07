@@ -1,7 +1,7 @@
 ---
 title: Roth or Traditional IRA? It mostly comes down to one question
-seo_title: Roth vs Traditional IRA for beginners: which one should you pick?
-description: Pay the tax now or later? How Roth and Traditional IRAs differ, why many people early in their career lean Roth, what you can withdraw, and how to open one.
+seo_title: "Roth vs Traditional IRA: which should beginners pick?"
+description: "Pay the tax now or later? How Roth and Traditional IRAs differ, why many people early in their career lean Roth, what you can withdraw, and how to open one"
 date: 2026-11-07
 pillar: investing
 keyword: roth vs traditional ira

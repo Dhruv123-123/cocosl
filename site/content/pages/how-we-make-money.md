@@ -1,6 +1,6 @@
 ---
 title: How we make money
-description: "Money Made Simple is free to read. Here's exactly how it pays for itself: our own products, affiliate links and, later, labelled sponsors. Plus what we never do."
+description: "Money Made Simple is free to read. How it pays for itself: our own products, affiliate links and, later, labelled sponsors. Plus what we never do."
 updated: 2026-11-07
 ---
 Everything on this site is free to read, and the email is free too. It costs money to run, so here is how it pays for itself, in plain words. There are three ways, and none of them changes what an article says.
@@ -40,7 +40,7 @@ We don't have sponsors today. If we take them later, every sponsored email, vide
 
 ## How AI is used
 
-We use AI tools for visuals, voice and first drafts. A human chooses every topic, checks the facts against primary sources and approves everything before it's published. More on this, and the legal small print, on the [Disclosures](/disclosures/) page.
+Everything here is **drafted with AI help, fact-checked by a person**. We also use AI tools for visuals and voice. A person chooses every topic, checks the facts against primary sources and approves everything before it's published. More on this, and the legal small print, on the [Disclosures](/disclosures/) page.
 
 ## Questions
 

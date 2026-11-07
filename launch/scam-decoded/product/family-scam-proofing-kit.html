@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Family Scam-Proofing Kit</title>
+<style>
+  :root{
+    --ink:#0d1b2a; --cream:#f4f1ea; --teal:#2ec4b6; --teal-d:#178a80; --amber:#ff9f1c;
+    --muted:#4a5868; --line:#d8d3c7; --paper:#fffdf9; --tint:#e6f6f4; --amber-t:#fff1dc;
+  }
+  @page{ size: Letter; margin:0; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#cdd3d9; color:var(--ink);
+    font-family:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size:10.4pt; line-height:1.48; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:8.5in; height:11in; margin:24px auto; background:var(--paper); position:relative;
+    padding:0.7in 0.8in 0.85in; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,.18);
+    page-break-after:always; break-after:page; }
+  .page:last-child{ page-break-after:auto; break-after:auto; }
+  @media print{ html,body{ background:none; } .page{ margin:0; box-shadow:none; } }
+  .folio{ position:absolute; left:0.8in; right:0.8in; bottom:0.42in; display:flex; justify-content:space-between;
+    font-size:8pt; color:var(--muted); border-top:1px solid var(--line); padding-top:6px; }
+  h1,h2,h3{ line-height:1.15; margin:0; }
+  h2{ font-size:23pt; font-weight:800; letter-spacing:-.02em; margin-bottom:6px; }
+  h3{ font-size:12.5pt; font-weight:700; margin:16px 0 6px; }
+  p{ margin:0 0 9px; }
+  .kicker{ text-transform:uppercase; letter-spacing:.14em; font-size:8pt; font-weight:700; color:var(--teal-d); margin-bottom:6px; }
+  .lede{ font-size:11.5pt; color:var(--muted); margin-bottom:12px; }
+  ul,ol{ margin:0 0 10px; padding-left:20px; } li{ margin-bottom:4px; }
+  .box{ border-radius:10px; padding:12px 16px; margin:12px 0; }
+  .box.tip{ background:var(--tint); border-left:4px solid var(--teal); }
+  .box.warn{ background:var(--amber-t); border-left:4px solid var(--amber); }
+  .box.dark{ background:var(--ink); color:var(--cream); }
+  .box.dark .kicker{ color:var(--amber); }
+  .box p:last-child,.box ul:last-child{ margin-bottom:0; }
+  table{ width:100%; border-collapse:collapse; margin:8px 0 12px; font-size:9.4pt; }
+  th{ text-align:left; font-weight:700; background:var(--cream); border-bottom:2px solid var(--ink); padding:6px 8px; }
+  td{ border-bottom:1px solid var(--line); padding:6px 8px; vertical-align:top; }
+  td.blank{ height:26px; }
+  .check li{ list-style:none; position:relative; padding-left:4px; }
+  .check{ padding-left:22px; }
+  .check li::before{ content:""; position:absolute; left:-20px; top:3px; width:12px; height:12px; border:1.6px solid var(--ink); border-radius:3px; }
+  .fill{ border-bottom:1.4px solid var(--ink); display:inline-block; min-width:2.4in; height:16px; vertical-align:bottom; }
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .step{ display:flex; gap:12px; margin:8px 0; }
+  .step b.n{ flex:0 0 28px; height:28px; border-radius:50%; background:var(--teal); color:var(--ink); display:flex;
+    align-items:center; justify-content:center; font-weight:800; }
+  /* cover */
+  .cover{ background:var(--ink); color:var(--cream); padding:0.9in 0.85in; }
+  .cover .badge{ width:92px; height:104px; background:var(--teal); border-radius:46px 46px 52px 52px / 40px 40px 64px 64px;
+    position:relative; margin-bottom:40px; }
+  .cover .badge::after{ content:""; position:absolute; left:26px; top:34px; width:40px; height:40px; border-radius:50%;
+    border:7px solid var(--ink); }
+  .cover h1{ font-size:44pt; font-weight:800; letter-spacing:-.03em; line-height:1.02; margin-bottom:18px; }
+  .cover h1 span{ color:var(--amber); }
+  .cover .sub{ font-size:14pt; color:#c9d2dc; max-width:5.6in; }
+  .cover ul{ margin-top:36px; font-size:11pt; color:var(--cream); }
+  .cover .foot{ position:absolute; left:0.85in; right:0.85in; bottom:0.7in; font-size:8.5pt; color:#9fb0c0; }
+  /* fridge card */
+  .fridge{ border:3px solid var(--ink); border-radius:16px; padding:22px 26px; font-size:14pt; line-height:1.4; }
+  .fridge h2{ font-size:26pt; }
+  .fridge li{ margin-bottom:10px; }
+  .cut{ border:1.5px dashed var(--muted); border-radius:10px; padding:12px 14px; font-size:9pt; height:2in; }
+  .cut b{ display:block; font-size:10.5pt; margin-bottom:4px; }
+</style>
+</head>
+<body>
+
+<!-- 1 cover -->
+<section class="page cover">
+  <div class="badge"></div>
+  <h1>The Family<br><span>Scam-Proofing</span><br>Kit</h1>
+  <p class="sub">A 15-minute family plan, the trackers to finish it, and the cards that keep it working when a scary call comes in.</p>
+  <ul>
+    <li>The 15-minute family meeting, scripted</li>
+    <li>Family plan sheet: safe word, call-back rule, payment rule</li>
+    <li>Credit freeze tracker for every family member, kids included</li>
+    <li>Account lockdown checklist</li>
+    <li>The Scam Decoder: 12 scams, 12 tells</li>
+    <li>Fridge card and wallet cards for parents</li>
+    <li>"It happened" first-hour plan and incident log</li>
+  </ul>
+  <div class="foot">Scam Decoded · General education, not legal or financial advice. Contact details and rules checked November 2026; confirm before relying on them. All example messages and numbers are fictional.</div>
+</section>
+
+<!-- 2 how to use -->
+<section class="page">
+  <div class="kicker">Start here</div>
+  <h2>How to use this kit</h2>
+  <p class="lede">Scams win on two things: panic and secrecy. A plan your family makes calmly, in advance, takes both away. You don't need to be good with technology to do any of this.</p>
+  <h3>The 15-minute family meeting</h3>
+  <div class="step"><b class="n">1</b><div><strong>Minutes 0–3: Why we're doing this.</strong> Scammers now clone voices, fake caller ID, and know personal details from data breaches. "It sounded just like you" isn't proof anymore. Nobody here is gullible; these are professionals.</div></div>
+  <div class="step"><b class="n">2</b><div><strong>Minutes 3–6: Pick the safe word</strong> (page 3). Say it out loud. Don't text it, post it or write it on the fridge card.</div></div>
+  <div class="step"><b class="n">3</b><div><strong>Minutes 6–9: Agree the three rules</strong>: call back, no strange payments, call our trusted person first (page 3).</div></div>
+  <div class="step"><b class="n">4</b><div><strong>Minutes 9–12: Walk through the Scam Decoder</strong> (page 6). Ask: "Has anyone had one of these?" Most families have.</div></div>
+  <div class="step"><b class="n">5</b><div><strong>Minutes 12–15: Hand out jobs.</strong> Who freezes whose credit this week (page 4), who sets up the fridge card (page 7), who checks Mom and Dad's phone settings (page 5).</div></div>
+  <div class="box tip"><p><strong>Tip for adult children:</strong> lead with "help me protect you and the kids", not "you might fall for something". People act on plans they helped make.</p></div>
+  <h3>What's in here</h3>
+  <table>
+    <tr><th>Page</th><th>What</th><th>Time</th></tr>
+    <tr><td>3</td><td>Family plan sheet</td><td>5 min</td></tr>
+    <tr><td>4</td><td>Credit freeze tracker</td><td>10 min per adult</td></tr>
+    <tr><td>5</td><td>Account lockdown checklist</td><td>about 1 hour, spread out</td></tr>
+    <tr><td>6</td><td>The Scam Decoder</td><td>read once, keep handy</td></tr>
+    <tr><td>7</td><td>Fridge card + wallet cards</td><td>print and cut</td></tr>
+    <tr><td>8</td><td>"It happened": the first 60 minutes</td><td>read now, use if needed</td></tr>
+    <tr><td>9</td><td>Incident log</td><td>use if needed</td></tr>
+  </table>
+  <div class="folio"><span>The Family Scam-Proofing Kit</span><span>2</span></div>
+</section>
+
+<!-- 3 plan sheet -->
+<section class="page">
+  <div class="kicker">Fill this in together</div>
+  <h2>Our family plan</h2>
+  <p class="lede">Keep this page somewhere private (not on the fridge). Everyone in the plan should know every rule.</p>
+  <h3>Rule 1 · Our safe word</h3>
+  <p>Anyone calling or messaging in a panic about money must say it. If they can't, or dodge the question, we hang up and call back. <strong>Pick something not findable online</strong> (not a pet's name, street or school). Don't write the word itself here; write a hint only you'll understand.</p>
+  <p>Hint: <span class="fill"></span> &nbsp; Agreed on (date): <span class="fill" style="min-width:1.4in"></span></p>
+  <h3>Rule 2 · We always call back</h3>
+  <p>Any urgent call or message about money, from "the bank", "the police", "Medicare" or "your grandson": we hang up and call back on a number we already have or look up ourselves. Caller ID can be faked.</p>
+  <h3>Rule 3 · No strange payments, ever</h3>
+  <p>Nobody in this family pays someone who contacted us with <strong>gift cards, wire transfers, payment apps to strangers, cryptocurrency, or cash handed to a courier</strong>. No real agency, bank or company asks for these.</p>
+  <h3>Rule 4 · Call our trusted person first</h3>
+  <p>Before sending money anyone asked for, we call one of these people. Even if we were told to keep it secret. <em>Especially</em> then.</p>
+  <table>
+    <tr><th style="width:34%">Trusted person</th><th style="width:33%">Phone</th><th>Best time to reach</th></tr>
+    <tr><td class="blank"></td><td></td><td></td></tr>
+    <tr><td class="blank"></td><td></td><td></td></tr>
+  </table>
+  <h3>Rule 5 · Who's in this plan</h3>
+  <table>
+    <tr><th style="width:34%">Name</th><th style="width:33%">Phone</th><th>Knows the safe word? Has the fridge card?</th></tr>
+    <tr><td class="blank"></td><td></td><td></td></tr><tr><td class="blank"></td><td></td><td></td></tr>
+    <tr><td class="blank"></td><td></td><td></td></tr><tr><td class="blank"></td><td></td><td></td></tr>
+    <tr><td class="blank"></td><td></td><td></td></tr>
+  </table>
+  <div class="box warn"><p><strong>If someone breaks a rule in a scary moment,</strong> no blame. Call the bank, follow page 8, and update the plan together.</p></div>
+  <div class="folio"><span>The Family Scam-Proofing Kit</span><span>3</span></div>
+</section>
+
+<!-- 4 freeze tracker -->
+<section class="page">
+  <div class="kicker">Do this week</div>
+  <h2>Credit freeze tracker</h2>
+  <p class="lede">A freeze stops lenders from pulling a credit report, so nobody can open new accounts in that name. It's free by federal law, doesn't change a credit score, and existing cards keep working.</p>
+  <table>
+    <tr><th style="width:22%">Person</th><th>Equifax</th><th>Experian</th><th>TransUnion</th><th>Innovis</th><th>ChexSystems</th></tr>
+    <tr><td class="blank"></td><td>☐</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+    <tr><td class="blank"></td><td>☐</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+    <tr><td class="blank"></td><td>☐</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+    <tr><td class="blank"></td><td>☐</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+    <tr><td class="blank"></td><td>☐</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+    <tr><td class="blank"></td><td>☐</td><td>☐</td><td>☐</td><td>☐</td><td>☐</td></tr>
+  </table>
+  <h3>How, for each adult</h3>
+  <ol>
+    <li>Type each bureau's website yourself (don't click ads or links in messages): <strong>equifax.com</strong>, <strong>experian.com</strong>, <strong>transunion.com</strong>. Look for "credit freeze".</li>
+    <li>Create an account and turn the freeze on. Save the login in a password manager or a safe place, never in email.</li>
+    <li>Bonus: <strong>Innovis</strong> (a smaller fourth bureau) and <strong>ChexSystems</strong> (used for bank accounts) also offer free freezes.</li>
+    <li>Applying for credit later? Ask which bureau the lender uses and lift only that one, for a day or two. Online lifts are processed quickly (by law, within an hour).</li>
+  </ol>
+  <h3>For children</h3>
+  <p>A child's clean credit file is valuable to thieves and often goes unchecked for years. Parents and guardians can request a freeze for a child under 16 at each bureau; this usually needs proof of identity for both of you (mailed or uploaded documents). Teens 16+ can request their own.</p>
+  <div class="box tip"><p><strong>Also free:</strong> your credit reports at <strong>AnnualCreditReport.com</strong> (weekly). Check each report once a year for accounts you don't recognise.</p></div>
+  <div class="folio"><span>The Family Scam-Proofing Kit</span><span>4</span></div>
+</section>
+
+<!-- 5 lockdown -->
+<section class="page">
+  <div class="kicker">One lock a night</div>
+  <h2>Account lockdown checklist</h2>
+  <p class="lede">Most account takeovers aren't clever hacking. They're reused passwords and tricked codes. These five locks stop both. Do one a night.</p>
+  <div class="grid2">
+    <div>
+      <h3>1 · Email first</h3>
+      <ul class="check">
+        <li>Long, unique password (a short sentence works)</li>
+        <li>Strongest sign-in option turned on (passkey or authenticator app)</li>
+        <li>Recovery phone and email are ours and current</li>
+        <li>Signed out of old devices</li>
+      </ul>
+      <h3>2 · Different passwords</h3>
+      <ul class="check">
+        <li>Password manager installed</li>
+        <li>Bank, email, phone carrier changed first</li>
+        <li>Old reused password retired everywhere</li>
+      </ul>
+      <h3>3 · Better than text codes</h3>
+      <ul class="check">
+        <li>Passkeys turned on where offered</li>
+        <li>Authenticator app for the rest</li>
+        <li>Backup codes printed and stored safely</li>
+      </ul>
+    </div>
+    <div>
+      <h3>4 · Lock the phone number</h3>
+      <ul class="check">
+        <li>Carrier account PIN set (not the phone unlock code)</li>
+        <li>Number lock / port-out protection on, if offered</li>
+        <li>We know: sudden "No service" = call the carrier from another phone</li>
+      </ul>
+      <h3>5 · Alerts on everything</h3>
+      <ul class="check">
+        <li>Transaction alerts on every bank and card</li>
+        <li>New-login alerts on email and bank</li>
+        <li>Alerts go to a phone someone actually checks</li>
+      </ul>
+      <h3>Bonus · Devices</h3>
+      <ul class="check">
+        <li>Automatic updates on (phone, computer, browser)</li>
+        <li>Screen lock on every phone</li>
+        <li>Remote-access apps removed unless we installed them</li>
+      </ul>
+    </div>
+  </div>
+  <div class="box warn"><p><strong>The one rule that beats most account takeovers:</strong> never read a one-time code to anyone who contacted you. Not "the bank", not "support", not a buyer online.</p></div>
+  <div class="folio"><span>The Family Scam-Proofing Kit</span><span>5</span></div>
+</section>
+
+<!-- 6 decoder -->
+<section class="page">
+  <div class="kicker">Read once, keep handy</div>
+  <h2>The Scam Decoder</h2>
+  <p class="lede">Twelve scams, the tell that gives each away, and the move that beats it.</p>
+  <table>
+    <tr><th style="width:24%">Scam</th><th style="width:40%">The tell</th><th>Your move</th></tr>
+    <tr><td><strong>Grandchild in trouble</strong></td><td>Panic, secrecy, bail or hospital money, maybe a cloned voice</td><td>Ask for the safe word. Call them back.</td></tr>
+    <tr><td><strong>Fake bank fraud team</strong></td><td>"Move your money to a safe account" or "send it to yourself"</td><td>Hang up. Call the number on your card.</td></tr>
+    <tr><td><strong>Government imposter</strong></td><td>SSA, IRS, Medicare or police threatening arrest; payment by phone</td><td>Hang up. Look up the agency's number.</td></tr>
+    <tr><td><strong>Tech support pop-up</strong></td><td>Alarm, "computer infected", a phone number on screen</td><td>Don't call. Close or restart. No remote access.</td></tr>
+    <tr><td><strong>Unpaid toll / package text</strong></td><td>Small fee, deadline, a link</td><td>Check the real site yourself. Forward to 7726.</td></tr>
+    <tr><td><strong>Verification code ask</strong></td><td>"Read me the code we just sent"</td><td>Never. Change that password.</td></tr>
+    <tr><td><strong>Overpayment check</strong></td><td>Check for too much; "send back the difference"</td><td>Take the exact amount only.</td></tr>
+    <tr><td><strong>Task / remote job</strong></td><td>Paid to like or rate; then "top up to unlock"</td><td>Real jobs never make you pay.</td></tr>
+    <tr><td><strong>Romance</strong></td><td>Never meets or video chats; then an emergency</td><td>Never send money to someone you haven't met.</td></tr>
+    <tr><td><strong>Investment "friend"</strong></td><td>Started as a wrong-number text; a crypto app with big gains</td><td>Don't invest via anyone you met online.</td></tr>
+    <tr><td><strong>Bitcoin ATM</strong></td><td>Anyone sending you to a kiosk with cash</td><td>Hang up. No real agency does this.</td></tr>
+    <tr><td><strong>Prize or lottery</strong></td><td>"Pay taxes or fees to collect"</td><td>Real prizes are free to collect.</td></tr>
+  </table>
+  <div class="box dark"><div class="kicker">Every scam, one shape</div><p><strong>Rush + secrecy + a strange payment.</strong> If you see two of the three, stop and call your trusted person.</p></div>
+  <div class="folio"><span>The Family Scam-Proofing Kit</span><span>6</span></div>
+</section>
+
+<!-- 7 fridge card -->
+<section class="page">
+  <div class="kicker">Print · put it on the fridge</div>
+  <div class="fridge">
+    <h2>Before you send money</h2>
+    <ul>
+      <li><strong>Hang up and call back</strong> on a number you already have.</li>
+      <li><strong>Ask for our word.</strong> No word, no money.</li>
+      <li><strong>Never pay</strong> with gift cards, wires, payment apps, crypto, or cash to a courier.</li>
+      <li><strong>Never read out a code</strong> that was texted to you.</li>
+      <li><strong>Call</strong> <span class="fill" style="min-width:2in"></span> first.</li>
+    </ul>
+    <p style="font-size:11pt;margin:0">Bank fraud line: <span class="fill" style="min-width:2in"></span> &nbsp; Report: ReportFraud.ftc.gov</p>
+  </div>
+  <h3 style="margin-top:22px">Wallet cards (cut out)</h3>
+  <div class="grid2">
+    <div class="cut"><b>Stop. Check. Call.</b>Rushed? Told to keep it secret? Asked for gift cards, wires, crypto or a code? It's a scam. Hang up and call back on a number you look up. Trusted person: ____________</div>
+    <div class="cut"><b>Stop. Check. Call.</b>Rushed? Told to keep it secret? Asked for gift cards, wires, crypto or a code? It's a scam. Hang up and call back on a number you look up. Trusted person: ____________</div>
+    <div class="cut"><b>It happened? Do this now.</b>1. Call the bank on the number on your card. 2. Call the gift card or app company. 3. Change your email password. 4. Report: ReportFraud.ftc.gov</div>
+    <div class="cut"><b>It happened? Do this now.</b>1. Call the bank on the number on your card. 2. Call the gift card or app company. 3. Change your email password. 4. Report: ReportFraud.ftc.gov</div>
+  </div>
+  <div class="folio"><span>The Family Scam-Proofing Kit</span><span>7</span></div>
+</section>
+
+<!-- 8 it happened -->
+<section class="page">
+  <div class="kicker">If it happens</div>
+  <h2>The first 60 minutes</h2>
+  <p class="lede">It happens to careful, smart people every day. Shame is what scammers count on to stop you acting. Speed matters more than anything; money can sometimes be stopped if you move fast (not always).</p>
+  <div class="step"><b class="n">1</b><div><strong>Call your bank or card issuer</strong> on the number on the back of your card. Say "I've been scammed", ask them to stop or reverse the payment and lock the card or account.</div></div>
+  <div class="step"><b class="n">2</b><div><strong>Call where the money went.</strong> Gift card: call the card company on the number on the card or its official site; unspent balances can sometimes be frozen. Payment app or wire: contact the app or wire service directly.</div></div>
+  <div class="step"><b class="n">3</b><div><strong>Change passwords, email first</strong>, from a device the scammer never touched. Sign out of all devices. If you allowed remote access, disconnect that computer from the internet first.</div></div>
+  <div class="step"><b class="n">4</b><div><strong>Freeze your credit</strong> at all three bureaus (page 4) if you shared personal details like your Social Security number.</div></div>
+  <div class="step"><b class="n">5</b><div><strong>Report it.</strong> ReportFraud.ftc.gov for scams. IdentityTheft.gov if your identity was used (it builds a recovery plan). ic3.gov for internet crime. Your local police if your bank or insurer asks for a report.</div></div>
+  <div class="step"><b class="n">6</b><div><strong>Write everything down</strong> on page 9: names, numbers, dates, amounts, how you paid.</div></div>
+  <div class="box warn"><p><strong>Watch for the second scam.</strong> Anyone who contacts you offering to recover your money for a fee, including people claiming to be lawyers, investigators or government agents, is very likely another scammer.</p></div>
+  <h3>Numbers to fill in now</h3>
+  <table>
+    <tr><th style="width:40%">Who</th><th>Phone / website</th></tr>
+    <tr><td>Main bank fraud line</td><td class="blank"></td></tr>
+    <tr><td>Credit card fraud line</td><td class="blank"></td></tr>
+    <tr><td>Mobile carrier</td><td class="blank"></td></tr>
+    <tr><td>Our trusted person</td><td class="blank"></td></tr>
+  </table>
+  <div class="folio"><span>The Family Scam-Proofing Kit</span><span>8</span></div>
+</section>
+
+<!-- 9 log -->
+<section class="page">
+  <div class="kicker">Use if needed</div>
+  <h2>Incident log</h2>
+  <p class="lede">Banks, police and the FTC will ask for these details. Write them down while they're fresh.</p>
+  <table>
+    <tr><th style="width:15%">Date / time</th><th style="width:22%">Who contacted us, how</th><th style="width:28%">What they said / asked for</th><th style="width:15%">Money / info given</th><th>Who we told, report #</th></tr>
+    <tr><td class="blank" style="height:44px"></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td class="blank" style="height:44px"></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td class="blank" style="height:44px"></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td class="blank" style="height:44px"></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td class="blank" style="height:44px"></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td class="blank" style="height:44px"></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td class="blank" style="height:44px"></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td class="blank" style="height:44px"></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <h3>Our yearly check (put it in the calendar)</h3>
+  <ul class="check">
+    <li>Everyone still knows the safe word (change it if it leaked)</li>
+    <li>Credit reports checked at AnnualCreditReport.com; freezes still on</li>
+    <li>Fridge card numbers still right</li>
+    <li>Bank and card alerts still reach someone</li>
+  </ul>
+  <p style="font-size:8.5pt;color:var(--muted);margin-top:18px">This kit is general education, not legal, financial or security advice for your specific situation. Laws, company processes and contact details change; confirm them with the organisation before relying on them. © Scam Decoded. For personal and family use; please don't resell.</p>
+  <div class="folio"><span>The Family Scam-Proofing Kit</span><span>9</span></div>
+</section>
+
+</body>
+</html>
