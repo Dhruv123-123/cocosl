@@ -126,6 +126,8 @@ def create_app(factory: Factory | None = None) -> FastAPI:
     app.add_exception_handler(Exception, _unexpected)
 
     app.include_router(api.router)
+    from . import fastreview
+    app.include_router(fastreview.router)  # before pages: /review/fast must win over /review/{...}
     app.include_router(pages.router)
     _include_business(app)
     _include_funnel(app)
