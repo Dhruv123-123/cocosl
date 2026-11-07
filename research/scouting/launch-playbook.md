@@ -19,11 +19,10 @@ It builds on the other files in this folder: `domains-and-names.md` (names, hand
    means four times the setup mistakes, and nobody can keep up with replies to all of them.
 2. **Order of operations: domain → email → site → accounts → API apps.** Everything downstream (the email
    sending domain, the Pinterest claim, Search Console, the bio links) needs the final domain.
-3. **Two API gates take the longest, so apply in week 1:**
-   - Until TikTok approves our app, every post it publishes is **private** (`publish/tiktok.py`).
-   - YouTube API projects that haven't been verified upload as **private** too.
-
-   Post by hand in the apps until both clear.
+3. **TikTok posts go up by hand; YouTube can be automated from day 1.** TikTok's guidelines rule out an
+   app that uploads to accounts "you or your team manages", so the factory won't get through its audit,
+   and unaudited apps can only post privately. On 2 Nov 2026, YouTube stopped restricting unverified API
+   projects to private uploads, so no audit is needed there (`api-applications.md`).
 4. **Ramp, don't flood.** Week 1 is about half the eventual cadence. YouTube's spam policy bans using
    automation "to flood our platform with repetitive content", and TikTok bans accounts run "in bulk" or
    "through unauthorized automation". Our steady state is the cap we already set: at most 1 long video and
@@ -37,9 +36,9 @@ It builds on the other files in this folder: `domains-and-names.md` (names, hand
 |---|---|---|---|
 | **YouTube** | Standard features come with a new channel. **Phone verification** unlocks intermediate features: videos over 15 minutes, custom thumbnails, live on desktop. **Channel history or ID/video verification** unlocks advanced features: clickable links in long-form descriptions, **pinned comments**, chapters, monetization | Verify the phone on day 1, or the 6-10 minute explainers and custom thumbnails fail. Pinned comments and description links come later, so put the link in the channel banner and the "about" section until then | [YouTube Help: feature access](https://support.google.com/youtube/answer/9890437) |
 | **YouTube** | Spam policy: no automation "to flood our platform with repetitive content" ("a few variations of a video is ok"); no "identical or similar 'check out my channel' messages across hundreds of videos"; "It's okay to ask viewers to like, comment, or subscribe." 3 strikes in 90 days can end a channel | Never comment-promote on other channels. Ramp the upload count. Vary the structure from video to video (`youtube-monetization.md`) | [YouTube Help: spam, deceptive practices and scams](https://support.google.com/youtube/answer/2801973) |
-| **YouTube API** | Uploads through `videos.insert` from **unverified API projects** are restricted to private | Apply for the API audit in week 1. Until it clears, the factory uploads as private and a person publishes in Studio, which `YT_PRIVACY=private` already does | YouTube Data API revision history, linked in `publish/youtube.py` |
+| **YouTube API** | Since **2 Nov 2026**, uploads from unverified API projects "are no longer restricted to private viewing mode". Personal-use OAuth apps (fewer than 100 users) don't need Google verification | No audit needed. Publish the consent screen to production for a long-lived token, and keep `YT_PRIVACY=private` for the first two weeks anyway (`api-applications.md`) | [YouTube Data API revision history](https://developers.google.com/youtube/v3/revision_history), [Google Cloud help](https://support.google.com/cloud/answer/13464323) |
 | **TikTok** | Not allowed: accounts operated "in bulk" or "through unauthorized automation"; using "multiple accounts to intentionally bypass our rules" (several accounts are fine "for authentic creative expression"). Not eligible for For You: "unoriginal or reproduced content… without any new or creative changes", "extremely short clips", content containing QR codes | One account per brand is fine. Never post the same video on two brand accounts. No QR codes in end cards | [TikTok Community Guidelines: integrity and authenticity](https://www.tiktok.com/community-guidelines/en/integrity-authenticity) |
-| **TikTok API** | An app that hasn't passed TikTok's audit can only post as `SELF_ONLY` (private) | Submit the app for audit in week 1. Post by hand from the TikTok app until then | `publish/tiktok.py` (cites TikTok's Content Posting API docs) |
+| **TikTok API** | Unaudited apps post `SELF_ONLY` (private) only. Unacceptable use: "A utility tool to help upload contents to the account(s) you or your team manages" | Don't apply. Post by hand in the app, or with TikTok's own web scheduler | [TikTok content sharing guidelines](https://developers.tiktok.com/doc/content-sharing-guidelines) |
 | **Instagram API** | 100 API-published posts per rolling 24 hours (a carousel counts as 1) | Not a constraint at our volume. The account must be a professional (Creator or Business) account | `publish/instagram.py` (cites Meta's content-publishing docs) |
 | **Email (Gmail)** | "A consistent sending volume is particularly important for new domains." "Increasing your sending volume too quickly can result in delivery issues"; after a deferral, increase "with a common daily increase of 25% to 100%". Keep the Postmaster spam rate "below 0.1%". Set up SPF and DKIM, then DMARC. Use one-click unsubscribe | Authenticate the domain before the first send. Send the weekly issue on the same day and time every week. Double opt-in only, so the list stays clean | [Gmail: top sender issues](https://support.google.com/mail/answer/15256272) |
 
@@ -68,7 +67,7 @@ Do this per brand, in this order. Each step needs the one before it.
 | 8 | **TikTok**: a **personal** account, not Business | Business accounts can never join Creator Rewards (`tiktok-instagram-monetization.md`) | 18+, the brand's own phone number or inbox |
 | 9 | **Pinterest** business account + **claim the domain** | Rich pins and analytics need the claimed domain | One board per topic, 5-8 boards to start |
 | 10 | **Gumroad** product pages live, with the real prices | The thank-you page and bio links point at them | `thank-you-offers.md` |
-| 11 | **API apps**: Google Cloud project for the YouTube Data API (submit the audit), TikTok developer app (submit the audit), Meta app for Instagram | The audits take time. Start them while posting by hand | Keys go in `.env` only |
+| 11 | **API apps**: Google Cloud project for the YouTube Data API (personal-use setup, no submission), Meta app for Instagram. No TikTok app | `api-applications.md` has the YouTube checklist | Keys go in `.env` only |
 
 **One handle everywhere** (`domains-and-names.md`). Take all of them on the same day, even if a platform
 won't be used until week 3, so nobody else takes the handle. Fill in the profile right away (picture, bio,
@@ -81,8 +80,8 @@ link). An empty profile looks like a bot.
   by hand. TikTok and YouTube both name artificial engagement as a violation.
 - **No follow-for-follow, engagement pods, bought followers or "growth services"** (TikTok bans their
   trade outright).
-- **Post by hand in the app for the first week,** then move to the factory's API publishing. This also
-  fits the API gates above, which force it on YouTube and TikTok anyway.
+- **Post by hand in the app for the first week,** then move YouTube and Instagram to the factory's API
+  publishing. TikTok stays by hand.
 - **One login per device per brand** for the first week. Switching four new accounts back and forth on
   one phone all day looks like an account farm (practice). After week 1, the apps' account switchers are fine.
 - **Never DM strangers.** In finance and scams, "DM me" is the scammer's move (`distribution.md`).
@@ -133,9 +132,9 @@ Week-1 brands, per week:
 
 | Platform | Week 2 | Notes |
 |---|---|---|
-| YouTube | 1 long + 5 Shorts | Turn on factory publishing if the API audit has cleared. Otherwise keep uploading through Studio |
+| YouTube | 1 long + 5 Shorts | Turn on factory publishing (`YT_PRIVACY=private`, made public by hand in Studio) |
 | Instagram | 3 carousels + 2 Reels, Stories most days | Start **Trial Reels** (`IG_TRIAL_REELS`) for one Reel a week: it shows to non-followers first |
-| TikTok | 5 videos | Still by hand, until the app audit clears |
+| TikTok | 5 videos | By hand, or batched in TikTok's web scheduler |
 | Pinterest | 5-7 pins | Each one a fresh design for an existing URL |
 | Facebook Page | Cross-post every original Reel | Original Reels only, never anyone else's clips |
 | Email | **First weekly issue**, same day and time every week from now on | Goes to everyone who finished the welcome sequence, excluding those still in it |
