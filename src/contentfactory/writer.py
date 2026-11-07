@@ -8,13 +8,20 @@ from __future__ import annotations
 
 from .config import BrandProfile
 from .llm import LLM
-from .schemas import ReviewVerdict, Script, Segment
+from .schemas import ChartSpec, ReviewVerdict, Script, Segment
 
 FORMAT_SPECS = {
     "short": "A 30-55 second vertical video. 5-8 beats of 1-2 sentences. Total narration 90-140 words. "
              "Hook in the first sentence; pay it off; one clear takeaway; end on the CTA.",
     "long": "A 6-10 minute narrated explainer. 8-14 sections of 80-150 words each, story-driven, with "
-            "concrete examples and numbers. Include chapter headings. Total 1000-1600 words.",
+            "concrete examples and numbers. Include chapter headings. Total 1000-1600 words. "
+            "It must contain one thing a template can't make: at least one worked example with this video's "
+            "own numbers as a `chart`, and/or name in original_element a screen recording a person should make "
+            "(e.g. 'record the IRS payment page while filling in the example'). Not a slideshow of generic "
+            "illustrations with narration.",
+    "mid": "A 65-90 second vertical video for TikTok only (its Creator Rewards count videos over one minute). "
+           "8-11 beats; total narration 190-250 words. Hook in the first sentence, then one idea developed "
+           "with a concrete example, ending on the CTA. Must stand on its own, not a stretched short.",
     "carousel": "A 7-10 slide Instagram carousel. Slide 1 is the hook headline. Each slide: a short headline "
                 "(on_screen_text) and a 1-3 sentence body (narration). Last slide is the CTA and a save prompt.",
     "image": "A single image post: one bold on_screen_text, a caption that delivers the value.",
@@ -38,14 +45,15 @@ Affiliate offers:
 SYSTEM = (
     "You are a senior scriptwriter for a faceless educational channel. You write tight, specific, "
     "accurate scripts with a real point of view. Rules: no fabricated statistics (if unsure, say so or "
-    "omit); list every factual claim that needs checking in claims_to_verify; never write first-person "
+    "omit); list every factual claim that needs checking in claims_to_verify; list every computed money figure (loan payment, "
+    "interest, payoff time, growth, federal or payroll tax) in calcs with its inputs so it is recomputed; never write first-person "
     "product testimonials ('I used this and...'); no real people's likeness in visual prompts; no "
     "logos or brand marks in visual prompts; no text inside visual prompts; no engagement bait."
 )
 
 
 def _offline_script(brand: BrandProfile, title: str, angle: str, fmt: str) -> Script:
-    beats = {"short": 6, "long": 10, "carousel": 8, "image": 1}[fmt if fmt in FORMAT_SPECS else "short"]
+    beats = {"short": 6, "mid": 9, "long": 10, "carousel": 8, "image": 1}[fmt if fmt in FORMAT_SPECS else "short"]
     topic = title.rstrip("?.!")
     segs = []
     for i in range(beats):
@@ -62,9 +70,14 @@ def _offline_script(brand: BrandProfile, title: str, angle: str, fmt: str) -> Sc
             on_screen_text=(topic if i == 0 else head)[:60],
             visual_prompt=f"{brand.visual.image_style}; scene illustrating '{head.lower()}' about {topic.lower()}",
         ))
+    original = ""
+    if fmt == "long":  # a worked example drawn from the script's own (placeholder) numbers
+        segs[2].chart = ChartSpec(kind="bars", title=f"Worked example: {topic}"[:60], labels=["Before", "After"],
+                                  values=[100, 160], note="Placeholder numbers: replace with the real example")
+        original = "The worked-example chart (replace its placeholder numbers)"
     tags = (brand.hashtags or [brand.slug])[:8]
     return Script(
-        title=title, hook=segs[0].narration, segments=segs, cta=brand.cta,
+        title=title, hook=segs[0].narration, segments=segs, cta=brand.cta, original_element=original,
         caption=f"{title}\n\n{angle}.\n\n{brand.cta}",
         hashtags=tags, description=f"{title}. {angle}.",
         thumbnail_text=" ".join(topic.split()[:4]),

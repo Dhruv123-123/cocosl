@@ -25,6 +25,14 @@ from .llm import LLM
 from .writer import write_with_review
 
 
+def voice_of_assets(assets: dict) -> str | None:
+    """The voice provider a rendered video used (human = the owner's recording)."""
+    for e in (assets or {}).get("provenance") or []:
+        if str(e.get("path", "")).endswith("audio.wav"):
+            return e.get("provider") or e.get("tool")
+    return None
+
+
 def _affiliates_in(brand: BrandProfile, caption: str, title: str) -> tuple[list[str], list[str]]:
     """(offers whose link is actually in the caption, offers that would fit by keyword)."""
     present = [a.slug or a.name for a in brand.affiliates
@@ -122,6 +130,10 @@ class Factory:
         from .media import render_post
         post = self._post(post_id)
         brand = self.brand(post["brand"])
+        if post["format"] in ("short", "mid", "long"):  # vary the look against this channel's recent videos
+            recent = self.db.query("SELECT assets FROM posts WHERE brand = ? AND id != ? AND format IN ('short','mid','long') "
+                                   "AND status != 'rejected' ORDER BY id DESC LIMIT 8", [brand.slug, post_id])
+            post["_recent_looks"] = [(r["assets"] or {}).get("look") for r in recent if (r["assets"] or {}).get("look")]
         try:
             assets = render_post(self.settings, brand, post)
         except Exception as e:
@@ -223,6 +235,12 @@ class Factory:
                                 if a.enabled and post["format"] in a.formats]
         if not targets:
             raise ValueError(f"No enabled account in {brand.slug} accepts format '{post['format']}'")
+        if post["format"] in ("short", "mid", "long") and (brand.own_voice or (post.get("meta") or {}).get("own_voice")):
+            from .media.tts import human_voice_source
+            if human_voice_source(self.settings, brand, post_id) is None or \
+                    (voice_of_assets(assets) or "") != "human":
+                raise PermissionError("Waiting for your narration: `factory voice "
+                                      f"{post_id} <recording>` (see `factory recordings`)")
         from .publish.preflight import blocking, check_post
         stop = blocking(check_post(self, post, targets), self.settings.dry_run)
         if stop:
@@ -244,6 +262,8 @@ class Factory:
             }))
         self.db.update("posts", post_id, {"status": "scheduled", "scheduled_at": min(s for _, s in plan).isoformat()})
         self.db.log("post.scheduled", "post", post_id, {"publications": pub_ids})
+        from .manual import prepare
+        prepare(self, pub_ids)  # post-by-hand platforms get their package now, so they can be batched
         return pub_ids
 
     def unschedule(self, post_id: int, actor: str = "human") -> int:
@@ -326,7 +346,8 @@ class Factory:
             for b, platforms in brands_due.items():
                 scoped = self.settings.for_brand(b)
                 try:
-                    if "tiktok" in platforms:
+                    from .manual import is_manual
+                    if "tiktok" in platforms and not is_manual("tiktok"):
                         refresh_tiktok_if_needed(scoped)
                     refresh_long_lived(scoped)
                 except Exception as e:  # a failed refresh surfaces as a publish error below
@@ -351,6 +372,11 @@ class Factory:
                            "AND status = 'published'", [pub["post_id"], pub["platform"], pub["id"]]):
                 self.db.update("publications", pub["id"], {"status": "cancelled",
                                                            "error": "already published on this platform"})
+                continue
+            from .manual import hand_off, is_manual
+            if is_manual(pub["platform"]):  # never uploaded by the factory: package it for you to post by hand
+                rel = hand_off(self, pub, post)
+                results.append({"publication": pub["id"], "status": "manual", "package": rel["dir"]})
                 continue
             from .publish.preflight import blocking, check
             stop = blocking(check(post, pub["platform"], self.settings.output_dir,

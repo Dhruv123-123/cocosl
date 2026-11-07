@@ -118,6 +118,7 @@ class CaptionStyle:
     outline_color: RGB = (0, 0, 0)
     bold: bool = True
     pop: bool = True          # small scale-in on each chunk
+    box: bool = False         # words on a solid box instead of an outline
 
     @classmethod
     def for_format(cls, fmt: str, font: str, accent: RGB | None = None) -> "CaptionStyle":
@@ -154,7 +155,7 @@ ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Cap,{style.font},{style.size},{_ass_color(style.primary)},{_ass_color(style.primary)},{_ass_color(style.outline_color)},{_ass_color((0, 0, 0), 0x60)},{-1 if style.bold else 0},0,0,0,100,100,0,0,1,{style.outline},{style.shadow},2,{style.margin_h},{style.margin_h},{style.margin_v},1
+Style: Cap,{style.font},{style.size},{_ass_color(style.primary)},{_ass_color(style.primary)},{_ass_color(style.outline_color)},{_ass_color((0, 0, 0), 0x60)},{-1 if style.bold else 0},0,0,0,100,100,0,0,{3 if style.box else 1},{style.outline},{0 if style.box else style.shadow},2,{style.margin_h},{style.margin_h},{style.margin_v},1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text

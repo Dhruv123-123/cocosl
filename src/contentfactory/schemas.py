@@ -40,6 +40,8 @@ class Segment(BaseModel):
     visual_prompt: str = Field(description="Prompt for an original illustration for this beat; no real people, no logos, no text")
     chart: ChartSpec | None = Field(default=None, description="Optional: a data chart drawn with exact numbers "
                                     "instead of an illustration (only when the beat is about numbers)")
+    footage: str = Field(default="", description="Leave empty. Set by a person: path to their own screen "
+                         "recording or camera clip shown on this beat instead of an illustration")
 
 
 class Script(BaseModel):
@@ -57,6 +59,14 @@ class Script(BaseModel):
                                       description="2-3 alternative titles for A/B tests (YouTube Test & Compare)")
     hook_variants: list[str] = Field(default_factory=list,
                                      description="2-3 alternative opening lines to test in later reposts or cutdowns")
+    calcs: list[dict] = Field(default_factory=list, description=(
+        "Every computed money figure the script states, so it can be recomputed automatically. One object each: "
+        "{kind: loan_payment|total_interest|payoff_months|future_value|federal_tax|payroll_tax, the inputs "
+        "(principal/balance, rate as a percent, months or years, payment, monthly, initial, wages, married, year), "
+        "claimed: the number the script says}"))
+    original_element: str = Field(default="", description="Long videos: the one thing a template can't make, e.g. "
+                                  "a worked example charted with this video's own numbers, or a screen recording of "
+                                  "a real tool a person should record (say exactly what to record). Empty for shorts")
 
 
 class ReviewVerdict(BaseModel):

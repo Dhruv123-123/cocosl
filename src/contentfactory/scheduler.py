@@ -16,14 +16,14 @@ def _parse_hhmm(s: str) -> time:
 def taken_slots(db: DB, brand: str, platform: str) -> set[str]:
     rows = db.query(
         """SELECT p.scheduled_at FROM publications p JOIN posts s ON s.id = p.post_id
-           WHERE s.brand = ? AND p.platform = ? AND p.status IN ('queued','publishing','published','dry_run','needs_check')
+           WHERE s.brand = ? AND p.platform = ? AND p.status IN ('queued','publishing','published','dry_run','needs_check','manual')
            AND p.scheduled_at IS NOT NULL""",
         [brand, platform],
     )
     return {r["scheduled_at"] for r in rows}
 
 
-WEEKLY_CAP = {"short": "shorts_per_week", "long": "long_per_week", "carousel": "carousels_per_week"}
+WEEKLY_CAP = {"short": "shorts_per_week", "mid": "shorts_per_week", "long": "long_per_week", "carousel": "carousels_per_week"}
 
 
 def format_days(db: DB, brand: str, platform: str, fmt: str, tz) -> dict:
@@ -31,7 +31,7 @@ def format_days(db: DB, brand: str, platform: str, fmt: str, tz) -> dict:
     rows = db.query(
         """SELECT p.scheduled_at FROM publications p JOIN posts s ON s.id = p.post_id
            WHERE s.brand = ? AND p.platform = ? AND s.format = ?
-           AND p.status IN ('queued','publishing','published','dry_run','needs_check') AND p.scheduled_at IS NOT NULL""",
+           AND p.status IN ('queued','publishing','published','dry_run','needs_check','manual') AND p.scheduled_at IS NOT NULL""",
         [brand, platform, fmt])
     out: dict = {}
     for r in rows:

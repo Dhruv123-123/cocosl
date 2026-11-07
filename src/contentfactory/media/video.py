@@ -32,6 +32,7 @@ class Beat:
     start: float
     duration: float
     clip: Path | None = None  # an animated chart (Manim) used instead of the still, last frame held
+    still: bool = False       # no pan/zoom (charts: every number must stay on screen)
 
 
 @dataclass
@@ -42,6 +43,7 @@ class VideoSpec:
     font_family: str
     watermark: str
     options: RenderOptions
+    look: dict | None = None  # media.looks: layout / motion / captions / headline
 
 
 # ---------------------------------------------------------------- overlay
@@ -56,11 +58,18 @@ def draw_overlay(spec: VideoSpec, headline: str, out: Path) -> None:
         max_w = int(w * (0.80 if vertical else 0.52))
         block = fonts.fit(headline.strip(), bold, max_w, int(h * (0.16 if vertical else 0.22)),
                           max_size=78 if vertical else 64, min_size=40, leading=1.12, max_lines=3)
+        look = spec.look or {}
         bw, bh = block.width() + 2 * pad_x, block.height + 2 * pad_y + 14
         x0 = (w - bw) // 2 if vertical else 80
         y0 = int(h * 0.115) if vertical else 70
+        radius, alpha = 30, 220
+        if look.get("layout") == "split" and not vertical:  # headline sits in the left panel
+            x0, y0, alpha = 60, (h - bh) // 2, 0
+        elif look.get("headline") == "bar":  # full-width strip
+            x0, bw, radius = 0, w, 0
+            y0 = int(h * 0.10) if vertical else 0
         card = ImageDraw.Draw(img)
-        card.rounded_rectangle((x0, y0, x0 + bw, y0 + bh), radius=30, fill=(*spec.palette.dark, 220))
+        card.rounded_rectangle((x0, y0, x0 + bw, y0 + bh), radius=radius, fill=(*spec.palette.dark, alpha))
         accent = spec.palette.accent_on(spec.palette.dark)
         bar_w = 64
         bar_x = x0 + (bw - bar_w) // 2 if vertical else x0 + pad_x
@@ -87,7 +96,9 @@ def _zoompan(motion: str, frames: int, size: tuple[int, int], fps: int) -> str:
     e = f"({p}*{p}*(3-2*{p}))"
     cx, cy = "(iw-iw/zoom)/2", "(ih-ih/zoom)/2"
     z, x, y = f"1.0+0.10*{e}", cx, cy
-    if motion == "zoom_out":
+    if motion == "push":
+        z = f"1.0+0.04*{e}"
+    elif motion == "zoom_out":
         z = f"1.10-0.10*{e}"
     elif motion == "pan_right":
         z, x = "1.12", f"(iw-iw/zoom)*{e}"
@@ -104,19 +115,30 @@ def render_clip(spec: VideoSpec, beat: Beat, index: int, frames: int, cues: list
     w, h = spec.size
     fps = spec.options.fps
     overlay = work / f"overlay-{index:02d}.png"
-    draw_overlay(spec, "" if beat.clip else beat.headline, overlay)  # charts carry their own title
+    draw_overlay(spec, "" if (beat.clip or beat.still) else beat.headline, overlay)  # charts carry their own title
     ass = work / f"captions-{index:02d}.ass"
+    look = spec.look or {}
     style = CaptionStyle.for_format(spec.fmt, fonts.family_name(fonts.font_path(spec.font_family, "extrabold")))
+    if look.get("captions") == "plain":
+        style.pop = False
+    elif look.get("captions") == "box":
+        style.pop, style.box = False, True
+        style.margin_v = int(style.margin_v * (1.35 if spec.fmt == "long" else 1.0))
     write_ass(cues, style, ass, offset=beat.start)
     motion = MOTIONS[(seed_of(str(beat.image)) + index) % len(MOTIONS)]
-    if beat.clip:
+    if look.get("motion") == "gentle":
+        motion = "push"
+    if beat.clip or beat.still or look.get("motion") == "cuts":
         bg = (f"[0:v]scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},fps={fps},"
               f"tpad=stop_mode=clone:stop_duration={frames / fps + 1:.3f},setsar=1[bg];")
     else:
         bg = f"[0:v]scale={w * 2}:{h * 2}:flags=lanczos,{_zoompan(motion, frames, spec.size, fps)},setsar=1[bg];"
     graph = bg + f"[bg][1:v]overlay=0:0:format=auto,ass={ass.name},format=yuv420p[v]"
     out = work / f"clip-{index:02d}.mp4"
-    ffmpeg(["-i", str((beat.clip or beat.image).resolve()),
+    src = str((beat.clip or beat.image).resolve())
+    held = not beat.clip and (beat.still or look.get("motion") == "cuts")  # zoompan makes its own frames
+    still_input = [] if not held else ["-loop", "1", "-framerate", str(fps), "-t", f"{frames / fps + 0.5:.3f}"]
+    ffmpeg([*still_input, "-i", src,
             "-loop", "1", "-framerate", str(fps), "-t", f"{frames / fps + 0.5:.3f}", "-i", overlay.name,
             "-filter_complex", graph, "-map", "[v]", "-frames:v", str(frames), "-r", str(fps),
             *x264_args(spec.options), "-an", out.name], cwd=work)

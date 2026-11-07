@@ -101,7 +101,17 @@ def scoped_key(brand_slug: str, key: str) -> str:
 # Brand profile
 # ---------------------------------------------------------------------------
 
-Platform = Literal["instagram", "youtube", "tiktok", "facebook", "threads", "postiz"]
+Platform = Literal["instagram", "youtube", "tiktok", "facebook", "threads", "postiz", "pinterest"]
+
+
+class SignatureVisual(BaseModel):
+    """One recurring graphic device (see media/signature.py). auto = picked from the slug."""
+    device: Literal["auto", "corner_block", "stripe", "ring", "bracket", "dot_grid", "none"] = "auto"
+    color: str = "accent"  # accent | accent2 | light | dark | #hex
+    corner: Literal["top-left", "top-right", "bottom-left", "bottom-right"] = "top-right"
+    size: float = Field(0.14, ge=0.04, le=0.4)
+    label: str = Field("", max_length=6)
+    where: list[Literal["thumbnail", "intro", "cover"]] = Field(default_factory=lambda: ["thumbnail", "intro", "cover"])
 
 
 class VisualStyle(BaseModel):
@@ -110,6 +120,7 @@ class VisualStyle(BaseModel):
     image_style: str = "clean flat editorial illustration, soft lighting, no text"
     mascot: str = ""  # optional recurring character description (original, never a real person)
     watermark: str = ""  # e.g. @handle
+    signature: SignatureVisual = Field(default_factory=SignatureVisual)
 
 
 class VoiceStyle(BaseModel):
@@ -149,6 +160,7 @@ class PlatformAccount(BaseModel):
     handle: str = ""
     enabled: bool = True
     formats: list[str] = Field(default_factory=lambda: ["short"])
+    board: str = ""  # Pinterest board the pin goes on
 
 
 class BrandProfile(BaseModel):
@@ -176,6 +188,7 @@ class BrandProfile(BaseModel):
     ai_disclosure: str = "Made with AI tools; written and fact-checked by a human."
     realistic_synthetic_media: bool = False  # True if visuals/voices could pass as real people/events
     require_human_review: bool = True
+    own_voice: bool = False  # videos wait for the owner's recorded narration (`factory voice`) before scheduling
 
     def account(self, platform: str) -> PlatformAccount | None:
         return next((a for a in self.accounts if a.platform == platform and a.enabled), None)

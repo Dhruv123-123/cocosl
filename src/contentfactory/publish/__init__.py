@@ -15,6 +15,7 @@ REGISTRY = {
     "youtube": ("contentfactory.publish.youtube", "YouTubePublisher"),
     "tiktok": ("contentfactory.publish.tiktok", "TikTokPublisher"),
     "postiz": ("contentfactory.publish.postiz", "PostizPublisher"),
+    "pinterest": ("contentfactory.publish.pinterest", "PinterestPublisher"),  # post-by-hand packages only
 }
 
 
