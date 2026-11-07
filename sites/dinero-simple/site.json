@@ -61,6 +61,17 @@
     "invertir-con-100-al-mes"
   ],
   "affiliates": [],
+  "go_links": {
+    "_note": "Articles link to /go/<slug>/. Until `url` is a real affiliate link it redirects to `home`. `card` (text, button) adds a labelled partner box where an article has {{partner:<slug>}}; add it only after checking the offer accepts ITIN.",
+    "remitly": {"name": "Remitly", "home": "https://www.remitly.com/", "url": "https://REPLACE_ME/remitly"},
+    "wise": {"name": "Wise", "home": "https://wise.com/", "url": "https://REPLACE_ME/wise"},
+    "xoom": {"name": "Xoom", "home": "https://www.xoom.com/", "url": "https://REPLACE_ME/xoom"},
+    "turbotax": {"name": "TurboTax", "home": "https://turbotax.intuit.com/", "url": "https://REPLACE_ME/turbotax"},
+    "hrblock": {"name": "H&R Block", "home": "https://www.hrblock.com/", "url": "https://REPLACE_ME/hrblock"},
+    "freetaxusa": {"name": "FreeTaxUSA", "home": "https://www.freetaxusa.com/", "url": "https://REPLACE_ME/freetaxusa"},
+    "cuenta-itin": {"name": "REPLACE_ME (banco o cooperativa que acepta ITIN)", "home": "", "url": ""},
+    "tarjeta-itin": {"name": "REPLACE_ME (tarjeta asegurada que acepta ITIN)", "home": "", "url": ""}
+  },
   "disclaimer": "Contenido educativo. No es asesoría financiera, fiscal ni de inversión. Los ejemplos usan números supuestos, no son promesas. Revisa las reglas y tasas actuales en la fuente oficial antes de actuar.",
   "ai_disclosure": "Usamos herramientas de IA para las imágenes y los borradores. Una persona elige cada tema, revisa los datos y aprueba todo antes de publicarlo.",
   "analytics_snippet": "",

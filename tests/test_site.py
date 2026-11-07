@@ -120,7 +120,7 @@ def test_free_tools_hidden_until_their_url_is_set(tmp_path):
 
 def test_plausible_events_and_email_utm(tmp_path):
     out = _build(tmp_path, "https://example.org", SITE_ROOT=str(DS))
-    pages = [p for p in out.rglob("*.html") if p.name != "email.html"]
+    pages = [p for p in out.rglob("*.html") if p.name != "email.html" and "go" not in p.relative_to(out).parts]
     snippet = 'data-domain="dinerosimple.netlify.app" src="https://plausible.io/js/script.outbound-links.tagged-events.js"'
     assert pages and all(snippet in p.read_text() for p in pages)
     buy = (out / "products" / "tu-fecha-sin-deudas" / "index.html").read_text()
@@ -140,3 +140,26 @@ def test_dinero_youtube_descriptions_carry_utm_links():
     assert longs and all(f"utm_source=youtube&utm_medium=social&utm_campaign={i['key']}" in i["script"]["description"]
                          for i in longs)
     assert all("utm_" not in i["script"]["description"] for i in items if i["format"] != "long")
+
+
+def test_go_links_redirect_home_until_the_affiliate_url_is_set(tmp_path):
+    out = _build(tmp_path, "https://example.org", SITE_ROOT=str(DS))
+    redirects = (out / "_redirects").read_text()
+    assert "/go/remitly/ https://www.remitly.com/ 302!" in redirects and "REPLACE_ME" not in redirects
+    assert "Disallow: /go/" in (out / "robots.txt").read_text()
+    art = (out / "blog" / "remitly-wise-o-xoom" / "index.html").read_text()
+    assert 'href="/go/wise/" rel="sponsored noopener"' in art and "Divulgación" in art
+    # ITIN partner boxes stay hidden until a real, checked partner is configured
+    assert 'class="partner"' not in (out / "blog" / "cuenta-y-tarjeta-con-itin" / "index.html").read_text()
+    assert not (out / "go" / "cuenta-itin").exists()
+
+    site = tmp_path / "ds"
+    shutil.copytree(DS, site, ignore=shutil.ignore_patterns("public"))
+    cfg = json.loads((site / "site.json").read_text())
+    cfg["go_links"]["tarjeta-itin"] = {"name": "Tarjeta X", "home": "", "url": "https://aff.example/x",
+                                       "card": {"text": "Acepta ITIN.", "button": "Ver tarjeta"}}
+    (site / "site.json").write_text(json.dumps(cfg, ensure_ascii=False))
+    out = _build(tmp_path / "b", "https://example.org", SITE_ROOT=str(site))
+    art = (out / "blog" / "cuenta-y-tarjeta-con-itin" / "index.html").read_text()
+    assert 'class="partner"' in art and 'href="/go/tarjeta-itin/"' in art
+    assert "/go/tarjeta-itin/ https://aff.example/x 302!" in (out / "_redirects").read_text()

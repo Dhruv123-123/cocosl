@@ -427,6 +427,8 @@ def shortcode_factory(products: dict, source: str):
         if name.startswith("product:"):
             p = products.get(name.split(":", 1)[1])
             return f'<div class="inline-product">{product_card(p)}</div>' if p else ""
+        if name.startswith("partner:"):
+            return partner_card(name.split(":", 1)[1])
         if name == "disclaimer":
             return f'<p class="disclaimer">{esc(CFG["disclaimer"])}</p>'
         return ""
@@ -445,6 +447,36 @@ def free_tools() -> list[dict]:
             continue
         out.append({**t, "href": base + "/" + t.get("path", "").lstrip("/")})
     return out
+
+
+def go_links() -> dict[str, dict]:
+    """site.json "go_links": {slug: {name, home, url, card?}}. Articles link to /go/<slug>/, which redirects
+    to the affiliate `url` once it is set (no REPLACE_ME), and to the company's own `home` page until then,
+    so a link never dies while an application is pending. `live` says whether the affiliate URL is set."""
+    out = {}
+    for slug, g in (CFG.get("go_links") or {}).items():
+        if slug.startswith("_"):
+            continue
+        url = (g.get("url") or "").strip()
+        live = bool(url) and "REPLACE_ME" not in url
+        target = url if live else (g.get("home") or "")
+        if target:  # a partner slot with no affiliate URL and no home page yet is left out entirely
+            out[slug] = {**g, "slug": slug, "live": live, "target": target}
+    return out
+
+
+def partner_card(slug: str) -> str:
+    """{{partner:slug}}: a labelled affiliate card, shown only once that partner's affiliate URL is live and
+    the go_link has a "card" (the operator fills it in after checking the offer)."""
+    g = go_links().get(slug)
+    if not g or not g["live"] or not g.get("card"):
+        return ""
+    c = g["card"]
+    ev = event_class("Affiliate Click", link=slug)
+    return (f'<aside class="partner"><p class="kicker">{esc(T("affiliate"))}</p><h3>{esc(g["name"])}</h3>'
+            f'<p>{inline(c.get("text", ""))}</p>'
+            f'<a class="btn{" " + ev if ev else ""}" href="{u(f"/go/{slug}/")}" rel="sponsored noopener">{esc(c.get("button", g["name"]))}</a>'
+            f'<p class="small">{esc(T("links_aff_note"))}</p></aside>')
 
 
 def free_tool_links(tools: list[dict], cls: str = "lb-link") -> str:
@@ -852,7 +884,19 @@ def build() -> list[str]:
     sm = "".join(f"<url><loc>{esc(absu(p))}</loc><lastmod>{d}</lastmod></url>" for p, d in urls)
     (OUT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')
+    # ---- /go/ redirects: a Netlify _redirects rule plus a meta-refresh page for hosts without one
+    go = go_links()
+    for g in go.values():
+        d = OUT / "go" / g["slug"]
+        d.mkdir(parents=True, exist_ok=True)
+        (d / "index.html").write_text(
+            f'<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex">'
+            f'<meta http-equiv="refresh" content="0; url={esc(g["target"])}"><title>{esc(g["name"])}</title>'
+            f'<a href="{esc(g["target"])}" rel="sponsored noopener">{esc(g["name"])}</a>\n')
+    if go:
+        (OUT / "_redirects").write_text("".join(f'{u(f"/go/{g["slug"]}/")} {g["target"]} 302!\n' for g in go.values()))
     (OUT / "robots.txt").write_text(f"User-agent: *\nDisallow: {u('/emails/')}\nDisallow: {u('/free/thanks/')}\n"
+                                    + (f"Disallow: {u('/go/')}\n" if go else "") +
                                     f"Sitemap: {absu('/sitemap.xml')}\n")
     items = "".join(f"""<item><title>{esc(p['title'])}</title><link>{absu(f"/blog/{p['slug']}/")}</link>
 <guid>{absu(f"/blog/{p['slug']}/")}</guid><pubDate>{datetime.strptime(p['date'], '%Y-%m-%d').replace(tzinfo=timezone.utc).strftime('%a, %d %b %Y 00:00:00 +0000')}</pubDate>

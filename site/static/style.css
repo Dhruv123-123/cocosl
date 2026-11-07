@@ -213,3 +213,5 @@ th{background:var(--tint)}
 .free-tool-link{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;
   color:var(--ink);font-weight:600;text-decoration:none}
 .free-tool-link:hover{border-color:var(--green-d)}
+.partner{border:2px solid var(--line);border-radius:14px;padding:18px 20px;margin:24px 0;background:var(--paper)}
+.partner h3{margin:4px 0 6px}.partner .btn{margin:8px 0 4px}.partner .small{color:var(--muted);font-size:.85rem;margin:6px 0 0}
