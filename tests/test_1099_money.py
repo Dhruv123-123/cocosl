@@ -17,6 +17,7 @@ def _items(name="content.json"):
 MONTH1 = "month-1/content.json"
 MONTH2 = "month-2/content.json"
 MONTH3 = "month-3/content.json"
+MONTH4 = "month-4/content.json"
 
 
 def test_brand_loads_with_placeholder_affiliates(factory):
@@ -30,7 +31,7 @@ def test_brand_loads_with_placeholder_affiliates(factory):
 import pytest
 
 
-@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5])])
+@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5]), (MONTH4, [22, 13, 4])])
 def test_content_is_valid(factory, name, counts):
     from contentfactory.schemas import Script
     brand = factory.brand("1099-money")
@@ -78,6 +79,15 @@ def test_month_3_has_no_repeat_titles_and_fills_31_days(factory):
     month = _items(MONTH3)
     assert not earlier & {i["script"]["title"].lower() for i in month}
     slots, leftover = plan(factory.brand("1099-money"), month, date(2027, 1, 30), 31)
+    assert not leftover
+    assert {s.day for s in slots} == set(range(1, 32))
+
+
+def test_month_4_has_no_repeat_titles_and_fills_31_days(factory):
+    earlier = {i["script"]["title"].lower() for i in _items() + _items(MONTH1) + _items(MONTH2) + _items(MONTH3)}
+    month = _items(MONTH4)
+    assert not earlier & {i["script"]["title"].lower() for i in month}
+    slots, leftover = plan(factory.brand("1099-money"), month, date(2027, 3, 2), 31)
     assert not leftover
     assert {s.day for s in slots} == set(range(1, 32))
 
@@ -145,3 +155,21 @@ def test_product_ladder_builds(tmp_path):
     assert "$15" in text and "$29" in text and "$49" in text and "TRACKER15" in text and "KIT29" in text
     assert "$29" in (LAUNCH / "products" / "rate-contract-kit" / "LISTING.md").read_text()
     assert "$49" in (LAUNCH / "products" / "bundle" / "LISTING.md").read_text()
+
+
+def test_spring_channels_point_at_etsy_calculator_and_compare_pages(factory, tmp_path):
+    from contentfactory import channels
+    res = channels.export(factory, "1099-money", LAUNCH / "channels" / "spring.json", tmp_path, render=False)
+    assert res["block"] == 0 and res["warn"] == 0 and res["issues"] == 8 and res["pins"] >= 36
+    pins = json.loads((tmp_path / "pinterest" / "pins.json").read_text())
+    targets = [p["target"] for p in pins]
+    for listing in ("quarterly-tax-tracker", "rate-contract-kit", "freelancer-money-bundle"):
+        assert sum(t == f"product:etsy-{listing}".replace("rate-contract", "rate-and-contract") for t in targets) == 2
+    assert sum(t == "article:calculator" for t in targets) >= 4
+    assert any(t.startswith("article:") and "calculator" not in t for t in targets)
+    assert not {p["title"] for p in pins} & {"Six weeks to April 15: the freelancer countdown", "Your 1099s are due Monday: check these 3 things"}
+    for p in pins:
+        if "etsy.com" in p["link"]:
+            assert "utm_" not in p["link"]
+        else:
+            assert "utm_source=pinterest" in p["link"]

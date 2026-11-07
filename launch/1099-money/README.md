@@ -10,6 +10,8 @@ Money and taxes for US freelancers. Brand file: `brands/1099-money.yaml`. Start 
 | `month-1/` | 39 more scripts for Nov 30 – Dec 29, 2026 (22 Shorts, 13 carousels, 4 long at 8+ min) + posting plan |
 | `month-2/` | 40 scripts for Dec 30, 2026 – Jan 29, 2027 (22 Shorts, 14 carousels, 4 long at 8+ min): 1099 season, the Jan 15 payment, deductions + posting plan |
 | `month-3/` | 40 scripts for Jan 30 – Mar 1, 2027 (22 Shorts, 13 carousels, 5 long at 8+ min): filing season, Schedule C, home office, mileage + posting plan |
+| `month-4/` | 39 scripts for Mar 2 – Apr 1, 2027 (22 Shorts, 13 carousels, 4 long at 8+ min): filing, paying the IRS, extensions, the two Apr 15 payments + posting plan |
+| `channels/` | `config.json`: launch–month 2 pins, threads and newsletter. `spring.json`: 40 pins from Jan 4, 2027 (month 3–4 content, the calculator, compare pages and 6 Etsy listing pins), 26 threads and 8 newsletter issues Feb 14 – Apr 4. `exclude` drops pins that only make sense on their posting day |
 | `etsy/` | `build_etsy.py` + Etsy listings for the three products (Etsy-safe guide wording, 2400x1800 listing images) |
 | `../../apps/freelance-tax/` | Free quarterly estimated tax calculator + funnel: free 2027 tax calendar (PDF), landing and download pages, 7-email sequence selling the tracker |
 | `product/` | The Quarterly Tax Tracker: spreadsheet builder, the built .xlsx, 10-page guide (HTML + PDF), store listing |
@@ -30,6 +32,8 @@ python launch/1099-money/products/build_kit.py && python launch/1099-money/produ
 Month 1: `factory pack export --brand 1099-money --file launch/1099-money/month-1/content.json --start 2026-11-30 --days 30 --out month-1/` (no `--*-days` flags: it uses the brand cadence).
 Month 2: `factory pack export --brand 1099-money --file launch/1099-money/month-2/content.json --start 2026-12-30 --days 31 --out month-2/`.
 Month 3: `factory pack export --brand 1099-money --file launch/1099-money/month-3/content.json --start 2027-01-30 --days 31 --out month-3/`.
+Month 4: `factory pack export --brand 1099-money --file launch/1099-money/month-4/content.json --start 2027-03-02 --days 31 --out month-4/`.
+Spring channels: `factory channels export --brand 1099-money --config launch/1099-money/channels/spring.json --out channels-spring/` (Etsy listing URLs are `REPLACE_ME` until the listings are live).
 Etsy: `python launch/1099-money/etsy/build_etsy.py` (writes to project files).
 
 Long videos from month 1 on are written to run 8+ minutes (about 1,300 words at 160 wpm) so YouTube allows mid-roll ads. Re-time the chapter list in each description after the voice-over is recorded.
