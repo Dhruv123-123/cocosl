@@ -60,6 +60,8 @@ official Business Discovery API (see `watchlist.py`).
 | [`sponsor-kit.md`](sponsor-kit.md) | Sponsor readiness: the 7-point gate before any pitch, a CPM rate card formula with worked prices, a media kit template with per-brand lines, 40 finance-adjacent brands seen sponsoring faceless channels (plus a do-not-pitch list), and 6 email drafts. Nothing sent |
 | [`oss-landscape.md`](oss-landscape.md) | Open-source round 3: budgeting apps (Actual Budget MIT, Firefly III AGPL), tax and finance libraries (Tax-Calculator CC0, numpy-financial BSD), freelancer tools, a CC BY security checklist, video/caption/TTS re-checked against `main`, and 5 recommendations |
 | [`state-of-the-business.md`](state-of-the-business.md) | One page for Dhruv: what is built, the 8 decisions blocked on him, and the top 5 actions in order |
+| [`actual-budget-tutorials.md`](actual-budget-tutorials.md) | 6 screen-recording scripts with shot lists for an "Actual Budget + The 20-Minute Budget" MMS series, the licence and naming check (MIT, nominative use, no logo in our art), how the plan maps onto Actual, and the starter-file bonus |
+| [`instagram-growth-2026.md`](instagram-growth-2026.md) | Instagram growth for faceless finance in late 2026: originality rules on carousels (Apr 2026), the 5-hashtag cap, sends per reach, Trial Reels eligibility, collabs, broadcast channels, and 5 factory changes |
 | [`hooks.md`](hooks.md) | 30 hook templates, now used by the writer (`src/contentfactory/hooks_library.json`) |
 | [`repos.csv`](repos.csv) | Raw repo metadata pulled 2026-11-07 |
 | [`watchlist.csv`](watchlist.csv), [`watchlist.py`](watchlist.py) | Accounts to watch, and a script that snapshots their public follower and engagement numbers through the official Business Discovery API |
@@ -67,7 +69,7 @@ official Business Discovery API (see `watchlist.py`).
 ## Top 5 actions, in order
 
 1. Voice the 16 waiting videos with Kokoro (the `kokoro` TTS provider on main: `docker compose --profile kokoro up`, set `KOKORO_URL`).
-2. Turn on Trial Reels (`IG_TRIAL_REELS=SS_PERFORMANCE`, added in this PR) so new Reels go to non-followers first as Trial Reels and only graduate if they perform. Ideal for a new account testing hooks.
+2. Turn on Trial Reels (`IG_TRIAL_REELS=SS_PERFORMANCE`, added in this PR) so new Reels go to non-followers first as Trial Reels and only graduate if they perform. Good for testing hooks, but only once the account passes Instagram's follower minimum for Trial Reels (see `instagram-growth-2026.md`).
 3. Replace estimated caption timing with word-level timestamps from faster-whisper or stable-ts (both MIT).
 4. Shift the weekly mix towards carousels (5 per week instead of 3), keeping Reels for hooks and reach.
 5. Start the Business Discovery watchlist weekly so we measure which accounts in our niche are growing, rather than trusting listicle numbers.
