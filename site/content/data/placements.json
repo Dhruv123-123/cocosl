@@ -308,6 +308,66 @@
   "retirement-savings-in-your-20s": [
    "investing-starter-kit",
    "financial-goals-planner"
+  ],
+  "how-to-negotiate-a-medical-bill": [
+   "bill-payment-tracker",
+   "debt-payoff-sheet"
+  ],
+  "apr-vs-apy-explained": [
+   "savings-account-register",
+   "credit-card-payoff-tracker"
+  ],
+  "payday-loans-explained": [
+   "paycheck-budget-planner",
+   "emergency-fund-tracker"
+  ],
+  "what-is-an-index-fund": [
+   "investing-starter-kit"
+  ],
+  "how-to-check-your-credit-report": [
+   "credit-report-audit-kit"
+  ],
+  "how-to-buy-a-used-car": [
+   "car-expense-tracker",
+   "sinking-funds-tracker"
+  ],
+  "estimated-tax-payments-explained": [
+   "side-hustle-income-tracker",
+   "irregular-income-budget"
+  ],
+  "what-to-do-if-your-identity-is-stolen": [
+   "credit-report-audit-kit"
+  ],
+  "how-to-avoid-rental-scams": [
+   "monthly-budget-planner"
+  ],
+  "secured-credit-cards-explained": [
+   "credit-card-payoff-tracker",
+   "credit-report-audit-kit"
+  ],
+  "how-to-get-a-car-loan": [
+   "loan-payoff-tracker",
+   "car-expense-tracker"
+  ],
+  "cds-explained": [
+   "savings-goals-sheet",
+   "savings-account-register"
+  ],
+  "how-529-plans-work": [
+   "investing-starter-kit",
+   "financial-goals-planner"
+  ],
+  "how-to-handle-a-job-loss-financially": [
+   "emergency-fund-tracker",
+   "zero-based-budget-worksheet"
+  ],
+  "how-to-teach-kids-about-money": [
+   "savings-challenge-pack",
+   "financial-goals-planner"
+  ],
+  "term-vs-whole-life-insurance": [
+   "financial-goals-planner",
+   "net-worth-tracker"
   ]
  },
  "goals": [
@@ -318,6 +378,7 @@
    "intro": "Tools that turn a payoff plan into a date on the calendar, and keep you going until you reach it. Start with the free guides below; buy a template only if you want the maths done for you or something to colour in.",
    "items": [
     "debt-free-date-planner",
+    "debt-payoff-bundle",
     "debt-payoff-sheet",
     "notion-debt-payoff",
     "credit-card-payoff-tracker",
@@ -336,10 +397,10 @@
    "intro": "An emergency fund, sinking funds and savings challenges you can see filling up. The free guides below cover the method; these make it visible.",
    "items": [
     "savings-goals-sheet",
+    "savings-challenge-pack",
     "notion-savings-goals",
     "emergency-fund-tracker",
     "sinking-funds-tracker",
-    "savings-challenge-pack",
     "52-week-savings-challenge",
     "paycheck-savings-challenge",
     "home-fund-tracker",
@@ -354,6 +415,7 @@
    "intro": "Your first real paycheck is the easiest time to set up a system. These templates help you plan each paycheck, set goals, and start investing once the basics are in place.",
    "items": [
     "the-20-minute-budget",
+    "first-paycheck-budget-bundle",
     "paycheck-budget-planner",
     "budget-sheet",
     "notion-budget",
@@ -372,6 +434,7 @@
    "intro": "Uneven income needs a different budget: a steady salary from a holding account, and tax set aside from every payment. These templates track both.",
    "items": [
     "irregular-income-budget",
+    "freelance-budget-bundle",
     "side-hustle-income-tracker",
     "monthly-expense-tracker",
     "bill-payment-tracker",

@@ -64,7 +64,9 @@
     "car-repair-sinking-fund",
     "how-much-car-can-i-afford",
     "moving-out-for-the-first-time",
-    "lifestyle-creep"
+    "lifestyle-creep",
+    "how-to-buy-a-used-car",
+    "how-to-get-a-car-loan"
    ]
   },
   {
@@ -121,7 +123,8 @@
     "how-much-emergency-fund-do-i-need",
     "renters-insurance-explained",
     "health-insurance-explained",
-    "how-to-avoid-overdraft-fees"
+    "how-to-avoid-overdraft-fees",
+    "how-to-handle-a-job-loss-financially"
    ]
   },
   {
@@ -136,7 +139,8 @@
     "sofi-review",
     "how-to-save-for-a-house-down-payment",
     "how-to-budget-for-a-trip",
-    "how-much-emergency-fund-do-i-need"
+    "how-much-emergency-fund-do-i-need",
+    "cds-explained"
    ]
   },
   {
@@ -164,7 +168,9 @@
     "how-credit-card-interest-works",
     "what-is-a-good-credit-score",
     "how-to-lower-your-credit-card-interest-rate",
-    "credit-utilization-explained"
+    "credit-utilization-explained",
+    "apr-vs-apy-explained",
+    "secured-credit-cards-explained"
    ]
   },
   {
@@ -178,7 +184,8 @@
     "aura-review",
     "how-to-dispute-a-credit-report-error",
     "how-to-build-credit-from-scratch",
-    "what-is-a-good-credit-score"
+    "what-is-a-good-credit-score",
+    "how-to-check-your-credit-report"
    ]
   },
   {
@@ -188,7 +195,8 @@
    "path": "/medical-bills/",
    "blurb": "request an itemized bill, dispute an error or ask for financial assistance.",
    "articles": [
-    "hsa-vs-fsa"
+    "hsa-vs-fsa",
+    "how-to-negotiate-a-medical-bill"
    ]
   },
   {
@@ -198,7 +206,8 @@
    "path": "/medical-bills/debt.html",
    "blurb": "debt validation and stop-contact letters.",
    "articles": [
-    "how-to-deal-with-debt-collectors"
+    "how-to-deal-with-debt-collectors",
+    "how-to-negotiate-a-medical-bill"
    ]
   },
   {
@@ -221,7 +230,8 @@
     "empower-review",
     "monarch-money-review",
     "how-to-start-investing-with-100-a-month",
-    "how-to-calculate-net-worth"
+    "how-to-calculate-net-worth",
+    "term-vs-whole-life-insurance"
    ]
   },
   {
@@ -234,7 +244,9 @@
     "are-robo-advisors-worth-it",
     "acorns-review",
     "betterment-review",
-    "retirement-savings-in-your-20s"
+    "retirement-savings-in-your-20s",
+    "what-is-an-index-fund",
+    "how-529-plans-work"
    ]
   },
   {
@@ -317,7 +329,8 @@
    "articles": [
     "how-to-avoid-overdraft-fees",
     "moving-out-for-the-first-time",
-    "buy-now-pay-later-explained"
+    "buy-now-pay-later-explained",
+    "payday-loans-explained"
    ]
   },
   {
@@ -375,7 +388,9 @@
    "title": "52-week savings challenge tracker",
    "path": "/budget/savings-challenge.html",
    "blurb": "save $1 in week 1 up to $52 in week 52, or set your own goal; tick off each week and print the chart.",
-   "articles": []
+   "articles": [
+    "how-to-teach-kids-about-money"
+   ]
   },
   {
    "key": "remittance",
@@ -399,7 +414,9 @@
    "title": "Freelance rate calculator",
    "path": "/freelance-invoices/rate.html",
    "blurb": "the hourly, day and weekly rate you need after tax, insurance, time off and costs.",
-   "articles": []
+   "articles": [
+    "estimated-tax-payments-explained"
+   ]
   },
   {
    "key": "set-aside",
@@ -409,7 +426,8 @@
    "blurb": "log each payment and see how much to move to tax savings and when estimated tax is due.",
    "articles": [
     "self-employment-tax-explained",
-    "how-to-budget-with-irregular-income"
+    "how-to-budget-with-irregular-income",
+    "estimated-tax-payments-explained"
    ]
   },
   {
@@ -430,7 +448,9 @@
    "blurb": "paste a suspicious text, email or DM and see the red flags scammers use.",
    "articles": [
     "how-to-freeze-your-credit",
-    "how-to-spot-a-scam-text"
+    "how-to-spot-a-scam-text",
+    "how-to-avoid-rental-scams",
+    "what-to-do-if-your-identity-is-stolen"
    ]
   },
   {
@@ -440,7 +460,8 @@
    "path": "/scam-checker/link/",
    "blurb": "check a link for look-alike spellings, brand names on the wrong domain and hidden destinations.",
    "articles": [
-    "how-to-spot-a-scam-text"
+    "how-to-spot-a-scam-text",
+    "how-to-avoid-rental-scams"
    ]
   },
   {

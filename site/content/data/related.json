@@ -156,6 +156,7 @@
   "expense-ratios-explained": {
    "related": [
     "how-to-start-investing-with-100-a-month",
+    "what-is-an-index-fund",
     "roth-vs-traditional-ira",
     "401k-match-explained",
     "are-robo-advisors-worth-it"
@@ -186,6 +187,7 @@
   "high-yield-savings-vs-money-market": {
    "related": [
     "how-to-save-for-a-house-down-payment",
+    "cds-explained",
     "how-to-build-an-emergency-fund",
     "sinking-funds-explained",
     "how-to-open-a-high-yield-savings-account",
@@ -208,6 +210,7 @@
   "how-to-build-an-emergency-fund": {
    "related": [
     "how-much-emergency-fund-do-i-need",
+    "how-to-handle-a-job-loss-financially",
     "sinking-funds-explained",
     "how-to-make-a-budget-you-will-keep",
     "find-and-cancel-subscriptions",
@@ -227,6 +230,7 @@
   "how-to-freeze-your-credit": {
    "related": [
     "how-to-dispute-a-credit-report-error",
+    "what-to-do-if-your-identity-is-stolen",
     "how-to-spot-a-scam-text",
     "aura-review",
     "how-credit-scores-work",
@@ -295,6 +299,7 @@
   "roth-vs-traditional-ira": {
    "related": [
     "ira-contribution-before-tax-deadline",
+    "how-529-plans-work",
     "retirement-savings-in-your-20s",
     "401k-match-explained",
     "how-to-start-investing-with-100-a-month",
@@ -362,6 +367,7 @@
   "car-repair-sinking-fund": {
    "related": [
     "how-much-car-can-i-afford",
+    "how-to-get-a-car-loan",
     "sinking-funds-explained",
     "how-to-build-an-emergency-fund",
     "how-to-make-a-budget-you-will-keep",
@@ -452,6 +458,7 @@
   "how-to-dispute-a-credit-report-error": {
    "related": [
     "how-to-build-credit-from-scratch",
+    "how-to-check-your-credit-report",
     "how-to-deal-with-debt-collectors",
     "how-credit-scores-work",
     "how-to-freeze-your-credit",
@@ -482,6 +489,7 @@
   "how-much-car-can-i-afford": {
    "related": [
     "how-to-save-money-on-car-insurance",
+    "how-to-buy-a-used-car",
     "car-repair-sinking-fund",
     "how-to-dispute-a-credit-report-error",
     "50-30-20-rule",
@@ -492,6 +500,7 @@
   "how-credit-card-interest-works": {
    "related": [
     "how-to-lower-your-credit-card-interest-rate",
+    "apr-vs-apy-explained",
     "buy-now-pay-later-explained",
     "debt-avalanche-vs-snowball",
     "debt-consolidation-explained",
@@ -523,6 +532,7 @@
   "self-employment-tax-explained": {
    "related": [
     "how-to-budget-with-irregular-income",
+    "estimated-tax-payments-explained",
     "how-to-file-a-tax-extension",
     "tax-deductions-vs-tax-credits",
     "sinking-funds-explained"
@@ -587,6 +597,7 @@
   "how-to-build-credit-from-scratch": {
    "related": [
     "what-is-a-good-credit-score",
+    "secured-credit-cards-explained",
     "self-credit-builder-review",
     "how-credit-scores-work",
     "how-to-dispute-a-credit-report-error",
@@ -606,6 +617,7 @@
   "renters-insurance-explained": {
    "related": [
     "moving-out-for-the-first-time",
+    "term-vs-whole-life-insurance",
     "how-much-emergency-fund-do-i-need",
     "sinking-funds-explained",
     "how-to-make-a-budget-you-will-keep"
@@ -642,6 +654,7 @@
   "college-student-budget": {
    "related": [
     "how-to-build-credit-from-scratch",
+    "how-to-teach-kids-about-money",
     "how-to-pay-off-student-loans-faster",
     "how-to-lower-your-grocery-bill",
     "how-to-make-a-budget-you-will-keep"
@@ -670,6 +683,7 @@
   "moving-out-for-the-first-time": {
    "related": [
     "renters-insurance-explained",
+    "how-to-avoid-rental-scams",
     "how-to-make-a-budget-you-will-keep",
     "how-much-emergency-fund-do-i-need",
     "how-to-build-credit-from-scratch"
@@ -688,6 +702,7 @@
   "how-to-avoid-overdraft-fees": {
    "related": [
     "how-to-stop-living-paycheck-to-paycheck",
+    "payday-loans-explained",
     "how-to-choose-a-checking-account",
     "how-much-emergency-fund-do-i-need",
     "best-bank-account-for-college-students"
@@ -705,6 +720,7 @@
   "health-insurance-explained": {
    "related": [
     "hsa-vs-fsa",
+    "how-to-negotiate-a-medical-bill",
     "how-to-read-a-pay-stub",
     "sinking-funds-explained"
    ],
@@ -797,6 +813,150 @@
     "roth-vs-traditional-ira",
     "first-job-401k-setup",
     "expense-ratios-explained"
+   ],
+   "tool": "budget"
+  },
+  "how-to-negotiate-a-medical-bill": {
+   "related": [
+    "how-to-deal-with-debt-collectors",
+    "health-insurance-explained",
+    "hsa-vs-fsa",
+    "how-to-dispute-a-credit-report-error"
+   ],
+   "tool": "debt"
+  },
+  "apr-vs-apy-explained": {
+   "related": [
+    "how-credit-card-interest-works",
+    "how-to-open-a-high-yield-savings-account",
+    "high-yield-savings-vs-money-market",
+    "debt-consolidation-explained"
+   ],
+   "tool": "budget"
+  },
+  "payday-loans-explained": {
+   "related": [
+    "how-to-stop-living-paycheck-to-paycheck",
+    "how-to-avoid-overdraft-fees",
+    "how-to-budget-on-a-low-income",
+    "how-to-build-an-emergency-fund"
+   ],
+   "tool": "debt"
+  },
+  "what-is-an-index-fund": {
+   "related": [
+    "expense-ratios-explained",
+    "how-to-start-investing-with-100-a-month",
+    "are-robo-advisors-worth-it",
+    "roth-vs-traditional-ira"
+   ],
+   "tool": "budget"
+  },
+  "how-to-check-your-credit-report": {
+   "related": [
+    "how-to-dispute-a-credit-report-error",
+    "how-credit-scores-work",
+    "how-to-freeze-your-credit",
+    "credit-utilization-explained"
+   ],
+   "tool": "debt"
+  },
+  "how-to-buy-a-used-car": {
+   "related": [
+    "how-much-car-can-i-afford",
+    "car-repair-sinking-fund",
+    "how-to-save-money-on-car-insurance",
+    "how-to-get-a-car-loan"
+   ],
+   "tool": "budget"
+  },
+  "estimated-tax-payments-explained": {
+   "related": [
+    "self-employment-tax-explained",
+    "how-to-budget-with-irregular-income",
+    "tax-deductions-vs-tax-credits",
+    "what-to-do-if-you-cant-pay-your-taxes"
+   ],
+   "tool": "budget"
+  },
+  "what-to-do-if-your-identity-is-stolen": {
+   "related": [
+    "how-to-freeze-your-credit",
+    "how-to-check-your-credit-report",
+    "how-to-spot-a-scam-text",
+    "aura-review"
+   ],
+   "tool": "budget"
+  },
+  "how-to-avoid-rental-scams": {
+   "related": [
+    "moving-out-for-the-first-time",
+    "how-to-spot-a-scam-text",
+    "what-to-do-if-your-identity-is-stolen",
+    "renters-insurance-explained"
+   ],
+   "tool": "budget"
+  },
+  "secured-credit-cards-explained": {
+   "related": [
+    "how-to-build-credit-from-scratch",
+    "self-credit-builder-review",
+    "credit-utilization-explained",
+    "what-is-a-good-credit-score"
+   ],
+   "tool": "debt"
+  },
+  "how-to-get-a-car-loan": {
+   "related": [
+    "how-to-buy-a-used-car",
+    "how-much-car-can-i-afford",
+    "apr-vs-apy-explained",
+    "how-to-check-your-credit-report"
+   ],
+   "tool": "debt"
+  },
+  "cds-explained": {
+   "related": [
+    "high-yield-savings-vs-money-market",
+    "how-to-open-a-high-yield-savings-account",
+    "how-to-save-for-a-house-down-payment",
+    "apr-vs-apy-explained"
+   ],
+   "tool": "budget"
+  },
+  "how-529-plans-work": {
+   "related": [
+    "what-is-an-index-fund",
+    "roth-vs-traditional-ira",
+    "expense-ratios-explained",
+    "retirement-savings-in-your-20s"
+   ],
+   "tool": "budget"
+  },
+  "how-to-handle-a-job-loss-financially": {
+   "related": [
+    "how-to-build-an-emergency-fund",
+    "health-insurance-explained",
+    "how-to-budget-on-a-low-income",
+    "payday-loans-explained"
+   ],
+   "tool": "budget"
+  },
+  "how-to-teach-kids-about-money": {
+   "related": [
+    "how-529-plans-work",
+    "college-student-budget",
+    "secured-credit-cards-explained",
+    "how-to-spot-a-scam-text"
+   ],
+   "tool": "budget"
+  },
+  "term-vs-whole-life-insurance": {
+   "related": [
+    "renters-insurance-explained",
+    "health-insurance-explained",
+    "how-to-build-an-emergency-fund",
+    "first-job-401k-setup"
    ],
    "tool": "budget"
   }

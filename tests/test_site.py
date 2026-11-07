@@ -1029,3 +1029,45 @@ def test_ai_disclosure_wording_matches_the_caption_line(tmp_path):
         h = (out / page / "index.html").read_text()
         assert "drafted with ai help, fact-checked by a person" in h.lower(), page
         assert "A human chooses" not in h, page
+
+
+NEW_JUL_AUG_ARTICLES = ["how-to-negotiate-a-medical-bill", "apr-vs-apy-explained", "payday-loans-explained", "what-is-an-index-fund",
+                        "how-to-check-your-credit-report", "how-to-buy-a-used-car", "estimated-tax-payments-explained",
+                        "what-to-do-if-your-identity-is-stolen", "how-to-avoid-rental-scams", "secured-credit-cards-explained",
+                        "how-to-get-a-car-loan", "cds-explained", "how-529-plans-work", "how-to-handle-a-job-loss-financially",
+                        "how-to-teach-kids-about-money", "term-vs-whole-life-insurance"]
+
+
+def test_july_august_articles_are_long_dated_and_linked(tmp_path):
+    sys.path.insert(0, str(SITE))
+    import build
+    dates = []
+    for slug in NEW_JUL_AUG_ARTICLES:
+        meta, body = build.parse_front_matter((SITE / "content" / "blog" / f"{slug}.md").read_text())
+        prose = re.sub(r"<!--.*?-->", "", body, flags=re.S)
+        assert len(prose.split()) >= 1500, (slug, len(prose.split()))
+        assert "## A worked example" in prose and "fictional" in prose, slug
+        assert str(meta["date"])[:7] in ("2027-07", "2027-08"), slug
+        assert len(meta["seo_title"]) <= 60 and len(meta["description"]) <= 155, slug
+        assert len(meta["sources"]) >= 2, slug
+        dates.append(str(meta["date"]))
+    assert len(set(dates)) == 16
+    assert sum(d.startswith("2027-07") for d in dates) == 8
+    early = _build(tmp_path / "early", "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2027-06-30")
+    assert not (early / "blog" / "how-to-negotiate-a-medical-bill" / "index.html").exists()
+    late = _build(tmp_path, "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2027-08-31")
+    for s in NEW_JUL_AUG_ARTICLES:
+        assert (late / "blog" / s / "index.html").exists(), s
+
+
+def test_ai_guide_kits_are_gumroad_only_and_goal_pages_show_the_etsy_bundles(tmp_path):
+    import json
+    shop = {i["slug"]: i for i in json.loads((SITE / "content" / "shop.json").read_text())["items"]}
+    for kit in ("bill-cut-kit", "the-20-minute-budget", "credit-report-audit-kit", "debt-free-date-planner",
+                "investing-starter-kit", "money-toolkit-bundle"):
+        assert shop[kit]["stores"] == ["gumroad"], kit  # Etsy bans AI-generated guides
+    out = _build(tmp_path, "https://example.org")
+    for goal, bundle in (("debt", "debt-payoff-bundle"), ("first-job", "first-paycheck-budget-bundle"),
+                         ("freelance", "freelance-budget-bundle"), ("saving", "savings-challenge-pack")):
+        assert shop[bundle]["bundle"] and shop[bundle]["stores"] == ["etsy"], bundle
+        assert shop[bundle]["name"] in (out / "shop" / goal / "index.html").read_text(), goal
