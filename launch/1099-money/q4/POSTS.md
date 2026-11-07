@@ -229,7 +229,7 @@ Card: `cards/q4-06.png` (Before Dec 31: / 5 deduction checks / cash method = pai
 ```
 On the cash method (most freelancers), an expense counts in the year you pay it. So December 31 is a real line. Five checks before then:
 
-1. Mileage: add up your 2026 log now, while you can still rebuild a missing week from your calendar. 72.5 cents a business mile.
+1. Mileage: add up your 2026 log now, while you can still rebuild a missing week from your calendar. 72.5 cents a business mile to June 30, 76 cents from July 1.
 2. Software and subscriptions: renewals you'd pay in January anyway can be paid in December.
 3. Phone and internet: work out your business-use percentage and write down how you got it.
 4. Home office: measure the space and photo it. $5 a square foot up to 300 square feet with the simplified method.
@@ -245,7 +245,7 @@ Educational, not tax advice. 2026 federal figures.
 **Threads / X**
 
 ```
-Year-end, cash-method freelancers: expenses count when PAID. Before Dec 31: total your mileage log (72.5¢/mi), prepay renewals you'd pay in Jan anyway, set your phone/internet business %, measure the home office. Don't buy stuff you don't need.
+Year-end, cash-method freelancers: expenses count when PAID. Before Dec 31: total your mileage log (72.5¢/mi to Jun 30, 76¢ after), prepay renewals you'd pay in Jan anyway, set your phone/internet business %, measure the home office. Don't buy stuff you don't need.
 ```
 
 **Facebook groups**
@@ -256,7 +256,7 @@ Year-end checklist worth ten minutes: total the mileage log while you can still 
 
 Sources: https://www.irs.gov/publications/p334, https://www.irs.gov/tax-professionals/standard-mileage-rates, https://www.irs.gov/businesses/small-businesses-self-employed/home-office-deduction
 
-Check before posting: Cash method: deduct when paid; Prepaid expenses within the 12-month rule; 2026 mileage 72.5 cents; Simplified home office $5/sq ft up to 300 sq ft
+Check before posting: Cash method: deduct when paid; Prepaid expenses within the 12-month rule; 2026 mileage 72.5¢ Jan–Jun, 76¢ Jul–Dec; Simplified home office $5/sq ft up to 300 sq ft
 
 ## 7. 2026-12-11 · Retirement deadlines: what can wait
 

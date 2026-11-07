@@ -2,7 +2,7 @@
  {
   "format": "short",
   "pillar": "deductions with sources",
-  "idea_angle": "Logged miles are worth real money: 15,000 miles is a $10,875 deduction.",
+  "idea_angle": "Logged miles are worth real money: 15,000 miles in 2026 is about an $11,138 deduction.",
   "script": {
    "title": "What 15,000 delivery miles are worth at tax time",
    "hook": "If you drove fifteen thousand miles for the apps this year, that's worth over two thousand dollars. But only if you logged them.",
@@ -15,20 +15,20 @@
     },
     {
      "heading": "Rate",
-     "narration": "For twenty twenty-six, the IRS standard mileage rate is seventy-two and a half cents a mile.",
-     "on_screen_text": "2026 rate: 72.5¢ a mile",
+     "narration": "For twenty twenty-six there are two IRS rates: seventy-two and a half cents a mile through June, and seventy-six cents from July first.",
+     "on_screen_text": "2026: 72.5¢ to June, 76¢ from July",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin stamped with a road. No text, no logos, no real people."
     },
     {
      "heading": "Math",
-     "narration": "Fifteen thousand miles times seventy-two and a half cents is a ten thousand eight hundred seventy-five dollar deduction.",
-     "on_screen_text": "15,000 × 72.5¢ = $10,875",
+     "narration": "Fifteen thousand miles, half before July and half after, is about an eleven thousand one hundred forty dollar deduction.",
+     "on_screen_text": "7,500 × 72.5¢ + 7,500 × 76¢ ≈ $11,138",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calculator showing a big number. No text, no logos, no real people."
     },
     {
      "heading": "Saving",
-     "narration": "On thirty thousand dollars of payouts, a single driver with no other job saves about two thousand three hundred forty dollars in federal tax.",
-     "on_screen_text": "≈ $2,340 less federal tax",
+     "narration": "On thirty thousand dollars of payouts, a single driver with no other job saves about two thousand four hundred dollars in federal tax.",
+     "on_screen_text": "≈ $2,400 less federal tax",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a stack of coins shrinking a tax bill. No text, no logos, no real people."
     },
     {
@@ -39,7 +39,7 @@
     }
    ],
    "cta": "Follow for one driver tax move a week.",
-   "caption": "At the 2026 IRS standard mileage rate of 72.5¢, 15,000 business miles is a $10,875 deduction. On $30,000 of payouts, a single driver with no other job owes about $2,840 in 2026 federal tax instead of about $5,180. The deduction needs a mileage log made at or near the time.\n\nFree driver mileage calculator in the link in bio: it shows what your miles save and what to set aside.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one driver tax move a week.",
+   "caption": "2026 has two IRS standard mileage rates: 72.5¢ a mile through June 30 and 76¢ from July 1 (Announcement 2026-11). 15,000 business miles, half in each half of the year, is about an $11,138 deduction. On $30,000 of payouts, a single driver with no other job owes about $2,780 in 2026 federal tax instead of about $5,180. The deduction needs a mileage log made at or near the time.\n\nFree driver mileage calculator in the link in bio: it shows what your miles save and what to set aside.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one driver tax move a week.",
    "hashtags": [
     "doordashdriver",
     "ubereats",
@@ -50,14 +50,14 @@
     "1099money"
    ],
    "description": "What a year of logged delivery miles saves you in tax.",
-   "thumbnail_text": "15,000 miles = $2,340",
+   "thumbnail_text": "15,000 miles = $2,400",
    "sources": [
     "https://www.irs.gov/tax-professionals/standard-mileage-rates",
     "https://www.irs.gov/publications/p463",
     "https://www.irs.gov/businesses/gig-economy-tax-center"
    ],
    "claims_to_verify": [
-    "2026 standard mileage rate 72.5 cents",
+    "2026 standard mileage rates: 72.5 cents Jan 1 - Jun 30 (Notice 2026-10), 76 cents Jul 1 - Dec 31 (Announcement 2026-11)",
     "$30K payouts, 15K miles, single, no W-2: tax ≈ $2,836 vs ≈ $5,181"
    ]
   },
@@ -85,8 +85,8 @@
     },
     {
      "heading": "Gap",
-     "narration": "That gap can be a third of your driving or more. At seventy-two and a half cents a mile, it adds up fast.",
-     "on_screen_text": "The gap adds up at 72.5¢",
+     "narration": "That gap can be a third of your driving or more. At seventy-six cents a mile since July, it adds up fast.",
+     "on_screen_text": "The gap adds up at 76¢ a mile",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. coins falling through a gap. No text, no logos, no real people."
     },
     {
@@ -213,14 +213,14 @@
     },
     {
      "heading": "Example",
-     "narration": "Thirty thousand dollars of payouts, fifteen thousand logged miles, single, no other job. Federal tax is about twenty-eight hundred dollars. That's about nine and a half percent of payouts.",
-     "on_screen_text": "Example: ≈ 9.5% of payouts",
+     "narration": "Thirty thousand dollars of payouts, fifteen thousand logged miles, single, no other job. Federal tax is about twenty-seven hundred eighty dollars. That's just over nine percent of payouts.",
+     "on_screen_text": "Example: ≈ 9.3% of payouts",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a pie chart with a small slice. No text, no logos, no real people."
     },
     {
      "heading": "Per",
-     "narration": "Over three thousand deliveries, that's about ninety-five cents each.",
-     "on_screen_text": "≈ 95¢ per delivery",
+     "narration": "Over three thousand deliveries, that's about ninety-three cents each.",
+     "on_screen_text": "≈ 93¢ per delivery",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin dropping in a jar. No text, no logos, no real people."
     },
     {
@@ -231,7 +231,7 @@
     }
    ],
    "cta": "Follow for one driver tax move a week.",
-   "caption": "Example: $30,000 of payouts, 15,000 logged miles, single, no W-2 job: about $2,840 of 2026 federal tax, about 9.5% of payouts or 95¢ a delivery over 3,000 deliveries. A W-2 job, state income tax or fewer miles raise it, so work out your own rate.\n\nFree driver mileage calculator in the link in bio: it shows what your miles save and what to set aside.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one driver tax move a week.",
+   "caption": "Example: $30,000 of payouts, 15,000 logged miles, single, no W-2 job: about $2,780 of 2026 federal tax, about 9.3% of payouts or 93¢ a delivery over 3,000 deliveries (half the miles after July 1, at 76¢). A W-2 job, state income tax or fewer miles raise it, so work out your own rate.\n\nFree driver mileage calculator in the link in bio: it shows what your miles save and what to set aside.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one driver tax move a week.",
    "hashtags": [
     "doordashdriver",
     "instacartshopper",
@@ -242,7 +242,7 @@
     "1099money"
    ],
    "description": "Your set-aside per delivery, worked out.",
-   "thumbnail_text": "Save ≈ 95¢ a delivery",
+   "thumbnail_text": "Set aside ≈ 93¢ a delivery",
    "sources": [
     "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
     "https://www.irs.gov/tax-professionals/standard-mileage-rates",
@@ -482,7 +482,7 @@
     },
     {
      "heading": "Don't",
-     "narration": "What not to take: gas, oil, repairs and car insurance. The seventy-two and a half cent rate already covers them. Deduct them too and you've counted them twice.",
+     "narration": "What not to take: gas, oil, repairs and car insurance. The standard mileage rate already covers them. Deduct them too and you've counted them twice.",
      "on_screen_text": "Not gas: the rate covers it",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a gas pump crossed out. No text, no logos, no real people."
     },

@@ -4,10 +4,10 @@
 check). They pair with the free **driver mileage calculator** on the site (`apps/freelance-tax/mileage/`),
 which the captions point to as "in the link in bio". No links in captions.
 
-Every figure is 2026 federal: the 72.5¢ standard mileage rate, the $2,000 1099-NEC threshold, the
+Every figure is 2026 federal: the two standard mileage rates (72.5¢ through June 30, 76¢ from July 1, Announcement 2026-11), the $2,000 1099-NEC threshold, the
 $20,000 / 200-payment 1099-K threshold. The worked example everywhere is the same one the calculator
-uses: $30,000 of payouts, 15,000 logged miles, single, no W-2 job → a $10,875 deduction, about $2,840 of
-federal tax instead of about $5,180, about 9.5% of payouts or 95¢ a delivery over 3,000 deliveries.
+uses: $30,000 of payouts, 15,000 logged miles, single, no W-2 job (half of them from July) → about an $11,138 deduction, about $2,780 of
+federal tax instead of about $5,180, about 9.3% of payouts or 93¢ a delivery over 3,000 deliveries.
 
 ## When to post
 

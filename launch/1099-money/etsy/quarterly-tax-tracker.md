@@ -68,5 +68,5 @@ changing titles and first photos on selling listings during the peak, and this t
 3. Replace photos 02–08 (photo 01 has no year on it). The chips and "what's inside" now say 2027.
 4. In this description: "Suggested payment for each 2027 deadline: Apr 15, Jun 15, Sep 15, Jan 18, 2028", "All 2027 federal
    tables built in", and "Federal figures are for the 2027 tax year."
-5. Mileage rate: the 2027 edition still uses the 2026 rate (72.5¢) until the IRS announces 2027's in December. Update the
+5. Mileage rate: the 2027 edition uses the latest rate (76¢, from July 1, 2026) until the IRS announces 2027's in December. Update the
    Tax Tables cell, rebuild, and re-upload if it changes.

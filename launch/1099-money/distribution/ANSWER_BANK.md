@@ -19,8 +19,8 @@ Rules from `research/scouting/distribution.md` (PR #2) that shape every draft:
 - **Pace:** at most 3–5 answers a day, spread across communities. Comment on other posts for a week before
   posting anything of your own in a subreddit.
 - **Figures are 2026 federal** (checked Nov 2026): self-employment tax 15.3% on 92.35% of profit, Social
-  Security wage base $184,500, standard deduction $16,100 single / $32,200 joint, standard mileage rate
-  72.5¢, 1099-NEC threshold $2,000 for payments made in 2026, 1099-K threshold $20,000 and 200 payments.
+  Security wage base $184,500, standard deduction $16,100 single / $32,200 joint, standard mileage rates
+  72.5¢ to June 30 and 76¢ from July 1, 1099-NEC threshold $2,000 for payments made in 2026, 1099-K threshold $20,000 and 200 payments.
   Next estimated payment: Fri Jan 15, 2027 (the 4th for 2026 income). Re-check each January.
 
 ---
@@ -149,7 +149,7 @@ use personally. The common ones:
 - The business share of your phone and internet
 - Equipment such as a laptop or camera (usually all in the year you buy it)
 - Home office, if you qualify
-- Business mileage (72.5¢ a mile for 2026) or actual car costs
+- Business mileage (72.5¢ a mile to June 30, 2026, 76¢ from July 1) or actual car costs
 - Professional fees: accountant, lawyer, payment processor fees
 - Courses that improve skills for your current work
 - Business insurance
@@ -173,7 +173,7 @@ The common mistake is choosing the wrong year. A January payment is for the prev
 the payment due January 15, 2027 is for tax year 2026. Save each confirmation number.
 
 ### Q11. "Should I use the standard mileage rate or actual expenses?"
-For most freelancers with an ordinary car, the standard rate. For 2026 it's 72.5¢ a business mile. You
+For most freelancers with an ordinary car, the standard rate. For 2026 it's 72.5¢ a business mile through June 30 and 76¢ from July 1. You
 multiply by your logged business miles and that's the deduction, covering gas, repairs, insurance and
 depreciation. Parking and tolls on business trips are added on top.
 
@@ -314,8 +314,8 @@ going by a rule of thumb from a formation company.
 
 ### R6. r/doordash_drivers: "How much should I save for taxes per order?"
 Depends a lot on whether you log your miles. Rough example for 2026: $30K of payouts, 15,000 logged
-miles, single, no other job. Miles × 72.5¢ = $10,875 deduction, federal tax ends up around $2,840, so
-about 9.5% of payouts, roughly 95¢ an order over 3,000 orders. Without the mileage it'd be about $5,180.
+miles, single, no other job. Half the miles before July at 72.5¢, half after at 76¢: about an $11,138 deduction, federal tax around $2,780, so
+about 9.3% of payouts, roughly 93¢ an order over 3,000 orders. Without the mileage it'd be about $5,180.
 
 So: log every mile you drive online (to the pickup, the dropoff and in between), then save your own
 percentage from every payout. If you have a W-2 job too or a state income tax, it goes up.
@@ -345,8 +345,8 @@ Log the shift instead: odometer at the start and end and which apps were on. Inc
 around: add up every app's payouts and tips.
 
 ### R11. r/couriersofreddit: "Can I deduct gas?"
-Only if you use the actual-expense method. Most drivers use the standard mileage rate (72.5¢ a mile for
-2026), which already includes gas, oil, repairs, insurance and depreciation, so you can't deduct gas on
+Only if you use the actual-expense method. Most drivers use the standard mileage rate (72.5¢ a mile to June 30,
+2026, 76¢ from July 1), which already includes gas, oil, repairs, insurance and depreciation, so you can't deduct gas on
 top. You can add parking and tolls on jobs, and things like insulated bags, a phone mount and the
 business share of your phone bill.
 

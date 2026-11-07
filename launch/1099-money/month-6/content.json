@@ -2808,8 +2808,8 @@
     },
     {
      "heading": "Driving",
-     "narration": "Driving instead of flying? For a road trip that's primarily business, you can deduct your car costs at the standard mileage rate, seventy-two and a half cents a mile for twenty twenty-six, plus parking and tolls. Log the odometer at the start and the end, and note any personal side trips, which you subtract. If you rent a car for the trip, the rental is a travel expense instead, along with fuel. Either way, mileage from your hotel to the client's office each day counts too.",
-     "on_screen_text": "Driving: 72.5¢/mile + parking, tolls",
+     "narration": "Driving instead of flying? For a road trip that's primarily business, you can deduct your car costs at the standard mileage rate, which the IRS sets each year (seventy-six cents a mile since July twenty twenty-six), plus parking and tolls. Log the odometer at the start and the end, and note any personal side trips, which you subtract. If you rent a car for the trip, the rental is a travel expense instead, along with fuel. Either way, mileage from your hotel to the client's office each day counts too.",
+     "on_screen_text": "Driving: standard rate + parking, tolls",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a car on a winding road. No text, no logos, no real people."
     },
     {
@@ -2835,7 +2835,7 @@
     "1099",
     "1099money"
    ],
-   "description": "What freelancers can deduct on a business trip, with a worked example.\n\nChapters\n0:00 Business travel, step by step\n0:37 Away overnight, for business\n1:08 More business days than personal\n1:39 Primarily business: travel fully deductible\n2:08 Lodging: business nights only\n2:34 Meals: 50%\n3:01 Per diem: meals only, still 50%\n3:34 $400 + $720 + $120 = $1,240\n4:05 Mostly personal: no flight deduction\n4:33 A weekend between business days can count\n4:58 Conferences in your field: deductible\n5:23 Family along: deduct your share\n5:51 Abroad: extra rules\n6:14 Dates, purpose, receipts\n6:42 4 travel mistakes\n7:04 Driving: 72.5¢/mile + parking, tolls\n7:38 Schedule C: 24a travel · 24b meals\n8:02 Recap\n\nFree rate calculator: https://1099money.netlify.app/rate-calculator/\nFree quarterly tax calculator: https://1099money.netlify.app/\nThe Rate & Contract Kit: https://example.gumroad.com/l/rate-contract-kit\n\nSources: irs.gov (Publication 463, Publication 334), gsa.gov per diem rates.\n\nEducational only, not tax, legal or financial advice.",
+   "description": "What freelancers can deduct on a business trip, with a worked example.\n\nChapters\n0:00 Business travel, step by step\n0:37 Away overnight, for business\n1:08 More business days than personal\n1:39 Primarily business: travel fully deductible\n2:08 Lodging: business nights only\n2:34 Meals: 50%\n3:01 Per diem: meals only, still 50%\n3:34 $400 + $720 + $120 = $1,240\n4:05 Mostly personal: no flight deduction\n4:33 A weekend between business days can count\n4:58 Conferences in your field: deductible\n5:23 Family along: deduct your share\n5:51 Abroad: extra rules\n6:14 Dates, purpose, receipts\n6:42 4 travel mistakes\n7:04 Driving: standard rate + parking, tolls\n7:38 Schedule C: 24a travel · 24b meals\n8:02 Recap\n\nFree rate calculator: https://1099money.netlify.app/rate-calculator/\nFree quarterly tax calculator: https://1099money.netlify.app/\nThe Rate & Contract Kit: https://example.gumroad.com/l/rate-contract-kit\n\nSources: irs.gov (Publication 463, Publication 334), gsa.gov per diem rates.\n\nEducational only, not tax, legal or financial advice.",
    "thumbnail_text": "Travel deductions",
    "sources": [
     "https://www.irs.gov/publications/p463",

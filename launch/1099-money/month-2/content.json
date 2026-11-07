@@ -21,7 +21,7 @@
     },
     {
      "heading": "What it's worth",
-     "narration": "At seventy-two and a half cents a mile for twenty twenty-six, two thousand business miles is a fourteen hundred and fifty dollar deduction.",
+     "narration": "At seventy-two and a half cents a mile for the first half of twenty twenty-six, two thousand business miles is a fourteen hundred and fifty dollar deduction.",
      "on_screen_text": "2,000 miles ≈ $1,450 deduction",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a road curving into a coin stack. No text, no logos, no real people."
     },
@@ -45,7 +45,7 @@
     }
    ],
    "cta": "Follow for one freelancer money move a week.",
-   "caption": "Tonight's odometer photo is your Dec 31, 2026 reading, which closes your 2026 mileage log and opens 2027's. Log every business drive: date, destination, purpose, miles. Commuting to a regular workplace doesn't count.\n\n2026 standard mileage rate: 72.5¢ a mile, so 2,000 business miles is a $1,450 deduction. Check irs.gov for the 2027 rate.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "caption": "Tonight's odometer photo is your Dec 31, 2026 reading, which closes your 2026 mileage log and opens 2027's. Log every business drive: date, destination, purpose, miles. Commuting to a regular workplace doesn't count.\n\n2026 standard mileage rates: 72.5¢ a mile through June 30, 76¢ from July 1, so 2,000 business miles is a $1,450–$1,520 deduction. Check irs.gov for the 2027 rate.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
    "hashtags": [
     "mileagelog",
     "taxdeductions",
@@ -61,7 +61,7 @@
     "https://www.irs.gov/publications/p463"
    ],
    "claims_to_verify": [
-    "2026 standard mileage rate 72.5¢",
+    "2026 mileage: 72.5¢ Jan–Jun, 76¢ Jul–Dec (IRS Notice 2026-10, Announcement 2026-11)",
     "Commuting is not deductible",
     "2027 rate published separately"
    ]
@@ -2154,7 +2154,7 @@
     },
     {
      "heading": "5-6",
-     "narration": "5. Business miles (72.5¢ a mile for 2026). 6. Parking and tolls for business trips, on top of mileage.",
+     "narration": "5. Business miles (72.5¢ a mile to June 30, 2026, 76¢ from July 1). 6. Parking and tolls for business trips, on top of mileage.",
      "on_screen_text": "Miles + parking + tolls",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a car and a parking sign. No text, no logos, no real people."
     },
@@ -2190,7 +2190,7 @@
     }
    ],
    "cta": "Save this. Follow for one freelancer money move a week.",
-   "caption": "12 deductions freelancers often miss: processor fees, business bank fees, software, business share of phone/internet, business miles (72.5¢ in 2026), parking and tolls, home office, coworking, work-related education, business share of tax prep, self-employed health insurance, SEP IRA contributions. Keep records and a business purpose. At $60K profit, $1,000 of deductions saves about $231 federal.\n\nThe Quarterly Tax Tracker (guide + spreadsheet) is in the link in bio if you want the math done for you.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSave this. Follow for one freelancer money move a week.",
+   "caption": "12 deductions freelancers often miss: processor fees, business bank fees, software, business share of phone/internet, business miles (72.5¢ Jan–Jun 2026, 76¢ from July), parking and tolls, home office, coworking, work-related education, business share of tax prep, self-employed health insurance, SEP IRA contributions. Keep records and a business purpose. At $60K profit, $1,000 of deductions saves about $231 federal.\n\nThe Quarterly Tax Tracker (guide + spreadsheet) is in the link in bio if you want the math done for you.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSave this. Follow for one freelancer money move a week.",
    "hashtags": [
     "taxdeductions",
     "freelancetaxes",
@@ -2209,7 +2209,7 @@
     "https://www.irs.gov/retirement-plans/plan-sponsor/simplified-employee-pension-plan-sep"
    ],
    "claims_to_verify": [
-    "2026 mileage 72.5¢",
+    "2026 mileage: 72.5¢ Jan–Jun, 76¢ Jul–Dec (IRS Notice 2026-10, Announcement 2026-11)",
     "$1,000 at $60K ≈ $231 (lib/tax.js)",
     "Parking/tolls deductible in addition to standard mileage"
    ]
@@ -2713,7 +2713,7 @@
     },
     {
      "heading": "Levers",
-     "narration": "Three levers move these numbers legally. First, real business expenses with records: mileage at seventy-two and a half cents a mile, software, a home office if you qualify. Second, retirement. A SEP IRA contribution of about eleven thousand dollars would cut our sixty thousand freelancer's federal tax by about a thousand. At a hundred and twenty thousand, a full SEP of around twenty-two thousand saves close to four thousand. Third, health. Self-employed health insurance premiums and HSA contributions lower income tax. None of these reduce self-employment tax except business expenses, which is worth knowing.",
+     "narration": "Three levers move these numbers legally. First, real business expenses with records: mileage at seventy-two and a half cents a mile, or seventy-six from July, software, a home office if you qualify. Second, retirement. A SEP IRA contribution of about eleven thousand dollars would cut our sixty thousand freelancer's federal tax by about a thousand. At a hundred and twenty thousand, a full SEP of around twenty-two thousand saves close to four thousand. Third, health. Self-employed health insurance premiums and HSA contributions lower income tax. None of these reduce self-employment tax except business expenses, which is worth knowing.",
      "on_screen_text": "Expenses · retirement · health",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three levers on a simple control panel. No text, no logos, no real people."
     },
@@ -2957,8 +2957,8 @@
     },
     {
      "heading": "3 Car",
-     "narration": "Number three for anyone who drives for work: the car. The standard mileage rate is seventy-two and a half cents a mile for twenty twenty-six. Three thousand business miles is a two thousand one hundred seventy-five dollar deduction, worth about five hundred dollars in tax. Parking and tolls for business trips go on top. Commuting from home to a regular workplace doesn't count. The record is a mileage log: date, where, why, miles. Without it this deduction is very hard to defend.",
-     "on_screen_text": "#3 Miles: 3,000 × 72.5¢ = $2,175",
+     "narration": "Number three for anyone who drives for work: the car. The standard mileage rate is seventy-two and a half cents a mile for the first half of twenty twenty-six, and seventy-six cents from July. Three thousand business miles is a deduction of about two thousand two hundred dollars, worth about five hundred dollars in tax. Parking and tolls for business trips go on top. Commuting from home to a regular workplace doesn't count. The record is a mileage log: date, where, why, miles. Without it this deduction is very hard to defend.",
+     "on_screen_text": "#3 Miles: 3,000 mi = $2,175–$2,280",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a car on a curving road with mile markers. No text, no logos, no real people."
     },
     {
@@ -3029,7 +3029,7 @@
     }
    ],
    "cta": "Subscribe for one freelancer money move a week.",
-   "caption": "Common freelancer deductions ranked by typical value at $60K profit (2026 federal): SEP IRA (~$1,070 saved), health insurance and HSA, mileage (72.5¢), home office (simplified vs regular), equipment, software, phone/internet share, fees, learning and travel, plus what isn't deductible.\n\nThe Quarterly Tax Tracker (guide + spreadsheet) is in the link in bio if you want the math done for you.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSubscribe for one freelancer money move a week.",
+   "caption": "Common freelancer deductions ranked by typical value at $60K profit (2026 federal): SEP IRA (~$1,070 saved), health insurance and HSA, mileage (72.5¢, 76¢ from Jul 1), home office (simplified vs regular), equipment, software, phone/internet share, fees, learning and travel, plus what isn't deductible.\n\nThe Quarterly Tax Tracker (guide + spreadsheet) is in the link in bio if you want the math done for you.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSubscribe for one freelancer money move a week.",
    "hashtags": [
     "taxdeductions",
     "writeoffs",
@@ -3038,7 +3038,7 @@
     "1099",
     "1099money"
    ],
-   "description": "Freelancer tax deductions ranked by what they actually save, with 2026 federal figures.\n\nChapters\n0:00 Deductions, ranked by $\n0:34 $1,000 expense ≈ $231 saved\n1:04 Ordinary · necessary · recorded\n1:34 #1 SEP IRA: ~$11,150 → ~$1,070 saved\n2:05 #2 Health premiums + HSA\n2:35 #3 Miles: 3,000 × 72.5¢ = $2,175\n3:07 #4 Home office: $750–$4,000+\n3:42 #5 Equipment: business % in year one\n4:09 #6 Software: often $1K–$3K a year\n4:34 #7 Phone + internet: business %\n5:00 #8 Fees: processor, bank, prep\n5:24 #9 Learning · travel · 50% meals\n5:49 #10 Contractors · advertising\n6:21 #11 Startup costs: up to $5,000\n6:54 Deduct what you can explain\n7:20 Not deductible: clothes · gym · commute\n7:45 Recap: the ranked list\n\nThe Quarterly Tax Tracker: https://example.gumroad.com/l/quarterly-tax-tracker\n\nSources: IRS Publication 334, 463, 587, 969, 970; SEP and IRA contribution pages; Form 7206.\n\nIllustrative examples. Educational only, not tax, legal or financial advice.",
+   "description": "Freelancer tax deductions ranked by what they actually save, with 2026 federal figures.\n\nChapters\n0:00 Deductions, ranked by $\n0:34 $1,000 expense ≈ $231 saved\n1:04 Ordinary · necessary · recorded\n1:34 #1 SEP IRA: ~$11,150 → ~$1,070 saved\n2:05 #2 Health premiums + HSA\n2:35 #3 Miles: 3,000 mi = $2,175–$2,280\n3:07 #4 Home office: $750–$4,000+\n3:42 #5 Equipment: business % in year one\n4:09 #6 Software: often $1K–$3K a year\n4:34 #7 Phone + internet: business %\n5:00 #8 Fees: processor, bank, prep\n5:24 #9 Learning · travel · 50% meals\n5:49 #10 Contractors · advertising\n6:21 #11 Startup costs: up to $5,000\n6:54 Deduct what you can explain\n7:20 Not deductible: clothes · gym · commute\n7:45 Recap: the ranked list\n\nThe Quarterly Tax Tracker: https://example.gumroad.com/l/quarterly-tax-tracker\n\nSources: IRS Publication 334, 463, 587, 969, 970; SEP and IRA contribution pages; Form 7206.\n\nIllustrative examples. Educational only, not tax, legal or financial advice.",
    "thumbnail_text": "Deductions, ranked",
    "sources": [
     "https://www.irs.gov/publications/p334",
@@ -3053,7 +3053,7 @@
     "$1,000 at $60K ≈ $231",
     "SEP $11,152 → $1,071",
     "$5,000 premiums → ~$480 (income tax only, with QBI interaction)",
-    "Mileage 72.5¢; 3,000 mi = $2,175 ≈ $501",
+    "Mileage 72.5¢ to Jun 30, 76¢ from Jul 1 (2026); 3,000 mi = $2,175–$2,280 ≈ $501–$525",
     "Home office example ≈ $3,960",
     "100% bonus depreciation / Section 179 for equipment",
     "Meals 50%",

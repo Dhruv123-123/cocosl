@@ -109,7 +109,7 @@ passes with its chart.
 - **Shots:**
   1. Open a blank spreadsheet with columns Date · From/To · Purpose · Miles.
   2. Type two fictional trips: '3/2/2027 · Home → Client A office · Kickoff meeting · 14' and '3/5/2027 · Home → Print shop · Pick up samples · 6'.
-  3. Switch tabs to irs.gov/tax-professionals/standard-mileage-rates and pause on the 2026 business rate (72.5 cents).
+  3. Switch tabs to irs.gov/tax-professionals/standard-mileage-rates and pause on the 2026 business rates (72.5 cents to June 30, 76 cents from July 1).
 - **On screen while it plays:** Date · where · why · miles
 - **Narration over this beat:** "Either way, you need a log. For each trip: the date, where you went, the business purpose, and the miles. Plus your odometer reading at the start and end of the year, and your total miles. It should be made at the time, or soon after. A spreadsheet tab, a notes app or a mileage app all work. The format doesn't matter. The details and the timing do. Many people find it easiest to log trips at the end of each day, or to use an app that records drives automatically and lets them classify each one later."
 - **Footage path:** `footage/1099-money/the-mileage-deduction-logs-rates-commuting-rules.mp4`

@@ -127,7 +127,7 @@ def test_month_6_has_no_repeat_titles_rotates_formats_and_fills_31_days(factory)
     june = [s for s in slots if s.fmt == "short" and month[s.index]["script"]["title"].startswith("June 15")]
     assert june and date(2027, 5, 31) <= june[0].when.date() <= date(2027, 6, 2)
     text = " ".join(seg["narration"] for i in month for seg in i["script"]["segments"])
-    assert "seventy-five dollars an hour" in text and "seventy-two and a half cents" in text
+    assert "seventy-five dollars an hour" in text and "seventy-six cents" in text  # 2026 rate from Jul 1 (Announcement 2026-11)
 
 
 def test_two_week_plan_fits_and_respects_cap(factory):

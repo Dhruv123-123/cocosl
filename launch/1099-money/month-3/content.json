@@ -628,8 +628,8 @@
     },
     {
      "heading": "Standard",
-     "narration": "The standard mileage rate: seventy-two and a half cents a business mile for twenty twenty-six. It covers gas, insurance, repairs and depreciation.",
-     "on_screen_text": "Standard: 72.5¢/mile",
+     "narration": "The standard mileage rate: seventy-two and a half cents a business mile for the first half of twenty twenty-six, and seventy-six cents from July. It covers gas, insurance, repairs and depreciation.",
+     "on_screen_text": "Standard: 72.5¢, 76¢ from July",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a road with mile markers. No text, no logos, no real people."
     },
     {
@@ -658,7 +658,7 @@
     }
    ],
    "cta": "Follow for one freelancer money move a week.",
-   "caption": "Two ways to deduct a car: the standard mileage rate (72.5¢ a business mile in 2026) or actual expenses × business-use %. Example: 8,000 business miles = $5,800 standard vs $8,000 total costs × 40% = $3,200 actual. To use the standard rate for a car you own, choose it in the first year you use the car for business. Parking and tolls are extra under both.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "caption": "Two ways to deduct a car: the standard mileage rate (72.5¢ a business mile to June 30, 2026, 76¢ from July 1) or actual expenses × business-use %. Example: 8,000 business miles = $5,800 standard vs $8,000 total costs × 40% = $3,200 actual. To use the standard rate for a car you own, choose it in the first year you use the car for business. Parking and tolls are extra under both.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
    "hashtags": [
     "mileage",
     "taxdeductions",
@@ -674,7 +674,7 @@
     "https://www.irs.gov/publications/p463"
    ],
    "claims_to_verify": [
-    "2026 rate 72.5¢",
+    "2026 mileage: 72.5¢ Jan–Jun, 76¢ Jul–Dec (IRS Notice 2026-10, Announcement 2026-11)",
     "First-year rule for standard mileage (owned vehicles)",
     "Example figures illustrative"
    ]
@@ -1921,7 +1921,7 @@
     },
     {
      "heading": "Standard",
-     "narration": "Standard rate: 8,000 × 72.5¢ = $5,800.",
+     "narration": "Standard rate: 8,000 × 72.5¢ = $5,800 (Jan–Jun rate; 76¢ from July).",
      "on_screen_text": "Standard: $5,800",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a road with mile markers. No text, no logos, no real people."
     },
@@ -1957,7 +1957,7 @@
     }
    ],
    "cta": "Save this. Follow for one freelancer money move a week.",
-   "caption": "Same driver, both methods (illustrative): 8,000 business miles × 72.5¢ = $5,800 standard vs ($2,400 gas + $1,500 insurance + $800 maintenance + $300 registration + $3,000 depreciation) × 40% = $3,200 actual. Parking and tolls are extra under both. Choose the standard rate in the car's first business year if you want the option.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSave this. Follow for one freelancer money move a week.",
+   "caption": "Same driver, both methods (illustrative): 8,000 business miles × 72.5¢ = $5,800 standard (Jan–Jun 2026 rate; 76¢ from July) vs ($2,400 gas + $1,500 insurance + $800 maintenance + $300 registration + $3,000 depreciation) × 40% = $3,200 actual. Parking and tolls are extra under both. Choose the standard rate in the car's first business year if you want the option.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSave this. Follow for one freelancer money move a week.",
    "hashtags": [
     "mileage",
     "taxdeductions",
@@ -1973,7 +1973,7 @@
     "https://www.irs.gov/publications/p463"
    ],
    "claims_to_verify": [
-    "2026 rate 72.5¢",
+    "2026 mileage: 72.5¢ Jan–Jun, 76¢ Jul–Dec (IRS Notice 2026-10, Announcement 2026-11)",
     "Example figures illustrative",
     "Standard-rate first-year rule"
    ]
@@ -2575,7 +2575,7 @@
     },
     {
      "heading": "Jo's expenses",
-     "narration": "Here's Jo's year. Commissions and fees, mostly payment processor fees: one thousand nine hundred. Car and truck: twelve hundred miles to client meetings at seventy-two and a half cents, eight hundred seventy. Legal and professional, Jo's accountant: four hundred. Utilities, the business share of phone and internet: nine hundred sixty. Supplies and a new monitor under the small-item threshold: six hundred. And other expenses, listed by name: software subscriptions two thousand one hundred, a writing course four hundred, bank fees one hundred twenty. Total: about seven thousand three hundred fifty.",
+     "narration": "Here's Jo's year. Commissions and fees, mostly payment processor fees: one thousand nine hundred. Car and truck: twelve hundred miles to client meetings in the first half of the year at seventy-two and a half cents, eight hundred seventy. Legal and professional, Jo's accountant: four hundred. Utilities, the business share of phone and internet: nine hundred sixty. Supplies and a new monitor under the small-item threshold: six hundred. And other expenses, listed by name: software subscriptions two thousand one hundred, a writing course four hundred, bank fees one hundred twenty. Total: about seven thousand three hundred fifty.",
      "on_screen_text": "Jo's expenses ≈ $7,350",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. receipts sorting into folders. No text, no logos, no real people."
     },
@@ -2743,7 +2743,7 @@
     },
     {
      "heading": "Mileage bonus",
-     "narration": "There's a bonus most people miss. If your home office is your principal place of business, trips from home to clients, suppliers and the post office for work generally count as business miles, not commuting. So a qualifying home office can make your mileage deduction bigger too, at seventy-two and a half cents a mile for twenty twenty-six. That's next week's video.",
+     "narration": "There's a bonus most people miss. If your home office is your principal place of business, trips from home to clients, suppliers and the post office for work generally count as business miles, not commuting. So a qualifying home office can make your mileage deduction bigger too, at seventy-two and a half cents a mile for the first half of twenty twenty-six, and seventy-six cents from July. That's next week's video.",
      "on_screen_text": "Bonus: deductible drives from home",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a house with arrows to several places. No text, no logos, no real people."
     },
@@ -2843,7 +2843,7 @@
     },
     {
      "heading": "Worth",
-     "narration": "First, why it matters. The standard mileage rate for twenty twenty-six is seventy-two and a half cents a mile. Three thousand business miles is a two thousand one hundred seventy-five dollar deduction. Eight thousand miles is fifty-eight hundred. At sixty thousand of profit, every thousand dollars of deductions saves about two hundred thirty dollars of federal tax, so eight thousand miles is worth over thirteen hundred dollars. That's real money for a notebook entry per trip. And unlike many deductions, it reduces both your self-employment tax and your income tax, because it lowers your business profit directly.",
+     "narration": "First, why it matters. The standard mileage rate for twenty twenty-six is seventy-two and a half cents a mile through June, and seventy-six cents from July. Three thousand business miles is a deduction of about two thousand two hundred dollars. Eight thousand miles is fifty-eight hundred. At sixty thousand of profit, every thousand dollars of deductions saves about two hundred thirty dollars of federal tax, so eight thousand miles is worth over thirteen hundred dollars. That's real money for a notebook entry per trip. And unlike many deductions, it reduces both your self-employment tax and your income tax, because it lowers your business profit directly.",
      "on_screen_text": "8,000 mi ≈ $5,800 ≈ $1,340 saved",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a road turning into a coin stack. No text, no logos, no real people."
     },
@@ -2867,8 +2867,8 @@
     },
     {
      "heading": "Standard rate",
-     "narration": "Now the two methods. The standard mileage rate is simple: business miles times seventy-two and a half cents. It's meant to cover gas, maintenance, insurance, registration and depreciation. On top of it you can still deduct business parking and tolls, and the business share of interest on a car loan. You can't also deduct gas or repairs; the rate already includes them.",
-     "on_screen_text": "Standard: 72.5¢ + parking + tolls",
+     "narration": "Now the two methods. The standard mileage rate is simple: business miles times the rate: seventy-two and a half cents through June twenty twenty-six, seventy-six from July. It's meant to cover gas, maintenance, insurance, registration and depreciation. On top of it you can still deduct business parking and tolls, and the business share of interest on a car loan. You can't also deduct gas or repairs; the rate already includes them.",
+     "on_screen_text": "Standard: 72.5¢/76¢ + parking + tolls",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a road with mile markers and a parking sign. No text, no logos, no real people."
     },
     {
@@ -2939,13 +2939,13 @@
     },
     {
      "heading": "Recap",
-     "narration": "Recap: business trips count, commuting doesn't, and a qualifying home office makes trips from home count. The standard rate is seventy-two and a half cents a mile for twenty twenty-six, plus parking and tolls. Actual expenses times business use can win for expensive cars, but choose the standard rate in the car's first year if you want the option. And keep a same-day log. The Quarterly Tax Tracker in the description has a mileage tab with the rate built in. Subscribe for one freelancer money move a week.",
+     "narration": "Recap: business trips count, commuting doesn't, and a qualifying home office makes trips from home count. The standard rate is seventy-two and a half cents a mile for the first half of twenty twenty-six, and seventy-six cents from July, plus parking and tolls. Actual expenses times business use can win for expensive cars, but choose the standard rate in the car's first year if you want the option. And keep a same-day log. The Quarterly Tax Tracker in the description has a mileage tab with the rate built in. Subscribe for one freelancer money move a week.",
      "on_screen_text": "Recap",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes parking neatly and giving a thumbs up. No text, no logos, no real people."
     }
    ],
    "cta": "Subscribe for one freelancer money move a week.",
-   "caption": "The mileage deduction for freelancers: what it's worth, which trips count, the commuting rule and the home-office exception, standard rate (72.5¢ in 2026) vs actual expenses, the first-year rule, what a log needs, rebuilding a missing log, common mistakes and where it goes on Schedule C.\n\nThe Quarterly Tax Tracker (guide + spreadsheet) is in the link in bio if you want the math done for you.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSubscribe for one freelancer money move a week.",
+   "caption": "The mileage deduction for freelancers: what it's worth, which trips count, the commuting rule and the home-office exception, standard rate (72.5¢ Jan–Jun 2026, 76¢ from July) vs actual expenses, the first-year rule, what a log needs, rebuilding a missing log, common mistakes and where it goes on Schedule C.\n\nThe Quarterly Tax Tracker (guide + spreadsheet) is in the link in bio if you want the math done for you.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSubscribe for one freelancer money move a week.",
    "hashtags": [
     "mileage",
     "mileagelog",
@@ -2954,7 +2954,7 @@
     "selfemployed",
     "1099money"
    ],
-   "description": "The mileage deduction explained for US freelancers, with 2026 numbers.\n\nChapters\n0:00 The mileage deduction, fully\n0:26 8,000 mi ≈ $5,800 ≈ $1,340 saved\n1:04 Business trips vs personal\n1:39 Commuting: never deductible\n2:03 Home office = trips from home count\n2:29 Standard: 72.5¢ + parking + tolls\n2:53 Actual: total costs × business %\n3:18 Usually standard · year-one rule\n3:50 Date · where · why · miles\n4:28 Specific beats vague\n4:52 Rebuild honestly · start today\n5:17 5 mileage mistakes\n5:38 Mixed trips: log the business route\n6:10 Two cars or a lease: special rules\n6:39 Gig drivers: log all shift miles\n7:06 Schedule C car line + vehicle questions\n7:31 Start your log today\n7:43 Recap\n\nThe Quarterly Tax Tracker: https://example.gumroad.com/l/quarterly-tax-tracker\nFree quarterly tax calculator: https://1099money.netlify.app/\n\nSources: irs.gov (standard mileage rates, Publication 463, Schedule C instructions).\n\nIllustrative examples. Educational only, not tax, legal or financial advice.",
+   "description": "The mileage deduction explained for US freelancers, with 2026 numbers.\n\nChapters\n0:00 The mileage deduction, fully\n0:26 8,000 mi ≈ $5,800 ≈ $1,340 saved\n1:04 Business trips vs personal\n1:39 Commuting: never deductible\n2:03 Home office = trips from home count\n2:29 Standard: 72.5¢/76¢ + parking + tolls\n2:53 Actual: total costs × business %\n3:18 Usually standard · year-one rule\n3:50 Date · where · why · miles\n4:28 Specific beats vague\n4:52 Rebuild honestly · start today\n5:17 5 mileage mistakes\n5:38 Mixed trips: log the business route\n6:10 Two cars or a lease: special rules\n6:39 Gig drivers: log all shift miles\n7:06 Schedule C car line + vehicle questions\n7:31 Start your log today\n7:43 Recap\n\nThe Quarterly Tax Tracker: https://example.gumroad.com/l/quarterly-tax-tracker\nFree quarterly tax calculator: https://1099money.netlify.app/\n\nSources: irs.gov (standard mileage rates, Publication 463, Schedule C instructions).\n\nIllustrative examples. Educational only, not tax, legal or financial advice.",
    "thumbnail_text": "Mileage, fully",
    "sources": [
     "https://www.irs.gov/tax-professionals/standard-mileage-rates",
@@ -2962,7 +2962,7 @@
     "https://www.irs.gov/forms-pubs/about-schedule-c-form-1040"
    ],
    "claims_to_verify": [
-    "2026 rate 72.5¢",
+    "2026 mileage: 72.5¢ Jan–Jun, 76¢ Jul–Dec (IRS Notice 2026-10, Announcement 2026-11)",
     "8,000 × 0.725 = 5,800 × ~0.231 ≈ 1,340",
     "Car loan interest business share deductible (self-employed)",
     "First-year standard mileage rule",

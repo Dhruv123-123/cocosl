@@ -1,6 +1,6 @@
 // Browser glue for the driver mileage page: reads the form, runs lib/mileage.js, keeps inputs in the URL.
 // Nothing typed is sent anywhere.
-import { mileagePlan, MILEAGE_RATE } from '../lib/mileage.js';
+import { mileagePlan, RATE_JAN_JUN, RATE_JUL_DEC } from '../lib/mileage.js';
 import { setupSignup } from '../signup.js';
 import { setupSite } from '../site.js';
 
@@ -8,11 +8,12 @@ const $ = (s) => document.querySelector(s);
 const money = (x) => '$' + Math.round(x).toLocaleString('en-US');
 const cents = (x) => (x < 1 ? Math.round(x * 100) + '¢' : '$' + x.toFixed(2));
 const pct = (x) => (x * 100).toFixed(1).replace(/\.0$/, '') + '%';
-const FIELDS = ['earnings', 'miles', 'status', 'appMiles', 'otherCosts', 'deliveries', 'w2Wages', 'stateRate'];
+const FIELDS = ['earnings', 'miles', 'milesFromJuly', 'status', 'appMiles', 'otherCosts', 'deliveries', 'w2Wages', 'stateRate'];
 
 function read(form) {
   const v = {};
   for (const k of FIELDS) v[k] = k === 'status' ? form.elements[k].value : parseFloat(String(form.elements[k].value).replace(/[$,%\s]/g, '')) || 0;
+  if (String(form.elements.milesFromJuly.value).trim() === '') v.milesFromJuly = null;  // blank: assume half
   v.stateRate /= 100;
   return v;
 }
@@ -22,7 +23,7 @@ function render(v) {
   if (p.earnings <= 0) return '<p class="big">Add your earnings</p><p>Enter what the apps paid you this year, tips included.</p>';
   const lines = [
     `<p class="kicker">Your miles save you about</p><p class="big">${money(p.saving)}</p>`,
-    `<p class="note">${p.miles.toLocaleString('en-US')} miles × ${MILEAGE_RATE * 100}¢ = a ${money(p.deduction)} deduction, which takes your taxable profit from ${money(p.profitNoMiles)} to ${money(p.profit)}.</p>`,
+    `<p class="note">${p.miles.toLocaleString('en-US')} miles (${v.milesFromJuly === null ? 'half assumed before July at' : 'before July at'} ${RATE_JAN_JUN * 100}¢, the rest at ${RATE_JUL_DEC * 100}¢) = a ${money(p.deduction)} deduction, which takes your taxable profit from ${money(p.profitNoMiles)} to ${money(p.profit)}.</p>`,
     `<div class="two stats"><div><span>Tax on this income</span><b>${money(p.tax)}</b></div><div><span>Set aside from each payout</span><b>${pct(p.setAsideRate)}</b></div></div>`,
   ];
   if (p.perDelivery !== null) lines.push(`<h3>Per delivery or trip</h3><p class="setaside">${cents(p.perDelivery)}</p>`);

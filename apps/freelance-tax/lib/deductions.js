@@ -7,7 +7,7 @@ export const ITEMS = [
   { id: 'home-office', q: 'Do you use part of your home regularly and only for work?', name: 'Home office',
     rule: 'Simplified: $5 a square foot, up to 300 sq ft ($1,500). Or the regular method: the office share of rent or mortgage interest, utilities and insurance (Form 8829). The space must be used exclusively for business.', where: 'Schedule C, line 30', source: `${IRS}/businesses/small-businesses-self-employed/home-office-deduction` },
   { id: 'car', q: 'Do you drive to clients, job sites or business errands (not a commute to a regular workplace)?', name: 'Business mileage',
-    rule: '72.5¢ a business mile for 2026, or the business share of actual car costs. Needs a log: date, miles, purpose. Parking and tolls on business trips are extra.', where: 'Schedule C, line 9', source: `${IRS}/tax-professionals/standard-mileage-rates` },
+    rule: '72.5¢ a business mile for Jan–Jun 2026 and 76¢ from July 1, or the business share of actual car costs. Needs a log: date, miles, purpose. Parking and tolls on business trips are extra.', where: 'Schedule C, line 9', source: `${IRS}/tax-professionals/standard-mileage-rates` },
   { id: 'phone', q: 'Do you use your phone for work?', name: 'Phone (business share)',
     rule: 'The business-use percentage of your phone plan and the phone itself. Write down how you worked out the percentage.', where: 'Schedule C, line 25 or 27a', source: `${IRS}/publications/p334` },
   { id: 'internet', q: 'Do you use your home internet for work?', name: 'Internet (business share)',

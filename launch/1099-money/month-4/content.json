@@ -2527,7 +2527,7 @@
     },
     {
      "heading": "Step four",
-     "narration": "Step four is Schedule C, the heart of the return. Enter gross receipts, then expenses by category: software, equipment, advertising, phone and internet for the business share, professional fees, supplies, and so on. Then the car: Sam drove four thousand business miles, and at seventy-two and a half cents a mile that's two thousand nine hundred dollars. Then the home office: Sam's two hundred square foot office at the simplified rate of five dollars a square foot is one thousand dollars. All in, Sam's expenses total eight thousand five hundred, so Schedule C profit is sixty thousand.",
+     "narration": "Step four is Schedule C, the heart of the return. Enter gross receipts, then expenses by category: software, equipment, advertising, phone and internet for the business share, professional fees, supplies, and so on. Then the car: Sam drove four thousand business miles, and at seventy-two and a half cents a mile, the rate through June, that's two thousand nine hundred dollars; miles from July get seventy-six cents. Then the home office: Sam's two hundred square foot office at the simplified rate of five dollars a square foot is one thousand dollars. All in, Sam's expenses total eight thousand five hundred, so Schedule C profit is sixty thousand.",
      "on_screen_text": "Step 4: Schedule C → $60,000 profit",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with columns filling in. No text, no logos, no real people."
     },
@@ -2615,7 +2615,7 @@
    ],
    "claims_to_verify": [
     "2026 standard deduction $16,100 single",
-    "2026 mileage 72.5 cents",
+    "2026 mileage: 72.5¢ Jan–Jun, 76¢ Jul–Dec (IRS Notice 2026-10, Announcement 2026-11)",
     "$60K single: SE $8,478, AGI $55,761, QBI $7,932, taxable $31,729, income tax $3,559, total $12,037 (1099 Money model)",
     "Simplified home office $5/sq ft up to 300 sq ft",
     "Chapter timestamps must match final edit"
@@ -2816,8 +2816,8 @@
     },
     {
      "heading": "Mileage",
-     "narration": "Then your car. Business driving, to clients, to pick up supplies, to a coworking space that isn't your regular office, counts at seventy-two and a half cents a mile for twenty twenty-six. Commuting to a regular workplace doesn't. If you don't have a log, you can rebuild one honestly from your calendar, emails, invoices and map history. Three thousand business miles is about two thousand one hundred and seventy-five dollars of deductions, worth about five hundred dollars of tax at sixty thousand.",
-     "on_screen_text": "Mileage: 72.5¢ a mile",
+     "narration": "Then your car. Business driving, to clients, to pick up supplies, to a coworking space that isn't your regular office, counts at seventy-two and a half cents a mile for the first half of twenty twenty-six, and seventy-six cents from July. Commuting to a regular workplace doesn't. If you don't have a log, you can rebuild one honestly from your calendar, emails, invoices and map history. Three thousand business miles is about two thousand one hundred and seventy-five dollars of deductions, worth about five hundred dollars of tax at sixty thousand.",
+     "on_screen_text": "Mileage: 72.5¢, 76¢ from July",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a car on a road with mile markers. No text, no logos, no real people."
     },
     {
@@ -2905,7 +2905,7 @@
     }
    ],
    "cta": "Subscribe for one freelancer money move a week.",
-   "caption": "Legitimate ways a freelancer can still lower 2026 tax in March: missed business expenses (~$231 per $1,000 at $60K profit), home office, mileage (72.5¢), self-employed health insurance, IRA ($7,500) and HSA ($4,400/$8,750) by Apr 15, SEP IRA (~20%) up to the extended filing deadline, credits, the QBI deduction, what no longer works, and a worked example.\n\nThe Quarterly Tax Tracker (guide + spreadsheet) is in the link in bio if you want the math done for you.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSubscribe for one freelancer money move a week.",
+   "caption": "Legitimate ways a freelancer can still lower 2026 tax in March: missed business expenses (~$231 per $1,000 at $60K profit), home office, mileage (72.5¢, 76¢ from Jul 1), self-employed health insurance, IRA ($7,500) and HSA ($4,400/$8,750) by Apr 15, SEP IRA (~20%) up to the extended filing deadline, credits, the QBI deduction, what no longer works, and a worked example.\n\nThe Quarterly Tax Tracker (guide + spreadsheet) is in the link in bio if you want the math done for you.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSubscribe for one freelancer money move a week.",
    "hashtags": [
     "taxdeductions",
     "freelancetaxes",
@@ -2914,7 +2914,7 @@
     "1099",
     "1099money"
    ],
-   "description": "Every legitimate move still open in March to lower a freelancer's 2026 tax, with real numbers.\n\nChapters\n0:00 Lower your 2026 tax in March\n0:32 Expense: ~$231 per $1,000 · account: ~$96\n1:04 Missed expenses: check every statement\n1:39 Home office: up to $1,500 simplified\n2:18 Mileage: 72.5¢ a mile\n2:50 Self-employed health insurance\n3:22 IRA: $7,500 until Apr 15\n3:59 HSA: $4,400 / $8,750 until Apr 15\n4:32 SEP: ~20%, until your filing deadline\n5:09 Check credits (saver's, 8962)\n5:38 Check the QBI deduction (8995)\n6:04 What doesn't work now\n6:32 Order: free first, then accounts\n7:05 Example: ~$1,300 saved\n7:36 Keep the evidence\n8:04 Recap\n\nThe Quarterly Tax Tracker: https://example.gumroad.com/l/quarterly-tax-tracker\nFree quarterly tax calculator: https://1099money.netlify.app/\n\nSources: irs.gov (home office deduction, standard mileage rates, Form 7206, IRA contribution limits, Publication 969, SEP plans, Form 8962, Form 8995).\n\nEducational only, not tax, legal or financial advice.",
+   "description": "Every legitimate move still open in March to lower a freelancer's 2026 tax, with real numbers.\n\nChapters\n0:00 Lower your 2026 tax in March\n0:32 Expense: ~$231 per $1,000 · account: ~$96\n1:04 Missed expenses: check every statement\n1:39 Home office: up to $1,500 simplified\n2:18 Mileage: 72.5¢, 76¢ from July\n2:50 Self-employed health insurance\n3:22 IRA: $7,500 until Apr 15\n3:59 HSA: $4,400 / $8,750 until Apr 15\n4:32 SEP: ~20%, until your filing deadline\n5:09 Check credits (saver's, 8962)\n5:38 Check the QBI deduction (8995)\n6:04 What doesn't work now\n6:32 Order: free first, then accounts\n7:05 Example: ~$1,300 saved\n7:36 Keep the evidence\n8:04 Recap\n\nThe Quarterly Tax Tracker: https://example.gumroad.com/l/quarterly-tax-tracker\nFree quarterly tax calculator: https://1099money.netlify.app/\n\nSources: irs.gov (home office deduction, standard mileage rates, Form 7206, IRA contribution limits, Publication 969, SEP plans, Form 8962, Form 8995).\n\nEducational only, not tax, legal or financial advice.",
    "thumbnail_text": "Still time to save",
    "sources": [
     "https://www.irs.gov/businesses/small-businesses-self-employed/home-office-deduction",

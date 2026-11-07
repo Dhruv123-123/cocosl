@@ -13,7 +13,7 @@ Good records do two jobs: they make filing quick, and they prove your numbers if
 **Keep:**
 - **Income:** every invoice, and a record of when and how it was paid. Report all of it, whether or not you get a 1099.
 - **Expenses:** the receipt or invoice, plus a few words on the business purpose for meals, travel and gifts. A bank statement shows you paid; it usually doesn't show what you bought or why.
-- **Car:** a mileage log kept as you go: date, where, why, miles. The 2026 standard rate is **72.5 cents a mile**. Commuting to a regular workplace doesn't count.
+- **Car:** a mileage log kept as you go: date, where, why, miles. The 2026 standard rate is **72.5 cents a mile** to June 30 and **76 cents** from July 1. Commuting to a regular workplace doesn't count.
 - **Equipment:** what you paid and when you started using it.
 
 Photos and scans are fine. A folder per year with a subfolder per month works.

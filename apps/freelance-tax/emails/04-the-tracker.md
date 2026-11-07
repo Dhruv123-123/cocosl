@@ -12,7 +12,7 @@ You've seen the math (email 2) and the safe harbor (email 3). Doing both every q
 
 **The Quarterly Tax Tracker** ({{price}}):
 
-- **Log as you go.** Income, expenses (with categories and a business-use %) and mileage at 72.5¢ a mile.
+- **Log as you go.** Income, expenses (with categories and a business-use %) and mileage at 72.5¢ a mile to June 30 and 76¢ from July 1 (2026).
 - **Before each deadline, it tells you what to pay.** It compares the safe harbor with this year's actual numbers, subtracts what you've already paid and gives you one figure.
 - **A set-aside check.** Is the money in your tax account enough for the rest of the year? It tells you.
 - **Every 2026 deadline and tax table built in**, plus a 10-page guide that walks through the first setup in about 20 minutes.

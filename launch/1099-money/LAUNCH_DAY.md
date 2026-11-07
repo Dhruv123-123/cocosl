@@ -46,7 +46,7 @@ the deadline Short (or a fresh cut) around Jan 8–14.
 1. Open the post in the review queue (`factory review`) or its folder here.
 2. Tick every line under **CHECK BEFORE POSTING** in caption.txt against the linked irs.gov / ssa.gov
    source. These are 2026 federal figures: standard deduction $16,100, brackets, SS wage base $184,500,
-   mileage 72.5¢, 401(k) $24,500, HSA $4,400/$8,750, 1099-NEC $2,000, 1099-K $20,000/200.
+   mileage 72.5¢ Jan–Jun / 76¢ Jul–Dec, 401(k) $24,500, HSA $4,400/$8,750, 1099-NEC $2,000, 1099-K $20,000/200.
 3. Paste the caption exactly (it already has the AI disclosure, "not tax advice" and any affiliate
    disclosure). Set the platform's AI-label toggle where required.
 4. Revenue pieces (marked **affiliate** / **product** in the plan): make sure the link-in-bio page has

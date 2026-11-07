@@ -49,7 +49,8 @@ YEARS = {
                                        (512450, .35), (768700, .37)],
         },
         "std": {"Single": 16100, "Married filing jointly": 32200},
-        "ss_base": 184500, "mileage": 0.725, "mileage_note": "",
+        "ss_base": 184500, "mileage": 0.725, "mileage_h2": 0.76,  # Notice 2026-10; Announcement 2026-11 raised it from Jul 1
+        "mileage_note": "72.5¢ for Jan 1 - Jun 30, 2026; 76¢ from Jul 1 (row 28, IRS Announcement 2026-11).",
         "sources": "Sources: IRS Rev. Proc. 2025-32 (2026 inflation adjustments), SSA 2026 contribution and benefit base, IRS standard mileage rates.",
         "deadlines": None,  # formula dates from the Setup year
     },
@@ -60,8 +61,8 @@ YEARS = {
                                        (529100, .35), (793650, .37)],
         },
         "std": {"Single": 16600, "Married filing jointly": 33200},
-        "ss_base": 192300, "mileage": 0.725,
-        "mileage_note": "2026 rate: the IRS announces the 2027 rate in December. Update this cell when it does.",
+        "ss_base": 192300, "mileage": 0.76, "mileage_h2": 0.76,
+        "mileage_note": "Latest rate (76¢ from Jul 1, 2026). The IRS announces 2027's in December: update this cell and row 28.",
         "sources": "Sources: IRS Rev. Proc. 2026-35 (2027 inflation adjustments, Nov 5 2026), SSA 2027 contribution and benefit base ($192,300), IRS standard mileage rates.",
         # Jan 31 2027 is a Sunday; Jan 15 2028 is a Saturday and Jan 17 2028 is MLK Day.
         "deadlines": [date(2027, 1, 15), date(2027, 2, 1), date(2027, 4, 15), date(2027, 6, 15), date(2027, 9, 15),
@@ -175,7 +176,7 @@ def build(out: Path, year: int = 2026) -> Path:
         ("Medicare rate (both halves)", 0.029, PCT),
         ("Net earnings factor", 0.9235, "0.00%"),
         ("QBI deduction rate", 0.20, "0%"),
-        ("Standard mileage rate ($/mile)", MILEAGE, '"$"0.000'),
+        ("Standard mileage rate, Jan 1 - Jun 30 ($/mile)", MILEAGE, '"$"0.000'),
         ("Safe harbor high-income AGI line", 150000, USD0),
         ("Annualization factor Q1 (3 months)", 4, "0.00"),
         ("Annualization factor Q2 (5 months)", 2.4, "0.00"),
@@ -190,6 +191,9 @@ def build(out: Path, year: int = 2026) -> Path:
     T = {"std_s": "'Tax Tables'!$C$15", "std_m": "'Tax Tables'!$C$16", "ssbase": "'Tax Tables'!$C$17",
          "ss": "'Tax Tables'!$C$18", "med": "'Tax Tables'!$C$19", "nef": "'Tax Tables'!$C$20",
          "qbi": "'Tax Tables'!$C$21", "mile": "'Tax Tables'!$C$22", "hi": "'Tax Tables'!$C$23"}
+    put(tt, "B28", "Standard mileage rate, Jul 1 - Dec 31 ($/mile)")
+    put(tt, "C28", Y["mileage_h2"], '"$"0.000', INPUT)
+    T["mile2"] = "'Tax Tables'!$C$28"
     tt["B29"] = Y["sources"]
     if Y["mileage_note"]:
         put(tt, "D22", Y["mileage_note"], font=MUTED)
@@ -319,7 +323,7 @@ def build(out: Path, year: int = 2026) -> Path:
         row = sam_miles[i] if i < len(sam_miles) else (None,) * 4
         for col, v, fmt in zip("BCDE", row, (DATE, None, None, "0.0")):
             put(mi, f"{col}{r}", v, fmt, INPUT)
-        put(mi, f"F{r}", f'=IF(E{r}="","",E{r}*{T["mile"]})', USD)
+        put(mi, f"F{r}", f'=IF(E{r}="","",E{r}*IF(B{r}>=DATE(YEAR(B{r}),7,1),{T["mile2"]},{T["mile"]}))', USD)
         put(mi, f"G{r}", "=" + QUARTER.format(d=f"B{r}"), "0")
     mi.freeze_panes = "B6"
     MI_AMT, MI_Q = f"Mileage!$F$6:$F${last}", f"Mileage!$G$6:$G${last}"

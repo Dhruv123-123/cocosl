@@ -90,14 +90,14 @@ post("2027-02-05", "countdown", "deductions", "4 deductions freelancers miss",
 
 4. Payment platform fees. A 1099-K shows the gross, before PayPal, Stripe or Upwork took their cut. The fees are a business expense.
 3. Self-employed health insurance. If you paid your own premiums and weren't eligible for an employer plan, they generally come off your income (Form 7206).
-2. Business mileage. 72.5 cents a mile for 2026: client meetings, supply runs, the post office. A rebuilt log from your calendar beats no log.
+2. Business mileage. 72.5 cents a mile to June 30, 2026, and 76 cents from July 1: client meetings, supply runs, the post office. A rebuilt log from your calendar beats no log.
 1. Half of your self-employment tax. Automatic, but only if your return actually includes Schedule SE. Check that your software filled it in.
 
 And one bonus: the 20% qualified business income deduction, which most freelancers below about $200,000 of taxable income get.""",
- "Commonly missed by freelancers: 4) platform fees (1099-K is gross), 3) self-employed health insurance (Form 7206), 2) mileage at 72.5¢/mi, 1) half of SE tax (automatic, if Schedule SE is on your return). Bonus: the 20% QBI deduction.",
- "A few deductions freelancers often miss: platform fees (your 1099-K is before fees), self-employed health insurance premiums, business mileage at 72.5 cents a mile, and the 20% QBI deduction. Worth double-checking before filing.",
+ "Commonly missed by freelancers: 4) platform fees (1099-K is gross), 3) self-employed health insurance (Form 7206), 2) mileage at 72.5¢/mi (76¢ from Jul 1), 1) half of SE tax (automatic, if Schedule SE is on your return). Bonus: the 20% QBI deduction.",
+ "A few deductions freelancers often miss: platform fees (your 1099-K is before fees), self-employed health insurance premiums, business mileage at 72.5 cents a mile (76 cents from July 1), and the 20% QBI deduction. Worth double-checking before filing.",
  [IRS + "/forms-pubs/about-form-7206", IRS + "/tax-professionals/standard-mileage-rates", IRS + "/forms-pubs/about-form-8995"],
- ["Form 7206 SE health insurance", "72.5 cents 2026", "QBI threshold ~ $200K single"], link="finder")
+ ["Form 7206 SE health insurance", "2026 mileage: 72.5¢ Jan–Jun, 76¢ Jul–Dec (IRS Notice 2026-10, Announcement 2026-11)", "QBI threshold ~ $200K single"], link="finder")
 
 post("2027-02-09", "real-numbers", "homeoffice", "Home office: simplified vs regular",
  ["Home office:", "$600 vs $2,484", "same room, two methods"],
@@ -153,10 +153,10 @@ Usually no:
 
 The home office twist: if your home is your principal place of business, trips from home to clients are business trips, not a commute.
 
-For 2026 it's 72.5 cents a business mile. Keep a log with date, destination, purpose and miles. A log rebuilt honestly from your calendar is far better than none.""",
- "Q: Which drives can freelancers deduct? A: client sites, business errands, between business stops. Not: commuting to a regular workplace or personal errands. If home is your principal place of business, home → client counts. 72.5¢/mi for 2026.",
- "On mileage for freelancers: trips to clients and business errands count, commuting to a regular workplace doesn't. If your home office is your principal place of business, drives from home to clients generally count too. It's 72.5 cents a mile for 2026.",
- [IRS + "/publications/p463", IRS + "/tax-professionals/standard-mileage-rates"], ["Home office makes home->client trips deductible", "72.5 cents"], link="mileage")
+For 2026 it's 72.5 cents a business mile through June 30 and 76 cents from July 1. Keep a log with date, destination, purpose and miles. A log rebuilt honestly from your calendar is far better than none.""",
+ "Q: Which drives can freelancers deduct? A: client sites, business errands, between business stops. Not: commuting to a regular workplace or personal errands. If home is your principal place of business, home → client counts. 72.5¢/mi Jan–Jun 2026, 76¢ from Jul 1.",
+ "On mileage for freelancers: trips to clients and business errands count, commuting to a regular workplace doesn't. If your home office is your principal place of business, drives from home to clients generally count too. It's 72.5 cents a mile to June 30, 2026, and 76 cents from July 1.",
+ [IRS + "/publications/p463", IRS + "/tax-professionals/standard-mileage-rates"], ["Home office makes home->client trips deductible", "2026 mileage: 72.5¢ Jan–Jun, 76¢ Jul–Dec (IRS Notice 2026-10, Announcement 2026-11)"], link="mileage")
 
 post("2027-02-23", "worked-math", "mileage", "What a mileage log is worth",
  ["Mileage log:", "2,400 miles", "= $1,740 deduction"],
@@ -171,8 +171,8 @@ $1,740 × 0.23 ≈ $400 less tax
 Without a log, the IRS can disallow the whole thing. With one (date, where, why, miles), it's routine.
 
 If you didn't keep one in 2026, rebuild it from your calendar, invoices and map distances, and note that it's reconstructed. Then start a real one this month.""",
- "Mileage log math: 2 shoots/week × 30 mi × 40 weeks = 2,400 mi × 72.5¢ = $1,740 deduction ≈ $400 less federal tax at $60K profit. No log, no deduction. Rebuild 2026 honestly from your calendar.",
- "If you're unsure whether tracking mileage is worth it: two 30-mile round trips a week for 40 weeks is 2,400 miles, a $1,740 deduction at 72.5 cents a mile. A log with date, destination, purpose and miles is what makes it stick.",
+ "Mileage log math: 2 shoots/week × 30 mi × 40 weeks = 2,400 mi × 72.5¢ = $1,740 (more for miles after Jun 30, at 76¢) deduction ≈ $400 less federal tax at $60K profit. No log, no deduction. Rebuild 2026 honestly from your calendar.",
+ "If you're unsure whether tracking mileage is worth it: two 30-mile round trips a week for 40 weeks is 2,400 miles, a $1,740 deduction at 72.5 cents a mile (76 cents for miles from July 1). A log with date, destination, purpose and miles is what makes it stick.",
  [IRS + "/tax-professionals/standard-mileage-rates", IRS + "/publications/p463"],
  ["2,400 × 0.725 = 1,740", "~23% marginal at $60K"], link="mileage")
 

@@ -116,17 +116,17 @@ Rule of thumb: want to save less than ~20% of profit? A SEP is simpler. Want to 
   card=["Before Dec 31:", "5 deduction checks", "cash method = paid by 12/31"],
   linkedin="""On the cash method (most freelancers), an expense counts in the year you pay it. So December 31 is a real line. Five checks before then:
 
-1. Mileage: add up your 2026 log now, while you can still rebuild a missing week from your calendar. 72.5 cents a business mile.
+1. Mileage: add up your 2026 log now, while you can still rebuild a missing week from your calendar. 72.5 cents a business mile to June 30, 76 cents from July 1.
 2. Software and subscriptions: renewals you'd pay in January anyway can be paid in December.
 3. Phone and internet: work out your business-use percentage and write down how you got it.
 4. Home office: measure the space and photo it. $5 a square foot up to 300 square feet with the simplified method.
 5. Retirement and health: if you pay your own health insurance, those premiums may be deductible. A SEP can wait until you file; some other plans can't.
 
 Not on the list: buying things you don't need. A deduction saves a fraction of what you spend.""",
-  short="Year-end, cash-method freelancers: expenses count when PAID. Before Dec 31: total your mileage log (72.5¢/mi), prepay renewals you'd pay in Jan anyway, set your phone/internet business %, measure the home office. Don't buy stuff you don't need.",
+  short="Year-end, cash-method freelancers: expenses count when PAID. Before Dec 31: total your mileage log (72.5¢/mi to Jun 30, 76¢ after), prepay renewals you'd pay in Jan anyway, set your phone/internet business %, measure the home office. Don't buy stuff you don't need.",
   facebook="Year-end checklist worth ten minutes: total the mileage log while you can still fill gaps from your calendar, pay any business renewals due early January before the 31st, write down your phone/internet business percentage, and measure and photograph your home office space.",
   sources=[IRS + "/publications/p334", IRS + "/tax-professionals/standard-mileage-rates", IRS + "/businesses/small-businesses-self-employed/home-office-deduction"],
-  claims=["Cash method: deduct when paid", "Prepaid expenses within the 12-month rule", "2026 mileage 72.5 cents", "Simplified home office $5/sq ft up to 300 sq ft"]),
+  claims=["Cash method: deduct when paid", "Prepaid expenses within the 12-month rule", "2026 mileage: 72.5¢ Jan–Jun, 76¢ Jul–Dec (IRS Notice 2026-10, Announcement 2026-11)", "Simplified home office $5/sq ft up to 300 sq ft"]),
 
  dict(date="2026-12-11", topic="retirement", title="Retirement deadlines: what can wait",
   card=["Retirement for 2026:", "IRA & SEP can wait", "check 401(k) timing now"],
