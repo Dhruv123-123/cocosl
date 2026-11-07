@@ -36,11 +36,15 @@ def system_status(factory: Factory, now: datetime | None = None) -> dict:
         alerts.append(f"{len(needs_check)} publication(s) were interrupted mid-upload: check the platform.")
     if not factory.settings.dry_run:
         from .publish import credential_status
-        missing = {k: v for k, v in credential_status(factory.settings).items() if v}
-        for row in db.query("SELECT platform, COUNT(*) n FROM publications WHERE status = 'queued' GROUP BY platform"):
-            if row["platform"] in missing:
-                alerts.append(f"{row['n']} post(s) queued for {row['platform']} but it isn't connected "
-                              f"(missing {', '.join(missing[row['platform']])}).")
+        cache: dict = {}
+        for row in db.query("SELECT s.brand, p.platform, COUNT(*) n FROM publications p JOIN posts s ON s.id = p.post_id "
+                            "WHERE p.status = 'queued' GROUP BY s.brand, p.platform"):
+            if row["brand"] not in cache:
+                cache[row["brand"]] = credential_status(factory.settings.for_brand(row["brand"]))
+            missing = cache[row["brand"]].get(row["platform"])
+            if missing:
+                alerts.append(f"{row['n']} {row['brand']} post(s) queued for {row['platform']} but it isn't connected "
+                              f"(missing {', '.join(missing)}).")
     since = (now.replace(microsecond=0) - timedelta(hours=24)).isoformat()
     token_fail = db.one("SELECT detail FROM audit_log WHERE action = 'tokens.refresh_failed' AND ts >= ? "
                         "ORDER BY id DESC LIMIT 1", [since])

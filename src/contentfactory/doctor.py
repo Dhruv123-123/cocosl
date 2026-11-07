@@ -101,11 +101,14 @@ def _publishing(f: Factory, online: bool) -> list[Result]:
     res = [Result("dry run", "ok" if f.settings.dry_run else "warn",
                   "ON: nothing is posted" if f.settings.dry_run else "OFF: approved posts go live on schedule")]
     used = {a.platform for b in f.brands().values() for a in b.accounts if a.enabled}
-    for platform, missing in credential_status(f.settings).items():
-        if platform not in used:
-            continue
-        res.append(Result(platform, "ok" if not missing else ("warn" if f.settings.dry_run else "fail"),
-                          "connected" if not missing else f"missing {', '.join(missing)} (docs/CREDENTIALS.md)"))
+    multi = len(f.brands()) > 1
+    for slug, b in f.brands().items():
+        status = credential_status(f.settings.for_brand(slug))
+        for platform in sorted({a.platform for a in b.accounts if a.enabled}):
+            missing = status.get(platform, [])
+            name = f"{slug}/{platform}" if multi else platform
+            res.append(Result(name, "ok" if not missing else ("warn" if f.settings.dry_run else "fail"),
+                              "connected" if not missing else f"missing {', '.join(missing)} (docs/CREDENTIALS.md)"))
     base = f.settings.public_media_base_url
     if used & {"instagram", "threads"}:
         if not base:

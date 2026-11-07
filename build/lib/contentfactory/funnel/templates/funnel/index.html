@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}Audience funnel{% endblock %}
+{% block content %}
+<div class="page-head">
+  <div>
+    <h1>Audience funnel</h1>
+    <p class="muted">Views → link clicks → email subscribers → sales. Link pages, double opt-in signups, weekly digests and payment webhooks.</p>
+  </div>
+</div>
+
+<div class="card section">
+  <div class="card-head"><h2>Setup</h2></div>
+  <div class="statusbar">
+    <span class="badge {{ 'badge-ok' if public_url else 'badge-warn' }}" title="Where /subscribe, /confirm and /go are publicly reachable">FUNNEL_PUBLIC_URL {{ public_url or 'not set' }}</span>
+    <span class="badge {{ 'badge-ok' if smtp else 'badge-warn' }}">SMTP {{ 'configured' if smtp else 'not set: emails saved as .eml' }}</span>
+    <span class="badge {{ 'badge-ok' if address else 'badge-block' }}">BUSINESS_ADDRESS {{ 'set' if address else 'missing (required to send)' }}</span>
+    <span class="badge {{ 'badge-ok' if stripe else 'badge-info' }}">Stripe webhook {{ 'on' if stripe else 'off' }}</span>
+    <span class="badge {{ 'badge-ok' if gumroad else 'badge-info' }}">Gumroad ping {{ 'on' if gumroad else 'off' }}</span>
+  </div>
+</div>
+
+<div class="card section">
+  <div class="card-head"><h2>Funnel by brand</h2><a class="small" href="/funnel/stats.json">JSON</a></div>
+  <div class="table-wrap"><table class="table">
+    <thead><tr><th>Brand</th><th class="right">Views</th><th class="right">Link clicks</th><th class="right">Subscribers</th><th class="right">Sales</th><th class="right">Revenue</th></tr></thead>
+    <tbody>
+    {% for s in stats %}
+      <tr><td>{{ s.brand }}</td>
+        <td class="right">{{ s.views|compact }}</td>
+        <td class="right">{{ s.link_clicks|compact }} <span class="small muted">{{ s.click_rate }}%</span></td>
+        <td class="right">{{ s.subscribers }} <span class="small muted">{{ s.signup_rate }}%</span>{% if s.pending %} <span class="small muted">+{{ s.pending }} pending</span>{% endif %}</td>
+        <td class="right">{{ s.sales }} <span class="small muted">{{ s.sale_rate }}%</span></td>
+        <td class="right">{{ s.revenue_cents|money }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table></div>
+  <p class="small muted">Percentages are conversion from the previous step.</p>
+</div>
+
+<div class="grid grid-2 section">
+{% for r in rows %}
+  <div class="card">
+    <div class="card-head"><h2>{{ r.name }}</h2>
+      <span class="badge badge-accent">{{ r.counts.confirmed or 0 }} confirmed</span></div>
+    <p class="small muted">{{ r.counts.pending or 0 }} pending · {{ r.counts.unsubscribed or 0 }} unsubscribed · +{{ r.counts.new_7d or 0 }} this week · +{{ r.counts.new_30d or 0 }} in 30 days</p>
+    {% set pts = r.growth|sparkline %}
+    {% if pts %}<svg class="spark" width="120" height="28" viewBox="0 0 120 28" aria-label="Signups, last 30 days"><polyline fill="none" stroke="currentColor" stroke-width="2" points="{{ pts }}"/></svg>{% endif %}
+    <div class="btn-row mt">
+      <a class="btn" href="/funnel/{{ r.slug }}/subscribers">Subscribers</a>
+      <a class="btn" href="/funnel/{{ r.slug }}/export.csv">Export CSV</a>
+      <a class="btn" href="/l/{{ r.slug }}" target="_blank">Live link page</a>
+      {% if r.site %}<a class="btn" href="{{ r.site_rel|media_url }}" target="_blank">Static copy</a>{% endif %}
+    </div>
+    <div class="btn-row mt">
+      <form method="post" action="/funnel/{{ r.slug }}/digest"><input type="hidden" name="days" value="7"><button class="btn btn-primary" type="submit">Draft weekly digest</button></form>
+      <form method="post" action="/funnel/{{ r.slug }}/link-page"><button class="btn" type="submit">{{ 'Rebuild' if r.site else 'Build' }} link page</button></form>
+      <form method="post" action="/funnel/{{ r.slug }}/brand-kit"><button class="btn" type="submit">{{ 'Rebuild' if r.kit else 'Build' }} brand kit</button></form>
+    </div>
+    {% if r.kit %}<p class="small muted mt">Brand kit: <a href="{{ (r.kit_rel ~ '/style-sheet.html')|media_url }}" target="_blank">style sheet</a> · <a href="{{ (r.kit_rel ~ '/bio-pack.txt')|media_url }}" target="_blank">bios</a> · <a href="{{ (r.kit_rel ~ '/profile-picture.png')|media_url }}" target="_blank">profile pic</a> · <a href="{{ (r.kit_rel ~ '/youtube-banner.png')|media_url }}" target="_blank">banner</a></p>{% endif %}
+  </div>
+{% endfor %}
+</div>
+
+<div class="card section">
+  <div class="card-head"><h2>Recent digests</h2></div>
+  {% if drafts %}
+  <div class="table-wrap"><table class="table">
+    <thead><tr><th>#</th><th>Brand</th><th>Subject</th><th>Status</th><th>Created</th></tr></thead>
+    <tbody>{% for d in drafts %}
+      <tr><td><a href="/funnel/digest/{{ d.id }}">{{ d.id }}</a></td><td>{{ d.brand }}</td><td><a href="/funnel/digest/{{ d.id }}">{{ d.subject }}</a></td>
+      <td><span class="badge {{ 'badge-ok' if d.status == 'sent' else 'badge-info' }}">{{ d.status }}</span></td><td class="small muted">{{ d.created_at|humanize }}</td></tr>
+    {% endfor %}</tbody>
+  </table></div>
+  {% else %}<div class="empty">No digests yet. Use “Draft weekly digest” on a brand.</div>{% endif %}
+</div>
+{% endblock %}
