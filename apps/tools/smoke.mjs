@@ -442,6 +442,18 @@ const checks = [
     await page.waitForTimeout(300);
     if (outside.length) throw new Error(`checking a link called out: ${outside.join(', ')}`);
   }],
+  ['/scam-checker/link/', '#result .score', async (page) => {
+    // A domain from the shipped phishing list: found offline, and the address isn't sent anywhere.
+    const { sample } = JSON.parse(await readFile(join(root, 'scam-checker/phishlist/phish-meta.json'), 'utf8'));
+    const outside = []; page.on('request', (r) => { if (!/^(https?:\/\/(127\.0\.0\.1|localhost)[:/]|data:|blob:)/.test(r.url())) outside.push(r.url()); });
+    await page.fill('#url', `https://login.${sample}/verify`);
+    await page.click('#link-form button[type=submit]');
+    await page.waitForFunction(() => /Reported as phishing/.test(document.querySelector('#result .score')?.textContent || ''), null, { timeout: 5000 });
+    if (outside.length) throw new Error(`the list check called out: ${outside.join(', ')}`);
+    await page.fill('#url', 'https://www.irs.gov/payments');
+    await page.click('#link-form button[type=submit]');
+    await page.waitForFunction(() => /Official site/.test(document.querySelector('#result .score')?.textContent || ''));
+  }],
   ['/scam-checker/es/enlace/', '#result .score', async (page) => { await page.click('[data-url*=usps]'); }],
   ['/scam-checker/scams/', '.tiles'],
   ['/scam-checker/es/estafas/', '.tiles'],

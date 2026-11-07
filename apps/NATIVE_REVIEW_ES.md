@@ -51,7 +51,7 @@ Do the **first three** first: they are the most-used tools and the ones Dinero S
 | `money-calculators/es/remittance-cost/` (envíos de dinero) | `pages-es.mjs`, `lib/text-extra.js` EXTRA.es `rf`, `remit` | needs review |
 | `money-calculators/es/gracias/` | `pages-es.mjs` | needs review |
 | `scam-checker/es/index.html` (¿es una estafa?) | `scam-checker/` i18n (`lib/i18n.js`) | needs review |
-| `scam-checker/es/enlace/` | `scam-checker/lib/i18n.js` | needs review |
+| `scam-checker/es/enlace/` | `scam-checker/lib/i18n.js`, `scam-checker/link.js` (phishing-list result and credit, added Nov 7) | needs review |
 | `scam-checker/es/thanks.html` | the page | needs review |
 | `scam-checker/es/estafas/index.html` | `scam-checker/scams-es.mjs` (built by `scam-checker/build.mjs`) | needs review |
 | `scam-checker/es/estafas/alerta-de-fraude-bancaria-falsa/` | `scam-checker/scams-es.mjs` | needs review |
