@@ -114,13 +114,286 @@ Tip: add a rule that skips emails 5, 9 and the product line of 10 for people who
 - [ ] `content/products/the-20-minute-budget.md` > `buy_url`: your real Gumroad / Lemon Squeezy link.
 - [ ] `site.json` > `url`, `contact_email`, `socials`, and `affiliates` (leave empty until you have real, approved affiliate links; they render with an "affiliate" label and `rel="sponsored"`).
 - [ ] `site.json` > `email` provider (step 2).
-- [ ] Optional analytics: paste a privacy-friendly snippet (e.g. Plausible, GoatCounter, Cloudflare Web Analytics) into `site.json` > `analytics_snippet`.
-  For Plausible, set `plausible_domain` instead: it loads the outbound-links + tagged-events script and tags buy buttons (`Product Click`), affiliate links (`Affiliate Click`) and signups (`Signup`). `utm_emails: true` adds UTM to the site links in the exported emails.
-- [ ] Optional: `hold` keeps pieces off the site without deleting them, for example until they pass review: `{"enabled": true, "blog": ["*"], "products": [slugs], "emails": [slugs]}`. Held pages aren't built, held emails leave `sequence.json`, and links to them render as plain text. `sites/dinero-simple/site.json` has the lean-launch hold ready, with `enabled: false`.
+- [ ] Analytics: Plausible (cookieless) is on every page, set by `site.json` > `analytics.plausible_domain` (default `moneymadesimple.netlify.app`; env `PLAUSIBLE_DOMAIN` overrides, empty turns it off). Add that site in Plausible with goals `Product Click`, `Affiliate Click`, `Signup` and `Outbound Link: Click` (see `docs/UTM.md` section 3). Buy buttons and affiliate links carry the event classes; signups send `Signup` with a `form` property.
 - [ ] Only set `sale_price` on a product while a launch price is actually running. No fake countdowns.
 - [ ] Submit `https://<your-site>/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
 - [ ] Proofread the facts: every article lists its sources. Contribution limits and rates change; re-check
       the IRS limits each November.
+
+## Comparison pages (affiliate)
+
+`content/compare/` holds 8 comparison pages at `/compare/` (high-yield savings, budgeting apps, credit-builder
+cards, robo-advisors, bill negotiation, identity theft protection, balance transfer cards, Rocket Money vs YNAB
+vs Monarch). Each has a side-by-side table, an FTC disclosure box at the top, and a "Checked as of" date with
+a note to verify rates. Update `as_of` whenever you re-check a page.
+
+Links are written as `[text](aff:sofi)`. The key points to `site.json` > `programs`:
+
+- `affiliate_url` empty (now): the link goes to the provider's official site, with no commission and no
+  "sponsored" label, and the disclosure says we earn nothing from the page.
+- Paste your approved link into `affiliate_url`: the link becomes `rel="sponsored"`, sends a Plausible
+  `Affiliate Click`, and the disclosure names that company automatically.
+- Payout notes from `research/02-affiliate-programs.md` are kept beside each program for reference.
+- `compliance_review: required` (robo-advisors): the build prints a reminder when a broker/adviser link
+  is paid, because FINRA/SEC rules mean the firm may need to approve the page first.
+
+## Start here, resources and the quiz
+
+- `/start/` (`content/pages/start.md`): hub page with five "sounds like me" paths into articles, comparisons and the reset.
+- `/resources/`: built from `site.json` > `programs` (with `category`, `blurb`, `compare`) plus `free_tools`. Each
+  tool shows "affiliate" or "no affiliation" from its affiliate slot, so the page stays truthful as you join programs.
+- `/quiz/` (`content/quiz.json` + `static/quiz.js`): "What's your money personality?", 6 questions, 4 results
+  (Avoider, Spender, Juggler, Cautious Saver), each with three linked moves and the 7-Day Money Reset signup.
+  Signups are tagged `quiz-<result>` so you can segment emails; Plausible gets a `Quiz Complete` event.
+  Linked from the home hero, the link-in-bio page and the footer.
+
+## Social sharing and Pinterest
+
+Every page has Open Graph and Twitter tags (title, description, image with size and alt text).
+Articles and comparisons add `article:published_time`, `article:modified_time`, `article:author` and
+`article:section`; products add `product:price:amount`/`currency` and availability. That's what Pinterest
+reads for article and product rich pins: claim the domain in Pinterest, then rich pins apply automatically.
+
+## Affiliate articles from the content thread
+
+19 review and how-to articles from the content thread are in `content/blog/` (this PR is now the only copy;
+see `AFFILIATE_ARTICLES.md` for the pre-publish checklist). Three of them (how to open a high-yield savings
+account, how to choose a budgeting app, are robo-advisors worth it) target "how to" keywords so they feed the
+comparison pages instead of competing with them. They link out through `/go/<slug>/` redirect pages made from `go-links.json`.
+
+- **One place for approved links:** paste a tracking link into `go-links.json` > `affiliate_url` and run
+  `python3 site/tools/make_go_links.py`. The build also copies it into the matching `site.json` program, so
+  comparison pages, the resources page and their disclosures update too.
+- **No duplicates:** `site.json` > `blog_redirects` retires blog slugs a comparison page already covers
+  (best budgeting apps, best HYSAs, best robo-advisors, Monarch vs YNAB). Those articles are skipped even if
+  present, links to them are rewritten, and the old URL 301-redirects (`_redirects` on Netlify, a noindex
+  stub elsewhere).
+- **Cross-links:** `site.json` > `article_compare` adds a "Compare your options" box to an article and a
+  "Go deeper" list on the comparison page.
+
+## Newsletter archive
+
+Each weekly issue is a Markdown file in `content/newsletter/` (front matter: `issue`, `date` = send date,
+`title`, optional `seo_title`, `description`, `subject`, `preheader`). The build makes:
+
+- `/newsletter/`: the archive (an honest "first issue goes out on ..." note until one has been sent), with signup.
+- `/newsletter/<slug>/`: one page per issue, with older/newer links, Article JSON-LD and the signup box.
+- `/newsletter/feed.xml`: RSS 2.0 with the full issue in `content:encoded`, for feed readers and for
+  RSS-to-email (Kit, MailerLite and Buttondown can all send from a feed). The articles feed stays at `/feed.xml`.
+- `public/emails/newsletter/<slug>/email.html`: a paste-ready email of every issue, scheduled ones included.
+
+An issue only goes public on a build on or after its `date`, so write ahead, send it from your email provider
+that day, and let the site catch up. Netlify rebuilds only on a push, so add a build hook and save it as the
+repo secret `NETLIFY_BUILD_HOOK`; `.github/workflows/netlify-rebuild.yml` pings it every Thursday. The
+GitHub Pages workflow has the same weekly schedule. Preview scheduled issues locally with
+`NEWSLETTER_SHOW_SCHEDULED=1 python3 site/build.py`, or pretend it's another day with `BUILD_DATE=2026-11-20`.
+
+Seven issues are written and scheduled (weekly, Nov 12 to Dec 24, 2026). They aren't in the welcome sequence; send
+them to everyone on the list.
+
+## Budget by salary and cost of living by city
+
+`pseo.py` builds 35 pages from data files, so every table on them is computed, not typed:
+
+- `/budget/<salary>-salary/` for 8 salary bands ($30k, $40k, $50k, $60k, $75k, $100k, $150k, $200k) plus the
+  `/budget/` hub: 2026 take-home pay (federal maths identical to the take-home pay calculator), Texas / North
+  Carolina / California / NYC side by side, a four-line monthly plan, which of the 25 cities' rents fit,
+  emergency fund and 401(k) maths, bracket explanation, FAQ schema. **Each page also has a hand-written worked
+  example** from `content/budget-examples.md` (one `## <salary>` section each; the build fails if one is
+  missing, and a test checks each example quotes the page's own take-home figure). These were 20 pages until
+  Nov 2026; the scouting audit (PR #2) found 99% shared wording between neighbours, so the other 12 URLs now
+  301 to the nearest band (`pseo.SALARY_REDIRECTS`, written to `_redirects`).
+- `/cost-of-living/<city>/` for the 25 largest US cities plus the `/cost-of-living/` hub: HUD fair market
+  rent, salary needed at 30% of gross, take-home after state and city tax at six salaries, a monthly budget,
+  rank against the other 24 cities, a sourced local transit fact ("Getting around", from
+  `cities.json > local_fact`, checked Nov 7, 2026: fares change, so re-check yearly), FAQ schema and sources.
+
+Every page links to the take-home pay calculator (PR #8), pre-filled with the page's salary and state rate.
+Set its address in `site.json` > `calculators_url` (default `https://moneymadesimple.netlify.app/calculators`,
+the same URL as the calculator's own `config.js`). If the calculators end up somewhere else, change it there.
+
+**Update every year:** `content/data/tax_rules.json` each November (federal, state and city tax rules) and
+`content/data/cities.json` each October, when HUD publishes new fair market rents. **Before promoting these
+pages:** the rents were read from sites that republish HUD's tables (HUD's own site was unreachable from the
+build machine), so spot-check a few against HUD's FMR tool. Oklahoma City and Las Vegas are still FY2026
+figures, and Indianapolis uses Marion County's long-standing 2.02% rate; confirm both.
+
+## Money questions (/ask/)
+
+`content/ask.md` is one page of 30 short Q&As (`## Group`, then `### Question` and the answer), with a jump list,
+a link to each answer and FAQPage schema. The questions were picked so they don't repeat an article, a comparison
+page, a newsletter issue or any article FAQ; `tests/test_site.py` checks every new question against those titles
+and FAQs, so the build stays free of near-duplicates. Tokens in answers: `{month:50000}` / `{paycheck:50000}`
+(take-home from `pseo.py`, so the numbers match the salary pages), `(calc:take-home-pay)` / `(calc:debt-payoff)`
+(the calculators), `(shop:<slug>)` (that card on /shop/; unknown slugs fail the build). Every answer ends with a
+"Tools:" line.
+
+## Pinterest pin images
+
+`python3 tools/make_pins.py` renders the 10 designs in `PINS.md` to `pins/NN-<campaign>.png` (1000×1500) and
+writes `pins/pins.csv` with each pin's title, description, alt text, board and tracked link, ready for Pinterest's
+bulk upload or to paste by hand.
+
+`python3 tools/make_pins.py --all --start YYYY-MM-DD` also renders two designs (A: dark, headline + one-line
+pitch; B: light, gold headline block + what's inside) for every shop product, comparison and article, 196 more
+pins in `pins/library/` (not committed; they're in the project files), and writes `pins/schedule.csv`: 60 days
+of fresh pins, 1 a day for two weeks, then 2, then 3 (what the scouting audit recommends for a new account), each
+page's design B at least 14 days after its A, and never before the page is live. Pins that don't fit in 60 days
+are listed at the end, undated, as the backlog. All text on a pin comes from its page's title, description and
+headings, so re-run it after editing a page. The $50k numbers come from `pseo.py`; re-run after the tax data or shop prices
+change. Needs Playwright and Chromium (`pip install playwright && python -m playwright install chromium`).
+
+## Shop
+
+`/shop/` lists the products thread's whole catalog (PR #6): the guide-and-spreadsheet kits and the Google
+Sheets / Notion templates (Gumroad), the printables (Etsy), and the bundles first, with "save $X" against buying
+separately. Every buy button sends a Plausible `Product Click` with `product` and `store` properties.
+
+- The catalog lives in `content/shop.json`, made by `python3 site/tools/import_shop.py <content-factory folder>`
+  from `products/`, `templates/` and `etsy/` (it also makes the 360px card images in `static/img/shop/`).
+  Re-run it when the products thread changes a name, price or blurb.
+- **Store links are placeholders** until the stores exist: Gumroad items link to
+  `site.json > stores.gumroad` + `/l/<slug>`, Etsy items to `stores.etsy` + a shop search. Set the two store
+  URLs in `site.json`, and paste exact listing links into `shop.json` as `url` (Gumroad) or `etsy_url`;
+  the import tool keeps links you've pasted.
+
+## Debt payoff calculator
+
+`/debt-payoff/` is one page: an in-page calculator (`static/debt-calc.js`, up to six debts, avalanche vs snowball,
+same maths as `pseo.payoff()` and the calculators' debt tool; runs in the browser, nothing is sent) and three
+worked examples ($5k, $15k, $30k) with hand-written notes from `content/debt-examples.md`. Each example has a
+button that loads it into the calculator. The ten per-amount pages it replaced (Nov 2026, after the scouting
+audit) 301 to it.
+
+## Holiday page (/holiday/)
+
+`content/holiday.md` is the Black Friday and holiday landing page: key dates, a holiday budget in four numbers,
+Black Friday traps, four buy-now-pay-later rules, the ten-step year-end checklist, an FAQ and sources. Themes and
+claims come from the content thread's holiday pack; update the key dates each season.
+
+The opt-in box sends the form with `source=holiday-checklist`, then goes to `/holiday/thanks/` (noindex), which has
+the download button for `static/downloads/year-end-money-checklist.pdf`. Edit the printable in
+`lead-magnet/year-end-money-checklist.html` and rebuild it, with its cover image, using `python3 tools/make_assets.py`.
+The home page shows a one-line link to /holiday/ only when the build date is in November or December, and the
+daily scheduled build turns it on and off. The footer always links it.
+
+## New Year Money Reset (/new-year/)
+
+`content/new-year.md` is the landing page for the 5-email New Year Money Reset (emails: project files
+`content-factory/new-year-reset/`, sent Jan 1–5 2027 at 7am ET). The page isn't built before its `live` date
+(Dec 26), and links to it render as plain text until then. From Dec 26 to Jan 31 the home page links it instead of
+/holiday/, and /holiday/ lists it under "Tools and printables". The form sends `source=new-year-reset`, and the
+email provider starts the course from that tag. People who sign up before Jan 1 get Day 1 on Jan 1. The thanks
+page is /new-year/thanks/ (noindex). Keep the five "### Day N:" titles in step with the email subjects.
+
+## Related articles and tools
+
+`content/data/related.json` hand-picks up to four related articles and one free tool (budget by salary, debt
+payoff, city budgets, quiz, holiday, money questions) for every article. Each article shows the first three related
+articles that are published, filling in from the same pillar while some are still scheduled, plus a "Free tool for
+this" box. A test fails if a new article has no entry.
+
+## Apps site links
+
+`site.json > apps_url` is the address of the separate apps site (PR #8, `apps/`, planned as
+`https://mms-tools.netlify.app`). /holiday/ links its holiday spending planner at `<apps_url>/budget/holiday.html`.
+Set `apps_url` to `""` to hide the link (or override it with env `APPS_URL`), and update it if the Netlify site
+gets a different name.
+
+## Free tools (/tools/) and apps-site links
+
+`content/data/apps.json` lists the tools on the separate apps site (`site.json > apps_url`, PR #8), each with a
+group and the article slugs that should link it. Articles show up to two of them under "Free tools for this", next to
+their site tool from `related.json`. Salary pages link the paycheck-by-state, afford-it and emergency-fund tools, city
+pages link rent-vs-buy, paycheck and afford-it, and /debt-payoff/ links card-minimum, student-loan and afford-it.
+/tools/ lists the site's own tools, then every apps tool by group. With `apps_url` empty, every apps link disappears.
+
+## Structured data
+
+- Every indexed page gets a BreadcrumbList. A page's own one wins; otherwise it's built from the visible
+  `<p class="crumbs">` trail, or Home > page title.
+- FAQPage comes from any "## Common questions" section, plus /ask/.
+- HowTo is added to step-by-step articles that set `howto:` in front matter. Its value is the section whose numbered
+  list or `###` sub-headings are the steps, or `steps` for `## Step N:` headings. Add `howto_time: PT20M` if the
+  article says how long it takes. Six articles use it.
+
+## Page speed (Core Web Vitals)
+
+Lighthouse on Nov 7 2026 scored 100 for performance, accessibility and SEO on 11 key pages, both mobile and desktop.
+Best practices scored 96, but only because the test machine blocked the Plausible script. Mobile LCP was 1.1 to 1.5 s,
+CLS 0 and TBT 0 ms. Keep it that way:
+
+- Every `<img>` needs `width` and `height`. Images below the fold get `loading="lazy"`, and the hero image gets
+  `fetchpriority="high"`. On /shop/ that means only the first card loads eagerly.
+- Show small images. The header uses `img/logo-72.png` (1.7 KB). The big PNGs (`og-default.png`, `lead-magnet-cover.png`,
+  `product-20-minute-budget.png`) are for social cards only. Pages use JPGs, and `tests/test_site.py` checks this.
+- No web fonts: the CSS uses the system font stack (Inter only if it's already installed).
+- `public/_headers` caches images and downloads for a week, and CSS and JS for an hour. Netlify compresses text itself.
+
+To re-run Lighthouse: `npx lighthouse http://localhost:8000/shop/ --chrome-flags="--headless=new"`, adding
+`--preset=desktop` for the desktop scores.
+
+## Scheduled publishing and the editor
+
+**Articles and comparisons go live on their `date`.** A page dated after the build date isn't built, isn't in the
+sitemap or feed, and links to it from other pages render as plain text until it is (so nothing 404s in between).
+16 pages went out on Nov 7, 2026: every article the email sequence or the page templates link to, plus the four
+comparisons the first pins point at. The other 24 are dated 4 a week through Dec 18. The deploy workflows rebuild
+daily at 13:00 UTC so each one appears on its day. `BUILD_DATE=YYYY-MM-DD` builds as of a date;
+`BLOG_SHOW_SCHEDULED=1` builds everything (the tests use it). To publish a new article, give it the day it
+should go out.
+
+**The 12 product pages are overviews, not reviews**: their titles no longer say "review", because they're based
+on published features and pricing, not hands-on testing. URLs are unchanged. If you test one for real (sign up,
+use it, screenshots), you can call that one a review again.
+
+**Editor:** `site.json > editor` names the person who edits and fact-checks the site. It's a placeholder ("The
+Money Made Simple editor", `placeholder: true`) until there's a real name; the build prints a warning while it
+is. Articles and comparisons show "Edited and fact-checked by <name>" linking to `/about/editor/`, which lists
+what the editor checks. Once you set a real name and a true, short bio and set `placeholder` to false, article
+schema names that person as the author. The byline is a promise: only keep it if someone really does check each
+page before it goes out.
+
+## Email-capture A/B test
+
+`site.json > ab_test` runs a two-by-two test on the signup offer: two hero versions on the home page
+(headline + offer line) and two lead-magnet titles (in the home hero, the `/free/` page and every
+"Free download" box). Each visitor is assigned one of four combinations (AA, AB, BA, BB) at random, stored for
+90 days in a first-party cookie `mms_ab` (the privacy page says so). Without JavaScript everyone sees A.
+
+**Reading the result in Plausible:** add the goals `AB Exposure` and `Signup`, then the custom properties
+`variant`, `hero`, `magnet` and `test`. Open the `Signup` goal and break it down by `variant`, and compare
+with the `AB Exposure` count per variant: signup rate = Signups / Exposures. Compare `hero` A vs B and
+`magnet` A vs B the same way. As a rule of thumb, wait for at least ~100 signups per arm before calling it;
+small differences on a few dozen signups are noise.
+
+**Preview** a variant with `?ab=ba` (hero B, magnet A); previews don't set the cookie. **End the test:** set
+`active` to `false`, put the winning copy in the `a` slots (and in `lead_magnet.title` if title B wins),
+and start a new test by changing `id`. The PDF and welcome email still say "The 7-Day Money Reset"; if title B
+wins, rename them too.
+
+## Accessibility
+
+The site targets WCAG 2.2 AA. Two layers of checks:
+
+- **Every build** (`tools/check_site.py`, so Netlify, GitHub Pages and CI): `<html lang>`, alt text on every
+  image (`alt=""` for decoration), a label on every form field, no empty links, buttons or table headers, no
+  duplicate ids. `tests/test_site.py` also checks the colour tokens in `style.css` against AA contrast.
+- **Full audit** (`tests/test_a11y_browser.py`, run by `.github/workflows/a11y.yml` on PRs that touch `site/`):
+  axe-core on every page at 1280px and 390px, no sideways scrolling on phones, keyboard-only use (skip link,
+  a visible focus ring on every control, the quiz), and 44px tap targets for the nav, forms and buttons.
+  Run it locally with Playwright and `AXE_PATH` (see the test's docstring).
+
+When you add a table, an image or a form field in Markdown or `site.json`, the build will tell you if
+something's missing. Pinterest pin designs for the main pages are in `PINS.md`.
+
+## Deploy check
+
+`python3 site/tools/check_site.py` runs after every build on Netlify and GitHub Pages, and in the tests.
+It fails the deploy on broken internal links or #anchors, missing title/description/canonical/og:image/h1,
+insecure assets, or a page over budget (HTML 100 KB; HTML + same-site CSS/JS/images 350 KB; any image
+200 KB), and prints the five heaviest pages. It warns on long or duplicate titles and descriptions.
+Add `--external` locally to HEAD-check every outbound link.
 
 ## Everyday edits
 

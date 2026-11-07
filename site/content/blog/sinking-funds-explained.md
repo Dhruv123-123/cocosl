@@ -8,6 +8,8 @@ keyword: sinking funds
 read_minutes: 6
 product: the-20-minute-budget
 sources: [https://www.consumerfinance.gov/consumer-tools/, https://www.fdic.gov/resources/deposit-insurance]
+howto: How to set up sinking funds in 20 minutes
+howto_time: PT20M
 ---
 Car registration isn't an emergency. It shows up every single year. So do holiday gifts, the annual subscription renewal, the dentist and the friend's wedding you said yes to in March.
 

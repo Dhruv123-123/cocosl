@@ -5,6 +5,8 @@ Needs Playwright with Chromium:  pip install playwright && playwright install ch
     python3 site/tools/make_assets.py
 Writes:
   site/static/downloads/the-7-day-money-reset.pdf   (from site/lead-magnet/the-7-day-money-reset.html)
+  site/static/downloads/year-end-money-checklist.pdf (from site/lead-magnet/year-end-money-checklist.html)
+  site/static/img/year-end-checklist-cover.jpg      (its page 1, 300x388, for /holiday/)
   site/static/img/lead-magnet-cover.png             (page 1 of the PDF, 600x776)
   site/static/img/product-20-minute-budget.png      (1280x720 product cover)
   site/static/img/og-default.png                    (1200x630 social share image)
@@ -59,8 +61,16 @@ def shot(page, html: str, w: int, h: int, out: Path) -> None:
     print("wrote", out.relative_to(SITE.parent))
 
 
+def make_header_logo() -> None:
+    """The header shows the logo at 36px: a 72px (2x) palette PNG is ~1.7 KB instead of the 31 KB original."""
+    from PIL import Image
+    im = Image.open(STATIC / "img" / "logo.png").convert("RGBA").resize((72, 72), Image.LANCZOS)
+    im.quantize(64, method=Image.FASTOCTREE).save(STATIC / "img" / "logo-72.png", optimize=True)
+
+
 def main() -> None:
     (STATIC / "downloads").mkdir(parents=True, exist_ok=True)
+    make_header_logo()
     src = (SITE / "lead-magnet" / "the-7-day-money-reset.html").as_uri()
     with sync_playwright() as pw:
         browser = pw.chromium.launch(executable_path=os.environ.get("CHROMIUM_PATH") or None)
@@ -79,7 +89,23 @@ def main() -> None:
         im = Image.open(STATIC / "img" / "lead-magnet-cover.png").convert("RGB")
         im.resize((600, 776), Image.LANCZOS).save(STATIC / "img" / "lead-magnet-cover.png", optimize=True)
         print("wrote site/static/img/lead-magnet-cover.png")
+        ye = (SITE / "lead-magnet" / "year-end-money-checklist.html").as_uri()
+        page.goto(ye)
+        page.pdf(path=str(STATIC / "downloads" / "year-end-money-checklist.pdf"), format="Letter",
+                 print_background=True, prefer_css_page_size=True)
+        c2 = browser.new_page(viewport={"width": 816, "height": 1056})
+        c2.goto(ye)
+        c2.emulate_media(media="print")
+        tmp = STATIC / "img" / "_ye.png"
+        c2.screenshot(path=str(tmp), clip={"x": 0, "y": 0, "width": 816, "height": 1056})
+        Image.open(tmp).convert("RGB").resize((300, 388), Image.LANCZOS).save(
+            STATIC / "img" / "year-end-checklist-cover.jpg", quality=82, optimize=True, progressive=True)
+        tmp.unlink()
+        print("wrote the year-end checklist PDF and cover")
         shot(page, PRODUCT, 1280, 720, STATIC / "img" / "product-20-minute-budget.png")
+        # The PNG stays for og:image; pages show a JPG (161 KB -> ~52 KB) with the 640px card as the 1x source.
+        Image.open(STATIC / "img" / "product-20-minute-budget.png").convert("RGB").save(
+            STATIC / "img" / "product-20-minute-budget-1280.jpg", quality=82, optimize=True, progressive=True)
         shot(page, OG, 1200, 630, STATIC / "img" / "og-default.png")
         browser.close()
 

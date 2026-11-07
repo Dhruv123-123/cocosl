@@ -8,6 +8,7 @@ keyword: how to freeze your credit
 read_minutes: 7
 product: the-20-minute-budget
 sources: [https://consumer.ftc.gov/articles/what-know-about-credit-freezes-and-fraud-alerts, https://www.annualcreditreport.com/, https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/, https://www.identitytheft.gov/]
+howto: How to freeze your credit at all three bureaus
 ---
 Anyone with your Social Security number and a few personal details can try to open a credit card or loan in your name. A **credit freeze** makes that much harder, it's **free by federal law**, and it takes about 15 minutes for all three bureaus.
 

@@ -8,6 +8,7 @@ keyword: how to make a budget
 read_minutes: 8
 product: the-20-minute-budget
 sources: [https://www.consumerfinance.gov/consumer-tools/, https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/]
+howto: Step by step: build yours in an evening
 ---
 Most budgets don't fail in month one. They fail in week three, when the "eating out" category is somehow empty, groceries are over, and you stop opening the spreadsheet because it only makes you feel bad.
 

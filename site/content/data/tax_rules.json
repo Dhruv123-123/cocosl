@@ -1,0 +1,320 @@
+{
+  "_about": "2026 tax figures for a single W-2 filer. Federal: IRS Rev. Proc. 2025-32 and SSA, the same figures as the take-home pay calculator (apps/money-calculators/lib/tax2026.js). State: Tax Foundation, State Individual Income Tax Rates and Brackets, 2026. Local: each city's tax office. Update every November. State and local results are estimates: credits, local add-ons and payroll deductions such as state disability insurance aren't modelled.",
+  "tax_year": 2026,
+  "sources": {
+    "federal": "https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill",
+    "ssa": "https://www.ssa.gov/oact/cola/cbb.html",
+    "state": "https://taxfoundation.org/data/all/state/state-income-tax-rates-2026/",
+    "philadelphia": "https://www.phila.gov/services/payments-assistance-taxes/business-taxes/wage-tax-employers/",
+    "nyc": "https://paychecktaxcalculator.net/local-income-tax-by-city",
+    "columbus": "https://paychecktaxcalculator.net/local-income-tax-by-city",
+    "marion_county": "https://www.in.gov/dor/"
+  },
+  "federal": {
+    "standard_deduction": 16100,
+    "brackets": [
+      [
+        12400,
+        0.1
+      ],
+      [
+        50400,
+        0.12
+      ],
+      [
+        105700,
+        0.22
+      ],
+      [
+        201775,
+        0.24
+      ],
+      [
+        256225,
+        0.32
+      ],
+      [
+        640600,
+        0.35
+      ],
+      [
+        null,
+        0.37
+      ]
+    ],
+    "social_security": {
+      "rate": 0.062,
+      "wage_base": 184500
+    },
+    "medicare": {
+      "rate": 0.0145,
+      "additional_rate": 0.009,
+      "additional_threshold": 200000
+    }
+  },
+  "states": {
+    "TX": {
+      "name": "Texas",
+      "none": true
+    },
+    "FL": {
+      "name": "Florida",
+      "none": true
+    },
+    "TN": {
+      "name": "Tennessee",
+      "none": true
+    },
+    "WA": {
+      "name": "Washington",
+      "none": true,
+      "note": "Washington taxes some capital gains, not wages."
+    },
+    "NV": {
+      "name": "Nevada",
+      "none": true
+    },
+    "CA": {
+      "name": "California",
+      "deduction": 5540,
+      "credit": 153,
+      "brackets": [
+        [
+          11079,
+          0.01
+        ],
+        [
+          26264,
+          0.02
+        ],
+        [
+          41452,
+          0.04
+        ],
+        [
+          57542,
+          0.06
+        ],
+        [
+          72724,
+          0.08
+        ],
+        [
+          371479,
+          0.093
+        ],
+        [
+          445771,
+          0.103
+        ],
+        [
+          742953,
+          0.113
+        ],
+        [
+          1000000,
+          0.123
+        ],
+        [
+          null,
+          0.133
+        ]
+      ],
+      "note": "California also withholds State Disability Insurance from paychecks, which isn't included here."
+    },
+    "NY": {
+      "name": "New York",
+      "deduction": 8000,
+      "brackets": [
+        [
+          8500,
+          0.039
+        ],
+        [
+          11700,
+          0.044
+        ],
+        [
+          13900,
+          0.0515
+        ],
+        [
+          80650,
+          0.054
+        ],
+        [
+          215400,
+          0.059
+        ],
+        [
+          1077550,
+          0.0685
+        ],
+        [
+          5000000,
+          0.0965
+        ],
+        [
+          25000000,
+          0.103
+        ],
+        [
+          null,
+          0.109
+        ]
+      ],
+      "note": "New York also deducts small disability and paid family leave contributions, not included here."
+    },
+    "IL": {
+      "name": "Illinois",
+      "exemption": 2925,
+      "flat": 0.0495
+    },
+    "AZ": {
+      "name": "Arizona",
+      "deduction": 8350,
+      "flat": 0.025
+    },
+    "PA": {
+      "name": "Pennsylvania",
+      "flat": 0.0307
+    },
+    "OH": {
+      "name": "Ohio",
+      "exemption_by_agi": [
+        [
+          40000,
+          2400
+        ],
+        [
+          80000,
+          2150
+        ],
+        [
+          500000,
+          1900
+        ]
+      ],
+      "zero_bracket": 26050,
+      "flat": 0.0275
+    },
+    "IN": {
+      "name": "Indiana",
+      "exemption": 1000,
+      "flat": 0.0295
+    },
+    "NC": {
+      "name": "North Carolina",
+      "deduction": 12750,
+      "flat": 0.0399
+    },
+    "DC": {
+      "name": "the District of Columbia",
+      "deduction": 16100,
+      "brackets": [
+        [
+          10000,
+          0.04
+        ],
+        [
+          40000,
+          0.06
+        ],
+        [
+          60000,
+          0.065
+        ],
+        [
+          250000,
+          0.085
+        ],
+        [
+          500000,
+          0.0925
+        ],
+        [
+          1000000,
+          0.0975
+        ],
+        [
+          null,
+          0.1075
+        ]
+      ]
+    },
+    "MA": {
+      "name": "Massachusetts",
+      "exemption": 4400,
+      "flat": 0.05
+    },
+    "CO": {
+      "name": "Colorado",
+      "deduction": 16100,
+      "flat": 0.044,
+      "note": "Colorado starts from federal taxable income."
+    },
+    "OK": {
+      "name": "Oklahoma",
+      "deduction": 6350,
+      "exemption": 1000,
+      "brackets": [
+        [
+          3750,
+          0.0
+        ],
+        [
+          4900,
+          0.025
+        ],
+        [
+          7200,
+          0.035
+        ],
+        [
+          null,
+          0.045
+        ]
+      ]
+    }
+  },
+  "local": {
+    "nyc": {
+      "name": "New York City income tax",
+      "deduction": 8000,
+      "brackets": [
+        [
+          12000,
+          0.03078
+        ],
+        [
+          25000,
+          0.03762
+        ],
+        [
+          50000,
+          0.03819
+        ],
+        [
+          null,
+          0.03876
+        ]
+      ]
+    },
+    "philadelphia": {
+      "name": "Philadelphia Wage Tax (resident)",
+      "flat": 0.03735,
+      "on": "wages"
+    },
+    "columbus": {
+      "name": "Columbus city income tax",
+      "flat": 0.025,
+      "on": "wages"
+    },
+    "marion_county": {
+      "name": "Marion County income tax",
+      "flat": 0.0202,
+      "exemption": 1000,
+      "verify": "2.02% is the long-standing Marion County rate; confirm the current county rate on the Indiana DOR's county tax notice before promoting the page."
+    }
+  }
+}

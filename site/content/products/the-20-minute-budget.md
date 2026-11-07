@@ -9,6 +9,7 @@ buy_url: https://example.gumroad.com/l/budget
 buy_label: Get the guide + spreadsheet
 guarantee: Instant download. If it isn't for you, email us within 14 days for a full refund. No forms, no hoops.
 image: /img/product-20-minute-budget.png
+thumb: /img/product-20-minute-budget-card.jpg
 order: 1
 includes: [14-page PDF guide with a fully worked example, Spreadsheet for Excel / Google Sheets / Numbers, Weekly check-in tab that handles overspend and rollover, Debt payoff planner: avalanche vs snowball side by side]
 ---
