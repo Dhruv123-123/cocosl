@@ -282,8 +282,24 @@ def cmd_import(args):
                     script[key] = item[key]
             pid = f.import_script(args.brand, script, item["format"], item.get("pillar", ""),
                                   item.get("idea_angle", ""), render=not args.no_render)
+        _pack_review(f, pid, item.get("review"))
         post = f.db.get("posts", pid)
         print(f"post #{pid} [{post['format']}/{post['status']}] {post['title']}")
+
+
+def _pack_review(f, pid: int, value) -> None:
+    """A pack item's "review": "native_review" | ["native_review", "legal_review"] marks the post (review gate)."""
+    if not value:
+        return
+    from .review import normalize, required, require
+    post = f.db.get("posts", pid)
+    new = [s for s in normalize(value) if s not in required(post)]
+    if not new:
+        return
+    try:
+        require(f, pid, new, note="from the pack")
+    except PermissionError as e:
+        print(f"  post #{pid}: {e} (review marker not applied)")
 
 
 def cmd_niche(args):
@@ -511,7 +527,7 @@ def _extend(sub) -> None:
                 "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup",
                 "contentfactory.publish.preflight", "contentfactory.cleanup",
                 "contentfactory.planner", "contentfactory.launch_check", "contentfactory.stats",
-                "contentfactory.scaffold", "contentfactory.manual", "contentfactory.numbercheck", "contentfactory.ytplan", "contentfactory.triage", "contentfactory.challenge", "contentfactory.whitelabel", "contentfactory.originality", "contentfactory.newsletter_export", "contentfactory.batch_record", "contentfactory.routine", "contentfactory.export_week"):
+                "contentfactory.scaffold", "contentfactory.manual", "contentfactory.numbercheck", "contentfactory.ytplan", "contentfactory.triage", "contentfactory.challenge", "contentfactory.whitelabel", "contentfactory.originality", "contentfactory.newsletter_export", "contentfactory.batch_record", "contentfactory.routine", "contentfactory.export_week", "contentfactory.scorecard", "contentfactory.sequence_export", "contentfactory.scheduler", "contentfactory.review"):
         try:
             module = __import__(mod, fromlist=["register"])
         except ImportError:
