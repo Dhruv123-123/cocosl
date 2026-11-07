@@ -82,16 +82,33 @@ def collect(factory, day: date | None = None, cap: bool = True) -> dict:
     by_hand = [r for r in pending(factory) if r["due"] or (r.get("scheduled_at") or "")[:10] <= day.isoformat()]
     ensure_schema(factory.db)
     people = inbox(factory.db, limit=50)
+    from .launchmode import active_brands
+    act = active_brands(factory)
+    if act is not None:  # two-brand launch: the paused brands don't take any of the 15 minutes
+        items = [i for i in items if i.brand in act or i.brand == "-"]
+        red = [i for i in red if i.brand in act or i.brand == "-"]
+        review = [i for i in review if i.brand in act]
+        by_hand = [r for r in by_hand if r["brand"] in act]
+        people = [c for c in people if c.get("brand") in act]
     if cap:
         red, review, by_hand, people = red[:5], review[:2], by_hand[:3], people[:8]
-    return {"day": day, "red": red, "review": review, "by_hand": by_hand, "people": people,
+    from .timelog import limit_per_day, weeks
+    w = weeks(factory, 1, day)[0]
+    return {"day": day, "brands": act, "time": {"brand_min": w["brand_min"], "limit_week": w["limit_week"],
+                                                "per_day": limit_per_day()}, "red": red, "review": review, "by_hand": by_hand, "people": people,
             "extras": extras(factory, day), "capped": cap,
             "more": {"review": sum(1 for i in items if i.kind.startswith("review")) - len(review)}}
 
 
 def to_text(r: dict) -> str:
     d = r["day"]
-    out = [f"Today, {d:%a %d %b %Y}" + (" · 15 minutes" if r["capped"] else ""), ""]
+    out = [f"Today, {d:%a %d %b %Y}" + (" · 15 minutes" if r["capped"] else "")
+           + (f" · launch mode: {', '.join(r['brands'])}" if r.get("brands") else "")]
+    if r.get("time"):
+        t = r["time"]
+        out.append(f"Time this week: {t['brand_min']} of {t['limit_week']} min on the brands "
+                   f"(`factory time log <minutes>` when you're done)")
+    out.append("")
 
     out.append(f"1. Triage ({STEP_MIN['triage']} min)")
     out += [f"   - [{i.brand}] {i.kind}: {i.what}" + (f"\n     → {i.how}" if i.how else "") for i in r["red"]] \

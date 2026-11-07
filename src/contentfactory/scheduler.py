@@ -119,7 +119,9 @@ def reslot(factory, brand: str | None = None, after: datetime | None = None, app
     after = after or datetime.now(timezone.utc)
     brands = factory.brands()
     moves, dropped = [], []
-    slugs = [brand] if brand else list(brands)
+    from .launchmode import active_brands
+    act = active_brands(factory)
+    slugs = [brand] if brand else [b for b in brands if act is None or b in act]
     db = factory.db
     for slug in slugs:
         b = brands[slug]

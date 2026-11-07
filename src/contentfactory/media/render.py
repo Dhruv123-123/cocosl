@@ -6,6 +6,7 @@ half-written post). Returned paths are relative to settings.output_dir.
 """
 from __future__ import annotations
 
+import json
 import re
 import shutil
 from pathlib import Path
@@ -89,7 +90,7 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     from .tts import human_voice
     tts = human_voice(settings, brand, post.get("id"), lines, work / "voice") \
         or synthesize_segments(settings, brand, lines, work / "voice")
-    beats, cues, slots, t, starts, owned = [], [], [], 0.0, [], []
+    beats, cues, slots, t, starts, owned, stocked = [], [], [], 0.0, [], [], []
     seg_words = tts.words or [None] * len(lines)
     from .charts import render_chart_clip
     for i, (line, head, img, dur) in enumerate(zip(lines, heads, images, tts.durations)):
@@ -101,6 +102,11 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
         if own:
             clip, chart = own, None  # the person's own recording beats any generated visual
             owned.append(own)
+        elif not chart and i < len(segments) and (getattr(segments[i], "broll", "") or "").strip():
+            stock_clip = settings.home / segments[i].broll
+            if stock_clip.is_file():
+                clip = stock_clip
+                stocked.append(stock_clip)
         beats.append(Beat(img, "" if chart else head, t, slot, clip=clip, still=bool(chart)))  # charts: own title, no pan
         if seg_words[i]:
             cues += time_segment_words(line, t, dur, seg_words[i])
@@ -185,6 +191,11 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
                            music=music.name if music else None))
     for own in dict.fromkeys(owned):
         prov.append(provenance(str(own), "own", "footage", "", "recorded by the channel owner"))
+    for clip in dict.fromkeys(stocked):
+        side = clip.with_suffix(".json")
+        info = json.loads(side.read_text()) if side.is_file() else {}
+        prov.append(provenance(str(clip), "licensed", info.get("provider", "stock"), info.get("query", ""),
+                               f"{info.get('license', 'stock licence')}; by {info.get('author', '?')} {info.get('page', '')}".strip()))
     if music:
         prov.append(provenance(str(music), "licensed", "user-music", "",
                                "user-supplied via FACTORY_MUSIC_DIR; keep the licence on file"))

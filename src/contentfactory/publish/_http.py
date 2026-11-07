@@ -83,7 +83,19 @@ class ApiClient:
     def __init__(self, platform: str, transport: httpx.BaseTransport | None = None,
                  client: httpx.Client | None = None, timeout: httpx.Timeout = DEFAULT_TIMEOUT):
         self.platform = platform
-        self._client = client or httpx.Client(transport=transport, timeout=timeout, follow_redirects=False)
+        self._given = client
+        self._transport, self._timeout = transport, timeout
+        self._made: httpx.Client | None = None
+
+    @property
+    def _client(self) -> httpx.Client:
+        """Built on first use: a publisher made only to check its credentials (the dashboard does that
+        for every platform on each page load) never pays for loading the TLS certificates."""
+        if self._given is not None:
+            return self._given
+        if self._made is None:
+            self._made = httpx.Client(transport=self._transport, timeout=self._timeout, follow_redirects=False)
+        return self._made
 
     def request(self, method: str, url: str, *, what: str = "", ok: tuple[int, ...] = (),
                 **kwargs: Any) -> httpx.Response:
@@ -108,7 +120,8 @@ class ApiClient:
         return data if isinstance(data, dict) else {"data": data}
 
     def close(self) -> None:
-        self._client.close()
+        if self._given is not None or self._made is not None:
+            self._client.close()
 
 
 def poll(check: Callable[[], tuple[bool, Any]], *, platform: str, what: str, sleep: Sleep,
