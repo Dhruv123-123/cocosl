@@ -1,0 +1,33 @@
+:root { --ink: #14202b; --muted: #5a6875; --line: #dfe5ea; --bg: #fff; --high: #c62828; --med: #e08a00; --low: #2e7d32; --brand: #1f4fd1; }
+@media (prefers-color-scheme: dark) { :root { --ink: #e9eef2; --muted: #a3b0bb; --line: #2c3a46; --bg: #12191f; --brand: #7aa2ff; } }
+* { box-sizing: border-box; }
+body { margin: 0 auto; max-width: 460px; padding: 14px; font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); }
+body.ext { width: 380px; max-width: none; margin: 0; }
+header { display: flex; gap: 8px; align-items: center; font-size: 15px; margin-bottom: 10px; }
+label { display: block; font-weight: 600; margin-bottom: 6px; }
+textarea { width: 100%; font: inherit; padding: 8px; border: 1px solid var(--line); border-radius: 8px; background: transparent; color: inherit; resize: vertical; }
+button { margin-top: 8px; width: 100%; padding: 9px; border: 0; border-radius: 8px; background: var(--brand); color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+.page { border-left: 4px solid var(--line); padding: 6px 10px; margin-bottom: 12px; background: color-mix(in srgb, var(--line) 35%, transparent); border-radius: 6px; }
+.page p { margin: 0; }
+.page ul { margin: 4px 0 0; padding-left: 18px; }
+.page.official, .page.low { border-color: var(--low); }
+.page.medium { border-color: var(--med); }
+.page.high { border-color: var(--high); }
+#result { margin-top: 12px; }
+.verdict { border-radius: 8px; padding: 10px; border: 1px solid var(--line); }
+.verdict.high { border-color: var(--high); } .verdict.medium { border-color: var(--med); } .verdict.low { border-color: var(--low); }
+.verdict p { margin: 4px 0 0; }
+.meter { height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; }
+.meter span { display: block; height: 100%; background: var(--low); }
+.medium .meter span { background: var(--med); } .high .meter span { background: var(--high); }
+.score { font-weight: 800; font-size: 16px; }
+.score small { color: var(--muted); font-weight: 600; }
+.flags, ol { padding-left: 18px; margin: 8px 0; }
+.flags li, ol li { margin-bottom: 4px; }
+.h { font-weight: 700; margin: 10px 0 0; }
+.toggle { display: flex; gap: 8px; align-items: flex-start; font-weight: 500; margin-top: 12px; }
+.toggle input { margin-top: 3px; }
+.tiny { color: var(--muted); font-size: 12px; margin: 8px 0; }
+footer { font-size: 13px; }
+a { color: var(--brand); }
+@media (prefers-color-scheme: dark) { button { color: #0b1220; } }

@@ -78,3 +78,16 @@ export const ES = {
     safe: { text: '¡Hola! ¿Sigue en pie la cena del jueves? Paso por ti como a las 7.', sender: '' },
   },
 };
+
+/** Return a copy of an analyzeMessage() result with every user-facing string in Spanish. */
+export function translateResult(r) {
+  const issue = (i) => ({ ...i, label: ES.links[i.code] ? ES.links[i.code](i.param) : i.label });
+  return {
+    ...r,
+    category: ES.categories[r.categoryId] || r.category,
+    steps: r.stepIds.map((id) => ES.steps[id]),
+    signals: r.signals.map((s) => (ES.signals[s.id] ? { ...s, label: ES.signals[s.id][0], advice: ES.signals[s.id][1] } : s)),
+    links: r.links.map((l) => ({ ...l, issues: l.issues.map(issue) })),
+    senderIssues: r.senderIssues.map(issue),
+  };
+}

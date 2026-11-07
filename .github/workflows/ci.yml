@@ -32,4 +32,4 @@ jobs:
       - name: Unit tests
         run: npm test
       - name: Pages are up to date
-        run: node money-calculators/build.mjs && node scam-checker/build.mjs && git diff --exit-code -- money-calculators scam-checker
+        run: node money-calculators/build.mjs && node scam-checker/build.mjs && node scam-extension/build.mjs && git diff --exit-code -- money-calculators scam-checker scam-extension

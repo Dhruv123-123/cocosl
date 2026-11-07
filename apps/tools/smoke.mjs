@@ -88,4 +88,38 @@ for (const [path, selector, act] of checks) {
 }
 await browser.close();
 server.close();
+
+// The browser extension, loaded for real. Extensions need full Chromium (channel 'chromium'), not the headless shell.
+{
+  const extDir = join(root, 'scam-extension');
+  let ctx;
+  try {
+    ctx = await playwright.chromium.launchPersistentContext('', { headless: true, channel: 'chromium', args: [`--disable-extensions-except=${extDir}`, `--load-extension=${extDir}`] });
+  } catch (e) { console.log(`skip scam-extension (full Chromium not available: ${e.message.split('\n')[0]})`); }
+  if (ctx) {
+    const sw = ctx.serviceWorkers()[0] || await ctx.waitForEvent('serviceworker', { timeout: 10000 });
+    const id = new URL(sw.url()).host;
+    for (const [label, url, width] of [
+      ['popup', `chrome-extension://${id}/popup.html`, 380],
+      ['right-click window', `chrome-extension://${id}/popup.html?window=1#m=${encodeURIComponent('USPS: package held. Pay $1.99 now: https://usps-redelivery.top/pay')}`, 420],
+    ]) {
+      const page = await ctx.newPage();
+      await page.setViewportSize({ width, height: 640 });
+      const errors = [];
+      page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
+      page.on('pageerror', (e) => errors.push(e.message));
+      await page.goto(url);
+      if (!url.includes('#m=')) { await page.fill('#message', 'Your Amazon account is locked. Verify now: http://amaz0n-secure.help/login'); await page.click('#b-check'); }
+      const score = (await page.locator('#result .score').textContent({ timeout: 3000 }).catch(() => '')) || '';
+      const high = /High risk/.test(score);
+      const scroll = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);
+      const ok = errors.length === 0 && high && !scroll;
+      if (!ok) failed++;
+      console.log(`${ok ? 'ok  ' : 'FAIL'} scam-extension ${label}${errors.length ? ' errors: ' + errors.join(' | ') : ''}${high ? '' : ` (expected High risk, got "${score.trim()}")`}${scroll ? ' (horizontal scroll)' : ''}`);
+      if (shots) await page.screenshot({ path: join(shots, `scam-extension-${label.replace(/\W+/g, '_')}.png`), fullPage: true });
+      await page.close();
+    }
+    await ctx.close();
+  }
+}
 process.exit(failed ? 1 : 0);

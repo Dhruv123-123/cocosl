@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Is this a scam?</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+<header><img src="icons/icon-32.png" alt="" width="20" height="20"><b id="brand"></b></header>
+<section id="page" class="page" hidden></section>
+<form id="checker">
+  <label for="message" id="l-message"></label>
+  <textarea id="message" rows="5" maxlength="20000"></textarea>
+  <button type="submit" id="b-check"></button>
+</form>
+<section id="result" aria-live="polite" hidden></section>
+<label class="toggle"><input type="checkbox" id="site-warnings"><span id="l-warnings"></span></label>
+<p class="tiny" id="privacy"></p>
+<footer><a id="site" target="_blank" rel="noopener"></a><span id="kit"></span></footer>
+<script type="module" src="popup.js"></script>
+</body>
+</html>

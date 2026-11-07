@@ -6,14 +6,15 @@ HTML, CSS and JavaScript, no framework, no build step needed) and deploy free.
 
 | App | Brand | How it earns | Folder |
 |---|---|---|---|
-| **Money calculators** (6 tools) | Money Made Simple | SEO traffic → email list, HYSA / brokerage / debt affiliates, The 20-Minute Budget product | `money-calculators/` |
+| **Money calculators** (7 tools, including 2026 take-home pay) | Money Made Simple | SEO traffic → email list, HYSA / brokerage / debt affiliates, The 20-Minute Budget product | `money-calculators/` |
 | **Is this a scam?** message checker | Scam Shield | Identity protection, password manager and VPN affiliates, weekly scam-alert list, $9 Family Scam-Proofing Kit | `scam-checker/` |
 | **The 20-Minute Budget** web app | Money Made Simple | Freemium: Pro at $3/month or $29 once via Gumroad or Stripe | `budget/` |
 | **Rate My Budget** (8 numbers → score, grade, 3 next moves; anonymous submissions for the video series) | Money Made Simple | Budget app upsell, $19 personal review, content for the "Rate My Budget" series | `budget/rate.html` |
 | **Subscription finder** (upload a bank CSV, see every recurring charge and its yearly cost) | Money Made Simple | Free tool → budget app and Pro upsell, email list | `budget/subscriptions.html` |
-| **Calculadoras en español**: all 6 calculators in Spanish with hreflang links | Money Made Simple / Dinero Simple | Spanish search traffic, Spanish email list | `money-calculators/es/` |
+| **Calculadoras en español**: all 7 calculators in Spanish with hreflang links | Money Made Simple / Dinero Simple | Spanish search traffic, Spanish email list | `money-calculators/es/` |
 | **¿Es una estafa?** Spanish checker (Dinero Simple audience): Spanish scam patterns and fully translated results | Scam Shield | Same offers, Spanish scam-alert list | `scam-checker/es/` |
 | **Scam guides**: 12 search pages (USPS, toll, IRS, Amazon...) feeding the checker | Scam Shield | Search traffic → checker, list, affiliates | `scam-checker/scams/` |
+| **Browser extension** (Chrome/Edge): check a text or link from the right-click menu or toolbar, optional red badge on look-alike sites, English and Spanish | Scam Shield | Free; drives people to the site, kit and list. Chrome Web Store listing is its own discovery channel | `scam-extension/` |
 
 Privacy is a selling point for all three: nothing the user types is sent anywhere. The only server code is
 one serverless function that checks budget-app license keys.
@@ -22,8 +23,8 @@ one serverless function that checks budget-app license keys.
 
 ```bash
 cd apps
-npm test            # 70 unit tests, Node 20+, no dependencies
-npm run smoke       # opens every page in Chromium at desktop and phone width (needs Playwright)
+npm test            # 78 unit tests, Node 20+, no dependencies
+npm run smoke       # opens every page in Chromium at desktop and phone width, and loads the extension (needs Playwright)
 ```
 
 ## Deploy (free)
@@ -70,9 +71,17 @@ self-resizing iframe; no cookies). Free embeds carry a "Free calculator by Money
 one is a backlink. For paying licensees (credit unions, coaches), set `embed.allowUnbranded: true` and give
 them `data-brand="0"`, or deploy a copy with their colours. Set `embed.licenceUrl` to your contact link.
 
+## Browser extension
+
+`scam-extension/` is a Manifest V3 extension built from the checker's own rule engine (`node scam-extension/build.mjs`
+copies it in; CI fails if the copy is stale). It asks only for `contextMenus`, `activeTab` and `storage`; the
+look-alike badge needs the optional `tabs` permission, which Chrome asks for only when the user turns it on.
+To publish: `node scam-extension/package.mjs`, then upload the zip from `scam-extension/dist/` to the Chrome
+Web Store (one-time $5 developer fee). Listing text, privacy answers and steps are in `scam-extension/STORE.md`.
+
 ## Renaming the scam brand
 
-The brand name and domain live in `scam-checker/config.js`. To rename everywhere (pages and guides):
+The brand name and domain live in `scam-checker/config.js`. To rename everywhere (pages, guides and the extension):
 `node scam-checker/rename-brand.mjs "Scam Decoded" scamdecoded.netlify.app`.
 The checker sells the brand's Family Scam-Proofing Kit (`launch/scam-decoded/product/`); set its URL in
 `scam-checker/config.js` > `product.url`.

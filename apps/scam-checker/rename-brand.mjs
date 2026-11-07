@@ -1,4 +1,4 @@
-// Rename the scam brand everywhere in one go, then rebuild the guide pages.
+// Rename the scam brand everywhere in one go, then rebuild the guide pages and the browser extension.
 //   node scam-checker/rename-brand.mjs "Scam Decoded" scamdecoded.netlify.app
 // Replaces the current name (config.js `brand`) and domain (config.js `siteUrl`) in every
 // page, script and doc in this folder.
@@ -33,3 +33,5 @@ for (const f of files) {
 }
 console.log(`Renamed "${oldName}" to "${newName}"${newDomain ? ` and ${oldDomain} to ${newDomain}` : ''} in ${changed} files.`);
 execFileSync(process.execPath, [join(root, 'build.mjs')], { stdio: 'inherit' });
+// The browser extension takes its name and site from this config, so rebuild it too.
+execFileSync(process.execPath, [join(root, '..', 'scam-extension', 'build.mjs')], { stdio: 'inherit' });
