@@ -51,6 +51,10 @@ def cmd_init(args):
         env_example = examples / "env.example"
     if env_example.exists() and not (home / ".env").exists():
         shutil.copy(env_example, home / ".env")
+        try:
+            (home / ".env").chmod(0o600)  # it will hold API keys and tokens: owner only
+        except OSError:
+            pass
     s = Settings.load(home)
     from .db import DB
     DB(s.db_path)
