@@ -54,7 +54,11 @@ affiliates:
     keywords: [savings account, hysa, emergency fund]
     commission: "$50 per funded account"
 products:
+  - {name: "The 7-Day Money Reset", slug: 7-day-money-reset, url: "https://example.com/the-7-day-money-reset.pdf", price: 0}
   - {name: "The 20-Minute Budget (guide + Excel/Sheets/Numbers template)", slug: 20-minute-budget, url: "https://example.gumroad.com/l/budget", price: 12}
+  - {name: "Debt Payoff Planner (spreadsheet + guide)", slug: debt-payoff-planner, url: "https://example.gumroad.com/l/planner", price: 9}
+  - {name: "First Investing Account Kit", slug: first-investing-account-kit, url: "https://example.gumroad.com/l/kit", price: 15}
+  - {name: "Starter Bundle: all three", slug: starter-bundle, url: "https://example.gumroad.com/l/bundle", price: 24}
 ai_disclosure: "Visuals and voice made with AI tools. Script written and fact-checked by a human. Not financial advice."
 realistic_synthetic_media: false
 require_human_review: true
