@@ -1,0 +1,1806 @@
+[
+ {
+  "key": "m4-credito-con-itin",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "You can build a credit history with an ITIN: the bureaus can keep a file under an ITIN and many credit unions and some banks lend with one.",
+  "script": {
+   "title": "Sí puedes tener crédito con ITIN",
+   "hook": "Mucha gente cree que sin Seguro Social no hay crédito. No es cierto.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Mucha gente cree que sin Seguro Social no hay crédito. No es cierto.",
+     "on_screen_text": "¿Sin Seguro Social no hay crédito? Falso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small card with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Las agencias de crédito pueden llevar tu historial con tu ITIN, y muchas cooperativas y algunos bancos te prestan con él.",
+     "on_screen_text": "Tu historial también se arma con ITIN",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder with a small chart inside. No text, no logos, no real people."
+    },
+    {
+     "heading": "Empieza",
+     "narration": "Lo más común para empezar es una tarjeta asegurada o un préstamo para construir crédito.",
+     "on_screen_text": "Empieza con una tarjeta asegurada",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card with a small lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta",
+     "narration": "Antes de firmar, pregunta si reportan tus pagos a las tres agencias. Si no reportan, no te ayuda.",
+     "on_screen_text": "Pregunta: ¿reporta a las tres agencias?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three small buildings with checkmarks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Hábito",
+     "narration": "Y después, lo de siempre: paga a tiempo, y usa poco de tu límite.",
+     "on_screen_text": "Paga completo y a tiempo, siempre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a checkmark on every month. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "En unos meses de pagos a tiempo ya tienes historial. Y con historial, todo lo demás se abre.",
+     "on_screen_text": "En unos meses ya tienes historial",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf opening a door. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Sí puedes tener crédito con ITIN. Las agencias pueden llevar tu historial con tu ITIN, y muchas cooperativas y algunos bancos te prestan con él. Empieza con una tarjeta asegurada o un préstamo para construir crédito, y pregunta si reportan a las tres agencias (Equifax, Experian y TransUnion). Luego: pagos a tiempo y poco uso del límite. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "itin",
+    "credito",
+    "puntajedecredito",
+    "inmigrantes",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cómo empezar tu historial de crédito con ITIN.",
+   "thumbnail_text": "Crédito con ITIN",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://www.myfico.com/credit-education/credit-scores"
+   ],
+   "claims_to_verify": [
+    "Bureaus can maintain a credit file under an ITIN; lenders' ITIN acceptance varies",
+    "Secured cards and credit-builder loans that accept ITIN exist, mostly at credit unions and CDFIs"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4-tarjeta-asegurada",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Secured card explained: a deposit becomes the limit, payments get reported, and the deposit comes back when it graduates or closes in good standing.",
+  "script": {
+   "title": "La tarjeta asegurada, explicada en 30 segundos",
+   "hook": "Si nadie te da una tarjeta de crédito, hay una que te dan casi seguro.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si nadie te da una tarjeta de crédito, hay una que te dan casi seguro: la tarjeta asegurada.",
+     "on_screen_text": "La tarjeta que te dan casi seguro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a card with a small lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Dejas un depósito, por ejemplo doscientos dólares, y ese es tu límite.",
+     "on_screen_text": "Tu depósito = tu límite",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. coins going into a small safe. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "La usas como una tarjeta normal, y el banco reporta tus pagos a las agencias. Así construyes historial.",
+     "on_screen_text": "Funciona como tarjeta normal",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card next to a rising line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Truco",
+     "narration": "El truco: ponle un solo gasto fijo chico, como el celular, y págala completa en automático.",
+     "on_screen_text": "Solo un gasto fijo chico",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone bill with an autopay arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Depósito",
+     "narration": "El depósito no se pierde. Te lo regresan cuando la cierras al corriente o cuando te la pasan a tarjeta normal.",
+     "on_screen_text": "El depósito regresa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. coins coming back out of a safe. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Evita las que cobran cuotas altas cada mes. Hay muchas sin anualidad.",
+     "on_screen_text": "Cuidado con cuotas altas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a price tag with a small X. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "La tarjeta asegurada: dejas un depósito (por ejemplo $200) y ese es tu límite. La usas como tarjeta normal y reporta tus pagos a las agencias. Ponle un solo gasto chico, págala completa en automático, y evita las que cobran cuotas altas. El depósito te lo regresan al cerrarla al corriente o al pasarte a tarjeta normal. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "tarjetaasegurada",
+    "credito",
+    "puntajedecredito",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Qué es una tarjeta asegurada y cómo usarla para construir crédito.",
+   "thumbnail_text": "Tarjeta asegurada",
+   "sources": [
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-secured-credit-card-en-2108/"
+   ],
+   "claims_to_verify": [
+    "Secured card deposit usually equals the limit and is refundable when closed in good standing or upgraded"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4-prestamo-constructor",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Credit-builder loan: the lender holds the money in a savings account while you make payments; you get it at the end, and the payments are reported.",
+  "script": {
+   "title": "El préstamo que te da el dinero al final",
+   "hook": "Hay un préstamo raro: te dan el dinero cuando terminas de pagarlo.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Hay un préstamo raro: te dan el dinero cuando terminas de pagarlo.",
+     "on_screen_text": "Un préstamo que te paga al final",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking puzzled at a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Se llama préstamo para construir crédito. La cooperativa guarda el dinero en una cuenta mientras tú pagas cada mes.",
+     "on_screen_text": "El dinero se queda guardado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. coins inside a glass box. No text, no logos, no real people."
+    },
+    {
+     "heading": "Para qué",
+     "narration": "Cada pago se reporta a las agencias. Así construyes historial sin tener una tarjeta.",
+     "on_screen_text": "Tus pagos se reportan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a rising line made of small checkmarks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Al final",
+     "narration": "Al terminar, te dan el dinero. Es como ahorrar y construir crédito a la vez.",
+     "on_screen_text": "Al final, el dinero es tuyo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a glass box opening with coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ojo",
+     "narration": "Ojo: cobran algo de interés o una cuota. Pregunta el costo total y si reportan a las tres agencias.",
+     "on_screen_text": "Ojo: cobran algo de interés",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Búscalo en cooperativas de crédito. Muchas aceptan ITIN.",
+     "on_screen_text": "Búscalo en cooperativas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small building with a handshake sign. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El préstamo para construir crédito: la cooperativa guarda el dinero mientras pagas cada mes, tus pagos se reportan, y al final el dinero es tuyo. Cobra algo de interés o una cuota: pregunta el costo total y si reporta a las tres agencias. Muchas cooperativas lo ofrecen y aceptan ITIN. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "credito",
+    "cooperativa",
+    "itin",
+    "puntajedecredito",
+    "dinerosimple"
+   ],
+   "description": "Qué es un préstamo para construir crédito (credit builder loan) y cuándo conviene.",
+   "thumbnail_text": "Préstamo para crédito",
+   "sources": [
+    "https://www.consumerfinance.gov/about-us/blog/how-credit-builder-loans-work/"
+   ],
+   "claims_to_verify": [
+    "Credit-builder loan funds held in savings until paid; payments reported; offered by many credit unions/CDFIs"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4-usuario-autorizado",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Being an authorized user on a relative's old, well-paid card can add its history to your report; their late payments can hurt you too, and not every issuer reports authorized users.",
+  "script": {
+   "title": "Usuario autorizado: el atajo, con cuidado",
+   "hook": "Hay una forma de tomar prestado el buen historial de alguien de tu familia.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Hay una forma de tomar prestado el buen historial de alguien de tu familia.",
+     "on_screen_text": "Toma prestado un buen historial",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf and an older figure sharing an umbrella. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Se llama usuario autorizado. Tu familiar te agrega a su tarjeta, y muchas veces ese historial aparece en tu reporte.",
+     "on_screen_text": "Te agregan a su tarjeta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two cards with a link between them. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mejor",
+     "narration": "Sirve si su tarjeta es vieja, siempre se paga a tiempo y usa poco del límite.",
+     "on_screen_text": "Tarjeta vieja, pagos a tiempo, poco uso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an old card with a gold star. No text, no logos, no real people."
+    },
+    {
+     "heading": "Riesgo",
+     "narration": "El riesgo: si se atrasa o la llena, también te puede bajar el puntaje a ti.",
+     "on_screen_text": "Si se atrasa, te afecta a ti",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a rain cloud over the umbrella. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta",
+     "narration": "Antes, que tu familiar pregunte si su banco reporta a los usuarios autorizados. No todos lo hacen.",
+     "on_screen_text": "Pregunta si reportan usuarios autorizados",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone call bubble. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y no necesitas usar la tarjeta para que cuente. Puedes ni tenerla en la mano.",
+     "on_screen_text": "No necesitas usar la tarjeta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with empty hands, smiling. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Usuario autorizado: un familiar te agrega a su tarjeta y, muchas veces, ese historial aparece en tu reporte. Sirve si la tarjeta es vieja, se paga siempre a tiempo y se usa poco. El riesgo: sus atrasos también te afectan. Pregunten si el banco reporta usuarios autorizados. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "credito",
+    "usuarioautorizado",
+    "puntajedecredito",
+    "familia",
+    "dinerosimple"
+   ],
+   "description": "Cómo funciona ser usuario autorizado en la tarjeta de un familiar, y sus riesgos.",
+   "thumbnail_text": "Usuario autorizado",
+   "sources": [
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-an-authorized-user-en-1585/"
+   ],
+   "claims_to_verify": [
+    "Authorized-user history often appears on the AU's report; issuers' reporting practices vary; negative history can also affect the AU"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4-renta-al-credito",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Rent paid on time can be reported to credit bureaus through some landlords or rent-reporting services; check fees, which bureaus, and that newer score models count it.",
+  "script": {
+   "title": "Tu renta puede contar para tu crédito",
+   "hook": "Llevas años pagando la renta a tiempo, y tu puntaje ni se entera.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Llevas años pagando la renta a tiempo, y tu puntaje ni se entera.",
+     "on_screen_text": "Pagas renta a tiempo… y no cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a house key next to a blank chart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Opción",
+     "narration": "Hay administradores de edificios y servicios que reportan tus pagos de renta a las agencias de crédito.",
+     "on_screen_text": "Hay servicios que la reportan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a house with an arrow to a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta 1",
+     "narration": "Antes de inscribirte, pregunta cuánto cuesta. Algunos son gratis por tu casero; otros cobran cada mes.",
+     "on_screen_text": "¿Cuánto cuesta?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta 2",
+     "narration": "Pregunta a qué agencias reporta, y si puedes agregar pagos de meses anteriores.",
+     "on_screen_text": "¿A qué agencias reporta?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three small buildings. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ojo",
+     "narration": "Ojo: no todos los modelos de puntaje toman en cuenta la renta. Ayuda más cuando empiezas de cero.",
+     "on_screen_text": "No todos los puntajes la cuentan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a scale with a small house. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Primero pregúntale a tu administrador si ya lo ofrece. A veces es gratis.",
+     "on_screen_text": "Pregúntale a tu administrador",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf knocking on an office door. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu renta puede contar para tu crédito: algunos administradores y servicios reportan tus pagos de renta a las agencias. Pregunta cuánto cuesta, a qué agencias reporta y si incluye meses anteriores. No todos los modelos de puntaje la cuentan, pero ayuda sobre todo si empiezas de cero. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "credito",
+    "renta",
+    "puntajedecredito",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cómo hacer que tus pagos de renta cuenten para tu historial de crédito.",
+   "thumbnail_text": "Renta = crédito",
+   "sources": [
+    "https://www.consumerfinance.gov/about-us/blog/what-you-need-to-know-about-rent-reporting/"
+   ],
+   "claims_to_verify": [
+    "Rent reporting exists via landlords and third-party services; some charge fees; not all scoring models use rent data (e.g., FICO 8 does not; newer models do)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4-disputa-error",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Errors on credit reports are common and disputing is free: dispute online with the bureau that shows the error, attach proof, and the bureau generally has 30 days to investigate.",
+  "script": {
+   "title": "Un error en tu reporte se corrige gratis",
+   "hook": "Si tu reporte de crédito tiene un error, nadie te lo va a arreglar si no lo pides.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si tu reporte de crédito tiene un error, nadie te lo va a arreglar si no lo pides.",
+     "on_screen_text": "Nadie arregla el error si no lo pides",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a paper with a red circle. No text, no logos, no real people."
+    },
+    {
+     "heading": "Busca",
+     "narration": "Busca cuentas que no reconoces, pagos marcados tarde que pagaste a tiempo, o datos personales mal.",
+     "on_screen_text": "Busca deudas que no son tuyas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over a list. No text, no logos, no real people."
+    },
+    {
+     "heading": "Disputa",
+     "narration": "Disputa en línea con la agencia que muestra el error. Es gratis.",
+     "on_screen_text": "Disputa en línea con esa agencia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop with a form and a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pruebas",
+     "narration": "Adjunta pruebas: un estado de cuenta, un recibo, una carta. Guarda copia de todo.",
+     "on_screen_text": "Adjunta pruebas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder with papers and a paperclip. No text, no logos, no real people."
+    },
+    {
+     "heading": "Plazo",
+     "narration": "La agencia normalmente tiene unos treinta días para investigar y responderte.",
+     "on_screen_text": "Normalmente 30 días para investigar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with 30 circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y no le pagues a nadie por 'reparar tu crédito'. Lo mismo lo haces tú, gratis.",
+     "on_screen_text": "No pagues por 'reparar tu crédito'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a price tag with an X. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Un error en tu reporte de crédito se corrige gratis: disputa en línea con la agencia que muestra el error (Equifax, Experian o TransUnion), adjunta pruebas y guarda copia. Normalmente tienen unos 30 días para investigar. No le pagues a nadie por 'reparar tu crédito'. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "reportedecredito",
+    "credito",
+    "puntajedecredito",
+    "derechos",
+    "dinerosimple"
+   ],
+   "description": "Cómo disputar gratis un error en tu reporte de crédito.",
+   "thumbnail_text": "Disputa gratis",
+   "sources": [
+    "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/"
+   ],
+   "claims_to_verify": [
+    "Disputes are free; bureaus generally must investigate within 30 days (45 in some cases)",
+    "Credit repair companies cannot do anything you can't do for free"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4-cuenta-sin-ssn",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Opening a bank account without a Social Security number: many banks and credit unions accept an ITIN, passport or matrícula consular; call first and ask exactly.",
+  "script": {
+   "title": "Cuenta de banco sin Seguro Social",
+   "hook": "No necesitas Seguro Social para abrir una cuenta de banco en muchos lugares.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "No necesitas Seguro Social para abrir una cuenta de banco en muchos lugares.",
+     "on_screen_text": "Banco sin Seguro Social: sí se puede",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf walking toward a small bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué llevar",
+     "narration": "Muchos bancos y cooperativas aceptan ITIN, pasaporte o matrícula consular. Cada lugar decide.",
+     "on_screen_text": "ITIN, pasaporte o matrícula consular",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a passport and an ID card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Domicilio",
+     "narration": "Normalmente también te piden un comprobante de domicilio, como un recibo de luz.",
+     "on_screen_text": "Y un comprobante de domicilio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with a house icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Llama",
+     "narration": "Llama antes y pregunta tal cual: ¿abren cuentas con ITIN y matrícula? Te ahorras la vuelta.",
+     "on_screen_text": "Llama antes y pregunta tal cual",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a speech bubble. No text, no logos, no real people."
+    },
+    {
+     "heading": "Revisa",
+     "narration": "Revisa que esté asegurada por FDIC o NCUA, y que no cobre cargo mensual.",
+     "on_screen_text": "Asegurada y sin cargo mensual",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a shield next to a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Con una cuenta dejas de pagar por cambiar cheques, y tu dinero está más seguro que en casa.",
+     "on_screen_text": "Deja de pagar por cambiar cheques",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf putting coins into a safe. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Cuenta de banco sin Seguro Social: muchos bancos y cooperativas aceptan ITIN, pasaporte o matrícula consular, más un comprobante de domicilio. Llama antes y pregunta. Revisa que esté asegurada (FDIC o NCUA) y que no cobre cargo mensual. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "banco",
+    "itin",
+    "matriculaconsular",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "Qué necesitas para abrir una cuenta de banco sin número de Seguro Social.",
+   "thumbnail_text": "Banco sin Seguro Social",
+   "sources": [
+    "https://www.fdic.gov/consumer-resource-center",
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Banks may accept ITIN/passport/foreign government ID under CIP rules; acceptance of matrícula varies by bank"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4-sobregiro",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Overdraft fees on ATM and one-time debit card purchases need your opt-in; you can turn that coverage off so the card is declined instead of charging a fee. Checks and autopays are different.",
+  "script": {
+   "title": "Apaga el sobregiro de tu tarjeta de débito",
+   "hook": "Un café de cuatro dólares te puede costar treinta y cinco.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Un café de cuatro dólares te puede costar treinta y cinco más, si tu cuenta no tenía saldo.",
+     "on_screen_text": "Un café de $4 que cuesta $39",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a coffee cup with a big price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Pasa si aceptaste la cobertura de sobregiro para compras con tarjeta de débito y cajeros.",
+     "on_screen_text": "Aceptaste la 'protección de sobregiro'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card with a small warning sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tu derecho",
+     "narration": "Para cobrarte sobregiro en esas compras, el banco necesita tu permiso. Y lo puedes quitar.",
+     "on_screen_text": "Para eso necesitan tu permiso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a checkbox being unchecked. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Llama a tu banco o búscalo en la app y pide quitar la cobertura de sobregiro.",
+     "on_screen_text": "Llama o búscalo en la app",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a settings gear. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resultado",
+     "narration": "Así, si no tienes saldo, la compra se rechaza y no te cobran nada.",
+     "on_screen_text": "Rechazan la compra, sin cargo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card with a small X and a zero. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Ojo: los cheques y los pagos automáticos funcionan distinto. Activa también una alerta de saldo bajo.",
+     "on_screen_text": "Cheques y cargos automáticos: aparte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bell icon on a phone. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Apaga el sobregiro de tu tarjeta de débito: para cobrarte sobregiro en compras con débito y cajeros, el banco necesita tu permiso, y lo puedes quitar en la app o llamando. Así, sin saldo, la compra se rechaza en vez de costarte una cuota. Los cheques y pagos automáticos funcionan distinto: activa una alerta de saldo bajo. El Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "banco",
+    "sobregiro",
+    "comisiones",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cómo dejar de pagar cuotas de sobregiro en compras con tarjeta de débito.",
+   "thumbnail_text": "Apaga el sobregiro",
+   "sources": [
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-overdraft-coverage-and-how-does-it-work-en-1035/"
+   ],
+   "claims_to_verify": [
+    "Reg E opt-in required for overdraft fees on ATM and one-time debit card transactions; consumer can revoke",
+    "Typical overdraft fee around $35 (varies; some banks dropped them)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4-cambiar-cheques",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Cashing paychecks at check-cashing stores costs a percentage every payday; a free account with direct deposit can save hundreds a year. Example math is illustrative.",
+  "script": {
+   "title": "Lo que te cuesta cambiar tu cheque cada quincena",
+   "hook": "Cambiar tu cheque en la tienda parece barato. Haz la cuenta del año.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Cambiar tu cheque en la tienda parece barato. Haz la cuenta del año.",
+     "on_screen_text": "Haz la cuenta del año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a paycheck and a calculator. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "Ejemplo: un cheque de ochocientos dólares, y te cobran tres por ciento. Son veinticuatro dólares.",
+     "on_screen_text": "Cheque de $800, cobran 3% = $24",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paycheck with a small slice cut out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Al año",
+     "narration": "Dos veces al mes, son quinientos setenta y seis dólares al año. Por cobrar tu propio dinero.",
+     "on_screen_text": "Dos veces al mes = $576 al año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a stack of coins growing. No text, no logos, no real people."
+    },
+    {
+     "heading": "Opción",
+     "narration": "Con una cuenta sin cargo mensual y depósito directo, tu sueldo llega sin costo.",
+     "on_screen_text": "Cuenta gratis + depósito directo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an arrow from an office to a bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sin SSN",
+     "narration": "Y muchas cooperativas abren cuenta con ITIN o matrícula consular.",
+     "on_screen_text": "Muchas aceptan ITIN o matrícula",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an ID card next to a bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Esos quinientos dólares pueden ser tu fondo de emergencia del año.",
+     "on_screen_text": "Ese dinero, a tu ahorro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf putting coins into a jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Lo que te cuesta cambiar tu cheque: con un cheque de $800 y una cuota de 3% (ejemplo), son $24 por quincena y $576 al año. Una cuenta sin cargo mensual con depósito directo te ahorra eso, y muchas cooperativas aceptan ITIN o matrícula. Las cuotas reales varían por lugar y estado. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "banco",
+    "cheques",
+    "ahorro",
+    "comisiones",
+    "dinerosimple"
+   ],
+   "description": "Cuánto cuesta al año cambiar tu cheque de pago, y cómo evitarlo.",
+   "thumbnail_text": "Cambiar cheques cuesta",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Check-cashing fees vary by state and store; 3% is an illustrative example (some charge 1-10%)",
+    "Math: $800 x 3% = $24; x 24 paychecks = $576"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4-cooperativa",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Bank vs credit union: credit unions are member-owned nonprofits, insured by NCUA like banks are by FDIC, often with lower fees and loan rates; you need to qualify for membership.",
+  "script": {
+   "title": "¿Banco o cooperativa? La diferencia en 30 segundos",
+   "hook": "Un banco y una cooperativa de crédito se ven igual. No funcionan igual.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Un banco y una cooperativa de crédito se ven igual. No funcionan igual.",
+     "on_screen_text": "Se ven igual. No funcionan igual.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf between two small buildings. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dueños",
+     "narration": "La cooperativa es una organización sin fines de lucro que pertenece a sus socios. El banco, a sus accionistas.",
+     "on_screen_text": "La cooperativa es de sus socios",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a group of small figures inside a building. No text, no logos, no real people."
+    },
+    {
+     "heading": "Seguro",
+     "narration": "Las dos están aseguradas hasta doscientos cincuenta mil dólares: los bancos por FDIC y las cooperativas por NCUA.",
+     "on_screen_text": "Las dos están aseguradas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two shields side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Costo",
+     "narration": "Las cooperativas muchas veces cobran menos cargos y prestan con tasas más bajas.",
+     "on_screen_text": "Cooperativas: muchas veces menos cargos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small price tag going down. No text, no logos, no real people."
+    },
+    {
+     "heading": "Requisito",
+     "narration": "Para entrar tienes que calificar: por tu trabajo, tu zona o tu comunidad. Muchas son fáciles.",
+     "on_screen_text": "Tienes que calificar para ser socio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a door with a welcome mat. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Lo mejor: compara una de cada una antes de abrir tu cuenta.",
+     "on_screen_text": "Compara las dos antes de abrir",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf comparing two papers. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "¿Banco o cooperativa? La cooperativa es sin fines de lucro y pertenece a sus socios; muchas veces cobra menos cargos y presta más barato. Las dos están aseguradas hasta $250,000 (FDIC o NCUA). Para entrar a una cooperativa tienes que calificar, por trabajo, zona o comunidad. Compara antes de abrir. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "cooperativa",
+    "banco",
+    "finanzaspersonales",
+    "ahorro",
+    "dinerosimple"
+   ],
+   "description": "La diferencia entre un banco y una cooperativa de crédito.",
+   "thumbnail_text": "Banco o cooperativa",
+   "sources": [
+    "https://www.mycreditunion.gov/",
+    "https://www.fdic.gov/resources/deposit-insurance"
+   ],
+   "claims_to_verify": [
+    "NCUA and FDIC insure up to $250,000 per depositor, per institution, per ownership category",
+    "Credit unions are member-owned not-for-profits with field-of-membership rules"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4-prorroga",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "If you can't file by April 15, 2027, Form 4868 gives an automatic extension to October 15 to file, but not to pay: estimate and pay what you owe by April 15.",
+  "script": {
+   "title": "La prórroga te da tiempo para declarar, no para pagar",
+   "hook": "La prórroga de impuestos tiene una trampa que mucha gente descubre en octubre.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "La prórroga de impuestos tiene una trampa que mucha gente descubre en octubre.",
+     "on_screen_text": "La trampa de la prórroga",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a calendar with April and October. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "Si no alcanzas a declarar, el formulario 4868 te da hasta el 15 de octubre. Es automático y gratis.",
+     "on_screen_text": "Formulario 4868: hasta octubre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form with a small clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Trampa",
+     "narration": "La trampa: la prórroga es para declarar, no para pagar. Lo que debas vence el 15 de abril igual.",
+     "on_screen_text": "Pero el pago vence el 15 de abril",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a coin with an April tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Si no pagas",
+     "narration": "Si no pagas para abril, te cobran multa e intereses sobre lo que falte.",
+     "on_screen_text": "Si no, multa e intereses",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small stack of coins growing. No text, no logos, no real people."
+    },
+    {
+     "heading": "Haz esto",
+     "narration": "Haz un cálculo de lo que vas a deber y paga lo que puedas con la prórroga.",
+     "on_screen_text": "Calcula y paga lo que puedas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calculator next to an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y si te toca reembolso, no hay multa por declarar tarde. Pero tu dinero se queda esperando.",
+     "on_screen_text": "Si te toca reembolso, no hay multa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf waiting next to a mailbox. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "La prórroga (formulario 4868) te da hasta el 15 de octubre de 2027 para declarar, no para pagar: lo que debas vence el 15 de abril de 2027 y, si no lo pagas, hay multa e intereses. Calcula y paga lo que puedas con la prórroga. Si te toca reembolso, no hay multa por declarar tarde. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "irs",
+    "prorroga",
+    "15deabril",
+    "dinerosimple"
+   ],
+   "description": "Cómo funciona la prórroga de impuestos (formulario 4868) y por qué no es una prórroga para pagar.",
+   "thumbnail_text": "Prórroga ≠ pagar después",
+   "sources": [
+    "https://www.irs.gov/es/forms-pubs/about-form-4868",
+    "https://www.irs.gov/es/filing/get-an-extension-to-file-your-tax-return"
+   ],
+   "claims_to_verify": [
+    "Form 4868 automatic extension to Oct 15, 2027 to file, not to pay; payment due Apr 15, 2027",
+    "No failure-to-file penalty if a refund is due"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4-estimados",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Self-employed (1099, gig, own business): taxes aren't withheld, so set aside part of every payment and pay estimated taxes quarterly; first 2027 payment due April 15.",
+  "script": {
+   "title": "Si trabajas por tu cuenta, el 15 de abril pagas dos veces",
+   "hook": "Si trabajas por tu cuenta, el 15 de abril no es solo para declarar.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si trabajas por tu cuenta, el 15 de abril no es solo para declarar.",
+     "on_screen_text": "El 15 de abril no es solo declarar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding two envelopes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Si te pagan con 1099, por aplicación o en tu propio negocio, nadie te retiene impuestos.",
+     "on_screen_text": "Nadie te retiene impuestos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paycheck with nothing taken out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué",
+     "narration": "Por eso el IRS espera pagos estimados, cuatro veces al año. El primero de 2027 vence el 15 de abril.",
+     "on_screen_text": "Pagos estimados, cuatro al año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with four circled dates. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuánto",
+     "narration": "Lo más fácil: aparta una parte de cada pago en una cuenta solo para impuestos. Muchos apartan entre 25 y 30 por ciento.",
+     "on_screen_text": "Aparta una parte de cada pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a coin being split into a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué importa",
+     "narration": "Si no pagas durante el año, te puede llegar una multa además de lo que debes.",
+     "on_screen_text": "Si no, multa por pago insuficiente",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small warning sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Para tu cantidad exacta, pregunta en VITA o a un preparador con PTIN.",
+     "on_screen_text": "Pregunta en VITA o a un preparador",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf talking to a person at a desk. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si trabajas por tu cuenta (1099, aplicaciones, negocio propio), nadie te retiene impuestos: el IRS espera pagos estimados cuatro veces al año, y el primero de 2027 vence el 15 de abril. Aparta una parte de cada pago en una cuenta solo para impuestos (muchos apartan entre 25% y 30%; tu cantidad depende de tu caso). Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "1099",
+    "trabajoindependiente",
+    "irs",
+    "dinerosimple"
+   ],
+   "description": "Qué son los impuestos estimados y cómo apartar para ellos si trabajas por tu cuenta.",
+   "thumbnail_text": "Impuestos estimados",
+   "sources": [
+    "https://www.irs.gov/es/businesses/small-businesses-self-employed/estimated-taxes"
+   ],
+   "claims_to_verify": [
+    "Estimated tax generally required if you expect to owe $1,000+; 2027 due dates Apr 15, Jun 15, Sep 15, Jan 15 2028",
+    "25-30% set-aside is a rule of thumb, not a rate"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4-lo-que-no-cuenta",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "What doesn't affect your credit score: income, savings, immigration status, checking your own report, debit card use; utilities usually don't unless they go to collections.",
+  "script": {
+   "title": "Tu puntaje no sabe cuánto ganas",
+   "hook": "Tu puntaje de crédito no sabe cuánto ganas. Ni tu estatus.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Tu puntaje de crédito no sabe cuánto ganas. Ni tu estatus.",
+     "on_screen_text": "Tu puntaje no sabe cuánto ganas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a scoreboard with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "No 1",
+     "narration": "Ni tu sueldo ni lo que tienes ahorrado entran en el puntaje.",
+     "on_screen_text": "Tu sueldo y tu ahorro: no cuentan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paycheck and a jar with an X. No text, no logos, no real people."
+    },
+    {
+     "heading": "No 2",
+     "narration": "Tu estatus migratorio tampoco.",
+     "on_screen_text": "Tu estatus migratorio: no cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a passport with an X. No text, no logos, no real people."
+    },
+    {
+     "heading": "No 3",
+     "narration": "Revisar tu propio reporte no te baja nada. Revísalo cuando quieras.",
+     "on_screen_text": "Revisar tu propio reporte: no baja",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "No 4",
+     "narration": "Y usar tu tarjeta de débito no construye crédito. Es tu propio dinero.",
+     "on_screen_text": "La tarjeta de débito: no construye",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a debit card with a flat line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Lo que más cuenta: pagar a tiempo y usar poco de tu límite.",
+     "on_screen_text": "Lo que sí: pagos a tiempo y poco uso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf checking boxes on a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Lo que NO cuenta en tu puntaje de crédito: tu sueldo, tus ahorros, tu estatus migratorio, revisar tu propio reporte y usar tu tarjeta de débito. Lo que más cuenta: pagar a tiempo y usar poco de tu límite. Tu Fecha Sin Deudas (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "puntajedecredito",
+    "credito",
+    "mitos",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Lo que no afecta tu puntaje de crédito, y lo que sí.",
+   "thumbnail_text": "Lo que NO cuenta",
+   "sources": [
+    "https://www.myfico.com/credit-education/whats-not-in-your-credit-score"
+   ],
+   "claims_to_verify": [
+    "Income, savings, immigration status, own-report checks (soft inquiries) and debit use don't affect FICO scores"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4-cargos-del-banco",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Call your bank and ask to waive a monthly maintenance fee or switch to a no-fee account; also check ATM fees and paper statements.",
+  "script": {
+   "title": "Una llamada para quitar el cargo mensual del banco",
+   "hook": "Si tu banco te cobra cada mes por tener tu dinero ahí, haz esta llamada.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si tu banco te cobra cada mes por tener tu dinero ahí, haz esta llamada.",
+     "on_screen_text": "¿Te cobran por guardar tu dinero?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a phone next to a bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "Revisa",
+     "narration": "Primero busca en tu estado de cuenta 'monthly service fee' o 'maintenance fee'.",
+     "on_screen_text": "Busca 'monthly service fee'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over a statement. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta 1",
+     "narration": "Llama y pregunta cómo quitarlo. Muchas veces basta con tener depósito directo o un saldo mínimo.",
+     "on_screen_text": "'¿Cómo lo quito?'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a speech bubble with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta 2",
+     "narration": "Si no, pregunta si tienen una cuenta sin cargo mensual y cámbiate a esa.",
+     "on_screen_text": "'¿Tienen una cuenta sin cargo?'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card with a zero tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Otros",
+     "narration": "De paso, revisa los cargos por usar cajeros de otro banco y por estados de cuenta en papel.",
+     "on_screen_text": "Cajeros y estados en papel",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an ATM with a small price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Si no te ayudan, hay muchas cuentas sin cargo en otros bancos y cooperativas.",
+     "on_screen_text": "Si no, hay cuentas gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf walking out with a smile. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Una llamada para quitar el cargo mensual del banco: busca 'monthly service fee' en tu estado de cuenta, pregunta cómo quitarlo (muchas veces basta con depósito directo o un saldo mínimo) o pide una cuenta sin cargo. Revisa también cajeros fuera de la red y estados en papel. El Kit para Recortar Gastos (guía + guiones para llamar, en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "banco",
+    "comisiones",
+    "ahorro",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cómo quitar el cargo mensual de tu cuenta de banco con una llamada.",
+   "thumbnail_text": "Quita el cargo mensual",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Monthly maintenance fees often waived with direct deposit or minimum balance (varies by bank)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4c-credito-desde-cero",
+  "format": "carousel",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "A 12-month plan to build credit from zero, with or without an SSN: open an account, one secured card or builder loan, autopay, low use, check reports, then graduate.",
+  "script": {
+   "title": "Crédito desde cero en 12 meses",
+   "hook": "Guárdalo: tu plan de crédito desde cero, mes por mes.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Con Seguro Social o con ITIN. Guárdalo.",
+     "on_screen_text": "Crédito desde cero en 12 meses",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at the start of a short path. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mes 1",
+     "narration": "Mejor en una cooperativa. Muchas aceptan ITIN o matrícula.",
+     "on_screen_text": "Mes 1: abre tu cuenta de banco",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small bank with a door open. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mes 1",
+     "narration": "O un préstamo para construir crédito. Que reporte a las 3 agencias.",
+     "on_screen_text": "Mes 1: una tarjeta asegurada",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card with a lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mes 2",
+     "narration": "Ponle el celular y págala completa cada mes.",
+     "on_screen_text": "Mes 2: un gasto chico y pago automático",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone bill with an autopay arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mes 2-12",
+     "narration": "Con $200 de límite, que el saldo no pase de $20 al cerrar el mes.",
+     "on_screen_text": "Usa menos de 10% del límite",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small gauge near empty. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mes 6",
+     "narration": "Gratis. Si hay errores, dispútalos.",
+     "on_screen_text": "Mes 6: revisa tus reportes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over a list. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mes 12",
+     "narration": "Y que te regresen el depósito. No cierres tu primera tarjeta.",
+     "on_screen_text": "Mes 12: pide que la pasen a normal",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card changing from locked to open. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Pagar a tiempo. Un atraso de 30 días pesa mucho.",
+     "on_screen_text": "Lo único que no puede fallar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf checking a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Crédito desde cero en 12 meses:\nMes 1: abre tu cuenta (muchas cooperativas aceptan ITIN o matrícula) y saca una tarjeta asegurada o un préstamo para construir crédito que reporte a las 3 agencias.\nMes 2: un gasto chico y pago automático.\nTodo el año: usa menos de 10% del límite.\nMes 6: revisa tus reportes gratis.\nMes 12: pide que te la pasen a tarjeta normal.\nLo único que no puede fallar: pagar a tiempo. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "credito",
+    "itin",
+    "puntajedecredito",
+    "tarjetaasegurada",
+    "dinerosimple"
+   ],
+   "description": "Un plan de 12 meses para construir crédito desde cero.",
+   "thumbnail_text": "Crédito desde cero",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/"
+   ],
+   "claims_to_verify": [
+    "Secured cards often review for upgrade after 6-12 months (varies)",
+    "Under 10% utilization guidance is a rule of thumb"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4c-preguntas-tarjeta-asegurada",
+  "format": "carousel",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Five questions before getting a secured card: reports to all three bureaus, annual or monthly fees, accepts ITIN, graduation path, deposit refund.",
+  "script": {
+   "title": "5 preguntas antes de sacar una tarjeta asegurada",
+   "hook": "Antes de dejar tu depósito, haz estas 5 preguntas.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo para cuando vayas al banco.",
+     "on_screen_text": "5 preguntas antes de una tarjeta asegurada",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a card and a list. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Equifax, Experian y TransUnion. Si no, no te ayuda.",
+     "on_screen_text": "1. ¿Reporta a las 3 agencias?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three small buildings with checkmarks. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Hay muchas sin costo. Evita las de cuotas altas.",
+     "on_screen_text": "2. ¿Cobra anualidad o cuota mensual?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a price tag with an X. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Si no tienes Seguro Social, pregúntalo primero.",
+     "on_screen_text": "3. ¿Acepta ITIN?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an ID card with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Muchas revisan tu cuenta entre los 6 y 12 meses.",
+     "on_screen_text": "4. ¿Cuándo la pasan a normal?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card changing from locked to open. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Al pasarla a normal o al cerrarla al corriente.",
+     "on_screen_text": "5. ¿Cómo me regresan el depósito?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. coins coming out of a safe. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y págala completa cada mes.",
+     "on_screen_text": "Si las 5 están bien, adelante",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf giving a thumbs up. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "5 preguntas antes de sacar una tarjeta asegurada: 1) ¿reporta a las 3 agencias? 2) ¿cobra anualidad o cuota mensual? 3) ¿acepta ITIN? 4) ¿cuándo la pasan a tarjeta normal? 5) ¿cómo me regresan el depósito? Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "tarjetaasegurada",
+    "credito",
+    "itin",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cinco preguntas que hacer antes de sacar una tarjeta de crédito asegurada.",
+   "thumbnail_text": "5 preguntas",
+   "sources": [
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-secured-credit-card-en-2108/"
+   ],
+   "claims_to_verify": [
+    "Graduation review timing varies by issuer"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4c-disputa-paso-a-paso",
+  "format": "carousel",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "How to dispute a credit report error, step by step: get the reports, mark the error, dispute online with each bureau showing it, attach proof, also contact the company that reported it, keep records, follow up.",
+  "script": {
+   "title": "Cómo disputar un error en tu reporte, paso a paso",
+   "hook": "Un error en tu reporte te puede costar un préstamo. Así se corrige, gratis.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Paso a paso. Guárdalo.",
+     "on_screen_text": "Disputa un error en tu reporte, gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a paper with a red circle. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "En el sitio oficial de reportes anuales.",
+     "on_screen_text": "1. Saca tus 3 reportes gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three papers side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Cuentas que no son tuyas, atrasos falsos, datos mal.",
+     "on_screen_text": "2. Marca lo que está mal",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pen circling a line. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "En línea. Si aparece en dos, disputa en las dos.",
+     "on_screen_text": "3. Disputa con cada agencia que lo muestre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop with a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Estados de cuenta, recibos, cartas. Copias, no originales.",
+     "on_screen_text": "4. Adjunta pruebas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder with papers. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "La que reportó el dato. También tiene que investigar.",
+     "on_screen_text": "5. Avísale también a la empresa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope going to a building. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Normalmente responden en unos 30 días.",
+     "on_screen_text": "6. Guarda todo y anota fechas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with 30 circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Puedes quejarte con la CFPB, también en español.",
+     "on_screen_text": "Si no lo corrigen, hay más opciones",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small megaphone. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Cómo disputar un error en tu reporte de crédito, gratis: 1) saca tus 3 reportes, 2) marca lo que está mal, 3) disputa con cada agencia que lo muestre, 4) adjunta pruebas (copias), 5) avísale también a la empresa que reportó el dato, 6) guarda todo y anota fechas (normalmente responden en unos 30 días). Si no lo corrigen, puedes presentar una queja ante la CFPB, también en español. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "reportedecredito",
+    "credito",
+    "derechos",
+    "cfpb",
+    "dinerosimple"
+   ],
+   "description": "Cómo disputar gratis un error en tu reporte de crédito, paso a paso.",
+   "thumbnail_text": "Disputa paso a paso",
+   "sources": [
+    "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+    "https://www.consumerfinance.gov/complaint/"
+   ],
+   "claims_to_verify": [
+    "Bureaus and furnishers must investigate disputes, generally within 30 days",
+    "CFPB accepts complaints in Spanish"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4c-cuenta-sin-ssn",
+  "format": "carousel",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "What to bring to open a bank account without an SSN, and what to ask: ID options, proof of address, opening deposit, fees, insurance, how to send money.",
+  "script": {
+   "title": "Qué llevar para abrir cuenta sin Seguro Social",
+   "hook": "Guárdalo antes de ir al banco.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Qué llevar y qué preguntar. Guárdalo.",
+     "on_screen_text": "Abre tu cuenta sin Seguro Social",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf walking toward a small bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lleva 1",
+     "narration": "Pasaporte o matrícula consular, según el lugar.",
+     "on_screen_text": "Identificación con foto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a passport and an ID card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lleva 2",
+     "narration": "Algunos lo piden; otros aceptan solo el pasaporte.",
+     "on_screen_text": "Tu ITIN, si lo tienes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card with nine digits. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lleva 3",
+     "narration": "Recibo de luz, contrato de renta o una carta con tu dirección.",
+     "on_screen_text": "Comprobante de domicilio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with a house icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lleva 4",
+     "narration": "Pregunta antes el mínimo. Muchas cuentas abren con $25 o menos.",
+     "on_screen_text": "Tu primer depósito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a few coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta 1",
+     "narration": "Busca una cuenta sin cargo mensual.",
+     "on_screen_text": "¿Cargo mensual? ¿Cómo lo evito?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a price tag with a zero. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta 2",
+     "narration": "Así tu dinero está protegido.",
+     "on_screen_text": "¿Está asegurada por FDIC o NCUA?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a shield next to a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Pregunta: '¿Abren cuentas con ITIN o matrícula?'",
+     "on_screen_text": "Llama antes de ir",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf talking on a phone. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Qué llevar para abrir cuenta sin Seguro Social: identificación con foto (pasaporte o matrícula consular, según el lugar), tu ITIN si lo tienes, comprobante de domicilio y tu primer depósito. Pregunta si cobran cargo mensual y si la cuenta está asegurada (FDIC o NCUA). Llama antes de ir. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "banco",
+    "itin",
+    "matriculaconsular",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "Qué documentos llevar y qué preguntar para abrir una cuenta de banco sin número de Seguro Social.",
+   "thumbnail_text": "Cuenta sin Seguro Social",
+   "sources": [
+    "https://www.fdic.gov/consumer-resource-center",
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "ID requirements vary by bank; minimum opening deposits vary (example $25)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4c-cargos-evitables",
+  "format": "carousel",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Six bank fees you can avoid: monthly maintenance, overdraft, out-of-network ATM, paper statements, check cashing, and returned-payment fees from autopays without a buffer.",
+  "script": {
+   "title": "6 cargos del banco que puedes evitar",
+   "hook": "Guárdalo y revisa tu estado de cuenta esta semana.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Revisa tu estado de cuenta con esta lista.",
+     "on_screen_text": "6 cargos del banco que puedes evitar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a magnifying glass over a statement. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Depósito directo, saldo mínimo, o cambia a cuenta sin cargo.",
+     "on_screen_text": "1. Cargo mensual",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Quita la cobertura: la compra se rechaza sin cuota.",
+     "on_screen_text": "2. Sobregiro con débito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card with a small X. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Usa los de tu red. Busca el mapa en la app.",
+     "on_screen_text": "3. Cajeros de otro banco",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an ATM with a map pin. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Cámbiate a electrónicos si te cobran.",
+     "on_screen_text": "4. Estados de cuenta en papel",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paper with an X and a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Con depósito directo, tu sueldo llega gratis.",
+     "on_screen_text": "5. Cambiar cheques en la tienda",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paycheck going into a bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Deja un colchón para que no reboten.",
+     "on_screen_text": "6. Pagos automáticos sin colchón",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a cushion under a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Programa esa misma cantidad como transferencia.",
+     "on_screen_text": "Lo que ahorres, a tu ahorro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf putting coins into a jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "6 cargos del banco que puedes evitar: 1) cargo mensual, 2) sobregiro con débito, 3) cajeros de otro banco, 4) estados de cuenta en papel, 5) cambiar cheques en la tienda, 6) pagos automáticos que rebotan por falta de colchón. Lo que ahorres, prográmalo directo a tu ahorro. El Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "banco",
+    "comisiones",
+    "ahorro",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Seis cargos bancarios comunes y cómo evitarlos.",
+   "thumbnail_text": "6 cargos evitables",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Overdraft opt-in rule for debit/ATM (Reg E)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4c-antes-del-15-abril",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Checklist before April 15, 2027: file or request an extension, pay what you owe, first estimated payment if self-employed, IRA contribution for 2026, state return, keep copies.",
+  "script": {
+   "title": "Tu lista antes del 15 de abril",
+   "hook": "Faltan pocas semanas. Guarda esta lista.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdala y ve tachando.",
+     "on_screen_text": "Tu lista antes del 15 de abril de 2027",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a checklist and a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Formulario 4868: hasta el 15 de octubre para declarar.",
+     "on_screen_text": "1. Declara, o pide prórroga",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form with a small clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "La prórroga no es para pagar. Lo que puedas, antes del 15.",
+     "on_screen_text": "2. Paga lo que debas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a coin with an April tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Primer pago estimado de 2027, también el 15 de abril.",
+     "on_screen_text": "3. ¿Trabajas por tu cuenta?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two envelopes. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Puedes aportar para 2026 hasta el día de declarar.",
+     "on_screen_text": "4. ¿IRA de 2026? Hasta el 15",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar with 2026 on it. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Muchos estados tienen su propia declaración.",
+     "on_screen_text": "5. No olvides tu estado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a map outline with a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Declaración, W-2, 1099 y comprobantes. Unos años.",
+     "on_screen_text": "6. Guarda copia de todo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder going into a drawer. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Declara a tiempo igual y pide un plan de pagos.",
+     "on_screen_text": "¿Debes y no te alcanza?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a calm face. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu lista antes del 15 de abril de 2027: 1) declara o pide prórroga (formulario 4868), 2) paga lo que debas (la prórroga no es para pagar), 3) si trabajas por tu cuenta, el primer pago estimado de 2027, 4) aportes a tu IRA de 2026, 5) la declaración de tu estado, 6) guarda copia de todo. ¿Debes y no te alcanza? Declara a tiempo igual y pide un plan de pagos. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "15deabril",
+    "irs",
+    "checklist",
+    "dinerosimple"
+   ],
+   "description": "Lo que tienes que hacer antes del 15 de abril de 2027.",
+   "thumbnail_text": "Antes del 15 de abril",
+   "sources": [
+    "https://www.irs.gov/es/forms-pubs/about-form-4868",
+    "https://www.irs.gov/es/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/retirement-plans/ira-deduction-limits"
+   ],
+   "claims_to_verify": [
+    "April 15, 2027 deadline (check for weekend/holiday shifts and disaster extensions)",
+    "IRA contributions for 2026 allowed until the April 2027 filing deadline",
+    "Keep returns and records generally 3 years (longer in some cases)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4c-mitos-puntaje",
+  "format": "carousel",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Six credit score myths: checking hurts, income counts, carrying a balance helps, closing cards helps, debit builds credit, immigration status counts.",
+  "script": {
+   "title": "6 mitos del puntaje de crédito",
+   "hook": "Compártelo con quien siempre te da 'consejos' de crédito.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Lo que se dice en la familia y en el trabajo, revisado.",
+     "on_screen_text": "6 mitos del puntaje de crédito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a speech bubble full of question marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mito 1",
+     "narration": "Falso. Revisar el tuyo no cuenta.",
+     "on_screen_text": "'Revisar tu reporte te baja puntos'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mito 2",
+     "narration": "Falso. Tu sueldo no está en el puntaje.",
+     "on_screen_text": "'Si ganas más, tu puntaje sube'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paycheck with an X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mito 3",
+     "narration": "Falso. Pagar completo es mejor y no pagas intereses.",
+     "on_screen_text": "'Deja un saldo para que suba'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card with a full payment checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mito 4",
+     "narration": "Al revés: puede bajarlo.",
+     "on_screen_text": "'Cancela tarjetas para subirlo'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. scissors over a card with a warning sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mito 5",
+     "narration": "No. Es tu dinero, no un préstamo.",
+     "on_screen_text": "'La tarjeta de débito construye crédito'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a debit card with a flat line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mito 6",
+     "narration": "Con ITIN también se puede empezar.",
+     "on_screen_text": "'Sin Seguro Social no hay crédito'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an ID card next to a rising line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Pagos a tiempo y poco uso del límite.",
+     "on_screen_text": "Lo que sí cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf checking boxes on a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "6 mitos del puntaje de crédito: revisar tu reporte no te baja puntos; tu sueldo no cuenta; dejar un saldo no ayuda (pagar completo es mejor); cancelar tarjetas puede bajarlo; la tarjeta de débito no construye crédito; y con ITIN también se puede empezar. Lo que sí cuenta: pagos a tiempo y poco uso del límite. Tu Fecha Sin Deudas (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "puntajedecredito",
+    "credito",
+    "mitos",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Seis mitos comunes sobre el puntaje de crédito.",
+   "thumbnail_text": "Mitos del crédito",
+   "sources": [
+    "https://www.myfico.com/credit-education/whats-not-in-your-credit-score",
+    "https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/"
+   ],
+   "claims_to_verify": [
+    "Soft inquiries don't affect scores; carrying a balance isn't needed; closing cards can raise utilization"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m4c-banco-o-cooperativa",
+  "format": "carousel",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Bank vs credit union side by side: ownership, insurance, fees, loan rates, branches and apps, membership, ITIN acceptance (varies for both).",
+  "script": {
+   "title": "Banco o cooperativa: la comparación",
+   "hook": "Guárdalo antes de abrir tu próxima cuenta.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Sin rodeos. Guárdalo.",
+     "on_screen_text": "Banco o cooperativa: la comparación",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf between two small buildings. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dueños",
+     "narration": "Banco: accionistas. Cooperativa: sus socios, sin fines de lucro.",
+     "on_screen_text": "Dueños",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two buildings with small figures. No text, no logos, no real people."
+    },
+    {
+     "heading": "Seguro",
+     "narration": "Los dos hasta $250,000: FDIC o NCUA.",
+     "on_screen_text": "Seguro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two shields side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cargos",
+     "narration": "Cooperativas: muchas veces menos cargos y préstamos más baratos.",
+     "on_screen_text": "Cargos y tasas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a price tag going down. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sucursales",
+     "narration": "Bancos grandes: más sucursales. Muchas cooperativas comparten cajeros.",
+     "on_screen_text": "Sucursales y app",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a map with pins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Entrar",
+     "narration": "Banco: cualquiera. Cooperativa: calificas por trabajo, zona o comunidad.",
+     "on_screen_text": "Para entrar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a door with a welcome mat. No text, no logos, no real people."
+    },
+    {
+     "heading": "ITIN",
+     "narration": "Varía en los dos. Pregunta antes de ir.",
+     "on_screen_text": "Con ITIN",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an ID card with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y quédate con la que te cobre menos.",
+     "on_screen_text": "Compara una de cada una",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf comparing two papers. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Banco o cooperativa: los dos están asegurados hasta $250,000 (FDIC o NCUA). La cooperativa es de sus socios, sin fines de lucro, y muchas veces cobra menos cargos y presta más barato; para entrar calificas por trabajo, zona o comunidad. Los bancos grandes tienen más sucursales. Con ITIN, varía en los dos: pregunta antes. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "cooperativa",
+    "banco",
+    "comparacion",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Banco o cooperativa de crédito: la comparación lado a lado.",
+   "thumbnail_text": "Banco vs cooperativa",
+   "sources": [
+    "https://www.mycreditunion.gov/",
+    "https://www.fdic.gov/resources/deposit-insurance"
+   ],
+   "claims_to_verify": [
+    "FDIC/NCUA $250,000 coverage",
+    "Credit unions often share ATM networks (e.g., CO-OP) - optional detail"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "l-credito-desde-cero",
+  "format": "long",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Complete Spanish guide to building credit from zero, with an SSN or an ITIN: how scores work, what doesn't count, secured cards, builder loans, authorized users, rent reporting, the first year, disputes, and credit-repair scams.",
+  "script": {
+   "title": "Crédito desde cero, con Seguro Social o con ITIN: la guía completa",
+   "hook": "Sin historial de crédito, todo cuesta más: la renta, el carro, hasta el celular. Así se construye desde cero.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Sin historial de crédito, todo cuesta más: te piden más depósito para rentar, para el celular, para la luz, y si te prestan para un carro, te cobran más interés. La buena noticia es que el crédito se construye, y no hace falta tener número de Seguro Social. En este video vemos cómo funciona el puntaje, qué no cuenta, las cuatro formas de empezar, cómo se ve tu primer año, cómo corregir errores y de qué estafas cuidarte. Es información general, no asesoría financiera.",
+     "on_screen_text": "Crédito desde cero: la guía completa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at the start of a short path. No text, no logos, no real people."
+    },
+    {
+     "heading": "El puntaje",
+     "narration": "Tu puntaje de crédito es un número que usan los prestamistas para adivinar si vas a pagar. El más usado se calcula con cinco cosas. La más importante, más o menos un tercio, es si pagas a tiempo. La segunda es cuánto de tu límite usas: entre menos, mejor. Después cuentan la antigüedad de tus cuentas, las solicitudes nuevas y los tipos de crédito. Con eso ya sabes lo principal: paga siempre a tiempo y usa poco.",
+     "on_screen_text": "Pagos a tiempo y poco uso: casi todo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pie chart with two big slices highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lo que no cuenta",
+     "narration": "Igual de importante es saber lo que no cuenta. Tu sueldo no está en el puntaje, ni lo que tienes ahorrado. Tu estatus migratorio tampoco. Revisar tu propio reporte no te baja nada. Y usar tu tarjeta de débito no construye crédito, porque es tu propio dinero, no un préstamo. Por eso hay gente que gana bien y paga todo en efectivo, y aun así no tiene puntaje.",
+     "on_screen_text": "Tu sueldo y tu estatus no cuentan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paycheck, a jar and a passport with small X marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Con ITIN",
+     "narration": "Si no tienes Seguro Social, las agencias de crédito pueden llevar tu historial con tu ITIN, y muchas cooperativas y algunos bancos te prestan con él. No todos, así que pregunta antes. Y si después obtienes número de Seguro Social, pide que unan tu historial: llama a las agencias y a tus bancos para que no empieces de cero otra vez.",
+     "on_screen_text": "Con ITIN también se puede",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an ID card next to a rising line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Opción 1",
+     "narration": "La forma más común de empezar es una tarjeta asegurada. Dejas un depósito, digamos doscientos dólares, y ese es tu límite. La usas como cualquier tarjeta y el banco reporta tus pagos. Antes de sacarla, pregunta cinco cosas: si reporta a las tres agencias, si cobra anualidad o cuotas, si acepta ITIN, cuándo la pasan a tarjeta normal y cómo te regresan el depósito.",
+     "on_screen_text": "Opción 1: la tarjeta asegurada",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card with a small lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Opción 2",
+     "narration": "La segunda opción es un préstamo para construir crédito, que ofrecen muchas cooperativas. Funciona al revés de un préstamo normal: la cooperativa guarda el dinero en una cuenta mientras tú pagas cada mes, y te lo dan al final. Tus pagos se reportan, así que construyes historial y ahorras a la vez. Cobra algo de interés o una cuota, así que pregunta el costo total.",
+     "on_screen_text": "Opción 2: el préstamo para construir crédito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. coins inside a glass box. No text, no logos, no real people."
+    },
+    {
+     "heading": "Opción 3",
+     "narration": "La tercera es que un familiar con buen crédito te agregue como usuario autorizado en su tarjeta. Muchas veces el historial de esa tarjeta aparece en tu reporte. Sirve si la tarjeta es vieja, se paga siempre a tiempo y se usa poco. El riesgo es que, si tu familiar se atrasa, también te afecta a ti. Y no todos los bancos reportan a los usuarios autorizados, así que pregunten.",
+     "on_screen_text": "Opción 3: usuario autorizado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two people sharing an umbrella. No text, no logos, no real people."
+    },
+    {
+     "heading": "Opción 4",
+     "narration": "La cuarta es hacer que tu renta cuente. Algunos administradores y servicios reportan tus pagos de renta a las agencias. Pregunta si cuesta, a qué agencias reporta y si incluye meses anteriores. No todos los modelos de puntaje toman en cuenta la renta, pero ayuda más cuando empiezas de cero.",
+     "on_screen_text": "Opción 4: tu renta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a house with an arrow to a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tu primer año",
+     "narration": "Así se ve un buen primer año. Mes uno: abre tu cuenta de banco y saca una tarjeta asegurada o un préstamo para construir crédito. Mes dos: ponle un solo gasto chico, como el celular, y pago automático del total. Todo el año: que el saldo al cerrar el mes sea menos de diez por ciento del límite. Mes seis: revisa tus tres reportes. Mes doce: pide que te pasen a tarjeta normal, y no cierres esa primera tarjeta, porque es tu cuenta más vieja.",
+     "on_screen_text": "Tu primer año, mes por mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with checkmarks in every month. No text, no logos, no real people."
+    },
+    {
+     "heading": "Errores",
+     "narration": "Revisa tus reportes, que son gratis. Si ves una cuenta que no es tuya, un atraso que no pasó o datos mal, dispútalo en línea con cada agencia que lo muestre, con pruebas, y avísale también a la empresa que reportó el dato. Normalmente tienen unos treinta días para investigar. Si no lo corrigen, puedes quejarte ante la Oficina de Protección Financiera del Consumidor, también en español.",
+     "on_screen_text": "Un error se disputa gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over a list with a red circle. No text, no logos, no real people."
+    },
+    {
+     "heading": "Estafas",
+     "narration": "Y cuidado con las estafas. Nadie puede borrar información correcta de tu reporte, por más que te lo prometa. Las empresas de reparación de crédito no pueden cobrarte antes de hacer el trabajo, y nada de lo que hacen lo puedes hacer tú gratis. Tampoco existe un número nuevo para empezar de cero: quien te venda uno te está metiendo en un fraude.",
+     "on_screen_text": "Nadie 'arregla' tu crédito por dinero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a price tag with a big X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Resumen: el crédito se construye con o sin Seguro Social. Empieza con una tarjeta asegurada, un préstamo para construir crédito, como usuario autorizado o con tu renta. Paga siempre a tiempo, usa poco de tu límite y revisa tus reportes. En un año ya tienes historial, y con eso todo lo demás se abre.",
+     "on_screen_text": "Paga a tiempo, usa poco, revisa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf opening a door at the end of the path. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Crédito desde cero, con Seguro Social o con ITIN:\n1. Cómo funciona el puntaje\n2. Lo que no cuenta\n3. Crédito con ITIN\n4. La tarjeta asegurada\n5. El préstamo para construir crédito\n6. Usuario autorizado\n7. Tu renta\n8. Tu primer año, mes por mes\n9. Cómo disputar errores\n10. Las estafas de 'reparación de crédito'\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "credito",
+    "itin",
+    "puntajedecredito",
+    "tarjetaasegurada",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cómo construir crédito desde cero en Estados Unidos, con Seguro Social o con ITIN: cómo funciona el puntaje, lo que no cuenta, tarjeta asegurada, préstamo para construir crédito, usuario autorizado, reporte de renta, tu primer año, disputas y estafas.\n\nCapítulos (estimados; ajústalos después de grabar)\n0:00 Crédito desde cero\n0:45 El puntaje\n1:30 Lo que no cuenta\n2:10 Con ITIN\n2:50 La tarjeta asegurada\n3:35 El préstamo para construir crédito\n4:20 Usuario autorizado\n5:00 Tu renta\n5:35 Tu primer año\n6:30 Errores\n7:15 Estafas\n7:55 Resumen\n\nInformación general, no es asesoría financiera.\n\nFuentes: consumerfinance.gov (tarjetas aseguradas, préstamos para construir crédito, usuarios autorizados, reporte de renta, disputas, reparación de crédito), myfico.com (qué cuenta en el puntaje).\n\nEnlaces (los productos de pago son nuestros):\nCuenta de banco y tarjeta con ITIN: https://dinerosimple.netlify.app/blog/cuenta-y-tarjeta-con-itin/?utm_source=youtube&utm_medium=social&utm_campaign=l-credito-desde-cero\nTu Fecha Sin Deudas ($17): https://dinerosimple.netlify.app/products/tu-fecha-sin-deudas/?utm_source=youtube&utm_medium=social&utm_campaign=l-credito-desde-cero\nGuía gratis: Tu dinero en orden en 7 días: https://dinerosimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=l-credito-desde-cero",
+   "thumbnail_text": "Crédito desde cero",
+   "sources": [
+    "https://www.myfico.com/credit-education/whats-in-your-credit-score",
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-secured-credit-card-en-2108/",
+    "https://www.consumerfinance.gov/about-us/blog/how-credit-builder-loans-work/",
+    "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+    "https://consumer.ftc.gov/articles/fixing-your-credit-faqs"
+   ],
+   "claims_to_verify": [
+    "FICO weights: payment history ~35%, amounts owed ~30%",
+    "Bureaus can keep files under ITIN; merging ITIN and SSN history requires contacting bureaus/lenders",
+    "Credit repair organizations can't charge before services are performed (CROA)",
+    "Selling a 'new credit identity' (CPN) is fraud",
+    "Rent reporting not used by all scoring models"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "l-banco-sin-cargos",
+  "format": "long",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Complete Spanish guide to banking without fees, with or without an SSN: why have an account, bank vs credit union, what to bring, choosing an account, overdraft, avoidable fees, two-account setup, sending money, and account scams.",
+  "script": {
+   "title": "Tu cuenta de banco sin cargos (con o sin Seguro Social): la guía completa",
+   "hook": "Mucha gente paga cientos de dólares al año por usar su propio dinero. Así se deja de pagar.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Entre cambiar cheques, cargos mensuales, sobregiros y cajeros, mucha gente paga cientos de dólares al año por usar su propio dinero. En este video vemos por qué conviene tener cuenta, banco o cooperativa, qué llevar si no tienes Seguro Social, cómo escoger una cuenta, cómo dejar de pagar sobregiros y otros cargos, y cómo organizar tus cuentas para que tu dinero trabaje solo. Es información general, no asesoría financiera.",
+     "on_screen_text": "Tu cuenta de banco sin cargos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a wallet next to a small bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Primero, por qué tener cuenta. El dinero en casa se puede perder en un robo o un incendio, y nadie te lo repone. En una cuenta asegurada, está protegido hasta doscientos cincuenta mil dólares aunque el banco quiebre. Además, con depósito directo tu sueldo llega gratis, en vez de pagar por cambiar cada cheque. Con un cheque de ochocientos dólares y una cuota de tres por ciento, son veinticuatro dólares cada vez, casi seiscientos al año si te pagan cada quincena.",
+     "on_screen_text": "Tu dinero, asegurado y sin costo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a shield over a stack of coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Banco o cooperativa",
+     "narration": "¿Banco o cooperativa? Las dos están aseguradas, los bancos por la FDIC y las cooperativas por la NCUA. La cooperativa es una organización sin fines de lucro que pertenece a sus socios, y muchas veces cobra menos cargos y presta más barato. Para entrar tienes que calificar, por tu trabajo, tu zona o tu comunidad, y muchas son fáciles. Los bancos grandes tienen más sucursales y cajeros. Compara una de cada una.",
+     "on_screen_text": "Banco o cooperativa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two small buildings side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sin Seguro Social",
+     "narration": "Si no tienes número de Seguro Social, muchos bancos y cooperativas abren cuentas con ITIN, pasaporte o matrícula consular, más un comprobante de domicilio como un recibo de luz. Cada institución decide qué acepta, así que llama antes y pregunta tal cual: ¿abren cuentas con ITIN y matrícula? Y lleva tu primer depósito; muchas cuentas abren con veinticinco dólares o menos.",
+     "on_screen_text": "Sin Seguro Social: ITIN, pasaporte o matrícula",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a passport, an ID card and an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Escoge",
+     "narration": "Al escoger la cuenta, busca tres cosas: que no tenga cargo mensual, o que se quite fácil con depósito directo; que esté asegurada por FDIC o NCUA; y que tenga cajeros sin costo cerca de ti o en su red. Si vas a usar una app, revisa que el dinero esté en un banco asegurado detrás de la app, no solo en la app.",
+     "on_screen_text": "Escoge: sin cargo mensual y asegurada",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a checklist with three items. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sobregiro",
+     "narration": "El sobregiro es uno de los cargos más caros. Para cobrarte sobregiro en compras con tarjeta de débito y en cajeros, el banco necesita tu permiso, y lo puedes quitar. Así, si no tienes saldo, la compra se rechaza en vez de costarte una cuota. Los cheques y los pagos automáticos funcionan distinto, por eso conviene una alerta de saldo bajo y un colchón chico en la cuenta.",
+     "on_screen_text": "Apaga el sobregiro con débito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card with a small X and a zero. No text, no logos, no real people."
+    },
+    {
+     "heading": "Otros cargos",
+     "narration": "Revisa tu estado de cuenta y busca estos cargos: el cargo mensual, cajeros de otro banco, estados de cuenta en papel y pagos que rebotan. Casi todos se evitan con una llamada o un cambio en la app. Busca palabras como 'monthly service fee', 'ATM fee' o 'paper statement'. Si tu banco no te ayuda, cámbiate: hay muchas cuentas sin cargos.",
+     "on_screen_text": "Los otros cargos que se evitan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over a statement. No text, no logos, no real people."
+    },
+    {
+     "heading": "Organiza",
+     "narration": "Para que tu dinero trabaje solo, usa dos o tres cuentas. En la de cheques cae tu sueldo y salen tus gastos fijos en automático. El día de pago, una transferencia automática manda una parte al ahorro. Y si quieres, una tercera cuenta solo para el gasto de la semana: lo que tiene es lo que te queda. Así no tienes que calcular nada en la caja del súper.",
+     "on_screen_text": "Dos o tres cuentas, en automático",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three jars connected by arrows. No text, no logos, no real people."
+    },
+    {
+     "heading": "Envíos",
+     "narration": "Si mandas dinero a tu familia, tener cuenta también ayuda: muchas apps de envío cobran menos si pagas desde tu cuenta que en efectivo. Compara cada vez cuánto le llega a tu familia, no solo la comisión, porque el tipo de cambio también cuesta. Y recuerda que tienes ciento ochenta días para reclamar un error en un envío.",
+     "on_screen_text": "Mandar dinero desde tu cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an arrow from a bank to a small house far away. No text, no logos, no real people."
+    },
+    {
+     "heading": "Estafas",
+     "narration": "Y cuidado: ningún banco te llama para pedirte que muevas tu dinero a una 'cuenta segura', ni te pide los códigos que te llegan por mensaje. Si te llaman, cuelga y marca al número de atrás de tu tarjeta. Y nunca prestes tu cuenta para recibir y reenviar dinero de otros: eso es ser mula de dinero, y te pueden cerrar la cuenta.",
+     "on_screen_text": "Nadie de tu banco te pide mover tu dinero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a warning sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Resumen: abre una cuenta asegurada, en banco o cooperativa, con ITIN, pasaporte o matrícula si es lo que tienes. Escoge una sin cargo mensual, apaga el sobregiro con débito, evita los cargos que se pueden evitar y pon tu dinero en automático. Lo que dejes de pagar en cargos, mándalo a tu ahorro.",
+     "on_screen_text": "Cuenta asegurada, sin cargos, en automático",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf putting coins into a jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu cuenta de banco sin cargos, con o sin Seguro Social:\n1. Por qué tener cuenta\n2. Banco o cooperativa\n3. Sin Seguro Social: ITIN, pasaporte o matrícula\n4. Cómo escoger la cuenta\n5. Apaga el sobregiro con débito\n6. Los otros cargos que se evitan\n7. Dos o tres cuentas, en automático\n8. Mandar dinero desde tu cuenta\n9. Estafas de 'tu banco'\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "banco",
+    "cooperativa",
+    "itin",
+    "comisiones",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cómo abrir y usar una cuenta de banco sin pagar cargos, con o sin número de Seguro Social: banco o cooperativa, qué documentos llevar, sobregiro, cargos evitables, cómo organizar tus cuentas, envíos y estafas.\n\nCapítulos (estimados; ajústalos después de grabar)\n0:00 Tu cuenta sin cargos\n0:40 Por qué tener cuenta\n1:30 Banco o cooperativa\n2:15 Sin Seguro Social\n2:55 Cómo escoger\n3:35 El sobregiro\n4:20 Otros cargos\n5:00 Organiza tus cuentas\n5:45 Envíos\n6:25 Estafas\n7:05 Resumen\n\nInformación general, no es asesoría financiera.\n\nFuentes: fdic.gov y mycreditunion.gov (seguro de depósitos), consumerfinance.gov (sobregiro, envíos de dinero, cuentas).\n\nEnlaces (los productos de pago son nuestros):\nCuenta de banco y tarjeta con ITIN: https://dinerosimple.netlify.app/blog/cuenta-y-tarjeta-con-itin/?utm_source=youtube&utm_medium=social&utm_campaign=l-banco-sin-cargos\nEl Presupuesto de 20 Minutos ($12): https://dinerosimple.netlify.app/products/el-presupuesto-de-20-minutos/?utm_source=youtube&utm_medium=social&utm_campaign=l-banco-sin-cargos\nGuía gratis: Tu dinero en orden en 7 días: https://dinerosimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=l-banco-sin-cargos",
+   "thumbnail_text": "Banco sin cargos",
+   "sources": [
+    "https://www.fdic.gov/resources/deposit-insurance",
+    "https://www.mycreditunion.gov/",
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-overdraft-coverage-and-how-does-it-work-en-1035/",
+    "https://www.consumerfinance.gov/consumer-tools/sending-money/"
+   ],
+   "claims_to_verify": [
+    "FDIC/NCUA $250,000 coverage; fintech apps need a partner bank for pass-through insurance",
+    "Reg E overdraft opt-in for debit/ATM",
+    "Remittance error claims within 180 days",
+    "Check-cashing example: $800 x 3% = $24, x 24 = $576/year (illustrative)",
+    "Some remittance providers charge less when funded from a bank account (varies)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ }
+]

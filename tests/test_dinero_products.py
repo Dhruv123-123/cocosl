@@ -155,3 +155,19 @@ def test_answer_bank_has_30_linkless_answers_and_is_current():
     assert (DS / "ANSWER_BANK.md").read_text() == build_answers.build()
     for _, q, a, _ in build_answers.A:
         assert "notario" not in a.lower() or "no con un notario" in a.lower() or "un notario público solo certifica" in a.lower(), q
+
+
+def test_month4_plan_is_complete_and_names_no_bank():
+    items = json.loads((DS / "content-month-4.json").read_text())
+    fmts = [i["format"] for i in items]
+    assert fmts.count("short") == 14 and fmts.count("carousel") == 8 and fmts.count("long") == 2
+    plan = (DS / "POSTING_PLAN_MONTH_4.md").read_text()
+    review = (DS / "REVIEW_CHECKLIST_MONTH_4.md").read_text()
+    banned = ("chase", "wells fargo", "bank of america", "citibank", "capital one", "discover", "remitly", "wise", "xoom", "self financial")
+    for i in items:
+        s = i["script"]
+        assert s["title"] in plan and s["title"] in review and s["claims_to_verify"], i["key"]
+        text = " ".join([s["caption"], s["description"]] + [g["narration"] + " " + g["on_screen_text"] for g in s["segments"]]).lower()
+        assert not any(b in text for b in banned), i["key"]
+    rows = [r for r in plan.splitlines() if r.startswith("| ") and " mar |" in r]
+    assert len(rows) == 24 and len({(r.split("|")[1], r.split("|")[2]) for r in rows}) == 24
