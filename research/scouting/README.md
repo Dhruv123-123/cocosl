@@ -49,6 +49,7 @@ official Business Discovery API (see `watchlist.py`).
 | [`newsletter.md`](newsletter.md) | beehiiv vs Kit vs MailerLite (cost at 0-10k, ad network, paid recommendations, payout per subscriber), the pick (Kit, one free account per brand), exact setup and automations for the existing sequences, and 20 swap partners |
 | [`youtube-monetization.md`](youtube-monetization.md) | YouTube money beyond AdSense: sponsors that fit 1k-10k finance channels and their rates, the inauthentic-content and AI-label rules audited against our pipeline (with fixes), and Shopping/Amazon eligibility |
 | [`tiktok-instagram-monetization.md`](tiktok-instagram-monetization.md) | TikTok Creator Rewards (1-minute rule), Subscriptions and Shop; Instagram bonuses, Subscriptions, Gifts and Facebook Content Monetization; both platforms' AI and originality rules audited against our formats, with fixes |
+| [`pinterest-seo.md`](pinterest-seo.md) | Pinterest for finance (fresh pins, standard vs video, cadence, AI labels), Google's scaled-content, thin-affiliate and AI rules, and an audit of the Money Made Simple site (PR #4) with measured duplication per section and fixes |
 | [`hooks.md`](hooks.md) | 30 hook templates, now used by the writer (`src/contentfactory/hooks_library.json`) |
 | [`repos.csv`](repos.csv) | Raw repo metadata pulled 2026-11-07 |
 | [`watchlist.csv`](watchlist.csv), [`watchlist.py`](watchlist.py) | Accounts to watch, and a script that snapshots their public follower and engagement numbers through the official Business Discovery API |
