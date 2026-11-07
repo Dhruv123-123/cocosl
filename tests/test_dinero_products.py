@@ -545,3 +545,17 @@ def test_dinero_welcome_sequence_is_spanish_and_checks_clean(factory):
     assert itin and all("abogado de inmigración con licencia" in s.body_markdown for s in itin)
     assert "Recortar Gastos" in seq.steps[-1].body_markdown or "{product_name}" in seq.steps[-1].body_markdown
     assert "IA" in seq.footer_note and "no es asesoría financiera" in seq.footer_note
+
+
+def test_primer_ano_workbook_is_gumroad_only_and_current():
+    """'Tu primer año' workbook: 19 pages, price left as [PRICE], Gumroad only (Etsy bans AI-generated functional
+    guides), attorney line on the immigration pages, and the committed listing/checklist match the builder."""
+    b = _load(DS / "primer-ano" / "build_cuaderno.py", "build_cuaderno")
+    pages = b.pages()
+    assert len(pages) == 19
+    text = " ".join(pages)
+    assert text.count("abogado de inmigración con licencia") >= 3 and "nunca con un notario" in text
+    listing = (DS / "primer-ano" / "GUMROAD.md").read_text()
+    assert listing == b.gumroad() and "[PRICE]" in listing and "Gumroad only" in listing
+    assert (DS / "REVIEW_CHECKLIST_PRIMER_ANO.md").read_text() == b.review_doc()
+    assert not any(x in text.lower() for x in ("remitly", "western union", "zelle", "venmo", "chime"))
