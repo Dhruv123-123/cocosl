@@ -1,0 +1,1874 @@
+[
+ {
+  "key": "m2-meta-con-nombre",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "New Year: give each savings goal its own named sub-account with a date and an amount; named money is harder to spend.",
+  "script": {
+   "title": "Ponle nombre a tu ahorro",
+   "hook": "Una cuenta que se llama 'ahorro' se gasta. Una que se llama 'Viaje a Guadalajara, diciembre' no.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Una cuenta que se llama 'ahorro' se gasta. Una que se llama 'Viaje a Guadalajara, diciembre' no.",
+     "on_screen_text": "Ponle nombre a tu ahorro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small jar with a blank label and a pen. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Cuando el dinero tiene nombre, sacarlo se siente como quitarle algo a esa meta. Esa pequeña pausa es justo lo que necesitas.",
+     "on_screen_text": "El dinero con nombre ya tiene trabajo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a labeled jar next to a hand that stops before taking a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Muchos bancos te dejan abrir apartados o subcuentas dentro de tu cuenta de ahorro, sin costo. Abre uno por meta.",
+     "on_screen_text": "Un apartado por meta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three small jars side by side inside one larger box. No text, no logos, no real people."
+    },
+    {
+     "heading": "El nombre",
+     "narration": "Ponle la meta y la fecha. 'Viaje, diciembre 2027'. 'Colchón, $1,000'. 'Llantas del carro, junio'.",
+     "on_screen_text": "Meta + fecha: 'Viaje, dic 2027'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. jars with tags showing a plane, an umbrella and a car tire. No text, no logos, no real people."
+    },
+    {
+     "heading": "La cuenta",
+     "narration": "Divide el total entre los meses que faltan. Un viaje de $900 en diciembre son unos $82 al mes. Ponlo en automático el día de pago.",
+     "on_screen_text": "$900 ÷ 11 meses ≈ $82 al mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with eleven small coins, one per month. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Hoy, una sola cosa: abre un apartado y ponle nombre. El resto del año trabaja solo.",
+     "on_screen_text": "Hoy: abre un apartado y ponle nombre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sticking a label on a jar with a smile. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Ponle nombre a tu ahorro: un apartado por meta, con la meta y la fecha en el nombre ('Viaje, diciembre 2027'), el total dividido entre los meses que faltan y una transferencia automática el día de pago. Ejemplo: $900 ÷ 11 meses ≈ $82 al mes.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "ahorro",
+    "metas2027",
+    "añonuevo",
+    "presupuesto",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Por qué ponerle nombre y fecha a cada meta de ahorro funciona, y cómo hacerlo en cinco minutos.",
+   "thumbnail_text": "Ponle nombre a tu ahorro",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Many (not all) banks offer free savings sub-accounts or 'buckets'; keep the wording hedged",
+    "Example arithmetic only: $900 / 11 = $81.82"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2-estado-de-diciembre",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "The December statement arrives in January: pay the statement balance to keep the grace period; if you can't, stop using the card and make a plan.",
+  "script": {
+   "title": "Llegó el estado de cuenta de diciembre",
+   "hook": "Llegó el estado de cuenta de diciembre. Mira este número antes del mínimo.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Llegó el estado de cuenta de diciembre. Mira este número antes del mínimo.",
+     "on_screen_text": "Mira el saldo del estado, no el mínimo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf opening an envelope with a credit card statement. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tres números",
+     "narration": "Tu estado de cuenta trae tres números: el pago mínimo, el saldo del estado de cuenta y el saldo actual. El que importa es el del medio.",
+     "on_screen_text": "Mínimo · saldo del estado · saldo actual",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a statement with three highlighted lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Si pagas completo el saldo del estado de cuenta antes de la fecha límite, en la mayoría de las tarjetas no pagas intereses por esas compras.",
+     "on_screen_text": "Pagas el saldo del estado = sin intereses",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar date circled with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Si no alcanza",
+     "narration": "Si no te alcanza para pagarlo completo, lo primero es dejar de usar esa tarjeta. Paga más que el mínimo, aunque sea un poco.",
+     "on_screen_text": "No alcanza: deja de usarla",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card placed in a drawer. No text, no logos, no real people."
+    },
+    {
+     "heading": "El plan",
+     "narration": "Pon la fecha límite en la alarma del celular para no pagar cargos por atraso, y haz un plan para terminar de pagar en meses, no en años.",
+     "on_screen_text": "Fecha límite en la alarma + plan de pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone alarm next to a short checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Diciembre se paga en enero, no en julio.",
+     "on_screen_text": "Diciembre se paga en enero, no en julio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf closing the envelope, relieved. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Llegó el estado de cuenta de diciembre. Trae tres números: el pago mínimo, el saldo del estado de cuenta y el saldo actual. Si pagas completo el saldo del estado antes de la fecha límite, en la mayoría de las tarjetas no pagas intereses por esas compras. Si no te alcanza: deja de usarla, paga más que el mínimo y haz un plan.\n\nTu Fecha Sin Deudas (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "tarjetadecredito",
+    "deudas",
+    "cuestadeenero",
+    "intereses",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Qué número mirar en el estado de cuenta de diciembre y qué hacer si no te alcanza para pagarlo completo.",
+   "thumbnail_text": "El número que importa",
+   "sources": [
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-statement-balance-en-1966/",
+    "https://www.consumerfinance.gov/consumer-tools/credit-cards/"
+   ],
+   "claims_to_verify": [
+    "Paying the full statement balance by the due date generally avoids purchase interest (grace period); not all cards have a grace period, so 'en la mayoría' must stay"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2-lista-de-deudas",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Fifteen minutes in January: every debt on one list with balance, rate, minimum and due date. You can't plan what you can't see.",
+  "script": {
+   "title": "Todas tus deudas en una sola lista",
+   "hook": "No puedes salir de una deuda que no sabes cuánto es.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "No puedes salir de una deuda que no sabes cuánto es.",
+     "on_screen_text": "Todas tus deudas en una lista",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a notebook and several envelopes spread on a table. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué anotar",
+     "narration": "Haz una lista con todo lo que debes: tarjetas, préstamo del carro, préstamos personales, lo que le debes a la tienda, pagos de 'paga en 4'. De cada uno, cuatro datos: saldo, tasa de interés, pago mínimo y fecha de pago.",
+     "on_screen_text": "Saldo · tasa · mínimo · fecha",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple four-column table on a notepad. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dónde",
+     "narration": "Todo eso viene en la app o en el estado de cuenta. Si no encuentras la tasa, llama y pregúntala.",
+     "on_screen_text": "Todo está en la app o el estado de cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone app and a paper statement side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "El total",
+     "narration": "Suma el total una sola vez. Puede asustar. No es un juicio sobre ti: es el punto de partida.",
+     "on_screen_text": "Súmalo una vez, sin juzgarte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a single number in a calm circle. No text, no logos, no real people."
+    },
+    {
+     "heading": "El orden",
+     "narration": "Ahora el plan: el mínimo en todas, y todo lo extra a una sola. La de interés más alto si quieres ahorrar más, o la más chica si quieres ganar rápido.",
+     "on_screen_text": "Mínimos en todas, el extra a una",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. several small envelopes, one with a bigger arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Quince minutos hoy y ya tienes algo que la mayoría no tiene: una fecha para terminar.",
+     "on_screen_text": "15 minutos hoy, una fecha para terminar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf circling a date on a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Todas tus deudas en una sola lista, en 15 minutos: tarjetas, carro, préstamos, tienda, 'paga en 4'. De cada una anota saldo, tasa, pago mínimo y fecha. Suma el total una vez, sin juzgarte. Después: el mínimo en todas y todo lo extra a una sola.\n\nTu Fecha Sin Deudas (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "deudas",
+    "salirdedeudas",
+    "bolanieve",
+    "presupuesto",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cómo poner todas tus deudas en una sola lista en 15 minutos, y el siguiente paso.",
+   "thumbnail_text": "Tus deudas en una lista",
+   "sources": [
+    "https://www.consumerfinance.gov/about-us/blog/how-to-reduce-your-debt/"
+   ],
+   "claims_to_verify": [
+    "No factual claims beyond the method; avalanche (highest rate) saves the most interest, snowball (smallest balance) gives quicker wins"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2-pruebas-gratis",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Free trials signed up for over the holidays convert to paid in January; find them and cancel before the charge.",
+  "script": {
+   "title": "Las pruebas gratis de diciembre empiezan a cobrar",
+   "hook": "Esa prueba gratis que abriste en diciembre empieza a cobrar este mes.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Esa prueba gratis que abriste en diciembre empieza a cobrar este mes.",
+     "on_screen_text": "La prueba gratis ya va a cobrar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a phone with a gift icon that turns into a price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué pasa",
+     "narration": "En las fiestas abrimos pruebas para ver una película, una serie, música para la posada. Casi todas se renuevan solas.",
+     "on_screen_text": "Las pruebas se renuevan solas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a TV, headphones and a small calendar with a renewal arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Búscalas",
+     "narration": "Busca en tu correo 'prueba gratis', 'free trial' y 'suscripción', y revisa los cargos de tu tarjeta de diciembre y enero.",
+     "on_screen_text": "Busca 'prueba', 'trial', 'suscripción'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over an email inbox. No text, no logos, no real people."
+    },
+    {
+     "heading": "En el celular",
+     "narration": "Y en el celular, revisa las suscripciones de la tienda de apps. Ahí aparecen muchas que no salen en el correo.",
+     "on_screen_text": "Celular: Ajustes > Suscripciones",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone settings screen with a list of three items. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cancela",
+     "narration": "Cancela hoy las que no vas a usar. En muchas sigues teniendo acceso hasta el final del periodo de prueba.",
+     "on_screen_text": "Cancela hoy, aunque falten días",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a hand tapping a cancel button. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Diez minutos pueden ser treinta dólares al mes que se quedan contigo.",
+     "on_screen_text": "10 minutos pueden ser $30 al mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf putting coins back into a small wallet. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Las pruebas gratis que abriste en diciembre se renuevan solas en enero. Búscalas en tu correo ('prueba gratis', 'free trial', 'suscripción'), en los cargos de tu tarjeta y en las suscripciones de la tienda de apps de tu celular. Cancela hoy las que no vas a usar.\n\nEl Kit para Recortar Gastos (guía + guiones para llamar, en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "suscripciones",
+    "ahorro",
+    "cuestadeenero",
+    "gastoshormiga",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cómo encontrar y cancelar las pruebas gratis de las fiestas antes de que empiecen a cobrar.",
+   "thumbnail_text": "La prueba gratis ya cobra",
+   "sources": [
+    "https://consumer.ftc.gov/articles/free-trial-offers-and-subscriptions"
+   ],
+   "claims_to_verify": [
+    "Many (not all) services keep access until the end of the trial after you cancel; keep 'en muchas'",
+    "$30/month is illustrative"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2-primer-talon",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Check your first paystub of the year: gross, withholding, benefits and retirement deductions can change in January.",
+  "script": {
+   "title": "Revisa tu primer talón de pago del año",
+   "hook": "Tu primer cheque de enero puede venir distinto. Revísalo antes de gastarlo.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Tu primer cheque de enero puede venir distinto. Revísalo antes de gastarlo.",
+     "on_screen_text": "Tu primer talón del año: revísalo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a paystub up to the light. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "En enero muchas empresas cambian el seguro médico, los beneficios y los descuentos. Y lo que elegiste en la inscripción abierta empieza ahora.",
+     "on_screen_text": "En enero cambian descuentos y beneficios",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paystub with a few lines highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué mirar 1",
+     "narration": "Mira tres cosas. Primero, el pago bruto, los impuestos y el neto. Si tu pago neto cambió mucho, pregunta por qué.",
+     "on_screen_text": "Bruto, impuestos y neto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three stacked boxes labeled with icons, the last one smaller. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué mirar 2",
+     "narration": "Segundo, el seguro y los beneficios. Que sea lo que elegiste, ni más ni menos.",
+     "on_screen_text": "Seguro y beneficios: ¿lo que elegiste?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small shield and a checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué mirar 3",
+     "narration": "Tercero, tu aportación al retiro. Que el porcentaje sea el que pediste, y si este año lo subiste, que ya aparezca.",
+     "on_screen_text": "Tu 401(k): ¿sigue el porcentaje?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small piggy bank with a percent sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Si algo no cuadra, habla con recursos humanos esta semana. Un error se arregla mejor en enero que en diciembre.",
+     "on_screen_text": "Un error se arregla mejor en enero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf talking at a small office desk. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Revisa tu primer talón de pago del año antes de gastarlo: 1) pago bruto, impuestos y neto; 2) seguro y beneficios, que sean los que elegiste; 3) tu aportación al 401(k), que tenga el porcentaje que pediste. Si algo no cuadra, habla con recursos humanos esta semana.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "talondepago",
+    "cheque",
+    "401k",
+    "trabajo",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Tres cosas que revisar en tu primer talón de pago de enero.",
+   "thumbnail_text": "Revisa tu talón de enero",
+   "sources": [
+    "https://www.dol.gov/general/topic/wages"
+   ],
+   "claims_to_verify": [
+    "Benefit elections from open enrollment usually take effect Jan 1 for calendar-year plans (not all employers)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2-bajar-la-tasa",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Call your card issuer and ask for a lower rate or a hardship program; a five-minute call sometimes works, and asking doesn't hurt your score.",
+  "script": {
+   "title": "Llama y pide que te bajen la tasa",
+   "hook": "Una llamada de cinco minutos a veces te baja la tasa de tu tarjeta.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Una llamada de cinco minutos a veces te baja la tasa de tu tarjeta.",
+     "on_screen_text": "Llama y pide una tasa más baja",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a phone next to a credit card with a percent sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "A la compañía le conviene más que sigas pagando que perderte como cliente. Por eso a veces dicen que sí.",
+     "on_screen_text": "A ellos les conviene que sigas pagando",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a scale with a card on one side and coins on the other. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué decir",
+     "narration": "Llama al número de atrás de la tarjeta y di: 'Llevo tiempo con ustedes y quiero pagar esta deuda. ¿Me pueden bajar la tasa de interés?'",
+     "on_screen_text": "'¿Me pueden bajar la tasa?'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a speech bubble with a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Si dicen que no",
+     "narration": "Si dicen que no, pregunta si tienen un programa de apoyo por dificultades económicas. Algunas compañías bajan la tasa o el pago por unos meses.",
+     "on_screen_text": "Pregunta por un programa de apoyo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small lifebuoy next to a card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ojo",
+     "narration": "Antes de aceptar, pregunta si te cierran o congelan la tarjeta y si se reporta algo al buró de crédito.",
+     "on_screen_text": "Pregunta qué pasa con tu tarjeta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over a small contract. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Lo peor que puede pasar es que te digan que no. Anota con quién hablaste y la fecha.",
+     "on_screen_text": "Lo peor que pasa: te dicen que no",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf writing a name and date in a notebook. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Llama al número de atrás de tu tarjeta y pide que te bajen la tasa de interés. Si dicen que no, pregunta por un programa de apoyo por dificultades económicas. Antes de aceptar, pregunta si te cierran la tarjeta y si se reporta algo al buró. Anota con quién hablaste y la fecha.\n\nTu Fecha Sin Deudas (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "tarjetadecredito",
+    "deudas",
+    "intereses",
+    "salirdedeudas",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Qué decir cuando llamas a tu tarjeta para pedir una tasa más baja o un programa de apoyo.",
+   "thumbnail_text": "Pide una tasa más baja",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/credit-cards/"
+   ],
+   "claims_to_verify": [
+    "Issuers sometimes agree to lower APRs; not guaranteed (wording must stay 'a veces')",
+    "Some issuers offer hardship programs that may lower rate or payment temporarily, sometimes closing or freezing the card"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2-reporte-gratis-semanal",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Your credit reports from all three bureaus are free every week at annualcreditreport.com, and checking your own report never lowers your score.",
+  "script": {
+   "title": "Tu reporte de crédito es gratis cada semana",
+   "hook": "Revisar tu propio reporte de crédito no baja tu puntaje. Y es gratis cada semana.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Revisar tu propio reporte de crédito no baja tu puntaje. Y es gratis cada semana.",
+     "on_screen_text": "Tu reporte de crédito: gratis cada semana",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking through a magnifying glass at a short report. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dónde",
+     "narration": "El sitio oficial es AnnualCreditReport.com. Ahí sacas tus reportes de Equifax, Experian y TransUnion, sin pagar.",
+     "on_screen_text": "AnnualCreditReport.com",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three simple folders side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuidado",
+     "narration": "Si un sitio te pide tarjeta para ver tu reporte, no es el oficial. Escribe la dirección tú, no le des clic a anuncios.",
+     "on_screen_text": "Si te cobran, no es el sitio oficial",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a warning sign next to a credit card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué buscar",
+     "narration": "Busca cuentas que no reconoces, pagos marcados tarde que pagaste a tiempo y deudas que ya pagaste.",
+     "on_screen_text": "Cuentas que no son tuyas, pagos mal reportados",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a report with one line circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Si hay un error",
+     "narration": "Si hay un error, disputarlo es gratis, en línea o por correo, con la agencia de crédito y con la compañía que lo reportó.",
+     "on_screen_text": "Disputa el error: es gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope being sent with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Enero es buen mes para revisar los tres. Diez minutos, una vez al año como mínimo.",
+     "on_screen_text": "Enero: revisa los tres",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf ticking three boxes on a list. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tus reportes de crédito de Equifax, Experian y TransUnion son gratis cada semana en AnnualCreditReport.com, y revisar el tuyo no baja tu puntaje. Busca cuentas que no reconoces, pagos marcados tarde por error y deudas ya pagadas. Disputar un error es gratis.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "credito",
+    "reportedecredito",
+    "puntajedecredito",
+    "buro",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Dónde sacar gratis tus reportes de crédito cada semana y qué revisar.",
+   "thumbnail_text": "Gratis cada semana",
+   "sources": [
+    "https://www.annualcreditreport.com/",
+    "https://consumer.ftc.gov/articles/free-credit-reports",
+    "https://consumer.ftc.gov/articles/disputing-errors-your-credit-reports"
+   ],
+   "claims_to_verify": [
+    "Free weekly reports from all three bureaus at AnnualCreditReport.com (made permanent in 2023)",
+    "Checking your own report is a soft inquiry and does not affect your score",
+    "Disputes are free with the bureau and the furnisher"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2-ira-hasta-abril",
+  "format": "short",
+  "pillar": "invertir por primera vez (fondos índice, cuentas de retiro)",
+  "idea_angle": "You can still put money into an IRA for 2026 until the April 15, 2027 tax deadline; choose the year when you contribute.",
+  "script": {
+   "title": "Todavía puedes aportar a tu IRA de 2026",
+   "hook": "2026 ya se acabó, pero tu IRA de 2026 todavía no.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "2026 ya se acabó, pero tu IRA de 2026 todavía no.",
+     "on_screen_text": "Tu IRA de 2026 sigue abierta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a calendar page that says 2026 with a small piggy bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "Puedes aportar a una IRA para el año 2026 hasta la fecha límite de impuestos: el 15 de abril de 2027.",
+     "on_screen_text": "Hasta el 15 de abril de 2027",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with April 15 circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Cuando hagas el depósito entre enero y abril, la cuenta te pregunta para qué año es. Elige 2026.",
+     "on_screen_text": "Al aportar, elige el año: 2026",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple form with two boxes, one checked. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué importa",
+     "narration": "Cada año tiene su propio límite. Si no lo usas antes de abril, ese espacio de 2026 se pierde.",
+     "on_screen_text": "Cada año tiene su límite",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an empty box with a lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Roth o Traditional",
+     "narration": "Aplica para la Roth IRA y la Traditional IRA. Con la Traditional, a veces también te ayuda en la declaración de impuestos.",
+     "on_screen_text": "Roth o Traditional: misma fecha",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two small jars labeled with simple icons. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "No tienes que llegar al límite. Aunque sean cincuenta dólares, cuentan.",
+     "on_screen_text": "Aunque sea $50, cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf dropping a coin into a jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Todavía puedes aportar a una IRA para 2026 hasta el 15 de abril de 2027. Al hacer el depósito, elige el año 2026. Cada año tiene su propio límite, y el de 2026 se pierde después de abril. Aplica a Roth y Traditional. Aunque sean $50, cuentan. Información general, no es asesoría fiscal.\n\nEmpieza a Invertir con $100 al Mes (guía + calculadoras en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "rothira",
+    "ira",
+    "retiro",
+    "invertir",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Por qué todavía puedes aportar a tu IRA de 2026 hasta el 15 de abril de 2027.",
+   "thumbnail_text": "IRA 2026: hasta abril",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits",
+    "https://www.irs.gov/retirement-plans/roth-iras"
+   ],
+   "claims_to_verify": [
+    "IRA contributions for a tax year can be made until the unextended filing deadline (April 15, 2027 for 2026)",
+    "Traditional IRA deductibility depends on income and workplace plan coverage ('a veces')",
+    "Roth IRA eligibility has income limits; not mentioned, consider adding"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2-itin-vence",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "An ITIN not used on a federal return for three years in a row expires; renew it with Form W-7 before you file so your refund isn't delayed.",
+  "script": {
+   "title": "¿Tu ITIN venció? Revísalo antes de declarar",
+   "hook": "Si tienes ITIN y no declaraste en los últimos tres años, puede estar vencido.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si tienes ITIN y no declaraste en los últimos tres años, puede estar vencido.",
+     "on_screen_text": "¿Tu ITIN sigue vigente?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an ID-style card with a small question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "Un ITIN vence si no lo usaste en una declaración federal en tres años seguidos. Vence al final de ese tercer año.",
+     "on_screen_text": "Sin usar 3 años seguidos = vence",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three calendar pages with empty boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué pasa",
+     "narration": "Si declaras con un ITIN vencido, el IRS procesa la declaración, pero puede atrasar tu reembolso y quitarte algunos créditos.",
+     "on_screen_text": "Si declaras con uno vencido, se atrasa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a slow snail carrying an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo renovar",
+     "narration": "Se renueva con el formulario W-7, que es gratis. Va junto con tu declaración, o antes, por correo, en persona o con un agente certificado.",
+     "on_screen_text": "Formulario W-7, gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple form with a pen. No text, no logos, no real people."
+    },
+    {
+     "heading": "Familia",
+     "narration": "Revisa el ITIN de cada persona de tu declaración, también el de tu pareja y tus dependientes.",
+     "on_screen_text": "Revisa el de cada persona en la declaración",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three small ID cards in a row. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Revísalo ahora, en enero, no en abril. Y nadie te puede cobrar por el formulario: es gratis en irs.gov.",
+     "on_screen_text": "Revísalo en enero, no en abril",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf marking a January calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Un ITIN vence si no lo usaste en una declaración federal en tres años seguidos. Si declaras con uno vencido, tu reembolso se puede atrasar. Se renueva con el formulario W-7, que es gratis en irs.gov. Revisa el de cada persona de tu declaración. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "itin",
+    "impuestos",
+    "irs",
+    "declaraciondeimpuestos",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cómo saber si tu ITIN venció y cómo renovarlo con el formulario W-7 antes de declarar.",
+   "thumbnail_text": "¿Tu ITIN venció?",
+   "sources": [
+    "https://www.irs.gov/es/individuals/itin-expiration-faqs",
+    "https://www.irs.gov/es/forms-pubs/about-form-w-7"
+   ],
+   "claims_to_verify": [
+    "ITIN expires if not used on a federal tax return at least once in three consecutive tax years (expires Dec 31 of the third year)",
+    "Filing with an expired ITIN: return processed but delays and some credits disallowed until renewed",
+    "Form W-7 is free; can be filed with the return, by mail, in person at a TAC, or through a Certifying Acceptance Agent",
+    "Confirm wording on renewing 'antes' (IRS generally requires renewal with a return unless an exception applies)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2-w2-1-feb",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Employers must send W-2s by Feb 1, 2027 (Jan 31 falls on a Sunday). Check name and SSN/ITIN; if it doesn't arrive, ask the employer first.",
+  "script": {
+   "title": "Tu W-2 tiene que llegar antes del 1 de febrero",
+   "hook": "Tu W-2 tiene fecha límite. Este año es el 1 de febrero.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Tu W-2 tiene fecha límite. Este año es el 1 de febrero.",
+     "on_screen_text": "W-2: fecha límite 1 de febrero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf waiting by a mailbox with a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "El W-2 es el papel que manda tu trabajo con cuánto ganaste en 2026 y cuánto te retuvieron de impuestos. Sin él no deberías declarar.",
+     "on_screen_text": "El W-2 dice cuánto ganaste y te retuvieron",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple tax form with two highlighted boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "La fecha",
+     "narration": "Normalmente es el 31 de enero, pero en 2027 cae en domingo, así que la fecha es el lunes 1 de febrero. Puede llegar por correo o por el portal de tu trabajo.",
+     "on_screen_text": "31 de enero es domingo → 1 de febrero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with Sunday crossed and Monday circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Revísalo",
+     "narration": "Cuando llegue, revisa tu nombre y tu número de Seguro Social o ITIN. Un dígito mal puede atrasar todo.",
+     "on_screen_text": "Nombre y número: que estén bien",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over a name line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Si no llega",
+     "narration": "Si no llega, pregunta primero en tu trabajo y confirma tu dirección. Si sigue sin llegar a finales de febrero, el IRS te puede ayudar.",
+     "on_screen_text": "No llegó: primero pregunta en tu trabajo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone call to a small office building. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y si tuviste varios trabajos en 2026, necesitas el W-2 de cada uno. Guárdalos en tu carpeta de impuestos.",
+     "on_screen_text": "Si tuviste varios trabajos, junta todos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf putting several forms into one folder. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu W-2 de 2026 tiene que llegar a más tardar el 1 de febrero de 2027 (el 31 de enero cae en domingo). Revisa tu nombre y tu número de Seguro Social o ITIN. Si no llega, pregunta primero en tu trabajo; si a finales de febrero sigue sin llegar, el IRS te puede ayudar. Si tuviste varios trabajos, junta todos. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "w2",
+    "impuestos",
+    "irs",
+    "declaraciondeimpuestos",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cuándo tiene que llegar tu W-2, qué revisar y qué hacer si no llega.",
+   "thumbnail_text": "W-2: 1 de febrero",
+   "sources": [
+    "https://www.irs.gov/es/forms-pubs/about-form-w-2",
+    "https://www.irs.gov/taxtopics/tc154"
+   ],
+   "claims_to_verify": [
+    "W-2 due to employees by Jan 31; when it falls on a weekend the deadline is the next business day (Mon Feb 1, 2027)",
+    "IRS Topic 154: contact the IRS if the W-2 hasn't arrived by the end of February"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2-vita-gratis",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Free tax prep through IRS-certified volunteers (VITA/TCE) for moderate incomes, many with Spanish-speaking volunteers; find a site with the IRS locator.",
+  "script": {
+   "title": "Hay quien te hace los impuestos gratis",
+   "hook": "Antes de pagarle a alguien por tus impuestos, revisa si te los pueden hacer gratis.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Antes de pagarle a alguien por tus impuestos, revisa si te los pueden hacer gratis.",
+     "on_screen_text": "Tus impuestos, gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a folder in front of a small community center. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "Se llama VITA. Son voluntarios certificados por el IRS que preparan tu declaración sin cobrarte, en bibliotecas, iglesias y centros comunitarios.",
+     "on_screen_text": "VITA: voluntarios certificados por el IRS",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a library building with a small check badge. No text, no logos, no real people."
+    },
+    {
+     "heading": "Para quién",
+     "narration": "Es para personas con ingresos moderados. El límite cambia cada año, así que revísalo en irs.gov. También hay un programa para mayores de 60 años.",
+     "on_screen_text": "Ingresos moderados (revisa el límite)",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple income bar with a dotted line. No text, no logos, no real people."
+    },
+    {
+     "heading": "En español",
+     "narration": "Muchos sitios tienen voluntarios que hablan español. Pregunta cuando hagas la cita.",
+     "on_screen_text": "Muchos sitios ayudan en español",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two speech bubbles side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué llevar",
+     "narration": "Lleva tu identificación, la tarjeta de Seguro Social o el ITIN de cada persona, tus W-2 y 1099, y tu cuenta para el depósito directo.",
+     "on_screen_text": "Identificación, números, W-2 y 1099",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder with an ID card and a few forms. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Busca 'VITA' en irs.gov y pon tu código postal. Los sitios se llenan en febrero, así que aparta tu cita ya.",
+     "on_screen_text": "Búscalo: 'VITA' en irs.gov",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf typing on a laptop with a map pin on screen. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Antes de pagar por tus impuestos, revisa VITA: voluntarios certificados por el IRS que preparan tu declaración gratis si tienes ingresos moderados (el límite cambia cada año). Muchos sitios ayudan en español. Lleva identificación, Seguro Social o ITIN de cada persona, W-2, 1099 y tu cuenta para depósito directo. Busca 'VITA' en irs.gov. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "vita",
+    "irs",
+    "declaraciondeimpuestos",
+    "gratis",
+    "dinerosimple"
+   ],
+   "description": "Qué es VITA, para quién es y cómo encontrar un sitio que prepare tus impuestos gratis.",
+   "thumbnail_text": "Impuestos gratis",
+   "sources": [
+    "https://www.irs.gov/es/individuals/free-tax-return-preparation-for-qualifying-taxpayers",
+    "https://irs.treasury.gov/freetaxprep/"
+   ],
+   "claims_to_verify": [
+    "VITA: free prep for people generally earning up to an income limit set each year (around $69,000 recently; check the 2027 season figure before posting if you add a number)",
+    "TCE serves taxpayers 60 and older",
+    "Many sites offer Spanish-speaking volunteers (not all)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2-1099-trabajos",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Side gigs, cleaning, construction, delivery apps: that income is taxable even if no 1099 arrives. Keep records and set money aside.",
+  "script": {
+   "title": "¿Trabajaste por tu cuenta? Eso también se declara",
+   "hook": "Si te pagaron por limpiar casas, manejar o hacer trabajitos, eso también se declara.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si te pagaron por limpiar casas, manejar o hacer trabajitos, eso también se declara.",
+     "on_screen_text": "Trabajo por tu cuenta: también se declara",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a toolbox, a broom and a delivery bag. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "El ingreso por tu cuenta se declara aunque no te llegue ningún formulario 1099. El 1099 solo es el aviso; la obligación es tuya.",
+     "on_screen_text": "Con o sin 1099, es ingreso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a coin with a small form beside it, the form faded. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué te llega",
+     "narration": "Algunos clientes te mandan un 1099-NEC, y algunas apps de pago, un 1099-K. Guárdalos, pero también lleva tu propia cuenta.",
+     "on_screen_text": "1099-NEC o 1099-K",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two simple forms with different corner tags. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tus gastos",
+     "narration": "La buena noticia: muchos gastos del trabajo, como herramientas, materiales o millas del carro, pueden bajar lo que pagas. Guarda recibos.",
+     "on_screen_text": "Tus gastos del trabajo te ayudan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. receipts clipped together with a small car icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Aparta",
+     "narration": "Como nadie te retiene impuestos, aparta una parte de cada pago en una cuenta separada. Mucha gente aparta entre 20% y 30%; tu número depende de tu caso.",
+     "on_screen_text": "Aparta una parte de cada pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar labeled with a small tax icon receiving coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Declarar ese ingreso también cuenta para tu Seguro Social y te da un historial que te sirve para pedir un préstamo o rentar.",
+     "on_screen_text": "Declarar te protege",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a folder with a shield icon. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si trabajaste por tu cuenta (limpieza, construcción, manejar para una app, trabajitos), ese ingreso se declara aunque no te llegue un 1099. Guarda recibos de tus gastos de trabajo, aparta una parte de cada pago para impuestos y lleva tu propia cuenta. Declararlo también cuenta para tu Seguro Social. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "trabajoindependiente",
+    "1099",
+    "irs",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Por qué el ingreso por tu cuenta se declara aunque no te llegue un 1099, y cómo prepararte.",
+   "thumbnail_text": "Eso también se declara",
+   "sources": [
+    "https://www.irs.gov/forms-pubs/about-form-1099-nec",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/self-employed-individuals-tax-center"
+   ],
+   "claims_to_verify": [
+    "Self-employment income is taxable whether or not a 1099 is received",
+    "1099-K reporting thresholds changed (OBBBA restored $20,000 / 200 transactions); no threshold is quoted, keep it that way",
+    "Self-employment tax counts toward Social Security credits",
+    "20-30% set-aside is a common rule of thumb, not advice; check wording"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2-reembolso-cuando-llega",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "When the refund arrives: e-file + direct deposit is fastest (most within 21 days); refunds with EITC/ACTC can't be issued before mid-February by law; beware refund-advance fees.",
+  "script": {
+   "title": "¿Cuándo llega tu reembolso?",
+   "hook": "La forma más rápida de recibir tu reembolso no cuesta nada extra.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "La forma más rápida de recibir tu reembolso no cuesta nada extra.",
+     "on_screen_text": "Tu reembolso, más rápido y sin costo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf waiting with an envelope and a stopwatch. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lo más rápido",
+     "narration": "Declara en línea y pide depósito directo a tu cuenta. El IRS dice que la mayoría de esos reembolsos llegan en menos de 21 días.",
+     "on_screen_text": "Declaración electrónica + depósito directo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop sending an arrow straight into a bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "Con créditos",
+     "narration": "Si pides el crédito por ingreso del trabajo o el crédito adicional por hijos, por ley el IRS no puede mandar el reembolso antes de mediados de febrero.",
+     "on_screen_text": "Con EITC o ACTC: después de mediados de febrero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with mid-February marked. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuidado",
+     "narration": "Cuidado con los anticipos de reembolso que ofrecen algunos preparadores. Lee las comisiones: a veces cobran por algo que llega gratis en unas semanas.",
+     "on_screen_text": "'Reembolso rápido' puede costar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a price tag hanging from an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Nunca",
+     "narration": "Y nunca dejes que el reembolso se deposite en la cuenta del preparador. Siempre a la tuya.",
+     "on_screen_text": "El reembolso va a TU cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an arrow pointing to a house-shaped bank with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Para ver dónde va tu reembolso, usa la herramienta oficial '¿Dónde está mi reembolso?' en irs.gov.",
+     "on_screen_text": "Revisa en '¿Dónde está mi reembolso?'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a phone with a progress bar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Para recibir tu reembolso más rápido: declara en línea y pide depósito directo (el IRS dice que la mayoría llega en menos de 21 días). Si pides EITC o ACTC, por ley no puede llegar antes de mediados de febrero. Cuidado con los 'anticipos de reembolso' con comisión, y el reembolso siempre va a TU cuenta. Revisa en '¿Dónde está mi reembolso?' en irs.gov. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "reembolso",
+    "impuestos",
+    "irs",
+    "declaraciondeimpuestos",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cuándo llega tu reembolso de impuestos, cómo recibirlo más rápido y qué evitar.",
+   "thumbnail_text": "Tu reembolso, más rápido",
+   "sources": [
+    "https://www.irs.gov/es/refunds",
+    "https://www.irs.gov/es/wheres-my-refund"
+   ],
+   "claims_to_verify": [
+    "IRS: most e-filed returns with direct deposit refunded in under 21 days",
+    "PATH Act: refunds claiming EITC/ACTC cannot be issued before mid-February",
+    "Refund advance products may carry fees (some are no-fee); keep 'a veces'",
+    "Federal paper-check phase-out: consider adding that direct deposit is now the default, after checking current IRS guidance"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2-reembolso-con-trabajo",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Give your tax refund a job before it arrives: split it in four (cushion, expensive debt, a named goal, something for you).",
+  "script": {
+   "title": "Dale trabajo a tu reembolso antes de que llegue",
+   "hook": "Un reembolso sin plan desaparece en dos fines de semana.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Un reembolso sin plan desaparece en dos fines de semana.",
+     "on_screen_text": "Tu reembolso necesita un plan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an envelope with wings that is about to fly away. No text, no logos, no real people."
+    },
+    {
+     "heading": "Antes",
+     "narration": "Decide hoy qué hace cada dólar, antes de que llegue. Con el dinero ya en la cuenta, todo parece urgente.",
+     "on_screen_text": "Decide ahora, no cuando llegue",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a notepad with four empty boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "1 y 2",
+     "narration": "Primero, tu colchón de emergencias, si no tienes al menos mil dólares. Segundo, la deuda con el interés más alto.",
+     "on_screen_text": "1. Colchón  2. Deuda más cara",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an umbrella and a credit card with a down arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Tercero, una meta con nombre: el viaje, el depósito de un departamento, las llantas del carro.",
+     "on_screen_text": "3. Una meta con nombre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a labeled jar with a small plane. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Y cuarto, algo para ti, con tope. Si el plan no tiene nada para disfrutar, no lo vas a cumplir.",
+     "on_screen_text": "4. Algo para ti, con tope",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small gift box with a price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Por ejemplo, un reembolso de $2,000: quinientos al colchón, ochocientos a la tarjeta, cuatrocientos al viaje y trescientos para ti.",
+     "on_screen_text": "Ejemplo: $2,000 = 500 + 800 + 400 + 300",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sorting coins into four jars. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Dale trabajo a tu reembolso antes de que llegue: 1) colchón de emergencias, 2) la deuda más cara, 3) una meta con nombre, 4) algo para ti, con tope. Ejemplo con $2,000: $500 + $800 + $400 + $300.\n\nTu Fecha Sin Deudas (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "reembolso",
+    "impuestos",
+    "ahorro",
+    "deudas",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Un plan sencillo en cuatro partes para tu reembolso de impuestos.",
+   "thumbnail_text": "Tu reembolso con plan",
+   "sources": [
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
+   ],
+   "claims_to_verify": [
+    "Example split only; arithmetic $500 + $800 + $400 + $300 = $2,000"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2c-fondos-2027",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "A 12-month calendar of the 'surprise' yearly costs, each with its own fund, so 2027 has no surprise bills.",
+  "script": {
+   "title": "Los gastos 'sorpresa' de 2027, mes por mes",
+   "hook": "Guárdalo: los gastos que cada año 'nos sorprenden'.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "No son sorpresa: vienen cada año. Guárdalo y ponle fondo a cada uno.",
+     "on_screen_text": "Los gastos 'sorpresa' de 2027",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a calendar with small icons on several months. No text, no logos, no real people."
+    },
+    {
+     "heading": "Enero-febrero",
+     "narration": "Lo que pagas al preparador, seguros anuales, renovación de membresías.",
+     "on_screen_text": "Ene-feb: impuestos y seguros",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder and a small shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Marzo-abril",
+     "narration": "Registro, inspección, el cambio de llantas que siempre se atrasa.",
+     "on_screen_text": "Mar-abr: placas y registro del carro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a car with a small calendar tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mayo-junio",
+     "narration": "Regalos, fiestas, ropa para la ceremonia.",
+     "on_screen_text": "May-jun: graduaciones y Día de las Madres",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a graduation cap and a flower. No text, no logos, no real people."
+    },
+    {
+     "heading": "Julio-agosto",
+     "narration": "Útiles, uniformes, zapatos, el viaje de verano.",
+     "on_screen_text": "Jul-ago: vacaciones y regreso a clases",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a backpack and a sun. No text, no logos, no real people."
+    },
+    {
+     "heading": "Septiembre-octubre",
+     "narration": "Empieza el fondo de fiestas aquí: el número semanal sale más chico.",
+     "on_screen_text": "Sep-oct: cumpleaños y el fondo de diciembre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small cake and a ribboned jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Noviembre-diciembre",
+     "narration": "Regalos, posadas, el viaje para ver a la familia, lo que mandas.",
+     "on_screen_text": "Nov-dic: fiestas, viaje y envíos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small tree and an airplane. No text, no logos, no real people."
+    },
+    {
+     "heading": "La cuenta",
+     "narration": "Suma todo lo del año y divídelo entre 12. Ejemplo: $3,600 ÷ 12 = $300 al mes.",
+     "on_screen_text": "Total del año ÷ 12 = tu fondo mensual",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. twelve small jars in a row. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "El día de pago, la transferencia sale sola. Así ningún mes te toma por sorpresa.",
+     "on_screen_text": "Un apartado por fondo, en automático",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf relaxing next to a row of labeled jars. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Los gastos 'sorpresa' de 2027, mes por mes: impuestos y seguros (ene-feb), placas del carro (mar-abr), graduaciones y Día de las Madres (may-jun), vacaciones y regreso a clases (jul-ago), cumpleaños y el fondo de diciembre (sep-oct), fiestas, viaje y envíos (nov-dic). Suma el año y divídelo entre 12: ese es tu fondo mensual.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "ahorro",
+    "presupuesto",
+    "metas2027",
+    "fondosdeahorro",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Un calendario de los gastos que llegan cada año, con un fondo para cada uno.",
+   "thumbnail_text": "Gastos sorpresa 2027",
+   "sources": [],
+   "claims_to_verify": [
+    "Example amounts only ($3,600 / 12 = $300)",
+    "Months are typical, not universal (car registration dates vary by state)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2c-lista-de-deudas",
+  "format": "carousel",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "One-page debt list and the order to pay it, with a worked example.",
+  "script": {
+   "title": "Tu lista de deudas en una página (y en qué orden pagar)",
+   "hook": "Guárdalo: tu plan de deudas en una sola página.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo y llénalo este fin de semana.",
+     "on_screen_text": "Tu plan de deudas en una página",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a single sheet of paper and a pen. No text, no logos, no real people."
+    },
+    {
+     "heading": "1. La lista",
+     "narration": "Tarjetas, carro, préstamos, tienda, 'paga en 4', lo que le debes a alguien.",
+     "on_screen_text": "1. Cada deuda, una línea",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a sheet with several lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "2. Los datos",
+     "narration": "Los cuatro datos de cada una. La tasa está en el estado de cuenta.",
+     "on_screen_text": "2. Saldo · tasa · mínimo · fecha",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a four-column table. No text, no logos, no real people."
+    },
+    {
+     "heading": "3. Mínimos",
+     "narration": "Así no hay cargos por atraso ni marcas en tu crédito.",
+     "on_screen_text": "3. El mínimo en todas, siempre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. small coins on each line. No text, no logos, no real people."
+    },
+    {
+     "heading": "4. El extra",
+     "narration": "Avalancha: la de interés más alto. Bola de nieve: la más chica.",
+     "on_screen_text": "4. Todo lo extra a una sola",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a big arrow pointing to one line. No text, no logos, no real people."
+    },
+    {
+     "heading": "5. Cuando se acaba",
+     "narration": "Cuando terminas una, su pago completo se suma a la siguiente.",
+     "on_screen_text": "5. Ese pago pasa a la siguiente",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. coins rolling from one line to the next. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "Tarjeta de $1,200 al 27%, mínimo $40: con $150 extra se paga en unos 7 meses. Solo con el mínimo, más de 4 años.",
+     "on_screen_text": "Ejemplo: $150 extra al mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with seven marked months. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Con la lista, la fecha de la última deuda deja de ser un misterio.",
+     "on_screen_text": "Escribe tu fecha de libertad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf circling a date on a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu plan de deudas en una página: 1) cada deuda en una línea, 2) saldo, tasa, mínimo y fecha, 3) el mínimo en todas, siempre, 4) todo lo extra a una sola (avalancha: la de interés más alto; bola de nieve: la más chica), 5) cuando terminas una, su pago pasa a la siguiente.\n\nTu Fecha Sin Deudas (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "deudas",
+    "salirdedeudas",
+    "bolanieve",
+    "avalancha",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cómo poner todas tus deudas en una página y en qué orden pagarlas.",
+   "thumbnail_text": "Tu plan de deudas",
+   "sources": [
+    "https://www.consumerfinance.gov/about-us/blog/how-to-reduce-your-debt/"
+   ],
+   "claims_to_verify": [
+    "Worked example: $1,200 at 27% APR paying $190/month ($40 minimum + $150) pays off in 7 months; $40 only takes 51 months (computed monthly compounding)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2c-que-pagar-primero",
+  "format": "carousel",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "If January doesn't stretch: what to pay first (housing, utilities, food, transport to work, insurance) and how to talk to lenders before you miss a payment.",
+  "script": {
+   "title": "Si en enero no te alcanza: qué pagar primero",
+   "hook": "Si este mes no te alcanza para todo, no pagues en el orden en que llegan las cuentas.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "No pagues en el orden en que llegan las cuentas. Paga en este.",
+     "on_screen_text": "Si no te alcanza: qué pagar primero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sorting envelopes into piles on a table. No text, no logos, no real people."
+    },
+    {
+     "heading": "1. Techo",
+     "narration": "Perder la vivienda es lo más caro y lo más difícil de arreglar.",
+     "on_screen_text": "1. Renta o hipoteca",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small house. No text, no logos, no real people."
+    },
+    {
+     "heading": "2. Servicios",
+     "narration": "Si te los cortan, reconectar cuesta. Pregunta por planes de pago y ayuda para servicios.",
+     "on_screen_text": "2. Luz, agua, gas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a light bulb and a water drop. No text, no logos, no real people."
+    },
+    {
+     "heading": "3. Comida",
+     "narration": "Lo básico de tu casa va antes que cualquier tarjeta.",
+     "on_screen_text": "3. Comida y medicinas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a grocery bag and a pill bottle. No text, no logos, no real people."
+    },
+    {
+     "heading": "4. Ir a trabajar",
+     "narration": "El carro o el pase del autobús: sin eso, no entra dinero.",
+     "on_screen_text": "4. Transporte para trabajar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a car and a bus ticket. No text, no logos, no real people."
+    },
+    {
+     "heading": "5. Seguros",
+     "narration": "Manejar sin seguro puede salir mucho más caro.",
+     "on_screen_text": "5. Seguro del carro y médico",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "6. Deudas",
+     "narration": "Tarjetas y préstamos: llama ANTES de atrasarte y pide un plan.",
+     "on_screen_text": "6. Luego, las deudas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone next to a credit card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ojo",
+     "narration": "Si un 'cobrador' te presiona así, es estafa. Pide todo por escrito.",
+     "on_screen_text": "Nadie legítimo te pide pagar con tarjetas de regalo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a gift card with a red X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Es para salir del mes. Después, el plan de deudas.",
+     "on_screen_text": "Este orden es temporal, no para siempre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf walking out of a narrow hallway into light. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si en enero no te alcanza para todo, paga en este orden: 1) renta o hipoteca, 2) luz, agua y gas, 3) comida y medicinas, 4) transporte para ir a trabajar, 5) seguros, 6) luego las deudas, llamando antes de atrasarte para pedir un plan. Nadie legítimo te pide pagar con tarjetas de regalo.\n\nTu Fecha Sin Deudas (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "cuestadeenero",
+    "deudas",
+    "presupuesto",
+    "facturas",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "El orden para pagar tus cuentas cuando el mes no te alcanza.",
+   "thumbnail_text": "Qué pagar primero",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/debt-collection/",
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Priority order mirrors CFPB guidance on essential bills first (housing, utilities, food, transportation, insurance); confirm current CFPB Spanish page",
+    "Utility assistance (e.g. LIHEAP) exists in every state; not named, consider adding"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2c-recorte-de-enero",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Seven bills to call or cut in January, with what to say.",
+  "script": {
+   "title": "7 cuentas que puedes bajar en enero",
+   "hook": "Guárdalo: siete llamadas que pueden bajar tus gastos fijos.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Una llamada por semana y en febrero tus gastos fijos son otros.",
+     "on_screen_text": "7 cuentas que puedes bajar en enero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a phone and a short list. No text, no logos, no real people."
+    },
+    {
+     "heading": "1. Celular",
+     "narration": "Revisa cuántos datos usas de verdad. Muchas compañías tienen planes más baratos que no anuncian.",
+     "on_screen_text": "1. El plan del celular",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a small bar chart. No text, no logos, no real people."
+    },
+    {
+     "heading": "2. Internet",
+     "narration": "Si tu precio subió, llama y pregunta por las ofertas para clientes actuales.",
+     "on_screen_text": "2. Internet: ¿se acabó la promoción?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a router with a price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "3. Seguro del carro",
+     "narration": "Compara dos o tres cotizaciones con la misma cobertura. Cambiar a veces baja bastante.",
+     "on_screen_text": "3. Cotiza tu seguro del carro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a car with three small receipts. No text, no logos, no real people."
+    },
+    {
+     "heading": "4. Suscripciones",
+     "narration": "Las de streaming, apps y las pruebas gratis de diciembre.",
+     "on_screen_text": "4. Las suscripciones que no usas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a TV and a phone with small X marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "5. Comisiones del banco",
+     "narration": "Si te cobran mensualidad o sobregiros, pide que te quiten el cargo o busca una cuenta sin comisiones.",
+     "on_screen_text": "5. Comisiones del banco",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank with a coin falling out. No text, no logos, no real people."
+    },
+    {
+     "heading": "6. Gimnasio",
+     "narration": "Si no vas, cancélalo. Revisa cómo se cancela: algunos piden carta o ir en persona.",
+     "on_screen_text": "6. El gimnasio de los propósitos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a dumbbell with a cobweb. No text, no logos, no real people."
+    },
+    {
+     "heading": "7. Renta del equipo",
+     "narration": "El módem, el decodificador: a veces sale más barato comprar el tuyo.",
+     "on_screen_text": "7. Equipo rentado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small box with a price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y manda ese dinero a tu meta o a tu deuda el mismo día.",
+     "on_screen_text": "Anota cuánto ahorraste cada vez",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf dropping coins into a labeled jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "7 cuentas que puedes bajar en enero: 1) el plan del celular, 2) internet si se acabó la promoción, 3) cotiza tu seguro del carro, 4) suscripciones que no usas, 5) comisiones del banco, 6) el gimnasio, 7) equipo rentado. Una llamada por semana, y lo que ahorres va a tu meta o a tu deuda el mismo día.\n\nEl Kit para Recortar Gastos (guía + guiones para llamar, en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "ahorro",
+    "gastosfijos",
+    "cuestadeenero",
+    "recortargastos",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Siete cuentas que puedes bajar con una llamada en enero.",
+   "thumbnail_text": "7 cuentas que bajar",
+   "sources": [
+    "https://consumer.ftc.gov/articles/free-trial-offers-and-subscriptions"
+   ],
+   "claims_to_verify": [
+    "Savings are possible, not guaranteed (keep 'a veces')",
+    "Some gyms require written or in-person cancellation (varies by state and contract)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2c-calendario-impuestos",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "The 2027 tax season calendar: forms by Feb 1, IRS opening in late January, refunds with credits from mid-February, April 15 deadline, extensions.",
+  "script": {
+   "title": "Temporada de impuestos 2027: las fechas",
+   "hook": "Guárdalo: las fechas de la temporada de impuestos 2027.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo y pon cada fecha en tu calendario.",
+     "on_screen_text": "Temporada de impuestos 2027: las fechas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a calendar with a few circled dates. No text, no logos, no real people."
+    },
+    {
+     "heading": "Enero",
+     "narration": "Si tu ITIN venció, renuévalo con el W-7. Aparta tu cita de VITA.",
+     "on_screen_text": "Enero: revisa tu ITIN y junta papeles",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder and an ID card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Finales de enero",
+     "narration": "El IRS anuncia cada año el día en que empieza a recibir declaraciones.",
+     "on_screen_text": "Finales de enero: el IRS abre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an office door opening. No text, no logos, no real people."
+    },
+    {
+     "heading": "1 de febrero",
+     "narration": "Si no te llegaron, pregunta en tu trabajo o a quien te pagó.",
+     "on_screen_text": "1 de febrero: W-2 y la mayoría de los 1099",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope arriving in a mailbox. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mediados de febrero",
+     "narration": "Por ley, esos reembolsos no salen antes. Llegan después, normalmente a finales de febrero o en marzo.",
+     "on_screen_text": "Mediados de feb: reembolsos con EITC/ACTC",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with mid-February marked. No text, no logos, no real people."
+    },
+    {
+     "heading": "15 de abril",
+     "narration": "Para declarar, pagar lo que debas y aportar a tu IRA de 2026.",
+     "on_screen_text": "15 de abril: fecha límite",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with April 15 circled in red. No text, no logos, no real people."
+    },
+    {
+     "heading": "Prórroga",
+     "narration": "Si debes, paga lo que puedas antes del 15 de abril para bajar recargos.",
+     "on_screen_text": "Prórroga = más tiempo para declarar, no para pagar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an hourglass next to a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y menos riesgo de que alguien declare con tu número antes que tú.",
+     "on_screen_text": "Declarar temprano = reembolso antes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf handing in a folder early, smiling. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Temporada de impuestos 2027: enero, revisa tu ITIN y junta papeles; finales de enero, el IRS empieza a recibir declaraciones; 1 de febrero, fecha para el W-2 y la mayoría de los 1099; mediados de febrero, empiezan los reembolsos con EITC/ACTC; 15 de abril, fecha límite para declarar, pagar y aportar a tu IRA de 2026. Una prórroga da más tiempo para declarar, no para pagar. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "irs",
+    "temporadadeimpuestos",
+    "declaraciondeimpuestos",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Las fechas clave de la temporada de impuestos 2027.",
+   "thumbnail_text": "Impuestos 2027: fechas",
+   "sources": [
+    "https://www.irs.gov/es/filing",
+    "https://www.irs.gov/taxtopics/tc154",
+    "https://www.irs.gov/es/refunds"
+   ],
+   "claims_to_verify": [
+    "IRS opening day for the 2027 filing season (announced each year; usually late January)",
+    "W-2 and most 1099-NEC due Feb 1, 2027 (Jan 31 is a Sunday); some 1099s are due Feb 16",
+    "PATH Act: EITC/ACTC refunds not before mid-February; IRS usually says most arrive by early March",
+    "April 15, 2027 is a Thursday; extension (Form 4868) extends filing, not payment"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2c-ayuda-gratis-impuestos",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Where to get free or trustworthy tax help, and the red flags of a bad preparer.",
+  "script": {
+   "title": "Dónde conseguir ayuda con tus impuestos (y de quién cuidarte)",
+   "hook": "Guárdalo: ayuda con tus impuestos que no te cuesta, y las señales de un mal preparador.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Y las señales de alguien de quien cuidarte.",
+     "on_screen_text": "Ayuda con tus impuestos: gratis y de confianza",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a folder with a small shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "VITA",
+     "narration": "Voluntarios certificados por el IRS. Muchos sitios ayudan en español.",
+     "on_screen_text": "VITA: gratis para ingresos moderados",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a community center with a check badge. No text, no logos, no real people."
+    },
+    {
+     "heading": "TCE",
+     "narration": "Especial para jubilados y pensiones.",
+     "on_screen_text": "TCE: gratis si tienes 60 años o más",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an older person with a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Free File",
+     "narration": "Si tus ingresos están por debajo del límite del año, lo haces tú, en línea.",
+     "on_screen_text": "IRS Free File: software gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop with a check badge. No text, no logos, no real people."
+    },
+    {
+     "heading": "De pago",
+     "narration": "Todo preparador pagado necesita un número PTIN y tiene que firmar tu declaración.",
+     "on_screen_text": "Si pagas: que tenga PTIN y firme",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a signature line on a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 1",
+     "narration": "Un buen preparador cobra por el trabajo, no por lo que te 'consigue'.",
+     "on_screen_text": "Alerta: Cobra un % de tu reembolso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pie chart slice being taken. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 2",
+     "narration": "Tu reembolso va a tu cuenta, siempre.",
+     "on_screen_text": "Alerta: Quiere el reembolso en SU cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an arrow being redirected. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 3",
+     "narration": "Si algo sale mal, la responsabilidad es tuya, no de él.",
+     "on_screen_text": "Alerta: No firma o promete 'reembolsos grandes'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a blank signature line with a red X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y revisa tu declaración antes de firmarla.",
+     "on_screen_text": "Pide copia de todo lo que firmas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf reading a document carefully. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Ayuda con tus impuestos: VITA (gratis para ingresos moderados, muchos sitios en español), TCE (gratis si tienes 60 años o más), IRS Free File (software gratis bajo cierto ingreso). Si pagas, que el preparador tenga PTIN y firme. Cuídate de quien cobra un % de tu reembolso, quiere que el reembolso llegue a su cuenta, no firma o promete reembolsos grandes. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "vita",
+    "irs",
+    "preparadordeimpuestos",
+    "estafas",
+    "dinerosimple"
+   ],
+   "description": "Dónde conseguir ayuda gratis o de confianza con tus impuestos, y las señales de un mal preparador.",
+   "thumbnail_text": "Ayuda con impuestos",
+   "sources": [
+    "https://www.irs.gov/es/individuals/free-tax-return-preparation-for-qualifying-taxpayers",
+    "https://www.irs.gov/es/filing/irs-free-file-do-your-taxes-for-free",
+    "https://www.irs.gov/es/tax-professionals/choosing-a-tax-professional"
+   ],
+   "claims_to_verify": [
+    "VITA income limit set yearly; TCE prioritizes 60+",
+    "IRS Free File has an AGI limit set yearly",
+    "All paid preparers must have a PTIN and sign the return (IRS 'choosing a tax professional')",
+    "Red flags per IRS: fees based on refund size, refund to preparer's account, refusing to sign"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2c-reembolso-en-4",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Refund plan in four jars, with three worked examples at different refund sizes.",
+  "script": {
+   "title": "Tu reembolso en 4 partes",
+   "hook": "Guárdalo para cuando llegue tu reembolso.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Decide hoy. Cuando llegue, solo mueves el dinero.",
+     "on_screen_text": "Tu reembolso en 4 partes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with four jars and an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "1. Colchón",
+     "narration": "La primera emergencia del año ya no va a la tarjeta.",
+     "on_screen_text": "1. Colchón (si tienes menos de $1,000)",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an umbrella over a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "2. Deuda",
+     "narration": "Cada dólar a una tarjeta del 25% es un 25% que dejas de pagar.",
+     "on_screen_text": "2. La deuda más cara",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a credit card with a down arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "3. Meta",
+     "narration": "El viaje, el carro, el depósito de un departamento.",
+     "on_screen_text": "3. Una meta con nombre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a labeled jar with a small car. No text, no logos, no real people."
+    },
+    {
+     "heading": "4. Para ti",
+     "narration": "Si el plan no tiene nada para disfrutar, no se cumple.",
+     "on_screen_text": "4. Algo para ti, con tope",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small gift with a price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "$800",
+     "narration": "$400 colchón · $250 deuda · $100 meta · $50 para ti.",
+     "on_screen_text": "Reembolso de $800",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. four jars with different coin piles. No text, no logos, no real people."
+    },
+    {
+     "heading": "$2,000",
+     "narration": "$500 colchón · $800 deuda · $400 meta · $300 para ti.",
+     "on_screen_text": "Reembolso de $2,000",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. four jars with bigger piles. No text, no logos, no real people."
+    },
+    {
+     "heading": "$4,000",
+     "narration": "Si ya tienes colchón: $2,200 deuda · $1,000 meta · $400 retiro · $400 para ti.",
+     "on_screen_text": "Reembolso de $4,000",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. jars plus a small piggy bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Si siempre te regresan mucho, revisa tu W-4 con tu trabajo.",
+     "on_screen_text": "Un reembolso grande = te retuvieron de más",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a small form with a magnifying glass. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu reembolso en 4 partes: 1) colchón si tienes menos de $1,000, 2) la deuda más cara, 3) una meta con nombre, 4) algo para ti con tope. Ejemplos: $800 = 400 + 250 + 100 + 50; $2,000 = 500 + 800 + 400 + 300. Si siempre te regresan mucho, revisa tu W-4.\n\nTu Fecha Sin Deudas (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "reembolso",
+    "impuestos",
+    "ahorro",
+    "deudas",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Un plan en cuatro partes para tu reembolso, con ejemplos de $800, $2,000 y $4,000.",
+   "thumbnail_text": "Reembolso en 4 partes",
+   "sources": [
+    "https://www.irs.gov/es/individuals/tax-withholding-estimator"
+   ],
+   "claims_to_verify": [
+    "Example arithmetic: 400+250+100+50=800; 500+800+400+300=2,000; 2,200+1,000+400+400=4,000",
+    "A large refund generally means more was withheld than needed; adjusting the W-4 changes take-home pay"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m2c-antes-de-invertir",
+  "format": "carousel",
+  "pillar": "invertir por primera vez (fondos índice, cuentas de retiro)",
+  "idea_angle": "Five checks before you start investing in 2027, in order: the match, a $1,000 cushion, high-interest debt, a Roth IRA, a low-cost index fund.",
+  "script": {
+   "title": "5 pasos antes de invertir en 2027",
+   "hook": "Guárdalo: el orden para empezar a invertir este año.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "En este orden. No tienes que tener mucho para empezar.",
+     "on_screen_text": "5 pasos antes de invertir en 2027",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at the bottom of five small steps. No text, no logos, no real people."
+    },
+    {
+     "heading": "1. Match",
+     "narration": "Si tu trabajo pone dinero cuando tú pones, aporta al menos para recibirlo completo.",
+     "on_screen_text": "1. El match de tu 401(k)",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two hands dropping coins into one jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "2. Colchón",
+     "narration": "Para que una emergencia no te obligue a vender o a usar la tarjeta.",
+     "on_screen_text": "2. Un colchón de $1,000",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an umbrella over a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "3. Deuda cara",
+     "narration": "Pagar una tarjeta del 25% le gana a casi cualquier inversión.",
+     "on_screen_text": "3. Tarjetas de interés alto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a credit card with a down arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "4. Roth IRA",
+     "narration": "Se abre en minutos en una casa de bolsa. Revisa si tus ingresos califican.",
+     "on_screen_text": "4. Una Roth IRA",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small jar with a leaf. No text, no logos, no real people."
+    },
+    {
+     "heading": "5. Fondo índice",
+     "narration": "Muchas acciones en una sola compra, con comisión baja.",
+     "on_screen_text": "5. Un fondo índice de bajo costo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a basket full of tiny boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "En automático",
+     "narration": "Aunque sean $50 o $100. Lo constante le gana a lo perfecto.",
+     "on_screen_text": "Ponlo en automático el día de pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a repeating arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Si alguien te los promete, es señal de alerta.",
+     "on_screen_text": "Nadie te puede prometer rendimientos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small shield. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "5 pasos antes de invertir en 2027, en orden: 1) el match de tu 401(k), 2) un colchón de $1,000, 3) pagar tarjetas de interés alto, 4) una Roth IRA, 5) un fondo índice de bajo costo. Ponlo en automático el día de pago, aunque sean $50. Nadie te puede prometer rendimientos.\n\nEmpieza a Invertir con $100 al Mes (guía + calculadoras en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "invertir",
+    "rothira",
+    "401k",
+    "fondosindice",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "El orden para empezar a invertir en 2027.",
+   "thumbnail_text": "Invertir en 2027",
+   "sources": [
+    "https://www.investor.gov/introduction-investing/investing-basics/glossary/index-funds",
+    "https://www.irs.gov/retirement-plans/roth-iras"
+   ],
+   "claims_to_verify": [
+    "Roth IRA has income limits",
+    "Paying off ~25% APR debt is a guaranteed return equal to the rate avoided; 'casi cualquier inversión' is a common framing, keep it hedged",
+    "Some brokerages accept an ITIN to open an account; not claimed here"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "l-plan-2027",
+  "format": "long",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Your whole 2027 money plan in one afternoon: look back at 2026, flatten the cuesta de enero, the yearly-costs funds, the debt list, the cushion, retirement, credit check and a monthly 20-minute date.",
+  "script": {
+   "title": "Tu plan de dinero para 2027 en una tarde",
+   "hook": "No necesitas diez propósitos de dinero. Necesitas una tarde y este plan.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "No necesitas diez propósitos de dinero. Necesitas una tarde y este plan. En este video armamos juntos todo tu año: qué pasó con tu dinero en 2026, cómo pasar la cuesta de enero, cómo dejar de tener gastos 'sorpresa', un plan para tus deudas, tu colchón, tu retiro y una cita al mes de veinte minutos para que el plan no se quede en enero. Ten a la mano tu app del banco, tus estados de cuenta y algo para escribir.",
+     "on_screen_text": "Tu plan de dinero para 2027 en una tarde",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sitting at a table with a notebook, a cup of coffee and a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mira atrás",
+     "narration": "Paso uno: mira atrás, quince minutos. Abre tu banco y busca tres números de 2026: cuánto entró en total, cuánto debías en enero de 2026 y cuánto debes hoy, y cuánto tenías ahorrado al principio y al final. No es para regañarte. Es para saber de dónde sales. Anota también una cosa que funcionó, como 'pagué la tarjeta a tiempo todo el año', y una que no.",
+     "on_screen_text": "Paso 1: lo que pasó en 2026, sin juzgarte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a notebook with three numbers and a small checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "La cuesta",
+     "narration": "Paso dos: los próximos treinta días. Haz la lista de todo lo que tienes que pagar de aquí al 15 de febrero: renta, servicios, la tarjeta de diciembre, seguros, pagos de 'paga en 4'. Ponle fecha a cada uno y compáralo con tus días de pago. Si algo no cuadra, ahora es el momento de llamar y pedir que te cambien la fecha de pago o un plan, antes de atrasarte. Y si este mes no te alcanza para todo, primero la vivienda, los servicios, la comida y el transporte para ir a trabajar; luego las deudas.",
+     "on_screen_text": "Paso 2: los próximos 30 días",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with bills placed on specific dates next to paydays. No text, no logos, no real people."
+    },
+    {
+     "heading": "Gastos sorpresa",
+     "narration": "Paso tres: los gastos que cada año nos 'sorprenden'. No son sorpresa: las placas del carro, los seguros anuales, el regreso a clases, los cumpleaños, diciembre, el viaje para ver a la familia. Haz la lista, ponle un número a cada uno y súmalos. Divide el total entre doce. Si te da $300, ese es tu fondo mensual. Abre un apartado para cada uno, o uno solo con nombre, y ponlo en automático el día de pago. Este paso solo quita la mitad del estrés de todo el año.",
+     "on_screen_text": "Paso 3: un fondo para cada gasto 'sorpresa'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a row of labeled jars with small icons for car, school and gifts. No text, no logos, no real people."
+    },
+    {
+     "heading": "Deudas",
+     "narration": "Paso cuatro: las deudas. Todas en una sola lista: saldo, tasa, pago mínimo y fecha. El mínimo en todas, siempre, y todo lo extra a una sola. Si quieres pagar menos intereses, a la de tasa más alta. Si necesitas ganar rápido para no rendirte, a la más chica. Las dos funcionan si las cumples. Y antes de empezar, llama a tus tarjetas y pide que te bajen la tasa: a veces dicen que sí, y pedirlo no baja tu puntaje.",
+     "on_screen_text": "Paso 4: todas tus deudas en una lista",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a single sheet with several debt lines and one big arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Colchón",
+     "narration": "Paso cinco: el colchón. Si no tienes un fondo de emergencias, la meta de enero no es tener seis meses de gastos. Es llegar a mil dólares. Con eso, una llanta ponchada o una visita al doctor ya no va a la tarjeta. Si apartas $125 por quincena, llegas en cuatro meses. Tu reembolso de impuestos puede adelantarlo mucho. Después de los mil, sigues subiendo poco a poco hacia tres meses de gastos básicos.",
+     "on_screen_text": "Paso 5: tu colchón, primero $1,000",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an umbrella over a jar slowly filling with coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Retiro",
+     "narration": "Paso seis: tu retiro. Si tu trabajo tiene 401(k) con match, aporta al menos lo que te dan completo: es dinero que, si no, dejas en la mesa. Si ya lo haces, súbele uno por ciento este mes. Y si no tienes plan en el trabajo, una Roth IRA se abre en minutos y puedes empezar con $50 al mes. Recuerda que hasta el 15 de abril todavía puedes aportar para 2026.",
+     "on_screen_text": "Paso 6: tu retiro, aunque sea poco",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small piggy bank with a percent sign and a growing plant. No text, no logos, no real people."
+    },
+    {
+     "heading": "Crédito",
+     "narration": "Paso siete: tu crédito. Saca gratis tus tres reportes en AnnualCreditReport.com, que puedes ver cada semana sin que baje tu puntaje. Busca cuentas que no reconoces y pagos marcados tarde por error, y disputa lo que esté mal. Y si no vas a pedir crédito pronto, congela tu crédito en las tres agencias: es gratis y es una de las mejores protecciones contra el robo de identidad.",
+     "on_screen_text": "Paso 7: revisa tu crédito y protégelo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over three folders and a small lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "La cita mensual",
+     "narration": "Paso ocho, el que hace que todo lo demás funcione: una cita de veinte minutos al mes con tu dinero. El mismo día cada mes, por ejemplo el primer domingo. Revisa saldos, mira si los fondos están creciendo, ajusta el mes que viene y elige un solo paso. Si vives en pareja, háganlo juntos, con un café. Ponlo en el calendario hoy, con alarma, para todo el año.",
+     "on_screen_text": "Paso 8: 20 minutos al mes con tu dinero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with the first Sunday of each month marked and a coffee cup. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Resumen. Mira atrás sin juzgarte. Planea los próximos treinta días. Un fondo para cada gasto 'sorpresa'. Todas las deudas en una lista. Colchón de mil dólares. Tu retiro, aunque sea poco. Tus reportes de crédito y la congelación. Y una cita mensual de veinte minutos. No tienes que hacer todo hoy: con los pasos uno y dos ya vas adelante. Todo esto es educación general, no asesoría personal.",
+     "on_screen_text": "Tu plan 2027: 8 pasos, una tarde",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf closing a notebook with a calm smile next to a 2027 calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu plan de dinero para 2027 en una tarde:\n1. Mira 2026 sin juzgarte: lo que entró, lo que debes, lo que ahorraste\n2. Planea los próximos 30 días\n3. Un fondo para cada gasto 'sorpresa' (total del año ÷ 12)\n4. Todas tus deudas en una lista\n5. Colchón: primero $1,000\n6. Tu retiro, aunque sea poco\n7. Revisa y congela tu crédito\n8. Una cita de 20 minutos al mes con tu dinero\n\nEl Paquete Dinero Simple (los 4 kits en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "metas2027",
+    "añonuevo",
+    "presupuesto",
+    "ahorro",
+    "deudas",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Arma tu plan de dinero para todo 2027 en una tarde: lo que pasó en 2026, los próximos 30 días, los gastos 'sorpresa' del año, tus deudas, tu colchón, tu retiro, tu crédito y una cita mensual de 20 minutos.\n\nCapítulos (estimados; ajústalos después de grabar)\n0:00 Tu plan 2027 en una tarde\n0:45 Lo que pasó en 2026\n1:35 Los próximos 30 días\n2:35 Los gastos 'sorpresa'\n3:35 Tus deudas en una lista\n4:30 Tu colchón\n5:20 Tu retiro\n6:10 Tu crédito\n7:00 La cita mensual\n7:50 Resumen\n\nContenido educativo, no es asesoría financiera.\n\nFuentes: consumerfinance.gov, annualcreditreport.com, irs.gov (límites y fechas de IRA).\n\nEnlaces (los productos de pago son nuestros):\nEl Paquete Dinero Simple, los 4 kits ($29): https://dinerosimple.netlify.app/products/el-paquete-dinero-simple/?utm_source=youtube&utm_medium=social&utm_campaign=l-plan-2027\nEl Presupuesto de 20 Minutos ($12): https://dinerosimple.netlify.app/products/el-presupuesto-de-20-minutos/?utm_source=youtube&utm_medium=social&utm_campaign=l-plan-2027\nGuía gratis: Tu dinero en orden en 7 días: https://dinerosimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=l-plan-2027",
+   "thumbnail_text": "Tu plan 2027 en una tarde",
+   "sources": [
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+    "https://www.annualcreditreport.com/",
+    "https://www.usa.gov/credit-freeze",
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits"
+   ],
+   "claims_to_verify": [
+    "$125 per biweekly paycheck reaches $1,000 in 8 paychecks (about 4 months)",
+    "Free weekly credit reports; checking your own does not affect your score; freezes are free at all three bureaus",
+    "2026 IRA contributions allowed until April 15, 2027",
+    "Asking for a lower APR is not a credit inquiry (generally true; confirm wording)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "l-impuestos-2027",
+  "format": "long",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Spanish-language guide to the 2027 tax season for US Hispanic workers: dates, papers, ITIN, free help, choosing a preparer, refund timing and plan, and the scams of the season.",
+  "script": {
+   "title": "Temporada de impuestos 2027: la guía en español antes de declarar",
+   "hook": "Cada año, mucha gente pierde parte de su reembolso por un error que se evita en enero.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Cada año, mucha gente pierde parte de su reembolso por un error que se evita en enero: un preparador que cobra de más, un ITIN vencido, un papel que faltó o un reembolso que se fue a la cuenta equivocada. En este video vemos las fechas de la temporada de impuestos 2027, qué papeles juntar, qué pasa con el ITIN, dónde conseguir ayuda gratis, cómo elegir a un preparador, cuándo llega el reembolso, qué hacer con él y las estafas de la temporada. Es información general: para tu caso, habla con un profesional.",
+     "on_screen_text": "Impuestos 2027: la guía antes de declarar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a folder in front of a calendar with circled dates. No text, no logos, no real people."
+    },
+    {
+     "heading": "Las fechas",
+     "narration": "Primero, las fechas. El IRS anuncia cada año el día en que empieza a recibir declaraciones, normalmente a finales de enero. Tu trabajo tiene hasta el 1 de febrero para mandarte el W-2, porque el 31 de enero de 2027 cae en domingo, y la mayoría de los 1099 llegan en esas mismas fechas. Si pides el crédito por ingreso del trabajo o el crédito adicional por hijos, por ley el reembolso no sale antes de mediados de febrero. Y la fecha límite para declarar y pagar es el jueves 15 de abril de 2027.",
+     "on_screen_text": "Las fechas: finales de enero al 15 de abril",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with late January, February 1 and April 15 marked. No text, no logos, no real people."
+    },
+    {
+     "heading": "Los papeles",
+     "narration": "Segundo, los papeles. Una sola carpeta, física o en el celular, con: tu identificación; la tarjeta de Seguro Social o el ITIN de cada persona de la declaración; todos tus W-2; los 1099 si trabajaste por tu cuenta, si te pagaron por una app o si tu cuenta de ahorro te dio intereses; el formulario 1095-A si tuviste seguro médico del mercado; lo que pagaste de guardería; y tu número de cuenta y de ruta para el depósito directo. Si tienes la declaración del año pasado, también, porque ayuda mucho.",
+     "on_screen_text": "Junta todo en una carpeta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder with an ID card, several forms and a bank card. No text, no logos, no real people."
+    },
+    {
+     "heading": "El ITIN",
+     "narration": "Tercero, el ITIN. Si tú o alguien de tu declaración tiene ITIN, revisa que esté vigente. Un ITIN vence si no se usó en una declaración federal en tres años seguidos. Si declaras con uno vencido, el IRS procesa la declaración, pero tu reembolso se puede atrasar y algunos créditos no se aplican hasta que lo renueves. Se renueva con el formulario W-7, que es gratis. Nadie te puede cobrar por el formulario en sí; si alguien te ayuda a llenarlo, que sea un agente certificado o un preparador de confianza.",
+     "on_screen_text": "ITIN: revisa que no esté vencido",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an ID-style card with a small calendar and a pen. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ayuda gratis",
+     "narration": "Cuarto, la ayuda gratis, que mucha gente no sabe que existe. VITA son voluntarios certificados por el IRS que preparan tu declaración sin cobrarte si tienes ingresos moderados, y muchos sitios ayudan en español. TCE es parecido, para personas de 60 años o más. Y si prefieres hacerlo tú, IRS Free File te da software gratis si tus ingresos están por debajo del límite del año. Los límites cambian cada año, así que revísalos en irs.gov. Los sitios de VITA se llenan en febrero: aparta tu cita en enero.",
+     "on_screen_text": "Ayuda gratis: VITA, TCE, Free File",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a community center, an older person and a laptop, each with a check badge. No text, no logos, no real people."
+    },
+    {
+     "heading": "El preparador",
+     "narration": "Quinto, si le pagas a alguien. Todo preparador pagado necesita un número PTIN del IRS y tiene que firmar tu declaración con él. Pregunta cuánto cobra antes de empezar. Cuidado con tres señales: si cobra un porcentaje de tu reembolso, si quiere que el reembolso llegue a su cuenta en vez de la tuya, o si no quiere firmar. Si algo está mal en tu declaración, la responsabilidad es tuya, aunque lo haya hecho él. Revísala antes de firmar y pide una copia.",
+     "on_screen_text": "Si pagas: PTIN, firma y tu cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a signature line, a magnifying glass and a small red flag. No text, no logos, no real people."
+    },
+    {
+     "heading": "El reembolso",
+     "narration": "Sexto, el reembolso. Lo más rápido es declarar en línea y pedir depósito directo a tu cuenta: el IRS dice que la mayoría de esos reembolsos llegan en menos de 21 días. Cuidado con los anticipos de reembolso: algunos tienen comisiones o intereses por un dinero que te llega en unas semanas. Para ver dónde va el tuyo, usa la herramienta oficial '¿Dónde está mi reembolso?' en irs.gov, también en español.",
+     "on_screen_text": "Electrónica + depósito directo = lo más rápido",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop sending an arrow into a bank, with a stopwatch. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer con él",
+     "narration": "Séptimo, qué hacer con el reembolso. Decídelo antes de que llegue, porque con el dinero en la cuenta todo parece urgente. Un plan en cuatro partes: tu colchón si tienes menos de mil dólares, la deuda más cara, una meta con nombre y algo para ti, con tope. Y si cada año te regresan mucho, significa que te retuvieron de más todo el año: puedes revisar tu W-4 con tu trabajo y tener ese dinero en cada cheque.",
+     "on_screen_text": "Dale trabajo antes de que llegue",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. four labeled jars receiving coins from one envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Estafas",
+     "narration": "Octavo, las estafas de la temporada. El IRS normalmente te contacta primero por carta, no por llamada, texto o redes sociales, y nunca te exige pagar con tarjetas de regalo, criptomonedas o transferencias. Si alguien te dice que eres del IRS y te amenaza con la policía o con inmigración, cuelga. Y declara temprano: así es más difícil que alguien declare con tu número antes que tú. Si ya te pasó, el IRS tiene un proceso de robo de identidad y puedes pedir un PIN de protección.",
+     "on_screen_text": "El IRS no te llama para exigir pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a hook and a red X, next to a sealed letter. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Resumen. Pon las fechas en tu calendario. Junta todo en una carpeta. Revisa el ITIN de cada persona. Busca VITA o Free File antes de pagar. Si pagas, que tenga PTIN, que firme y que el reembolso vaya a tu cuenta. Pide depósito directo. Dale trabajo a tu reembolso antes de que llegue. Y el IRS no te llama para exigirte pago. Esto es información general, no asesoría fiscal: para tu caso, consulta a un profesional.",
+     "on_screen_text": "Fechas, carpeta, ITIN, ayuda gratis y reembolso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf handing a neat folder to a friendly volunteer at a desk. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Temporada de impuestos 2027, la guía en español:\n1. Fechas: el IRS abre a finales de enero, W-2 el 1 de febrero, fecha límite el 15 de abril\n2. Junta todo en una carpeta\n3. Revisa que tu ITIN no esté vencido (W-7, gratis)\n4. Ayuda gratis: VITA, TCE, IRS Free File\n5. Si pagas: PTIN, firma y el reembolso a TU cuenta\n6. Declaración electrónica + depósito directo\n7. Dale trabajo a tu reembolso\n8. El IRS no te llama para exigir pago\n\nInformación general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "irs",
+    "temporadadeimpuestos",
+    "itin",
+    "reembolso",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Todo lo que necesitas antes de declarar en la temporada de impuestos 2027: las fechas, qué papeles juntar, el ITIN, la ayuda gratis (VITA, TCE, Free File), cómo elegir a un preparador, cuándo llega el reembolso, qué hacer con él y las estafas de la temporada.\n\nCapítulos (estimados; ajústalos después de grabar)\n0:00 Impuestos 2027: la guía\n0:50 Las fechas\n1:50 Los papeles\n2:55 El ITIN\n3:55 Ayuda gratis\n4:55 El preparador\n5:55 El reembolso\n6:45 Qué hacer con él\n7:35 Estafas\n8:30 Resumen\n\nInformación general, no es asesoría fiscal ni legal.\n\nFuentes: irs.gov (fechas, ITIN y W-7, VITA y Free File, cómo elegir un preparador, reembolsos, robo de identidad).\n\nEnlaces (los productos de pago son nuestros):\nTu Fecha Sin Deudas ($17): https://dinerosimple.netlify.app/products/tu-fecha-sin-deudas/?utm_source=youtube&utm_medium=social&utm_campaign=l-impuestos-2027\nGuía gratis: Tu dinero en orden en 7 días: https://dinerosimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=l-impuestos-2027",
+   "thumbnail_text": "Impuestos 2027 en español",
+   "sources": [
+    "https://www.irs.gov/es/filing",
+    "https://www.irs.gov/es/individuals/itin-expiration-faqs",
+    "https://www.irs.gov/es/individuals/free-tax-return-preparation-for-qualifying-taxpayers",
+    "https://www.irs.gov/es/filing/irs-free-file-do-your-taxes-for-free",
+    "https://www.irs.gov/es/tax-professionals/choosing-a-tax-professional",
+    "https://www.irs.gov/es/refunds",
+    "https://www.irs.gov/es/identity-theft-fraud-scams/get-an-identity-protection-pin"
+   ],
+   "claims_to_verify": [
+    "2027 filing season opening date (IRS announces; usually late January)",
+    "W-2 due Feb 1, 2027; April 15, 2027 deadline (Thursday)",
+    "PATH Act EITC/ACTC refund hold until mid-February",
+    "ITIN expiration rule (3 consecutive years unused) and filing with an expired ITIN",
+    "Paid preparers must have a PTIN and sign; IRS red flags",
+    "Most e-file + direct deposit refunds in under 21 days",
+    "IRS typically initiates contact by mail; never demands gift cards, crypto or wire transfers",
+    "IP PIN available to any taxpayer who can verify identity",
+    "Form 1095-A needed for Marketplace coverage (premium tax credit reconciliation)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ }
+]
