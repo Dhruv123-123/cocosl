@@ -1,6 +1,6 @@
 # Products catalog: every product, every brand
 
-One sheet to list from. **120 listings** (Money Made Simple 93, Scam Decoded 6, 1099 Money 7, Dinero Simple 14). Nothing in this list has been uploaded, listed or
+One sheet to list from. **121 listings** (Money Made Simple 93, Scam Decoded 6, 1099 Money 8, Dinero Simple 14). Nothing in this list has been uploaded, listed or
 submitted anywhere.
 
 - **Files** and **Listing copy** paths are inside the project files folder `content-factory/` (the upload-ready copies).
@@ -122,11 +122,12 @@ submitted anywhere.
 | Seniors pack group print license | Gumroad | $49 (+$19 per extra site) | `scam-decoded/products/seniors-pack/` | `scam-decoded/products/seniors-pack/GROUP_LICENSE_LISTING.md` | When the first talk is booked | proposed | PR #9. For libraries and senior centers. |
 | Spot It, Stop It team training pack | Gumroad | $99 | `scam-decoded/products/team-training/` | `scam-decoded/products/team-training/LISTING.md` | Before the B2B outreach starts (Tue Nov 10) | proposed | PR #9. Code TEAMLAUNCH. |
 
-## 1099 Money (7)
+## 1099 Money (8)
 
 | Product | Platform | Price | Files | Listing copy | Launch | Date | Notes |
 |---|---|---|---|---|---|---|---|
 | 2027 Freelancer Tax-Year Planner (printable) | Etsy + Gumroad | $12 | `brands/1099-money/freelancer-tax-planner-2027/` | `brands/1099-money/freelancer-tax-planner-2027/LISTING.md` | Week of Nov 16, with the brand launch (dated 2027: list early) | proposed | Sold as the paper companion to the Quarterly Tax Tracker (the brand's spreadsheet). My sheet and bundle were merged away (see Merged). Needs the brand's own Etsy shop (or a section in an existing one). |
+| Schedule C Setup Pack for TaxHacker | Gumroad (Etsy optional) | $12 | `brands/1099-money-taxhacker/schedule-c-setup-pack/` | `brands/1099-money-taxhacker/schedule-c-setup-pack/LISTING.md` | After a live TaxHacker test; target week of Jan 4 (year-end packets and Q4 estimates) | proposed | BLOCKER before listing: install TaxHacker 0.8.5 with made-up receipts, add these categories and fields, run 30 sample receipts through it, export the CSV and paste it into the packet. Fix any prompt that sorts badly, and confirm the menu names in the guide. Until then it is untested in a live install. Only for TaxHacker users (a self-hosted receipt app, MIT, not affiliated): categories, fields and a sheet that reads its CSV. Points non-users to the Quarterly Tax Tracker. Etsy is optional. |
 | The Quarterly Tax Tracker | Gumroad | $15 | `1099-money/product-quarterly-tax-tracker/` | `1099-money/product-quarterly-tax-tracker/LISTING.md` | Mon Nov 16 (brand launch day 1) | proposed | PR #10. Code LAUNCH ($9 for 7 days). |
 | The Rate & Contract Kit | Gumroad | $29 | `1099-money/products/rate-contract-kit/` | `1099-money/products/rate-contract-kit/LISTING.md` | Week of Nov 16 | proposed | PR #10. Codes LAUNCH, TRACKER5, KIT29. |
 | The Freelancer Money Bundle | Gumroad | $49 | `1099-money/products/bundle/` | `1099-money/products/bundle/LISTING.md` | Week of Nov 16 | proposed | PR #10. Codes LAUNCH, TRACKER15, KIT29. |

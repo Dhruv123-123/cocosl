@@ -26,6 +26,7 @@ import ten99_sheet  # noqa: E402
 import dinero_simple as DS  # noqa: E402
 import remesas_sheet  # noqa: E402
 import money_reset as MR  # noqa: E402
+import schedule_c_pack as SC  # noqa: E402
 
 SIZES = shop.SIZES
 
@@ -43,6 +44,7 @@ MOCK = {
     "registro-de-envios": ("El Registro de Envíos", "Compara antes de enviar y guarda cada envío. Para imprimir y en Google Sheets."),
     "construir-credito": ("Construye tu Crédito", "Tus primeros 12 meses paso a paso, también con ITIN, en 8 páginas."),
     "money-reset-30-day": ("The Money Reset", "30 days, one 15-minute task a day: see it, cut it, plan it, pay it down."),
+    "schedule-c-setup-pack": ("Schedule C Setup Pack", "Schedule C categories, a year-end packet and a mileage log, for TaxHacker users."),
     "paquete-familia": ("Paquete de la Familia", "El presupuesto, el registro de envíos y la lista de crédito, en una descarga."),
 }
 CHIPS = {"sheet": ["Instant download", "Google Sheets + Excel"], "bundle": ["Instant download", "Printable + digital"]}
@@ -140,6 +142,21 @@ def mms_jobs(out: Path, work: Path) -> tuple[list[dict], dict[str, list[Path]]]:
         pdf = d / f"The-Money-Reset-30-Day-Challenge-{size}.pdf"
         jobs.append({"src": str(src), "pdf": str(pdf)})
         files.setdefault("money-reset-30-day", []).append(pdf)
+    return jobs, files
+
+
+def schedc_jobs(out: Path, work: Path) -> tuple[list[dict], dict[str, list[Path]]]:
+    B, jobs, files = SC.BRAND, [], {}
+    d = out / "schedule-c-setup-pack"
+    d.mkdir(parents=True, exist_ok=True)
+    for size, (w, h, pn) in SIZES.items():
+        src = work / f"schedc-{size}.html"
+        src.write_text(doc(B, [("page", p) for p in SC.pages()], "Schedule C Setup Pack", w, h, pn, SC.CSS))
+        pdf = d / f"Schedule-C-Setup-Pack-Guide-{size}.pdf"
+        jobs.append({"src": str(src), "pdf": str(pdf)})
+        files.setdefault("schedule-c-setup-pack", []).append(pdf)
+    xlsx = SC.build_workbook(d / "Year-End-Packet.xlsx")
+    files["schedule-c-setup-pack"] = [xlsx, *files["schedule-c-setup-pack"], *SC.write_mapping(d)]
     return jobs, files
 
 
@@ -242,7 +259,7 @@ def zip_bundle(name: Path, paths: list[Path]) -> Path:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--brand", nargs="*", default=["scam-decoded", "1099-money", "dinero-simple", "money-made-simple"])
+    ap.add_argument("--brand", nargs="*", default=["scam-decoded", "1099-money", "dinero-simple", "money-made-simple", "1099-money-taxhacker"])
     ap.add_argument("--out", default=str(HERE / "dist"))
     ap.add_argument("--no-mockups", action="store_true")
     ap.add_argument("--check", action="store_true", help="recalculate the workbook in LibreOffice")
@@ -251,7 +268,7 @@ def main() -> int:
     work = Path(tempfile.mkdtemp(prefix="brandshop-"))
     failures: list[str] = []
     brands = {"scam-decoded": (SD, scam_jobs), "1099-money": (T, ten99_jobs), "dinero-simple": (DS, dinero_jobs),
-              "money-made-simple": (MR, mms_jobs)}
+              "money-made-simple": (MR, mms_jobs), "1099-money-taxhacker": (SC, schedc_jobs)}
     if a.check:
         sys.path.insert(0, str(shop.ROOT / "launch" / "products"))
         from build import recalc_check
@@ -284,6 +301,8 @@ def main() -> int:
                                                                   files["freelancer-tax-planner-2027"] + files["freelancer-tax-sheet-2027"])]
             if a.check:
                 failures += recalc_check(files["freelancer-tax-sheet-2027"][0])
+        elif key == "1099-money-taxhacker" and a.check:
+            failures += recalc_check(files["schedule-c-setup-pack"][0])
         for it in mod.LISTINGS:  # a retired listing leaves no upload folder behind (its pages still render and are checked)
             if it not in active and (out / it["slug"]).exists():
                 shutil.rmtree(out / it["slug"])

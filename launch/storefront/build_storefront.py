@@ -69,6 +69,7 @@ BRANDS = {
                "AI tools and checked by a person."),
         sections=[("Quarterly taxes", ["The Quarterly Tax Tracker", "2027 Freelancer Tax-Year Planner (printable)"]),
                   ("Get paid", ["The Rate & Contract Kit"]),
+                  ("For TaxHacker users", ["Schedule C Setup Pack for TaxHacker"]),
                   ("Everything", ["The Freelancer Money Bundle"])],
         featured="The Quarterly Tax Tracker"),
     "Dinero Simple": dict(
@@ -131,6 +132,7 @@ CROSS_SELL = {
     "The Quarterly Tax Tracker": ("The Freelancer Money Bundle", "Adds the rate, contract and invoice kit and the email scripts.", "Checkout upsell ($34 more)", "TRACKER15"),
     "The Rate & Contract Kit": ("The Freelancer Money Bundle", "Adds the tax tracker and the email scripts.", "Checkout upsell ($20 more)", "KIT29"),
     "The Freelancer Money Bundle": ("2027 Freelancer Tax-Year Planner (printable)", "A paper year-planner beside the spreadsheet: dates, months and the tax-time checklist.", "Email", ""),
+    "Schedule C Setup Pack for TaxHacker": ("The Quarterly Tax Tracker", "The packet totals the year; the tracker sets aside tax as each payment lands.", "Receipt note", ""),
     "2027 Freelancer Tax-Year Planner (printable)": ("The Quarterly Tax Tracker", "The planner is for the desk; the tracker does the sums.", "Receipt note", ""),
     # Dinero Simple (dinero-simple product pages and LISTING files)
     "El Kit para Recortar Gastos": ("El Presupuesto de 20 Minutos", "Lo que recortas necesita un plan.", "Receipt note", "RECORTE5"),

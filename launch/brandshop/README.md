@@ -42,3 +42,11 @@ on PRs #9 and #10.
   weekend and federal-holiday rule (Q4 lands on Tue Jan 18 2028 because of MLK Day); confirm on irs.gov, and confirm the
   1099-NEC threshold and the 2027 mileage rate once the IRS publishes it (the tracker leaves the rate blank on Setup).
 - Every page and listing says it is educational, not financial, tax or legal advice, and discloses the AI help.
+- **Schedule C Setup Pack for TaxHacker (1099 Money, $12, `schedule_c_pack.py`, built as `1099-money-taxhacker`).** A
+  guide, 26 categories with AI prompts mapped to Schedule C lines, three custom fields, a CSV/JSON category map and a
+  year-end packet workbook that reads TaxHacker's CSV export by header name (totals by line, quarterly set-asides,
+  receipts over $75 with no note, a mileage log). Written against the TaxHacker 0.8.5 source; **it has not been tried in
+  a live install**, so the listing carries a BLOCKER: install 0.8.5 with made-up receipts, run 30 through it, confirm the
+  menu names, then list. TaxHacker is MIT (Copyright (c) 2025 Vasily Zubarev): the pack names and links it, says it
+  isn't affiliated, uses no logo and contains none of its code. Restoring a TaxHacker backup deletes existing data, so
+  the pack never asks anyone to restore one.

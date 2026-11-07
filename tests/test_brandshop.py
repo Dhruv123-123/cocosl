@@ -195,3 +195,46 @@ def test_money_reset_workbook():
     worksheets = {d[4] for d in MR.DAYS if d[4]}
     titles = " ".join(MR.pages()).replace("<em>", "").replace("</em>", "")
     assert all(w.split()[0] in titles for w in worksheets)
+
+
+def test_schedule_c_pack_matches_taxhacker_and_irs_lines(tmp_path):
+    import schedule_c_pack as SC
+    assert shop.validate(SC.LISTINGS) == []
+    it = SC.LISTINGS[0]
+    assert it["price"] == 12 and it["review"].startswith("BLOCKER") and "[LINK:" in it["gumroad"]
+    assert "isn't affiliated" in it["gumroad"] and "Vasily Zubarev" in it["gumroad"]
+    # TaxHacker builds a category's code from its first 16 slug characters: they must not collide
+    codes = [SC.code_of(n) for n, *_ in SC.CATEGORIES]
+    assert len(set(codes)) == len(codes) and all(len(c) <= 16 for c in codes)
+    assert SC.code_of("Business %") == "business_percent" and SC.code_of("Software and subscriptions") == "software_and_sub"
+    assert all(line in SC.LINES or line in SC.OTHER for _, line, *_ in SC.CATEGORIES)
+    assert f"{len(SC.CATEGORIES)} Schedule C categories" in SC.GET[0] and f"{len(SC.pages())}-page" in SC.GET[0]
+    assert set(SC.REQUIRED) <= set(SC.EXPORT_COLUMNS)
+    csv_path, json_path = SC.write_mapping(tmp_path)
+    text = json_path.read_text()
+    assert "don't restore" in text and "TaxHacker 0.8.5" in text
+    # the pack ships our own files only: no TaxHacker source
+    assert not any(p.suffix in (".ts", ".tsx", ".prisma") for p in tmp_path.iterdir())
+
+
+@pytest.mark.skipif(not shutil.which("soffice"), reason="LibreOffice not installed")
+def test_year_end_packet_reads_taxhacker_csv(tmp_path):
+    import subprocess
+    from openpyxl import load_workbook
+    import schedule_c_pack as SC
+    src = SC.build_workbook(tmp_path / "p.xlsx")
+    out = tmp_path / "out"
+    subprocess.run(["soffice", "--headless", "--convert-to", "xlsx", "--outdir", str(out), str(src)],
+                   capture_output=True, timeout=300, check=True)
+    wb = load_workbook(out / "p.xlsx", data_only=True)
+    by = {r[0]: r[2] for r in wb["By line"].iter_rows(min_row=5, max_row=30, values_only=True) if r[0]}
+    # 2026 examples only (the Dec 2025 receipt is left out); the phone bill counts at its 50% business share
+    assert by["Line 1"] == 4200 and by["Line 13"] == 1299 and by["Line 25"] == 40 and by["Line 24b"] == pytest.approx(62.4)
+    assert by["Not Schedule C"] == 1200 and by["Personal"] == 95 and by["Unmapped"] == 0 and by["Line 22"] == 0
+    q = [r for r in wb["Quarters"].iter_rows(min_row=5, max_row=8, max_col=7, values_only=True)]
+    assert [r[4] for r in q] == [1354, pytest.approx(182.4), 0, 358]
+    assert q[0][2].date() == date(2026, 4, 15) and q[3][2].date() == date(2027, 1, 15)
+    assert q[0][6] == pytest.approx(446 * 0.25) and q[1][6] == 0
+    mn = wb["Missing notes"]
+    assert mn["G1"].value == 2 and mn["C5"].value == "Computer store" and mn["C6"].value == "Coworking space"
+    assert all(r[2] == "found" for r in wb["Settings"].iter_rows(min_row=10, max_row=19, max_col=3, values_only=True))

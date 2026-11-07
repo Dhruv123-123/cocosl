@@ -132,26 +132,32 @@ def brandshop_rows() -> list[dict]:
     import dinero_simple as DS
     import money_reset as MR
     import scam_decoded as SD
+    import schedule_c_pack as SC
     import ten99 as T
     out = []
     dates = {"scam-decoded": ("Week of Nov 16 (holiday-scam season runs Nov 21-Dec 18)", "proposed"),
              "1099-money": ("Week of Nov 16, with the brand launch (dated 2027: list early)", "proposed"),
              "dinero-simple": ("After native review; target week of Dec 7 (December remittance and aguinaldo season)", "proposed"),
-             "money-made-simple": ("Week of Dec 14, for New Year resets (budget searches peak in January)", "proposed")}
+             "money-made-simple": ("Week of Dec 14, for New Year resets (budget searches peak in January)", "proposed"),
+             "1099-money-taxhacker": ("After a live TaxHacker test; target week of Jan 4 (year-end packets and Q4 estimates)", "proposed")}
     differ = {
         "scam-card-set": "Cards only (no guide), so it sits beside the Scam-Proofing Kit and the seniors guide rather than competing with them. Replaces the fridge cards, caller ID card, my kit and my bundle (see Merged).",
         "freelancer-tax-planner-2027": "Sold as the paper companion to the Quarterly Tax Tracker (the brand's spreadsheet). My sheet and bundle were merged away (see Merged).",
         "presupuesto-familiar": "Different from El Presupuesto de 20 Minutos ($12, a guide plus a spreadsheet): this is a printable household binder for the whole family.",
         "money-reset-30-day": "A guided month of daily tasks, unlike the trackers (No-Spend Challenge) and the guide kits; leads into The 20-Minute Budget. Goes in the existing Money Made Simple Etsy shop.",
+        "schedule-c-setup-pack": ("Only for TaxHacker users (a self-hosted receipt app, MIT, not affiliated): categories, fields and a "
+                                  "sheet that reads its CSV. Points non-users to the Quarterly Tax Tracker. Etsy is optional."),
         "paquete-familia": "Different from El Paquete Dinero Simple ($29, the four guide kits): this bundles the three printables.",
     }
     for key, mod, plat in (("scam-decoded", SD, "Etsy + Gumroad"), ("1099-money", T, "Etsy + Gumroad"), ("dinero-simple", DS, "Etsy + Gumroad"),
-                           ("money-made-simple", MR, "Etsy + Gumroad")):
+                           ("money-made-simple", MR, "Etsy + Gumroad"), ("1099-money-taxhacker", SC, "Gumroad (Etsy optional)")):
         d, src = dates[key]
         for it in mod.LISTINGS:
             if it.get("status", "active") != "active":
                 continue
             note = differ.get(it["slug"], "")
+            if it.get("review", "").startswith("BLOCKER"):
+                note = (it["review"] + " " + note).strip()
             if key == "dinero-simple":
                 note = ("NATIVE REVIEW PENDING: sign brands/dinero-simple/REVIEW_CHECKLIST_ES.md first. " + note).strip()
             if key in ("scam-decoded", "1099-money") and "Etsy" in plat:
