@@ -354,6 +354,32 @@ class Factory:
             "AND COALESCE(updated_at, created_at) < ?", [cutoff])
         return cur.rowcount or 0
 
+    def resolve_publication(self, pub_id: int, action: str, url: str = "", actor: str = "human") -> None:
+        """Human decision on an interrupted (needs_check) or failed publication:
+        'live' = it did go out (record it), 'requeue' = try again at the next free slot, 'drop' = give up."""
+        pub = self.db.get("publications", pub_id)
+        if not pub:
+            raise KeyError(f"No publication #{pub_id}")
+        if pub["status"] not in ("needs_check", "failed"):
+            raise ValueError(f"Publication #{pub_id} is {pub['status']}; only needs_check or failed can be resolved")
+        if action == "live":
+            self.db.update("publications", pub_id, {"status": "published", "url": url or pub["url"],
+                                                    "published_at": pub["published_at"] or now_iso(), "error": ""})
+            self.db.update("posts", pub["post_id"], {"status": "published"})
+        elif action == "requeue":
+            from .scheduler import next_slot
+            post = self._post(pub["post_id"])
+            slot = next_slot(self.db, self.brand(post["brand"]), pub["platform"])
+            self.db.update("publications", pub_id, {"status": "queued", "attempts": 0, "error": "",
+                                                    "scheduled_at": slot.isoformat()})
+            if post["status"] != "published":
+                self.db.update("posts", post["id"], {"status": "scheduled"})
+        elif action == "drop":
+            self.db.update("publications", pub_id, {"status": "cancelled"})
+        else:
+            raise ValueError("action must be live, requeue or drop")
+        self.db.log(f"publication.resolved_{action}", "publication", pub_id, {"url": url}, actor=actor)
+
     # ------------------------------------------------------------------ analytics
     def collect_metrics(self) -> int:
         from .publish import get_publisher

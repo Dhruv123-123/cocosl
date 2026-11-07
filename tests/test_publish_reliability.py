@@ -73,3 +73,31 @@ def test_interrupted_publish_is_flagged_not_retried(factory, scheduled):
     assert factory.flag_interrupted() == 1
     assert factory.db.get("publications", pubs[0])["status"] == "needs_check"
 
+
+
+def test_needs_check_resolution_from_dashboard(factory, scheduled):
+    from fastapi.testclient import TestClient
+
+    from contentfactory.web.app import create_app
+    pid, pubs = scheduled
+    factory.db.execute("UPDATE publications SET status='needs_check' WHERE id = ?", [pubs[0]])
+    factory.settings.dashboard_token = "t"
+    c = TestClient(create_app(factory), client=("203.0.113.9", 4000), headers={"Authorization": "Bearer t"},
+                   follow_redirects=False)
+    page = c.get("/").text
+    assert "interrupted mid-upload" in page and f"/publications/{pubs[0]}/resolve" in page
+    r = c.post(f"/publications/{pubs[0]}/resolve", data={"action": "live", "url": "https://ig/p/1"},
+               headers={"Origin": "http://testserver"})
+    assert r.status_code in (302, 303)
+    pub = factory.db.get("publications", pubs[0])
+    assert pub["status"] == "published" and pub["url"] == "https://ig/p/1"
+    with pytest.raises(ValueError):
+        factory.resolve_publication(pubs[0], "requeue")
+
+
+def test_requeue_failed_publication(factory, scheduled):
+    pid, pubs = scheduled
+    factory.db.execute("UPDATE publications SET status='failed', attempts=3 WHERE id = ?", [pubs[0]])
+    factory.resolve_publication(pubs[0], "requeue")
+    pub = factory.db.get("publications", pubs[0])
+    assert pub["status"] == "queued" and pub["attempts"] == 0
