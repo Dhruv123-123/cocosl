@@ -36,7 +36,7 @@ Bookmark our free **[Is this a scam? checker](/checker/)**. Paste in any text, e
 
 ## From Scam Decoded
 
-Not sure what a scam looks like? Our new [scam explainers](/scams/) cover sixteen of the most common ones in plain English, including [package delivery texts](/scams/package-delivery-texts/) and [marketplace scams](/scams/online-marketplace-scams/).
+Going home for Thanksgiving? Our free **[holiday conversation guide](/holiday/)** gives you the openers, a 30-minute plan and word-for-word answers to the 6 calls to hang up on, so the scam talk with your parents doesn't feel like a lecture. For something to leave on their fridge, our large-print [Scam Decoded for Seniors](/seniors/) pack is $7 (our own product).
 
 Stay safe out there,
 Scam Decoded

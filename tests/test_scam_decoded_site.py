@@ -140,7 +140,7 @@ def test_page_copy_lives_in_content_files(tmp_path, monkeypatch):
     src = (ROOT / "build.py").read_text()
     for phrase in ("What's inside", "Honest notes", "Who it's for", "Kit or guide?", "Our take", "free by law"):
         assert phrase not in src, f"copy still hard-coded in build.py: {phrase}"
-    assert sorted(p.stem for p in (ROOT / "content" / "products").glob("*.md")) == ["kit", "parents", "teams"]
+    assert sorted(p.stem for p in (ROOT / "content" / "products").glob("*.md")) == ["kit", "parents", "seniors", "teams"]
     for name in ("index", "thanks", "checker", "compare"):
         assert (ROOT / "content" / "pages" / f"{name}.md").exists()
     _, out = build(tmp_path, monkeypatch)
@@ -192,3 +192,21 @@ def test_in_browser_scam_checker_and_explainers(tmp_path, monkeypatch):
         assert got == level, (text, got)
         if article:
             assert article in arts, (text, arts)
+
+
+def test_holiday_parents_guide_opt_in_and_seniors_upsell(tmp_path, monkeypatch):
+    mod, out = build(tmp_path, monkeypatch)
+    cfg = json.loads((ROOT / "site.json").read_text())
+    pdf = out / "downloads" / cfg["holiday_guide"]["file"]
+    assert pdf.exists() and pdf.read_bytes()[:4] == b"%PDF" and pdf.read_bytes().count(b"/Type /Page\n") in (0, 4)
+    guide = (ROOT / "lead-magnet" / "holiday-parents-guide.html").read_text()
+    assert guide.count('class="page"') == 4 and "$7" in guide
+    assert cfg["url"].split("//")[1] + "/seniors/" in guide  # the PDF's upsell URL matches the live site
+    landing = (out / "holiday" / "index.html").read_text()
+    assert 'action="/holiday/thanks/"' in landing and 'value="holiday-guide"' in landing
+    thanks = (out / "holiday" / "thanks" / "index.html").read_text()
+    assert f'/downloads/{cfg["holiday_guide"]["file"]}' in thanks and 'href="/seniors/"' in thanks and "noindex" in thanks
+    seniors = (out / "seniors" / "index.html").read_text()
+    assert "$7" in seniors and "etsy" in seniors
+    assert "/holiday/thanks/" in (out / "robots.txt").read_text()
+    assert "/holiday/</loc>" in (out / "sitemap.xml").read_text()

@@ -252,10 +252,10 @@ def load_dir(name: str) -> list[dict]:
 
 
 # --------------------------------------------------------------------- parts
-def email_form(source: str, button: str = "Send me the free checklist") -> str:
+def email_form(source: str, button: str = "Send me the free checklist", thanks_path: str = "/free/thanks/") -> str:
     e = CFG["email"]
     provider = e.get("provider", "netlify")
-    thanks = u("/free/thanks/")
+    thanks = u(thanks_path)
     field = e.get("email_field") or {"kit": "email_address", "mailerlite": "fields[email]"}.get(provider, "email")
     extra, attrs = "", ""
     if provider == "netlify":
@@ -527,7 +527,7 @@ def shortcode(name: str, args: list[str], ctx: dict) -> str | None:
     if name == "aff":
         return aff_button(args[0].strip(), args[1].strip())
     if name == "download":
-        lm = CFG["lead_magnet"]
+        lm = CFG[args[0].strip()] if args else CFG["lead_magnet"]  # {{download}} or {{download:holiday_guide}}
         return f'<p><a class="button" href="{u("/downloads/" + lm["file"])}" download>Download {esc(lm["title"])} (PDF)</a></p>'
     if name == "buy" and ctx.get("product"):
         p = ctx["product"]
@@ -625,7 +625,7 @@ def build() -> list[str]:
     sm = "".join(f"<url><loc>{absu(p)}</loc></url>" for p in indexed)
     (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n'
                                      f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')
-    (OUT / "robots.txt").write_text(f"User-agent: *\nDisallow: {u('/emails/')}\nDisallow: {u('/free/thanks/')}\n"
+    (OUT / "robots.txt").write_text(f"User-agent: *\nDisallow: {u('/emails/')}\nDisallow: {u('/free/thanks/')}\nDisallow: {u('/holiday/thanks/')}\n"
                                     f"Sitemap: {absu('/sitemap.xml')}\n")
     return indexed
 
