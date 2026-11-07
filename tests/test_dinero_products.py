@@ -91,7 +91,16 @@ def test_month2_plan_is_complete_and_avoids_scam_series_slots():
     assert all("no es asesoría fiscal" in i["script"]["caption"] for i in taxes if "irs" in i["script"]["hashtags"])
 
 
-def test_etsy_listings_fit_etsy_and_editions_stay_on_etsy():
+@pytest.fixture
+def _forget_products_build():
+    """launch/dinero-simple/products/build.py is imported as "build"; drop it afterwards so another test's
+    `import build` (the site generator in tests/test_site.py) doesn't get this module from the cache."""
+    yield
+    for name in ("build", "build_etsy", "listings"):
+        sys.modules.pop(name, None)
+
+
+def test_etsy_listings_fit_etsy_and_editions_stay_on_etsy(_forget_products_build):
     pytest.importorskip("openpyxl")
     sys.path.insert(0, str(DS / "etsy"))
     sys.path.insert(0, str(DS / "products"))
