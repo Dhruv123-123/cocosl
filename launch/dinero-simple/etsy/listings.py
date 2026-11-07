@@ -1,6 +1,6 @@
 """Spanish Etsy listing copy for the five Dinero Simple products.
 
-Titles <= 140 characters, exactly 13 tags of <= 20 characters (build_etsy.py checks both). Tags mix Spanish
+Titles under 15 words (Etsy guidance, Apr 2026; see research/scouting/etsy-seo-playbook.md on PR #2) and <= 140 characters, a first line that says what the item is, exactly 13 tags of <= 20 characters (build_etsy.py checks both). Tags mix Spanish
 with the English words US buyers type when they look for Spanish products ("spanish budget"). Every
 description says nothing is shipped, that it's educational, and that AI tools helped (Etsy's creativity
 standards). No links, codes or prompts to buy off Etsy.
@@ -23,17 +23,18 @@ MORE = f"""MÁS EN LA TIENDA
 Busca "{SHOP}" en Etsy para los otros kits en español, o llévate los cuatro en El Paquete Dinero Simple."""
 
 
-def _desc(hook: str, get: list[str], how: list[str]) -> str:
+def _desc(what: str, hook: str, get: list[str], how: list[str]) -> str:
     g = "\n".join(f"- {x}" for x in get)
     h = "\n".join(f"{i}. {x}" for i, x in enumerate(how, start=1))
-    return f"{hook}\n\nQUÉ INCLUYE\n{g}\n\nCÓMO FUNCIONA\n{h}\n\n{GOOD_TO_KNOW}\n\n{MORE}"
+    return f"{what}\n\n{hook}\n\nQUÉ INCLUYE\n{g}\n\nCÓMO FUNCIONA\n{h}\n\n{GOOD_TO_KNOW}\n\n{MORE}"
 
 
 LISTINGS: list[dict] = [
     dict(slug="recorte-de-gastos", name="El Kit para Recortar Gastos", price=5.00, category=CAT,
-         title="Kit para Recortar Gastos en Español, Lista de Suscripciones, Guiones para Bajar Cuentas, Hoja de Cálculo Excel y Google Sheets",
-         tags=["spanish budget", "en español", "recortar gastos", "ahorrar dinero", "suscripciones",
-               "presupuesto", "finanzas personales", "hoja de calculo", "google sheets", "excel template",
+         what="Este Kit para Recortar Gastos es una descarga digital en español: una guía en PDF de 9 páginas y una hoja de cálculo para Excel y Google Sheets.",
+         title="Kit para Recortar Gastos en Español, Lista de Suscripciones y Guiones para Bajar Cuentas",
+         tags=["spanish budget", "en español", "recortar gastos", "ahorrar dinero", "cancelar suscripcion",
+               "presupuesto mensual", "finanzas personales", "hoja de calculo", "google sheets", "excel template",
                "spanish planner", "bill negotiation", "money saving"],
          pitch="Encuentra cada cobro que se repite y baja las cuentas que te quedas.",
          chips=["Descarga inmediata", "Guía PDF", "Excel + Google Sheets", "En español"],
@@ -46,10 +47,11 @@ LISTINGS: list[dict] = [
          hook="Las suscripciones no se sienten caras a $9.99 al mes. Se sienten caras a $120 al año, por seis. Este kit en español te ayuda a encontrar cada cobro que se repite en unos 10 minutos, cancelar lo que no usas y bajar las cuentas que te quedas.",
          hero=[1, 3, 6], grid=[1, 2, 3, 4, 5, 6, 7, 8]),
     dict(slug="presupuesto-20-minutos", name="El Presupuesto de 20 Minutos", price=12.00, category=CAT,
-         title="Presupuesto en Español, Plantilla de Presupuesto Semanal Excel y Google Sheets, Guía de 14 Páginas, Fondos de Ahorro, Plan de Deudas",
-         tags=["spanish budget", "presupuesto", "en español", "plantilla excel", "google sheets",
-               "finanzas personales", "budget template", "spanish planner", "ahorro", "control de gastos",
-               "budget spreadsheet", "planificador", "presupuesto semanal"],
+         what="Esta plantilla de presupuesto semanal es una descarga digital en español: una guía en PDF de 14 páginas y una hoja de cálculo para Excel y Google Sheets.",
+         title="Plantilla de Presupuesto Semanal en Español, Excel y Google Sheets, Guía de 14 Páginas",
+         tags=["spanish budget", "presupuesto familiar", "en español", "plantilla excel", "google sheets",
+               "finanzas personales", "budget template", "spanish planner", "plan de ahorro", "control de gastos",
+               "budget spreadsheet", "planificador semanal", "presupuesto semanal"],
          pitch="Un número semanal para gastar y un plan automático para todo lo demás.",
          chips=["Descarga inmediata", "Guía de 14 páginas", "Excel + Google Sheets", "En español"],
          inside_title="14 páginas de guía + plantilla",
@@ -61,8 +63,9 @@ LISTINGS: list[dict] = [
          hook="Un presupuesto en español que no te pide anotar cada café. Pones en automático tus cuentas, tu ahorro y tus metas, y te queda un solo número semanal para gastar. Una revisión de 20 minutos a la semana y listo.",
          hero=[1, 4, 7], grid=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
     dict(slug="fecha-sin-deudas", name="Tu Fecha Sin Deudas", price=17.00, category=CAT,
-         title="Planificador para Pagar Deudas en Español, Método Bola de Nieve y Avalancha, Hoja de Cálculo Excel y Google Sheets, Fecha Sin Deudas",
-         tags=["debt payoff", "pagar deudas", "en español", "bola de nieve", "avalancha",
+         what="Este planificador para pagar deudas es una descarga digital en español: una guía en PDF de 10 páginas y una hoja de cálculo para Excel y Google Sheets.",
+         title="Planificador para Pagar Deudas en Español, Método Bola de Nieve, Excel y Google Sheets",
+         tags=["debt payoff", "pagar deudas", "en español", "bola de nieve", "metodo avalancha",
                "spanish budget", "debt tracker", "salir de deudas", "google sheets", "excel template",
                "finanzas personales", "debt snowball", "spanish planner"],
          pitch="Pon todas tus deudas en una hoja y ve el mes exacto en que terminas.",
@@ -76,10 +79,11 @@ LISTINGS: list[dict] = [
          hook="¿Cuándo terminas de pagar tus deudas? Este planificador en español pone todas tus deudas en un solo lugar, compara el método avalancha y el de bola de nieve con tus números, y te dice el mes exacto en que quedas libre.",
          hero=[1, 4, 6], grid=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
     dict(slug="invertir-con-100", name="Empieza a Invertir con $100 al Mes", price=19.00, category=CAT,
-         title="Guía para Empezar a Invertir en Español, Calculadoras de Inversión Excel y Google Sheets, Roth IRA, 401k, Fondos Índice para Principiantes",
-         tags=["invertir", "en español", "spanish finance", "roth ira", "401k",
-               "fondos indice", "investing guide", "principiantes", "calculadora", "google sheets",
-               "excel template", "finanzas personales", "retirement"],
+         what="Esta guía de inversión para principiantes es una descarga digital en español: una guía en PDF de 12 páginas y calculadoras para Excel y Google Sheets.",
+         title="Guía de Inversión para Principiantes en Español, Calculadoras en Excel y Google Sheets",
+         tags=["invertir dinero", "en español", "spanish finance", "roth ira", "401k",
+               "fondos indice", "investing guide", "guia principiantes", "calculadora interes", "google sheets",
+               "excel template", "finanzas personales", "retirement planning"],
          pitch="El orden para empezar a invertir y calculadoras para ver tus números.",
          chips=["Descarga inmediata", "Guía de 12 páginas", "5 calculadoras", "En español"],
          inside_title="12 páginas de guía + calculadoras",
@@ -91,11 +95,12 @@ LISTINGS: list[dict] = [
          hook="No necesitas mucho dinero para empezar a invertir. Necesitas el orden correcto y ponerlo en automático. Esta guía en español te lleva paso a paso, con calculadoras para ver cuánto puede crecer tu dinero y cuánto te cuestan las comisiones. Ejemplos hipotéticos, nadie te promete rendimientos.",
          hero=[1, 3, 5], grid=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
     dict(slug="paquete", name="El Paquete Dinero Simple", price=29.00, category=CAT,
+         what="Este paquete de finanzas personales es una descarga digital en español: los cuatro kits de Dinero Simple (guías en PDF y hojas de cálculo) y un mapa de inicio.",
          bundle_of=["recorte-de-gastos", "presupuesto-20-minutos", "fecha-sin-deudas", "invertir-con-100"],
-         title="Paquete de Finanzas Personales en Español, 4 Guías y Hojas de Cálculo, Presupuesto, Deudas, Ahorro e Inversión, Excel y Google Sheets",
-         tags=["spanish budget", "en español", "presupuesto", "pagar deudas", "invertir",
+         title="Paquete de Finanzas Personales en Español: Presupuesto, Deudas, Ahorro e Inversión",
+         tags=["spanish budget", "en español", "presupuesto mensual", "pagar deudas", "invertir dinero",
                "finanzas personales", "budget bundle", "spanish planner", "google sheets", "excel template",
-               "ahorro", "money bundle", "regalo"],
+               "plan de ahorro", "money bundle", "regalo practico"],
          pitch="Los cuatro kits en español: gastos, presupuesto, deudas e inversión.",
          chips=["Descarga inmediata", "4 guías + 4 hojas", "Excel + Google Sheets", "En español"],
          inside_title="Los 4 kits que recibes",
@@ -111,5 +116,5 @@ LISTINGS: list[dict] = [
 ]
 
 for _it in LISTINGS:
-    _it["description"] = _desc(_it["hook"], _it["get"], _it["how"])
+    _it["description"] = _desc(_it["what"], _it["hook"], _it["get"], _it["how"])
 BY_SLUG = {it["slug"]: it for it in LISTINGS}

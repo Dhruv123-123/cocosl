@@ -1,8 +1,9 @@
 # Dinero Simple on Etsy
 
-Etsy-ready, Spanish versions of the five Dinero Simple products. Each folder has the files to upload, three
-2000x1500 listing images (upload `mockup-01-hero.png` first; it's the thumbnail) and `LISTING.md` (title,
-13 tags, price, description). `listings.csv` has one row per listing.
+Etsy-ready, Spanish versions of the five Dinero Simple products. Each folder has the files to upload, four
+2700x2025 listing images (upload `mockup-01-clean.png` first: it's the thumbnail, the pages alone with no text
+on them, as Etsy advises) and `LISTING.md` (title under 15 words, 13 tags, price, a description whose first
+line says what the item is). `listings.csv` has one row per listing.
 
 | Folder | Price | Files |
 |---|---|---|
@@ -22,8 +23,14 @@ for repeat buyers go through Etsy's private coupons.
 2. The existing shop, with these as their own listings. Etsy shows the Spanish text to everyone; the
    English words in the tags ("spanish budget", "spanish planner") help English searches find them.
 
-**Before listing:** a fluent Spanish speaker reads every title, tag, description and the PDFs and
+**Before listing (REVISIÓN NATIVA PENDIENTE):** a fluent Spanish speaker reads every title, tag, description and the PDFs and
 spreadsheets. Listing is a manual step; nothing here is listed yet.
 
 Rebuild after changing a guide: `python launch/dinero-simple/products/build.py`, then
 `python launch/dinero-simple/etsy/build_etsy.py --out <folder>`.
+
+**November 2026 Etsy SEO pass** (from scouting's audit, `research/scouting/etsy-seo-playbook.md` on PR #2):
+titles cut from 20-22 words to 11-14, each description now opens with what the item is, single-word tags are
+phrases, and photos are 2700x2025 with a clean first photo (the old text panel is photo 2). The new Spanish
+titles and first lines are drafts for the native reviewer. Don't change titles or first photos on a listing
+that's selling between about 20 December and 31 January.

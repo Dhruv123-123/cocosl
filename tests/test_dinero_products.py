@@ -117,6 +117,8 @@ def test_etsy_listings_fit_etsy_and_editions_stay_on_etsy(_forget_products_build
     for it in LISTINGS:
         assert len(it["title"]) <= 140 and len(it["tags"]) == 13 and all(len(t) <= 20 for t in it["tags"]), it["slug"]
         assert "No se envía nada" in it["description"] and "IA" in it["description"]
+        assert len(it["title"].split()) < 15 and it["description"].startswith(it["what"]), it["slug"]
+        assert "descarga digital" in it["what"] and all(" " in t or t == "401k" for t in it["tags"]), it["slug"]
         assert "http" not in it["description"] and "código" not in it["description"].lower()
     for p in products.PRODUCTS:
         src = build_etsy.etsy_edition(p)

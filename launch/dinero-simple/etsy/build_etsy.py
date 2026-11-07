@@ -3,8 +3,9 @@
     python launch/dinero-simple/products/build.py          # first: PDFs and workbooks -> products/dist/
     python launch/dinero-simple/etsy/build_etsy.py [--out DIR]
 
-Per product, DIR/<slug>/ gets the files to upload (Etsy: up to 5 files, 20 MB each), three 2000x1500
-listing images (mockup-01-hero.png is the thumbnail) and LISTING.md (title, 13 tags, price, description).
+Per product, DIR/<slug>/ gets the files to upload (Etsy: up to 5 files, 20 MB each), four 2700x2025
+listing images (mockup-01-clean.png, the pages alone with no text, is the thumbnail) and LISTING.md
+(title under 15 words, 13 tags, price, a description that opens with what the item is).
 DIR/listings.csv has one row per listing.
 
 Etsy rules this follows: the Etsy edition of each guide has no discount codes, store links or "reply to
@@ -33,6 +34,7 @@ from listings import LISTINGS, SHOP  # noqa: E402
 
 DIST = DS / "products" / "dist"
 MAX_MB = 20
+PHOTO_SCALE = 1.35  # 2000x1500 layout rendered at 2700x2025: Etsy asks for at least 2000 px on both sides
 
 
 def etsy_edition(product: dict) -> str:
@@ -111,11 +113,17 @@ def mockups(it: dict, hero: list[Path], inside: list[Path], out_dir: Path, work:
     b3 = f'''<div style="padding:90px"><div class="kick">Cómo funciona</div><h2>Listo en minutos</h2><div class="steps">{st}</div>
       <div class="kick" style="margin-top:56px">Lo que recibes</div><ul class="inc">{inc}</ul></div>{side}
       <div class="foot"><span>DINERO SIMPLE</span><span>Contenido educativo, no es asesoría financiera</span></div>'''
+    # Etsy: first photo without text overlays or collage, item centred so square crops keep it (playbook on PR #2)
+    cpos = [(470, 400, -8, 640), (680, 320, 0, 680), (890, 400, 8, 640)][:len(hero)]
+    b0 = "".join(f'<img class="pg" src="file://{p}" style="left:{x}px;top:{y}px;width:{w}px;transform:rotate({r}deg)">'
+                 for p, (x, y, r, w) in zip(hero, cpos))
     jobs = []
-    for i, (body, cls, label) in enumerate([(b1, "cream", "hero"), (b2, "ink", "inside"), (b3, "cream", "details")], 1):
+    for i, (body, cls, label) in enumerate([(b0, "cream", "clean"), (b1, "cream", "hero"), (b2, "ink", "inside"),
+                                            (b3, "cream", "details")], 1):
         src = work / f"mock-{it['slug']}-{i}.html"
         src.write_text(_doc(body, cls))
-        jobs.append({"src": str(src), "png": str(out_dir / f"mockup-{i:02d}-{label}.png"), "w": 2000, "h": 1500})
+        jobs.append({"src": str(src), "png": str(out_dir / f"mockup-{i:02d}-{label}.png"), "w": 2000, "h": 1500,
+                     "scale": PHOTO_SCALE})
     return jobs
 
 
@@ -127,7 +135,7 @@ const { chromium } = require('playwright');
   const report = [];
   try {
     for (const j of jobs) {
-      const page = await browser.newPage({ viewport: { width: j.w || 1200, height: j.h || 900 } });
+      const page = await browser.newPage({ viewport: { width: j.w || 1200, height: j.h || 900 }, deviceScaleFactor: j.scale || 1 });
       await page.goto('file://' + j.src, { waitUntil: 'load' });
       if (j.pdf) {
         const over = await page.evaluate(() => [...document.querySelectorAll('.page')]
@@ -163,11 +171,12 @@ def listing_md(it: dict, files: list[Path]) -> str:
     flist = "\n".join(f"- `{f.name}` ({f.stat().st_size / 1e6:.1f} MB)" for f in files)
     return f"""# Etsy listing: {it['name']}
 
-Spanish listing. Copy each field into Etsy (Shop Manager > Listings > Add a listing). Upload the three
-mockups in order (01 is the thumbnail), then the digital files below. **A fluent Spanish speaker must
-read the title, tags, description and the files before this goes live.**
+Spanish listing. Copy each field into Etsy (Shop Manager > Listings > Add a listing). Upload the four
+mockups in order (01, the clean photo of the pages, is the thumbnail), then the digital files below. **A fluent Spanish speaker must
+read the title, tags, description and the files before this goes live.** The title and first line were
+shortened in November 2026 for Etsy's under-15-words guidance: check they still read naturally.
 
-## Title ({len(it['title'])}/140)
+## Title ({len(it['title'].split())} words, {len(it['title'])}/140)
 {it['title']}
 
 ## Price
@@ -271,6 +280,8 @@ def main() -> int:
                     failures.append(f"{f.name} is over {MAX_MB} MB")
             if len(uploads[it["slug"]]) > 5:
                 failures.append(f"{it['slug']}: more than 5 files")
+            if len(it["title"].split()) >= 15 or not it["description"].startswith(it["what"]):
+                failures.append(f"{it['slug']}: title of 15+ words, or the description doesn't open with what it is")
             if len(it["title"]) > 140 or len(it["tags"]) != 13 or any(len(t) > 20 for t in it["tags"]):
                 failures.append(f"{it['slug']}: title or tags break Etsy limits")
             (d / "LISTING.md").write_text(listing_md(it, uploads[it["slug"]]))
