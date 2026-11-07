@@ -57,6 +57,8 @@ factory publish                             # post what's due (dry run until FAC
 factory insights --brand money-made-simple --rescore
 factory repurpose 15                        # long video → Shorts + carousel
 factory import launch/money-made-simple/content.json --brand money-made-simple
+factory pack export --brand money-made-simple --file launch/money-made-simple/month-1/content.json \
+  --start 2026-11-21 --days 30 --out month-1/     # content.json → posting calendar + ready-to-post folders
 factory clients import --file leads.csv && factory pitch draft && factory pitch export
 factory order create --client 3 --package starter && factory order invoice --id 1
 factory revenue report
