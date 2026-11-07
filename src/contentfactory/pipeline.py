@@ -131,6 +131,9 @@ class Factory:
         from .media import render_post
         post = self._post(post_id)
         brand = self.brand(post["brand"])
+        if (post.get("meta") or {}).get("challenge") and post["format"] == "image":
+            self.check(post_id)  # a challenge day's image is its tracker (factory challenge), not generated art
+            return post.get("assets") or {}
         if post["format"] in ("short", "mid", "long"):  # vary the look against this channel's recent videos
             recent = self.db.query("SELECT assets FROM posts WHERE brand = ? AND id != ? AND format IN ('short','mid','long') "
                                    "AND status != 'rejected' ORDER BY id DESC LIMIT 8", [brand.slug, post_id])
@@ -242,7 +245,7 @@ class Factory:
         if post["status"] != "approved":
             raise PermissionError("Only approved posts can be scheduled")
         assets = post.get("assets") or {}
-        if not (assets.get("slides") if post["format"] == "carousel" else assets.get("video")):
+        if not (assets.get("slides") if post["format"] in ("carousel", "image") else assets.get("video")):
             raise PermissionError("Post has no rendered media yet; render it before scheduling")
         brand = self.brand(post["brand"])
         targets = platforms or [a.platform for a in brand.accounts
