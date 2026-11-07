@@ -1,5 +1,7 @@
 // All words the calculators show, in English and Spanish. Numbers come from lib/calc.js.
-// Spanish needs a native speaker's read before promotion (see apps/README.md).
+// Spanish uses tú and neutral Latin American vocabulary to match the Dinero Simple voice
+// (carro, celular, cuenta de cheques; US product names like 401(k), Roth IRA, APY kept in English).
+// It needs a native speaker's read before promotion (see apps/README.md).
 import { money, duration } from './format.js';
 
 const en = {
@@ -57,53 +59,53 @@ const en = {
 const es = {
   fields: {
     initial: 'Monto inicial ($)', monthly: 'Aporte mensual ($)', annualRate: 'Rendimiento anual (%)', years: 'Años',
-    monthlyExpenses: 'Gastos esenciales al mes ($)', monthsTarget: 'Meses a cubrir', currentSaved: 'Ya ahorrado ($)', monthlySave: 'Puede ahorrar al mes ($)', apy: 'APY de ahorro (%)',
-    balance: 'Saldo ($)', monthlyDeposit: 'Depósito mensual ($)', hyApy: 'APY de alto rendimiento (%)', compareApy: 'Su APY actual (%)', months: 'Meses',
-    cardBalance: 'Saldo de la tarjeta ($)', apr: 'Tasa anual APR (%)', minPercent: 'Mínimo: % del saldo + intereses', minFloor: 'Pago mínimo base ($)', fixedPayment: '¿Y si pagara cada mes? ($)',
-    annualContribution: 'Aporte anual, antes de impuestos ($)', currentRate: 'Su tasa de impuestos hoy (%)', retirementRate: 'Tasa esperada al jubilarse (%)', yearsToWithdraw: 'Años hasta retirar', annualReturn: 'Rendimiento anual (%)',
+    monthlyExpenses: 'Gastos esenciales al mes ($)', monthsTarget: 'Meses a cubrir', currentSaved: 'Ya ahorrado ($)', monthlySave: 'Puedes ahorrar al mes ($)', apy: 'APY de ahorro (%)',
+    balance: 'Saldo ($)', monthlyDeposit: 'Depósito mensual ($)', hyApy: 'APY de alto rendimiento (%)', compareApy: 'Tu APY actual (%)', months: 'Meses',
+    cardBalance: 'Saldo de la tarjeta ($)', apr: 'Tasa anual APR (%)', minPercent: 'Mínimo: % del saldo + intereses', minFloor: 'Pago mínimo base ($)', fixedPayment: '¿Y si pagaras cada mes? ($)',
+    annualContribution: 'Aporte anual, antes de impuestos ($)', currentRate: 'Tu tasa de impuestos hoy (%)', retirementRate: 'Tasa esperada al jubilarte (%)', yearsToWithdraw: 'Años hasta retirar', annualReturn: 'Rendimiento anual (%)',
     debtName: 'Nombre', debtBalance: 'Saldo ($)', debtApr: 'APR (%)', debtMin: 'Mínimo ($)', remove: 'Quitar', removeAria: 'Quitar esta deuda',
   },
   dur: (m) => duration(m, 'es'),
   growth: (v, r) => `<p class="big">${money(r.finalBalance)}</p>
-    <p>Después de ${v.years} años habría aportado <b>${money(r.totalContributed)}</b> y el crecimiento sumaría
+    <p>Después de ${v.years} años habrías aportado <b>${money(r.totalContributed)}</b> y el crecimiento sumaría
     <b>${money(r.totalGrowth)}</b>. El crecimiento es el ${Math.round((r.totalGrowth / Math.max(r.finalBalance, 1)) * 100)}% del total.</p>`,
   growthNote: (v) => `Supone un ${v.annualRate}% anual constante, capitalizado cada mes. Los rendimientos reales suben y bajan, y no están garantizados.`,
-  chartLabel: (a, b) => `El saldo crece de ${a} a ${b}`, legendTotal: 'Saldo total', legendIn: 'Lo que usted aportó',
-  efDone: (r) => `<p class="big">¡Ya lo tiene!</p><p>Su meta de ${money(r.target)} ya está cubierta. Guárdela en una cuenta aburrida, asegurada y separada del dinero para gastos.</p>`,
-  efNoSave: (r) => `<p class="big">Agregue un monto mensual</p><p>Su meta es ${money(r.target)}. Aunque sean $25 por semana, ya avanza.</p>`,
+  chartLabel: (a, b) => `El saldo crece de ${a} a ${b}`, legendTotal: 'Saldo total', legendIn: 'Lo que tú aportaste',
+  efDone: (r) => `<p class="big">¡Ya lo tienes!</p><p>Tu meta de ${money(r.target)} ya está cubierta. Guárdala en una cuenta aburrida, asegurada y separada del dinero para gastos.</p>`,
+  efNoSave: (r) => `<p class="big">Agrega un monto mensual</p><p>Tu meta es ${money(r.target)}. Aunque sean $25 por semana, ya avanzas.</p>`,
   efStarter: (r) => `<p>Primera meta: <b>${money(r.starterGoal)}</b>. Cubre la mayoría de los gastos inesperados y es la parte más difícil.</p>`,
-  ef: (v, r) => `<p class="big">${duration(r.months, 'es')}</p><p>Es el tiempo hasta tener <b>${money(r.target)}</b> (${v.monthsTarget} meses de gastos). Le faltan ${money(r.gap)}.</p>`,
+  ef: (v, r) => `<p class="big">${duration(r.months, 'es')}</p><p>Es el tiempo hasta tener <b>${money(r.target)}</b> (${v.monthsTarget} meses de gastos). Te faltan ${money(r.gap)}.</p>`,
   savings: (v, r) => `<p class="big">+${money(r.difference, 2)}</p>
-    <p>Con un APY de ${v.apy}% ganaría <b>${money(r.interest, 2)}</b> de intereses en ${duration(v.months, 'es')}, comparado con <b>${money(r.compareInterest, 2)}</b> al ${v.compareApy}%.</p>
-    <p class="note">Los APY cambian. Revise la tasa actual y que el banco esté asegurado por la FDIC (o la cooperativa por la NCUA).</p>`,
-  ccFixed: (v, f, saved) => `<p>Si paga <b>${money(v.fixedPayment)}</b> fijos al mes, la liquida en <b>${duration(f.months, 'es')}</b> con ${money(f.interest)} de intereses. Se ahorraría <b>${money(saved)}</b>.</p>`,
+    <p>Con un APY de ${v.apy}% ganarías <b>${money(r.interest, 2)}</b> de intereses en ${duration(v.months, 'es')}, comparado con <b>${money(r.compareInterest, 2)}</b> al ${v.compareApy}%.</p>
+    <p class="note">Los APY cambian. Revisa la tasa actual y que el banco esté asegurado por la FDIC (o la cooperativa por la NCUA).</p>`,
+  ccFixed: (v, f, saved) => `<p>Si pagas <b>${money(v.fixedPayment)}</b> fijos al mes, la liquidas en <b>${duration(f.months, 'es')}</b> con ${money(f.interest)} de intereses. Te ahorrarías <b>${money(saved)}</b>.</p>`,
   ccFixedNever: (v) => `<p>${money(v.fixedPayment)} al mes no cubre los intereses, así que el saldo nunca bajaría.</p>`,
   cc: (m, fixed) => `<p class="big">${duration(m.months, 'es')}</p>
-    <p>Eso tarda pagando solo el mínimo. Pagaría <b>${money(m.interest)}</b> de intereses, ${money(m.paid)} en total.</p>${fixed}
-    <p class="note">Cada emisor calcula el mínimo distinto. El recuadro de "advertencia de pago mínimo" en su estado de cuenta muestra los números reales de su tarjeta.</p>`,
+    <p>Eso tardas pagando solo el mínimo. Pagarías <b>${money(m.interest)}</b> de intereses, ${money(m.paid)} en total.</p>${fixed}
+    <p class="note">Cada emisor calcula el mínimo distinto. El recuadro de "advertencia de pago mínimo" en tu estado de cuenta muestra los números reales de tu tarjeta.</p>`,
   roth: (r) => {
     const head = r.winner === 'tie' ? 'Empate' : r.winner === 'roth' ? 'Gana la Roth' : 'Gana la Tradicional';
     return `<p class="big">${head}</p>
       <p>Después de impuestos: Roth <b>${money(r.roth)}</b>, Tradicional <b>${money(r.traditional)}</b>${r.winner === 'tie' ? '' : `, una diferencia de <b>${money(r.difference)}</b>`}.</p>
-      <p>La pregunta que lo decide: <b>¿su tasa de impuestos es más alta hoy o después?</b> Más alta hoy favorece la Tradicional. Más alta después favorece la Roth. ¿No está seguro? Mucha gente divide sus aportes.</p>
-      <p class="note">Simplificado: mismos dólares antes de impuestos, tasas fijas, sin aporte del empleador ni límites de ingreso. Revise los límites del IRS para el año en curso.</p>`;
+      <p>La pregunta que lo decide: <b>¿tu tasa de impuestos es más alta hoy o después?</b> Más alta hoy favorece la Tradicional. Más alta después favorece la Roth. ¿No estás seguro? Mucha gente divide sus aportes.</p>
+      <p class="note">Simplificado: mismos dólares antes de impuestos, tasas fijas, sin aporte del empleador ni límites de ingreso. Revisa los límites del IRS para el año en curso.</p>`;
   },
-  debtInfeasible: '<p class="big">No se liquida con este presupuesto</p><p>Los pagos no superan los intereses. Suba el monto extra o busque una opción con tasa más baja.</p>',
+  debtInfeasible: '<p class="big">No se liquida con este presupuesto</p><p>Los pagos no superan los intereses. Sube el monto extra o busca una opción con tasa más baja.</p>',
   debtPaidIn: (name, m) => `${name}: liquidada en ${duration(m, 'es')}`,
   debtVerdict: (c) => (c.interestSaved > 0
-    ? `Avalancha ahorra <b>${money(c.interestSaved)}</b> en intereses${c.monthsSaved > 0 ? ` y ${duration(c.monthsSaved, 'es')}` : ''}. Bola de nieve le da victorias más rápido. Elija el que va a mantener.`
-    : 'Los dos órdenes cuestan casi lo mismo, así que elija bola de nieve por las victorias rápidas.'),
+    ? `Avalancha ahorra <b>${money(c.interestSaved)}</b> en intereses${c.monthsSaved > 0 ? ` y ${duration(c.monthsSaved, 'es')}` : ''}. Bola de nieve te da victorias más rápido. Elige el que vas a mantener.`
+    : 'Los dos órdenes cuestan casi lo mismo, así que elige bola de nieve por las victorias rápidas.'),
   debt: (a, s, verdict, listA, listS) => `<p class="big">Sin deudas en ${duration(a.months, 'es')}</p>
     <p>Pagando <b>${money(a.budget)}</b> al mes en total. ${verdict}</p>
     <div class="two"><div><h3>Avalancha (APR más alta primero)</h3><p>${money(a.totalInterest)} de intereses, ${duration(a.months, 'es')}</p>${listA}</div>
     <div><h3>Bola de nieve (saldo más chico primero)</h3><p>${money(s.totalInterest)} de intereses, ${duration(s.months, 'es')}</p>${listS}</div></div>`,
-  defaultDebts: ['Tarjeta de crédito', 'Tarjeta de tienda', 'Préstamo de auto'],
+  defaultDebts: ['Tarjeta de crédito', 'Tarjeta de tienda', 'Préstamo del carro'],
   printAva: 'Imprimir mi plan avalancha', printSnow: 'Imprimir mi plan bola de nieve',
   planTitle: (strategy) => `Mi plan para salir de deudas (${strategy === 'avalanche' ? 'avalancha: APR más alta primero' : 'bola de nieve: saldo más chico primero'})`,
-  planIntro: (a) => `Pague ${money(a.budget)} al mes en total. Sin deudas en ${duration(a.months, 'es')}, con ${money(a.totalInterest)} de intereses. Marque cada mes cuando lo pague.`,
-  planMonth: 'Mes', planPaid: 'Pagado', planLeft: 'queda', planFooter: 'Hecho con la calculadora gratis para pagar deudas. Son estimaciones que suponen que sus tasas y mínimos no cambian.',
-  nextStep: 'Siguiente paso', affiliateNote: 'Enlace de afiliado: podemos ganar una comisión sin costo para usted.', getIt: 'Obtenerlo',
-  copied: 'Enlace copiado', copyPrompt: 'Copie este enlace', sending: 'Enviando…', notConnected: 'El registro por correo aún no está conectado: configure email.action en config.js.',
+  planIntro: (a) => `Paga ${money(a.budget)} al mes en total. Sin deudas en ${duration(a.months, 'es')}, con ${money(a.totalInterest)} de intereses. Marca cada mes cuando lo pagues.`,
+  planMonth: 'Mes', planPaid: 'Pagado', planLeft: 'queda', planFooter: 'Hecho con la calculadora gratis para pagar deudas. Son estimaciones que suponen que tus tasas y mínimos no cambian.',
+  nextStep: 'Siguiente paso', affiliateNote: 'Enlace de afiliado: podemos ganar una comisión sin costo para ti.', getIt: 'Obtenerlo',
+  copied: 'Enlace copiado', copyPrompt: 'Copia este enlace', sending: 'Enviando…', notConnected: 'El registro por correo aún no está conectado: configura email.action en config.js.',
 };
 
 export const TEXT = { en, es };

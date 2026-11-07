@@ -4,19 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Calculadora para pagar deudas: avalancha vs bola de nieve | Calculadoras</title>
-<meta name="description" content="Anote sus deudas y vea cuándo quedará libre de deudas, cuánto pagará de intereses y cuánto ahorra el método avalancha frente a la bola de nieve.">
+<meta name="description" content="Anota tus deudas y ve cuándo quedarás libre de deudas, cuánto pagarás de intereses y cuánto ahorra el método avalancha frente a la bola de nieve.">
 <link rel="canonical" href="https://moneymadesimple.netlify.app/calculators/es/debt-payoff/">
 <link rel="alternate" hreflang="en" href="https://moneymadesimple.netlify.app/calculators/debt-payoff/">
 <link rel="alternate" hreflang="es" href="https://moneymadesimple.netlify.app/calculators/es/debt-payoff/">
 <meta property="og:title" content="Calculadora para pagar deudas: avalancha vs bola de nieve">
-<meta property="og:description" content="Anote sus deudas y vea cuándo quedará libre de deudas, cuánto pagará de intereses y cuánto ahorra el método avalancha frente a la bola de nieve.">
+<meta property="og:description" content="Anota tus deudas y ve cuándo quedarás libre de deudas, cuánto pagarás de intereses y cuánto ahorra el método avalancha frente a la bola de nieve.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://moneymadesimple.netlify.app/calculators/es/debt-payoff/">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#0b1d13">
 <link rel="stylesheet" href="../../style.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Calculadora para pagar deudas: avalancha vs bola de nieve","url":"https://moneymadesimple.netlify.app/calculators/es/debt-payoff/","inLanguage":"es","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"es","mainEntity":[{"@type":"Question","name":"¿Qué es el método avalancha?","acceptedAnswer":{"@type":"Answer","text":"Paga el mínimo en todo y pone cada dólar extra en la deuda con la tasa (APR) más alta. Cuando la liquida, pasa ese pago a la siguiente. Es el que menos intereses cuesta."}},{"@type":"Question","name":"¿Qué es el método bola de nieve?","acceptedAnswer":{"@type":"Answer","text":"La misma idea, pero empieza por el saldo más chico. Paga un poco más de intereses, pero liquida deudas completas antes, y eso motiva a mucha gente."}},{"@type":"Question","name":"¿Cuál me conviene?","acceptedAnswer":{"@type":"Answer","text":"El que va a mantener. Si la avalancha ahorra poco, la bola de nieve está bien. Si ahorra cientos de dólares, suele valer la pena."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"es","mainEntity":[{"@type":"Question","name":"¿Qué es el método avalancha?","acceptedAnswer":{"@type":"Answer","text":"Pagas el mínimo en todo y pones cada dólar extra en la deuda con la tasa (APR) más alta. Cuando la liquidas, pasas ese pago a la siguiente. Es el que menos intereses cuesta."}},{"@type":"Question","name":"¿Qué es el método bola de nieve?","acceptedAnswer":{"@type":"Answer","text":"La misma idea, pero empiezas por el saldo más chico. Pagas un poco más de intereses, pero liquidas deudas completas antes, y eso motiva a mucha gente."}},{"@type":"Question","name":"¿Cuál me conviene?","acceptedAnswer":{"@type":"Answer","text":"El que vas a mantener. Si la avalancha ahorra poco, la bola de nieve está bien. Si ahorra cientos de dólares, suele valer la pena."}}]}</script>
 </head>
 <body data-calc="debt-payoff" data-root="../../">
 <header class="top"><a class="logo" href="../../es/"><span class="mark">MS</span> <span>Calculadoras de dinero</span></a>
@@ -24,7 +24,7 @@
 <main>
 
 <h1>Calculadora para pagar deudas: avalancha vs bola de nieve</h1>
-<p class="lede">Anote lo que debe. Calculamos los dos órdenes de pago mes a mes y le mostramos su fecha sin deudas y cuánto cuesta cada uno en intereses.</p>
+<p class="lede">Anota lo que debes. Calculamos los dos órdenes de pago mes a mes y te mostramos tu fecha sin deudas y cuánto cuesta cada uno en intereses.</p>
 <div class="layout">
   <form id="calc-form" class="card" autocomplete="off"><div id="debts"></div>
        <button type="button" id="add-debt" class="link">+ Agregar una deuda</button>
@@ -39,21 +39,21 @@
   <p class="signup-pitch"></p>
   <form class="signup" name="calculadoras-registro" method="POST" data-netlify="true" netlify-honeypot="website">
     <input type="hidden" name="form-name" value="calculadoras-registro">
-    <p class="hp"><label>Deje esto vacío <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <p class="hp"><label>Deja esto vacío <input name="website" tabindex="-1" autocomplete="off"></label></p>
     <label class="sr" for="signup-email">Correo</label>
-    <input id="signup-email" type="email" name="email" placeholder="usted@ejemplo.com" required autocomplete="email">
+    <input id="signup-email" type="email" name="email" placeholder="tu@ejemplo.com" required autocomplete="email">
     <button class="btn">Suscribirme</button>
   </form>
-  <p class="tiny">Un correo útil por semana. Cancele con un clic.</p>
+  <p class="tiny">Un correo útil por semana. Cancela con un clic.</p>
 </section>
-<section class="faq"><h2>Preguntas</h2><h3>¿Qué es el método avalancha?</h3><p>Paga el mínimo en todo y pone cada dólar extra en la deuda con la tasa (APR) más alta. Cuando la liquida, pasa ese pago a la siguiente. Es el que menos intereses cuesta.</p>
-<h3>¿Qué es el método bola de nieve?</h3><p>La misma idea, pero empieza por el saldo más chico. Paga un poco más de intereses, pero liquida deudas completas antes, y eso motiva a mucha gente.</p>
-<h3>¿Cuál me conviene?</h3><p>El que va a mantener. Si la avalancha ahorra poco, la bola de nieve está bien. Si ahorra cientos de dólares, suele valer la pena.</p></section>
+<section class="faq"><h2>Preguntas</h2><h3>¿Qué es el método avalancha?</h3><p>Pagas el mínimo en todo y pones cada dólar extra en la deuda con la tasa (APR) más alta. Cuando la liquidas, pasas ese pago a la siguiente. Es el que menos intereses cuesta.</p>
+<h3>¿Qué es el método bola de nieve?</h3><p>La misma idea, pero empiezas por el saldo más chico. Pagas un poco más de intereses, pero liquidas deudas completas antes, y eso motiva a mucha gente.</p>
+<h3>¿Cuál me conviene?</h3><p>El que vas a mantener. Si la avalancha ahorra poco, la bola de nieve está bien. Si ahorra cientos de dólares, suele valer la pena.</p></section>
 <p class="more"><a href="../">Más calculadoras</a></p>
 </main>
 <footer>
-<p>Herramientas educativas, no asesoría financiera, fiscal ni de inversión. Los resultados son estimaciones con los números que usted ingresa. Revise las reglas y tasas actuales con la fuente oficial antes de actuar.</p>
-<p>Sus números se quedan en su navegador; nada de lo que escribe se envía a ningún lado. Algunos enlaces son de afiliado.</p>
+<p>Herramientas educativas, no asesoría financiera, fiscal ni de inversión. Los resultados son estimaciones con los números que ingresas. Revisa las reglas y tasas actuales con la fuente oficial antes de actuar.</p>
+<p>Tus números se quedan en tu navegador; nada de lo que escribes se envía a ningún lado. Algunos enlaces son de afiliado.</p>
 <p><a href="../../es/">Todas las calculadoras</a></p>
 </footer>
 <script type="module" src="../../app.js"></script>

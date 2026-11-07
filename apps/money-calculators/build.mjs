@@ -23,11 +23,11 @@ const L = {
   },
   es: {
     dir: 'es/', brandLine: 'Calculadoras de dinero', mainSite: 'Sitio principal', other: 'English', otherDir: '',
-    signupTitle: esc(config.email.es.title), formName: config.email.es.formName, emailPh: 'usted@ejemplo.com', send: 'Suscribirme', emailLabel: 'Correo',
-    signupNote: 'Un correo útil por semana. Cancele con un clic.', honeypot: 'Deje esto vacío',
-    footer: ['Herramientas educativas, no asesoría financiera, fiscal ni de inversión. Los resultados son estimaciones con los números que usted ingresa. Revise las reglas y tasas actuales con la fuente oficial antes de actuar.', 'Sus números se quedan en su navegador; nada de lo que escribe se envía a ningún lado. Algunos enlaces son de afiliado.'],
+    signupTitle: esc(config.email.es.title), formName: config.email.es.formName, emailPh: 'tu@ejemplo.com', send: 'Suscribirme', emailLabel: 'Correo',
+    signupNote: 'Un correo útil por semana. Cancela con un clic.', honeypot: 'Deja esto vacío',
+    footer: ['Herramientas educativas, no asesoría financiera, fiscal ni de inversión. Los resultados son estimaciones con los números que ingresas. Revisa las reglas y tasas actuales con la fuente oficial antes de actuar.', 'Tus números se quedan en tu navegador; nada de lo que escribes se envía a ningún lado. Algunos enlaces son de afiliado.'],
     all: 'Todas las calculadoras', addDebt: '+ Agregar una deuda', extra: 'Extra cada mes además de los mínimos ($)', share: 'Copiar un enlace con estos números', questions: 'Preguntas', more: 'Más calculadoras',
-    indexTitle: 'Calculadoras de dinero gratis', indexH1: 'Calculadoras de dinero gratis', indexLede: 'Calculadoras sencillas para las preguntas de dinero más comunes. Sin registro, y sus números nunca salen de su navegador.',
+    indexTitle: 'Calculadoras de dinero gratis', indexH1: 'Calculadoras de dinero gratis', indexLede: 'Calculadoras sencillas para las preguntas de dinero más comunes. Sin registro, y tus números nunca salen de tu navegador.',
     indexDesc: 'Calculadoras gratis para pagar deudas, interés compuesto, fondo de emergencia, ahorro, tarjeta de crédito y Roth vs Tradicional.',
   },
 };
@@ -130,7 +130,7 @@ ${signup(t)}`;
 const thanks = `<!doctype html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>¡Listo!</title><meta name="robots" content="noindex"><link rel="stylesheet" href="../../style.css"></head>
-<body><main><h1>¡Listo!</h1><p class="lede">Su primer correo llega esta semana. Si no lo ve, revise Promociones o Spam.</p>
+<body><main><h1>¡Listo!</h1><p class="lede">Tu primer correo llega esta semana. Si no lo ves, revisa Promociones o Spam.</p>
 <p><a class="btn" href="../">Volver a las calculadoras</a></p></main></body></html>
 `;
 

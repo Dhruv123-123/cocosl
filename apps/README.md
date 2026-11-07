@@ -84,7 +84,7 @@ The brand name and domain live in `scam-checker/config.js`. To rename everywhere
   patterns to `RULES` in `scam-checker/lib/scan.js` with a test.
 - Scam guide pages are generated from `scam-checker/scams.mjs` by `scam-checker/build.mjs`. Every example
   message there must score high risk in the checker, so adding a guide also tests the checker.
-- The Spanish checker's wording (`scam-checker/es/`, `scam-checker/lib/i18n.js`) needs a native speaker's
+- Spanish wording uses tú and neutral Latin American vocabulary to match Dinero Simple. The Spanish checker (`scam-checker/es/`, `scam-checker/lib/i18n.js`) and calculators need a native speaker's
   read before you promote it, same as the Dinero Simple content. A test fails if any rule lacks Spanish text.
 - Calculator pages are generated from `money-calculators/pages.mjs` and `pages-es.mjs` (all on-page result
   wording is in `money-calculators/lib/text.js`) by `build.mjs`; edit the copy there.

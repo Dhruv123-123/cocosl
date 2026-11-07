@@ -20,7 +20,7 @@ export default {
       formName: 'calculadoras-registro',
       thanksUrl: 'es/gracias/', // relative to the calculators' root
       title: 'Un paso de dinero por semana, gratis',
-      pitch: 'Reciba cada semana un paso sencillo para ordenar su dinero, en español.',
+      pitch: 'Recibe cada semana un paso sencillo para ordenar tu dinero, en español.',
     },
   },
 
@@ -37,7 +37,7 @@ export default {
   // complianceReview: brokerage / adviser offers need a FINRA 2210 / SEC Marketing Rule check before going live.
   affiliates: {
     hysa: {
-      es: { label: 'Comparar cuentas de ahorro de alto rendimiento', blurb: 'Los bancos en línea han pagado mucho más que el ahorro de los bancos grandes. Revise el APY actual y el seguro de la FDIC antes de abrir una.' },
+      es: { label: 'Comparar cuentas de ahorro de alto rendimiento', blurb: 'Los bancos en línea han pagado mucho más que el ahorro de los bancos grandes. Revisa el APY actual y el seguro de la FDIC antes de abrir una.' },
       label: 'Compare high-yield savings accounts',
       blurb: 'Online banks have been paying far more than big-bank savings. Check the current APY and FDIC insurance before you open one.',
       url: 'https://REPLACE_ME/hysa',
@@ -50,13 +50,13 @@ export default {
       complianceReview: true,
     },
     debt: {
-      es: { label: 'Revisar tasas de préstamos personales y transferencias de saldo', blurb: 'Solo conviene si la nueva tasa es más baja, las comisiones son pequeñas y deja de usar la tarjeta vieja.' },
+      es: { label: 'Revisar tasas de préstamos personales y transferencias de saldo', blurb: 'Solo conviene si la nueva tasa es más baja, las comisiones son pequeñas y dejas de usar la tarjeta vieja.' },
       label: 'Check personal loan and balance transfer rates',
       blurb: 'Only worth it if the new APR is lower, the fees are small, and you stop adding to the old card.',
       url: 'https://REPLACE_ME/debt',
     },
     credit: {
-      es: { label: 'Revisar su puntaje de crédito gratis', blurb: 'Tiene derecho a reportes de crédito gratis cada semana en AnnualCreditReport.com.' },
+      es: { label: 'Revisar tu puntaje de crédito gratis', blurb: 'Tienes derecho a reportes de crédito gratis cada semana en AnnualCreditReport.com.' },
       label: 'Check your credit score for free',
       blurb: 'You are entitled to free weekly credit reports at AnnualCreditReport.com. Score tracking apps can alert you to changes.',
       url: 'https://REPLACE_ME/credit',
