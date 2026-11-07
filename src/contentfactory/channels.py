@@ -411,7 +411,8 @@ def _find(items: list[dict], title: str) -> dict:
     raise KeyError(f"No item titled {title!r} in the source packs")
 
 
-def build_issue(brand, items, links: Links, issue: dict, n: int, day: date, products: dict) -> dict:
+def build_issue(brand, items, links: Links, issue: dict, n: int, day: date, products: dict,
+                midweek: bool = False) -> dict:
     move = _find(items, issue["move"])
     fact = _find(items, issue["fact"])
     read = issue.get("read")
@@ -419,10 +420,13 @@ def build_issue(brand, items, links: Links, issue: dict, n: int, day: date, prod
         read = f"article:{read}"
     fsegs = [s for s in fact["script"]["segments"] if not re.search(r"\bfollow\b", s["narration"], re.I)][:4]
     prod = products.get(issue.get("product") or "", {})
-    camp = f"newsletter-{n:02d}"
+    camp = f"newsletter-{n:02d}{'w' if midweek else ''}"
     msegs = move["script"]["segments"]
     blocks = {
         "subject": issue["subject"], "preview": issue["preview"], "date": day.isoformat(), "n": n,
+        "kind": "midweek" if midweek else "sunday",
+        "header": f"Midweek · week {n}" if midweek else f"Issue {n}",
+        "signoff": "See you Sunday," if midweek else "See you next Sunday,",
         "intro": issue["intro"],
         "move_title": move["script"]["title"],
         "move_lead": msegs[0]["narration"] or move["script"].get("hook", ""),
@@ -430,7 +434,7 @@ def build_issue(brand, items, links: Links, issue: dict, n: int, day: date, prod
         "move_close": "" if SOCIAL_CTA.search(msegs[-1]["narration"]) else msegs[-1]["narration"],
         "fact_title": fact["script"]["title"],
         "fact": " ".join(s["narration"] for s in fsegs),
-        "move_label": issue.get("move_label", "This week's money move"),
+        "move_label": issue.get("move_label", "Midweek money move" if midweek else "This week's money move"),
         "read_title": links.label(read) if read else "", "read_url": links.url(read, "newsletter", camp, "email") if read else "",
         "read_blurb": issue.get("read_blurb") or (links.articles[read[8:]].get("blurb", "") if read and read.startswith("article:") else ""),
         "product_name": prod.get("name", ""),
@@ -462,7 +466,7 @@ def issue_text(brand, b: dict) -> str:
         lines += [f"FROM US: {b['product_name']}", b["product_blurb"], b["product_url"], ""]
     if b["ps"]:
         lines += [f"P.S. {b['ps']}", ""]
-    lines += ["See you next Sunday,", brand.name, "", "—", FOOTER.replace("{site}", brand.name)]
+    lines += [b.get("signoff", "See you next Sunday,"), brand.name, "", "—", FOOTER.replace("{site}", brand.name)]
     return "\n".join(lines)
 
 
@@ -489,7 +493,7 @@ def issue_html(brand, b: dict) -> str:
 <body style="margin:0;background:{paper};font:16px/1.55 -apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1d2a22">
 <span style="display:none;max-height:0;overflow:hidden">{e(b['preview'])}</span>
 <div style="max-width:600px;margin:0 auto;padding:24px 16px">
-<div style="background:{dark};color:{paper};padding:18px 22px;border-radius:12px 12px 0 0;font-weight:700">{e(brand.name)} · Issue {b['n']}</div>
+<div style="background:{dark};color:{paper};padding:18px 22px;border-radius:12px 12px 0 0;font-weight:700">{e(brand.name)} · {e(b.get('header') or f"Issue {b['n']}")}</div>
 <div style="background:#fff;padding:22px;border-radius:0 0 12px 12px">
 <p>{e(b['intro'])}</p>
 <h2 style="font-size:20px;margin:24px 0 8px;color:{dark}">{e(b['move_label'])}: {e(b['move_title'])}</h2>
@@ -498,29 +502,41 @@ def issue_html(brand, b: dict) -> str:
 <b>Quick fact: {e(b['fact_title'])}</b><br>{e(b['fact'])}</div>
 {read}
 {prod}
-{ps}<p>See you next Sunday,<br>{e(brand.name)}</p></div>
+{ps}<p>{e(b.get('signoff', 'See you next Sunday,'))}<br>{e(brand.name)}</p></div>
 <p style="font-size:12px;color:#5b665f;margin-top:16px">{foot}</p></div></body></html>"""
 
 
 def build_newsletter(brand, items, links: Links, cfg: dict) -> list[dict]:
+    """Sunday issues, plus optional midweek ones (cfg["midweek"]: {"days_after": 3, "issues": [...]}),
+    where midweek issue k goes out days_after days after Sunday issue k. Sorted by send date."""
     start = date.fromisoformat(cfg["start"])
     products = cfg["products"]
-    return [build_issue(brand, items, links, iss, n, start + timedelta(weeks=n - 1), products)
-            for n, iss in enumerate(cfg["issues"], start=1)]
+    out = [build_issue(brand, items, links, iss, n, start + timedelta(weeks=n - 1), products)
+           for n, iss in enumerate(cfg["issues"], start=1)]
+    mid = cfg.get("midweek") or {}
+    gap = timedelta(days=int(mid.get("days_after", 3)))
+    out += [build_issue(brand, items, links, iss, n, start + timedelta(weeks=n - 1) + gap, products, midweek=True)
+            for n, iss in enumerate(mid.get("issues", []), start=1)]
+    return sorted(out, key=lambda b: b["date"])
 
 
 def write_newsletter(brand, issues: list[dict], out: Path) -> None:
     d = out / "newsletter"
     d.mkdir(parents=True, exist_ok=True)
-    rows = ["# Newsletter run", "", "Send each issue on its Sunday. Paste the .html into your email tool (or the .txt "
+    rows = ["# Newsletter run", "", "Send each issue on its date (Sundays, plus the midweek issues where there are any). Paste the .html into your email tool (or the .txt "
             "for plain-text), fill {{unsubscribe_url}} and {{business_address}} (your tool usually does both), and tick "
-            "the fact checks first.", "", "| # | Send | Subject | Main piece | Product |", "|---|---|---|---|---|"]
+            "the fact checks first.", ""]
+    if any(b.get("kind") == "midweek" for b in issues):
+        rows += ["Midweek issues (`NNw`) go out on Wednesdays. If unsubscribes go above 0.5% of a send, drop them and "
+                 "go back to Sundays only.", ""]
+    rows += ["| # | Send | Subject | Main piece | Product |", "|---|---|---|---|---|"]
     for b in issues:
-        stem = f"{b['n']:02d}-{b['date']}-{slugify(b['subject'])[:40]}"
+        tag = f"{b['n']:02d}{'w' if b.get('kind') == 'midweek' else ''}"
+        stem = f"{tag}-{b['date']}-{slugify(b['subject'])[:40]}"
         checks = "\n".join(f"[ ] {c}" for c in b["claims_to_verify"]) + "\n\nSources:\n" + "\n".join(b["sources"])
         (d / f"{stem}.txt").write_text(b["text"] + "\n\n--- CHECK BEFORE SENDING (delete this part) ---\n" + checks + "\n")
         (d / f"{stem}.html").write_text(issue_html(brand, b))
-        rows.append(f"| {b['n']} | {b['date']} | {b['subject']} | {b['move_title']} | {b['product_name'] or '—'} |")
+        rows.append(f"| {tag} | {b['date']} | {b['subject']} | {b['move_title']} | {b['product_name'] or '—'} |")
     (d / "ISSUES.md").write_text("\n".join(rows) + "\n")
     (d / "issues.json").write_text(json.dumps(issues, indent=1, ensure_ascii=False))
 

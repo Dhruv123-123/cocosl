@@ -156,8 +156,8 @@ This follows scouting's playbook (PR #2, `research/scouting/pinterest-playbook-2
   - "How to find and cancel forgotten subscriptions in 10 minutes" → /blog/find-and-cancel-subscriptions/
   - "How to start investing with $100 a month" → /blog/how-to-start-investing-with-100-a-month/
   - "Expense ratios explained: the fee that can cost you $18,000" → /blog/expense-ratios-explained/
-- **The site's own pin schedule** starts at 1 a day from Nov 9. It should start at week 3 after Day 1 instead, with 7 days between pins for the same URL.
-- **Domain:** the links use moneymadesimple.netlify.app, but the pin footer says moneymadesimple.co. Decide which before the first pin, and claim it in Pinterest. **Only pin a page once it loads on the live site.**
+- **The site's own pin schedule** (`site/pins/schedule.csv`) starts Mon Nov 30, week 3 after Day 1. These 8 pins go first, in this order, and no page gets a second pin within 7 days. If Day 1 moves, ask for the schedule to move with it.
+- **Domain:** the site's pins print moneymadesimple.netlify.app in their footer, the same as every link, and the channel pins print no domain at all. Claim moneymadesimple.netlify.app in Pinterest (or the custom domain, if Dhruv buys one before Day 1). Every page these pins link to is live by Nov 16. **Still check each page loads on the live site before pinning it.**
 
 ## After Day 14
 
