@@ -695,7 +695,7 @@ def alert_items() -> list[dict]:
     _TEMPLATE.md has no alert_date and isn't published. Missing fields fail the build loudly."""
     out = []
     for a in load_dir("alerts"):
-        if not a.get("alert_date"):
+        if not a.get("alert_date") or a.get("status") == "draft":  # drafts from new_alert.py --text wait for review
             continue
         missing = [f for f in ALERT_FIELDS if not str(a.get(f, "")).strip()]
         if missing:
