@@ -63,13 +63,14 @@ factory revenue report
 factory auth youtube | tiktok | meta        # connect accounts
 factory renderq revoice                     # re-voice silent renders once KOKORO_URL (or another voice) is set
 factory status                              # credentials, queues, worker heartbeat, anything needing you
-factory doctor [--online]                   # is this install ready to make and post content?
+factory doctor [--online | --offline]       # is this install ready? --offline: fresh-laptop check, no network
 factory preflight --scheduled               # check queued media against each platform's limits (runs automatically too)
 factory cleanup --older-than 60 [--yes]     # free disk from posts live everywhere 60+ days (lists unless --yes)
 factory voice 12 take.m4a                   # your own narration for post 12 (one take, or one file per line); re-renders it
 factory recordings                           # posts waiting on your voice or a screen recording, soonest first
 factory launch-check [--online]             # red/yellow/green: links, UTM tags, placeholders, disclosures, caption limits
 factory stats import --brand <slug> *.csv   # YouTube Studio / TikTok / Plausible exports → weekly scorecard (`factory stats`)
+factory repurpose 12 --text-only              # blog post, newsletter section, 3 pins and a thread as drafts from a published long video
 factory calendar --export output/calendar  # all brands: calendar.ics + calendar.html, flags caps and collisions
 ```
 
