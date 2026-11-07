@@ -72,6 +72,7 @@ def _post_view(factory: Factory, request: Request, post: dict) -> dict:
         "check_status": (post.get("checks") or {}).get("status", ""),
         "editor": (post.get("meta") or {}).get("editor") or {},
         "job": _jobs(request).active_for("post", post["id"]),
+        "render_queued": factory.render_pending(post["id"]),
         "pubs": queries.publications_for(factory, post["id"]),
     }
 
@@ -218,6 +219,15 @@ def post_reject(post_id: int, request: Request, reason: str = Form(""),
 
 @router.post("/posts/{post_id}/rerender")
 def post_rerender(post_id: int, request: Request, factory: Factory = Depends(get_factory)):
+    import os
+    if os.environ.get("RENDER_QUEUE") == "1":  # the renderer service does it; the dashboard stays snappy
+        from ..renderq import enqueue
+        post = queries.require_post(factory, post_id)
+        if post["status"] in ("scheduled", "published"):
+            raise PermissionError(f"Post #{post_id} is {post['status']}; re-rendering would not update the platforms")
+        job = enqueue(factory, post_id, reason="manual", priority=5)
+        return back(request, "/review", msg=f"Post #{post_id} queued for rendering" if job else
+                    f"Post #{post_id} is already in the render queue", anchor=f"post-{post_id}")
     job = actions.start_render(factory, _jobs(request), post_id)
     return back(request, "/review", msg=f"Re-rendering post #{post_id} (job #{job.id})", anchor=f"post-{post_id}")
 
