@@ -40,7 +40,7 @@ def _doc(body: str, cls: str) -> str:
 def _pages_for(it: dict, out_dir: Path, work: Path, page_images) -> tuple[list[Path], list[Path]]:
     """(hero page images, inside page images) for a listing."""
     if it["kind"] == "printable":
-        pdf = next(out_dir.glob("*-Letter.pdf"))
+        pdf = min(out_dir.glob("*-Letter.pdf"), key=lambda p: "Monday" in p.name)
     elif it["slug"] == "20-minute-budget":
         pdf = out_dir / "The-20-Minute-Budget.pdf"
     elif it.get("bundle") and it["kind"] == "bundle":
@@ -63,6 +63,8 @@ def _pages_for(it: dict, out_dir: Path, work: Path, page_images) -> tuple[list[P
 
 
 def _chips(it: dict) -> list[str]:
+    if it.get("dated"):
+        return ["Instant download", "Dated Jan-Dec", "Sun + Mon start", "Letter + A4"]
     if it["kind"] == "printable":
         return ["Instant download", "Letter + A4", "Undated", "Print at home"]
     if it["kind"] == "bundle":

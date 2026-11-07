@@ -12,7 +12,7 @@ import printables_more  # noqa: E402
 
 def test_listings_follow_etsy_limits():
     assert listings.validate() == []
-    assert len(listings.LISTINGS) == 49
+    assert len(listings.LISTINGS) == 50
     for it in listings.LISTINGS:
         assert len(it["title"]) <= 140 and len(it["tags"]) == 13
         assert "DIGITAL DOWNLOAD" in it["description"] and "How it's made" in it["description"]
@@ -27,7 +27,7 @@ def test_every_printable_has_a_listing_and_pages():
 
 
 def test_printable_prices_are_low_cost():
-    prices = [it["price"] for it in listings.LISTINGS if it["kind"] == "printable"]
+    prices = [it["price"] for it in listings.LISTINGS if it["kind"] == "printable" and not it.get("dated")]
     assert len(prices) == 40 and all(3 <= p <= 8 for p in prices)
     binder = listings.BY_SLUG["budget-binder-bundle"]
     assert binder["price"] < sum(listings.BY_SLUG[s]["price"] for s in binder["bundle"])
@@ -47,7 +47,7 @@ def test_new_printables_are_new_and_bundled():
     assert len(printables_more.MORE) == 30
     assert not set(printables_more.MORE) & set(printables.PRINTABLES)
     mega = listings.BY_SLUG["mega-budget-bundle"]
-    every = [x["slug"] for x in listings.LISTINGS if x["kind"] == "printable"]
+    every = [x["slug"] for x in listings.LISTINGS if x["kind"] == "printable" and not x.get("dated")]
     assert sorted(mega["bundle"]) == sorted(every) and len(every) == 40
     for b in ("mega-budget-bundle", "savings-challenge-pack", "budget-binder-bundle"):
         it = listings.BY_SLUG[b]
@@ -75,3 +75,20 @@ def test_mockgen_layouts_render_html():
         assert f"width:{w}px;height:{h}px" in doc.replace(" ", "") or f"width:{w}px" in doc
         assert "Savings Bingo" in doc and "$3" in doc
     assert "40 items" in mockgen.inside(o, pages, 2000, 1500, count=40)
+
+
+def test_2027_planner_dates_are_right():
+    import calendar as cal
+    from datetime import date
+    import planner_2027 as P
+    k = P.key_dates(2027)
+    assert date(2027, 1, 18) in k and date(2027, 5, 31) in k and date(2027, 9, 6) in k and date(2027, 11, 25) in k
+    assert "Tax Day" in k[date(2027, 4, 15)] and len(P.build(2027)) == 48
+    for start, first in (("sun", 6), ("mon", 0)):
+        for m in range(1, 13):
+            weeks = P._weeks(2027, m, start)
+            assert all(wk[0].weekday() == first for wk in weeks)
+            assert sum(d.month == m for wk in weeks for d in wk) == cal.monthrange(2027, m)[1]
+    it = listings.BY_SLUG["2027-budget-planner"]
+    assert it["dated"] and it["price"] == 12 and len(it["variants"]) * 2 <= 5
+    assert "2027-budget-planner" not in listings.BY_SLUG["mega-budget-bundle"]["bundle"]

@@ -274,6 +274,12 @@ def _more_listings() -> list[dict]:
                         tags=tags(d["tags"], d["pool"]), hook=d["hook"], get=d["get"] + ["US Letter and A4 PDFs"],
                         how=d["how"], hero=[4, 3, 2] if n >= 4 else [3, 2] if n == 3 else [1, 2], grid=list(range(1, n + 1))))
     printable_slugs = [x["slug"] for x in LISTINGS if x["kind"] == "printable"] + [x["slug"] for x in out]
+    import planner_2027
+    for d in M.DATED:
+        n = len(planner_2027.build(d["year"]))
+        out.append(dict(slug=d["slug"], kind="printable", dated=True, name=d["name"], price=d["price"], file_stem=d["file_stem"],
+                        title=d["title"], tags=tags(d["tags"], d["pool"]), hook=d["hook"], get=d["get"], how=d["how"],
+                        variants=d["variants"], hero=[11, 10, 1], grid=[1, 3, 4, 5, 6, 8, 10, 11, 12, 46]))
     prices = {x["slug"]: x["price"] for x in LISTINGS + out}
     names = {x["slug"]: x["name"] for x in LISTINGS + out}
     for d in M.BUNDLES:

@@ -27,11 +27,13 @@ sys.path.insert(0, str(ROOT / "launch" / "products"))
 
 import listings  # noqa: E402
 import printables  # noqa: E402
+import planner_2027  # noqa: E402
 import printables_more  # noqa: E402
 from build import node_env, wrap_guide  # noqa: E402  (launch/products/build.py)
 
 PRODUCTS_DIST = ROOT / "launch" / "products" / "dist"
-ALL_PRINTABLES = {**printables.PRINTABLES, **printables_more.MORE}
+ALL_PRINTABLES = {**printables.PRINTABLES, **printables_more.MORE,
+                  "2027-budget-planner": lambda variant="Sunday-start": planner_2027.build(2027, planner_2027.VARIANTS[variant])}
 SIZES = {"Letter": ("8.5in", "11in", "Letter"), "A4": ("210mm", "297mm", "A4")}
 
 RENDER_JS = r"""
@@ -76,10 +78,10 @@ def run_jobs(jobs: list[dict]) -> list[dict]:
     return json.loads(proc.stdout.strip().splitlines()[-1])
 
 
-def printable_html(slug: str, size: str) -> str:
+def printable_html(slug: str, size: str, variant: str | None = None) -> str:
     w, h, name = SIZES[size]
     css = (HERE / "printables.css").read_text().replace("--w:8.5in; --h:11in;", f"--w:{w}; --h:{h};")
-    pages = "".join(f'<section class="page">{p}</section>\n' for p in ALL_PRINTABLES[slug]())
+    pages = "".join(f'<section class="page">{p}</section>\n' for p in (ALL_PRINTABLES[slug](variant) if variant else ALL_PRINTABLES[slug]()))
     title = listings.BY_SLUG[slug]["name"]
     return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>{html.escape(title)}</title>'
             f'<style>@page{{size:{name};margin:0}}\n{css}</style></head><body>{pages}</body></html>')
@@ -123,10 +125,12 @@ def main() -> int:
         d = out / it["slug"]
         d.mkdir(parents=True, exist_ok=True)
         if it["kind"] == "printable":
-            for size in SIZES:
-                src = work / f'{it["slug"]}-{size}.html'
-                src.write_text(printable_html(it["slug"], size))
-                jobs.append({"src": str(src), "pdf": str(d / f'{it["file_stem"]}-{size}.pdf')})
+            for v in it.get("variants") or [None]:
+                for size in SIZES:
+                    tag = f"{v}-{size}" if v else size
+                    src = work / f'{it["slug"]}-{tag}.html'
+                    src.write_text(printable_html(it["slug"], size, v))
+                    jobs.append({"src": str(src), "pdf": str(d / f'{it["file_stem"]}-{tag}.pdf')})
         elif it["kind"] == "product" and it["slug"] in pcat:
             p = pcat[it["slug"]]
             src = work / f'{it["slug"]}.html'

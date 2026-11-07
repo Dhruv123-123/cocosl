@@ -1,10 +1,10 @@
 # Etsy shop: setup and launch
 
-A second sales channel for Money Made Simple: 49 listings, all digital downloads (40 printables, 5 guide + spreadsheet kits and 4 bundles). Every listing folder has the
+A second sales channel for Money Made Simple: 50 listings, all digital downloads (40 undated printables, the dated 2027 Budget Planner, 5 guide + spreadsheet kits and 4 bundles). Every listing folder has the
 files to upload, three mockup images and `LISTING.md` with the title, 13 tags, price and description to paste in.
 `listings.csv` has everything on one sheet.
 
-## The 49 listings
+## The 50 listings
 
 | # | Listing | Price | You keep (approx.) | Files |
 |---|---|---|---|---|
@@ -57,6 +57,7 @@ files to upload, three mockup images and `LISTING.md` with the title, 13 tags, p
 | 47 | Side Hustle Income Tracker | $3 | $2.26 | Letter + A4 PDF |
 | 48 | **Savings Challenge Pack (12 printables)** | $8 | $6.79 | 1 zip |
 | 49 | **Mega Budget Bundle (all 40 printables)** | $19 | $16.74 | 1 zip |
+| 50 | **2027 Budget Planner** (dated; not in the bundles) | $12 | $10.41 | 4 PDFs: Sunday + Monday start, Letter + A4 |
 
 "You keep" uses US seller fees as of November 2026: $0.20 listing fee, 6.5% transaction fee, 3% + $0.25 payment
 processing. Check etsy.com/legal/fees before you list; fees differ outside the US. Opt out of Offsite Ads while
@@ -90,8 +91,8 @@ For every folder in this `etsy/` folder:
 7. Add it to its sections. Publish.
 
 List the cheap printables first; they get the first sales and reviews. Then the bundles, then the guides. Each listing costs
-$0.20 to publish, so all 49 cost about $9.80 every four months; if that's too much at first, start with the 10 savings
-challenges and the Mega Budget Bundle.
+$0.20 to publish, so all 50 cost about $10 every four months; if that's too much at first, start with the 2027 Budget Planner, the 10 savings
+challenges and the Mega Budget Bundle. List the 2027 planner first and soon: dated planners sell from October to February.
 
 ## Images for new listings (no Canva needed)
 

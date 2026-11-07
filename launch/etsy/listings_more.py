@@ -227,3 +227,20 @@ BUNDLES = [
          hook="Every printable in the shop, 40 of them, in one download: budgets, bills, savings challenges, debt trackers and money records.",
          bundle=None),  # filled in by listings.py: every printable
 ]
+
+# Dated planners: not part of the undated bundles (they go out of date), priced on their own.
+DATED = [
+    dict(slug="2027-budget-planner", pool="budget", price=12.00, name="2027 Budget Planner", year=2027,
+         file_stem="2027-Budget-Planner",
+         title="2027 Budget Planner Printable, Dated Monthly Budget Calendar, Finance Planner, Bill Tracker, Sunday Monday Start, Letter A4",
+         tags=["2027 budget planner", "2027 planner", "dated planner", "2027 calendar", "monthly budget",
+               "budget calendar", "yearly planner", "2027 finance"],
+         hook="A full year of money planning, already dated for 2027: a calendar for every month with US holidays and tax dates marked, plus a budget page and a spending log for each month.",
+         get=["48 pages: start-here page, 2027 at a glance with key dates, goals, year overview, yearly bills, 26-paycheck tracker, savings goals, debt payoff",
+              "Every month: dated calendar, monthly budget with weekly check-ins, spending log with month-end review",
+              "December wrap-up: year in review and a look-ahead to 2028",
+              "4 PDFs: Sunday-start and Monday-start, each in US Letter and A4"],
+         how=["Fill the front pages once.", "Budget each month before it starts.", "Log spending and check in weekly.",
+              "Review the month and the year."],
+         variants=["Sunday-start", "Monday-start"]),
+]
