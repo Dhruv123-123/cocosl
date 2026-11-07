@@ -18,6 +18,7 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
 FOOTAGE_DIR = "footage/scam-decoded"
 RULES = "Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s."
 
@@ -32,26 +33,26 @@ CHARTS = {
     "How the scam actually worked: the 'bail money' calls": (
         "Cold open", chart("The Montreal bail-call case", ["People charged", "Other states hit"], [25, 40],
                            note="DOJ, D. Vt., Mar 2025; 'more than 40' states shown as 40")),
-    "How the scam actually worked: the pop-up that found": (
+    "The $26 million pop-up": (
         "What happened next", chart("Restoro and Reimage: the money", ["Settlement", "Refunded"],
                                     [26, 25.5], "$", "M", "FTC, Mar 2024 settlement; refunds announced Mar 2025")),
     "How the scam actually worked: the fake invoices": (
         "How it ended", chart("Fake invoices: taken vs ordered back", ["Taken, 2013-15", "Forfeit", "Restitution"],
                               [120, 49.7, 26.5], "$", "M", "SDNY; 'more than $120M' shown as 120")),
-    "How the scam actually worked: the robocalls": (
+    "'Google will remove your business'": (
         "How it ended", chart("Pointbreak refund checks, Aug 2020", ["Businesses refunded"], [4467],
                               note="FTC, Aug 2020: $700K+ in all, about $158 each")),
     "How the scam actually worked: inside the IRS impersonation": (
         "How it ended", chart("India call-center case, by Jul 2018", ["Sentenced", "Owe restitution"],
                               [24, 22], note="DOJ, S.D. Tex.; restitution nearly $9M")),
-    "How the scam actually worked: inside a 'pig butchering'": (
+    "Inside a pig butchering compound": (
         "The scale", chart("Crypto fraud: one seizure vs a year", ["Bitcoin seized", "US losses, 2024"],
                            [15, 5.8], "$", "B", "Seizure value at the time, DOJ EDNY Oct 2025; US crypto investment fraud losses, FBI 2024")),
     "How the scam actually worked: the money transfer company": (
         "The refunds", chart("Western Union: ordered vs repaid", ["FTC judgment", "DOJ forfeiture",
                                                                   "Repaid, Mar 2020"],
                              [586, 586, 153], "$", "M", "FTC and DOJ, Jan 2017; DOJ remission round Mar 2020")),
-    "How the scam actually worked: the 'chairmen'": (
+    "The 'chairmen' behind": (
         "How it's ending", chart("The romance ring's losses", ["Ring (alleged)", "Chairman 1", "Chairman 2"],
                                  [100, 12.5, 28.5], "$", "M", "SDNY; 'more than $100M' shown as 100")),
 }
@@ -103,9 +104,12 @@ def _find(table: dict, title: str):
 
 def apply(items: list[dict]) -> list[dict]:
     """Add the chart or footage beat to each long video in a pack (in place; returns items)."""
+    from long_examples import apply_examples, examples
+    table = examples()
     for it in items:
         if it.get("format") != "long":
             continue
+        apply_examples(it, table)
         script = it["script"]
         title = script["title"]
         heads = [s["heading"] for s in script["segments"]]
@@ -116,7 +120,7 @@ def apply(items: list[dict]) -> list[dict]:
         elif (f := _find(FOOTAGE, title)):
             k = heads.index(f[0])
             seg = script["segments"][k]
-            seg["footage"] = f"{FOOTAGE_DIR}/{slug(title)}-beat{k + 1}.mp4"
+            seg["footage"] = f"{FOOTAGE_DIR}/{slug(title)[:40].strip('-')}--{slug(f[0])}.mp4"
             script["original_element"] = f"{f[1]} {RULES} Save it as {seg['footage']}."
         else:
             raise SystemExit(f"long video without a chart or footage plan: {title}")

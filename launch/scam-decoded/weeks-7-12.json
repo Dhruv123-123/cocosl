@@ -3763,13 +3763,31 @@
           "narration": "Number six, fake gift card balance sites. You search 'check gift card balance' and land on a look-alike site that asks for the card number and PIN. A moment later, the balance is gone. The tell: you found the site through a search ad, not the address on the back of the card. The fix: check balances only on the website or phone number printed on the card itself, or at the store's register. And use gift cards soon; the longer they sit, the longer someone has to drain them.",
           "on_screen_text": "6. Fake balance-check sites",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a gift card with a search bar and a mask No text, no logos, no real people.",
-          "footage": "footage/scam-decoded/7-scams-that-hit-after-the-holidays-returns-resa-beat7.mp4"
+          "footage": "footage/scam-decoded/7-scams-that-hit-after-the-holidays-retu--6-balance-checks.mp4"
         },
         {
           "heading": "7. Unclaimed money",
           "narration": "Number seven, unclaimed money texts. 'You have one thousand two hundred forty-seven dollars in unclaimed funds. Pay a forty-nine dollar fee to release it.' Unclaimed money is real, which is why the scam works. But searching and claiming through your state's official program is free. The fix: go to USA dot gov slash unclaimed money, which links to every state's official site. Search your name and old addresses, and your parents' names too.",
           "on_screen_text": "7. Unclaimed money texts",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a treasure chest with a price tag on the lock No text, no logos, no real people."
+        },
+        {
+          "heading": "One gift, three traps",
+          "narration": "Here's how three of these can land on one person in one week, in a made-up case. Priya lists a pair of unwanted headphones for one hundred twenty dollars. Within an hour a buyer messages: 'Still available? I'll text you a code to make sure you're real.' Priya reads the code back. That code was a sign-in check for a new account being opened with her phone number, and now the buyer controls it.",
+          "on_screen_text": "One headphone sale, start to end",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a woman photographing headphones on a table for a resale listing, a phone buzzing with a code. No text, no logos, no real people."
+        },
+        {
+          "heading": "The payment that never came",
+          "narration": "Next, the buyer says he paid four hundred twenty, by mistake, and an email that looks like her payment app agrees: money on hold until she upgrades to a business account, and she should refund the extra three hundred. She opens the real app instead of the email. Balance: zero. No payment ever arrived. She blocks the buyer, reports the listing, and changes the password on the account the code opened.",
+          "on_screen_text": "'$420 received, on hold'",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a phone screen showing a payment app with a zero balance beside a suspicious email. No text, no logos, no real people."
+        },
+        {
+          "heading": "What it would have cost",
+          "narration": "Had she followed the email, Priya would have sent three hundred dollars of her own money and still shipped the headphones. What saved her was the one habit: she checked the source herself, in the real app, before doing anything the buyer or the email asked. The code mistake still took an evening to fix. So add one more rule for selling online: a buyer never needs a code from you, for any reason.",
+          "on_screen_text": "Lost: $0. Could have been $300+",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a calm woman closing a laptop, a padlock icon over a resale app, headphones still on the table. No text, no logos, no real people."
         },
         {
           "heading": "The one habit",
@@ -3787,7 +3805,7 @@
         "newyear",
         "scamdecoded"
       ],
-      "description": "Seven scams that peak after the holidays, with how each works, the tell, and the fix.\n\nChapters\n0:00 Why late December\n0:40 Fake refund texts\n1:30 The code-stealing buyer\n2:20 Fake payment emails\n3:10 Fake activation sites\n4:00 Free trial traps\n4:50 Gift card balance sites\n5:30 Unclaimed money texts\n6:10 The one habit\n\nAll examples are fictional.",
+      "description": "Seven scams that peak after the holidays, with how each works, the tell, and the fix.\n\nChapters\n0:00 Why late December\n0:30 1. Refund texts\n1:05 2. The code buyer\n1:39 3. Fake payment emails\n2:12 4. Activation sites\n2:42 5. Free trials\n3:13 6. Balance checks\n3:49 7. Unclaimed money\n4:18 One gift, three traps\n4:48 The payment that never came\n5:16 What it would have cost\n5:46 The one habit\n\nAll examples are fictional.",
       "thumbnail_text": "7 post-holiday scams",
       "sources": [
         "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams",
@@ -3808,7 +3826,7 @@
         "After Christmas: the 7 scams waiting for you",
         "Returns, resales and new devices: 7 post-holiday scams decoded"
       ],
-      "original_element": "Screen-record typing the balance-check address printed on the back of your own gift card (blur the card number). Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/7-scams-that-hit-after-the-holidays-returns-resa-beat7.mp4."
+      "original_element": "Screen-record typing the balance-check address printed on the back of your own gift card (blur the card number). Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/7-scams-that-hit-after-the-holidays-retu--6-balance-checks.mp4."
     }
   },
   {
@@ -3839,7 +3857,7 @@
           "narration": "Place two, your phone's app store subscriptions. On most phones it's in your account settings, under subscriptions. These don't always show clearly on your card statement, because they're billed through the app store. Look for apps you haven't opened in months, and free trials that quietly became paid. Cancel them there. Deleting an app doesn't cancel its subscription. That one catches a lot of people.",
           "on_screen_text": "2. App store subscriptions",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone settings screen with a subscriptions list No text, no logos, no real people.",
-          "footage": "footage/scam-decoded/find-and-cancel-every-subscription-you-forgot-a-beat3.mp4"
+          "footage": "footage/scam-decoded/find-and-cancel-every-subscription-you-f--place-2-app-stores.mp4"
         },
         {
           "heading": "Place 3: email",
@@ -3866,6 +3884,30 @@
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone with a notification bell No text, no logos, no real people."
         },
         {
+          "heading": "Sam's 30 minutes",
+          "narration": "Let's run the cleanup once with made-up numbers. Sam sits down on a Sunday with a coffee and a timer. Place one, two months of card statements: a streaming service at sixteen ninety-nine, a gym at forty, a meal kit at seventy-nine that he paused in October but never actually cancelled, and a name he doesn't recognise at nine ninety-nine. He writes them all down. Eleven minutes.",
+          "on_screen_text": "One cleanup, timed",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a man at a kitchen table with a coffee, a timer and two printed statements with highlights. No text, no logos, no real people."
+        },
+        {
+          "heading": "Places two and three",
+          "narration": "Place two, his phone's app store subscriptions: a photo editor at four ninety-nine, a meditation app on an annual plan that renews in nine days, and a weather app at two ninety-nine he hasn't opened since summer. Place three, his email: a search for 'renewal' turns up the mystery nine ninety-nine. It's a cloud storage plan from an old laptop. Nineteen minutes in, everything has a name.",
+          "on_screen_text": "App store: 3 more. Email: 1 more",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a phone showing a subscriptions list, an email inbox with one result highlighted. No text, no logos, no real people."
+        },
+        {
+          "heading": "The one he didn't sign up for",
+          "narration": "Then he spots it: a one-dollar charge from a shop he's never heard of, three days ago. That's a test charge, so he calls the number on the back of his card, reports it, and gets a new card. Then he cancels the meal kit, the photo editor, the weather app and the old storage plan, each through its own app or site. Total saved: about a hundred and ten dollars a month, plus a stolen card stopped before the big charge. Thirty-one minutes.",
+          "on_screen_text": "A $1.00 charge: call the bank",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a man on the phone holding a bank card, a short list with four items crossed out. No text, no logos, no real people."
+        },
+        {
+          "heading": "The trap he skipped",
+          "narration": "One more moment worth showing. The gym wouldn't let Sam cancel online, so he searched 'cancel' plus the gym's name. The top result was an ad with a phone number and a 'cancellation service' that wanted his card number and a twenty-nine dollar fee. He closed it, found the real phone number on the gym's own website, and cancelled by phone, asking for a confirmation email. That's the habit: cancel through the company itself, never through a search result.",
+          "on_screen_text": "Cancel in the app, not by search",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a search results page with a highlighted ad crossed out, a confirmation email arriving. No text, no logos, no real people."
+        },
+        {
           "heading": "Wrap",
           "narration": "So, three places: statements, app stores, email. One charge to act on today: small, strange amounts. Cancel only through the real site or app. Then alerts on everything. Save this for next January, and send it to the person in your family who never checks their statements. Follow for one scam decoded every day.",
           "on_screen_text": "Statements · apps · email · alerts",
@@ -3881,7 +3923,7 @@
         "budgeting",
         "scamdecoded"
       ],
-      "description": "A 30-minute cleanup that finds forgotten subscriptions, free trial traps and small fraud test charges.\n\nChapters\n0:00 Why January\n0:50 Place 1: statements\n2:00 Place 2: app stores\n2:50 Place 3: email\n3:40 Test charges\n4:30 Cancelling safely\n5:30 Alerts so it can't happen again",
+      "description": "A 30-minute cleanup that finds forgotten subscriptions, free trial traps and small fraud test charges.\n\nChapters\n0:00 Why January\n0:33 Place 1: statements\n1:04 Place 2: app stores\n1:30 Place 3: email\n1:56 Test charges\n2:28 Cancel safely\n2:58 Set alerts\n3:29 Sam's 30 minutes\n3:56 Places two and three\n4:22 The one he didn't sign up for\n4:56 The trap he skipped\n5:28 Wrap",
       "thumbnail_text": "30-min subscription cleanup",
       "sources": [
         "https://consumer.ftc.gov/articles/free-trial-offers",
@@ -3897,7 +3939,7 @@
         "The New Year subscription audit: 30 minutes, every charge",
         "Forgotten subscriptions, free trial traps and test charges: a cleanup"
       ],
-      "original_element": "Screen-record your own phone's subscriptions screen in the app store settings (blur prices if you like). Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/find-and-cancel-every-subscription-you-forgot-a-beat3.mp4."
+      "original_element": "Screen-record your own phone's subscriptions screen in the app store settings (blur prices if you like). Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/find-and-cancel-every-subscription-you-f--place-2-app-stores.mp4."
     }
   },
   {
@@ -3970,7 +4012,25 @@
           "narration": "Now the six digits. An IRS Identity Protection PIN is a free number, new each year, that only you and the IRS know. Once you have one, any return filed with your Social Security number has to include it, so a thief can't file in your name. Anyone with a Social Security number or taxpayer ID can get one through their IRS online account. Do it in January, before filing opens. Save this video, send it to whoever does the taxes in your house, and follow for one scam decoded every day.",
           "on_screen_text": "Get your IP PIN in January",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a six-digit PIN card No text, no logos, no real people.",
-          "footage": "footage/scam-decoded/tax-season-scams-2027-8-to-know-before-you-file-beat10.mp4"
+          "footage": "footage/scam-decoded/tax-season-scams-2027-8-to-know-before-y--the-ip-pin.mp4"
+        },
+        {
+          "heading": "Lena's rejected return",
+          "narration": "Here's the case the IP PIN exists for, made up but common. Lena files on February tenth and gets a rejection: a return with her Social Security number was already filed. She did nothing wrong. Her number was in a data breach two years ago, and a thief filed first with fake wages and a bank account of their own. She doesn't call a number from any text or email about it.",
+          "on_screen_text": "E-file rejected: what next",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a woman at a laptop looking at a rejection notice, a calendar showing February. No text, no logos, no real people."
+        },
+        {
+          "heading": "The fix, step by step",
+          "narration": "She prints and mails a paper return, attaching Form fourteen oh thirty-nine, the identity theft affidavit, as the IRS instructs. She freezes her credit at all three bureaus that night. When an IRS letter arrives weeks later asking her to verify her identity, she checks it by typing IRS dot gov herself and following the steps there, not by calling a number from a text. Her refund takes longer, but it arrives, and the fake return is flagged.",
+          "on_screen_text": "Paper return + Form 14039",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a paper tax return in an envelope with a form attached, three small padlocks on a desk. No text, no logos, no real people."
+        },
+        {
+          "heading": "Next year, the PIN",
+          "narration": "From then on, Lena gets an IP PIN every year. Next season, if the same thief tries again, the return is rejected because it doesn't have her six digits. That's the whole point of tonight's video: you don't need to wait to be Lena. Anyone with a Social Security number or ITIN who can verify their identity can get the PIN before anything goes wrong.",
+          "on_screen_text": "6 digits that stop it",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a simple six-digit PIN card next to a calendar for the following year. No text, no logos, no real people."
         }
       ],
       "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
@@ -3982,7 +4042,7 @@
         "identitytheft",
         "scamdecoded"
       ],
-      "description": "Eight scams that peak during tax season, how each works, and the IRS rule or step that exposes it.\n\nChapters\n0:00 Why tax season\n0:40 Fake IRS texts\n1:30 Fake IRS calls\n2:20 Ghost preparers\n3:10 Social media tax hacks\n4:00 W-2 phishing\n4:50 Refund theft\n5:40 Fake 'free filing'\n6:20 Fake 'you're owed a refund' mail\n7:00 The IP PIN\n\nGeneral education, not tax advice.",
+      "description": "Eight scams that peak during tax season, how each works, and the IRS rule or step that exposes it.\n\nChapters\n0:00 Why tax season\n0:32 1. IRS texts\n1:02 2. IRS calls\n1:32 3. Ghost preparers\n2:03 4. Tax hacks\n2:35 5. W-2 phishing\n3:03 6. Refund theft\n3:30 7. Fake free filing\n3:56 8. Refund letters\n4:22 The IP PIN\n4:58 Lena's rejected return\n5:27 The fix, step by step\n5:58 Next year, the PIN\n\nGeneral education, not tax advice.",
       "thumbnail_text": "8 tax scams",
       "sources": [
         "https://www.irs.gov/newsroom/how-to-know-its-really-the-irs-calling-or-knocking-on-your-door-collecting-taxes",
@@ -4004,7 +4064,7 @@
         "8 tax scams that steal refunds, and how to stop each one",
         "Before you file: the 8 tax season scams, decoded"
       ],
-      "original_element": "Screen-record irs.gov (typed in): the Get an IP PIN page. Stop at sign-in. Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/tax-season-scams-2027-8-to-know-before-you-file-beat10.mp4."
+      "original_element": "Screen-record irs.gov (typed in): the Get an IP PIN page. Stop at sign-in. Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/tax-season-scams-2027-8-to-know-before-y--the-ip-pin.mp4."
     }
   },
   {
@@ -4041,7 +4101,7 @@
           "narration": "Step three, choose how to file. If your income is under the limit, IRS Free File offers free guided software, and VITA and TCE volunteers will prepare it for free. Start from IRS dot gov to find both, not a search ad. If you use a paid preparer, check four things: they have a PTIN, they'll sign the return, their fee isn't a cut of your refund, and the refund goes to your account. The scam: ghost preparers and social media 'refund experts' who promise more than anyone else.",
           "on_screen_text": "3. Free option or a real preparer",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. two paths: a free sign and a signed form No text, no logos, no real people.",
-          "footage": "footage/scam-decoded/how-to-file-your-taxes-safely-documents-preparer-beat4.mp4"
+          "footage": "footage/scam-decoded/how-to-file-your-taxes-safely-documents--step-3-choose.mp4"
         },
         {
           "heading": "Step 4: file and check",
@@ -4062,6 +4122,30 @@
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a filing box and a shredder No text, no logos, no real people."
         },
         {
+          "heading": "Jordan's season, start to finish",
+          "narration": "Let's walk one made-up filer, Jordan, through the five steps. Early January, Jordan signs in at IRS dot gov and gets an Identity Protection PIN. Late January, an email says 'your W-2 is ready, log in here.' Jordan doesn't click. He opens the payroll site from his work bookmark instead, and the W-2 is there. The email was a copy of the payroll login page.",
+          "on_screen_text": "One filer, five steps",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a young man at a laptop ignoring an email and opening a bookmarked site instead. No text, no logos, no real people."
+        },
+        {
+          "heading": "The preparer with a promise",
+          "narration": "In February, a friend recommends a preparer who 'gets everyone big refunds' and takes twenty percent of the refund as the fee, paid into his own account first. Jordan checks the four things from step three: no preparer tax ID offered, fee tied to the refund, and he won't sign the return. That's three red flags, so Jordan walks away. He uses IRS Free File instead, because his income is under the limit.",
+          "on_screen_text": "'Bigger refund, I take 20%'",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a small office desk with a stack of returns and a percent sign, a man shaking his head politely. No text, no logos, no real people."
+        },
+        {
+          "heading": "Before he signs",
+          "narration": "Before submitting, Jordan reads the return line by line, checks his bank account number twice, and includes his IP PIN. Two weeks later a text says his refund is on hold until he verifies. He ignores it and types IRS dot gov into the browser, opens Where's My Refund, and sees it's on schedule. That's the season. Every scam showed up, and each one hit a step that was already locked.",
+          "on_screen_text": "Read it. Then track it yourself",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a phone showing a refund tracker with a progress bar, a deleted text bubble beside it. No text, no logos, no real people."
+        },
+        {
+          "heading": "What Jordan kept",
+          "narration": "After filing, Jordan saves a PDF of the return and his W-2 in one folder, keeps them at least three years as the IRS suggests, and shreds last year's paper copies he no longer needs. He puts a note in his calendar for next January: renew the IP PIN, ignore any 'W-2 ready' links, and check Free File again. None of this took long. The point is that next season starts already locked.",
+          "on_screen_text": "Copies, shredder, calendar note",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a laptop folder labeled with a year icon, a paper shredder, a calendar with a January reminder. No text, no logos, no real people."
+        },
+        {
           "heading": "Wrap",
           "narration": "So: lock your account, get documents from the source, choose a free option or a real preparer, read before you sign, and track your refund yourself. Five steps, five protections. Save this for when your W-2 arrives, and follow for one scam decoded every day.",
           "on_screen_text": "Lock · gather · choose · check · track",
@@ -4077,7 +4161,7 @@
         "moneytips",
         "scamdecoded"
       ],
-      "description": "Five steps to file your taxes safely, with the scam to watch for at each step.\n\nChapters\n0:00 The five steps\n0:40 Step 1: lock your account\n1:40 Step 2: gather documents\n2:40 Step 3: choose how to file\n4:00 Step 4: file and check\n5:00 Step 5: the refund\n5:50 After you file\n\nGeneral education, not tax advice.",
+      "description": "Five steps to file your taxes safely, with the scam to watch for at each step.\n\nChapters\n0:00 The five steps\n0:23 Step 1: lock it\n0:58 Step 2: documents\n1:30 Step 3: choose\n2:06 Step 4: file and check\n2:36 Step 5: the refund\n3:04 After you file\n3:32 Jordan's season, start to finish\n3:58 The preparer with a promise\n4:27 Before he signs\n4:55 What Jordan kept\n5:24 Wrap\n\nGeneral education, not tax advice.",
       "thumbnail_text": "File safely: 5 steps",
       "sources": [
         "https://www.irs.gov/identity-theft-fraud-scams/get-an-identity-protection-pin",
@@ -4098,7 +4182,7 @@
         "File your taxes without getting scammed: a step-by-step guide",
         "From W-2 to refund: a safe tax filing checklist"
       ],
-      "original_element": "Screen-record the IRS Directory of Federal Tax Return Preparers: search your ZIP code and show the credentials column. Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/how-to-file-your-taxes-safely-documents-preparer-beat4.mp4."
+      "original_element": "Screen-record the IRS Directory of Federal Tax Return Preparers: search your ZIP code and show the credentials column. Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/how-to-file-your-taxes-safely-documents--step-3-choose.mp4."
     }
   },
   {
@@ -4135,7 +4219,7 @@
           "narration": "Stage three, the tip. Casually, they mention how they afford their life: an uncle who trades, a special crypto platform, a strategy that never loses. They don't push. They let you ask. Then they offer to show you, step by step, and send a link to an app or website. The exit: investment advice from someone you've only met online is the turning point. Check the platform at Investor dot gov and FINRA BrokerCheck, and search its name plus 'scam'.",
           "on_screen_text": "3. 'Let me show you my platform'",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a chat bubble with a chart No text, no logos, no real people.",
-          "footage": "footage/scam-decoded/how-a-wrong-number-text-becomes-a-100-000-loss-c-beat4.mp4"
+          "footage": "footage/scam-decoded/how-a-wrong-number-text-becomes-a-100-00--stage-3-the-tip.mp4"
         },
         {
           "heading": "Stage 4: the proof",
@@ -4156,6 +4240,24 @@
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. three masks and a fee tag No text, no logos, no real people."
         },
         {
+          "heading": "Mark's ledger",
+          "narration": "Let's put numbers on Mark's story, because the totals are what shock families. Week three, the first deposit: two thousand. Week five, after the three hundred withdrawal worked, fifteen thousand from savings. Week eight, forty thousand from a retirement account, taxes and penalties included. Week ten, a thirty thousand personal loan, because the 'opportunity' was closing. Week twelve, the wall, and thirteen thousand more in fees to release money that never existed.",
+          "on_screen_text": "Week by week: $100,000",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a simple ledger page with rising amounts by week, a phone with a chart going up. No text, no logos, no real people."
+        },
+        {
+          "heading": "Where the exits were",
+          "narration": "Now count the exits. A stranger who kept talking after a wrong number. A move to a private app. An investment tip from someone he'd never met. A platform he found only through their link. And a fee to withdraw his own money. Any one of those, checked with someone he trusted, ends the story at two thousand dollars or less. Scammers know this, which is why they ask people to keep the opportunity secret from family.",
+          "on_screen_text": "5 exits Mark passed",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a road with five exit signs, a lone car driving past them, warm sunset colors. No text, no logos, no real people."
+        },
+        {
+          "heading": "What the family did",
+          "narration": "When Mark finally told his daughter, she did three things that day. She helped him report it at I C 3 dot gov with every wallet address and screenshot. She called his bank and the lender about the loan. And she blocked every number that offered 'recovery'. Most of the money was gone, and that's the hard truth. But the report and the lockdown stopped the second scam before it took anything more.",
+          "on_screen_text": "Report it and lock it down",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a father and adult daughter at a table with a laptop, papers organised, a supportive hand on a shoulder. No text, no logos, no real people."
+        },
+        {
           "heading": "Helping someone",
           "narration": "If this is happening to someone you love, they may not believe you at first. They've been told family won't understand. Ask questions instead of lecturing: how did you meet, have you met in person, have you tried withdrawing most of it? Offer to look up the platform together. If money's gone, say it's not their fault, because these are organised professionals. Then call the bank together and report at I-C-3 dot gov. Save this, send it to someone who gets a lot of wrong-number texts, and follow for one scam decoded every day.",
           "on_screen_text": "Ask, check together, report",
@@ -4171,7 +4273,7 @@
         "investmentscam",
         "scamdecoded"
       ],
-      "description": "How crypto investment scams run from a wrong-number text to a total loss, and how to exit at each stage.\n\nChapters\n0:00 The text\n0:50 Stage 1: contact\n1:50 Stage 2: friendship\n2:50 Stage 3: the tip\n3:50 Stage 4: the proof\n4:50 Stage 5: the wall\n5:40 Stage 6: the second scam\n6:20 Helping someone\n\nThe story is a fictional composite.",
+      "description": "How crypto investment scams run from a wrong-number text to a total loss, and how to exit at each stage.\n\nChapters\n0:00 The text\n0:34 Stage 1: contact\n1:03 Stage 2: friendship\n1:32 Stage 3: the tip\n2:04 Stage 4: the proof\n2:36 Stage 5: the wall\n3:04 Stage 6: second scam\n3:34 Mark's ledger\n4:03 Where the exits were\n4:34 What the family did\n5:03 Helping someone\n\nThe story is a fictional composite.",
       "thumbnail_text": "Wrong number → $100K",
       "sources": [
         "https://consumer.ftc.gov/articles/what-know-about-cryptocurrency-and-scams",
@@ -4190,7 +4292,7 @@
         "Pig butchering explained: the 6 stages of a crypto investment scam",
         "The crypto romance scam, stage by stage"
       ],
-      "original_element": "Screen-record FINRA BrokerCheck and the SEC's investor.gov search: look up a made-up 'platform' name and show that nothing comes back. Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/how-a-wrong-number-text-becomes-a-100-000-loss-c-beat4.mp4."
+      "original_element": "Screen-record FINRA BrokerCheck and the SEC's investor.gov search: look up a made-up 'platform' name and show that nothing comes back. Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/how-a-wrong-number-text-becomes-a-100-00--stage-3-the-tip.mp4."
     }
   },
   {
@@ -4233,7 +4335,7 @@
           "narration": "The old advice was: make them video call. Still useful, since many will make excuses. But real-time face-swap tools can now put a different face on a live call, and the FBI has warned about criminals using AI-generated video. Watch for calls that are short, dark or glitchy, or that freeze when you ask them to turn their head. But don't rely on video as proof. There's a better test.",
           "on_screen_text": "Video calls aren't proof anymore",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a video window with a face slipping No text, no logos, no real people.",
-          "footage": "footage/scam-decoded/romance-scams-before-valentine-s-how-to-spot-one-beat5.mp4"
+          "footage": "footage/scam-decoded/romance-scams-before-valentine-s-how-to--video-and-ai.mp4"
         },
         {
           "heading": "The money stories",
@@ -4246,6 +4348,30 @@
           "narration": "Here's the question that beats all of it, AI or not: have I met this person in person, and are they asking for money, or for me to invest? If the answer is no and yes, stop. No real partner you've never met needs your savings. You can say it kindly: 'I don't send money to people I haven't met.' Watch how they react. Someone real is disappointed. A scammer gets angry, desperate, or more loving than ever.",
           "on_screen_text": "Not met + money = stop",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. two question cards and a stop sign No text, no logos, no real people."
+        },
+        {
+          "heading": "Carol and 'David'",
+          "narration": "One made-up case, start to finish. Carol, sixty-six and widowed, gets a friend request from 'David', a structural engineer working on an offshore platform. His photos are kind and a little shy. Within four days he asks to move to a private chat app because he's 'hardly on social media'. He messages every morning and night, remembers her grandchildren's names, and says he's never met anyone so easy to talk to.",
+          "on_screen_text": "Week 1: a kind stranger",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: an older woman smiling at a phone in a cozy armchair, morning tea, a ship far away on the horizon. No text, no logos, no real people."
+        },
+        {
+          "heading": "Week 7: the first ask",
+          "narration": "In week seven, a problem. David's contract payment is stuck, and the equipment he needs is held at customs. Two thousand four hundred dollars, by gift cards, just until his bank sorts it out. He's embarrassed to ask. A video call keeps failing, the camera 'broken' on the rig. Carol has never heard his voice for longer than a few seconds.",
+          "on_screen_text": "Customs fee: $2,400",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a phone with a chat bubble and a pile of gift cards, a frozen video call screen. No text, no logos, no real people."
+        },
+        {
+          "heading": "The question, used",
+          "narration": "Carol asks herself the one question: have I met him in person, and is he asking for money? No, and yes. She doesn't send anything. She does a reverse image search with her son, and the photos belong to a real man with a different name. They report the profile on the app where it started and at ReportFraud dot FTC dot gov. It hurt. It cost her nothing.",
+          "on_screen_text": "Met in person? Asking for money?",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: an older woman and her adult son looking at a laptop together, a profile photo crossed out. No text, no logos, no real people."
+        },
+        {
+          "heading": "Why it nearly worked",
+          "narration": "It's worth saying why this nearly worked, because Carol is not foolish. Seven weeks of daily kindness came before any request. The amount was small compared with the relationship. The broken camera had a reason. And David never asked for her bank details, only gift cards, which felt less risky. That's the design. So if someone you love is in week three of a lovely online romance, don't wait for the money request to bring up the question.",
+          "on_screen_text": "7 weeks of trust, then the ask",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a calendar with seven weeks of small hearts, then a single gift card on the last day. No text, no logos, no real people."
         },
         {
           "heading": "Helping someone",
@@ -4263,7 +4389,7 @@
         "protectyourparents",
         "scamdecoded"
       ],
-      "description": "How romance scams work in 2027, the new AI tricks, the money stories, and how to help someone who's in one.\n\nChapters\n0:00 Why February\n0:50 Where they find you\n1:50 The profile\n2:50 Moving off the app\n3:40 Video calls and AI\n4:40 The money stories\n5:40 The one question\n6:20 Helping someone you love\n\nAll examples are fictional.",
+      "description": "How romance scams work in 2027, the new AI tricks, the money stories, and how to help someone who's in one.\n\nChapters\n0:00 Why February\n0:31 Where they find you\n0:54 The profile\n1:23 Moving off the app\n1:50 Video and AI\n2:18 The money stories\n2:48 The one question\n3:19 Carol and 'David'\n3:48 Week 7: the first ask\n4:12 The question, used\n4:40 Why it nearly worked\n5:11 Helping someone\n\nAll examples are fictional.",
       "thumbnail_text": "Romance scams: the guide",
       "sources": [
         "https://consumer.ftc.gov/articles/what-know-about-romance-scams",
@@ -4282,7 +4408,7 @@
         "Romance scams 2027: AI video, fake jobs and the money ask",
         "Is your online match real? The Valentine's romance scam guide"
       ],
-      "original_element": "Screen-record a reverse image search of a stock photo of a person, showing where else the photo appears. Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/romance-scams-before-valentine-s-how-to-spot-one-beat5.mp4."
+      "original_element": "Screen-record a reverse image search of a stock photo of a person, showing where else the photo appears. Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/romance-scams-before-valentine-s-how-to--video-and-ai.mp4."
     }
   }
 ]

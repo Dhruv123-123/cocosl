@@ -22,7 +22,7 @@ Weekly push: wk 27 Protect Your Parents (Mother's Day), wk 28 the newsletter (gr
 | #11 | Mon May 17 18:00 | TikTok | TikTok cut | face cam | I almost got hired by a scammer: 3 messages that told me |
 | #12 | Tue May 18 19:30 | Instagram | Carousel | checklist | 5 signs a job offer isn't real (for new grads) |
 | #13 | Wed May 19 12:00 | Reels + Shorts | Short | illustrated | 'You won a scholarship, pay the fee': 0 real ones charge |
-| #14 | Wed May 19 18:00 | TikTok | TikTok cut | quiz pause | Quiz: which of these 3 scholarship offers is the scam? |
+| #14 | Wed May 19 18:00 | TikTok | TikTok cut | quiz pause | 3 scholarship offers, 1 scam: can you spot it? |
 | #15 | Thu May 20 19:30 | Instagram | Carousel | comparison | New grad money-safety checklist: 6 things to set up before your first paycheck |
 | #16 | Fri May 21 12:00 | Reels + Shorts | Short | data chart | 'I'm abroad, can't show you the apartment': 1 rental flag |
 | #17 | Fri May 21 18:00 | TikTok | TikTok cut | walkthrough | First apartment listing: can you find 4 red flags? |

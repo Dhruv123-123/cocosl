@@ -176,7 +176,7 @@ S(week=32, pillar=P_HOME, look="illustrated", tt_look="quiz pause",
   ("Do this", "Hang up. Sign in to your own business profile and check it yourself. Pass this to anyone who runs a "
               "small business.", "Check your own profile", f"{MASCOT} hanging up a phone"),
  ],
- tt_title="Quiz: which of these 3 business calls is real?",
+ tt_title="3 calls to your business: only 1 is real",
  tt_hook="3 calls a small business gets in 1 week. Pause and pick the real one.",
  tt_extra=[
   ("Pause", "Pause. Call A: your Google listing will be removed today. Call B: your directory renewal is overdue, we'll "

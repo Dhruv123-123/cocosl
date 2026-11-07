@@ -432,7 +432,7 @@ def test_how_the_scam_actually_worked_series():
         assert item["post_on"][:10] not in taken
         sc = Script.model_validate(item["script"])
         assert 450 <= sum(len(s.narration.split()) for s in sc.segments) <= 900, sc.title
-        assert sc.title.startswith("How the scam actually worked:") and any(ch.isdigit() for ch in sc.hook)
+        assert sc.playlist == "How the scam actually worked" and any(ch.isdigit() for ch in sc.hook)
         assert "Chapters" in sc.description and sc.segments[-1].heading == "Three checks"
         assert "Case board" in item["original_element"] and "no AI voice" in item["original_element"]
         assert len(sc.sources) >= 2 and len(sc.claims_to_verify) >= 3
@@ -508,7 +508,7 @@ def test_every_long_video_has_an_original_element():
         Script(**it["script"])
         assert it["script"]["original_element"]
         paths += [s["footage"] for s in it["script"]["segments"] if s.get("footage")]
-        if it["script"]["title"].startswith("How the scam actually worked"):
+        if it["script"].get("playlist") == "How the scam actually worked":
             assert any(s.get("chart") for s in it["script"]["segments"])
     assert len(paths) == len(set(paths)) and all(p.startswith("footage/scam-decoded/") for p in paths)
     shots = (Path(long_originals.__file__).parent / "LONG_VIDEO_RECORDINGS.md").read_text()

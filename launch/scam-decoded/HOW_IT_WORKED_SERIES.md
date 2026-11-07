@@ -20,10 +20,10 @@ Rules for every part: say "alleged" for anything not proven in court, and say de
 ## Produced parts
 
 - **Part 1, 2027-07-11:** How the scam actually worked: the 'bail money' calls from Montreal (580 words, about 4 minutes). Case board: `how-it-worked/out/bail-money-calls.png`.
-- **Part 2, 2027-08-08:** How the scam actually worked: the pop-up that found viruses on every computer (515 words, about 3 minutes). Case board: `how-it-worked/out/pop-up-that-always-finds-viruses.png`.
+- **Part 2, 2027-08-08:** The $26 million pop-up: how fake virus scans sold 'repairs' (515 words, about 3 minutes). Case board: `how-it-worked/out/pop-up-that-always-finds-viruses.png`.
 - **Part 3, 2027-09-12:** How the scam actually worked: the fake invoices that took over $120 million from two tech giants (504 words, about 3 minutes). Case board: `how-it-worked/out/fake-invoices-120-million.png`.
-- **Part 4, 2027-10-10:** How the scam actually worked: the robocalls that said Google would close your business (473 words, about 3 minutes). Case board: `how-it-worked/out/removed-from-google-robocalls.png`.
+- **Part 4, 2027-10-10:** 'Google will remove your business': inside the robocalls the FTC stopped (473 words, about 3 minutes). Case board: `how-it-worked/out/removed-from-google-robocalls.png`.
 - **Part 5, 2027-11-14:** How the scam actually worked: inside the IRS impersonation call centers (477 words, about 3 minutes). Case board: `how-it-worked/out/irs-call-centers.png`.
-- **Part 6, 2027-12-12:** How the scam actually worked: inside a 'pig butchering' scam compound (457 words, about 3 minutes). Case board: `how-it-worked/out/scam-compound.png`.
+- **Part 6, 2027-12-12:** Inside a pig butchering compound: phone farms, scripts and 127,000 bitcoin (457 words, about 3 minutes). Case board: `how-it-worked/out/scam-compound.png`.
 - **Part 7, 2028-01-09:** How the scam actually worked: the money transfer company that paid $586 million (496 words, about 3 minutes). Case board: `how-it-worked/out/money-transfer-586-million.png`.
-- **Part 8, 2028-02-13:** How the scam actually worked: the 'chairmen' of a romance scam ring (457 words, about 3 minutes). Case board: `how-it-worked/out/romance-ring.png`.
+- **Part 8, 2028-02-13:** The 'chairmen' behind a $100 million romance scam ring (457 words, about 3 minutes). Case board: `how-it-worked/out/romance-ring.png`.

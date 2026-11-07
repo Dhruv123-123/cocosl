@@ -2567,7 +2567,7 @@
           "narration": "Number one, fake online stores. They show up in social media ads with huge discounts: closing-down sales, seventy percent off everything, or a near-perfect copy of a brand you know. You pay, and either nothing arrives or a cheap knockoff does. The tell is a store you've never heard of, found through an ad, with prices far below everyone else. The fix: search the store name plus the word scam, look for a real address and phone number, and always pay with a credit card. Under federal law you can dispute a charge for something that never arrived. Payment apps and bank transfers rarely give you that.",
           "on_screen_text": "1. Fake online stores",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a shop front with a crooked discount banner No text, no logos, no real people.",
-          "footage": "footage/scam-decoded/9-holiday-scams-that-peak-before-new-year-and-ho-beat2.mp4"
+          "footage": "footage/scam-decoded/9-holiday-scams-that-peak-before-new-yea--1-fake-stores.mp4"
         },
         {
           "heading": "2. Delivery texts",
@@ -2653,7 +2653,7 @@
         "Holiday scams 2026: the complete guide",
         "The 9 scams of the holiday season, decoded"
       ],
-      "original_element": "Screen-record checking an unfamiliar store: search its name plus 'scam' and 'reviews', then open its contact and returns pages. Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/9-holiday-scams-that-peak-before-new-year-and-ho-beat2.mp4."
+      "original_element": "Screen-record checking an unfamiliar store: search its name plus 'scam' and 'reviews', then open its contact and returns pages. Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/9-holiday-scams-that-peak-before-new-yea--1-fake-stores.mp4."
     }
   },
   {
@@ -2696,7 +2696,7 @@
           "narration": "Step three, the phone. While you're there, turn on the phone's built-in spam call filtering, and silence unknown callers if your parent is comfortable with that. Set an account PIN with their carrier and turn on number lock or port-out protection if offered. Update the phone's software. And look for remote access apps they didn't install on purpose; if a 'technician' put one there, remove it and change passwords. Fifteen minutes here removes a lot of scam calls before they ever ring.",
           "on_screen_text": "3. Phone settings: 15 minutes",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone with a shield and toggles No text, no logos, no real people.",
-          "footage": "footage/scam-decoded/how-to-protect-your-parents-from-scams-the-compl-beat5.mp4"
+          "footage": "footage/scam-decoded/how-to-protect-your-parents-from-scams-t--phone-settings.mp4"
         },
         {
           "heading": "Credit freezes",
@@ -2717,6 +2717,24 @@
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a fridge with a card under a magnet No text, no logos, no real people."
         },
         {
+          "heading": "Rosa's Tuesday call",
+          "narration": "Let's run the plan once, with a made-up example. Rosa is seventy-four. On a Tuesday at ten in the morning her landline rings, and a crying voice says, 'Grandma, it's me, I've been in a car accident and the police are holding me.' A second man comes on, calm and official, and says he's a public defender. Bail is eight thousand five hundred dollars, it has to be cash today, and a courier will collect it. And please, don't tell the parents, the case is sealed.",
+          "on_screen_text": "One call, start to finish",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: an older woman at a kitchen table holding a landline phone, a worried expression, morning light. No text, no logos, no real people."
+        },
+        {
+          "heading": "Where it would have gone",
+          "narration": "Without a plan, here's how this usually goes. Rosa drives to the bank, takes out the cash, and tells the teller it's for a family repair, because she was told to keep it quiet. A driver knocks at two o'clock and takes the envelope. At four, the man calls again: the other driver was hurt, now it's another twelve thousand. Each step felt urgent and private, and nobody else in the family heard a word until the money was long gone.",
+          "on_screen_text": "Without a plan: $8,500 gone",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: an envelope of cash being handed through a half-open front door to a faceless courier. No text, no logos, no real people."
+        },
+        {
+          "heading": "Where the plan stops it",
+          "narration": "Now the same morning with the plan. When the voice cries, Rosa asks for the family word. The caller dodges, so she says she'll call back, hangs up, and dials her grandson on the number saved in her phone. He answers from his college library, fine and confused. Then she calls her daughter, the person on the fridge card. Total time: four minutes. Total lost: nothing. Afterwards they report the call at ReportFraud dot FTC dot gov, so the pattern gets counted. That's the whole point: the plan decides, so Rosa doesn't have to.",
+          "on_screen_text": "Safe word, call back, done",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: the same woman smiling with relief, calling on a mobile phone, a fridge card in the background. No text, no logos, no real people."
+        },
+        {
           "heading": "If it happens",
           "narration": "And if it happens anyway, the plan is speed, not shame. Call the bank using the number on the card. Call the gift card or payment app company. Change the email password. Freeze credit. Report it at ReportFraud dot FTC dot gov and, for internet crime, I C 3 dot gov. And warn them about recovery scams: anyone offering to get the money back for a fee is the next scammer. Our printable Family Scam-Proofing Kit has all of this on paper, linked below. Send this video to your siblings, and plan the visit.",
           "on_screen_text": "If it happens: speed, not shame",
@@ -2732,7 +2750,7 @@
         "familysafety",
         "scamdecoded"
       ],
-      "description": "A complete guide for adult children: how to talk to parents about scams without shame, the settings to change, and the family plan.\n\nChapters\n0:00 Why parents are targeted\n1:00 The conversation\n2:30 The family word\n3:30 Phone settings\n4:30 Credit freezes\n5:30 Bank alerts and a trusted contact\n6:30 The fridge card\n7:30 If it happens",
+      "description": "A complete guide for adult children: how to talk to parents about scams without shame, the settings to change, and the family plan.\n\nChapters\n0:00 Why parents\n0:41 The conversation\n1:17 The family word\n1:53 Call-back and payment rules\n2:27 Phone settings\n3:00 Credit freezes\n3:33 Bank alerts and trusted contact\n4:02 The fridge card\n4:28 Rosa's Tuesday call\n5:02 Where it would have gone\n5:35 Where the plan stops it\n6:12 If it happens",
       "thumbnail_text": "Protect your parents",
       "sources": [
         "https://www.ic3.gov/AnnualReport/Reports",
@@ -2750,7 +2768,7 @@
         "Protect your parents from scams in one visit",
         "The scam-proofing plan for aging parents"
       ],
-      "original_element": "Screen-record your own phone: silence unknown callers, the carrier spam filter, and adding a contact as a favorite. Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/how-to-protect-your-parents-from-scams-the-compl-beat5.mp4."
+      "original_element": "Screen-record your own phone: silence unknown callers, the carrier spam filter, and adding a contact as a favorite. Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/how-to-protect-your-parents-from-scams-t--phone-settings.mp4."
     }
   },
   {
@@ -2793,7 +2811,7 @@
           "narration": "Step three, report it at IdentityTheft dot gov. It's the FTC's official site. You answer questions about what happened, and it creates an FTC Identity Theft Report plus a personalised recovery plan with pre-filled letters. That report matters: it's what you'll show businesses and the credit bureaus to get fraudulent accounts and debts removed. Some creditors may also ask for a police report; your local police can take one, bring your FTC report with you.",
           "on_screen_text": "Step 3: IdentityTheft.gov",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a simple government form with a check mark No text, no logos, no real people.",
-          "footage": "footage/scam-decoded/identity-theft-recovery-step-by-step-what-to-do-beat5.mp4"
+          "footage": "footage/scam-decoded/identity-theft-recovery-step-by-step-wha--3-report.mp4"
         },
         {
           "heading": "4. Repair",
@@ -2806,6 +2824,24 @@
           "narration": "If debt collectors call about a fraudulent debt, tell them in writing that it's the result of identity theft, include your report, and ask them to stop and to tell the original creditor. Don't pay a debt that isn't yours to make the calls stop. And watch out for recovery scams: anyone who contacts you offering to fix your identity theft for a large upfront fee is likely another scammer.",
           "on_screen_text": "Debt collectors and recovery scams",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone with a letter and a shield No text, no logos, no real people."
+        },
+        {
+          "heading": "Dev's week, day 1",
+          "narration": "Here's the whole process in one made-up case. Dev is thirty-one. On Monday a letter arrives from a store card he never opened, with a balance of two thousand three hundred dollars. Same day, he pulls all three credit reports at AnnualCreditReport dot com and finds the store card plus an inquiry for a phone contract. He freezes his credit at all three bureaus that evening, and calls the store's fraud line using the number on its website, not the one in the letter.",
+          "on_screen_text": "Day 1: the letter",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a young man at a desk opening a letter, a laptop showing three simple report panels. No text, no logos, no real people."
+        },
+        {
+          "heading": "Days 2 to 4",
+          "narration": "Tuesday, he files at IdentityTheft dot gov and downloads his FTC Identity Theft Report and the recovery plan. Wednesday, he changes his email password first, turns on two-step verification, then does his bank and phone carrier. Thursday, he sends disputes to each bureau with the report attached, and a letter to the store asking it to close the account and confirm in writing that he isn't responsible. Copies go in one folder, and the important letters go certified mail.",
+          "on_screen_text": "Days 2-4: report and dispute",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a tidy folder of letters, a calendar with Tuesday to Thursday ticked off, a padlock on an envelope. No text, no logos, no real people."
+        },
+        {
+          "heading": "Day 5 and after",
+          "narration": "Friday, a collector calls about the phone contract. Dev doesn't argue on the phone and doesn't pay a cent. He says it's identity theft, asks for the collector's address, and sends the report in writing. Over the next weeks the fraudulent accounts come off his reports one by one. What made it work wasn't luck. It was doing the five steps in order, keeping proof of everything, and freezing his credit on day one, so nothing new could be opened while he cleaned up.",
+          "on_screen_text": "Day 5: the collector call",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a phone on a desk next to a written letter, a calm man writing notes, a checklist with ticks. No text, no logos, no real people."
         },
         {
           "heading": "5. Prevent",
@@ -2829,7 +2865,7 @@
         "credittips",
         "scamdecoded"
       ],
-      "description": "What to do in the first week of identity theft: confirm, contain, report, repair, prevent.\n\nChapters\n0:00 Signs\n1:00 Confirm\n2:00 Contain\n3:30 Report\n5:00 Repair\n6:30 Prevent\n\nGeneral information, not legal advice.",
+      "description": "What to do in the first week of identity theft: confirm, contain, report, repair, prevent.\n\nChapters\n0:00 Signs\n0:33 1. Confirm\n1:02 2. Contain\n1:33 Freeze vs alert\n2:02 3. Report\n2:32 4. Repair\n3:01 Debt collectors\n3:29 Dev's week, day 1\n4:02 Days 2 to 4\n4:34 Day 5 and after\n5:08 5. Prevent\n5:35 Recap\n\nGeneral information, not legal advice.",
       "thumbnail_text": "ID theft: 5 steps",
       "sources": [
         "https://www.identitytheft.gov/",
@@ -2847,7 +2883,7 @@
         "Someone opened a card in my name. Now what?",
         "Identity theft: the first 7 days"
       ],
-      "original_element": "Screen-record IdentityTheft.gov (typed in): start a report, pick a category, stop before personal details. Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/identity-theft-recovery-step-by-step-what-to-do-beat5.mp4."
+      "original_element": "Screen-record IdentityTheft.gov (typed in): start a report, pick a category, stop before personal details. Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/identity-theft-recovery-step-by-step-wha--3-report.mp4."
     }
   },
   {
@@ -2872,7 +2908,7 @@
           "narration": "The credit freeze. It stops lenders from pulling your credit report, so most new credit accounts can't be opened in your name. It's free at Equifax, Experian and TransUnion by federal law, it doesn't affect your score, and existing accounts keep working. When you apply for credit, you lift it, online, and the bureaus must do that quickly. The downside is a little hassle when you apply for credit. For prevention, this is the strongest free tool there is.",
           "on_screen_text": "Freeze: free, strongest prevention",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a vault door with a padlock No text, no logos, no real people.",
-          "footage": "footage/scam-decoded/credit-freeze-vs-fraud-alert-vs-monitoring-what-beat2.mp4"
+          "footage": "footage/scam-decoded/credit-freeze-vs-fraud-alert-vs-monitori--freeze.mp4"
         },
         {
           "heading": "Fraud alert",
@@ -2905,6 +2941,30 @@
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. three simple figures each holding a different tool No text, no logos, no real people."
         },
         {
+          "heading": "Two neighbors, one breach",
+          "narration": "Let's make this concrete with two made-up neighbors, Ana and Marcus. Both get the same email from a retailer: their names, birthdates and Social Security numbers were exposed in a breach. Ana spends ten minutes that night freezing her credit at Equifax, Experian and TransUnion. Marcus signs up for a monitoring app from an ad and decides that's enough. Neither of them hears anything for two months.",
+          "on_screen_text": "Same breach, two outcomes",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: two neighboring front doors, each person reading the same breach email on a phone. No text, no logos, no real people."
+        },
+        {
+          "heading": "Month three",
+          "narration": "In month three, someone using their stolen details applies for a credit card in both names. For Ana, the lender can't pull her report because it's frozen, so the application dies right there. For Marcus, the card is approved. His monitoring app sends an alert the next day, which helps, but now he has an open account to close, a dispute to file, and an identity theft report to make at IdentityTheft dot gov. The alert told him fast. It just couldn't stop it.",
+          "on_screen_text": "Alert after, freeze before",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a credit card application stamped denied on one side, approved on the other, a phone alert bell. No text, no logos, no real people."
+        },
+        {
+          "heading": "What Marcus does next",
+          "narration": "So Marcus does what Ana did, a few months late: he freezes all three bureaus, adds an extended fraud alert with his identity theft report, and keeps the monitoring because he likes having someone help with the paperwork. That's a fair choice. The order is the lesson. Free freeze first, because it prevents. Monitoring second, if you want it, because it detects.",
+          "on_screen_text": "Freeze first, then extras",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a man at a laptop with three padlock icons closing, a small bell icon beside them. No text, no logos, no real people."
+        },
+        {
+          "heading": "The cost, side by side",
+          "narration": "Add up the cost. Ana spent ten minutes and zero dollars, and when she buys a car next spring she'll lift one freeze for a day and put it back. Marcus paid for a subscription, then spent evenings on the phone with the card issuer, writing dispute letters, and checking his reports for anything else. Nothing here makes Marcus careless. The ad simply sold him the wrong first step. If you only do one thing after a breach notice, do Ana's ten minutes tonight.",
+          "on_screen_text": "Ana: 10 minutes. Marcus: weeks",
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes: a stopwatch showing ten minutes on one side, a stack of letters and a calendar on the other. No text, no logos, no real people."
+        },
+        {
           "heading": "Disclosure",
           "narration": "The identity protection service linked below is Aura. It's an affiliate link, so we may earn a commission if you sign up, at no extra cost to you. Compare it against the free options first, and against other services. Nobody can promise you won't be a victim, and anyone who promises that is overselling.",
           "on_screen_text": "Affiliate disclosure",
@@ -2926,7 +2986,7 @@
         "identityprotection",
         "scamdecoded"
       ],
-      "description": "Credit freezes, fraud alerts, credit locks and identity monitoring compared: what each does, what it costs, and who needs which.\n\nChapters\n0:00 The four options\n1:00 Freeze\n2:30 Fraud alert\n3:30 Lock\n4:30 Monitoring\n6:00 Who needs what\n\nThe identity-protection service in our bio (Aura) is an affiliate link: we may earn a commission if you sign up, at no extra cost to you. You don't need a paid service to freeze your credit; that part is free.",
+      "description": "Credit freezes, fraud alerts, credit locks and identity monitoring compared: what each does, what it costs, and who needs which.\n\nChapters\n0:00 The four options\n0:36 Freeze\n1:08 Fraud alert\n1:41 Lock\n2:06 Monitoring\n2:30 Free monitoring\n2:53 Who needs what\n3:20 Two neighbors, one breach\n3:46 Month three\n4:20 What Marcus does next\n4:45 The cost, side by side\n5:18 Disclosure\n5:40 Recap\n\nThe identity-protection service in our bio (Aura) is an affiliate link: we may earn a commission if you sign up, at no extra cost to you. You don't need a paid service to freeze your credit; that part is free.",
       "thumbnail_text": "Freeze vs monitor",
       "sources": [
         "https://consumer.ftc.gov/articles/what-know-about-credit-freezes-and-fraud-alerts",
@@ -2944,7 +3004,7 @@
         "Do you need to pay for identity theft protection?",
         "Freeze, lock, alert or monitor? The honest answer"
       ],
-      "original_element": "Screen-record typing one credit bureau's freeze page address and finding the freeze button. Stop at sign-in. Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/credit-freeze-vs-fraud-alert-vs-monitoring-what-beat2.mp4."
+      "original_element": "Screen-record typing one credit bureau's freeze page address and finding the freeze button. Stop at sign-in. Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/credit-freeze-vs-fraud-alert-vs-monitori--freeze.mp4."
     }
   }
 ]

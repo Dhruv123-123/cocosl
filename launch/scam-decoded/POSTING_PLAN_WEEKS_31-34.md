@@ -22,7 +22,7 @@ Weekly themes and push: wk 31 teens and summer money (newsletter), wk 32 car and
 | #11 | Mon Jun 14 18:00 | TikTok | TikTok cut | face cam | Dad's 'final notice' warranty calls: 3 questions end them |
 | #12 | Tue Jun 15 19:30 | Instagram | Carousel | checklist | Selling a car online: 6 checks before you hand over the keys |
 | #13 | Wed Jun 16 12:00 | Reels + Shorts | Short | illustrated | 'Removed from Google today': 1 robocall business owners get |
-| #14 | Wed Jun 16 18:00 | TikTok | TikTok cut | quiz pause | Quiz: which of these 3 business calls is real? |
+| #14 | Wed Jun 16 18:00 | TikTok | TikTok cut | quiz pause | 3 calls to your business: only 1 is real |
 | #15 | Thu Jun 17 19:30 | Instagram | Carousel | comparison | Your car's warranty vs the 'final notice' caller: 4 differences |
 | #16 | Fri Jun 18 12:00 | Reels + Shorts | Short | face cam | Selling Dad's truck? 1 'buyer' who overpays by check |
 | #17 | Fri Jun 18 18:00 | TikTok | TikTok cut | walkthrough | Selling a car online: the overpaying buyer, played out |

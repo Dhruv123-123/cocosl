@@ -168,7 +168,7 @@ S(week=28, pillar=P_JOBS, look="illustrated", tt_look="quiz pause",
   ("Do this", "Get free help from your school's financial aid office. Never pay to apply or to claim a prize.",
    "Ask the aid office. Never pay.", "a school building with a help sign"),
  ],
- tt_title="Quiz: which of these 3 scholarship offers is the scam?",
+ tt_title="3 scholarship offers, 1 scam: can you spot it?",
  tt_hook="3 scholarship offers, 1 is real. Pause and pick before I tell you.",
  tt_extra=[
   ("Pause", "Pause. Offer A says you won, pay a fee to claim it. Offer B charges to file your FAFSA. Offer C is free, "
@@ -399,7 +399,7 @@ _AFTER = {
   ("Already deposited?", "Already deposited the check? Don't spend it and don't pay any vendor. Call your bank and tell them "
    "you think the check is fake, then report the 'employer' at report fraud dot f t c dot gov.",
    "Deposited it? Call your bank.", "a bank building with a phone"),
- "Quiz: which of these 3 scholarship offers is the scam?":
+ "3 scholarship offers, 1 scam: can you spot it?":
   ("Free help", "Want real help? Your school's financial aid office is free, the FAFSA is free, and real scholarship searches "
    "don't charge. If anyone asks for a fee to apply or to claim money, close the tab. And never give a bank account number "
    "to claim a scholarship you didn't apply for.", "Real help is free", "a school building with a help sign"),

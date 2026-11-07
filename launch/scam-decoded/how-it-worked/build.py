@@ -77,7 +77,8 @@ def item(p):
                                     for h, n in rows],
                        "cta": CTA_TIKTOK, "caption": p["caption"], "hashtags": p["hashtags"], "description": desc,
                        "thumbnail_text": p["thumb"], "sources": p["sources"], "claims_to_verify": p["claims"],
-                       "title_variants": p["title_variants"]}}
+                       "title_variants": p["title_variants"],
+                       "playlist": "How the scam actually worked"}}
 
 
 def series_md(items):
