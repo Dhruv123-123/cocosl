@@ -16,6 +16,19 @@ posts, recording sessions, a 15-minutes-a-day routine, each brand's launch day a
 
 Nothing in this repo sends, posts or charges on its own. You press every button.
 
+### Decisions only you can make (5 minutes, before Stage 4)
+
+Each one has a default, so nothing waits on these. Change a default only if you want to.
+
+| Decision | Default | To change it |
+|---|---|---|
+| Money Made Simple Day 1 | **Mon Nov 16** | `python scripts/launch_week.py --day1 YYYY-MM-DD` (PR #5) rewrites `launch/money-made-simple/LAUNCH_WEEK.md` |
+| The savings challenge's Sun Nov 15 kickoff, which falls before Day 1 | post it on Day 1 at 19:00 on TikTok | or drop it |
+| Scam Decoded Day 1 | **Mon Nov 30** (Cyber Monday, MMS day 15); Mon Nov 23 is the earlier option | the Day 1 line in `launch/scam-decoded/LAUNCH_WEEK.md` (PR #9) |
+| Site domain | the Pinterest pins say `.co`, the links go to `.netlify.app` | buy the domain before the first pin, or edit the pins to the Netlify URL |
+| Brand 3 | 1099 Money once the five Stage 9 gates pass (around Jan 10) | see Stage 9 |
+| B2B cold email (PR #13) | parked | say yes to start it; pitching is timed to late Jan for NCPW |
+
 ---
 
 ## Stage 0 · Merge the PRs (15 min, do first)
@@ -151,6 +164,12 @@ Needs PR #4 merged. Turns followers into an email list that sees the products 3 
       pitch emails for buyers). 30 min
 - [ ] Put `https://your-site/links/` in every profile's link in bio. 5 min
 - [ ] Submit `sitemap.xml` to Google Search Console and Bing Webmaster Tools. 10 min
+- [ ] Scheduled articles: Netlify > Build hooks > add one, then put its URL in the GitHub secret
+      `NETLIFY_BUILD_HOOK`. The scheduled rebuild only deploys on days something publishes (about 69 days in
+      2027), and pushes that don't touch `site/` are skipped. 5 min
+- [ ] Optional 7-day Money Basics course (PR #4): `factory sequence-export money-made-simple --sequence
+      money-basics --for sender`, then turn that automation on in your provider (signup source
+      `money-basics-7-days`). 15 min
 
 ## Stage 6 · Voice and writing keys (≈ 45 min)
 
