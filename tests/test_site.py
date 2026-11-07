@@ -631,3 +631,71 @@ def test_apps_tools_linked_and_tools_page(tmp_path):
     out2 = _build(tmp_path / "noapps", "https://example.org", APPS_URL="")
     assert not any("tools.example.net" in p.read_text() for p in out2.rglob("*.html"))
     assert (out2 / "tools" / "index.html").is_file()
+
+
+NEW_JAN_ARTICLES = ["first-job-401k-setup", "car-repair-sinking-fund", "how-to-calculate-net-worth",
+                    "debt-consolidation-explained", "50-30-20-rule", "how-to-save-for-a-house-down-payment",
+                    "how-to-stop-living-paycheck-to-paycheck", "what-to-do-with-your-tax-refund"]
+
+
+def test_january_articles_are_long_dated_and_linked(tmp_path):
+    sys.path.insert(0, str(SITE))
+    import build
+    dates = []
+    for slug in NEW_JAN_ARTICLES:
+        meta, body = build.parse_front_matter((SITE / "content" / "blog" / f"{slug}.md").read_text())
+        prose = re.sub(r"<!--.*?-->", "", body, flags=re.S)
+        assert len(prose.split()) >= 1500, (slug, len(prose.split()))
+        assert re.search(r"^## A (?:worked )?example|^## A worked example", prose, re.M) or "## A worked example" in prose, slug
+        assert "fictional" in prose, slug  # worked examples are labelled
+        assert str(meta["date"]).startswith("2027-01"), slug
+        assert len(meta["seo_title"]) <= 60 and len(meta["description"]) <= 155, slug
+        dates.append(str(meta["date"]))
+    assert len(set(dates)) == 8  # one per publish day, staggered through January
+    # hidden before their date, live after
+    early = _build(tmp_path, "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2026-12-31")
+    assert not any((early / "blog" / s).exists() for s in NEW_JAN_ARTICLES)
+    late = _build(tmp_path / "late", "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2027-01-31")
+    sm = (late / "sitemap.xml").read_text()
+    for s in NEW_JAN_ARTICLES:
+        assert f"/blog/{s}/" in sm, s
+    # older articles start linking to them once they're live
+    assert 'href="/blog/first-job-401k-setup/"' in (late / "blog" / "401k-match-explained" / "index.html").read_text()
+    assert 'href="/blog/how-to-calculate-net-worth/"' in (late / "ask" / "index.html").read_text()
+
+
+def test_sitemap_and_robots_check_catches_problems(tmp_path):
+    sys.path.insert(0, str(SITE / "tools"))
+    import check_site
+    out = _build(tmp_path, "https://example.org")
+    assert not check_site.check(out, "")[0]
+    sm = out / "sitemap.xml"
+    good = sm.read_text()
+    sm.write_text(good.replace("<url><loc>https://example.org/about/</loc>", "<url><loc>https://example.org/gone/</loc>")
+                  .replace("</urlset>", "<url><loc>https://example.org/free/thanks/</loc></url></urlset>"))
+    (out / "robots.txt").write_text("User-agent: *\nDisallow: /blog/\n")
+    text = "\n".join(check_site.check(out, "")[0])
+    assert "https://example.org/gone/ has no built page" in text
+    assert "https://example.org/free/thanks/ is noindex" in text
+    assert "indexable page https://example.org/about/ is missing" in text
+    assert "no 'Sitemap: https://example.org/sitemap.xml' line" in text
+    assert "'Disallow: /blog/' blocks" in text
+    sm.write_text("<urlset")
+    assert any("not valid XML" in e for e in check_site.check(out, "")[0])
+
+
+def test_coming_soon_product_has_unique_form_ids(tmp_path):
+    import shutil
+    site2 = tmp_path / "site2"
+    shutil.copytree(SITE, site2, ignore=shutil.ignore_patterns("public", "pins"))
+    src = (site2 / "content" / "products" / "the-20-minute-budget.md").read_text()
+    src = src.replace("---\n", "---\nstatus: coming-soon\n", 1).replace("slug: the-20-minute-budget", "slug: soon-kit")
+    (site2 / "content" / "products" / "soon-kit.md").write_text(src)
+    e = {**os.environ, "SITE_OUT": str(tmp_path / "out"), "SITE_URL": "https://example.org", "BLOG_SHOW_SCHEDULED": "1"}
+    e.pop("URL", None)
+    subprocess.run([sys.executable, str(site2 / "build.py")], check=True, env=e, capture_output=True)
+    page = next(p for p in (tmp_path / "out" / "products").glob("*/index.html") if "coming-soon" in p.read_text() or "Not on sale yet" in p.read_text())
+    html = page.read_text()
+    ids = re.findall(r'\sid="([^"]+)"', html)
+    assert len(ids) == len(set(ids)), [i for i in ids if ids.count(i) > 1]
+    assert html.count("Not on sale yet") == 2

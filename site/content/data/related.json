@@ -1,5 +1,5 @@
 {
- "_readme": "Internal links for each article (/blog/<slug>/). 'related': up to 4 article slugs, best first; the page shows the first 3 that are published. 'tool': a key from 'tools', shown as the free tool for that article. tests/test_site.py checks every article has an entry.",
+ "_readme": "Internal links for each article (/blog/<slug>/). 'related': article slugs, best first; the page shows the first 3 that are published. 'tool': a key from 'tools', shown as the free tool for that article. tests/test_site.py checks every article has an entry.",
  "tools": {
   "budget": {
    "title": "Budget by salary",
@@ -35,6 +35,7 @@
  "articles": {
   "401k-match-explained": {
    "related": [
+    "first-job-401k-setup",
     "roth-vs-traditional-ira",
     "how-to-start-investing-with-100-a-month",
     "expense-ratios-explained",
@@ -89,6 +90,7 @@
   },
   "best-tax-software-for-simple-returns": {
    "related": [
+    "what-to-do-with-your-tax-refund",
     "401k-match-explained",
     "roth-vs-traditional-ira",
     "how-to-make-a-budget-you-will-keep",
@@ -125,6 +127,7 @@
   },
   "debt-avalanche-vs-snowball": {
    "related": [
+    "debt-consolidation-explained",
     "how-credit-scores-work",
     "how-to-make-a-budget-you-will-keep",
     "find-and-cancel-subscriptions",
@@ -134,6 +137,7 @@
   },
   "empower-review": {
    "related": [
+    "how-to-calculate-net-worth",
     "expense-ratios-explained",
     "401k-match-explained",
     "how-to-start-investing-with-100-a-month",
@@ -152,6 +156,7 @@
   },
   "find-and-cancel-subscriptions": {
    "related": [
+    "how-to-stop-living-paycheck-to-paycheck",
     "how-to-make-a-budget-you-will-keep",
     "sinking-funds-explained",
     "budgeting-app-vs-spreadsheet",
@@ -170,6 +175,7 @@
   },
   "high-yield-savings-vs-money-market": {
    "related": [
+    "how-to-save-for-a-house-down-payment",
     "how-to-build-an-emergency-fund",
     "sinking-funds-explained",
     "how-to-open-a-high-yield-savings-account",
@@ -215,6 +221,7 @@
   },
   "how-to-make-a-budget-you-will-keep": {
    "related": [
+    "50-30-20-rule",
     "sinking-funds-explained",
     "how-to-build-an-emergency-fund",
     "budgeting-app-vs-spreadsheet",
@@ -287,6 +294,7 @@
   },
   "sinking-funds-explained": {
    "related": [
+    "car-repair-sinking-fund",
     "how-to-build-an-emergency-fund",
     "how-to-make-a-budget-you-will-keep",
     "find-and-cancel-subscriptions",
@@ -318,6 +326,78 @@
     "how-to-make-a-budget-you-will-keep",
     "how-to-choose-a-budgeting-app",
     "monarch-money-review"
+   ],
+   "tool": "budget"
+  },
+  "first-job-401k-setup": {
+   "related": [
+    "401k-match-explained",
+    "roth-vs-traditional-ira",
+    "expense-ratios-explained",
+    "how-to-build-an-emergency-fund"
+   ],
+   "tool": "budget"
+  },
+  "car-repair-sinking-fund": {
+   "related": [
+    "sinking-funds-explained",
+    "how-to-build-an-emergency-fund",
+    "how-to-make-a-budget-you-will-keep",
+    "how-to-open-a-high-yield-savings-account"
+   ],
+   "tool": "budget"
+  },
+  "how-to-calculate-net-worth": {
+   "related": [
+    "how-to-start-investing-with-100-a-month",
+    "debt-avalanche-vs-snowball",
+    "401k-match-explained",
+    "empower-review"
+   ],
+   "tool": "quiz"
+  },
+  "debt-consolidation-explained": {
+   "related": [
+    "debt-avalanche-vs-snowball",
+    "how-credit-scores-work",
+    "find-and-cancel-subscriptions",
+    "how-to-make-a-budget-you-will-keep"
+   ],
+   "tool": "debt"
+  },
+  "50-30-20-rule": {
+   "related": [
+    "how-to-make-a-budget-you-will-keep",
+    "sinking-funds-explained",
+    "budgeting-app-vs-spreadsheet",
+    "how-to-build-an-emergency-fund"
+   ],
+   "tool": "budget"
+  },
+  "how-to-save-for-a-house-down-payment": {
+   "related": [
+    "high-yield-savings-vs-money-market",
+    "how-to-open-a-high-yield-savings-account",
+    "how-to-build-an-emergency-fund",
+    "sinking-funds-explained"
+   ],
+   "tool": "col"
+  },
+  "how-to-stop-living-paycheck-to-paycheck": {
+   "related": [
+    "how-to-make-a-budget-you-will-keep",
+    "find-and-cancel-subscriptions",
+    "how-to-build-an-emergency-fund",
+    "50-30-20-rule"
+   ],
+   "tool": "budget"
+  },
+  "what-to-do-with-your-tax-refund": {
+   "related": [
+    "how-to-build-an-emergency-fund",
+    "debt-avalanche-vs-snowball",
+    "roth-vs-traditional-ira",
+    "best-tax-software-for-simple-returns"
    ],
    "tool": "budget"
   }

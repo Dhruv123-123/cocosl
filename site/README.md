@@ -317,6 +317,17 @@ pages link rent-vs-buy, paycheck and afford-it, and /debt-payoff/ links card-min
   list or `###` sub-headings are the steps, or `steps` for `## Step N:` headings. Add `howto_time: PT20M` if the
   article says how long it takes. Six articles use it.
 
+## Search Console and the sitemap check
+
+`public/sitemap.xml` lists every indexable page that's live on the build date. `robots.txt` points to it and blocks
+only the email previews and thank-you pages. `tools/check_site.py` (the deploy check) now fails if the sitemap
+isn't valid XML, lists a missing, redirected, noindex or off-site URL, or leaves out an indexable page, or if
+robots.txt has no `Sitemap:` line or blocks a listed URL.
+
+To verify the site in Google Search Console, put the `content` value of Google's meta tag in
+`site.json > search_verification > google` (Bing's goes in `bing`), or set env `GOOGLE_SITE_VERIFICATION`. The
+home page then carries the tag. Setup steps for Dhruv: the "Google Search Console setup: Money Made Simple" doc.
+
 ## Page speed (Core Web Vitals)
 
 Lighthouse on Nov 7 2026 scored 100 for performance, accessibility and SEO on 11 key pages, both mobile and desktop.

@@ -268,8 +268,10 @@ def load_dir(name: str) -> list[dict]:
 
 # ----------------------------------------------------------------- templates
 def email_form(source: str, button: str = "Send me the free reset", compact: bool = False,
-               thanks_path: str = "/free/thanks/") -> str:
+               thanks_path: str = "/free/thanks/", field_id: str = "") -> str:
+    """field_id: a distinct id for a second form with the same source on one page (ids must be unique)."""
     e = CFG["email"]
+    fid = field_id or f"em-{source}"
     provider = e.get("provider", "netlify")
     thanks = u(thanks_path)
     field = e.get("email_field") or {
@@ -298,8 +300,8 @@ def email_form(source: str, button: str = "Send me the free reset", compact: boo
     return f"""<form class="signup-form{' compact' if compact else ''}" method="post" action="{esc(action)}"{attrs} data-thanks="{thanks}">
   {extra}
   <label class="hp" aria-hidden="true">Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
-  <label class="sr" for="em-{esc(source)}">Email address</label>
-  <input id="em-{esc(source)}" type="email" name="{esc(field)}" required autocomplete="email" inputmode="email" placeholder="you@example.com">
+  <label class="sr" for="{esc(fid)}">Email address</label>
+  <input id="{esc(fid)}" type="email" name="{esc(field)}" required autocomplete="email" inputmode="email" placeholder="you@example.com">
   <button type="submit">{ab("magnet", button, CFG.get("ab_test", {}).get("magnet_button", {}).get("b", button)) if button == CFG.get("ab_test", {}).get("magnet_button", {}).get("a") else esc(button)}</button>
 </form>
 <p class="form-note">{note} <a href="{u('/privacy/')}">Privacy</a>.</p>"""
@@ -561,6 +563,17 @@ def article_og(item: dict, section: str) -> dict:
             "article:author": editor()["name"], "article:section": section}
 
 
+def search_verification_tags() -> str:
+    """Home-page meta tags that prove site ownership to Google Search Console and Bing Webmaster Tools
+    (site.json > search_verification: {"google": "<content value>", "bing": "<content value>"}; env
+    GOOGLE_SITE_VERIFICATION overrides google)."""
+    v = dict(CFG.get("search_verification", {}))
+    if os.environ.get("GOOGLE_SITE_VERIFICATION"):
+        v["google"] = os.environ["GOOGLE_SITE_VERIFICATION"]
+    names = {"google": "google-site-verification", "bing": "msvalidate.01"}
+    return "".join(f'<meta name="{names[k]}" content="{esc(val)}">\n' for k, val in v.items() if k in names and val)
+
+
 def auto_breadcrumbs(path: str, title: str, body: str, jsonld: list, noindex: bool) -> dict | None:
     """BreadcrumbList for every indexed page that doesn't define its own: built from the visible
     <p class="crumbs"> trail when there is one (Home is added if missing), else Home > the page's h1."""
@@ -625,6 +638,7 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
 <meta name="twitter:description" content="{esc(description)}">
 <meta name="twitter:image" content="{esc(absu(image))}">
 <meta name="theme-color" content="#0b1d13">
+{search_verification_tags() if path == "/" else ""}
 <link rel="icon" type="image/png" href="{u('/img/favicon.png')}">
 <link rel="apple-touch-icon" href="{u('/img/apple-touch-icon.png')}">
 <link rel="alternate" type="application/rss+xml" title="{esc(CFG['name'])}" href="{u('/feed.xml')}">
@@ -899,12 +913,16 @@ def build() -> list[str]:
         body_html, _ = markdown(p["body"], shortcode_factory(products, f"product-{p['slug']}"))
         faq = extract_faq(p["body"])
         if p.get("status") == "coming-soon":
-            buy = (f'<p class="buy-note">Not on sale yet. Join the free email and you\'ll hear the day it opens.</p>'
-                   f'{email_form(f"waitlist-{p["slug"]}", "Tell me when it opens")}')
+            note = '<p class="buy-note">Not on sale yet. Join the free email and you\'ll hear the day it opens.</p>'
+            buy = note + email_form(f"waitlist-{p['slug']}", "Tell me when it opens")
+            # the bottom form keeps the same source tag but needs its own field id
+            buy_bottom = note + email_form(f"waitlist-{p['slug']}", "Tell me when it opens",
+                                           field_id=f"em-waitlist-{p['slug']}-bottom")
         else:
             buy = (f'<a class="btn big plausible-event-name=Product+Click" href="{esc(p["buy_url"])}" rel="noopener" data-buy="{esc(p["slug"])}">'
                    f'{esc(p.get("buy_label", "Get instant access"))}</a>'
                    f'<p class="buy-note">{esc(p.get("guarantee", ""))}</p>')
+            buy_bottom = buy
         ld = [{"@context": "https://schema.org", "@type": "Product", "name": p["title"],
                "description": p["short"], "image": absu(p["image"]), "brand": {"@type": "Brand", "name": CFG["name"]},
                **({"offers": {"@type": "Offer", "price": p.get("sale_price") or p["price"], "priceCurrency": "USD",
@@ -929,7 +947,7 @@ def build() -> list[str]:
   <div class="prose">
 {body_html}
   </div>
-  <div class="buy-again">{price_html(p)}{buy}</div>
+  <div class="buy-again">{price_html(p)}{buy_bottom}</div>
   <p class="disclaimer">{esc(CFG['disclaimer'])}</p>
 </article>"""
         write(path, layout(title=p.get("seo_title", p["title"]), description=p["short"], path=path, body=body,

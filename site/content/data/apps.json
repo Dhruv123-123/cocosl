@@ -12,7 +12,9 @@
     "roth-vs-traditional-ira",
     "best-tax-software-for-simple-returns",
     "freetaxusa-review",
-    "how-to-make-a-budget-you-will-keep"
+    "how-to-make-a-budget-you-will-keep",
+    "first-job-401k-setup",
+    "50-30-20-rule"
    ]
   },
   {
@@ -23,7 +25,8 @@
    "blurb": "compare Roth and traditional IRA or 401(k) contributions at your tax rates.",
    "articles": [
     "roth-vs-traditional-ira",
-    "where-to-open-a-roth-ira"
+    "where-to-open-a-roth-ira",
+    "first-job-401k-setup"
    ]
   },
   {
@@ -34,7 +37,8 @@
    "blurb": "a car, a phone or anything big: cash vs loan vs buy now, pay later, and how it fits your month.",
    "articles": [
     "how-to-make-a-budget-you-will-keep",
-    "sinking-funds-explained"
+    "sinking-funds-explained",
+    "car-repair-sinking-fund"
    ]
   },
   {
@@ -45,7 +49,8 @@
    "blurb": "find every recurring charge in a bank statement and what it costs a year.",
    "articles": [
     "find-and-cancel-subscriptions",
-    "rocket-money-review"
+    "rocket-money-review",
+    "how-to-stop-living-paycheck-to-paycheck"
    ]
   },
   {
@@ -54,7 +59,9 @@
    "title": "Bill negotiation tracker",
    "path": "/budget/bills.html",
    "blurb": "bills, promo end dates and call scripts to lower them yourself.",
-   "articles": []
+   "articles": [
+    "how-to-stop-living-paycheck-to-paycheck"
+   ]
   },
   {
    "key": "deals",
@@ -74,7 +81,8 @@
     "how-to-build-an-emergency-fund",
     "high-yield-savings-vs-money-market",
     "how-to-open-a-high-yield-savings-account",
-    "is-my-savings-app-fdic-insured"
+    "is-my-savings-app-fdic-insured",
+    "what-to-do-with-your-tax-refund"
    ]
   },
   {
@@ -86,7 +94,8 @@
    "articles": [
     "ally-bank-review",
     "cit-bank-review",
-    "sofi-review"
+    "sofi-review",
+    "how-to-save-for-a-house-down-payment"
    ]
   },
   {
@@ -108,7 +117,8 @@
    "blurb": "how long minimum payments take and what they cost.",
    "articles": [
     "how-credit-scores-work",
-    "self-credit-builder-review"
+    "self-credit-builder-review",
+    "debt-consolidation-explained"
    ]
   },
   {
@@ -144,7 +154,9 @@
    "title": "Rent vs buy calculator",
    "path": "/money-calculators/rent-vs-buy/",
    "blurb": "owning costs vs renting and investing the difference, with the break-even year.",
-   "articles": []
+   "articles": [
+    "how-to-save-for-a-house-down-payment"
+   ]
   },
   {
    "key": "networth",
@@ -155,7 +167,8 @@
    "articles": [
     "empower-review",
     "monarch-money-review",
-    "how-to-start-investing-with-100-a-month"
+    "how-to-start-investing-with-100-a-month",
+    "how-to-calculate-net-worth"
    ]
   },
   {
@@ -198,7 +211,9 @@
    "title": "Rate My Budget",
    "path": "/budget/rate.html",
    "blurb": "a budget score in 2 minutes and three next moves.",
-   "articles": []
+   "articles": [
+    "50-30-20-rule"
+   ]
   },
   {
    "key": "holiday",
