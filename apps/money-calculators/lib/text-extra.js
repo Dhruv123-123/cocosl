@@ -1,4 +1,4 @@
-// Labels and result text for the student loan chooser and rent vs buy calculator, in English and Spanish.
+// Labels and result text for the student loan chooser, rent vs buy, tax refund estimator and debt chart, in English and Spanish.
 import { money } from './format.js';
 
 const yrs = (m, es) => {
@@ -10,6 +10,12 @@ const yrs = (m, es) => {
 
 const SL_SOURCES = '<a href="https://studentaid.gov/articles/save/" target="_blank" rel="noopener">StudentAid.gov</a>, <a href="https://edfinancial.studentaid.gov/income-driven-repaymentinformation-center/repayment-plan-comparison" target="_blank" rel="noopener">FSA plan comparison</a>';
 
+const TR_SOURCES = (es) => `${es ? 'Fuentes' : 'Sources'}: <a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf" target="_blank" rel="noopener">IRS Rev. Proc. 2025-32</a> (${es ? 'tramos, deducción estándar, crédito por hijos' : 'brackets, standard deduction, child tax credit'}), <a href="https://www.irs.gov/credits-deductions/individuals/child-tax-credit" target="_blank" rel="noopener">IRS: Child Tax Credit</a>, <a href="https://www.irs.gov/newsroom/working-families-tax-cuts-tax-deductions-for-working-americans-and-seniors" target="_blank" rel="noopener">IRS: ${es ? 'deducciones por propinas, horas extra y mayores de 65' : 'tips, overtime and senior deductions'}</a>.`;
+const EITC_URL = 'https://www.irs.gov/credits-deductions/individuals/earned-income-tax-credit/use-the-eitc-assistant';
+const W4_URL = 'https://www.irs.gov/individuals/tax-withholding-estimator';
+const pct = (x) => `${Math.round(x * 1000) / 10}%`;
+const trRow = (label, v, neg) => (v ? `<tr><td>${label}</td><td>${neg ? '−' : ''}${money(v, 2)}</td></tr>` : '');
+
 export const EXTRA = {
   en: {
     f: {
@@ -19,6 +25,9 @@ export const EXTRA = {
       slRegion: 'Where you live', contiguous: 'Lower 48 states or DC', alaska: 'Alaska', hawaii: 'Hawaii',
       rbPrice: 'Home price ($)', rbDown: 'Down payment (%)', rbRate: 'Mortgage rate (%)', rbTerm: 'Mortgage length (years)', rbTax: 'Property tax (% of value a year)', rbIns: 'Home insurance a year ($)', rbHoa: 'HOA a month ($)', rbUpkeep: 'Upkeep (% of value a year)', rbClosing: 'Closing costs to buy (%)', rbSelling: 'Costs to sell (%)', rbApp: 'Home value growth a year (%)',
       rbRent: 'Rent a month ($)', rbRentGrowth: 'Rent increase a year (%)', rbRentersIns: "Renter's insurance a month ($)", rbReturn: 'Investment return a year (%)', rbYears: 'Years you plan to stay',
+      trFiling: 'Filing status', trSingle: 'Single', trMarried: 'Married filing jointly', trHoh: 'Head of household',
+      trWages: 'Wages for 2026, box 1 of your W-2 ($)', trWithheld: 'Federal tax withheld, box 2 ($)', trOther: 'Other taxable income, like interest ($)', trEstimated: 'Estimated tax payments you made ($)',
+      trKids: 'Children under 17', trOtherDeps: 'Other dependents', trTips: 'Tips you were paid ($)', trOvertime: 'Overtime premium, the extra half ($)', trSeniors: 'People 65 or older on the return',
     },
     plan: { standard: 'Standard (10 years)', graduated: 'Graduated (10 years)', extended: 'Extended (25 years)', ibr: 'Income-Based (IBR)', rap: 'Repayment Assistance Plan (RAP)', tiered: 'Tiered Standard' },
     loans(r) {
@@ -46,6 +55,22 @@ export const EXTRA = {
         ${r.pmiLikely ? '<p>With less than 20% down, lenders usually add mortgage insurance (PMI), which is not included here, so buying costs a bit more than shown.</p>' : ''}
         <p class="note">Estimate only. It assumes whoever pays less each month invests the difference. It leaves out tax deductions, PMI and taxes on gains. Home prices, rents and returns are your guesses, so try a few.</p>`;
     },
+    refund(r) {
+      const head = r.refund >= 0 ? `Estimated refund: ${money(r.refund, 2)}` : `You may owe: ${money(-r.refund, 2)}`;
+      const rows = [
+        trRow('Total income (AGI)', r.agi), trRow('Standard deduction', r.standard, true), trRow('No tax on tips', r.tipsDed, true), trRow('No tax on overtime', r.otDed, true), trRow('Senior deduction (65+)', r.seniorDed, true),
+        trRow('Taxable income', r.taxable) || '<tr><td>Taxable income</td><td>$0.00</td></tr>', trRow('Tax before credits', r.tax), trRow('Child and dependent credits used', r.nonrefundable, true),
+        `<tr><td><b>Your 2026 federal income tax</b></td><td><b>${money(r.owed, 2)}</b></td></tr>`, trRow('Already paid (withholding and estimates)', r.paid), trRow('Refundable child credit', r.refundableCredit),
+      ].join('');
+      return `<p class="big">${head}</p>
+        <p>Your tax comes to <b>${money(r.owed, 2)}</b>, an effective rate of ${pct(r.effective)}. Your top bracket is ${pct(r.marginal)}.${r.refund >= 0 ? ` You paid in ${money(r.paid, 2)}${r.refundableCredit ? ` and get ${money(r.refundableCredit, 2)} of refundable child credit` : ''}, so the difference comes back to you.` : ' You paid in less than you owe. File by April 15, 2027 and pay the balance to avoid penalties.'}</p>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="How we got there"><table class="split-table"><tbody>${rows}</tbody></table></div>
+        ${r.bigRefund ? `<p>A refund this size is money you lent the IRS for free. To get it in your paychecks instead, use the <a href="${W4_URL}" target="_blank" rel="noopener">IRS Tax Withholding Estimator</a> and give your employer a new W-4.</p>` : ''}
+        ${r.owesMuch ? `<p>To avoid owing next year, raise your withholding with the <a href="${W4_URL}" target="_blank" rel="noopener">IRS Tax Withholding Estimator</a>.</p>` : ''}
+        ${r.eitcMaybe ? `<p>You may also qualify for the Earned Income Tax Credit, worth up to $8,231 for 2026, which would add to your refund. It isn't included here. Check with the <a href="${EITC_URL}" target="_blank" rel="noopener">IRS EITC Assistant</a>.</p>` : ''}
+        <p class="note">Estimate for the 2026 tax year (the return you file in early 2027), using the standard deduction. It leaves out itemizing, the EITC, education and other credits, self-employment tax and state tax. The tips and overtime deductions shrink above $150,000 of income ($300,000 joint), and the senior deduction above $75,000 ($150,000 joint); their phase-out rates come from the law, so check the final IRS forms. ${TR_SOURCES(false)}</p>`;
+    },
+    debtChart: (start, months) => `Total debt falls from ${start} to $0 in ${yrs(months)}`, debtLegendA: 'Avalanche', debtLegendS: 'Snowball', debtChartTitle: 'Total balance over time', debtChartNow: 'Now', debtSame: 'Same order here, so the lines overlap.', debtChartEnd: (m) => `${yrs(m)}`,
   },
   es: {
     f: {
@@ -55,6 +80,9 @@ export const EXTRA = {
       slRegion: 'Dónde vives', contiguous: 'Los 48 estados contiguos o DC', alaska: 'Alaska', hawaii: 'Hawái',
       rbPrice: 'Precio de la casa ($)', rbDown: 'Enganche (%)', rbRate: 'Tasa de la hipoteca (%)', rbTerm: 'Plazo de la hipoteca (años)', rbTax: 'Impuesto predial (% del valor al año)', rbIns: 'Seguro de la casa al año ($)', rbHoa: 'HOA al mes ($)', rbUpkeep: 'Mantenimiento (% del valor al año)', rbClosing: 'Costos de cierre al comprar (%)', rbSelling: 'Costos al vender (%)', rbApp: 'Aumento del valor de la casa al año (%)',
       rbRent: 'Renta al mes ($)', rbRentGrowth: 'Aumento de la renta al año (%)', rbRentersIns: 'Seguro de inquilino al mes ($)', rbReturn: 'Rendimiento de inversión al año (%)', rbYears: 'Años que piensas quedarte',
+      trFiling: 'Estado civil para la declaración', trSingle: 'Soltero', trMarried: 'Casados, declaración conjunta', trHoh: 'Cabeza de familia',
+      trWages: 'Salario de 2026, casilla 1 de tu W-2 ($)', trWithheld: 'Impuesto federal retenido, casilla 2 ($)', trOther: 'Otros ingresos gravables, como intereses ($)', trEstimated: 'Pagos de impuesto estimado que hiciste ($)',
+      trKids: 'Hijos menores de 17', trOtherDeps: 'Otros dependientes', trTips: 'Propinas que recibiste ($)', trOvertime: 'Pago extra por horas extra, la mitad adicional ($)', trSeniors: 'Personas de 65 años o más en la declaración',
     },
     plan: { standard: 'Estándar (10 años)', graduated: 'Graduado (10 años)', extended: 'Extendido (25 años)', ibr: 'Basado en ingresos (IBR)', rap: 'Plan de Asistencia de Pago (RAP)', tiered: 'Estándar escalonado' },
     loans(r) {
@@ -81,5 +109,21 @@ export const EXTRA = {
         ${r.pmiLikely ? '<p>Con menos de 20% de enganche, el banco suele cobrar seguro hipotecario (PMI), que no está incluido.</p>' : ''}
         <p class="note">Solo una estimación. Supone que quien paga menos cada mes invierte la diferencia. No incluye deducciones de impuestos, PMI ni impuestos sobre ganancias.</p>`;
     },
+    refund(r) {
+      const head = r.refund >= 0 ? `Reembolso estimado: ${money(r.refund, 2)}` : `Podrías deber: ${money(-r.refund, 2)}`;
+      const rows = [
+        trRow('Ingreso total (AGI)', r.agi), trRow('Deducción estándar', r.standard, true), trRow('Sin impuesto sobre propinas', r.tipsDed, true), trRow('Sin impuesto sobre horas extra', r.otDed, true), trRow('Deducción para mayores de 65', r.seniorDed, true),
+        trRow('Ingreso gravable', r.taxable) || '<tr><td>Ingreso gravable</td><td>$0.00</td></tr>', trRow('Impuesto antes de créditos', r.tax), trRow('Créditos por hijos y dependientes usados', r.nonrefundable, true),
+        `<tr><td><b>Tu impuesto federal de 2026</b></td><td><b>${money(r.owed, 2)}</b></td></tr>`, trRow('Ya pagado (retenciones y estimados)', r.paid), trRow('Crédito reembolsable por hijos', r.refundableCredit),
+      ].join('');
+      return `<p class="big">${head}</p>
+        <p>Tu impuesto es de <b>${money(r.owed, 2)}</b>, una tasa efectiva de ${pct(r.effective)}. Tu tramo más alto es ${pct(r.marginal)}.${r.refund >= 0 ? ` Pagaste ${money(r.paid, 2)}${r.refundableCredit ? ` y recibes ${money(r.refundableCredit, 2)} de crédito reembolsable por hijos` : ''}, así que la diferencia te regresa.` : ' Pagaste menos de lo que debes. Declara antes del 15 de abril de 2027 y paga el saldo para evitar multas.'}</p>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Cómo llegamos al resultado"><table class="split-table"><tbody>${rows}</tbody></table></div>
+        ${r.bigRefund ? `<p>Un reembolso así es dinero que le prestaste gratis al IRS. Para recibirlo en tus cheques, usa el <a href="${W4_URL}" target="_blank" rel="noopener">estimador de retenciones del IRS</a> (en inglés) y dale un W-4 nuevo a tu empleador.</p>` : ''}
+        ${r.owesMuch ? `<p>Para no deber el próximo año, sube tu retención con el <a href="${W4_URL}" target="_blank" rel="noopener">estimador de retenciones del IRS</a>.</p>` : ''}
+        ${r.eitcMaybe ? `<p>También podrías calificar para el Crédito por Ingreso del Trabajo (EITC), de hasta $8,231 en 2026, que aumentaría tu reembolso. No está incluido aquí. Revísalo con el <a href="${EITC_URL}" target="_blank" rel="noopener">asistente del EITC del IRS</a>.</p>` : ''}
+        <p class="note">Estimación para el año fiscal 2026 (la declaración que presentas a inicios de 2027), con la deducción estándar. No incluye deducciones detalladas, el EITC, créditos de educación u otros, impuesto de trabajo por cuenta propia ni impuesto estatal. Las deducciones por propinas y horas extra bajan con ingresos de más de $150,000 ($300,000 en conjunta), y la de mayores de 65 con más de $75,000 ($150,000 en conjunta); sus tasas de reducción vienen de la ley, así que revisa los formularios finales del IRS. ${TR_SOURCES(true)}</p>`;
+    },
+    debtChart: (start, months) => `La deuda total baja de ${start} a $0 en ${yrs(months, true)}`, debtLegendA: 'Avalancha', debtLegendS: 'Bola de nieve', debtChartTitle: 'Saldo total con el tiempo', debtChartNow: 'Hoy', debtSame: 'Aquí el orden es el mismo, así que las líneas se enciman.', debtChartEnd: (m) => `${yrs(m, true)}`,
   },
 };

@@ -106,7 +106,23 @@ const checks = [
   ['/money-calculators/es/rent-vs-buy/', '#result .big'],
   ['/money-calculators/compound-interest/?embed=1', '.embed-credit'],
   ['/money-calculators/embed/', '#embed-form', async (page) => { await page.waitForSelector('#e-preview iframe'); }],
-  ['/money-calculators/es/debt-payoff/', '#result .big'],
+  ['/money-calculators/es/debt-payoff/', '#result .chart-axis'],
+  ['/money-calculators/debt-payoff/', '#result .chart-axis', async (page) => {
+    if ((await page.locator('#result svg.chart path').count()) !== 2) throw new Error('two strategy lines');
+    if (!/Total debt falls from/.test(await page.getAttribute('#result svg.chart', 'aria-label'))) throw new Error('debt chart label');
+  }],
+  ['/money-calculators/tax-refund/', '#result .big', async (page) => {
+    if (!/Estimated refund: \$780\.00/.test(await page.textContent('#result .big'))) throw new Error('default refund');
+    await page.selectOption('[name=filing]', 'hoh');
+    await page.fill('[name=wages]', '30000');
+    await page.fill('[name=withheld]', '800');
+    await page.fill('[name=kids]', '2');
+    const t = await page.textContent('#result');
+    if (!/\$4,200\.00/.test(t) || !/EITC Assistant/.test(t) || !/Rev\. Proc\. 2025-32/.test(t)) throw new Error('hoh refund, EITC note or sources');
+  }],
+  ['/money-calculators/es/tax-refund/', '#result .big', async (page) => {
+    if (!/Reembolso estimado/.test(await page.textContent('#result .big'))) throw new Error('es refund');
+  }],
   ['/money-calculators/es/compound-interest/', '#result .big'],
   ['/money-calculators/es/credit-card-minimum/', '#result .big'],
   ['/scam-checker/', '#result', async (page) => {

@@ -79,6 +79,19 @@ export const pagesEs = [
     ],
   },
   {
+    slug: 'tax-refund',
+    title: 'Calculadora de reembolso de impuestos 2026 (federal)',
+    h1: 'Calcula tu reembolso de impuestos (año fiscal 2026)',
+    tile: 'Reembolso de impuestos',
+    description: 'Calcula tu reembolso federal de 2026 (se declara en 2027) con tu W-2: tramos y deducción estándar de 2026, el crédito por hijos de $2,200 y las nuevas deducciones por propinas, horas extra y mayores de 65. Con fuentes.',
+    intro: 'Ten a la mano tu W-2 (o tu último talón de pago del año). Pon tu salario y el impuesto federal retenido, y calculamos con los tramos, créditos y deducciones de 2026 tu reembolso o lo que debes.',
+    faq: [
+      ['¿Cuándo llega mi reembolso?', 'El IRS suele empezar a recibir declaraciones de 2026 a fines de enero de 2027. La mayoría de las declaraciones electrónicas con depósito directo se pagan en 21 días. Si pides el EITC o el crédito adicional por hijos, por ley no se paga antes de mediados de febrero.'],
+      ['¿Qué cambió en 2026?', 'La deducción estándar es de $16,100 soltero, $32,200 casados en conjunta y $24,150 cabeza de familia. El crédito por hijos es de $2,200 por hijo, con hasta $1,700 reembolsables. Puedes restar hasta $25,000 de propinas y hasta $12,500 de pago extra por horas extra ($25,000 en conjunta), y los mayores de 65 tienen $6,000 más de deducción.'],
+      ['¿Es bueno un reembolso grande?', 'Se siente bien, pero significa que te retuvieron de más durante el año. Si prefieres el dinero cada mes, actualiza tu W-4 con el estimador de retenciones del IRS.'],
+    ],
+  },
+  {
     slug: 'roth-vs-traditional',
     title: 'Calculadora Roth vs Tradicional (IRA y 401(k))',
     h1: 'Calculadora Roth vs Tradicional',

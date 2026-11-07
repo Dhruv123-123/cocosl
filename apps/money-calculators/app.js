@@ -5,6 +5,7 @@ import * as calc from './lib/calc.js';
 import { STATE_OPTIONS } from './lib/state-tax-2026.js';
 import { comparePlans } from './lib/student-loans.js';
 import { rentVsBuy } from './lib/rent-vs-buy.js';
+import { estimateRefund } from './lib/refund.js';
 import { EXTRA } from './lib/text-extra.js';
 import { analyzeFees } from './lib/fees.js';
 import { money, isLiveUrl, escapeHtml } from './lib/format.js';
@@ -89,6 +90,13 @@ const CALCS = {
       ['appreciation', XF.rbApp, 3, 0.1], ['rentGrowth', XF.rbRentGrowth, 3, 0.1], ['rentersInsurance', XF.rbRentersIns, 15], ['investReturn', XF.rbReturn, 6, 0.1]],
     render: (v) => X.rentBuy(rentVsBuy(v)),
   },
+  'tax-refund': {
+    cta: 'hysa',
+    fields: [['wages', XF.trWages, 55000], ['withheld', XF.trWithheld, 5200], ['otherIncome', XF.trOther, 0], ['estimated', XF.trEstimated, 0], ['kids', XF.trKids, 0], ['otherDeps', XF.trOtherDeps, 0],
+      ['tips', XF.trTips, 0], ['overtime', XF.trOvertime, 0], ['seniors', XF.trSeniors, 0]],
+    select: ['filing', XF.trFiling, [['single', XF.trSingle], ['married', XF.trMarried], ['hoh', XF.trHoh]]],
+    render: (v) => X.refund(estimateRefund(v)) + budgetProBox('tax-refund'),
+  },
   'roth-vs-traditional': {
     cta: 'brokerage',
     fields: [['annualContribution', F.annualContribution, 6000], ['currentRate', F.currentRate, 22], ['retirementRate', F.retirementRate, 15], ['years', F.yearsToWithdraw, 35], ['annualReturn', F.annualReturn, 7, 0.1]],
@@ -161,7 +169,27 @@ function renderDebt(form) {
   if (!a.feasible) return T.debtInfeasible;
   const list = (r) => `<ol>${r.paidOff.map((p) => `<li>${T.debtPaidIn(escapeHtml(p.name), p.month)}</li>`).join('')}</ol>`;
   const printBtns = `<div class="row print-row"><button type="button" class="btn small" data-print="avalanche">${T.printAva}</button><button type="button" class="btn small ghost" data-print="snowball">${T.printSnow}</button></div>`;
-  return T.debt(a, s, T.debtVerdict(c), list(a), list(s)) + printBtns;
+  return T.debt(a, s, T.debtVerdict(c), list(a), list(s)) + debtChart(debts, extra) + printBtns;
+}
+
+// Avalanche vs snowball: total balance left each month, two lines.
+function debtChart(debts, extra) {
+  const series = ['avalanche', 'snowball'].map((strategy) => {
+    const r = calc.debtPayoff(debts, { extra, strategy, schedule: true });
+    return [debts.reduce((t, d) => t + (Number(d.balance) || 0), 0), ...r.schedule.map((row) => row.balances.reduce((t, b) => t + b, 0))];
+  });
+  const [ava, snow] = series;
+  const months = Math.max(ava.length, snow.length) - 1;
+  if (months < 1) return '';
+  const w = 600, h = 200, pad = 8;
+  const max = Math.max(...ava, ...snow, 1);
+  const x = (i) => pad + (i / months) * (w - pad * 2);
+  const y = (v) => h - pad - (v / max) * (h - pad * 2);
+  const path = (pts) => pts.map((v, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
+  return `<h3>${X.debtChartTitle}</h3><svg class="chart" viewBox="0 0 ${w} ${h}" role="img" aria-label="${escapeHtml(X.debtChart(money(ava[0]), months))}">
+    <path d="${path(snow)}" class="line-in"/><path d="${path(ava)}" class="line-total"/></svg>
+    <p class="legend chart-axis"><span>${X.debtChartNow}</span><span>${X.debtChartEnd(months)}</span></p>
+    <p class="legend"><span class="key total"></span> ${X.debtLegendA} <span class="key in"></span> ${X.debtLegendS}${ava.join() === snow.join() ? ` · ${X.debtSame}` : ''}</p>`;
 }
 
 function printPlan(strategy) {

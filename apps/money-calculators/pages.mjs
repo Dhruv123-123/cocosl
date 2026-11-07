@@ -77,6 +77,20 @@ export const pages = [
     ],
   },
   {
+    slug: 'tax-refund',
+    title: 'Tax Refund Estimator 2026: Federal Refund Calculator',
+    h1: 'Tax refund estimator (2026 tax year)',
+    tile: 'Tax refund estimator',
+    description: 'Estimate your federal tax refund for 2026 (filed in 2027) from your W-2: 2026 brackets and standard deduction, the $2,200 child tax credit, and the new deductions for tips, overtime and seniors. Sources cited.',
+    intro: 'Grab your W-2 (or your last pay stub of the year). Enter your wages and the federal tax withheld, and we work through the 2026 brackets, credits and new deductions to estimate your refund or what you owe.',
+    faq: [
+      ['When will I get my refund?', 'The IRS usually starts accepting 2026 returns in late January 2027. Most e-filed returns with direct deposit are paid within 21 days. Returns claiming the EITC or the additional child tax credit can\'t be paid before mid-February by law.'],
+      ['What changed for 2026?', 'The standard deduction is $16,100 single, $32,200 married filing jointly and $24,150 head of household. The child tax credit is $2,200 per child, with up to $1,700 refundable. New deductions let you subtract up to $25,000 of tips and up to $12,500 of overtime premium ($25,000 joint), and people 65 and older get an extra $6,000 deduction.'],
+      ['Is a big refund good?', 'It feels good, but it means too much tax came out of your paychecks during the year. If you would rather have the money monthly, update your W-4 with the IRS Tax Withholding Estimator.'],
+      ['What does this leave out?', 'Itemized deductions, the Earned Income Tax Credit, education credits, self-employment tax, capital gains rates and state tax. It is an estimate. Your tax software or a preparer will give the final number.'],
+    ],
+  },
+  {
     slug: 'roth-vs-traditional',
     title: 'Roth vs Traditional IRA and 401(k) Calculator',
     h1: 'Roth vs Traditional calculator',
