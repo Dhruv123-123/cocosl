@@ -1,0 +1,20 @@
+# Brand file for the self-serve kits' email funnel ONLY. It lives here, not in brands/, so the
+# factory's daily worker never treats it as a content channel. Use it by pointing FACTORY_BRANDS here:
+#   FACTORY_BRANDS=launch/ugc-service/kits-funnel/brands factory sequence-check small-shop-kits
+#   FACTORY_BRANDS=launch/ugc-service/kits-funnel/brands factory sequence-export small-shop-kits --for sender
+# See ../KIT_SALES_FUNNEL.md. Replace every YOURNAME / YOUR-STUDIO-SITE link before exporting for real.
+name: Small Shop Kits
+niche: DIY listing videos and shop graphics for small online sellers
+audience: Etsy, Shopify and Gumroad sellers who make their own product photos
+promise: tools that turn your own product photos into videos and graphics, no design skills needed
+cadence: {paused: true}      # never a content channel: the worker skips its daily run
+welcome_via: sender          # the welcome emails are built in Sender, never sent by the factory
+accounts: []
+products:   # flagship last; the sequence's {price} comes from the bundle entry (vars.product)
+  - {name: "Listing Video Maker Lite (free)", slug: lite, url: "https://YOURNAME.gumroad.com/l/listing-video-maker-lite", price: 0}
+  - {name: "DIY Listing Video Kit", slug: listing-video-kit, url: "https://YOURNAME.gumroad.com/l/listing-video-kit", price: 19}
+  - {name: "Small Shop Video and Graphics Bundle", slug: small-shop-bundle, url: "https://YOURNAME.gumroad.com/l/small-shop-bundle", price: 35}
+ai_disclosure: "Emails drafted with AI help and edited by a person."
+scripts_by: ai_assisted
+realistic_synthetic_media: false
+require_human_review: true
