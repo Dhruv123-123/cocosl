@@ -58,7 +58,7 @@ factory publish                             # post what's due (dry run until FAC
 factory insights --brand money-made-simple --rescore
 factory repurpose 15                        # long video → Shorts + carousel
 factory import launch/money-made-simple/content.json --brand money-made-simple
-factory pack launch/scam-decoded/content.json --brand scam-decoded --out dist/scam-decoded   # postable folder
+factory launch-pack launch/scam-decoded/content.json --brand scam-decoded --out dist/scam-decoded   # postable folder
 factory clients import --file leads.csv && factory pitch draft && factory pitch export
 factory order create --client 3 --package starter && factory order invoice --id 1
 factory revenue report

@@ -223,8 +223,8 @@ def cmd_import(args):
         print(f"post #{pid} [{post['format']}/{post['status']}] {post['title']}")
 
 
-def cmd_pack(args):
-    from .pack import build_pack
+def cmd_launch_pack(args):
+    from .launch_pack import build_pack
     f = _factory(args)
     res = build_pack(f, args.brand, Path(args.file), Path(args.out),
                      render_videos=True if args.render_videos else None, extras=not args.no_extras)
@@ -381,13 +381,13 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--no-render", action="store_true")
     s.set_defaults(func=cmd_import)
 
-    s = sub.add_parser("pack", help="export a postable launch pack (slides, thumbnails, captions, brand kit)")
+    s = sub.add_parser("launch-pack", help="export a postable launch pack (slides, thumbnails, captions, brand kit)")
     s.add_argument("file", help="content.json (same shape as for import)")
     s.add_argument("--brand", required=True)
     s.add_argument("--out", required=True)
     s.add_argument("--render-videos", action="store_true", help="render videos even without a real voice")
     s.add_argument("--no-extras", action="store_true", help="skip brand kit and link page")
-    s.set_defaults(func=cmd_pack)
+    s.set_defaults(func=cmd_launch_pack)
 
     s = sub.add_parser("niche", help="score niche candidates (ad value, demand, risk, saturation)")
     s.add_argument("niches", nargs="+")

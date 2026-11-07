@@ -54,7 +54,7 @@ def test_unknown_platform_is_rejected(factory):
 
 
 def test_build_pack_writes_postable_folders(factory, tmp_path):
-    from contentfactory.pack import build_pack
+    from contentfactory.launch_pack import build_pack
     items = _items()
     subset = [items[0], items[14], items[28]]           # a short, its TikTok cut, a carousel
     content = tmp_path / "content.json"

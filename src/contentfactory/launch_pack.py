@@ -1,7 +1,7 @@
 """Launch pack export: turn a brand's ready-written content.json into a folder
 someone can post from without running the software.
 
-    factory pack launch/scam-decoded/content.json --brand scam-decoded --out dist/scam-decoded
+    factory launch-pack launch/scam-decoded/content.json --brand scam-decoded --out dist/scam-decoded
 
 Layout (same as the Money Made Simple pack):
   carousels/<nn-title>/slide-01.jpg ... + caption.txt

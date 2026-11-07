@@ -16,7 +16,7 @@ Check @scamdecoded is free on Instagram, TikTok and YouTube before creating acco
 Build the postable pack (slides, thumbnails, captions, brand kit, link page) and queue everything for review:
 
 ```bash
-factory pack launch/scam-decoded/content.json --brand scam-decoded --out dist/scam-decoded
+factory launch-pack launch/scam-decoded/content.json --brand scam-decoded --out dist/scam-decoded
 ```
 
 Without a voice key, videos come out as thumbnail + caption + script in `videos-need-voice/`. With a real voice
