@@ -8,7 +8,7 @@
       "youtube"
     ],
     "script": {
-      "title": "3 ways to pay that only scammers insist on",
+      "title": "Gift card scam: 3 ways only scammers ask to be paid",
       "hook": "3 ways to pay that only scammers insist on.",
       "segments": [
         {
@@ -65,7 +65,8 @@
       ],
       "title_variants": [
         "The 3 payment requests that mean scam",
-        "Gift card, wire, crypto: the scam tell"
+        "Gift card, wire, crypto: the scam tell",
+        "3 ways to pay that only scammers insist on"
       ],
       "hook_variants": [
         "Gift cards, wires, crypto. If someone insists on one of these, it's a scam.",
@@ -235,7 +236,7 @@
       "youtube"
     ],
     "script": {
-      "title": "1 family safe word beats an AI voice clone",
+      "title": "AI voice clone scam: 1 family safe word stops it",
       "hook": "1 word, picked tonight, beats a cloned voice of someone you love.",
       "segments": [
         {
@@ -288,15 +289,16 @@
       "claims_to_verify": [
         "FTC consumer alert (Mar 2023) on AI voice cloning in family emergency scams",
         "FBI PSA (Dec 2024) recommends a secret word or phrase with family",
-        "'3 seconds of audio' figure: verify before using the hook variant (vendor research, not official)",
-        "Example calls are fictional composites"
+        "Example calls are fictional composites",
+        "Voice cloning needs only a short audio clip (FTC consumer alert, Mar 20 2023)"
       ],
       "title_variants": [
         "The grandparent scam now uses AI voices. Do this.",
-        "Set a family safe word tonight"
+        "Set a family safe word tonight",
+        "1 family safe word beats an AI voice clone"
       ],
       "hook_variants": [
-        "3 seconds of audio can be enough to clone a voice. Here's the fix.",
+        "1 short clip of someone's voice can be enough to clone it. Here's the fix.",
         "The 'grandma, I'm in trouble' call now uses AI. 1 word stops it."
       ]
     }
@@ -310,13 +312,13 @@
       "youtube"
     ],
     "script": {
-      "title": "0 real banks ask you to move money to keep it safe",
-      "hook": "0. That's how many real banks will ask you to move your money to 'keep it safe.'",
+      "title": "Bank impersonation scam: the 'safe account' is theirs",
+      "hook": "1 call, 1 'safe account' for your money, and the account belongs to the scammer.",
       "segments": [
         {
           "heading": "Hook",
-          "narration": "Zero. That's how many real banks will ask you to move your money to keep it safe.",
-          "on_screen_text": "Real banks asking you to move money: 0",
+          "narration": "One call from your bank's fraud team, one 'safe account' for your money, and that account belongs to the scammer.",
+          "on_screen_text": "The 'safe account' is theirs",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a big zero shape like a hoop No text, no logos, no real people."
         },
         {
@@ -345,7 +347,7 @@
         }
       ],
       "cta": "Follow, and send this to someone who'd fall for it.",
-      "caption": "Caller ID says it's your bank's fraud team. They know your name and the last four digits of your card. Then: \"To protect your money, move it to this safe account.\"\n\nNo real bank asks you to move money to protect it. Caller ID can be faked. Hang up and call the number on the back of your card.\n\nFollow, and send this to someone who'd fall for it.",
+      "caption": "Caller ID says it's your bank's fraud team. They know your name and the last four digits of your card. Then: \"To protect your money, move it to this safe account.\"\n\nA call telling you to move money to protect it is the scam, says the FTC. Caller ID can be faked. Hang up and call the number on the back of your card.\n\nFollow, and send this to someone who'd fall for it.",
       "hashtags": [
         "bankscam",
         "fraudalert",
@@ -358,20 +360,23 @@
       "sources": [
         "https://www.fcc.gov/spoofing",
         "https://consumer.ftc.gov/articles/how-avoid-scam",
-        "https://www.consumerfinance.gov/consumer-tools/fraud/"
+        "https://www.consumerfinance.gov/consumer-tools/fraud/",
+        "https://consumer.ftc.gov/consumer-alerts/2024/03/never-move-your-money-protect-it-thats-scam",
+        "https://consumer.ftc.gov/articles/phone-scams"
       ],
       "claims_to_verify": [
-        "Caller ID can be spoofed to show a real bank's number (FCC)",
-        "Banks do not ask customers to move money to a 'safe account' to protect it (confirm with a bank or regulator statement)",
-        "Payment-app transfers sent by the account holder are often hard or impossible to reverse"
+        "Scammers can make any name or number show up on caller ID (FTC phone scams page)",
+        "Payment-app transfers sent by the account holder are often hard or impossible to reverse",
+        "Someone who says you have to move your money to protect it is a scammer (FTC consumer alert, Mar 2024)"
       ],
       "title_variants": [
         "The fake bank fraud call, decoded",
-        "Your bank will never ask you to do this"
+        "Your bank will never ask you to do this",
+        "0 real banks ask you to move money to keep it safe"
       ],
       "hook_variants": [
         "The caller ID says it's your bank. It isn't. Here's the tell.",
-        "1 sentence your real bank will never say."
+        "1 sentence that means it's not your bank: 'move it to a safe account.'"
       ]
     }
   },
@@ -407,7 +412,7 @@
         },
         {
           "heading": "Don't reply",
-          "narration": "Don't reply, not even STOP. A reply tells them your number is live.",
+          "narration": "Don't reply, not even STOP. The FCC says don't answer scam texts at all, not even Y or N.",
           "on_screen_text": "Never reply, not even STOP",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a speech bubble with a hand-drawn stop gesture and a crossed-out reply arrow No text, no logos, no real people."
         },
@@ -419,7 +424,7 @@
         }
       ],
       "cta": "Follow, and send this to someone who'd fall for it.",
-      "caption": "7726 spells SPAM on a keypad. Forward any scam text there and your carrier gets a report it can use to block the sender. It's free on the major US carriers.\n\nThen delete it. Don't reply, not even STOP: that tells them the number is live.\n\nFollow, and send this to someone who'd fall for it.",
+      "caption": "7726 spells SPAM on a keypad. Forward any scam text there and your carrier gets a report it can use to block the sender. It's free on the major US carriers.\n\nThen delete it. Don't reply, not even STOP. The FCC's advice: don't answer a scam text at all.\n\nFollow, and send this to someone who'd fall for it.",
       "hashtags": [
         "spamtexts",
         "textscam",
@@ -432,11 +437,12 @@
       "sources": [
         "https://www.fcc.gov/consumers/guides/stop-unwanted-robocalls-and-texts",
         "https://reportfraud.ftc.gov/",
-        "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages"
+        "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages",
+        "https://www.fcc.gov/consumer-governmental-affairs/how-spot-and-avoid-toll-road-payment-scam-texts"
       ],
       "claims_to_verify": [
         "Forwarding to 7726 (SPAM) reports a text to most major US carriers at no cost",
-        "Replying to a scam text (even STOP) can confirm your number is active (FTC advice: don't reply)",
+        "Don't reply to scam texts at all, not even Y or N (FCC toll-text guidance)",
         "Phone menus for forwarding vary by device and OS version"
       ],
       "title_variants": [
@@ -458,7 +464,7 @@
       "youtube"
     ],
     "script": {
-      "title": "1 question kills the fake delivery text",
+      "title": "Fake USPS delivery text: 1 question kills it",
       "hook": "1 question kills every fake delivery text: did I actually ask for updates?",
       "segments": [
         {
@@ -515,7 +521,8 @@
       ],
       "title_variants": [
         "The fake package text, decoded",
-        "USPS didn't text you. Here's how to know."
+        "USPS didn't text you. Here's how to know.",
+        "1 question kills the fake delivery text"
       ],
       "hook_variants": [
         "2 seconds to spot a fake package text.",
@@ -532,7 +539,7 @@
       "youtube"
     ],
     "script": {
-      "title": "Read back a 6-digit code and you hand over your account",
+      "title": "Verification code scam: never read back a 6-digit code",
       "hook": "6 digits. If anyone asks you to read back a code you just got, they're logging into your account.",
       "segments": [
         {
@@ -580,16 +587,19 @@
       "sources": [
         "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams",
         "https://consumer.ftc.gov/articles/how-avoid-scam",
-        "https://www.cisa.gov/secure-our-world/turn-mfa"
+        "https://www.cisa.gov/secure-our-world/turn-mfa",
+        "https://consumer.ftc.gov/consumer-alerts/2024/03/whats-verification-code-why-would-someone-ask-me-it",
+        "https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf"
       ],
       "claims_to_verify": [
-        "Legitimate companies don't ask you to read back one-time sign-in codes (check each example company's own policy)",
+        "Anyone who asks you for your account verification code is a scammer (FTC consumer alert, Mar 2024)",
         "Marketplace 'verify you're real' code scams are documented by the FTC (Google Voice code scam)",
-        "Passkeys resist phishing because they're tied to the real site (CISA/FIDO guidance)"
+        "Passkeys/FIDO are the only widely available phishing-resistant sign-in; text codes are vulnerable to phishing and SIM swaps (CISA fact sheet)"
       ],
       "title_variants": [
         "The verification code scam, decoded",
-        "Never read this code to anyone"
+        "Never read this code to anyone",
+        "Read back a 6-digit code and you hand over your account"
       ],
       "hook_variants": [
         "The one code you should never say out loud.",
@@ -606,7 +616,7 @@
       "youtube"
     ],
     "script": {
-      "title": "The $500 overpayment check that bounces on you",
+      "title": "Fake check overpayment scam: the $500 that bounces",
       "hook": "$2,000 check. 'Send me back $500.' Weeks later, you owe the bank all of it.",
       "segments": [
         {
@@ -656,13 +666,14 @@
         "https://reportfraud.ftc.gov/"
       ],
       "claims_to_verify": [
-        "Banks must make deposited check funds available within a few business days, before the check is confirmed good",
+        "By law banks make deposited funds available quickly, but it can take weeks to find out a check is fake, and you repay the bank (FTC fake checks page)",
         "A fake check can be returned weeks later and the depositor is responsible for the amount",
         "$2,000/$500 and mystery-shopper amounts are fictional examples"
       ],
       "title_variants": [
         "Why 'available funds' doesn't mean the check is real",
-        "The fake check scam, decoded"
+        "The fake check scam, decoded",
+        "The $500 overpayment check that bounces on you"
       ],
       "hook_variants": [
         "The money shows up in your account. It's still a scam.",
@@ -702,7 +713,7 @@
         },
         {
           "heading": "The fix",
-          "narration": "Set an account PIN with your carrier, and turn on number lock or port-out protection. It's usually free.",
+          "narration": "Set an account PIN with your carrier, and turn on number lock or port-out protection. Look in your carrier's security settings.",
           "on_screen_text": "Carrier PIN + number lock",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a simple settings toggle switched on next to a phone with a shield No text, no logos, no real people."
         },
@@ -714,7 +725,7 @@
         }
       ],
       "cta": "Follow, and send this to someone who'd fall for it.",
-      "caption": "In a SIM swap, a thief convinces your carrier to move your number to their phone. Now your bank's texted codes go to them.\n\nOpen your carrier's app tonight. Set an account PIN or passcode, and turn on number lock or port-out protection if it's offered. Most big carriers have one, free. Then move important accounts to an authenticator app or passkeys instead of texts.\n\nFollow, and send this to someone who'd fall for it.",
+      "caption": "In a SIM swap, a thief convinces your carrier to move your number to their phone. Now your bank's texted codes go to them.\n\nOpen your carrier's app tonight. Set an account PIN or passcode, and turn on number lock or port-out protection if it's offered. Names differ by carrier. Then move important accounts to an authenticator app or passkeys instead of texts.\n\nAnd if a caller says the FTC will deactivate your number: the FTC says it never threatens to cut off your phone service. Hang up.\n\nFollow, and send this to someone who'd fall for it.",
       "hashtags": [
         "simswap",
         "phonesecurity",
@@ -727,12 +738,15 @@
       "sources": [
         "https://www.fcc.gov/consumers/guides/cell-phone-fraud",
         "https://www.cisa.gov/secure-our-world/turn-mfa",
-        "https://consumer.ftc.gov/articles/how-avoid-scam"
+        "https://consumer.ftc.gov/articles/how-avoid-scam",
+        "https://docs.fcc.gov/public/attachments/DOC-398483A1.pdf",
+        "https://consumer.ftc.gov/consumer-alerts/2026/10/ftc-not-calling-deactivate-your-phone-number"
       ],
       "claims_to_verify": [
-        "FCC rules (adopted Nov 2023) require carriers to verify customers before SIM changes and port-outs and to notify them",
-        "Major US carriers offer free account PINs and number-lock/port-out protection (names vary; confirm per carrier)",
-        "'2 minutes' is an estimate"
+        "FCC rules (adopted Nov 15 2023) require carriers to verify customers before SIM changes and port-outs and to notify them",
+        "Carriers offer account PINs and number-lock/port-out protection; names and cost vary, so confirm with your own carrier",
+        "'2 minutes' is an estimate",
+        "The FTC never threatens to cut off your phone service (FTC consumer alert, Oct 22 2026)"
       ],
       "title_variants": [
         "The SIM swap, decoded",
@@ -753,7 +767,7 @@
       "youtube"
     ],
     "script": {
-      "title": "0 real jobs make you pay to get paid",
+      "title": "Task job scam: 0 real jobs make you pay to get paid",
       "hook": "$0. That's what a real job asks you to pay before you get paid. Task jobs ask for a lot more.",
       "segments": [
         {
@@ -799,18 +813,19 @@
       "description": "How 'task' job scams work (rate products, like videos, then deposit crypto to unlock earnings), the tells, and what real jobs never ask for.",
       "thumbnail_text": "Fake task job",
       "sources": [
-        "https://consumer.ftc.gov/consumer-alerts/2023/09/paying-earn-money-gamified-online-job-task-scams",
+        "https://www.ic3.gov/PSA/2024/PSA240604",
         "https://consumer.ftc.gov/articles/job-scams",
         "https://reportfraud.ftc.gov/"
       ],
       "claims_to_verify": [
-        "FTC has warned about gamified 'task' job scams (consumer alert, 2023)",
-        "Task scams typically require deposits (often crypto) to unlock earnings",
-        "Example payout amounts are fictional"
+        "FBI IC3 PSA (Jun 4 2024): task scams make victims pay in crypto to 'unlock' work or earnings; 'Never send money to an alleged employer'",
+        "Example payout amounts are fictional",
+        "Honest employers will never ask you to pay to get a job (FTC job scams page)"
       ],
       "title_variants": [
         "The 'task job' scam, decoded",
-        "Paid to like videos? Here's the catch."
+        "Paid to like videos? Here's the catch.",
+        "0 real jobs make you pay to get paid"
       ],
       "hook_variants": [
         "Earning $20 for rating products? Here's where it ends.",
@@ -827,7 +842,7 @@
       "youtube"
     ],
     "script": {
-      "title": "1 pop-up, 1 phone number, 0 real tech companies",
+      "title": "Fake virus pop-up? The tech support scam explained",
       "hook": "1 pop-up, 1 phone number, and 0 real tech companies behind it.",
       "segments": [
         {
@@ -883,7 +898,8 @@
       ],
       "title_variants": [
         "The fake virus pop-up, decoded",
-        "Your computer isn't infected. Close the tab."
+        "Your computer isn't infected. Close the tab.",
+        "1 pop-up, 1 phone number, 0 real tech companies"
       ],
       "hook_variants": [
         "A loud alarm and a phone number on your screen? Here's what to do.",
@@ -946,12 +962,12 @@
       "description": "Why Bitcoin ATMs show up in so many scams, the script that sends people there, and the rule that stops it. Figures from FTC Consumer Sentinel data.",
       "thumbnail_text": "Bitcoin ATM trap",
       "sources": [
-        "https://www.ftc.gov/news-events/data-visualizations/data-spotlight/2024/09/bitcoin-atms-rising-new-cash-crypto-fraud-trend",
+        "https://www.ftc.gov/news-events/news/press-releases/2024/09/new-ftc-data-shows-massive-increase-losses-bitcoin-atm-scams",
         "https://reportfraud.ftc.gov/",
         "https://www.ic3.gov/"
       ],
       "claims_to_verify": [
-        "FTC data spotlight (Sept 2024): reported losses at Bitcoin ATMs topped $110 million in 2023",
+        "FTC press release + data spotlight (Sept 3 2024): reported losses at Bitcoin ATMs topped $110 million in 2023",
         "People 60+ were more than 3x as likely to report losing money through a Bitcoin ATM (same spotlight)",
         "Check for a newer FTC/FBI figure before posting; update the hook if one exists"
       ],
@@ -1163,7 +1179,7 @@
         },
         {
           "heading": "Bonus freezes",
-          "narration": "Bonus round. Innovis is a smaller fourth bureau, and ChexSystems tracks bank accounts. Both let you freeze for free, which stops a thief opening a checking account in your name.",
+          "narration": "Bonus round. Innovis is a smaller fourth bureau, and ChexSystems tracks bank accounts. Both will freeze your file if you ask, which helps stop a thief opening a checking account in your name.",
           "on_screen_text": "Bonus: Innovis and ChexSystems",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. two smaller buildings behind the three main ones, each with a padlock No text, no logos, no real people."
         },
@@ -1196,7 +1212,10 @@
         "https://www.equifax.com/personal/credit-report-services/credit-freeze/",
         "https://www.experian.com/freeze/center.html",
         "https://www.transunion.com/credit-freeze",
-        "https://www.annualcreditreport.com/"
+        "https://www.annualcreditreport.com/",
+        "https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/consumer-reporting-companies/companies-list/innovis/",
+        "https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/consumer-reporting-companies/companies-list/chex-systems/",
+        "https://www.ftc.gov/business-guidance/blog/2018/08/new-law-new-consumer-rights"
       ],
       "claims_to_verify": [
         "Credit freezes and lifts are free at Equifax, Experian and TransUnion under federal law (since Sept 2018)",
@@ -1204,7 +1223,8 @@
         "Online/phone lift requests must be processed within one hour",
         "Parents/guardians can request a freeze for a child under 16",
         "'About 10 minutes' is an estimate for all three bureaus",
-        "Innovis and ChexSystems offer separate free freezes (confirm current process)"
+        "Innovis and ChexSystems will freeze your file on request (CFPB company list); check each site for cost and steps",
+        "A freeze lift requested online or by phone has to happen within an hour (FTC on the 2018 law)"
       ],
       "title_variants": [
         "$0 and 10 minutes: freeze your credit tonight"
@@ -1370,8 +1390,8 @@
       "claims_to_verify": [
         "FTC consumer alert (Mar 2023) on AI voice cloning in family emergency scams",
         "FBI PSA (Dec 2024) recommends a secret word or phrase with family",
-        "'3 seconds of audio' figure: verify before using the hook variant (vendor research, not official)",
-        "Example calls are fictional composites"
+        "Example calls are fictional composites",
+        "Voice cloning needs only a short audio clip (FTC consumer alert, Mar 20 2023)"
       ],
       "title_variants": [
         "1 family safe word beats an AI voice clone"
@@ -1449,18 +1469,20 @@
       "sources": [
         "https://www.fcc.gov/spoofing",
         "https://consumer.ftc.gov/articles/how-avoid-scam",
-        "https://www.consumerfinance.gov/consumer-tools/fraud/"
+        "https://www.consumerfinance.gov/consumer-tools/fraud/",
+        "https://consumer.ftc.gov/consumer-alerts/2024/03/never-move-your-money-protect-it-thats-scam",
+        "https://consumer.ftc.gov/articles/phone-scams"
       ],
       "claims_to_verify": [
-        "Caller ID can be spoofed to show a real bank's number (FCC)",
-        "Banks do not ask customers to move money to a 'safe account' to protect it (confirm with a bank or regulator statement)",
-        "Payment-app transfers sent by the account holder are often hard or impossible to reverse"
+        "Scammers can make any name or number show up on caller ID (FTC phone scams page)",
+        "Payment-app transfers sent by the account holder are often hard or impossible to reverse",
+        "Someone who says you have to move your money to protect it is a scammer (FTC consumer alert, Mar 2024)"
       ],
       "title_variants": [
-        "0 real banks ask you to move money to keep it safe"
+        "Bank fraud call? The 'safe account' is the scam"
       ],
       "hook_variants": [
-        "0. That's how many real banks will ask you to move your money to 'keep it safe.'"
+        "1 phrase gives the fake bank call away: 'move it to a safe account.'"
       ]
     }
   },
@@ -1495,7 +1517,7 @@
         },
         {
           "heading": "Never reply",
-          "narration": "What you don't do: reply. Not STOP, not 'wrong number'. Any reply confirms a real person reads this number, and you'll get more.",
+          "narration": "What you don't do: reply. Not STOP, not 'wrong number'. The FCC's advice is simple: don't answer a scam text at all, not even Y or N.",
           "on_screen_text": "Don't reply. Ever.",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a reply arrow with a small amber cross over it No text, no logos, no real people."
         },
@@ -1532,11 +1554,12 @@
       "sources": [
         "https://www.fcc.gov/consumers/guides/stop-unwanted-robocalls-and-texts",
         "https://reportfraud.ftc.gov/",
-        "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages"
+        "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages",
+        "https://www.fcc.gov/consumer-governmental-affairs/how-spot-and-avoid-toll-road-payment-scam-texts"
       ],
       "claims_to_verify": [
         "Forwarding to 7726 (SPAM) reports a text to most major US carriers at no cost",
-        "Replying to a scam text (even STOP) can confirm your number is active (FTC advice: don't reply)",
+        "Don't reply to scam texts at all, not even Y or N (FCC toll-text guidance)",
         "Phone menus for forwarding vary by device and OS version"
       ],
       "title_variants": [
@@ -1698,12 +1721,14 @@
       "sources": [
         "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams",
         "https://consumer.ftc.gov/articles/how-avoid-scam",
-        "https://www.cisa.gov/secure-our-world/turn-mfa"
+        "https://www.cisa.gov/secure-our-world/turn-mfa",
+        "https://consumer.ftc.gov/consumer-alerts/2024/03/whats-verification-code-why-would-someone-ask-me-it",
+        "https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf"
       ],
       "claims_to_verify": [
-        "Legitimate companies don't ask you to read back one-time sign-in codes (check each example company's own policy)",
+        "Anyone who asks you for your account verification code is a scammer (FTC consumer alert, Mar 2024)",
         "Marketplace 'verify you're real' code scams are documented by the FTC (Google Voice code scam)",
-        "Passkeys resist phishing because they're tied to the real site (CISA/FIDO guidance)"
+        "Passkeys/FIDO are the only widely available phishing-resistant sign-in; text codes are vulnerable to phishing and SIM swaps (CISA fact sheet)"
       ],
       "title_variants": [
         "Read back a 6-digit code and you hand over your account"
@@ -1783,7 +1808,7 @@
         "https://reportfraud.ftc.gov/"
       ],
       "claims_to_verify": [
-        "Banks must make deposited check funds available within a few business days, before the check is confirmed good",
+        "By law banks make deposited funds available quickly, but it can take weeks to find out a check is fake, and you repay the bank (FTC fake checks page)",
         "A fake check can be returned weeks later and the depositor is responsible for the amount",
         "$2,000/$500 and mystery-shopper amounts are fictional examples"
       ],
@@ -1838,7 +1863,7 @@
         },
         {
           "heading": "Setting two",
-          "narration": "Setting two: number lock or port-out protection. Most big carriers offer one for free, in the app or the account security menu.",
+          "narration": "Setting two: number lock or port-out protection. Look for it in your carrier's app or account security menu.",
           "on_screen_text": "2. Number lock / port-out protection",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a toggle switch turning on next to a phone tower No text, no logos, no real people."
         },
@@ -1869,11 +1894,12 @@
       "sources": [
         "https://www.fcc.gov/consumers/guides/cell-phone-fraud",
         "https://www.cisa.gov/secure-our-world/turn-mfa",
-        "https://consumer.ftc.gov/articles/how-avoid-scam"
+        "https://consumer.ftc.gov/articles/how-avoid-scam",
+        "https://docs.fcc.gov/public/attachments/DOC-398483A1.pdf"
       ],
       "claims_to_verify": [
-        "FCC rules (adopted Nov 2023) require carriers to verify customers before SIM changes and port-outs and to notify them",
-        "Major US carriers offer free account PINs and number-lock/port-out protection (names vary; confirm per carrier)",
+        "FCC rules (adopted Nov 15 2023) require carriers to verify customers before SIM changes and port-outs and to notify them",
+        "Carriers offer account PINs and number-lock/port-out protection; names and cost vary, so confirm with your own carrier",
         "'2 minutes' is an estimate"
       ],
       "title_variants": [
@@ -1950,14 +1976,14 @@
       "description": "How 'task' job scams work (rate products, like videos, then deposit crypto to unlock earnings), the tells, and what real jobs never ask for.",
       "thumbnail_text": "Fake task job",
       "sources": [
-        "https://consumer.ftc.gov/consumer-alerts/2023/09/paying-earn-money-gamified-online-job-task-scams",
+        "https://www.ic3.gov/PSA/2024/PSA240604",
         "https://consumer.ftc.gov/articles/job-scams",
         "https://reportfraud.ftc.gov/"
       ],
       "claims_to_verify": [
-        "FTC has warned about gamified 'task' job scams (consumer alert, 2023)",
-        "Task scams typically require deposits (often crypto) to unlock earnings",
-        "Example payout amounts are fictional"
+        "FBI IC3 PSA (Jun 4 2024): task scams make victims pay in crypto to 'unlock' work or earnings; 'Never send money to an alleged employer'",
+        "Example payout amounts are fictional",
+        "Honest employers will never ask you to pay to get a job (FTC job scams page)"
       ],
       "title_variants": [
         "0 real jobs make you pay to get paid"
@@ -2115,12 +2141,12 @@
       "description": "Why Bitcoin ATMs show up in so many scams, the script that sends people there, and the rule that stops it. Figures from FTC Consumer Sentinel data.",
       "thumbnail_text": "Bitcoin ATM trap",
       "sources": [
-        "https://www.ftc.gov/news-events/data-visualizations/data-spotlight/2024/09/bitcoin-atms-rising-new-cash-crypto-fraud-trend",
+        "https://www.ftc.gov/news-events/news/press-releases/2024/09/new-ftc-data-shows-massive-increase-losses-bitcoin-atm-scams",
         "https://reportfraud.ftc.gov/",
         "https://www.ic3.gov/"
       ],
       "claims_to_verify": [
-        "FTC data spotlight (Sept 2024): reported losses at Bitcoin ATMs topped $110 million in 2023",
+        "FTC press release + data spotlight (Sept 3 2024): reported losses at Bitcoin ATMs topped $110 million in 2023",
         "People 60+ were more than 3x as likely to report losing money through a Bitcoin ATM (same spotlight)",
         "Check for a newer FTC/FBI figure before posting; update the hook if one exists"
       ],
@@ -2218,7 +2244,7 @@
     "pillar": "text and email scams, decoded",
     "idea_angle": "Annotate one fictional scam text line by line so the viewer learns five red flags they can reuse on any message.",
     "script": {
-      "title": "5 red flags in one scam text",
+      "title": "How to spot a scam text: 5 red flags",
       "hook": "5 red flags, 1 text message. Learn them once, spot them forever.",
       "segments": [
         {
@@ -2294,6 +2320,9 @@
       "claims_to_verify": [
         "Example text is fictional; make sure no real domain or number appears on the slides",
         "Forwarding to 7726 reports a text to most major US carriers"
+      ],
+      "title_variants": [
+        "5 red flags in one scam text"
       ]
     }
   },
@@ -2343,7 +2372,7 @@
         },
         {
           "heading": "Bonus",
-          "narration": "Bonus freezes: Innovis (a fourth bureau) and ChexSystems (bank accounts). Both free.",
+          "narration": "Bonus freezes: Innovis (a fourth bureau) and ChexSystems (bank accounts). Both freeze on request.",
           "on_screen_text": "Bonus: Innovis + ChexSystems",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. two smaller buildings with padlocks No text, no logos, no real people."
         },
@@ -2375,12 +2404,15 @@
         "https://consumer.ftc.gov/articles/what-know-about-credit-freezes-and-fraud-alerts",
         "https://www.equifax.com/personal/credit-report-services/credit-freeze/",
         "https://www.experian.com/freeze/center.html",
-        "https://www.transunion.com/credit-freeze"
+        "https://www.transunion.com/credit-freeze",
+        "https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/consumer-reporting-companies/companies-list/innovis/",
+        "https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/consumer-reporting-companies/companies-list/chex-systems/",
+        "https://www.ftc.gov/business-guidance/blog/2018/08/new-law-new-consumer-rights"
       ],
       "claims_to_verify": [
         "Freezes and lifts are free at all three bureaus by federal law",
         "Online/phone lift requests must be processed within one hour",
-        "Innovis and ChexSystems freeze availability and process (confirm current links)",
+        "Innovis and ChexSystems will freeze your file on request (CFPB company list); check each site for cost and steps",
         "'10 minutes' is an estimate"
       ]
     }
@@ -2390,7 +2422,7 @@
     "pillar": "protecting older parents and family",
     "idea_angle": "A share-to-family carousel: the seven scams most aimed at people 60+, each with its one-line tell, so adult children can send it to parents.",
     "script": {
-      "title": "7 scams aimed at your parents right now",
+      "title": "7 scams targeting seniors right now",
       "hook": "7 scams aimed at people over 60, and the 1-line tell for each. Send this to your parents.",
       "segments": [
         {
@@ -2407,7 +2439,7 @@
         },
         {
           "heading": "2. Fake bank fraud team",
-          "narration": "'We see fraud, move your money to a safe account.' Tell: no real bank asks you to move money. Hang up, call the number on your card.",
+          "narration": "'We see fraud, move your money to a safe account.' Tell: a 'safe account' for your money is the scam. Hang up, call the number on your card.",
           "on_screen_text": "2. The fake bank fraud team",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a bank icon wearing a mask No text, no logos, no real people."
         },
@@ -2462,12 +2494,16 @@
       "sources": [
         "https://www.ic3.gov/AnnualReport/Reports",
         "https://consumer.ftc.gov/features/pass-it-on",
-        "https://reportfraud.ftc.gov/"
+        "https://reportfraud.ftc.gov/",
+        "https://consumer.ftc.gov/consumer-alerts/2024/03/never-move-your-money-protect-it-thats-scam"
       ],
       "claims_to_verify": [
         "These seven scam types are among the most reported by older adults (FBI IC3 elder fraud report / FTC Pass It On)",
         "Medicare/SSA/IRS don't demand immediate payment by phone with gift cards, wires or crypto",
         "Legitimate sweepstakes don't require payment to collect a prize"
+      ],
+      "title_variants": [
+        "7 scams aimed at your parents right now"
       ]
     }
   },
@@ -2563,7 +2599,7 @@
     "pillar": "account security basics (passwords, 2FA, SIM swap)",
     "idea_angle": "Five layers of account security ranked by impact per minute: email first, unique passwords, passkeys/authenticator, carrier lock, alerts.",
     "script": {
-      "title": "5 locks every account should have",
+      "title": "How to protect your accounts: 5 locks to turn on",
       "hook": "5 locks, about 1 hour total, and most account takeovers bounce off.",
       "segments": [
         {
@@ -2636,13 +2672,17 @@
         "https://www.cisa.gov/secure-our-world",
         "https://www.cisa.gov/secure-our-world/turn-mfa",
         "https://www.cisa.gov/secure-our-world/use-strong-passwords",
-        "https://www.fcc.gov/consumers/guides/cell-phone-fraud"
+        "https://www.fcc.gov/consumers/guides/cell-phone-fraud",
+        "https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf"
       ],
       "claims_to_verify": [
         "Email account access usually allows resetting other accounts' passwords",
         "Passkeys and authenticator apps resist SIM swap and phishing better than SMS codes (CISA guidance)",
         "Most traffic on public Wi-Fi to HTTPS sites is already encrypted; a VPN adds protection on untrusted networks (keep the VPN claim modest)",
         "'About 1 hour' is an estimate"
+      ],
+      "title_variants": [
+        "5 locks every account should have"
       ]
     }
   },
@@ -2651,7 +2691,7 @@
     "pillar": "text and email scams, decoded",
     "idea_angle": "A pause-and-check card: six questions to answer before sending money to anyone you've only met online or by phone.",
     "script": {
-      "title": "6 questions before you send money to anyone",
+      "title": "Is this a scam? 6 questions before you send money",
       "hook": "6 questions to ask before you send money to anyone. If any answer is 'yes', stop.",
       "segments": [
         {
@@ -2726,6 +2766,9 @@
       ],
       "claims_to_verify": [
         "These six questions reflect common FTC red flags (unsolicited contact, pressure, secrecy, unusual payment)"
+      ],
+      "title_variants": [
+        "6 questions before you send money to anyone"
       ]
     }
   },

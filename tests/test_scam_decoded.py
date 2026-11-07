@@ -64,7 +64,7 @@ def test_build_pack_writes_postable_folders(factory, tmp_path):
     out = tmp_path / "pack"
     res = build_pack(factory, "scam-decoded", content, out)
     assert len(res["items"]) == 3
-    short_dir = out / "videos-need-voice" / "01-3-ways-to-pay-that-only-scammers-insist-on"
+    short_dir = out / "videos-need-voice" / "01-gift-card-scam-3-ways-only-scammers-ask-to-be-paid"
     assert (short_dir / "thumbnail.jpg").exists()
     cap = (short_dir / "caption.txt").read_text()
     assert "Platforms: instagram, youtube" in cap and "CHECK BEFORE POSTING" in cap
@@ -927,3 +927,22 @@ def test_moving_season_pack_and_renting_checklist():
     page = (site / "content" / "pages" / "renting.md").read_text()
     assert "{{signup:renting-checklist|" in page and "/renting/thanks/" in page
     assert "{{download:renting_checklist}}" in (site / "content" / "pages" / "renting-thanks.md").read_text()
+
+
+def test_launch_week_plan_is_current_and_fact_checked():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("scam_decoded_launch_week", CONTENT.parent / "generators" / "launch-week" / "build.py")
+    lw = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(lw)
+    content, longs = lw.load()
+    keys = lw.checks(content, longs)      # looks, cadence, bios, a verdict for every claim
+    assert (CONTENT.parent / "LAUNCH_WEEK.md").read_text() == lw.render(content, longs, keys), \
+        "LAUNCH_WEEK.md is stale: run generators/launch-week/build.py"
+    # scouting's keyword sheet: the scam's name leads the retitled launch posts
+    renames = json.loads((CONTENT.parent / "launch-renames.json").read_text())
+    for n, r in renames.items():
+        sc = content[int(n)]["script"]
+        assert sc["title"] == r["new"] and len(sc["title"]) <= 60 and r["old"] in sc["title_variants"]
+    text = json.dumps(content)
+    for gone in ("3 seconds of audio", "tells them your number is live", "Both let you freeze for free"):
+        assert gone not in text, gone
