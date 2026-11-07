@@ -195,6 +195,8 @@ class Factory:
             raise ValueError(f"Can't approve a post in status {post['status']}")
         if self.render_pending(post_id):
             raise PermissionError("Post is still waiting in the render queue; review it once it has rendered")
+        from .review import check_can_approve
+        check_can_approve(post, self.brands().get(post["brand"]))
         self.db.update("posts", post_id, {"status": "approved", "review_notes": notes})
         self.db.log("post.approved", "post", post_id, {"notes": notes}, actor=actor)
 
@@ -274,12 +276,21 @@ class Factory:
             raise PermissionError("Media check failed: " + "; ".join(map(str, stop)))
         # Work out every slot first so a cadence block can't leave a half-scheduled post behind.
         plan = []
-        for platform in targets:
+        from .scheduler import platform_cap_reached
+        for platform in list(targets):
             slot = at or next_slot(self.db, brand, platform, fmt=post["format"])
+            cap = platform_cap_reached(self.db, brand, platform, post["format"], slot)
+            if cap is not None:
+                if platforms:
+                    raise PermissionError(f"{platform} already has {cap} {post['format']} post(s) that week (platform_weekly_caps)")
+                self.db.log("post.skipped_cap", "post", post_id, {"platform": platform, "cap": cap})
+                continue
             cadence = check_cadence(self.db, brand, platform, slot)
             if cadence.level == "block":
                 raise PermissionError(cadence.message)
             plan.append((platform, slot))
+        if not plan:
+            raise ValueError("Every platform for this post is at its weekly cap; nothing scheduled")
         pub_ids = []
         for platform, slot in plan:
             acct = brand.account(platform)
