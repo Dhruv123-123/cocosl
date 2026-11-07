@@ -1,0 +1,3478 @@
+[
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Winter heating bills that run about $90 a month above normal: spread the extra over September to November so December isn't a shock.",
+  "script": {
+   "title": "Winter heating bill fund: $120 a month from September",
+   "hook": "Winter heating can add $360 to your bills. Start saving for it in September.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Winter heating can add three hundred sixty dollars to your bills. Start saving for it in September.",
+     "on_screen_text": "Winter heating: +$360",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a radiator with a small coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Example",
+     "narration": "Example: your bill is usually ninety dollars, and runs about one eighty in December through March.",
+     "on_screen_text": "$90 normal · $180 in winter",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bill with two numbers. No text, no logos, no real people."
+    },
+    {
+     "heading": "The extra",
+     "narration": "That's ninety extra a month, for four months. Ninety times four is three hundred sixty.",
+     "on_screen_text": "$90 × 4 = $360",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calculator with four coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Spread it",
+     "narration": "Spread three sixty over September, October and November, and it's a hundred twenty a month.",
+     "on_screen_text": "$360 ÷ 3 ≈ $120 a month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three jars filling. No text, no logos, no real people."
+    },
+    {
+     "heading": "Check",
+     "narration": "Look up last winter's bills in your utility account to get your own numbers.",
+     "on_screen_text": "Use last winter's bills",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a small chart. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Winter heating fund (example):\nNormal bill $90, winter bill $180 for 4 months.\nExtra: $90 × 4 = $360.\nSaved over Sep–Nov: $360 ÷ 3 = $120 a month.\n\nUse last winter's bills from your utility account for your own numbers.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "heatingbill",
+    "budgeting",
+    "sinkingfunds",
+    "fall",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "A sinking fund for winter heating bills.",
+   "thumbnail_text": "Heating fund: $120/mo",
+   "sources": [
+    "https://www.energy.gov/energysaver/energy-saver",
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "Example bill amounts",
+    "90 × 4 = 360; 360 ÷ 3 = 120"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Budget billing",
+    "narration": "Many utilities offer budget billing, which averages your bill across the year. It smooths the payments but doesn't lower the total.",
+    "on_screen_text": "Budget billing smooths it",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bill with a flat line. No text, no logos, no real people."
+   },
+   {
+    "heading": "Cut it",
+    "narration": "Sealing drafts and lowering the thermostat a few degrees at night can cut the winter number.",
+    "on_screen_text": "Seal drafts · lower at night",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a door with a draft stopper. No text, no logos, no real people."
+   },
+   {
+    "heading": "Help",
+    "narration": "If winter bills are hard to cover, ask your utility about payment plans and local assistance programs.",
+    "on_screen_text": "Ask about assistance",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a speech bubble. No text, no logos, no real people."
+   },
+   {
+    "heading": "Name it",
+    "narration": "Give the fund a name in your savings app, like Winter Heat, so it doesn't get spent on something else.",
+    "on_screen_text": "Name it: Winter Heat",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a snowflake label. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "on-screen-calculation"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Fictional new grad with $3,100 take-home and $1,400 rent in a first apartment. Fix: bills first, then a weekly spending number and a starter fund.",
+  "script": {
+   "title": "Rate My Budget #38: new grad, $3,100 and $1,400 rent",
+   "hook": "New grad, $3,100 a month, $1,400 rent. Let's rate the first-apartment budget.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "New grad, thirty-one hundred a month, fourteen hundred rent. Let's rate the first-apartment budget.",
+     "on_screen_text": "$3,100 · rent $1,400",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a key and a small apartment. No text, no logos, no real people."
+    },
+    {
+     "heading": "Numbers",
+     "narration": "Fictional example. Rent fourteen hundred, other bills five hundred, student loan two hundred. That's twenty-one hundred.",
+     "on_screen_text": "Fictional · bills $2,100",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list with three lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Problem",
+     "narration": "The other thousand has no plan. It goes on takeout and furniture, and nothing is saved.",
+     "on_screen_text": "$1,000 with no plan",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin rolling away. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "Fix: two hundred to a starter emergency fund, two hundred to a furniture fund, and six hundred for spending, about a hundred fifty a week.",
+     "on_screen_text": "$200 · $200 · $150 a week",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "Score",
+     "narration": "Score: four out of ten. Seven out of ten with a plan for the thousand.",
+     "on_screen_text": "4/10 → 7/10",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a score card flipping from 4 to 7. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Rate My Budget #38 (fictional example): new grad, $3,100 take-home.\nRent $1,400, other bills $500, student loan $200 = $2,100.\n\nProblem: the other $1,000 has no plan.\n\nFix: $200 starter fund, $200 furniture fund, $600 spending (about $150 a week).\n\nScore: 4/10 → 7/10.\n\nFictional example budget for illustration, not a real person or submission. Want yours rated? DM us your numbers (no names, no screenshots with account details) and we'll anonymise them.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "ratemybudget",
+    "firstapartment",
+    "newgrad",
+    "budgetreview",
+    "budgeting",
+    "moneymadesimple"
+   ],
+   "description": "Rate My Budget #38: a fictional new grad's first apartment.",
+   "thumbnail_text": "New grad: $3,100",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/",
+    "https://www.consumerfinance.gov/renters/"
+   ],
+   "claims_to_verify": [
+    "Fictional example (label on screen)",
+    "1,400 + 500 + 200 = 2,100; 3,100 − 2,100 = 1,000; 600 ÷ 4 = 150"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Rent check",
+    "narration": "Rent at forty-five percent of take-home is high. At renewal, compare it with a roommate or a cheaper unit.",
+    "on_screen_text": "Rent: 45% of take-home",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small house with a percent sign. No text, no logos, no real people."
+   },
+   {
+    "heading": "Furniture",
+    "narration": "Buying furniture slowly, or second-hand, keeps it off a card at twenty percent or more.",
+    "on_screen_text": "Furniture: slow, or second-hand",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a chair with a price tag. No text, no logos, no real people."
+   },
+   {
+    "heading": "Match",
+    "narration": "If the job has a 401(k) match, enrol now. Even a small contribution can get it.",
+    "on_screen_text": "Enrol for the match",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin with a second coin. No text, no logos, no real people."
+   },
+   {
+    "heading": "Weekly",
+    "narration": "Move one week's spending to checking every Monday, and keep the rest in savings.",
+    "on_screen_text": "Move it weekly",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with an arrow. No text, no logos, no real people."
+   }
+  ],
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "September is National Preparedness Month. Three emergency kit myths: it's expensive, you have to buy it all at once, and it's only for storms.",
+  "script": {
+   "title": "3 emergency kit myths for Preparedness Month",
+   "hook": "September is Preparedness Month. 3 emergency kit myths that cost people money.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "September is Preparedness Month. Three emergency kit myths that cost people money.",
+     "on_screen_text": "3 emergency kit myths",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a small backpack with a flashlight. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 1",
+     "narration": "Myth one: a kit is expensive. Most of it is water, food, a flashlight and batteries. Many people already own half of it.",
+     "on_screen_text": "You probably own half",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pantry shelf with cans. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 2",
+     "narration": "Myth two: you have to buy it all at once. Add a few items every grocery trip for a month.",
+     "on_screen_text": "A few items each trip",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shopping basket with one can. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 3",
+     "narration": "Myth three: it's only for storms. Power cuts, a burst pipe or a job loss make a kit useful too.",
+     "on_screen_text": "Power cuts, not just storms",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lamp with a crossed-out plug. No text, no logos, no real people."
+    },
+    {
+     "heading": "Start",
+     "narration": "Start with the free checklist at Ready dot gov and tick off what you already have.",
+     "on_screen_text": "Free list: Ready.gov/kit",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a checklist with ticks. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "3 emergency kit myths:\n1. It's expensive: most of it is water, food, a flashlight and batteries\n2. Buy it all at once: add a few items each grocery trip\n3. Only for storms: power cuts and other surprises count too\n\nFree checklist: ready.gov/kit\n\nFollow for one money move a week.",
+   "hashtags": [
+    "preparednessmonth",
+    "emergencykit",
+    "budgeting",
+    "moneytips",
+    "september",
+    "moneymadesimple"
+   ],
+   "description": "Three emergency kit myths.",
+   "thumbnail_text": "Emergency kit myths",
+   "sources": [
+    "https://www.ready.gov/kit"
+   ],
+   "claims_to_verify": [
+    "September is National Preparedness Month (Ready.gov)",
+    "General guidance"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Water",
+    "narration": "Ready dot gov suggests about a gallon of water per person per day, for several days.",
+    "on_screen_text": "About 1 gallon per person a day",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a water jug. No text, no logos, no real people."
+   },
+   {
+    "heading": "Papers",
+    "narration": "Keep copies of key documents in a waterproof bag, or saved securely online.",
+    "on_screen_text": "Copies of key documents",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a folder in a plastic bag. No text, no logos, no real people."
+   },
+   {
+    "heading": "Cash",
+    "narration": "Keep a little cash in small bills. Card readers don't work in a power cut.",
+    "on_screen_text": "Small bills for power cuts",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a few folded bills. No text, no logos, no real people."
+   },
+   {
+    "heading": "Money side",
+    "narration": "The money side of a kit is your emergency fund. Both protect you from the same surprises.",
+    "on_screen_text": "Kit + emergency fund",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a backpack next to a jar. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "myth-vs-fact"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Five money dates in September and early October, counting down: Labor Day, the Sep 15 estimated tax date, insurance renewals, FAFSA opening, and holiday fund check-in.",
+  "script": {
+   "title": "5 money dates this fall, counting down",
+   "hook": "5 money dates coming up this fall. Number 2 has a penalty if you miss it.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Five money dates coming up this fall. Number two has a penalty if you miss it.",
+     "on_screen_text": "5 fall money dates",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a calendar with five circles. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Five: Labor Day weekend. Set a spending number before the sales start.",
+     "on_screen_text": "5. Labor Day: set a number",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small flag. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Four: any insurance renewal this fall. Compare quotes a few weeks before it renews.",
+     "on_screen_text": "4. Insurance renewal: compare",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shield with a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Three: the FAFSA usually opens October first for the next school year. Gather documents now.",
+     "on_screen_text": "3. FAFSA: usually Oct 1",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a graduation cap with a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Two: September fifteenth, the third-quarter estimated tax date, if you freelance or have side income. Missing it can mean a penalty.",
+     "on_screen_text": "2. Sep 15: estimated tax",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with 15 circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "One: your holiday fund check-in. Are you on track for December?",
+     "on_screen_text": "1. Holiday fund check-in",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gift box with a tick. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "5 fall money dates:\n5. Labor Day: set a spending number\n4. Insurance renewals: compare quotes early\n3. FAFSA: usually opens Oct 1 (check studentaid.gov)\n2. Sep 15: Q3 estimated tax for freelancers and side income\n1. Holiday fund check-in\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "moneycalendar",
+    "fall",
+    "estimatedtaxes",
+    "fafsa",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Five money dates this fall.",
+   "thumbnail_text": "5 fall money dates",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://studentaid.gov/h/apply-for-aid/fafsa"
+   ],
+   "claims_to_verify": [
+    "Q3 estimated tax due Sep 15 (moves to next business day on weekends)",
+    "FAFSA usually opens Oct 1; check studentaid.gov for the current year"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Calendar",
+    "narration": "Put all five in your phone calendar now, with a reminder a week before each.",
+    "on_screen_text": "Add them with reminders",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a bell. No text, no logos, no real people."
+   },
+   {
+    "heading": "Weekend rule",
+    "narration": "If a tax date falls on a weekend or holiday, it moves to the next business day.",
+    "on_screen_text": "Weekend? Next business day",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with an arrow. No text, no logos, no real people."
+   },
+   {
+    "heading": "One list",
+    "narration": "Keep one fall money list on your fridge or phone, and tick each date off.",
+    "on_screen_text": "One list, ticked off",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fridge with a note. No text, no logos, no real people."
+   },
+   {
+    "heading": "Open enrollment",
+    "narration": "Workplace benefits open enrollment often starts in October or November. Note your date when HR announces it.",
+    "on_screen_text": "Open enrollment: note the date",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a leaf. No text, no logos, no real people."
+   },
+   {
+    "heading": "Bonus",
+    "narration": "Fall is also a good time to check your credit reports, free at AnnualCreditReport dot com.",
+    "on_screen_text": "Bonus: check credit reports",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a report with a magnifying glass. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "countdown"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A common question from people with a small side hustle: do I have to pay estimated taxes? The general rule, the $1,000 threshold, and the safe-harbor idea.",
+  "script": {
+   "title": "\"Do I pay estimated taxes on a side hustle?\" Common question",
+   "hook": "Side hustle money coming in? Here's when estimated taxes apply. The $1,000 rule.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Side hustle money coming in? Here's when estimated taxes apply. The thousand-dollar rule.",
+     "on_screen_text": "Estimated taxes: the $1,000 rule",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a laptop with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Question",
+     "narration": "A common question: I make a few hundred a month on the side. Do I need to pay estimated taxes?",
+     "on_screen_text": "A common question",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "Generally, if you expect to owe a thousand dollars or more when you file, the IRS expects payments during the year.",
+     "on_screen_text": "Owe $1,000+? Pay during the year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with four marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Other option",
+     "narration": "If you also have a job, you can raise your paycheck withholding instead, using a new W-4.",
+     "on_screen_text": "Or raise withholding on a W-4",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pay stub with a pencil. No text, no logos, no real people."
+    },
+    {
+     "heading": "Next date",
+     "narration": "The next estimated payment date is September fifteenth.",
+     "on_screen_text": "Next date: Sep 15",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with 15 circled. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Do I pay estimated taxes on a side hustle?\nGenerally, if you expect to owe $1,000 or more when you file, the IRS expects payments during the year.\nWith a job too? You can raise withholding with a new W-4 instead.\nNext date: Sep 15.\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "sidehustle",
+    "estimatedtaxes",
+    "freelance",
+    "taxes",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "When side hustle income needs estimated taxes.",
+   "thumbnail_text": "Side hustle taxes?",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes"
+   ],
+   "claims_to_verify": [
+    "$1,000 threshold per IRS estimated taxes page",
+    "Safe harbor rules per IRS; check current rules"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Safe harbor",
+    "narration": "There are safe-harbor rules based on last year's tax that can help you avoid a penalty. Check the IRS page for details.",
+    "on_screen_text": "Safe-harbor rules exist",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small harbor with a boat. No text, no logos, no real people."
+   },
+   {
+    "heading": "Set aside",
+    "narration": "Many side hustlers move a share of each payment, often twenty-five to thirty percent, to a separate tax savings account.",
+    "on_screen_text": "Set aside a share of each payment",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar labelled tax. No text, no logos, no real people."
+   },
+   {
+    "heading": "Pay online",
+    "narration": "You can pay online through IRS Direct Pay or your IRS online account.",
+    "on_screen_text": "Pay at IRS.gov/payments",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a tick. No text, no logos, no real people."
+   },
+   {
+    "heading": "Self-employment tax",
+    "narration": "Side hustle profit can also owe self-employment tax for Social Security and Medicare, on top of income tax.",
+    "on_screen_text": "Plus self-employment tax",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin split in two. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "question-reply"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A season of college or NFL home-game tailgates for 2 people, priced in real numbers: food, drinks, parking and gear over 8 games.",
+  "script": {
+   "title": "Football season tailgates for 2: the real numbers",
+   "hook": "8 home games, 2 people, tailgating every one. Here's the season's real cost.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Eight home games, two people, tailgating every one. Here's the season's real cost.",
+     "on_screen_text": "8 games · 2 people",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a small grill and a football. No text, no logos, no real people."
+    },
+    {
+     "heading": "Per game",
+     "narration": "Example: food and drinks fifty dollars, parking twenty-five. That's seventy-five a game.",
+     "on_screen_text": "$50 food · $25 parking",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a cooler with a parking sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Season",
+     "narration": "Seventy-five times eight games is six hundred dollars, before tickets.",
+     "on_screen_text": "$75 × 8 = $600",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calculator with eight footballs. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cut it",
+     "narration": "Share parking with friends and split the food four ways, and it can drop to about forty a game.",
+     "on_screen_text": "Split it: ≈ $40 a game",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four friends around a grill. No text, no logos, no real people."
+    },
+    {
+     "heading": "Plan",
+     "narration": "Forty times eight is three hundred twenty. That's two eighty saved for the season.",
+     "on_screen_text": "$320 · $280 saved",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a football label. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Football season tailgates for 2 (example):\nFood and drinks $50 + parking $25 = $75 a game.\n8 home games: $600, before tickets.\nShare parking and split food 4 ways: about $40 a game, $320 a season.\nSaved: about $280.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "football",
+    "tailgate",
+    "budgeting",
+    "fall",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "What a tailgate season really costs.",
+   "thumbnail_text": "Tailgate season: $600",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "Example prices; local costs vary",
+    "75 × 8 = 600; 40 × 8 = 320; 600 − 320 = 280"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Gear",
+    "narration": "Buy gear once: a cooler and chairs you'll use all season, not new ones every game.",
+    "on_screen_text": "Buy gear once",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two folding chairs. No text, no logos, no real people."
+   },
+   {
+    "heading": "Watch at home",
+    "narration": "Watching a few away games or tougher games at home with friends costs much less.",
+    "on_screen_text": "Some games at home",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a TV with a football. No text, no logos, no real people."
+   },
+   {
+    "heading": "Fund",
+    "narration": "Set the season number aside in August, so game days come out of a fund, not a card.",
+    "on_screen_text": "Fund it before the season",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar filling. No text, no logos, no real people."
+   },
+   {
+    "heading": "Potluck",
+    "narration": "Make it a potluck. Each person brings one dish, and nobody pays for the whole spread.",
+    "on_screen_text": "Potluck: 1 dish each",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a table with several dishes. No text, no logos, no real people."
+   },
+   {
+    "heading": "Drinks",
+    "narration": "Drinks are often the biggest line. Bring your own water and buy in bulk before the season.",
+    "on_screen_text": "Drinks: buy in bulk",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a cooler full of bottles. No text, no logos, no real people."
+   },
+   {
+    "heading": "Track",
+    "narration": "Track the first two games. If the real number is higher than the plan, adjust early.",
+    "on_screen_text": "Track the first 2 games",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a small list. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "real-numbers"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Fictional two-parent family with $6,200 take-home and $1,600 a month of daycare. Fix: check the dependent care FSA and the child care credit, and trim one category.",
+  "script": {
+   "title": "Rate My Budget #39: $6,200 a month, $1,600 daycare",
+   "hook": "$6,200 take-home, $1,600 on daycare. Let's rate this family's budget.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Sixty-two hundred take-home, sixteen hundred on daycare. Let's rate this family's budget.",
+     "on_screen_text": "$6,200 · daycare $1,600",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a small house with a stroller. No text, no logos, no real people."
+    },
+    {
+     "heading": "Numbers",
+     "narration": "Fictional example. Mortgage nineteen hundred, daycare sixteen hundred, other bills twelve hundred. That's forty-seven hundred.",
+     "on_screen_text": "Fictional · bills $4,700",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list with three lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Problem",
+     "narration": "That leaves fifteen hundred, and it's all spent. Nothing goes to savings.",
+     "on_screen_text": "$1,500 left · $0 saved",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an empty jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "Fix: check for a dependent care FSA at work. It lets you pay daycare with pre-tax money, which can save hundreds a year.",
+     "on_screen_text": "Check: dependent care FSA",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin with a small shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Score",
+     "narration": "Score: five out of ten. Seven out of ten with the FSA and two hundred a month saved.",
+     "on_screen_text": "5/10 → 7/10",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a score card flipping from 5 to 7. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Rate My Budget #39 (fictional example): two parents, $6,200 take-home.\nMortgage $1,900, daycare $1,600, other bills $1,200 = $4,700.\n\nProblem: the remaining $1,500 is all spent; nothing saved.\n\nFix: check a dependent care FSA at work (pre-tax daycare money) and the Child and Dependent Care Credit; save $200 a month.\n\nScore: 5/10 → 7/10.\n\nFictional example budget for illustration, not a real person or submission. Want yours rated? DM us your numbers (no names, no screenshots with account details) and we'll anonymise them.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "ratemybudget",
+    "daycare",
+    "familybudget",
+    "budgetreview",
+    "parenting",
+    "moneymadesimple"
+   ],
+   "description": "Rate My Budget #39: a fictional family's daycare budget.",
+   "thumbnail_text": "Daycare: $1,600",
+   "sources": [
+    "https://www.irs.gov/taxtopics/tc602",
+    "https://www.healthcare.gov/have-job-based-coverage/flexible-spending-accounts/"
+   ],
+   "claims_to_verify": [
+    "Fictional example (label on screen)",
+    "1,900 + 1,600 + 1,200 = 4,700; 6,200 − 4,700 = 1,500",
+    "Dependent care FSA limits set by law; check plan"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Credit",
+    "narration": "There's also the Child and Dependent Care Credit. You generally can't use the same dollars for both, so check which helps more.",
+    "on_screen_text": "Care credit: same dollars can't count twice",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a small child icon. No text, no logos, no real people."
+   },
+   {
+    "heading": "Open enrollment",
+    "narration": "FSA sign-ups usually happen at open enrollment in the fall, so check now.",
+    "on_screen_text": "Sign up at open enrollment",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a leaf. No text, no logos, no real people."
+   },
+   {
+    "heading": "Trim",
+    "narration": "Two hundred a month can come from one category, like takeout or subscriptions.",
+    "on_screen_text": "Find $200 in one category",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pair of scissors and a receipt. No text, no logos, no real people."
+   },
+   {
+    "heading": "Starter fund",
+    "narration": "Point the two hundred at a starter emergency fund first.",
+    "on_screen_text": "$200 → starter fund",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with an umbrella. No text, no logos, no real people."
+   },
+   {
+    "heading": "Ask",
+    "narration": "Ask the daycare about sibling discounts, or paying a semester up front, which some offer at a discount.",
+    "on_screen_text": "Ask about discounts",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble with a percent sign. No text, no logos, no real people."
+   }
+  ],
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
+ },
+ {
+  "format": "short",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Money deposited into an IRA or brokerage account often sits as cash until you buy a fund. Explained: deposited isn't invested, and how to check.",
+  "script": {
+   "title": "Deposited isn't invested: the IRA cash mistake, explained",
+   "hook": "You put $1,000 in an IRA. It might still be sitting in cash. Here's how to check.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "You put a thousand dollars in an IRA. It might still be sitting in cash. Here's how to check.",
+     "on_screen_text": "Is your IRA money invested?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a jar of coins next to a laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "What happens",
+     "narration": "When money arrives in an IRA or brokerage account, it usually sits as cash until you buy something.",
+     "on_screen_text": "Deposits usually sit as cash",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. coins in an open box. No text, no logos, no real people."
+    },
+    {
+     "heading": "The cost",
+     "narration": "Cash in a sweep account can pay almost nothing, while the money was meant to be invested for years.",
+     "on_screen_text": "Cash can earn almost nothing",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small coin with a tiny arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Check",
+     "narration": "Log in and look at holdings. If it only shows cash or a money market, nothing is invested yet.",
+     "on_screen_text": "Holdings: only cash?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a screen with a list. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "To fix it, choose your fund, enter the dollar amount, and buy.",
+     "on_screen_text": "Choose the fund · buy",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a buy button. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Deposited isn't invested:\nMoney in an IRA or brokerage usually sits as cash until you buy a fund.\nCheck holdings: only cash or a money market? It's not invested yet.\nFix: choose your fund, enter the amount, buy.\n\nInvesting involves risk. Not financial advice.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "rothira",
+    "investingforbeginners",
+    "investing",
+    "first1000",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Why IRA deposits can sit uninvested.",
+   "thumbnail_text": "Is your IRA invested?",
+   "sources": [
+    "https://www.investor.gov/introduction-investing"
+   ],
+   "claims_to_verify": [
+    "Handling of uninvested cash varies by provider"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Automatic",
+    "narration": "Many providers let you turn on automatic investing, so future deposits buy your fund.",
+    "on_screen_text": "Turn on automatic investing",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gear with a coin. No text, no logos, no real people."
+   },
+   {
+    "heading": "Not advice",
+    "narration": "We don't recommend specific funds. Low-cost, diversified funds are a common starting point.",
+    "on_screen_text": "Low-cost, diversified",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a basket of small coins. No text, no logos, no real people."
+   },
+   {
+    "heading": "Series",
+    "narration": "Our long video series on your first thousand dollars invested starts September fifth.",
+    "on_screen_text": "Long series: from Sep 5",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a play button with a calendar. No text, no logos, no real people."
+   },
+   {
+    "heading": "Check yearly",
+    "narration": "Check once a year, after you contribute, that nothing has piled up as cash.",
+    "on_screen_text": "Check once a year",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a tick. No text, no logos, no real people."
+   },
+   {
+    "heading": "Settled",
+    "narration": "If you just deposited, wait for the money to settle, usually one to three business days, before buying.",
+    "on_screen_text": "Wait for it to settle",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an hourglass. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "explainer"
+ },
+ {
+  "format": "short",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "A $50,000 salary with a 50% match up to 6%: what the employee puts in, what the employer adds, and what's left on the table at 3%.",
+  "script": {
+   "title": "401(k) match on $50,000: what 3% leaves on the table",
+   "hook": "$50,000 salary, 50% match up to 6%. Contributing 3%? You're leaving $750 a year.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Fifty-thousand-dollar salary, fifty percent match up to six percent. Contributing three percent? You're leaving seven fifty a year.",
+     "on_screen_text": "3% in? $750 left on the table",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a coin left on a table. No text, no logos, no real people."
+    },
+    {
+     "heading": "At 6%",
+     "narration": "At six percent, you put in three thousand a year, and the employer adds fifteen hundred.",
+     "on_screen_text": "6%: you $3,000 · match $1,500",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two stacks of coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "At 3%",
+     "narration": "At three percent, you put in fifteen hundred, and the match is seven fifty.",
+     "on_screen_text": "3%: you $1,500 · match $750",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two smaller stacks. No text, no logos, no real people."
+    },
+    {
+     "heading": "The gap",
+     "narration": "Fifteen hundred minus seven fifty: seven hundred fifty dollars of match not collected.",
+     "on_screen_text": "$1,500 − $750 = $750",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calculator with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Check",
+     "narration": "Formulas vary. Check yours in the benefits portal, and check vesting too.",
+     "on_screen_text": "Check your formula and vesting",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a small form. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "401(k) match on $50,000 (example formula: 50% up to 6%):\nAt 6%: you $3,000, match $1,500.\nAt 3%: you $1,500, match $750.\nMatch not collected: $750 a year.\n\nFormulas vary. Check your plan and vesting schedule. Investing involves risk.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "401k",
+    "employermatch",
+    "investing",
+    "retirement",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "What contributing below the match costs.",
+   "thumbnail_text": "Match: $750 missed",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/401k-plans"
+   ],
+   "claims_to_verify": [
+    "Example formula",
+    "50,000 × 6% = 3,000; × 50% = 1,500; 50,000 × 3% = 1,500; × 50% = 750"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Raise it",
+    "narration": "Can't jump to six percent? Raise it one percent at a time, maybe with each raise.",
+    "on_screen_text": "Raise 1% at a time",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a staircase with coins. No text, no logos, no real people."
+   },
+   {
+    "heading": "Per paycheck",
+    "narration": "Going from three to six percent on fifty thousand is about fifty-eight dollars more per paycheck, before tax savings, if paid every two weeks.",
+    "on_screen_text": "≈ $58 more per paycheck",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pay stub. No text, no logos, no real people."
+   },
+   {
+    "heading": "Traditional",
+    "narration": "With a traditional 401(k), that contribution also lowers taxable income, so take-home falls by less.",
+    "on_screen_text": "Take-home falls by less",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pay stub with a small arrow. No text, no logos, no real people."
+   },
+   {
+    "heading": "Vesting",
+    "narration": "Some matches vest over a few years. Leave early, and you may keep only part of it.",
+    "on_screen_text": "Check vesting",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small key. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "on-screen-calculation"
+ },
+ {
+  "format": "short",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Three myths that stop people investing their first $1,000: you need a lot of money, you have to pick stocks, and you should wait for the right time.",
+  "script": {
+   "title": "3 myths about investing your first $1,000",
+   "hook": "3 myths that stop people investing their first $1,000. Myth 2 is the biggest.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Three myths that stop people investing their first thousand dollars. Myth two is the biggest.",
+     "on_screen_text": "3 first-$1,000 myths",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a small plant in a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 1",
+     "narration": "Myth one: you need a lot to start. Many accounts have no minimum, and fractional shares let any amount be invested.",
+     "on_screen_text": "No minimum · fractional shares",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin cut into slices. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 2",
+     "narration": "Myth two: you have to pick stocks. A single diversified fund holds hundreds or thousands of companies for you.",
+     "on_screen_text": "1 diversified fund is enough",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a basket of many coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 3",
+     "narration": "Myth three: wait for the right time. Nobody reliably knows when that is. Time invested usually matters more.",
+     "on_screen_text": "No one times it reliably",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a clock with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "First",
+     "narration": "But tick the basics first: a starter emergency fund and no high-interest card debt.",
+     "on_screen_text": "Starter fund · no card debt first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a checklist with two ticks. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "3 myths about investing your first $1,000:\n1. You need a lot: many accounts have no minimum\n2. You have to pick stocks: one diversified fund can be enough\n3. Wait for the right time: nobody reliably knows when\n\nFirst: a starter emergency fund and no high-interest debt.\n\nInvesting involves risk, including loss. Not financial advice.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "investingforbeginners",
+    "first1000",
+    "indexfunds",
+    "investing",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Three myths about starting to invest.",
+   "thumbnail_text": "First $1,000 myths",
+   "sources": [
+    "https://www.investor.gov/introduction-investing"
+   ],
+   "claims_to_verify": [
+    "General education; no specific securities"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Risk",
+    "narration": "Investing can lose money, especially in the short term. That's why it's for money you won't need for years.",
+    "on_screen_text": "For money you won't need for years",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a long arrow. No text, no logos, no real people."
+   },
+   {
+    "heading": "Fees",
+    "narration": "Check the expense ratio. A low-cost fund keeps more of your money working.",
+    "on_screen_text": "Check the expense ratio",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fact sheet with a magnifying glass. No text, no logos, no real people."
+   },
+   {
+    "heading": "Series",
+    "narration": "Our six-part series, Your First One Thousand Dollars Invested, starts on YouTube September fifth.",
+    "on_screen_text": "6-part series from Sep 5",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a play button. No text, no logos, no real people."
+   },
+   {
+    "heading": "Account",
+    "narration": "Using a 401(k) with a match? That's often the place to start.",
+    "on_screen_text": "Match first",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin with a second coin. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "myth-vs-fact"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Five car checks before winter, counting down, with what each costs vs the repair it can prevent.",
+  "script": {
+   "title": "5 car checks before winter, counting down",
+   "hook": "5 car checks before winter. Number 1 costs almost nothing and can save hundreds.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Five car checks before winter. Number one costs almost nothing and can save hundreds.",
+     "on_screen_text": "5 pre-winter car checks",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a small car with a snowflake. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Five: wiper blades and fluid. Cheap to replace, and you'll need them.",
+     "on_screen_text": "5. Wipers and fluid",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a windshield with a wiper. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Four: the battery. Cold weather is hard on old batteries. Many auto parts stores test them free.",
+     "on_screen_text": "4. Battery test",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a car battery. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Three: lights. A burnt-out bulb can mean a ticket.",
+     "on_screen_text": "3. Lights",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a headlight. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Two: tire tread. Worn tires are risky on wet or icy roads.",
+     "on_screen_text": "2. Tire tread",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tire with a coin in the tread. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "One: tire pressure. Cold air lowers it. Checking is nearly free, and the right pressure helps fuel economy and tire life.",
+     "on_screen_text": "1. Tire pressure",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pressure gauge. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "5 car checks before winter:\n5. Wipers and fluid\n4. Battery test (often free at parts stores)\n3. Lights\n2. Tire tread\n1. Tire pressure: nearly free, helps fuel economy and tire life\n\nFollow for one money move a week.",
+   "hashtags": [
+    "carmaintenance",
+    "winter",
+    "budgeting",
+    "cars",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Five car checks before winter.",
+   "thumbnail_text": "5 winter car checks",
+   "sources": [
+    "https://www.fueleconomy.gov/",
+    "https://www.consumerfinance.gov/consumer-tools/auto-loans/"
+   ],
+   "claims_to_verify": [
+    "Free battery testing is common but varies by store",
+    "Proper tire pressure can improve fuel economy (fueleconomy.gov)"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Car fund",
+    "narration": "Set aside a small amount monthly for car upkeep, so repairs don't land on a card.",
+    "on_screen_text": "Monthly car fund",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a car label. No text, no logos, no real people."
+   },
+   {
+    "heading": "Pressure number",
+    "narration": "Use the pressure on the sticker in the driver's door, not the number on the tire.",
+    "on_screen_text": "Use the door sticker number",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a car door with a sticker. No text, no logos, no real people."
+   },
+   {
+    "heading": "Kit",
+    "narration": "Keep a small winter kit in the car: a scraper, a blanket and jumper cables.",
+    "on_screen_text": "Scraper · blanket · cables",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small bag in a car trunk. No text, no logos, no real people."
+   },
+   {
+    "heading": "Oil",
+    "narration": "Check when your next oil change is due. Skipping it can lead to much bigger repairs.",
+    "on_screen_text": "Oil change due?",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an oil can. No text, no logos, no real people."
+   },
+   {
+    "heading": "Insurance",
+    "narration": "And with winter coming, check your car insurance deductible matches what's in your car fund.",
+    "on_screen_text": "Deductible vs your car fund",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shield next to a jar. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "countdown"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Fictional freelancer whose income swings between $2,000 and $5,000 a month. Fix: budget on the low month, pay yourself a steady salary from a buffer account.",
+  "script": {
+   "title": "Rate My Budget #40: freelancer, $2,000 to $5,000 a month",
+   "hook": "Income swings from $2,000 to $5,000 a month. Let's rate this freelancer's budget.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Income swings from two thousand to five thousand a month. Let's rate this freelancer's budget.",
+     "on_screen_text": "$2,000 – $5,000 a month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a laptop with a wavy line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Numbers",
+     "narration": "Fictional example. Bills are twenty-two hundred. Some months that's covered twice; some months it isn't.",
+     "on_screen_text": "Fictional · bills $2,200",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list with a wavy arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Problem",
+     "narration": "Big months get spent, and small months go on a card.",
+     "on_screen_text": "Big months spent · small on a card",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a credit card and a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "Fix: pay all income into a buffer account, then pay yourself a steady twenty-eight hundred each month. Set aside tax first.",
+     "on_screen_text": "Buffer → steady $2,800 'salary'",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big jar pouring into a small jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Score",
+     "narration": "Score: three out of ten. Eight out of ten with a buffer and a steady salary.",
+     "on_screen_text": "3/10 → 8/10",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a score card flipping from 3 to 8. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Rate My Budget #40 (fictional example): freelancer earning $2,000 to $5,000 a month; bills $2,200.\n\nProblem: big months get spent, small months go on a card.\n\nFix: all income into a buffer account, tax set aside first, then a steady $2,800 'salary' each month.\n\nScore: 3/10 → 8/10.\n\nFictional example budget for illustration, not a real person or submission. Want yours rated? DM us your numbers (no names, no screenshots with account details) and we'll anonymise them.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "ratemybudget",
+    "freelance",
+    "irregularincome",
+    "budgetreview",
+    "budgeting",
+    "moneymadesimple"
+   ],
+   "description": "Rate My Budget #40: a fictional freelancer's uneven income.",
+   "thumbnail_text": "Freelancer: $2K–$5K",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes"
+   ],
+   "claims_to_verify": [
+    "Fictional example (label on screen)",
+    "Steady salary must be ≤ average after-tax income"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Average",
+    "narration": "Pick the salary from your average month after tax, not your best month.",
+    "on_screen_text": "Use the average, after tax",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale with coins. No text, no logos, no real people."
+   },
+   {
+    "heading": "Buffer size",
+    "narration": "Build the buffer to one or two months of salary, so a slow month doesn't break it.",
+    "on_screen_text": "Buffer: 1–2 months",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with two marks. No text, no logos, no real people."
+   },
+   {
+    "heading": "Tax",
+    "narration": "Move a share of every payment to a tax account first. The next estimated date is September fifteenth.",
+    "on_screen_text": "Tax first · Sep 15 next",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar labelled tax. No text, no logos, no real people."
+   },
+   {
+    "heading": "Extra",
+    "narration": "When the buffer is full, extra from big months goes to savings or debt.",
+    "on_screen_text": "Full buffer? Extra to goals",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow to a savings jar. No text, no logos, no real people."
+   },
+   {
+    "heading": "Invoices",
+    "narration": "Send invoices on a set day each week, and follow up on late ones. Steadier invoicing means steadier income.",
+    "on_screen_text": "Invoice on a set day",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with an envelope. No text, no logos, no real people."
+   }
+  ],
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
+ },
+ {
+  "format": "short",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "A common fall question: should I upgrade my phone? The math of keeping a paid-off phone vs a new $1,000 phone on a 36-month plan.",
+  "script": {
+   "title": "\"Should I upgrade my phone this fall?\" Common question",
+   "hook": "New phones are out. Upgrade or keep yours? The $28 a month question.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "New phones are out. Upgrade or keep yours? The twenty-eight-dollar-a-month question.",
+     "on_screen_text": "Upgrade? The $28/mo question",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes two phones side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Question",
+     "narration": "A common question: my phone works fine, but the new one is out. Should I upgrade?",
+     "on_screen_text": "A common question",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble with a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "The math",
+     "narration": "A thousand-dollar phone over thirty-six months is about twenty-eight dollars a month. Keeping a paid-off phone costs nothing extra.",
+     "on_screen_text": "$1,000 ÷ 36 ≈ $28 a month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calculator with a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "A year",
+     "narration": "Keep yours one more year, and that's about three hundred thirty-six dollars not spent.",
+     "on_screen_text": "1 more year ≈ $336 kept",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a phone label. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule",
+     "narration": "A simple rule: upgrade when it stops doing what you need, not when a new one comes out.",
+     "on_screen_text": "Upgrade when it stops working for you",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a tick. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Should I upgrade my phone this fall?\nA $1,000 phone over 36 months ≈ $28 a month.\nKeeping a paid-off phone one more year ≈ $336 kept.\n\nRule: upgrade when it stops doing what you need.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "phone",
+    "budgeting",
+    "frugal",
+    "moneytips",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "The monthly math of a phone upgrade.",
+   "thumbnail_text": "Upgrade? $28/mo",
+   "sources": [
+    "https://www.fcc.gov/consumers"
+   ],
+   "claims_to_verify": [
+    "Example price",
+    "1,000 ÷ 36 ≈ 27.78; × 12 ≈ 333 (rounded to $28 × 12 = $336)"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Battery",
+    "narration": "Slow battery? A battery replacement often costs far less than a new phone.",
+    "on_screen_text": "Try a new battery first",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a battery with a tick. No text, no logos, no real people."
+   },
+   {
+    "heading": "Deals",
+    "narration": "Free phone deals usually spread the cost into a longer contract or a pricier plan. Check the total.",
+    "on_screen_text": "'Free' = check the total",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a contract with a magnifying glass. No text, no logos, no real people."
+   },
+   {
+    "heading": "Sell it",
+    "narration": "If you do upgrade, sell or trade in the old phone, and wipe it first.",
+    "on_screen_text": "Sell or trade in · wipe it",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a price tag. No text, no logos, no real people."
+   },
+   {
+    "heading": "Fund it",
+    "narration": "Save the twenty-eight a month now, and buy the next phone in cash.",
+    "on_screen_text": "Save $28/mo · buy in cash",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar filling. No text, no logos, no real people."
+   },
+   {
+    "heading": "Plan check",
+    "narration": "While you're at it, check your phone plan. Paying for more data than you use is a common leak.",
+    "on_screen_text": "Check your plan's data",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a gauge. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "question-reply"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Halloween for a family of 4, priced in real numbers: costumes, candy, decorations and a pumpkin patch trip, and where it can be trimmed.",
+  "script": {
+   "title": "Halloween for a family of 4: the real numbers",
+   "hook": "Halloween for a family of 4 can hit $250. Here are the real numbers.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Halloween for a family of four can hit two hundred fifty dollars. Here are the real numbers.",
+     "on_screen_text": "Halloween: $250?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a pumpkin and a small coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Costumes",
+     "narration": "Example: four costumes at thirty dollars each, a hundred twenty.",
+     "on_screen_text": "Costumes: 4 × $30 = $120",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four small costumes. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rest",
+     "narration": "Candy fifty, decorations forty, a pumpkin patch trip forty. That's one thirty.",
+     "on_screen_text": "Candy $50 · decor $40 · patch $40",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bowl of candy and a pumpkin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Total",
+     "narration": "Total: two hundred fifty dollars.",
+     "on_screen_text": "Total: $250",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calculator with a pumpkin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Trim",
+     "narration": "Costume swaps with friends and reusing decorations can cut it to about one forty.",
+     "on_screen_text": "Swaps + reuse ≈ $140",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two kids swapping costumes. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Halloween for a family of 4 (example):\nCostumes 4 × $30 = $120\nCandy $50 · decorations $40 · pumpkin patch $40\nTotal: $250\n\nCostume swaps and reused decorations: about $140.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "halloween",
+    "familybudget",
+    "budgeting",
+    "fall",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "What Halloween costs a family of four.",
+   "thumbnail_text": "Halloween: $250",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "Example prices",
+    "4 × 30 = 120; 50 + 40 + 40 = 130; 120 + 130 = 250"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Early",
+    "narration": "Buy candy close to the day, so it doesn't get eaten and bought twice.",
+    "on_screen_text": "Buy candy late",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a candy bag with a calendar. No text, no logos, no real people."
+   },
+   {
+    "heading": "After",
+    "narration": "Buy decorations in the after-Halloween sales for next year.",
+    "on_screen_text": "Decor: buy Nov 1 for next year",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a box with a small tag. No text, no logos, no real people."
+   },
+   {
+    "heading": "Set it",
+    "narration": "Set the number now and give it its own small fund, so October doesn't go on a card.",
+    "on_screen_text": "Set it now · small fund",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a pumpkin label. No text, no logos, no real people."
+   },
+   {
+    "heading": "Candy math",
+    "narration": "Not sure how much candy to buy? Note how many trick-or-treaters you get this year, and use that number next year.",
+    "on_screen_text": "Count visitors for next year",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a door with a small tally. No text, no logos, no real people."
+   },
+   {
+    "heading": "Free fun",
+    "narration": "Many towns run free trunk-or-treat or community events. Check the library or local parks calendar.",
+    "on_screen_text": "Check free local events",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small town square with lanterns. No text, no logos, no real people."
+   },
+   {
+    "heading": "Costume reuse",
+    "narration": "Pick costumes that can be reused for dress-up play, so the money stretches beyond one night.",
+    "on_screen_text": "Costumes that get reused",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a dress-up box. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "real-numbers"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A side hustle with $3,000 profit in a quarter: setting aside 25% to 30% for taxes before the Sep 15 estimated payment.",
+  "script": {
+   "title": "Side hustle profit of $3,000: what to set aside by Sep 15",
+   "hook": "$3,000 of side hustle profit this quarter. Set aside $750 to $900 before Sep 15.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Three thousand dollars of side hustle profit this quarter. Set aside seven fifty to nine hundred before September fifteenth.",
+     "on_screen_text": "$3,000 profit → set aside $750–$900",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a laptop with a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why",
+     "narration": "Side hustle profit can owe income tax and self-employment tax, and no one withholds it for you.",
+     "on_screen_text": "No one withholds it for you",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin with a small shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "The math",
+     "narration": "A common rule of thumb is twenty-five to thirty percent. Three thousand times twenty-five percent is seven fifty. Times thirty percent, nine hundred.",
+     "on_screen_text": "$3,000 × 25–30% = $750–$900",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calculator with two numbers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Your number",
+     "narration": "Your real number depends on your bracket and other income. IRS Form 1040-ES has a worksheet.",
+     "on_screen_text": "Form 1040-ES worksheet",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a pencil. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pay",
+     "narration": "Pay by September fifteenth through IRS dot gov slash payments.",
+     "on_screen_text": "Pay by Sep 15",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with 15 circled. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Side hustle profit of $3,000 this quarter (example):\nRule of thumb: set aside 25–30%.\n$3,000 × 25% = $750 · × 30% = $900.\nYour real number depends on your bracket: use the Form 1040-ES worksheet.\nPay by Sep 15 at IRS.gov/payments.\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "sidehustle",
+    "estimatedtaxes",
+    "freelance",
+    "taxes",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "How much to set aside from side hustle profit.",
+   "thumbnail_text": "$3,000 → set aside $750+",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes",
+    "https://www.irs.gov/payments"
+   ],
+   "claims_to_verify": [
+    "25–30% is a rule of thumb, not a calculation",
+    "3,000 × 0.25 = 750; × 0.30 = 900",
+    "Q3 due Sep 15, 2027 (Wednesday)"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Profit",
+    "narration": "Profit means income minus business expenses. Keep receipts so the number is accurate.",
+    "on_screen_text": "Profit = income − expenses",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a receipt and a coin. No text, no logos, no real people."
+   },
+   {
+    "heading": "Separate",
+    "narration": "Keep the tax money in a separate savings account, so it's not spent by mistake.",
+    "on_screen_text": "Separate tax account",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar labelled tax. No text, no logos, no real people."
+   },
+   {
+    "heading": "Self-employment tax",
+    "narration": "Self-employment tax is about fifteen point three percent of most net earnings, before income tax.",
+    "on_screen_text": "SE tax ≈ 15.3%",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin split in two. No text, no logos, no real people."
+   },
+   {
+    "heading": "Next",
+    "narration": "After September, the next estimated date is in mid-January.",
+    "on_screen_text": "Next: mid-January",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a snowflake. No text, no logos, no real people."
+   },
+   {
+    "heading": "Penalty",
+    "narration": "Paying late can add a penalty, charged like interest on the amount that was due. Paying even part on time helps.",
+    "on_screen_text": "Late = penalty · pay what you can",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a small coin. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "on-screen-calculation"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Workplace benefits open enrollment, explained in 4 steps: review last year, compare plans by total cost, check FSA/HSA, and update beneficiaries.",
+  "script": {
+   "title": "Open enrollment, explained in 4 steps",
+   "hook": "Open enrollment is coming. 4 steps so you don't just click 'keep my plan'.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Open enrollment is coming. Four steps so you don't just click keep my plan.",
+     "on_screen_text": "Open enrollment: 4 steps",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a laptop with a benefits form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1",
+     "narration": "Step one: look at last year. How often did you see a doctor, and what did you pay?",
+     "on_screen_text": "1. Review last year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with small crosses. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2",
+     "narration": "Step two: compare plans by total cost. Yearly premiums plus what you'd likely pay out of pocket.",
+     "on_screen_text": "2. Premiums + likely costs",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two plans on a scale. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3",
+     "narration": "Step three: check FSA or HSA options. Pre-tax money for medical or dependent care costs.",
+     "on_screen_text": "3. FSA or HSA?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin with a small cross. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 4",
+     "narration": "Step four: update beneficiaries on life insurance and your retirement plan.",
+     "on_screen_text": "4. Update beneficiaries",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a name. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Open enrollment in 4 steps:\n1. Review last year's care and costs\n2. Compare plans by total cost: premiums + likely out-of-pocket\n3. Check FSA or HSA options\n4. Update beneficiaries\n\nDates vary by employer; many run in October or November.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "openenrollment",
+    "benefits",
+    "healthinsurance",
+    "moneytips",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "How to work through open enrollment.",
+   "thumbnail_text": "Open enrollment: 4 steps",
+   "sources": [
+    "https://www.healthcare.gov/have-job-based-coverage/",
+    "https://www.healthcare.gov/have-job-based-coverage/flexible-spending-accounts/"
+   ],
+   "claims_to_verify": [
+    "Dates vary by employer",
+    "HSA requires a qualifying high-deductible plan"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Max",
+    "narration": "Check each plan's out-of-pocket maximum. That's the worst case in a bad year.",
+    "on_screen_text": "Check the out-of-pocket max",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gauge on high. No text, no logos, no real people."
+   },
+   {
+    "heading": "Network",
+    "narration": "Make sure your doctors and nearby hospitals are in network.",
+    "on_screen_text": "Doctors in network?",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a map with a small cross. No text, no logos, no real people."
+   },
+   {
+    "heading": "HSA",
+    "narration": "An HSA needs a qualifying high-deductible plan. The money carries over year to year.",
+    "on_screen_text": "HSA: needs a high-deductible plan",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a cross. No text, no logos, no real people."
+   },
+   {
+    "heading": "FSA",
+    "narration": "Most FSA money must be used within the plan year, though some plans allow a small carryover or grace period.",
+    "on_screen_text": "FSA: use it or lose most of it",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a coin. No text, no logos, no real people."
+   },
+   {
+    "heading": "Life changes",
+    "narration": "Had a baby, got married, or moved? Those can change which plan fits, so look again even if last year's plan was fine.",
+    "on_screen_text": "Life change? Look again",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a small heart. No text, no logos, no real people."
+   },
+   {
+    "heading": "Deadline",
+    "narration": "Put the enrollment deadline in your calendar. If you miss it, you may have to wait a year to change.",
+    "on_screen_text": "Miss it, wait a year",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a clock. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "explainer"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Fictional single parent with $4,200 take-home and two kids. Fix: one fixed grocery number, a kids' sinking fund, and a starter emergency fund.",
+  "script": {
+   "title": "Rate My Budget #41: single parent, $4,200, two kids",
+   "hook": "Single parent, 2 kids, $4,200 a month. Let's rate the budget.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Single parent, two kids, forty-two hundred a month. Let's rate the budget.",
+     "on_screen_text": "$4,200 · 2 kids",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a small house with three figures. No text, no logos, no real people."
+    },
+    {
+     "heading": "Numbers",
+     "narration": "Fictional example. Rent fifteen hundred, other bills nine hundred, groceries around eight hundred, but it changes every month.",
+     "on_screen_text": "Fictional · rent $1,500",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list with three lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Problem",
+     "narration": "Kids' costs, like field trips and shoes, keep landing on a card. Savings is zero.",
+     "on_screen_text": "Kids' costs on a card",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. small sneakers with a card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "Fix: groceries at a set seven hundred, a hundred fifty a month kids' fund, and a hundred fifty to a starter emergency fund.",
+     "on_screen_text": "$700 · $150 · $150",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "Score",
+     "narration": "Score: five out of ten. Eight out of ten with the two funds.",
+     "on_screen_text": "5/10 → 8/10",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a score card flipping from 5 to 8. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Rate My Budget #41 (fictional example): single parent, two kids, $4,200 take-home.\nRent $1,500, other bills $900, groceries ~$800 and changing.\n\nProblem: kids' costs land on a card; savings $0.\n\nFix: groceries set at $700, $150 a month kids' fund, $150 a month starter emergency fund.\n\nScore: 5/10 → 8/10.\n\nFictional example budget for illustration, not a real person or submission. Want yours rated? DM us your numbers (no names, no screenshots with account details) and we'll anonymise them.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "ratemybudget",
+    "singleparent",
+    "familybudget",
+    "budgetreview",
+    "budgeting",
+    "moneymadesimple"
+   ],
+   "description": "Rate My Budget #41: a fictional single parent's budget.",
+   "thumbnail_text": "Single parent: $4,200",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/",
+    "https://www.fns.usda.gov/nslp"
+   ],
+   "claims_to_verify": [
+    "Fictional example (label on screen)",
+    "1,500 + 900 + 700 + 150 + 150 = 3,400; leaves 800 for other spending"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Meals",
+    "narration": "Check if the kids qualify for free or reduced-price school meals. It can cut the grocery number a lot.",
+    "on_screen_text": "Check school meal programs",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lunch tray. No text, no logos, no real people."
+   },
+   {
+    "heading": "Credits",
+    "narration": "Check the Child Tax Credit and Earned Income Tax Credit at tax time. They can be worth a lot.",
+    "on_screen_text": "Check CTC and EITC",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a small child icon. No text, no logos, no real people."
+   },
+   {
+    "heading": "Kids' fund",
+    "narration": "List the kids' costs you know are coming this year: shoes, trips, birthdays. Divide by twelve.",
+    "on_screen_text": "Kids' costs ÷ 12",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list with a calendar. No text, no logos, no real people."
+   },
+   {
+    "heading": "Left",
+    "narration": "That leaves about eight hundred for gas and everything else. Track it weekly.",
+    "on_screen_text": "≈ $800 left · track weekly",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a small chart. No text, no logos, no real people."
+   }
+  ],
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Three FAFSA myths ahead of the usual Oct 1 opening: we earn too much, it's only for loans, and you only file once.",
+  "script": {
+   "title": "3 FAFSA myths before it opens",
+   "hook": "The FAFSA usually opens October 1. 3 myths that stop families filing.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "The FAFSA usually opens October first. Three myths that stop families filing.",
+     "on_screen_text": "3 FAFSA myths",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a graduation cap with a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 1",
+     "narration": "Myth one: we earn too much to qualify. There's no single income cutoff, and many schools use the FAFSA for their own aid.",
+     "on_screen_text": "No single income cutoff",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale with a cap. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 2",
+     "narration": "Myth two: it's only for loans. It's also the form for federal grants, work-study and many school scholarships.",
+     "on_screen_text": "Grants · work-study · scholarships",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stack of small papers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 3",
+     "narration": "Myth three: you file once. You file a new FAFSA for each school year.",
+     "on_screen_text": "File every year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a repeat arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Start",
+     "narration": "Create your StudentAid dot gov account now, so you're ready when it opens.",
+     "on_screen_text": "Make your account now",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a key. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "3 FAFSA myths:\n1. We earn too much: there's no single income cutoff\n2. It's only for loans: it's also for grants, work-study and many scholarships\n3. You file once: it's every school year\n\nUsually opens Oct 1. Check studentaid.gov for this year's date.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "fafsa",
+    "college",
+    "financialaid",
+    "studentloans",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Three FAFSA myths.",
+   "thumbnail_text": "FAFSA myths",
+   "sources": [
+    "https://studentaid.gov/h/apply-for-aid/fafsa",
+    "https://studentaid.gov/"
+   ],
+   "claims_to_verify": [
+    "FAFSA usually opens Oct 1; check studentaid.gov for the current cycle",
+    "No single income cutoff (studentaid.gov)"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Early",
+    "narration": "Some aid is limited, so filing early can matter. Check each school's deadline too.",
+    "on_screen_text": "Some aid is first-come",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an hourglass with a cap. No text, no logos, no real people."
+   },
+   {
+    "heading": "Documents",
+    "narration": "You'll generally need tax info from two years before. The form can often pull it in directly.",
+    "on_screen_text": "Tax info from 2 years before",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a folder of papers. No text, no logos, no real people."
+   },
+   {
+    "heading": "Free",
+    "narration": "The FAFSA is free. Never pay a website to file it.",
+    "on_screen_text": "It's free: never pay to file",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a zero. No text, no logos, no real people."
+   },
+   {
+    "heading": "Contributors",
+    "narration": "Parents of dependent students usually need their own account too.",
+    "on_screen_text": "Parents need an account too",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two keys. No text, no logos, no real people."
+   },
+   {
+    "heading": "Help",
+    "narration": "Stuck on a question? StudentAid dot gov has free help, and many high school counselors run FAFSA nights.",
+    "on_screen_text": "Free help: counselors, StudentAid.gov",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble with a cap. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "myth-vs-fact"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Five ways to lower your car insurance bill, counting down, from shopping quotes to raising the deductible only if your fund covers it.",
+  "script": {
+   "title": "5 ways to lower car insurance, counting down",
+   "hook": "5 ways to lower your car insurance. Number 1 takes about an hour.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Five ways to lower your car insurance. Number one takes about an hour.",
+     "on_screen_text": "5 ways to lower car insurance",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a small car with a shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Five: ask about discounts: safe driver, good student, low mileage, paperless.",
+     "on_screen_text": "5. Ask about discounts",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble with a percent sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Four: bundle with renters or home insurance, if the total really is lower.",
+     "on_screen_text": "4. Bundle, if it's cheaper",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two shields together. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Three: drop extras you don't use, like rental cover if you have a second car.",
+     "on_screen_text": "3. Drop unused extras",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list with a line crossed off. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Two: raise the deductible, but only if your car fund can cover it.",
+     "on_screen_text": "2. Higher deductible, if funded",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar next to a shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "One: get three quotes before you renew. It takes about an hour.",
+     "on_screen_text": "1. 3 quotes before renewal",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three papers with prices. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "5 ways to lower car insurance:\n5. Ask about discounts\n4. Bundle, if the total is lower\n3. Drop unused extras\n2. Raise the deductible, only if your fund covers it\n1. Get 3 quotes before renewal\n\nFollow for one money move a week.",
+   "hashtags": [
+    "carinsurance",
+    "insurance",
+    "budgeting",
+    "cars",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Five ways to lower car insurance.",
+   "thumbnail_text": "Lower car insurance",
+   "sources": [
+    "https://content.naic.org/consumer",
+    "https://www.consumerfinance.gov/consumer-tools/auto-loans/"
+   ],
+   "claims_to_verify": [
+    "General guidance; discounts vary by insurer and state"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Same cover",
+    "narration": "Compare quotes with the same coverage, so the cheapest isn't just the thinnest.",
+    "on_screen_text": "Compare the same coverage",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two equal shields. No text, no logos, no real people."
+   },
+   {
+    "heading": "Old car",
+    "narration": "On an older car, compare the cost of collision coverage with what the car is worth.",
+    "on_screen_text": "Old car? Check collision cost",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an old car with a price tag. No text, no logos, no real people."
+   },
+   {
+    "heading": "Credit",
+    "narration": "In many states, insurers can use credit-based scores, so paying on time can help over time.",
+    "on_screen_text": "Credit can matter (most states)",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gauge on high. No text, no logos, no real people."
+   },
+   {
+    "heading": "Annual",
+    "narration": "Paying for six or twelve months at once can be cheaper than monthly, if you've saved for it.",
+    "on_screen_text": "Pay in full, if saved",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a coin. No text, no logos, no real people."
+   },
+   {
+    "heading": "Telematics",
+    "narration": "Some insurers offer a discount for tracking your driving through an app. Read what data they collect first.",
+    "on_screen_text": "Driving apps: read the data terms",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a small car. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "countdown"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A common question: where should my emergency fund live? Why a high-yield savings account fits, and what to check (FDIC/NCUA insurance, no fees, easy transfer).",
+  "script": {
+   "title": "\"Where should my emergency fund live?\" Common question",
+   "hook": "$1,000 emergency fund in checking earning almost nothing? Here's where it can live instead.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "A thousand-dollar emergency fund in checking, earning almost nothing? Here's where it can live instead.",
+     "on_screen_text": "Where should it live?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a jar next to a bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "Question",
+     "narration": "A common question: where should my emergency fund go? Checking, savings, or investing?",
+     "on_screen_text": "A common question",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble with a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Answer",
+     "narration": "Many people use a high-yield savings account. It's separate from spending, earns more than most checking, and you can reach it in a day or two.",
+     "on_screen_text": "High-yield savings: separate + reachable",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a small arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Check",
+     "narration": "Check that it's FDIC or NCUA insured, with no monthly fee.",
+     "on_screen_text": "FDIC/NCUA insured · no fee",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small shield with a tick. No text, no logos, no real people."
+    },
+    {
+     "heading": "Not invested",
+     "narration": "It usually shouldn't be invested in stocks, because you might need it right after a drop.",
+     "on_screen_text": "Not in stocks",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a line chart with a dip. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Where should my emergency fund live?\nMany people use a high-yield savings account: separate from spending, earns more than most checking, reachable in a day or two.\nCheck: FDIC or NCUA insured, no monthly fee.\nUsually not in stocks: you might need it right after a drop.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "emergencyfund",
+    "highyieldsavings",
+    "savings",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Where an emergency fund can live.",
+   "thumbnail_text": "Emergency fund home",
+   "sources": [
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+    "https://www.consumerfinance.gov/consumer-tools/bank-accounts/"
+   ],
+   "claims_to_verify": [
+    "FDIC/NCUA insurance up to limits",
+    "Rates vary and change"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Rates change",
+    "narration": "Savings rates change. Check yours once or twice a year.",
+    "on_screen_text": "Rates change: check yearly",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a percent sign. No text, no logos, no real people."
+   },
+   {
+    "heading": "Apps",
+    "narration": "Some savings apps aren't banks. Check that your money is held at an insured bank.",
+    "on_screen_text": "Apps: check who holds it",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a shield. No text, no logos, no real people."
+   },
+   {
+    "heading": "Link it",
+    "narration": "Link it to checking, so a transfer takes one or two business days.",
+    "on_screen_text": "Link to checking",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two jars with an arrow. No text, no logos, no real people."
+   },
+   {
+    "heading": "Name it",
+    "narration": "Name the account Emergency, so it's clear what it's for.",
+    "on_screen_text": "Name it: Emergency",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a label. No text, no logos, no real people."
+   },
+   {
+    "heading": "How much",
+    "narration": "Start with a starter goal, like five hundred to a thousand dollars, then build toward three to six months of expenses.",
+    "on_screen_text": "Start small → 3–6 months",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with three marks. No text, no logos, no real people."
+   },
+   {
+    "heading": "Two jars",
+    "narration": "Some people keep a small amount in checking for same-day needs and the rest in savings.",
+    "on_screen_text": "A little in checking, rest in savings",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two jars, one small. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "question-reply"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Holiday fund check-in: at $37.50 a week from late August, where you should be by mid-September, and how to catch up if you haven't started.",
+  "script": {
+   "title": "Holiday fund check-in: $150 by mid-September",
+   "hook": "Started a $37.50-a-week holiday fund in late August? You should have $150 by now. Here's the check.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Started a thirty-seven-fifty-a-week holiday fund in late August? You should have a hundred fifty by now. Here's the check.",
+     "on_screen_text": "On track: $150",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a gift box with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Plan",
+     "narration": "The plan: six hundred dollars by mid-December, at thirty-seven fifty a week for sixteen weeks.",
+     "on_screen_text": "$37.50 × 16 = $600",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with sixteen marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "So far",
+     "narration": "Four weeks in, that's a hundred fifty dollars. Twelve weeks to go.",
+     "on_screen_text": "4 × $37.50 = $150",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar a quarter full. No text, no logos, no real people."
+    },
+    {
+     "heading": "Not started?",
+     "narration": "Starting now? Six hundred over twelve weeks is fifty dollars a week.",
+     "on_screen_text": "Late: $600 ÷ 12 = $50/wk",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calculator with a gift. No text, no logos, no real people."
+    },
+    {
+     "heading": "Or",
+     "narration": "Or lower the goal. Four hundred over twelve weeks is about thirty-three a week.",
+     "on_screen_text": "Or $400 ÷ 12 ≈ $33/wk",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a smaller gift box. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Holiday fund check-in (example):\nPlan: $600 by mid-December at $37.50 a week for 16 weeks from late August.\n4 weeks in: $150.\nStarting now: $600 ÷ 12 weeks = $50 a week, or $400 ÷ 12 ≈ $33 a week.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "holidayfund",
+    "sinkingfunds",
+    "budgeting",
+    "holidays",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "A holiday fund progress check.",
+   "thumbnail_text": "Holiday fund: on track?",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "37.5 × 16 = 600; × 4 = 150; 600 ÷ 12 = 50; 400 ÷ 12 ≈ 33.33"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "List",
+    "narration": "Check the gift list total against the goal. Adjust the list or the goal now, not in December.",
+    "on_screen_text": "List total vs goal",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list with gift icons. No text, no logos, no real people."
+   },
+   {
+    "heading": "Windfall",
+    "narration": "Add any rebate or refund to the fund and lower the weekly number.",
+    "on_screen_text": "Add windfalls",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin falling into a box. No text, no logos, no real people."
+   },
+   {
+    "heading": "Auto",
+    "narration": "Automate the weekly amount on payday, so it happens without thinking.",
+    "on_screen_text": "Automate it on payday",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gear with a coin. No text, no logos, no real people."
+   },
+   {
+    "heading": "Experiences",
+    "narration": "Not every gift has to be bought. Experiences, homemade gifts or a family gift swap can lower the total.",
+    "on_screen_text": "Try a family gift swap",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small wrapped box with a ribbon. No text, no logos, no real people."
+   },
+   {
+    "heading": "Track",
+    "narration": "Write the running total on your list each week, so you can see the fund grow.",
+    "on_screen_text": "Track the running total",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list with a growing number. No text, no logos, no real people."
+   },
+   {
+    "heading": "Ask early",
+    "narration": "Agree on spending limits with family now, before anyone starts shopping.",
+    "on_screen_text": "Agree on limits early",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two speech bubbles. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "real-numbers"
+ },
+ {
+  "format": "short",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "A $2,000 card balance at 24% APR: monthly interest worked out, what a year of it costs, and what paying $200 a month extra does.",
+  "script": {
+   "title": "$2,000 on a 24% card: the monthly interest math",
+   "hook": "$2,000 on a card at 24%. That's about $40 a month in interest. Here's the math.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Two thousand dollars on a card at twenty-four percent. That's about forty dollars a month in interest. Here's the math.",
+     "on_screen_text": "$2,000 at 24% ≈ $40/mo",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a credit card with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Monthly rate",
+     "narration": "Twenty-four percent a year is about two percent a month.",
+     "on_screen_text": "24% ÷ 12 = 2% a month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calculator. No text, no logos, no real people."
+    },
+    {
+     "heading": "Interest",
+     "narration": "Two percent of two thousand is forty dollars, just in interest.",
+     "on_screen_text": "2% × $2,000 = $40",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small coin falling. No text, no logos, no real people."
+    },
+    {
+     "heading": "A year",
+     "narration": "If the balance stays there, that's about four hundred eighty a year.",
+     "on_screen_text": "$40 × 12 ≈ $480 a year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with twelve coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pay more",
+     "narration": "Pay two hundred forty a month, and it's gone in about ten months.",
+     "on_screen_text": "$240/mo ≈ 10 months",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shrinking card. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "$2,000 at 24% APR (example):\n24% ÷ 12 = 2% a month.\n2% × $2,000 = $40 interest a month.\nIf the balance stays: about $480 a year.\nPay about $240 a month: paid off in about 10 months.\n\nCards compound daily, so real numbers vary slightly.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "creditcarddebt",
+    "debtfree",
+    "apr",
+    "interest",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "What 24% interest costs on $2,000.",
+   "thumbnail_text": "$2,000 at 24%: $40/mo",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/credit-cards/"
+   ],
+   "claims_to_verify": [
+    "24/12 = 2; 2,000 × 0.02 = 40; × 12 = 480",
+    "Payoff at $240/mo ≈ 10 months (check with a calculator; daily compounding)"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Ask",
+    "narration": "Ask the issuer for a lower rate. Some say yes, especially after on-time payments.",
+    "on_screen_text": "Ask for a lower rate",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a percent sign. No text, no logos, no real people."
+   },
+   {
+    "heading": "Balance transfer",
+    "narration": "A zero percent balance transfer can help, but check the fee and when the rate ends.",
+    "on_screen_text": "0% transfer: check fee + end date",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two cards with an arrow. No text, no logos, no real people."
+   },
+   {
+    "heading": "Statement",
+    "narration": "Your statement shows how long minimum payments would take. It's worth reading.",
+    "on_screen_text": "Read the minimum payment box",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a statement with a magnifying glass. No text, no logos, no real people."
+   },
+   {
+    "heading": "Stop adding",
+    "narration": "Pause using the card while you pay it off, so the balance only goes down.",
+    "on_screen_text": "Pause the card",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card in a small box. No text, no logos, no real people."
+   },
+   {
+    "heading": "Daily",
+    "narration": "Most cards charge interest daily, so paying earlier in the month can trim it a little.",
+    "on_screen_text": "Pay early in the month",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with an early tick. No text, no logos, no real people."
+   },
+   {
+    "heading": "Order",
+    "narration": "Got more than one card? Paying the highest rate first saves the most interest.",
+    "on_screen_text": "Highest rate first",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three cards in a row. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "on-screen-calculation"
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A Labor Day weekend plan: five ways to enjoy the long weekend without a September card bill.",
+  "script": {
+   "title": "Labor Day weekend: 5 ways to spend less",
+   "hook": "Long weekend coming. 5 ways to enjoy it and spend less.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Long weekend coming. 5 ways to enjoy it and spend less.",
+     "on_screen_text": "Labor Day: spend less",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Set one number for the whole weekend before it starts.",
+     "on_screen_text": "1. One weekend number",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a flag. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Plan one paid outing and fill the rest with free ones.",
+     "on_screen_text": "2. One paid outing",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a park bench. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Host a potluck instead of eating out.",
+     "on_screen_text": "3. Potluck, not restaurants",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a table with dishes. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Make a list before the sales, and only buy what's on it.",
+     "on_screen_text": "4. Sales: list only",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shopping list. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Fill the tank before the holiday rush.",
+     "on_screen_text": "5. Gas before the rush",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fuel pump. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Labor Day weekend, spend less:\n1. Set one number for the weekend\n2. One paid outing, the rest free\n3. Potluck instead of restaurants\n4. Sales: only what's on your list\n5. Fill up before the rush\n\nFollow for one money move a week.",
+   "hashtags": [
+    "laborday",
+    "budgeting",
+    "longweekend",
+    "moneytips",
+    "frugal",
+    "moneymadesimple"
+   ],
+   "description": "Five ways to spend less over Labor Day weekend.",
+   "thumbnail_text": "Labor Day: spend less",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "General guidance"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A September money checklist: six things to do this month.",
+  "script": {
+   "title": "September money checklist: 6 things to do",
+   "hook": "September's here. 6 money things to do this month.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "September's here. 6 money things to do this month.",
+     "on_screen_text": "September money checklist",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Freelancers and side hustlers: pay the Sep 15 estimated tax.",
+     "on_screen_text": "1. Sep 15 estimated tax",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with 15 circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Start a winter heating fund.",
+     "on_screen_text": "2. Winter heating fund",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a radiator. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Check the holiday fund is on track.",
+     "on_screen_text": "3. Holiday fund check",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gift box. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Build or top up an emergency kit: it's Preparedness Month.",
+     "on_screen_text": "4. Emergency kit",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small backpack. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Get documents ready for the FAFSA.",
+     "on_screen_text": "5. FAFSA documents",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Note your open enrollment dates.",
+     "on_screen_text": "6. Open enrollment dates",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a benefits form. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "September money checklist:\n1. Sep 15 estimated tax (freelancers, side income)\n2. Start a winter heating fund\n3. Holiday fund check-in\n4. Emergency kit for Preparedness Month\n5. FAFSA documents ready\n6. Note open enrollment dates\n\nFollow for one money move a week.",
+   "hashtags": [
+    "september",
+    "moneychecklist",
+    "budgeting",
+    "moneytips",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "Six money things to do in September.",
+   "thumbnail_text": "September money checklist",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.ready.gov/kit",
+    "https://studentaid.gov/h/apply-for-aid/fafsa"
+   ],
+   "claims_to_verify": [
+    "Example checklist"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "An emergency kit built over four grocery trips for Preparedness Month, instead of one big shop.",
+  "script": {
+   "title": "Emergency kit in 4 grocery trips",
+   "hook": "September is Preparedness Month. Build an emergency kit in 4 grocery trips.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "September is Preparedness Month. Build an emergency kit in 4 grocery trips.",
+     "on_screen_text": "Kit in 4 trips",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Trip 1: water. About a gallon per person per day, for several days.",
+     "on_screen_text": "Trip 1: water",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. water jugs. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Trip 2: food that keeps: cans, a manual can opener, snacks.",
+     "on_screen_text": "Trip 2: food that keeps",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shelf with cans. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Trip 3: flashlight, batteries, a first aid kit.",
+     "on_screen_text": "Trip 3: light + first aid",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a flashlight and a kit. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Trip 4: medicines, chargers, copies of key documents.",
+     "on_screen_text": "Trip 4: meds, chargers, papers",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bag with a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Tick it off on the free Ready.gov checklist.",
+     "on_screen_text": "Free list: Ready.gov/kit",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a checklist. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Emergency kit in 4 grocery trips:\n1. Water: about 1 gallon per person per day\n2. Food that keeps + manual can opener\n3. Flashlight, batteries, first aid\n4. Medicines, chargers, document copies\n5. Check off at ready.gov/kit\n\nFollow for one money move a week.",
+   "hashtags": [
+    "preparednessmonth",
+    "emergencykit",
+    "budgeting",
+    "moneytips",
+    "september",
+    "moneymadesimple"
+   ],
+   "description": "Build an emergency kit over four grocery trips.",
+   "thumbnail_text": "Kit in 4 trips",
+   "sources": [
+    "https://www.ready.gov/kit"
+   ],
+   "claims_to_verify": [
+    "Ready.gov guidance on water"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Five steps to the Sep 15 estimated tax payment for freelancers and side hustlers.",
+  "script": {
+   "title": "Sep 15 estimated tax: 5 steps",
+   "hook": "Freelance or side income? 5 steps before September 15.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Freelance or side income? 5 steps before September 15.",
+     "on_screen_text": "Sep 15: 5 steps",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Add up profit since June 1: income minus business expenses.",
+     "on_screen_text": "1. Profit since Jun 1",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a receipt and a calculator. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Estimate the tax with the Form 1040-ES worksheet.",
+     "on_screen_text": "2. Use the 1040-ES worksheet",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Check the tax savings account covers it.",
+     "on_screen_text": "3. Check your tax account",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar labelled tax. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Pay at IRS.gov/payments and save the confirmation.",
+     "on_screen_text": "4. Pay and save the receipt",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a tick. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Note the next date: mid-January.",
+     "on_screen_text": "5. Next: mid-January",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a snowflake. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Sep 15 estimated tax in 5 steps:\n1. Add up profit since Jun 1\n2. Estimate with the 1040-ES worksheet\n3. Check your tax savings covers it\n4. Pay at IRS.gov/payments, save the confirmation\n5. Next date: mid-January\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "estimatedtaxes",
+    "freelance",
+    "sidehustle",
+    "taxes",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Five steps to the Sep 15 estimated payment.",
+   "thumbnail_text": "Sep 15: 5 steps",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/payments"
+   ],
+   "claims_to_verify": [
+    "Q3 period covers Jun 1 – Aug 31 per IRS"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "A four-box readiness checklist before investing your first $1,000, ahead of the long-form series.",
+  "script": {
+   "title": "4 boxes to tick before you invest $1,000",
+   "hook": "Investing your first $1,000? Tick these 4 boxes first.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Investing your first $1,000? Tick these 4 boxes first.",
+     "on_screen_text": "4 boxes before investing",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "A starter emergency fund: $500 to $1,000.",
+     "on_screen_text": "1. Starter fund",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with an umbrella. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "No high-interest card debt. Paying off 24% beats a hypothetical 7% return.",
+     "on_screen_text": "2. No high-rate cards",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card with a percent sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Your full employer match, if you have one.",
+     "on_screen_text": "3. The full match",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin with a second coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "A goal at least five years away.",
+     "on_screen_text": "4. 5+ years away",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a long arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Full walkthrough: our six-part YouTube series from Sep 5.",
+     "on_screen_text": "6-part series from Sep 5",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a play button. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Before you invest your first $1,000:\n1. Starter emergency fund: $500–$1,000\n2. No high-interest card debt\n3. Get the full employer match\n4. A goal 5+ years away\n\nInvesting involves risk, including loss. Examples are hypothetical. Not financial advice.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "investingforbeginners",
+    "first1000",
+    "investing",
+    "personalfinance",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Four boxes to tick before investing.",
+   "thumbnail_text": "4 boxes before investing",
+   "sources": [
+    "https://www.investor.gov/introduction-investing",
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
+   ],
+   "claims_to_verify": [
+    "7% is hypothetical"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A fall budget reset in five steps after a summer of travel, back-to-school and Labor Day.",
+  "script": {
+   "title": "Fall budget reset in 5 steps",
+   "hook": "Summer's over. Reset your budget in 5 steps.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Summer's over. Reset your budget in 5 steps.",
+     "on_screen_text": "Fall budget reset",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Look at June to August spending in one list.",
+     "on_screen_text": "1. Summer spending list",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list with a sun. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Pay down anything summer put on a card.",
+     "on_screen_text": "2. Clear summer card balances",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card with a down arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Cancel summer-only subscriptions.",
+     "on_screen_text": "3. Cancel summer subscriptions",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a cross. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Start fall funds: heating, holidays, car.",
+     "on_screen_text": "4. Fall funds",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Set a weekly spending number for fall.",
+     "on_screen_text": "5. A weekly number",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a coin. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Fall budget reset:\n1. List summer spending\n2. Clear summer card balances\n3. Cancel summer-only subscriptions\n4. Start fall funds: heating, holidays, car\n5. Set a weekly spending number\n\nFollow for one money move a week.",
+   "hashtags": [
+    "budgeting",
+    "fall",
+    "budgetreset",
+    "moneytips",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "Reset your budget after summer.",
+   "thumbnail_text": "Fall budget reset",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/",
+    "https://consumer.ftc.gov/articles/how-cancel-subscriptions"
+   ],
+   "claims_to_verify": [
+    "General guidance"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Three simple ways to invest a first $1,000, one slide each, with fees as typical ranges and no specific funds.",
+  "script": {
+   "title": "Index, target-date or robo: 3 simple options",
+   "hook": "3 simple ways to invest. What each one is, and what it usually costs.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "3 simple ways to invest. What each one is, and what it usually costs.",
+     "on_screen_text": "3 simple options",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Broad index fund: tracks a whole market. Often very low fees, and you choose the mix.",
+     "on_screen_text": "Index fund: lowest fees",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Target-date fund: one fund, mix shifts as the year nears. Check the fee.",
+     "on_screen_text": "Target-date: one fund, auto mix",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Robo-advisor: builds and rebalances for you, for an extra yearly fee.",
+     "on_screen_text": "Robo: fully managed",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small robot with a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Whichever: check the expense ratio first.",
+     "on_screen_text": "Check the expense ratio",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fact sheet. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "We don't recommend specific funds. Part 3 of our series covers costs in detail.",
+     "on_screen_text": "No picks · series part 3",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a play button. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "3 simple ways to invest:\n1. Broad index fund: often lowest fees, you set the mix\n2. Target-date fund: one fund, automatic mix\n3. Robo-advisor: managed for an extra fee\n4. Check the expense ratio first\n\nInvesting involves risk, including loss. Examples are hypothetical. Not financial advice.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "indexfunds",
+    "roboadvisor",
+    "investingforbeginners",
+    "first1000",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Three simple investing options compared.",
+   "thumbnail_text": "3 simple options",
+   "sources": [
+    "https://www.investor.gov/introduction-investing",
+    "https://www.investor.gov/introduction-investing/investing-basics/glossary/mutual-fund-fees-and-expenses"
+   ],
+   "claims_to_verify": [
+    "Fee levels are typical ranges, not products"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Six things to check before benefits open enrollment starts this fall.",
+  "script": {
+   "title": "Open enrollment: 6 things to check first",
+   "hook": "Open enrollment is coming. 6 things to check before it starts.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Open enrollment is coming. 6 things to check before it starts.",
+     "on_screen_text": "Open enrollment prep",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Last year's medical visits and costs.",
+     "on_screen_text": "1. Last year's costs",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with crosses. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Each plan's premium and out-of-pocket max.",
+     "on_screen_text": "2. Premium + max",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two plans on a scale. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Your doctors are in network.",
+     "on_screen_text": "3. In network?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a map with a cross. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "FSA or HSA options.",
+     "on_screen_text": "4. FSA or HSA",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a cross. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Dependent care FSA, if you pay for daycare.",
+     "on_screen_text": "5. Dependent care FSA",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stroller with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Beneficiaries on life insurance and retirement plans.",
+     "on_screen_text": "6. Beneficiaries",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a name. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Before open enrollment:\n1. Last year's costs\n2. Each plan's premium and out-of-pocket max\n3. Doctors in network\n4. FSA or HSA options\n5. Dependent care FSA\n6. Beneficiaries\n\nFollow for one money move a week.",
+   "hashtags": [
+    "openenrollment",
+    "benefits",
+    "healthinsurance",
+    "moneytips",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "What to check before open enrollment.",
+   "thumbnail_text": "Open enrollment prep",
+   "sources": [
+    "https://www.healthcare.gov/have-job-based-coverage/",
+    "https://www.healthcare.gov/have-job-based-coverage/flexible-spending-accounts/"
+   ],
+   "claims_to_verify": [
+    "Dates vary by employer"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "The documents to gather before the FAFSA opens, usually on Oct 1.",
+  "script": {
+   "title": "FAFSA prep: 5 things to gather now",
+   "hook": "The FAFSA usually opens October 1. Gather these 5 things now.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "The FAFSA usually opens October 1. Gather these 5 things now.",
+     "on_screen_text": "FAFSA prep",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "StudentAid.gov accounts for the student and each parent contributor.",
+     "on_screen_text": "1. StudentAid.gov accounts",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two keys. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Tax information from two years before.",
+     "on_screen_text": "2. Tax info (2 years back)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Records of savings, investments and other assets.",
+     "on_screen_text": "3. Asset records",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar and a document. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "A list of schools to send it to.",
+     "on_screen_text": "4. List of schools",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list with a cap. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Each school's own aid deadline.",
+     "on_screen_text": "5. School deadlines",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "FAFSA prep:\n1. StudentAid.gov accounts for student and parents\n2. Tax info from two years before\n3. Records of assets\n4. List of schools\n5. Each school's aid deadline\n\nThe FAFSA is free. Check studentaid.gov for this year's opening date.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "fafsa",
+    "college",
+    "financialaid",
+    "studentloans",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "What to gather before the FAFSA.",
+   "thumbnail_text": "FAFSA prep",
+   "sources": [
+    "https://studentaid.gov/h/apply-for-aid/fafsa"
+   ],
+   "claims_to_verify": [
+    "FAFSA usually opens Oct 1; check the current cycle"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Five questions to ask before a car insurance policy renews.",
+  "script": {
+   "title": "Car insurance renewal: 5 questions to ask",
+   "hook": "Car insurance renewing soon? Ask these 5 questions.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Car insurance renewing soon? Ask these 5 questions.",
+     "on_screen_text": "Insurance renewal: 5 Qs",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Why did my premium change?",
+     "on_screen_text": "1. Why the change?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bill with an arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Which discounts am I getting, and which could I get?",
+     "on_screen_text": "2. Which discounts?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a percent sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "What's my deductible, and can my fund cover it?",
+     "on_screen_text": "3. Deductible vs fund",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar next to a shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Do I still need every extra on the policy?",
+     "on_screen_text": "4. Every extra needed?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "What would the same cover cost elsewhere? Get 2 quotes.",
+     "on_screen_text": "5. Compare 2 quotes",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two papers. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Before your car insurance renews:\n1. Why did the premium change?\n2. Which discounts could I get?\n3. Can my fund cover the deductible?\n4. Do I need every extra?\n5. Compare 2 quotes for the same cover\n\nFollow for one money move a week.",
+   "hashtags": [
+    "carinsurance",
+    "insurance",
+    "budgeting",
+    "cars",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Questions to ask at car insurance renewal.",
+   "thumbnail_text": "Insurance renewal: 5 Qs",
+   "sources": [
+    "https://content.naic.org/consumer",
+    "https://www.consumerfinance.gov/consumer-tools/auto-loans/"
+   ],
+   "claims_to_verify": [
+    "General guidance"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "A four-step plan for the day an investment account drops, from the long-form series.",
+  "script": {
+   "title": "When your investments drop: a 4-step plan",
+   "hook": "Your investment account is down. A 4-step plan for that day.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Your investment account is down. A 4-step plan for that day.",
+     "on_screen_text": "Market drop plan",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Don't decide on the day of a big drop. Wait a few days.",
+     "on_screen_text": "1. Wait a few days",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calm face. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Check your timeline: still five years or more away?",
+     "on_screen_text": "2. Check your timeline",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a long arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Keep automatic contributions going if you can.",
+     "on_screen_text": "3. Keep contributing",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gear with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Can't sleep? Calmly review your mix, not in a panic.",
+     "on_screen_text": "4. Review the mix calmly",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance scale. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "A drop isn't a loss until you sell. Series part 4 covers it.",
+     "on_screen_text": "Series part 4",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a play button. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "When your investments drop:\n1. Wait a few days before deciding\n2. Check your timeline\n3. Keep contributions going if you can\n4. Review your mix calmly\n\nInvesting involves risk, including loss. Examples are hypothetical. Not financial advice.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "stockmarket",
+    "investingforbeginners",
+    "first1000",
+    "investing",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "What to do when your investments drop.",
+   "thumbnail_text": "Market drop plan",
+   "sources": [
+    "https://www.investor.gov/introduction-investing"
+   ],
+   "claims_to_verify": [
+    "General education; no prediction"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Six ways to lower winter heating bills before the cold arrives.",
+  "script": {
+   "title": "6 ways to lower winter heating bills",
+   "hook": "Winter bills coming. 6 ways to lower them, starting now.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Winter bills coming. 6 ways to lower them, starting now.",
+     "on_screen_text": "Lower heating bills",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Seal drafts around doors and windows.",
+     "on_screen_text": "1. Seal drafts",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a door with a draft stopper. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Lower the thermostat a few degrees at night.",
+     "on_screen_text": "2. Lower it at night",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a thermostat. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Change the furnace filter.",
+     "on_screen_text": "3. New filter",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a filter. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Open curtains on sunny days, close them at night.",
+     "on_screen_text": "4. Curtains: sun in, cold out",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a window with curtains. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Ask about budget billing to smooth payments.",
+     "on_screen_text": "5. Budget billing",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bill with a flat line. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Ask about assistance programs if bills are hard to cover.",
+     "on_screen_text": "6. Ask about help",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Lower winter heating bills:\n1. Seal drafts\n2. Lower the thermostat at night\n3. Change the furnace filter\n4. Curtains: open in sun, closed at night\n5. Ask about budget billing\n6. Ask about assistance programs\n\nFollow for one money move a week.",
+   "hashtags": [
+    "heatingbill",
+    "winter",
+    "budgeting",
+    "energysaving",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Six ways to lower heating bills.",
+   "thumbnail_text": "Lower heating bills",
+   "sources": [
+    "https://www.energy.gov/energysaver/energy-saver",
+    "https://www.energy.gov/energysaver/thermostats"
+   ],
+   "claims_to_verify": [
+    "energy.gov guidance"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Five things to check before signing a lease renewal.",
+  "script": {
+   "title": "Lease renewal: 5 things to check before you sign",
+   "hook": "Lease up for renewal? Check these 5 things before you sign.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Lease up for renewal? Check these 5 things before you sign.",
+     "on_screen_text": "Lease renewal check",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "The new rent, and the increase as a percentage.",
+     "on_screen_text": "1. New rent + % increase",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a house with a percent sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "What similar places nearby rent for.",
+     "on_screen_text": "2. Local comparison",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small map. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Moving costs if you leave: deposit, movers, overlap.",
+     "on_screen_text": "3. Cost of moving",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. boxes with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Any changed terms: fees, pets, parking.",
+     "on_screen_text": "4. Changed terms",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a contract with a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Whether a longer lease can lock the rate.",
+     "on_screen_text": "5. Longer lease, same rate?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a lock. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Before you renew your lease:\n1. New rent and % increase\n2. What similar places rent for\n3. Cost of moving\n4. Any changed terms\n5. Can a longer lease lock the rate?\n\nFollow for one money move a week.",
+   "hashtags": [
+    "renting",
+    "lease",
+    "budgeting",
+    "rent",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "What to check before renewing a lease.",
+   "thumbnail_text": "Lease renewal check",
+   "sources": [
+    "https://www.consumerfinance.gov/renters/"
+   ],
+   "claims_to_verify": [
+    "General guidance; tenant laws vary by state"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Six low-cost Halloween ideas for families.",
+  "script": {
+   "title": "Halloween on a budget: 6 ideas",
+   "hook": "Halloween on a budget. 6 ideas that cost little or nothing.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Halloween on a budget. 6 ideas that cost little or nothing.",
+     "on_screen_text": "Halloween on a budget",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Costume swaps with friends or neighbours.",
+     "on_screen_text": "1. Costume swap",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two kids swapping costumes. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Homemade costumes from clothes you own.",
+     "on_screen_text": "2. From your closet",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a closet. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Free trunk-or-treat or library events.",
+     "on_screen_text": "3. Free local events",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small town square. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Carve pumpkins at home, not at a paid patch.",
+     "on_screen_text": "4. Carve at home",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pumpkin. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Reuse last year's decorations.",
+     "on_screen_text": "5. Reuse decorations",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a box of decorations. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Set a total and keep it in a small fund.",
+     "on_screen_text": "6. Set a total",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a pumpkin label. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Halloween on a budget:\n1. Costume swaps\n2. Costumes from your closet\n3. Free local events\n4. Carve pumpkins at home\n5. Reuse decorations\n6. Set a total, fund it\n\nFollow for one money move a week.",
+   "hashtags": [
+    "halloween",
+    "familybudget",
+    "budgeting",
+    "frugal",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Low-cost Halloween ideas.",
+   "thumbnail_text": "Halloween on a budget",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "General guidance"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Five ways to pay less credit card interest, from asking for a lower rate to paying the highest rate first.",
+  "script": {
+   "title": "5 ways to pay less credit card interest",
+   "hook": "Carrying a card balance? 5 ways to pay less interest.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Carrying a card balance? 5 ways to pay less interest.",
+     "on_screen_text": "Pay less interest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Ask the issuer for a lower rate.",
+     "on_screen_text": "1. Ask for a lower rate",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a percent sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Pay more than the minimum, every month.",
+     "on_screen_text": "2. More than the minimum",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a statement. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Pay the highest-rate card first.",
+     "on_screen_text": "3. Highest rate first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three cards in a row. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Consider a 0% balance transfer: check the fee and end date.",
+     "on_screen_text": "4. 0% transfer: read the terms",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two cards with an arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Pause spending on the card while you pay it down.",
+     "on_screen_text": "5. Pause the card",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card in a box. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Pay less credit card interest:\n1. Ask for a lower rate\n2. Pay more than the minimum\n3. Highest rate first\n4. 0% balance transfer: check fee and end date\n5. Pause the card while you pay it down\n\nFollow for one money move a week.",
+   "hashtags": [
+    "creditcarddebt",
+    "debtfree",
+    "apr",
+    "interest",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Five ways to pay less card interest.",
+   "thumbnail_text": "Pay less interest",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/credit-cards/"
+   ],
+   "claims_to_verify": [
+    "General guidance"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Lump sum vs $100 a month with $1,000, as four numbers from the long-form series' two hypothetical markets.",
+  "script": {
+   "title": "All at once or monthly? 4 numbers",
+   "hook": "$1,000 all at once, or $100 a month? 4 numbers from 2 hypothetical markets.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "$1,000 all at once, or $100 a month? 4 numbers from 2 hypothetical markets.",
+     "on_screen_text": "Lump sum or monthly?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Rising 1% a month: all at once ≈ $1,105.",
+     "on_screen_text": "Rising: lump ≈ $1,105",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a line going up. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Rising 1% a month: $100 a month ≈ $1,057.",
+     "on_screen_text": "Rising: monthly ≈ $1,057",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. ten small arrows. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Down 3% for 5 months, up 3% for 5: all at once ≈ $996.",
+     "on_screen_text": "Dip: lump ≈ $996",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a V-shaped line. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Same dip: $100 a month ≈ $1,076.",
+     "on_screen_text": "Dip: monthly ≈ $1,076",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. coins at the bottom of a V. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Vanguard research found lump sum ahead about two-thirds of the time. Pick the one you'll stick with.",
+     "on_screen_text": "Pick the one you'll keep",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with ticks. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "$1,000 after 10 months (hypothetical):\n1. Rising market: all at once ≈ $1,105, monthly ≈ $1,057\n2. Dip then recovery: all at once ≈ $996, monthly ≈ $1,076\n3. Vanguard (2023): lump sum beat 3-month cost averaging about 2/3 of the time, 1976–2022\n\nInvesting involves risk, including loss. Examples are hypothetical. Not financial advice.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "dollarcostaveraging",
+    "investingforbeginners",
+    "first1000",
+    "investing",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Lump sum vs monthly investing in numbers.",
+   "thumbnail_text": "Lump sum or monthly?",
+   "sources": [
+    "https://www.investor.gov/introduction-investing",
+    "https://corporate.vanguard.com/content/dam/corp/research/pdf/cost_averaging_invest_now_or_temporarily_hold_your_cash.pdf"
+   ],
+   "claims_to_verify": [
+    "Hypothetical markets; figures from the long video's worked examples",
+    "Vanguard 2023: 68%"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A five-point student loan check-up: servicer, balance, rate, plan and autopay.",
+  "script": {
+   "title": "Student loan check-up: 5 things to look at",
+   "hook": "Student loans? A 5-minute check-up on 5 things.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Student loans? A 5-minute check-up on 5 things.",
+     "on_screen_text": "Student loan check-up",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Who your servicer is: check StudentAid.gov.",
+     "on_screen_text": "1. Your servicer",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a cap. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Your total balance and each loan's rate.",
+     "on_screen_text": "2. Balance + rates",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list with percents. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Your repayment plan, and whether another fits better.",
+     "on_screen_text": "3. Your plan",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two paths. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Autopay: many servicers offer a small rate discount.",
+     "on_screen_text": "4. Autopay discount",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gear with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Your contact details are up to date.",
+     "on_screen_text": "5. Contact details",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an envelope. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Student loan check-up:\n1. Find your servicer at StudentAid.gov\n2. Balance and each loan's rate\n3. Your repayment plan\n4. Autopay discount\n5. Contact details up to date\n\nFollow for one money move a week.",
+   "hashtags": [
+    "studentloans",
+    "debt",
+    "college",
+    "moneytips",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "A quick student loan check-up.",
+   "thumbnail_text": "Student loan check-up",
+   "sources": [
+    "https://studentaid.gov/"
+   ],
+   "claims_to_verify": [
+    "Autopay discounts common for federal loans; check servicer"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Three accounts to separate side hustle money: business checking, tax savings, and your own pay.",
+  "script": {
+   "title": "Side hustle money: 3 accounts to separate it",
+   "hook": "Side hustle money mixed with your own? Split it into 3 accounts.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Side hustle money mixed with your own? Split it into 3 accounts.",
+     "on_screen_text": "3 side hustle accounts",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Account 1: all side hustle income and expenses.",
+     "on_screen_text": "1. Business account",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a briefcase. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Account 2: a tax savings account. Move 25% to 30% of profit.",
+     "on_screen_text": "2. Tax savings: 25–30%",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar labelled tax. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Account 3: what you pay yourself, into your personal account.",
+     "on_screen_text": "3. Pay yourself",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow to a wallet. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "It makes taxes and records much simpler.",
+     "on_screen_text": "Simpler taxes + records",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tidy folder. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Side hustle money in 3 accounts:\n1. Business account: all income and expenses\n2. Tax savings: 25–30% of profit\n3. Pay yourself into your personal account\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "sidehustle",
+    "freelance",
+    "taxes",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Separating side hustle money.",
+   "thumbnail_text": "3 side hustle accounts",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes"
+   ],
+   "claims_to_verify": [
+    "25–30% is a rule of thumb"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "A five-step phone plan audit: usage, plan, extras, family plans and prepaid options.",
+  "script": {
+   "title": "Phone plan audit: 5 steps",
+   "hook": "Paying too much for your phone plan? A 5-step audit.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Paying too much for your phone plan? A 5-step audit.",
+     "on_screen_text": "Phone plan audit",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Check how much data you actually use.",
+     "on_screen_text": "1. Real data use",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a gauge. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Compare it with what your plan includes.",
+     "on_screen_text": "2. Plan vs use",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two bars. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Remove add-ons you don't use.",
+     "on_screen_text": "3. Drop add-ons",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list with a cross. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Price a family or group plan.",
+     "on_screen_text": "4. Family plan price",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four phones. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Check prepaid plans on the same network.",
+     "on_screen_text": "5. Prepaid options",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a SIM card. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Phone plan audit:\n1. Check your real data use\n2. Compare with your plan\n3. Remove unused add-ons\n4. Price a family plan\n5. Check prepaid options\n\nFollow for one money move a week.",
+   "hashtags": [
+    "phoneplan",
+    "budgeting",
+    "frugal",
+    "moneytips",
+    "bills",
+    "moneymadesimple"
+   ],
+   "description": "Five steps to audit a phone plan.",
+   "thumbnail_text": "Phone plan audit",
+   "sources": [
+    "https://www.fcc.gov/consumers"
+   ],
+   "claims_to_verify": [
+    "General guidance"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "A checklist for opening a brokerage account or IRA and making sure the money is actually invested.",
+  "script": {
+   "title": "Opening an IRA: 6-step checklist",
+   "hook": "Opening your first IRA or brokerage account? A 6-step checklist.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Opening your first IRA or brokerage account? A 6-step checklist.",
+     "on_screen_text": "IRA checklist",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Choose a provider: no fees, low-cost funds, SIPC member.",
+     "on_screen_text": "1. No fees · SIPC",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three doors. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Pick the account type and add a beneficiary.",
+     "on_screen_text": "2. Type + beneficiary",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Link your bank and transfer.",
+     "on_screen_text": "3. Link + transfer",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow from a bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Buy your fund: deposited isn't invested.",
+     "on_screen_text": "4. Buy the fund",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a buy button. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Turn on auto-invest and dividend reinvestment.",
+     "on_screen_text": "5. Automate",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gear. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Turn on two-factor login.",
+     "on_screen_text": "6. Two-factor login",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a padlock. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Opening an IRA or brokerage account:\n1. Provider: no fees, low-cost funds, SIPC member\n2. Account type and a beneficiary\n3. Link your bank and transfer\n4. Buy your fund: deposited isn't invested\n5. Auto-invest and dividend reinvestment\n6. Two-factor login\n\nInvesting involves risk, including loss. Examples are hypothetical. Not financial advice.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "rothira",
+    "investingforbeginners",
+    "first1000",
+    "brokerage",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "A checklist for opening an investment account.",
+   "thumbnail_text": "IRA checklist",
+   "sources": [
+    "https://www.investor.gov/introduction-investing",
+    "https://www.sipc.org/for-investors/what-sipc-protects"
+   ],
+   "claims_to_verify": [
+    "SIPC covers brokerage failure, not market losses"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A mid-September check on the fall funds: heating, holidays, car and Halloween.",
+  "script": {
+   "title": "Fall funds check-in: 4 jars",
+   "hook": "Mid-September. Check your 4 fall funds.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Mid-September. Check your 4 fall funds.",
+     "on_screen_text": "Fall funds check-in",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Heating: on track for $360 by December?",
+     "on_screen_text": "1. Heating: $360 goal",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a snowflake. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Holidays: $150 by now on the $37.50 plan.",
+     "on_screen_text": "2. Holidays: $150 by now",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gift box. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Car: enough for the deductible?",
+     "on_screen_text": "3. Car: the deductible",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a car. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Halloween: a set total, funded.",
+     "on_screen_text": "4. Halloween: set total",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pumpkin jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Behind on one? Lower the goal or raise the weekly amount now.",
+     "on_screen_text": "Behind? Adjust now",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with an arrow. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Fall funds check-in:\n1. Heating: $360 by December\n2. Holidays: $150 by now\n3. Car: covers the deductible\n4. Halloween: set total\n5. Behind? Adjust now\n\nFollow for one money move a week.",
+   "hashtags": [
+    "sinkingfunds",
+    "budgeting",
+    "fall",
+    "moneytips",
+    "savings",
+    "moneymadesimple"
+   ],
+   "description": "A check-in on fall sinking funds.",
+   "thumbnail_text": "Fall funds check-in",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "Figures from this month's examples"
+   ]
+  }
+ }
+]

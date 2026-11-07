@@ -85,7 +85,8 @@ def test_export_writes_pack(factory, tmp_path):
                                               ("month-6", date(2027, 4, 21), 30),
                                               ("month-7", date(2027, 5, 21), 31),
                                               ("month-8", date(2027, 6, 21), 30),
-                                              ("month-9", date(2027, 7, 21), 31)])
+                                              ("month-9", date(2027, 7, 21), 31),
+                                              ("month-10", date(2027, 8, 21), 31)])
 def test_tiktok_cuts_and_series(factory, month, start, days):
     items = _items(ROOT / "launch" / "money-made-simple" / month / "content.json")
     shorts = [i for i in items if i["format"] == "short"]
@@ -377,3 +378,21 @@ def test_no_spend_january_challenge_runs_on_january_sundays(factory):
     slots, leftover = plan(brand, items, date(2027, 1, 3), 29, {"mid": "sun"})
     assert not leftover and [s.when.day for s in slots] == [3, 10, 17, 24, 31]
     assert all(s.platforms == ["tiktok"] for s in slots)
+
+
+def test_rate_my_budget_items_are_labelled():
+    """launch/money-made-simple/community/RATE_MY_BUDGET_SUBMISSIONS.md: every Rate My Budget is either
+    labelled fictional, or carries the viewer-submission label plus a consent record (no personal data)."""
+    real_label = "Based on a viewer's budget, shared with permission."
+    items = [i for p in (ROOT / "launch" / "money-made-simple").rglob("content.json") for i in _items(p)
+             if i.get("series") == "Rate My Budget"]
+    assert len(items) >= 40
+    for it in items:
+        cap = it["script"]["caption"]
+        sub = it.get("submission")
+        if sub:
+            assert real_label in cap and "ictional" not in cap, it["script"]["title"]
+            assert sub["consent_version"].startswith("rmb-consent-") and sub["consented_on"] and sub["confirmed_on"]
+            assert set(sub) <= {"id", "consent_version", "consented_on", "confirmed_on"}
+        else:
+            assert "Fictional" in cap and real_label not in cap, it["script"]["title"]
