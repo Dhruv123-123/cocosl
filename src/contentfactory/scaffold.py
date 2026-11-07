@@ -131,7 +131,7 @@ def create(home: Path, slug: str, name: str = "", niche: str = "", audience: str
 def remove(factory, slug: str) -> list[Path]:
     """Undo a scaffold: refuses if the brand has anything scheduled or published."""
     live = factory.db.scalar("SELECT COUNT(*) FROM publications p JOIN posts s ON s.id = p.post_id WHERE s.brand = ? "
-                             "AND p.status IN ('queued','publishing','published','needs_check')", [slug])
+                             "AND p.status IN ('queued','publishing','published','needs_check','manual')", [slug])
     if live:
         raise PermissionError(f"{slug} has {live} scheduled or published publication(s); not removing it")
     home = factory.settings.home

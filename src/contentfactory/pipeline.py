@@ -344,7 +344,8 @@ class Factory:
             for b, platforms in brands_due.items():
                 scoped = self.settings.for_brand(b)
                 try:
-                    if "tiktok" in platforms:
+                    from .manual import is_manual
+                    if "tiktok" in platforms and not is_manual("tiktok"):
                         refresh_tiktok_if_needed(scoped)
                     refresh_long_lived(scoped)
                 except Exception as e:  # a failed refresh surfaces as a publish error below
@@ -369,6 +370,11 @@ class Factory:
                            "AND status = 'published'", [pub["post_id"], pub["platform"], pub["id"]]):
                 self.db.update("publications", pub["id"], {"status": "cancelled",
                                                            "error": "already published on this platform"})
+                continue
+            from .manual import hand_off, is_manual
+            if is_manual(pub["platform"]):  # never uploaded by the factory: package it for you to post by hand
+                rel = hand_off(self, pub, post)
+                results.append({"publication": pub["id"], "status": "manual", "package": rel["dir"]})
                 continue
             from .publish.preflight import blocking, check
             stop = blocking(check(post, pub["platform"], self.settings.output_dir,
