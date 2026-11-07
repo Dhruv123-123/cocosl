@@ -306,7 +306,7 @@
       "youtube"
     ],
     "script": {
-      "title": "2 words that mean your concert tickets are fake: 'friends and family'",
+      "title": "'Friends and family': 2 words that mean fake concert tickets",
       "hook": "2 words from a ticket seller should end the deal: 'friends and family.'",
       "segments": [
         {
@@ -453,7 +453,7 @@
       "youtube"
     ],
     "script": {
-      "title": "The top search result for 'airline phone number' might be a scammer",
+      "title": "The top 'airline phone number' result might be a scammer",
       "hook": "1 search, 1 'customer service' number, and a stranger now has your booking and your card.",
       "segments": [
         {
@@ -677,7 +677,7 @@
       "youtube"
     ],
     "script": {
-      "title": "Medicare won't call to sell you a plan. 1 rule for your parents",
+      "title": "Medicare won't call to sell you a plan: 1 rule for parents",
       "hook": "1 rule for your parents until December 7: Medicare doesn't call to sell plans or ask for your Medicare number.",
       "segments": [
         {
@@ -752,7 +752,7 @@
       "youtube"
     ],
     "script": {
-      "title": "Never met, never video-chatted, needs $1,200 for a flight home",
+      "title": "Never met, no video chat, needs $1,200 for a flight home",
       "hook": "0 video calls, 0 meetings, and now they need $1,200 to fly home for Christmas.",
       "segments": [
         {
@@ -1307,7 +1307,7 @@
         "Official/verified resale platforms offer buyer protection (check terms)"
       ],
       "title_variants": [
-        "2 words that mean your concert tickets are fake: 'friends and family'"
+        "'Friends and family': 2 words that mean fake concert tickets"
       ],
       "hook_variants": [
         "2 words from a ticket seller should end the deal: 'friends and family.'"
@@ -1472,7 +1472,7 @@
         "Example scenario is a composite"
       ],
       "title_variants": [
-        "The top search result for 'airline phone number' might be a scammer"
+        "The top 'airline phone number' result might be a scammer"
       ],
       "hook_variants": [
         "1 search, 1 'customer service' number, and a stranger now has your booking and your card."
@@ -1655,7 +1655,7 @@
       "tiktok"
     ],
     "script": {
-      "title": "Medicare scam calls: the 'new card' and the 'free benefits' switch",
+      "title": "Medicare scam calls: the 'new card' and the 'free benefits'",
       "hook": "2 Medicare scam calls peak before December 7. 1 rule beats both.",
       "segments": [
         {
@@ -1724,7 +1724,7 @@
         "1-800-MEDICARE is the official number"
       ],
       "title_variants": [
-        "Medicare won't call to sell you a plan. 1 rule for your parents"
+        "Medicare won't call to sell you a plan: 1 rule for parents"
       ],
       "hook_variants": [
         "1 rule for your parents until December 7: Medicare doesn't call to sell plans or ask for your Medicare number."
@@ -1807,7 +1807,7 @@
         "Amounts and scenarios are illustrative"
       ],
       "title_variants": [
-        "Never met, never video-chatted, needs $1,200 for a flight home"
+        "Never met, no video chat, needs $1,200 for a flight home"
       ],
       "hook_variants": [
         "0 video calls, 0 meetings, and now they need $1,200 to fly home for Christmas."

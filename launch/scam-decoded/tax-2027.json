@@ -12,7 +12,7 @@
   "original_element": "Illustrated beats; the closing beat is 5 seconds of Dhruv's screen showing IRS.gov's sign-in page (no login).",
   "idea_angle": "Tax season 2027 pack: IRS impersonation. Why you should create your IRS Online Account yourself, not through a 'helper'.",
   "script": {
-   "title": "'I'll set up your IRS online account for you': 1 offer to turn down",
+   "title": "'I'll set up your IRS account for you': 1 offer to refuse",
    "hook": "1 friendly offer to set up your IRS online account is how some tax identity theft starts.",
    "segments": [
     {
@@ -243,7 +243,7 @@
   "original_element": "Quiz format with a real 3-second pause card; Dhruv on camera for the answer.",
   "idea_angle": "Tax season 2027 pack: fake preparers. A quick quiz on choosing a tax preparer: PTIN, signatures and fees.",
   "script": {
-   "title": "Quiz: which of these 3 tax preparers would you hand your W-2?",
+   "title": "Quiz: which of 3 tax preparers gets your W-2?",
    "hook": "3 tax preparers, 1 you can trust. Pause and pick before I tell you.",
    "segments": [
     {
@@ -455,7 +455,7 @@
   "original_element": "An FTC data chart beat drawn like originality/out/charts (bars: imposters $3.5B, business ~$1B, government ~$920M).",
   "idea_angle": "Tax season 2027 pack: IRS impersonation. FTC data on government impersonation losses, and three things the real IRS won't do.",
   "script": {
-   "title": "Fake government agents took about $920 million in 2025: 3 things the real IRS doesn't do",
+   "title": "$920 million to fake agents: 3 things the IRS won't do",
    "hook": "About $920 million. That's what people reported losing to fake government agents in 2025.",
    "segments": [
     {
@@ -593,7 +593,7 @@
   "original_element": "Illustrated explainer with Dhruv's own voice. Dhruv records the narration in his own voice. No AI voice on TikTok cuts.",
   "idea_angle": "Tax season 2027 pack: IP PIN. What to do when your e-filed return is rejected because a dependent was already claimed, and how an IP PIN helps.",
   "script": {
-   "title": "'Dependent already claimed': someone used your child's SSN. What now?",
+   "title": "'Dependent already claimed': your child's SSN, what now?",
    "hook": "1 rejection message, 'dependent already claimed', can mean someone used your child's SSN.",
    "segments": [
     {
@@ -813,7 +813,7 @@
   "original_element": "Quiz pause format with a real-looking (fictional, marked) letter on screen. Dhruv records the narration in his own voice. No AI voice on TikTok cuts.",
   "idea_angle": "Tax season 2027 pack: IRS impersonation. Three checks for an IRS letter before you call any number on it.",
   "script": {
-   "title": "IRS letter or fake? 3 checks before you call the number on it",
+   "title": "IRS letter or fake? 3 checks before you call",
    "hook": "3 checks tell you if an IRS letter is real, 5 days before Tax Day.",
    "segments": [
     {

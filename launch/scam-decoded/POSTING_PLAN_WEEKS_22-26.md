@@ -22,35 +22,35 @@ Newsletter issues #9–#13 (Thursdays Apr 1 – Apr 29) follow the same themes; 
 | Date | 12:00 Reels + Shorts | 12:00 TikTok | 19:30 Instagram carousel | YouTube long-form |
 |---|---|---|---|---|
 | Sun Apr 4 |  |  |  | #40 After the storm: how home repair scams work, and how to hire safely · **kit** |
-| Mon Apr 5 | #0 'File your tax extension here': 1 free form scammers charge for | #15 2 tax extension myths scam sites count on |  |  |
+| Mon Apr 5 | #0 'File your tax extension here': 1 free form they charge for | #15 2 tax extension myths scam sites count on |  |  |
 | Tue Apr 6 |  |  | #30 Filing a tax extension: 4 facts before April 15 |  |
-| Wed Apr 7 | #1 'Track your refund': 3 things the real IRS tracker asks for (and 1 it never does) | #16 Fake refund trackers: 3 boxes vs 6 |  |  |
+| Wed Apr 7 | #1 Real IRS refund tracker: 3 things it asks, 1 it never does | #16 Fake refund trackers: 3 boxes vs 6 |  |  |
 | Thu Apr 8 |  |  | #31 Your Tax Day lockdown: 6 steps in 20 minutes |  |
-| Fri Apr 9 | #2 A real-looking IRS letter with 1 fake detail: the phone number | #17 Fake IRS letters copy everything but 1 thing |  |  |
+| Fri Apr 9 | #2 A real-looking IRS letter with 1 fake detail | #17 Fake IRS letters copy everything but 1 thing |  |  |
 | Sun Apr 11 |  |  |  | #41 After Tax Day: the scams that follow you (and what the IRS really does next) |
-| Mon Apr 12 | #3 'I'll get you a bigger refund, fast': 3 preparer red flags before April 15 | #18 The bigger-refund preparer: 4 questions to ask |  |  |
+| Mon Apr 12 | #3 'A bigger refund, fast': 3 preparer red flags | #18 The bigger-refund preparer: 4 questions to ask |  |  |
 | Tue Apr 13 |  |  | #32 After April 15: 4 things the real IRS does (and doesn't) |  |
-| Wed Apr 14 | #4 'You missed the April 15 deadline. Pay the penalty now': 1 text the IRS doesn't send | #19 Missed the tax deadline? What really happens |  |  |
+| Wed Apr 14 | #4 'Missed April 15, pay the penalty now': not the IRS | #19 Missed the tax deadline? What really happens |  |  |
 | Thu Apr 15 |  |  | #33 Owe the IRS this year? 5 real options before you call an ad |  |
-| Fri Apr 16 | #5 Paying the IRS? 1 search mistake that costs you a 'service fee' | #20 Pay the IRS safely: 3 rules |  |  |
+| Fri Apr 16 | #5 Paying the IRS? 1 search mistake that adds a 'fee' | #20 Pay the IRS safely: 3 rules |  |  |
 | Sun Apr 18 |  |  |  | #42 How 1 hacked email unlocks everything (and how to lock it in 20 minutes) · **compare page** |
-| Mon Apr 19 | #6 'Your account will be deleted in 48 hours': 1 email to never click through · **compare page** | #21 Old accounts are the easiest to steal: 4-step spring clean |  |  |
+| Mon Apr 19 | #6 'Account deleted in 48 hours': 1 email to never click · **compare page** | #21 Old accounts are the easiest to steal: 4-step spring clean |  |  |
 | Tue Apr 20 |  |  | #34 Password spring clean: 5 steps in 1 evening · **compare page** |  |
 | Wed Apr 21 | #7 1 account unlocks all the others. Lock it first. · **compare page** | #22 How 1 hacked email becomes 10 hacked accounts |  |  |
 | Thu Apr 22 |  |  | #35 Two-step sign-in, ranked: 4 kinds from good to best |  |
-| Fri Apr 23 | #8 'Can you vote for my niece?' 1 message from a friend that steals your account | #23 The 'vote for my niece' chain: 3 steps |  |  |
+| Fri Apr 23 | #8 'Can you vote for my niece?' 1 message that steals accounts | #23 The 'vote for my niece' chain: 3 steps |  |  |
 | Sun Apr 25 |  |  |  | #43 Moving this spring? Rental listing scams and moving company scams, decoded |
-| Mon Apr 26 | #9 'Free solar panels from a government program': 3 words that cost homeowners | #24 'Free solar': 4 checks before you sign |  |  |
+| Mon Apr 26 | #9 'Free solar from a government program': 3 costly words | #24 'Free solar': 4 checks before you sign |  |  |
 | Tue Apr 27 |  |  | #36 6 questions to ask any contractor before you hire them · **kit** |  |
-| Wed Apr 28 | #10 'We're from the power company, can we see your bill?' 2 things to ask first | #25 The energy program visitor: 3 versions |  |  |
+| Wed Apr 28 | #10 'From the power company, can we see your bill?' Ask 2 things | #25 The energy program visitor: 3 versions |  |  |
 | Thu Apr 29 |  |  | #37 Signed something at your door? The 3-day Cooling-Off Rule, explained |  |
-| Fri Apr 30 | #11 'We've got leftover asphalt from a job down the street': 4 signs of a door-knocker scam · **kit** | #26 Hiring after a storm: 5 rules |  |  |
+| Fri Apr 30 | #11 'Leftover asphalt from down the street': 4 door-knock signs · **kit** | #26 Hiring after a storm: 5 rules |  |  |
 | Sun May 2 |  |  |  | #44 Older Americans Month: the 7 scams that target older adults most · **seniors pack** |
-| Mon May 3 | #12 They read the obituary, then they call: 2 funeral scams grieving families get · **seniors pack** | #27 After someone dies: 3 scams and 3 protections |  |  |
+| Mon May 3 | #12 They read the obituary, then call: 2 funeral scams · **seniors pack** | #27 After someone dies: 3 scams and 3 protections |  |  |
 | Tue May 4 |  |  | #38 7 scams aimed at older adults, and the 1-line fix for each · **seniors pack** |  |
-| Wed May 5 | #13 'We have a buyer for your timeshare': 1 upfront fee, 0 buyers | #28 Getting out of a timeshare: 3 scams and 2 real options |  |  |
+| Wed May 5 | #13 'We have a buyer for your timeshare': 1 fee, 0 buyers | #28 Getting out of a timeshare: 3 scams and 2 real options |  |  |
 | Thu May 6 |  |  | #39 What to put by Mom and Dad's phone: 5 things · **seniors pack** |  |
-| Fri May 7 | #14 'You've won $2.5 million. Just pay the taxes first': 0 real prizes work this way · **seniors pack** | #29 The prize call: 4 stages from 'you've won' to 'one more fee' |  |  |
+| Fri May 7 | #14 'You won $2.5 million, pay taxes first': 0 real prizes · **seniors pack** | #29 The prize call: 4 stages from 'you've won' to 'one more fee' |  |  |
 
 Before publishing: verify every item's `claims_to_verify` against its `sources` that week (IRS pages update after
 tax law changes), record the voiceovers for `videos-need-voice/`, and check that tax-deadline dates match the 2027 IRS

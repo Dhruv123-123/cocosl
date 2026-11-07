@@ -230,7 +230,7 @@
       "youtube"
     ],
     "script": {
-      "title": "Activating a new streaming device is free. 1 check stops the fake help sites",
+      "title": "New streaming device? Activation is free. 1 check first",
       "hook": "1 activation code on your new TV, and a search result charging $99 to 'activate' it. Activation is free.",
       "segments": [
         {
@@ -377,7 +377,7 @@
       "youtube"
     ],
     "script": {
-      "title": "$0 to search for your unclaimed money. Anyone charging a fee first is a red flag",
+      "title": "$0 to search for unclaimed money. A fee first is a red flag",
       "hook": "$0: what it costs to search for unclaimed money in your name. The text asking for a $49 fee is a scam.",
       "segments": [
         {
@@ -452,7 +452,7 @@
       "youtube"
     ],
     "script": {
-      "title": "'IRS: your refund is ready' with a link? 0 times the IRS starts that way",
+      "title": "'IRS: your refund is ready' with a link? 0 real ones",
       "hook": "0 times the IRS starts a conversation with a text and a link. So the refund text in your messages is fake.",
       "segments": [
         {
@@ -827,7 +827,7 @@
       "youtube"
     ],
     "script": {
-      "title": "$0 to file your taxes: 2 real free options, and 1 search ad to skip",
+      "title": "$0 to file your taxes: 2 free options, 1 search ad to skip",
       "hook": "$0: what filing your taxes can cost if your income is under the limit. 2 real options, and the ad to skip.",
       "segments": [
         {
@@ -902,7 +902,7 @@
       "youtube"
     ],
     "script": {
-      "title": "A 20% 'withdrawal tax' before you can cash out? The profit was never real",
+      "title": "A 20% 'withdrawal tax' to cash out? The profit wasn't real",
       "hook": "20% 'tax' to withdraw your crypto profits. That one request proves the profits were never real.",
       "segments": [
         {
@@ -1199,7 +1199,7 @@
       "youtube"
     ],
     "script": {
-      "title": "'We can recover your lost crypto' for a $2,000 fee? That's scam number 2",
+      "title": "'We'll recover your lost crypto' for $2,000? Scam number 2",
       "hook": "2nd scam, same victim: 'We recover lost crypto. Pay $2,000 upfront.' Here's why it's almost always fake.",
       "segments": [
         {
@@ -1658,7 +1658,7 @@
         "Fake tech support sites ask for payment or remote access (FTC tech support scam guidance)"
       ],
       "title_variants": [
-        "Activating a new streaming device is free. 1 check stops the fake help sites"
+        "New streaming device? Activation is free. 1 check first"
       ],
       "hook_variants": [
         "1 activation code on your new TV, and a search result charging $99 to 'activate' it. Activation is free."
@@ -1813,7 +1813,7 @@
         "Amounts are fictional examples"
       ],
       "title_variants": [
-        "$0 to search for your unclaimed money. Anyone charging a fee first is a red flag"
+        "$0 to search for unclaimed money. A fee first is a red flag"
       ],
       "hook_variants": [
         "$0: what it costs to search for unclaimed money in your name. The text asking for a $49 fee is a scam."
@@ -1891,7 +1891,7 @@
         "Report IRS phishing to phishing@irs.gov (check IRS page for current text-reporting steps)"
       ],
       "title_variants": [
-        "'IRS: your refund is ready' with a link? 0 times the IRS starts that way"
+        "'IRS: your refund is ready' with a link? 0 real ones"
       ],
       "hook_variants": [
         "0 times the IRS starts a conversation with a text and a link. So the refund text in your messages is fake."
@@ -2299,7 +2299,7 @@
         "Search ads can lead to paid products or look-alike sites"
       ],
       "title_variants": [
-        "$0 to file your taxes: 2 real free options, and 1 search ad to skip"
+        "$0 to file your taxes: 2 free options, 1 search ad to skip"
       ],
       "hook_variants": [
         "$0: what filing your taxes can cost if your income is under the limit. 2 real options, and the ad to skip."
@@ -2383,7 +2383,7 @@
         "Amounts are fictional"
       ],
       "title_variants": [
-        "A 20% 'withdrawal tax' before you can cash out? The profit was never real"
+        "A 20% 'withdrawal tax' to cash out? The profit wasn't real"
       ],
       "hook_variants": [
         "20% 'tax' to withdraw your crypto profits. That one request proves the profits were never real."
@@ -2711,7 +2711,7 @@
         "Scammers share or sell lists of past victims"
       ],
       "title_variants": [
-        "'We can recover your lost crypto' for a $2,000 fee? That's scam number 2"
+        "'We'll recover your lost crypto' for $2,000? Scam number 2"
       ],
       "hook_variants": [
         "2nd scam, same victim: 'We recover lost crypto. Pay $2,000 upfront.' Here's why it's almost always fake."

@@ -3,7 +3,7 @@
     python3 build.py           ->  ../how-it-worked.json, ../HOW_IT_WORKED_SERIES.md, out/<slug>.html
     python3 build.py --png     ->  also renders out/<slug>.png (1920x1080) with Playwright via render_boards.mjs
 
-Parts 1-3 take the first Sunday long-video slot of Jul, Aug and Sep 2027 (no weekly plan exists yet for those weeks),
+Parts 1-8 take the second Sunday long-video slot of each month, Jul 2027 - Feb 2028 (no weekly plan exists yet for those weeks),
 so the series runs monthly without breaking the one-long-video-a-week cap. Future weekly plans must leave them free.
 """
 import html
@@ -15,13 +15,17 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(1, str(HERE.parent / "generators" / "weeks-22-26"))
-from common import CTA_TIKTOK, P_FAMILY, P_SECURITY, P_TEXT, seg  # noqa: E402
-from series import OUTLINE, PARTS  # noqa: E402
+from common import CTA_TIKTOK, P_FAMILY, P_INVEST, P_SECURITY, P_TEXT, seg  # noqa: E402
+from series import OUTLINE, PARTS as PARTS_1_3  # noqa: E402
+from parts_4_8 import PARTS_4_8  # noqa: E402
+
+PARTS = PARTS_1_3 + PARTS_4_8
 
 OUT = HERE / "out"
 ROOT = HERE.parent
-SLOTS = {1: "2027-07-11", 2: "2027-08-08", 3: "2027-09-12"}
-PILLAR = {1: P_FAMILY, 2: P_SECURITY, 3: P_TEXT}
+SLOTS = {1: "2027-07-11", 2: "2027-08-08", 3: "2027-09-12", 4: "2027-10-10", 5: "2027-11-14", 6: "2027-12-12",
+         7: "2028-01-09", 8: "2028-02-13"}
+PILLAR = {1: P_FAMILY, 2: P_SECURITY, 3: P_TEXT, 4: P_TEXT, 5: P_FAMILY, 6: P_INVEST, 7: P_FAMILY, 8: P_FAMILY}
 esc = html.escape
 
 
@@ -80,8 +84,8 @@ def series_md(items):
            "ending with the three checks that stop it. From the competitor teardown on PR #2 (idea 4). Every part has "
            "an original element: a case board we draw from the public record, plus Dhruv on camera with the source "
            "document, in his own voice.", "",
-           "Schedule: one part a month, in the first Sunday 10:00 long-video slot of the month, starting Jul 11 2027 "
-           "(no weekly plan covers July yet). That keeps the one-long-video-a-week cap. Future weekly plans must leave "
+           "Schedule: one part a month, in the second Sunday 10:00 long-video slot of the month, Jul 11 2027 to "
+           "Feb 13 2028 (no weekly plan covers those months yet). That keeps the one-long-video-a-week cap. Future weekly plans must leave "
            "these Sundays free. Nothing has been posted.", "",
            "Rules for every part: say \"alleged\" for anything not proven in court, and say defendants are presumed "
            "innocent until convicted. Use only facts in the cited public record. No real victims' names or faces. "

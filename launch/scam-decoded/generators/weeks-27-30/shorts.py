@@ -19,7 +19,7 @@ def S(**k):
 SHORTS = [
 # ===================================================================== week 27: Mother's Day
 S(week=27, pillar=P_HEALTH, look="illustrated", tt_look="face cam",
- title="'Free' Medicare genetic test: 1 cheek swab that costs your Medicare number",
+ title="'Free' Medicare genetic test: 1 swab, 1 stolen number",
  hook="1 cheek swab, 'free with Medicare.' What it really costs is your Medicare number.",
  thumb="The 'free' DNA test",
  hashtags=["medicare", "medicarefraud", "seniors", "geneticTesting", "scamalert", "scamdecoded"],
@@ -40,7 +40,7 @@ S(week=27, pillar=P_HEALTH, look="illustrated", tt_look="face cam",
   ("The rule", "Only take a test your own doctor orders. Never give your Medicare number to a caller or a stranger at "
                "a booth.", "Only tests your doctor orders", f"{MASCOT} holding a stop sign"),
  ],
- tt_title="Mom got a call about a free DNA test. Here's the 1 question to ask.",
+ tt_title="Mom got a free DNA test call: the 1 question to ask",
  tt_hook="1 question ends the 'free Medicare DNA test' call. Here's how the call goes first.",
  tt_extra=[
   ("Pause", "Pause. What would you say if they asked you, right now, for your Medicare number to ship the kit? Think about it.",
@@ -52,7 +52,7 @@ S(week=27, pillar=P_HEALTH, look="illustrated", tt_look="face cam",
    f"{MASCOT} holding a phone and a statement"),
  ]),
 S(week=27, pillar=P_HEALTH, look="walkthrough", tt_look="illustrated",
- title="'Your doctor approved a free back brace': 1 call to hang up on",
+ title="'Your doctor approved a free back brace': hang up",
  hook="1 call offers a free back brace. Medicare pays, the scammer profits, and your number is out there.",
  thumb="Free brace? Hang up.",
  hashtags=["medicare", "medicarefraud", "backbrace", "seniors", "scamalert", "scamdecoded"],
@@ -82,7 +82,7 @@ S(week=27, pillar=P_HEALTH, look="walkthrough", tt_look="illustrated",
    "Don't call the slip · call Medicare · check statements", "a three-step checklist"),
  ]),
 S(week=27, pillar=P_FAMILY, look="face cam", tt_look="walkthrough",
- title="A 'courier' at Grandma's door: 1 grandparent scam twist to know",
+ title="A 'courier' at Grandma's door: 1 scam twist to know",
  hook="1 knock at the door turns a grandparent scam phone call into a cash pickup.",
  thumb="Never hand cash to a courier",
  hashtags=["grandparentscam", "mothersday", "protectyourparents", "familysafety", "scamalert", "scamdecoded"],
@@ -102,7 +102,7 @@ S(week=27, pillar=P_FAMILY, look="face cam", tt_look="walkthrough",
   ("The fix", "Hang up and call your grandchild, or their parents, on a number you already have. And pick a family safe "
               "word this Mother's Day.", "Hang up. Call them back. Safe word.", f"{MASCOT} with a family photo"),
  ],
- tt_title="Mother's Day gift idea: 1 safe word that stops the courier scam",
+ tt_title="Mother's Day gift: 1 safe word that stops the courier scam",
  tt_hook="1 word, picked at Mother's Day lunch, stops the grandparent courier scam.",
  tt_extra=[
   ("Pause", "Pause. If someone knocked right now and said, I'm here for your grandson's bail money, what would you do?",
@@ -115,7 +115,7 @@ S(week=27, pillar=P_FAMILY, look="face cam", tt_look="walkthrough",
  ]),
 # ===================================================================== week 28: graduation
 S(week=28, pillar=P_JOBS, look="walkthrough", tt_look="face cam",
- title="'Interview on Telegram today': 1 job offer new grads should walk away from",
+ title="'Interview on Telegram today': 1 job offer to walk away from",
  hook="1 'interview' over a chat app, an offer an hour later, and a check for your equipment. It's a scam.",
  thumb="Chat-app interview? Walk away.",
  hashtags=["newgrad", "jobscam", "jobsearch", "classof2027", "scamalert", "scamdecoded"],
@@ -135,7 +135,7 @@ S(week=28, pillar=P_JOBS, look="walkthrough", tt_look="face cam",
   ("The rule", "Real employers interview by video or in person, and never send you money to buy their equipment.",
    "Real jobs don't send checks first", f"{MASCOT} in a graduation cap holding a stop sign"),
  ],
- tt_title="I almost got hired by a scammer: the 3 messages that gave it away",
+ tt_title="I almost got hired by a scammer: 3 messages that told me",
  tt_hook="3 messages give away a fake job offer. Here's the whole chat, step by step.",
  tt_extra=[
   ("Pause", "Pause. Which message would have made you stop? The chat-app interview, the instant offer, or the check?",
@@ -148,7 +148,7 @@ S(week=28, pillar=P_JOBS, look="walkthrough", tt_look="face cam",
    f"{MASCOT} at a laptop with a magnifying glass"),
  ]),
 S(week=28, pillar=P_JOBS, look="illustrated", tt_look="quiz pause",
- title="'You won a scholarship, just pay the fee': 0 real ones charge you",
+ title="'You won a scholarship, pay the fee': 0 real ones charge",
  hook="0 real scholarships make you pay to apply, or pay a fee to collect.",
  thumb="Scholarships don't charge",
  hashtags=["scholarships", "financialaid", "fafsa", "collegebound", "scamalert", "scamdecoded"],
@@ -177,7 +177,7 @@ S(week=28, pillar=P_JOBS, look="illustrated", tt_look="quiz pause",
    "A and B: scams. C: real.", "card C with a green check"),
  ]),
 S(week=28, pillar=P_JOBS, look="data chart", tt_look="walkthrough",
- title="'I'm out of the country, so I can't show you the apartment': 1 rental red flag",
+ title="'I'm abroad, can't show you the apartment': 1 rental flag",
  hook="1 line from a landlord ends the deal: I can't show you the apartment, but send the deposit.",
  thumb="Can't see it? Don't pay.",
  hashtags=["firstapartment", "rentalscam", "newgrad", "apartmenthunting", "scamalert", "scamdecoded"],
@@ -197,7 +197,7 @@ S(week=28, pillar=P_JOBS, look="data chart", tt_look="walkthrough",
   ("The rule", "Never pay before you, or someone you trust, has been inside and met the landlord or agent.",
    "See it first. Then pay.", f"{MASCOT} holding a key"),
  ],
- tt_title="Your first apartment listing has 4 red flags. Can you find them?",
+ tt_title="First apartment listing: can you find 4 red flags?",
  tt_hook="4 red flags in 1 apartment listing. Pause and count them before I say them.",
  tt_extra=[
   ("Pause", "Pause and count. Low rent. A landlord who can't meet. A deposit by payment app or wire. And pressure to pay "
@@ -208,7 +208,7 @@ S(week=28, pillar=P_JOBS, look="data chart", tt_look="walkthrough",
  ]),
 # ===================================================================== week 29: Military Appreciation Month
 S(week=29, pillar=P_FAMILY, look="face cam", tt_look="illustrated",
- title="'We'll get you a bigger VA pension, for a fee': 1 offer veterans should refuse",
+ title="'A bigger VA pension, for a fee': 1 offer to refuse",
  hook="1 'free seminar' about VA pension, then a fee and a new annuity. It's called pension poaching.",
  thumb="VA help is free",
  hashtags=["veterans", "vapension", "militaryappreciationmonth", "seniors", "scamalert", "scamdecoded"],
@@ -228,7 +228,7 @@ S(week=29, pillar=P_FAMILY, look="face cam", tt_look="illustrated",
   ("Do this", "Look up an accredited representative on VA's own website, or ask a veterans service organization.",
    "Use a VA-accredited rep", f"{MASCOT} saluting"),
  ],
- tt_title="Dad's a veteran? 3 questions before anyone 'helps' with his pension",
+ tt_title="Dad's a veteran? 3 questions before anyone 'helps'",
  tt_hook="3 questions to ask anyone offering to help a veteran with a VA pension.",
  tt_extra=[
   ("Pause", "Pause. If someone offers to help, what would you ask first? Think about it.",
@@ -238,7 +238,7 @@ S(week=29, pillar=P_FAMILY, look="face cam", tt_look="illustrated",
                 "yes, get a second opinion first.", "Accredited? Cost? Moving savings?", "three question marks"),
  ]),
 S(week=29, pillar=P_FAMILY, look="quiz pause", tt_look="face cam",
- title="'Help veterans this Memorial Day': 2-minute check before you give",
+ title="'Help veterans this Memorial Day': a 2-minute check",
  hook="2 minutes before you give to a veterans' charity, and your money reaches veterans.",
  thumb="Check before you give",
  hashtags=["memorialday", "veterans", "charity", "donate", "scamalert", "scamdecoded"],
@@ -258,7 +258,7 @@ S(week=29, pillar=P_FAMILY, look="quiz pause", tt_look="face cam",
   ("The check", "Look the charity up yourself, check it with a watchdog like Give.org or Charity Navigator, and give on "
                 "its own website.", "Look it up · check it · give direct", f"{MASCOT} holding a flag and a heart"),
  ],
- tt_title="Before Memorial Day: the veterans' charity call, line by line",
+ tt_title="Before Memorial Day: the veterans' charity call, decoded",
  tt_hook="1 Memorial Day charity call, line by line, and the 2-minute check that beats it.",
  tt_extra=[
   ("Pause", "Pause. The caller says most of your gift goes straight to wounded vets. How would you check that?",
@@ -268,7 +268,7 @@ S(week=29, pillar=P_FAMILY, look="quiz pause", tt_look="face cam",
    "Ask: how much reaches vets?", "a pie chart with a small slice"),
  ]),
 S(week=29, pillar=P_INVEST, look="walkthrough", tt_look="data chart",
- title="'Deployed overseas, can't video call': 4 tells of a fake soldier profile",
+ title="'Deployed, can't video call': 4 tells of a fake soldier",
  hook="4 tells of a fake soldier on a dating app, and why they always need money.",
  thumb="Fake soldier: 4 tells",
  hashtags=["romancescam", "militaryromance", "onlinedating", "veterans", "scamalert", "scamdecoded"],
@@ -300,7 +300,7 @@ S(week=29, pillar=P_INVEST, look="walkthrough", tt_look="data chart",
  ]),
 # ===================================================================== week 30: summer travel
 S(week=30, pillar=P_TRAVEL, look="walkthrough", tt_look="quiz pause",
- title="'Your flight is canceled, call to rebook': 1 text to check in the airline app",
+ title="'Flight canceled, call to rebook': 1 text to check first",
  hook="1 text says your flight is canceled and gives a number to rebook. Don't call it.",
  thumb="Flight canceled? Check the app.",
  hashtags=["travel", "flightcanceled", "summertravel", "airline", "scamalert", "scamdecoded"],
@@ -329,7 +329,7 @@ S(week=30, pillar=P_TRAVEL, look="walkthrough", tt_look="quiz pause",
              "airline's app and on your booking confirmation.", "The app. Always.", "the app number with a green check"),
  ]),
 S(week=30, pillar=P_TRAVEL, look="illustrated", tt_look="walkthrough",
- title="That 'official' hotel site in your search: 1 check before you book",
+ title="That 'official' hotel site: 1 check before you book",
  hook="1 search ad looks like the hotel's own site. It isn't, and the room may not exist.",
  thumb="Is it the real hotel site?",
  hashtags=["summertravel", "hotelbooking", "travelscam", "vacation", "scamalert", "scamdecoded"],
@@ -359,7 +359,7 @@ S(week=30, pillar=P_TRAVEL, look="illustrated", tt_look="walkthrough",
    "a phone and a credit card"),
  ]),
 S(week=30, pillar=P_TRAVEL, look="face cam", tt_look="illustrated",
- title="Road trip this summer? 1 tug at the gas pump that spots a skimmer",
+ title="Road trip? 1 tug at the gas pump spots a skimmer",
  hook="1 tug on the card reader before you pay at the pump can spot a skimmer.",
  thumb="Tug the reader",
  hashtags=["roadtrip", "summertravel", "skimmer", "gasstation", "scamalert", "scamdecoded"],
@@ -378,7 +378,7 @@ S(week=30, pillar=P_TRAVEL, look="face cam", tt_look="illustrated",
   ("Pay smart", "Better still, tap to pay or pay inside. Use a credit card, not debit, and turn on card alerts.",
    "Tap, or pay inside. Credit, not debit.", f"{MASCOT} with a credit card"),
  ],
- tt_title="Gas pump skimmers: 4 road trip habits and the 1 that matters most",
+ tt_title="Gas pump skimmers: 4 habits, and the 1 that matters most",
  tt_hook="4 road trip habits protect your card at the pump, and 1 matters most.",
  tt_extra=[
   ("Pause", "Pause. Which do you think protects you most: checking the seal, tapping to pay, or using credit not debit?",
@@ -395,7 +395,7 @@ _AFTER = {
   ("Already gave it?", "Already gave your Medicare number to a caller? Call 1-800-MEDICARE, tell them what happened, and watch "
    "every statement for the next year. It's not your fault, and reporting it protects the next person.",
    "Gave the number? Call Medicare.", "a phone and a Medicare statement"),
- "I almost got hired by a scammer: the 3 messages that gave it away":
+ "I almost got hired by a scammer: 3 messages that told me":
   ("Already deposited?", "Already deposited the check? Don't spend it and don't pay any vendor. Call your bank and tell them "
    "you think the check is fake, then report the 'employer' at report fraud dot f t c dot gov.",
    "Deposited it? Call your bank.", "a bank building with a phone"),
@@ -403,14 +403,14 @@ _AFTER = {
   ("Free help", "Want real help? Your school's financial aid office is free, the FAFSA is free, and real scholarship searches "
    "don't charge. If anyone asks for a fee to apply or to claim money, close the tab. And never give a bank account number "
    "to claim a scholarship you didn't apply for.", "Real help is free", "a school building with a help sign"),
- "Your first apartment listing has 4 red flags. Can you find them?":
+ "First apartment listing: can you find 4 red flags?":
   ("Already paid?", "Already paid a deposit? Call your bank or payment app the same day and ask them to stop or reverse it, "
    "then report the listing to the site.", "Paid? Call your bank today.", "a phone dialling"),
- "Dad's a veteran? 3 questions before anyone 'helps' with his pension":
+ "Dad's a veteran? 3 questions before anyone 'helps'":
   ("Already signed?", "Already signed something or moved money? Talk to a VA-accredited representative or a veterans service "
    "organization before anything else changes, and report the adviser to the VA inspector general. There's no fee to ask.",
    "Signed? Get free accredited help.", "a veteran shaking hands with a helper"),
- "Before Memorial Day: the veterans' charity call, line by line":
+ "Before Memorial Day: the veterans' charity call, decoded":
   ("Already pledged?", "Already pledged on the phone? A pledge isn't a payment. You don't owe anything you didn't agree to in "
    "writing. If you paid by card, call your card company and ask about a dispute. If you paid by gift card, call the card "
    "company right away.", "A pledge isn't a payment", "a phone with a checkmark"),
@@ -427,7 +427,7 @@ _AFTER = {
   ("Booking next time", "Next time, start from the hotel's own website, or a booking site you've used before and typed in "
    "yourself. Check the price matches, read the cancellation terms, and pay with a credit card, so a fake booking is a "
    "dispute and not a loss.", "Start from the hotel's own site", "a suitcase next to a laptop"),
- "Gas pump skimmers: 4 road trip habits and the 1 that matters most":
+ "Gas pump skimmers: 4 habits, and the 1 that matters most":
   ("Card alerts", "And turn on card alerts before you leave. If a skimmed card gets used, you'll see the charge in minutes, "
    "not at the end of the month, and you can lock the card from the app while you're still on the road.",
    "Turn on card alerts", "a phone with a bell"),

@@ -76,7 +76,7 @@
   "original_element": "Dhruv on camera, acting out the call with his own phone; illustrated beat for the code.",
   "idea_angle": "Breach checklist push: The fake fraud team call that follows data breach news, and what to do instead.",
   "script": {
-   "title": "'Your account was in the breach, let's secure it now': 1 follow-up call to hang up on",
+   "title": "'Your account was in the breach': 1 call to hang up on",
    "hook": "1 call comes a few days after breach news, from your 'bank's fraud team'. Hang up.",
    "segments": [
     {
@@ -138,7 +138,7 @@
   "original_element": "Walkthrough of a fictional settlement text with the flags lighting up, in the originality/render.mjs style.",
   "idea_angle": "Breach checklist push: The fake breach settlement text, and how to find a real settlement.",
   "script": {
-   "title": "'You're owed $412 from the breach settlement, pay a $25 fee': 0 real claims charge you",
+   "title": "Breach settlement with a $25 fee? 0 real claims charge you",
    "hook": "$412 from a data breach settlement, after a $25 processing fee. Real claims don't charge you.",
    "segments": [
     {
@@ -201,7 +201,7 @@
   "original_element": "Illustrated beats: two padlocks, one on a credit report and one on a tax form.",
   "idea_angle": "Breach checklist push: A credit freeze and an IRS IP PIN: the two free locks after an SSN breach.",
   "script": {
-   "title": "Social Security number in a breach? 2 free locks to turn on today",
+   "title": "SSN in a breach? 2 free locks to turn on today",
    "hook": "2 free locks protect you when your Social Security number shows up in a breach.",
    "segments": [
     {
@@ -265,7 +265,7 @@
   "original_element": "Quiz format with a real 3-second pause card; the answer beat shows haveibeenpwned.com typed into a browser.",
   "idea_angle": "Breach checklist push: The 'your info is on the dark web' email, and the free way to check.",
   "script": {
-   "title": "'Your data is on the dark web, scan now': real alert or sales pitch?",
+   "title": "'Your data is on the dark web': real alert or sales pitch?",
    "hook": "1 email says your data is on the dark web. Pause: real alert or sales pitch?",
    "segments": [
     {

@@ -417,11 +417,14 @@ def test_how_the_scam_actually_worked_series():
     root = CONTENT.parent
     import sys
     sys.path.insert(0, str(root / "how-it-worked"))
-    from series import OUTLINE, PARTS
+    from series import OUTLINE
+    from parts_4_8 import PARTS_4_8
+    from series import PARTS as P13
+    PARTS = P13 + PARTS_4_8
     assert [o["part"] for o in OUTLINE] == list(range(1, 9))
     assert all(o["source"].startswith("https://") and ("justice.gov" in o["source"] or "ftc.gov" in o["source"]) for o in OUTLINE)
     items = json.loads((root / "how-it-worked.json").read_text())
-    assert [i["part"] for i in items] == [1, 2, 3] and all(i["format"] == "long" for i in items)
+    assert [i["part"] for i in items] == list(range(1, 9)) and all(i["format"] == "long" for i in items)
     taken = set()
     for name in ("weeks-22-26.json", "weeks-27-30.json", "weeks-31-34.json"):
         taken |= {i["post_on"][:10] for i in json.loads((root / name).read_text()) if i.get("post_on")}
@@ -437,4 +440,39 @@ def test_how_the_scam_actually_worked_series():
         text = G.script_text(item["script"])
         for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
             assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
-    assert "presumed innocent" in G.script_text(items[0]["script"])
+    for n in (0, 4, 5):  # parts with open charges say so
+        assert "presumed innocent" in G.script_text(items[n]["script"]), n
+
+
+def test_every_short_title_fits_60_characters():
+    long = []
+    for f in sorted(CONTENT.parent.glob("*.json")):
+        data = json.loads(f.read_text())
+        if not isinstance(data, list):
+            continue
+        long += [(f.name, i["script"]["title"]) for i in data
+                 if isinstance(i, dict) and i.get("format") == "short" and len(i["script"]["title"]) > 60]
+    assert not long, long
+
+
+def test_newsletter_cut_pack():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    items = json.loads((CONTENT.parent / "newsletter-cuts.json").read_text())
+    assert len(items) == 10 and all(a["look"] != b["look"] for a, b in zip(items, items[1:]))
+    slots = set()
+    for name in ("weeks-13-21.json", "weeks-22-26.json", "weeks-27-30.json", "weeks-31-34.json", "holiday-2026.json",
+                 "tax-2027.json", "breach-shorts-2027.json"):
+        slots |= {i["post_on"] for i in json.loads((CONTENT.parent / name).read_text()) if i.get("post_on")}
+    news = CONTENT.parent.parent.parent / "sites" / "scam-decoded" / "content" / "newsletter"
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        issue = next(news.glob(f"{item['newsletter_issue']:02d}-*.md")).read_text()
+        assert f"send_date: {item['post_on'][:10]}" in issue and item["post_on"] not in slots
+        assert len(sc.hashtags) <= 5 and item["platforms"] == ["instagram", "tiktok"]
+        assert "no AI voice" in item["original_element"] and sc.sources and sc.claims_to_verify
+        assert 60 <= sum(len(s.narration.split()) for s in sc.segments) <= 120, sc.title
+        assert any(ch.isdigit() for ch in sc.hook) and "Scam Alert" in sc.caption
+        text = G.script_text(item["script"])
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title

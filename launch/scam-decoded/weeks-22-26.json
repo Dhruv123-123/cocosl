@@ -8,7 +8,7 @@
       "youtube"
     ],
     "script": {
-      "title": "'File your tax extension here': 1 free form scammers charge for",
+      "title": "'File your tax extension here': 1 free form they charge for",
       "hook": "1 form, free from the IRS. Scam sites charge for it and keep your Social Security number.",
       "segments": [
         {
@@ -78,7 +78,7 @@
       "youtube"
     ],
     "script": {
-      "title": "'Track your refund': 3 things the real IRS tracker asks for (and 1 it never does)",
+      "title": "Real IRS refund tracker: 3 things it asks, 1 it never does",
       "hook": "3 things the real refund tracker asks for. A card number isn't 1 of them.",
       "segments": [
         {
@@ -148,7 +148,7 @@
       "youtube"
     ],
     "script": {
-      "title": "A real-looking IRS letter with 1 fake detail: the phone number",
+      "title": "A real-looking IRS letter with 1 fake detail",
       "hook": "1 detail on this IRS letter is fake, and it's the 1 you'd use: the phone number.",
       "segments": [
         {
@@ -218,7 +218,7 @@
       "youtube"
     ],
     "script": {
-      "title": "'I'll get you a bigger refund, fast': 3 preparer red flags before April 15",
+      "title": "'A bigger refund, fast': 3 preparer red flags",
       "hook": "3 red flags in a tax preparer, and the 1 that costs you most comes later.",
       "segments": [
         {
@@ -287,7 +287,7 @@
       "youtube"
     ],
     "script": {
-      "title": "'You missed the April 15 deadline. Pay the penalty now': 1 text the IRS doesn't send",
+      "title": "'Missed April 15, pay the penalty now': not the IRS",
       "hook": "April 16, 1 text: 'You missed the deadline. Pay your penalty today.' The IRS doesn't do that.",
       "segments": [
         {
@@ -357,7 +357,7 @@
       "youtube"
     ],
     "script": {
-      "title": "Paying the IRS? 1 search mistake that costs you a 'service fee'",
+      "title": "Paying the IRS? 1 search mistake that adds a 'fee'",
       "hook": "1 search ad, 1 lookalike payment page, and a 'service fee' the IRS never charged.",
       "segments": [
         {
@@ -426,7 +426,7 @@
       "youtube"
     ],
     "script": {
-      "title": "'Your account will be deleted in 48 hours': 1 email to never click through",
+      "title": "'Account deleted in 48 hours': 1 email to never click",
       "hook": "48 hours until your account is deleted, the email says. It's a password trap.",
       "segments": [
         {
@@ -564,7 +564,7 @@
       "youtube"
     ],
     "script": {
-      "title": "'Can you vote for my niece?' 1 message from a friend that steals your account",
+      "title": "'Can you vote for my niece?' 1 message that steals accounts",
       "hook": "1 vote for a friend's niece, and your account is next. Here's how the chain works.",
       "segments": [
         {
@@ -633,7 +633,7 @@
       "youtube"
     ],
     "script": {
-      "title": "'Free solar panels from a government program': 3 words that cost homeowners",
+      "title": "'Free solar from a government program': 3 costly words",
       "hook": "3 words, 'free government solar', and usually a 20-year loan behind them.",
       "segments": [
         {
@@ -703,7 +703,7 @@
       "youtube"
     ],
     "script": {
-      "title": "'We're from the power company, can we see your bill?' 2 things to ask first",
+      "title": "'From the power company, can we see your bill?' Ask 2 things",
       "hook": "2 questions for anyone at your door who says they're from the power company.",
       "segments": [
         {
@@ -772,7 +772,7 @@
       "youtube"
     ],
     "script": {
-      "title": "'We've got leftover asphalt from a job down the street': 4 signs of a door-knocker scam",
+      "title": "'Leftover asphalt from down the street': 4 door-knock signs",
       "hook": "4 signs the contractor at your door is a scam, and 1 is about how they want to be paid.",
       "segments": [
         {
@@ -842,7 +842,7 @@
       "youtube"
     ],
     "script": {
-      "title": "They read the obituary, then they call: 2 funeral scams grieving families get",
+      "title": "They read the obituary, then call: 2 funeral scams",
       "hook": "2 calls grieving families get after an obituary goes online. Both want money fast.",
       "segments": [
         {
@@ -911,7 +911,7 @@
       "youtube"
     ],
     "script": {
-      "title": "'We have a buyer for your timeshare': 1 upfront fee, 0 buyers",
+      "title": "'We have a buyer for your timeshare': 1 fee, 0 buyers",
       "hook": "1 call says there's a buyer for your timeshare. 0 buyers ever show up.",
       "segments": [
         {
@@ -980,7 +980,7 @@
       "youtube"
     ],
     "script": {
-      "title": "'You've won $2.5 million. Just pay the taxes first': 0 real prizes work this way",
+      "title": "'You won $2.5 million, pay taxes first': 0 real prizes",
       "hook": "0 real sweepstakes ask winners to pay first. Here's the call that does.",
       "segments": [
         {
@@ -1112,7 +1112,7 @@
         "An extension to file is not an extension to pay"
       ],
       "title_variants": [
-        "'File your tax extension here': 1 free form scammers charge for"
+        "'File your tax extension here': 1 free form they charge for"
       ],
       "hook_variants": [
         "1 form, free from the IRS. Scam sites charge for it and keep your Social Security number."
@@ -1191,7 +1191,7 @@
         "The IRS doesn't text people about refunds out of the blue"
       ],
       "title_variants": [
-        "'Track your refund': 3 things the real IRS tracker asks for (and 1 it never does)"
+        "Real IRS refund tracker: 3 things it asks, 1 it never does"
       ],
       "hook_variants": [
         "3 things the real refund tracker asks for. A card number isn't 1 of them."
@@ -1270,7 +1270,7 @@
         "The IRS doesn't demand payment by gift card, wire or crypto"
       ],
       "title_variants": [
-        "A real-looking IRS letter with 1 fake detail: the phone number"
+        "A real-looking IRS letter with 1 fake detail"
       ],
       "hook_variants": [
         "1 detail on this IRS letter is fake, and it's the 1 you'd use: the phone number."
@@ -1354,7 +1354,7 @@
         "The IRS warns against preparers who base fees on refund size"
       ],
       "title_variants": [
-        "'I'll get you a bigger refund, fast': 3 preparer red flags before April 15"
+        "'A bigger refund, fast': 3 preparer red flags"
       ],
       "hook_variants": [
         "3 red flags in a tax preparer, and the 1 that costs you most comes later."
@@ -1433,7 +1433,7 @@
         "Filing as soon as possible limits penalties, even if you can't pay in full"
       ],
       "title_variants": [
-        "'You missed the April 15 deadline. Pay the penalty now': 1 text the IRS doesn't send"
+        "'Missed April 15, pay the penalty now': not the IRS"
       ],
       "hook_variants": [
         "April 16, 1 text: 'You missed the deadline. Pay your penalty today.' The IRS doesn't do that."
@@ -1517,7 +1517,7 @@
         "Payments should start from IRS.gov"
       ],
       "title_variants": [
-        "Paying the IRS? 1 search mistake that costs you a 'service fee'"
+        "Paying the IRS? 1 search mistake that adds a 'fee'"
       ],
       "hook_variants": [
         "1 search ad, 1 lookalike payment page, and a 'service fee' the IRS never charged."
@@ -1601,7 +1601,7 @@
         "Two-factor authentication helps protect accounts even if a password is stolen"
       ],
       "title_variants": [
-        "'Your account will be deleted in 48 hours': 1 email to never click through"
+        "'Account deleted in 48 hours': 1 email to never click"
       ],
       "hook_variants": [
         "48 hours until your account is deleted, the email says. It's a password trap."
@@ -1769,7 +1769,7 @@
         "Secure and report a hacked account using the platform's recovery tools"
       ],
       "title_variants": [
-        "'Can you vote for my niece?' 1 message from a friend that steals your account"
+        "'Can you vote for my niece?' 1 message that steals accounts"
       ],
       "hook_variants": [
         "1 vote for a friend's niece, and your account is next. Here's how the chain works."
@@ -1854,7 +1854,7 @@
         "The government doesn't call or knock to give away free panels"
       ],
       "title_variants": [
-        "'Free solar panels from a government program': 3 words that cost homeowners"
+        "'Free solar from a government program': 3 costly words"
       ],
       "hook_variants": [
         "3 words, 'free government solar', and usually a 20-year loan behind them."
@@ -1938,7 +1938,7 @@
         "The Cooling-Off Rule gives three days to cancel many door-to-door sales"
       ],
       "title_variants": [
-        "'We're from the power company, can we see your bill?' 2 things to ask first"
+        "'From the power company, can we see your bill?' Ask 2 things"
       ],
       "hook_variants": [
         "2 questions for anyone at your door who says they're from the power company."
@@ -2023,7 +2023,7 @@
         "Avoid large cash payments up front (FTC)"
       ],
       "title_variants": [
-        "'We've got leftover asphalt from a job down the street': 4 signs of a door-knocker scam"
+        "'Leftover asphalt from down the street': 4 door-knock signs"
       ],
       "hook_variants": [
         "4 signs the contractor at your door is a scam, and 1 is about how they want to be paid."
@@ -2107,7 +2107,7 @@
         "Debts are paid from the deceased person's estate"
       ],
       "title_variants": [
-        "They read the obituary, then they call: 2 funeral scams grieving families get"
+        "They read the obituary, then call: 2 funeral scams"
       ],
       "hook_variants": [
         "2 calls grieving families get after an obituary goes online. Both want money fast."
@@ -2191,7 +2191,7 @@
         "Recovery scams target people who've already lost money"
       ],
       "title_variants": [
-        "'We have a buyer for your timeshare': 1 upfront fee, 0 buyers"
+        "'We have a buyer for your timeshare': 1 fee, 0 buyers"
       ],
       "hook_variants": [
         "1 call says there's a buyer for your timeshare. 0 buyers ever show up."
@@ -2275,7 +2275,7 @@
         "Anyone who demands gift card payment is a scammer (FTC)"
       ],
       "title_variants": [
-        "'You've won $2.5 million. Just pay the taxes first': 0 real prizes work this way"
+        "'You won $2.5 million, pay taxes first': 0 real prizes"
       ],
       "hook_variants": [
         "0 real sweepstakes ask winners to pay first. Here's the call that does."
