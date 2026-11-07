@@ -42,18 +42,21 @@ document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click'
 </div>
 
 <div class="card section">
-  <div class="card-head"><h2>Post by hand</h2><span class="small muted">TikTok doesn't allow tools to upload to your own accounts, so these are yours to post from the app.</span></div>
+  <div class="card-head"><h2>Post by hand</h2><span class="small muted">TikTok doesn't allow tools to upload to your own accounts, and pins go through Pinterest's own scheduler, so these are yours to post.</span></div>
   {% if by_hand_items %}<ul class="list">
     {% for r in by_hand_items %}<li><span class="grow">
       <strong {% if r.due %}style="color:var(--warn)"{% endif %}>{{ 'Due now' if r.due else r.scheduled_at|localtime }}</strong> ·
       <a href="/posts/{{ r.post_id }}">{{ r.title }}</a> <span class="small muted">{{ r.brand }} · {{ r.platform }} · {{ r.format }}{% if r.account %} · {{ r.account }}{% endif %}</span><br>
       <span class="small">
+        {% if r.package.image %}<a href="/media/{{ r.package.image }}" download>Download pin</a> · {% endif %}
         {% if r.package.video %}<a href="/media/{{ r.package.video }}" download>Download video</a> · {% endif %}
-        <button type="button" class="btn btn-sm" data-copy="{{ r.caption }}">Copy caption</button>
+        {% if r.pin_title %}<button type="button" class="btn btn-sm" data-copy="{{ r.pin_title }}">Copy title</button>{% endif %}
+        <button type="button" class="btn btn-sm" data-copy="{{ r.caption }}">Copy {{ 'description' if r.platform == 'pinterest' else 'caption' }}</button>
+        {% if r.pin_link %}<button type="button" class="btn btn-sm" data-copy="{{ r.pin_link }}">Copy link</button>{% endif %}
         {% if r.package.dir %}<span class="muted mono">output/{{ r.package.dir }}</span>{% else %}<span class="muted">package is written when it's due (or run <code>factory manual build</code>)</span>{% endif %}
       </span></span>
       <form method="post" action="/manual/{{ r.id }}/done" class="inline">
-        <input name="url" type="url" placeholder="https://www.tiktok.com/@…/video/…" style="min-width:16em">
+        <input name="url" type="url" placeholder="link to the post" style="min-width:16em">
         <button class="btn btn-sm btn-primary" type="submit">Mark posted</button></form></li>{% endfor %}
   </ul>{% else %}<p class="muted">Nothing to post by hand.</p>{% endif %}
 </div>
