@@ -1,0 +1,108 @@
+{
+  "name": "Scam Decoded",
+  "handle": "@scamdecoded",
+  "url": "https://scamdecoded.netlify.app",
+  "tagline": "One scam, decoded in 60 seconds, so you spot it first.",
+  "description": "Plain-English scam, fraud and identity-theft explainers for adults and their families: how each scam works, the tell that gives it away, and what to do.",
+  "socials": {
+    "Instagram": "https://www.instagram.com/scamdecoded/",
+    "YouTube": "https://www.youtube.com/@scamdecoded",
+    "TikTok": "https://www.tiktok.com/@scamdecoded"
+  },
+  "contact_email": "hello@example.com",
+  "email": {
+    "provider": "netlify",
+    "action": "",
+    "email_field": "",
+    "privacy_note": "Your checklist now, then one short scam alert a week. Unsubscribe in one click.",
+    "thanks_note": "Your checklist is below. Your first email is on its way (check Promotions or Spam if it isn't there in a few minutes)."
+  },
+  "lead_magnet": {
+    "title": "The Scam-Proof Checklist",
+    "file": "the-scam-proof-checklist.pdf",
+    "headline": "Make your family a hard target in one evening.",
+    "short": "A free 2-page checklist: 10 minutes tonight, 3 rules, and what to do if it happens.",
+    "pitch": "A free, printable 2-page checklist: the 10-minute setup that blocks most identity theft, the 3 rules that beat most scam calls and texts, and the first-hour plan if something goes wrong."
+  },
+  "scam_checker": {
+    "url": "https://REPLACE_ME/scam-checker/",
+    "label": "Is this a scam? Paste a text or email into our free checker"
+  },
+  "product": {
+    "slug": "kit",
+    "name": "The Family Scam-Proofing Kit",
+    "price": 9,
+    "buy_url": "https://example.gumroad.com/l/scam-proof-kit",
+    "refund_days": 14,
+    "pages": 9
+  },
+  "affiliates": [
+    {
+      "slug": "aura",
+      "name": "Aura",
+      "category": "identity",
+      "url": "https://REPLACE_ME/aff/aura"
+    },
+    {
+      "slug": "lifelock",
+      "name": "LifeLock",
+      "category": "identity",
+      "url": "https://REPLACE_ME/aff/lifelock"
+    },
+    {
+      "slug": "bitwarden",
+      "name": "Bitwarden",
+      "category": "passwords",
+      "url": "https://REPLACE_ME/aff/bitwarden"
+    },
+    {
+      "slug": "1password",
+      "name": "1Password",
+      "category": "passwords",
+      "url": "https://REPLACE_ME/aff/1password"
+    }
+  ],
+  "disclaimer": "Educational content, not legal or financial advice. Example messages, names and numbers are fictional. Check current rules with the official source before acting.",
+  "ai_disclosure": "We use AI tools to help with visuals and drafts. A human chooses every topic, checks the facts and approves everything before it is published.",
+  "analytics_snippet": "",
+  "ladder": [
+    {
+      "slug": "parents",
+      "name": "Protect Your Parents",
+      "price": 29,
+      "code": "KITPARENTS",
+      "code_off": 10,
+      "buy_url": "https://example.gumroad.com/l/protect-your-parents",
+      "pages": 20,
+      "cover": "/img/parents-cover.png"
+    },
+    {
+      "slug": "teams",
+      "name": "Spot It, Stop It: Scam Awareness Training Pack",
+      "price": 99,
+      "buy_url": "https://example.gumroad.com/l/spot-it-stop-it",
+      "cover": "/img/teams-cover.png"
+    },
+    {
+      "slug": "seniors",
+      "name": "Scam Decoded for Seniors",
+      "price": 7,
+      "buy_url": "https://example.gumroad.com/l/scam-decoded-for-seniors",
+      "pages": 13,
+      "cover": "/img/seniors-cover.png"
+    }
+  ],
+  "analytics": {
+    "plausible_domain": "scamdecoded.netlify.app",
+    "plausible_src": "https://plausible.io/js/script.outbound-links.tagged-events.js"
+  },
+  "compare_reviewed": "November 2026",
+  "holiday_guide": {
+    "title": "Scam-Proof Your Parents This Holiday",
+    "file": "scam-proof-your-parents-holiday-guide.pdf"
+  },
+  "renting_checklist": {
+    "title": "Renting Safely: Before You Pay Anything",
+    "file": "renting-safely-checklist.pdf"
+  }
+}

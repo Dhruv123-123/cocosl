@@ -1,0 +1,44 @@
+---
+issue: 6
+send_date: 2026-12-31
+subject: Scam Alert #6: a 15-minute security reset for New Year's
+preheader: Three things to lock before midnight, the subscription renewal email to ignore, and a resolution that works.
+---
+Hi,
+
+Last issue of the year. Instead of a resolution you'll drop by February, here's one that takes 15 minutes and lasts all year.
+
+## This week's scam: the auto-renewal email
+
+**Spotted this week (fictional example):** *"Your annual protection plan has been renewed. $389.99 has been charged to your account. To cancel and get a refund within 48 hours, call 555-0193."*
+
+There's no plan and no charge. The number goes to a scammer who wants remote access to your computer, or your card details, to 'refund' you.
+
+## The tell
+
+**A charge you don't recognise, plus a phone number and a deadline.** Check the real account or your card statement. No charge there means no charge.
+
+## What to do
+
+1. Don't call the number in the email.
+2. Check your card statement or log into the real account yourself.
+3. Already gave remote access? Disconnect from the internet, call your bank, and get the computer checked. Our [fake order explainer](/scams/fake-order-and-refund-emails/) has the full steps.
+
+## Quick hits
+
+- **Shopping returns season:** fake "return label" emails arrive in early January. Start every return from the shop's own app or order page.
+- **New year, new number?** If someone texts "Hi, this is my new number" and then asks for money, call their old number first.
+- **Tax season starts soon.** We'll cover it in January, but the short version: the IRS doesn't text, email or call first about money.
+
+## Your 5-minute job this week
+
+The 15-minute reset: (1) change your email password to a long, unique one and turn on two-step sign-in; (2) freeze your credit at Equifax, Experian and TransUnion if you haven't; (3) turn on transaction alerts on every card.
+
+## From Scam Decoded
+
+Want the whole family plan on paper? The [Family Scam-Proofing Kit](/kit/) is our own $9 printable kit, with a family meeting script, credit freeze trackers for everyone and a fridge card.
+
+Happy New Year,
+Scam Decoded
+
+P.S. What's the one scam you want us to cover in 2027? Reply with one word, and I'll tally them up.

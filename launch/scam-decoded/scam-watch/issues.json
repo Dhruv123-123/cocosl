@@ -1,0 +1,843 @@
+{
+ "_about": "Weekly Scam Watch issues built from the Scam Decoded alert-of-the-day cards by launch/scam-decoded/scam-watch/build.py, in the issue schema of launch/b2b/*/issues.json (PR #13). The week's most serious alert leads; the rest are quick hits. Member-facing text has no Scam Decoded links or products. Examples are made up. Rebuild after adding alerts.",
+ "reviewed": "2026-11-07",
+ "issues": [
+  {
+   "id": "2026-w47",
+   "n": 1,
+   "send_date": "2026-11-16",
+   "deliver_by": "2026-11-09",
+   "source": "Scam Decoded alert cards, week of Nov 16, 2026: gift-card-drained-at-the-rack, fake-order-call-this-number, marketplace-buyer-wants-a-code, family-emergency-voice-calls, task-job-texts",
+   "topic": "\"Your $1,299 order is confirmed\" emails with a number to call",
+   "subject": "Scam alert: \"Your $1,299 order is confirmed\" emails with a number to call",
+   "preheader": "Don't call the number in the email. Check your orders in the store's own app.",
+   "headline": "\"Your $1,299 order is confirmed\" emails with a number to call",
+   "example_label": "What it looks like (made-up example)",
+   "example": "\"Order #A-77812 confirmed: MacBook Pro, $1,299.00. Not you? Call our fraud desk within 24 hours at 1-555-0142 to cancel and get a refund.\"",
+   "explain": [
+    "It arrives by email, usually from a big online store or payment app. A big purchase you never made, sent to scare you into acting fast.",
+    "A phone number to call, instead of \"check your account\". A deadline to cancel. On the call, they'll want remote access to your computer or your bank login \"to refund you\"."
+   ],
+   "tell": "Don't call the number in the email. Check your orders in the store's own app.",
+   "promise": false,
+   "steps": [
+    "Don't call the number in the email. Open the store's app or type its website yourself and check your orders.",
+    "No order there? Delete the email. It's fake.",
+    "**Called and let them onto your computer?** Disconnect it from the internet, call your bank on the number on your card, and change your passwords from another device."
+   ],
+   "quick_hits": [
+    "**Gift cards drained before you even give them:** A scratched, peeled or re-stuck PIN strip on the back. Check the package and the PIN area before you pay. Pick one from the back of the rack.",
+    "**Marketplace \"buyers\" who ask for a code to prove you're real:** The buyer wants to \"verify\" you before they've even seen the item. Never share a code someone sends you, with anyone.",
+    "**A family member's voice, crying for money:** It's urgent and secret: don't tell anyone else in the family. Hang up and call the family member on the number you already have for them.",
+    "**\"Rate products from home, earn $800 a week\" job texts:** A recruiter you never contacted texts out of the blue. Don't reply. Real employers don't recruit by surprise text and never ask you to pay to work."
+   ],
+   "job": "Tell one person who'd get a email like this about it. The rule to pass on: Don't call the number in the email. Open the store's app or type its website yourself and check your orders.",
+   "lobby": {
+    "kicker": "Scam alert",
+    "headline": "\"Your $1,299 order is confirmed\" emails with a number to call",
+    "bullets": [
+     "A big purchase you never made, sent to scare you into acting fast.",
+     "A phone number to call, instead of \"check your account\".",
+     "Don't call the number in the email."
+    ]
+   },
+   "social": {
+    "caption": "Scam alert: \"Your $1,299 order is confirmed\" emails with a number to call. A big purchase you never made, sent to scare you into acting fast. Don't call the number in the email. Open the store's app or type its website yourself and check your orders. Report scams at ReportFraud.ftc.gov.",
+    "alt": "Scam alert: \"Your $1,299 order is confirmed\" emails with a number to call. Don't call the number in the email."
+   },
+   "brief": {
+    "People may ask": "\"I got a email like this. Is it real?\"",
+    "What to say": "Don't call the number in the email. Open the store's app or type its website yourself and check your orders.",
+    "Escalate": "Called and let them onto your computer? Disconnect it from the internet, call your bank on the number on your card, and change your passwords from another device."
+   },
+   "sources": [
+    {
+     "name": "FTC: How to recognize and avoid phishing scams",
+     "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
+    },
+    {
+     "name": "FTC: Check out gift cards before you buy them",
+     "url": "https://consumer.ftc.gov/consumer-alerts/2024/12/check-out-gift-cards-you-buy-them"
+    },
+    {
+     "name": "FTC: Selling stuff online? Here's how to avoid a scam",
+     "url": "https://consumer.ftc.gov/consumer-alerts/2022/07/selling-stuff-online-heres-how-avoid-scam"
+    },
+    {
+     "name": "FTC: Scammers use AI to enhance their family emergency schemes",
+     "url": "https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes"
+    },
+    {
+     "name": "FTC: Paying to earn money? Gamified online job task scams",
+     "url": "https://consumer.ftc.gov/consumer-alerts/2023/09/paying-earn-money-gamified-online-job-task-scams"
+    }
+   ]
+  },
+  {
+   "id": "2026-w48",
+   "n": 2,
+   "send_date": "2026-11-23",
+   "deliver_by": "2026-11-16",
+   "source": "Scam Decoded alert cards, week of Nov 23, 2026: black-friday-fake-shops, holiday-delivery-texts, giving-tuesday-fake-charities, tech-support-pop-ups, dark-web-info-for-sale-emails",
+   "topic": "\"Your package is on hold\" texts are spiking before Black Friday",
+   "subject": "Scam alert: \"Your package is on hold\" texts are spiking before Black Friday",
+   "preheader": "A $1.99 redelivery fee is how they get your card. Track packages in the shipper's app instead.",
+   "headline": "\"Your package is on hold\" texts are spiking before Black Friday",
+   "example_label": "What it looks like (made-up example)",
+   "example": "\"USPS: Your package is on hold due to an incomplete address. Update within 12 hours and pay a $1.99 redelivery fee: usps-redeliver-help.com\"",
+   "explain": [
+    "It arrives by text, usually from a delivery company, from a number you don't know. A text you didn't sign up for, from a regular phone number, about a package you can't name.",
+    "A tiny fee and a short deadline. The fee is the bait; the page wants your full card details. A link that only looks like the shipper's site. The real domain is right before the first single slash."
+   ],
+   "tell": "A $1.99 redelivery fee is how they get your card. Track packages in the shipper's app instead.",
+   "promise": false,
+   "steps": [
+    "Don't tap. Track packages in the shipper's app or by typing its website yourself.",
+    "Expecting something? Check the order page on the store's own site or app.",
+    "**Typed your card number?** Call the number on the back of your card and ask for a new one. Then watch your statement for small test charges."
+   ],
+   "quick_hits": [
+    "**Black Friday ads for shops that don't exist:** Prices far below what anyone else charges. Search the shop's name with \"scam\", \"review\" or \"complaints\" before you buy.",
+    "**Fake charities ahead of Giving Tuesday:** It thanks you for a donation you don't remember making. Look the charity up before you give: search its name plus \"complaint\", \"review\" or \"scam\".",
+    "**The loud \"your computer is infected\" pop-up:** It's loud, scary and won't close. Don't call. Close the browser; if it won't close, restart the computer.",
+    "**\"Your personal info is for sale on the dark web\" emails:** A scary claim from a company you never signed up with. Don't click. If you're worried, change passwords on the sites you use and turn on two-step sign-in."
+   ],
+   "job": "Tell one person who'd get a text like this about it. The rule to pass on: Don't tap. Track packages in the shipper's app or by typing its website yourself.",
+   "lobby": {
+    "kicker": "Scam alert",
+    "headline": "\"Your package is on hold\" texts are spiking before Black Friday",
+    "bullets": [
+     "A text you didn't sign up for, from a regular phone number, about a package you can't name.",
+     "A tiny fee and a short deadline.",
+     "Don't tap."
+    ]
+   },
+   "social": {
+    "caption": "Scam alert: \"Your package is on hold\" texts are spiking before Black Friday. A text you didn't sign up for, from a regular phone number, about a package you can't name. Don't tap. Track packages in the shipper's app or by typing its website yourself. Report scams at ReportFraud.ftc.gov.",
+    "alt": "Scam alert: \"Your package is on hold\" texts are spiking before Black Friday. Don't tap."
+   },
+   "brief": {
+    "People may ask": "\"I got a text like this. Is it real?\"",
+    "What to say": "Don't tap. Track packages in the shipper's app or by typing its website yourself.",
+    "Escalate": "Typed your card number? Call the number on the back of your card and ask for a new one. Then watch your statement for small test charges."
+   },
+   "sources": [
+    {
+     "name": "FTC: Scammers are delivering phishing messages this holiday season",
+     "url": "https://consumer.ftc.gov/consumer-alerts/2024/12/scammers-are-delivering-phishing-messages-holiday-season"
+    },
+    {
+     "name": "FTC: Online shopping",
+     "url": "https://consumer.ftc.gov/articles/online-shopping"
+    },
+    {
+     "name": "FTC: Giving to charity",
+     "url": "https://consumer.ftc.gov/articles/giving-charity"
+    },
+    {
+     "name": "FTC: How to spot, avoid and report tech support scams",
+     "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams"
+    },
+    {
+     "name": "FTC: Did you get an email saying your personal info is for sale on the dark web?",
+     "url": "https://consumer.ftc.gov/consumer-alerts/2022/09/did-you-get-email-saying-your-personal-info-sale-dark-web"
+    }
+   ]
+  },
+  {
+   "id": "2026-w49",
+   "n": 3,
+   "send_date": "2026-11-30",
+   "deliver_by": "2026-11-23",
+   "source": "Scam Decoded alert cards, week of Nov 30, 2026: fake-past-due-invoices, google-listing-robocalls, domain-renewal-notices, secret-santa-gift-chain, advent-calendar-ads",
+   "topic": "Past-due invoices for services your business never ordered",
+   "subject": "Scam alert: past-due invoices for services your business never ordered",
+   "preheader": "No purchase order, no payment. Match every bill to a real order first.",
+   "headline": "Past-due invoices for services your business never ordered",
+   "example_label": "What it looks like (made-up example)",
+   "example": "\"FINAL NOTICE: Invoice #44871, Search Optimization Services, $489.00. This account is 30 days past due. Pay today to avoid collections.\"",
+   "explain": [
+    "It arrives by email or mail, usually from an SEO, tech support or domain company. A \"final\" or \"past due\" notice for a bill you never got a first copy of.",
+    "Services like SEO, tech support or domain listings that nobody remembers buying. A deadline and a collections threat to rush whoever opens the mail."
+   ],
+   "tell": "No purchase order, no payment. Match every bill to a real order first.",
+   "promise": false,
+   "steps": [
+    "Match the invoice to a real order or contract. No match, no payment.",
+    "Search the company's name with \"scam\" or \"complaint\".",
+    "**Paid it?** Call your bank or card company now and ask to stop or dispute the payment."
+   ],
+   "quick_hits": [
+    "**Robocalls saying your business will vanish from Google:** A recorded \"final notice\" about your listing. Hang up. Don't press 1.",
+    "**Domain \"expiration notices\" that aren't from your registrar:** The name is a close variant of yours, like .org instead of .com. Sign in to your real registrar account and check the renewal date there.",
+    "**The \"send 1 gift, get 36 back\" holiday exchange:** You pay the person at the top of a list of strangers. Skip it. BBB calls it a pyramid scheme.",
+    "**Advent calendar ads that take the money and never ship:** A famous-looking box at a tiny price. Go to the brand's own website instead of the ad's link."
+   ],
+   "job": "Tell one person who'd get a email like this about it. The rule to pass on: Match the invoice to a real order or contract. No match, no payment.",
+   "lobby": {
+    "kicker": "Scam alert",
+    "headline": "Past-due invoices for services your business never ordered",
+    "bullets": [
+     "A \"final\" or \"past due\" notice for a bill you never got a first copy of.",
+     "Services like SEO, tech support or domain listings that nobody remembers buying.",
+     "Match the invoice to a real order or contract."
+    ]
+   },
+   "social": {
+    "caption": "Scam alert: Past-due invoices for services your business never ordered. A \"final\" or \"past due\" notice for a bill you never got a first copy of. Match the invoice to a real order or contract. No match, no payment. Report scams at ReportFraud.ftc.gov.",
+    "alt": "Scam alert: Past-due invoices for services your business never ordered. Match the invoice to a real order or contract."
+   },
+   "brief": {
+    "People may ask": "\"I got a email or mail like this. Is it real?\"",
+    "What to say": "Match the invoice to a real order or contract. No match, no payment.",
+    "Escalate": "Paid it? Call your bank or card company now and ask to stop or dispute the payment."
+   },
+   "sources": [
+    {
+     "name": "FTC: Run a small business? Pay your bills, not scammers",
+     "url": "https://consumer.ftc.gov/consumer-alerts/2026/05/run-small-business-pay-your-bills-not-scammers"
+    },
+    {
+     "name": "FTC: Robocallers' false threat that small businesses will be \"removed\" from Google",
+     "url": "https://www.ftc.gov/business-guidance/blog/2018/05/ftc-challenges-robocallers-false-threat-small-businesses-will-be-removed-google"
+    },
+    {
+     "name": "FTC halts domain name registration scam",
+     "url": "https://www.ftc.gov/news-events/news/press-releases/2010/08/ftc-halts-cross-border-domain-name-registration-scam"
+    },
+    {
+     "name": "BBB: The secret sister gift exchange is illegal",
+     "url": "https://www.bbb.org/all/holiday-hq/scams/secret-sister-gift-exchange-is-illegal"
+    },
+    {
+     "name": "BBB: Social media advent calendar scams",
+     "url": "https://www.bbb.org/all/holiday-hq/scams/social-media-advent-calendar-scams"
+    }
+   ]
+  },
+  {
+   "id": "2026-w50",
+   "n": 4,
+   "send_date": "2026-12-07",
+   "deliver_by": "2026-11-30",
+   "source": "Scam Decoded alert cards, week of Dec 7, 2026: holiday-job-training-fee, breach-fraud-team-calls, reward-points-expiring, qr-code-mystery-package, sold-out-toy-discount",
+   "topic": "Holiday warehouse jobs that make you pay for \"training\"",
+   "subject": "Scam alert: holiday warehouse jobs that make you pay for \"training\"",
+   "preheader": "The FTC's rule: anyone who asks you to pay to get a job is a scammer.",
+   "headline": "Holiday warehouse jobs that make you pay for \"training\"",
+   "example_label": "What it looks like (made-up example)",
+   "example": "\"You're hired! Seasonal warehouse role, $22/hr, start Monday. To activate your badge, pay the $49 safety training fee by today: hr-onboard-pay.com\"",
+   "explain": [
+    "It arrives by text, usually from a recruiter for a big-name warehouse. Hired with no interview, by text.",
+    "A fee to start: training, a uniform or a badge. A payment link that isn't the company's own careers site."
+   ],
+   "tell": "The FTC's rule: anyone who asks you to pay to get a job is a scammer.",
+   "promise": false,
+   "steps": [
+    "Don't pay. Real employers pay you, not the other way round.",
+    "Apply on the company's own careers page, typed in.",
+    "**Paid a fee or sent your bank login?** Call your bank now, and report it at ReportFraud.ftc.gov."
+   ],
+   "quick_hits": [
+    "**Fake \"fraud team\" calls after a data breach:** It arrives right after breach news, and uses that news to sound believable. Hang up and call the number on your card or statement.",
+    "**\"Your reward points expire tonight\" texts:** A specific dollar value to make it feel real. Don't tap. Open the store's own app and check your points there.",
+    "**A package you didn't order, with a QR code to \"see who sent it\":** A package you didn't order, with no sender. Don't scan it.",
+    "**The sold-out toy everyone wants, at 60% off:** Sold out at every real store, but in stock here. Buy from the brand or a store you know."
+   ],
+   "job": "Tell one person who'd get a text like this about it. The rule to pass on: Don't pay. Real employers pay you, not the other way round.",
+   "lobby": {
+    "kicker": "Scam alert",
+    "headline": "Holiday warehouse jobs that make you pay for \"training\"",
+    "bullets": [
+     "Hired with no interview, by text.",
+     "A fee to start: training, a uniform or a badge.",
+     "Don't pay."
+    ]
+   },
+   "social": {
+    "caption": "Scam alert: Holiday warehouse jobs that make you pay for \"training\". Hired with no interview, by text. Don't pay. Real employers pay you, not the other way round. Report scams at ReportFraud.ftc.gov.",
+    "alt": "Scam alert: Holiday warehouse jobs that make you pay for \"training\". Don't pay."
+   },
+   "brief": {
+    "People may ask": "\"I got a text like this. Is it real?\"",
+    "What to say": "Don't pay. Real employers pay you, not the other way round.",
+    "Escalate": "Paid a fee or sent your bank login? Call your bank now, and report it at ReportFraud.ftc.gov."
+   },
+   "sources": [
+    {
+     "name": "FTC: Spot holiday job scams",
+     "url": "https://consumer.ftc.gov/consumer-alerts/2023/12/spot-holiday-job-scams"
+    },
+    {
+     "name": "FTC: Have you been affected by a data breach?",
+     "url": "https://consumer.ftc.gov/consumer-alerts/2022/10/have-you-been-affected-data-breach-read"
+    },
+    {
+     "name": "BBB: 12 scams of the holidays",
+     "url": "https://www.bbb.org/all/holiday-hq/scams/12-scams-of-christmas"
+    },
+    {
+     "name": "FTC: Scam alert: a QR code on an unexpected package",
+     "url": "https://consumer.ftc.gov/consumer-alerts/2025/01/scam-alert-qr-code-unexpected-package"
+    },
+    {
+     "name": "BBB: 12 scams of the holidays",
+     "url": "https://www.bbb.org/all/holiday-hq/scams/12-scams-of-christmas"
+    }
+   ]
+  },
+  {
+   "id": "2026-w51",
+   "n": 5,
+   "send_date": "2026-12-14",
+   "deliver_by": "2026-12-07",
+   "source": "Scam Decoded alert cards, week of Dec 14, 2026: fake-brand-support-replies, puppy-for-christmas-deposit, celebrity-deepfake-ads, holiday-romance-money, customs-fee-package-text",
+   "topic": "Fake \"support\" accounts that reply to your complaint",
+   "subject": "Scam alert: fake \"support\" accounts that reply to your complaint",
+   "preheader": "Real support won't ask for your card or a code in a DM.",
+   "headline": "Fake \"support\" accounts that reply to your complaint",
+   "example_label": "What it looks like (made-up example)",
+   "example": "\"So sorry about your order! Please DM us your email, order number and the card you used so we can process your refund today.\"",
+   "explain": [
+    "It arrives by social media reply, usually from an account using a big brand's logo. A reply within minutes of a public complaint.",
+    "A name one letter off the real brand. It asks for card details or a code to \"refund\" you."
+   ],
+   "tell": "Real support won't ask for your card or a code in a DM.",
+   "promise": false,
+   "steps": [
+    "Don't DM replies. Use the help page on the brand's own website.",
+    "Check the brand's real handles on its own site.",
+    "**Shared your card or a code?** Call your card company and change the account's password."
+   ],
+   "quick_hits": [
+    "**Puppies for Christmas that don't exist:** You can't visit or see a live video. Don't pay until you've seen the puppy in person or on live video.",
+    "**Celebrity \"endorsements\" in holiday ads:** A celebrity pushing a deal they never mention anywhere else. Search the star's name with the product. Real endorsements show up on their own pages.",
+    "**An online sweetheart who needs money to visit for the holidays:** You've never met, and video calls never quite happen. Don't send money, gift cards or crypto.",
+    "**\"Your package is held at customs\" texts:** A text about a package you can't name. Don't tap. Track it in the shipper's app or website, typed in."
+   ],
+   "job": "Tell one person who'd get a social media reply like this about it. The rule to pass on: Don't DM replies. Use the help page on the brand's own website.",
+   "lobby": {
+    "kicker": "Scam alert",
+    "headline": "Fake \"support\" accounts that reply to your complaint",
+    "bullets": [
+     "A reply within minutes of a public complaint.",
+     "A name one letter off the real brand.",
+     "Don't DM replies."
+    ]
+   },
+   "social": {
+    "caption": "Scam alert: Fake \"support\" accounts that reply to your complaint. A reply within minutes of a public complaint. Don't DM replies. Use the help page on the brand's own website. Report scams at ReportFraud.ftc.gov.",
+    "alt": "Scam alert: Fake \"support\" accounts that reply to your complaint. Don't DM replies."
+   },
+   "brief": {
+    "People may ask": "\"I got a social media reply like this. Is it real?\"",
+    "What to say": "Don't DM replies. Use the help page on the brand's own website.",
+    "Escalate": "Shared your card or a code? Call your card company and change the account's password."
+   },
+   "sources": [
+    {
+     "name": "BBB: 12 scams of the holidays",
+     "url": "https://www.bbb.org/all/holiday-hq/scams/12-scams-of-christmas"
+    },
+    {
+     "name": "BBB: 12 scams of the holidays",
+     "url": "https://www.bbb.org/all/holiday-hq/scams/12-scams-of-christmas"
+    },
+    {
+     "name": "BBB: 12 scams of the holidays",
+     "url": "https://www.bbb.org/all/holiday-hq/scams/12-scams-of-christmas"
+    },
+    {
+     "name": "FTC: What to know about romance scams",
+     "url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams"
+    },
+    {
+     "name": "FTC: Scammers are delivering phishing messages this holiday season",
+     "url": "https://consumer.ftc.gov/consumer-alerts/2024/12/scammers-are-delivering-phishing-messages-holiday-season"
+    }
+   ]
+  },
+  {
+   "id": "2026-w52",
+   "n": 6,
+   "send_date": "2026-12-21",
+   "deliver_by": "2026-12-14",
+   "source": "Scam Decoded alert cards, week of Dec 21, 2026: boss-wants-gift-cards, holiday-travel-toll-text, last-minute-fake-shops",
+   "topic": "\"The boss\" needs gift cards for the team, today",
+   "subject": "Scam alert: \"The boss\" needs gift cards for the team, today",
+   "preheader": "Anyone who asks you to pay with gift cards is a scammer.",
+   "headline": "\"The boss\" needs gift cards for the team, today",
+   "example_label": "What it looks like (made-up example)",
+   "example": "\"Hi, it's Mark. I'm in a meeting and can't talk. I need 5 x $100 gift cards for client holiday gifts. Send me the codes. Keep it quiet for now.\"",
+   "explain": [
+    "It arrives by text or email, usually from your manager or a company owner. Your \"boss\" can't talk, only text.",
+    "Gift cards, and the codes sent back. Secrecy and a rush."
+   ],
+   "tell": "Anyone who asks you to pay with gift cards is a scammer.",
+   "promise": false,
+   "steps": [
+    "Don't buy anything. Call your manager on the number you already have.",
+    "Tell your office manager or IT.",
+    "**Sent codes?** Call the gift card company right away with your receipt."
+   ],
+   "quick_hits": [
+    "**Unpaid toll texts during holiday travel:** A small toll with a big penalty. Don't tap. Log in to your toll account yourself.",
+    "**Last-minute shops that promise delivery by Christmas:** A countdown and a huge discount. Search the shop's name with \"scam\" or \"complaints\"."
+   ],
+   "job": "Tell one person who'd get a text like this about it. The rule to pass on: Don't buy anything. Call your manager on the number you already have.",
+   "lobby": {
+    "kicker": "Scam alert",
+    "headline": "\"The boss\" needs gift cards for the team, today",
+    "bullets": [
+     "Your \"boss\" can't talk, only text.",
+     "Gift cards, and the codes sent back.",
+     "Don't buy anything."
+    ]
+   },
+   "social": {
+    "caption": "Scam alert: \"The boss\" needs gift cards for the team, today. Your \"boss\" can't talk, only text. Don't buy anything. Call your manager on the number you already have. Report scams at ReportFraud.ftc.gov.",
+    "alt": "Scam alert: \"The boss\" needs gift cards for the team, today. Don't buy anything."
+   },
+   "brief": {
+    "People may ask": "\"I got a text or email like this. Is it real?\"",
+    "What to say": "Don't buy anything. Call your manager on the number you already have.",
+    "Escalate": "Sent codes? Call the gift card company right away with your receipt."
+   },
+   "sources": [
+    {
+     "name": "FTC: Gift card scams",
+     "url": "https://consumer.ftc.gov/gift-card-scams"
+    },
+    {
+     "name": "FBI IC3: Smishing scam targeting toll road users",
+     "url": "https://www.ic3.gov/PSA/2024/PSA240412"
+    },
+    {
+     "name": "FTC: Online shopping",
+     "url": "https://consumer.ftc.gov/articles/online-shopping"
+    }
+   ]
+  },
+  {
+   "id": "2026-w53",
+   "n": 7,
+   "send_date": "2026-12-28",
+   "deliver_by": "2026-12-21",
+   "source": "Scam Decoded alert cards, week of Dec 28, 2026: refund-failed-email, bill-for-unordered-package, new-year-crypto-friend, new-year-sweepstakes-win",
+   "topic": "\"Your refund failed, confirm your card\" emails",
+   "subject": "Scam alert: \"Your refund failed, confirm your card\" emails",
+   "preheader": "Check returns in the store's app. Refunds don't need your full card.",
+   "headline": "\"Your refund failed, confirm your card\" emails",
+   "example_label": "What it looks like (made-up example)",
+   "example": "\"We couldn't process your refund of $86.40. Confirm your card details within 48 hours to receive it: returns-refund-verify.com\"",
+   "explain": [
+    "It arrives by email, usually from a store you just returned something to. It arrives after the holidays, when lots of people have returns.",
+    "It asks you to re-enter your card. A link that isn't the store's real site."
+   ],
+   "tell": "Check returns in the store's app. Refunds don't need your full card.",
+   "promise": false,
+   "steps": [
+    "Don't click. Check the return in the store's app or account.",
+    "Delete the email.",
+    "**Typed your card?** Call your card company and ask for a new card."
+   ],
+   "quick_hits": [
+    "**A bill for a package you never ordered:** A \"trial\" you never signed up for. Don't call their number. Check your card statement.",
+    "**A new online friend with a \"sure thing\" crypto plan for the new year:** A stranger who becomes a friend, then talks about money. Don't invest through someone you met online.",
+    "**\"You won the New Year sweepstakes\" calls:** You won something you never entered. Hang up. Real prizes never cost money to collect."
+   ],
+   "job": "Tell one person who'd get a email like this about it. The rule to pass on: Don't click. Check the return in the store's app or account.",
+   "lobby": {
+    "kicker": "Scam alert",
+    "headline": "\"Your refund failed, confirm your card\" emails",
+    "bullets": [
+     "It arrives after the holidays, when lots of people have returns.",
+     "It asks you to re-enter your card.",
+     "Don't click."
+    ]
+   },
+   "social": {
+    "caption": "Scam alert: \"Your refund failed, confirm your card\" emails. It arrives after the holidays, when lots of people have returns. Don't click. Check the return in the store's app or account. Report scams at ReportFraud.ftc.gov.",
+    "alt": "Scam alert: \"Your refund failed, confirm your card\" emails. Don't click."
+   },
+   "brief": {
+    "People may ask": "\"I got a email like this. Is it real?\"",
+    "What to say": "Don't click. Check the return in the store's app or account.",
+    "Escalate": "Typed your card? Call your card company and ask for a new card."
+   },
+   "sources": [
+    {
+     "name": "FTC: How to recognize and avoid phishing scams",
+     "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
+    },
+    {
+     "name": "FTC: Billed for things you never got, or got unordered products",
+     "url": "https://consumer.ftc.gov/articles/what-do-if-youre-billed-things-you-never-got-or-you-get-unordered-products"
+    },
+    {
+     "name": "FTC: What to know about cryptocurrency scams",
+     "url": "https://consumer.ftc.gov/articles/what-know-about-cryptocurrency-scams"
+    },
+    {
+     "name": "FTC: Fake prize, sweepstakes and lottery scams",
+     "url": "https://consumer.ftc.gov/articles/fake-prize-sweepstakes-and-lottery-scams"
+    }
+   ]
+  },
+  {
+   "id": "2027-w01",
+   "n": 8,
+   "send_date": "2027-01-04",
+   "deliver_by": "2026-12-28",
+   "source": "Scam Decoded alert cards, week of Jan 4, 2027: early-irs-refund-text, new-year-job-fake-check, wrong-number-friendly-text, social-security-suspended-call, bank-did-you-make-this-purchase",
+   "topic": "\"Your IRS refund is ready\" texts, before you've even filed",
+   "subject": "Scam alert: \"Your IRS refund is ready\" texts, before you've even filed",
+   "preheader": "The IRS doesn't text you about refunds out of the blue.",
+   "headline": "\"Your IRS refund is ready\" texts, before you've even filed",
+   "example_label": "What it looks like (made-up example)",
+   "example": "\"IRS: You are eligible for a tax refund of $1,272.50. Verify your identity to receive it: irs-refund-claim.com\"",
+   "explain": [
+    "It arrives by text, usually from the IRS. The IRS doesn't start contact by text about a refund.",
+    "A refund you haven't filed for yet. A link that isn't irs.gov."
+   ],
+   "tell": "The IRS doesn't text you about refunds out of the blue.",
+   "promise": false,
+   "steps": [
+    "Don't tap. Check refunds only at irs.gov, typed in.",
+    "Forward the text to 7726 (SPAM).",
+    "**Entered your SSN or bank details?** Go to IdentityTheft.gov and the IRS identity theft page for next steps."
+   ],
+   "quick_hits": [
+    "**A new-year job that mails you a check to buy equipment:** Hired with no real interview. Don't deposit it or send money anywhere.",
+    "**The \"wrong number\" text that turns into a friendship:** A text to someone else, from a number you don't know. Don't reply, even to say wrong number.",
+    "**\"Your Social Security number has been suspended\" calls:** A threat of arrest or a suspended number. Hang up. Don't press anything.",
+    "**\"Did you make this $1,180 purchase?\" bank texts:** A text that leads to a call from the \"fraud team\". Don't reply. Call the number on the back of your card."
+   ],
+   "job": "Tell one person who'd get a text like this about it. The rule to pass on: Don't tap. Check refunds only at irs.gov, typed in.",
+   "lobby": {
+    "kicker": "Scam alert",
+    "headline": "\"Your IRS refund is ready\" texts, before you've even filed",
+    "bullets": [
+     "The IRS doesn't start contact by text about a refund.",
+     "A refund you haven't filed for yet.",
+     "Don't tap."
+    ]
+   },
+   "social": {
+    "caption": "Scam alert: \"Your IRS refund is ready\" texts, before you've even filed. The IRS doesn't start contact by text about a refund. Don't tap. Check refunds only at irs.gov, typed in. Report scams at ReportFraud.ftc.gov.",
+    "alt": "Scam alert: \"Your IRS refund is ready\" texts, before you've even filed. Don't tap."
+   },
+   "brief": {
+    "People may ask": "\"I got a text like this. Is it real?\"",
+    "What to say": "Don't tap. Check refunds only at irs.gov, typed in.",
+    "Escalate": "Entered your SSN or bank details? Go to IdentityTheft.gov and the IRS identity theft page for next steps."
+   },
+   "sources": [
+    {
+     "name": "IRS: Report fake IRS, Treasury or tax-related emails and messages",
+     "url": "https://www.irs.gov/help/report-fraud/report-fake-irs-treasury-or-tax-related-emails-and-messages"
+    },
+    {
+     "name": "FTC: How to spot, avoid and report fake check scams",
+     "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams"
+    },
+    {
+     "name": "FTC: How to recognize and report spam text messages",
+     "url": "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages"
+    },
+    {
+     "name": "FTC: How to avoid a government impersonation scam",
+     "url": "https://consumer.ftc.gov/articles/how-avoid-government-impersonation-scam"
+    },
+    {
+     "name": "FTC: How to avoid a scam",
+     "url": "https://consumer.ftc.gov/articles/how-avoid-scam"
+    }
+   ]
+  },
+  {
+   "id": "2027-w02",
+   "n": 9,
+   "send_date": "2027-01-11",
+   "deliver_by": "2027-01-04",
+   "source": "Scam Decoded alert cards, week of Jan 11, 2027: medicare-new-card-call, unpaid-toll-texts, tech-support-refund-overpaid, romance-customs-fee, biggest-refund-preparer",
+   "topic": "\"Unpaid toll\" texts are back",
+   "subject": "Scam alert: \"Unpaid toll\" texts are back",
+   "preheader": "Toll agencies bill through your account or by mail. Don't tap the link.",
+   "headline": "\"Unpaid toll\" texts are back",
+   "example_label": "What it looks like (made-up example)",
+   "example": "\"NOTICE: You have an outstanding toll balance of $6.99. To avoid a $50 late fee and license suspension, pay by 11:59 PM today: ezdrive-tollpay.top\"",
+   "explain": [
+    "It arrives by text, usually from a toll agency, from a number or email address you don't know. A small amount with a big threat attached: late fees, license suspension, today.",
+    "A link that isn't your toll agency's real website, often with an odd ending like .top or .xyz. It arrives as a text from a number you don't know, sometimes even if you haven't driven a toll road."
+   ],
+   "tell": "Toll agencies bill through your account or by mail. Don't tap the link.",
+   "promise": false,
+   "steps": [
+    "Don't tap. Log in to your toll account by typing the agency's website yourself, or call the number on your statement.",
+    "Check the real balance there. No balance? It's fake.",
+    "**Paid on that page?** Call your card company today, ask for a new card, and dispute the charge."
+   ],
+   "quick_hits": [
+    "**\"Your new Medicare card is ready, confirm your number\" calls:** A call you didn't ask for. Hang up.",
+    "**\"We refunded you too much\" tech support calls:** A refund you weren't expecting. Hang up. Don't let anyone connect to your computer.",
+    "**An online partner whose gift is \"stuck in customs\":** A big gift you never asked for. Don't pay any fee.",
+    "**Tax preparers who promise \"the biggest refund in town\":** A promise about your refund before they've seen anything. Choose a preparer who will sign the return and has a PTIN."
+   ],
+   "job": "Tell one person who'd get a text like this about it. The rule to pass on: Don't tap. Log in to your toll account by typing the agency's website yourself, or call the number on your statement.",
+   "lobby": {
+    "kicker": "Scam alert",
+    "headline": "\"Unpaid toll\" texts are back",
+    "bullets": [
+     "A small amount with a big threat attached: late fees, license suspension, today.",
+     "A link that isn't your toll agency's real website, often with an odd ending like .top or .xyz.",
+     "Don't tap."
+    ]
+   },
+   "social": {
+    "caption": "Scam alert: \"Unpaid toll\" texts are back. A small amount with a big threat attached: late fees, license suspension, today. Don't tap. Log in to your toll account by typing the agency's website yourself, or call the number on your statement. Report scams at ReportFraud.ftc.gov.",
+    "alt": "Scam alert: \"Unpaid toll\" texts are back. Don't tap."
+   },
+   "brief": {
+    "People may ask": "\"I got a text like this. Is it real?\"",
+    "What to say": "Don't tap. Log in to your toll account by typing the agency's website yourself, or call the number on your statement.",
+    "Escalate": "Paid on that page? Call your card company today, ask for a new card, and dispute the charge."
+   },
+   "sources": [
+    {
+     "name": "FTC: Got a text about unpaid tolls? It's probably a scam",
+     "url": "https://consumer.ftc.gov/consumer-alerts/2025/01/got-text-about-unpaid-tolls-its-probably-scam"
+    },
+    {
+     "name": "FTC: How to avoid a government impersonation scam",
+     "url": "https://consumer.ftc.gov/articles/how-avoid-government-impersonation-scam"
+    },
+    {
+     "name": "FTC: How to spot, avoid and report tech support scams",
+     "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams"
+    },
+    {
+     "name": "FTC: What to know about romance scams",
+     "url": "https://consumer.ftc.gov/articles/what-know-about-romance-scams"
+    },
+    {
+     "name": "IRS: Dirty Dozen tax scams for 2026",
+     "url": "https://www.irs.gov/newsroom/dirty-dozen-tax-scams-for-2026-irs-reminds-taxpayers-to-watch-out-for-dangerous-threats"
+    }
+   ]
+  },
+  {
+   "id": "2027-w03",
+   "n": 10,
+   "send_date": "2027-01-18",
+   "deliver_by": "2027-01-11",
+   "source": "Scam Decoded alert cards, week of Jan 18, 2027: irs-online-account-help, w2-request-to-hr, disaster-charity-text, lookalike-bank-link, buyer-business-account-upgrade",
+   "topic": "The \"CEO\" who emails HR for every employee's W-2",
+   "subject": "Scam alert: the \"CEO\" who emails HR for every employee's W-2",
+   "preheader": "Confirm any W-2 request by phone or in person before sending anything.",
+   "headline": "The \"CEO\" who emails HR for every employee's W-2",
+   "example_label": "What it looks like (made-up example)",
+   "example": "\"Hi, I need copies of all employee W-2s for 2026 in PDF format for a meeting with the accountants. Please send them to me today. Thanks, CEO\"",
+   "explain": [
+    "It arrives by email, usually from a company executive. An urgent request for everyone's W-2s.",
+    "It's from an executive, but the reply-to address is off. It's January, when W-2s are ready."
+   ],
+   "tell": "Confirm any W-2 request by phone or in person before sending anything.",
+   "promise": false,
+   "steps": [
+    "Call the executive on a known number to check.",
+    "Have a rule: W-2s never go out by email.",
+    "**Already sent them?** The IRS says to report it right away. Tell staff so they can watch for tax identity theft."
+   ],
+   "quick_hits": [
+    "**\"I'll set up your IRS online account for you\" offers:** A stranger offers to set up your IRS account. Set up your IRS account yourself at irs.gov.",
+    "**Disaster relief appeals from charities you've never heard of:** Pressure to give right now. Look up the charity yourself before you give.",
+    "**Bank log-in links that are one letter off:** A locked account you didn't lock. Don't tap. Open your bank's app or type its website.",
+    "**Buyers whose payment is \"pending until you upgrade\":** An email that looks like it's from a payment app. Check your balance in the payment app itself."
+   ],
+   "job": "Tell one person who'd get a email like this about it. The rule to pass on: Call the executive on a known number to check.",
+   "lobby": {
+    "kicker": "Scam alert",
+    "headline": "The \"CEO\" who emails HR for every employee's W-2",
+    "bullets": [
+     "An urgent request for everyone's W-2s.",
+     "It's from an executive, but the reply-to address is off.",
+     "Call the executive on a known number to check."
+    ]
+   },
+   "social": {
+    "caption": "Scam alert: The \"CEO\" who emails HR for every employee's W-2. An urgent request for everyone's W-2s. Call the executive on a known number to check. Report scams at ReportFraud.ftc.gov.",
+    "alt": "Scam alert: The \"CEO\" who emails HR for every employee's W-2. Call the executive on a known number to check."
+   },
+   "brief": {
+    "People may ask": "\"I got a email like this. Is it real?\"",
+    "What to say": "Call the executive on a known number to check.",
+    "Escalate": "Already sent them? The IRS says to report it right away. Tell staff so they can watch for tax identity theft."
+   },
+   "sources": [
+    {
+     "name": "IRS: Form W-2/SSN data theft: information for businesses",
+     "url": "https://www.irs.gov/newsroom/form-w-2-ssn-data-theft-information-for-businesses-and-payroll-service-providers"
+    },
+    {
+     "name": "IRS: Dirty Dozen tax scams for 2026",
+     "url": "https://www.irs.gov/newsroom/dirty-dozen-tax-scams-for-2026-irs-reminds-taxpayers-to-watch-out-for-dangerous-threats"
+    },
+    {
+     "name": "FTC: Giving to charity",
+     "url": "https://consumer.ftc.gov/articles/giving-charity"
+    },
+    {
+     "name": "FTC: How to recognize and avoid phishing scams",
+     "url": "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams"
+    },
+    {
+     "name": "FTC: Selling stuff online? Here's how to avoid a scam",
+     "url": "https://consumer.ftc.gov/consumer-alerts/2022/07/selling-stuff-online-heres-how-avoid-scam"
+    }
+   ]
+  },
+  {
+   "id": "2027-w04",
+   "n": 11,
+   "send_date": "2027-01-25",
+   "deliver_by": "2027-01-18",
+   "source": "Scam Decoded alert cards, week of Jan 25, 2027: ghost-preparer, bail-money-courier, investment-group-chat, irs-qr-code-letter, return-already-filed",
+   "topic": "\"Your grandson needs bail, a courier will pick up the cash\"",
+   "subject": "Scam alert: \"Your grandson needs bail, a courier will pick up the cash\"",
+   "preheader": "Hang up and call your grandchild. No court sends a courier for cash.",
+   "headline": "\"Your grandson needs bail, a courier will pick up the cash\"",
+   "example_label": "What it looks like (made-up example)",
+   "example": "\"This is his lawyer. Your grandson is in jail after an accident. Bail is $9,000. A courier will come to your house today to collect it. Don't tell anyone.\"",
+   "explain": [
+    "It arrives by call, usually from a grandchild, then a \"lawyer\". A family emergency, then a \"lawyer\" or \"officer\".",
+    "A courier sent to your door for cash. Secrecy."
+   ],
+   "tell": "Hang up and call your grandchild. No court sends a courier for cash.",
+   "promise": false,
+   "steps": [
+    "Hang up and call your grandchild or their parents.",
+    "Never hand cash to a courier.",
+    "**Already paid?** Call your bank and local police right away, then the Elder Fraud Hotline at 1-833-372-8311."
+   ],
+   "quick_hits": [
+    "**Ghost preparers who won't sign your return:** They won't sign the return or give a PTIN. Use a preparer who signs and has a PTIN.",
+    "**Investment \"clubs\" in group chats with a professor and big wins:** Huge returns and screenshots from other \"members\". Don't download their app or send money.",
+    "**Fake IRS letters with a QR code to \"claim your refund\":** A refund you didn't expect, with a deadline. Don't scan it.",
+    "**\"A return was already filed with your SSN\":** Your e-file is rejected because your SSN was already used. Follow the IRS identity theft guide on irs.gov."
+   ],
+   "job": "Tell one person who'd get a call like this about it. The rule to pass on: Hang up and call your grandchild or their parents.",
+   "lobby": {
+    "kicker": "Scam alert",
+    "headline": "\"Your grandson needs bail, a courier will pick up the cash\"",
+    "bullets": [
+     "A family emergency, then a \"lawyer\" or \"officer\".",
+     "A courier sent to your door for cash.",
+     "Hang up and call your grandchild or their parents."
+    ]
+   },
+   "social": {
+    "caption": "Scam alert: \"Your grandson needs bail, a courier will pick up the cash\". A family emergency, then a \"lawyer\" or \"officer\". Hang up and call your grandchild or their parents. Report scams at ReportFraud.ftc.gov.",
+    "alt": "Scam alert: \"Your grandson needs bail, a courier will pick up the cash\". Hang up and call your grandchild or their parents."
+   },
+   "brief": {
+    "People may ask": "\"I got a call like this. Is it real?\"",
+    "What to say": "Hang up and call your grandchild or their parents.",
+    "Escalate": "Already paid? Call your bank and local police right away, then the Elder Fraud Hotline at 1-833-372-8311."
+   },
+   "sources": [
+    {
+     "name": "FTC: Scammers use fake emergencies to steal your money",
+     "url": "https://consumer.ftc.gov/articles/scammers-use-fake-emergencies-steal-your-money"
+    },
+    {
+     "name": "IRS: Dirty Dozen tax scams for 2026",
+     "url": "https://www.irs.gov/newsroom/dirty-dozen-tax-scams-for-2026-irs-reminds-taxpayers-to-watch-out-for-dangerous-threats"
+    },
+    {
+     "name": "FTC: What to know about cryptocurrency scams",
+     "url": "https://consumer.ftc.gov/articles/what-know-about-cryptocurrency-scams"
+    },
+    {
+     "name": "IRS: Report fake IRS, Treasury or tax-related emails and messages",
+     "url": "https://www.irs.gov/help/report-fraud/report-fake-irs-treasury-or-tax-related-emails-and-messages"
+    },
+    {
+     "name": "IRS: Identity theft guide for individuals",
+     "url": "https://www.irs.gov/identity-theft-central/identity-theft-guide-for-individuals"
+    }
+   ]
+  },
+  {
+   "id": "2027-w09",
+   "n": 12,
+   "send_date": "2027-03-01",
+   "deliver_by": "2027-02-22",
+   "source": "Scam Decoded alert cards, week of Mar 1, 2027: scam-recovery-for-a-fee, calls-from-the-ftc, free-trial-pay-shipping, debt-collectors-who-threaten-arrest, credit-repair-paid-up-front",
+   "topic": "Recovery offices that will get your scam losses back, for a fee",
+   "subject": "Scam alert: recovery offices that will get your scam losses back, for a fee",
+   "preheader": "Nobody real charges you upfront to get your money back. This is the second scam.",
+   "headline": "Recovery offices that will get your scam losses back, for a fee",
+   "example_label": "What it looks like (made-up example)",
+   "example": "\"This is the Federal Fraud Recovery Unit. We located $8,400 you lost last year. A $350 processing fee by gift card releases the refund today.\"",
+   "explain": [
+    "It arrives by call or email, usually from a \"fraud recovery\" office, a law firm or a government agency. They know you lost money before, and offer to get it back.",
+    "The refund needs a fee first: processing, retainer or tax. They want gift cards, crypto or a wire."
+   ],
+   "tell": "Nobody real charges you upfront to get your money back. This is the second scam.",
+   "promise": false,
+   "steps": [
+    "Hang up. Look up the agency or firm's number yourself and call it.",
+    "Never pay upfront for a refund, or give account numbers to \"deposit\" one.",
+    "**Paid already?** Call the gift card company or your bank on the number on the card right away and ask them to stop or reverse it."
+   ],
+   "quick_hits": [
+    "**Calls from \"the FTC\" about a prize, a virus or your account:** The caller uses the FTC's name, sometimes a real employee's. Hang up. The FTC never calls to demand money.",
+    "**Free trials that only cost shipping, then charge every month:** \"Free\" still needs your card, for shipping or a fee. Find the terms and the cancel steps before you sign up. No terms, no order.",
+    "**Debt collectors who threaten arrest and won't give an address:** A debt you don't recognize. Ask for the collector's name, address and the creditor, in writing. Pay nothing yet.",
+    "**Credit repair that wants $499 up front to wipe your record:** They promise to remove true, accurate information."
+   ],
+   "job": "Tell one person who'd get a call like this about it. The rule to pass on: Hang up. Look up the agency or firm's number yourself and call it.",
+   "lobby": {
+    "kicker": "Scam alert",
+    "headline": "Recovery offices that will get your scam losses back, for a fee",
+    "bullets": [
+     "They know you lost money before, and offer to get it back.",
+     "The refund needs a fee first: processing, retainer or tax.",
+     "Hang up."
+    ]
+   },
+   "social": {
+    "caption": "Scam alert: Recovery offices that will get your scam losses back, for a fee. They know you lost money before, and offer to get it back. Hang up. Look up the agency or firm's number yourself and call it. Report scams at ReportFraud.ftc.gov.",
+    "alt": "Scam alert: Recovery offices that will get your scam losses back, for a fee. Hang up."
+   },
+   "brief": {
+    "People may ask": "\"I got a call or email like this. Is it real?\"",
+    "What to say": "Hang up. Look up the agency or firm's number yourself and call it.",
+    "Escalate": "Paid already? Call the gift card company or your bank on the number on the card right away and ask them to stop or reverse it."
+   },
+   "sources": [
+    {
+     "name": "FTC: Refund and recovery scams",
+     "url": "https://consumer.ftc.gov/articles/refund-and-recovery-scams"
+    },
+    {
+     "name": "FTC consumer alert: The FTC won't demand money, threaten you, or promise you a prize",
+     "url": "https://consumer.ftc.gov/consumer-alerts/2023/07/ftc-wont-demand-money-threaten-you-or-promise-you-prize"
+    },
+    {
+     "name": "FTC: Getting in and out of free trials, auto-renewals and subscriptions",
+     "url": "https://consumer.ftc.gov/articles/getting-and-out-free-trials-auto-renewals-and-negative-option-subscriptions"
+    },
+    {
+     "name": "FTC: Fake and abusive debt collectors",
+     "url": "https://consumer.ftc.gov/articles/fake-abusive-debt-collectors"
+    },
+    {
+     "name": "FTC: Fixing your credit FAQs",
+     "url": "https://consumer.ftc.gov/articles/fixing-your-credit-faqs"
+    }
+   ]
+  }
+ ]
+}

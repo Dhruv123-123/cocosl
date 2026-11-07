@@ -1,0 +1,709 @@
+[
+ {
+  "format": "short",
+  "pillar": "text and email scams, decoded",
+  "platforms": [
+   "instagram",
+   "youtube"
+  ],
+  "post_on": "2026-11-09 12:00",
+  "topic": "delivery",
+  "original_element": "Walkthrough video w2-delivery (originality/out/walkthroughs/w2-delivery) as the visual.",
+  "idea_angle": "Holiday 2026 pack: delivery. The fake 'package on hold' text that spikes every holiday season, and the safe way to track a parcel.",
+  "script": {
+   "title": "'Your package is on hold': 1 holiday text to never tap",
+   "hook": "1 text shows up more than any other in November. Here's how to spot it.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "One text shows up more than any other in November. Your package is on hold. Update your address in twelve hours, or it goes back.",
+     "on_screen_text": "'Your package is on hold'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough w2-delivery, message arriving No text, no logos, no real people."
+    },
+    {
+     "heading": "The bait",
+     "narration": "Then a tiny fee. Thirty cents for redelivery. Nobody argues with thirty cents. But they don't want thirty cents. They want the card number you type in.",
+     "on_screen_text": "The fee is the bait",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough w2-delivery, fee highlighted No text, no logos, no real people."
+    },
+    {
+     "heading": "The tell",
+     "narration": "Look at the link. It isn't the carrier's real site. And you never gave a carrier your number for this order.",
+     "on_screen_text": "Not the carrier's site",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough w2-delivery, link highlighted No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Track it with the number in the shop's own order email or app. Then forward the text to seven seven two six, and delete it.",
+     "on_screen_text": "Track from the shop's email. Forward to 7726.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a parcel and a phone No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "Everyone's expecting a package this month, and scammers know it. The tells: a link, a countdown and a tiny 'redelivery fee'. Track from the shop's own email instead. Example is fictional.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "packagescam",
+    "deliveryscam",
+    "holidayscams",
+    "smishing",
+    "scamdecoded"
+   ],
+   "description": "The fake 'package on hold' text that spikes every holiday season, and the safe way to track a parcel.",
+   "thumbnail_text": "Package on hold? Don't tap.",
+   "sources": [
+    "https://consumer.ftc.gov/consumer-alerts/2024/12/scammers-are-delivering-phishing-messages-holiday-season",
+    "https://consumer.ftc.gov/consumer-alerts/2023/12/fake-shipping-notification-emails-text-messages-what-you-need-know-holiday-season",
+    "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages"
+   ],
+   "claims_to_verify": [
+    "Fake delivery texts and emails increase around the holidays (FTC)",
+    "Forwarding spam texts to 7726 reports them to your carrier"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "protecting older parents and family",
+  "platforms": [
+   "instagram"
+  ],
+  "post_on": "2026-11-12 19:30",
+  "topic": "gift cards",
+  "original_element": "Final slide reuses the quiz style; Dhruv adds a 10-second story showing a real gift card's back (unscratched).",
+  "idea_angle": "Holiday 2026 pack: gift cards. Five ways scammers ask for gift cards, and the one rule that covers all of them.",
+  "script": {
+   "title": "5 gift card requests only a scammer makes",
+   "hook": "5 gift card asks you'll hear this season, and every one is a scam.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "",
+     "on_screen_text": "5 gift card scams",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a gift card with a red flag No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "A text from your 'boss': grab gift cards for the team, send photos of the codes, keep it quiet.",
+     "on_screen_text": "1. The 'boss'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. an office desk with a phone No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "A call from your 'power company': pay the overdue bill with gift cards in an hour or we cut you off.",
+     "on_screen_text": "2. The 'utility'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a light bulb with a clock No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "A call from the 'IRS' or 'Social Security' saying you owe money, payable by gift card.",
+     "on_screen_text": "3. The 'government'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a government building with a phone No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "A grandchild in trouble who needs bail money now, in gift cards, and begs you not to tell anyone.",
+     "on_screen_text": "4. The 'grandchild'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a crying phone emoji No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "An online seller who only takes gift cards for that hard-to-find toy or ticket.",
+     "on_screen_text": "5. The 'seller'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a shopping bag with a padlock No text, no logos, no real people."
+    },
+    {
+     "heading": "Save this",
+     "narration": "One rule covers all 5: gift cards are for gifts. Save this and send it to someone who buys them.",
+     "on_screen_text": "Save it. Share it.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes giving a thumbs up No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "Gift cards are for gifts. Anyone who asks you to pay with one, for anything else, is scamming you:\n1. The 'boss'\n2. The 'utility company'\n3. The 'government agency'\n4. The grandchild in trouble\n5. The online seller\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "giftcards",
+    "giftcardscam",
+    "holidayscams",
+    "protectyourparents",
+    "scamdecoded"
+   ],
+   "description": "Five ways scammers ask for gift cards, and the one rule that covers all of them.",
+   "thumbnail_text": "5 gift card scams",
+   "sources": [
+    "https://consumer.ftc.gov/gift-card-scams",
+    "https://consumer.ftc.gov/consumer-alerts/2024/10/only-scammers-tell-you-buy-gift-card-pay-them"
+   ],
+   "claims_to_verify": [
+    "Only scammers tell you to buy a gift card to pay them (FTC)",
+    "Scammers ask for the numbers on the back of the card"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "online shopping and marketplace scams",
+  "platforms": [
+   "tiktok"
+  ],
+  "post_on": "2026-11-17 18:00",
+  "topic": "marketplace",
+  "original_element": "Built on quiz carousel q2-marketplace, with a pause card. Dhruv records the narration in his own voice. No AI voice on TikTok cuts.",
+  "idea_angle": "Holiday 2026 pack: marketplace. The fake payment app email that makes sellers pay to 'receive' money.",
+  "script": {
+   "title": "Selling gifts on Marketplace? 3 flags in this 'payment'",
+   "hook": "3 red flags in 1 'payment pending' email. Pause and find them before I do.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Three red flags in one payment email. Selling stuff before the holidays? Pause and find them before I do.",
+     "on_screen_text": "3 red flags. Find them.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. quiz slide q2-marketplace/slide-01 No text, no logos, no real people."
+    },
+    {
+     "heading": "The email",
+     "narration": "You listed a bike. A buyer says they'll pay through a payment app. Then this email arrives. The buyer sent four hundred fifty dollars. Because it's your first sale, upgrade to a business account for a hundred fifty dollars, refundable, before the money is released.",
+     "on_screen_text": "Pause: how many flags?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. quiz slide q2-marketplace/slide-01, zooming in No text, no logos, no real people."
+    },
+    {
+     "heading": "Pause",
+     "narration": "Pause. Count them. Three seconds.",
+     "on_screen_text": "Pause",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a full-screen countdown card No text, no logos, no real people."
+    },
+    {
+     "heading": "Flag 1",
+     "narration": "Red flag one: the sender. Look at the address. It isn't the payment app's real domain. It's a lookalike.",
+     "on_screen_text": "1: not the real app",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. quiz slide q2-marketplace/slide-03 No text, no logos, no real people."
+    },
+    {
+     "heading": "Flag 2",
+     "narration": "Red flag two: an upgrade before you can be paid. Payment apps don't charge you to receive money. Ever.",
+     "on_screen_text": "2: pay to get paid",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. quiz slide q2-marketplace/slide-04 No text, no logos, no real people."
+    },
+    {
+     "heading": "Flag 3",
+     "narration": "Red flag three: refundable. That word is doing all the work. You pay first, and the refund never comes. There was never a four hundred fifty dollar payment either.",
+     "on_screen_text": "3: 'refundable'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. quiz slide q2-marketplace/slide-05 No text, no logos, no real people."
+    },
+    {
+     "heading": "The fix",
+     "narration": "So check payments only inside your own payment app, opened yourself. Hand over the bike when the money is really there. Better yet, meet in person and get paid on the spot.",
+     "on_screen_text": "Check the app, not the email",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a phone with a green check No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "How many did you find before I said them?",
+     "on_screen_text": "How many did you get?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding up three fingers No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "caption": "Selling things before the holidays? This fake 'payment pending' email is aimed at you. Example is fictional.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "facebookmarketplace",
+    "marketplacescam",
+    "sellingonline",
+    "holidayscams",
+    "scamdecoded"
+   ],
+   "description": "The fake payment app email that makes sellers pay to 'receive' money.",
+   "thumbnail_text": "Find the 3 red flags",
+   "sources": [
+    "https://consumer.ftc.gov/consumer-alerts/2022/07/selling-stuff-online-heres-how-avoid-scam",
+    "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams",
+    "https://reportfraud.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "Payment apps don't charge sellers to receive a payment",
+    "Scammers send fake payment emails to online sellers (FTC)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "online shopping and marketplace scams",
+  "platforms": [
+   "instagram",
+   "youtube"
+  ],
+  "post_on": "2026-11-20 12:00",
+  "topic": "marketplace",
+  "original_element": "Face cam: Dhruv reads the seller's messages from his phone, then the rule on screen.",
+  "idea_angle": "Holiday 2026 pack: marketplace. Why you should never send a deposit to hold an item from an online marketplace seller.",
+  "script": {
+   "title": "A $200 deposit to 'hold' it: 1 marketplace rule",
+   "hook": "$200 to hold a game console you've never seen. Here's the 1 rule that stops it.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Two hundred dollars to hold a game console you've never seen. That's the whole scam, and it peaks right now.",
+     "on_screen_text": "$200 to 'hold' it",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes looking at a game console behind glass No text, no logos, no real people."
+    },
+    {
+     "heading": "The setup",
+     "narration": "Great price, sold out everywhere else. The seller says three people are asking, so send a deposit by payment app and it's yours.",
+     "on_screen_text": "'3 people are asking'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a chat bubble with a clock No text, no logos, no real people."
+    },
+    {
+     "heading": "The tell",
+     "narration": "Pressure, plus a payment you can't take back. Payment apps work like cash. Once it's sent, it's gone, and so is the seller.",
+     "on_screen_text": "Payment apps work like cash",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a coin disappearing from a phone No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "Never pay before you see the item. Meet somewhere public and pay on the spot, or buy through a checkout with a credit card, so you can dispute it.",
+     "on_screen_text": "See it first. Then pay.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes shaking hands at a table No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "Hard-to-find gift, great price, seller wants a deposit by payment app to hold it? That's the scam. Example is fictional.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "marketplacescam",
+    "blackfriday",
+    "onlineshopping",
+    "holidayscams",
+    "scamdecoded"
+   ],
+   "description": "Why you should never send a deposit to hold an item from an online marketplace seller.",
+   "thumbnail_text": "Never pay to hold it",
+   "sources": [
+    "https://consumer.ftc.gov/consumer-alerts/2025/11/how-avoid-online-shopping-scam-holiday-season",
+    "https://consumer.ftc.gov/articles/online-shopping",
+    "https://reportfraud.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "Payment app transfers are hard to reverse",
+    "FTC advises paying by credit card for online purchases for dispute rights"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "protecting older parents and family",
+  "platforms": [
+   "instagram"
+  ],
+  "post_on": "2026-11-24 19:30",
+  "topic": "charity",
+  "original_element": "Slide 3 is a 10-second screen recording Dhruv makes of the IRS Tax Exempt Organization Search (search a well-known charity).",
+  "idea_angle": "Holiday 2026 pack: charity. Four quick checks before you donate this Giving Tuesday.",
+  "script": {
+   "title": "Before Giving Tuesday: a 4-step charity check",
+   "hook": "4 steps, 2 minutes, and your Giving Tuesday donation reaches a real charity.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "",
+     "on_screen_text": "Charity check: 4 steps",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a heart-shaped box No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Look the charity up yourself. Don't use the link in the text, call or post that asked you.",
+     "on_screen_text": "1. Look it up yourself",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a magnifying glass over a heart No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Check it at Give.org or Charity Navigator. A charity with no record, or a name one letter off a famous one, is a warning.",
+     "on_screen_text": "2. Check a watchdog",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a checklist with stars No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Want the tax deduction? Search the IRS Tax Exempt Organization Search to see if gifts to it are deductible.",
+     "on_screen_text": "3. Check the IRS list",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a receipt with a tick No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Give on the charity's own website by credit card or check. Never by gift card, wire or crypto.",
+     "on_screen_text": "4. Card or check only",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a credit card with a heart No text, no logos, no real people."
+    },
+    {
+     "heading": "Save this",
+     "narration": "Save this for Dec 1, and share it with the most generous person you know.",
+     "on_screen_text": "Save it. Share it.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes giving a thumbs up No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "Giving Tuesday is Dec 1. Before you give:\n1. Look the charity up yourself\n2. Check it at Give.org or Charity Navigator\n3. Want a tax deduction? Check the IRS list\n4. Pay by card or check, never gift card, wire or crypto\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "givingtuesday",
+    "charity",
+    "donate",
+    "charityscam",
+    "scamdecoded"
+   ],
+   "description": "Four quick checks before you donate this Giving Tuesday.",
+   "thumbnail_text": "Check a charity in 2 minutes",
+   "sources": [
+    "https://consumer.ftc.gov/articles/giving-charity",
+    "https://consumer.ftc.gov/consumer-alerts/2025/11/donate-charities-not-scammers-giving-tuesday",
+    "https://apps.irs.gov/app/eos/"
+   ],
+   "claims_to_verify": [
+    "Giving Tuesday 2026 falls on Dec 1 (the Tuesday after Thanksgiving)",
+    "The IRS Tax Exempt Organization Search shows which groups can receive tax-deductible donations"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "protecting older parents and family",
+  "platforms": [
+   "instagram",
+   "youtube"
+  ],
+  "post_on": "2026-11-30 12:00",
+  "topic": "charity",
+  "original_element": "Quiz carousel q7-charity slides as the visuals (originality/out/quizzes/q7-charity).",
+  "idea_angle": "Holiday 2026 pack: charity. Fake charity texts that thank you for a past pledge to get you to 'renew' it.",
+  "script": {
+   "title": "'Thanks for your pledge last year': 1 charity text to skip",
+   "hook": "1 thank-you text for a donation you never made. It's the most polite scam of the year.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "One thank-you text, for a donation you never made. Thank you for your generous pledge last year. Families are counting on you again.",
+     "on_screen_text": "'Thanks for your pledge'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. quiz slide q7-charity/slide-01 No text, no logos, no real people."
+    },
+    {
+     "heading": "The trick",
+     "narration": "You don't remember the pledge, but who wants to look stingy? That doubt is the point. The text asks you to renew today, by gift card or payment app.",
+     "on_screen_text": "Doubt + 'renew today'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. quiz slide q7-charity/slide-04 No text, no logos, no real people."
+    },
+    {
+     "heading": "The tell",
+     "narration": "Real charities don't need it today, and don't take gift cards. The link is a new site, not one you can look up.",
+     "on_screen_text": "No real charity wants gift cards",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. quiz slide q7-charity/slide-05 No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Want to give? Look the charity up yourself and donate on its own site, by card. Then delete the text.",
+     "on_screen_text": "Look it up. Give on its site.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a heart and a credit card No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "Giving Tuesday is tomorrow. Real charities welcome your gift next week too; scammers need it today. Example is fictional.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "givingtuesday",
+    "charityscam",
+    "donate",
+    "holidayscams",
+    "scamdecoded"
+   ],
+   "description": "Fake charity texts that thank you for a past pledge to get you to 'renew' it.",
+   "thumbnail_text": "Thanks for... what pledge?",
+   "sources": [
+    "https://consumer.ftc.gov/articles/giving-charity",
+    "https://consumer.ftc.gov/consumer-alerts/2025/11/donate-charities-not-scammers-giving-tuesday",
+    "https://reportfraud.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "Scammers thank you for donations you don't remember to get you to pay (FTC)",
+    "Charities don't ask for donations by gift card or wire (FTC)"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "protecting older parents and family",
+  "platforms": [
+   "instagram"
+  ],
+  "post_on": "2026-12-03 19:30",
+  "topic": "charity",
+  "original_element": "Rendered quiz carousel q7-charity: use the 7 PNG slides as-is (originality/out/quizzes/q7-charity).",
+  "idea_angle": "Holiday 2026 pack: charity. A quiz: find the four red flags in a fake holiday charity text.",
+  "script": {
+   "title": "Spot the red flags: the 'holiday relief' text",
+   "hook": "4 red flags in 1 holiday charity text. How many can you find?",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "",
+     "on_screen_text": "Find 4 red flags",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a score card No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Thanks for a pledge you don't remember making. It plays on doubt and politeness.",
+     "on_screen_text": "1. A pledge you never made",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. quiz slide 3 No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Today. Real charities welcome your gift next week too.",
+     "on_screen_text": "2. 'Today'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. quiz slide 4 No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Gift card or payment app. No real charity asks for gift cards.",
+     "on_screen_text": "3. Gift cards",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. quiz slide 5 No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "A brand-new site with an odd ending, not a charity you can look up.",
+     "on_screen_text": "4. The link",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. quiz slide 6 No text, no logos, no real people."
+    },
+    {
+     "heading": "Save this",
+     "narration": "Look the charity up yourself and give on its own site. How many did you get?",
+     "on_screen_text": "Save it. Share it.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes giving a thumbs up No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "Quiz time. Count the red flags before you swipe. Answers on slides 3–6. Example is fictional.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "charityscam",
+    "spotthescam",
+    "holidayscams",
+    "donate",
+    "scamdecoded"
+   ],
+   "description": "A quiz: find the four red flags in a fake holiday charity text.",
+   "thumbnail_text": "Find 4 red flags",
+   "sources": [
+    "https://consumer.ftc.gov/articles/giving-charity",
+    "https://consumer.ftc.gov/consumer-alerts/2025/11/donate-charities-not-scammers-giving-tuesday"
+   ],
+   "claims_to_verify": [
+    "Fake charities pressure you to give immediately (FTC)",
+    "Fake charities ask for gift cards, wire or crypto (FTC)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "protecting older parents and family",
+  "platforms": [
+   "tiktok"
+  ],
+  "post_on": "2026-12-08 18:00",
+  "topic": "gift cards",
+  "original_element": "Walkthrough video w7-boss-gift-cards for segments 1-5. Dhruv records the narration in his own voice. No AI voice on TikTok cuts.",
+  "idea_angle": "Holiday 2026 pack: gift cards. The boss impersonation gift card text, walked through, and the 10-second check that stops it.",
+  "script": {
+   "title": "The 'boss' who needs 5 gift cards for the team, played out",
+   "hook": "5 gift cards, 1 text from your 'boss'. Watch how December's favourite office scam plays out.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Five gift cards, one text from your boss. Watch how December's favourite office scam plays out, message by message.",
+     "on_screen_text": "5 gift cards. 1 'boss'.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough w7-boss-gift-cards, blank No text, no logos, no real people."
+    },
+    {
+     "heading": "Text 1",
+     "narration": "Hi, it's Karen. Are you free? I'm stuck in meetings all day and can't talk. You reply, sure, what's up?",
+     "on_screen_text": "'I can't talk'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough w7, first two messages No text, no logos, no real people."
+    },
+    {
+     "heading": "Text 2",
+     "narration": "I want to surprise the team with holiday gifts. Pick up five hundred dollar gift cards, scratch the backs, and text me photos of the codes. I'll pay you back today. Keep it quiet, it's a surprise.",
+     "on_screen_text": "'Text me photos of the codes'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough w7, third message No text, no logos, no real people."
+    },
+    {
+     "heading": "Pause",
+     "narration": "Pause. How many red flags? Count them before I say them.",
+     "on_screen_text": "Pause: count the flags",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a full-screen countdown card No text, no logos, no real people."
+    },
+    {
+     "heading": "The flags",
+     "narration": "There are four. She can't talk, so you can't check her voice. Gift cards. Photos of the codes, which are the money itself. And keep it quiet, so no coworker says, wait, that's a scam.",
+     "on_screen_text": "Can't talk · gift cards · codes · secret",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough w7, all four flags lit No text, no logos, no real people."
+    },
+    {
+     "heading": "The fix",
+     "narration": "So walk over to her desk, or call her on the number you already have. Not the number that texted you. Real bosses can wait ten seconds.",
+     "on_screen_text": "Call her real number",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes walking to an office door No text, no logos, no real people."
+    },
+    {
+     "heading": "Already sent?",
+     "narration": "Already sent the codes? Call the gift card company right away, using the number on the card, and ask for a refund. Keep the cards and receipts, and report it at report fraud dot f t c dot gov.",
+     "on_screen_text": "Sent codes? Call the card company now.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone dialling, gift cards and receipt on a table No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "caption": "Holiday gifts for the team, bought with your money, codes sent by text. Your boss didn't send it. Example is fictional.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "giftcardscam",
+    "workscams",
+    "holidayscams",
+    "officelife",
+    "scamdecoded"
+   ],
+   "description": "The boss impersonation gift card text, walked through, and the 10-second check that stops it.",
+   "thumbnail_text": "Your boss didn't send this",
+   "sources": [
+    "https://consumer.ftc.gov/gift-card-scams",
+    "https://consumer.ftc.gov/consumer-alerts/2024/10/only-scammers-tell-you-buy-gift-card-pay-them",
+    "https://reportfraud.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "Only scammers ask you to buy gift cards and send the numbers (FTC)",
+    "Contact the gift card company right away if you paid a scammer with one (FTC)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "protecting older parents and family",
+  "platforms": [
+   "instagram",
+   "youtube"
+  ],
+  "post_on": "2026-12-11 12:00",
+  "topic": "gift cards",
+  "original_element": "Dhruv films his own hands checking a real gift card's packaging and back at home (no store footage).",
+  "idea_angle": "Holiday 2026 pack: gift cards. How tampered gift cards work, and the five-second check before you buy one.",
+  "script": {
+   "title": "Buying gift cards this weekend? 1 check at the rack first",
+   "hook": "1 check at the gift card rack takes 5 seconds and stops a holiday scam.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "One check at the gift card rack takes five seconds, and it stops a scam that peaks right now.",
+     "on_screen_text": "5 seconds at the rack",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes at a gift card rack No text, no logos, no real people."
+    },
+    {
+     "heading": "The scam",
+     "narration": "Scammers take cards off the rack, record the numbers, cover the PIN again and put them back. When you load money onto it, they spend it first.",
+     "on_screen_text": "Your money, their card",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a gift card with a peeled sticker No text, no logos, no real people."
+    },
+    {
+     "heading": "The check",
+     "narration": "Before you buy, check the packaging isn't torn and the PIN area isn't scratched or re-stuck. Better yet, pick a card from behind the counter.",
+     "on_screen_text": "Torn? Scratched? Put it back.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. two hands inspecting a gift card No text, no logos, no real people."
+    },
+    {
+     "heading": "After",
+     "narration": "Keep the receipt with the card. If the balance is empty, call the card company right away.",
+     "on_screen_text": "Keep the receipt",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a receipt stapled to a gift card No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "Some scammers tamper with gift cards on the rack so your money lands on their card. Check the packaging, or buy from behind the counter.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "giftcards",
+    "christmasshopping",
+    "holidayscams",
+    "shoppingtips",
+    "scamdecoded"
+   ],
+   "description": "How tampered gift cards work, and the five-second check before you buy one.",
+   "thumbnail_text": "Check the back first",
+   "sources": [
+    "https://consumer.ftc.gov/consumer-alerts/2024/12/check-out-gift-cards-you-buy-them",
+    "https://consumer.ftc.gov/gift-card-scams"
+   ],
+   "claims_to_verify": [
+    "Scammers tamper with gift cards in stores so the balance goes to them (FTC)",
+    "Keep the receipt and contact the card company if a card is empty"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "text and email scams, decoded",
+  "platforms": [
+   "instagram"
+  ],
+  "post_on": "2026-12-16 19:30",
+  "topic": "delivery",
+  "original_element": "Slide 5 is a screenshot of the Scam Decoded checker flagging the slide 1 text (take it on the live site).",
+  "idea_angle": "Holiday 2026 pack: delivery. Four fake delivery messages that spike in the last shipping week, and how to track packages safely.",
+  "script": {
+   "title": "Last shipping week: 4 delivery scam texts and the 1 safe way to track",
+   "hook": "4 delivery texts you'll get before Christmas, and 1 safe way to track every package.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "",
+     "on_screen_text": "4 fake delivery texts",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a phone with a tracking map No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "'Your package is on hold. Update your address within 12 hours.' A countdown and a link.",
+     "on_screen_text": "1. 'On hold'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a parcel with a clock No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "'A small redelivery fee applies.' The fee is the bait. They want your card number.",
+     "on_screen_text": "2. 'Redelivery fee'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a parcel with a coin No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "'Customs charge due before release.' For a gift that never left the country.",
+     "on_screen_text": "3. 'Customs charge'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a parcel with a stamp No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "'We missed you. Reschedule here.' A link to a page that asks for your details.",
+     "on_screen_text": "4. 'Missed you'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a door with a note No text, no logos, no real people."
+    },
+    {
+     "heading": "Save this",
+     "narration": "The safe way: track with the number in the shop's own order email or app. Forward fakes to 7726.",
+     "on_screen_text": "Save it. Share it.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes giving a thumbs up No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "The last shipping week is peak season for fake delivery texts:\n1. 'Package on hold'\n2. 'Redelivery fee'\n3. 'Customs charge'\n4. 'Missed delivery, reschedule'\nThe safe way: track from the shop's own email or app.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "deliveryscam",
+    "packagescam",
+    "christmasshopping",
+    "smishing",
+    "scamdecoded"
+   ],
+   "description": "Four fake delivery messages that spike in the last shipping week, and how to track packages safely.",
+   "thumbnail_text": "4 fake delivery texts",
+   "sources": [
+    "https://consumer.ftc.gov/consumer-alerts/2024/12/scammers-are-delivering-phishing-messages-holiday-season",
+    "https://consumer.ftc.gov/consumer-alerts/2023/12/fake-shipping-notification-emails-text-messages-what-you-need-know-holiday-season",
+    "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages"
+   ],
+   "claims_to_verify": [
+    "Fake delivery notices increase around the holidays (FTC)",
+    "Carriers don't text you links to pay fees unless you signed up for alerts for that package"
+   ]
+  }
+ }
+]

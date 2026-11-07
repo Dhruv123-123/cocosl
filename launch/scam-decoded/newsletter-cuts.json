@@ -1,0 +1,615 @@
+[
+ {
+  "format": "short",
+  "pillar": "text and email scams, decoded",
+  "platforms": [
+   "instagram",
+   "tiktok"
+  ],
+  "post_on": "2026-12-31 20:00",
+  "look": "face cam",
+  "newsletter_issue": 6,
+  "original_element": "Dhruv on camera holding his phone, opening his own bank app (balance blurred) to show the charge isn't there. Dhruv's own voice, no AI voice.",
+  "idea_angle": "Cut from Scam Alert #6 (a 15-minute security reset for New Year's)",
+  "script": {
+   "title": "'$389.99 renewed, call to cancel': check your bank app",
+   "hook": "1 email says $389.99 was just charged for a plan you don't remember. Check your bank app, not the number.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "One email. Your annual protection plan renewed, three hundred eighty-nine ninety-nine charged. Call within forty-eight hours to cancel.",
+     "on_screen_text": "'$389.99 charged'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv on camera holding a phone No text, no logos, no real people."
+    },
+    {
+     "heading": "The catch",
+     "narration": "The call goes to a fake support team. To 'refund' you, they ask to connect to your computer, or for your bank login.",
+     "on_screen_text": "The call is the trap",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone with a headset icon No text, no logos, no real people."
+    },
+    {
+     "heading": "The check",
+     "narration": "Open your bank app and look. No charge? It's fake. A real charge? Call the number on your card, not the email.",
+     "on_screen_text": "Check your bank app",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv's phone: bank app, blurred No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Delete the email. Never let a caller connect to your computer to process a refund.",
+     "on_screen_text": "No remote access for refunds",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes with a stop hand No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "A fake renewal email wants you to call about a charge that never happened. The call is where it goes wrong.\n\nThis is from this week's free Scam Alert email, one scam a week (link in bio). Not sure about a message? Paste it into our free scam checker.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "scamalert",
+    "phishing",
+    "autorenewal",
+    "newyear",
+    "scamdecoded"
+   ],
+   "description": "From Scam Alert #6: https://scamdecoded.netlify.app/newsletter/new-year-reset/",
+   "thumbnail_text": "$389.99 'renewed'? Check first.",
+   "sources": [
+    "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams",
+    "https://consumer.ftc.gov/articles/how-avoid-scam"
+   ],
+   "claims_to_verify": [
+    "Scammers send fake renewal or invoice emails to get people to call them (FTC)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "text and email scams, decoded",
+  "platforms": [
+   "instagram",
+   "tiktok"
+  ],
+  "post_on": "2027-01-07 20:00",
+  "look": "walkthrough",
+  "newsletter_issue": 7,
+  "original_element": "Walkthrough of the newsletter's fictional text on a phone mockup, flags lighting up one by one. Dhruv's own voice, no AI voice.",
+  "idea_angle": "Cut from Scam Alert #7 (the return label that isn't)",
+  "script": {
+   "title": "'Confirm your card for your $84.50 refund': 1 fake text",
+   "hook": "1 text says your $84.50 return is stuck. Real refunds don't need your card number again.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "One text. Your return couldn't be processed. To receive your eighty-four fifty, confirm your card details within twenty-four hours.",
+     "on_screen_text": "'Confirm your card'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough: the refund text No text, no logos, no real people."
+    },
+    {
+     "heading": "Flag 1",
+     "narration": "A refund goes back to the card you paid with. It never needs your card number again.",
+     "on_screen_text": "Refunds don't need your card",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough: flag 1 lit No text, no logos, no real people."
+    },
+    {
+     "heading": "Flag 2",
+     "narration": "A twenty-four-hour deadline, and a link that isn't the store's website. Two more flags.",
+     "on_screen_text": "Deadline + odd link",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough: flags 2 and 3 lit No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Check the return in the store's own app or account. Typed your card? Call your bank today.",
+     "on_screen_text": "Check in the store's app",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a receipt No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "After the holidays come the returns, and the fake 'refund failed' texts. Here's the tell.\n\nThis is from this week's free Scam Alert email, one scam a week (link in bio). Not sure about a message? Paste it into our free scam checker.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "scamalert",
+    "returns",
+    "textscam",
+    "onlineshopping",
+    "scamdecoded"
+   ],
+   "description": "From Scam Alert #7: https://scamdecoded.netlify.app/newsletter/return-labels/",
+   "thumbnail_text": "Stuck refund? Not real.",
+   "sources": [
+    "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams",
+    "https://consumer.ftc.gov/articles/how-avoid-scam"
+   ],
+   "claims_to_verify": [
+    "Scammers send texts posing as stores or delivery companies to steal card details (FTC)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "investment and crypto scams on social media",
+  "platforms": [
+   "instagram",
+   "tiktok"
+  ],
+  "post_on": "2027-01-21 20:00",
+  "look": "quiz pause",
+  "newsletter_issue": 9,
+  "original_element": "Quiz format with a real 3-second pause card; the answer beat shows the newsletter's archive page on Dhruv's phone. Dhruv's own voice, no AI voice.",
+  "idea_angle": "Cut from Scam Alert #9 (the wrong number that wants to be friends)",
+  "script": {
+   "title": "'Hi Emma, still on for dinner?' 1 wrong number to block",
+   "hook": "1 wrong-number text, then 'you seem nice'. Pause: reply, block, or ignore?",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Hi Emma, are we still on for dinner Saturday? Oh sorry, wrong number. You seem nice though.",
+     "on_screen_text": "'Wrong number! You seem nice'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a text bubble on a phone No text, no logos, no real people."
+    },
+    {
+     "heading": "Pause",
+     "narration": "Pause. Reply, block, or ignore? Pick one.",
+     "on_screen_text": "Pause: reply, block or ignore?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a full-screen countdown card No text, no logos, no real people."
+    },
+    {
+     "heading": "Answer",
+     "narration": "Block and delete. A friendly reply starts weeks of chat, then a crypto app where your money can't come out. Federal prosecutors say messages like this can come from scam compounds.",
+     "on_screen_text": "Block. Don't chat.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone with a block button No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Never invest on an app someone you met by text recommends. Not once, not a little.",
+     "on_screen_text": "No apps from text 'friends'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes with a shield No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "The friendliest text you'll get this month, and the start of many crypto investment scams.\n\nThis is from this week's free Scam Alert email, one scam a week (link in bio). Not sure about a message? Paste it into our free scam checker.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "scamalert",
+    "wrongnumber",
+    "cryptoscam",
+    "textscam",
+    "scamdecoded"
+   ],
+   "description": "From Scam Alert #9: https://scamdecoded.netlify.app/newsletter/wrong-number-friend/",
+   "thumbnail_text": "Wrong number? Pause.",
+   "sources": [
+    "https://www.justice.gov/opa/pr/chairman-prince-group-indicted-operating-cambodian-forced-labor-scam-compounds-engaged",
+    "https://consumer.ftc.gov/articles/what-know-about-cryptocurrency-scams"
+   ],
+   "claims_to_verify": [
+    "Crypto investment scams often start with friendly messages that build trust over time (DOJ, FTC)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "protecting older parents and family",
+  "platforms": [
+   "instagram",
+   "tiktok"
+  ],
+  "post_on": "2027-02-11 20:00",
+  "look": "illustrated",
+  "newsletter_issue": 12,
+  "original_element": "Illustrated beats; the closing beat is Dhruv's hand covering the back of a real gift card. Dhruv's own voice, no AI voice.",
+  "idea_angle": "Cut from Scam Alert #12 (\"send me a photo of the back of the card\")",
+  "script": {
+   "title": "'Send a photo of the back of the gift cards': it's a scam",
+   "hook": "1 photo of the back of a gift card is all a romance scammer needs. Here's the ask.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "One message. Babe, my card isn't working out here. Could you grab three gift cards and send me a photo of the backs?",
+     "on_screen_text": "'Send a photo of the backs'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a gift card No text, no logos, no real people."
+    },
+    {
+     "heading": "The catch",
+     "narration": "The numbers on the back are the money. Once they have the photo, the cards are drained in minutes.",
+     "on_screen_text": "The back is the money",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a gift card with a timer No text, no logos, no real people."
+    },
+    {
+     "heading": "The tell",
+     "narration": "Someone you haven't met in person, asking for gift cards. That's never love. It's always the scam.",
+     "on_screen_text": "Gift cards = scam",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a heart with a crack No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Don't send it. Already did? Call the gift card company on the number on the card, right now.",
+     "on_screen_text": "Sent it? Call the card company.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a hand covering the back of a card No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "'My card isn't working out here. Could you grab 3 gift cards and send me a photo of the backs?' That's the whole scam.\n\nThis is from this week's free Scam Alert email, one scam a week (link in bio). Not sure about a message? Paste it into our free scam checker.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "scamalert",
+    "romancescam",
+    "giftcards",
+    "valentinesday",
+    "scamdecoded"
+   ],
+   "description": "From Scam Alert #12: https://scamdecoded.netlify.app/newsletter/valentines/",
+   "thumbnail_text": "Back of the card? No.",
+   "sources": [
+    "https://consumer.ftc.gov/articles/what-know-about-romance-scams",
+    "https://consumer.ftc.gov/consumer-alerts/2024/10/only-scammers-tell-you-buy-gift-card-pay-them"
+   ],
+   "claims_to_verify": [
+    "Romance scammers ask for gift cards and the numbers on the back (FTC)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "identity theft and credit freezes",
+  "platforms": [
+   "instagram",
+   "tiktok"
+  ],
+  "post_on": "2027-03-18 20:00",
+  "look": "screen recording",
+  "newsletter_issue": 17,
+  "original_element": "Dhruv screen-records StudentAid.gov's sign-in page and its scam warning page on his own phone. Dhruv's own voice, no AI voice.",
+  "idea_angle": "Cut from Scam Alert #17 (\"your student loans qualify for forgiveness, $499 to apply\")",
+  "script": {
+   "title": "'Loan forgiveness approved, $499 fee': 0 fees to apply",
+   "hook": "$499 to apply for student loan forgiveness? Applying is free, and here's the screen.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Final notice. You've been approved for student loan forgiveness. One-time enrollment fee, four hundred ninety-nine dollars.",
+     "on_screen_text": "'$499 enrollment fee'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv's screen: the text No text, no logos, no real people."
+    },
+    {
+     "heading": "The catch",
+     "narration": "They take the fee, and ask for your F S A I D to 'manage' your account. Then they change the contact details.",
+     "on_screen_text": "They want your FSA ID",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a key with a red X No text, no logos, no real people."
+    },
+    {
+     "heading": "The real screen",
+     "narration": "Here's Student Aid dot gov. Applying for repayment plans and forgiveness is free, right here.",
+     "on_screen_text": "StudentAid.gov: free",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv's screen: StudentAid.gov No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Never pay to apply, never share your F S A I D, and check your contact details tonight.",
+     "on_screen_text": "No fees. No FSA ID sharing.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes with a graduation cap No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "Student loan help is free at StudentAid.gov. A fee, or a request for your FSA ID, is the scam.\n\nThis is from this week's free Scam Alert email, one scam a week (link in bio). Not sure about a message? Paste it into our free scam checker.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "scamalert",
+    "studentloans",
+    "studentloanforgiveness",
+    "fsa",
+    "scamdecoded"
+   ],
+   "description": "From Scam Alert #17: https://scamdecoded.netlify.app/newsletter/student-loan-fees/",
+   "thumbnail_text": "Forgiveness for $499? No.",
+   "sources": [
+    "https://consumer.ftc.gov/consumer-alerts/2025/05/spotting-student-loan-scams",
+    "https://consumer.ftc.gov/articles/paying-school-and-avoiding-scams"
+   ],
+   "claims_to_verify": [
+    "You never have to pay for help with federal student loans; apply free at StudentAid.gov (FTC)",
+    "Never share your FSA ID (FTC)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "text and email scams, decoded",
+  "platforms": [
+   "instagram",
+   "tiktok"
+  ],
+  "post_on": "2027-03-25 20:00",
+  "look": "face cam",
+  "newsletter_issue": 18,
+  "original_element": "Dhruv on camera calling a friend (who agreed to be filmed) to check a message, on speaker. Dhruv's own voice, no AI voice.",
+  "idea_angle": "Cut from Scam Alert #18 (the \"government grant\" a friend sent you)",
+  "script": {
+   "title": "A friend got a $9,000 grant? 1 call before you reply",
+   "hook": "1 message from a friend about a $9,000 grant. Call her first. Her account was probably hacked.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "One message from a friend. I just got nine thousand dollars from a government grant, and your name is on the list too.",
+     "on_screen_text": "'Your name is on the list'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv on camera holding a phone No text, no logos, no real people."
+    },
+    {
+     "heading": "The catch",
+     "narration": "The agent wants a two hundred fifty dollar delivery fee. Then taxes. The grant never comes.",
+     "on_screen_text": "Fee, then more fees",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a pile of bills with a padlock No text, no logos, no real people."
+    },
+    {
+     "heading": "The check",
+     "narration": "Call your friend on the number you already have. Watch, I'm calling mine now.",
+     "on_screen_text": "Call the friend",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv on a speakerphone call No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Free money never has a fee. Report the account, and turn on two-step sign-in on yours.",
+     "on_screen_text": "Free money has no fee",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes with a phone No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "Free government money with a $250 'delivery fee', sent from a friend's account. It's not your friend.\n\nThis is from this week's free Scam Alert email, one scam a week (link in bio). Not sure about a message? Paste it into our free scam checker.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "scamalert",
+    "grantscam",
+    "hackedaccount",
+    "facebook",
+    "scamdecoded"
+   ],
+   "description": "From Scam Alert #18: https://scamdecoded.netlify.app/newsletter/grant-fee/",
+   "thumbnail_text": "Friend's grant? Call her.",
+   "sources": [
+    "https://consumer.ftc.gov/articles/government-grant-scams",
+    "https://consumer.ftc.gov/consumer-alerts/2026/03/how-avoid-government-grant-scams-offer-free-money-personal-expenses"
+   ],
+   "claims_to_verify": [
+    "The government doesn't charge fees to receive a grant (FTC)",
+    "Scammers use hacked social media accounts to message friends (FTC)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "text and email scams, decoded",
+  "platforms": [
+   "instagram",
+   "tiktok"
+  ],
+  "post_on": "2027-04-01 20:00",
+  "look": "walkthrough",
+  "newsletter_issue": 19,
+  "original_element": "Walkthrough over a fictional letter (marked SAMPLE) with the notice number and phone number circled. Dhruv's own voice, no AI voice.",
+  "idea_angle": "Cut from Scam Alert #19 (the IRS letter that wants a phone call)",
+  "script": {
+   "title": "IRS letter says call in 10 days? 1 number to look up",
+   "hook": "1 letter, an eagle, a case number and 10 days to call. Check the number before you dial.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Notice of intent to levy. Balance four thousand one hundred eighteen dollars. Call our Resolution Department within ten days.",
+     "on_screen_text": "'Call within 10 days'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough: a sample letter No text, no logos, no real people."
+    },
+    {
+     "heading": "The catch",
+     "narration": "The number goes to the scammer, who 'settles' your debt by payment app, gift card or wire.",
+     "on_screen_text": "The number is the trap",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough: phone number circled No text, no logos, no real people."
+    },
+    {
+     "heading": "The check",
+     "narration": "Look up the notice number on I R S dot gov, and check your balance in your IRS online account.",
+     "on_screen_text": "Check your IRS account",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough: notice number circled No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Need to call? Use the number on I R S dot gov, never the one on the letter.",
+     "on_screen_text": "Call the IRS.gov number",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes with an envelope No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "Scammers mail fake IRS letters too. The phone number is the one thing they can't copy.\n\nThis is from this week's free Scam Alert email, one scam a week (link in bio). Not sure about a message? Paste it into our free scam checker.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "scamalert",
+    "irs",
+    "taxseason",
+    "irsletter",
+    "scamdecoded"
+   ],
+   "description": "From Scam Alert #19: https://scamdecoded.netlify.app/newsletter/irs-letters/",
+   "thumbnail_text": "Fake IRS letter? Check.",
+   "sources": [
+    "https://www.irs.gov/help/how-to-know-its-the-irs",
+    "https://www.irs.gov/help/tax-scams/recognize-tax-scams-and-fraud"
+   ],
+   "claims_to_verify": [
+    "The IRS generally contacts people by mail first; scammers send fake letters too (IRS)",
+    "Check any balance in your IRS Online Account (IRS)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "text and email scams, decoded",
+  "platforms": [
+   "instagram",
+   "tiktok"
+  ],
+  "post_on": "2027-04-15 20:00",
+  "look": "quiz pause",
+  "newsletter_issue": 21,
+  "original_element": "Quiz format; the answer beat is Dhruv typing IRS.gov/refunds into his own browser. Dhruv's own voice, no AI voice.",
+  "idea_angle": "Cut from Scam Alert #21 (you filed. Now comes the \"refund adjustment\" text)",
+  "script": {
+   "title": "'Your refund needs an adjustment': real IRS text or fake?",
+   "hook": "1 text says your $1,284 refund needs an adjustment. Pause: real or fake?",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "IRS: your refund of twelve eighty-four requires an adjustment before release. Scan the code within forty-eight hours.",
+     "on_screen_text": "'Requires an adjustment'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone with a QR code No text, no logos, no real people."
+    },
+    {
+     "heading": "Pause",
+     "narration": "Pause. Real or fake? Decide.",
+     "on_screen_text": "Pause: real or fake?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a full-screen countdown card No text, no logos, no real people."
+    },
+    {
+     "heading": "Answer",
+     "narration": "Fake. The IRS doesn't text about your refund, and refunds don't expire in forty-eight hours. The code leads to a page that asks for your Social Security number and bank details.",
+     "on_screen_text": "Fake. Every time.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a QR code with a red X No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Check your refund only at I R S dot gov slash refunds, typed yourself. Forward the text to seven seven two six.",
+     "on_screen_text": "IRS.gov/refunds only",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv typing in a browser No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "You filed. Now come the refund texts. There's one place to check a refund.\n\nThis is from this week's free Scam Alert email, one scam a week (link in bio). Not sure about a message? Paste it into our free scam checker.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "scamalert",
+    "taxrefund",
+    "irs",
+    "qrcode",
+    "scamdecoded"
+   ],
+   "description": "From Scam Alert #21: https://scamdecoded.netlify.app/newsletter/tax-day/",
+   "thumbnail_text": "Refund 'adjustment'? Pause.",
+   "sources": [
+    "https://www.irs.gov/help/report-fraud/report-fake-irs-treasury-or-tax-related-emails-and-messages",
+    "https://www.irs.gov/refunds"
+   ],
+   "claims_to_verify": [
+    "The IRS doesn't start contact about refunds by text (IRS)",
+    "Check refunds at IRS.gov/refunds (IRS)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "protecting older parents and family",
+  "platforms": [
+   "instagram",
+   "tiktok"
+  ],
+  "post_on": "2027-05-06 20:00",
+  "look": "illustrated",
+  "newsletter_issue": 24,
+  "original_element": "Illustrated beats; the closing beat shows our case board from 'How the scam actually worked' part 1. Dhruv's own voice, no AI voice.",
+  "idea_angle": "Cut from Scam Alert #24 (a \"courier\" at Grandma's door)",
+  "script": {
+   "title": "'My lawyer will send someone for the bail': don't open",
+   "hook": "1 call, 1 'lawyer', and 1 courier at Grandma's door. That's the newest grandparent scam.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Grandma, it's me. I was in an accident. Please don't tell Mom. My lawyer will send someone for the bail money.",
+     "on_screen_text": "'Don't tell Mom'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes next to a ringing phone No text, no logos, no real people."
+    },
+    {
+     "heading": "The catch",
+     "narration": "A fake lawyer names the amount. Then a 'bail bondsman' knocks on the door to collect cash.",
+     "on_screen_text": "A courier at the door",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a door with a shadow No text, no logos, no real people."
+    },
+    {
+     "heading": "The tell",
+     "narration": "No court or lawyer sends a stranger to your house for cash. And 'don't tell anyone' is the scam talking.",
+     "on_screen_text": "Courts don't send couriers",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a courthouse with a red X No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Hang up and call the grandchild on the number you have. Someone coming to the door? Call the police.",
+     "on_screen_text": "Call back. Then the police.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the case board, part 1 No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "A grandchild in trouble, a lawyer, and someone coming to the house for cash. Real courts don't send couriers.\n\nThis is from this week's free Scam Alert email, one scam a week (link in bio). Not sure about a message? Paste it into our free scam checker.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "scamalert",
+    "grandparentscam",
+    "mothersday",
+    "elderfraud",
+    "scamdecoded"
+   ],
+   "description": "From Scam Alert #24: https://scamdecoded.netlify.app/newsletter/mothers-day/",
+   "thumbnail_text": "Courier for 'bail'? No.",
+   "sources": [
+    "https://www.justice.gov/usao-vt/pr/25-canadian-nationals-charged-vermont-connection-nationwide-multimillion-dollar",
+    "https://consumer.ftc.gov/articles/scammers-use-fake-emergencies-steal-your-money"
+   ],
+   "claims_to_verify": [
+    "Prosecutors allege a grandparent scam network sent fake 'bail bondsmen' to collect cash at victims' homes (DOJ, 2025)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "text and email scams, decoded",
+  "platforms": [
+   "instagram",
+   "tiktok"
+  ],
+  "post_on": "2027-05-27 20:00",
+  "look": "screen recording",
+  "newsletter_issue": 27,
+  "original_element": "Dhruv screen-records his own airline app's trips page (booking details blurred). Dhruv's own voice, no AI voice.",
+  "idea_angle": "Cut from Scam Alert #27 (\"your flight is canceled, call to rebook\")",
+  "script": {
+   "title": "'Flight canceled, call to rebook': check the app first",
+   "hook": "1 text says your flight is canceled. Open the airline app before you call anyone. Here's mine.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Your flight has been canceled due to a schedule change. To rebook at no cost, call our support line.",
+     "on_screen_text": "'Call to rebook'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv's screen: the text No text, no logos, no real people."
+    },
+    {
+     "heading": "The catch",
+     "narration": "The number goes to a fake agent who charges a rebooking fee, and takes your card and your frequent flyer login.",
+     "on_screen_text": "A fake agent, a real fee",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a headset with a price tag No text, no logos, no real people."
+    },
+    {
+     "heading": "The check",
+     "narration": "Here's my airline app. Trips, my flight, still on time. Real changes show up here first.",
+     "on_screen_text": "Check the airline app",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv's screen: trips page, blurred No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Need help? Use the number in the app or on the airline's own website.",
+     "on_screen_text": "Use the app's number",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes with a suitcase No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "Fake cancellation texts send you to a fake agent who charges to rebook. The airline app tells the truth.\n\nThis is from this week's free Scam Alert email, one scam a week (link in bio). Not sure about a message? Paste it into our free scam checker.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "scamalert",
+    "travel",
+    "flightcanceled",
+    "summertravel",
+    "scamdecoded"
+   ],
+   "description": "From Scam Alert #27: https://scamdecoded.netlify.app/newsletter/summer-travel/",
+   "thumbnail_text": "Canceled? Check the app.",
+   "sources": [
+    "https://consumer.ftc.gov/consumer-alerts/2024/07/scammers-impersonate-airline-customer-service-representatives"
+   ],
+   "claims_to_verify": [
+    "Scammers impersonate airline customer service by text, search ads and social media (FTC)"
+   ]
+  }
+ }
+]

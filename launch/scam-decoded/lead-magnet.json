@@ -1,0 +1,36 @@
+{
+  "sections": [
+    {
+      "heading": "Tonight (10 minutes)",
+      "items": [
+        "Freeze your credit at Equifax, Experian and TransUnion. Save the three logins somewhere safe.",
+        "Pick a family safe word and tell your family out loud, not by text.",
+        "Turn on transaction alerts for every bank account and card."
+      ]
+    },
+    {
+      "heading": "Your phone and email",
+      "items": [
+        "Set a carrier account PIN and turn on number lock or port-out protection.",
+        "Give your email a long, unique password and its strongest sign-in option.",
+        "Switch bank and email logins from text codes to passkeys or an authenticator app where offered."
+      ]
+    },
+    {
+      "heading": "The three rules",
+      "items": [
+        "Never read a one-time code to anyone who contacted you.",
+        "Urgent call about money? Hang up and call back on a number you look up yourself.",
+        "Nobody real asks for gift cards, wires, payment apps to strangers, or crypto. Ever."
+      ]
+    },
+    {
+      "heading": "If it happens",
+      "items": [
+        "Call your bank or card issuer first, using the number on the card.",
+        "Report at ReportFraud.ftc.gov, and at IdentityTheft.gov if your identity was used.",
+        "Ignore anyone offering to recover your money for a fee: that's the next scam."
+      ]
+    }
+  ]
+}

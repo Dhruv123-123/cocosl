@@ -45,7 +45,10 @@ only you can do: payouts, accounts, API keys).
 
 Ready-made launch material lives in `launch/`: two weeks of scripts for the example finance brand,
 a sellable product (guide PDF + spreadsheet), the ad studio's website, rate card, pitch templates,
-contract template and the launch-day plan.
+contract template and the launch-day plan. `launch/scam-decoded/` is a second brand (scam and identity-theft
+explainers) with Shorts, 60–90s TikTok cuts routed by platform, carousels and a printable product; turn any of
+its content files into a postable folder with
+`factory launch-pack launch/scam-decoded/content.json --brand scam-decoded --out dist/scam-decoded`.
 
 ## Website and email funnel
 
