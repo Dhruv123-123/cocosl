@@ -9,6 +9,7 @@ export const LAUNCH = '2026-11-16';
 export const releases = {
   '': LAUNCH, 'free/': LAUNCH, 'free/thanks/': LAUNCH, 'compare/': LAUNCH, 'about/': LAUNCH, 'q4/': LAUNCH, 'rate-calculator/': LAUNCH, 'how-we-make-money/': LAUNCH,
   ...Object.fromEntries(pages.map((p) => [`compare/${p.slug}/`, p.published])),
+  'invoice-template/': '2026-12-07',
   'mileage/': '2026-12-21',
   'deduction-finder/': '2026-12-28',
 };

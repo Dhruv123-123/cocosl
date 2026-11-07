@@ -77,6 +77,10 @@ export default {
     stride: { url: 'https://REPLACE_ME/stride' },
   },
 
+  // Other free tools, linked from the invoice template once deployed. The invoice tracker is its own
+  // Netlify site (apps/freelance-invoices, PR #8): paste its URL here. Hidden while it contains REPLACE_ME.
+  tools: { invoiceTracker: 'https://REPLACE_ME.netlify.app/' },
+
   // Sponsors, listed on how-we-make-money/. Add a name only once a deal is signed; label every sponsored post.
   disclosures: { sponsors: [] },
 

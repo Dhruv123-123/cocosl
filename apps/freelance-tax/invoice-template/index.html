@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Freelance Invoice Template: Fill In, Print or Save as PDF | 1099 Money</title>
+<meta name="description" content="Free freelance invoice template you fill in online: line items, due date from your payment terms, deposit paid, late fee line and payment instructions. Print or save as a PDF. No sign-up, nothing leaves your browser.">
+<link rel="canonical" href="https://1099money.netlify.app/invoice-template/">
+<meta property="og:title" content="Free freelance invoice template (fill in, save as PDF)">
+<meta property="og:description" content="Fill it in, check it has everything a client needs to pay you, then print or save as a PDF.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://1099money.netlify.app/invoice-template/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#14213d">
+<link rel="stylesheet" href="../style.css">
+<style>
+.items{width:100%;border-collapse:collapse}.items td{padding:2px}.items input{width:100%}.items .q{width:4.5em}.items .r{width:6.5em}
+.items button{padding:2px 8px}.ready{margin:.5rem 0 0;padding-left:1.2rem}.ready li{color:#a33}.ok{color:#1b7a5a;font-weight:600}
+.sheet{background:#fff;color:#14213d;border:1px solid #ddd;border-radius:8px;padding:28px;font-size:.95rem;overflow-wrap:anywhere}
+.sheet h2{margin:0 0 .25rem;font-size:1.6rem;letter-spacing:.04em}.sheet .meta{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+.sheet table{width:100%;border-collapse:collapse;margin:12px 0}.sheet th,.sheet td{text-align:left;padding:6px 4px;border-bottom:1px solid #eee}
+.sheet .n{text-align:right;white-space:nowrap}.sheet .total td{font-weight:700;border-bottom:none;font-size:1.05rem}
+.sheet .small{font-size:.85rem;color:#444;white-space:pre-line}
+@media print{header,footer,.signup-box,.faq,#inv-form,.no-print,.lede,h1{display:none!important}.layout{display:block}.sheet{border:none;padding:0}body{background:#fff}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Free freelance invoice template","url":"https://1099money.netlify.app/invoice-template/","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What should a freelance invoice include?","acceptedAnswer":{"@type":"Answer","text":"Your name or business and contact details, the client's name, a unique invoice number, the invoice date, a due date written as a date, an itemized description of the work with quantities and rates, the total due, and how to pay you. Add your late-fee terms if your contract has them."}},{"@type":"Question","name":"How should I number my invoices?","acceptedAnswer":{"@type":"Answer","text":"Use a simple sequence that never repeats, such as the year and a running number (2027-001, 2027-002). Each invoice gets its own number so you and the client can refer to it and match it to a payment."}}]}</script>
+</head>
+<body>
+<header class="top"><a class="logo" href="../"><span class="mark">1M</span> <span data-brand>1099 Money</span></a>
+<nav class="nav"><a href="../">Calculator</a><a href="../mileage/">Driver mileage</a><a href="../compare/">Compare tools</a><a href="../free/">Free calendar</a></nav></header>
+<main>
+
+<h1>Free freelance invoice template</h1>
+<p class="lede">Fill it in, check it has everything a client needs to pay you, then print it or save it as a PDF. No sign-up. What you type stays in this browser.</p>
+
+<div class="layout">
+  <form id="inv-form" class="card" autocomplete="off" onsubmit="return false">
+    <h2>From</h2>
+    <div class="grid">
+      <label>Your name or business<input name="fromName" maxlength="80"></label>
+      <label>Email<input name="fromEmail" type="email" maxlength="120"></label>
+      <label>Address or city (optional)<input name="fromAddr" maxlength="160"></label>
+    </div>
+    <h2>Bill to</h2>
+    <div class="grid">
+      <label>Client name or company<input name="toName" maxlength="80"></label>
+      <label>Contact or accounts payable email (optional)<input name="toEmail" maxlength="120"></label>
+      <label>PO number, if they gave you one<input name="po" maxlength="40"></label>
+    </div>
+    <h2>Invoice</h2>
+    <div class="grid">
+      <label>Invoice number<input name="number" maxlength="30" placeholder="2027-001"></label>
+      <label>Invoice date<input name="issued" type="date"></label>
+      <label>Payment terms<select name="terms"><option value="receipt">Due on receipt</option><option value="net7">Net 7</option><option value="net15" selected>Net 15</option><option value="net30">Net 30</option></select></label>
+    </div>
+    <h2>Work</h2>
+    <table class="items" id="items"><thead><tr><th>Description</th><th>Qty / hours</th><th>Rate ($)</th><th></th></tr></thead><tbody></tbody></table>
+    <p><button type="button" id="add-line" class="link">+ Add a line</button></p>
+    <div class="grid">
+      <label>Deposit already paid ($)<input name="deposit" inputmode="decimal" value="0"></label>
+      <label>Sales tax (%)<input name="taxRate" inputmode="decimal" value="0"><small>Most freelance services aren't taxed. Check your state.</small></label>
+      <label>Late fee, % per month (only if your contract says so)<input name="lateFee" inputmode="decimal" value="0"></label>
+      <label>How to pay you<textarea name="payHow" rows="3" maxlength="400" placeholder="Pay online: [payment link]&#10;or ACH to: [bank, account and routing number]"></textarea></label>
+      <label>Note (optional)<input name="note" maxlength="200" placeholder="Thank you for the work together."></label>
+    </div>
+    <div id="check" aria-live="polite"></div>
+    <p class="no-print"><button type="button" id="print" class="btn">Print or save as PDF</button> <button type="button" id="next" class="link">Start the next invoice</button></p>
+  </form>
+  <section aria-label="Invoice preview"><div class="sheet" id="sheet"></div><div id="more" class="no-print"></div></section>
+</div>
+
+<section class="card signup-box">
+  <h2>Free: the 2027 Freelancer Tax Calendar</h2>
+  <p class="signup-pitch"></p>
+  <form class="signup" name="tax-calendar" method="POST" action="../free/thanks/" data-thanks="../free/thanks/" data-netlify="true" netlify-honeypot="website">
+    <input type="hidden" name="form-name" value="tax-calendar"><input type="hidden" name="source" value="invoice-template">
+    <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <label class="sr" for="signup-email">Email</label>
+    <input id="signup-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+    <button class="btn">Send me the calendar</button>
+  </form>
+  <p class="tiny">Deadline reminders plus one short email a week. Unsubscribe in one click.</p>
+</section>
+
+<section class="faq"><h2>Freelance invoices that get paid</h2>
+<h3>What does a freelance invoice need?</h3><p>Your name or business and an email, the client's name, a unique invoice number, the invoice date, a due date, a line for each piece of work with the quantity and rate, the total due, and how to pay you. If your contract has a late fee, repeat it on the invoice. The checklist next to the form tells you what's still missing.</p>
+<h3>Why does the due date show as a date?</h3><p>"Net 30" makes someone count from a date they may not have in front of them. "Due July 1, 2027" doesn't. The template works out the date from your terms and prints both.</p>
+<h3>How should I number invoices?</h3><p>Pick a pattern that never repeats, such as the year and a running number: 2027-001, 2027-002. "Start the next invoice" keeps your details and moves to the next number.</p>
+<h3>Can I add a late fee?</h3><p>Only if the client agreed to it before the work, usually in your contract or proposal. Putting it on the invoice reminds them; it doesn't create the agreement. Some states limit how much you can charge, so check yours. This isn't legal advice.</p>
+<h3>Do I charge sales tax?</h3><p>Most states don't tax most freelance services, but some tax many of them, and digital products have their own rules. Leave it at 0 unless your state's revenue department says your service is taxable and you're registered to collect it.</p>
+<h3>What happens to my data?</h3><p>Nothing is sent anywhere. Your details are kept in this browser so the form is filled in next time; clear your browser data to remove them. Use a private window on a shared computer.</p>
+<p>Setting the rate on that invoice? The free <a href="../rate-calculator/">rate calculator</a> works back from the take-home you want. Choosing software to send invoices for you? See the <a href="../compare/invoicing-tools/">invoicing tools comparison</a>.</p>
+</section>
+</main>
+<footer>
+<p>Educational tool, not tax or legal advice. Check irs.gov and your state before acting.</p>
+<p>Your numbers stay in your browser; nothing you type is sent anywhere. Some links may be to our own paid products.</p>
+<p><span data-brand>1099 Money</span> · get paid, keep more, never fear April. <a href="../about/">About these pages</a> · <a href="../how-we-make-money/">How we make money</a></p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

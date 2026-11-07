@@ -73,6 +73,21 @@ for (const [name, viewport] of [['desktop', { width: 1280, height: 900 }], ['pho
     console.log(name, 'rate-calculator/', good ? 'ok' : 'FAIL', { big, wide, errors });
     if (shots) await page.screenshot({ path: `${shots}/${name}-rate.png`, fullPage: true });
   }
+  // Invoice template: fill a line, the preview totals it and the checklist updates.
+  await page.goto(url + 'invoice-template/');
+  {
+    await page.fill('input[name=fromName]', 'Sam Lee Design');
+    await page.fill('#items .d', 'Website design');
+    await page.fill('#items .q', '10');
+    await page.fill('#items .r', '75');
+    const total = await page.locator('#sheet .total .n').textContent();
+    const left = await page.locator('#check li').count();
+    const wide = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
+    const good = total === '$750.00' && left === 4 && !wide && !errors.length;
+    if (!good) failed = true;
+    console.log(name, 'invoice-template/', good ? 'ok' : 'FAIL', { total, left, wide, errors });
+    if (shots) await page.screenshot({ path: `${shots}/${name}-invoice.png`, fullPage: true });
+  }
   // Driver mileage page: the result renders from URL inputs and nothing overflows.
   await page.goto(url + 'mileage/?earnings=30000&miles=15000&deliveries=3000');
   {
