@@ -107,3 +107,22 @@ def test_etsy_listings_fit_etsy_and_editions_stay_on_etsy():
         src = build_etsy.etsy_edition(p)
         assert "<strong>RECORTE5</strong>" not in src and "FECHA5" not in src and "INVERTIR5" not in src
         assert "[el enlace de tu tienda]" not in src and "correo de compra" not in src
+
+
+def test_month3_plan_is_complete_and_sends_immigration_questions_to_attorneys():
+    items = json.loads((DS / "content-month-3.json").read_text())
+    fmts = [i["format"] for i in items]
+    assert fmts.count("short") == 14 and fmts.count("carousel") == 8 and fmts.count("long") == 2
+    plan = (DS / "POSTING_PLAN_MONTH_3.md").read_text()
+    review = (DS / "REVIEW_CHECKLIST_MONTH_3.md").read_text()
+    for i in items:
+        assert i["script"]["title"] in plan and i["script"]["title"] in review, i["key"]
+        assert i["script"]["claims_to_verify"], i["key"]
+    rows = lambda text: {(r.split("|")[1].strip(), r.split("|")[2].strip()) for r in text.splitlines()  # noqa: E731
+                         if r.startswith("| ") and "feb" in r}
+    assert rows(plan) and not (rows(plan) & rows((DS / "POSTING_PLAN_ESTAFAS.md").read_text()))
+    for i in items:
+        cap = i["script"]["caption"]
+        if "inmigra" in cap.lower():
+            assert "abogado de inmigración con licencia" in cap, i["key"]
+        assert "notario" not in cap.lower() or "no con un notario" in cap.lower(), i["key"]

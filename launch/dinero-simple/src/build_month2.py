@@ -58,16 +58,18 @@ HIGH_RISK = ("the 2027 filing-season opening date, the Feb 1, 2027 W-2 deadline,
              "the 21-day refund line, and the April 15, 2027 IRA deadline for 2026")
 
 
-def build() -> list[dict]:
+def build(sources: list | None = None, youtube_links: dict | None = None) -> list[dict]:
+    sources = sources if sources is not None else month2_shorts.ITEMS + month2_carousels.ITEMS + month2_long.ITEMS
+    youtube_links = YOUTUBE_LINKS if youtube_links is None else youtube_links
     out = []
-    for it in month2_shorts.ITEMS + month2_carousels.ITEMS + month2_long.ITEMS:
+    for it in sources:
         segs = []
         for heading, on_screen, narration, scene in it["segments"]:
             if len(on_screen.split()) > 12:
                 raise SystemExit(f"{it['key']}: on-screen text over 12 words: {on_screen}")
             segs.append({"heading": heading, "narration": narration, "on_screen_text": on_screen,
                          "visual_prompt": visual(scene)})
-        desc = add_youtube_links(it["description"], it["key"], YOUTUBE_LINKS.get(it["key"], []))
+        desc = add_youtube_links(it["description"], it["key"], youtube_links.get(it["key"], []))
         script = {"title": it["title"], "hook": it["hook"], "segments": segs, "cta": CTA,
                   "caption": it["caption"], "hashtags": it["hashtags"], "description": desc,
                   "thumbnail_text": it["thumbnail_text"], "sources": it["sources"],
@@ -83,15 +85,20 @@ def folder(items: list[dict], key: str) -> str:
     return f"{sub}/{i + 1:02d}-…"
 
 
-def posting_plan(items: list[dict]) -> str:
+def schedule_rows(items: list[dict], schedule: list) -> list[str]:
     by_key = {it["key"]: it for it in items}
-    assert sorted(k for _, _, k in SCHEDULE) == sorted(by_key), "schedule must list every piece exactly once"
+    assert sorted(k for _, _, k in schedule) == sorted(by_key), "schedule must list every piece exactly once"
     rows = []
-    for day, time, key in SCHEDULE:
+    for day, time, key in schedule:
         it = by_key[key]
         tag = " · **producto**" if "Es nuestro producto" in it["script"]["caption"] else ""
         rows.append(f"| {day} | {time} | {WHERE[it['format']]} | {folder(items, key)} | {it['format']} | "
                     f"{it['script']['title']}{tag} |")
+    return rows
+
+
+def posting_plan(items: list[dict]) -> str:
+    rows = schedule_rows(items, SCHEDULE)
     counts = {f: sum(1 for i in items if i["format"] == f) for f in ("short", "carousel", "long")}
     return f"""# Dinero Simple: month 2 posting plan (January 2027)
 
@@ -110,12 +117,12 @@ Source: `launch/dinero-simple/content-month-2.json`. Folder numbers match the re
 """ + "\n".join(rows) + "\n"
 
 
-def review_checklist(items: list[dict]) -> str:
-    parts = [f"""# Dinero Simple month 2: review checklist
+def review_checklist(items: list[dict], month: int = 2, high_risk: str = HIGH_RISK) -> str:
+    parts = [f"""# Dinero Simple month {month}: review checklist
 
-Nothing in `content-factory/dinero-simple/month-2/` goes out until both boxes for that piece are ticked: a fluent Spanish speaker has read every word (on screen, caption, narration) and fixed anything that sounds translated, and every fact listed under it has been checked against its source. Each folder's `caption.txt` has the same facts under CHECK BEFORE POSTING.
+Nothing in `content-factory/dinero-simple/month-{month}/` goes out until both boxes for that piece are ticked: a fluent Spanish speaker has read every word (on screen, caption, narration) and fixed anything that sounds translated, and every fact listed under it has been checked against its source. Each folder's `caption.txt` has the same facts under CHECK BEFORE POSTING.
 
-Highest-risk facts this month (check these first): {HIGH_RISK}. Tax rules and dates change every year; check irs.gov the week you post.
+Highest-risk facts this month (check these first): {high_risk}. Tax rules and dates change every year; check irs.gov the week you post.
 """]
     names = {"short": "Shorts", "carousel": "Carousels", "long": "Long videos"}
     last = None
