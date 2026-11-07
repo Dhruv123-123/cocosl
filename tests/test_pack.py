@@ -235,3 +235,33 @@ def test_month1_tiktok_long_cuts():
         cut = [s["narration"] for s in tiktok_segments(it)]
         assert 65 <= est_seconds(cut) <= 90
         assert cut[-1] == it["script"]["segments"][-1]["narration"]
+
+
+BASICS = ROOT / "launch" / "money-made-simple" / "youtube-money-basics" / "content.json"
+
+
+def test_money_basics_series_parts_are_long_form_and_tagged():
+    import re
+    from urllib.parse import parse_qs, urlparse
+    from contentfactory.guardrails import HYPE_PATTERNS, TESTIMONIAL_PATTERNS
+    items = _items(BASICS)
+    others = {i["script"]["title"].lower() for p in MONTHS + [EVERGREEN, SERIES] for i in _items(p)}
+    assert [i["series_part"] for i in items] == list(range(1, len(items) + 1)) and len(items) >= 4
+    for it in items:
+        sc = it["script"]
+        words = sum(len(s["narration"].split()) for s in sc["segments"])
+        assert 1200 <= words <= 1800, (sc["title"], words)
+        assert sc["title"].lower() not in others
+        assert sc["segments"][0]["narration"].split()[0] == sc["hook"].split()[0]  # the spoken open is the hook
+        assert any(ch.isdigit() for ch in sc["hook"])
+        links = re.findall(r"https://\S+", sc["description"])
+        assert len(links) >= 3
+        for u in links:
+            q = parse_qs(urlparse(u).query)
+            assert q["utm_campaign"] == [it["content_id"]] and it["content_id"].startswith("yt-basics-")
+        assert "AI tools" in sc["description"]
+        if "/compare/" in sc["description"]:
+            assert "commission" in sc["description"]
+        text = " ".join([sc["hook"], sc["caption"], sc["description"]] + [s["narration"] for s in sc["segments"]])
+        for pat in HYPE_PATTERNS + TESTIMONIAL_PATTERNS:
+            assert not re.search(pat, text, re.I), (sc["title"], pat)

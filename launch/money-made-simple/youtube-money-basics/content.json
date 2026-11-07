@@ -1,0 +1,520 @@
+[
+ {
+  "format": "long",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A fictional $55,000 salary's every-two-weeks pay stub, read top to bottom: gross pay, pre-tax deductions, FICA, federal and state withholding, net pay, and the year-to-date column, plus how to check your withholding.",
+  "series": "money-basics",
+  "series_part": 1,
+  "content_id": "yt-basics-01",
+  "search_terms": [
+   "how to read a pay stub",
+   "pay stub explained",
+   "paycheck deductions explained",
+   "gross vs net pay"
+  ],
+  "thumbnail_alt": "Every pay stub line",
+  "script": {
+   "title": "How to Read Your Pay Stub: Every Line Explained",
+   "hook": "$2,115 on the offer letter's math. $1,528 in the bank. Let's read every line of the pay stub in between.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "$2,115 on the offer letter's math. $1,528 in the bank. Let's read every line of the pay stub in between. If you've ever looked at your first paycheck and wondered where a quarter of it went, this video is for you. We're going to read a pay stub top to bottom, using a fictional example: someone earning fifty-five thousand dollars a year, paid every two weeks. Every line has a reason, and once you know what each one means, you can spot mistakes, check that your benefits are set up right, and know exactly what you have to budget with. Grab your own most recent pay stub if you can. Most employers put them in a payroll app or website. You'll get more out of this if you follow along with your real numbers.",
+     "on_screen_text": "Every line of your pay stub",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding up a long paper pay stub with a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "The top: who, when and how much",
+     "narration": "Start at the top. You'll see your name, your employer, and usually the last few digits of your Social Security number. Check those are right. Then the pay period, which is the two weeks this check covers, and the pay date, when the money actually lands. Next to that you'll often see your pay rate. For a salaried worker on fifty-five thousand, paid every two weeks, that's fifty-five thousand divided by twenty-six paychecks: two thousand one hundred fifteen dollars and thirty-eight cents. For hourly workers, you'll see hours times rate instead, plus any overtime at time and a half. If the hours look wrong, this is where you catch it. Payroll mistakes happen, and the person who catches them is usually you.",
+     "on_screen_text": "$55,000 ÷ 26 = $2,115.38",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the top of a pay stub with a name, dates and a small calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Gross pay",
+     "narration": "The first big number is gross pay. That's what you earned before anything came out: two thousand one hundred fifteen dollars in our example. It's the number your salary is based on, and it's the number people quote when they talk about income. But you can't spend gross pay. Think of it as the whole pie before anyone takes a slice. Everything below this line on the stub is a slice. Some slices are your choice, like retirement savings. Some are required, like taxes. And some, like health insurance, are a mix: you chose the plan, but the cost is set. Let's go through them in the order most stubs list them, starting with the ones that come out before tax.",
+     "on_screen_text": "Gross: $2,115.38",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a whole pie with a coin on top. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pre-tax deductions",
+     "narration": "Pre-tax deductions come out before income tax is calculated, which means they lower the income you're taxed on. The two most common are retirement contributions and health insurance. In our example, six percent goes to a traditional 401(k). Six percent of two thousand one hundred fifteen is one hundred twenty-six dollars and ninety-two cents. Health, dental and vision premiums come to eighty-five dollars. Here's a detail most people miss. The 401(k) contribution lowers your income tax, but not your Social Security and Medicare tax. Health premiums taken through your employer's plan usually lower both. So on our stub, income tax is calculated on about one thousand nine hundred and three dollars, while Social Security and Medicare are calculated on about two thousand and thirty.",
+     "on_screen_text": "401(k) $126.92 · health $85",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two slices cut from the pie before a tax label. No text, no logos, no real people."
+    },
+    {
+     "heading": "Social Security and Medicare",
+     "narration": "Next is FICA, which is Social Security and Medicare together. Social Security is six point two percent and Medicare is one point four five percent, so seven point six five percent combined. These fund the programs you'll draw from later in life. On our stub, seven point six five percent of about two thousand and thirty dollars is about one hundred fifty-five dollars. Two things to know. Social Security stops being taken once your wages for the year pass a yearly limit, which is well above most people's pay. And very high earners pay an extra Medicare tax above two hundred thousand dollars. For almost everyone watching, though, it's a flat seven point six five percent, every paycheck, and it isn't something you can change with a form.",
+     "on_screen_text": "FICA: 7.65% ≈ $155",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two small jars labelled with a shield and a cross. No text, no logos, no real people."
+    },
+    {
+     "heading": "Federal income tax withholding",
+     "narration": "Then federal income tax. This line is different from the others because it's an estimate. Your employer withholds an amount based on the W-4 form you filled out when you started, and the goal is to come close to the tax you'll actually owe for the year. In our example it's about one hundred fifty dollars. If too much is withheld, you get the extra back as a refund when you file. If too little, you owe in April. A big refund feels nice, but it means you lent the government your money for free all year. A big bill can be a shock. The aim is somewhere close to zero. And unlike FICA, you control this one, by updating your W-4 any time.",
+     "on_screen_text": "Federal withholding ≈ $150",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a small dial on it. No text, no logos, no real people."
+    },
+    {
+     "heading": "State and local taxes",
+     "narration": "Next, state income tax, and in some places local or city tax too. In our example, about seventy dollars goes to state tax. If you live in a state with no income tax, this line won't be there. Some states also take small amounts for things like disability insurance or paid family leave. If you moved states this year, or you live in one state and work in another, check that the right state is listed. That's one of the most common payroll errors, and it can mean filing in two states to sort it out. If you work remotely, make sure your employer has your home address, not just the office address.",
+     "on_screen_text": "State ≈ $70 (varies by state)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a map with a small coin on one state. No text, no logos, no real people."
+    },
+    {
+     "heading": "Net pay",
+     "narration": "Now subtract everything. Two thousand one hundred fifteen, minus one hundred twenty-seven to the 401(k), minus eighty-five for health insurance, minus one hundred fifty-five in Social Security and Medicare, minus about one hundred fifty federal and seventy state. That leaves about one thousand five hundred and twenty-eight dollars. That's net pay, your take-home, and it's about seventy-two percent of gross. This is the number your budget runs on. Paid every two weeks? Multiply by twenty-six and divide by twelve for a monthly figure: about three thousand three hundred and ten dollars. Not two paychecks times two. Twenty-six divided by twelve. That small difference is why two months a year feel richer than the rest.",
+     "on_screen_text": "Net ≈ $1,528 · ≈ $3,310/month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small coin stack left after the pie is sliced. No text, no logos, no real people."
+    },
+    {
+     "heading": "The year-to-date column",
+     "narration": "Most stubs have a second column labelled YTD, for year to date. It adds up every line since January. This column is quietly useful. It's how you check whether you're on track to hit your 401(k) goal for the year, or whether you're near the Social Security wage limit if you earn a lot. It's also a good mistake detector. If your YTD federal tax is zero halfway through the year, something is wrong with your W-4. And when you change jobs mid-year, the YTD totals from both employers tell you whether you've over-contributed to retirement or overpaid Social Security, which can happen with two employers.",
+     "on_screen_text": "YTD = since January 1",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a second column of numbers with a small calendar on top. No text, no logos, no real people."
+    },
+    {
+     "heading": "Check your withholding",
+     "narration": "Here's the ten-minute task that turns this video into money. Go to the IRS Tax Withholding Estimator on IRS dot gov. It's free and it doesn't need your Social Security number. Have this pay stub and last year's tax return open. Enter your pay, your YTD withholding, and any other income, like a side hustle. The tool tells you whether you're on track for a refund or a bill, and exactly what to put on a new W-4 if you want to change it. Then give the new W-4 to HR, or update it in your payroll app. Do this after any big change: a new job, a raise, marriage, a baby, or starting side income. And do it once a year anyway.",
+     "on_screen_text": "IRS Tax Withholding Estimator",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop showing a simple form and a check mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Five pay stub mistakes to check",
+     "narration": "Before we wrap up, five things to check on every new stub. One: the wrong pay rate or missing hours. Two: a benefit you didn't choose, or one you did that isn't there, like a 401(k) contribution that never started. Three: the wrong state, especially after a move. Four: your employer match. It may show on the stub or only in your 401(k) account, but it should be arriving. And five: your filing status and allowances, if your stub shows them. If anything looks off, email payroll or HR the same week, and keep a copy. Fixing it early is easy. Fixing it at tax time is not.",
+     "on_screen_text": "5 things to check",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short checklist next to a pay stub. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. Gross pay is what you earn: two thousand one hundred fifteen dollars in our example. Pre-tax deductions, like the 401(k) and health insurance, come out first and lower your taxable income. Social Security and Medicare take seven point six five percent. Federal and state withholding are estimates you can adjust with your W-4. What's left is net pay: about fifteen twenty-eight, or about seventy-two percent. Budget from that, using twenty-six paychecks divided by twelve. Then spend ten minutes with the IRS withholding estimator. The free seven-day money reset in the description starts with finding this exact number. Next in the Money Basics series: where your money should live, checking, savings and everything in between.",
+     "on_screen_text": "Gross → deductions → net",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a neatly folded pay stub, smiling. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Every line on your pay stub, explained with a fictional $55,000 salary: gross pay, 401(k), health insurance, FICA, withholding, and the $1,528 that actually lands.\n\nExamples are hypothetical and for education only. Not financial or tax advice.",
+   "hashtags": [
+    "paystub",
+    "paycheck",
+    "taxes",
+    "firstjob",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "How to read your pay stub, line by line. We walk through a fictional $55,000 salary paid every two weeks: gross pay, pre-tax 401(k) and health deductions, Social Security and Medicare, federal and state withholding, net pay and the year-to-date column, then check withholding with the free IRS estimator.\n\nChapters\n0:00 Intro\n0:55 The top: who, when and how much\n1:45 Gross pay\n2:35 Pre-tax deductions\n3:26 Social Security and Medicare\n4:19 Federal income tax withholding\n5:10 State and local taxes\n5:56 Net pay\n6:44 The year-to-date column\n7:27 Check your withholding\n8:18 Five pay stub mistakes to check\n9:03 Recap\n\nLinks\nFind your real take-home: how to make a budget you'll keep: https://moneymadesimple.netlify.app/blog/how-to-make-a-budget-you-will-keep/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-01\nExample budget on a $55,000 salary: https://moneymadesimple.netlify.app/budget/55000-salary/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-01\n401(k) match explained: https://moneymadesimple.netlify.app/blog/401k-match-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-01\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-01\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script written and fact-checked by a human.",
+   "thumbnail_text": "Where did my paycheck go?",
+   "sources": [
+    "https://www.irs.gov/individuals/tax-withholding-estimator",
+    "https://www.irs.gov/taxtopics/tc751",
+    "https://www.ssa.gov/oact/cola/cbb.html"
+   ],
+   "claims_to_verify": [
+    "$55,000 ÷ 26 = $2,115.38",
+    "FICA 6.2% + 1.45% = 7.65%; 7.65% × ($2,115.38 − $85) ≈ $155.32",
+    "Section 125 health premiums generally reduce FICA wages; traditional 401(k) does not",
+    "2115.38 − 126.92 − 85 − 155.32 − 150 − 70 ≈ 1,528",
+    "1,528 × 26 ÷ 12 ≈ 3,311",
+    "Additional Medicare tax 0.9% above $200,000"
+   ],
+   "title_variants": [
+    "Where Did My Paycheck Go? Every Pay Stub Line, Explained",
+    "Your First Pay Stub, Line by Line ($2,115 Example)"
+   ],
+   "hook_variants": [
+    "Your paycheck is about 28% smaller than your salary math. Here's every line that takes a slice.",
+    "Most people never read their pay stub. Ten minutes with it can save you hundreds a year."
+   ]
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Screen recording of the free IRS Tax Withholding Estimator filled in with the video's fictional $55,000 pay stub, showing the refund-or-owe result and the W-4 suggestion",
+   "chapter": "Check your withholding"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A money map for a fictional $8,000: which dollars belong in checking, high-yield savings, a money market account, a CD or a brokerage account, and the insurance and access rules behind each choice.",
+  "series": "money-basics",
+  "series_part": 2,
+  "content_id": "yt-basics-02",
+  "search_terms": [
+   "checking vs savings",
+   "money market account vs savings",
+   "what is a cd",
+   "where to keep money"
+  ],
+  "thumbnail_alt": "$8,000 money map",
+  "script": {
+   "title": "Checking, Savings, Money Market or CD? Where Your Money Should Live",
+   "hook": "Got $8,000 sitting in checking? Let's map where each dollar should actually live, in 5 accounts.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Got eight thousand dollars sitting in checking? Let's map where each dollar should actually live, in five accounts. A lot of people keep everything in one checking account because it's easy. That works, until it doesn't: the emergency fund gets spent on a weekend away, or thousands sit earning almost nothing. Today we'll look at the five places most people keep money, what each is good at, and the one question that decides where a dollar goes: when will I need it? We'll sort a fictional eight thousand dollars as we go. By the end you'll have a simple money map you can copy, and you'll know the safety rules that matter, like what insurance actually covers.",
+     "on_screen_text": "5 accounts · 1 question",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing at a small crossroads with five signposts. No text, no logos, no real people."
+    },
+    {
+     "heading": "The one question: when do you need it?",
+     "narration": "Every account trades off three things: how fast you can get the money, how much it earns, and how much risk it carries. You can't have all three at the top. Checking is instant but earns little. A CD earns more but locks money away. Investments can grow the most but can drop in value. So instead of asking which account is best, ask when you'll need each dollar. This week? Checking. In an emergency, any day? Savings you can reach in a day or two. On a known date next year? A CD might fit. Not for five years or more? That's where investing comes in. Time is the sorting rule.",
+     "on_screen_text": "Need it when?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a timeline with a small calendar, a clock and a growing plant. No text, no logos, no real people."
+    },
+    {
+     "heading": "Checking: the hub",
+     "narration": "Checking is your hub. Paychecks land here, bills and your debit card come out of here. It's built for movement, not for growing money, so most checking accounts pay little or no interest. How much should it hold? A simple rule: one month of bills and spending, plus a small cushion, maybe a few hundred dollars, so a bill that comes early doesn't overdraw you. In our example, monthly bills and spending are about two thousand five hundred, plus a five-hundred-dollar cushion. So three thousand stays in checking. Everything above that is doing nothing in checking and should move. And look for a checking account with no monthly fee, which most online banks and many credit unions offer.",
+     "on_screen_text": "Checking: 1 month + cushion = $3,000",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a central hub with arrows coming in and going out. No text, no logos, no real people."
+    },
+    {
+     "heading": "High-yield savings: the emergency fund",
+     "narration": "Next, a high-yield savings account. This is where your emergency fund lives. It pays much more interest than a typical big-bank savings account, the money is still easy to reach, usually within a day or two, and it's federally insured at an insured bank. That slight delay is actually a feature. It's just far enough away that you won't spend it on a whim, but close enough for a real emergency. In our example, three thousand five hundred goes here. That's the starter emergency fund, working toward three months of essentials. Keep it at a different bank from your checking if that helps you leave it alone. Rates change, so compare a few, and avoid accounts with monthly fees.",
+     "on_screen_text": "High-yield savings: $3,500",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a shield and a small upward arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Money market accounts",
+     "narration": "A money market account is a cousin of savings. It's a bank or credit union deposit account, insured the same way, and it often pays similar interest to a high-yield savings account. The difference is that some money market accounts let you write checks or use a debit card, and some need a higher minimum balance. They're useful if you want a savings-like rate but occasionally need to pay a big bill straight from the account. One thing to watch: a money market account is not the same as a money market fund. A fund is an investment you buy through a brokerage. It's generally low risk, but it isn't covered by bank deposit insurance. Same name, different product.",
+     "on_screen_text": "Account (insured) ≠ fund (investment)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two similar boxes, one with a shield, one without. No text, no logos, no real people."
+    },
+    {
+     "heading": "CDs: money with a date",
+     "narration": "A certificate of deposit, or CD, is a deal: you leave money with the bank for a set time, like six months or a year, and they pay a fixed rate. It's insured like savings. CDs fit money you'll need on a known date: a car you'll buy next spring, or tuition due in August. You lock in the rate even if rates fall. The catch is the early withdrawal penalty, often a few months of interest, if you take it out before the date. So never put your emergency fund in a CD. In our example, one thousand dollars set aside for a trip next year goes into a one-year CD. Some people build a ladder of CDs with different end dates so money comes free regularly.",
+     "on_screen_text": "CD: $1,000 · known date",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small safe with a calendar on the door. No text, no logos, no real people."
+    },
+    {
+     "heading": "Brokerage and retirement: the long-term money",
+     "narration": "The fifth place is for money you won't need for at least five years: retirement accounts like a 401(k) or IRA, and a regular brokerage account. This is where investing happens, in things like broad index funds. Over long periods, diversified investments have historically grown more than savings accounts, but they can drop sharply along the way, sometimes for years, and there are no promises. That's why only long-term money belongs here. In our example, the last five hundred dollars opens a Roth IRA, invested in a target-date fund. And if this person's job offers a 401(k) match, that comes first. Brokerage accounts aren't covered by bank deposit insurance, though SIPC protects you if the brokerage itself fails, not against market losses.",
+     "on_screen_text": "5+ years → invest: $500",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small plant growing out of a coin jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "The money map",
+     "narration": "Here's the whole map for our eight thousand dollars. Three thousand in checking: one month of bills and spending plus a cushion. Three thousand five hundred in high-yield savings: the emergency fund. One thousand in a one-year CD: the trip fund with a fixed date. Five hundred in a Roth IRA: long-term money. Notice the logic. Money you need soonest sits in the most accessible place. Money you won't touch for decades sits where it can grow. And every dollar has a job. If your numbers are smaller, the map still works. It just has fewer boxes. The first box is always checking with a cushion, and the second is always an emergency fund.",
+     "on_screen_text": "$3,000 · $3,500 · $1,000 · $500",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple map with four labelled boxes and arrows. No text, no logos, no real people."
+    },
+    {
+     "heading": "Is my money safe? FDIC and NCUA",
+     "narration": "Now safety. At an FDIC-insured bank, deposits are insured up to two hundred fifty thousand dollars per depositor, per bank, per ownership category. Credit unions have the same level of coverage through the NCUA. That covers checking, savings, money market accounts and CDs. It does not cover investments like stocks, funds or crypto, even if you buy them through a bank's app. A few practical checks. Use the FDIC's BankFind tool to confirm a bank is insured. With some apps, your money is held at a partner bank, so check which one. And if you ever hold more than two hundred fifty thousand dollars, spread it across banks or ownership categories. For most people, the limit is far above what they hold.",
+     "on_screen_text": "$250,000 per depositor, per bank, per category",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bank building with a large shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Labels and automatic transfers",
+     "narration": "Two tricks make the map work on autopilot. First, labels. Many banks let you open several savings accounts or buckets and name them: emergency, car, trip, gifts. Named money is much harder to spend by accident than a lump sum called savings. Second, automatic transfers. Set a transfer from checking to each bucket for the day after payday. Then the map refills itself. If your bank charges for extra accounts, a simple spreadsheet tracking how much of one savings account belongs to each goal works too. Check in once a month to make sure every transfer ran.",
+     "on_screen_text": "Name it · automate it",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. small labelled jars filling from one tap. No text, no logos, no real people."
+    },
+    {
+     "heading": "Common mistakes",
+     "narration": "A few mistakes to avoid. Keeping your emergency fund in checking, where it slowly gets spent. Putting it in investments, where it might be down twenty percent the week you need it. Locking it in a CD with a penalty. Chasing tiny rate differences by moving banks every few months, which usually isn't worth the hassle for small balances. Paying monthly fees, which can wipe out the interest you earn. And forgetting about old accounts. If you've got a forgotten savings account from college, check it's still yours, and consider consolidating. Simple and boring is the goal here.",
+     "on_screen_text": "6 money-map mistakes",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a few small warning signs around a map. No text, no logos, no real people."
+    },
+    {
+     "heading": "On camera: set up your first two boxes",
+     "narration": "Let's finish with the part that matters most: doing it. This chapter is filmed on camera, with the host setting up two boxes in a real banking app, with balances and account numbers blurred. Step one: open a second savings account or bucket and name it emergency fund. Step two: schedule a recurring transfer from checking for the day after payday. Even twenty-five dollars is fine to start. Step three: write your checking cushion number on a sticky note, so you know when there's extra to move. That's it. Setting up just these two boxes this week beats planning a perfect five-account system you never start. Next in the Money Basics series: how interest really works, APR, APY and compounding, with the numbers on screen.",
+     "on_screen_text": "Set up 2 boxes this week",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a host's desk with a phone and two labelled jars. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Checking, high-yield savings, money market, CD or investing? We sort a fictional $8,000 by when it's needed, plus the FDIC rules that keep it safe.\n\nExamples are hypothetical and for education only. Not financial advice.",
+   "hashtags": [
+    "savingsaccount",
+    "checkingaccount",
+    "emergencyfund",
+    "personalfinance",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Checking, savings, money market accounts, CDs and investing accounts explained with a simple money map. We sort a fictional $8,000 by when it's needed, cover FDIC and NCUA insurance limits, and set up named buckets with automatic transfers.\n\nChapters\n0:00 Intro\n0:48 The one question: when do you need it?\n1:34 Checking: the hub\n2:23 High-yield savings: the emergency fund\n3:12 Money market accounts\n4:01 CDs: money with a date\n4:54 Brokerage and retirement: the long-term money\n5:44 The money map\n6:31 Is my money safe? FDIC and NCUA\n7:21 Labels and automatic transfers\n8:02 Common mistakes\n8:42 On camera: set up your first two boxes\n\nLinks\nHigh-yield savings accounts compared: https://moneymadesimple.netlify.app/compare/best-high-yield-savings-accounts/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-02\nHow to build an emergency fund: https://moneymadesimple.netlify.app/blog/how-to-build-an-emergency-fund/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-02\nRoth vs Traditional IRA: https://moneymadesimple.netlify.app/blog/roth-vs-traditional-ira/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-02\nSinking funds explained: https://moneymadesimple.netlify.app/blog/sinking-funds-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-02\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-02\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script written and fact-checked by a human.",
+   "thumbnail_text": "Where should your money live?",
+   "sources": [
+    "https://www.fdic.gov/resources/deposit-insurance",
+    "https://ncua.gov/consumers/share-insurance-coverage",
+    "https://www.sipc.org/for-investors/what-sipc-protects",
+    "https://www.consumerfinance.gov/consumer-tools/bank-accounts/"
+   ],
+   "claims_to_verify": [
+    "FDIC: $250,000 per depositor, per insured bank, per ownership category",
+    "NCUA same coverage level",
+    "Money market funds are not FDIC-insured",
+    "SIPC covers brokerage failure, not market losses",
+    "3,000 + 3,500 + 1,000 + 500 = 8,000"
+   ],
+   "title_variants": [
+    "Where Should Your Money Live? 5 Accounts, Explained",
+    "Checking vs Savings vs CD: A Simple Money Map"
+   ],
+   "hook_variants": [
+    "Your checking account is probably holding money that should be somewhere else. Here's the map.",
+    "5 places to keep money, one rule for each. Let's sort $8,000."
+   ]
+  },
+  "format_style": "real-numbers",
+  "original_element": {
+   "type": "human-segment",
+   "detail": "The host on camera, setting up a named emergency-fund bucket and a day-after-payday transfer in a real banking app (balances and account numbers blurred)",
+   "chapter": "On camera: set up your first two boxes"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Interest from both sides with numbers worked out on screen: simple vs compound, APR vs APY, daily credit card interest on $3,000, savings at 4%, the rule of 72, and $200 a month for 30 years at an assumed 7%.",
+  "series": "money-basics",
+  "series_part": 3,
+  "content_id": "yt-basics-03",
+  "search_terms": [
+   "apr vs apy",
+   "how compound interest works",
+   "how credit card interest works",
+   "rule of 72"
+  ],
+  "thumbnail_alt": "Interest, both sides",
+  "script": {
+   "title": "APR vs APY and Compound Interest, Explained With Real Numbers",
+   "hook": "24% APR on a credit card actually works out to about 27% a year. Here's how interest really works, from both sides.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "24% APR on a credit card actually works out to about 27% a year. Here's how interest really works, from both sides. Interest is the price of money over time. When you borrow, you pay it. When you save or invest, you earn it. The math is exactly the same in both directions, and once you see it, a lot of financial decisions get simpler: which debt to pay first, whether a savings rate is any good, and why starting to invest early matters so much. We'll do every calculation on screen, with simple numbers, so you can follow along with a calculator. No formulas to memorise. Just four ideas: simple interest, compounding, APR versus APY, and time.",
+     "on_screen_text": "Interest: both sides",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a coin that is split into two halves, one going in and one going out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Simple interest",
+     "narration": "Start with simple interest. You borrow or deposit an amount, called the principal, and interest is a percentage of that principal each year. A thousand dollars at five percent simple interest earns fifty dollars a year. After three years, that's one hundred fifty, and the balance is eleven hundred fifty. The interest never earns interest of its own. Simple interest shows up in some car loans and personal loans, where each payment covers that month's interest first and the rest reduces the principal. It's easy to calculate and predictable. But most savings accounts, investments and credit cards don't work this way. They compound, and that changes everything over time.",
+     "on_screen_text": "$1,000 × 5% = $50 a year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin stack growing by the same small step each year. No text, no logos, no real people."
+    },
+    {
+     "heading": "Compound interest",
+     "narration": "Compound interest means you earn interest on your interest. A thousand dollars at five percent earns fifty in year one, so you have one thousand and fifty. In year two you earn five percent of one thousand and fifty, which is fifty-two fifty. In year three, about fifty-five. The steps keep getting bigger. After ten years, simple interest would give you fifteen hundred. Compounding yearly gives you about sixteen hundred and twenty-nine. After thirty years, it's about forty-three hundred versus twenty-five hundred. Same rate, same starting amount. The only difference is that the interest stays in and works. This is the engine behind long-term saving, and, in reverse, behind debt that seems to grow on its own.",
+     "on_screen_text": "10 yrs: $1,500 simple vs $1,629 compound",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two staircases, one with steps that keep getting taller. No text, no logos, no real people."
+    },
+    {
+     "heading": "APR vs APY",
+     "narration": "Now the two labels you see everywhere. APR is the annual percentage rate. It's the yearly rate before compounding. APY is the annual percentage yield. It's what you actually earn or pay in a year once compounding is included. Banks advertise APY on savings, because it's the bigger number. Lenders advertise APR on loans and cards, because it's the smaller one. The more often interest compounds, the bigger the gap. A savings account at four percent APR compounded daily has an APY of about four point zero eight percent. A small difference. But a credit card at twenty-four percent APR, compounded daily, works out to about twenty-seven point one percent a year if the balance just sits there. That's the gap the hook was about.",
+     "on_screen_text": "4% APR → 4.08% APY · 24% APR → ~27.1%",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two price tags, one slightly bigger than the other. No text, no logos, no real people."
+    },
+    {
+     "heading": "Credit card interest, day by day",
+     "narration": "Here's how a credit card actually charges you. It takes the APR and divides by three hundred sixty-five to get a daily rate. Twenty-four percent divided by three sixty-five is about point zero six six percent a day. On a three-thousand-dollar balance, that's about one dollar and ninety-seven cents a day, or roughly fifty-nine dollars over a thirty-day month. And each day's interest is added to the balance, so tomorrow's interest is calculated on a slightly bigger number. The good news: most cards have a grace period. If you pay the full statement balance by the due date every month, you usually pay no interest on purchases at all. The interest only starts when you carry a balance.",
+     "on_screen_text": "$3,000 × 24% ÷ 365 ≈ $1.97/day",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small calendar with one coin dropping each day. No text, no logos, no real people."
+    },
+    {
+     "heading": "The minimum payment trap",
+     "narration": "That's why minimum payments are so expensive. Many cards set the minimum at roughly one percent of the balance plus that month's interest, with a floor of around twenty-five to forty dollars. On our three thousand dollars, the first minimum might be about ninety dollars, and almost sixty of that is interest. As the balance falls, the minimum falls too, so you pay less and less principal and it drags on for years. Your statement is required to show how long minimum-only payments would take and what they'd cost in total. Look for that box. Paying a fixed amount instead, say two hundred a month on that three thousand, clears it in about a year and a half instead of many years.",
+     "on_screen_text": "Min ≈ $90 · ~$60 is interest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin stack shrinking very slowly on a long path. No text, no logos, no real people."
+    },
+    {
+     "heading": "Interest working for you: savings",
+     "narration": "Now the good side. Put five thousand dollars in a high-yield savings account at four percent APY and you earn about two hundred dollars in the first year, with no risk to the balance at an insured bank. In a typical account paying zero point zero one percent, the same five thousand earns about fifty cents. Same money, same safety, wildly different result. Rates on savings change as interest rates in the economy change, so four percent won't last forever. But the gap between a good savings account and a poor one has been large for years. If your emergency fund is in an account earning almost nothing, moving it is one of the easiest wins in personal finance.",
+     "on_screen_text": "$5,000 × 4% ≈ $200 vs $0.50",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two jars, one filling much faster than the other. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule of 72",
+     "narration": "Here's a shortcut worth remembering: the rule of seventy-two. Divide seventy-two by an interest rate, and you get roughly how many years it takes money to double. At four percent, seventy-two divided by four is eighteen years. At eight percent, about nine years. It works for debt too, which is the scary part. At twenty-four percent, an unpaid balance roughly doubles in three years. Seventy-two divided by twenty-four. It's an estimate, not exact math, but it's close enough to make quick decisions. Any time you see a rate, try it. It turns a percentage that feels abstract into a number of years you can picture.",
+     "on_screen_text": "72 ÷ rate ≈ years to double",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin splitting into two with a small clock beside it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Time: the biggest number",
+     "narration": "Time is the most powerful number in this whole video. Let's say someone invests two hundred dollars a month, and the investments grow at seven percent a year on average. That rate is an assumption for illustration, not a promise. Real returns go up and down, sometimes by a lot. Over thirty years, two hundred a month is seventy-two thousand dollars put in. At seven percent compounded monthly, the balance would be about two hundred forty-four thousand. Most of that is growth, not deposits. Now start ten years later and invest for twenty years instead: about one hundred four thousand. Waiting ten years cost more than half the ending balance, even though only twenty-four thousand fewer dollars went in.",
+     "on_screen_text": "$200/mo · 30 yrs ≈ $244K · 20 yrs ≈ $104K",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two growth curves, one starting earlier and rising much higher. No text, no logos, no real people."
+    },
+    {
+     "heading": "Putting it together",
+     "narration": "So what do you do with this? Three things. One: pay off high-interest debt first. A credit card at twenty-four percent is costing you more than almost any investment is likely to earn, so every extra dollar there is a strong move. Two: keep your emergency fund somewhere that actually pays interest, like a high-yield savings account at an insured bank. Three: if you're investing for the long term, start as early as you can, even with a small amount, because time does the heavy lifting. And whenever you compare rates, compare APY to APY for savings, and APR to APR for loans, so you're comparing like with like.",
+     "on_screen_text": "Pay high APR · earn high APY · start early",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes pointing at three short steps on a board. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. Simple interest is a flat percentage of the principal. Compound interest earns interest on interest, and the steps get bigger over time. APR is the rate before compounding. APY includes it, so a twenty-four percent card is about twenty-seven percent in practice. Credit cards charge daily, but paying the full statement balance usually means zero interest. The rule of seventy-two tells you roughly how long money, or debt, takes to double. And time is the biggest number of all. The links below go to our high-yield savings comparison and our guide to paying off credit card debt. Next in the Money Basics series: how taxes work, brackets, withholding and refunds, explained without the jargon.",
+     "on_screen_text": "Simple · compound · APR/APY · 72 · time",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to a neat board with five small icons. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "APR vs APY, compound interest, daily credit card interest and the rule of 72, with every number worked out on screen.\n\nExamples are hypothetical and for education only. The 7% return is an assumption, not a promise; investing involves risk. Not financial advice.",
+   "hashtags": [
+    "compoundinterest",
+    "apr",
+    "creditcards",
+    "savings",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "How interest really works, with every number worked out on screen: simple vs compound interest, APR vs APY, how credit cards charge daily interest on a $3,000 balance, savings at 4%, the rule of 72, and why time matters most (illustrated at an assumed 7%).\n\nChapters\n0:00 Intro\n0:48 Simple interest\n1:33 Compound interest\n2:22 APR vs APY\n3:13 Credit card interest, day by day\n4:02 The minimum payment trap\n4:52 Interest working for you: savings\n5:41 The rule of 72\n6:25 Time: the biggest number\n7:14 Putting it together\n7:59 Recap\n\nLinks\nHigh-yield savings accounts compared: https://moneymadesimple.netlify.app/compare/best-high-yield-savings-accounts/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-03\nDebt avalanche vs snowball: https://moneymadesimple.netlify.app/blog/debt-avalanche-vs-snowball/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-03\nHow to start investing with $100 a month: https://moneymadesimple.netlify.app/blog/how-to-start-investing-with-100-a-month/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-03\nBalance transfer cards compared: https://moneymadesimple.netlify.app/compare/best-balance-transfer-cards/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-03\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-03\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script written and fact-checked by a human.",
+   "thumbnail_text": "24% APR = 27%?",
+   "sources": [
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-loans-interest-rate-and-its-apr-en-733/",
+    "https://www.consumerfinance.gov/consumer-tools/credit-cards/",
+    "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"
+   ],
+   "claims_to_verify": [
+    "(1 + 0.04/365)^365 − 1 ≈ 4.08%",
+    "(1 + 0.24/365)^365 − 1 ≈ 27.1%",
+    "3000 × 0.24 ÷ 365 ≈ 1.97/day; × 30 ≈ 59",
+    "1000 × 1.05^10 ≈ 1,629; × 1.05^30 ≈ 4,322",
+    "$200/mo at 7%/12 for 360 months ≈ $244K; 240 months ≈ $104K",
+    "Minimum payment formulas vary by issuer",
+    "$3,000 at 24% paying $200/month ≈ 18 months"
+   ],
+   "title_variants": [
+    "How Interest Actually Works (APR, APY, Compounding)",
+    "Why a 24% Card Really Costs You 27%: Interest Explained"
+   ],
+   "hook_variants": [
+    "Interest is the same math whether you're earning it or paying it. Let's do both on screen.",
+    "$3,000 at 24%: here's exactly what it costs per day, per month and per year."
+   ]
+  },
+  "format_style": "on-screen-calculation",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Two charts built from the video's own numbers: $1,000 at 5% simple vs compound over 30 years, and $200 a month at an assumed 7% starting at year 0 vs year 10",
+   "chapter": "Time: the biggest number"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Myths about income tax checked one by one, built around a fictional $55,000 earner and simplified round-number brackets: the staircase, marginal vs effective rate, deductions vs credits, and why refunds happen.",
+  "series": "money-basics",
+  "series_part": 4,
+  "content_id": "yt-basics-04",
+  "search_terms": [
+   "how tax brackets work",
+   "how income tax works",
+   "marginal vs effective tax rate",
+   "why did i get a tax refund"
+  ],
+  "thumbnail_alt": "The $55,000 tax staircase",
+  "script": {
+   "title": "How Income Tax Works: Brackets, Withholding and Refunds for Beginners",
+   "hook": "Myth: a raise can push you into a higher bracket and shrink your paycheck. Here are 5 tax myths, checked with one $55,000 example.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Myth: a raise can push you into a higher bracket and shrink your paycheck. Here are 5 tax myths, checked with one fifty-five-thousand-dollar example. Income tax confuses almost everyone, and a lot of that confusion costs people money: turning down overtime, panicking about refunds, or missing credits they qualify for. In this video we'll use one fictional person earning fifty-five thousand dollars, and simplified, round-number tax brackets so the math is easy to follow. Real brackets and amounts change every year, so check IRS dot gov for the current ones. The ideas, though, stay the same year after year. We'll go myth by myth, and by the end you'll be able to estimate your own tax on the back of an envelope.",
+     "on_screen_text": "5 tax myths · 1 example",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a simple tax form with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 1: all your income is taxed at your bracket",
+     "narration": "Myth one: if you're in the twenty-two percent bracket, all your income is taxed at twenty-two percent. It isn't. US income tax is a staircase. Each step has its own rate, and only the income on that step is taxed at that rate. For our example, imagine simplified brackets: ten percent on the first twelve thousand dollars of taxable income, twelve percent on income from twelve thousand up to fifty thousand, and twenty-two percent above fifty thousand. Your income fills the steps from the bottom up. The first twelve thousand is taxed at ten percent no matter how much you earn. Only the dollars that reach the top step are taxed at the top rate.",
+     "on_screen_text": "Tax is a staircase, not a single rate",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a staircase with three steps of different colours. No text, no logos, no real people."
+    },
+    {
+     "heading": "Taxable income: the standard deduction",
+     "narration": "Before we climb the stairs, we need taxable income, which is smaller than salary. Start with fifty-five thousand. Subtract pre-tax retirement contributions, say six percent to a traditional 401(k): about thirty-three hundred. Subtract pre-tax health premiums: about twenty-two hundred a year. Then subtract the standard deduction, a flat amount most people take instead of itemizing. For our simplified example, let's use fifteen thousand. Fifty-five thousand, minus thirty-three hundred, minus twenty-two hundred, minus fifteen thousand leaves about thirty-four thousand five hundred of taxable income. That's the number that climbs the staircase, not fifty-five thousand. This alone surprises most people.",
+     "on_screen_text": "$55,000 → ~$34,500 taxable",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a large coin stack shrinking through three filters. No text, no logos, no real people."
+    },
+    {
+     "heading": "Climbing the staircase",
+     "narration": "Now climb. The first twelve thousand dollars at ten percent is twelve hundred dollars of tax. The rest, twenty-two thousand five hundred, sits on the twelve percent step: that's twenty-seven hundred. Our person never reaches the twenty-two percent step at all. Total federal income tax: about thirty-nine hundred dollars. Their top bracket, which is called the marginal rate, is twelve percent. But their effective rate, total tax divided by salary, is about seven percent. Thirty-nine hundred divided by fifty-five thousand. That's a long way from the twenty-two percent people often assume. When someone says their tax rate, ask whether they mean the top step or the average.",
+     "on_screen_text": "$1,200 + $2,700 = $3,900 · ~7% effective",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a staircase with coins on the bottom two steps. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 2: a raise can lower your take-home",
+     "narration": "Myth two: a raise can push you into a higher bracket and lower your take-home pay. Because of the staircase, it can't, at least not through income tax brackets. Say our person gets a raise that pushes taxable income from thirty-four thousand five hundred to fifty-two thousand. The first fifty thousand is still taxed exactly as before. Only the two thousand above fifty thousand is taxed at twenty-two percent, which is four hundred forty dollars. They still keep seventy-eight cents of every one of those top dollars, before state tax and FICA. A raise always means more money after income tax. The only situations where earning more can cost you are things like losing eligibility for some benefits or credits, which is a different issue.",
+     "on_screen_text": "Only the new dollars hit the new step",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a raise arrow going up the staircase, with coins still on the lower steps. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 3: deductions and credits are the same",
+     "narration": "Myth three: deductions and credits are the same thing. They're not, and the difference is big. A deduction lowers your taxable income. If you're on the twelve percent step, a one-thousand-dollar deduction saves you about one hundred twenty dollars. A credit lowers your tax bill directly, dollar for dollar. A one-thousand-dollar credit saves you a thousand dollars. Some credits are even refundable, which means you can get money back even if you owe no tax. Examples of credits include the child tax credit, the earned income tax credit and education credits. Rules and amounts change, so check IRS dot gov. But when you hear credit, think dollar for dollar.",
+     "on_screen_text": "Deduction: −taxable income · credit: −tax",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two tools, one a pair of scissors and one an eraser. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 4: a refund is a bonus",
+     "narration": "Myth four: a big refund means you did taxes well. A refund just means more was withheld from your paychecks during the year than you actually owed. Your employer withholds tax based on your W-4, and at filing time you settle up. Our person owes about thirty-nine hundred in federal tax. If thirty-four hundred was withheld, they'll owe five hundred when they file. If forty-nine hundred was withheld, they'll get about a thousand back. It's the same tax bill either way. A refund is your own money, returned with no interest. If you'd rather have it during the year, the IRS withholding estimator can help you adjust your W-4. If you like the forced savings of a refund, that's a valid choice too, as long as it's on purpose.",
+     "on_screen_text": "Refund = overpaid during the year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an envelope returning coins to a small jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 5: filing is always expensive",
+     "narration": "Myth five: you have to pay to file. Many people can file their federal return for free. IRS Free File partners with tax software companies to offer free filing to people under an income limit. There are free fillable forms for anyone comfortable doing it themselves. And the IRS's free volunteer programs, VITA and TCE, help people with lower incomes, people with disabilities, older adults and people who speak limited English. Watch out for free versions that charge for state returns or push upgrades. Start at IRS dot gov, not a search ad, so you land on the genuine free options.",
+     "on_screen_text": "Free File · free forms · VITA",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a small free tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Payroll taxes and state tax",
+     "narration": "Two more pieces finish the picture. First, payroll taxes: Social Security and Medicare, seven point six five percent of wages, taken from every paycheck. They aren't part of the bracket staircase and there's no refund of them for most people. On fifty-five thousand, that's around four thousand dollars a year, more than this person's federal income tax. Second, state income tax, which most states have, with their own brackets or a flat rate. A handful of states have no income tax on wages at all. So when you estimate your total tax, add three things: federal income tax from the staircase, payroll tax, and your state's tax.",
+     "on_screen_text": "Federal + payroll + state",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small jars side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Your back-of-envelope estimate",
+     "narration": "Here's how to estimate your own tax in five minutes. One: start with your salary and subtract pre-tax retirement and health contributions. Two: subtract the standard deduction for your filing status, from IRS dot gov. Three: climb the current brackets step by step. Four: subtract any credits you expect. Five: compare the result with the year-to-date federal withholding on your latest pay stub. If withholding is way above your estimate, expect a refund. If it's way below, expect to owe, and consider adjusting your W-4 now rather than in April. It won't be perfect, but it's usually close enough to avoid surprises.",
+     "on_screen_text": "Salary → taxable → stairs → credits → compare",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small envelope with a few lines of math on the back. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. Income tax is a staircase: only the dollars on each step are taxed at that step's rate. Taxable income is much lower than salary, after pre-tax contributions and the standard deduction. Your marginal rate is your top step; your effective rate is the average, often far lower. A raise always means more after-tax money from brackets. Deductions lower taxable income; credits lower tax dollar for dollar. A refund means you overpaid. And many people can file for free. The brackets in this video were simplified, so check IRS dot gov for the real ones. Next in the Money Basics series: net worth, and how to calculate yours in ten minutes.",
+     "on_screen_text": "Staircase · taxable · marginal vs effective · credits · refunds",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing at the top of a small, tidy staircase. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Five income tax myths, checked with one fictional $55,000 earner and simplified brackets: the staircase, marginal vs effective rate, deductions vs credits, refunds and free filing.\n\nExamples use simplified, illustrative brackets; check IRS.gov for current figures. Not tax advice.",
+   "hashtags": [
+    "taxes",
+    "taxbrackets",
+    "taxrefund",
+    "personalfinance",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "How income tax works for beginners, with five common myths checked against one fictional $55,000 earner and simplified, round-number brackets: the bracket staircase, taxable income and the standard deduction, marginal vs effective rate, deductions vs credits, refunds and free filing.\n\nChapters\n0:00 Intro\n0:50 Myth 1: all your income is taxed at your bracket\n1:37 Taxable income: the standard deduction\n2:18 Climbing the staircase\n3:02 Myth 2: a raise can lower your take-home\n3:54 Myth 3: deductions and credits are the same\n4:39 Myth 4: a refund is a bonus\n5:32 Myth 5: filing is always expensive\n6:14 Payroll taxes and state tax\n6:58 Your back-of-envelope estimate\n7:41 Recap\n\nLinks\nThe free 7-day money reset (start with your real take-home): https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-04\nExample budget on a $55,000 salary: https://moneymadesimple.netlify.app/budget/55000-salary/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-04\nRoth vs Traditional IRA: https://moneymadesimple.netlify.app/blog/roth-vs-traditional-ira/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-04\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-04\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script written and fact-checked by a human.",
+   "thumbnail_text": "Your bracket isn't your rate",
+   "sources": [
+    "https://www.irs.gov/filing/federal-income-tax-rates-and-brackets",
+    "https://www.irs.gov/taxtopics/tc551",
+    "https://www.irs.gov/filing/free-file-do-your-federal-taxes-for-free",
+    "https://www.irs.gov/individuals/free-tax-return-preparation-for-qualifying-taxpayers"
+   ],
+   "claims_to_verify": [
+    "Brackets and standard deduction are simplified illustrations, not current law",
+    "55,000 − 3,300 − 2,200 − 15,000 = 34,500",
+    "12,000 × 10% = 1,200; 22,500 × 12% = 2,700; total 3,900",
+    "3,900 ÷ 55,000 ≈ 7.1%",
+    "2,000 × 22% = 440",
+    "FICA 7.65% × ~$52,800 FICA wages ≈ $4,040"
+   ],
+   "title_variants": [
+    "Will a Raise Put You in a Higher Tax Bracket? (How Taxes Really Work)",
+    "Tax Brackets Explained: The $55,000 Staircase"
+   ],
+   "hook_variants": [
+    "Your tax bracket isn't your tax rate. Here's the staircase that explains why.",
+    "5 things people get wrong about income tax, explained with simple numbers."
+   ]
+  },
+  "format_style": "myth-vs-fact",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "An animated tax staircase chart from the video's own example: $34,500 of taxable income filling the 10% and 12% steps, with marginal and effective rates labelled",
+   "chapter": "Climbing the staircase"
+  }
+ }
+]
