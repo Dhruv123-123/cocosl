@@ -259,3 +259,13 @@ th{background:var(--tint)}
 .sources li{margin:6px 0}
 .sources a{display:inline-block;padding:4px 0}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+/* Ask page */
+.ask-toc{background:var(--card,#fff);border:1px solid var(--line);border-radius:14px;padding:8px 22px 14px;margin:8px 0 32px}
+.ask-toc .ask-toc-h{font-size:17px;margin:16px 0 6px}
+.ask-toc ul{margin:0;padding-left:20px}
+.ask-toc li{margin:6px 0;line-height:1.4}
+.ask-q{border-top:1px solid var(--line);padding:6px 0 10px;scroll-margin-top:16px}
+.ask-q h3{margin-top:18px}
+.ask-tools{background:var(--gold-t,#fdf3dd);border-radius:10px;padding:10px 14px}
+.ask-link{font-size:14px;color:var(--muted)}
+.ask-link a{display:inline-block;padding:8px 0}

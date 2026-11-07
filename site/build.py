@@ -481,7 +481,7 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
   <div class="wrap">
     <p class="foot-brand"><strong>{esc(CFG['name'])}</strong> · {esc(CFG['tagline'])}</p>
     <p>{soc}</p>
-    <p><a href="{u('/about/')}">About</a> · <a href="{u('/resources/')}">Resources</a> · <a href="{u('/quiz/')}">Money quiz</a> · <a href="{u('/budget/')}">Budget by salary</a> · <a href="{u('/cost-of-living/')}">City budgets</a> · <a href="{u('/debt-payoff/')}">Debt payoff</a> · <a href="{u('/shop/')}">Shop</a> · <a href="{u('/privacy/')}">Privacy</a> · <a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/terms/')}">Terms</a> · <a href="{u('/links/')}">Links</a> · <a href="{u('/newsletter/')}">Newsletter</a> · <a href="{u('/feed.xml')}">RSS</a></p>
+    <p><a href="{u('/about/')}">About</a> · <a href="{u('/resources/')}">Resources</a> · <a href="{u('/quiz/')}">Money quiz</a> · <a href="{u('/budget/')}">Budget by salary</a> · <a href="{u('/cost-of-living/')}">City budgets</a> · <a href="{u('/debt-payoff/')}">Debt payoff</a> · <a href="{u('/ask/')}">Money questions</a> · <a href="{u('/shop/')}">Shop</a> · <a href="{u('/privacy/')}">Privacy</a> · <a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/terms/')}">Terms</a> · <a href="{u('/links/')}">Links</a> · <a href="{u('/newsletter/')}">Newsletter</a> · <a href="{u('/feed.xml')}">RSS</a></p>
     <p class="small">{esc(CFG['disclaimer'])}</p>
     <p class="small">{esc(CFG['ai_disclosure'])}</p>
     <p class="small">&copy; {date.today().year} {esc(CFG['name'])}</p>
@@ -999,6 +999,8 @@ def build() -> list[str]:
                              "today": os.environ.get("BUILD_DATE") or date.today().isoformat(),
                              "as_of": fmt_date(os.environ.get("BUILD_DATE") or date.today().isoformat())})
 
+    urls += build_ask(_shop, pseo)
+
     # ---- newsletter archive: content/newsletter/*.md, one page per issue that has gone out.
     # An issue dated in the future stays unpublished until a build on or after its date
     # (BUILD_DATE=YYYY-MM-DD overrides "today"; NEWSLETTER_SHOW_SCHEDULED=1 previews them locally).
@@ -1114,6 +1116,69 @@ def build() -> list[str]:
     return [p for p, _ in urls]
 
 
+def build_ask(shop: dict, pseo) -> list[tuple[str, str]]:
+    """/ask/: content/ask.md, '## Group' + '### Question' + answer. One page, a jump list, FAQPage schema."""
+    src = CONTENT / "ask.md"
+    if not src.exists():
+        return []
+    meta, md = parse_front_matter(src.read_text())
+    md = re.sub(r"<!--.*?-->", "", md, flags=re.S)
+    rules, _ = pseo.load()
+    calc = CFG.get("calculators_url", CFG["url"] + "/calculators").rstrip("/")
+
+    def token(m):
+        kind, val = m.group(1), m.group(2)
+        th = pseo.take_home(rules, int(val))
+        return f"${th['month' if kind == 'month' else 'paycheck']:,.0f}"
+    md = re.sub(r"\{(month|paycheck):(\d+)\}", token, md)
+
+    def shop_link(m):
+        if m.group(1) not in shop:
+            raise SystemExit(f"content/ask.md: unknown shop item '{m.group(1)}'")
+        return f"(/shop/#item-{m.group(1)})"
+    md = re.sub(r"\(shop:([a-z0-9-]+)\)", shop_link, md)
+    md = re.sub(r"\(calc:([a-z-]+)\)", lambda m: f"({calc}/{m.group(1)}/)", md)
+
+    groups = []
+    for g in re.split(r"^## ", md, flags=re.M)[1:]:
+        name, rest = g.split("\n", 1)
+        qs = [(q.strip(), a.strip()) for q, a in re.findall(r"^### (.+?)\n(.*?)(?=^### |\Z)", rest, re.S | re.M)]
+        groups.append((name.strip(), qs))
+    strip = lambda h: " ".join(re.sub(r"<[^>]+>", "", h).split())
+    toc, sections, faq = [], [], []
+    for name, qs in groups:
+        items, links = [], []
+        for q, a in qs:
+            qid = slug_id(q)[:60].strip("-")
+            ans, _ = markdown(a)
+            ans = re.sub(r"<p><strong>([^<]+:)</strong>", r'<p class="ask-tools"><strong>\1</strong>', ans)
+            items.append(f'<div class="ask-q" id="{qid}"><h3>{esc(q)}</h3>{ans}'
+                         f'<p class="ask-link"><a href="#{qid}">Link to this answer</a> · <a href="#top">All questions</a></p></div>')
+            links.append(f'<li><a href="#{qid}">{esc(q)}</a></li>')
+            body_txt = strip(ans.split('<p class="ask-tools">')[0])
+            faq.append({"@type": "Question", "name": q,
+                        "acceptedAnswer": {"@type": "Answer", "text": body_txt}})
+        gid = slug_id(name)
+        toc.append(f'<h2 class="ask-toc-h"><a href="#{gid}">{esc(name)}</a></h2><ul>{"".join(links)}</ul>')
+        sections.append(f'<section aria-labelledby="{gid}"><h2 id="{gid}">{esc(name)}</h2>{"".join(items)}</section>')
+    updated = str(meta.get("updated", date.today().isoformat()))
+    ld = [{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faq},
+          {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Home", "item": absu("/")},
+              {"@type": "ListItem", "position": 2, "name": "Money questions", "item": absu("/ask/")}]}, org_ld()]
+    body = f"""<article class="wrap ask" id="top">
+  <h1>Money questions, answered</h1>
+  <p class="dek">{len(faq)} questions people ask about paychecks, rent, cars, credit card debt and saving on a tight budget. Each answer is short, says what it depends on, and links a free tool to work out your own numbers. Updated {fmt_date(updated)}.</p>
+  <nav class="ask-toc" aria-label="All questions">{"".join(toc)}</nav>
+  {"".join(sections)}
+  <p class="disclaimer">General education, not financial, tax or legal advice. Tax figures are 2026 federal rules for a single filer unless an answer says otherwise; your state, deductions and situation change the numbers.</p>
+  {magnet_box("ask")}
+</article>"""
+    write("/ask/", layout(title=meta.get("seo_title", meta["title"]), description=meta["description"], path="/ask/",
+                          body=body, jsonld=ld))
+    return [("/ask/", updated)]
+
+
 SHOP_GROUPS = [("budget", "Budget planners"), ("savings", "Savings challenges"), ("debt", "Debt payoff"),
                ("trackers", "Trackers and records")]
 
@@ -1158,7 +1223,7 @@ def shop_price(it: dict) -> str:
 def shop_card(it: dict, image: bool = True) -> str:
     img = (f'<img src="{u(it["image"])}" alt="{esc(it["name"])} cover" width="360" height="360" loading="lazy">'
            if image and it.get("image") else "")
-    return f"""<div class="shop-card{' has-img' if img else ''}">{img}<div class="shop-body">
+    return f"""<div class="shop-card{' has-img' if img else ''}" id="item-{esc(it['slug'])}">{img}<div class="shop-body">
   <h3>{esc(it["name"])}</h3><p>{esc(it.get("blurb", ""))}</p>{shop_price(it)}
   <p class="shop-buy">{shop_buttons(it)}</p></div></div>"""
 

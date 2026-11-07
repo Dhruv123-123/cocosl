@@ -1,5 +1,7 @@
 # Pinterest pins: 10 designs for the highest-value pages
 
+Rendered PNGs: `site/pins/` (made by `python3 site/tools/make_pins.py`, with `pins.csv` for upload).
+
 Written Nov 7, 2026. Every number below comes from the page it links to (2026 tax figures, single filer, no
 state income tax, unless the pin says otherwise). If a page's numbers change, change the pin.
 

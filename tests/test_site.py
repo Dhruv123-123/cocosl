@@ -363,3 +363,58 @@ def test_deploy_check_catches_accessibility_problems(tmp_path):
     for msg in ("no lang attribute", "image(s) without alt", "form field", "<a> with no text",
                 "<button> with no text", "id 'dup' used 2 times"):
         assert msg in r.stdout, msg
+
+
+STOP = set("a an and the to of for on in is it my i do does how what should can i'm your you or with when if much many by be at from".split())
+
+
+def _words(s):
+    return {w for w in re.findall(r"[a-z0-9]+", s.lower().replace("401(k)", "401k")) if w not in STOP}
+
+
+def test_ask_page_answers_30_new_questions_with_schema(tmp_path):
+    out = _build(tmp_path, "https://example.org")
+    page = (out / "ask" / "index.html").read_text()
+    ld = [json.loads(m) for m in re.findall(r'<script type="application/ld\+json">(.*?)</script>', page)]
+    faq = next(x for x in ld if x["@type"] == "FAQPage")["mainEntity"]
+    assert len(faq) == 30
+    visible = re.findall(r'<div class="ask-q" id="[^"]+"><h3>(.*?)</h3>', page)
+    assert [html_unescape(q) for q in visible] == [q["name"] for q in faq]
+    assert all(len(q["acceptedAnswer"]["text"]) > 150 and "{" not in q["acceptedAnswer"]["text"] for q in faq)
+    # every answer links a tool, and every shop link points at a real card
+    assert page.count('class="ask-tools"') == 30
+    for slug in re.findall(r'href="/shop/#item-([a-z0-9-]+)"', page):
+        assert f'id="item-{slug}"' in (out / "shop" / "index.html").read_text(), slug
+    assert "/ask/" in (out / "sitemap.xml").read_text()
+    assert 'href="/ask/"' in (out / "index.html").read_text()
+    # No overlap with what the site already answers: article/compare/newsletter titles and their FAQ questions.
+    sys.path.insert(0, str(SITE))
+    import build
+    existing = []
+    for d in ("blog", "compare", "newsletter", "pages"):
+        for f in (SITE / "content" / d).glob("*.md"):
+            meta, body = build.parse_front_matter(f.read_text())
+            existing.append(meta.get("title", ""))
+            existing += [q for q, _ in build.extract_faq(body)]
+    for q in faq:
+        qa = _words(q["name"])
+        for e in existing:
+            eb = _words(e)
+            sim = len(qa & eb) / len(qa | eb) if qa | eb else 0
+            assert sim < 0.5, f"Ask question overlaps existing content: {q['name']!r} ~ {e!r}"
+
+
+def html_unescape(s):
+    import html
+    return html.unescape(s)
+
+
+def test_pin_specs_match_pages():
+    sys.path.insert(0, str(SITE / "tools"))
+    import make_pins
+    pins = make_pins.pins()
+    assert len(pins) == 10
+    for p in pins:
+        assert "utm_campaign=pin-" + p["slug"] in p["link"] and p["title"] and p["alt"] and p["board"]
+        assert (SITE / "content").exists() and len(p["desc"]) <= 500 and len(p["title"]) <= 100
+    assert "$3,530" in pins[6]["html"]  # $50k take-home, same maths as /budget/50000-salary/

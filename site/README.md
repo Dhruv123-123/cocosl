@@ -213,6 +213,23 @@ pages:** the rents were read from sites that republish HUD's tables (HUD's own s
 build machine), so spot-check a few against HUD's FMR tool. Oklahoma City and Las Vegas are still FY2026
 figures, and Indianapolis uses Marion County's long-standing 2.02% rate; confirm both.
 
+## Money questions (/ask/)
+
+`content/ask.md` is one page of 30 short Q&As (`## Group`, then `### Question` and the answer), with a jump list,
+a link to each answer and FAQPage schema. The questions were picked so they don't repeat an article, a comparison
+page, a newsletter issue or any article FAQ; `tests/test_site.py` checks every new question against those titles
+and FAQs, so the build stays free of near-duplicates. Tokens in answers: `{month:50000}` / `{paycheck:50000}`
+(take-home from `pseo.py`, so the numbers match the salary pages), `(calc:take-home-pay)` / `(calc:debt-payoff)`
+(the calculators), `(shop:<slug>)` (that card on /shop/; unknown slugs fail the build). Every answer ends with a
+"Tools:" line.
+
+## Pinterest pin images
+
+`python3 tools/make_pins.py` renders the 10 designs in `PINS.md` to `pins/NN-<campaign>.png` (1000×1500) and
+writes `pins/pins.csv` with each pin's title, description, alt text, board and tracked link, ready for Pinterest's
+bulk upload or to paste by hand. The $50k numbers come from `pseo.py`; re-run after the tax data or shop prices
+change. Needs Playwright and Chromium (`pip install playwright && python -m playwright install chromium`).
+
 ## Shop
 
 `/shop/` lists the products thread's whole catalog (PR #6): the guide-and-spreadsheet kits and the Google
