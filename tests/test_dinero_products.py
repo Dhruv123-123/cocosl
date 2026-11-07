@@ -1,6 +1,7 @@
 """Spanish product builds (launch/dinero-simple/products) and the month-1 content plan."""
 import importlib.util
 import json
+import sys
 from pathlib import Path
 
 import pytest
@@ -88,3 +89,21 @@ def test_month2_plan_is_complete_and_avoids_scam_series_slots():
     assert month2_slots and not (scam_slots & month2_slots)
     taxes = [i for i in items if "impuesto" in json.dumps(i, ensure_ascii=False).lower() and i["key"] != "m2c-fondos-2027"]
     assert all("no es asesoría fiscal" in i["script"]["caption"] for i in taxes if "irs" in i["script"]["hashtags"])
+
+
+def test_etsy_listings_fit_etsy_and_editions_stay_on_etsy():
+    pytest.importorskip("openpyxl")
+    sys.path.insert(0, str(DS / "etsy"))
+    sys.path.insert(0, str(DS / "products"))
+    import build as products
+    import build_etsy
+    from listings import LISTINGS
+    assert {i["slug"] for i in LISTINGS} == {p["slug"] for p in products.PRODUCTS} | set(products.EXISTING)
+    for it in LISTINGS:
+        assert len(it["title"]) <= 140 and len(it["tags"]) == 13 and all(len(t) <= 20 for t in it["tags"]), it["slug"]
+        assert "No se envía nada" in it["description"] and "IA" in it["description"]
+        assert "http" not in it["description"] and "código" not in it["description"].lower()
+    for p in products.PRODUCTS:
+        src = build_etsy.etsy_edition(p)
+        assert "<strong>RECORTE5</strong>" not in src and "FECHA5" not in src and "INVERTIR5" not in src
+        assert "[el enlace de tu tienda]" not in src and "correo de compra" not in src
