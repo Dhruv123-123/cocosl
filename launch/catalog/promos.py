@@ -124,6 +124,21 @@ JAN_STEPS = [
 ]
 
 
+# Scouting's template-pricing-jan-2027.md (PR #2): proposed prices from Jan 1 2027, after the codes end. Waiting on
+# Dhruv's decision; current prices stay until then. Etsy and Gumroad stay equal. (brand, product, from, to, why)
+JAN1_PRICES_STATUS = "proposed, waiting on Dhruv"
+JAN1_PRICES = [
+    ("Money Made Simple", "Every $3 Etsy printable (35 listings)", "$3", "$4",
+     "Etsy median for \"savings challenge\" is $4; adds about $0.90 net per sale."),
+    ("Money Made Simple", "Savings Challenge Pack (12 printables)", "$8", "$10", "Still well under 12 singles at $4."),
+    ("Money Made Simple", "The Debt-Free Date Planner", "$17", "$17 (keep)",
+     "Above the debt-tracker median, so the first line says \"a PDF guide plus a spreadsheet\" (done)."),
+    ("1099 Money", "The Quarterly Tax Tracker (2027 edition)", "$15", "$17", "PR #10's product: its thread decides."),
+    ("1099 Money", "The Freelancer Money Bundle", "$49", "$39, or keep $49 with a \"worth $59 separately\" line",
+     "PR #10's product: its thread decides."),
+]
+
+
 def _price(s: str) -> float:
     return float(s.replace("$", "").replace(",", "").split()[0])
 
@@ -221,6 +236,9 @@ Etsy searches for "budget planner" peak in January, so this is the bigger push, 
     out.append("\nFeatured on Etsy (in order): " + ", ".join(JAN_FEATURED) + ".\n\n| Listing | Tag out | Tag in |\n|---|---|---|")
     out += [f"| {t['product']} | {t['old']} | {t['new']} |" for t in jan_tag_rows(listings)]
     out.append("\nAfter Jan 31, swap the tags back if their views fell, and keep them if not.")
+    out.append(f"\n**Prices from Jan 1 ({JAN1_PRICES_STATUS})**, from scouting's `template-pricing-jan-2027.md`. No January "
+               "discounts on tax products.\n\n| Brand | Product | Now | From Jan 1 | Why |\n|---|---|---|---|---|")
+    out += [f"| {b} | {p} | {a} | {n} | {w} |" for b, p, a, n, w in JAN1_PRICES]
     return "\n".join(out) + "\n"
 
 

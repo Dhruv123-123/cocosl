@@ -243,6 +243,16 @@ Featured on Etsy (in order): 2027 Budget Planner, Monthly Budget Planner, Mega B
 
 After Jan 31, swap the tags back if their views fell, and keep them if not.
 
+**Prices from Jan 1 (proposed, waiting on Dhruv)**, from scouting's `template-pricing-jan-2027.md`. No January discounts on tax products.
+
+| Brand | Product | Now | From Jan 1 | Why |
+|---|---|---|---|---|
+| Money Made Simple | Every $3 Etsy printable (35 listings) | $3 | $4 | Etsy median for "savings challenge" is $4; adds about $0.90 net per sale. |
+| Money Made Simple | Savings Challenge Pack (12 printables) | $8 | $10 | Still well under 12 singles at $4. |
+| Money Made Simple | The Debt-Free Date Planner | $17 | $17 (keep) | Above the debt-tracker median, so the first line says "a PDF guide plus a spreadsheet" (done). |
+| 1099 Money | The Quarterly Tax Tracker (2027 edition) | $15 | $17 | PR #10's product: its thread decides. |
+| 1099 Money | The Freelancer Money Bundle | $49 | $39, or keep $49 with a "worth $59 separately" line | PR #10's product: its thread decides. |
+
 
 ## Merged or retired (6), reversible
 
