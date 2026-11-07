@@ -277,6 +277,37 @@
   "lifestyle-creep": [
    "monthly-money-review",
    "financial-goals-planner"
+  ],
+  "credit-utilization-explained": [
+   "credit-card-payoff-tracker",
+   "credit-report-audit-kit"
+  ],
+  "how-to-deal-with-debt-collectors": [
+   "debt-payoff-sheet",
+   "credit-report-audit-kit"
+  ],
+  "how-to-budget-on-a-low-income": [
+   "paycheck-budget-planner",
+   "bill-payment-tracker"
+  ],
+  "how-to-choose-a-checking-account": [
+   "checking-account-register",
+   "savings-account-register"
+  ],
+  "buy-now-pay-later-explained": [
+   "bill-payment-tracker",
+   "debt-snowball-worksheet"
+  ],
+  "how-to-lower-your-utility-bills": [
+   "utility-bill-tracker",
+   "bill-cut-kit"
+  ],
+  "how-to-spot-a-scam-text": [
+   "credit-report-audit-kit"
+  ],
+  "retirement-savings-in-your-20s": [
+   "investing-starter-kit",
+   "financial-goals-planner"
   ]
  },
  "goals": [

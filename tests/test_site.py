@@ -942,3 +942,70 @@ def test_may_articles_are_long_dated_and_linked(tmp_path):
     late = _build(tmp_path, "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2027-05-31")
     for s in NEW_MAY_ARTICLES:
         assert (late / "blog" / s / "index.html").exists(), s
+
+
+def test_internal_links_every_article_has_related_reads_a_goal_shop_and_no_orphans(tmp_path):
+    import json
+    sys.path.insert(0, str(SITE))
+    import build
+    posts = {}
+    for f in (SITE / "content" / "blog").glob("*.md"):
+        meta, body = build.parse_front_matter(f.read_text())
+        posts[f.stem] = (str(meta["date"]), body)
+    rel = json.loads((SITE / "content" / "data" / "related.json").read_text())["articles"]
+    # On its own publish date, each article already links 2+ published articles (body links + related list).
+    for slug, (day, body) in posts.items():
+        links = set(re.findall(r"\]\(/blog/([a-z0-9-]+)/", body)) | set(rel[slug]["related"])
+        live = {x for x in links if x in posts and x != slug and posts[x][0] <= day}
+        assert len(live) >= 2, (slug, day, sorted(live))
+    out = _build(tmp_path, "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2027-12-31")
+    inbound = {s: 0 for s in posts}
+    for slug in posts:
+        h = (out / "blog" / slug / "index.html").read_text()
+        main = h.split("<main", 1)[1].split("</main>")[0]
+        links = {x for x in re.findall(r'href="/blog/([a-z0-9-]+)/"', main) if x != slug and x in posts}
+        assert len(links) >= 2, (slug, links)
+        for x in links:
+            inbound[x] += 1
+        assert re.search(r'class="goal-shop"><a href="/shop/(debt|saving|first-job|freelance)/"', h), slug
+    assert not [s for s, n in inbound.items() if n == 0]  # no orphan articles
+
+
+def test_tools_hub_links_every_apps_site_tool_and_lists_upcoming_ones(tmp_path):
+    import json
+    data = json.loads((SITE / "content" / "data" / "apps.json").read_text())
+    for k in ("bill-calendar", "tax-refund", "debt-payoff-calc", "savings-challenge", "set-aside", "scam-checker", "install"):
+        assert any(t["key"] == k for t in data["tools"]), k
+    out = _build(tmp_path, "https://example.org", APPS_URL="https://tools.example.net")
+    h = (out / "tools" / "index.html").read_text()
+    assert "<h1>Money Made Simple tools</h1>" in h
+    for t in data["tools"]:
+        assert f'href="https://tools.example.net{t["path"]}"' in h, t["key"]
+    for t in data.get("upcoming", []):
+        assert f"<strong>{t['title']}</strong> (coming soon)" in h, t["key"]  # listed, not linked, until it ships
+
+
+NEW_JUN_ARTICLES = ["credit-utilization-explained", "how-to-deal-with-debt-collectors", "how-to-budget-on-a-low-income",
+                    "how-to-choose-a-checking-account", "buy-now-pay-later-explained", "how-to-lower-your-utility-bills",
+                    "how-to-spot-a-scam-text", "retirement-savings-in-your-20s"]
+
+
+def test_june_articles_are_long_dated_and_linked(tmp_path):
+    sys.path.insert(0, str(SITE))
+    import build
+    dates = []
+    for slug in NEW_JUN_ARTICLES:
+        meta, body = build.parse_front_matter((SITE / "content" / "blog" / f"{slug}.md").read_text())
+        prose = re.sub(r"<!--.*?-->", "", body, flags=re.S)
+        assert len(prose.split()) >= 1500, (slug, len(prose.split()))
+        assert "## A worked example" in prose and "fictional" in prose, slug
+        assert str(meta["date"]).startswith("2027-06"), slug
+        assert len(meta["seo_title"]) <= 60 and len(meta["description"]) <= 155, slug
+        assert len(meta["sources"]) >= 2, slug
+        dates.append(str(meta["date"]))
+    assert len(set(dates)) == 8
+    early = _build(tmp_path / "early", "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2027-05-31")
+    assert not (early / "blog" / "credit-utilization-explained" / "index.html").exists()
+    late = _build(tmp_path, "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2027-06-30")
+    for s in NEW_JUN_ARTICLES:
+        assert (late / "blog" / s / "index.html").exists(), s

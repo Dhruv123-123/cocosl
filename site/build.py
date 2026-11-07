@@ -539,14 +539,34 @@ def template_card(it: dict) -> str:
   <p class="shop-buy">{shop_buttons(it)}</p></div></aside>"""
 
 
-def templates_section(slug: str, prod: dict | None) -> str:
-    """End-of-article product block: the article's other related templates, or the default product."""
+PILLAR_GOAL = {"credit-and-debt": "debt", "budgeting": "saving", "money-tools": "saving", "investing": "first-job"}
+
+
+def article_goal(slug: str, pillar: str = "") -> dict | None:
+    """The Start here goal an article belongs to: placements.json > article_goals, else the first goal in
+    start.json that lists it, else one picked by pillar. Used for the article's /shop/<goal>/ link."""
+    pl = load_placements()
+    goals = {g["id"]: g for g in pl["goals"]}
+    gid = pl.get("article_goals", {}).get(slug)
+    if not gid:
+        gid = next((g["id"] for g in load_start()["goals"] if slug in g["articles"]), None)
+    return goals.get(gid or PILLAR_GOAL.get(pillar, "saving"))
+
+
+def templates_section(slug: str, prod: dict | None, pillar: str = "") -> str:
+    """End-of-article product block: the article's other related templates (or the default product), and a
+    link to its goal's shop page so every article links one /shop/<goal>/ page."""
     items = shop_items()
     picks = [items[s] for s in load_placements()["articles"].get(slug, [])[1:] if s in items]
+    g = article_goal(slug, pillar)
+    goal_link = (f'<p class="goal-shop"><a href="{u(f"/shop/{g['id']}/")}">{esc(g["title"])}</a>'
+                 f' · <a href="{u("/shop/")}">the whole shop</a></p>') if g else ""
     if picks:
         return ('<section class="next templates"><h2>More templates for this</h2>' + "".join(template_card(i) for i in picks)
-                + f'<p><a href="{u("/shop/")}">See every template in the shop</a></p></section>')
-    return f'<section class="next"><h2>Template for this</h2>{product_card(prod)}</section>' if prod else ""
+                + (goal_link or f'<p><a href="{u("/shop/")}">See every template in the shop</a></p>') + '</section>')
+    if prod or goal_link:
+        return f'<section class="next"><h2>Template for this</h2>{product_card(prod) if prod else ""}{goal_link}</section>'
+    return ""
 
 
 def load_embeds() -> dict:
@@ -987,7 +1007,7 @@ def build() -> list[str]:
   {compare_box(p['slug'], comps_by_slug)}
   {magnet_box(f"blog-{p['slug']}-end")}
   {tool_box(tool, p['slug'])}
-  {templates_section(p['slug'], prod)}
+  {templates_section(p['slug'], prod, p.get('pillar', ''))}
   <section class="next"><h2>Read next</h2><ul class="related">{rel_html}</ul></section>
 </article>"""
         write(path, layout(title=p.get("seo_title", p["title"]), description=p["description"], path=path,
@@ -1714,7 +1734,15 @@ def build_tools() -> list[tuple[str, str]]:
     groups: dict[str, list[dict]] = {}
     for t in apps:
         groups.setdefault(t["group"], []).append(t)
-    apps_html = "".join(f'<h2>{esc(g)}</h2><ul class="tool-list">{"".join(apps_li(t) for t in ts)}</ul>'
+    upcoming = []
+    if apps and (CONTENT / "data" / "apps.json").exists():
+        upcoming = json.loads((CONTENT / "data" / "apps.json").read_text()).get("upcoming", [])
+    soon: dict[str, list[dict]] = {}
+    for t in upcoming:
+        soon.setdefault(t["group"], []).append(t)
+        groups.setdefault(t["group"], [])
+    soon_li = lambda t: f'<li class="soon"><strong>{esc(t["title"])}</strong> (coming soon): {esc(t["blurb"].replace(" Coming soon.", ""))}</li>'
+    apps_html = "".join(f'<h2>{esc(g)}</h2><ul class="tool-list">{"".join(apps_li(t) for t in ts)}{"".join(soon_li(t) for t in soon.get(g, []))}</ul>'
                         for g, ts in groups.items())
     intro_apps = (f'<p>The calculators and trackers below run on our tools site, '
                   f'<a href="{esc(apps_base())}/">{esc(urlparse(apps_base()).netloc)}</a>. What you type stays in '
@@ -1725,8 +1753,8 @@ def build_tools() -> list[tuple[str, str]]:
                                for i, (n, url) in enumerate(items)]}, org_ld()]
     body = f"""<article class="wrap article tools-page">
   <p class="crumbs"><a href="{u('/')}">Home</a> / <span>Free tools</span></p>
-  <h1>Free money tools</h1>
-  <p class="dek">Calculators, planners and checklists for budgets, debt, saving and taxes. All free.</p>
+  <h1>{esc(CFG['name'])} tools</h1>
+  <p class="dek">Every free calculator, planner, tracker and checklist we make, for budgets, bills, debt, saving, taxes, freelance income and scam safety. No sign-up.</p>
   <div class="prose">
   <h2>On this site</h2>
   <ul class="tool-list">{site_li}

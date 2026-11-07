@@ -36,6 +36,7 @@
   "401k-match-explained": {
    "related": [
     "first-job-401k-setup",
+    "retirement-savings-in-your-20s",
     "roth-vs-traditional-ira",
     "how-to-start-investing-with-100-a-month",
     "expense-ratios-explained",
@@ -64,6 +65,7 @@
   "are-robo-advisors-worth-it": {
    "related": [
     "expense-ratios-explained",
+    "acorns-review",
     "how-to-start-investing-with-100-a-month",
     "roth-vs-traditional-ira",
     "betterment-review"
@@ -82,6 +84,9 @@
   "best-bank-account-for-college-students": {
    "related": [
     "how-to-make-a-budget-you-will-keep",
+    "how-to-choose-a-checking-account",
+    "how-to-avoid-overdraft-fees",
+    "college-student-budget",
     "how-to-build-an-emergency-fund",
     "is-my-savings-app-fdic-insured",
     "how-to-open-a-high-yield-savings-account"
@@ -160,6 +165,7 @@
   "find-and-cancel-subscriptions": {
    "related": [
     "no-spend-challenge",
+    "how-to-lower-your-utility-bills",
     "how-to-stop-living-paycheck-to-paycheck",
     "how-to-make-a-budget-you-will-keep",
     "sinking-funds-explained",
@@ -190,6 +196,7 @@
   "how-credit-scores-work": {
    "related": [
     "what-is-a-good-credit-score",
+    "credit-utilization-explained",
     "how-to-dispute-a-credit-report-error",
     "how-to-freeze-your-credit",
     "debt-avalanche-vs-snowball",
@@ -220,10 +227,11 @@
   "how-to-freeze-your-credit": {
    "related": [
     "how-to-dispute-a-credit-report-error",
+    "how-to-spot-a-scam-text",
+    "aura-review",
     "how-credit-scores-work",
     "find-and-cancel-subscriptions",
-    "debt-avalanche-vs-snowball",
-    "aura-review"
+    "debt-avalanche-vs-snowball"
    ],
    "tool": "ask"
   },
@@ -250,6 +258,7 @@
   "how-to-start-investing-with-100-a-month": {
    "related": [
     "expense-ratios-explained",
+    "acorns-review",
     "roth-vs-traditional-ira",
     "401k-match-explained",
     "are-robo-advisors-worth-it"
@@ -286,6 +295,7 @@
   "roth-vs-traditional-ira": {
    "related": [
     "ira-contribution-before-tax-deadline",
+    "retirement-savings-in-your-20s",
     "401k-match-explained",
     "how-to-start-investing-with-100-a-month",
     "expense-ratios-explained",
@@ -371,6 +381,7 @@
   "debt-consolidation-explained": {
    "related": [
     "debt-avalanche-vs-snowball",
+    "how-to-pay-off-student-loans-faster",
     "how-credit-scores-work",
     "find-and-cancel-subscriptions",
     "how-to-make-a-budget-you-will-keep"
@@ -399,6 +410,8 @@
   "how-to-stop-living-paycheck-to-paycheck": {
    "related": [
     "how-to-budget-with-irregular-income",
+    "how-to-budget-on-a-low-income",
+    "how-to-avoid-overdraft-fees",
     "how-to-make-a-budget-you-will-keep",
     "find-and-cancel-subscriptions",
     "how-to-build-an-emergency-fund",
@@ -439,6 +452,7 @@
   "how-to-dispute-a-credit-report-error": {
    "related": [
     "how-to-build-credit-from-scratch",
+    "how-to-deal-with-debt-collectors",
     "how-credit-scores-work",
     "how-to-freeze-your-credit",
     "how-much-car-can-i-afford",
@@ -478,6 +492,7 @@
   "how-credit-card-interest-works": {
    "related": [
     "how-to-lower-your-credit-card-interest-rate",
+    "buy-now-pay-later-explained",
     "debt-avalanche-vs-snowball",
     "debt-consolidation-explained",
     "how-credit-scores-work",
@@ -499,7 +514,9 @@
     "standard-deduction-vs-itemizing",
     "earned-income-tax-credit",
     "how-to-file-taxes-for-the-first-time",
-    "ira-contribution-before-tax-deadline"
+    "ira-contribution-before-tax-deadline",
+    "what-to-do-with-your-tax-refund",
+    "best-tax-software-for-simple-returns"
    ],
    "tool": "budget"
   },
@@ -570,6 +587,7 @@
   "how-to-build-credit-from-scratch": {
    "related": [
     "what-is-a-good-credit-score",
+    "self-credit-builder-review",
     "how-credit-scores-work",
     "how-to-dispute-a-credit-report-error",
     "how-credit-card-interest-works"
@@ -614,6 +632,7 @@
   "what-is-a-good-credit-score": {
    "related": [
     "how-credit-scores-work",
+    "self-credit-builder-review",
     "how-to-build-credit-from-scratch",
     "how-to-dispute-a-credit-report-error",
     "debt-avalanche-vs-snowball"
@@ -623,6 +642,7 @@
   "college-student-budget": {
    "related": [
     "how-to-build-credit-from-scratch",
+    "how-to-pay-off-student-loans-faster",
     "how-to-lower-your-grocery-bill",
     "how-to-make-a-budget-you-will-keep"
    ],
@@ -640,6 +660,7 @@
   "how-to-pay-off-student-loans-faster": {
    "related": [
     "debt-avalanche-vs-snowball",
+    "college-student-budget",
     "how-to-negotiate-a-raise",
     "401k-match-explained",
     "debt-consolidation-explained"
@@ -667,6 +688,7 @@
   "how-to-avoid-overdraft-fees": {
    "related": [
     "how-to-stop-living-paycheck-to-paycheck",
+    "how-to-choose-a-checking-account",
     "how-much-emergency-fund-do-i-need",
     "best-bank-account-for-college-students"
    ],
@@ -703,6 +725,78 @@
     "find-and-cancel-subscriptions",
     "no-spend-challenge",
     "how-much-car-can-i-afford"
+   ],
+   "tool": "budget"
+  },
+  "credit-utilization-explained": {
+   "related": [
+    "what-is-a-good-credit-score",
+    "how-credit-scores-work",
+    "how-to-build-credit-from-scratch",
+    "how-to-lower-your-credit-card-interest-rate"
+   ],
+   "tool": "debt"
+  },
+  "how-to-deal-with-debt-collectors": {
+   "related": [
+    "how-to-dispute-a-credit-report-error",
+    "debt-avalanche-vs-snowball",
+    "what-to-do-if-you-cant-pay-your-taxes",
+    "how-to-freeze-your-credit"
+   ],
+   "tool": "debt"
+  },
+  "how-to-budget-on-a-low-income": {
+   "related": [
+    "how-to-stop-living-paycheck-to-paycheck",
+    "how-to-make-a-budget-you-will-keep",
+    "sinking-funds-explained",
+    "how-to-lower-your-grocery-bill"
+   ],
+   "tool": "budget"
+  },
+  "how-to-choose-a-checking-account": {
+   "related": [
+    "how-to-avoid-overdraft-fees",
+    "best-bank-account-for-college-students",
+    "is-my-savings-app-fdic-insured",
+    "how-to-open-a-high-yield-savings-account"
+   ],
+   "tool": "budget"
+  },
+  "buy-now-pay-later-explained": {
+   "related": [
+    "how-credit-card-interest-works",
+    "how-to-avoid-overdraft-fees",
+    "how-to-build-credit-from-scratch",
+    "credit-utilization-explained"
+   ],
+   "tool": "debt"
+  },
+  "how-to-lower-your-utility-bills": {
+   "related": [
+    "find-and-cancel-subscriptions",
+    "how-to-budget-on-a-low-income",
+    "moving-out-for-the-first-time",
+    "how-to-lower-your-grocery-bill"
+   ],
+   "tool": "budget"
+  },
+  "how-to-spot-a-scam-text": {
+   "related": [
+    "how-to-freeze-your-credit",
+    "aura-review",
+    "how-to-dispute-a-credit-report-error",
+    "how-to-avoid-overdraft-fees"
+   ],
+   "tool": "budget"
+  },
+  "retirement-savings-in-your-20s": {
+   "related": [
+    "401k-match-explained",
+    "roth-vs-traditional-ira",
+    "first-job-401k-setup",
+    "expense-ratios-explained"
    ],
    "tool": "budget"
   }

@@ -1,5 +1,5 @@
 {
- "_readme": "Tools on the separate apps site (site.json > apps_url, PR #8 apps/). 'articles': article slugs that link the tool in their 'Free tools for this' box (at most 2 apps tools per article are shown). /tools/ lists every tool by group. Hidden when apps_url is empty.",
+ "_readme": "Tools on the separate apps site (site.json > apps_url, PR #8 apps/). 'articles': article slugs that link the tool in their 'Free tools for this' box (at most 2 apps tools per article are shown). /tools/ lists every tool by group. Hidden when apps_url is empty. 'upcoming': tools that haven't shipped on the apps site yet; /tools/ lists them without a link. When one ships, move it to 'tools' with its path.",
  "tools": [
   {
    "key": "take-home-pay",
@@ -80,7 +80,9 @@
     "how-to-stop-living-paycheck-to-paycheck",
     "how-to-budget-with-irregular-income",
     "how-to-split-finances-as-a-couple",
-    "how-to-save-money-on-car-insurance"
+    "how-to-save-money-on-car-insurance",
+    "how-to-budget-on-a-low-income",
+    "how-to-lower-your-utility-bills"
    ]
   },
   {
@@ -150,7 +152,8 @@
     "debt-consolidation-explained",
     "how-credit-card-interest-works",
     "what-is-a-good-credit-score",
-    "how-to-lower-your-credit-card-interest-rate"
+    "how-to-lower-your-credit-card-interest-rate",
+    "credit-utilization-explained"
    ]
   },
   {
@@ -183,7 +186,9 @@
    "title": "Debt collector letters",
    "path": "/medical-bills/debt.html",
    "blurb": "debt validation and stop-contact letters.",
-   "articles": []
+   "articles": [
+    "how-to-deal-with-debt-collectors"
+   ]
   },
   {
    "key": "rent-vs-buy",
@@ -217,7 +222,8 @@
    "articles": [
     "are-robo-advisors-worth-it",
     "acorns-review",
-    "betterment-review"
+    "betterment-review",
+    "retirement-savings-in-your-20s"
    ]
   },
   {
@@ -263,6 +269,181 @@
    "path": "/budget/holiday.html",
    "blurb": "gift list, per-person budgets and the real cost of pay-in-4.",
    "articles": []
+  },
+  {
+   "key": "debt-payoff-calc",
+   "group": "Debt and credit",
+   "title": "Debt payoff calculator",
+   "path": "/money-calculators/debt-payoff/",
+   "blurb": "list your debts and compare avalanche and snowball, with a payoff chart and a printable plan.",
+   "articles": []
+  },
+  {
+   "key": "tax-refund",
+   "group": "Paychecks and taxes",
+   "title": "Tax refund estimator",
+   "path": "/money-calculators/tax-refund/",
+   "blurb": "an estimate of your 2026 federal refund or balance due from your pay, withholding and family.",
+   "articles": []
+  },
+  {
+   "key": "first-paycheck",
+   "group": "Paychecks and taxes",
+   "title": "First paycheck checklist",
+   "path": "/budget/first-paycheck.html",
+   "blurb": "your W-4, the 401(k) match, a starter emergency fund and a first budget, step by step.",
+   "articles": [
+    "how-to-read-a-pay-stub",
+    "first-job-401k-setup"
+   ]
+  },
+  {
+   "key": "bill-calendar",
+   "group": "Budgeting",
+   "title": "Bill due date calendar",
+   "path": "/budget/bill-calendar/",
+   "blurb": "every bill on one calendar: mark them paid and send repeating reminders to your phone.",
+   "articles": [
+    "how-to-avoid-overdraft-fees",
+    "moving-out-for-the-first-time",
+    "buy-now-pay-later-explained"
+   ]
+  },
+  {
+   "key": "couples",
+   "group": "Budgeting",
+   "title": "Couples budget",
+   "path": "/budget/couples.html",
+   "blurb": "split shared bills fairly by income, then plan a monthly money date.",
+   "articles": [
+    "how-to-split-finances-as-a-couple"
+   ]
+  },
+  {
+   "key": "money-dashboard",
+   "group": "Budgeting",
+   "title": "Money dashboard spreadsheet",
+   "path": "/budget/money-dashboard.html",
+   "blurb": "turn your bank's CSV download into a categorised monthly dashboard for Google Sheets or Excel.",
+   "articles": [
+    "budgeting-app-vs-spreadsheet"
+   ]
+  },
+  {
+   "key": "checkup",
+   "group": "Budgeting",
+   "title": "Annual money checkup",
+   "path": "/budget/checkup.html",
+   "blurb": "20 quick questions, a score out of 100 and the fixes that matter most.",
+   "articles": [
+    "lifestyle-creep"
+   ]
+  },
+  {
+   "key": "money-personality",
+   "group": "Budgeting",
+   "title": "Money personality quiz (apps site)",
+   "path": "/budget/money-personality.html",
+   "blurb": "eight questions to find your money personality and the tools that suit it.",
+   "articles": []
+  },
+  {
+   "key": "savings-challenge",
+   "group": "Saving",
+   "title": "52-week savings challenge tracker",
+   "path": "/budget/savings-challenge.html",
+   "blurb": "save $1 in week 1 up to $52 in week 52, or set your own goal; tick off each week and print the chart.",
+   "articles": []
+  },
+  {
+   "key": "remittance",
+   "group": "Spending and big purchases",
+   "title": "Remittance cost calculator",
+   "path": "/money-calculators/remittance-cost/",
+   "blurb": "the real cost of sending money abroad: the fee plus the markup hidden in the exchange rate.",
+   "articles": []
+  },
+  {
+   "key": "invoices",
+   "group": "Freelance and side income",
+   "title": "Freelance invoice tracker",
+   "path": "/freelance-invoices/",
+   "blurb": "what's due, what's late, the late fee under your terms, and a polite reminder email.",
+   "articles": []
+  },
+  {
+   "key": "set-aside",
+   "group": "Freelance and side income",
+   "title": "Quarterly tax set-aside app",
+   "path": "/freelance-invoices/set-aside/",
+   "blurb": "log each payment and see how much to move to tax savings and when estimated tax is due.",
+   "articles": [
+    "self-employment-tax-explained",
+    "how-to-budget-with-irregular-income"
+   ]
+  },
+  {
+   "key": "side-hustle",
+   "group": "Freelance and side income",
+   "title": "Side hustle profit calculator",
+   "path": "/freelance-invoices/side-hustle.html",
+   "blurb": "your real hourly pay after platform fees, mileage, supplies and self-employment tax.",
+   "articles": [
+    "self-employment-tax-explained"
+   ]
+  },
+  {
+   "key": "scam-checker",
+   "group": "Scam safety",
+   "title": "Is this a scam? checker",
+   "path": "/scam-checker/",
+   "blurb": "paste a suspicious text, email or DM and see the red flags scammers use.",
+   "articles": [
+    "how-to-freeze-your-credit",
+    "how-to-spot-a-scam-text"
+   ]
+  },
+  {
+   "key": "link-checker",
+   "group": "Scam safety",
+   "title": "Is this website legit? link checker",
+   "path": "/scam-checker/link/",
+   "blurb": "check a link for look-alike spellings, brand names on the wrong domain and hidden destinations.",
+   "articles": [
+    "how-to-spot-a-scam-text"
+   ]
+  },
+  {
+   "key": "family-scam",
+   "group": "Scam safety",
+   "title": "Family scam protection checklist",
+   "path": "/scam-checker/family/",
+   "blurb": "credit freezes, a family safe word, 2-step verification and a phone number lock, step by step.",
+   "articles": [
+    "how-to-freeze-your-credit"
+   ]
+  },
+  {
+   "key": "install",
+   "group": "Get the apps",
+   "title": "Install the tools as apps",
+   "path": "/apps.html",
+   "blurb": "add the budget, bill calendar and tax set-aside to your phone's home screen. No app store, works offline.",
+   "articles": []
+  }
+ ],
+ "upcoming": [
+  {
+   "key": "paycheck-planner",
+   "group": "Paychecks and taxes",
+   "title": "Paycheck planner",
+   "blurb": "plan where each paycheck goes before it arrives. Coming soon."
+  },
+  {
+   "key": "rate-calculator",
+   "group": "Debt and credit",
+   "title": "Interest rate calculator",
+   "blurb": "see what a lower rate saves on a card or loan. Coming soon."
   }
  ]
 }

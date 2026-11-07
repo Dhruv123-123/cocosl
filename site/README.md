@@ -282,6 +282,15 @@ refund estimator and the debt payoff calculator (with its chart) load live throu
 (still the placeholder `https://mms-tools.netlify.app`) and disappear if it's emptied. Map more articles in
 `articles`, or place one by hand with `{{embed:<key>}}`.
 
+### The tools hub (/tools/) and internal links
+
+`/tools/` is the "Money Made Simple tools" page: every tool in `apps.json > tools`, grouped, plus
+`apps.json > upcoming` for tools not shipped yet (shown as "coming soon" with no link; move one into `tools`
+with its `path` when it lands). Every article also ends its template box with a link to its goal's shop page
+(`placements.json > article_goals`, else the first `start.json` goal that lists it, else its pillar). A test
+checks each article links 2+ published articles on its own date, renders 2+ `/blog/` links and a goal shop
+link, and that no article is an orphan: when you add an article, add it to `related.json` for 1–2 older ones.
+
 ### Shop pages per goal (/shop/debt/, /shop/saving/, /shop/first-job/, /shop/freelance/)
 
 `placements.json > goals` lists each goal's title, intro and items. Each page starts with the free guides for
