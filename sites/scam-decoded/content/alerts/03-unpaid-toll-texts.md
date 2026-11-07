@@ -7,6 +7,7 @@ sender: a toll agency, from a number or email address you don't know
 subject: Scam alert: the $6.99 "unpaid toll" text
 preheader: Toll agencies bill through your account or by mail. Don't tap the link.
 example: NOTICE: You have an outstanding toll balance of $6.99. To avoid a $50 late fee and license suspension, pay by 11:59 PM today: ezdrive-tollpay.top
+flags: $50 late fee and license suspension | 11:59 PM today | ezdrive-tollpay.top
 tell_1: A small amount with a big threat attached: late fees, license suspension, today.
 tell_2: A link that isn't your toll agency's real website, often with an odd ending like .top or .xyz.
 tell_3: It arrives as a text from a number you don't know, sometimes even if you haven't driven a toll road.

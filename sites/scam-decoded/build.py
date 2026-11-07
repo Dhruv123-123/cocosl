@@ -700,9 +700,12 @@ def alert_items() -> list[dict]:
         missing = [f for f in ALERT_FIELDS if not str(a.get(f, "")).strip()]
         if missing:
             raise SystemExit(f"alert {a['slug']}: missing {', '.join(missing)}")
-        todo = [f for f in (*ALERT_FIELDS, "explainer", "body_md") if str(a.get(f, "")).lstrip().startswith("[")]
+        todo = [f for f in (*ALERT_FIELDS, "explainer", "flags", "body_md") if str(a.get(f, "")).lstrip().startswith("[")]
         if todo or a["source_url"].strip() == "https://":
             raise SystemExit(f"alert {a['slug']}: still has template text in {', '.join(todo) or 'source_url'}")
+        a["flag_list"] = [x.strip() for x in str(a.get("flags", "")).split("|") if x.strip()]
+        if not todo and (len(a["flag_list"]) > 3 or any(x not in a["example"] for x in a["flag_list"])):
+            raise SystemExit(f"alert {a['slug']}: flags must be up to 3 exact phrases from the example")
         if a["severity"] not in SEVERITY:
             raise SystemExit(f"alert {a['slug']}: severity must be one of {', '.join(SEVERITY)}")
         out.append(a)
@@ -797,6 +800,124 @@ def alerts() -> list[tuple]:
     return pages
 
 
+# --------------------------------------------------------------- weekly "scam of the week" email
+WEEKLY_FIELDS = ("send_date", "subject", "preheader", "lead", "intro")
+
+
+def weekly_items() -> list[dict]:
+    """content/weekly/NN-slug.md: a weekly 'scam of the week' email built from alerts. `lead` is one alert's slug
+    (shown in full), `also` is up to 3 more alert slugs, comma-separated (one line each), `quiz` is an optional
+    question number from content/quiz.json. _TEMPLATE.md has no send_date and isn't published."""
+    known = {a["slug"]: a for a in alert_items()}
+    out = []
+    for w in load_dir("weekly"):
+        if not w.get("send_date"):
+            continue
+        missing = [f for f in WEEKLY_FIELDS if not str(w.get(f, "")).strip()]
+        if missing:
+            raise SystemExit(f"weekly {w['slug']}: missing {', '.join(missing)}")
+        todo = [f for f in (*WEEKLY_FIELDS, "also", "body_md") if str(w.get(f, "")).lstrip().startswith("[")]
+        if todo:
+            raise SystemExit(f"weekly {w['slug']}: still has template text in {', '.join(todo)}")
+        also = [x.strip() for x in str(w.get("also", "")).split(",") if x.strip()]
+        unknown = [x for x in [w["lead"], *also] if x not in known]
+        if unknown:
+            raise SystemExit(f"weekly {w['slug']}: no alert called {', '.join(unknown)} in content/alerts/")
+        if len(also) > 3 or w["lead"] in also:
+            raise SystemExit(f"weekly {w['slug']}: 'also' takes up to 3 other alerts")
+        q = quiz_data()["questions"]
+        if str(w.get("quiz", "")).strip() and not (isinstance(w["quiz"], int) and 1 <= w["quiz"] <= len(q)):
+            raise SystemExit(f"weekly {w['slug']}: quiz must be a question number from 1 to {len(q)}")
+        w["lead_alert"], w["also_alerts"] = known[w["lead"]], [known[x] for x in also]
+        w["quiz_q"] = q[w["quiz"] - 1] if str(w.get("quiz", "")).strip() else None
+        out.append(w)
+    return sorted(out, key=lambda w: str(w["send_date"]))
+
+
+def weekly_email_html(w: dict) -> str:
+    a = w["lead_alert"]
+    label, bg, fg = SEVERITY[a["severity"]]
+    li = lambda x: f'<li style="margin:0 0 8px">{esc(x)}</li>'
+    tells = "".join(li(a[f"tell_{n}"]) for n in (1, 2, 3))
+    dos = "".join(li(a[f"do_{n}"]) for n in (1, 2, 3))
+    h2 = 'style="font-size:18px;margin:22px 0 8px"'
+    also = "".join(f'<li style="margin:0 0 10px"><strong>{esc(x["scam"])}</strong> ({esc(x["channel"])}). {esc(x["tell_1"])} '
+                   f'<a style="color:#178a80" href="{esc(absu("/alerts/" + x["slug"] + "/"))}">The 3 tells</a></li>'
+                   for x in w["also_alerts"])
+    also = f'<h2 {h2}>Also going around</h2><ul style="margin:0;padding-left:22px">{also}</ul>' if also else ""
+    q = w["quiz_q"]
+    quiz = (f'<h2 {h2}>Could you spot it?</h2><p style="margin:0 0 8px;font-size:13px;color:#4a5868">{esc(q["channel"])} from '
+            f'{esc(q["sender"])} (fictional)</p><div style="background:#eef2f4;border-radius:16px;padding:14px 16px;margin:0 0 10px;'
+            f'font-style:italic">{esc(q["message"])}</div><p style="margin:0">Scam or legit? <a style="color:#178a80;font-weight:600" '
+            f'href="{esc(absu("/quiz/"))}">Take the 12-question quiz for the answer</a>.</p>') if q else ""
+    extra = markdown(expand(w["body_md"])) if w["body_md"].strip() else ""
+    links = "".join(f'<p style="margin:0 0 8px"><a style="color:#178a80;font-weight:600" href="{esc(h)}">{esc(t)}</a></p>'
+                    for t, h in alert_links(a, absu))
+    return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(w['subject'])}</title></head>
+<body style="margin:0;background:#f4f1ea">
+<span style="display:none;max-height:0;overflow:hidden">{esc(w['preheader'])}</span>
+<div style="max-width:560px;margin:0 auto;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#0d1b2a;background:#ffffff">
+<div style="background:#0d1b2a;color:#f4f1ea;padding:14px 20px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px">{esc(CFG['name'])} · Scam of the week · {esc(str(w['send_date']))}</div>
+<div style="padding:20px">
+<p style="margin:0 0 16px">{esc(w['intro'])}</p>
+<p style="display:inline-block;margin:0 0 8px;background:{bg};color:{fg};padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em">{esc(label)}</p>
+<h1 style="font-size:24px;line-height:1.25;margin:0 0 12px">{esc(a['scam'])}</h1>
+<p style="margin:0 0 8px;font-size:13px;color:#4a5868">Arrives by: {esc(a['channel'])} · From: {esc(a['sender'])} (fictional example)</p>
+<div style="background:#eef2f4;border-radius:16px;padding:14px 16px;margin:0 0 20px;font-style:italic">{esc(a['example'])}</div>
+<h2 style="font-size:18px;margin:0 0 8px">3 tells</h2><ol style="margin:0 0 16px;padding-left:22px">{tells}</ol>
+<h2 style="font-size:18px;margin:0 0 8px">Do this</h2><ol style="margin:0 0 16px;padding-left:22px">{dos}</ol>
+<p style="margin:0 0 16px;background:#fff4e0;border-left:4px solid #ff9f1c;padding:10px 12px"><strong>Already clicked, paid or shared?</strong> {esc(a['if_already'])}</p>
+<p style="margin:0 0 16px;font-size:13px;color:#4a5868">Source: <a style="color:#178a80" href="{esc(a['source_url'])}">{esc(a['source_title'])}</a></p>
+{links}
+{also}
+{quiz}
+{extra}
+<p style="margin:22px 0 0">Know someone who'd get a message like this? Forward them this email. They can sign up at <a style="color:#178a80" href="{esc(absu('/alerts/'))}">{esc(absu('/alerts/'))}</a>.</p>
+<p style="margin:16px 0 0;font-size:12px;color:#4a5868">{esc(CFG['disclaimer'])}</p>
+</div></div></body></html>
+"""
+
+
+def weekly_email_text(w: dict) -> str:
+    a = w["lead_alert"]
+    lines = [f"{CFG['name'].upper()} · SCAM OF THE WEEK · {w['send_date']}", "", w["intro"], "",
+             f"{SEVERITY[a['severity']][0].upper()}: {a['scam']}",
+             f"Arrives by: {a['channel']} · From: {a['sender']} (fictional example)", f"\"{a['example']}\"", "",
+             "3 TELLS", *[f"{n}. {a[f'tell_{n}']}" for n in (1, 2, 3)], "",
+             "DO THIS", *[f"{n}. {a[f'do_{n}']}" for n in (1, 2, 3)], "",
+             f"Already clicked, paid or shared? {a['if_already']}", f"Source: {a['source_title']} ({a['source_url']})", ""]
+    lines += [f"{t}: {h}" for t, h in alert_links(a, absu)]
+    if w["also_alerts"]:
+        lines += ["", "ALSO GOING AROUND"]
+        lines += [f"- {x['scam']} ({x['channel']}). {x['tell_1']} {absu('/alerts/' + x['slug'] + '/')}" for x in w["also_alerts"]]
+    if w["quiz_q"]:
+        q = w["quiz_q"]
+        lines += ["", "COULD YOU SPOT IT?", f"{q['channel']} from {q['sender']} (fictional):", f"\"{q['message']}\"",
+                  f"Scam or legit? Take the 12-question quiz for the answer: {absu('/quiz/')}"]
+    if w["body_md"].strip():
+        lines += ["", email_text(markdown(expand(w["body_md"]))).rsplit("\n\n", 1)[0]]
+    lines += ["", f"Know someone who'd get a message like this? Forward them this email. Sign up: {absu('/alerts/')}",
+              "", CFG["disclaimer"]]
+    return "\n".join(lines) + "\n"
+
+
+def weekly() -> None:
+    """Weekly 'scam of the week' email files (no public pages: each alert already has one)."""
+    items = []
+    for w in weekly_items():
+        CFG["_absolute_links"] = True
+        try:
+            html_doc, text = weekly_email_html(w), weekly_email_text(w)
+        finally:
+            CFG["_absolute_links"] = False
+        write(f"/weekly/{w['slug']}/email.html", html_doc)
+        (OUT / "weekly" / w["slug"] / "email.txt").write_text(text)
+        items.append({"slug": w["slug"], "send_date": str(w["send_date"]), "subject": w["subject"],
+                      "preheader": w["preheader"], "lead": w["lead"], "html": html_doc, "text": text})
+    (OUT / "weekly").mkdir(parents=True, exist_ok=True)
+    (OUT / "weekly" / "weekly.json").write_text(json.dumps(items, indent=2))
+
+
 def build() -> list[str]:
     global CFG
     CFG = load_config()
@@ -812,11 +933,12 @@ def build() -> list[str]:
     write("/404.html", layout(title="Not found", description="Page not found.", path="/404.html", noindex=True,
                               body=f'<section class="wrap narrow"><h1>Page not found</h1><p><a href="{u("/")}">Get the free checklist</a></p></section>'))
     emails()
+    weekly()
     indexed = [p for p, *_ , noindex in pages if not noindex and p != "/free/"]  # /free/ duplicates /
     sm = "".join(f"<url><loc>{absu(p)}</loc></url>" for p in indexed)
     (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n'
                                      f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')
-    (OUT / "robots.txt").write_text(f"User-agent: *\nDisallow: {u('/emails/')}\nDisallow: {u('/free/thanks/')}\nDisallow: {u('/holiday/thanks/')}\n"
+    (OUT / "robots.txt").write_text(f"User-agent: *\nDisallow: {u('/emails/')}\nDisallow: {u('/weekly/')}\nDisallow: {u('/free/thanks/')}\nDisallow: {u('/holiday/thanks/')}\n"
                                     f"Sitemap: {absu('/sitemap.xml')}\n")
     return indexed
 

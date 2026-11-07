@@ -74,5 +74,6 @@ affiliates:
 products:
   - {name: "The Family Scam-Proofing Kit (printable PDF)", url: "https://example.gumroad.com/l/scam-proof-kit", price: 9}
 ai_disclosure: "Visuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person. All example messages, names and numbers are fictional."
+scripts_by: ai_assisted   # or person, if you write the scripts yourself (then you may say so in ai_disclosure)
 realistic_synthetic_media: false
 require_human_review: true

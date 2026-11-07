@@ -7,6 +7,7 @@ sender: your bank's "fraud department"
 subject: Scam alert: the "your account was in the breach" call
 preheader: Your bank won't ask you to read out a code. Hang up and call the number on your card.
 example: Hi, this is the fraud team at your bank. Your account was included in the recent data breach. To secure it, please read me the 6-digit code we just sent you.
+flags: recent data breach | To secure it | read me the 6-digit code
 tell_1: It arrives right after breach news, and uses that news to sound believable.
 tell_2: It asks for a one-time code, a password or a PIN. That code signs them in as you.
 tell_3: It's urgent, and it wants you to stay on the line rather than call back.
