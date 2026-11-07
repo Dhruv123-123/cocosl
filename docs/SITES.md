@@ -115,3 +115,40 @@ For each brand:
 
 GitHub Pages works for any one brand (`.github/workflows/pages.yml`, set `EMAIL_PROVIDER` since Netlify Forms
 don't exist there), but one repo gets one Pages site, so Netlify is the practical choice for four brands.
+
+## Scam Decoded migration: assessment (Nov 7, 2026), not started
+
+Read from `claude/project-thread-wa5csw` at `389a852`. Conclusion: **wait.** The move is doable, but doing it now
+would fork live copy, so I wrote this up instead of starting the branch.
+
+**Why it's messy today**
+
+1. **The copy lives in Python, not content files.** Of its 703-line `build.py`, seven pages are functions that
+   return hand-written HTML: `home()` (also used for `/free/`), `thanks()`, `kit()`, `parents_page()`,
+   `teams_page()`, `checker_page()` and `compare_page()` (whose table rows are a `COMPARE_ROWS` dict in code).
+   Only `content/pages/` (privacy, disclosures), `content/emails/` and `content/newsletter/` are Markdown.
+   Migrating means turning those seven functions into Markdown plus front matter. Every later copy edit on the
+   Scam Decoded thread would then land in the old Python and silently miss the new files.
+2. **The branch is still moving.** Its latest commit (`389a852`) added the newsletter and `/compare/` on top of
+   a merge, and its conflicts are being worked on there. A stacked copy would be out of date within a day.
+3. **Different config schema.** Its `site.json` uses `product` + `ladder` (3 paid rungs: kit, parents, teams),
+   `affiliates` (a list of `{slug, url}`), `scam_checker`, `compare_reviewed` and `analytics.plausible_domain`.
+   The shared builder uses `content/products/*.md`, `programs` + `go-links.json` and `article_compare`.
+
+**What the shared builder would need first** (small, and useful to every brand):
+
+| Scam Decoded feature | Shared-builder change |
+|---|---|
+| Funnel-only home (lead magnet as the landing page) | `home: lead-magnet` switch in `site.json`, or a `content/pages/index.md` that replaces the generated home |
+| Kit / parents / teams sales pages | Product `.md` files with `layout: sales` (long-form body, FAQ, price box, guarantee) |
+| Product ladder (`next` rung on each page) | `next:` front matter on products, rendered as the "next step" box |
+| `REPLACE_ME` links hidden and reported | `placeholders_hidden: true`: skip links containing `REPLACE_ME`, print them after the build |
+| `/checker/` (embeds the PR #8 scam checker) | A content page with a `{{checker}}` shortcode, configured by `scam_checker.url` |
+| `/compare/` with two head-to-heads | `content/compare/*.md`, the same format as MMS's comparison pages |
+| Its newsletter template | Already matches `content/newsletter/` here (date, subject, preheader) |
+
+**Order once Scam Decoded's branch merges:** (1) add the switches above to `site/build.py` in one PR, with MMS
+output unchanged; (2) on the Scam Decoded thread, move the seven pages to Markdown and delete
+`sites/scam-decoded/build.py` in the same PR, so there's never a second copy of the words; (3) point its
+`netlify.toml` at `SITE_ROOT=. python3 ../../site/build.py`. The Scam Decoded thread should own step 2, since
+it owns the copy.
