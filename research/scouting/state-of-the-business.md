@@ -2,7 +2,7 @@
 
 As of **2026-11-07, 06:50 UTC** (merge status from `GO_LIVE.md`'s 06:30 UTC check). Nothing has been posted, sent, charged or signed up for. Every step that
 touches the outside world is yours to press. The full step-by-step checklist is `docs/GO_LIVE.md` (PR #7);
-this page is the short version and adds the open decisions from the scouting research (PR #2).
+this page is the short version and adds the open decisions from the scouting research (PR #2). The full list of open calls across every PR is `DHRUV_DECISIONS.md` at the repo root.
 
 ## What's built
 
