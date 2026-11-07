@@ -100,9 +100,9 @@ def test_weekly_scam_alert_newsletter_six_issues(tmp_path, monkeypatch):
     src = ROOT / "content" / "newsletter"
     assert (src / "TEMPLATE.md").exists() and (src / "README.md").exists()
     issues = json.loads((out / "newsletter" / "issues.json").read_text())
-    assert [i["issue"] for i in issues] == list(range(1, 26))
+    assert [i["issue"] for i in issues] == list(range(1, 28))
     dates = [i["send_date"] for i in issues]
-    assert dates == sorted(dates) and len(set(dates)) == 25
+    assert dates == sorted(dates) and len(set(dates)) == 27
     sections = ["## This week's scam", "## The tell", "## What to do", "## Quick hits", "## Your 5-minute job"]
     for meta in mod.newsletter_issues():
         body = meta["body_md"]

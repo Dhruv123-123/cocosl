@@ -1,7 +1,7 @@
 ---
-issue: 17
+issue: 19
 send_date: 2027-04-01
-subject: Scam Alert #17: the IRS letter that wants a phone call
+subject: Scam Alert #19: the IRS letter that wants a phone call
 preheader: Two weeks to Tax Day, scammers mail letters too. Three checks before you dial.
 ---
 Hi,

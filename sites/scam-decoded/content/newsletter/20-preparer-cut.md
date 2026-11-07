@@ -1,7 +1,7 @@
 ---
-issue: 18
+issue: 20
 send_date: 2027-04-08
-subject: Scam Alert #18: the preparer who takes a cut of your refund
+subject: Scam Alert #20: the preparer who takes a cut of your refund
 preheader: A week to Tax Day. Three things a real preparer always does.
 ---
 Hi,

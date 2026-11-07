@@ -1,7 +1,7 @@
 ---
-issue: 20
+issue: 22
 send_date: 2027-04-22
-subject: Scam Alert #20: the breach was real. The follow-up call isn't.
+subject: Scam Alert #22: the breach was real. The follow-up call isn't.
 preheader: After a data breach notice, the second wave is scammers. Four follow-ups and the free checklist.
 ---
 Hi,

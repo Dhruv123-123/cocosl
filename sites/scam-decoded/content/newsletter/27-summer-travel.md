@@ -1,7 +1,7 @@
 ---
-issue: 25
+issue: 27
 send_date: 2027-05-27
-subject: Scam Alert #25: "your flight is canceled, call to rebook"
+subject: Scam Alert #27: "your flight is canceled, call to rebook"
 preheader: Memorial Day weekend travel: fake airline texts, lookalike hotel sites and gas pump skimmers.
 ---
 Hi,

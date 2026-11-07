@@ -1,7 +1,7 @@
 ---
-issue: 23
+issue: 25
 send_date: 2027-05-13
-subject: Scam Alert #23: the job offer that comes with a check
+subject: Scam Alert #25: the job offer that comes with a check
 preheader: Graduation season: fake jobs, scholarship fees and first-apartment listings.
 ---
 Hi,

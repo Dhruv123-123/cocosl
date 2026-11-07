@@ -1,7 +1,7 @@
 ---
-issue: 22
+issue: 24
 send_date: 2027-05-06
-subject: Scam Alert #22: a "courier" at Grandma's door
+subject: Scam Alert #24: a "courier" at Grandma's door
 preheader: Mother's Day is Sunday. The grandparent scam twist to know, and a 5-minute safe word.
 ---
 Hi,

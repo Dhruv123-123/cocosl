@@ -1,7 +1,7 @@
 ---
-issue: 24
+issue: 26
 send_date: 2027-05-20
-subject: Scam Alert #24: "we'll get you a bigger VA pension, for a fee"
+subject: Scam Alert #26: "we'll get you a bigger VA pension, for a fee"
 preheader: Before Memorial Day: pension poaching, veterans' charity calls and the free help that's real.
 ---
 Hi,

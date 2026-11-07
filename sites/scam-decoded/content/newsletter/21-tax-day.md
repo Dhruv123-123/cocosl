@@ -1,7 +1,7 @@
 ---
-issue: 19
+issue: 21
 send_date: 2027-04-15
-subject: Scam Alert #19: you filed. Now comes the "refund adjustment" text
+subject: Scam Alert #21: you filed. Now comes the "refund adjustment" text
 preheader: Tax Day edition: the texts that arrive after you file, and the one place to check your refund.
 ---
 Hi,
