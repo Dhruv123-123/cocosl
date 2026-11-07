@@ -47,3 +47,5 @@ footer{background:var(--ink);color:#c9d2dc;padding:24px 0;font-size:15px}
 footer a{color:var(--cream)}
 footer .small{color:#9aa8b6}
 @media (max-width:760px){.grid,.cards{grid-template-columns:1fr}.hero{padding:28px 0}.cover{width:200px}.product{flex-direction:column;align-items:flex-start}}
+.scroll{overflow-x:auto}.compare th{width:22%}.compare td{width:39%}.compare .button{font-size:15px;padding:10px 14px}
+.disclosure{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:15px}

@@ -79,7 +79,7 @@ def test_product_ladder_pages_and_upsells(tmp_path, monkeypatch):
 
 def test_plausible_snippet_and_click_tags(tmp_path, monkeypatch):
     _, out = build(tmp_path, monkeypatch)
-    pages = [p for p in out.rglob("*.html") if "emails" not in p.parts or p.name == "index.html"]
+    pages = [p for p in out.rglob("*.html") if p.name != "email.html"]
     snippet = ('<script defer data-domain="scamdecoded.netlify.app" '
                'src="https://plausible.io/js/script.outbound-links.tagged-events.js"></script>')
     for p in pages:
@@ -92,3 +92,45 @@ def test_plausible_snippet_and_click_tags(tmp_path, monkeypatch):
     assert not any("<script" in p.read_text() for p in out.rglob("email.html"))
     _, out2 = build(tmp_path / "b", monkeypatch, PLAUSIBLE_DOMAIN="")
     assert "plausible.io" not in (out2 / "index.html").read_text()
+
+
+def test_weekly_scam_alert_newsletter_six_issues(tmp_path, monkeypatch):
+    from contentfactory.guardrails import ENGAGEMENT_BAIT, HYPE_PATTERNS, check_patterns
+    mod, out = build(tmp_path, monkeypatch)
+    src = ROOT / "content" / "newsletter"
+    assert (src / "TEMPLATE.md").exists() and (src / "README.md").exists()
+    issues = json.loads((out / "newsletter" / "issues.json").read_text())
+    assert [i["issue"] for i in issues] == [1, 2, 3, 4, 5, 6]
+    dates = [i["send_date"] for i in issues]
+    assert dates == sorted(dates) and len(set(dates)) == 6
+    sections = ["## This week's scam", "## The tell", "## What to do", "## Quick hits", "## Your 5-minute job"]
+    for meta in mod.newsletter_issues():
+        body = meta["body_md"]
+        assert all(s in body for s in sections), meta["slug"]
+        assert "fictional example" in body and "guarantee" not in body.lower()
+        assert check_patterns(body, HYPE_PATTERNS + ENGAGEMENT_BAIT, "n", "warn", "Hype").level == "ok", meta["slug"]
+        if "/compare/" in body:  # affiliate mentions carry the disclosure
+            assert "affiliate links" in body
+    for i in issues:
+        d = out / "newsletter" / i["slug"]
+        html = (d / "email.html").read_text()
+        assert 'href="/' not in html and "{{" not in html and mod.esc(i["preheader"]) in html
+        assert (d / "email.txt").read_text().strip() and (d / "index.html").exists()
+    sitemap = (out / "sitemap.xml").read_text()
+    assert "/newsletter/irs-season/" in sitemap and "template" not in sitemap.lower()
+    assert "988" in (out / "newsletter" / "valentines" / "email.txt").read_text()
+
+
+def test_affiliate_comparison_page(tmp_path, monkeypatch):
+    mod, out = build(tmp_path, monkeypatch)
+    page = (out / "compare" / "index.html").read_text()
+    for name in ["Aura", "LifeLock", "Bitwarden", "1Password"]:
+        assert name in page
+    for a in mod.CFG["affiliates"]:
+        assert a["url"] in page
+        assert f'class="button plausible-event-name=Affiliate+Click" rel="sponsored nofollow" href="{a["url"]}"' in page
+        assert any(a["slug"] in w for w in mod.WARNINGS)  # placeholders are reported
+    assert "Affiliate disclosure" in page and "free by law" in page
+    assert page.index("Affiliate disclosure") < page.index("Affiliate+Click")
+    assert "$" not in re.sub(r"<script.*?</script>", "", page, flags=re.S)  # no unverified prices
+    assert "/compare/" in (out / "sitemap.xml").read_text()

@@ -36,7 +36,32 @@
     "refund_days": 14,
     "pages": 9
   },
-  "affiliates": [],
+  "affiliates": [
+    {
+      "slug": "aura",
+      "name": "Aura",
+      "category": "identity",
+      "url": "https://REPLACE_ME/aff/aura"
+    },
+    {
+      "slug": "lifelock",
+      "name": "LifeLock",
+      "category": "identity",
+      "url": "https://REPLACE_ME/aff/lifelock"
+    },
+    {
+      "slug": "bitwarden",
+      "name": "Bitwarden",
+      "category": "passwords",
+      "url": "https://REPLACE_ME/aff/bitwarden"
+    },
+    {
+      "slug": "1password",
+      "name": "1Password",
+      "category": "passwords",
+      "url": "https://REPLACE_ME/aff/1password"
+    }
+  ],
   "disclaimer": "Educational content, not legal or financial advice. Example messages, names and numbers are fictional. Check current rules with the official source before acting.",
   "ai_disclosure": "We use AI tools to help with visuals and drafts. A human chooses every topic, checks the facts and approves everything before it is published.",
   "analytics_snippet": "",
@@ -62,5 +87,6 @@
   "analytics": {
     "plausible_domain": "scamdecoded.netlify.app",
     "plausible_src": "https://plausible.io/js/script.outbound-links.tagged-events.js"
-  }
+  },
+  "compare_reviewed": "November 2026"
 }

@@ -251,7 +251,7 @@ def layout(*, title: str, description: str, path: str, body: str, noindex: bool 
 <main>{body}</main>
 <footer><div class="wrap">
 <p>{socials}</p>
-<p><a href="{u('/parents/')}">Protect Your Parents</a> · <a href="{u('/teams/')}">Training for teams</a></p>
+<p><a href="{u('/parents/')}">Protect Your Parents</a> · <a href="{u('/teams/')}">Training for teams</a> · <a href="{u('/newsletter/')}">Weekly Scam Alert</a> · <a href="{u('/compare/')}">Tools compared</a></p>
 <p><a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/privacy/')}">Privacy</a> · {esc(CFG['contact_email'])}</p>
 <p class="small">{esc(CFG['disclaimer'])} {esc(CFG['ai_disclosure'])}</p>
 </div></footer>
@@ -530,6 +530,122 @@ def emails() -> list[dict]:
     return seq
 
 
+def newsletter_issues() -> list[dict]:
+    """content/newsletter/NN-slug.md (TEMPLATE.md is the blank format and isn't published)."""
+    return sorted((i for i in load_dir("newsletter") if i.get("issue")), key=lambda i: i["issue"])
+
+
+def newsletter() -> list[tuple]:
+    """Weekly Scam Alert: ready-to-paste email files plus a public archive."""
+    issues, pages = [], []
+    for i in newsletter_issues():
+        CFG["_absolute_links"] = True
+        try:
+            body = markdown(expand(i["body_md"]))
+            html_doc, text = email_html(i, body), email_text(body)
+        finally:
+            CFG["_absolute_links"] = False
+        write(f"/newsletter/{i['slug']}/email.html", html_doc)
+        (OUT / "newsletter" / i["slug"] / "email.txt").write_text(text)
+        issues.append({"issue": i["issue"], "send_date": i["send_date"], "slug": i["slug"], "subject": i["subject"],
+                       "preheader": i.get("preheader", ""), "html": html_doc, "text": text})
+        web = markdown(expand(i["body_md"]))
+        pages.append((f"/newsletter/{i['slug']}/", f"{i['subject']} · {CFG['name']}", i.get("preheader", ""),
+                      f'<section class="wrap narrow"><p class="kicker">Scam Alert · issue {i["issue"]} · {esc(str(i["send_date"]))}</p>'
+                      f'<h1>{esc(i["subject"].split(": ", 1)[-1])}</h1>{web}'
+                      f'<h2>Get the next one</h2>{email_form("newsletter-" + i["slug"], "Send me the weekly Scam Alert")}</section>',
+                      False))
+    (OUT / "newsletter").mkdir(parents=True, exist_ok=True)
+    (OUT / "newsletter" / "issues.json").write_text(json.dumps(issues, indent=2))
+    rows = "".join(f'<li><a href="{u("/newsletter/" + x["slug"] + "/")}">{esc(x["subject"])}</a> '
+                   f'<span class="small">{esc(str(x["send_date"]))}</span></li>' for x in reversed(issues))
+    pages.insert(0, ("/newsletter/", f"Scam Alert: the weekly newsletter · {CFG['name']}",
+                     "One scam a week, decoded in plain English: the tell, what to do, and one 5-minute job.",
+                     f'<section class="wrap narrow"><h1>Scam Alert, every Thursday</h1>'
+                     f'<p class="lede">One scam a week, decoded: the tell that gives it away, what to do, and one 5-minute job that makes you harder to scam.</p>'
+                     f'{email_form("newsletter-archive", "Send me the weekly Scam Alert")}<h2>Past issues</h2><ul>{rows}</ul></section>',
+                     False))
+    return pages
+
+
+def aff(slug: str) -> dict:
+    return next(a for a in CFG["affiliates"] if a["slug"] == slug)
+
+
+def aff_button(slug: str, label: str) -> str:
+    a = aff(slug)
+    if is_placeholder(a["url"]):
+        WARNINGS.append(f"affiliate {slug} url is still a placeholder: {a['url']}")
+    return (f'<a class="button {AFFILIATE_CLICK}" rel="sponsored nofollow" href="{esc(a["url"])}">{esc(label)}</a>')
+
+
+COMPARE_ROWS = {
+    "identity": [
+        ("What it is", "An all-in-one plan: identity and credit monitoring plus device and privacy tools.",
+         "Identity and credit monitoring from Gen Digital, the company behind Norton."),
+        ("Good fit if", "You want one app that also covers antivirus, a VPN and passwords for the family.",
+         "You mainly want identity monitoring and restoration help, and may already use Norton."),
+        ("Watch for", "Plans, features and insurance limits change; check what the family plan covers for kids.",
+         "Cheaper tiers may monitor only one credit bureau; first-year prices often rise at renewal."),
+        ("Free trial", "Check the site: trials and money-back terms change.",
+         "Check the site: trials and money-back terms change."),
+    ],
+    "passwords": [
+        ("What it is", "Open-source password manager with a free plan for unlimited passwords on all your devices.",
+         "Polished paid password manager with family plans and a free trial."),
+        ("Good fit if", "You want to start free today, or want the cheapest paid family plan.",
+         "You want the smoothest setup for a family that isn't techy."),
+        ("Watch for", "The free plan covers the basics; sharing with a whole family needs a paid plan.",
+         "No free-forever plan; set a reminder before the trial ends."),
+        ("Free option", "Yes, a free plan.", "No, a free trial."),
+    ],
+}
+
+
+def compare_table(cat: str, a: str, b: str) -> str:
+    head = f"<tr><th></th><th>{esc(aff(a)['name'])}</th><th>{esc(aff(b)['name'])}</th></tr>"
+    rows = "".join(f"<tr><th>{esc(k)}</th><td>{esc(x)}</td><td>{esc(y)}</td></tr>" for k, x, y in COMPARE_ROWS[cat])
+    btns = (f"<tr><th></th><td>{aff_button(a, 'See ' + aff(a)['name'] + ' plans')}</td>"
+            f"<td>{aff_button(b, 'See ' + aff(b)['name'] + ' plans')}</td></tr>")
+    return f'<div class="scroll"><table class="compare">{head}{rows}{btns}</table></div>'
+
+
+def compare_page() -> str:
+    reviewed = CFG.get("compare_reviewed", "")
+    return f"""<section class="wrap narrow">
+<p class="kicker">Plain-English comparison · reviewed {esc(reviewed)}</p>
+<h1>Identity theft protection and password managers: Aura vs LifeLock, Bitwarden vs 1Password</h1>
+<p class="disclosure"><strong>Affiliate disclosure:</strong> the "See plans" buttons on this page are affiliate links. If you sign up, we may earn a commission at no extra cost to you. Nobody paid to be on this page, and we put the free options first. <a href="{u('/disclosures/')}">How we make money</a>.</p>
+<h2>First, the free stuff (do this even if you buy nothing)</h2>
+<ol>
+<li><strong>Freeze your credit at all three bureaus</strong> (Equifax, Experian, TransUnion). It's free by law, and it blocks most new-account fraud. You can do it for your kids too.</li>
+<li><strong>Check your credit reports for free</strong> at <a href="https://www.annualcreditreport.com/">AnnualCreditReport.com</a>, the official site.</li>
+<li><strong>Get an IRS Identity Protection PIN</strong> at <a href="https://www.irs.gov/identity-theft-fraud-scams/get-an-identity-protection-pin">IRS.gov</a> so nobody can file taxes in your name.</li>
+<li><strong>Turn on two-step sign-in</strong> for your email and bank.</li>
+<li>If it happens, <a href="https://www.identitytheft.gov/">IdentityTheft.gov</a> (from the FTC) gives you a free recovery plan.</li>
+</ol>
+<p>A paid service can't freeze your credit better than you can, and it can't stop every scam. What it adds is <strong>convenience</strong>: alerts in one place, help with the paperwork if your identity is stolen, and insurance for some recovery costs.</p>
+
+<h2>Password managers: Bitwarden vs 1Password</h2>
+<p>Most hacked accounts start with a reused password. A password manager makes a different strong password for every site and remembers them all. For most families this is the single best security purchase, and you can start for free.</p>
+{compare_table("passwords", "bitwarden", "1password")}
+<p><strong>Our take:</strong> start with Bitwarden's free plan today. If the family finds it fiddly, try the 1Password trial. Either is far better than reusing passwords.</p>
+
+<h2>Identity theft protection: Aura vs LifeLock</h2>
+<p>These services watch for your details in places they shouldn't be (new credit, data breaches, the dark web), alert you, and help you recover if your identity is stolen. Both advertise identity theft insurance; check the limit and what it covers on the plan you're looking at.</p>
+{compare_table("identity", "aura", "lifelock")}
+<p><strong>Our take:</strong> freeze your credit first. If you then want someone watching and a team to call if it goes wrong, compare the family plans side by side, and check the renewal price, not just the first-year deal.</p>
+
+<h2>Honest notes</h2>
+<ul>
+<li>Prices, plans and insurance limits change often, so we don't list prices here. Check each company's site before you buy.</li>
+<li>No service can stop every scam. The habits in our <a href="{u('/free/')}">free checklist</a> do more than any app.</li>
+<li>We haven't been paid to rank anyone. If that ever changes, we'll say so on this page.</li>
+</ul>
+<p class="small">Last reviewed {esc(reviewed)}. Spotted something out of date? Email {esc(CFG['contact_email'])}.</p>
+</section>"""
+
+
 def build() -> list[str]:
     global CFG
     CFG = load_config()
@@ -547,11 +663,15 @@ def build() -> list[str]:
          "A setup guide and 10 phone scripts to protect older parents from scams.", parents_page(), False),
         ("/teams/", "Scam awareness training for small teams ($99)",
          "A ready-to-run 45-minute scam awareness session: slides, quiz, certificates.", teams_page(), False),
+        ("/compare/", "Aura vs LifeLock, Bitwarden vs 1Password: plain-English comparison",
+         "Identity theft protection and password managers compared in plain English, with the free options first.",
+         compare_page(), False),
         ("/checker/", "Is this a scam? Free checker", "Check a suspicious text or email.", checker_page(), False),
     ]
     for p in load_dir("pages"):
         pages.append((f"/{p['slug']}/", f"{p['title']} · {CFG['name']}", p["title"],
                       f'<section class="wrap narrow"><h1>{esc(p["title"])}</h1>{markdown(p["body_md"])}</section>', False))
+    pages += newsletter()
     for path, title, desc, body, noindex in pages:
         write(path, layout(title=title, description=desc, path=path, body=body, noindex=noindex))
     write("/404.html", layout(title="Not found", description="Page not found.", path="/404.html", noindex=True,

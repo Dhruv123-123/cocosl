@@ -49,3 +49,8 @@ Email links are absolute (they use `url` / `SITE_URL`).
    `Product Click` and affiliate links (any `affiliates[].url` used in page text) send `Affiliate Click`
    with `rel="sponsored"`. Add both goals in Plausible. Outbound links, like the checker, are counted
    automatically. Email bodies carry no script.
+
+## Weekly Scam Alert and the comparison page
+
+- **Newsletter:** `content/newsletter/` holds the template and issues 1–6 (Thursdays, Feb 4 – Mar 11 2027). The build writes paste-ready `public/newsletter/<slug>/email.html` + `email.txt`, a public archive at `/newsletter/` and `newsletter/issues.json`. See `content/newsletter/README.md` before sending.
+- **Comparison page:** `/compare/` compares Aura vs LifeLock and Bitwarden vs 1Password, free options first. Its buttons use `affiliates[].url` in `site.json` (placeholders `https://REPLACE_ME/aff/...` until you're approved; the build warns until they're replaced). Buttons get `rel="sponsored nofollow"` and the `Affiliate Click` event. No prices on purpose; re-check the table and bump `compare_reviewed` whenever you edit it.
