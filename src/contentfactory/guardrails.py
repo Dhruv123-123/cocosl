@@ -250,6 +250,9 @@ def run_content_checks(db: DB, brand: BrandProfile, post: dict) -> list[Check]:
     checks.append(check_sameness(db, brand.slug, post))
     if (orig := check_original_element(post)) is not None:
         checks.append(orig)
+    from .numbercheck import as_check, check_script
+    if (nums := as_check(check_script(script, caption))) is not None:
+        checks.append(nums)
     unverified = script.get("claims_to_verify") or []
     if unverified:
         checks.append(Check("fact_check", "warn", f"{len(unverified)} claim(s) need a human fact-check"))
