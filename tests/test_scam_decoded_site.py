@@ -288,6 +288,50 @@ def test_scam_of_the_week_alert_templates(tmp_path, monkeypatch):
         mod.alert_items()
 
 
+def test_weekly_scam_of_the_week_email_reuses_alerts(tmp_path, monkeypatch):
+    import shutil
+    import sys
+    import pytest
+    mod, out = build(tmp_path, monkeypatch, SITE_URL="https://example.org")
+    data = json.loads((out / "weekly" / "weekly.json").read_text())
+    assert data, "no weekly email built"
+    alerts = {a["slug"]: a for a in json.loads((out / "alerts" / "alerts.json").read_text())}
+    for w in data:
+        assert w["lead"] in alerts and "[" not in w["subject"] and len(w["subject"]) <= 70
+        hrefs = re.findall(r'href="([^"]+)"', w["html"])
+        assert hrefs and all(h.startswith("https://") for h in hrefs), hrefs
+        assert "https://example.org/checker/" in w["text"] and "fictional" in w["text"] and "3 TELLS" in w["text"]
+        assert (out / "weekly" / w["slug"] / "email.txt").read_text() == w["text"]
+        assert not (out / "weekly" / w["slug"] / "index.html").exists()  # email only; alerts have the pages
+    first = data[0]
+    assert "ALSO GOING AROUND" in first["text"] and "COULD YOU SPOT IT?" in first["text"]
+    assert "/weekly/" in (out / "robots.txt").read_text()
+    # new_weekly.py leads with the newest unused alert and skips quiz questions about the same scam
+    spec = importlib.util.spec_from_file_location("new_weekly", ROOT / "new_weekly.py")
+    nw = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(nw)
+    content = tmp_path / "content"
+    shutil.copytree(ROOT / "content" / "alerts", content / "alerts")
+    shutil.copy(ROOT / "content" / "quiz.json", content / "quiz.json")
+    (content / "weekly").mkdir()
+    shutil.copy(ROOT / "content" / "weekly" / "_TEMPLATE.md", content / "weekly" / "_TEMPLATE.md")
+    monkeypatch.setattr(nw, "CONTENT", content)
+    monkeypatch.setattr(nw, "WEEKLY", content / "weekly")
+    monkeypatch.setattr(sys, "argv", ["new_weekly.py", "--date", "2027-01-20"])
+    dest = nw.main()
+    text = dest.read_text()
+    assert dest.name == "01-week-of-2027-01-20.md" and "lead: unpaid-toll-texts" in text
+    assert "also: breach-fraud-team-calls, holiday-delivery-texts" in text and "quiz: 2" in text  # q1 is a toll text
+    assert 'subject: Scam of the week: "Unpaid toll" texts are back' in text
+    monkeypatch.setattr(mod, "CONTENT", content)
+    with pytest.raises(SystemExit, match="template text in intro"):
+        mod.weekly_items()
+    dest.write_text(text.replace("lead: unpaid-toll-texts", "lead: no-such-alert").replace(
+        text.split("intro: ")[1].split("\n")[0], "Toll texts are back."))
+    with pytest.raises(SystemExit, match="no alert called no-such-alert"):
+        mod.weekly_items()
+
+
 def test_could_you_spot_it_quiz_and_share_cards(tmp_path, monkeypatch):
     import subprocess
     mod, out = build(tmp_path, monkeypatch, SITE_URL="https://example.org")

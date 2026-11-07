@@ -21,6 +21,8 @@ and names any field you missed), then run `python3 build.py`. You get:
 - `explainer`: optional slug from `/scams/`. It adds a "How it works" link.
 - `source_url`: an official source (FTC, FBI/IC3, IRS, a state AG). Every alert needs one.
 
+The weekly "scam of the week" email (`../weekly/`) reuses these: one alert leads, up to 3 more get a line each.
+
 ## Rules
 
 - Send at most one alert a week, and only when there's a real spike. Most weeks the newsletter is enough.

@@ -7,6 +7,7 @@
 | 2 | Protect Your Parents | $29 | Adult children helping parents | `protect-your-parents/` |
 | 3 | Spot It, Stop It team training pack | $99 | Small-business owners, office managers, HR | `team-training/` |
 | Side | Scam Decoded for Seniors (large print, Etsy) | $7 | Older adults; gift from adult children | `seniors-pack/` |
+| Side | Scam-Proof Your Parents printable kit (Etsy + Gumroad) | [PRICE] | Adult child and parent, together | `parents-printable-kit/` |
 | Side | Community talks (libraries, senior centers, churches) | $0–$300 | Venues; drives pack sales and email sign-ups | `speaking-kit/` |
 
 ## Upsell path

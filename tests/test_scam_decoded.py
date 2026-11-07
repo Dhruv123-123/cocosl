@@ -349,6 +349,46 @@ def test_tax_2027_pack_covers_tax_scams_on_free_saturdays():
     assert all(f"#{n} " in plan for n in range(12))
 
 
+def test_holiday_season_pack_fills_free_tuesday_thursday_noon_slots():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    import datetime as dt
+    items = json.loads((CONTENT.parent / "holiday-season-2026.json").read_text())
+    assert len(items) == 10
+    dates = [i["post_on"] for i in items]
+    assert dates == sorted(dates) and dates[0] >= "2026-11-23" and dates[-1] <= "2026-12-31 23:59"
+    assert all(d.endswith("12:00") and dt.date.fromisoformat(d[:10]).weekday() in (1, 3) for d in dates)
+    assert {i["format"] for i in items} == {"short", "carousel"}
+    videos = [i for i in items if i["format"] != "carousel"]
+    assert all(a["look"] != b["look"] for a, b in zip(videos, videos[1:])), "two videos in a row look alike"
+    earlier, taken = set(), set()
+    for f in CONTENT.parent.glob("*.json"):
+        if f.name == "holiday-season-2026.json":
+            continue
+        data = json.loads(f.read_text())
+        for i in data if isinstance(data, list) else []:
+            if isinstance(i, dict) and "script" in i:
+                earlier.add(i["script"]["title"])
+                if i.get("post_on"):
+                    taken.add(i["post_on"])
+    assert not taken & set(dates), "a holiday post lands on a slot another plan already uses"
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        words = sum(len(s.narration.split()) for s in sc.segments)
+        if item["format"] == "short":
+            assert 60 <= words <= 120 and len(sc.title) <= 60, sc.title
+        assert sc.title not in earlier and any(ch.isdigit() for ch in sc.hook.split(".")[0][:60])
+        assert sc.sources and sc.claims_to_verify and item["original_element"]
+        assert all(any(h in u for h in ("ftc.gov", "bbb.org", "fbi.gov", "ic3.gov")) for u in sc.sources), sc.title
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments) and len(sc.hashtags) <= 5
+        text = G.script_text(item["script"])
+        assert "checker" in sc.caption and "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+    plan = (CONTENT.parent / "POSTING_PLAN_HOLIDAY_SEASON_2026.md").read_text()
+    assert all(f"#{n} " in plan for n in range(10))
+
+
 def test_weeks_31_34_june_content_rotates_formats():
     from contentfactory.schemas import Script
     from contentfactory import guardrails as G
@@ -538,3 +578,30 @@ def test_long_videos_follow_a_worked_example():
         assert example or words >= 900, sc["title"]
         for h, *_ in (example[0][1] if example else []):
             assert h in heads and (not chapters or h in chapters), (sc["title"], h)
+
+
+def test_parents_printable_kit_and_listing(tmp_path, monkeypatch):
+    import importlib.util
+    import re
+    kit = CONTENT.parent / "product" / "parents-printable-kit"
+    spec = importlib.util.spec_from_file_location("parents_kit", kit / "build.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    monkeypatch.setattr(mod, "DIST", tmp_path)
+    monkeypatch.setattr("sys.argv", ["build.py", "--no-pdf"])
+    mod.main()
+    html_text = (tmp_path / "Scam-Proof-Your-Parents-Kit.html").read_text()
+    assert html_text.count('<section class="page') == 9
+    assert len(mod.SCRIPTS) == 8 and sum(len(v) for v in mod.CHECKLIST.values()) == 15
+    for word in ("code word", "Fridge", "checklist", "personal use only", "not legal or financial advice"):
+        assert word.lower() in html_text.lower(), word
+    assert all(any(h in u for h in ("ftc.gov", "fbi.gov", "ic3.gov", "ojp.gov", "justice.gov")) for _, u in mod.SOURCES)
+    assert "guarantee" not in html_text.lower()
+    listing = (kit / "LISTING.md").read_text()
+    assert "[PRICE]" in listing and "## Etsy" in listing and "## Gumroad" in listing
+    title = listing.split("**Title (13 words):**\n")[1].split("\n")[0]
+    assert len(title.split()) == 13 and len(title) <= 140
+    tags = re.findall(r"^\| \d+ \| ([a-z ]+) \| (\d+) \|$", listing, flags=re.M)
+    assert len(tags) == 13 and len({t for t, _ in tags}) == 13
+    assert all(len(t) <= 20 and len(t) == int(n) for t, n in tags)
+    assert "How it's made" in listing and "Personal use only" in listing
