@@ -496,7 +496,7 @@ def _extend(sub) -> None:
                 "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup",
                 "contentfactory.publish.preflight", "contentfactory.cleanup",
                 "contentfactory.planner", "contentfactory.launch_check", "contentfactory.stats",
-                "contentfactory.scaffold", "contentfactory.manual"):
+                "contentfactory.scaffold", "contentfactory.manual", "contentfactory.numbercheck"):
         try:
             module = __import__(mod, fromlist=["register"])
         except ImportError:
