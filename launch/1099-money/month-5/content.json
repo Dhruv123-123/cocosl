@@ -2918,7 +2918,28 @@
      "heading": "Compare",
      "narration": "If you have last year's return too, put the two side by side and compare all ten numbers. The direction matters more than the level. Rising revenue with a falling hourly rate means you're working more for less. A rising expense ratio might be fine if it bought you new clients. A shrinking balance due means your set-aside habit is working. Two years of numbers tell you more than either one alone.",
      "on_screen_text": "Compare two years side by side",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two reports side by side with arrows. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two reports side by side with arrows. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Sam's 2026 in five numbers",
+      "labels": [
+       "Revenue",
+       "Expenses",
+       "Profit",
+       "Federal tax",
+       "Take-home"
+      ],
+      "values": [
+       68500,
+       8500,
+       60000,
+       12037,
+       47963
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Fictional example. Take-home is before state tax."
+     }
     },
     {
      "heading": "Recap",
@@ -2956,7 +2977,7 @@
   "format_style": "scorecard",
   "original_element": {
    "type": "worked-example-chart",
-   "detail": "Scorecard chart of the ten numbers for the example freelancer across two fictional years, with arrows for direction",
+   "detail": "Bar chart of Sam's 2026 scorecard numbers (revenue, expenses, profit, federal tax, take-home), from the script",
    "chapter": "Compare"
   }
  },
@@ -3128,7 +3149,24 @@
      "heading": "Safe harbor",
      "narration": "Quick reminder of the safe harbor. You generally avoid the underpayment penalty if each payment is at least a quarter of last year's total tax, or a quarter of one hundred and ten percent of it if last year's adjusted gross income was over one hundred fifty thousand dollars. Last year here means twenty twenty-six, the return you just filed. The other option is ninety percent of this year's tax, which we'll come to.",
      "on_screen_text": "Safe harbor: ¼ of 2026 total tax",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a shield with a fraction. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a shield with a fraction. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "June 15 safe-harbor payment",
+      "labels": [
+       "Ana $30K",
+       "Sam $60K",
+       "Jo $120K"
+      ],
+      "values": [
+       1296,
+       3010,
+       7116
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "¼ of each one's 2026 total tax (all under $150K AGI)."
+     }
     },
     {
      "heading": "Ana",
@@ -3247,7 +3285,7 @@
   "format_style": "real-numbers",
   "original_element": {
    "type": "worked-example-chart",
-   "detail": "Bars for Ana, Sam and Jo: safe-harbor payment vs 90%-of-this-year payment, from the script's figures",
+   "detail": "Bar chart of Ana's, Sam's and Jo's June 15 safe-harbor payments, from the script's figures",
    "chapter": "Safe harbor"
   }
  }

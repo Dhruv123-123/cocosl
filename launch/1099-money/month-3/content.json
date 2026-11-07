@@ -2763,7 +2763,22 @@
      "heading": "Choose",
      "narration": "So how do you choose? Renters with a meaningful share of a high-rent home usually do better with the regular method. Small spaces, low costs, or owners who expect to sell soon often prefer the simplified method. Run both. It's a ten-minute calculation once you have your square footage and bills, and the difference can be several hundred dollars of tax a year.",
      "on_screen_text": "Run both. Pick the better one.",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two coin stacks being compared. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two coin stacks being compared. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Renter's deduction, both methods",
+      "labels": [
+       "Simplified",
+       "Regular"
+      ],
+      "values": [
+       600,
+       3090
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "120 sq ft of a 960 sq ft apartment; $24,720 a year of rent, utilities and insurance."
+     }
     },
     {
      "heading": "This week",
@@ -2808,7 +2823,7 @@
   "format_style": "on-screen-calculation",
   "original_element": {
    "type": "worked-example-chart",
-   "detail": "Simplified vs regular method chart for the renter and owner examples in the script, with the bigger deduction highlighted",
+   "detail": "Bar chart of the renter example's deduction under the simplified ($600) and regular ($3,090) methods, from the script's numbers",
    "chapter": "Choose"
   }
  },
@@ -2979,7 +2994,26 @@
      "heading": "Example",
      "narration": "Our freelancer is single, with sixty thousand dollars of Schedule C profit, no other income, and four estimated payments of sixteen hundred twenty-five during the year, sixty-five hundred in total. We'll start from that profit, because we covered how to get it, line by line, in our Schedule C video.",
      "on_screen_text": "Single · $60K profit · $6,500 paid",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a profile card with four coins. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a profile card with four coins. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$60K profit on the return",
+      "labels": [
+       "SE tax",
+       "Income tax",
+       "Paid in 2026",
+       "Due Apr 15"
+      ],
+      "values": [
+       8478,
+       3559,
+       6500,
+       5537
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Single, 2026 federal, standard deduction, QBI deduction."
+     }
     },
     {
      "heading": "Schedule SE",
@@ -3112,7 +3146,7 @@
   "format_style": "walkthrough",
   "original_element": {
    "type": "worked-example-chart",
-   "detail": "Flow diagram of the example's numbers moving from Schedule C to Schedule SE, Schedule 1 and Form 1040, drawn from the script",
+   "detail": "Bar chart of the example return: SE tax, income tax, estimated payments and the April balance, from the script's numbers",
    "chapter": "Example"
   }
  },

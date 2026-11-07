@@ -2674,7 +2674,24 @@
      "heading": "Set aside",
      "narration": "So how much should each freelancer set aside? Take the federal rate and add your state. With a five percent state tax, that's roughly twenty-two percent at thirty thousand, twenty-five percent at sixty thousand and twenty-nine at a hundred twenty thousand. Round up a little if your income is growing, because the next dollar costs more than the average. Per month, that's roughly four hundred thirty, one thousand and two thousand four hundred dollars of federal tax alone. Move it into a separate savings account the day each client pays, not at the end of the month.",
      "on_screen_text": "Set aside ≈ 22% · 25% · 29% (with 5% state)",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three jars filling to different levels. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three jars filling to different levels. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Set aside, with a 5% state tax",
+      "labels": [
+       "$30K",
+       "$60K",
+       "$120K"
+      ],
+      "values": [
+       22,
+       25,
+       29
+      ],
+      "unit_prefix": "",
+      "unit_suffix": "%",
+      "note": "2026 federal (single, standard deduction, QBI) + 5% state. Rounded."
+     }
     },
     {
      "heading": "Quarterly",
@@ -2743,7 +2760,7 @@
   "format_style": "real-numbers",
   "original_element": {
    "type": "worked-example-chart",
-   "detail": "Side-by-side bars for $30K, $60K and $120K split into SE tax, income tax and state, with the set-aside rate on each",
+   "detail": "Bar chart of the set-aside rate at $30K, $60K and $120K of profit (2026 federal plus a 5% state), from the script's numbers",
    "chapter": "Set aside"
   }
  },
@@ -2899,7 +2916,26 @@
      "heading": "How much",
      "narration": "First, the exchange rate. At sixty thousand of profit, single, every thousand dollars of business expenses saves about two hundred thirty-one dollars of federal tax, because it lowers both self-employment tax and income tax. Some deductions only lower income tax, like retirement contributions and health insurance, so they save a bit less per dollar, about ninety-six dollars per thousand for this freelancer, but they're often much bigger. Keep both rates in mind as we go down the list.",
      "on_screen_text": "$1,000 expense ≈ $231 saved",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with roughly a quarter sliced off. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with roughly a quarter sliced off. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Tax saved at $60K profit",
+      "labels": [
+       "SEP ≈ $11,150",
+       "Health $5,000",
+       "3,000 miles",
+       "Laptop 90%"
+      ],
+      "values": [
+       1070,
+       480,
+       500,
+       400
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "2026 federal, single. Approximate, from this video's examples."
+     }
     },
     {
      "heading": "Rules",
@@ -3027,7 +3063,7 @@
   "format_style": "countdown",
   "original_element": {
    "type": "worked-example-chart",
-   "detail": "Ranked bar chart of what each deduction saves at $60K of profit, using the script's figures, revealed bar by bar as the countdown runs",
+   "detail": "Bar chart of what the top deductions save at $60K of profit (SEP, health insurance, mileage, a laptop), using the script's figures",
    "chapter": "How much"
   }
  },

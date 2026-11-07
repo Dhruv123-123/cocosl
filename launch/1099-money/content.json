@@ -1851,7 +1851,26 @@
      "heading": "Sam's year",
      "narration": "Here's how Sam's year actually plays out. In April, Sam pays sixteen twenty-five and has about four thousand five hundred in tax savings, because thirty percent of the first months' income went straight there. In June, another sixteen twenty-five. A big project lands in the summer, so in September Sam pays sixteen twenty-five again, and the tax savings account keeps growing. In January, Sam pays the last sixteen twenty-five. That's sixty-five hundred paid, and the savings account holds more than enough for the April balance.",
      "on_screen_text": "Sam: $1,625 × 4 + savings for April",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a timeline with four coins and a growing vault. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a timeline with four coins and a growing vault. No text, no logos, no real people.",
+     "chart": {
+      "kind": "line",
+      "title": "Sam's payments, running total",
+      "labels": [
+       "Apr 15",
+       "Jun 15",
+       "Sep 15",
+       "Jan 15"
+      ],
+      "values": [
+       1625,
+       3250,
+       4875,
+       6500
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Safe harbor: 100% of last year's $6,500 tax, in four equal payments."
+     }
     },
     {
      "heading": "Sam's choice",
@@ -1958,7 +1977,7 @@
   "format_style": "real-numbers",
   "original_element": {
    "type": "worked-example-chart",
-   "detail": "Sam's four payments charted against Sam's profit by quarter, drawn from the script's numbers, with the safe-harbor line marked",
+   "detail": "Line chart of Sam's four $1,625 safe-harbor payments adding up to last year's $6,500, from the script's numbers",
    "chapter": "Sam's year"
   }
  }

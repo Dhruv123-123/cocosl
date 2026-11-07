@@ -73,3 +73,14 @@ def test_no_video_repeats_the_structure_of_the_last_20():
     scores = _scores()
     assert max(scores) <= 0.5
     assert sum(scores) / len(scores) <= 0.12
+
+
+def test_worked_example_longs_carry_their_chart():
+    # The pack's original-element check blocks a long video with no chart or footage; a worked-example
+    # chart is ready to render, so it must be drawn on its own chapter.
+    for batch, it in _videos():
+        el = it.get("original_element") or {}
+        if it["format"] == "long" and el.get("type") == "worked-example-chart":
+            seg = next(s for s in it["script"]["segments"] if s["heading"] == el["chapter"])
+            chart = seg.get("chart") or {}
+            assert len(chart.get("labels", [])) == len(chart.get("values", [])) >= 2, (batch, it["script"]["title"])

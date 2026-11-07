@@ -2589,7 +2589,26 @@
      "heading": "Hours chart",
      "narration": "Let's put that on a chart, because this is where most rates go wrong. Same target, same costs, only the billable hours change. At thirty-five hours a week, Alex needs about fifty-four dollars an hour. At thirty, sixty-two fifty. At twenty-five, seventy-five. At twenty, about ninety-four. If you set your rate assuming thirty-five billable hours and you're actually billing twenty-two, you're not lazy and you're not failing. Your rate was built on the wrong number. Most freelancers find their real number is between twenty and thirty.",
      "on_screen_text": "35h $54 · 30h $62.50 · 25h $75 · 20h $94",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a bar chart with four bars. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a bar chart with four bars. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Hourly floor for $90,000",
+      "labels": [
+       "35 h/wk",
+       "30 h/wk",
+       "25 h/wk",
+       "20 h/wk"
+      ],
+      "values": [
+       53.57,
+       62.5,
+       75,
+       93.75
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "48 working weeks. Same target and costs; only billable hours change."
+     }
     },
     {
      "heading": "Day rate",
@@ -3030,7 +3049,22 @@
      "heading": "Cash flow",
      "narration": "Here's why terms matter as much as your rate. Picture an eight-thousand-dollar project that takes six weeks. On net thirty after delivery, you invoice in week six and get paid around week ten, if they're on time. For ten weeks, your bank balance only goes down. With a fifty percent deposit, four thousand arrives in week one and four thousand around week eight. Same price, same work, but the deposit version has cash in the bank from the start. On a retainer paid in advance, you're paid before the month begins.",
      "on_screen_text": "Net 30: first cash ~week 10",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a line chart with three paths. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a line chart with three paths. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Cash in hand at week 6",
+      "labels": [
+       "Net 30",
+       "50% deposit"
+      ],
+      "values": [
+       0,
+       4000
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "$8,000 six-week project, from the script's example."
+     }
     },
     {
      "heading": "Deposit how",
@@ -3136,7 +3170,7 @@
   "format_style": "myth-vs-fact",
   "original_element": {
    "type": "worked-example-chart",
-   "detail": "Line chart of bank balance across an $8,000, six-week project under net 30 after delivery, a 50% deposit, and a monthly retainer",
+   "detail": "Bar chart of cash received by week 6 of an $8,000 project: $0 on net 30 vs $4,000 with a 50% deposit, from the script",
    "chapter": "Cash flow"
   }
  }

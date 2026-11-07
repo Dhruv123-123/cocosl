@@ -2872,7 +2872,24 @@
      "heading": "Example",
      "narration": "Here's Sam again, sixty thousand of profit. Sam finds twelve hundred dollars of missed software and fees, claims the home office for a thousand, and adds two thousand one hundred and seventy-five of mileage. That's about four thousand four hundred of expenses, worth roughly a thousand dollars of tax. Then Sam puts three thousand into a traditional IRA for twenty twenty-six, saving about two hundred and ninety more. Around thirteen hundred dollars less tax, mostly from money Sam had already spent.",
      "on_screen_text": "Example: ~$1,300 saved",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin stack getting shorter. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin stack getting shorter. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Sam's tax saved in March",
+      "labels": [
+       "Missed expenses",
+       "IRA $3,000",
+       "Total"
+      ],
+      "values": [
+       1000,
+       290,
+       1290
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "$60K profit, 2026 federal, single. Approximate, from the script."
+     }
     },
     {
      "heading": "Records",
@@ -2920,7 +2937,7 @@
   "format_style": "countdown",
   "original_element": {
    "type": "worked-example-chart",
-   "detail": "Before/after chart of the example's tax as each move (IRA, HSA, SEP) is added, from the script's numbers",
+   "detail": "Bar chart of the tax Sam saves from missed expenses and a $3,000 IRA contribution, from the script's numbers",
    "chapter": "Example"
   }
  },
@@ -2966,7 +2983,22 @@
      "heading": "Priya numbers",
      "narration": "Say Priya's twenty twenty-six total tax was eleven thousand, and the job withheld nine thousand five hundred. Payment one is fifteen hundred. The safe harbor for twenty twenty-seven is eleven thousand divided by four: two thousand seven hundred and fifty a quarter. But Priya now expects only thirty-five thousand of freelance profit for twenty twenty-seven, and no salary, so the tax will probably be lower. The current-year method may let Priya pay less each quarter, as long as it reaches ninety percent of the actual twenty twenty-seven tax.",
      "on_screen_text": "Priya: $1,500 + $2,750 (or less)",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two coins, one smaller. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two coins, one smaller. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Priya's two April 15 payments",
+      "labels": [
+       "2026 balance",
+       "Q1 2027 estimate"
+      ],
+      "values": [
+       1500,
+       2750
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Safe harbor: $11,000 ÷ 4. The current-year method may allow less."
+     }
     },
     {
      "heading": "Jordan",
@@ -3066,7 +3098,7 @@
   "format_style": "real-numbers",
   "original_element": {
    "type": "worked-example-chart",
-   "detail": "Chart of Priya's two April 15 payments, the 2026 balance and the Q1 2027 estimate, side by side from the script's figures",
+   "detail": "Bar chart of Priya's two April 15 payments: the $1,500 2026 balance and the $2,750 Q1 2027 safe-harbor estimate, from the script",
    "chapter": "Priya numbers"
   }
  }
