@@ -1,6 +1,7 @@
 """Spanish product builds (launch/dinero-simple/products) and the month-1 content plan."""
 import importlib.util
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -575,3 +576,17 @@ def test_review_packets_cover_every_post_and_every_attorney_flag():
     for k in ("native", "attorney"):
         lo, hi = r[k]["hours"]
         assert 0 < lo < hi
+
+
+def test_etsy_safe_printables_have_no_instructions_and_fit_etsy():
+    """The three Spanish printables are trackers/logs (labels only), so they pass PR #6's Etsy rule; titles are under
+    15 words, descriptions open with what the item is, 13 tags of 20 characters or fewer, price left as [PRICE]."""
+    b = _load(DS / "imprimibles" / "build_imprimibles.py", "build_imprimibles")
+    assert [p["slug"] for p in b.PRODUCTS] == ["registro-de-cuentas", "reto-de-ahorro", "renta-y-reparaciones"]
+    guide = re.compile(r"\b(guía|guide|kit|paso a paso|instrucciones|cómo (hacer|usar|empezar))\b", re.I)
+    for p in b.PRODUCTS:
+        assert len(p["title"].split()) < 15 and not guide.search(p["title"]), p["slug"]
+        assert len(p["tags"]) == 13 and all(len(t) <= 20 for t in p["tags"]), p["slug"]
+        text = " ".join(p["pages"]())
+        assert not guide.search(re.sub(r"<[^>]+>", " ", text)), p["slug"]
+    assert b.PRICE == "[PRICE]"
