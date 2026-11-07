@@ -384,19 +384,34 @@ NOTE_CSS = ("<style>@page{size:Letter;margin:.7in}body{font-family:Arial,Helveti
             "padding:5px;vertical-align:top;font-size:10pt}a{color:#1F5C8B}</style>")
 
 
+FORM_CSS = "<style>th:nth-child(3),td:nth-child(3){width:42%}td{height:30px}</style>"
+
+
+def md_to_pdf_job(md: Path, out_pdf: Path, extra_css: str = "") -> dict:
+    body = subprocess.run(["pandoc", str(md), "-f", "gfm", "-t", "html"],
+                          check=True, capture_output=True, text=True).stdout
+    page = out_pdf.with_suffix(".html")
+    page.write_text(f"<!doctype html><html><head><meta charset='utf-8'>{NOTE_CSS}{extra_css}</head><body>{body}</body></html>")
+    return {"html": str(page), "out": str(out_pdf), "w": 816, "h": 1056}
+
+
 def sales_doc_jobs(pdir: Path) -> list[dict]:
+    """Sales and onboarding documents: <name>.html pages and a few Markdown files, rendered to out/ as PDFs."""
     out = pdir / "out"
     out.mkdir(exist_ok=True)
     jobs = []
-    for name in ("sales-sheet", "roi"):
-        if (pdir / f"{name}.html").exists():
-            jobs.append({"html": str(pdir / f"{name}.html"), "out": str(out / f"{name}.pdf"), "w": 816, "h": 1056})
-    if (pdir / "COMPLIANCE_NOTE.md").exists() and shutil.which("pandoc"):
-        body = subprocess.run(["pandoc", str(pdir / "COMPLIANCE_NOTE.md"), "-f", "gfm", "-t", "html"],
-                              check=True, capture_output=True, text=True).stdout
-        note = out / "COMPLIANCE_NOTE.html"
-        note.write_text(f"<!doctype html><html><head><meta charset='utf-8'>{NOTE_CSS}</head><body>{body}</body></html>")
-        jobs.append({"html": str(note), "out": str(out / "COMPLIANCE_NOTE.pdf"), "w": 816, "h": 1056})
+    pages = [pdir / f"{n}.html" for n in ("sales-sheet", "roi")] + sorted((pdir / "onboarding").glob("*.html"))
+    for page in pages:
+        if page.exists():
+            dest = out / page.relative_to(pdir).with_suffix(".pdf")
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            jobs.append({"html": str(page), "out": str(dest), "w": 816, "h": 1056})
+    if shutil.which("pandoc"):
+        for md in [pdir / "COMPLIANCE_NOTE.md", pdir / "onboarding" / "BRAND_INTAKE.md"]:
+            if md.exists():
+                dest = out / md.relative_to(pdir).with_suffix(".pdf")
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                jobs.append(md_to_pdf_job(md, dest, FORM_CSS if md.name == "BRAND_INTAKE.md" else ""))
     return jobs
 
 

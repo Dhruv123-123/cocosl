@@ -1,7 +1,15 @@
-# 30 prospect credit unions
+# 60 prospect credit unions
 
-`PROSPECTS.csv` lists 30 community credit unions in Montana (10), Idaho (8), Oregon (6) and
-Washington (6), in send order. Same region as the Spot It, Stop It outreach, so "credit unions around
+`PROSPECTS.csv` lists 60 community credit unions in send order:
+
+- **Batch 1 (rows 1–30):** Montana (10), Idaho (8), Oregon (6), Washington (6).
+- **Batch 2 (rows 31–60, added Nov 7 2026):** Wyoming (8), Utah (10), Colorado (12). Same Q2 2026
+  call report source and the same rules. Wyoming goes first because it borders Montana. Five towns hold
+  two listed CUs (Cheyenne, Brigham City, Pueblo, Littleton, Montrose); those rows suggest Plus for
+  local exclusivity, because the first one to sign takes the town. Skipped: employee-only CUs such as
+  Hercules First, Firefighters, Denver Fire Department, Fitzsimons and Education First, and CUs over $500M.
+
+Send batch 1 first. Same region as the Spot It, Stop It outreach, so "credit unions around
 Great Falls" is an honest line and word of mouth can help.
 
 ## How they were picked (public information only)
@@ -10,7 +18,7 @@ Great Falls" is an honest line and word of mouth can help.
   every federally insured credit union makes, read through BankRegReports' state lists. Each row's
   `data_source` gives the page. NCUA's own site wasn't reachable from this session; the charter number
   lets you check any row on NCUA's Credit Union Locator.
-- **Size:** $77M to $465M in assets. Big enough to pay $49 to $149 a month, small enough that most
+- **Size:** $61M to $474M in assets. Big enough to pay $49 to $149 a month, small enough that most
   have no one writing weekly fraud content.
 - **Left out:** credit unions over $500M (they usually have marketing teams), employee-only and union
   credit unions (narrow membership; a weaker fit for lobby and social), and **Vocal Credit Union**
@@ -22,7 +30,7 @@ Great Falls" is an honest line and word of mouth can help.
 
 | Column | Meaning |
 |---|---|
-| `send_order` | Montana first (closest to the other outreach), then Idaho, Oregon, Washington; smaller first within each state. |
+| `send_order` | Montana first (closest to the other outreach), then Idaho, Oregon, Washington, Wyoming, Utah, Colorado; smaller first within each state. |
 | `ncua_charter` | NCUA charter number. Look it up on NCUA's Credit Union Locator to get the official website. |
 | `total_assets_usd_m_q2_2026`, `members_q2_2026` | From the call report. |
 | `suggested_tier` | Essentials under $100M, Standard $100M to $500M. Offer Plus where two or more listed credit unions share a town (Great Falls, Pocatello), because local exclusivity matters there. |

@@ -21,7 +21,9 @@ Nothing was bought.
 | `roi.html` | ROI one-pager: cost vs writing it in-house, break-even, fill-in table for their own numbers (renders to `out/roi.pdf`). |
 | `COMPLIANCE_NOTE.md` | No legal advice; sourcing rules; NCUA advertising, UDAAP, Reg E, CAN-SPAM, GLBA/vendor, accessibility, social, SMS; fact-check list. |
 | `COLD_EMAILS.md` | Email 1 (two versions), contact form, LinkedIn note, 2 follow-ups, final note, and replies to 9 common answers. |
-| `PROSPECTS.csv` + `PROSPECTS.md` | 30 credit unions in MT/ID/OR/WA from NCUA call report data (Q2 2026). |
+| `PROSPECTS.csv` + `PROSPECTS.md` | 60 credit unions from NCUA call report data (Q2 2026): batch 1 in MT/ID/OR/WA, batch 2 in WY/UT/CO. |
+| `CONTENT_CALENDAR.md` + `.csv` | 12 weeks of planned issues after the samples (member sends Feb 2 to Apr 20 2027), with delivery, fact-check and write-by dates, Scam Decoded source issue and official sources. |
+| `onboarding/` | First-client kit: kickoff email series, brand intake form (PDF), approval workflow and sign-off log, invoice template with `{{PAYMENT_LINK}}` (PDF). |
 | `DELIVERY_WORKFLOW.md` | How each weekly issue is picked, written, checked, built, delivered and corrected; client onboarding. |
 
 `out/` and `clients/` are gitignored. Rendered copies live in project files at

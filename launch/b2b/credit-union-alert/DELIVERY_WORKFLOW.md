@@ -33,7 +33,7 @@ Choose one scam that members are likely to meet in the send week. In order:
 5. **Evergreen fillers** when nothing is pressing: fraud department calls, fake checks, gift card
    payment requests, account takeover, romance, grandparent and "Hi Mom" calls, P2P payment scams.
 
-Don't repeat a topic within 8 weeks. Write the topic, the member send date and the source issue in
+Planned topics through Apr 20 2027 are in `CONTENT_CALENDAR.md`. Don't repeat a topic within 8 weeks. Write the topic, the member send date and the source issue in
 a new `issues.json` entry.
 
 ## 2. Write it (day −14)
@@ -102,6 +102,9 @@ copy of exactly what was sent in `out/` (or your Drive) as the record of what ea
   every client, and email them all the same day, even if they've already sent it.
 
 ## Onboarding a new client (once, about 30 minutes)
+
+The full kit (emails, intake form, approval workflow, invoice) is in `onboarding/`; start with
+`onboarding/README.md`. The short version:
 
 1. Ask for: full name, short name used in copy, member service phone, website, logo (PNG or SVG, at
    least 400 px tall), brand color (hex), accent color, the "we will never ask" sentence their
