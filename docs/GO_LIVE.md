@@ -1,8 +1,9 @@
 # Go live: the one checklist
 
-Written 2026-11-07 for Dhruv. This merges every "only you can do this" step from `docs/CREDENTIALS.md`,
-`docs/QUICKSTART.md`, `docs/DEPLOY.md`, `launch/LAUNCH_DAY.md`, the open PRs (#1–#6) and the project files
-in `content-factory/`, with the duplicates removed. Everything else is already built.
+Written 2026-11-07 for Dhruv, refreshed the same night after the round-2 work landed on `main`. This merges
+every "only you can do this" step from `docs/CREDENTIALS.md`, `docs/QUICKSTART.md`, `docs/DEPLOY.md`,
+`launch/LAUNCH_DAY.md`, `launch/VERIFY_BEFORE_POSTING.md`, the open PRs (#1–#6), the round-2 commits on `main`
+and the project files in `content-factory/`, with the duplicates removed. Everything else is already built.
 
 It's ordered by **fastest path to first revenue**: the ad studio can pay this month, products can sell as
 soon as there's traffic, affiliates and platform money come later. Times are hands-on time, not waiting time.
@@ -52,6 +53,9 @@ The 76 leads and pitches are already written in `content-factory/ai-ad-studio-v2
 - [ ] Choose one AI video tool whose terms allow commercial ads, and make a 10-second test so you know the
       workflow before someone says yes. 30 min
 - [ ] Invoice template: 50% deposit, terms from `launch/ugc-service/RATE_CARD.md`. 10 min
+- [ ] In `.env`: `FACTORY_PORTFOLIO_URL` (the hosted portfolio) and `FACTORY_PAYMENT_INSTRUCTIONS`
+      (e.g. "Pay by the Stripe link in the invoice email"), so the factory's proposals and onboarding drafts
+      fill in correctly. 5 min
 - [ ] **From Tue Nov 10: send 15 first emails a day** from `ai-ad-studio-v2/pitches/` (highest rank first),
       compliance footer under each, from your own inbox. Log dates in `TRACKER.csv`. Follow-ups on day 4 and
       day 11, per `FOLLOW_UP_SEQUENCE.md`. ≈ 1 h/day
@@ -74,7 +78,7 @@ Needs PR #6 merged. Files are in `content-factory/products/` and `launch/product
       | `AUDIT5` | 5 | The Debt-Free Date Planner |
       | `DEBTFREE5` | 5 | Start Investing With $100 a Month |
       | `INVEST5` | 5 | The 20-Minute Budget |
-      | `LAUNCH` | per LISTING.md | each product, first 7 days only, with an end date |
+      | `LAUNCH` | per LISTING.md | each product, **ending 2026-11-14** (the welcome emails on `main` print that date) |
 
 - [ ] Upsells (one per product), per `launch/products/UPSELL_PATH.md` step 3. 10 min
 - [ ] Post-purchase workflow email 3 days after each purchase (drafts in `UPSELL_PATH.md`). 15 min
@@ -91,11 +95,26 @@ Needs PR #6 merged. Files are in `content-factory/products/` and `launch/product
       Facebook Page. 30 min
 - [ ] Upload the brand kit from `content-factory/launch-pack/brand-kit/` (profile picture, banner, watermark,
       bios from `bio-pack.txt`). Verify the YouTube channel by phone (custom thumbnails). 20 min
+- [ ] **Before each post, tick `launch/VERIFY_BEFORE_POSTING.md`:** the real HYSA APY (scripts use an
+      illustrative 3.5%), that the linked bank is FDIC-insured with no monthly fee, take-home pay and tax
+      estimates, the student-loan autopay discount and HSA/FSA limits. 15 min once, then 2 min per piece
 - [ ] Post by hand from `content-factory/launch-pack/POSTING_PLAN.md` (Nov 7–20): carousels are ready now;
       videos wait for a voice (Stage 6). Check every number, keep the AI disclosure, switch on the
       platform AI label. 10 min/post
+- [ ] `SUPPORT_EMAIL` in `.env` (reply-to on the factory's welcome emails and sales pages). 2 min
 - [ ] Month 1 (Nov 21 – Dec 20) follows `content-factory/month-1/POSTING_PLAN.md`; import `calendar.ics`
       into your calendar. 5 min
+
+## Stage 4b · Second brand: Tiny Histories (optional, ≈ 1 h)
+
+On `main` already: 24 launch pieces and `launch/tiny-histories/POSTING_PLAN.md` (Nov 7–20, 17:00 ET daily,
+YouTube + Instagram). No product or affiliate links yet, so it earns only from views later. Do it after
+Money Made Simple is posting, not before.
+
+- [ ] Create its YouTube and Instagram accounts with the handles in `brands/tiny-histories.yaml`. 30 min
+- [ ] Open the four source links listed under Tiny Histories in `launch/VERIFY_BEFORE_POSTING.md` and keep
+      CONTESTED/LEGEND/UNPROVEN stories worded as uncertain. 20 min
+- [ ] Don't add a product link until its PDF exists.
 
 ## Stage 5 · Website and email funnel (≈ 1 h 30 min)
 
@@ -142,11 +161,13 @@ Needs PR #2 merged. Unlocks the 16 launch videos and 26 month-1 videos waiting i
 Manual posting is fine for the first weeks. Do this when it isn't.
 
 - [ ] **Instagram token:** Meta developer app (Facebook Login for Business + Instagram + Threads), add the
-      permissions in `docs/CREDENTIALS.md` §6, Graph API Explorer token, then
+      permissions in `docs/CREDENTIALS.md` §6 (now including `instagram_manage_comments` for the comment inbox,
+      which needs App Review for Advanced Access), Graph API Explorer token, then
       `factory auth meta --token <token>`. Add `META_APP_ID`, `META_APP_SECRET`. Optional `IG_TRIAL_REELS=SS_PERFORMANCE`.
       This token also runs `research/scouting/watchlist.py`. 45 min
-- [ ] **YouTube:** Cloud project, YouTube Data API v3, OAuth consent (you as test user), Desktop client,
-      `factory auth youtube`. Testing-mode tokens expire every 7 days. 30 min
+- [ ] **YouTube:** Cloud project, YouTube Data API v3, OAuth consent (you as test user) with scopes
+      `youtube.upload`, `youtube.readonly`, `youtube.force-ssl` (comment replies), Desktop client,
+      `factory auth youtube`. Optional `YT_CHANNEL_ID` and `IG_USERNAME` so the inbox skips your own comments. Testing-mode tokens expire every 7 days. 30 min
 - [ ] **TikTok:** developer app with Login Kit + Content Posting API, `factory auth tiktok`, submit the audit
       (posts are private until it passes; post from the app meanwhile). 30 min
 - [ ] **Server:** a $5–10 VPS + domain, follow `docs/DEPLOY.md` (Caddy, `DASHBOARD_TOKEN`,
@@ -158,23 +179,30 @@ Manual posting is fine for the first weeks. Do this when it isn't.
 ## Every week after that
 
 - Monday: `factory report`, do its "Next actions". 20 min
-- Daily: 15 pitches + follow-ups, 2 approved posts, reply to comments. ≈ 1.5 h
+- Daily: 15 pitches + follow-ups, 2 approved posts, reply to comments (the dashboard's `/inbox` drafts
+  replies once platforms are connected; you send them). ≈ 1.5 h
 
 ---
 
 ## PR merge order
 
-Checked 2026-11-07: merging all six onto `main` in this order has no conflicts, and the full test suite
-passes on the result (149 tests).
+Checked 2026-11-07 against `main` after the round-2 commits (welcome sequences, comment inbox, site export,
+Tiny Histories). In this order, #1, #3, #2, #4 and this PR merge cleanly and all tests pass.
+**#5 and #6 now have one small conflict each with `main`** and need a rebase before they can merge:
 
-| # | Merge | PR | Why here |
-|---|---|---|---|
+- #5: `src/contentfactory/cli.py`, the list of command modules (keep both: `community.cli`, `site` and `pack`).
+- #6: `brands/money-made-simple.yaml`, the `products:` list (keep #6's six products, plus `main`'s `slug:` field).
+
+The threads that opened them are being asked to fix this; this table gets updated when they're green.
+
+| # | Merge | Why here |
+|---|---|---|
 | 1 | **#1** Research: competitors, affiliates, hooks, next niches | docs only (`research/`), no risk |
 | 2 | **#3** Financial model | docs only (`docs/FINANCIAL_MODEL.md`) |
 | 3 | **#2** Scouting, Kokoro voice, Instagram Trial Reels | code; touches voice and the IG publisher, nothing the later PRs touch |
 | 4 | **#4** Website, lead magnet, 10-email funnel | adds `site/` and `netlify.toml`; must land before #6 |
-| 5 | **#5** Month 1 pack and `factory pack` | edits `README.md` like #4 does; Git merges them cleanly in this order |
-| 6 | **#6** Product line | adds product pages under `site/content/products/`, which need #4's site |
-| 7 | This PR (go-live checklist) | docs only; any time |
+| 5 | **#5** Month 1 pack and `factory pack` | after its rebase; edits `README.md` like #4, which Git merges cleanly |
+| 6 | **#6** Product line | after its rebase; adds product pages under `site/content/products/`, which need #4's site |
+| 7 | **#7** This go-live checklist | docs only; any time |
 
 If a new PR lands, merge it after these unless its description says otherwise.
