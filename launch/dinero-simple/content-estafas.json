@@ -1,0 +1,1384 @@
+[
+ {
+  "key": "e-notario",
+  "format": "short",
+  "pillar": "estafas y fraude",
+  "idea_angle": "In Latin America a notario is a lawyer; in the US a notary public only witnesses signatures and cannot give immigration advice.",
+  "script": {
+   "title": "Un 'notario' en EE. UU. no es abogado",
+   "hook": "En tu país, un notario es abogado. Aquí, no.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "En muchos países de Latinoamérica, un notario es un abogado con mucha preparación. En Estados Unidos, no.",
+     "on_screen_text": "Aquí, un notario NO es abogado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at two office doors, one marked with a stamp and one with a scale of justice. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hace",
+     "narration": "Aquí, un notario público solo certifica firmas. No puede darte consejos de inmigración ni llenar tus trámites por ti.",
+     "on_screen_text": "Solo sella y certifica firmas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple rubber stamp over a blank document. No text, no logos, no real people."
+    },
+    {
+     "heading": "La estafa",
+     "narration": "Hay quien se anuncia como 'notario' para cobrarte miles por un trámite de inmigración. Y un trámite mal hecho puede dañar tu caso.",
+     "on_screen_text": "Cobran miles y meten mal tu caso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a thick folder with a red warning triangle. No text, no logos, no real people."
+    },
+    {
+     "heading": "Quién sí",
+     "narration": "Para inmigración, busca un abogado con licencia o un representante acreditado por el Departamento de Justicia en una organización reconocida.",
+     "on_screen_text": "Abogado o representante acreditado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a scale of justice next to a small building with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo verificar",
+     "narration": "Pídele su número de licencia y búscalo en el colegio de abogados de tu estado, o busca a la organización en la lista oficial del Departamento de Justicia.",
+     "on_screen_text": "Pide su número de licencia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a magnifying glass over an ID card. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos y mándaselo a alguien de tu familia.",
+   "caption": "En muchos países, un notario es abogado. En Estados Unidos, un notario público solo certifica firmas: no puede darte consejos de inmigración ni preparar tu caso.\n\nPara inmigración, busca:\n• un abogado con licencia (verifícalo en el colegio de abogados de tu estado), o\n• un representante acreditado por el Departamento de Justicia en una organización reconocida.\n\nSi alguien que se dice 'notario' te cobró por un trámite de inmigración, Repórtalo en ReporteFraude.ftc.gov, en español.\n\nSíguenos y mándaselo a alguien de tu familia.",
+   "hashtags": [
+    "inmigracion",
+    "notario",
+    "estafas",
+    "fraude",
+    "comunidadlatina",
+    "dinerosimple"
+   ],
+   "description": "Por qué un notario público en Estados Unidos no puede ayudarte con tu caso de inmigración, y quién sí.",
+   "thumbnail_text": "Notario ≠ abogado",
+   "sources": [
+    "https://www.uscis.gov/es/evitar-estafas",
+    "https://www.justice.gov/eoir/recognition-and-accreditation-roster-reports",
+    "https://consumidor.ftc.gov/articulos/estafas-de-servicios-de-inmigracion"
+   ],
+   "claims_to_verify": [
+    "US notaries public cannot give legal or immigration advice (USCIS 'Avoid Scams' page)",
+    "Only licensed attorneys and DOJ-accredited representatives of recognized organizations may give immigration legal advice",
+    "EOIR publishes the roster of recognized organizations and accredited representatives (check current URL)",
+    "'Can damage your case' wording stays general; do not promise outcomes"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "e-formularios-gratis",
+  "format": "short",
+  "pillar": "estafas y fraude",
+  "idea_angle": "USCIS forms are free to download on uscis.gov; fees go only to USCIS through its own channels.",
+  "script": {
+   "title": "Los formularios de inmigración son gratis",
+   "hook": "Si alguien te vende un formulario de inmigración, te está estafando.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si alguien te vende un formulario de inmigración, te está estafando. Los formularios son gratis.",
+     "on_screen_text": "Los formularios de USCIS: $0",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a blank form with a big zero coin beside it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dónde",
+     "narration": "Se descargan gratis en el sitio oficial, uscis.gov. Fíjate que termine en punto gov.",
+     "on_screen_text": "Solo en uscis.gov",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a browser window with a small government building icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "La tarifa",
+     "narration": "Muchos trámites sí tienen tarifa, pero se le paga directo a USCIS, por sus medios oficiales. Nunca a una persona.",
+     "on_screen_text": "La tarifa se le paga a USCIS",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a coin going into an official envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Las señales",
+     "narration": "USCIS no te pide pagar por teléfono, por correo electrónico, con tarjetas de regalo ni por transferencia a una persona.",
+     "on_screen_text": "Nunca por teléfono ni tarjeta de regalo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone and a gift card each crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "¿Te llamaron de 'inmigración'? Cuelga y revisa tu caso tú mismo en uscis.gov con tu número de recibo.",
+     "on_screen_text": "Revisa tu caso tú mismo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf checking a phone calmly with a shield next to it. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos y mándaselo a alguien de tu familia.",
+   "caption": "Los formularios de USCIS son gratis en uscis.gov. Muchos trámites tienen tarifa, pero se le paga directo a USCIS por sus medios oficiales, nunca a una persona, por teléfono ni con tarjetas de regalo.\n\n¿Te llamaron o te escribieron de 'inmigración' pidiendo dinero? Cuelga y revisa tu caso tú mismo en uscis.gov con tu número de recibo. Repórtalo en ReporteFraude.ftc.gov, en español.\n\nSíguenos y mándaselo a alguien de tu familia.",
+   "hashtags": [
+    "inmigracion",
+    "uscis",
+    "estafas",
+    "fraude",
+    "comunidadlatina",
+    "dinerosimple"
+   ],
+   "description": "Los formularios de inmigración son gratis en uscis.gov y las tarifas solo se le pagan a USCIS.",
+   "thumbnail_text": "Los formularios son gratis",
+   "sources": [
+    "https://www.uscis.gov/es/formularios",
+    "https://www.uscis.gov/es/evitar-estafas"
+   ],
+   "claims_to_verify": [
+    "USCIS forms are free to download from uscis.gov",
+    "USCIS does not accept payment by phone, email, gift card or transfer to an individual (USCIS scam guidance)",
+    "Case status can be checked online with the receipt number"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "e-loteria-de-visas",
+  "format": "short",
+  "pillar": "estafas y fraude",
+  "idea_angle": "The Diversity Visa lottery is free to enter only on dvprogram.state.gov, and the State Department never emails or calls winners.",
+  "script": {
+   "title": "La lotería de visas: gratis y sin correos de 'ganaste'",
+   "hook": "Si te llegó un correo de que ganaste la lotería de visas, es falso.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si te llegó un correo de que ganaste la lotería de visas, es falso.",
+     "on_screen_text": "'Ganaste la lotería de visas' = falso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at an email envelope with a fake gold ribbon. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "El Departamento de Estado no avisa por correo electrónico, carta ni llamada. Revisas tu resultado tú mismo, en línea.",
+     "on_screen_text": "Nunca te avisan por correo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a closed mailbox with a small X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Inscribirte",
+     "narration": "Inscribirte es gratis y solo se hace en el sitio oficial del programa, que termina en state punto gov.",
+     "on_screen_text": "Inscribirte cuesta $0",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple form with a zero coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "La estafa",
+     "narration": "La estafa te pide pagar para 'asegurar tu lugar' o 'procesar tu visa'. Ese dinero no regresa.",
+     "on_screen_text": "'Paga para asegurar tu lugar'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a coin falling into a dark hole. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "Guarda tu número de confirmación y revisa tu resultado solo en el sitio oficial. Nadie te puede garantizar una visa.",
+     "on_screen_text": "Revisa solo en el sitio oficial",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small paper slip with a checkmark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos y mándaselo a alguien de tu familia.",
+   "caption": "La lotería de visas de diversidad: inscribirte es gratis y solo se hace en el sitio oficial del Departamento de Estado (dvprogram.state.gov). No te avisan que ganaste por correo, carta ni llamada; revisas tu resultado tú mismo con tu número de confirmación.\n\nSi te piden pagar para 'asegurar tu lugar', es estafa. Repórtalo en ReporteFraude.ftc.gov, en español.\n\nSíguenos y mándaselo a alguien de tu familia.",
+   "hashtags": [
+    "visa",
+    "loteriadevisas",
+    "inmigracion",
+    "estafas",
+    "comunidadlatina",
+    "dinerosimple"
+   ],
+   "description": "Cómo funciona de verdad la lotería de visas y cómo reconocer los correos falsos.",
+   "thumbnail_text": "Ese correo es falso",
+   "sources": [
+    "https://travel.state.gov/content/travel/en/us-visas/immigrate/diversity-visa-program-entry.html",
+    "https://consumidor.ftc.gov/articulos/estafas-de-servicios-de-inmigracion"
+   ],
+   "claims_to_verify": [
+    "Diversity Visa entry is free and only at dvprogram.state.gov",
+    "The State Department does not notify selectees by email, letter or phone; entrants check status online with their confirmation number",
+    "Many nationalities (including Mexico) are not eligible in a given year; do not imply everyone can enter"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "e-fianza-falsa",
+  "format": "short",
+  "pillar": "estafas y fraude",
+  "idea_angle": "Fake 'immigration' call: a relative was detained and you must pay a bond now by app, wire or gift card.",
+  "script": {
+   "title": "'Tu familiar está detenido, paga la fianza ya'",
+   "hook": "Te llaman: tu familiar está detenido y tienes que pagar ya.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Te llaman: tu familiar está detenido por inmigración y tienes que pagar la fianza en una hora.",
+     "on_screen_text": "'Paga la fianza en una hora'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a phone with an alarm clock ringing beside it. No text, no logos, no real people."
+    },
+    {
+     "heading": "La presión",
+     "narration": "Te piden no colgar, no decirle a nadie y pagar por app, transferencia o tarjetas de regalo.",
+     "on_screen_text": "Prisa, miedo y secreto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with three small icons: hourglass, lock, gift card. No text, no logos, no real people."
+    },
+    {
+     "heading": "La señal",
+     "narration": "Esa forma de pagar es la señal. Una fianza de inmigración no se paga con tarjetas de regalo ni a la cuenta de una persona.",
+     "on_screen_text": "Esa forma de pago es la señal",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a gift card and a phone payment arrow, both crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Verifica",
+     "narration": "Cuelga. Llama a tu familiar al número que ya tienes, y si de verdad está detenido, búscalo en el localizador oficial de detenidos de ICE.",
+     "on_screen_text": "Cuelga y verifica tú",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over a simple map pin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ayuda",
+     "narration": "Si es real, busca a un abogado o a una organización acreditada antes de pagar nada.",
+     "on_screen_text": "Busca un abogado o una organización",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf next to a small building with a checkmark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos y mándaselo a alguien de tu familia.",
+   "caption": "Si te llaman diciendo que tu familiar está detenido por inmigración y tienes que pagar la fianza ya, por app, transferencia o tarjeta de regalo: cuelga. Llámale a tu familiar al número que ya tienes. Si de verdad está detenido, búscalo en el localizador oficial de ICE y habla con un abogado o una organización acreditada antes de pagar.\n\nRepórtalo en ReporteFraude.ftc.gov, en español.\n\nSíguenos y mándaselo a alguien de tu familia.",
+   "hashtags": [
+    "inmigracion",
+    "estafas",
+    "fraude",
+    "familia",
+    "comunidadlatina",
+    "dinerosimple"
+   ],
+   "description": "La llamada de la 'fianza de inmigración' urgente: cómo reconocerla y qué hacer.",
+   "thumbnail_text": "La fianza falsa",
+   "sources": [
+    "https://locator.ice.gov/",
+    "https://www.ice.gov/detain/detention-management/bonds",
+    "https://consumidor.ftc.gov/articulos/estafas-de-servicios-de-inmigracion"
+   ],
+   "claims_to_verify": [
+    "ICE has an Online Detainee Locator System (locator.ice.gov)",
+    "ICE immigration bonds are paid through ICE's official channels (CeBONDS or an ERO office), not gift cards or person-to-person apps; confirm current process",
+    "Scenario is a fictional composite"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "e-secuestro-virtual",
+  "format": "short",
+  "pillar": "estafas y fraude",
+  "idea_angle": "Virtual kidnapping calls: a crying voice, a ransom demand, nobody is actually taken; a family code word and a call-back break it.",
+  "script": {
+   "title": "El secuestro virtual se rompe con una palabra",
+   "hook": "Una palabra que elijan hoy en familia puede parar un secuestro virtual.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Una palabra que elijan hoy en familia puede parar un secuestro virtual.",
+     "on_screen_text": "Una palabra clave en familia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf whispering to a small heart-shaped speech bubble. No text, no logos, no real people."
+    },
+    {
+     "heading": "La llamada",
+     "narration": "Te llaman, se oye a alguien llorando y te dicen que tienen a tu hijo. Piden dinero ya, y que no cuelgues.",
+     "on_screen_text": "Gritos, llanto, 'tenemos a tu hijo'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with jagged sound waves. No text, no logos, no real people."
+    },
+    {
+     "heading": "El truco",
+     "narration": "En el secuestro virtual nadie está secuestrado. Usan el miedo, datos de tus redes y, a veces, una voz copiada con inteligencia artificial.",
+     "on_screen_text": "Nadie está secuestrado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a mask icon on screen. No text, no logos, no real people."
+    },
+    {
+     "heading": "La palabra",
+     "narration": "Pide la palabra clave. Si no la saben, es estafa.",
+     "on_screen_text": "Pide la palabra clave",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small key next to a speech bubble. No text, no logos, no real people."
+    },
+    {
+     "heading": "Verifica",
+     "narration": "Si puedes, desde otro teléfono, llama tú a tu familiar o a alguien que esté con él. Y luego repórtalo a la policía y al FBI.",
+     "on_screen_text": "Llama tú a tu familiar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding two phones, calm. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos y mándaselo a alguien de tu familia.",
+   "caption": "Secuestro virtual: te llaman, se oye a alguien llorando y te exigen dinero ya. Nadie está secuestrado; usan el miedo, datos de tus redes y a veces una voz copiada con IA.\n\nEsta noche, elijan una palabra clave en familia. Si alguien llama en pánico pidiendo dinero, pídela. Si no la sabe, cuelga y llama tú a tu familiar. Repórtalo a la policía y en ic3.gov.\n\nSíguenos y mándaselo a alguien de tu familia.",
+   "hashtags": [
+    "secuestrovirtual",
+    "estafas",
+    "familia",
+    "seguridad",
+    "comunidadlatina",
+    "dinerosimple"
+   ],
+   "description": "Cómo funciona el secuestro virtual y cómo una palabra clave en familia lo detiene.",
+   "thumbnail_text": "Su palabra clave",
+   "sources": [
+    "https://www.fbi.gov/news/stories/virtual-kidnapping",
+    "https://www.ic3.gov/PSA/2024/PSA241203",
+    "https://consumidor.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "FBI has warned about virtual kidnapping ransom schemes, including ones aimed at Spanish speakers (check the current FBI page)",
+    "FBI PSA (Dec 2024) recommends a secret word or phrase with family against AI voice cloning",
+    "Scenario is a fictional composite; keep tone calm, not graphic"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "e-envio-retenido",
+  "format": "short",
+  "pillar": "estafas y fraude",
+  "idea_angle": "'Your transfer is on hold, pay a release fee' messages and fake remittance support accounts on social media.",
+  "script": {
+   "title": "'Tu envío está retenido, paga para liberarlo'",
+   "hook": "Si te piden pagar para 'liberar' un envío de dinero, es estafa.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si te piden pagar para 'liberar' un envío de dinero, es estafa.",
+     "on_screen_text": "Pagar para 'liberar' un envío = estafa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a winged envelope locked with a padlock. No text, no logos, no real people."
+    },
+    {
+     "heading": "El mensaje",
+     "narration": "El mensaje dice que tu envío o el de tu familia está retenido y que pagues una comisión para soltarlo.",
+     "on_screen_text": "'Tu envío está retenido'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone screen with an envelope and a small padlock icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "La otra versión",
+     "narration": "La otra versión: te quejas en redes de un envío y te escribe un 'agente de soporte' con una cuenta que parece oficial.",
+     "on_screen_text": "'Soporte' falso en redes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a chat bubble with a fake badge. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "Habla con el servicio de envíos solo desde su app o el número de su sitio oficial. Nunca desde un mensaje que te llegó.",
+     "on_screen_text": "Busca tú el número oficial",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone opening an official-looking app with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tus derechos",
+     "narration": "Y si un envío de verdad tiene un error, la ley te da 180 días para reportarlo con la compañía, gratis.",
+     "on_screen_text": "Tienes 180 días para reportar errores",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a small shield. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos y mándaselo a alguien de tu familia.",
+   "caption": "Si te piden pagar una comisión para 'liberar' un envío de dinero, es estafa. Igual si te escribe un 'agente de soporte' en redes después de que te quejaste de un envío.\n\nHabla con tu servicio de envíos solo desde su app o el número de su sitio oficial. Si un envío real tuvo un error, tienes 180 días para reportarlo con la compañía. Repórtalo en ReporteFraude.ftc.gov, en español.\n\n¿Te llegó algo raro? Pégalo en nuestro verificador de estafas gratis (enlace en la bio).\n\nSíguenos y mándaselo a alguien de tu familia.",
+   "hashtags": [
+    "remesas",
+    "enviardinero",
+    "estafas",
+    "fraude",
+    "comunidadlatina",
+    "dinerosimple"
+   ],
+   "description": "Las estafas del envío 'retenido' y del soporte falso en redes, y cómo protegerte.",
+   "thumbnail_text": "Envío 'retenido' = estafa",
+   "sources": [
+    "https://www.consumerfinance.gov/rules-policy/regulations/1005/33/",
+    "https://consumidor.ftc.gov/articulos/estafas-de-servicios-de-inmigracion"
+   ],
+   "claims_to_verify": [
+    "CFPB Remittance Transfer Rule: 180 days to report an error to the provider",
+    "Impostor 'customer support' accounts on social media are a documented scam pattern (FTC)",
+    "Do not name any real remittance company on screen"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "e-mula-de-dinero",
+  "format": "short",
+  "pillar": "estafas y fraude",
+  "idea_angle": "Money mule recruitment: 'receive money in your account and forward it to Mexico for a cut' makes you part of the crime.",
+  "script": {
+   "title": "'Te pago por recibir y reenviar dinero'",
+   "hook": "Si te pagan por recibir dinero en tu cuenta y mandarlo a otro lado, no es un trabajo.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si te pagan por recibir dinero en tu cuenta y mandarlo a otro lado, no es un trabajo.",
+     "on_screen_text": "Recibir y reenviar dinero ≠ trabajo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a coin between two arrows pointing in different directions. No text, no logos, no real people."
+    },
+    {
+     "heading": "La oferta",
+     "narration": "Te ofrecen quedarte con una parte por recibir un depósito y mandarlo a otro país, o comprar tarjetas de regalo con él.",
+     "on_screen_text": "'Quédate con el 10%'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a coin split with a small slice taken out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "Ese dinero casi siempre viene de otra víctima. Te están usando para moverlo, y a eso le llaman mula de dinero.",
+     "on_screen_text": "Ese dinero es robado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a coin with a small shadow figure behind it. No text, no logos, no real people."
+    },
+    {
+     "heading": "El costo",
+     "narration": "Te pueden cerrar la cuenta del banco, pedirte que devuelvas el dinero, y hasta meterte en problemas legales.",
+     "on_screen_text": "Te pueden cerrar la cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank building with a closed door. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "Di que no. Si ya recibiste algo, no lo mandes, y avísale a tu banco hoy.",
+     "on_screen_text": "Di que no y avisa a tu banco",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf shaking its head and holding a phone. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos y mándaselo a alguien de tu familia.",
+   "caption": "'Recibe un depósito, quédate con el 10% y manda el resto a otro país.' No es un trabajo: casi siempre es dinero de otra víctima, y te están usando como mula de dinero. Te pueden cerrar la cuenta, pedirte que lo devuelvas y hasta meterte en problemas legales.\n\nSi ya recibiste algo, no lo mandes y avísale a tu banco hoy. Repórtalo en ReporteFraude.ftc.gov, en español.\n\nSíguenos y mándaselo a alguien de tu familia.",
+   "hashtags": [
+    "estafas",
+    "fraude",
+    "trabajo",
+    "remesas",
+    "comunidadlatina",
+    "dinerosimple"
+   ],
+   "description": "Qué es una mula de dinero, por qué esas ofertas no son trabajos y qué hacer.",
+   "thumbnail_text": "No seas mula de dinero",
+   "sources": [
+    "https://www.fbi.gov/how-we-can-help-you/scams-and-safety/common-scams-and-crimes/money-mules",
+    "https://consumidor.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "FBI money mule guidance: mules can face account closures and legal consequences",
+    "Hedge: 'casi siempre' is used, not 'siempre'"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "e-banco-falso",
+  "format": "short",
+  "pillar": "estafas y fraude",
+  "idea_angle": "Adapted from Scam Decoded: no real bank asks you to move money to a 'safe account'.",
+  "script": {
+   "title": "Ningún banco te pide mover tu dinero para cuidarlo",
+   "hook": "Cero. Esos son los bancos que te piden mover tu dinero para protegerlo.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Cero. Esos son los bancos de verdad que te piden mover tu dinero para protegerlo.",
+     "on_screen_text": "Bancos que piden mover tu dinero: 0",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a big zero sign next to a small bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "La llamada",
+     "narration": "En la pantalla dice el nombre de tu banco. Saben tu nombre y los últimos cuatro números de tu tarjeta. Dicen que hay fraude.",
+     "on_screen_text": "En la pantalla dice 'tu banco'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone showing a small bank icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "El pedido",
+     "narration": "Luego viene el pedido: pasa tus ahorros a una 'cuenta segura' mientras lo arreglan.",
+     "on_screen_text": "'Pásalo a una cuenta segura'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. coins moving toward a box with a fake lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "El truco",
+     "narration": "El número que ves en la pantalla se puede falsificar, y esa 'cuenta segura' es del estafador.",
+     "on_screen_text": "El número en pantalla se puede falsificar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a mask on its screen. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "Cuelga y llama al número que viene atrás de tu tarjeta. Si hay fraude de verdad, ellos lo ven.",
+     "on_screen_text": "Cuelga y llama al número de tu tarjeta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf turning over a bank card to look at the back. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos y mándaselo a alguien de tu familia.",
+   "caption": "Ningún banco de verdad te pide mover tu dinero a una 'cuenta segura' para protegerlo. El número que aparece en tu pantalla se puede falsificar, y saber tu nombre o los últimos 4 números de tu tarjeta no prueba nada.\n\nCuelga y llama al número que viene atrás de tu tarjeta. Si te pasó, llama a tu banco ya. Repórtalo en ReporteFraude.ftc.gov, en español.\n\nSíguenos y mándaselo a alguien de tu familia.",
+   "hashtags": [
+    "estafas",
+    "fraude",
+    "banco",
+    "seguridad",
+    "comunidadlatina",
+    "dinerosimple"
+   ],
+   "description": "La llamada falsa del 'departamento de fraudes' de tu banco, y qué hacer.",
+   "thumbnail_text": "Cuelga y llama tú",
+   "sources": [
+    "https://www.fcc.gov/spoofing",
+    "https://consumidor.ftc.gov/articulos/como-evitar-una-estafa"
+   ],
+   "claims_to_verify": [
+    "Caller ID can be spoofed to show a real bank's number (FCC)",
+    "Banks do not ask customers to move money to a 'safe account' to protect it (confirm with a bank or regulator statement)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "e-codigo-whatsapp",
+  "format": "short",
+  "pillar": "estafas y fraude",
+  "idea_angle": "Adapted from Scam Decoded's read-back-the-code piece, set on WhatsApp: 'I sent you a code by mistake, send it to me'.",
+  "script": {
+   "title": "'Te mandé un código por error, ¿me lo pasas?'",
+   "hook": "Seis números. Si se los pasas, te roban tu WhatsApp.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Seis números. Si se los pasas a alguien, te puede robar tu WhatsApp.",
+     "on_screen_text": "6 números = tu cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a phone with six empty boxes on screen. No text, no logos, no real people."
+    },
+    {
+     "heading": "El mensaje",
+     "narration": "Un contacto te escribe: 'Te llegó un código mío por error, ¿me lo pasas?' Muchas veces es la cuenta de un amigo que ya robaron.",
+     "on_screen_text": "'Te llegó un código mío por error'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two chat bubbles, one with a small mask. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué pasa",
+     "narration": "Ese código no es de ellos. Es el que abre tu cuenta en otro teléfono. Con eso le piden dinero a todos tus contactos.",
+     "on_screen_text": "Ese código abre TU cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a key unlocking a phone that belongs to someone else. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "Nadie de verdad necesita tu código. Ni tu banco, ni soporte técnico, ni un comprador en línea.",
+     "on_screen_text": "Nadie necesita tu código",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a code card with a big X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Protégete",
+     "narration": "Hoy mismo, activa la verificación en dos pasos en la configuración de WhatsApp. Te toma un minuto.",
+     "on_screen_text": "Activa la verificación en dos pasos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf tapping a settings icon with a small shield. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos y mándaselo a alguien de tu familia.",
+   "caption": "'Te llegó un código mío por error, ¿me lo pasas?' Ese código abre TU cuenta en otro teléfono, y con ella le piden dinero a tus contactos. Muchas veces el mensaje viene de la cuenta robada de un amigo.\n\nNadie de verdad necesita tu código. Hoy mismo: WhatsApp → Configuración → Cuenta → Verificación en dos pasos.\n\n¿Te llegó algo raro? Pégalo en nuestro verificador de estafas gratis (enlace en la bio).\n\nSíguenos y mándaselo a alguien de tu familia.",
+   "hashtags": [
+    "whatsapp",
+    "estafas",
+    "seguridad",
+    "fraude",
+    "comunidadlatina",
+    "dinerosimple"
+   ],
+   "description": "La estafa del código de WhatsApp 'enviado por error' y cómo proteger tu cuenta.",
+   "thumbnail_text": "No pases el código",
+   "sources": [
+    "https://faq.whatsapp.com/1278661612895630",
+    "https://consumidor.ftc.gov/articulos/como-reconocer-y-evitar-las-estafas-de-phishing"
+   ],
+   "claims_to_verify": [
+    "WhatsApp offers two-step verification (a PIN) in Settings > Account (menu path may vary by version)",
+    "Legitimate companies don't ask you to read back one-time codes",
+    "Do not claim WhatsApp endorses this; no logo on screen"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "e-trabajo-que-cobra",
+  "format": "short",
+  "pillar": "estafas y fraude",
+  "idea_angle": "Adapted from Scam Decoded: task-job scams. A real job never asks you to pay to get paid.",
+  "script": {
+   "title": "Ningún trabajo te pide pagar para pagarte",
+   "hook": "Cero dólares. Eso te pide pagar un trabajo de verdad antes de pagarte.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Cero dólares. Eso te pide pagar un trabajo de verdad antes de pagarte.",
+     "on_screen_text": "Trabajo de verdad: pagas $0",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a zero coin next to a small briefcase. No text, no logos, no real people."
+    },
+    {
+     "heading": "El mensaje",
+     "narration": "Te llega un mensaje: trabajo fácil desde casa, calificar productos o dar 'me gusta' a videos, y te pagan por tarea.",
+     "on_screen_text": "'Califica productos desde tu casa'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with star ratings and small hearts. No text, no logos, no real people."
+    },
+    {
+     "heading": "El gancho",
+     "narration": "Los primeros pagos son reales. Veinte, cuarenta dólares. Parece legítimo.",
+     "on_screen_text": "Los primeros pagos son reales",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a few coins landing in a hand. No text, no logos, no real people."
+    },
+    {
+     "heading": "La trampa",
+     "narration": "Luego tienes que 'recargar' tu cuenta, casi siempre en cripto, para desbloquear las siguientes tareas. Ese dinero no regresa.",
+     "on_screen_text": "'Recarga para desbloquear'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a padlock on a phone screen with a coin slot. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "Si un trabajo te pide pagar, depositar o comprar algo para pagarte, no es un trabajo.",
+     "on_screen_text": "Si pagas para cobrar, no es trabajo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf crossing its arms next to a crossed-out coin. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos y mándaselo a alguien de tu familia.",
+   "caption": "Los 'trabajos' de tareas: calificas productos o das 'me gusta', los primeros pagos son reales, y luego te piden 'recargar' (casi siempre en cripto) para desbloquear lo que ganaste. Ese dinero no regresa.\n\nSi un trabajo te pide pagar, depositar o comprar algo para pagarte, no es un trabajo. Repórtalo en ReporteFraude.ftc.gov, en español.\n\nSíguenos y mándaselo a alguien de tu familia.",
+   "hashtags": [
+    "trabajodesdecasa",
+    "estafas",
+    "empleo",
+    "fraude",
+    "comunidadlatina",
+    "dinerosimple"
+   ],
+   "description": "Cómo funcionan las estafas de 'trabajos de tareas' y la regla para reconocerlas.",
+   "thumbnail_text": "Pagar para cobrar = estafa",
+   "sources": [
+    "https://consumidor.ftc.gov/alertas-para-consumidores/2023/09/pagar-para-ganar-dinero-estafas-de-trabajos-o-tareas-en-linea",
+    "https://consumidor.ftc.gov/articulos/estafas-de-empleo"
+   ],
+   "claims_to_verify": [
+    "FTC consumer alert (2023) on gamified 'task' job scams (check the Spanish URL)",
+    "Task scams typically require deposits, often crypto, to unlock earnings",
+    "Example payout amounts are fictional"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "e-7726",
+  "format": "short",
+  "pillar": "estafas y fraude",
+  "idea_angle": "Adapted from Scam Decoded: forward scam texts to 7726 for free.",
+  "script": {
+   "title": "7726: el número para reenviar mensajes de estafa",
+   "hook": "Siete, siete, dos, seis. Ahí va cada mensaje de estafa.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Siete, siete, dos, seis. Cuatro números que casi nadie conoce, y ahí va cada mensaje de estafa.",
+     "on_screen_text": "7726",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf pointing at four large keypad buttons. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "En el teclado del celular forman la palabra SPAM en inglés. Reenvías el mensaje y tu compañía de celular lo puede bloquear.",
+     "on_screen_text": "En el teclado dice SPAM",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone keypad with four keys glowing. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Mantén presionado el mensaje, elige reenviar y mándalo al siete, siete, dos, seis. Es gratis.",
+     "on_screen_text": "Mantén presionado · Reenviar · 7726",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a finger holding down a chat bubble with a forward arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Nunca",
+     "narration": "No contestes, ni siquiera STOP. Contestar les confirma que tu número sí funciona.",
+     "on_screen_text": "No contestes, ni 'STOP'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a reply button crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Listo",
+     "narration": "Reenvía y borra. Diez segundos, y a lo mejor a la próxima persona ya no le llega.",
+     "on_screen_text": "Reenvía y borra",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf tossing a crumpled message into a small bin. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos y mándaselo a alguien de tu familia.",
+   "caption": "¿Te llegó un mensaje de estafa? Mantén presionado el mensaje → Reenviar → 7726. Es gratis y le avisa a tu compañía de celular para que lo bloquee. No contestes, ni siquiera 'STOP'. Luego bórralo.\n\nSi diste datos o dinero, repórtalo en ReporteFraude.ftc.gov, en español.\n\n¿Te llegó algo raro? Pégalo en nuestro verificador de estafas gratis (enlace en la bio).\n\nSíguenos y mándaselo a alguien de tu familia.",
+   "hashtags": [
+    "estafas",
+    "spam",
+    "mensajes",
+    "seguridad",
+    "comunidadlatina",
+    "dinerosimple"
+   ],
+   "description": "Cómo reportar mensajes de estafa gratis reenviándolos al 7726.",
+   "thumbnail_text": "Reenvíalo al 7726",
+   "sources": [
+    "https://www.fcc.gov/consumers/guides/stop-unwanted-robocalls-and-texts",
+    "https://consumidor.ftc.gov/articulos/como-reconocer-y-reportar-mensajes-de-texto-no-deseados"
+   ],
+   "claims_to_verify": [
+    "Forwarding to 7726 reports a text to most major US carriers at no cost",
+    "Replying (even STOP) can confirm your number is active (FTC: don't reply)",
+    "Forward menus vary by phone and OS"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "e-congela-tu-credito",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Adapted from Scam Decoded: a free credit freeze at the three bureaus blocks most new-account fraud.",
+  "script": {
+   "title": "$0 y 10 minutos: congela tu crédito hoy",
+   "hook": "Cero dólares y diez minutos. Eso cuesta bloquear casi todo el fraude de cuentas nuevas.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Cero dólares y unos diez minutos. Eso cuesta bloquear casi todo el fraude de cuentas nuevas a tu nombre.",
+     "on_screen_text": "$0 · 10 minutos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small ice cube with a lock inside. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hace",
+     "narration": "Congelar tu crédito impide que los prestamistas vean tu reporte, así que nadie puede abrir una tarjeta o un préstamo a tu nombre.",
+     "on_screen_text": "Sin reporte, no hay cuentas nuevas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a credit report page inside an ice block. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dónde",
+     "narration": "Hazlo en las tres agencias: Equifax, Experian y TransUnion. Por ley es gratis.",
+     "on_screen_text": "Equifax · Experian · TransUnion",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three small buildings with snowflakes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tu puntaje",
+     "narration": "No baja tu puntaje, y tus tarjetas de ahora siguen funcionando.",
+     "on_screen_text": "Tu puntaje no cambia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a score gauge with a steady needle. No text, no logos, no real people."
+    },
+    {
+     "heading": "Si necesitas crédito",
+     "narration": "¿Vas a pedir algo? Lo descongelas en línea por un día y luego se vuelve a bloquear.",
+     "on_screen_text": "¿Vas a pedir crédito? Descongélalo un día",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf melting a small ice cube with a tiny hair dryer. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos y mándaselo a alguien de tu familia.",
+   "caption": "Congelar tu crédito es gratis por ley en Equifax, Experian y TransUnion. Impide que alguien abra cuentas nuevas a tu nombre, no baja tu puntaje y tus tarjetas siguen funcionando. ¿Vas a pedir crédito? Lo descongelas en línea por un día.\n\nSi ya usaron tus datos, entra a RobodeIdentidad.gov (en español) para tu plan de recuperación.\n\nSíguenos y mándaselo a alguien de tu familia.",
+   "hashtags": [
+    "credito",
+    "robodeidentidad",
+    "seguridad",
+    "fraude",
+    "comunidadlatina",
+    "dinerosimple"
+   ],
+   "description": "Cómo congelar tu crédito gratis en las tres agencias y por qué vale la pena.",
+   "thumbnail_text": "Congela tu crédito",
+   "sources": [
+    "https://consumidor.ftc.gov/articulos/lo-que-tiene-que-saber-sobre-los-congelamientos-de-credito-y-las-alertas-de-fraude",
+    "https://www.robodeidentidad.gov/"
+   ],
+   "claims_to_verify": [
+    "Credit freezes and lifts are free at Equifax, Experian and TransUnion under federal law (since Sept 2018)",
+    "A freeze does not affect your credit score or existing accounts",
+    "'About 10 minutes' is an estimate for all three bureaus",
+    "Bureau websites are mostly in English; note this if a viewer asks"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "e-preparador-fantasma",
+  "format": "short",
+  "pillar": "estafas y fraude",
+  "idea_angle": "Ghost tax preparers: won't sign the return, promise a huge refund, take a cut of it. Paid preparers must sign and have a PTIN.",
+  "script": {
+   "title": "El preparador de impuestos que no firma",
+   "hook": "Si quien te hace los impuestos no quiere firmar, aléjate.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si la persona que te hace los impuestos no quiere firmar tu declaración, aléjate.",
+     "on_screen_text": "No firma = aléjate",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a tax form with an empty signature line. No text, no logos, no real people."
+    },
+    {
+     "heading": "La ley",
+     "narration": "Por ley, quien te cobra por preparar tus impuestos tiene que firmar la declaración y poner su número de preparador, el PTIN.",
+     "on_screen_text": "Debe firmar y tener PTIN",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pen signing a document with a small ID badge beside it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Las señales",
+     "narration": "Otras señales: te promete un reembolso enorme sin ver tus papeles, o te cobra un porcentaje del reembolso.",
+     "on_screen_text": "Reembolso enorme y cobro por porcentaje",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a giant coin with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "El riesgo",
+     "narration": "Si algo está mal, tú respondes ante el IRS, no el preparador. Y tienes que devolver lo que no te tocaba.",
+     "on_screen_text": "Tú respondes ante el IRS",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small person-shaped figure holding a heavy envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "Pide su PTIN, que el reembolso llegue a tu propia cuenta, y una copia firmada de tu declaración.",
+     "on_screen_text": "Pide su PTIN y tu copia firmada",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a signed paper and a bank card. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos y mándaselo a alguien de tu familia.",
+   "caption": "El preparador 'fantasma' no firma tu declaración, te promete un reembolso enorme sin ver tus papeles o te cobra un porcentaje del reembolso. Si algo está mal, tú respondes ante el IRS.\n\nAntes de que te hagan tus impuestos, pide: su PTIN, que firme, que el reembolso llegue a tu propia cuenta y una copia firmada para ti.\n\nSíguenos y mándaselo a alguien de tu familia.",
+   "hashtags": [
+    "impuestos",
+    "irs",
+    "estafas",
+    "reembolso",
+    "comunidadlatina",
+    "dinerosimple"
+   ],
+   "description": "Cómo reconocer a un preparador de impuestos 'fantasma' y qué pedirle a cualquier preparador.",
+   "thumbnail_text": "Si no firma, aléjate",
+   "sources": [
+    "https://www.irs.gov/es/newsroom/dirty-dozen",
+    "https://www.irs.gov/es/tax-professionals/choosing-a-tax-professional"
+   ],
+   "claims_to_verify": [
+    "Paid preparers must sign the return and include their PTIN (IRS)",
+    "IRS warns about ghost preparers who refuse to sign (Dirty Dozen list; check year)",
+    "Taxpayers are legally responsible for what is on their return"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "ec-notario-o-abogado",
+  "format": "carousel",
+  "pillar": "estafas y fraude",
+  "idea_angle": "Who can and can't help with immigration paperwork, and how to check.",
+  "script": {
+   "title": "¿Quién sí puede ayudarte con tu trámite de inmigración?",
+   "hook": "Guárdalo antes de pagarle a alguien.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo antes de pagarle a alguien.",
+     "on_screen_text": "¿Quién sí puede ayudarte con inmigración?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a folder with a small scale of justice. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sí: abogado",
+     "narration": "Pide su número de licencia y búscalo en el colegio de abogados de su estado.",
+     "on_screen_text": "SÍ: abogado con licencia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a scale of justice with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sí: acreditado",
+     "narration": "Trabaja en una organización reconocida por el Departamento de Justicia. Muchas cobran poco o nada.",
+     "on_screen_text": "SÍ: representante acreditado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small community building with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "No: notario",
+     "narration": "Aquí un notario solo certifica firmas. No puede darte consejos de inmigración.",
+     "on_screen_text": "NO: 'notario' o notario público",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a rubber stamp with a red X. No text, no logos, no real people."
+    },
+    {
+     "heading": "No: consultor",
+     "narration": "Tampoco pueden darte consejos legales ni escoger tus formularios.",
+     "on_screen_text": "NO: 'consultor' o 'gestor' de inmigración",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a briefcase with a red X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 1",
+     "narration": "Nadie puede garantizarte una visa, un permiso o una green card.",
+     "on_screen_text": "Señal: te garantiza el resultado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a gold ribbon with a crack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 2",
+     "narration": "Nunca le dejes tus documentos originales. Dale copias.",
+     "on_screen_text": "Señal: se queda con tus papeles originales",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a passport-like booklet held back by a hand. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal 3",
+     "narration": "O mentir en ellos. Lee todo antes de firmar y pide copia.",
+     "on_screen_text": "Señal: te pide firmar formularios en blanco",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a blank form with a pen hovering, warning triangle. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "En ReporteFraude.ftc.gov, en español. El formulario no pregunta tu estatus migratorio.",
+     "on_screen_text": "¿Te estafaron? Repórtalo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a phone and a shield. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos y mándaselo a alguien de tu familia.",
+   "caption": "Para un trámite de inmigración, SÍ te pueden ayudar: un abogado con licencia o un representante acreditado por el Departamento de Justicia en una organización reconocida. NO: un 'notario', notario público, 'consultor' o 'gestor'.\n\nSeñales de alerta: te garantiza el resultado, se queda con tus originales o te pide firmar formularios en blanco.\n\nSi te estafaron, repórtalo en ReporteFraude.ftc.gov, en español.\n\nSíguenos y mándaselo a alguien de tu familia.",
+   "hashtags": [
+    "inmigracion",
+    "notario",
+    "estafas",
+    "abogado",
+    "comunidadlatina",
+    "dinerosimple"
+   ],
+   "description": "Quién puede y quién no puede ayudarte con un trámite de inmigración.",
+   "thumbnail_text": "¿Quién sí puede ayudarte?",
+   "sources": [
+    "https://www.uscis.gov/es/evitar-estafas",
+    "https://www.justice.gov/eoir/recognition-and-accreditation-roster-reports",
+    "https://consumidor.ftc.gov/articulos/estafas-de-servicios-de-inmigracion"
+   ],
+   "claims_to_verify": [
+    "Only licensed attorneys and DOJ-accredited representatives of recognized organizations may give immigration legal advice",
+    "US notaries public and 'immigration consultants' cannot give legal advice",
+    "Last slide says the FTC report form does not ask for immigration status: confirm on ReporteFraude.ftc.gov before posting"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "ec-estafas-de-inmigracion",
+  "format": "carousel",
+  "pillar": "estafas y fraude",
+  "idea_angle": "Six immigration-themed scams: fake USCIS calls, sold forms, DV lottery emails, fake bonds, fake .gov sites, 'fast-track' offers.",
+  "script": {
+   "title": "6 estafas que usan la palabra 'inmigración'",
+   "hook": "Mándaselo a alguien que tenga un trámite abierto.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Mándaselo a alguien con un trámite abierto.",
+     "on_screen_text": "6 estafas que usan 'inmigración'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a magnifying glass over an official-looking envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Dicen que hay un problema con tu caso y que pagues ya. USCIS no cobra por teléfono.",
+     "on_screen_text": "1. La llamada 'de USCIS'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a small government building icon and a warning triangle. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Los formularios son gratis en uscis.gov.",
+     "on_screen_text": "2. Te venden los formularios",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form with a price tag crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "No avisan por correo. Revisas tú en el sitio oficial.",
+     "on_screen_text": "3. 'Ganaste la lotería de visas'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with a fake gold ribbon. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Pagos por app o tarjetas de regalo. Cuelga y verifica.",
+     "on_screen_text": "4. La fianza urgente",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a gift card and an hourglass. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Busca que termine en .gov. Los demás cobran por lo que es gratis.",
+     "on_screen_text": "5. Sitios que parecen oficiales",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a browser window with a small fake badge. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Nadie puede adelantar tu caso por un pago extra.",
+     "on_screen_text": "6. 'Te saco el permiso más rápido'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a stopwatch with a coin slot and a red X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Regla",
+     "narration": "Revisa tu caso tú mismo en uscis.gov con tu número de recibo.",
+     "on_screen_text": "Prisa + pago raro = cuelga",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf hanging up a phone calmly. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos y mándaselo a alguien de tu familia.",
+   "caption": "6 estafas que usan la palabra 'inmigración': 1) la llamada 'de USCIS' que cobra, 2) te venden formularios que son gratis, 3) 'ganaste la lotería de visas', 4) la fianza urgente por app o tarjeta de regalo, 5) sitios que parecen oficiales pero no terminan en .gov, 6) 'te saco el permiso más rápido'.\n\nRevisa tu caso tú mismo en uscis.gov con tu número de recibo. Repórtalo en ReporteFraude.ftc.gov, en español.\n\n¿Te llegó algo raro? Pégalo en nuestro verificador de estafas gratis (enlace en la bio).\n\nSíguenos y mándaselo a alguien de tu familia.",
+   "hashtags": [
+    "inmigracion",
+    "uscis",
+    "estafas",
+    "fraude",
+    "comunidadlatina",
+    "dinerosimple"
+   ],
+   "description": "Seis estafas comunes que usan trámites de inmigración, y la regla para reconocerlas.",
+   "thumbnail_text": "6 estafas de inmigración",
+   "sources": [
+    "https://www.uscis.gov/es/evitar-estafas",
+    "https://travel.state.gov/content/travel/en/us-visas/immigrate/diversity-visa-program-entry.html"
+   ],
+   "claims_to_verify": [
+    "USCIS forms are free; USCIS does not request payment by phone",
+    "DV lottery selectees are not notified by email",
+    "Hedge slide 6: some USCIS requests can be expedited through USCIS itself, but no third party can buy a faster decision"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "ec-5-senales",
+  "format": "carousel",
+  "pillar": "estafas y fraude",
+  "idea_angle": "Adapted from Scam Decoded: five red flags in one fictional scam text.",
+  "script": {
+   "title": "5 señales en un solo mensaje de estafa",
+   "hook": "Guárdalo y mándaselo a quien contesta todos los mensajes.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Ejemplo inventado. Cada parte es una señal.",
+     "on_screen_text": "5 señales en un solo mensaje",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a phone with a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "El mensaje",
+     "narration": "'...por saldo pendiente. Paga ya para evitar un cargo de $45.' Y un enlace.",
+     "on_screen_text": "'Último aviso: tu cuenta se suspende en 2 horas'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone screen with a chat bubble and a warning triangle. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Las empresas de verdad casi nunca empiezan con un cobro por mensaje.",
+     "on_screen_text": "1. No lo esperabas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope appearing from nowhere. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "'2 horas' está ahí para que actúes antes de pensar.",
+     "on_screen_text": "2. Una cuenta regresiva",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an hourglass. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Cuenta suspendida, cargo, reembolso, regalo. El miedo y la emoción apagan la calma.",
+     "on_screen_text": "3. Una amenaza (o un premio)",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a lightning bolt next to a gift. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Aunque se parezca al real. Palabras de más y terminaciones raras son trucos comunes.",
+     "on_screen_text": "4. Su enlace, no el tuyo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a chain link with a small hook. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Ese es todo el punto del mensaje.",
+     "on_screen_text": "5. El pedido: tarjeta, código o dinero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card, a code and a coin in a row. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "Abre la app oficial o escribe tú la página. Reenvía al 7726 y bórralo.",
+     "on_screen_text": "2 o más señales: no toques nada",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf forwarding a message with a calm face. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos y mándaselo a alguien de tu familia.",
+   "caption": "5 señales en un solo mensaje de estafa: 1) no lo esperabas, 2) una cuenta regresiva, 3) una amenaza o un premio, 4) un enlace que no buscaste tú, 5) te piden tarjeta, código o dinero.\n\n¿Dos o más? No toques nada. Abre la app oficial o escribe tú la página. Reenvía el mensaje al 7726 y bórralo.\n\n¿Te llegó algo raro? Pégalo en nuestro verificador de estafas gratis (enlace en la bio).\n\nSíguenos y mándaselo a alguien de tu familia.",
+   "hashtags": [
+    "estafas",
+    "mensajes",
+    "fraude",
+    "seguridad",
+    "comunidadlatina",
+    "dinerosimple"
+   ],
+   "description": "Cinco señales para reconocer un mensaje de estafa.",
+   "thumbnail_text": "5 señales de estafa",
+   "sources": [
+    "https://consumidor.ftc.gov/articulos/como-evitar-una-estafa",
+    "https://consumidor.ftc.gov/articulos/como-reconocer-y-reportar-mensajes-de-texto-no-deseados"
+   ],
+   "claims_to_verify": [
+    "Example text is fictional; no real domain or number on the slides",
+    "Forwarding to 7726 reports a text to most major US carriers"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "ec-primeros-60-minutos",
+  "format": "carousel",
+  "pillar": "estafas y fraude",
+  "idea_angle": "Adapted from Scam Decoded: what to do in the first hour after a scam, with Spanish-language resources.",
+  "script": {
+   "title": "¿Te estafaron? Los primeros 60 minutos, en orden",
+   "hook": "Guárdalo antes de necesitarlo.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo antes de necesitarlo.",
+     "on_screen_text": "¿Te estafaron? Tus primeros 60 minutos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a stopwatch and a checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "Calma",
+     "narration": "Son profesionales y le pasa a gente lista. Ahora, la rapidez es lo que más importa.",
+     "on_screen_text": "No es tu culpa. Muévete rápido.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a heart with a small clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Al número de tu tarjeta. Pide que paren o reviertan el pago y bloqueen la tarjeta.",
+     "on_screen_text": "1. Llama a tu banco",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone next to a bank card. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "A veces se puede congelar el saldo que no han usado.",
+     "on_screen_text": "2. Llama a la app o a la tarjeta de regalo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a gift card with a small snowflake. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "El correo abre todo lo demás. Cierra sesión en todos los aparatos.",
+     "on_screen_text": "3. Cambia contraseñas, primero el correo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with a new key. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Equifax, Experian y TransUnion. Es gratis.",
+     "on_screen_text": "4. Congela tu crédito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three small buildings with snowflakes. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "ReporteFraude.ftc.gov. Si usaron tus datos: RobodeIdentidad.gov.",
+     "on_screen_text": "5. Repórtalo, en español",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a document with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Quien te cobra por 'recuperar' tu dinero es la siguiente estafa.",
+     "on_screen_text": "6. Anótalo todo. Cuidado con 'recuperadores'.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a notebook and a fishing hook with an X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Para que nadie lo tenga que buscar con prisa.",
+     "on_screen_text": "Mándaselo a tu familia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf handing a folded paper to a small heart. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos y mándaselo a alguien de tu familia.",
+   "caption": "¿Te estafaron? Los primeros 60 minutos: 1) llama a tu banco al número de tu tarjeta, 2) llama a la app de pagos o a la empresa de la tarjeta de regalo, 3) cambia contraseñas empezando por tu correo, 4) congela tu crédito, 5) repórtalo en ReporteFraude.ftc.gov (y en RobodeIdentidad.gov si usaron tus datos), 6) anota todo. Cuidado con quien te cobre por 'recuperar' tu dinero: es otra estafa.\n\nNo es tu culpa. Guárdalo y mándaselo a tu familia.\n\nSíguenos y mándaselo a alguien de tu familia.",
+   "hashtags": [
+    "estafas",
+    "fraude",
+    "robodeidentidad",
+    "seguridad",
+    "comunidadlatina",
+    "dinerosimple"
+   ],
+   "description": "Qué hacer en la primera hora después de una estafa, con recursos en español.",
+   "thumbnail_text": "Los primeros 60 minutos",
+   "sources": [
+    "https://reportefraude.ftc.gov/",
+    "https://www.robodeidentidad.gov/",
+    "https://consumidor.ftc.gov/articulos/que-hacer-si-le-pagaron-a-un-estafador"
+   ],
+   "claims_to_verify": [
+    "Banks or payment providers can sometimes stop or reverse a transfer if contacted quickly (not guaranteed)",
+    "RobodeIdentidad.gov is the Spanish version of IdentityTheft.gov",
+    "FTC warns about 'recovery' scams targeting previous victims"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "ec-6-preguntas-envio",
+  "format": "carousel",
+  "pillar": "estafas y fraude",
+  "idea_angle": "Adapted from Scam Decoded: six yes/no questions before sending money, framed for remittances and family requests.",
+  "script": {
+   "title": "6 preguntas antes de mandarle dinero a quien sea",
+   "hook": "Léelo antes de darle a 'enviar'.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Un 'sí' no prueba una estafa, pero significa: para y verifica.",
+     "on_screen_text": "6 preguntas antes de mandar dinero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a winged envelope with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Las estafas casi siempre empiezan cuando te contactan de la nada.",
+     "on_screen_text": "1. ¿Me buscaron ellos primero?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone ringing with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "'Hoy', 'en una hora'. Un problema real aguanta una llamada para verificar.",
+     "on_screen_text": "2. ¿Hay una fecha límite?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an hourglass. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Ni al banco, ni a la familia, ni al cajero. El secreto los protege a ellos.",
+     "on_screen_text": "3. ¿Me pidieron que no le diga a nadie?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a finger over lips icon on a speech bubble. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Tarjeta de regalo, envío a un desconocido, app de pagos, cripto.",
+     "on_screen_text": "4. ¿Es un pago difícil de revertir?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a coin flying through a one-way arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Nunca se han visto, pero necesita dinero: el patrón más viejo que hay.",
+     "on_screen_text": "5. ¿Nunca lo he visto en persona?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two chat bubbles that never meet. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Esa pena es tu alarma.",
+     "on_screen_text": "6. ¿Me daría pena decirle a mi banco?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small bell ringing. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Si te late que es urgente, léelo antes de enviar.",
+     "on_screen_text": "Guárdalo para la próxima prisa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf pausing with a hand over a send button. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos y mándaselo a alguien de tu familia.",
+   "caption": "6 preguntas antes de mandarle dinero a quien sea:\n1) ¿Me buscaron ellos primero?\n2) ¿Hay fecha límite?\n3) ¿Me pidieron que no le diga a nadie?\n4) ¿Es un pago difícil de revertir?\n5) ¿Nunca lo he visto en persona?\n6) ¿Me daría pena decirle a mi banco?\n\nUn 'sí' no prueba una estafa, pero significa: para y verifica antes de enviar.\n\n¿Te llegó algo raro? Pégalo en nuestro verificador de estafas gratis (enlace en la bio).\n\nSíguenos y mándaselo a alguien de tu familia.",
+   "hashtags": [
+    "remesas",
+    "enviardinero",
+    "estafas",
+    "fraude",
+    "comunidadlatina",
+    "dinerosimple"
+   ],
+   "description": "Seis preguntas para hacerte antes de mandar dinero.",
+   "thumbnail_text": "6 preguntas antes de enviar",
+   "sources": [
+    "https://consumidor.ftc.gov/articulos/como-evitar-una-estafa"
+   ],
+   "claims_to_verify": [
+    "These six questions reflect common FTC red flags (unsolicited contact, pressure, secrecy, unusual payment)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "ec-estafas-a-tus-papas",
+  "format": "carousel",
+  "pillar": "estafas y fraude",
+  "idea_angle": "Adapted from Scam Decoded's 'scams aimed at your parents', with the versions most often aimed at Spanish-speaking families.",
+  "script": {
+   "title": "7 estafas que le están llegando a tus papás",
+   "hook": "Mándaselo a tus papás esta noche.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Mándaselo esta noche.",
+     "on_screen_text": "7 estafas que le llegan a tus papás",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sitting next to two older relatives' armchairs, holding a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Un 'nieto' llorando pide dinero y que no le digan a nadie. Pidan la palabra clave.",
+     "on_screen_text": "1. 'Abuela, estoy en problemas'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a crying speech bubble. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Gritos y amenazas por teléfono. Nadie está secuestrado. Cuelguen y llamen.",
+     "on_screen_text": "2. El secuestro virtual",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with jagged sound waves. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "'Mueva su dinero a una cuenta segura.' Ningún banco pide eso.",
+     "on_screen_text": "3. El 'departamento de fraudes' del banco",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank with a fake lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "'Seguro Social, Medicare o inmigración: pague o lo arrestan.' No funcionan así.",
+     "on_screen_text": "4. El 'funcionario' del gobierno",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a government building with a warning triangle. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "'Te mandé un código por error.' Ese código abre su cuenta.",
+     "on_screen_text": "5. El código de WhatsApp",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a chat bubble with six boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Nunca puede hacer videollamada y luego tiene una emergencia.",
+     "on_screen_text": "6. El romance que necesita dinero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a heart with a coin slot. No text, no logos, no real people."
+    },
+    {
+     "heading": "7",
+     "narration": "'Ganó, solo pague los impuestos primero.' Los premios reales no cobran.",
+     "on_screen_text": "7. El premio con comisión",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a gift box with a price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Las mismas tres señales siempre. Elijan hoy su palabra clave.",
+     "on_screen_text": "Prisa · secreto · pago raro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small key. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos y mándaselo a alguien de tu familia.",
+   "caption": "7 estafas que le están llegando a tus papás: el 'nieto en problemas', el secuestro virtual, el falso departamento de fraudes del banco, el 'funcionario' que amenaza con arresto, el código de WhatsApp, el romance que necesita dinero y el premio con comisión.\n\nSiempre las mismas tres señales: prisa, secreto y una forma de pago rara. Elijan hoy una palabra clave en familia.\n\nSíguenos y mándaselo a alguien de tu familia.",
+   "hashtags": [
+    "estafas",
+    "familia",
+    "adultosmayores",
+    "fraude",
+    "comunidadlatina",
+    "dinerosimple"
+   ],
+   "description": "Siete estafas comunes contra adultos mayores y las tres señales que comparten.",
+   "thumbnail_text": "Estafas a tus papás",
+   "sources": [
+    "https://www.ic3.gov/AnnualReport/Reports",
+    "https://consumidor.ftc.gov/destacado/pasa-la-voz",
+    "https://reportefraude.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "These scam types are among the most reported by older adults (FBI IC3 elder fraud report / FTC Pass It On)",
+    "SSA, Medicare and immigration agencies don't demand immediate payment by phone with gift cards, wires or crypto",
+    "Legitimate sweepstakes don't require payment to collect a prize"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ }
+]

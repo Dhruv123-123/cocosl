@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="es-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El Presupuesto de 20 Minutos</title>
+<style>
+  :root{
+    --ink:#14213d; --cream:#fbf5e9; --green:#2ab7a9; --green-d:#1d7f75; --gold:#ff7a59;
+    --muted:#4a5468; --line:#d9d3c3; --paper:#fffdf8; --tint:#e6f6f4; --gold-t:#ffece5;
+  }
+  @page{ size: Letter; margin:0; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#cfc9ba; color:var(--ink);
+    font-family:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size:10.2pt; line-height:1.48; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:8.5in; height:11in; margin:24px auto; background:var(--paper); position:relative;
+    padding:0.7in 0.85in 0.85in; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,.18);
+    page-break-after:always; break-after:page; }
+  .page:last-child{ page-break-after:auto; break-after:auto; }
+  @media print{ html,body{ background:none; } .page{ margin:0; box-shadow:none; } }
+
+  .folio{ position:absolute; left:0.85in; right:0.85in; bottom:0.45in; display:flex;
+    justify-content:space-between; font-size:8pt; color:var(--muted); border-top:1px solid var(--line); padding-top:6px; }
+
+  h1,h2,h3,h4{ font-family:"Inter Display","Inter",system-ui,sans-serif; line-height:1.15; margin:0; }
+  h2{ font-size:24pt; font-weight:800; letter-spacing:-.02em; margin-bottom:6px; }
+  h3{ font-size:13pt; font-weight:700; margin:18px 0 6px; }
+  h4{ font-size:10.5pt; font-weight:700; margin:12px 0 4px; }
+  p{ margin:0 0 9px; }
+  .kicker{ text-transform:uppercase; letter-spacing:.14em; font-size:8pt; font-weight:700; color:var(--green-d); margin-bottom:6px; }
+  .lede{ font-size:11.5pt; color:var(--muted); margin-bottom:12px; }
+  ul,ol{ margin:0 0 10px; padding-left:20px; } li{ margin-bottom:4px; }
+  strong{ font-weight:700; }
+  .num{ font-variant-numeric:tabular-nums; }
+
+  .box{ border-radius:10px; padding:12px 16px; margin:12px 0; }
+  .box.tip{ background:var(--tint); border-left:4px solid var(--green); }
+  .box.warn{ background:var(--gold-t); border-left:4px solid var(--gold); }
+  .box.dark{ background:var(--ink); color:var(--cream); }
+  .box.dark .kicker{ color:var(--gold); }
+  .box p:last-child, .box ul:last-child{ margin-bottom:0; }
+
+  table{ width:100%; border-collapse:collapse; margin:8px 0 12px; font-size:9.5pt; }
+  th{ text-align:left; font-weight:700; background:var(--cream); border-bottom:2px solid var(--ink); padding:5px 8px; }
+  td{ border-bottom:1px solid var(--line); padding:4px 8px; }
+  td.r, th.r{ text-align:right; font-variant-numeric:tabular-nums; }
+  tr.total td{ font-weight:800; border-top:2px solid var(--ink); border-bottom:none; background:var(--tint); }
+  tr.sub td{ font-weight:700; background:#f7f4ec; }
+
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .grid4{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:14px 0; }
+  .card{ border:1.5px solid var(--ink); border-radius:12px; padding:12px; background:#fff; }
+  .card .big{ font-size:20pt; font-weight:800; font-family:"Inter Display","Inter",sans-serif; }
+  .card .lbl{ font-size:8pt; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); font-weight:700; }
+  .pill{ display:inline-block; background:var(--green); color:#fff; font-weight:700; border-radius:999px; padding:1px 9px; font-size:8.5pt; }
+  .step{ display:flex; gap:12px; margin:10px 0; }
+  .step .n{ flex:0 0 30px; height:30px; border-radius:50%; background:var(--ink); color:var(--cream);
+    display:flex; align-items:center; justify-content:center; font-weight:800; }
+  .step .b{ flex:1; }
+  .timer{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin:12px 0 16px; border:1.5px solid var(--ink); border-radius:12px; overflow:hidden; }
+  .timer div{ padding:10px 12px; border-right:1.5px solid var(--ink); background:#fff; }
+  .timer div:last-child{ border-right:none; }
+  .timer .t{ font-weight:800; font-size:16pt; color:var(--green-d); }
+  .timer .h{ font-weight:700; font-size:9.5pt; }
+  .timer .d{ font-size:8.5pt; color:var(--muted); }
+  .formula{ font-family:"JetBrains Mono", ui-monospace, monospace; background:var(--ink); color:var(--cream);
+    padding:10px 14px; border-radius:8px; font-size:10pt; margin:10px 0; }
+  .check li{ list-style:none; position:relative; padding-left:4px; }
+  .check{ padding-left:22px; }
+  .check li::before{ content:""; position:absolute; left:-20px; top:3px; width:12px; height:12px; border:1.5px solid var(--ink); border-radius:3px; }
+  .faq h4{ margin-top:12px; }
+  .blank td{ height:24px; }
+  .toc{ list-style:none; padding:0; margin:12px 0; }
+  .toc li{ display:flex; border-bottom:1px dotted var(--line); padding:6px 0; margin:0; font-size:11pt; }
+  .toc li span:first-child{ flex:1; } .toc li span:last-child{ font-weight:700; }
+
+  /* cover */
+  .cover{ background:var(--ink); color:var(--cream); padding:0.9in; }
+  .cover .tag{ color:var(--gold); letter-spacing:.2em; text-transform:uppercase; font-weight:700; font-size:9pt; }
+  .cover h1{ font-size:58pt; font-weight:900; letter-spacing:-.035em; line-height:.95; margin:24px 0 18px; }
+  .cover h1 em{ font-style:normal; color:var(--green); }
+  .cover .sub{ font-size:15pt; max-width:5.2in; color:#cfd6e2; line-height:1.4; }
+  .cover .clock{ position:absolute; right:0.9in; bottom:1.4in; width:3.1in; height:3.1in; }
+  .cover .bottom{ position:absolute; left:0.9in; right:0.9in; bottom:0.8in; display:flex; justify-content:space-between; align-items:flex-end; font-size:9pt; color:#a9b3c6; }
+  .cover .chips{ display:flex; gap:8px; flex-wrap:wrap; margin-top:28px; }
+  .cover .chips span{ border:1px solid #34466b; border-radius:999px; padding:5px 12px; font-size:9pt; color:var(--cream); }
+</style>
+</head>
+<body>
+
+<!-- ============ 1. PORTADA ============ -->
+<section class="page cover">
+  <div class="tag">Dinero Simple &middot; Guía + hoja de cálculo</div>
+  <h1>El Presupuesto<br>de <em>20</em><br><em>Minutos</em></h1>
+  <p class="sub">Un presupuesto que armas una sola noche y manejas en veinte minutos a la semana. Un solo número semanal para gastar. Sin apps que cuidar, sin anotar cada cafecito.</p>
+  <div class="chips"><span>Se arma en ~60 min</span><span>20 min por semana</span><span>Plan para salir de deudas</span><span>Funciona con cualquier banco</span></div>
+  <svg class="clock" viewBox="0 0 200 200" aria-hidden="true">
+    <circle cx="100" cy="100" r="92" fill="none" stroke="#2ab7a9" stroke-width="6"/>
+    <path d="M100 100 L100 8 A92 92 0 0 1 179.7 146 Z" fill="#2ab7a9" opacity=".9"/>
+    <circle cx="100" cy="100" r="70" fill="#14213d"/>
+    <text x="100" y="98" text-anchor="middle" font-family="Inter Display, Inter, sans-serif" font-weight="900" font-size="44" fill="#fbf5e9">20</text>
+    <text x="100" y="124" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="13" letter-spacing="3" fill="#ff7a59">MINUTOS</text>
+  </svg>
+  <div class="bottom"><span>Edición 1.0 en español</span><span>Contenido educativo. No es asesoría financiera.</span></div>
+</section>
+
+<!-- ============ 2. CONTENIDO ============ -->
+<section class="page">
+  <div class="kicker">Empieza aquí</div>
+  <h2>Qué vas a encontrar</h2>
+  <p class="lede">Lee las páginas 3 a 7 una vez, arma la hoja de cálculo y ten a la mano la página 8. Ese es todo el sistema.</p>
+  <ul class="toc">
+    <li><span>1. La idea: un solo número por semana</span><span>3</span></li>
+    <li><span>2. Pasos 1 a 3: lo que entra y los gastos fijos</span><span>4</span></li>
+    <li><span>3. Pasos 4 a 6: fondos, metas y tu número semanal</span><span>5</span></li>
+    <li><span>4. Ejemplo: el mes de Daniela, con números reales</span><span>6</span></li>
+    <li><span>5. Ponlo en automático: cuentas y día de pago</span><span>7</span></li>
+    <li><span>6. La rutina semanal de 20 minutos</span><span>8</span></li>
+    <li><span>7. El ajuste mensual (también 20 minutos)</span><span>9</span></li>
+    <li><span>8. Salir de deudas: avalancha o bola de nieve</span><span>10</span></li>
+    <li><span>9. Errores comunes y cómo arreglarlos</span><span>11</span></li>
+    <li><span>10. Variaciones: ingresos irregulares, parejas, meses apretados</span><span>12</span></li>
+    <li><span>11. Preguntas frecuentes</span><span>13</span></li>
+    <li><span>12. Hoja de trabajo para imprimir</span><span>14</span></li>
+  </ul>
+  <h3>Cómo usar la hoja de cálculo</h3>
+  <p>La plantilla que viene con esta guía (<strong>Presupuesto-20-Minutos-Plantilla.xlsx</strong>) tiene cinco pestañas que siguen los capítulos: <strong>Configuración</strong>, <strong>Plan mensual</strong>, <strong>Revisión semanal</strong>, <strong>Fondos de previsión</strong> y <strong>Pago de deudas</strong>. Abre en Excel, Google Sheets (Archivo &rarr; Importar &rarr; Subir) y Apple Numbers.</p>
+  <ul>
+    <li><strong>Las celdas amarillas</strong> son para tus datos. Escribe encima.</li>
+    <li><strong>Las celdas blancas</strong> se calculan solas. No las toques.</li>
+    <li>Viene llena con el ejemplo de la página 6, para que veas cómo funciona antes de borrarlo y poner tus números.</li>
+  </ul>
+  <div class="box warn">
+    <div class="kicker" style="color:#b0472a">Léelo, por favor</div>
+    <p>Esta guía es educación general para organizar tu propio dinero. No es asesoría financiera, fiscal, legal ni de inversión, y no conoce tu situación. La persona y los números del ejemplo son inventados. Si tienes cuentas en cobranza, bancarrota, deudas de impuestos o algo que se siente inmanejable, un consejero de crédito sin fines de lucro (en EE. UU., busca una agencia miembro de la NFCC; muchas atienden en español) es un buen siguiente paso y de bajo costo.</p>
+  </div>
+  <div class="folio"><span>El Presupuesto de 20 Minutos</span><span>2</span></div>
+</section>
+
+<!-- ============ 3. LA IDEA ============ -->
+<section class="page">
+  <div class="kicker">Capítulo 1</div>
+  <h2>La idea: un solo número por semana</h2>
+  <p class="lede">Casi todos los presupuestos fallan por una razón aburrida: te piden decenas de decisiones chiquitas cada día. Este te pide una decisión al mes y una revisión a la semana.</p>
+  <p>Cada dólar de tu sueldo neto va a una de cuatro líneas. Tres se deciden una vez al mes y luego corren solas. Solo la cuarta necesita tu atención durante el mes, y es un solo número.</p>
+  <div class="grid4">
+    <div class="card"><div class="lbl">Línea 1</div><div class="big">Gastos fijos</div><p style="font-size:9pt;margin:4px 0 0">Lo que se repite cada mes: renta, luz, celular, seguro, pagos mínimos de deudas, suscripciones, el envío fijo a tu familia.</p></div>
+    <div class="card"><div class="lbl">Línea 2</div><div class="big">Fondos</div><p style="font-size:9pt;margin:4px 0 0">"Fondos de previsión": dinero que apartas cada mes para gastos predecibles pero no mensuales (carro, regalos, renovaciones).</p></div>
+    <div class="card"><div class="lbl">Línea 3</div><div class="big">Metas</div><p style="font-size:9pt;margin:4px 0 0">Fondo de emergencia, pagos extra a deudas, inversión. Te pagas esto primero, no con lo que sobre.</p></div>
+    <div class="card" style="background:var(--tint);border-color:var(--green-d)"><div class="lbl">Línea 4</div><div class="big">Semanal</div><p style="font-size:9pt;margin:4px 0 0">Todo lo demás: súper, gasolina, comer fuera, diversión, cositas. Una cantidad por semana. Gástala como quieras.</p></div>
+  </div>
+  <h3>Por qué funciona un número semanal</h3>
+  <ul>
+    <li><strong>Una semana es lo bastante corta para corregir.</strong> Si te pasas el martes, lo ves el domingo y ajustas. Con un número mensual, te enteras el 28.</li>
+    <li><strong>Un número es fácil de recordar.</strong> "Me quedan $61 esta semana" es algo que sí puedes tener en la cabeza en la caja del súper.</li>
+    <li><strong>Sin vigilar categorías.</strong> Súper, comer fuera y diversión salen de la misma bolsa semanal. Tú decides en el momento, que es donde de verdad se decide.</li>
+    <li><strong>Pasarte tiene límite.</strong> Una mala semana no se puede comer tu renta, porque la renta nunca estuvo en la bolsa semanal.</li>
+  </ul>
+  <h3>La regla que lo hace funcionar</h3>
+  <div class="box dark">
+    <p style="font-size:12pt;margin:0"><strong>Gastos fijos, Fondos y Metas se pagan primero y en automático. Tú solo miras el número semanal.</strong> Si el número semanal no alcanza para vivir, cambias el plan en el ajuste mensual, no a media semana.</p>
+  </div>
+  <p>Es una versión del presupuesto base cero (cada dólar tiene un trabajo) combinada con "págate a ti primero". Ninguna idea es nueva. Lo diferente es que el día a día se reduce a una sola cifra y un hábito de veinte minutos por semana.</p>
+  <div class="folio"><span>El Presupuesto de 20 Minutos</span><span>3</span></div>
+</section>
+
+<!-- ============ 4. PASOS 1-3 ============ -->
+<section class="page">
+  <div class="kicker">Capítulo 2 &middot; Una noche, unos 60 minutos</div>
+  <h2>Pasos 1 a 3</h2>
+  <p class="lede">Ten a la mano tus estados de cuenta de los últimos dos meses, para usar números reales y no suposiciones.</p>
+
+  <div class="step"><div class="n">1</div><div class="b">
+    <h4 style="margin-top:4px">Calcula tu sueldo neto mensual</h4>
+    <p>Usa lo que de verdad cae en tu cuenta después de impuestos y descuentos, no tu sueldo bruto. En la pestaña <strong>Configuración</strong>, elige cada cuánto te pagan y escribe un cheque típico. La hoja lo convierte a cifra mensual:</p>
+    <table style="width:auto;min-width:60%">
+      <tr><th>Te pagan&hellip;</th><th class="r">Neto mensual =</th></tr>
+      <tr><td>Cada semana</td><td class="r">cheque &times; 52 &divide; 12</td></tr>
+      <tr><td>Cada dos semanas</td><td class="r">cheque &times; 26 &divide; 12</td></tr>
+      <tr><td>Dos veces al mes (quincenal)</td><td class="r">cheque &times; 2</td></tr>
+      <tr><td>Una vez al mes</td><td class="r">cheque</td></tr>
+    </table>
+    <p>Si tu ingreso cambia (freelance, propinas, comisiones, trabajo por temporada), usa tu <strong>mes normal más bajo</strong> de los últimos seis. En la página 12 ves qué hacer con lo extra.</p>
+  </div></div>
+
+  <div class="step"><div class="n">2</div><div class="b">
+    <h4 style="margin-top:4px">Anota cada gasto fijo</h4>
+    <p>Revisa tus estados de cuenta línea por línea y anota cada gasto que se repite cada mes por más o menos lo mismo. Incluye:</p>
+    <ul>
+      <li>Vivienda: renta o hipoteca, seguro de inquilino o de casa, HOA</li>
+      <li>Servicios: luz, agua, gas, internet, celular</li>
+      <li>Transporte: pago del carro, seguro del carro, pase de transporte</li>
+      <li>Pagos <strong>mínimos</strong> de cada deuda (los pagos extra van en Metas)</li>
+      <li>Envíos fijos a tu familia, si los mandas cada mes</li>
+      <li>Suscripciones y membresías. Ya que estás, cancela las que habías olvidado.</li>
+    </ul>
+    <p>Para cuentas que cambian (la luz en verano), usa un promedio un poco alto para que no te falte.</p>
+  </div></div>
+
+  <div class="step"><div class="n">3</div><div class="b">
+    <h4 style="margin-top:4px">Suma los gastos fijos y revisa</h4>
+    <p>Escríbelos en la pestaña <strong>Plan mensual</strong>. La hoja los suma y te dice qué parte de tu sueldo neto se llevan. No hay porcentaje mágico, pero si pasan de un 60%, tu número semanal se va a sentir apretado, y lo que más ayuda es bajar gastos fijos (vivienda, carro, celular, seguros), no dejar el cafecito.</p>
+  </div></div>
+
+  <div class="box tip"><strong>Atajo:</strong> busca en tus estados de cuenta palabras como "monthly", "subscription", "renewal", "membership" y "autopay" (casi siempre aparecen en inglés). En pocos minutos encuentras la mayoría de los cargos que se repiten.</div>
+  <div class="folio"><span>El Presupuesto de 20 Minutos</span><span>4</span></div>
+</section>
+
+<!-- ============ 5. PASOS 4-6 ============ -->
+<section class="page">
+  <div class="kicker">Capítulo 3</div>
+  <h2>Pasos 4 a 6</h2>
+  <p class="lede">Ahora planeas los gastos que suelen tumbar el presupuesto, decides cuánto te pagas a ti y encuentras tu número semanal.</p>
+
+  <div class="step"><div class="n">4</div><div class="b">
+    <h4 style="margin-top:4px">Arma tus fondos de previsión</h4>
+    <p>Revisa los últimos 12 meses y busca gastos que no llegaron cada mes pero eran totalmente predecibles: carro (reparaciones y registro), fiestas y cumpleaños, suscripciones anuales, copagos, ropa, viajes a ver a la familia, mascotas. Cada uno se vuelve un <strong>fondo</strong>.</p>
+    <div class="formula">cantidad mensual = costo anual esperado &divide; 12</div>
+    <p>O, para un gasto con fecha: <em>costo &divide; meses que faltan</em>. La pestaña <strong>Fondos de previsión</strong> hace la cuenta y lleva el saldo y el avance de cada fondo.</p>
+  </div></div>
+
+  <div class="step"><div class="n">5</div><div class="b">
+    <h4 style="margin-top:4px">Elige tus Metas y págalas primero</h4>
+    <p>Un orden sensato para la mayoría (ajústalo a tu caso):</p>
+    <ol>
+      <li><strong>Fondo de emergencia inicial</strong> de un mes de gastos fijos. Es lo que evita que una llanta ponchada se vuelva deuda nueva en la tarjeta.</li>
+      <li><strong>Pagos extra a deudas con interés alto</strong> (más o menos 8% de APR o más). El capítulo 8 compara dos formas de hacerlo.</li>
+      <li><strong>Hacer crecer el fondo de emergencia</strong> hacia 3 a 6 meses de gastos fijos.</li>
+      <li><strong>Inversión a largo plazo</strong>, empezando por el match de retiro de tu trabajo, si lo hay.</li>
+    </ol>
+    <p>Elige una cantidad que puedas mantener cada mes; aquí gana la constancia. La puedes subir en cualquier ajuste mensual.</p>
+  </div></div>
+
+  <div class="step"><div class="n">6</div><div class="b">
+    <h4 style="margin-top:4px">Calcula tu número semanal</h4>
+    <div class="formula">bolsa mensual = neto &minus; gastos fijos &minus; fondos &minus; metas<br>número semanal = bolsa mensual &times; 12 &divide; 52 &nbsp;(redondea hacia abajo)</div>
+    <p>¿Por qué &times;12&divide;52 y no &divide;4? Porque un mes tiene unas 4.33 semanas, no 4. Dividir entre 4 te regala una semana de gastos que no tienes: justo el hueco de los meses de cinco semanas. Redondear hacia abajo deja unos dólares de colchón.</p>
+    <p>La pestaña <strong>Plan mensual</strong> lo calcula y se pone en rojo si la bolsa es negativa: planeaste más de lo que ganas. Recorta Metas o Fondos primero, luego Gastos fijos.</p>
+  </div></div>
+  <div class="box warn"><strong>¿Se puede vivir con ese número?</strong> Tiene que cubrir súper, gasolina y todo lo divertido. Si no es realista, no te hagas. Baja una Meta por ahora y súbela cuando baje un gasto o termines una deuda. Un plan que abandonas en la semana dos no ahorra nada.</div>
+  <div class="folio"><span>El Presupuesto de 20 Minutos</span><span>5</span></div>
+</section>
+
+<!-- ============ 6. EJEMPLO ============ -->
+<section class="page">
+  <div class="kicker">Capítulo 4 &middot; Ejemplo (ficticio)</div>
+  <h2>El mes de Daniela, con números reales</h2>
+  <p class="lede">Daniela tiene 26 años, renta un departamento de una recámara, tiene préstamo del carro, deuda de estudiante y dos deudas chicas que quiere quitarse. Recibe <strong>$3,500 netos al mes</strong>. Es el mismo ejemplo que viene en la hoja de cálculo.</p>
+  <div class="grid2">
+    <div>
+      <table>
+        <tr><th>Línea 1 &middot; Gastos fijos</th><th class="r">Mensual</th></tr>
+        <tr><td>Renta</td><td class="r">$1,250</td></tr>
+        <tr><td>Seguro de inquilino + carro</td><td class="r">$140</td></tr>
+        <tr><td>Luz, agua y gas</td><td class="r">$120</td></tr>
+        <tr><td>Internet</td><td class="r">$55</td></tr>
+        <tr><td>Celular</td><td class="r">$45</td></tr>
+        <tr><td>Suscripciones (3)</td><td class="r">$35</td></tr>
+        <tr><td>Mínimo del carro</td><td class="r">$210</td></tr>
+        <tr><td>Mínimo préstamo estudiantil</td><td class="r">$180</td></tr>
+        <tr><td>Mínimo tarjeta de crédito</td><td class="r">$60</td></tr>
+        <tr><td>Mínimo préstamo personal</td><td class="r">$55</td></tr>
+        <tr class="sub"><td>Total gastos fijos</td><td class="r">$2,150</td></tr>
+      </table>
+    </div>
+    <div>
+      <table>
+        <tr><th>Línea 2 &middot; Fondos</th><th class="r">Anual</th><th class="r">Mensual</th></tr>
+        <tr><td>Mantenimiento del carro</td><td class="r">$480</td><td class="r">$40</td></tr>
+        <tr><td>Regalos y fiestas</td><td class="r">$600</td><td class="r">$50</td></tr>
+        <tr><td>Viajes</td><td class="r">$480</td><td class="r">$40</td></tr>
+        <tr><td>Ropa</td><td class="r">$360</td><td class="r">$30</td></tr>
+        <tr><td>Médico / copagos</td><td class="r">$300</td><td class="r">$25</td></tr>
+        <tr><td>Renovaciones anuales</td><td class="r">$180</td><td class="r">$15</td></tr>
+        <tr class="sub"><td>Total fondos</td><td class="r">$2,400</td><td class="r">$200</td></tr>
+      </table>
+      <table>
+        <tr><th>Línea 3 &middot; Metas</th><th class="r">Mensual</th></tr>
+        <tr><td>Fondo de emergencia</td><td class="r">$200</td></tr>
+        <tr><td>Pago extra a deudas</td><td class="r">$150</td></tr>
+        <tr class="sub"><td>Total metas</td><td class="r">$350</td></tr>
+      </table>
+    </div>
+  </div>
+  <table>
+    <tr><th>Línea 4 &middot; El número semanal</th><th class="r">Cantidad</th></tr>
+    <tr><td>Sueldo neto</td><td class="r">$3,500.00</td></tr>
+    <tr><td>&minus; Gastos fijos &minus; Fondos &minus; Metas ($2,150 + $200 + $350)</td><td class="r">&minus;$2,700.00</td></tr>
+    <tr class="sub"><td>Bolsa mensual</td><td class="r">$800.00</td></tr>
+    <tr><td>&times; 12 &divide; 52</td><td class="r">$184.62</td></tr>
+    <tr class="total"><td>Número semanal de Daniela (redondeado hacia abajo)</td><td class="r">$184 / semana</td></tr>
+  </table>
+  <p>Esos $184 cubren el súper (unos $85 a la semana para ella), la gasolina (unos $35) y le dejan unos $64 para comer fuera, café, diversión y cositas. Redondear $184.62 hacia abajo deja unos $2.67 al mes en la cuenta de cheques como colchón. Si termina una semana con dinero, lo pasa a la siguiente o lo manda al ahorro en el ajuste mensual.</p>
+  <div class="box tip"><strong>Fíjate en lo que no está:</strong> no hay categorías de "comer fuera" o "entretenimiento" que vigilar. Daniela decide eso dentro de sus $184, semana a semana.</div>
+  <div class="folio"><span>El Presupuesto de 20 Minutos</span><span>6</span></div>
+</section>
+
+<!-- ============ 7. AUTOMATIZACIÓN ============ -->
+<section class="page">
+  <div class="kicker">Capítulo 5</div>
+  <h2>Ponlo en automático</h2>
+  <p class="lede">Entre menos decisiones tomes a mano, menos fuerza de voluntad necesita tu presupuesto. Dos o tres cuentas y unas transferencias programadas hacen casi todo el trabajo.</p>
+  <h3>Las cuentas, sin complicarte</h3>
+  <table>
+    <tr><th>Cuenta</th><th>Qué guarda</th><th>Cómo entra el dinero</th></tr>
+    <tr><td><strong>Cheques de gastos fijos</strong><br><span style="color:var(--muted);font-size:8.5pt">(tu cuenta actual)</span></td><td>Aquí cae tu cheque. Los gastos fijos salen con pago automático.</td><td>Depósito directo</td></tr>
+    <tr><td><strong>Ahorro</strong><br><span style="color:var(--muted);font-size:8.5pt">(idealmente de alto rendimiento, asegurada por FDIC/NCUA)</span></td><td>Fondos de previsión + fondo de emergencia. Lleva el saldo de cada fondo en la hoja, o usa los "apartados" de tu banco si los tiene.</td><td>Transferencia automática el día de pago</td></tr>
+    <tr><td><strong>Gasto semanal</strong><br><span style="color:var(--muted);font-size:8.5pt">(otra cuenta de cheques o una tarjeta de débito)</span></td><td>Solo el número semanal. Cuando se acaba, se acabó la semana.</td><td>Transferencia automática semanal</td></tr>
+  </table>
+  <p>La cuenta aparte para gastar es opcional pero muy útil: tu saldo <em>es</em> lo que te queda de la semana, así que no tienes que calcular nada en la caja. Muchos bancos te abren una segunda cuenta gratis en minutos. Si usas tarjeta de crédito por los puntos, págala completa cada semana en tu revisión.</p>
+
+  <h3>El día de pago de Daniela (le pagan el día 1)</h3>
+  <div class="step"><div class="n">1</div><div class="b"><strong>Día 1:</strong> caen $3,500 en la cuenta de gastos fijos.</div></div>
+  <div class="step"><div class="n">2</div><div class="b"><strong>Día 1:</strong> transferencia automática de $400 al ahorro (Fondos $200 + emergencia $200). El pago extra de $150 va programado directo a la tarjeta.</div></div>
+  <div class="step"><div class="n">3</div><div class="b"><strong>Cada viernes:</strong> transferencia automática de $184 a la cuenta de gasto semanal.</div></div>
+  <div class="step"><div class="n">4</div><div class="b"><strong>Durante el mes:</strong> los gastos fijos ($2,150) salen solos de la cuenta de gastos fijos.</div></div>
+  <div class="box warn"><strong>Meses con cinco viernes:</strong> pasa unas cuantas veces al año. Como el número semanal se calculó con &times;12&divide;52, en el año se empareja, pero el flujo de efectivo no. Deja un colchón chico (Daniela deja $300) en la cuenta de gastos fijos para que la quinta transferencia nunca rebote. La pestaña <strong>Configuración</strong> tiene un campo de colchón para recordártelo.</div>
+  <h3>Si te pagan cada dos semanas</h3>
+  <p>Divide cada transferencia a la mitad y prográmala en cada día de pago. Dos veces al año tendrás un mes con "tercer cheque". No dejes que se evapore: decide en el ajuste mensual a dónde va (una meta, un fondo o un gustito que ya planeaste).</p>
+  <div class="folio"><span>El Presupuesto de 20 Minutos</span><span>7</span></div>
+</section>
+
+<!-- ============ 8. RUTINA SEMANAL ============ -->
+<section class="page">
+  <div class="kicker">Capítulo 6 &middot; Ten esta página a la mano</div>
+  <h2>La rutina semanal de 20 minutos</h2>
+  <p class="lede">El mismo día, a la misma hora, cada semana. Domingo en la noche o viernes a la hora de la comida, los dos funcionan. Ponlo en tu calendario como evento repetido y pon un temporizador de 20 minutos.</p>
+  <div class="timer">
+    <div><div class="t">0&ndash;5</div><div class="h">Mira</div><div class="d">Abre las apps del banco y las tarjetas. Anota saldos.</div></div>
+    <div><div class="t">5&ndash;10</div><div class="h">Anota</div><div class="d">Escribe el total gastado esta semana.</div></div>
+    <div><div class="t">10&ndash;15</div><div class="h">Revisa</div><div class="d">Gastos fijos, fondos, algo raro.</div></div>
+    <div><div class="t">15&ndash;20</div><div class="h">Decide</div><div class="d">Un paso para la próxima semana.</div></div>
+  </div>
+  <h4>Minutos 0&ndash;5 &middot; Mira</h4>
+  <p>Abre tus cuentas. Anota el saldo de la cuenta de gasto semanal (o suma las compras de la semana). Si usaste tarjeta de crédito para el gasto semanal, págala ahora.</p>
+  <h4>Minutos 5&ndash;10 &middot; Anota</h4>
+  <p>En la pestaña <strong>Revisión semanal</strong>, escribe un solo número: cuánto gastaste de la bolsa semanal. La hoja te muestra lo que queda y el total del mes. No tienes que clasificar cada compra. Si una compra te sorprendió, anótala en la columna de notas.</p>
+  <h4>Minutos 10&ndash;15 &middot; Revisa</h4>
+  <ul class="check">
+    <li>¿Salió cada gasto fijo de esta semana, por la cantidad que esperabas?</li>
+    <li>¿Se hicieron las transferencias del día de pago al ahorro y los fondos?</li>
+    <li>¿Algún cargo que no reconoces? (Dispútalo ahora, no en tres meses.)</li>
+    <li>¿Usaste un fondo de previsión? Actualiza su saldo en la pestaña Fondos de previsión.</li>
+  </ul>
+  <h4>Minutos 15&ndash;20 &middot; Decide una cosa</h4>
+  <p>Elige <strong>un</strong> paso chico según lo que acabas de ver. Por ejemplo:</p>
+  <ul>
+    <li>¿Te sobró? Pásalo a la próxima semana o mándalo a una meta.</li>
+    <li>¿Te pasaste? El número de la próxima semana baja por lo que te pasaste. Planea una semana barata (la "semana de reponer").</li>
+    <li>¿Viene una semana pesada (cumpleaños, viaje)? Decide ahora qué fondo la cubre.</li>
+    <li>¿Viste una suscripción que no usas? Cancélala antes de cerrar la app.</li>
+  </ul>
+  <div class="box tip"><strong>¿Te saltaste una semana?</strong> No intentes reconstruirla. Anota el total gastado en las dos semanas contra las dos asignaciones y sigue. El hábito importa más que tener registros perfectos.</div>
+  <div class="folio"><span>El Presupuesto de 20 Minutos</span><span>8</span></div>
+</section>
+
+<!-- ============ 9. AJUSTE MENSUAL ============ -->
+<section class="page">
+  <div class="kicker">Capítulo 7</div>
+  <h2>El ajuste mensual</h2>
+  <p class="lede">Una vez al mes, unos días antes del día de pago, usa veinte minutos para armar el plan del próximo mes. Es el único momento en que el plan cambia.</p>
+  <div class="timer">
+    <div><div class="t">0&ndash;5</div><div class="h">Repasa</div><div class="d">¿Cómo te fue en las semanas?</div></div>
+    <div><div class="t">5&ndash;10</div><div class="h">Ajusta</div><div class="d">Gastos fijos y fondos del próximo mes.</div></div>
+    <div><div class="t">10&ndash;15</div><div class="h">Asigna</div><div class="d">Metas y lo que sobró.</div></div>
+    <div><div class="t">15&ndash;20</div><div class="h">Confirma</div><div class="d">Transferencias + nuevo número semanal.</div></div>
+  </div>
+  <h4>Repasa</h4>
+  <p>Mira la pestaña Revisión semanal. ¿Estuviste siempre abajo, arriba o más o menos en el número? Dos o más semanas seguidas pasándote casi siempre significan que el número semanal no es realista, no que tú seas malo para esto.</p>
+  <h4>Ajusta</h4>
+  <ul>
+    <li>¿Algún gasto fijo cambia el próximo mes (sube la renta, se acaba una promoción, terminaste una deuda)? Actualiza el Plan mensual.</li>
+    <li>¿Algún gasto único conocido el próximo mes (una boda, una quinceañera, una renovación anual)? Asegúrate de que el fondo correcto alcance, o crea uno nuevo.</li>
+  </ul>
+  <h4>Asigna</h4>
+  <ul>
+    <li>Dinero semanal que sobró este mes: pásalo al siguiente o mándalo a una meta. Decide; no lo dejes flotando.</li>
+    <li>Si terminaste una deuda, su pago mínimo pasa a la siguiente deuda (eso es lo que acelera el pago).</li>
+    <li>¿Te subieron el sueldo o tuviste un ingreso extra? Decide ahora cómo se reparte: una opción común es mitad a metas, mitad al número semanal.</li>
+  </ul>
+  <h4>Confirma</h4>
+  <p>Revisa que el Plan mensual muestre una bolsa de cero o más y anota el nuevo número semanal. Si cambió, actualiza la transferencia automática en la app de tu banco antes de cerrar la hoja.</p>
+  <h3>Tu lista del ajuste mensual</h3>
+  <ul class="check">
+    <li>Revisiones semanales repasadas y dinero sobrante asignado</li>
+    <li>Plan mensual actualizado: gastos fijos, fondos, metas</li>
+    <li>La bolsa está en $0 o más y anotaste el nuevo número semanal</li>
+    <li>Las transferencias automáticas coinciden con el plan</li>
+    <li>Saldos de Fondos de previsión y Pago de deudas actualizados con los estados de cuenta</li>
+  </ul>
+  <div class="folio"><span>El Presupuesto de 20 Minutos</span><span>9</span></div>
+</section>
+
+<!-- ============ 10. DEUDAS ============ -->
+<section class="page">
+  <div class="kicker">Capítulo 8</div>
+  <h2>Salir de deudas: avalancha o bola de nieve</h2>
+  <p class="lede">Los dos métodos pagan el mínimo de cada deuda y mandan todo el dinero extra a un solo objetivo. Cuando ese objetivo desaparece, su mínimo "rueda" al siguiente. Solo cambia el orden.</p>
+  <div class="grid2">
+    <div class="card"><div class="lbl">Avalancha</div><h3 style="margin:4px 0">Primero la tasa de interés más alta</h3><p style="margin:0;font-size:9.5pt">Lo más barato en números. Ideal si vas a seguir aunque la primera victoria tarde.</p></div>
+    <div class="card"><div class="lbl">Bola de nieve</div><h3 style="margin:4px 0">Primero el saldo más chico</h3><p style="margin:0;font-size:9.5pt">Cuesta un poco más de interés, pero liquidas una deuda antes. Ideal si los triunfos rápidos te motivan.</p></div>
+  </div>
+  <h3>Las deudas de Daniela</h3>
+  <table>
+    <tr><th>Deuda</th><th class="r">Saldo</th><th class="r">APR</th><th class="r">Mínimo</th><th class="r">Orden avalancha</th><th class="r">Orden bola de nieve</th></tr>
+    <tr><td>Tarjeta de crédito</td><td class="r">$2,400</td><td class="r">24.9%</td><td class="r">$60</td><td class="r">1</td><td class="r">2</td></tr>
+    <tr><td>Préstamo personal</td><td class="r">$1,200</td><td class="r">11.0%</td><td class="r">$55</td><td class="r">2</td><td class="r">1</td></tr>
+    <tr><td>Préstamo del carro</td><td class="r">$6,500</td><td class="r">7.9%</td><td class="r">$210</td><td class="r">3</td><td class="r">3</td></tr>
+    <tr><td>Préstamo estudiantil</td><td class="r">$14,000</td><td class="r">5.5%</td><td class="r">$180</td><td class="r">4</td><td class="r">4</td></tr>
+    <tr class="sub"><td>Total</td><td class="r">$24,100</td><td></td><td class="r">$505</td><td></td><td></td></tr>
+  </table>
+  <h3>Lo que hacen $150 extra al mes</h3>
+  <p>La pestaña Pago de deudas simula mes por mes. Con $505 de mínimos más los $150 extra de Daniela ($655 al mes en total, pasando cada mínimo liberado a la siguiente deuda):</p>
+  <table>
+    <tr><th>Plan</th><th class="r">Primera deuda liquidada</th><th class="r">Sin deudas en</th><th class="r">Interés total</th></tr>
+    <tr><td>Solo mínimos ($505/mes, pasando los mínimos)</td><td class="r">mes 25</td><td class="r">58 meses</td><td class="r">$5,017</td></tr>
+    <tr><td>Bola de nieve ($655/mes)</td><td class="r">mes 7</td><td class="r">42 meses</td><td class="r">$3,128</td></tr>
+    <tr class="total"><td>Avalancha ($655/mes)</td><td class="r">mes 14</td><td class="r">42 meses</td><td class="r">$2,992</td></tr>
+  </table>
+  <p>Primero, los $150 extra importan mucho más que el método: recortan unos 16 meses y unos $1,900&ndash;2,000 de interés con cualquiera. Segundo, la avalancha le ahorra unos $136, pero la bola de nieve le da un triunfo siete meses antes. <strong>El mejor método es el que vas a seguir.</strong></p>
+  <div class="box warn">Estas cifras salen de una simulación mensual simple (interés = APR &divide; 12 sobre cada saldo, cada mes). Los prestamistas calculan el interés diario, así que tus estados de cuenta no van a cuadrar al centavo. Úsalo para planear, no como cotización.</div>
+  <div class="folio"><span>El Presupuesto de 20 Minutos</span><span>10</span></div>
+</section>
+
+<!-- ============ 11. ERRORES ============ -->
+<section class="page">
+  <div class="kicker">Capítulo 9</div>
+  <h2>Errores comunes, y cómo arreglarlos</h2>
+  <p class="lede">Casi todo presupuesto que falla cae en uno de estos. Ninguno significa que seas malo con el dinero.</p>
+  <table>
+    <tr><th style="width:38%">Error</th><th>Solución</th></tr>
+    <tr><td><strong>Número semanal basado en buenos deseos</strong><br><span style="font-size:8.5pt;color:var(--muted)">"Ahora sí voy a gastar $40 a la semana en el súper."</span></td><td>Parte de lo que de verdad gastaste el mes pasado y recorta un 10%, no un 50%. Si te fue bien, aprieta otro poco el mes siguiente.</td></tr>
+    <tr><td><strong>Dividir entre 4 en vez de 4.33</strong></td><td>Siempre &times;12&divide;52. Dividir entre 4 crea un faltante escondido de cerca del 8% cada mes.</td></tr>
+    <tr><td><strong>Olvidar los gastos irregulares</strong><br><span style="font-size:8.5pt;color:var(--muted)">Registro del carro, suscripciones anuales, fiestas.</span></td><td>Para eso son los fondos de previsión. Si uno te sorprende, créale un fondo en el siguiente ajuste.</td></tr>
+    <tr><td><strong>Usar el fondo de emergencia para cosas que no son emergencia</strong></td><td>Pregúntate: ¿fue inesperado, necesario y urgente? Si no son las tres, iba en un fondo de previsión o en el número semanal.</td></tr>
+    <tr><td><strong>Cambiar el plan a mitad de mes</strong></td><td>Te pasaste en la semana 2 = semana 3 más barata. El plan solo cambia en el ajuste mensual. Esta regla sola evita casi todas las espirales.</td></tr>
+    <tr><td><strong>Saltarte la revisión después de una mala semana</strong></td><td>Las malas semanas son cuando más importa. Haz una versión de 5 minutos: anota el número, decide una cosa, cierra la laptop.</td></tr>
+    <tr><td><strong>Anotar demasiado</strong></td><td>No tienes que clasificar cada compra. Un total semanal es el sistema funcionando como debe.</td></tr>
+    <tr><td><strong>Cero colchón en la cuenta de cheques</strong></td><td>Deja un colchón chico (muchas veces $100&ndash;500) para que un pago a destiempo nunca te cause sobregiros.</td></tr>
+    <tr><td><strong>No ahorrar nada hasta terminar las deudas</strong></td><td>Primero un fondo de emergencia inicial, para que las sorpresas no regresen a la tarjeta. Luego, con todo a las deudas.</td></tr>
+    <tr><td><strong>Ignorar los tres grandes</strong></td><td>Vivienda, transporte y seguros suelen pesar más que todo lo demás. Una cuenta renegociada le gana a meses de fuerza de voluntad.</td></tr>
+    <tr><td><strong>Cero dinero para disfrutar</strong></td><td>Un presupuesto sin nada de alegría se abandona. Deja espacio en el número semanal para algo que disfrutes.</td></tr>
+  </table>
+  <div class="box dark">
+    <div class="kicker">La revisión de cada 3 meses</div>
+    <p>Cada tercer ajuste, hazte una pregunta más grande: <em>¿qué cuenta podría bajar?</em> Pide una cotización nueva de seguro, revisa un plan de celular o pregúntale a un prestamista por una tasa más baja. Una llamada que te ahorra $40 al mes son $480 al año, sin fuerza de voluntad de por medio.</p>
+  </div>
+  <div class="folio"><span>El Presupuesto de 20 Minutos</span><span>11</span></div>
+</section>
+
+<!-- ============ 12. VARIACIONES ============ -->
+<section class="page">
+  <div class="kicker">Capítulo 10</div>
+  <h2>Variaciones</h2>
+  <p class="lede">Las cuatro líneas no cambian. Estos ajustes adaptan el sistema a distintas situaciones.</p>
+  <h3>Ingresos irregulares o freelance</h3>
+  <ol>
+    <li>Arma el plan con tu <strong>mes normal más bajo</strong> de los últimos seis (ignora los meses muy fuera de lo normal).</li>
+    <li>Todo el ingreso entra primero a una cuenta de reserva. El día 1, te "pagas" la cantidad base a la cuenta de gastos fijos, como si fuera un sueldo.</li>
+    <li>Lo que pase de la base se queda en la reserva hasta el ajuste mensual. Ahí lo repartes: primero completa un colchón de 1&ndash;2 meses de ingreso, luego metas.</li>
+    <li>Si trabajas por tu cuenta, aparta para impuestos de cada pago antes que nada. Un preparador de impuestos te puede decir el porcentaje correcto para tu caso.</li>
+  </ol>
+  <h3>En pareja</h3>
+  <ul>
+    <li><strong>Gastos compartidos, números semanales separados</strong> funciona bien para casi todas las parejas: los dos aportan a una cuenta conjunta para Gastos fijos, Fondos y Metas compartidos (en proporción al ingreso si ganan distinto), y cada quien tiene su propio número semanal sin dar explicaciones.</li>
+    <li>Hagan el ajuste mensual juntos. La revisión semanal, por separado o juntos, como sí la vayan a mantener.</li>
+  </ul>
+  <h3>Si ayudas a tu familia</h3>
+  <ul>
+    <li>Si mandas dinero cada mes, ponlo en <strong>Gastos fijos</strong> como cualquier otra cuenta. Si es de vez en cuando, créale un <strong>fondo</strong> para que no salga de tu número semanal ni de la tarjeta.</li>
+    <li>Compara el costo total del envío (comisión más tipo de cambio), no solo la comisión.</li>
+  </ul>
+  <h3>Un mes apretado (o una temporada apretada)</h3>
+  <ul>
+    <li>Pausa las Metas un tiempo antes de recortar el súper a niveles irreales. Sigue pagando todos los mínimos.</li>
+    <li>Revisa los Gastos fijos primero: llama a las compañías y pregunta por programas de ayuda, cambio de fecha de pago o planes más baratos.</li>
+    <li>Si solo los mínimos ya no te alcanzan, contacta a tus prestamistas antes de atrasarte, y considera un consejero de crédito sin fines de lucro.</li>
+  </ul>
+  <div class="box tip"><strong>Si te gusta el efectivo:</strong> saca el número semanal en efectivo el día de la transferencia. Con billetes en la mano, es imposible ignorar cuánto te queda.</div>
+  <div class="folio"><span>El Presupuesto de 20 Minutos</span><span>12</span></div>
+</section>
+
+<!-- ============ 13. PREGUNTAS ============ -->
+<section class="page faq">
+  <div class="kicker">Capítulo 11</div>
+  <h2>Preguntas frecuentes</h2>
+  <h4>¿De verdad son solo 20 minutos a la semana?</h4>
+  <p>Después de armarlo, sí, para casi todos. Las primeras dos o tres revisiones pueden tomar 30 minutos mientras aprendes dónde está todo. Armarlo toma como una hora, más si tienes muchas cuentas.</p>
+  <h4>¿Necesito la hoja de cálculo?</h4>
+  <p>No, el método funciona en papel (la página 14 es una hoja para imprimir). La hoja de cálculo solo hace las cuentas y la simulación de deudas por ti.</p>
+  <h4>¿Funciona con Google Sheets o Numbers?</h4>
+  <p>Sí. En Google Sheets usa Archivo &rarr; Importar &rarr; Subir, o abre el .xlsx desde Google Drive. Las fórmulas y las listas desplegables se conservan. Numbers lo abre directo.</p>
+  <h4>¿Dónde va el súper?</h4>
+  <p>En el número semanal. Es a propósito: es el gasto flexible más grande, así que ahí es donde tus decisiones de la semana tienen más efecto.</p>
+  <h4>¿Y si me paso del número semanal?</h4>
+  <p>El número de la próxima semana baja por lo que te pasaste. Si te pasa seguido, sube el número semanal en el siguiente ajuste y baja otra cosa. No lo saques de los gastos fijos ni del fondo de emergencia.</p>
+  <h4>¿Pago deudas o ahorro primero?</h4>
+  <p>Lo común es un fondo de emergencia inicial pequeño primero, luego enfocarte en deudas de interés alto y después seguir ahorrando. Tu situación (estabilidad del trabajo, tasas, match de tu empresa) puede cambiar la respuesta; es buena pregunta para un planificador financiero que cobre solo honorarios (fee-only).</p>
+  <h4>¿Y las tandas?</h4>
+  <p>Una tanda con gente de confianza puede funcionar como ahorro forzado, pero no paga interés, no está asegurada y depende de que todos cumplan. Si participas, trata tu aportación como un gasto fijo y no metas ahí tu fondo de emergencia.</p>
+  <h4>¿Avalancha o bola de nieve?</h4>
+  <p>La avalancha casi siempre cuesta menos interés; la bola de nieve casi siempre te da un triunfo antes. Prueba las dos en la pestaña Pago de deudas y quédate con la que vas a seguir.</p>
+  <h4>¿Puedo usar una app de presupuesto con esto?</h4>
+  <p>Claro. Muchas apps te muestran el total gastado en la semana, y eso hace el paso de "Anota" todavía más rápido. El método no depende de ninguna app.</p>
+  <h4>¿Esto es asesoría financiera?</h4>
+  <p>No. Es un método general de organización y una herramienta. Para decisiones sobre inversiones, impuestos, alivio de deudas o algo específico de tu caso, habla con un profesional calificado.</p>
+  <div class="folio"><span>El Presupuesto de 20 Minutos</span><span>13</span></div>
+</section>
+
+<!-- ============ 14. HOJA DE TRABAJO ============ -->
+<section class="page">
+  <div class="kicker">Imprímeme</div>
+  <h2>Hoja de trabajo de una página</h2>
+  <p style="color:var(--muted)">Mes: ____________________ &nbsp;&nbsp; Sueldo neto: $____________</p>
+  <div class="grid2">
+    <table class="blank">
+      <tr><th>Gastos fijos</th><th class="r" style="width:35%">$ / mes</th></tr>
+      <tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr>
+      <tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr>
+      <tr class="sub"><td>Total gastos fijos</td><td></td></tr>
+    </table>
+    <div>
+      <table class="blank">
+        <tr><th>Fondos</th><th class="r" style="width:35%">$ / mes</th></tr>
+        <tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr>
+        <tr class="sub"><td>Total fondos</td><td></td></tr>
+      </table>
+      <table class="blank">
+        <tr><th>Metas</th><th class="r" style="width:35%">$ / mes</th></tr>
+        <tr><td></td><td></td></tr><tr><td></td><td></td></tr>
+        <tr class="sub"><td>Total metas</td><td></td></tr>
+      </table>
+    </div>
+  </div>
+  <table>
+    <tr><th>El número semanal</th><th class="r" style="width:30%">$</th></tr>
+    <tr class="blank"><td>Neto &minus; gastos fijos &minus; fondos &minus; metas = bolsa mensual</td><td></td></tr>
+    <tr class="blank"><td>Bolsa mensual &times; 12 &divide; 52 = número semanal (redondea hacia abajo)</td><td></td></tr>
+  </table>
+  <table class="blank">
+    <tr><th>Semana</th><th class="r">Asignado</th><th class="r">Gastado</th><th class="r">Queda</th><th>Una decisión</th></tr>
+    <tr><td>1</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>2</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>3</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>4</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>5</td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <p style="font-size:8.5pt;color:var(--muted);margin-top:14px">&copy; Dinero Simple. Licencia de uso personal para quien lo compra; por favor no lo revendas ni lo compartas. Contenido educativo, no es asesoría financiera, fiscal, legal ni de inversión. La persona y las cifras del ejemplo son ficticias.</p>
+  <div class="folio"><span>El Presupuesto de 20 Minutos</span><span>14</span></div>
+</section>
+
+</body>
+</html>

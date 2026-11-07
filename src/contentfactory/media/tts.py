@@ -5,11 +5,15 @@ Providers (settings.tts_provider; "auto" tries them in this order):
                Kokoro-FastAPI server at KOKORO_URL (OpenAI-compatible /v1/audio/speech;
                `docker compose --profile kokoro up`), or the local `kokoro` Python
                package (pip install "contentfactory[kokoro]"). Voice: brand.voice.tts_voice
-               if it is a Kokoro id like af_heart, else KOKORO_VOICE (default af_heart)
-  piper      - local `piper` CLI, model path in PIPER_MODEL (.onnx)
-  espeak     - local `espeak-ng` / `espeak` (robotic, but free and offline)
+               if it is a Kokoro id like af_heart, else a voice in the brand language: KOKORO_VOICE
+               for English (default af_heart), KOKORO_VOICE_<LANG> otherwise (Spanish: ef_dora)
+  piper      - local `piper` CLI, model from brand.voice.piper_model, PIPER_MODEL_<LANG> (e.g.
+               PIPER_MODEL_ES) or, for English brands, PIPER_MODEL (.onnx)
+  espeak     - local `espeak-ng` / `espeak` (robotic, but free and offline); voice follows the
+               brand language (ESPEAK_VOICE_<LANG> overrides; ESPEAK_VOICE for English)
   elevenlabs - REST API, ELEVENLABS_API_KEY; voice id from brand.voice.tts_voice or ELEVENLABS_VOICE_ID
-  openai     - REST API, OPENAI_API_KEY; gpt-4o-mini-tts (falls back to tts-1)
+  openai     - REST API, OPENAI_API_KEY; gpt-4o-mini-tts (falls back to tts-1).
+               OPENAI_TTS_BASE_URL points it at any OpenAI-compatible server instead
   silent     - near-silent room tone sized to the words at brand.voice.words_per_minute
 
 Voice rights: clone only your own voice or a voice you hold a licence for.
@@ -33,6 +37,7 @@ from pathlib import Path
 
 import httpx
 
+from .. import i18n
 from ..config import BrandProfile, Settings
 from .util import MediaError, ProviderError, ffmpeg, probe, seed_of, word_count
 
@@ -220,9 +225,18 @@ class Kokoro(Provider):
     tool = "kokoro"
     _pipelines: dict = {}
 
+    # Kokoro picks the language from the voice prefix (a/b = English, e = Spanish), so an English
+    # voice must never read a Spanish script.
+    DEFAULT_VOICES = {"en": "af_heart", "es": "ef_dora"}
+
     def voice(self) -> str:
         v = (self.brand.voice.tts_voice or "").strip()
-        return v if KOKORO_VOICE_RE.match(v) else os.environ.get("KOKORO_VOICE", "af_heart")
+        if KOKORO_VOICE_RE.match(v):
+            return v
+        lang = i18n.lang_of(self.brand)
+        if lang == "en":
+            return os.environ.get("KOKORO_VOICE", "af_heart")
+        return os.environ.get(f"KOKORO_VOICE_{lang.upper()}") or self.DEFAULT_VOICES.get(lang, "af_heart")
 
     def speed(self) -> float:
         try:
@@ -321,15 +335,23 @@ class Kokoro(Provider):
 class Piper(Provider):
     tool = "piper"
 
+    def model(self) -> str:
+        """A voice in the brand's language: an English PIPER_MODEL never voices a Spanish brand."""
+        lang = i18n.lang_of(self.brand)
+        return (self.brand.voice.piper_model or os.environ.get(f"PIPER_MODEL_{lang.upper()}", "")
+                or (os.environ.get("PIPER_MODEL", "") if lang == "en" else ""))
+
     def available(self) -> bool:
-        model = os.environ.get("PIPER_MODEL", "")
+        model = self.model()
         return bool(shutil.which("piper") and model and Path(model).exists())
 
     def speak(self, text: str, out: Path) -> None:
         if not self.available():
-            raise ProviderError("piper needs the `piper` CLI on PATH and PIPER_MODEL pointing to a .onnx voice")
+            lang = i18n.lang_of(self.brand).upper()
+            raise ProviderError("piper needs the `piper` CLI on PATH and a .onnx voice in the brand's language "
+                                f"(brand.voice.piper_model, PIPER_MODEL_{lang} or PIPER_MODEL for English)")
         from .util import run
-        run(["piper", "--model", os.environ["PIPER_MODEL"], "--output_file", str(out)],
+        run(["piper", "--model", self.model(), "--output_file", str(out)],
             input_bytes=_clean(text).encode(), timeout=300)
 
 
@@ -350,7 +372,10 @@ class Espeak(Provider):
         if not binary:
             raise ProviderError("espeak-ng/espeak not found on PATH")
         from .util import run
-        voice = os.environ.get("ESPEAK_VOICE", "en-us")
+        lang = i18n.lang_of(self.brand)
+        voice = (os.environ.get(f"ESPEAK_VOICE_{lang.upper()}")
+                 or (os.environ.get("ESPEAK_VOICE") if lang == "en" else "")
+                 or i18n.ESPEAK_VOICES.get(lang, "en-us"))
         wpm = str(max(80, min(260, self.brand.voice.words_per_minute)))
         run([binary, "-v", voice, "-s", wpm, "-w", str(out), "--stdin"], input_bytes=_clean(text).encode(),
             timeout=120)
@@ -383,30 +408,52 @@ class ElevenLabs(Provider):
 
 class OpenAITTS(Provider):
     tool = "openai"
-    URL = "https://api.openai.com/v1/audio/speech"
+    DEFAULT_BASE = "https://api.openai.com/v1"
+
+    @property
+    def base(self) -> str:
+        return (os.environ.get("OPENAI_TTS_BASE_URL") or self.DEFAULT_BASE).rstrip("/")
+
+    @property
+    def url(self) -> str:
+        return f"{self.base}/audio/speech"
+
+    def _key(self) -> str:
+        return os.environ.get("OPENAI_API_KEY", "")
 
     def available(self) -> bool:
-        return bool(os.environ.get("OPENAI_API_KEY"))
+        return bool(self._key())
+
+    def _models(self) -> list[str]:
+        return list(dict.fromkeys([os.environ.get("OPENAI_TTS_MODEL", "gpt-4o-mini-tts"), "tts-1"]))
+
+    def _voice(self) -> str:
+        return os.environ.get("OPENAI_TTS_VOICE", "alloy")
 
     def speak(self, text: str, out: Path) -> None:
-        key = os.environ.get("OPENAI_API_KEY", "")
-        if not key:
+        key = self._key()
+        if not key and self.base == self.DEFAULT_BASE:
             raise ProviderError("OpenAI TTS needs OPENAI_API_KEY")
-        voice = os.environ.get("OPENAI_TTS_VOICE", "alloy")
+        headers = {"Authorization": f"Bearer {key}"} if key else {}
         last = None
-        for model in dict.fromkeys([os.environ.get("OPENAI_TTS_MODEL", "gpt-4o-mini-tts"), "tts-1"]):
-            body = {"model": model, "input": _clean(text), "voice": voice, "response_format": "wav"}
+        models = self._models()
+        for model in models:
+            body = {"model": model, "input": _clean(text), "voice": self._voice(), "response_format": "wav"}
             if model.startswith("gpt-4o"):
-                body["instructions"] = f"Tone: {self.brand.voice.tone}. Speak naturally, like {self.brand.voice.persona}."
-            resp = httpx.post(self.URL, headers={"Authorization": f"Bearer {key}"}, json=body, timeout=HTTP_TIMEOUT)
-            if resp.status_code in (400, 404) and model != "tts-1":
+                accent = i18n.SPEECH_ACCENTS.get(i18n.lang_of(self.brand), "")
+                body["instructions"] = (f"Tone: {self.brand.voice.tone}. Speak naturally, like "
+                                        f"{self.brand.voice.persona}. {accent}").strip()
+            resp = httpx.post(self.url, headers=headers, json=body, timeout=HTTP_TIMEOUT)
+            if resp.status_code in (400, 404) and model != models[-1]:
                 last = resp
                 continue
-            _raise_for(resp, "OpenAI TTS")
-            self.tool = f"openai:{model}"
+            _raise_for(resp, self.label)
+            self.tool = f"{self.name}:{model}"
             _to_wav(resp.content, ".wav", out)
             return
-        _raise_for(last, "OpenAI TTS")
+        _raise_for(last, self.label)
+
+    name, label = "openai", "OpenAI TTS"
 
 
 class Silent(Provider):

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /emails/
+Disallow: /free/thanks/
+Disallow: /holiday/thanks/
+Disallow: /new-year/thanks/
+Sitemap: https://moneymadesimple.netlify.app/sitemap.xml

@@ -10,12 +10,14 @@ import re
 
 from pydantic import BaseModel, Field
 
+from .. import i18n
 from ..config import BrandProfile
 from ..llm import LLM
 
 LIMITS = {"instagram": 150, "tiktok": 80, "youtube_about": 1000, "x": 160, "threads": 150}
 AI_TAG = "AI-assisted"
-AI_RE = re.compile(r"\bAI[- ](assisted|generated|made|tools)\b|made with AI", re.I)
+AI_RE = re.compile(r"\bAI[- ](assisted|generated|made|tools)\b|made with AI"
+                   r"|(?:hech[oa]s?|cread[oa]s?) con (?:ayuda de )?(?:la )?IA|\bcon ayuda de IA\b|herramientas de IA", re.I)
 
 
 class BioPack(BaseModel):
@@ -43,6 +45,8 @@ def prompt_for(brand: BrandProfile) -> str:
         f"Banned phrases: {', '.join(brand.voice.banned_phrases) or 'none'}\n"
         f"Limits: instagram {LIMITS['instagram']}, tiktok {LIMITS['tiktok']}, x {LIMITS['x']}, "
         f"threads {LIMITS['threads']}, youtube_about about {LIMITS['youtube_about']} characters."
+        + (f"\nLanguage: write every bio in the brand's language. {i18n.writing_instruction(brand)} "
+           f"Use '{i18n.t(brand, 'ai_tag')}' in place of 'AI-assisted'." if not i18n.is_english(brand) else "")
     )
 
 
@@ -57,22 +61,21 @@ def offline_bios(brand: BrandProfile) -> BioPack:
     cta = brand.cta.strip()
     pillars = [p.strip() for p in brand.pillars if p.strip()]
     topics = "; ".join(pillars)
+    tag = i18n.t(brand, "ai_tag")
     about = (
         f"{brand.name}: {promise.lower() if promise else brand.niche}.\n\n"
-        f"Made for {brand.audience}. We cover {topics or brand.niche}.\n\n"
-        f"Every upload is specific and free of hype: one idea you can use, explained clearly. "
+        f"{i18n.t(brand, 'about_made_for', audience=brand.audience, topics=topics or brand.niche)}\n\n"
+        f"{i18n.t(brand, 'about_promise')} "
         f"{cta}\n\n"
-        f"How this channel is made: {brand.ai_disclosure} Content is AI-assisted; a human chooses every topic, "
-        f"checks the facts and approves each upload. No fake reviews, no AI testimonials.\n\n"
-        f"Some links may be affiliate links; if you buy through them we may earn a commission at no extra cost "
-        f"to you. Business enquiries via the link in the channel header."
+        f"{i18n.t(brand, 'about_how_made', disclosure=brand.ai_disclosure)}\n\n"
+        f"{i18n.t(brand, 'about_affiliate')}"
     )
     return BioPack(
-        instagram=f"{promise}.\n{cta}\n{AI_TAG} · free guide below",
+        instagram=f"{promise}.\n{cta}\n{tag} · {i18n.t(brand, 'free_guide_below')}",
         tiktok=f"{promise}",
         youtube_about=about,
-        x=f"{promise}. {cta} {AI_TAG}.",
-        threads=f"{promise}.\n{cta}\n{AI_TAG}",
+        x=f"{promise}. {cta} {tag}.",
+        threads=f"{promise}.\n{cta}\n{tag}",
     )
 
 
@@ -87,13 +90,13 @@ def _trim(text: str, limit: int) -> str:
     return cut.rstrip(" ,.;:·-\n") + "…"
 
 
-def _with_tag(text: str, limit: int, sep: str) -> str:
+def _with_tag(text: str, limit: int, sep: str, tag: str = AI_TAG) -> str:
     """Append the AI tag when missing, making room by trimming when the bio is
     long enough to spare the space (tiny bios keep the copy instead)."""
     text = text.strip()
     if AI_RE.search(text):
         return _trim(text, limit)
-    suffix = f"{sep}{AI_TAG}"
+    suffix = f"{sep}{tag}"
     if len(text) + len(suffix) <= limit:
         return text + suffix
     room = limit - len(suffix)
@@ -102,20 +105,27 @@ def _with_tag(text: str, limit: int, sep: str) -> str:
     return _trim(text, limit)
 
 
-def enforce_limits(pack: BioPack) -> BioPack:
+def enforce_limits(pack: BioPack, language: str = "en") -> BioPack:
+    tag = i18n.t(language, "ai_tag")
     return BioPack(
-        instagram=_with_tag(pack.instagram, LIMITS["instagram"], "\n"),
-        tiktok=_with_tag(pack.tiktok, LIMITS["tiktok"], " · "),
-        youtube_about=_with_tag(pack.youtube_about, LIMITS["youtube_about"], "\n\n"),
-        x=_with_tag(pack.x, LIMITS["x"], " · "),
-        threads=_with_tag(pack.threads, LIMITS["threads"], "\n"),
+        instagram=_with_tag(pack.instagram, LIMITS["instagram"], "\n", tag),
+        tiktok=_with_tag(pack.tiktok, LIMITS["tiktok"], " · ", tag),
+        youtube_about=_with_tag(pack.youtube_about, LIMITS["youtube_about"], "\n\n", tag),
+        x=_with_tag(pack.x, LIMITS["x"], " · ", tag),
+        threads=_with_tag(pack.threads, LIMITS["threads"], "\n", tag),
     )
 
 
 def write_bios(llm: LLM, brand: BrandProfile) -> BioPack:
+    """Hand-written bios in the brand file (`bios:`) win; the LLM fills any that are missing."""
+    fixed = {k: v for k, v in (brand.bios or {}).items() if k in LIMITS and str(v).strip()}
+    if len(fixed) == len(LIMITS):
+        return enforce_limits(BioPack(**fixed), brand.language)
     pack = llm.structured(BioPack, system=SYSTEM, prompt=prompt_for(brand),
                           offline=lambda: offline_bios(brand), purpose="brandkit.bios", max_tokens=4000)
-    return enforce_limits(pack)
+    if fixed:
+        pack = BioPack(**{**pack.model_dump(), **fixed})
+    return enforce_limits(pack, brand.language)
 
 
 def render_text(brand: BrandProfile, pack: BioPack) -> str:
@@ -129,6 +139,9 @@ def render_text(brand: BrandProfile, pack: BioPack) -> str:
     for label, text, limit in rows:
         out += [f"## {label}  ({len(text)}/{limit} chars)", text, ""]
     out += ["## Full AI disclosure (pin or add to descriptions)", brand.ai_disclosure, "",
-            "Notes: keep 'AI-assisted' visible in bios; also use each platform's own AI label "
+            f"Notes: keep '{i18n.t(brand, 'ai_tag')}' visible in bios; also use each platform's own AI label "
             "when posting realistic synthetic media."]
+    if not i18n.is_english(brand):
+        out += ["", f"REVIEW: these bios are machine-written {i18n.locale_of(brand)}. Have a fluent speaker read "
+                "and correct them before they go on any profile."]
     return "\n".join(out) + "\n"

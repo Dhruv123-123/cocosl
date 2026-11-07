@@ -1,0 +1,538 @@
+[
+ {
+  "key": "a-propositos-fallan",
+  "format": "mid",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Why money resolutions die by February (too big, no number, depend on willpower) and the fix: one goal with a number, a date and an automatic transfer on payday.",
+  "script": {
+   "title": "Por qué tu propósito de dinero se muere en febrero",
+   "hook": "La mayoría de los propósitos de dinero no llegan a febrero. No es falta de ganas: es cómo están escritos.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "La mayoría de los propósitos de dinero no llegan a febrero. No es falta de ganas: es cómo están escritos.",
+     "on_screen_text": "Tu propósito no llega a febrero. ¿Por qué?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a calendar with January torn off. No text, no logos, no real people."
+    },
+    {
+     "heading": "Uno",
+     "narration": "Error uno: es demasiado grande. 'Este año salgo de todas mis deudas' suena bien, pero el primer mes que no avanzas, lo sueltas.",
+     "on_screen_text": "Error 1: demasiado grande",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a giant mountain next to a tiny figure. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dos",
+     "narration": "Error dos: no tiene número. 'Ahorrar más' no se puede cumplir ni fallar. Nunca sabes si vas bien, y lo que no se puede medir, en marzo ya se olvidó.",
+     "on_screen_text": "Error 2: no tiene número",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tres",
+     "narration": "Error tres: depende de que te acuerdes y tengas ganas cada quincena. Y en marzo hay mil cosas antes: la renta, el carro, un cumpleaños, un envío a tu familia.",
+     "on_screen_text": "Error 3: depende de tu fuerza de voluntad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a tired figure next to a to-do list. No text, no logos, no real people."
+    },
+    {
+     "heading": "Arreglo",
+     "narration": "El arreglo tiene tres partes: un número, una fecha y algo automático.",
+     "on_screen_text": "Un número, una fecha, un automático",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three small boxes with checkmarks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "Por ejemplo: 'Paso cincuenta dólares cada quincena, el día de pago, a mi apartado del colchón'. En un año son mil doscientos.",
+     "on_screen_text": "$50 cada quincena, el día de pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a coin moving from a paycheck to a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Automático",
+     "narration": "La parte automática es la que lo salva. Prográmalo hoy en la app de tu banco, no 'el lunes'. Que salga el mismo día que llega tu pago, antes de que lo veas en tu cuenta.",
+     "on_screen_text": "Prográmalo hoy, no 'el lunes'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a repeating arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pequeño",
+     "narration": "Si cincuenta es mucho, empieza con veinte. Un propósito chico que se cumple le gana a uno grande que se abandona.",
+     "on_screen_text": "Mejor chico y diario que grande y nunca",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small plant growing. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Escríbelo en una sola línea, prográmalo, y en febrero ya vas a ir ganando.",
+     "on_screen_text": "Escríbelo en una línea y prográmalo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf writing one line on a card. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Por qué los propósitos de dinero se mueren en febrero: son demasiado grandes, no tienen número y dependen de tu fuerza de voluntad. El arreglo: un número, una fecha y algo automático. Ejemplo: '$50 cada quincena, el día de pago, a mi apartado del colchón' son $1,200 en un año. Prográmalo hoy.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "propositos",
+    "añonuevo",
+    "ahorro",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cómo escribir un propósito de dinero que sí llegue a febrero.",
+   "thumbnail_text": "¿Llega a febrero?",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Example arithmetic: $50 x 24 paychecks = $1,200",
+    "Avoid citing a specific 'X% of resolutions fail' statistic unless sourced"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "a-proposito-con-numero",
+  "format": "image",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "A fill-in-the-blanks resolution card to screenshot: amount, day, account, goal.",
+  "script": {
+   "title": "Tu propósito en una línea",
+   "hook": "Tómale captura y llénalo.",
+   "segments": [
+    {
+     "heading": "Imagen",
+     "narration": "",
+     "on_screen_text": "Paso $___ cada ___ a ___ para ___",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a card with blank lines. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu propósito de dinero en una línea. Tómale captura y llénalo:\n'Paso $___ cada ___ (día de pago) a ___ (qué cuenta) para ___ (qué meta).'\nEjemplo: 'Paso $50 cada quincena a mi apartado del colchón para tener $1,200 en diciembre.'\nY prográmalo hoy en tu banco.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "propositos",
+    "añonuevo",
+    "ahorro",
+    "metas",
+    "dinerosimple"
+   ],
+   "description": "Una plantilla para tu propósito de dinero.",
+   "thumbnail_text": "Tu propósito",
+   "sources": [],
+   "claims_to_verify": [
+    "Example arithmetic: $50 x 24 = $1,200"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "ac-actualiza-en-enero",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Seven things to update in January so the year's paperwork and money flows are right: address with employer and payers, W-4 after life changes, beneficiaries, autopay amounts, insurance renewals, emergency contact at the bank, and passwords and alerts.",
+  "script": {
+   "title": "7 cosas que actualizar en enero",
+   "hook": "Guárdalo: 20 minutos en enero te ahorran sustos todo el año.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "20 minutos que te ahorran sustos todo el año.",
+     "on_screen_text": "7 cosas que actualizar en enero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a checklist and a pencil. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Y con quien te paga por tu cuenta. Ahí llega tu W-2 o tu 1099.",
+     "on_screen_text": "1. Tu dirección con tu trabajo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with a house icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Te casaste, tuviste un bebé o tienes otro trabajo: revísalo.",
+     "on_screen_text": "2. Tu W-4, si tu vida cambió",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form with a small heart. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "En tu 401(k), tu seguro de vida y tus cuentas.",
+     "on_screen_text": "3. Tus beneficiarios",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a family icon on a document. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Si subió la renta, el seguro o el celular, ajusta el monto.",
+     "on_screen_text": "4. Tus pagos automáticos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a repeating arrow with a price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Carro y renta: compara antes de que se renueven solos.",
+     "on_screen_text": "5. Los seguros que se renuevan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a car and a house with a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Saldo bajo, compras grandes y depósitos. Toma un minuto.",
+     "on_screen_text": "6. Las alertas de tu banco",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a bell. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Un número, una fecha y algo automático.",
+     "on_screen_text": "7. Tu propósito, programado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf checking the last box. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "7 cosas que actualizar en enero:\n1. Tu dirección con tu trabajo y quien te paga (ahí llega tu W-2 o 1099).\n2. Tu W-4, si tu vida cambió.\n3. Tus beneficiarios (401(k), seguro de vida, cuentas).\n4. Tus pagos automáticos, si algo subió.\n5. Los seguros que se renuevan solos: compara antes.\n6. Las alertas de tu banco.\n7. Tu propósito, programado.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "añonuevo",
+    "organizacion",
+    "finanzaspersonales",
+    "w4",
+    "dinerosimple"
+   ],
+   "description": "Siete cosas de dinero que conviene actualizar cada enero.",
+   "thumbnail_text": "Actualiza en enero",
+   "sources": [
+    "https://www.irs.gov/es/individuals/tax-withholding-estimator"
+   ],
+   "claims_to_verify": [
+    "No numeric claims"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "a-aumento-de-enero",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "If your pay went up in January, decide where the raise goes before the first bigger check: half to a goal, automatically, before lifestyle catches up.",
+  "script": {
+   "title": "¿Te subieron el sueldo? Decide hoy a dónde va",
+   "hook": "Si te subieron el sueldo, tienes una semana antes de que desaparezca en gastos.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si te subieron el sueldo, tienes una semana antes de que desaparezca en gastos.",
+     "on_screen_text": "El aumento desaparece en una semana",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a slightly bigger paycheck. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Un aumento sin destino se gasta solo: un antojo aquí, una suscripción allá.",
+     "on_screen_text": "Si no tiene trabajo, se gasta solo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. coins rolling away. No text, no logos, no real people."
+    },
+    {
+     "heading": "Regla",
+     "narration": "Una regla fácil: la mitad del aumento a tu meta, la mitad para vivir un poquito mejor.",
+     "on_screen_text": "La mitad a tu meta, la mitad para vivir",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a coin split in two. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "Si son sesenta dólares más por quincena, treinta van al ahorro, automático.",
+     "on_screen_text": "$60 más por quincena: $30 al ahorro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an arrow from a paycheck to a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Prográmalo antes de que llegue el primer cheque nuevo.",
+     "on_screen_text": "Prográmalo antes del primer cheque nuevo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf setting a phone reminder. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "¿Te subieron el sueldo? Decide hoy a dónde va, antes de que llegue el primer cheque nuevo. Regla fácil: la mitad del aumento a tu meta (automático) y la mitad para vivir un poquito mejor. Ejemplo: $60 más por quincena, $30 al ahorro.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "aumento",
+    "sueldo",
+    "ahorro",
+    "añonuevo",
+    "dinerosimple"
+   ],
+   "description": "Qué hacer con un aumento de sueldo.",
+   "thumbnail_text": "¿Aumento? Decide hoy",
+   "sources": [],
+   "claims_to_verify": [
+    "Example arithmetic only"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "a-talon-linea-por-linea",
+  "format": "mid",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "The pay stub line by line: gross, federal income tax withholding, Social Security 6.2%, Medicare 1.45%, state tax, pre-tax deductions, net; with a worked example and the free take-home pay estimator.",
+  "script": {
+   "title": "Tu talón de pago, línea por línea",
+   "hook": "Ganas una cosa y te llega otra. Aquí está, línea por línea, a dónde se va la diferencia.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Ganas una cosa y te llega otra. Aquí está, línea por línea, a dónde se va la diferencia.",
+     "on_screen_text": "Ganas una cosa y te llega otra",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a long pay stub. No text, no logos, no real people."
+    },
+    {
+     "heading": "Bruto",
+     "narration": "Arriba está el bruto: tus horas por tu pago por hora, o tu salario. Por ejemplo, ochocientos dólares a la semana.",
+     "on_screen_text": "Bruto: lo que ganaste antes de todo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a big number at the top of a paper. No text, no logos, no real people."
+    },
+    {
+     "heading": "Federal",
+     "narration": "Luego el impuesto federal sobre la renta. No es lo que debes: es lo que tu patrón aparta según tu formulario W-4. Si te retienen de más, te regresan en abril; si te retienen de menos, pagas la diferencia.",
+     "on_screen_text": "Impuesto federal: lo que te retienen para abril",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a slice taken from a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Seguro Social",
+     "narration": "Después, Seguro Social: seis punto dos por ciento. En ochocientos dólares son cuarenta y nueve sesenta.",
+     "on_screen_text": "Seguro Social: 6.2%",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small shield icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Medicare",
+     "narration": "Y Medicare: uno punto cuarenta y cinco por ciento. En ochocientos, once sesenta.",
+     "on_screen_text": "Medicare: 1.45%",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small medical cross icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Estado",
+     "narration": "Si tu estado cobra impuesto sobre la renta, sale otra línea. Algunos estados, como Texas y Florida, no cobran.",
+     "on_screen_text": "Tu estado, si cobra",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a map outline with a small tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Deducciones",
+     "narration": "Luego tus deducciones: seguro médico, dental, tu 401(k). Algunas bajan tus impuestos porque salen antes de calcularlos. Por eso dos personas con el mismo sueldo pueden recibir cheques distintos.",
+     "on_screen_text": "Seguro médico y 401(k)",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small health card and a piggy bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "Neto",
+     "narration": "Al final, el neto: lo que llega a tu cuenta. Ese es el número para tu presupuesto, no el bruto.",
+     "on_screen_text": "Neto: lo que de verdad llega",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a coin landing in a wallet. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Si quieres ver tu cuenta con tus números, hicimos una calculadora gratis de sueldo neto. El enlace está en la bio.",
+     "on_screen_text": "Calcula tu neto gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a phone with a calculator. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu talón de pago, línea por línea: bruto, impuesto federal (lo que te retienen según tu W-4), Seguro Social (6.2%), Medicare (1.45%), tu estado (si cobra), tus deducciones y el neto, que es el número para tu presupuesto. Ejemplo con $800 a la semana: Seguro Social $49.60, Medicare $11.60. Información general, no es asesoría fiscal.\n\nLa calculadora gratis de sueldo neto está en el enlace de la bio. Lo que escribes no sale de tu celular.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "talondepago",
+    "sueldo",
+    "impuestos",
+    "presupuesto",
+    "dinerosimple"
+   ],
+   "description": "Qué es cada línea de tu talón de pago.",
+   "thumbnail_text": "Tu talón, explicado",
+   "sources": [
+    "https://www.ssa.gov/news/en/cola/factsheets/2026.html",
+    "https://www.irs.gov/es/individuals/tax-withholding-estimator"
+   ],
+   "claims_to_verify": [
+    "Employee Social Security 6.2% (up to the wage base: $184,500 in 2026; check the 2027 figure) and Medicare 1.45% (SSA)",
+    "Example arithmetic: $800 x 6.2% = $49.60; $800 x 1.45% = $11.60",
+    "Texas and Florida have no state income tax on wages",
+    "Pre-tax health premiums (Section 125) also lower Social Security and Medicare; traditional 401(k) lowers only income tax",
+    "The paycheck calculator page is live and uses current tables before this posts"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "a-calculadora-de-sueldo",
+  "format": "image",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "One image announcing the free Spanish take-home pay estimator: type your pay and filing status and see federal tax, Social Security, Medicare and your net per check.",
+  "script": {
+   "title": "Calcula tu sueldo neto, gratis",
+   "hook": "Tu presupuesto empieza con el neto, no con el bruto.",
+   "segments": [
+    {
+     "heading": "Imagen",
+     "narration": "",
+     "on_screen_text": "¿Cuánto te llega de verdad? Calcúlalo gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a phone that shows a pay stub. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu presupuesto empieza con lo que te llega, no con lo que ganas. Hicimos una calculadora gratis de sueldo neto en español: escribes tu pago y tu estado civil y te dice un estimado de impuesto federal, Seguro Social, Medicare y lo que te llega en cada cheque. No guardamos nada: lo que escribes no sale de tu celular. Es un estimado, no lo que te retiene tu patrón al centavo.\n\nLa calculadora gratis de sueldo neto está en el enlace de la bio. Lo que escribes no sale de tu celular.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "sueldo",
+    "calculadora",
+    "presupuesto",
+    "impuestos",
+    "dinerosimple"
+   ],
+   "description": "La calculadora gratis de sueldo neto de Dinero Simple.",
+   "thumbnail_text": "Calculadora de sueldo",
+   "sources": [],
+   "claims_to_verify": [
+    "The paycheck calculator page is live at /calculadora-de-sueldo/ with the current year's tables before this posts"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "ac-que-formulario-te-llega",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Which tax form arrives for each kind of work in January 2027 (W-2, 1099-NEC, 1099-K, 1099-INT), the new higher thresholds, and the rule that income counts with or without a form.",
+  "script": {
+   "title": "Qué formulario te llega según cómo trabajas",
+   "hook": "Guárdalo para cuando empiecen a llegar los sobres.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo para cuando lleguen los sobres.",
+     "on_screen_text": "Qué formulario te llega según cómo trabajas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a stack of envelopes. No text, no logos, no real people."
+    },
+    {
+     "heading": "W-2",
+     "narration": "Lo manda tu patrón antes del 1 de febrero.",
+     "on_screen_text": "Empleado: W-2",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a W-2 form. No text, no logos, no real people."
+    },
+    {
+     "heading": "1099-NEC",
+     "narration": "Si un cliente te pagó $2,000 o más en 2026.",
+     "on_screen_text": "Por tu cuenta: 1099-NEC",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a 1099 form with a toolbox. No text, no logos, no real people."
+    },
+    {
+     "heading": "1099-K",
+     "narration": "Si pasaste de $20,000 y 200 pagos en una plataforma.",
+     "on_screen_text": "Apps de pago y ventas: 1099-K",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a payment icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "1099-INT",
+     "narration": "Si tu cuenta te pagó $10 o más de intereses.",
+     "on_screen_text": "Intereses del banco: 1099-INT",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small bank with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "El ingreso se declara aunque no te llegue ningún formulario.",
+     "on_screen_text": "Sin formulario, igual cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a notebook with dated lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "Y si falta uno, pídelo antes de declarar.",
+     "on_screen_text": "Junta todo en una carpeta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder with papers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Guárdalo y compártelo.",
+     "on_screen_text": "Información general, no asesoría fiscal",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sharing a phone. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Qué formulario te llega según cómo trabajas (impuestos de 2026, se declaran en 2027):\nEmpleado: W-2, antes del 1 de febrero.\nPor tu cuenta: 1099-NEC, si un cliente te pagó $2,000 o más.\nApps de pago o ventas: 1099-K, si pasaste de $20,000 y 200 pagos.\nIntereses: 1099-INT, desde $10.\nLa regla: el ingreso se declara aunque no te llegue formulario. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "w2",
+    "1099",
+    "trabajoindependiente",
+    "dinerosimple"
+   ],
+   "description": "Qué formulario de impuestos te llega según cómo trabajas.",
+   "thumbnail_text": "¿Qué formulario?",
+   "sources": [
+    "https://www.irs.gov/newsroom/working-families-tax-cuts-individuals-and-workers"
+   ],
+   "claims_to_verify": [
+    "HIGH RISK: 1099-NEC/MISC reporting threshold rose from $600 to $2,000 for payments made after Dec 31, 2025 (2025 law); confirm with IRS guidance",
+    "HIGH RISK: 1099-K threshold back to over $20,000 and over 200 transactions (2025 law); confirm",
+    "1099-INT generally issued for $10+ of interest",
+    "W-2 and 1099-NEC due to recipients by Feb 1, 2027 (Jan 31 is a Sunday)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "a-sin-formulario-igual-cuenta",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "With the higher 1099 thresholds, many side-job and app earners won't get a form for 2026, but the income is still taxable; keep your own records.",
+  "script": {
+   "title": "¿No te llegó un 1099? El ingreso igual cuenta",
+   "hook": "Este año a mucha gente no le va a llegar un 1099. El ingreso igual se declara.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Este año a mucha gente no le va a llegar un 1099. El ingreso igual se declara.",
+     "on_screen_text": "¿No te llegó un 1099? Igual cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an empty envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "La ley subió los mínimos: ahora muchos clientes y apps solo lo mandan si pasaste ciertos montos.",
+     "on_screen_text": "Subieron los mínimos para mandarlo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bar going up. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "Pero eso cambió quién manda el papel, no lo que tú tienes que declarar.",
+     "on_screen_text": "La ley no cambió lo que se declara",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a scale with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "Usa tus registros: tu cuaderno, tus depósitos del banco, los reportes de la app.",
+     "on_screen_text": "Usa tus propios registros",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a notebook and a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Tus números son tu respaldo si el IRS pregunta.",
+     "on_screen_text": "Tus números, tu respaldo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf closing a folder. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Este año a mucha gente no le va a llegar un 1099, porque la ley subió los montos mínimos para mandarlo. Pero el ingreso igual se declara. Usa tus propios registros: tu cuaderno, tus depósitos y los reportes de la app. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "1099",
+    "trabajoindependiente",
+    "apps",
+    "dinerosimple"
+   ],
+   "description": "Aunque no te llegue un 1099, el ingreso se declara.",
+   "thumbnail_text": "Sin 1099, igual cuenta",
+   "sources": [
+    "https://www.irs.gov/newsroom/working-families-tax-cuts-individuals-and-workers"
+   ],
+   "claims_to_verify": [
+    "HIGH RISK: higher 1099-NEC ($2,000) and 1099-K ($20,000 / 200) thresholds for 2026; confirm",
+    "All income is reportable with or without an information return"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ }
+]

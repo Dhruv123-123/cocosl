@@ -1,0 +1,1853 @@
+[
+ {
+  "key": "m9-primeros-30-dias",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Series opener for recent arrivals: five money moves for the first 30 days (a safe place for documents, an insured account, a phone plan without a credit check, keep every receipt and pay stub, and a small emergency fund).",
+  "script": {
+   "title": "Recién llegaste: 5 cosas de dinero para tu primer mes",
+   "hook": "Si acabas de llegar a Estados Unidos, estas cinco cosas de dinero te ahorran problemas todo el año.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si acabas de llegar a Estados Unidos, estas cinco cosas de dinero te ahorran problemas todo el año.",
+     "on_screen_text": "Recién llegaste: 5 cosas de dinero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small suitcase and a checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "1 y 2",
+     "narration": "Uno: guarda tus documentos originales en un lugar seguro y una foto en tu celular. Dos: abre una cuenta asegurada en un banco o cooperativa.",
+     "on_screen_text": "1. Tus papeles a salvo · 2. Una cuenta asegurada",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder and a debit card. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Tres: para el celular, un plan prepagado no revisa tu crédito ni pide depósito.",
+     "on_screen_text": "3. Celular prepagado: sin revisar tu crédito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a prepaid phone card, generic. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Cuatro: guarda cada talón de pago y cada recibo de renta. Te sirven para rentar, pedir crédito y hacer tus impuestos.",
+     "on_screen_text": "4. Guarda cada talón y cada recibo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone folder of photos of receipts. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Cinco: un colchón para emergencias. Empieza con veinte dólares por semana.",
+     "on_screen_text": "5. Un colchón chico: empieza con $20 por semana",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar with a few bills. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Cada semana de agosto te explico uno de estos temas.",
+     "on_screen_text": "Cada semana de agosto, un tema",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar of August. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Recién llegaste a EE. UU.: 5 cosas de dinero para tu primer mes.\n1. Tus documentos originales a salvo (y una foto en tu celular).\n2. Una cuenta asegurada (FDIC o NCUA).\n3. Celular prepagado: sin revisión de crédito ni depósito.\n4. Guarda cada talón de pago y recibo de renta.\n5. Un colchón: empieza con $20 a la semana.\n\nSerie 'Tu primer año': lo básico del dinero en Estados Unidos, para quien acaba de llegar.\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "recienllegados",
+    "dineroenusa",
+    "finanzasenespañol",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "Las 5 cosas de dinero para tu primer mes en Estados Unidos.",
+   "thumbnail_text": "Tu primer mes aquí",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Prepaid phone plans generally don't run a credit check or require a deposit"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m9-efectivo-en-casa",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Why cash at home is risky (theft, fire, nobody replaces it, no record of your income) and what an insured account protects: up to $250,000 per depositor, per institution, per ownership category.",
+  "script": {
+   "title": "El dinero debajo del colchón: 3 riesgos",
+   "hook": "El dinero en casa se siente seguro. Hasta que no lo está.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "El dinero en casa se siente seguro. Hasta que no lo está.",
+     "on_screen_text": "Se siente seguro… hasta que no",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a mattress with an envelope peeking out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Riesgo 1",
+     "narration": "Uno: un robo o un incendio, y se fue. Nadie te lo repone.",
+     "on_screen_text": "1. Un robo o un incendio y se fue",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an empty envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Riesgo 2",
+     "narration": "Dos: quien sabe que guardas efectivo te vuelve un blanco.",
+     "on_screen_text": "2. Quien sabe que tienes efectivo, te busca",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a closed door with a shadow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Riesgo 3",
+     "narration": "Tres: no deja registro de lo que ganas, y ese registro te sirve para rentar y pedir crédito.",
+     "on_screen_text": "3. No deja registro de lo que ganas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a blank bank statement. No text, no logos, no real people."
+    },
+    {
+     "heading": "La opción",
+     "narration": "En una cuenta asegurada por la FDIC o la NCUA, tu dinero está protegido hasta doscientos cincuenta mil dólares.",
+     "on_screen_text": "Cuenta asegurada: hasta $250,000 protegidos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a deposit insurance sign, generic. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "¿No tienes Seguro Social? Muchas cuentas se abren con pasaporte o matrícula consular. Lo vemos esta semana.",
+     "on_screen_text": "¿Sin Seguro Social? Hay cuentas con ITIN",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a passport next to a debit card. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Efectivo en casa: 3 riesgos.\n1. Un robo o un incendio, y nadie te lo repone.\n2. Quien sabe que guardas efectivo te vuelve un blanco.\n3. No deja registro de lo que ganas.\nEn una cuenta asegurada (FDIC o NCUA), tu dinero está protegido hasta $250,000.\n\nSerie 'Tu primer año': lo básico del dinero en Estados Unidos, para quien acaba de llegar.\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "recienllegados",
+    "dineroenusa",
+    "finanzasenespañol",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "Por qué guardar el dinero en casa es arriesgado.",
+   "thumbnail_text": "¿Efectivo en casa?",
+   "sources": [
+    "https://www.fdic.gov/es",
+    "https://mycreditunion.gov/"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "FDIC and NCUA insure deposits up to $250,000 per depositor, per insured institution, per ownership category",
+    "Some banks and credit unions open accounts with a foreign passport or consular ID (requirements vary)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "m9-debito-o-credito",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Debit vs credit card when something goes wrong: with a credit card your liability for unauthorized charges is capped at $50 (and most issuers charge $0); with a debit card it depends on how fast you report: $50 within 2 business days, up to $500 within 60 days, and possibly unlimited after.",
+  "script": {
+   "title": "Débito o crédito: cuál te protege más si te roban",
+   "hook": "Si te roban la tarjeta, con una pierdes cincuenta dólares máximo. Con la otra, depende de qué tan rápido avises.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si te roban la tarjeta, con una pierdes cincuenta dólares máximo. Con la otra, depende de qué tan rápido avises.",
+     "on_screen_text": "Si te la roban: ¿cuánto pierdes?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two cards, one with a lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Crédito",
+     "narration": "Con tarjeta de crédito, la ley pone un máximo de cincuenta dólares por cargos que no hiciste, y muchas cobran cero.",
+     "on_screen_text": "Crédito: máximo $50, y muchos cobran $0",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a credit card with a shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Débito",
+     "narration": "Con débito sale de tu cuenta, y lo que pierdes depende de cuándo avisas.",
+     "on_screen_text": "Débito: depende de cuándo avisas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a debit card and a bank balance dropping. No text, no logos, no real people."
+    },
+    {
+     "heading": "Los plazos",
+     "narration": "Si avisas en dos días hábiles, máximo cincuenta. Hasta sesenta días, hasta quinientos. Después, puede ser más.",
+     "on_screen_text": "2 días: $50 · 60 días: hasta $500",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with 2 and 60 circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "Activa alertas de cada compra y, si ves algo raro, llama al banco el mismo día.",
+     "on_screen_text": "Alertas en tu celular y avisa el mismo día",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a purchase alert. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Para comprar en línea, mejor crédito, si la pagas completa cada mes.",
+     "on_screen_text": "En línea: mejor con crédito, pagado completo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop and a card. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si te roban la tarjeta:\n• Crédito: máximo $50 por cargos no autorizados (muchas cobran $0).\n• Débito: avisa en 2 días hábiles y pierdes máximo $50; hasta 60 días después de tu estado de cuenta, hasta $500; después, puede ser más.\nActiva alertas y avisa al banco el mismo día.\n\nSerie 'Tu primer año': lo básico del dinero en Estados Unidos, para quien acaba de llegar.\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "recienllegados",
+    "dineroenusa",
+    "finanzasenespañol",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "Qué te protege más si te roban la tarjeta: débito o crédito.",
+   "thumbnail_text": "Débito o crédito",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://consumidor.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "Credit cards: liability for unauthorized charges capped at $50 (Truth in Lending Act / Fair Credit Billing Act)",
+    "Debit (EFTA/Reg E): $50 if reported within 2 business days of learning of loss/theft; up to $500 if later but within 60 days of the statement; potentially unlimited after 60 days"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m9-apps-de-pago",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Payment apps that send money between people work like cash: once sent, it's very hard to get back, and paying a stranger for a product or a 'deposit' is the most common way people lose money. Only send to people you know in person.",
+  "script": {
+   "title": "Las apps de pago son como efectivo",
+   "hook": "Mandar dinero con una app es como dar efectivo: una vez que sale, casi nunca regresa.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Mandar dinero con una app es como dar efectivo: una vez que sale, casi nunca regresa.",
+     "on_screen_text": "Una app de pago = efectivo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone sending money, a bill flying away. No text, no logos, no real people."
+    },
+    {
+     "heading": "Para qué sí",
+     "narration": "Úsalas para lo que son: mandarle a tu familia y amigos que conoces en persona.",
+     "on_screen_text": "Sí: familia y amigos que conoces",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two friends splitting a bill. No text, no logos, no real people."
+    },
+    {
+     "heading": "Para qué no",
+     "narration": "No para pagarle a un vendedor que no conoces: un carro, una renta, un perrito, unos boletos.",
+     "on_screen_text": "No: vendedores que no conoces",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a marketplace listing with a red flag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Si era estafa, muchas veces no hay a quién reclamar, porque tú autorizaste el pago.",
+     "on_screen_text": "Si es estafa, casi nunca hay reembolso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an empty refund box. No text, no logos, no real people."
+    },
+    {
+     "heading": "Revisa",
+     "narration": "Y antes de mandar, revisa el nombre y el número dos veces.",
+     "on_screen_text": "Revisa el nombre antes de mandar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a confirm screen with the name circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Para comprar algo, mejor tarjeta de crédito: puedes disputar el cargo.",
+     "on_screen_text": "Para comprar: tarjeta de crédito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a credit card. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Las apps de pago entre personas son como efectivo.\n• Sí: familia y amigos que conoces en persona.\n• No: vendedores que no conoces (renta, carros, boletos, mascotas).\n• Si era estafa, muchas veces no hay reembolso.\nPara comprar, mejor tarjeta de crédito: puedes disputar el cargo.\n\nSerie 'Tu primer año': lo básico del dinero en Estados Unidos, para quien acaba de llegar.\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "recienllegados",
+    "dineroenusa",
+    "finanzasenespañol",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "Por qué las apps de pago son como efectivo y cuándo no usarlas.",
+   "thumbnail_text": "App de pago = efectivo",
+   "sources": [
+    "https://consumidor.ftc.gov/",
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Payments you authorize on P2P apps are generally hard to reverse even if you were tricked (CFPB/FTC guidance); check current CFPB guidance",
+    "Credit card purchases can be disputed (Fair Credit Billing Act)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m9-impuesto-de-ventas",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "The price on the tag isn't the price you pay: sales tax is added at the register, it changes by state and city (a few states have none), and many states tax groceries less or not at all.",
+  "script": {
+   "title": "¿Por qué pagas más de lo que dice la etiqueta?",
+   "hook": "La etiqueta decía diez dólares y en la caja pagaste diez ochenta. No es un error.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "La etiqueta decía diez dólares y en la caja pagaste diez ochenta. No es un error.",
+     "on_screen_text": "Decía $10, pagaste $10.80",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a price tag and a receipt side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "Es el impuesto de ventas. Aquí casi nunca está en la etiqueta: se suma en la caja.",
+     "on_screen_text": "El impuesto de ventas se suma en la caja",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a register adding a tax line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuánto",
+     "narration": "Cambia por estado y por ciudad. Hay estados que no cobran nada y lugares que pasan del nueve por ciento.",
+     "on_screen_text": "Cambia por estado y ciudad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a map with different shades. No text, no logos, no real people."
+    },
+    {
+     "heading": "Comida",
+     "narration": "En muchos estados, la comida del súper paga menos o nada. La comida preparada, sí paga.",
+     "on_screen_text": "Comida del súper: muchas veces menos o nada",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a grocery bag and a hot meal. No text, no logos, no real people."
+    },
+    {
+     "heading": "Presupuesto",
+     "narration": "Para tu presupuesto, súmale el impuesto de tu ciudad a lo que planeas comprar.",
+     "on_screen_text": "Suma el impuesto en tu presupuesto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a notepad with +8%. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Búscalo: impuesto de ventas más el nombre de tu ciudad.",
+     "on_screen_text": "Busca: 'impuesto de ventas' + tu ciudad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a search bar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "En EE. UU. el precio de la etiqueta casi nunca incluye el impuesto de ventas: se suma en la caja.\n• Cambia por estado y ciudad (algunos estados no cobran).\n• En muchos estados la comida del súper paga menos o nada.\nEjemplo: $10 con 8% de impuesto = $10.80.\n\nSerie 'Tu primer año': lo básico del dinero en Estados Unidos, para quien acaba de llegar.\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "recienllegados",
+    "dineroenusa",
+    "finanzasenespañol",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "El impuesto de ventas: por qué pagas más de lo que dice la etiqueta.",
+   "thumbnail_text": "El precio + impuesto",
+   "sources": [
+    "https://taxfoundation.org/"
+   ],
+   "claims_to_verify": [
+    "Five states have no statewide sales tax (AK, DE, MT, NH, OR); Alaska allows local sales taxes",
+    "Combined state+local rates exceed 9% in some places (e.g. parts of LA, TN, AR, WA, AL)",
+    "Many states exempt or reduce tax on groceries",
+    "Example arithmetic: $10 x 1.08 = $10.80"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m9-propinas",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Tipping in the US for newcomers: in sit-down restaurants 15-20% is expected because servers' pay counts on it; check the bill for an included service charge; at counters and screens it's optional. Example: $40 meal.",
+  "script": {
+   "title": "Las propinas en Estados Unidos: cuándo y cuánto",
+   "hook": "Una cena de cuarenta dólares aquí puede terminar costando cincuenta. Te explico por qué.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Una cena de cuarenta dólares aquí puede terminar costando cincuenta. Te explico por qué.",
+     "on_screen_text": "Una cena de $40 que cuesta $50",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a restaurant bill with lines added. No text, no logos, no real people."
+    },
+    {
+     "heading": "Restaurante",
+     "narration": "En un restaurante con mesero, se espera una propina de quince a veinte por ciento. Mucho de su sueldo depende de eso.",
+     "on_screen_text": "Restaurante con mesero: 15% a 20%",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a waiter with a tray. No text, no logos, no real people."
+    },
+    {
+     "heading": "La cuenta",
+     "narration": "Ejemplo: cuarenta de comida, más el impuesto, más dieciocho por ciento de propina: unos cincuenta.",
+     "on_screen_text": "$40 + impuesto + 18% = unos $50",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with three lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Revisa",
+     "narration": "Revisa la cuenta: si ya dice cargo por servicio, la propina ya está incluida.",
+     "on_screen_text": "Revisa si ya incluye 'service charge'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with 'service charge' circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "En la pantalla",
+     "narration": "En el mostrador, cuando la pantalla te pregunta, es opcional. Puedes poner 'sin propina'.",
+     "on_screen_text": "En el mostrador es opcional",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a tablet screen with tip options. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Súmalo en tu presupuesto antes de salir a comer.",
+     "on_screen_text": "Súmalo antes de salir a comer",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a notepad. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Propinas en EE. UU.:\n• Restaurante con mesero: 15% a 20% (es parte de su sueldo).\n• Revisa si la cuenta ya incluye 'service charge'.\n• En el mostrador o en la pantalla: es opcional.\nEjemplo: $40 de comida + impuesto + 18% de propina = unos $50.\n\nSerie 'Tu primer año': lo básico del dinero en Estados Unidos, para quien acaba de llegar.\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "recienllegados",
+    "dineroenusa",
+    "finanzasenespañol",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "Las propinas en Estados Unidos: cuándo se esperan y cuánto.",
+   "thumbnail_text": "Propinas: cuánto",
+   "sources": [
+    "https://www.dol.gov/agencies/whd/flsa"
+   ],
+   "claims_to_verify": [
+    "Federal tipped minimum cash wage is $2.13/hour (employers may take a tip credit); state rules differ",
+    "Example arithmetic: $40 + 8% tax ($3.20) + 18% tip on $40 ($7.20) = $50.40"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m9-luz-sin-historial",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Utilities and phone with no US credit history: companies may ask a deposit; ask whether a letter of good payment history from a previous utility, a co-signer or autopay can waive or lower it, and ask when they refund it.",
+  "script": {
+   "title": "Luz y gas sin historial de crédito: el depósito",
+   "hook": "Sin historial de crédito, la compañía de luz te puede pedir un depósito. Hay formas de bajarlo.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Sin historial de crédito, la compañía de luz te puede pedir un depósito. Hay formas de bajarlo.",
+     "on_screen_text": "Sin historial: te piden depósito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a utility bill with 'depósito' circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta 1",
+     "narration": "Pregunta si aceptan una carta de buen pago de tu compañía anterior, aquí o de otro estado.",
+     "on_screen_text": "¿Aceptan una carta de buen pago?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a letter with a check mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta 2",
+     "narration": "Pregunta si lo bajan o lo quitan si pones pago automático.",
+     "on_screen_text": "¿Lo bajan con pago automático?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an autopay toggle. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta 3",
+     "narration": "Y pregunta cuándo te lo devuelven: muchas lo regresan después de un año pagando a tiempo.",
+     "on_screen_text": "¿Cuándo me lo devuelven?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a year circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ayuda",
+     "narration": "Si no te alcanza, pregunta por planes de pago y programas de ayuda con la factura.",
+     "on_screen_text": "¿No te alcanza? Pregunta por planes de pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone call to customer service. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y todo lo que te prometan, pídelo por escrito.",
+     "on_screen_text": "Pide todo por escrito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an email confirmation. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Luz, gas y agua sin historial de crédito: pueden pedirte un depósito.\nPregunta:\n1. ¿Aceptan una carta de buen pago de mi compañía anterior?\n2. ¿Lo bajan o lo quitan con pago automático?\n3. ¿Cuándo me lo devuelven?\nSi no te alcanza, pregunta por planes de pago y programas de ayuda. Pídelo por escrito.\n\nSerie 'Tu primer año': lo básico del dinero en Estados Unidos, para quien acaba de llegar.\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "recienllegados",
+    "dineroenusa",
+    "finanzasenespañol",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "Cómo bajar el depósito de la luz y el gas sin historial de crédito.",
+   "thumbnail_text": "Depósito de la luz",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Utility deposit rules are set by each state's utility commission; letters of credit/good payment history and refund timelines vary by utility",
+    "Check that no specific assistance program is described as open to everyone (eligibility varies)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m9-carpeta-de-papeles",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "The first-year folder: pay stubs, rent receipts, the lease, bank statements, tax returns and utility bills. They prove income and address for renting, credit and taxes. Keep originals safe and photos in the phone.",
+  "script": {
+   "title": "La carpeta de tu primer año: qué guardar",
+   "hook": "Los papeles que hoy tiras te los van a pedir el año que viene.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Los papeles que hoy tiras te los van a pedir el año que viene.",
+     "on_screen_text": "Lo que hoy tiras, mañana te lo piden",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a trash can with papers and a stop hand. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ingresos",
+     "narration": "Guarda tus talones de pago y estados de cuenta: prueban cuánto ganas.",
+     "on_screen_text": "Talones de pago y estados de cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. pay stubs in a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Domicilio",
+     "narration": "Tu contrato de renta, los recibos y las facturas de luz prueban dónde vives.",
+     "on_screen_text": "Contrato de renta, recibos y facturas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a lease and a utility bill. No text, no logos, no real people."
+    },
+    {
+     "heading": "Impuestos",
+     "narration": "Y tus declaraciones de impuestos: guárdalas por lo menos tres años, mejor más.",
+     "on_screen_text": "Tus declaraciones: guárdalas años",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. tax forms in a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "El original en una carpeta; una foto en tu celular, en un álbum que se llame 'Papeles'.",
+     "on_screen_text": "Original guardado, foto en el celular",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone album named 'Papeles'. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Te sirve para rentar, pedir crédito y hacer tus impuestos.",
+     "on_screen_text": "Te sirve para rentar, crédito e impuestos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder with three tabs. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "La carpeta de tu primer año:\n• Talones de pago y estados de cuenta (tus ingresos).\n• Contrato de renta, recibos y facturas (tu domicilio).\n• Declaraciones de impuestos (por lo menos 3 años).\nOriginal en una carpeta y una foto en el celular.\n\nSerie 'Tu primer año': lo básico del dinero en Estados Unidos, para quien acaba de llegar.\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "recienllegados",
+    "dineroenusa",
+    "finanzasenespañol",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "Qué papeles guardar en tu primer año en Estados Unidos.",
+   "thumbnail_text": "Tu carpeta de papeles",
+   "sources": [
+    "https://www.irs.gov/es"
+   ],
+   "claims_to_verify": [
+    "IRS generally recommends keeping returns and records at least 3 years (longer in some cases)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m9-antes-de-firmar",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Before signing a lease: read it all, and find five things: the total move-in cost, the length and how to leave early, who pays which utilities, late fees, and who fixes what. Get a copy signed by both.",
+  "script": {
+   "title": "Antes de firmar tu contrato de renta: 5 cosas",
+   "hook": "El contrato de renta que firmas hoy decide cuánto pagas por un año. Busca estas cinco cosas.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "El contrato de renta que firmas hoy decide cuánto pagas por un año. Busca estas cinco cosas.",
+     "on_screen_text": "Antes de firmar, busca 5 cosas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a lease on a table with a pen. No text, no logos, no real people."
+    },
+    {
+     "heading": "1-2",
+     "narration": "Uno: cuánto pagas para entrar, todo junto. Dos: cuánto dura y qué pasa si te sales antes.",
+     "on_screen_text": "1. Total para entrar · 2. Cuánto dura",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a lease with two lines highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Tres: qué servicios pagas tú: luz, agua, gas, basura, internet.",
+     "on_screen_text": "3. Qué servicios pagas tú",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. utility icons. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Cuatro: cuánto te cobran si pagas tarde, y desde qué día.",
+     "on_screen_text": "4. Recargos por pagar tarde",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a late fee. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Cinco: quién arregla qué, y cómo se pide una reparación.",
+     "on_screen_text": "5. Quién arregla qué",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a wrench and a lease. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y llévate una copia firmada por los dos. Si no hay contrato por escrito, pregunta por qué.",
+     "on_screen_text": "Una copia firmada por los dos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two signatures on a page. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Antes de firmar tu contrato de renta, busca:\n1. El total para entrar.\n2. Cuánto dura y qué pasa si te sales antes.\n3. Qué servicios pagas tú.\n4. Los recargos por pagar tarde.\n5. Quién arregla qué.\nLlévate una copia firmada por los dos.\n\nLas reglas de renta cambian por estado y ciudad. Información general, no es asesoría legal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "rentar",
+    "inquilinos",
+    "derechosdelinquilino",
+    "vivienda",
+    "dinerosimple"
+   ],
+   "description": "Las 5 cosas que debes revisar antes de firmar un contrato de renta.",
+   "thumbnail_text": "Antes de firmar",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://www.hud.gov/espanol"
+   ],
+   "claims_to_verify": [
+    "LEGAL CHECK: general tenant guidance; lease rules and late-fee limits vary by state and city"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m9-fotos-al-entrar",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Getting the security deposit back: photos and video of every room on move-in and move-out (dated), a written list of existing damage signed by the landlord, and a forwarding address in writing; most states set a deadline to return it or itemize deductions.",
+  "script": {
+   "title": "Tu depósito de renta: haz esto el primer día",
+   "hook": "Lo que haces el primer día en tu departamento decide si te devuelven el depósito.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Lo que haces el primer día en tu departamento decide si te devuelven el depósito.",
+     "on_screen_text": "El primer día decide tu depósito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an empty apartment and a phone camera. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fotos",
+     "narration": "Antes de meter tus cosas, toma fotos y video de cada cuarto: paredes, piso, baño, cocina.",
+     "on_screen_text": "Fotos y video de cada cuarto, con fecha",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone recording a room. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lista",
+     "narration": "Haz una lista de lo que ya está dañado y pide que el dueño la firme. Guarda una copia.",
+     "on_screen_text": "Una lista de daños, firmada por el dueño",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a list with two signatures. No text, no logos, no real people."
+    },
+    {
+     "heading": "Al salir",
+     "narration": "Al salir, limpia, toma fotos otra vez y entrega las llaves por escrito.",
+     "on_screen_text": "Al salir: limpia, fotos otra vez",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a clean apartment and keys. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tu dirección",
+     "narration": "Deja tu nueva dirección por escrito. Muchos estados ponen un plazo para devolverte el depósito o explicarte los descuentos.",
+     "on_screen_text": "Deja tu nueva dirección por escrito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with a new address. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Guarda las fotos por lo menos un año.",
+     "on_screen_text": "Guarda las fotos un año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone album named 'Depto'. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Para que te devuelvan el depósito de renta:\n• El primer día: fotos y video de cada cuarto, con fecha.\n• Una lista de daños firmada por el dueño.\n• Al salir: limpia, fotos otra vez y entrega las llaves por escrito.\n• Deja tu nueva dirección por escrito.\nMuchos estados ponen un plazo para devolver el depósito o explicar los descuentos.\n\nLas reglas de renta cambian por estado y ciudad. Información general, no es asesoría legal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "rentar",
+    "inquilinos",
+    "derechosdelinquilino",
+    "vivienda",
+    "dinerosimple"
+   ],
+   "description": "Cómo proteger tu depósito de renta desde el primer día.",
+   "thumbnail_text": "Recupera tu depósito",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "LEGAL CHECK: most states set a deadline (commonly 14-45 days) to return a security deposit or itemize deductions; confirm the range"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m9-reparaciones",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Repairs: ask in writing (text or email with photos and a date), keep copies, and know that in most places the landlord must keep the home livable (heat, water, safe wiring); don't stop paying rent before checking your state's rules with a tenant group or legal aid.",
+  "script": {
+   "title": "Si el dueño no arregla: pídelo por escrito",
+   "hook": "Pedir una reparación de palabra casi nunca funciona. Por escrito, sí.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Pedir una reparación de palabra casi nunca funciona. Por escrito, sí.",
+     "on_screen_text": "De palabra no funciona. Por escrito, sí.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a leaking pipe and a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Manda un mensaje o un correo con fotos, la fecha y qué está mal.",
+     "on_screen_text": "Mensaje o correo, con fotos y fecha",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a text message with a photo. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué cuenta",
+     "narration": "En la mayoría de los lugares, el dueño tiene que mantener lo básico: agua, calefacción, electricidad segura.",
+     "on_screen_text": "Agua, calefacción, luz segura: lo básico",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a radiator and a faucet. No text, no logos, no real people."
+    },
+    {
+     "heading": "Copias",
+     "narration": "Guarda cada mensaje y cada respuesta. Es tu prueba.",
+     "on_screen_text": "Guarda cada mensaje y respuesta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. screenshots in a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ojo",
+     "narration": "Ojo: no dejes de pagar la renta sin antes preguntar las reglas de tu estado. Te pueden demandar.",
+     "on_screen_text": "No dejes de pagar renta sin preguntar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a warning sign over a rent check. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ayuda",
+     "narration": "Pregunta a un grupo de inquilinos o a ayuda legal gratis de tu ciudad.",
+     "on_screen_text": "Pregunta a un grupo de inquilinos o ayuda legal",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a community office, generic. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si el dueño no arregla:\n• Pídelo por escrito: mensaje o correo con fotos y fecha.\n• En la mayoría de los lugares tiene que mantener lo básico (agua, calefacción, electricidad segura).\n• Guarda cada mensaje y respuesta.\n• No dejes de pagar la renta sin preguntar primero las reglas de tu estado.\nBusca un grupo de inquilinos o ayuda legal gratis en tu ciudad.\n\nLas reglas de renta cambian por estado y ciudad. Información general, no es asesoría legal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "rentar",
+    "inquilinos",
+    "derechosdelinquilino",
+    "vivienda",
+    "dinerosimple"
+   ],
+   "description": "Cómo pedir reparaciones al dueño y proteger tus derechos.",
+   "thumbnail_text": "Reparaciones: por escrito",
+   "sources": [
+    "https://www.hud.gov/espanol",
+    "https://www.lsc.gov/"
+   ],
+   "claims_to_verify": [
+    "LEGAL CHECK: implied warranty of habitability exists in most states; rent withholding/repair-and-deduct rules vary and can backfire"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m9-desalojo",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Eviction basics: in most of the US a landlord needs a court order to evict; changing the locks, removing your things or cutting utilities to push you out is generally illegal. Never ignore court papers; go to the hearing and call legal aid.",
+  "script": {
+   "title": "Un desalojo necesita una orden de la corte",
+   "hook": "Si el dueño te cambia la chapa para sacarte, en la mayoría de los estados eso es ilegal.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si el dueño te cambia la chapa para sacarte, en la mayoría de los estados eso es ilegal.",
+     "on_screen_text": "¿Te cambiaron la chapa? Puede ser ilegal",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a door lock being changed. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "Para sacarte, en la mayoría de los lugares necesita una orden de la corte.",
+     "on_screen_text": "Para sacarte, necesita orden de la corte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a courthouse, generic. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ilegal",
+     "narration": "Cortarte la luz o el agua, o sacar tus cosas para presionarte, en general no está permitido.",
+     "on_screen_text": "Cortar luz o sacar tus cosas: no",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a switch turned off with a red X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Papeles",
+     "narration": "Si te llegan papeles de la corte, no los ignores. Si no vas a la audiencia, puedes perder automáticamente.",
+     "on_screen_text": "Si te llegan papeles: no los ignores",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. court papers on a table. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ayuda",
+     "narration": "Llama ese mismo día a ayuda legal gratis o a un grupo de inquilinos.",
+     "on_screen_text": "Llama a ayuda legal gratis ese mismo día",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone call. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Mándaselo a quien renta.",
+     "on_screen_text": "Mándaselo a quien renta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two phones sharing a video. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Desalojo: lo básico.\n• En la mayoría de los estados, el dueño necesita una orden de la corte para sacarte.\n• Cambiar la chapa, cortar servicios o sacar tus cosas para presionarte, en general, es ilegal.\n• Si te llegan papeles de la corte, no los ignores: ve a la audiencia.\n• Llama a ayuda legal gratis ese mismo día.\n\nLas reglas de renta cambian por estado y ciudad. Información general, no es asesoría legal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "rentar",
+    "inquilinos",
+    "derechosdelinquilino",
+    "vivienda",
+    "dinerosimple"
+   ],
+   "description": "Lo básico de un desalojo: la orden de la corte y tus derechos.",
+   "thumbnail_text": "Desalojo: tus derechos",
+   "sources": [
+    "https://www.lsc.gov/",
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "LEGAL CHECK: 'self-help' eviction (lockouts, utility shutoffs, removing belongings) is prohibited in most states; a court order is generally required",
+    "Missing an eviction hearing can lead to a default judgment"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m9-clinica-comunitaria",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Health care without insurance in the first year: federally funded community health centers charge on a sliding scale by income, whether or not you have insurance; ask for the sliding-fee discount and find one at findahealthcenter.hrsa.gov.",
+  "script": {
+   "title": "Sin seguro médico: la clínica comunitaria",
+   "hook": "Si no tienes seguro médico, hay clínicas que cobran según lo que ganas.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si no tienes seguro médico, hay clínicas que cobran según lo que ganas.",
+     "on_screen_text": "Sin seguro: cobran según lo que ganas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a community clinic front, no logo. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué son",
+     "narration": "Se llaman centros de salud comunitarios, y reciben fondos federales.",
+     "on_screen_text": "Centros de salud comunitarios",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a waiting room. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuánto",
+     "narration": "Tienen una escala de precios según tus ingresos y tu familia, tengas seguro o no.",
+     "on_screen_text": "Escala de precios según tu ingreso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a sliding scale graphic. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué llevar",
+     "narration": "Llama y pregunta qué papeles piden para el descuento, por ejemplo tus talones de pago.",
+     "on_screen_text": "Pregunta qué papeles piden para el descuento",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. pay stubs and a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dónde",
+     "narration": "Búscalos en findahealthcenter punto hrsa punto gov.",
+     "on_screen_text": "findahealthcenter.hrsa.gov",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop with a generic map. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Para algo que no es emergencia, la clínica te sale mucho más barata que la sala de emergencias.",
+     "on_screen_text": "Mejor la clínica que la sala de emergencias",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a clinic and an ER sign. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Sin seguro médico: los centros de salud comunitarios cobran con una escala según tus ingresos y tu familia, tengas seguro o no.\n• Pregunta qué papeles piden para el descuento.\n• Búscalos en findahealthcenter.hrsa.gov.\n• Para algo que no es emergencia, sale mucho más barato que la sala de emergencias.\n\nSerie 'Tu primer año': lo básico del dinero en Estados Unidos, para quien acaba de llegar.\nInformación general, no es asesoría médica ni legal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "recienllegados",
+    "dineroenusa",
+    "finanzasenespañol",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "Centros de salud comunitarios: atención médica según tu ingreso.",
+   "thumbnail_text": "Clínica según tu ingreso",
+   "sources": [
+    "https://findahealthcenter.hrsa.gov/",
+    "https://www.hrsa.gov/"
+   ],
+   "claims_to_verify": [
+    "HRSA-funded health centers provide services regardless of ability to pay and offer a sliding fee discount based on income and family size"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m9-colchon-primer-ano",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "The first-year emergency fund, in steps: $20 a week to $500 (25 weeks), then one month of rent; why it comes before paying extra on debt when you're new (no family nearby, no credit to fall back on).",
+  "script": {
+   "title": "Tu primer colchón: de $0 a $500 en 25 semanas",
+   "hook": "Veinte dólares por semana, veinticinco semanas, quinientos dólares. Tu primer colchón.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Veinte dólares por semana, veinticinco semanas, quinientos dólares. Tu primer colchón.",
+     "on_screen_text": "$20 × 25 semanas = $500",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar filling up week by week. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Cuando acabas de llegar, muchas veces no tienes a quién pedirle ni crédito para una emergencia.",
+     "on_screen_text": "Recién llegado: menos red de apoyo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a person alone with a broken phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Pon una transferencia automática de veinte dólares el día de pago, a un apartado con nombre.",
+     "on_screen_text": "Transferencia automática el día de pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an autopay toggle. No text, no logos, no real people."
+    },
+    {
+     "heading": "Después",
+     "narration": "Cuando llegues a quinientos, la siguiente meta es un mes de renta.",
+     "on_screen_text": "Luego: un mes de renta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a rent calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Para qué",
+     "narration": "Úsalo solo para emergencias de verdad: salud, trabajo, carro para trabajar.",
+     "on_screen_text": "Solo emergencias de verdad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a first aid kit and car keys. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Empieza este viernes.",
+     "on_screen_text": "Empieza este viernes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with Friday circled. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu primer colchón: $20 por semana durante 25 semanas = $500.\n• Transferencia automática el día de pago, a un apartado con nombre.\n• Después: un mes de renta.\n• Solo para emergencias de verdad.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSerie 'Tu primer año': lo básico del dinero en Estados Unidos, para quien acaba de llegar.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "recienllegados",
+    "dineroenusa",
+    "finanzasenespañol",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "Cómo juntar tu primer fondo de emergencia de $500.",
+   "thumbnail_text": "De $0 a $500",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Example arithmetic: 25 x $20 = $500"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m9c-primer-mes",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Save-able checklist for the first month in the US: documents safe, an insured account, a prepaid phone, a receipts folder, $20 a week, and who to ask for free help.",
+  "script": {
+   "title": "Tu primer mes aquí: la lista",
+   "hook": "Guárdala o mándasela a quien acaba de llegar.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdala o mándasela a quien acaba de llegar.",
+     "on_screen_text": "Tu primer mes aquí: la lista",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a suitcase and a checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Pasaporte, actas, cartas importantes.",
+     "on_screen_text": "1. Originales a salvo, foto en el celular",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder and a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Que diga FDIC o NCUA.",
+     "on_screen_text": "2. Una cuenta asegurada",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a debit card. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Sin revisión de crédito ni depósito.",
+     "on_screen_text": "3. Celular prepagado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a prepaid phone card. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Te los van a pedir para rentar.",
+     "on_screen_text": "4. Una carpeta de recibos y talones",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder with tabs. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "En automático, el día de pago.",
+     "on_screen_text": "5. $20 por semana a un colchón",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar with a few bills. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Pregunta antes de pagarle a alguien.",
+     "on_screen_text": "Ayuda gratis: biblioteca, cooperativa, consulado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a library front, generic. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu primer mes en EE. UU.:\n1. Originales a salvo y una foto en el celular.\n2. Una cuenta asegurada (FDIC o NCUA).\n3. Celular prepagado.\n4. Una carpeta de recibos y talones.\n5. $20 por semana a un colchón.\nPara ayuda gratis: biblioteca, cooperativa, consulado.\n\nSerie 'Tu primer año': lo básico del dinero en Estados Unidos, para quien acaba de llegar.\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "recienllegados",
+    "dineroenusa",
+    "finanzasenespañol",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "La lista de dinero para tu primer mes en Estados Unidos.",
+   "thumbnail_text": "Tu primer mes",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "No numeric claims beyond $20/week"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m9c-abrir-cuenta",
+  "format": "carousel",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "What to bring to open an account as a newcomer: a photo ID (passport or consular ID often accepted), proof of address, an SSN or ITIN if you have one (some accounts open without either), and the three questions to ask about fees.",
+  "script": {
+   "title": "Abrir tu primera cuenta: qué llevar",
+   "hook": "Guárdalo antes de ir al banco.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo antes de ir.",
+     "on_screen_text": "Tu primera cuenta: qué llevar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank counter, generic. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Muchos aceptan pasaporte o matrícula consular.",
+     "on_screen_text": "1. Identificación con foto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a passport. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Un contrato o una factura con tu nombre.",
+     "on_screen_text": "2. Comprobante de domicilio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a utility bill. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Algunas cuentas abren sin ninguno de los dos.",
+     "on_screen_text": "3. Seguro Social o ITIN, si tienes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a blank card shape. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta",
+     "narration": "¿Y cómo se quita ese cobro?",
+     "on_screen_text": "¿Cuánto cobran al mes?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a fee table. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta",
+     "narration": "Pide que te lo desactiven.",
+     "on_screen_text": "¿Cobran por sobregiro?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a toggle turned off. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Cada banco y cooperativa pide algo distinto.",
+     "on_screen_text": "Llama antes y pregunta qué aceptan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone call. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Para abrir tu primera cuenta, lleva:\n1. Identificación con foto (muchos aceptan pasaporte o matrícula consular).\n2. Comprobante de domicilio.\n3. Seguro Social o ITIN si tienes (algunas cuentas abren sin ninguno).\nPregunta: ¿cuánto cobran al mes y cómo se quita? ¿Cobran por sobregiro?\nLlama antes: cada banco pide algo distinto.\n\nSerie 'Tu primer año': lo básico del dinero en Estados Unidos, para quien acaba de llegar.\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "recienllegados",
+    "dineroenusa",
+    "finanzasenespañol",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "Qué llevar para abrir tu primera cuenta de banco en EE. UU.",
+   "thumbnail_text": "Qué llevar al banco",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://joinbankon.org/"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "Some banks and credit unions accept a foreign passport or consular ID and open accounts with an ITIN or without an SSN (requirements vary)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "m9c-tarjeta-robada",
+  "format": "carousel",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Carousel version of debit vs credit liability with the deadlines: credit capped at $50; debit $50 within 2 business days, up to $500 within 60 days of the statement, possibly more after.",
+  "script": {
+   "title": "Si te roban la tarjeta: los plazos",
+   "hook": "Guárdalo. Los días cuentan.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo. Los días cuentan.",
+     "on_screen_text": "Si te roban la tarjeta: los plazos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a wallet with a missing card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Crédito",
+     "narration": "Y muchas cobran $0.",
+     "on_screen_text": "Crédito: máximo $50",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a credit card with a shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Débito 1",
+     "narration": "Avisa en cuanto te des cuenta.",
+     "on_screen_text": "Débito, 2 días hábiles: máximo $50",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with 2 circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Débito 2",
+     "narration": "Contados desde tu estado de cuenta.",
+     "on_screen_text": "Débito, hasta 60 días: hasta $500",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with 60 circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Débito 3",
+     "narration": "Revisa tu cuenta cada semana.",
+     "on_screen_text": "Después de 60 días: puede ser más",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank statement. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "Y llama al banco el mismo día.",
+     "on_screen_text": "Alertas de cada compra en tu celular",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone alert. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "A quien usa tarjeta de débito.",
+     "on_screen_text": "Mándaselo a tu familia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two phones. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si te roban la tarjeta:\n• Crédito: máximo $50 (muchas cobran $0).\n• Débito, si avisas en 2 días hábiles: máximo $50.\n• Débito, hasta 60 días después del estado de cuenta: hasta $500.\n• Después: puede ser más.\nActiva alertas y llama al banco el mismo día.\n\nSerie 'Tu primer año': lo básico del dinero en Estados Unidos, para quien acaba de llegar.\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "recienllegados",
+    "dineroenusa",
+    "finanzasenespañol",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "Los plazos para avisar si te roban la tarjeta de débito o crédito.",
+   "thumbnail_text": "Los días cuentan",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Credit: $50 cap (FCBA/TILA)",
+    "Debit (Reg E): $50 within 2 business days; up to $500 within 60 days of statement; potentially unlimited after"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m9c-precio-real",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "The real price in the US: tag + sales tax, tip at sit-down restaurants, delivery and service fees, and monthly subscriptions that auto-renew; a $40 dinner example.",
+  "script": {
+   "title": "El precio de verdad: lo que no dice la etiqueta",
+   "hook": "Guárdalo para tu presupuesto.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Lo que no dice la etiqueta.",
+     "on_screen_text": "El precio de verdad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a price tag with question marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Se suma en la caja; cambia por ciudad.",
+     "on_screen_text": "1. Impuesto de ventas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with a tax line. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Revisa si ya incluye 'service charge'.",
+     "on_screen_text": "2. Propina con mesero: 15% a 20%",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a restaurant bill. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "En apps de comida pueden sumar bastante.",
+     "on_screen_text": "3. Cargos de envío y servicio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a delivery app screen, generic. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Revisa tu estado de cuenta cada mes.",
+     "on_screen_text": "4. Suscripciones que se renuevan solas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with repeating charges. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "Comida + impuesto + 18% de propina.",
+     "on_screen_text": "$40 de cena ≈ $50 con todo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with three lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Así tu presupuesto no se queda corto.",
+     "on_screen_text": "Súmalo antes de comprar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a notepad. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El precio de verdad en EE. UU.:\n1. Impuesto de ventas (se suma en la caja).\n2. Propina con mesero: 15% a 20%.\n3. Cargos de envío y servicio en apps.\n4. Suscripciones que se renuevan solas.\nEjemplo: $40 de cena + impuesto + 18% de propina ≈ $50.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "recienllegados",
+    "dineroenusa",
+    "finanzasenespañol",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "Lo que no dice la etiqueta: impuesto, propina, cargos y suscripciones.",
+   "thumbnail_text": "El precio de verdad",
+   "sources": [
+    "https://taxfoundation.org/"
+   ],
+   "claims_to_verify": [
+    "Example arithmetic: $40 + 8% tax + 18% tip on $40 = $50.40"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m9c-contrato-de-renta",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Lease checklist carousel: total to move in, length and early exit, utilities, late fees, repairs, guests and subletting rules, and a signed copy.",
+  "script": {
+   "title": "Antes de firmar la renta: la lista",
+   "hook": "Guárdala para tu próxima mudanza.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdala para tu próxima mudanza.",
+     "on_screen_text": "Antes de firmar la renta: la lista",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a lease and a pen. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Primer mes, depósito, cargos de solicitud.",
+     "on_screen_text": "1. Total para entrar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a sum on a notepad. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "¿Cuánto cobran si te sales antes?",
+     "on_screen_text": "2. Cuánto dura y cómo salirte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Luz, agua, gas, basura, internet.",
+     "on_screen_text": "3. Qué servicios pagas tú",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. utility icons. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "¿Cuánto y desde qué día?",
+     "on_screen_text": "4. Recargo por pagar tarde",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a late fee. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "¿Y cómo se pide una reparación?",
+     "on_screen_text": "5. Quién arregla qué",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a wrench. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Sin contrato por escrito, pregunta por qué.",
+     "on_screen_text": "Copia firmada por los dos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two signatures. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Antes de firmar tu contrato de renta:\n1. El total para entrar.\n2. Cuánto dura y cómo salirte.\n3. Qué servicios pagas tú.\n4. El recargo por pagar tarde.\n5. Quién arregla qué.\nLlévate una copia firmada por los dos.\n\nLas reglas de renta cambian por estado y ciudad. Información general, no es asesoría legal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "rentar",
+    "inquilinos",
+    "derechosdelinquilino",
+    "vivienda",
+    "dinerosimple"
+   ],
+   "description": "La lista para revisar un contrato de renta antes de firmar.",
+   "thumbnail_text": "Antes de firmar",
+   "sources": [
+    "https://www.hud.gov/espanol"
+   ],
+   "claims_to_verify": [
+    "LEGAL CHECK: general guidance; rules vary by state and city"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m9c-depositos",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Security deposit carousel: move-in photos and video, a signed damage list, receipts for every payment, cleaning and photos on move-out, keys returned in writing, a forwarding address, and the state deadline to return it.",
+  "script": {
+   "title": "Que te devuelvan el depósito: la lista",
+   "hook": "Guárdala desde el primer día.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "La lista, desde el primer día.",
+     "on_screen_text": "Que te devuelvan el depósito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an empty apartment. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Cada cuarto, con fecha.",
+     "on_screen_text": "1. Fotos y video al entrar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone recording. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Con copia para ti.",
+     "on_screen_text": "2. Lista de daños firmada",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a signed list. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Nunca pagues sin recibo.",
+     "on_screen_text": "3. Recibo de cada pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Y entrega las llaves por escrito.",
+     "on_screen_text": "4. Al salir: limpia y fotos otra vez",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. keys and a note. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Para que te manden el depósito.",
+     "on_screen_text": "5. Tu nueva dirección por escrito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Búscalo: 'depósito de renta' + tu estado.",
+     "on_screen_text": "Tu estado pone un plazo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a search bar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Para que te devuelvan el depósito:\n1. Fotos y video al entrar, con fecha.\n2. Lista de daños firmada.\n3. Recibo de cada pago.\n4. Al salir: limpia, fotos otra vez y llaves por escrito.\n5. Tu nueva dirección por escrito.\nMuchos estados ponen un plazo para devolverlo o explicar los descuentos.\n\nLas reglas de renta cambian por estado y ciudad. Información general, no es asesoría legal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "rentar",
+    "inquilinos",
+    "derechosdelinquilino",
+    "vivienda",
+    "dinerosimple"
+   ],
+   "description": "La lista para que te devuelvan el depósito de renta.",
+   "thumbnail_text": "Tu depósito de vuelta",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "LEGAL CHECK: state deposit-return deadlines vary (commonly 14-45 days)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m9c-derechos-inquilino",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Tenant rights basics: a livable home, repairs requested in writing, notice before entry in many states, no lockouts or utility shutoffs to push you out, a court order to evict, and protection from housing discrimination by national origin under the Fair Housing Act.",
+  "script": {
+   "title": "Tus derechos como inquilino: lo básico",
+   "hook": "Guárdalo. Aplican aunque acabes de llegar.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Lo básico. Guárdalo.",
+     "on_screen_text": "Tus derechos como inquilino",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a door with a key. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Agua, calefacción y electricidad segura.",
+     "on_screen_text": "1. Una vivienda habitable",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a faucet and a radiator. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Con fotos y fecha.",
+     "on_screen_text": "2. Reparaciones: pídelas por escrito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a text with a photo. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "En muchos estados, el dueño debe avisar.",
+     "on_screen_text": "3. Aviso antes de entrar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a knock on a door. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Cambiar la chapa en general es ilegal.",
+     "on_screen_text": "4. Sin orden de la corte, no te sacan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a lock with a red X. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Por tu país de origen, raza o familia.",
+     "on_screen_text": "5. No te pueden discriminar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a diverse group of neighbors. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Busca un grupo de inquilinos o ayuda legal.",
+     "on_screen_text": "Ayuda legal gratis en tu ciudad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a community office. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tus derechos como inquilino, lo básico:\n1. Una vivienda habitable.\n2. Reparaciones pedidas por escrito.\n3. En muchos estados, aviso antes de que el dueño entre.\n4. Sin orden de la corte, en general no te pueden sacar.\n5. La Ley de Vivienda Justa prohíbe discriminar por país de origen, raza o familia, entre otros.\nBusca ayuda legal gratis en tu ciudad.\n\nLas reglas de renta cambian por estado y ciudad. Información general, no es asesoría legal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "rentar",
+    "inquilinos",
+    "derechosdelinquilino",
+    "vivienda",
+    "dinerosimple"
+   ],
+   "description": "Lo básico de tus derechos como inquilino en EE. UU.",
+   "thumbnail_text": "Tus derechos",
+   "sources": [
+    "https://www.hud.gov/espanol",
+    "https://www.lsc.gov/"
+   ],
+   "claims_to_verify": [
+    "LEGAL CHECK: Fair Housing Act protected classes include national origin, race, color, religion, sex, familial status, disability",
+    "Entry-notice rules vary by state; self-help eviction prohibited in most states"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m9c-colchon",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Emergency fund ladder for newcomers: $20/week to $500, then one month of rent, then three months of essentials; what counts as an emergency.",
+  "script": {
+   "title": "Tu colchón de emergencias: los escalones",
+   "hook": "Guárdalo y empieza este viernes.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Empieza este viernes.",
+     "on_screen_text": "Tu colchón: los escalones",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. stairs made of coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "$20 por semana, 25 semanas.",
+     "on_screen_text": "Escalón 1: $500",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Para un mes sin trabajo.",
+     "on_screen_text": "Escalón 2: un mes de renta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a rent calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Renta, comida, transporte, luz.",
+     "on_screen_text": "Escalón 3: 3 meses de lo básico",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. four icons. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "A un apartado con nombre.",
+     "on_screen_text": "Transferencia automática el día de pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an autopay toggle. No text, no logos, no real people."
+    },
+    {
+     "heading": "Para qué",
+     "narration": "Salud, trabajo, carro para trabajar.",
+     "on_screen_text": "Solo emergencias de verdad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a first aid kit. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Un colchón chico es mejor que ninguno.",
+     "on_screen_text": "Mándaselo a quien acaba de llegar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two phones. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu colchón de emergencias, por escalones:\n1. $500 ($20 por semana, 25 semanas).\n2. Un mes de renta.\n3. Tres meses de lo básico.\nTransferencia automática el día de pago, a un apartado con nombre. Solo para emergencias de verdad.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "recienllegados",
+    "dineroenusa",
+    "finanzasenespañol",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "Los escalones de tu fondo de emergencias.",
+   "thumbnail_text": "Los escalones",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Example arithmetic: 25 x $20 = $500"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "l-primer-ano",
+  "format": "long",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Complete Spanish guide to money in your first year in the US, for recent arrivals: a safe place for documents, an insured account (with a passport, consular ID or ITIN where accepted), debit vs credit protections, payment apps as cash, the real price (sales tax and tips), utility deposits, a first-year folder, a $500 emergency fund, starting credit, and free help; one made-up family's numbers carried through.",
+  "script": {
+   "title": "Tu primer año en Estados Unidos: el dinero, paso a paso (guía completa)",
+   "hook": "El primer año aquí decide mucho: dónde guardas tu dinero, cuánto pagas de más y si empiezas tu historial. Vamos paso a paso.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "El primer año en Estados Unidos decide mucho: dónde guardas tu dinero, cuánto pagas de más sin darte cuenta y si empiezas tu historial de crédito. En este video vamos paso a paso, mes por mes, con el ejemplo inventado de una familia que acaba de llegar, Rosa y Daniel, con un hijo de ocho años. Es información general, no asesoría financiera ni legal, y para cualquier pregunta sobre tu situación migratoria, habla con un abogado de inmigración con licencia o un representante acreditado, nunca con un notario.",
+     "on_screen_text": "Tu primer año aquí: el dinero, paso a paso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sitting at a kitchen table with a folder and a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Los papeles",
+     "narration": "Lo primero no es dinero: son tus papeles. Pasaportes, actas de nacimiento, cartas importantes. Los originales van en una carpeta, en un lugar seco y seguro de la casa, y una foto de cada uno en tu celular, en un álbum que se llame 'Papeles'. Rosa y Daniel hicieron eso la primera semana. No le entregues tus originales a nadie que te prometa trámites rápidos: una copia casi siempre basta.",
+     "on_screen_text": "Mes 1: tus papeles a salvo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder of documents and a phone album named 'Papeles'. No text, no logos, no real people."
+    },
+    {
+     "heading": "La cuenta",
+     "narration": "Después, una cuenta en un banco o una cooperativa que diga FDIC o NCUA: tu dinero queda asegurado hasta doscientos cincuenta mil dólares. Muchos aceptan pasaporte o matrícula consular, y algunas cuentas se abren con ITIN o sin número. Llama antes y pregunta qué piden, cuánto cobran al mes y cómo se quita ese cobro. Daniel encontró una cooperativa sin cargo mensual. El dinero en casa no te protege de un robo, ni deja registro de lo que ganas.",
+     "on_screen_text": "Mes 1: una cuenta asegurada",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a debit card and a deposit insurance sign, generic. No text, no logos, no real people."
+    },
+    {
+     "heading": "Débito o crédito",
+     "narration": "Con la cuenta te dan una tarjeta de débito. Ojo con los plazos: si te la roban y avisas en dos días hábiles, pierdes máximo cincuenta dólares; si avisas hasta sesenta días después de tu estado de cuenta, hasta quinientos, y después puede ser más. Con una tarjeta de crédito, el máximo es cincuenta, y muchas cobran cero. Por eso Rosa activó alertas en su celular de cada compra.",
+     "on_screen_text": "Débito o crédito: qué te protege",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a purchase alert. No text, no logos, no real people."
+    },
+    {
+     "heading": "Apps de pago",
+     "narration": "Las apps para mandar dinero entre personas son cómodas, pero funcionan como efectivo: una vez que sale, casi nunca regresa, aunque te hayan engañado. Úsalas solo con familia y amigos que conoces en persona. Para pagarle a alguien que no conoces, una renta, un carro, unos boletos, mejor no. Antes de mandar, revisa el nombre y el número dos veces.",
+     "on_screen_text": "Las apps de pago son como efectivo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone sending money to a known contact. No text, no logos, no real people."
+    },
+    {
+     "heading": "El precio real",
+     "narration": "Aquí el precio de la etiqueta casi nunca es lo que pagas. Se suma el impuesto de ventas, que cambia por estado y ciudad. En un restaurante con mesero se espera una propina del quince al veinte por ciento. Rosa y Daniel salieron a cenar: cuarenta dólares de comida, más el impuesto del ocho por ciento, más dieciocho por ciento de propina, fueron unos cincuenta dólares. Desde entonces le suman veinticinco por ciento a cualquier cena en su presupuesto.",
+     "on_screen_text": "El precio de verdad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with three lines adding up to about $50. No text, no logos, no real people."
+    },
+    {
+     "heading": "La luz y el celular",
+     "narration": "Sin historial de crédito, la compañía de luz te puede pedir un depósito. A Rosa le pidieron doscientos dólares. Preguntó si aceptaban una carta de buen pago de su compañía anterior y si lo bajaban con pago automático, y le dijeron que con pago automático era de cien y que se lo devolvían después de doce meses pagando a tiempo. Lo pidió por escrito. Para el celular, eligieron un plan prepagado: no revisa el crédito ni pide depósito.",
+     "on_screen_text": "Luz, gas y celular sin historial",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a utility bill with 'depósito' circled and an autopay toggle. No text, no logos, no real people."
+    },
+    {
+     "heading": "El presupuesto",
+     "narration": "Veamos sus números de ejemplo. Entre los dos ganan unos tres mil doscientos dólares al mes después de impuestos. La renta es de mil cuatrocientos. Comida, ochocientos. Luz, gas, internet y celulares, doscientos cincuenta. Transporte, doscientos. Lo que mandan a casa, doscientos. Eso suma dos mil ochocientos cincuenta. Les quedan trescientos cincuenta al mes, y de ahí sale su colchón. Tus números van a ser distintos: lo que importa es hacer la cuenta.",
+     "on_screen_text": "La cuenta de Rosa y Daniel",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple budget table on a notepad. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Presupuesto de ejemplo, $3,200 al mes",
+      "labels": [
+       "Renta",
+       "Comida",
+       "Servicios",
+       "Transporte",
+       "Envíos",
+       "Sobra"
+      ],
+      "values": [
+       1400,
+       800,
+       250,
+       200,
+       200,
+       350
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo inventado: Rosa y Daniel"
+     }
+    },
+    {
+     "heading": "El colchón",
+     "narration": "Con lo que les sobra, Rosa y Daniel pusieron una transferencia automática de veinte dólares cada semana a un apartado que se llama 'Emergencias'. En veinticinco semanas son quinientos dólares. Cuando lleguen ahí, la siguiente meta es un mes de renta. Cuando acabas de llegar, muchas veces no tienes a quién pedirle ni crédito para una emergencia, así que ese colchón va antes que cualquier otra meta.",
+     "on_screen_text": "Tu primer colchón: $500",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a savings pocket named 'Emergencias' filling up week by week. No text, no logos, no real people."
+    },
+    {
+     "heading": "La carpeta",
+     "narration": "Durante todo el año, guarda los talones de pago, los estados de cuenta, el contrato de renta, los recibos de cada pago de renta y las facturas de luz. Prueban tus ingresos y tu domicilio, y te los van a pedir para rentar, para pedir crédito y para hacer tus impuestos. Daniel les toma foto el mismo día y las guarda en el álbum de papeles.",
+     "on_screen_text": "La carpeta de tu primer año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. pay stubs, rent receipts and a lease in a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "El crédito",
+     "narration": "Hacia el sexto mes, con la cuenta funcionando, Rosa pidió una tarjeta asegurada en su cooperativa: dejó trescientos dólares de depósito y esa fue su línea de crédito. La usa solo para el celular y la paga completa cada mes, en automático. Algunas tarjetas y préstamos para construir crédito aceptan ITIN; pregunta antes. A los doce meses, ya tiene un historial que le sirve para su próxima renta.",
+     "on_screen_text": "Meses 6 a 12: empieza tu historial",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a secured card and a credit score starting to appear. No text, no logos, no real people."
+    },
+    {
+     "heading": "Los impuestos",
+     "narration": "Si trabajaste, probablemente tienes que declarar impuestos la primavera siguiente, aunque sea tu primer año. Si no tienes Seguro Social, el ITIN se pide con el formulario W-7, normalmente con tu declaración. Y busca ayuda gratis: el programa VITA prepara declaraciones sin costo para muchas familias. Nadie que te cobre por 'arreglar tus papeles' con los impuestos te puede cambiar tu situación migratoria.",
+     "on_screen_text": "Tus impuestos del primer año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a tax form and a free tax help sign, generic. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ayuda gratis",
+     "narration": "No tienes que pagarle a nadie para lo básico. La biblioteca pública, las cooperativas, tu consulado, las organizaciones comunitarias y las clínicas comunitarias ayudan gratis o por poco. Si alguien te cobra por adelantado para abrir una cuenta, conseguirte crédito o arreglar un trámite, desconfía. Y para lo migratorio, siempre un abogado de inmigración con licencia o un representante acreditado.",
+     "on_screen_text": "Dónde pedir ayuda gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a library and a community center, generic. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Resumen. Mes uno: tus papeles a salvo y una cuenta asegurada. Ten claro cómo te protege cada tarjeta y usa las apps de pago solo con gente que conoces. Suma el impuesto y la propina a tu presupuesto. Pregunta cómo bajar los depósitos. Veinte dólares por semana a tu colchón. Una carpeta con todo. Y hacia el sexto mes, empieza tu historial de crédito. Mándaselo a quien acaba de llegar.",
+     "on_screen_text": "Papeles, cuenta, colchón, carpeta y crédito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf closing the folder and smiling. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu primer año en EE. UU., el dinero paso a paso, con el ejemplo inventado de Rosa y Daniel: papeles a salvo, una cuenta asegurada, débito o crédito, apps de pago, el precio real (impuesto y propina), depósitos de la luz, presupuesto, un colchón de $500 ($20 por semana), la carpeta del año, el crédito y los impuestos.",
+   "hashtags": [
+    "recienllegados",
+    "dineroenusa",
+    "finanzasenespañol",
+    "inmigrantes",
+    "dinerosimple"
+   ],
+   "description": "La guía del dinero para tu primer año en Estados Unidos, con el ejemplo inventado de una familia: papeles, una cuenta asegurada, débito o crédito, apps de pago, impuesto de ventas y propinas, depósitos de servicios, presupuesto, colchón, la carpeta del año, crédito, impuestos y ayuda gratis.\n\nCapítulos (estimados)\n0:00 Intro\n0:40 Tus papeles\n1:10 Una cuenta asegurada\n1:45 Débito o crédito\n2:15 Apps de pago\n2:40 El precio de verdad\n3:15 Luz y celular sin historial\n3:50 El presupuesto de ejemplo\n4:25 Tu primer colchón\n4:55 La carpeta del año\n5:20 Empieza tu crédito\n5:55 Tus impuestos\n6:20 Ayuda gratis\n6:45 Resumen\n\nInformación general, no es asesoría financiera.\n\nEnlaces (los productos de pago son nuestros):\nCuenta de banco y tarjeta con ITIN: https://dinerosimple.netlify.app/blog/cuenta-y-tarjeta-con-itin/?utm_source=youtube&utm_medium=social&utm_campaign=l-primer-ano\nEl Presupuesto de 20 Minutos ($12): https://dinerosimple.netlify.app/products/el-presupuesto-de-20-minutos/?utm_source=youtube&utm_medium=social&utm_campaign=l-primer-ano\nGuía gratis: Tu dinero en orden en 7 días: https://dinerosimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=l-primer-ano",
+   "thumbnail_text": "Tu primer año aquí",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://www.fdic.gov/es",
+    "https://www.irs.gov/es"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "FDIC/NCUA insurance up to $250,000 per depositor, per institution, per ownership category",
+    "Debit (Reg E): $50 within 2 business days; up to $500 within 60 days of statement; potentially unlimited after; credit cap $50",
+    "Example arithmetic: $40 + 8% ($3.20) + 18% ($7.20) = $50.40; budget 1,400+800+250+200+200 = 2,850; 3,200-2,850 = 350; 25 x $20 = $500",
+    "ITIN applied for with Form W-7, normally attached to a federal return; VITA offers free tax prep to eligible filers",
+    "Some secured cards/credit-builder loans accept an ITIN (varies)",
+    "Chart 'Presupuesto de ejemplo, $3,200 al mes': Renta 1400, Comida 800, Servicios 250, Transporte 200, Envíos 200, Sobra 350 (Ejemplo inventado: Rosa y Daniel)"
+   ],
+   "title_variants": [],
+   "hook_variants": [],
+   "original_element": "Graba la pantalla del buscador de cooperativas de MyCreditUnion.gov y de la página de seguro de depósitos de la FDIC en español (sin poner datos)"
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "l-rentar",
+  "format": "long",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Complete Spanish guide to renting without getting ripped off: your rent number (about 30% of income as a guide), the total to move in with a worked example, application fees and listing scams, reading the lease, move-in photos and the deposit, repairs in writing, rent increases and notice, eviction basics and free legal help; one made-up renter's numbers carried through.",
+  "script": {
+   "title": "Rentar sin que te roben: contrato, depósito y tus derechos (guía completa)",
+   "hook": "Para entrar a un departamento de mil doscientos dólares, puedes necesitar casi tres mil. Y recuperar el depósito depende del primer día.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Para entrar a un departamento de mil doscientos dólares al mes, puedes necesitar casi tres mil el día que firmas. Y si te devuelven o no el depósito depende de lo que hagas el primer día. En este video vemos cuánto te conviene pagar de renta, el total para entrar, las estafas de anuncios, el contrato, el depósito, las reparaciones, los aumentos y lo básico de un desalojo, con el ejemplo inventado de Javier. Las reglas cambian por estado y ciudad: es información general, no asesoría legal.",
+     "on_screen_text": "Rentar sin que te roben",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding keys in front of an apartment building, generic. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tu número",
+     "narration": "Una guía común es que la renta no pase del treinta por ciento de lo que ganas antes de impuestos. Javier gana unos cuatro mil dólares al mes antes de impuestos: el treinta por ciento son mil doscientos. Muchos dueños también piden que ganes dos y media o tres veces la renta. No es una ley, es una referencia: si pagas mucho más, te queda poco para comida, transporte y ahorro.",
+     "on_screen_text": "Cuánto pagar de renta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calculator showing 4,000 x 30%. No text, no logos, no real people."
+    },
+    {
+     "heading": "Para entrar",
+     "narration": "Javier encontró un departamento de mil doscientos al mes. Para entrar le pidieron el primer mes, mil doscientos; un depósito de un mes, otros mil doscientos; y cincuenta dólares por la solicitud. En algunos lugares también piden el último mes. Sin el último mes, son dos mil cuatrocientos cincuenta. Con el último mes, tres mil seiscientos cincuenta. Antes de buscar, saca tu total para entrar, no solo la renta.",
+     "on_screen_text": "El total para entrar, con un ejemplo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three stacks of bills adding up. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Para entrar a $1,200 al mes",
+      "labels": [
+       "Sin el último mes",
+       "Con el último mes"
+      ],
+      "values": [
+       2450,
+       3650
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo: primer mes, depósito y $50 de solicitud"
+     }
+    },
+    {
+     "heading": "Las estafas",
+     "narration": "La estafa más común: un anuncio barato, un 'dueño' que está fuera de la ciudad y te pide el depósito para 'apartarlo' sin que veas el departamento. Nunca pagues sin ver el lugar por dentro y sin confirmar que quien te lo renta es el dueño o la administración. Y nunca pagues con una app de pago, tarjeta de regalo o transferencia a un desconocido. Javier pidió ver el departamento, el contrato y el nombre del administrador, y buscó la dirección en internet.",
+     "on_screen_text": "Antes de pagar: verifica",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a listing with a red flag and keys behind glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "La solicitud",
+     "narration": "Muchos dueños revisan crédito, ingresos y renta anterior. Si acabas de llegar y no tienes historial, lleva talones de pago o una carta de tu trabajo, estados de cuenta, recibos de tu renta anterior y, si puedes, una carta de tu dueño anterior. Pregunta antes cuánto cobran por la solicitud y si la devuelven si no te aceptan. Algunos aceptan un depósito más alto o un aval en vez de historial de crédito.",
+     "on_screen_text": "La solicitud y tu historial",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder with pay stubs and a reference letter. No text, no logos, no real people."
+    },
+    {
+     "heading": "El contrato",
+     "narration": "Antes de firmar, lee todo y busca cinco cosas. Uno: cuánto dura y qué pasa si te sales antes. Dos: qué servicios pagas tú. Tres: cuánto es el recargo por pagar tarde y desde qué día. Cuatro: quién arregla qué y cómo se pide una reparación. Cinco: las reglas de visitas y de subarrendar. Javier vio que el contrato cobraba dos meses de renta si se salía antes, y lo negoció a uno. Llévate una copia firmada por los dos.",
+     "on_screen_text": "El contrato: 5 cosas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a lease with five lines highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "El primer día",
+     "narration": "El día que te dan las llaves, antes de meter tus cosas, toma fotos y video de cada cuarto: paredes, piso, ventanas, baño, cocina, aparatos. Javier encontró una mancha en la alfombra, un hoyo en una pared y una llave de agua que goteaba. Hizo una lista, la mandó por correo al administrador ese mismo día con las fotos, y guardó la respuesta. Esa lista vale tanto como el depósito.",
+     "on_screen_text": "El primer día: fotos y lista",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone recording a room and a list of damages. No text, no logos, no real people."
+    },
+    {
+     "heading": "Los pagos",
+     "narration": "Paga la renta de una forma que deje rastro: el portal del administrador, un cheque o una orden de pago, y guarda cada recibo. Si te piden efectivo, pide siempre un recibo firmado con la fecha, el monto y la dirección. Javier pone su renta en pago automático dos días después de su día de pago. Esos recibos también son tu historial para la próxima renta.",
+     "on_screen_text": "Paga con rastro, siempre con recibo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a rent payment confirmation on a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Reparaciones",
+     "narration": "En la mayoría de los lugares, el dueño tiene que mantener lo básico: agua, calefacción, electricidad segura, sin plagas graves. Cuando algo se descompone, pídelo por escrito, con fotos y la fecha, y guarda cada mensaje. Cuando a Javier se le fue la calefacción en enero, mandó un correo, y como no le contestaron en tres días, mandó otro y llamó a un grupo de inquilinos. No dejes de pagar la renta sin preguntar antes las reglas de tu estado: te pueden demandar.",
+     "on_screen_text": "Reparaciones: siempre por escrito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a radiator, a text message with a photo and a date. No text, no logos, no real people."
+    },
+    {
+     "heading": "Aumentos",
+     "narration": "Durante el contrato, normalmente la renta no cambia. Al renovar, te la pueden subir, y muchos estados piden un aviso por escrito con cierto tiempo, a veces de treinta a noventa días. Algunas ciudades limitan cuánto pueden subirla. A Javier le avisaron un aumento de cien dólares. Comparó con otros departamentos de la zona, ofreció firmar por dos años, y el aumento quedó en cincuenta.",
+     "on_screen_text": "Si te suben la renta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a letter with a rent increase and a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Desalojo",
+     "narration": "En la mayoría de los estados, para sacarte el dueño necesita una orden de la corte. Cambiar la chapa, cortar la luz o el agua, o sacar tus cosas para presionarte, en general no está permitido. Si te llegan papeles de la corte, no los ignores: si no vas a la audiencia, puedes perder automáticamente. Llama ese mismo día a ayuda legal gratis. La Ley de Vivienda Justa también prohíbe que te discriminen por tu país de origen o tu familia.",
+     "on_screen_text": "Lo básico de un desalojo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. court papers on a table and a phone call. No text, no logos, no real people."
+    },
+    {
+     "heading": "Al salir",
+     "narration": "Un año después, Javier se mudó. Avisó por escrito con el tiempo que pedía el contrato, limpió, tomó fotos de cada cuarto igual que el primer día, entregó las llaves con un correo y dejó su nueva dirección por escrito. El administrador quiso cobrarle la mancha de la alfombra. Javier mandó la lista y las fotos del primer día, y le devolvieron los mil doscientos completos. Muchos estados ponen un plazo para devolver el depósito o explicar cada descuento.",
+     "on_screen_text": "Al salir: recupera tu depósito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with a deposit check and photos side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Resumen. Tu renta, cerca del treinta por ciento de tu ingreso. Saca el total para entrar. Nunca pagues sin ver el lugar y confirmar quién lo renta. Lee el contrato y negocia. Fotos y lista el primer día. Paga con rastro. Reparaciones por escrito. Pregunta antes de dejar de pagar. Y si te llegan papeles de la corte, ayuda legal gratis ese mismo día. Mándaselo a quien está buscando dónde vivir.",
+     "on_screen_text": "Tu número, verifica, por escrito y con fotos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf handing keys to a friend. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Rentar sin que te roben, con el ejemplo inventado de Javier: cuánto pagar de renta (guía: 30% de tu ingreso), el total para entrar (ejemplo: $2,450 por un departamento de $1,200, o $3,650 con el último mes), estafas de anuncios, la solicitud, el contrato, fotos el primer día, pagos con recibo, reparaciones por escrito, aumentos, desalojo y cómo recuperar tu depósito.",
+   "hashtags": [
+    "rentar",
+    "inquilinos",
+    "derechosdelinquilino",
+    "vivienda",
+    "dinerosimple"
+   ],
+   "description": "La guía para rentar sin que te roben, con el ejemplo inventado de un inquilino: cuánto pagar, el total para entrar, estafas de anuncios, la solicitud sin historial, el contrato, el primer día, pagos, reparaciones, aumentos, desalojo y el depósito.\n\nCapítulos (estimados)\n0:00 Intro\n0:40 Cuánto pagar de renta\n1:10 El total para entrar\n1:45 Estafas de anuncios\n2:20 La solicitud\n2:55 El contrato\n3:35 El primer día\n4:05 Los pagos\n4:30 Reparaciones\n5:10 Aumentos\n5:40 Desalojo\n6:15 Al salir\n6:50 Resumen\n\nLas reglas de renta cambian por estado y ciudad. Información general, no es asesoría legal.\n\nInformación general, no es asesoría financiera.\n\nEnlaces (los productos de pago son nuestros):\nEl Presupuesto de 20 Minutos ($12): https://dinerosimple.netlify.app/products/el-presupuesto-de-20-minutos/?utm_source=youtube&utm_medium=social&utm_campaign=l-rentar\nTu Fecha Sin Deudas ($17): https://dinerosimple.netlify.app/products/tu-fecha-sin-deudas/?utm_source=youtube&utm_medium=social&utm_campaign=l-rentar\nGuía gratis: Tu dinero en orden en 7 días: https://dinerosimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=l-rentar",
+   "thumbnail_text": "Rentar sin que te roben",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://www.hud.gov/espanol",
+    "https://www.lsc.gov/",
+    "https://consumidor.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "Example arithmetic: $4,000 x 30% = $1,200; 1,200 + 1,200 + 50 = 2,450; + 1,200 = 3,650",
+    "LEGAL CHECK: 30% of gross income is a common affordability guideline (HUD cost-burden threshold); 2.5-3x rent income rule is a landlord practice",
+    "LEGAL CHECK: rent-increase notice periods (often 30-90 days) and rent caps vary by state/city",
+    "LEGAL CHECK: self-help eviction prohibited in most states; missing a hearing can lead to default judgment; Fair Housing Act prohibits national-origin and familial-status discrimination",
+    "LEGAL CHECK: deposit-return deadlines vary by state",
+    "Chart 'Para entrar a $1,200 al mes': Sin el último mes 2450, Con el último mes 3650 (Ejemplo: primer mes, depósito y $50 de solicitud)"
+   ],
+   "title_variants": [],
+   "hook_variants": [],
+   "original_element": "Graba la pantalla de un video de ejemplo recorriendo un departamento vacío cuarto por cuarto, y la nota con la lista de daños con fecha que se manda al administrador"
+  },
+  "phase": 2
+ }
+]

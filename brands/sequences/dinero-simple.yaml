@@ -1,0 +1,244 @@
+# Funnel file for Dinero Simple: lead magnet, welcome sequence, sales page copy. Same shape as money-made-simple.yaml.
+# Loaded by contentfactory.funnel (brandfunnel.py). Check it with
+#   factory sequence-check dinero-simple     (funnel.sequences.validate_sequence)
+#   factory sequence-preview dinero-simple   (renders every email to output/.../preview/)
+# Emails go only to confirmed subscribers, at most one per run, never the same step twice.
+#
+# REVISIÓN NATIVA PENDIENTE: all Spanish below is machine-drafted. A fluent Spanish speaker must read every email,
+# the sales page and the checklist before this goes live.
+#
+# Placeholders: {brand} {signoff} {price} {launch_price} {launch_code} {launch_ends_human}
+#   {product_name} {link:<key>} {affiliate_name:<slug>}
+#
+# BEFORE GOING LIVE
+#   1. Native-speaker review (above), then set the Sender template language to Spanish.
+#   2. Replace the example.gumroad.com URL for El Kit para Recortar Gastos in brands/dinero-simple.yaml.
+#   3. Set links.credito_guia to the live URL of the site's /credito-sin-seguro-social/ page.
+#   4. Days 3 and 5 talk about the ITIN: a licensed immigration attorney or DOJ-accredited representative reads it first.
+
+lead_magnet:
+  title: Tu dinero en orden en 7 días
+  pitch: "Una tarea de 15 minutos al día durante una semana. Sin apps nuevas y sin abrir cuentas."
+  sections:
+    - heading: "Día 1: Tus números reales"
+      items:
+        - Busca tus dos últimos pagos y anota lo que de verdad cayó en tu cuenta (tu sueldo neto).
+        - "Pásalo a un número al mes: cada semana × 52 ÷ 12; cada dos semanas × 26 ÷ 12; por quincena × 2."
+        - Anota cada gasto fijo del mes (renta, celular, seguro, luz, pagos mínimos).
+        - Sueldo neto menos gastos fijos. Ese es el dinero que sí decides tú.
+    - heading: "Día 2: Caza las suscripciones olvidadas"
+      items:
+        - Revisa los dos últimos meses de tu cuenta y de cada tarjeta.
+        - Anota cada cobro que se repite y cuánto es al mes.
+        - Revisa también las suscripciones de la tienda de apps de tu celular.
+        - Cancela o baja de plan una cosa que hoy no volverías a contratar.
+    - heading: "Día 3: Tres alertas del banco"
+      items:
+        - "Activa una alerta de saldo bajo (por ejemplo, menos de $100)."
+        - Activa una alerta de cada compra grande o de cada retiro.
+        - Activa una alerta de depósito, para saber cuándo te pagan.
+    - heading: "Día 4: Dale a tu ahorro su propia casa"
+      items:
+        - Una cuenta de ahorro separada de la que usas para gastar.
+        - Que esté asegurada (FDIC o NCUA) y sin cuota mensual.
+        - Una transferencia automática el día de pago. $20 ya es empezar.
+    - heading: "Día 5: Revisa tu crédito"
+      items:
+        - Pide tus reportes gratis en AnnualCreditReport.com y revisa que todo sea tuyo.
+        - Si no reconoces algo, dispútalo por escrito con la agencia.
+        - ¿Sin Seguro Social o sin historial? Lee la guía gratis Crédito sin Seguro Social.
+    - heading: "Día 6: El match de tu 401(k)"
+      items:
+        - Si tu trabajo tiene plan con match, busca la fórmula en el portal de beneficios.
+        - Revisa que pones por lo menos lo necesario para el match completo.
+        - ¿No tienes plan en el trabajo? Anótalo para la semana que viene; hay otras opciones.
+    - heading: "Día 7: Tu número semanal"
+      items:
+        - Sueldo neto menos gastos fijos menos ahorro. Divídelo entre 4.33.
+        - Ese es tu número para todo lo demás cada semana. Escríbelo donde lo veas.
+        - Pon en tu calendario 20 minutos cada semana para revisarlo.
+
+# ----------------------------------------------------------------- welcome sequence
+name: welcome
+min_gap_hours: 20       # never two sequence emails to one person within 20 hours
+max_late_days: 3        # if a step is 3+ days overdue (e.g. after downtime), skip it instead of sending late
+signoff: "Hablamos pronto,\nEl equipo de Dinero Simple"
+footer_note: "Contenido educativo, no es asesoría financiera, legal ni de impuestos. Para decisiones sobre tu situación, habla con un profesional calificado. Redactado con ayuda de herramientas de IA y revisado por una persona."
+
+vars:
+  product: el-kit-para-recortar-gastos      # which products: entry below holds price / launch details
+  product_name: El Kit para Recortar Gastos
+
+links:
+  checklist: freebie
+  kit_page: product:el-kit-para-recortar-gastos
+  kit_buy: checkout:el-kit-para-recortar-gastos
+  credito_guia: "https://example.com/credito-sin-seguro-social/"   # replace with the live site URL
+
+steps:
+  - day_offset: 0
+    subject: "Aquí está tu guía: Tu dinero en orden en 7 días"
+    preheader: "Una tarea de 15 minutos al día. Empieza hoy con el Día 1."
+    cta_url_key: checklist
+    cta_label: Abrir la guía
+    body_markdown: |
+      Hola,
+
+      Gracias por confirmar. Aquí está tu guía: **[Tu dinero en orden en 7 días]({link:checklist})**.
+
+      Es una tarea pequeña al día durante una semana. Cada una toma unos 15 minutos, con la app de tu banco abierta. No necesitas apps nuevas ni abrir cuentas.
+
+      Para sacarle el mayor provecho:
+
+      1. Guarda el enlace o imprímelo.
+      2. Haz el Día 1 hoy o mañana. Es el que hace más fácil todo lo demás.
+      3. No intentes hacer los siete de una vez. La idea son pasos chicos que sí terminas.
+
+      En los próximos días te mandamos unos correos cortos que te acompañan en la semana: por qué funciona cada paso y dónde se atora la gente. Después, un correo por semana con un paso concreto con tu dinero.
+
+      Un favor: responde a este correo y cuéntanos qué es lo que más quieres arreglar con tu dinero este año. Una persona lee cada respuesta.
+
+      Si prefieres no recibir estos correos, el enlace para darte de baja al final funciona con un clic.
+
+      {signoff}
+
+  - day_offset: 1
+    subject: "Días 1 y 2: tu número real y los cobros olvidados"
+    preheader: "Lo que de verdad cae en tu cuenta, y una suscripción menos."
+    cta_url_key: checklist
+    cta_label: Abrir la guía
+    body_markdown: |
+      Hola,
+
+      El Día 1 es el más aburrido y el más importante: **tu sueldo neto real del mes**, lo que de verdad cae en tu cuenta, no lo que dice tu contrato.
+
+      Donde se atora la gente:
+
+      - **Si te pagan cada dos semanas**, no multipliques por dos. Son 26 pagos al año: un cheque × 26 ÷ 12. Dos meses del año traen tres cheques.
+      - **Si tus ingresos cambian**, usa tu mes normal más bajo de los últimos seis. Si un mes ganas más, mejor; tu plan no depende de eso.
+
+      Luego réstale tus gastos fijos. Ese número, lo que queda, es el que sí decides tú.
+
+      El Día 2 es más divertido: **caza las suscripciones olvidadas**. Revisa dos meses de tu cuenta y de cada tarjeta, y también la tienda de apps de tu celular, porque esos cobros a veces salen con otro nombre. Cancela una cosa que hoy no volverías a contratar. Una sola ya cuenta.
+
+      {signoff}
+
+  - day_offset: 3
+    subject: "Días 3 y 4: tres alertas y una casa para tu ahorro"
+    preheader: "Que tu banco te avise, y que tu ahorro no esté donde gastas."
+    body_markdown: |
+      Hola,
+
+      Los Días 3 y 4 son para que tu dinero se cuide solo.
+
+      **Día 3: tres alertas del banco.** Una de saldo bajo, una de cada compra grande y una de depósito. Cuestan cero y te avisan antes de que un cobro raro o un sobregiro se vuelva un problema. Si ves un cargo que no hiciste con tu tarjeta de débito, avisa al banco ese mismo día: los plazos cuentan.
+
+      **Día 4: dale a tu ahorro su propia casa.** El dinero que está en la misma cuenta donde gastas, se gasta. Abre una cuenta de ahorro separada, asegurada por la FDIC (bancos) o la NCUA (cooperativas), sin cuota mensual. Luego pon una transferencia automática el día de pago. Veinte dólares ya es empezar.
+
+      **¿No tienes Seguro Social?** Muchos bancos y cooperativas abren cuentas con pasaporte, matrícula consular o ITIN. Llama antes y pregunta qué piden y cuánto cobran al mes.
+
+      Para cualquier pregunta sobre tu situación migratoria, habla con un abogado de inmigración con licencia o un representante acreditado, nunca con un notario.
+
+      {signoff}
+
+  - day_offset: 5
+    subject: "Día 5: tu crédito, aunque no tengas Seguro Social"
+    preheader: "Revisa tu reporte, y si empiezas de cero, por dónde empezar."
+    cta_url_key: credito_guia
+    cta_label: Leer la guía Crédito sin Seguro Social
+    body_markdown: |
+      Hola,
+
+      El Día 5 es revisar tu crédito. Pide tus reportes gratis en AnnualCreditReport.com y revisa que todo sea tuyo: tus nombres (con tus dos apellidos), tus direcciones y cada cuenta. Si algo no es tuyo, dispútalo por escrito con la agencia.
+
+      Pero muchas personas que nos escriben no tienen reporte todavía, porque no tienen número de Seguro Social o acaban de llegar. Si es tu caso, no es que no puedas tener crédito: es que hay que empezarlo de otra forma.
+
+      Lo básico:
+
+      - **Con ITIN se puede empezar.** Algunas cooperativas y bancos dan tarjetas aseguradas o préstamos para construir crédito con ITIN. Pregunta antes de llenar la solicitud.
+      - **Paga a tiempo y usa poco.** Usa la tarjeta para un solo gasto chico, como el celular, y págala completa cada mes, en automático.
+      - **Cuidado con quien te venda un "número nuevo" (CPN)** para tener crédito más rápido. Es una estafa y te puede meter en problemas serios.
+
+      Escribimos una guía gratis, paso a paso, para empezar tu historial sin Seguro Social. Está en el botón de abajo.
+
+      Para cualquier pregunta sobre tu situación migratoria, habla con un abogado de inmigración con licencia o un representante acreditado, nunca con un notario.
+
+      {signoff}
+
+  - day_offset: 7
+    subject: "Días 6 y 7: tu número semanal (y lo que sigue)"
+    preheader: "Un solo número para la semana. Y una noche para recortar gastos."
+    cta_url_key: kit_page
+    cta_label: Ver El Kit para Recortar Gastos
+    body_markdown: |
+      Hola,
+
+      Llegaste al final de la semana.
+
+      **Día 6: el match de tu 401(k).** Si tu trabajo tiene plan con match, es dinero extra por ahorrar. Busca la fórmula en el portal de beneficios y revisa que pones por lo menos lo necesario para recibirlo completo. Si tu trabajo no tiene plan, no pasa nada: anótalo, lo vemos en otro correo.
+
+      **Día 7: tu número semanal.** Sueldo neto, menos gastos fijos, menos tu ahorro. Divide lo que queda entre 4.33. Ese es tu número para todo lo demás cada semana: comida, salidas, gustos. Cuando se acaba, la semana se acabó. Pon en tu calendario 20 minutos cada semana para revisarlo.
+
+      Si el Día 2 te dejó con ganas de recortar más, hicimos **{product_name}** ({price}): una revisión de una noche para encontrar cada cobro que se repite, cancelarlo bien y bajar las cuentas que te quedas, con 7 guiones palabra por palabra para llamar y negociar internet, celular, seguros y la tasa de tu tarjeta. Viene con una hoja de control que te dice cuánto liberaste al año.
+
+      No es obligatorio: todo lo que necesitas para la semana ya está en la guía gratis. El kit es para quien quiere ir más rápido.
+
+      Gracias por hacer los 7 días. Nos vemos en el correo de cada semana.
+
+      {signoff}
+
+# ----------------------------------------------------------------- sales pages
+products:
+  - slug: el-kit-para-recortar-gastos
+    match: "Recortar Gastos"
+    name: El Kit para Recortar Gastos
+    headline: Encuentra cada cobro que se repite y baja las cuentas que te quedas
+    subhead: "Una guía de 9 páginas, una hoja de control y 7 guiones para llamar y negociar. Una noche, como una hora."
+    price: "$5"
+    includes: "Guía en PDF (9 páginas) + hoja de control (.xlsx) · descarga inmediata"
+    problem_title: Por qué se te va el dinero sin darte cuenta
+    problem:
+      - Las suscripciones no se sienten caras a $9.99 al mes. Se sienten caras a $120 al año, por seis, por cosas que ni recordabas.
+      - Algunos cobros no salen en tu estado de cuenta con su nombre, porque los cobra la tienda de apps de tu celular.
+      - Y las cuentas que sí usas (internet, celular, seguros) casi nunca bajan solas. Hay que pedirlo.
+    how_title: Cómo funciona
+    how:
+      - {title: Encuentra, text: "Los cinco lugares donde se esconden los cobros, incluidos los de la tienda de apps."}
+      - {title: Decide, text: "A cada cobro le toca una de cuatro decisiones: me quedo, cancelar, bajar de plan o negociar."}
+      - {title: Cancela bien, text: "Para que no vuelva, y con pruebas por si regresa."}
+      - {title: Negocia, text: "Guiones palabra por palabra para internet, celular, seguros, la tasa de tu tarjeta, cargos del banco y el gimnasio."}
+    inside:
+      - {title: "La guía (PDF, 9 páginas)", text: "El método, los cinco lugares donde buscar, cómo cancelar sin que regrese y los 7 guiones."}
+      - {title: "La hoja de control (.xlsx)", text: "Tres pestañas: Revisión, Registro de llamadas y Resumen, con un ejemplo inventado."}
+    previews: []
+    for_who:
+      - Sientes que pagas por cosas que ya no usas
+      - Te da pena llamar para pedir un descuento
+      - Quieres liberar dinero sin cambiar toda tu vida
+    not_for:
+      - Quieres una app que se conecte a tu banco
+      - Buscas que alguien negocie por ti
+    faq:
+      - {q: "¿Se conecta a mi banco?", a: "No. Tú revisas tus estados de cuenta; no hay nada que conectar."}
+      - {q: "¿Los guiones me garantizan un descuento?", a: "Nadie puede prometer eso. El kit hace que pedir sea rápido y sin pena."}
+      - {q: "¿Y si la compañía solo atiende en inglés?", a: "Muchas atienden en español si lo pides. Los términos que vas a ver en inglés vienen explicados."}
+      - {q: "¿Necesito Excel?", a: "No. La hoja funciona en Google Sheets (gratis) y en Numbers."}
+      - {q: "¿Es asesoría financiera?", a: "No. Es una guía educativa y una herramienta para organizar tu propio dinero."}
+    refund: "¿No es lo que esperabas? Escríbenos a {support} dentro de 14 días de tu compra y te devolvemos todo."
+    disclaimer: "Contenido educativo, no es asesoría financiera, legal ni de seguros. El ejemplo de la hoja es inventado."
+    ai_disclosure: "Esta guía y la hoja se hicieron con ayuda de herramientas de IA, y una persona las revisó y editó."
+
+# ----------------------------------------------------------------- facts used above (verify before sending)
+claims_to_verify:
+  - claim: "FDIC and NCUA insure deposits up to $250,000 per depositor, per insured institution, per ownership category."
+    source: https://www.fdic.gov/resources/deposit-insurance
+  - claim: "Free credit reports from all three bureaus at AnnualCreditReport.com."
+    source: https://www.annualcreditreport.com/
+  - claim: "Average weeks per month is 4.33 (52 / 12); paid every two weeks = 26 paychecks a year."
+    source: arithmetic
+  - claim: "ATTORNEY REVIEW (day 5): some lenders and credit unions offer secured cards or credit-builder loans with an ITIN; requirements vary."
+    source: https://www.consumerfinance.gov/es/
+  - claim: "CPNs ('credit privacy numbers') sold as a new credit identity are a scam; using one to apply for credit can be a crime (FTC)."
+    source: https://consumer.ftc.gov/
+  - claim: "ATTORNEY REVIEW (day 3): some banks and credit unions open accounts with a foreign passport, consular ID or ITIN (requirements vary)."
+    source: https://www.consumerfinance.gov/es/

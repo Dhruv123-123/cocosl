@@ -1,0 +1,340 @@
+<!doctype html><html lang="es-US"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Tu dinero en orden en 7 días</title>
+<style>
+  :root{
+    --ink:#14213d; --cream:#fbf5e9; --green:#2ab7a9; --green-d:#11706a; --gold:#ff7a59;
+    --muted:#4a5468; --line:#e2d8c4; --paper:#fffdf8; --tint:#e2f4f1; --gold-t:#ffe8df;
+  }
+  @page{ size: Letter; margin:0; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#cfc9ba; color:var(--ink);
+    font-family:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size:10.2pt; line-height:1.48; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:8.5in; height:11in; margin:24px auto; background:var(--paper); position:relative;
+    padding:0.7in 0.85in 0.85in; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,.18);
+    page-break-after:always; break-after:page; }
+  .page:last-child{ page-break-after:auto; break-after:auto; }
+  @media print{ html,body{ background:none; } .page{ margin:0; box-shadow:none; } }
+
+  .folio{ position:absolute; left:0.85in; right:0.85in; bottom:0.45in; display:flex;
+    justify-content:space-between; font-size:8pt; color:var(--muted); border-top:1px solid var(--line); padding-top:6px; }
+
+  h1,h2,h3,h4{ font-family:"Inter Display","Inter",system-ui,sans-serif; line-height:1.15; margin:0; }
+  h2{ font-size:24pt; font-weight:800; letter-spacing:-.02em; margin-bottom:6px; }
+  h3{ font-size:13pt; font-weight:700; margin:18px 0 6px; }
+  h4{ font-size:10.5pt; font-weight:700; margin:12px 0 4px; }
+  p{ margin:0 0 9px; }
+  .kicker{ text-transform:uppercase; letter-spacing:.14em; font-size:8pt; font-weight:700; color:var(--green-d); margin-bottom:6px; }
+  .lede{ font-size:11.5pt; color:var(--muted); margin-bottom:12px; }
+  ul,ol{ margin:0 0 10px; padding-left:20px; } li{ margin-bottom:4px; }
+  strong{ font-weight:700; }
+  .num{ font-variant-numeric:tabular-nums; }
+
+  .box{ border-radius:10px; padding:12px 16px; margin:12px 0; }
+  .box.tip{ background:var(--tint); border-left:4px solid var(--green); }
+  .box.warn{ background:var(--gold-t); border-left:4px solid var(--gold); }
+  .box.dark{ background:var(--ink); color:var(--cream); }
+  .box.dark .kicker{ color:var(--gold); }
+  .box p:last-child, .box ul:last-child{ margin-bottom:0; }
+
+  table{ width:100%; border-collapse:collapse; margin:8px 0 12px; font-size:9.5pt; }
+  th{ text-align:left; font-weight:700; background:var(--cream); border-bottom:2px solid var(--ink); padding:5px 8px; }
+  td{ border-bottom:1px solid var(--line); padding:4px 8px; }
+  td.r, th.r{ text-align:right; font-variant-numeric:tabular-nums; }
+  tr.total td{ font-weight:800; border-top:2px solid var(--ink); border-bottom:none; background:var(--tint); }
+  tr.sub td{ font-weight:700; background:#f8f1e3; }
+
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .grid4{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:14px 0; }
+  .card{ border:1.5px solid var(--ink); border-radius:12px; padding:12px; background:#fff; }
+  .card .big{ font-size:20pt; font-weight:800; font-family:"Inter Display","Inter",sans-serif; }
+  .card .lbl{ font-size:8pt; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); font-weight:700; }
+  .pill{ display:inline-block; background:var(--green); color:#fff; font-weight:700; border-radius:999px; padding:1px 9px; font-size:8.5pt; }
+  .step{ display:flex; gap:12px; margin:10px 0; }
+  .step .n{ flex:0 0 30px; height:30px; border-radius:50%; background:var(--ink); color:var(--cream);
+    display:flex; align-items:center; justify-content:center; font-weight:800; }
+  .step .b{ flex:1; }
+  .timer{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin:12px 0 16px; border:1.5px solid var(--ink); border-radius:12px; overflow:hidden; }
+  .timer div{ padding:10px 12px; border-right:1.5px solid var(--ink); background:#fff; }
+  .timer div:last-child{ border-right:none; }
+  .timer .t{ font-weight:800; font-size:16pt; color:var(--green-d); }
+  .timer .h{ font-weight:700; font-size:9.5pt; }
+  .timer .d{ font-size:8.5pt; color:var(--muted); }
+  .formula{ font-family:"JetBrains Mono", ui-monospace, monospace; background:var(--ink); color:var(--cream);
+    padding:10px 14px; border-radius:8px; font-size:10pt; margin:10px 0; }
+  .check li{ list-style:none; position:relative; padding-left:4px; }
+  .check{ padding-left:22px; }
+  .check li::before{ content:""; position:absolute; left:-20px; top:3px; width:12px; height:12px; border:1.5px solid var(--ink); border-radius:3px; }
+  .faq h4{ margin-top:12px; }
+  .blank td{ height:24px; }
+  .toc{ list-style:none; padding:0; margin:12px 0; }
+  .toc li{ display:flex; border-bottom:1px dotted var(--line); padding:6px 0; margin:0; font-size:11pt; }
+  .toc li span:first-child{ flex:1; } .toc li span:last-child{ font-weight:700; }
+
+  /* cover */
+  .cover{ background:var(--ink); color:var(--cream); padding:0.9in; }
+  .cover .tag{ color:var(--gold); letter-spacing:.2em; text-transform:uppercase; font-weight:700; font-size:9pt; }
+  .cover h1{ font-size:58pt; font-weight:900; letter-spacing:-.035em; line-height:.95; margin:24px 0 18px; }
+  .cover h1 em{ font-style:normal; color:var(--green); }
+  .cover .sub{ font-size:15pt; max-width:5.2in; color:#d5dbe8; line-height:1.4; }
+  .cover .clock{ position:absolute; right:0.9in; bottom:1.4in; width:3.1in; height:3.1in; }
+  .cover .bottom{ position:absolute; left:0.9in; right:0.9in; bottom:0.8in; display:flex; justify-content:space-between; align-items:flex-end; font-size:9pt; color:#a9b3c9; }
+  .cover .chips{ display:flex; gap:8px; flex-wrap:wrap; margin-top:28px; }
+  .cover .chips span{ border:1px solid #3b4d78; border-radius:999px; padding:5px 12px; font-size:9pt; color:var(--cream); }
+  .cover .ring{ position:absolute; right:0.8in; bottom:1.3in; width:3.2in; height:3.2in; }
+  .daybadge{ display:inline-block; background:var(--green); color:var(--ink); font-weight:900; border-radius:8px; padding:2px 10px; font-size:10pt; letter-spacing:.06em; margin-bottom:8px; }
+  .why{ font-size:10.5pt; color:var(--muted); margin:0 0 10px; }
+  .done{ margin-top:14px; border:1.5px dashed var(--green-d); border-radius:10px; padding:10px 14px; font-weight:700; }
+  .done::before{ content:"\2610  "; font-size:13pt; }
+  .week td:first-child{ width:70px; font-weight:800; }
+  .week td:last-child{ width:34px; }
+  .week .bx{ display:inline-block; width:14px; height:14px; border:1.5px solid var(--ink); border-radius:3px; }
+  .lines td{ height:26px; }
+</style>
+</head>
+<body>
+
+<section class="page cover">
+  <div class="tag">Dinero Simple &middot; Guía gratis</div>
+  <h1>Tu dinero<br>en orden<br>en <em>7 días</em></h1>
+  <p class="sub">Siete tareas de 15 minutos para encontrar tus números reales, frenar cargos sorpresa, proteger tu crédito y tener un solo número semanal para gastar.</p>
+  <div class="chips"><span>15 minutos al día</span><span>Lista para imprimir</span><span>Hojas de trabajo</span><span>Sin apps</span></div>
+  <svg class="ring" viewBox="0 0 200 200" aria-hidden="true">
+    <circle cx="100" cy="100" r="92" fill="none" stroke="#2b3f6b" stroke-width="10"/>
+    <circle cx="100" cy="100" r="92" fill="none" stroke="#2ab7a9" stroke-width="10" stroke-dasharray="72.6 10" transform="rotate(-90 100 100)"/>
+    <text x="100" y="104" text-anchor="middle" font-family="Inter, sans-serif" font-weight="900" font-size="58" fill="#fbf5e9">7</text>
+    <text x="100" y="132" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="13" letter-spacing="3" fill="#ff7a59">DÍAS</text>
+  </svg>
+  <div class="bottom"><span>dinerosimple &middot; edición gratis</span><span>Contenido educativo. No es asesoría financiera.</span></div>
+</section>
+
+<section class="page">
+  <div class="kicker">Empieza aquí</div>
+  <h2>Cómo funciona</h2>
+  <p class="lede">Sentir que vas atrasado con tu dinero casi nunca es primero un problema de números. Es un problema de no ver: no puedes arreglar lo que evitas mirar. Esta guía lo arregla en una semana.</p>
+  <div class="step"><div class="n">1</div><div class="b"><strong>Una tarea al día, de unos 15 minutos.</strong> Hazlas en orden; cada día se apoya en el anterior. ¿Te saltaste un día? Hazlo mañana.</div></div>
+  <div class="step"><div class="n">2</div><div class="b"><strong>Ten abiertas las apps de tu banco y tus tarjetas.</strong> Cada tarea usa tus cuentas reales, no cálculos al aire.</div></div>
+  <div class="step"><div class="n">3</div><div class="b"><strong>Escribe en las hojas de trabajo.</strong> Imprime este PDF o copia las tablas en una nota. Para el Día 7 vas a tener tus números en una sola página.</div></div>
+  <h3 style="margin-top:16px">La semana de un vistazo</h3>
+  <table class="week">
+    <tr><th>Día</th><th>Tarea</th><th>Listo</th></tr>
+    <tr><td>Día 1</td><td>Encuentra tu sueldo neto real del mes y anota cada gasto fijo</td><td><span class="bx"></span></td></tr>
+    <tr><td>Día 2</td><td>Busca suscripciones olvidadas; cancela las que no usas</td><td><span class="bx"></span></td></tr>
+    <tr><td>Día 3</td><td>Activa tres alertas del banco contra sobregiros y pagos tarde</td><td><span class="bx"></span></td></tr>
+    <tr><td>Día 4</td><td>Abre o revisa una cuenta de ahorro aparte y asegurada; programa una primera transferencia</td><td><span class="bx"></span></td></tr>
+    <tr><td>Día 5</td><td>Pide tus reportes de crédito gratis, revísalos y congela tu crédito</td><td><span class="bx"></span></td></tr>
+    <tr><td>Día 6</td><td>Revisa que recibes todo el match de tu 401(k) (o anota cuándo puedes empezar)</td><td><span class="bx"></span></td></tr>
+    <tr><td>Día 7</td><td>Fija tu número semanal para gastar y aparta 20 minutos a la semana para revisarlo</td><td><span class="bx"></span></td></tr>
+  </table>
+  <div class="box warn">
+    <div class="kicker" style="color:#b2462a">Por favor lee esto</div>
+    <p>Esto es educación general para organizar tu propio dinero, no asesoría financiera, fiscal, legal ni de inversión. Los ejemplos usan números inventados. Las referencias de EE. UU. (FDIC, IRS, burós de crédito) están señaladas. Si tienes cobranzas, deudas de impuestos o algo que sientes que ya no puedes manejar, un consejero de crédito sin fines de lucro (una agencia miembro de la NFCC; muchas atienden en español) es un buen siguiente paso y cuesta poco.</p>
+  </div>
+  <div class="folio"><span>Tu dinero en orden en 7 días</span><span>2</span></div>
+</section>
+
+<section class="page">
+  <span class="daybadge">DÍA 1</span>
+  <h2>Encuentra tus números reales</h2>
+  <p class="why">Por qué: todo plan empieza con lo que de verdad cae en tu cuenta y lo que de verdad sale. No tu salario, no un cálculo a ojo.</p>
+  <h3>A. Tu sueldo neto del mes</h3>
+  <p>Mira tus últimos dos o tres cheques (lo que te depositan, después de impuestos y descuentos).</p>
+  <ul>
+    <li><strong>Te pagan cada mes:</strong> usa un cheque.</li>
+    <li><strong>Te pagan por quincena (dos veces al mes):</strong> un cheque &times; 2.</li>
+    <li><strong>Te pagan cada dos semanas:</strong> un cheque &times; 26 &divide; 12.</li>
+    <li><strong>Te pagan cada semana:</strong> un cheque &times; 52 &divide; 12.</li>
+    <li><strong>Tus ingresos cambian:</strong> usa tu mes normal <em>más bajo</em> de los últimos seis.</li>
+  </ul>
+  <div class="formula">Mi sueldo neto del mes: $ ____________</div>
+  <h3>B. Cada gasto fijo</h3>
+  <p>Revisa los últimos 60 días de cada cuenta de banco y tarjeta. Anota todo lo que se repite. Incluye también lo que pagas una vez al año, dividido entre 12.</p>
+  <table class="lines">
+    <tr><th>Gasto</th><th class="r">$ al mes</th><th>Fecha de pago</th><th>Sale de</th></tr>
+    <tr><td>Renta / vivienda</td><td></td><td></td><td></td></tr>
+    <tr><td>Luz, agua, gas</td><td></td><td></td><td></td></tr>
+    <tr><td>Celular / internet</td><td></td><td></td><td></td></tr>
+    <tr><td>Seguros</td><td></td><td></td><td></td></tr>
+    <tr><td>Pagos mínimos de deudas</td><td></td><td></td><td></td></tr>
+    <tr><td>Transporte (pago del carro, pase de transporte)</td><td></td><td></td><td></td></tr>
+    <tr><td>Envío de dinero a tu familia</td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td></tr>
+    <tr class="total"><td>Total de gastos fijos</td><td></td><td></td><td></td></tr>
+  </table>
+  <div class="box tip"><p><strong>Consejo:</strong> anota de qué cuenta sale cada gasto. Cuando los pagos están repartidos en varias tarjetas, es cuando se te pasa alguno.</p></div>
+  <div class="done">Día 1 listo: sé mi sueldo neto y el total de mis gastos fijos.</div>
+  <div class="folio"><span>Tu dinero en orden en 7 días</span><span>3</span></div>
+</section>
+
+<section class="page">
+  <span class="daybadge">DÍA 2</span>
+  <h2>Caza las suscripciones olvidadas</h2>
+  <p class="why">Por qué: las suscripciones están hechas para ser fáciles de empezar y fáciles de olvidar. Casi siempre es el ahorro mensual más rápido que vas a encontrar.</p>
+  <div class="step"><div class="n">1</div><div class="b"><strong>Busca en tus estados de cuenta</strong> (últimos 90 días) estas palabras, que casi siempre salen en inglés: <em>monthly, subscription, renewal, membership, recurring, premium, plus, pro</em>, y también "Apple", "Google" y "PayPal". Luego revisa 12 meses buscando cobros de una vez al año.</div></div>
+  <div class="step"><div class="n">2</div><div class="b"><strong>Revisa las tiendas de apps.</strong> iPhone: Configuración &rarr; tu nombre &rarr; Suscripciones. Android: Play Store &rarr; perfil &rarr; Pagos y suscripciones &rarr; Suscripciones. PayPal: Configuración &rarr; Pagos &rarr; Administrar pagos automáticos.</div></div>
+  <div class="step"><div class="n">3</div><div class="b"><strong>Hazle una sola pregunta a cada una:</strong> "Si esto no estuviera activo, ¿me suscribiría hoy a este precio?" No &rarr; cancélala ya. Tal vez &rarr; recordatorio una semana antes del próximo cobro. Sí &rarr; quédatela, sin culpa.</div></div>
+  <table class="lines">
+    <tr><th>Suscripción</th><th class="r">$ al mes</th><th>Me quedo / Cancelo / Decido el día</th></tr>
+    <tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr>
+    <tr class="total"><td>Ahorro al mes por cancelar</td><td></td><td></td></tr>
+  </table>
+  <div class="box tip"><p><strong>¿No te dejan cancelar?</strong> Cancela por el mismo camino por el que te suscribiste, toma captura de la confirmación y, si te siguen cobrando, disputa el cargo con el banco de tu tarjeta.</p></div>
+  <div class="done">Día 2 listo: tengo todas mis suscripciones anotadas y cancelé las que no uso.</div>
+  <div class="folio"><span>Tu dinero en orden en 7 días</span><span>4</span></div>
+</section>
+
+<section class="page">
+  <span class="daybadge">DÍA 3</span>
+  <h2>Activa tres alertas del banco</h2>
+  <p class="why">Por qué: no necesitas una app de presupuesto para dejar de llevarte sorpresas. Tus cuentas te pueden avisar lo que pasa en vez de que tú adivines. Las tres son gratis.</p>
+  <div class="grid2">
+    <div class="card"><div class="lbl">Alerta 1</div><div class="big" style="font-size:15pt">Saldo bajo</div><p>Ponla en más o menos una semana de tu gasto normal, para que te avise cuando todavía hay tiempo de mover dinero.</p></div>
+    <div class="card"><div class="lbl">Alerta 2</div><div class="big" style="font-size:15pt">Compra grande</div><p>De unos $50 a $100. Atrapa fraudes y compras por impulso en el momento.</p></div>
+  </div>
+  <div class="card" style="margin-top:12px"><div class="lbl">Alerta 3</div><div class="big" style="font-size:15pt">Fecha de pago</div><p>En cada tarjeta y préstamo, 5 días antes de la fecha límite. Un pago con 30 días o más de atraso se puede reportar a los burós de crédito y quedarse en tu reporte por años.</p></div>
+  <p style="margin-top:12px">Las encuentras en cada app de banco o tarjeta en <strong>Configuración</strong>, <strong>Notificaciones</strong> o <strong>Alertas</strong> (en inglés: <em>Settings, Notifications, Alerts</em>).</p>
+  <h3>Extra (5 minutos): pago automático de los mínimos</h3>
+  <p>Programa cada tarjeta y préstamo para que pague solo por lo menos el mínimo. Igual puedes pagar más a mano. El pago automático es una red de seguridad para que una semana ocupada nunca se vuelva un pago tarde.</p>
+  <h3>Extra: el truco de las dos cuentas</h3>
+  <p>Si revisas tu saldo antes de comprar la comida, prueba con dos cuentas de cheques: <strong>Gastos fijos</strong> (recibe una transferencia automática cada día de pago y nunca la tocas con tarjeta) y <strong>Gasto diario</strong> (todo lo demás). Deja más o menos una semana extra de gastos fijos en la primera como colchón.</p>
+  <table>
+    <tr><th>Cuenta</th><th>Alerta de saldo bajo</th><th>Alerta de compra grande</th><th>Alerta de fecha de pago</th><th>Mínimo automático</th></tr>
+    <tr class="blank"><td></td><td></td><td></td><td></td><td></td></tr><tr class="blank"><td></td><td></td><td></td><td></td><td></td></tr><tr class="blank"><td></td><td></td><td></td><td></td><td></td></tr>
+  </table>
+  <div class="done">Día 3 listo: tengo las tres alertas y los mínimos en pago automático.</div>
+  <div class="folio"><span>Tu dinero en orden en 7 días</span><span>5</span></div>
+</section>
+
+<section class="page">
+  <span class="daybadge">DÍA 4</span>
+  <h2>Dale a tu ahorro su propia casa</h2>
+  <p class="why">Por qué: un fondo de emergencia inicial convierte una llanta ponchada de crisis en mandado. El dinero que se queda en la cuenta de cheques se gasta.</p>
+  <h3>Revisa (o elige) tu cuenta de ahorro</h3>
+  <ul class="check">
+    <li><strong>Separada de tu cuenta de cheques</strong> y sin conexión a tu tarjeta de débito.</li>
+    <li><strong>Asegurada:</strong> en un banco asegurado por la FDIC o una cooperativa de crédito asegurada por la NCUA (hasta $250,000 por depositante, por institución y por tipo de cuenta). ¿Usas una app? Busca su banco socio en la letra chiquita y revísalo en FDIC BankFind.</li>
+    <li><strong>Sin cuotas mensuales</strong> y sin trampas de saldo mínimo.</li>
+    <li><strong>Buena tasa.</strong> Las cuentas de ahorro de alto rendimiento muchas veces pagan mucho más que una cuenta normal.</li>
+    <li><strong>Fácil de sacar</strong>, en uno o dos días.</li>
+  </ul>
+  <h3>Programa tu primera transferencia automática</h3>
+  <p>Ponla para el día después de tu día de pago. Cualquier cantidad que puedas mantener cuenta: $25 a la semana son $1,300 al año.</p>
+  <div class="formula">Transferencia automática: $ ________ cada ____________ (día) a ____________ (cuenta)</div>
+  <h3>Tu primera meta: $1,000</h3>
+  <p>La meta a largo plazo normalmente es de 3 a 6 meses de gastos básicos. Empieza con $1,000. A $125 por semana, son 8 semanas. Formas rápidas: vende dos cosas que no has usado en un año, pasa al ahorro lo de las suscripciones que cancelaste el Día 2 y manda el pago de un turno extra directo al ahorro.</p>
+  <div class="box tip"><p><strong>Reglas del fondo:</strong> solo emergencias de verdad (arreglo del carro, cuenta médica, viaje urgente, tiempo sin trabajo). Úsalo sin culpa. Vuélvelo a llenar antes que cualquier otra cosa.</p></div>
+  <div class="done">Día 4 listo: mi ahorro está aparte y asegurado, y la transferencia está en automático.</div>
+  <div class="folio"><span>Tu dinero en orden en 7 días</span><span>6</span></div>
+</section>
+
+<section class="page">
+  <span class="daybadge">DÍA 5</span>
+  <h2>Revisa tu crédito y luego congélalo</h2>
+  <p class="why">Por qué: los reportes de crédito pueden tener errores, y congelar tu crédito (gratis) hace mucho más difícil que alguien abra crédito a tu nombre. (Solo aplica en EE. UU.)</p>
+  <h3>A. Pide tus reportes gratis (5 minutos)</h3>
+  <p>Entra a <strong>AnnualCreditReport.com</strong>, el sitio oficial. Los reportes de Equifax, Experian y TransUnion son gratis, cada semana. No tienes que pagar ni empezar ninguna prueba en otro lado.</p>
+  <h3>B. Revísalos con lupa (5 minutos)</h3>
+  <ul class="check">
+    <li>Datos personales: nombres (con tus dos apellidos), direcciones y empleadores son tuyos</li>
+    <li>Cada cuenta: reconoces todas</li>
+    <li>Estado: las cuentas abiertas y cerradas están bien</li>
+    <li>Saldos y límites correctos (un límite que falta puede bajar tu puntaje)</li>
+    <li>Historial de pagos: no hay atrasos en pagos que hiciste a tiempo</li>
+    <li>No hay cuentas ni cobranzas repetidas</li>
+    <li>Consultas duras: solo solicitudes que tú hiciste</li>
+  </ul>
+  <p>¿Encontraste un error? Dispútalo en línea con el buró que lo reporta. ¿Una cuenta que no es tuya? Entra a <strong>RobodeIdentidad.gov</strong>, el sitio de la FTC en español.</p>
+  <h3>C. Congela tu crédito en los tres burós (5 minutos)</h3>
+  <p>Es gratis por ley federal. No afecta tu puntaje ni tus tarjetas actuales. Quítalo por un tiempo cuando pidas crédito. Por teléfono puedes pedir atención en español.</p>
+  <table>
+    <tr><th>Buró</th><th>Dónde</th><th>Congelado</th><th>Acceso guardado en</th></tr>
+    <tr><td>Equifax</td><td>equifax.com (busca "credit freeze") &middot; 1-888-298-0045</td><td><span style="display:inline-block;width:14px;height:14px;border:1.5px solid #14213d;border-radius:3px"></span></td><td></td></tr>
+    <tr><td>Experian</td><td>experian.com/freeze &middot; 1-888-397-3742</td><td><span style="display:inline-block;width:14px;height:14px;border:1.5px solid #14213d;border-radius:3px"></span></td><td></td></tr>
+    <tr><td>TransUnion</td><td>transunion.com/credit-freeze &middot; 1-888-909-8872</td><td><span style="display:inline-block;width:14px;height:14px;border:1.5px solid #14213d;border-radius:3px"></span></td><td></td></tr>
+  </table>
+  <div class="done">Día 5 listo: revisé mis reportes y congelé mi crédito en los tres burós.</div>
+  <div class="folio"><span>Tu dinero en orden en 7 días</span><span>7</span></div>
+</section>
+
+<section class="page">
+  <span class="daybadge">DÍA 6</span>
+  <h2>Reclama el match de tu 401(k)</h2>
+  <p class="why">Por qué: muchos empleadores ponen dinero cuando tú aportas a un plan de retiro del trabajo. No aportar lo suficiente para el match completo es rechazar parte de tu sueldo.</p>
+  <h3>Cómo funciona un match común</h3>
+  <p>Una fórmula común es <strong>el 50% de lo que aportas, hasta el 6% de tu sueldo</strong>. Con un salario de $45,000 (ejemplo):</p>
+  <table>
+    <tr><th>Tú aportas</th><th class="r">Lo que pones al año</th><th class="r">Tu empleador agrega</th></tr>
+    <tr><td>0%</td><td class="r">$0</td><td class="r">$0</td></tr>
+    <tr><td>3%</td><td class="r">$1,350</td><td class="r">$675</td></tr>
+    <tr class="total"><td>6% (match completo)</td><td class="r">$2,700</td><td class="r">$1,350</td></tr>
+  </table>
+  <h3>Tu revisión de 10 minutos</h3>
+  <ul class="check">
+    <li>Entra al sitio de tu plan (desde el portal de Recursos Humanos o de beneficios)</li>
+    <li>Busca la fórmula del match y el calendario de vesting (o pregúntale a Recursos Humanos)</li>
+    <li>Revisa que tu porcentaje de aporte sea por lo menos el que necesitas para el match completo</li>
+    <li>Revisa que el dinero de verdad esté invertido (por ejemplo, en un fondo con fecha objetivo) y no en efectivo</li>
+    <li>¿Todavía no te alcanza para el match completo? Empieza con menos y activa un aumento automático de 1% al año, si lo ofrecen</li>
+  </ul>
+  <div class="formula">Fórmula del match: __________ &nbsp; Necesito: ____% &nbsp; Aporto hoy: ____% &nbsp; Vesting: __________</div>
+  <div class="box tip"><p><strong>¿No tienes plan en el trabajo?</strong> Anota "IRA" como siguiente paso. Una Roth IRA es una primera cuenta común si tienes ingresos de trabajo; tus aportes (no las ganancias) pueden salir cuando quieras sin impuestos ni multa. Revisa los límites actuales en irs.gov.</p></div>
+  <div class="done">Día 6 listo: sé cuál es mi match y voy a recibirlo completo (o tengo un plan para empezar).</div>
+  <div class="folio"><span>Tu dinero en orden en 7 días</span><span>8</span></div>
+</section>
+
+<section class="page">
+  <span class="daybadge">DÍA 7</span>
+  <h2>Fija tu número semanal</h2>
+  <p class="why">Por qué: los presupuestos fallan en la tercera semana porque te piden vigilar una docena de categorías. Mejor vigila un solo número.</p>
+  <p>Divide tu sueldo neto en cuatro líneas. Tres van en automático; tú solo vigilas la cuarta.</p>
+  <table>
+    <tr><th>Línea</th><th>Qué va ahí</th><th class="r">$ al mes</th></tr>
+    <tr><td><strong>Sueldo neto</strong></td><td>Del Día 1</td><td class="r"></td></tr>
+    <tr><td>&minus; Gastos fijos</td><td>Total del Día 1, menos lo que cancelaste el Día 2</td><td class="r"></td></tr>
+    <tr><td>&minus; Fondos</td><td>Gastos anuales pero previsibles &divide; 12 (carro, regalos, renovaciones)</td><td class="r"></td></tr>
+    <tr><td>&minus; Metas</td><td>Transferencia al ahorro del Día 4 + cualquier pago extra a deudas</td><td class="r"></td></tr>
+    <tr class="total"><td>= Para gastar</td><td>Súper, comer fuera, diversión, todo lo demás</td><td class="r"></td></tr>
+  </table>
+  <div class="formula">Número semanal = lo que queda para gastar &times; 12 &divide; 52 = $ ________ a la semana</div>
+  <p><strong>Ejemplo (ficticio):</strong> $832 para gastar &times; 12 &divide; 52 = <strong>$192 a la semana</strong>. Cuando se acaba, se acabó la semana. Lo que sobre el domingo pasa a la otra semana o se va a una meta.</p>
+  <h3>Aparta tu revisión semanal de 20 minutos</h3>
+  <p>Pon un evento que se repita en tu calendario, el mismo día cada semana:</p>
+  <div class="timer">
+    <div><div class="t">2 min</div><div class="h">Revisa</div><div class="d">¿Cuánto queda del número de esta semana?</div></div>
+    <div><div class="t">3 min</div><div class="h">Decide</div><div class="d">Pásalo a la otra semana o a una meta</div></div>
+    <div><div class="t">10 min</div><div class="h">Mira adelante</div><div class="d">Cumpleaños, viajes, cuentas en las próximas 2 semanas</div></div>
+    <div><div class="t">5 min</div><div class="h">Mejora</div><div class="d">Cancela, negocia o súbele $10 a una meta</div></div>
+  </div>
+  <div class="done">Día 7 listo: tengo mi número semanal y una revisión en mi calendario.</div>
+  <div class="folio"><span>Tu dinero en orden en 7 días</span><span>9</span></div>
+</section>
+
+<section class="page">
+  <div class="kicker">Lo lograste</div>
+  <h2>Qué sigue</h2>
+  <p class="lede">En una semana encontraste tus números reales, tapaste fugas, protegiste tu crédito, empezaste a ahorrar en automático y armaste un presupuesto que manejas en 20 minutos. Casi nadie hace ni la mitad de eso.</p>
+  <h3>No pierdas el impulso</h3>
+  <ul>
+    <li><strong>Haz tu primera revisión semanal</strong> este fin de semana.</li>
+    <li><strong>Revisa tu correo:</strong> un correo corto por semana, cada uno con un paso concreto con tu dinero. Respóndenos cuando quieras y cuéntanos cómo te fue. Una persona lee cada respuesta.</li>
+    <li><strong>Tus próximos pasos grandes,</strong> en un orden común: match completo del 401(k) &rarr; pagar las deudas con interés alto (avalancha o bola de nieve) &rarr; llevar el fondo de emergencia a 3&ndash;6 meses &rarr; invertir más, por ejemplo en una Roth IRA con un fondo índice o con fecha objetivo de bajo costo.</li>
+  </ul>
+  <div class="box dark">
+    <div class="kicker">¿Quieres el sistema completo, ya armado?</div>
+    <p><strong>El Presupuesto de 20 Minutos</strong> es una guía de 14 páginas más una hoja de cálculo (Excel, Google Sheets o Numbers) que convierte el Día 7 en un sistema completo: plan mensual, revisión semanal que maneja lo que te pasas y lo que te sobra, control de fondos de previsión y un plan de deudas que compara avalancha y bola de nieve lado a lado. Un solo pago, sin suscripción, 14 días para pedir reembolso.</p>
+    <p>Lo encuentras en nuestro sitio, en Productos.</p>
+  </div>
+  <h3>Guías gratis en el sitio</h3>
+  <ul>
+    <li>Cómo hacer un presupuesto que sí vas a mantener</li>
+    <li>Fondos de previsión: que los gastos "sorpresa" no arruinen tu presupuesto</li>
+    <li>Avalancha o bola de nieve, con las cuentas reales</li>
+    <li>Cómo empezar a invertir con $100 al mes</li>
+  </ul>
+  <div class="box warn">
+    <p><strong>La letra chiquita.</strong> Solo contenido educativo; no es asesoría financiera, fiscal, legal ni de inversión. Los ejemplos son ficticios y usan números supuestos. Las reglas, los límites y los teléfonos pueden cambiar: revisa la fuente oficial. Usamos herramientas de IA para imágenes y borradores; una persona revisa los datos y aprueba todo. Gratis para uso personal; comparte la página de descarga en lugar del archivo.</p>
+  </div>
+  <div class="folio"><span>Tu dinero en orden en 7 días</span><span>10</span></div>
+</section>
+</body>
+</html>

@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def home(tmp_path, monkeypatch):
     """An isolated factory home with the example brands and offline providers."""
     for key in list(os.environ):
-        if key.startswith(("FACTORY_", "IG_", "YT_", "TIKTOK_", "FB_", "THREADS_", "POSTIZ_")):
+        if key.startswith(("FACTORY_", "IG_", "YT_", "TIKTOK_", "FB_", "THREADS_", "POSTIZ_", "KOKORO_", "OPENAI_TTS_")):
             monkeypatch.delenv(key, raising=False)
     monkeypatch.setenv("FACTORY_LLM", "offline")
     monkeypatch.setenv("FACTORY_TTS", "silent")

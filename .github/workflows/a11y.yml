@@ -1,0 +1,31 @@
+name: Website accessibility
+# Full axe-core audit (WCAG 2.2 AA + best practice) of every page at desktop and phone width, plus keyboard,
+# focus and tap-target checks: tests/test_a11y_browser.py. The quick checks also run in every deploy build
+# (site/tools/check_site.py).
+on:
+  pull_request:
+    paths: ["site/**", "tests/test_a11y_browser.py", ".github/workflows/a11y.yml"]
+  push:
+    branches: [main]
+    paths: ["site/**", "tests/test_a11y_browser.py", ".github/workflows/a11y.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  a11y:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Playwright, Chromium and axe-core
+        run: |
+          pip install pytest playwright==1.49.1
+          python -m playwright install --with-deps chromium
+          npm install --prefix "$RUNNER_TEMP/axe" axe-core@4.10.2
+          echo "AXE_PATH=$RUNNER_TEMP/axe/node_modules/axe-core/axe.min.js" >> "$GITHUB_ENV"
+      - name: Accessibility audit
+        run: python -m pytest tests/test_a11y_browser.py -v

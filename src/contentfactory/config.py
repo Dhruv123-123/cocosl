@@ -39,7 +39,7 @@ class Settings:
     llm_provider: str = "auto"  # auto | anthropic | offline
     anthropic_model: str = "claude-opus-5-5"
     anthropic_effort: str = "medium"
-    tts_provider: str = "auto"  # auto | piper | espeak | elevenlabs | openai | silent
+    tts_provider: str = "auto"  # auto | kokoro | piper | espeak | elevenlabs | openai | silent
     image_provider: str = "auto"  # auto | comfyui | openai | replicate | cards
     public_media_base_url: str = ""  # where rendered files are reachable over HTTPS (needed by Instagram)
     dry_run: bool = True  # never call publishing APIs unless explicitly turned off
@@ -129,6 +129,7 @@ class VoiceStyle(BaseModel):
     persona: str = "a knowledgeable friend"
     tts_voice: str = ""  # provider-specific voice id; must be your own or licensed
     words_per_minute: int = 160
+    piper_model: str = ""  # path to a Piper .onnx voice in the brand's language (overrides PIPER_MODEL)
     banned_phrases: list[str] = Field(default_factory=list)
 
 
@@ -224,9 +225,12 @@ class BrandProfile(BaseModel):
     avoid_topics: list[str] = Field(default_factory=list)
     subreddits: list[str] = Field(default_factory=list)  # read-only topic signals
     hashtags: list[str] = Field(default_factory=list)
+    highlights: list[str] = Field(default_factory=list)  # optional Instagram highlight titles (≤15 chars)
+    bios: dict[str, str] = Field(default_factory=dict)  # optional hand-written bios: instagram, tiktok, x, threads, youtube_about
     cta: str = "Follow for more."
     link_in_bio: str = ""
-    language: str = "en"
+    language: str = "en"  # ISO 639-1; script copy, on-screen labels, bios and TTS follow it (see i18n.py)
+    region: str = ""  # optional market, e.g. "US" -> locale es-US; also used for trend signals
     visual: VisualStyle = Field(default_factory=VisualStyle)
     voice: VoiceStyle = Field(default_factory=VoiceStyle)
     cadence: Cadence = Field(default_factory=Cadence)

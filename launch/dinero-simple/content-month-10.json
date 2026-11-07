@@ -1,0 +1,1823 @@
+[
+ {
+  "key": "m10-familia-aqui-y-alla",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Series opener for Hispanic Heritage Month: four money conversations for families living between two countries (how much we send, who helps the parents, what happens if something happens to us, and our own retirement).",
+  "script": {
+   "title": "Cuatro conversaciones de dinero que tu familia necesita",
+   "hook": "Hay cuatro conversaciones de dinero que casi ninguna familia tiene. Hasta que es tarde.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Hay cuatro conversaciones de dinero que casi ninguna familia tiene. Hasta que es tarde.",
+     "on_screen_text": "4 conversaciones que casi nadie tiene",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a family at a kitchen table, a phone on video call. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Una: cuánto mandamos a la familia, y hasta dónde podemos.",
+     "on_screen_text": "1. ¿Cuánto mandamos, y hasta dónde?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope and a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Dos: quién ayuda a los papás, y cómo nos repartimos entre hermanos.",
+     "on_screen_text": "2. ¿Quién ayuda a los papás?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. siblings on a group video call. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Tres: qué pasa con los niños y el dinero si a nosotros nos pasa algo.",
+     "on_screen_text": "3. ¿Y si nos pasa algo?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder labeled 'Plan'. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Cuatro: nuestro propio retiro, aunque empecemos tarde.",
+     "on_screen_text": "4. ¿Y nuestro retiro?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an older couple on a bench. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Este mes vemos una por semana.",
+     "on_screen_text": "Una por semana, todo septiembre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a September calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Cuatro conversaciones de dinero que tu familia necesita:\n1. ¿Cuánto mandamos, y hasta dónde podemos?\n2. ¿Quién ayuda a los papás?\n3. ¿Qué pasa si nos pasa algo?\n4. ¿Y nuestro retiro?\nUna por semana, todo septiembre.\n\nSerie 'Tu familia, aquí y allá': el dinero de las familias que viven entre dos países.\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "familia",
+    "remesas",
+    "finanzasenespañol",
+    "mesdelaherenciahispana",
+    "dinerosimple"
+   ],
+   "description": "Las cuatro conversaciones de dinero que toda familia necesita.",
+   "thumbnail_text": "4 conversaciones",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "No numeric claims"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m10-lesion-en-el-trabajo",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Hurt at work: report it to your employer in writing right away (states set deadlines), get medical care and say it happened at work, and know that workers' compensation in most states covers workers regardless of immigration status; free help from the state workers' comp agency or legal aid.",
+  "script": {
+   "title": "Si te lastimas en el trabajo: 3 pasos",
+   "hook": "Si te lastimas en el trabajo, lo que haces en los primeros días decide si te pagan.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si te lastimas en el trabajo, lo que haces en los primeros días decide si te pagan.",
+     "on_screen_text": "Lo que haces los primeros días cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a worker holding a hurt wrist. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 1",
+     "narration": "Uno: avísale a tu jefe por escrito, ese mismo día si puedes. Cada estado pone un plazo.",
+     "on_screen_text": "1. Avisa a tu jefe por escrito, ya",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a text message to a supervisor. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 2",
+     "narration": "Dos: ve al médico y di que pasó en el trabajo, para que quede en tu expediente.",
+     "on_screen_text": "2. Ve al médico y di que fue en el trabajo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a clinic check-in. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 3",
+     "narration": "Tres: guarda todo: fotos, nombres de testigos, fechas y recibos.",
+     "on_screen_text": "3. Guarda todo: fotos, nombres, fechas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone album named 'Trabajo'. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tu derecho",
+     "narration": "La compensación laboral es un seguro del trabajo, y lo que cubre lo decide cada estado.",
+     "on_screen_text": "Pregunta qué te cubre en tu estado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a generic state office. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Si te dicen que no aplica, pregunta gratis en la oficina de compensación laboral de tu estado o a ayuda legal.",
+     "on_screen_text": "Pregunta gratis en tu estado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone call. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si te lastimas en el trabajo:\n1. Avisa a tu jefe por escrito, lo antes posible (cada estado pone un plazo).\n2. Ve al médico y di que pasó en el trabajo.\n3. Guarda fotos, nombres de testigos, fechas y recibos.\n\nLas reglas cambian por estado. Información general, no es asesoría legal.\nTus derechos aquí dependen de tu estado: pregunta gratis en la oficina de tu estado o en una organización de ayuda legal, y si tu duda es migratoria, consulta a un abogado de inmigración con licencia o a un representante acreditado (lista gratis en justice.gov/eoir).\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "diadeltrabajo",
+    "derechoslaborales",
+    "trabajadores",
+    "finanzasenespañol",
+    "dinerosimple"
+   ],
+   "description": "Qué hacer si te lastimas en el trabajo: los 3 primeros pasos.",
+   "thumbnail_text": "¿Te lastimaste?",
+   "sources": [
+    "https://www.dol.gov/agencies/owcp/wc",
+    "https://www.lsc.gov/"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions immigration status)",
+    "LEGAL CHECK: no longer says who workers' comp covers by immigration status; it sends the viewer to the state office and the standard DERECHOS_ESTADO line (src/safe_lines.py)",
+    "LEGAL CHECK: injury-reporting deadlines are set by each state (often 30 days or less)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "m10-dias-de-enfermedad",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Paid sick leave: there is no federal law for most private jobs, but many states and cities require it (often 1 hour per 30 hours worked); ask HR, check your pay stub, and search your state's labor department.",
+  "script": {
+   "title": "¿Tienes días de enfermedad pagados? Revisa esto",
+   "hook": "En muchos estados, cada treinta horas que trabajas te ganas una hora de enfermedad pagada.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "En muchos estados, cada treinta horas que trabajas te ganas una hora de enfermedad pagada.",
+     "on_screen_text": "30 horas trabajadas = 1 hora de enfermedad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a clock and a thermometer. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "No hay una ley federal para la mayoría de los trabajos privados, pero muchos estados y ciudades sí la tienen.",
+     "on_screen_text": "No hay ley federal; muchos estados sí",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a map with some states shaded. No text, no logos, no real people."
+    },
+    {
+     "heading": "Para qué",
+     "narration": "En muchos lugares sirve para cuando tú te enfermas o cuidas a un hijo o a tus papás.",
+     "on_screen_text": "Para ti, tus hijos o tus papás",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a parent with a sick child. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dónde ver",
+     "narration": "Revisa tu talón de pago: muchas veces dice cuántas horas tienes acumuladas.",
+     "on_screen_text": "Revisa tu talón de pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pay stub with a line circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta",
+     "narration": "Si no dice, pregúntale a recursos humanos por escrito.",
+     "on_screen_text": "Pregúntale a recursos humanos por escrito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an email to HR. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y búscalo: licencia por enfermedad pagada más el nombre de tu estado.",
+     "on_screen_text": "Busca: 'licencia por enfermedad' + tu estado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a search bar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Días de enfermedad pagados:\n• No hay ley federal para la mayoría de los trabajos privados, pero muchos estados y ciudades sí la tienen (muchas veces, 1 hora por cada 30 trabajadas).\n• En muchos lugares sirve para ti o para cuidar a tu familia.\n• Revisa tu talón de pago y pregunta por escrito.\n\nLas reglas cambian por estado. Información general, no es asesoría legal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "diadeltrabajo",
+    "derechoslaborales",
+    "trabajadores",
+    "finanzasenespañol",
+    "dinerosimple"
+   ],
+   "description": "Cómo saber si tienes días de enfermedad pagados.",
+   "thumbnail_text": "Días de enfermedad",
+   "sources": [
+    "https://www.dol.gov/agencies/whd/state"
+   ],
+   "claims_to_verify": [
+    "LEGAL CHECK: no federal paid sick leave mandate for most private employers; ~18+ states and DC plus several cities require it; 1 hour per 30 hours worked is a common accrual rate"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m10-linea-familia",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Give helping family a fixed line in the budget instead of sending whatever is asked: example $3,000 take-home, 10% = $300, plus a small 'family emergency' pocket, so your own bills and savings still get paid.",
+  "script": {
+   "title": "Ayudar a tu familia con un número fijo",
+   "hook": "Si mandas lo que te piden cada vez, nunca sabes cuánto te queda. Ponle un número.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si mandas lo que te piden cada vez, nunca sabes cuánto te queda. Ponle un número.",
+     "on_screen_text": "Lo que te piden no es un presupuesto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with many money request messages. No text, no logos, no real people."
+    },
+    {
+     "heading": "El número",
+     "narration": "Decide un número fijo al mes para ayudar a tu familia, y apártalo el día de pago.",
+     "on_screen_text": "Un número fijo al mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope labeled 'Familia'. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "Ejemplo: si te llegan tres mil dólares al mes, el diez por ciento son trescientos.",
+     "on_screen_text": "$3,000 al mes × 10% = $300",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calculator. No text, no logos, no real people."
+    },
+    {
+     "heading": "Emergencias",
+     "narration": "Aparte, un apartado chico para emergencias de allá: una medicina, un hospital.",
+     "on_screen_text": "Un apartado chico para emergencias de allá",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a savings pocket named 'Emergencia familia'. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tu parte",
+     "narration": "Tu renta, tus cuentas y tu propio colchón van primero. Si tú te hundes, no puedes ayudar a nadie.",
+     "on_screen_text": "Tu renta y tu ahorro, primero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a life jacket. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y díselo a tu familia con cariño: este es mi número este año.",
+     "on_screen_text": "Díselo a tu familia con cariño",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a warm video call. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Ayudar a tu familia con un número fijo:\n• Decide un número al mes y apártalo el día de pago.\n• Ejemplo: $3,000 al mes × 10% = $300.\n• Aparte, un apartado chico para emergencias de allá.\n• Tu renta, tus cuentas y tu colchón van primero.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSerie 'Tu familia, aquí y allá': el dinero de las familias que viven entre dos países.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "familia",
+    "remesas",
+    "finanzasenespañol",
+    "mesdelaherenciahispana",
+    "dinerosimple"
+   ],
+   "description": "Cómo ayudar a tu familia con un número fijo en tu presupuesto.",
+   "thumbnail_text": "Un número para ayudar",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Example arithmetic: $3,000 x 10% = $300; 10% is an example, not a rule"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m10-decir-que-no",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "How to say 'not this month' to a family money request without a fight: say it early, offer what you can and when, explain the number, and never borrow (or use a card) to send.",
+  "script": {
+   "title": "Cómo decir 'este mes no puedo' sin pelear",
+   "hook": "Decir que no a tu familia duele. Pero pedir prestado para mandar duele más.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Decir que no a tu familia duele. Pero pedir prestado para mandar duele más.",
+     "on_screen_text": "Pedir prestado para mandar duele más",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a person looking at a phone, worried. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Uno: dilo pronto. Si ya sabes que este mes no alcanza, avisa antes.",
+     "on_screen_text": "1. Dilo pronto, no el día que piden",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Dos: ofrece lo que sí puedes y cuándo: 'cien ahora y cien el día quince'.",
+     "on_screen_text": "2. Ofrece lo que sí puedes, y cuándo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a note with two dates. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Tres: explica tu número: 'esto es lo que aparto cada mes para ustedes'.",
+     "on_screen_text": "3. Explica tu número",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope labeled 'Familia'. No text, no logos, no real people."
+    },
+    {
+     "heading": "Nunca",
+     "narration": "Y nunca mandes con la tarjeta de crédito o con un préstamo: pagas intereses por meses.",
+     "on_screen_text": "Nunca con tarjeta ni préstamo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a credit card with a red X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Querer a tu familia también es no hundirte.",
+     "on_screen_text": "Querer a tu familia también es cuidarte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a family hug on a video call. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Cómo decir 'este mes no puedo' sin pelear:\n1. Dilo pronto, no el día que piden.\n2. Ofrece lo que sí puedes, y cuándo.\n3. Explica tu número.\nY nunca mandes con tarjeta de crédito o con un préstamo.\n\nSerie 'Tu familia, aquí y allá': el dinero de las familias que viven entre dos países.\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "familia",
+    "remesas",
+    "finanzasenespañol",
+    "mesdelaherenciahispana",
+    "dinerosimple"
+   ],
+   "description": "Cómo decirle a tu familia que este mes no puedes mandar dinero.",
+   "thumbnail_text": "'Este mes no puedo'",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "No numeric claims beyond the $100 example"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m10-hermanos-cooperan",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Helping parents among siblings: a monthly total for the parents' needs, a split by what each can (not equal), one sibling who pays and keeps receipts, and a shared note updated monthly; example $600 split $300/$200/$100.",
+  "script": {
+   "title": "Ayudar a los papás entre hermanos: un plan",
+   "hook": "Cuando todos ayudan 'cuando pueden', casi siempre uno termina pagando todo.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Cuando todos ayudan cuando pueden, casi siempre uno termina pagando todo.",
+     "on_screen_text": "'Cuando pueden' = uno paga todo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. one sibling holding many bills. No text, no logos, no real people."
+    },
+    {
+     "heading": "Total",
+     "narration": "Uno: un total al mes para lo que necesitan los papás: medicinas, luz, comida.",
+     "on_screen_text": "1. Un total al mes para los papás",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a list on a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Reparto",
+     "narration": "Dos: repártelo según lo que cada quien puede, no por partes iguales.",
+     "on_screen_text": "2. Según lo que cada quien puede",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three stacks of different heights. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "Ejemplo: seiscientos al mes: trescientos, doscientos y cien.",
+     "on_screen_text": "$600: $300 + $200 + $100",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three envelopes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Uno paga",
+     "narration": "Tres: una sola persona paga y guarda los recibos, y los demás le mandan su parte.",
+     "on_screen_text": "3. Una persona paga y guarda recibos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder of receipts. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y una nota compartida que actualizan cada mes. Menos pleitos.",
+     "on_screen_text": "Una nota compartida, cada mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a shared note on a phone. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Ayudar a los papás entre hermanos:\n1. Un total al mes para lo que necesitan.\n2. Repártanlo según lo que cada quien puede.\n   Ejemplo: $600 = $300 + $200 + $100.\n3. Una persona paga y guarda recibos.\n4. Una nota compartida que actualizan cada mes.\n\nSerie 'Tu familia, aquí y allá': el dinero de las familias que viven entre dos países.\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "familia",
+    "remesas",
+    "finanzasenespañol",
+    "mesdelaherenciahispana",
+    "dinerosimple"
+   ],
+   "description": "Cómo organizarse entre hermanos para ayudar a los papás.",
+   "thumbnail_text": "Entre hermanos",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Example arithmetic: $300 + $200 + $100 = $600"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m10-fiestas-patrias",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Fiestas patrias on a budget (Central America Sep 15, Mexico Sep 16, Chile Sep 18): one number, a potluck, decorations reused, and comparing price per pound for the big dish.",
+  "script": {
+   "title": "Fiestas patrias sin romper el presupuesto",
+   "hook": "El grito, la fonda o el desfile: la fiesta es la gente, no la cuenta.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "El grito, la fonda o el desfile: la fiesta es la gente, no la cuenta.",
+     "on_screen_text": "La fiesta es la gente, no la cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a festive table with flags, no brands. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Uno: un número para lo tuyo, antes de invitar.",
+     "on_screen_text": "1. Un número antes de invitar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a sticky note. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Dos: cada familia trae un platillo. Así se prueba de todo.",
+     "on_screen_text": "2. Cada familia trae un platillo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. many dishes on a table. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Tres: para el platillo grande, compara el precio por libra en la etiqueta chiquita.",
+     "on_screen_text": "3. El platillo grande, por precio por libra",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a shelf price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Cuatro: decoración que se guarda para el año que viene.",
+     "on_screen_text": "4. Decoración que se guarda",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a box of decorations. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Cuéntame en los comentarios qué fiestas celebras.",
+     "on_screen_text": "¿Qué fiestas celebras tú?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. flags of several countries, generic. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Fiestas patrias sin romper el presupuesto:\n1. Un número antes de invitar.\n2. Cada familia trae un platillo.\n3. El platillo grande, por precio por libra.\n4. Decoración que se guarda.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "fiestaspatrias",
+    "mesdelaherenciahispana",
+    "familia",
+    "presupuesto",
+    "dinerosimple"
+   ],
+   "description": "Cómo celebrar las fiestas patrias sin gastar de más.",
+   "thumbnail_text": "Fiestas patrias",
+   "sources": [],
+   "claims_to_verify": [
+    "Independence days: Costa Rica, El Salvador, Guatemala, Honduras, Nicaragua Sep 15; Mexico Sep 16; Chile Sep 18"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m10-hablar-con-hijos",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Talking about money with your kids in two languages: three jars (spend, save, share), let them pay at the store, and tell them the family story of why you work so hard.",
+  "script": {
+   "title": "Habla de dinero con tus hijos: tres frascos",
+   "hook": "Tus hijos aprenden de dinero viéndote. Esto es lo que puedes enseñarles esta semana.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Tus hijos aprenden de dinero viéndote. Esto es lo que puedes enseñarles esta semana.",
+     "on_screen_text": "Tus hijos aprenden viéndote",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a parent and child at a table with jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "Frascos",
+     "narration": "Tres frascos: uno para gastar, uno para ahorrar y uno para compartir.",
+     "on_screen_text": "Tres frascos: gastar, ahorrar, compartir",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three labeled jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "En la tienda",
+     "narration": "En la tienda, deja que ellos paguen algo chico y cuenten el cambio.",
+     "on_screen_text": "Que ellos paguen en la tienda",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a child paying at a counter. No text, no logos, no real people."
+    },
+    {
+     "heading": "La historia",
+     "narration": "Y cuéntales tu historia: por qué viniste, por qué ahorras, por qué ayudas a la abuela.",
+     "on_screen_text": "Cuéntales tu historia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a parent telling a story. No text, no logos, no real people."
+    },
+    {
+     "heading": "En dos idiomas",
+     "narration": "En español o en inglés, igual cuenta. Lo importante es hablarlo.",
+     "on_screen_text": "En español o en inglés: igual cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bilingual book. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Empieza con los frascos este fin de semana.",
+     "on_screen_text": "Empieza con los frascos este fin",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. jars with coins. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Habla de dinero con tus hijos:\n• Tres frascos: gastar, ahorrar, compartir.\n• Que ellos paguen algo chico y cuenten el cambio.\n• Cuéntales tu historia: por qué ahorras, por qué ayudas a la familia.\nEn español o en inglés, igual cuenta.\n\nSerie 'Tu familia, aquí y allá': el dinero de las familias que viven entre dos países.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "hijos",
+    "educacionfinanciera",
+    "familia",
+    "mesdelaherenciahispana",
+    "dinerosimple"
+   ],
+   "description": "Cómo hablar de dinero con tus hijos con tres frascos.",
+   "thumbnail_text": "Tres frascos",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "No numeric claims"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m10-plan-familiar",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "A family emergency plan for mixed-status and immigrant families: emergency contacts the school has, who can pick up the kids, copies of documents in a safe place, who can access the money, and a lawyer's number; legal documents (like a power of attorney or a caregiver authorization) are prepared with a licensed attorney.",
+  "script": {
+   "title": "El plan de tu familia por si pasa algo",
+   "hook": "Si mañana no pudieras llegar a casa, ¿quién recoge a tus hijos? Hagan el plan hoy.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si mañana no pudieras llegar a casa, ¿quién recoge a tus hijos? Hagan el plan hoy.",
+     "on_screen_text": "¿Quién recoge a tus hijos?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a school pickup line, generic. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Uno: que la escuela tenga al día los contactos de emergencia, con quién sí puede recoger a los niños.",
+     "on_screen_text": "1. Contactos de emergencia en la escuela",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a school emergency card. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Dos: copias de actas, pasaportes y papeles importantes, y alguien de confianza que sepa dónde están.",
+     "on_screen_text": "2. Copias de papeles en un lugar seguro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder in a drawer. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Tres: quién puede pagar la renta si tú no puedes, y cómo llega al dinero.",
+     "on_screen_text": "3. ¿Quién puede usar el dinero?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank card and a note. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Cuatro: el número de un abogado de inmigración con licencia o una organización acreditada, guardado en tu celular.",
+     "on_screen_text": "4. El número de un abogado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone contact named 'Abogado'. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Los papeles legales, como un poder, prepáralos con un abogado con licencia, nunca con un notario.",
+     "on_screen_text": "Papeles legales: con un abogado, nunca un notario",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a lawyer's office, generic. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El plan de tu familia por si pasa algo:\n1. Contactos de emergencia al día en la escuela.\n2. Copias de papeles importantes, y alguien de confianza que sepa dónde están.\n3. Quién puede pagar la renta si tú no puedes.\n4. El número de un abogado de inmigración con licencia o una organización acreditada.\nLos papeles legales, como un poder, con un abogado con licencia.\n\nPara cualquier pregunta sobre tu situación migratoria, habla con un abogado de inmigración con licencia o un representante acreditado, nunca con un notario.\nInformación general, no es asesoría legal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "familia",
+    "remesas",
+    "finanzasenespañol",
+    "mesdelaherenciahispana",
+    "dinerosimple"
+   ],
+   "description": "Cómo preparar un plan familiar de emergencia.",
+   "thumbnail_text": "El plan familiar",
+   "sources": [
+    "https://www.justice.gov/eoir/find-legal-representation",
+    "https://www.lsc.gov/"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions immigration status)",
+    "LEGAL CHECK: caregiver authorization and power-of-attorney rules vary by state; prepared with a licensed attorney",
+    "DOJ EOIR lists recognized organizations and accredited representatives"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "m10-poder-notarial",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "A notary public in the US is not a lawyer (unlike a notario in Latin America): they only witness signatures. A power of attorney or guardianship paperwork should be done with a licensed attorney; free or low-cost help through legal aid and DOJ-recognized organizations.",
+  "script": {
+   "title": "Un 'notary public' no es un abogado",
+   "hook": "En tu país, un notario es abogado. Aquí, un 'notary public' solo sella firmas.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "En tu país, un notario es abogado. Aquí, un notary public solo sella firmas.",
+     "on_screen_text": "Aquí un 'notary' solo sella firmas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a rubber stamp on a page. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hace",
+     "narration": "Lo único que hace es confirmar quién firma. No te puede dar consejo legal.",
+     "on_screen_text": "Confirma quién firma. Nada más.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a signature and a stamp. No text, no logos, no real people."
+    },
+    {
+     "heading": "El riesgo",
+     "narration": "Si te prepara papeles migratorios o legales, te puede cobrar caro y dejarte en peor situación.",
+     "on_screen_text": "Papeles mal hechos te pueden costar caro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pile of papers with a red X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Para un poder",
+     "narration": "Para un poder, o para decidir quién cuida a tus hijos, busca un abogado con licencia.",
+     "on_screen_text": "Un poder o tutela: con abogado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a lawyer's office, generic. No text, no logos, no real people."
+    },
+    {
+     "heading": "Gratis",
+     "narration": "Hay ayuda legal gratis y organizaciones acreditadas por el Departamento de Justicia.",
+     "on_screen_text": "Ayuda legal gratis u organizaciones acreditadas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a community office. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Antes de pagar, revisa que tenga licencia en tu estado.",
+     "on_screen_text": "Revisa la licencia antes de pagar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a search bar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "En EE. UU., un 'notary public' no es abogado: solo confirma quién firma.\n• No te puede dar consejo legal ni preparar tus papeles migratorios.\n• Para un poder o para decidir quién cuida a tus hijos, busca un abogado con licencia.\n• Hay ayuda legal gratis y organizaciones acreditadas por el Departamento de Justicia.\nRevisa la licencia antes de pagar.\n\nPara cualquier pregunta sobre tu situación migratoria, habla con un abogado de inmigración con licencia o un representante acreditado, nunca con un notario.\nInformación general, no es asesoría legal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "notario",
+    "abogado",
+    "inmigrantes",
+    "estafas",
+    "dinerosimple"
+   ],
+   "description": "Por qué un 'notary public' en EE. UU. no es un abogado.",
+   "thumbnail_text": "Notary ≠ abogado",
+   "sources": [
+    "https://consumidor.ftc.gov/",
+    "https://www.justice.gov/eoir/find-legal-representation"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions immigration status)",
+    "Notaries public in the US are not attorneys and may not give legal advice (FTC notario fraud guidance)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "m10-creditos-seguro-social",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Social Security retirement needs 40 credits (about 10 years of work); you earn up to 4 credits a year; the benefit is based on your 35 highest-earning years; check your earnings record in a my Social Security account and fix missing years.",
+  "script": {
+   "title": "Seguro Social: necesitas 40 créditos",
+   "hook": "Para recibir tu retiro del Seguro Social necesitas cuarenta créditos. ¿Sabes cuántos tienes?",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Para recibir tu retiro del Seguro Social necesitas cuarenta créditos. ¿Sabes cuántos tienes?",
+     "on_screen_text": "¿Sabes cuántos créditos tienes?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a counter showing 40. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Ganas hasta cuatro créditos por año trabajando y pagando el impuesto del Seguro Social.",
+     "on_screen_text": "Máximo 4 por año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. four checkmarks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuánto",
+     "narration": "Así que cuarenta créditos son unos diez años de trabajo.",
+     "on_screen_text": "40 créditos ≈ 10 años de trabajo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a ten-year timeline. No text, no logos, no real people."
+    },
+    {
+     "heading": "El monto",
+     "narration": "Lo que recibes depende de tus treinta y cinco años con más ingresos.",
+     "on_screen_text": "Cuentan tus 35 años más altos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bar chart of years. No text, no logos, no real people."
+    },
+    {
+     "heading": "Revisa",
+     "narration": "Revisa tu historial en una cuenta de mi Seguro Social en ssa punto gov. Si falta un año, pide que lo corrijan.",
+     "on_screen_text": "Revisa tu historial en ssa.gov",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop with a generic earnings table. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Un año que falta es dinero que pierdes.",
+     "on_screen_text": "Un año que falta es dinero que pierdes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a missing puzzle piece. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Retiro del Seguro Social:\n• Necesitas 40 créditos (hasta 4 por año, unos 10 años de trabajo).\n• Lo que recibes depende de tus 35 años con más ingresos.\n• Revisa tu historial en una cuenta de 'my Social Security' (ssa.gov) y pide que corrijan los años que falten.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "retiro",
+    "segurosocial",
+    "jubilacion",
+    "finanzasenespañol",
+    "dinerosimple"
+   ],
+   "description": "Cuántos créditos necesitas para el retiro del Seguro Social.",
+   "thumbnail_text": "40 créditos",
+   "sources": [
+    "https://www.ssa.gov/espanol/"
+   ],
+   "claims_to_verify": [
+    "40 credits needed for retirement benefits; max 4 credits per year; benefit based on highest 35 years of indexed earnings; my Social Security shows earnings record"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m10-retiro-con-itin",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Retirement savings with an ITIN: an IRA needs earned income reported on a tax return, not an SSN, and some brokerages and credit unions open IRAs with an ITIN (ask first); the 2027 IRA limit is set each fall.",
+  "script": {
+   "title": "¿Puedes ahorrar para tu retiro con ITIN?",
+   "hook": "No tener Seguro Social no significa no poder ahorrar para tu retiro.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "No tener Seguro Social no significa no poder ahorrar para tu retiro.",
+     "on_screen_text": "Sin Seguro Social también se ahorra",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a piggy bank with a passport. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "Una cuenta de retiro IRA pide que tengas ingresos de trabajo que declares en tus impuestos.",
+     "on_screen_text": "Una IRA pide ingreso de trabajo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a tax form and a paycheck. No text, no logos, no real people."
+    },
+    {
+     "heading": "Con ITIN",
+     "narration": "Algunas casas de inversión y cooperativas abren una IRA con ITIN. Pregunta antes de llenar nada.",
+     "on_screen_text": "Algunos lugares la abren con ITIN",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone call to a credit union. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuánto",
+     "narration": "Hay un límite de cuánto puedes poner al año. Se anuncia cada otoño.",
+     "on_screen_text": "Hay un límite al año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar with a line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Empieza",
+     "narration": "Empieza con poco, en automático, en algo sencillo como un fondo de fecha objetivo.",
+     "on_screen_text": "Empieza con poco, en automático",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an autopay toggle. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Si tienes preguntas sobre tu situación migratoria, habla con un abogado de inmigración con licencia, nunca con un notario.",
+     "on_screen_text": "Tu situación migratoria: con un abogado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a lawyer's office, generic. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "¿Ahorrar para tu retiro con ITIN?\n• Una IRA pide ingresos de trabajo que declares en tus impuestos.\n• Algunas casas de inversión y cooperativas la abren con ITIN (pregunta antes).\n• Hay un límite al año, que se anuncia cada otoño.\n• Empieza con poco, en automático.\n\nPara cualquier pregunta sobre tu situación migratoria, habla con un abogado de inmigración con licencia o un representante acreditado, nunca con un notario.\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "retiro",
+    "segurosocial",
+    "jubilacion",
+    "finanzasenespañol",
+    "dinerosimple"
+   ],
+   "description": "Cómo ahorrar para tu retiro con ITIN.",
+   "thumbnail_text": "Retiro con ITIN",
+   "sources": [
+    "https://www.irs.gov/es/retirement-plans/individual-retirement-arrangements-iras"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "IRA contributions require taxable compensation; an ITIN can be used as the taxpayer ID at some custodians (varies; confirm)",
+    "IRA limit for the year is announced by the IRS each fall"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "m10-retiro-en-tu-pais",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Retiring in your home country: Social Security can pay benefits to people living in many countries, with exceptions and rules for noncitizens; use the SSA's Payments Abroad Screening Tool and ask before you move; also plan health care costs.",
+  "script": {
+   "title": "¿Te quieres retirar en tu país? Revisa esto",
+   "hook": "Si sueñas con retirarte en tu país, revisa esto antes de hacer las maletas.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si sueñas con retirarte en tu país, revisa esto antes de hacer las maletas.",
+     "on_screen_text": "Antes de hacer las maletas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an older couple with suitcases. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "El Seguro Social puede pagar beneficios a personas que viven en muchos países.",
+     "on_screen_text": "El Seguro Social puede pagar en el extranjero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a world map, generic. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ojo",
+     "narration": "Pero hay excepciones y reglas distintas si no eres ciudadano.",
+     "on_screen_text": "Hay excepciones, sobre todo si no eres ciudadano",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a list with exceptions. No text, no logos, no real people."
+    },
+    {
+     "heading": "Revisa",
+     "narration": "Usa la herramienta de pagos fuera de Estados Unidos en ssa punto gov, y pregunta antes de mudarte.",
+     "on_screen_text": "Usa la herramienta de pagos fuera de EE. UU.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop with a generic questionnaire. No text, no logos, no real people."
+    },
+    {
+     "heading": "La salud",
+     "narration": "Y planea el costo de la salud allá: el seguro médico de aquí muchas veces no te cubre afuera.",
+     "on_screen_text": "Planea también el costo de la salud",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a clinic abroad, generic. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Pregunta antes, no después.",
+     "on_screen_text": "Pregunta antes, no después",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "¿Te quieres retirar en tu país?\n• El Seguro Social puede pagar beneficios en muchos países, con excepciones y reglas distintas si no eres ciudadano.\n• Usa la herramienta de pagos fuera de EE. UU. en ssa.gov y pregunta antes de mudarte.\n• Planea el costo de la salud allá.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "retiro",
+    "segurosocial",
+    "jubilacion",
+    "finanzasenespañol",
+    "dinerosimple"
+   ],
+   "description": "Qué revisar antes de retirarte en tu país de origen.",
+   "thumbnail_text": "Retirarte en tu país",
+   "sources": [
+    "https://www.ssa.gov/international/payments.html"
+   ],
+   "claims_to_verify": [
+    "SSA pays benefits abroad in most countries, with restrictions (some countries barred; noncitizens may face a 6-month absence rule unless an exception applies); Payments Abroad Screening Tool on ssa.gov",
+    "Medicare generally does not cover care outside the US"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m10-cuenta-para-hijos",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "A savings account for your child: many banks and credit unions offer youth or custodial accounts opened by a parent; ask what ID they accept for the parent and the child and whether there are fees.",
+  "script": {
+   "title": "Una cuenta de ahorro para tu hijo",
+   "hook": "El primer dinero de tu hijo puede estar en una cuenta, no en una alcancía.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "El primer dinero de tu hijo puede estar en una cuenta, no en una alcancía.",
+     "on_screen_text": "De la alcancía a una cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a piggy bank next to a debit card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "Muchos bancos y cooperativas tienen cuentas para menores, que abre un papá o una mamá.",
+     "on_screen_text": "Cuentas para menores, abiertas con un adulto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a parent and child at a counter. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta",
+     "narration": "Pregunta qué identificación aceptan para ti y para tu hijo.",
+     "on_screen_text": "¿Qué identificación aceptan?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an ID and a birth certificate, generic. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cargos",
+     "narration": "Y pregunta si cobran algo al mes. Muchas de menores no cobran.",
+     "on_screen_text": "¿Cobran algo al mes?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a fee table. No text, no logos, no real people."
+    },
+    {
+     "heading": "La costumbre",
+     "narration": "Lo mejor: que tu hijo vaya contigo a depositar una vez al mes.",
+     "on_screen_text": "Que deposite él, una vez al mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a child depositing money. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "La costumbre vale más que la cantidad.",
+     "on_screen_text": "La costumbre vale más que el monto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with monthly checks. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Una cuenta de ahorro para tu hijo:\n• Muchos bancos y cooperativas tienen cuentas para menores, que abre un adulto.\n• Pregunta qué identificación aceptan y si cobran algo al mes.\n• Que tu hijo vaya contigo a depositar una vez al mes.\nLa costumbre vale más que la cantidad.\n\nSerie 'Tu familia, aquí y allá': el dinero de las familias que viven entre dos países.\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "hijos",
+    "ahorro",
+    "familia",
+    "educacionfinanciera",
+    "dinerosimple"
+   ],
+   "description": "Cómo abrir una cuenta de ahorro para tu hijo.",
+   "thumbnail_text": "Su primera cuenta",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Youth/custodial accounts require a parent or guardian; ID requirements vary by institution"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m10c-cuatro-conversaciones",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "The four family money conversations as a save-able carousel, each with one question to start it.",
+  "script": {
+   "title": "4 conversaciones de dinero en familia",
+   "hook": "Guárdalo para la próxima comida familiar.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo para la próxima comida familiar.",
+     "on_screen_text": "4 conversaciones de dinero en familia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a family table. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Empieza: '¿cuánto podemos apartar cada mes?'",
+     "on_screen_text": "1. ¿Cuánto mandamos, y hasta dónde?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Empieza: '¿qué necesitan los papás al mes?'",
+     "on_screen_text": "2. ¿Quién ayuda a los papás?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. siblings on a call. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Empieza: '¿quién recogería a los niños?'",
+     "on_screen_text": "3. ¿Y si nos pasa algo?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder labeled 'Plan'. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Empieza: '¿cuántos créditos del Seguro Social tenemos?'",
+     "on_screen_text": "4. ¿Y nuestro retiro?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an older couple. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tip",
+     "narration": "Con calma y sin culpas.",
+     "on_screen_text": "Una por semana, no todas el mismo día",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Para empezar la plática.",
+     "on_screen_text": "Mándaselo a tu familia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two phones. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "4 conversaciones de dinero en familia, y cómo empezarlas:\n1. ¿Cuánto mandamos? → '¿Cuánto podemos apartar cada mes?'\n2. ¿Quién ayuda a los papás? → '¿Qué necesitan al mes?'\n3. ¿Y si nos pasa algo? → '¿Quién recogería a los niños?'\n4. ¿Y nuestro retiro? → '¿Cuántos créditos del Seguro Social tenemos?'\n\nSerie 'Tu familia, aquí y allá': el dinero de las familias que viven entre dos países.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "familia",
+    "remesas",
+    "finanzasenespañol",
+    "mesdelaherenciahispana",
+    "dinerosimple"
+   ],
+   "description": "Las 4 conversaciones de dinero en familia y cómo empezarlas.",
+   "thumbnail_text": "4 conversaciones",
+   "sources": [],
+   "claims_to_verify": [
+    "No numeric claims"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m10c-lesion-en-el-trabajo",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Hurt-at-work checklist: report in writing, see a doctor and say it was at work, photos and witnesses, keep every bill, don't sign anything you don't understand, ask the state workers' comp office.",
+  "script": {
+   "title": "Si te lastimas en el trabajo: la lista",
+   "hook": "Guárdala. Ojalá no la necesites.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "La lista. Ojalá no la necesites.",
+     "on_screen_text": "Si te lastimas en el trabajo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a hard hat. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Cada estado pone un plazo.",
+     "on_screen_text": "1. Avisa por escrito, lo antes posible",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a text to a supervisor. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Que quede en tu expediente.",
+     "on_screen_text": "2. Al médico: di que fue en el trabajo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a clinic. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "En tu celular, el mismo día.",
+     "on_screen_text": "3. Fotos, testigos y fechas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone album. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Y cada día que no pudiste trabajar.",
+     "on_screen_text": "4. Guarda cada recibo médico",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. receipts in a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Pide una copia y pregunta primero.",
+     "on_screen_text": "5. No firmes lo que no entiendes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a document with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Pregunta gratis en la oficina de compensación laboral de tu estado qué te cubre.",
+     "on_screen_text": "Pregunta gratis en la oficina de tu estado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a generic state office. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si te lastimas en el trabajo:\n1. Avisa por escrito, lo antes posible.\n2. Al médico, y di que fue en el trabajo.\n3. Fotos, testigos y fechas.\n4. Guarda cada recibo médico.\n5. No firmes lo que no entiendes.\nPregunta gratis en la oficina de compensación laboral de tu estado.\n\nLas reglas cambian por estado. Información general, no es asesoría legal.\nTus derechos aquí dependen de tu estado: pregunta gratis en la oficina de tu estado o en una organización de ayuda legal, y si tu duda es migratoria, consulta a un abogado de inmigración con licencia o a un representante acreditado (lista gratis en justice.gov/eoir).\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "diadeltrabajo",
+    "derechoslaborales",
+    "trabajadores",
+    "finanzasenespañol",
+    "dinerosimple"
+   ],
+   "description": "La lista de qué hacer si te lastimas en el trabajo.",
+   "thumbnail_text": "Lesión en el trabajo",
+   "sources": [
+    "https://www.dol.gov/agencies/owcp/wc"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions immigration status)",
+    "LEGAL CHECK: reporting deadlines vary by state; the piece no longer says who is covered by immigration status (standard line DERECHOS_ESTADO, src/safe_lines.py)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "m10c-presupuesto-familia",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Where helping family fits in the budget: needs, your emergency fund, a fixed family line, a family emergency pocket, then the rest; $3,000 example.",
+  "script": {
+   "title": "Dónde va la ayuda a tu familia en tu presupuesto",
+   "hook": "Guárdalo para tu próximo día de pago.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo para tu próximo día de pago.",
+     "on_screen_text": "La ayuda a tu familia, en tu presupuesto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope labeled 'Familia'. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Esto va primero.",
+     "on_screen_text": "1. Lo básico: renta, comida, luz, transporte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. four icons. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "$20 por semana ya cuenta.",
+     "on_screen_text": "2. Tu colchón, aunque sea chico",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Ejemplo: 10% de $3,000 = $300.",
+     "on_screen_text": "3. Tu número fijo para la familia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Una medicina, un hospital.",
+     "on_screen_text": "4. Un apartado para emergencias de allá",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a savings pocket. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Sin culpa.",
+     "on_screen_text": "5. Lo que queda: tus metas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small gift. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Cuídate para poder cuidar.",
+     "on_screen_text": "Si tú te hundes, no ayudas a nadie",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a life jacket. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Dónde va la ayuda a tu familia en tu presupuesto:\n1. Lo básico.\n2. Tu colchón.\n3. Tu número fijo para la familia (ejemplo: 10% de $3,000 = $300).\n4. Un apartado para emergencias de allá.\n5. Lo que queda: tus metas.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "familia",
+    "remesas",
+    "finanzasenespañol",
+    "mesdelaherenciahispana",
+    "dinerosimple"
+   ],
+   "description": "Cómo acomodar la ayuda a tu familia en tu presupuesto.",
+   "thumbnail_text": "La línea 'Familia'",
+   "sources": [],
+   "claims_to_verify": [
+    "Example arithmetic: $3,000 x 10% = $300"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m10c-plan-hermanos",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "A siblings' plan for the parents as a fill-in template: monthly total, each person's part, who pays, where receipts go, when you review.",
+  "script": {
+   "title": "El plan de los hermanos para los papás",
+   "hook": "Llénalo en el chat de los hermanos.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Llénalo en el chat de los hermanos.",
+     "on_screen_text": "El plan de los hermanos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a group chat. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Medicinas, luz, comida, renta.",
+     "on_screen_text": "Total al mes: $____",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a list. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Según lo que cada quien puede.",
+     "on_screen_text": "La parte de cada quien: $____",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three envelopes. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Una sola persona, con recibos.",
+     "on_screen_text": "Quién paga: ________",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Una carpeta o un álbum compartido.",
+     "on_screen_text": "Dónde van los recibos: ________",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a shared album. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Por ejemplo, el primer domingo del mes.",
+     "on_screen_text": "Cuándo lo revisamos: ________",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Mándaselo a tus hermanos.",
+     "on_screen_text": "Por escrito, menos pleitos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two phones. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El plan de los hermanos para los papás. Llénenlo juntos:\n• Total al mes: $____\n• La parte de cada quien: $____\n• Quién paga: ____\n• Dónde van los recibos: ____\n• Cuándo lo revisamos: ____\nPor escrito, menos pleitos.\n\nSerie 'Tu familia, aquí y allá': el dinero de las familias que viven entre dos países.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "familia",
+    "remesas",
+    "finanzasenespañol",
+    "mesdelaherenciahispana",
+    "dinerosimple"
+   ],
+   "description": "Una plantilla para organizarse entre hermanos y ayudar a los papás.",
+   "thumbnail_text": "Plan de hermanos",
+   "sources": [],
+   "claims_to_verify": [
+    "No numeric claims"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m10c-fiestas-patrias",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Fiestas patrias plan carousel: a number, a shared list of who brings what, price per pound, reused decorations, leftovers as lunches.",
+  "script": {
+   "title": "Fiestas patrias en cooperacha",
+   "hook": "Mándaselo al chat de la familia.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Mándaselo al chat de la familia.",
+     "on_screen_text": "Fiestas patrias en cooperacha",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a festive table, generic flags. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Antes de invitar.",
+     "on_screen_text": "1. Un número para lo tuyo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a sticky note. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Platillo, bebidas, postre, platos.",
+     "on_screen_text": "2. Una lista: quién trae qué",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a shared list. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "La etiqueta chiquita del estante.",
+     "on_screen_text": "3. El platillo grande, por libra",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a shelf tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Para el año que viene.",
+     "on_screen_text": "4. Decoración que se guarda",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a box of decorations. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Comidas listas para el lunes.",
+     "on_screen_text": "5. Lo que sobre, para la semana",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. containers in a fridge. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "15, 16 o 18 de septiembre.",
+     "on_screen_text": "¡Felices fiestas patrias!",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. flags, generic. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Fiestas patrias en cooperacha:\n1. Un número para lo tuyo.\n2. Una lista de quién trae qué.\n3. El platillo grande, por precio por libra.\n4. Decoración que se guarda.\n5. Lo que sobre, para la semana.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "fiestaspatrias",
+    "mesdelaherenciahispana",
+    "familia",
+    "presupuesto",
+    "dinerosimple"
+   ],
+   "description": "Cómo organizar las fiestas patrias en cooperacha.",
+   "thumbnail_text": "Cooperacha patria",
+   "sources": [],
+   "claims_to_verify": [
+    "Independence days: Sep 15 (Costa Rica, El Salvador, Guatemala, Honduras, Nicaragua), Sep 16 (Mexico), Sep 18 (Chile)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "m10c-plan-familiar",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Family emergency plan as a fill-in checklist: school emergency contacts, who picks up the kids, where the copies are, who can pay rent, an attorney's number, legal papers with a licensed attorney.",
+  "script": {
+   "title": "El plan familiar: la lista para llenar",
+   "hook": "Llénenla juntos este fin de semana.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Este fin de semana.",
+     "on_screen_text": "El plan familiar: llénenlo juntos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a family at a table with a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Y que la escuela lo tenga anotado.",
+     "on_screen_text": "Quién recoge a los niños: ________",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a school emergency card. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Actas, pasaportes, papeles importantes.",
+     "on_screen_text": "Dónde están las copias: ________",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Y cómo llega al dinero.",
+     "on_screen_text": "Quién paga la renta si no puedo: ________",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a rent receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Con licencia o acreditada.",
+     "on_screen_text": "Abogado u organización: ________",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone contact. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Un poder o una autorización de cuidado.",
+     "on_screen_text": "Papeles legales: con abogado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a lawyer's office, generic. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Aquí un 'notary' no es abogado.",
+     "on_screen_text": "Nunca con un notario",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a stamp with a red X. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El plan familiar, para llenar juntos:\n• Quién recoge a los niños (y que la escuela lo tenga).\n• Dónde están las copias de los papeles.\n• Quién paga la renta si tú no puedes.\n• El número de un abogado con licencia o una organización acreditada.\n• Los papeles legales, con un abogado con licencia, nunca con un notario.\n\nPara cualquier pregunta sobre tu situación migratoria, habla con un abogado de inmigración con licencia o un representante acreditado, nunca con un notario.\nInformación general, no es asesoría legal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "familia",
+    "remesas",
+    "finanzasenespañol",
+    "mesdelaherenciahispana",
+    "dinerosimple"
+   ],
+   "description": "Una lista para llenar el plan familiar de emergencia.",
+   "thumbnail_text": "Plan familiar",
+   "sources": [
+    "https://www.justice.gov/eoir/find-legal-representation"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions immigration status)",
+    "LEGAL CHECK: caregiver authorization and power-of-attorney rules vary by state"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "m10c-retiro-tarde",
+  "format": "carousel",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Retirement when you start late: check your Social Security credits, take any 401(k) match, an IRA (some open with an ITIN), automatic contributions, and a $200/month example over 20 years.",
+  "script": {
+   "title": "Tu retiro, aunque empieces tarde",
+   "hook": "Guárdalo. Nunca es tarde para empezar.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo.",
+     "on_screen_text": "Tu retiro, aunque empieces tarde",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an older person with a plant. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Necesitas 40: unos 10 años.",
+     "on_screen_text": "1. Revisa tus créditos del Seguro Social",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a counter. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Es dinero extra por ahorrar.",
+     "on_screen_text": "2. Si tu trabajo da 'match', tómalo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two coins becoming four. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Pregunta antes de llenar nada.",
+     "on_screen_text": "3. Una IRA: algunas abren con ITIN",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone call. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Aunque sea poco.",
+     "on_screen_text": "4. En automático, el día de pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an autopay toggle. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "Ejemplo al 6% al año; no es una promesa.",
+     "on_screen_text": "$200 al mes, 20 años ≈ $92,000",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a growing bar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Lo que importa es el tiempo.",
+     "on_screen_text": "Empieza este mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu retiro, aunque empieces tarde:\n1. Revisa tus créditos del Seguro Social (necesitas 40).\n2. Si tu trabajo da 'match', tómalo.\n3. Una IRA (algunas se abren con ITIN; pregunta antes).\n4. En automático, el día de pago.\nEjemplo: $200 al mes por 20 años, con 6% al año, serían unos $92,000 (pusiste $48,000). Es un ejemplo, no una promesa.\n\nPara cualquier pregunta sobre tu situación migratoria, habla con un abogado de inmigración con licencia o un representante acreditado, nunca con un notario.\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "retiro",
+    "segurosocial",
+    "jubilacion",
+    "finanzasenespañol",
+    "dinerosimple"
+   ],
+   "description": "Cómo empezar tu retiro aunque empieces tarde.",
+   "thumbnail_text": "Nunca es tarde",
+   "sources": [
+    "https://www.ssa.gov/espanol/",
+    "https://www.investor.gov/"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "Example arithmetic: $200/month for 240 months at 6%/yr compounded monthly ≈ $92,408; contributions $48,000",
+    "40 Social Security credits needed for retirement benefits"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "m10c-retiro-fuera",
+  "format": "carousel",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Before retiring in your home country: check SSA's Payments Abroad Screening Tool, rules for noncitizens, how payments arrive, health care costs there, and your US accounts and taxes.",
+  "script": {
+   "title": "Antes de retirarte en tu país: la lista",
+   "hook": "Guárdala antes de hacer planes.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "La lista.",
+     "on_screen_text": "Antes de retirarte en tu país",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an older couple with suitcases. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Revisa la herramienta de ssa.gov.",
+     "on_screen_text": "1. ¿Te pagan el Seguro Social allá?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Pregunta antes de mudarte.",
+     "on_screen_text": "2. Reglas distintas si no eres ciudadano",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a list. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Pregunta las opciones de depósito.",
+     "on_screen_text": "3. ¿Cómo te llega el pago?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank card. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "El seguro de aquí casi nunca cubre afuera.",
+     "on_screen_text": "4. El costo de la salud allá",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a clinic abroad. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Qué pasa con ellos si te vas.",
+     "on_screen_text": "5. Tus cuentas e impuestos de aquí",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Mándaselo a tus papás.",
+     "on_screen_text": "Pregunta antes, no después",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Antes de retirarte en tu país:\n1. ¿Te pagan el Seguro Social allá? Revisa la herramienta de pagos fuera de EE. UU. en ssa.gov.\n2. Hay reglas distintas si no eres ciudadano.\n3. ¿Cómo te llega el pago?\n4. El costo de la salud allá.\n5. Tus cuentas e impuestos de aquí.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "retiro",
+    "segurosocial",
+    "jubilacion",
+    "finanzasenespañol",
+    "dinerosimple"
+   ],
+   "description": "La lista para planear tu retiro en tu país de origen.",
+   "thumbnail_text": "Retirarte allá",
+   "sources": [
+    "https://www.ssa.gov/international/payments.html"
+   ],
+   "claims_to_verify": [
+    "SSA pays benefits abroad with restrictions; noncitizen rules differ; Medicare generally doesn't cover care abroad"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "l-familia-aqui-y-alla",
+  "format": "long",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Complete Spanish guide to helping family back home and parents without going broke: why 'whatever they ask' fails, a fixed family line with a worked $3,000 example, a family-emergency pocket, splitting parents' needs among siblings, saying 'not this month', sending for less, a family emergency plan, and protecting your own future; one made-up person's numbers carried through.",
+  "script": {
+   "title": "Ayudar a tu familia sin quedarte sin nada (guía completa)",
+   "hook": "Ana manda dinero cada vez que se lo piden. A fin de mes, nunca le queda nada. Así lo arregló.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Para millones de familias, mandar dinero a casa no es un gasto: es amor y es responsabilidad. Pero si mandas cada vez que te piden, nunca sabes cuánto te queda, y una emergencia tuya te puede hundir. En este video vemos cómo ayudar con un número fijo, cómo repartir entre hermanos, cómo decir 'este mes no puedo', cómo mandar pagando menos y cómo proteger tu propio futuro, con el ejemplo inventado de Ana. Es información general, no asesoría financiera.",
+     "on_screen_text": "Ayudar a tu familia sin quedarte sin nada",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at a kitchen table with an envelope and a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "El problema",
+     "narration": "Ana trabaja en un restaurante y le llegan unos tres mil dólares al mes. Su mamá le pide para la luz, su tío para una medicina, su hermano para la escuela de los niños. Ana dice que sí a todo. Algunos meses manda doscientos, otros setecientos. Cuando se le descompuso el carro, no tenía nada guardado y lo pagó con la tarjeta de crédito. Ese es el problema: no es que mande mucho, es que nunca sabe cuánto va a mandar.",
+     "on_screen_text": "Mandar 'lo que piden' no es un plan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with many money requests. No text, no logos, no real people."
+    },
+    {
+     "heading": "La cuenta",
+     "narration": "Así que Ana hizo su cuenta, con números de ejemplo. Renta, mil doscientos. Comida, seiscientos. Transporte, trescientos. Luz, celular e internet, doscientos. Eso suma dos mil trescientos. Le quedan setecientos. De esos, decidió que trescientos son para la familia cada mes, doscientos para su propio colchón y doscientos para todo lo demás. Por primera vez, sabe cuánto puede mandar sin quedarse sin nada.",
+     "on_screen_text": "Los $3,000 de Ana al mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple budget table on a notepad. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Los $3,000 de Ana al mes",
+      "labels": [
+       "Renta",
+       "Comida",
+       "Transporte",
+       "Servicios",
+       "Familia",
+       "Colchón",
+       "Lo demás"
+      ],
+      "values": [
+       1200,
+       600,
+       300,
+       200,
+       300,
+       200,
+       200
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo inventado; tu número será otro"
+     }
+    },
+    {
+     "heading": "El número",
+     "narration": "El secreto es que ese número sale el día de pago, no cuando llega el mensaje. Ana abrió un apartado en su cuenta que se llama 'Familia' y puso una transferencia automática de trescientos dólares cada mes. Cuando alguien le pide, ya sabe cuánto hay. Si ese mes ya mandó todo, no hay más. Tu número puede ser otro: lo importante es que sea un número y que lo decidas tú, con calma, y no en el momento de la presión.",
+     "on_screen_text": "Un número fijo, apartado el día de pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a savings pocket named 'Familia' with an autopay toggle. No text, no logos, no real people."
+    },
+    {
+     "heading": "Emergencias de allá",
+     "narration": "Pero allá también hay emergencias de verdad: un hospital, una operación, un entierro. Para eso, Ana tiene un segundo apartado, chico, que se llama 'Emergencia familia', con cincuenta dólares al mes que salen de su parte de 'todo lo demás'. En un año son seiscientos dólares. Cuando su mamá tuvo que ir al hospital, Ana mandó de ahí, sin tocar su renta y sin la tarjeta de crédito.",
+     "on_screen_text": "Un apartado para emergencias de allá",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small jar labeled 'Emergencia familia'. No text, no logos, no real people."
+    },
+    {
+     "heading": "Los hermanos",
+     "narration": "Ana tiene dos hermanos aquí. Antes, cada uno ayudaba a la mamá 'cuando podía', y casi siempre pagaba Ana. Hicieron una videollamada y sacaron la cuenta: la mamá necesita unos seiscientos al mes para medicinas, luz y comida. Lo repartieron según lo que gana cada quien: Ana trescientos, su hermano doscientos y su hermana cien. Una sola persona le paga a la mamá y guarda los recibos, y los demás le mandan su parte. Lo escribieron en una nota compartida.",
+     "on_screen_text": "Repartir entre hermanos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three siblings on a video call with a shared note. No text, no logos, no real people."
+    },
+    {
+     "heading": "Decir que no",
+     "narration": "Lo más difícil fue aprender a decir que no. Cuando su tío le pidió cuatrocientos para una fiesta, Ana le contestó con cariño: este mes ya mandé lo que aparto para la familia; el día quince te puedo mandar cincuenta. Dilo pronto, ofrece lo que sí puedes y cuándo, y explica tu número. Y nunca mandes con la tarjeta de crédito o con un préstamo, porque terminas pagando intereses por meses por algo que ya se gastó.",
+     "on_screen_text": "Cómo decir 'este mes no puedo'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a kind text message being typed. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mandar barato",
+     "narration": "Después, Ana revisó cuánto le costaba mandar. Comparó la comisión y el tipo de cambio de dos servicios el mismo día, con la calculadora gratis del enlace de la bio. Cambiar a depósito a cuenta en vez de efectivo y mandar una vez al mes en vez de cuatro le ahorró unos quince dólares al mes. Son ciento ochenta dólares al año que ahora llegan a su familia en vez de quedarse en comisiones.",
+     "on_screen_text": "Que llegue más, pagando menos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the calculator on a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Si te pasa algo",
+     "narration": "Ayudar a tu familia también es pensar qué pasa si tú faltas o no puedes trabajar. Ana dejó por escrito a quién llamar, dónde están sus papeles y quién sabe de su cuenta. Si tienes hijos, que la escuela tenga los contactos de emergencia al día. Y los papeles legales, como un poder, prepáralos con un abogado con licencia, nunca con un notario: aquí un 'notary public' solo sella firmas.",
+     "on_screen_text": "Y si a ti te pasa algo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder labeled 'Plan' and a school emergency card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tu futuro",
+     "narration": "Por último, Ana se puso una regla: su propio futuro también cuenta. Cuando su colchón llegó a mil dólares, empezó a poner cincuenta al mes para su retiro. Si un día no puede trabajar, el que la va a cuidar es ese dinero. Muchas familias se sacrifican durante años por los de allá y llegan a viejos sin nada. Cuidarte a ti no es egoísta: es lo que te permite seguir ayudando.",
+     "on_screen_text": "Tu futuro también es tu familia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an older woman smiling with a small plant. No text, no logos, no real people."
+    },
+    {
+     "heading": "Un año después",
+     "narration": "Un año después, Ana mandó a su familia tres mil seiscientos dólares, casi lo mismo que antes, pero sin sorpresas. Tiene mil dólares en su colchón, seiscientos en el apartado de emergencias de allá, y no le debe nada a la tarjeta. Su mamá recibe lo mismo cada mes y sabe con qué puede contar, y sus hermanos ya no discuten por quién pagó qué, porque está todo en la nota. Lo que cambió no fue cuánto ganaba Ana, sino que ahora decide antes, con calma, en vez de decidir con prisa cada vez que suena el celular. Y Ana duerme tranquila.",
+     "on_screen_text": "Un año después: lo que cambió",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with twelve checkmarks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Resumen. Haz tu cuenta y decide un número fijo para tu familia, apartado el día de pago. Ten un apartado chico para emergencias de allá. Repartan entre hermanos según lo que cada quien puede, por escrito. Aprende a decir 'este mes no puedo' con cariño. Compara antes de mandar. Ten un plan por si te pasa algo. Y no te olvides de tu propio futuro. Mándaselo a quien manda dinero a casa.",
+     "on_screen_text": "Un número, dos apartados y un plan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf closing the envelope and smiling. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Ayudar a tu familia sin quedarte sin nada, con el ejemplo inventado de Ana: un número fijo para la familia (ejemplo: $300 de $3,000 al mes), un apartado para emergencias de allá, repartir entre hermanos ($600 = $300 + $200 + $100), decir 'este mes no puedo', mandar pagando menos, un plan por si te pasa algo y tu propio futuro.",
+   "hashtags": [
+    "familia",
+    "remesas",
+    "finanzasenespañol",
+    "mesdelaherenciahispana",
+    "dinerosimple"
+   ],
+   "description": "La guía para ayudar a tu familia aquí y allá sin quedarte sin nada, con el ejemplo inventado de una persona: un número fijo, emergencias de allá, repartir entre hermanos, decir que no, mandar pagando menos, un plan familiar y tu propio retiro.\n\nCapítulos (estimados)\n0:00 Intro\n0:40 El problema\n1:15 La cuenta de Ana\n1:50 Un número fijo\n2:25 Emergencias de allá\n2:55 Entre hermanos\n3:35 Decir que no\n4:10 Mandar pagando menos\n4:40 Si te pasa algo\n5:10 Tu futuro\n5:40 Un año después\n6:00 Resumen\n\nInformación general, no es asesoría financiera.\n\nEnlaces (los productos de pago son nuestros):\nRemitly, Wise o Xoom: cuál conviene para mandar dinero: https://dinerosimple.netlify.app/blog/remitly-wise-o-xoom/?utm_source=youtube&utm_medium=social&utm_campaign=l-familia-aqui-y-alla\nEl Presupuesto de 20 Minutos ($12): https://dinerosimple.netlify.app/products/el-presupuesto-de-20-minutos/?utm_source=youtube&utm_medium=social&utm_campaign=l-familia-aqui-y-alla\nGuía gratis: Tu dinero en orden en 7 días: https://dinerosimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=l-familia-aqui-y-alla",
+   "thumbnail_text": "Ayudar sin hundirte",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions immigration status)",
+    "Example arithmetic: 1,200+600+300+200 = 2,300; 3,000-2,300 = 700 = 300+200+200; $50 x 12 = $600; $15 x 12 = $180; $300 x 12 = $3,600",
+    "Remittance savings example is illustrative; no provider named",
+    "Notaries public in the US are not attorneys (FTC)",
+    "Chart 'Los $3,000 de Ana al mes': Renta 1200, Comida 600, Transporte 300, Servicios 200, Familia 300, Colchón 200, Lo demás 200 (Ejemplo inventado; tu número será otro)"
+   ],
+   "title_variants": [],
+   "hook_variants": [],
+   "original_element": "Graba la pantalla creando dos apartados de ahorro, 'Familia' y 'Emergencia familia', con transferencia mensual en una app de banco de demostración, y la nota compartida de los hermanos con números de ejemplo"
+  },
+  "phase": 2,
+  "review": "legal_review"
+ },
+ {
+  "key": "l-retiro-tarde",
+  "format": "long",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Complete Spanish guide to retirement when you start late, with an SSN or an ITIN: Social Security credits and the 35 highest years, checking your earnings record, a 401(k) match, an IRA with an ITIN, a worked example starting at 45 with $200 a month, retiring in your home country, and 'retirement plan' sales pitches; one made-up worker's numbers carried through.",
+  "script": {
+   "title": "Tu retiro aunque empieces tarde, con Seguro Social o con ITIN (guía completa)",
+   "hook": "Jorge tiene cuarenta y cinco años y cero ahorrado para su retiro. Con doscientos dólares al mes, a los sesenta y cinco podría tener unos noventa y dos mil.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Mucha gente llega a los cuarenta o cincuenta años sin nada ahorrado para el retiro, porque primero estuvo la familia, la casa, los de allá. Si es tu caso, no es tarde. En este video vemos cómo funciona el retiro del Seguro Social, cómo revisar tu historial, el dinero extra que da tu trabajo, cómo ahorrar con o sin Seguro Social, qué pasa si te quieres retirar en tu país y las ofertas que debes evitar, con el ejemplo inventado de Jorge. Es información general, no asesoría financiera.",
+     "on_screen_text": "Tu retiro, aunque empieces tarde",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sitting on a bench with a notebook. No text, no logos, no real people."
+    },
+    {
+     "heading": "Jorge",
+     "narration": "Jorge tiene cuarenta y cinco años, trabaja en construcción y gana unos cuatro mil dólares al mes antes de impuestos. Lleva doce años en Estados Unidos. Su esposa trabaja limpiando oficinas. Tienen dos hijos adolescentes. Para el retiro, no tienen nada ahorrado. Jorge pensaba que ya era muy tarde, o que no le tocaba nada. Veamos qué le toca y qué puede hacer.",
+     "on_screen_text": "Jorge: 45 años, empezando de cero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a construction worker at the end of the day. No text, no logos, no real people."
+    },
+    {
+     "heading": "El Seguro Social",
+     "narration": "Si trabajas con número de Seguro Social y te descuentan ese impuesto, vas ganando créditos: hasta cuatro por año. Para el retiro necesitas cuarenta créditos, o sea, unos diez años de trabajo. Lo que recibes depende de tus treinta y cinco años con más ingresos. Si trabajaste menos de treinta y cinco años, los que faltan cuentan como cero y bajan tu pago. Por eso, cada año extra que trabajas puede subirlo.",
+     "on_screen_text": "El Seguro Social: 40 créditos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a counter showing 40 credits and a 35-year timeline. No text, no logos, no real people."
+    },
+    {
+     "heading": "Revisa tu historial",
+     "narration": "Jorge abrió su cuenta de mi Seguro Social en ssa punto gov y revisó su historial de ingresos año por año. Encontró un año en que su patrón no reportó lo que le pagó. Con sus talones de pago y su W-2 de ese año, pidió que lo corrigieran. Un año que falta es dinero que pierdes para siempre. En la misma cuenta ves un cálculo de cuánto recibirías según la edad a la que te retires.",
+     "on_screen_text": "Revisa tu historial en ssa.gov",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop with a generic earnings table, one year missing. No text, no logos, no real people."
+    },
+    {
+     "heading": "La edad",
+     "narration": "Puedes empezar a cobrar desde los sesenta y dos años, pero te pagan menos para siempre. A tu edad plena de retiro, que para quien nació en 1960 o después es a los sesenta y siete, recibes el pago completo. Y si esperas hasta los setenta, recibes más cada mes. Jorge todavía no tiene que decidir, pero ya sabe que esperar unos años puede hacer una gran diferencia.",
+     "on_screen_text": "A qué edad te retiras cambia el pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a timeline with 62, 67 and 70 marked. No text, no logos, no real people."
+    },
+    {
+     "heading": "El match",
+     "narration": "Si tu trabajo tiene un plan 401(k) y ofrece 'match', es dinero extra por ahorrar: por ejemplo, si pones el tres por ciento de tu sueldo, la empresa pone otro tres. La compañía de Jorge no tiene plan, pero la de su esposa sí, y ella no se había inscrito. Ahora pone el tres por ciento y la empresa pone lo mismo. Es como un aumento que estaba dejando en la mesa.",
+     "on_screen_text": "El dinero extra de tu trabajo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two coins becoming four. No text, no logos, no real people."
+    },
+    {
+     "heading": "Con ITIN",
+     "narration": "Si trabajas con ITIN, no ganas créditos del Seguro Social con ese número. Pero sí puedes ahorrar por tu cuenta. Una cuenta de retiro IRA pide que tengas ingresos de trabajo que declares en tus impuestos, y algunas casas de inversión y cooperativas la abren con ITIN. Pregunta antes de llenar nada. Y para cualquier pregunta sobre tu situación migratoria, habla con un abogado de inmigración con licencia o un representante acreditado, nunca con un notario.",
+     "on_screen_text": "Si tienes ITIN en vez de Seguro Social",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a passport next to a retirement account statement, generic. No text, no logos, no real people."
+    },
+    {
+     "heading": "El ejemplo",
+     "narration": "Jorge abrió una IRA y puso una transferencia automática de doscientos dólares al mes, en un fondo de fecha objetivo, que es una sola inversión sencilla y diversificada. De los cuarenta y cinco a los sesenta y cinco son veinte años: en total pone cuarenta y ocho mil dólares. Si su dinero creciera un seis por ciento al año, que es solo un ejemplo y no una promesa, a los sesenta y cinco tendría unos noventa y dos mil. Las inversiones suben y bajan, y no hay nada garantizado.",
+     "on_screen_text": "Jorge: $200 al mes por 20 años",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bar growing over twenty years. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$200 al mes por 20 años",
+      "labels": [
+       "Lo que pone",
+       "Con 6% al año (ejemplo)"
+      ],
+      "values": [
+       48000,
+       92400
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo, no una promesa; las inversiones suben y bajan"
+     }
+    },
+    {
+     "heading": "Sube poco a poco",
+     "narration": "Jorge también se puso una regla: cada vez que le suben el sueldo, le sube veinte dólares a su IRA. Y cuando sus hijos terminen la escuela, lo que gastaba en ellos va para el retiro. Hay un límite de cuánto puedes poner en una IRA cada año, y se anuncia cada otoño, pero para la mayoría de la gente el límite no es el problema: el problema es empezar. Con esos aumentos pequeños, Jorge no siente el cambio en su presupuesto, pero en diez años ya estaría poniendo bastante más que al principio. Y si un mes de verdad no puede, pausa la transferencia y la vuelve a prender el mes siguiente, en vez de cancelar la cuenta.",
+     "on_screen_text": "Súbele cada vez que puedas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a staircase of small steps. No text, no logos, no real people."
+    },
+    {
+     "heading": "En tu país",
+     "narration": "Jorge y su esposa sueñan con retirarse en su pueblo. Antes de hacer planes, revisaron la herramienta de pagos fuera de Estados Unidos en ssa punto gov: el Seguro Social paga beneficios en muchos países, pero hay excepciones y reglas distintas si no eres ciudadano. Y el seguro médico de aquí casi nunca cubre afuera, así que también hay que planear la salud allá.",
+     "on_screen_text": "Si te quieres retirar en tu país",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an older couple with suitcases and a map. No text, no logos, no real people."
+    },
+    {
+     "heading": "Las ofertas",
+     "narration": "Un conocido le ofreció a Jorge un 'plan de retiro' de doscientos cincuenta dólares al mes. Resultó ser un seguro de vida permanente con comisiones altas, que casi no devuelve nada si lo cancelas en los primeros años. Antes de firmar, pregunta: ¿es un seguro o una cuenta de inversión? ¿Cuánto me devuelven si lo cancelo en cinco años? ¿Cuánto gana usted si lo firmo? Y nunca firmes el mismo día.",
+     "on_screen_text": "Cuidado con los 'planes de retiro' de amigos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a person politely saying no to a salesperson. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Resumen. Si trabajas con Seguro Social, revisa tus créditos y tu historial en ssa punto gov, y corrige los años que falten. La edad a la que empiezas a cobrar cambia tu pago. Si tu trabajo da match, tómalo. Con o sin Seguro Social, una IRA en automático, aunque sea poco. Súbele cada vez que puedas. Y antes de firmar un 'plan de retiro', pregunta. Nunca es tarde para empezar.",
+     "on_screen_text": "Créditos, historial, match, IRA y paciencia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf closing the notebook and smiling. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu retiro aunque empieces tarde, con el ejemplo inventado de Jorge (45 años, cero ahorrado): 40 créditos del Seguro Social, tus 35 años más altos, revisar tu historial en ssa.gov, la edad para cobrar, el match de tu trabajo, una IRA con ITIN, $200 al mes por 20 años (ejemplo al 6%: unos $92,000, pusiste $48,000), retirarte en tu país y los 'planes de retiro' que debes evitar.",
+   "hashtags": [
+    "retiro",
+    "segurosocial",
+    "jubilacion",
+    "finanzasenespañol",
+    "dinerosimple"
+   ],
+   "description": "La guía del retiro aunque empieces tarde, con Seguro Social o con ITIN, con el ejemplo inventado de un trabajador: créditos del Seguro Social, tu historial, la edad para cobrar, el match, una IRA con ITIN, un ejemplo de 20 años, retirarte en tu país y las ofertas que debes evitar.\n\nCapítulos (estimados)\n0:00 Intro\n0:40 Jorge\n1:05 El Seguro Social\n1:40 Revisa tu historial\n2:15 La edad para cobrar\n2:45 El match\n3:15 Con ITIN\n3:55 El ejemplo de 20 años\n4:35 Súbele poco a poco\n5:00 En tu país\n5:30 Las ofertas\n6:05 Resumen\n\nInformación general, no es asesoría financiera.\n\nEnlaces (los productos de pago son nuestros):\nCuenta de banco y tarjeta con ITIN: https://dinerosimple.netlify.app/blog/cuenta-y-tarjeta-con-itin/?utm_source=youtube&utm_medium=social&utm_campaign=l-retiro-tarde\nEmpieza a Invertir con $100 al Mes ($19): https://dinerosimple.netlify.app/products/empieza-a-invertir-con-100-al-mes/?utm_source=youtube&utm_medium=social&utm_campaign=l-retiro-tarde\nGuía gratis: Tu dinero en orden en 7 días: https://dinerosimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=l-retiro-tarde",
+   "thumbnail_text": "Nunca es tarde",
+   "sources": [
+    "https://www.ssa.gov/espanol/",
+    "https://www.investor.gov/",
+    "https://www.ssa.gov/international/payments.html"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "40 credits; up to 4 per year; benefit based on highest 35 years (missing years count as zero)",
+    "Benefits can start at 62 (reduced); full retirement age 67 for those born 1960 or later; delayed credits to 70",
+    "Example arithmetic: $200/month x 240 = $48,000; FV at 6%/yr compounded monthly ≈ $92,408",
+    "IRA requires taxable compensation; some custodians accept an ITIN (varies)",
+    "SSA payments abroad: restrictions and noncitizen rules; Medicare generally doesn't cover care abroad",
+    "Chart '$200 al mes por 20 años': Lo que pone 48000, Con 6% al año (ejemplo) 92400 (Ejemplo, no una promesa; las inversiones suben y bajan)"
+   ],
+   "title_variants": [],
+   "hook_variants": [],
+   "original_element": "Graba la pantalla de la calculadora de interés compuesto de Investor.gov con $200 al mes, 20 años y 6%, y la página de ssa.gov en español donde se abre la cuenta de mi Seguro Social (sin iniciar sesión)"
+  },
+  "phase": 2,
+  "review": "legal_review"
+ }
+]

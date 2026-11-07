@@ -18,6 +18,7 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+from . import i18n
 from .config import BrandProfile, Settings, load_brand, load_brands
 from .db import DB, now_iso
 from .guardrails import check_cadence, run_content_checks, summarize
@@ -93,7 +94,7 @@ class Factory:
         brand = self.brand(idea["brand"])
         # Research only when a real model will read it; offline drafts don't need it.
         do_research = (self.llm.provider != "offline") if research is None else research
-        sources = rs.gather(idea["title"], online=do_research)
+        sources = rs.gather(idea["title"], online=do_research, lang=i18n.lang_of(brand))
         script, verdict = write_with_review(self.llm, brand, idea["title"], idea["angle"], idea["format"],
                                             notes=notes, research=rs.as_prompt(sources))
         for s in sources:
@@ -244,6 +245,24 @@ class Factory:
                                     [post_id]))
         except Exception:  # queue table not created yet
             return False
+
+    def mark_language_reviewed(self, post_id: int, reviewer: str, actor: str = "human") -> dict:
+        """Record that a fluent speaker read and corrected a non-English post."""
+        reviewer = reviewer.strip()
+        if not reviewer:
+            raise ValueError("Give the reviewer's name")
+        post = self._post(post_id)
+        meta = post.get("meta") or {}
+        meta["native_review"] = reviewer
+        meta["native_review_at"] = now_iso()
+        self.db.update("posts", post_id, {"meta": meta})
+        self.db.log("post.language_reviewed", "post", post_id, {"reviewer": reviewer}, actor=actor)
+        # Same sign-off as the review gate's native_review, so one command covers both.
+        from . import review
+        brand = self.brands().get(post["brand"])
+        if "native_review" in review.pending(self._post(post_id), brand):
+            review.pass_stage(self, post_id, "native_review", by=reviewer, actor=actor)
+        return self.check(post_id)
 
     def reject(self, post_id: int, reason: str = "", actor: str = "human") -> None:
         self._post(post_id)

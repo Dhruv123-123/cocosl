@@ -1,0 +1,21 @@
+# Money Made Simple website (site/). Netlify: "Add new site" > "Import from Git" > pick this repo.
+# Everything below is picked up automatically; no settings to type.
+[build]
+  base = "site"
+  command = "python3 build.py && python3 tools/check_site.py"
+  publish = "public"
+
+[build.environment]
+  PYTHON_VERSION = "3.12"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+
+[[headers]]
+  for = "/emails/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
