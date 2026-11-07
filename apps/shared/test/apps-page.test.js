@@ -62,8 +62,8 @@ test('the install pages link every app and only local icons', () => {
     const html = appsPage(lang);
     for (const [, src] of html.matchAll(/<img src="([^"]+)"/g)) assert.ok(existsSync(join(root, lang === 'es' ? 'es' : '', src)), src);
     for (const [, href] of html.matchAll(/<a class="btn" href="([^"]+)"/g)) {
-      const p = join(root, lang === 'es' ? 'es' : '', href);
-      assert.ok(existsSync(href.endsWith('/') ? join(p, 'index.html') : p), href);
+      const p = join(root, lang === 'es' ? 'es' : '', href.split('?')[0]);
+      assert.ok(existsSync(p.endsWith('/') ? join(p, 'index.html') : p), href);
     }
   }
 });

@@ -247,6 +247,22 @@ const checks = [
     if ((await page.locator('#funds .fund').count()) !== 2) throw new Error('not saved');
   }],
   ['/budget/fondos-ahorro.html', '#ideas .chip'],
+  ['/app/', '#tools .tile', async (page) => {
+    if ((await page.locator('#tools .tile').count()) !== 10) throw new Error('ten tools');
+    await page.waitForSelector('#status.ready', { timeout: 30000 });
+    await page.evaluate(() => navigator.serviceWorker.ready);
+    await page.waitForFunction(() => !!navigator.serviceWorker.controller, null, { timeout: 10000 });
+    await page.context().setOffline(true);
+    try {
+      for (const [u, sel] of [['/budget/split-bills.html', '#h-people'], ['/money-calculators/take-home-pay/', 'h1'], ['/scam-checker/', 'h1'], ['/app/?source=pwa', '#tools .tile']]) {
+        await page.goto(`${new URL(page.url()).origin}${u}`);
+        if (!(await page.locator(sel).first().textContent())?.trim()) throw new Error(`offline: ${u}`);
+      }
+    } finally { await page.context().setOffline(false); }
+    await page.click('#lang');
+    if (!/Dividir gastos/.test(await page.textContent('#tools'))) throw new Error('spanish');
+    await page.click('#lang');
+  }],
   ['/budget/wedding-budget.html', '#cats .wcat', async (page) => {
     await page.fill('[name=total]', '30000'); await page.fill('[name=guests]', '100');
     await page.click('#split');
@@ -308,7 +324,7 @@ const checks = [
     if (!/mms-calc/.test(await page.inputValue('#code'))) throw new Error('calc snippet');
   }],
   ['/apps.html', '#apps .app', async (page) => {
-    if ((await page.locator('#apps .app').count()) !== 4) throw new Error('four apps');
+    if ((await page.locator('#apps .app').count()) !== 5) throw new Error('five apps');
     for (const src of await page.locator('#apps img').evaluateAll((els) => els.map((e) => e.complete && e.naturalWidth))) if (!src) throw new Error('icon did not load');
     const m = await (await page.request.get(new URL('manifest.webmanifest', page.url()).href)).json();
     if (!m.icons?.length) throw new Error('hub manifest');

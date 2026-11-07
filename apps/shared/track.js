@@ -6,6 +6,8 @@
 // tagged here and one tagged by the factory look the same, and the webhooks parse both.
 // Conventions: docs/UTM.md.
 
+import { addAppHome } from './app-home.js';
+
 const CLEAN = /[^A-Za-z0-9_.-]+/g;
 export const UTM_KEYS = ['source', 'medium', 'campaign', 'content'];
 export const REF_SEP = '__';
@@ -134,6 +136,7 @@ export function rememberVisit(search, storage) {
  * - Tags Gumroad, Stripe and Lemon Squeezy links with UTM at click time so sales are attributed (see checkoutUtm).
  */
 export function initTracking({ config, app, page = '', win = globalThis.window, doc = globalThis.document } = {}) {
+  addAppHome(win, doc); // Home button when opened inside the installed app (app-home.js)
   const a = config?.analytics || {};
   if (!a.plausibleDomain || !win || !doc) return false;
   win.plausible = win.plausible || function plausible() { (win.plausible.q = win.plausible.q || []).push(arguments); };

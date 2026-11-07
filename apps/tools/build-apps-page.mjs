@@ -15,6 +15,8 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&l
 export const APPS = [
   { manifest: 'manifest.webmanifest', open: 'index.html', what: 'Every calculator, tracker, letter and scam check in one place. The tools you\'ve opened work offline.',
     es: { open: 'es/index.html', name: 'Herramientas de dinero', what: 'Todas las calculadoras y herramientas en español en un solo lugar. Las que ya abriste funcionan sin internet.' } },
+  { manifest: 'app/manifest.webmanifest', open: 'app/index.html', what: 'Ten money tools on one home screen: budget, paycheck, bills, debt, savings, bill splitting and a scam check. All ten work offline, with no account.',
+    es: { open: 'app/index.html?lang=es', what: 'Diez herramientas de dinero en una sola pantalla: presupuesto, salario neto, pagos, deudas, ahorro, dividir gastos y revisar estafas. Funcionan sin internet y sin cuenta.' } },
   { manifest: 'budget/manifest.webmanifest', open: 'budget/index.html', what: 'A monthly budget you keep up in 20 minutes, plus the bill tracker and 0% deal countdown. Your numbers stay on your phone.',
     es: { name: 'The 20-Minute Budget', what: 'Un presupuesto mensual sencillo. Por ahora solo en inglés.', englishOnly: true } },
   { manifest: 'budget/bill-calendar/manifest.webmanifest', open: 'budget/bill-calendar/index.html', what: 'Every bill this month on a calendar. Tick them off as you pay and send reminders to your phone\'s calendar.' },
