@@ -1,0 +1,524 @@
+{
+  "name": "Money Made Simple",
+  "url": "https://moneymadesimple.netlify.app",
+  "tagline": "One money move you can make this week, explained in under a minute.",
+  "description": "Plain-English money guides for students and early-career workers: budgets that stick, first-time investing, credit scores and debt payoff, with the maths shown and no hype.",
+  "pillars": {
+    "budgeting": "Budgeting that sticks",
+    "investing": "First-time investing",
+    "credit-and-debt": "Credit and debt payoff",
+    "money-tools": "Money apps and tools"
+  },
+  "socials": {
+    "Instagram": "https://www.instagram.com/moneymadesimple/",
+    "YouTube": "https://www.youtube.com/@moneymadesimple",
+    "TikTok": "https://www.tiktok.com/@moneymadesimple"
+  },
+  "contact_email": "hello@example.com",
+  "editor": {
+    "_note": "The person who edits and fact-checks every article. Replace name and bio with the real editor (true statements only, no credentials they don't have), then set placeholder to false: articles then name them as author.",
+    "name": "The Money Made Simple editor",
+    "placeholder": true,
+    "bio": "This page will introduce the person who edits Money Made Simple: who they are, why they write about money, and what they do and don't have expertise in. Until then, here's what the editor does on every page."
+  },
+  "email": {
+    "provider": "netlify",
+    "action": "",
+    "email_field": "",
+    "privacy_note": "One useful email a week. Unsubscribe in one click.",
+    "thanks_note": "Your download is below. Your first email is on its way too (check Promotions or Spam if you don't see it in a few minutes)."
+  },
+  "lead_magnet": {
+    "title": "The 7-Day Money Reset",
+    "file": "the-7-day-money-reset.pdf",
+    "headline": "Get your money organised in 7 days, 15 minutes a day.",
+    "short": "Seven 15-minute tasks, a printable checklist and worksheets. Free.",
+    "pitch": "A free 10-page PDF: seven 15-minute tasks that find your real numbers, stop surprise fees, protect your credit and set up a weekly spending number. Printable checklist and worksheets included.",
+    "days": [
+      "Find your real monthly take-home pay and list every fixed bill.",
+      "Hunt down forgotten subscriptions and cancel the ones you don't use.",
+      "Set three bank alerts that stop overdrafts before they happen.",
+      "Open (or check) a separate, insured savings account and automate a first transfer.",
+      "Pull your free credit reports, check them like an auditor, and freeze your credit.",
+      "Check whether you're getting your full 401(k) match, or note when you'll start.",
+      "Set your one weekly spending number and book a 20-minute weekly check-in."
+    ]
+  },
+  "affiliates": [],
+  "disclaimer": "Educational content, not financial, tax or investment advice. Examples are illustrations with assumed numbers, not promises. Check current rules and rates with the official source before acting.",
+  "ai_disclosure": "Drafted with AI help, fact-checked by a person. A person chooses every topic, checks the facts and approves everything before it is published.",
+  "search_verification": {"google": "", "bing": ""},
+  "apps_url": "https://mms-tools.netlify.app",
+  "analytics": {
+    "plausible_domain": "moneymadesimple.netlify.app",
+    "plausible_host": "https://plausible.io"
+  },
+  "analytics_snippet": "",
+  "programs_note": "Comparison-page links: paste your approved affiliate URL into affiliate_url. Empty = link to the official site with no commission and no 'sponsored' label. Payout notes come from research/02-affiliate-programs.md; confirm in the network dashboard.",
+  "programs": {
+    "sofi": {
+      "name": "SoFi",
+      "site": "https://www.sofi.com/",
+      "affiliate_url": "",
+      "network": "Impact / direct",
+      "note": "$100-$150 per lead (confirm qualifying action)",
+      "category": "Savings and banking",
+      "blurb": "Online checking and savings in one app; also investing and loans.",
+      "compare": "best-high-yield-savings-accounts"
+    },
+    "cit": {
+      "name": "CIT Bank",
+      "site": "https://www.cit.com/",
+      "affiliate_url": "",
+      "network": "CJ",
+      "note": "~$100 per order",
+      "category": "Savings and banking",
+      "blurb": "Online savings accounts from a division of First Citizens Bank.",
+      "compare": "best-high-yield-savings-accounts"
+    },
+    "ally": {
+      "name": "Ally Bank",
+      "site": "https://www.ally.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": "",
+      "category": "Savings and banking",
+      "blurb": "Online bank with savings buckets for sinking funds.",
+      "compare": "best-high-yield-savings-accounts"
+    },
+    "marcus": {
+      "name": "Marcus by Goldman Sachs",
+      "site": "https://www.marcus.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": "",
+      "category": "Savings and banking",
+      "blurb": "Simple online savings from Goldman Sachs Bank USA.",
+      "compare": "best-high-yield-savings-accounts"
+    },
+    "capital_one": {
+      "name": "Capital One",
+      "site": "https://www.capitalone.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": "",
+      "category": "Savings and banking",
+      "blurb": "Bank with online savings, some branches and cafés, and secured cards.",
+      "compare": "best-high-yield-savings-accounts"
+    },
+    "rocket_money": {
+      "name": "Rocket Money",
+      "site": "https://www.rocketmoney.com/",
+      "affiliate_url": "",
+      "network": "Impact",
+      "note": "$4-$10 per action",
+      "category": "Budgeting apps",
+      "blurb": "Subscription finder, spending tracker and paid bill negotiation.",
+      "compare": "rocket-money-vs-ynab-vs-monarch"
+    },
+    "ynab": {
+      "name": "YNAB",
+      "site": "https://www.ynab.com/",
+      "affiliate_url": "",
+      "network": "Direct (invite-only)",
+      "note": "",
+      "category": "Budgeting apps",
+      "blurb": "Zero-based budgeting method with an app.",
+      "compare": "rocket-money-vs-ynab-vs-monarch"
+    },
+    "monarch": {
+      "name": "Monarch Money",
+      "site": "https://www.monarchmoney.com/",
+      "affiliate_url": "",
+      "network": "Impact",
+      "note": "not published",
+      "category": "Budgeting apps",
+      "blurb": "Household money dashboard: budgets, net worth, sharing.",
+      "compare": "rocket-money-vs-ynab-vs-monarch"
+    },
+    "copilot": {
+      "name": "Copilot Money",
+      "site": "https://www.copilot.money/",
+      "affiliate_url": "",
+      "network": "",
+      "note": "",
+      "category": "Budgeting apps",
+      "blurb": "Polished budgeting app, Apple-first.",
+      "compare": "best-budgeting-apps"
+    },
+    "everydollar": {
+      "name": "EveryDollar",
+      "site": "https://www.everydollar.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": "",
+      "category": "Budgeting apps",
+      "blurb": "Zero-based budgeting, free manual version.",
+      "compare": "best-budgeting-apps"
+    },
+    "goodbudget": {
+      "name": "Goodbudget",
+      "site": "https://goodbudget.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": "",
+      "category": "Budgeting apps",
+      "blurb": "Digital envelope budgeting, free tier, no bank linking.",
+      "compare": "best-budgeting-apps"
+    },
+    "discover": {
+      "name": "Discover",
+      "site": "https://www.discover.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": "",
+      "category": "Building credit",
+      "blurb": "Secured credit card with upgrade reviews.",
+      "compare": "best-credit-builder-cards"
+    },
+    "chime": {
+      "name": "Chime",
+      "site": "https://www.chime.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": "",
+      "category": "Building credit",
+      "blurb": "Credit-builder card tied to a Chime account.",
+      "compare": "best-credit-builder-cards"
+    },
+    "self": {
+      "name": "Self",
+      "site": "https://www.self.inc/",
+      "affiliate_url": "",
+      "network": "",
+      "note": "",
+      "category": "Building credit",
+      "blurb": "Credit-builder loan with a secured card option.",
+      "compare": "best-credit-builder-cards"
+    },
+    "betterment": {
+      "name": "Betterment",
+      "site": "https://www.betterment.com/",
+      "affiliate_url": "",
+      "network": "Impact",
+      "note": "$25-$1,250 tiered; SEC Marketing Rule applies",
+      "category": "Investing",
+      "blurb": "Robo-advisor with goal planning and tax-loss harvesting.",
+      "compare": "best-robo-advisors"
+    },
+    "wealthfront": {
+      "name": "Wealthfront",
+      "site": "https://www.wealthfront.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": "",
+      "category": "Investing",
+      "blurb": "Robo-advisor with planning tools.",
+      "compare": "best-robo-advisors"
+    },
+    "empower": {
+      "name": "Empower",
+      "site": "https://www.empower.com/",
+      "affiliate_url": "",
+      "network": "Impact",
+      "note": "~$115 per lead",
+      "category": "Investing",
+      "blurb": "Free net worth and retirement tracking tools; paid advisory service.",
+      "compare": ""
+    },
+    "acorns": {
+      "name": "Acorns",
+      "site": "https://www.acorns.com/",
+      "affiliate_url": "",
+      "network": "Impact",
+      "note": "~$10 per lead",
+      "category": "Investing",
+      "blurb": "Round-up investing with a flat monthly fee.",
+      "compare": "best-robo-advisors"
+    },
+    "schwab": {
+      "name": "Charles Schwab",
+      "site": "https://www.schwab.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": "",
+      "category": "Investing",
+      "blurb": "Brokerage; robo portfolios with no advisory fee advertised.",
+      "compare": "best-robo-advisors"
+    },
+    "vanguard": {
+      "name": "Vanguard",
+      "site": "https://investor.vanguard.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": "",
+      "category": "Investing",
+      "blurb": "Brokerage known for index funds; low-fee digital advisor.",
+      "compare": "best-robo-advisors"
+    },
+    "aura": {
+      "name": "Aura",
+      "site": "https://www.aura.com/",
+      "affiliate_url": "",
+      "network": "Impact",
+      "note": "$65 per enrollment",
+      "category": "Fraud and identity",
+      "blurb": "Identity theft protection bundles with insurance and security tools.",
+      "compare": "best-identity-theft-protection"
+    },
+    "lifelock": {
+      "name": "LifeLock",
+      "site": "https://www.lifelock.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": "",
+      "category": "Fraud and identity",
+      "blurb": "Identity theft protection tiers from Gen Digital (Norton).",
+      "compare": "best-identity-theft-protection"
+    },
+    "identity_guard": {
+      "name": "Identity Guard",
+      "site": "https://www.identityguard.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": "",
+      "category": "Fraud and identity",
+      "blurb": "Identity theft protection, part of Aura.",
+      "compare": "best-identity-theft-protection"
+    },
+    "experian": {
+      "name": "Experian",
+      "site": "https://www.experian.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": "",
+      "category": "Fraud and identity",
+      "blurb": "Credit bureau with free and paid credit monitoring.",
+      "compare": "best-identity-theft-protection"
+    },
+    "nfcc": {
+      "name": "NFCC",
+      "site": "https://www.nfcc.org/",
+      "affiliate_url": "",
+      "network": "",
+      "note": "",
+      "category": "Debt help",
+      "blurb": "Network of nonprofit credit counselling agencies.",
+      "compare": "best-balance-transfer-cards"
+    },
+    "freetaxusa": {
+      "name": "FreeTaxUSA",
+      "site": "https://www.freetaxusa.com/",
+      "affiliate_url": "",
+      "network": "FreeTaxUSA (direct)",
+      "note": "",
+      "category": "Taxes",
+      "blurb": "Low-cost tax filing; federal filing free, state return extra.",
+      "compare": ""
+    },
+    "taxact": {
+      "name": "TaxAct",
+      "site": "https://www.taxact.com/",
+      "affiliate_url": "",
+      "network": "TaxAct (CJ / TaxAct Alliance)",
+      "note": "",
+      "category": "Taxes",
+      "blurb": "Tax filing software with several paid tiers.",
+      "compare": ""
+    },
+    "kikoff": {
+      "name": "Kikoff",
+      "site": "https://kikoff.com/",
+      "affiliate_url": "",
+      "network": "Kikoff (FlexOffers)",
+      "note": "",
+      "category": "Building credit",
+      "blurb": "Credit-builder account with a small monthly fee.",
+      "compare": "best-credit-builder-cards"
+    },
+    "fidelity": {
+      "name": "Fidelity",
+      "site": "https://www.fidelity.com/retirement-ira/roth-ira",
+      "affiliate_url": "",
+      "network": "none (no affiliate)",
+      "note": "",
+      "category": "Investing",
+      "blurb": "Brokerage with no-minimum IRAs and index funds.",
+      "compare": ""
+    }
+  },
+  "free_tools": [
+    {
+      "name": "AnnualCreditReport.com",
+      "url": "https://www.annualcreditreport.com/",
+      "blurb": "The official site for free weekly credit reports from all three bureaus.",
+      "category": "Fraud and identity"
+    },
+    {
+      "name": "IdentityTheft.gov",
+      "url": "https://www.identitytheft.gov/",
+      "blurb": "The FTC's free recovery plan if your identity is stolen.",
+      "category": "Fraud and identity"
+    },
+    {
+      "name": "FDIC BankFind",
+      "url": "https://banks.data.fdic.gov/bankfind-suite/bankfind",
+      "blurb": "Check that a bank (or your app's partner bank) is FDIC-insured.",
+      "category": "Savings and banking"
+    },
+    {
+      "name": "Investor.gov calculators",
+      "url": "https://www.investor.gov/financial-tools-calculators",
+      "blurb": "The SEC's free compound interest and fund fee calculators.",
+      "category": "Investing"
+    },
+    {
+      "name": "IRS retirement plan pages",
+      "url": "https://www.irs.gov/retirement-plans",
+      "blurb": "Current IRA and 401(k) limits and rules.",
+      "category": "Investing"
+    },
+    {
+      "name": "Google Sheets",
+      "url": "https://sheets.google.com/",
+      "blurb": "Free spreadsheets; opens our templates.",
+      "category": "Budgeting apps"
+    }
+  ],
+  "blog_redirects_note": "Blog slugs whose topic is covered by a /compare/ page. The build skips any article with these slugs (so a duplicate never ships), rewrites links to them, and leaves a 301/noindex redirect at the old URL.",
+  "blog_redirects": {
+    "best-budgeting-apps": "/compare/best-budgeting-apps/",
+    "best-high-yield-savings-accounts": "/compare/best-high-yield-savings-accounts/",
+    "best-robo-advisors-for-beginners": "/compare/best-robo-advisors/",
+    "monarch-vs-ynab": "/compare/rocket-money-vs-ynab-vs-monarch/"
+  },
+  "article_compare_note": "Article slug -> comparison page shown in a 'Compare your options' box on the article; each comparison page lists the articles that point at it.",
+  "article_compare": {
+    "apr-vs-apy-explained": "best-high-yield-savings-accounts",
+    "cds-explained": "high-yield-savings-vs-cds",
+    "what-is-an-index-fund": "best-robo-advisors",
+    "secured-credit-cards-explained": "best-credit-builder-cards",
+    "what-to-do-if-your-identity-is-stolen": "best-identity-theft-protection",
+    "credit-utilization-explained": "best-credit-builder-cards",
+    "how-to-choose-a-checking-account": "ally-vs-marcus",
+    "retirement-savings-in-your-20s": "best-robo-advisors",
+    "buy-now-pay-later-explained": "balance-transfer-vs-personal-loan",
+    "how-to-lower-your-utility-bills": "best-bill-negotiation-services",
+    "how-to-spot-a-scam-text": "best-identity-theft-protection",
+    "sofi-review": "best-high-yield-savings-accounts",
+    "cit-bank-review": "best-high-yield-savings-accounts",
+    "ally-bank-review": "ally-vs-marcus",
+    "high-yield-savings-vs-money-market": "high-yield-savings-vs-cds",
+    "best-bank-account-for-college-students": "best-high-yield-savings-accounts",
+    "how-to-build-an-emergency-fund": "best-high-yield-savings-accounts",
+    "is-my-savings-app-fdic-insured": "best-high-yield-savings-accounts",
+    "sinking-funds-explained": "best-high-yield-savings-accounts",
+    "rocket-money-review": "rocket-money-vs-ynab-vs-monarch",
+    "ynab-review": "rocket-money-vs-ynab-vs-monarch",
+    "monarch-money-review": "rocket-money-vs-ynab-vs-monarch",
+    "budgeting-app-vs-spreadsheet": "best-budgeting-apps",
+    "how-to-make-a-budget-you-will-keep": "best-budgeting-apps",
+    "find-and-cancel-subscriptions": "best-bill-negotiation-services",
+    "betterment-review": "best-robo-advisors",
+    "empower-review": "best-robo-advisors",
+    "acorns-review": "best-robo-advisors",
+    "how-to-start-investing-with-100-a-month": "best-robo-advisors",
+    "where-to-open-a-roth-ira": "best-robo-advisors",
+    "expense-ratios-explained": "best-robo-advisors",
+    "self-credit-builder-review": "best-credit-builder-cards",
+    "how-credit-scores-work": "best-credit-builder-cards",
+    "aura-review": "best-identity-theft-protection",
+    "how-to-freeze-your-credit": "best-identity-theft-protection",
+    "debt-avalanche-vs-snowball": "best-balance-transfer-cards",
+    "are-robo-advisors-worth-it": "best-robo-advisors",
+    "how-to-choose-a-budgeting-app": "best-budgeting-apps",
+    "how-to-open-a-high-yield-savings-account": "best-high-yield-savings-accounts",
+    "how-to-file-taxes-for-the-first-time": "freetaxusa-vs-taxact",
+    "freetaxusa-review": "freetaxusa-vs-taxact",
+    "best-tax-software-for-simple-returns": "freetaxusa-vs-taxact",
+    "how-credit-card-interest-works": "balance-transfer-vs-personal-loan",
+    "debt-consolidation-explained": "balance-transfer-vs-personal-loan",
+    "how-to-save-for-a-house-down-payment": "high-yield-savings-vs-cds",
+    "how-to-budget-with-irregular-income": "ynab-vs-everydollar",
+    "how-to-split-finances-as-a-couple": "best-budgeting-apps",
+    "how-to-lower-your-grocery-bill": "best-budgeting-apps",
+    "how-to-dispute-a-credit-report-error": "best-identity-theft-protection",
+    "how-much-car-can-i-afford": "best-high-yield-savings-accounts",
+    "hsa-vs-fsa": "best-high-yield-savings-accounts",
+    "tax-deductions-vs-tax-credits": "freetaxusa-vs-taxact",
+    "self-employment-tax-explained": "freetaxusa-vs-taxact",
+    "how-to-fill-out-a-w-4": "freetaxusa-vs-taxact",
+    "standard-deduction-vs-itemizing": "freetaxusa-vs-taxact",
+    "earned-income-tax-credit": "freetaxusa-vs-taxact",
+    "how-to-file-a-tax-extension": "freetaxusa-vs-taxact",
+    "what-to-do-if-you-cant-pay-your-taxes": "balance-transfer-vs-personal-loan",
+    "ira-contribution-before-tax-deadline": "best-robo-advisors",
+    "how-to-build-credit-from-scratch": "best-credit-builder-cards",
+    "how-much-emergency-fund-do-i-need": "best-high-yield-savings-accounts",
+    "renters-insurance-explained": "best-bill-negotiation-services",
+    "how-to-negotiate-a-raise": "best-budgeting-apps",
+    "how-to-budget-for-a-trip": "high-yield-savings-vs-cds",
+    "what-is-a-good-credit-score": "best-credit-builder-cards",
+    "college-student-budget": "best-budgeting-apps",
+    "no-spend-challenge": "ynab-vs-everydollar",
+    "how-to-pay-off-student-loans-faster": "balance-transfer-vs-personal-loan",
+    "moving-out-for-the-first-time": "best-budgeting-apps",
+    "how-to-read-a-pay-stub": "freetaxusa-vs-taxact",
+    "how-to-avoid-overdraft-fees": "ally-vs-marcus",
+    "how-to-save-money-on-car-insurance": "best-bill-negotiation-services",
+    "health-insurance-explained": "best-high-yield-savings-accounts",
+    "how-to-lower-your-credit-card-interest-rate": "best-balance-transfer-cards",
+    "lifestyle-creep": "rocket-money-vs-ynab-vs-monarch"
+  },
+  "calculators_url": "https://moneymadesimple.netlify.app/calculators",
+  "stores": {
+    "gumroad": "https://example.gumroad.com",
+    "etsy": "https://www.etsy.com/shop/REPLACE_ME"
+  },
+  "sister_brands_note": "Other brands from the same team, shown in a homepage section. Two-brand launch: only Money Made Simple and Scam Decoded. Each brand appears only when \"show\" is true AND its \"stage\" is at or before \"launch_stage\" (two-brand, then brand-3 after the week-8 gates around Jan 10 2027, then all). Flip launch_stage to \"brand-3\" when GO_LIVE.md's five gates pass.",
+  "launch_stage": "two-brand",
+  "sister_brands": [
+    {"slug": "scam-decoded", "name": "Scam Decoded", "url": "https://scamdecoded.netlify.app", "stage": "two-brand", "show": true,
+     "tagline": "One scam, decoded in 60 seconds, so you spot it first.",
+     "blurb": "Plain-English explainers on scams, fraud and identity theft: how each scam works, the tell that gives it away, and what to do. Short enough to forward to your parents.",
+     "button": "Visit Scam Decoded"},
+    {"slug": "1099-money", "name": "1099 Money", "url": "https://1099money.netlify.app", "stage": "brand-3", "show": true,
+     "tagline": "Money and taxes for freelancers and gig workers.",
+     "blurb": "Quarterly tax reminders, rate and mileage tools and plain-English guides for 1099 workers.",
+     "button": "Visit 1099 Money"},
+    {"slug": "dinero-simple", "name": "Dinero Simple", "url": "https://dinerosimple.netlify.app", "stage": "all", "show": false,
+     "tagline": "Dinero, explicado en simple.",
+     "blurb": "Guías de dinero en español. En pausa hasta que una persona revise el español.",
+     "button": "Visitar Dinero Simple"}
+  ],
+  "plan_optin_note": "The 'Email me this plan' box under every calculator on this site (embedded apps calculators and /debt-payoff/). Copy is the mms line of apps/shared/optin.js on PR #8; keep them the same (a test checks when that file is present). Signups carry source plan-<tool>.",
+  "plan_optin": {
+    "enabled": true,
+    "title": "Email me this plan",
+    "pitch": "Get your numbers and the matching printable, plus one short money email a week. Unsubscribe any time.",
+    "button": "Email me"
+  },
+  "ab_test": {
+    "_how": "Two-by-two test on the email capture: hero copy (h) x lead-magnet title (m). Each visitor gets a 90-day first-party cookie mms_ab (e.g. 'ab' = hero A, magnet B). Plausible gets an 'AB Exposure' event on pages that show the test and the same test/hero/magnet props on every Signup. Preview a variant with ?ab=ba. Set active to false to end the test, then copy the winner into the A slots (and lead_magnet.title).",
+    "id": "capture-1",
+    "active": true,
+    "hero": {
+      "a": {
+        "headline": "Feel behind on money? Start with one move this week.",
+        "offer": "seven 15-minute tasks that get your money organised in a week."
+      },
+      "b": {
+        "headline": "Get your money organised in 15 minutes a day.",
+        "offer": "one short task a night for seven nights: your real numbers, bank alerts and savings on autopilot."
+      }
+    },
+    "magnet": {
+      "a": "The 7-Day Money Reset",
+      "b": "The 15-Minute Money Checklist"
+    },
+    "magnet_button": {
+      "a": "Send me the free reset",
+      "b": "Send me the free checklist"
+    }
+  }
+}

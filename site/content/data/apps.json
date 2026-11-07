@@ -1,0 +1,491 @@
+{
+ "_readme": "Tools on the separate apps site (site.json > apps_url, PR #8 apps/). 'articles': article slugs that link the tool in their 'Free tools for this' box (at most 2 apps tools per article are shown). /tools/ lists every tool by group. Hidden when apps_url is empty. 'upcoming': tools that haven't shipped on the apps site yet; /tools/ lists them without a link. When one ships, move it to 'tools' with its path.",
+ "tools": [
+  {
+   "key": "take-home-pay",
+   "group": "Paychecks and taxes",
+   "title": "Paycheck calculator by state",
+   "path": "/money-calculators/take-home-pay/",
+   "blurb": "take-home pay after 2026 federal and state tax, for all 50 states and DC.",
+   "articles": [
+    "401k-match-explained",
+    "roth-vs-traditional-ira",
+    "best-tax-software-for-simple-returns",
+    "freetaxusa-review",
+    "how-to-make-a-budget-you-will-keep",
+    "first-job-401k-setup",
+    "50-30-20-rule",
+    "how-to-file-taxes-for-the-first-time",
+    "hsa-vs-fsa",
+    "how-to-fill-out-a-w-4",
+    "self-employment-tax-explained",
+    "tax-deductions-vs-tax-credits",
+    "standard-deduction-vs-itemizing",
+    "earned-income-tax-credit",
+    "how-to-file-a-tax-extension",
+    "how-to-negotiate-a-raise",
+    "how-to-read-a-pay-stub",
+    "moving-out-for-the-first-time"
+   ]
+  },
+  {
+   "key": "paycheck-planner",
+   "group": "Paychecks and taxes",
+   "title": "Paycheck to budget planner",
+   "path": "/budget/paycheck-plan.html",
+   "blurb": "turn your take-home pay into a 50/30/20 or zero-based monthly budget.",
+   "articles": [
+    "how-to-budget-on-a-low-income",
+    "how-to-read-a-pay-stub"
+   ]
+  },
+  {
+   "key": "roth-vs-traditional",
+   "group": "Paychecks and taxes",
+   "title": "Roth vs traditional calculator",
+   "path": "/money-calculators/roth-vs-traditional/",
+   "blurb": "compare Roth and traditional IRA or 401(k) contributions at your tax rates.",
+   "articles": [
+    "roth-vs-traditional-ira",
+    "where-to-open-a-roth-ira",
+    "first-job-401k-setup",
+    "ira-contribution-before-tax-deadline"
+   ]
+  },
+  {
+   "key": "afford",
+   "group": "Spending and big purchases",
+   "title": "Can I afford it?",
+   "path": "/budget/afford.html",
+   "blurb": "a car, a phone or anything big: cash vs loan vs buy now, pay later, and how it fits your month.",
+   "articles": [
+    "how-to-make-a-budget-you-will-keep",
+    "sinking-funds-explained",
+    "car-repair-sinking-fund",
+    "how-much-car-can-i-afford",
+    "moving-out-for-the-first-time",
+    "lifestyle-creep",
+    "how-to-buy-a-used-car",
+    "how-to-get-a-car-loan"
+   ]
+  },
+  {
+   "key": "subscriptions",
+   "group": "Spending and big purchases",
+   "title": "Subscription audit",
+   "path": "/budget/subscriptions.html",
+   "blurb": "find every recurring charge in a bank statement and what it costs a year.",
+   "articles": [
+    "find-and-cancel-subscriptions",
+    "rocket-money-review",
+    "how-to-stop-living-paycheck-to-paycheck",
+    "no-spend-challenge",
+    "college-student-budget"
+   ]
+  },
+  {
+   "key": "bills",
+   "group": "Spending and big purchases",
+   "title": "Bill negotiation tracker",
+   "path": "/budget/bills.html",
+   "blurb": "bills, promo end dates and call scripts to lower them yourself.",
+   "articles": [
+    "how-to-stop-living-paycheck-to-paycheck",
+    "how-to-budget-with-irregular-income",
+    "how-to-split-finances-as-a-couple",
+    "how-to-save-money-on-car-insurance",
+    "how-to-budget-on-a-low-income",
+    "how-to-lower-your-utility-bills"
+   ]
+  },
+  {
+   "key": "deals",
+   "group": "Spending and big purchases",
+   "title": "0% deal countdown",
+   "path": "/budget/deals.html",
+   "blurb": "the payment that clears a 0% or deferred-interest deal in time.",
+   "articles": [
+    "how-credit-card-interest-works"
+   ]
+  },
+  {
+   "key": "emergency-fund",
+   "group": "Saving",
+   "title": "Emergency fund calculator",
+   "path": "/money-calculators/emergency-fund/",
+   "blurb": "how much to save and how long it takes at your pace.",
+   "articles": [
+    "how-to-build-an-emergency-fund",
+    "high-yield-savings-vs-money-market",
+    "how-to-open-a-high-yield-savings-account",
+    "is-my-savings-app-fdic-insured",
+    "what-to-do-with-your-tax-refund",
+    "how-much-emergency-fund-do-i-need",
+    "renters-insurance-explained",
+    "health-insurance-explained",
+    "how-to-avoid-overdraft-fees",
+    "how-to-handle-a-job-loss-financially",
+    "how-to-automate-your-savings"
+   ]
+  },
+  {
+   "key": "savings-interest",
+   "group": "Saving",
+   "title": "High-yield savings calculator",
+   "path": "/money-calculators/savings-interest/",
+   "blurb": "how much interest a savings account pays on your balance.",
+   "articles": [
+    "ally-bank-review",
+    "cit-bank-review",
+    "sofi-review",
+    "how-to-save-for-a-house-down-payment",
+    "how-to-budget-for-a-trip",
+    "how-much-emergency-fund-do-i-need",
+    "cds-explained",
+    "how-to-automate-your-savings"
+   ]
+  },
+  {
+   "key": "student-loans",
+   "group": "Debt and credit",
+   "title": "Student loan repayment chooser",
+   "path": "/money-calculators/student-loans/",
+   "blurb": "compare 2026 federal repayment plans on your balance and income.",
+   "articles": [
+    "best-bank-account-for-college-students",
+    "debt-avalanche-vs-snowball",
+    "how-to-pay-off-student-loans-faster"
+   ]
+  },
+  {
+   "key": "credit-card-minimum",
+   "group": "Debt and credit",
+   "title": "Credit card minimum payment calculator",
+   "path": "/money-calculators/credit-card-minimum/",
+   "blurb": "how long minimum payments take and what they cost.",
+   "articles": [
+    "how-credit-scores-work",
+    "self-credit-builder-review",
+    "debt-consolidation-explained",
+    "how-credit-card-interest-works",
+    "what-is-a-good-credit-score",
+    "how-to-lower-your-credit-card-interest-rate",
+    "credit-utilization-explained",
+    "apr-vs-apy-explained",
+    "secured-credit-cards-explained"
+   ]
+  },
+  {
+   "key": "disputes",
+   "group": "Debt and credit",
+   "title": "Credit dispute tracker",
+   "path": "/budget/disputes.html",
+   "blurb": "track 30-day credit bureau deadlines for a report error.",
+   "articles": [
+    "how-to-freeze-your-credit",
+    "aura-review",
+    "how-to-dispute-a-credit-report-error",
+    "how-to-build-credit-from-scratch",
+    "what-is-a-good-credit-score",
+    "how-to-check-your-credit-report"
+   ]
+  },
+  {
+   "key": "medical-bills",
+   "group": "Debt and credit",
+   "title": "Medical bill letters",
+   "path": "/medical-bills/",
+   "blurb": "request an itemized bill, dispute an error or ask for financial assistance.",
+   "articles": [
+    "hsa-vs-fsa",
+    "how-to-negotiate-a-medical-bill"
+   ]
+  },
+  {
+   "key": "debt-letters",
+   "group": "Debt and credit",
+   "title": "Debt collector letters",
+   "path": "/medical-bills/debt.html",
+   "blurb": "debt validation and stop-contact letters.",
+   "articles": [
+    "how-to-deal-with-debt-collectors",
+    "how-to-negotiate-a-medical-bill"
+   ]
+  },
+  {
+   "key": "rent-vs-buy",
+   "group": "Investing and net worth",
+   "title": "Rent vs buy calculator",
+   "path": "/money-calculators/rent-vs-buy/",
+   "blurb": "owning costs vs renting and investing the difference, with the break-even year.",
+   "articles": [
+    "how-to-save-for-a-house-down-payment"
+   ]
+  },
+  {
+   "key": "networth",
+   "group": "Investing and net worth",
+   "title": "Net worth tracker",
+   "path": "/budget/networth.html",
+   "blurb": "what you own minus what you owe, with dated snapshots and a trend.",
+   "articles": [
+    "empower-review",
+    "monarch-money-review",
+    "how-to-start-investing-with-100-a-month",
+    "how-to-calculate-net-worth",
+    "term-vs-whole-life-insurance"
+   ]
+  },
+  {
+   "key": "compound-interest",
+   "group": "Investing and net worth",
+   "title": "Compound interest calculator",
+   "path": "/money-calculators/compound-interest/",
+   "blurb": "how monthly contributions grow over time.",
+   "articles": [
+    "are-robo-advisors-worth-it",
+    "acorns-review",
+    "betterment-review",
+    "retirement-savings-in-your-20s",
+    "what-is-an-index-fund",
+    "how-529-plans-work"
+   ]
+  },
+  {
+   "key": "401k-fees",
+   "group": "Investing and net worth",
+   "title": "401(k) fee checker",
+   "path": "/money-calculators/401k-fees/",
+   "blurb": "what your funds' expense ratios cost in dollars.",
+   "articles": [
+    "expense-ratios-explained"
+   ]
+  },
+  {
+   "key": "budget-app",
+   "group": "Budgeting",
+   "title": "The 20-Minute Budget app",
+   "path": "/budget/",
+   "blurb": "a free, private budget app that runs in your browser.",
+   "articles": [
+    "budgeting-app-vs-spreadsheet",
+    "how-to-choose-a-budgeting-app",
+    "ynab-review",
+    "college-student-budget",
+    "no-spend-challenge",
+    "how-to-budget-for-a-trip",
+    "lifestyle-creep"
+   ]
+  },
+  {
+   "key": "rate",
+   "group": "Budgeting",
+   "title": "Rate My Budget",
+   "path": "/budget/rate.html",
+   "blurb": "a budget score in 2 minutes and three next moves.",
+   "articles": [
+    "50-30-20-rule"
+   ]
+  },
+  {
+   "key": "holiday",
+   "group": "Budgeting",
+   "title": "Holiday spending planner",
+   "path": "/budget/holiday.html",
+   "blurb": "gift list, per-person budgets and the real cost of pay-in-4.",
+   "articles": []
+  },
+  {
+   "key": "debt-payoff-calc",
+   "group": "Debt and credit",
+   "title": "Debt payoff calculator",
+   "path": "/money-calculators/debt-payoff/",
+   "blurb": "list your debts and compare avalanche and snowball, with a payoff chart and a printable plan.",
+   "articles": []
+  },
+  {
+   "key": "tax-refund",
+   "group": "Paychecks and taxes",
+   "title": "Tax refund estimator",
+   "path": "/money-calculators/tax-refund/",
+   "blurb": "an estimate of your 2026 federal refund or balance due from your pay, withholding and family.",
+   "articles": []
+  },
+  {
+   "key": "first-paycheck",
+   "group": "Paychecks and taxes",
+   "title": "First paycheck checklist",
+   "path": "/budget/first-paycheck.html",
+   "blurb": "your W-4, the 401(k) match, a starter emergency fund and a first budget, step by step.",
+   "articles": [
+    "how-to-read-a-pay-stub",
+    "first-job-401k-setup"
+   ]
+  },
+  {
+   "key": "bill-calendar",
+   "group": "Budgeting",
+   "title": "Bill due date calendar",
+   "path": "/budget/bill-calendar/",
+   "blurb": "every bill on one calendar: mark them paid and send repeating reminders to your phone.",
+   "articles": [
+    "how-to-avoid-overdraft-fees",
+    "moving-out-for-the-first-time",
+    "buy-now-pay-later-explained",
+    "payday-loans-explained"
+   ]
+  },
+  {
+   "key": "sinking-funds",
+   "group": "Budgeting",
+   "title": "Sinking funds planner",
+   "path": "/budget/sinking-funds.html",
+   "blurb": "what to set aside each month or paycheck for the costs you know are coming.",
+   "articles": [
+    "sinking-funds-explained",
+    "car-repair-sinking-fund",
+    "short-term-vs-long-term-savings-goals"
+   ]
+  },
+  {
+   "key": "couples",
+   "group": "Budgeting",
+   "title": "Couples budget",
+   "path": "/budget/couples.html",
+   "blurb": "split shared bills fairly by income, then plan a monthly money date.",
+   "articles": [
+    "how-to-split-finances-as-a-couple"
+   ]
+  },
+  {
+   "key": "money-dashboard",
+   "group": "Budgeting",
+   "title": "Money dashboard spreadsheet",
+   "path": "/budget/money-dashboard.html",
+   "blurb": "turn your bank's CSV download into a categorised monthly dashboard for Google Sheets or Excel.",
+   "articles": [
+    "budgeting-app-vs-spreadsheet"
+   ]
+  },
+  {
+   "key": "checkup",
+   "group": "Budgeting",
+   "title": "Annual money checkup",
+   "path": "/budget/checkup.html",
+   "blurb": "20 quick questions, a score out of 100 and the fixes that matter most.",
+   "articles": [
+    "lifestyle-creep"
+   ]
+  },
+  {
+   "key": "money-personality",
+   "group": "Budgeting",
+   "title": "Money personality quiz (apps site)",
+   "path": "/budget/money-personality.html",
+   "blurb": "eight questions to find your money personality and the tools that suit it.",
+   "articles": []
+  },
+  {
+   "key": "savings-challenge",
+   "group": "Saving",
+   "title": "52-week savings challenge tracker",
+   "path": "/budget/savings-challenge.html",
+   "blurb": "save $1 in week 1 up to $52 in week 52, or set your own goal; tick off each week and print the chart.",
+   "articles": [
+    "how-to-teach-kids-about-money",
+    "how-to-set-a-savings-goal"
+   ]
+  },
+  {
+   "key": "remittance",
+   "group": "Spending and big purchases",
+   "title": "Remittance cost calculator",
+   "path": "/money-calculators/remittance-cost/",
+   "blurb": "the real cost of sending money abroad: the fee plus the markup hidden in the exchange rate.",
+   "articles": []
+  },
+  {
+   "key": "invoices",
+   "group": "Freelance and side income",
+   "title": "Freelance invoice tracker",
+   "path": "/freelance-invoices/",
+   "blurb": "what's due, what's late, the late fee under your terms, and a polite reminder email.",
+   "articles": []
+  },
+  {
+   "key": "freelance-rate",
+   "group": "Freelance and side income",
+   "title": "Freelance rate calculator",
+   "path": "/freelance-invoices/rate.html",
+   "blurb": "the hourly, day and weekly rate you need after tax, insurance, time off and costs.",
+   "articles": [
+    "estimated-tax-payments-explained"
+   ]
+  },
+  {
+   "key": "set-aside",
+   "group": "Freelance and side income",
+   "title": "Quarterly tax set-aside app",
+   "path": "/freelance-invoices/set-aside/",
+   "blurb": "log each payment and see how much to move to tax savings and when estimated tax is due.",
+   "articles": [
+    "self-employment-tax-explained",
+    "how-to-budget-with-irregular-income",
+    "estimated-tax-payments-explained"
+   ]
+  },
+  {
+   "key": "side-hustle",
+   "group": "Freelance and side income",
+   "title": "Side hustle profit calculator",
+   "path": "/freelance-invoices/side-hustle.html",
+   "blurb": "your real hourly pay after platform fees, mileage, supplies and self-employment tax.",
+   "articles": [
+    "self-employment-tax-explained"
+   ]
+  },
+  {
+   "key": "scam-checker",
+   "group": "Scam safety",
+   "title": "Is this a scam? checker",
+   "path": "/scam-checker/",
+   "blurb": "paste a suspicious text, email or DM and see the red flags scammers use.",
+   "articles": [
+    "how-to-freeze-your-credit",
+    "how-to-spot-a-scam-text",
+    "how-to-avoid-rental-scams",
+    "what-to-do-if-your-identity-is-stolen"
+   ]
+  },
+  {
+   "key": "link-checker",
+   "group": "Scam safety",
+   "title": "Is this website legit? link checker",
+   "path": "/scam-checker/link/",
+   "blurb": "check a link for look-alike spellings, brand names on the wrong domain and hidden destinations.",
+   "articles": [
+    "how-to-spot-a-scam-text",
+    "how-to-avoid-rental-scams"
+   ]
+  },
+  {
+   "key": "family-scam",
+   "group": "Scam safety",
+   "title": "Family scam protection checklist",
+   "path": "/scam-checker/family/",
+   "blurb": "credit freezes, a family safe word, 2-step verification and a phone number lock, step by step.",
+   "articles": [
+    "how-to-freeze-your-credit"
+   ]
+  },
+  {
+   "key": "install",
+   "group": "Get the apps",
+   "title": "Install the tools as apps",
+   "path": "/apps.html",
+   "blurb": "add the budget, bill calendar and tax set-aside to your phone's home screen. No app store, works offline.",
+   "articles": []
+  }
+ ],
+ "upcoming": []
+}

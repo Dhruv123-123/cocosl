@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medical Bill Letters: Itemized Bill, Dispute, Financial Assistance | Money Made Simple</title>
+<meta name="description" content="Free letter builder for medical bills: ask for an itemized bill, dispute billing errors, ask for financial assistance (charity care), or push back on a surprise bill under the No Surprises Act. Runs in your browser.">
+<meta property="og:title" content="Before you pay a medical bill, send these letters">
+<meta property="og:description" content="Itemized bill request, billing error dispute, financial assistance request and No Surprises Act letters. Free, private.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Medical bill letter builder","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Should I pay a medical bill right away?","acceptedAnswer":{"@type":"Answer","text":"For a large bill, first ask for an itemized bill and compare it with your insurer's explanation of benefits. Ask the billing office to hold the account while you review it, and keep copies of everything you send."}},
+{"@type":"Question","name":"What is hospital financial assistance?","acceptedAnswer":{"@type":"Answer","text":"Nonprofit hospitals must have a written financial assistance policy, often called charity care, that can reduce or cancel bills for people under certain incomes. Many for-profit hospitals have programs too. Ask for the policy and an application, even if the bill is already old."}},
+{"@type":"Question","name":"What does the No Surprises Act cover?","acceptedAnswer":{"@type":"Answer","text":"It generally protects insured people from out-of-network bills for emergency care and for certain out-of-network doctors at in-network hospitals and surgery centers. Uninsured or self-pay patients can dispute a bill that is at least $400 more than their Good Faith Estimate within 120 days. The federal No Surprises Help Desk is 1-800-985-3059."}}
+]}</script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" data-site href="https://moneymadesimple.netlify.app"><span class="mark">MS</span><span>Medical bill letters</span></a>
+</header>
+<main>
+  <h1 class="page-title">Before you pay a big medical bill, send a letter</h1>
+  <p class="lede">Billing offices fix errors, hold accounts and approve financial assistance when you ask in writing. Answer a few questions and we'll write the letters for you to check, print and mail. Nothing you type leaves this browser.</p>
+
+  <section class="card">
+    <h2>1. Where are you with this bill?</h2>
+    <form id="quiz" class="quiz">
+      <label class="pick"><input type="checkbox" name="haveItemized"> I already have an itemized bill with every charge listed</label>
+      <label class="pick"><input type="checkbox" name="cantAfford"> I can't afford to pay it in full</label>
+      <label class="pick"><input type="checkbox" name="surprise"> It's an emergency or out-of-network bill I didn't expect, or it's far above my estimate</label>
+    </form>
+    <p id="plan" class="plan-line" aria-live="polite"></p>
+  </section>
+
+  <section class="card">
+    <h2>2. Your details</h2>
+    <form id="details" class="grid" autocomplete="on">
+      <label>Your name <input name="patient" autocomplete="name" required></label>
+      <label>Your mailing address <input name="address" autocomplete="street-address" placeholder="Street, city, state, ZIP"></label>
+      <label>Phone <input name="phone" type="tel" autocomplete="tel"></label>
+      <label>Email <input name="email" type="email" autocomplete="email"></label>
+      <label>Hospital or provider <input name="provider" required placeholder="Name on the bill"></label>
+      <label>Their billing address <input name="providerAddress" placeholder="From the bill: 'Send payment to' or 'Questions'"></label>
+      <label>Account number <input name="account" required></label>
+      <label>Date(s) of service <input name="serviceDates" placeholder="March 3 to 5, 2026"></label>
+      <label>Amount billed ($) <input name="amount" inputmode="decimal"></label>
+      <label>Insurance plan (if any) <input name="insurer"></label>
+      <label>Claim number (if any) <input name="claim"></label>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2>3. Your letters</h2>
+    <div id="tabs" class="tabs" role="tablist"></div>
+    <div id="extra"></div>
+    <p id="letter-msg" class="error" aria-live="polite"></p>
+    <textarea id="letter" rows="22" spellcheck="true" aria-label="Your letter (you can edit it)"></textarea>
+    <div class="row">
+      <button id="copy" class="btn small" type="button">Copy</button>
+      <button id="print" class="btn small ghost" type="button">Print</button>
+      <button id="download" class="btn small ghost" type="button">Download .txt</button>
+    </div>
+    <p class="tiny">Read it and change anything that isn't right before you send it. You can type straight into the letter.</p>
+  </section>
+
+  <section class="card">
+    <h2>How to send it</h2>
+    <ul class="checks">
+      <li>Mail it to the billing address on the statement. Certified mail with a return receipt gives you proof it arrived.</li>
+      <li>Keep a copy of every letter, and note the date you sent it.</li>
+      <li>Call the billing office a week later, confirm they received it and ask them to note your account. Write down who you spoke to.</li>
+      <li>Compare the itemized bill with your insurer's explanation of benefits (EOB). Charges that don't match are worth asking about.</li>
+      <li>Free help: many hospitals have patient financial counselors. Nonprofits such as Dollar For help with charity care applications. For surprise bills, call the No Surprises Help Desk at 1-800-985-3059.</li>
+    </ul>
+  </section>
+
+  <section id="product" class="card" hidden></section>
+
+  <section class="card signup-box">
+    <h2>One money move a week</h2>
+    <p>Short, practical emails on bills, budgets and saving. Free.</p>
+    <form class="signup inline-form" name="medical-bills" method="POST" data-netlify="true" netlify-honeypot="website">
+      <input type="hidden" name="form-name" value="medical-bills">
+      <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+      <input type="email" name="email" placeholder="you@example.com" required autocomplete="email" aria-label="Email">
+      <button class="btn small">Sign me up</button>
+    </form>
+  </section>
+
+  <section class="card faq">
+    <h2>Questions</h2>
+    <h3>Should I pay a medical bill right away?</h3>
+    <p>For a large bill, first ask for an itemized bill and compare it with your insurer's explanation of benefits. Ask the billing office to hold the account while you review it, and keep copies of everything you send.</p>
+    <h3>What is hospital financial assistance?</h3>
+    <p>Nonprofit hospitals must have a written financial assistance policy, often called charity care, that can reduce or cancel bills for people under certain incomes. Many for-profit hospitals have programs too. Ask for the policy and an application, even if the bill is already old.</p>
+    <h3>What does the No Surprises Act cover?</h3>
+    <p>It generally protects insured people from out-of-network bills for emergency care and for certain out-of-network doctors at in-network hospitals and surgery centers. Uninsured or self-pay patients can dispute a bill that is at least $400 more than their Good Faith Estimate within 120 days of the bill. The federal No Surprises Help Desk is 1-800-985-3059.</p>
+  </section>
+</main>
+<footer><p>General information, not legal or medical advice. Rules differ by state and by plan; for help with a specific bill, contact your state's consumer assistance program or a patient advocate. Nothing you type is sent anywhere. A collector is calling? <a href="debt.html">Debt collector letters</a>. Made by <a data-site href="https://moneymadesimple.netlify.app">Money Made Simple</a>.</p></footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

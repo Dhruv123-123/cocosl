@@ -9,7 +9,9 @@ For every brand it checks, in one pass:
   campaign comes with a source and medium.
 * placeholders: nothing scheduled in the next N days (default 14) still
   contains REPLACE_ME or another placeholder; that is red.
-* disclosures: affiliate posts say so (FTC), and every post has the AI label.
+* disclosures: affiliate posts say so (FTC), and every post has the AI label. The brand's ai_disclosure
+  must not claim a person wrote the scripts while `scripts_by: ai_assisted` (red). Facebook Reels
+  get a reminder: Meta's AI label has to be ticked by hand in Business Suite.
 * caption limits per platform each post is queued for (Instagram 2,200 chars
   and 5 hashtags, TikTok 2,200, Threads 500, YouTube title 100 / description
   5,000 bytes). Over the limit is yellow: the publisher trims, but you should
@@ -35,6 +37,8 @@ CAPTION_LIMITS = {  # platform -> (max chars, max hashtags)
     "instagram": (2200, 5), "tiktok": (2200, None), "threads": (500, None), "facebook": (63206, None),
 }
 LEVELS = {"green": 0, "yellow": 1, "red": 2}
+HUMAN_WRITTEN_RE = re.compile(r"\b(?:script(?:s|ed)?\s+)?(?:researched\s+and\s+)?(?:written|scripted)"
+                              r"(?:\s+and\s+[\w-]+)?\s+by\s+(?:a\s+)?(?:human|person|people|me|us|hand)\b", re.I)
 SHORT_TITLE_MAX, LONG_TITLE_MAX = 60, 70  # YouTube SEO playbook: mobile and search cut longer titles
 
 
@@ -50,6 +54,7 @@ class Finding:
 class Report:
     findings: list[Finding] = field(default_factory=list)
     checked: dict = field(default_factory=dict)
+    reminders: list[str] = field(default_factory=list)  # by-hand steps; they don't change the colour
 
     def add(self, level: str, brand: str, where: str, message: str) -> None:
         self.findings.append(Finding(level, brand, where, message))
@@ -132,6 +137,14 @@ def run(factory, days: int = 14, online: bool = False, now: datetime | None = No
             if PLACEHOLDER_RE.search(text) and not URL_RE.search(text):
                 rep.add("yellow", slug, f"brand file: {path}", f"placeholder text: {text[:80]}")
         rep.checked.setdefault(slug, {})["brand_links"] = n_urls
+        if brand.scripts_by == "ai_assisted" and HUMAN_WRITTEN_RE.search(brand.ai_disclosure or ""):
+            rep.add("red", slug, "brand file: ai_disclosure",
+                    f"says a person wrote the scripts (“{HUMAN_WRITTEN_RE.search(brand.ai_disclosure).group(0)}”), but "
+                    "scripts_by is ai_assisted: say “Script drafted with AI help and fact-checked by a person.” "
+                    "(or set scripts_by: person if you write them yourself)")
+        if brand.account("facebook"):
+            rep.reminders.append(f"{slug}: Facebook Reels need Meta's AI label ticked by hand (Business Suite → "
+                                 "AI info) on every post with the AI voice; the API has no field for it.")
 
         pubs = factory.db.query(
             "SELECT s.*, pub.platform AS pub_platform, pub.scheduled_at AS pub_at FROM publications pub JOIN posts s ON s.id = pub.post_id "
@@ -192,7 +205,20 @@ def run(factory, days: int = 14, online: bool = False, now: datetime | None = No
         for url, problem in _online(set(real_urls)).items():
             slug, where = real_urls[url]
             rep.add("red", slug, where, f"{url} {problem}")
+    _drop_paused(factory, rep)
     return rep
+
+
+def _drop_paused(factory, rep: Report) -> None:
+    """Two-brand launch: a paused brand with nothing scheduled isn't checked (its placeholders aren't news).
+    A paused brand with posts still queued is checked as usual, because those posts would still go out."""
+    from .launchmode import in_play
+    for slug, c in rep.checked.items():
+        if c.get("scheduled", 0) or in_play(factory, slug):
+            continue
+        c["paused"] = True
+        rep.findings = [f for f in rep.findings if f.brand != slug]
+        rep.reminders = [r for r in rep.reminders if not r.startswith(f"{slug}:")]
 
 
 ORIGINALITY_MIN_LONGS, ORIGINALITY_MIN_VIDEOS = 3, 10  # too few videos and the score means nothing
@@ -220,6 +246,9 @@ def render_text(rep: Report, days: int) -> str:
     icon = {"green": "GREEN", "yellow": "YELLOW", "red": "RED"}[rep.status]
     lines = [f"Launch check: {icon}", ""]
     for slug, c in rep.checked.items():
+        if c.get("paused"):
+            lines.append(f"{slug}: paused (launch mode), nothing scheduled: not checked")
+            continue
         mine = [f for f in rep.findings if f.brand == slug]
         worst = max((LEVELS[f.level] for f in mine), default=0)
         lines.append(f"{slug}: {['green', 'yellow', 'red'][worst]} · {c.get('scheduled', 0)} publication(s) in the "
@@ -228,6 +257,8 @@ def render_text(rep: Report, days: int) -> str:
         for level in ("red", "yellow"):
             for f in [f for f in mine if f.level == level]:
                 lines.append(f"  [{level}] {f.where}: {f.message}")
+    if rep.reminders:
+        lines += ["", "Reminders (by hand, every post):"] + [f"  - {r}" for r in rep.reminders]
     if rep.status == "green":
         lines += ["", "Everything scheduled is ready to go out."]
     elif rep.status == "yellow":

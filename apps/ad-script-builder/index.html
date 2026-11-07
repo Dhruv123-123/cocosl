@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Video Ad Script Generator for Small Brands (TikTok, Reels, Shorts)</title>
+<meta name="description" content="Write a 15, 20 or 30-second vertical video ad script for your product in two minutes: hook, shot list, voiceover, on-screen text, three hooks to test and a caption. Free, no signup.">
+<meta property="og:title" content="Free video ad script generator for small brands">
+<meta property="og:description" content="Hook, shot list, voiceover, on-screen text and three test hooks for your product. Free, no signup.">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Video Ad Script Builder","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+<header class="top"><b class="logo" id="studio">AI Video Ad Studio</b><a class="tiny" id="packages-link" hidden>Packages</a></header>
+<main>
+  <h1>Write your product's video ad in two minutes</h1>
+  <p class="lede">A ready-to-film script for TikTok, Reels and Shorts: the hook, every shot, the voiceover, the on-screen text, three hooks to test and a caption. Free, no signup. It uses only the facts you give it.</p>
+
+  <div class="layout">
+    <form id="builder" class="card" autocomplete="off">
+      <div class="two">
+        <label>Brand name<input name="brand" required maxlength="60" placeholder="e.g. Hollowick"></label>
+        <label>Product<input name="product" required maxlength="80" placeholder="e.g. Cedar & Smoke candle"></label>
+      </div>
+      <div class="two">
+        <label>Category<select name="niche" id="niche"></select></label>
+        <label>Price (optional)<input name="price" maxlength="20" placeholder="e.g. 28"></label>
+      </div>
+      <fieldset>
+        <legend>Three true facts about it <span class="tiny">(from your label or listing)</span></legend>
+        <input name="fact1" aria-label="Fact 1" required maxlength="90" placeholder="e.g. wooden wick that crackles">
+        <input name="fact2" aria-label="Fact 2" required maxlength="90" placeholder="e.g. hand-poured soy wax">
+        <input name="fact3" aria-label="Fact 3" maxlength="90" placeholder="e.g. 8 oz amber glass jar">
+      </fieldset>
+      <label>Ad style<select name="format" id="format"></select><span class="tiny" id="format-best"></span></label>
+      <label id="problem-row">Problem it solves<input name="problem" maxlength="80" placeholder="e.g. candles that tunnel"></label>
+      <label id="alt-row" hidden>What people use instead<input name="alternative" maxlength="60" placeholder="e.g. plastic wrap"></label>
+      <div class="two">
+        <label>Length<select name="length"><option value="15">15 seconds</option><option value="20" selected>20 seconds</option><option value="30">30 seconds</option></select></label>
+        <label>Who speaks<select name="presenter"><option value="ai-voice">AI voiceover</option><option value="ai-presenter">AI presenter on camera</option><option value="founder">Me (the founder)</option></select></label>
+      </div>
+      <div class="two">
+        <label>Who it's for (optional)<input name="audience" maxlength="60" placeholder="e.g. candle lovers"></label>
+        <label>Call to action<input name="cta" maxlength="40" value="Link below"></label>
+      </div>
+      <button class="btn" type="submit">Write my script</button>
+      <p class="tiny">Everything stays in your browser.</p>
+    </form>
+
+    <section id="out" class="card" aria-live="polite" hidden></section>
+  </div>
+
+  <section class="card pitch" id="pitch">
+    <h2>Want it made for you?</h2>
+    <p id="pitch-text"></p>
+    <p>Not sure yet? Ask for <b>one free 20-second sample ad</b> for one product, built from your product page photos. No cost, no obligation. We take a few a week.</p>
+    <form id="sample-form" name="ad-sample-request" method="POST" data-netlify="true" netlify-honeypot="website" class="two">
+      <input type="hidden" name="form-name" value="ad-sample-request">
+      <input type="hidden" name="script" id="script-field">
+      <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+      <label>Your name<input name="name" required maxlength="60" autocomplete="name"></label>
+      <label>Email<input name="email" type="email" required autocomplete="email"></label>
+      <label class="wide">Product page link<input name="product_url" type="url" required placeholder="https://yourstore.com/products/..."></label>
+      <label class="wide pick"><input type="checkbox" name="consent" value="yes" required><span>OK to email me about this sample. The ad uses an AI presenter or voice and is labelled as AI.</span></label>
+      <button class="btn small" type="submit">Request my free sample</button>
+    </form>
+    <p id="sample-msg" class="tiny" aria-live="polite"></p>
+  </section>
+
+  <section class="faq">
+    <h2>Questions</h2>
+    <h3>Why does it ask for facts?</h3>
+    <p>Ads that state specific, true details (what it's made of, the size, what's on the label) beat vague praise, and they don't get rejected for unprovable claims. The builder never adds claims of its own.</p>
+    <h3>What's a hook, and why three?</h3>
+    <p>The hook is the first three seconds, where most viewers decide to keep watching. Film the ad once, then swap only the opening to test which hook holds attention best.</p>
+    <h3>Can an AI presenter say they love the product?</h3>
+    <p>No. An AI presenter can present and demonstrate, but a first-person "I use it, I love it" line would be a fake testimonial. The builder flags that wording. If you want a personal story, pick "Me (the founder)" and film yourself.</p>
+    <h3>Does it work for services?</h3>
+    <p>It's built for physical products you can show on camera. Local services work with the "problem → solution" style if you have real photos of the place.</p>
+  </section>
+</main>
+<footer><p>Scripts are a starting point: check every fact before you film. Ads that use AI presenters or voices should say so on screen; the builder adds the label for you.</p></footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

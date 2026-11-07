@@ -1,0 +1,23 @@
+{
+  "id": "/app/",
+  "name": "Money Made Simple",
+  "short_name": "Money Simple",
+  "description": "Ten free money tools on one home screen: budget, paycheck, bills, debt, savings, bill splitting and a scam check. Works offline, no account, nothing you type leaves your phone.",
+  "start_url": "./?source=pwa",
+  "scope": "../",
+  "display": "standalone",
+  "background_color": "#f4f1e8",
+  "theme_color": "#0b1d13",
+  "categories": ["finance", "productivity"],
+  "icons": [
+    { "src": "../budget/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "../budget/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "../budget/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Budget", "url": "../budget/", "icons": [{ "src": "../budget/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Bill calendar", "url": "../budget/bill-calendar/", "icons": [{ "src": "../budget/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Split bills", "url": "../budget/split-bills.html", "icons": [{ "src": "../budget/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Scam check", "url": "../scam-checker/", "icons": [{ "src": "../budget/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "note": "Portfolio sample ads for FICTIONAL brands, transcribed from launch/ugc-service/SAMPLE_ADS.md. Every brand, product and price here is made up. Spokesperson/demo only: no first-person use, results or reviews. Render with: factory portfolio build",
+  "note": "Portfolio sample ads for FICTIONAL brands, transcribed from launch/ugc-service/SAMPLE_ADS.md and SAMPLE_ADS_V2.md. Every brand, product and price here is made up. Spokesperson/demo only: no first-person use, results or reviews. Render with: factory portfolio build",
   "ads": [
     {
       "slug": "trailsip",
@@ -9,20 +9,53 @@
       "style": "Demo + spokesperson",
       "presenter": "voice",
       "fictional_price": "$24",
-      "palette": ["#0b2a2a", "#f3f7f2", "#3ddc97", "#ffb347"],
+      "palette": [
+        "#0b2a2a",
+        "#f3f7f2",
+        "#3ddc97",
+        "#ffb347"
+      ],
       "script": {
         "concept": "Show a full-size bottle folding to pocket size in one push, then the three features that matter on the move.",
         "hook": "This is a full-size water bottle. Watch.",
         "segments": [
-          {"heading": "Hook", "narration": "This is a full-size water bottle. Watch.", "on_screen_text": "Full size → pocket size", "visual_prompt": "hand squashing a silicone water bottle flat, bright outdoor light"},
-          {"heading": "Fold", "narration": "When it's empty, it folds down to a third of its height.", "on_screen_text": "Folds to 1/3", "visual_prompt": "collapsed bottle sliding into a jacket pocket"},
-          {"heading": "Fill", "narration": "When you need it, pop it open, 600 millilitres, and clip it anywhere.", "on_screen_text": "600 ml · clip-on", "visual_prompt": "bottle being filled at a tap, carabiner on a backpack strap"},
-          {"heading": "Seal", "narration": "The cap seals, so it's bag-safe. And it's dishwasher safe.", "on_screen_text": "Leak-proof · dishwasher safe", "visual_prompt": "bottle held upside down, cap sealed, no drips"},
-          {"heading": "CTA", "narration": "TrailSip. Link below.", "on_screen_text": "TrailSip · $24", "visual_prompt": "product shot on white with space for a price card"}
+          {
+            "heading": "Hook",
+            "narration": "This is a full-size water bottle. Watch.",
+            "on_screen_text": "Full size → pocket size",
+            "visual_prompt": "hand squashing a silicone water bottle flat, bright outdoor light"
+          },
+          {
+            "heading": "Fold",
+            "narration": "When it's empty, it folds down to a third of its height.",
+            "on_screen_text": "Folds to 1/3",
+            "visual_prompt": "collapsed bottle sliding into a jacket pocket"
+          },
+          {
+            "heading": "Fill",
+            "narration": "When you need it, pop it open, 600 millilitres, and clip it anywhere.",
+            "on_screen_text": "600 ml · clip-on",
+            "visual_prompt": "bottle being filled at a tap, carabiner on a backpack strap"
+          },
+          {
+            "heading": "Seal",
+            "narration": "The cap seals, so it's bag-safe. And it's dishwasher safe.",
+            "on_screen_text": "Leak-proof · dishwasher safe",
+            "visual_prompt": "bottle held upside down, cap sealed, no drips"
+          },
+          {
+            "heading": "CTA",
+            "narration": "TrailSip. Link below.",
+            "on_screen_text": "TrailSip · $24",
+            "visual_prompt": "product shot on white with space for a price card"
+          }
         ],
         "cta": "Link below.",
         "on_screen_disclosure": "AI-generated voice · Ad",
-        "variations": ["Your bag is full of air. Specifically, your water bottle.", "Airport security tip nobody tells you: bring it empty, fold it flat."]
+        "variations": [
+          "Your bag is full of air. Specifically, your water bottle.",
+          "Airport security tip nobody tells you: bring it empty, fold it flat."
+        ]
       }
     },
     {
@@ -33,20 +66,53 @@
       "style": "Product demo voiceover",
       "presenter": "voice",
       "fictional_price": "$39",
-      "palette": ["#2b1a10", "#fbf4e8", "#e8a54b", "#c8553d"],
+      "palette": [
+        "#2b1a10",
+        "#fbf4e8",
+        "#e8a54b",
+        "#c8553d"
+      ],
       "script": {
         "concept": "Same dough, two loaves: show that the basket is the difference, then walk through the four-piece kit.",
         "hook": "Same recipe. The difference is the basket.",
         "segments": [
-          {"heading": "Hook", "narration": "Same recipe. The difference is the basket.", "on_screen_text": "Same dough. Different shape.", "visual_prompt": "flat loaf next to a tall scored loaf on a wooden board"},
-          {"heading": "Kit", "narration": "The Lumen and Loaf kit has the four things beginners usually skip.", "on_screen_text": "4-piece proofing kit", "visual_prompt": "basket, linen liner, scoring lame and timing card laid out"},
-          {"heading": "Proof", "narration": "The basket holds the dough's shape while it rises, so it bakes up instead of out.", "on_screen_text": "Holds shape while it proofs", "visual_prompt": "dough resting in a floured banneton basket overnight"},
-          {"heading": "Bake", "narration": "Flip it out, score it, bake. The timing card walks you through each step.", "on_screen_text": "Step-by-step timing card", "visual_prompt": "dough being scored with a lame before going into the oven"},
-          {"heading": "CTA", "narration": "The Lumen and Loaf proofing kit. Link below.", "on_screen_text": "Lumen & Loaf · $39", "visual_prompt": "kit on a wooden board with space for a price card"}
+          {
+            "heading": "Hook",
+            "narration": "Same recipe. The difference is the basket.",
+            "on_screen_text": "Same dough. Different shape.",
+            "visual_prompt": "flat loaf next to a tall scored loaf on a wooden board"
+          },
+          {
+            "heading": "Kit",
+            "narration": "The Lumen and Loaf kit has the four things beginners usually skip.",
+            "on_screen_text": "4-piece proofing kit",
+            "visual_prompt": "basket, linen liner, scoring lame and timing card laid out"
+          },
+          {
+            "heading": "Proof",
+            "narration": "The basket holds the dough's shape while it rises, so it bakes up instead of out.",
+            "on_screen_text": "Holds shape while it proofs",
+            "visual_prompt": "dough resting in a floured banneton basket overnight"
+          },
+          {
+            "heading": "Bake",
+            "narration": "Flip it out, score it, bake. The timing card walks you through each step.",
+            "on_screen_text": "Step-by-step timing card",
+            "visual_prompt": "dough being scored with a lame before going into the oven"
+          },
+          {
+            "heading": "CTA",
+            "narration": "The Lumen and Loaf proofing kit. Link below.",
+            "on_screen_text": "Lumen & Loaf · $39",
+            "visual_prompt": "kit on a wooden board with space for a price card"
+          }
         ],
         "cta": "Link below.",
         "on_screen_disclosure": "AI-generated voice · Ad",
-        "variations": ["If your sourdough spreads like a pancake, read this.", "Four tools. One taller loaf."]
+        "variations": [
+          "If your sourdough spreads like a pancake, read this.",
+          "Four tools. One taller loaf."
+        ]
       }
     },
     {
@@ -57,20 +123,53 @@
       "style": "Spokesperson",
       "presenter": "presenter",
       "fictional_price": "$32",
-      "palette": ["#14213d", "#f6f1e9", "#fca311", "#4ea8de"],
+      "palette": [
+        "#14213d",
+        "#f6f1e9",
+        "#fca311",
+        "#4ea8de"
+      ],
       "script": {
         "concept": "Both hands full, dog still on the leash: a spokesperson walks through the belt, the bungee and the pocket.",
         "hook": "Both hands full. Dog still on the leash.",
         "segments": [
-          {"heading": "Hook", "narration": "Both hands full. Dog still on the leash.", "on_screen_text": "Hands-free walking", "visual_prompt": "coffee cup and phone in hand, leash belt around the waist"},
-          {"heading": "Belt", "narration": "The leash clips around your waist and adjusts to fit.", "on_screen_text": "Adjustable waist belt", "visual_prompt": "close-up of a belt clip and adjustable strap"},
-          {"heading": "Bungee", "narration": "This stretch section takes the edge off sudden pulls.", "on_screen_text": "Shock-absorbing bungee", "visual_prompt": "stretch section of a leash extending in slow motion"},
-          {"heading": "Pocket", "narration": "And there's a zip pocket for keys, phone, and bags.", "on_screen_text": "Zip pocket", "visual_prompt": "zip pocket on a belt opened to show keys and a phone"},
-          {"heading": "CTA", "narration": "Hound and Hollow. Link below.", "on_screen_text": "Hound & Hollow · $32", "visual_prompt": "product on white with space for a price card"}
+          {
+            "heading": "Hook",
+            "narration": "Both hands full. Dog still on the leash.",
+            "on_screen_text": "Hands-free walking",
+            "visual_prompt": "coffee cup and phone in hand, leash belt around the waist"
+          },
+          {
+            "heading": "Belt",
+            "narration": "The leash clips around your waist and adjusts to fit.",
+            "on_screen_text": "Adjustable waist belt",
+            "visual_prompt": "close-up of a belt clip and adjustable strap"
+          },
+          {
+            "heading": "Bungee",
+            "narration": "This stretch section takes the edge off sudden pulls.",
+            "on_screen_text": "Shock-absorbing bungee",
+            "visual_prompt": "stretch section of a leash extending in slow motion"
+          },
+          {
+            "heading": "Pocket",
+            "narration": "And there's a zip pocket for keys, phone, and bags.",
+            "on_screen_text": "Zip pocket",
+            "visual_prompt": "zip pocket on a belt opened to show keys and a phone"
+          },
+          {
+            "heading": "CTA",
+            "narration": "Hound and Hollow. Link below.",
+            "on_screen_text": "Hound & Hollow · $32",
+            "visual_prompt": "product on white with space for a price card"
+          }
         ],
         "cta": "Link below.",
         "on_screen_disclosure": "AI-generated presenter · Ad",
-        "variations": ["Running with a dog, minus the arm workout.", "Three things this leash does that yours doesn't."]
+        "variations": [
+          "Running with a dog, minus the arm workout.",
+          "Three things this leash does that yours doesn't."
+        ]
       }
     },
     {
@@ -81,19 +180,47 @@
       "style": "Demo voiceover",
       "presenter": "voice",
       "fictional_price": "$29",
-      "palette": ["#111827", "#f5f7fa", "#22d3ee", "#a78bfa"],
+      "palette": [
+        "#111827",
+        "#f5f7fa",
+        "#22d3ee",
+        "#a78bfa"
+      ],
       "script": {
         "concept": "Before and after under the desk: a tool-free tray gets every cable off the floor in one shot.",
         "hook": "This is what's under most desks.",
         "segments": [
-          {"heading": "Hook", "narration": "This is what's under most desks.", "on_screen_text": "Be honest.", "visual_prompt": "tangle of cables under a desk"},
-          {"heading": "Install", "narration": "Deskline clamps on by hand. No drilling, no screws.", "on_screen_text": "Tool-free install", "visual_prompt": "hands clamping a steel tray to a desk edge"},
-          {"heading": "Tidy", "narration": "Your power strip and cables go in the tray, off the floor.", "on_screen_text": "Off the floor", "visual_prompt": "power strip and cables laid into an under-desk tray"},
-          {"heading": "CTA", "narration": "Deskline cable tray. Link below.", "on_screen_text": "Deskline · $29", "visual_prompt": "clean desk underside with space for a price card"}
+          {
+            "heading": "Hook",
+            "narration": "This is what's under most desks.",
+            "on_screen_text": "Be honest.",
+            "visual_prompt": "tangle of cables under a desk"
+          },
+          {
+            "heading": "Install",
+            "narration": "Deskline clamps on by hand. No drilling, no screws.",
+            "on_screen_text": "Tool-free install",
+            "visual_prompt": "hands clamping a steel tray to a desk edge"
+          },
+          {
+            "heading": "Tidy",
+            "narration": "Your power strip and cables go in the tray, off the floor.",
+            "on_screen_text": "Off the floor",
+            "visual_prompt": "power strip and cables laid into an under-desk tray"
+          },
+          {
+            "heading": "CTA",
+            "narration": "Deskline cable tray. Link below.",
+            "on_screen_text": "Deskline · $29",
+            "visual_prompt": "clean desk underside with space for a price card"
+          }
         ],
         "cta": "Link below.",
         "on_screen_disclosure": "AI-generated voice · Ad",
-        "variations": ["A 2-minute desk upgrade you'll notice every day.", "No drill? No problem."]
+        "variations": [
+          "A 2-minute desk upgrade you'll notice every day.",
+          "No drill? No problem."
+        ]
       }
     },
     {
@@ -104,20 +231,611 @@
       "style": "Spokesperson promo",
       "presenter": "presenter",
       "fictional_price": "3 classes for $39",
-      "palette": ["#1f2d24", "#f7f3ee", "#9bc59d", "#f28482"],
+      "palette": [
+        "#1f2d24",
+        "#f7f3ee",
+        "#9bc59d",
+        "#f28482"
+      ],
       "script": {
         "concept": "An easy way in for people who have never tried pilates: small beginner classes and one clear intro offer.",
         "hook": "Never tried pilates? This is the easy way in.",
         "segments": [
-          {"heading": "Hook", "narration": "Never tried pilates? This is the easy way in.", "on_screen_text": "New to pilates?", "visual_prompt": "bright studio entrance with plants"},
-          {"heading": "Classes", "narration": "Fern Street Studio runs beginner classes with a maximum of eight people.", "on_screen_text": "Beginner classes · max 8", "visual_prompt": "small calm pilates class in a sunlit room"},
-          {"heading": "Setup", "narration": "Instructors show you how to set up the equipment before you start.", "on_screen_text": "Setup shown first", "visual_prompt": "reformer machine being adjusted"},
-          {"heading": "Offer", "narration": "New clients get three classes for thirty-nine dollars.", "on_screen_text": "3 classes · $39 · new clients", "visual_prompt": "offer card over a soft studio background"},
-          {"heading": "CTA", "narration": "Fern Street Studio. Book through the link.", "on_screen_text": "Book now", "visual_prompt": "map pin and booking button area"}
+          {
+            "heading": "Hook",
+            "narration": "Never tried pilates? This is the easy way in.",
+            "on_screen_text": "New to pilates?",
+            "visual_prompt": "bright studio entrance with plants"
+          },
+          {
+            "heading": "Classes",
+            "narration": "Fern Street Studio runs beginner classes with a maximum of eight people.",
+            "on_screen_text": "Beginner classes · max 8",
+            "visual_prompt": "small calm pilates class in a sunlit room"
+          },
+          {
+            "heading": "Setup",
+            "narration": "Instructors show you how to set up the equipment before you start.",
+            "on_screen_text": "Setup shown first",
+            "visual_prompt": "reformer machine being adjusted"
+          },
+          {
+            "heading": "Offer",
+            "narration": "New clients get three classes for thirty-nine dollars.",
+            "on_screen_text": "3 classes · $39 · new clients",
+            "visual_prompt": "offer card over a soft studio background"
+          },
+          {
+            "heading": "CTA",
+            "narration": "Fern Street Studio. Book through the link.",
+            "on_screen_text": "Book now",
+            "visual_prompt": "map pin and booking button area"
+          }
         ],
         "cta": "Book through the link.",
         "on_screen_disclosure": "AI-generated presenter · Ad",
-        "variations": ["Three classes, thirty-nine dollars, no contract.", "Pilates for people who've never done pilates."]
+        "variations": [
+          "Three classes, thirty-nine dollars, no contract.",
+          "Pilates for people who've never done pilates."
+        ]
+      }
+    },
+    {
+      "slug": "hollowick",
+      "brand": "Hollowick",
+      "product": "Hollowick wooden-wick candle",
+      "category": "Candles",
+      "style": "Sensory close-up",
+      "presenter": "voice",
+      "fictional_price": "$28",
+      "palette": [
+        "#1f140c",
+        "#f7efe4",
+        "#d9822b",
+        "#7a4b2a"
+      ],
+      "script": {
+        "concept": "Lead with sound: a wooden wick crackling, then the jar, wax and scent.",
+        "hook": "Turn your sound on for this one.",
+        "segments": [
+          {
+            "heading": "Hook",
+            "narration": "Turn your sound on for this one.",
+            "on_screen_text": "Sound on",
+            "visual_prompt": "extreme close-up of a match lighting a wooden candle wick in a dark room"
+          },
+          {
+            "heading": "Wick",
+            "narration": "That's a wooden wick. It crackles a little while it burns.",
+            "on_screen_text": "Wooden wick",
+            "visual_prompt": "wide low candle flame flickering, warm amber glow"
+          },
+          {
+            "heading": "Jar",
+            "narration": "Hand-poured soy wax in an eight-ounce amber jar.",
+            "on_screen_text": "Soy wax · 8 oz",
+            "visual_prompt": "amber glass candle jar with a plain label on linen"
+          },
+          {
+            "heading": "Scent",
+            "narration": "The scent is Cedar and Smoke.",
+            "on_screen_text": "Cedar & Smoke",
+            "visual_prompt": "candle on a side table beside a book and a wool blanket, evening"
+          },
+          {
+            "heading": "CTA",
+            "narration": "Hollowick. Link below.",
+            "on_screen_text": "Hollowick · $28",
+            "visual_prompt": "amber candle jar on linen with empty space for a price card"
+          }
+        ],
+        "cta": "Link below.",
+        "on_screen_disclosure": "AI-generated voice · Ad",
+        "variations": [
+          "A candle you can hear.",
+          "If your candles tunnel, look at the wick."
+        ]
+      }
+    },
+    {
+      "slug": "ninth-hour-coffee",
+      "brand": "Ninth Hour Coffee",
+      "product": "Ninth Hour single-origin coffee",
+      "category": "Coffee",
+      "style": "Explainer",
+      "presenter": "presenter",
+      "fictional_price": "$19",
+      "palette": [
+        "#14110f",
+        "#f4ede4",
+        "#c0843d",
+        "#5b3a29"
+      ],
+      "script": {
+        "concept": "Teach viewers three things to read on a coffee bag, using this bag as the example.",
+        "hook": "Three things on a coffee bag worth reading.",
+        "segments": [
+          {
+            "heading": "Hook",
+            "narration": "Three things on a coffee bag worth reading.",
+            "on_screen_text": "3 things to check",
+            "visual_prompt": "hand holding a kraft coffee bag up to the camera, cafe counter"
+          },
+          {
+            "heading": "Roast date",
+            "narration": "One: the roast date. This one says when it was roasted.",
+            "on_screen_text": "1 · Roast date",
+            "visual_prompt": "close-up of a printed roast date on a coffee bag"
+          },
+          {
+            "heading": "Origin",
+            "narration": "Two: where it's from. This bag is a single farm in Colombia.",
+            "on_screen_text": "2 · Origin",
+            "visual_prompt": "simple illustrated map of Colombia beside coffee beans"
+          },
+          {
+            "heading": "Notes",
+            "narration": "Three: tasting notes. Here it's brown sugar and red apple.",
+            "on_screen_text": "3 · Tasting notes",
+            "visual_prompt": "coffee beans pouring into a hand grinder, apple and sugar cubes beside"
+          },
+          {
+            "heading": "CTA",
+            "narration": "Ninth Hour Coffee. Twelve ounces, whole bean. Link below.",
+            "on_screen_text": "Ninth Hour · $19",
+            "visual_prompt": "pour-over brewing next to a coffee bag, morning light"
+          }
+        ],
+        "cta": "Link below.",
+        "on_screen_disclosure": "AI-generated presenter · Ad",
+        "variations": [
+          "Your coffee bag has a date on it. Is it the right one?",
+          "How to pick coffee in ten seconds."
+        ]
+      }
+    },
+    {
+      "slug": "tumbletree",
+      "brand": "Tumbletree Toys",
+      "product": "Tumbletree wooden stacking rainbow",
+      "category": "Wooden toys",
+      "style": "Problem/solution",
+      "presenter": "voice",
+      "fictional_price": "$42",
+      "palette": [
+        "#1d2b36",
+        "#fbf7ef",
+        "#e0603f",
+        "#f2b33d"
+      ],
+      "script": {
+        "concept": "Fewer, better toys: one wooden set that becomes many toys. Hands only, no children on camera.",
+        "hook": "Fewer toys. Ones that do more.",
+        "segments": [
+          {
+            "heading": "Hook",
+            "narration": "Fewer toys. Ones that do more.",
+            "on_screen_text": "Fewer, better toys",
+            "visual_prompt": "overhead shot of a pile of plastic toys being slid aside on a play mat"
+          },
+          {
+            "heading": "Stack",
+            "narration": "Seven wooden arches. Stack them as a rainbow.",
+            "on_screen_text": "7 pieces",
+            "visual_prompt": "adult hands stacking seven painted wooden arches into a rainbow"
+          },
+          {
+            "heading": "Play",
+            "narration": "Or a tunnel, a bridge, or whatever comes next.",
+            "on_screen_text": "Open-ended play",
+            "visual_prompt": "wooden arches arranged as a tunnel and a bridge on a wooden floor"
+          },
+          {
+            "heading": "Details",
+            "narration": "Solid wood, water-based paint, and a cotton bag to put it all away.",
+            "on_screen_text": "Solid wood",
+            "visual_prompt": "close-up of wood grain and soft paint colours, cotton drawstring bag"
+          },
+          {
+            "heading": "CTA",
+            "narration": "Tumbletree. Link below.",
+            "on_screen_text": "Tumbletree · $42",
+            "visual_prompt": "wooden rainbow on a white shelf with space for a price card"
+          }
+        ],
+        "cta": "Link below.",
+        "on_screen_disclosure": "AI-generated voice · Ad",
+        "variations": [
+          "The toy that's a different toy every day.",
+          "A gift that doesn't need batteries."
+        ]
+      }
+    },
+    {
+      "slug": "saltmeadow",
+      "brand": "Saltmeadow Soap Co.",
+      "product": "Saltmeadow sea-salt soap, 3-bar set",
+      "category": "Soap",
+      "style": "Ingredient reveal",
+      "presenter": "presenter",
+      "fictional_price": "$24",
+      "palette": [
+        "#13262b",
+        "#f2f5f3",
+        "#7fb7b0",
+        "#e6c79c"
+      ],
+      "script": {
+        "concept": "Short label versus long label: list the five ingredients, then show how the bars are made.",
+        "hook": "Long list. Short list.",
+        "segments": [
+          {
+            "heading": "Hook",
+            "narration": "Long list. Short list.",
+            "on_screen_text": "Read the label",
+            "visual_prompt": "hands holding two soap labels side by side, one long and one short"
+          },
+          {
+            "heading": "Ingredients",
+            "narration": "Olive oil, coconut oil, shea butter, sea salt, and water. That's the list.",
+            "on_screen_text": "5 ingredients",
+            "visual_prompt": "five small bowls of soap ingredients on a white counter"
+          },
+          {
+            "heading": "Made",
+            "narration": "Cold-process, cut by hand, and cured before it ships.",
+            "on_screen_text": "Cut by hand",
+            "visual_prompt": "a long loaf of soap being cut into bars with a wire cutter"
+          },
+          {
+            "heading": "Wrap",
+            "narration": "Wrapped in paper. No plastic.",
+            "on_screen_text": "Plastic-free wrap",
+            "visual_prompt": "soap bar being wrapped in plain kraft paper"
+          },
+          {
+            "heading": "CTA",
+            "narration": "Saltmeadow. Three bars for twenty-four. Link below.",
+            "on_screen_text": "3 bars · $24",
+            "visual_prompt": "three wrapped soap bars stacked on a stone, space for a price card"
+          }
+        ],
+        "cta": "Link below.",
+        "on_screen_disclosure": "AI-generated presenter · Ad",
+        "variations": [
+          "Five ingredients. You can pronounce all of them.",
+          "How soap is made when it's made by hand."
+        ]
+      }
+    },
+    {
+      "slug": "wren-and-wire",
+      "brand": "Wren & Wire",
+      "product": "Wren & Wire initial necklace",
+      "category": "Jewelry",
+      "style": "Gift countdown",
+      "presenter": "voice",
+      "fictional_price": "$48",
+      "palette": [
+        "#1c1a22",
+        "#f8f3ee",
+        "#d4a64a",
+        "#b56b6b"
+      ],
+      "script": {
+        "concept": "Position a hand-stamped initial necklace as the personal birthday gift.",
+        "hook": "A birthday gift that's actually personal.",
+        "segments": [
+          {
+            "heading": "Hook",
+            "narration": "A birthday gift that's actually personal.",
+            "on_screen_text": "Gift idea",
+            "visual_prompt": "paper calendar with a date circled, small gift box sliding into frame"
+          },
+          {
+            "heading": "Stamp",
+            "narration": "Each initial is stamped by hand.",
+            "on_screen_text": "Hand-stamped",
+            "visual_prompt": "metal letter stamp striking a small gold disc on a steel block"
+          },
+          {
+            "heading": "Chain",
+            "narration": "On a fourteen-karat gold-filled chain.",
+            "on_screen_text": "14k gold-filled",
+            "visual_prompt": "delicate gold chain with an initial disc catching the light"
+          },
+          {
+            "heading": "Gift",
+            "narration": "It ships in a gift box, with a note card if you want one.",
+            "on_screen_text": "Gift box + note",
+            "visual_prompt": "a handwritten note card tucked into a small jewelry box"
+          },
+          {
+            "heading": "CTA",
+            "narration": "Wren and Wire. Link below.",
+            "on_screen_text": "Wren & Wire · $48",
+            "visual_prompt": "closed jewelry gift box on silk with space for a price card"
+          }
+        ],
+        "cta": "Link below.",
+        "on_screen_disclosure": "AI-generated voice · Ad",
+        "variations": [
+          "One letter. That's the whole gift.",
+          "A necklace with one letter on it."
+        ]
+      }
+    },
+    {
+      "slug": "potbound",
+      "brand": "Potbound",
+      "product": "Potbound self-watering planter",
+      "category": "Plants",
+      "style": "Before/after",
+      "presenter": "voice",
+      "fictional_price": "$36",
+      "palette": [
+        "#16241c",
+        "#f3f6ef",
+        "#6fae6a",
+        "#d98e5a"
+      ],
+      "script": {
+        "concept": "Start with a drooping plant, explain the hidden reservoir, end with the same plant thriving.",
+        "hook": "Forgot to water it again?",
+        "segments": [
+          {
+            "heading": "Hook",
+            "narration": "Forgot to water it again?",
+            "on_screen_text": "We've all been there",
+            "visual_prompt": "a drooping pothos plant in a plain pot on a windowsill"
+          },
+          {
+            "heading": "How",
+            "narration": "Potbound has a water reservoir in the base, and a wick that feeds the soil.",
+            "on_screen_text": "Hidden reservoir",
+            "visual_prompt": "cutaway illustration of a planter with a water reservoir and a cotton wick"
+          },
+          {
+            "heading": "Fill",
+            "narration": "Fill it through the side. The plant draws water as it needs it.",
+            "on_screen_text": "Fill from the side",
+            "visual_prompt": "water being poured into the side spout of a ceramic planter"
+          },
+          {
+            "heading": "CTA",
+            "narration": "Six inches, three glazes. Potbound. Link below.",
+            "on_screen_text": "Potbound · $36",
+            "visual_prompt": "three ceramic planters in different glazes with healthy plants"
+          }
+        ],
+        "cta": "Link below.",
+        "on_screen_disclosure": "AI-generated voice · Ad",
+        "variations": [
+          "A planter for people who travel.",
+          "The pot does the watering."
+        ]
+      }
+    },
+    {
+      "slug": "grate-escape",
+      "brand": "Grate Escape",
+      "product": "Grate Escape rotary grater",
+      "category": "Kitchen gadget",
+      "style": "Speed demo",
+      "presenter": "presenter",
+      "fictional_price": "$34",
+      "palette": [
+        "#221a12",
+        "#fbf6ec",
+        "#f2a93b",
+        "#3e7c59"
+      ],
+      "script": {
+        "concept": "A fast demo: turn the handle, swap drums, into the dishwasher.",
+        "hook": "Put the box grater down.",
+        "segments": [
+          {
+            "heading": "Hook",
+            "narration": "Put the box grater down.",
+            "on_screen_text": "Watch this",
+            "visual_prompt": "a block of cheese beside a box grater, then a rotary grater appears"
+          },
+          {
+            "heading": "Grate",
+            "narration": "Load it, turn the handle.",
+            "on_screen_text": "Turn. Done.",
+            "visual_prompt": "hand cranking a rotary cheese grater, fine cheese falling into a bowl"
+          },
+          {
+            "heading": "Drums",
+            "narration": "Three drums: fine, coarse, and a slicer.",
+            "on_screen_text": "3 drums",
+            "visual_prompt": "three stainless grater drums laid out on a cutting board"
+          },
+          {
+            "heading": "CTA",
+            "narration": "Drums go in the dishwasher. Grate Escape. Link below.",
+            "on_screen_text": "Grate Escape · $34",
+            "visual_prompt": "grater drums in a dishwasher rack, then the product on a counter"
+          }
+        ],
+        "cta": "Link below.",
+        "on_screen_disclosure": "AI-generated presenter · Ad",
+        "variations": [
+          "Your knuckles will thank you.",
+          "Ten seconds of grating, start to finish."
+        ]
+      }
+    },
+    {
+      "slug": "wrapsody",
+      "brand": "Wrapsody",
+      "product": "Wrapsody beeswax wraps, set of 3",
+      "category": "Eco / reusable",
+      "style": "Side-by-side",
+      "presenter": "voice",
+      "fictional_price": "$22",
+      "palette": [
+        "#1f2416",
+        "#fbf8ee",
+        "#e9b949",
+        "#7a9a4a"
+      ],
+      "script": {
+        "concept": "Split-screen against plastic wrap, then show how the wrap shapes, rinses and comes in three sizes.",
+        "hook": "Left: plastic wrap. Right: not plastic wrap.",
+        "segments": [
+          {
+            "heading": "Hook",
+            "narration": "Left: plastic wrap. Right: not plastic wrap.",
+            "on_screen_text": "Left vs right",
+            "visual_prompt": "split screen of tangled plastic wrap and a fabric wrap folded neatly over a bowl"
+          },
+          {
+            "heading": "Shape",
+            "narration": "The warmth of your hands shapes it, and it holds.",
+            "on_screen_text": "Shapes with warm hands",
+            "visual_prompt": "hands pressing a patterned beeswax wrap over half a lemon"
+          },
+          {
+            "heading": "Reuse",
+            "narration": "Rinse it in cool water and use it again.",
+            "on_screen_text": "Rinse · reuse",
+            "visual_prompt": "beeswax wrap rinsed under a tap and hung to dry"
+          },
+          {
+            "heading": "Sizes",
+            "narration": "Three sizes: small, medium and large.",
+            "on_screen_text": "S · M · L",
+            "visual_prompt": "three wraps covering a bowl, a sandwich and a wedge of cheese"
+          },
+          {
+            "heading": "CTA",
+            "narration": "Wrapsody. Set of three. Link below.",
+            "on_screen_text": "Wrapsody · $22",
+            "visual_prompt": "folded wraps in a paper sleeve with space for a price card"
+          }
+        ],
+        "cta": "Link below.",
+        "on_screen_disclosure": "AI-generated voice · Ad",
+        "variations": [
+          "The roll of plastic in your drawer has a replacement.",
+          "Three wraps, one less roll of cling film."
+        ]
+      }
+    },
+    {
+      "slug": "loopline",
+      "brand": "Loopline Bands",
+      "product": "Loopline fabric resistance bands",
+      "category": "Fitness accessories",
+      "style": "Workout in a bag",
+      "presenter": "presenter",
+      "fictional_price": "$29",
+      "palette": [
+        "#141a24",
+        "#f1f4f8",
+        "#5aa9e6",
+        "#ff7a59"
+      ],
+      "script": {
+        "concept": "A full band set fits in a small bag; show the three levels and the non-roll fabric. No body or results claims.",
+        "hook": "A whole set of bands fits in this bag.",
+        "segments": [
+          {
+            "heading": "Hook",
+            "narration": "A whole set of bands fits in this bag.",
+            "on_screen_text": "Fits in a carry-on",
+            "visual_prompt": "small drawstring bag pulled from a carry-on suitcase"
+          },
+          {
+            "heading": "Levels",
+            "narration": "Three fabric loop bands: light, medium, and heavy.",
+            "on_screen_text": "Light · Medium · Heavy",
+            "visual_prompt": "three colour-coded fabric loop bands laid out on a mat"
+          },
+          {
+            "heading": "Fabric",
+            "narration": "Fabric, so they don't roll up like thin rubber bands.",
+            "on_screen_text": "Fabric · non-roll",
+            "visual_prompt": "person doing side steps with a fabric band above the knees, gym floor"
+          },
+          {
+            "heading": "Grip",
+            "narration": "There's a grip strip inside to keep it in place.",
+            "on_screen_text": "Inner grip strip",
+            "visual_prompt": "close-up of the rubber grip strip inside a fabric band"
+          },
+          {
+            "heading": "CTA",
+            "narration": "Loopline. Set of three. Link below.",
+            "on_screen_text": "Loopline · $29",
+            "visual_prompt": "bands going back into a drawstring bag, space for a price card"
+          }
+        ],
+        "cta": "Link below.",
+        "on_screen_disclosure": "AI-generated presenter · Ad",
+        "variations": [
+          "Rubber bands that roll up mid-squat? Try fabric.",
+          "Three bands, one bag, any room."
+        ]
+      }
+    },
+    {
+      "slug": "packwell",
+      "brand": "Packwell",
+      "product": "Packwell compression packing cubes",
+      "category": "Travel",
+      "style": "Packing time-lapse",
+      "presenter": "voice",
+      "fictional_price": "$39",
+      "palette": [
+        "#16202a",
+        "#f5f7f9",
+        "#4fb0a5",
+        "#f2c14e"
+      ],
+      "script": {
+        "concept": "Overstuffed suitcase to closed carry-on: pack by cube, then the compression zip does the rest.",
+        "hook": "If this is your suitcase every trip.",
+        "segments": [
+          {
+            "heading": "Hook",
+            "narration": "If this is your suitcase every trip.",
+            "on_screen_text": "Every. Trip.",
+            "visual_prompt": "an overstuffed carry-on suitcase that won't zip closed"
+          },
+          {
+            "heading": "Cubes",
+            "narration": "Pack by cube. Four sizes, one for each kind of thing.",
+            "on_screen_text": "4 cubes",
+            "visual_prompt": "overhead time-lapse of clothes rolled into four packing cubes"
+          },
+          {
+            "heading": "Compress",
+            "narration": "Then close the second zip, and the cube compresses.",
+            "on_screen_text": "Compression zip",
+            "visual_prompt": "close-up of a second zipper pulling a packing cube thinner"
+          },
+          {
+            "heading": "Fit",
+            "narration": "Same clothes. Bag closes.",
+            "on_screen_text": "Same clothes, more room",
+            "visual_prompt": "packing cubes sliding into a carry-on that zips easily"
+          },
+          {
+            "heading": "CTA",
+            "narration": "Packwell. Set of four. Link below.",
+            "on_screen_text": "Packwell · $39",
+            "visual_prompt": "set of packing cubes on a bed with space for a price card"
+          }
+        ],
+        "cta": "Link below.",
+        "on_screen_disclosure": "AI-generated voice · Ad",
+        "variations": [
+          "The second zip is the whole trick.",
+          "Carry-on only, for real this time."
+        ]
       }
     }
   ]

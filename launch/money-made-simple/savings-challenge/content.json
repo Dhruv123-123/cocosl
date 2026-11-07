@@ -1,0 +1,609 @@
+[
+ {
+  "format": "mid",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Day 1 of an 8-move savings challenge: $300 by New Year's Eve. The whole plan on screen, then move 1: open a separate savings bucket and put $20 in today.",
+  "script": {
+   "title": "$300 by New Year's Eve: day 1 (the plan)",
+   "hook": "Let's save $300 by New Year's Eve, together. Here's the whole plan, and today's first move: $20.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Let's save three hundred dollars by New Year's Eve, together. Here's the whole plan, and today's first move: twenty dollars.",
+     "on_screen_text": "$300 by Dec 31 · day 1",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a jar with a small party hat. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why now",
+     "narration": "The holidays are when money slips. A challenge with one small move a week is easier to stick to than a big goal you forget by Thursday.",
+     "on_screen_text": "1 small move a week",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with one circled Sunday. No text, no logos, no real people."
+    },
+    {
+     "heading": "The plan",
+     "narration": "Eight moves, one every Sunday. A cart pause on Black Friday week. One subscription and one thing you sell. A pantry week. One bill call. A gift cap. Returns and gift cards. Then a final round-up on New Year's Eve.",
+     "on_screen_text": "8 moves · 8 Sundays",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. eight small boxes in a row. No text, no logos, no real people."
+    },
+    {
+     "heading": "The math",
+     "narration": "The amounts are an example plan: twenty, forty, fifty, forty-five, thirty-five, forty, fifty and twenty. That adds up to three hundred. Your numbers will be different, and that's fine.",
+     "on_screen_text": "Example: 20+40+50+45+35+40+50+20 = $300",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short column of numbers with a total. No text, no logos, no real people."
+    },
+    {
+     "heading": "Move 1",
+     "narration": "Today's move: open a separate savings bucket, or a savings account with no card attached, and name it three hundred by New Year's. Move twenty dollars into it now.",
+     "on_screen_text": "Move 1: a named bucket + $20",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a label and a coin dropping in. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tracker",
+     "narration": "Write three hundred at the top of a note or a sheet of paper, with eight boxes underneath. Tick the first one tonight. Seeing it fill up helps more than you'd think.",
+     "on_screen_text": "8 boxes · tick box 1",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sheet of paper with eight boxes, one ticked. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Doing it with us? Comment the week you're on. Day 1 is pinned. Follow for next Sunday's move.",
+   "caption": "Day 1 of the $300 by New Year's Eve challenge.\n\nThe example plan, one move every Sunday:\n1. Open a named savings bucket: $20\n2. Black Friday week: the 72-hour cart pause: $40\n3. Cancel 1 subscription + sell 1 thing: $50\n4. Pantry week: $45\n5. Call 1 bill: $35\n6. Set a gift cap: $40\n7. Returns + gift cards: $50\n8. New Year's Eve round-up: $20\n\nToday: open the bucket, name it, move $20.\n\nRunning total (example plan): $20 of $300.\n\nExample plan, not a promise: what you save depends on your own spending. Start any week: each video stands alone, and day 1 is pinned.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "savingschallenge",
+    "300challenge",
+    "savemoney",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Day 1: the full $300 plan and the first $20 move.",
+   "thumbnail_text": "$300 by NYE: day 1",
+   "sources": [
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "20+40+50+45+35+40+50+20 = 300",
+    "Example plan; no savings promised"
+   ]
+  },
+  "series": "$300 by New Year's Eve",
+  "format_style": "on-screen-calculation",
+  "series_part": 1
+ },
+ {
+  "format": "mid",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Week 2 (Black Friday week): the 72-hour cart pause. Put one wanted item on hold for 72 hours; if you skip it, move the money. Example: $40.",
+  "script": {
+   "title": "$300 by New Year's Eve, week 2: the 72-hour cart pause",
+   "hook": "Week 2 of saving $300 by New Year's Eve. It's Black Friday week, so this move is a 72-hour pause.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Week two of saving three hundred dollars by New Year's Eve. It's Black Friday week, so this move is a seventy-two-hour pause.",
+     "on_screen_text": "Week 2 · the 72-hour pause",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a shopping cart with a small hourglass. No text, no logos, no real people."
+    },
+    {
+     "heading": "New here?",
+     "narration": "New here? We're doing one money move every Sunday until December thirty-first. Day one is pinned. You can start from this week.",
+     "on_screen_text": "New? Start this week",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pinned note on a board. No text, no logos, no real people."
+    },
+    {
+     "heading": "The move",
+     "narration": "Pick one thing in a cart this week that you want but didn't plan. Leave it there for seventy-two hours. Set a reminder.",
+     "on_screen_text": "1 item · 72 hours · reminder",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a reminder and a cart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why it works",
+     "narration": "Sales are built for fast decisions: countdown timers, low-stock warnings. Waiting three days takes the urgency out, and a lot of carts look different by Monday.",
+     "on_screen_text": "Timers push fast decisions",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a countdown timer with a pause button. No text, no logos, no real people."
+    },
+    {
+     "heading": "Move the money",
+     "narration": "If you skip it, move what it would have cost into your bucket. Our example: a forty-dollar item. If you still want it after three days, and it fits your budget, that's fine too.",
+     "on_screen_text": "Skipped it? Move the $40",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin moving from a cart to a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Not a no",
+     "narration": "This isn't a rule against buying. It's a pause. If it's something you'd been planning to buy anyway, and the price is genuinely lower, buying it on sale is a good move. The pause is for the impulse buys.",
+     "on_screen_text": "A pause, not a ban",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pause button over a gift box. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tally",
+     "narration": "Example running total: twenty plus forty is sixty dollars of three hundred. Tick box two.",
+     "on_screen_text": "Example total: $60 of $300",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sheet with two ticked boxes. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Doing it with us? Comment the week you're on. Day 1 is pinned. Follow for next Sunday's move.",
+   "caption": "Week 2 (Black Friday week): the 72-hour cart pause.\n\n1. Pick one unplanned item in a cart\n2. Leave it for 72 hours, with a reminder\n3. Skipped it? Move its price to your bucket (example: $40)\n4. Still want it and it fits your budget? Fine too.\n\nRunning total (example plan): $60 of $300.\n\nExample plan, not a promise: what you save depends on your own spending. Start any week: each video stands alone, and day 1 is pinned.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "savingschallenge",
+    "300challenge",
+    "savemoney",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Week 2: the 72-hour cart pause for Black Friday week.",
+   "thumbnail_text": "Week 2: 72-hour pause",
+   "sources": [
+    "https://consumer.ftc.gov/shopping-and-donating"
+   ],
+   "claims_to_verify": [
+    "20 + 40 = 60",
+    "Example item price"
+   ]
+  },
+  "series": "$300 by New Year's Eve",
+  "format_style": "explainer",
+  "series_part": 2
+ },
+ {
+  "format": "mid",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Week 3: cancel one subscription you don't use ($15) and sell one thing you don't need ($35). Example: $50.",
+  "script": {
+   "title": "$300 by New Year's Eve, week 3: 1 subscription, 1 sale",
+   "hook": "Week 3 of saving $300 by New Year's Eve: 1 subscription out, 1 thing sold. Example: $50.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Week three of saving three hundred dollars by New Year's Eve. One subscription out, one thing sold. Example: fifty dollars.",
+     "on_screen_text": "Week 3 · cancel 1 · sell 1",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a phone with an X and a box with a tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "New here?",
+     "narration": "New here? One money move every Sunday until New Year's Eve. Day one is pinned, and you can start from this one.",
+     "on_screen_text": "New? Start this week",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pinned note on a board. No text, no logos, no real people."
+    },
+    {
+     "heading": "Part 1",
+     "narration": "Part one: open your bank app and search the last two months for repeating charges. Find one you haven't used in a month and cancel it. Our example: fifteen dollars.",
+     "on_screen_text": "Find 1 unused subscription · $15",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bank statement with one line circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tip",
+     "narration": "Can't decide? Pause instead of cancelling, if the service allows it. And check for free trials that turn into paid plans in December.",
+     "on_screen_text": "Pause it · check free trials",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pause button and a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Part 2",
+     "narration": "Part two: sell one thing you don't use. Good bets this time of year are kids' gear, small furniture, tools and unused gifts from last year. Our example: thirty-five dollars.",
+     "on_screen_text": "Sell 1 thing · $35",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a chair with a price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Selling safely",
+     "narration": "Selling locally? Meet in a public place in daylight, bring someone if you can, and take payment before handing anything over. Clean photos in natural light sell faster.",
+     "on_screen_text": "Meet in public · paid first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small shield next to a box. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tally",
+     "narration": "Move both amounts into the bucket. Example running total: one hundred ten dollars of three hundred. Tick box three.",
+     "on_screen_text": "Example total: $110 of $300",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sheet with three ticked boxes. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Doing it with us? Comment the week you're on. Day 1 is pinned. Follow for next Sunday's move.",
+   "caption": "Week 3: cancel 1 subscription, sell 1 thing.\n\n1. Search 2 months of bank charges for repeats\n2. Cancel (or pause) one you don't use: example $15\n3. Sell one thing you don't use: example $35\n4. Move both to the bucket\n\nRunning total (example plan): $110 of $300.\n\nExample plan, not a promise: what you save depends on your own spending. Start any week: each video stands alone, and day 1 is pinned.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "savingschallenge",
+    "300challenge",
+    "savemoney",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Week 3: one subscription out and one thing sold.",
+   "thumbnail_text": "Week 3: cancel 1, sell 1",
+   "sources": [
+    "https://consumer.ftc.gov/articles/how-cancel-subscriptions",
+    "https://consumer.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "20+40+50 = 110",
+    "Example amounts"
+   ]
+  },
+  "series": "$300 by New Year's Eve",
+  "format_style": "countdown",
+  "series_part": 3
+ },
+ {
+  "format": "mid",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Week 4: pantry week. Cook from what you already have for five dinners and move the grocery difference. Example: $45.",
+  "script": {
+   "title": "$300 by New Year's Eve, week 4: pantry week",
+   "hook": "Week 4 of saving $300 by New Year's Eve: pantry week. 5 dinners from what you already have.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Week four of saving three hundred dollars by New Year's Eve. It's pantry week: five dinners from what you already have.",
+     "on_screen_text": "Week 4 · pantry week",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes an open cupboard with jars and tins. No text, no logos, no real people."
+    },
+    {
+     "heading": "New here?",
+     "narration": "New here? One move every Sunday until December thirty-first. Day one is pinned. Join from this week.",
+     "on_screen_text": "New? Start this week",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pinned note on a board. No text, no logos, no real people."
+    },
+    {
+     "heading": "The move",
+     "narration": "Before you shop this week, look in the freezer, the fridge and the cupboard. Plan five dinners around what's there, and buy only the gaps, like milk, fruit or one fresh vegetable.",
+     "on_screen_text": "5 dinners · buy only the gaps",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short list next to a freezer. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ideas",
+     "narration": "Easy pantry dinners: pasta with tinned tomatoes, fried rice with frozen veg, bean chilli, soup, eggs on toast. Nothing fancy, and that's the point.",
+     "on_screen_text": "Pasta · fried rice · chilli · soup",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pot, a pan and a bowl. No text, no logos, no real people."
+    },
+    {
+     "heading": "The math",
+     "narration": "Compare this week's grocery bill with a normal week. Our example: a normal week is one hundred twenty, pantry week is seventy-five. The forty-five dollar difference goes in the bucket.",
+     "on_screen_text": "$120 − $75 = $45",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two receipts side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Leftovers",
+     "narration": "Cook a little extra on two of the nights, and lunch is covered the next day too. That's often where the biggest grocery savings hide, because lunches out add up quickly over a week.",
+     "on_screen_text": "Cook extra · lunch is covered",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a container with a lid next to a lunch bag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tally",
+     "narration": "Example running total: one hundred fifty-five dollars of three hundred, more than halfway. Tick box four.",
+     "on_screen_text": "Example total: $155 of $300",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sheet with four ticked boxes. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Doing it with us? Comment the week you're on. Day 1 is pinned. Follow for next Sunday's move.",
+   "caption": "Week 4: pantry week.\n\n1. Check freezer, fridge and cupboard first\n2. Plan 5 dinners around what's there\n3. Buy only the gaps\n4. Move the difference: example $120 − $75 = $45\n\nMore than halfway (example).\n\nRunning total (example plan): $155 of $300.\n\nExample plan, not a promise: what you save depends on your own spending. Start any week: each video stands alone, and day 1 is pinned.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "savingschallenge",
+    "300challenge",
+    "savemoney",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Week 4: five dinners from the pantry.",
+   "thumbnail_text": "Week 4: pantry week",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "120 − 75 = 45",
+    "20+40+50+45 = 155",
+    "Example grocery bills"
+   ]
+  },
+  "series": "$300 by New Year's Eve",
+  "format_style": "real-numbers",
+  "series_part": 4
+ },
+ {
+  "format": "mid",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Week 5: call one bill (internet, phone or insurance) with a short script and move the monthly saving. Example: $35.",
+  "script": {
+   "title": "$300 by New Year's Eve, week 5: call 1 bill",
+   "hook": "Week 5 of saving $300 by New Year's Eve: 1 phone call to lower 1 bill. Example: $35.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Week five of saving three hundred dollars by New Year's Eve. One phone call to lower one bill. Example: thirty-five dollars.",
+     "on_screen_text": "Week 5 · call 1 bill",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a phone and a bill with a down arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "New here?",
+     "narration": "New here? One money move every Sunday until New Year's Eve. Day one is pinned. This one works on its own.",
+     "on_screen_text": "New? Start this week",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pinned note on a board. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pick one",
+     "narration": "Pick your biggest bill that has competitors: internet, mobile phone or car insurance. Look up what new customers are offered, for you and from a competitor.",
+     "on_screen_text": "Internet · phone · insurance",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small icons in a row. No text, no logos, no real people."
+    },
+    {
+     "heading": "The script",
+     "narration": "Then call and say: I've been a customer for a while, and I've seen offers around this price. I'd like to stay, but I need a better rate. What can you do? If they can't help, ask for the retention team.",
+     "on_screen_text": "\"I'd like to stay, but…\"",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a speech bubble. No text, no logos, no real people."
+    },
+    {
+     "heading": "The math",
+     "narration": "Our example: the internet bill drops from eighty-five to fifty-five, a thirty-dollar saving each month. Move this month's thirty, plus five you skipped on takeout this week.",
+     "on_screen_text": "$30 saved + $5 = $35",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bill with a lower number. No text, no logos, no real people."
+    },
+    {
+     "heading": "In writing",
+     "narration": "Whatever they offer, ask how long the price lasts and what it goes to afterwards. Ask them to confirm it by email or in the app.",
+     "on_screen_text": "How long does it last?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an email icon with a tick. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tally",
+     "narration": "Example running total: one hundred ninety dollars of three hundred. Tick box five. And put a reminder in your calendar for when the new price ends.",
+     "on_screen_text": "Example total: $190 of $300",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sheet with five ticked boxes. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Doing it with us? Comment the week you're on. Day 1 is pinned. Follow for next Sunday's move.",
+   "caption": "Week 5: call one bill.\n\n1. Pick internet, phone or insurance\n2. Look up new-customer offers\n3. Script: \"I'd like to stay, but I need a better rate. What can you do?\"\n4. Ask for retention if needed; get the new price in writing\n5. Move the saving: example $30 + $5 = $35\n\nResults vary by provider.\n\nRunning total (example plan): $190 of $300.\n\nExample plan, not a promise: what you save depends on your own spending. Start any week: each video stands alone, and day 1 is pinned.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "savingschallenge",
+    "300challenge",
+    "savemoney",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Week 5: one call to lower one bill.",
+   "thumbnail_text": "Week 5: call 1 bill",
+   "sources": [
+    "https://www.consumerfinance.gov/",
+    "https://consumer.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "85 − 55 = 30",
+    "20+40+50+45+35 = 190",
+    "Results vary; example only"
+   ]
+  },
+  "series": "$300 by New Year's Eve",
+  "format_style": "question-reply",
+  "series_part": 5
+ },
+ {
+  "format": "mid",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Week 6: set a gift cap before the last shopping week, and move whatever comes in under it. Example: $40.",
+  "script": {
+   "title": "$300 by New Year's Eve, week 6: the gift cap",
+   "hook": "Week 6 of saving $300 by New Year's Eve: set a gift cap before the last shopping week.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Week six of saving three hundred dollars by New Year's Eve. Set a gift cap before the last shopping week.",
+     "on_screen_text": "Week 6 · the gift cap",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a gift box with a small ceiling line. No text, no logos, no real people."
+    },
+    {
+     "heading": "New here?",
+     "narration": "New here? One move every Sunday until December thirty-first. Day one is pinned. Start with this one.",
+     "on_screen_text": "New? Start this week",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pinned note on a board. No text, no logos, no real people."
+    },
+    {
+     "heading": "The move",
+     "narration": "Write down everyone you're still buying for, and give each person a number. Add them up. That total is your cap for the week.",
+     "on_screen_text": "List · a number each · a total",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short list with numbers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Stay under",
+     "narration": "Shop with the list, not the store. A small, thoughtful gift beats a big one bought in a panic on December twenty-third.",
+     "on_screen_text": "Shop the list, not the store",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list on a shopping bag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Move the rest",
+     "narration": "Whatever comes in under the cap goes in the bucket. Our example: a cap of two hundred, and one sixty spent. Forty dollars moves.",
+     "on_screen_text": "$200 cap − $160 = $40",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin moving from a gift box to a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Not just gifts",
+     "narration": "Count the extras too: wrapping paper, cards, shipping and the hosting food. They're easy to forget, and they're often what pushes December over budget. Give them their own line inside the cap, so they don't sneak up on you.",
+     "on_screen_text": "Count wrapping, cards, shipping",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a roll of wrapping paper and a stamp. No text, no logos, no real people."
+    },
+    {
+     "heading": "Talk about it",
+     "narration": "If money's tight, it's okay to suggest a gift swap or a spending limit with family. Many people are relieved when someone asks first.",
+     "on_screen_text": "Suggest a limit or a swap",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two speech bubbles with a small gift. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tally",
+     "narration": "Example running total: two hundred thirty dollars of three hundred. Tick box six. Two moves left.",
+     "on_screen_text": "Example total: $230 of $300",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sheet with six ticked boxes. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Doing it with us? Comment the week you're on. Day 1 is pinned. Follow for next Sunday's move.",
+   "caption": "Week 6: the gift cap.\n\n1. List everyone you're still buying for\n2. Give each a number; add them up\n3. That's your cap; shop the list\n4. Move what's under the cap: example $200 − $160 = $40\n\nRunning total (example plan): $230 of $300.\n\nExample plan, not a promise: what you save depends on your own spending. Start any week: each video stands alone, and day 1 is pinned.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "savingschallenge",
+    "300challenge",
+    "savemoney",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Week 6: set a gift cap and move what's left.",
+   "thumbnail_text": "Week 6: gift cap",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/",
+    "https://consumer.ftc.gov/shopping-and-donating"
+   ],
+   "claims_to_verify": [
+    "200 − 160 = 40",
+    "20+40+50+45+35+40 = 230"
+   ]
+  },
+  "series": "$300 by New Year's Eve",
+  "format_style": "on-screen-calculation",
+  "series_part": 6
+ },
+ {
+  "format": "mid",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Week 7 (after Christmas): return or resell what you won't use, and move gift cards and cash gifts into the plan. Example: $50.",
+  "script": {
+   "title": "$300 by New Year's Eve, week 7: returns and gift cards",
+   "hook": "Week 7 of saving $300 by New Year's Eve: returns, resales and gift cards. Example: $50.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Week seven of saving three hundred dollars by New Year's Eve. Returns, resales and gift cards. Example: fifty dollars.",
+     "on_screen_text": "Week 7 · returns + gift cards",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a gift box with a return arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "New here?",
+     "narration": "New here? We've done one move every Sunday since mid-November. Day one is pinned, and this move works on its own.",
+     "on_screen_text": "New? Start this week",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pinned note on a board. No text, no logos, no real people."
+    },
+    {
+     "heading": "Returns",
+     "narration": "Anything you won't use? Check the return window. Many stores extend it for holiday purchases, but not forever. Return it, and move the refund.",
+     "on_screen_text": "Check return windows",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a box. No text, no logos, no real people."
+    },
+    {
+     "heading": "Gift cards",
+     "narration": "Gift cards: write each one down with its balance, so none get lost. Use one for something you'd buy anyway, and move the cash you didn't spend.",
+     "on_screen_text": "Log every gift card",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gift card in a wallet. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cash gifts",
+     "narration": "Cash gifts: decide on a split before it's spent, like half to the bucket and half to enjoy. Our example adds up to fifty dollars from all three.",
+     "on_screen_text": "Cash gifts: split before spending",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin split in two. No text, no logos, no real people."
+    },
+    {
+     "heading": "Unwanted gifts",
+     "narration": "Got something that can't be returned? Resell it while it's still in its box, or re-gift it to someone who'd love it. Either way, it stops being clutter and starts being useful.",
+     "on_screen_text": "Resell it boxed or re-gift it",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a box with a small tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tally",
+     "narration": "Example running total: two hundred eighty dollars of three hundred. Tick box seven. One move left, on New Year's Eve.",
+     "on_screen_text": "Example total: $280 of $300",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sheet with seven ticked boxes. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Doing it with us? Comment the week you're on. Day 1 is pinned. Follow for next Sunday's move.",
+   "caption": "Week 7: returns, resales and gift cards.\n\n1. Return what you won't use (check the window)\n2. Log every gift card and its balance\n3. Use one for something you'd buy anyway; move the cash\n4. Split cash gifts before spending\n\nExample: $50 from all three.\n\nRunning total (example plan): $280 of $300.\n\nExample plan, not a promise: what you save depends on your own spending. Start any week: each video stands alone, and day 1 is pinned.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "savingschallenge",
+    "300challenge",
+    "savemoney",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Week 7: returns, gift cards and cash gifts.",
+   "thumbnail_text": "Week 7: returns + cards",
+   "sources": [
+    "https://consumer.ftc.gov/shopping-and-donating"
+   ],
+   "claims_to_verify": [
+    "20+40+50+45+35+40+50 = 280",
+    "Example amounts"
+   ]
+  },
+  "series": "$300 by New Year's Eve",
+  "format_style": "myth-vs-fact",
+  "series_part": 7
+ },
+ {
+  "format": "mid",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Finale (New Year's Eve): the round-up move, the example tally to $300, and what to do with the money in January.",
+  "script": {
+   "title": "$300 by New Year's Eve, final move: the round-up",
+   "hook": "It's New Year's Eve. The final move in our $300 challenge, and what to do with the money next.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "It's New Year's Eve. Here's the final move in our three-hundred-dollar challenge, and what to do with the money next.",
+     "on_screen_text": "Final move · Dec 31",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a jar with a party hat and confetti. No text, no logos, no real people."
+    },
+    {
+     "heading": "New here?",
+     "narration": "New here? This was an eight-week plan, one move every Sunday. Day one is pinned. You can run the whole thing in January instead.",
+     "on_screen_text": "New? Run it in January",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pinned note and a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "The round-up",
+     "narration": "The last move: look at your checking balance and round it down to the nearest fifty. Move what's above that line. Our example: twenty dollars.",
+     "on_screen_text": "Round down · move the rest: $20",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance with a line under it. No text, no logos, no real people."
+    },
+    {
+     "heading": "The tally",
+     "narration": "The example plan: twenty, forty, fifty, forty-five, thirty-five, forty, fifty, twenty. Three hundred dollars. If yours is less, it's still more than you'd have had.",
+     "on_screen_text": "Example: $300 in 8 moves",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. eight ticked boxes and a total. No text, no logos, no real people."
+    },
+    {
+     "heading": "Next",
+     "narration": "What now? If you don't have an emergency fund, that's its first home. If you do, it can start a sinking fund for next year's holidays, so December is already paid for.",
+     "on_screen_text": "Emergency fund or next year's fund",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar next to a small calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Your tally",
+     "narration": "Add up your own boxes tonight. Write the real number at the top of your tracker. Whatever it says, that's money you chose to keep.",
+     "on_screen_text": "Write your real number",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pencil and a sheet with a total. No text, no logos, no real people."
+    },
+    {
+     "heading": "Keep one",
+     "narration": "Pick the one move that was easiest, and keep doing it once a month in January. That's how a challenge turns into a habit.",
+     "on_screen_text": "Keep your easiest move",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single ticked box with a small star. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Doing it with us? Comment the week you're on. Day 1 is pinned. Follow for next Sunday's move.",
+   "caption": "Final move (New Year's Eve): the round-up.\n\n1. Round your checking balance down to the nearest $50\n2. Move what's above the line: example $20\n\nThe example plan: 20 + 40 + 50 + 45 + 35 + 40 + 50 + 20 = $300.\n\nNext: an emergency fund first, or a sinking fund for next year's holidays. Keep your easiest move monthly.\n\nRunning total (example plan): $300 of $300.\n\nExample plan, not a promise: what you save depends on your own spending. Start any week: each video stands alone, and day 1 is pinned.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "savingschallenge",
+    "300challenge",
+    "savemoney",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "The finale: the round-up and what to do with the money.",
+   "thumbnail_text": "Final move: $300",
+   "sources": [
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "Sum = 300",
+    "Example plan; no savings promised"
+   ]
+  },
+  "series": "$300 by New Year's Eve",
+  "format_style": "countdown",
+  "series_part": 8
+ }
+]

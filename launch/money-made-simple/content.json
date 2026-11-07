@@ -1,10 +1,11 @@
 [
   {
     "format": "short",
+    "date": "2026-11-16",
     "pillar": "budgeting systems that actually stick",
     "idea_angle": "Split checking into a 'bills' account and a 'spending' account so fixed costs can never be accidentally spent.",
     "script": {
-      "title": "The two-account trick that stops overdrafts",
+      "title": "Stop overdraft fees: the two-account trick",
       "hook": "If you keep checking your balance before buying lunch, your accounts are set up wrong.",
       "segments": [
         {
@@ -71,11 +72,15 @@
         "Example bills total of $1,450 is illustrative, not an average",
         "Many banks and credit unions offer checking with no monthly fee or minimum balance (confirm before recommending)"
       ],
-      "related_video": "Feel behind on money? A 30-day reset plan"
+      "related_video": "How to get your finances in order: a 30-day money reset",
+      "title_variants": [
+        "The two-account trick that stops overdrafts"
+      ]
     }
   },
   {
     "format": "short",
+    "date": "2026-11-18",
     "pillar": "budgeting systems that actually stick",
     "idea_angle": "Monthly category budgets break in week three; convert flexible spending into one weekly number instead.",
     "script": {
@@ -120,7 +125,7 @@
         }
       ],
       "cta": "Follow for one money move a week.",
-      "caption": "Monthly budgets look fine on the 1st and fall apart by the 20th.\n\nAdd up flexible spending (groceries, eating out, gas, shopping), multiply by 12, divide by 52. $1,000/month ≈ $230/week. Reload it every Monday; leftovers roll forward.\n\nWant this set up for you? The 20-Minute Budget template (Notion + Sheets) is in the link in bio.\n\nFollow for one money move a week.",
+      "caption": "Monthly budgets look fine on the 1st and fall apart by the 20th.\n\nAdd up flexible spending (groceries, eating out, gas, shopping), multiply by 12, divide by 52. $1,000/month ≈ $230/week. Reload it every Monday; leftovers roll forward.\n\nWant this set up for you? The 20-Minute Budget template (a guide and spreadsheet for Excel, Google Sheets or Numbers) is in the link in bio. It's our own product.\n\nFollow for one money move a week.",
       "hashtags": [
         "weeklybudget",
         "budgetingforbeginners",
@@ -138,7 +143,7 @@
       "claims_to_verify": [
         "$1,000 × 12 ÷ 52 = $230.77 (rounded to $230)"
       ],
-      "related_video": "Feel behind on money? A 30-day reset plan"
+      "related_video": "How to get your finances in order: a 30-day money reset"
     }
   },
   {
@@ -146,7 +151,7 @@
     "pillar": "first-time investing basics (index funds, retirement accounts)",
     "idea_angle": "Fear of locking money away stops people from opening a Roth IRA; contributions (not earnings) can be withdrawn.",
     "script": {
-      "title": "Roth IRA money isn't locked away",
+      "title": "Can you withdraw from a Roth IRA? Your contributions, yes",
       "hook": "The reason you haven't opened a Roth IRA is probably wrong.",
       "segments": [
         {
@@ -209,15 +214,19 @@
         "Early withdrawal of Roth earnings can be subject to income tax plus 10% additional tax, with exceptions (age 59½, five-year rule)",
         "Roth IRA eligibility requires taxable compensation and is subject to MAGI income limits"
       ],
-      "related_video": "How to start investing with $100 a month (complete beginner walkthrough)"
+      "related_video": "How to start investing with $100 a month (complete beginner walkthrough)",
+      "title_variants": [
+        "Roth IRA money isn't locked away"
+      ]
     }
   },
   {
     "format": "short",
+    "date": "2026-11-19",
     "pillar": "first-time investing basics (index funds, retirement accounts)",
     "idea_angle": "Not contributing enough to get the full 401(k) match is turning down part of your pay; worked example on a $50k salary.",
     "script": {
-      "title": "The raise you're ignoring: your 401(k) match",
+      "title": "401(k) match explained: the raise you're ignoring",
       "hook": "There's a good chance part of your salary is sitting unclaimed.",
       "segments": [
         {
@@ -279,7 +288,10 @@
         "$50,000 × 6% = $3,000; 50% match = $1,500; at 3% contribution match = $750",
         "Employer contributions may be subject to a vesting schedule; employee contributions are always 100% vested"
       ],
-      "related_video": "How to start investing with $100 a month (complete beginner walkthrough)"
+      "related_video": "How to start investing with $100 a month (complete beginner walkthrough)",
+      "title_variants": [
+        "The raise you're ignoring: your 401(k) match"
+      ]
     }
   },
   {
@@ -287,7 +299,7 @@
     "pillar": "first-time investing basics (index funds, retirement accounts)",
     "idea_angle": "Same index, different price tag: a 0.03% vs 1% expense ratio turns $10,000 into about $75k vs $57k over 30 years.",
     "script": {
-      "title": "The fee that eats $18,000",
+      "title": "The expense ratio that eats $18,000",
       "hook": "Two funds can own the exact same stocks and leave you with very different money.",
       "segments": [
         {
@@ -350,7 +362,10 @@
         "Broad index funds commonly have expense ratios of a few hundredths of a percent (check current fund fact sheets)",
         "7% annual return is a hypothetical assumption, not a forecast"
       ],
-      "related_video": "How to start investing with $100 a month (complete beginner walkthrough)"
+      "related_video": "How to start investing with $100 a month (complete beginner walkthrough)",
+      "title_variants": [
+        "The fee that eats $18,000"
+      ]
     }
   },
   {
@@ -358,7 +373,7 @@
     "pillar": "credit scores and debt payoff",
     "idea_angle": "Paying in full on the due date can still report high utilization because issuers usually report the statement balance.",
     "script": {
-      "title": "Paid in full, score still dropped?",
+      "title": "Why did my credit score drop after paying in full?",
       "hook": "You paid your card in full and your credit score still dipped. Here's why.",
       "segments": [
         {
@@ -420,11 +435,15 @@
         "Credit utilization is a large factor in common scoring models and reflects recent reported balances",
         "Payment history is the most heavily weighted FICO score factor"
       ],
-      "related_video": "Feel behind on money? A 30-day reset plan"
+      "related_video": "How to get your finances in order: a 30-day money reset",
+      "title_variants": [
+        "Paid in full, score still dropped?"
+      ]
     }
   },
   {
     "format": "short",
+    "date": "2026-11-17",
     "pillar": "credit scores and debt payoff",
     "idea_angle": "A credit freeze is free at all three bureaus, doesn't hurt your score, and takes about 15 minutes; how to thaw it when you apply.",
     "script": {
@@ -491,7 +510,7 @@
         "A freeze does not affect credit scores and does not block existing creditors",
         "Bureaus must lift a freeze within one hour for online or phone requests"
       ],
-      "related_video": "Feel behind on money? A 30-day reset plan"
+      "related_video": "How to get your finances in order: a 30-day money reset"
     }
   },
   {
@@ -499,7 +518,7 @@
     "pillar": "credit scores and debt payoff",
     "idea_angle": "Minimum-ish payments on a $3,000 card at 22% APR: $60/month takes 11+ years and $5,200 interest; $150/month takes ~2 years and ~$770.",
     "script": {
-      "title": "$60 vs $150 on a $3,000 card",
+      "title": "Minimum payment vs $150 on a $3,000 card",
       "hook": "Paying $60 a month on a $3,000 card balance costs you more in interest than the balance itself.",
       "segments": [
         {
@@ -562,7 +581,10 @@
         "22% APR is a realistic card rate (check current Fed G.19 average)",
         "Credit card statements must include a minimum payment warning showing payoff time (CARD Act)"
       ],
-      "related_video": "Feel behind on money? A 30-day reset plan"
+      "related_video": "How to get your finances in order: a 30-day money reset",
+      "title_variants": [
+        "$60 vs $150 on a $3,000 card"
+      ]
     }
   },
   {
@@ -570,7 +592,7 @@
     "pillar": "money apps and tools, honestly compared",
     "idea_angle": "What 'FDIC insured' on a high-yield savings app actually covers, and the fintech-vs-bank catch.",
     "script": {
-      "title": "Is your savings app actually insured?",
+      "title": "Is your savings app FDIC insured? Check in 1 minute",
       "hook": "That savings app paying a nice rate might not be a bank.",
       "segments": [
         {
@@ -634,7 +656,10 @@
         "FDIC insurance covers insured bank failure only, not failure of a non-bank fintech company",
         "Confirm the affiliate HYSA is held at an FDIC-insured bank before posting"
       ],
-      "related_video": "Feel behind on money? A 30-day reset plan"
+      "related_video": "How to get your finances in order: a 30-day money reset",
+      "title_variants": [
+        "Is your savings app actually insured?"
+      ]
     }
   },
   {
@@ -642,7 +667,7 @@
     "pillar": "money apps and tools, honestly compared",
     "idea_angle": "Three free bank alerts (low balance, large transaction, payment due) that replace daily balance-checking anxiety.",
     "script": {
-      "title": "Set these 3 bank alerts today",
+      "title": "3 bank alerts to turn on today",
       "hook": "You don't need a budgeting app to stop money surprises. You need three alerts.",
       "segments": [
         {
@@ -703,7 +728,10 @@
         "Late payments are generally reported to credit bureaus once 30 or more days past due",
         "Most major banks and card issuers offer free customizable alerts (confirm wording is not overstated)"
       ],
-      "related_video": "Feel behind on money? A 30-day reset plan"
+      "related_video": "How to get your finances in order: a 30-day money reset",
+      "title_variants": [
+        "Set these 3 bank alerts today"
+      ]
     }
   },
   {
@@ -711,7 +739,7 @@
     "pillar": "budgeting systems that actually stick",
     "idea_angle": "Irregular yearly costs (registration, gifts, renewals) aren't emergencies; turn each into a monthly sinking fund.",
     "script": {
-      "title": "That 'surprise' bill was on the calendar",
+      "title": "Sinking funds: the 'surprise' bill was on the calendar",
       "hook": "Car registration isn't an emergency. It shows up every single year.",
       "segments": [
         {
@@ -752,7 +780,7 @@
         }
       ],
       "cta": "Follow for one money move a week.",
-      "caption": "Irregular costs aren't emergencies. List last year's non-monthly expenses (registration, renewals, gifts, annual subscriptions), total them and divide by 12. $1,800/year = $150/month.\n\nAuto-transfer that into a separate savings bucket. When the bill shows up, it's already covered.\n\nWant this set up for you? The 20-Minute Budget template (Notion + Sheets) is in the link in bio.\n\nFollow for one money move a week.",
+      "caption": "Irregular costs aren't emergencies. List last year's non-monthly expenses (registration, renewals, gifts, annual subscriptions), total them and divide by 12. $1,800/year = $150/month.\n\nAuto-transfer that into a separate savings bucket. When the bill shows up, it's already covered.\n\nWant this set up for you? The 20-Minute Budget template (a guide and spreadsheet for Excel, Google Sheets or Numbers) is in the link in bio. It's our own product.\n\nFollow for one money move a week.",
       "hashtags": [
         "sinkingfunds",
         "budgetingtips",
@@ -769,7 +797,10 @@
       "claims_to_verify": [
         "$1,800 ÷ 12 = $150 (illustrative total, not an average)"
       ],
-      "related_video": "Feel behind on money? A 30-day reset plan"
+      "related_video": "How to get your finances in order: a 30-day money reset",
+      "title_variants": [
+        "That 'surprise' bill was on the calendar"
+      ]
     }
   },
   {
@@ -777,7 +808,7 @@
     "pillar": "first-time investing basics (index funds, retirement accounts)",
     "idea_angle": "A target-date fund is a legit one-fund start for a beginner IRA; the two catches are fees and stacking it with other funds.",
     "script": {
-      "title": "The one-fund retirement option",
+      "title": "Target date funds: the one-fund retirement option",
       "hook": "If picking investments is why you haven't started, one fund can handle most of it.",
       "segments": [
         {
@@ -840,7 +871,10 @@
         "Target-date funds are not guaranteed and can lose money, including near and after the target date (SEC investor bulletin)",
         "2065/2070 vintages exist at major providers (verify current availability)"
       ],
-      "related_video": "How to start investing with $100 a month (complete beginner walkthrough)"
+      "related_video": "How to start investing with $100 a month (complete beginner walkthrough)",
+      "title_variants": [
+        "The one-fund retirement option"
+      ]
     }
   },
   {
@@ -848,7 +882,7 @@
     "pillar": "credit scores and debt payoff",
     "idea_angle": "Closing an old no-fee card can raise utilization and shorten average age; utilization math with a $4,000 limit.",
     "script": {
-      "title": "Don't cancel that old card yet",
+      "title": "Should you close an old credit card? Not yet",
       "hook": "Closing a credit card you never use can actually lower your score.",
       "segments": [
         {
@@ -910,7 +944,10 @@
         "Closed accounts in good standing generally remain on credit reports for up to about 10 years",
         "Issuers may close inactive accounts; a small recurring charge keeps the account active (policies vary)"
       ],
-      "related_video": "Feel behind on money? A 30-day reset plan"
+      "related_video": "How to get your finances in order: a 30-day money reset",
+      "title_variants": [
+        "Don't cancel that old card yet"
+      ]
     }
   },
   {
@@ -918,7 +955,7 @@
     "pillar": "money apps and tools, honestly compared",
     "idea_angle": "A 10-minute subscription audit using a bank-statement search, sorted by 'use it weekly / monthly / forgot'.",
     "script": {
-      "title": "Find your forgotten subscriptions in 10 minutes",
+      "title": "How to find and cancel forgotten subscriptions",
       "hook": "Search your bank statement for one word and you'll probably find money leaking.",
       "segments": [
         {
@@ -978,11 +1015,15 @@
       "claims_to_verify": [
         "Statement search terms vary by bank; generic advice only (no specific figures to verify)"
       ],
-      "related_video": "Feel behind on money? A 30-day reset plan"
+      "related_video": "How to get your finances in order: a 30-day money reset",
+      "title_variants": [
+        "Find your forgotten subscriptions in 10 minutes"
+      ]
     }
   },
   {
     "format": "carousel",
+    "date": "2026-11-16",
     "pillar": "budgeting systems that actually stick",
     "idea_angle": "A fixed 20-minute monthly 'money date' agenda with timed steps, so budgeting becomes a calendar habit rather than willpower.",
     "script": {
@@ -1045,7 +1086,7 @@
         }
       ],
       "cta": "Save this for your next money date. Follow for one money move a week.",
-      "caption": "Budgeting sticks when it's a short recurring appointment, not a mood. Agenda:\n0–5 min: open every account, note balances\n5–10: find the category that ran over\n10–15: set next month's numbers\n15–18: scan for one-off costs\n18–20: pick one money move\n\nWant this set up for you? The 20-Minute Budget template (Notion + Sheets) is in the link in bio.\n\nFollow for one money move a week.",
+      "caption": "Budgeting sticks when it's a short recurring appointment, not a mood. Agenda:\n0–5 min: open every account, note balances\n5–10: find the category that ran over\n10–15: set next month's numbers\n15–18: scan for one-off costs\n18–20: pick one money move\n\nWant this set up for you? The 20-Minute Budget template (a guide and spreadsheet for Excel, Google Sheets or Numbers) is in the link in bio. It's our own product.\n\nFollow for one money move a week.",
       "hashtags": [
         "budgetingtips",
         "moneydate",
@@ -1068,6 +1109,7 @@
   },
   {
     "format": "carousel",
+    "date": "2026-11-18",
     "pillar": "budgeting systems that actually stick",
     "idea_angle": "An 8-week plan to a $1,000 starter emergency fund at $125/week, with specific places the money comes from.",
     "script": {
@@ -1473,7 +1515,7 @@
         },
         {
           "heading": "The real rule",
-          "narration": "Either method beats minimum payments only. Paying minimums alone on these same debts takes about 46 months and roughly $4,300 in interest.",
+          "narration": "Either method beats minimum payments only. Paying only each debt's minimum, with no extra, takes about 89 months, over seven years, and roughly $6,700 in interest.",
           "on_screen_text": "Any plan beats minimums",
           "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a long winding road next to a short straight one. No text, no logos, no real people."
         },
@@ -1485,7 +1527,7 @@
         }
       ],
       "cta": "Save this and run your own numbers. Follow for one money move a week.",
-      "caption": "Same debts ($900 at 18%, $4,200 at 27%, $6,500 at 9%), same $200 extra per month:\nAvalanche: ~25 months, ~$1,850 interest, first debt gone month 17\nSnowball: ~25 months, ~$1,950 interest, first debt gone month 5\nMinimums only: ~46 months, ~$4,300 interest\n\nPick the one you'll stick with. The math gap is often smaller than the internet makes it sound.\n\nFollow for one money move a week.",
+      "caption": "Same debts ($900 at 18%, $4,200 at 27%, $6,500 at 9%), same $200 extra per month:\nAvalanche: ~25 months, ~$1,850 interest, first debt gone month 17\nSnowball: ~25 months, ~$1,950 interest, first debt gone month 5\nMinimums only (no extra): ~89 months, ~$6,700 interest\n\nPick the one you'll stick with. The math gap is often smaller than the internet makes it sound.\n\nFollow for one money move a week.",
       "hashtags": [
         "debtavalanche",
         "debtsnowball",
@@ -1502,7 +1544,7 @@
         "https://www.consumerfinance.gov/consumer-tools/debt-collection/"
       ],
       "claims_to_verify": [
-        "Simulation (monthly compounding, minimums $30/$110/$210 + $200 extra): avalanche 25 months, $1,848 interest, first payoff month 17; snowball 25 months, $1,954 interest, first payoff month 5; minimums only 46 months, $4,326 interest",
+        "Simulation (monthly compounding, minimums $30/$110/$210 + $200 extra): avalanche 25 months, $1,848 interest, first payoff month 17; snowball 25 months, $1,954 interest, first payoff month 5; minimums only (no extra, no rollover) 89 months, $6,718 interest",
         "Debts and rates are hypothetical illustrations"
       ]
     }
@@ -1571,7 +1613,7 @@
         }
       ],
       "cta": "Save this before you pick a tool. Follow for one money move a week.",
-      "caption": "App: automatic, low effort, usually a subscription, sync can break.\nSpreadsheet: free, flexible, you own the data, needs ~10 min/week.\nNotebook: simplest, but no math or trends.\n\nPick based on what you'll actually keep doing, not on features.\n\nGoing the spreadsheet route? The 20-Minute Budget template (Notion + Sheets) is in the link in bio. It's our own product.\n\nFollow for one money move a week.",
+      "caption": "App: automatic, low effort, usually a subscription, sync can break.\nSpreadsheet: free, flexible, you own the data, needs ~10 min/week.\nNotebook: simplest, but no math or trends.\n\nPick based on what you'll actually keep doing, not on features.\n\nGoing the spreadsheet route? The 20-Minute Budget template (a guide and spreadsheet for Excel, Google Sheets or Numbers) is in the link in bio. It's our own product.\n\nFollow for one money move a week.",
       "hashtags": [
         "budgetingapp",
         "budgetspreadsheet",
@@ -1687,7 +1729,7 @@
     "pillar": "first-time investing basics (index funds, retirement accounts)",
     "idea_angle": "A start-to-finish walkthrough for investing $100/month from age 25: order of operations, account choice, fund choice, automation, and surviving the first downturn.",
     "script": {
-      "title": "How to start investing with $100 a month (complete beginner walkthrough)",
+      "title": "How to start investing with $100 a month (beginner walkthrough)",
       "hook": "A hundred dollars a month doesn't sound like investing. Over forty years, it can quietly become one of the biggest things you own.",
       "segments": [
         {
@@ -1700,7 +1742,26 @@
           "heading": "Why time matters",
           "narration": "Here's a hypothetical to show the shape of it. Invest $100 a month for forty years, and assume an average of seven percent a year. You'd put in $48,000, and the account would be worth roughly $262,000. Start ten years later, same $100, same assumption, and you'd put in $36,000 and end up around $122,000. Ten fewer years cost more than half the result, because the growth in the final decades is growth on growth. Real markets don't deliver a smooth seven percent, and returns aren't promised. But the lesson holds: starting small and early usually beats starting big and late.",
           "on_screen_text": "40 years ≈ $262k · 30 years ≈ $122k",
-          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two coin trees, one planted earlier and much taller than the other, same-size watering cans. No text, no logos, no real people."
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two coin trees, one planted earlier and much taller than the other, same-size watering cans. No text, no logos, no real people.",
+          "chart": {
+            "kind": "bars",
+            "title": "$100 a month at a hypothetical 7%",
+            "labels": [
+              "Put in over 40 years",
+              "Worth after 40 years",
+              "Put in over 30 years",
+              "Worth after 30 years"
+            ],
+            "values": [
+              48000,
+              262000,
+              36000,
+              122000
+            ],
+            "unit_prefix": "$",
+            "unit_suffix": "",
+            "note": "Hypothetical 7% a year, compounded monthly; not a forecast"
+          }
         },
         {
           "heading": "Before you invest",
@@ -1787,15 +1848,22 @@
         "Employee 401(k) contributions are always 100% vested",
         "Broad US stock market has declined 20%+ multiple times in recent decades (e.g., 2000–02, 2008–09, 2020, 2022)",
         "Broad index funds from large providers often charge a few hundredths of a percent"
-      ]
+      ],
+      "original_element": "worked-example-chart: Bar chart of $100 a month at a hypothetical 7%: $48,000 in grows to about $262,000 over 40 years vs $36,000 in growing to about $122,000 over 30 (chapter \"Why time matters\")"
+    },
+    "original_element": {
+      "type": "worked-example-chart",
+      "detail": "Bar chart of $100 a month at a hypothetical 7%: $48,000 in grows to about $262,000 over 40 years vs $36,000 in growing to about $122,000 over 30",
+      "chapter": "Why time matters"
     }
   },
   {
     "format": "long",
+    "date": "2026-11-17",
     "pillar": "budgeting systems that actually stick",
     "idea_angle": "A day-by-day 30-day reset for a 20-something who feels behind: see the numbers, fix fixed costs, set a weekly number, triage debt, start the fund, protect credit.",
     "script": {
-      "title": "Feel behind on money? A 30-day reset plan",
+      "title": "How to get your finances in order: a 30-day money reset",
       "hook": "Feeling behind with money is common. The fix isn't a dramatic overhaul. It's thirty days of small, specific moves.",
       "segments": [
         {
@@ -1806,9 +1874,28 @@
         },
         {
           "heading": "Days 1–3: see it all",
-          "narration": "Day one: list every account. Checking, savings, every credit card, student loans, car loan, buy-now-pay-later plans, retirement accounts from old jobs. Day two: write the balance and interest rate next to each one. Day three: subtract what you owe from what you have. That number is your net worth, and in your twenties it's often negative, especially with student loans. That's okay. It's a starting point, not a grade. The goal of these three days is only this: no more mystery. Most people find the real number is less scary than the fog they'd been carrying around.",
+          "narration": "Day one: list every account. Checking, savings, every credit card, student loans, car loan, buy-now-pay-later plans, retirement accounts from old jobs. Day two: write the balance and interest rate next to each one. Day three: subtract what you owe from what you have. That number is your net worth, and in your twenties it's often negative, especially with student loans. Take Jordan, a fictional example. Checking and savings add up to $1,800, and an old retirement account holds $2,500. Jordan owes $3,200 on a card and $14,000 in student loans. That's $4,300 minus $17,200: a net worth of minus $12,900. That's okay. It's a starting point, not a grade. The goal of these three days is only this: no more mystery. Most people find the real number is less scary than the fog they'd been carrying around.",
           "on_screen_text": "Days 1–3: list every account",
-          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tidy table covered with simple account cards laid out in a row. No text, no logos, no real people."
+          "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tidy table covered with simple account cards laid out in a row. No text, no logos, no real people.",
+          "chart": {
+            "kind": "bars",
+            "title": "Jordan's day-3 net worth",
+            "labels": [
+              "Checking + savings",
+              "Retirement account",
+              "Credit card",
+              "Student loan"
+            ],
+            "values": [
+              1800,
+              2500,
+              3200,
+              14000
+            ],
+            "unit_prefix": "$",
+            "unit_suffix": "",
+            "note": "Fictional example. Have $4,300 − owe $17,200 = net worth −$12,900"
+          }
         },
         {
           "heading": "Days 4–7: watch, don't change",
@@ -1866,7 +1953,7 @@
         }
       ],
       "cta": "Follow for one money move a week.",
-      "caption": "Feel behind? A 30-day reset:\nWeek 1: list every account, track spending, check your credit reports\nWeek 2: cut recurring costs, split checking, set a weekly spending number\nWeek 3: autopay minimums, choose avalanche or snowball, start a $1,000 cushion\nWeek 4: get the 401(k) match, consider a Roth IRA, freeze credit, set alerts\nDay 30: your first 20-minute money date\n\nThe high-yield savings account in our link in bio is an affiliate link: we may earn a commission if you open and fund an account, at no extra cost to you. Compare rates and terms yourself first.\n\nWant this set up for you? The 20-Minute Budget template (Notion + Sheets) is in the link in bio.\n\nFollow for one money move a week.",
+      "caption": "Feel behind? A 30-day reset:\nWeek 1: list every account, track spending, check your credit reports\nWeek 2: cut recurring costs, split checking, set a weekly spending number\nWeek 3: autopay minimums, choose avalanche or snowball, start a $1,000 cushion\nWeek 4: get the 401(k) match, consider a Roth IRA, freeze credit, set alerts\nDay 30: your first 20-minute money date\n\nThe high-yield savings account in our link in bio is an affiliate link: we may earn a commission if you open and fund an account, at no extra cost to you. Compare rates and terms yourself first.\n\nWant this set up for you? The 20-Minute Budget template (a guide and spreadsheet for Excel, Google Sheets or Numbers) is in the link in bio. It's our own product.\n\nFollow for one money move a week.",
       "hashtags": [
         "moneyreset",
         "budgetingforbeginners",
@@ -1895,7 +1982,16 @@
         "Credit freezes are free and don't affect scores",
         "Emergency fund guidance of 3–6 months of essential expenses",
         "High-yield savings accounts often pay well above big-bank standard savings rates (check FDIC national rate)"
+      ],
+      "original_element": "worked-example-chart: Bar chart of the fictional Jordan's day-3 accounts: $4,300 in checking, savings and retirement vs $17,200 owed on a card and a student loan, a net worth of −$12,900 (chapter \"Days 1–3: see it all\")",
+      "title_variants": [
+        "Feel behind on money? A 30-day reset plan"
       ]
+    },
+    "original_element": {
+      "type": "worked-example-chart",
+      "detail": "Bar chart of the fictional Jordan's day-3 accounts: $4,300 in checking, savings and retirement vs $17,200 owed on a card and a student loan, a net worth of −$12,900",
+      "chapter": "Days 1–3: see it all"
     }
   }
 ]

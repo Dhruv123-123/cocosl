@@ -1,0 +1,784 @@
+[
+ {
+  "format": "short",
+  "pillar": "text and email scams, decoded",
+  "platforms": [
+   "tiktok"
+  ],
+  "idea_angle": "65-90s TikTok-only minute cut of content.json #2, rebuilt with a walkthrough or quiz beat and real FTC data (177 words, about 71s at 150 wpm).",
+  "based_on": "content.json #2",
+  "original_element": "Recorded phone-screen walkthrough w1-toll as B-roll for segments 2-4, FTC chart c2 for the data beat. Dhruv records the narration in his own voice (or uses the recorded walkthrough audio). No AI voice on TikTok cuts.",
+  "script": {
+   "title": "Pause on this toll text: count the 4 red flags",
+   "hook": "4 red flags in one toll text. Pause and count them before I point them out.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Four red flags in one toll text. Pause right now and count them before I point them out.",
+     "on_screen_text": "4 red flags. Count them.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a full-screen countdown card reading PAUSE with a 3-second timer No text, no logos, no real people."
+    },
+    {
+     "heading": "The text",
+     "narration": "Here's the text. Toll services notice. You owe four dollars and fifteen cents. Pay by midnight or face a fifty dollar late fee and a license suspension. Then a link.",
+     "on_screen_text": "Pause: how many?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone screen mockup from originality/out/walkthroughs (w1-toll), messages appearing No text, no logos, no real people."
+    },
+    {
+     "heading": "Flags 1 and 2",
+     "narration": "Red flag one: it came from a random personal number, not a toll agency. Red flag two: the tiny amount. Nobody argues about four dollars, so you tap and pay.",
+     "on_screen_text": "1: random number · 2: tiny amount",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone screen mockup from originality/out/walkthroughs (w1-toll), flags 1 and 2 highlighted No text, no logos, no real people."
+    },
+    {
+     "heading": "Flags 3 and 4",
+     "narration": "Red flag three: the midnight deadline. Rush is the point. Red flag four: the link. It isn't your real toll account, and the page asks for your card number. That's what they wanted.",
+     "on_screen_text": "3: deadline · 4: fake link",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone screen mockup from originality/out/walkthroughs (w1-toll), flags 3 and 4 highlighted No text, no logos, no real people."
+    },
+    {
+     "heading": "The number",
+     "narration": "In FTC data for twenty twenty-five, about seven of every hundred scam reports where someone lost money started with a text.",
+     "on_screen_text": "7% of money-losing scams: a text",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the FTC chart originality/out/charts/c2-how-it-started.png No text, no logos, no real people."
+    },
+    {
+     "heading": "The fix",
+     "narration": "So don't tap. Type your toll agency's website yourself, or open its official app. If you owe anything, it'll be there. Then forward the text to seven seven two six, which spells SPAM, and delete it.",
+     "on_screen_text": "Type the site yourself. Forward to 7726.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the mascot pointing at a phone keypad showing 7726 No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "How many did you count before I said them?",
+     "on_screen_text": "How many did you get?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the mascot holding up four fingers No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "caption": "Pause on this toll text: count the 4 red flags. Examples are fictional; numbers are from the FTC.\n\nFollow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "tollscam",
+    "textscam",
+    "smishing",
+    "spotthescam",
+    "scamdecoded"
+   ],
+   "description": "Pause on this toll text: count the 4 red flags",
+   "thumbnail_text": "Count the 4 red flags",
+   "sources": [
+    "https://www.ic3.gov/PSA/2024/PSA240412",
+    "https://reportfraud.ftc.gov/",
+    "https://www.ftc.gov/news-events/data-visualizations/data-spotlight/2026/04/reported-losses-scams-social-media-eight-times-higher-2020"
+   ],
+   "claims_to_verify": [
+    "Toll agencies bill through your account or by mail, not via random texts with links",
+    "7% of 2025 FTC fraud reports with a loss started with a text (FTC Data Spotlight, Apr 2026)",
+    "Forwarding spam texts to 7726 reports them to your carrier"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "protecting older parents and family",
+  "platforms": [
+   "tiktok"
+  ],
+  "idea_angle": "65-90s TikTok-only minute cut of content.json #3, rebuilt with a walkthrough or quiz beat and real FTC data (185 words, about 74s at 150 wpm).",
+  "based_on": "content.json #3",
+  "original_element": "Dhruv acts out the call as a split-screen (his voice as the 'grandson', on-screen text for the listener), then the pause card. Dhruv records the narration in his own voice (or uses the recorded walkthrough audio). No AI voice on TikTok cuts.",
+  "script": {
+   "title": "A cloned voice call, played out: 1 word ends it",
+   "hook": "1 word ends a cloned voice call. Here's how the call goes, line by line.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "One word ends a cloned voice call. Here's how that call goes, line by line, and where the word comes in.",
+     "on_screen_text": "1 word ends this call",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. an incoming call screen labelled Grandson No text, no logos, no real people."
+    },
+    {
+     "heading": "The call",
+     "narration": "The phone rings. It's your grandson's voice. He's crying. He was in a car accident, he's been arrested, and he needs bail money now. Then: please don't tell Mom and Dad.",
+     "on_screen_text": "'Please don't tell Mom and Dad'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone held to an ear, sound waves in amber No text, no logos, no real people."
+    },
+    {
+     "heading": "Pause",
+     "narration": "Pause. Before you answer him, how many red flags did you just hear? Count them.",
+     "on_screen_text": "Pause: how many red flags?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a full-screen countdown card reading PAUSE with a 3-second timer No text, no logos, no real people."
+    },
+    {
+     "heading": "The flags",
+     "narration": "There are three. Panic, so you don't stop to think. Urgent money. And a secret, so nobody checks. That combination is the whole scam.",
+     "on_screen_text": "Panic · money · secret",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. three amber flags on a line No text, no logos, no real people."
+    },
+    {
+     "heading": "The voice",
+     "narration": "And the voice? Scammers can clone a voice from a short clip posted online. The FTC and the FBI have both warned about it. So 'it sounded just like him' isn't proof anymore.",
+     "on_screen_text": "'Sounded like him' isn't proof",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a waveform being copied from a video thumbnail No text, no logos, no real people."
+    },
+    {
+     "heading": "The number",
+     "narration": "Imposter scams like this one cost people three and a half billion dollars in reports to the FTC in twenty twenty-five.",
+     "on_screen_text": "$3.5B lost to imposters in 2025",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a single bold amber bar labelled 2025 No text, no logos, no real people."
+    },
+    {
+     "heading": "The fix",
+     "narration": "So tonight, pick a family safe word. Anyone who calls in a panic asking for money has to say it. No word? Hang up, and call them back on the number you already have. It takes two minutes at dinner.",
+     "on_screen_text": "Pick a safe word tonight",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a family at a dinner table, a speech bubble with a key No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "caption": "A cloned voice call, played out: 1 word ends it. Examples are fictional; numbers are from the FTC.\n\nFollow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "grandparentscam",
+    "aivoice",
+    "familysafeword",
+    "protectyourparents",
+    "scamdecoded"
+   ],
+   "description": "A cloned voice call, played out: 1 word ends it",
+   "thumbnail_text": "1 word stops this call",
+   "sources": [
+    "https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes",
+    "https://www.ic3.gov/PSA/2024/PSA241203",
+    "https://www.ftc.gov/news-events/news/press-releases/2026/06/ftc-data-show-people-reported-losing-3-point-5-billion-imposter-scams-2025"
+   ],
+   "claims_to_verify": [
+    "Scammers can clone a voice from a short audio clip (FTC alert, Mar 2023; FBI PSA Dec 2024)",
+    "People reported losing $3.5 billion to imposter scams in 2025 (FTC, Jun 2026)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "account security basics (passwords, 2FA, SIM swap)",
+  "platforms": [
+   "tiktok"
+  ],
+  "idea_angle": "65-90s TikTok-only minute cut of content.json #7, rebuilt with a walkthrough or quiz beat and real FTC data (191 words, about 76s at 150 wpm).",
+  "based_on": "content.json #7",
+  "original_element": "Recorded walkthrough w3-bank-code for segments 1-3, plus 10-15 seconds of Dhruv's own screen showing where 'sign out of all devices' lives in a real account. Dhruv records the narration in his own voice (or uses the recorded walkthrough audio). No AI voice on TikTok cuts.",
+  "script": {
+   "title": "The fraud alert that ends with a code, played out",
+   "hook": "6 digits is all this caller wants. Watch how the call gets there.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Six digits. That's all this caller wants, and he'll spend three minutes getting there. Watch how, because the script is the same almost every time.",
+     "on_screen_text": "He wants 6 digits",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone screen mockup from originality/out/walkthroughs (w3-bank-code), blank No text, no logos, no real people."
+    },
+    {
+     "heading": "The text",
+     "narration": "First, a text that looks like your bank. Fraud alert: did you try to spend twelve hundred eighty dollars at an electronics store? Reply yes or no. You reply no.",
+     "on_screen_text": "'Did you spend $1,280?'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone screen mockup from originality/out/walkthroughs (w3-bank-code), first two messages No text, no logos, no real people."
+    },
+    {
+     "heading": "The call",
+     "narration": "Seconds later your phone rings. Caller ID shows your bank. A calm voice: we blocked that charge. I'm sending you a code. Just read it back so I can verify it's you.",
+     "on_screen_text": "'Just read me the code'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone screen mockup from originality/out/walkthroughs (w3-bank-code), the code arriving No text, no logos, no real people."
+    },
+    {
+     "heading": "Pause",
+     "narration": "Pause. What's actually happening on his end right now? Take a guess.",
+     "on_screen_text": "Pause: what's he doing?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a full-screen countdown card reading PAUSE with a 3-second timer No text, no logos, no real people."
+    },
+    {
+     "heading": "Reveal",
+     "narration": "He's on your bank's login page with your username, pressing forgot password. The code your bank just sent is the last lock. Read it out loud, and he's in.",
+     "on_screen_text": "He's logging in as you",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a login page with a cursor on 'Forgot password' No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "Nobody real needs that code. Not your bank, not tech support, not a buyer online. A code is for typing into a screen, never for saying to a person.",
+     "on_screen_text": "Codes are typed, never said",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the mascot zipping its lips beside a 6-digit code No text, no logos, no real people."
+    },
+    {
+     "heading": "The fix",
+     "narration": "Already shared one? Change that password now, sign out of all devices, and call the number on the back of your card. Then turn on sign-in alerts, so the next attempt pings you first.",
+     "on_screen_text": "Shared one? Change password now.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a checklist with three ticks No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "caption": "The fraud alert that ends with a code, played out. Examples are fictional; numbers are from the FTC.\n\nFollow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "2fa",
+    "verificationcode",
+    "bankscam",
+    "accountsecurity",
+    "scamdecoded"
+   ],
+   "description": "The fraud alert that ends with a code, played out",
+   "thumbnail_text": "Never read a code out",
+   "sources": [
+    "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams",
+    "https://www.fcc.gov/spoofing",
+    "https://www.cisa.gov/secure-our-world/turn-mfa"
+   ],
+   "claims_to_verify": [
+    "Caller ID can be spoofed (FCC)",
+    "One-time codes are sent when someone tries to sign in or reset a password"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "text and email scams, decoded",
+  "platforms": [
+   "tiktok"
+  ],
+  "idea_angle": "65-90s TikTok-only minute cut of content.json #4, rebuilt with a walkthrough or quiz beat and real FTC data (181 words, about 72s at 150 wpm).",
+  "based_on": "content.json #4",
+  "original_element": "Dhruv films the back of his own bank card (number covered) and dials the printed number for the fix beat; steps 1-3 as on-screen text over his face cam. Dhruv records the narration in his own voice (or uses the recorded walkthrough audio). No AI voice on TikTok cuts.",
+  "script": {
+   "title": "'Move it to a safe account': the bank call, step by step",
+   "hook": "0 real banks make this call. Here it is, step by step.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Zero real banks make this call. But it sounds exactly like one, so here it is, step by step.",
+     "on_screen_text": "0 real banks make this call",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. an incoming call screen labelled Bank Fraud Dept No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1",
+     "narration": "Step one, trust. Caller ID says your bank. They know your name and the last four digits of your card. Scammers can get both from old data breaches.",
+     "on_screen_text": "1: they know your details",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a caller ID screen with a bank icon No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2",
+     "narration": "Step two, fear. There's fraud on your account. Someone at your branch may be involved, so don't go in, and don't tell anyone.",
+     "on_screen_text": "2: 'Don't tell anyone'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a padlock cracking open No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3",
+     "narration": "Step three, the ask. Move your savings to a new secure account while we fix this. They stay on the phone and walk you through every transfer.",
+     "on_screen_text": "3: 'Move your savings'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. coins sliding from one box to another No text, no logos, no real people."
+    },
+    {
+     "heading": "Pause",
+     "narration": "Pause. Which step gives it away? It's step three. Your bank can freeze your account itself. It never needs you to move the money.",
+     "on_screen_text": "Pause: which step?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a full-screen countdown card reading PAUSE with a 3-second timer No text, no logos, no real people."
+    },
+    {
+     "heading": "The number",
+     "narration": "In twenty twenty-five, people told the FTC they lost nearly a billion dollars to scammers posing as businesses, and about nine hundred twenty million to fake government agents.",
+     "on_screen_text": "Fake businesses: nearly $1B",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. two amber bars, labelled Business and Government No text, no logos, no real people."
+    },
+    {
+     "heading": "The fix",
+     "narration": "And caller ID can be faked, so the name on your screen proves nothing. Hang up. Call the number on the back of your card. If there's real fraud, they'll see it.",
+     "on_screen_text": "Hang up. Call the number on your card.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a hand flipping a bank card to the back No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "caption": "'Move it to a safe account': the bank call, step by step. Examples are fictional; numbers are from the FTC.\n\nFollow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "bankscam",
+    "safeaccountscam",
+    "fraudalert",
+    "moneysafety",
+    "scamdecoded"
+   ],
+   "description": "'Move it to a safe account': the bank call, step by step",
+   "thumbnail_text": "Your bank never asks this",
+   "sources": [
+    "https://www.fcc.gov/spoofing",
+    "https://www.consumerfinance.gov/consumer-tools/fraud/",
+    "https://www.ftc.gov/news-events/news/press-releases/2026/06/ftc-data-show-people-reported-losing-3-point-5-billion-imposter-scams-2025"
+   ],
+   "claims_to_verify": [
+    "Caller ID can be spoofed (FCC)",
+    "2025 losses: business impersonators nearly $1B, government impersonators about $920M (FTC, Jun 2026)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "account security basics (passwords, 2FA, SIM swap)",
+  "platforms": [
+   "tiktok"
+  ],
+  "idea_angle": "65-90s TikTok-only minute cut of content.json #11, rebuilt with a walkthrough or quiz beat and real FTC data (184 words, about 74s at 150 wpm).",
+  "based_on": "content.json #11",
+  "original_element": "Dhruv screen-records force-quitting a harmless full-screen page on his own Windows or Mac (Task Manager or Force Quit window), 10-15 seconds, for the fix beat. Dhruv records the narration in his own voice (or uses the recorded walkthrough audio). No AI voice on TikTok cuts.",
+  "script": {
+   "title": "Fake virus pop-up: 3 tricks and the 1 key combo that ends it",
+   "hook": "1 pop-up, 3 tricks, 0 real tech companies behind it.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "One pop-up, three tricks, and zero real tech companies behind it. Here's each trick, so you know it when you see it.",
+     "on_screen_text": "1 pop-up · 3 tricks",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a laptop with a red full-screen warning No text, no logos, no real people."
+    },
+    {
+     "heading": "Trick 1",
+     "narration": "Trick one: noise. An alarm sound, or a voice saying your computer is infected. It's meant to make you panic before you think.",
+     "on_screen_text": "1: an alarm",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a speaker icon with amber sound waves No text, no logos, no real people."
+    },
+    {
+     "heading": "Trick 2",
+     "narration": "Trick two: it won't go away. It fills the screen, and the close button seems dead. It's just a web page in full-screen mode.",
+     "on_screen_text": "2: it won't close",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a browser window stretched edge to edge No text, no logos, no real people."
+    },
+    {
+     "heading": "Trick 3",
+     "narration": "Trick three: a phone number. Call now, don't turn off your computer. Real tech companies don't put phone numbers in error messages.",
+     "on_screen_text": "3: a number to call",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a warning box with a phone number masked by dots No text, no logos, no real people."
+    },
+    {
+     "heading": "Pause",
+     "narration": "Pause. What happens if you call? Someone friendly asks to connect to your computer to fix it. Then come fake scans, a bill for hundreds of dollars, and sometimes a fake refund that ends with them in your bank account.",
+     "on_screen_text": "Pause: what happens if you call?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a full-screen countdown card reading PAUSE with a 3-second timer, then a cursor moving on its own No text, no logos, no real people."
+    },
+    {
+     "heading": "The fix",
+     "narration": "So don't call. Close the browser. If it won't close, press control, alt, delete on Windows, or command, option, escape on a Mac, and force quit it. Or just restart.",
+     "on_screen_text": "Ctrl+Alt+Del · Cmd+Option+Esc",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. two keyboards with the key combos lit in teal No text, no logos, no real people."
+    },
+    {
+     "heading": "Never",
+     "narration": "And never let anyone who contacted you install remote access on your computer. Already did? Disconnect from the internet and call your bank.",
+     "on_screen_text": "Never allow remote access",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the mascot blocking a cable plug No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "caption": "Fake virus pop-up: 3 tricks and the 1 key combo that ends it. Examples are fictional; numbers are from the FTC.\n\nFollow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "techsupportscam",
+    "popupscam",
+    "computertips",
+    "seniorsafety",
+    "scamdecoded"
+   ],
+   "description": "Fake virus pop-up: 3 tricks and the 1 key combo that ends it",
+   "thumbnail_text": "Don't call. Force quit.",
+   "sources": [
+    "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams",
+    "https://reportfraud.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "Legitimate tech companies don't put phone numbers in pop-up error messages (FTC)",
+    "Tech support scammers ask for remote access and payment"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "identity theft and credit freezes",
+  "platforms": [
+   "tiktok"
+  ],
+  "idea_angle": "65-90s TikTok-only minute cut of content.json #1, rebuilt with a walkthrough or quiz beat and real FTC data (179 words, about 72s at 150 wpm).",
+  "based_on": "content.json #1",
+  "original_element": "Dhruv screen-records the freeze flow on one bureau's real page (his details blurred), 15-20 seconds, for the 'How' beat. Dhruv records the narration in his own voice (or uses the recorded walkthrough audio). No AI voice on TikTok cuts.",
+  "script": {
+   "title": "Freezing your credit, start to finish, in 3 stops",
+   "hook": "3 websites, $0, about 10 minutes. Here's a credit freeze start to finish.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Three websites, zero dollars, about ten minutes. Here's the whole credit freeze, start to finish.",
+     "on_screen_text": "3 sites · $0 · 10 minutes",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a stopwatch next to three padlocks No text, no logos, no real people."
+    },
+    {
+     "heading": "What it does",
+     "narration": "A credit freeze stops lenders from pulling your credit report. No report, no new card or loan in your name. It's free by federal law.",
+     "on_screen_text": "Free by federal law",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a credit report behind a padlock No text, no logos, no real people."
+    },
+    {
+     "heading": "The 3 stops",
+     "narration": "Stop one, Equifax. Stop two, Experian. Stop three, TransUnion. You need all three, because a lender might check any one of them.",
+     "on_screen_text": "Equifax · Experian · TransUnion",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. three doors with padlocks, numbered 1 2 3 No text, no logos, no real people."
+    },
+    {
+     "heading": "How",
+     "narration": "On each site, you make an account, confirm who you are, and hit freeze. Some ask questions from your credit history, like an old address or a past loan. Save each login somewhere safe. You'll need it later.",
+     "on_screen_text": "Make an account. Hit freeze.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a screen recording placeholder of a bureau freeze page No text, no logos, no real people."
+    },
+    {
+     "heading": "Quiz",
+     "narration": "Quick quiz. True or false: a freeze hurts your credit score. False. True or false: your current cards stop working. Also false. They keep working exactly as before.",
+     "on_screen_text": "True or false?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a full-screen countdown card reading PAUSE with a 3-second timer No text, no logos, no real people."
+    },
+    {
+     "heading": "Lifting it",
+     "narration": "Applying for a loan or an apartment? Lift the freeze online for a day or a week, and it locks again when the time's up.",
+     "on_screen_text": "Lift it for a day, then it relocks",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a padlock opening and closing on a calendar No text, no logos, no real people."
+    },
+    {
+     "heading": "The number",
+     "narration": "People reported losing twelve and a half billion dollars to fraud in twenty twenty-four. A freeze is a free lock on one of the biggest doors.",
+     "on_screen_text": "$12.5B reported lost in 2024",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a bold amber number on navy No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "caption": "Freezing your credit, start to finish, in 3 stops. Examples are fictional; numbers are from the FTC.\n\nFollow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "creditfreeze",
+    "identitytheft",
+    "credittips",
+    "fraudprevention",
+    "scamdecoded"
+   ],
+   "description": "Freezing your credit, start to finish, in 3 stops",
+   "thumbnail_text": "Freeze it in 10 minutes",
+   "sources": [
+    "https://consumer.ftc.gov/articles/what-know-about-credit-freezes-and-fraud-alerts",
+    "https://www.equifax.com/personal/credit-report-services/credit-freeze/",
+    "https://www.experian.com/freeze/center.html",
+    "https://www.transunion.com/credit-freeze",
+    "https://www.ftc.gov/news-events/news/press-releases/2025/03/new-ftc-data-show-big-jump-reported-losses-fraud-125-billion-2024"
+   ],
+   "claims_to_verify": [
+    "Credit freezes are free at all three bureaus by federal law",
+    "A freeze does not affect your credit score or existing accounts",
+    "Consumers reported losing $12.5 billion to fraud in 2024 (FTC, Mar 2025)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "investment and crypto scams on social media",
+  "platforms": [
+   "tiktok"
+  ],
+  "idea_angle": "65-90s TikTok-only minute cut of content.json #10, rebuilt with a walkthrough or quiz beat and real FTC data (182 words, about 73s at 150 wpm).",
+  "based_on": "content.json #10",
+  "original_element": "Recorded walkthrough w5-job for segments 1-4, with the flags revealing in time with the narration. Dhruv records the narration in his own voice (or uses the recorded walkthrough audio). No AI voice on TikTok cuts.",
+  "script": {
+   "title": "The task job text, followed all the way to the top-up",
+   "hook": "$0 is what a real job asks you to pay. Follow this job text to the end.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Zero dollars. That's what a real job asks you to pay. Follow this job text all the way to the end, and watch that number change.",
+     "on_screen_text": "Watch the number change",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone screen mockup from originality/out/walkthroughs (w5-job), blank No text, no logos, no real people."
+    },
+    {
+     "heading": "The text",
+     "narration": "It starts out of nowhere. Hi, this is Jenna from a placement agency. Remote work, an hour or so a day, three hundred to nine hundred dollars daily. Interested?",
+     "on_screen_text": "'$300-$900 a day'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone screen mockup from originality/out/walkthroughs (w5-job), first message No text, no logos, no real people."
+    },
+    {
+     "heading": "The hook",
+     "narration": "You say yes. Add our trainer on WhatsApp. You get an app, simple tasks rating products, and the first payouts are real. Twenty, forty dollars. It feels legit.",
+     "on_screen_text": "The first payouts are real",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone screen mockup from originality/out/walkthroughs (w5-job), messages two and three No text, no logos, no real people."
+    },
+    {
+     "heading": "The turn",
+     "narration": "Then your account goes negative. To unlock your earnings, you top it up, usually in crypto. Then again. And again. That money doesn't come back, and neither do the earnings on the screen.",
+     "on_screen_text": "Then: pay to unlock",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone screen mockup from originality/out/walkthroughs (w5-job), the top-up message highlighted No text, no logos, no real people."
+    },
+    {
+     "heading": "Pause",
+     "narration": "Pause. When was the moment to walk away? The very first text. A recruiter you never contacted, offering big pay for little work, is the red flag.",
+     "on_screen_text": "Pause: when to walk away?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a full-screen countdown card reading PAUSE with a 3-second timer No text, no logos, no real people."
+    },
+    {
+     "heading": "The number",
+     "narration": "People reported losing about half a billion dollars to job scams in twenty twenty-four, according to the FTC.",
+     "on_screen_text": "Job scams: ~$500M lost in 2024",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a bold amber number on navy No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "Here's the rule. If a job asks you to pay, deposit, or buy anything to get paid, it isn't a job.",
+     "on_screen_text": "Pay to get paid = not a job",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the mascot holding a stop sign No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "caption": "The task job text, followed all the way to the top-up. Examples are fictional; numbers are from the FTC.\n\nFollow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "jobscam",
+    "taskscam",
+    "remotejobs",
+    "workfromhome",
+    "scamdecoded"
+   ],
+   "description": "The task job text, followed all the way to the top-up",
+   "thumbnail_text": "Real jobs don't charge you",
+   "sources": [
+    "https://consumer.ftc.gov/consumer-alerts/2023/09/paying-earn-money-gamified-online-job-task-scams",
+    "https://consumer.ftc.gov/articles/job-scams",
+    "https://www.ftc.gov/news-events/news/press-releases/2025/03/new-ftc-data-show-big-jump-reported-losses-fraud-125-billion-2024"
+   ],
+   "claims_to_verify": [
+    "Task scams pay small early amounts, then require deposits, often in crypto (FTC alert, Sep 2023)",
+    "Reported job scam losses were $501 million in 2024 (FTC, Mar 2025)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "protecting older parents and family",
+  "platforms": [
+   "tiktok"
+  ],
+  "idea_angle": "65-90s TikTok-only minute cut of weeks-13-21.json #10, rebuilt with a walkthrough or quiz beat and real FTC data (182 words, about 73s at 150 wpm).",
+  "based_on": "weeks-13-21.json #10",
+  "original_element": "Recorded walkthrough w4-new-number for segments 1-4. Optional: Dhruv's real mum reacts to the thread on camera (with her permission). Dhruv records the narration in his own voice (or uses the recorded walkthrough audio). No AI voice on TikTok cuts.",
+  "script": {
+   "title": "'New number, can you pay a bill?': the whole text thread",
+   "hook": "2 texts in, the money ask arrives. Here's the whole 'Hi Mom' thread.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Two texts in, the money ask arrives. Here's the whole 'Hi Mom' thread, and the one question that ends it.",
+     "on_screen_text": "The 'Hi Mom' thread, start to end",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone screen mockup from originality/out/walkthroughs (w4-new-number), blank No text, no logos, no real people."
+    },
+    {
+     "heading": "Text 1",
+     "narration": "Hi Mom, it's me. Dropped my phone in the sink, this is my new number, save this one. You ask: which one of you is this? Haha, your favourite, obviously.",
+     "on_screen_text": "'Which one of you is this?'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone screen mockup from originality/out/walkthroughs (w4-new-number), first three messages No text, no logos, no real people."
+    },
+    {
+     "heading": "Text 2",
+     "narration": "Then: I have a bill due today, and my banking app won't work on the new phone. Could you pay it for me? Then a stranger's name, and nineteen hundred forty dollars.",
+     "on_screen_text": "A stranger's name. $1,940.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone screen mockup from originality/out/walkthroughs (w4-new-number), the payment details No text, no logos, no real people."
+    },
+    {
+     "heading": "Pause",
+     "narration": "Pause and count the red flags. There are four. A new number. Dodging a simple question. Rush. And a stranger's name on the payment.",
+     "on_screen_text": "Pause: count the red flags",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a full-screen countdown card reading PAUSE with a 3-second timer No text, no logos, no real people."
+    },
+    {
+     "heading": "The fix",
+     "narration": "So call the old number. It probably still works. Or ask something only your child would know, something that isn't on social media, like a family joke or the name of a first teacher.",
+     "on_screen_text": "Call the old number",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone dialling a contact labelled Kid (old) No text, no logos, no real people."
+    },
+    {
+     "heading": "Safe word",
+     "narration": "Even better, agree on a family safe word tonight. It takes two minutes, and it works for phone calls too.",
+     "on_screen_text": "Family safe word: 2 minutes",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a family group chat with a key emoji No text, no logos, no real people."
+    },
+    {
+     "heading": "Already paid",
+     "narration": "Already paid? Call your bank or payment app right away, and report it at report fraud dot f t c dot gov.",
+     "on_screen_text": "Paid? Call your bank now.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone dialling a bank No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "caption": "'New number, can you pay a bill?': the whole text thread. Examples are fictional; numbers are from the FTC.\n\nFollow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "himomscam",
+    "familyscam",
+    "scamtext",
+    "imposterscam",
+    "scamdecoded"
+   ],
+   "description": "'New number, can you pay a bill?': the whole text thread",
+   "thumbnail_text": "4 red flags in 4 texts",
+   "sources": [
+    "https://consumer.ftc.gov/articles/scammers-use-fake-emergencies-steal-your-money",
+    "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages",
+    "https://reportfraud.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "Family-emergency scams often start with a 'new number' text (FTC)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "text and email scams, decoded",
+  "platforms": [
+   "tiktok"
+  ],
+  "idea_angle": "65-90s TikTok-only minute cut of weeks-3-6.json #3, rebuilt with a walkthrough or quiz beat and real FTC data (177 words, about 71s at 150 wpm).",
+  "based_on": "weeks-3-6.json #3",
+  "original_element": "Built on the quiz carousel q3-invoice (its slides are the visuals), with a real 3-second pause card and FTC chart c2. Dhruv records the narration in his own voice (or uses the recorded walkthrough audio). No AI voice on TikTok cuts.",
+  "script": {
+   "title": "Quiz: 4 red flags in a $499 order email",
+   "hook": "$499 for something you didn't buy. Find the 4 red flags before I do.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Four ninety-nine for something you didn't buy. Find the four red flags in this email before I do. Here's the email, word for word.",
+     "on_screen_text": "Find 4 red flags",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the quiz slide originality/out/quizzes/q3-invoice/slide-01.png No text, no logos, no real people."
+    },
+    {
+     "heading": "The email",
+     "narration": "Thank you for your order of PC Security Plus, three years. Amount charged, four ninety-nine ninety-nine. Didn't authorize it? Call our cancellation desk within twenty-four hours. Pause here and count.",
+     "on_screen_text": "Pause and count",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the quiz slide q3-invoice/slide-01.png, zooming in No text, no logos, no real people."
+    },
+    {
+     "heading": "Flags 1 and 2",
+     "narration": "Red flag one: the sender. A random address, not the company. Red flag two: a big charge you didn't make. It's there to panic you.",
+     "on_screen_text": "1: sender · 2: big charge",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. quiz slides q3-invoice/slide-03 and slide-04 No text, no logos, no real people."
+    },
+    {
+     "heading": "Flags 3 and 4",
+     "narration": "Red flag three: the twenty-four hour deadline. Red flag four: the phone number. It goes to a scammer who wants into your computer or your card, to 'refund' you.",
+     "on_screen_text": "3: deadline · 4: the number",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. quiz slides q3-invoice/slide-05 and slide-06 No text, no logos, no real people."
+    },
+    {
+     "heading": "The number",
+     "narration": "Email started about one in ten of the money-losing scams reported to the FTC in twenty twenty-five.",
+     "on_screen_text": "Email: 10% of money-losing scams",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the FTC chart originality/out/charts/c2-how-it-started.png No text, no logos, no real people."
+    },
+    {
+     "heading": "The fix",
+     "narration": "So don't call the number in the email. Log into the real account, or check your card statement. No charge there means no charge. Mark the email as spam and delete it.",
+     "on_screen_text": "Check your real statement",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the quiz slide q3-invoice/slide-07.png No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "How many did you get before I said them? Four out of four means you're ready for the next one.",
+     "on_screen_text": "How many did you get?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the mascot holding a score card No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "caption": "Quiz: 4 red flags in a $499 order email. Examples are fictional; numbers are from the FTC.\n\nFollow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "phishing",
+    "emailscam",
+    "refundscam",
+    "spotthescam",
+    "scamdecoded"
+   ],
+   "description": "Quiz: 4 red flags in a $499 order email",
+   "thumbnail_text": "Find the 4 red flags",
+   "sources": [
+    "https://consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams",
+    "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-tech-support-scams",
+    "https://www.ftc.gov/news-events/data-visualizations/data-spotlight/2026/04/reported-losses-scams-social-media-eight-times-higher-2020"
+   ],
+   "claims_to_verify": [
+    "10% of 2025 FTC fraud reports with a loss started with an email (FTC Data Spotlight, Apr 2026)",
+    "Fake invoice emails push people to call a number that leads to remote-access scams (FTC)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "investment and crypto scams on social media",
+  "platforms": [
+   "tiktok"
+  ],
+  "idea_angle": "65-90s TikTok-only minute cut of weeks-7-12.json #15, rebuilt with a walkthrough or quiz beat and real FTC data (174 words, about 70s at 150 wpm).",
+  "based_on": "weeks-7-12.json #15",
+  "original_element": "FTC chart c4 as the data beat, plus Dhruv's face cam reading the morning/afternoon messages. Dhruv records the narration in his own voice (or uses the recorded walkthrough audio). No AI voice on TikTok cuts.",
+  "script": {
+   "title": "Dating app to WhatsApp in 1 day: the pattern, hour by hour",
+   "hook": "1 day from match to 'let's move to WhatsApp.' Here's the pattern, hour by hour.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "One day from match to 'let's move to WhatsApp.' It happens fast, and it's on purpose. Here's the pattern, hour by hour.",
+     "on_screen_text": "Match to WhatsApp in 1 day",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a clock face with a heart and a chat bubble No text, no logos, no real people."
+    },
+    {
+     "heading": "Morning",
+     "narration": "Morning: you match. They're warm, funny, and asking all the right questions. Afternoon: I barely use this app. Let's text on WhatsApp instead.",
+     "on_screen_text": "'I barely use this app'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a dating app chat sliding to a private chat No text, no logos, no real people."
+    },
+    {
+     "heading": "Why it matters",
+     "narration": "Here's why that matters. Dating apps can spot scam accounts and ban them, even mid-conversation. Private chat apps can't. Off the app, nobody's watching.",
+     "on_screen_text": "Off the app, nobody's watching",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a lifeguard tower left behind on a beach No text, no logos, no real people."
+    },
+    {
+     "heading": "The weeks after",
+     "narration": "Then the love-bombing speeds up. Good morning texts, big feelings, fast. And later comes the money: an emergency, a plane ticket, or an investment tip they swear by.",
+     "on_screen_text": "Then: love-bombing, then money",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a heart turning into a coin No text, no logos, no real people."
+    },
+    {
+     "heading": "The number",
+     "narration": "In FTC data for twenty twenty-five, people aged eighteen to twenty-nine were the most likely to have a money-losing scam start on social media. Forty percent did.",
+     "on_screen_text": "18-29: 40% started on social",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the FTC chart originality/out/charts/c4-age-social.png No text, no logos, no real people."
+    },
+    {
+     "heading": "Pause",
+     "narration": "Pause. Is moving apps proof of a scam? No. Plenty of real people prefer texting. It's a reason to slow down.",
+     "on_screen_text": "Pause: proof of a scam?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a full-screen countdown card reading PAUSE with a 3-second timer No text, no logos, no real people."
+    },
+    {
+     "heading": "The fix",
+     "narration": "Keep chatting in the app until you've met on video or in person. If they keep pushing, report the profile, and never send money to someone you haven't met.",
+     "on_screen_text": "Stay in the app until you've met",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the mascot holding a report flag No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "caption": "Dating app to WhatsApp in 1 day: the pattern, hour by hour. Examples are fictional; numbers are from the FTC.\n\nFollow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "onlinedating",
+    "romancescam",
+    "datingapp",
+    "redflags",
+    "scamdecoded"
+   ],
+   "description": "Dating app to WhatsApp in 1 day: the pattern, hour by hour",
+   "thumbnail_text": "The 1-day red flag",
+   "sources": [
+    "https://consumer.ftc.gov/articles/what-know-about-romance-scams",
+    "https://consumer.ftc.gov/consumer-alerts/2023/02/love-lies-and-losses",
+    "https://www.ftc.gov/news-events/data-visualizations/data-spotlight/2026/04/reported-losses-scams-social-media-eight-times-higher-2020"
+   ],
+   "claims_to_verify": [
+    "Romance scammers often ask to move off dating apps (FTC)",
+    "40% of 2025 money-losing reports from 18-29 year olds started on social media (FTC Data Spotlight, Apr 2026)"
+   ]
+  }
+ }
+]

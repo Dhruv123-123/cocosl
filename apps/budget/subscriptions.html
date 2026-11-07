@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Subscription Audit: What Do Your Subscriptions Cost a Year? | Money Made Simple</title>
+<meta name="description" content="Tick the subscriptions you pay for, or upload a bank CSV, and see what they cost a year. How to cancel Netflix, Spotify, Amazon Prime and 27 more, from each company's own help pages. Free, private, no sign-up.">
+<meta property="og:title" content="Find every subscription you're paying for">
+<meta property="og:description" content="Upload a bank CSV or paste a statement, see every recurring charge and its yearly cost. Runs in your browser.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Subscription audit","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="./" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Subscription audit</span></a>
+  <a class="badge" href="./">Budget app</a>
+</header>
+<main>
+  <h1 class="page-title">What do your subscriptions really cost a year?</h1>
+  <p class="lede">Tick the ones you pay for and see the yearly total, with how to cancel each one. Then upload a bank statement to catch the ones you forgot. Nothing leaves this browser.</p>
+
+  <section class="card" aria-labelledby="h-quick">
+    <h2 id="h-quick">1. Quick audit: tick what you pay for</h2>
+    <label class="inline guess">First, a guess: what do you think you spend a month? ($)<input id="guess" type="number" min="0" step="1" inputmode="decimal" placeholder="50"></label>
+    <p class="tiny">Prices are typical US prices, checked <span id="checked"></span>. Change any of them to what you pay.</p>
+    <div id="services" class="svc-groups"></div>
+    <details class="import"><summary>Add one that isn't listed</summary>
+      <form id="add-form" class="inline-form">
+        <input id="add-name" aria-label="Name" placeholder="Name, e.g. Gym" maxlength="40">
+        <input id="add-price" aria-label="Price" type="number" min="0" step="0.01" inputmode="decimal" placeholder="Price">
+        <select id="add-per" aria-label="How often"><option value="month">a month</option><option value="year">a year</option></select>
+        <button class="btn small" type="submit">Add</button>
+      </form>
+    </details>
+  </section>
+  <section id="aha" class="card aha" aria-live="polite" hidden></section>
+  <section id="cancel" class="card" hidden>
+    <h2>How to cancel the ones you ticked</h2>
+    <p class="tiny">Steps and links from each company's own help or account pages. Subscribed on an iPhone or Android? Then cancel in <a href="https://support.apple.com/en-us/118428" target="_blank" rel="noopener">Apple subscriptions</a> or <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener">Google Play</a>.</p>
+    <div id="cancel-list"></div>
+  </section>
+
+  <h2 class="page-title" style="font-size:22px;margin-top:28px">2. Find the ones you forgot</h2>
+  <p>Download the last 3 to 12 months of transactions from your bank or card as a CSV and drop it here, or paste them from your statement. We list every charge that repeats, what it costs a year, and which ones went up.</p>
+
+  <section class="card">
+    <label class="drop" id="drop">
+      <input id="file" type="file" accept=".csv,text/csv" hidden>
+      <b>Choose a CSV file</b> or drop it here
+      <span class="tiny">Most banks: Accounts > Statements or Activity > Download > CSV</span>
+    </label>
+    <div class="row" style="margin-top:12px">
+      <button id="sample" class="btn ghost small" type="button">Try it with sample data</button>
+      <span id="file-msg" class="tiny" aria-live="polite"></span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>No CSV? Paste your statement instead</h2>
+    <p class="tiny">Open your online banking or a PDF statement, select the transactions (3 months or more), copy, and paste them here. Each line needs a date, a description and an amount. Nothing is uploaded: it's read on this device.</p>
+    <form id="paste-form">
+      <textarea id="paste" rows="8" aria-label="Pasted transactions" placeholder="10/03  NETFLIX.COM 866-579-7172      15.49&#10;10/09  SPOTIFY USA                 11.99&#10;Oct 14 PLANET FITNESS #1022        24.99"></textarea>
+      <div class="row" style="margin-top:8px"><button class="btn small" type="submit">Find my subscriptions</button><span id="paste-msg" class="tiny" aria-live="polite"></span></div>
+    </form>
+  </section>
+
+  <section id="results" class="card" hidden aria-live="polite"></section>
+
+  <section class="card">
+    <h2>How to cancel</h2>
+    <ul class="checks">
+      <li>App store subscriptions: iPhone Settings > your name > Subscriptions, or Google Play > Profile > Payments & subscriptions.</li>
+      <li>Everything else: sign in to the service and look under Account, Billing or Membership. Several states require services to let you cancel online if you signed up online, so look for a cancel button before you call.</li>
+      <li>Can't find it or they won't stop charging? Ask your card issuer about blocking the merchant or disputing the charge.</li>
+      <li>Not ready to cancel? Ask for a cheaper plan. Many services offer one when you start to cancel.</li>
+    </ul>
+  </section>
+
+  <section class="card signup-box">
+    <h2>Get one money move a week</h2>
+    <p>Short, practical emails on budgets, bills and saving. Free.</p>
+    <form class="signup inline-form" name="subscription-finder" method="POST" data-netlify="true" netlify-honeypot="website">
+      <input type="hidden" name="form-name" value="subscription-finder">
+      <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+      <input type="email" name="email" placeholder="you@example.com" required autocomplete="email" aria-label="Email">
+      <button class="btn small">Sign me up</button>
+    </form>
+  </section>
+</main>
+<footer><p>Results are estimates from the transactions in your file. Not financial advice. Made by Money Made Simple.</p></footer>
+<script type="module" src="subscriptions.js"></script>
+</body>
+</html>

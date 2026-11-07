@@ -1,0 +1,782 @@
+[
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "A W-2 spouse doesn't make the freelancer's tax go away.",
+  "script": {
+   "title": "My spouse has a W-2 job. Do I still pay quarterly?",
+   "hook": "A common question from married freelancers: my spouse has a regular job with tax withheld. Do I still need to pay quarterly?",
+   "segments": [
+    {
+     "heading": "Common question",
+     "narration": "A common question from married freelancers: my spouse has a regular job with tax withheld. Do I still need to pay quarterly?",
+     "on_screen_text": "Common question: spouse has a W-2",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with two rings and a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Answer",
+     "narration": "Usually, yes. Your spouse's withholding is set for their wages. Nothing covers the tax on your freelance profit unless you add it.",
+     "on_screen_text": "Their withholding covers their wages",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a paycheck next to an invoice. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "If the two of you will owe a thousand dollars or more after withholding, the IRS expects estimated payments, or more withholding.",
+     "on_screen_text": "Owe $1,000+? Pay during the year",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with a flag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Two ways",
+     "narration": "You can make joint quarterly payments, or your spouse can have extra tax withheld from each paycheck. Either counts.",
+     "on_screen_text": "Quarterly payments or extra withholding",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two arrows into one jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Next",
+     "narration": "Which is easier? That's the next video.",
+     "on_screen_text": "Which is easier? Next video",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes pointing right. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Married to someone with a W-2 job? Their withholding covers their wages, not your freelance profit. If you'll owe $1,000+ after withholding, pay joint estimated taxes or add extra withholding to their paycheck.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "marriedcouples",
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "1099money"
+   ],
+   "description": "Married freelancers with a W-2 spouse still need to cover their tax.",
+   "thumbnail_text": "Spouse has a W-2",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/publications/p505"
+   ],
+   "claims_to_verify": [
+    "$1,000 threshold after withholding and credits",
+    "Married couples can make joint estimated payments"
+   ]
+  },
+  "format_style": "question-reply"
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Why a married freelancer's set-aside is higher.",
+  "script": {
+   "title": "Married to a W-2 earner? Your tax rate is higher",
+   "hook": "Same freelance profit, more tax, just because you're married to someone with a salary. Here's why, with numbers.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Same freelance profit, more tax, just because you're married to someone with a salary. Here's why, with numbers.",
+     "on_screen_text": "Married = higher set-aside",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with two coin stacks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Alone",
+     "narration": "Example, fictional: Riley has forty thousand dollars of freelance profit. Filing single with no other income, federal tax is about seven thousand four hundred, eighteen point six percent.",
+     "on_screen_text": "Alone: ≈ $7,427 (18.6%)",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a short coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Married",
+     "narration": "Now Riley files jointly with Jordan, who earns seventy thousand. Jordan's wages fill the lowest brackets, so Riley's profit lands higher.",
+     "on_screen_text": "Spouse's wages fill low brackets",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a stack on top of another. No text, no logos, no real people."
+    },
+    {
+     "heading": "Result",
+     "narration": "The extra tax caused by Riley's forty thousand is about nine thousand two hundred, twenty-three percent.",
+     "on_screen_text": "Married: ≈ $9,221 (23.1%)",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a taller coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Do",
+     "narration": "So if you file jointly with a salaried spouse, set aside more than a solo freelancer would. Then add your state.",
+     "on_screen_text": "Set aside more than solo",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a jar with a higher line. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Example (fictional): Jordan earns $70,000 in wages, Riley has $40,000 of freelance profit, married filing jointly, 2026 federal figures. Riley alone (single): ≈ $7,427 federal (18.6%). Married to Jordan: the tax caused by Riley's profit ≈ $9,221 (23.1%).\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "marriedcouples",
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "1099money"
+   ],
+   "description": "Why married freelancers need a higher set-aside.",
+   "thumbnail_text": "Married: set aside more",
+   "sources": [
+    "https://www.irs.gov/forms-pubs/about-schedule-se-form-1040",
+    "https://www.irs.gov/publications/p505"
+   ],
+   "claims_to_verify": [
+    "Single $40K profit 2026: total federal ≈ $7,427",
+    "MFJ $70K wages + $40K profit: total ≈ $13,261; wage-only income tax ≈ $4,040; difference ≈ $9,221"
+   ]
+  },
+  "format_style": "real-numbers"
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Use the W-2 paycheck to cover freelance tax.",
+  "script": {
+   "title": "Cover freelance tax from your spouse's paycheck",
+   "hook": "Married to someone with a W-2 job? There's a way to pay your freelance tax without ever making a quarterly payment.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Married to someone with a W-2 job? There's a way to pay your freelance tax without ever making a quarterly payment.",
+     "on_screen_text": "Skip quarterlies: use the W-4",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a paycheck. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1",
+     "narration": "Work out the tax your freelance profit adds. The IRS Tax Withholding Estimator handles self-employment income.",
+     "on_screen_text": "1. Find the extra tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calculator. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2",
+     "narration": "Divide it by the paychecks left this year.",
+     "on_screen_text": "2. ÷ paychecks left",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with paydays marked. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3",
+     "narration": "Your spouse puts that on a new Form W-4, step four c, extra withholding, and gives it to their employer.",
+     "on_screen_text": "3. W-4 step 4(c): extra per check",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with one box filled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why it's good",
+     "narration": "Withholding counts as paid evenly through the year, even if you start in July. Quarterly payments don't work that way.",
+     "on_screen_text": "Withholding counts as paid evenly",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four equal coins. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "One way for a W-2 + freelancer couple to skip quarterly payments: work out the extra tax (IRS Tax Withholding Estimator), divide by the paychecks left, and put it on the W-2 spouse's Form W-4, step 4(c). Withholding is treated as paid evenly through the year.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "marriedcouples",
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "1099money"
+   ],
+   "description": "Covering freelance tax with extra W-2 withholding.",
+   "thumbnail_text": "Use the W-4",
+   "sources": [
+    "https://www.irs.gov/forms-pubs/about-form-w-4",
+    "https://www.irs.gov/individuals/tax-withholding-estimator",
+    "https://www.irs.gov/publications/p505"
+   ],
+   "claims_to_verify": [
+    "W-4 Step 4(c) extra withholding per pay period",
+    "Withholding is treated as paid evenly on the due dates unless you elect otherwise (Form 2210)"
+   ]
+  },
+  "format_style": "how-to"
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Joint estimated tax myths.",
+  "script": {
+   "title": "2 myths about estimated taxes for married couples",
+   "hook": "Married, one of you freelances. Two myths about estimated taxes that make it harder than it is.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Married, one of you freelances. Two myths about estimated taxes that make it harder than it is.",
+     "on_screen_text": "2 myths for married couples",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with two rings. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 1",
+     "narration": "Myth: the freelancer has to pay estimated tax on their own. Fact: if you file jointly, you can make joint estimated payments, using both names and Social Security numbers.",
+     "on_screen_text": "Joint payments are allowed",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two hands on one coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 2",
+     "narration": "Myth: it's too late to fix it once the April and June payments are missed. Fact: extra withholding from the W-2 spouse's pay counts as paid evenly through the year, so it can help cover earlier quarters.",
+     "on_screen_text": "Extra withholding can catch up",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a paycheck with a plus sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Safe harbor",
+     "narration": "And your safe harbor is last year's joint total tax, or a hundred ten percent of it if last year's AGI was over a hundred fifty thousand.",
+     "on_screen_text": "Safe harbor: last year's joint tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Follow",
+     "narration": "More for couples where one spouse freelances: follow.",
+     "on_screen_text": "Follow for the couples series",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes waving. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "If you file jointly, you can make joint estimated payments. Extra W-2 withholding counts as paid evenly through the year, so it can catch up missed quarters. Safe harbor: 100% of last year's joint tax (110% if AGI > $150,000).\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "marriedcouples",
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "1099money"
+   ],
+   "description": "Estimated tax myths for married couples.",
+   "thumbnail_text": "Couples myths",
+   "sources": [
+    "https://www.irs.gov/forms-pubs/about-form-1040-es",
+    "https://www.irs.gov/publications/p505",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes"
+   ],
+   "claims_to_verify": [
+    "Joint estimated payments permitted for spouses who expect to file jointly",
+    "Withholding treated as paid evenly",
+    "110% rule over $150K AGI ($75K if MFS)"
+   ]
+  },
+  "format_style": "myth-vs-fact"
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Per-paycheck extra withholding, worked out.",
+  "script": {
+   "title": "$355 a paycheck: the W-4 math for a freelance spouse",
+   "hook": "How much extra should a W-2 spouse withhold to cover the other spouse's freelance tax? Here's the math with real numbers.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "How much extra should a W-2 spouse withhold to cover the other spouse's freelance tax? Here's the math with real numbers.",
+     "on_screen_text": "Extra withholding, worked out",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes at a whiteboard. No text, no logos, no real people."
+    },
+    {
+     "heading": "Couple",
+     "narration": "Example, fictional: Jordan earns seventy thousand. Riley has forty thousand of freelance profit. Married, filing jointly.",
+     "on_screen_text": "$70K wages + $40K freelance",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two coin stacks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tax",
+     "narration": "Total federal tax: about thirteen thousand two hundred sixty. Jordan's normal withholding covers about four thousand forty.",
+     "on_screen_text": "$13,261 total − $4,040 withheld",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a bill with a slice taken out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Gap",
+     "narration": "The gap is about nine thousand two hundred twenty.",
+     "on_screen_text": "Gap ≈ $9,221",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Per check",
+     "narration": "Over twenty-six paychecks, that's about three hundred fifty-five each. Starting in July, with thirteen left, about seven hundred ten.",
+     "on_screen_text": "÷ 26 ≈ $355 · ÷ 13 ≈ $710",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a paycheck with a plus sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Check",
+     "narration": "Check Jordan's real withholding on a pay stub first. Tax tables vary.",
+     "on_screen_text": "Check a real pay stub",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a magnifying glass over a stub. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Example (fictional): Jordan earns $70,000 in wages, Riley has $40,000 of freelance profit, married filing jointly, 2026 federal figures. Total ≈ $13,261; wage withholding assumed ≈ $4,040 (the tax on wages alone); gap ≈ $9,221 → ≈ $355 per biweekly paycheck for a full year, ≈ $710 from July.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "marriedcouples",
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "1099money"
+   ],
+   "description": "Per-paycheck extra withholding for a freelance spouse.",
+   "thumbnail_text": "$355 a paycheck",
+   "sources": [
+    "https://www.irs.gov/forms-pubs/about-form-w-4",
+    "https://www.irs.gov/individuals/tax-withholding-estimator"
+   ],
+   "claims_to_verify": [
+    "MFJ $70K wages + $40K profit: ≈ $13,261 total",
+    "Wage-only income tax ≈ $4,040 (actual withholding varies)",
+    "$9,221 / 26 ≈ $355; / 13 ≈ $710"
+   ]
+  },
+  "format_style": "on-screen-calculation"
+ },
+ {
+  "format": "short",
+  "pillar": "benefits without an employer",
+  "idea_angle": "What changes when one spouse freelances.",
+  "script": {
+   "title": "3 things that change when your spouse freelances",
+   "hook": "One of you just went freelance. Three things change at tax time that couples often miss.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "One of you just went freelance. Three things change at tax time that couples often miss.",
+     "on_screen_text": "3 things that change",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with two rings and a laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 3",
+     "narration": "Number three: self-employment tax is per person. The freelancer pays fifteen point three percent on their own profit, whatever the other spouse earns.",
+     "on_screen_text": "3: SE tax is per person",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. one coin stack with a slice. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 2",
+     "narration": "Number two: health insurance. If the freelancer could join the W-2 spouse's subsidized work plan, they generally can't take the self-employed health insurance deduction.",
+     "on_screen_text": "2: spouse's plan = no SE health deduction",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a heart with a lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 1",
+     "narration": "Number one: retirement. The freelancer can open their own SEP IRA or Solo 401(k), separate from the spouse's work 401(k) and its limit.",
+     "on_screen_text": "1: own SEP or Solo 401(k)",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two piggy banks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Follow",
+     "narration": "Follow for the rest of the couples series.",
+     "on_screen_text": "Follow for more",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes waving. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "When one spouse freelances: SE tax is per person; eligibility for the other spouse's subsidized work plan generally rules out the self-employed health insurance deduction; and the freelancer can open their own SEP IRA or Solo 401(k).\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "marriedcouples",
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "1099money"
+   ],
+   "description": "Tax changes when a spouse starts freelancing.",
+   "thumbnail_text": "What changes",
+   "sources": [
+    "https://www.irs.gov/forms-pubs/about-schedule-se-form-1040",
+    "https://www.irs.gov/forms-pubs/about-form-7206",
+    "https://www.irs.gov/retirement-plans/one-participant-401k-plans"
+   ],
+   "claims_to_verify": [
+    "SE tax computed per spouse on their own Schedule SE",
+    "SE health insurance deduction not allowed for months eligible for employer-subsidized plan incl. spouse's",
+    "Each person has their own 401(k) deferral limit"
+   ]
+  },
+  "format_style": "countdown"
+ },
+ {
+  "format": "carousel",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Couples tax plan in steps.",
+  "script": {
+   "title": "W-2 + freelancer couple: the tax plan in 6 steps",
+   "hook": "",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "",
+     "on_screen_text": "One W-2, one freelancer: your tax plan",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with two rings. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "",
+     "on_screen_text": "1. Estimate both incomes for the year",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two coin stacks. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "",
+     "on_screen_text": "2. Find the tax the freelance profit adds",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calculator. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "",
+     "on_screen_text": "3. Pick: quarterlies or extra withholding",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two arrows. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "",
+     "on_screen_text": "4. Or mix: withholding + a top-up in April",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a paycheck and a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "",
+     "on_screen_text": "5. Freelancer sets aside the rest",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "",
+     "on_screen_text": "6. Recheck mid-year with the IRS estimator",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save",
+     "narration": "",
+     "on_screen_text": "Save this. Send it to your spouse.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a paper plane. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this. Follow for one freelancer money move a week.",
+   "caption": "A tax plan for a W-2 + freelancer couple filing jointly: estimate both incomes, find the tax the freelance profit adds, then cover it with joint estimated payments, extra W-2 withholding (W-4 step 4(c)), or both. Recheck mid-year with the IRS Tax Withholding Estimator.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSave this. Follow for one freelancer money move a week.",
+   "hashtags": [
+    "marriedcouples",
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "1099money"
+   ],
+   "description": "Six-step tax plan for a W-2 + freelancer couple.",
+   "thumbnail_text": "Couples tax plan",
+   "sources": [
+    "https://www.irs.gov/individuals/tax-withholding-estimator",
+    "https://www.irs.gov/forms-pubs/about-form-w-4",
+    "https://www.irs.gov/forms-pubs/about-form-1040-es"
+   ],
+   "claims_to_verify": [
+    "W-4 step 4(c); joint estimated payments allowed"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Quarterlies vs withholding.",
+  "script": {
+   "title": "Quarterly payments vs extra withholding",
+   "hook": "",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "",
+     "on_screen_text": "Pay freelance tax: quarterly or by paycheck?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a balance scale. No text, no logos, no real people."
+    },
+    {
+     "heading": "Quarterly",
+     "narration": "",
+     "on_screen_text": "Quarterly: 4 dates, you choose amounts",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four calendar pages. No text, no logos, no real people."
+    },
+    {
+     "heading": "Q timing",
+     "narration": "",
+     "on_screen_text": "Quarterly: counted when you pay",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Withholding",
+     "narration": "",
+     "on_screen_text": "Withholding: automatic, every paycheck",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a paycheck. No text, no logos, no real people."
+    },
+    {
+     "heading": "W timing",
+     "narration": "",
+     "on_screen_text": "Withholding: counted as paid evenly",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four equal coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Downside",
+     "narration": "",
+     "on_screen_text": "Withholding: less cash on hand all year",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a smaller wallet. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save",
+     "narration": "",
+     "on_screen_text": "Many couples mix both",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two arrows into one jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this. Follow for one freelancer money move a week.",
+   "caption": "Joint estimated payments count when you pay them. Extra withholding from the W-2 spouse's pay is automatic and counts as paid evenly through the year, but leaves less cash in each paycheck. Many couples use both.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSave this. Follow for one freelancer money move a week.",
+   "hashtags": [
+    "marriedcouples",
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "1099money"
+   ],
+   "description": "Comparing estimated payments with extra withholding.",
+   "thumbnail_text": "Quarterly vs W-4",
+   "sources": [
+    "https://www.irs.gov/forms-pubs/about-form-1040-es",
+    "https://www.irs.gov/forms-pubs/about-form-w-4",
+    "https://www.irs.gov/publications/p505"
+   ],
+   "claims_to_verify": [
+    "Withholding treated as paid evenly unless you elect actual dates (Form 2210)"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Three couples, worked out.",
+  "script": {
+   "title": "Three couples, one freelancer each: the tax gap",
+   "hook": "",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "",
+     "on_screen_text": "How much tax does the freelance income add?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with three pairs of rings. No text, no logos, no real people."
+    },
+    {
+     "heading": "A",
+     "narration": "",
+     "on_screen_text": "$50K wages + $25K freelance: ≈ $5,623 (22.5%)",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "B",
+     "narration": "",
+     "on_screen_text": "$70K wages + $40K freelance: ≈ $9,221 (23.1%)",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a medium stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "C",
+     "narration": "",
+     "on_screen_text": "$90K wages + $60K freelance: ≈ $13,992 (23.3%)",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a tall stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why",
+     "narration": "",
+     "on_screen_text": "Wages fill the low brackets first",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a stacked bar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Note",
+     "narration": "",
+     "on_screen_text": "2026 federal, married filing jointly. Add state.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a map outline. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save",
+     "narration": "",
+     "on_screen_text": "Save this. Set aside about 23% + state.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this. Follow for one freelancer money move a week.",
+   "caption": "Extra federal tax caused by the freelance income, married filing jointly, 2026 figures (fictional couples): $50K wages + $25K profit ≈ $5,623 (22.5%); $70K + $40K ≈ $9,221 (23.1%); $90K + $60K ≈ $13,992 (23.3%). Add state tax.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSave this. Follow for one freelancer money move a week.",
+   "hashtags": [
+    "marriedcouples",
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "1099money"
+   ],
+   "description": "Tax added by freelance income for three couples.",
+   "thumbnail_text": "Three couples",
+   "sources": [
+    "https://www.irs.gov/forms-pubs/about-schedule-se-form-1040",
+    "https://www.irs.gov/publications/p505"
+   ],
+   "claims_to_verify": [
+    "MFJ 2026: 50/25 → total $7,403 − wage-only $1,780 = $5,623; 70/40 → $13,261 − $4,040 = $9,221; 90/60 → $20,432 − $6,440 = $13,992"
+   ]
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Married, one W-2 and one freelancer: the full plan.",
+  "script": {
+   "title": "Married, one W-2 and one freelancer: how to handle the taxes",
+   "hook": "If you're married and one of you has a regular job while the other freelances, your taxes work differently from what either of you is used to. The job's withholding doesn't cover the freelance income, the freelancer's tax rate is higher than it would be alone, and you have two different ways to pay during the year. In this video we'll work through one fictional couple with twenty twenty-six federal numbers, compare quarterly payments with extra withholding, and cover health insurance and retirement. Education, not advice.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "If you're married and one of you has a regular job while the other freelances, your taxes work differently from what either of you is used to. The job's withholding doesn't cover the freelance income, the freelancer's tax rate is higher than it would be alone, and you have two different ways to pay during the year. In this video we'll work through one fictional couple with twenty twenty-six federal numbers, compare quarterly payments with extra withholding, and cover health insurance and retirement. Education, not advice.",
+     "on_screen_text": "One W-2, one freelancer",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with two rings, a briefcase and a laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "The couple",
+     "narration": "Meet Jordan and Riley, both fictional. Jordan works for a company and earns seventy thousand dollars in wages, with tax withheld from every paycheck. Riley freelances and expects forty thousand dollars of profit this year, after business expenses. They're married and file jointly, with the twenty twenty-six standard deduction of thirty-two thousand two hundred. No kids, no other income, to keep the math clear.",
+     "on_screen_text": "$70K wages + $40K freelance profit",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two coin stacks side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "SE tax",
+     "narration": "Start with Riley's self-employment tax, because it's per person. It's fifteen point three percent on ninety-two point three five percent of Riley's profit: about five thousand six hundred fifty-two dollars. Jordan's salary doesn't change it. Jordan already pays Social Security and Medicare through payroll, and the Social Security wage limit applies to each person separately.",
+     "on_screen_text": "Riley's SE tax ≈ $5,652",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin stack with a slice. No text, no logos, no real people."
+    },
+    {
+     "heading": "Income tax",
+     "narration": "Then income tax, on both incomes together. Add Jordan's wages and Riley's profit, subtract half of Riley's self-employment tax, the joint standard deduction, and the twenty percent qualified business income deduction on Riley's business income. Taxable income is about sixty-seven thousand five hundred. Income tax is about seven thousand six hundred nine. Total federal tax for the couple: about thirteen thousand two hundred sixty-one.",
+     "on_screen_text": "Couple's total ≈ $13,261",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a bill with two names. No text, no logos, no real people."
+    },
+    {
+     "heading": "The gap",
+     "narration": "Now, what does Jordan's employer withhold? It depends on Jordan's Form W-4, but say it matches the tax on Jordan's wages alone: about four thousand forty. Thirteen thousand two hundred sixty-one minus four thousand forty leaves about nine thousand two hundred twenty-one that nobody is paying yet. That's the tax caused by Riley's freelance income.",
+     "on_screen_text": "Gap ≈ $9,221",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a bill with a slice missing. No text, no logos, no real people."
+    },
+    {
+     "heading": "Alone vs married",
+     "narration": "Here's the surprise. If Riley were single with the same forty thousand and no other income, federal tax would be about seven thousand four hundred twenty-seven. Married to Jordan, Riley's income causes about nine thousand two hundred twenty-one. That's eighteen point six percent alone versus twenty-three point one percent married. Jordan's wages fill the lowest brackets and most of the standard deduction, so every dollar of Riley's profit is taxed higher.",
+     "on_screen_text": "Alone 18.6% · married 23.1%",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a bar chart with two bars. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Tax caused by Riley's $40K",
+      "labels": [
+       "Filing alone",
+       "Married to $70K salary"
+      ],
+      "values": [
+       7427,
+       9221
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "2026 federal. Single vs married filing jointly. Fictional example."
+     }
+    },
+    {
+     "heading": "The rule",
+     "narration": "The rule for paying during the year applies to the couple. If you'll owe a thousand dollars or more after withholding, you're expected to pay during the year. You generally avoid a penalty if withholding plus estimated payments cover the smaller of ninety percent of this year's tax, or a hundred percent of last year's joint tax. A hundred and ten percent if last year's adjusted gross income was over a hundred fifty thousand.",
+     "on_screen_text": "Smaller of 90% this year or 100% last",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Option 1",
+     "narration": "Option one: joint estimated payments. You use Form ten forty ES, both names and Social Security numbers, on the four due dates. For our couple, to reach ninety percent of this year's tax, they need about seven thousand eight hundred ninety-five beyond Jordan's withholding. That's about nineteen seventy-four a quarter. Riley sets aside a share of each client payment and pays from that.",
+     "on_screen_text": "Joint 1040-ES: ≈ $1,974 a quarter",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four calendar pages. No text, no logos, no real people."
+    },
+    {
+     "heading": "Option 2",
+     "narration": "Option two: more withholding from Jordan's paycheck. Jordan gives the employer a new Form W-4 with an extra amount per paycheck in step four c. To cover the whole gap over twenty-six biweekly paychecks, that's about three hundred fifty-five per paycheck. To just reach the ninety percent mark, about three hundred four. No quarterly dates to remember, and nothing for Riley to send.",
+     "on_screen_text": "W-4 step 4(c): ≈ $355 a paycheck",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a paycheck with a plus sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "The timing trick",
+     "narration": "Option two has a hidden advantage. Withholding is treated as paid evenly through the year, no matter when it actually came out. Quarterly payments count on the day you make them. So if a couple realizes in July that they've paid nothing, extra withholding for the rest of the year can cover the earlier quarters too. With thirteen paychecks left, that's about seven hundred ten each to cover the full gap.",
+     "on_screen_text": "Withholding counts as paid evenly",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four equal coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Trade-offs",
+     "narration": "The trade-off is cash flow and control. Withholding takes money from every paycheck whether Riley had a good month or a slow one. Estimated payments let you pay when the freelance money actually arrives. Many couples mix them: a fixed extra amount withheld to cover most of it, and a small top-up payment in April or January if Riley's year turns out bigger.",
+     "on_screen_text": "Many couples mix both",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two arrows into one jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tools",
+     "narration": "The IRS Tax Withholding Estimator on irs.gov handles exactly this situation: wages for one spouse and self-employment income for the other. It tells you what to put on the W-4. Run it at the start of the year, and again mid-year with real numbers. It takes about fifteen minutes with a recent pay stub and Riley's profit so far.",
+     "on_screen_text": "IRS Tax Withholding Estimator",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop with a simple form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Health insurance",
+     "narration": "Health insurance changes too. If Riley could join Jordan's employer plan, and the employer pays part of it, Riley generally can't take the self-employed health insurance deduction for those months, even if Riley buys a separate plan. If Jordan's plan doesn't offer family coverage, or Riley isn't eligible, Riley's own premiums can be deductible, up to Riley's business profit.",
+     "on_screen_text": "Spouse's work plan? No SE health deduction",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a heart with a lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Retirement",
+     "narration": "Retirement is per person. Jordan has the work 401(k) with its own deferral limit. Riley can open a SEP IRA or a Solo 401(k) on Riley's freelance income. At forty thousand of profit, a SEP allows about seven thousand four hundred thirty-five. Contributions lower the couple's income tax, which shrinks the gap a little, but not Riley's self-employment tax.",
+     "on_screen_text": "Riley's own SEP ≈ $7,435",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two piggy banks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Three couples",
+     "narration": "The pattern holds at other incomes too. Fifty thousand of wages plus twenty-five thousand of freelance profit: the freelance income adds about five thousand six hundred twenty-three, twenty-two and a half percent. Ninety thousand plus sixty thousand: about thirteen thousand nine hundred ninety-two, twenty-three point three percent. For most of these couples, about twenty-three percent plus state tax is a sensible set-aside on the freelance profit.",
+     "on_screen_text": "≈ 23% of freelance profit + state",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three pairs of coin stacks. No text, no logos, no real people."
+    },
+    {
+     "heading": "State",
+     "narration": "Don't forget your state. Most states with an income tax also want estimated payments or enough withholding, often on the same dates. The same two options usually work: extra state withholding on Jordan's state form, or joint state estimated payments. Check your state revenue department's site for its rules.",
+     "on_screen_text": "Your state: same two options",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a map outline with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Filing separately",
+     "narration": "Could filing separately help? Rarely, for a couple like this. Married filing separately uses narrower brackets, makes several credits unavailable, and lowers the safe-harbor income line to seventy-five thousand dollars per spouse. It can make sense in unusual situations, like income-driven student loan payments, so if that's you, run both ways in tax software before you file.",
+     "on_screen_text": "Filing separately: rarely better",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two forms, one crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Both freelance",
+     "narration": "And if you both freelance? Each of you has your own Schedule C and your own self-employment tax. You can still make joint estimated payments covering both businesses, and the set-aside works the same way: a share of every client payment, from both of you, into one tax savings account.",
+     "on_screen_text": "Both freelance: one joint tax jar",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two laptops and one jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mistakes",
+     "narration": "Four mistakes couples make. Assuming the W-2 withholding covers everything. Using the solo-freelancer set-aside percentage, which is too low when you're married to a salary. Claiming the self-employed health deduction when the spouse's work plan was available. And forgetting to update the W-4 after a big change in either income.",
+     "on_screen_text": "4 couples' tax mistakes",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four small warning signs. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Recap. Self-employment tax is per person. Income tax is joint, and the freelance income lands in a higher bracket because the salary fills the lower ones: about twenty-three percent for our couples, plus state. Cover the gap with joint estimated payments, extra withholding through the W-2 spouse's W-4, or both. Withholding counts as paid evenly, which makes it a good catch-up tool. Check health insurance eligibility and give the freelancer their own retirement account. Subscribe for one freelancer money move a week.",
+     "on_screen_text": "Recap",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes closing a notebook and smiling. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Subscribe for one freelancer money move a week.",
+   "caption": "Example (fictional): Jordan earns $70,000 in wages, Riley has $40,000 of freelance profit, married filing jointly, 2026 federal figures. Total ≈ $13,261 (Riley's SE tax ≈ $5,652, joint income tax ≈ $7,609). Tax caused by Riley's profit ≈ $9,221 (23.1%) vs ≈ $7,427 (18.6%) if single. Joint estimated payments (≈ $1,974/quarter to reach 90%) vs W-4 step 4(c) extra withholding (≈ $355 per biweekly paycheck), withholding counted as paid evenly, health insurance eligibility, retirement.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSubscribe for one freelancer money move a week.",
+   "hashtags": [
+    "marriedcouples",
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "w4",
+    "1099money"
+   ],
+   "description": "Married with one W-2 and one freelancer: estimated taxes, W-4 withholding, health and retirement.\n\nChapters\n0:00 One W-2, one freelancer\n0:33 $70K wages + $40K freelance profit\n0:58 Riley's SE tax ≈ $5,652\n1:19 Couple's total ≈ $13,261\n1:44 Gap ≈ $9,221\n2:06 Alone 18.6% · married 23.1%\n2:34 Smaller of 90% this year or 100% last\n3:02 Joint 1040-ES: ≈ $1,974 a quarter\n3:27 W-4 step 4(c): ≈ $355 a paycheck\n3:52 Withholding counts as paid evenly\n4:19 Many couples mix both\n4:44 IRS Tax Withholding Estimator\n5:07 Spouse's work plan? No SE health deduction\n5:30 Riley's own SEP ≈ $7,435\n5:53 ≈ 23% of freelance profit + state\n6:19 Your state: same two options\n6:38 Filing separately: rarely better\n7:01 Both freelance: one joint tax jar\n7:21 4 couples' tax mistakes\n7:40 Recap\n\nIRS Tax Withholding Estimator: https://www.irs.gov/individuals/tax-withholding-estimator\nFree quarterly tax calculator: https://1099money.netlify.app/\n\nSources: irs.gov (Form 1040-ES, Form W-4, Publication 505, Schedule SE, Form 7206).\n\nEducational only, not tax, legal or financial advice.",
+   "thumbnail_text": "One W-2, one freelancer",
+   "sources": [
+    "https://www.irs.gov/forms-pubs/about-form-1040-es",
+    "https://www.irs.gov/forms-pubs/about-form-w-4",
+    "https://www.irs.gov/individuals/tax-withholding-estimator",
+    "https://www.irs.gov/publications/p505",
+    "https://www.irs.gov/forms-pubs/about-schedule-se-form-1040",
+    "https://www.irs.gov/forms-pubs/about-form-7206"
+   ],
+   "claims_to_verify": [
+    "MFJ 2026: $70K wages + $40K profit → SE tax $5,652, taxable $67,539, income tax $7,609, total $13,261",
+    "Wage-only income tax ≈ $4,040 (actual withholding depends on W-4)",
+    "Single $40K: ≈ $7,427",
+    "90% × $13,261 − $4,040 = $7,895 → $1,974/quarter; $9,221/26 = $355; $7,895/26 = $304; $9,221/13 = $709",
+    "SEP at $40K: 20% × ($40,000 − $2,826) ≈ $7,435",
+    "Withholding treated as paid evenly (Form 2210 instructions)",
+    "Chapter timestamps must match final edit"
+   ]
+  },
+  "format_style": "comparison",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Bar chart of the tax caused by Riley's $40,000 of freelance profit filing alone ($7,427) vs married to Jordan's $70,000 salary ($9,221), from the video's 2026 numbers",
+   "chapter": "Alone vs married"
+  }
+ }
+]

@@ -1,0 +1,25 @@
+---
+order: 1
+day: 0
+subject: Aquí está tu guía: Tu dinero en orden en 7 días
+preheader: Empieza hoy en la noche con el Día 1. Toma unos 15 minutos.
+goal: Entregar la guía gratis, decir qué esperar, conseguir una respuesta
+---
+Hola,
+
+Gracias por pedir **Tu dinero en orden en 7 días**. Aquí la tienes:
+
+**[Descarga la guía (PDF)](/downloads/tu-dinero-en-orden-en-7-dias.pdf)**
+
+Así funciona, en corto: una tarea al día, de unos 15 minutos, con la app de tu banco abierta. Para el Día 7 vas a saber tus números reales, vas a tener tres alertas del banco cuidándote, una transferencia a tu ahorro en automático, tu crédito congelado y un solo número semanal para manejar tu mes.
+
+**Empieza hoy en la noche con el Día 1.** Busca tu sueldo neto real del mes (lo que de verdad cae en tu cuenta, no lo que dice tu contrato) y anota cada gasto fijo. Eso es todo.
+
+Qué esperar de nosotros: en las próximas tres semanas te vamos a mandar unos cuantos correos cortos que te acompañan en los 7 días y explican las ideas detrás. Después, un correo por semana, cada uno con un paso concreto con tu dinero. Sin exageraciones, sin recomendar acciones, nada de "hazte rico".
+
+Un favor: **responde a este correo y cuéntanos qué es lo que más quieres arreglar con tu dinero este año.** Una persona lee cada respuesta, y nos ayuda a escribir correos que de verdad te sirvan. (Además, así tu correo sabe que no somos spam.)
+
+Hablamos pronto,
+El equipo de Dinero Simple
+
+P.D. Si este correo cayó en Promociones o Spam, muévelo a tu bandeja principal para que no se pierdan los siguientes.

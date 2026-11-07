@@ -19,7 +19,7 @@ Prices in USD. Valid until [date, e.g. 3 months from today]. These match `index.
 | Commitment | One-off | One-off | Month to month, 30 days' notice |
 | Effective price per ad | $62.25 | $56.13 (≈$18.71 per hook file) | $66.58 |
 
-Every ad includes: human-written script approved by the client, AI presenter and/or AI voice, the client's
+Every ad includes: script drafted with AI help, edited by a person and approved by the client, AI presenter and/or AI voice, the client's
 own product footage or photos, burned-in captions, licensed music, and an on-screen "AI-generated" label.
 
 ## Add-ons

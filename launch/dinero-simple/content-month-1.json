@@ -1,0 +1,2499 @@
+[
+ {
+  "key": "diciembre-en-noviembre",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Holiday plan in November: one total for gifts, food, travel and hosting, divided by the weeks left, moved weekly into a separate fund.",
+  "script": {
+   "title": "Paga diciembre en noviembre",
+   "hook": "Diciembre no arruina tu presupuesto. No planearlo en noviembre, sí.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Diciembre no arruina tu presupuesto. No planearlo en noviembre, sí.",
+     "on_screen_text": "Planea diciembre desde hoy",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf wrapping a small gift next to a calendar with autumn leaves. No text, no logos, no real people."
+    },
+    {
+     "heading": "Un solo total",
+     "narration": "Anota a quién le vas a regalar, más la comida, las posadas, el viaje y lo que mandas a tu familia. Ponle un solo total a todo. Digamos $480.",
+     "on_screen_text": "Un total para todo: $480",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a short list of gift, plate and plane icons beside one stack of coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Divídelo",
+     "narration": "Cuenta las semanas que faltan para tu último día de compras. Si son seis, necesitas apartar $80 cada semana.",
+     "on_screen_text": "$480 ÷ 6 semanas = $80",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with six small gift tags on six weeks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sepáralo",
+     "narration": "Pasa esos $80 cada semana a un fondo aparte, para que el dinero de las fiestas no se mezcle con el del súper.",
+     "on_screen_text": "Transferencia semanal a un fondo aparte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small jar with a red ribbon receiving coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Gasta de ahí",
+     "narration": "Compra solo de ese fondo. Cuando se vacía, las fiestas ya están pagadas, y en enero no te espera una sorpresa en la tarjeta.",
+     "on_screen_text": "Cuando se acaba, ya terminaste",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an empty ribboned jar, looking satisfied. No text, no logos, no real people."
+    },
+    {
+     "heading": "Para el otro año",
+     "narration": "El año que viene empieza en septiembre. Mismo total, número semanal más chico.",
+     "on_screen_text": "El año que viene: empieza en septiembre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar flipping back to an early autumn page. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Plan de fiestas hecho en noviembre: anota a quién le regalas y todo lo demás (comida, posadas, viaje, lo que mandas a tu familia), ponle un solo total, divídelo entre las semanas que faltan y aparta esa cantidad cada semana en un fondo separado. Ejemplo: $480 ÷ 6 semanas = $80 a la semana. Cuando el fondo se acaba, ya terminaste.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "navidad",
+    "presupuesto",
+    "regalosdenavidad",
+    "ahorro",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Un plan de fiestas sencillo: un solo total, dividido entre las semanas que faltan, apartado cada semana en un fondo de regalos.",
+   "thumbnail_text": "Paga diciembre ya",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Example numbers only; no factual claims beyond arithmetic ($480 / 6 = $80)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "regla-72-horas",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Black Friday (Nov 27, 2026): leave anything non-planned in the cart for 72 hours; most impulse wants fade.",
+  "script": {
+   "title": "Black Friday: la regla de las 72 horas",
+   "hook": "Lo que metes al carrito el viernes negro, déjalo ahí tres días.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Lo que metes al carrito el viernes negro, déjalo ahí tres días.",
+     "on_screen_text": "Déjalo en el carrito 72 horas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a shopping cart full of boxes with a small hourglass beside it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Los contadores de tiempo y los 'solo quedan dos' están diseñados para que decidas rápido. La prisa es parte del precio.",
+     "on_screen_text": "La oferta se siente urgente a propósito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a ticking clock icon over a price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "Si algo no estaba en tu lista de antes, no lo compras hoy. Lo dejas en el carrito y pones una alarma para dentro de 72 horas.",
+     "on_screen_text": "Si no estaba en tu lista, espera",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a short paper list next to a phone showing a simple alarm icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué pasa",
+     "narration": "Cuando suena la alarma, muchas veces ya no lo quieres. Y si sí, lo compras con calma y sabes de qué fondo sale.",
+     "on_screen_text": "Muchas veces ya no lo quieres",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a cart with most boxes removed and one box left. No text, no logos, no real people."
+    },
+    {
+     "heading": "La excepción",
+     "narration": "Lo que ya tenías planeado, como los regalos de tu lista, sí lo compras en oferta. Para eso sirven.",
+     "on_screen_text": "Lo planeado sí se compra",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a checklist with checkmarks beside a gift box. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Tu lista manda. La oferta solo decide cuándo compras lo que ya ibas a comprar.",
+     "on_screen_text": "Tu lista manda, no la oferta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf walking out of a store with one small bag, calm. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "La regla de las 72 horas para el viernes negro y el Cyber Monday: si algo no estaba en tu lista de antes, se queda en el carrito tres días. Si cuando suena la alarma todavía lo quieres, lo compras con calma y sabes de qué fondo sale. Lo planeado sí se compra en oferta.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "blackfriday",
+    "viernesnegro",
+    "compras",
+    "ahorro",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "La regla de las 72 horas: cómo comprar en el viernes negro sin compras por impulso.",
+   "thumbnail_text": "Espera 72 horas",
+   "sources": [],
+   "claims_to_verify": [
+    "Black Friday 2026 is Friday Nov 27; Cyber Monday Nov 30"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "compra-ahora-paga-despues",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "BNPL stacking in December: several 'small' 4-payment plans land on the same paydays in January.",
+  "script": {
+   "title": "Compra ahora, paga después: el problema de juntar varios",
+   "hook": "Cuatro pagos chiquitos no son chiquitos cuando tienes cinco.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Cuatro pagos chiquitos no son chiquitos cuando tienes cinco.",
+     "on_screen_text": "Cinco planes de 4 pagos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf juggling five small boxes labeled only with simple shapes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo funciona",
+     "narration": "Los planes de compra ahora y paga después dividen una compra en cuatro pagos, normalmente cada dos semanas.",
+     "on_screen_text": "Pagas en 4 partes, cada 2 semanas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a box split into four equal slices on a timeline. No text, no logos, no real people."
+    },
+    {
+     "heading": "El problema",
+     "narration": "En diciembre es fácil tener varios a la vez. Unos zapatos, un celular, unos regalos. Y todos caen en las mismas semanas de enero.",
+     "on_screen_text": "Todos caen en las mismas quincenas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. five timelines stacking on the same two dates. No text, no logos, no real people."
+    },
+    {
+     "heading": "Los números",
+     "narration": "Cinco planes de $40 son $200 cada dos semanas que ya no puedes usar, justo en el mes más pesado del año.",
+     "on_screen_text": "5 planes × $40 = $200 cada dos semanas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paycheck being sliced by several small arrows. No text, no logos, no real people."
+    },
+    {
+     "heading": "Si fallas un pago",
+     "narration": "Si se te pasa uno, puede haber cargos por atraso, y algunas empresas pueden reportar a los burós. Revisa los términos de cada uno.",
+     "on_screen_text": "Cargos por atraso y posibles reportes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small warning triangle beside a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "Nuestra regla: uno a la vez, y solo si el pago cabe en tu número semanal para gastar. Si no cabe hoy, tampoco cabe en enero.",
+     "on_screen_text": "Solo uno a la vez, y que quepa en tu número semanal",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding one small box and a single coin, smiling. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Compra ahora, paga después no es malo por sí solo. El problema es juntar varios: cinco planes de $40 son $200 cada dos semanas en enero. Regla simple: uno a la vez, y solo si el pago cabe en tu número semanal para gastar. Revisa los cargos por atraso de cada plan.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "comprahorapagadespues",
+    "deudas",
+    "navidad",
+    "presupuesto",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Por qué juntar varios planes de compra ahora y paga después en diciembre te pega en enero.",
+   "thumbnail_text": "Cuidado con los 4 pagos",
+   "sources": [
+    "https://www.consumerfinance.gov/about-us/newsroom/cfpb-study-details-the-rapid-growth-of-buy-now-pay-later-lending/"
+   ],
+   "claims_to_verify": [
+    "BNPL 'pay in 4' plans typically charge every two weeks",
+    "Some BNPL providers charge late fees and some may report to credit bureaus; wording must stay hedged"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "bono-con-menos",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Holiday bonus looks smaller because bonuses are supplemental wages: employers often withhold a flat 22% federal plus Social Security, Medicare and state.",
+  "script": {
+   "title": "¿Por qué tu bono de diciembre llegó con menos?",
+   "hook": "Te dijeron que tu bono era de $1,000 y te llegaron como $700. No es un error.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Te dijeron que tu bono era de $1,000 y te llegaron como $700. No es un error.",
+     "on_screen_text": "$1,000 de bono, $700 en tu cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking puzzled at a small envelope with fewer coins than expected. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Para el IRS, un bono es pago suplementario. Muchos empleadores le retienen una tasa fija de 22% de impuesto federal.",
+     "on_screen_text": "Un bono es 'pago suplementario'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with a slice taken out by a simple government building icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Más descuentos",
+     "narration": "Encima van el Seguro Social y Medicare, que juntos son 7.65%, y el impuesto de tu estado si tiene. Por eso llega como 70%.",
+     "on_screen_text": "Más Seguro Social, Medicare y estatal",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three smaller slices taken from the same envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "La buena noticia",
+     "narration": "Retenido no siempre es perdido. Si te retuvieron de más para tu situación, eso se ajusta cuando declaras impuestos.",
+     "on_screen_text": "Retenido no es lo mismo que perdido",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small arrow returning coins toward the envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "Así que haz tus planes con lo que de verdad cae en tu cuenta. Pregunta en Recursos Humanos el monto neto aproximado.",
+     "on_screen_text": "Planea con lo neto, no con lo prometido",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf writing a smaller number on a note. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Bono de mil, planea con unos setecientos. Lo que sobre después, es extra.",
+     "on_screen_text": "Bono de $1,000 ≈ $700 para planear",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf placing coins into three small jars. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si tu bono de diciembre llegó con menos de lo que esperabas: para el IRS un bono es pago suplementario, y muchos empleadores retienen una tasa fija federal de 22%, más Seguro Social y Medicare (7.65%) y el impuesto estatal donde aplica. Retenido no siempre es perdido; se ajusta al declarar. Planea con el neto.\n\nContenido educativo, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "bono",
+    "aguinaldo",
+    "impuestos",
+    "irs",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Por qué un bono de fin de año llega con menos: la retención de 22% sobre pagos suplementarios, explicada.",
+   "thumbnail_text": "¿Y mi bono?",
+   "sources": [
+    "https://www.irs.gov/publications/p15",
+    "https://www.ssa.gov/oact/cola/cbb.html"
+   ],
+   "claims_to_verify": [
+    "Optional flat-rate federal withholding on supplemental wages is 22% (up to $1M) per IRS Pub. 15",
+    "Employee Social Security + Medicare = 7.65%",
+    "$1,000 bonus nets roughly $700 is illustrative; varies by state and method"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "plan-aguinaldo",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "If you get an aguinaldo or year-end bonus, decide its three jobs before it lands: expensive debt or cushion, December commitments, one thing for you.",
+  "script": {
+   "title": "Decide qué hace tu aguinaldo antes de que llegue",
+   "hook": "El aguinaldo que no tiene plan se va en tres semanas.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "El aguinaldo que no tiene plan se va en tres semanas.",
+     "on_screen_text": "Aguinaldo sin plan = 3 semanas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf watching a small pile of coins scatter in the wind. No text, no logos, no real people."
+    },
+    {
+     "heading": "En EE. UU.",
+     "narration": "En Estados Unidos no hay aguinaldo obligatorio por ley como en México, pero muchos trabajos dan un bono de fin de año. Si te llega, dale trabajo antes.",
+     "on_screen_text": "Aquí no es obligatorio, pero muchos lo reciben",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small gift envelope crossing a simple border line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Trabajo 1",
+     "narration": "Primer trabajo: la tarjeta con interés más alto, o tu fondo de emergencia si todavía no llega a $1,000.",
+     "on_screen_text": "1. Deuda cara o tu colchón",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a broken chain next to a small jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Trabajo 2",
+     "narration": "Segundo: lo que ya prometiste en diciembre. Lo que le mandas a tu familia, los regalos de tu lista, el viaje.",
+     "on_screen_text": "2. Lo de diciembre que ya prometiste",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a gift, a plane and a heart icon in a row. No text, no logos, no real people."
+    },
+    {
+     "heading": "Trabajo 3",
+     "narration": "Tercero: algo para ti, con un tope que pones hoy. Disfrutarlo también es parte del plan.",
+     "on_screen_text": "3. Algo para ti, con tope",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small treat with a price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "Con $700 netos, por ejemplo: $350 a la tarjeta, $250 a diciembre, $100 para ti. Escríbelo antes de que llegue.",
+     "on_screen_text": "$700: $350 · $250 · $100",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three jars of different sizes being filled. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si recibes aguinaldo o bono de fin de año, decide sus tres trabajos antes de que llegue:\n1. Deuda cara o tu colchón de emergencia\n2. Lo de diciembre que ya prometiste (familia, regalos, viaje)\n3. Algo para ti, con tope\nEjemplo con $700 netos: $350 · $250 · $100. En EE. UU. el aguinaldo no es obligatorio por ley, pero muchos trabajos dan un bono.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "aguinaldo",
+    "bono",
+    "ahorro",
+    "deudas",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Un plan de tres partes para el aguinaldo o bono de fin de año.",
+   "thumbnail_text": "Plan para tu aguinaldo",
+   "sources": [
+    "https://www.dol.gov/general/topic/wages"
+   ],
+   "claims_to_verify": [
+    "US federal law does not require year-end bonuses (unlike Mexico's legally required aguinaldo); confirm wording"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "remesas-tipo-de-cambio",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Remittances: 'no fee' transfers can cost more through the exchange-rate markup; compare the amount your family receives.",
+  "script": {
+   "title": "Envíos de dinero: la comisión que no ves",
+   "hook": "'Envío sin comisión' no quiere decir gratis.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "'Envío sin comisión' no quiere decir gratis.",
+     "on_screen_text": "'Sin comisión' no es gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small envelope with a tiny hidden coin slipping out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dos costos",
+     "narration": "Mandar dinero tiene dos costos: la comisión que ves y el tipo de cambio que te dan.",
+     "on_screen_text": "Comisión + tipo de cambio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two price tags, one visible and one half-hidden. No text, no logos, no real people."
+    },
+    {
+     "heading": "El truco",
+     "narration": "Muchas empresas te dan menos pesos por dólar que el tipo de cambio del mercado, y la diferencia se la quedan ellas.",
+     "on_screen_text": "Te dan menos pesos por dólar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a balance scale slightly tilted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo comparar",
+     "narration": "Así que no compares la comisión. Compara cuánto recibe tu familia en total por los mismos $300.",
+     "on_screen_text": "Compara lo que RECIBE tu familia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two envelopes side by side with different stacks of coins inside. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dónde verlo",
+     "narration": "Por ley, antes de pagar te tienen que mostrar la comisión, el tipo de cambio y cuánto va a recibir la otra persona. Ese es el número.",
+     "on_screen_text": "Sale en el recibo antes de pagar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple receipt with three highlighted lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Pide la cotización en dos o tres servicios y quédate con el que deja más dinero allá.",
+     "on_screen_text": "Mismo envío, compara el total recibido",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf comparing three receipts and pointing at one. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Cuando mandas dinero a tu familia hay dos costos: la comisión y el tipo de cambio. Un envío 'sin comisión' puede costarte más si te dan menos pesos (o quetzales, o lempiras) por dólar. Compara cuánto recibe tu familia en total; por ley el proveedor te lo tiene que mostrar antes de pagar.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "remesas",
+    "enviardinero",
+    "tipodecambio",
+    "familia",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cómo comparar servicios para mandar dinero: la comisión, el tipo de cambio y el monto que recibe tu familia.",
+   "thumbnail_text": "La comisión escondida",
+   "sources": [
+    "https://www.consumerfinance.gov/es/obtener-respuestas/",
+    "https://www.consumerfinance.gov/rules-policy/regulations/1005/33/"
+   ],
+   "claims_to_verify": [
+    "CFPB Remittance Rule requires pre-payment disclosure of fees, exchange rate and amount to be received",
+    "Exchange-rate markups are a common hidden cost (keep general; no specific provider named)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "remesas-derechos",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Your rights when sending remittances from the US: receipt, 30 minutes to cancel, 180 days to report an error.",
+  "script": {
+   "title": "Tus derechos cuando mandas dinero a otro país",
+   "hook": "Si mandas dinero desde Estados Unidos, tienes derechos que casi nadie conoce.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si mandas dinero desde Estados Unidos, tienes derechos que casi nadie conoce.",
+     "on_screen_text": "Tienes derechos al mandar dinero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small shield next to an envelope with wings. No text, no logos, no real people."
+    },
+    {
+     "heading": "1. La información",
+     "narration": "Uno: antes de pagar te tienen que decir la comisión, el tipo de cambio y cuánto recibe la otra persona.",
+     "on_screen_text": "1. Ver costos antes de pagar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with three lines highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "2. Cancelar",
+     "narration": "Dos: en general tienes 30 minutos para cancelar y recibir todo tu dinero, si todavía no lo recogieron ni depositaron.",
+     "on_screen_text": "2. 30 minutos para cancelar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small stopwatch next to an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "3. Errores",
+     "narration": "Tres: si llegó menos o no llegó, tienes 180 días para reportar el error, y la empresa tiene que investigarlo.",
+     "on_screen_text": "3. 180 días para reportar errores",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Guarda el recibo",
+     "narration": "Para todo eso necesitas el recibo. Tómale foto a cada uno.",
+     "on_screen_text": "Guarda cada recibo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf taking a photo of a receipt with a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Si no responden",
+     "narration": "Si la empresa no te responde, puedes poner una queja con la CFPB, también en español.",
+     "on_screen_text": "Queja con la CFPB, en español",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple government building with a speech bubble. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tus derechos al mandar dinero desde EE. UU. (regla de remesas de la CFPB):\n1. Ver comisión, tipo de cambio y monto que recibe tu familia antes de pagar\n2. En general, 30 minutos para cancelar con reembolso completo si no lo han recogido\n3. 180 días para reportar un error\nGuarda cada recibo. Si la empresa no responde, presenta una queja en consumerfinance.gov (hay atención en español).\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "remesas",
+    "enviardinero",
+    "derechosdelconsumidor",
+    "cfpb",
+    "familia",
+    "dinerosimple"
+   ],
+   "description": "Tus derechos al mandar remesas desde Estados Unidos: información antes de pagar, 30 minutos para cancelar y 180 días para reportar errores.",
+   "thumbnail_text": "30 minutos para cancelar",
+   "sources": [
+    "https://www.consumerfinance.gov/rules-policy/regulations/1005/33/",
+    "https://www.consumerfinance.gov/complaint/"
+   ],
+   "claims_to_verify": [
+    "Remittance Rule: cancel within 30 minutes for full refund (if not picked up/deposited)",
+    "180 days to report errors",
+    "CFPB complaint portal available in Spanish",
+    "Rule applies to providers doing more than 500 transfers a year; small providers may be exempt (consider adding)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "remesas-impuesto-1",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Since Jan 1, 2026 there's a 1% federal excise tax on remittances paid in cash, money order or cashier's check; transfers funded from a US bank account or US-issued card are exempt.",
+  "script": {
+   "title": "El impuesto de 1% a los envíos en efectivo",
+   "hook": "Desde 2026, mandar dinero pagando en efectivo cuesta 1% más.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Desde 2026, mandar dinero pagando en efectivo cuesta 1% más.",
+     "on_screen_text": "Envío en efectivo: 1% más",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at a counter holding cash next to a small envelope with wings. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "Es un impuesto federal nuevo de 1% sobre los envíos al extranjero que pagas en efectivo, con money order o con cheque de caja.",
+     "on_screen_text": "Impuesto federal de 1% a remesas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small percent sign stamped on an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "Si mandas $300 en efectivo, son $3 más. Al año, si mandas cada mes, son $36.",
+     "on_screen_text": "$300 en efectivo = $3 de impuesto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. twelve tiny coins in a row on a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "La excepción",
+     "narration": "Si el envío sale de tu cuenta de banco o de una tarjeta de débito o crédito emitida en Estados Unidos, el impuesto no aplica.",
+     "on_screen_text": "Desde tu cuenta o tarjeta: no aplica",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank card and a bank building with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ojo con el crédito",
+     "narration": "Ojo: con tarjeta de crédito algunos bancos lo cobran como avance de efectivo, con comisión e interés desde el primer día. Mejor débito o cuenta.",
+     "on_screen_text": "Con tarjeta de crédito: revisa cargos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a credit card with a small warning triangle. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Si puedes, paga desde tu cuenta, y sigue comparando cuánto recibe tu familia.",
+     "on_screen_text": "Paga desde tu cuenta, compara lo recibido",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sending a winged envelope from a phone. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Desde el 1 de enero de 2026 hay un impuesto federal de 1% sobre las remesas pagadas en efectivo, money order o cheque de caja. Si el envío sale de una cuenta de banco o de una tarjeta emitida en EE. UU., no aplica. Ojo: algunas tarjetas de crédito tratan los envíos como avance de efectivo; revisa antes.\n\nContenido educativo, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "remesas",
+    "impuestos",
+    "enviardinero",
+    "efectivo",
+    "familia",
+    "dinerosimple"
+   ],
+   "description": "El impuesto federal de 1% a las remesas pagadas en efectivo, y cómo no pagarlo.",
+   "thumbnail_text": "1% si pagas en efectivo",
+   "sources": [
+    "https://www.irs.gov/newsroom/one-big-beautiful-bill-provisions",
+    "https://www.law.cornell.edu/uscode/text/26/4475"
+   ],
+   "claims_to_verify": [
+    "1% excise tax on remittance transfers funded with cash, money orders, cashier's checks or similar physical instruments, for transfers after Dec 31, 2025 (IRC 4475)",
+    "Exempt when funded from an account at a US financial institution or a US-issued debit/credit card",
+    "Some card issuers treat money transfers as cash advances; keep hedged"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "remesas-juntar-envios",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "With a flat per-transfer fee, one monthly transfer costs less per dollar than four weekly ones; plan the monthly amount as a fixed bill.",
+  "script": {
+   "title": "Un envío al mes en vez de cuatro",
+   "hook": "Si mandas $75 cada semana, puede que estés pagando cuatro comisiones por lo mismo.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si mandas $75 cada semana, puede que estés pagando cuatro comisiones por lo mismo.",
+     "on_screen_text": "4 envíos = 4 comisiones",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sending four small envelopes, each with a coin falling off. No text, no logos, no real people."
+    },
+    {
+     "heading": "La cuenta",
+     "narration": "Con una comisión fija de $4 por envío, cuatro envíos son $16 al mes. Un envío de $300 podría costar $5. Son $11 al mes, más de $130 al año.",
+     "on_screen_text": "4 × $4 = $16 · 1 × $5 = $5",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. four small coins versus one coin on a scale. No text, no logos, no real people."
+    },
+    {
+     "heading": "Depende",
+     "narration": "Ojo: no todos cobran igual. Algunos cobran porcentaje. Pide la cotización de los dos casos y compara lo que recibe tu familia.",
+     "on_screen_text": "Revisa cómo cobra tu servicio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two receipts side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "El plan",
+     "narration": "Lo que mandas cada mes va en tus gastos fijos, como la renta. Apártalo el día de pago para que no compita con el súper.",
+     "on_screen_text": "Ponlo en gastos fijos, como la renta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small house icon and a heart icon in the same row of bills. No text, no logos, no real people."
+    },
+    {
+     "heading": "Platícalo",
+     "narration": "Platica con tu familia una fecha fija al mes. Les ayuda a planear, y a ti también.",
+     "on_screen_text": "Acuerda una fecha con tu familia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf on a video call with a simple calendar between them. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Menos envíos, misma ayuda, más dinero que llega.",
+     "on_screen_text": "Menos envíos, más dinero allá",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. one large winged envelope flying toward a small house. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si tu servicio cobra una comisión fija por envío, mandar una vez al mes en vez de cada semana puede ahorrar más de $100 al año (ejemplo: 4 × $4 contra 1 × $5). No todos cobran igual: compara lo que recibe tu familia en los dos casos. Y pon el envío en tus gastos fijos, como la renta.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "remesas",
+    "enviardinero",
+    "familia",
+    "ahorro",
+    "presupuesto",
+    "dinerosimple"
+   ],
+   "description": "Por qué juntar envíos de dinero puede bajar lo que pagas en comisiones.",
+   "thumbnail_text": "1 envío, no 4",
+   "sources": [
+    "https://remittanceprices.worldbank.org/"
+   ],
+   "claims_to_verify": [
+    "Fee numbers ($4 per transfer, $5 per $300) are illustrative; real fees vary by provider and method"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "tanda-segura",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Holiday tandas: only with people you trust, written down (members, amounts, order, dates, what happens if someone stops paying), and never as your emergency fund.",
+  "script": {
+   "title": "Si entras a una tanda para diciembre, haz esto",
+   "hook": "Una tanda puede ayudarte a ahorrar. También puede costarte una amistad.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Una tanda puede ayudarte a ahorrar. También puede costarte una amistad.",
+     "on_screen_text": "Tanda: ayuda o problema",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sitting in a small circle of simple round characters passing a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "1. Con quién",
+     "narration": "Uno: solo con gente que conoces bien. Nunca con desconocidos de internet.",
+     "on_screen_text": "1. Solo gente que conoces bien",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small circle of familiar faces drawn as simple shapes. No text, no logos, no real people."
+    },
+    {
+     "heading": "2. Por escrito",
+     "narration": "Dos: todo por escrito. Quién está, cuánto, cada cuándo, el orden de los turnos y qué pasa si alguien deja de pagar.",
+     "on_screen_text": "2. Todo por escrito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple sheet with a numbered list and a pen. No text, no logos, no real people."
+    },
+    {
+     "heading": "3. Tu turno",
+     "narration": "Tres: si te toca al final, básicamente estás ahorrando sin interés. Si te toca al principio, te están prestando, y tú debes seguir pagando.",
+     "on_screen_text": "3. Si te toca al final, ahorras; al principio, te prestan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a circular arrow with a coin at the start and at the end. No text, no logos, no real people."
+    },
+    {
+     "heading": "4. No es emergencia",
+     "narration": "Cuatro: no es tu fondo de emergencia. Ese dinero no lo puedes sacar cuando quieras.",
+     "on_screen_text": "4. No es tu fondo de emergencia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a locked jar next to an open jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Alternativa",
+     "narration": "Si lo que buscas es la disciplina, una transferencia automática a una cuenta de ahorro asegurada hace lo mismo y te paga interés.",
+     "on_screen_text": "O: transferencia automática a tu ahorro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf setting up a small automatic arrow from wallet to jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si vas a entrar a una tanda (o cundina) para diciembre:\n1. Solo con gente que conoces bien\n2. Todo por escrito: montos, fechas, orden y qué pasa si alguien deja de pagar\n3. Si te toca al principio, te están prestando; sigue pagando\n4. No es tu fondo de emergencia\nSi buscas la disciplina, una transferencia automática a una cuenta de ahorro asegurada hace lo mismo y te paga interés.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "tanda",
+    "cundina",
+    "ahorro",
+    "navidad",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Reglas para entrar a una tanda con menos riesgo, y una alternativa automática.",
+   "thumbnail_text": "Tanda segura",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Tandas are informal and not insured; keep wording general"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "regalos-por-persona",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Gift budget per person: names, a cap per name, and a family rule (e.g. kids only, or an intercambio) so the total stays inside the December fund.",
+  "script": {
+   "title": "La lista de regalos que sí cuadra",
+   "hook": "Si no le pones tope a cada regalo, el total te lo pone la tarjeta.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si no le pones tope a cada regalo, el total te lo pone la tarjeta.",
+     "on_screen_text": "Ponle tope a cada regalo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a long gift list that unrolls onto the floor. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 1",
+     "narration": "Paso uno: escribe los nombres. Todos, también los del intercambio de la oficina.",
+     "on_screen_text": "Nombres primero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple list with small name tags. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 2",
+     "narration": "Paso dos: al lado de cada nombre, un tope. Mamá $60, sobrinos $20 cada uno, intercambio $25.",
+     "on_screen_text": "Un tope al lado de cada nombre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. price tags attached to gift boxes of different sizes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 3",
+     "narration": "Paso tres: súmalo. Si no cabe en tu fondo de diciembre, se ajusta la lista, no la tarjeta.",
+     "on_screen_text": "La suma tiene que caber en tu fondo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar with a line showing the limit. No text, no logos, no real people."
+    },
+    {
+     "heading": "Truco",
+     "narration": "Un truco que le quita presión a todos: propón que este año solo se les regala a los niños, o un intercambio con tope. Casi siempre alguien más lo estaba pensando.",
+     "on_screen_text": "Propón: regalos solo a los niños",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small group of simple characters nodding around a single gift. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Nombres, topes, suma. Y compras con la lista en la mano.",
+     "on_screen_text": "Nombres, topes, suma",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf checking off a short list while carrying two small bags. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Lista de regalos que sí cuadra: 1) todos los nombres, 2) un tope al lado de cada uno, 3) la suma tiene que caber en tu fondo de diciembre. Si no cabe, se ajusta la lista, no la tarjeta. Idea para la familia: regalos solo a los niños, o un intercambio con tope.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "regalosdenavidad",
+    "navidad",
+    "presupuesto",
+    "ahorro",
+    "intercambio",
+    "dinerosimple"
+   ],
+   "description": "Cómo armar una lista de regalos con tope por persona para que quepa en tu presupuesto de diciembre.",
+   "thumbnail_text": "Tope por persona",
+   "sources": [],
+   "claims_to_verify": [
+    "Example amounts only"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "posada-anfitrion",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Hosting a posada or Nochebuena: the hidden costs (food, drinks, decorations, extra trips) add up; set a host budget and ask guests to bring a dish.",
+  "script": {
+   "title": "Hacer la posada en tu casa: el costo que nadie suma",
+   "hook": "Ser anfitrión de la posada sale más caro que cualquier regalo.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Ser anfitrión de la posada sale más caro que cualquier regalo.",
+     "on_screen_text": "La posada en tu casa cuesta más",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf in a small festive kitchen surrounded by pots and paper decorations. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lo que se suma",
+     "narration": "Comida, bebida, platos, adornos, la piñata, las tres vueltas extra a la tienda. Nadie lo suma hasta que llega el estado de cuenta.",
+     "on_screen_text": "Comida, bebida, adornos, vueltas extra",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a row of small icons: pot, cup, piñata shape, shopping bag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ponle número",
+     "narration": "Antes de decir que sí, ponle un número. Por ejemplo, $250 para todo, y que salga de tu fondo de diciembre.",
+     "on_screen_text": "Presupuesto de anfitrión: un total",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a single price tag tied to a small house. No text, no logos, no real people."
+    },
+    {
+     "heading": "Reparte",
+     "narration": "Pide que cada familia traiga un plato o las bebidas. No es de mal anfitrión; es lo normal en muchas casas.",
+     "on_screen_text": "Que cada quien traiga un plato",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. several simple hands each carrying a covered dish. No text, no logos, no real people."
+    },
+    {
+     "heading": "Una sola compra",
+     "narration": "Haz una sola lista y una compra grande. Las vueltas chiquitas son las que se comen el presupuesto.",
+     "on_screen_text": "Una lista, una compra grande",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. one big shopping bag versus many tiny ones. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "La fiesta sale igual de bonita, y enero llega tranquilo.",
+     "on_screen_text": "Fiesta completa, enero tranquilo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf relaxing on a couch after the party, confetti on the floor. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si te toca la posada o la Nochebuena en tu casa: ponle un total de anfitrión (ejemplo: $250) que salga de tu fondo de diciembre, pide que cada familia traiga un plato o las bebidas, y haz una sola lista y una compra grande. Las vueltas chiquitas son las que se comen el presupuesto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "posadas",
+    "nochebuena",
+    "navidad",
+    "presupuesto",
+    "ahorro",
+    "dinerosimple"
+   ],
+   "description": "Cómo ponerle presupuesto a la posada o la Nochebuena en tu casa.",
+   "thumbnail_text": "El costo de la posada",
+   "sources": [],
+   "claims_to_verify": [
+    "Example amounts only"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "viaje-de-diciembre",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "The December trip home is predictable: next year's trip starts as a sinking fund in January ($960 / 12 = $80 a month).",
+  "script": {
+   "title": "El viaje de diciembre del año que viene empieza en enero",
+   "hook": "Ir a ver a tu familia en diciembre no es una sorpresa. Se puede pagar antes.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Ir a ver a tu familia en diciembre no es una sorpresa. Se puede pagar antes.",
+     "on_screen_text": "El viaje no es sorpresa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a small suitcase looking at a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "El costo real",
+     "narration": "Suma todo: boletos, maletas, regalos que llevas, transporte allá y los días que no trabajas. Digamos $960.",
+     "on_screen_text": "Boletos + maletas + regalos + días sin pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a suitcase with small icons around it: plane, gift, bus, calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Divídelo",
+     "narration": "Divídelo entre doce meses. Son $80 al mes desde enero.",
+     "on_screen_text": "$960 ÷ 12 meses = $80",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with twelve small plane stickers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sepáralo",
+     "narration": "Ábrele su propio apartado en tu cuenta de ahorro y pon la transferencia en automático el día de pago.",
+     "on_screen_text": "Fondo 'Viaje' aparte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small jar labeled with a plane icon receiving coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Bonus",
+     "narration": "Bonus: con el dinero ya ahí, puedes comprar los boletos cuando estén a buen precio, no cuando te alcance.",
+     "on_screen_text": "Así compras el boleto cuando conviene",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a plane ticket with a small checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Este enero, $80 al mes. El diciembre que viene, viajas sin deuda.",
+     "on_screen_text": "Enero: $80 al mes para el viaje",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf waving from a small airplane window. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El viaje de diciembre para ver a tu familia se puede pagar antes. Suma el costo real (boletos, maletas, regalos, transporte allá, días sin pago), divídelo entre 12 y aparta esa cantidad cada mes desde enero en un fondo aparte. Ejemplo: $960 ÷ 12 = $80 al mes.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "viajes",
+    "familia",
+    "ahorro",
+    "fondodeprevision",
+    "presupuesto",
+    "dinerosimple"
+   ],
+   "description": "Cómo pagar el viaje de diciembre a ver a tu familia con un fondo de previsión desde enero.",
+   "thumbnail_text": "Viaje pagado antes",
+   "sources": [],
+   "claims_to_verify": [
+    "Example amounts only"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "estafa-paquete",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Holiday smishing: 'your package couldn't be delivered' texts with a link; USPS says it won't text you a link unless you asked for tracking.",
+  "script": {
+   "title": "El mensaje del 'paquete no entregado' es una estafa",
+   "hook": "'Tu paquete no se pudo entregar, haz clic aquí.' No hagas clic.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "'Tu paquete no se pudo entregar, haz clic aquí.' No hagas clic.",
+     "on_screen_text": "'Tu paquete no se pudo entregar'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a phone with a suspicious message bubble and a fishing hook. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué ahora",
+     "narration": "En diciembre todos esperamos paquetes, y por eso estos mensajes funcionan tan bien.",
+     "on_screen_text": "En diciembre todos esperamos paquetes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pile of delivery boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué quieren",
+     "narration": "El enlace lleva a una página falsa que te pide tus datos y una 'pequeña tarifa' con tarjeta. Lo que quieren es tu número de tarjeta.",
+     "on_screen_text": "Tus datos y tu tarjeta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a fake form with a card icon and a warning triangle. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "El Servicio Postal dice que no te manda mensajes con enlaces a menos que tú te hayas registrado para seguir un paquete.",
+     "on_screen_text": "USPS no te manda enlaces si no los pediste",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple mailbox with a small 'no link' symbol. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "Si esperas algo, rastréalo tú desde la app de la tienda o el sitio oficial. Borra el mensaje.",
+     "on_screen_text": "Rastrea desde la app o el sitio oficial",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf typing directly into a browser bar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Si ya pagaste",
+     "narration": "Si ya pusiste tu tarjeta, llama a tu banco para cancelarla y repórtalo en ReporteFraude.ftc.gov.",
+     "on_screen_text": "Llama a tu banco y reporta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone and a small shield. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "'Tu paquete no se pudo entregar' con un enlace es una estafa muy común en diciembre. El Servicio Postal (USPS) dice que no manda mensajes con enlaces a menos que te hayas registrado para rastrear un envío. Rastrea desde el sitio oficial o la app de la tienda. Si ya pusiste tu tarjeta, llama a tu banco y repórtalo en ReporteFraude.ftc.gov.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "estafas",
+    "fraude",
+    "navidad",
+    "seguridad",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cómo reconocer el mensaje falso de 'paquete no entregado' y qué hacer si ya diste tu tarjeta.",
+   "thumbnail_text": "No hagas clic",
+   "sources": [
+    "https://faq.usps.com/s/article/USPS-Smishing-Fraud",
+    "https://reportefraude.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "USPS says it does not send texts or emails with links unless the customer signed up for tracking (check current USPS wording)",
+    "ReporteFraude.ftc.gov is the FTC's Spanish fraud-report site"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "tarjeta-de-tienda",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "'Save 20% today if you open our card': store cards often carry very high APRs; the discount disappears if you carry a balance a few months.",
+  "script": {
+   "title": "'Ahorra 20% hoy con nuestra tarjeta'",
+   "hook": "El 20% de descuento en la caja puede salirte más caro que no tenerlo.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "El 20% de descuento en la caja puede salirte más caro que no tenerlo.",
+     "on_screen_text": "El 20% en la caja",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at a checkout counter being offered a shiny card. No text, no logos, no real people."
+    },
+    {
+     "heading": "El descuento",
+     "narration": "Compras $300, abres la tarjeta y te ahorras $60. Suena bien.",
+     "on_screen_text": "$300 de compra = $60 de descuento",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with a small discount line. No text, no logos, no real people."
+    },
+    {
+     "heading": "La tasa",
+     "narration": "Pero muchas tarjetas de tienda tienen tasas de interés muy altas, muchas veces cerca de 30% al año.",
+     "on_screen_text": "Muchas tarjetas de tienda: tasas muy altas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a price tag with a large percent sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Las cuentas",
+     "narration": "Si dejas $240 sin pagar a esa tasa, en unos meses el interés ya se comió buena parte del descuento. Y además abriste una cuenta nueva en tu reporte.",
+     "on_screen_text": "Si no la pagas completa, se come el descuento",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small monster eating coins from a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuándo sí",
+     "narration": "Si la vas a pagar completa en el primer estado de cuenta y es una tienda que usas mucho, puede valer. Si no, di que no.",
+     "on_screen_text": "Solo si la pagas completa ese mismo mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with one checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Antes de decir que sí en la caja, pregunta la tasa de interés. Si te dicen 'no sé', ya tienes tu respuesta.",
+     "on_screen_text": "Pregunta la tasa antes de firmar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf politely shaking head at the shiny card. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El 20% de descuento por abrir la tarjeta de la tienda solo te conviene si la pagas completa en el primer estado de cuenta. Muchas tarjetas de tienda tienen tasas de interés muy altas, y abrir una cuenta nueva aparece en tu reporte de crédito. Pregunta la tasa antes de firmar.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "tarjetadecredito",
+    "deudas",
+    "credito",
+    "compras",
+    "navidad",
+    "dinerosimple"
+   ],
+   "description": "Cuándo conviene (y cuándo no) abrir la tarjeta de una tienda por el descuento.",
+   "thumbnail_text": "¿20% de descuento?",
+   "sources": [
+    "https://www.consumerfinance.gov/data-research/research-reports/issue-spotlight-the-high-cost-of-retail-credit-cards/"
+   ],
+   "claims_to_verify": [
+    "Many store/private-label credit cards carry APRs near 30% (CFPB 2023 issue spotlight; check current figure)",
+    "Opening a new account adds a hard inquiry and a new account to the credit report"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "cuesta-de-enero",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "La cuesta de enero starts in December: hold back January's rent and fixed bills from December pay before spending on the holidays.",
+  "script": {
+   "title": "La cuesta de enero empieza en diciembre",
+   "hook": "La cuesta de enero no empieza en enero. Empieza el día que te pagan en diciembre.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "La cuesta de enero no empieza en enero. Empieza el día que te pagan en diciembre.",
+     "on_screen_text": "La cuesta de enero empieza hoy",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at the bottom of a steep hill labeled only with a calendar icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "En diciembre todo se gasta en fiestas, y en enero llegan la renta, la tarjeta de diciembre y los seguros anuales, todo junto.",
+     "on_screen_text": "Diciembre se gasta; enero cobra",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a stack of bills arriving at once. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "La regla: antes de gastar en fiestas, aparta del pago de diciembre la renta de enero y tus gastos fijos de la primera quincena.",
+     "on_screen_text": "Primero aparta la renta de enero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small house icon put into a locked jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Las fechas",
+     "narration": "Abre tu calendario y anota todo lo que cae del 1 al 15 de enero. Ese es tu número para apartar.",
+     "on_screen_text": "Revisa qué cae del 1 al 15 de enero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with the first half of the month highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Los pagos con tarjeta",
+     "narration": "Y lo que pagues con tarjeta en diciembre, que sea lo que puedes pagar completo cuando llegue el estado de cuenta.",
+     "on_screen_text": "Lo de diciembre en la tarjeta, pagado completo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a credit card with a small checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Así enero deja de ser cuesta y se vuelve un mes normal.",
+     "on_screen_text": "Enero sin cuesta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf walking on a flat path with a light backpack. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "La cuesta de enero se prepara en diciembre: antes de gastar en fiestas, aparta del pago de diciembre la renta de enero y los gastos fijos que caen del 1 al 15. Y usa la tarjeta solo para lo que puedes pagar completo cuando llegue el estado de cuenta.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "cuestadeenero",
+    "enero",
+    "presupuesto",
+    "ahorro",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cómo preparar la cuesta de enero desde el pago de diciembre.",
+   "thumbnail_text": "Prepárate para enero",
+   "sources": [],
+   "claims_to_verify": [
+    "No factual claims beyond general advice"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "proposito-automatico",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "A New Year money resolution that survives February is a single automatic transfer set up on Jan 2, not a promise.",
+  "script": {
+   "title": "El propósito de año nuevo que sí dura",
+   "hook": "Los propósitos de dinero fallan en febrero porque dependen de ti. Este no.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Los propósitos de dinero fallan en febrero porque dependen de ti. Este no.",
+     "on_screen_text": "Un propósito que no depende de ti",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small party horn next to a calendar showing January. No text, no logos, no real people."
+    },
+    {
+     "heading": "El problema",
+     "narration": "'Este año sí voy a ahorrar' no es un plan. Es un deseo que compite cada semana con todo lo demás.",
+     "on_screen_text": "'Este año sí ahorro' no es un plan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a thought bubble with a coin floating away. No text, no logos, no real people."
+    },
+    {
+     "heading": "El propósito",
+     "narration": "El propósito que sí dura es una sola cosa: una transferencia automática a tu ahorro, el día después de cada pago.",
+     "on_screen_text": "Una transferencia automática",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an arrow moving coins from a wallet to a jar on its own. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuánto",
+     "narration": "¿Cuánto? Empieza con algo que no sientas, como el 1% de tu sueldo neto. $25 por quincena son $600 al año.",
+     "on_screen_text": "Empieza con 1% de tu sueldo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. twenty-four small coins on a yearly calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuándo",
+     "narration": "Hazlo el 2 de enero, en diez minutos, desde la app de tu banco. Y cada tres meses súbele un poquito.",
+     "on_screen_text": "Hazlo el 2 de enero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a simple settings icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Un clic en enero. El resto del año pasa solo.",
+     "on_screen_text": "Un clic en enero, un año de ahorro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf relaxing while coins keep dropping into a jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El propósito de dinero que sí dura: una transferencia automática a tu ahorro el día después de cada pago. Empieza con algo que no sientas (por ejemplo $25 por quincena = $600 al año), configúrala el 2 de enero y súbele un poco cada tres meses.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "añonuevo",
+    "propositos",
+    "ahorro",
+    "finanzaspersonales",
+    "educacionfinanciera",
+    "dinerosimple"
+   ],
+   "description": "Un propósito de año nuevo que funciona solo: la transferencia automática a tu ahorro.",
+   "thumbnail_text": "Un propósito automático",
+   "sources": [],
+   "claims_to_verify": [
+    "$25 x 24 semi-monthly paychecks = $600 (arithmetic)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "401k-enero",
+  "format": "short",
+  "pillar": "invertir por primera vez (fondos índice, cuentas de retiro)",
+  "idea_angle": "January: raise your 401(k) contribution by 1% (or turn on auto-increase); on a $45,000 salary that's $450 a year, less out of take-home if pre-tax.",
+  "script": {
+   "title": "Súbele 1% a tu 401(k) en enero",
+   "hook": "El aumento más fácil del año te lo das tú, y casi no lo sientes.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "El aumento más fácil del año te lo das tú, y casi no lo sientes.",
+     "on_screen_text": "+1% a tu 401(k)",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf nudging a small dial up by one notch. No text, no logos, no real people."
+    },
+    {
+     "heading": "La cuenta",
+     "narration": "Con un salario de $45,000, subir tu aporte al 401(k) un 1% son $450 más al año para tu retiro.",
+     "on_screen_text": "$45,000 × 1% = $450 al año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small stack of coins growing by one coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lo que sientes",
+     "narration": "Repartido en 24 quincenas son menos de $19 cada una. Y si es antes de impuestos, tu pago neto baja todavía menos.",
+     "on_screen_text": "Menos de $19 por quincena",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paycheck with a very small slice removed. No text, no logos, no real people."
+    },
+    {
+     "heading": "Primero el match",
+     "narration": "Si todavía no recibes todo el match de tu empleador, ese es el primer objetivo. El 1% extra va después.",
+     "on_screen_text": "Lo primero: el match completo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two jars pouring into one with a gift bow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Automático",
+     "narration": "Muchos planes tienen un aumento automático de 1% cada año. Actívalo una vez y te olvidas.",
+     "on_screen_text": "Activa el aumento automático",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a small upward arrow on each January. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Este enero, entra al portal de beneficios y súbele 1%. Cinco minutos.",
+     "on_screen_text": "Enero: entra al portal, sube 1%",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf giving a thumbs up in front of a laptop. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "En enero, súbele 1% a tu aporte del 401(k). Con $45,000 de salario son $450 más al año, menos de $19 por quincena (y si es antes de impuestos, tu pago neto baja menos que eso). Primero asegúrate de recibir todo el match. Si tu plan tiene aumento automático anual, actívalo.\n\nContenido educativo, no es asesoría de inversión.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "401k",
+    "retiro",
+    "invertir",
+    "añonuevo",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Por qué subir 1% tu aporte al 401(k) en enero es el aumento más fácil del año.",
+   "thumbnail_text": "+1% en enero",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/401k-plans"
+   ],
+   "claims_to_verify": [
+    "$450 / 24 = $18.75 per semi-monthly paycheck before tax effects",
+    "Many plans offer automatic annual contribution increases (not all)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "carpeta-de-impuestos",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Make a tax folder in January: W-2 and 1099-NEC are due to you by Jan 31; collect 1098-E, 1098-T, 1095-A and last year's return before filing.",
+  "script": {
+   "title": "Arma tu carpeta de impuestos en enero",
+   "hook": "La declaración de impuestos se hace en diez minutos si en enero armas una carpeta.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "La declaración de impuestos se hace mucho más rápido si en enero armas una carpeta.",
+     "on_screen_text": "Una carpeta en enero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an empty folder next to a January calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "W-2",
+     "narration": "Si eres empleado, tu W-2 te lo tienen que dar a más tardar el 31 de enero.",
+     "on_screen_text": "W-2: tu empleador, a más tardar el 31 de enero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple form icon dropping into the folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "1099",
+     "narration": "Si hiciste trabajos por tu cuenta, cada cliente que te pagó $2,000 o más en 2026 normalmente te manda un 1099-NEC (antes el mínimo era $600), también para el 31 de enero.",
+     "on_screen_text": "1099-NEC: si trabajas por tu cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. several small form icons dropping into the folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Otros",
+     "narration": "Junta también el 1098-E si pagaste intereses de préstamo estudiantil, el 1098-T si pagaste colegiatura, y el 1095-A si tuviste seguro del Mercado.",
+     "on_screen_text": "Préstamo estudiantil, colegiatura, seguro médico",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a short stack of forms with small icons: cap, book, heart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Y el año pasado",
+     "narration": "Y tu declaración del año pasado, para comparar y para no olvidar nada.",
+     "on_screen_text": "Tu declaración del año pasado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an older folder next to the new one. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Una carpeta, física o en tu celular, y todo entra ahí conforme llega.",
+     "on_screen_text": "Una carpeta, todo junto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf closing a full folder with a satisfied smile. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Arma tu carpeta de impuestos en enero:\n• W-2 (a más tardar el 31 de enero)\n• 1099-NEC si trabajaste por tu cuenta (también el 31 de enero)\n• 1098-E (intereses de préstamo estudiantil), 1098-T (colegiatura), 1095-A (seguro del Mercado)\n• Tu declaración del año pasado\nTodo entra a la carpeta conforme llega.\n\nContenido educativo, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "taxes",
+    "irs",
+    "w2",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Qué documentos juntar en enero para declarar impuestos sin estrés.",
+   "thumbnail_text": "Tu carpeta de impuestos",
+   "sources": [
+    "https://www.irs.gov/es/forms-pubs/about-form-w-2",
+    "https://www.irs.gov/forms-pubs/about-form-1099-nec"
+   ],
+   "claims_to_verify": [
+    "Employers must furnish W-2 by Jan 31",
+    "1099-NEC due to recipients by Jan 31; reporting threshold rises from $600 to $2,000 for payments made after Dec 31, 2025 (One Big Beautiful Bill Act); confirm IRS guidance for tax year 2026 forms",
+    "1098-E, 1098-T, 1095-A descriptions"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "fsa-diciembre",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "FSA balances are generally use-it-or-lose-it; check your plan's grace period or carryover before Dec 31 and use what's left on eligible expenses.",
+  "script": {
+   "title": "El dinero de tu FSA que se pierde el 31 de diciembre",
+   "hook": "Si tienes FSA en el trabajo, puede que tengas dinero que se pierde en unas semanas.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si tienes FSA en el trabajo, puede que tengas dinero que se pierde en unas semanas.",
+     "on_screen_text": "Tu FSA puede vencer el 31",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a small jar with a calendar showing December 31. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "Una FSA es una cuenta de gastos médicos con dinero que apartaste de tu sueldo antes de impuestos.",
+     "on_screen_text": "FSA: dinero antes de impuestos para salud",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small first-aid kit next to a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "En general, lo que no usas en el año se pierde. Algunos planes dan unos meses de gracia o dejan pasar una parte al año siguiente.",
+     "on_screen_text": "En general: úsalo o piérdelo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar with an hourglass. No text, no logos, no real people."
+    },
+    {
+     "heading": "Revisa",
+     "narration": "Entra hoy a tu cuenta de beneficios y revisa dos cosas: cuánto te queda y qué regla tiene tu plan.",
+     "on_screen_text": "Entra a tu cuenta y revisa saldo y regla",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone screen with a simple balance icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Úsalo",
+     "narration": "Si te sobra, úsalo en gastos que califican: lentes, citas del dentista, medicinas o cosas del botiquín que califiquen. Guarda los recibos.",
+     "on_screen_text": "Lentes, dentista, medicinas, botiquín",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. small icons of glasses, a tooth and a medicine bottle. No text, no logos, no real people."
+    },
+    {
+     "heading": "Conclusión",
+     "narration": "Revísalo hoy, no el 30 de diciembre.",
+     "on_screen_text": "Revisa hoy, no el 30",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf checking a box on a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si tienes una FSA de salud en el trabajo, revisa tu saldo antes del 31 de diciembre. En general es 'úsalo o piérdelo', aunque algunos planes dan un periodo de gracia o dejan pasar una parte. Si te sobra, úsalo en gastos que califican (lentes, dentista, medicinas) y guarda los recibos. Esto es para FSA, no HSA: el dinero de una HSA no se pierde.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "fsa",
+    "beneficios",
+    "salud",
+    "finanzaspersonales",
+    "diciembre",
+    "dinerosimple"
+   ],
+   "description": "Por qué revisar tu FSA antes del 31 de diciembre y en qué puedes usar lo que sobre.",
+   "thumbnail_text": "Usa tu FSA",
+   "sources": [
+    "https://www.healthcare.gov/es/have-job-based-coverage/flexible-spending-accounts/",
+    "https://www.irs.gov/publications/p969"
+   ],
+   "claims_to_verify": [
+    "Health FSAs are generally use-it-or-lose-it; plans may offer a grace period (up to 2.5 months) or a limited carryover, not both",
+    "HSA balances roll over",
+    "Eligible expense examples"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "c-plan-de-regalos",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "A one-screen December plan: total, weeks left, weekly amount, list with caps, one fund.",
+  "script": {
+   "title": "Tu plan de diciembre en 6 pasos",
+   "hook": "Guárdalo: tu plan de diciembre en 6 pasos.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo para cuando hagas tus compras.",
+     "on_screen_text": "Tu plan de diciembre en 6 pasos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a clipboard with a small gift on top. No text, no logos, no real people."
+    },
+    {
+     "heading": "1. Lista",
+     "narration": "Regalos, posadas, comida, viaje, lo que mandas a tu familia, ropa para las fiestas.",
+     "on_screen_text": "1. Todo lo de diciembre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a short list with festive icons. No text, no logos, no real people."
+    },
+    {
+     "heading": "2. Total",
+     "narration": "Ponle un número a todo junto. Ese es tu techo.",
+     "on_screen_text": "2. Un solo total",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. one stack of coins with a ceiling line. No text, no logos, no real people."
+    },
+    {
+     "heading": "3. Semanas",
+     "narration": "$480 ÷ 6 semanas = $80 a la semana.",
+     "on_screen_text": "3. Total ÷ semanas que faltan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with six marked weeks. No text, no logos, no real people."
+    },
+    {
+     "heading": "4. Fondo",
+     "narration": "Pasa esa cantidad cada semana a un apartado de ahorro solo para diciembre.",
+     "on_screen_text": "4. Un fondo aparte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a ribboned jar receiving coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "5. Topes",
+     "narration": "Cada nombre de la lista lleva su tope. La suma tiene que caber en el fondo.",
+     "on_screen_text": "5. Un tope por persona",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. gift boxes with small price tags. No text, no logos, no real people."
+    },
+    {
+     "heading": "6. Enero",
+     "narration": "Antes de gastar, aparta la renta y los gastos del 1 al 15 de enero.",
+     "on_screen_text": "6. Aparta la renta de enero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small house placed in a locked jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Sin sorpresas en la tarjeta en enero.",
+     "on_screen_text": "Cuando el fondo se acaba, terminaste",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf relaxing next to an empty ribboned jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu plan de diciembre en 6 pasos: lista, un solo total, total ÷ semanas, un fondo aparte, tope por persona y la renta de enero apartada primero. Guárdalo para cuando salgas de compras.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "navidad",
+    "presupuesto",
+    "regalosdenavidad",
+    "ahorro",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Un plan de diciembre en seis pasos.",
+   "thumbnail_text": "Plan de diciembre",
+   "sources": [],
+   "claims_to_verify": [
+    "Example amounts only"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "c-antes-de-mandar-dinero",
+  "format": "carousel",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Seven things to compare before sending money abroad.",
+  "script": {
+   "title": "Antes de mandar dinero, compara estas 7 cosas",
+   "hook": "Guárdalo para tu próximo envío.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo para tu próximo envío.",
+     "on_screen_text": "Antes de mandar dinero: 7 cosas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a winged envelope and a checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "El número que importa. Pide el total en la moneda de allá.",
+     "on_screen_text": "1. Cuánto RECIBE tu familia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope arriving at a small house. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Fija o porcentaje. Cambia según el monto y cómo pagas.",
+     "on_screen_text": "2. La comisión",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Compáralo con el del mercado. La diferencia es una comisión escondida.",
+     "on_screen_text": "3. El tipo de cambio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a slightly tilted scale. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "En efectivo hay un impuesto federal de 1% desde 2026. Desde tu cuenta, no.",
+     "on_screen_text": "4. Cómo pagas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. cash versus a bank card with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Depósito, efectivo, billetera móvil. Lo más cómodo para ellos también cuenta.",
+     "on_screen_text": "5. Cómo lo recogen",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank, a hand with cash and a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Minutos o días. Lo rápido a veces cuesta más.",
+     "on_screen_text": "6. Cuánto tarda",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a stopwatch. No text, no logos, no real people."
+    },
+    {
+     "heading": "7",
+     "narration": "Guárdalo: tienes 30 minutos para cancelar y 180 días para reportar errores.",
+     "on_screen_text": "7. El recibo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with a camera icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Las tarifas cambian; tu servicio de siempre no siempre es el mejor.",
+     "on_screen_text": "Compara 2 o 3 servicios cada vez",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf comparing three receipts. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Antes de mandar dinero a tu familia, compara: 1) cuánto recibe allá, 2) la comisión, 3) el tipo de cambio, 4) cómo pagas (efectivo: impuesto de 1% desde 2026), 5) cómo lo recogen, 6) cuánto tarda, 7) el recibo (30 minutos para cancelar, 180 días para reportar errores).\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "remesas",
+    "enviardinero",
+    "familia",
+    "tipodecambio",
+    "ahorro",
+    "dinerosimple"
+   ],
+   "description": "Siete cosas que comparar antes de mandar dinero a otro país.",
+   "thumbnail_text": "7 cosas antes de enviar",
+   "sources": [
+    "https://www.consumerfinance.gov/rules-policy/regulations/1005/33/",
+    "https://www.law.cornell.edu/uscode/text/26/4475",
+    "https://remittanceprices.worldbank.org/"
+   ],
+   "claims_to_verify": [
+    "CFPB remittance rule: 30-minute cancellation, 180-day error window",
+    "1% excise tax on cash-funded remittances from 2026; exempt from US bank accounts and US-issued cards"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "c-aguinaldo",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "What to do with a year-end bonus or aguinaldo, in order.",
+  "script": {
+   "title": "Qué hacer con tu aguinaldo o bono, en orden",
+   "hook": "Guárdalo antes de que te paguen.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Decide antes de que llegue.",
+     "on_screen_text": "Tu aguinaldo o bono, en orden",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small gift envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "0",
+     "narration": "Muchos bonos llegan con 22% de retención federal, más Seguro Social, Medicare y estatal.",
+     "on_screen_text": "0. Planea con el neto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with a slice taken out. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Lo que mandas a tu familia, los regalos de tu lista, el viaje.",
+     "on_screen_text": "1. Lo que ya debes en diciembre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a gift, a plane and a heart in a row. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Si todavía no lo tienes, va antes que cualquier otra meta.",
+     "on_screen_text": "2. Tu colchón de $1,000",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small jar reaching a line. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "La tarjeta con la tasa más alta. Cada dólar ahí rinde esa tasa.",
+     "on_screen_text": "3. La deuda más cara",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a broken chain. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Apártala ahora y la cuesta de enero se aplana.",
+     "on_screen_text": "4. La renta de enero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small house in a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Ponle número hoy. Disfrutarlo también es parte del plan.",
+     "on_screen_text": "5. Algo para ti, con tope",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small treat. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Un bono sin plan se va en tres semanas.",
+     "on_screen_text": "Escríbelo antes de que llegue",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a short handwritten plan. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu aguinaldo o bono, en orden: planea con el neto, cubre lo de diciembre que ya prometiste, completa tu colchón de $1,000, ataca la deuda más cara, aparta la renta de enero y deja algo para ti con tope. Escríbelo antes de que llegue.\n\nContenido educativo, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "aguinaldo",
+    "bono",
+    "deudas",
+    "ahorro",
+    "cuestadeenero",
+    "dinerosimple"
+   ],
+   "description": "Un orden simple para usar el aguinaldo o bono de fin de año.",
+   "thumbnail_text": "Tu bono, en orden",
+   "sources": [
+    "https://www.irs.gov/publications/p15"
+   ],
+   "claims_to_verify": [
+    "22% optional flat federal withholding on supplemental wages",
+    "Employee Social Security + Medicare = 7.65%"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "c-black-friday",
+  "format": "carousel",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Six rules for Black Friday and Cyber Monday without new debt.",
+  "script": {
+   "title": "Viernes negro sin deudas: 6 reglas",
+   "hook": "Guárdalo para el viernes.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo para el viernes.",
+     "on_screen_text": "Viernes negro sin deudas: 6 reglas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a shopping bag and a calm face. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Si no estaba en la lista, no es oferta para ti.",
+     "on_screen_text": "1. Lista antes de abrir la app",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a short paper list. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Lo que no estaba planeado se queda en el carrito tres días.",
+     "on_screen_text": "2. Regla de las 72 horas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a cart with an hourglass. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Del fondo de diciembre o con tarjeta que pagas completa al llegar el estado de cuenta.",
+     "on_screen_text": "3. Paga con lo que ya tienes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a ribboned jar and a card with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Varios planes juntos caen en las mismas quincenas de enero.",
+     "on_screen_text": "4. Un solo 'paga en 4' a la vez",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. one small box instead of five. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Algunos 'descuentos' son sobre un precio que casi nadie pagó. Compara en otras tiendas.",
+     "on_screen_text": "5. Revisa el precio de antes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two price tags side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Entra al sitio escribiendo tú la dirección. Las ofertas falsas suben en estas fechas.",
+     "on_screen_text": "6. Ojo con los enlaces de ofertas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a fishing hook next to a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Todo lo demás es gasto.",
+     "on_screen_text": "La mejor oferta: lo planeado, más barato",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf checking off a list. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Viernes negro y Cyber Monday sin deudas: lista antes de abrir la app, regla de las 72 horas, paga con lo que ya tienes, un solo plan de 4 pagos a la vez, compara el precio de antes y entra a los sitios escribiendo tú la dirección.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "blackfriday",
+    "viernesnegro",
+    "cybermonday",
+    "compras",
+    "deudas",
+    "dinerosimple"
+   ],
+   "description": "Seis reglas para comprar en el viernes negro sin endeudarte.",
+   "thumbnail_text": "Viernes negro sin deudas",
+   "sources": [
+    "https://consumidor.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "Holiday shopping scams increase in this season (keep general)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "c-estafas-de-temporada",
+  "format": "carousel",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Six holiday scam signs, including fake delivery texts, gift-card payment demands and fake remittance 'prizes'.",
+  "script": {
+   "title": "6 estafas de temporada (y cómo reconocerlas)",
+   "hook": "Mándaselo a tu mamá.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Mándaselo a alguien que compra en línea.",
+     "on_screen_text": "6 estafas de temporada",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a magnifying glass over a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Mensaje con enlace. Rastrea tú desde el sitio oficial.",
+     "on_screen_text": "1. 'Tu paquete no se pudo entregar'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a delivery box with a warning triangle. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Nadie legítimo cobra con tarjetas de regalo. Es estafa siempre.",
+     "on_screen_text": "2. Te piden pagar con tarjetas de regalo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a gift card with a red X. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Premios por enviar dinero que piden tus datos o un pago primero.",
+     "on_screen_text": "3. 'Ganaste un envío gratis'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a winged envelope with a fishing hook. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Dona en el sitio de la organización, no por un enlace que te llegó.",
+     "on_screen_text": "4. Caridades con prisa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a heart with an hourglass. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Tiendas que no conoces, precios absurdos, pago solo por transferencia.",
+     "on_screen_text": "5. Ofertas demasiado buenas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a price tag that is too small. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Si te llaman, cuelga y llama tú al número de tu tarjeta.",
+     "on_screen_text": "6. 'Llamada de tu banco'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a small shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Si caíste",
+     "narration": "ReporteFraude.ftc.gov, en español. Rápido es mejor.",
+     "on_screen_text": "Llama a tu banco y reporta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone and a document. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "6 estafas de temporada: paquete 'no entregado', pagos con tarjetas de regalo, premios por enviar dinero, caridades con prisa, ofertas demasiado buenas y la 'llamada de tu banco'. Si caíste, llama a tu banco y repórtalo en ReporteFraude.ftc.gov (en español).\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "estafas",
+    "fraude",
+    "navidad",
+    "seguridad",
+    "familia",
+    "dinerosimple"
+   ],
+   "description": "Seis estafas comunes en diciembre y cómo reconocerlas.",
+   "thumbnail_text": "Estafas de diciembre",
+   "sources": [
+    "https://consumidor.ftc.gov/articulos/como-evitar-una-estafa",
+    "https://reportefraude.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "FTC: anyone demanding payment by gift card is a scammer",
+    "ReporteFraude.ftc.gov is the FTC Spanish report site"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "c-cuesta-de-enero",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Checklist of what lands in January so the 'cuesta de enero' is planned in December.",
+  "script": {
+   "title": "La cuesta de enero: lo que llega del 1 al 31",
+   "hook": "Guárdalo y aparta esto en diciembre.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Apártalo desde diciembre.",
+     "on_screen_text": "La cuesta de enero: lo que llega",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at the foot of a small hill. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Lo primero que se aparta del último pago de diciembre.",
+     "on_screen_text": "1. Renta y gastos fijos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small house and bills. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "El estado de cuenta con las fiestas llega en enero.",
+     "on_screen_text": "2. La tarjeta de diciembre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a credit card with a festive ribbon. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Carro, inquilino, membresías, el dominio de tu negocio.",
+     "on_screen_text": "3. Seguros y renovaciones anuales",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a car and a small house with a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Si compraste en noviembre o diciembre, siguen cayendo.",
+     "on_screen_text": "4. Los pagos de 'paga en 4'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. small boxes on a timeline. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Útiles, uniformes, el súper vacío después de las fiestas.",
+     "on_screen_text": "5. Gastos de regreso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a backpack and a grocery bag. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Si en tu casa se festeja, ponle su propio tope.",
+     "on_screen_text": "6. Día de Reyes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small crown and a gift. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Enero se vuelve un mes normal.",
+     "on_screen_text": "Suma todo y apártalo antes del 24",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf walking on a flat path. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "La cuesta de enero se aplana si apartas en diciembre: renta y gastos fijos, la tarjeta de diciembre, seguros y renovaciones anuales, los pagos de 'paga en 4', gastos de regreso y el Día de Reyes. Suma todo y apártalo antes del 24.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "cuestadeenero",
+    "enero",
+    "presupuesto",
+    "diadereyes",
+    "ahorro",
+    "dinerosimple"
+   ],
+   "description": "Lista de lo que llega en enero para apartarlo desde diciembre.",
+   "thumbnail_text": "Cuesta de enero",
+   "sources": [],
+   "claims_to_verify": [
+    "No factual claims beyond general advice"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "c-12-uvas",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Twelve grapes, twelve small money moves for the new year, one per month.",
+  "script": {
+   "title": "12 uvas, 12 pasos con tu dinero",
+   "hook": "Un paso por uva, uno por mes.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Uno por mes. Guárdalo.",
+     "on_screen_text": "12 uvas, 12 pasos con tu dinero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small bunch of twelve grapes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ene-Feb",
+     "narration": "Ahorro en automático el 2 de enero; declara temprano en febrero.",
+     "on_screen_text": "Ene: transferencia automática · Feb: impuestos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two grapes with a coin and a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mar-Abr",
+     "narration": "Gratis en AnnualCreditReport.com; congelar es gratis.",
+     "on_screen_text": "Mar: reportes de crédito · Abr: congela tu crédito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two grapes with a magnifying glass and a snowflake. No text, no logos, no real people."
+    },
+    {
+     "heading": "May-Jun",
+     "narration": "Cancela lo que no usas; pide un mejor precio.",
+     "on_screen_text": "May: suscripciones · Jun: llama a tu aseguradora",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two grapes with scissors and a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Jul-Ago",
+     "narration": "¿Recibes todo el match? El viaje de diciembre empieza a mitad de año.",
+     "on_screen_text": "Jul: revisa tu 401(k) · Ago: fondo del viaje",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two grapes with a jar and a plane. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sep-Oct",
+     "narration": "Empieza el fondo de fiestas; compara servicios para mandar dinero.",
+     "on_screen_text": "Sep: fondo de diciembre · Oct: revisa tus envíos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two grapes with a gift and an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Nov-Dic",
+     "narration": "Inscripción abierta; patrimonio neto y metas.",
+     "on_screen_text": "Nov: beneficios del trabajo · Dic: tu revisión del año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two grapes with a heart and a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Feliz año.",
+     "on_screen_text": "Un paso al mes es suficiente",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf raising a glass of sparkling cider with confetti. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "12 uvas, 12 pasos con tu dinero, uno por mes: ahorro automático, impuestos temprano, reportes de crédito, congelar tu crédito, suscripciones, seguros, 401(k), fondo del viaje, fondo de diciembre, comparar envíos, beneficios del trabajo y tu revisión del año. Feliz año.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "añonuevo",
+    "12uvas",
+    "propositos",
+    "ahorro",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Doce pasos con tu dinero para el año nuevo, uno por mes.",
+   "thumbnail_text": "12 uvas de dinero",
+   "sources": [
+    "https://www.annualcreditreport.com/"
+   ],
+   "claims_to_verify": [
+    "Free weekly credit reports at AnnualCreditReport.com",
+    "Credit freezes are free"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "c-revision-del-ano",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "A 20-minute year-end money review: net worth, debts, savings, what worked, one goal.",
+  "script": {
+   "title": "Tu revisión de fin de año en 20 minutos",
+   "hook": "Guárdalo para el 31.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo para la última semana de diciembre.",
+     "on_screen_text": "Tu revisión del año en 20 minutos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a notebook and a cup of hot chocolate. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Saldos de cheques, ahorro y retiro.",
+     "on_screen_text": "1. Lo que tienes (5 min)",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three jars with coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Cada deuda con su saldo y su tasa.",
+     "on_screen_text": "2. Lo que debes (5 min)",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a short list with chain links. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Lo que tienes menos lo que debes. Compáralo con el año pasado si lo tienes.",
+     "on_screen_text": "3. Tu patrimonio neto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple scale. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Un hábito que sí mantuviste. Ese se queda.",
+     "on_screen_text": "4. Qué funcionó (3 min)",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small trophy. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Un gasto que se te fue de las manos. Sin culpa, solo dato.",
+     "on_screen_text": "5. Qué no (3 min)",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small leaking bucket. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Una sola, con número y fecha. Ejemplo: $1,000 de colchón para junio.",
+     "on_screen_text": "6. Una meta (4 min)",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a flag on a small hill. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Es todo lo que necesitas para empezar el año.",
+     "on_screen_text": "Un número, un hábito, una meta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf closing the notebook, smiling. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Revisión de fin de año en 20 minutos: lo que tienes, lo que debes, tu patrimonio neto, qué funcionó, qué no y una sola meta con número y fecha. Guárdalo para la última semana de diciembre.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "findeaño",
+    "añonuevo",
+    "metas",
+    "finanzaspersonales",
+    "presupuesto",
+    "dinerosimple"
+   ],
+   "description": "Una revisión de fin de año de tu dinero en 20 minutos.",
+   "thumbnail_text": "Revisión del año",
+   "sources": [],
+   "claims_to_verify": [
+    "No factual claims"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "c-carpeta-impuestos",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "The tax folder checklist for January.",
+  "script": {
+   "title": "Tu carpeta de impuestos: qué juntar en enero",
+   "hook": "Guárdalo y ve marcando.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Ve marcando conforme llegan.",
+     "on_screen_text": "Tu carpeta de impuestos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an open folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "De tu empleador, a más tardar el 31 de enero.",
+     "on_screen_text": "W-2",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form icon with a building. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Si trabajaste por tu cuenta o cobraste por apps de pago.",
+     "on_screen_text": "1099-NEC / 1099-K",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form icon with a laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Intereses de tu cuenta de ahorro, si pasaron de $10.",
+     "on_screen_text": "1099-INT",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form icon with a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Intereses de préstamo estudiantil y colegiatura.",
+     "on_screen_text": "1098-E y 1098-T",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form icon with a graduation cap. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Si tuviste seguro del Mercado de salud.",
+     "on_screen_text": "1095-A",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form icon with a heart. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Y los de tus dependientes. Revisa si tu ITIN necesita renovarse.",
+     "on_screen_text": "Tu declaración pasada + tu SSN o ITIN",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an older folder and an ID card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Contenido educativo, no asesoría fiscal.",
+     "on_screen_text": "Todo en una carpeta, física o en el celular",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf closing a full folder. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu carpeta de impuestos: W-2, 1099-NEC o 1099-K, 1099-INT, 1098-E, 1098-T, 1095-A, tu declaración pasada y tu SSN o ITIN (y los de tus dependientes; revisa si tu ITIN necesita renovarse). Ve marcando conforme llegan.\n\nContenido educativo, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "taxes",
+    "irs",
+    "itin",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "La lista de documentos para tu carpeta de impuestos.",
+   "thumbnail_text": "Carpeta de impuestos",
+   "sources": [
+    "https://www.irs.gov/es/individuals/itin-expiration-faqs",
+    "https://www.irs.gov/forms-pubs/about-form-1099-int"
+   ],
+   "claims_to_verify": [
+    "W-2 due Jan 31",
+    "1099-INT generally issued for interest of $10 or more",
+    "ITINs not used on a return for 3 consecutive years expire; check current IRS rule",
+    "1099-K threshold for payment apps changed under 2025 law (back to $20,000 and 200 transactions); keep wording general"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "c-tanda-o-ahorro",
+  "format": "carousel",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Honest comparison: tanda vs automatic transfer to an insured high-yield savings account.",
+  "script": {
+   "title": "¿Tanda o cuenta de ahorro? Comparación honesta",
+   "hook": "Las dos te ayudan a ahorrar. No son iguales.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Las dos ayudan a ahorrar. No son iguales.",
+     "on_screen_text": "¿Tanda o cuenta de ahorro?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf between a circle of coins and a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Disciplina",
+     "narration": "La tanda te compromete con otros; la transferencia automática, con tu banco.",
+     "on_screen_text": "Disciplina: las dos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two checkmarks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Interés",
+     "narration": "En una tanda recibes lo mismo que pusiste. Una cuenta de alto rendimiento te paga interés.",
+     "on_screen_text": "Interés: solo la cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar with a small sprout. No text, no logos, no real people."
+    },
+    {
+     "heading": "Seguro",
+     "narration": "Una cuenta en banco asegurado por la FDIC está protegida si el banco quiebra. La tanda depende de la gente.",
+     "on_screen_text": "Protección: solo la cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an umbrella over a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Acceso",
+     "narration": "En la tanda esperas tu turno. La cuenta la sacas cuando la necesitas.",
+     "on_screen_text": "Acceso: la cuenta, cuando quieras",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an open jar versus a waiting line. No text, no logos, no real people."
+    },
+    {
+     "heading": "A favor de la tanda",
+     "narration": "Si te toca primero, es un préstamo sin interés. Y es algo que se hace en confianza.",
+     "on_screen_text": "A favor de la tanda: comunidad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small circle of simple characters. No text, no logos, no real people."
+    },
+    {
+     "heading": "Nuestra opinión",
+     "narration": "Nunca la tanda como tu fondo de emergencia.",
+     "on_screen_text": "Para el colchón: cuenta. Para una meta con gente de confianza: tanda",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar and a circle side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "La herramienta es lo de menos.",
+     "on_screen_text": "Lo que importa: ahorrar cada quincena",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf dropping a coin into a jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "¿Tanda o cuenta de ahorro? Las dos dan disciplina. La cuenta paga interés, está asegurada (FDIC o NCUA) y la sacas cuando quieras. La tanda es comunidad y, si te toca primero, un préstamo sin interés. Para el colchón de emergencia: cuenta. Para una meta con gente de confianza: tanda.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "tanda",
+    "ahorro",
+    "cuentadeahorro",
+    "finanzaspersonales",
+    "comunidad",
+    "dinerosimple"
+   ],
+   "description": "Comparación honesta entre una tanda y una cuenta de ahorro.",
+   "thumbnail_text": "¿Tanda o ahorro?",
+   "sources": [
+    "https://www.fdic.gov/resources/deposit-insurance"
+   ],
+   "claims_to_verify": [
+    "FDIC insures deposits up to $250,000 per depositor, per bank, per ownership category"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  },
+  "phase": 2
+ },
+ {
+  "key": "l-mandar-dinero",
+  "format": "long",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Complete guide to sending money to family abroad without losing it to fees: true cost, comparing, the 1% cash tax, rights, budgeting it as a fixed bill.",
+  "script": {
+   "title": "Cómo mandar dinero a tu familia sin perder en comisiones (guía completa)",
+   "hook": "Si mandas $300 al mes a tu familia, puedes estar perdiendo cientos de dólares al año sin darte cuenta.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Si mandas $300 al mes a tu familia, puedes estar perdiendo cientos de dólares al año sin darte cuenta. No porque hagas algo mal, sino porque el costo real de un envío casi nunca es el que te anuncian. En este video vamos a ver cuánto cuesta de verdad mandar dinero, cómo comparar en cinco minutos, el impuesto nuevo de 1% a los envíos en efectivo, tus derechos si algo sale mal y cómo meter el envío en tu presupuesto para que no compita con la renta. No vamos a recomendar ninguna empresa en particular. Te vamos a dar el método para que tú compares.",
+     "on_screen_text": "Mandar dinero sin perder en comisiones",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a winged envelope, a small house in the distance. No text, no logos, no real people."
+    },
+    {
+     "heading": "El costo real",
+     "narration": "Cada envío tiene dos costos. El primero es la comisión, la que ves: tres, cinco, ocho dólares, o un porcentaje. El segundo es el tipo de cambio. Si el mercado está a, digamos, 18 pesos por dólar y a ti te dan 17.60, esos cuarenta centavos por dólar se los queda la empresa. En $300 son unos $6.70 más, escondidos. Por eso un envío 'sin comisión' puede salir más caro que uno con comisión de $3. El único número que de verdad sirve para comparar es uno: cuánto recibe tu familia allá por los mismos dólares.",
+     "on_screen_text": "Comisión + tipo de cambio = costo real",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two price tags, one visible and one half hidden behind an envelope. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Lo que recibe tu familia por $300",
+      "labels": [
+       "Al tipo del mercado (18)",
+       "A 17.60, 'sin comisión'"
+      ],
+      "values": [
+       5400,
+       5280
+      ],
+      "unit_prefix": "",
+      "unit_suffix": " pesos",
+      "note": "Ejemplo: 120 pesos menos, unos $6.70 escondidos en el tipo de cambio"
+     }
+    },
+    {
+     "heading": "Cuánto suma",
+     "narration": "Hagamos la cuenta del año. Si entre comisión y tipo de cambio pierdes $10 en cada envío de $300 y mandas cada mes, son $120 al año. Si mandas cada semana con una comisión fija, puede ser el doble. Y en muchos servicios, enviar desde una tienda en efectivo cuesta más que enviar desde una app conectada a tu cuenta. Los números exactos cambian por empresa, país y día, por eso no te damos una tabla. Te damos el método.",
+     "on_screen_text": "$10 por envío × 12 = $120 al año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. twelve small coins falling off a calendar. No text, no logos, no real people.",
+     "chart": {
+      "kind": "line",
+      "title": "Lo que pierdes en un año",
+      "labels": [
+       "3 meses",
+       "6 meses",
+       "9 meses",
+       "12 meses"
+      ],
+      "values": [
+       30,
+       60,
+       90,
+       120
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo: $10 perdidos en cada envío de $300, uno al mes"
+     }
+    },
+    {
+     "heading": "Cómo comparar",
+     "narration": "El método toma cinco minutos. Uno: decide la cantidad, por ejemplo $300. Dos: pide la cotización en dos o tres servicios el mismo día, con la misma forma de pago y la misma forma de recoger. Tres: anota cuánto recibe tu familia en cada uno, en su moneda. Cuatro: elige el que deje más allá, siempre que sea cómodo para quien lo recibe. El Banco Mundial tiene un sitio que compara precios de remesas por país, que sirve como referencia. Hazlo cada pocos meses, porque las tarifas cambian y el servicio de siempre no siempre es el mejor.",
+     "on_screen_text": "Misma cantidad, 2 o 3 servicios, el día del envío",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf comparing three receipts on a table. No text, no logos, no real people."
+    },
+    {
+     "heading": "El impuesto de 1%",
+     "narration": "Desde el 1 de enero de 2026 hay algo nuevo: un impuesto federal de 1% sobre los envíos al extranjero que pagas en efectivo, con money order o con cheque de caja. En $300 son $3. Si el envío sale de tu cuenta de banco o de una tarjeta emitida en Estados Unidos, ese impuesto no aplica. Ojo con las tarjetas de crédito: algunos bancos tratan los envíos de dinero como avance de efectivo, con comisión y con interés desde el primer día. Si puedes, usa débito o tu cuenta.",
+     "on_screen_text": "Desde 2026: 1% si pagas en efectivo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. cash with a small percent stamp next to a bank card with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tus derechos",
+     "narration": "Ahora, tus derechos. Cuando mandas dinero desde Estados Unidos con una empresa de remesas, la ley te protege. Antes de pagar te tienen que mostrar la comisión, el tipo de cambio y cuánto va a recibir la otra persona. En general tienes 30 minutos para cancelar y recuperar todo, si todavía no lo recogieron ni depositaron. Y si llegó menos, llegó tarde o no llegó, tienes 180 días para reportar el error, y la empresa tiene que investigar. Para todo eso necesitas el recibo, así que tómale foto a cada uno. Si la empresa no responde, puedes presentar una queja ante la CFPB, también en español.",
+     "on_screen_text": "Información, 30 minutos, 180 días",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small shield over a receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuidado con estafas",
+     "narration": "Un aviso importante. Las remesas son una de las formas favoritas de los estafadores, porque una vez que el dinero se recoge, es muy difícil recuperarlo. Nunca mandes dinero a alguien que no conoces en persona, aunque te diga que es un familiar en problemas, un premio o un trabajo. Si alguien te presiona para mandar dinero rápido, cuelga y llama tú a tu familiar a su número de siempre.",
+     "on_screen_text": "Nunca mandes dinero a quien no conoces",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a fishing hook and a red X. No text, no logos, no real people."
+    },
+    {
+     "heading": "En tu presupuesto",
+     "narration": "Ahora, el presupuesto. Lo que mandas a tu familia cada mes no es un gasto 'si sobra'. Es un compromiso, así que va en tus gastos fijos, junto a la renta y el celular. Apártalo el día de pago y mándalo en una fecha fija. Si tu servicio cobra comisión fija, un envío al mes suele salir más barato que cuatro. Y platícalo con tu familia: una fecha fija les ayuda a planear allá, y a ti te deja saber cuánto te queda para tu número semanal.",
+     "on_screen_text": "El envío va en gastos fijos, como la renta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a row of bills with a small house and a heart side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Y tu colchón",
+     "narration": "Una última cosa, que cuesta decir. Ayudar a tu familia es importante, y también lo es que tú tengas un colchón. Si una emergencia de allá se lleva todo tu fondo, la siguiente emergencia de aquí se va a la tarjeta. Decide de antemano cuánto puedes dar en una emergencia sin vaciar tu fondo, y si la ayuda extra se vuelve de cada mes, súbela a tus gastos fijos en vez de sacarla del ahorro.",
+     "on_screen_text": "Ayudar sin quedarte sin colchón",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small umbrella over a jar while sending an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: qué copiar",
+     "narration": "Un ejemplo inventado: Jorge manda trescientos al mes. Pide tres cotizaciones el mismo día y encuentra una donde llegan ciento cincuenta pesos más por envío. En el año, su familia recibe casi dos mil pesos más, sin que él mande un dólar extra.",
+     "on_screen_text": "Copia esto: tu cuenta del año, y compara cada pocos meses",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three quotes side by side, one circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Resumen. Compara cuánto recibe tu familia, no la comisión. Pide dos o tres cotizaciones cada pocos meses. Paga desde tu cuenta o tarjeta de débito para no pagar el 1%. Guarda cada recibo: tienes 30 minutos para cancelar y 180 días para reportar errores. Nunca mandes dinero a quien no conoces. Y pon el envío en tus gastos fijos. Todo esto es educación general, no asesoría personal; revisa las fuentes de la descripción.",
+     "on_screen_text": "Compara lo recibido · paga desde tu cuenta · guarda el recibo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sending a winged envelope toward a small house with a smile. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Cómo mandar dinero a tu familia sin perder en comisiones:\n1. Compara cuánto recibe tu familia, no la comisión\n2. Pide 2 o 3 cotizaciones el mismo día\n3. Paga desde tu cuenta o débito: en efectivo hay un impuesto de 1% desde 2026\n4. Guarda el recibo: 30 minutos para cancelar, 180 días para reportar errores\n5. Nunca mandes dinero a quien no conoces\n6. El envío va en tus gastos fijos\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "remesas",
+    "enviardinero",
+    "familia",
+    "tipodecambio",
+    "finanzaspersonales",
+    "educacionfinanciera",
+    "dinerosimple"
+   ],
+   "description": "Todo lo que necesitas para mandar dinero a tu familia en otro país sin perder en comisiones: el costo real (comisión + tipo de cambio), cómo comparar, el impuesto de 1% a los envíos en efectivo desde 2026, tus derechos y cómo meter el envío en tu presupuesto.\n\nCapítulos (estimados; ajústalos después de grabar)\n0:00 Mandar dinero sin perder en comisiones\n0:45 El costo real\n1:40 Cuánto suma al año\n2:25 Cómo comparar\n3:20 El impuesto de 1%\n4:10 Tus derechos\n5:10 Cuidado con estafas\n5:45 En tu presupuesto\n6:35 Y tu colchón\n7:20 Resumen\n\nNo recomendamos ninguna empresa en particular. Contenido educativo, no es asesoría financiera.\n\nFuentes: consumerfinance.gov (regla de remesas), irs.gov y 26 U.S.C. 4475 (impuesto a remesas), remittanceprices.worldbank.org.\n\nEnlaces (los productos de pago son nuestros):\nEl Presupuesto de 20 Minutos ($12): https://dinerosimple.netlify.app/products/el-presupuesto-de-20-minutos/?utm_source=youtube&utm_medium=social&utm_campaign=l-mandar-dinero\nGuía gratis: Tu dinero en orden en 7 días: https://dinerosimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=l-mandar-dinero",
+   "thumbnail_text": "Envíos sin perder dinero",
+   "sources": [
+    "https://www.consumerfinance.gov/rules-policy/regulations/1005/33/",
+    "https://www.law.cornell.edu/uscode/text/26/4475",
+    "https://remittanceprices.worldbank.org/",
+    "https://www.consumerfinance.gov/complaint/"
+   ],
+   "claims_to_verify": [
+    "Exchange-rate example (18 vs 17.60 MXN) is illustrative",
+    "CFPB Remittance Rule: pre-payment disclosures, 30-minute cancellation, 180-day error window",
+    "1% excise tax on cash-funded remittances after Dec 31, 2025; exempt from US accounts and US-issued cards",
+    "Some card issuers treat money transfers as cash advances",
+    "World Bank Remittance Prices Worldwide compares corridor prices",
+    "Chart 'Lo que recibe tu familia por $300': Al tipo del mercado (18) 5400, A 17.60, 'sin comisión' 5280 (Ejemplo: 120 pesos menos, unos $6.70 escondidos en el tipo de cambio)",
+    "Chart 'Lo que pierdes en un año': 3 meses 30, 6 meses 60, 9 meses 90, 12 meses 120 (Ejemplo: $10 perdidos en cada envío de $300, uno al mes)"
+   ],
+   "title_variants": [],
+   "hook_variants": [],
+   "original_element": "Graba la pantalla comparando cuánto recibe tu familia por $300 en dos apps de envío, el mismo día (sin iniciar sesión, solo el cotizador)"
+  },
+  "phase": 2
+ },
+ {
+  "key": "l-diciembre-sin-deudas",
+  "format": "long",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "A full December plan so January starts without debt: one total, weekly fund, gift caps, aguinaldo plan, travel, hosting, and the cuesta de enero.",
+  "script": {
+   "title": "Diciembre sin deudas en enero: el plan completo",
+   "hook": "Diciembre dura 31 días. La deuda de diciembre puede durar todo el año.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Diciembre dura 31 días. La deuda de diciembre puede durar todo el año. Y no es porque la gente gaste a lo loco. Es porque diciembre junta todo: regalos, posadas, la cena de Nochebuena, el viaje para ver a la familia, lo que mandas allá, y encima llega enero con la renta. En este video armamos el plan completo, de hoy al Día de Reyes, para que disfrutes las fiestas y empieces el año sin una tarjeta llena.",
+     "on_screen_text": "Diciembre sin deudas en enero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf in a cozy room with a small tree and a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Un solo total",
+     "narration": "Paso uno: un solo total. Haz una lista de todo lo de diciembre: regalos, comida, posadas, ropa para las fiestas, el viaje, lo que mandas a tu familia, el intercambio de la oficina. Ponle un número a todo junto. Ese es tu techo. Si te da miedo el número, mejor: ahora sabes, y todavía puedes ajustar.",
+     "on_screen_text": "Paso 1: un solo total",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a single long list next to one stack of coins with a ceiling line. No text, no logos, no real people."
+    },
+    {
+     "heading": "El fondo semanal",
+     "narration": "Paso dos: divide el total entre las semanas que faltan para tu último día de compras. Si son $480 y faltan seis semanas, son $80 a la semana. Abre un apartado en tu cuenta de ahorro solo para diciembre, y cada día de pago pasa esa cantidad. Todo lo de las fiestas sale de ahí. Así el dinero de los regalos nunca se mezcla con el del súper.",
+     "on_screen_text": "Paso 2: total ÷ semanas = número semanal",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a ribboned jar receiving coins on a weekly calendar. No text, no logos, no real people.",
+     "chart": {
+      "kind": "line",
+      "title": "Tu fondo de diciembre, semana a semana",
+      "labels": [
+       "Sem 1",
+       "Sem 2",
+       "Sem 3",
+       "Sem 4",
+       "Sem 5",
+       "Sem 6"
+      ],
+      "values": [
+       80,
+       160,
+       240,
+       320,
+       400,
+       480
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo: $480 en seis semanas, $80 cada semana"
+     }
+    },
+    {
+     "heading": "Los regalos",
+     "narration": "Paso tres: los regalos. Al lado de cada nombre, un tope. La suma tiene que caber en el fondo. Si no cabe, se ajusta la lista, no la tarjeta. Y un truco que le quita presión a todos: propón que este año solo se les regala a los niños, o un intercambio con tope. Casi siempre alguien más lo estaba pensando. Y para el viernes negro: si no estaba en tu lista, se queda tres días en el carrito.",
+     "on_screen_text": "Paso 3: tope por persona",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. gift boxes with small price tags and an hourglass. No text, no logos, no real people."
+    },
+    {
+     "heading": "Las fiestas",
+     "narration": "Paso cuatro: las fiestas. Si te toca la posada o la Nochebuena, ponle un total de anfitrión, por ejemplo $250, que salga del mismo fondo. Pide que cada familia traiga un plato o las bebidas, que es lo normal en muchas casas, y haz una sola compra grande. Las vueltas chiquitas a la tienda son las que se comen el presupuesto.",
+     "on_screen_text": "Paso 4: si eres anfitrión, presupuesto de anfitrión",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. several simple hands each carrying a covered dish to a table. No text, no logos, no real people."
+    },
+    {
+     "heading": "El aguinaldo",
+     "narration": "Paso cinco: si recibes aguinaldo o bono, dale trabajo antes de que llegue. Primero, planea con lo neto: muchos bonos llegan con 22% de retención federal más Seguro Social, Medicare y estatal, así que un bono de $1,000 puede llegar como $700. Luego, en orden: lo de diciembre que ya prometiste, tu colchón de $1,000 si no lo tienes, la deuda más cara, la renta de enero y algo para ti, con tope.",
+     "on_screen_text": "Paso 5: el aguinaldo ya tiene trabajo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a gift envelope splitting into several small jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "La familia y el viaje",
+     "narration": "Paso seis: la familia. Lo que mandas en diciembre muchas veces es más que en otros meses, así que va en la lista del paso uno, no aparte. Compara cuánto recibe allá en dos o tres servicios y paga desde tu cuenta, porque en efectivo hay un impuesto de 1% desde 2026. Y si viajas, suma el costo real: boletos, maletas, regalos que llevas, transporte allá y los días que no trabajas. El viaje del año que viene se empieza a pagar en enero.",
+     "on_screen_text": "Paso 6: envíos y viaje, en el plan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a winged envelope and a small airplane over a map. No text, no logos, no real people."
+    },
+    {
+     "heading": "Las tarjetas",
+     "narration": "Paso siete: las tarjetas. Usar tarjeta en diciembre está bien si es lo que vas a pagar completo cuando llegue el estado de cuenta. Lo que no puedes pagar completo, no es parte del plan. Di que no a la tarjeta de la tienda en la caja, a menos que la pagues completa ese mismo mes. Y un solo plan de compra ahora y paga después a la vez, porque varios juntos caen en las mismas quincenas de enero.",
+     "on_screen_text": "Paso 7: tarjeta solo si la pagas completa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a credit card with a checkmark and a single small box. No text, no logos, no real people."
+    },
+    {
+     "heading": "La cuesta de enero",
+     "narration": "Paso ocho, el más importante: la cuesta de enero. Antes del 24, aparta del pago de diciembre la renta de enero y todo lo que cae del 1 al 15: la tarjeta de diciembre, los seguros anuales, los pagos de 'paga en 4' y, si en tu casa se festeja, el Día de Reyes con su propio tope. Si lo apartas antes de gastar en fiestas, enero se vuelve un mes normal.",
+     "on_screen_text": "Paso 8: aparta enero antes del 24",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf walking on a flat path past a small hill. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: la familia",
+     "narration": "Un ejemplo inventado, con los números del plan. La familia Ruiz hace su lista: regalos para ocho personas a veinticinco dólares cada uno, doscientos; comida para la Nochebuena, ciento cincuenta; y el envío extra de diciembre para la abuela, ciento treinta. Total: cuatrocientos ochenta. Faltan seis semanas, así que son ochenta dólares por semana a un apartado que se llama 'Diciembre'. Cuando un primo propone un intercambio, lo aceptan: así cinco regalos se vuelven uno.",
+     "on_screen_text": "Ejemplo inventado: $480 en seis semanas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a short list adding up to $480. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: enero",
+     "narration": "Con el aguinaldo, la familia ya había decidido antes: la mitad para la renta de enero y la otra mitad para la tarjeta. El 20 de diciembre apartan la renta de enero en otra cuenta. Lo que pagaron con tarjeta en diciembre lo pagan completo cuando llega el estado de cuenta. El 2 de enero no hay cuesta: la renta está, la tarjeta está en cero y en el apartado de 'Diciembre' sobraron treinta dólares, que se quedan ahí para el próximo año.",
+     "on_screen_text": "La renta de enero, apartada antes del 24",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a January calendar with rent marked 'paid'. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: qué copiar",
+     "narration": "Lo que puedes copiar de los Ruiz: una sola lista con todo diciembre, un fondo semanal aparte, un tope por regalo, el aguinaldo con trabajo antes de llegar, y la renta de enero apartada antes del 24.",
+     "on_screen_text": "Copia esto: lista, fondo semanal, enero apartado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a five-item checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Resumen. Un solo total. Un fondo semanal aparte. Tope por persona. Presupuesto de anfitrión. El aguinaldo con trabajo antes de llegar. Los envíos y el viaje dentro del plan. Tarjeta solo si la pagas completa. Y enero apartado antes del 24. Disfruta las fiestas: para eso es el plan. Todo esto es educación general, no asesoría personal.",
+     "on_screen_text": "Total · fondo · topes · aguinaldo · enero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf raising a cup of hot chocolate next to a small tree. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Diciembre sin deudas en enero, en 8 pasos:\n1. Un solo total para todo diciembre\n2. Total ÷ semanas = fondo semanal aparte\n3. Tope por persona en los regalos\n4. Presupuesto de anfitrión si te toca la posada\n5. El aguinaldo con trabajo antes de que llegue\n6. Envíos y viaje dentro del plan\n7. Tarjeta solo si la pagas completa\n8. Aparta enero antes del 24\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "navidad",
+    "diciembre",
+    "cuestadeenero",
+    "aguinaldo",
+    "presupuesto",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Un plan completo para disfrutar diciembre y empezar enero sin deudas: un solo total, fondo semanal, topes por persona, presupuesto de anfitrión, aguinaldo, envíos a tu familia, viaje, tarjetas y la cuesta de enero.\n\nCapítulos (estimados; ajústalos después de grabar)\n0:00 Diciembre sin deudas en enero\n0:40 Un solo total\n1:20 El fondo semanal\n2:05 Los regalos\n2:55 Las fiestas\n3:35 El aguinaldo\n4:30 La familia y el viaje\n5:30 Las tarjetas\n6:20 La cuesta de enero\n7:10 Resumen\n\nContenido educativo, no es asesoría financiera.\n\nFuentes: irs.gov (Publicación 15, pagos suplementarios), consumerfinance.gov.\n\nEnlaces (los productos de pago son nuestros):\nTu Fecha Sin Deudas ($17): https://dinerosimple.netlify.app/products/tu-fecha-sin-deudas/?utm_source=youtube&utm_medium=social&utm_campaign=l-diciembre-sin-deudas\nEl Presupuesto de 20 Minutos ($12): https://dinerosimple.netlify.app/products/el-presupuesto-de-20-minutos/?utm_source=youtube&utm_medium=social&utm_campaign=l-diciembre-sin-deudas\nGuía gratis: Tu dinero en orden en 7 días: https://dinerosimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=l-diciembre-sin-deudas",
+   "thumbnail_text": "Diciembre sin deudas",
+   "sources": [
+    "https://www.irs.gov/publications/p15",
+    "https://www.law.cornell.edu/uscode/text/26/4475",
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "22% optional flat federal withholding on supplemental wages",
+    "1% excise tax on cash-funded remittances from 2026",
+    "Example amounts are illustrative",
+    "Chart 'Tu fondo de diciembre, semana a semana': Sem 1 80, Sem 2 160, Sem 3 240, Sem 4 320, Sem 5 400, Sem 6 480 (Ejemplo: $480 en seis semanas, $80 cada semana)"
+   ],
+   "title_variants": [],
+   "hook_variants": [],
+   "original_element": "Graba la pantalla abriendo un apartado de ahorro llamado 'Diciembre' en una app de banco de demostración, o la hoja del presupuesto con el total de diciembre"
+  },
+  "phase": 2
+ }
+]

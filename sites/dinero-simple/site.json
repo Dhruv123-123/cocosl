@@ -1,0 +1,336 @@
+{
+  "name": "Dinero Simple",
+  "slug": "dinero-simple",
+  "url": "https://dinerosimple.netlify.app",
+  "tagline": "Un paso con tu dinero que puedes dar esta semana, explicado en menos de un minuto.",
+  "description": "Guías de dinero en español claro para latinos en EE. UU.: presupuestos que sí funcionan, cómo empezar a invertir, puntaje de crédito y cómo salir de deudas, con los números a la vista y sin exageraciones.",
+  "pillars": {
+    "presupuesto": "Presupuesto que sí funciona",
+    "invertir": "Invertir por primera vez",
+    "credito-y-deudas": "Crédito y deudas",
+    "herramientas": "Apps y herramientas"
+  },
+  "socials": {
+    "Instagram": "https://www.instagram.com/dinerosimple/",
+    "YouTube": "https://www.youtube.com/@dinerosimple",
+    "TikTok": "https://www.tiktok.com/@dinerosimple"
+  },
+  "contact_email": "hola@example.com",
+  "colors": {
+    "ink": "#14213d",
+    "ink2": "#1f2e52",
+    "ink3": "#34446b",
+    "glow": "#2b3f6b",
+    "paper": "#fbf5e9",
+    "card": "#fffdf8",
+    "green": "#2ab7a9",
+    "green-d": "#11706a",
+    "gold": "#ff7a59",
+    "gold-t": "#ffe8df",
+    "tint": "#e2f4f1",
+    "muted": "#4a5468",
+    "line": "#e2d8c4"
+  },
+  "email": {
+    "provider": "netlify",
+    "action": "",
+    "email_field": "",
+    "privacy_note": "Un correo útil por semana. Te das de baja con un clic.",
+    "thanks_note": "Tu descarga está abajo. Tu primer correo ya va en camino (si en unos minutos no lo ves, revisa Promociones o Spam)."
+  },
+  "lead_magnet": {
+    "title": "Tu dinero en orden en 7 días",
+    "file": "tu-dinero-en-orden-en-7-dias.pdf",
+    "headline": "Pon tu dinero en orden en 7 días, 15 minutos al día.",
+    "short": "Siete tareas de 15 minutos, una lista para imprimir y hojas de trabajo. Gratis.",
+    "pitch": "Un PDF gratis de 10 páginas: siete tareas de 15 minutos para encontrar tus números reales, frenar cargos sorpresa, proteger tu crédito y fijar un número semanal para gastar. Incluye lista para imprimir y hojas de trabajo.",
+    "days": [
+      "Encuentra tu sueldo neto real del mes y anota cada gasto fijo.",
+      "Busca suscripciones olvidadas y cancela las que no usas.",
+      "Activa tres alertas del banco que frenan los sobregiros antes de que pasen.",
+      "Abre (o revisa) una cuenta de ahorro aparte y asegurada, y programa una primera transferencia.",
+      "Pide tus reportes de crédito gratis, revísalos con lupa y congela tu crédito.",
+      "Revisa si estás recibiendo todo el match de tu 401(k), o anota cuándo vas a empezar.",
+      "Fija tu número semanal para gastar y aparta 20 minutos a la semana para revisarlo."
+    ]
+  },
+  "links_featured": [
+    "como-hacer-un-presupuesto",
+    "avalancha-o-bola-de-nieve",
+    "como-funciona-el-puntaje-de-credito",
+    "invertir-con-100-al-mes"
+  ],
+  "footer_links": [["Cómo ganamos dinero", "/como-ganamos-dinero/"], ["Glosario", "/glosario/"]],
+  "affiliates": [],
+  "go_links": {
+    "_note": "Articles link to /go/<slug>/. Until `url` is a real affiliate link it redirects to `home`. `card` (text, button) adds a labelled partner box where an article has {{partner:<slug>}}; add it only after checking the offer accepts ITIN.",
+    "remitly": {"name": "Remitly", "home": "https://www.remitly.com/", "url": "https://REPLACE_ME/remitly"},
+    "wise": {"name": "Wise", "home": "https://wise.com/", "url": "https://REPLACE_ME/wise"},
+    "xoom": {"name": "Xoom", "home": "https://www.xoom.com/", "url": "https://REPLACE_ME/xoom"},
+    "turbotax": {"name": "TurboTax", "home": "https://turbotax.intuit.com/", "url": "https://REPLACE_ME/turbotax"},
+    "hrblock": {"name": "H&R Block", "home": "https://www.hrblock.com/", "url": "https://REPLACE_ME/hrblock"},
+    "freetaxusa": {"name": "FreeTaxUSA", "home": "https://www.freetaxusa.com/", "url": "https://REPLACE_ME/freetaxusa"},
+    "cuenta-itin": {"name": "REPLACE_ME (banco o cooperativa que acepta ITIN)", "home": "", "url": ""},
+    "tarjeta-itin": {"name": "REPLACE_ME (tarjeta asegurada que acepta ITIN)", "home": "", "url": ""}
+  },
+  "disclaimer": "Contenido educativo. No es asesoría financiera, fiscal ni de inversión. Los ejemplos usan números supuestos, no son promesas. Revisa las reglas y tasas actuales en la fuente oficial antes de actuar.",
+  "ai_disclosure": "Usamos herramientas de IA para las imágenes y los borradores. Una persona elige cada tema, revisa los datos y aprueba todo antes de publicarlo.",
+  "analytics_snippet": "",
+  "plausible_domain": "dinerosimple.netlify.app",
+  "plausible_host": "",
+  "utm_emails": true,
+  "ui": {
+    "lang": "es-US",
+    "theme_color": "#14213d",
+    "months": [
+      "enero",
+      "febrero",
+      "marzo",
+      "abril",
+      "mayo",
+      "junio",
+      "julio",
+      "agosto",
+      "septiembre",
+      "octubre",
+      "noviembre",
+      "diciembre"
+    ],
+    "date_format": "{day} de {month} de {year}",
+    "nav_articles": "Artículos",
+    "nav_products": "Productos",
+    "nav_free": "Guía gratis",
+    "nav_about": "Quiénes somos",
+    "skip": "Ir al contenido",
+    "home": "Inicio",
+    "articles": "Artículos",
+    "guide": "Guía",
+    "privacy": "Privacidad",
+    "disclosures": "Transparencia",
+    "terms": "Términos",
+    "links": "Enlaces",
+    "form_button": "Mándame la guía gratis",
+    "form_button_short": "Mándamela",
+    "honeypot": "Deja esto vacío",
+    "email_label": "Correo electrónico",
+    "email_placeholder": "tu@correo.com",
+    "privacy_note": "Un correo útil por semana. Te das de baja con un clic.",
+    "free_download": "Descarga gratis",
+    "cover_of": "Portada de {title}",
+    "coming_soon": "Muy pronto",
+    "launch_price": "precio de lanzamiento",
+    "on_this_page": "En esta página",
+    "sources": "Fuentes",
+    "updated": "Actualizado",
+    "min_read": "min de lectura",
+    "reviewed": "Revisado por una persona",
+    "aff_note": "Este artículo tiene enlaces de afiliado. Si te registras con ellos, podríamos recibir una comisión sin costo extra para ti.",
+    "aff_how": "Cómo lo manejamos",
+    "tool_for_this": "La herramienta para esto",
+    "read_next": "Lee también",
+    "blog_title": "Artículos: presupuesto, invertir, crédito y herramientas de dinero",
+    "blog_description": "Guías en español claro para latinos en EE. UU.: presupuestos que sí funcionan, cómo empezar a invertir, puntaje de crédito, salir de deudas y apps de dinero, con los números a la vista.",
+    "blog_h1": "Artículos",
+    "blog_empty": "Muy pronto vas a encontrar artículos aquí.",
+    "blog_dek": "Una idea por artículo, bien explicada y con los números a la vista. Elige un tema:",
+    "pillar_title": "{label}: artículos",
+    "pillar_description": "Todos los artículos de {site} sobre {label_lower}.",
+    "products": "Productos",
+    "preview_alt": "Vista previa de {title}",
+    "not_on_sale": "Todavía no está a la venta. Suscríbete al correo gratis y te avisamos el día que salga.",
+    "waitlist_button": "Avísame cuando salga",
+    "buy_label": "Consíguelo ahora",
+    "products_title": "Guías y plantillas",
+    "products_description": "Herramientas de dinero de {site} a bajo costo y sin suscripción: guías y hojas de cálculo que son tuyas.",
+    "products_dek": "Herramientas chicas y concretas. Un solo pago, sin suscripción, archivos que son tuyos. Todas tienen reembolso sin complicaciones.",
+    "free_title": "Gratis: {title}",
+    "free_kicker": "PDF gratis + lista",
+    "free_days_h": "Lo que vas a hacer: una tarea de 15 minutos al día",
+    "day": "Día {n}",
+    "free_else_h": "Qué más recibes",
+    "free_else": "Después de los 7 días, un correo corto por semana: un solo paso con tu dinero, explicado con números. Sin exageraciones, sin recomendar acciones, nada de \"hazte rico\". Te das de baja con un clic desde cualquier correo.",
+    "thanks_title": "Ya estás dentro",
+    "thanks_description": "Tu descarga gratis.",
+    "thanks_h1": "Ya estás dentro. Aquí está tu guía.",
+    "thanks_note": "Revisa también tu correo: tu primer mensaje ya va en camino (si no lo ves, busca en Promociones o Spam).",
+    "download": "Descarga {title} (PDF)",
+    "thanks_start": "Empieza hoy con el Día 1. Toma unos 15 minutos y vas a necesitar la app de tu banco.",
+    "thanks_more": "¿Quieres el sistema completo?",
+    "links_title": "Enlaces",
+    "links_free": "Gratis: {title}",
+    "links_products": "Guías y plantillas",
+    "links_articles": "Artículos más leídos",
+    "links_tools": "Herramientas que recomendamos",
+    "affiliate": "afiliado",
+    "links_aff_note": "Enlaces de afiliado: podríamos recibir una comisión sin costo extra para ti.",
+    "home_title": "{site}: un paso con tu dinero cada semana, explicado fácil",
+    "home_kicker": "Para latinos en EE. UU. que trabajan, estudian o ayudan a su familia",
+    "home_h1": "¿Sientes que vas atrasado con tu dinero? Empieza con un paso esta semana.",
+    "home_offer": "Recibe <strong>{title}</strong> gratis: siete tareas de 15 minutos para poner tu dinero en orden en una semana.",
+    "home_topics": "Empieza por un tema",
+    "home_latest": "Artículos recientes",
+    "home_all": "Todos los artículos",
+    "home_tools": "Las herramientas",
+    "home_how": "Cómo lo hacemos",
+    "n_articles": "{n} artículos",
+    "home_promise": [
+      [
+        "Concreto, sin exagerar",
+        "Cada artículo y cada correo es una idea que puedes usar esta semana, con las cuentas a la vista. No recomendamos acciones, no promovemos cripto, no prometemos ingresos."
+      ],
+      [
+        "Revisado por una persona",
+        "Usamos IA para imágenes y borradores. Una persona elige cada tema, revisa cada número contra fuentes oficiales (IRS, CFPB, FDIC, Investor.gov) y aprueba cada publicación."
+      ],
+      [
+        "Honestos con el dinero",
+        "Algunos enlaces son de afiliado y siempre lo decimos. Los productos tienen reembolso sin complicaciones. Los testimonios solo vienen de compradores reales, palabra por palabra."
+      ]
+    ],
+    "nf_title": "Página no encontrada",
+    "nf_h1": "Esta página se nos perdió.",
+    "nf_dek": "Prueba con los <a href=\"{blog}\">artículos</a> o descarga la <a href=\"{free}\">guía gratis</a>.",
+    "links_free_tools": "Herramientas gratis",
+    "free_tool": "Herramienta gratis",
+    "free_tool_open": "Ábrela",
+    "home_free_tools": "Calculadoras y verificadores gratis"
+  },
+  "tool_urls": {
+    "calculators": "https://REPLACE_ME/money-calculators/es",
+    "scam_checker": "https://REPLACE_ME/scam-checker/es",
+    "apps_es": "https://REPLACE_ME/es", "_note": "Set these to the deployed PR #8 apps (e.g. https://YOUR-APPS-SITE/money-calculators/es). apps_es is the apps site's Spanish hub with all 13 Spanish tools (planned: https://mms-tools.netlify.app/es; confirm the name at deploy). Until a URL is set its links stay hidden."
+  },
+  "free_tools": [
+    {"name": "Todas las herramientas gratis en español", "base": "apps_es", "path": "/", "short": "Calculadoras de sueldo por estado, deudas, préstamos estudiantiles, rentar o comprar y más, junto con el verificador de estafas. Todo gratis y en tu navegador.", "posts": []},
+    {
+      "name": "Calculadora de sueldo neto",
+      "base": "site",
+      "path": "/calculadora-de-sueldo/",
+      "short": "Cuánto te llega en cada cheque después del impuesto federal, Seguro Social y Medicare. Tablas de 2026; nada sale de tu celular.",
+      "posts": [
+        "como-hacer-un-presupuesto"
+      ],
+      "pillars": [
+        "presupuesto"
+      ]
+    },
+    {
+      "name": "Calculadora de envíos de dinero",
+      "base": "site",
+      "path": "/calculadora-de-envios/",
+      "short": "Compara comisión más tipo de cambio y mira cuánto llega allá. Tú escribes las tarifas; no sale nada de tu celular.",
+      "posts": [
+        "remitly-wise-o-xoom"
+      ]
+    },
+    {
+      "name": "Guía gratis: Crédito sin Seguro Social",
+      "base": "site",
+      "path": "/credito-sin-seguro-social/",
+      "short": "Cómo construir tu historial de crédito con ITIN en cinco pasos, y las trampas que debes evitar. Con PDF y lista para imprimir.",
+      "posts": [
+        "cuenta-y-tarjeta-con-itin"
+      ]
+    },
+    {
+      "name": "¿Es una estafa? Verificador gratis",
+      "base": "scam_checker",
+      "path": "/",
+      "short": "Pega el mensaje, el correo o el DM y te dice qué señales de estafa tiene. Lo que pegas no sale de tu navegador.",
+      "posts": [
+        "como-congelar-tu-credito",
+        "mi-app-esta-asegurada-por-la-fdic"
+      ]
+    },
+    {
+      "name": "¿Este sitio web es confiable?",
+      "base": "scam_checker",
+      "path": "/enlace/",
+      "short": "Revisa un enlace antes de abrirlo: nombres parecidos, marcas en el dominio equivocado y terminaciones raras.",
+      "posts": []
+    },
+    {
+      "name": "Estafas que circulan ahora",
+      "base": "scam_checker",
+      "path": "/estafas/",
+      "short": "12 guías de estafas comunes, cada una con su verificador.",
+      "posts": []
+    },
+    {
+      "name": "Calculadora para pagar deudas",
+      "base": "calculators",
+      "path": "/debt-payoff/",
+      "short": "Avalancha contra bola de nieve con tus deudas, y la fecha en que terminas.",
+      "posts": [
+        "avalancha-o-bola-de-nieve"
+      ],
+      "pillars": [
+        "credito-y-deudas"
+      ]
+    },
+    {
+      "name": "Calculadora de interés compuesto",
+      "base": "calculators",
+      "path": "/compound-interest/",
+      "short": "Cuánto podría crecer lo que inviertes cada mes.",
+      "posts": [
+        "invertir-con-100-al-mes",
+        "comisiones-de-los-fondos"
+      ],
+      "pillars": [
+        "invertir"
+      ]
+    },
+    {
+      "name": "Calculadora Roth vs Tradicional",
+      "base": "calculators",
+      "path": "/roth-vs-traditional/",
+      "short": "Cuál te deja más con tu tasa de impuestos de hoy y la del retiro.",
+      "posts": [
+        "roth-ira-o-traditional-ira",
+        "match-del-401k"
+      ]
+    },
+    {
+      "name": "Calculadora de fondo de emergencia",
+      "base": "calculators",
+      "path": "/emergency-fund/",
+      "short": "Cuánto necesitas y en cuánto tiempo llegas.",
+      "posts": [
+        "fondo-de-emergencia"
+      ]
+    },
+    {
+      "name": "Calculadora de salario neto (2026)",
+      "base": "calculators",
+      "path": "/take-home-pay/",
+      "short": "Cuánto te llega de verdad después de impuestos, para armar tu presupuesto.",
+      "posts": [
+        "como-hacer-un-presupuesto",
+        "fondos-de-prevision",
+        "cancelar-suscripciones",
+        "app-o-hoja-de-calculo"
+      ],
+      "pillars": [
+        "presupuesto"
+      ]
+    },
+    {
+      "name": "Calculadora del pago mínimo de la tarjeta",
+      "base": "calculators",
+      "path": "/credit-card-minimum/",
+      "short": "Cuánto tardas y cuánto interés pagas si solo pagas el mínimo.",
+      "posts": [
+        "como-funciona-el-puntaje-de-credito"
+      ]
+    }
+  ],
+  "hold": {
+    "enabled": true,
+    "_note": "Lean launch (launch/dinero-simple/lean/LEAN_LAUNCH.md): only the core pages, the freebie and El Kit para Recortar Gastos are live. Remove a name here once that piece has passed native review (and attorney review where flagged). Rebuild with lean_launch.py, which rewrites this block.",
+    "blog": ["*"],
+    "products": ["el-paquete-dinero-simple", "el-presupuesto-de-20-minutos", "empieza-a-invertir-con-100-al-mes", "tu-fecha-sin-deudas"],
+    "emails": ["*"],
+    "pages": ["calculadora-de-envios", "calculadora-de-sueldo", "como-ganamos-dinero", "credito-sin-seguro-social", "glosario"]
+  }
+}

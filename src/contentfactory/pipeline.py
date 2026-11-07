@@ -18,6 +18,7 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+from . import i18n
 from .config import BrandProfile, Settings, load_brand, load_brands
 from .db import DB, now_iso
 from .guardrails import check_cadence, run_content_checks, summarize
@@ -40,6 +41,23 @@ def _affiliates_in(brand: BrandProfile, caption: str, title: str) -> tuple[list[
     text = f"{caption} {title}".lower()
     fits = [a.slug or a.name for a in brand.affiliates if any(k.lower() in text for k in a.keywords)]
     return present, fits
+
+
+def _plan_day(post: dict, brand: BrandProfile) -> datetime | None:
+    """Start of the post's planned local day (`"date"` on a pack item), or None when it has none or it's past."""
+    from datetime import date as _date
+    from zoneinfo import ZoneInfo
+    raw = (post.get("meta") or {}).get("plan_date")
+    if not raw:
+        return None
+    try:
+        tz = ZoneInfo(brand.cadence.timezone)
+        day = _date.fromisoformat(str(raw)[:10])
+    except (ValueError, KeyError):
+        return None
+    if day < datetime.now(tz).date():
+        return None  # the plan slid: fall back to the next free slot
+    return datetime.combine(day, datetime.min.time(), tzinfo=tz) - timedelta(seconds=1)
 
 
 @dataclass
@@ -76,7 +94,7 @@ class Factory:
         brand = self.brand(idea["brand"])
         # Research only when a real model will read it; offline drafts don't need it.
         do_research = (self.llm.provider != "offline") if research is None else research
-        sources = rs.gather(idea["title"], online=do_research)
+        sources = rs.gather(idea["title"], online=do_research, lang=i18n.lang_of(brand))
         script, verdict = write_with_review(self.llm, brand, idea["title"], idea["angle"], idea["format"],
                                             notes=notes, research=rs.as_prompt(sources))
         for s in sources:
@@ -97,11 +115,18 @@ class Factory:
         return post_id
 
     def import_script(self, brand_slug: str, script: dict, fmt: str, pillar: str = "", angle: str = "",
-                      render: bool = True, source: str = "import") -> int:
-        """Load a hand-written or externally written script as a post for review."""
+                      render: bool = True, source: str = "import", platforms: list[str] | None = None) -> int:
+        """Load a hand-written or externally written script as a post for review.
+
+        `platforms` pins the post to some of the brand's accounts, e.g. a 60-90s
+        cut that should only go to TikTok while the 30-45s version goes elsewhere."""
         from .schemas import Script
         brand = self.brand(brand_slug)
         sc = Script.model_validate(script)
+        platforms = [p for p in (platforms or []) if p]
+        unknown = [p for p in platforms if not brand.account(p)]
+        if unknown:
+            raise ValueError(f"{brand.slug} has no enabled account for: {', '.join(unknown)}")
         idea_id = self.db.insert("ideas", {"brand": brand.slug, "title": sc.title, "angle": angle,
                                            "format": fmt, "pillar": pillar, "source": source, "status": "used"})
         affiliate_slugs, affiliate_ideas = _affiliates_in(brand, sc.caption, sc.title)
@@ -109,7 +134,8 @@ class Factory:
             "brand": brand.slug, "idea_id": idea_id, "format": fmt, "status": "scripted",
             "title": sc.title, "script": sc.model_dump(), "caption": sc.caption, "hashtags": sc.hashtags,
             "disclosure": brand.ai_disclosure, "meta": {"affiliate_slugs": affiliate_slugs, "affiliate_suggestions": affiliate_ideas, "llm": source,
-                                                         "human_edited": True},
+                                                         "human_edited": True,
+                                                         **({"platforms": platforms} if platforms else {})},
         })
         self.db.log("post.imported", "post", post_id, {"source": source})
         self._render_or_queue(post_id, render)
@@ -194,6 +220,8 @@ class Factory:
             raise ValueError(f"Can't approve a post in status {post['status']}")
         if self.render_pending(post_id):
             raise PermissionError("Post is still waiting in the render queue; review it once it has rendered")
+        from .review import check_can_approve
+        check_can_approve(post, self.brands().get(post["brand"]))
         self.db.update("posts", post_id, {"status": "approved", "review_notes": notes})
         self.db.log("post.approved", "post", post_id, {"notes": notes}, actor=actor)
 
@@ -218,6 +246,24 @@ class Factory:
         except Exception:  # queue table not created yet
             return False
 
+    def mark_language_reviewed(self, post_id: int, reviewer: str, actor: str = "human") -> dict:
+        """Record that a fluent speaker read and corrected a non-English post."""
+        reviewer = reviewer.strip()
+        if not reviewer:
+            raise ValueError("Give the reviewer's name")
+        post = self._post(post_id)
+        meta = post.get("meta") or {}
+        meta["native_review"] = reviewer
+        meta["native_review_at"] = now_iso()
+        self.db.update("posts", post_id, {"meta": meta})
+        self.db.log("post.language_reviewed", "post", post_id, {"reviewer": reviewer}, actor=actor)
+        # Same sign-off as the review gate's native_review, so one command covers both.
+        from . import review
+        brand = self.brands().get(post["brand"])
+        if "native_review" in review.pending(self._post(post_id), brand):
+            review.pass_stage(self, post_id, "native_review", by=reviewer, actor=actor)
+        return self.check(post_id)
+
     def reject(self, post_id: int, reason: str = "", actor: str = "human") -> None:
         self._post(post_id)
         self.db.update("posts", post_id, {"status": "rejected", "review_notes": reason})
@@ -234,8 +280,10 @@ class Factory:
         if not (assets.get("slides") if post["format"] in ("carousel", "image") else assets.get("video")):
             raise PermissionError("Post has no rendered media yet; render it before scheduling")
         brand = self.brand(post["brand"])
+        pinned = (post.get("meta") or {}).get("platforms") or []
         targets = platforms or [a.platform for a in brand.accounts
-                                if a.enabled and post["format"] in a.formats]
+                                if a.enabled and post["format"] in a.formats
+                                and (not pinned or a.platform in pinned)]
         if not targets:
             raise ValueError(f"No enabled account in {brand.slug} accepts format '{post['format']}'")
         if post["format"] in ("short", "mid", "long") and (brand.own_voice or (post.get("meta") or {}).get("own_voice")):
@@ -260,12 +308,28 @@ class Factory:
             raise PermissionError("Media check failed: " + "; ".join(map(str, stop)))
         # Work out every slot first so a cadence block can't leave a half-scheduled post behind.
         plan = []
-        for platform in targets:
-            slot = at or next_slot(self.db, brand, platform, fmt=post["format"])
+        from .scheduler import platform_cap_reached, same_day_slots
+        plan_day = _plan_day(post, brand)
+        if at:
+            slots = {p: at for p in targets}
+        elif plan_day:  # a pack's planned date: that day's slots; the plan already set the weekly mix
+            slots = same_day_slots(self.db, brand, targets, post["format"], after=plan_day, weekly_cap=False)
+        else:
+            slots = same_day_slots(self.db, brand, targets, post["format"])
+        for platform in list(targets):
+            slot = slots[platform]
+            cap = platform_cap_reached(self.db, brand, platform, post["format"], slot)
+            if cap is not None:
+                if platforms:
+                    raise PermissionError(f"{platform} already has {cap} {post['format']} post(s) that week (platform_weekly_caps)")
+                self.db.log("post.skipped_cap", "post", post_id, {"platform": platform, "cap": cap})
+                continue
             cadence = check_cadence(self.db, brand, platform, slot)
             if cadence.level == "block":
                 raise PermissionError(cadence.message)
             plan.append((platform, slot))
+        if not plan:
+            raise ValueError("Every platform for this post is at its weekly cap; nothing scheduled")
         pub_ids = []
         for platform, slot in plan:
             acct = brand.account(platform)
@@ -300,7 +364,10 @@ class Factory:
             sql += " AND brand = ?"
             params.append(brand)
         out: dict = {"scheduled": {}, "skipped": {}}
-        for row in self.db.query(sql + " ORDER BY updated_at, id", params)[: limit or None]:
+        # planned posts first, in plan order; on one day Shorts, then long videos, then carousels take the slots
+        order = (" ORDER BY json_extract(meta, '$.plan_date') IS NULL, json_extract(meta, '$.plan_date'), "
+                 "CASE format WHEN 'short' THEN 0 WHEN 'mid' THEN 1 WHEN 'long' THEN 2 ELSE 3 END, updated_at, id")
+        for row in self.db.query(sql + order, params)[: limit or None]:
             try:
                 pubs = self.schedule(row["id"])
                 out["scheduled"][row["id"]] = [self.db.get("publications", p)["scheduled_at"] for p in pubs]

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>De tu cheque a tu presupuesto: 50/30/20 y presupuesto base cero | Dinero Simple</title>
+<meta name="description" content="Escribe cuánto recibes por cheque y arma tu presupuesto del mes de dos formas: la regla 50/30/20 y un plan base cero donde cada dólar tiene un trabajo. Pásalo al tablero de dinero gratis. Sin registrarte, nada sale de tu navegador.">
+<meta property="og:title" content="Convierte tu cheque en un presupuesto">
+<meta property="og:description" content="Escribe cuánto recibes por cheque y arma tu presupuesto del mes de dos formas: la regla 50/30/20 y un plan base cero donde cada dólar tiene un trabajo. Pásalo al tablero de dinero gratis. Sin registrarte, nada sale de tu navegador.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="alternate" hreflang="en" href="paycheck-plan.html">
+<link rel="alternate" hreflang="es" href="plan-quincena.html">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Plan de tu cheque","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Hago el presupuesto con mi sueldo o con lo que recibo?", "acceptedAnswer": {"@type": "Answer", "text": "Con lo que recibes: lo que te llega a la cuenta después de impuestos, seguro y aportes al retiro. Ese es el dinero que puedes planear."}}, {"@type": "Question", "name": "¿Y si me pagan cada dos semanas?", "acceptedAnswer": {"@type": "Answer", "text": "Planea con dos cheques al mes. Dos veces al año un mes trae tres, y ese cheque de más puede ir directo a tus ahorros o a una deuda sin romper tu plan."}}, {"@type": "Question", "name": "¿Y si mis necesidades pasan del 50%?", "acceptedAnswer": {"@type": "Answer", "text": "Pasa mucho donde la renta es alta. Usa el plan base cero con tus números reales y recorta primero de los gustos. La regla es una guía, no una ley."}}]}</script>
+<script type="module" src="lib/embed-page.js"></script>
+</head>
+<body class="pp">
+<header class="top">
+  <a class="logo" href="../" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Plan de tu cheque</span></a>
+  <a class="badge" href="paycheck-plan.html" hreflang="en" lang="en">English</a>
+</header>
+<main>
+  <h1 class="page-title">Convierte tu cheque en un presupuesto</h1>
+  <p class="lede">Escribe lo que te llega a tu cuenta cada día de pago. Lo convertimos en una cantidad al mes, lo dividimos con la regla 50/30/20 y te ayudamos a armar un plan base cero donde cada dólar tiene un trabajo. Tu plan se queda en este navegador y pasa directo al tablero de dinero.</p>
+
+  <form id="pay-form" class="card deal-form">
+    <label>Lo que recibes por cheque, después de impuestos ($)<input name="pay" type="number" min="0" step="0.01" inputmode="decimal" value="1600"></label>
+    <label>Cada cuánto te pagan<select name="freq"></select></label>
+    <label class="full" id="plan-on-row">Planear con<select name="planOn"></select></label>
+    <div class="full" id="income" aria-live="polite"></div>
+  </form>
+
+  <div id="plans">
+  <section class="card">
+    <h2>La regla 50/30/20</h2>
+    <p class="tiny">Un buen punto de partida: la mitad para necesidades, 30% para gustos y 20% para ahorrar y pagar deudas más rápido.</p>
+    <div class="split" id="split"></div>
+    <div class="row" style="margin-top:12px"><button id="use-split" class="btn small" type="button">Usar estos números como mi plan</button></div>
+  </section>
+
+  <section class="card">
+    <h2>Tu plan base cero</h2>
+    <p class="tiny">Dale un trabajo a cada dólar, categoría por categoría, hasta que te quede $0. Empieza con los números 50/30/20 o escribe los tuyos.</p>
+    <div id="zero"></div>
+    <div id="left" class="plan-left" aria-live="polite"></div>
+    <div class="row" style="margin-top:12px"><button id="clear" class="btn ghost small" type="button">Borrar</button></div>
+  </section>
+
+  <section class="card">
+    <h2>Llévalo más lejos</h2>
+    <p>Abre el tablero de dinero: tu plan llena sus presupuestos y tu hoja de cálculo compara cada mes con ellos. O descarga el plan en CSV para guardarlo o pegarlo en la pestaña Categorías de la hoja Pro.</p>
+    <div class="row"><a id="to-dashboard" class="btn" href="tablero-dinero.html">Abrir el tablero de dinero</a><button id="csv" class="btn ghost" type="button">Descargar el plan (CSV)</button></div>
+  </section>
+  </div>
+
+  <section class="card faq">
+    <h3>¿Hago el presupuesto con mi sueldo o con lo que recibo?</h3>
+    <p>Con lo que recibes: lo que te llega a la cuenta después de impuestos, seguro y aportes al retiro. Ese es el dinero que puedes planear.</p>
+    <h3>¿Y si me pagan cada dos semanas?</h3>
+    <p>Planea con dos cheques al mes. Dos veces al año un mes trae tres, y ese cheque de más puede ir directo a tus ahorros o a una deuda sin romper tu plan.</p>
+    <h3>¿Y si mis necesidades pasan del 50%?</h3>
+    <p>Pasa mucho donde la renta es alta. Usa el plan base cero con tus números reales y recorta primero de los gustos. La regla es una guía, no una ley.</p>
+  </section>
+</main>
+<footer><p><a href="../es/">Todas las herramientas</a> · <a href="./">Presupuesto</a> · No es asesoría financiera. Nada de lo que escribes sale de tu navegador. Hecho por Dinero Simple.</p></footer>
+<script type="module" src="paycheck-plan.js"></script>
+</body>
+</html>

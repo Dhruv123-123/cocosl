@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Freelancer Tools Compared: Banking, Tax Software, Invoicing, S Corp, Health Insurance | 1099 Money</title>
+<meta name="description" content="Side-by-side comparisons of the tools US freelancers use for banking, taxes, invoicing, S corps and health insurance.">
+<link rel="canonical" href="https://1099money.netlify.app/compare/">
+<meta property="og:title" content="Freelancer Tools Compared: Banking, Tax Software, Invoicing, S Corp, Health Insurance">
+<meta property="og:description" content="Side-by-side comparisons of the tools US freelancers use for banking, taxes, invoicing, S corps and health insurance.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://1099money.netlify.app/compare/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#14213d">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"1099 Money","item":"https://1099money.netlify.app/"},{"@type":"ListItem","position":2,"name":"Compare tools","item":"https://1099money.netlify.app/compare/"}]}</script>
+</head>
+<body>
+<header class="top"><a class="logo" href="../"><span class="mark">1M</span> <span>1099 Money</span></a>
+<nav class="nav"><a href="../">Calculator</a><a href="../mileage/">Driver mileage</a><a href="../compare/" aria-current="page">Compare tools</a><a href="../free/">Free calendar</a></nav></header>
+<main>
+<h1>Tools for freelancers, compared</h1>
+<p class="lede">Honest comparisons of the banking, tax, invoicing, S corp and health insurance options US freelancers actually use, with the tax angle on each.</p>
+<p class="disclose">Picks are made on fit, not payout. Some links on these pages are affiliate links: we may earn a commission at no cost to you, and every page says how its picks were made.</p>
+<section class="hub">
+<a class="card" href="freelancer-banking/"><h2>Business banking for freelancers</h2><p>An honest comparison of Found, Lili, Bluevine, Novo and Relay for US freelancers and 1099 workers: tax set-aside buckets, invoicing, interest, cash deposits and what to check about FDIC insurance.</p></a>
+<a class="card" href="tax-software/"><h2>Tax software for freelancers</h2><p>Which tax software handles Schedule C, self-employment tax and the home office deduction well? Keeper, FreeTaxUSA, TurboTax, H&amp;R Block and QuickBooks Solopreneur compared for US freelancers.</p></a>
+<a class="card" href="invoicing-tools/"><h2>Invoicing tools for freelancers</h2><p>FreshBooks, QuickBooks Solopreneur, Wave and Found compared for freelancers: invoices with pay-now links, reminders, time tracking, expense tracking and what each costs to run.</p></a>
+<a class="card" href="s-corp-services/"><h2>S corp services for freelancers</h2><p>When does an S corp election save a freelancer money? The real break-even math, plus Collective, Gusto with a CPA, and a local accountant compared.</p></a>
+<a class="card" href="health-insurance/"><h2>Health insurance for freelancers</h2><p>How US freelancers get health insurance: the ACA marketplace and premium tax credits, HealthSherpa and Stride for enrolling, a spouse's plan, COBRA and HSAs, plus the self-employed health insurance deduction.</p></a>
+</section>
+<section class="card signup-box">
+  <h2>Free: the 2027 Freelancer Tax Calendar</h2>
+  <p class="signup-pitch"></p>
+  <form class="signup" name="tax-calendar" method="POST" action="../free/thanks/" data-thanks="../free/thanks/" data-netlify="true" netlify-honeypot="website">
+    <input type="hidden" name="form-name" value="tax-calendar"><input type="hidden" name="source" value="compare">
+    <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <label class="sr" for="signup-email">Email</label>
+    <input id="signup-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+    <button class="btn">Send me the calendar</button>
+  </form>
+  <p class="tiny">Deadline reminders plus one short email a week. Unsubscribe in one click.</p>
+</section>
+<section class="card" id="our-tool" hidden></section>
+</main>
+<footer>
+<p>Educational content, not tax, legal or financial advice. Features and prices change: check each provider's site before you sign up. Picks are ours; some links are affiliate links, and we may earn a commission at no cost to you. That never changes the order.</p>
+<p>1099 Money · get paid, keep more, never fear April. Written with help from AI tools. <a href="../about/">About these pages</a> · <a href="../how-we-make-money/">How we make money</a></p>
+</footer>
+<script type="module">
+import config from '../config.js';
+import { setupSite, live } from '../site.js';
+import { setupSignup } from '../signup.js';
+const p = config.product, box = document.getElementById('our-tool');
+if (box && live(p.url)) {
+  box.innerHTML = '<h2></h2><p></p><a class="btn"></a>';
+  box.querySelector('h2').textContent = p.name + ' · ' + p.price;
+  box.querySelector('p').textContent = p.pitch;
+  const a = box.querySelector('a'); a.href = p.url; a.textContent = 'Get the tracker'; a.rel = 'noopener';
+  box.hidden = false;
+}
+setupSignup();
+setupSite();
+</script>
+</body>
+</html>

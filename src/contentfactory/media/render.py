@@ -6,6 +6,7 @@ half-written post). Returned paths are relative to settings.output_dir.
 """
 from __future__ import annotations
 
+import json
 import re
 import shutil
 from pathlib import Path
@@ -20,8 +21,8 @@ from .carousel import SlideKit, SlideText, render_carousel
 from .images import generate_images
 from .thumbnail import render_thumbnail
 from .tts import concat_narration, synthesize_segments
-from .util import (ASPECTS, SHORT_MAX_SECONDS, SLIDE_SIZE, VIDEO_SIZES, MediaError, Palette, RenderOptions,
-                   probe, provenance, save_png_and_jpeg)
+from .util import (ASPECTS, SHORT_MAX_SECONDS, SLIDE_SIZE, TIKTOK_CUT_MAX_SECONDS, VIDEO_SIZES, MediaError, Palette,
+                   RenderOptions, probe, provenance, save_png_and_jpeg)
 from .video import Beat, VideoSpec, assemble, pick_music
 
 MIN_BEAT = 1.5      # seconds on screen per beat, even if the line is very short
@@ -89,7 +90,7 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     from .tts import human_voice
     tts = human_voice(settings, brand, post.get("id"), lines, work / "voice") \
         or synthesize_segments(settings, brand, lines, work / "voice")
-    beats, cues, slots, t, starts, owned = [], [], [], 0.0, [], []
+    beats, cues, slots, t, starts, owned, stocked = [], [], [], 0.0, [], [], []
     seg_words = tts.words or [None] * len(lines)
     from .charts import render_chart_clip
     for i, (line, head, img, dur) in enumerate(zip(lines, heads, images, tts.durations)):
@@ -101,6 +102,14 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
         if own:
             clip, chart = own, None  # the person's own recording beats any generated visual
             owned.append(own)
+        elif not chart and i < len(segments) and (getattr(segments[i], "motion", "") or "").strip() \
+                and (settings.home / segments[i].motion).is_file():
+            clip = settings.home / segments[i].motion  # our own motion card (factory motion)
+        elif not chart and i < len(segments) and (getattr(segments[i], "broll", "") or "").strip():
+            stock_clip = settings.home / segments[i].broll
+            if stock_clip.is_file():
+                clip = stock_clip
+                stocked.append(stock_clip)
         beats.append(Beat(img, "" if chart else head, t, slot, clip=clip, still=bool(chart)))  # charts: own title, no pan
         if seg_words[i]:
             cues += time_segment_words(line, t, dur, seg_words[i])
@@ -138,9 +147,12 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     duration = probe(video)["duration"] or duration
 
     notes = list(tts.notes)
-    if fmt == "short" and duration > SHORT_MAX_SECONDS:
-        notes.append(f"WARNING: short runs {duration:.1f}s (> {SHORT_MAX_SECONDS:.0f}s); trim the script "
-                     "before posting as a Reel/Short. Nothing was cut automatically.")
+    meta = post.get("meta") or {}
+    tiktok_only = isinstance(meta, dict) and meta.get("platforms") == ["tiktok"]
+    limit = TIKTOK_CUT_MAX_SECONDS if tiktok_only else SHORT_MAX_SECONDS
+    if fmt == "short" and duration > limit:
+        notes.append(f"WARNING: short runs {duration:.1f}s (> {limit:.0f}s); trim the script "
+                     "before posting. Nothing was cut automatically.")
     if fmt == "mid" and not 61 <= duration <= 95:
         notes.append(f"WARNING: TikTok cut runs {duration:.1f}s; aim for 65-90s (TikTok's Creator Rewards "
                      "only count videos over a minute).")
@@ -182,6 +194,11 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
                            music=music.name if music else None))
     for own in dict.fromkeys(owned):
         prov.append(provenance(str(own), "own", "footage", "", "recorded by the channel owner"))
+    for clip in dict.fromkeys(stocked):
+        side = clip.with_suffix(".json")
+        info = json.loads(side.read_text()) if side.is_file() else {}
+        prov.append(provenance(str(clip), "licensed", info.get("provider", "stock"), info.get("query", ""),
+                               f"{info.get('license', 'stock licence')}; by {info.get('author', '?')} {info.get('page', '')}".strip()))
     if music:
         prov.append(provenance(str(music), "licensed", "user-music", "",
                                "user-supplied via FACTORY_MUSIC_DIR; keep the licence on file"))
@@ -199,7 +216,7 @@ def _render_slides(settings: Settings, brand: BrandProfile, script: Script, fmt:
     imgs = _images_with_charts(settings, brand, segments, SLIDE_SIZE, ASPECTS[fmt], out / "images", family,
                                Palette.from_brand(brand))
     kit = SlideKit(Palette.from_brand(brand), brand.visual.font, brand.visual.watermark, brand.name,
-                   script.cta or brand.cta)
+                   script.cta or brand.cta, language=brand.language)
     texts = []
     for i, s in enumerate(segments):
         head = s.on_screen_text or s.heading or script.title
@@ -303,7 +320,7 @@ def _image_provenance(imgs) -> list[dict]:
 
 
 def _norm(text: str) -> str:
-    return re.sub(r"[^a-z0-9 ]", "", (text or "").lower()).strip()
+    return re.sub(r"[^\w ]", "", (text or "").lower()).strip()
 
 
 def _relativize(assets: dict, build: Path, final: Path, root: Path) -> dict:

@@ -22,10 +22,11 @@ dependencies = [
 
 [project.optional-dependencies]
 claude = ["anthropic>=0.70"]
-dev = ["pytest>=8", "anthropic>=0.70", "numpy-financial>=1.0", "taxcalc>=4"]
+dev = ["pytest>=8", "anthropic>=0.70", "numpy-financial>=1.0", "taxcalc>=4", "openpyxl>=3.1"]
 numbers = ["numpy-financial>=1.0", "taxcalc>=4"]   # automatic number checks in review (BSD-3 / CC0)
 kokoro = ["kokoro>=0.9", "soundfile>=0.12"]
 charts = ["manim>=0.18"]                     # animated data charts (FACTORY_CHARTS=manim)   # local Kokoro-82M voice; or run the kokoro service in docker-compose
+docs = ["python-docx>=1.1"]                   # Word copies of the 1099 Money kit (launch/1099-money/products/build_kit.py)
 
 [project.scripts]
 factory = "contentfactory.cli:main"
@@ -34,7 +35,7 @@ factory = "contentfactory.cli:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-contentfactory = ["web/templates/*.html", "web/static/*", "business/templates/*.html", "funnel/templates/*.html", "funnel/templates/funnel/*.html", "brandkit/templates/*.html", "media/*.json", "media/assets/*", "examples/*"]
+contentfactory = ["web/templates/*.html", "web/static/*", "business/templates/*.html", "funnel/templates/*.html", "funnel/templates/funnel/*.html", "brandkit/templates/*.html", "media/*.json", "hooks_library.json", "media/assets/*", "examples/*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

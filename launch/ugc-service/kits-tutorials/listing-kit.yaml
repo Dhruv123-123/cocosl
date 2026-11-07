@@ -1,0 +1,42 @@
+# Tutorial 1 in TUTORIALS.md: the DIY Listing Video Kit, about 3 minutes.
+id: listing-kit
+title: "Make a listing video from your photos"
+size: [1920, 1080]
+palette: ["#16181d", "#f6efe6", "#c8775a"]
+footage_dir: footage/listing-kit
+beats:
+  - footage: list-hook.mp4
+    say: "This is a listing video made from three product photos, with no filming. Here's how to make one in about five minutes."
+    seconds: 9
+  - image: list-unbox.png
+    say: "Unzip the kit. You get the maker, a folder of overlays, and a guide."
+  - footage: list-open.mp4
+    say: "Open the maker in Chrome, Edge or Safari. It runs on your computer, so your photos aren't uploaded anywhere."
+  - footage: list-photos.mp4
+    say: "Step one: add one to six photos. The main photo, a close-up, and one that shows size work best."
+  - footage: list-format.mp4
+    say: "Square for Etsy and your shop, vertical for Reels and TikTok."
+  - footage: list-template.mp4
+    say: "Pick a template. Spotlight is a good first video."
+  - footage: list-hook-line.mp4
+    say: "Your opening line matters most. Etsy listing videos play without sound, so it has to work as text. Name the problem, the moment, the feeling or the use."
+  - footage: list-facts.mp4
+    say: "Then three facts that are true: materials, size, what's included. No 'best', and no health claims."
+  - footage: list-colours.mp4
+    say: "Pick a colour set, or your own colours."
+  - footage: list-preview.mp4
+    say: "Preview it. This is what your buyers will see."
+    seconds: 11
+  - footage: list-templates.mp4
+    say: "Same photos, other templates: details, line-up, and new in."
+    seconds: 12
+  - footage: list-export.mp4
+    say: "Make my video records it in real time, so keep the tab open. You get an MP4."
+    seconds: 12
+  - image: list-etsy.png
+    say: "On Etsy, edit the listing and add the video under photos and video. It needs to be five to fifteen seconds, and the maker keeps you inside that."
+  - image: list-overlays.jpg
+    say: "The overlays folder has the same designs as PNGs for any video editor, and the guide has a checklist."
+  - footage: list-end.mp4
+    say: "Start with your best seller. One video per listing."
+    seconds: 6

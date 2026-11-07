@@ -1,0 +1,139 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>The Year-End Money Checklist</title><style>
+  :root{
+    --ink:#0b1d13; --cream:#f4f1e8; --green:#2fbf71; --green-d:#1e8a50; --gold:#f2b134;
+    --muted:#4b5a51; --line:#d9d3c3; --paper:#fffdf8; --tint:#eaf6ef; --gold-t:#fdf3dd;
+  }
+  @page{ size: Letter; margin:0; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#cfc9ba; color:var(--ink);
+    font-family:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size:10.2pt; line-height:1.48; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:8.5in; height:11in; margin:24px auto; background:var(--paper); position:relative;
+    padding:0.7in 0.85in 0.85in; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,.18);
+    page-break-after:always; break-after:page; }
+  .page:last-child{ page-break-after:auto; break-after:auto; }
+  @media print{ html,body{ background:none; } .page{ margin:0; box-shadow:none; } }
+
+  .folio{ position:absolute; left:0.85in; right:0.85in; bottom:0.45in; display:flex;
+    justify-content:space-between; font-size:8pt; color:var(--muted); border-top:1px solid var(--line); padding-top:6px; }
+
+  h1,h2,h3,h4{ font-family:"Inter Display","Inter",system-ui,sans-serif; line-height:1.15; margin:0; }
+  h2{ font-size:24pt; font-weight:800; letter-spacing:-.02em; margin-bottom:6px; }
+  h3{ font-size:13pt; font-weight:700; margin:18px 0 6px; }
+  h4{ font-size:10.5pt; font-weight:700; margin:12px 0 4px; }
+  p{ margin:0 0 9px; }
+  .kicker{ text-transform:uppercase; letter-spacing:.14em; font-size:8pt; font-weight:700; color:var(--green-d); margin-bottom:6px; }
+  .lede{ font-size:11.5pt; color:var(--muted); margin-bottom:12px; }
+  ul,ol{ margin:0 0 10px; padding-left:20px; } li{ margin-bottom:4px; }
+  strong{ font-weight:700; }
+  .num{ font-variant-numeric:tabular-nums; }
+
+  .box{ border-radius:10px; padding:12px 16px; margin:12px 0; }
+  .box.tip{ background:var(--tint); border-left:4px solid var(--green); }
+  .box.warn{ background:var(--gold-t); border-left:4px solid var(--gold); }
+  .box.dark{ background:var(--ink); color:var(--cream); }
+  .box.dark .kicker{ color:var(--gold); }
+  .box p:last-child, .box ul:last-child{ margin-bottom:0; }
+
+  table{ width:100%; border-collapse:collapse; margin:8px 0 12px; font-size:9.5pt; }
+  th{ text-align:left; font-weight:700; background:var(--cream); border-bottom:2px solid var(--ink); padding:5px 8px; }
+  td{ border-bottom:1px solid var(--line); padding:4px 8px; }
+  td.r, th.r{ text-align:right; font-variant-numeric:tabular-nums; }
+  tr.total td{ font-weight:800; border-top:2px solid var(--ink); border-bottom:none; background:var(--tint); }
+  tr.sub td{ font-weight:700; background:#f7f4ec; }
+
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .grid4{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:14px 0; }
+  .card{ border:1.5px solid var(--ink); border-radius:12px; padding:12px; background:#fff; }
+  .card .big{ font-size:20pt; font-weight:800; font-family:"Inter Display","Inter",sans-serif; }
+  .card .lbl{ font-size:8pt; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); font-weight:700; }
+  .pill{ display:inline-block; background:var(--green); color:#fff; font-weight:700; border-radius:999px; padding:1px 9px; font-size:8.5pt; }
+  .step{ display:flex; gap:12px; margin:10px 0; }
+  .step .n{ flex:0 0 30px; height:30px; border-radius:50%; background:var(--ink); color:var(--cream);
+    display:flex; align-items:center; justify-content:center; font-weight:800; }
+  .step .b{ flex:1; }
+  .timer{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin:12px 0 16px; border:1.5px solid var(--ink); border-radius:12px; overflow:hidden; }
+  .timer div{ padding:10px 12px; border-right:1.5px solid var(--ink); background:#fff; }
+  .timer div:last-child{ border-right:none; }
+  .timer .t{ font-weight:800; font-size:16pt; color:var(--green-d); }
+  .timer .h{ font-weight:700; font-size:9.5pt; }
+  .timer .d{ font-size:8.5pt; color:var(--muted); }
+  .formula{ font-family:"JetBrains Mono", ui-monospace, monospace; background:var(--ink); color:var(--cream);
+    padding:10px 14px; border-radius:8px; font-size:10pt; margin:10px 0; }
+  .check li{ list-style:none; position:relative; padding-left:4px; }
+  .check{ padding-left:22px; }
+  .check li::before{ content:""; position:absolute; left:-20px; top:3px; width:12px; height:12px; border:1.5px solid var(--ink); border-radius:3px; }
+  .faq h4{ margin-top:12px; }
+  .blank td{ height:24px; }
+  .toc{ list-style:none; padding:0; margin:12px 0; }
+  .toc li{ display:flex; border-bottom:1px dotted var(--line); padding:6px 0; margin:0; font-size:11pt; }
+  .toc li span:first-child{ flex:1; } .toc li span:last-child{ font-weight:700; }
+
+  /* cover */
+  .cover{ background:var(--ink); color:var(--cream); padding:0.9in; }
+  .cover .tag{ color:var(--gold); letter-spacing:.2em; text-transform:uppercase; font-weight:700; font-size:9pt; }
+  .cover h1{ font-size:58pt; font-weight:900; letter-spacing:-.035em; line-height:.95; margin:24px 0 18px; }
+  .cover h1 em{ font-style:normal; color:var(--green); }
+  .cover .sub{ font-size:15pt; max-width:5.2in; color:#cfd8cf; line-height:1.4; }
+  .cover .clock{ position:absolute; right:0.9in; bottom:1.4in; width:3.1in; height:3.1in; }
+  .cover .bottom{ position:absolute; left:0.9in; right:0.9in; bottom:0.8in; display:flex; justify-content:space-between; align-items:flex-end; font-size:9pt; color:#aab8ad; }
+  .cover .chips{ display:flex; gap:8px; flex-wrap:wrap; margin-top:28px; }
+  .cover .chips span{ border:1px solid #3c5446; border-radius:999px; padding:5px 12px; font-size:9pt; color:var(--cream); }
+  .cover .ring{ position:absolute; right:0.8in; bottom:1.3in; width:3.2in; height:3.2in; }
+  .daybadge{ display:inline-block; background:var(--green); color:var(--ink); font-weight:900; border-radius:8px; padding:2px 10px; font-size:10pt; letter-spacing:.06em; margin-bottom:8px; }
+  .why{ font-size:10.5pt; color:var(--muted); margin:0 0 10px; }
+  .done{ margin-top:14px; border:1.5px dashed var(--green-d); border-radius:10px; padding:10px 14px; font-weight:700; }
+  .done::before{ content:"\2610  "; font-size:13pt; }
+  .week td:first-child{ width:70px; font-weight:800; }
+  .week td:last-child{ width:34px; }
+  .week .bx{ display:inline-block; width:14px; height:14px; border:1.5px solid var(--ink); border-radius:3px; }
+  .lines td{ height:26px; }
+
+  .bigcheck{ list-style:none; padding:0; margin:10px 0; }
+  .bigcheck li{ display:flex; gap:12px; padding:6px 0; border-bottom:1px solid var(--line); margin:0; }
+  .bigcheck .bx{ flex:none; width:16px; height:16px; border:1.8px solid var(--ink); border-radius:4px; margin-top:2px; }
+  .bigcheck strong{ display:block; font-size:10.8pt; }
+  .bigcheck span.d{ display:block; color:var(--muted); font-size:8.8pt; line-height:1.38; }
+  .when{ float:right; font-size:8pt; font-weight:700; color:var(--green-d); text-transform:uppercase; letter-spacing:.08em; }
+  .src{ font-size:7.8pt; color:var(--muted); }
+</style></head><body><div class="page cover"><div class="tag">Free printable · Money Made Simple</div>
+<h1>The Year-End <em>Money</em> Checklist</h1>
+<p class="sub">Ten moves with real deadlines, a one-page holiday spending plan, and the checks that keep Black Friday and pay-later plans from following you into March.</p>
+<div class="chips"><span>FSA &amp; 401(k) deadlines</span><span>Holiday plan in 4 numbers</span><span>Deal checks</span><span>Pay-in-4 rules</span></div>
+<svg class="ring" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="88" fill="none" stroke="#3c5446" stroke-width="10"/><path d="M100 12 A88 88 0 1 1 30 153" fill="none" stroke="#f2b134" stroke-width="10" stroke-linecap="round"/><text x="100" y="96" text-anchor="middle" font-size="44" font-weight="900" fill="#f4f1e8" font-family="Inter">10</text><text x="100" y="124" text-anchor="middle" font-size="14" font-weight="700" fill="#aab8ad" font-family="Inter">MOVES · 1 HOUR</text></svg>
+<div class="bottom"><span>Print it, or fill it in on a tablet.</span><span>Examples are hypothetical. General education, not financial advice.</span></div></div><div class="page"><div class="kicker">Part 1</div><h2>10 money moves before January 1</h2>
+<p class="lede">Each takes 5 to 10 minutes. Do them all in an afternoon, or one a day until New Year's.</p>
+<ul class="bigcheck"><li><span class="bx"></span><div><span class="when">Before Dec 31</span><strong>Spend what's left in your health FSA</strong><span class="d">Check your balance and deadline in the benefits portal. FSAs are generally use-it-or-lose-it; some plans give a grace period or let you carry over a limited amount. Glasses, contacts, prescriptions and many over-the-counter medicines usually qualify.</span></div></li><li><span class="bx"></span><div><span class="when">Before the last payroll</span><strong>Set next year's 401(k) percentage</strong><span class="d">At least enough for the full employer match. Got a raise? Add 1%. Contributions for this year must come out of this year's paychecks, so December is the last chance to add more for 2026.</span></div></li><li><span class="bx"></span><div><span class="when">Before January</span><strong>Run the IRS Tax Withholding Estimator</strong><span class="d">15 minutes with a recent pay stub. If you're heading for a big refund or a bill, give payroll a new W-4 for January. Especially after a side gig, a new job or getting married.</span></div></li><li><span class="bx"></span><div><strong>Check your credit reports and consider a freeze</strong><span class="d">Free at AnnualCreditReport.com. Look for accounts you don't recognise and wrong late payments. A freeze at all three bureaus is free, doesn't affect your score and blocks most new-account fraud.</span></div></li><li><span class="bx"></span><div><strong>Cancel subscriptions you didn't use this fall</strong><span class="d">List every recurring charge from the last three months of statements. Watch for free trials from holiday sales that are about to start charging.</span></div></li><li><span class="bx"></span><div><span class="when">Before Dec 31</span><strong>Use work perks that reset in January</strong><span class="d">Learning stipends, wellness or phone allowances, commuter benefits. Check the benefits portal or ask HR.</span></div></li><li><span class="bx"></span><div><strong>Write down your net worth</strong><span class="d">Everything you own (cash, investments, retirement, car at resale value) minus everything you owe. Negative is normal early on: it's a baseline for next December.</span></div></li><li><span class="bx"></span><div><strong>List next year's known big costs</strong><span class="d">Car registration, insurance renewals, annual subscriptions, weddings, travel, next year's holidays. Each with its month and amount.</span></div></li><li><span class="bx"></span><div><span class="when">Set up in January</span><strong>Turn them into sinking funds</strong><span class="d">Divide each cost by the months until it's due and automate a transfer to separate savings. Example: $600 of travel in June, starting in January, is $100 a month.</span></div></li><li><span class="bx"></span><div><strong>Pick three goals with a number, a date and an automation</strong><span class="d">Not "save more" but "$2,400 in the emergency fund by December, $100 every payday". Set the transfers before January 1.</span></div></li></ul>
+<div class="box tip"><p><strong>Two deadlines to remember.</strong> 401(k) contributions for 2026 come from 2026 paychecks. IRA and HSA contributions for 2026 can generally be made until the tax filing deadline, April 15, 2027.</p></div>
+<div class="folio"><span>The Year-End Money Checklist · Money Made Simple</span><span>2</span></div></div><div class="page"><div class="kicker">Part 2</div><h2>Your holiday plan in 4 numbers</h2>
+<p class="lede">About 30 minutes. One total, four categories, one per-person gift number.</p>
+<h3>1. Your total</h3>
+<p>Money you have now or will earn this month, minus bills through month-end and a small cushion, plus anything already set aside. Not next month's paycheck, and not a card balance you'll pay off "eventually".</p>
+<div class="formula">Total = checking balance − bills to month-end − cushion + money set aside = $________</div>
+<h3>2. Split it four ways</h3><div class="grid4"><div class="card"><div class="lbl">Gifts</div><div class="big">$______</div><div class="d" style="font-size:8.5pt;color:var(--muted)">Total for everyone on the list</div></div><div class="card"><div class="lbl">Travel</div><div class="big">$______</div><div class="d" style="font-size:8.5pt;color:var(--muted)">Door to door: gas, parking, rides, pet sitter</div></div><div class="card"><div class="lbl">Food &amp; hosting</div><div class="big">$______</div><div class="d" style="font-size:8.5pt;color:var(--muted)">Big meals, the dish you bring, drinks</div></div><div class="card"><div class="lbl">Extras</div><div class="big">$______</div><div class="d" style="font-size:8.5pt;color:var(--muted)">Outfits, decorations, tips, white elephant</div></div></div>
+<p>If the four add up to more than the total, shrink the biggest one first.</p>
+<h3>3. Your per-person gift number</h3>
+<div class="formula">Gift total ÷ number of names = $______ each   (example: $300 ÷ 12 = $25)</div>
+<table><thead><tr><th>Name</th><th class="r">Budget</th><th class="r">Spent</th></tr></thead><tbody class="blank"><tr><td></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td class="r"></td><td class="r"></td></tr></tbody></table>
+<h3>4. In January: next year's fund</h3>
+<div class="formula">What you actually spent ÷ 12 = $______ a month into a holiday sinking fund</div>
+<div class="folio"><span>The Year-End Money Checklist · Money Made Simple</span><span>3</span></div></div><div class="page" style="padding-top:0.6in"><div class="kicker">Part 3</div><h2>Black Friday and checkout traps</h2>
+<p class="lede" style="margin-bottom:4px">Deals can be real. Stores are designed to make you decide fast. These checks slow it down.</p>
+<h3>Before you buy: 5 checks</h3>
+<ul class="bigcheck">
+<li><span class="bx"></span><div><strong>Was it on my list before the sale?</strong><span class="d">If not, it goes in the cart for 24 hours. Countdown timers and "only 2 left" are there to rush you.</span></div></li>
+<li><span class="bx"></span><div><strong>Is it really cheaper?</strong><span class="d">Check the price history: some "sale" prices are what it cost in October.</span></div></li>
+<li><span class="bx"></span><div><strong>Cost per use</strong><span class="d">Price ÷ times you'll realistically use it. A $40 gadget used twice is $20 a use; a $90 appliance used 100 times is 90¢.</span></div></li>
+<li><span class="bx"></span><div><strong>Which card?</strong><span class="d">For online shopping, a credit card you pay in full is usually safer than debit: federal law caps your liability for unauthorized credit card charges at $50, and the money doesn't leave your account while you dispute it.</span></div></li>
+<li><span class="bx"></span><div><strong>Does it fit the category number?</strong><span class="d">If not, pick something else, or move money from another category on purpose.</span></div></li>
+</ul>
+<div class="box warn"><p><strong>The store card at checkout.</strong> "20% off today" often comes with deferred interest: if any of the promo balance is left when the promo ends, interest is charged all the way back to the purchase date. Store card rates are often near 30%. Unless you'd pay it in full on the first statement, say no thanks.</p></div>
+<h3>Pay in 4 without the hangover</h3>
+<ul class="bigcheck">
+<li><span class="bx"></span><div><strong>One plan at a time</strong><span class="d">Stacked plans are how a $50 payment becomes a $200 week.</span></div></li>
+<li><span class="bx"></span><div><strong>Know the late fee and where payments come from</strong><span class="d">An auto-pull from a thin checking account can mean a late fee and an overdraft.</span></div></li>
+<li><span class="bx"></span><div><strong>Treat it as credit</strong><span class="d">Some providers report payments to the credit bureaus.</span></div></li>
+<li><span class="bx"></span><div><strong>Only for things you could pay for today</strong><span class="d">It's a payment schedule, not extra money.</span></div></li>
+</ul>
+<p class="src">Sources: IRS Publication 969 and Tax Withholding Estimator (irs.gov); CFPB on deferred interest and buy now, pay later (consumerfinance.gov); FTC on credit freezes and lost or stolen cards (consumer.ftc.gov); AnnualCreditReport.com. Checked November 2026. Examples are hypothetical. General education, not financial, tax or legal advice.</p>
+<div class="folio"><span>The Year-End Money Checklist · Money Made Simple</span><span>4</span></div></div></body></html>

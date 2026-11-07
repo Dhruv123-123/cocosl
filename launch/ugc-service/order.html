@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Order a Listing Video</title>
+<meta name="description" content="A product video for your Etsy or Shopify listing, made from the photos you already have. $49 for one product, $99 for three.">
+<script>
+  /* =========================================================
+     EDIT THESE AND NOTHING ELSE.
+     stripe49 / stripe99: paste your Stripe Payment Link URLs
+     (Stripe Dashboard > Payment Links > Create). Leave "" until
+     they exist: the page then asks buyers to email the order and
+     you send an invoice instead.
+     ========================================================= */
+  const STUDIO = {
+    name:     "Your Studio Name",
+    email:    "hello@yourdomain.com",
+    owner:    "Your Name",
+    stripe49: "",   // e.g. "https://buy.stripe.com/XXXXXXXX"  (Listing Video, $49)
+    stripe99: "",   // e.g. "https://buy.stripe.com/YYYYYYYY"  (Shop Trio, $99)
+    samples:  "portfolio/portfolio.html"
+  };
+</script>
+<style>
+  :root{
+    --bg:#0c0f14; --bg2:#121722; --card:#161c29; --line:#263044; --text:#eef1f7; --muted:#9aa5bb;
+    --accent:#7cf0c5; --accent2:#ffcf5c; --accent-ink:#06261a; --danger:#ff8b8b;
+    --radius:18px;
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg:#f7f6f2; --bg2:#ffffff; --card:#ffffff; --line:#e3e0d6; --text:#121722; --muted:#5b6476;
+      --accent:#0f9d6e; --accent2:#b77900; --accent-ink:#ffffff;
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+  h1,h2,h3{line-height:1.12;margin:0 0 .5em;letter-spacing:-.02em}
+  h1{font-size:clamp(2.1rem,7vw,3.8rem);font-weight:850}
+  h2{font-size:clamp(1.6rem,4.5vw,2.4rem);font-weight:800}
+  h3{font-size:1.15rem;font-weight:750}
+  p{margin:0 0 1em}
+  .muted{color:var(--muted)}
+  .eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+  section{padding:64px 0;border-top:1px solid var(--line)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:999px;font-weight:700;text-decoration:none;border:1.5px solid var(--accent);transition:transform .15s}
+  .btn:hover{transform:translateY(-1px)}
+  .btn.primary{background:var(--accent);color:var(--accent-ink)}
+  .btn.ghost{color:var(--text);border-color:var(--line)}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .logo{font-weight:850;letter-spacing:-.02em;text-decoration:none;display:flex;align-items:center;gap:8px}
+  .logo i{width:22px;height:22px;border-radius:7px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:inline-block}
+  nav .links{display:none;gap:22px;font-size:.92rem}
+  nav .links a{text-decoration:none;color:var(--muted)} nav .links a:hover{color:var(--text)}
+  nav .btn{padding:9px 16px;font-size:.9rem}
+  @media(min-width:760px){nav .links{display:flex}}
+
+  /* hero */
+  .hero{padding:56px 0 64px;border-top:none}
+  .hero-grid{display:grid;gap:40px;align-items:center}
+  @media(min-width:860px){.hero-grid{grid-template-columns:1.15fr .85fr}}
+  .hero .lead{font-size:1.15rem;color:var(--muted);max-width:36ch}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0 18px}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;font-size:.85rem}
+  .badges span{border:1px solid var(--line);border-radius:999px;padding:5px 12px;color:var(--muted)}
+  .phones{display:flex;gap:14px;justify-content:center}
+  .phone{width:44%;max-width:200px;aspect-ratio:9/16;border-radius:26px;border:2px solid var(--line);background:var(--card);position:relative;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+  .phone:nth-child(2){transform:translateY(28px)}
+  .phone .scene{position:absolute;inset:0;background:radial-gradient(120% 70% at 50% 30%,color-mix(in srgb,var(--accent) 35%,transparent),transparent 60%),linear-gradient(180deg,var(--bg2),var(--card))}
+  .phone:nth-child(2) .scene{background:radial-gradient(120% 70% at 50% 30%,color-mix(in srgb,var(--accent2) 40%,transparent),transparent 60%),linear-gradient(180deg,var(--bg2),var(--card))}
+  .phone .cap{position:absolute;left:10px;right:10px;bottom:58px;font-weight:800;font-size:.95rem;line-height:1.2;text-align:center;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+  .phone .ai{position:absolute;top:12px;left:10px;font-size:.62rem;font-weight:700;background:rgba(0,0,0,.55);color:#fff;border-radius:6px;padding:3px 7px;letter-spacing:.03em}
+  .phone .bar{position:absolute;left:14px;right:14px;bottom:24px;height:4px;border-radius:4px;background:var(--line)}
+  .phone .bar::after{content:"";position:absolute;left:0;top:0;bottom:0;width:38%;border-radius:4px;background:var(--accent)}
+  .phone .head{position:absolute;left:50%;top:26%;width:46%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:color-mix(in srgb,var(--text) 14%,transparent)}
+  .phone .body{position:absolute;left:50%;top:50%;width:76%;height:30%;transform:translateX(-50%);border-radius:50% 50% 0 0;background:color-mix(in srgb,var(--text) 10%,transparent)}
+
+  /* cards */
+  .grid{display:grid;gap:16px}
+  @media(min-width:700px){.grid.c2{grid-template-columns:1fr 1fr}.grid.c3{grid-template-columns:repeat(3,1fr)}.grid.c4{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:980px){.grid.c4{grid-template-columns:repeat(4,1fr)}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+  .card .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent);font-weight:800;margin-bottom:12px}
+
+  /* pricing */
+  .price-card{display:flex;flex-direction:column}
+  .price-card.featured{border:2px solid var(--accent);position:relative}
+  .price-card.featured .tag{position:absolute;top:-12px;left:22px;background:var(--accent);color:var(--accent-ink);font-size:.75rem;font-weight:800;border-radius:999px;padding:3px 10px}
+  .price{font-size:2.6rem;font-weight:850;letter-spacing:-.03em;margin:4px 0}
+  .price small{font-size:1rem;font-weight:600;color:var(--muted)}
+  .price-card ul{list-style:none;padding:0;margin:12px 0 22px;flex:1}
+  .price-card li{padding:7px 0 7px 26px;position:relative;border-bottom:1px dashed var(--line);font-size:.95rem}
+  .price-card li::before{content:"";position:absolute;left:2px;top:13px;width:12px;height:7px;border-left:2.5px solid var(--accent);border-bottom:2.5px solid var(--accent);transform:rotate(-45deg)}
+  .addons{margin-top:22px}
+  .addons table{width:100%;border-collapse:collapse;font-size:.95rem}
+  .addons td{padding:12px 4px;border-bottom:1px solid var(--line)}
+  .addons td:last-child{text-align:right;font-weight:700;white-space:nowrap}
+
+  /* steps */
+  .steps{counter-reset:s;display:grid;gap:14px}
+  @media(min-width:860px){.steps{grid-template-columns:repeat(4,1fr)}}
+  .steps .card::before{counter-increment:s;content:counter(s,decimal-leading-zero);display:block;font-weight:850;font-size:1.6rem;color:var(--accent);margin-bottom:6px}
+
+  /* honesty block */
+  .honest{background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 14%,var(--card)),var(--card));}
+  .honest ul{padding-left:20px;margin:0}
+  .honest li{margin-bottom:8px}
+
+  /* faq */
+  details{border-bottom:1px solid var(--line);padding:16px 0}
+  summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--accent);font-size:1.4rem;line-height:1}
+  details[open] summary::after{content:"\2212"}
+  details p{margin:10px 0 0;color:var(--muted)}
+
+  /* form */
+  form{display:grid;gap:14px}
+  @media(min-width:700px){form .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}}
+  label{display:grid;gap:6px;font-size:.9rem;font-weight:600}
+  input,select,textarea{font:inherit;color:var(--text);background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+  textarea{min-height:120px;resize:vertical}
+  .fineprint{font-size:.82rem;color:var(--muted)}
+  footer{border-top:1px solid var(--line);padding:32px 0 48px;font-size:.88rem;color:var(--muted)}
+  footer .wrap{display:grid;gap:10px}
+
+  .pkgs{display:grid;gap:16px}
+  @media(min-width:700px){.pkgs{grid-template-columns:1fr 1fr}}
+  .pkg{position:relative;cursor:pointer;display:flex;flex-direction:column;gap:6px}
+  .pkg input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
+  .pkg.on{border:2px solid var(--accent)}
+  .pkg ul{list-style:none;padding:0;margin:8px 0 0;font-size:.95rem;color:var(--muted)}
+  .pkg li{padding:4px 0}
+  .stepnum{font-weight:850;color:var(--accent);margin-right:6px}
+  .notice{border-left:3px solid var(--accent2);padding:10px 14px;background:var(--bg2);border-radius:10px;font-size:.92rem}
+  #done{display:none}
+  form label,form>*{min-width:0}
+  form input{min-width:0;max-width:100%}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="logo" href="index.html"><i></i><span data-studio="name">Your Studio Name</span></a>
+    <div class="links"><a href="index.html#pricing">Studio packages</a><a href="#how">How it works</a><a href="#faq">FAQ</a></div>
+    <a class="btn primary" href="#order">Order</a>
+  </div>
+</nav>
+
+<header class="hero" id="top" style="padding-bottom:32px">
+  <div class="wrap" style="max-width:820px">
+    <span class="eyebrow">For Etsy and Shopify sellers</span>
+    <h1>A product video for your listing, from the photos you already have.</h1>
+    <p class="lead" style="max-width:52ch">Send your listing link. You get a 10&ndash;15 second silent video made for Etsy listings and Shopify product pages, plus a vertical version with music and captions for Instagram and TikTok. Your real product, never altered. Delivered in 3 working days.</p>
+    <div class="badges"><span>$49 for 1 product</span><span>$99 for 3</span><span>1 revision included</span><span>Plan approved before I start</span></div>
+  </div>
+</header>
+
+<section id="order" style="padding-top:40px">
+  <div class="wrap" style="max-width:820px">
+    <h2><span class="stepnum">1</span>Choose a package</h2>
+    <div class="pkgs" role="radiogroup" aria-label="Package">
+      <label class="card pkg on" data-p="49">
+        <input type="radio" name="pkgpick" value="49" checked>
+        <span class="eyebrow" style="margin:0">Listing Video</span>
+        <span class="price">$49</span>
+        <ul><li>1 product</li><li>Silent listing video, 10&ndash;15s</li><li>Vertical 9:16 social video</li><li>1 revision, 3 working days</li></ul>
+      </label>
+      <label class="card pkg" data-p="99">
+        <input type="radio" name="pkgpick" value="99">
+        <span class="eyebrow" style="margin:0">Shop Trio</span>
+        <span class="price">$99</span>
+        <ul><li>3 products</li><li>Both videos for each product</li><li>Matching style across your shop</li><li>1 revision, 4 working days</li></ul>
+      </label>
+    </div>
+
+    <h2 style="margin-top:40px"><span class="stepnum">2</span>Tell me about your products</h2>
+    <form id="order-form" class="card">
+      <div class="two">
+        <label>Your name<input name="name" required autocomplete="name"></label>
+        <label>Email<input name="email" type="email" required autocomplete="email"></label>
+      </div>
+      <label>Shop name<input name="shop" required></label>
+      <label>Listing link (product 1)<input name="url1" type="url" required placeholder="https://www.etsy.com/listing/... or your Shopify product page"></label>
+      <div class="trio" hidden>
+        <label>Listing link (product 2)<input name="url2" type="url" placeholder="https://"></label>
+        <label style="margin-top:14px">Listing link (product 3)<input name="url3" type="url" placeholder="https://"></label>
+      </div>
+      <label>Photos or clips (optional)<input name="assets" type="url" placeholder="Google Drive or Dropbox link, if you have more than the listing photos"></label>
+      <label>Anything I should know?<textarea name="msg" placeholder="What makes it special, who buys it, any words to avoid..."></textarea></label>
+      <label style="display:flex;gap:10px;align-items:flex-start;font-weight:500"><input type="checkbox" name="rights" required style="width:auto;margin-top:5px">I own these photos (or have the right to use them) and the products are mine to sell.</label>
+      <button class="btn primary" type="submit">Continue to payment</button>
+      <p class="fineprint">The button opens your email app with your order filled in, then takes you to secure checkout with Stripe. Nothing is stored on this site.</p>
+    </form>
+
+    <div id="done" class="card" style="margin-top:20px">
+      <h2><span class="stepnum">3</span>Pay and you're done</h2>
+      <p id="pay-line">Send the email that just opened, then pay with the button below. I'll reply within one working day with a short plan for each video, and start once you OK it.</p>
+      <a id="pay-btn" class="btn primary" href="#" target="_blank" rel="noopener">Pay $49 with Stripe</a>
+      <p class="notice" id="no-stripe" hidden>Card payment isn't switched on yet. Send the email that just opened and I'll reply with an invoice link.</p>
+      <p class="fineprint" style="margin-top:14px">Email didn't open? Write to <a data-studio-mail href="mailto:hello@yourdomain.com">hello@yourdomain.com</a> with your listing link.</p>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <span class="eyebrow">How it works</span>
+    <h2>Four steps, about a week at most</h2>
+    <div class="steps">
+      <div class="card"><h3>Order</h3><p class="muted">Pick a package, send your listing link, pay.</p></div>
+      <div class="card"><h3>Approve the plan</h3><p class="muted">Within a working day you get a 3-line plan per product: opening, shots, end card. Reply OK or change it.</p></div>
+      <div class="card"><h3>Get your videos</h3><p class="muted">In 3 working days (4 for the Trio): an Etsy-ready MP4 and a vertical social MP4 per product.</p></div>
+      <div class="card"><h3>One revision</h3><p class="muted">Send one list of changes and I'll fix them.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap" style="max-width:820px">
+    <span class="eyebrow">FAQ</span>
+    <h2>Questions</h2>
+    <details><summary>Does it work on Etsy?</summary><p>Yes. The listing video is 10&ndash;15 seconds and silent, because Etsy listing videos must be 3&ndash;15 seconds and play without sound. You upload it in the listing editor under Photos and video.</p></details>
+    <details><summary>Will AI change how my product looks?</summary><p>No. The product is always your real product from your own photos. AI only helps with motion, backgrounds, transitions and captions, never with the product itself. Buyers should get exactly what they saw.</p></details>
+    <details><summary>Is it labeled as AI?</summary><p>If the social video uses an AI voice, it carries an on-screen "AI-generated" label. The silent listing video is made only from your photos, and your delivery note says so, so you can answer buyers honestly.</p></details>
+    <details><summary>Do you write reviews or "customer" lines?</summary><p>No fake reviews, customer quotes, ratings or sales numbers. If you have real reviews you're allowed to share, I can show one as on-screen text.</p></details>
+    <details><summary>Can I run these as paid ads?</summary><p>These packages cover your listings, website and social accounts with no time limit. For paid ads, see the <a href="index.html#pricing">studio packages</a>. Your $49 or $99 is credited in full if you upgrade within 30 days.</p></details>
+    <details><summary>What if I'm not happy?</summary><p>You approve the plan before I start, and one revision is included. If I can't make a video that works from your photos, I'll tell you before starting and refund you.</p></details>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong data-studio="name">Your Studio Name</strong> &middot; <span data-studio="owner">Your Name</span> &middot; <a data-studio-mail href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></div>
+    <div>Payments are processed by Stripe. Etsy and Shopify are trademarks of their owners; this service isn't affiliated with or endorsed by them.</div>
+    <div>&copy; <span id="yr"></span> <span data-studio="name">Your Studio Name</span>.</div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    document.title = "Order a Listing Video · " + STUDIO.name;
+    document.querySelectorAll('[data-studio]').forEach(function(el){ el.textContent = STUDIO[el.getAttribute('data-studio')] || ''; });
+    document.querySelectorAll('[data-studio-mail]').forEach(function(el){ el.textContent = STUDIO.email; el.href = 'mailto:' + STUDIO.email; });
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    var price = '49', form = document.getElementById('order-form'), trio = form.querySelector('.trio');
+    function setPkg(p){
+      price = p;
+      document.querySelectorAll('.pkg').forEach(function(c){ var on = c.getAttribute('data-p') === p; c.classList.toggle('on', on); c.querySelector('input').checked = on; });
+      trio.hidden = p !== '99';
+      form.url2.required = form.url3.required = p === '99';
+    }
+    document.querySelectorAll('.pkg').forEach(function(c){ c.addEventListener('click', function(){ setPkg(c.getAttribute('data-p')); }); });
+    if (/trio/i.test(location.hash)) setPkg('99');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var f = form.elements, name = price === '99' ? 'Shop Trio ($99)' : 'Listing Video ($49)';
+      var links = [f.url1.value, f.url2.value, f.url3.value].filter(Boolean);
+      var body = 'Package: ' + name + '\nName: ' + f.name.value + '\nEmail: ' + f.email.value + '\nShop: ' + f.shop.value +
+                 '\nListings:\n' + links.map(function(l, i){ return '  ' + (i + 1) + '. ' + l; }).join('\n') +
+                 '\nExtra photos/clips: ' + (f.assets.value || '-') + '\nRights confirmed: yes\n\n' + f.msg.value;
+      window.location.href = 'mailto:' + STUDIO.email + '?subject=' + encodeURIComponent('Order: ' + name + ' for ' + f.shop.value) + '&body=' + encodeURIComponent(body);
+      var link = price === '99' ? STUDIO.stripe99 : STUDIO.stripe49, btn = document.getElementById('pay-btn');
+      if (/^https:\/\/(buy|checkout)\.stripe\.com\//.test(link)) {
+        var u = new URL(link); if (f.email.value) u.searchParams.set('prefilled_email', f.email.value);
+        btn.href = u.toString(); btn.textContent = 'Pay $' + price + ' with Stripe'; btn.hidden = false; document.getElementById('no-stripe').hidden = true;
+      } else { btn.hidden = true; document.getElementById('no-stripe').hidden = false; document.getElementById('pay-line').hidden = true; }
+      var d = document.getElementById('done'); d.style.display = 'block'; d.scrollIntoView({behavior: 'smooth'});
+    });
+  })();
+</script>
+</body>
+</html>

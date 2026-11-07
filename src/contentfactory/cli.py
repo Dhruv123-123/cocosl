@@ -51,6 +51,10 @@ def cmd_init(args):
         env_example = examples / "env.example"
     if env_example.exists() and not (home / ".env").exists():
         shutil.copy(env_example, home / ".env")
+        try:
+            (home / ".env").chmod(0o600)  # it will hold API keys and tokens: owner only
+        except OSError:
+            pass
     s = Settings.load(home)
     from .db import DB
     DB(s.db_path)
@@ -269,6 +273,7 @@ def cmd_import(args):
             f._render_or_queue(existing["id"], True)
             pid = existing["id"]
         elif existing:
+            _pack_date(f, existing["id"], item.get("date"))
             print(f"post #{existing['id']} [{existing['status']}] {title}: already imported, skipped")
             continue
         else:
@@ -277,9 +282,56 @@ def cmd_import(args):
                 if item.get(key) and not script.get(key):
                     script[key] = item[key]
             pid = f.import_script(args.brand, script, item["format"], item.get("pillar", ""),
-                                  item.get("idea_angle", ""), render=not args.no_render)
+                                  item.get("idea_angle", ""), render=not args.no_render,
+                                  platforms=item.get("platforms"))
+        _pack_review(f, pid, item.get("review"))
+        _pack_date(f, pid, item.get("date"))
         post = f.db.get("posts", pid)
         print(f"post #{pid} [{post['format']}/{post['status']}] {post['title']}")
+
+
+def _pack_date(f, pid: int, value) -> None:
+    """A pack item's "date": "YYYY-MM-DD" (its day in the posting plan). Scheduling then uses that day's
+    slots instead of the next free one, so the calendar matches the plan (LAUNCH_WEEK.md). A past date
+    is ignored at scheduling time. Re-running import adds dates to posts already imported."""
+    if not value:
+        return
+    from datetime import date as _date
+    try:
+        day = _date.fromisoformat(str(value)[:10]).isoformat()
+    except ValueError:
+        print(f"  post #{pid}: date '{value}' isn't YYYY-MM-DD, ignored")
+        return
+    post = f.db.get("posts", pid)
+    meta = dict(post.get("meta") or {})
+    if meta.get("plan_date") != day:
+        meta["plan_date"] = day
+        f.db.update("posts", pid, {"meta": meta})
+
+
+def _pack_review(f, pid: int, value) -> None:
+    """A pack item's "review": "native_review" | ["native_review", "legal_review"] marks the post (review gate)."""
+    if not value:
+        return
+    from .review import normalize, required, require
+    post = f.db.get("posts", pid)
+    new = [s for s in normalize(value) if s not in required(post)]
+    if not new:
+        return
+    try:
+        require(f, pid, new, note="from the pack")
+    except PermissionError as e:
+        print(f"  post #{pid}: {e} (review marker not applied)")
+
+
+def cmd_launch_pack(args):
+    from .launch_pack import build_pack
+    f = _factory(args)
+    res = build_pack(f, args.brand, Path(args.file), Path(args.out),
+                     render_videos=True if args.render_videos else None, extras=not args.no_extras)
+    for r in res["items"]:
+        print(f"post #{r['post_id']} [{r['format']}] {r['folder']}")
+    print(f"\nPack written to {res['out']} (see CONTENTS.md). Everything is in the review queue, unapproved.")
 
 
 def cmd_niche(args):
@@ -294,6 +346,23 @@ def cmd_new_brand(args):
     data, slug = generate_brand(f.llm, args.niche, args.audience or "", args.platform)
     path = write_brand(f.settings.brands_dir, data, args.slug or slug, overwrite=args.force)
     print(f"Wrote {path}. Edit it, then: factory ideas generate --brand {args.slug or slug}")
+
+
+def cmd_review_language(args):
+    result = _factory(args).mark_language_reviewed(args.id, args.by)
+    print(f"Post #{args.id}: native-speaker review recorded ({args.by}); checks now {result['status']}")
+
+
+def cmd_handoff_pack(args):
+    from .launchpack import export_pack
+    f = _factory(args)
+    items = json.loads(Path(args.file).read_text())
+    if args.format:
+        items = [i for i in items if i.get("format") in args.format]
+    folders = export_pack(f.settings, f.brand(args.brand), items[: args.limit or None], Path(args.out),
+                          video=args.video, start=args.start)
+    for folder in folders:
+        print(folder)
 
 
 def cmd_report(args):
@@ -463,6 +532,14 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--force", action="store_true", help="import even if a post with the same title exists")
     s.set_defaults(func=cmd_import)
 
+    s = sub.add_parser("launch-pack", help="export a postable launch pack (slides, thumbnails, captions, brand kit)")
+    s.add_argument("file", help="content.json (same shape as for import)")
+    s.add_argument("--brand", required=True)
+    s.add_argument("--out", required=True)
+    s.add_argument("--render-videos", action="store_true", help="render videos even without a real voice")
+    s.add_argument("--no-extras", action="store_true", help="skip brand kit and link page")
+    s.set_defaults(func=cmd_launch_pack)
+
     s = sub.add_parser("niche", help="score niche candidates (ad value, demand, risk, saturation)")
     s.add_argument("niches", nargs="+")
     s.add_argument("--offline", action="store_true")
@@ -475,6 +552,21 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--platform", action="append")
     s.add_argument("--force", action="store_true")
     s.set_defaults(func=cmd_new_brand)
+
+    s = sub.add_parser("review-language", help="older name for `review-gate pass <id> native_review` (records the fluent speaker)")
+    s.add_argument("id", type=int)
+    s.add_argument("--by", required=True, help="reviewer's name")
+    s.set_defaults(func=cmd_review_language)
+
+    s = sub.add_parser("handoff-pack", help="export a content.json as a hand-off folder (slides, thumbnails, captions)")
+    s.add_argument("file")
+    s.add_argument("--brand", required=True)
+    s.add_argument("--out", required=True)
+    s.add_argument("--format", action="append", help="only these formats (repeatable)")
+    s.add_argument("--limit", type=int, default=0)
+    s.add_argument("--video", action="store_true", help="also render full videos (needs a voice for narration)")
+    s.add_argument("--start", type=int, default=1, help="number of the first folder (to add to an existing pack)")
+    s.set_defaults(func=cmd_handoff_pack)
 
     s = sub.add_parser("report", help="weekly business report: money, content, funnel, pipeline, next actions")
     s.add_argument("--save", action="store_true", help="write to output/reports/ (also writes the HTML pages)")
@@ -503,11 +595,11 @@ def build_parser() -> argparse.ArgumentParser:
 def _extend(sub) -> None:
     """Optional command groups that live in their own modules."""
     for mod in ("contentfactory.business.cli", "contentfactory.publish.cli", "contentfactory.funnel.cli",
-                "contentfactory.community.cli", "contentfactory.site",
-                "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup",
+                "contentfactory.community.cli", "contentfactory.site", "contentfactory.pack",
+                "contentfactory.channels", "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup",
                 "contentfactory.publish.preflight", "contentfactory.cleanup",
                 "contentfactory.planner", "contentfactory.launch_check", "contentfactory.stats",
-                "contentfactory.scaffold", "contentfactory.manual", "contentfactory.numbercheck", "contentfactory.ytplan", "contentfactory.triage", "contentfactory.challenge", "contentfactory.whitelabel", "contentfactory.originality", "contentfactory.newsletter_export", "contentfactory.batch_record"):
+                "contentfactory.scaffold", "contentfactory.manual", "contentfactory.numbercheck", "contentfactory.ytplan", "contentfactory.triage", "contentfactory.challenge", "contentfactory.whitelabel", "contentfactory.originality", "contentfactory.newsletter_export", "contentfactory.batch_record", "contentfactory.routine", "contentfactory.export_week", "contentfactory.scorecard", "contentfactory.sequence_export", "contentfactory.tutorial_render", "contentfactory.scheduler", "contentfactory.review", "contentfactory.launchmode", "contentfactory.timelog", "contentfactory.media.stock", "contentfactory.keywords", "contentfactory.weekly_review", "contentfactory.media.motion"):
         try:
             module = __import__(mod, fromlist=["register"])
         except ImportError:

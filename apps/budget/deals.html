@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>0% APR and Deferred Interest Countdown Calculator | Money Made Simple</title>
+<meta name="description" content="Enter your 0% balance transfer, store card or buy-now-pay-later plan and see the monthly payment that clears it before the promo ends, and what deferred interest would cost if you miss. Free, private, runs in your browser.">
+<meta property="og:title" content="Will you clear your 0% deal in time?">
+<meta property="og:description" content="The payment that clears it before the promo ends, and what deferred interest would cost if you miss.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"0% deal countdown","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is deferred interest?","acceptedAnswer":{"@type":"Answer","text":"Many store cards and some medical and furniture financing say 'no interest if paid in full' within a set time. Interest is still being worked out in the background. If any balance is left when the promo ends, all of that interest, back to the purchase date, is added to your balance at once."}},
+{"@type":"Question","name":"How is deferred interest different from a 0% APR offer?","acceptedAnswer":{"@type":"Answer","text":"With a true 0% APR offer, such as most balance transfer cards, interest only starts on whatever is left after the promo ends. With deferred interest, missing the deadline by even a dollar can add the interest for the whole promo period."}},
+{"@type":"Question","name":"Is paying the minimum enough?","acceptedAnswer":{"@type":"Answer","text":"Often not. Minimum payments on deferred-interest plans are frequently too small to clear the balance in time. Divide the balance by the months left, and aim to finish a month early."}}
+]}</script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="./" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>0% deal countdown</span></a>
+  <a id="plan-badge" class="badge" href="pricing.html?from=badge" data-upgrade="badge">Free · Upgrade</a>
+</header>
+<main>
+  <h1 class="page-title">Will you clear your 0% deal in time?</h1>
+  <p class="lede">In CFPB data, about 1 in 5 credit card "no interest if paid in full" deals ended with a balance left. When that happens, the interest from day one gets added at once. Enter your deal to see what to pay each month to be safe.</p>
+
+  <section class="card">
+    <form id="deal-form" class="deal-form">
+      <label class="full">What kind of deal is it?
+        <select name="kind" id="d-kind"></select>
+      </label>
+      <label>Name <input name="name" maxlength="60" placeholder="Furniture store card"></label>
+      <label>Balance you owe now ($) <input name="balance" type="number" min="0" step="any" inputmode="decimal" required></label>
+      <label>Promo ends on <input name="end" type="date" required></label>
+      <label>APR after the promo (%) <input name="apr" type="number" min="0" max="99" step="any" inputmode="decimal" placeholder="29.99"></label>
+      <label>What you pay each month ($) <input name="payment" type="number" min="0" step="any" inputmode="decimal" placeholder="Your usual payment"></label>
+      <label class="deferred-only">Original purchase amount ($) <input name="purchase" type="number" min="0" step="any" inputmode="decimal" placeholder="Same as balance if blank"></label>
+      <label class="deferred-only">Purchase or promo start date <input name="start" type="date"></label>
+      <div class="row full"><button class="btn" type="submit">Check my deal</button><button id="save" class="btn ghost" type="button">Save to my list</button></div>
+    </form>
+    <p id="deal-msg" class="tiny" aria-live="polite"></p>
+  </section>
+
+  <section id="result" class="card" hidden aria-live="polite"></section>
+
+  <section class="card">
+    <div class="head"><h2>My deals</h2><span class="tiny">Soonest deadline first</span></div>
+    <div id="deals"></div>
+    <div class="row" style="margin-top:12px"><button id="ics" class="btn small" type="button">Add reminders to my calendar</button><span class="pro-tag">PRO</span><button id="backup" class="btn ghost small" type="button">Download my data</button></div>
+    <p id="ics-msg" class="tiny" aria-live="polite"></p>
+  </section>
+
+  <section class="card faq">
+    <h2>Questions</h2>
+    <h3>What is deferred interest?</h3>
+    <p>Many store cards and some medical and furniture financing say "no interest if paid in full" by a date. Interest is still being worked out in the background. If any balance is left when the promo ends, all of that interest, back to the purchase date, is added at once.</p>
+    <h3>How is that different from 0% APR?</h3>
+    <p>With a true 0% APR offer, such as most balance transfer cards, interest only starts on what's left after the promo ends. Deferred interest is the expensive one: missing by a dollar can cost the whole period's interest.</p>
+    <h3>Is the minimum payment enough?</h3>
+    <p>Often not. Minimums on deferred-interest plans are frequently too small to clear the balance in time. Divide the balance by the months left and aim to finish a month early, because payments take a few days to post.</p>
+    <h3>Where do I find the dates and APR?</h3>
+    <p>On your statement or in the card's app: look for "promotional balance", "promo expiration" or "deferred interest". The APR shown for purchases is usually what applies after.</p>
+    <p class="tiny">Estimates only. Lenders work out interest on the average daily balance, so the real number will differ a little. Not financial advice.</p>
+  </section>
+</main>
+<footer><p><a href="./">Budget app</a> · <a href="bills.html">Bill tracker</a> · <a href="subscriptions.html">Subscription finder</a> · Nothing you enter leaves this browser. Made by Money Made Simple.</p></footer>
+<script type="module" src="deals.js"></script>
+</body>
+</html>

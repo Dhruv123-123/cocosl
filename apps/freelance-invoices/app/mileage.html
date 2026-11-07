@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Free Mileage Log for 1099 Drivers and Freelancers, Exports to CSV | 1099 Money</title>
+<meta name="description" content="Log business miles with the date, where and why, the way the IRS expects. See your deduction at the 2026 IRS rates and export the log to CSV for your taxes. Free, private, works offline.">
+<meta property="og:title" content="Mileage log">
+<meta property="og:description" content="Log business miles with the date, where and why, the way the IRS expects. See your deduction at the 2026 IRS rates and export the log to CSV for your taxes. Free, private, works offline.">
+<meta name="theme-color" content="#14213d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="1099 Money">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="mileage">
+<header class="top"><a class="logo" href="./"><span class="mark" aria-hidden="true" style="background:#ff7a45;color:#14213d;font-size:11px;font-weight:800">1099</span><span>1099 Money</span></a><a class="back" href="./">← 1099 Money</a></header>
+<main>
+  <h1>Mileage log</h1>
+  <p class="lede">Log each business trip with the date, miles and why you drove. The IRS wants a log kept as you go, and at 76 cents a mile it adds up fast.</p>
+<p class="note"><b>Not tax advice.</b> These are planning estimates from IRS rules for 2026 and 2027. Your real tax depends on your whole return. Check with a tax professional or the IRS before you file or pay.</p>
+  <form id="trip" class="card form">
+    <label>Date<input name="date" type="date" required></label>
+    <label>Miles<input name="miles" type="number" min="0.1" step="0.1" inputmode="decimal" required></label>
+    <label class="full">Business purpose<input name="purpose" maxlength="120" placeholder="Deliveries, client meeting at Acme, supply run" required></label>
+    <label>From<input name="from" maxlength="80" placeholder="Optional"></label>
+    <label>To<input name="to" maxlength="80" placeholder="Optional"></label>
+    <div class="full row"><button class="btn" type="submit">Add trip</button><span id="trip-msg" class="tiny" role="alert"></span></div>
+  </form>
+  <section class="card" aria-labelledby="h-log"><h2 id="h-log">Your log</h2>
+    <label>Year<select id="year"></select></label>
+    <div id="stats" class="stats" aria-live="polite"></div>
+    <p id="prov" class="tiny" hidden>The IRS hasn't announced the 2027 rate yet, so 2027 trips use the latest 2026 rate for now. The log keeps your miles, so the deduction updates when the rate does.</p>
+    <div class="table-scroll"><table><thead><tr><th scope="col">Date</th><th scope="col">Purpose</th><th scope="col" class="num">Miles</th><th scope="col" class="num">Deduction</th><th scope="col"><span class="sr-only">Remove</span></th></tr></thead><tbody id="rows"></tbody></table></div>
+    <p class="row" style="margin-top:12px"><button id="csv" class="btn" type="button">Download CSV</button></p>
+  </section>
+</main>
+<footer><p><a href="../">Invoice tracker</a> · <a href="../set-aside/">Tax set-aside</a> · Not tax advice. Made by 1099 Money.</p></footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

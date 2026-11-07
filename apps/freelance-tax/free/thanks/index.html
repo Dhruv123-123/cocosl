@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your 2027 Freelancer Tax Calendar | 1099 Money</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#14213d">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="top"><a class="logo" href="../../"><span class="mark">1M</span> <span>1099 Money</span></a>
+<nav class="nav"><a href="../../">Calculator</a><a href="../../mileage/">Driver mileage</a><a href="../../compare/">Compare tools</a><a href="../../free/">Free calendar</a></nav></header>
+<main>
+<h1>You're in. Here's your calendar.</h1>
+<p class="lede">It's also on its way to your inbox. Print page 5 and put it where you'll see it.</p>
+<p><a class="btn" href="../../downloads/freelancer-tax-calendar-2027.pdf" download>Download the PDF</a></p>
+<p><b>Bonus:</b> <a href="../../downloads/freelancer-tax-checklist.pdf" download>The Freelancer Tax Checklist</a> (5-page PDF). Everything you do about taxes, in order: once, every payment, monthly, quarterly, year-end and at tax time.</p>
+<p><b>Bonus:</b> <a href="../../downloads/tax-jar-tracker.pdf" download>The Tax Jar Tracker</a> (2-page PDF). Our Tax Jar Challenge on one page: set aside a share of every payment until Jan 15, plus a payments log.</p>
+
+<section class="card signup-box">
+  <p class="kicker">Do this now (2 minutes)</p>
+  <ol>
+    <li>Add the bold dates on page 2 to your phone calendar with a reminder one week before.</li>
+    <li>Run your numbers in the free <a href="../../">quarterly tax calculator</a> so you know what Jan 15 should be.</li>
+    <li>Open a separate savings account for tax money if you don't have one.</li>
+  </ol>
+</section>
+
+<div id="offers"></div>
+<template id="offer">
+<section class="card signup-box">
+  <p class="kicker">Optional · <span data-price></span></p>
+  <h2 data-name></h2>
+  <p data-pitch></p>
+  <p><a class="btn alt" data-url href="#">Take a look</a></p>
+  <p class="tiny">Instant download. 14-day refund if it isn't for you.</p>
+</section>
+</template>
+</main>
+<footer>
+<p>Educational content, not tax, legal or financial advice.</p>
+<p>1099 Money · get paid, keep more, never fear April. <a href="../../about/">About these pages</a> · <a href="../../how-we-make-money/">How we make money</a></p>
+</footer>
+<script type="module">
+import config from '../../config.js';
+import { setupSite } from '../../site.js';
+// The tracker first, then the rest of the ladder; anything still on a REPLACE_ME link stays hidden.
+const tpl = document.getElementById('offer'), box = document.getElementById('offers');
+for (const p of [config.product, ...(config.upsells || [])]) {
+  if (!p || !p.url || p.url.includes('REPLACE_ME')) continue;
+  const n = tpl.content.cloneNode(true);
+  n.querySelector('[data-name]').textContent = p.name;
+  n.querySelector('[data-price]').textContent = p.price;
+  n.querySelector('[data-pitch]').textContent = p.pitch;
+  n.querySelector('[data-url]').href = p.url;
+  box.appendChild(n);
+}
+setupSite();
+</script>
+</body>
+</html>

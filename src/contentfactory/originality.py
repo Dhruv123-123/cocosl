@@ -68,6 +68,13 @@ def _sentences(text: str) -> list[str]:
     return [s.strip().lower() for s in re.split(r"(?<=[.!?])\s+", text or "") if len(s.split()) >= 8]
 
 
+def element_text(value) -> str:
+    """original_element is free text in some packs and {type, detail, chapter} in others."""
+    if isinstance(value, dict):
+        return " ".join(str(value.get(k) or "") for k in ("type", "detail", "what", "chapter")).strip()
+    return str(value or "").strip()
+
+
 def _element(script: dict, home: Path | None) -> str:
     """'footage' | 'chart' | 'planned' | 'none'."""
     segs = _segs(script)
@@ -76,7 +83,7 @@ def _element(script: dict, home: Path | None) -> str:
         return "footage"
     if any(s.get("chart") for s in segs):
         return "chart"
-    if foot or (script.get("original_element") or "").strip():
+    if foot or element_text(script.get("original_element")):
         return "planned"
     return "none"
 
@@ -223,7 +230,7 @@ def register(sub, factory_fn) -> None:
                 groups[a.brand or a.packs[0].parent.name] = from_packs(a.packs)
             else:
                 for d in sorted((f.settings.home / "launch").glob("*/")):
-                    files = sorted(d.glob("*.json"))
+                    files = sorted(d.rglob("*.json"))
                     if files and (not a.brand or d.name == a.brand):
                         groups[d.name] = from_packs(files)
         else:

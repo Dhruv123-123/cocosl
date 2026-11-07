@@ -74,3 +74,21 @@ def test_originality_medium_is_yellow(factory):
     rep = run(factory)
     hits = [f for f in rep.findings if "originality" in f.where]
     assert hits and hits[0].level == "yellow", hits
+
+
+def test_disclosure_honesty_and_facebook_reminder(factory, monkeypatch):
+    from contentfactory.launch_check import HUMAN_WRITTEN_RE
+    assert HUMAN_WRITTEN_RE.search("Script written and fact-checked by a human.")
+    assert HUMAN_WRITTEN_RE.search("Researched and written by a human; sources below")
+    assert not HUMAN_WRITTEN_RE.search("Script drafted with AI help and fact-checked by a person.")
+    brand = factory.brand("money-made-simple")
+    assert "drafted with AI help" in brand.ai_disclosure and brand.scripts_by == "ai_assisted"
+    brand.ai_disclosure = "Visuals made with AI tools. Script written and fact-checked by a human."
+    monkeypatch.setattr(factory, "brands", lambda: {"money-made-simple": brand})
+    rep = run(factory)
+    assert any(f.level == "red" and "ai_disclosure" in f.where for f in rep.findings)
+    brand.scripts_by = "person"
+    rep = run(factory)
+    assert not any("ai_disclosure" in f.where for f in rep.findings)
+    if brand.account("facebook"):
+        assert "AI info" in render_text(rep, 14)

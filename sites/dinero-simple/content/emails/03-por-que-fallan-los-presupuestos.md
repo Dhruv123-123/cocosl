@@ -1,0 +1,30 @@
+---
+order: 3
+day: 3
+subject: Por qué tu último presupuesto murió en la tercera semana
+preheader: No fue falta de fuerza de voluntad. Fue el diseño.
+goal: Enseñar la idea del número semanal; primera mención suave del producto
+---
+Hola,
+
+Si ya intentaste hacer un presupuesto y lo dejaste, esto te puede ayudar: probablemente no fue tu culpa.
+
+Casi todos los presupuestos te piden manejar una docena de categorías todos los días. Súper, comer fuera, diversión, casa, transporte, "otros". Cada cafecito es una decisión. Para la tercera semana del mes, las categorías que el día 1 se veían enormes ya están vacías, no sabes a dónde se fue el dinero y abrir la hoja de cálculo solo te hace sentir mal. Así que lo dejas.
+
+Tres cosas hacen que un presupuesto sí dure:
+
+1. **Menos decisiones.** Un número que vigilar, no doce.
+2. **Revisiones cortas y seguidas.** Cada semana, para que una mala semana sea un problema chico y no un mes arruinado.
+3. **Todo lo que no cambia, en automático.** Los gastos fijos y el ahorro se mueven solos.
+
+Esa es la idea detrás del Día 7 de tu guía: divide tu pago en **gastos fijos, fondos, metas** y **un solo número semanal para gastar**. Los tres primeros van en automático. Tú solo vigilas el cuarto.
+
+Ejemplo (ficticio): Daniela gana $3,050 netos al mes. Después de gastos fijos (incluidos los $200 que le manda a su mamá), fondos y metas, le quedan $832 para gastar. $832 × 12 ÷ 52 = **$192 a la semana**. Súper, comida para llevar, un concierto: todo sale de esos $192. Cuando se acaban, se acabó la semana.
+
+El método completo, con las cuentas: [Cómo hacer un presupuesto que sí vas a mantener](/blog/como-hacer-un-presupuesto/).
+
+**Si vas al día, hoy toca el Día 3:** activa una alerta de saldo bajo, una de compras grandes y una de fecha de pago en cada tarjeta. Diez minutos, gratis, y tus cuentas empiezan a avisarte en lugar de sorprenderte.
+
+El equipo de Dinero Simple
+
+P.D. Convertimos este método en una guía completa con hoja de cálculo que se llama El Presupuesto de 20 Minutos. Te contamos más en unos días. Por ahora, la versión gratis de tu guía es todo lo que necesitas para empezar.

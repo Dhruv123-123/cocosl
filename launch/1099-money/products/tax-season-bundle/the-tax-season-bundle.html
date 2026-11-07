@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Freelancer Tax Season Bundle</title>
+<style>
+  :root{
+    --ink:#14213d; --cream:#f7f3ea; --green:#3cc6a0; --green-d:#1f8f72; --gold:#ff7a45;
+    --muted:#4d566b; --line:#d9d3c3; --paper:#fffdf8; --tint:#e8f7f2; --gold-t:#ffece3;
+  }
+  @page{ size: Letter; margin:0; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#c9cbd3; color:var(--ink);
+    font-family:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size:10.2pt; line-height:1.48; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:8.5in; height:11in; margin:24px auto; background:var(--paper); position:relative;
+    padding:0.7in 0.85in 0.85in; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,.18);
+    page-break-after:always; break-after:page; }
+  .page:last-child{ page-break-after:auto; break-after:auto; }
+  @media print{ html,body{ background:none; } .page{ margin:0; box-shadow:none; } }
+
+  .folio{ position:absolute; left:0.85in; right:0.85in; bottom:0.45in; display:flex;
+    justify-content:space-between; font-size:8pt; color:var(--muted); border-top:1px solid var(--line); padding-top:6px; }
+
+  h1,h2,h3,h4{ font-family:"Inter Display","Inter",system-ui,sans-serif; line-height:1.15; margin:0; }
+  h2{ font-size:24pt; font-weight:800; letter-spacing:-.02em; margin-bottom:6px; }
+  h3{ font-size:13pt; font-weight:700; margin:18px 0 6px; }
+  h4{ font-size:10.5pt; font-weight:700; margin:12px 0 4px; }
+  p{ margin:0 0 9px; }
+  .kicker{ text-transform:uppercase; letter-spacing:.14em; font-size:8pt; font-weight:700; color:var(--green-d); margin-bottom:6px; }
+  .lede{ font-size:11.5pt; color:var(--muted); margin-bottom:12px; }
+  ul,ol{ margin:0 0 10px; padding-left:20px; } li{ margin-bottom:4px; }
+  strong{ font-weight:700; }
+  .num{ font-variant-numeric:tabular-nums; }
+
+  .box{ border-radius:10px; padding:12px 16px; margin:12px 0; }
+  .box.tip{ background:var(--tint); border-left:4px solid var(--green); }
+  .box.warn{ background:var(--gold-t); border-left:4px solid var(--gold); }
+  .box.dark{ background:var(--ink); color:var(--cream); }
+  .box.dark .kicker{ color:var(--gold); }
+  .box p:last-child, .box ul:last-child{ margin-bottom:0; }
+
+  table{ width:100%; border-collapse:collapse; margin:8px 0 12px; font-size:9.5pt; }
+  th{ text-align:left; font-weight:700; background:var(--cream); border-bottom:2px solid var(--ink); padding:5px 8px; }
+  td{ border-bottom:1px solid var(--line); padding:4px 8px; }
+  td.r, th.r{ text-align:right; font-variant-numeric:tabular-nums; }
+  tr.total td{ font-weight:800; border-top:2px solid var(--ink); border-bottom:none; background:var(--tint); }
+  tr.sub td{ font-weight:700; background:#f3f0e8; }
+
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .grid4{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:14px 0; }
+  .card{ border:1.5px solid var(--ink); border-radius:12px; padding:12px; background:#fff; }
+  .card .big{ font-size:20pt; font-weight:800; font-family:"Inter Display","Inter",sans-serif; }
+  .card .lbl{ font-size:8pt; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); font-weight:700; }
+  .pill{ display:inline-block; background:var(--green); color:#fff; font-weight:700; border-radius:999px; padding:1px 9px; font-size:8.5pt; }
+  .step{ display:flex; gap:12px; margin:10px 0; }
+  .step .n{ flex:0 0 30px; height:30px; border-radius:50%; background:var(--ink); color:var(--cream);
+    display:flex; align-items:center; justify-content:center; font-weight:800; }
+  .step .b{ flex:1; }
+  .timer{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin:12px 0 16px; border:1.5px solid var(--ink); border-radius:12px; overflow:hidden; }
+  .timer div{ padding:10px 12px; border-right:1.5px solid var(--ink); background:#fff; }
+  .timer div:last-child{ border-right:none; }
+  .timer .t{ font-weight:800; font-size:16pt; color:var(--green-d); }
+  .timer .h{ font-weight:700; font-size:9.5pt; }
+  .timer .d{ font-size:8.5pt; color:var(--muted); }
+  .formula{ font-family:"JetBrains Mono", ui-monospace, monospace; background:var(--ink); color:var(--cream);
+    padding:10px 14px; border-radius:8px; font-size:10pt; margin:10px 0; }
+  .check li{ list-style:none; position:relative; padding-left:4px; }
+  .check{ padding-left:22px; }
+  .check li::before{ content:""; position:absolute; left:-20px; top:3px; width:12px; height:12px; border:1.5px solid var(--ink); border-radius:3px; }
+  .faq h4{ margin-top:12px; }
+  .blank td{ height:24px; }
+  .toc{ list-style:none; padding:0; margin:12px 0; }
+  .toc li{ display:flex; border-bottom:1px dotted var(--line); padding:6px 0; margin:0; font-size:11pt; }
+  .toc li span:first-child{ flex:1; } .toc li span:last-child{ font-weight:700; }
+
+  /* cover */
+  .cover{ background:var(--ink); color:var(--cream); padding:0.9in; }
+  .cover .tag{ color:var(--gold); letter-spacing:.2em; text-transform:uppercase; font-weight:700; font-size:9pt; }
+  .cover h1{ font-size:58pt; font-weight:900; letter-spacing:-.035em; line-height:.95; margin:24px 0 18px; }
+  .cover h1 em{ font-style:normal; color:var(--green); }
+  .cover .sub{ font-size:15pt; max-width:5.2in; color:#c9d0de; line-height:1.4; }
+  .cover .clock{ position:absolute; right:0.9in; bottom:1.4in; width:3.1in; height:3.1in; }
+  .cover .bottom{ position:absolute; left:0.9in; right:0.9in; bottom:0.8in; display:flex; justify-content:space-between; align-items:flex-end; font-size:9pt; color:#9aa5bd; }
+  .cover .chips{ display:flex; gap:8px; flex-wrap:wrap; margin-top:28px; }
+  .cover .chips span{ border:1px solid #33456b; border-radius:999px; padding:5px 12px; font-size:9pt; color:var(--cream); }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="kicker">Start here</div>
+  <h2>The Freelancer Tax Season Bundle</h2>
+  <p class="lede">Three tools for January to April 15: pay the last 2026 estimate, file the return, and decide whether an S corp is worth it for 2027.</p>
+  <h3>What's in the folder</h3>
+  <table>
+    <tr><th>File</th><th>Use it for</th></tr>
+    <tr><td><strong>2-Quarterly-Tax-Tracker</strong> (spreadsheet + guide)</td><td>Your 2026 income, expenses and miles, the Jan 15 payment, and the 2027 quarters</td></tr>
+    <tr><td><strong>3-Tax-Checklist</strong> (printable)</td><td>What to gather and do before you file</td></tr>
+    <tr><td><strong>S corp check</strong> (pages 2&ndash;3 of this PDF)</td><td>A worked table and a fill-in worksheet; the free online calculator runs your own numbers</td></tr>
+  </table>
+  <h3>Your tax season in five steps</h3>
+  <div class="step"><div class="n">1</div><div class="b"><strong>By Fri Jan 15, 2027:</strong> pay the Q4 2026 estimate. The tracker's Quarterly estimate tab shows a suggested amount.</div></div>
+  <div class="step"><div class="n">2</div><div class="b"><strong>By Mon Feb 1:</strong> clients' 1099-NECs arrive (for 2026, only clients who paid you $2,000 or more). Check them against the tracker's Income log, not the other way round.</div></div>
+  <div class="step"><div class="n">3</div><div class="b"><strong>February and March:</strong> work through the checklist's filing-time section. Mileage for 2026 is priced by date: 72.5&cent; to Jun 30, 76&cent; from Jul 1.</div></div>
+  <div class="step"><div class="n">4</div><div class="b"><strong>Before you file:</strong> run the S corp check (page 2). If it says yes, talk to a CPA before you form anything.</div></div>
+  <div class="step"><div class="n">5</div><div class="b"><strong>By Thu Apr 15:</strong> file 2026, pay any balance, and make the first 2027 estimate. Switch to the 2027 tracker.</div></div>
+  <div class="box warn"><p>Educational tools, not tax, legal or financial advice. Federal figures only; check your state.</p></div>
+  <div class="folio"><span>The Freelancer Tax Season Bundle &middot; 1099 Money</span><span>1 / 3</span></div>
+</div>
+<div class="page">
+  <div class="kicker">S corp check</div>
+  <h2>Is an S corp worth it for you?</h2>
+  <p class="lede">An S corp pays you a salary (with payroll taxes) and the rest as profit (without self-employment tax). It saves money only once profit is high enough to cover the salary rules and the extra costs.</p>
+  <h3>Worked table: single filer, 2026 federal figures, $2,500 a year of extra S corp costs</h3>
+  <table>
+    <tr><th class="r">Profit</th><th class="r">Salary</th><th class="r">Tax as sole prop</th><th class="r">Tax as S corp</th><th class="r">Saving after costs</th></tr>
+    <tr><td class="r">$40,000</td><td class="r">$16,000 (40%)</td><td class="r">$7,427</td><td class="r">$4,175</td><td class="r"><strong>$752</strong></td></tr>
+<tr><td class="r">$40,000</td><td class="r">$24,000 (60%)</td><td class="r">$7,427</td><td class="r">$5,530</td><td class="r"><strong>&minus;$603</strong></td></tr>
+<tr><td class="r">$60,000</td><td class="r">$24,000 (40%)</td><td class="r">$12,037</td><td class="r">$7,450</td><td class="r"><strong>$2,087</strong></td></tr>
+<tr><td class="r">$60,000</td><td class="r">$36,000 (60%)</td><td class="r">$12,037</td><td class="r">$9,486</td><td class="r"><strong>$52</strong></td></tr>
+<tr><td class="r">$80,000</td><td class="r">$32,000 (40%)</td><td class="r">$16,647</td><td class="r">$10,727</td><td class="r"><strong>$3,421</strong></td></tr>
+<tr><td class="r">$80,000</td><td class="r">$48,000 (60%)</td><td class="r">$16,647</td><td class="r">$13,654</td><td class="r"><strong>$493</strong></td></tr>
+<tr><td class="r">$100,000</td><td class="r">$40,000 (40%)</td><td class="r">$22,365</td><td class="r">$15,706</td><td class="r"><strong>$4,159</strong></td></tr>
+<tr><td class="r">$100,000</td><td class="r">$60,000 (60%)</td><td class="r">$22,365</td><td class="r">$19,377</td><td class="r"><strong>$488</strong></td></tr>
+<tr><td class="r">$120,000</td><td class="r">$48,000 (40%)</td><td class="r">$28,462</td><td class="r">$20,694</td><td class="r"><strong>$5,267</strong></td></tr>
+<tr><td class="r">$120,000</td><td class="r">$72,000 (60%)</td><td class="r">$28,462</td><td class="r">$25,099</td><td class="r"><strong>$863</strong></td></tr>
+<tr><td class="r">$150,000</td><td class="r">$60,000 (40%)</td><td class="r">$37,608</td><td class="r">$28,267</td><td class="r"><strong>$6,841</strong></td></tr>
+<tr><td class="r">$150,000</td><td class="r">$90,000 (60%)</td><td class="r">$37,608</td><td class="r">$33,856</td><td class="r"><strong>$1,252</strong></td></tr>
+  </table>
+  <p class="num">From the site's calculator (<code>lib/scorp.js</code>): income tax, self-employment tax, both halves of payroll tax and FUTA, with the 20% QBI deduction. With salary at 40% of profit it starts to pay at about <strong>$35,000</strong> of profit; at 60%, about <strong>$60,000</strong>.</p>
+  <div class="box tip"><p><strong>The salary has to be reasonable</strong> for the work you do (IRS: S corporation compensation). A low salary is what makes the numbers look good and what the IRS checks. Ask a CPA what's reasonable for your field.</p></div>
+  <p>Single filers with profit over $200,000 (or married over $250,000) are outside this table: Additional Medicare Tax and QBI limits change the result.</p>
+  <div class="folio"><span>The Freelancer Tax Season Bundle &middot; 1099 Money</span><span>2 / 3</span></div>
+</div>
+<div class="page">
+  <div class="kicker">S corp check</div>
+  <h2>Your numbers</h2>
+  <p class="lede">Run them in the free calculator at <strong>1099money.netlify.app/s-corp-calculator/</strong>, then copy the results here to take to a CPA.</p>
+  <table>
+    <tr><th>Line</th><th class="r">Amount</th></tr>
+    <tr><td>A. Expected 2027 business profit</td><td class="r">$________</td></tr>
+    <tr><td>B. Reasonable salary for your work (ask a CPA)</td><td class="r">$________</td></tr>
+    <tr><td>C. Extra yearly costs: payroll service, state fees, separate return</td><td class="r">$________</td></tr>
+    <tr><td>D. Tax as a sole proprietor (calculator)</td><td class="r">$________</td></tr>
+    <tr><td>E. Tax as an S corp (calculator)</td><td class="r">$________</td></tr>
+    <tr class="total"><td>F. Saving: D &minus; E &minus; C</td><td class="r">$________</td></tr>
+  </table>
+  <h3>Questions for your CPA</h3>
+  <ul>
+    <li>What salary is reasonable for my work, and how do you support it?</li>
+    <li>What does my state charge an S corp each year (franchise tax, fees)?</li>
+    <li>When would the election take effect, and what's the Form 2553 deadline for that?</li>
+    <li>What changes for my health insurance and retirement contributions?</li>
+  </ul>
+  <div class="box warn"><p>If line F is small, or you aren't sure profit will stay at line A, staying a sole proprietor is usually simpler. The election is easier to make than to undo.</p></div>
+  <div class="folio"><span>The Freelancer Tax Season Bundle &middot; 1099 Money</span><span>3 / 3</span></div>
+</div>
+</body>
+</html>

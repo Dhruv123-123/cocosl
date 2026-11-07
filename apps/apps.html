@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Install the Free Money Apps on Your Phone (No App Store)</title>
+<meta name="description" content="The free money tools that install like apps: a budget, a bill calendar, a tax set-aside for freelancers and the full toolbox. No app store, no account, and they work offline.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="budget/icon-192.png">
+<link rel="apple-touch-icon" href="budget/icon-192.png">
+<link rel="alternate" hreflang="en" href="apps.html">
+<link rel="alternate" hreflang="es" href="es/apps.html">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Are these real apps?","acceptedAnswer":{"@type":"Answer","text":"They are web apps (sometimes called PWAs). They get an icon on your home screen and open full screen like any app, but they install from the browser instead of an app store, so there is no account and nothing to update by hand."}},{"@type":"Question","name":"Where is my data kept?","acceptedAnswer":{"@type":"Answer","text":"In your browser's storage on that device. Nothing you type is sent to a server. Because of that, removing the app or clearing your browser data deletes it, so use each app's export or backup if it has one."}},{"@type":"Question","name":"How do I remove one?","acceptedAnswer":{"@type":"Answer","text":"Like any app: press and hold the icon and choose Remove (iPhone) or Uninstall (Android). On a computer, open the app and use its menu."}}]}</script>
+<style>
+:root{--ink:#0b1d13;--paper:#f4f1e8;--card:#fffdf7;--line:#ddd6c4;--muted:#5b6b61;--gold:#f2b134;--green:#2fbf71}
+@media (prefers-color-scheme:dark){:root{--paper:#0b1d13;--card:#12291b;--ink:#f4f1e8;--muted:#a9b8ae;--line:#24412f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main,footer{max-width:960px;margin:0 auto;padding:24px 16px}
+h1{font-size:clamp(30px,5.5vw,46px);line-height:1.1;margin:8px 0}
+.lede{color:var(--muted);font-size:18px;max-width:640px}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px;padding:0;list-style:none}
+.jump a{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 12px;color:inherit;text-decoration:none;font-size:14px}
+.jump a:hover{border-color:var(--gold)}
+section{margin-top:36px}
+h2{font-size:24px;margin:0 0 4px}
+.brand{color:var(--muted);margin:0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));margin-top:16px}
+a.card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;color:inherit;text-decoration:none}
+a.card:hover,a.card:focus-visible{border-color:var(--gold)}
+a.card h3{font-size:18px;margin:0}
+a.card p{color:var(--muted);margin:6px 0 0;font-size:15px}
+.tag{align-self:flex-start;font-size:12px;font-weight:700;border-radius:999px;padding:2px 8px;margin-bottom:8px;background:var(--gold);color:#0b1d13}
+.tag.free{background:none;border:1px solid var(--green);color:inherit}
+.feature{border:2px solid var(--gold)}
+.pro{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;background:var(--card);border:2px solid var(--gold);border-radius:16px;padding:18px;margin-top:16px}
+.pro p{margin:0;color:var(--muted)}
+[hidden]{display:none!important}
+.install{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin:18px 0 0}
+.install p{margin:0;color:var(--muted);font-size:15px}
+.install .row{display:flex;gap:8px;align-items:center}
+.link{background:none;border:0;color:inherit;font:inherit;text-decoration:underline;cursor:pointer;padding:6px}
+button.btn{border:0;font:inherit;font-weight:700;cursor:pointer}
+.btn{display:inline-block;background:var(--gold);color:#0b1d13;border-radius:999px;padding:10px 18px;font-weight:700;text-decoration:none}
+.search{margin:18px 0 0}
+.search label{display:block;font-weight:700;margin-bottom:6px}
+.search input{width:100%;font:inherit;font-size:17px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.search input:focus{outline:3px solid var(--gold);outline-offset:1px}
+.search-count{color:var(--muted);font-size:14px;margin:6px 0 0;min-height:1em}
+.section-tag{background:none;border:1px solid var(--line);color:var(--muted);font-weight:600}
+.none{color:var(--muted)}
+@media (prefers-color-scheme:dark){.brand a,main p a{color:#9cc4ff}}
+footer{color:var(--muted);font-size:13px;text-align:center}
+footer a{color:inherit}
+div.card.product{display:flex;flex-direction:column;background:var(--card);border:1px dashed var(--line);border-radius:16px;padding:18px}
+.card.product h3{font-size:18px;margin:0}.card.product p{color:var(--muted);margin:6px 0 0;font-size:15px}
+.tag.soon{background:none;border:1px solid var(--line);color:var(--muted)}
+.products{margin-top:32px}.tiny-note{font-size:13px!important}
+.quiz-cta{background:var(--card,#fff);border:1px solid var(--line,#ddd);border-radius:12px;padding:10px 14px;margin:10px 0}
+.apps{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:12px}
+.app{display:grid;grid-template-columns:64px 1fr;gap:12px 14px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
+.app img{border-radius:14px}.app h3{font-size:18px;margin:0}.app p{margin:4px 0 0;color:var(--muted);font-size:15px}
+.app .meta{font-size:13px}.app .btn{grid-column:1/-1;justify-self:start}
+@media (min-width:640px){.app{grid-template-columns:64px 1fr auto;align-items:center}.app .btn{grid-column:auto}}
+.steps{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));margin-top:16px}
+.steps div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}.steps h3{margin:0 0 4px;font-size:17px}.steps p{margin:0;color:var(--muted);font-size:15px}
+.steps .here{border:2px solid var(--gold)}
+details{border-top:1px solid var(--line);padding:10px 0}summary{font-weight:700;cursor:pointer}
+.tag{margin:0 0 0 6px;vertical-align:middle}
+</style>
+</head>
+<body>
+<main>
+  <p class="brand"><a href="./">All free tools</a> · <a href="es/apps.html" hreflang="es" lang="es">En español</a></p>
+  <h1>Put the free tools on your phone</h1>
+  <p class="lede">These tools install like apps, straight from the browser: no app store, no account, nothing to pay. They open full screen, work offline once you've used them, and your numbers stay on your device.</p>
+  <p id="install-here" hidden><button id="install-btn" class="btn" type="button">Install the toolbox</button></p>
+  <section aria-labelledby="h-how">
+    <h2 id="h-how">How to install</h2>
+    <div class="steps" id="steps">
+      <div data-os="ios"><h3>iPhone and iPad</h3><p>Open the app in <b>Safari</b>, tap <b>Share</b> (the square with an arrow), then <b>Add to Home Screen</b> and <b>Add</b>. In Chrome on iPhone it's the Share button in the address bar.</p></div>
+      <div data-os="android"><h3>Android</h3><p>Open the app in <b>Chrome</b>, tap the <b>⋮</b> menu, then <b>Install app</b> or <b>Add to Home screen</b>. Samsung Internet: menu, then <b>Add page to</b>, then <b>Home screen</b>.</p></div>
+      <div data-os="desktop"><h3>Computer</h3><p>In <b>Chrome</b> or <b>Edge</b>, click the install icon at the right end of the address bar (a screen with a down arrow), or the menu, then <b>Install</b>. On a Mac, Safari's <b>File</b> menu has <b>Add to Dock</b>.</p></div>
+    </div>
+  </section>
+  <section aria-labelledby="h-apps">
+    <h2 id="h-apps">The apps</h2>
+    <ul class="apps" id="apps">
+      <li class="app"><img src="budget/icon-192.png" width="64" height="64" alt="">
+        <div><h3>Free Money and Safety Tools</h3><p>Every calculator, tracker, letter and scam check in one place. The tools you've opened work offline.</p>
+        <p class="meta">Works offline</p></div>
+        <a class="btn" href="">Open</a></li>
+      <li class="app"><img src="budget/icon-192.png" width="64" height="64" alt="">
+        <div><h3>Money Made Simple</h3><p>Ten money tools on one home screen: budget, paycheck, bills, debt, savings, bill splitting and a scam check. All ten work offline, with no account.</p>
+        <p class="meta">Works offline</p></div>
+        <a class="btn" href="app/">Open</a></li>
+      <li class="app"><img src="scam-checker/app/icon-192.png" width="64" height="64" alt="">
+        <div><h3>Scam Shield</h3><p>Check a message or link, answer the 12-question &quot;Is this a scam?&quot; checklist, take the red-flag quiz and find where to report, down to your state attorney general. Works offline.</p>
+        <p class="meta">Works offline</p></div>
+        <a class="btn" href="scam-checker/app/">Open</a></li>
+      <li class="app"><img src="budget/icon-192.png" width="64" height="64" alt="">
+        <div><h3>The 20-Minute Budget</h3><p>A monthly budget you keep up in 20 minutes, plus the bill tracker and 0% deal countdown. Your numbers stay on your phone.</p>
+        <p class="meta">Works offline</p></div>
+        <a class="btn" href="budget/">Open</a></li>
+      <li class="app"><img src="budget/bill-calendar/icon-192.png" width="64" height="64" alt="">
+        <div><h3>Bill calendar</h3><p>Every bill this month on a calendar. Tick them off as you pay and send reminders to your phone's calendar.</p>
+        <p class="meta">Works offline</p></div>
+        <a class="btn" href="budget/bill-calendar/">Open</a></li>
+      <li class="app"><img src="freelance-invoices/app/icon-192.png" width="64" height="64" alt="">
+        <div><h3>1099 Money</h3><p>Quarterly estimated tax with the 2026 and 2027 due dates, a mileage log that exports to CSV, and a deduction checklist. Works offline. Not tax advice.</p>
+        <p class="meta">Works offline</p></div>
+        <a class="btn" href="freelance-invoices/app/">Open</a></li>
+      <li class="app"><img src="freelance-invoices/set-aside/icon-192.png" width="64" height="64" alt="">
+        <div><h3>1099 Tax Set-Aside</h3><p>Log each client payment and see how much to save for taxes and what to send the IRS each quarter.</p>
+        <p class="meta">Works offline</p></div>
+        <a class="btn" href="freelance-invoices/set-aside/">Open</a></li>
+    </ul>
+  </section>
+  <section aria-labelledby="h-faq">
+    <h2 id="h-faq">FAQ</h2>
+    <details><summary>Are these real apps?</summary><p>They are web apps (sometimes called PWAs). They get an icon on your home screen and open full screen like any app, but they install from the browser instead of an app store, so there is no account and nothing to update by hand.</p></details>
+    <details><summary>Where is my data kept?</summary><p>In your browser's storage on that device. Nothing you type is sent to a server. Because of that, removing the app or clearing your browser data deletes it, so use each app's export or backup if it has one.</p></details>
+    <details><summary>How do I remove one?</summary><p>Like any app: press and hold the icon and choose Remove (iPhone) or Uninstall (Android). On a computer, open the app and use its menu.</p></details>
+  </section>
+</main>
+<footer><p>Not financial or legal advice. Private by design: no accounts, and the tools run in your browser.</p></footer>
+<script type="module">
+// Highlight the steps for this device, and offer the browser's own install prompt for the toolbox where it exists.
+const ua = navigator.userAgent;
+const os = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) ? 'ios' : /Android/.test(ua) ? 'android' : 'desktop';
+document.querySelector(`[data-os=${os}]`)?.classList.add('here');
+let deferred = null;
+addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferred = e; document.getElementById('install-here').hidden = false; });
+document.getElementById('install-btn').addEventListener('click', async () => { if (!deferred) return; deferred.prompt(); await deferred.userChoice.catch(() => null); deferred = null; document.getElementById('install-here').hidden = true; });
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || ['localhost', '127.0.0.1'].includes(location.hostname))) navigator.serviceWorker.register('sw.js').catch(() => {});
+</script>
+</body>
+</html>

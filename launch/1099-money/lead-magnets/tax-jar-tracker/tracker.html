@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tax Jar Tracker</title>
+<style>
+:root{--ink:#14213d;--cream:#f7f3ea;--coral:#ff7a45;--mint:#3cc6a0;--muted:#56607a;--line:#ddd6c6;--paper:#fffdf8;--tint:#e8f7f1;--coral-t:#fff0e8}
+@page{size:Letter;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#cfc9ba;color:var(--ink);font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:10.2pt;line-height:1.45;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:8.5in;height:11in;margin:24px auto;background:var(--paper);position:relative;padding:.7in .8in .85in;overflow:hidden;page-break-after:always;break-after:page}
+.page:last-child{page-break-after:auto;break-after:auto}
+@media print{html,body{background:none}.page{margin:0}}
+.folio{position:absolute;left:.8in;right:.8in;bottom:.45in;display:flex;justify-content:space-between;font-size:8pt;color:var(--muted);border-top:1px solid var(--line);padding-top:6px}
+h1,h2,h3{line-height:1.15;margin:0}
+h2{font-size:23pt;font-weight:800;letter-spacing:-.02em;margin-bottom:6px}
+h3{font-size:12.5pt;font-weight:700;margin:16px 0 6px;display:flex;align-items:center;gap:8px}
+h3 .when{font-size:8pt;font-weight:700;text-transform:uppercase;letter-spacing:.12em;background:var(--ink);color:var(--cream);border-radius:999px;padding:2px 9px}
+p{margin:0 0 8px}
+.kicker{text-transform:uppercase;letter-spacing:.14em;font-size:8pt;font-weight:700;color:var(--coral);margin-bottom:6px}
+.lede{font-size:11pt;color:var(--muted);margin-bottom:10px}
+.check{list-style:none;padding-left:24px;margin:0 0 8px}
+.check li{position:relative;margin-bottom:5px}
+.check li::before{content:"";position:absolute;left:-22px;top:2px;width:12px;height:12px;border:1.5px solid var(--ink);border-radius:3px;background:#fff}
+.check li small{display:block;color:var(--muted);font-size:8.6pt}
+table{width:100%;border-collapse:collapse;margin:6px 0 10px;font-size:9.4pt}
+th{text-align:left;font-weight:700;background:var(--cream);border-bottom:2px solid var(--ink);padding:5px 8px}
+td{border-bottom:1px solid var(--line);padding:4px 8px;vertical-align:top}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
+.box{border-radius:10px;padding:10px 14px;margin:10px 0}
+.box.tip{background:var(--tint);border-left:4px solid var(--mint)}
+.box.warn{background:var(--coral-t);border-left:4px solid var(--coral)}
+.box p:last-child{margin-bottom:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.cover{background:var(--ink);color:var(--cream);padding:.9in}
+.cover .tag{color:var(--mint);letter-spacing:.2em;text-transform:uppercase;font-weight:700;font-size:9pt}
+.cover h1{font-size:56pt;font-weight:900;letter-spacing:-.035em;line-height:.95;margin:26px 0 18px}
+.cover h1 em{font-style:normal;color:var(--coral)}
+.cover .sub{font-size:14.5pt;max-width:5.6in;color:#d5dbe8;line-height:1.4}
+.cover .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:26px}
+.cover .chips span{border:1px solid #3a4a6e;border-radius:999px;padding:5px 12px;font-size:9pt}
+.cover .boxes{position:absolute;right:.9in;bottom:1.5in;display:grid;gap:14px}
+.cover .boxes div{display:flex;align-items:center;gap:14px;font-size:13pt;font-weight:700}
+.cover .boxes i{width:30px;height:30px;border:3px solid var(--cream);border-radius:6px;display:inline-grid;place-items:center;font-style:normal;color:var(--mint);font-size:20pt}
+.cover .bottom{position:absolute;left:.9in;right:.9in;bottom:.8in;display:flex;justify-content:space-between;font-size:9pt;color:#9aa6c0}
+.jarwrap{display:grid;grid-template-columns:2.3in 1fr;gap:26px;align-items:start;margin-top:8px}
+.log td{height:.285in}
+.log th:nth-child(1){width:.9in}.log th:nth-child(4),.log th:nth-child(5),.log th:nth-child(6){width:1.05in}
+.band{font-size:8pt;fill:#56607a}
+</style>
+</head>
+<body>
+
+<section class="page">
+  <div class="kicker">1099 Money · Tax Jar Challenge · Nov 16, 2026 – Jan 15, 2027</div>
+  <h2>The Tax Jar Tracker</h2>
+  <p class="lede">The rule: from every client payment, move your set-aside percentage into a separate tax account the same day. Colour in a band each time the jar reaches another 10% of your goal.</p>
+  <div class="jarwrap">
+    <svg viewBox="0 0 230 340" width="2.3in" aria-label="A jar with ten bands to colour in">
+<rect x="70" y="18" width="80" height="18" rx="4" fill="#14213d"/>
+<path d="M60 40 h100 v12 q22 8 22 30 v232 q0 14 -14 14 h-116 q-14 0 -14 -14 v-232 q0 -22 22 -30z" fill="#fffdf8" stroke="#14213d" stroke-width="3"/>
+<rect x="38" y="300" width="144" height="22" rx="3" fill="none" stroke="#ddd6c6"/><text class="band" x="190" y="315">10%</text><rect x="38" y="276" width="144" height="22" rx="3" fill="none" stroke="#ddd6c6"/><text class="band" x="190" y="291">20%</text><rect x="38" y="252" width="144" height="22" rx="3" fill="none" stroke="#ddd6c6"/><text class="band" x="190" y="267">30%</text><rect x="38" y="228" width="144" height="22" rx="3" fill="none" stroke="#ddd6c6"/><text class="band" x="190" y="243">40%</text><rect x="38" y="204" width="144" height="22" rx="3" fill="none" stroke="#ddd6c6"/><text class="band" x="190" y="219">50%</text><rect x="38" y="180" width="144" height="22" rx="3" fill="none" stroke="#ddd6c6"/><text class="band" x="190" y="195">60%</text><rect x="38" y="156" width="144" height="22" rx="3" fill="none" stroke="#ddd6c6"/><text class="band" x="190" y="171">70%</text><rect x="38" y="132" width="144" height="22" rx="3" fill="none" stroke="#ddd6c6"/><text class="band" x="190" y="147">80%</text><rect x="38" y="108" width="144" height="22" rx="3" fill="none" stroke="#ddd6c6"/><text class="band" x="190" y="123">90%</text><rect x="38" y="84" width="144" height="22" rx="3" fill="none" stroke="#ddd6c6"/><text class="band" x="190" y="99">100%</text>
+<text x="110" y="336" text-anchor="middle" font-size="9" fill="#14213d" font-weight="700">Jar goal: $______</text></svg>
+    <div>
+      <h3>One step a week</h3>
+      <ul class="check"><li><b>Day 1 · Nov 16</b> Start: 25% of every payment, the same day it arrives</li><li><b>Week 1 · Nov 23</b> Open a separate savings account for tax. Nickname it</li><li><b>Week 2 · Nov 30</b> Find your own %: federal from the table + your state's rate</li><li><b>Week 3 · Dec 7</b> Backfill: your % of payments since Sep 1</li><li><b>Week 4 · Dec 14</b> Decide: % of the whole payment (simple) or of profit</li><li><b>Week 5 · Dec 21</b> Automate: invoice reminder, Friday transfer or bank rule</li><li><b>Week 6 · Dec 28</b> Check the jar against your Jan 15 payment</li><li><b>Week 7 · Jan 4</b> Set up IRS Direct Pay: 1040-ES, tax year 2026</li><li><b>Week 8 · Jan 11</b> Leftover beyond the payment stays for April 15</li><li><b>Jan 15</b> Pay from the jar. Save the confirmation number</li></ul>
+    </div>
+  </div>
+  <h3>Your percentage (2026 federal, single filer, no other income)</h3>
+  <table>
+    <tr><th>Expected profit</th><th class="r">$30,000</th><th class="r">$60,000</th><th class="r">$90,000</th><th class="r">$120,000</th></tr>
+    <tr><td>Federal set-aside</td><td class="r">17.3%</td><td class="r">20.1%</td><td class="r">21.5%</td><td class="r">23.7%</td></tr>
+  </table>
+  <p>Add your state's income tax rate. With a day job, freelance income is taxed on top of your wages, so it's often closer to 30%.
+  Jar goal: your Jan 15 payment (smaller of 90% of 2026 tax or 100% of 2025 tax, 110% if 2025 AGI was over $150,000, minus what you've paid) plus a cushion for April 15.</p>
+  <div class="box tip"><p><b>My jar %:</b> ______ &nbsp;&nbsp; <b>My Jan 15 payment:</b> $______ &nbsp;&nbsp; <b>Tax account:</b> ______________</p></div>
+  <div class="folio"><span>1099 Money · Tax Jar Tracker</span><span>Educational content, not tax advice. 2026 federal figures.</span></div>
+</section>
+
+<section class="page">
+  <div class="kicker">Payments log</div>
+  <h2>Every payment, every set-aside</h2>
+  <p class="lede">One line per client payment. "In the jar" is the payment times your %. Keep a running total and compare it with your goal in week 6.</p>
+  <table class="log">
+    <tr><th>Date</th><th>Client</th><th class="r">Payment</th><th class="r">Jar %</th><th class="r">In the jar</th><th class="r">Jar total</th></tr>
+    <tr><td><i>Example</i></td><td><i>Fictional client</i></td><td class="r"><i>$2,000</i></td><td class="r"><i>25%</i></td><td class="r"><i>$500</i></td><td class="r"><i>$500</i></td></tr>
+    <tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr><tr><td></td><td></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr>
+  </table>
+  <div class="box warn"><p><b>Jan 15, 2027:</b> pay at irs.gov/payments (Direct Pay or your online account). Choose estimated tax, Form 1040-ES, tax year 2026. Whatever stays in the jar is for April 15.</p></div>
+  <div class="folio"><span>1099 Money · Tax Jar Tracker</span><span>Example numbers are fictional, not a promise.</span></div>
+</section>
+
+</body>
+</html>

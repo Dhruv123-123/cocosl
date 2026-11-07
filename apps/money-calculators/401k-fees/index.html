@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>401(k) Fee Checker: What Your Funds Cost in Dollars | Money Made Simple</title>
+<meta name="description" content="Enter the funds in your 401(k) and their expense ratios. See what you pay in fees each year, how much fees could take over 30 years, and the lowest-cost fund in each category in your own plan.">
+<link rel="canonical" href="https://moneymadesimple.netlify.app/calculators/401k-fees/">
+<link rel="alternate" hreflang="en" href="https://moneymadesimple.netlify.app/calculators/401k-fees/">
+<link rel="alternate" hreflang="es" href="https://moneymadesimple.netlify.app/calculators/es/401k-fees/">
+<meta property="og:title" content="401(k) Fee Checker: What Your Funds Cost in Dollars">
+<meta property="og:description" content="Enter the funds in your 401(k) and their expense ratios. See what you pay in fees each year, how much fees could take over 30 years, and the lowest-cost fund in each category in your own plan.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://moneymadesimple.netlify.app/calculators/401k-fees/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0b1d13">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"401(k) fee checker","url":"https://moneymadesimple.netlify.app/calculators/401k-fees/","inLanguage":"en","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"Where do I find my expense ratios?","acceptedAnswer":{"@type":"Answer","text":"In your plan's yearly fee disclosure (often called the 404a-5 notice), or on your 401(k) website next to each fund. It is shown as a percent, like 0.04% or 0.85%."}},{"@type":"Question","name":"What is a good expense ratio?","acceptedAnswer":{"@type":"Answer","text":"Broad index funds often cost under 0.10% a year, while many actively managed funds cost 0.50% to 1% or more. A higher fee has to be earned back by better returns, and most funds don't manage that over long periods."}},{"@type":"Question","name":"Should I switch to the cheapest fund?","acceptedAnswer":{"@type":"Answer","text":"Not automatically. Compare funds in the same category, and look at what each one holds and how it fits your plan. This tool shows costs; it doesn't tell you what to buy. If you have questions, your plan provider or a fee-only fiduciary adviser can help."}},{"@type":"Question","name":"Are there other 401(k) fees?","acceptedAnswer":{"@type":"Answer","text":"Often yes: plan administration and recordkeeping fees, sometimes charged as a flat dollar amount. Your fee disclosure lists them. This checker covers fund expense ratios only."}}]}</script>
+</head>
+<body data-calc="401k-fees" data-root="../">
+<header class="top"><a class="logo" href="../"><span class="mark">MS</span> <span>Money Made Simple calculators</span></a>
+<nav class="nav"><a class="home" href="../es/401k-fees/" hreflang="es">Español</a> <a class="home" data-site href="https://moneymadesimple.netlify.app">Main site</a></nav></header>
+<main>
+
+<h1>401(k) fee checker</h1>
+<p class="lede">Copy each fund, its expense ratio and your balance from your plan's fee disclosure or website. We turn percentages into dollars.</p>
+<div class="layout">
+  <form id="calc-form" class="card" autocomplete="off"><div id="funds"></div>
+       <button type="button" id="add-fund" class="link">+ Add a fund</button>
+       <div class="grid"><label>Added each month, you and employer ($)<input name="monthly" type="number" min="0" step="any" value="500"></label>
+       <label>Years until retirement<input name="years" type="number" min="1" max="60" step="1" value="30"></label>
+       <label>Yearly return before fees (%)<input name="annualReturn" type="number" min="0" max="15" step="any" value="7"></label></div>
+    <button type="button" id="share" class="link">Copy a link to these numbers</button>
+  </form>
+  <section class="card result" aria-live="polite"><div id="result"></div><div id="offers"></div></section>
+</div>
+
+<section class="card signup-box">
+  <h2>Free: The 7-Day Money Reset</h2>
+  <p class="signup-pitch"></p>
+  <form class="signup" name="calculator-signup" method="POST" data-netlify="true" netlify-honeypot="website">
+    <input type="hidden" name="form-name" value="calculator-signup">
+    <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <label class="sr" for="signup-email">Email</label>
+    <input id="signup-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+    <button class="btn">Send it to me</button>
+  </form>
+  <p class="tiny">One useful email a week. Unsubscribe in one click.</p>
+</section>
+<section class="faq"><h2>Questions</h2><h3>Where do I find my expense ratios?</h3><p>In your plan's yearly fee disclosure (often called the 404a-5 notice), or on your 401(k) website next to each fund. It is shown as a percent, like 0.04% or 0.85%.</p>
+<h3>What is a good expense ratio?</h3><p>Broad index funds often cost under 0.10% a year, while many actively managed funds cost 0.50% to 1% or more. A higher fee has to be earned back by better returns, and most funds don't manage that over long periods.</p>
+<h3>Should I switch to the cheapest fund?</h3><p>Not automatically. Compare funds in the same category, and look at what each one holds and how it fits your plan. This tool shows costs; it doesn't tell you what to buy. If you have questions, your plan provider or a fee-only fiduciary adviser can help.</p>
+<h3>Are there other 401(k) fees?</h3><p>Often yes: plan administration and recordkeeping fees, sometimes charged as a flat dollar amount. Your fee disclosure lists them. This checker covers fund expense ratios only.</p></section>
+<p class="more"><a href="../">More calculators</a></p>
+</main>
+<footer>
+<p>Educational tools, not financial, tax or investment advice. Results are estimates from the numbers you enter. Check current rules and rates with the official source before acting.</p>
+<p>Your numbers stay in your browser; nothing you type into a calculator is sent anywhere. Some links are affiliate links.</p>
+<p><a href="../">All calculators</a> · <a href="../embed/">Add these calculators to your site</a></p>
+</footer>
+<script type="module" src="../app.js"></script>
+</body>
+</html>

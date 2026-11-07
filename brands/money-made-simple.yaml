@@ -45,6 +45,11 @@ cadence:
   carousels_per_week: 3
   max_posts_per_day_per_platform: 2
   post_times: ["12:30", "19:00"]
+  # Merged over the defaults (TikTok 18:00, Pinterest 11:00, YouTube Shorts 12:30). Packs are planned one
+  # at a time, so two formats that can share a day on one platform get different minutes: TikTok-only
+  # videos keep 19:00 (the Short is at 18:00) and Sunday long-video pins go at 11:30 (holiday carousels
+  # take 11:00).
+  platform_times: {"tiktok:mid": ["19:00"], "pinterest:long": ["11:30"], "instagram:carousel": ["19:00"], "youtube:long": ["19:00"]}
   timezone: America/New_York
 accounts:
   - {platform: instagram, handle: "@moneymadesimple", formats: [short, carousel, image]}
@@ -67,6 +72,7 @@ products:   # flagship first; ladder and upsell codes: launch/products/UPSELL_PA
   - {name: "The Debt-Free Date Planner", slug: debt-free-date-planner, url: "https://example.gumroad.com/l/debt-free-date", price: 17}
   - {name: "Start Investing With $100 a Month", slug: investing-starter-kit, url: "https://example.gumroad.com/l/start-investing", price: 19}
   - {name: "The Money Made Simple Toolkit (all 5 kits)", slug: money-toolkit-bundle, url: "https://example.gumroad.com/l/toolkit", price: 39}
-ai_disclosure: "Visuals and voice made with AI tools. Script written and fact-checked by a human. Not financial advice."
+ai_disclosure: "Visuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person. Not financial advice."
+scripts_by: ai_assisted   # or person, if you write the scripts yourself (then you may say so in ai_disclosure)
 realistic_synthetic_media: false
 require_human_review: true

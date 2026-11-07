@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>52-Week Savings Challenge Tracker: Free Printable Chart | Money Made Simple</title>
+<meta name="description" content="A free 52-week savings challenge tracker. Save $1,378 the classic way ($1 more each week) or set your own goal. Tick off each week, see if you're ahead or behind, get calendar reminders and print the chart.">
+<meta property="og:title" content="52-week savings challenge tracker">
+<meta property="og:description" content="$1 more each week, $1,378 in a year, or your own goal. Tick weeks off and stay on track. Free.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="alternate" hreflang="en" href="savings-challenge.html">
+<link rel="alternate" hreflang="es" href="reto-ahorro.html">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"52-week savings challenge tracker","applicationCategory":"FinanceApplication","operatingSystem":"Any","inLanguage":"en","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="module" src="lib/embed-page.js"></script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="../" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>52-week challenge</span></a>
+  <a class="badge" href="reto-ahorro.html" hreflang="es" lang="es">Español</a>
+</header>
+<main>
+  <h1 class="page-title">52-week savings challenge</h1>
+  <p class="lede">Save $1 in week 1, $2 in week 2, and so on up to $52. After a year you have $1,378. Or pick your own goal and style. Tick each week off as you move the money to savings. Your progress stays in this browser.</p>
+
+  <form id="setup" class="card deal-form no-print">
+    <label class="full">Style <select name="plan"></select></label>
+    <label>Goal for the year ($) <input name="goal" type="number" min="0" step="1" inputmode="decimal"></label>
+    <label>First week starts <input name="start" type="date"></label>
+    <label class="pick full"><input type="checkbox" name="dollars"> <span>Round to whole dollars</span></label>
+  </form>
+
+  <section id="progress" class="card" aria-live="polite"></section>
+
+  <section class="card">
+    <h2>Tick off each week</h2>
+    <ul id="weeks" class="weeks"></ul>
+    <div class="row no-print" style="margin-top:12px">
+      <button id="ics" class="btn small" type="button">Add weekly reminders to my calendar</button>
+      <button id="print" class="btn ghost small" type="button">Print the chart</button>
+      <button id="reset" class="btn ghost small" type="button">Start again</button>
+    </div>
+  </section>
+
+  <section class="card no-print">
+    <h2>Make it easier</h2>
+    <ul class="plain-list">
+      <li>Keep the money in a separate high-yield savings account so it earns interest and isn't mixed with spending. <a href="../money-calculators/savings-interest/">See what it earns</a>.</li>
+      <li>Set an automatic transfer for the week's amount on payday, then just tick it here.</li>
+      <li>Saving for something? Use the <a href="../money-calculators/emergency-fund/">emergency fund calculator</a> to set your goal, or add it to the <a href="./">20-Minute Budget</a>.</li>
+    </ul>
+  </section>
+
+  <section class="card faq no-print">
+    <h2>Questions</h2>
+    <h3>How much is the 52-week challenge?</h3>
+    <p>The classic version adds up to $1,378: $1 + $2 + … + $52. Set any goal and the weeks scale to it, so a $5,000 goal starts at about $3.63 and ends at about $188.</p>
+    <h3>Which style should I pick?</h3>
+    <p>Classic starts easy. Reverse front-loads the big weeks while you're keen, so the end of the year (and the holidays) is light. Even keeps every week the same, which is easiest to automate.</p>
+    <h3>What if I miss a week?</h3>
+    <p>Just catch up. The tracker shows how far behind you are and a small extra amount a week that clears it by the end. You can also tick off any week you like, in any order.</p>
+  </section>
+</main>
+<footer class="no-print"><p><a href="../">All free tools</a> · <a href="./">Budget</a> · Not financial advice. Nothing you type is sent anywhere. Made by <a id="site-link" href="#">Money Made Simple</a>.</p></footer>
+<script type="module" src="savings-challenge.js"></script>
+</body>
+</html>

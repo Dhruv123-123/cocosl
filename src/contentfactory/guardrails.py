@@ -11,6 +11,7 @@ import re
 from dataclasses import asdict, dataclass
 from datetime import datetime, timedelta, timezone
 
+from . import i18n
 from .config import BrandProfile
 from .db import DB
 
@@ -34,25 +35,44 @@ TESTIMONIAL_PATTERNS = [
     r"\bI lost \d+",
     r"\bI (?:love|swear by|can't live without) (?:this|it)\b",
     r"\bas a (?:real|verified) (?:customer|buyer)\b",
+    # Spanish
+    r"\b(?:yo )?(?:lo |la )?(?:he|llevo|estoy) (?:usado|usando|probado|probando|comprado|pedido)\b",
+    r"\b(?:lo|la) (?:us[eé]|prob[eé]|compr[eé])\b",
+    r"\bme cambi[oó] la vida\b",
+    r"\bbaj[eé] \d+ ?(?:kilos|libras|lbs?)\b",
+    r"\b(?:me encanta|no puedo vivir sin) (?:esto|este|esta|él|ella)\b",
+    r"\bcomo (?:cliente|comprador)a? (?:real|verificad[oa])\b",
 ]
 
 HYPE_PATTERNS = [
     r"\bguarantee[sd]?\b", r"\b100% (?:safe|free|guaranteed)\b", r"\bget rich\b",
     r"\bpassive income (?:for life|forever)\b", r"\bcures?\b", r"\brisk[- ]free\b",
     r"\bmake \$\d[\d,]* (?:a|per) (?:day|week)\b", r"\bdoctors hate\b",
+    # Spanish
+    r"\bgarantizad[oa]s?\b", r"\bte lo garantizo\b", r"\bhazte rico\b", r"\bhacerte rico\b",
+    r"\bdinero f[aá]cil\b", r"\bsin riesgo\b", r"\bingresos pasivos de por vida\b",
+    r"\bgana \$\d[\d,]* (?:al|por) (?:d[ií]a|semana)\b", r"\bcura (?:la|el|tu)\b",
 ]
 
 ENGAGEMENT_BAIT = [
     r"\blike (?:and|&) share or\b", r"\bcomment ['\"]?\w+['\"]? (?:and|to) (?:get|receive)\b.*\bDM\b",
     r"\btag \d+ friends\b", r"\bfollow (?:for|4) follow\b",
+    # Spanish
+    r"\betiqueta a \d+ amig[oa]s\b", r"\bdale like y comparte o\b", r"\bsigo a quien me siga\b",
+    r"\bcomenta ['\"]?\w+['\"]? (?:y|para) (?:recibir|que te)\b.*\b(?:DM|mensaje)\b",
 ]
 
-AFFILIATE_DISCLOSURE = re.compile(r"(#ad\b|#affiliate|affiliate link|paid partnership|I may earn|commission)", re.I)
-AI_DISCLOSURE = re.compile(r"(AI[- ](?:generated|assisted|made|tools)|made with AI|#aigenerated|#ai\b)", re.I)
+AFFILIATE_DISCLOSURE = re.compile(
+    r"(#ad\b|#affiliate|affiliate link|paid partnership|I may earn|commission"
+    r"|#publicidad|#afiliado|enlace de afiliado|enlaces? de afiliados?|colaboraci[oó]n pagada|comisi[oó]n)", re.I)
+AI_DISCLOSURE = re.compile(
+    r"(AI[- ](?:generated|assisted|made|tools)|made with AI|#aigenerated|#ai\b"
+    r"|(?:hech[oa]s?|cread[oa]s?|generad[oa]s?) con (?:ayuda de )?(?:la )?IA|herramientas de IA|#hechoconia|#ia\b)",
+    re.I)
 
 
 def _tokens(text: str) -> list[str]:
-    return re.findall(r"[a-z0-9']+", text.lower())
+    return re.findall(r"[^\W_]+(?:'[^\W_]+)*", text.lower())
 
 
 def shingles(text: str, n: int = 3) -> set[tuple[str, ...]]:
@@ -128,6 +148,22 @@ def check_banned(brand: BrandProfile, text: str) -> Check:
     if hits:
         return Check("brand_rules", "warn", "Uses avoided phrases/topics: " + ", ".join(hits[:5]))
     return Check("brand_rules", "ok", "Follows brand rules")
+
+
+def check_language_review(brand: BrandProfile, post: dict) -> Check | None:
+    """Non-English copy is machine-written in a language the operator may not read:
+    a fluent speaker must sign it off before it goes out. The review gate's native_review pass
+    (`factory review-gate pass <id> native_review --by NAME`) counts, as does the older meta.native_review."""
+    if i18n.is_english(brand):
+        return None
+    meta = post.get("meta") or {}
+    gate = ((meta.get("review") or {}).get("passed") or {}).get("native_review") or {}
+    reviewer = str(meta.get("native_review") or gate.get("by") or "").strip()
+    if reviewer:
+        return Check("language_review", "ok", f"{i18n.locale_of(brand)} copy reviewed by {reviewer}")
+    return Check("language_review", "warn",
+                 f"{i18n.locale_of(brand)} copy needs a native-speaker review before posting "
+                 "(record it with `factory review-gate pass <id> native_review --by NAME`)")
 
 
 def check_assets_licensed(assets: dict) -> Check:
@@ -269,7 +305,8 @@ def check_original_element(post: dict) -> Check | None:
         return Check("original_element", "ok", f"{len(footage)} beat(s) with your own footage")
     if charts:
         return Check("original_element", "ok", f"{len(charts)} chart(s) drawn from this video's numbers")
-    planned = (script.get("original_element") or "").strip()
+    from .originality import element_text
+    planned = element_text(script.get("original_element"))
     if planned:
         return Check("original_element", "block", f"Planned original element not in the video yet: {planned[:160]}. "
                      "Add the footage to a beat (or a chart), then re-render")
@@ -294,6 +331,9 @@ def run_content_checks(db: DB, brand: BrandProfile, post: dict) -> list[Check]:
         check_banned(brand, everything),
         *check_disclosures(brand, caption, post.get("disclosure", ""), has_affiliate),
     ]
+    lang_check = check_language_review(brand, post)
+    if lang_check:
+        checks.append(lang_check)
     if post.get("assets"):
         checks.append(check_assets_licensed(post["assets"]))
     checks.append(check_sameness(db, brand.slug, post))

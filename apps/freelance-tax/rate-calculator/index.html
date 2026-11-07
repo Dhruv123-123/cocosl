@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Freelance Rate Calculator: Hourly Rate from Take-Home Pay (2026) | 1099 Money</title>
+<meta name="description" content="Free freelance and consulting rate calculator: start from the take-home pay you want, add health insurance, retirement and business costs, and get the hourly and day rate you need after 2026 self-employment and income tax.">
+<link rel="canonical" href="https://1099money.netlify.app/rate-calculator/">
+<meta property="og:title" content="Freelance Rate Calculator: what to charge per hour">
+<meta property="og:description" content="Work backwards from take-home pay to your hourly floor, with taxes, benefits and real billable hours built in.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://1099money.netlify.app/rate-calculator/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#14213d">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Freelance rate calculator","url":"https://1099money.netlify.app/rate-calculator/","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I work out my freelance hourly rate?","acceptedAnswer":{"@type":"Answer","text":"Start with the take-home pay you want, add what an employer used to cover (health insurance, retirement) and your business costs, gross it up for self-employment and income tax, then divide by the hours clients will actually pay for in a year."}},{"@type":"Question","name":"How many billable hours does a freelancer have?","acceptedAnswer":{"@type":"Answer","text":"Far fewer than 40 a week. Admin, sales, invoicing and email take a big share, so 20 to 30 billable hours a week over about 46 to 48 working weeks is a common planning range."}}]}</script>
+</head>
+<body>
+<header class="top"><a class="logo" href="../"><span class="mark">1M</span> <span data-brand>1099 Money</span></a>
+<nav class="nav"><a href="../">Calculator</a><a href="../mileage/">Driver mileage</a><a href="../compare/">Compare tools</a><a href="../free/">Free calendar</a></nav></header>
+<main>
+
+<h1>Freelance rate calculator</h1>
+<p class="lede">For freelancers and solo consultants. Start from what you want to take home, add the costs an employer used to cover, and see the hourly and day rate you need after 2026 self-employment and income tax.</p>
+
+<div class="layout">
+  <form id="rate-form" class="card" autocomplete="off" onsubmit="return false">
+    <div class="grid">
+      <label>Take-home pay you want per year ($)<input name="takeHome" inputmode="decimal" value="55000"><small>After tax. What you want to live on.</small></label>
+      <label>Health insurance per year ($)<input name="health" inputmode="decimal" value="6000"><small>0 if you're on a partner's plan.</small></label>
+      <label>Retirement savings per year ($)<input name="retirement" inputmode="decimal" value="5000"><small>What an employer match and your own savings used to be.</small></label>
+      <label>Business costs per year ($)<input name="costs" inputmode="decimal" value="6000"><small>Software, equipment, insurance, fees, coworking.</small></label>
+      <label>Working weeks per year<input name="weeks" inputmode="decimal" value="48"><small>52 minus holidays, vacation and sick days.</small></label>
+      <label>Billable hours per week<input name="hoursPerWeek" inputmode="decimal" value="25"><small>Hours clients pay for. Not admin, sales or email.</small></label>
+      <details class="more-fields"><summary>Tax details</summary>
+        <label>Filing status<select name="status"><option value="single">Single</option><option value="mfj">Married filing jointly (no other household income)</option></select></label>
+        <label>State income tax, rough rate (%)<input name="stateRate" inputmode="decimal" value="0"></label>
+        <label>Hours in a billable day<input name="dayHours" inputmode="decimal" value="6"></label>
+      </details>
+    </div>
+    <button type="button" id="share" class="link">Copy a link to these numbers</button>
+  </form>
+  <section class="card result" aria-live="polite"><div id="result"></div><div id="kit" hidden></div></section>
+</div>
+
+<section class="card signup-box">
+  <h2>Free: the 2027 Freelancer Tax Calendar</h2>
+  <p class="signup-pitch"></p>
+  <form class="signup" name="tax-calendar" method="POST" action="../free/thanks/" data-thanks="../free/thanks/" data-netlify="true" netlify-honeypot="website">
+    <input type="hidden" name="form-name" value="tax-calendar"><input type="hidden" name="source" value="rate-calculator">
+    <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <label class="sr" for="signup-email">Email</label>
+    <input id="signup-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+    <button class="btn">Send me the calendar</button>
+  </form>
+  <p class="tiny">Deadline reminders plus one short email a week. Unsubscribe in one click.</p>
+</section>
+
+<section class="faq"><h2>Setting a freelance rate</h2>
+<h3>Why is the rate so much higher than my old salary per hour?</h3><p>Three things an employer used to pay for are now yours: the employer half of Social Security and Medicare (self-employment tax is 15.3% on 92.35% of profit), benefits such as health insurance and retirement matching, and the hours you work but can't bill. A $55,000 take-home salary works out to about $26 an hour over 2,080 hours. The same take-home as a freelancer, with typical costs and 1,200 billable hours, needs about $75.</p>
+<h3>How many billable hours are realistic?</h3><p>Fewer than you think. Finding clients, proposals, invoicing, email and learning all take time no one pays for. Planning on 20 to 30 billable hours a week over 46 to 48 weeks is common. If you're new, start at the low end.</p>
+<h3>Is this the rate I should charge?</h3><p>It's your floor: the least you can charge and still reach your target. Compare it with what experienced people in your niche charge. If the market pays more, charge more. If it pays less than your floor, sharpen your niche or your offer, or package the work into fixed-price projects, before you cut the rate.</p>
+<h3>Hourly, day rate or project pricing?</h3><p>The hourly floor is the building block. A day rate is it times the hours in a billable day. For projects, estimate the hours, multiply by your rate, and add a buffer for revisions and the unexpected. Many consultants quote by project and use the hourly floor only to check the price.</p>
+<h3>What does this leave out?</h3><p>Credits, other household income, itemized deductions, and the fact that health insurance and retirement contributions are often deductible, which would lower the tax a little. It's built to be slightly conservative. Figures are 2026 federal.</p>
+<p>Next: when the money comes in, see what to pay the IRS each quarter with the free <a href="../">quarterly tax calculator</a>.</p>
+</section>
+</main>
+<footer>
+<p>Educational tool, not tax, legal or financial advice. Estimates use 2026 federal figures (IRS Rev. Proc. 2025-32, SSA wage base), the standard deduction and Schedule C income. Check irs.gov before acting.</p>
+<p>Your numbers stay in your browser; nothing you type is sent anywhere. Some links may be to our own paid products.</p>
+<p><span data-brand>1099 Money</span> · get paid, keep more, never fear April. <a href="../about/">About these pages</a> · <a href="../how-we-make-money/">How we make money</a></p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

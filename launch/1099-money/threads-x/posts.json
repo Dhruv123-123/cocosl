@@ -1,0 +1,378 @@
+[
+ {
+  "n": 1,
+  "date": "2026-11-16",
+  "weekday": "Mon",
+  "format": "numbers",
+  "topic": "rates",
+  "posts": [
+   "$55K salary ≈ $26/hour.\n\nSame take-home as a freelancer ≈ $75/hour.\n\nNot greed. Health insurance, retirement, both halves of payroll tax, business costs, and ~1,200 billable hours instead of 2,080.\n\nNot tax advice. 2026 federal figures."
+  ],
+  "link_reply": "Free rate calculator, no sign-up: 1099money.netlify.app/rate-calculator/",
+  "longest": 238
+ },
+ {
+  "n": 2,
+  "date": "2026-11-17",
+  "weekday": "Tue",
+  "format": "hot-take",
+  "topic": "rates",
+  "posts": [
+   "Your freelance rate isn't too high.\n\nYou're comparing it to a salary that came with health insurance, a 401(k) match, paid vacation and someone else paying half your Social Security."
+  ],
+  "link_reply": null,
+  "longest": 182
+ },
+ {
+  "n": 3,
+  "date": "2026-11-18",
+  "weekday": "Wed",
+  "format": "thread",
+  "topic": "tax",
+  "posts": [
+   "How to work out what to set aside for taxes from every client payment, in 4 steps 🧵",
+   "1. Estimate this year's profit: what clients pay you minus business costs.",
+   "2. Look up the federal tax on that profit. At $60K of profit (single, no other income) it's about $12,000. That's ~20%.",
+   "3. Add your state's rate. Round up.",
+   "4. Every time a client pays, move that % to a separate account the same day. Pay the IRS from it each quarter.\n\nNot tax advice. 2026 federal figures."
+  ],
+  "link_reply": "Free quarterly tax calculator: 1099money.netlify.app",
+  "longest": 149
+ },
+ {
+  "n": 4,
+  "date": "2026-11-19",
+  "weekday": "Thu",
+  "format": "question",
+  "topic": "rates",
+  "posts": [
+   "Freelancers: how many hours a week do you actually bill?\n\nNot work. Bill."
+  ],
+  "link_reply": null,
+  "longest": 73
+ },
+ {
+  "n": 5,
+  "date": "2026-11-20",
+  "weekday": "Fri",
+  "format": "myth-fact",
+  "topic": "tax",
+  "posts": [
+   "Myth: no 1099, no tax.\n\nFact: all freelance income is taxable, with or without a form. The 1099 just tells the IRS what the client paid you."
+  ],
+  "link_reply": null,
+  "longest": 140
+ },
+ {
+  "n": 6,
+  "date": "2026-11-21",
+  "weekday": "Sat",
+  "format": "one-liner",
+  "topic": "invoicing",
+  "posts": [
+   "Write the due date as a date.\n\n\"Due June 30\" gets paid. \"Net 30\" gets counted wrong."
+  ],
+  "link_reply": "Free invoice template (fill in, save as PDF): 1099money.netlify.app/invoice-template/",
+  "longest": 84
+ },
+ {
+  "n": 7,
+  "date": "2026-11-22",
+  "weekday": "Sun",
+  "format": "checklist",
+  "topic": "invoicing",
+  "posts": [
+   "An invoice that gets paid has:\n\n- your name + email\n- client name\n- invoice number\n- invoice date\n- due date (a real date)\n- itemized work\n- total\n- how to pay you\n\nMissing one = a reply asking about it = a week lost."
+  ],
+  "link_reply": "Free invoice template (fill in, save as PDF): 1099money.netlify.app/invoice-template/",
+  "longest": 217
+ },
+ {
+  "n": 8,
+  "date": "2026-11-23",
+  "weekday": "Mon",
+  "format": "numbers",
+  "topic": "rates",
+  "posts": [
+   "20% discount math:\n\n$10,000 → $8,000\nTo get back to $10,000 you need $2,000 more work.\n$2,000 is 25% of $8,000.\n\n20% off = 25% more work.\n30% off = 43% more.\n\nCut scope, not your rate."
+  ],
+  "link_reply": null,
+  "longest": 185
+ },
+ {
+  "n": 9,
+  "date": "2026-11-24",
+  "weekday": "Tue",
+  "format": "thread",
+  "topic": "invoicing",
+  "posts": [
+   "3 messages for a late invoice, copy-paste ready 🧵",
+   "Day 1 overdue:\n\"Hi [name], quick reminder that invoice #[x] for $[amount] was due yesterday. Here's the link again: [link]. Let me know if anything's needed on your side.\"",
+   "Day 7:\n\"Hi [name], following up on invoice #[x], now a week overdue. Could you tell me the date it'll be paid? Happy to contact whoever processes it.\"",
+   "Day 21:\n\"Hi [name], invoice #[x] is 3 weeks overdue. Per our agreement, a late fee of [x] applies from [date] and new work is paused until it's settled. What's the best way to sort this quickly?\"\n\nThe third only works if your contract says it."
+  ],
+  "link_reply": null,
+  "longest": 243
+ },
+ {
+  "n": 10,
+  "date": "2026-11-25",
+  "weekday": "Wed",
+  "format": "hot-take",
+  "topic": "clients",
+  "posts": [
+   "A client who won't pay a 50% deposit is telling you something before the project starts.\n\nListen the first time."
+  ],
+  "link_reply": null,
+  "longest": 112
+ },
+ {
+  "n": 11,
+  "date": "2026-11-26",
+  "weekday": "Thu",
+  "format": "question",
+  "topic": "clients",
+  "posts": [
+   "Happy Thanksgiving to everyone who works for themselves.\n\nWhat's one client habit you're grateful for this year?"
+  ],
+  "link_reply": null,
+  "longest": 112
+ },
+ {
+  "n": 12,
+  "date": "2026-11-27",
+  "weekday": "Fri",
+  "format": "myth-fact",
+  "topic": "tax",
+  "posts": [
+   "Myth: spending before Dec 31 is smart because it's a write-off.\n\nFact: a $1,000 purchase saves roughly $230 of federal tax at $60K profit. You're still out $770.\n\nBuy what the business needs. Not what the deduction needs.\n\nNot tax advice. 2026 federal figures."
+  ],
+  "link_reply": null,
+  "longest": 260
+ },
+ {
+  "n": 13,
+  "date": "2026-11-28",
+  "weekday": "Sat",
+  "format": "one-liner",
+  "topic": "tax",
+  "posts": [
+   "The quarterly tax \"quarters\" are 3, 2, 3 and 4 months long.\n\nThe Jan 15 payment covers Sep–Dec. Check your savings against your fall income now."
+  ],
+  "link_reply": "Free Jan 15 calculator: 1099money.netlify.app/q4/",
+  "longest": 144
+ },
+ {
+  "n": 14,
+  "date": "2026-11-29",
+  "weekday": "Sun",
+  "format": "question",
+  "topic": "tax",
+  "posts": [
+   "Freelancers: what % of each payment do you set aside for taxes?\n\n15? 20? 25? 30+?"
+  ],
+  "link_reply": null,
+  "longest": 81
+ },
+ {
+  "n": 15,
+  "date": "2026-11-30",
+  "weekday": "Mon",
+  "format": "numbers",
+  "topic": "rates",
+  "posts": [
+   "Raise your rate from $75 to $85 (+13%).\n\nLose 10% of your hours.\n\nBefore: 1,200 h × $75 = $90,000\nAfter: 1,080 h × $85 = $91,800\n\nMore money. 120 hours back."
+  ],
+  "link_reply": null,
+  "longest": 157
+ },
+ {
+  "n": 16,
+  "date": "2026-12-01",
+  "weekday": "Tue",
+  "format": "checklist",
+  "topic": "contracts",
+  "posts": [
+   "One-page freelance contract:\n\n- who\n- deliverables + what's NOT included\n- revision rounds\n- timeline\n- price, deposit, due dates\n- late fee + right to pause work\n- when ownership transfers\n- kill fee\n\nNot legal advice. Better than nothing."
+  ],
+  "link_reply": null,
+  "longest": 240
+ },
+ {
+  "n": 17,
+  "date": "2026-12-02",
+  "weekday": "Wed",
+  "format": "thread",
+  "topic": "rates",
+  "posts": [
+   "How to turn your hourly rate into a day rate (without giving away 2 hours a day) 🧵",
+   "A day of client work isn't 8 billable hours. Email, calls, admin and switching tasks eat the edges. ~6 is realistic.",
+   "$75/hour × 6 = $450/day.\n\nCheck: $450 × 4 days × 48 weeks ≈ $86,400. Same target as the hourly rate. That's the point.",
+   "Quote the day rate. Keep the hourly floor to yourself as a check."
+  ],
+  "link_reply": "Free rate calculator, no sign-up: 1099money.netlify.app/rate-calculator/",
+  "longest": 119
+ },
+ {
+  "n": 18,
+  "date": "2026-12-03",
+  "weekday": "Thu",
+  "format": "hot-take",
+  "topic": "tax",
+  "posts": [
+   "The most expensive freelance tax mistake isn't a missed deduction.\n\nIt's spending the tax money."
+  ],
+  "link_reply": null,
+  "longest": 96
+ },
+ {
+  "n": 19,
+  "date": "2026-12-04",
+  "weekday": "Fri",
+  "format": "myth-fact",
+  "topic": "tax",
+  "posts": [
+   "Myth: an LLC lowers your taxes.\n\nFact: a single-member LLC is taxed exactly like a sole proprietor by default. Same Schedule C, same 15.3% self-employment tax.\n\nIt can help with liability. Not with tax."
+  ],
+  "link_reply": null,
+  "longest": 202
+ },
+ {
+  "n": 20,
+  "date": "2026-12-05",
+  "weekday": "Sat",
+  "format": "one-liner",
+  "topic": "pipeline",
+  "posts": [
+   "The best time to look for your next client is while you're too busy to."
+  ],
+  "link_reply": null,
+  "longest": 71
+ },
+ {
+  "n": 21,
+  "date": "2026-12-06",
+  "weekday": "Sun",
+  "format": "question",
+  "topic": "invoicing",
+  "posts": [
+   "How do you get paid by most clients?\n\nBank transfer, card, PayPal, check, something else?"
+  ],
+  "link_reply": null,
+  "longest": 89
+ },
+ {
+  "n": 22,
+  "date": "2026-12-07",
+  "weekday": "Mon",
+  "format": "numbers",
+  "topic": "clients",
+  "posts": [
+   "$90K revenue. One client = $54K (60%).\n\nThey leave → $36K.\n\nSame revenue, biggest client at 30% → lose them → $63K.\n\nOne is a crisis. The other is a slow quarter."
+  ],
+  "link_reply": null,
+  "longest": 165
+ },
+ {
+  "n": 23,
+  "date": "2026-12-08",
+  "weekday": "Tue",
+  "format": "thread",
+  "topic": "tax",
+  "posts": [
+   "What self-employment tax actually is, in 4 posts 🧵",
+   "As an employee you paid 7.65% for Social Security and Medicare. Your employer quietly paid another 7.65%.",
+   "Freelance, you pay both: 15.3%, on 92.35% of your profit. On $60K that's about $8,500, before any income tax.",
+   "Two offsets: you deduct half of it, and it builds your Social Security record.\n\nSet aside for it from the first dollar.\n\nNot tax advice. 2026 federal figures."
+  ],
+  "link_reply": "Free quarterly tax calculator: 1099money.netlify.app",
+  "longest": 158
+ },
+ {
+  "n": 24,
+  "date": "2026-12-09",
+  "weekday": "Wed",
+  "format": "checklist",
+  "topic": "tax",
+  "posts": [
+   "Before Dec 31, freelancers:\n\n- check this year's profit\n- tax savings vs what you'll owe\n- make or plan the Jan 15 payment\n- total your 2026 business expenses\n- count your 2026 business miles\n- chase unpaid invoices\n\nNot tax advice. 2026 federal figures."
+  ],
+  "link_reply": "Free Jan 15 calculator: 1099money.netlify.app/q4/",
+  "longest": 254
+ },
+ {
+  "n": 25,
+  "date": "2026-12-10",
+  "weekday": "Thu",
+  "format": "hot-take",
+  "topic": "rates",
+  "posts": [
+   "\"Exposure\" is a payment term your landlord doesn't accept."
+  ],
+  "link_reply": null,
+  "longest": 58
+ },
+ {
+  "n": 26,
+  "date": "2026-12-11",
+  "weekday": "Fri",
+  "format": "myth-fact",
+  "topic": "invoicing",
+  "posts": [
+   "Myth: an unpaid invoice is a tax write-off.\n\nFact: most freelancers use the cash method. Money you never received was never counted as income, so there's nothing to deduct.\n\nThe protection is a deposit, not a deduction."
+  ],
+  "link_reply": null,
+  "longest": 219
+ },
+ {
+  "n": 27,
+  "date": "2026-12-12",
+  "weekday": "Sat",
+  "format": "question",
+  "topic": "rates",
+  "posts": [
+   "What was your first freelance rate, and what is it now?\n\nNo judgment. It helps people just starting."
+  ],
+  "link_reply": null,
+  "longest": 100
+ },
+ {
+  "n": 28,
+  "date": "2026-12-13",
+  "weekday": "Sun",
+  "format": "one-liner",
+  "topic": "invoicing",
+  "posts": [
+   "Invoice the day you deliver.\n\nEvery day you wait is a day added to the payment clock."
+  ],
+  "link_reply": null,
+  "longest": 85
+ },
+ {
+  "n": 29,
+  "date": "2026-12-14",
+  "weekday": "Mon",
+  "format": "numbers",
+  "topic": "tax",
+  "posts": [
+   "Federal tax set-aside by freelance profit (single, no state):\n\n$40K → ~19%\n$60K → ~20%\n$80K → ~21%\n$100K → ~22%\n\nAdd your state. Round up.\n\nNot tax advice. 2026 federal figures."
+  ],
+  "link_reply": "Free quarterly tax calculator: 1099money.netlify.app",
+  "longest": 181
+ },
+ {
+  "n": 30,
+  "date": "2026-12-15",
+  "weekday": "Tue",
+  "format": "thread",
+  "topic": "rates",
+  "posts": [
+   "Setting 2027 rates? 6 numbers to pull first 🧵",
+   "1. Take-home you want\n2. Health insurance\n3. Retirement savings",
+   "4. Business costs\n5. Weeks you'll really work\n6. Billable hours a week (honestly)",
+   "Add 1–3. Gross up for tax. Add 4. Divide by 5 × 6.\n\nThat's your floor. Charge that or the market rate, whichever's higher. Tell clients 30–60 days ahead."
+  ],
+  "link_reply": "Free rate calculator, no sign-up: 1099money.netlify.app/rate-calculator/",
+  "longest": 153
+ }
+]

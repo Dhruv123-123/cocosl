@@ -17,5 +17,8 @@ def test_brand_runs_end_to_end(factory, fake_render, slug):
     post = factory.db.get("posts", pid)
     assert post["status"] in ("in_review", "blocked")
     if post["status"] == "in_review":
+        from contentfactory.review import pass_stage, pending
+        for stage in pending(post, brand):  # a brand's review_stages (e.g. Dinero Simple's native_review)
+            pass_stage(factory, pid, stage, by="test reviewer")
         factory.approve(pid)
         assert factory.schedule(pid)

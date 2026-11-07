@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>January 15 Estimated Tax Payment Calculator (Q4 2026) | 1099 Money</title>
+<meta name="description" content="Free calculator for the January 15, 2027 estimated tax payment, the 4th payment for 2026 income: what to pay, how much is catch-up for earlier quarters, and the file-by-February-1 alternative.">
+<link rel="canonical" href="https://1099money.netlify.app/q4/">
+<meta property="og:title" content="January 15 Estimated Tax Payment Calculator (Q4 2026)">
+<meta property="og:description" content="What to pay the IRS by January 15, 2027 for your 2026 freelance income. Free, private, no signup.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://1099money.netlify.app/q4/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#14213d">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"January 15 estimated tax payment calculator","url":"https://1099money.netlify.app/q4/","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does the January 15 payment cover?","acceptedAnswer":{"@type":"Answer","text":"It's the 4th and last estimated payment for 2026 income, covering September through December 2026. It is due Friday, January 15, 2027."}},{"@type":"Question","name":"Can I skip the January 15 payment?","acceptedAnswer":{"@type":"Answer","text":"Yes, if you file your 2026 return and pay the whole balance by February 1, 2027. You avoid any penalty for the fourth quarter that way, though not for earlier quarters you underpaid."}},{"@type":"Question","name":"I missed earlier payments. What do I pay now?","acceptedAnswer":{"@type":"Answer","text":"Pay enough by January 15 to bring the year's total up to the full requirement. The penalty on the earlier quarters stops growing once the shortfall is paid, so paying now costs less than waiting until April."}}]}</script>
+</head>
+<body>
+<header class="top"><a class="logo" href="../"><span class="mark">1M</span> <span data-brand>1099 Money</span></a>
+<nav class="nav"><a href="../">Calculator</a><a href="../mileage/">Driver mileage</a><a href="../compare/">Compare tools</a><a href="../free/">Free calendar</a></nav></header>
+<main>
+
+<h1>The January 15 payment calculator</h1>
+<p class="lede">The last estimated payment for your 2026 freelance income is due Friday, January 15, 2027. Enter what you've earned and paid this year to see the amount, how much of it is catching up on earlier quarters, and whether filing early instead makes sense.</p>
+
+<div class="layout">
+  <form id="q4-form" class="card" autocomplete="off" onsubmit="return false">
+    <div class="grid">
+      <label>Freelance profit for all of 2026 ($)<input name="profit" inputmode="decimal" value="60000"><small>Income minus business expenses, January to December. A close estimate is fine.</small></label>
+      <label>Estimated payments already made for 2026 ($)<input name="paidSoFar" inputmode="decimal" value="0"><small>April, June and September payments for tax year 2026. Your IRS online account lists them.</small></label>
+      <label>Filing status<select name="status"><option value="single">Single</option><option value="mfj">Married filing jointly</option></select></label>
+      <details class="more-fields" open><summary>Your 2025 return (for the safe harbor)</summary>
+        <label>2025 total tax ($)<input name="priorYearTax" inputmode="decimal" value="0"><small>Form 1040, "total tax" line. 0 if you don't know.</small></label>
+        <label>2025 AGI ($)<input name="priorYearAgi" inputmode="decimal" value="0"></label>
+      </details>
+      <details class="more-fields"><summary>Also had a W-2 job in 2026?</summary>
+        <label>2026 W-2 wages ($)<input name="w2Wages" inputmode="decimal" value="0"></label>
+        <label>Federal tax withheld in 2026 ($)<input name="withholding" inputmode="decimal" value="0"></label>
+      </details>
+    </div>
+    <button type="button" id="share" class="link">Copy a link to these numbers</button>
+  </form>
+  <section class="card result" aria-live="polite"><div id="result"></div></section>
+</div>
+
+<section class="card signup-box">
+  <h2>Free: the 2027 Freelancer Tax Calendar</h2>
+  <p class="signup-pitch"></p>
+  <form class="signup" name="tax-calendar" method="POST" action="../free/thanks/" data-thanks="../free/thanks/" data-netlify="true" netlify-honeypot="website">
+    <input type="hidden" name="form-name" value="tax-calendar"><input type="hidden" name="source" value="q4">
+    <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <label class="sr" for="signup-email">Email</label>
+    <input id="signup-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+    <button class="btn">Send me the calendar</button>
+  </form>
+  <p class="tiny">Deadline reminders plus one short email a week. Unsubscribe in one click.</p>
+</section>
+
+<section class="faq"><h2>About the January payment</h2>
+<h3>Why is the fourth payment in January?</h3><p>The IRS splits the year unevenly: April 15 covers January to March, June 15 covers April and May, Sept 15 covers June to August, and January 15 covers the last four months, September to December. So the January payment is often the biggest one for people whose income picked up late in the year.</p>
+<h3>How do I pay it?</h3><p>Free at irs.gov/payments with IRS Direct Pay or your IRS online account. Choose "Estimated Tax", Form 1040-ES, and <b>tax year 2026</b>. That last choice is the one people get wrong in January, because it feels like a 2027 payment. Save the confirmation number.</p>
+<h3>Can I skip it?</h3><p>Yes, if you file your 2026 return and pay everything you owe by February 1, 2027 (January 31 is a Sunday). That removes any penalty for the fourth quarter. It doesn't undo a penalty for earlier quarters you underpaid, and it means having every 1099 and your books closed in two weeks, so most freelancers just pay on the 15th.</p>
+<h3>I missed a payment earlier in the year. Now what?</h3><p>The calculator shows the catch-up part separately. The underpayment penalty works like interest on each late amount for each day it's late, so a missed June payment has already cost a little, and paying it now stops it growing. Don't wait for April: the cost keeps running until the shortfall is paid.</p>
+<h3>What if my income was much higher than last year?</h3><p>Use the safe harbor: if your payments for 2026 add up to 100% of your 2025 total tax (110% if your 2025 AGI was over $150,000), you generally owe no penalty, even if 2026's bill is much bigger. Enter your 2025 numbers above and the calculator picks the smaller requirement. You still owe the rest in April.</p>
+<h3>And my state?</h3><p>Most states with an income tax also have a January payment for the prior year, usually on or near January 15. Check your state tax agency's estimated tax page.</p>
+<p>For the other three payments, or to plan 2027, use the <a href="../">quarterly tax calculator</a>.</p>
+</section>
+</main>
+<footer>
+<p>Educational tool, not tax, legal or financial advice. Estimates use 2026 federal figures (IRS Rev. Proc. 2025-32, SSA wage base), Schedule C income, the standard deduction and no credits. Check irs.gov before acting.</p>
+<p>Your numbers stay in your browser; nothing you type is sent anywhere.</p>
+<p><span data-brand>1099 Money</span> · get paid, keep more, never fear April. <a href="../about/">About these pages</a> · <a href="../how-we-make-money/">How we make money</a></p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

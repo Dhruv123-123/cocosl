@@ -37,7 +37,8 @@ def make_post(post_id: int, fmt: str, n: int) -> dict:
 
 @pytest.fixture
 def media_env(home, monkeypatch):
-    for key in ("OPENAI_API_KEY", "ELEVENLABS_API_KEY", "REPLICATE_API_TOKEN", "COMFYUI_URL", "PIPER_MODEL",
+    for key in ("OPENAI_API_KEY", "ELEVENLABS_API_KEY", "REPLICATE_API_TOKEN", "COMFYUI_URL", "PIPER_MODEL", "KOKORO_URL",
+                "OPENAI_TTS_BASE_URL",
                 "FACTORY_MUSIC_DIR"):
         monkeypatch.delenv(key, raising=False)
     settings = Settings.load(home)
@@ -155,6 +156,40 @@ def test_string_id_and_output_subdir(media_env):
         render_post(settings, brand, post)
 
 
+# --------------------------------------------------------------------------- Kokoro / OpenAI-compatible TTS
+def _fake_speech(calls):
+    import io
+    import wave
+
+    def handler(url, headers=None, json=None, timeout=None):
+        calls.append({"url": url, "headers": headers or {}, "json": json})
+        buf = io.BytesIO()
+        with wave.open(buf, "wb") as w:
+            w.setnchannels(1)
+            w.setsampwidth(2)
+            w.setframerate(24000)
+            w.writeframes(b"\x00\x00" * 12000)
+        import httpx
+        return httpx.Response(200, content=buf.getvalue())
+    return handler
+
+
+def test_openai_tts_base_url_override(media_env, monkeypatch, tmp_path):
+    from contentfactory.media import tts
+    settings, brand = media_env
+    settings.tts_provider = "openai"
+    calls = []
+    monkeypatch.setenv("OPENAI_TTS_BASE_URL", "http://tts.local:9000/v1")
+    monkeypatch.setenv("OPENAI_TTS_MODEL", "tts-1")
+    monkeypatch.setattr(tts.httpx, "post", _fake_speech(calls))
+    res = tts.synthesize_segments(settings, brand, ["Hello there."], tmp_path / "b")
+    assert calls[0]["url"] == "http://tts.local:9000/v1/audio/speech" and res.tool == "openai:tts-1"
+    assert "Authorization" not in calls[0]["headers"]  # local server, no key needed
+    monkeypatch.delenv("OPENAI_TTS_BASE_URL")
+    with pytest.raises(tts.ProviderError):  # the real OpenAI endpoint still needs a key
+        tts.OpenAITTS(settings, brand).speak("hi", tmp_path / "c.wav")
+
+
 def _chart_post(post_id: int, fmt: str, n: int) -> dict:
     post = make_post(post_id, fmt, n)
     post["script"]["segments"][1]["chart"] = dict(kind="bars", title="Interest on $10,000 for a year",
@@ -257,3 +292,19 @@ def test_whisper_model_follows_brand_language(monkeypatch):
     res = TTSResult("x", "x", [], [], [], [])
     align_with_whisper(res, "es")
     assert "English-only" in res.notes[0]
+
+
+def test_stock_broll_beat(media_env):
+    import json as _json
+    settings, brand = media_env
+    clip = settings.home / "footage" / "money-made-simple" / "stock" / "b.mp4"
+    clip.parent.mkdir(parents=True, exist_ok=True)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", "testsrc=s=720x1280:d=3",
+                    "-pix_fmt", "yuv420p", str(clip)], check=True)
+    clip.with_suffix(".json").write_text(_json.dumps({"provider": "pexels", "author": "Ana", "license": "Pexels License",
+                                                      "page": "https://pexels.com/v/1", "query": "groceries"}))
+    post = make_post(8, "short", 3)
+    post["script"]["segments"][1]["broll"] = "footage/money-made-simple/stock/b.mp4"
+    assets = render_post(settings, brand, post)
+    lic = [p for p in assets["provenance"] if p["source"] == "licensed" and p["tool"] == "pexels"]
+    assert lic and "Ana" in str(lic[0])

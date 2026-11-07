@@ -6,6 +6,7 @@ is for, how it sounds, how it looks, where it posts and how it makes money.
 """
 from __future__ import annotations
 
+import hashlib
 import os
 import re
 from dataclasses import dataclass, field
@@ -13,7 +14,7 @@ from pathlib import Path
 from typing import Literal
 
 import yaml
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 
 def _load_dotenv(path: Path) -> None:
@@ -38,7 +39,7 @@ class Settings:
     llm_provider: str = "auto"  # auto | anthropic | offline
     anthropic_model: str = "claude-opus-5-5"
     anthropic_effort: str = "medium"
-    tts_provider: str = "auto"  # auto | piper | espeak | elevenlabs | openai | silent
+    tts_provider: str = "auto"  # auto | kokoro | piper | espeak | elevenlabs | openai | silent
     image_provider: str = "auto"  # auto | comfyui | openai | replicate | cards
     public_media_base_url: str = ""  # where rendered files are reachable over HTTPS (needed by Instagram)
     dry_run: bool = True  # never call publishing APIs unless explicitly turned off
@@ -128,7 +129,12 @@ class VoiceStyle(BaseModel):
     persona: str = "a knowledgeable friend"
     tts_voice: str = ""  # provider-specific voice id; must be your own or licensed
     words_per_minute: int = 160
+    piper_model: str = ""  # path to a Piper .onnx voice in the brand's language (overrides PIPER_MODEL)
     banned_phrases: list[str] = Field(default_factory=list)
+
+
+DEFAULT_PLATFORM_TIMES = {"tiktok": ["18:00"], "pinterest": ["11:00"], "youtube:short": ["12:30"]}
+DEFAULT_WEEKLY_CAPS: dict[str, int] = {}  # scouting dropped the 3 Reels/week idea: 6-9 posts a week grows faster
 
 
 class Cadence(BaseModel):
@@ -138,13 +144,42 @@ class Cadence(BaseModel):
     carousels_per_week: int = 3
     max_posts_per_day_per_platform: int = 2
     post_times: list[str] = Field(default_factory=lambda: ["12:30", "18:30"])  # local times
-    platform_times: dict[str, list[str]] = Field(default_factory=dict)  # e.g. {tiktok: ["19:00", "21:00"]}
+    # Local posting times per platform, or per "platform:format" (that wins). Defaults from scouting's
+    # posting-times memo (PR #2): TikTok 6pm, Pinterest 11am, YouTube Shorts 12:30. Anything not listed
+    # uses post_times. A brand file's platform_times entries are merged over these defaults.
+    platform_times: dict[str, list[str]] = Field(default_factory=lambda: dict(DEFAULT_PLATFORM_TIMES))
+    # Optional: at most N posts in any 7 days per "platform:format" (or "platform"), e.g.
+    # {"instagram:short": 3}. Past the cap the scheduler leaves that platform out (the post still goes to
+    # the others); asked for explicitly, it refuses. None by default.
+    platform_weekly_caps: dict[str, int] = Field(default_factory=lambda: dict(DEFAULT_WEEKLY_CAPS))
     timezone: str = "America/New_York"
     # Worker settings for this brand (multi-brand runner)
     daily_at: str = ""            # local HH:MM for the daily ideas+drafts run; "" = DAILY_AT env (07:00)
     daily_ideas: int = 8
     daily_drafts: int = 2         # posts drafted into the review queue per day
     paused: bool = False          # true = the worker skips this brand's daily run (publishing still runs)
+
+    @field_validator("platform_times", mode="after")
+    @classmethod
+    def _merge_times(cls, v: dict) -> dict:
+        return {**DEFAULT_PLATFORM_TIMES, **(v or {})}
+
+    @field_validator("platform_weekly_caps", mode="after")
+    @classmethod
+    def _merge_caps(cls, v: dict) -> dict:
+        return {**DEFAULT_WEEKLY_CAPS, **(v or {})}
+
+    def times_for(self, platform: str, fmt: str | None = None) -> list[str]:
+        return (self.platform_times.get(f"{platform}:{fmt}") if fmt else None) or self.platform_times.get(platform) \
+            or self.post_times
+
+    def weekly_cap(self, platform: str, fmt: str | None = None) -> int | None:
+        v = (self.platform_weekly_caps.get(f"{platform}:{fmt}") if fmt else None)
+        if v is None:
+            v = self.platform_weekly_caps.get(platform)
+        if v is None and fmt == "mid":
+            v = self.platform_weekly_caps.get(f"{platform}:short")
+        return v
 
 
 class AffiliateOffer(BaseModel):
@@ -190,9 +225,12 @@ class BrandProfile(BaseModel):
     avoid_topics: list[str] = Field(default_factory=list)
     subreddits: list[str] = Field(default_factory=list)  # read-only topic signals
     hashtags: list[str] = Field(default_factory=list)
+    highlights: list[str] = Field(default_factory=list)  # optional Instagram highlight titles (≤15 chars)
+    bios: dict[str, str] = Field(default_factory=dict)  # optional hand-written bios: instagram, tiktok, x, threads, youtube_about
     cta: str = "Follow for more."
     link_in_bio: str = ""
-    language: str = "en"
+    language: str = "en"  # ISO 639-1; script copy, on-screen labels, bios and TTS follow it (see i18n.py)
+    region: str = ""  # optional market, e.g. "US" -> locale es-US; also used for trend signals
     visual: VisualStyle = Field(default_factory=VisualStyle)
     voice: VoiceStyle = Field(default_factory=VoiceStyle)
     cadence: Cadence = Field(default_factory=Cadence)
@@ -201,13 +239,44 @@ class BrandProfile(BaseModel):
     affiliates: list[AffiliateOffer] = Field(default_factory=list)
     products: list[dict] = Field(default_factory=list)  # {name, url, price}
     # Compliance switches. The defaults are the safe ones; flipping them is on you.
-    ai_disclosure: str = "Made with AI tools; written and fact-checked by a human."
+    ai_disclosure: str = "Visuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person."
+    # Who writes the scripts. "ai_assisted" (the default: writer.py drafts them, you fact-check) or
+    # "person" (you write them yourself). launch-check turns red if ai_disclosure claims a person wrote
+    # scripts while this says ai_assisted: understating AI use is what platforms and the FTC call deceptive.
+    scripts_by: Literal["ai_assisted", "person"] = "ai_assisted"
+    # Who sends the welcome sequence: the factory's own mailer, or an email platform you built it in
+    # (`factory sequence-export --for sender`). Anything but "factory" makes the worker skip this brand's welcomes.
+    welcome_via: Literal["factory", "sender", "kit"] = "factory"
     realistic_synthetic_media: bool = False  # True if visuals/voices could pass as real people/events
     require_human_review: bool = True
+    # Extra reviews every post of this brand needs before you can approve it: native_review (a fluent
+    # speaker) and/or legal_review (an attorney or tax pro). See `factory review-gate`.
+    review_stages: list[Literal["native_review", "legal_review"]] = Field(default_factory=list)
     own_voice: bool = False  # videos wait for the owner's recorded narration (`factory voice`) before scheduling
 
     def account(self, platform: str) -> PlatformAccount | None:
         return next((a for a in self.accounts if a.platform == platform and a.enabled), None)
+
+
+_BRAND_CACHE: dict[Path, tuple[str, BrandProfile]] = {}
+_YAML_LOADER = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
+
+
+def _load_brand_file(path: Path) -> BrandProfile:
+    """Parse and validate one brand file, cached until its text changes.
+
+    Pages and checks ask for the brands once per post; parsing the YAML every time made the
+    dashboard take seconds with a few hundred posts. Callers get their own copy, so changing
+    one in memory never leaks into the next call."""
+    text = path.read_text()
+    key = hashlib.sha1(text.encode()).hexdigest()
+    hit = _BRAND_CACHE.get(path)
+    if hit is None or hit[0] != key:
+        data = yaml.load(text, Loader=_YAML_LOADER) or {}
+        data.setdefault("slug", path.stem)
+        hit = (key, BrandProfile.model_validate(data))
+        _BRAND_CACHE[path] = hit
+    return hit[1].model_copy(deep=True)
 
 
 def load_brands(brands_dir: Path) -> dict[str, BrandProfile]:
@@ -217,9 +286,7 @@ def load_brands(brands_dir: Path) -> dict[str, BrandProfile]:
     for path in sorted(brands_dir.glob("*.y*ml")):
         if path.name.startswith("_"):
             continue
-        data = yaml.safe_load(path.read_text()) or {}
-        data.setdefault("slug", path.stem)
-        brand = BrandProfile.model_validate(data)
+        brand = _load_brand_file(path.resolve())
         brands[brand.slug] = brand
     return brands
 

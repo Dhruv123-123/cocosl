@@ -19,3 +19,47 @@ jobs:
         env:
           FACTORY_LLM: offline
         run: python -m pytest
+  apps:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Unit tests
+        run: npm test
+      - name: Pages are up to date
+        run: node money-calculators/build.mjs && node scam-checker/build.mjs && node scam-extension/build.mjs && node tools/build-apps-page.mjs && node tools/build-embed-page.mjs && git diff --exit-code -- money-calculators scam-checker scam-extension apps.html es/apps.html embed.html
+  apps-browser:
+    # Real-browser checks for apps/: smoke test (incl. offline for both installable apps),
+    # axe-core accessibility on every hub page in light and dark, the page-weight/tap-target audit,
+    # and Lighthouse (accessibility, best practices and SEO must pass; performance warns).
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install browser test tools
+        run: npm i --no-save --no-audit --no-fund playwright@1.63.0 axe-core@4.10.2 @lhci/cli@0.16.0 && npx playwright install --with-deps chromium
+      - name: Smoke test
+        run: node tools/smoke.mjs
+      - name: Accessibility (axe-core, WCAG 2.1 AA)
+        run: node tools/a11y.mjs
+      - name: Page audit (weight, tap targets, focus)
+        run: node tools/audit.mjs
+      - name: Lighthouse
+        run: npx lhci autorun
+      - name: Keep Lighthouse reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-reports
+          path: apps/.lighthouseci
+          if-no-files-found: ignore

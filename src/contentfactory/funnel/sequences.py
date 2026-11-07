@@ -86,9 +86,22 @@ class Sequence(BaseModel):
 
 
 # ---------------------------------------------------------------- loading
-def load_sequence(settings, brand_slug: str) -> Sequence | None:
-    """The brand's sequence, or None if it has no funnel file / no steps."""
-    cfg = load_funnel(settings, brand_slug)
+def course_path(settings, brand_slug: str, name: str) -> Path:
+    """A brand's extra sequence (an email course): brands/sequences/<brand>.<name>.yaml."""
+    return Path(settings.brands_dir) / "sequences" / f"{brand_slug}.{name}.yaml"
+
+
+def load_sequence(settings, brand_slug: str, name: str = "") -> Sequence | None:
+    """The brand's sequence, or None if it has no funnel file / no steps. With `name`, the extra sequence in
+    brands/sequences/<brand>.<name>.yaml instead (same keys as the welcome part of the funnel file); those
+    are exported for an email provider (`factory sequence-export --sequence <name>`), not sent by the worker."""
+    if name:
+        import yaml
+        path = course_path(settings, brand_slug, name)
+        cfg = (yaml.safe_load(path.read_text()) or {}) if path.exists() else {}
+        cfg.setdefault("name", name)
+    else:
+        cfg = load_funnel(settings, brand_slug)
     if not cfg.get("steps"):
         return None
     data = {k: cfg[k] for k in ("name", "min_gap_hours", "max_late_days", "footer_note", "signoff", "links",
@@ -418,6 +431,9 @@ def run_sequences(factory, now: datetime | None = None, confirm: bool = False, *
             raise KeyError(f"Unknown brand '{slug}'")
         seq = load_sequence(factory.settings, b.slug)
         if seq is None:
+            continue
+        if getattr(b, "welcome_via", "factory") != "factory":  # built in Sender / Kit instead: never double-send
+            result["brands"][b.slug] = {"sequence": seq.name, "handled_by": b.welcome_via}
             continue
         stats = result["brands"].setdefault(b.slug, {"sequence": seq.name, "due": 0, "sent": 0, "failed": 0,
                                                      "dry_run": 0, "skipped": 0})

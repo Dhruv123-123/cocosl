@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Freelance Rate Calculator: What Should I Charge per Hour? | 1099 Money</title>
+<meta name="description" content="Work out your freelance hourly rate from the take-home pay you want: self-employment and income tax, health insurance, retirement, business costs, time off and billable hours. Day and weekly rates too. Free and private.">
+<meta property="og:title" content="What should you charge as a freelancer?">
+<meta property="og:description" content="Your hourly, day and weekly rate from the take-home pay you want, with taxes, health insurance and unbillable hours counted. Free.">
+<meta name="theme-color" content="#14213d">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Freelance rate calculator","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I work out my freelance hourly rate?", "acceptedAnswer": {"@type": "Answer", "text": "Start from the take-home pay you want, add the taxes an employer would otherwise pay part of (self-employment tax is 15.3% on 92.35% of profit), health insurance, retirement savings and business costs, then divide by the hours you can actually bill. Most freelancers bill 50% to 70% of the hours they work."}}, {"@type": "Question", "name": "Why is my rate so much higher than my old hourly wage?", "acceptedAnswer": {"@type": "Answer", "text": "An employer pays half of Social Security and Medicare, your health insurance, paid time off and your equipment. As a freelancer you pay all of that from your rate, and only some of your working hours are billable, so a rate around double your old hourly wage is common."}}, {"@type": "Question", "name": "What counts as billable hours?", "acceptedAnswer": {"@type": "Answer", "text": "Time a client pays for. Finding work, proposals, invoicing, admin, learning and unpaid revisions are not billable. If you are not sure, track a normal week: the share you could put on an invoice is your billable percentage."}}, {"@type": "Question", "name": "Should I charge by the hour or by the project?", "acceptedAnswer": {"@type": "Answer", "text": "Use this hourly rate to price projects: estimate the hours, add 20% for surprises, and multiply. Quoting a project price instead of hours lets you keep the gain when you work faster."}}]}</script>
+<script type="module" src="lib/embed-page.js"></script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="./" style="color:inherit;text-decoration:none"><span class="mark">1099</span><span>What to charge</span></a>
+  <span class="badge">Free</span>
+</header>
+<main>
+  <h1 class="page-title">What should you charge per hour?</h1>
+  <p class="lede">Start from the take-home pay you want. We add self-employment and income tax, health insurance, retirement savings, business costs and a cushion for slow months, then divide by the hours you can actually bill. Nothing you type leaves this browser.</p>
+
+  <form id="rate" class="card deal-form">
+    <label class="full">Take-home pay you want a year, after tax ($) <input name="takeHome" inputmode="decimal"></label>
+    <label>Business costs a month: software, equipment, insurance, coworking ($) <input name="costs" inputmode="decimal"></label>
+    <label>Health insurance a month ($) <input name="health" inputmode="decimal"></label>
+    <label>Retirement savings a month, pre-tax ($) <input name="retire" inputmode="decimal"></label>
+    <label>Weeks off a year: vacation, holidays, sick days <input name="weeksOff" type="number" min="0" max="40"></label>
+    <label>Hours you work in a week <input name="hours" inputmode="decimal"></label>
+    <label>Share of those hours you can bill (%) <input name="billable" inputmode="decimal"></label>
+    <label>Cushion for slow months and late payers (%) <input name="buffer" inputmode="decimal"></label>
+    <label>Your federal tax bracket <select name="bracket" id="bracket"></select></label>
+    <label>State income tax rate (%) <input name="stateRate" inputmode="decimal"></label>
+    <label class="full">Your rate now, to compare ($ an hour, optional) <input name="current" inputmode="decimal" placeholder="e.g. 50"></label>
+  </form>
+
+  <section id="result" class="card" aria-live="polite"></section>
+  <ul id="tips" class="warnings"></ul>
+
+  <section class="card">
+    <h2>Next: get paid on time</h2>
+    <p>Track invoices, late fees and polite reminders with the free <a href="./">invoice tracker</a>, and put the tax part of every payment aside with the <a href="set-aside/">quarterly tax set-aside app</a>.</p>
+  </section>
+
+  <section class="card faq">
+    <h2>Questions</h2>
+    <h3>How do I work out my freelance hourly rate?</h3>
+    <p>Start from the take-home pay you want, add the taxes an employer would otherwise pay part of (self-employment tax is 15.3% on 92.35% of profit), health insurance, retirement savings and business costs, then divide by the hours you can actually bill. Most freelancers bill 50% to 70% of the hours they work.</p>
+    <h3>Why is my rate so much higher than my old hourly wage?</h3>
+    <p>An employer pays half of Social Security and Medicare, your health insurance, paid time off and your equipment. As a freelancer you pay all of that from your rate, and only some of your working hours are billable, so a rate around double your old hourly wage is common.</p>
+    <h3>What counts as billable hours?</h3>
+    <p>Time a client pays for. Finding work, proposals, invoicing, admin, learning and unpaid revisions are not billable. If you are not sure, track a normal week: the share you could put on an invoice is your billable percentage.</p>
+    <h3>Should I charge by the hour or by the project?</h3>
+    <p>Use this hourly rate to price projects: estimate the hours, add 20% for surprises, and multiply. Quoting a project price instead of hours lets you keep the gain when you work faster.</p>
+    <h3>How is this worked out?</h3>
+    <p>Self-employment tax is 15.3% on 92.35% of profit (the 12.4% Social Security part stops at the 2026 wage base of $184,500). Income tax is at your bracket on profit after half of self-employment tax, health insurance, pre-tax retirement savings and the 20% qualified business income deduction; state tax is a flat rate on the same base. Real returns have credits, other income and several brackets, so treat it as a planning number. The rate is rounded up to the next $5.</p>
+  </section>
+</main>
+<footer><p>General information, not tax advice. Nothing you type is sent anywhere. Made by <a data-site href="https://1099money.netlify.app">1099 Money</a>.</p></footer>
+<script type="module" src="rate.js"></script>
+</body>
+</html>

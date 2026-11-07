@@ -1,0 +1,207 @@
+# Funnel file for Scam Decoded: lead magnet and welcome sequence.
+# Loaded by contentfactory.funnel (brandfunnel.py). Edit the copy freely, then check it with
+#   factory sequence-check scam-decoded       (funnel.sequences.validate_sequence)
+#   factory sequence-preview scam-decoded     (renders every email to output/.../preview/)
+# Emails go only to confirmed subscribers, at most one per run, never the same step twice.
+#
+# No launch prices or dates here on purpose: Sender (the planned sending tool) has no date conditional,
+# so every line has to stay true whenever someone signs up. The kit is pitched at its normal price.
+#
+# BEFORE GOING LIVE
+#   1. Replace the kit's example Gumroad link in brands/scam-decoded.yaml (products) and sites/scam-decoded/site.json.
+#   2. Check every line under claims_to_verify against its source.
+
+lead_magnet:
+  title: The Scam-Proof Checklist
+  url: https://scamdecoded.netlify.app/downloads/the-scam-proof-checklist.pdf
+  pitch: "A free, printable 2-page checklist: the 10-minute setup that blocks most identity theft, the 3 rules that beat most scam calls and texts, and the first-hour plan if something goes wrong."
+  sections:
+    - heading: "Tonight: 10 minutes, $0"
+      items:
+        - Freeze your credit at Equifax, Experian and TransUnion. It's free and doesn't change your score.
+        - Pick a family safe word. Say it out loud, never text it.
+        - Turn on alerts for every transaction on every bank account and card.
+    - heading: "This week: your phone and email"
+      items:
+        - Add a carrier account PIN and number lock, so nobody can move your number.
+        - Give your email a long unique password and its strongest sign-in option.
+        - Use a different password everywhere, starting with bank, email and phone carrier.
+        - Turn on spam call filtering in your phone's settings or your carrier's app.
+    - heading: "The three rules"
+      items:
+        - "Call back: hang up on any urgent call about money and call a number you look up yourself."
+        - "No strange payments: nobody real asks for gift cards, wires, crypto or payment apps to strangers."
+        - "No codes: never read a one-time code to anyone who contacted you."
+    - heading: "If it happens: the first hour"
+      items:
+        - Call your bank or card company on the number on your card and ask them to stop the payment.
+        - Change passwords, email first, from a device the scammer never touched.
+        - Report it at ReportFraud.ftc.gov, and at IdentityTheft.gov if your identity was used.
+
+# ----------------------------------------------------------------- welcome sequence
+name: welcome
+min_gap_hours: 20       # never two sequence emails to one person within 20 hours
+max_late_days: 3        # if a step is 3+ days overdue (e.g. after downtime), skip it instead of sending late
+signoff: "Stay sharp,\nScam Decoded"
+footer_note: "General education, not legal or financial advice. Example messages, names and numbers are made up. Written with help from AI tools and fact-checked by a person."
+
+vars:
+  product_name: The Family Scam-Proofing Kit
+  price: "$9"
+
+links:
+  checklist: freebie
+  kit: https://scamdecoded.netlify.app/kit/
+  checker: https://scamdecoded.netlify.app/checker/
+  report: https://reportfraud.ftc.gov/
+  ic3: https://www.ic3.gov/
+
+steps:
+  - day_offset: 0
+    subject: "Your Scam-Proof Checklist is here"
+    preheader: "10 minutes tonight blocks most identity theft. Start at the top."
+    cta_url_key: checklist
+    cta_label: Open the checklist
+    body_markdown: |
+      Hi,
+
+      Thanks for confirming. Here's your checklist: **[The Scam-Proof Checklist]({link:checklist})**.
+
+      It's two pages. You don't need to do it all at once:
+
+      1. **Tonight (10 minutes):** the three things at the top. A credit freeze, a family safe word and account alerts.
+      2. **This week:** your phone and email, because they're the keys to everything else.
+      3. **Keep:** the three rules and the first-hour plan. Print them, or save them where you'll find them in a panic.
+
+      Over the next week I'll send four short emails: the three tells every scam shares, how to set up a safe word that actually works, and what to do in the first hour if something goes wrong. After that, it's one email a week about the scam that's going around.
+
+      Not sure about a message right now? Paste it into the [free scam checker]({link:checker}). It runs in your browser and sends nothing anywhere.
+
+      If you'd rather not get these, the unsubscribe link at the bottom works with one click.
+
+      {signoff}
+
+  - day_offset: 1
+    subject: "Every scam has the same 3 tells"
+    preheader: "Rush, secrecy, and a strange way to pay. Two of three? Stop."
+    cta_url_key: checklist
+    cta_label: Open the checklist
+    body_markdown: |
+      Hi,
+
+      Scams change their story every month: tolls, packages, the bank, the IRS, a grandchild, a job. The shape underneath barely changes. Look for three things:
+
+      - **Rush.** Today, within the hour, before your account is closed. Pressure is there to stop you checking.
+      - **Secrecy.** Don't tell your family, don't tell the bank, stay on the line. A real problem survives a second opinion.
+      - **A strange way to pay.** Gift cards, a wire, crypto, a Bitcoin ATM, a payment app to a stranger, cash to a courier. The FTC says scammers ask for these because the money is hard to get back.
+
+      **See two of the three? Stop.** Hang up, close the tab, and check it yourself, using a number or website you look up, not the one they gave you.
+
+      Try it on the next odd text you get. Once you've seen the pattern, you'll spot it everywhere.
+
+      {signoff}
+
+  - day_offset: 3
+    subject: "A safe word that actually works"
+    preheader: "Voices can be copied now. One word, said out loud, settles it."
+    cta_url_key: checklist
+    cta_label: Open the checklist
+    body_markdown: |
+      Hi,
+
+      Scammers can copy a voice from a short clip online. The FBI suggests families agree on a secret word or phrase to check who's really calling. Here's how to make one work:
+
+      1. **Make it easy to remember and hard to guess.** Not a pet's name, street or birthday. Two odd words work well: "purple toaster".
+      2. **Say it out loud. Never text, email or post it.** Don't write it on the fridge.
+      3. **Tell everyone who might call in a panic:** parents, grandparents, the sibling who travels.
+      4. **Use it.** Anyone who calls upset and asking for money gets one question: "What's our word?" No word means hang up and call them back on the number you already have.
+      5. **Practice once.** Call from the next room with a fake emergency and let them ask. It feels silly for ten seconds, and then it sticks.
+
+      The word doesn't replace the call-back rule. Even with the right word, nobody in your family needs gift cards or a wire.
+
+      {signoff}
+
+  - day_offset: 5
+    subject: "If it happens: the first hour"
+    preheader: "Bank first, then passwords, then reports. Speed matters more than shame."
+    cta_url_key: report
+    cta_label: Report a scam to the FTC
+    body_markdown: |
+      Hi,
+
+      If you, or someone you love, has already paid, clicked or shared something, the first hour matters. Save this email.
+
+      1. **Call your bank or card company** on the number on the back of your card. Ask them to stop or reverse the payment. If you used a gift card or payment app, call that company too.
+      2. **Change passwords, email first,** from a device the scammer never touched, and turn on two-step sign-in.
+      3. **Freeze your credit** at Equifax, Experian and TransUnion if you shared personal details. It's free.
+      4. **Report it** at [ReportFraud.ftc.gov]({link:report}). If it happened online, report it to the FBI at [ic3.gov]({link:ic3}) as well. If your identity was used, go to IdentityTheft.gov for a recovery plan.
+      5. **Watch for the second scam.** People who've lost money often get calls offering to "recover" it for a fee. That's a scam too.
+
+      And if it happened to you: it's not about being gullible. These are professionals who do this all day. Telling someone quickly is the smartest thing you can do.
+
+      {signoff}
+
+  - day_offset: 7
+    subject: "Scam-proof the whole family in one evening"
+    preheader: "The kit: a family plan, credit freezes for everyone, and fridge and wallet cards."
+    cta_url_key: kit
+    cta_label: "See what's in the kit"
+    body_markdown: |
+      Hi,
+
+      That's the welcome series done. From here it's one email a week about the scam that's going around.
+
+      One last thing. The checklist covers you. If you're the person your family calls about this stuff, our own product, **{product_name}**, covers everyone else:
+
+      - A family plan page: your safe word, who to call first, and the numbers that matter
+      - A credit freeze tracker for every family member, kids included
+      - An account lockdown checklist, a "before you send money" check and the first 60 minutes plan
+      - A fridge card and wallet cards for parents, plus an incident log if something goes wrong
+
+      It's **{price}**, a printable PDF, and if it's not what you expected there's a 14-day refund.
+
+      [See what's in the kit]({link:kit})
+
+      If you don't need it, no problem at all. The weekly emails stay free.
+
+      {signoff}
+
+# ----------------------------------------------------------------- sales pages
+products:
+  - slug: family-scam-proofing-kit
+    match: "Family Scam-Proofing Kit"
+    name: The Family Scam-Proofing Kit
+    headline: Make your whole family a hard target in one evening
+    subhead: "A printable kit: a family plan with your safe word, a credit freeze tracker for everyone, an account lockdown checklist, and fridge and wallet cards."
+    price: "$9"
+    includes: "Printable PDF · instant download"
+    problem_title: Why families get hit
+    problem:
+      - Scammers don't need to fool everyone. They need one person in a hurry, which is why they call grandparents and text teenagers.
+      - Most families have never talked about what to do, so the first plan gets made in a panic.
+    for_who:
+      - You're the person your family calls when something looks off
+      - You have kids, teens or parents you want covered too
+    not_for:
+      - You want a service that monitors your accounts for you. This is a printable kit you set up yourself
+    faq:
+      - {q: "What format is it?", a: "A printable PDF you download right after purchase."}
+      - {q: "Is this legal or financial advice?", a: "No. It's general education and a set of checklists for your own family."}
+    refund: "Not what you expected? Email {support} within 14 days of purchase for a full refund."
+    disclaimer: "General education, not legal or financial advice. Example messages, names and numbers are made up."
+    ai_disclosure: "This kit was made with help from AI tools, then checked and edited by a person."
+
+# ----------------------------------------------------------------- facts used above (verify before sending)
+claims_to_verify:
+  - claim: "Credit freezes at Equifax, Experian and TransUnion are free and don't affect your credit score."
+    source: https://consumer.ftc.gov/articles/what-know-about-credit-freezes-fraud-alerts
+  - claim: "Scammers ask for gift cards, wires, crypto and payment apps because the money is hard to get back."
+    source: https://consumer.ftc.gov/articles/how-avoid-scam
+  - claim: "The FBI suggests families create a secret word or phrase to verify identity, because voices can be cloned."
+    source: https://www.ic3.gov/PSA/2024/PSA241203
+  - claim: "Report fraud to the FTC at ReportFraud.ftc.gov and internet crime to the FBI at ic3.gov; IdentityTheft.gov gives a recovery plan."
+    source: https://reportfraud.ftc.gov/ and https://www.ic3.gov/ and https://www.identitytheft.gov/
+  - claim: "'Recovery' offers after a scam are often a second scam."
+    source: https://consumer.ftc.gov/articles/what-do-if-you-were-scammed
+  - claim: "Forwarding spam texts to 7726 (SPAM) reports them to your carrier (in the checklist)."
+    source: https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages

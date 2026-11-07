@@ -1,0 +1,93 @@
+// Spanish text for the checker's results. English lives next to the rules in scan.js.
+// Uses tú to match the Dinero Simple voice. Have a native speaker review before promoting it.
+export const ES = {
+  signals: {
+    'gift-card': ['Pide pago con tarjetas de regalo', 'Ninguna empresa, agencia del gobierno o compañía de servicios acepta tarjetas de regalo como pago. Es una estafa.'],
+    'crypto-payment': ['Pide pagar o "invertir" con criptomonedas', 'Pedir pagos en cripto o en un cajero de bitcoin es una de las estafas más comunes. Las agencias reales nunca lo piden.'],
+    'p2p-payment': ['Pide pago por Zelle, Cash App, Venmo o transferencia', 'Estos pagos son como efectivo: una vez enviados, es muy difícil recuperarlos. Solo págale a gente que conoces en persona.'],
+    'code-request': ['Te pide compartir un código de verificación', 'Nunca leas ni reenvíes un código de un solo uso. Así es como roban tus cuentas.'],
+    credentials: ['Pide contraseña, NIP, número de Seguro Social o de tarjeta', 'Las empresas reales nunca piden tu contraseña completa, NIP o número de Seguro Social por mensaje o correo.'],
+    urgency: ['Presión para actuar ya', 'Los estafadores te apuran para que no te detengas a verificar. Un problema real seguirá ahí después de llamar al número oficial.'],
+    threat: ['Amenaza con arresto, demanda o cuenta bloqueada', 'Las agencias del gobierno no amenazan con arrestos por mensaje, y los bancos no cierran cuentas por un toque que no hiciste.'],
+    prize: ['Dice que "ganaste" algo en lo que no participaste', 'No puedes ganar una lotería o sorteo en el que no participaste, y los premios reales nunca cobran una tarifa.'],
+    delivery: ['Problema con un paquete, con tarifa o enlace', 'USPS, UPS y FedEx no te piden por mensaje una tarifa de reenvío. Rastrea tus paquetes en la app o sitio oficial.'],
+    toll: ['Mensaje de peaje sin pagar', 'Los mensajes de peajes sin pagar son una de las estafas más comunes ahora. Revisa tu cuenta solo en la app o sitio oficial de tu agencia de peaje.'],
+    refund: ['Reembolso o pago en exceso inesperado', 'Los reembolsos falsos terminan contigo devolviendo dinero. Revisa tu cuenta directamente, no desde el mensaje.'],
+    job: ['Oferta de trabajo demasiado buena', 'Los trabajos que pagan por dar "me gusta", reseñas o tareas simples, o que te piden pagar primero, son estafas.'],
+    investment: ['Ganancias garantizadas u "oportunidad de inversión"', 'Nadie puede garantizar ganancias. Los "mentores" que te llevan a una app de trading son estafadores.'],
+    'remote-access': ['Te pide instalar un programa de acceso remoto', 'Los estafadores usan AnyDesk, TeamViewer y apps similares para tomar control de tu computadora y tu banco.'],
+    'tech-support': ['Falso soporte técnico o alerta de virus', 'Microsoft, Apple y los antivirus no te llaman ni te escriben por virus. Cierra el mensaje y no llames al número.'],
+    'wrong-number': ['Mensaje amistoso de "número equivocado"', 'Un mensaje de número equivocado que se vuelve amistad y luego inversión en cripto es una estafa larga. No respondas.'],
+    'reply-to-activate': ['Te pide responder para activar el enlace', 'Responder "S" o "1" le confirma al estafador que tu número funciona y activa su enlace. No respondas.'],
+    'move-chat': ['Quiere pasar la conversación a WhatsApp o Telegram', 'Los estafadores te sacan de la plataforma para que su protección contra fraude no los alcance.'],
+    'fraud-alert-callback': ['Una "alerta de fraude" que dice que un agente te llamará', 'Las alertas falsas preparan una llamada de un "agente" que te convence de mover tu dinero. Cuelga y llama al número de tu tarjeta.'],
+    'ssn-suspended': ['Dice que tu número de Seguro Social está suspendido', 'Los números de Seguro Social nunca se suspenden. Solo los estafadores dicen eso.'],
+    'generic-greeting': ['Saludo genérico en vez de tu nombre', 'Las empresas donde tienes cuenta suelen usar tu nombre.'],
+    'verify-account': ['Te pide "verificar" o "confirmar" tu cuenta con un enlace', 'Entra a la app de la empresa o escribe tú mismo su dirección web en lugar de usar el enlace.'],
+    secrecy: ['Te pide guardar el secreto o no decirle a tu banco', 'Que te pidan no decirle a nadie, ni a tu banco, es señal clásica de estafa.'],
+    'romance-money': ['Alguien que conociste en línea necesita dinero', 'Nunca envíes dinero ni cripto a alguien que solo conoces en línea, aunque lleven mucho tiempo hablando.'],
+    government: ['Dice ser el IRS, el Seguro Social, Medicare u otra agencia', 'El IRS y el Seguro Social te contactan primero por correo postal. Nunca exigen pago por mensaje, tarjeta de regalo o cripto.'],
+    'money-amount': ['Menciona una cantidad que debes o que te ofrecen', 'Revisa cualquier saldo entrando tú mismo, no desde el mensaje.'],
+  },
+  links: {
+    ip: () => 'El enlace va a una dirección IP en vez de un sitio web',
+    punycode: () => 'El enlace usa caracteres internacionales que imitan letras (punycode)',
+    shortener: () => 'Un enlace acortado oculta a dónde lleva',
+    'risky-tld': (p) => `Usa una dirección ".${p}", común en enlaces de estafa`,
+    'at-sign': () => 'El enlace contiene "@", lo que puede ocultar el destino real',
+    http: () => 'El enlace no es seguro (http, no https)',
+    hyphens: () => 'La dirección tiene varios guiones, un truco común en sitios falsos',
+    subdomains: () => 'Cadena de subdominios inusualmente larga',
+    lookalike: (p) => `Imita el nombre de ${p} en una dirección que no es suya`,
+    'brand-mismatch': (p) => `Usa el nombre ${p} pero no es un sitio oficial de ${p}`,
+    'sender-brand': (p) => { const [b, d] = p.split('|'); return `El remitente dice ser ${b} pero escribe desde ${d}`; },
+    'sender-free': (p) => `Una "empresa" que escribe desde una cuenta gratuita de ${p}`,
+    'sender-intl': () => 'Una "empresa" que escribe desde un número internacional',
+  },
+  steps: {
+    'dont-engage': 'No hagas clic en enlaces, no llames a números y no respondas el mensaje.',
+    'check-official': 'Para verificar, abre la app oficial de la empresa o escribe tú mismo su dirección web.',
+    'change-password': 'Si ya compartiste un código o contraseña, cámbiala ahora y activa la verificación en dos pasos.',
+    'call-bank': 'Si ya pagaste, llama de inmediato a tu banco o emisor de tarjeta, y a la empresa de la tarjeta de regalo si pagaste así.',
+    disconnect: 'Si alguien entró a tu computadora, desconéctala de internet y cambia tus contraseñas desde otro dispositivo.',
+    report: 'Repórtalo: reenvía los mensajes de estafa al 7726 (SPAM) y denuncia el fraude en ReporteFraude.ftc.gov.',
+    'not-proof': 'No encontramos señales comunes de estafa, pero eso no prueba que sea seguro. Si te piden dinero o datos, verifica directamente con la empresa.',
+  },
+  categories: {
+    toll: 'Estafa de peaje sin pagar', delivery: 'Aviso de entrega falso', government: 'Suplantación del gobierno', 'remote-access': 'Estafa de soporte técnico',
+    'tech-support': 'Estafa de soporte técnico o suscripción falsa', 'fraud-alert-callback': 'Alerta de fraude bancario falsa', investment: 'Estafa de inversión o cripto',
+    job: 'Estafa de empleo o tareas', prize: 'Estafa de premio o lotería', 'wrong-number': 'Mensaje de número equivocado o romance', 'romance-money': 'Estafa romántica',
+    refund: 'Estafa de reembolso', 'code-request': 'Intento de robo de cuenta', 'gift-card': 'Estafa de pago con tarjeta de regalo', 'verify-account': 'Phishing (alerta de cuenta falsa)', 'phishing-link': 'Enlace de phishing',
+  },
+  ui: {
+    level: {
+      high: ['Riesgo alto', 'Tiene varias señales de estafa. No hagas clic, no respondas y no pagues.'],
+      medium: ['Ten cuidado', 'Tiene algunas señales de alerta. Verifica directamente con la empresa antes de hacer nada.'],
+      low: ['No encontramos señales comunes', 'Es buena señal, pero no es prueba. Ten cuidado si te piden dinero o datos.'],
+    },
+    readGuide: 'Lee cómo funciona esta estafa y qué hacer', looksLike: 'Parece:', flags: 'Señales de alerta', sender: 'Remitente', links: 'Enlaces en el mensaje', official: 'sitio oficial',
+    noIssues: 'No encontramos problemas con esta dirección, pero ábrela solo si confías en el remitente.', whatToDo: 'Qué hacer',
+    warn: 'Copiar un aviso para enviar a la familia', copied: 'Copiado. Pégalo en el chat familiar.', protect: 'Protégete la próxima vez',
+    affiliate: 'Enlaces de afiliado: podemos ganar una comisión sin costo para ti.', getKit: 'Obtener el kit',
+    warning: (cat, flags) => `Ojo: hoy recibí ${cat ? 'un mensaje de ' + cat.toLowerCase() : 'un mensaje de estafa'}. ${flags}. Si les llega uno, no hagan clic ni respondan. Revisen en la app oficial.`,
+  },
+  examples: {
+    toll: { text: 'Aviso de peaje: tiene un saldo de peaje pendiente de $6.85. Para evitar un cargo por mora de $50, pague en las próximas 24 horas: https://ezpass-pagos.top/pagar\n\n(Responda S y vuelva a abrir este mensaje para activar el enlace.)', sender: '+63 917 555 0142' },
+    package: { text: 'USPS: Su paquete no pudo ser entregado por dirección incompleta. Actualiza tus datos y paga la tarifa de reenvío de $1.99: usps-entrega-centro.com/rastreo', sender: '' },
+    job: { text: '¡Hola! Soy reclutadora y tengo un trabajo desde casa de medio tiempo. Gana $300 al día solo dando me gusta a videos. Escríbeme por WhatsApp para empezar hoy.', sender: '' },
+    safe: { text: '¡Hola! ¿Sigue en pie la cena del jueves? Paso por ti como a las 7.', sender: '' },
+  },
+};
+
+/** Return a copy of an analyzeMessage() result with every user-facing string in Spanish. */
+export function translateResult(r) {
+  const issue = (i) => ({ ...i, label: ES.links[i.code] ? ES.links[i.code](i.param) : i.label });
+  return {
+    ...r,
+    category: ES.categories[r.categoryId] || r.category,
+    steps: r.stepIds.map((id) => ES.steps[id]),
+    signals: r.signals.map((s) => (ES.signals[s.id] ? { ...s, label: ES.signals[s.id][0], advice: ES.signals[s.id][1] } : s)),
+    links: r.links.map((l) => ({ ...l, issues: l.issues.map(issue) })),
+    senderIssues: r.senderIssues.map(issue),
+  };
+}

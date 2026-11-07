@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 20-Minute Budget: a free, private budget app</title>
+<meta name="description" content="A simple monthly budget you can keep up in 20 minutes a month. Give every dollar a job, track spending, and check your 50/30/20 split. Free, no sign-up, your data stays on your device.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="logo"><span class="mark">MS</span><span>The 20-Minute Budget</span></div>
+  <button id="plan-badge" class="badge" type="button">Free · Upgrade</button>
+</header>
+<main>
+  <nav class="month" aria-label="Month">
+    <button id="prev" type="button" aria-label="Previous month">‹</button>
+    <h1 id="month-label">Month</h1>
+    <button id="next" type="button" aria-label="Next month">›</button>
+  </nav>
+
+  <section id="summary" class="stats" aria-live="polite"></section>
+
+  <section class="card">
+    <div class="head"><h2>1. Your plan</h2><label class="inline">Take-home pay this month ($) <input id="income" type="number" min="0" step="any" inputmode="decimal"></label></div>
+    <table class="plan"><thead><tr><th>Category</th><th>Planned</th><th>Spent</th><th>Left</th></tr></thead><tbody id="rows"></tbody></table>
+    <form id="cat-form" class="inline-form">
+      <input id="cat-name" placeholder="New category" maxlength="40" aria-label="New category name">
+      <select id="cat-group" aria-label="Type"><option value="needs">Need</option><option value="wants" selected>Want</option><option value="savings">Savings / debt</option></select>
+      <button class="btn small" type="submit">Add</button>
+    </form>
+    <div id="split"></div>
+  </section>
+
+  <section class="card">
+    <h2>2. Log spending</h2>
+    <form id="tx-form" class="tx-form">
+      <label>Date<input id="tx-date" type="date" required></label>
+      <label>Amount ($)<input id="tx-amount" type="number" step="any" inputmode="decimal" required placeholder="12.50"></label>
+      <label>Category<select id="tx-cat"></select></label>
+      <label>Note<input id="tx-note" maxlength="120" placeholder="optional"></label>
+      <button id="tx-add" class="btn" type="submit">Add</button>
+    </form>
+    <p class="tiny">Refund or money back? Enter a negative amount.</p>
+    <ul id="tx-list" class="tx-list"></ul>
+  </section>
+
+  <section class="card">
+    <h2>3. Goals</h2>
+    <form id="goal-form" class="inline-form">
+      <input id="goal-name" aria-label="Goal name" placeholder="Goal, e.g. Emergency fund" maxlength="40" required>
+      <input id="goal-target" aria-label="Target amount" type="number" min="1" step="any" placeholder="Target $" required>
+      <input id="goal-saved" aria-label="Saved so far" type="number" min="0" step="any" placeholder="Saved so far $">
+      <input id="goal-deadline" type="month" required aria-label="Deadline">
+      <button class="btn small" type="submit">Add goal</button>
+    </form>
+    <ul id="goals" class="goals"></ul>
+  </section>
+
+  <section class="card">
+    <h2>Your data</h2>
+    <p class="tiny">Everything is saved on this device only. Back it up to move it to another device.</p>
+    <div class="row">
+      <label class="btn ghost small file">Import bank CSV <span class="pro-tag">Pro</span><input id="import-csv" type="file" accept=".csv,text/csv" hidden></label>
+      <button id="export-csv" class="btn ghost small" type="button">Export CSV</button>
+      <button id="backup" class="btn ghost small" type="button">Download backup</button>
+      <label class="btn ghost small file">Restore backup<input id="restore" type="file" accept="application/json,.json" hidden></label>
+    </div>
+    <p id="data-msg" class="tiny" aria-live="polite"></p>
+  </section>
+</main>
+
+<dialog id="upgrade">
+  <form method="dialog" class="close"><button aria-label="Close">×</button></form>
+  <h2>Go Pro</h2>
+  <p id="upgrade-reason" class="lede"></p>
+  <ul id="pro-features" class="checks"></ul>
+  <div id="buy" class="row"></div>
+  <p id="no-checkout" class="tiny" hidden>Checkout isn't connected yet (set pricing links in config.js).</p>
+  <form id="license-form" class="inline-form">
+    <input id="license-key" placeholder="Paste your license key" autocomplete="off" aria-label="License key">
+    <button class="btn small" type="submit">Activate</button>
+  </form>
+  <p id="license-msg" class="tiny" aria-live="polite"></p>
+  <p class="tiny"><a id="compare" href="pricing.html">Compare Free and Pro</a> · Free stays free: your budget, one goal, 3 bills and backups never expire.</p>
+</dialog>
+
+<dialog id="welcome" aria-labelledby="welcome-title">
+  <form method="dialog" class="close"><button aria-label="Skip">×</button></form>
+  <section data-step="1">
+    <p class="tiny">Step 1 of 3</p>
+    <h2 id="welcome-title">Welcome. Let's set up this month in two minutes.</h2>
+    <form id="welcome-pay">
+      <label>Your take-home pay this month ($)<input id="welcome-income" type="number" min="0" step="any" inputmode="decimal" placeholder="3200"></label>
+      <label class="pick"><input id="welcome-split" type="checkbox" checked> Start me with a 50/30/20 plan (half on needs, 30% on wants, 20% to savings and debt). I can change any number.</label>
+      <div class="row"><button class="btn" type="submit">Next</button></div>
+    </form>
+  </section>
+  <section data-step="2" hidden>
+    <p class="tiny">Step 2 of 3</p>
+    <h2>How it works</h2>
+    <ul class="checks">
+      <li><b>Plan:</b> give every dollar a job in "Your plan". Not assigned should reach $0.</li>
+      <li><b>Log:</b> add what you spend, or import your bank's CSV once a month (Pro).</li>
+      <li><b>Check in:</b> 20 minutes at the end of the month. Next month starts from this plan.</li>
+    </ul>
+    <p class="tiny">Your budget stays on this device. Use "Download backup" to move it.</p>
+    <div class="row"><button id="welcome-next" class="btn" type="button">Next</button></div>
+  </section>
+  <section data-step="3" hidden>
+    <p class="tiny">Step 3 of 3</p>
+    <h2>Free does the basics. Pro does the rest.</h2>
+    <p>Free: one month at a time, 10 categories, one goal, 3 bills and 1 deal. Pro adds every past and future month, bank CSV import, unlimited goals, every bill and 0% deal, and calendar reminders.</p>
+    <div class="row">
+      <form method="dialog"><button class="btn">Start budgeting</button></form>
+      <a class="btn ghost" href="pricing.html?from=onboarding" data-upgrade="onboarding">See Pro</a>
+    </div>
+  </section>
+</dialog>
+
+<footer><p><a href="pricing.html">Pricing</a> · <a href="bills.html">Bill tracker</a> · <a href="disputes.html">Credit dispute tracker</a> · <a href="networth.html">Net worth</a> · <a href="holiday.html">Holiday planner</a> · <a href="deals.html">0% deal countdown</a> · <a href="rate.html">Rate my budget</a> · <a href="subscriptions.html">Free subscription finder</a> · Not financial advice. Made by <a id="site-link" href="#">Money Made Simple</a>. Your budget never leaves this device.</p></footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

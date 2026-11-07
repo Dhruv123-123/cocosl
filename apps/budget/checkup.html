@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Annual Money Checkup: 20 Questions, Your Score and What to Fix | Money Made Simple</title>
+<meta name="description" content="A free yearly financial checkup: answer 20 quick questions about spending, savings, debt, credit, retirement, insurance and scams. Get a score out of 100, a grade by area, and the fixes that matter most, each linked to a free tool.">
+<meta property="og:title" content="Your annual money checkup">
+<meta property="og:description" content="20 questions, a score out of 100, and what to fix first. Free and private.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Annual money checkup","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="./" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Money checkup</span></a>
+  <span class="badge">Free</span>
+</header>
+<main>
+  <h1 class="page-title">Your annual money checkup</h1>
+  <p class="lede">20 quick questions, about 5 minutes. You get a score out of 100, how you're doing in each area, and the fixes that matter most, each with a free tool. Your answers stay in this browser.</p>
+
+  <form id="checkup" class="checkup"></form>
+  <section id="report" class="card report" aria-live="polite"></section>
+
+  <section class="card no-print">
+    <div class="row">
+      <button id="print" class="btn ghost small" type="button">Print or save as PDF</button>
+      <button id="reset" class="btn ghost small" type="button">Start again</button>
+    </div>
+    <p class="tiny">Do it once a year, for example in January or on your birthday, and compare your score.</p>
+  </section>
+
+  <section class="card pro-slot no-print">
+    <h2>Turn the fixes into a plan</h2>
+    <p>Put your fixes into the free <a href="./">20-Minute Budget</a>. Budget Pro adds unlimited goals, every past and future month and bank CSV import.</p>
+    <div class="row"><a class="btn small" href="./" data-upgrade="checkup-app">Open the budget app</a><a class="btn ghost small" href="pricing.html?from=checkup" data-upgrade="checkup">See Budget Pro</a></div>
+  </section>
+</main>
+<footer class="no-print"><p><a href="./">Budget</a> · <a href="first-paycheck.html">First paycheck guide</a> · Not financial advice. Nothing you type is sent anywhere. Made by <a id="site-link" href="#">Money Made Simple</a>.</p></footer>
+<script type="module" src="checkup.js"></script>
+</body>
+</html>

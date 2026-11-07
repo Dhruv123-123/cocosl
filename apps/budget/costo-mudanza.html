@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de costo de mudanza: camión, mudanceros, depósitos y más | Dinero Simple</title>
+<meta name="description" content="Calcula cuánto te costará de verdad la mudanza: camión o mudanceros, gasolina, empaque, bodega, viaje, depósitos, renta doble y días sin trabajar. Estimados para empezar, cotizaciones reales y CSV. Gratis, privado, sin registro.">
+<meta property="og:title" content="¿Cuánto te costará de verdad la mudanza?">
+<meta property="og:description" content="Calcula cuánto te costará de verdad la mudanza: camión o mudanceros, gasolina, empaque, bodega, viaje, depósitos, renta doble y días sin trabajar. Estimados para empezar, cotizaciones reales y CSV. Gratis, privado, sin registro.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="alternate" hreflang="en" href="moving-cost.html">
+<link rel="alternate" hreflang="es" href="costo-mudanza.html">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Costo de mudanza", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuánto cuesta mudarse?", "acceptedAnswer": {"@type": "Answer", "text": "Depende sobre todo de la distancia, de cuántas cosas tienes y de si contratas mudanceros. Una mudanza local con camión rentado puede quedar en cientos de dólares; una larga con mudanceros suele costar miles. Lo que más se olvida es el depósito, unos días de renta doble y los días sin trabajar."}}, {"@type": "Question", "name": "¿Qué tan exactos son los estimados?", "acceptedAnswer": {"@type": "Answer", "text": "Son reglas generales para que tengas un punto de partida, no cotizaciones. Pide al menos tres cotizaciones por escrito y escríbelas aquí. Los supuestos están en la página."}}, {"@type": "Question", "name": "¿Cómo evito estafas de mudanza?", "acceptedAnswer": {"@type": "Answer", "text": "Para mudanzas entre estados, usa mudanceros con número USDOT y revísalo en el sitio de la FMCSA. Desconfía de una cotización mucho más baja que las demás, de un depósito grande en efectivo o de una cotización sin ver tus cosas."}}]}</script>
+<script type="module" src="lib/embed-page.js"></script>
+</head>
+<body class="sf wd">
+<header class="top">
+  <a class="logo" href="../es/" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Costo de mudanza</span></a>
+  <a class="badge" href="moving-cost.html" hreflang="en" lang="en">English</a>
+</header>
+<main>
+  <h1 class="page-title">¿Cuánto te costará de verdad la mudanza?</h1>
+  <p class="lede">Los mudanceros son solo una parte. El depósito, unos días de renta doble, la gasolina, el hotel y los días sin trabajar también suman. Cuéntanos de la mudanza para tener estimados y cámbialos por cotizaciones reales. Se guarda solo en este navegador.</p>
+
+  <form id="trip" class="card deal-form">
+    <h2 class="full">Sobre la mudanza</h2>
+    <label>Distancia (millas)<input name="miles" type="number" min="0" step="1" inputmode="numeric" placeholder="25"></label>
+    <label>Tamaño del hogar<select name="size"><option value="studio">Estudio</option><option value="1br">1 recámara</option><option value="2br">2 recámaras</option><option value="3br">3 recámaras</option><option value="4br">4 o más recámaras</option></select></label>
+    <label class="full">Cómo te mudas<select name="method"><option value="diy">Rento un camión y lo hago yo</option><option value="container">Contenedor de mudanza</option><option value="movers">Mudanceros de servicio completo</option></select></label>
+    <label>Carros que vas a manejar<input name="cars" type="number" min="0" max="5" step="1" inputmode="numeric"></label>
+    <label>Personas que viajan<input name="people" type="number" min="1" max="10" step="1" inputmode="numeric"></label>
+    <label>Renta mensual nueva ($)<input name="newRent" type="number" min="0" step="10" inputmode="decimal"></label>
+    <label>Depósito (meses de renta)<input name="depositMonths" type="number" min="0" max="3" step="0.5" inputmode="decimal"></label>
+    <label>Días pagando dos rentas<input name="overlapDays" type="number" min="0" max="60" step="1" inputmode="numeric"></label>
+    <label>Meses de bodega<input name="storageMonths" type="number" min="0" max="24" step="1" inputmode="numeric"></label>
+    <label>Días sin goce de sueldo<input name="daysOff" type="number" min="0" max="30" step="1" inputmode="numeric"></label>
+    <label>Lo que ganas en un día ($)<input name="dayPay" type="number" min="0" step="10" inputmode="decimal"></label>
+    <div class="full row"><button class="btn" type="submit">Llenar estimados</button><span id="fill-msg" class="tiny" role="status"></span></div>
+    <p id="assume" class="tiny full"></p>
+  </form>
+
+  <section class="card" aria-labelledby="h-plan">
+    <h2 id="h-plan">Tu presupuesto de mudanza</h2>
+    <label class="inline">Ahorrado para la mudanza ($)<input id="saved" type="number" min="0" step="1" inputmode="decimal"></label>
+    <div id="stats" class="stats" aria-live="polite"></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-cats">
+    <h2 id="h-cats">Costos</h2>
+    <p class="tiny">Cada costo muestra lo que falta pagar, o cuánto se pasó el costo real de tu estimado.</p>
+    <ul id="cats" class="funds"></ul>
+  </section>
+
+  <section class="card" id="export" hidden>
+    <h2>Pásalo a tu hoja de cálculo</h2>
+    <p>Copia las filas y pégalas en la pestaña &quot;Planner paste&quot; de la hoja de mudanza, en la celda B7 (Categoría, Estimado, Real, Pagado), o descarga un CSV para Google Sheets o Excel.</p>
+    <label for="t-rows" class="sr-only">Filas para pegar en la hoja</label><textarea id="t-rows" rows="4" readonly></textarea>
+    <div class="row" style="margin-top:10px"><button id="copy" class="btn small" type="button">Copiar filas</button><button id="csv" class="btn ghost small" type="button">Descargar CSV</button></div>
+    <p id="copy-msg" class="tiny" aria-live="polite"></p>
+    <div class="offer-box" id="upsell" hidden></div>
+  </section>
+
+  <section class="card faq">
+    <h3>¿Cuánto cuesta mudarse?</h3>
+    <p>Depende sobre todo de la distancia, de cuántas cosas tienes y de si contratas mudanceros. Una mudanza local con camión rentado puede quedar en cientos de dólares; una larga con mudanceros suele costar miles. Lo que más se olvida es el depósito, unos días de renta doble y los días sin trabajar.</p>
+    <h3>¿Qué tan exactos son los estimados?</h3>
+    <p>Son reglas generales para que tengas un punto de partida, no cotizaciones. Pide al menos tres cotizaciones por escrito y escríbelas aquí. Los supuestos están en la página.</p>
+    <h3>¿Cómo evito estafas de mudanza?</h3>
+    <p>Para mudanzas entre estados, usa mudanceros con número USDOT y revísalo en el sitio de la FMCSA. Desconfía de una cotización mucho más baja que las demás, de un depósito grande en efectivo o de una cotización sin ver tus cosas.</p>
+  </section>
+</main>
+<footer><p><a href="../es/">Todas las herramientas</a> · <a href="fondos-ahorro.html">Fondos de ahorro</a> · <a href="dividir-gastos.html">Dividir gastos</a> · No es asesoría financiera. Nada de lo que escribes sale de este navegador. Hecho por Dinero Simple.</p></footer>
+<script type="module" src="moving-cost.js"></script>
+</body>
+</html>
