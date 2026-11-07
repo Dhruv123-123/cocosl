@@ -40,7 +40,7 @@ Reenvíe esta alerta a alguien que esté buscando trabajo ahora mismo.
 
 > ¿No está seguro de una llamada, mensaje de texto o correo? Llámenos al **{{CU_PHONE}}** o al número que aparece al reverso de su tarjeta.
 
-*Footer:* Esta alerta es información general para ayudarle a reconocer estafas. No es asesoría legal, fiscal ni financiera. Sources (below), plus the client's footer lines.
+*Footer:* Esta alerta es información general para ayudarle a reconocer estafas. No es asesoría legal, fiscal ni financiera. Redactado con ayuda de IA y verificado por una persona. Sources (below), plus the client's footer lines.
 
 ## Pantalla del vestíbulo y póster
 

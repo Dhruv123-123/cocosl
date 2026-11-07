@@ -10,7 +10,7 @@ follow-up dates (about day 4 and day 10) only where a day still has room. It wri
 (day by day) and OUTREACH_DATES.csv (one row per prospect). The ad studio files are only read.
 
 Order: accounting firms first (they must hear from us before mid-January or after tax season),
-then credit unions 1-30, Scam Watch, employer partners and employers, then credit unions 31-60.
+then credit unions 1-30, Scam Watch, schools and colleges, employer partners and employers, then credit unions 31-60.
 After the ad studio calendar ends, the full cap of 10 a day (5 new) is free.
 """
 import csv
@@ -61,6 +61,8 @@ def prospects():
         out.append(("Credit union", r["credit_union"], r["state"], "", "credit-union-alert", False))
     for r in read("community-scam-watch/PROSPECTS.csv"):
         out.append(("Scam Watch", r["organization"], r["state"], "", "community-scam-watch", False))
+    for r in read("schools/PROSPECTS.csv"):
+        out.append(("School or college", r["organization"], r["state"], r.get("fit_score", ""), "schools", False))
     for r in read("employer-wellness/PROSPECTS.csv"):
         kind = "Employer partner" if r["type"].startswith("Channel") else "Employer"
         out.append((kind, r["organization"], r["state"], r.get("fit_score", ""), "employer-wellness", False))
@@ -169,7 +171,7 @@ def main():
              "Before then the ad studio has the whole cap. Follow-ups land about 4 and 10 days after Email 1, on the "
              "next day with B2B room.", "",
              "**Order:** accounting firms first, highest fit score first, so they hear from us before tax season. "
-             "Any firm whose 3 emails can't finish by Jan 15 moves to after Apr 19. Then credit unions 1–30, Scam Watch, "
+             "Any firm whose 3 emails can't finish by Jan 15 moves to after Apr 19. Then credit unions 1–30, Scam Watch, schools and colleges, "
              "employer partners and employers (by fit score), then credit unions 31–60.", "",
              f"**{len(rows)} prospects, {3 * len(rows)} emails.** Last email: {dt.date.fromisoformat(last):%a %d %b %Y}. "
              f"{sum(r['type'] == 'Accounting firm' and r['follow_up_2'] < TAX_BLACKOUT[0].isoformat() for r in rows)} of the "

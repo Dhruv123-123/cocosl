@@ -322,8 +322,24 @@ def master_md(issue: dict, prod: dict) -> str:
 
 # ---------------------------------------------------------------- build
 
+# The AI disclosure, adapted from the factory's (src/contentfactory/config.py: "Script drafted with AI help and
+# fact-checked by a person."). These packs have no AI voice or AI images, so only the writing part applies.
+# It prints in every footer next to the disclaimer. A client may reword it ("ai_disclosure" in the brand file)
+# but can't remove it: an empty value falls back to ours, as in `factory whitelabel`.
+AI_DISCLOSURE = {
+    "en": "Drafted with AI help and fact-checked by a person.",
+    "es": "Redactado con ayuda de IA y verificado por una persona.",
+}
+
+
+def with_disclosure(prod: dict, brand: dict) -> dict:
+    line = (brand.get("ai_disclosure") or "").strip() or AI_DISCLOSURE[prod.get("lang", "en")]
+    return {**prod, "disclaimer": f"{prod['disclaimer']} {line}"}
+
+
 def build(pdir: Path, prod: dict, brand_path: Path, issues: list[dict], allow_tokens: bool, images: bool) -> list[dict]:
     brand = json.loads(brand_path.read_text())
+    prod = with_disclosure(prod, brand)
     out = pdir / "out"
     root = out / brand["slug"]
     if root.exists():
@@ -488,7 +504,7 @@ def main() -> None:
                 sys.exit(f"no issue {a.issue} in {pdir.name}")
         (pdir / "samples").mkdir(exist_ok=True)
         for i in issues:
-            (pdir / "samples" / f"{prod['unit']}-{i['n']}.md").write_text(master_md(i, prod))
+            (pdir / "samples" / f"{prod['unit']}-{i['n']}.md").write_text(master_md(i, with_disclosure(prod, {})))
         if a.brand:
             packs.append(build(pdir, prod, a.brand, issues, a.placeholders, images))
         else:

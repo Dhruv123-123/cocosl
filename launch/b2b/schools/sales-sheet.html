@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Money Made Simple for Schools</title>
+<!-- One-page sales sheet. Fill the 3 {{YOUR_...}} tokens, then run python3 build.py (writes out/sales-sheet.pdf)
+     (or open in a browser and Print > Save as PDF, Letter, no margins, background graphics on). -->
+<style>
+@page{size:8.5in 11in;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;color:#17202a;background:#fff}
+.page{width:8.5in;height:10.98in;overflow:hidden;padding:.45in .5in .4in;display:flex;flex-direction:column}
+.top{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:4px solid #E0A526;padding-bottom:10px}
+.brand{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1F5F4A}
+h1{font-size:30px;line-height:1.1;margin-top:4px}
+.sub{font-size:14px;color:#41505e;margin-top:6px;max-width:5.2in;line-height:1.4}
+.tag{background:#1F5F4A;color:#fff;font-size:12px;font-weight:700;padding:8px 10px;border-radius:6px;text-align:center;line-height:1.35}
+.cols{display:flex;gap:22px;margin-top:14px}
+.col{flex:1}
+h2{font-size:15px;color:#1F5F4A;margin:12px 0 6px;text-transform:uppercase;letter-spacing:.04em}
+p,li{font-size:12.5px;line-height:1.45}
+ul,ol{padding-left:17px}
+li{margin-bottom:4px}
+table{width:100%;border-collapse:collapse;margin-top:6px}
+th,td{font-size:12px;padding:7px 6px;text-align:left;vertical-align:top;border-bottom:1px solid #dfe4e9}
+th{background:#f1f4f7;font-size:12px}
+.price{font-size:20px;font-weight:800;color:#1F5F4A}
+.pilot{margin-top:12px;background:#fff6dc;border-left:5px solid #E0A526;padding:10px 12px;font-size:13px;line-height:1.45}
+.foot{margin-top:auto;display:flex;justify-content:space-between;font-size:11.5px;color:#41505e;border-top:1px solid #dfe4e9;padding-top:8px}
+.check li{list-style:none;position:relative;padding-left:2px}
+.check li:before{content:"✓";position:absolute;left:-15px;color:#1F5F4A;font-weight:700}
+</style></head><body><div class="page">
+<div class="top">
+  <div><div class="brand">Money Made Simple · for schools and colleges</div>
+  <h1>A 10-minute money lesson every week, ready to teach</h1>
+  <p class="sub">Weekly financial literacy mini-lessons for high school teachers and college advisors: a class slide, a student handout, an activity, an exit ticket and teacher notes. Aligned to the 2021 National Standards for Personal Financial Education, with your school's name on every page.</p></div>
+  <div class="tag">Arrives 2 weeks<br>before class</div>
+</div>
+<div class="cols">
+<div class="col">
+  <h2>Why schools use it</h2>
+  <p>Montana now requires a half-credit of financial education or economics for graduation, starting with the class of 2026, and most states have a personal finance requirement. Full curricula exist. What teachers and advisors are short of is a current, ready-to-teach 10 minutes for advisory, homeroom, an economics or math class, or a first-year seminar.</p>
+  <h2>Each week you get</h2>
+  <ul class="check"><li><b>Class slide</b> (1920×1080) and a <b>student handout</b> (PDF)</li><li><b>Lesson page</b> to post or email: example, activity, discussion questions, exit ticket</li><li><b>Teacher notes</b>: the standard, timing, answer key and what to watch for</li><li><b>LMS post</b> with an image for Google Classroom or Canvas</li><li><b>Sources</b>: IRS, CFPB and FTC links for every fact</li></ul>
+  <h2>How it works</h2>
+  <ol><li>Send your logo, colors and who students should ask, once.</li><li>Each lesson arrives 2 weeks before its week.</li><li>Teachers review it, adapt anything, and teach it.</li><li>No student data, logins or tracking. Ever.</li></ol>
+</div>
+<div class="col">
+  <h2>Pricing (per school year)</h2>
+  <table>
+    <tr><th>Plan</th><th>Includes</th><th>Per year</th></tr>
+    <tr><td><b>Teacher</b></td><td>One teacher or advisor, every weekly lesson</td><td class="price">$79</td></tr>
+    <tr><td><b>School</b></td><td>Every teacher and advisor in one building</td><td class="price">$299</td></tr>
+    <tr><td><b>District</b></td><td>Up to 5 high schools; larger districts by quote</td><td class="price">$899</td></tr>
+    <tr><td><b>College</b></td><td>One campus: advising, TRIO, financial aid, first-year seminar</td><td class="price">$399</td></tr>
+  </table>
+  <p style="margin-top:6px">Invoiced by purchase order, or paid by school card. Lessons run through the school year.</p>
+  <div class="pilot"><b>Free for your school, if a local credit union sponsors it:</b> a sponsor pays the license and gets one line, "Lessons provided by …". Sponsors never appear in the lesson content or promote products. <b>Founding pilot:</b> the first 3 schools get spring semester 2027 free.</div>
+  <h2>Built for classrooms</h2>
+  <ul class="check"><li>General education only: no product, bank or card recommendations</li><li>Made-up examples, so no student shares their family's money</li><li>Every fact linked to a public source and checked before delivery</li><li>Plain-text version and alt text for accessibility</li></ul>
+</div>
+</div>
+<h2>What it looks like (sample, fictional school)</h2>
+<div style="display:flex;gap:14px;align-items:flex-start;margin-top:4px">
+  <img src="out/sample-valley-high/week-1-2027-w02/social.png" style="width:1.6in;height:1.6in;border:1px solid #dfe4e9">
+  <img src="out/sample-valley-high/week-3-2027-w04/social.png" style="width:1.6in;height:1.6in;border:1px solid #dfe4e9">
+  <p style="font-size:11.5px;color:#41505e;flex:1">Two LMS images from the free sample: reading your first paycheck, and the five parts of a credit score. The sample has 4 lessons for a fictional school.</p>
+</div>
+<div class="foot" style="margin-top:12px">
+  <div><b>{{YOUR_NAME}}</b> · {{YOUR_EMAIL}} · {{YOUR_PHONE}}</div>
+  <div>Ask for the free 4-lesson sample.</div>
+</div>
+</div></body></html>

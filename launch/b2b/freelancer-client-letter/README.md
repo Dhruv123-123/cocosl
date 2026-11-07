@@ -42,6 +42,7 @@ The firm sends this to its own clients, so it carries the firm's professional na
 - **CPAs have their own advertising rules.** The IRS (Circular 230) and state boards of accountancy
   don't allow false or misleading claims in a firm's marketing. The copy makes no claims about the
   firm, but the firm should read it with that in mind. This isn't legal advice; their own rules apply.
+- **AI disclosure.** Every footer says "Drafted with AI help and fact-checked by a person." The firm may reword it (`ai_disclosure` in its brand file) but not remove it, and the fact-check has to really happen before delivery.
 - **No client data.** The firm sends from its own email platform. Its client list never comes to us.
 
 ## Prospects (`PROSPECTS.csv`)

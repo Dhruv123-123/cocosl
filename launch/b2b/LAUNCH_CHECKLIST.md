@@ -1,8 +1,8 @@
 # B2B launch checklist (for Dhruv)
 
-Four offers are ready to sell: **credit unions** (Weekly Scam Alert), **libraries and senior centers**
-(Scam Watch), **employers** (Money Made Simple at Work) and **CPA and bookkeeping firms** (Freelancer
-Money Notes, for their 1099 clients). Nothing has been sent, posted or deployed;
+Five offers are ready to sell: **credit unions** (Weekly Scam Alert), **libraries and senior centers**
+(Scam Watch), **employers** (Money Made Simple at Work), **CPA and bookkeeping firms** (Freelancer
+Money Notes, for their 1099 clients) and **high schools and colleges** (Money Made Simple for Schools). Nothing has been sent, posted or deployed;
 you do every send by hand. Plan on about 2 hours of setup, then 30 to 45 minutes a day.
 
 ## 1. Decide (10 minutes)
@@ -18,7 +18,7 @@ you do every send by hand. Plan on about 2 hours of setup, then 30 to 45 minutes
 - [ ] `{{YOUR_NAME}}`, `{{YOUR_EMAIL}}`, `{{YOUR_PHONE}}` in these files:
       - `credit-union-alert/sales-sheet.html` and `credit-union-alert/roi.html`
       - `employer-wellness/sales-sheet.html`, `community-scam-watch/sales-sheet.html` and
-        `freelancer-client-letter/sales-sheet.html`
+        `freelancer-client-letter/sales-sheet.html`, `schools/sales-sheet.html`
       - `credit-union-alert/onboarding/KICKOFF_EMAIL.md`
       Find any you missed with `grep -rn "{{YOUR_" launch/b2b --include=*.html --include=*.md`.
 - [ ] `{{YOUR_BUSINESS_NAME}}` and `{{YOUR_ADDRESS}}` in `credit-union-alert/onboarding/invoice.html`.
@@ -42,6 +42,7 @@ second inbox, which costs about $6–7 a month, so it's only there if you choose
 | **1** | **Credit unions, rows 1 to 30** (Montana first) | Biggest recurring price, weekly cadence, and the ROI page makes the case. | `credit-union-alert/COLD_EMAILS.md`, `PROSPECTS.csv` |
 | **1 to 2** | **CPA and bookkeeping firms** (MT and ID, 40, highest `fit_score` first) | Send before mid-January: after that they're buried in tax season until late April. Small firms decide fast, and it's the cheapest yes to get. | `freelancer-client-letter/README.md` (emails inside), `PROSPECTS.csv` |
 | **2** | **Libraries and Area Agencies on Aging** | Cheap and quick to say yes; good first logos and testimonials. Call the senior centers (phone script). | `community-scam-watch/COLD_EMAILS.md` |
+| **2 to 3** | **Schools and colleges** (40 districts and two-year colleges, by `fit_score`; Montana first) | Montana's new graduation requirement; spring is when next year's budgets are set. Write to curriculum or CTE coordinators, never individual teachers. Offer the credit-union-sponsored tier to your credit union contacts. | `schools/README.md` (emails inside), `PROSPECTS.csv` |
 | **3** | **Employers** (40, by `fit_score`), via SHRM chapters, the 2 brokers and the PEO first | Longer buying cycle. A single broker or chapter can open many doors. | `employer-wellness/COLD_EMAILS.md` |
 | 4+ | **Credit unions, rows 31 to 60** (WY, UT, CO) | Use what you learned from batch 1's replies. | same |
 
@@ -70,6 +71,8 @@ Never guess an address, buy a list or scrape a directory.
   `out/demo-packet.zip` (the same 3 issues as email, images, print files, staff notes and sources). Keep the
   full 12-issue packs for paying clients. For brokers, send `employer-wellness/out/broker/broker-one-pager.pdf` and the co-branded zip
   (`employer-wellness/broker/BROKER_PARTNER_KIT.md`). Fill in its referral-fee placeholders first. Never brand a pack with their logo until they ask.
+- **Before anyone signs:** have a lawyer check `<product>/onboarding/services-agreement.html` once (the five are
+  the same apart from the service details). Bill with that product's `onboarding/invoice.html`.
 - **When someone says yes,** follow `credit-union-alert/onboarding/README.md`. It covers kickoff,
   intake, approval, the first send and the invoice. For the other products, use the same kit and
   change the product name.

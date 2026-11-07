@@ -11,12 +11,28 @@ links stay as placeholders, and nothing was bought.
 | `employer-wellness/` | Money Made Simple at Work | Employer HR and benefits teams (and benefits brokers) | $59 / $129 / $249 a month | Monthly |
 | `community-scam-watch/` | Scam Watch (large print) | Public libraries, senior centers, Area Agencies on Aging | $19 one site, $49 for 2–4, $12 a location for 5–20, quote 21+; CU-sponsored $99 for 5 sites; talks $150 | Monthly |
 | `freelancer-client-letter/` | Freelancer Money Notes | Small CPA, tax and bookkeeping firms, for their 1099 clients | $39 / $79 / $129 a month | Monthly |
+| `schools/` | Money Made Simple for Schools | High school teachers and college advisors (districts, community colleges) | $79 teacher / $299 school / $899 district / $399 college, per school year; or credit-union sponsored | Weekly in the school year |
 
 The first three folders each have: `product.json` (labels, call to action, formats), `issues.json` (12 issues: 3 months for the weekly credit union alert, Jan to Dec 2027 for the monthly products),
 `samples/*.md` (readable masters with brand slots shown), `brands/` (a fictional sample brand and a
 placeholders brand), `sales-sheet.html`, `COMPLIANCE_NOTE.md`, `COLD_EMAILS.md`, `PROSPECTS.csv` + `.md`
 (public-info prospects, with a fit score for employers and accounting firms) and `README.md`. The credit union folder also has the full
 `DELIVERY_WORKFLOW.md`; the others describe only what's different. `freelancer-client-letter/` is the lean one: 12 issues, a sales sheet, 40 prospects, and its cold emails and compliance notes inside its README.
+
+## Agreements and invoices: `paperwork.py`
+
+Every offer has `onboarding/services-agreement.html` and `onboarding/invoice.html`, which the build renders to
+`out/onboarding/*.pdf`. They're one-page **templates** with every party, price and date as a `{{TOKEN}}`.
+**Have a lawyer in your state check the agreement before anyone signs it.** It covers services, approval,
+fees, the 30-day exit, the content license, the AI disclosure, no guarantees and a liability cap. To change the
+wording, edit `paperwork.py` and run `python3 paperwork.py`, not the generated files. `{{PAYMENT_LINK}}` stays a
+placeholder.
+
+## AI disclosure
+
+Every issue footer ends with "Drafted with AI help and fact-checked by a person." This adapts the factory's
+disclosure (`src/contentfactory/config.py`) for text-only packs. A client may reword it with `"ai_disclosure"`
+in its brand file but can't remove it, and the fact-check has to really happen before each delivery.
 
 ## Delivering to a client: `deliver.py`
 

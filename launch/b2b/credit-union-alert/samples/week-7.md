@@ -40,7 +40,7 @@ Pick a family code word tonight and text it to your kids and parents. Don't use 
 
 > Not sure about a call, text or email? Call us at **{{CU_PHONE}}** or the number on the back of your card.
 
-*Footer:* This alert is general information to help you spot scams. It isn't legal, tax or financial advice. Sources (below), plus the client's footer lines.
+*Footer:* This alert is general information to help you spot scams. It isn't legal, tax or financial advice. Drafted with AI help and fact-checked by a person. Sources (below), plus the client's footer lines.
 
 ## Lobby screen and poster
 

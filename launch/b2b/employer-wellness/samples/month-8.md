@@ -38,7 +38,7 @@ Run the IRS Tax Withholding Estimator with this month's pay stub. It takes about
 
 > Questions about your benefits? Contact **{{BENEFITS_CONTACT}}**. Something weighing on you? {{EAP_LINE}}
 
-*Footer:* This newsletter is general education, not personal financial, tax, legal or investment advice. For advice about your situation, talk to a qualified professional. Sources (below), plus the client's footer lines.
+*Footer:* This newsletter is general education, not personal financial, tax, legal or investment advice. For advice about your situation, talk to a qualified professional. Drafted with AI help and fact-checked by a person. Sources (below), plus the client's footer lines.
 
 ## Breakroom screen and flyer
 

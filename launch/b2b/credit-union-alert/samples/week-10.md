@@ -40,7 +40,7 @@ If you're booking a trip this spring, use a card with fraud protection and keep 
 
 > Not sure about a call, text or email? Call us at **{{CU_PHONE}}** or the number on the back of your card.
 
-*Footer:* This alert is general information to help you spot scams. It isn't legal, tax or financial advice. Sources (below), plus the client's footer lines.
+*Footer:* This alert is general information to help you spot scams. It isn't legal, tax or financial advice. Drafted with AI help and fact-checked by a person. Sources (below), plus the client's footer lines.
 
 ## Lobby screen and poster
 

@@ -40,7 +40,7 @@ Escriba los números reales del Seguro Social y de Medicare en una tarjeta junto
 
 > ¿Preguntas? {{HELP_LINE}} Si tiene 60 años o más y perdió dinero por una estafa, llame gratis a la Línea Nacional contra el Fraude a Personas Mayores: **1-833-372-8311**.
 
-*Footer:* Esta hoja es información general para ayudarle a reconocer estafas. No es asesoría legal ni financiera. Puede copiarla y compartirla libremente. Sources (below), plus the client's footer lines.
+*Footer:* Esta hoja es información general para ayudarle a reconocer estafas. No es asesoría legal ni financiera. Puede copiarla y compartirla libremente. Redactado con ayuda de IA y verificado por una persona. Sources (below), plus the client's footer lines.
 
 ## Volante para el tablero y diapositiva para pantalla
 

@@ -40,7 +40,7 @@ Find your latest utility bill and circle the phone number. That's the one to cal
 
 > Questions? {{HELP_LINE}} If you're 60 or older and lost money to a scam, call the free National Elder Fraud Hotline: **1-833-372-8311**.
 
-*Footer:* This handout is general information to help you spot scams. It isn't legal or financial advice. Please copy and share it freely. Sources (below), plus the client's footer lines.
+*Footer:* This handout is general information to help you spot scams. It isn't legal or financial advice. Please copy and share it freely. Drafted with AI help and fact-checked by a person. Sources (below), plus the client's footer lines.
 
 ## Bulletin board flyer and screen slide
 

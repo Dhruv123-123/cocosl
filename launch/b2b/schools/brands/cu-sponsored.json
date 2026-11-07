@@ -1,0 +1,22 @@
+{
+  "_about": "FICTIONAL sponsored sample: a local credit union pays for the school's license and gets a credit line on every format. Both names are made up.",
+  "slug": "sample-valley-high-cu-sponsored",
+  "name": "Sample Valley High School",
+  "initials": "SV",
+  "logo": "",
+  "color": "#1F5F4A",
+  "accent": "#F2B134",
+  "tier": "standard",
+  "tokens": {
+    "SCHOOL_NAME": "Sample Valley High School",
+    "SCHOOL_SHORT": "Sample Valley High",
+    "HELP_CONTACT": "Ms. Rivera in Room 114, or the counseling office at (555) 010-0177"
+  },
+  "promise": "",
+  "footer_lines": [
+    "Sample Valley High School · 100 School Road · Anytown, MT 59000",
+    "Shared with students in Personal Finance and Advisory classes."
+  ],
+  "unsubscribe": "",
+  "credit_line": "Lessons provided free to Sample Valley High by Sample Community Credit Union. No products are promoted."
+}

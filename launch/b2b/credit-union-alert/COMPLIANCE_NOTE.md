@@ -111,3 +111,9 @@ says the product makes a credit union compliant with anything.
   listed before it ships.
 - **"Does this satisfy our [exam, policy, training] requirement?"** We can't say that. It's member
   education content; how you use it is up to you.
+
+## AI disclosure
+
+Every issue's footer says: "Drafted with AI help and fact-checked by a person." That's true only because
+a person checks each issue against its sources before delivery. Your organization may reword the line
+(`ai_disclosure` in your brand settings), but it can't be removed: if it's left empty, ours is used.

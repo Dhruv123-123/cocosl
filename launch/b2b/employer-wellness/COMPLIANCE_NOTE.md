@@ -71,3 +71,9 @@ here says the newsletter satisfies any legal requirement.
 5. Tax-law references checked against IRS.gov that month.
 6. No unfilled `{{TOKENS}}` (the build refuses).
 7. Read it once out loud. If it sounds like a salesperson or a lawyer, rewrite it.
+
+## AI disclosure
+
+Every issue's footer says: "Drafted with AI help and fact-checked by a person." That's true only because
+a person checks each issue against its sources before delivery. Your organization may reword the line
+(`ai_disclosure` in your brand settings), but it can't be removed: if it's left empty, ours is used.

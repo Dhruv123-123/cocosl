@@ -1,0 +1,22 @@
+{
+  "_about": "Every brand slot visible as a token, for the school's review. build.py skips the leftover-token check for this file.",
+  "slug": "placeholders",
+  "name": "{{SCHOOL_NAME}}",
+  "initials": "LOGO",
+  "logo": "",
+  "color": "#3B4A5A",
+  "accent": "#E0A526",
+  "tier": "standard",
+  "tokens": {
+    "SCHOOL_NAME": "{{SCHOOL_NAME}}",
+    "SCHOOL_SHORT": "{{SCHOOL_SHORT}}",
+    "HELP_CONTACT": "{{HELP_CONTACT}}"
+  },
+  "promise": "{{SCHOOL_NOTE}}",
+  "footer_lines": [
+    "{{SCHOOL_ADDRESS}}",
+    "{{WHO_GETS_THIS}}"
+  ],
+  "unsubscribe": "{{UNSUBSCRIBE_LINK_IF_EMAILED}}",
+  "credit_line": "{{SPONSOR_LINE_IF_SPONSORED}}"
+}

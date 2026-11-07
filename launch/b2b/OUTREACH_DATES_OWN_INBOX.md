@@ -5,14 +5,15 @@ Made by `outreach_dates.py --own-inbox`. **Nothing has been sent, and this plan 
 | Group | Prospects | First Email 1 | Last Email 1 |
 |---|---|---|---|
 | Accounting firm | 40 | 2026-11-10 | 2026-12-01 |
-| Credit union | 60 | 2026-12-02 | 2027-02-17 |
+| Credit union | 60 | 2026-12-02 | 2027-03-10 |
 | Scam Watch | 30 | 2026-12-17 | 2027-01-05 |
-| Employer partner | 11 | 2027-01-06 | 2027-01-08 |
-| Employer | 40 | 2027-01-08 | 2027-01-29 |
+| School or college | 40 | 2027-01-06 | 2027-01-22 |
+| Employer partner | 11 | 2027-01-27 | 2027-01-29 |
+| Employer | 40 | 2027-01-29 | 2027-02-19 |
 
-Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low volume first, so add that before the first date.
+Last email: Mon 22 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low volume first, so add that before the first date.
 
-### Tue 10 Nov 2026 · 5 B2B (ad studio: 0)
+### Tue 10 Nov 2026 · 5 B2B
 
 - Email 1: Coulston Accounting PC (Accounting firm, MT · fit 5)
 - Email 1: Orazem Tax & Financial (Accounting firm, MT · fit 5)
@@ -20,7 +21,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Berrett Tax & Finance Inc. (Accounting firm, ID · fit 5)
 - Email 1: Northwest Tax Advisors (Accounting firm, ID · fit 5)
 
-### Wed 11 Nov 2026 · 5 B2B (ad studio: 0)
+### Wed 11 Nov 2026 · 5 B2B
 
 - Email 1: Bates Bean Counting (Accounting firm, ID · fit 5)
 - Email 1: Middleton Accounting & Tax Services (Accounting firm, ID · fit 5)
@@ -28,7 +29,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Bookkeeping by CHOICE (Accounting firm, ID · fit 5)
 - Email 1: Atticus Accounting (Accounting firm, ID · fit 5)
 
-### Thu 12 Nov 2026 · 5 B2B (ad studio: 0)
+### Thu 12 Nov 2026 · 5 B2B
 
 - Email 1: Elite Accounting, Inc (Accounting firm, ID · fit 5)
 - Email 1: Kane Tax & Accounting (Accounting firm, ID · fit 5)
@@ -36,7 +37,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Randall Hensel & Company (Accounting firm, MT · fit 4)
 - Email 1: Lee & Company PC (Accounting firm, MT · fit 4)
 
-### Fri 13 Nov 2026 · 5 B2B (ad studio: 0)
+### Fri 13 Nov 2026 · 5 B2B
 
 - Email 1: Cote & Associates CPAs PLLC (Accounting firm, MT · fit 4)
 - Email 1: Campbell & Associates P.C. (Accounting firm, MT · fit 4)
@@ -44,7 +45,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Neil & Company CPAs PC (Accounting firm, MT · fit 4)
 - Email 1: Penor & Associates CPAs PC (Accounting firm, MT · fit 4)
 
-### Mon 16 Nov 2026 · 10 B2B (ad studio: 0)
+### Mon 16 Nov 2026 · 10 B2B
 
 - Follow-up 1: Coulston Accounting PC (Accounting firm, MT · fit 5)
 - Follow-up 1: Orazem Tax & Financial (Accounting firm, MT · fit 5)
@@ -57,7 +58,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Bookkeeping by CHOICE (Accounting firm, ID · fit 5)
 - Follow-up 1: Atticus Accounting (Accounting firm, ID · fit 5)
 
-### Tue 17 Nov 2026 · 10 B2B (ad studio: 0)
+### Tue 17 Nov 2026 · 10 B2B
 
 - Follow-up 1: Elite Accounting, Inc (Accounting firm, ID · fit 5)
 - Follow-up 1: Kane Tax & Accounting (Accounting firm, ID · fit 5)
@@ -70,7 +71,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Neil & Company CPAs PC (Accounting firm, MT · fit 4)
 - Follow-up 1: Penor & Associates CPAs PC (Accounting firm, MT · fit 4)
 
-### Wed 18 Nov 2026 · 5 B2B (ad studio: 0)
+### Wed 18 Nov 2026 · 5 B2B
 
 - Email 1: Runyan & Associates P.C. (Accounting firm, MT · fit 4)
 - Email 1: Schafer & Co PLLC (Accounting firm, MT · fit 4)
@@ -78,7 +79,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Tripp & Associates (Accounting firm, MT · fit 4)
 - Email 1: Paul Strom & Associates (Accounting firm, MT · fit 4)
 
-### Thu 19 Nov 2026 · 5 B2B (ad studio: 0)
+### Thu 19 Nov 2026 · 5 B2B
 
 - Email 1: Schafer & Associates P.C. (Accounting firm, MT · fit 4)
 - Email 1: Ortt & Co. CPAs Inc. (Accounting firm, MT · fit 4)
@@ -86,7 +87,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Nardella & Associates P.C. (Accounting firm, MT · fit 4)
 - Email 1: Montgomery & Associates, PLLC (Accounting firm, ID · fit 4)
 
-### Fri 20 Nov 2026 · 10 B2B (ad studio: 0)
+### Fri 20 Nov 2026 · 10 B2B
 
 - Email 1: Knuff & Kunde CPAs (Accounting firm, ID · fit 4)
 - Email 1: Stewart & Associates P.A. (Accounting firm, ID · fit 4)
@@ -99,7 +100,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 2: Berrett Tax & Finance Inc. (Accounting firm, ID · fit 5)
 - Follow-up 2: Northwest Tax Advisors (Accounting firm, ID · fit 5)
 
-### Mon 23 Nov 2026 · 10 B2B (ad studio: 0)
+### Mon 23 Nov 2026 · 10 B2B
 
 - Follow-up 2: Bates Bean Counting (Accounting firm, ID · fit 5)
 - Follow-up 2: Middleton Accounting & Tax Services (Accounting firm, ID · fit 5)
@@ -112,7 +113,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 2: Randall Hensel & Company (Accounting firm, MT · fit 4)
 - Follow-up 2: Lee & Company PC (Accounting firm, MT · fit 4)
 
-### Tue 24 Nov 2026 · 10 B2B (ad studio: 0)
+### Tue 24 Nov 2026 · 10 B2B
 
 - Follow-up 2: Cote & Associates CPAs PLLC (Accounting firm, MT · fit 4)
 - Follow-up 2: Campbell & Associates P.C. (Accounting firm, MT · fit 4)
@@ -125,7 +126,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Tripp & Associates (Accounting firm, MT · fit 4)
 - Follow-up 1: Paul Strom & Associates (Accounting firm, MT · fit 4)
 
-### Wed 25 Nov 2026 · 10 B2B (ad studio: 0)
+### Wed 25 Nov 2026 · 10 B2B
 
 - Follow-up 1: Schafer & Associates P.C. (Accounting firm, MT · fit 4)
 - Follow-up 1: Ortt & Co. CPAs Inc. (Accounting firm, MT · fit 4)
@@ -138,7 +139,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Rutherford MacDonald & Olson (Accounting firm, MT · fit 3)
 - Follow-up 1: Boyle Deveny & Meyer P.C. (Accounting firm, MT · fit 3)
 
-### Mon 30 Nov 2026 · 10 B2B (ad studio: 0)
+### Mon 30 Nov 2026 · 10 B2B
 
 - Follow-up 2: Runyan & Associates P.C. (Accounting firm, MT · fit 4)
 - Follow-up 2: Schafer & Co PLLC (Accounting firm, MT · fit 4)
@@ -151,7 +152,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 2: Nardella & Associates P.C. (Accounting firm, MT · fit 4)
 - Follow-up 2: Montgomery & Associates, PLLC (Accounting firm, ID · fit 4)
 
-### Tue 01 Dec 2026 · 10 B2B (ad studio: 0)
+### Tue 01 Dec 2026 · 10 B2B
 
 - Email 1: Hubley Phillips & Williams PLLP (Accounting firm, MT · fit 3)
 - Email 1: Weber Dobson & Jensen P.C. (Accounting firm, MT · fit 3)
@@ -164,7 +165,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 2: Rutherford MacDonald & Olson (Accounting firm, MT · fit 3)
 - Follow-up 2: Boyle Deveny & Meyer P.C. (Accounting firm, MT · fit 3)
 
-### Wed 02 Dec 2026 · 5 B2B (ad studio: 0)
+### Wed 02 Dec 2026 · 5 B2B
 
 - Email 1: Fergus Federal Credit Union (Credit union, MT)
 - Email 1: Russell Country Federal Credit Union (Credit union, MT)
@@ -172,7 +173,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: SKY Federal Credit Union (Credit union, MT)
 - Email 1: Southwest Montana Community Federal Credit Union (Credit union, MT)
 
-### Thu 03 Dec 2026 · 5 B2B (ad studio: 0)
+### Thu 03 Dec 2026 · 5 B2B
 
 - Email 1: 1st Liberty Federal Credit Union (Credit union, MT)
 - Email 1: Intrepid Credit Union (Credit union, MT)
@@ -180,7 +181,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Park Side Financial Credit Union (Credit union, MT)
 - Email 1: Rocky Mountain Credit Union (Credit union, MT)
 
-### Fri 04 Dec 2026 · 5 B2B (ad studio: 0)
+### Fri 04 Dec 2026 · 5 B2B
 
 - Email 1: Latah Credit Union (Credit union, ID)
 - Email 1: Idaho United Credit Union (Credit union, ID)
@@ -188,7 +189,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Connections Credit Union (Credit union, ID)
 - Email 1: Lewis Clark Credit Union (Credit union, ID)
 
-### Mon 07 Dec 2026 · 10 B2B (ad studio: 0)
+### Mon 07 Dec 2026 · 10 B2B
 
 - Follow-up 1: Hubley Phillips & Williams PLLP (Accounting firm, MT · fit 3)
 - Follow-up 1: Weber Dobson & Jensen P.C. (Accounting firm, MT · fit 3)
@@ -201,7 +202,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: SKY Federal Credit Union (Credit union, MT)
 - Follow-up 1: Southwest Montana Community Federal Credit Union (Credit union, MT)
 
-### Tue 08 Dec 2026 · 10 B2B (ad studio: 0)
+### Tue 08 Dec 2026 · 10 B2B
 
 - Follow-up 1: 1st Liberty Federal Credit Union (Credit union, MT)
 - Follow-up 1: Intrepid Credit Union (Credit union, MT)
@@ -214,7 +215,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Connections Credit Union (Credit union, ID)
 - Follow-up 1: Lewis Clark Credit Union (Credit union, ID)
 
-### Wed 09 Dec 2026 · 5 B2B (ad studio: 0)
+### Wed 09 Dec 2026 · 5 B2B
 
 - Email 1: Cottonwood Community Federal Credit Union (Credit union, ID)
 - Email 1: Advantage Plus Federal Credit Union (Credit union, ID)
@@ -222,7 +223,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Pacific Cascade Federal Credit Union (Credit union, OR)
 - Email 1: 44 North Credit Union (Credit union, OR)
 
-### Thu 10 Dec 2026 · 5 B2B (ad studio: 0)
+### Thu 10 Dec 2026 · 5 B2B
 
 - Email 1: Old West Federal Credit Union (Credit union, OR)
 - Email 1: Inroads Federal Credit Union (Credit union, OR)
@@ -230,7 +231,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Cascade Community Federal Credit Union (Credit union, OR)
 - Email 1: White River Credit Union (Credit union, WA)
 
-### Fri 11 Dec 2026 · 10 B2B (ad studio: 0)
+### Fri 11 Dec 2026 · 10 B2B
 
 - Email 1: Mountaincrest Credit Union (Credit union, WA)
 - Email 1: Canopy Federal Credit Union (Credit union, WA)
@@ -243,7 +244,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 2: Summers McNea & Company P.C. (Accounting firm, MT · fit 3)
 - Follow-up 2: Roberts Hart & Co., CPAs (Accounting firm, ID · fit 3)
 
-### Mon 14 Dec 2026 · 10 B2B (ad studio: 0)
+### Mon 14 Dec 2026 · 10 B2B
 
 - Follow-up 2: Fergus Federal Credit Union (Credit union, MT)
 - Follow-up 2: Russell Country Federal Credit Union (Credit union, MT)
@@ -256,7 +257,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 2: Park Side Financial Credit Union (Credit union, MT)
 - Follow-up 2: Rocky Mountain Credit Union (Credit union, MT)
 
-### Tue 15 Dec 2026 · 10 B2B (ad studio: 0)
+### Tue 15 Dec 2026 · 10 B2B
 
 - Follow-up 2: Latah Credit Union (Credit union, ID)
 - Follow-up 2: Idaho United Credit Union (Credit union, ID)
@@ -269,7 +270,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Pacific Cascade Federal Credit Union (Credit union, OR)
 - Follow-up 1: 44 North Credit Union (Credit union, OR)
 
-### Wed 16 Dec 2026 · 10 B2B (ad studio: 0)
+### Wed 16 Dec 2026 · 10 B2B
 
 - Follow-up 1: Old West Federal Credit Union (Credit union, OR)
 - Follow-up 1: Inroads Federal Credit Union (Credit union, OR)
@@ -282,7 +283,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Great Northwest Federal Credit Union (Credit union, WA)
 - Follow-up 1: North Coast Credit Union (Credit union, WA)
 
-### Thu 17 Dec 2026 · 5 B2B (ad studio: 0)
+### Thu 17 Dec 2026 · 5 B2B
 
 - Email 1: Area I Agency on Aging (Scam Watch, MT)
 - Email 1: Area II Agency on Aging (Scam Watch, MT)
@@ -290,7 +291,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Area V Agency on Aging (Southwestern Montana Aging and Disability Services) (Scam Watch, MT)
 - Email 1: Area VI Agency on Aging (Western Montana Aging Services) (Scam Watch, MT)
 
-### Fri 18 Dec 2026 · 5 B2B (ad studio: 0)
+### Fri 18 Dec 2026 · 5 B2B
 
 - Email 1: Area VII Agency on Aging (Missoula Aging Services) (Scam Watch, MT)
 - Email 1: Area VIII Agency on Aging (Cascade County Aging Services) (Scam Watch, MT)
@@ -298,7 +299,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Lake City Center (Scam Watch, ID)
 - Email 1: Sandpoint Senior Center (Scam Watch, ID)
 
-### Mon 21 Dec 2026 · 10 B2B (ad studio: 0)
+### Mon 21 Dec 2026 · 10 B2B
 
 - Follow-up 2: Cottonwood Community Federal Credit Union (Credit union, ID)
 - Follow-up 2: Advantage Plus Federal Credit Union (Credit union, ID)
@@ -311,7 +312,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 2: Cascade Community Federal Credit Union (Credit union, OR)
 - Follow-up 2: White River Credit Union (Credit union, WA)
 
-### Tue 22 Dec 2026 · 10 B2B (ad studio: 0)
+### Tue 22 Dec 2026 · 10 B2B
 
 - Follow-up 2: Mountaincrest Credit Union (Credit union, WA)
 - Follow-up 2: Canopy Federal Credit Union (Credit union, WA)
@@ -324,7 +325,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Area V Agency on Aging (Southwestern Montana Aging and Disability Services) (Scam Watch, MT)
 - Follow-up 1: Area VI Agency on Aging (Western Montana Aging Services) (Scam Watch, MT)
 
-### Wed 23 Dec 2026 · 10 B2B (ad studio: 0)
+### Wed 23 Dec 2026 · 10 B2B
 
 - Email 1: Friendly Neighbors Senior Center (Scam Watch, ID)
 - Email 1: Caldwell Senior Center (Scam Watch, ID)
@@ -337,7 +338,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Lake City Center (Scam Watch, ID)
 - Follow-up 1: Sandpoint Senior Center (Scam Watch, ID)
 
-### Mon 28 Dec 2026 · 10 B2B (ad studio: 0)
+### Mon 28 Dec 2026 · 10 B2B
 
 - Follow-up 2: Area I Agency on Aging (Scam Watch, MT)
 - Follow-up 2: Area II Agency on Aging (Scam Watch, MT)
@@ -350,7 +351,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 2: Lake City Center (Scam Watch, ID)
 - Follow-up 2: Sandpoint Senior Center (Scam Watch, ID)
 
-### Tue 29 Dec 2026 · 10 B2B (ad studio: 0)
+### Tue 29 Dec 2026 · 10 B2B
 
 - Email 1: Idaho Falls Senior Community Center (Scam Watch, ID)
 - Email 1: Greater Pocatello Senior Center (Scam Watch, ID)
@@ -363,7 +364,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Nampa Senior Center (Scam Watch, ID)
 - Follow-up 1: Meridian Senior Center (Scam Watch, ID)
 
-### Wed 30 Dec 2026 · 5 B2B (ad studio: 0)
+### Wed 30 Dec 2026 · 5 B2B
 
 - Email 1: Meridian Library District (Scam Watch, ID)
 - Email 1: Nampa Public Library (Scam Watch, ID)
@@ -371,7 +372,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Marshall Public Library (Scam Watch, ID)
 - Email 1: Twin Falls Public Library (Scam Watch, ID)
 
-### Mon 04 Jan 2027 · 10 B2B (ad studio: 0)
+### Mon 04 Jan 2027 · 10 B2B
 
 - Follow-up 2: Friendly Neighbors Senior Center (Scam Watch, ID)
 - Follow-up 2: Caldwell Senior Center (Scam Watch, ID)
@@ -384,7 +385,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Boise Public Library (Scam Watch, ID)
 - Follow-up 1: Ada Community Library (Scam Watch, ID)
 
-### Tue 05 Jan 2027 · 10 B2B (ad studio: 0)
+### Tue 05 Jan 2027 · 10 B2B
 
 - Email 1: Community Library Network (Scam Watch, ID)
 - Email 1: Lewis & Clark Library (Scam Watch, MT)
@@ -397,36 +398,36 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Marshall Public Library (Scam Watch, ID)
 - Follow-up 1: Twin Falls Public Library (Scam Watch, ID)
 
-### Wed 06 Jan 2027 · 5 B2B (ad studio: 0)
+### Wed 06 Jan 2027 · 5 B2B
 
-- Email 1: Big Sky Chapter SHRM (Employer partner, MT · fit 4)
-- Email 1: Southwest Montana SHRM (Employer partner, MT · fit 4)
-- Email 1: Helena Chapter SHRM (Employer partner, MT · fit 4)
-- Email 1: Great Falls Chapter SHRM (Employer partner, MT · fit 4)
-- Email 1: Flathead Valley Chapter SHRM (Employer partner, MT · fit 4)
+- Email 1: Billings Public Schools (Billings H S district) (School or college, MT · fit 5)
+- Email 1: Great Falls Public Schools (Great Falls H S) (School or college, MT · fit 5)
+- Email 1: Missoula County Public Schools (Missoula H S) (School or college, MT · fit 5)
+- Email 1: Helena Public Schools (Helena H S) (School or college, MT · fit 5)
+- Email 1: Bozeman Public Schools (Bozeman H S) (School or college, MT · fit 5)
 
-### Thu 07 Jan 2027 · 5 B2B (ad studio: 0)
+### Thu 07 Jan 2027 · 5 B2B
 
-- Email 1: Yellowstone Valley Chapter SHRM (Employer partner, MT · fit 4)
-- Email 1: Human Resources Association of Treasure Valley (HRATV) (Employer partner, ID · fit 4)
-- Email 1: Idaho SHRM State Council (Employer partner, ID · fit 4)
-- Email 1: Leavitt Great West Insurance (Employer partner, MT · fit 5)
-- Email 1: Leavitt Select Insurance Services (Employer partner, ID · fit 5)
+- Email 1: Flathead High School District (Kalispell Public Schools) (School or college, MT · fit 5)
+- Email 1: Butte School District No. 1 (School or college, MT · fit 5)
+- Email 1: Belgrade Public Schools (School or college, MT · fit 5)
+- Email 1: East Helena Public Schools (School or college, MT · fit 5)
+- Email 1: Hamilton School District (School or college, MT · fit 5)
 
-### Fri 08 Jan 2027 · 10 B2B (ad studio: 0)
+### Fri 08 Jan 2027 · 10 B2B
 
-- Email 1: Ataraxis PEO (Employer partner, ID · fit 5)
-- Email 1: Murdoch's Ranch & Home Supply (Employer, MT · fit 5)
-- Email 1: CSWW (Employer, MT · fit 5)
-- Email 1: Blackfoot Communications (Employer, MT · fit 5)
-- Email 1: Ressler Motors (Employer, MT · fit 5)
+- Email 1: Lockwood Schools (School or college, MT · fit 5)
+- Email 1: Corvallis School District (School or college, MT · fit 5)
+- Email 1: Columbia Falls School District (School or college, MT · fit 5)
+- Email 1: West Ada School District (Joint School District No. 2) (School or college, ID · fit 4)
+- Email 1: Boise School District (School or college, ID · fit 4)
 - Follow-up 2: Idaho Falls Senior Community Center (Scam Watch, ID)
 - Follow-up 2: Greater Pocatello Senior Center (Scam Watch, ID)
 - Follow-up 2: Twin Falls Senior Citizen's Federation (Scam Watch, ID)
 - Follow-up 2: Boise Public Library (Scam Watch, ID)
 - Follow-up 2: Ada Community Library (Scam Watch, ID)
 
-### Mon 11 Jan 2027 · 10 B2B (ad studio: 0)
+### Mon 11 Jan 2027 · 10 B2B
 
 - Follow-up 2: Meridian Library District (Scam Watch, ID)
 - Follow-up 2: Nampa Public Library (Scam Watch, ID)
@@ -439,7 +440,177 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Missoula Public Library (Scam Watch, MT)
 - Follow-up 1: Billings Public Library (Scam Watch, MT)
 
-### Tue 12 Jan 2027 · 10 B2B (ad studio: 0)
+### Tue 12 Jan 2027 · 10 B2B
+
+- Follow-up 1: Billings Public Schools (Billings H S district) (School or college, MT · fit 5)
+- Follow-up 1: Great Falls Public Schools (Great Falls H S) (School or college, MT · fit 5)
+- Follow-up 1: Missoula County Public Schools (Missoula H S) (School or college, MT · fit 5)
+- Follow-up 1: Helena Public Schools (Helena H S) (School or college, MT · fit 5)
+- Follow-up 1: Bozeman Public Schools (Bozeman H S) (School or college, MT · fit 5)
+- Follow-up 1: Flathead High School District (Kalispell Public Schools) (School or college, MT · fit 5)
+- Follow-up 1: Butte School District No. 1 (School or college, MT · fit 5)
+- Follow-up 1: Belgrade Public Schools (School or college, MT · fit 5)
+- Follow-up 1: East Helena Public Schools (School or college, MT · fit 5)
+- Follow-up 1: Hamilton School District (School or college, MT · fit 5)
+
+### Wed 13 Jan 2027 · 10 B2B
+
+- Email 1: Nampa School District (School or college, ID · fit 4)
+- Email 1: Bonneville Joint School District No. 93 (School or college, ID · fit 4)
+- Email 1: Pocatello/Chubbuck School District No. 25 (School or college, ID · fit 4)
+- Email 1: Vallivue School District (School or college, ID · fit 4)
+- Email 1: Coeur d'Alene School District No. 271 (School or college, ID · fit 4)
+- Follow-up 1: Lockwood Schools (School or college, MT · fit 5)
+- Follow-up 1: Corvallis School District (School or college, MT · fit 5)
+- Follow-up 1: Columbia Falls School District (School or college, MT · fit 5)
+- Follow-up 1: West Ada School District (Joint School District No. 2) (School or college, ID · fit 4)
+- Follow-up 1: Boise School District (School or college, ID · fit 4)
+
+### Thu 14 Jan 2027 · 5 B2B
+
+- Email 1: Idaho Falls School District No. 91 (School or college, ID · fit 4)
+- Email 1: Twin Falls School District No. 411 (School or college, ID · fit 4)
+- Email 1: Flathead Valley Community College (School or college, MT · fit 4)
+- Email 1: Miles Community College (School or college, MT · fit 4)
+- Email 1: Dawson Community College (School or college, MT · fit 4)
+
+### Fri 15 Jan 2027 · 10 B2B
+
+- Email 1: City College at Montana State University Billings (School or college, MT · fit 4)
+- Email 1: Great Falls College Montana State University (School or college, MT · fit 4)
+- Email 1: Helena College University of Montana (School or college, MT · fit 4)
+- Email 1: Highlands College of Montana Tech (School or college, MT · fit 4)
+- Email 1: Missoula College University of Montana (School or college, MT · fit 4)
+- Follow-up 2: Community Library Network (Scam Watch, ID)
+- Follow-up 2: Lewis & Clark Library (Scam Watch, MT)
+- Follow-up 2: Bozeman Public Library (Scam Watch, MT)
+- Follow-up 2: Missoula Public Library (Scam Watch, MT)
+- Follow-up 2: Billings Public Library (Scam Watch, MT)
+
+### Mon 18 Jan 2027 · 10 B2B
+
+- Follow-up 2: Billings Public Schools (Billings H S district) (School or college, MT · fit 5)
+- Follow-up 2: Great Falls Public Schools (Great Falls H S) (School or college, MT · fit 5)
+- Follow-up 2: Missoula County Public Schools (Missoula H S) (School or college, MT · fit 5)
+- Follow-up 2: Helena Public Schools (Helena H S) (School or college, MT · fit 5)
+- Follow-up 2: Bozeman Public Schools (Bozeman H S) (School or college, MT · fit 5)
+- Follow-up 2: Flathead High School District (Kalispell Public Schools) (School or college, MT · fit 5)
+- Follow-up 2: Butte School District No. 1 (School or college, MT · fit 5)
+- Follow-up 2: Belgrade Public Schools (School or college, MT · fit 5)
+- Follow-up 2: East Helena Public Schools (School or college, MT · fit 5)
+- Follow-up 2: Hamilton School District (School or college, MT · fit 5)
+
+### Tue 19 Jan 2027 · 10 B2B
+
+- Follow-up 2: Lockwood Schools (School or college, MT · fit 5)
+- Follow-up 2: Corvallis School District (School or college, MT · fit 5)
+- Follow-up 2: Columbia Falls School District (School or college, MT · fit 5)
+- Follow-up 2: West Ada School District (Joint School District No. 2) (School or college, ID · fit 4)
+- Follow-up 2: Boise School District (School or college, ID · fit 4)
+- Follow-up 1: Nampa School District (School or college, ID · fit 4)
+- Follow-up 1: Bonneville Joint School District No. 93 (School or college, ID · fit 4)
+- Follow-up 1: Pocatello/Chubbuck School District No. 25 (School or college, ID · fit 4)
+- Follow-up 1: Vallivue School District (School or college, ID · fit 4)
+- Follow-up 1: Coeur d'Alene School District No. 271 (School or college, ID · fit 4)
+
+### Wed 20 Jan 2027 · 10 B2B
+
+- Follow-up 1: Idaho Falls School District No. 91 (School or college, ID · fit 4)
+- Follow-up 1: Twin Falls School District No. 411 (School or college, ID · fit 4)
+- Follow-up 1: Flathead Valley Community College (School or college, MT · fit 4)
+- Follow-up 1: Miles Community College (School or college, MT · fit 4)
+- Follow-up 1: Dawson Community College (School or college, MT · fit 4)
+- Follow-up 1: City College at Montana State University Billings (School or college, MT · fit 4)
+- Follow-up 1: Great Falls College Montana State University (School or college, MT · fit 4)
+- Follow-up 1: Helena College University of Montana (School or college, MT · fit 4)
+- Follow-up 1: Highlands College of Montana Tech (School or college, MT · fit 4)
+- Follow-up 1: Missoula College University of Montana (School or college, MT · fit 4)
+
+### Thu 21 Jan 2027 · 5 B2B
+
+- Email 1: College of Western Idaho (School or college, ID · fit 4)
+- Email 1: College of Southern Idaho (School or college, ID · fit 4)
+- Email 1: North Idaho College (School or college, ID · fit 4)
+- Email 1: College of Eastern Idaho (School or college, ID · fit 4)
+- Email 1: Jefferson County Joint School District No. 251 (School or college, ID · fit 3)
+
+### Fri 22 Jan 2027 · 5 B2B
+
+- Email 1: Post Falls School District (School or college, ID · fit 3)
+- Email 1: Kuna School District (School or college, ID · fit 3)
+- Email 1: Madison School District No. 321 (School or college, ID · fit 3)
+- Email 1: Caldwell School District (School or college, ID · fit 3)
+- Email 1: Lakeland Joint School District No. 272 (School or college, ID · fit 3)
+
+### Mon 25 Jan 2027 · 10 B2B
+
+- Follow-up 2: Nampa School District (School or college, ID · fit 4)
+- Follow-up 2: Bonneville Joint School District No. 93 (School or college, ID · fit 4)
+- Follow-up 2: Pocatello/Chubbuck School District No. 25 (School or college, ID · fit 4)
+- Follow-up 2: Vallivue School District (School or college, ID · fit 4)
+- Follow-up 2: Coeur d'Alene School District No. 271 (School or college, ID · fit 4)
+- Follow-up 2: Idaho Falls School District No. 91 (School or college, ID · fit 4)
+- Follow-up 2: Twin Falls School District No. 411 (School or college, ID · fit 4)
+- Follow-up 2: Flathead Valley Community College (School or college, MT · fit 4)
+- Follow-up 2: Miles Community College (School or college, MT · fit 4)
+- Follow-up 2: Dawson Community College (School or college, MT · fit 4)
+
+### Tue 26 Jan 2027 · 10 B2B
+
+- Follow-up 2: City College at Montana State University Billings (School or college, MT · fit 4)
+- Follow-up 2: Great Falls College Montana State University (School or college, MT · fit 4)
+- Follow-up 2: Helena College University of Montana (School or college, MT · fit 4)
+- Follow-up 2: Highlands College of Montana Tech (School or college, MT · fit 4)
+- Follow-up 2: Missoula College University of Montana (School or college, MT · fit 4)
+- Follow-up 1: College of Western Idaho (School or college, ID · fit 4)
+- Follow-up 1: College of Southern Idaho (School or college, ID · fit 4)
+- Follow-up 1: North Idaho College (School or college, ID · fit 4)
+- Follow-up 1: College of Eastern Idaho (School or college, ID · fit 4)
+- Follow-up 1: Jefferson County Joint School District No. 251 (School or college, ID · fit 3)
+
+### Wed 27 Jan 2027 · 10 B2B
+
+- Email 1: Big Sky Chapter SHRM (Employer partner, MT · fit 4)
+- Email 1: Southwest Montana SHRM (Employer partner, MT · fit 4)
+- Email 1: Helena Chapter SHRM (Employer partner, MT · fit 4)
+- Email 1: Great Falls Chapter SHRM (Employer partner, MT · fit 4)
+- Email 1: Flathead Valley Chapter SHRM (Employer partner, MT · fit 4)
+- Follow-up 1: Post Falls School District (School or college, ID · fit 3)
+- Follow-up 1: Kuna School District (School or college, ID · fit 3)
+- Follow-up 1: Madison School District No. 321 (School or college, ID · fit 3)
+- Follow-up 1: Caldwell School District (School or college, ID · fit 3)
+- Follow-up 1: Lakeland Joint School District No. 272 (School or college, ID · fit 3)
+
+### Thu 28 Jan 2027 · 5 B2B
+
+- Email 1: Yellowstone Valley Chapter SHRM (Employer partner, MT · fit 4)
+- Email 1: Human Resources Association of Treasure Valley (HRATV) (Employer partner, ID · fit 4)
+- Email 1: Idaho SHRM State Council (Employer partner, ID · fit 4)
+- Email 1: Leavitt Great West Insurance (Employer partner, MT · fit 5)
+- Email 1: Leavitt Select Insurance Services (Employer partner, ID · fit 5)
+
+### Fri 29 Jan 2027 · 5 B2B
+
+- Email 1: Ataraxis PEO (Employer partner, ID · fit 5)
+- Email 1: Murdoch's Ranch & Home Supply (Employer, MT · fit 5)
+- Email 1: CSWW (Employer, MT · fit 5)
+- Email 1: Blackfoot Communications (Employer, MT · fit 5)
+- Email 1: Ressler Motors (Employer, MT · fit 5)
+
+### Mon 01 Feb 2027 · 10 B2B
+
+- Follow-up 2: College of Western Idaho (School or college, ID · fit 4)
+- Follow-up 2: College of Southern Idaho (School or college, ID · fit 4)
+- Follow-up 2: North Idaho College (School or college, ID · fit 4)
+- Follow-up 2: College of Eastern Idaho (School or college, ID · fit 4)
+- Follow-up 2: Jefferson County Joint School District No. 251 (School or college, ID · fit 3)
+- Follow-up 2: Post Falls School District (School or college, ID · fit 3)
+- Follow-up 2: Kuna School District (School or college, ID · fit 3)
+- Follow-up 2: Madison School District No. 321 (School or college, ID · fit 3)
+- Follow-up 2: Caldwell School District (School or college, ID · fit 3)
+- Follow-up 2: Lakeland Joint School District No. 272 (School or college, ID · fit 3)
+
+### Tue 02 Feb 2027 · 10 B2B
 
 - Follow-up 1: Big Sky Chapter SHRM (Employer partner, MT · fit 4)
 - Follow-up 1: Southwest Montana SHRM (Employer partner, MT · fit 4)
@@ -452,7 +623,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Leavitt Great West Insurance (Employer partner, MT · fit 5)
 - Follow-up 1: Leavitt Select Insurance Services (Employer partner, ID · fit 5)
 
-### Wed 13 Jan 2027 · 10 B2B (ad studio: 0)
+### Wed 03 Feb 2027 · 10 B2B
 
 - Email 1: Frances Mahon Deaconess Hospital (Employer, MT · fit 5)
 - Email 1: Autovol (Employer, ID · fit 5)
@@ -465,7 +636,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Blackfoot Communications (Employer, MT · fit 5)
 - Follow-up 1: Ressler Motors (Employer, MT · fit 5)
 
-### Thu 14 Jan 2027 · 5 B2B (ad studio: 0)
+### Thu 04 Feb 2027 · 5 B2B
 
 - Email 1: Larry H Miller Subaru Boise (Employer, ID · fit 5)
 - Email 1: Andersen Construction (Employer, ID · fit 5)
@@ -473,20 +644,15 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Metro Express Car Wash (Employer, ID · fit 5)
 - Email 1: Bluebird Express Car Wash (Employer, ID · fit 5)
 
-### Fri 15 Jan 2027 · 10 B2B (ad studio: 0)
+### Fri 05 Feb 2027 · 5 B2B
 
 - Email 1: KC Harvey Environmental (Employer, MT · fit 5)
 - Email 1: Missoula Bone & Joint and Surgery Center (Employer, MT · fit 4)
 - Email 1: Helena Indian Alliance (Employer, MT · fit 4)
 - Email 1: BPA Health (Employer, ID · fit 4)
 - Email 1: OGA - Ob/Gyn Associates, PA (Employer, ID · fit 4)
-- Follow-up 2: Community Library Network (Scam Watch, ID)
-- Follow-up 2: Lewis & Clark Library (Scam Watch, MT)
-- Follow-up 2: Bozeman Public Library (Scam Watch, MT)
-- Follow-up 2: Missoula Public Library (Scam Watch, MT)
-- Follow-up 2: Billings Public Library (Scam Watch, MT)
 
-### Mon 18 Jan 2027 · 10 B2B (ad studio: 0)
+### Mon 08 Feb 2027 · 10 B2B
 
 - Follow-up 2: Big Sky Chapter SHRM (Employer partner, MT · fit 4)
 - Follow-up 2: Southwest Montana SHRM (Employer partner, MT · fit 4)
@@ -499,7 +665,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 2: Leavitt Great West Insurance (Employer partner, MT · fit 5)
 - Follow-up 2: Leavitt Select Insurance Services (Employer partner, ID · fit 5)
 
-### Tue 19 Jan 2027 · 10 B2B (ad studio: 0)
+### Tue 09 Feb 2027 · 10 B2B
 
 - Follow-up 2: Ataraxis PEO (Employer partner, ID · fit 5)
 - Follow-up 2: Murdoch's Ranch & Home Supply (Employer, MT · fit 5)
@@ -512,7 +678,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: High Desert Harley-Davidson (Employer, ID · fit 5)
 - Follow-up 1: Greyloch (Employer, ID · fit 5)
 
-### Wed 20 Jan 2027 · 10 B2B (ad studio: 0)
+### Wed 10 Feb 2027 · 10 B2B
 
 - Follow-up 1: Larry H Miller Subaru Boise (Employer, ID · fit 5)
 - Follow-up 1: Andersen Construction (Employer, ID · fit 5)
@@ -525,7 +691,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: BPA Health (Employer, ID · fit 4)
 - Follow-up 1: OGA - Ob/Gyn Associates, PA (Employer, ID · fit 4)
 
-### Thu 21 Jan 2027 · 5 B2B (ad studio: 0)
+### Thu 11 Feb 2027 · 5 B2B
 
 - Email 1: TableRock Residential (Employer, ID · fit 4)
 - Email 1: Allied Business Solutions (Employer, ID · fit 4)
@@ -533,7 +699,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Apex Leaders (Employer, ID · fit 4)
 - Email 1: Falcon Ridge Charter (Employer, ID · fit 4)
 
-### Fri 22 Jan 2027 · 5 B2B (ad studio: 0)
+### Fri 12 Feb 2027 · 5 B2B
 
 - Email 1: Cole Valley Christian School (Employer, ID · fit 4)
 - Email 1: Drake Cooper (Employer, ID · fit 4)
@@ -541,7 +707,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Your Health Idaho (Employer, ID · fit 3)
 - Email 1: Tamarack Grove Engineering (Employer, ID · fit 3)
 
-### Mon 25 Jan 2027 · 10 B2B (ad studio: 0)
+### Mon 15 Feb 2027 · 10 B2B
 
 - Follow-up 2: Frances Mahon Deaconess Hospital (Employer, MT · fit 5)
 - Follow-up 2: Autovol (Employer, ID · fit 5)
@@ -554,7 +720,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 2: Metro Express Car Wash (Employer, ID · fit 5)
 - Follow-up 2: Bluebird Express Car Wash (Employer, ID · fit 5)
 
-### Tue 26 Jan 2027 · 10 B2B (ad studio: 0)
+### Tue 16 Feb 2027 · 10 B2B
 
 - Follow-up 2: KC Harvey Environmental (Employer, MT · fit 5)
 - Follow-up 2: Missoula Bone & Joint and Surgery Center (Employer, MT · fit 4)
@@ -567,7 +733,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Apex Leaders (Employer, ID · fit 4)
 - Follow-up 1: Falcon Ridge Charter (Employer, ID · fit 4)
 
-### Wed 27 Jan 2027 · 10 B2B (ad studio: 0)
+### Wed 17 Feb 2027 · 10 B2B
 
 - Email 1: Capital Auto Loan (Employer, ID · fit 3)
 - Email 1: B.A. Harris, LLC (Employer, ID · fit 3)
@@ -580,7 +746,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Your Health Idaho (Employer, ID · fit 3)
 - Follow-up 1: Tamarack Grove Engineering (Employer, ID · fit 3)
 
-### Thu 28 Jan 2027 · 5 B2B (ad studio: 0)
+### Thu 18 Feb 2027 · 5 B2B
 
 - Email 1: Liberty Asset Group (Employer, ID · fit 2)
 - Email 1: SRA 831(b) (Employer, ID · fit 2)
@@ -588,7 +754,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Premier Mortgage Resources, LLC (Employer, ID · fit 2)
 - Email 1: Mann Mortgage (Employer, MT · fit 2)
 
-### Fri 29 Jan 2027 · 5 B2B (ad studio: 0)
+### Fri 19 Feb 2027 · 5 B2B
 
 - Email 1: Glacier Bancorp (Employer, MT · fit 1)
 - Email 1: Sheridan Community Federal Credit Union (Credit union, WY)
@@ -596,7 +762,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Sunlight Federal Credit Union (Credit union, WY)
 - Email 1: Grand Altitude Federal Credit Union (Credit union, WY)
 
-### Mon 01 Feb 2027 · 10 B2B (ad studio: 0)
+### Mon 22 Feb 2027 · 10 B2B
 
 - Follow-up 2: TableRock Residential (Employer, ID · fit 4)
 - Follow-up 2: Allied Business Solutions (Employer, ID · fit 4)
@@ -609,7 +775,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 2: Your Health Idaho (Employer, ID · fit 3)
 - Follow-up 2: Tamarack Grove Engineering (Employer, ID · fit 3)
 
-### Tue 02 Feb 2027 · 10 B2B (ad studio: 0)
+### Tue 23 Feb 2027 · 10 B2B
 
 - Follow-up 1: Capital Auto Loan (Employer, ID · fit 3)
 - Follow-up 1: B.A. Harris, LLC (Employer, ID · fit 3)
@@ -622,7 +788,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Premier Mortgage Resources, LLC (Employer, ID · fit 2)
 - Follow-up 1: Mann Mortgage (Employer, MT · fit 2)
 
-### Wed 03 Feb 2027 · 10 B2B (ad studio: 0)
+### Wed 24 Feb 2027 · 10 B2B
 
 - Email 1: Campco Federal Credit Union (Credit union, WY)
 - Email 1: Western Vista Federal Credit Union (Credit union, WY)
@@ -635,7 +801,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Sunlight Federal Credit Union (Credit union, WY)
 - Follow-up 1: Grand Altitude Federal Credit Union (Credit union, WY)
 
-### Thu 04 Feb 2027 · 5 B2B (ad studio: 0)
+### Thu 25 Feb 2027 · 5 B2B
 
 - Email 1: Desert Rivers Federal Credit Union (Credit union, UT)
 - Email 1: Utah Heritage Credit Union (Credit union, UT)
@@ -643,7 +809,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Members First Credit Union (Credit union, UT)
 - Email 1: Eastern Utah Community Credit Union (Credit union, UT)
 
-### Fri 05 Feb 2027 · 5 B2B (ad studio: 0)
+### Fri 26 Feb 2027 · 5 B2B
 
 - Email 1: Elevate Federal Credit Union (Credit union, UT)
 - Email 1: Alpine Credit Union (Credit union, UT)
@@ -651,7 +817,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Jordan Federal Credit Union (Credit union, UT)
 - Email 1: San Juan Mountains Credit Union (Credit union, CO)
 
-### Mon 08 Feb 2027 · 10 B2B (ad studio: 0)
+### Mon 01 Mar 2027 · 10 B2B
 
 - Follow-up 2: Capital Auto Loan (Employer, ID · fit 3)
 - Follow-up 2: B.A. Harris, LLC (Employer, ID · fit 3)
@@ -664,7 +830,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 2: Premier Mortgage Resources, LLC (Employer, ID · fit 2)
 - Follow-up 2: Mann Mortgage (Employer, MT · fit 2)
 
-### Tue 09 Feb 2027 · 10 B2B (ad studio: 0)
+### Tue 02 Mar 2027 · 10 B2B
 
 - Follow-up 2: Glacier Bancorp (Employer, MT · fit 1)
 - Follow-up 2: Sheridan Community Federal Credit Union (Credit union, WY)
@@ -677,7 +843,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Trona Valley Community Federal Credit Union (Credit union, WY)
 - Follow-up 1: Kings Peak Credit Union (Credit union, UT)
 
-### Wed 10 Feb 2027 · 10 B2B (ad studio: 0)
+### Wed 03 Mar 2027 · 10 B2B
 
 - Follow-up 1: Desert Rivers Federal Credit Union (Credit union, UT)
 - Follow-up 1: Utah Heritage Credit Union (Credit union, UT)
@@ -690,7 +856,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Jordan Federal Credit Union (Credit union, UT)
 - Follow-up 1: San Juan Mountains Credit Union (Credit union, CO)
 
-### Thu 11 Feb 2027 · 5 B2B (ad studio: 0)
+### Thu 04 Mar 2027 · 5 B2B
 
 - Email 1: Delta County Federal Credit Union (Credit union, CO)
 - Email 1: Weld Community Credit Union (Credit union, CO)
@@ -698,7 +864,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Coloramo Federal Credit Union (Credit union, CO)
 - Email 1: Sunwest Credit Union (Credit union, CO)
 
-### Fri 12 Feb 2027 · 5 B2B (ad studio: 0)
+### Fri 05 Mar 2027 · 5 B2B
 
 - Email 1: Sterling Federal Credit Union (Credit union, CO)
 - Email 1: Minnequa Works Credit Union (Credit union, CO)
@@ -706,7 +872,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Email 1: Denver Community Credit Union (dba Zing Credit Union) (Credit union, CO)
 - Email 1: Colorado Credit Union (Credit union, CO)
 
-### Mon 15 Feb 2027 · 10 B2B (ad studio: 0)
+### Mon 08 Mar 2027 · 10 B2B
 
 - Follow-up 2: Campco Federal Credit Union (Credit union, WY)
 - Follow-up 2: Western Vista Federal Credit Union (Credit union, WY)
@@ -719,7 +885,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 2: Members First Credit Union (Credit union, UT)
 - Follow-up 2: Eastern Utah Community Credit Union (Credit union, UT)
 
-### Tue 16 Feb 2027 · 10 B2B (ad studio: 0)
+### Tue 09 Mar 2027 · 10 B2B
 
 - Follow-up 2: Elevate Federal Credit Union (Credit union, UT)
 - Follow-up 2: Alpine Credit Union (Credit union, UT)
@@ -732,7 +898,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Coloramo Federal Credit Union (Credit union, CO)
 - Follow-up 1: Sunwest Credit Union (Credit union, CO)
 
-### Wed 17 Feb 2027 · 6 B2B (ad studio: 0)
+### Wed 10 Mar 2027 · 6 B2B
 
 - Email 1: On Tap Credit Union (Credit union, CO)
 - Follow-up 1: Sterling Federal Credit Union (Credit union, CO)
@@ -741,7 +907,7 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 1: Denver Community Credit Union (dba Zing Credit Union) (Credit union, CO)
 - Follow-up 1: Colorado Credit Union (Credit union, CO)
 
-### Mon 22 Feb 2027 · 10 B2B (ad studio: 0)
+### Mon 15 Mar 2027 · 10 B2B
 
 - Follow-up 2: Delta County Federal Credit Union (Credit union, CO)
 - Follow-up 2: Weld Community Credit Union (Credit union, CO)
@@ -754,10 +920,10 @@ Last email: Mon 01 Mar 2027. A new inbox needs 2 to 4 weeks of warm-up at low vo
 - Follow-up 2: Denver Community Credit Union (dba Zing Credit Union) (Credit union, CO)
 - Follow-up 2: Colorado Credit Union (Credit union, CO)
 
-### Tue 23 Feb 2027 · 1 B2B (ad studio: 0)
+### Tue 16 Mar 2027 · 1 B2B
 
 - Follow-up 1: On Tap Credit Union (Credit union, CO)
 
-### Mon 01 Mar 2027 · 1 B2B (ad studio: 0)
+### Mon 22 Mar 2027 · 1 B2B
 
 - Follow-up 2: On Tap Credit Union (Credit union, CO)

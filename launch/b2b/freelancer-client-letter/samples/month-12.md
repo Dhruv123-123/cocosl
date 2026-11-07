@@ -40,7 +40,7 @@ List everyone you paid for work this year, with the total for each. Send it to u
 
 > Questions about your situation? Call **{{FIRM_PHONE}}** or book a time: {{BOOKING_LINK}}
 
-*Footer:* This newsletter is general information for self-employed people. It isn't tax, legal or financial advice for your situation. Rules and amounts change; we'll apply them to your return. Sources (below), plus the client's footer lines.
+*Footer:* This newsletter is general information for self-employed people. It isn't tax, legal or financial advice for your situation. Rules and amounts change; we'll apply them to your return. Drafted with AI help and fact-checked by a person. Sources (below), plus the client's footer lines.
 
 ## Client handout (printable)
 

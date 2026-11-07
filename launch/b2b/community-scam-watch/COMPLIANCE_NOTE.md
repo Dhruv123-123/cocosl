@@ -43,3 +43,9 @@ on Aging is likely to ask, and what we already do about it.
 4. Example messages labelled made up, with no real company names or numbers.
 5. No unfilled `{{TOKENS}}`.
 6. Read it aloud to someone. Shorten any sentence over about 20 words.
+
+## AI disclosure
+
+Every issue's footer says: "Drafted with AI help and fact-checked by a person." That's true only because
+a person checks each issue against its sources before delivery. Your organization may reword the line
+(`ai_disclosure` in your brand settings), but it can't be removed: if it's left empty, ours is used.
