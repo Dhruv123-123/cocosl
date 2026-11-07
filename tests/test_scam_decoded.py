@@ -455,6 +455,16 @@ def test_every_short_title_fits_60_characters():
     assert not long, long
 
 
+def test_every_post_uses_at_most_5_hashtags():
+    over = []
+    for f in sorted(CONTENT.parent.glob("*.json")):
+        data = json.loads(f.read_text())
+        if isinstance(data, list):
+            over += [(f.name, i["script"]["title"]) for i in data
+                     if isinstance(i, dict) and "script" in i and len(i["script"].get("hashtags", [])) > 5]
+    assert not over, over[:5]
+
+
 def test_newsletter_cut_pack():
     from contentfactory.schemas import Script
     from contentfactory import guardrails as G

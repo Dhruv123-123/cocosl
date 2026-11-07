@@ -51,7 +51,7 @@ dict(part=1, slug="bail-money-calls",
                  "$21 million in 'bail money': how prosecutors say a grandparent scam ran"],
  hook="25 people charged, more than 40 states, more than $21 million. This is how prosecutors say one grandparent scam network ran.",
  thumb="The 'bail money' calls",
- hashtags=["grandparentscam", "howitworked", "elderfraud", "truecrime", "scamalert", "scamdecoded"],
+ hashtags=["grandparentscam", "howitworked", "elderfraud", "truecrime", "scamdecoded"],
  caption="A call from a 'grandchild' in jail, a 'lawyer', a gag order and a 'bail bondsman' at the door. How federal "
          "prosecutors say a Montreal-based network ran, step by step, and the three checks that stop it. The people "
          "charged are presumed innocent unless proven guilty.",
@@ -118,7 +118,7 @@ dict(part=2, slug="pop-up-that-always-finds-viruses",
                  "Why the scan always found something: inside an FTC tech support case"],
  hook="1 pop-up, 1 'free scan', and the scan found problems no matter what. The FTC case behind it ended in a $26 million settlement.",
  thumb="The scan always found something",
- hashtags=["techsupportscam", "howitworked", "popup", "ftc", "scamalert", "scamdecoded"],
+ hashtags=["techsupportscam", "howitworked", "popup", "ftc", "scamdecoded"],
  caption="A fake Windows pop-up, a scan that flagged problems regardless of the computer's real condition, cheap "
          "software, then a call to 'activate' it and a technician for hundreds more. How the FTC's Restoro and "
          "Reimage case worked, and the three checks that stop it.",
@@ -181,7 +181,7 @@ dict(part=3, slug="fake-invoices-120-million",
                  "Two of the biggest tech companies paid a fake supplier. Here's how."],
  hook="2 of the biggest tech companies in the world, 1 fake supplier, and over $120 million wired away by email.",
  thumb="$120M by fake invoice",
- hashtags=["businessemailcompromise", "howitworked", "phishing", "smallbusiness", "truecrime", "scamdecoded"],
+ hashtags=["businessemailcompromise", "howitworked", "phishing", "smallbusiness", "scamdecoded"],
  caption="A company registered with a real supplier's name, lookalike emails, and invoices that sent payments to the "
          "wrong bank. How a Lithuanian man took over $120 million from two US tech companies, according to federal "
          "prosecutors, and the three checks that stop it at any size of business.",

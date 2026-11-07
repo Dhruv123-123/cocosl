@@ -47,7 +47,6 @@
     "irs",
     "identitytheft",
     "taxscam",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "Why you should create your IRS Online Account yourself, not through a 'helper'.",
@@ -133,7 +132,6 @@
     "taxseason",
     "identitytheft",
     "irs",
-    "taxtips",
     "scamdecoded"
    ],
    "description": "Six facts about the IRS Identity Protection PIN.",
@@ -214,7 +212,6 @@
     "irs",
     "qrcode",
     "taxscam",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "The fake IRS refund text with a QR code, walked through.",
@@ -278,7 +275,6 @@
     "taxseason",
     "ghostpreparer",
     "irs",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "A quick quiz on choosing a tax preparer: PTIN, signatures and fees.",
@@ -353,7 +349,6 @@
     "ghostpreparer",
     "spotthescam",
     "taxseason",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "A quiz carousel: four red flags in a ghost preparer's ad.",
@@ -427,7 +422,6 @@
     "smallbusiness",
     "payroll",
     "phishing",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "The W-2 phishing email aimed at payroll and HR, and the one-call rule that stops it.",
@@ -490,7 +484,6 @@
     "governmentimposter",
     "taxseason",
     "ftcdata",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "FTC data on government impersonation losses, and three things the real IRS won't do.",
@@ -565,7 +558,6 @@
     "vita",
     "taxseason",
     "irsfreefile",
-    "moneytips",
     "scamdecoded"
    ],
    "description": "Free IRS-backed tax help, compared with paid lookalikes in search ads.",
@@ -640,7 +632,6 @@
     "dependents",
     "identitytheft",
     "ippin",
-    "parenting",
     "scamdecoded"
    ],
    "description": "What to do when your e-filed return is rejected because a dependent was already claimed, and how an IP PIN helps.",
@@ -704,7 +695,6 @@
     "taxseason",
     "identitytheft",
     "irs",
-    "taxtips",
     "scamdecoded"
    ],
    "description": "A screen walkthrough of where to get an IRS IP PIN.",
@@ -784,7 +774,6 @@
     "identitytheft",
     "ippin",
     "taxseason",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "Five ways tax refunds get stolen, and why an IP PIN is the lock.",
@@ -860,7 +849,6 @@
     "irsletter",
     "taxday",
     "taxscam",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "Three checks for an IRS letter before you call any number on it.",

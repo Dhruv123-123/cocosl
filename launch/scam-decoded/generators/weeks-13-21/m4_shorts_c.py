@@ -10,7 +10,7 @@ S(pillar=P_TEXT,
  hook="1 beach house at half price, and 1 host who wants the deposit by payment app. That's the scam.",
  hook_variants=["3 checks before you pay a spring break deposit.", "Paying a rental deposit outside the app? 0 protection."],
  thumb="Pay inside the platform",
- hashtags=["springbreak", "vacationrental", "travel", "rentalscam", "scamalert", "scamdecoded"],
+ hashtags=["springbreak", "vacationrental", "travel", "rentalscam", "scamdecoded"],
  description="How fake spring break rental listings work, and three checks before you pay any deposit.",
  caption=("A beach house for spring break at half the price of everything nearby. The host says: 'Book directly, pay "
           "the deposit by Zelle or wire and I'll knock off the fees.'\n\nThat takes you outside the booking site's "
@@ -58,7 +58,7 @@ S(pillar=P_FAMILY,
  hook="30 minutes until your power is cut off, unless you pay right now. Your real utility doesn't work that way.",
  hook_variants=["1 call threatens to cut your heat today. Hang up and do this.", "Pay your power bill with a gift card? 0 utilities ask for that."],
  thumb="Call the number on your bill",
- hashtags=["utilityscam", "phonescam", "smallbusiness", "seniors", "scamalert", "scamdecoded"],
+ hashtags=["utilityscam", "phonescam", "smallbusiness", "seniors", "scamdecoded"],
  description="How the utility shutoff scam works, and how to check your account with your real utility.",
  caption=("'This is your electric company. Your account is past due and a technician is on the way to disconnect "
           "you in 30 minutes. Pay now to stop it.' By gift card, payment app, crypto or a barcode you scan at a store.\n\n"
@@ -105,7 +105,7 @@ S(pillar=P_ID,
  hook="$499 to apply for student loan forgiveness? You never have to pay for help with federal loans.",
  hook_variants=["1 text says your loans are approved for forgiveness. 2 tells.", "Never share 1 login with a student loan 'helper'."],
  thumb="Federal loan help is free",
- hashtags=["studentloans", "studentloanforgiveness", "collegedebt", "scamalert", "moneytips", "scamdecoded"],
+ hashtags=["studentloans", "studentloanforgiveness", "collegedebt", "moneytips", "scamdecoded"],
  description="How student loan forgiveness scams work, and where to get free, real help with federal loans.",
  caption=("'You've been approved for student loan forgiveness. Pay a $499 processing fee to finalize.' Or 'give us your "
           "FSA ID and we'll handle it.'\n\nStudentAid.gov says you never have to pay for help with your federal "
@@ -153,7 +153,7 @@ S(pillar=P_FAMILY,
  hook="1 call says your parent's Medicare card is expiring. Medicare doesn't call for their number.",
  hook_variants=["'You need a new plastic Medicare card'? 0 calls needed.", "2 things Medicare never asks for on the phone."],
  thumb="Medicare won't call for it",
- hashtags=["medicare", "seniors", "parents", "phonescam", "healthcare", "scamdecoded"],
+ hashtags=["medicare", "seniors", "parents", "phonescam", "scamdecoded"],
  description="Why calls about new or expiring Medicare cards are scams, and what to tell parents to say.",
  caption=("'Hi, this is Medicare. Your card is expiring and we're issuing new chip cards. Can you confirm your Medicare "
           "number and bank details?'\n\nMedicare cards are free, and Medicare generally won't call to ask for your "
@@ -201,7 +201,7 @@ S(pillar=P_TEXT,
  hook="1 package you didn't order, 1 QR code inside. Don't scan it.",
  hook_variants=["A mystery gift with a QR code? 2 reasons not to scan.", "Free stuff in the mail, plus a QR code: 1 scam."],
  thumb="Don't scan it",
- hashtags=["qrcode", "brushingscam", "package", "scamalert", "onlinesafety", "scamdecoded"],
+ hashtags=["qrcode", "brushingscam", "package", "onlinesafety", "scamdecoded"],
  description="Why unexpected packages with QR codes are a scam, what brushing is, and what to do with the package.",
  caption=("A package you didn't order shows up, with a note: 'Scan to see who sent you this gift.'\n\nThe FTC warns the "
           "QR code can take you to a site that asks for personal or financial information, or installs something on "
@@ -249,7 +249,7 @@ S(pillar=P_TEXT,
  hook="$2,800 a month to receive packages at home and reship them? It's a scam, and you're the cover.",
  hook_variants=["1 job offer: 'package inspector, work from home'. 3 tells.", "Reshipping jobs: you do the work, they keep the money."],
  thumb="Reshipping = scam",
- hashtags=["jobscam", "workfromhome", "sidehustle", "reshipping", "scamalert", "scamdecoded"],
+ hashtags=["jobscam", "workfromhome", "sidehustle", "reshipping", "scamdecoded"],
  description="How reshipping job scams work, why you never get paid, and what to do if you've already started.",
  caption=("'Package inspector, work from home. Receive packages, check them, print new labels, reship. $2,800 a "
           "month.'\n\nThe FTC and the Postal Inspection Service warn the goods are often bought with stolen cards. "
@@ -297,7 +297,7 @@ S(pillar=P_TEXT,
  hook="1 email says your tax balance is due today, with a pay-now button. There's 1 safe place to check.",
  hook_variants=["'Final notice' from the IRS by email? 2 tells.", "April's coming. 1 rule for paying the IRS safely."],
  thumb="Check IRS.gov yourself",
- hashtags=["taxday", "irs", "taxseason", "phishing", "scamalert", "scamdecoded"],
+ hashtags=["taxday", "irs", "taxseason", "phishing", "scamdecoded"],
  description="How fake 'balance due' emails work near the tax deadline, and how to check and pay what you owe safely.",
  caption=("As the April deadline gets closer, fake 'FINAL NOTICE: balance due' emails and texts show up, with a link to "
           "pay.\n\nThe IRS doesn't start contact by email or text about tax bills. Check any balance in your online "
@@ -345,7 +345,7 @@ S(pillar=P_TEXT,
  hook="$9,000 'government grant', just pay a $250 fee. Real grants never charge you to get them.",
  hook_variants=["1 message says you've won a federal grant. 2 tells.", "A friend's account says they got a grant? 1 check."],
  thumb="Real grants don't charge",
- hashtags=["governmentgrant", "freemoney", "scamalert", "imposterscam", "socialmedia", "scamdecoded"],
+ hashtags=["governmentgrant", "freemoney", "imposterscam", "socialmedia", "scamdecoded"],
  description="How the free government grant scam works, including messages from hacked friends' accounts, and where real grants are listed.",
  caption=("'Congratulations! You qualify for a $9,000 government grant. Pay a $250 processing fee to receive it.' "
           "Sometimes it comes from a friend's account: 'I got mine, you should apply!'\n\nThe FTC says government "

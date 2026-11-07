@@ -13,7 +13,7 @@ L(pillar=P_HOME,
  title_variants=["Storm chasers and roofing scams: a homeowner's guide", "Spring storm damage? Read this before you hire anyone"],
  hook="5 home repair scams show up after spring storms. Here's each one, and a 6-step plan to hire safely.",
  thumb="After the storm: hire safely",
- hashtags=["homerepair", "springstorms", "roofing", "contractor", "homeowner", "scamdecoded"],
+ hashtags=["homerepair", "springstorms", "roofing", "contractor", "scamdecoded"],
  description=("How storm chasers and home repair scams work, and a step-by-step plan for hiring a contractor after "
               "damage.\n\nChapters\n0:00 Why after storms\n0:50 Door-knockers\n1:50 The big deposit\n2:50 Insurance tricks\n"
               "3:50 Fake inspectors\n4:40 Hiring safely\n5:40 Paying safely\n6:30 If it went wrong\n\nExamples are fictional."),
@@ -38,7 +38,7 @@ L(pillar=P_TEXT,
  title_variants=["Filed your taxes? 6 scams that come next", "The post-April 15 scam guide"],
  hook="6 tax scams start after you file, not before. Here's each one, and what the real IRS does next.",
  thumb="After Tax Day: 6 scams",
- hashtags=["taxday", "irs", "taxrefund", "taxscam", "scamalert", "scamdecoded"],
+ hashtags=["taxday", "irs", "taxrefund", "taxscam", "scamdecoded"],
  description=("Six scams that arrive after you file your taxes, and what the real IRS does after April 15.\n\nChapters\n"
               "0:00 It's not over\n0:50 Refund trackers\n1:50 Penalty texts\n2:40 Fake audit letters\n3:40 Payment lookalikes\n"
               "4:30 Preparer problems\n5:20 Identity theft\n6:10 Your post-tax checklist\n\nExamples are fictional."),
@@ -63,7 +63,7 @@ L(pillar=P_SECURITY,
  title_variants=["Your email is your master key: a 20-minute lockdown", "Hacked email? Here's the chain, and the fix"],
  hook="1 hacked email can unlock 10 other accounts. Here's how it happens, and a 20-minute lockdown.",
  thumb="Lock your email first",
- hashtags=["cybersecurity", "email", "passwords", "2fa", "passwordmanager", "scamdecoded"],
+ hashtags=["cybersecurity", "email", "passwords", "2fa", "scamdecoded"],
  description=("Why your email account is the one to protect first, how takeovers spread, and a 20-minute lockdown.\n\n"
               "Chapters\n0:00 The master key\n0:50 How the chain works\n1:50 Warning signs\n2:40 Lockdown: password\n"
               "3:30 Lockdown: two-step\n4:20 Lockdown: recovery and rules\n5:10 Spring clean the rest\n6:00 If it's already happened\n\n"
@@ -89,7 +89,7 @@ L(pillar=P_HOME,
  title_variants=["Moving scams: fake rentals, fake movers, and how to check", "Before you sign a lease or book movers, watch this"],
  hook="2 big moving scams hit every spring: the fake rental and the hostage mover. Here's how to spot both.",
  thumb="Moving? 2 big scams",
- hashtags=["moving", "rentals", "apartmenthunting", "movingday", "scamalert", "scamdecoded"],
+ hashtags=["moving", "rentals", "apartmenthunting", "movingday", "scamdecoded"],
  description=("Fake rental listings, moving company and broker scams, and how to check a mover before you book.\n\n"
               "Chapters\n0:00 Moving season\n0:50 The fake rental\n1:50 Rental checks\n2:50 Lowball movers\n3:50 Hostage loads\n"
               "4:50 Check a mover\n5:50 Moving day\n6:40 If it went wrong\n\nExamples are fictional."),
@@ -114,7 +114,7 @@ L(pillar=P_FAMILY,
  title_variants=["7 scams aimed at older adults, and 1 rule for each", "Protecting older parents from scams: the 7 to know"],
  hook="7 scams target older adults more than anyone, and each 1 has a simple rule that beats it.",
  thumb="7 scams aimed at older adults",
- hashtags=["olderamericansmonth", "seniors", "eldercare", "familysafety", "scamalert", "scamdecoded"],
+ hashtags=["olderamericansmonth", "seniors", "eldercare", "familysafety", "scamdecoded"],
  description=("For Older Americans Month: seven scams that target older adults, one rule for each, and how families can "
               "help.\n\nChapters\n0:00 Why this month\n0:50 Family emergency\n1:40 Government imposters\n2:30 Bank fraud call\n"
               "3:20 Tech support\n4:00 Romance\n4:50 Prizes and funerals\n5:40 How families help\n\n" + SENIORS),

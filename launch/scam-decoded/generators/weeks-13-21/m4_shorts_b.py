@@ -10,7 +10,7 @@ S(pillar=P_FAMILY,
  hook="$850 to release a package your online partner sent you? There is no package.",
  hook_variants=["1 courier email after a romance: 'customs fee required'.", "They sent you gold. 3 fees later, still nothing."],
  thumb="There is no package",
- hashtags=["romancescam", "onlinedating", "valentinesday", "deliveryscam", "scamalert", "scamdecoded"],
+ hashtags=["romancescam", "onlinedating", "valentinesday", "deliveryscam", "scamdecoded"],
  description="How the romance 'package stuck in customs' scam works, why the fees keep growing, and how to check a shipment for real.",
  caption=("They say they've sent you something special: cash, gold, jewelry, 'our future'. Then a courier emails: "
           "held at customs, pay $850 to release it. Then another fee. And another.\n\nThe package, the courier site "
@@ -57,7 +57,7 @@ S(pillar=P_FAMILY,
  hook="0 real soldiers have to pay for leave. So why is your online partner asking for $2,500?",
  hook_variants=["A soldier you met online needs money to come home? 1 fact ends it.", "3 things fake soldiers always need money for."],
  thumb="Soldiers don't pay for leave",
- hashtags=["romancescam", "military", "onlinedating", "valentinesday", "scamalert", "scamdecoded"],
+ hashtags=["romancescam", "military", "onlinedating", "valentinesday", "scamdecoded"],
  description="Why online partners posing as deployed soldiers ask for money for leave, flights or phones, and what the US Army says.",
  caption=("A handsome soldier on deployment, met online. Then: 'I need $2,500 for leave papers so I can come see you "
           "for Valentine's Day.'\n\nThe US Army says soldiers don't pay to go on leave, and they don't need you to "
@@ -104,7 +104,7 @@ S(pillar=P_FAMILY,
  hook="1 text from your 'kid' on a new number, and 1 question that tells you if it's really them.",
  hook_variants=["'Hi Mum, new number, can you pay something for me?' 1 call fixes it.", "2 minutes to set up a family word that beats this text."],
  thumb="Call the old number",
- hashtags=["familyscam", "scamtext", "parents", "imposterscam", "scamalert", "scamdecoded"],
+ hashtags=["familyscam", "scamtext", "parents", "imposterscam", "scamdecoded"],
  description="How the 'Hi Mom, new number' text scam works, and the simple check every parent can do.",
  caption=("'Hi Mom, I dropped my phone, this is my new number. Save it.' A few texts later: 'can you pay a bill for me? "
           "I can't log in to my bank on the new phone.'\n\nCall your child's old number, or ask a question only they "
@@ -150,7 +150,7 @@ S(pillar=P_SECURITY,
  hook="1 search for a support number while doing your taxes, and you could be talking to a scammer.",
  hook_variants=["Stuck on your tax return? 2 safe ways to get real help.", "A 'support agent' wants remote access to your tax return? 0 times that's OK."],
  thumb="Get help inside the app",
- hashtags=["taxseason", "techsupport", "taxsoftware", "scamalert", "onlinesafety", "scamdecoded"],
+ hashtags=["taxseason", "techsupport", "taxsoftware", "onlinesafety", "scamdecoded"],
  description="How fake support numbers in search results target people filing taxes, and how to reach real help safely.",
  caption=("Stuck on your return, you search for your tax software's support number and call the first one you see. "
           "The 'agent' wants to connect to your computer, or asks for a fee to 'unlock' your refund.\n\nUse the help "
@@ -197,7 +197,7 @@ S(pillar=P_TEXT,
  hook="1 text says you owe tax on your payment app money and must pay today. 0 real forms arrive that way.",
  hook_variants=["Payment app tax form 'overdue'? 2 checks before you panic.", "'Your 1099-K shows $640 owed'? 1 rule."],
  thumb="Not how 1099-Ks work",
- hashtags=["1099k", "taxseason", "paymentapps", "scamtext", "irs", "scamdecoded"],
+ hashtags=["1099k", "taxseason", "paymentapps", "scamtext", "scamdecoded"],
  description="Why texts saying you owe tax on payment app transactions are scams, and where real 1099-K forms and tax payments happen.",
  caption=("'IRS notice: your 1099-K shows $640 in unpaid tax on payment app transactions. Pay now to avoid penalties.'\n\n"
           "Real 1099-K forms come from the payment app or platform itself, in your account or by mail, and any tax you "
@@ -246,7 +246,7 @@ S(pillar=P_FAMILY,
  hook="0 Social Security numbers get 'suspended'. That call is a scam every time.",
  hook_variants=["1 call your parents will get this year: 'your Social Security number is suspended'.", "Social Security calling about a crime in your name? 3 tells."],
  thumb="SSNs don't get suspended",
- hashtags=["socialsecurity", "slamthescam", "seniors", "phonescam", "imposterscam", "scamdecoded"],
+ hashtags=["socialsecurity", "slamthescam", "seniors", "phonescam", "scamdecoded"],
  description="Why calls saying your Social Security number is suspended are scams, what Social Security actually does, and how to report it.",
  caption=("'Your Social Security number has been suspended due to suspicious activity. Press 1 to speak to an "
           "officer.' Then: move your money to a 'safe' account, or face arrest.\n\nSocial Security numbers don't get "
@@ -294,7 +294,7 @@ S(pillar=P_TEXT,
  hook="1 call says you missed jury duty and there's a warrant out. Courts don't collect fines like this.",
  hook_variants=["A 'deputy' wants a gift card for your missed jury duty? 0 courts do that.", "Missed jury duty? 2 minutes to check, for free."],
  thumb="Call the court yourself",
- hashtags=["juryduty", "phonescam", "imposterscam", "scamalert", "scamtext", "scamdecoded"],
+ hashtags=["juryduty", "phonescam", "imposterscam", "scamtext", "scamdecoded"],
  description="How the missed jury duty scam works and how to check with the court directly.",
  caption=("A 'deputy' calls: you missed jury duty, there's a warrant, and you'll be arrested unless you pay a fine "
           "now, by gift card, payment app or crypto. Sometimes they use a real judge's name.\n\nCourts say they don't "
@@ -341,7 +341,7 @@ S(pillar=P_INVEST,
  hook="$99 for 'sure-win' picks this March? 3 red flags say it's a scam.",
  hook_variants=["1 betting app shows your winnings, then wants a fee to cash out.", "3 signs a March Madness tipster is a scammer."],
  thumb="No such thing as sure wins",
- hashtags=["marchmadness", "sportsbetting", "scamalert", "basketball", "moneytips", "scamdecoded"],
+ hashtags=["marchmadness", "sportsbetting", "basketball", "moneytips", "scamdecoded"],
  description="Three red flags in paid betting tip groups and fake betting apps around March Madness.",
  caption=("Around March Madness, 'VIP picks' groups promise sure wins for a fee, and some point you to a betting app "
           "nobody's heard of. The app shows big winnings, then wants a 'tax' or 'verification fee' before you can "

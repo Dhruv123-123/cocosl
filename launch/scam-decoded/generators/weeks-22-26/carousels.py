@@ -1,7 +1,14 @@
 from sources import *
 
 
+def _cap5(tags):
+    """Instagram allows 5 hashtags: drop the generic #scamalert first, keep #scamdecoded."""
+    tags = [t for t in tags if t != "scamalert"] if len(tags) > 5 else list(tags)
+    return tags if len(tags) <= 5 else [t for t in tags if t != "scamdecoded"][:4] + ["scamdecoded"]
+
+
 def car(pillar, angle, title, hook, thumb, hashtags, description, caption, sources, claims, segs):
+    hashtags = _cap5(hashtags)
     return dict(pillar=pillar, angle=angle, title=title, hook=hook, thumb=thumb, hashtags=hashtags,
                 description=description, caption=caption, sources=sources, claims=claims, segs=segs)
 

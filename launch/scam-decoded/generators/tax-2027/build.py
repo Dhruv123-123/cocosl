@@ -48,7 +48,7 @@ POSTS = [
   title="'I'll set up your IRS account for you': 1 offer to refuse",
   hook="1 friendly offer to set up your IRS online account is how some tax identity theft starts.",
   thumb="Set it up yourself",
-  hashtags=["taxseason", "irs", "identitytheft", "taxscam", "scamalert", "scamdecoded"],
+  hashtags=["taxseason", "irs", "identitytheft", "taxscam", "scamdecoded"],
   description="Why you should create your IRS Online Account yourself, not through a 'helper'.",
   caption="An IRS Online Account is useful: it shows what you owe, your payments and your IP PIN. That's why scammers "
           "offer to 'help' you set one up. Create it yourself at IRS.gov.",
@@ -69,7 +69,7 @@ POSTS = [
   title="The IRS IP PIN: 6 facts before you file",
   hook="6 facts about the IRS IP PIN, the 6-digit number that blocks tax refund theft.",
   thumb="IP PIN: 6 facts",
-  hashtags=["ippin", "taxseason", "identitytheft", "irs", "taxtips", "scamdecoded"],
+  hashtags=["ippin", "taxseason", "identitytheft", "irs", "scamdecoded"],
   description="Six facts about the IRS Identity Protection PIN.",
   caption="The IP PIN is a 6-digit number the IRS gives you so nobody else can file a federal return with your Social "
           "Security number. 6 facts before you file.",
@@ -88,7 +88,7 @@ POSTS = [
   title="The 'IRS refund' text with a QR code, played out",
   hook="4 red flags in 1 'IRS refund' text with a QR code. Watch them light up one by one.",
   thumb="QR code from the 'IRS'? No.",
-  hashtags=["taxrefund", "irs", "qrcode", "taxscam", "scamalert", "scamdecoded"],
+  hashtags=["taxrefund", "irs", "qrcode", "taxscam", "scamdecoded"],
   description="The fake IRS refund text with a QR code, walked through.",
   caption="Refund 'pending verification', a QR code and a 48-hour deadline. The IRS doesn't start contact about your "
           "refund by text. Example is fictional.",
@@ -119,7 +119,7 @@ POSTS = [
   title="Quiz: which of 3 tax preparers gets your W-2?",
   hook="3 tax preparers, 1 you can trust. Pause and pick before I tell you.",
   thumb="Which preparer?",
-  hashtags=["taxpreparer", "taxseason", "ghostpreparer", "irs", "scamalert", "scamdecoded"],
+  hashtags=["taxpreparer", "taxseason", "ghostpreparer", "irs", "scamdecoded"],
   description="A quick quiz on choosing a tax preparer: PTIN, signatures and fees.",
   caption="A: charges a percentage of your refund. B: won't sign the return. C: has a PTIN, signs the return, and gives "
           "you a copy. Only one is safe.",
@@ -141,7 +141,7 @@ POSTS = [
   title="Spot the red flags: the 'biggest refunds in town' preparer ad",
   hook="4 red flags in 1 tax preparer ad. How many can you find before you swipe?",
   thumb="Find 4 red flags",
-  hashtags=["taxpreparer", "ghostpreparer", "spotthescam", "taxseason", "scamalert", "scamdecoded"],
+  hashtags=["taxpreparer", "ghostpreparer", "spotthescam", "taxseason", "scamdecoded"],
   description="A quiz carousel: four red flags in a ghost preparer's ad.",
   caption="Quiz time. Count the red flags in the ad on slide 1 before you swipe. Example is fictional.",
   sources=[PREPARER, DIRTY], claims=["Ghost preparers won't sign returns or omit their PTIN (IRS)",
@@ -157,7 +157,7 @@ POSTS = [
   title="The 'boss' who emails HR for every W-2, played out",
   hook="1 email from the 'CEO' to payroll can hand every employee's W-2 to a tax thief.",
   thumb="Your boss didn't ask for the W-2s",
-  hashtags=["w2", "smallbusiness", "payroll", "phishing", "scamalert", "scamdecoded"],
+  hashtags=["w2", "smallbusiness", "payroll", "phishing", "scamdecoded"],
   description="The W-2 phishing email aimed at payroll and HR, and the one-call rule that stops it.",
   caption="Work in payroll, HR or a small business office? The 'boss' email asking for every employee's W-2 is a classic "
           "tax season scam. Call the boss first.",
@@ -184,7 +184,7 @@ POSTS = [
   title="$920 million to fake agents: 3 things the IRS won't do",
   hook="About $920 million. That's what people reported losing to fake government agents in 2025.",
   thumb="$920M to fake agents",
-  hashtags=["irs", "governmentimposter", "taxseason", "ftcdata", "scamalert", "scamdecoded"],
+  hashtags=["irs", "governmentimposter", "taxseason", "ftcdata", "scamdecoded"],
   description="FTC data on government impersonation losses, and three things the real IRS won't do.",
   caption="People told the FTC they lost about $920 million to government impersonators in 2025. Fake IRS agents are a "
           "big part of that. 3 things the real IRS won't do.",
@@ -205,7 +205,7 @@ POSTS = [
   title="Free tax help that's real: VITA, TCE and IRS Free File vs the search ad",
   hook="3 free, IRS-backed ways to get your taxes done, and 1 search ad that charges for the same thing.",
   thumb="Free tax help: 3 real options",
-  hashtags=["freetaxprep", "vita", "taxseason", "irsfreefile", "moneytips", "scamdecoded"],
+  hashtags=["freetaxprep", "vita", "taxseason", "irsfreefile", "scamdecoded"],
   description="Free IRS-backed tax help, compared with paid lookalikes in search ads.",
   caption="Before you pay a stranger to do your taxes, check the free options:\n1. VITA (IRS-certified volunteers)\n"
           "2. TCE (focus on people 60 and over)\n3. IRS Free File\nStart from IRS.gov, not a search ad.",
@@ -222,7 +222,7 @@ POSTS = [
   title="'Dependent already claimed': your child's SSN, what now?",
   hook="1 rejection message, 'dependent already claimed', can mean someone used your child's SSN.",
   thumb="Someone claimed your kid?",
-  hashtags=["taxseason", "dependents", "identitytheft", "ippin", "parenting", "scamdecoded"],
+  hashtags=["taxseason", "dependents", "identitytheft", "ippin", "scamdecoded"],
   description="What to do when your e-filed return is rejected because a dependent was already claimed, and how an IP PIN helps.",
   caption="Your return bounces: the dependent's SSN was already used. It might be a family mix-up, or identity theft. "
           "Here's what to do, and how a child's IP PIN helps.",
@@ -249,7 +249,7 @@ POSTS = [
   title="Getting an IP PIN takes about 10 minutes. Here's the screen.",
   hook="10 minutes on IRS.gov, and nobody can e-file a federal return with your Social Security number.",
   thumb="IP PIN in 10 minutes",
-  hashtags=["ippin", "taxseason", "identitytheft", "irs", "taxtips", "scamdecoded"],
+  hashtags=["ippin", "taxseason", "identitytheft", "irs", "scamdecoded"],
   description="A screen walkthrough of where to get an IRS IP PIN.",
   caption="Most of the work is verifying who you are. After that, the IP PIN is on your profile page, and a new one shows "
           "up every January.",
@@ -270,7 +270,7 @@ POSTS = [
   title="5 ways criminals steal a tax refund, and the 1 lock that blocks most of them",
   hook="5 ways a tax refund gets stolen, and 1 lock that blocks most of them.",
   thumb="Refund theft: 5 ways",
-  hashtags=["taxrefund", "identitytheft", "ippin", "taxseason", "scamalert", "scamdecoded"],
+  hashtags=["taxrefund", "identitytheft", "ippin", "taxseason", "scamdecoded"],
   description="Five ways tax refunds get stolen, and why an IP PIN is the lock.",
   caption="Refund thieves need your SSN and enough details to file before you do. Here's how they get them, and the "
           "lock that stops a fake federal return.",
@@ -288,7 +288,7 @@ POSTS = [
   title="IRS letter or fake? 3 checks before you call",
   hook="3 checks tell you if an IRS letter is real, 5 days before Tax Day.",
   thumb="Real IRS letter?",
-  hashtags=["irs", "irsletter", "taxday", "taxscam", "scamalert", "scamdecoded"],
+  hashtags=["irs", "irsletter", "taxday", "taxscam", "scamdecoded"],
   description="Three checks for an IRS letter before you call any number on it.",
   caption="The IRS usually contacts you by mail first, so scammers fake letters too. 3 checks before you call.",
   sources=[KNOW, SCAMS, DIRTY], claims=["The IRS generally contacts people by mail first (IRS)",

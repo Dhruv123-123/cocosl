@@ -43,7 +43,6 @@
         "taxextension",
         "irs",
         "taxscam",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "Why you don't need to pay a website for a tax filing extension, and where to file one for free.",
@@ -113,7 +112,6 @@
         "irs",
         "taxseason",
         "taxscam",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "What the real IRS refund tracker asks for, and how fake trackers and 'release fee' texts work.",
@@ -183,7 +181,6 @@
         "taxaudit",
         "irsletter",
         "taxscam",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "How fake IRS audit letters work, and how to check any IRS letter without using its phone number.",
@@ -253,7 +250,6 @@
         "taxpreparer",
         "taxrefund",
         "irs",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "Red flags in tax preparers who promise bigger, faster refunds, and how to check a preparer.",
@@ -322,7 +318,6 @@
         "irs",
         "taxpenalty",
         "textscam",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "How the 'missed tax deadline penalty' text works, and what really happens if you file late.",
@@ -392,7 +387,6 @@
         "irs",
         "paytaxes",
         "taxscam",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "Why to start any IRS payment at IRS.gov/payments, and how lookalike payment sites work.",
@@ -461,7 +455,6 @@
         "emailscam",
         "accountsecurity",
         "springcleaning",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "How 'your inactive account will be deleted' phishing emails work, and how to check safely.",
@@ -530,7 +523,6 @@
         "email",
         "passwords",
         "2fa",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "Why your email is the account to protect first, and the 3 settings that lock it down.",
@@ -599,7 +591,6 @@
         "instagram",
         "hackedaccount",
         "socialmedia",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "How the 'vote for my niece' message spreads account takeovers, and what to do if you clicked.",
@@ -668,7 +659,6 @@
         "solar",
         "homeowner",
         "doortodoor",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "How 'free government solar' pitches work, and what to check before signing anything.",
@@ -738,7 +728,6 @@
         "doortodoor",
         "homeowner",
         "energy",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "How fake utility and energy rebate door visits work, and how to check a visitor safely.",
@@ -807,7 +796,6 @@
         "contractor",
         "doortodoor",
         "homeowner",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "Signs of a door-to-door contractor scam, and how to hire safely after spring storms.",
@@ -877,7 +865,6 @@
         "family",
         "funeral",
         "olderadults",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "How obituary and funeral scams target grieving families, and what families really owe.",
@@ -946,7 +933,6 @@
         "retirement",
         "olderadults",
         "phonescam",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "How timeshare resale and exit scams work, and what to check before paying anyone.",
@@ -1015,7 +1001,6 @@
         "lotteryscam",
         "olderadults",
         "phonescam",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "How fake prize, sweepstakes and lottery scams work, and the one rule that beats them.",
@@ -1095,7 +1080,6 @@
         "taxextension",
         "irs",
         "taxscam",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "Why you don't need to pay a website for a tax filing extension, and where to file one for free.",
@@ -1174,7 +1158,6 @@
         "irs",
         "taxseason",
         "taxscam",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "What the real IRS refund tracker asks for, and how fake trackers and 'release fee' texts work.",
@@ -1253,7 +1236,6 @@
         "taxaudit",
         "irsletter",
         "taxscam",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "How fake IRS audit letters work, and how to check any IRS letter without using its phone number.",
@@ -1338,7 +1320,6 @@
         "taxpreparer",
         "taxrefund",
         "irs",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "Red flags in tax preparers who promise bigger, faster refunds, and how to check a preparer.",
@@ -1416,7 +1397,6 @@
         "irs",
         "taxpenalty",
         "textscam",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "How the 'missed tax deadline penalty' text works, and what really happens if you file late.",
@@ -1501,7 +1481,6 @@
         "irs",
         "paytaxes",
         "taxscam",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "Why to start any IRS payment at IRS.gov/payments, and how lookalike payment sites work.",
@@ -1585,7 +1564,6 @@
         "emailscam",
         "accountsecurity",
         "springcleaning",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "How 'your inactive account will be deleted' phishing emails work, and how to check safely.",
@@ -1669,7 +1647,6 @@
         "email",
         "passwords",
         "2fa",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "Why your email is the account to protect first, and the 3 settings that lock it down.",
@@ -1753,7 +1730,6 @@
         "instagram",
         "hackedaccount",
         "socialmedia",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "How the 'vote for my niece' message spreads account takeovers, and what to do if you clicked.",
@@ -1837,7 +1813,6 @@
         "solar",
         "homeowner",
         "doortodoor",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "How 'free government solar' pitches work, and what to check before signing anything.",
@@ -1922,7 +1897,6 @@
         "doortodoor",
         "homeowner",
         "energy",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "How fake utility and energy rebate door visits work, and how to check a visitor safely.",
@@ -2006,7 +1980,6 @@
         "contractor",
         "doortodoor",
         "homeowner",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "Signs of a door-to-door contractor scam, and how to hire safely after spring storms.",
@@ -2091,7 +2064,6 @@
         "family",
         "funeral",
         "olderadults",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "How obituary and funeral scams target grieving families, and what families really owe.",
@@ -2175,7 +2147,6 @@
         "retirement",
         "olderadults",
         "phonescam",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "How timeshare resale and exit scams work, and what to check before paying anyone.",
@@ -2259,7 +2230,6 @@
         "lotteryscam",
         "olderadults",
         "phonescam",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "How fake prize, sweepstakes and lottery scams work, and the one rule that beats them.",
@@ -2334,7 +2304,6 @@
         "taxextension",
         "irs",
         "taxes",
-        "moneytips",
         "scamdecoded"
       ],
       "description": "Four facts about filing a tax extension: it's free, it's more time to file, not to pay, and where to do it.",
@@ -2415,7 +2384,6 @@
         "irs",
         "identitytheft",
         "taxscam",
-        "moneytips",
         "scamdecoded"
       ],
       "description": "Six quick steps around Tax Day that protect you from refund theft and IRS imposters.",
@@ -2485,7 +2453,6 @@
         "irs",
         "taxrefund",
         "taxscam",
-        "moneytips",
         "scamdecoded"
       ],
       "description": "What really happens after you file: refunds, letters, payment plans, and what the IRS never does.",
@@ -2561,7 +2528,6 @@
         "irs",
         "taxdebt",
         "moneytips",
-        "personalfinance",
         "scamdecoded"
       ],
       "description": "Real ways to handle a tax bill you can't pay in full, and the 'relief' ads to be careful with.",
@@ -2636,7 +2602,6 @@
         "cybersecurity",
         "springcleaning",
         "passwordmanager",
-        "2fa",
         "scamdecoded"
       ],
       "description": "A five-step evening plan to clean up your passwords, starting with email. Includes affiliate disclosure.",
@@ -2711,7 +2676,6 @@
         "cybersecurity",
         "passkeys",
         "accountsecurity",
-        "techtips",
         "scamdecoded"
       ],
       "description": "Text codes, authenticator apps, passkeys and security keys, ranked, plus the one rule that matters for all of them.",
@@ -2791,7 +2755,6 @@
         "contractor",
         "homeowner",
         "springstorms",
-        "moneytips",
         "scamdecoded"
       ],
       "description": "Six questions that separate good contractors from storm chasers and door-knockers.",
@@ -2866,7 +2829,6 @@
         "consumerrights",
         "homeowner",
         "ftc",
-        "moneytips",
         "scamdecoded"
       ],
       "description": "What the FTC's Cooling-Off Rule covers, how to cancel, and what it doesn't apply to.",
@@ -2952,7 +2914,6 @@
         "seniors",
         "eldercare",
         "familysafety",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "Seven common scams aimed at older adults, each with a one-line fix. Includes our own product mention.",
@@ -3031,7 +2992,6 @@
         "seniors",
         "family",
         "phonescam",
-        "familysafety",
         "scamdecoded"
       ],
       "description": "Five things to tape by an older parent's phone so they can check before they pay.",
@@ -3114,7 +3074,6 @@
         "springstorms",
         "roofing",
         "contractor",
-        "homeowner",
         "scamdecoded"
       ],
       "description": "How storm chasers and home repair scams work, and a step-by-step plan for hiring a contractor after damage.\n\nChapters\n0:00 Why after storms\n0:31 Door-knockers\n1:08 The big deposit\n1:40 Insurance tricks\n2:10 Fake inspectors\n2:42 Hiring safely\n3:16 Paying safely\n3:49 If it went wrong\n\nExamples are fictional.",
@@ -3203,7 +3162,6 @@
         "irs",
         "taxrefund",
         "taxscam",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "Six scams that arrive after you file your taxes, and what the real IRS does after April 15.\n\nChapters\n0:00 It's not over\n0:26 Refund trackers\n1:02 Penalty texts\n1:33 Fake audit letters\n2:10 Payment lookalikes\n2:45 Preparer problems\n3:16 Identity theft\n3:44 Your checklist\n\nExamples are fictional.",
@@ -3296,7 +3254,6 @@
         "email",
         "passwords",
         "2fa",
-        "passwordmanager",
         "scamdecoded"
       ],
       "description": "Why your email account is the one to protect first, how takeovers spread, and a 20-minute lockdown.\n\nChapters\n0:00 The master key\n0:30 How the chain works\n1:06 Warning signs\n1:37 Password\n2:08 Two-step\n2:35 Recovery and rules\n3:02 The rest\n3:28 Already happened\n\nOur password manager comparison (link in bio) includes affiliate links: we may earn a commission at no extra cost to you. Bitwarden's free plan is a fine place to start.",
@@ -3385,7 +3342,6 @@
         "rentals",
         "apartmenthunting",
         "movingday",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "Fake rental listings, moving company and broker scams, and how to check a mover before you book.\n\nChapters\n0:00 Moving season\n0:29 The fake rental\n1:07 Rental checks\n1:44 Lowball movers\n2:14 Hostage loads\n2:43 Check a mover\n3:12 Moving day\n3:29 If it went wrong\n\nExamples are fictional.",
@@ -3474,7 +3430,6 @@
         "seniors",
         "eldercare",
         "familysafety",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "For Older Americans Month: seven scams that target older adults, one rule for each, and how families can help.\n\nChapters\n0:00 Why this month\n0:31 Family emergency\n1:01 Government imposters\n1:24 Bank fraud call\n1:50 Tech support\n2:13 Romance\n2:34 Prizes and funerals\n3:02 How families help\n\nThe large-print Scam Decoded for Seniors pack in our bio is our own product ($7).",

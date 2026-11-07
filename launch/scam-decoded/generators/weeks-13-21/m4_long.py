@@ -13,7 +13,7 @@ L(pillar=P_FAMILY,
  title_variants=["If someone threatens to share a photo: a guide for families", "Financial sextortion, explained for parents and teens"],
  hook="1 conversation with your teen this week could matter more than any app setting. Here's how sextortion works, and what to do.",
  thumb="Sextortion: what to do",
- hashtags=["saferinternetday", "parenting", "teens", "onlinesafety", "sextortion", "scamdecoded"],
+ hashtags=["saferinternetday", "parenting", "teens", "sextortion", "scamdecoded"],
  description=("A calm, practical guide to financially motivated sextortion for parents and teens, based on FBI and "
               "NCMEC advice.\n\nChapters\n0:00 Why this week\n0:50 How it starts\n1:50 Why it works\n2:50 Not your fault\n"
               "3:40 Don't pay\n4:30 The steps\n5:30 Take It Down\n6:20 How to talk about it\n\nIf you or someone you know "
@@ -40,7 +40,7 @@ L(pillar=P_FAMILY,
  title_variants=["Every way a romance scammer asks for money, decoded", "Love, then money: the 4 asks in every romance scam"],
  hook="4 ways romance scammers ask for money. Every scam uses at least 1 of them.",
  thumb="4 romance money asks",
- hashtags=["valentinesday", "romancescam", "onlinedating", "relationships", "scamalert", "scamdecoded"],
+ hashtags=["valentinesday", "romancescam", "onlinedating", "relationships", "scamdecoded"],
  description=("The four ways romance scammers ask for money, what each sounds like, and how to say no. Plus how to "
               "help someone who's in one.\n\nChapters\n0:00 Why Valentine's Day\n0:50 The emergency\n1:50 The favor\n"
               "2:50 The investment\n3:50 The package\n4:50 Saying no\n5:40 Helping someone\n6:30 If you've sent money\n\n"
@@ -67,7 +67,7 @@ L(pillar=P_TEXT,
  title_variants=["Is it really the IRS? A complete guide", "The real IRS vs the fake one: phone, text, email, mail and at your door"],
  hook="6 ways scammers pretend to be the IRS, and 1 simple habit that beats every one.",
  thumb="Real IRS vs fake IRS",
- hashtags=["irs", "taxseason", "taxscam", "scamalert", "taxes", "scamdecoded"],
+ hashtags=["irs", "taxseason", "taxscam", "taxes", "scamdecoded"],
  description=("Every way scammers impersonate the IRS, and how the real IRS contacts you.\n\nChapters\n0:00 Why now\n"
               "0:40 Phone calls\n1:40 Texts\n2:30 Emails\n3:20 Fake letters\n4:10 Social media\n4:50 At your door\n"
               "5:40 How to check and pay\n6:30 Reporting\n\nAll examples are fictional. General education, not tax advice."),
@@ -95,7 +95,7 @@ L(pillar=P_ID,
  title_variants=["Tax debt help: what's free, what's a scam", "Before you call a tax relief company, watch this"],
  hook="3 free places to get help with a tax bill, before you pay a relief company thousands.",
  thumb="Tax debt: free help first",
- hashtags=["taxdebt", "irs", "taxrelief", "moneytips", "personalfinance", "scamdecoded"],
+ hashtags=["taxdebt", "irs", "taxrelief", "moneytips", "scamdecoded"],
  description=("What to do if you owe the IRS: the free and official options, and the red flags in tax relief marketing, "
               "from FTC and IRS guidance.\n\nChapters\n0:00 Why it matters\n0:50 What the ads promise\n1:50 Red flags\n"
               "3:00 Payment plans\n3:50 Offer in Compromise\n4:40 Free help\n5:30 If you hire someone\n\n"
@@ -124,7 +124,7 @@ L(pillar=P_FAMILY,
  title_variants=["6 government imposter scams, and how to protect your parents", "'This is Social Security': the government imposter guide"],
  hook="6 government agencies scammers pretend to be. Here's what each real 1 never does.",
  thumb="6 fake government calls",
- hashtags=["slamthescam", "socialsecurity", "medicare", "seniors", "imposterscam", "scamdecoded"],
+ hashtags=["slamthescam", "socialsecurity", "medicare", "seniors", "scamdecoded"],
  description=("For Slam the Scam Day: six government imposter scams, what the real agencies say they never do, and a "
               "family plan.\n\nChapters\n0:00 Why it works\n0:50 Social Security\n1:50 Medicare\n2:40 Courts\n"
               "3:30 FTC and 'safe accounts'\n4:20 Utilities\n5:00 Police and sheriffs\n5:40 The family plan\n\n"
@@ -152,7 +152,7 @@ L(pillar=P_TEXT,
  title_variants=["Spring travel scams 2027: 5 to know before you book", "Before you book spring break, watch this"],
  hook="5 travel scams wait for spring break bookers. Here's how each works, and the 2-minute check for each.",
  thumb="5 spring break scams",
- hashtags=["springbreak", "travel", "vacationrental", "travelscam", "scamalert", "scamdecoded"],
+ hashtags=["springbreak", "travel", "vacationrental", "travelscam", "scamdecoded"],
  description=("Five scams that target spring break and spring travel, from fake rentals to fake airline support numbers.\n\n"
               "Chapters\n0:00 Why spring\n0:40 Fake rentals\n1:50 Fake booking sites\n2:50 Fake support numbers\n"
               "3:40 'You've won a trip'\n4:30 Social media deals\n5:20 Paying safely\n\nAll examples are fictional."),
@@ -178,7 +178,7 @@ L(pillar=P_TEXT,
  title_variants=["Work-from-home job scams, decoded", "4 job offers that are really scams"],
  hook="4 kinds of fake jobs are everywhere right now. Each 1 ends with you paying them.",
  thumb="4 fake jobs",
- hashtags=["jobscam", "workfromhome", "jobsearch", "sidehustle", "scamalert", "scamdecoded"],
+ hashtags=["jobscam", "workfromhome", "jobsearch", "sidehustle", "scamdecoded"],
  description=("Four common job scams, how each one works, and how to protect yourself while job hunting.\n\nChapters\n"
               "0:00 Why now\n0:40 Reshipping jobs\n1:40 Fake check jobs\n2:40 Task jobs\n3:40 Fake recruiters\n"
               "4:40 The 3 rules\n5:30 If you've been hit\n\nAll examples are fictional."),
@@ -202,7 +202,7 @@ L(pillar=P_TEXT,
  title_variants=["Before April 15: file, extend and pay safely", "Last-minute taxes: 5 scams and the safe way to finish"],
  hook="2 weeks to the tax deadline. 5 scams target last-minute filers, and here's the safe way to finish.",
  thumb="Last-minute taxes, safely",
- hashtags=["taxday", "taxseason", "irs", "taxes", "scamalert", "scamdecoded"],
+ hashtags=["taxday", "taxseason", "irs", "taxes", "scamdecoded"],
  description=("How to finish your taxes safely before the April deadline: free filing options, free extensions, paying "
               "what you owe, and the scams aimed at last-minute filers.\n\nChapters\n0:00 Two weeks to go\n0:40 File for "
               "free\n1:40 Choosing a preparer fast\n2:40 Free extensions\n3:30 Paying safely\n4:20 The scams\n5:30 After "

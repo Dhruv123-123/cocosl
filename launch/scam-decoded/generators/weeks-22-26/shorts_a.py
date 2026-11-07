@@ -9,7 +9,7 @@ S(pillar=P_TEXT,
  hook="1 form, free from the IRS. Scam sites charge for it and keep your Social Security number.",
  hook_variants=["Need a tax extension? 1 thing to know before you search.", "A free IRS form, sold for $49. Here's the trick."],
  thumb="Tax extensions are free",
- hashtags=["taxday", "taxextension", "irs", "taxscam", "scamalert", "scamdecoded"],
+ hashtags=["taxday", "taxextension", "irs", "taxscam", "scamdecoded"],
  description="Why you don't need to pay a website for a tax filing extension, and where to file one for free.",
  caption=("Searching 'tax extension' before April 15? Some sites look official, charge a fee, and ask for your Social "
           "Security number and bank details.\n\nAn extension to file is free: Form 4868 through IRS Free File, your "
@@ -54,7 +54,7 @@ S(pillar=P_TEXT,
  hook="3 things the real refund tracker asks for. A card number isn't 1 of them.",
  hook_variants=["Checking your refund? 1 question proves the site is fake.", "The real refund tracker needs 3 things. Fakes want 6."],
  thumb="The real refund tracker",
- hashtags=["taxrefund", "irs", "taxseason", "taxscam", "scamalert", "scamdecoded"],
+ hashtags=["taxrefund", "irs", "taxseason", "taxscam", "scamdecoded"],
  description="What the real IRS refund tracker asks for, and how fake trackers and 'release fee' texts work.",
  caption=("The real 'Where's My Refund?' tool on IRS.gov asks for 3 things: your Social Security number or ITIN, "
           "your filing status, and the exact refund amount. It never asks for a card number or a fee.\n\nA text or "
@@ -97,7 +97,7 @@ S(pillar=P_TEXT,
  hook="1 detail on this IRS letter is fake, and it's the 1 you'd use: the phone number.",
  hook_variants=["Got an audit letter? Don't call the number on it. Here's why.", "A real logo, a real address, 1 fake phone number."],
  thumb="Don't call the number on it",
- hashtags=["irs", "taxaudit", "irsletter", "taxscam", "scamalert", "scamdecoded"],
+ hashtags=["irs", "taxaudit", "irsletter", "taxscam", "scamdecoded"],
  description="How fake IRS audit letters work, and how to check any IRS letter without using its phone number.",
  caption=("Fake IRS letters copy the logo, the layout and even a notice number. The giveaway is often the phone "
           "number, which goes straight to the scammer.\n\nLook up the notice number on IRS.gov's 'understanding your "
@@ -140,7 +140,7 @@ S(pillar=P_TEXT,
  hook="3 red flags in a tax preparer, and the 1 that costs you most comes later.",
  hook_variants=["'Bigger refund, super fast'? 1 problem: it's your name on the return.", "A preparer promises you $3,000 more. Here's the catch."],
  thumb="Bigger refund? Red flag",
- hashtags=["taxday", "taxpreparer", "taxrefund", "irs", "scamalert", "scamdecoded"],
+ hashtags=["taxday", "taxpreparer", "taxrefund", "irs", "scamdecoded"],
  description="Red flags in tax preparers who promise bigger, faster refunds, and how to check a preparer.",
  caption=("Last-minute filers get flyers and DMs: 'Bigger refund, fast cash, fee comes out of your refund.' The IRS "
           "warns about preparers who inflate credits or base fees on the size of your refund.\n\nYou're legally "
@@ -186,7 +186,7 @@ S(pillar=P_TEXT,
  hook="April 16, 1 text: 'You missed the deadline. Pay your penalty today.' The IRS doesn't do that.",
  hook_variants=["A late-filing penalty by text? 0 chance.", "Missed the tax deadline? 1 thing that won't happen."],
  thumb="No penalty by text",
- hashtags=["taxday", "irs", "taxpenalty", "textscam", "scamalert", "scamdecoded"],
+ hashtags=["taxday", "irs", "taxpenalty", "textscam", "scamdecoded"],
  description="How the 'missed tax deadline penalty' text works, and what really happens if you file late.",
  caption=("Right after April 15, texts say you missed the deadline and owe a penalty, payable through a link today. "
           "The IRS doesn't text about penalties. Real penalties come by letter, and you can see any balance in your "
@@ -230,7 +230,7 @@ S(pillar=P_TEXT,
  hook="1 search ad, 1 lookalike payment page, and a 'service fee' the IRS never charged.",
  hook_variants=["Paying your tax bill this week? Start in 1 place.", "The top search result for 'pay IRS' might not be the IRS."],
  thumb="Pay the IRS at IRS.gov",
- hashtags=["taxday", "irs", "paytaxes", "taxscam", "scamalert", "scamdecoded"],
+ hashtags=["taxday", "irs", "paytaxes", "taxscam", "scamdecoded"],
  description="Why to start any IRS payment at IRS.gov/payments, and how lookalike payment sites work.",
  caption=("Searching 'pay IRS' can show ads for sites that look official, add big 'processing fees', or simply take "
           "your card details.\n\nStart every payment at IRS.gov/payments. Direct Pay from a bank account is free; card "
@@ -275,7 +275,7 @@ S(pillar=P_SECURITY,
  hook="48 hours until your account is deleted, the email says. It's a password trap.",
  hook_variants=["1 email uses your old photos as bait.", "Account 'closing for inactivity'? 1 rule."],
  thumb="Deletion email? Don't click",
- hashtags=["phishing", "emailscam", "accountsecurity", "springcleaning", "scamalert", "scamdecoded"],
+ hashtags=["phishing", "emailscam", "accountsecurity", "springcleaning", "scamdecoded"],
  description="How 'your inactive account will be deleted' phishing emails work, and how to check safely.",
  caption=("'Your account has been inactive. It and all your photos will be deleted in 48 hours unless you sign in.' "
           "The button goes to a fake sign-in page.\n\nIf you're worried about an old account, open the app or type the "
@@ -320,7 +320,7 @@ S(pillar=P_SECURITY,
  hook="1 account can reset the passwords to almost all your others. It's your email.",
  hook_variants=["Hackers don't need your bank password. They need 1 other thing.", "Protect 1 account and you protect 20."],
  thumb="Email = master key",
- hashtags=["cybersecurity", "email", "passwords", "2fa", "scamalert", "scamdecoded"],
+ hashtags=["cybersecurity", "email", "passwords", "2fa", "scamdecoded"],
  description="Why your email is the account to protect first, and the 3 settings that lock it down.",
  caption=("Most 'forgot password' links go to your email. So whoever gets into your email can reset your bank, "
           "shopping, social and phone accounts.\n\nLock it first: a long unique password, two-step sign-in, and up-to-date "

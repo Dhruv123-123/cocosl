@@ -17,7 +17,7 @@ S(pillar=P_TEXT,
  hook="0 times. That's how often the real IRS calls to say police are coming unless you pay today.",
  hook_variants=["A caller says there's a warrant for your arrest. 1 detail proves it's fake.", "Gift cards for the IRS? 0 chance it's real."],
  thumb="The IRS won't call like this",
- hashtags=["irs", "taxseason", "taxscam", "phonescam", "scamalert", "scamdecoded"],
+ hashtags=["irs", "taxseason", "taxscam", "phonescam", "scamdecoded"],
  description="How the IRS arrest-threat phone scam works, what the real IRS does instead, and where to report it.",
  caption=("A caller says you owe back taxes, there's a warrant out, and police are on the way unless you pay today "
           "with gift cards, a wire or crypto. Hang up.\n\nThe real IRS normally starts with a letter in the mail. "
@@ -66,7 +66,7 @@ S(pillar=P_ID,
  hook="1 surprise deposit from the IRS, then 1 phone call asking you to send it back. That's a scam.",
  hook_variants=["Money you didn't expect, then a call to return it: 2 steps of 1 scam.", "A refund you never filed for? 2 things to do, 1 thing not to."],
  thumb="Don't send it back to them",
- hashtags=["taxrefund", "irs", "identitytheft", "taxseason", "scamalert", "scamdecoded"],
+ hashtags=["taxrefund", "irs", "identitytheft", "taxseason", "scamdecoded"],
  description="How criminals use stolen data to send a fake refund to your account and then trick you into returning it to them, and what to do instead.",
  caption=("A tax refund you didn't expect lands in your account. Then someone calls 'from the IRS' or a 'collection "
           "agency' and asks you to send it back, to them.\n\nThat means someone filed a return in your name. Don't "
@@ -115,7 +115,7 @@ S(pillar=P_TEXT,
  hook="1 text says your IRS account is locked until you verify your identity. The link is the scam.",
  hook_variants=["'Verify your identity to receive your refund'? 0 links needed.", "2 seconds: look at the address before you sign in to anything 'IRS'."],
  thumb="IRS.gov. Typed. Only.",
- hashtags=["irs", "taxseason", "phishing", "scamtext", "identitytheft", "scamdecoded"],
+ hashtags=["irs", "taxseason", "phishing", "scamtext", "scamdecoded"],
  description="Why texts telling you to verify or unlock your IRS online account are phishing, and how to check your real account safely.",
  caption=("'Your IRS account has been suspended. Verify your identity to release your refund.' Then a link.\n\nThe "
           "IRS says it doesn't text or email people out of the blue about refunds or accounts. The link goes to a "
@@ -163,7 +163,7 @@ S(pillar=P_FAMILY,
  hook="1 photo of the back of a gift card. That's all a romance scammer needs to take the money.",
  hook_variants=["Valentine's week: 1 request from an online partner means it's a scam.", "They love you. They need 3 gift cards. Pick 1."],
  thumb="Gift cards = scam",
- hashtags=["romancescam", "valentinesday", "giftcards", "onlinedating", "scamalert", "scamdecoded"],
+ hashtags=["romancescam", "valentinesday", "giftcards", "onlinedating", "scamdecoded"],
  description="Why an online partner asking for gift cards, or a photo of one, is always a scam, and what to do if you've already sent one.",
  caption=("They've been sweet for weeks. Then, before Valentine's Day: 'Can you get me a few gift cards? Just send "
           "a photo of the back.'\n\nThat photo is the money. The numbers and PIN let them spend it instantly. The FTC "
@@ -212,7 +212,7 @@ S(pillar=P_FAMILY,
  hook="3 things every teen should hear from you before someone online threatens them with a photo.",
  hook_variants=["1 message every parent should send their teen today.", "Being threatened with a photo? 3 steps, and 0 of them is paying."],
  thumb="Don't pay. Tell someone.",
- hashtags=["saferinternetday", "onlinesafety", "parenting", "teens", "sextortion", "scamdecoded"],
+ hashtags=["saferinternetday", "parenting", "teens", "sextortion", "scamdecoded"],
  description=("What financially motivated sextortion is, why paying makes it worse, and three things to tell your teen. "
               "With the FBI's advice and NCMEC's free Take It Down tool."),
  caption=("For Safer Internet Day: someone your teen meets online gets a private photo, then says 'pay or I'll send it to "
@@ -263,7 +263,7 @@ S(pillar=P_TEXT,
  hook="$1.99 to redeliver the flowers someone sent you? That text is after your card, not your Valentine's.",
  hook_variants=["1 text hits right before Valentine's Day: 'we missed you'.", "Valentine's gift on hold? 2 checks before you pay any fee."],
  thumb="Fake delivery fee",
- hashtags=["valentinesday", "flowers", "deliveryscam", "smishing", "scamtext", "scamdecoded"],
+ hashtags=["valentinesday", "flowers", "deliveryscam", "smishing", "scamdecoded"],
  description="How the fake Valentine's delivery text works and how to check a real delivery without clicking.",
  caption=("'Your Valentine's gift couldn't be delivered. Pay $1.99 to reschedule.' It's timed for the one week you "
           "might be expecting something.\n\nThe tiny fee is a way to get your card number. Real florists and carriers "
@@ -312,7 +312,7 @@ S(pillar=P_ID,
  hook="3 free options exist before you pay a tax relief company thousands up front.",
  hook_variants=["'Pennies on the dollar' ads: 1 thing they won't tell you.", "Owe the IRS? 2 free tools to check before any 'relief' company."],
  thumb="3 free options first",
- hashtags=["taxdebt", "irs", "taxrelief", "taxseason", "moneytips", "scamdecoded"],
+ hashtags=["taxdebt", "irs", "taxrelief", "taxseason", "scamdecoded"],
  description="What tax relief ads promise, what the FTC warns about, and the free IRS options to try first.",
  caption=("Owe the IRS and seeing ads that promise to settle for 'pennies on the dollar'? Some charge thousands up "
           "front and do little you couldn't do yourself.\n\nFirst: check payment plans at IRS.gov, use the IRS "
@@ -362,7 +362,7 @@ S(pillar=P_TEXT,
  hook="1 text says your state tax refund is waiting. 2 details give it away.",
  hook_variants=["Your state won't text a link for your refund. 1 check.", "State refund 'processing fee'? 0 states charge that by text."],
  thumb="Fake state refund text",
- hashtags=["taxrefund", "statetax", "taxseason", "scamtext", "smishing", "scamdecoded"],
+ hashtags=["taxrefund", "statetax", "taxseason", "scamtext", "scamdecoded"],
  description="How fake state tax refund texts work and how to check your real state refund status safely.",
  caption=("'Department of Revenue: your state tax refund of $412.80 is pending. Confirm your bank details.' Then "
           "a link.\n\nScammers copy state agencies too, not just the IRS. Find your state's revenue department "

@@ -47,7 +47,6 @@
     "identitytheft",
     "creditfreeze",
     "privacy",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "The order to work through after a data breach notice, from our free checklist. Checklist: https://scamdecoded.netlify.app/breached/",
@@ -111,7 +110,6 @@
     "bankscam",
     "fraudalert",
     "phonescam",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "The fake fraud team call that follows data breach news, and what to do instead. Checklist: https://scamdecoded.netlify.app/breached/",
@@ -173,7 +171,6 @@
     "classaction",
     "settlement",
     "textscam",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "The fake breach settlement text, and how to find a real settlement. Checklist: https://scamdecoded.netlify.app/breached/",
@@ -236,7 +233,6 @@
     "ssn",
     "creditfreeze",
     "ippin",
-    "identitytheft",
     "scamdecoded"
    ],
    "description": "A credit freeze and an IRS IP PIN: the two free locks after an SSN breach. Checklist: https://scamdecoded.netlify.app/breached/",
@@ -300,7 +296,6 @@
     "databreach",
     "phishing",
     "privacy",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "The 'your info is on the dark web' email, and the free way to check. Checklist: https://scamdecoded.netlify.app/breached/",

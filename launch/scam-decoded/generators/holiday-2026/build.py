@@ -49,7 +49,7 @@ POSTS = [
   title="'Your package is on hold': 1 holiday text to never tap",
   hook="1 text shows up more than any other in November. Here's how to spot it.",
   thumb="Package on hold? Don't tap.",
-  hashtags=["packagescam", "deliveryscam", "holidayscams", "smishing", "scamalert", "scamdecoded"],
+  hashtags=["packagescam", "deliveryscam", "holidayscams", "smishing", "scamdecoded"],
   description="The fake 'package on hold' text that spikes every holiday season, and the safe way to track a parcel.",
   caption="Everyone's expecting a package this month, and scammers know it. The tells: a link, a countdown and a tiny "
           "'redelivery fee'. Track from the shop's own email instead. Example is fictional.",
@@ -70,7 +70,7 @@ POSTS = [
   title="5 gift card requests only a scammer makes",
   hook="5 gift card asks you'll hear this season, and every one is a scam.",
   thumb="5 gift card scams",
-  hashtags=["giftcards", "giftcardscam", "holidayscams", "protectyourparents", "scamalert", "scamdecoded"],
+  hashtags=["giftcards", "giftcardscam", "holidayscams", "protectyourparents", "scamdecoded"],
   description="Five ways scammers ask for gift cards, and the one rule that covers all of them.",
   caption="Gift cards are for gifts. Anyone who asks you to pay with one, for anything else, is scamming you:\n"
           "1. The 'boss'\n2. The 'utility company'\n3. The 'government agency'\n4. The grandchild in trouble\n5. The online seller",
@@ -89,7 +89,7 @@ POSTS = [
   title="Selling gifts on Marketplace? 3 flags in this 'payment'",
   hook="3 red flags in 1 'payment pending' email. Pause and find them before I do.",
   thumb="Find the 3 red flags",
-  hashtags=["facebookmarketplace", "marketplacescam", "sellingonline", "holidayscams", "scamalert", "scamdecoded"],
+  hashtags=["facebookmarketplace", "marketplacescam", "sellingonline", "holidayscams", "scamdecoded"],
   description="The fake payment app email that makes sellers pay to 'receive' money.",
   caption="Selling things before the holidays? This fake 'payment pending' email is aimed at you. Example is fictional.",
   sources=[SELLING, CHECKS, REPORT], claims=["Payment apps don't charge sellers to receive a payment",
@@ -117,7 +117,7 @@ POSTS = [
   title="A $200 deposit to 'hold' it: 1 marketplace rule",
   hook="$200 to hold a game console you've never seen. Here's the 1 rule that stops it.",
   thumb="Never pay to hold it",
-  hashtags=["marketplacescam", "blackfriday", "onlineshopping", "holidayscams", "scamalert", "scamdecoded"],
+  hashtags=["marketplacescam", "blackfriday", "onlineshopping", "holidayscams", "scamdecoded"],
   description="Why you should never send a deposit to hold an item from an online marketplace seller.",
   caption="Hard-to-find gift, great price, seller wants a deposit by payment app to hold it? That's the scam. "
           "Example is fictional.",
@@ -138,7 +138,7 @@ POSTS = [
   title="Before Giving Tuesday: a 4-step charity check",
   hook="4 steps, 2 minutes, and your Giving Tuesday donation reaches a real charity.",
   thumb="Check a charity in 2 minutes",
-  hashtags=["givingtuesday", "charity", "donate", "charityscam", "scamalert", "scamdecoded"],
+  hashtags=["givingtuesday", "charity", "donate", "charityscam", "scamdecoded"],
   description="Four quick checks before you donate this Giving Tuesday.",
   caption="Giving Tuesday is Dec 1. Before you give:\n1. Look the charity up yourself\n2. Check it at Give.org or Charity "
           "Navigator\n3. Want a tax deduction? Check the IRS list\n4. Pay by card or check, never gift card, wire or crypto",
@@ -155,7 +155,7 @@ POSTS = [
   title="'Thanks for your pledge last year': 1 charity text to skip",
   hook="1 thank-you text for a donation you never made. It's the most polite scam of the year.",
   thumb="Thanks for... what pledge?",
-  hashtags=["givingtuesday", "charityscam", "donate", "holidayscams", "scamalert", "scamdecoded"],
+  hashtags=["givingtuesday", "charityscam", "donate", "holidayscams", "scamdecoded"],
   description="Fake charity texts that thank you for a past pledge to get you to 'renew' it.",
   caption="Giving Tuesday is tomorrow. Real charities welcome your gift next week too; scammers need it today. "
           "Example is fictional.",
@@ -176,7 +176,7 @@ POSTS = [
   title="Spot the red flags: the 'holiday relief' text",
   hook="4 red flags in 1 holiday charity text. How many can you find?",
   thumb="Find 4 red flags",
-  hashtags=["charityscam", "spotthescam", "holidayscams", "donate", "scamalert", "scamdecoded"],
+  hashtags=["charityscam", "spotthescam", "holidayscams", "donate", "scamdecoded"],
   description="A quiz: find the four red flags in a fake holiday charity text.",
   caption="Quiz time. Count the red flags before you swipe. Answers on slides 3–6. Example is fictional.",
   sources=[CHARITY, GIVING_TUE], claims=["Fake charities pressure you to give immediately (FTC)",
@@ -192,7 +192,7 @@ POSTS = [
   title="The 'boss' who needs 5 gift cards for the team, played out",
   hook="5 gift cards, 1 text from your 'boss'. Watch how December's favourite office scam plays out.",
   thumb="Your boss didn't send this",
-  hashtags=["giftcardscam", "workscams", "holidayscams", "officelife", "scamalert", "scamdecoded"],
+  hashtags=["giftcardscam", "workscams", "holidayscams", "officelife", "scamdecoded"],
   description="The boss impersonation gift card text, walked through, and the 10-second check that stops it.",
   caption="Holiday gifts for the team, bought with your money, codes sent by text. Your boss didn't send it. "
           "Example is fictional.",
@@ -221,7 +221,7 @@ POSTS = [
   title="Buying gift cards this weekend? 1 check at the rack first",
   hook="1 check at the gift card rack takes 5 seconds and stops a holiday scam.",
   thumb="Check the back first",
-  hashtags=["giftcards", "christmasshopping", "holidayscams", "shoppingtips", "scamalert", "scamdecoded"],
+  hashtags=["giftcards", "christmasshopping", "holidayscams", "shoppingtips", "scamdecoded"],
   description="How tampered gift cards work, and the five-second check before you buy one.",
   caption="Some scammers tamper with gift cards on the rack so your money lands on their card. Check the packaging, "
           "or buy from behind the counter.",
@@ -242,7 +242,7 @@ POSTS = [
   title="Last shipping week: 4 delivery scam texts and the 1 safe way to track",
   hook="4 delivery texts you'll get before Christmas, and 1 safe way to track every package.",
   thumb="4 fake delivery texts",
-  hashtags=["deliveryscam", "packagescam", "christmasshopping", "smishing", "scamalert", "scamdecoded"],
+  hashtags=["deliveryscam", "packagescam", "christmasshopping", "smishing", "scamdecoded"],
   description="Four fake delivery messages that spike in the last shipping week, and how to track packages safely.",
   caption="The last shipping week is peak season for fake delivery texts:\n1. 'Package on hold'\n2. 'Redelivery fee'\n"
           "3. 'Customs charge'\n4. 'Missed delivery, reschedule'\nThe safe way: track from the shop's own email or app.\n\n" + CHECKER,

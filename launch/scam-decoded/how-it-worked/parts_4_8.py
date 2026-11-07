@@ -8,7 +8,7 @@ dict(part=4, slug="removed-from-google-robocalls",
                  "$300 to $700 for a free listing: how the Google robocall scheme worked"],
  hook="4,467 small business owners got FTC refund checks after robocalls said Google would mark them 'permanently closed'.",
  thumb="'Google' didn't call",
- hashtags=["smallbusiness", "robocall", "howitworked", "google", "scamalert", "scamdecoded"],
+ hashtags=["smallbusiness", "robocall", "howitworked", "google", "scamdecoded"],
  caption="A robocall says Google will label your business 'permanently closed' unless you talk to a 'Google "
          "specialist'. Then a $300 to $700 fee to 'claim and verify' a listing that's free. How the FTC's case "
          "against Pointbreak Media worked, and the three checks for any small business.",
@@ -69,7 +69,7 @@ dict(part=5, slug="irs-call-centers",
                  "From a call center in India to a gift card in Texas: one IRS scam, step by step"],
  hook="24 people sentenced, sentences up to 20 years, thousands of victims. This is how the 'you owe the IRS' calls really worked.",
  thumb="Inside the fake IRS calls",
- hashtags=["irs", "howitworked", "governmentimposter", "truecrime", "scamalert", "scamdecoded"],
+ hashtags=["irs", "howitworked", "governmentimposter", "truecrime", "scamdecoded"],
  caption="Call centers in Ahmedabad, callers posing as the IRS and immigration officers, threats of arrest and "
          "deportation, then a network of runners in the US turning payments into cash. How the case the Justice "
          "Department prosecuted in Houston worked, from the guilty pleas.",
@@ -132,7 +132,7 @@ dict(part=6, slug="scam-compound",
                  "127,271 bitcoin: the forced-labor scam compound case, explained"],
  hook="127,271 bitcoin, worth about $15 billion: the largest forfeiture action the Justice Department says it has ever brought.",
  thumb="Inside a scam compound",
- hashtags=["pigbutchering", "cryptoscam", "howitworked", "humantrafficking", "scamalert", "scamdecoded"],
+ hashtags=["pigbutchering", "cryptoscam", "howitworked", "humantrafficking", "scamdecoded"],
  caption="The 'wrong number' text, the friendship, the investment app. Federal prosecutors say one source of those "
          "messages was compounds in Cambodia where trafficked workers were forced to run them. The case against the "
          "Prince Group's chairman, from the indictment. Allegations only; the defendant is presumed innocent.",
@@ -194,7 +194,7 @@ dict(part=7, slug="money-transfer-586-million",
                  "$586 million: the Western Union fraud case, step by step"],
  hook="$586 million. That's what Western Union agreed to forfeit in 2017 after scammers used its system for years.",
  thumb="The $586M case",
- hashtags=["westernunion", "wirefraud", "howitworked", "refunds", "scamalert", "scamdecoded"],
+ hashtags=["westernunion", "wirefraud", "howitworked", "refunds", "scamdecoded"],
  caption="Not a scammer this time: the pipe the money went through. How the FTC and the Justice Department say "
          "Western Union's system was used for scam payments for years, what the company admitted, and how victims "
          "later got money back.",
@@ -256,7 +256,7 @@ dict(part=8, slug="romance-ring",
                  "Two 'chairmen' plead guilty: how a romance scam ring ran"],
  hook="More than $100 million, dozens of victims, and 2 'chairmen' who have now pleaded guilty. This is how the romance scam ring ran.",
  thumb="The romance scam 'chairmen'",
- hashtags=["romancescam", "howitworked", "datingapps", "truecrime", "scamalert", "scamdecoded"],
+ hashtags=["romancescam", "howitworked", "datingapps", "truecrime", "scamdecoded"],
  caption="Fake profiles, months of trust, then money: to the 'partner', or to help 'move' money stolen from other "
          "victims. How a Ghana-based ring ran, according to federal prosecutors in Manhattan, and the three checks "
          "that protect a parent.",

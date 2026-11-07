@@ -46,7 +46,6 @@
     "deliveryscam",
     "holidayscams",
     "smishing",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "The fake 'package on hold' text that spikes every holiday season, and the safe way to track a parcel.",
@@ -126,7 +125,6 @@
     "giftcardscam",
     "holidayscams",
     "protectyourparents",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "Five ways scammers ask for gift cards, and the one rule that covers all of them.",
@@ -211,7 +209,6 @@
     "marketplacescam",
     "sellingonline",
     "holidayscams",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "The fake payment app email that makes sellers pay to 'receive' money.",
@@ -274,7 +271,6 @@
     "blackfriday",
     "onlineshopping",
     "holidayscams",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "Why you should never send a deposit to hold an item from an online marketplace seller.",
@@ -348,7 +344,6 @@
     "charity",
     "donate",
     "charityscam",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "Four quick checks before you donate this Giving Tuesday.",
@@ -411,7 +406,6 @@
     "charityscam",
     "donate",
     "holidayscams",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "Fake charity texts that thank you for a past pledge to get you to 'renew' it.",
@@ -485,7 +479,6 @@
     "spotthescam",
     "holidayscams",
     "donate",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "A quiz: find the four red flags in a fake holiday charity text.",
@@ -564,7 +557,6 @@
     "workscams",
     "holidayscams",
     "officelife",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "The boss impersonation gift card text, walked through, and the 10-second check that stops it.",
@@ -627,7 +619,6 @@
     "christmasshopping",
     "holidayscams",
     "shoppingtips",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "How tampered gift cards work, and the five-second check before you buy one.",
@@ -700,7 +691,6 @@
     "packagescam",
     "christmasshopping",
     "smishing",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "Four fake delivery messages that spike in the last shipping week, and how to track packages safely.",

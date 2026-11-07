@@ -48,7 +48,6 @@
         "blackfriday",
         "onlineshopping",
         "shoppingscam",
-        "scamalert",
         "holidayshopping",
         "scamdecoded"
       ],
@@ -123,7 +122,6 @@
         "giftcards",
         "giftcardscam",
         "holidayshopping",
-        "scamalert",
         "christmasgifts",
         "scamdecoded"
       ],
@@ -197,7 +195,6 @@
         "givingtuesday",
         "charityscam",
         "donate",
-        "scamalert",
         "holidaygiving",
         "scamdecoded"
       ],
@@ -272,7 +269,6 @@
         "phishing",
         "emailscam",
         "refundscam",
-        "scamalert",
         "onlinesafety",
         "scamdecoded"
       ],
@@ -346,7 +342,6 @@
         "ticketscam",
         "concerttickets",
         "marketplacescam",
-        "scamalert",
         "paymentapps",
         "scamdecoded"
       ],
@@ -420,7 +415,6 @@
         "puppyscam",
         "petscam",
         "adoptdontshop",
-        "scamalert",
         "christmaspuppy",
         "scamdecoded"
       ],
@@ -493,7 +487,6 @@
         "travelscam",
         "customerservice",
         "holidaytravel",
-        "scamalert",
         "flightcancelled",
         "scamdecoded"
       ],
@@ -568,7 +561,6 @@
         "debitcard",
         "onlineshopping",
         "fraudprotection",
-        "moneytips",
         "scamdecoded"
       ],
       "description": "Why credit cards give stronger protection than debit cards against fraud and scam purchases, with the federal liability limits explained.",
@@ -643,7 +635,6 @@
         "taxseason",
         "irs",
         "taxtips",
-        "fraudprevention",
         "scamdecoded"
       ],
       "description": "The IRS Identity Protection PIN: what it is, who can get one, and why to set it up before tax season.",
@@ -718,7 +709,6 @@
         "seniorsafety",
         "protectyourparents",
         "elderfraud",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "Scam calls during Medicare open enrollment, the one rule that stops them, and where to compare plans safely.",
@@ -792,7 +782,6 @@
         "romancescam",
         "onlinedating",
         "datingsafety",
-        "scamalert",
         "protectyourparents",
         "scamdecoded"
       ],
@@ -867,7 +856,6 @@
         "cybersecurity",
         "passwords",
         "identitytheft",
-        "onlinesafety",
         "scamdecoded"
       ],
       "description": "How to check which data breaches your email appears in, what to do with the results, and why it explains how scammers know your details.",
@@ -951,7 +939,6 @@
         "blackfriday",
         "onlineshopping",
         "shoppingscam",
-        "scamalert",
         "holidayshopping",
         "scamdecoded"
       ],
@@ -1035,7 +1022,6 @@
         "giftcards",
         "giftcardscam",
         "holidayshopping",
-        "scamalert",
         "christmasgifts",
         "scamdecoded"
       ],
@@ -1118,7 +1104,6 @@
         "givingtuesday",
         "charityscam",
         "donate",
-        "scamalert",
         "holidaygiving",
         "scamdecoded"
       ],
@@ -1202,7 +1187,6 @@
         "phishing",
         "emailscam",
         "refundscam",
-        "scamalert",
         "onlinesafety",
         "scamdecoded"
       ],
@@ -1291,7 +1275,6 @@
         "ticketscam",
         "concerttickets",
         "marketplacescam",
-        "scamalert",
         "paymentapps",
         "scamdecoded"
       ],
@@ -1374,7 +1357,6 @@
         "puppyscam",
         "petscam",
         "adoptdontshop",
-        "scamalert",
         "christmaspuppy",
         "scamdecoded"
       ],
@@ -1456,7 +1438,6 @@
         "travelscam",
         "customerservice",
         "holidaytravel",
-        "scamalert",
         "flightcancelled",
         "scamdecoded"
       ],
@@ -1540,7 +1521,6 @@
         "debitcard",
         "onlineshopping",
         "fraudprotection",
-        "moneytips",
         "scamdecoded"
       ],
       "description": "Why credit cards give stronger protection than debit cards against fraud and scam purchases, with the federal liability limits explained.",
@@ -1624,7 +1604,6 @@
         "taxseason",
         "irs",
         "taxtips",
-        "fraudprevention",
         "scamdecoded"
       ],
       "description": "The IRS Identity Protection PIN: what it is, who can get one, and why to set it up before tax season.",
@@ -1708,7 +1687,6 @@
         "seniorsafety",
         "protectyourparents",
         "elderfraud",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "Scam calls during Medicare open enrollment, the one rule that stops them, and where to compare plans safely.",
@@ -1791,7 +1769,6 @@
         "romancescam",
         "onlinedating",
         "datingsafety",
-        "scamalert",
         "protectyourparents",
         "scamdecoded"
       ],
@@ -1875,7 +1852,6 @@
         "cybersecurity",
         "passwords",
         "identitytheft",
-        "onlinesafety",
         "scamdecoded"
       ],
       "description": "How to check which data breaches your email appears in, what to do with the results, and why it explains how scammers know your details.",
@@ -1967,7 +1943,6 @@
         "onlineshopping",
         "shoppingscam",
         "holidayshopping",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "Seven checks that catch fake online stores before checkout.",
@@ -2050,7 +2025,6 @@
         "giftcards",
         "giftcardscam",
         "holidayshopping",
-        "scamalert",
         "christmas",
         "scamdecoded"
       ],
@@ -2136,7 +2110,6 @@
         "charity",
         "donate",
         "charityscam",
-        "holidaygiving",
         "scamdecoded"
       ],
       "description": "Six quick steps to verify a charity before donating.",
@@ -2221,7 +2194,6 @@
         "paymentapps",
         "fraudprotection",
         "moneytips",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "Six payment methods ranked by fraud protection, from credit cards to crypto.",
@@ -2307,7 +2279,6 @@
       "hashtags": [
         "customerservice",
         "travelscam",
-        "scamalert",
         "holidaytravel",
         "onlinesafety",
         "scamdecoded"
@@ -2393,7 +2364,6 @@
         "newyear",
         "passwordmanager",
         "identitytheft",
-        "onlinesafety",
         "scamdecoded"
       ],
       "description": "Eight quick security tasks to finish before the new year.",
@@ -2479,7 +2449,6 @@
         "elderfraud",
         "familysafety",
         "holidays",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "Six gentle ways to start a conversation about scams with older parents during holiday visits.",
@@ -2562,7 +2531,6 @@
         "romancescam",
         "onlinedating",
         "datingsafety",
-        "scamalert",
         "protectyourparents",
         "scamdecoded"
       ],
@@ -2660,7 +2628,6 @@
       "hashtags": [
         "holidayscams",
         "blackfriday",
-        "scamalert",
         "onlinesafety",
         "christmasshopping",
         "scamdecoded"
@@ -2760,7 +2727,6 @@
         "elderfraud",
         "seniorsafety",
         "familysafety",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "A complete guide for adult children: how to talk to parents about scams without shame, the settings to change, and the family plan.\n\nChapters\n0:00 Why parents are targeted\n1:00 The conversation\n2:30 The family word\n3:30 Phone settings\n4:30 Credit freezes\n5:30 Bank alerts and a trusted contact\n6:30 The fridge card\n7:30 If it happens",
@@ -2856,7 +2822,6 @@
         "creditfreeze",
         "fraudhelp",
         "credittips",
-        "scamalert",
         "scamdecoded"
       ],
       "description": "What to do in the first week of identity theft: confirm, contain, report, repair, prevent.\n\nChapters\n0:00 Signs\n1:00 Confirm\n2:00 Contain\n3:30 Report\n5:00 Repair\n6:30 Prevent\n\nGeneral information, not legal advice.",
@@ -2952,7 +2917,6 @@
         "identitytheft",
         "credittips",
         "identityprotection",
-        "moneytips",
         "scamdecoded"
       ],
       "description": "Credit freezes, fraud alerts, credit locks and identity monitoring compared: what each does, what it costs, and who needs which.\n\nChapters\n0:00 The four options\n1:00 Freeze\n2:30 Fraud alert\n3:30 Lock\n4:30 Monitoring\n6:00 Who needs what\n\nThe identity-protection service in our bio (Aura) is an affiliate link: we may earn a commission if you sign up, at no extra cost to you. You don't need a paid service to freeze your credit; that part is free.",

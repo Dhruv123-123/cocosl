@@ -62,7 +62,6 @@
     "textscam",
     "smishing",
     "spotthescam",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "Pause on this toll text: count the 4 red flags",
@@ -141,7 +140,6 @@
     "grandparentscam",
     "aivoice",
     "familysafeword",
-    "scamalert",
     "protectyourparents",
     "scamdecoded"
    ],
@@ -221,7 +219,6 @@
     "verificationcode",
     "bankscam",
     "accountsecurity",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "The fraud alert that ends with a code, played out",
@@ -299,7 +296,6 @@
     "bankscam",
     "safeaccountscam",
     "fraudalert",
-    "scamalert",
     "moneysafety",
     "scamdecoded"
    ],
@@ -378,7 +374,6 @@
     "techsupportscam",
     "popupscam",
     "computertips",
-    "scamalert",
     "seniorsafety",
     "scamdecoded"
    ],
@@ -457,7 +452,6 @@
     "identitytheft",
     "credittips",
     "fraudprevention",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "Freezing your credit, start to finish, in 3 stops",
@@ -539,7 +533,6 @@
     "taskscam",
     "remotejobs",
     "workfromhome",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "The task job text, followed all the way to the top-up",
@@ -618,7 +611,6 @@
     "familyscam",
     "scamtext",
     "imposterscam",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "'New number, can you pay a bill?': the whole text thread",
@@ -696,7 +688,6 @@
     "emailscam",
     "refundscam",
     "spotthescam",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "Quiz: 4 red flags in a $499 order email",
@@ -775,7 +766,6 @@
     "romancescam",
     "datingapp",
     "redflags",
-    "scamalert",
     "scamdecoded"
    ],
    "description": "Dating app to WhatsApp in 1 day: the pattern, hour by hour",

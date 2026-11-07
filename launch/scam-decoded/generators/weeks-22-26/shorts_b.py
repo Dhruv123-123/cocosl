@@ -30,7 +30,7 @@ S(pillar=P_SECURITY,
  hook="1 vote for a friend's niece, and your account is next. Here's how the chain works.",
  hook_variants=["A message from a real friend. 1 request gives it away.", "'Just 1 quick vote?' It's a takeover."],
  thumb="'Vote for my niece?' Scam",
- hashtags=["facebook", "instagram", "hackedaccount", "socialmedia", "scamalert", "scamdecoded"],
+ hashtags=["facebook", "instagram", "hackedaccount", "socialmedia", "scamdecoded"],
  description="How the 'vote for my niece' message spreads account takeovers, and what to do if you clicked.",
  caption=("A message from a real friend: 'Hi! Could you vote for my niece in a competition? It takes 2 seconds.' The "
           "link asks you to sign in, or asks for a code that was just texted to you.\n\nYour friend's account was "
@@ -75,7 +75,7 @@ S(pillar=P_HOME,
  hook="3 words, 'free government solar', and usually a 20-year loan behind them.",
  hook_variants=["0 government programs give out free panels at your door.", "The free solar call: 1 question to ask."],
  thumb="'Free solar'? Not free",
- hashtags=["earthday", "solar", "homeowner", "doortodoor", "scamalert", "scamdecoded"],
+ hashtags=["earthday", "solar", "homeowner", "doortodoor", "scamdecoded"],
  description="How 'free government solar' pitches work, and what to check before signing anything.",
  caption=("Around Earth Day, ads and door-knockers promise 'free solar panels through a new government program'. Often it's "
           "a long loan or lease, with savings and tax credits overstated. Some take a deposit and never install.\n\nThe "
@@ -120,7 +120,7 @@ S(pillar=P_HOME,
  hook="2 questions for anyone at your door who says they're from the power company.",
  hook_variants=["'Can I see your last bill?' 1 reason they want it.", "An 'energy rebate' visit: 1 phone call to make first."],
  thumb="Power company at the door?",
- hashtags=["utilityscam", "doortodoor", "homeowner", "energy", "scamalert", "scamdecoded"],
+ hashtags=["utilityscam", "doortodoor", "homeowner", "energy", "scamdecoded"],
  description="How fake utility and energy rebate door visits work, and how to check a visitor safely.",
  caption=("Someone at the door with a lanyard: 'We're with the energy program. Can we see your last bill to check you're "
           "getting the rebate?' Your account number is all they need to switch your supplier, and some want inside.\n\n"
@@ -165,7 +165,7 @@ S(pillar=P_HOME,
  hook="4 signs the contractor at your door is a scam, and 1 is about how they want to be paid.",
  hook_variants=["'We're working nearby, we can do yours today.' 1 question to ask.", "A big cash deposit up front? 0 good reasons."],
  thumb="Contractor at the door?",
- hashtags=["homerepair", "contractor", "doortodoor", "homeowner", "scamalert", "scamdecoded"],
+ hashtags=["homerepair", "contractor", "doortodoor", "homeowner", "scamdecoded"],
  description="Signs of a door-to-door contractor scam, and how to hire safely after spring storms.",
  caption=("'We're doing a job down the street and have leftover materials. We can do your driveway, roof or gutters today, "
           "cheap.' Then: a big cash deposit, a rushed job, or nothing at all.\n\nThe FTC says to get several written "
@@ -210,7 +210,7 @@ S(pillar=P_FAMILY,
  hook="2 calls grieving families get after an obituary goes online. Both want money fast.",
  hook_variants=["'Your father owed us $4,000.' 1 thing to know first.", "Scammers read obituaries. Here's what they say next."],
  thumb="After a funeral: 2 scams",
- hashtags=["grief", "family", "funeral", "olderadults", "scamalert", "scamdecoded"],
+ hashtags=["grief", "family", "funeral", "olderadults", "scamdecoded"],
  description="How obituary and funeral scams target grieving families, and what families really owe.",
  caption=("Scammers read obituaries. Then they call the family: 'Your father had an unpaid debt' or 'The funeral home "
           "payment failed, please pay by card now'.\n\nThe FTC says family members generally aren't responsible for a "
@@ -256,7 +256,7 @@ S(pillar=P_FAMILY,
  hook="1 call says there's a buyer for your timeshare. 0 buyers ever show up.",
  hook_variants=["Upfront fee to sell your timeshare? 1 red flag.", "Timeshare exit companies: 3 questions before you pay."],
  thumb="Timeshare buyer? No.",
- hashtags=["timeshare", "retirement", "olderadults", "phonescam", "scamalert", "scamdecoded"],
+ hashtags=["timeshare", "retirement", "olderadults", "phonescam", "scamdecoded"],
  description="How timeshare resale and exit scams work, and what to check before paying anyone.",
  caption=("'We have a buyer ready for your timeshare. You just need to pay closing costs first.' Then nothing.\n\n"
           "The FTC warns about resellers and exit companies that charge upfront fees and promise results. Talk to the "
@@ -301,7 +301,7 @@ S(pillar=P_FAMILY,
  hook="0 real sweepstakes ask winners to pay first. Here's the call that does.",
  hook_variants=["$2.5 million prize, $500 in fees. Spot the problem.", "1 rule beats every lottery scam."],
  thumb="Pay to win? Scam.",
- hashtags=["sweepstakes", "lotteryscam", "olderadults", "phonescam", "scamalert", "scamdecoded"],
+ hashtags=["sweepstakes", "lotteryscam", "olderadults", "phonescam", "scamdecoded"],
  description="How fake prize, sweepstakes and lottery scams work, and the one rule that beats them.",
  caption=("'Congratulations, you've won two and a half million dollars and a new car. To release it, pay the taxes and "
           "insurance first with gift cards or a wire.'\n\nThe FTC says if you have to pay to get a prize, it's a scam. "
