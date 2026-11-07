@@ -109,6 +109,12 @@ def _publishing(f: Factory, online: bool) -> list[Result]:
             name = f"{slug}/{platform}" if multi else platform
             res.append(Result(name, "ok" if not missing else ("warn" if f.settings.dry_run else "fail"),
                               "connected" if not missing else f"missing {', '.join(missing)} (docs/CREDENTIALS.md)"))
+            if platform == "youtube" and not missing:
+                age = youtube_token_age_days(f.settings.for_brand(slug))
+                if age is not None and age >= 6:
+                    res.append(Result(f"{name} sign-in", "warn",
+                                      f"saved {age:.0f} days ago; if the OAuth consent screen is in Testing it stops "
+                                      "working at 7 days (publish the consent screen, or rerun factory auth youtube)"))
     base = f.settings.public_media_base_url
     if used & {"instagram", "threads"}:
         if not base:
@@ -124,6 +130,14 @@ def _publishing(f: Factory, online: bool) -> list[Result]:
             except Exception as e:
                 res.append(Result("media URL", "fail", f"{base} unreachable: {e}"))
     return res
+
+
+def youtube_token_age_days(settings) -> float | None:
+    import time
+    try:
+        return (time.time() - float(settings.env("YT_REFRESH_TOKEN_SET_AT"))) / 86400
+    except (TypeError, ValueError):
+        return None
 
 
 def _worker(f: Factory) -> Result:
