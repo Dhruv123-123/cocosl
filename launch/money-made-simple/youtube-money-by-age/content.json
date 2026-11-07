@@ -1,0 +1,840 @@
+[
+ {
+  "format": "long",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Part 1 of Money Moves by Age: five moves for your 20s, counted down, with a fictional 25-year-old (Maya) and a chart of $200 a month started at 25 vs 35 at a hypothetical 7%.",
+  "series": "money-by-age",
+  "series_part": 1,
+  "content_id": "yt-age-01",
+  "search_terms": [
+   "money tips for your 20s",
+   "what to do with money in your 20s",
+   "financial goals by age 30",
+   "investing in your 20s"
+  ],
+  "thumbnail_alt": "Money moves for your 20s",
+  "script": {
+   "title": "Money in Your 20s: 5 Moves That Matter Most",
+   "hook": "Five money moves for your 20s. Number one is the one you can't get back later: time.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Five money moves for your twenties. Number one is the one you can't get back later: time. This is part one of Money Moves by Age, a five-part series that goes decade by decade, from your twenties to your sixties. Each part has one fictional person, real numbers, and the moves that tend to matter most at that stage. Nothing here is personal advice, and the examples are made up to show how the math works. Today: your twenties, when your income is often lowest, your debts can feel huge, and the smallest habits have the most time to grow.",
+     "on_screen_text": "Part 1: your 20s",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to a small sapling. No text, no logos, no real people."
+    },
+    {
+     "heading": "Meet Maya",
+     "narration": "Meet Maya, a fictional twenty-five-year-old. She earns forty-eight thousand dollars a year, about thirty-one hundred a month after tax. She has twenty-two thousand in student loans at around five percent, a fifteen-hundred-dollar credit card balance at twenty-two percent, and about three hundred dollars in savings. Her job offers a 401(k) with a fifty percent match up to six percent. She's not doing anything wrong. She just doesn't have a plan yet, and like many people in their twenties, she feels like she's behind. Let's count down the five moves that would change her next ten years.",
+     "on_screen_text": "Fictional: Maya, 25 · $48,000",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fictional young woman with a small backpack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Move 5: a starter emergency fund",
+     "narration": "Move five: a starter emergency fund. Before anything else, Maya needs a cushion so the next surprise doesn't go on the card. A common first goal is five hundred to a thousand dollars in a separate high-yield savings account. At a hundred fifty a month, she gets to a thousand in under five months. It won't cover a job loss, and that's okay. It covers the car repair, the vet bill or the flight home, which are the things that usually knock a budget off track in your twenties.",
+     "on_screen_text": "5. Starter fund: $1,000",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small jar with an umbrella. No text, no logos, no real people."
+    },
+    {
+     "heading": "Move 4: clear the expensive debt",
+     "narration": "Move four: clear the expensive debt. Maya's card charges twenty-two percent. Paying it off is like earning twenty-two percent on that money, with no risk. With two hundred extra a month, the fifteen hundred is gone in about eight months. Her student loans are different. At around five percent, she can keep paying them on schedule while she saves and invests. A rough line many people use is about eight percent: above it, pay it down fast; below it, it's a judgment call between paying it off and investing.",
+     "on_screen_text": "4. Cards first · loans on schedule",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a credit card with a down arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Move 3: the full match",
+     "narration": "Move three: get the full employer match. Six percent of forty-eight thousand is twenty-eight eighty a year, about two hundred forty a month. The employer adds half of that, fourteen forty a year, before any investment growth. Because her 401(k) contribution comes out before income tax, her take-home pay drops by less than two hundred forty. If she can't do six percent right away, she can start at three and raise it one percent every few months. The match is part of her pay, and she only gets it by contributing.",
+     "on_screen_text": "3. 6% in → $1,440 a year of match",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin with a second coin added. No text, no logos, no real people."
+    },
+    {
+     "heading": "The chart: 25 vs 35",
+     "narration": "Here's why the twenties matter so much. Say Maya invests two hundred dollars a month from twenty-five to sixty-five, at a hypothetical seven percent a year. She'd put in ninety-six thousand dollars, and it could grow to about five hundred twenty-five thousand. If she waits until thirty-five, with the same two hundred a month and the same assumption, she'd put in seventy-two thousand and end up around two hundred forty-four thousand. Ten years later means less than half the result. Real returns go up and down and aren't promised, but the shape of that chart is the reason to start small and early.",
+     "on_screen_text": "From 25: ≈ $525k · from 35: ≈ $244k (hypothetical)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two bars, one about twice as tall. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$200 a month to age 65, hypothetical 7%",
+      "labels": [
+       "Put in from 25",
+       "Worth at 65 (from 25)",
+       "Put in from 35",
+       "Worth at 65 (from 35)"
+      ],
+      "values": [
+       96000,
+       524963,
+       72000,
+       243994
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Hypothetical return, compounded monthly; not a forecast"
+     }
+    },
+    {
+     "heading": "Move 2: automate everything",
+     "narration": "Move two: automate everything. Maya sets four automatic transfers the day after payday: savings, the extra card payment, bills, and a fixed amount to checking for spending. Her 401(k) already comes straight from her paycheck. Automation matters more in your twenties than at any other age, because income is tight and every month there's a reason to skip. When the money moves before she sees it, there's nothing to decide. She checks in once a week for ten minutes, and once a month she looks at the whole picture.",
+     "on_screen_text": "2. Automate on payday",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with four arrows. No text, no logos, no real people."
+    },
+    {
+     "heading": "Move 1: start investing, even small",
+     "narration": "Move one, the one you can't get back: start investing, even small. Beyond the match, many people in their twenties open a Roth IRA, because they pay tax at today's rate, which is often lower than it will be later, and qualified withdrawals in retirement are tax-free. A single low-cost, diversified fund, like a broad index fund or a target-date fund, is a common simple choice. We don't recommend specific funds. Even fifty dollars a month counts, because it builds the habit and gives the money the most possible time.",
+     "on_screen_text": "1. Start investing: even $50",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small plant growing in a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Maya's plan",
+     "narration": "Here's Maya's whole plan on one page. Take-home after her six percent 401(k) contribution: about twenty-nine hundred. Bills, including rent and her student loan: twenty-one hundred. Starter fund: a hundred fifty a month until it hits a thousand. Extra to the card: two hundred a month until it's gone. That leaves about four hundred fifty a month, a little over a hundred dollars a week, for everything else. It's tight for eight months, and that's the point of a plan with an end date. When the card is paid off in about eight months, that two hundred moves to a Roth IRA. When the starter fund is full, that one fifty builds toward three months of expenses.",
+     "on_screen_text": "$2,900 − $2,100 − $150 − $200 ≈ $450",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single page with five lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "What about the student loans?",
+     "narration": "What about the twenty-two thousand in student loans? It feels like the biggest number, but at around five percent, it's not the most urgent. Maya keeps paying on schedule and makes sure she's on the right repayment plan at StudentAid dot gov. If her payments ever feel unmanageable, income-driven plans can lower them. Once the card is gone and her emergency fund is growing, she can decide whether to send extra to the loans or to investing. Both are reasonable. Many people split the difference.",
+     "on_screen_text": "Loans at ~5%: on schedule, right plan",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a graduation cap with a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Common 20s mistakes",
+     "narration": "Three common twenties mistakes. One: lifestyle creep, where every raise disappears into a nicer apartment or car. A simple fix is to save half of every raise. Two: skipping the match because the paycheck feels too small. Even three percent is a start. Three: comparing yourself with people on social media. You don't see their debt. The person who saves a little every month from twenty-five usually ends up ahead of the person who waits for the perfect time.",
+     "on_screen_text": "Save half of every raise",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a staircase with half the coins in a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Protecting yourself",
+     "narration": "One more set of moves that's easy to skip in your twenties: protection. Renters insurance is usually inexpensive and covers your belongings and liability. Health insurance matters even when you're healthy; one emergency room visit can cost thousands. Freeze your credit at all three bureaus for free, so nobody can open accounts in your name. And name a beneficiary on your 401(k) and any IRA. None of these grows your money, but each one stops a single bad event from undoing years of progress.",
+     "on_screen_text": "Renters insurance · health cover · freeze",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small shield over a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Your next 12 months",
+     "narration": "Here's what the next twelve months could look like for Maya. Months one to five: the starter fund fills to a thousand dollars. Months one to eight: the card balance shrinks to zero. Month nine: the two hundred that went to the card starts going to a Roth IRA instead. By the end of the year, she has a cushion, no high-interest debt, a match that's working for her, and a small investment account that's growing. None of that took a big income. It took a plan, a few automatic transfers, and patience through the tight months.",
+     "on_screen_text": "Month 9: card gone → Roth IRA",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with twelve small ticks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap the five moves for your twenties. Five: a starter emergency fund of five hundred to a thousand dollars. Four: clear high-interest card debt, and keep lower-rate loans on schedule. Three: get the full employer match. Two: automate everything on payday. And one: start investing, even small, because time is the one thing you can't get back. In our hypothetical chart, starting at twenty-five instead of thirty-five more than doubled the result. Next week, part two: your thirties, with kids, houses and keeping retirement on track.",
+     "on_screen_text": "Fund · debt · match · automate · invest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to a growing sapling. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "5 money moves for your 20s, with a fictional 25-year-old: a starter fund, clearing card debt, the full match, automation, and starting to invest early.\n\nReturns shown are hypothetical. Investing involves risk. Not financial advice.",
+   "hashtags": [
+    "moneyin20s",
+    "personalfinance",
+    "investingforbeginners",
+    "moneybyage",
+    "moneymadesimple"
+   ],
+   "description": "Part 1 of Money Moves by Age: five moves for your 20s, counted down, with a fictional 25-year-old (Maya) and a chart of $200 a month invested from 25 vs 35 at a hypothetical 7%.\n\nChapters\n0:00 Intro\n0:41 Meet Maya\n1:21 Move 5: a starter emergency fund\n1:58 Move 4: clear the expensive debt\n2:35 Move 3: the full match\n3:13 The chart: 25 vs 35\n3:56 Move 2: automate everything\n4:33 Move 1: start investing, even small\n5:10 Maya's plan\n5:59 What about the student loans?\n6:34 Common 20s mistakes\n7:07 Protecting yourself\n7:42 Your next 12 months\n8:23 Recap\n\nLinks\nHow to start investing with $100 a month: https://moneymadesimple.netlify.app/blog/how-to-start-investing-with-100-a-month/?utm_source=youtube&utm_medium=social&utm_campaign=yt-age-01\n401(k) match explained: https://moneymadesimple.netlify.app/blog/401k-match-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-age-01\nHow to build an emergency fund: https://moneymadesimple.netlify.app/blog/how-to-build-an-emergency-fund/?utm_source=youtube&utm_medium=social&utm_campaign=yt-age-01\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-age-01\n\nInvesting involves risk, including the possible loss of money you invest. Past performance doesn't predict future results. Returns shown are hypothetical illustrations, not forecasts.\nExamples are hypothetical and for education only. Not financial, tax or investment advice. We don't recommend specific securities.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "Your 20s: 5 moves",
+   "sources": [
+    "https://www.investor.gov/introduction-investing",
+    "https://www.irs.gov/retirement-plans/401k-plans",
+    "https://studentaid.gov/manage-loans/repayment"
+   ],
+   "claims_to_verify": [
+    "$200/mo, 40 yrs at 7% compounded monthly ≈ $524,963; 30 yrs ≈ $243,994",
+    "48,000 × 6% = 2,880; × 50% = 1,440",
+    "$1,500 at 22% with $200 extra ≈ 8 months",
+    "Take-home after 6% pre-tax ≈ 2,900; 2,900 − 2,100 − 150 − 200 = 450; × 12 ÷ 52 ≈ 104"
+   ],
+   "title_variants": [
+    "Money Moves by Age, Part 1: Your 20s",
+    "The 5 Money Moves to Make in Your 20s"
+   ],
+   "hook_variants": [
+    "Your 20s are when small money moves count the most. Here are 5.",
+    "Starting at 25 instead of 35 can double the result. Here's why."
+   ],
+   "original_element": "worked-example-chart: Bar chart of $200 a month at a hypothetical 7%: about $525,000 if started at 25 vs about $244,000 if started at 35, both to 65 (chapter \"The chart: 25 vs 35\")"
+  },
+  "format_style": "countdown",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Bar chart of $200 a month at a hypothetical 7%: about $525,000 if started at 25 vs about $244,000 if started at 35, both to 65",
+   "chapter": "The chart: 25 vs 35"
+  },
+  "compliance_review": [
+   "Hypothetical 7% labelled on chart, narration and caption",
+   "Roth IRA framing is general; eligibility and limits per IRS",
+   "No specific funds or providers",
+   "Maya is fictional and labelled"
+  ]
+ },
+ {
+  "format": "long",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Part 2 of Money Moves by Age: a fictional couple in their 30s (Priya and Dev, one toddler, renting, saving for a house) and their real-numbers monthly plan, charted, covering the order of goals, insurance and a will.",
+  "series": "money-by-age",
+  "series_part": 2,
+  "content_id": "yt-age-02",
+  "search_terms": [
+   "money in your 30s",
+   "financial checklist 30s",
+   "saving for a house and retirement",
+   "how much should i save in my 30s"
+  ],
+  "thumbnail_alt": "Money plan for your 30s",
+  "script": {
+   "title": "Money in Your 30s: Kids, a House, and Retirement on Track",
+   "hook": "Your 30s pile on goals at once: a house, kids, retirement. Here's one couple's $8,000-a-month plan, in real numbers.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Your thirties pile on goals at once: a house, kids, retirement. Here's one couple's eight-thousand-dollar-a-month plan, in real numbers. This is part two of Money Moves by Age. In part one we covered your twenties: a starter fund, the match, and starting early. In your thirties, income is often higher, but so are the demands on it. Childcare, a bigger home, a car that fits a car seat. The big risk in this decade isn't one bad decision. It's letting retirement saving quietly slip while everything else feels more urgent.",
+     "on_screen_text": "Part 2: your 30s",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to a sapling that has grown into a small tree. No text, no logos, no real people."
+    },
+    {
+     "heading": "Meet Priya and Dev",
+     "narration": "Meet Priya and Dev, a fictional couple, both thirty-four. Together they take home eight thousand dollars a month after taxes and their workplace retirement contributions. They have a two-year-old, they rent for twenty-four hundred a month, and they want to buy a home in about three years. They have eight thousand in savings, no credit card debt, and a car loan. Both contribute enough to get their full 401(k) match. They're doing a lot right. Their question is the classic thirties question: in what order do we fund everything?",
+     "on_screen_text": "Fictional: Priya + Dev, 34 · $8,000/mo",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two fictional parents with a toddler. No text, no logos, no real people."
+    },
+    {
+     "heading": "The chart: their monthly plan",
+     "narration": "Here's their plan on a chart. Housing: twenty-four hundred. Childcare: fourteen hundred. Other bills, including the car loan, utilities, phones and insurance: twelve hundred. Savings goals: eight hundred. And everything else, like groceries, gas, eating out and fun: twenty-two hundred. That adds up to exactly eight thousand. The eight hundred in savings is split three ways: three hundred to the emergency fund, four hundred to a house fund, and a hundred to a college savings account for their daughter. Every dollar has a job before the month starts.",
+     "on_screen_text": "$2,400 · $1,400 · $1,200 · $800 · $2,200",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. five bars of different heights. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Priya and Dev's $8,000 a month",
+      "labels": [
+       "Housing",
+       "Childcare",
+       "Other bills",
+       "Savings goals",
+       "Everything else"
+      ],
+      "values": [
+       2400,
+       1400,
+       1200,
+       800,
+       2200
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "/mo",
+      "note": "Fictional example"
+     }
+    },
+    {
+     "heading": "Goal 1: a full emergency fund",
+     "narration": "Their first goal is a full emergency fund. With a child and two jobs, a common target is three to six months of essential expenses. Their essentials, housing, childcare, bills and groceries, come to about fifty-eight hundred a month. Three months is about seventeen thousand five hundred. They have eight thousand, so at three hundred a month it takes a while, which is why their tax refund and any bonuses go here first. In your thirties, a job loss or a medical leave would hit more people, so this fund protects all the other goals.",
+     "on_screen_text": "Essentials ≈ $5,800 × 3 ≈ $17,500",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with three marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Goal 2: retirement stays on track",
+     "narration": "Goal two: retirement stays on track, even while the house fund grows. They both contribute enough for the full match, but a common guideline is to aim for around fifteen percent of pay toward retirement, including any match. They're at about nine percent combined. Their plan: raise each contribution by one percent every January, and with every raise. That moves them toward fifteen percent over a few years without a painful cut in take-home pay. The house can be financed with a mortgage. Retirement can't be borrowed for later.",
+     "on_screen_text": "Aim ≈ 15% incl. match · +1% each January",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a staircase with coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Goal 3: the house fund",
+     "narration": "Goal three: the house. Their target is a thirty-five-thousand-dollar down payment plus about ten thousand for closing and moving costs. At four hundred a month that would take nine years, so their plan has two speed-ups. When the car loan ends next year, its three-hundred-fifty-dollar payment goes to the house fund. And half of every raise goes there too. Because they need this money in a few years, it stays in high-yield savings or CDs, not in stocks. A market drop right before they buy could shrink the down payment.",
+     "on_screen_text": "House fund: savings, not stocks",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a small house label. No text, no logos, no real people."
+    },
+    {
+     "heading": "Goal 4: college, in its place",
+     "narration": "Goal four: college savings. They put a hundred a month into a 529 plan for their daughter. That's a meaningful start, and some states give a tax deduction for contributions. But they deliberately keep it small for now. Many planners put retirement ahead of college, because a student can borrow for school, apply for aid and work part time, but nobody lends money for retirement. As their income grows and other goals are met, they can raise the college amount. Grandparents can contribute to a 529 too.",
+     "on_screen_text": "529: $100 a month, after retirement",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a graduation cap with a small coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Protection: insurance",
+     "narration": "Next, protection, which matters more in your thirties than in any other decade. With a child depending on them, both get term life insurance through work or on their own. Term life is usually much cheaper than whole life for the same amount of cover. They check whether their jobs include disability insurance, which replaces part of your income if you can't work. That's often more likely to be needed than life insurance. They get quotes, compare, and keep the policies simple. Insurance isn't exciting, but it keeps one bad event from undoing everything.",
+     "on_screen_text": "Term life · disability cover",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shield over a small family. No text, no logos, no real people."
+    },
+    {
+     "heading": "Protection: a will and beneficiaries",
+     "narration": "And they write a will. With a young child, the most important part isn't the money. It's naming a guardian. Without a will, a court decides. Many people use an estate lawyer; some use reputable online services for simple situations. They also check the beneficiaries on their 401(k)s and life insurance, because those forms usually override a will. It takes an afternoon. Once it's done, they review it every few years, or after a big change like another child or a move to a new state.",
+     "on_screen_text": "Will · guardian · beneficiaries",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a folded document with a small heart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Childcare tax breaks",
+     "narration": "One way Priya and Dev free up money is through childcare tax breaks. If either employer offers a dependent care FSA, they can pay some daycare costs with pre-tax money. There's also the Child and Dependent Care Credit at tax time, though the same dollars can't count for both. With fourteen hundred a month in childcare, checking these at open enrollment can be worth several hundred dollars a year. They put any savings straight into the emergency fund, so it doesn't disappear into everyday spending.",
+     "on_screen_text": "Dependent care FSA · care credit",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stroller next to a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lifestyle creep in your 30s",
+     "narration": "The thirties are also when lifestyle creep gets expensive. A bigger home, a second car, nicer vacations: each one makes sense on its own, and together they can absorb every raise for a decade. Priya and Dev use one simple rule: when income goes up, half of the increase goes to goals and half to lifestyle. They still enjoy the raise, and their savings rate climbs every year. They also do one money date a month: twenty minutes, both of them, looking at the plan together.",
+     "on_screen_text": "Raises: half to goals, half to life",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin split into two jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "Their next three years",
+     "narration": "Here's how the next three years could look for them. By the end of year one, the emergency fund passes twelve thousand and the car loan is gone. By the end of year two, the emergency fund is full at about seventeen thousand five hundred, and the house fund, with the old car payment and half of two raises, is around twenty-two thousand. By the end of year three, the house fund approaches forty-five thousand, enough for the down payment and closing costs. These are fictional numbers, and real life will wobble, but the plan has a clear direction.",
+     "on_screen_text": "Year 3: house fund ≈ $45,000",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with three ticks and a small house. No text, no logos, no real people."
+    },
+    {
+     "heading": "If you're single in your 30s",
+     "narration": "Not everyone in their thirties is part of a couple with kids, and the same order still works if you're single. Build a full emergency fund, because there's no second income to fall back on, so many single people aim for the higher end, closer to six months. Keep retirement moving toward about fifteen percent. Save for any home goal in savings, not stocks. Disability insurance matters even more when you're the only earner. And a will and beneficiaries still matter, even without kids, so your money goes where you want it to.",
+     "on_screen_text": "Single: aim nearer 6 months",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single figure next to a full jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap your thirties. One: build a full emergency fund of three to six months of essentials, because more people depend on you. Two: keep retirement on track, aiming toward about fifteen percent of pay, raising it one percent at a time. Three: save for a house in savings, not stocks, and speed it up with old payments and raises. Four: start college savings, but after retirement. And protect it all with term life, disability cover and a will. Next week, part three: your forties, and how to check whether you're on track.",
+     "on_screen_text": "Fund · retirement · house · college · protect",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to a young tree with a small fence. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Money in your 30s: one fictional couple's $8,000-a-month plan, with an emergency fund, retirement, a house fund, college savings and insurance in the right order.\n\nExamples are fictional. Investing involves risk. Not financial advice.",
+   "hashtags": [
+    "moneyin30s",
+    "personalfinance",
+    "familybudget",
+    "moneybyage",
+    "moneymadesimple"
+   ],
+   "description": "Part 2 of Money Moves by Age: a fictional couple in their 30s (Priya and Dev, $8,000 a month, one toddler, saving for a house) and their monthly plan charted, with the order of goals, insurance, a will and childcare tax breaks.\n\nChapters\n0:00 Intro\n0:37 Meet Priya and Dev\n1:14 The chart: their monthly plan\n1:51 Goal 1: a full emergency fund\n2:30 Goal 2: retirement stays on track\n3:07 Goal 3: the house fund\n3:45 Goal 4: college, in its place\n4:21 Protection: insurance\n5:00 Protection: a will and beneficiaries\n5:36 Childcare tax breaks\n6:12 Lifestyle creep in your 30s\n6:48 Their next three years\n7:29 If you're single in your 30s\n8:07 Recap\n\nLinks\nHow to build an emergency fund: https://moneymadesimple.netlify.app/blog/how-to-build-an-emergency-fund/?utm_source=youtube&utm_medium=social&utm_campaign=yt-age-02\nSinking funds explained: https://moneymadesimple.netlify.app/blog/sinking-funds-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-age-02\nRoth vs traditional IRA: https://moneymadesimple.netlify.app/blog/roth-vs-traditional-ira/?utm_source=youtube&utm_medium=social&utm_campaign=yt-age-02\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-age-02\n\nInvesting involves risk, including the possible loss of money you invest. Past performance doesn't predict future results. Returns shown are hypothetical illustrations, not forecasts.\nExamples are hypothetical and for education only. Not financial, tax or investment advice. We don't recommend specific securities.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "Your 30s: the plan",
+   "sources": [
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+    "https://www.investor.gov/introduction-investing/investing-basics/save-college/529-plans",
+    "https://www.irs.gov/taxtopics/tc602"
+   ],
+   "claims_to_verify": [
+    "2,400 + 1,400 + 1,200 + 800 + 2,200 = 8,000",
+    "Essentials 2,400 + 1,400 + 1,200 + 800 groceries ≈ 5,800; × 3 ≈ 17,400",
+    "~15% of pay incl. match is a common guideline",
+    "Projection is illustrative: EF 8,000 + 300×12 + refunds ≈ 12k yr 1"
+   ],
+   "title_variants": [
+    "Money Moves by Age, Part 2: Your 30s",
+    "Your 30s Money Plan, With Real Numbers"
+   ],
+   "hook_variants": [
+    "House, kids or retirement first? A 30s plan in real numbers.",
+    "Money in your 30s: how to fund five goals without dropping one."
+   ],
+   "original_element": "worked-example-chart: Bar chart of the fictional Priya and Dev's $8,000 monthly plan: housing $2,400, childcare $1,400, other bills $1,200, savings goals $800, spending $2,200 (chapter \"The chart: their monthly plan\")"
+  },
+  "format_style": "real-numbers",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Bar chart of the fictional Priya and Dev's $8,000 monthly plan: housing $2,400, childcare $1,400, other bills $1,200, savings goals $800, spending $2,200",
+   "chapter": "The chart: their monthly plan"
+  },
+  "compliance_review": [
+   "Fictional couple, labelled",
+   "Insurance described generally; no products or providers named",
+   "Retirement-before-college framed as common planner view, not advice",
+   "Tax break rules summarised; verify FSA and credit rules at IRS.gov"
+  ]
+ },
+ {
+  "format": "long",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Part 3 of Money Moves by Age: an on-screen calculation for a fictional 44-year-old (Chris, $95k, $120k saved) projecting savings to 67 at a hypothetical 6%, charted as a line, then the 4% rule and the levers that move the result.",
+  "series": "money-by-age",
+  "series_part": 3,
+  "content_id": "yt-age-03",
+  "search_terms": [
+   "money in your 40s",
+   "retirement savings at 45",
+   "am i on track for retirement",
+   "catching up on retirement in your 40s"
+  ],
+  "thumbnail_alt": "Retirement math for your 40s",
+  "script": {
+   "title": "Money in Your 40s: Are You on Track? Do the Math",
+   "hook": "Forty-four years old, $120,000 saved. Is that on track? Let's do the math on screen.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Forty-four years old, a hundred twenty thousand dollars saved. Is that on track? Let's do the math on screen. This is part three of Money Moves by Age. Part one was your twenties, part two was your thirties. Your forties are often peak earning years, and also peak spending years: teenagers, a mortgage, maybe aging parents. It's also the decade when a lot of people first ask, seriously, am I going to be okay? Instead of guessing, we'll run one calculation you can copy with your own numbers.",
+     "on_screen_text": "Part 3: your 40s",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to a sturdy tree. No text, no logos, no real people."
+    },
+    {
+     "heading": "Meet Chris",
+     "narration": "Meet Chris, a fictional forty-four-year-old. Chris earns ninety-five thousand dollars a year, has a hundred twenty thousand in a 401(k) and an IRA, and puts in about twelve thousand a year, counting the employer match. That's about thirteen percent of pay. Chris has a mortgage, two kids heading toward college, and no other debt. Chris has read the rules of thumb online, like having three times your salary saved by forty, and feels behind. Chris is at about one point three times salary. Let's see what the math actually says.",
+     "on_screen_text": "Fictional: Chris, 44 · $95k · $120k saved",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fictional person at a kitchen table with a laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "The calculation, step by step",
+     "narration": "Here's the calculation. Start with what Chris has: a hundred twenty thousand. Each year, it grows by a hypothetical six percent, and then Chris adds twelve thousand. Six percent is just an assumption for illustration; real returns go up and down and could be lower. Year one: a hundred twenty thousand times one point zero six is a hundred twenty-seven thousand two hundred, plus twelve thousand, so about a hundred thirty-nine thousand. Repeat that every year. A spreadsheet or a free online compound interest calculator does this in seconds.",
+     "on_screen_text": "$120k × 1.06 + $12k ≈ $139k",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calculator with a growing number. No text, no logos, no real people."
+    },
+    {
+     "heading": "The chart: 44 to 67",
+     "narration": "Here's that calculation on a chart, from forty-four to sixty-seven. At fifty: about two hundred fifty-four thousand. At fifty-five: about four hundred seven thousand. At sixty: about six hundred thirteen thousand. And at sixty-seven, Chris's full retirement age for Social Security: about one point zero two million. Notice the line bends upward. In the last seven years it grows by more than in the first sixteen. That's compounding: growth on the growth. This chart assumes Chris keeps contributing the same twelve thousand and never raises it, which is a conservative assumption.",
+     "on_screen_text": "Age 67 ≈ $1.02M (hypothetical 6%)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a line rising and curving upward. No text, no logos, no real people.",
+     "chart": {
+      "kind": "line",
+      "title": "Chris's savings, hypothetical 6% a year",
+      "labels": [
+       "44",
+       "50",
+       "55",
+       "60",
+       "67"
+      ],
+      "values": [
+       120000,
+       253926,
+       407456,
+       612913,
+       1022320
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Hypothetical return, $12,000 added a year; not a forecast"
+     }
+    },
+    {
+     "heading": "What a million means",
+     "narration": "So is one point zero two million enough? One common way to turn savings into income is the four percent rule of thumb, from research on historical returns: withdraw about four percent in the first year, then adjust for inflation. Four percent of one point zero two million is about forty thousand nine hundred a year. Important catch: that's in future dollars. Twenty-three years of inflation means forty thousand then buys less than forty thousand now. And the four percent rule is a guideline, not a promise; some planners use lower rates.",
+     "on_screen_text": "4% of $1.02M ≈ $40,900 a year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a small tap. No text, no logos, no real people."
+    },
+    {
+     "heading": "Add Social Security",
+     "narration": "Savings aren't the only income. Chris can log in at SSA dot gov and see an estimate of their Social Security benefit, based on their real earnings record. Say the estimate is about twenty-five hundred a month at sixty-seven, in today's dollars. That's thirty thousand a year. Together with about forty thousand from savings, that's roughly seventy thousand a year, before tax. Chris's goal is to replace around seventy to eighty percent of their pre-retirement income, a common rule of thumb. On these assumptions, Chris is closer than they thought.",
+     "on_screen_text": "Check your estimate at SSA.gov",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two jars pouring into one cup. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lever 1: raise the savings rate",
+     "narration": "Now the levers, because the point of the math is to see what you can change. Lever one: raise the savings rate. If Chris goes from twelve thousand a year to fifteen thousand, about three thousand more, or two hundred fifty a month, the projection at sixty-seven rises by roughly a hundred forty thousand dollars, using the same hypothetical six percent. Many people do this by raising their contribution one percent a year, or by sending half of each raise to savings. In your forties, raises are often bigger, so this lever is strong.",
+     "on_screen_text": "+$3,000 a year ≈ +$140k at 67 (hypothetical)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a dial turning up. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lever 2: fees",
+     "narration": "Lever two: fees. If Chris's investments charge one percent a year instead of a tenth of a percent, that difference compounds too. Over twenty-three years on a balance this size, it can cost well over a hundred thousand dollars. Chris checks the expense ratio of each fund in the 401(k), which is listed in the plan documents, and compares low-cost options. We don't recommend specific funds. The point is that fees are one of the few things you control completely, and the forties are a good time to check them.",
+     "on_screen_text": "Check expense ratios",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small leak in a pipe being fixed. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lever 3: working a little longer",
+     "narration": "Lever three: time. Working even two extra years, to sixty-nine, does three things at once. Chris contributes for two more years, the money compounds for two more years, and there are two fewer years to fund in retirement. Delaying Social Security also raises the monthly benefit, which we'll cover in part five. Not everyone can choose when they retire, because health and jobs don't always cooperate, so Chris treats this as a backup lever, not the plan. The main plan is lever one.",
+     "on_screen_text": "Backup lever: 2 more years",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with two extra pages. No text, no logos, no real people."
+    },
+    {
+     "heading": "College vs retirement in your 40s",
+     "narration": "The biggest pull on money in your forties is often college. Chris wants to help the kids, and that's fair. The common planner view is the one from part two: retirement first, because students can borrow and get aid, and retirees can't. Chris sets a fixed college amount, puts it in a 529, and has an honest conversation with the kids about what the family can cover. Pausing retirement contributions for college could cost far more later than any student loan the kids take on.",
+     "on_screen_text": "Retirement first, then college",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a graduation cap next to a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Other 40s checks",
+     "narration": "A few other forties checks. Life insurance: does the coverage still match the mortgage and the kids' ages? Disability insurance: is it in place, since income is at its peak? A will and beneficiaries: updated since the kids were born? And aging parents: is there a conversation about their plans, so a crisis doesn't land on Chris's savings unexpectedly? None of these are fun, and each takes an afternoon. Chris puts one on the calendar each quarter, so they all get done in a year without one giant weekend.",
+     "on_screen_text": "Insurance · will · parents",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a checklist with four boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Your own numbers",
+     "narration": "Here's how to run this for yourself. Write down four numbers: your age, what you have saved for retirement, what you add each year including any match, and your expected retirement age. Pick a conservative growth assumption, and try a few, like four, five and six percent. Run the calculation in a spreadsheet or calculator. Then check your Social Security estimate. Then try the levers: what if you added a little more, or retired two years later? The goal isn't a perfect forecast. It's seeing which lever matters most for you.",
+     "on_screen_text": "Age · saved · yearly · retire age",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a page with four blank lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why rules of thumb mislead",
+     "narration": "A quick word on those rules of thumb, like three times your salary by forty. They're rough averages, built on assumptions about when you started, what you earn, and when you'll retire. Chris took years off saving early on and still projects to around a million by sixty-seven, on our hypothetical numbers. Someone with a high income but expensive habits could hit the rule of thumb and still fall short. That's why your own calculation, with your own numbers, beats any rule you see online.",
+     "on_screen_text": "Your math beats the rule of thumb",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a ruler next to a calculator. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap your forties. Don't guess whether you're on track; run the math. In our fictional example, Chris's hundred twenty thousand at forty-four, with twelve thousand a year added at a hypothetical six percent, projected to about a million by sixty-seven. Check your Social Security estimate. Then pull the levers: raise your savings rate, cut fees, and keep working longer as a backup. Put retirement before college, and update insurance and your will. Next week, part four: your fifties, catch-up contributions, and the last stretch.",
+     "on_screen_text": "Run the math · pull the levers",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to a tall tree with a ruler. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Are you on track in your 40s? We run the math on screen for a fictional 44-year-old with $120,000 saved, then show the three levers that change the result.\n\nReturns shown are hypothetical. Investing involves risk. Not financial advice.",
+   "hashtags": [
+    "moneyin40s",
+    "retirementplanning",
+    "personalfinance",
+    "moneybyage",
+    "moneymadesimple"
+   ],
+   "description": "Part 3 of Money Moves by Age: an on-screen calculation for a fictional 44-year-old (Chris, $95k income, $120k saved, $12k a year) projected to 67 at a hypothetical 6%, the 4% rule, Social Security, and the levers that move the result.\n\nChapters\n0:00 Intro\n0:36 Meet Chris\n1:14 The calculation, step by step\n1:51 The chart: 44 to 67\n2:29 What a million means\n3:07 Add Social Security\n3:45 Lever 1: raise the savings rate\n4:24 Lever 2: fees\n5:01 Lever 3: working a little longer\n5:36 College vs retirement in your 40s\n6:11 Other 40s checks\n6:48 Your own numbers\n7:26 Why rules of thumb mislead\n8:02 Recap\n\nLinks\nRoth vs traditional IRA: https://moneymadesimple.netlify.app/blog/roth-vs-traditional-ira/?utm_source=youtube&utm_medium=social&utm_campaign=yt-age-03\n401(k) match explained: https://moneymadesimple.netlify.app/blog/401k-match-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-age-03\nIndex funds explained: https://moneymadesimple.netlify.app/blog/index-funds-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-age-03\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-age-03\n\nInvesting involves risk, including the possible loss of money you invest. Past performance doesn't predict future results. Returns shown are hypothetical illustrations, not forecasts.\nExamples are hypothetical and for education only. Not financial, tax or investment advice. We don't recommend specific securities.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "Your 40s: on track?",
+   "sources": [
+    "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator",
+    "https://www.ssa.gov/myaccount/",
+    "https://www.investor.gov/introduction-investing/getting-started/understanding-fees"
+   ],
+   "claims_to_verify": [
+    "120,000 at 6% + 12,000/yr end-of-year: 50 ≈ 253,926; 55 ≈ 407,456; 60 ≈ 612,913; 67 ≈ 1,022,320",
+    "4% of 1,022,320 ≈ 40,893",
+    "+3,000/yr × 23 yrs at 6% ≈ +141,000 (FV annuity factor ≈ 47.0)",
+    "Social Security $2,500/mo is a fictional example estimate"
+   ],
+   "title_variants": [
+    "Money Moves by Age, Part 3: Your 40s",
+    "Behind on Retirement at 44? Run This Calculation"
+   ],
+   "hook_variants": [
+    "Are you on track in your 40s? One calculation tells you.",
+    "In your 40s and worried you're behind? Run these numbers."
+   ],
+   "original_element": "worked-example-chart: Line chart of the fictional Chris's retirement savings from 44 to 67 at a hypothetical 6% with $12,000 a year added: $120,000 at 44, about $254,000 at 50, $407,000 at 55, $613,000 at 60 and $1.02M at 67 (chapter \"The chart: 44 to 67\")"
+  },
+  "format_style": "on-screen-calculation",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Line chart of the fictional Chris's retirement savings from 44 to 67 at a hypothetical 6% with $12,000 a year added: $120,000 at 44, about $254,000 at 50, $407,000 at 55, $613,000 at 60 and $1.02M at 67",
+   "chapter": "The chart: 44 to 67"
+  },
+  "compliance_review": [
+   "Hypothetical 6% labelled on chart, narration and caption",
+   "4% rule framed as a guideline, not a promise; future-dollar caveat stated",
+   "No specific funds or providers",
+   "Chris is fictional and labelled; Social Security figure is an example"
+  ]
+ },
+ {
+  "format": "long",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Part 4 of Money Moves by Age: a step-by-step walkthrough for a fictional 53-year-old (Denise) using catch-up contributions, with a chart of $12k vs $18k a year for 14 years at a hypothetical 6%, plus debt, risk and health costs before retirement.",
+  "series": "money-by-age",
+  "series_part": 4,
+  "content_id": "yt-age-04",
+  "search_terms": [
+   "money in your 50s",
+   "catch up contributions 401k",
+   "retirement savings at 55",
+   "behind on retirement at 50"
+  ],
+  "thumbnail_alt": "Catch-up plan for your 50s",
+  "script": {
+   "title": "Money in Your 50s: Catch-Up Contributions and the Last Stretch",
+   "hook": "At 50, the IRS lets you save extra. Here's what $6,000 more a year could mean by 67, step by step.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "At fifty, the IRS lets you save extra. Here's what six thousand dollars more a year could mean by sixty-seven, step by step. This is part four of Money Moves by Age. Your fifties are a turning point. For many people, kids are leaving home, the mortgage is shrinking, and income is near its peak. Retirement is no longer an abstract idea; it's a date on the horizon. The good news is there's still time to make a real difference. Today we'll walk through one fictional person's plan, one step at a time.",
+     "on_screen_text": "Part 4: your 50s",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to a tall tree with a few golden leaves. No text, no logos, no real people."
+    },
+    {
+     "heading": "Meet Denise",
+     "narration": "Meet Denise, a fictional fifty-three-year-old. She earns eighty-eight thousand dollars a year and has two hundred ten thousand saved for retirement, after taking a few years off work in her thirties to care for family. She currently puts about twelve thousand a year into her 401(k), counting the match. Her youngest just finished college, which frees up about five hundred a month. She'd like to retire at sixty-seven. She feels behind, and she's not alone; a lot of people reach their fifties with less saved than the rules of thumb suggest.",
+     "on_screen_text": "Fictional: Denise, 53 · $210k saved",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fictional person with a coffee and a notebook. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1: know the catch-up rules",
+     "narration": "Step one: know the catch-up rules. Once you turn fifty, you're allowed to put more into a 401(k) or similar workplace plan than the standard annual limit. That extra amount is called a catch-up contribution. IRAs have a catch-up amount too. Recent rules also added a higher catch-up for people aged sixty to sixty-three in many plans, and higher earners may have to make catch-up contributions as Roth. The limits change most years, so Denise checks the current numbers on the IRS website and with her plan before she changes anything.",
+     "on_screen_text": "Age 50+: catch-up contributions",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a ladder with one extra rung. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2: redirect the freed-up money",
+     "narration": "Step two: redirect the freed-up money. The five hundred a month that used to go to college costs is six thousand a year. Instead of letting it disappear into everyday spending, Denise raises her 401(k) contribution so her yearly total goes from twelve thousand to eighteen thousand. Because 401(k) contributions come out before income tax, her take-home pay drops by less than five hundred a month. This is the single biggest move most people in their fifties can make: when a big expense ends, the money moves to retirement the next month.",
+     "on_screen_text": "College ends → $500 a month to retirement",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow from a graduation cap to a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "The chart: $12k vs $18k",
+     "narration": "Here's what that difference could mean, looking only at the new contributions. Fourteen years of twelve thousand a year, from fifty-three to sixty-seven, at a hypothetical six percent, could grow to about two hundred fifty-two thousand. Fourteen years of eighteen thousand, with the same assumption, could grow to about three hundred seventy-eight thousand. That's a gap of about a hundred twenty-six thousand dollars, from six thousand a year more. And that's on top of what her existing two hundred ten thousand could grow to. Returns aren't promised, but the extra saving is in her control.",
+     "on_screen_text": "$12k/yr ≈ $252k · $18k/yr ≈ $378k (hypothetical)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two bars, one taller. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "14 years of contributions, hypothetical 6%",
+      "labels": [
+       "$12k a year: put in",
+       "$12k a year: worth at 67",
+       "$18k a year: put in",
+       "$18k a year: worth at 67"
+      ],
+      "values": [
+       168000,
+       252181,
+       252000,
+       378271
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Hypothetical return; not a forecast"
+     }
+    },
+    {
+     "heading": "Step 3: clear debts before retirement",
+     "narration": "Step three: plan to enter retirement with as little debt as possible. Denise has a car loan and eight years left on her mortgage. She pays the car loan on schedule and, when it ends, sends that payment to savings. The mortgage is a judgment call: paying it off early lowers her monthly costs in retirement, but extra payments don't help if she then has to borrow for an emergency. Her plan is to keep retirement contributions first, and add a little to the mortgage once her emergency fund is full.",
+     "on_screen_text": "Car loan done → savings",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a key next to a small house. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 4: check the investment mix",
+     "narration": "Step four: check the investment mix. In your fifties, a big market drop can feel very different, because there's less time to recover. Many people gradually shift toward a mix with less in stocks and more in bonds and cash as retirement gets closer. Target-date funds do this automatically. But going too conservative too early has a cost too, because retirement can last thirty years and the money still needs to grow. Denise reviews her mix once a year and doesn't make changes in a panic after a bad month. We don't recommend specific funds.",
+     "on_screen_text": "Review the mix once a year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pie chart with three slices. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 5: plan for health costs",
+     "narration": "Step five: plan for health costs. If Denise retires before sixty-five, she'll need health insurance until Medicare starts, which can be expensive. If she has a high-deductible health plan at work, a health savings account lets her save pre-tax for medical costs, and those savings can be used in retirement too. HSAs also have a catch-up amount from age fifty-five. She also starts learning about Medicare now, so the choices at sixty-five aren't a surprise. Health care is one of the biggest costs in retirement, and planning ahead helps.",
+     "on_screen_text": "HSA · bridge to Medicare at 65",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small medical cross next to a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 6: estimate retirement spending",
+     "narration": "Step six: estimate what retirement will actually cost. Denise looks at her current spending and adjusts it: no mortgage once it's paid off, no commuting, but more for health care and maybe travel. She lands at about fifty-five thousand a year in today's dollars. She checks her Social Security estimate at SSA dot gov, which shows about twenty-two hundred a month at sixty-seven. That's about twenty-six thousand a year, so her savings need to cover the remaining twenty-nine thousand or so. Now she has a real target, not a guess.",
+     "on_screen_text": "$55k needed − $26k Social Security ≈ $29k",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple ledger with two columns. No text, no logos, no real people."
+    },
+    {
+     "heading": "Is she on track?",
+     "narration": "So, is Denise on track? Her two hundred ten thousand, growing at a hypothetical six percent for fourteen years, could reach about four hundred seventy-five thousand. Add about three hundred seventy-eight thousand from her new eighteen-thousand-a-year contributions, and the total could be around eight hundred fifty thousand at sixty-seven. Using the four percent rule of thumb, that's about thirty-four thousand a year in the first year, in future dollars. Her gap was twenty-nine thousand in today's dollars. Inflation will raise that gap, so it's close, not certain. Which is why she reviews the plan every year.",
+     "on_screen_text": "≈ $850k at 67 (hypothetical)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale nearly balanced. No text, no logos, no real people."
+    },
+    {
+     "heading": "What if you're further behind?",
+     "narration": "What if you're further behind than Denise? First, you're not out of options. Working a few more years, part time or full time, can help a lot. Delaying Social Security raises your monthly benefit, which we'll cover next week. Downsizing a home can free up money and lower costs. Cutting fees on your investments adds up. And talking to a fee-only financial planner, who's paid by you rather than by commissions, can help you see options you might miss. The worst move is doing nothing because the number feels too big.",
+     "on_screen_text": "More years · delay SS · downsize · fees",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four small arrows pointing up. No text, no logos, no real people."
+    },
+    {
+     "heading": "Watch for retirement scams",
+     "narration": "One more fifties step: watch for scams aimed at people nearing retirement. Be wary of free lunch seminars that end in a sales pitch, offers of high returns with no risk, pressure to move your 401(k) into a product you don't understand, and anyone who says you must act today. You can check whether an advisor is registered at Investor dot gov or with FINRA BrokerCheck. A real professional is fine with you taking a week to decide. The money you've saved over thirty years deserves a slow, careful decision.",
+     "on_screen_text": "Check any advisor at Investor.gov",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a brochure. No text, no logos, no real people."
+    },
+    {
+     "heading": "Denise's one-page plan",
+     "narration": "Here's Denise's whole plan on one page. Contributions: eighteen thousand a year, raised whenever the catch-up limit allows. Car loan: paid on schedule, then redirected to savings. Emergency fund: six months of essentials in high-yield savings. Mortgage: extra payments only after the emergency fund is full. Investment mix: reviewed every January. HSA: funded every year she has a qualifying plan. Social Security estimate: checked every year at SSA dot gov. She keeps that page on the fridge and updates it each birthday.",
+     "on_screen_text": "Denise's plan: one page, every birthday",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single page on a fridge door. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap your fifties, step by step. One: learn the catch-up rules and check the current limits. Two: when a big expense ends, send that money to retirement the next month. Three: plan to retire with as little debt as possible. Four: review your investment mix once a year, without panic. Five: plan for health costs and the gap before Medicare. Six: estimate your real retirement spending, and check your Social Security estimate. Next week, the final part: your sixties, and when to claim Social Security.",
+     "on_screen_text": "Catch up · redirect · debt · mix · health",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to a tall tree with golden leaves. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Money in your 50s: a step-by-step walkthrough for a fictional 53-year-old using catch-up contributions, with the math on $6,000 more a year by 67.\n\nReturns shown are hypothetical. Investing involves risk. Not financial advice.",
+   "hashtags": [
+    "moneyin50s",
+    "retirementplanning",
+    "catchupcontributions",
+    "moneybyage",
+    "moneymadesimple"
+   ],
+   "description": "Part 4 of Money Moves by Age: a six-step walkthrough for a fictional 53-year-old (Denise, $210k saved) using catch-up contributions, with a chart of $12k vs $18k a year for 14 years at a hypothetical 6%, plus debt, investment mix, health costs and spending estimates.\n\nChapters\n0:00 Intro\n0:38 Meet Denise\n1:16 Step 1: know the catch-up rules\n1:54 Step 2: redirect the freed-up money\n2:32 The chart: $12k vs $18k\n3:12 Step 3: clear debts before retirement\n3:50 Step 4: check the investment mix\n4:29 Step 5: plan for health costs\n5:06 Step 6: estimate retirement spending\n5:44 Is she on track?\n6:24 What if you're further behind?\n7:02 Watch for retirement scams\n7:39 Denise's one-page plan\n8:13 Recap\n\nLinks\n401(k) match explained: https://moneymadesimple.netlify.app/blog/401k-match-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-age-04\nRoth vs traditional IRA: https://moneymadesimple.netlify.app/blog/roth-vs-traditional-ira/?utm_source=youtube&utm_medium=social&utm_campaign=yt-age-04\nHow to build an emergency fund: https://moneymadesimple.netlify.app/blog/how-to-build-an-emergency-fund/?utm_source=youtube&utm_medium=social&utm_campaign=yt-age-04\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-age-04\n\nInvesting involves risk, including the possible loss of money you invest. Past performance doesn't predict future results. Returns shown are hypothetical illustrations, not forecasts.\nExamples are hypothetical and for education only. Not financial, tax or investment advice. We don't recommend specific securities.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "Your 50s: catch up",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-catch-up-contributions",
+    "https://www.ssa.gov/myaccount/",
+    "https://brokercheck.finra.org/"
+   ],
+   "claims_to_verify": [
+    "12,000/yr × 14 yrs at 6% (end of year) ≈ 252,181; 18,000 ≈ 378,271; gap ≈ 126,090",
+    "210,000 × 1.06^14 ≈ 475,000",
+    "474,790 + 378,271 ≈ 853,061; 4% ≈ 34,122",
+    "Catch-up limits change yearly; verify at IRS.gov"
+   ],
+   "title_variants": [
+    "Money Moves by Age, Part 4: Your 50s",
+    "Your 50s Money Walkthrough: Catch Up Without Panic"
+   ],
+   "hook_variants": [
+    "Behind on retirement in your 50s? Walk through this plan.",
+    "Catch-up contributions start at 50. Here's the math for one fictional saver."
+   ],
+   "original_element": "worked-example-chart: Bar chart of new contributions for the fictional Denise from 53 to 67 at a hypothetical 6%: $12,000 a year grows to about $252,000 vs $18,000 a year to about $378,000 (chapter \"The chart: $12k vs $18k\")"
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Bar chart of new contributions for the fictional Denise from 53 to 67 at a hypothetical 6%: $12,000 a year grows to about $252,000 vs $18,000 a year to about $378,000",
+   "chapter": "The chart: $12k vs $18k"
+  },
+  "compliance_review": [
+   "Hypothetical 6% labelled on chart, narration and caption",
+   "Catch-up limits not stated as numbers; viewers told to check IRS.gov",
+   "No specific funds or providers; target-date funds named as a category only",
+   "Denise is fictional and labelled"
+  ]
+ },
+ {
+  "format": "long",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Part 5 of Money Moves by Age: an explainer on claiming Social Security at 62, 67 or 70 for a fictional 62-year-old (Ray, $2,000 a month at 67), charted, with break-even ages, Medicare at 65, required minimum distributions and a first-year retirement paycheck.",
+  "series": "money-by-age",
+  "series_part": 5,
+  "content_id": "yt-age-05",
+  "search_terms": [
+   "when to claim social security",
+   "social security at 62 vs 67 vs 70",
+   "money in your 60s",
+   "social security break even age"
+  ],
+  "thumbnail_alt": "When to claim Social Security",
+  "script": {
+   "title": "Money in Your 60s: When to Claim Social Security, Explained",
+   "hook": "Claim Social Security at 62 and you could get 30% less for life. Here's how the 62, 67 and 70 math works.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Claim Social Security at sixty-two and you could get thirty percent less for life. Here's how the sixty-two, sixty-seven and seventy math works. This is the final part of Money Moves by Age. We've gone from your twenties to your fifties, and now we're at the decade where saving turns into spending. Your sixties come with some of the biggest one-time money decisions you'll make: when to claim Social Security, how Medicare works, and how to turn savings into a paycheck. We'll explain each one with a fictional example.",
+     "on_screen_text": "Part 5: your 60s",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to a full-grown tree with fruit. No text, no logos, no real people."
+    },
+    {
+     "heading": "Meet Ray",
+     "narration": "Meet Ray, a fictional sixty-two-year-old. Ray has just left a long career and has about six hundred thousand dollars saved. His Social Security statement, which anyone can see at SSA dot gov, says his full retirement benefit is about two thousand dollars a month. For people born in nineteen sixty or later, full retirement age is sixty-seven. Ray is healthy, his wife is fifty-nine and still working, and he's trying to decide whether to claim now, at sixty-seven, or wait until seventy. Let's explain how each choice changes the numbers.",
+     "on_screen_text": "Fictional: Ray, 62 · $2,000 at 67",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fictional man with a folder of papers. No text, no logos, no real people."
+    },
+    {
+     "heading": "How claiming age works",
+     "narration": "Here's the basic rule. You can claim Social Security as early as sixty-two, but your monthly benefit is permanently reduced. Claim at your full retirement age and you get your full benefit. Wait past full retirement age and your benefit grows by eight percent for each year you delay, up to seventy. After seventy, there's no extra increase, so there's no reason to wait longer. These percentages come from the Social Security Administration's own rules, and the reductions and increases apply for life, with cost-of-living adjustments added on top.",
+     "on_screen_text": "62 = reduced · 67 = full · 70 = +24%",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a dial with three marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "The chart: 62, 67 or 70",
+     "narration": "Here's Ray's choice on a chart. If he claims at sixty-two, five years early, he gets about seventy percent of his full benefit: around fourteen hundred dollars a month. At sixty-seven, his full benefit: two thousand a month. At seventy, three years of eight percent increases, or twenty-four percent more: about twenty-four hundred eighty a month. The difference between the shortest bar and the tallest is more than a thousand dollars every month, for the rest of his life. That's why this decision deserves real attention.",
+     "on_screen_text": "$1,400 · $2,000 · $2,480 a month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three bars rising left to right. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Ray's monthly benefit by claiming age",
+      "labels": [
+       "Claim at 62",
+       "Claim at 67",
+       "Claim at 70"
+      ],
+      "values": [
+       1400,
+       2000,
+       2480
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "/mo",
+      "note": "Fictional example, full retirement age 67, before cost-of-living adjustments"
+     }
+    },
+    {
+     "heading": "The break-even age",
+     "narration": "So when does waiting pay off? That's the break-even age. Claiming at sixty-two, Ray collects fourteen hundred a month for five years before he'd have started at sixty-seven. But at sixty-seven he'd get six hundred more each month. Adding it up, the totals cross at about age seventy-eight and eight months. Comparing sixty-seven with seventy, the totals cross at about eighty-two and a half. These ignore cost-of-living increases, taxes and investment growth, so they're rough. But they show the key question: how long do you expect to live?",
+     "on_screen_text": "Break-even ≈ 78.7 (vs 67) · 82.5 (vs 70)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two lines crossing. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why many people wait",
+     "narration": "Nobody knows how long they'll live, so many planners think about it as insurance. If Ray dies at seventy-five, claiming early would have paid more. If he lives to ninety-two, which is quite possible for a healthy sixty-two-year-old, waiting until seventy would pay much more in total, and the bigger checks arrive when he may need them most. Social Security is also one of the few incomes that rises with inflation and lasts for life. The longer you might live, the more valuable a bigger check becomes.",
+     "on_screen_text": "Bigger check = longevity insurance",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an umbrella over a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "When claiming early can make sense",
+     "narration": "Claiming early isn't wrong. It can make sense if you have health problems or a shorter life expectancy in your family, if you need the income and have no other savings to bridge the gap, or if you're single and want the money now. One thing to know: if you claim before full retirement age and keep working, an earnings test can temporarily withhold some benefits if your earnings pass a yearly limit. Social Security publishes the current limit each year. The money isn't lost, but it can be a surprise.",
+     "on_screen_text": "Health · need · earnings test",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance scale. No text, no logos, no real people."
+    },
+    {
+     "heading": "Married couples and survivors",
+     "narration": "For married couples, there's an extra layer. When one spouse dies, the survivor keeps the larger of the two benefits. Ray has the higher earnings record, so if he waits until seventy, his wife could keep that larger check if she outlives him. That's a big reason many higher-earning spouses delay. His wife can also claim a spousal benefit based on his record, if it's larger than her own. Couples should look at both records together. SSA dot gov has a calculator, and SSA staff can help over the phone.",
+     "on_screen_text": "Survivor keeps the larger benefit",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two figures with one umbrella. No text, no logos, no real people."
+    },
+    {
+     "heading": "Medicare at 65",
+     "narration": "Next big date: Medicare at sixty-five, whenever you claim Social Security. Your initial enrollment window runs for seven months around your sixty-fifth birthday. If you miss it and don't have other qualifying coverage, like insurance through a current employer, you can face late enrollment penalties that last for life. Ray is sixty-two, so until sixty-five he needs other health insurance, through his wife's job or the marketplace at HealthCare dot gov. He's put his sixty-fifth birthday in his calendar with a three-month reminder.",
+     "on_screen_text": "Medicare: 7-month window around 65",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a medical cross. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ray's first retirement paycheck",
+     "narration": "Ray decides to wait until seventy, and to bridge the gap with his savings. Here's how his first year could work. He needs about forty-five hundred a month. His wife's job covers half of their shared costs. He withdraws from savings into a high-yield account once a year, and pays himself a monthly transfer, like a paycheck. He keeps one to two years of spending in cash and short-term bonds, so he doesn't have to sell investments after a market drop. When his Social Security starts at seventy, his withdrawals drop sharply.",
+     "on_screen_text": "Savings bridge → bigger check at 70",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a monthly arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Taxes and required withdrawals",
+     "narration": "Two tax points in your sixties. First, required minimum distributions: eventually you must withdraw a minimum amount each year from traditional IRAs and 401(k)s. The starting age depends on your birth year; for people born in nineteen sixty or later, it's seventy-five. Second, your sixties may be a low-tax window, after your paycheck stops and before Social Security and those required withdrawals begin. Some people use it to convert part of a traditional IRA to a Roth. The rules are detailed, so this is a good time to talk to a tax professional.",
+     "on_screen_text": "RMDs from 75 (born 1960+)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a tax form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Protecting what you've built",
+     "narration": "A last set of sixties moves. Update your will, beneficiaries and powers of attorney, so someone you trust can manage money and health decisions if you can't. Simplify accounts, because ten old accounts are harder for a family to handle than three. And be extra careful with scams: fake Social Security calls, Medicare card scams, and grandparent scams all target people in their sixties and older. The real Social Security Administration won't threaten you or ask for payment by gift card. Hang up and call the number on SSA dot gov.",
+     "on_screen_text": "Will · POA · fewer accounts · scam check",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shield over a house. No text, no logos, no real people."
+    },
+    {
+     "heading": "Questions to ask before you claim",
+     "narration": "Before Ray files, he writes down five questions. One: what does my own Social Security statement say at sixty-two, sixty-seven and seventy? Two: how long have people in my family typically lived? Three: do I have savings to cover the years before I claim? Four: how does my choice affect my wife's survivor benefit? Five: will I keep working, and does the earnings test apply? He answers them with his wife, then calls Social Security to confirm the details before choosing.",
+     "on_screen_text": "5 questions before you file",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a notepad with five lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap your sixties, and the whole series. Claiming Social Security at sixty-two gives a smaller check for life; waiting until seventy gives a bigger one. In Ray's fictional example: fourteen hundred, two thousand, or about twenty-four eighty a month. The break-even ages were about seventy-nine and eighty-two and a half. Enroll in Medicare on time at sixty-five, plan your withdrawals and taxes, and protect what you've built. Across five decades, the pattern was the same: start early, automate, raise your savings over time, and keep checking the plan.",
+     "on_screen_text": "62 · 67 · 70: know your numbers",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to a tree with a full harvest basket. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "When should you claim Social Security? We explain the 62, 67 and 70 math with a fictional example, plus break-even ages, survivor benefits and Medicare at 65.\n\nExamples are fictional. Check your own estimate at SSA.gov. Not financial advice.",
+   "hashtags": [
+    "socialsecurity",
+    "retirementplanning",
+    "moneyin60s",
+    "moneybyage",
+    "moneymadesimple"
+   ],
+   "description": "Part 5 of Money Moves by Age: claiming Social Security at 62, 67 or 70 for a fictional 62-year-old (Ray, $2,000 at full retirement age), charted, with break-even ages, survivor benefits, Medicare at 65, RMDs and a first-year retirement paycheck.\n\nChapters\n0:00 Intro\n0:37 Meet Ray\n1:14 How claiming age works\n1:51 The chart: 62, 67 or 70\n2:27 The break-even age\n3:04 Why many people wait\n3:40 When claiming early can make sense\n4:18 Married couples and survivors\n4:56 Medicare at 65\n5:30 Ray's first retirement paycheck\n6:09 Taxes and required withdrawals\n6:47 Protecting what you've built\n7:25 Questions to ask before you claim\n7:59 Recap\n\nLinks\nRoth vs traditional IRA: https://moneymadesimple.netlify.app/blog/roth-vs-traditional-ira/?utm_source=youtube&utm_medium=social&utm_campaign=yt-age-05\nHow to build an emergency fund: https://moneymadesimple.netlify.app/blog/how-to-build-an-emergency-fund/?utm_source=youtube&utm_medium=social&utm_campaign=yt-age-05\nIndex funds explained: https://moneymadesimple.netlify.app/blog/index-funds-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-age-05\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-age-05\n\nInvesting involves risk, including the possible loss of money you invest. Past performance doesn't predict future results. Returns shown are hypothetical illustrations, not forecasts.\nExamples are hypothetical and for education only. Not financial, tax or investment advice. We don't recommend specific securities.\nVisuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
+   "thumbnail_text": "62, 67 or 70?",
+   "sources": [
+    "https://www.ssa.gov/benefits/retirement/planner/agereduction.html",
+    "https://www.ssa.gov/benefits/retirement/planner/delayret.html",
+    "https://www.medicare.gov/basics/get-started-with-medicare/sign-up/when-does-medicare-coverage-start",
+    "https://www.irs.gov/retirement-plans/retirement-plan-and-ira-required-minimum-distributions-faqs"
+   ],
+   "claims_to_verify": [
+    "FRA 67 (born 1960+); claim at 62 = 70% → 1,400",
+    "Delayed credits 8%/yr to 70 = 124% → 2,480",
+    "Break-even 62 vs 67: 1,400(a−62) = 2,000(a−67) → a ≈ 78.7; 67 vs 70: 2,000(a−67) = 2,480(a−70) → a = 82.5 (no COLA)",
+    "RMD age 75 for those born 1960 or later (SECURE 2.0)"
+   ],
+   "title_variants": [
+    "Money Moves by Age, Part 5: Your 60s",
+    "Claim Social Security at 62, 67 or 70? The Math"
+   ],
+   "hook_variants": [
+    "62, 67 or 70: when should you claim Social Security?",
+    "The Social Security break-even age, explained with one example."
+   ],
+   "original_element": "worked-example-chart: Bar chart of the fictional Ray's monthly Social Security benefit by claiming age: about $1,400 at 62, $2,000 at 67 (full retirement age) and $2,480 at 70 (chapter \"The chart: 62, 67 or 70\")"
+  },
+  "format_style": "explainer",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Bar chart of the fictional Ray's monthly Social Security benefit by claiming age: about $1,400 at 62, $2,000 at 67 (full retirement age) and $2,480 at 70",
+   "chapter": "The chart: 62, 67 or 70"
+  },
+  "compliance_review": [
+   "Claiming percentages from SSA rules, linked",
+   "Break-even ages labelled rough, no COLA or tax",
+   "Early claiming presented as reasonable for some; no single recommendation",
+   "Ray is fictional and labelled; Roth conversion pointed to a tax professional"
+  ]
+ }
+]

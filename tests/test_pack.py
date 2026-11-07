@@ -86,7 +86,8 @@ def test_export_writes_pack(factory, tmp_path):
                                               ("month-7", date(2027, 5, 21), 31),
                                               ("month-8", date(2027, 6, 21), 30),
                                               ("month-9", date(2027, 7, 21), 31),
-                                              ("month-10", date(2027, 8, 21), 31)])
+                                              ("month-10", date(2027, 8, 21), 31),
+                                              ("month-11", date(2027, 9, 21), 30)])
 def test_tiktok_cuts_and_series(factory, month, start, days):
     items = _items(ROOT / "launch" / "money-made-simple" / month / "content.json")
     shorts = [i for i in items if i["format"] == "short"]
@@ -302,6 +303,34 @@ def test_first_1000_investing_series_is_compliance_ready():
             assert not re.search(pat, text, re.I), (sc["title"], pat)
 
 
+MONEY_BY_AGE = ROOT / "launch" / "money-made-simple" / "youtube-money-by-age" / "content.json"
+
+
+def test_money_by_age_series_is_compliance_ready():
+    import re
+    from contentfactory.guardrails import HYPE_PATTERNS, TESTIMONIAL_PATTERNS
+    from contentfactory.schemas import ChartSpec
+    items = _items(MONEY_BY_AGE)
+    others = {i["script"]["title"].lower() for p in MONTHS + [EVERGREEN, SERIES, BASICS, FIRST_1000] for i in _items(p)}
+    assert [i["series_part"] for i in items] == list(range(1, 6))
+    assert len({i["format_style"] for i in items}) == 5
+    for decade, it in zip(("20s", "30s", "40s", "50s", "60s"), items):
+        sc = it["script"]
+        words = sum(len(s["narration"].split()) for s in sc["segments"])
+        assert 1200 <= words <= 1800, (sc["title"], words)
+        assert decade in sc["title"] and sc["title"].lower() not in others and len(sc["title"]) <= 70
+        assert sc["segments"][0]["narration"].split()[0] == sc["hook"].split()[0]
+        assert it["content_id"].startswith("yt-age-") and f"utm_campaign={it['content_id']}" in sc["description"]
+        assert "possible loss of money" in sc["description"] and "fact-checked by a person" in sc["description"]
+        assert "fictional" in " ".join(s["narration"] for s in sc["segments"][:3]).lower()
+        assert len(it["compliance_review"]) >= 3
+        seg = next(s for s in sc["segments"] if s["heading"] == it["original_element"]["chapter"])
+        assert re.search(r"hypothetical|fictional|example", ChartSpec(**seg["chart"]).note, re.I)
+        text = " ".join([sc["hook"], sc["caption"], sc["description"]] + [s["narration"] for s in sc["segments"]])
+        for pat in HYPE_PATTERNS + TESTIMONIAL_PATTERNS:
+            assert not re.search(pat, text, re.I), (sc["title"], pat)
+
+
 MYTH_VS_MATH = ROOT / "launch" / "money-made-simple" / "myth-vs-math" / "content.json"
 
 
@@ -357,7 +386,7 @@ def test_savings_challenge_is_tiktok_only_weekly_and_labelled(factory):
 
 def test_chart_element_videos_carry_a_real_chart():
     from contentfactory.schemas import ChartSpec
-    files = MONTHS + [SERIES, BASICS, FIRST_1000]
+    files = MONTHS + [SERIES, BASICS, FIRST_1000, MONEY_BY_AGE]
     longs = [i for p in files for i in _items(p) if i["format"] == "long"]
     charted = [i for i in longs if i["original_element"]["type"] == "worked-example-chart"]
     assert len(charted) >= 20
