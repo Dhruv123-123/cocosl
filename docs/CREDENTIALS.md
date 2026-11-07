@@ -44,6 +44,13 @@ After adding a voice, re-voice everything that was rendered silent in one go: `f
 (add `--include-approved` for approved posts; they go back to review). With Docker the `renderer` service
 picks the jobs up by itself; without it run `factory renderq run`. `factory status` shows progress.
 
+## Running more than one brand
+
+Each brand should post to its own accounts. App-level keys (`YT_CLIENT_ID`, `META_APP_ID`, `TIKTOK_CLIENT_KEY`...)
+are shared; account tokens go under the brand's name: run the auth commands with `--brand`, e.g.
+`factory auth youtube --brand tiny-histories`, and the tokens are saved as `TINY_HISTORIES__YT_REFRESH_TOKEN` etc.
+Any platform key can be set per brand this way (for example `TINY_HISTORIES__IG_USER_ID`); a brand without its own key falls back to the shared one. `factory doctor` lists each brand's connections.
+
 ## 5. Social accounts (create these by hand, one per platform for the brand)
 
 Create the Instagram, YouTube and TikTok accounts yourself with the handle in the brand YAML.

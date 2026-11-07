@@ -10,15 +10,17 @@ import re
 import shutil
 from pathlib import Path
 
+from PIL import Image
+
 from ..config import BrandProfile, Settings
 from ..schemas import Script, Segment
-from .captions import time_segment, write_srt
+from .captions import time_segment, time_segment_words, write_srt
 from .carousel import SlideKit, SlideText, render_carousel
 from .images import generate_images
 from .thumbnail import render_thumbnail
 from .tts import concat_narration, synthesize_segments
 from .util import (ASPECTS, SHORT_MAX_SECONDS, SLIDE_SIZE, VIDEO_SIZES, MediaError, Palette, RenderOptions,
-                   probe, provenance)
+                   probe, provenance, save_png_and_jpeg)
 from .video import Beat, VideoSpec, assemble, pick_music
 
 MIN_BEAT = 1.5      # seconds on screen per beat, even if the line is very short
@@ -62,8 +64,7 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     segments = script.segments
     family = f"{brand.slug}:{script.title}"
 
-    imgs = generate_images(settings, brand, [s.visual_prompt for s in segments], size, ASPECTS[fmt],
-                           out / "images", family=family)
+    imgs = _images_with_charts(settings, brand, segments, size, ASPECTS[fmt], out / "images", family, palette)
     lines = [(s.narration or s.on_screen_text or s.heading).strip() for s in segments]
     heads = [s.on_screen_text for s in segments]
     images = [r.path for r in imgs]
@@ -74,10 +75,18 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
 
     tts = synthesize_segments(settings, brand, lines, work / "voice")
     beats, cues, slots, t = [], [], [], 0.0
+    seg_words = tts.words or [None] * len(lines)
+    from .charts import render_chart_clip
     for i, (line, head, img, dur) in enumerate(zip(lines, heads, images, tts.durations)):
         slot = max(MIN_BEAT, dur + (TAIL if i == len(lines) - 1 else GAP))
-        beats.append(Beat(img, head, t, slot))
-        cues += time_segment(line, t + LEAD, max(0.4, dur - LEAD))
+        chart = segments[i].chart if i < len(segments) else None
+        clip = render_chart_clip(chart, size, palette, work / f"chart-{i:02d}.mp4", seconds=min(slot, 4.0)) \
+            if chart else None
+        beats.append(Beat(img, "" if chart else head, t, slot, clip=clip))  # charts carry their own title
+        if seg_words[i]:
+            cues += time_segment_words(line, t, dur, seg_words[i])
+        else:
+            cues += time_segment(line, t + LEAD, max(0.4, dur - LEAD))
         slots.append(slot)
         t += slot
 
@@ -98,10 +107,24 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     thumb = render_thumbnail(images[0], script.thumbnail_text or script.title, palette, brand.visual.font,
                              brand.visual.watermark, out / "thumbnail.png")
 
+    variants = []
+    if fmt == "long":  # A/B candidates for YouTube: different art and wording; pick one on the post page
+        texts = [script.thumbnail_text or script.title]
+        texts += [_short_words(t) for t in [*script.title_variants, script.title] if _short_words(t)]
+        texts = list(dict.fromkeys(texts))
+        arts = [images[min(i, len(images) - 1)] for i in (len(images) // 2, len(images) - 1)]
+        for k, (art, text) in enumerate(zip(arts, (texts[1:] + texts)[:2]), start=1):
+            variants.append(render_thumbnail(art, text, palette, brand.visual.font, brand.visual.watermark,
+                                             out / f"thumbnail-{k + 1}.png"))
     prov = _image_provenance(imgs)
+    for v in variants:
+        prov.append(provenance(str(v), "rendered", "pillow", "thumbnail variant"))
+        prov.append(provenance(str(v.with_suffix(".jpg")), "rendered", "pillow", "thumbnail variant (JPEG)"))
     prov.append(provenance(str(audio), "generated", tts.tool, " ".join(lines), provider=tts.provider,
                            note="Voice must be your own or licensed."))
-    prov.append(provenance(str(srt), "rendered", "contentfactory.captions", note="timing estimated from audio length"))
+    prov.append(provenance(str(srt), "rendered", "contentfactory.captions",
+                           note="word timing from the voice" if tts.timing != "estimated"
+                           else "timing estimated from audio length", timing=tts.timing))
     prov.append(provenance(str(thumb), "rendered", "pillow", script.thumbnail_text))
     prov.append(provenance(str(thumb.with_suffix(".jpg")), "rendered", "pillow", script.thumbnail_text,
                            note="JPEG copy for APIs that require JPEG"))
@@ -111,15 +134,16 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
         prov.append(provenance(str(music), "licensed", "user-music", "",
                                "user-supplied via FACTORY_MUSIC_DIR; keep the licence on file"))
     return {"video": video, "audio": audio, "captions_srt": srt, "images": [r.path for r in imgs], "slides": [],
-            "thumbnail": thumb, "duration": round(duration, 3), "provenance": prov}
+            "thumbnail": thumb, "thumbnail_variants": [thumb, *variants], "duration": round(duration, 3),
+            "provenance": prov}
 
 
 # ---------------------------------------------------------------- slides
 def _render_slides(settings: Settings, brand: BrandProfile, script: Script, fmt: str, out: Path, post: dict) -> dict:
     segments = script.segments[:1] if fmt == "image" else script.segments
     family = f"{brand.slug}:{script.title}"
-    imgs = generate_images(settings, brand, [s.visual_prompt for s in segments], SLIDE_SIZE, ASPECTS[fmt],
-                           out / "images", family=family)
+    imgs = _images_with_charts(settings, brand, segments, SLIDE_SIZE, ASPECTS[fmt], out / "images", family,
+                               Palette.from_brand(brand))
     kit = SlideKit(Palette.from_brand(brand), brand.visual.font, brand.visual.watermark, brand.name,
                    script.cta or brand.cta, language=brand.language)
     texts = []
@@ -132,7 +156,14 @@ def _render_slides(settings: Settings, brand: BrandProfile, script: Script, fmt:
             kicker = s.heading if s.heading and _norm(s.heading) != _norm(head) else ""
             texts.append(SlideText(head, s.narration, kicker))
     slides = render_carousel(kit, [r.path for r in imgs], texts, out / "slides")
+    for i, seg in enumerate(segments):  # a chart slide is the chart itself (it carries its own title)
+        if seg.chart and i < len(slides):
+            save_png_and_jpeg(Image.open(imgs[i].path).convert("RGB"), Path(slides[i]))
+    variants = []
     prov = _image_provenance(imgs)
+    for v in variants:
+        prov.append(provenance(str(v), "rendered", "pillow", "thumbnail variant"))
+        prov.append(provenance(str(v.with_suffix(".jpg")), "rendered", "pillow", "thumbnail variant (JPEG)"))
     for p, t in zip(slides, texts):
         prov.append(provenance(str(p), "rendered", "pillow", t.headline))
         prov.append(provenance(str(p.with_suffix(".jpg")), "rendered", "pillow", t.headline,
@@ -177,8 +208,30 @@ def _script(post: dict) -> Script:
     return script
 
 
+def _images_with_charts(settings, brand, segments, size, aspect, out_dir, family, palette):
+    """Illustrations for ordinary beats; exact data charts (no AI) for beats that carry a chart."""
+    import json as _json
+
+    from .charts import render_chart
+    from .images import ImageResult
+    plain = [i for i, s in enumerate(segments) if not s.chart]
+    made = generate_images(settings, brand, [segments[i].visual_prompt for i in plain], size, aspect, out_dir,
+                           family=family) if plain else []
+    by_index = dict(zip(plain, made))
+    out = []
+    for i, s in enumerate(segments):
+        if s.chart:
+            path = render_chart(s.chart, size, palette, brand.visual.font, out_dir / f"chart-{i:02d}.png")
+            out.append(ImageResult(path, "chart", "contentfactory.charts", _json.dumps(s.chart.model_dump())[:500],
+                                   note="drawn from the script's numbers; check them"))
+        else:
+            out.append(by_index[i])
+    return out
+
+
 def _image_provenance(imgs) -> list[dict]:
-    return [provenance(str(r.path), "generated", r.tool, r.prompt, provider=r.provider, note=r.note) for r in imgs]
+    return [provenance(str(r.path), "rendered" if r.provider == "chart" else "generated", r.tool, r.prompt,
+                       provider=r.provider, note=r.note) for r in imgs]
 
 
 def _norm(text: str) -> str:
@@ -202,5 +255,13 @@ def _relativize(assets: dict, build: Path, final: Path, root: Path) -> dict:
         out[key] = rel(assets.get(key))
     out["images"] = [rel(p) for p in assets.get("images", [])]
     out["slides"] = [rel(p) for p in assets.get("slides", [])]
+    if assets.get("thumbnail_variants"):
+        out["thumbnail_variants"] = [rel(p) for p in assets["thumbnail_variants"]]
     out["provenance"] = [{**e, "path": rel(e["path"])} for e in assets.get("provenance", [])]
     return out
+
+
+def _short_words(text: str, n: int = 5) -> str:
+    """Thumbnail wording from a title: the first few words, without trailing punctuation."""
+    words = (text or "").replace(":", " ").split()
+    return " ".join(words[:n]).rstrip(",.;:!?") if words else ""

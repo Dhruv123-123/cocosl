@@ -104,6 +104,20 @@ class ImageProvider:
         raise NotImplementedError
 
 
+def is_flux(ckpt: str) -> bool:
+    return "flux" in (ckpt or "").lower()
+
+
+def check_model_licence(ckpt: str) -> None:
+    """Monetized posts need commercially licensed weights. FLUX.1 [dev] weights are non-commercial;
+    FLUX.1 [schnell] is Apache-2.0. Refuse dev rather than quietly produce content you can't sell."""
+    name = (ckpt or "").lower()
+    if is_flux(name) and "schnell" not in name:
+        raise ProviderError(f"COMFYUI_CHECKPOINT={ckpt} looks like FLUX.1 [dev] or another non-schnell FLUX "
+                            "model, whose weights are non-commercial. Use FLUX.1 [schnell] "
+                            "(e.g. flux1-schnell-fp8.safetensors) or SDXL for monetized posts.")
+
+
 class ComfyUI(ImageProvider):
     name = "comfyui"
     tool = "comfyui"
@@ -116,10 +130,17 @@ class ComfyUI(ImageProvider):
         wf = copy.deepcopy(json.loads(TEMPLATE.read_text()))
         width, height = self.LATENT.get(aspect, (1024, 1024))
         wf["3"]["inputs"]["seed"] = seed_of(prompt) % (2**32)
-        wf["4"]["inputs"]["ckpt_name"] = os.environ.get("COMFYUI_CHECKPOINT", wf["4"]["inputs"]["ckpt_name"])
+        ckpt = os.environ.get("COMFYUI_CHECKPOINT", wf["4"]["inputs"]["ckpt_name"])
+        check_model_licence(ckpt)
+        wf["4"]["inputs"]["ckpt_name"] = ckpt
         wf["5"]["inputs"].update(width=width, height=height)
         wf["6"]["inputs"]["text"] = prompt
         wf["7"]["inputs"]["text"] = NEGATIVE
+        if is_flux(ckpt):  # FLUX.1 [schnell]: 4 steps, no CFG, no negative prompt
+            wf["3"]["inputs"].update(steps=int(os.environ.get("COMFYUI_STEPS", "4")), cfg=1.0,
+                                     sampler_name="euler", scheduler="simple")
+            wf["7"]["inputs"]["text"] = ""
+            self.tool = f"comfyui:{ckpt}"
         return wf
 
     def generate(self, prompt, size, aspect, family):

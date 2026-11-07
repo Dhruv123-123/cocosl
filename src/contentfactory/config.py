@@ -7,6 +7,7 @@ is for, how it sounds, how it looks, where it posts and how it makes money.
 from __future__ import annotations
 
 import os
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Literal
@@ -43,6 +44,7 @@ class Settings:
     dry_run: bool = True  # never call publishing APIs unless explicitly turned off
     dashboard_token: str = ""
     extra: dict = field(default_factory=dict)
+    brand_scope: str = ""  # set by for_brand(): env() prefers <BRAND>__KEY over KEY
 
     @classmethod
     def load(cls, home: str | Path | None = None) -> "Settings":
@@ -68,7 +70,31 @@ class Settings:
         return s
 
     def env(self, key: str, default: str = "") -> str:
+        """A setting from the environment. Inside a brand scope, `MONEY_MADE_SIMPLE__IG_ACCESS_TOKEN`
+        wins over `IG_ACCESS_TOKEN`, so each brand can post to its own accounts while app-level
+        values (client ids, secrets) stay shared."""
+        if self.brand_scope:
+            scoped = os.environ.get(scoped_key(self.brand_scope, key))
+            if scoped:
+                return scoped
         return os.environ.get(key, default)
+
+    def env_key(self, key: str, write_scoped: bool | None = None) -> str:
+        """The variable name to write a refreshed/new value to: the brand-scoped name if this brand
+        already uses one (or write_scoped=True), else the shared name."""
+        if self.brand_scope:
+            name = scoped_key(self.brand_scope, key)
+            if write_scoped or (write_scoped is None and os.environ.get(name)):
+                return name
+        return key
+
+    def for_brand(self, slug: str | None) -> "Settings":
+        from dataclasses import replace
+        return replace(self, brand_scope=slug or "")
+
+
+def scoped_key(brand_slug: str, key: str) -> str:
+    return re.sub(r"[^A-Z0-9]+", "_", brand_slug.upper()).strip("_") + "__" + key
 
 
 # ---------------------------------------------------------------------------
@@ -102,6 +128,7 @@ class Cadence(BaseModel):
     carousels_per_week: int = 3
     max_posts_per_day_per_platform: int = 2
     post_times: list[str] = Field(default_factory=lambda: ["12:30", "18:30"])  # local times
+    platform_times: dict[str, list[str]] = Field(default_factory=dict)  # e.g. {tiktok: ["19:00", "21:00"]}
     timezone: str = "America/New_York"
     # Worker settings for this brand (multi-brand runner)
     daily_at: str = ""            # local HH:MM for the daily ideas+drafts run; "" = DAILY_AT env (07:00)

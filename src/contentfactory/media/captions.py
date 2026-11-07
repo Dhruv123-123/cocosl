@@ -1,8 +1,9 @@
 """Word-chunked captions: timing, .srt export and .ass (libass) for burn-in.
 
-Timing is estimated: each segment's words are spread across that segment's
-audio, weighted by word length, so captions follow the voice closely enough
-without a forced-alignment model.
+When the voice returns word timestamps (Kokoro) or FACTORY_ALIGN=whisper is set,
+each chunk starts and ends exactly when its words are spoken (`time_segment_words`).
+Otherwise timing is estimated: each segment's words are spread across that
+segment's audio, weighted by word length.
 """
 from __future__ import annotations
 
@@ -53,6 +54,38 @@ def time_segment(text: str, start: float, duration: float) -> list[Cue]:
         span = duration * wgt / total
         cues.append(Cue(t, t + span, " ".join(c)))
         t += span
+    return cues
+
+
+def _norm_word(w: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", w.lower())
+
+
+def time_segment_words(text: str, start: float, duration: float,
+                       words: list[tuple[str, float, float]] | None) -> list[Cue]:
+    """Cues timed from real word timestamps (relative to the segment). Falls back to the estimate
+    when the timestamps don't line up with the script's words."""
+    chunks = chunk_words(text)
+    timed = [(w, s, e) for w, s, e in (words or []) if _norm_word(w)]
+    script_words = [w for c in chunks for w in c if _norm_word(w)]
+    if not chunks or not timed or abs(len(timed) - len(script_words)) > max(2, 0.15 * len(script_words)):
+        return time_segment(text, start, duration)
+    cues, i = [], 0
+    for c in chunks:
+        n = sum(1 for w in c if _norm_word(w))
+        if n == 0 or i >= len(timed):
+            continue
+        first, last = timed[i], timed[min(i + n, len(timed)) - 1]
+        cues.append(Cue(start + first[1], start + last[2], " ".join(c)))
+        i += n
+    if not cues:
+        return time_segment(text, start, duration)
+    end_limit = start + duration
+    for a, b in zip(cues, cues[1:]):  # no flicker: hold each chunk until the next one starts
+        if b.start - a.end < 0.35:
+            a.end = b.start
+    for c in cues:
+        c.start, c.end = min(c.start, end_limit), min(max(c.end, c.start + 0.2), end_limit + 0.3)
     return cues
 
 

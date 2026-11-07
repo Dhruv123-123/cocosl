@@ -23,7 +23,8 @@ dependencies = [
 [project.optional-dependencies]
 claude = ["anthropic>=0.70"]
 dev = ["pytest>=8", "anthropic>=0.70"]
-kokoro = ["kokoro>=0.9", "soundfile>=0.12"]   # local Kokoro-82M voice; or run the kokoro service in docker-compose
+kokoro = ["kokoro>=0.9", "soundfile>=0.12"]
+charts = ["manim>=0.18"]                     # animated data charts (FACTORY_CHARTS=manim)   # local Kokoro-82M voice; or run the kokoro service in docker-compose
 
 [project.scripts]
 factory = "contentfactory.cli:main"
@@ -32,7 +33,7 @@ factory = "contentfactory.cli:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-contentfactory = ["web/templates/*.html", "web/static/*", "business/templates/*.html", "funnel/templates/*.html", "funnel/templates/funnel/*.html", "brandkit/templates/*.html", "media/*.json", "media/assets/*"]
+contentfactory = ["web/templates/*.html", "web/static/*", "business/templates/*.html", "funnel/templates/*.html", "funnel/templates/funnel/*.html", "brandkit/templates/*.html", "media/*.json", "media/assets/*", "examples/*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
