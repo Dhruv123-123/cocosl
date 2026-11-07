@@ -627,8 +627,10 @@ def test_apps_tools_linked_and_tools_page(tmp_path):
     assert "https://tools.example.net/money-calculators/rent-vs-buy/" in (out / "cost-of-living" / "houston" / "index.html").read_text()
     assert 'href="/tools/"' in (out / "index.html").read_text()
     # every article that the data names gets the link, and at most 2 apps tools per article
+    # (not counting the one embedded tool from content/data/embeds.json)
     for page in (out / "blog").glob("*/index.html"):
-        assert page.read_text().count('href="https://tools.example.net') <= 2, page
+        h = re.sub(r'<div class="tool-embed">.*?</p></div>', "", page.read_text(), count=1, flags=re.S)
+        assert h.count('href="https://tools.example.net') <= 2, page
     # without an apps site, nothing points at it
     out2 = _build(tmp_path / "noapps", "https://example.org", APPS_URL="")
     assert not any("tools.example.net" in p.read_text() for p in out2.rglob("*.html"))
@@ -914,3 +916,29 @@ def test_apps_tools_are_embedded_in_matching_articles(tmp_path):
     off = _build(tmp_path / "off", "https://example.org", APPS_URL="", BUILD_DATE="2027-04-30")
     h = (off / "blog" / "debt-avalanche-vs-snowball" / "index.html").read_text()
     assert "tool-embed" not in h and "{{" not in h
+
+
+NEW_MAY_ARTICLES = ["how-to-pay-off-student-loans-faster", "moving-out-for-the-first-time", "how-to-read-a-pay-stub",
+                    "how-to-avoid-overdraft-fees", "how-to-save-money-on-car-insurance", "health-insurance-explained",
+                    "how-to-lower-your-credit-card-interest-rate", "lifestyle-creep"]
+
+
+def test_may_articles_are_long_dated_and_linked(tmp_path):
+    sys.path.insert(0, str(SITE))
+    import build
+    dates = []
+    for slug in NEW_MAY_ARTICLES:
+        meta, body = build.parse_front_matter((SITE / "content" / "blog" / f"{slug}.md").read_text())
+        prose = re.sub(r"<!--.*?-->", "", body, flags=re.S)
+        assert len(prose.split()) >= 1500, (slug, len(prose.split()))
+        assert "## A worked example" in prose and "fictional" in prose, slug
+        assert str(meta["date"]).startswith("2027-05"), slug
+        assert len(meta["seo_title"]) <= 60 and len(meta["description"]) <= 155, slug
+        assert len(meta["sources"]) >= 2, slug
+        dates.append(str(meta["date"]))
+    assert len(set(dates)) == 8
+    early = _build(tmp_path / "early", "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2027-04-30")
+    assert not (early / "blog" / "lifestyle-creep" / "index.html").exists()
+    late = _build(tmp_path, "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2027-05-31")
+    for s in NEW_MAY_ARTICLES:
+        assert (late / "blog" / s / "index.html").exists(), s
