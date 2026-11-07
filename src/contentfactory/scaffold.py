@@ -45,7 +45,11 @@ def brand_yaml(slug: str, name: str, niche: str, audience: str, timezone: str, h
                   "tts_voice": "", "banned_phrases": ["this one trick", "guaranteed"]},
         "visual": {"palette": palette, "font": "Inter",
                    "image_style": "clean flat vector illustration, brand palette, simple shapes, no text, no logos",
-                   "watermark": handle},
+                   "watermark": handle,
+                   # the one constant across every thumbnail, intro and cover; looks rotate around it
+                   "signature": {"device": ["corner_block", "stripe", "ring", "bracket", "dot_grid"][sum(map(ord, slug)) % 5],
+                                 "color": "accent", "corner": "top-right", "size": 0.14,
+                                 "label": "".join(w[0] for w in name.split())[:4].upper()}},
         "cadence": {"shorts_per_week": 3, "long_per_week": 0, "carousels_per_week": 2,
                     "max_posts_per_day_per_platform": 1, "post_times": ["12:30", "19:00"], "platform_times": {},
                     "timezone": timezone, "daily_at": "07:00", "daily_drafts": 1, "paused": False},

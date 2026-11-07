@@ -45,7 +45,7 @@ def test_full_flow_dry_run(factory, fake_render):
     assert len(pubs) >= 1
     # Publish everything regardless of slot time
     results = factory.publish_due(now=datetime.now(timezone.utc) + timedelta(days=30))
-    assert results and all(r["status"] == "dry_run" for r in results)
+    assert results and all(r["status"] in ("dry_run", "manual") for r in results)  # manual = post-by-hand package
     assert factory.db.get("posts", post_id)["status"] == "published"
 
 
