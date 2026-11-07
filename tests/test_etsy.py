@@ -118,3 +118,17 @@ def test_pod_posters_copy_and_layout():
         for k in posters.RATIOS:
             h = build_pod.poster_html(p, k)
             assert '<div class="chart">' in h and "please don't resell" not in h
+
+
+def test_kdp_book_specs():
+    import sys as _s
+    _s.path.insert(0, str(Path(__file__).resolve().parents[1] / "launch" / "kdp"))
+    import build_kdp as K
+    for year in (2027, 2028):
+        pages = K.interior_pages(year)
+        assert len(pages) % 4 == 0 and 24 <= len(pages) <= 150
+        assert not any("Etsy" in p or "resell" in p for p in pages)
+    n = len(K.interior_pages(2027))
+    w, h = K.cover_size(n)
+    assert abs(w - (0.25 + 17 + n * 0.002252)) < 1e-3 and h == 11.25
+    assert "Not financial" not in K.cover_html(2027, n) and "not financial advice" in K.cover_html(2027, n)

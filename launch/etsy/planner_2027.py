@@ -78,7 +78,7 @@ def cover(year: int, start: str) -> str:
       <div class="foot"><span>&copy; Money Made Simple &middot; for personal use only, please don't resell or share the file</span><span>moneymadesimple</span></div>'''
 
 
-def how_to_use(year: int) -> str:
+def how_to_use(year: int, book: bool = False) -> str:
     steps = [
         f"<strong>Start with the front pages</strong> (about 30 minutes, once): your {year} goals, your pay dates, the bills that come once a year, your savings goals and your debts.",
         "<strong>Each month has three pages:</strong> a calendar (write paydays and due dates), a budget (plan the month before it starts), and a spending log (fill it as you go).",
@@ -90,14 +90,23 @@ def how_to_use(year: int) -> str:
     lis = "".join(f'<li style="margin-bottom:9px">{s}</li>' for s in steps)
     return page(f"How to use your <em>{year}</em> planner", "Start here", f'''
       <ol style="font-size:10.5pt;padding-left:20px">{lis}</ol>
-      <h3>Printing</h3><ul style="font-size:10pt;padding-left:20px">
-        <li>Letter for the US and Canada, A4 almost everywhere else. Print at 100% / actual size. Double-sided works well.</li>
-        <li>Print it all and put it in a binder, or print one month at a time.</li>
-        <li>Prefer a tablet? Open the PDF in any note app that lets you write on PDFs.</li></ul>
+      {_how_extra(book)}
       <p class="note">* Dates marked with a star are the usual US tax deadlines. The IRS can move them; check irs.gov. Holidays shown are US federal holidays.</p>
       <div class="box" style="margin-top:auto"><div class="lbl">Good to know</div><p style="margin:4px 0 0;font-size:9pt">An organising tool, not financial
-      advice. Digital download: nothing is shipped. Questions or a printing problem? Message the shop through Etsy.</p></div>''',
+      advice. {"Write in pencil if you like to change your mind." if book else "Digital download: nothing is shipped. Questions or a printing problem? Message the shop through Etsy."}</p></div>''',
                 kicker="Money Made Simple")
+
+
+def _how_extra(book: bool) -> str:
+    if book:
+        return ('<h3>Tips</h3><ul style="font-size:10pt;padding-left:20px">'
+                '<li>A pencil or a fine-tip pen that doesn\'t bleed works best on this paper.</li>'
+                '<li>Keep a sticky note on the current month so the book opens where you need it.</li>'
+                '<li>Fill in the front pages in January; they make every month quicker.</li></ul>')
+    return ('<h3>Printing</h3><ul style="font-size:10pt;padding-left:20px">'
+            '<li>Letter for the US and Canada, A4 almost everywhere else. Print at 100% / actual size. Double-sided works well.</li>'
+            '<li>Print it all and put it in a binder, or print one month at a time.</li>'
+            '<li>Prefer a tablet? Open the PDF in any note app that lets you write on PDFs.</li></ul>')
 
 
 def year_page(year: int, start: str) -> str:
