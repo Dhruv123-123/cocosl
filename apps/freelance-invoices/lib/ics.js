@@ -2,7 +2,7 @@ import { addDays } from './dates.js';
 
 // Calendar file (.ics) for reminders: all-day events with a morning alarm. No server needed:
 // the page offers the file as a download and the phone or computer calendar imports it.
-const esc = (s) => String(s ?? '').replace(/\\/g, '\\\\').replace(/;/g, '\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n');
+const esc = (s) => String(s ?? '').replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n');
 const fold = (line) => {
   const out = [];
   let s = line;

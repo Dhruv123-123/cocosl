@@ -52,11 +52,13 @@
     <div class="row" style="margin-top:10px">
       <button id="snap" class="btn small" type="button">Save today's snapshot</button>
       <button id="pdf" class="btn ghost small" type="button">Download PDF</button>
+      <button id="xlsx" class="btn ghost small" type="button">Download spreadsheet (.xlsx)</button>
       <button id="csv" class="btn ghost small" type="button">Export CSV</button>
       <button id="backup" class="btn ghost small" type="button">Download backup</button>
       <label class="btn ghost small file">Restore<input id="restore" type="file" accept="application/json,.json" hidden></label>
     </div>
     <p id="data-msg" class="tiny" aria-live="polite"></p>
+    <p class="tiny">Making a <a href="money-dashboard.html">money dashboard spreadsheet</a> in this browser? Your net worth and snapshots are added to it as their own tab.</p>
     <label class="inline" style="margin-top:10px">Essential costs a month ($), optional <input id="costs" inputmode="decimal" placeholder="2,400"></label>
     <ul id="notes" class="checks"></ul>
   </section>

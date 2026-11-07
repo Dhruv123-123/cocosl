@@ -9,6 +9,7 @@ import { parseStatement } from './lib/statement.js';
 import { CATEGORIES, buildDashboard, workbookSheets, catName, labels } from './lib/dashboard.js';
 import { buildXlsx } from './lib/xlsx.js';
 import { parsePlanCsv, PLAN_STORE } from './lib/paycheck-plan.js';
+import { loadSheet, netWorthSheet } from './lib/networth.js';
 import { $, esc, store, live } from './page.js';
 
 const es = document.documentElement.lang.startsWith('es');
@@ -145,7 +146,10 @@ $('#results').addEventListener('click', (e) => {
 
 $('#download').addEventListener('click', () => {
   if (!dash) return;
-  const bytes = buildXlsx(workbookSheets(dash, { lang, made: today, budgets }), { title: L.title });
+  // Net worth from the net worth tracker on this site, if this browser has one, becomes its own tab.
+  const nw = loadSheet(store.get('mms-networth-v1'));
+  const extra = nw.items.length || nw.snapshots.length ? [netWorthSheet(nw, { lang })] : [];
+  const bytes = buildXlsx(workbookSheets(dash, { lang, made: today, budgets, extra }), { title: L.title });
   const name = `${L.file}-${dash.months[0]}-to-${dash.months.at(-1)}.xlsx`.replace('-to-', es ? '-a-' : '-to-');
   const a = document.createElement('a');
   a.href = URL.createObjectURL(new Blob([bytes], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' }));

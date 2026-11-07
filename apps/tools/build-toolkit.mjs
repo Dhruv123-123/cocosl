@@ -2,13 +2,14 @@
 // images inlined), plus an index page, in a folder and a zip. Opens from the folder with no internet: browsers
 // won't load JavaScript modules from file:// pages, so each page's modules are bundled into one plain script.
 // Needs esbuild: `npm i -D esbuild`, or set ESBUILD_PATH to its package folder.
-// Run from apps/: node tools/build-toolkit.mjs [out-dir]   (default: ../launch/money-toolkit/dist)
+// Run from apps/: node tools/build-toolkit.mjs [--edition es] [out-dir]   (default: ../launch/money-toolkit/dist)
+// --edition es builds the Spanish "Caja de herramientas de dinero" for Dinero Simple from SECTIONS_ES.
 import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { join, dirname, posix, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
 import { execFileSync } from 'node:child_process';
-import { SECTIONS, ITEMS, sourceFile } from './toolkit.mjs';
+import { EDITIONS, itemsOf, sourceFile } from './toolkit.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const require = createRequire(import.meta.url);
@@ -16,8 +17,14 @@ let esbuild;
 try { esbuild = require(process.env.ESBUILD_PATH || 'esbuild'); } catch { console.log('esbuild not installed (npm i -D esbuild, or set ESBUILD_PATH): skipping the toolkit build.'); process.exit(0); }
 
 export const VERSION = '2026.11';
-const outRoot = process.argv[2] || join(root, '..', 'launch', 'money-toolkit', 'dist');
-const dir = join(outRoot, 'Money-Toolkit');
+const args = process.argv.slice(2);
+const edKey = args.includes('--edition') ? args[args.indexOf('--edition') + 1] : 'en';
+const ED = EDITIONS[edKey] || EDITIONS.en;
+const SECTIONS = ED.sections;
+const ITEMS = itemsOf(SECTIONS);
+const es = ED.lang === 'es';
+const outRoot = args.filter((a, i) => a !== '--edition' && args[i - 1] !== '--edition')[0] || join(root, '..', 'launch', 'money-toolkit', 'dist');
+const dir = join(outRoot, ED.folder);
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
 const MIME = { '.png': 'image/png', '.svg': 'image/svg+xml', '.jpg': 'image/jpeg', '.webp': 'image/webp' };
 const bySrc = new Map(ITEMS.map((i) => [sourceFile(i.src), i.out]));
@@ -66,50 +73,35 @@ async function buildPage(item) {
     return `${pre}${bySrc.get(p) || 'index.html'}"`;
   });
   html = html.replace(/<\/head>/, `<style>${KIT_CSS}</style>\n</head>`);
-  const back = item.lang === 'es' ? 'Volver al Money Toolkit' : 'Back to the Money Toolkit';
+  const back = es ? 'Volver a la Caja de herramientas' : item.lang === 'es' ? 'Volver al Money Toolkit' : 'Back to the Money Toolkit';
   html = html.replace(/<body([^>]*)>/, `<body$1>\n<p class="tk-bar"><a href="index.html">← ${back}</a></p>`);
   html = html.replace(/<\/body>/, () => `${bundled.map((js) => `<script>${js}</script>`).join('\n')}\n</body>`); // a function, so $& in the code isn't a pattern
   writeFileSync(join(dir, item.out), html);
   return { out: item.out, kb: Math.round(html.length / 1024) };
 }
 
-function indexPage() {
-  const hub = readFileSync(join(root, 'index.html'), 'utf8');
-  const style = (/<style>([\s\S]*?)<\/style>/.exec(hub) || ['', ''])[1];
-  const sections = SECTIONS.map((s) => `  <section id="${s.id}" aria-labelledby="h-${s.id}"${s.lang ? ` lang="${s.lang}"` : ''}>
-    <h2 id="h-${s.id}">${esc(s.en)}</h2>
-    <div class="grid">
-${ITEMS.filter((i) => i.section === s.id).map((i) => `      <a class="card" href="${i.out}"><h3>${esc(i.title)}</h3><p>${esc(i.blurb)}</p></a>`).join('\n')}
-    </div>
-  </section>`).join('\n');
-  return `<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Money Toolkit</title>
-<meta name="description" content="${ITEMS.length} private money tools that work with no internet: calculators, budget planners, bill calendar, scam checkers and freelancer tools.">
-<style>${style}</style>
-</head>
-<body>
-<main>
-  <h1>Money Toolkit</h1>
-  <p class="lede">${ITEMS.length} money tools that run on your computer with no internet and no account. Everything you type stays on this device. Bookmark this page, or keep the folder on your desktop.</p>
-  <ul class="jump">${SECTIONS.map((s) => `<li><a href="#${s.id}">${esc(s.en)}</a></li>`).join('')}</ul>
-${sections}
-  <section aria-labelledby="h-tips">
-    <h2 id="h-tips">Good to know</h2>
-    <p>Your entries are saved in your browser on this computer. Use the same browser to come back to them, and use each tool's download or backup button for anything you want to keep. Clearing your browser's data deletes them.</p>
-    <p>Tax and benefit numbers are for 2026. Version ${VERSION}. Not financial, tax or legal advice.</p>
-  </section>
-</main>
-<footer><p>Money Toolkit by Money Made Simple. For your own personal use: please don't share or resell the files.</p></footer>
-</body>
-</html>
-`;
-}
+const TXT = es ? {
+  title: 'Caja de herramientas de dinero', desc: (n) => `${n} herramientas de dinero en español que funcionan sin internet: calculadoras, presupuesto, calendario de pagos y protección contra estafas.`,
+  lede: (n) => `${n} herramientas de dinero que funcionan en tu computadora sin internet y sin cuenta. Todo lo que escribes se queda en este aparato. Guarda esta página en favoritos o deja la carpeta en tu escritorio.`,
+  tipsH: 'Bueno saber', tips: ['Lo que escribes se guarda en el navegador de esta computadora. Usa el mismo navegador para volver a verlo, y usa el botón de descargar o respaldar de cada herramienta para lo que quieras guardar. Si borras los datos del navegador, se borra.', `Los números de impuestos y beneficios son de 2026. Versión ${VERSION}. No es asesoría financiera, de impuestos ni legal.`],
+  foot: 'Caja de herramientas de dinero de Dinero Simple. Para tu uso personal: por favor no compartas ni revendas los archivos.',
+  start: `CAJA DE HERRAMIENTAS DE DINERO (versión ${VERSION})
 
-const START = `MONEY TOOLKIT (version ${VERSION})
+1. Descomprime esta carpeta (en Windows: clic derecho > Extraer todo; en Mac: doble clic).
+2. Abre "index.html" en Chrome, Edge, Firefox o Safari.
+3. Elige una herramienta. Todo funciona sin internet y nada de lo que escribes sale de tu computadora.
+
+Lo que escribes se guarda en el navegador que uses. Usa el mismo la próxima vez.
+¿Preguntas? Responde al correo de tu recibo de compra.
+
+No es asesoría financiera, de impuestos ni legal. Para tu uso personal.
+`,
+} : {
+  title: 'Money Toolkit', desc: (n) => `${n} private money tools that work with no internet: calculators, budget planners, bill calendar, scam checkers and freelancer tools.`,
+  lede: (n) => `${n} money tools that run on your computer with no internet and no account. Everything you type stays on this device. Bookmark this page, or keep the folder on your desktop.`,
+  tipsH: 'Good to know', tips: ['Your entries are saved in your browser on this computer. Use the same browser to come back to them, and use each tool\'s download or backup button for anything you want to keep. Clearing your browser\'s data deletes them.', `Tax and benefit numbers are for 2026. Version ${VERSION}. Not financial, tax or legal advice.`],
+  foot: 'Money Toolkit by Money Made Simple. For your own personal use: please don\'t share or resell the files.',
+  start: `MONEY TOOLKIT (version ${VERSION})
 
 1. Unzip this folder (on Windows: right-click > Extract All; on a Mac: double-click).
 2. Open "index.html" in Chrome, Edge, Firefox or Safari.
@@ -119,7 +111,44 @@ Your entries are saved in the browser you use. Use the same browser next time.
 Questions: reply to your purchase receipt email.
 
 Not financial, tax or legal advice. For your own personal use.
+`,
+};
+
+function indexPage() {
+  const hub = readFileSync(join(root, 'index.html'), 'utf8');
+  const style = (/<style>([\s\S]*?)<\/style>/.exec(hub) || ['', ''])[1];
+  const head = (sec) => (es ? sec.es : sec.en);
+  const sections = SECTIONS.map((sec) => `  <section id="${sec.id}" aria-labelledby="h-${sec.id}"${sec.lang && sec.lang !== ED.lang ? ` lang="${sec.lang}"` : ''}>
+    <h2 id="h-${sec.id}">${esc(head(sec))}</h2>
+    <div class="grid">
+${ITEMS.filter((i) => i.section === sec.id).map((i) => `      <a class="card" href="${i.out}"><h3>${esc(i.title)}</h3><p>${esc(i.blurb)}</p></a>`).join('\n')}
+    </div>
+  </section>`).join('\n');
+  return `<!doctype html>
+<html lang="${ED.lang}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${TXT.title}</title>
+<meta name="description" content="${esc(TXT.desc(ITEMS.length))}">
+<style>${style}</style>
+</head>
+<body>
+<main>
+  <h1>${TXT.title}</h1>
+  <p class="lede">${esc(TXT.lede(ITEMS.length))}</p>
+  <ul class="jump">${SECTIONS.map((sec) => `<li><a href="#${sec.id}">${esc(head(sec))}</a></li>`).join('')}</ul>
+${sections}
+  <section aria-labelledby="h-tips">
+    <h2 id="h-tips">${TXT.tipsH}</h2>
+${TXT.tips.map((t) => `    <p>${esc(t)}</p>`).join('\n')}
+  </section>
+</main>
+<footer><p>${esc(TXT.foot)}</p></footer>
+</body>
+</html>
 `;
+}
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   if (existsSync(dir)) rmSync(dir, { recursive: true });
@@ -127,10 +156,10 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const sizes = [];
   for (const item of ITEMS) sizes.push(await buildPage(item));
   writeFileSync(join(dir, 'index.html'), indexPage());
-  writeFileSync(join(dir, 'START HERE.txt'), START);
-  const zip = join(outRoot, 'Money-Toolkit.zip');
+  writeFileSync(join(dir, es ? 'EMPIEZA AQUI.txt' : 'START HERE.txt'), TXT.start);
+  const zip = join(outRoot, ED.zip);
   if (existsSync(zip)) rmSync(zip);
-  execFileSync('python3', ['-c', 'import shutil,sys; shutil.make_archive(sys.argv[1], "zip", sys.argv[2], "Money-Toolkit")', zip.replace(/\.zip$/, ''), outRoot]);
+  execFileSync('python3', ['-c', 'import shutil,sys; shutil.make_archive(sys.argv[1], "zip", sys.argv[2], sys.argv[3])', zip.replace(/\.zip$/, ''), outRoot, ED.folder]);
   const total = sizes.reduce((t, s) => t + s.kb, 0);
-  console.log(`Money Toolkit: ${sizes.length} tools + index, ${total} KB of HTML, ${zip}`);
+  console.log(`${TXT.title}: ${sizes.length} tools + index, ${total} KB of HTML, ${zip}`);
 }

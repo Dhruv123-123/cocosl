@@ -63,5 +63,47 @@ export const SECTIONS = [
   ] },
 ];
 
-export const ITEMS = SECTIONS.flatMap((s) => s.items.map(([src, out, title, blurb]) => ({ section: s.id, src, out: `${out}.html`, title, blurb, lang: s.lang || 'en' })));
 export const sourceFile = (src) => (src.endsWith('/') ? `${src}index.html` : src);
+
+// Spanish edition for Dinero Simple: "Caja de herramientas de dinero". Every page is Spanish, so the whole
+// edition is on the native review list (NATIVE_REVIEW_ES.md) before it's sold.
+export const SECTIONS_ES = [
+  { id: 'calculadoras', es: 'Calculadoras de dinero', lang: 'es', items: [
+    ['money-calculators/es/debt-payoff/', 'pagar-deudas', 'Pagar deudas', 'Avalancha o bola de nieve: tu fecha sin deudas.'],
+    ['money-calculators/es/take-home-pay/', 'salario-neto', 'Salario neto por estado', 'Lo que te llega en cada cheque, con los impuestos de 2026.'],
+    ['money-calculators/es/tax-refund/', 'reembolso-de-impuestos', 'Reembolso de impuestos', 'Tu reembolso federal o lo que debes, con tu W-2.'],
+    ['money-calculators/es/emergency-fund/', 'fondo-de-emergencia', 'Fondo de emergencia', 'Cuánto necesitas y en cuánto tiempo lo juntas.'],
+    ['money-calculators/es/remittance-cost/', 'envios-de-dinero', 'Envíos de dinero', 'Comisión, tipo de cambio y cuánto llega de verdad.'],
+    ['money-calculators/es/compound-interest/', 'interes-compuesto', 'Interés compuesto', 'Cómo crece tu dinero con aportes cada mes.'],
+    ['money-calculators/es/savings-interest/', 'intereses-de-ahorro', 'Intereses de ahorro', 'Lo que gana tu ahorro con las tasas de hoy.'],
+    ['money-calculators/es/credit-card-minimum/', 'pago-minimo-de-tarjeta', 'Pago mínimo de tarjeta', 'Cuánto tardas y cuánto pagas con el mínimo.'],
+    ['money-calculators/es/roth-vs-traditional/', 'roth-o-tradicional', 'Roth o Tradicional', 'Cuál te deja más después de impuestos.'],
+    ['money-calculators/es/student-loans/', 'prestamos-estudiantiles', 'Préstamos estudiantiles', 'Los planes de pago con las reglas de 2026.'],
+    ['money-calculators/es/rent-vs-buy/', 'rentar-o-comprar', 'Rentar o comprar', 'El costo real de ser dueño y tu año de equilibrio.'],
+    ['money-calculators/es/401k-fees/', 'comisiones-401k', 'Comisiones del 401(k)', 'Lo que te cuestan las comisiones con los años.'],
+  ] },
+  { id: 'presupuesto', es: 'Presupuesto y pagos', lang: 'es', items: [
+    ['budget/plan-quincena.html', 'presupuesto-50-30-20', 'Presupuesto 50/30/20 y base cero', 'De tu cheque a tu presupuesto del mes.'],
+    ['budget/fondos-ahorro.html', 'fondos-de-ahorro', 'Fondos de ahorro', 'Guarda cada mes para los gastos que sabes que vienen.'],
+    ['budget/bill-calendar/es.html', 'calendario-de-pagos', 'Calendario de pagos', 'Todos tus recibos en un calendario, con recordatorios.'],
+    ['budget/tablero-dinero.html', 'tablero-de-dinero', 'Tablero de dinero', 'El CSV de tu banco en una hoja de cálculo.'],
+    ['budget/reto-ahorro.html', 'reto-de-ahorro', 'Reto de ahorro de 52 semanas', 'Ahorra $1,378 en un año.'],
+    ['budget/calendario-dinero.html', 'calendario-de-dinero', 'Calendario de dinero', 'Fechas de impuestos, Black Friday y más en tu calendario.'],
+  ] },
+  { id: 'estafas', es: 'Protégete de estafas', lang: 'es', items: [
+    ['scam-checker/es/', 'es-una-estafa', '¿Es una estafa?', 'Pega un mensaje sospechoso y ve las señales de alerta.'],
+    ['scam-checker/es/enlace/', 'revisar-enlace', 'Revisor de enlaces', 'Revisa un enlace antes de abrirlo.'],
+    ['scam-checker/es/estafas/', 'guias-de-estafas', 'Guías de estafas comunes', 'USPS, peajes, IRS, Amazon y más, explicados.'],
+    ['scam-checker/es/estafas/mensaje-peaje-sin-pagar/', 'estafa-peaje', 'Mensaje de peaje sin pagar', 'Cómo reconocerlo y qué hacer.'],
+    ['scam-checker/es/estafas/mensaje-usps-falso/', 'estafa-usps', 'Mensaje falso de USPS', 'Cómo reconocerlo y qué hacer.'],
+    ['scam-checker/es/estafas/estafa-irs/', 'estafa-irs', 'Estafa del IRS', 'Cómo reconocerla y qué hacer.'],
+  ] },
+];
+
+export const EDITIONS = {
+  en: { sections: SECTIONS, folder: 'Money-Toolkit', zip: 'Money-Toolkit.zip', lang: 'en' },
+  es: { sections: SECTIONS_ES, folder: 'Caja-de-Herramientas', zip: 'Caja-de-Herramientas-de-Dinero.zip', lang: 'es' },
+};
+export const itemsOf = (sections) => sections.flatMap((s) => s.items.map(([src, out, title, blurb]) => ({ section: s.id, src, out: `${out}.html`, title, blurb, lang: s.lang || 'en' })));
+export const ITEMS = itemsOf(SECTIONS);
+export const ITEMS_ES = itemsOf(SECTIONS_ES);

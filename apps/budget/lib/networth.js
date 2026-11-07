@@ -106,3 +106,41 @@ export function toCsv(sheet) {
   const rows = [['Type', 'Category', 'Name', 'Value'], ...sheet.items.map((i) => [i.side === 'asset' ? 'Own' : 'Owe', (i.side === 'asset' ? ASSET_KINDS : DEBT_KINDS)[i.kind], i.name, i.value])];
   return rows.map((r) => r.map(q).join(',')).join('\r\n') + '\r\n';
 }
+
+const NW_LABELS = {
+  en: { sheet: 'Net worth', title: 'Net worth', own: 'Own', owe: 'Owe', type: 'Type', category: 'Category', name: 'Name', value: 'Value', owned: 'Total owned', owed: 'Total owed', net: 'Net worth', history: 'Snapshots over time', date: 'Date', change: 'Change',
+    note: 'From the net worth tracker. Update values in column D; totals are formulas. Add a row under Snapshots each month.' },
+  es: { sheet: 'Patrimonio', title: 'Patrimonio neto', own: 'Tienes', owe: 'Debes', type: 'Tipo', category: 'Categoría', name: 'Nombre', value: 'Valor', owned: 'Total que tienes', owed: 'Total que debes', net: 'Patrimonio neto', history: 'Fotos en el tiempo', date: 'Fecha', change: 'Cambio',
+    note: 'Del registro de patrimonio. Cambia los valores en la columna D; los totales son fórmulas. Agrega una fila en Fotos cada mes.' },
+};
+
+/**
+ * A sheet spec for lib/xlsx.js: what you own and owe (with SUMIF totals), then snapshots with net worth
+ * and change as formulas. Used on its own (networth.html) and inside the money dashboard workbook.
+ */
+export function netWorthSheet(sheet, { lang = 'en' } = {}) {
+  const L = NW_LABELS[lang === 'es' ? 'es' : 'en'];
+  const rows = [[{ v: L.title, s: 'title' }], [{ v: L.note, s: 'note' }], []];
+  rows.push([L.type, L.category, L.name, L.value].map((v) => ({ v, s: 'head' })));
+  const first = rows.length + 1;
+  const items = [...sheet.items].sort((a, b) => (a.side === b.side ? 0 : a.side === 'asset' ? -1 : 1));
+  for (const i of items) rows.push([i.side === 'asset' ? L.own : L.owe, (i.side === 'asset' ? ASSET_KINDS : DEBT_KINDS)[i.kind] || i.kind, i.name, { v: i.value, s: 'money' }]);
+  // Totals cover the item rows only (inserting rows inside the range grows it), never the totals themselves.
+  const last = Math.max(first, rows.length);
+  const t = totals(sheet);
+  rows.push([]);
+  const ownedRow = rows.length + 1;
+  rows.push([{ v: L.owned, s: 'totalText' }, null, null, { f: `SUMIF($A$${first}:$A$${last},"${L.own}",$D$${first}:$D$${last})`, v: t.assets, s: 'total' }]);
+  rows.push([{ v: L.owed, s: 'totalText' }, null, null, { f: `SUMIF($A$${first}:$A$${last},"${L.owe}",$D$${first}:$D$${last})`, v: t.debts, s: 'total' }]);
+  rows.push([{ v: L.net, s: 'totalText' }, null, null, { f: `D${ownedRow}-D${ownedRow + 1}`, v: t.net, s: 'total' }]);
+  rows.push([]);
+  rows.push([{ v: L.history, s: 'bold' }]);
+  rows.push([L.date, L.owned, L.owed, L.net, L.change].map((v) => ({ v, s: 'head' })));
+  sheet.snapshots.forEach((s, k) => {
+    const r = rows.length + 1;
+    const row = [{ d: s.date }, { v: s.assets, s: 'money' }, { v: s.debts, s: 'money' }, { f: `B${r}-C${r}`, v: s.net, s: 'money' }];
+    if (k) row.push({ f: `D${r}-D${r - 1}`, v: cents(s.net - sheet.snapshots[k - 1].net), s: 'money' });
+    rows.push(row);
+  });
+  return { name: L.sheet, rows, cols: [14, 26, 30, 16, 14] };
+}

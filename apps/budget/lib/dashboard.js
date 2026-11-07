@@ -140,7 +140,7 @@ export const catName = (key, lang) => (CAT[key] ? CAT[key][lang === 'es' ? 'es' 
  * Sheet specs for lib/xlsx.js. The Summary's numbers are SUMIFS formulas over Transactions
  * (with the computed values cached), so the file stays a working template after download.
  */
-export function workbookSheets(dash, { lang = 'en', made = new Date().toISOString().slice(0, 10), budgets = {} } = {}) {
+export function workbookSheets(dash, { lang = 'en', made = new Date().toISOString().slice(0, 10), budgets = {}, extra = [] } = {}) {
   const L = labels(lang);
   const T = `'${L.transactions}'`; const C = `'${L.categories}'`;
   const n = dash.rows.length; const last = n + 2001; // room for rows pasted in later
@@ -200,5 +200,6 @@ export function workbookSheets(dash, { lang = 'en', made = new Date().toISOStrin
     lists: [{ ref: `D2:D${Math.max(2, n + 200)}`, source: `${C}!$A$2:$A$${CATEGORIES.length + 40}` }] };
   const categories = { name: L.categories, rows: [[L.category, L.type, L.budget].map((v) => ({ v, s: 'head' })), ...catRows], cols: [34, 26, 18], freeze: { rows: 1 } };
   const guide = { name: L.guide, rows: [[{ v: L.title, s: 'title' }], [{ v: L.tHead, s: 'note' }], [], ...L.steps.map((t, i) => [`${i + 1}. ${t}`])], cols: [120] };
-  return [summary, transactions, categories, guide];
+  // extra: more finished sheets, such as net worth from the net worth tracker, placed before How to use.
+  return [summary, transactions, categories, ...extra, guide];
 }

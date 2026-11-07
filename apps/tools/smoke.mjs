@@ -247,6 +247,16 @@ const checks = [
     if ((await page.locator('#funds .fund').count()) !== 2) throw new Error('not saved');
   }],
   ['/budget/fondos-ahorro.html', '#ideas .chip'],
+  ['/budget/money-calendar.html?brand=1099', '#preview li', async (page) => {
+    if (!/1099 Money/.test(await page.textContent('#brand'))) throw new Error('brand');
+    if (!/estimated tax/i.test(await page.textContent('#preview'))) throw new Error('freelancer dates');
+    const [dl] = await Promise.all([page.waitForEvent('download'), page.click('#download')]);
+    const ics = await (await import('node:fs/promises')).readFile(await dl.path(), 'utf8');
+    if (!/BEGIN:VCALENDAR/.test(ics) || !/X-WR-CALNAME:1099 Money money calendar/.test(ics)) throw new Error('ics');
+  }],
+  ['/budget/calendario-dinero.html', '#preview li', async (page) => {
+    if (!/Dinero Simple/.test(await page.textContent('#brand'))) throw new Error('es brand');
+  }],
   ['/budget/plan-quincena.html', '#split li', async (page) => {
     if (!/Necesidades/.test(await page.textContent('#split'))) throw new Error('es split');
   }],

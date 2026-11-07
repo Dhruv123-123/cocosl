@@ -5,6 +5,7 @@ import * as N from './lib/networth.js';
 import { buildPdf } from './lib/pdf.js';
 import { today as todayIs, prettyDay } from './lib/dates.js';
 import { $, esc, money, store, download } from './page.js';
+import { buildXlsx } from './lib/xlsx.js';
 
 const KEY = 'mms-networth-v1';
 const CKEY = 'mms-networth-costs';
@@ -97,6 +98,7 @@ $('#pdf').addEventListener('click', () => {
   if (!sheet.items.length) { $('#data-msg').textContent = 'Add at least one thing you own or owe first.'; return; }
   download(`net-worth-${today}.pdf`, buildPdf(pdfLines(), { title: `Net worth snapshot ${today}` }), 'application/pdf');
 });
+$('#xlsx').addEventListener('click', () => download(`net-worth-${today}.xlsx`, buildXlsx([N.netWorthSheet(sheet)], { title: 'Net worth' }), 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'));
 $('#csv').addEventListener('click', () => download(`net-worth-${today}.csv`, N.toCsv(sheet), 'text/csv'));
 $('#backup').addEventListener('click', () => download(`net-worth-backup-${today}.json`, JSON.stringify(sheet, null, 2), 'application/json'));
 $('#restore').addEventListener('change', async (e) => {

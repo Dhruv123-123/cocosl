@@ -33,6 +33,7 @@ Do the **first three** first: they are the most-used tools and the ones Dinero S
 | `budget/bill-calendar/es.html` (calendario de pagos) | `es.html`, `budget/bill-calendar/app.js` (`es` text), `manifest-es.webmanifest` | needs review |
 | `budget/plan-quincena.html` (de tu cheque a tu presupuesto) | `plan-quincena.html`, `budget/paycheck-plan.js` (`es` text) | needs review |
 | `budget/fondos-ahorro.html` (fondos de ahorro) | `fondos-ahorro.html`, `budget/sinking-funds.js` (`es` text), `budget/lib/sinking.js` (`PRESETS.es`) | needs review |
+| `budget/calendario-dinero.html` (calendario de dinero) | `calendario-dinero.html`, `budget/money-calendar.js` (`es` names), `budget/lib/moneycal.js` (the `es` titles and descriptions) | needs review |
 | `budget/tablero-dinero.html` (tablero de dinero) | `tablero-dinero.html`, `budget/money-dashboard.js`, `budget/lib/dashboard.js` (category names, sheet text) | needs review |
 | `money-calculators/es/index.html` | `money-calculators/pages-es.mjs` | needs review |
 | `money-calculators/es/take-home-pay/` | `pages-es.mjs`, `lib/text-extra.js` | needs review |
@@ -63,6 +64,9 @@ Do the **first three** first: they are the most-used tools and the ones Dinero S
 | `scam-checker/es/estafas/mensaje-peaje-sin-pagar/` | `scam-checker/scams-es.mjs` | needs review |
 | `scam-checker/es/estafas/mensaje-usps-falso/` | `scam-checker/scams-es.mjs` | needs review |
 
-Also Spanish, outside the site: the Tablero de dinero Pro spreadsheet and its Empieza aquí PDF
+Also Spanish, outside the site: the **Caja de herramientas de dinero** offline edition (its index page and
+"EMPIEZA AQUI.txt" in `apps/tools/build-toolkit.mjs`, item names in `apps/tools/toolkit.mjs` `SECTIONS_ES`, listing in
+`launch/money-toolkit/LISTING_ES.md`; the tool pages are the ones listed above), the Dinero Simple money calendar
+file (`budget/lib/moneycal.js`), the Tablero de dinero Pro spreadsheet and its Empieza aquí PDF
 (`launch/dashboard-pro/text.py`, `listing.py`), and the Scam Decoded extension's Spanish messages
 (`scam-extension/_locales/es/`).

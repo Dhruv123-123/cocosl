@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { SECTIONS, ITEMS, sourceFile } from '../../tools/toolkit.mjs';
+import { SECTIONS, ITEMS, ITEMS_ES, EDITIONS, sourceFile } from '../../tools/toolkit.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 
@@ -26,4 +26,17 @@ test('Spanish items are Spanish pages, English items English', () => {
 
 test('every section has tools', () => {
   for (const s of SECTIONS) assert.ok(s.items.length, s.id);
+});
+
+test('the Spanish edition is all Spanish pages, each on the native review list', () => {
+  assert.ok(ITEMS_ES.length >= 20);
+  assert.equal(new Set(ITEMS_ES.map((i) => i.out)).size, ITEMS_ES.length);
+  const review = readFileSync(join(root, 'NATIVE_REVIEW_ES.md'), 'utf8');
+  for (const i of ITEMS_ES) {
+    const file = sourceFile(i.src);
+    assert.ok(existsSync(join(root, file)), file);
+    assert.match(readFileSync(join(root, file), 'utf8'), /<html lang="es"/, file);
+    assert.ok(review.includes(`\`${file}\``) || review.includes(`\`${i.src}\``), `${file} on NATIVE_REVIEW_ES.md`);
+  }
+  assert.equal(EDITIONS.es.lang, 'es');
 });
