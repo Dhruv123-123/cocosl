@@ -63,7 +63,7 @@ every brand's site from this one builder, with per-brand Netlify, domain and Pla
 
 ## Everyday commands
 
-All 81 commands, grouped, are in [docs/COMMANDS.md](docs/COMMANDS.md) (generated from the CLI, so it's always
+All 88 commands, grouped, are in [docs/COMMANDS.md](docs/COMMANDS.md) (generated from the CLI, so it's always
 current). The ones you'll use most:
 
 ```bash
