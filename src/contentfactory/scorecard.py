@@ -212,24 +212,136 @@ def to_text(c: dict) -> str:
     return "\n".join(lines) + "\n"
 
 
+def history_dir(factory) -> Path:
+    return Path(factory.settings.home) / "data" / "scorecard-history"
+
+
+def save_history(factory, c: dict) -> Path:
+    """One JSON per brand per week, so the gate can look back (written by --save and --gate)."""
+    import json
+    d = history_dir(factory)
+    d.mkdir(parents=True, exist_ok=True)
+    p = d / f"{c['monday']}-{c['brand']}.json"
+    p.write_text(json.dumps({"brand": c["brand"], "monday": str(c["monday"]), "day": c["day"],
+                             "warning": c["v"].get("warnings_any_warning"),
+                             "open_change": [f.rule for f in c["flags"] if f.severity in ("stop", "change") and f.status == "flag"]},
+                            indent=2))
+    return p
+
+
+def _history(factory, slug: str, monday: date, n: int) -> list[dict | None]:
+    import json
+    out = []
+    for k in range(n):
+        p = history_dir(factory) / f"{monday - timedelta(weeks=k)}-{slug}.json"
+        out.append(json.loads(p.read_text()) if p.is_file() else None)
+    return out
+
+
+def gate(factory, brands: list[str], day: date | None = None) -> list[dict]:
+    """The two-brand plan's five gates for adding brand 3 (checked from week 8, then every two weeks)."""
+    from .timelog import streak_ok
+    day = day or date.today()
+    monday = day - timedelta(days=day.weekday())
+    cards = [collect(factory, slug, day) for slug in brands]
+    for c in cards:
+        save_history(factory, c)
+    out = []
+    n_day = cards[0]["day"] if cards else None
+    ok, why = streak_ok(factory, 4, day)
+    out.append({"gate": "time: the brands under an hour a day for 4 straight weeks", "ok": ok, "detail": why})
+    warn_bad = []
+    for slug in brands:
+        hist = _history(factory, slug, monday, 4)
+        missing = sum(1 for h in hist if h is None or h.get("warning") is None)
+        if any(h and h.get("warning") for h in hist) or missing:
+            warn_bad.append(f"{slug}: " + ("a warning was logged" if any(h and h.get("warning") for h in hist)
+                                            else f"{missing} of 4 weeks not recorded (scorecard-manual.yaml warnings)"))
+    out.append({"gate": "clean accounts: no warning or strike on either brand for 4 weeks", "ok": not warn_bad,
+                "detail": "; ".join(warn_bad) or "no warnings in the last 4 weekly scorecards"})
+    open_bad = []
+    for slug in brands:
+        hist = _history(factory, slug, monday, 2)
+        if any(h is None for h in hist):
+            open_bad.append(f"{slug}: last week's scorecard not saved (`factory scorecard --save` each Monday)")
+        elif any(h["open_change"] for h in hist):
+            open_bad.append(f"{slug}: " + "; ".join(sorted({r for h in hist for r in h["open_change"]}))[:160])
+    out.append({"gate": "thresholds: no open change rule on either brand for 2 weeks", "ok": not open_bad,
+                "detail": "; ".join(open_bad) or "clean two weeks running"})
+    from datetime import datetime, timezone
+    horizon = (datetime.now(timezone.utc) + timedelta(days=14)).isoformat()
+    short = []
+    for slug in brands:
+        last = factory.db.scalar("""SELECT MAX(p.scheduled_at) FROM publications p JOIN posts s ON s.id = p.post_id
+                                    WHERE s.brand = ? AND p.status IN ('queued', 'manual')""", [slug])
+        if not last or last < horizon:
+            short.append(f"{slug}: queue ends {str(last)[:10] if last else 'now'}")
+    out.append({"gate": "a queue: 2+ weeks of approved posts scheduled for both brands", "ok": not short,
+                "detail": "; ".join(short) or "both queues run 14+ days"})
+    from .funnel import store
+    store.ensure_schema(factory.db)
+    flat = []
+    for slug in brands:
+        for k in range(1, 5):
+            start = monday - timedelta(weeks=k)
+            n = factory.db.scalar("SELECT COUNT(*) FROM subscribers WHERE brand = ? AND status = 'confirmed' "
+                                  "AND confirmed_at >= ? AND confirmed_at < ?",
+                                  [slug, start.isoformat(), (start + timedelta(days=7)).isoformat()])
+            if not n:
+                flat.append(f"{slug}: no new subscribers the week of {start}")
+                break
+    out.append({"gate": "owned audience: the email list grew every week on both brands", "ok": not flat,
+                "detail": "; ".join(flat) or "grew each of the last 4 weeks"})
+    early = n_day is not None and n_day < 56
+    for g in out:
+        g["early"] = early
+    return out
+
+
+def gate_text(gates: list[dict], brands: list[str], day_n) -> str:
+    out = [f"Brand-3 gates for {', '.join(brands)} (day {day_n if day_n is not None else '?'} since launch)"]
+    if day_n is None or day_n < 56:
+        out.append("Too early to add a brand: the plan checks at week 8 (day 56), then every two weeks.")
+    out.append("")
+    for g in gates:
+        out.append(f"[{'PASS' if g['ok'] else 'FAIL'}] {g['gate']}\n       {g['detail']}")
+    passed = all(g["ok"] for g in gates) and not gates[0]["early"]
+    out += ["", "All five pass: brand 3 is 1099 Money (GO_LIVE Stage 9d). Re-check its 2027 figures on irs.gov first."
+            if passed else "Not yet. Fix the failing gate and check again in two weeks; don't add a brand to get momentum."]
+    return "\n".join(out) + "\n"
+
+
 def register(sub, factory_fn) -> None:
     s = sub.add_parser("scorecard", help="GO_LIVE R8 weekly scorecard filled from your imports, with stop/change/watch flags")
     s.add_argument("--brand", default="")
     s.add_argument("--date", type=date.fromisoformat, default=None, help="score as of this day (default today)")
     s.add_argument("--save", action="store_true", help="also write output/scorecards/week-<monday>/<brand>.md")
     s.add_argument("--manual-template", action="store_true", help="write data/scorecard-manual.yaml to fill by hand")
+    s.add_argument("--gate", action="store_true", help="the two-brand plan's five gates for adding brand 3 (week 8 on)")
 
     def cmd(a):
         f = factory_fn(a)
         if a.manual_template:
             print(template(f))
             return
-        cards = [collect(f, slug, a.date) for slug in f.brands() if not a.brand or slug == a.brand]
+        from .launchmode import active_brands
+        act = active_brands(f)
+        slugs = [s for s in f.brands() if (s == a.brand if a.brand else act is None or s in act)]
+        if a.gate:
+            brands = [a.brand] if a.brand else (act or slugs)
+            gates = gate(f, brands, a.date)
+            day_n = collect(f, brands[0], a.date)["day"] if brands else None
+            print(gate_text(gates, brands, day_n), end="")
+            if not all(g["ok"] for g in gates):
+                raise SystemExit(1)
+            return
+        cards = [collect(f, slug, a.date) for slug in slugs]
         print("\n".join("```\n" + to_text(c) + "```" if a.save else to_text(c) for c in cards))
         if a.save and cards:
             d = f.settings.output_dir / "scorecards" / f"week-{cards[0]['monday']}"
             d.mkdir(parents=True, exist_ok=True)
             for c in cards:
+                save_history(f, c)
                 (d / f"{c['brand']}.md").write_text(f"# Scorecard: {c['brand']}\n\n```\n{to_text(c)}```\n")
             print(d)
         if any(fl.severity == "stop" and fl.status == "flag" for c in cards for fl in c["flags"]):
