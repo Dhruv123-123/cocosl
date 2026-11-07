@@ -205,7 +205,11 @@ class BrandProfile(BaseModel):
     affiliates: list[AffiliateOffer] = Field(default_factory=list)
     products: list[dict] = Field(default_factory=list)  # {name, url, price}
     # Compliance switches. The defaults are the safe ones; flipping them is on you.
-    ai_disclosure: str = "Made with AI tools; written and fact-checked by a human."
+    ai_disclosure: str = "Visuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person."
+    # Who writes the scripts. "ai_assisted" (the default: writer.py drafts them, you fact-check) or
+    # "person" (you write them yourself). launch-check turns red if ai_disclosure claims a person wrote
+    # scripts while this says ai_assisted: understating AI use is what platforms and the FTC call deceptive.
+    scripts_by: Literal["ai_assisted", "person"] = "ai_assisted"
     realistic_synthetic_media: bool = False  # True if visuals/voices could pass as real people/events
     require_human_review: bool = True
     own_voice: bool = False  # videos wait for the owner's recorded narration (`factory voice`) before scheduling

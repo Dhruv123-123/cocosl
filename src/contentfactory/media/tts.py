@@ -91,7 +91,7 @@ def synthesize_segments(settings: Settings, brand: BrandProfile, texts: list[str
             if any(words):
                 res.timing = name
             elif name != "silent":
-                align_with_whisper(res)
+                align_with_whisper(res, brand.language)
             return res
         except (ProviderError, MediaError, httpx.HTTPError) as e:
             if wanted != "auto":
@@ -157,9 +157,15 @@ def trim_silence(path: Path, pad: float = 0.08) -> float:
         return 0.0
 
 
-def align_with_whisper(res: TTSResult) -> None:
+def whisper_model_name(language: str = "en") -> str:
+    """WHISPER_MODEL wins; otherwise base.en for English and the multilingual base for anything else
+    (base.en can't hear Spanish, so its timings would be wrong)."""
+    return os.environ.get("WHISPER_MODEL") or ("base.en" if (language or "en").lower().startswith("en") else "base")
+
+
+def align_with_whisper(res: TTSResult, language: str = "en") -> None:
     """Optional forced timing: FACTORY_ALIGN=whisper with faster-whisper installed transcribes each
-    segment with word timestamps. Silently does nothing otherwise."""
+    segment with word timestamps, in the brand's language. Silently does nothing otherwise."""
     if os.environ.get("FACTORY_ALIGN", "").lower() != "whisper":
         return
     try:
@@ -168,10 +174,15 @@ def align_with_whisper(res: TTSResult) -> None:
         res.notes.append("FACTORY_ALIGN=whisper but faster-whisper isn't installed; caption timing estimated")
         return
     try:
-        model = WhisperModel(os.environ.get("WHISPER_MODEL", "base.en"), device="cpu", compute_type="int8")
+        name = whisper_model_name(language)
+        lang = (language or "en").split("-")[0].lower()
+        if name.endswith(".en") and lang != "en":
+            res.notes.append(f"WHISPER_MODEL={name} is English-only but the brand is {lang}; caption timing estimated")
+            return
+        model = WhisperModel(name, device="cpu", compute_type="int8")
         out = []
         for path in res.paths:
-            segs, _ = model.transcribe(str(path), word_timestamps=True, vad_filter=False)
+            segs, _ = model.transcribe(str(path), word_timestamps=True, vad_filter=False, language=lang)
             out.append([(w.word.strip(), float(w.start), float(w.end)) for sg in segs for w in (sg.words or [])
                         if w.word.strip()] or None)
         res.words, res.timing = out, "whisper"
@@ -615,5 +626,5 @@ def human_voice(settings: Settings, brand: BrandProfile, post_id, texts: list[st
         trim_silence(p)
     res = TTSResult("human", "own recording", paths, [probe(p)["duration"] for p in paths], notes,
                     [None] * len(paths))
-    align_with_whisper(res)
+    align_with_whisper(res, brand.language)
     return res

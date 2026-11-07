@@ -51,6 +51,10 @@ def cmd_init(args):
         env_example = examples / "env.example"
     if env_example.exists() and not (home / ".env").exists():
         shutil.copy(env_example, home / ".env")
+        try:
+            (home / ".env").chmod(0o600)  # it will hold API keys and tokens: owner only
+        except OSError:
+            pass
     s = Settings.load(home)
     from .db import DB
     DB(s.db_path)
@@ -272,7 +276,11 @@ def cmd_import(args):
             print(f"post #{existing['id']} [{existing['status']}] {title}: already imported, skipped")
             continue
         else:
-            pid = f.import_script(args.brand, item["script"], item["format"], item.get("pillar", ""),
+            script = dict(item["script"])
+            for key in ("original_element", "related_video", "playlist"):  # packs sometimes keep these on the item
+                if item.get(key) and not script.get(key):
+                    script[key] = item[key]
+            pid = f.import_script(args.brand, script, item["format"], item.get("pillar", ""),
                                   item.get("idea_angle", ""), render=not args.no_render)
         post = f.db.get("posts", pid)
         print(f"post #{pid} [{post['format']}/{post['status']}] {post['title']}")
@@ -535,7 +543,7 @@ def _extend(sub) -> None:
                 "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup",
                 "contentfactory.publish.preflight", "contentfactory.cleanup",
                 "contentfactory.planner", "contentfactory.launch_check", "contentfactory.stats",
-                "contentfactory.scaffold", "contentfactory.manual", "contentfactory.numbercheck", "contentfactory.ytplan", "contentfactory.triage", "contentfactory.challenge", "contentfactory.whitelabel"):
+                "contentfactory.scaffold", "contentfactory.manual", "contentfactory.numbercheck", "contentfactory.ytplan", "contentfactory.triage", "contentfactory.challenge", "contentfactory.whitelabel", "contentfactory.originality", "contentfactory.newsletter_export", "contentfactory.batch_record", "contentfactory.routine", "contentfactory.export_week"):
         try:
             module = __import__(mod, fromlist=["register"])
         except ImportError:

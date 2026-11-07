@@ -276,3 +276,19 @@ def test_long_video_needs_original_element():
     long["script"]["segments"] = [dict(seg, footage="footage/irs.mp4"), seg]
     assert check_original_element(long).level == "ok"
     assert check_original_element({"format": "short", "script": {}}) is None
+
+
+def test_whisper_model_follows_brand_language(monkeypatch):
+    from contentfactory.media.tts import TTSResult, align_with_whisper, whisper_model_name
+    monkeypatch.delenv("WHISPER_MODEL", raising=False)
+    assert whisper_model_name("en") == "base.en" and whisper_model_name("es") == "base"
+    monkeypatch.setenv("WHISPER_MODEL", "small")
+    assert whisper_model_name("es") == "small"
+    import sys
+    import types
+    monkeypatch.setitem(sys.modules, "faster_whisper", types.SimpleNamespace(WhisperModel=object))
+    monkeypatch.setenv("FACTORY_ALIGN", "whisper")
+    monkeypatch.setenv("WHISPER_MODEL", "base.en")
+    res = TTSResult("x", "x", [], [], [], [])
+    align_with_whisper(res, "es")
+    assert "English-only" in res.notes[0]
