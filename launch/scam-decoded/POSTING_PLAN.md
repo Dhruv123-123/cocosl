@@ -6,6 +6,9 @@ All times America/New_York (brand `post_times`: 12:00 and 19:30). Source: `conte
 Why two cuts: research/03-hooks-and-formats.md found TikToks over 60s break out about twice as often, while Reels are flat
 across lengths. Each item in `content.json` names its `platforms`, so `factory schedule` never double-posts.
 
+Titles follow scouting's keyword sheet: the scam's name comes first (old titles are in `launch-renames.json`).
+For launch order, bios and pinned posts, use `LAUNCH_WEEK.md`; this table is the topic pairing.
+
 Rules this plan follows:
 - Max 2 posts per platform per day. Short and its TikTok cut go out the same day (same topic, different cut).
 - Every hook opens with a number (research: number openers 6.8% breakout on TikTok vs ~5% baseline).
@@ -18,17 +21,17 @@ Rules this plan follows:
 | Day | 12:00 Reels + Shorts | 12:00 TikTok | 19:30 Instagram carousel |
 |---|---|---|---|
 | Day 1 · Sat Nov 7 | #1 $0 and 10 minutes: freeze your credit | #15 Credit freeze, full walkthrough · **Aura** | #29 Freeze your credit in 10 minutes · **Aura** |
-| Day 2 · Sun Nov 8 | #3 1 family safe word beats an AI voice clone · **kit** | #17 The AI voice clone call | #35 Scam-proof your family in 15 minutes · **kit** |
-| Day 3 · Mon Nov 9 | #2 That $3.95 'unpaid toll' text | #16 2 versions of the toll text | #28 5 red flags in one scam text |
-| Day 4 · Tue Nov 10 | #4 0 real banks ask you to move money | #18 The fake bank fraud call | |
-| Day 5 · Wed Nov 11 | #12 $110M+ lost at Bitcoin ATMs | #26 The Bitcoin ATM scam, call to kiosk | #30 7 scams aimed at your parents · **kit** |
-| Day 6 · Thu Nov 12 | #7 Read back a 6-digit code… | #21 'Read me the code' · **1Password** | |
-| Day 7 · Fri Nov 13 | #0 3 ways to pay only scammers insist on | #14 Gift card, wire or crypto? | #33 6 questions before you send money |
-| Day 8 · Sat Nov 14 | #9 2 minutes to lock your number | #23 SIM swaps and port-outs | #32 5 locks every account should have · **1Password + NordVPN** |
-| Day 9 · Sun Nov 15 | #6 1 question kills the fake delivery text | #20 Fake delivery texts | |
-| Day 10 · Mon Nov 16 | #10 0 real jobs make you pay to get paid | #24 The task job scam | #34 The 'wrong number' text… |
-| Day 11 · Tue Nov 17 | #8 The $500 overpayment check | #22 Fake checks: 2 versions | |
-| Day 12 · Wed Nov 18 | #11 1 pop-up, 1 number, 0 real companies | #25 Fake virus pop-ups | #31 Scammed? The first 60 minutes · **Aura** |
+| Day 2 · Sun Nov 8 | #3 AI voice clone scam: 1 family safe word stops it · **kit** | #17 The AI voice clone call | #35 Scam-proof your family in 15 minutes · **kit** |
+| Day 3 · Mon Nov 9 | #2 That $3.95 'unpaid toll' text | #16 2 versions of the toll text | #28 How to spot a scam text: 5 red flags |
+| Day 4 · Tue Nov 10 | #4 Bank impersonation scam: the 'safe account' is theirs | #18 The fake bank fraud call | |
+| Day 5 · Wed Nov 11 | #12 $110M+ lost at Bitcoin ATMs | #26 The Bitcoin ATM scam, call to kiosk | #30 7 scams targeting seniors right now · **kit** |
+| Day 6 · Thu Nov 12 | #7 Verification code scam: never read back a 6-digit code | #21 'Read me the code' · **1Password** | |
+| Day 7 · Fri Nov 13 | #0 Gift card scam: 3 ways only scammers ask to be paid | #14 Gift card, wire or crypto? | #33 Is this a scam? 6 questions before you send money |
+| Day 8 · Sat Nov 14 | #9 2 minutes to lock your number | #23 SIM swaps and port-outs | #32 How to protect your accounts: 5 locks to turn on · **1Password + NordVPN** |
+| Day 9 · Sun Nov 15 | #6 Fake USPS delivery text: 1 question kills it | #20 Fake delivery texts | |
+| Day 10 · Mon Nov 16 | #10 Task job scam: 0 real jobs make you pay to get paid | #24 The task job scam | #34 The 'wrong number' text… |
+| Day 11 · Tue Nov 17 | #8 Fake check overpayment scam: the $500 that bounces | #22 Fake checks: 2 versions | |
+| Day 12 · Wed Nov 18 | #11 Fake virus pop-up? The tech support scam explained | #25 Fake virus pop-ups | #31 Scammed? The first 60 minutes · **Aura** |
 | Day 13 · Thu Nov 19 | #5 7726: forward scam texts here | #19 Report scam texts the right way | |
 | Day 14 · Fri Nov 20 | #13 2 checks before you scan a parking QR | #27 Fake QR codes: 3 places | |
 
