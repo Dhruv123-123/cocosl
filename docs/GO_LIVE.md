@@ -273,7 +273,7 @@ the Monday report (0.5 h) and Saturday recording (1–1.5 h).
 
 ### 9c · Dinero Simple, Spanish (PR #11, ≈ 3 h plus a reviewer)
 - [ ] **Find a fluent Spanish reviewer first.** Nothing goes live until they've read it: posts are blocked
-      until `factory review-language <id> --by NAME`, and the site, emails and products are listed in
+      until `factory review-gate pass <id> native_review --by NAME`, and the site, emails and products are listed in
       `launch/dinero-simple/REVIEW_CHECKLIST.md` and `REVIEW_CHECKLIST_MONTH_1.md`. Their time, not yours.
 - [ ] Accounts and brand kit from `brands/dinero-simple.yaml`. 30 min
 - [ ] Gumroad: El Presupuesto de 20 Minutos $12, El Kit para Recortar Gastos $5, Tu Fecha Sin Deudas $17. 30 min
@@ -716,7 +716,7 @@ Do this once per brand, the morning its first post goes out. ≈ 45 minutes the 
 | Tiny Histories | long *Why your keyboard says QWERTY*, 17:00 ET | open the four source links in `VERIFY_BEFORE_POSTING.md`; contested stories stay worded as uncertain; no product link yet |
 | Scam Decoded | channel trailer + long *How to protect your parents from scams*, Day 1 (default Mon Nov 30) 10:00 ET | check `@scamdecoded` handles are yours; no real phone numbers or links on any slide; captions say a credit freeze is free; the $9 kit is live before the Day 2 kit post; Aura/1Password/NordVPN links only once approved |
 | 1099 Money | short *Your first 1099 has no tax taken out*, **Mon Nov 16** 12:30 ET | confirm the 2026 figures and 2027 dates against irs.gov and ssa.gov; the $15 Quarterly Tax Tracker is live before the Day 1 product carousel |
-| Dinero Simple | short *El truco de las dos cuentas que evita sobregiros*, 12:30 ET | **the fluent reviewer has signed off** (`factory review-language <id> --by NAME` on every post); `RECORTE5` and `FECHA5` exist; Spanish voice, never the English one |
+| Dinero Simple | short *El truco de las dos cuentas que evita sobregiros*, 12:30 ET | **the fluent reviewer has signed off** (`factory review-gate pass <id> native_review --by NAME` on every post); `RECORTE5` and `FECHA5` exist; Spanish voice, never the English one |
 | Ad studio | Post 1 *Before → after*, **Mon Nov 16** | studio site and order page are live; the caption says the sample is a spec ad for a made-up shop; first cold emails went out Nov 10, so the account is live when leads look it up |
 
 ### R8 · Week 1 numbers: scorecard template
