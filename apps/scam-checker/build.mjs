@@ -137,7 +137,7 @@ ${signup}`;
 const write = (rel, text) => { const f = join(root, rel); mkdirSync(dirname(f), { recursive: true }); writeFileSync(f, text); };
 write('scams/index.html', index());
 for (const s of scams) write(`scams/${s.slug}/index.html`, guide(s));
-const urls = ['', 'scams/', ...scams.map((s) => `scams/${s.slug}/`)];
+const urls = ['', 'es/', 'scams/', ...scams.map((s) => `scams/${s.slug}/`)];
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${base}/${u}</loc></url>`).join('\n')}\n</urlset>\n`);
 write('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${base}/sitemap.xml\n`);
 console.log(`Built ${scams.length + 1} scam guide pages`);

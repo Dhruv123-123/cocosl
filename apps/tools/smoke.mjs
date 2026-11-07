@@ -31,6 +31,7 @@ const checks = [
     await page.fill('#message', 'USPS: Your package is on hold due to an unpaid fee of $1.99. Pay now at https://usps-redelivery.top/pay or it will be returned.');
     await page.click('#check');
   }],
+  ['/scam-checker/es/', '#result', async (page) => { await page.click('[data-example=toll]'); }],
   ['/scam-checker/scams/', '.tiles'],
   ['/scam-checker/scams/toll-text-scam/', '#result', async (page) => {
     await page.fill('#guide-msg', 'URGENT: unpaid toll of $4.15, pay at ezpass-help.top now or face a late fee');

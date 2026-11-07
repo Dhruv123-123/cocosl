@@ -98,3 +98,29 @@ test('score is bounded and empty input is safe', () => {
   const r = analyzeMessage('URGENT gift card bitcoin wire transfer anydesk arrest warrant you won the lottery verify your account password ssn guaranteed returns http://1.2.3.4');
   assert.ok(r.score <= 100);
 });
+
+test('Spanish versions of common scams are caught', () => {
+  const cases = [
+    'USPS: Su paquete está retenido por dirección incompleta. Pague la tarifa de $1.99 en las próximas 24 horas: https://usps-entrega.top/pago',
+    'Tiene un saldo de peaje pendiente de $6.99. Para evitar un cargo por mora, pague ahora: ezpass-pagos.vip',
+    'Hola, soy reclutadora. Trabajo desde casa, gane $300 al día dando me gusta a videos. Escríbame por WhatsApp.',
+    'Administración del Seguro Social: su número fue suspendido. Llame inmediatamente o habrá una orden de arresto.',
+    'Le envié un código a su teléfono para verificar que es real, ¿me puede enviar el código?',
+  ];
+  for (const c of cases) assert.equal(analyzeMessage(c).level, 'high', c);
+  assert.equal(analyzeMessage('Su código de verificación es 123456. No lo comparta con nadie.').level, 'low');
+  assert.equal(analyzeMessage('¿Nos vemos el sábado para la comida de mamá?').level, 'low');
+});
+
+test('every rule, link issue, step and category has Spanish text', async () => {
+  const { ES } = await import('../lib/i18n.js');
+  const { STEPS, CATEGORIES, analyzeMessage: run } = await import('../lib/scan.js');
+  for (const id of Object.keys(STEPS)) assert.ok(ES.steps[id], `step ${id}`);
+  for (const [id] of CATEGORIES) assert.ok(ES.categories[id], `category ${id}`);
+  // Trigger every rule and link check, then make sure each has a translation.
+  const kitchenSink = 'URGENT gift card bitcoin zelle anydesk virus arrest you won package on hold fee unpaid toll refund earn $300/day guaranteed returns hi is this Sam? wrong number reply Y to activate the link whatsapp an agent will call you your SSN is suspended dear customer verify your account do not tell your bank stuck at customs need money send me the code password IRS $5 http://1.2.3.4 https://xn--pypal-4ve.com https://bit.ly/x http://user@paypa1-secure-login.a.b.c.top';
+  const r = run(kitchenSink, { sender: 'PayPal <x@paypal-help.net>' });
+  for (const s of r.signals) assert.ok(ES.signals[s.id], `signal ${s.id}`);
+  for (const l of r.links) for (const i of l.issues) assert.ok(ES.links[i.code], `link ${i.code}`);
+  for (const i of r.senderIssues) assert.ok(ES.links[i.code], `sender ${i.code}`);
+});

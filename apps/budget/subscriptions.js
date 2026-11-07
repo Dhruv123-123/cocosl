@@ -5,6 +5,7 @@ import { findRecurring } from './lib/recurring.js';
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const money = (n) => (Number(n) || 0).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+const live = (u) => typeof u === 'string' && /^https:\/\//.test(u) && !/REPLACE_ME/i.test(u);
 const today = new Date().toISOString().slice(0, 10);
 
 function sampleCsv() {
@@ -49,7 +50,8 @@ function render(csvText, label) {
     <tbody>${active.map(row).join('')}</tbody></table>
     ${stale.length ? `<h3>Probably already stopped</h3><table class="plan subs"><tbody>${stale.map(row).join('')}</tbody></table>` : ''}
     <p class="tiny">We look for charges from the same place at a regular interval with a similar amount. Bills like rent or utilities may show up too.</p>
-    <div class="offer-box"><h3>Keep it from creeping back</h3><p>The free <a href="./">20-Minute Budget app</a> gives every dollar a job each month. Pro imports this same CSV and sorts it into categories automatically.</p><a class="btn small" href="./">Open the budget app</a></div>`;
+    <div class="offer-box"><h3>Keep it from creeping back</h3><p>The free <a href="./">20-Minute Budget app</a> gives every dollar a job each month. Pro imports this same CSV and sorts it into categories automatically.</p><a class="btn small" href="./">Open the budget app</a></div>
+    ${live(config.billCutKit.url) ? `<div class="offer-box"><h3>${esc(config.billCutKit.name)} (${esc(config.billCutKit.price)})</h3><p>${esc(config.billCutKit.pitch)}</p><a class="btn small" href="${esc(config.billCutKit.url)}">Get the kit</a></div>` : ''}`;
   $('#results').hidden = false;
   $('#results').addEventListener('change', () => {
     const total = [...document.querySelectorAll('[data-yearly]:checked')].reduce((s, c) => s + Number(c.dataset.yearly), 0);

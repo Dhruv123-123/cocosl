@@ -20,7 +20,7 @@ export default {
   // The paid product each calculator can point to (Gumroad, Stripe Payment Link, Lemon Squeezy...).
   product: {
     name: 'The 20-Minute Budget',
-    price: '$19',
+    price: '$12',
     url: 'https://REPLACE_ME.gumroad.com/l/the-20-minute-budget',
     pitch: 'The spreadsheet and guide behind our budgeting videos. Set it up once, check it in 20 minutes a month.',
   },

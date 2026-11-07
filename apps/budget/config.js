@@ -18,6 +18,13 @@ export default {
     emailField: 'email',
     thanksUrl: 'https://moneymadesimple.netlify.app/free/thanks/',
   },
+  // Upsell on the subscription finder (from the product ladder in launch/products/).
+  billCutKit: {
+    name: 'The Bill Cut Kit',
+    price: '$5',
+    url: 'https://REPLACE_ME.gumroad.com/l/bill-cut-kit',
+    pitch: 'Scripts and a checklist for calling your phone, internet and insurance providers to get a lower rate.',
+  },
   verifyEndpoint: '/api/verify-license',
   proFeatures: [
     'Unlimited categories',

@@ -14,9 +14,9 @@ export default {
 
   // Shown under every result. Order = display order. Affiliate programs from research/: Aura, NordVPN, 1Password.
   offers: [
-    { id: 'identity', title: 'Identity theft protection', blurb: 'Monitors your SSN, bank and credit for misuse and helps you recover if it happens.', label: 'See identity protection plans', url: 'https://REPLACE_ME/aura', showWhen: ['medium', 'high'] },
-    { id: 'passwords', title: 'A password manager', blurb: 'Unique passwords everywhere means one leaked password can\'t open your other accounts. It also won\'t autofill on fake sites.', label: 'Try a password manager', url: 'https://REPLACE_ME/1password', showWhen: ['low', 'medium', 'high'] },
-    { id: 'vpn', title: 'Threat protection on public Wi-Fi', blurb: 'Some VPNs block known scam and malware sites before they load.', label: 'Compare VPN plans', url: 'https://REPLACE_ME/nordvpn', showWhen: ['low', 'medium'] },
+    { id: 'identity', title: 'Identity theft protection', blurb: 'Monitors your SSN, bank and credit for misuse and helps you recover if it happens.', label: 'See identity protection plans', es: { title: 'Protección contra robo de identidad', blurb: 'Vigila su número de Seguro Social, banco y crédito, y le ayuda a recuperarse si pasa algo.', label: 'Ver planes de protección' }, url: 'https://REPLACE_ME/aura', showWhen: ['medium', 'high'] },
+    { id: 'passwords', title: 'A password manager', blurb: 'Unique passwords everywhere means one leaked password can\'t open your other accounts. It also won\'t autofill on fake sites.', label: 'Try a password manager', es: { title: 'Un administrador de contraseñas', blurb: 'Contraseñas distintas en cada sitio: si se filtra una, no abre sus otras cuentas. Además no se autocompleta en sitios falsos.', label: 'Probar un administrador de contraseñas' }, url: 'https://REPLACE_ME/1password', showWhen: ['low', 'medium', 'high'] },
+    { id: 'vpn', title: 'Threat protection on public Wi-Fi', blurb: 'Some VPNs block known scam and malware sites before they load.', label: 'Compare VPN plans', es: { title: 'Protección en Wi-Fi público', blurb: 'Algunas VPN bloquean sitios de estafa y malware conocidos antes de que carguen.', label: 'Comparar VPN' }, url: 'https://REPLACE_ME/nordvpn', showWhen: ['low', 'medium'] },
   ],
 
   // Paid product: a printable family scam-safety kit (sell on Gumroad / Stripe Payment Link).

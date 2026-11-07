@@ -81,6 +81,8 @@ const RULES = [
     /\b(whats ?app|telegram|signal app|wechat|kik)\b/i],
   ['fraud-alert-callback', 20, 'A "fraud alert" that says an agent will call you', 'Fake fraud alerts set up a call from a "fraud agent" who talks you into moving money. Hang up and call the number on your card.',
     /\b(agent|specialist|representative|department|team) will (call|contact|reach out to) you\b/i, /\b(fraud (alert|department)|did you (attempt|authorize|authorise|make) (a|this))\b[^.!?\n]{0,80}\b(zelle|wire|transfer|payment)\b/i],
+  ['ssn-suspended', 30, 'Says your Social Security number is suspended', 'Social Security numbers are never suspended. This line is used only by scammers.',
+    /\b(social security number|ssn|n[uú]mero( de seguro social)?)\b[^.!?\n]{0,30}\b(suspended|suspendido|blocked|bloqueado|compromised|comprometido)\b/i],
   ['generic-greeting', 8, 'Generic greeting instead of your name', 'Companies you have an account with usually use your name.',
     /\b(dear (customer|user|client|member|account holder|valued)|estimado cliente)\b/i],
   ['verify-account', 15, 'Asks you to "verify" or "confirm" your account through a link', 'Go to the company\'s app or type its website yourself instead of using the link.',
@@ -94,6 +96,35 @@ const RULES = [
   ['money-amount', 5, 'Mentions a specific amount owed or offered', 'Check any balance by logging in yourself, not through the message.',
     /[$€£]\s?\d[\d,]*(\.\d{2})?|\b\d+(\.\d{2})?\s?(usd|dollars|d[oó]lares)\b/i],
 ];
+
+// Spanish phrasing for the same rules (Dinero Simple / Scam Shield en español).
+// Accents are optional because many scam texts drop them.
+const ES_PATTERNS = {
+  'gift-card': [/\btarjetas? (de )?regalo\b/i],
+  'crypto-payment': [/\b(criptomonedas?|cajero (de )?bitcoin|billetera (digital|cripto))\b/i],
+  'p2p-payment': [/\b(transferencia bancaria|giro|env[ií]o de dinero)\b/i],
+  'code-request': [/(?<!\bno\s)\b(env[ií]e(me)?|enviar(me)?|comparta|compartir(me)?|d[ií]game|decir(me)?|darme|reenv[ií]e|proporcione|mande(me)?|mandar(me)?)\b[^.!?\n]{0,30}\bc[oó]digo\b/i],
+  credentials: [/\b(contrase[nñ]a|n[uú]mero de (tarjeta|cuenta|seguro social)|clave|nip)\b/i],
+  urgency: [/\b(urgente|inmediatamente|de inmediato|en (las pr[oó]ximas )?(12|24|48) horas|[uú]ltimo aviso|[uú]ltima oportunidad|hoy mismo|pague ahora|act[uú]e ya)\b/i],
+  threat: [/\b(arresto|orden de (arresto|captura)|demanda|acci[oó]n legal|polic[ií]a|suspendid[ao]|bloquead[ao]|desactivad[ao]|multa|recargo|cargo por mora)\b/i],
+  prize: [/\b(ganaste|ha ganado|has ganado|felicidades|felicitaciones|premio|sorteo|loter[ií]a|reclame su (premio|regalo))\b/i],
+  delivery: [/\b(paquete|env[ií]o|entrega)\b[^.!?\n]{0,100}\b(retenido|pendiente|no (pudo|se pudo) (ser )?entregar|direcci[oó]n (incompleta|incorrecta)|tarifa|aduana|reprogramar)\b/i],
+  toll: [/\b(peaje|peajes)\b[^.!?\n]{0,40}\b(pendiente|sin pagar|impago|vencido|saldo)\b/i, /\b(saldo|deuda|cargo) (pendiente )?de peaje\b/i],
+  refund: [/\b(reembolso|devoluci[oó]n|pago en exceso)\b/i],
+  job: [/\b(gane|ganar?|gana)\s*\$?\d{2,4}[^.!?\n]{0,20}\b(al d[ií]a|por d[ií]a|diarios|por hora)\b/i, /\b(trabajo desde casa|empleo remoto|medio tiempo|reclutador[a]?|tareas en l[ií]nea|dar me gusta)\b/i],
+  investment: [/\b(rendimientos? garantizad[oa]s?|ganancias garantizadas|sin riesgo|duplica(r)? (tu|su) dinero|plataforma de (inversi[oó]n|trading)|oportunidad de inversi[oó]n)\b/i],
+  'remote-access': [/\b(acceso remoto|escritorio remoto)\b/i],
+  'tech-support': [/\b(virus|infectad[oa]|hackead[oa]|alerta de seguridad|renovaci[oó]n autom[aá]tica|suscripci[oó]n renovada)\b/i],
+  'wrong-number': [/\b(n[uú]mero equivocado|perd[oó]n por (la )?molestia|mi asistente (guard[oó]|me dio))\b/i],
+  'reply-to-activate': [/\bresponda\s+["']?(s|s[ií]|1|y)["']?\b[^.!?\n]{0,80}\b(enlace|activar|abrir)\b/i],
+  'generic-greeting': [/\b(estimad[oa] (cliente|usuario|miembro))\b/i],
+  'verify-account': [/\b(verifique|confirme|actualice|valide|desbloquee)\b[^.!?\n]{0,25}\b(su )?(cuenta|identidad|informaci[oó]n|datos|pago|tarjeta)\b/i],
+  secrecy: [/\bno (le )?(diga|cuente|informe|comparta esto)\b[^.!?\n]{0,30}\b(nadie|banco|familia|polic[ií]a)\b/i],
+  government: [/\b(seguro social|administraci[oó]n del seguro social|irs|servicio de impuestos internos|inmigraci[oó]n|uscis|medicare|hacienda|sat)\b/i],
+  'move-chat': [/\b(whats ?app|telegram)\b/i],
+  'fraud-alert-callback': [/\b(un )?(agente|representante|especialista) (le|te) (llamar[aá]|contactar[aá])\b/i, /\balerta de fraude\b/i],
+};
+for (const rule of RULES) if (ES_PATTERNS[rule[0]]) rule.push(...ES_PATTERNS[rule[0]]);
 
 const BARE_TLDS = new Set(['com', 'net', 'org', 'gov', 'edu', 'us', 'io', 'co', 'me', 'app', 'biz', 'uk', 'ca', 'de', 'mx', 'es', 'in', 'au', 'ly', 'gl', 'to', 'link', 'page', 'xyz', ...RISKY_TLDS]);
 
@@ -151,18 +182,18 @@ export function analyzeUrl(raw) {
   if (!parsed) return { url: raw, host: null, issues: [], points: 0 };
   const { host, protocol, hasAt } = parsed;
   const issues = [];
-  const add = (points, label) => issues.push({ points, label });
+  const add = (points, label, code, param = '') => issues.push({ points, label, code, param });
   const tld = host.split('.').pop();
   const reg = registrable(host);
 
-  if (/^\d{1,3}(\.\d{1,3}){3}$/.test(host)) add(30, 'Link goes to a raw IP address instead of a website name');
-  if (host.split('.').some((p) => p.startsWith('xn--'))) add(30, 'Link uses look-alike international characters (punycode)');
-  if (SHORTENERS.includes(host)) add(15, 'Shortened link hides where it really goes');
-  if (RISKY_TLDS.includes(tld)) add(15, `Uses a ".${tld}" address, common in scam links`);
-  if (hasAt) add(25, 'Link contains "@", which can hide the real destination');
-  if (protocol === 'http:' && /^(http|hxxp):/i.test(raw)) add(5, 'Link is not secure (http, not https)');
-  if ((host.match(/-/g) || []).length >= 2) add(10, 'Web address has several hyphens, a common trick for fake sites');
-  if (host.split('.').length >= 5) add(10, 'Unusually long chain of subdomains');
+  if (/^\d{1,3}(\.\d{1,3}){3}$/.test(host)) add(30, 'Link goes to a raw IP address instead of a website name', 'ip');
+  if (host.split('.').some((p) => p.startsWith('xn--'))) add(30, 'Link uses look-alike international characters (punycode)', 'punycode');
+  if (SHORTENERS.includes(host)) add(15, 'Shortened link hides where it really goes', 'shortener');
+  if (RISKY_TLDS.includes(tld)) add(15, `Uses a ".${tld}" address, common in scam links`, 'risky-tld', tld);
+  if (hasAt) add(25, 'Link contains "@", which can hide the real destination', 'at-sign');
+  if (protocol === 'http:' && /^(http|hxxp):/i.test(raw)) add(5, 'Link is not secure (http, not https)', 'http');
+  if ((host.match(/-/g) || []).length >= 2) add(10, 'Web address has several hyphens, a common trick for fake sites', 'hyphens');
+  if (host.split('.').length >= 5) add(10, 'Unusually long chain of subdomains', 'subdomains');
 
   const official = isAnyOfficial(host);
   if (!official) {
@@ -175,7 +206,7 @@ export function analyzeUrl(raw) {
         const leet = !host.includes(brand);
         add(leet ? 40 : 35, leet
           ? `Look-alike spelling of ${brand.toUpperCase()} in a web address that isn't theirs`
-          : `Uses the name ${brand.toUpperCase()} but isn't an official ${brand.toUpperCase()} website`);
+          : `Uses the name ${brand.toUpperCase()} but isn't an official ${brand.toUpperCase()} website`, leet ? 'lookalike' : 'brand-mismatch', brand.toUpperCase());
         break;
       }
     }
@@ -193,17 +224,27 @@ function emailSenderIssues(sender) {
   for (const b of BRAND_WORDS) {
     const key = brandKey(b);
     if ((name.includes(b) || deLeet(domain).includes(key)) && OFFICIAL_DOMAINS[key] && !isOfficialFor(key, domain)) {
-      issues.push({ points: 40, label: `Sender claims to be ${b.toUpperCase()} but writes from ${domain}` });
+      issues.push({ points: 40, label: `Sender claims to be ${b.toUpperCase()} but writes from ${domain}`, code: 'sender-brand', param: `${b.toUpperCase()}|${domain}` });
       return issues;
     }
   }
   if (free.includes(domain) && /\b(support|security|billing|service|team|admin|bank|irs)\b/.test(name)) {
-    issues.push({ points: 20, label: `A "company" writing from a free ${domain} address` });
+    issues.push({ points: 20, label: `A "company" writing from a free ${domain} address`, code: 'sender-free', param: domain });
   }
   return issues;
 }
 
-const CATEGORIES = [
+export const STEPS = {
+  'dont-engage': "Don't click links, call numbers, or reply in the message.",
+  'check-official': "To check, open the company's own app or type its web address yourself.",
+  'change-password': 'If you already shared a code or password, change that password now and turn on two-factor login.',
+  'call-bank': 'If you already paid, call your bank or card issuer right away, and the gift card company for gift cards.',
+  disconnect: 'If someone accessed your computer, disconnect it from the internet and change passwords from a different device.',
+  report: 'Report it: forward scam texts to 7726 (SPAM), and report fraud at ReportFraud.ftc.gov.',
+  'not-proof': "We didn't find common red flags, but that doesn't prove it's safe. If it asks for money or info, check with the company directly.",
+};
+
+export const CATEGORIES = [
   ['toll', 'Unpaid toll scam'], ['delivery', 'Fake delivery notice'], ['government', 'Government impersonation'],
   ['remote-access', 'Tech support scam'], ['tech-support', 'Tech support or fake subscription scam'], ['fraud-alert-callback', 'Fake bank fraud alert'], ['investment', 'Investment / crypto scam'],
   ['job', 'Job or task scam'], ['prize', 'Prize or lottery scam'], ['wrong-number', 'Wrong-number / romance opener'],
@@ -227,7 +268,7 @@ export function analyzeMessage(text, { sender = '' } = {}) {
   const links = extractUrls(input).slice(0, 20).map(analyzeUrl);
   const senderIssues = emailSenderIssues(sender);
   if (/^\+?\d[\d\s().-]{9,}$/.test(sender.trim()) && /\b(bank|irs|usps|ups|fedex|amazon|paypal|toll)\b/i.test(input) && sender.replace(/\D/g, '').length >= 11 && !sender.trim().startsWith('+1')) {
-    senderIssues.push({ points: 15, label: 'A "company" texting from an international number' });
+    senderIssues.push({ points: 15, label: 'A "company" texting from an international number', code: 'sender-intl' });
   }
 
   // Score: strongest signals count fully, extra ones count for less, so ten weak hints can't
@@ -246,16 +287,18 @@ export function analyzeMessage(text, { sender = '' } = {}) {
   const level = score >= 60 ? 'high' : score >= 30 ? 'medium' : 'low';
 
   const ids = new Set(signals.map((s) => s.id));
-  const category = (CATEGORIES.find(([id]) => ids.has(id)) || [null, links.some((l) => l.points >= 30) ? 'Phishing link' : null])[1];
+  const catHit = CATEGORIES.find(([id]) => ids.has(id)) || (links.some((l) => l.points >= 30) ? ['phishing-link', 'Phishing link'] : [null, null]);
+  const [categoryId, category] = catHit;
 
-  const steps = [];
-  if (level !== 'low') steps.push("Don't click links, call numbers, or reply in the message.");
-  if (links.length) steps.push('To check, open the company\'s own app or type its web address yourself.');
-  if (ids.has('code-request') || ids.has('credentials')) steps.push('If you already shared a code or password, change that password now and turn on two-factor login.');
-  if (ids.has('gift-card') || ids.has('crypto-payment') || ids.has('p2p-payment')) steps.push('If you already paid, call your bank or card issuer right away, and the gift card company for gift cards.');
-  if (ids.has('remote-access')) steps.push('If someone accessed your computer, disconnect it from the internet and change passwords from a different device.');
-  if (level !== 'low') steps.push('Report it: forward scam texts to 7726 (SPAM), and report fraud at ReportFraud.ftc.gov.');
-  if (level === 'low') steps.push("We didn't find common red flags, but that doesn't prove it's safe. If it asks for money or info, check with the company directly.");
+  const stepIds = [];
+  if (level !== 'low') stepIds.push('dont-engage');
+  if (links.length) stepIds.push('check-official');
+  if (ids.has('code-request') || ids.has('credentials')) stepIds.push('change-password');
+  if (ids.has('gift-card') || ids.has('crypto-payment') || ids.has('p2p-payment')) stepIds.push('call-bank');
+  if (ids.has('remote-access')) stepIds.push('disconnect');
+  if (level !== 'low') stepIds.push('report');
+  if (level === 'low') stepIds.push('not-proof');
+  const steps = stepIds.map((id) => STEPS[id]);
 
-  return { score, level, category, signals: signals.sort((a, b) => b.weight - a.weight), links, senderIssues, steps };
+  return { score, level, category, categoryId, stepIds, signals: signals.sort((a, b) => b.weight - a.weight), links, senderIssues, steps };
 }
