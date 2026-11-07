@@ -70,7 +70,9 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     lines = [(s.narration or s.on_screen_text or s.heading).strip() for s in segments]
     heads = [s.on_screen_text for s in segments]
     from .looks import choose, compose
-    look = post.get("look") or choose(post.get("_recent_looks") or [], seed=int(post.get("id") or 0))
+    pid = post.get("id") or 0
+    seed = int(pid) if str(pid).isdigit() else __import__("zlib").crc32(str(pid).encode())  # ids may be strings
+    look = post.get("look") or choose(post.get("_recent_looks") or [], seed=seed)
     images = [r.path if (i < len(segments) and segments[i].chart) else
               compose(r.path, size, look["layout"], palette, work / f"look-{i:02d}.png")
               for i, r in enumerate(imgs)]
