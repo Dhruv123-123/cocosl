@@ -253,3 +253,29 @@ def test_answer_bank_has_30_drafts_and_no_links():
     assert len(re.findall(r"^### R\d+\.", text, re.M)) == 12
     assert "http" not in text and "DM me" not in text.replace('No "DM me"', "")
     assert "$2,000" in text and "72.5" in text and "$184,500" in text
+
+
+def test_q4_year_end_pack_is_ready_to_post():
+    posts = json.loads((LAUNCH / "q4" / "posts.json").read_text())
+    assert len(posts) == 15
+    dates = [p["date"] for p in posts]
+    assert dates == sorted(dates) and len(set(dates)) == 15
+    assert dates[0] >= "2026-11-20" and dates[-1] <= "2027-01-15"
+    for p in posts:
+        assert len(p["short"]) <= 280, (p["n"], len(p["short"]))  # fits X as one post
+        assert "http" not in p["facebook"] and "1099 Money" not in p["facebook"]  # groups: no links, no brand
+        assert "not tax advice" in p["linkedin"].lower() and p["sources"] and p["claims"]
+        assert (LAUNCH / "q4" / p["card_file"]).exists()
+        assert len(p["card"]) == 3
+    text = " ".join(p["linkedin"] + p["short"] for p in posts)
+    for fact in ("$2,000", "$20,000", "72.5", "February 1, 2027", "tax year 2026", "December 15"):
+        assert fact.lower() in text.lower(), fact
+    assert "$600 or more" not in text
+    topics = {p["topic"] for p in posts}
+    assert topics == {"jan15", "equipment", "yearend", "retirement", "1099"}
+    emails = sorted((ROOT / "apps" / "freelance-tax" / "emails" / "year-end").glob("0*.md"))
+    assert len(emails) == 2
+    for e in emails:
+        body = e.read_text()
+        assert re.search(r"^send_on: 2026-12-\d\d$", body, re.M) and "{{q4_url}}" in body
+        assert "not tax, legal or financial advice" in body and "tracker" not in body.lower()

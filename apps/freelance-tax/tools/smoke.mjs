@@ -42,6 +42,16 @@ for (const [name, viewport] of [['desktop', { width: 1280, height: 900 }], ['pho
     console.log(name, slug, good ? 'ok' : 'FAIL', { cards, placeholder, wide, errors });
     if (shots) await page.screenshot({ path: `${shots}/${name}-${slug.replace(/\//g, '_')}.png`, fullPage: true });
   }
+  // January 15 page: the payment renders from URL inputs and nothing overflows.
+  await page.goto(url + 'q4/?profit=60000&paidSoFar=4875&priorYearTax=6500&priorYearAgi=52000');
+  {
+    const big = await page.locator('#result .big').textContent();
+    const wide = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
+    const good = big === '$1,625' && !wide && !errors.length;
+    if (!good) failed = true;
+    console.log(name, 'q4/', good ? 'ok' : 'FAIL', { big, wide, errors });
+    if (shots) await page.screenshot({ path: `${shots}/${name}-q4.png`, fullPage: true });
+  }
   // Driver mileage page: the result renders from URL inputs and nothing overflows.
   await page.goto(url + 'mileage/?earnings=30000&miles=15000&deliveries=3000');
   {
