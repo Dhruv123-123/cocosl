@@ -51,6 +51,7 @@ official Business Discovery API (see `watchlist.py`).
 | [`tiktok-instagram-monetization.md`](tiktok-instagram-monetization.md) | TikTok Creator Rewards (1-minute rule), Subscriptions and Shop; Instagram bonuses, Subscriptions, Gifts and Facebook Content Monetization; both platforms' AI and originality rules audited against our formats, with fixes |
 | [`pinterest-seo.md`](pinterest-seo.md) | Pinterest for finance (fresh pins, standard vs video, cadence, AI labels), Google's scaled-content, thin-affiliate and AI rules, and an audit of the Money Made Simple site (PR #4) with measured duplication per section and fixes |
 | [`domains-and-names.md`](domains-and-names.md) | .com availability (RDAP) for all four brands with 5 unregistered options each, the handle plan, and name conflicts (Scam Shield is a live T-Mobile trademark; use Scam Decoded) |
+| [`paid-acquisition.md`](paid-acquisition.md) | Paid ads math: net and break-even CPA per product, value per subscriber, Meta/Pinterest/Reddit finance CPCs, the gate before spending anything, and a $100 Meta test with kill rules (docs only, nothing spent) |
 | [`hooks.md`](hooks.md) | 30 hook templates, now used by the writer (`src/contentfactory/hooks_library.json`) |
 | [`repos.csv`](repos.csv) | Raw repo metadata pulled 2026-11-07 |
 | [`watchlist.csv`](watchlist.csv), [`watchlist.py`](watchlist.py) | Accounts to watch, and a script that snapshots their public follower and engagement numbers through the official Business Discovery API |
