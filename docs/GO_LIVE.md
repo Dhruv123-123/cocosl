@@ -1,7 +1,7 @@
 # Go live: the one checklist
 
-Written 2026-11-07 for Dhruv and refreshed through the evening (last pass: PRs #1–#11 and `main` at
-`25195c9`). This merges every "only you can do this" step from `docs/CREDENTIALS.md`, `docs/QUICKSTART.md`,
+Written 2026-11-07 for Dhruv and refreshed through the evening (last pass 04:30 UTC: PRs #1–#12 and `main` at
+`2902e0a`). This merges every "only you can do this" step from `docs/CREDENTIALS.md`, `docs/QUICKSTART.md`,
 `docs/DEPLOY.md`, `launch/LAUNCH_DAY.md`, `launch/VERIFY_BEFORE_POSTING.md`, the open PRs, the commits on `main`
 and the project files in `content-factory/`, with the duplicates removed. Everything else is already built.
 
@@ -19,10 +19,11 @@ Nothing in this repo sends, posts or charges on its own. You press every button.
 ## Stage 0 · Merge the PRs (15 min, do first)
 
 Merge in this order (details and current blockers in [PR merge order](#pr-merge-order) at the bottom):
-**#1 → #3 → #2 → #4 → #5 → #6 → #8 → #9 → #11 → #10 → #7.**
+**#1 → #3 → #2 → #4 → #5 → #6 → #8 → #9 → #11 → #10 → #12 → #7.**
 
-- [ ] Merge the PRs in that order on GitHub (≈ 2 min each). If GitHub shows a conflict on one, skip it and
-      come back; the thread that opened it fixes it. 25 min
+- [ ] Merge the ones marked ✅ in that order on GitHub (≈ 2 min each). Right now that's **#1, #3, #4, #6, #8,
+      #12, #7**: checked together on top of `main`, all tests pass. Skip the rest until GitHub shows them
+      green; the threads that opened them are fixing them. 15 min
 
 ---
 
@@ -48,8 +49,8 @@ The 76 leads and pitches are already written in `content-factory/ai-ad-studio-v2
 - [ ] Edit the `STUDIO` block at the top of `launch/ugc-service/index.html` (name, email, owner, location). 5 min
 - [ ] Publish it free: drag the folder onto app.netlify.com/drop, sign up, rename the site. Test the form on
       your phone. 15 min
-- [ ] Optional: host `content-factory/ugc-portfolio/portfolio.html` the same way and put its URL in
-      `STUDIO.portfolio`. 10 min
+- [ ] Optional: host `content-factory/ugc-portfolio/portfolio.html` the same way (PR #12 adds 10 more sample
+      ads and links them from the studio site), put its URL in `STUDIO.portfolio` and `FACTORY_PORTFOLIO_URL`. 10 min
 - [ ] Studio Instagram (business/creator), bio "AI video ads for small brands · clearly labeled AI · free
       sample", link the site. 15 min
 - [ ] Choose one AI video tool whose terms allow commercial ads, and make a 10-second test so you know the
@@ -93,6 +94,14 @@ $24). It's being moved to an archive; don't list those on Gumroad.
       the store URL.) 15 min
 - [ ] 100%-off code for yourself, **test-buy one product**, check download and thank-you email. 5 min
 - [ ] Remember the bundle promise: anyone who emails a receipt gets a single-use code for what they paid.
+
+### 3b · Etsy shop (PR #6, ≈ 2 h 15 min): buyers already searching for printables
+- [ ] Open the shop at etsy.com/sell (name MoneyMadeSimple or closest), icon from the brand kit, About and
+      policies text from `launch/etsy/SHOP_SETUP.md`, sections, thank-you coupon (20%) and abandoned-cart /
+      favourites coupons (10%). Opt out of Offsite Ads while small. 45 min
+- [ ] List the 17 items: 3 mockups, title/price/tags/description from each `LISTING.md`, the digital files.
+      US fees: $0.20 per listing plus 6.5% + 3% + $0.25 per sale. 5 min each, ≈ 1 h 25 min
+- [ ] Later, for 1099 Money (PR #10): its Etsy listings are in `launch/1099-money/etsy/`.
 
 ## Stage 4 · Money Made Simple accounts and first posts (≈ 1 h 15 min)
 
@@ -143,19 +152,27 @@ Needs PR #4 merged. Turns followers into an email list that sees the products 3 
 
 ## Stage 6 · Voice and writing keys (≈ 45 min)
 
-Needs PR #2 merged. Unlocks the 16 launch videos and 26 month-1 videos waiting in `videos-need-voice/`.
+Kokoro is now built into `main`, so this no longer waits on PR #2. Unlocks the 16 launch videos and
+26 month-1 videos waiting in `videos-need-voice/`.
 
-- [ ] **Free voice (Kokoro):** `docker compose --profile voice up -d kokoro`, then in `.env`
-      `KOKORO_URL=http://localhost:8880/v1` (`http://kokoro:8880/v1` inside compose). Or pay for ElevenLabs
-      with **your own** cloned voice. 15 min
+- [ ] Run `factory doctor` first: it checks ffmpeg, storage, brands, keys, voice and the media URL and says
+      what to fix. 5 min
+- [ ] **Free voice (Kokoro):** on a laptop `docker run -p 8880:8880 ghcr.io/remsky/kokoro-fastapi-cpu:v0.2.4`
+      and `KOKORO_URL=http://localhost:8880`; on the server `docker compose --profile kokoro up -d` and
+      `KOKORO_URL=http://kokoro:8880`. Pick `KOKORO_VOICE` (e.g. `af_heart`). Or pay for ElevenLabs with
+      **your own** cloned voice. 15 min
 - [ ] `ANTHROPIC_API_KEY` from console.anthropic.com (prepay $5–10). Without it new drafts are placeholders. 5 min
-- [ ] `factory status` to confirm, then re-render: `factory rerender <id>` per short, or re-export month 1 with
-      `--render-video`. Review and approve in the dashboard (`factory serve`). 20 min
+- [ ] Re-voice everything rendered silent in one go: `factory renderq revoice` (add `--include-approved`
+      for approved posts; they go back to review). With Docker the renderer picks the jobs up; otherwise run
+      `factory renderq run`. `factory status` shows progress. Review and approve in the dashboard (`factory serve`). 20 min
 - [ ] Optional: `FACTORY_MUSIC_DIR` with tracks you hold a licence for.
 
 ## Stage 7 · Affiliate networks (≈ 1 h; approval takes days)
 
 - [ ] **This week:** apply to **Impact** and **CJ Affiliate** (one application each unlocks most programs). 30 min
+- [ ] Use the application kit from PR #5: `python3 launch/affiliates/kit.py` builds `APPLICATIONS.md`
+      (ready answers for all four brands, 31 programs) and `applications.csv` to track them. Fill the
+      [BRACKETS] with real numbers only. Approved links go in `site/go-links.json`. Saves ≈ 15 min per application
 - [ ] **After ~10 posts are live and the site is up:** apply to SoFi, CIT Bank, Empower, Rocket Money, Monarch,
       Aura, Acorns (list and payouts in `research/02-affiliate-programs.md`). Only ones you'd recommend to a friend.
       Treat brokerage links (Robinhood, M1, Betterment) as needing compliance review. 30 min
@@ -236,23 +253,24 @@ brand properly before starting the next. Order below is by how soon each can ear
 
 ## PR merge order
 
-Checked 2026-11-07 against `main` at `25195c9` by merging every open PR in this order in a scratch copy.
-Everything that merged passes the full test suite.
+Checked 04:30 UTC on 2026-11-07 against `main` at `2902e0a` (which now includes Kokoro, the render queue,
+`factory doctor` and the canonical product list) by merging every open PR in this order in a scratch copy.
 
-| # | PR | Status now | Why here |
+| # | PR | Status now | What's in the way |
 |---|---|---|---|
-| 1 | **#1** Research | ✅ merges cleanly | docs only |
-| 2 | **#3** Financial model | ✅ merges cleanly | docs only |
-| 3 | **#2** Scouting, Kokoro voice, Trial Reels | ✅ merges cleanly | voice code that #11 builds on |
-| 4 | **#4** Website, lead magnet, emails | ✅ merges cleanly | #6, #9 and #11 reuse its site |
-| 5 | **#5** Months 1–3, `factory pack`, channels | ✅ merges cleanly | #10 is stacked on it |
-| 6 | **#6** Product line | ⚠️ conflict with `main` | `brands/money-made-simple.yaml` products list: keep #6's six (main's ladder is being archived) |
-| 7 | **#8** Web apps | ✅ merges cleanly | the #9 site links to its scam checker |
-| 8 | **#9** Scam Decoded | ⚠️ conflict with #5 | `README.md` only; merges cleanly onto `main` alone |
-| 9 | **#11** Dinero Simple | ⚠️ conflict with #2 | `src/contentfactory/media/tts.py` (both add voice options); includes #4's commits, so #4 first |
-| 10 | **#10** 1099 Money | ✅ merges cleanly | needs #5; GitHub retargets it to `main` once #5 merges |
-| 11 | **#7** This checklist | ✅ merges cleanly | docs only; any time |
+| 1 | **#1** Research | ✅ clean | |
+| 2 | **#3** Financial model | ✅ clean | |
+| 3 | **#2** Scouting, Kokoro, Trial Reels | ⚠️ conflicts with `main` | `main` built Kokoro itself: `.env.example`, `docker-compose.yml`, `media/tts.py`. Probably only the scouting docs and Trial Reels are still needed |
+| 4 | **#4** Website and emails | ✅ clean | |
+| 5 | **#5** Months 1–3, channels, affiliate kit | ✅ clean, but one test fails with #4 | `tests/test_site.py::test_plausible_analytics`: #5's `/go/` redirect pages have no analytics snippet |
+| 6 | **#6** Product line + Etsy | ✅ clean | |
+| 7 | **#8** Web apps | ✅ clean | |
+| 8 | **#9** Scam Decoded | ✅ clean, but one test fails | its new brand breaks `tests/test_worker.py::test_each_brand_runs_daily_once_on_its_own_clock` |
+| 9 | **#11** Dinero Simple | ⚠️ conflicts | 10 files, mostly with `main`'s new pipeline (tts, cli, pipeline, site build) |
+| 10 | **#10** 1099 Money | ⚠️ conflicts | `pyproject.toml`, `tests/test_business.py`; stacked on #5 |
+| 11 | **#12** Ad studio portfolio | ✅ clean | |
+| 12 | **#7** This checklist | ✅ clean | docs only |
 
-The three ⚠️ PRs need their threads to merge the newer code in before you merge them. If you're merging
-tonight, merge every ✅ PR in order and skip the ⚠️ ones; GitHub will show them green once fixed.
+Safe to merge tonight, in order: **#1, #3, #4, #6, #8, #12, #7.** The rest need their threads to bring in
+`main` and fix the noted test first; GitHub will show them green when they're ready.
 If a new PR lands, merge it after these unless its description says otherwise.
