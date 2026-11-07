@@ -21,6 +21,7 @@ MONTH4 = "month-4/content.json"
 MONTH5 = "month-5/content.json"
 MONTH6 = "month-6/content.json"
 MONTH7 = "month-7/content.json"
+COUPLES = "couples/content.json"
 DRIVERS = "drivers/content.json"
 YT6 = "youtube-6wk/content.json"
 JAR = "jar-challenge/content.json"
@@ -37,7 +38,7 @@ def test_brand_loads_with_placeholder_affiliates(factory):
 import pytest
 
 
-@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5]), (MONTH4, [22, 13, 4]), (MONTH5, [22, 13, 5]), (MONTH6, [22, 14, 4]), (MONTH7, [23, 13, 0]), (DRIVERS, [10, 0, 0]), (YT6, [0, 0, 6]), (JAR, [10, 1, 0])])
+@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5]), (MONTH4, [22, 13, 4]), (MONTH5, [22, 13, 5]), (MONTH6, [22, 14, 4]), (MONTH7, [23, 13, 0]), (COUPLES, [6, 3, 1]), (DRIVERS, [10, 0, 0]), (YT6, [0, 0, 6]), (JAR, [10, 1, 0])])
 def test_content_is_valid(factory, name, counts):
     from contentfactory.schemas import Script
     brand = factory.brand("1099-money")
@@ -390,7 +391,7 @@ def test_threads_x_kit_fits_both_platforms_and_is_ready():
 
 def test_short_titles_fit_in_60_characters():
     # Shorts titles get cut off in the feed past ~60 characters; YouTube's hard limit is 100 for any video.
-    files = ["content.json", MONTH1, MONTH2, MONTH3, MONTH4, MONTH5, MONTH6, DRIVERS, YT6, JAR, MONTH7]
+    files = ["content.json", MONTH1, MONTH2, MONTH3, MONTH4, MONTH5, MONTH6, DRIVERS, YT6, JAR, MONTH7, COUPLES]
     for name in files:
         for it in _items(name):
             title = it["script"]["title"]
@@ -472,3 +473,21 @@ def test_month_7_fills_jun_3_to_jul_3_with_the_youtube_plan_on_sundays(factory):
     assert len({i["format_style"] for i in shorts}) >= 8
     by_day = {s.when.date(): month[s.index]["script"]["title"] for s in slots if s.fmt == "short"}
     assert by_day[date(2027, 6, 14)].startswith("Tomorrow")  # the day before the Jun 15 payment
+
+
+def test_couples_pack_fits_its_week_and_matches_the_tax_model(factory):
+    items = _items(COUPLES)
+    earlier = {i["script"]["title"].lower() for n in ("content.json", MONTH1, MONTH2, MONTH3, MONTH4, MONTH5, MONTH6, MONTH7, DRIVERS, YT6, JAR)
+               for i in _items(n)}
+    assert not earlier & {i["script"]["title"].lower() for i in items}
+    spec = {"short": "mon,tue,wed,thu,fri,sat", "carousel": "mon,wed,fri", "long": "sun"}
+    slots, leftover = plan(factory.brand("1099-money"), items, date(2027, 7, 12), 7, spec)
+    assert not leftover and {s.when.date() for s in slots} == {date(2027, 7, 12) + timedelta(days=k) for k in range(7)}
+    long = next(i for i in items if i["format"] == "long")
+    assert any(s.get("chart") for s in long["script"]["segments"])
+    # The numbers in the scripts come from the site's tax model (run: node -e with lib/tax.js, status mfj).
+    text = " ".join(s["narration"] for i in items for s in i["script"]["segments"]) + " ".join(i["script"]["caption"] for i in items)
+    for figure in ("$13,261", "$9,221", "$7,427", "$355", "$5,623", "$13,992"):
+        assert figure in text, figure
+    readme = (LAUNCH / "couples" / "README.md").read_text()
+    assert "irs.gov" in readme and "$67,539" in readme

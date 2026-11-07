@@ -8,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1] / "launch" / "1099-money"
 FILES = [ROOT / "content.json"] + sorted(ROOT.glob("month-*/content.json")) + [ROOT / "drivers" / "content.json"]
-FILES += [ROOT / "youtube-6wk" / "content.json", ROOT / "jar-challenge" / "content.json"]
+FILES += [ROOT / "youtube-6wk" / "content.json", ROOT / "jar-challenge" / "content.json", ROOT / "couples" / "content.json"]
 NEW_FORMATS = {"on-screen-calculation", "myth-vs-fact", "question-reply", "countdown", "real-numbers"}
 ELEMENTS = {"worked-example-chart", "screen-recording", "human-segment"}
 
