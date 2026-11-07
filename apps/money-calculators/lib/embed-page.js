@@ -6,7 +6,7 @@
 // and adds a small credit link back to the full page. No cookies, no tracking, nothing sent anywhere else.
 // Pages include it with <script type="module" src="lib/embed-page.js"></script> (path relative to the page).
 
-export const HIDE = 'header.top, footer, .signup-box, .faq, section.faq, .offer-box, .signup, [data-embed-hide]';
+export const HIDE = 'header.top, footer, .signup-box, .faq, section.faq, .offer-box, .signup, [data-embed-hide], .mms-optin';
 export const BRANDS = { 'scam-checker': 'Scam Shield', 'freelance-invoices': '1099 Money' };
 
 /** What the page should do for these URL parameters. frame ids are letters and digits only. */

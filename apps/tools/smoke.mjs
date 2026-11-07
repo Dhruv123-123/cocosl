@@ -263,6 +263,36 @@ const checks = [
     if (!/Dividir gastos/.test(await page.textContent('#tools'))) throw new Error('spanish');
     await page.click('#lang');
   }],
+  ['/scam-checker/app/', '#tiles .tile', async (page) => {
+    await page.waitForSelector('#status.ready', { timeout: 30000 });
+    await page.waitForFunction(() => !!navigator.serviceWorker.controller, null, { timeout: 15000 });
+    await page.context().setOffline(true);
+    try {
+      for (const [u, sel] of [['/scam-checker/app/report.html', '#places li'], ['/scam-checker/', 'h1'], ['/scam-checker/link/', 'h1'], ['/scam-checker/app/?source=pwa', '#tiles .tile']]) {
+        await page.goto(`${new URL(page.url()).origin}${u}`);
+        if (!(await page.locator(sel).first().textContent())?.trim()) throw new Error(`offline: ${u}`);
+      }
+    } finally { await page.context().setOffline(false); }
+  }],
+  ['/scam-checker/app/checklist.html', '#verdict h2', async (page) => {
+    await page.check('input[name=urgent][value=yes]');
+    if (!/Some red flags/.test(await page.textContent('#verdict'))) throw new Error('medium');
+    await page.check('input[name=pay][value=yes]');
+    if (!/Very likely a scam/.test(await page.textContent('#verdict'))) throw new Error('high');
+    if (!(await page.locator('#why-pay').isVisible())) throw new Error('why');
+    await page.reload();
+    if (!(await page.isChecked('input[name=pay][value=yes]'))) throw new Error('not saved');
+  }],
+  ['/scam-checker/app/quiz.html', '#score h2', async (page) => {
+    for (let i = 0; i < 10; i++) await page.click(`button[data-i="${i}"][data-a="1"]`);
+    if (!/You got \d+ of 10/.test(await page.textContent('#score'))) throw new Error('score');
+  }],
+  ['/scam-checker/app/report.html', '#advice .first', async (page) => {
+    await page.click('#situations [data-s=text]');
+    if (!/7726/.test(await page.textContent('#advice'))) throw new Error('spam text');
+    await page.selectOption('#state', 'TX');
+    if (!(await page.getAttribute('#ag a', 'href')).includes('texasattorneygeneral.gov')) throw new Error('AG');
+  }],
   ['/budget/wedding-budget.html', '#cats .wcat', async (page) => {
     await page.fill('[name=total]', '30000'); await page.fill('[name=guests]', '100');
     await page.click('#split');
@@ -324,7 +354,7 @@ const checks = [
     if (!/mms-calc/.test(await page.inputValue('#code'))) throw new Error('calc snippet');
   }],
   ['/apps.html', '#apps .app', async (page) => {
-    if ((await page.locator('#apps .app').count()) !== 5) throw new Error('five apps');
+    if ((await page.locator('#apps .app').count()) !== 6) throw new Error('six apps');
     for (const src of await page.locator('#apps img').evaluateAll((els) => els.map((e) => e.complete && e.naturalWidth))) if (!src) throw new Error('icon did not load');
     const m = await (await page.request.get(new URL('manifest.webmanifest', page.url()).href)).json();
     if (!m.icons?.length) throw new Error('hub manifest');

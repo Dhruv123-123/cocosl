@@ -156,6 +156,14 @@ Spanish pages: every one is on `NATIVE_REVIEW_ES.md` for a native speaker's chec
 
 - `node tools/a11y.mjs` runs axe-core (contrast, labels, ARIA) on every hub-linked page, light and dark.
 - `node tools/audit.mjs` checks the same pages at phone width: page weight (under 350 KB, no third-party requests), load time, image sizes, tap targets of at least 24 px, a focus ring on every Tab stop, and the page basics.
+- CI runs all of these on every pull request (the `apps-browser` job), plus Lighthouse on 11 key pages
+  (`lighthouserc.json`: accessibility 95+, best practices and SEO 90+ fail the build; performance below 80 warns).
+- Email opt-in: `shared/optin.js` is one box mounted on every tool page by `initTracking`. It stays hidden
+  until `OPTIN.senderFormId` is filled in (preview any page with `?optin=preview`), and `OPTIN.enabled = false`
+  turns it off everywhere (then `node tools/sync-shared.mjs`). It posts to `/api/subscribe`
+  (`shared/sender.js`), which adds the address to a Sender group: set `SENDER_API_TOKEN` and `SENDER_GROUP_ID`.
+- Installable apps: `app/` (Money Made Simple, 10 tools) and `scam-checker/app/` (Scam Shield). After changing any
+  of their tools run `node tools/build-app-shell.mjs`; it rewrites `app/precache.json` and `scam-checker/sw.js`.
 - `shared/test/page-basics.test.js` runs on every `npm test` over every HTML page: lang, title, zoomable viewport, image alt and size, a label for every field, no third-party scripts.
 
 ## Money Toolkit (offline download)

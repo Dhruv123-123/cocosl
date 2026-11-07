@@ -8,6 +8,7 @@
 // Conventions: docs/UTM.md.
 
 import { addAppHome } from './app-home.js';
+import { mountOptin } from './optin.js';
 
 const CLEAN = /[^A-Za-z0-9_.-]+/g;
 export const UTM_KEYS = ['source', 'medium', 'campaign', 'content'];
@@ -138,6 +139,7 @@ export function rememberVisit(search, storage) {
  */
 export function initTracking({ config, app, page = '', win = globalThis.window, doc = globalThis.document } = {}) {
   addAppHome(win, doc); // Home button when opened inside the installed app (app-home.js)
+  mountOptin({ app, page, win, doc }); // email opt-in box (optin.js); hidden until Sender is connected
   const a = config?.analytics || {};
   if (!a.plausibleDomain || !win || !doc) return false;
   win.plausible = win.plausible || function plausible() { (win.plausible.q = win.plausible.q || []).push(arguments); };

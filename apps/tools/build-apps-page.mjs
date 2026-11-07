@@ -17,6 +17,8 @@ export const APPS = [
     es: { open: 'es/index.html', name: 'Herramientas de dinero', what: 'Todas las calculadoras y herramientas en español en un solo lugar. Las que ya abriste funcionan sin internet.' } },
   { manifest: 'app/manifest.webmanifest', open: 'app/index.html', what: 'Ten money tools on one home screen: budget, paycheck, bills, debt, savings, bill splitting and a scam check. All ten work offline, with no account.',
     es: { open: 'app/index.html?lang=es', what: 'Diez herramientas de dinero en una sola pantalla: presupuesto, salario neto, pagos, deudas, ahorro, dividir gastos y revisar estafas. Funcionan sin internet y sin cuenta.' } },
+  { manifest: 'scam-checker/app/manifest.webmanifest', open: 'scam-checker/app/index.html', what: 'Check a message or link, answer the 12-question "Is this a scam?" checklist, take the red-flag quiz and find where to report, down to your state attorney general. Works offline.',
+    es: { name: 'Scam Shield', what: 'Revisa mensajes y enlaces, responde la lista de señales de estafa y encuentra dónde denunciar. La lista, el quiz y el directorio están en inglés por ahora.', englishOnly: true } },
   { manifest: 'budget/manifest.webmanifest', open: 'budget/index.html', what: 'A monthly budget you keep up in 20 minutes, plus the bill tracker and 0% deal countdown. Your numbers stay on your phone.',
     es: { name: 'The 20-Minute Budget', what: 'Un presupuesto mensual sencillo. Por ahora solo en inglés.', englishOnly: true } },
   { manifest: 'budget/bill-calendar/manifest.webmanifest', open: 'budget/bill-calendar/index.html', what: 'Every bill this month on a calendar. Tick them off as you pay and send reminders to your phone\'s calendar.' },

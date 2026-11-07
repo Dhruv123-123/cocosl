@@ -5,6 +5,7 @@
 //   (shared/app-home.js); iPhone apps have no back button.
 // - No account and no data leaves the device: tools keep what you type in this browser.
 import { TOOLS, urlFor } from './tools.js';
+import { rememberAppHome } from '../budget/lib/app-home.js';
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
@@ -69,7 +70,7 @@ $('#install-btn').addEventListener('click', async () => { if (!deferred) return;
 if (!standalone && /iPhone|iPad|iPod/.test(navigator.userAgent)) { $('#install-text').textContent = T[lang].ios; $('#install-btn').hidden = true; $('#install').hidden = false; }
 
 // Tool pages show a Home button back to here when opened inside the installed app.
-store.set('mms-app-home', location.href.split('?')[0].split('#')[0]);
+rememberAppHome('../', location.href.split(/[?#]/)[0]);
 store.set('mms-app-lang', lang);
 
 render();

@@ -5,7 +5,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { TOOLS, urlFor } from '../../app/tools.js';
 import { buildPrecache, refsOf } from '../../tools/build-app-shell.mjs';
-import { appHomeUrl, addAppHome } from '../app-home.js';
+import { appHomeUrl, addAppHome, homesFrom } from '../app-home.js';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 
@@ -53,6 +53,11 @@ test('home button only inside the installed app, not on the home screen itself',
   assert.equal(appHomeUrl({ standalone: true, saved: home, here: 'https://x.app/app/?source=pwa' }), null);
   assert.equal(appHomeUrl({ standalone: true, saved: 'https://evil.example/app/', here: 'https://x.app/budget/' }), null);
   assert.equal(addAppHome(undefined, undefined), false);
+  // Two apps: the closest scope wins.
+  const both = JSON.stringify({ 'https://x.app/': 'https://x.app/app/', 'https://x.app/scam-checker/': 'https://x.app/scam-checker/app/' });
+  assert.equal(appHomeUrl({ standalone: true, saved: both, here: 'https://x.app/scam-checker/link/' }), 'https://x.app/scam-checker/app/');
+  assert.equal(appHomeUrl({ standalone: true, saved: both, here: 'https://x.app/budget/' }), 'https://x.app/app/');
+  assert.deepEqual(homesFrom('https://x.app/app/'), { 'https://x.app/': 'https://x.app/app/' });
 });
 
 test('every service worker install list has no duplicates (Cache.addAll rejects them and the worker never installs)', () => {
@@ -67,4 +72,12 @@ test('every service worker install list has no duplicates (Cache.addAll rejects 
     if (!/new Set\(/.test(src)) assert.equal(new Set(shell).size, shell.length, `${f} lists a file twice`);
     for (const p of new Set(shell)) assert.ok(existsSync(join(root, dirname(f), p.endsWith('/') || p === './' ? `${p}index.html` : p)), `${f}: ${p}`);
   }
+});
+
+test('scam-checker/sw.js is generated, up to date and stays inside scam-checker', async () => {
+  const { buildScamSw } = await import('../../tools/build-app-shell.mjs');
+  const sw = buildScamSw();
+  assert.equal(readFileSync(join(root, 'scam-checker', 'sw.js'), 'utf8'), sw, 'run: node tools/build-app-shell.mjs');
+  for (const f of ['app/', 'app/report.html', 'lib/scamapp.js', 'lib/scan.js', 'link/', 'es/']) assert.ok(sw.includes(`"${f}"`), f);
+  assert.doesNotMatch(sw, /"\.\.\//);
 });

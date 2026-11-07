@@ -1,6 +1,8 @@
 # Deploy all three apps as one free Netlify site: base directory "apps".
 # (Each app folder also has its own netlify.toml if you'd rather give each brand its own site.)
 [build]
+  # Save Netlify build credits: skip the deploy when nothing in this folder changed.
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- ."
   publish = "."
   command = "node money-calculators/build.mjs && node scam-checker/build.mjs && node tools/build-es-hub.mjs && node tools/build-apps-page.mjs && node tools/build-embed-page.mjs && node tools/build-search.mjs"
 
@@ -10,6 +12,10 @@
 # Service workers must never be served stale, or updates get stuck.
 [[headers]]
   for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+[[headers]]
+  for = "/scam-checker/sw.js"
   [headers.values]
     Cache-Control = "no-cache"
 [[headers]]

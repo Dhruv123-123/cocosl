@@ -5,3 +5,9 @@
 
 [functions]
   directory = "netlify/functions"
+
+# The service worker must never be served stale, or updates get stuck.
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
