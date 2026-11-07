@@ -66,7 +66,8 @@
     "Extended deadline Oct 15, 2027",
     "Extension doesn't extend time to pay"
    ]
-  }
+  },
+  "format_style": "how-to"
  },
  {
   "format": "short",
@@ -133,7 +134,8 @@
     "Direct Pay reason/year options",
     "Misapplied payments can be transferred"
    ]
-  }
+  },
+  "format_style": "list"
  },
  {
   "format": "short",
@@ -201,7 +203,8 @@
     "E-file debit can be scheduled up to the due date",
     "Dishonored payment penalty"
    ]
-  }
+  },
+  "format_style": "deadline-alert"
  },
  {
   "format": "short",
@@ -268,7 +271,8 @@
     "California estimated tax percentages 30/40/0/30",
     "Most states mirror federal dates"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -276,43 +280,37 @@
   "idea_angle": "Free filing options: IRS Free File and VITA.",
   "script": {
    "title": "Free help with your taxes (if you qualify)",
-   "hook": "Paying a lot to file a simple freelance return? Two free options are worth checking first.",
+   "hook": "A common question: is there free help with a simple freelance return? Yes, two kinds, if you qualify.",
    "segments": [
     {
-     "heading": "Hook",
-     "narration": "Paying a lot to file a simple freelance return? Two free options are worth checking first.",
-     "on_screen_text": "2 free ways to file",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding an empty wallet, smiling. No text, no logos, no real people."
+     "heading": "Common question",
+     "narration": "A common question: is there free help with a simple freelance return? Yes, two kinds, if you qualify.",
+     "on_screen_text": "Common question: free tax help?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a speech bubble with a gift. No text, no logos, no real people."
     },
     {
      "heading": "Free File",
-     "narration": "IRS Free File: brand-name software at no charge if your adjusted gross income is under the year's limit. Check the current limit on the Free File page.",
-     "on_screen_text": "IRS Free File: under an AGI limit",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop with a gift bow. No text, no logos, no real people."
+     "narration": "IRS Free File: brand-name software at no charge under the year's income limit. Check the current limit on the Free File page.",
+     "on_screen_text": "Free File: under an AGI limit",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop with a check. No text, no logos, no real people."
     },
     {
      "heading": "VITA",
-     "narration": "VITA: free, in-person help from IRS-certified volunteers, for people with moderate incomes.",
-     "on_screen_text": "VITA: free volunteers",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two friendly figures at a table. No text, no logos, no real people."
+     "narration": "VITA: free, in-person help from IRS-certified volunteers for moderate incomes. They take simple Schedule Cs, generally with no employees and modest expenses. Bring your income log and expense totals.",
+     "on_screen_text": "VITA: simple Schedule Cs",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a table with a helper. No text, no logos, no real people."
     },
     {
-     "heading": "Limits",
-     "narration": "VITA handles simple Schedule Cs, generally with no employees and modest expenses. Bring your income log and expense totals.",
-     "on_screen_text": "Simple Schedule Cs only",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a short checklist. No text, no logos, no real people."
-    },
-    {
-     "heading": "Find",
-     "narration": "Find a site with the IRS VITA locator. Many are booked by April, so call now.",
-     "on_screen_text": "Book now: many fill up",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a map with a pin. No text, no logos, no real people."
+     "heading": "Book",
+     "narration": "Use the IRS VITA locator, and book early. Many sites fill up by April.",
+     "on_screen_text": "Book early",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar filling up. No text, no logos, no real people."
     },
     {
      "heading": "Close",
-     "narration": "If your return is complex, a paid preparer is usually worth it. If it's simple, try free first.",
+     "narration": "Complex return? A paid preparer is usually worth it. Simple? Try free first.",
      "on_screen_text": "Simple return? Try free first",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes giving a thumbs-up. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a thumbs up. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one freelancer money move a week.",
@@ -335,7 +333,8 @@
     "Free File AGI limit for the current filing season",
     "VITA scope for Schedule C (no employees, expense limit)"
    ]
-  }
+  },
+  "format_style": "question-reply"
  },
  {
   "format": "short",
@@ -403,7 +402,8 @@
     "SE tax computed per spouse on Schedule SE",
     "Withholding treated as paid evenly (IRC 6654(g))"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -470,7 +470,8 @@
     "W-4 line 4(c) extra withholding",
     "Withholding treated as paid ratably"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -538,7 +539,8 @@
     "phishing@irs.gov reporting address",
     "TIGTA reporting"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -605,7 +607,8 @@
     "EFTPS 8 p.m. ET one calendar day before cutoff",
     "EFTPS up to 365 days in advance"
    ]
-  }
+  },
+  "format_style": "how-to"
  },
  {
   "format": "short",
@@ -673,7 +676,8 @@
     "Apr 15, 2027 deadlines",
     "Next estimated payment Jun 15, 2027"
    ]
-  }
+  },
+  "format_style": "deadline-alert"
  },
  {
   "format": "short",
@@ -739,7 +743,8 @@
    "claims_to_verify": [
     "Q2 2027 due Jun 15, 2027, covering Apr 1–May 31"
    ]
-  }
+  },
+  "format_style": "deadline-alert"
  },
  {
   "format": "short",
@@ -806,7 +811,8 @@
     "$60K profit total federal tax $12,037 (2026 figures)",
     "Typical combined set-aside 25–30%"
    ]
-  }
+  },
+  "format_style": "deadline-alert"
  },
  {
   "format": "short",
@@ -875,7 +881,8 @@
     "Interest accrues from Apr 15 on unpaid tax",
     "SEP deadline including extensions"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -943,7 +950,8 @@
     "SE tax 15.3% on 92.35% of net earnings",
     "1.5× rule of thumb (heuristic, not IRS)"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1009,7 +1017,8 @@
    "claims_to_verify": [
     "Schedule C profit = gross receipts minus expenses"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1077,7 +1086,8 @@
     "Form 5500-EZ threshold $250,000",
     "2027 limits published by IRS"
    ]
-  }
+  },
+  "format_style": "deadline-alert"
  },
  {
   "format": "short",
@@ -1085,43 +1095,43 @@
   "idea_angle": "Income dropped: use 90% of current-year tax.",
   "script": {
    "title": "Lost a big client? You might pay less tax this quarter",
-   "hook": "Lost a big client this year? You don't have to keep paying last year's safe harbor amount.",
+   "hook": "Profit falls from sixty thousand to forty. Here's what happens to the quarterly payment, for a fictional freelancer, Max.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Lost a big client this year? You don't have to keep paying last year's safe harbor amount.",
-     "on_screen_text": "Lost a client? Pay less",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a shrinking coin. No text, no logos, no real people."
+     "narration": "Profit falls from sixty thousand to forty. Here's what happens to the quarterly payment, for a fictional freelancer, Max.",
+     "on_screen_text": "$60K → $40K: the payments",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a falling arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Last year",
+     "narration": "Last year, on sixty thousand, the safe harbor was three thousand ten a quarter.",
+     "on_screen_text": "Safe harbor: $3,010 a quarter",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a stack of coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "This year",
+     "narration": "This year Max expects forty thousand. Ninety percent of this year's tax is about sixty-seven hundred.",
+     "on_screen_text": "90% of 2027 tax ≈ $6,700",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a smaller stack. No text, no logos, no real people."
     },
     {
      "heading": "Rule",
-     "narration": "The penalty test is the smaller of two amounts: last year's tax, or ninety percent of this year's.",
-     "on_screen_text": "Smaller of 2 tests",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two coins of different sizes. No text, no logos, no real people."
-    },
-    {
-     "heading": "Example",
-     "narration": "Say you paid tax on sixty thousand last year, but expect forty thousand this year. Ninety percent of this year's tax is about six thousand seven hundred.",
-     "on_screen_text": "$60K → $40K: ~$6,700 for 2027",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a bar chart dropping. No text, no logos, no real people."
-    },
-    {
-     "heading": "Quarter",
-     "narration": "That's about one thousand six hundred seventy a quarter, instead of three thousand ten.",
-     "on_screen_text": "~$1,670 vs $3,010 a quarter",
+     "narration": "The penalty test uses the smaller amount, so Max can pay about sixteen seventy a quarter instead.",
+     "on_screen_text": "≈ $1,670 vs $3,010",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two stacks side by side. No text, no logos, no real people."
     },
     {
      "heading": "Risk",
-     "narration": "The risk: if income bounces back, you'll be short. Recheck before every payment.",
+     "narration": "If income bounces back, Max will be short. So recheck before every payment.",
      "on_screen_text": "Recheck every quarter",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a magnifying glass. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with checks. No text, no logos, no real people."
     },
     {
      "heading": "Close",
-     "narration": "Pay on what's true this year, not on last year's habit.",
+     "narration": "Pay on this year's reality, not last year's habit.",
      "on_screen_text": "Pay on this year's reality",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes nodding. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a balance. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one freelancer money move a week.",
@@ -1145,7 +1155,8 @@
     "Required installment = lesser of 90% current / 100% (110%) prior",
     "$40K 2027 total tax ≈ $7,427 at 2026 rates"
    ]
-  }
+  },
+  "format_style": "real-numbers"
  },
  {
   "format": "short",
@@ -1153,43 +1164,37 @@
   "idea_angle": "Paying yourself as a sole proprietor isn't a deduction.",
   "script": {
    "title": "Paying yourself isn't a business expense",
-   "hook": "Moved money from your business account to your personal one? That's not a business expense.",
+   "hook": "Paying yourself as a freelancer: three myths that throw off your taxes.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Moved money from your business account to your personal one? That's not a business expense.",
-     "on_screen_text": "Paying yourself ≠ expense",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes moving a coin between jars. No text, no logos, no real people."
+     "narration": "Paying yourself as a freelancer: three myths that throw off your taxes.",
+     "on_screen_text": "Paying yourself: 3 myths",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a paycheck. No text, no logos, no real people."
     },
     {
-     "heading": "Draw",
-     "narration": "As a sole proprietor or single-member LLC, it's called an owner's draw. It's just you moving your own money.",
-     "on_screen_text": "It's an owner's draw",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an arrow between two jars. No text, no logos, no real people."
+     "heading": "Myth 1",
+     "narration": "Myth: transfers to your personal account are a business expense. Fact: it's an owner's draw, just you moving your own money.",
+     "on_screen_text": "FACT: it's an owner's draw",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a split card, myth and fact. No text, no logos, no real people."
     },
     {
-     "heading": "Tax",
-     "narration": "You're taxed on profit, whether you take it out or leave it in the account.",
-     "on_screen_text": "Taxed on profit either way",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with a tag. No text, no logos, no real people."
+     "heading": "Myth 2",
+     "narration": "Myth: leaving money in the business lowers your tax. Fact: you're taxed on profit, taken out or not.",
+     "on_screen_text": "FACT: taxed on profit either way",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin in two places. No text, no logos, no real people."
     },
     {
-     "heading": "Mistake",
-     "narration": "Recording draws as expenses makes profit look too low, and that's a fast way to get an IRS letter.",
-     "on_screen_text": "Draws as expenses = trouble",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a red flag. No text, no logos, no real people."
-    },
-    {
-     "heading": "How",
-     "narration": "Pay yourself a set amount on a set day, after the tax share is moved out.",
-     "on_screen_text": "Fixed amount, fixed day",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with one coin. No text, no logos, no real people."
+     "heading": "Myth 3",
+     "narration": "Myth: recording draws as expenses is harmless. Fact: it makes profit look too low, a fast way to an IRS letter.",
+     "on_screen_text": "FACT: draws ≠ expenses",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a letter arriving. No text, no logos, no real people."
     },
     {
      "heading": "Close",
-     "narration": "Taxes first, then you, then everything else.",
+     "narration": "Move the tax share out first, then pay yourself a set amount on a set day.",
      "on_screen_text": "Taxes first, then you",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes saluting. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a calendar. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one freelancer money move a week.",
@@ -1211,7 +1216,8 @@
    "claims_to_verify": [
     "Owner's draws aren't deductible on Schedule C"
    ]
-  }
+  },
+  "format_style": "myth-vs-fact"
  },
  {
   "format": "short",
@@ -1219,43 +1225,49 @@
   "idea_angle": "Special enrollment periods for health insurance.",
   "script": {
    "title": "You can change health plans mid-year if this happens",
-   "hook": "Missed open enrollment? Some life changes let you pick a new health plan mid-year.",
+   "hook": "Missed open enrollment? Four life changes that usually reopen it, counting down.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Missed open enrollment? Some life changes let you pick a new health plan mid-year.",
-     "on_screen_text": "Mid-year health plan change",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a small heart. No text, no logos, no real people."
+     "narration": "Missed open enrollment? Four life changes that usually reopen it, counting down.",
+     "on_screen_text": "4 events that reopen enrollment",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes on a podium with a heart. No text, no logos, no real people."
     },
     {
-     "heading": "Events",
-     "narration": "Losing other coverage, moving, getting married, or having or adopting a baby usually qualify.",
-     "on_screen_text": "Lost coverage · moved · married · baby",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four small icons. No text, no logos, no real people."
+     "heading": "Number 4",
+     "narration": "Number four: moving to a new area.",
+     "on_screen_text": "#4 Moving",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a house with an arrow. No text, no logos, no real people."
     },
     {
-     "heading": "Window",
-     "narration": "You usually have sixty days after the event to enroll through the marketplace.",
-     "on_screen_text": "Usually 60 days",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with a window marked. No text, no logos, no real people."
+     "heading": "Number 3",
+     "narration": "Number three: getting married, or having or adopting a baby.",
+     "on_screen_text": "#3 Marriage or a baby",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two rings and a small crib. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 2",
+     "narration": "Number two: losing other coverage, like a spouse's plan.",
+     "on_screen_text": "#2 Lost other coverage",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a broken umbrella. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 1",
+     "narration": "Number one for freelancers: leaving a job to go freelance. That loss of job coverage usually qualifies. You generally have sixty days to enroll.",
+     "on_screen_text": "#1 Left a job · ~60 days",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the top podium step with a briefcase. No text, no logos, no real people."
     },
     {
      "heading": "Income",
-     "narration": "A big change in income can change your subsidy too. Update your marketplace application when it happens.",
+     "narration": "And if your income changes a lot, update your marketplace application, so you repay less at tax time.",
      "on_screen_text": "Income changed? Update it",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a dial moving. No text, no logos, no real people."
-    },
-    {
-     "heading": "Tax",
-     "narration": "Your subsidy is settled on your tax return, so updating early avoids paying some back.",
-     "on_screen_text": "Update early, repay less",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin returning. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a dial on a heart. No text, no logos, no real people."
     },
     {
      "heading": "Close",
-     "narration": "Leaving a job to freelance? That's a qualifying event. Don't go uninsured.",
-     "on_screen_text": "Left a job? You qualify",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with an umbrella. No text, no logos, no real people."
+     "narration": "Don't go uninsured between jobs.",
+     "on_screen_text": "Don't go uninsured",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a shield. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one freelancer money move a week.",
@@ -1279,7 +1291,8 @@
     "60-day SEP window",
     "PTC reconciliation on Form 8962"
    ]
-  }
+  },
+  "format_style": "countdown"
  },
  {
   "format": "short",
@@ -1287,43 +1300,37 @@
   "idea_angle": "CP2000 notices propose changes; respond by the date.",
   "script": {
    "title": "Got a CP2000? It's a proposal, not a bill",
-   "hook": "Got an IRS letter called a CP2000? Breathe. It's a proposal, not a bill.",
+   "hook": "Got a CP2000 from the IRS? Three myths make it scarier than it is.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Got an IRS letter called a CP2000? Breathe. It's a proposal, not a bill.",
-     "on_screen_text": "CP2000 = proposal",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a letter calmly. No text, no logos, no real people."
+     "narration": "Got a CP2000 from the IRS? Three myths make it scarier than it is.",
+     "on_screen_text": "CP2000: 3 myths",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a letter. No text, no logos, no real people."
     },
     {
-     "heading": "What",
-     "narration": "It means income reported on a form, like a ten ninety-nine, doesn't match your return.",
-     "on_screen_text": "A 1099 didn't match",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two lists with one mismatch. No text, no logos, no real people."
+     "heading": "Myth 1",
+     "narration": "Myth: it's a bill. Fact: it's a proposal. Income on a form, like a 1099, didn't match your return.",
+     "on_screen_text": "MYTH: a bill · FACT: a proposal",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a split card, myth and fact. No text, no logos, no real people."
     },
     {
-     "heading": "Check",
-     "narration": "Compare the letter with your records. Often the income is on your Schedule C, just under a different total.",
-     "on_screen_text": "Check your Schedule C",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a magnifying glass. No text, no logos, no real people."
+     "heading": "Myth 2",
+     "narration": "Myth: they're always right. Fact: often the income is on your Schedule C, just in a different total. Check your records first.",
+     "on_screen_text": "FACT: check your Schedule C",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two papers compared. No text, no logos, no real people."
     },
     {
-     "heading": "Reply",
-     "narration": "Agree, partly agree or disagree on the response form, with an explanation and copies of your records.",
-     "on_screen_text": "Agree, partly, or disagree",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with three boxes. No text, no logos, no real people."
-    },
-    {
-     "heading": "Date",
-     "narration": "Reply by the date on the letter. Ignoring it is how a proposal becomes a bill.",
-     "on_screen_text": "Reply by the date",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a circled date. No text, no logos, no real people."
+     "heading": "Myth 3",
+     "narration": "Myth: ignoring it makes it go away. Fact: reply by the date, agreeing, partly agreeing or disagreeing, with copies of your records. Silence turns it into a bill.",
+     "on_screen_text": "FACT: reply by the date",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with a date circled. No text, no logos, no real people."
     },
     {
      "heading": "Close",
-     "narration": "If it's complicated, a tax pro can respond for you.",
+     "narration": "Complicated? A tax pro can respond for you.",
      "on_screen_text": "Complicated? Get help",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes handing over a folder. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a helper. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one freelancer money move a week.",
@@ -1346,7 +1353,8 @@
     "CP2000 is a proposed adjustment",
     "Response deadline on notice"
    ]
-  }
+  },
+  "format_style": "myth-vs-fact"
  },
  {
   "format": "short",
@@ -1354,43 +1362,37 @@
   "idea_angle": "Equipment can usually be deducted in the year you buy it.",
   "script": {
    "title": "Bought a laptop for work? You can usually deduct it now",
-   "hook": "Bought a new laptop or camera for your freelance work? You usually don't have to spread the deduction over years.",
+   "hook": "A common question: do I have to spread a new laptop's deduction over years? Usually not.",
    "segments": [
     {
-     "heading": "Hook",
-     "narration": "Bought a new laptop or camera for your freelance work? You usually don't have to spread the deduction over years.",
-     "on_screen_text": "Work gear: deduct it now?",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a laptop. No text, no logos, no real people."
+     "heading": "Common question",
+     "narration": "A common question: do I have to spread a new laptop's deduction over years? Usually not.",
+     "on_screen_text": "Common question: deduct it now?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a speech bubble with a laptop. No text, no logos, no real people."
     },
     {
-     "heading": "De minimis",
-     "narration": "Items up to two thousand five hundred dollars each can be expensed right away, if you make the de minimis election on your return.",
-     "on_screen_text": "Up to $2,500 per item: expense it",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a price tag with a check. No text, no logos, no real people."
+     "heading": "Small",
+     "narration": "Items up to two thousand five hundred dollars each can be expensed right away with the de minimis election on your return.",
+     "on_screen_text": "Up to $2,500 per item",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop with a tag. No text, no logos, no real people."
     },
     {
      "heading": "Bigger",
      "narration": "Bigger items can often be written off in one year too, through Section one seventy-nine or bonus depreciation.",
      "on_screen_text": "Bigger: Section 179 or bonus",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a larger box. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a camera with a tag. No text, no logos, no real people."
     },
     {
-     "heading": "Use",
-     "narration": "Only the business-use share counts. Use a laptop sixty percent for work, deduct sixty percent.",
-     "on_screen_text": "Only the business-use %",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a pie with a slice. No text, no logos, no real people."
-    },
-    {
-     "heading": "Keep",
-     "narration": "Keep the receipt, and a note of what it's for.",
-     "on_screen_text": "Keep the receipt + purpose",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a receipt with a note. No text, no logos, no real people."
+     "heading": "Share",
+     "narration": "Only the business share counts. Sixty percent for work, deduct sixty percent. Keep the receipt and a note of its purpose.",
+     "on_screen_text": "Business-use % · keep receipt",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a pie chart with sixty percent. No text, no logos, no real people."
     },
     {
      "heading": "Close",
-     "narration": "Buy what you need. Don't buy things just for the write-off.",
+     "narration": "Buy what you need, not what's deductible.",
      "on_screen_text": "Need it? Deduct it",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes nodding. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a check mark. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one freelancer money move a week.",
@@ -1413,7 +1415,8 @@
     "De minimis safe harbor $2,500 per item/invoice (no AFS)",
     "Section 179 and bonus depreciation availability for 2027"
    ]
-  }
+  },
+  "format_style": "question-reply"
  },
  {
   "format": "short",
@@ -1480,7 +1483,8 @@
    "claims_to_verify": [
     "Q2 2027 due Jun 15, 2027"
    ]
-  }
+  },
+  "format_style": "deadline-alert"
  },
  {
   "format": "carousel",
@@ -2653,6 +2657,12 @@
     "IRA/HSA deadline not extended",
     "Chapter timestamps must match final edit"
    ]
+  },
+  "format_style": "myth-vs-fact",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Screen recording of IRS Direct Pay showing the 'extension' reason option (nothing submitted, no personal data)",
+   "chapter": "How one"
   }
  },
  {
@@ -2792,6 +2802,12 @@
     "Couple: SE ≈ $5,652, income tax ≈ $7,609, without freelance ≈ $4,040",
     "Chapter timestamps must match final edit"
    ]
+  },
+  "format_style": "on-screen-calculation",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Screen recording of the IRS Tax Withholding Estimator with made-up inputs, ending on the suggested extra withholding for line 4(c)",
+   "chapter": "How"
   }
  },
  {
@@ -2936,6 +2952,12 @@
     "Record retention 3 years (longer for property)",
     "Chapter timestamps must match final edit"
    ]
+  },
+  "format_style": "scorecard",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Scorecard chart of the ten numbers for the example freelancer across two fictional years, with arrows for direction",
+   "chapter": "Compare"
   }
  },
  {
@@ -3074,6 +3096,12 @@
     "SEP ≈ $11,152 at $60K profit",
     "Chapter timestamps must match final edit"
    ]
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "human-segment",
+   "detail": "Dhruv records the check-in routine in his own voice, saying truthfully when he does his own mid-year check, or plainly that he's starting one",
+   "chapter": "Repeat"
   }
  },
  {
@@ -3215,6 +3243,12 @@
     "90% method cumulative 45% by Q2",
     "Chapter timestamps must match final edit"
    ]
+  },
+  "format_style": "real-numbers",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Bars for Ana, Sam and Jo: safe-harbor payment vs 90%-of-this-year payment, from the script's figures",
+   "chapter": "Safe harbor"
   }
  }
 ]

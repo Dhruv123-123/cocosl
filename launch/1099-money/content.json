@@ -64,7 +64,8 @@
     "25–30% is a rule of thumb, not a calculation; actual need depends on income, deductions and state",
     "Clients paying independent contractors generally don't withhold income tax (backup withholding is the exception)"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -133,7 +134,8 @@
     "2026 Social Security wage base $184,500 (SSA)",
     "Half of SE tax is an adjustment to income"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -201,7 +203,8 @@
     "$400 net SE earnings threshold for SE tax / filing",
     "W-4 extra withholding can cover side-income tax (it counts toward the safe harbor)"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -269,7 +272,8 @@
     "1099-K threshold back to $20,000 and 200 transactions (OBBBA); confirm on irs.gov",
     "All income is reportable regardless of form"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -338,7 +342,8 @@
     "$1,000 expected-balance threshold for estimated payments",
     "IRS Direct Pay and IRS Online Account accept estimated payments"
    ]
-  }
+  },
+  "format_style": "deadline-alert"
  },
  {
   "format": "short",
@@ -406,7 +411,8 @@
     "90% of current-year tax is the alternative safe harbor",
     "Total tax is Form 1040 line 24 on the 2025 form (confirm line number for the year referenced)"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -414,43 +420,37 @@
   "idea_angle": "One separate business checking account is the single habit that makes bookkeeping, deductions and audits easy.",
   "script": {
    "title": "Stop paying clients into your personal account",
-   "hook": "If client money and grocery money land in the same account, your taxes are going to take a whole weekend.",
+   "hook": "Three myths keep freelancers mixing client money with grocery money.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "If client money and grocery money land in the same account, your taxes are going to take a whole weekend.",
-     "on_screen_text": "Mixed accounts = lost weekend",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes buried under a tangled pile of mixed receipts. No text, no logos, no real people."
+     "narration": "Three myths keep freelancers mixing client money with grocery money.",
+     "on_screen_text": "3 myths about business accounts",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding two bank cards. No text, no logos, no real people."
     },
     {
-     "heading": "The fix",
-     "narration": "Open a separate checking account used only for the business. Clients pay into it. Business expenses come out of it. Nothing else.",
-     "on_screen_text": "One account. Business only.",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a single tidy vault door with a briefcase icon. No text, no logos, no real people."
+     "heading": "Myth 1",
+     "narration": "Myth: you need an LLC to open a business account. Fact: many banks open them for sole proprietors with your Social Security number or a free EIN.",
+     "on_screen_text": "MYTH: need an LLC · FACT: no",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a split card, myth and fact. No text, no logos, no real people."
     },
     {
-     "heading": "Why",
-     "narration": "Your bank statement becomes your bookkeeping. Every deposit is income, every charge is a business cost. No guessing what that forty-dollar charge was in March.",
-     "on_screen_text": "Your statement = your books",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a bank statement turning neatly into a ledger. No text, no logos, no real people."
+     "heading": "Myth 2",
+     "narration": "Myth: one account is simpler. Fact: mixed accounts mean guessing what every charge was in March. Separate, your statement is your bookkeeping.",
+     "on_screen_text": "FACT: your statement = your books",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a bank statement turning into a ledger. No text, no logos, no real people."
     },
     {
-     "heading": "Pay yourself",
-     "narration": "Then move money to your personal account on a schedule, like a paycheck. Every two weeks, a set amount.",
-     "on_screen_text": "Pay yourself on a schedule",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with two arrows carrying coins between two vaults. No text, no logos, no real people."
-    },
-    {
-     "heading": "Pick one",
-     "narration": "You don't need an LLC to do this. Many banks open business accounts for sole proprietors with your Social Security number or a free EIN. Look for no monthly fee and FDIC insurance.",
-     "on_screen_text": "No LLC needed. Check FDIC.",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small shield icon next to a simple bank building. No text, no logos, no real people."
+     "heading": "Myth 3",
+     "narration": "Myth: you can just take money when you need it. Fact: paying yourself a set amount on a schedule keeps both sides clean.",
+     "on_screen_text": "FACT: pay yourself on a schedule",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with paydays marked. No text, no logos, no real people."
     },
     {
      "heading": "Close",
-     "narration": "It's a thirty-minute setup that saves hours every single year.",
-     "on_screen_text": "30 minutes now, hours saved",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small hourglass next to a stack of saved hours as coins. No text, no logos, no real people."
+     "narration": "Thirty minutes to set up. Pick no monthly fee and FDIC insurance.",
+     "on_screen_text": "30 minutes · no fee · FDIC",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a new card. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one freelancer money move a week.",
@@ -474,7 +474,8 @@
     "Sole proprietors can open business checking with SSN or EIN (bank policies vary)",
     "FDIC coverage applies to the partner bank for fintech apps; confirm the bank name"
    ]
-  }
+  },
+  "format_style": "myth-vs-fact"
  },
  {
   "format": "short",
@@ -482,43 +483,49 @@
   "idea_angle": "The simplified home office deduction: $5 per square foot up to 300 sq ft ($1,500), but only for space used regularly and exclusively for work.",
   "script": {
    "title": "The home office deduction, honestly",
-   "hook": "The home office deduction is real, but your kitchen table probably doesn't count.",
+   "hook": "Five dollars a square foot. Here's the home office math, one line at a time.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "The home office deduction is real, but your kitchen table probably doesn't count.",
-     "on_screen_text": "Kitchen table? Probably not.",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes at a kitchen table covered in plates and a laptop, looking unsure. No text, no logos, no real people."
+     "narration": "Five dollars a square foot. Here's the home office math, one line at a time.",
+     "on_screen_text": "Home office math",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a tape measure. No text, no logos, no real people."
     },
     {
-     "heading": "The test",
-     "narration": "The space has to be used regularly and exclusively for your business. A spare room or a clearly separate corner that's only for work can qualify. The couch you also watch movies on doesn't.",
-     "on_screen_text": "Regular + exclusive use",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small separate desk corner with a rug outlining the space. No text, no logos, no real people."
+     "heading": "Measure",
+     "narration": "Measure the space you use regularly and only for work. Say it's ten feet by twelve.",
+     "on_screen_text": "10 ft × 12 ft",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a floor plan with one room outlined. No text, no logos, no real people."
     },
     {
-     "heading": "Simple method",
-     "narration": "The simplified method is five dollars per square foot, up to three hundred square feet. That's a maximum of fifteen hundred dollars.",
-     "on_screen_text": "$5/sq ft, max 300 sq ft = $1,500",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a floor plan grid with a highlighted square section. No text, no logos, no real people."
+     "heading": "Area",
+     "narration": "Ten times twelve is one hundred twenty square feet.",
+     "on_screen_text": "= 120 sq ft",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the room filling with a grid. No text, no logos, no real people."
     },
     {
-     "heading": "Example",
-     "narration": "A ten by twelve office is a hundred and twenty square feet. That's a six hundred dollar deduction, with no utility bills to add up.",
-     "on_screen_text": "10×12 ft → $600",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small room outline with a measuring tape along two sides. No text, no logos, no real people."
+     "heading": "Rate",
+     "narration": "Times five dollars a square foot, the simplified method.",
+     "on_screen_text": "120 × $5",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin stamped five. No text, no logos, no real people."
     },
     {
-     "heading": "Regular method",
-     "narration": "The regular method uses your actual rent, utilities and insurance times your office percentage. More work, sometimes a bigger number. You can choose each year.",
-     "on_screen_text": "Or: actual costs × office %",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calculator next to a small house with one room shaded. No text, no logos, no real people."
+     "heading": "Answer",
+     "narration": "That's a six hundred dollar deduction. The cap is three hundred square feet, so fifteen hundred dollars at most.",
+     "on_screen_text": "= $600 (max $1,500)",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a big number on a card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Catch",
+     "narration": "The kitchen table doesn't count: the space has to be used only for business. Or use the regular method with your real costs.",
+     "on_screen_text": "Exclusive use only",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a kitchen table crossed out. No text, no logos, no real people."
     },
     {
      "heading": "Close",
-     "narration": "Take a photo of the space and write down the measurements. That's your proof if anyone asks.",
-     "on_screen_text": "Photo + measurements = proof",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone camera framing a tidy desk. No text, no logos, no real people."
+     "narration": "Photo the space, note the measurements, done.",
+     "on_screen_text": "Photo + measurements",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a phone camera. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one freelancer money move a week.",
@@ -542,7 +549,8 @@
     "Regular and exclusive use test (daycare and inventory storage exceptions exist)",
     "Can switch methods year to year"
    ]
-  }
+  },
+  "format_style": "on-screen-calculation"
  },
  {
   "format": "short",
@@ -550,43 +558,37 @@
   "idea_angle": "Business mileage only counts if you log it; the standard rate makes a 15-mile client trip worth more than people think.",
   "script": {
    "title": "Your car is a deduction if you log it",
-   "hook": "Every business drive you don't write down is a deduction you're throwing away.",
+   "hook": "Fifteen miles a week to one client. Watch what that's worth.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Every business drive you don't write down is a deduction you're throwing away.",
-     "on_screen_text": "Unlogged miles = lost deduction",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes in a tiny car with receipts flying out the window. No text, no logos, no real people."
+     "narration": "Fifteen miles a week to one client. Watch what that's worth.",
+     "on_screen_text": "15 miles a week = ?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes next to a small car. No text, no logos, no real people."
     },
     {
-     "heading": "What counts",
-     "narration": "Driving to a client, a job site, the post office for business, or a supply run counts. Your normal commute to a regular office doesn't.",
-     "on_screen_text": "Client trips yes, commute no",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a simple map with a route to a briefcase pin and a crossed-out route to an office building. No text, no logos, no real people."
+     "heading": "Year",
+     "narration": "Fifteen miles a week, times fifty-two weeks, is about seven hundred eighty miles.",
+     "on_screen_text": "15 × 52 = 780 mi",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with a road through it. No text, no logos, no real people."
     },
     {
-     "heading": "The rate",
-     "narration": "The IRS standard mileage rate for twenty twenty-six is seventy-two and a half cents a mile. It covers gas, wear and insurance in one number.",
-     "on_screen_text": "72.5¢ per mile (2026)",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a car odometer with a coin next to it. No text, no logos, no real people."
+     "heading": "Rate",
+     "narration": "Times the twenty twenty-six standard rate, seventy-two and a half cents.",
+     "on_screen_text": "780 × $0.725",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin stamped with a road. No text, no logos, no real people."
     },
     {
-     "heading": "Example",
-     "narration": "A fifteen-mile round trip to a client once a week is about seven hundred eighty miles a year. That's roughly five hundred sixty-five dollars of deductions.",
-     "on_screen_text": "15 mi/week ≈ $565/yr",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with a small car icon on one day of every week. No text, no logos, no real people."
+     "heading": "Answer",
+     "narration": "About five hundred sixty-five dollars of deductions, from one weekly drive. Client trips count; your commute to a regular office doesn't.",
+     "on_screen_text": "≈ $565 deduction",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a big number on a card. No text, no logos, no real people."
     },
     {
-     "heading": "The log",
-     "narration": "Write down the date, where you went, why, and the miles. A notes app works. So does an app that tracks trips automatically.",
+     "heading": "Proof",
+     "narration": "Only if it's written down: date, where, why, miles, on the same day.",
      "on_screen_text": "Date · where · why · miles",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone notes list with four short rows. No text, no logos, no real people."
-    },
-    {
-     "heading": "Close",
-     "narration": "Do it the same day. Recreating a mileage log from memory in April is how deductions get denied.",
-     "on_screen_text": "Log it the same day",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes tapping a phone right after parking. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes writing in a small notebook. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one freelancer money move a week.",
@@ -610,7 +612,8 @@
     "15 mi × 52 weeks = 780 mi × $0.725 = $565.50",
     "Commuting to a regular workplace is not deductible"
    ]
-  }
+  },
+  "format_style": "on-screen-calculation"
  },
  {
   "format": "short",
@@ -678,7 +681,8 @@
     "Mixed-use expenses deductible only for business portion",
     "Example 60% is illustrative"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -745,7 +749,8 @@
     "30–50% deposit 'is common' is a general practice statement, not a statistic",
     "Late-fee limits vary by state and contract; no specific % stated"
    ]
-  }
+  },
+  "format_style": "list"
  },
  {
   "format": "short",
@@ -753,43 +758,37 @@
   "idea_angle": "Get a free EIN from the IRS in minutes so you stop putting your Social Security number on every client's W-9.",
   "script": {
    "title": "Stop putting your SSN on W-9s",
-   "hook": "Every new client asks for a W-9, and most freelancers write their Social Security number on it. You don't have to.",
+   "hook": "A common question: do I really have to put my Social Security number on every client's W-9? Short answer: no.",
    "segments": [
     {
-     "heading": "Hook",
-     "narration": "Every new client asks for a W-9, and most freelancers write their Social Security number on it. You don't have to.",
-     "on_screen_text": "Your SSN on every W-9?",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a form with a big padlock icon over one box. No text, no logos, no real people."
+     "heading": "Common question",
+     "narration": "A common question: do I really have to put my Social Security number on every client's W-9? Short answer: no.",
+     "on_screen_text": "Common question: SSN on W-9s?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a speech bubble with a question mark. No text, no logos, no real people."
     },
     {
-     "heading": "What a W-9 is",
-     "narration": "A W-9 just gives the client your name and taxpayer ID so they can report what they paid you. It's normal and you should fill it out.",
-     "on_screen_text": "W-9 = your taxpayer ID for clients",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a simple form passing from one hand icon to another. No text, no logos, no real people."
-    },
-    {
-     "heading": "The swap",
-     "narration": "But as a sole proprietor you can get an Employer Identification Number, an EIN, and use it instead of your SSN on the form.",
+     "heading": "Answer",
+     "narration": "Sole proprietors can get an EIN, an Employer Identification Number, and use it on the W-9 instead.",
      "on_screen_text": "Use an EIN instead",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two ID cards, one being swapped for the other. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with a new number. No text, no logos, no real people."
     },
     {
-     "heading": "Free + fast",
-     "narration": "It's free on irs.gov and the online application usually takes about ten minutes. Never pay a site to get one for you.",
-     "on_screen_text": "Free on irs.gov. ~10 minutes.",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop showing a single check mark and a small clock. No text, no logos, no real people."
+     "heading": "How",
+     "narration": "It's free on irs.gov and usually takes about ten minutes online. Never pay a site to get one.",
+     "on_screen_text": "Free on irs.gov, ~10 min",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop and a stopwatch. No text, no logos, no real people."
     },
     {
-     "heading": "Bonus",
-     "narration": "Many banks also ask for an EIN for a business account, so you'll use it again.",
-     "on_screen_text": "Bonus: banks ask for it too",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a bank building with a small ID card next to it. No text, no logos, no real people."
+     "heading": "Still fill it",
+     "narration": "You still fill out the W-9. It's normal. The client needs your ID to report what they paid you, and banks often ask for the EIN too.",
+     "on_screen_text": "Still fill out the W-9",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes handing over a form. No text, no logos, no real people."
     },
     {
      "heading": "Close",
-     "narration": "One ten-minute task, and your Social Security number stops living in a dozen clients' inboxes.",
-     "on_screen_text": "10 minutes. Less SSN exposure.",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes closing a drawer of papers with a padlock. No text, no logos, no real people."
+     "narration": "Ten minutes, and your Social Security number stops sitting in a dozen inboxes.",
+     "on_screen_text": "Less SSN exposure",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an inbox with fewer papers. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one freelancer money move a week.",
@@ -812,7 +811,8 @@
     "EIN application is free on irs.gov; online application available on weekdays during set hours",
     "Sole proprietors may enter an EIN on Form W-9 instead of SSN (check W-9 instructions)"
    ]
-  }
+  },
+  "format_style": "question-reply"
  },
  {
   "format": "short",
@@ -880,7 +880,8 @@
     "2026 HSA limits $4,400 self-only / $8,750 family",
     "Tax treatment of qualified medical withdrawals"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -888,43 +889,49 @@
   "idea_angle": "A three-account freelancer system (Income, Tax, Pay) so every payment is split the same day without thinking.",
   "script": {
    "title": "The 3-account system for freelancers",
-   "hook": "Freelance income is lumpy. Three bank accounts make it feel like a salary.",
+   "hook": "Meet Sam, a freelance designer. Let's follow one client payment through three bank accounts.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Freelance income is lumpy. Three bank accounts make it feel like a salary.",
-     "on_screen_text": "3 accounts = a calm salary",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes juggling three small vaults calmly. No text, no logos, no real people."
+     "narration": "Meet Sam, a freelance designer. Let's follow one client payment through three bank accounts.",
+     "on_screen_text": "Follow one $4,000 payment",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with three small piggy banks. No text, no logos, no real people."
     },
     {
-     "heading": "Account one",
-     "narration": "Income. Every client payment lands here first. Business checking, business only.",
-     "on_screen_text": "1. Income: clients pay here",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a mailbox-shaped vault receiving coins. No text, no logos, no real people."
+     "heading": "Lands",
+     "narration": "A four thousand dollar invoice gets paid. It lands in Income, Sam's business checking.",
+     "on_screen_text": "Income: $4,000",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin landing in the first bank. No text, no logos, no real people."
     },
     {
-     "heading": "Account two",
-     "narration": "Tax. The same day money lands, move your set-aside percentage here. Say thirty percent. A high-yield savings account works well, and you don't touch it.",
-     "on_screen_text": "2. Tax: move 30% same day",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coral vault with a padlock receiving one third of the coins. No text, no logos, no real people."
+     "heading": "Tax",
+     "narration": "Same day, thirty percent moves to Tax, a savings account Sam never touches. That's twelve hundred.",
+     "on_screen_text": "Tax: +$1,200 · Income: $2,800",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a slice moving to the second bank. No text, no logos, no real people."
     },
     {
-     "heading": "Account three",
-     "narration": "Pay. Every two weeks, transfer yourself a fixed amount to your personal account, like a paycheck. Keep the rest in Income as a buffer for slow months.",
-     "on_screen_text": "3. Pay: fixed 'paycheck' every 2 weeks",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with arrows every two weeks into a personal wallet. No text, no logos, no real people."
+     "heading": "Pay",
+     "narration": "Every two weeks Sam pays herself fifteen hundred into personal checking, like a salary.",
+     "on_screen_text": "Pay: $1,500 · Income: $1,300",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a paycheck moving to the third bank. No text, no logos, no real people."
     },
     {
-     "heading": "Quarterly",
-     "narration": "On each tax deadline, pay the IRS from the Tax account. It's already there.",
-     "on_screen_text": "Deadline? Pay from Tax",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coral vault opening toward a calendar page. No text, no logos, no real people."
+     "heading": "Buffer",
+     "narration": "The thirteen hundred left stays in Income as a buffer for slow months.",
+     "on_screen_text": "Buffer: $1,300",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small cushion under a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Deadline",
+     "narration": "On the tax deadline, Sam pays the IRS from Tax. The money's already there.",
+     "on_screen_text": "Deadline: pay from Tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar page and a coin. No text, no logos, no real people."
     },
     {
      "heading": "Close",
-     "narration": "Once a month, check whether your tax account is on track with what you'll owe. That's the whole system.",
+     "narration": "Once a month, one check: is Tax on track? Sam is fictional. The system works for real.",
      "on_screen_text": "Monthly: is Tax on track?",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes ticking a single box on a monthly calendar. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a checkmark. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one freelancer money move a week.",
@@ -947,7 +954,8 @@
     "30% set-aside is illustrative",
     "Confirm product name, price ($15) and link before posting"
    ]
-  }
+  },
+  "format_style": "real-numbers"
  },
  {
   "format": "carousel",
@@ -1787,6 +1795,12 @@
     "$40K profit → ~$7,427 federal (2026 single)",
     "Replace placeholder links with real ones before publishing"
    ]
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "human-segment",
+   "detail": "Dhruv records the monthly money hour in his own voice: the routine he actually runs, or plainly framed as the routine he's starting now",
+   "chapter": "Monthly hour"
   }
  },
  {
@@ -1940,6 +1954,12 @@
     "$1,000 threshold after withholding and refundable credits",
     "Chapter timestamps must match final edit"
    ]
+  },
+  "format_style": "real-numbers",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Sam's four payments charted against Sam's profit by quarter, drawn from the script's numbers, with the safe-harbor line marked",
+   "chapter": "Sam's year"
   }
  }
 ]

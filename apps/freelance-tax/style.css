@@ -65,3 +65,4 @@ footer{color:var(--muted);font-size:13px;padding-top:24px;padding-bottom:40px;bo
 .hub{display:grid;gap:12px;margin:20px 0}@media(min-width:720px){.hub{grid-template-columns:1fr 1fr}}
 .hub a{text-decoration:none}.hub h2{font-size:19px;margin:0 0 4px}.hub p{margin:0;color:var(--muted);font-size:14px}
 .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+.byline{font-size:13px;color:var(--muted);margin:4px 0 0}.byline a{color:inherit}

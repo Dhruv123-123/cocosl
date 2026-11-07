@@ -6,6 +6,7 @@
 export const pages = [
   {
     slug: 'freelancer-banking',
+    published: '2026-11-16', // staggered release: one new page a week (tools/schedule.mjs)
     nav: 'Banking',
     title: 'Best Business Bank Accounts for Freelancers (2026): Found vs Lili vs Bluevine vs Novo vs Relay',
     h1: 'Business banking for freelancers',
@@ -48,6 +49,7 @@ export const pages = [
   },
   {
     slug: 'tax-software',
+    published: '2026-11-23', // staggered release: one new page a week (tools/schedule.mjs)
     nav: 'Tax software',
     title: 'Best Tax Software for Freelancers and 1099 Workers (2026): Keeper vs FreeTaxUSA vs TurboTax vs H&R Block',
     h1: 'Tax software for freelancers',
@@ -89,6 +91,7 @@ export const pages = [
   },
   {
     slug: 'invoicing-tools',
+    published: '2026-12-07', // staggered release: one new page a week (tools/schedule.mjs)
     nav: 'Invoicing',
     title: 'Best Invoicing Software for Freelancers (2026): FreshBooks vs QuickBooks vs Wave',
     h1: 'Invoicing tools for freelancers',
@@ -125,6 +128,7 @@ export const pages = [
   },
   {
     slug: 's-corp-services',
+    published: '2026-12-14', // staggered release: one new page a week (tools/schedule.mjs)
     nav: 'S corp',
     title: 'S Corp for Freelancers (2026): When It Pays Off, and Collective vs Gusto vs a CPA',
     h1: 'S corp services for freelancers',
@@ -165,6 +169,7 @@ export const pages = [
   },
   {
     slug: 'health-insurance',
+    published: '2026-11-30', // staggered release: one new page a week (tools/schedule.mjs)
     nav: 'Health insurance',
     title: 'Health Insurance for Freelancers (2026): Marketplace, HealthSherpa, Stride and Other Options',
     h1: 'Health insurance for freelancers',

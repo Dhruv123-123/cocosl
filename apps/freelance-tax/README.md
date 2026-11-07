@@ -5,6 +5,7 @@
 | `/` | Quarterly estimated tax calculator |
 | `compare/` | Hub + 5 comparison pages: freelancer banking, tax software, invoicing tools, S corp services, health insurance |
 | `mileage/`, `lib/mileage.js` | Gig-driver mileage deduction calculator (72.5¢/mile for 2026): tax saved by logged miles, set-aside per payout and per delivery, own log vs the app's miles |
+| `about/` | Who writes the site, how pages are made (AI-assisted, sourced, dated), how it makes money |
 | `free/`, `free/thanks/` | Lead magnet landing page and download page |
 | `emails/` | 7-email welcome sequence + 3 buyer emails |
 
@@ -40,11 +41,26 @@ Same layout as the other apps (plain HTML/CSS/JS, no build step). The math in `l
 cd apps/freelance-tax
 npm test              # unit tests (Node 20+, no dependencies)
 npm run smoke         # Chromium at desktop + phone width: calculator, mileage/, compare pages, free/, free/thanks/ (needs Playwright)
-node tools/build-pages.mjs   # regenerate compare/ and sitemap.xml after editing tools/compare-data.mjs
+node tools/build-pages.mjs   # regenerate compare/, about/ and sitemap.xml after editing tools/compare-data.mjs
+node tools/seo-audit.mjs     # near-duplicate check: shared wording between pages (fails over 50%)
 ```
 
 **Deploy:** Netlify > Add new site > base directory `apps/freelance-tax` (or include it in the combined
 `apps` site). Then set `siteUrl` in `config.js` and update the canonical/og URLs, `robots.txt` and `sitemap.xml`.
+
+**Search (research/scouting/pinterest-seo.md):**
+- *Near-duplicates:* `tools/seo-audit.mjs` compares every page's wording (digits dropped, 5-word sequences).
+  The highest overlap today is 11% (invoicing vs tax software); the test fails any page over 50%. Run it
+  before adding a batch of similar pages, and merge or `noindex` anything that fails.
+- *Staggered release:* `tools/schedule.mjs` dates every page, one new page a week from Mon Nov 16, 2026
+  (banking first, the driver mileage page on Dec 21). On Netlify the build command
+  `node tools/build-pages.mjs --release` leaves out pages not yet due (folder, sitemap, hub card, nav
+  link). Add a Netlify build hook and call it weekly so each page appears on its date. Committed files
+  keep every page for previews. If you deploy this folder inside the combined `apps` site, run the same
+  command there.
+- *Author:* set `author.name` and a short, true `author.bio` in `config.js` and rebuild. Until then the
+  byline and the Article JSON-LD credit "1099 Money". `about/` says how pages are made: keep it true
+  (if a person stops checking figures, change the wording).
 
 **Turn on the money (config.js):** the product URL and affiliate links containing `REPLACE_ME` stay hidden
 until you paste real ones. Email capture works out of the box with Netlify Forms (form name

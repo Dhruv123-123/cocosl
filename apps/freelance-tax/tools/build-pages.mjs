@@ -1,17 +1,25 @@
-// Builds the comparison pages from tools/compare-data.mjs into compare/ and rewrites sitemap.xml.
-//   node tools/build-pages.mjs           write the files
+// Builds the comparison pages from tools/compare-data.mjs into compare/, the about/ page, and sitemap.xml.
+//   node tools/build-pages.mjs           write the files (every page, whatever its date)
 //   node tools/build-pages.mjs --check   exit 1 if the committed files are out of date (used by the tests)
+//   node tools/build-pages.mjs --release [--date YYYY-MM-DD]
+//                                        deploy build: drop pages not yet due (tools/schedule.mjs)
 // The output is plain static HTML, so the site still deploys with no build step.
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, rm, readdir } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import config from '../config.js';
 import { pages } from './compare-data.mjs';
+import { releases, released } from './schedule.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = config.siteUrl.replace(/\/$/, '');
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const json = (o) => JSON.stringify(o).replace(/</g, '\\u003c');
+const AUTHOR = (config.author && config.author.name || '').trim();
+const longDate = (d) => new Date(d + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+const author = () => (AUTHOR
+  ? { '@type': 'Person', name: AUTHOR, url: `${SITE}/about/` }
+  : { '@type': 'Organization', name: config.brand, url: `${SITE}/about/` });
 
 function shell({ title, description, path, pre, body, ld, current }) {
   const url = `${SITE}/${path}`;
@@ -42,7 +50,7 @@ ${body}
 </main>
 <footer>
 <p>Educational content, not tax, legal or financial advice. Features and prices change: check each provider's site before you sign up. Picks are ours; some links are affiliate links, and we may earn a commission at no cost to you. That never changes the order.</p>
-<p>1099 Money · get paid, keep more, never fear April. Written with help from AI tools.</p>
+<p>1099 Money · get paid, keep more, never fear April. Written with help from AI tools. <a href="${pre}about/">About these pages</a></p>
 </footer>
 <script type="module">
 import config from '${pre}config.js';
@@ -98,6 +106,7 @@ function comparePage(pg) {
   const body = `<p class="crumbs"><a href="${pre}">1099 Money</a> › <a href="../">Compare tools</a> › ${esc(pg.nav)}</p>
 <h1>${esc(pg.h1)}</h1>
 <p class="lede">${esc(pg.lede)}</p>
+<p class="byline">By <a href="${pre}about/">${esc(AUTHOR || config.brand)}</a> · Published <time datetime="${pg.published}">${longDate(pg.published)}</time></p>
 <p class="disclose">How we picked: ${esc(pg.picked)} <span class="aff-note" hidden>Buttons marked "Affiliate link" may earn us a commission at no cost to you.</span></p>
 
 <section class="card"><h2 style="margin-top:0">Quick picks</h2>
@@ -120,14 +129,17 @@ ${faq}
 </section>`;
   const ld = [
     breadcrumbs([['1099 Money', ''], ['Compare tools', 'compare/'], [pg.nav, path]]),
+    { '@context': 'https://schema.org', '@type': 'Article', headline: pg.h1, description: pg.description, url: `${SITE}/${path}`,
+      datePublished: pg.published, dateModified: pg.updated || pg.published, author: author(),
+      publisher: { '@type': 'Organization', name: config.brand, url: `${SITE}/` } },
     { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: pg.faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
   ];
   return [path, shell({ title: pg.title, description: pg.description, path, pre, body, ld, current: 'compare/' })];
 }
 
-function hubPage() {
+function hubPage(list = pages) {
   const pre = '../';
-  const cards = pages.map((pg) => `<a class="card" href="${pg.slug}/"><h2>${esc(pg.h1)}</h2><p>${esc(pg.description)}</p></a>`).join('\n');
+  const cards = list.map((pg) => `<a class="card" href="${pg.slug}/"><h2>${esc(pg.h1)}</h2><p>${esc(pg.description)}</p></a>`).join('\n');
   const body = `<h1>Tools for freelancers, compared</h1>
 <p class="lede">Honest comparisons of the banking, tax, invoicing, S corp and health insurance options US freelancers actually use, with the tax angle on each.</p>
 <p class="disclose">Picks are made on fit, not payout. Some links on these pages are affiliate links: we may earn a commission at no cost to you, and every page says how its picks were made.</p>
@@ -147,16 +159,49 @@ ${paths.map((p) => `  <url><loc>${SITE}/${p}</loc></url>`).join('\n')}
 `;
 }
 
-export function build() {
-  const out = [hubPage(), ...pages.map(comparePage)].map(([p, html]) => [`${p}index.html`, html]);
-  out.push(['sitemap.xml', sitemap(['', 'mileage/', 'free/', 'compare/', ...pages.map((p) => `compare/${p.slug}/`)])]);
+function aboutPage() {
+  const pre = '../';
+  const editor = AUTHOR
+    ? `<h2>Who writes it</h2>\n<p><b>${esc(AUTHOR)}</b>${config.author.bio ? `: ${esc(config.author.bio)}` : ''}</p>`
+    : '';
+  const body = `<h1>About 1099 Money</h1>
+<p class="lede">Free tools and plain-English guides on taxes and money for US freelancers, 1099 workers and gig drivers.</p>
+<section class="prose">
+${editor}
+<h2>How these pages are made</h2>
+<p>Pages are drafted with help from AI tools. The tax figures come from IRS, SSA and healthcare.gov publications, and each page names its sources or the form it relies on. A person decides what gets published and when, and each comparison page shows the date it went up. Figures are for the 2026 tax year and are re-checked each January.</p>
+<p>The calculators run entirely in your browser. Nothing you type is sent anywhere.</p>
+<h2>How the site makes money</h2>
+<p>Some links on the comparison pages are affiliate links, labeled on the page: we may earn a commission at no cost to you. We also sell our own spreadsheets and templates. Neither changes which tools we pick or the order they're in, and every comparison page says how its picks were made.</p>
+<h2>What this isn't</h2>
+<p>This is educational content, not tax, legal or financial advice. For your own situation, check irs.gov or talk to a CPA or enrolled agent.</p>
+</section>`;
+  const ld = [breadcrumbs([['1099 Money', ''], ['About', 'about/']]),
+    { '@context': 'https://schema.org', '@type': 'AboutPage', name: 'About 1099 Money', url: `${SITE}/about/`, publisher: { '@type': 'Organization', name: config.brand, url: `${SITE}/` } }];
+  return ['about/', shell({ title: 'About 1099 Money: How These Pages Are Made', description: 'What 1099 Money is, how its tax pages and calculators are made and checked, and how the site makes money.', path: 'about/', pre, body, ld, current: 'about/' })];
+}
+
+const ALL_PATHS = ['', 'mileage/', 'free/', 'compare/', ...pages.map((p) => `compare/${p.slug}/`), 'about/'];
+
+// today: null builds every page (the committed files); a YYYY-MM-DD builds only what's due by then.
+export function build(today = null) {
+  const due = (path) => !today || released(path, today);
+  const live = pages.filter((p) => due(`compare/${p.slug}/`));
+  const out = [hubPage(live), ...live.map(comparePage), aboutPage()].map(([p, html]) => [`${p}index.html`, html]);
+  out.push(['sitemap.xml', sitemap(ALL_PATHS.filter(due))]);
   return out;
 }
 
+// Paths whose release date is after `today`.
+export const notYet = (today) => Object.keys(releases).filter((p) => !released(p, today));
+
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const check = process.argv.includes('--check');
+  const release = process.argv.includes('--release');
+  const di = process.argv.indexOf('--date');
+  const today = release ? (di > 0 ? process.argv[di + 1] : new Date().toISOString().slice(0, 10)) : null;
   let stale = [];
-  for (const [rel, html] of build()) {
+  for (const [rel, html] of build(today)) {
     const file = join(root, rel);
     if (check) {
       const cur = await readFile(file, 'utf8').catch(() => '');
@@ -166,6 +211,19 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
       await writeFile(file, html);
     }
   }
+  if (release) {
+    // Deploy build only: remove pages that aren't due, and the nav links pointing at them.
+    const hidden = notYet(today);
+    for (const p of hidden) await rm(join(root, p), { recursive: true, force: true });
+    const htmlFiles = async (dir) => (await readdir(dir, { withFileTypes: true, recursive: true }))
+      .filter((d) => d.isFile() && d.name.endsWith('.html')).map((d) => join(d.parentPath || d.path, d.name));
+    for (const f of await htmlFiles(root)) {
+      let html = await readFile(f, 'utf8');
+      for (const p of hidden) html = html.replace(new RegExp(`<a href="(?:\\.\\./)*${p.replace(/[/.-]/g, '\\$&')}"[^>]*>([^<]*)</a>`, 'g'), '');
+      await writeFile(f, html);
+    }
+    console.log(`release ${today}: hid ${hidden.length ? hidden.join(', ') : 'nothing'}`);
+  }
   if (check && stale.length) { console.error('Out of date, run node tools/build-pages.mjs:', stale.join(', ')); process.exit(1); }
-  console.log(check ? 'pages up to date' : `wrote ${build().length} files`);
+  console.log(check ? 'pages up to date' : `wrote ${build(today).length} files`);
 }

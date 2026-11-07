@@ -5,6 +5,10 @@ export default {
   handle: '@1099money',
   siteUrl: 'https://1099money.netlify.app',            // update after deploying
 
+  // Byline and article author (compare pages, about/). Leave name empty and pages are credited to
+  // "1099 Money". Only a real person, with a short bio of true statements: no credentials you don't have.
+  author: { name: '', bio: '' },
+
   // Email capture. provider: 'netlify' (zero setup on Netlify), 'buttondown', 'kit', 'mailerlite',
   // 'formspree' or 'none'. For anything except netlify, paste the form action URL.
   email: {

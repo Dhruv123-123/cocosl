@@ -5,43 +5,37 @@
   "idea_angle": "S corp election deadline for 2027, and why most freelancers can skip it.",
   "script": {
    "title": "S corp for 2027? The deadline is March 15",
-   "hook": "Thinking about an S corp for this year? There's a deadline in two weeks: March fifteenth.",
+   "hook": "An S corp election is due March fifteenth for all of twenty twenty-seven. First, three myths.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Thinking about an S corp for this year? There's a deadline in two weeks: March fifteenth.",
-     "on_screen_text": "S corp for 2027? Mar 15",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes pointing at a calendar with one date circled. No text, no logos, no real people."
+     "narration": "An S corp election is due March fifteenth for all of twenty twenty-seven. First, three myths.",
+     "on_screen_text": "S corp myths · due Mar 15",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a form and a calendar. No text, no logos, no real people."
     },
     {
-     "heading": "Form",
-     "narration": "To have S corp status cover all of twenty twenty-seven, the election, Form twenty-five fifty-three, is generally due by March fifteenth. You need an LLC or corporation first.",
-     "on_screen_text": "Form 2553, due Mar 15",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with a coral stamp. No text, no logos, no real people."
+     "heading": "Myth 1",
+     "narration": "Myth: an S corp means no payroll tax. Fact: you pay it on a reasonable salary through payroll. It's saved only on profit above that.",
+     "on_screen_text": "FACT: you still pay on salary",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a split card, myth and fact. No text, no logos, no real people."
     },
     {
-     "heading": "Saves",
-     "narration": "It can cut Social Security and Medicare tax, because you only pay it on the salary you give yourself, not on the rest of the profit.",
-     "on_screen_text": "Saves payroll tax on profit above salary",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a pie with one slice lifted out. No text, no logos, no real people."
+     "heading": "Myth 2",
+     "narration": "Myth: it's free to run. Fact: payroll, a separate business return and state fees often cost two to four thousand dollars a year.",
+     "on_screen_text": "FACT: $2–4K a year to run",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. coins leaving a jar. No text, no logos, no real people."
     },
     {
-     "heading": "Costs",
-     "narration": "But you must pay yourself a reasonable salary through payroll, file a separate business return, and pay state fees. That's often two to four thousand dollars a year.",
-     "on_screen_text": "Costs: payroll, return, fees",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three small bills. No text, no logos, no real people."
+     "heading": "Myth 3",
+     "narration": "Myth: everyone should do it. Fact: under roughly sixty to eighty thousand of profit, most freelancers come out behind.",
+     "on_screen_text": "FACT: under ~$60–80K, skip",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a scale tipping the wrong way. No text, no logos, no real people."
     },
     {
-     "heading": "Rule",
-     "narration": "Under roughly sixty to eighty thousand of profit, most freelancers come out behind. Run your own numbers with a professional first.",
-     "on_screen_text": "Under ~$60–80K: usually skip",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a balance scale tipping. No text, no logos, no real people."
-    },
-    {
-     "heading": "Close",
-     "narration": "Missed the date? Late-election relief exists, so ask before you panic.",
-     "on_screen_text": "Missed it? Ask about relief",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a small question mark. No text, no logos, no real people."
+     "heading": "Deadline",
+     "narration": "Still interested? It's Form twenty-five fifty-three by March fifteenth, after you have an LLC or corporation. Run your numbers with a professional, and if you miss it, ask about late-election relief.",
+     "on_screen_text": "Form 2553 by Mar 15",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a form. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one freelancer money move a week.",
@@ -65,7 +59,8 @@
     "Typical S corp running costs",
     "Late election relief (Rev. Proc. 2013-30)"
    ]
-  }
+  },
+  "format_style": "myth-vs-fact"
  },
  {
   "format": "short",
@@ -133,7 +128,8 @@
     "Apr 15, 2027 filing and Q1 deadline",
     "Extension does not extend time to pay"
    ]
-  }
+  },
+  "format_style": "deadline-alert"
  },
  {
   "format": "short",
@@ -201,7 +197,8 @@
     "Deadline Apr 15, 2027 for TY2026 contributions",
     "~10% federal saving at $60K profit (12% bracket × QBI interaction)"
    ]
-  }
+  },
+  "format_style": "deadline-alert"
  },
  {
   "format": "short",
@@ -269,7 +266,8 @@
     "$60K profit → ~$11,152 contribution, ~$1,071 federal saving (1099 Money tax model)",
     "Deadline incl. extensions"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -338,7 +336,8 @@
     "Failure-to-pay 0.5%/month max 25%",
     "Interest accrues"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -346,43 +345,37 @@
   "idea_angle": "A big refund means you over-saved; use it to set 2027 better.",
   "script": {
    "title": "Getting a big refund as a freelancer? Read this.",
-   "hook": "Getting a big refund this spring? Nice. But it means the IRS held your money all year for free.",
+   "hook": "A common question: is a big refund good news for a freelancer? Partly. It means you lent the IRS money all year for free.",
    "segments": [
     {
-     "heading": "Hook",
-     "narration": "Getting a big refund this spring? Nice. But it means the IRS held your money all year for free.",
-     "on_screen_text": "Big refund = interest-free loan",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a coin out to a large hand. No text, no logos, no real people."
+     "heading": "Common question",
+     "narration": "A common question: is a big refund good news for a freelancer? Partly. It means you lent the IRS money all year for free.",
+     "on_screen_text": "Common question: big refund good?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a speech bubble with a coin. No text, no logos, no real people."
     },
     {
      "heading": "Why",
-     "narration": "For freelancers it usually means your estimated payments were higher than your actual tax.",
-     "on_screen_text": "You paid more than you owed",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a scale tipping. No text, no logos, no real people."
-    },
-    {
-     "heading": "Fine",
-     "narration": "That's fine if your income was unpredictable. Overpaying is cheaper than a penalty.",
-     "on_screen_text": "Better than a penalty",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small shield. No text, no logos, no real people."
+     "narration": "It usually means your estimated payments were higher than your real tax. That's better than a penalty, especially if income was unpredictable.",
+     "on_screen_text": "Overpaid, but better than a penalty",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a scale with a coin too many. No text, no logos, no real people."
     },
     {
      "heading": "Fix",
-     "narration": "But for twenty twenty-seven, look at your real tax as a share of profit and adjust your set-aside to match.",
+     "narration": "For twenty twenty-seven, check your real tax as a share of profit and set your set-aside to match.",
      "on_screen_text": "Adjust your 2027 set-aside",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a dial being turned. No text, no logos, no real people."
     },
     {
      "heading": "Option",
-     "narration": "You can also apply the refund to this year's first estimated payment instead of taking it as cash.",
+     "narration": "Or apply the refund to your first twenty twenty-seven estimated payment instead of taking cash.",
      "on_screen_text": "Or apply it to Q1 2027",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an arrow from one coin to a calendar. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin moving to a new jar. No text, no logos, no real people."
     },
     {
      "heading": "Close",
-     "narration": "A refund isn't a bonus. It's your own money coming back late.",
+     "narration": "A refund isn't a bonus. It's your money, back late.",
      "on_screen_text": "Your money, back late",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes shrugging. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a clock. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one freelancer money move a week.",
@@ -404,7 +397,8 @@
    "claims_to_verify": [
     "Refund can be applied to next year's estimated tax"
    ]
-  }
+  },
+  "format_style": "question-reply"
  },
  {
   "format": "short",
@@ -471,7 +465,8 @@
     "$60K single → $12,037 federal (1099 Money model, 2026)",
     "Safe harbor 100% of prior-year tax (110% if AGI > $150K)"
    ]
-  }
+  },
+  "format_style": "on-screen-calculation"
  },
  {
   "format": "short",
@@ -539,7 +534,8 @@
     "Card processor fees apply",
     "Direct Pay reason options"
    ]
-  }
+  },
+  "format_style": "list"
  },
  {
   "format": "short",
@@ -606,7 +602,8 @@
     "IRS guidance on corrected forms after filing",
     "1040-X e-file availability"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -674,7 +671,8 @@
     "Mar 15, 2027 due date for 1065 / 1120-S",
     "Single-member LLC disregarded by default"
    ]
-  }
+  },
+  "format_style": "deadline-alert"
  },
  {
   "format": "short",
@@ -741,7 +739,8 @@
     "2026 1099-NEC threshold $2,000",
     "All income taxable regardless of form"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -749,43 +748,37 @@
   "idea_angle": "Amending with Form 1040-X.",
   "script": {
    "title": "Made a mistake after filing? Use Form 1040-X",
-   "hook": "Found a mistake after you filed? Don't file a second return. Use Form ten forty X.",
+   "hook": "Found a mistake after filing? Three rules for Form ten forty X, from least to most urgent.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Found a mistake after you filed? Don't file a second return. Use Form ten forty X.",
-     "on_screen_text": "Mistake? Form 1040-X",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a form with a coral X. No text, no logos, no real people."
+     "narration": "Found a mistake after filing? Three rules for Form ten forty X, from least to most urgent.",
+     "on_screen_text": "1040-X: 3 rules",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes on a podium. No text, no logos, no real people."
     },
     {
-     "heading": "When",
-     "narration": "Amend for income you missed, a deduction you forgot, or the wrong filing status. Not for math errors. The IRS fixes those itself.",
-     "on_screen_text": "Missed income or deduction",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a list with two items circled. No text, no logos, no real people."
+     "heading": "Number 3",
+     "narration": "Number three: math errors don't need it. The IRS fixes those itself.",
+     "on_screen_text": "#3 Math errors: no need",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calculator with a check. No text, no logos, no real people."
     },
     {
-     "heading": "How",
-     "narration": "Most software can e-file a ten forty X. You show the original numbers, the corrected ones and why.",
-     "on_screen_text": "Original · corrected · why",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three columns. No text, no logos, no real people."
+     "heading": "Number 2",
+     "narration": "Number two: missed income, a forgotten deduction or the wrong filing status do. Software can e-file it with the original numbers, the corrected ones and why.",
+     "on_screen_text": "#2 Missed income or deduction",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two forms side by side. No text, no logos, no real people."
     },
     {
-     "heading": "Owe",
-     "narration": "If you owe more, pay it quickly. Interest runs from April fifteenth.",
-     "on_screen_text": "Owe more? Pay quickly",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small clock. No text, no logos, no real people."
-    },
-    {
-     "heading": "Refund",
-     "narration": "If you're owed money, you generally have three years from filing to claim it.",
-     "on_screen_text": "Refund: ~3 years to claim",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with three pages. No text, no logos, no real people."
+     "heading": "Number 1",
+     "narration": "Number one: if you owe more, file and pay fast. Interest runs from April fifteenth. If you're owed money, you generally have three years.",
+     "on_screen_text": "#1 Owe more? Pay fast",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the top podium step with a clock. No text, no logos, no real people."
     },
     {
      "heading": "Close",
-     "narration": "Your state return may need amending too.",
-     "on_screen_text": "Check your state too",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes pointing at a second form. No text, no logos, no real people."
+     "narration": "Never file a second regular return, and check whether your state needs amending too.",
+     "on_screen_text": "No second return · check state",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding two forms. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one freelancer money move a week.",
@@ -807,7 +800,8 @@
     "Refund claim window: later of 3 years from filing or 2 years from payment",
     "1040-X e-file"
    ]
-  }
+  },
+  "format_style": "countdown"
  },
  {
   "format": "short",
@@ -873,7 +867,8 @@
     "State estimated payment rules vary",
     "Part-year resident filing"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -938,7 +933,8 @@
    "claims_to_verify": [
     "$12,037 on $60K single (1099 Money model)"
    ]
-  }
+  },
+  "format_style": "on-screen-calculation"
  },
  {
   "format": "short",
@@ -1006,7 +1002,8 @@
     "Safe harbor 100%/110% (AGI > $150K)",
     "Apr 15, 2027 Q1 due date"
    ]
-  }
+  },
+  "format_style": "deadline-alert"
  },
  {
   "format": "short",
@@ -1014,41 +1011,35 @@
   "idea_angle": "No tax liability last year means no penalty this year.",
   "script": {
    "title": "Owed no tax last year? You may owe no penalty this year",
-   "hook": "First year freelancing, and you owed zero tax last year? There's a rule that might protect you.",
+   "hook": "A common question: I had zero tax last year. Do I need to pay quarterly this year? Maybe not, for the penalty.",
    "segments": [
     {
-     "heading": "Hook",
-     "narration": "First year freelancing, and you owed zero tax last year? There's a rule that might protect you.",
-     "on_screen_text": "Owed $0 last year?",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding an empty coin purse. No text, no logos, no real people."
+     "heading": "Common question",
+     "narration": "A common question: I had zero tax last year. Do I need to pay quarterly this year? Maybe not, for the penalty.",
+     "on_screen_text": "Common question: $0 tax last year?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a speech bubble with a zero. No text, no logos, no real people."
     },
     {
      "heading": "Rule",
-     "narration": "If your total tax for the previous year was zero, and that was a full twelve-month year as a US citizen or resident, there's generally no underpayment penalty this year.",
-     "on_screen_text": "$0 tax last year = no penalty",
+     "narration": "If last year's total tax was zero, and it was a full twelve-month year as a US citizen or resident, there's generally no underpayment penalty this year.",
+     "on_screen_text": "$0 total tax → no penalty",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a shield with a zero. No text, no logos, no real people."
     },
     {
-     "heading": "Not",
-     "narration": "That's zero total tax, not zero owed at filing. If tax was withheld from a job, you probably had tax.",
-     "on_screen_text": "Zero total tax, not zero due",
+     "heading": "Careful",
+     "narration": "Zero total tax, not zero owed at filing. If a job withheld tax, you probably had tax.",
+     "on_screen_text": "Total tax, not balance due",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with one line circled. No text, no logos, no real people."
     },
     {
      "heading": "Still",
-     "narration": "You still owe this year's tax next April. It could be a big bill.",
-     "on_screen_text": "You still owe the tax",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a large coin. No text, no logos, no real people."
-    },
-    {
-     "heading": "Do",
-     "narration": "So save as if you were paying quarterly, even if you skip the payments.",
-     "on_screen_text": "Save anyway",
+     "narration": "You still owe this year's tax next April, and it can be big. So save as if you were paying quarterly.",
+     "on_screen_text": "Still save every quarter",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a jar filling. No text, no logos, no real people."
     },
     {
      "heading": "Close",
-     "narration": "Use the calculator to see how big that April bill could be.",
+     "narration": "See how big that April bill could be before it arrives.",
      "on_screen_text": "See your number first",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a calculator. No text, no logos, no real people."
     }
@@ -1072,7 +1063,8 @@
    "claims_to_verify": [
     "Form 2210 exception: no tax liability for full 12-month prior year"
    ]
-  }
+  },
+  "format_style": "question-reply"
  },
  {
   "format": "short",
@@ -1080,43 +1072,49 @@
   "idea_angle": "Uneven income and the annualized method.",
   "script": {
    "title": "Most of your income comes late in the year? Read this.",
-   "hook": "Did most of your money come in at the end of the year? You might not owe the penalty you think.",
+   "hook": "Here's an uneven year for a fictional freelancer, Kim, quarter by quarter.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Did most of your money come in at the end of the year? You might not owe the penalty you think.",
-     "on_screen_text": "Earned most of it late?",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a small plant growing a big leaf at the end. No text, no logos, no real people."
+     "narration": "Here's an uneven year for a fictional freelancer, Kim, quarter by quarter.",
+     "on_screen_text": "An uneven year, quarter by quarter",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with four bars. No text, no logos, no real people."
     },
     {
-     "heading": "Normal",
-     "narration": "Normally the IRS assumes you earned evenly and expects four equal payments.",
-     "on_screen_text": "IRS assumes equal quarters",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four equal blocks. No text, no logos, no real people."
+     "heading": "Q1",
+     "narration": "January to March: five thousand of profit.",
+     "on_screen_text": "Q1: $5,000",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small bar. No text, no logos, no real people."
     },
     {
-     "heading": "Uneven",
-     "narration": "If your income really came late, the annualized method lets each payment match what you'd actually earned by then.",
-     "on_screen_text": "Annualized: pay as you earn",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four blocks growing in size. No text, no logos, no real people."
+     "heading": "Q2",
+     "narration": "April and May: five thousand more. Ten thousand so far.",
+     "on_screen_text": "Q2: +$5,000 = $10,000",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a second small bar. No text, no logos, no real people."
     },
     {
-     "heading": "How",
-     "narration": "It's Schedule AI on Form twenty-two ten. Software does the math if you give it income by period.",
-     "on_screen_text": "Form 2210, Schedule AI",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with four columns. No text, no logos, no real people."
+     "heading": "Q3",
+     "narration": "June to August: ten thousand. Twenty thousand so far.",
+     "on_screen_text": "Q3: +$10,000 = $20,000",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a taller bar. No text, no logos, no real people."
     },
     {
-     "heading": "Records",
-     "narration": "You need income and expenses split by the IRS periods. A good log makes this easy.",
-     "on_screen_text": "Needs income by period",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a ledger with dividers. No text, no logos, no real people."
+     "heading": "Q4",
+     "narration": "September to December: forty thousand. Sixty thousand for the year.",
+     "on_screen_text": "Q4: +$40,000 = $60,000",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a very tall bar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Method",
+     "narration": "The IRS assumes equal quarters. The annualized method, Schedule AI on Form twenty-two ten, lets Kim's payments match what she'd earned by each date. It needs income by period, so track by quarter.",
+     "on_screen_text": "Annualized: Form 2210, Schedule AI",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. bars matched by coins. No text, no logos, no real people."
     },
     {
      "heading": "Close",
      "narration": "Uneven year ahead? Track by quarter from day one.",
      "on_screen_text": "Track by quarter",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a divided notebook. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a ledger. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one freelancer money move a week.",
@@ -1138,7 +1136,8 @@
    "claims_to_verify": [
     "Schedule AI periods: Jan–Mar, Jan–May, Jan–Aug, Jan–Dec"
    ]
-  }
+  },
+  "format_style": "real-numbers"
  },
  {
   "format": "short",
@@ -1204,7 +1203,8 @@
    "claims_to_verify": [
     "Records generally kept 3 years"
    ]
-  }
+  },
+  "format_style": "list"
  },
  {
   "format": "short",
@@ -1271,7 +1271,8 @@
     "SSA earnings record posting timing",
     "Correction window (3 years, 3 months, 15 days, with exceptions)"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1340,7 +1341,8 @@
     "SEP deadline incl. extensions",
     "IRA/HSA deadline Apr 15 regardless of extension"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1406,7 +1408,8 @@
    "claims_to_verify": [
     "IRS record retention periods (3/6/7 years)"
    ]
-  }
+  },
+  "format_style": "list"
  },
  {
   "format": "short",
@@ -1474,7 +1477,8 @@
    "claims_to_verify": [
     "Apr 15, 2027 deadlines"
    ]
-  }
+  },
+  "format_style": "deadline-alert"
  },
  {
   "format": "carousel",
@@ -2616,6 +2620,12 @@
     "Simplified home office $5/sq ft up to 300 sq ft",
     "Chapter timestamps must match final edit"
    ]
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Screen recording of the IRS Free File landing page and the online account's payment history view (logged-out or demo screens only)",
+   "chapter": "Step one"
   }
  },
  {
@@ -2764,6 +2774,12 @@
     "Example penalty amounts",
     "Chapter timestamps must match final edit"
    ]
+  },
+  "format_style": "explainer",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Screen recording of the IRS Online Payment Agreement landing page, showing short-term vs long-term options (nothing submitted)",
+   "chapter": "Long"
   }
  },
  {
@@ -2900,6 +2916,12 @@
     "SEHI $5K at $60K saves ~$480",
     "Chapter timestamps must match final edit"
    ]
+  },
+  "format_style": "countdown",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Before/after chart of the example's tax as each move (IRA, HSA, SEP) is added, from the script's numbers",
+   "chapter": "Example"
   }
  },
  {
@@ -3040,6 +3062,12 @@
     "Safe harbor thresholds",
     "Chapter timestamps must match final edit"
    ]
+  },
+  "format_style": "real-numbers",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Chart of Priya's two April 15 payments, the 2026 balance and the Q1 2027 estimate, side by side from the script's figures",
+   "chapter": "Priya numbers"
   }
  }
 ]

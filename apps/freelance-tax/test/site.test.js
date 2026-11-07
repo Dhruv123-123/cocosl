@@ -3,7 +3,9 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import config from '../config.js';
 import { pages } from '../tools/compare-data.mjs';
-import { build } from '../tools/build-pages.mjs';
+import { build, notYet } from '../tools/build-pages.mjs';
+import { releases, LAUNCH } from '../tools/schedule.mjs';
+import { audit, LIMIT_SHARED } from '../tools/seo-audit.mjs';
 import { tagCheckout, pageName, live } from '../site.js';
 
 test('compare pages and sitemap are up to date with compare-data.mjs', () => {
@@ -40,4 +42,41 @@ test('page names used as utm_campaign', () => {
   assert.equal(pageName('/free/thanks/'), 'free-thanks');
   assert.equal(pageName('/compare/tax-software/index.html'), 'compare-tax-software');
   assert.equal(pageName('/apps/freelance-tax/compare/'), 'compare');
+});
+
+test('no page is a near-duplicate of another (research/scouting/pinterest-seo.md)', () => {
+  const rows = audit();
+  assert.ok(rows.length >= 9, 'audit found the pages');
+  for (const r of rows) assert.ok(r.shared <= LIMIT_SHARED, `${r.path} shares ${Math.round(r.shared * 100)}% with ${r.closest}`);
+});
+
+test('compare pages carry a byline, a staggered date and Article JSON-LD with an author', () => {
+  const dates = pages.map((p) => p.published);
+  assert.equal(new Set(dates).size, dates.length, 'one page a week, not all on one day');
+  assert.ok(dates.every((d) => /^\d{4}-\d{2}-\d{2}$/.test(d) && d >= LAUNCH));
+  for (const pg of pages) {
+    const html = build().find(([r]) => r === `compare/${pg.slug}/index.html`)[1];
+    const art = [...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)].map((m) => JSON.parse(m[1])).find((o) => o['@type'] === 'Article');
+    assert.ok(art && art.datePublished === pg.published && art.author && art.author.name, pg.slug);
+    assert.match(html, /class="byline">By <a href="\.\.\/\.\.\/about\/">/);
+  }
+  assert.equal(config.author.name, '', 'no invented author: set a real name in config.js');
+});
+
+test('release build leaves out pages that are not due yet', () => {
+  const at = (d) => build(d).map(([r]) => r);
+  const first = at(LAUNCH);
+  assert.ok(first.includes('compare/freelancer-banking/index.html'));
+  assert.ok(!first.includes('compare/tax-software/index.html'));
+  const sitemap = build(LAUNCH).find(([r]) => r === 'sitemap.xml')[1];
+  assert.ok(!sitemap.includes('mileage/') && !sitemap.includes('s-corp-services'));
+  assert.deepEqual(notYet('2027-01-01'), []);
+  assert.equal(at('2027-01-01').length, build().length);
+  assert.ok(Object.values(releases).every((d) => d <= '2026-12-31'), 'every page live before 1099 season');
+});
+
+test('every page links to about/', () => {
+  for (const f of ['index.html', 'mileage/index.html', 'free/index.html', 'free/thanks/index.html', 'compare/index.html', 'about/index.html']) {
+    assert.match(readFileSync(new URL(`../${f}`, import.meta.url), 'utf8'), /href="(\.\.\/)*about\/">About these pages/, f);
+  }
 });

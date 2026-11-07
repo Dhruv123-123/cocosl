@@ -60,7 +60,8 @@
     "2026 standard mileage rate 72.5 cents",
     "$30K payouts, 15K miles, single, no W-2: tax ≈ $2,836 vs ≈ $5,181"
    ]
-  }
+  },
+  "format_style": "on-screen-calculation"
  },
  {
   "format": "short",
@@ -123,7 +124,8 @@
     "Apps often report on-trip miles only (varies by app)",
     "IRS log requirements: date, miles, business purpose, made at or near the time"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -186,7 +188,8 @@
     "Commuting not deductible (Pub 463)",
     "Home-to-first-pickup treatment is unsettled; conservative approach suggested"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -249,7 +252,8 @@
     "$30K payouts, 15K miles: ≈ $2,836 federal, 9.45% of payouts",
     "Per delivery ≈ $0.95 at 3,000 deliveries"
    ]
-  }
+  },
+  "format_style": "on-screen-calculation"
  },
  {
   "format": "short",
@@ -257,37 +261,37 @@
   "idea_angle": "Tips are taxable income; the new tips deduction may cut income tax but not self-employment tax.",
   "script": {
    "title": "Delivery tips are income, and there's a new deduction",
-   "hook": "Are your tips taxed? Yes. But there's a new deduction that may help.",
+   "hook": "No tax on tips? Three myths drivers believe.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Are your tips taxed? Yes. But there's a new deduction that may help.",
-     "on_screen_text": "Tips: taxed, but…",
+     "narration": "No tax on tips? Three myths drivers believe.",
+     "on_screen_text": "Tips: 3 myths",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a tip jar. No text, no logos, no real people."
     },
     {
-     "heading": "Income",
-     "narration": "App tips and cash tips are both income. They go on your return with the rest of your payouts.",
-     "on_screen_text": "App + cash tips = income",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone and paper bills together. No text, no logos, no real people."
+     "heading": "Myth 1",
+     "narration": "Myth: app tips aren't income. Fact: app tips and cash tips are both income, reported with your payouts.",
+     "on_screen_text": "FACT: all tips are income",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a split card, myth and fact. No text, no logos, no real people."
     },
     {
-     "heading": "New",
-     "narration": "From twenty twenty-five through twenty twenty-eight, a new deduction for qualified tips, up to twenty-five thousand dollars a year, can lower your income tax, if your job is on the IRS list of tipped occupations. Check that yours is.",
-     "on_screen_text": "New: up to $25K tips deduction",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a stamp reading new on a form. No text, no logos, no real people."
+     "heading": "Myth 2",
+     "narration": "Myth: tips are now tax-free. Fact: from twenty twenty-five through twenty twenty-eight there's a deduction for qualified tips, up to twenty-five thousand dollars, if your job is on the IRS list. Check yours.",
+     "on_screen_text": "FACT: a deduction, if you qualify",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with a new line. No text, no logos, no real people."
     },
     {
-     "heading": "But",
-     "narration": "It doesn't cut self-employment tax. You still owe about fifteen percent on tips as part of your profit. It also shrinks at higher incomes.",
-     "on_screen_text": "Still owe self-employment tax",
+     "heading": "Myth 3",
+     "narration": "Myth: it covers all tax on tips. Fact: it lowers income tax only. You still owe self-employment tax on tips, and it shrinks at higher incomes.",
+     "on_screen_text": "FACT: SE tax still applies",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with a small bite missing. No text, no logos, no real people."
     },
     {
      "heading": "Close",
-     "narration": "So keep a record of your tips from each app, and keep setting money aside.",
+     "narration": "Track tips per app and keep setting money aside.",
      "on_screen_text": "Track tips per app",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a small ledger. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a ledger. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one driver tax move a week.",
@@ -312,7 +316,8 @@
     "Doesn't reduce SE tax",
     "Rideshare and delivery occupations on Treasury list (verify final regs)"
    ]
-  }
+  },
+  "format_style": "myth-vs-fact"
  },
  {
   "format": "short",
@@ -376,7 +381,8 @@
     "1099-K threshold $20,000 and 200 transactions",
     "Which form depends on the app"
    ]
-  }
+  },
+  "format_style": "comparison"
  },
  {
   "format": "short",
@@ -439,7 +445,8 @@
     "Rideshare 1099-K may report gross fares including platform fees (varies)",
     "Fees shown in tax summary are deductible expenses"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -508,7 +515,8 @@
     "Standard rate covers gas, oil, repairs, insurance, depreciation",
     "Parking and tolls deductible separately"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -516,37 +524,31 @@
   "idea_angle": "Multi-apping: one log for the shift, count each mile once.",
   "script": {
    "title": "Running two apps at once? Log the miles once",
-   "hook": "Running DoorDash and Uber Eats at the same time? Here's how to log the miles without getting it wrong.",
+   "hook": "A common question from drivers: I run DoorDash and Uber Eats at once. Do I add up both apps' miles? No.",
    "segments": [
     {
-     "heading": "Hook",
-     "narration": "Running DoorDash and Uber Eats at the same time? Here's how to log the miles without getting it wrong.",
-     "on_screen_text": "Multi-apping? Log once",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes juggling two phones. No text, no logos, no real people."
+     "heading": "Common question",
+     "narration": "A common question from drivers: I run DoorDash and Uber Eats at once. Do I add up both apps' miles? No.",
+     "on_screen_text": "Common question: add both apps' miles?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a speech bubble with two phones. No text, no logos, no real people."
     },
     {
-     "heading": "Once",
-     "narration": "Each mile counts once, no matter how many apps are open. Don't add up each app's miles. They overlap.",
+     "heading": "Answer",
+     "narration": "Each mile counts once, however many apps are open. The apps' miles overlap.",
      "on_screen_text": "Each mile counts once",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two overlapping road shapes. No text, no logos, no real people."
     },
     {
-     "heading": "Log",
-     "narration": "Log the shift, not the app: start and end odometer readings, and write which apps were on.",
+     "heading": "How",
+     "narration": "Log the shift instead: odometer at the start and the end, and which apps were on.",
      "on_screen_text": "Log the shift: odometer start/end",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a notebook with two numbers. No text, no logos, no real people."
     },
     {
-     "heading": "Income",
-     "narration": "Income is the other way round. Add every app's payouts together, tips included.",
-     "on_screen_text": "Income: add every app",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three coins merging into one pile. No text, no logos, no real people."
-    },
-    {
      "heading": "Close",
-     "narration": "One log, every app's summary, and you're ready to file.",
-     "on_screen_text": "One log + every summary",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding one notebook and three phones. No text, no logos, no real people."
+     "narration": "Income is the opposite: add every app's payouts and tips together.",
+     "on_screen_text": "Income: add every app",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with three phones. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one driver tax move a week.",
@@ -571,7 +573,8 @@
     "A mile can only be deducted once",
     "IRS record requirements for mileage"
    ]
-  }
+  },
+  "format_style": "question-reply"
  },
  {
   "format": "short",
@@ -641,6 +644,7 @@
     "Quarterly due dates Apr 15, Jun 15, Sep 15, Jan 15",
     "Withholding counts as paid evenly"
    ]
-  }
+  },
+  "format_style": "explainer"
  }
 ]

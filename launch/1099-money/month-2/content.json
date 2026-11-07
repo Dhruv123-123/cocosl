@@ -65,7 +65,8 @@
     "Commuting is not deductible",
     "2027 rate published separately"
    ]
-  }
+  },
+  "format_style": "how-to"
  },
  {
   "format": "short",
@@ -131,7 +132,8 @@
    "claims_to_verify": [
     "Jan 15, 2027 is the Q4 2026 due date"
    ]
-  }
+  },
+  "format_style": "list"
  },
  {
   "format": "short",
@@ -139,43 +141,43 @@
   "idea_angle": "Your 2026 total tax becomes your 2027 safe harbor.",
   "script": {
    "title": "Your 2027 safe harbor is already set",
-   "hook": "Here's the good news about twenty twenty-seven taxes: the number that protects you from penalties is already decided.",
+   "hook": "Eight thousand dollars divided by four. That's how simple your twenty twenty-seven safe harbor can be.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Here's the good news about twenty twenty-seven taxes: the number that protects you from penalties is already decided.",
-     "on_screen_text": "Your 2027 safe harbor is set",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes standing under a small umbrella labeled only with a check mark. No text, no logos, no real people."
+     "narration": "Eight thousand dollars divided by four. That's how simple your twenty twenty-seven safe harbor can be.",
+     "on_screen_text": "$8,000 ÷ 4",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes next to a calculator. No text, no logos, no real people."
     },
     {
-     "heading": "Rule",
-     "narration": "Pay at least your twenty twenty-six total tax over four on-time payments in twenty twenty-seven, and you generally avoid the underpayment penalty. One hundred ten percent if your twenty twenty-six AGI was over a hundred and fifty thousand.",
-     "on_screen_text": "100% of 2026 tax (110% over $150K AGI)",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a balance scale with two equal coin stacks. No text, no logos, no real people."
+     "heading": "Find",
+     "narration": "Find total tax on the twenty twenty-six return you're about to file. Say it's eight thousand.",
+     "on_screen_text": "2026 total tax: $8,000",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with one line circled. No text, no logos, no real people."
     },
     {
-     "heading": "Where",
-     "narration": "That number is the total tax line on the twenty twenty-six return you're about to file.",
-     "on_screen_text": "Total tax line, 2026 return",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with one line highlighted in coral. No text, no logos, no real people."
+     "heading": "Divide",
+     "narration": "Divide by four: two thousand by each twenty twenty-seven deadline, on time, and you generally avoid the penalty.",
+     "on_screen_text": "$8,000 ÷ 4 = $2,000",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four coins in a row. No text, no logos, no real people."
     },
     {
-     "heading": "Example",
-     "narration": "Total tax of eight thousand? Two thousand by each twenty twenty-seven deadline covers you, even if you earn more.",
-     "on_screen_text": "$8,000 → $2,000 a quarter",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four equal coin stacks. No text, no logos, no real people."
+     "heading": "High",
+     "narration": "AGI over a hundred and fifty thousand? Use a hundred ten percent: eighty-eight hundred, so twenty-two hundred each.",
+     "on_screen_text": "Over $150K AGI: × 1.1",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a fifth coin added. No text, no logos, no real people."
     },
     {
-     "heading": "But",
-     "narration": "You'd still owe the rest when you file. So keep setting aside your real percentage.",
-     "on_screen_text": "You still owe the rest in April",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coral vault with a small gauge. No text, no logos, no real people."
+     "heading": "Catch",
+     "narration": "It stops the penalty, not the tax. Earn more and you'll still owe the rest when you file.",
+     "on_screen_text": "Still owe the rest at filing",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small bill waiting. No text, no logos, no real people."
     },
     {
      "heading": "Close",
-     "narration": "File early, and you'll know your number by March.",
+     "narration": "File early and you'll know your number by March.",
      "on_screen_text": "File early, know your number",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a finished form. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a calendar. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one freelancer money move a week.",
@@ -198,7 +200,8 @@
     "Safe harbor 100% / 110% over $150K AGI",
     "Total tax line on Form 1040"
    ]
-  }
+  },
+  "format_style": "on-screen-calculation"
  },
  {
   "format": "short",
@@ -267,7 +270,8 @@
     "$1,000 threshold",
     "Q4 covers Sep–Dec"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -336,7 +340,8 @@
     "90% of $12,000 = $10,800; − $4,875 = $5,925",
     "Lesser-of rule"
    ]
-  }
+  },
+  "format_style": "how-to"
  },
  {
   "format": "short",
@@ -344,43 +349,31 @@
   "idea_angle": "The underpayment penalty works like interest, so paying late beats not paying.",
   "script": {
    "title": "Skipped a quarterly payment? Pay now, not April",
-   "hook": "Skipped a quarterly tax payment this year? Don't wait until April to fix it.",
+   "hook": "A common question: I skipped a quarterly payment. Should I just wait until April? Short answer: pay now.",
    "segments": [
     {
-     "heading": "Hook",
-     "narration": "Skipped a quarterly tax payment this year? Don't wait until April to fix it.",
-     "on_screen_text": "Skipped one? Pay now.",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes running toward a calendar with a coin. No text, no logos, no real people."
+     "heading": "Common question",
+     "narration": "A common question: I skipped a quarterly payment. Should I just wait until April? Short answer: pay now.",
+     "on_screen_text": "Common question: skipped one?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a speech bubble with a coin. No text, no logos, no real people."
     },
     {
-     "heading": "How it works",
-     "narration": "The underpayment penalty works a lot like interest. It's figured on how much you were short, for how many days.",
-     "on_screen_text": "Penalty ≈ interest × days short",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small meter ticking. No text, no logos, no real people."
-    },
-    {
-     "heading": "So",
-     "narration": "Every day you're short adds a little. Pay the missing amount now and that quarter stops growing.",
-     "on_screen_text": "Pay now → it stops growing",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the meter slowing to a stop. No text, no logos, no real people."
+     "heading": "Why",
+     "narration": "The underpayment penalty works like interest. It's figured on how much you were short, for how many days. Pay now and that quarter stops growing.",
+     "on_screen_text": "Penalty ≈ interest on days short",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a meter slowing down. No text, no logos, no real people."
     },
     {
      "heading": "How",
-     "narration": "Make an extra estimated payment for tax year twenty twenty-six at irs.gov/payments. There's no special form.",
-     "on_screen_text": "Extra payment, tax year 2026",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a browser window with a coin. No text, no logos, no real people."
-    },
-    {
-     "heading": "Not a fine",
-     "narration": "For most freelancers it's a modest cost, not a disaster. But it's money for nothing, so shrink it.",
-     "on_screen_text": "Modest, but avoidable",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small coin falling into a gap. No text, no logos, no real people."
+     "narration": "Make an extra estimated payment for tax year twenty twenty-six at irs.gov slash payments. No special form.",
+     "on_screen_text": "Extra payment · tax year 2026",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop with a coin going in. No text, no logos, no real people."
     },
     {
      "heading": "Close",
-     "narration": "Then set up reminders so twenty twenty-seven goes better.",
+     "narration": "It's usually a modest cost, not a disaster. Then set reminders for twenty twenty-seven.",
      "on_screen_text": "Then set reminders",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone with four calendar alerts. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a bell. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one freelancer money move a week.",
@@ -403,7 +396,8 @@
    "claims_to_verify": [
     "Penalty computed per quarter by days late × rate (Form 2210)"
    ]
-  }
+  },
+  "format_style": "question-reply"
  },
  {
   "format": "short",
@@ -470,7 +464,8 @@
     "Card processor fees (check current rates on irs.gov/payments)",
     "Direct Pay is free"
    ]
-  }
+  },
+  "format_style": "how-to"
  },
  {
   "format": "short",
@@ -537,7 +532,8 @@
     "Example figures illustrative",
     "Q1 2027 due Apr 15, 2027"
    ]
-  }
+  },
+  "format_style": "deadline-alert"
  },
  {
   "format": "short",
@@ -605,7 +601,8 @@
     "1099-K threshold $20,000 and 200 transactions",
     "Feb 1, 2027 due date (Jan 31 is a Sunday)"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -672,7 +669,8 @@
     "Payment card / third-party network payments excluded from 1099-NEC",
     "1099-K threshold $20,000 and 200 transactions"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -746,7 +744,8 @@
     "Jan 15, 2027 due date",
     "Many states follow the same date (check)"
    ]
-  }
+  },
+  "format_style": "deadline-alert"
  },
  {
   "format": "short",
@@ -814,7 +813,8 @@
     "File-and-pay-by-Jan-31 exception (Feb 1, 2027 as Jan 31 is a Sunday)",
     "Penalty computed on underpayment × days"
    ]
-  }
+  },
+  "format_style": "deadline-alert"
  },
  {
   "format": "short",
@@ -882,7 +882,8 @@
     "Cash method: income counts when received (constructive receipt)",
     "1099-K reports gross"
    ]
-  }
+  },
+  "format_style": "how-to"
  },
  {
   "format": "short",
@@ -950,7 +951,8 @@
     "Gains on personal items taxable",
     "IRS reporting method for 1099-K personal items"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1017,7 +1019,8 @@
     "1099-K reports gross amounts",
     "Fees deductible as ordinary and necessary expenses"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1083,7 +1086,8 @@
    "claims_to_verify": [
     "Work-related education rules (Pub 970 / Pub 334)"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1091,41 +1095,41 @@
   "idea_angle": "Coworking is a business expense; a gym membership isn't.",
   "script": {
    "title": "Your coworking membership is deductible. Your gym isn't.",
-   "hook": "Coworking space? Deductible. Gym membership because you sit all day? Not deductible. Here's the line.",
+   "hook": "What freelancers think is deductible, versus what actually is.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Coworking space? Deductible. Gym membership because you sit all day? Not deductible. Here's the line.",
-     "on_screen_text": "Coworking ✓ · Gym ✗",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes at a shared desk next to a dumbbell crossed out. No text, no logos, no real people."
+     "narration": "What freelancers think is deductible, versus what actually is.",
+     "on_screen_text": "Deductible or not?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding two membership cards. No text, no logos, no real people."
     },
     {
-     "heading": "Rule",
-     "narration": "A business expense has to be ordinary and necessary for your business. Not just good for you.",
-     "on_screen_text": "Ordinary + necessary for the business",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a simple checklist with two ticks. No text, no logos, no real people."
+     "heading": "Myth 1",
+     "narration": "Myth: if it helps you work, it's deductible. Fact: it has to be ordinary and necessary for the business, not just good for you.",
+     "on_screen_text": "FACT: ordinary + necessary",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a split card, myth and fact. No text, no logos, no real people."
     },
     {
-     "heading": "Yes",
-     "narration": "Coworking desks, a day pass to meet a client, the business share of your internet: these are about running the business.",
-     "on_screen_text": "Desk · day pass · internet share",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a desk, a ticket and a wifi icon. No text, no logos, no real people."
+     "heading": "Myth 2",
+     "narration": "Myth: a gym counts because you sit all day. Fact: gyms, everyday clothes and haircuts are personal.",
+     "on_screen_text": "MYTH: gym · FACT: personal",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a dumbbell crossed out. No text, no logos, no real people."
     },
     {
-     "heading": "No",
-     "narration": "Gym, clothes you could wear anywhere, your regular haircut: personal, even if they help you work.",
-     "on_screen_text": "Gym · everyday clothes: personal",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a shirt and a dumbbell, both grey. No text, no logos, no real people."
+     "heading": "Myth 3",
+     "narration": "Myth: coworking is a luxury write-off. Fact: a desk, a client-meeting day pass and the business share of internet are normal business costs.",
+     "on_screen_text": "FACT: coworking is deductible",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a desk with a check mark. No text, no logos, no real people."
     },
     {
-     "heading": "Home office",
-     "narration": "One catch: if you rent coworking, a home office may be harder to justify, because the space has to be your principal place of business.",
+     "heading": "Catch",
+     "narration": "One catch: renting coworking can make a home office harder to claim, because home has to be your principal place of business.",
      "on_screen_text": "Coworking can affect home office",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a house and a building with a dotted line. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a house and a desk with a link. No text, no logos, no real people."
     },
     {
      "heading": "Close",
-     "narration": "When in doubt: would you pay for it if you didn't have the business?",
+     "narration": "Test it: would you pay for it without the business?",
      "on_screen_text": "Would you buy it anyway?",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes thinking. No text, no logos, no real people."
     }
@@ -1150,7 +1154,8 @@
     "Ordinary and necessary standard",
     "Home office principal place of business test"
    ]
-  }
+  },
+  "format_style": "myth-vs-fact"
  },
  {
   "format": "short",
@@ -1217,7 +1222,8 @@
     "Business portion of tax prep deductible on Schedule C",
     "Miscellaneous itemized deductions suspended"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1283,7 +1289,8 @@
    "claims_to_verify": [
     "IRS Online Account shows payment history"
    ]
-  }
+  },
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1291,42 +1298,36 @@
   "idea_angle": "Why waiting for all forms beats filing on day one.",
   "script": {
    "title": "Don't rush to file in January",
-   "hook": "Want to file your freelance taxes the first day you can? Wait until you have every form.",
+   "hook": "Filing your freelance taxes on day one sounds responsible. Here's why it can backfire.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Want to file your freelance taxes the first day you can? Wait until you have every form.",
-     "on_screen_text": "Don't file on day one",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding back a racing form. No text, no logos, no real people."
+     "narration": "Filing your freelance taxes on day one sounds responsible. Here's why it can backfire.",
+     "on_screen_text": "Day-one filing: myth vs fact",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes at a starting line. No text, no logos, no real people."
     },
     {
-     "heading": "Why",
-     "narration": "1099s are due by February first, and some arrive late or get corrected. Brokerage forms can come later still.",
-     "on_screen_text": "Forms trickle in, some corrected",
+     "heading": "Myth 1",
+     "narration": "Myth: all your forms are in by January. Fact: 1099s are due by February first, some arrive late or corrected, and brokerage forms can come later.",
+     "on_screen_text": "FACT: forms trickle in",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. envelopes arriving one by one. No text, no logos, no real people."
     },
     {
-     "heading": "Cost",
-     "narration": "File too early and a late form means an amended return. More time, sometimes more fees.",
-     "on_screen_text": "Early + late form = amendment",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with a second form stapled on. No text, no logos, no real people."
+     "heading": "Myth 2",
+     "narration": "Myth: filing early is always cheaper. Fact: a late form means an amended return, more time and sometimes more fees.",
+     "on_screen_text": "FACT: late form = amendment",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with a second copy. No text, no logos, no real people."
     },
     {
      "heading": "Exception",
-     "narration": "One reason to file early: you're filing and paying everything by February first so you can skip the January payment.",
+     "narration": "The exception: filing and paying everything by February first lets you skip the January payment.",
      "on_screen_text": "Exception: file + pay by Feb 1",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with a check. No text, no logos, no real people."
-    },
-    {
-     "heading": "Sweet spot",
-     "narration": "For most freelancers, mid-February to March is the sweet spot. All forms in, books closed, plenty of time.",
-     "on_screen_text": "Sweet spot: mid-Feb to March",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with a mint band. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with Feb 1 circled. No text, no logos, no real people."
     },
     {
      "heading": "Close",
-     "narration": "Use January to close your books instead.",
-     "on_screen_text": "January: close the books",
+     "narration": "For most, mid-February to March is the sweet spot. Use January to close your books.",
+     "on_screen_text": "Sweet spot: mid-Feb to March",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes closing a ledger. No text, no logos, no real people."
     }
    ],
@@ -1350,7 +1351,8 @@
     "1099-NEC due Feb 1, 2027",
     "Corrected forms can arrive later"
    ]
-  }
+  },
+  "format_style": "myth-vs-fact"
  },
  {
   "format": "short",
@@ -1415,7 +1417,8 @@
    "claims_to_verify": [
     "$60K single 2026 federal total $12,037"
    ]
-  }
+  },
+  "format_style": "deadline-alert"
  },
  {
   "format": "short",
@@ -1423,43 +1426,31 @@
   "idea_angle": "HSA contributions for 2026 can be made until the April filing deadline.",
   "script": {
    "title": "You can still fund an HSA for 2026",
-   "hook": "Had an HSA-eligible health plan in twenty twenty-six? You can still put money in for last year, until April fifteenth.",
+   "hook": "A common question: can I still put money in an HSA for last year? If you had an eligible plan in twenty twenty-six, yes, until April fifteenth.",
    "segments": [
     {
-     "heading": "Hook",
-     "narration": "Had an HSA-eligible health plan in twenty twenty-six? You can still put money in for last year, until April fifteenth.",
-     "on_screen_text": "Still time: 2026 HSA",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes dropping a coin into a jar with a medical cross. No text, no logos, no real people."
+     "heading": "Common question",
+     "narration": "A common question: can I still put money in an HSA for last year? If you had an eligible plan in twenty twenty-six, yes, until April fifteenth.",
+     "on_screen_text": "Common question: 2026 HSA?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a speech bubble with a heart. No text, no logos, no real people."
     },
     {
      "heading": "Limits",
-     "narration": "The twenty twenty-six limits are forty-four hundred dollars for self-only coverage and eighty-seven fifty for family, plus a thousand more if you're fifty-five or older.",
+     "narration": "Twenty twenty-six limits: forty-four hundred self-only, eighty-seven fifty family, plus a thousand at fifty-five or older. Partial-year coverage is figured by month.",
      "on_screen_text": "$4,400 self · $8,750 family",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two jars of different sizes. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two jars with labels. No text, no logos, no real people."
     },
     {
      "heading": "Why",
-     "narration": "Contributions are deductible, growth is tax-free, and withdrawals for medical costs are tax-free. Triple benefit.",
+     "narration": "Deductible going in, tax-free growth, tax-free for medical costs. It lowers income tax, not self-employment tax.",
      "on_screen_text": "Deduct · grow · spend tax-free",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three mint check marks. No text, no logos, no real people."
-    },
-    {
-     "heading": "Catch",
-     "narration": "You need to have been covered by an HSA-eligible plan, and the limit is figured month by month if you weren't covered all year.",
-     "on_screen_text": "Must have had an eligible plan",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with some months shaded. No text, no logos, no real people."
-    },
-    {
-     "heading": "How",
-     "narration": "Tell your HSA provider the contribution is for twenty twenty-six.",
-     "on_screen_text": "Tell them: for 2026",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with a dropdown. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three coins with check marks. No text, no logos, no real people."
     },
     {
      "heading": "Close",
-     "narration": "It lowers income tax, not self-employment tax. Still worth it.",
-     "on_screen_text": "Lowers income tax",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a small shield. No text, no logos, no real people."
+     "narration": "Tell your HSA provider the deposit is for twenty twenty-six.",
+     "on_screen_text": "Say: it's for 2026",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes on the phone. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one freelancer money move a week.",
@@ -1483,7 +1474,8 @@
     "Deadline Apr 15, 2027",
     "Monthly proration / last-month rule"
    ]
-  }
+  },
+  "format_style": "question-reply"
  },
  {
   "format": "carousel",
@@ -2747,6 +2739,12 @@
     "SEP at $60K 11,152 → saves 1,071; at $120K 22,304 → saves 3,926",
     "Chapter timestamps must match final edit"
    ]
+  },
+  "format_style": "real-numbers",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Side-by-side bars for $30K, $60K and $120K split into SE tax, income tax and state, with the set-aside rate on each",
+   "chapter": "Set aside"
   }
  },
  {
@@ -2875,6 +2873,12 @@
     "IRS IRIS free e-file system",
     "Chapter timestamps must match final edit"
    ]
+  },
+  "format_style": "explainer",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Screen recording of the IRS 'Understanding your Form 1099-K' page, scrolling to the thresholds and what to do if a form is wrong",
+   "chapter": "1099-K"
   }
  },
  {
@@ -3019,6 +3023,12 @@
     "Meals 50%",
     "Chapter timestamps must match final edit"
    ]
+  },
+  "format_style": "countdown",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Ranked bar chart of what each deduction saves at $60K of profit, using the script's figures, revealed bar by bar as the countdown runs",
+   "chapter": "How much"
   }
  },
  {
@@ -3157,6 +3167,12 @@
     "Schedule payment in advance via Direct Pay",
     "Chapter timestamps must match final edit"
    ]
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "human-segment",
+   "detail": "Dhruv films his own Friday-night prep on screen or at his desk: downloading statements into one folder, using a demo account clearly labeled as a demo if he doesn't want to show his own",
+   "chapter": "Prep"
   }
  }
 ]
