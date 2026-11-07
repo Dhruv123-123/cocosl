@@ -39,11 +39,16 @@ def _table(rows: list[dict], cols: list[str]) -> None:
 def cmd_init(args):
     home = Path(args.home or ".").resolve()
     pkg_root = Path(__file__).resolve().parents[2]
+    examples = Path(__file__).resolve().parent / "examples"  # shipped in the wheel for pip installs
     (home / "brands").mkdir(parents=True, exist_ok=True)
     example_brand = pkg_root / "brands" / "money-made-simple.yaml"
+    if not example_brand.exists():
+        example_brand = examples / "money-made-simple.yaml"
     if example_brand.exists() and not any((home / "brands").glob("*.yaml")):
         shutil.copy(example_brand, home / "brands" / example_brand.name)
     env_example = pkg_root / ".env.example"
+    if not env_example.exists():
+        env_example = examples / "env.example"
     if env_example.exists() and not (home / ".env").exists():
         shutil.copy(env_example, home / ".env")
     s = Settings.load(home)
@@ -447,7 +452,8 @@ def _extend(sub) -> None:
     """Optional command groups that live in their own modules."""
     for mod in ("contentfactory.business.cli", "contentfactory.publish.cli", "contentfactory.funnel.cli",
                 "contentfactory.community.cli", "contentfactory.site", "contentfactory.pack", "contentfactory.channels",
-                "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup"):
+                "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup",
+                "contentfactory.publish.preflight"):
         try:
             module = __import__(mod, fromlist=["register"])
         except ImportError:

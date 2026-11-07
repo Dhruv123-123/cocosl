@@ -66,6 +66,7 @@ factory auth youtube | tiktok | meta        # connect accounts
 factory renderq revoice                     # re-voice silent renders once KOKORO_URL (or another voice) is set
 factory status                              # credentials, queues, worker heartbeat, anything needing you
 factory doctor [--online]                   # is this install ready to make and post content?
+factory preflight --scheduled               # check queued media against each platform's limits (runs automatically too)
 ```
 
 With `--days 0`, `pack export` renders the whole file as an undated library, grouped by format (used for `launch/money-made-simple/evergreen/`).

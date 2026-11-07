@@ -591,3 +591,25 @@ def test_local_callback_server():
         httpx.Client(trust_env=False).get(srv.redirect_uri + "?code=abc&state=xyz", timeout=5)
         res = srv.wait(5)
     assert res.code == "abc" and res.state == "xyz"
+
+
+def test_youtube_caption_track_best_effort(settings, brand, files, yt_env, tmp_path, monkeypatch):
+    srt = tmp_path / "output" / "captions.srt"
+    srt.write_text("1\n00:00:00,000 --> 00:00:01,500\nHello there\n")
+    r = yt_router().add("POST", "upload/youtube/v3/captions", {"id": "CAP1"})
+    pub = YouTubePublisher(settings, transport=r.transport, sleep=noop_sleep)
+    res = pub.publish(make_req(brand, settings, "youtube", "short", files, captions_path=srt))
+    assert res.raw["captions"] == {"ok": True, "id": "CAP1"}
+    cap = r.find("POST", "upload/youtube/v3/captions")[0]
+    assert cap.url.params["uploadType"] == "multipart" and b'"videoId": "VID1"' in cap.content
+    assert b"Hello there" in cap.content and cap.headers["Content-Type"].startswith("multipart/related")
+    # a refused caption upload never fails the finished video
+    r2 = yt_router().add("POST", "upload/youtube/v3/captions", httpx.Response(403, json={"error": {"message": "no"}}))
+    res2 = YouTubePublisher(settings, transport=r2.transport, sleep=noop_sleep).publish(
+        make_req(brand, settings, "youtube", "short", files, captions_path=srt))
+    assert res2.remote_id == "VID1" and res2.raw["captions"]["ok"] is False
+    monkeypatch.setenv("YT_UPLOAD_CAPTIONS", "0")
+    r3 = yt_router()
+    YouTubePublisher(settings, transport=r3.transport, sleep=noop_sleep).publish(
+        make_req(brand, settings, "youtube", "short", files, captions_path=srt))
+    assert not r3.find("POST", "captions")

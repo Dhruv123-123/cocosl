@@ -10,6 +10,8 @@ Docs used:
   https://developers.google.com/youtube/data/guides/using_resumable_upload_protocol
 - thumbnails.set (<=50MB JPEG/PNG; Shorts only after processing):
   https://developers.google.com/youtube/v3/docs/thumbnails/set
+- captions.insert (multipart: snippet + SRT; youtube.force-ssl scope; ~400 quota units):
+  https://developers.google.com/youtube/v3/docs/captions/insert
 - containsSyntheticMedia / unverified-project changes: https://developers.google.com/youtube/v3/revision_history
 - Token refresh: https://developers.google.com/identity/protocols/oauth2/native-app
 
@@ -139,6 +141,8 @@ class YouTubePublisher(HttpPublisher):
                "probe": probe, "upload_status": (video.get("status") or {}).get("uploadStatus")}
         if req.format == "long" and req.thumbnail_path:
             raw["thumbnail"] = self._set_thumbnail(video_id, Path(req.thumbnail_path))
+        if req.captions_path and self.settings.env("YT_UPLOAD_CAPTIONS", "1") != "0":
+            raw["captions"] = self._insert_captions(video_id, Path(req.captions_path), req.brand.language or "en")
         url = f"https://www.youtube.com/shorts/{video_id}" if req.format == "short" \
             else f"https://www.youtube.com/watch?v={video_id}"
         return PublishResult(remote_id=video_id, url=url, raw=raw)
@@ -202,6 +206,27 @@ class YouTubePublisher(HttpPublisher):
             return {"ok": True}
         except PublishError as e:
             return {"ok": False, "error": str(e)}
+
+    def _insert_captions(self, video_id: str, srt: Path, language: str) -> dict:
+        """Best effort: upload the voice-timed SRT as a caption track. Burned-in captions are for viewers
+        with sound off; a real track also feeds search and auto-translate. A failure never fails the upload."""
+        if not srt.exists() or not srt.read_text(errors="ignore").strip():
+            return {"ok": False, "error": "captions file missing or empty"}
+        boundary = "factory-captions-boundary"
+        meta = {"snippet": {"videoId": video_id, "language": language, "name": "", "isDraft": False}}
+        body = (f"--{boundary}\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n{json.dumps(meta)}\r\n"
+                f"--{boundary}\r\nContent-Type: application/octet-stream\r\n\r\n").encode() \
+            + srt.read_bytes() + f"\r\n--{boundary}--\r\n".encode()
+        try:
+            resp = self.http.request("POST", f"{UPLOAD_API}/captions", what="captions.insert",
+                                     params={"part": "snippet", "uploadType": "multipart"},
+                                     headers=self._auth(**{"Content-Type": f"multipart/related; boundary={boundary}"}),
+                                     content=body)
+            return {"ok": True, "id": (resp.json() or {}).get("id", "")}
+        except PublishError as e:
+            return {"ok": False, "error": str(e)}
+        except ValueError:
+            return {"ok": True}
 
     # ------------------------------------------------------------------ metrics
     def fetch_metrics(self, remote_id: str) -> MetricsSnapshot:

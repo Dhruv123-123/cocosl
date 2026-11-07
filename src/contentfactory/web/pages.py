@@ -72,6 +72,7 @@ def _post_view(factory: Factory, request: Request, post: dict) -> dict:
         "check_status": (post.get("checks") or {}).get("status", ""),
         "editor": (post.get("meta") or {}).get("editor") or {},
         "job": _jobs(request).active_for("post", post["id"]),
+        "render_queued": factory.render_pending(post["id"]),
         "pubs": queries.publications_for(factory, post["id"]),
     }
 
@@ -125,6 +126,12 @@ def _ops(factory: Factory) -> dict | None:
         return system_status(factory)
     except Exception:  # the overview must never fail because of the ops panel
         return None
+
+
+@router.post("/posts/{post_id}/thumbnail")
+def post_thumbnail(post_id: int, request: Request, index: int = Form(...), factory: Factory = Depends(get_factory)):
+    factory.choose_thumbnail(post_id, index)
+    return back(request, f"/posts/{post_id}", msg="Thumbnail updated")
 
 
 @router.post("/publications/{pub_id}/resolve")
@@ -218,6 +225,15 @@ def post_reject(post_id: int, request: Request, reason: str = Form(""),
 
 @router.post("/posts/{post_id}/rerender")
 def post_rerender(post_id: int, request: Request, factory: Factory = Depends(get_factory)):
+    import os
+    if os.environ.get("RENDER_QUEUE") == "1":  # the renderer service does it; the dashboard stays snappy
+        from ..renderq import enqueue
+        post = queries.require_post(factory, post_id)
+        if post["status"] in ("scheduled", "published"):
+            raise PermissionError(f"Post #{post_id} is {post['status']}; re-rendering would not update the platforms")
+        job = enqueue(factory, post_id, reason="manual", priority=5)
+        return back(request, "/review", msg=f"Post #{post_id} queued for rendering" if job else
+                    f"Post #{post_id} is already in the render queue", anchor=f"post-{post_id}")
     job = actions.start_render(factory, _jobs(request), post_id)
     return back(request, "/review", msg=f"Re-rendering post #{post_id} (job #{job.id})", anchor=f"post-{post_id}")
 
@@ -234,7 +250,16 @@ def post_detail(post_id: int, request: Request, factory: Factory = Depends(get_f
     view = _post_view(factory, request, post)
     tz = factory.brand(post["brand"]).cadence.timezone if post["brand"] in factory.brands() else "UTC"
     idea = factory.db.get("ideas", post["idea_id"]) if post.get("idea_id") else None
-    return render(request, "post.html", **view, idea=idea, history=queries.post_history(factory, post_id), tz=tz)
+    media_checks = []
+    if post["status"] in ("in_review", "rendered", "approved", "scheduled") and post["brand"] in factory.brands():
+        from ..publish.preflight import check_post
+        try:
+            media_checks = [i for i in check_post(factory, post)
+                            if not (factory.settings.dry_run and "PUBLIC_MEDIA_BASE_URL" in i.message)]
+        except Exception:  # a broken asset record shouldn't take the page down
+            media_checks = []
+    return render(request, "post.html", **view, idea=idea, history=queries.post_history(factory, post_id), tz=tz,
+                  media_checks=media_checks)
 
 
 # --------------------------------------------------------------------------- calendar / published

@@ -81,10 +81,11 @@ def collect_comments(factory, *, platforms: list[str] | None = None, max_age_day
     new_ids: list[int] = []
     for pub in pubs:
         platform = pub["platform"]
-        if platform not in clients:
-            clients[platform] = client_for(platform, factory.settings, own_usernames=_own_handles(factory, platform),
-                                           transport=transport)
-        client = clients[platform]
+        key = platform if platform in clients else (platform, pub["brand"])
+        if key not in clients:  # one client per brand: each brand may use its own account tokens
+            clients[key] = client_for(platform, factory.settings.for_brand(pub["brand"]),
+                                      own_usernames=_own_handles(factory, platform), transport=transport)
+        client = clients[key]
         missing = client.missing_credentials()
         if missing:
             msg = f"{platform}: missing {', '.join(missing)}"
@@ -268,7 +269,7 @@ def send_reply(factory, comment_id: int, text: str | None = None, *, actor: str 
         if sent >= MAX_REPLIES_PER_HOUR:
             raise RateLimited(f"{c['platform']}: {sent} replies in the last hour; the limit is "
                               f"{MAX_REPLIES_PER_HOUR}/hour. Try again later.")
-        client = client or client_for(c["platform"], factory.settings, transport=transport)
+        client = client or client_for(c["platform"], factory.settings.for_brand(c.get("brand")), transport=transport)
         remote = client.reply(target, body)
     when = (now or datetime.now(timezone.utc)).replace(microsecond=0).isoformat() if now else now_iso()
     db.update("comments", comment_id, {"status": "replied", "reply_text": body, "draft": body,

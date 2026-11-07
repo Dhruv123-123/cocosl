@@ -182,6 +182,20 @@ class Factory:
         self.db.update("posts", post_id, {"status": "approved", "review_notes": notes})
         self.db.log("post.approved", "post", post_id, {"notes": notes}, actor=actor)
 
+    def choose_thumbnail(self, post_id: int, index: int, actor: str = "human") -> str:
+        """Use thumbnail variant `index` (0 = the original) as the post's thumbnail."""
+        post = self._post(post_id)
+        if post["status"] in ("scheduled", "published"):
+            raise PermissionError("The thumbnail is already on its way to the platforms; unschedule first")
+        assets = dict(post.get("assets") or {})
+        variants = assets.get("thumbnail_variants") or []
+        if not 0 <= index < len(variants):
+            raise ValueError(f"Post #{post_id} has {len(variants)} thumbnail option(s)")
+        assets["thumbnail"] = variants[index]
+        self.db.update("posts", post_id, {"assets": assets})
+        self.db.log("post.thumbnail_chosen", "post", post_id, {"thumbnail": variants[index]}, actor=actor)
+        return variants[index]
+
     def render_pending(self, post_id: int) -> bool:
         try:
             return bool(self.db.one("SELECT id FROM render_jobs WHERE post_id = ? AND status IN ('queued','running')",
@@ -209,10 +223,14 @@ class Factory:
                                 if a.enabled and post["format"] in a.formats]
         if not targets:
             raise ValueError(f"No enabled account in {brand.slug} accepts format '{post['format']}'")
+        from .publish.preflight import blocking, check_post
+        stop = blocking(check_post(self, post, targets), self.settings.dry_run)
+        if stop:
+            raise PermissionError("Media check failed: " + "; ".join(map(str, stop)))
         # Work out every slot first so a cadence block can't leave a half-scheduled post behind.
         plan = []
         for platform in targets:
-            slot = at or next_slot(self.db, brand, platform)
+            slot = at or next_slot(self.db, brand, platform, fmt=post["format"])
             cadence = check_cadence(self.db, brand, platform, slot)
             if cadence.level == "block":
                 raise PermissionError(cadence.message)
@@ -277,11 +295,16 @@ class Factory:
             for p in [*(assets.get("slides") or []), *(assets.get("images") or []), assets.get("video"), assets.get("thumbnail")]:
                 if p:
                     public[str(out / p)] = f"{base}/{p}"
-        description = "\n\n".join(x for x in [script.get("description", ""), disclosure] if x)
+        body = script.get("description", "")
+        if post["format"] == "long" and assets.get("chapters"):
+            from .media.chapters import with_chapters
+            body = with_chapters(body, assets["chapters"])
+        description = "\n\n".join(x for x in [body, disclosure] if x)
         return PublishRequest(
             platform=platform, brand=brand, settings=self.settings, format=post["format"],
             title=post.get("title", ""), caption=caption, description=description, tags=tags,
             video_path=video, image_paths=images, thumbnail_path=thumb, public_urls=public,
+            captions_path=out / assets["captions_srt"] if assets.get("captions_srt") else None,
             ai_generated=True, realistic_synthetic=brand.realistic_synthetic_media,
             has_paid_promotion=bool((post.get("meta") or {}).get("sponsored")),
         )
@@ -296,12 +319,18 @@ class Factory:
         results = []
         if due and not self.settings.dry_run:
             from .publish.tokens import refresh_long_lived, refresh_tiktok_if_needed
-            try:
-                if any(p["platform"] == "tiktok" for p in due):
-                    refresh_tiktok_if_needed(self.settings)
-                refresh_long_lived(self.settings)
-            except Exception as e:  # a failed refresh surfaces as a publish error below
-                self.db.log("tokens.refresh_failed", "", None, {"error": str(e)})
+            brands_due: dict[str, set] = {}
+            for p in due:
+                b = self.db.scalar("SELECT brand FROM posts WHERE id = ?", [p["post_id"]]) or ""
+                brands_due.setdefault(b, set()).add(p["platform"])
+            for b, platforms in brands_due.items():
+                scoped = self.settings.for_brand(b)
+                try:
+                    if "tiktok" in platforms:
+                        refresh_tiktok_if_needed(scoped)
+                    refresh_long_lived(scoped)
+                except Exception as e:  # a failed refresh surfaces as a publish error below
+                    self.db.log("tokens.refresh_failed", "", None, {"error": str(e), "brand": b})
         for pub in due:
             post = self.db.get("posts", pub["post_id"])
             if not post or post["status"] not in ("scheduled", "published"):
@@ -323,6 +352,16 @@ class Factory:
                 self.db.update("publications", pub["id"], {"status": "cancelled",
                                                            "error": "already published on this platform"})
                 continue
+            from .publish.preflight import blocking, check
+            stop = blocking(check(post, pub["platform"], self.settings.output_dir,
+                                  self.settings.public_media_base_url), self.settings.dry_run)
+            if stop:  # media changed or vanished since scheduling: fail clearly instead of half-uploading
+                err = "Media check failed: " + "; ".join(map(str, stop))
+                self.db.update("publications", pub["id"], {"status": "failed", "error": err[:1000],
+                                                           "updated_at": now_iso()})
+                self.db.log("publication.failed", "publication", pub["id"], {"error": err[:1000], "retry": False})
+                results.append({"publication": pub["id"], "status": "failed", "error": err, "retry": False})
+                continue
             # Claim it atomically so a second process (dashboard "publish now") can't post it twice.
             cur = self.db.execute("UPDATE publications SET status = 'publishing', attempts = attempts + 1, "
                                   "updated_at = ? WHERE id = ? AND status = 'queued'", [now_iso(), pub["id"]])
@@ -330,7 +369,7 @@ class Factory:
                 continue
             attempts = pub["attempts"] + 1
             try:
-                publisher = get_publisher(pub["platform"], self.settings)
+                publisher = get_publisher(pub["platform"], self.settings.for_brand(post["brand"]))
                 res = publisher.publish(self.build_request(post, pub["platform"]))
             except Exception as e:  # PublishError, network errors, bad files: never leave it 'publishing'
                 retryable = getattr(e, "retryable", isinstance(e, (OSError, TimeoutError))
@@ -393,11 +432,13 @@ class Factory:
     # ------------------------------------------------------------------ analytics
     def collect_metrics(self) -> int:
         from .publish import get_publisher
-        pubs = self.db.query("SELECT * FROM publications WHERE status = 'published' AND remote_id != ''")
+        pubs = self.db.query("SELECT p.*, s.brand FROM publications p JOIN posts s ON s.id = p.post_id "
+                             "WHERE p.status = 'published' AND p.remote_id != ''")
         n = 0
         for pub in pubs:
             try:
-                snap = get_publisher(pub["platform"], self.settings, dry_run=False).fetch_metrics(pub["remote_id"])
+                snap = get_publisher(pub["platform"], self.settings.for_brand(pub["brand"]),
+                                     dry_run=False).fetch_metrics(pub["remote_id"])
             except Exception as e:
                 self.db.log("metrics.failed", "publication", pub["id"], {"error": str(e)})
                 continue
