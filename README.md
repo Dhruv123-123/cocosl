@@ -80,6 +80,9 @@ factory subscribers-export <brand> --for sender  # two CSVs (already welcomed / 
 factory reslot [--brand] [--yes]             # move queued posts onto current slots (TikTok 18:00, Pinterest 11:00, Shorts 12:30); zero collisions
 factory review-gate [list|pass|require|send-back]  # draft → native_review → legal_review → approved; only approved posts schedule or export
 # dashboard: /review/fast — keyboard review (A approve, R reject, E edit, 1-9 tick claims, J/K next) and approve-a-week
+factory launch-mode [two-brand|all]          # two-brand launch: today, reslot and scorecard show MMS + Scam Decoded only
+factory scorecard --gate                     # the five brand-3 gates (time, clean accounts, thresholds, queue, list growth)
+factory time [log <minutes> --what routine]  # weekly time used vs the one-hour-a-day limit (also a form on Today)
 scripts/smoke_fresh_clone.sh                 # fresh clone → install → init → doctor → render one post per brand → launch-check
 factory ui                                   # one local page (127.0.0.1 only): calendar, review queue, recordings, launch check
 factory manual [build|copy <pub>|done <pub> --url]  # TikTok + Pinterest post-by-hand packages
