@@ -12,7 +12,7 @@ Where something has a waiting period (verification, affiliate approval), start i
 Totals: **Stage 1–3 ≈ 5–6 hours** gets you able to take money. Stages 0–8 (one brand, fully live)
 ≈ 13–16 hours over two weeks. Stage 9 adds the other brands, one at a time, ≈ 2–4 hours each. The
 [launch runbook](#launch-runbook-after-the-merges) near the end covers the sites, placeholders, first-week
-posts and recording sessions once everything is merged.
+posts, recording sessions and a 15-minutes-a-day routine once everything is merged.
 
 Nothing in this repo sends, posts or charges on its own. You press every button.
 
@@ -610,6 +610,37 @@ batch-record on the day.
 | Due | Brand | Video | Record |
 |---|---|---|---|
 | 06-27 | Scam | 4th of July weekend scams: lost pet texts, money 'sent by mistake' and fake celebrity ads | screen-recording: Screen-record two settings on your own phone: making a payment app private, and the 'report ad' menu in a social app. (beat: 5. Settings) |
+
+### R6 · Dhruv's 15 minutes a day (first 30 days after launch)
+
+Days count from the day you start posting. Once the setup above is done, the factory drafts, renders and schedules. What's left is the part only you
+can do. Open `factory ui` (the Today page) and do these in order; stop at 15 minutes and carry the rest over.
+
+**Every day (15 min)**
+
+- [ ] **3 min · Triage.** `factory triage` (or the Today page). Clear anything red first.
+- [ ] **5 min · Review 2 posts.** Watch each one, tick every fact (and `launch/VERIFY_BEFORE_POSTING.md`),
+      then Approve & schedule. Reject anything you wouldn't say to a friend.
+- [ ] **2 min · Post TikTok by hand.** `factory ui` → Post by hand: copy the caption, upload, switch on the
+      AI-generated label, mark it posted.
+- [ ] **5 min · People.** Reply to comments and DMs yourself (the `/inbox` drafts help; you send). Answer any
+      ad-studio reply the same day. Note good questions as new ideas.
+
+**Plus, on these days**
+
+| When | Extra (time) | What |
+|---|---|---|
+| Mon–Fri, from Nov 10 | +45 min | 15 ad-studio first emails and due follow-ups (Stage 2). This is the fastest money; don't let the 15 minutes crowd it out |
+| Mondays | +20 min | `factory report` and its "Next actions"; `factory launch-check` |
+| Saturdays | +45–60 min | the recording session from R5 (prep sheet for Nov 14: `docs/RECORDING_PREP_2026-11-14.md`) |
+| Sat Nov 14 | +10 min | the `LAUNCH` codes end today (the welcome emails print that date): check they've expired on Gumroad |
+| Day 7 | +30 min | if Money Made Simple is steady, start the next brand's accounts (Stage 9) |
+| Day 10 | +30 min | ~10 posts are live: apply to the affiliate programs (Stage 7) with the kit's answers |
+| Sat Nov 21 | +15 min | Month 1 starts: import `calendar.ics`, confirm its first week is approved |
+| Day 21 | +20 min | look at what worked (`factory report`): keep the hooks that held viewers, drop the rest |
+| Day 30 | +30 min | swap the financial model's assumptions for real numbers (`docs/FINANCIAL_MODEL.md`) and decide what to do more of |
+
+Skip a day and nothing breaks: posts wait in the queue, and nothing goes out without your approval.
 
 ---
 
