@@ -42,6 +42,9 @@ cadence:
   max_posts_per_day_per_platform: 2
   post_times: ["12:30", "19:00"]
   timezone: America/New_York
+  daily_at: "07:00"        # local time the worker drafts new posts into your review queue
+  daily_drafts: 2          # drafts per day
+  paused: false            # true = no new drafts for this brand (scheduled posts still go out)
 accounts:
   - {platform: instagram, handle: "@moneymadesimple", formats: [short, carousel, image]}
   - {platform: youtube, handle: "@moneymadesimple", formats: [short, long]}
