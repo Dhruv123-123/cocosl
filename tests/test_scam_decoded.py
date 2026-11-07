@@ -838,3 +838,47 @@ def test_ncpw_pack_alerts_carousels_and_long_video():
     assert days == [f"2027-03-0{d}" for d in range(1, 6)]
     plan = (root / "POSTING_PLAN_NCPW_2027.md").read_text()
     assert all(f"#{n} " in plan for n in range(3)) and plan.count("`5") == 5
+
+
+def test_news_hook_shorts_nov_2026_in_free_noon_slots():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    root = CONTENT.parent
+    items = json.loads((root / "news-nov-2026.json").read_text())
+    assert len(items) == 5 and {i["topic"] for i in items} >= {"ghost tapping", "impostor ads", "open enrollment ads"}
+    dates = [i["post_on"] for i in items]
+    taken, earlier = set(), set()
+    for f in root.glob("*.json"):
+        if f.name == "news-nov-2026.json":
+            continue
+        data = json.loads(f.read_text())
+        for i in data if isinstance(data, list) else []:
+            if isinstance(i, dict) and "script" in i:
+                earlier.add(i["script"]["title"])
+                if i.get("post_on"):
+                    taken.add(i["post_on"])
+    months = {"Nov": "2026-11", "Dec": "2026-12"}
+    for name in ("POSTING_PLAN_WEEKS_3-6.md", "POSTING_PLAN.md"):
+        for line in (root / name).read_text().splitlines():
+            cells = [c.strip() for c in line.strip().strip("|").split("|")]
+            m = re.search(r"\w{3} (Nov|Dec) (\d+)", cells[0]) if len(cells) >= 4 else None
+            if m:
+                day = f"{months[m.group(1)]}-{int(m.group(2)):02d}"
+                for col, time in ((1, "12:00"), (2, "12:00"), (3, "19:30")):
+                    if cells[col]:
+                        taken.add(f"{day} {time}")
+                if len(cells) == 5 and cells[4]:
+                    taken.add(f"{day} 10:00")
+    assert not taken & set(dates), taken & set(dates)
+    assert all(a["look"] != b["look"] for a, b in zip(items, items[1:]))
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        words = sum(len(s.narration.split()) for s in sc.segments)
+        assert 60 <= words <= 120 and len(sc.title) <= 60 and sc.title not in earlier, sc.title
+        assert any(ch.isdigit() for ch in sc.hook.split(".")[0][:60]) and len(sc.hashtags) <= 5
+        assert sc.claims_to_verify and all("ftc.gov" in u or "bbb.org" in u for u in sc.sources)
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        text = G.script_text(item["script"])
+        assert "checker" in sc.caption and "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
