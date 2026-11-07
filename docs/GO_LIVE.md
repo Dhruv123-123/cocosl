@@ -710,7 +710,16 @@ The ONE change per platform this week: ______________________________
 | **Watch: act if it holds 2 weeks** | Instagram non-followers < 30% of reach · site < 100 visitors · YouTube < 50 watch hours · Pinterest < 10 saves after 20+ pins, < 20 outbound clicks per 5,000 impressions | 21–30 |
 | **Go / drop (day 30)** | double the 2 formats that cleared their thresholds, drop the 1 that missed most, and re-run `revenue_model.py` with real numbers | 30 |
 
-The research sets no rule for shutting a whole brand in month 1; the numbers are too small to judge. The
+The research sets no rule for shutting a whole brand in month 1; the numbers are too small to judge.
+
+**Suggested, not from the research: a day-90 "pause a brand" check.** Pause (don't delete) a brand at day 90
+if, after the month-1 thresholds were reset to your own medians, it still misses on **all three**: (1)
+reach: under 500 YouTube impressions a week *and* TikTok average under 200 views after 30+ posts, (2)
+interest: site sign-ups under 2% after 500 visitors, (3) money: no product sale and no affiliate
+conversion in the whole 90 days. Pausing means: stop new recordings and drafts, keep the site, list and
+products live, keep the finished posts banked in the queue, and post one evergreen piece a week so the
+accounts stay active. Re-check at day 120; a brand that hits any one of the three keeps going. If it misses
+only one or two, don't pause: fix that one with the R8 change rules. The
 "our judgment" thresholds (TikTok 200 views, 2% sign-ups, Pinterest saves) get reset to your own medians
 after month 1. To check automatically: `factory stats import`, then
 `python3 research/scouting/check_thresholds.py --day <N> --scorecard card.json --manual manual.json`
