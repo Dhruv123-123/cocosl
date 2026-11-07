@@ -8,7 +8,7 @@ description: How Money Made Simple makes money, how affiliate links work, and ho
 2. **Affiliate links.** Some links to banks, apps or tools are affiliate links. If you sign up or buy through one, we may earn a commission at no extra cost to you. Affiliate links are labelled where they appear and marked `rel="sponsored"` for search engines.
 3. **Sponsorships**, if we ever take them, will be labelled as sponsored in the post or email itself.
 
-A commission never decides what we say. We only link to products we would describe the same way without the commission, and we point out who a product is *not* for.
+A commission never decides what we say. We only link to products we would describe the same way without the commission, and we point out who a product is *not* for. The full plain-words version, including which affiliate programs are live right now, is on [How we make money](/how-we-make-money/).
 
 ## AI use
 

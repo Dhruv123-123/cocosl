@@ -554,3 +554,28 @@ def test_new_year_page_goes_live_in_late_december(tmp_path):
     home = (out / "index.html").read_text().split("<footer")[0]
     assert 'href="/new-year/"' in home and 'href="/holiday/"' not in home
     assert 'href="/new-year/"' in (out / "holiday" / "index.html").read_text()
+
+
+def test_how_we_make_money_page(tmp_path):
+    out = _build(tmp_path, "https://example.org")
+    page = (out / "how-we-make-money" / "index.html").read_text()
+    for h in ("Our own products", "Affiliate links", "Sponsors (not yet)", "What we never do"):
+        assert h in page
+    items = json.loads((SITE / "content" / "shop.json").read_text())["items"]
+    assert f"<strong>{len(items)} products</strong>" in page
+    assert "Affiliate partners right now: none." in page  # no affiliate_url is set yet
+    assert "{{" not in page
+    for p in ("index.html", "disclosures/index.html"):
+        assert 'href="/how-we-make-money/"' in (out / p).read_text(), p
+    assert "/how-we-make-money/" in (out / "sitemap.xml").read_text()
+    # once a program has an affiliate URL, it's listed by name
+    cfg = json.loads((SITE / "site.json").read_text())
+    cfg["programs"]["sofi"]["affiliate_url"] = "https://example.com/aff"
+    site2 = tmp_path / "site2"
+    import shutil
+    shutil.copytree(SITE, site2, ignore=shutil.ignore_patterns("public", "pins"))
+    (site2 / "site.json").write_text(json.dumps(cfg))
+    e = {**os.environ, "SITE_OUT": str(tmp_path / "p2"), "SITE_URL": "https://example.org", "BLOG_SHOW_SCHEDULED": "1"}
+    e.pop("URL", None)
+    subprocess.run([sys.executable, str(site2 / "build.py")], check=True, env=e, capture_output=True)
+    assert "Affiliate partners right now:</strong> SoFi." in (tmp_path / "p2" / "how-we-make-money" / "index.html").read_text()

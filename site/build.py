@@ -426,8 +426,42 @@ def shortcode_factory(products: dict, source: str):
             return f'<div class="inline-product">{product_card(p)}</div>' if p else ""
         if name == "disclaimer":
             return f'<p class="disclaimer">{esc(CFG["disclaimer"])}</p>'
+        if name == "money:shop":
+            return money_shop_summary()
+        if name == "money:partners":
+            return money_partners()
         return ""
     return sc
+
+
+def money_shop_summary() -> str:
+    """/how-we-make-money/: what's in the shop right now, from content/shop.json."""
+    f = CONTENT / "shop.json"
+    if not f.exists():
+        return ""
+    items = json.loads(f.read_text())["items"]
+    paid = [i["price"] for i in items if i["price"]]
+    free = len(items) - len(paid)
+    kinds = {"printable": "printables", "kit": "kits", "notion": "Notion templates", "sheets": "spreadsheets"}
+    counts = {}
+    for i in items:
+        counts[kinds.get(i.get("kind"), "other tools")] = counts.get(kinds.get(i.get("kind"), "other tools"), 0) + 1
+    mix = ", ".join(f"{n} {k}" for k, n in sorted(counts.items(), key=lambda x: -x[1]))
+    rng = f"${min(paid):g} to ${max(paid):g}" if paid else ""
+    return (f'<p class="money-facts">Right now: <strong>{len(items)} products</strong> ({esc(mix)})'
+            + (f", priced {rng}" if rng else "") + (f", {free} of them free" if free else "") + ".</p>")
+
+
+def money_partners() -> str:
+    """/how-we-make-money/: affiliate programs that are actually live (an affiliate_url is set in site.json or
+    go-links.json), so the page never claims a partnership we don't have."""
+    live = sorted({p.get("name", k) for k, p in CFG.get("programs", {}).items() if p.get("affiliate_url")})
+    if not live:
+        return ('<p class="money-facts"><strong>Affiliate partners right now: none.</strong> '
+                'Until an affiliate program approves us, links go straight to the company and pay us nothing. When that '
+                'changes, the list appears here.</p>')
+    return ('<p class="money-facts"><strong>Affiliate partners right now:</strong> ' + esc(", ".join(live))
+            + '. This list updates automatically when a program is added or removed.</p>')
 
 
 def plausible_tag() -> str:
@@ -517,7 +551,7 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
   <div class="wrap">
     <p class="foot-brand"><strong>{esc(CFG['name'])}</strong> · {esc(CFG['tagline'])}</p>
     <p>{soc}</p>
-    <p><a href="{u('/about/')}">About</a> · <a href="{u('/resources/')}">Resources</a> · <a href="{u('/quiz/')}">Money quiz</a> · <a href="{u('/budget/')}">Budget by salary</a> · <a href="{u('/cost-of-living/')}">City budgets</a> · <a href="{u('/debt-payoff/')}">Debt payoff</a> · <a href="{u('/ask/')}">Money questions</a> · <a href="{u('/holiday/')}">Holiday money</a> · <a href="{u('/shop/')}">Shop</a> · <a href="{u('/privacy/')}">Privacy</a> · <a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/terms/')}">Terms</a> · <a href="{u('/links/')}">Links</a> · <a href="{u('/newsletter/')}">Newsletter</a> · <a href="{u('/feed.xml')}">RSS</a></p>
+    <p><a href="{u('/about/')}">About</a> · <a href="{u('/resources/')}">Resources</a> · <a href="{u('/quiz/')}">Money quiz</a> · <a href="{u('/budget/')}">Budget by salary</a> · <a href="{u('/cost-of-living/')}">City budgets</a> · <a href="{u('/debt-payoff/')}">Debt payoff</a> · <a href="{u('/ask/')}">Money questions</a> · <a href="{u('/holiday/')}">Holiday money</a> · <a href="{u('/shop/')}">Shop</a> · <a href="{u('/privacy/')}">Privacy</a> · <a href="{u('/how-we-make-money/')}">How we make money</a> · <a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/terms/')}">Terms</a> · <a href="{u('/links/')}">Links</a> · <a href="{u('/newsletter/')}">Newsletter</a> · <a href="{u('/feed.xml')}">RSS</a></p>
     <p class="small">{esc(CFG['disclaimer'])}</p>
     <p class="small">{esc(CFG['ai_disclosure'])}</p>
     <p class="small">&copy; {date.today().year} {esc(CFG['name'])}</p>

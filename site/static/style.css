@@ -283,3 +283,4 @@ th{background:var(--tint)}
 .magnet.no-img{grid-template-columns:1fr}
 .course-days{margin:4px 0 14px;padding-left:22px;color:#d4d8cf}
 .course-days li{margin:4px 0}
+.money-facts{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
