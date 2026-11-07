@@ -1,0 +1,1714 @@
+[
+ {
+  "key": "m7-mitad-de-ano",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "June 1 is halfway through the year: a 10-minute midyear check of three numbers (what you have saved, what you owe, what you spend a week) instead of waiting for January.",
+  "script": {
+   "title": "Ya vamos a la mitad del año: revisa 3 números",
+   "hook": "Ya pasó medio año. No esperes a enero: revisa estos tres números hoy.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Ya pasó medio año. No esperes a enero: revisa estos tres números hoy.",
+     "on_screen_text": "Medio año: revisa 3 números hoy",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a calendar folded in half. No text, no logos, no real people."
+    },
+    {
+     "heading": "Uno",
+     "narration": "Uno: cuánto tienes ahorrado, comparado con enero. Aunque sea poquito, ¿subió?",
+     "on_screen_text": "1. Cuánto tienes ahorrado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar with a line marking January. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dos",
+     "narration": "Dos: cuánto debes en total, sumando todas las tarjetas y préstamos. ¿Bajó?",
+     "on_screen_text": "2. Cuánto debes en total",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a stack of cards with a total. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tres",
+     "narration": "Tres: cuánto gastas a la semana en lo que no es fijo. Ese es el número que más rápido puedes mover.",
+     "on_screen_text": "3. Cuánto gastas a la semana",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a weekly calendar with a receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Escoge uno de los tres y muévelo antes de julio.",
+     "on_screen_text": "Escoge uno y muévelo antes de julio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf circling one number. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Ya vamos a la mitad del año. Revisa 3 números hoy, en 10 minutos:\n1. Cuánto tienes ahorrado (¿subió desde enero?).\n2. Cuánto debes en total (¿bajó?).\n3. Cuánto gastas a la semana en lo que no es fijo.\nEscoge uno y muévelo antes de julio.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "presupuesto",
+    "finanzaspersonales",
+    "ahorro",
+    "metas",
+    "dinerosimple"
+   ],
+   "description": "El chequeo de dinero de mitad de año, en 3 números.",
+   "thumbnail_text": "Mitad del año",
+   "sources": [],
+   "claims_to_verify": [
+    "No numeric claims"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7-salario-robado",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "If your employer didn't pay you for hours you worked, that is wage theft; the federal minimum wage and overtime law protects workers regardless of immigration status, and you can complain to the Labor Department's Wage and Hour Division or your state.",
+  "script": {
+   "title": "¿No te pagaron horas que trabajaste? Te las deben",
+   "hook": "Si trabajaste y no te pagaron todas tus horas, ese dinero es tuyo. Y lo puedes reclamar.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si trabajaste y no te pagaron todas tus horas, ese dinero es tuyo. Y lo puedes reclamar.",
+     "on_screen_text": "Si lo trabajaste, te lo deben",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a timesheet with missing hours. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "Que no te paguen horas, el salario mínimo o las horas extra se llama robo de salario. Es ilegal.",
+     "on_screen_text": "Se llama robo de salario",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paycheck with a piece torn off. No text, no logos, no real people."
+    },
+    {
+     "heading": "Para todos",
+     "narration": "La ley federal de salario mínimo y horas extra protege a los trabajadores, tengan papeles o no.",
+     "on_screen_text": "La ley te protege, tengas papeles o no",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a shield over a group of workers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dónde",
+     "narration": "Puedes quejarte con la División de Salarios y Horas del Departamento de Trabajo, o con la oficina de trabajo de tu estado. Atienden en español.",
+     "on_screen_text": "Departamento de Trabajo o tu estado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a government building with a phone icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y empieza hoy: anota tus horas tú también, cada día.",
+     "on_screen_text": "Empieza hoy: anota tus horas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf writing hours in a small notebook. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si trabajaste y no te pagaron todas tus horas, el salario mínimo o tus horas extra, eso es robo de salario. La ley federal protege a los trabajadores tengan papeles o no. Puedes quejarte con la División de Salarios y Horas del Departamento de Trabajo (1-866-487-9243, en español) o con la oficina de trabajo de tu estado. Anota tus horas cada día.\n\nInformación general, no es asesoría legal. Para tu caso, un centro de trabajadores o un abogado laboral te orienta, muchas veces gratis.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "trabajadores",
+    "derechoslaborales",
+    "salario",
+    "trabajo",
+    "dinerosimple"
+   ],
+   "description": "Qué hacer si no te pagaron horas que trabajaste.",
+   "thumbnail_text": "Te deben tus horas",
+   "sources": [
+    "https://www.dol.gov/agencies/whd/espanol",
+    "https://www.dol.gov/agencies/whd/immigration"
+   ],
+   "claims_to_verify": [
+    "DOL WHD enforces the FLSA regardless of a worker's immigration status (WHD fact sheet on immigration status)",
+    "WHD phone 1-866-487-9243 (1-866-4-USWAGE), Spanish available"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7-horas-extra",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Overtime basics: most hourly workers must get time and a half for every hour over 40 in a workweek; a worked example at $18 an hour and 50 hours; 'we pay straight time' or 'comp time instead' is usually not allowed for private employers.",
+  "script": {
+   "title": "Horas extra: tiempo y medio después de 40",
+   "hook": "Si trabajas más de 40 horas a la semana y te pagan por hora, cada hora de más vale tiempo y medio.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si trabajas más de 40 horas a la semana y te pagan por hora, cada hora de más vale tiempo y medio.",
+     "on_screen_text": "Más de 40 horas = tiempo y medio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf pointing at a clock past 40. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "Ejemplo: si ganas 18 la hora, cada hora extra vale 27.",
+     "on_screen_text": "$18 la hora → $27 la hora extra",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two price tags: $18 and $27. No text, no logos, no real people."
+    },
+    {
+     "heading": "La cuenta",
+     "narration": "Con 50 horas a la semana te tocan 990 dólares, no 900. Son 90 a la semana que se pierden si te pagan todo parejo.",
+     "on_screen_text": "50 horas: $990, no $900",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two stacks of bills of different heights. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ojo",
+     "narration": "'Te lo pago parejo' o 'te doy días libres en vez de pagarte' casi nunca es legal en una empresa privada.",
+     "on_screen_text": "'Te lo pago parejo' no se vale",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a crossed-out handshake. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Revisa tu talón de pago esta semana: busca la línea de 'overtime'.",
+     "on_screen_text": "Revisa tu talón esta semana",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pay stub with a highlighted line. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Horas extra: si te pagan por hora, casi siempre te toca tiempo y medio por cada hora después de 40 en la semana. Ejemplo: a $18 la hora, la hora extra vale $27; con 50 horas son $990, no $900. 'Te lo pago parejo' o 'te doy días libres' casi nunca es legal en una empresa privada. Revisa la línea de 'overtime' en tu talón.\n\nInformación general, no es asesoría legal. Para tu caso, un centro de trabajadores o un abogado laboral te orienta, muchas veces gratis.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "horasextra",
+    "trabajadores",
+    "salario",
+    "derechoslaborales",
+    "dinerosimple"
+   ],
+   "description": "Cómo se pagan las horas extra, con un ejemplo.",
+   "thumbnail_text": "Tiempo y medio",
+   "sources": [
+    "https://www.dol.gov/agencies/whd/espanol"
+   ],
+   "claims_to_verify": [
+    "FLSA: non-exempt employees get 1.5x the regular rate for hours over 40 in a workweek; some jobs are exempt; some states (e.g. California) also have daily overtime",
+    "Private-sector comp time instead of overtime pay is generally not allowed under the FLSA",
+    "Example arithmetic: 40 x $18 = $720; 10 x $27 = $270; total $990 vs 50 x $18 = $900"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7-anota-tus-horas",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Keep your own record of hours worked: a notebook or a phone note with date, start, lunch and end time, plus photos of schedules; it is the best proof if you're ever underpaid.",
+  "script": {
+   "title": "Tu mejor prueba: tu propia libreta de horas",
+   "hook": "Si un día te pagan de menos, tu mejor prueba cabe en el bolsillo.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si un día te pagan de menos, tu mejor prueba cabe en el bolsillo.",
+     "on_screen_text": "Tu mejor prueba cabe en el bolsillo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small notebook. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué",
+     "narration": "Cada día anota la fecha, a qué hora entraste, cuánto duró tu comida y a qué hora saliste.",
+     "on_screen_text": "Fecha, entrada, comida y salida",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a notebook page with times. No text, no logos, no real people."
+    },
+    {
+     "heading": "Más",
+     "narration": "Toma foto del horario en la pared y guarda los mensajes donde te piden quedarte más tiempo.",
+     "on_screen_text": "Fotos del horario y los mensajes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone taking a photo of a schedule. No text, no logos, no real people."
+    },
+    {
+     "heading": "Compara",
+     "narration": "Cada día de pago, compara tus horas con las de tu talón.",
+     "on_screen_text": "Compáralo con tu talón cada pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a notebook next to a pay stub. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Son dos minutos al día, y te pueden regresar cientos.",
+     "on_screen_text": "Dos minutos al día",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf closing the notebook. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu mejor prueba si te pagan de menos: tu propia libreta de horas. Cada día anota fecha, entrada, cuánto duró tu comida y salida. Toma foto del horario y guarda los mensajes donde te piden quedarte. Compara tus horas con tu talón cada día de pago.\n\nInformación general, no es asesoría legal. Para tu caso, un centro de trabajadores o un abogado laboral te orienta, muchas veces gratis.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "trabajadores",
+    "salario",
+    "horasextra",
+    "derechoslaborales",
+    "dinerosimple"
+   ],
+   "description": "Cómo llevar tu propio registro de horas trabajadas.",
+   "thumbnail_text": "Anota tus horas",
+   "sources": [
+    "https://www.dol.gov/agencies/whd/espanol"
+   ],
+   "claims_to_verify": [
+    "Workers' own records can be used as evidence in wage claims (WHD)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7-pago-en-efectivo",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Paid in cash with no pay stub: it's harder to prove income for an apartment, a loan or your taxes; ask for a written record of each payment, keep your own, and remember the income still counts for taxes.",
+  "script": {
+   "title": "¿Te pagan en efectivo? Haz esto cada semana",
+   "hook": "Si te pagan en efectivo, ese dinero existe. Pero si no lo puedes probar, es como si no.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si te pagan en efectivo, ese dinero existe. Pero si no lo puedes probar, es como si no.",
+     "on_screen_text": "Si no lo puedes probar, es como si no existiera",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding cash and an empty folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "El problema",
+     "narration": "Sin talón de pago te cuesta más rentar, pedir un préstamo o demostrar tu ingreso.",
+     "on_screen_text": "Sin talón, cuesta rentar o pedir préstamo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an apartment door with a lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pide",
+     "narration": "Pide un recibo de cada pago, con la fecha, las horas y el monto. Y anótalo tú también.",
+     "on_screen_text": "Pide un recibo de cada pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small receipt being handed over. No text, no logos, no real people."
+    },
+    {
+     "heading": "Deposita",
+     "narration": "Deposita el efectivo en tu cuenta cada semana: así queda un registro, y no lo cargas encima.",
+     "on_screen_text": "Deposítalo en tu cuenta cada semana",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. cash going into a bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "Impuestos",
+     "narration": "Y ojo: aunque sea en efectivo, ese ingreso cuenta para tus impuestos.",
+     "on_screen_text": "Y sí cuenta para impuestos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a tax form next to cash. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si te pagan en efectivo: pide un recibo de cada pago (fecha, horas y monto) y anótalo tú también. Deposítalo en tu cuenta cada semana para que quede un registro. Te sirve para rentar, pedir un préstamo o demostrar tu ingreso. Y aunque sea en efectivo, el ingreso cuenta para tus impuestos.\n\nInformación general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "trabajadores",
+    "efectivo",
+    "impuestos",
+    "ingresos",
+    "dinerosimple"
+   ],
+   "description": "Qué hacer si te pagan en efectivo.",
+   "thumbnail_text": "Pago en efectivo",
+   "sources": [
+    "https://www.irs.gov/es"
+   ],
+   "claims_to_verify": [
+    "Cash wages and self-employment income are taxable (IRS)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7-1099-o-w2",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Being paid as a contractor (1099) when you work like an employee (set schedule, their tools, they control the work) may be misclassification: you lose overtime and pay both halves of Social Security and Medicare; how to ask and where to check.",
+  "script": {
+   "title": "¿Contratista o empleado? La diferencia te cuesta",
+   "hook": "Si te dan un 1099 pero trabajas como empleado, puedes estar perdiendo dinero cada semana.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si te dan un 1099 pero trabajas como empleado, puedes estar perdiendo dinero cada semana.",
+     "on_screen_text": "¿1099 pero trabajas como empleado?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding two forms. No text, no logos, no real people."
+    },
+    {
+     "heading": "La diferencia",
+     "narration": "Como contratista, tú pagas las dos partes del Seguro Social y Medicare, y no te toca tiempo extra.",
+     "on_screen_text": "Contratista: tú pagas los dos lados",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a scale with two coins on one side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señales",
+     "narration": "Si ellos ponen tu horario, te dan las herramientas y te dicen cómo hacer el trabajo, puede que seas empleado.",
+     "on_screen_text": "Horario fijo, sus herramientas, te mandan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a schedule and a toolbox. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "Pregúntalo por escrito y revisa con la oficina de trabajo de tu estado o con el Departamento de Trabajo.",
+     "on_screen_text": "Pregunta y revisa con tu estado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone and a written note. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Lo que decide no es el papel que firmaste, es cómo trabajas.",
+     "on_screen_text": "La etiqueta no decide: el trabajo sí",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf tearing a label off a box. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "¿Te pagan con 1099 pero trabajas como empleado? Como contratista pagas las dos partes del Seguro Social y Medicare y no te toca tiempo extra. Si ellos ponen tu horario, te dan las herramientas y te dicen cómo hacer el trabajo, puede que seas empleado. Revisa con la oficina de trabajo de tu estado o con el Departamento de Trabajo.\n\nInformación general, no es asesoría legal. Para tu caso, un centro de trabajadores o un abogado laboral te orienta, muchas veces gratis.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "1099",
+    "trabajadores",
+    "impuestos",
+    "derechoslaborales",
+    "dinerosimple"
+   ],
+   "description": "La diferencia entre contratista (1099) y empleado (W-2).",
+   "thumbnail_text": "¿1099 o W-2?",
+   "sources": [
+    "https://www.dol.gov/agencies/whd/flsa/misclassification",
+    "https://www.irs.gov/es"
+   ],
+   "claims_to_verify": [
+    "Self-employed people pay both halves of Social Security and Medicare (15.3% self-employment tax)",
+    "Classification depends on the working relationship (economic reality / control tests), not the label; tests differ by agency and state"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7-impuesto-estimado-junio",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "If you work for yourself, the second estimated tax payment for 2027 is due June 15; nobody withholds for you, so set aside a fixed share of every payment in a separate account and pay online.",
+  "script": {
+   "title": "¿Trabajas por tu cuenta? El 15 de junio toca pagar",
+   "hook": "Si trabajas por tu cuenta, el 15 de junio tienes una cita con el IRS que mucha gente no sabe.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si trabajas por tu cuenta, el 15 de junio tienes una cita con el IRS que mucha gente no sabe.",
+     "on_screen_text": "15 de junio: tu pago al IRS",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a calendar with June 15 circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Cuando trabajas por tu cuenta, nadie te quita impuestos del pago. Por eso se pagan por adelantado, cuatro veces al año.",
+     "on_screen_text": "Nadie te retiene impuestos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paycheck with no deductions. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuándo",
+     "narration": "Las fechas son a mediados de abril, junio, septiembre y enero. La de junio es el 15.",
+     "on_screen_text": "Abril, junio, septiembre y enero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with four dates. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "El truco: aparta un porcentaje fijo de cada pago en una cuenta aparte, y de ahí pagas.",
+     "on_screen_text": "Aparta un porcentaje de cada pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an arrow from income into a jar labeled IRS. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Si no pagas a tiempo, se suma una multa. Mejor poquito y a tiempo.",
+     "on_screen_text": "Pagar tarde trae multa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small fine notice. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si trabajas por tu cuenta, nadie te retiene impuestos: se pagan por adelantado 4 veces al año (mediados de abril, junio, septiembre y enero). El segundo pago de 2027 vence el 15 de junio. Aparta un porcentaje fijo de cada pago en una cuenta aparte y paga en línea en irs.gov. Pagar tarde suma una multa.\n\nInformación general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "trabajoindependiente",
+    "1099",
+    "irs",
+    "dinerosimple"
+   ],
+   "description": "El pago de impuestos estimados del 15 de junio.",
+   "thumbnail_text": "15 de junio",
+   "sources": [
+    "https://www.irs.gov/es/businesses/small-businesses-self-employed/estimated-taxes"
+   ],
+   "claims_to_verify": [
+    "Q2 2027 estimated tax due Tue June 15, 2027 (IRS Form 1040-ES schedule)",
+    "Underpayment penalty applies if estimated taxes are paid late or short"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7-dia-del-padre",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Father's Day (third Sunday of June in the US and Mexico): a gift without debt, set the amount first; ideas that cost little (a meal you cook, fixing something together, a printed photo).",
+  "script": {
+   "title": "Día del Padre sin deudas: 3 ideas",
+   "hook": "Para el Día del Padre, el regalo que más recuerdan casi nunca es el más caro.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Para el Día del Padre, el regalo que más recuerdan casi nunca es el más caro.",
+     "on_screen_text": "El regalo que más recuerdan no es el más caro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small gift box. No text, no logos, no real people."
+    },
+    {
+     "heading": "Uno",
+     "narration": "Uno: una comida que cocinas tú, con su plato favorito.",
+     "on_screen_text": "1. Una comida hecha por ti",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a plate of food with a ribbon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dos",
+     "narration": "Dos: arreglar juntos eso que lleva meses pendiente en la casa o el carro.",
+     "on_screen_text": "2. Arreglar algo juntos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two hands holding a wrench. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tres",
+     "narration": "Tres: una foto impresa, con la fecha y una frase atrás.",
+     "on_screen_text": "3. Una foto impresa con fecha",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a printed photo with handwriting. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y si vas a comprar algo, decide el monto antes de salir.",
+     "on_screen_text": "Decide el monto antes de salir",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf writing a number on a note. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Día del Padre sin deudas:\n1. Una comida hecha por ti.\n2. Arreglar juntos eso que lleva meses pendiente.\n3. Una foto impresa con la fecha y una frase atrás.\nSi vas a comprar algo, decide el monto antes de salir.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "diadelpadre",
+    "regalos",
+    "presupuesto",
+    "familia",
+    "dinerosimple"
+   ],
+   "description": "Ideas para el Día del Padre que no salen de la tarjeta.",
+   "thumbnail_text": "Día del Padre",
+   "sources": [],
+   "claims_to_verify": [
+    "Father's Day 2027: Sun June 20 in the US and Mexico (third Sunday of June); other countries differ"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7-seguro-de-vida-plazo",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Term life insurance in plain words: you pay a fixed price for 10, 20 or 30 years and, if you die in that time, your family gets the money; it's usually the cheapest way to protect people who depend on your income.",
+  "script": {
+   "title": "Seguro de vida a plazo: lo explico en 40 segundos",
+   "hook": "Si alguien depende de tu sueldo, esto es lo que tienes que saber del seguro de vida.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si alguien depende de tu sueldo, esto es lo que tienes que saber del seguro de vida.",
+     "on_screen_text": "¿Alguien depende de tu sueldo?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a family silhouette behind. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "El seguro de vida a plazo es sencillo: pagas un precio fijo por diez, veinte o treinta años.",
+     "on_screen_text": "Pagas un precio fijo por 10, 20 o 30 años",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a long bar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué cubre",
+     "narration": "Si mueres en ese tiempo, tu familia recibe el dinero. Si no, se termina y ya.",
+     "on_screen_text": "Si mueres en ese tiempo, tu familia cobra",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope handed to a family. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Suele ser la forma más barata de proteger a quien depende de ti, mientras tus hijos crecen o pagas la casa.",
+     "on_screen_text": "Suele ser lo más barato para proteger",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Pide cotizaciones de dos o tres lugares, y no firmes el mismo día.",
+     "on_screen_text": "Pide cotizaciones de dos o tres lugares",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three quote papers side by side. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Seguro de vida a plazo: pagas un precio fijo por 10, 20 o 30 años y, si mueres en ese tiempo, tu familia recibe el dinero. Si no, se termina. Suele ser la forma más barata de proteger a quien depende de tu sueldo. Pide 2 o 3 cotizaciones y no firmes el mismo día.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "segurodevida",
+    "familia",
+    "finanzaspersonales",
+    "proteccion",
+    "dinerosimple"
+   ],
+   "description": "Qué es el seguro de vida a plazo.",
+   "thumbnail_text": "Seguro a plazo",
+   "sources": [
+    "https://content.naic.org/consumer/life-insurance.htm"
+   ],
+   "claims_to_verify": [
+    "Term life is generally the lowest-cost life insurance for a given coverage amount (NAIC consumer guide)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7-plan-de-retiro-seguro",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "When a friend or relative offers a 'plan de retiro' or 'plan de ahorro' that is really permanent life insurance (often an IUL): ask if it's insurance, the monthly cost, the fees, what you get back if you stop paying in year 3, and compare with term plus a retirement account.",
+  "script": {
+   "title": "El 'plan de retiro' que en realidad es un seguro",
+   "hook": "Si un conocido te ofrece un 'plan de retiro' con seguro de vida, haz estas preguntas antes de firmar.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si un conocido te ofrece un 'plan de retiro' con seguro de vida, haz estas preguntas antes de firmar.",
+     "on_screen_text": "¿Un 'plan de retiro' con seguro?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf listening to someone with a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta 1",
+     "narration": "Uno: ¿esto es un seguro de vida? Muchos de estos planes lo son, aunque se vendan como ahorro.",
+     "on_screen_text": "¿Es un seguro de vida?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder with a small label. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta 2",
+     "narration": "Dos: ¿cuánto pago al mes y cuánto se va en comisiones y cargos?",
+     "on_screen_text": "¿Cuánto pago al mes y cuánto en comisiones?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with fee lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta 3",
+     "narration": "Tres: si dejo de pagar al año tres, ¿cuánto me regresan? A veces es muy poco o nada.",
+     "on_screen_text": "¿Cuánto me regresan si dejo de pagar al año 3?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar almost empty. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y compáralo con un seguro a plazo más una cuenta de retiro por tu lado. Pide todo por escrito.",
+     "on_screen_text": "Compara con un seguro a plazo y una cuenta de retiro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two paths on a sign. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si te ofrecen un 'plan de retiro' o 'plan de ahorro' con seguro de vida, pregunta antes de firmar:\n1. ¿Es un seguro de vida?\n2. ¿Cuánto pago al mes y cuánto se va en comisiones y cargos?\n3. Si dejo de pagar al año 3, ¿cuánto me regresan?\nCompáralo con un seguro a plazo más una cuenta de retiro. Pide todo por escrito y no firmes el mismo día.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "segurodevida",
+    "retiro",
+    "finanzaspersonales",
+    "estafas",
+    "dinerosimple"
+   ],
+   "description": "Preguntas antes de firmar un 'plan de retiro' que es un seguro de vida.",
+   "thumbnail_text": "¿Plan de retiro?",
+   "sources": [
+    "https://content.naic.org/consumer/life-insurance.htm",
+    "https://www.investor.gov/"
+   ],
+   "claims_to_verify": [
+    "Permanent policies (whole, universal, indexed universal life) are sometimes sold as savings or retirement plans; surrender charges in early years can leave little cash value (NAIC, state insurance regulators)",
+    "Don't name any company or agent"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7-seguro-de-renta",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Renter's insurance: the landlord's policy covers the building, not your things; renter's insurance covers your belongings and liability and often costs less than a dinner out each month; ask for actual cost vs replacement cost.",
+  "script": {
+   "title": "¿Rentas? El seguro del dueño no cubre tus cosas",
+   "hook": "Si rentas y hay un incendio o te roban, el seguro del dueño no te paga ni un sartén.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si rentas y hay un incendio o te roban, el seguro del dueño no te paga ni un sartén.",
+     "on_screen_text": "El seguro del dueño no cubre tus cosas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf in an empty apartment. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué cubre",
+     "narration": "Ese seguro cubre el edificio. Tus cosas las cubre el seguro de inquilino, el 'renters insurance'.",
+     "on_screen_text": "El seguro de inquilino cubre tus cosas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. furniture under an umbrella. No text, no logos, no real people."
+    },
+    {
+     "heading": "Y más",
+     "narration": "También te cubre si alguien se lastima en tu casa y te demanda.",
+     "on_screen_text": "También si alguien se lastima en tu casa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a person slipping on a wet floor. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuánto",
+     "narration": "Muchas veces cuesta menos al mes que una salida a cenar. Pide dos o tres cotizaciones.",
+     "on_screen_text": "Muchas veces cuesta menos que una salida a cenar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small price tag next to a plate. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Pregunta si paga el costo de reemplazo, no solo lo que valían tus cosas usadas.",
+     "on_screen_text": "Pide 'costo de reemplazo'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a new chair next to an old one. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si rentas, el seguro del dueño cubre el edificio, no tus cosas. El seguro de inquilino ('renters insurance') cubre tus cosas si hay un incendio o un robo, y tu responsabilidad si alguien se lastima en tu casa. Muchas veces cuesta menos al mes que una salida a cenar. Pide 2 o 3 cotizaciones y pregunta por 'costo de reemplazo'.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "renta",
+    "seguros",
+    "vivienda",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Por qué el seguro de inquilino vale la pena.",
+   "thumbnail_text": "Seguro de renta",
+   "sources": [
+    "https://content.naic.org/consumer/renters-insurance.htm"
+   ],
+   "claims_to_verify": [
+    "Landlord policies cover the building, not tenants' belongings (NAIC)",
+    "Renter's insurance is typically low-cost (NAIC/III averages around $15-20 a month; check current figures)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7-seguro-carro-minimo",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Your state's minimum car insurance (liability) pays for damage you cause to others, up to a low limit; it doesn't fix your car, and a serious crash can exceed it and come out of your pocket; ask for quotes with higher limits, often for a little more.",
+  "script": {
+   "title": "El seguro mínimo de carro: qué cubre y qué no",
+   "hook": "El seguro más barato de carro cumple la ley. Pero en un choque fuerte, lo que falta lo pagas tú.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "El seguro más barato de carro cumple la ley. Pero en un choque fuerte, lo que falta lo pagas tú.",
+     "on_screen_text": "El mínimo cumple la ley, pero…",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf next to a dented car. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué cubre",
+     "narration": "El mínimo, el de responsabilidad, paga lo que le haces al otro carro y a las personas, hasta un límite.",
+     "on_screen_text": "Paga lo que le haces a otros",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two cars with an arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué no",
+     "narration": "No arregla tu carro. Para eso es la cobertura de choque.",
+     "on_screen_text": "No arregla tu carro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a car with a wrench crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "El riesgo",
+     "narration": "Si el daño pasa del límite, te pueden cobrar la diferencia a ti.",
+     "on_screen_text": "Si el daño pasa del límite, te lo cobran a ti",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bill bigger than a shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Pide la cotización con límites más altos: muchas veces cuesta poco más.",
+     "on_screen_text": "Cotiza con límites más altos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two quotes side by side. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El seguro mínimo de carro (responsabilidad) paga lo que le haces a otros, hasta un límite. No arregla tu carro (para eso es la cobertura de choque). Si el daño pasa del límite, te pueden cobrar la diferencia a ti. Pide cotizaciones con límites más altos: muchas veces cuestan poco más. Los mínimos cambian por estado.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "segurodecarro",
+    "carros",
+    "seguros",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Qué cubre y qué no cubre el seguro mínimo de carro.",
+   "thumbnail_text": "Seguro mínimo",
+   "sources": [
+    "https://content.naic.org/consumer/auto-insurance.htm"
+   ],
+   "claims_to_verify": [
+    "Liability coverage pays others' damages up to policy limits; state minimums vary and are often low (NAIC)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7-cambiar-cheques",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Cashing your paycheck at a check-cashing store costs a percentage every time; a worked example at 3% on a $700 weekly check is over $1,000 a year; a free checking account with direct deposit costs nothing.",
+  "script": {
+   "title": "Cambiar tu cheque te puede costar $1,000 al año",
+   "hook": "Si cambias tu cheque cada semana en una tienda, haz esta cuenta.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si cambias tu cheque cada semana en una tienda, haz esta cuenta.",
+     "on_screen_text": "Cambiar tu cheque cuesta, y mucho",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at a counter with a check. No text, no logos, no real people."
+    },
+    {
+     "heading": "La cuenta",
+     "narration": "Ejemplo: si te cobran 3 por ciento por un cheque de 700, son 21 dólares cada semana.",
+     "on_screen_text": "3% de $700 = $21 cada semana",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a check with a small bite out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Al año",
+     "narration": "Por 52 semanas, son 1,092 dólares al año. Solo por cobrar tu propio sueldo.",
+     "on_screen_text": "$21 × 52 = $1,092 al año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a stack of bills labeled one year. No text, no logos, no real people."
+    },
+    {
+     "heading": "La opción",
+     "narration": "Una cuenta de cheques sin cargo mensual y con depósito directo te cuesta cero, y muchas te pagan un día antes.",
+     "on_screen_text": "Una cuenta sin cargos y depósito directo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a deposit notification. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Pregunta en una cooperativa o un banco que acepte tu identificación.",
+     "on_screen_text": "Pregunta en una cooperativa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small bank building. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Cambiar tu cheque en una tienda cuesta cada semana. Ejemplo: 3% de un cheque de $700 son $21; por 52 semanas, $1,092 al año. Una cuenta de cheques sin cargo mensual con depósito directo cuesta $0. Pregunta en una cooperativa o un banco que acepte tu identificación (muchas aceptan matrícula consular o pasaporte).\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "bancos",
+    "cheques",
+    "ahorro",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cuánto cuesta cambiar tu cheque cada semana.",
+   "thumbnail_text": "$1,000 al año",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://joinbankon.org/"
+   ],
+   "claims_to_verify": [
+    "Check-cashing fees vary by state and store, often 1-5% (state caps vary); 3% is an example",
+    "Example arithmetic: $700 x 3% = $21; $21 x 52 = $1,092",
+    "Many banks and credit unions accept a matrícula consular or foreign passport as ID (varies)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7-choque-que-hacer",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "After a car crash: check for injuries and call 911 if needed, take photos of both cars, plates, the other driver's license and insurance card, don't sign anything or accept cash on the spot, and report to your insurer the same day.",
+  "script": {
+   "title": "Si chocas: haz esto antes de irte",
+   "hook": "Si chocas, los primeros diez minutos deciden quién paga. Haz esto.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si chocas, los primeros diez minutos deciden quién paga. Haz esto.",
+     "on_screen_text": "Los primeros 10 minutos deciden quién paga",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf next to two cars after a small crash. No text, no logos, no real people."
+    },
+    {
+     "heading": "Primero",
+     "narration": "Primero revisa que nadie esté herido. Si hay heridos o el choque es fuerte, llama al 911.",
+     "on_screen_text": "Revisa heridos; si hay, llama al 911",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone dialing 911. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fotos",
+     "narration": "Toma fotos de los dos carros, las placas, la licencia y la tarjeta del seguro del otro conductor.",
+     "on_screen_text": "Fotos de todo: carros, placas, licencia, seguro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone taking photos. No text, no logos, no real people."
+    },
+    {
+     "heading": "No firmes",
+     "narration": "No firmes nada ni aceptes dinero en efectivo ahí mismo para 'arreglarlo entre nosotros'.",
+     "on_screen_text": "No firmes nada ni aceptes efectivo ahí",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a hand refusing cash. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y avisa a tu seguro el mismo día, aunque no haya sido tu culpa.",
+     "on_screen_text": "Avisa a tu seguro el mismo día",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf on the phone calmly. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si chocas:\n1. Revisa que nadie esté herido; si hay heridos o el choque es fuerte, llama al 911.\n2. Toma fotos de los dos carros, las placas, la licencia y la tarjeta del seguro del otro conductor.\n3. No firmes nada ni aceptes efectivo para 'arreglarlo entre nosotros'.\n4. Avisa a tu seguro el mismo día.\nLas reglas para reportar a la policía cambian por estado.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "segurodecarro",
+    "accidente",
+    "carros",
+    "seguros",
+    "dinerosimple"
+   ],
+   "description": "Qué hacer después de un choque para proteger tu dinero.",
+   "thumbnail_text": "Si chocas",
+   "sources": [
+    "https://content.naic.org/consumer/auto-insurance.htm"
+   ],
+   "claims_to_verify": [
+    "Police-report and exchange-of-information requirements vary by state"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7c-mitad-de-ano",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "A six-step midyear money check to save: savings vs January, total debt, weekly spending, subscriptions, the December fund, and one automatic transfer.",
+  "script": {
+   "title": "Chequeo de medio año: 6 pasos",
+   "hook": "Guárdalo y hazlo este fin de semana.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "6 pasos. Guárdalo y hazlo este fin de semana.",
+     "on_screen_text": "Chequeo de dinero de medio año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a calendar folded in half. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Aunque sea poquito, ¿subió?",
+     "on_screen_text": "1. Tu ahorro, comparado con enero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar with a January line. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Suma todas las tarjetas y préstamos.",
+     "on_screen_text": "2. Tu deuda total",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a stack of cards with a total. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Lo que no es fijo: comida, salidas, antojos.",
+     "on_screen_text": "3. Tu gasto de la semana",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a weekly calendar with receipts. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Cancela una hoy.",
+     "on_screen_text": "4. Las suscripciones que ya no usas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with subscription icons. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Faltan unas 26 semanas: divide y aparta.",
+     "on_screen_text": "5. Empieza el fondo de diciembre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar labeled 'Diciembre'. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "El día de pago, aunque sea de $10.",
+     "on_screen_text": "6. Una transferencia automática",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a repeating arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "En pareja se cumple más.",
+     "on_screen_text": "Mándaselo a quien lo hace contigo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two phones sharing a picture. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Chequeo de dinero de medio año, en 6 pasos:\n1. Tu ahorro, comparado con enero.\n2. Tu deuda total.\n3. Tu gasto de la semana.\n4. Cancela una suscripción que no usas.\n5. Empieza el fondo de diciembre (faltan unas 26 semanas).\n6. Pon una transferencia automática el día de pago.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "presupuesto",
+    "ahorro",
+    "metas",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "El chequeo de dinero de mitad de año en 6 pasos.",
+   "thumbnail_text": "Chequeo de medio año",
+   "sources": [],
+   "claims_to_verify": [
+    "About 26 weeks from late June to late December"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7c-cobrar-tu-salario",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Steps to recover unpaid wages: your own records, pay stubs, ask in writing, the state labor office or the federal Wage and Hour Division (free, confidential, Spanish), a worker center, and the deadline (usually 2 years, 3 if willful under federal law).",
+  "script": {
+   "title": "Si no te pagaron: 6 pasos para cobrar",
+   "hook": "Guárdalo. Ojalá no lo necesites.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo. Ojalá no lo necesites.",
+     "on_screen_text": "Si no te pagaron: 6 pasos para cobrar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a paycheck with a missing corner. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Tu libreta de horas, fotos del horario, mensajes, talones.",
+     "on_screen_text": "1. Junta tus pruebas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder with papers. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Un mensaje claro: fechas, horas y cuánto falta.",
+     "on_screen_text": "2. Pide el pago por escrito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a written message. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Es gratis y confidencial. Atienden en español.",
+     "on_screen_text": "3. Queja con tu estado o con el DOL",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a government building. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "La ley de salario mínimo y horas extra es para todos.",
+     "on_screen_text": "4. Te protege tengas papeles o no",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a shield over workers. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Despedirte por reclamar está prohibido.",
+     "on_screen_text": "5. No te pueden castigar por quejarte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a hand stopping a pink slip. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Por ley federal, casi siempre 2 años.",
+     "on_screen_text": "6. No esperes: hay fecha límite",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an hourglass. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Busca uno en tu ciudad.",
+     "on_screen_text": "Un centro de trabajadores te ayuda gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a group of people at a table. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si no te pagaron, 6 pasos para cobrar:\n1. Junta tus pruebas (libreta de horas, fotos, mensajes, talones).\n2. Pide el pago por escrito.\n3. Queja con la oficina de trabajo de tu estado o la División de Salarios y Horas (1-866-487-9243). Es gratis y confidencial.\n4. La ley te protege tengas papeles o no.\n5. No te pueden castigar por quejarte.\n6. No esperes: por ley federal casi siempre hay 2 años (3 si fue a propósito).\n\nInformación general, no es asesoría legal. Para tu caso, un centro de trabajadores o un abogado laboral te orienta, muchas veces gratis.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "trabajadores",
+    "salario",
+    "derechoslaborales",
+    "trabajo",
+    "dinerosimple"
+   ],
+   "description": "Seis pasos para cobrar el salario que te deben.",
+   "thumbnail_text": "Cobra lo tuyo",
+   "sources": [
+    "https://www.dol.gov/agencies/whd/espanol",
+    "https://www.dol.gov/agencies/whd/immigration"
+   ],
+   "claims_to_verify": [
+    "FLSA statute of limitations: 2 years, 3 for willful violations",
+    "FLSA prohibits retaliation for filing a complaint",
+    "WHD complaints are free and confidential; WHD enforces regardless of immigration status"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7c-horas-extra",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Overtime math on one carousel: $18 an hour, 50 hours, straight time $900 vs correct $990, $90 a week, $4,680 a year; plus who usually qualifies and what to check on the pay stub.",
+  "script": {
+   "title": "Horas extra: la cuenta que te deben",
+   "hook": "Haz tu cuenta con tus números.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Ejemplo con $18 la hora. Haz tu cuenta con tus números.",
+     "on_screen_text": "Horas extra: la cuenta que te deben",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a calculator and a timesheet. No text, no logos, no real people."
+    },
+    {
+     "heading": "Regla",
+     "narration": "Para casi todos los trabajos pagados por hora.",
+     "on_screen_text": "Después de 40 horas: tiempo y medio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a clock with 40 marked. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "40 horas a $18 y 10 horas a $27.",
+     "on_screen_text": "$18 la hora · 50 horas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a timesheet with 50 hours. No text, no logos, no real people."
+    },
+    {
+     "heading": "Bien pagado",
+     "narration": "Eso es lo que te toca esa semana.",
+     "on_screen_text": "Correcto: $720 + $270 = $990",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a stack of bills labeled 990. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mal pagado",
+     "narration": "Si te pagan todo parejo, faltan $90.",
+     "on_screen_text": "Parejo: 50 × $18 = $900",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a smaller stack labeled 900. No text, no logos, no real people."
+    },
+    {
+     "heading": "Al año",
+     "narration": "Lo que se pierde en un año de semanas así.",
+     "on_screen_text": "$90 × 52 semanas = $4,680",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a big number. No text, no logos, no real people."
+    },
+    {
+     "heading": "Revisa",
+     "narration": "Y compara con tu libreta de horas.",
+     "on_screen_text": "Busca 'overtime' en tu talón",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pay stub with a highlighted line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Muchos no saben que se lo deben.",
+     "on_screen_text": "Mándaselo a quien trabaja más de 40",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two phones sharing a picture. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Horas extra, ejemplo con $18 la hora y 50 horas a la semana:\nCorrecto: 40 × $18 + 10 × $27 = $990.\nParejo: 50 × $18 = $900. Faltan $90 a la semana, $4,680 en un año.\nRevisa la línea de 'overtime' en tu talón. Algunos trabajos no tienen derecho a horas extra y algunos estados pagan extra por día; revisa las reglas de tu estado.\n\nInformación general, no es asesoría legal. Para tu caso, un centro de trabajadores o un abogado laboral te orienta, muchas veces gratis.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "horasextra",
+    "salario",
+    "trabajadores",
+    "derechoslaborales",
+    "dinerosimple"
+   ],
+   "description": "La cuenta de las horas extra con un ejemplo.",
+   "thumbnail_text": "$90 a la semana",
+   "sources": [
+    "https://www.dol.gov/agencies/whd/espanol"
+   ],
+   "claims_to_verify": [
+    "Example arithmetic: 40 x 18 = 720; 10 x 27 = 270; 990 - 900 = 90; 90 x 52 = 4,680",
+    "Some jobs are exempt from overtime; some states require daily overtime"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7c-impuesto-estimado",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Estimated taxes for people who work for themselves: who pays, the four 2027 dates, a separate tax account with a fixed share of each payment, paying online at irs.gov, and keeping the receipts for next April.",
+  "script": {
+   "title": "Impuestos estimados: guía de 1 minuto",
+   "hook": "Si trabajas por tu cuenta, guárdalo.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Si trabajas por tu cuenta, guárdalo.",
+     "on_screen_text": "Impuestos estimados: guía de 1 minuto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a calendar and a jar labeled IRS. No text, no logos, no real people."
+    },
+    {
+     "heading": "Quién",
+     "narration": "Trabajo por tu cuenta, apps de entrega, limpieza, construcción por contrato.",
+     "on_screen_text": "Si nadie te retiene impuestos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a few work icons. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuándo",
+     "narration": "Las cuatro fechas de 2027 (la de enero es de 2028).",
+     "on_screen_text": "Abr 15 · jun 15 · sep 15 · ene 18",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with four dates. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuánto",
+     "narration": "Pregunta a un preparador cuánto apartar en tu caso.",
+     "on_screen_text": "Un porcentaje fijo de cada pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pie chart slice. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dónde",
+     "narration": "Lo que está aparte no se gasta.",
+     "on_screen_text": "En una cuenta aparte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar labeled IRS. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Y guarda el comprobante para abril.",
+     "on_screen_text": "Paga en línea en irs.gov",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a payment confirmation. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Pagar tarde suma una multa.",
+     "on_screen_text": "Poquito y a tiempo le gana a la multa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small fine notice crossed out. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Impuestos estimados, guía de 1 minuto:\n• Si trabajas por tu cuenta, nadie te retiene impuestos.\n• Fechas 2027: 15 de abril, 15 de junio, 15 de septiembre y 18 de enero de 2028.\n• Aparta un porcentaje fijo de cada pago en una cuenta aparte (pregunta a un preparador cuánto en tu caso).\n• Paga en línea en irs.gov y guarda el comprobante.\n\nInformación general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "impuestos",
+    "trabajoindependiente",
+    "1099",
+    "irs",
+    "dinerosimple"
+   ],
+   "description": "Los impuestos estimados explicados en un minuto.",
+   "thumbnail_text": "Impuestos estimados",
+   "sources": [
+    "https://www.irs.gov/es/businesses/small-businesses-self-employed/estimated-taxes"
+   ],
+   "claims_to_verify": [
+    "2027 estimated tax dates: Apr 15, Jun 15, Sep 15, 2027 and Jan 18, 2028 (Jan 15, 2028 is a Saturday; confirm on the 2027 Form 1040-ES)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7c-dia-del-padre",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Father's Day without debt in five ideas: a set amount, a meal you cook, fixing something together, a shared gift from the siblings, and a printed photo; no 'pay in 4'.",
+  "script": {
+   "title": "Día del Padre sin deudas: 5 ideas",
+   "hook": "Guárdalo para el chat de la familia.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "5 ideas. Guárdalo para el chat de la familia.",
+     "on_screen_text": "Día del Padre sin deudas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small gift and a list. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Decide cuánto antes de ver los anuncios.",
+     "on_screen_text": "1. Un número antes de salir",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a sticky note with a number. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Su plato favorito, en tu cocina.",
+     "on_screen_text": "2. Una comida hecha por ti",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a plate of food with a ribbon. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Eso que lleva meses pendiente.",
+     "on_screen_text": "3. Arreglar algo juntos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two hands holding a wrench. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Cada uno pone su parte.",
+     "on_screen_text": "4. Un regalo entre los hermanos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. four hands holding one gift. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Con una frase atrás.",
+     "on_screen_text": "5. Una foto impresa con fecha",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a printed photo. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Si no cabe este mes, no cabe en cuatro.",
+     "on_screen_text": "Nada de 'paga en 4'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. four small receipts with an X. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Día del Padre sin deudas, 5 ideas:\n1. Un número antes de salir.\n2. Una comida hecha por ti.\n3. Arreglar algo juntos.\n4. Un regalo entre los hermanos.\n5. Una foto impresa con fecha.\nY nada de 'paga en 4'.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "diadelpadre",
+    "regalos",
+    "familia",
+    "presupuesto",
+    "dinerosimple"
+   ],
+   "description": "Cinco ideas para el Día del Padre sin deudas.",
+   "thumbnail_text": "Día del Padre",
+   "sources": [],
+   "claims_to_verify": [
+    "No numeric claims"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7c-seguro-de-vida",
+  "format": "carousel",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Term vs permanent life insurance side by side: what each does, an illustrative monthly cost difference, who usually needs term, red flags when permanent insurance is sold as a retirement plan, and how much coverage to ask about.",
+  "script": {
+   "title": "Seguro a plazo o permanente: la diferencia",
+   "hook": "Antes de que te vendan uno, guárdalo.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Antes de que te vendan uno, guárdalo.",
+     "on_screen_text": "Seguro de vida: a plazo o permanente",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf between two doors. No text, no logos, no real people."
+    },
+    {
+     "heading": "A plazo",
+     "narration": "Precio fijo, solo protección. Suele ser lo más barato.",
+     "on_screen_text": "A plazo: 10, 20 o 30 años",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a long bar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Permanente",
+     "narration": "Mucho más caro al mes, con cargos y comisiones.",
+     "on_screen_text": "Permanente: toda la vida, con ahorro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a big price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Quién",
+     "narration": "Para proteger a quien depende de ti mientras crecen.",
+     "on_screen_text": "¿Hijos o casa? Casi siempre: a plazo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a family under an umbrella. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ojo",
+     "narration": "Pregunta cuánto te regresan si dejas de pagar al año 3.",
+     "on_screen_text": "Si te lo venden como 'plan de retiro'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder with small print. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuánto",
+     "narration": "Y pide cotizaciones de 2 o 3 lugares.",
+     "on_screen_text": "Pregunta por varias veces tu sueldo anual",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three quote papers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Lee todo y compara.",
+     "on_screen_text": "No firmes el mismo día",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf putting a pen down. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Seguro de vida a plazo o permanente:\n• A plazo: precio fijo por 10, 20 o 30 años, solo protección. Suele ser lo más barato.\n• Permanente: toda la vida, con un ahorro adentro; mucho más caro al mes, con cargos y comisiones.\n• Si tienes hijos o casa, casi siempre conviene a plazo.\n• Si te lo venden como 'plan de retiro', pregunta cuánto te regresan si dejas de pagar al año 3.\nPide 2 o 3 cotizaciones y no firmes el mismo día.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "segurodevida",
+    "familia",
+    "proteccion",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "La diferencia entre seguro de vida a plazo y permanente.",
+   "thumbnail_text": "¿Plazo o permanente?",
+   "sources": [
+    "https://content.naic.org/consumer/life-insurance.htm"
+   ],
+   "claims_to_verify": [
+    "Term is typically far cheaper than permanent coverage for the same death benefit (NAIC)",
+    "Coverage rules of thumb (several times annual income) are general guidance, not a recommendation"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7c-seguros-basicos",
+  "format": "carousel",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Which insurance most working families actually need, in order: health (ask about Marketplace or employer plans and Medicaid/CHIP for kids), car liability with decent limits, renter's or home, term life if someone depends on you, and what to skip (extended warranties, credit insurance).",
+  "script": {
+   "title": "Los seguros que sí necesitas (y los que no)",
+   "hook": "Guárdalo para revisar los tuyos.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo para revisar los tuyos.",
+     "on_screen_text": "Los seguros que sí necesitas (y los que no)",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a short checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Del trabajo o del Mercado. Los niños pueden calificar a Medicaid o CHIP.",
+     "on_screen_text": "1. Salud",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a heart with a cross. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "El mínimo cumple la ley, pero un choque fuerte lo pasa.",
+     "on_screen_text": "2. Carro, con límites decentes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a car with a shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "El seguro del dueño no cubre tus cosas.",
+     "on_screen_text": "3. Inquilino o casa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. furniture under an umbrella. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Hijos, pareja, papás que mantienes.",
+     "on_screen_text": "4. Vida a plazo, si alguien depende de ti",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a family silhouette. No text, no logos, no real people."
+    },
+    {
+     "heading": "Los que no",
+     "narration": "Muchas veces cuestan más de lo que pagan.",
+     "on_screen_text": "Casi nunca: garantías extendidas y seguros de deuda",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with lines crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Una llamada al año puede bajar la prima.",
+     "on_screen_text": "Compara cada año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone and a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Los seguros que casi todas las familias sí necesitan:\n1. Salud (del trabajo o del Mercado; los niños pueden calificar a Medicaid o CHIP).\n2. Carro, con límites decentes.\n3. Inquilino o casa.\n4. Vida a plazo, si alguien depende de ti.\nCasi nunca valen la pena: garantías extendidas y seguros de deuda. Compara cada año.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "seguros",
+    "familia",
+    "salud",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Qué seguros sí necesitas y cuáles casi nunca.",
+   "thumbnail_text": "Seguros que sí",
+   "sources": [
+    "https://content.naic.org/consumer.htm",
+    "https://www.cuidadodesalud.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Children in many families can qualify for Medicaid or CHIP regardless of parents' status (eligibility varies by state and the child's status)",
+    "Extended warranties and credit insurance often pay out less than they cost (general consumer guidance; keep it general)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m7c-si-chocas",
+  "format": "carousel",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "A post-crash checklist to keep in the glovebox: safety and 911, photos, the other driver's info, witnesses, no on-the-spot cash deals, report to your insurer, and get a copy of the police report if there is one.",
+  "script": {
+   "title": "Si chocas: la lista para la guantera",
+   "hook": "Tómale captura y guárdala en tu celular.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Tómale captura y guárdala.",
+     "on_screen_text": "Si chocas: la lista para la guantera",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf opening a glovebox. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Si no, mueve los carros a un lugar seguro si se puede.",
+     "on_screen_text": "1. ¿Heridos? Llama al 911",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone dialing 911. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Los dos carros, las placas, el lugar.",
+     "on_screen_text": "2. Fotos de todo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone taking photos. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Nombre, licencia, seguro y número de póliza.",
+     "on_screen_text": "3. Datos del otro conductor",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a driver's license and insurance card. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Nombre y teléfono de quien lo vio.",
+     "on_screen_text": "4. Testigos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a person with a phone number. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "No firmes ni aceptes efectivo ahí mismo.",
+     "on_screen_text": "5. Nada de 'lo arreglamos aquí'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a hand refusing cash. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Y pide copia del reporte de policía si lo hay.",
+     "on_screen_text": "6. Avisa a tu seguro el mismo día",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf on the phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Nadie se la sabe hasta que la necesita.",
+     "on_screen_text": "Mándasela a quien acaba de sacar licencia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two phones sharing a picture. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si chocas, la lista para la guantera:\n1. ¿Heridos? Llama al 911.\n2. Fotos de los dos carros, las placas y el lugar.\n3. Datos del otro conductor: nombre, licencia, seguro y número de póliza.\n4. Nombre y teléfono de testigos.\n5. No firmes ni aceptes efectivo ahí mismo.\n6. Avisa a tu seguro el mismo día y pide copia del reporte de policía.\nLas reglas para reportar cambian por estado.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "accidente",
+    "segurodecarro",
+    "carros",
+    "seguros",
+    "dinerosimple"
+   ],
+   "description": "La lista de qué hacer después de un choque.",
+   "thumbnail_text": "Si chocas",
+   "sources": [
+    "https://content.naic.org/consumer/auto-insurance.htm"
+   ],
+   "claims_to_verify": [
+    "Reporting requirements vary by state"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "l-tu-sueldo-completo",
+  "format": "long",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Complete Spanish guide to getting paid every dollar you work for: minimum wage, overtime with a worked example, keeping your own hours, pay stubs and cash pay, contractor vs employee, unpaid wages and how to claim them (free, confidential, regardless of immigration status), retaliation, deadlines and where to get help.",
+  "script": {
+   "title": "Tu sueldo completo: horas extra, salario robado y cómo cobrar (guía completa)",
+   "hook": "Por cada semana de cincuenta horas mal pagadas, se pueden perder noventa dólares. En un año, más de cuatro mil.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Por cada semana de cincuenta horas mal pagadas, se pueden perder noventa dólares. En un año, más de cuatro mil. En este video vemos el salario mínimo, las horas extra con un ejemplo en números, cómo llevar tus propias horas, el talón de pago y el pago en efectivo, la diferencia entre contratista y empleado, y qué hacer si no te pagan. Es información general, no asesoría legal.",
+     "on_screen_text": "Tu sueldo completo: la guía",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at a workplace entrance with a timesheet. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mínimo",
+     "narration": "Hay un salario mínimo federal, y muchos estados y ciudades tienen uno más alto. Te toca el más alto de los que apliquen donde trabajas. Búscalo en la página de trabajo de tu estado, porque muchos suben cada enero o cada julio.",
+     "on_screen_text": "El salario mínimo: el más alto gana",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a map with different numbers on states. No text, no logos, no real people."
+    },
+    {
+     "heading": "Horas extra",
+     "narration": "Si te pagan por hora, casi siempre te toca tiempo y medio por cada hora después de cuarenta en la semana de trabajo. No importa si te pagan cada semana o cada quincena: se cuenta semana por semana. Algunos estados, como California, también pagan extra después de ocho horas en un día.",
+     "on_screen_text": "Después de 40 horas: tiempo y medio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a clock with 40 marked. No text, no logos, no real people."
+    },
+    {
+     "heading": "La cuenta",
+     "narration": "Hagamos la cuenta. Ganas 18 dólares la hora y trabajas 50 horas. Las primeras 40 son 720 dólares. Las otras 10 valen 27 cada una, o sea 270. En total te tocan $990. Si te pagan todo parejo, 50 por 18, te dan $900. Faltan 90 dólares esa semana, y en un año de semanas así son 4,680.",
+     "on_screen_text": "$990 o $900: la diferencia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two stacks of bills of different heights. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "50 horas a $18 la hora",
+      "labels": [
+       "Pago parejo",
+       "Pago correcto"
+      ],
+      "values": [
+       900,
+       990
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo: 10 horas extra a $27"
+     }
+    },
+    {
+     "heading": "Tus horas",
+     "narration": "Tu mejor prueba es tu propio registro. Cada día anota la fecha, la hora de entrada, cuánto duró tu comida y la hora de salida. Toma fotos del horario y guarda los mensajes donde te piden quedarte. Cada día de pago, compara con tu talón.",
+     "on_screen_text": "Lleva tu propia libreta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small notebook with times. No text, no logos, no real people."
+    },
+    {
+     "heading": "El talón",
+     "narration": "Revisa tu talón: horas normales, horas extra, la tarifa y los descuentos. Si te pagan en efectivo, pide un recibo de cada pago con fecha, horas y monto, y deposítalo cada semana. Así tienes prueba de tu ingreso, y recuerda que ese dinero también cuenta para impuestos.",
+     "on_screen_text": "Tu talón y el pago en efectivo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pay stub next to cash and a receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "1099 o W-2",
+     "narration": "Si te pagan con 1099 pero ellos ponen tu horario, te dan las herramientas y te dicen cómo hacer el trabajo, puede que seas empleado. Como contratista pagas las dos partes del Seguro Social y Medicare, y no te toca tiempo extra. Lo que decide no es el papel que firmaste, es cómo trabajas.",
+     "on_screen_text": "¿Contratista o empleado?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two forms on a table. No text, no logos, no real people."
+    },
+    {
+     "heading": "Si no te pagan",
+     "narration": "Si no te pagaron, primero pide el pago por escrito, con fechas y horas. Si no te pagan, puedes poner una queja con la oficina de trabajo de tu estado o con la División de Salarios y Horas del Departamento de Trabajo. Es gratis, es confidencial y atienden en español. La ley de salario mínimo y horas extra protege a los trabajadores tengan papeles o no.",
+     "on_screen_text": "Si no te pagan: cómo cobrar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a government building with a phone icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Represalias",
+     "narration": "Despedirte, bajarte las horas o amenazarte porque reclamaste tu pago está prohibido. Si pasa, anótalo y repórtalo también. Y no esperes mucho: por ley federal, casi siempre tienes dos años para reclamar, tres si lo hicieron a propósito.",
+     "on_screen_text": "No te pueden castigar por reclamar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a hand stopping a pink slip. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ayuda",
+     "narration": "Un centro de trabajadores, una clínica legal o un abogado laboral te pueden orientar, muchas veces gratis o cobrando solo si ganas. Busca uno en tu ciudad. Desconfía de quien te pida dinero por adelantado para 'cobrar tu salario'.",
+     "on_screen_text": "Dónde pedir ayuda gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a group of people around a table. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Resumen. Conoce el mínimo de tu ciudad y tu estado. Cuenta tus horas extra semana por semana. Lleva tu propia libreta. Revisa cada talón. Si no te pagan, pídelo por escrito y pon tu queja, que es gratis y te protege tengas papeles o no. Tu trabajo vale cada dólar.",
+     "on_screen_text": "Mínimo, horas extra, tu libreta y tu queja",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf closing a notebook and smiling. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu sueldo completo: el salario mínimo (te toca el más alto), las horas extra con un ejemplo (50 horas a $18 son $990, no $900), tu propia libreta de horas, el talón y el pago en efectivo, contratista o empleado, y cómo cobrar si no te pagan: gratis, confidencial y tengas papeles o no.",
+   "hashtags": [
+    "trabajadores",
+    "horasextra",
+    "salario",
+    "derechoslaborales",
+    "dinerosimple"
+   ],
+   "description": "La guía completa para que te paguen cada dólar que trabajas: salario mínimo, horas extra con un ejemplo, tu propia libreta de horas, el talón y el pago en efectivo, contratista o empleado, cómo cobrar si no te pagan, represalias y dónde pedir ayuda.\n\nCapítulos (estimados)\n0:00 Intro\n0:35 El salario mínimo\n1:05 Horas extra\n1:40 La cuenta\n2:20 Tu libreta\n2:55 El talón y el efectivo\n3:35 Contratista o empleado\n4:15 Si no te pagan\n5:00 Represalias y plazos\n5:35 Dónde pedir ayuda\n6:05 Resumen\n\nInformación general, no es asesoría legal. Para tu caso, un centro de trabajadores o un abogado laboral te orienta, muchas veces gratis.\n\nEnlaces (los productos de pago son nuestros):\nDónde hacer tus impuestos: gratis, con programa o con preparador: https://dinerosimple.netlify.app/blog/donde-hacer-tus-impuestos/?utm_source=youtube&utm_medium=social&utm_campaign=l-tu-sueldo-completo\nEl Presupuesto de 20 Minutos ($12): https://dinerosimple.netlify.app/products/el-presupuesto-de-20-minutos/?utm_source=youtube&utm_medium=social&utm_campaign=l-tu-sueldo-completo\nGuía gratis: Tu dinero en orden en 7 días: https://dinerosimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=l-tu-sueldo-completo",
+   "thumbnail_text": "Cobra tu sueldo completo",
+   "sources": [
+    "https://www.dol.gov/agencies/whd/espanol",
+    "https://www.dol.gov/agencies/whd/immigration",
+    "https://www.dol.gov/agencies/whd/flsa/misclassification"
+   ],
+   "claims_to_verify": [
+    "FLSA overtime: 1.5x regular rate over 40 hours per workweek for non-exempt employees; California also has daily overtime",
+    "Example arithmetic: 40 x 18 = 720; 10 x 27 = 270; 990 - 900 = 90; 90 x 52 = 4,680",
+    "WHD enforces regardless of immigration status; complaints free and confidential; Spanish available",
+    "FLSA statute of limitations 2 years, 3 if willful; anti-retaliation provision",
+    "The applicable minimum wage is the highest of federal, state and local",
+    "Chart '50 horas a $18 la hora': Pago parejo 900, Pago correcto 990 (Ejemplo: 10 horas extra a $27)"
+   ],
+   "title_variants": [],
+   "hook_variants": [],
+   "original_element": "Graba la pantalla de una libreta de horas en el celular (una nota con fechas, entrada, comida y salida) junto a un talón de pago de ejemplo con la línea de 'overtime' marcada"
+  }
+ },
+ {
+  "key": "l-seguro-de-vida",
+  "format": "long",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Complete Spanish guide to life insurance for working families: who needs it, term vs permanent with an illustrative cost comparison, how much coverage to ask about, the 'plan de retiro' pitch from friends and the questions to ask, work coverage, beneficiaries (and minor children), and how to buy without pressure.",
+  "script": {
+   "title": "Seguro de vida: cuál necesitas y cuál te quieren vender (guía completa)",
+   "hook": "Por la misma protección, un seguro puede costar veinte dólares al mes y otro doscientos cincuenta. Te explico por qué.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Por la misma protección, un seguro puede costar veinte dólares al mes y otro doscientos cincuenta. En este video vemos quién necesita seguro de vida, la diferencia entre a plazo y permanente, cuánta cobertura preguntar, el 'plan de retiro' que te ofrece un conocido, el seguro del trabajo y los beneficiarios. Es información general, no asesoría financiera.",
+     "on_screen_text": "Seguro de vida, explicado claro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sitting at a kitchen table with papers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Quién",
+     "narration": "La pregunta es una: ¿alguien depende de tu sueldo? Hijos, pareja, papás que mantienes, una hipoteca. Si nadie depende de ti, quizás no lo necesitas todavía. Si alguien sí, el seguro es para que tu familia pueda seguir si tú faltas.",
+     "on_screen_text": "¿Lo necesitas?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a family silhouette behind M. No text, no logos, no real people."
+    },
+    {
+     "heading": "A plazo",
+     "narration": "El seguro a plazo cubre diez, veinte o treinta años. Pagas un precio fijo y, si mueres en ese tiempo, tu familia recibe el dinero. Si no, se termina. Es como el seguro del carro: pagas por protección, no por ahorro.",
+     "on_screen_text": "A plazo: protección por años",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a long bar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Permanente",
+     "narration": "El seguro permanente, como el de vida entera o el universal indexado, dura toda la vida y tiene un ahorro adentro. Por eso cuesta mucho más al mes, y una parte se va en cargos y comisiones, sobre todo en los primeros años.",
+     "on_screen_text": "Permanente: protección más un ahorro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a big price tag on a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "El costo",
+     "narration": "Un ejemplo para ver la diferencia. Para una persona sana de unos 35 años y 250 mil dólares de cobertura, un seguro a plazo de veinte años puede costar alrededor de $20 al mes, y uno permanente alrededor de $250. Son números de ejemplo: tu precio depende de tu edad, tu salud y la compañía. Pero la diferencia casi siempre es así de grande.",
+     "on_screen_text": "Ejemplo: $20 contra $250 al mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two price tags of very different sizes. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Al mes por $250,000 de cobertura",
+      "labels": [
+       "A plazo (20 años)",
+       "Permanente"
+      ],
+      "values": [
+       20,
+       250
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo ilustrativo; tu precio depende de edad y salud"
+     }
+    },
+    {
+     "heading": "Cuánto",
+     "narration": "¿Cuánto pedir? Piensa en cuántos años te necesitaría tu familia y cuánto ganas al año. Mucha gente pregunta por varias veces su sueldo anual, más lo que falta de la casa. No es una regla exacta; es un punto de partida para cotizar.",
+     "on_screen_text": "Cuánta cobertura preguntar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calculator next to a family photo. No text, no logos, no real people."
+    },
+    {
+     "heading": "El plan de retiro",
+     "narration": "Si un amigo o un familiar te ofrece un 'plan de retiro' o un 'plan de ahorro' con seguro, pregunta: ¿es un seguro de vida? ¿Cuánto pago al mes y cuánto se va en comisiones? Si dejo de pagar al año tres, ¿cuánto me regresan? Muchas veces es muy poco. Compáralo con un seguro a plazo más una cuenta de retiro por tu lado, y pide todo por escrito.",
+     "on_screen_text": "Cuando un conocido te ofrece un 'plan de retiro'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf listening to someone with a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "El del trabajo",
+     "narration": "Muchos trabajos dan un seguro de vida gratis, casi siempre de una o dos veces tu sueldo. Es bueno, pero se termina si dejas el trabajo. Úsalo como extra, no como tu único seguro si alguien depende de ti.",
+     "on_screen_text": "El seguro del trabajo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an ID badge with a small shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Beneficiarios",
+     "narration": "Pon beneficiarios en la póliza, y revísalos cuando te cases, te separes o nazca un hijo. Ojo: un menor de edad normalmente no puede recibir el dinero directo. Pregunta cómo dejarlo para tus hijos, por ejemplo con un tutor o un fideicomiso. Para eso, habla con un abogado de tu estado.",
+     "on_screen_text": "Los beneficiarios y los niños",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form with names filled in. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo comprar",
+     "narration": "Pide dos o tres cotizaciones. Pregunta si te van a hacer examen médico. Lee lo que cubre y lo que no. Y nunca firmes el mismo día que te lo ofrecen: un buen seguro sigue ahí mañana. Revisa que el agente tenga licencia en la página de seguros de tu estado.",
+     "on_screen_text": "Cómo comprar sin presión",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three quote papers side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Resumen. Si alguien depende de tu sueldo, casi siempre conviene un seguro a plazo. El permanente cuesta mucho más. Si te lo venden como plan de retiro, haz las tres preguntas. El del trabajo es un extra. Pon beneficiarios. Y cotiza sin prisa.",
+     "on_screen_text": "¿Alguien depende de ti? Plazo, cotiza y sin prisa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf putting a folder away calmly. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Seguro de vida: quién lo necesita, a plazo o permanente (ejemplo: unos $20 contra unos $250 al mes por la misma cobertura), cuánto preguntar, el 'plan de retiro' que te ofrece un conocido y las preguntas que tienes que hacer, el seguro del trabajo, los beneficiarios y cómo comprar sin presión.",
+   "hashtags": [
+    "segurodevida",
+    "familia",
+    "proteccion",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "La guía completa del seguro de vida para familias trabajadoras: quién lo necesita, a plazo o permanente con un ejemplo de costo, cuánta cobertura preguntar, el 'plan de retiro' que en realidad es un seguro, el seguro del trabajo, los beneficiarios y cómo comprar sin presión.\n\nCapítulos (estimados)\n0:00 Intro\n0:30 ¿Lo necesitas?\n1:00 A plazo\n1:30 Permanente\n2:05 El costo\n2:45 Cuánta cobertura\n3:15 El 'plan de retiro'\n4:00 El del trabajo\n4:25 Beneficiarios\n5:05 Cómo comprar\n5:35 Resumen\n\nInformación general, no es asesoría financiera.\n\nEnlaces (los productos de pago son nuestros):\nTu Fecha Sin Deudas ($17): https://dinerosimple.netlify.app/products/tu-fecha-sin-deudas/?utm_source=youtube&utm_medium=social&utm_campaign=l-seguro-de-vida\nEl Presupuesto de 20 Minutos ($12): https://dinerosimple.netlify.app/products/el-presupuesto-de-20-minutos/?utm_source=youtube&utm_medium=social&utm_campaign=l-seguro-de-vida\nGuía gratis: Tu dinero en orden en 7 días: https://dinerosimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=l-seguro-de-vida",
+   "thumbnail_text": "Seguro de vida claro",
+   "sources": [
+    "https://content.naic.org/consumer/life-insurance.htm",
+    "https://www.investor.gov/"
+   ],
+   "claims_to_verify": [
+    "Illustrative premiums (~$20/month 20-year term vs ~$250/month permanent for $250,000, healthy 35-year-old) are examples; check current quotes before posting and keep the 'ejemplo' wording",
+    "Minors generally can't receive life insurance proceeds directly; a guardian, custodian (UTMA) or trust is used (varies by state)",
+    "Agent licenses can be checked with the state insurance department (NAIC)",
+    "Employer group life is often 1-2x salary and usually ends with employment",
+    "Chart 'Al mes por $250,000 de cobertura': A plazo (20 años) 20, Permanente 250 (Ejemplo ilustrativo; tu precio depende de edad y salud)"
+   ],
+   "title_variants": [],
+   "hook_variants": [],
+   "original_element": "Graba la pantalla del buscador de licencias de agentes de seguros de la página del departamento de seguros de un estado (sin datos personales)"
+  }
+ }
+]

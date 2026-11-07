@@ -192,7 +192,7 @@ def test_every_dinero_long_video_has_an_original_element():
     brand = load_brand(ROOT / "brands", "dinero-simple")
     longs = 0
     for f in ("content.json", "content-month-1.json", "content-month-2.json", "content-month-3.json", "content-month-4.json",
-              "content-month-5.json", "content-month-6.json"):
+              "content-month-5.json", "content-month-6.json", "content-month-7.json", "content-month-8.json"):
         for it in json.loads((DS / f).read_text()):
             if it["format"] != "long":
                 continue
@@ -204,7 +204,7 @@ def test_every_dinero_long_video_has_an_original_element():
                 if seg.get("chart"):
                     assert any(c.startswith(f"Chart '{seg['chart']['title']}'") for c in s["claims_to_verify"])
             assert "--- ORIGINAL ELEMENT" in caption_text(brand, it)
-    assert longs == 14
+    assert longs == 18
 
 
 def test_month5_plan_is_complete_and_flags_itin_pieces_for_an_attorney():
@@ -317,6 +317,23 @@ def test_month6_plan_is_complete():
         assert s["title"] in plan and s["title"] in review and s["claims_to_verify"], i["key"]
     rows = [r for r in plan.splitlines() if r.startswith("| ") and " may |" in r]
     assert len(rows) == 24 and len({(r.split("|")[1], r.split("|")[2]) for r in rows}) == 24
+
+
+@pytest.mark.parametrize("month, tag, itin", [(7, " jun |", 0), (8, " jul |", 6)])
+def test_months_7_and_8_plans_are_complete(month, tag, itin):
+    items = json.loads((DS / f"content-month-{month}.json").read_text())
+    fmts = [i["format"] for i in items]
+    assert fmts.count("short") == 14 and fmts.count("carousel") == 8 and fmts.count("long") == 2
+    plan = (DS / f"POSTING_PLAN_MONTH_{month}.md").read_text()
+    review = (DS / f"REVIEW_CHECKLIST_MONTH_{month}.md").read_text()
+    for i in items:
+        s = i["script"]
+        assert s["title"] in plan and s["title"] in review and s["claims_to_verify"], i["key"]
+        assert len(s["hashtags"]) <= 5 and all(len(g["on_screen_text"].split()) <= 12 for g in s["segments"]), i["key"]
+    rows = [r for r in plan.splitlines() if r.startswith("| ") and tag in r]
+    assert len(rows) == 24 and len({(r.split("|")[1], r.split("|")[2]) for r in rows}) == 24
+    flagged = [i for i in items if i["script"]["claims_to_verify"][0].startswith("ATTORNEY REVIEW")]
+    assert len(flagged) == itin
 
 
 def test_whatsapp_kit_has_30_linkless_messages_and_is_current():

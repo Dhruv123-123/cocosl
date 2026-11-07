@@ -89,6 +89,22 @@ CHARTS = {
         "El fondo": _c("line", "Fondo del viaje: $75 semanales", ["Sem 6", "Sem 12", "Sem 18", "Sem 24"],
                        [450, 900, 1350, 1800], note="Ejemplo: viaje de $1,800 en 24 semanas"),
     },
+    "l-tu-sueldo-completo": {
+        "La cuenta": _c("bars", "50 horas a $18 la hora", ["Pago parejo", "Pago correcto"], [900, 990],
+                        note="Ejemplo: 10 horas extra a $27"),
+    },
+    "l-tanda": {
+        "El costo": _c("bars", "Costo de $1,000 por 10 semanas", ["Tanda", "Tarjeta al 25%", "Día de pago"], [0, 48, 750],
+                       note="Ejemplo; el día de pago renovado 5 veces"),
+    },
+    "l-primera-casa": {
+        "El enganche": _c("bars", "Enganche para una casa de $250,000", ["3%", "3.5%", "10%", "20%"],
+                          [7500, 8750, 25000, 50000], note="Ejemplo; con menos de 20% pagas seguro hipotecario"),
+    },
+    "l-seguro-de-vida": {
+        "El costo": _c("bars", "Al mes por $250,000 de cobertura", ["A plazo (20 años)", "Permanente"], [20, 250],
+                       note="Ejemplo ilustrativo; tu precio depende de edad y salud"),
+    },
 }
 
 ORIGINAL = {
@@ -106,6 +122,10 @@ ORIGINAL = {
     "l-envios-del-ano": "Graba la pantalla cotizando el mismo envío de $300 con dos métodos de entrega (depósito y efectivo) en una app, sin iniciar sesión",
     "l-carro-usado": "Graba la pantalla del buscador de llamados a reparación de la NHTSA con un VIN de ejemplo (no el tuyo), y la Guía del comprador en español de la FTC",
     "l-viaje-a-casa": "Graba la pantalla creando un apartado de ahorro llamado 'Viaje' con transferencia semanal en una app de banco de demostración",
+    "l-tanda": "Graba la pantalla de una hoja de cálculo sencilla con la lista de la tanda (nombres de ejemplo, montos, fechas y turnos) y una foto de la lista en un chat de grupo",
+    "l-primera-casa": "Graba la pantalla de la Estimación del préstamo de ejemplo de la CFPB (la versión en español) marcando la tasa, el APR y los gastos de cierre",
+    "l-tu-sueldo-completo": "Graba la pantalla de una libreta de horas en el celular (una nota con fechas, entrada, comida y salida) junto a un talón de pago de ejemplo con la línea de 'overtime' marcada",
+    "l-seguro-de-vida": "Graba la pantalla del buscador de licencias de agentes de seguros de la página del departamento de seguros de un estado (sin datos personales)",
 }
 
 

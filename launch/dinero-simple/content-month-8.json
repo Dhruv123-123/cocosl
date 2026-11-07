@@ -1,0 +1,1731 @@
+[
+ {
+  "key": "m8-carne-asada-4-de-julio",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "The 4th of July cookout without the card: set a number, make it a 'cooperacha' where each family brings one thing, and buy the meat by price per pound, not per package.",
+  "script": {
+   "title": "La carne asada del 4 de julio, sin tarjeta",
+   "hook": "La carne asada del 4 de julio sale cara cuando uno solo pone todo. Así se arregla.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "La carne asada del 4 de julio sale cara cuando uno solo pone todo. Así se arregla.",
+     "on_screen_text": "Cuando uno solo pone todo, sale caro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at a grill with a long receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "Número",
+     "narration": "Antes de invitar, pon un número para lo que te toca a ti.",
+     "on_screen_text": "Pon un número antes de invitar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a sticky note with a number. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cooperacha",
+     "narration": "Haz cooperacha: cada familia trae una cosa. Tortillas, refrescos, hielo, postre.",
+     "on_screen_text": "Cada familia trae una cosa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. several hands bringing dishes. No text, no logos, no real people."
+    },
+    {
+     "heading": "La carne",
+     "narration": "En la carne, compara el precio por libra, no por paquete. Está en la etiqueta chiquita.",
+     "on_screen_text": "Compara precio por libra, no por paquete",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a meat label with price per pound. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "La fiesta es la gente, no el ticket del súper.",
+     "on_screen_text": "La fiesta es la gente, no el ticket",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf laughing with friends. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "La carne asada del 4 de julio sin tarjeta: pon un número para lo que te toca, haz cooperacha (cada familia trae una cosa) y en la carne compara el precio por libra, no por paquete.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "4dejulio",
+    "carneasada",
+    "presupuesto",
+    "familia",
+    "dinerosimple"
+   ],
+   "description": "Cómo hacer la carne asada del 4 de julio sin deudas.",
+   "thumbnail_text": "4 de julio sin deudas",
+   "sources": [],
+   "claims_to_verify": [
+    "No numeric claims"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8-tanda-riesgos",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Tandas (cundinas, natilleras) help many families save, but nothing protects your money if someone stops paying or the organizer disappears; the risks to know before joining.",
+  "script": {
+   "title": "La tanda: lo que nadie te dice antes de entrar",
+   "hook": "La tanda ayuda a mucha gente a juntar dinero. Pero si algo sale mal, nadie te protege.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "La tanda ayuda a mucha gente a juntar dinero. Pero si algo sale mal, nadie te protege.",
+     "on_screen_text": "Si algo sale mal, nadie te protege",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an envelope among a circle of people. No text, no logos, no real people."
+    },
+    {
+     "heading": "Riesgo 1",
+     "narration": "Riesgo uno: alguien cobra su número y deja de pagar. Los últimos son los que pierden.",
+     "on_screen_text": "Alguien deja de pagar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a circle with one missing person. No text, no logos, no real people."
+    },
+    {
+     "heading": "Riesgo 2",
+     "narration": "Riesgo dos: el que organiza se va con el dinero. No hay seguro ni banco detrás.",
+     "on_screen_text": "El que organiza desaparece",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an empty chair. No text, no logos, no real people."
+    },
+    {
+     "heading": "Riesgo 3",
+     "narration": "Riesgo tres: si te toca al final, prestaste tu dinero meses sin ganar nada.",
+     "on_screen_text": "Los últimos esperan más",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with the last month circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Si vas a entrar, mañana te digo cómo hacerla más segura.",
+     "on_screen_text": "Mañana: cómo hacerla más segura",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf pointing to the next video. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "La tanda (cundina, natillera) ayuda a muchas familias a juntar dinero, pero nadie protege tu dinero si:\n1. Alguien cobra su número y deja de pagar.\n2. El que organiza desaparece.\n3. Te toca al final y prestaste tu dinero meses sin ganar nada.\nSi vas a entrar, que sea con gente que conoces bien y con las reglas por escrito.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "tanda",
+    "ahorro",
+    "familia",
+    "comunidad",
+    "dinerosimple"
+   ],
+   "description": "Los riesgos de la tanda antes de entrar.",
+   "thumbnail_text": "Riesgos de la tanda",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Informal savings circles have no deposit insurance or legal protection beyond small-claims court"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8-tanda-segura",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "If you join a tanda: people you know well, a written list with names, amounts, dates and turn order, everyone gets a copy, payments by a traceable method, and the organizer doesn't take the first number by default.",
+  "script": {
+   "title": "Si vas a entrar a una tanda, ponla por escrito",
+   "hook": "Si vas a entrar a una tanda, cinco minutos de papel te pueden ahorrar un pleito.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si vas a entrar a una tanda, cinco minutos de papel te pueden ahorrar un pleito.",
+     "on_screen_text": "Cinco minutos de papel, cero pleitos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf writing on a sheet with names. No text, no logos, no real people."
+    },
+    {
+     "heading": "Gente",
+     "narration": "Primero: solo con gente que conoces bien, no con conocidos de un grupo de Facebook.",
+     "on_screen_text": "Solo con gente que conoces bien",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small circle of familiar faces. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lista",
+     "narration": "Segundo: una lista con nombres, cuánto pone cada quien, las fechas y el orden de los turnos. Todos con copia.",
+     "on_screen_text": "Nombres, montos, fechas y turnos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a list with a numbered order. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pagos",
+     "narration": "Tercero: pagos que dejen rastro, con una app o recibo, no solo efectivo en la mano.",
+     "on_screen_text": "Pagos que dejen rastro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a payment confirmation. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y decidan antes qué pasa si alguien no paga.",
+     "on_screen_text": "¿Qué pasa si alguien no paga? Decídanlo antes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. people nodding at a table. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si vas a entrar a una tanda:\n1. Solo con gente que conoces bien.\n2. Una lista por escrito: nombres, montos, fechas y orden de turnos. Todos con copia.\n3. Pagos que dejen rastro (app o recibo).\n4. Decidan antes qué pasa si alguien no paga.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "tanda",
+    "ahorro",
+    "familia",
+    "comunidad",
+    "dinerosimple"
+   ],
+   "description": "Cómo hacer una tanda más segura.",
+   "thumbnail_text": "Tanda por escrito",
+   "sources": [],
+   "claims_to_verify": [
+    "No numeric claims"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8-circulo-de-prestamo",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Lending circles run by some nonprofits work like a tanda but with a written agreement, zero-interest loans, and payments reported to the credit bureaus, so they also build credit; ask local nonprofits or credit unions.",
+  "script": {
+   "title": "La tanda que sí te ayuda con tu crédito",
+   "hook": "Hay una versión de la tanda que además te construye historial de crédito.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Hay una versión de la tanda que además te construye historial de crédito.",
+     "on_screen_text": "Una tanda que construye crédito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an envelope and a credit report. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "Se llama círculo de préstamo. Funciona como una tanda, pero la organiza una organización sin fines de lucro.",
+     "on_screen_text": "Se llama círculo de préstamo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a circle of people with a small building. No text, no logos, no real people."
+    },
+    {
+     "heading": "La diferencia",
+     "narration": "Firman un contrato, el préstamo es sin intereses, y tus pagos se reportan a las agencias de crédito.",
+     "on_screen_text": "Contrato, sin intereses y reporta tus pagos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a contract and a credit score going up. No text, no logos, no real people."
+    },
+    {
+     "heading": "Para quién",
+     "narration": "Es útil si empiezas de cero. Algunas aceptan ITIN.",
+     "on_screen_text": "Útil si empiezas de cero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a blank credit report. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Pregunta en organizaciones comunitarias o cooperativas de tu ciudad.",
+     "on_screen_text": "Pregunta en organizaciones y cooperativas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a community center door. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Un círculo de préstamo funciona como una tanda, pero lo organiza una organización sin fines de lucro: firman un contrato, el préstamo es sin intereses y tus pagos se reportan a las agencias de crédito. Útil si empiezas de cero; algunas aceptan ITIN. Pregunta en organizaciones comunitarias o cooperativas de tu ciudad.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "tanda",
+    "credito",
+    "historialdecredito",
+    "comunidad",
+    "dinerosimple"
+   ],
+   "description": "Qué es un círculo de préstamo y cómo ayuda a tu crédito.",
+   "thumbnail_text": "Tanda + crédito",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "Some nonprofits run zero-interest lending circles that report payments to credit bureaus; ITIN acceptance varies by program; don't name any organization"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8-oportunidad-de-negocio",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "When a 'business opportunity' pays you mainly for recruiting people, not for selling to customers, it's a red flag; the FTC warns most people in multi-level marketing earn little or lose money; ask how much the average member earns after costs.",
+  "script": {
+   "title": "La 'oportunidad de negocio' que te pide reclutar",
+   "hook": "Si te invitan a un negocio donde ganas por meter a más gente, escucha esto primero.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si te invitan a un negocio donde ganas por meter a más gente, escucha esto primero.",
+     "on_screen_text": "¿Ganas por meter a más gente?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at a living-room presentation. No text, no logos, no real people."
+    },
+    {
+     "heading": "La señal",
+     "narration": "La señal: si ganas más por reclutar personas que por venderle a clientes de verdad.",
+     "on_screen_text": "Si ganas más por reclutar que por vender",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pyramid of small figures. No text, no logos, no real people."
+    },
+    {
+     "heading": "Lo que dice la FTC",
+     "narration": "La Comisión Federal de Comercio advierte que en estos negocios la mayoría gana poco o pierde dinero.",
+     "on_screen_text": "La mayoría gana poco o pierde",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small coin and a big receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta",
+     "narration": "Pregunta: ¿cuánto gana el promedio, después de lo que gasta en producto, cursos y eventos? Pide el número por escrito.",
+     "on_screen_text": "¿Cuánto gana el promedio, después de gastos?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paper with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Las fotos de carros y viajes no son prueba de nada.",
+     "on_screen_text": "Las fotos de carros no son prueba",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a flashy photo crossed out. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si te invitan a una 'oportunidad de negocio' donde ganas más por reclutar gente que por venderle a clientes de verdad, cuidado. La FTC advierte que en muchos de estos negocios la mayoría gana poco o pierde dinero. Pregunta cuánto gana el promedio después de gastos (producto, cursos, eventos) y pide el número por escrito.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "estafas",
+    "negocio",
+    "emprender",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Señales de que una 'oportunidad de negocio' es puro reclutamiento.",
+   "thumbnail_text": "¿Oportunidad o trampa?",
+   "sources": [
+    "https://consumidor.ftc.gov/articulos/mercadeo-de-niveles-multiples"
+   ],
+   "claims_to_verify": [
+    "FTC guidance on multi-level marketing: most participants make little or no money; recruitment-focused compensation is a pyramid-scheme warning sign",
+    "Don't name any company"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8-negocio-cuenta-aparte",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Starting a small business (food, cleaning, landscaping, nails): open a separate account for it from day one, so you know if it actually makes money and taxes are easier.",
+  "script": {
+   "title": "¿Empiezas un negocio? Primero una cuenta aparte",
+   "hook": "Si vendes comida, limpias casas o cortas pasto por tu cuenta, el primer paso no es el logo. Es esto.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si vendes comida, limpias casas o cortas pasto por tu cuenta, el primer paso no es el logo. Es esto.",
+     "on_screen_text": "El primer paso no es el logo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a small food stand. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué",
+     "narration": "Una cuenta solo para el negocio. Todo lo que entra y todo lo que sale del negocio, ahí.",
+     "on_screen_text": "Una cuenta solo para el negocio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two piggy banks labeled home and business. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Así sabes si de verdad ganas, o si estás poniendo de tu sueldo sin darte cuenta.",
+     "on_screen_text": "Así sabes si de verdad ganas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a scale with coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Impuestos",
+     "narration": "Y en abril, tus ingresos y tus gastos del negocio están en un solo lugar.",
+     "on_screen_text": "Y en abril, todo está en un lugar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder labeled taxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y págate un sueldo fijo desde ahí, aunque sea chiquito.",
+     "on_screen_text": "Págate un sueldo fijo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small paycheck. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "¿Empiezas un negocio (comida, limpieza, jardinería, uñas)? Primer paso: una cuenta solo para el negocio. Todo lo que entra y sale del negocio, ahí. Así sabes si de verdad ganas, y en abril tus ingresos y gastos están en un solo lugar. Págate un sueldo fijo desde ahí.\n\nInformación general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "emprender",
+    "negocio",
+    "pequenonegocio",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Por qué tu negocio necesita una cuenta aparte desde el día uno.",
+   "thumbnail_text": "Cuenta del negocio",
+   "sources": [
+    "https://www.sba.gov/es"
+   ],
+   "claims_to_verify": [
+    "No numeric claims"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8-ein-con-itin",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "An EIN is a free federal number for a business; you get it from the IRS at no cost (beware sites that charge), and in many cases you can apply with an ITIN; it helps open a business account and keep your personal number private.",
+  "script": {
+   "title": "El número de tu negocio es gratis: el EIN",
+   "hook": "Hay páginas que te cobran por sacar el número de tu negocio. En el IRS es gratis.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Hay páginas que te cobran por sacar el número de tu negocio. En el IRS es gratis.",
+     "on_screen_text": "En el IRS es gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf pointing at a price tag crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "El EIN es el número federal de tu negocio, como el Seguro Social, pero para la empresa.",
+     "on_screen_text": "El EIN es el número de tu negocio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a business card with a number. No text, no logos, no real people."
+    },
+    {
+     "heading": "Para qué",
+     "narration": "Te sirve para abrir la cuenta del negocio y para no dar tu número personal a cada cliente.",
+     "on_screen_text": "Cuenta del negocio y privacidad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank and a lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Con ITIN",
+     "narration": "En muchos casos se puede pedir con ITIN. Hazlo directo en la página del IRS.",
+     "on_screen_text": "En muchos casos se puede pedir con ITIN",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form on irs.gov. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Nunca le pagues a una página por un EIN.",
+     "on_screen_text": "Nunca pagues por un EIN",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a hand closing a wallet. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El EIN es el número federal de tu negocio y se saca gratis directo con el IRS (irs.gov). Te sirve para abrir la cuenta del negocio y no dar tu número personal a cada cliente. En muchos casos se puede pedir con ITIN. Nunca le pagues a una página por un EIN.\n\nInformación general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "emprender",
+    "negocio",
+    "irs",
+    "itin",
+    "dinerosimple"
+   ],
+   "description": "Cómo sacar gratis el número de tu negocio (EIN).",
+   "thumbnail_text": "EIN gratis",
+   "sources": [
+    "https://www.irs.gov/es/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "The IRS issues EINs free of charge; third-party sites may charge",
+    "The responsible party may apply with an SSN or ITIN (IRS EIN application rules); confirm the current online-application requirements"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8-casa-enganche",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "You don't always need 20% down to buy a home: many loans allow less, and local down payment assistance exists; but less down means mortgage insurance and a bigger loan; the first step is your number, not the house.",
+  "script": {
+   "title": "¿Necesitas el 20% para comprar casa? No siempre",
+   "hook": "Mucha gente no busca casa porque cree que necesita el veinte por ciento. No siempre es así.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Mucha gente no busca casa porque cree que necesita el veinte por ciento. No siempre es así.",
+     "on_screen_text": "El 20% no siempre es obligatorio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a small house with a big 20%. No text, no logos, no real people."
+    },
+    {
+     "heading": "Menos",
+     "narration": "Muchos préstamos aceptan mucho menos de enganche, y hay ayudas locales para el enganche.",
+     "on_screen_text": "Muchos préstamos piden menos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a smaller percentage sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pero",
+     "narration": "Pero con menos enganche pagas un seguro hipotecario y pides prestado más.",
+     "on_screen_text": "Menos enganche = seguro hipotecario",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a house with a small umbrella. No text, no logos, no real people."
+    },
+    {
+     "heading": "Y además",
+     "narration": "Y aparte del enganche están los gastos de cierre.",
+     "on_screen_text": "Gastos de cierre aparte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a stack of papers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Primero saca tu número: cuánto puedes pagar al mes, todo incluido. Después buscas la casa.",
+     "on_screen_text": "Primero tu número, después la casa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a calculator. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "No siempre necesitas el 20% de enganche para comprar casa: muchos préstamos aceptan menos y hay ayudas locales para el enganche. Pero con menos enganche pagas seguro hipotecario y pides prestado más, y aparte están los gastos de cierre. Primero saca tu número mensual, todo incluido.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "comprarcasa",
+    "vivienda",
+    "hipoteca",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Cuánto enganche necesitas de verdad para comprar casa.",
+   "thumbnail_text": "¿20% de enganche?",
+   "sources": [
+    "https://www.consumerfinance.gov/es/obtener-respuestas/",
+    "https://www.hud.gov/espanol"
+   ],
+   "claims_to_verify": [
+    "Many conventional and FHA loans allow down payments well under 20% (as low as 3-3.5% for eligible borrowers); PMI/MIP applies",
+    "Down payment assistance programs exist at state and local levels"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8-preaprobacion",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Prequalification is a quick estimate; preapproval means the lender checked your income, documents and credit and gives you a letter; sellers take preapproval seriously; get it from two or three lenders within a short window.",
+  "script": {
+   "title": "Precalificación o preaprobación: no es lo mismo",
+   "hook": "Si vas a buscar casa, hay una carta que hace que el vendedor te tome en serio.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si vas a buscar casa, hay una carta que hace que el vendedor te tome en serio.",
+     "on_screen_text": "La carta que te hace serio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a letter in front of a house. No text, no logos, no real people."
+    },
+    {
+     "heading": "Precalificación",
+     "narration": "La precalificación es un cálculo rápido con lo que tú dices. Sirve para darte una idea.",
+     "on_screen_text": "Precalificación: un cálculo rápido",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a napkin with a quick number. No text, no logos, no real people."
+    },
+    {
+     "heading": "Preaprobación",
+     "narration": "La preaprobación es cuando el prestamista revisó tus ingresos, tus documentos y tu crédito, y te da una carta.",
+     "on_screen_text": "Preaprobación: revisaron tus papeles",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder with documents and a stamp. No text, no logos, no real people."
+    },
+    {
+     "heading": "Compara",
+     "narration": "Pídela a dos o tres prestamistas en pocas semanas, para comparar tasas sin afectar mucho tu puntaje.",
+     "on_screen_text": "Pídela a dos o tres prestamistas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three letters side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Con la carta en la mano, buscas casas que de verdad te alcanzan.",
+     "on_screen_text": "Con la carta, buscas casas que sí te alcanzan",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf walking toward a modest house. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Precalificación: un cálculo rápido con lo que tú dices. Preaprobación: el prestamista revisó tus ingresos, documentos y crédito y te da una carta; los vendedores la toman en serio. Pídela a 2 o 3 prestamistas en pocas semanas para comparar sin afectar mucho tu puntaje.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "comprarcasa",
+    "hipoteca",
+    "credito",
+    "vivienda",
+    "dinerosimple"
+   ],
+   "description": "La diferencia entre precalificación y preaprobación.",
+   "thumbnail_text": "¿Pre-qué?",
+   "sources": [
+    "https://www.consumerfinance.gov/es/obtener-respuestas/"
+   ],
+   "claims_to_verify": [
+    "Multiple mortgage credit inquiries within a short window (typically 14-45 days depending on scoring model) count as one for scoring (CFPB)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8-hipoteca-con-itin",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Some lenders offer mortgages to people with an ITIN instead of an SSN, usually with a bigger down payment and a higher rate than standard loans; compare several, ask for the Loan Estimate, and beware of anyone promising a 'guaranteed' approval for a fee.",
+  "script": {
+   "title": "¿Casa con ITIN? Sí existe, pero compara",
+   "hook": "Sí hay prestamistas que dan hipoteca con ITIN. Pero no todas las ofertas son iguales.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Sí hay prestamistas que dan hipoteca con ITIN. Pero no todas las ofertas son iguales.",
+     "on_screen_text": "Hipoteca con ITIN: sí existe",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a house key and a document. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo son",
+     "narration": "Suelen pedir más enganche y cobrar una tasa más alta que un préstamo normal.",
+     "on_screen_text": "Suelen pedir más enganche",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bigger percentage sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Compara",
+     "narration": "Pide a dos o tres prestamistas la Estimación del préstamo, el formulario estándar de tres páginas, y compáralas.",
+     "on_screen_text": "Pide la Estimación del préstamo a varios",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three forms side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuidado",
+     "narration": "Desconfía de quien te cobre por adelantado o te 'garantice' la aprobación.",
+     "on_screen_text": "Nadie te puede 'garantizar' la aprobación",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a crossed-out guarantee seal. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Antes de firmar, pide orientación a un consejero de vivienda aprobado por HUD; muchos son gratis.",
+     "on_screen_text": "Y una consulta antes de firmar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a counselor at a desk. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Sí hay prestamistas que dan hipoteca con ITIN, normalmente con más enganche y una tasa más alta que un préstamo normal. Pide la Estimación del préstamo (Loan Estimate) a 2 o 3 y compáralas. Desconfía de quien te cobre por adelantado o te 'garantice' la aprobación. Un consejero de vivienda aprobado por HUD te orienta, muchas veces gratis.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "comprarcasa",
+    "itin",
+    "hipoteca",
+    "vivienda",
+    "dinerosimple"
+   ],
+   "description": "Lo que tienes que saber de las hipotecas con ITIN.",
+   "thumbnail_text": "Hipoteca con ITIN",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://www.hud.gov/espanol"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "ITIN mortgages are offered by some lenders (non-QM/portfolio), typically with larger down payments and higher rates; FHA requires an SSN",
+    "The Loan Estimate is a standard 3-page form lenders must give within 3 business days of an application (CFPB)",
+    "HUD-approved housing counseling is often free"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8-regreso-a-clases",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Back to school without debt: check the school's list before buying, reuse what's at home, buy the basics now and the rest after the first week when teachers say what's really needed; check if your state has a sales-tax holiday.",
+  "script": {
+   "title": "Regreso a clases: compra en dos partes",
+   "hook": "La mitad de la lista de útiles la puedes comprar después del primer día de clases. Y sale mejor.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "La mitad de la lista de útiles la puedes comprar después del primer día de clases. Y sale mejor.",
+     "on_screen_text": "Compra en dos partes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a backpack and a short list. No text, no logos, no real people."
+    },
+    {
+     "heading": "Primero",
+     "narration": "Primero revisa lo que ya hay en casa: mochilas, tijeras, colores del año pasado.",
+     "on_screen_text": "Revisa lo que ya hay en casa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a drawer with old school supplies. No text, no logos, no real people."
+    },
+    {
+     "heading": "Parte 1",
+     "narration": "Antes de clases, compra solo lo básico de la lista oficial de la escuela.",
+     "on_screen_text": "Antes: solo lo básico",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a short list with checkmarks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Parte 2",
+     "narration": "Lo demás, después de la primera semana, cuando la maestra diga qué se necesita de verdad.",
+     "on_screen_text": "Después: lo que de verdad piden",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a teacher's note. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y revisa si tu estado tiene días sin impuesto de venta para útiles y ropa.",
+     "on_screen_text": "Pregunta si hay días sin impuesto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a tax-free tag. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Regreso a clases en dos partes:\n1. Revisa lo que ya hay en casa.\n2. Antes de clases, solo lo básico de la lista oficial.\n3. Lo demás, después de la primera semana, cuando la maestra diga qué se necesita.\nRevisa si tu estado tiene días sin impuesto de venta para útiles y ropa.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "regresoaclases",
+    "utiles",
+    "presupuesto",
+    "familia",
+    "dinerosimple"
+   ],
+   "description": "Cómo comprar los útiles escolares sin deudas.",
+   "thumbnail_text": "Útiles en 2 partes",
+   "sources": [],
+   "claims_to_verify": [
+    "Sales-tax holidays exist in some states (dates and items vary each year; check your state's revenue department)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8-comida-escolar-gratis",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Free or reduced-price school meals: many schools give free breakfast and lunch to all students, others need a short form; apply at the start of the year; the form is about the household's income, and ask the school how they use the information.",
+  "script": {
+   "title": "Desayuno y almuerzo gratis en la escuela: llena la forma",
+   "hook": "Si tus hijos comen en la escuela, una forma de cinco minutos te puede ahorrar cientos al año.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si tus hijos comen en la escuela, una forma de cinco minutos te puede ahorrar cientos al año.",
+     "on_screen_text": "Una forma de 5 minutos, cientos al año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a school lunch tray. No text, no logos, no real people."
+    },
+    {
+     "heading": "Gratis para todos",
+     "narration": "Muchas escuelas ya dan desayuno y almuerzo gratis a todos los alumnos. Pregunta si la tuya es una.",
+     "on_screen_text": "Muchas escuelas ya dan comida gratis a todos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a school cafeteria. No text, no logos, no real people."
+    },
+    {
+     "heading": "Si no",
+     "narration": "Si no, hay una forma corta sobre los ingresos de la casa para comida gratis o a precio reducido.",
+     "on_screen_text": "Si no, hay una forma de ingresos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a short form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuándo",
+     "narration": "Llénala al empezar el año escolar, aunque el año pasado no hayas calificado.",
+     "on_screen_text": "Llénala al empezar el año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with August. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Si tienes dudas, pregunta en la escuela cómo usan la información.",
+     "on_screen_text": "Pregunta cómo usan tus datos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf talking to a school staff member. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Desayuno y almuerzo gratis en la escuela: muchas escuelas ya los dan gratis a todos los alumnos (pregunta si la tuya es una). Si no, hay una forma corta sobre los ingresos de la casa para comida gratis o a precio reducido. Llénala al empezar el año, aunque el año pasado no hayas calificado. Si tienes dudas, pregunta en la escuela cómo usan la información.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "regresoaclases",
+    "escuela",
+    "familia",
+    "ahorro",
+    "dinerosimple"
+   ],
+   "description": "Cómo pedir desayuno y almuerzo gratis en la escuela.",
+   "thumbnail_text": "Comida escolar",
+   "sources": [
+    "https://www.fns.usda.gov/es"
+   ],
+   "claims_to_verify": [
+    "Community Eligibility Provision schools serve free meals to all students; other schools use household income applications (USDA FNS)",
+    "School meal applications do not ask about immigration status (USDA guidance); confirm current guidance before posting"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8-estafa-de-renta",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Rental listing scam: a nice apartment far below market, the 'owner' is away and asks for a deposit by Zelle or gift card before you see it; never pay before seeing the place and confirming who owns it.",
+  "script": {
+   "title": "El depa barato que no existe",
+   "hook": "Si el departamento está muy barato y el dueño 'está fuera del país', para aquí.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si el departamento está muy barato y el dueño 'está fuera del país', para aquí.",
+     "on_screen_text": "Muy barato y el dueño 'está fuera'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a listing on a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "La trampa",
+     "narration": "La trampa: te piden el depósito por Zelle, efectivo o tarjeta de regalo antes de que lo veas.",
+     "on_screen_text": "Te piden depósito antes de verlo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a payment request. No text, no logos, no real people."
+    },
+    {
+     "heading": "Las fotos",
+     "narration": "Muchas veces las fotos son robadas de otro anuncio real.",
+     "on_screen_text": "Las fotos son de otro anuncio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a photo being copied. No text, no logos, no real people."
+    },
+    {
+     "heading": "Revisa",
+     "narration": "Velo en persona, y confirma quién es el dueño en los registros de propiedad del condado.",
+     "on_screen_text": "Velo en persona y confirma el dueño",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a county office building. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Nunca pagues un depósito por algo que no has visto.",
+     "on_screen_text": "Nunca pagues por algo que no has visto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a hand closing a wallet. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El departamento barato que no existe: está muy por debajo del precio de la zona, el 'dueño' está fuera del país y te pide el depósito por Zelle, efectivo o tarjeta de regalo antes de que lo veas. Velo en persona y confirma quién es el dueño en los registros de propiedad del condado. Nunca pagues por algo que no has visto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "estafas",
+    "renta",
+    "vivienda",
+    "fraude",
+    "dinerosimple"
+   ],
+   "description": "Cómo reconocer la estafa del departamento que no existe.",
+   "thumbnail_text": "Depa que no existe",
+   "sources": [
+    "https://consumidor.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "FTC rental listing scam guidance: requests for deposits before seeing a unit, wire/gift card/P2P payments, owners 'out of the country'"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8-permisos-negocio",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Before selling food or services from home, check your city and county rules: a business license, a food handler or cottage food permit, and whether you need to collect sales tax; it's often cheaper than a fine.",
+  "script": {
+   "title": "Antes de vender comida desde tu casa, revisa esto",
+   "hook": "Vender tamales o pasteles desde tu casa puede ser legal. Pero hay que revisar tres cosas.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Vender tamales o pasteles desde tu casa puede ser legal. Pero hay que revisar tres cosas.",
+     "on_screen_text": "Puede ser legal, si revisas 3 cosas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a tray of tamales. No text, no logos, no real people."
+    },
+    {
+     "heading": "Uno",
+     "narration": "Uno: si tu ciudad o condado pide licencia de negocio.",
+     "on_screen_text": "1. Licencia de negocio de tu ciudad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a city hall building. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dos",
+     "narration": "Dos: muchos estados tienen reglas de 'comida casera' que dicen qué puedes vender desde casa y si necesitas un curso o permiso.",
+     "on_screen_text": "2. Permiso de comida casera",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a kitchen with a small certificate. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tres",
+     "narration": "Tres: si tienes que cobrar impuesto de venta.",
+     "on_screen_text": "3. Si cobras impuesto de venta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with a tax line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Casi siempre sale más barato que una multa.",
+     "on_screen_text": "Casi siempre sale más barato que una multa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small fee next to a big fine. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Antes de vender comida desde tu casa, revisa:\n1. Si tu ciudad o condado pide licencia de negocio.\n2. Las reglas de 'comida casera' (cottage food) de tu estado: qué puedes vender y si necesitas un curso o permiso.\n3. Si tienes que cobrar impuesto de venta.\nCasi siempre sale más barato que una multa. Tu oficina local de la SBA o un centro de desarrollo de pequeños negocios te orienta gratis.\n\nInformación general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "emprender",
+    "negocio",
+    "comida",
+    "pequenonegocio",
+    "dinerosimple"
+   ],
+   "description": "Qué revisar antes de vender comida desde tu casa.",
+   "thumbnail_text": "Vender desde casa",
+   "sources": [
+    "https://www.sba.gov/es"
+   ],
+   "claims_to_verify": [
+    "Cottage food laws vary by state; local business licenses and sales tax rules vary",
+    "SBDCs offer free counseling"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8c-4-de-julio",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "A 4th of July cooperacha plan: a number, a shared list of who brings what, price per pound, cheaper sides, and leftovers as next week's lunches.",
+  "script": {
+   "title": "4 de julio en cooperacha: el plan",
+   "hook": "Mándaselo al chat de la familia.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "El plan. Mándaselo al chat de la familia.",
+     "on_screen_text": "4 de julio en cooperacha",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at a grill with friends. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Antes de invitar.",
+     "on_screen_text": "1. Un número para lo tuyo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a sticky note with a number. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Tortillas, refrescos, hielo, postre, platos.",
+     "on_screen_text": "2. Una lista: quién trae qué",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a shared list on a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Está en la etiqueta chiquita.",
+     "on_screen_text": "3. La carne, por precio por libra",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a meat label. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Frijoles, arroz, elote, ensalada.",
+     "on_screen_text": "4. Guarniciones que rinden",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. big bowls of sides. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Tacos para el lunes y el martes.",
+     "on_screen_text": "5. Lo que sobre, para la semana",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. containers in a fridge. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "No el ticket del súper.",
+     "on_screen_text": "La fiesta es la gente",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf laughing with friends. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "4 de julio en cooperacha:\n1. Un número para lo tuyo.\n2. Una lista de quién trae qué.\n3. La carne, por precio por libra.\n4. Guarniciones que rinden.\n5. Lo que sobre, para la semana.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "4dejulio",
+    "carneasada",
+    "familia",
+    "presupuesto",
+    "dinerosimple"
+   ],
+   "description": "Cómo organizar una carne asada en cooperacha.",
+   "thumbnail_text": "Cooperacha",
+   "sources": [],
+   "claims_to_verify": [
+    "No numeric claims"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8c-tanda-segura",
+  "format": "carousel",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "A safer-tanda checklist: people you know, written list and turn order, copies for everyone, traceable payments, a rule for missed payments, the organizer's role, and the lending-circle alternative that builds credit.",
+  "script": {
+   "title": "Tanda más segura: la lista",
+   "hook": "Guárdala antes de entrar a la próxima.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdala antes de entrar a la próxima.",
+     "on_screen_text": "Tanda más segura: la lista",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a circle of people with envelopes. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "No desconocidos de un grupo en línea.",
+     "on_screen_text": "1. Solo gente que conoces bien",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small circle of familiar faces. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Nombres, montos, fechas y orden de turnos.",
+     "on_screen_text": "2. Todo por escrito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a numbered list. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Una foto de la lista en el chat del grupo.",
+     "on_screen_text": "3. Copia para todos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a photo of a list. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "App o recibo, no solo efectivo en la mano.",
+     "on_screen_text": "4. Pagos que dejen rastro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a payment confirmation. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Decídanlo antes de empezar.",
+     "on_screen_text": "5. ¿Si alguien no paga?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. people at a table. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Busca un círculo de préstamo que reporte tus pagos.",
+     "on_screen_text": "6. ¿Quieres crédito también?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a credit score going up. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Mejor hablarlo antes que pelearlo después.",
+     "on_screen_text": "Mándasela a tu grupo de la tanda",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two phones sharing a picture. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tanda más segura:\n1. Solo gente que conoces bien.\n2. Todo por escrito: nombres, montos, fechas y turnos.\n3. Copia para todos.\n4. Pagos que dejen rastro.\n5. Decidan antes qué pasa si alguien no paga.\n6. ¿Quieres construir crédito también? Busca un círculo de préstamo de una organización sin fines de lucro que reporte tus pagos.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "tanda",
+    "ahorro",
+    "comunidad",
+    "credito",
+    "dinerosimple"
+   ],
+   "description": "La lista para una tanda más segura.",
+   "thumbnail_text": "Tanda segura",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Some nonprofit lending circles report payments to credit bureaus"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8c-oportunidad-de-negocio",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Six signs a 'business opportunity' is mostly recruiting: you pay to join, you must buy inventory monthly, earnings come from recruits, income claims with cars and trips, pressure to sign tonight, and no written average earnings after costs.",
+  "script": {
+   "title": "¿Oportunidad de negocio o reclutamiento? 6 señales",
+   "hook": "Guárdalo para la próxima invitación a 'una plática'.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo para la próxima invitación a 'una plática'.",
+     "on_screen_text": "¿Oportunidad o reclutamiento? 6 señales",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at a living-room presentation. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Un 'kit de inicio' o una cuota.",
+     "on_screen_text": "1. Pagas para entrar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a price tag on a box. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Para 'mantenerte activo'.",
+     "on_screen_text": "2. Compras producto cada mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a stack of boxes in a garage. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "La señal más clara.",
+     "on_screen_text": "3. Ganas por reclutar, no por vender",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pyramid of small figures. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "No son prueba de nada.",
+     "on_screen_text": "4. Fotos de carros y viajes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a flashy photo crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Un buen negocio sigue ahí mañana.",
+     "on_screen_text": "5. Prisa: 'firma hoy'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a ticking clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Pide cuánto gana el promedio después de gastos.",
+     "on_screen_text": "6. Sin números del promedio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a paper with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Mándaselo a quien te invitó.",
+     "on_screen_text": "La FTC: la mayoría gana poco o pierde",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two phones sharing a picture. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "¿Oportunidad de negocio o reclutamiento? 6 señales:\n1. Pagas para entrar.\n2. Tienes que comprar producto cada mes.\n3. Ganas más por reclutar que por vender.\n4. Fotos de carros y viajes como 'prueba'.\n5. Prisa: 'firma hoy'.\n6. No te dan por escrito cuánto gana el promedio después de gastos.\nLa FTC advierte que en muchos de estos negocios la mayoría gana poco o pierde dinero.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "estafas",
+    "negocio",
+    "emprender",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Seis señales de que una oportunidad de negocio es puro reclutamiento.",
+   "thumbnail_text": "6 señales",
+   "sources": [
+    "https://consumidor.ftc.gov/articulos/mercadeo-de-niveles-multiples"
+   ],
+   "claims_to_verify": [
+    "FTC multi-level marketing guidance; don't name any company"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8c-negocio-primeros-pasos",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Six first steps for a small business: a separate account, a free EIN from the IRS, local license and permits, a simple income and expense log, setting aside money for taxes, and a fixed pay for yourself; plus free help from SBDCs.",
+  "script": {
+   "title": "Tu negocio propio: 6 primeros pasos",
+   "hook": "Guárdalo si estás pensando emprender.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo si estás pensando emprender.",
+     "on_screen_text": "Tu negocio propio: 6 primeros pasos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a small food stand. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Todo lo que entra y sale, ahí.",
+     "on_screen_text": "1. Una cuenta solo del negocio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two piggy banks. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Nunca le pagues a una página por él.",
+     "on_screen_text": "2. Tu EIN, gratis en irs.gov",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form on a laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Ciudad, condado y, si es comida, tu estado.",
+     "on_screen_text": "3. Licencia y permisos locales",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a city hall building. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Una hoja sencilla, cada semana.",
+     "on_screen_text": "4. Anota ingresos y gastos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple spreadsheet. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Nadie te los retiene.",
+     "on_screen_text": "5. Aparta para impuestos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar labeled IRS. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Aunque sea chiquito.",
+     "on_screen_text": "6. Págate un sueldo fijo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small paycheck. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Muchos atienden en español.",
+     "on_screen_text": "Ayuda gratis: centros de pequeños negocios",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a counselor at a desk. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu negocio propio, 6 primeros pasos:\n1. Una cuenta solo del negocio.\n2. Tu EIN, gratis en irs.gov.\n3. Licencia y permisos locales.\n4. Anota ingresos y gastos cada semana.\n5. Aparta para impuestos.\n6. Págate un sueldo fijo.\nLos centros de desarrollo de pequeños negocios (SBDC) orientan gratis, muchos en español.\n\nInformación general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "emprender",
+    "negocio",
+    "pequenonegocio",
+    "impuestos",
+    "dinerosimple"
+   ],
+   "description": "Seis primeros pasos para empezar un negocio propio.",
+   "thumbnail_text": "6 primeros pasos",
+   "sources": [
+    "https://www.sba.gov/es",
+    "https://www.irs.gov/es"
+   ],
+   "claims_to_verify": [
+    "EINs are free from the IRS",
+    "SBDCs offer free counseling"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8c-costos-de-comprar-casa",
+  "format": "carousel",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "What buying a home really costs beyond the price: down payment, closing costs (often 2-5% of the loan), inspection, appraisal, mortgage insurance, property taxes and homeowners insurance in the monthly payment, and a repair fund.",
+  "script": {
+   "title": "Comprar casa: lo que cuesta además del precio",
+   "hook": "Guárdalo antes de empezar a buscar.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo antes de empezar a buscar.",
+     "on_screen_text": "Comprar casa: lo que cuesta además del precio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a house with a long receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "No siempre 20%, pero algo.",
+     "on_screen_text": "1. El enganche",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a percentage sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Muchas veces 2% a 5% del préstamo.",
+     "on_screen_text": "2. Gastos de cierre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a stack of papers. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Antes de firmar.",
+     "on_screen_text": "3. Inspección y avalúo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an inspector with a clipboard. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Si das menos de 20%.",
+     "on_screen_text": "4. Seguro hipotecario",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a house with a small umbrella. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Van dentro de tu pago mensual.",
+     "on_screen_text": "5. Impuestos y seguro de la casa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a monthly bill with lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "El calentador no avisa.",
+     "on_screen_text": "6. Un fondo para reparaciones",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a toolbox and a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Con eso sabes cuánta casa te alcanza.",
+     "on_screen_text": "Tu número: todo junto, al mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a calculator. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Comprar casa, lo que cuesta además del precio:\n1. El enganche.\n2. Gastos de cierre (muchas veces 2% a 5% del préstamo).\n3. Inspección y avalúo.\n4. Seguro hipotecario si das menos de 20%.\n5. Impuestos y seguro de la casa, dentro del pago mensual.\n6. Un fondo para reparaciones.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "comprarcasa",
+    "vivienda",
+    "hipoteca",
+    "finanzaspersonales",
+    "dinerosimple"
+   ],
+   "description": "Los costos de comprar casa además del precio.",
+   "thumbnail_text": "Además del precio",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Closing costs commonly 2-5% of the loan amount (CFPB/industry estimates)",
+    "PMI typically required on conventional loans with under 20% down"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8c-preguntas-al-prestamista",
+  "format": "carousel",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Six questions to ask every mortgage lender, with or without an SSN: the rate and APR, points, total closing costs on the Loan Estimate, down payment required, prepayment penalty, and whether the rate is fixed; compare two or three Loan Estimates side by side.",
+  "script": {
+   "title": "6 preguntas para cualquier prestamista de casa",
+   "hook": "Llévala a tu próxima cita.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Llévala a tu próxima cita.",
+     "on_screen_text": "6 preguntas para tu prestamista",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at a desk with a lender. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "El APR incluye algunos cargos.",
+     "on_screen_text": "1. ¿Cuál es la tasa y el APR?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two percentages side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Pagos por adelantado para bajar la tasa.",
+     "on_screen_text": "2. ¿Cobran puntos?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. coins next to a small arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Pídelo en la Estimación del préstamo.",
+     "on_screen_text": "3. ¿Cuánto son los gastos de cierre?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a three-page form. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Con ITIN suele ser más.",
+     "on_screen_text": "4. ¿Cuánto enganche piden?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a percentage sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Que no te castiguen por adelantar.",
+     "on_screen_text": "5. ¿Hay multa por pagar antes?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with an early date. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Si es variable, ¿cuánto puede subir?",
+     "on_screen_text": "6. ¿La tasa es fija?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a line chart going up. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "El formulario es igual para todos.",
+     "on_screen_text": "Compara 2 o 3 Estimaciones lado a lado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three forms side by side. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "6 preguntas para cualquier prestamista de casa:\n1. ¿Cuál es la tasa y el APR?\n2. ¿Cobran puntos?\n3. ¿Cuánto son los gastos de cierre? (en la Estimación del préstamo)\n4. ¿Cuánto enganche piden? (con ITIN suele ser más)\n5. ¿Hay multa por pagar antes?\n6. ¿La tasa es fija? Si es variable, ¿cuánto puede subir?\nCompara 2 o 3 Estimaciones lado a lado.\n\nInformación general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "comprarcasa",
+    "hipoteca",
+    "itin",
+    "vivienda",
+    "dinerosimple"
+   ],
+   "description": "Seis preguntas para hacerle a cualquier prestamista de hipotecas.",
+   "thumbnail_text": "6 preguntas",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "Loan Estimate is a standardized form (CFPB TRID)",
+    "ITIN mortgages typically require larger down payments"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8c-regreso-a-clases",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Back-to-school budget in six moves: a number per child, the school's official list, what's at home, buy in two rounds, free school meals and supplies programs, and the sales-tax holiday if your state has one.",
+  "script": {
+   "title": "Regreso a clases sin deudas: 6 pasos",
+   "hook": "Guárdalo para agosto.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "6 pasos. Guárdalo para agosto.",
+     "on_screen_text": "Regreso a clases sin deudas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a backpack and a list. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Antes de entrar a la tienda.",
+     "on_screen_text": "1. Un número por hijo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. sticky notes with numbers. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "No la del anuncio.",
+     "on_screen_text": "2. La lista oficial de la escuela",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a printed school list. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Mochilas, tijeras, colores.",
+     "on_screen_text": "3. Lo que ya hay en casa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a drawer of supplies. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Lo básico antes, lo demás después de la primera semana.",
+     "on_screen_text": "4. Compra en dos partes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two shopping bags. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Pregunta en la escuela.",
+     "on_screen_text": "5. Comida y útiles gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a school cafeteria. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Si tu estado los tiene.",
+     "on_screen_text": "6. Días sin impuesto de venta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a tax-free tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Todos estamos en lo mismo.",
+     "on_screen_text": "Mándaselo a otra mamá o papá",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two phones sharing a picture. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Regreso a clases sin deudas:\n1. Un número por hijo.\n2. La lista oficial de la escuela.\n3. Lo que ya hay en casa.\n4. Compra en dos partes.\n5. Pregunta por comida y útiles gratis en la escuela.\n6. Días sin impuesto de venta, si tu estado los tiene.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "regresoaclases",
+    "utiles",
+    "familia",
+    "presupuesto",
+    "dinerosimple"
+   ],
+   "description": "Seis pasos para el regreso a clases sin deudas.",
+   "thumbnail_text": "Regreso a clases",
+   "sources": [
+    "https://www.fns.usda.gov/es"
+   ],
+   "claims_to_verify": [
+    "Sales-tax holidays vary by state and year"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m8c-estafa-de-renta",
+  "format": "carousel",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Rental scam warning signs and checks: price far below the area, owner abroad, deposit before viewing, payment by Zelle, cash or gift cards, pressure, and how to verify ownership with county records and see the unit in person.",
+  "script": {
+   "title": "Estafa de renta: 6 señales",
+   "hook": "Guárdalo antes de mudarte.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo antes de mudarte.",
+     "on_screen_text": "Estafa de renta: 6 señales",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a listing. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Si es demasiado bueno, desconfía.",
+     "on_screen_text": "1. Muy por debajo del precio de la zona",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a price tag far lower than others. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Y no puede enseñártelo.",
+     "on_screen_text": "2. El dueño 'está fuera del país'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an airplane. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "La señal más clara.",
+     "on_screen_text": "3. Depósito antes de verlo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a payment request on a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Difíciles de recuperar.",
+     "on_screen_text": "4. Pago por Zelle, efectivo o tarjeta de regalo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a gift card and cash. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "La prisa es la herramienta del estafador.",
+     "on_screen_text": "5. Prisa: 'hay otros interesados'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a ticking clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "En los registros de propiedad del condado.",
+     "on_screen_text": "6. Revisa quién es el dueño",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a county records website. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Repórtalo en la FTC si te pasa.",
+     "on_screen_text": "Nunca pagues sin verlo en persona",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a hand closing a wallet. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Estafa de renta, 6 señales:\n1. Muy por debajo del precio de la zona.\n2. El dueño 'está fuera del país'.\n3. Te piden depósito antes de verlo.\n4. Pago por Zelle, efectivo o tarjeta de regalo.\n5. Prisa: 'hay otros interesados'.\n6. Revisa quién es el dueño en los registros del condado.\nNunca pagues sin verlo en persona. Si te pasa, repórtalo en ReporteFraude.ftc.gov.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "estafas",
+    "renta",
+    "vivienda",
+    "fraude",
+    "dinerosimple"
+   ],
+   "description": "Seis señales de una estafa de renta.",
+   "thumbnail_text": "Estafa de renta",
+   "sources": [
+    "https://consumidor.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "FTC rental scam guidance; ReporteFraude.ftc.gov is the FTC's Spanish fraud reporting site"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "l-tanda",
+  "format": "long",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Complete Spanish guide to the tanda (cundina, natillera): how it works, why it beats borrowing (cost of $1,000 for 10 weeks via a tanda, a credit card and a payday loan, as an example), the real risks, how to make one safer, the lending-circle version that builds credit, and when a savings account is better.",
+  "script": {
+   "title": "La tanda: cómo hacerla segura y cuándo te conviene (guía completa)",
+   "hook": "Juntar mil dólares con una tanda te cuesta cero. Con un préstamo de día de pago te puede costar setecientos cincuenta.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "La tanda, la cundina, la natillera, el san: cada país le dice distinto, y millones de familias la usan para juntar dinero. En este video vemos cómo funciona, cuánto te ahorra comparada con pedir prestado, los riesgos de verdad, cómo hacerla más segura, la versión que además te construye crédito y cuándo conviene más una cuenta de ahorro. Es información general, no asesoría financiera.",
+     "on_screen_text": "La tanda: la guía completa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf sitting in a circle of people with envelopes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo funciona",
+     "narration": "Un grupo, digamos diez personas, pone la misma cantidad cada semana, por ejemplo cien dólares. Cada semana, a una persona le toca todo: mil dólares. Después de diez semanas, todos pusieron mil y todos recibieron mil. Nadie gana intereses, pero a los primeros les llega el dinero antes.",
+     "on_screen_text": "Cómo funciona",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a circle of ten people passing one envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "El costo",
+     "narration": "Por eso la tanda es tan popular: para el que la necesita pronto, es como un préstamo sin intereses. Comparemos el costo de tener mil dólares por diez semanas. Con la tanda, cero. Con una tarjeta de crédito al 25 por ciento, unos $48 de intereses. Con un préstamo de día de pago, si cobra quince dólares por cada cien cada dos semanas y lo renuevas cinco veces, unos $750. Son números de ejemplo, pero la diferencia es real.",
+     "on_screen_text": "Cuánto cuesta juntar $1,000",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three stacks of coins of very different heights. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Costo de $1,000 por 10 semanas",
+      "labels": [
+       "Tanda",
+       "Tarjeta al 25%",
+       "Día de pago"
+      ],
+      "values": [
+       0,
+       48,
+       750
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo; el día de pago renovado 5 veces"
+     }
+    },
+    {
+     "heading": "Los riesgos",
+     "narration": "El problema: si alguien cobra su número y deja de pagar, o si el que organiza desaparece, nadie te protege. No hay seguro como en un banco, y reclamarlo cuesta. Los que cobran al final son los que más arriesgan, porque prestaron su dinero durante semanas sin ganar nada.",
+     "on_screen_text": "Los riesgos de verdad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an empty chair in the circle. No text, no logos, no real people."
+    },
+    {
+     "heading": "Más segura",
+     "narration": "Si vas a entrar: solo con gente que conoces bien, no con desconocidos de un grupo en línea. Todo por escrito: nombres, montos, fechas y orden de los turnos, con copia para todos. Pagos que dejen rastro, con una app o un recibo. Y decidan antes qué pasa si alguien no paga, por ejemplo que el siguiente turno cubra.",
+     "on_screen_text": "Cómo hacerla más segura",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a written list being photographed. No text, no logos, no real people."
+    },
+    {
+     "heading": "El orden",
+     "narration": "Si necesitas el dinero para algo seguro, como el enganche de un carro o un viaje con fecha, pide un número temprano. Si solo quieres ahorrar, un número tardío te obliga a guardar, pero piensa que es el más arriesgado. Y quien organiza no debería quedarse siempre con el primero.",
+     "on_screen_text": "¿Qué número te conviene?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a numbered list with one number circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Con crédito",
+     "narration": "Algunas organizaciones sin fines de lucro hacen círculos de préstamo: funcionan como una tanda, pero con un contrato, sin intereses, y tus pagos se reportan a las agencias de crédito. Si empiezas de cero, te ayuda a juntar dinero y a tener historial al mismo tiempo. Algunas aceptan ITIN.",
+     "on_screen_text": "La tanda que construye crédito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a circle of people and a credit score going up. No text, no logos, no real people."
+    },
+    {
+     "heading": "O una cuenta",
+     "narration": "Si no necesitas el dinero pronto, una cuenta de ahorro con un apartado con nombre y una transferencia automática hace lo mismo que una tanda tardía, sin el riesgo, y además te paga un poco de interés. La tanda te da disciplina; la transferencia automática también.",
+     "on_screen_text": "Cuándo conviene más una cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a savings pocket. No text, no logos, no real people."
+    },
+    {
+     "heading": "Las estafas",
+     "narration": "Ojo con las 'tandas' o 'círculos de regalo' en redes sociales donde te prometen recibir ocho veces lo que pones si invitas a más gente. Eso no es una tanda: es una pirámide, y la mayoría pierde.",
+     "on_screen_text": "Cuidado con las 'tandas' en redes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pyramid of small figures on a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Resumen. La tanda es un préstamo sin intereses para los primeros y un ahorro para los últimos. Hazla solo con gente de confianza, todo por escrito y con pagos que dejen rastro. Si quieres crédito también, busca un círculo de préstamo. Y si no necesitas el dinero pronto, una cuenta con transferencia automática es más segura.",
+     "on_screen_text": "Gente de confianza, por escrito y con rastro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf closing an envelope and smiling. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "La tanda, bien hecha: cómo funciona, cuánto te ahorra (ejemplo: $1,000 por 10 semanas cuesta $0 en tanda, unos $48 con tarjeta al 25% y unos $750 con préstamo de día de pago), los riesgos de verdad, cómo hacerla más segura, la versión que construye crédito y cuándo conviene más una cuenta.",
+   "hashtags": [
+    "tanda",
+    "ahorro",
+    "comunidad",
+    "credito",
+    "dinerosimple"
+   ],
+   "description": "La guía completa de la tanda: cómo funciona, cuánto te ahorra comparada con pedir prestado, los riesgos, cómo hacerla más segura, los círculos de préstamo que construyen crédito, cuándo conviene una cuenta, y las 'tandas' falsas de redes sociales.\n\nCapítulos (estimados)\n0:00 Intro\n0:35 Cómo funciona\n1:10 Cuánto cuesta juntar $1,000\n2:00 Los riesgos\n2:35 Cómo hacerla más segura\n3:15 ¿Qué número te conviene?\n3:50 La tanda que construye crédito\n4:25 Cuándo conviene una cuenta\n4:55 Tandas falsas en redes\n5:20 Resumen\n\nInformación general, no es asesoría financiera.\n\nEnlaces (los productos de pago son nuestros):\nCuenta de banco y tarjeta con ITIN: https://dinerosimple.netlify.app/blog/cuenta-y-tarjeta-con-itin/?utm_source=youtube&utm_medium=social&utm_campaign=l-tanda\nEl Presupuesto de 20 Minutos ($12): https://dinerosimple.netlify.app/products/el-presupuesto-de-20-minutos/?utm_source=youtube&utm_medium=social&utm_campaign=l-tanda\nGuía gratis: Tu dinero en orden en 7 días: https://dinerosimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=l-tanda",
+   "thumbnail_text": "La tanda, bien hecha",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://consumidor.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "Example arithmetic: $1,000 x 25% x 10/52 = about $48; payday $15 per $100 per 2 weeks = $150 per period x 5 = $750",
+    "Some nonprofit lending circles report to credit bureaus; ITIN acceptance varies",
+    "'Gifting circles' / 'blessing looms' promising multiples are pyramid schemes (FTC)",
+    "Chart 'Costo de $1,000 por 10 semanas': Tanda 0, Tarjeta al 25% 48, Día de pago 750 (Ejemplo; el día de pago renovado 5 veces)"
+   ],
+   "title_variants": [],
+   "hook_variants": [],
+   "original_element": "Graba la pantalla de una hoja de cálculo sencilla con la lista de la tanda (nombres de ejemplo, montos, fechas y turnos) y una foto de la lista en un chat de grupo"
+  }
+ },
+ {
+  "key": "l-primera-casa",
+  "format": "long",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Complete Spanish guide to the first steps to buying a home, with an SSN or an ITIN: your monthly number, credit, down payment options with a worked example on a $250,000 home, down payment assistance, prequalification vs preapproval, the Loan Estimate, ITIN mortgages, closing costs, HUD counseling, and scams.",
+  "script": {
+   "title": "Tu primera casa: los primeros pasos, con Seguro Social o con ITIN (guía completa)",
+   "hook": "Para una casa de doscientos cincuenta mil, el enganche puede ser de siete mil quinientos o de cincuenta mil. Depende de esto.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Para una casa de doscientos cincuenta mil, el enganche puede ser de siete mil quinientos o de cincuenta mil. En este video vemos tu número mensual, tu crédito, cuánto enganche se necesita con un ejemplo, las ayudas para el enganche, la preaprobación, el formulario que te deja comparar prestamistas, las hipotecas con ITIN, los gastos de cierre y las estafas. Es información general, no asesoría financiera.",
+     "on_screen_text": "Tu primera casa: los primeros pasos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf standing in front of a modest house. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tu número",
+     "narration": "Antes de ver casas, saca cuánto puedes pagar al mes, todo incluido: la hipoteca, los impuestos de la propiedad, el seguro de la casa, el seguro hipotecario si aplica y un apartado para reparaciones. Compáralo con lo que pagas de renta hoy, y deja espacio para el ahorro.",
+     "on_screen_text": "Primero tu número, no la casa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calculator next to a rent receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tu crédito",
+     "narration": "Tu puntaje de crédito decide qué tasa te ofrecen, y una diferencia de un punto en la tasa son miles de dólares en treinta años. Seis meses antes, pide tus reportes gratis, corrige errores, paga a tiempo y baja el saldo de tus tarjetas.",
+     "on_screen_text": "Tu crédito decide tu tasa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a credit score going up over months. No text, no logos, no real people."
+    },
+    {
+     "heading": "El enganche",
+     "narration": "Ejemplo con una casa de 250 mil dólares. Algunos préstamos convencionales aceptan desde el 3 por ciento: $7,500. Un préstamo FHA, desde el 3.5 por ciento: $8,750. Con el 10 por ciento son $25,000, y con el 20 por ciento, $50,000. Con menos del 20 por ciento pagas un seguro hipotecario, pero puedes comprar antes.",
+     "on_screen_text": "Cuánto enganche, con un ejemplo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. four stacks of bills of different heights. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Enganche para una casa de $250,000",
+      "labels": [
+       "3%",
+       "3.5%",
+       "10%",
+       "20%"
+      ],
+      "values": [
+       7500,
+       8750,
+       25000,
+       50000
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo; con menos de 20% pagas seguro hipotecario"
+     }
+    },
+    {
+     "heading": "Ayudas",
+     "narration": "Muchos estados, condados y ciudades tienen programas de ayuda para el enganche o los gastos de cierre, sobre todo para quien compra por primera vez. Algunos son préstamos que se perdonan con los años. Pregunta en la agencia de vivienda de tu estado o con un consejero de vivienda.",
+     "on_screen_text": "Ayudas para el enganche",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a hand offering a small key. No text, no logos, no real people."
+    },
+    {
+     "heading": "Preaprobación",
+     "narration": "La precalificación es un cálculo rápido. La preaprobación es cuando el prestamista revisa tus ingresos, tus documentos y tu crédito, y te da una carta que los vendedores toman en serio. Pídela a dos o tres prestamistas en pocas semanas: para el puntaje, esas consultas cuentan casi como una.",
+     "on_screen_text": "Precalificación y preaprobación",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three letters side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "La Estimación",
+     "narration": "Cada prestamista te tiene que dar la Estimación del préstamo, un formulario estándar de tres páginas, a más tardar tres días hábiles después de tu solicitud. Ponlas lado a lado: tasa, APR, puntos, gastos de cierre y el pago mensual. Es la forma más fácil de ver quién te cobra más.",
+     "on_screen_text": "El formulario para comparar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a three-page form with highlighted lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Con ITIN",
+     "narration": "Si tienes ITIN, el préstamo FHA no es opción, porque pide número de Seguro Social. Pero algunos prestamistas y cooperativas dan hipotecas con ITIN, normalmente con un enganche más grande, a veces del 10 al 20 por ciento, y una tasa más alta. Compara varias Estimaciones, y para cualquier pregunta sobre tu situación migratoria, habla con un abogado de inmigración con licencia o un representante acreditado, nunca con un notario.",
+     "on_screen_text": "Si tienes ITIN en vez de Seguro Social",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a house key next to a document. No text, no logos, no real people."
+    },
+    {
+     "heading": "El cierre",
+     "narration": "Aparte del enganche, al cerrar pagas los gastos de cierre, muchas veces entre el 2 y el 5 por ciento del préstamo: el avalúo, el título, comisiones del prestamista, el seguro de la casa por adelantado. A veces el vendedor puede pagar una parte si lo negocias. Y no te saltes la inspección.",
+     "on_screen_text": "Los gastos de cierre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a stack of closing papers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Estafas",
+     "narration": "Dos estafas comunes. Una: un correo que parece de tu agente o tu compañía de título, justo antes de cerrar, con 'nuevas instrucciones' para mandar el enganche. Siempre confirma por teléfono, a un número que ya tenías. Dos: quien te cobra por adelantado para 'garantizarte' una hipoteca. Nadie puede garantizarla.",
+     "on_screen_text": "Las estafas de la compra",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a suspicious email on a laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Resumen. Primero tu número mensual, todo incluido. Trabaja tu crédito seis meses antes. Junta el enganche y busca ayudas. Pide preaprobación a dos o tres prestamistas y compara las Estimaciones. Con ITIN, compara todavía más. Y confirma por teléfono antes de mandar dinero. Un consejero de vivienda aprobado por HUD te acompaña, muchas veces gratis.",
+     "on_screen_text": "Tu número, tu crédito, tu enganche y compara",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a house key and smiling. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tu primera casa, los primeros pasos: tu número mensual, tu crédito, cuánto enganche (ejemplo para una casa de $250,000: $7,500 al 3%, $8,750 al 3.5%, $25,000 al 10% y $50,000 al 20%), ayudas para el enganche, preaprobación, la Estimación del préstamo, hipotecas con ITIN, gastos de cierre y estafas.",
+   "hashtags": [
+    "comprarcasa",
+    "vivienda",
+    "hipoteca",
+    "itin",
+    "dinerosimple"
+   ],
+   "description": "La guía de los primeros pasos para comprar tu primera casa, con número de Seguro Social o con ITIN: tu número mensual, tu crédito, el enganche con un ejemplo, ayudas, preaprobación, la Estimación del préstamo, hipotecas con ITIN, gastos de cierre y estafas.\n\nCapítulos (estimados)\n0:00 Intro\n0:35 Tu número\n1:10 Tu crédito\n1:45 El enganche\n2:30 Ayudas\n3:00 Preaprobación\n3:40 La Estimación del préstamo\n4:15 Con ITIN\n5:00 Los gastos de cierre\n5:35 Estafas\n6:10 Resumen\n\nInformación general, no es asesoría financiera.\n\nEnlaces (los productos de pago son nuestros):\nCuenta de banco y tarjeta con ITIN: https://dinerosimple.netlify.app/blog/cuenta-y-tarjeta-con-itin/?utm_source=youtube&utm_medium=social&utm_campaign=l-primera-casa\nTu Fecha Sin Deudas ($17): https://dinerosimple.netlify.app/products/tu-fecha-sin-deudas/?utm_source=youtube&utm_medium=social&utm_campaign=l-primera-casa\nGuía gratis: Tu dinero en orden en 7 días: https://dinerosimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=l-primera-casa",
+   "thumbnail_text": "Tu primera casa",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://www.hud.gov/espanol",
+    "https://www.consumerfinance.gov/owning-a-home/"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "Example arithmetic: $250,000 x 3% = $7,500; 3.5% = $8,750; 10% = $25,000; 20% = $50,000",
+    "Some conventional programs allow 3% down for eligible first-time buyers; FHA minimum 3.5% with qualifying credit; FHA requires an SSN",
+    "Loan Estimate within 3 business days of application (TRID)",
+    "Closing costs commonly 2-5% of the loan",
+    "ITIN mortgages: some lenders/credit unions; often 10-20% down and higher rates (varies)",
+    "Wire fraud before closing is a common scam (FBI/CFPB warnings)",
+    "Chart 'Enganche para una casa de $250,000': 3% 7500, 3.5% 8750, 10% 25000, 20% 50000 (Ejemplo; con menos de 20% pagas seguro hipotecario)"
+   ],
+   "title_variants": [],
+   "hook_variants": [],
+   "original_element": "Graba la pantalla de la Estimación del préstamo de ejemplo de la CFPB (la versión en español) marcando la tasa, el APR y los gastos de cierre"
+  }
+ }
+]
