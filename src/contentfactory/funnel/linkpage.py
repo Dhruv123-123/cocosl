@@ -48,7 +48,7 @@ def public_env() -> jinja2.Environment:
 
 
 def slugify(text: str) -> str:
-    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:48] or "link"
+    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:48].rstrip("-") or "link"
 
 
 # ---------------------------------------------------------------- data
