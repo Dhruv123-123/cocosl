@@ -84,7 +84,8 @@ def test_export_writes_pack(factory, tmp_path):
                                               ("month-5", date(2027, 3, 21), 31),
                                               ("month-6", date(2027, 4, 21), 30),
                                               ("month-7", date(2027, 5, 21), 31),
-                                              ("month-8", date(2027, 6, 21), 30)])
+                                              ("month-8", date(2027, 6, 21), 30),
+                                              ("month-9", date(2027, 7, 21), 31)])
 def test_tiktok_cuts_and_series(factory, month, start, days):
     items = _items(ROOT / "launch" / "money-made-simple" / month / "content.json")
     shorts = [i for i in items if i["format"] == "short"]
