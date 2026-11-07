@@ -1,7 +1,7 @@
 # Go live: the one checklist
 
-Written 2026-11-07 for Dhruv and refreshed through the evening (last pass 07:20 UTC: PRs #1–#12 and `main` at
-`017dd81`). This merges every "only you can do this" step from `docs/CREDENTIALS.md`, `docs/QUICKSTART.md`,
+Written 2026-11-07 for Dhruv and refreshed through the evening (last pass 08:05 UTC: PRs #1–#12 and `main` at
+`092de0e`). This merges every "only you can do this" step from `docs/CREDENTIALS.md`, `docs/QUICKSTART.md`,
 `docs/DEPLOY.md`, `launch/LAUNCH_DAY.md`, `launch/VERIFY_BEFORE_POSTING.md`, the open PRs, the commits on `main`
 and the project files in `content-factory/`, with the duplicates removed. Everything else is already built.
 
@@ -24,7 +24,7 @@ Merge in this order (details and current blockers in [PR merge order](#pr-merge-
 **#1 → #3 → #2 → #4 → #5 → #6 → #8 → #9 → #11 → #10 → #12 → #7.**
 
 - [ ] Merge the ones marked ✅ in that order on GitHub (≈ 2 min each). Right now that's **#1, #3, #2, #4, #5,
-      #8, #12, #7**: checked together on top of `main`, all tests pass. Skip the rest until GitHub shows them
+      #6, #8, #12, #7**: checked together on top of `main`, all tests pass. Skip the rest until GitHub shows them
       green; the threads that opened them are fixing them. 15 min
 
 ---
@@ -615,8 +615,8 @@ batch-record on the day.
 
 ## PR merge order
 
-Checked 07:20 UTC on 2026-11-07 against `main` at `017dd81`, after the threads merged `main` into their PRs.
-Every open PR was merged in this order in a scratch copy and the full test suite was run.
+Checked 08:05 UTC on 2026-11-07 against `main` at `092de0e`, merging every open PR in this order in a
+scratch copy and running the full test suite.
 
 | # | PR | Status now | What's in the way |
 |---|---|---|---|
@@ -624,16 +624,15 @@ Every open PR was merged in this order in a scratch copy and the full test suite
 | 2 | **#3** Financial model | ✅ safe | |
 | 3 | **#2** Scouting, hooks, Trial Reels | ✅ safe | |
 | 4 | **#4** Website and emails | ✅ safe | |
-| 5 | **#5** Months 1–3, channels, affiliate kit | ✅ safe (fixed) | |
-| 6 | **#6** Products, Etsy, KDP, ebook | ⚠️ merges, but 2 tests fail with #4 | #6's tests put their own `build.py` on `sys.path`, so #4's `test_site.py` (the new January and Ask-page tests) imports the wrong `build`. Fix: load `site/build.py` by path with a unique module name |
+| 5 | **#5** Months 1–8, channels, affiliate kit | ✅ safe | |
+| 6 | **#6** Products, Etsy, KDP, ebook | ✅ safe (fixed) | |
 | 7 | **#8** Web apps | ✅ safe | |
-| 8 | **#9** Scam Decoded | ⚠️ merges, but 1 test fails with #5 | `tests/test_channels.py::test_other_brand_configs[scam-decoded]`: its channels config names an item that isn't in the source packs |
-| 9 | **#11** Dinero Simple | ⚠️ conflicts with #9; with #5 the CLI fails to start | both #5 and #11 register the same `factory` subcommand (argparse error in 3 tests); conflicts with #9 in `cli.py`, `tests/test_business.py`, `tests/test_worker.py` |
-| 10 | **#10** 1099 Money | ⚠️ conflicts with #5, #6, #9 and #11 | `cli.py`, `channels/config.json`, `pyproject.toml`, `tests/test_pack.py`, `test_business.py`, `test_worker.py`. Merge it last; its thread brings in `main` once the others are in |
+| 8 | **#9** Scam Decoded | ⚠️ conflicts with `main` | `src/contentfactory/cli.py`, `cmd_import`: `main` now copies `original_element` into the script, #9 adds `platforms=`. Keep both |
+| 9 | **#11** Dinero Simple | ⚠️ merges, 5 tests fail | registers a `factory` subcommand #5 already has (argparse error in 4 tests), plus `test_dinero_products.py::test_etsy_listings_fit_etsy_and_editions_stay_on_etsy` |
+| 10 | **#10** 1099 Money | ⚠️ conflicts with #5 and others | `cli.py`, `channels/config.json`, `pyproject.toml`, `tests/test_pack.py`, `test_business.py`, `test_worker.py`. Merge last, after it brings in `main` again |
 | 11 | **#12** Ad studio portfolio + listing-video page | ✅ safe | |
 | 12 | **#7** This checklist | ✅ safe | docs only |
 
-**Safe to merge now, in order: #1, #3, #2, #4, #5, #8, #12, #7.** These were merged together on top of
-`main` and the full test suite passed. After that: #6 once its test fix lands, then #9, then #11 and
-#10 (each merging `main` again before you merge it, because they touch the same files).
+**Safe to merge now, in order: #1, #3, #2, #4, #5, #6, #8, #12, #7.** These nine were merged together on top
+of `main` and the full test suite passed. Then #9, #11 and #10 once GitHub shows them green.
 If a new PR lands, merge it after these unless its description says otherwise.
