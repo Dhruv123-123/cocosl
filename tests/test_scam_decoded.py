@@ -784,3 +784,57 @@ def test_red_flags_printables_are_etsy_safe_signage(tmp_path):
     assert "How it's made" in etsy and "Personal use only" in etsy and "not legal, financial" in etsy
     assert "http" not in etsy and "scamdecoded." not in etsy.lower()
     assert all(f"mockup-0{i}" in listing for i in (1, 2, 3))
+
+
+def test_ncpw_pack_alerts_carousels_and_long_video():
+    import datetime as dt
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    root = CONTENT.parent
+    items = json.loads((root / "ncpw-2027.json").read_text())
+    assert [i["format"] for i in items] == ["carousel", "carousel", "long"]
+    dates = [i["post_on"] for i in items]
+    assert "2027-02-28" <= dates[0][:10] and dates[-1][:10] <= "2027-03-06"  # NCPW 2027: Feb 28 - Mar 6
+    taken, earlier = set(), set()
+    for f in root.glob("*.json"):
+        if f.name == "ncpw-2027.json":
+            continue
+        data = json.loads(f.read_text())
+        for i in data if isinstance(data, list) else []:
+            if isinstance(i, dict) and "script" in i:
+                earlier.add(i["script"]["title"])
+                if i.get("post_on"):
+                    taken.add(i["post_on"])
+    for line in (root / "POSTING_PLAN_WEEKS_13-21.md").read_text().splitlines():
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        m = re.match(r"\w{3} (Feb|Mar) (\d+)$", cells[0]) if len(cells) == 5 else None
+        if m:
+            day = f"2027-{2 if m.group(1) == 'Feb' else 3:02d}-{int(m.group(2)):02d}"
+            for col, time in ((1, "12:00"), (2, "12:00"), (3, "19:30"), (4, "10:00")):
+                if cells[col]:
+                    taken.add(f"{day} {time}")
+    assert not taken & set(dates), taken & set(dates)
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        assert sc.title not in earlier and sc.claims_to_verify and len(sc.hashtags) <= 5
+        assert all("ftc.gov" in u for u in sc.sources), sc.title
+        assert item["topic"] != "consumer rights" or "https://consumer.ftc.gov/ncpw" in sc.sources
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        text = G.script_text(item["script"])
+        assert "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+    long = items[-1]
+    assert sum(len(s["narration"].split()) for s in long["script"]["segments"]) >= 800
+    assert any(s.get("footage") for s in long["script"]["segments"]) and "Maya" in json.dumps(long)
+    assert long["script"]["title"] in (root / "LONG_VIDEO_RECORDINGS.md").read_text()
+    # one alert a day, Mon Mar 1 - Fri Mar 5, each from an FTC page
+    alerts = sorted((root.parent.parent / "sites" / "scam-decoded" / "content" / "alerts").glob("5[3-7]-*.md"))
+    days = []
+    for f in alerts:
+        meta = dict(l.split(": ", 1) for l in f.read_text().split("---")[1].strip().splitlines() if ": " in l)
+        assert "ftc.gov" in meta["source_url"] and len(meta["flags"].split("|")) == 3
+        days.append(meta["alert_date"])
+    assert days == [f"2027-03-0{d}" for d in range(1, 6)]
+    plan = (root / "POSTING_PLAN_NCPW_2027.md").read_text()
+    assert all(f"#{n} " in plan for n in range(3)) and plan.count("`5") == 5
