@@ -1,15 +1,16 @@
 # Go live: the one checklist
 
-Written 2026-11-07 for Dhruv, refreshed the same night after the round-2 work landed on `main`. This merges
-every "only you can do this" step from `docs/CREDENTIALS.md`, `docs/QUICKSTART.md`, `docs/DEPLOY.md`,
-`launch/LAUNCH_DAY.md`, `launch/VERIFY_BEFORE_POSTING.md`, the open PRs (#1–#6), the round-2 commits on `main`
+Written 2026-11-07 for Dhruv and refreshed through the evening (last pass: PRs #1–#11 and `main` at
+`25195c9`). This merges every "only you can do this" step from `docs/CREDENTIALS.md`, `docs/QUICKSTART.md`,
+`docs/DEPLOY.md`, `launch/LAUNCH_DAY.md`, `launch/VERIFY_BEFORE_POSTING.md`, the open PRs, the commits on `main`
 and the project files in `content-factory/`, with the duplicates removed. Everything else is already built.
 
 It's ordered by **fastest path to first revenue**: the ad studio can pay this month, products can sell as
 soon as there's traffic, affiliates and platform money come later. Times are hands-on time, not waiting time.
 Where something has a waiting period (verification, affiliate approval), start it early and keep going.
 
-Totals: **Stage 1–3 ≈ 5–6 hours** gets you able to take money. All stages ≈ 12–15 hours spread over two weeks.
+Totals: **Stage 1–3 ≈ 5–6 hours** gets you able to take money. Stages 0–8 (one brand, fully live)
+≈ 13–16 hours over two weeks. Stage 9 adds the other brands, one at a time, ≈ 2–4 hours each.
 
 Nothing in this repo sends, posts or charges on its own. You press every button.
 
@@ -17,10 +18,11 @@ Nothing in this repo sends, posts or charges on its own. You press every button.
 
 ## Stage 0 · Merge the PRs (15 min, do first)
 
-Merge in this order (details in [PR merge order](#pr-merge-order) at the bottom):
-**#1 → #3 → #2 → #4 → #5 → #6 → this PR.**
+Merge in this order (details and current blockers in [PR merge order](#pr-merge-order) at the bottom):
+**#1 → #3 → #2 → #4 → #5 → #6 → #8 → #9 → #11 → #10 → #7.**
 
-- [ ] Merge the PRs in that order on GitHub (≈ 2 min each). 10 min
+- [ ] Merge the PRs in that order on GitHub (≈ 2 min each). If GitHub shows a conflict on one, skip it and
+      come back; the thread that opened it fixes it. 25 min
 
 ---
 
@@ -64,6 +66,10 @@ The 76 leads and pitches are already written in `content-factory/ai-ad-studio-v2
 ## Stage 3 · Sell the six products on Gumroad (≈ 2 h)
 
 Needs PR #6 merged. Files are in `content-factory/products/` and `launch/products/dist/`.
+
+**Sell PR #6's six products, nothing else, for Money Made Simple.** `main` also has an older ladder in
+`launch/products/PRODUCT_LADDER.md` (Debt Payoff Planner $9, First Investing Account Kit $15, Starter Bundle
+$24). It's being moved to an archive; don't list those on Gumroad.
 
 - [ ] Create the 6 products from each `LISTING.md`: The 20-Minute Budget $12, Bill Cut Kit $5,
       Credit Report Audit Kit $9, Debt-Free Date Planner $17, Start Investing With $100 a Month $19,
@@ -176,6 +182,50 @@ Manual posting is fine for the first weeks. Do this when it isn't.
 - [ ] Sender identity in `.env`: `FACTORY_SENDER_*`, `BUSINESS_ADDRESS`; SMTP if the server sends newsletters. 10 min
 - [ ] Keep `FACTORY_DRY_RUN=1` until `factory status` is green and one manual test post looks right, then set `0`.
 
+## Stage 9 · More brands, one at a time (after Money Made Simple is posting)
+
+Each brand repeats Stage 4 (accounts, brand kit, first posts) and the relevant parts of 3, 5 and 7. Do one
+brand properly before starting the next. Order below is by how soon each can earn.
+
+### 9a · Free web apps (PR #8, ≈ 1 h): search traffic with no audience needed
+- [ ] Netlify > Add new site > Import `cocosl`, base directory `apps` (one site), or one site each for
+      `apps/money-calculators`, `apps/scam-checker`, `apps/budget`. Forms > enable form detection. 15 min
+- [ ] Put real URLs in each `config.js` (`siteUrl`, `calculatorsUrl`) and run `node money-calculators/build.mjs`. 10 min
+- [ ] Budget app Pro ($3/month or $29 once): one Gumroad product with monthly and lifetime variants and
+      "Generate a unique license key" ticked; checkout links in `apps/budget/config.js`; `GUMROAD_PRODUCT_ID`
+      env var on Netlify (or a Stripe Payment Link + restricted `STRIPE_SECRET_KEY`). 20 min
+- [ ] Replace `REPLACE_ME` links (product URLs, approved affiliates) as they become real; they stay hidden
+      until then. Brokerage offers are flagged for compliance review. 5 min each
+- [ ] Optional: Chrome Web Store developer account ($5 one-time), then upload the scam extension zip using
+      `apps/scam-extension/STORE.md`. 30 min
+
+### 9b · Scam Decoded (PR #9, ≈ 2 h): $9 Family Scam-Proofing Kit
+- [ ] Check `@scamdecoded` is free on Instagram, TikTok and YouTube, then create the accounts. 30 min
+- [ ] Gumroad product for the kit from `launch/scam-decoded/product/LISTING.md`. This is the only scam kit. 15 min
+- [ ] Deploy `sites/scam-decoded/` on Netlify; set `product.buy_url`, `scam_checker.url` (the #8 checker),
+      and the email provider. Load its 7-email sequence. 40 min
+- [ ] Affiliates: Aura on Impact, 1Password on FlexOffers, NordVPN direct, once the account has posts. 20 min
+- [ ] Before posting: no real phone numbers or links on any slide; update figures flagged in its README.
+
+### 9c · Dinero Simple, Spanish (PR #11, ≈ 3 h plus a reviewer)
+- [ ] **Find a fluent Spanish reviewer first.** Nothing goes live until they've read it: posts are blocked
+      until `factory review-language <id> --by NAME`, and the site, emails and products are listed in
+      `launch/dinero-simple/REVIEW_CHECKLIST.md` and `REVIEW_CHECKLIST_MONTH_1.md`. Their time, not yours.
+- [ ] Accounts and brand kit from `brands/dinero-simple.yaml`. 30 min
+- [ ] Gumroad: El Presupuesto de 20 Minutos $12, El Kit para Recortar Gastos $5, Tu Fecha Sin Deudas $17. 30 min
+- [ ] **Discount codes `RECORTE5` and `FECHA5`**, each $5 off El Presupuesto de 20 Minutos (the guides
+      promise them). 5 min
+- [ ] Deploy `sites/dinero-simple/` (its own `netlify.toml`), set the email provider, load the 10 emails. 40 min
+- [ ] Spanish voice: set `PIPER_MODEL_ES` (or a Spanish Kokoro/OpenAI voice), never the English one. 10 min
+
+### 9d · 1099 Money, freelancers (PR #10, ≈ 2 h): $15 Quarterly Tax Tracker
+- [ ] Accounts from `brands/1099-money.yaml`; its posting plan starts **Nov 16**. 30 min
+- [ ] Gumroad product from `launch/1099-money/product/LISTING.md` ($15). 15 min
+- [ ] Deploy `apps/freelance-tax/` (calculator + Tax Calendar lead magnet), set `siteUrl`, product URL and the
+      7-email sequence. 40 min
+- [ ] Confirm the 2026 figures and 2027 dates against irs.gov, ssa.gov and healthcare.gov before posting. 30 min
+- [ ] Affiliates (FreshBooks, QuickBooks, Gusto, TaxAct, Lively on Impact/CJ; Novo on PartnerStack). 20 min
+
 ## Every week after that
 
 - Monday: `factory report`, do its "Next actions". 20 min
@@ -186,23 +236,23 @@ Manual posting is fine for the first weeks. Do this when it isn't.
 
 ## PR merge order
 
-Checked 2026-11-07 against `main` after the round-2 commits (welcome sequences, comment inbox, site export,
-Tiny Histories). In this order, #1, #3, #2, #4 and this PR merge cleanly and all tests pass.
-**#5 and #6 now have one small conflict each with `main`** and need a rebase before they can merge:
+Checked 2026-11-07 against `main` at `25195c9` by merging every open PR in this order in a scratch copy.
+Everything that merged passes the full test suite.
 
-- #5: `src/contentfactory/cli.py`, the list of command modules (keep both: `community.cli`, `site` and `pack`).
-- #6: `brands/money-made-simple.yaml`, the `products:` list (keep #6's six products, plus `main`'s `slug:` field).
+| # | PR | Status now | Why here |
+|---|---|---|---|
+| 1 | **#1** Research | ✅ merges cleanly | docs only |
+| 2 | **#3** Financial model | ✅ merges cleanly | docs only |
+| 3 | **#2** Scouting, Kokoro voice, Trial Reels | ✅ merges cleanly | voice code that #11 builds on |
+| 4 | **#4** Website, lead magnet, emails | ✅ merges cleanly | #6, #9 and #11 reuse its site |
+| 5 | **#5** Months 1–3, `factory pack`, channels | ✅ merges cleanly | #10 is stacked on it |
+| 6 | **#6** Product line | ⚠️ conflict with `main` | `brands/money-made-simple.yaml` products list: keep #6's six (main's ladder is being archived) |
+| 7 | **#8** Web apps | ✅ merges cleanly | the #9 site links to its scam checker |
+| 8 | **#9** Scam Decoded | ⚠️ conflict with #5 | `README.md` only; merges cleanly onto `main` alone |
+| 9 | **#11** Dinero Simple | ⚠️ conflict with #2 | `src/contentfactory/media/tts.py` (both add voice options); includes #4's commits, so #4 first |
+| 10 | **#10** 1099 Money | ✅ merges cleanly | needs #5; GitHub retargets it to `main` once #5 merges |
+| 11 | **#7** This checklist | ✅ merges cleanly | docs only; any time |
 
-The threads that opened them are being asked to fix this; this table gets updated when they're green.
-
-| # | Merge | Why here |
-|---|---|---|
-| 1 | **#1** Research: competitors, affiliates, hooks, next niches | docs only (`research/`), no risk |
-| 2 | **#3** Financial model | docs only (`docs/FINANCIAL_MODEL.md`) |
-| 3 | **#2** Scouting, Kokoro voice, Instagram Trial Reels | code; touches voice and the IG publisher, nothing the later PRs touch |
-| 4 | **#4** Website, lead magnet, 10-email funnel | adds `site/` and `netlify.toml`; must land before #6 |
-| 5 | **#5** Month 1 pack and `factory pack` | after its rebase; edits `README.md` like #4, which Git merges cleanly |
-| 6 | **#6** Product line | after its rebase; adds product pages under `site/content/products/`, which need #4's site |
-| 7 | **#7** This go-live checklist | docs only; any time |
-
+The three ⚠️ PRs need their threads to merge the newer code in before you merge them. If you're merging
+tonight, merge every ✅ PR in order and skip the ⚠️ ones; GitHub will show them green once fixed.
 If a new PR lands, merge it after these unless its description says otherwise.
