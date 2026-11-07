@@ -34,6 +34,11 @@
       <ul style="margin:4px 0 0 18px">{% for i in media_checks %}<li>{{ i.platform }}: {{ i.message }}{{ '' if i.level == 'block' else ' (warning)' }}</li>{% endfor %}</ul>
     </div>
     {% endif %}
+    {% if post.script and (post.script.related_video or post.script.playlist) %}
+    <div class="banner banner-info mt"><strong>In YouTube Studio:</strong>
+      {% if post.script.related_video %}set the related video to “{{ post.script.related_video }}”.{% endif %}
+      {% if post.script.playlist %}Add to playlist “{{ post.script.playlist }}”.{% endif %}</div>
+    {% endif %}
     {% if assets.thumbnail_variants and assets.thumbnail_variants|length > 1 %}
     <h3 class="mt">Thumbnail</h3>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px">

@@ -163,6 +163,21 @@ class PlatformAccount(BaseModel):
     board: str = ""  # Pinterest board the pin goes on
 
 
+class PlaylistPlan(BaseModel):
+    title: str  # lead with the search phrase, e.g. "Budgeting for beginners: start here"
+    description: str = ""
+    pillars: list[str] = Field(default_factory=list)  # posts in these pillars go here
+    keywords: list[str] = Field(default_factory=list)  # ...or whose title contains one of these
+
+
+class YouTubePlan(BaseModel):
+    """Set by hand in Studio (the Data API has no end-screen or related-video endpoint)."""
+    playlists: list[PlaylistPlan] = Field(default_factory=list)  # empty = one per pillar
+    start_here: str = "Start here"  # a playlist of the 3-5 best videos, featured on the channel page
+    end_screen: list[str] = Field(default_factory=lambda: [
+        "Left: the next video in this series (specific video)", "Right: Best for viewer", "Subscribe button"])
+
+
 class BrandProfile(BaseModel):
     slug: str
     name: str
@@ -182,6 +197,7 @@ class BrandProfile(BaseModel):
     voice: VoiceStyle = Field(default_factory=VoiceStyle)
     cadence: Cadence = Field(default_factory=Cadence)
     accounts: list[PlatformAccount] = Field(default_factory=list)
+    youtube: YouTubePlan = Field(default_factory=YouTubePlan)
     affiliates: list[AffiliateOffer] = Field(default_factory=list)
     products: list[dict] = Field(default_factory=list)  # {name, url, price}
     # Compliance switches. The defaults are the safe ones; flipping them is on you.

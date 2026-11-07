@@ -68,7 +68,9 @@ def test_render_video(media_env, tmp_path, fmt, size):
     assert (info["width"], info["height"]) == size
     assert set(info["streams"]) == {"video", "audio"}
     # 3 lines + CTA at 160 wpm, each beat >= 1.5s plus gaps
-    assert 8 < info["duration"] < 25
+    slate = assets.get("end_slate_seconds") or 0
+    assert slate == (20 if fmt == "long" else 0)  # long videos close on a slate for the Studio end screen
+    assert 8 < info["duration"] - slate < 25
     assert abs(info["duration"] - assets["duration"]) < 0.5
     assert len(assets["images"]) == 3 and assets["slides"] == []
     assert probe(settings.output_dir / assets["thumbnail"])["width"] == 1280
@@ -79,6 +81,11 @@ def test_render_video(media_env, tmp_path, fmt, size):
                    for v in variants)
     srt = (settings.output_dir / assets["captions_srt"]).read_text()
     assert "Follow for one" in srt and "-->" in srt
+    if slate:  # no captions run into the end slate
+        import re as _re
+        ends = [sum(float(x) * m for x, m in zip(_re.split("[:,]", t)[:3], (3600, 60, 1))) for t in
+                _re.findall(r"--> (\d+:\d+:\d+),", srt)]
+        assert max(ends) <= info["duration"] - slate + 1
     video_prov = next(p for p in assets["provenance"] if p["path"] == assets["video"])
     assert video_prov["tool"] == "ffmpeg"
     assert not (settings.output_dir / brand.slug / "post-1" / "_work").exists()
