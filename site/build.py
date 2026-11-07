@@ -250,7 +250,7 @@ def extract_faq(md: str) -> list[tuple[str, str]]:
     if not m:
         return []
     pairs = re.findall(r"^### (.+?)\n(.*?)(?=^### |\Z)", m.group(1), re.S | re.M)
-    clean = lambda s: re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", re.sub(r"\*\*?|`", "", s)).strip()
+    clean = lambda s: re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", re.sub(r"\*\*?|`|\{\{[^}]*\}\}", "", s)).strip()
     return [(clean(q), " ".join(clean(a).split())) for q, a in pairs]
 
 
@@ -268,8 +268,10 @@ def load_dir(name: str) -> list[dict]:
 
 # ----------------------------------------------------------------- templates
 def email_form(source: str, button: str = "Send me the free reset", compact: bool = False,
-               thanks_path: str = "/free/thanks/") -> str:
+               thanks_path: str = "/free/thanks/", field_id: str = "") -> str:
+    """field_id: a distinct id for a second form with the same source on one page (ids must be unique)."""
     e = CFG["email"]
+    fid = field_id or f"em-{source}"
     provider = e.get("provider", "netlify")
     thanks = u(thanks_path)
     field = e.get("email_field") or {
@@ -298,8 +300,8 @@ def email_form(source: str, button: str = "Send me the free reset", compact: boo
     return f"""<form class="signup-form{' compact' if compact else ''}" method="post" action="{esc(action)}"{attrs} data-thanks="{thanks}">
   {extra}
   <label class="hp" aria-hidden="true">Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
-  <label class="sr" for="em-{esc(source)}">Email address</label>
-  <input id="em-{esc(source)}" type="email" name="{esc(field)}" required autocomplete="email" inputmode="email" placeholder="you@example.com">
+  <label class="sr" for="{esc(fid)}">Email address</label>
+  <input id="{esc(fid)}" type="email" name="{esc(field)}" required autocomplete="email" inputmode="email" placeholder="you@example.com">
   <button type="submit">{ab("magnet", button, CFG.get("ab_test", {}).get("magnet_button", {}).get("b", button)) if button == CFG.get("ab_test", {}).get("magnet_button", {}).get("a") else esc(button)}</button>
 </form>
 <p class="form-note">{note} <a href="{u('/privacy/')}">Privacy</a>.</p>"""
@@ -499,8 +501,242 @@ def shortcode_factory(products: dict, source: str):
             return money_shop_summary()
         if name == "money:partners":
             return money_partners()
+        if name.startswith("embed:"):
+            return embed_block(name.split(":", 1)[1])
+        if name.startswith("template:"):
+            it = shop_items().get(name.split(":", 1)[1])
+            return template_card(it) if it else ""
+        if name.startswith("start:"):
+            return start_hub(name.split(":", 1)[1])
+        if name.startswith("digest:"):
+            return digest_list(name.split(":", 1)[1])
         return ""
     return sc
+
+
+LIVE_POSTS: list[dict] = []  # published articles, newest first (set by build())
+
+
+def load_placements() -> dict:
+    f = CONTENT / "data" / "placements.json"
+    return json.loads(f.read_text()) if f.exists() else {"articles": {}, "goals": []}
+
+
+def shop_items() -> dict:
+    f = CONTENT / "shop.json"
+    return {i["slug"]: i for i in json.loads(f.read_text())["items"]} if f.exists() else {}
+
+
+def template_card(it: dict) -> str:
+    """A 'related template' card for articles: one of our own products, with its store buttons
+    (placeholder store links until shop.json / site.json > stores have the real ones)."""
+    img = (f'<img src="{u(it["image"])}" alt="" width="120" height="120" loading="lazy" decoding="async">'
+           if it.get("image") else "")
+    return f"""<aside class="template-card{' has-img' if img else ''}" aria-label="Template: {esc(it['name'])}">{img}<div>
+  <p class="tc-label">Our template · {"Free" if not it["price"] else f"${it['price']:g}"}</p>
+  <p class="tc-name"><a href="{u(product_path(it))}">{esc(it["name"])}</a></p>
+  <p class="tc-blurb">{esc(it.get("blurb", ""))}</p>
+  <p class="shop-buy">{shop_buttons(it)}</p></div></aside>"""
+
+
+PILLAR_GOAL = {"credit-and-debt": "debt", "budgeting": "saving", "money-tools": "saving", "investing": "first-job"}
+
+
+def article_goal(slug: str, pillar: str = "") -> dict | None:
+    """The Start here goal an article belongs to: placements.json > article_goals, else the first goal in
+    start.json that lists it, else one picked by pillar. Used for the article's /shop/<goal>/ link."""
+    pl = load_placements()
+    goals = {g["id"]: g for g in pl["goals"]}
+    gid = pl.get("article_goals", {}).get(slug)
+    if not gid:
+        gid = next((g["id"] for g in load_start()["goals"] if slug in g["articles"]), None)
+    return goals.get(gid or PILLAR_GOAL.get(pillar, "saving"))
+
+
+def templates_section(slug: str, prod: dict | None, pillar: str = "") -> str:
+    """End-of-article product block: the article's other related templates (or the default product), and a
+    link to its goal's shop page so every article links one /shop/<goal>/ page."""
+    items = shop_items()
+    picks = [items[s] for s in load_placements()["articles"].get(slug, [])[1:] if s in items]
+    g = article_goal(slug, pillar)
+    goal_link = (f'<p class="goal-shop"><a href="{u(f"/shop/{g['id']}/")}">{esc(g["title"])}</a>'
+                 f' · <a href="{u("/shop/")}">the whole shop</a></p>') if g else ""
+    if picks:
+        return ('<section class="next templates"><h2>More templates for this</h2>' + "".join(template_card(i) for i in picks)
+                + (goal_link or f'<p><a href="{u("/shop/")}">See every template in the shop</a></p>') + '</section>')
+    if prod or goal_link:
+        return f'<section class="next"><h2>Template for this</h2>{product_card(prod) if prod else ""}{goal_link}</section>'
+    return ""
+
+
+STAGES = ["two-brand", "brand-3", "all"]
+
+
+def visible_brands() -> list[dict]:
+    """site.json > sister_brands that the current launch_stage allows (two-brand launch: Scam Decoded only)."""
+    stage = CFG.get("launch_stage", "two-brand")
+    cut = STAGES.index(stage) if stage in STAGES else 0
+    return [b for b in CFG.get("sister_brands", [])
+            if b.get("show") and b.get("url") and STAGES.index(b.get("stage", "all")) <= cut]
+
+
+def plan_optin(tool: str, hidden: bool = False) -> str:
+    """'Email me this plan' right under a calculator result (scouting's email memo: offer the visitor's own
+    result, never gate it). Same copy as the mms line of apps/shared/optin.js (PR #8); that component skips
+    embedded iframes, so the host page carries the box. hidden=True: shown by the page's script once there's a result."""
+    o = CFG.get("plan_optin", {})
+    if not o.get("enabled"):
+        return ""
+    return (f'<div class="plan-optin" data-no-optin id="plan-{esc(tool)}"{" hidden" if hidden else ""}>'
+            f'<p class="plan-title">{esc(o["title"])}</p><p>{esc(o["pitch"])}</p>'
+            + email_form(f"plan-{tool}", o.get("button", "Email me"), compact=True).replace(
+                '<input type="hidden"', f'<input type="hidden" name="plan_tool" value="{esc(tool)}"><input type="hidden" name="plan" value=""><input type="hidden"', 1)
+            + '</div>')
+
+
+def load_embeds() -> dict:
+    f = CONTENT / "data" / "embeds.json"
+    return json.loads(f.read_text()) if f.exists() else {"tools": {}, "articles": {}}
+
+
+def embed_block(key: str) -> str:
+    """An apps-site tool inside an article: a live calculator (the apps site's embed.js makes a self-sizing
+    iframe) or a link card. Nothing while site.json > apps_url is empty."""
+    t = load_embeds()["tools"].get(key)
+    base = apps_base()
+    if not t or not base:
+        return ""
+    full = esc(base + t["path"])
+    head = (f'<p class="tc-label">Free tool</p><p class="tc-name"><a href="{full}">{esc(t["title"])}</a></p>'
+            f'<p class="tc-blurb">{esc(t["blurb"])}</p>')
+    if t["kind"] == "calc":
+        return (f'<div class="tool-embed">{head}<div class="mms-calc" data-calc="{esc(t["calc"])}" data-title="{esc(t["title"])}"></div>'
+                f'<script src="{esc(base)}/money-calculators/embed.js" async></script>'
+                f'<p class="tool-open"><a href="{full}">Open the full calculator</a></p>{plan_optin(key)}</div>')
+    return (f'<div class="tool-embed">{head}<p class="shop-buy"><a class="btn" href="{full}">'
+            f'{esc(t.get("button", "Open the tool"))}</a></p></div>')
+
+
+def with_inline_template(body: str, slug: str) -> str:
+    """Put the article's first related template right after its worked example section (or before
+    'Common questions' if there's no worked example), as {{template:<slug>}}."""
+    picks = load_placements()["articles"].get(slug, [])
+    tool = load_embeds()["articles"].get(slug)
+    if tool and f"{{{{embed:{tool}}}}}" in body:
+        tool = None  # placed by hand
+    if not picks and not tool:
+        return body
+    code = (f"\n{{{{embed:{tool}}}}}\n" if tool else "") + (f"\n{{{{template:{picks[0]}}}}}\n" if picks else "") + "\n"
+    m = re.search(r"^## A worked example.*$", body, re.M)
+    if m:
+        nxt = re.search(r"^## ", body[m.end():], re.M)
+        if nxt:
+            i = m.end() + nxt.start()
+            return body[:i] + code + body[i:]
+    i = body.find("## Common questions")
+    return body[:i] + code + body[i:] if i >= 0 else body
+LIVE_COMPS: list[dict] = []  # published comparison pages, newest first (set by build())
+
+
+def digest_picks(meta: dict) -> dict:
+    """What the "best of" digest (content/digest.md) shows at this build: pinned articles first, then the newest
+    published ones, up to 'count'; plus the newest published comparison page."""
+    by_slug = {p["slug"]: p for p in LIVE_POSTS}
+    pinned = [by_slug[s] for s in meta.get("pinned", []) if s in by_slug]
+    rest = [p for p in LIVE_POSTS if p not in pinned]
+    arts = (pinned + rest)[:int(meta.get("count", 5))]
+    return {"articles": arts, "compare": LIVE_COMPS[:1]}
+
+
+DIGEST_META: dict = {}
+
+
+def digest_list(which: str) -> str:
+    picks = digest_picks(DIGEST_META)
+    if which == "latest":
+        return "<ol>" + "".join(
+            f'<li><p><a href="{u(f"/blog/{p["slug"]}/")}"><strong>{esc(p["title"])}</strong></a><br>'
+            f'{esc(p["description"])}</p></li>' for p in picks["articles"]) + "</ol>"
+    if which == "compare":
+        return "".join(f'<p><a href="{u(f"/compare/{c["slug"]}/")}"><strong>{esc(c["title"])}</strong></a><br>'
+                       f'{esc(c["description"])}</p>' for c in picks["compare"])
+    raise SystemExit(f"Unknown digest shortcode 'digest:{which}' (use digest:latest or digest:compare).")
+
+
+def digest_text(body: str) -> str:
+    """Plain-text version of the digest: shortcodes become numbered lists with full URLs."""
+    picks = digest_picks(DIGEST_META)
+    lines = []
+    for i, p in enumerate(picks["articles"], 1):
+        lines.append(f"{i}. {p['title']}\n   {p['description']}\n   " + absu("/blog/" + p["slug"] + "/"))
+    latest = "\n".join(lines)
+    comp = "\n".join(f"{c['title']}\n{c['description']}\n" + absu("/compare/" + c["slug"] + "/")
+                     for c in picks["compare"])
+    text = body.replace("{{digest:latest}}", latest).replace("{{digest:compare}}", comp)
+    text = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", lambda m: f"{m.group(1)} ({absu(m.group(2))})", text)
+    return re.sub(r"\*\*(.+?)\*\*", r"\1", text).strip() + "\n"
+
+
+def build_digest() -> None:
+    """content/digest.md -> /emails/digest/ (noindex preview), email.html, email.txt and digest.json, filled with
+    the newest published articles at build time. Paste into your email provider when you send a digest."""
+    f = CONTENT / "digest.md"
+    if not f.exists():
+        return
+    meta, body = parse_front_matter(f.read_text())
+    DIGEST_META.clear()
+    DIGEST_META.update(meta)
+    month = datetime.strptime(os.environ.get("BUILD_DATE") or date.today().isoformat(), "%Y-%m-%d").strftime("%B %Y")
+    e = {"subject": meta["subject"].replace("{month}", month), "preheader": meta.get("preheader", "").replace("{month}", month)}
+    sc = shortcode_factory({}, "digest")
+    preview_html, _ = markdown(body, sc)
+    write("/emails/digest/", layout(title=f"Digest: {e['subject']}", path="/emails/digest/", noindex=True,
+                                    description="Email digest preview", body=f"""<article class="wrap article email-preview">
+  <p class="crumbs"><a href="{u('/emails/')}">Emails</a> · best-of digest, filled at build time</p>
+  <p class="meta"><strong>Subject:</strong> {esc(e['subject'])}<br><strong>Preview text:</strong> {esc(e['preheader'])}</p>
+  <div class="email-body prose">{preview_html}</div>
+</article>"""))
+    CFG["_absolute_links"] = True
+    html, _ = markdown(body, sc)
+    CFG["_absolute_links"] = False
+    text = digest_text(body)
+    picks = digest_picks(meta)
+    (OUT / "emails" / "digest" / "email.html").write_text(email_html(e, html))
+    (OUT / "emails" / "digest" / "email.txt").write_text(text)
+    (OUT / "emails" / "digest" / "digest.json").write_text(json.dumps({
+        "subject": e["subject"], "preheader": e["preheader"], "html": html, "text": text,
+        "articles": [absu(f"/blog/{p['slug']}/") for p in picks["articles"]],
+        "compare": [absu(f"/compare/{c['slug']}/") for c in picks["compare"]]}, indent=2, ensure_ascii=False))
+
+
+def load_start() -> dict:
+    f = CONTENT / "data" / "start.json"
+    return json.loads(f.read_text()) if f.exists() else {"goals": []}
+
+
+def start_hub(which: str) -> str:
+    """/start/ hub. {{start:goals}} = the goal picker (cards linking to each goal's section);
+    {{start:<goal id>}} = that goal's reading list: the first published articles from content/data/start.json,
+    so the hub fills in as scheduled articles go live, plus its tools and comparisons."""
+    goals = load_start()["goals"]
+    if which == "goals":
+        cards = "".join(
+            f'<li class="post goal"><p class="post-pillar">{esc(g["kicker"])}</p>'
+            f'<h2><a href="#{slug_id(g["heading"])}">{esc(g["label"])}</a></h2><p>{esc(g["blurb"])}</p></li>'
+            for g in goals)
+        return f'<ul class="posts grid goals" aria-label="Pick your goal">{cards}</ul>'
+    g = next((x for x in goals if x["id"] == which), None)
+    if not g:
+        raise SystemExit(f"Unknown Start here goal '{which}'. Add it to content/data/start.json.")
+    by_slug = {p["slug"]: p for p in LIVE_POSTS}
+    picks = [by_slug[s] for s in g["articles"] if s in by_slug][:int(g.get("show", 4))]
+    items = "".join(f'<li><a href="{u(f"/blog/{p["slug"]}/")}">{esc(p["title"])}</a></li>' for p in picks)
+    extras = [(t, h) for t, h in g.get("links", []) if h not in UNPUBLISHED][:3]
+    more = "".join(f'<li><a href="{u(h)}">{esc(t)}</a></li>' for t, h in extras)
+    shop = (f'<p class="start-shop"><a href="{u(f"/shop/{which}/")}">Templates for this goal</a></p>'
+            if any(x["id"] == which for x in load_placements()["goals"]) else "")
+    return (f'<div class="start-reading"><h3>Read next</h3><ul>{items}</ul>'
+            + (f'<h3>Tools and comparisons</h3><ul>{more}</ul>' if more else "") + shop + "</div>")
 
 
 def money_shop_summary() -> str:
@@ -559,6 +795,17 @@ def img_dims(image: str) -> str:
 def article_og(item: dict, section: str) -> dict:
     return {"article:published_time": item["date"], "article:modified_time": item.get("updated", item["date"]),
             "article:author": editor()["name"], "article:section": section}
+
+
+def search_verification_tags() -> str:
+    """Home-page meta tags that prove site ownership to Google Search Console and Bing Webmaster Tools
+    (site.json > search_verification: {"google": "<content value>", "bing": "<content value>"}; env
+    GOOGLE_SITE_VERIFICATION overrides google)."""
+    v = dict(CFG.get("search_verification", {}))
+    if os.environ.get("GOOGLE_SITE_VERIFICATION"):
+        v["google"] = os.environ["GOOGLE_SITE_VERIFICATION"]
+    names = {"google": "google-site-verification", "bing": "msvalidate.01"}
+    return "".join(f'<meta name="{names[k]}" content="{esc(val)}">\n' for k, val in v.items() if k in names and val)
 
 
 def auto_breadcrumbs(path: str, title: str, body: str, jsonld: list, noindex: bool) -> dict | None:
@@ -625,6 +872,7 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
 <meta name="twitter:description" content="{esc(description)}">
 <meta name="twitter:image" content="{esc(absu(image))}">
 <meta name="theme-color" content="#0b1d13">
+{search_verification_tags() if path == "/" else ""}
 <link rel="icon" type="image/png" href="{u('/img/favicon.png')}">
 <link rel="apple-touch-icon" href="{u('/img/apple-touch-icon.png')}">
 <link rel="alternate" type="application/rss+xml" title="{esc(CFG['name'])}" href="{u('/feed.xml')}">
@@ -719,6 +967,8 @@ def build() -> list[str]:
     if (CONTENT / "new-year.md").exists() and not new_year_live():
         UNPUBLISHED.add("/new-year/")
     posts = sorted((p for p in all_posts if live(p)), key=lambda p: (str(p["date"]), p.get("order", "")), reverse=True)
+    LIVE_POSTS[:] = posts
+    LIVE_COMPS[:] = sorted((c for c in all_comps if live(c)), key=lambda c: str(c["date"]), reverse=True)
     comps_by_slug = {c["slug"]: c for c in all_comps if live(c)}
     products_list = [p for p in load_dir("products") if p.get("status") != "draft"]
     products_list.sort(key=lambda p: int(p.get("order", 99)))
@@ -729,7 +979,8 @@ def build() -> list[str]:
     # ---- articles
     for p in posts:
         path = f"/blog/{p['slug']}/"
-        body_html, toc = markdown(p["body"], shortcode_factory(products, f"blog-{p['slug']}"))
+        body_html, toc = markdown(with_inline_template(p["body"], p["slug"]),
+                                  shortcode_factory(products, f"blog-{p['slug']}"))
         faq = extract_faq(p["body"])
         related, tool = related_for(p, posts)
         prod = products.get(p.get("product", "")) or (products_list[0] if products_list else None)
@@ -781,7 +1032,7 @@ def build() -> list[str]:
   {compare_box(p['slug'], comps_by_slug)}
   {magnet_box(f"blog-{p['slug']}-end")}
   {tool_box(tool, p['slug'])}
-  {f'<section class="next"><h2>Template for this</h2>{product_card(prod)}</section>' if prod else ''}
+  {templates_section(p['slug'], prod, p.get('pillar', ''))}
   <section class="next"><h2>Read next</h2><ul class="related">{rel_html}</ul></section>
 </article>"""
         write(path, layout(title=p.get("seo_title", p["title"]), description=p["description"], path=path,
@@ -899,12 +1150,16 @@ def build() -> list[str]:
         body_html, _ = markdown(p["body"], shortcode_factory(products, f"product-{p['slug']}"))
         faq = extract_faq(p["body"])
         if p.get("status") == "coming-soon":
-            buy = (f'<p class="buy-note">Not on sale yet. Join the free email and you\'ll hear the day it opens.</p>'
-                   f'{email_form(f"waitlist-{p["slug"]}", "Tell me when it opens")}')
+            note = '<p class="buy-note">Not on sale yet. Join the free email and you\'ll hear the day it opens.</p>'
+            buy = note + email_form(f"waitlist-{p['slug']}", "Tell me when it opens")
+            # the bottom form keeps the same source tag but needs its own field id
+            buy_bottom = note + email_form(f"waitlist-{p['slug']}", "Tell me when it opens",
+                                           field_id=f"em-waitlist-{p['slug']}-bottom")
         else:
             buy = (f'<a class="btn big plausible-event-name=Product+Click" href="{esc(p["buy_url"])}" rel="noopener" data-buy="{esc(p["slug"])}">'
                    f'{esc(p.get("buy_label", "Get instant access"))}</a>'
                    f'<p class="buy-note">{esc(p.get("guarantee", ""))}</p>')
+            buy_bottom = buy
         ld = [{"@context": "https://schema.org", "@type": "Product", "name": p["title"],
                "description": p["short"], "image": absu(p["image"]), "brand": {"@type": "Brand", "name": CFG["name"]},
                **({"offers": {"@type": "Offer", "price": p.get("sale_price") or p["price"], "priceCurrency": "USD",
@@ -929,7 +1184,7 @@ def build() -> list[str]:
   <div class="prose">
 {body_html}
   </div>
-  <div class="buy-again">{price_html(p)}{buy}</div>
+  <div class="buy-again">{price_html(p)}{buy_bottom}</div>
   <p class="disclaimer">{esc(CFG['disclaimer'])}</p>
 </article>"""
         write(path, layout(title=p.get("seo_title", p["title"]), description=p["short"], path=path, body=body,
@@ -957,12 +1212,18 @@ def build() -> list[str]:
     if shop_file.exists():
         build_shop(json.loads(shop_file.read_text())["items"])
         urls.append(("/shop/", date.today().isoformat()))
+        urls += build_shop_goals()
+        urls += build_product_pages()
 
     # ---- static pages
     for pg in pages:
         path = f"/{pg['slug']}/"
         body_html, _ = markdown(pg["body"], shortcode_factory(products, f"page-{pg['slug']}"))
-        write(path, layout(title=pg["title"], description=pg.get("description", pg["title"]), path=path,
+        faq = extract_faq(pg["body"])  # pages with a "## Common questions" section get FAQ rich results too
+        ld = [{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}] if faq else None
+        write(path, layout(title=pg.get("seo_title", pg["title"]), description=pg.get("description", pg["title"]), path=path,
+                           jsonld=ld,
                            body=f'<article class="wrap article"><h1>{esc(pg["title"])}</h1><div class="prose">{body_html}</div></article>'))
         urls.append((path, pg.get("updated", date.today().isoformat())))
 
@@ -1096,8 +1357,17 @@ def build() -> list[str]:
 </section>"""))
 
     # ---- link in bio
+    # The three links LAUNCH_WEEK.md (PR #5) puts in every bio, in order: the free reset (the form above),
+    # the 20-Minute Budget, and the high-yield savings comparison (it carries the affiliate disclosure).
+    lead = [p for p in products_list if p["slug"] == "the-20-minute-budget"]
+    lb_top = "".join(f'<a class="lb-link" href="{u(f"/products/{p["slug"]}/")}"><span>{esc(p["title"])}</span>{price_html(p)}</a>'
+                     for p in lead)
+    hysa = next((c for c in comps if c["slug"] == "best-high-yield-savings-accounts"), None)
+    if hysa:
+        lb_top += (f'<a class="lb-link" href="{u("/compare/best-high-yield-savings-accounts/")}"><span>Compare high-yield savings accounts</span>'
+                   '<small>affiliate links</small></a>')
     links = "".join(f'<a class="lb-link" href="{u(f"/products/{p["slug"]}/")}"><span>{esc(p["title"])}</span>{price_html(p)}</a>'
-                    for p in products_list)
+                    for p in products_list if p not in lead)
     links += '<h2 class="lb-h">Popular articles</h2>' + "".join(f'<a class="lb-link" href="{u(f"/blog/{p["slug"]}/")}"><span>{esc(p["title"])}</span></a>'
                      for p in posts[:4])
     aff = "".join(f'<a class="lb-link plausible-event-name=Affiliate+Click" href="{esc(a["url"])}" rel="sponsored noopener"><span>{esc(a["name"])}</span><small>affiliate</small></a>'
@@ -1109,6 +1379,7 @@ def build() -> list[str]:
   <h1>{esc(CFG['name'])}</h1>
   <p class="dek">{esc(CFG['tagline'])}</p>
   <div class="lb-signup"><h2>Free: {esc(lm['title'])}</h2><p>{esc(lm['short'])}</p>{email_form('link-in-bio', 'Send it', compact=True)}</div>
+  {lb_top}
   <a class="lb-link" href="{u('/quiz/')}"><span>What's your money personality? (1-minute quiz)</span></a>
   <a class="lb-link" href="{u('/start/')}"><span>New here? Start here</span></a>
   <h2 class="lb-h">Guides and templates</h2>{links}
@@ -1127,6 +1398,13 @@ def build() -> list[str]:
         compare_home = ('<section class="wrap"><h2 class="section-h">Compare before you sign up</h2><p class="chips">' +
                         "".join(f'<a class="chip" href="{u(f"/compare/{c["slug"]}/")}">{esc(c.get("short", c["title"].split(":")[0]))}</a>'
                                 for c in comps) + "</p></section>")
+    def brands_home() -> str:
+        bs = visible_brands()
+        if not bs:
+            return ""
+        cards = "".join(f'''<div class="brand-card"><p class="kicker">Also from our team</p><h3>{esc(b['name'])}</h3>
+<p class="brand-tag">{esc(b['tagline'])}</p><p>{esc(b['blurb'])}</p><p><a class="btn ghost" href="{esc(b['url'])}/">{esc(b['button'])}</a></p></div>''' for b in bs)
+        return f'<section class="wrap brands"><h2 class="section-h">Our other site{"s" if len(bs) > 1 else ""}</h2><div class="brand-cards">{cards}</div></section>'
     _ab = CFG.get("ab_test", {}).get("hero", {})
     hero_a = _ab.get("a", {"headline": "Feel behind on money? Start with one move this week.",
                            "offer": "seven 15-minute tasks that get your money organised in a week."})
@@ -1164,11 +1442,12 @@ def build() -> list[str]:
     <div class="product-grid">{''.join(product_card(p) for p in products_list)}</div>
   </div>
 </section>
+{brands_home()}
 <section class="wrap promise">
   <h2 class="section-h">How we make this</h2>
   <div class="three">
     <div><h3>Specific, not hype</h3><p>Every article and email is one idea you can use this week, with the maths shown. No stock picks, no crypto pumps, no income claims.</p></div>
-    <div><h3>Checked by a human</h3><p>We use AI tools for visuals and drafts. A human picks every topic, checks every number against primary sources (IRS, CFPB, FDIC, Investor.gov) and approves every post.</p></div>
+    <div><h3>Checked by a person</h3><p>Drafted with AI help, fact-checked by a person. A person picks every topic, checks every number against primary sources (IRS, CFPB, FDIC, Investor.gov) and approves every post.</p></div>
     <div><h3>Honest about money</h3><p>Some links are affiliate links and they're always labelled. Products have a no-hoops refund. Testimonials only ever come from real buyers, quoted word for word.</p></div>
   </div>
 </section>"""))
@@ -1209,6 +1488,8 @@ def build() -> list[str]:
     write("/emails/", layout(title="Email sequence preview", path="/emails/", noindex=True, description="Preview",
                              body=f'<section class="wrap"><h1>Welcome and nurture sequence</h1><p class="dek">Preview only (not linked, not indexed). Copy these into your email provider; see site/README.md.</p><div class="table" tabindex="0"><table><thead><tr><th>#</th><th>Send</th><th>Subject</th><th>Job</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div></section>'))
 
+    build_digest()
+
     # ---- data-driven pages: budget by salary + cost of living by city (pseo.py)
     import pseo
     extra_redirects: list[tuple[str, str]] = []  # (old path, new path) from merged data pages
@@ -1219,13 +1500,14 @@ def build() -> list[str]:
     _shop = {i["slug"]: i for i in json.loads((CONTENT / "shop.json").read_text())["items"]} \
         if (CONTENT / "shop.json").exists() else {}
     urls += pseo.build_debt({"CFG": CFG, "markdown": markdown, "author_ld": author_ld, "apps_tools": apps_tools_html, "redirects": extra_redirects, "u": u, "absu": absu, "layout": layout, "write": write, "org_ld": org_ld,
-                             "magnet_box": magnet_box, "product_card": product_card, "product": None, "shop": _shop,
+                             "magnet_box": magnet_box, "product_card": product_card, "product": None, "shop": _shop, "plan_optin": plan_optin,
                              "today": os.environ.get("BUILD_DATE") or date.today().isoformat(),
                              "as_of": fmt_date(os.environ.get("BUILD_DATE") or date.today().isoformat())})
 
     urls += build_ask(_shop, pseo)
     urls += build_holiday(_shop)
     urls += build_new_year()
+    urls += build_money_basics()
     urls += build_tools()
 
     # ---- newsletter archive: content/newsletter/*.md, one page per issue that has gone out.
@@ -1339,11 +1621,20 @@ def build() -> list[str]:
     (OUT / "_headers").write_text("".join(f"{u(p)}\n  Cache-Control: {v}\n" for p, v in [
         ("/img/*", week), ("/downloads/*", week), ("/*.css", hour), ("/*.js", hour)]))
 
+    # ---- self-contained B2B pages (B2B thread, PR #13): static/business/<slug>/index.html are copied as-is with
+    # static/; static/business/manifest.json ([{slug, title, description, updated?}]) puts them in the sitemap.
+    biz = STATIC / "business" / "manifest.json"
+    if biz.exists():
+        for b in json.loads(biz.read_text()):
+            page = OUT / "business" / b["slug"] / "index.html"
+            if page.exists() and "noindex" not in page.read_text():
+                urls.append((f"/business/{b['slug']}/", str(b.get("updated", date.today().isoformat()))))
+
     # ---- sitemap, robots, feed
     sm = "".join(f"<url><loc>{esc(absu(p))}</loc><lastmod>{d}</lastmod></url>" for p, d in urls)
     (OUT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')
-    (OUT / "robots.txt").write_text(f"User-agent: *\nDisallow: {u('/emails/')}\nDisallow: {u('/free/thanks/')}\nDisallow: {u('/holiday/thanks/')}\nDisallow: {u('/new-year/thanks/')}\n"
+    (OUT / "robots.txt").write_text(f"User-agent: *\nDisallow: {u('/emails/')}\nDisallow: {u('/free/thanks/')}\nDisallow: {u('/holiday/thanks/')}\nDisallow: {u('/new-year/thanks/')}\nDisallow: {u('/money-basics/thanks/')}\n"
                                     f"Sitemap: {absu('/sitemap.xml')}\n")
     items = "".join(f"""<item><title>{esc(p['title'])}</title><link>{absu(f"/blog/{p['slug']}/")}</link>
 <guid>{absu(f"/blog/{p['slug']}/")}</guid><pubDate>{datetime.strptime(p['date'], '%Y-%m-%d').replace(tzinfo=timezone.utc).strftime('%a, %d %b %Y 00:00:00 +0000')}</pubDate>
@@ -1375,7 +1666,7 @@ def build_ask(shop: dict, pseo) -> list[tuple[str, str]]:
     def shop_link(m):
         if m.group(1) not in shop:
             raise SystemExit(f"content/ask.md: unknown shop item '{m.group(1)}'")
-        return f"(/shop/#item-{m.group(1)})"
+        return f"({product_path(shop[m.group(1)])})"
     md = re.sub(r"\(shop:([a-z0-9-]+)\)", shop_link, md)
     md = re.sub(r"\(calc:([a-z-]+)\)", lambda m: f"({calc}/{m.group(1)}/)", md)
 
@@ -1490,6 +1781,66 @@ def build_new_year() -> list[tuple[str, str]]:
     return [("/new-year/", updated)]
 
 
+def build_money_basics() -> list[tuple[str, str]]:
+    """/money-basics/: landing page for the free "Money Basics in 7 days" email course (content/money-basics.md),
+    built from the best-of digest's format. Front matter `sender_form` holds the embed HTML from Sender; while it's
+    REPLACE_ME (or empty) the page uses the normal signup form with source=course_source. Thanks: /money-basics/thanks/."""
+    src = CONTENT / "money-basics.md"
+    if not src.exists():
+        return []
+    meta, md = parse_front_matter(src.read_text())
+    md = re.sub(r"<!--.*?-->", "", md, flags=re.S)
+    faq = extract_faq(md)
+    days = re.findall(r"^### (Day \d+): (.+)$", md, re.M)
+    body_html, _toc = markdown(md)
+    source = meta.get("course_source", "money-basics-7-days")
+    sender = str(meta.get("sender_form", "") or "").strip()
+    if sender and "REPLACE_ME" not in sender:
+        form = f'<div class="sender-form">{sender}</div>'
+    else:
+        form = ('<!-- Sender form placeholder: paste Sender\'s embed into content/money-basics.md > sender_form -->'
+                + email_form(source, button="Start the free course", thanks_path="/money-basics/thanks/"))
+    day_list = "".join(f"<li><strong>{esc(d)}:</strong> {esc(t)}</li>" for d, t in days)
+    optin = f"""<div class="magnet no-img" id="signup">
+  <div>
+    <p class="kicker">Free 7-day email course</p>
+    <h2 class="magnet-title">Start Money Basics in 7 days</h2>
+    <p>Seven emails, one a day from the day you sign up. One idea with the numbers shown, one task under 20 minutes.</p>
+    <ol class="course-days">{day_list}</ol>
+    {form}
+  </div>
+</div>"""
+    updated = str(meta.get("updated", date.today().isoformat()))
+    ld = [{"@context": "https://schema.org", "@type": "Course", "name": meta["title"],
+           "description": meta["description"], "provider": org_ld(), "isAccessibleForFree": True,
+           "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "online", "courseWorkload": "PT2H20M"},
+           "offers": {"@type": "Offer", "price": 0, "priceCurrency": "USD", "category": "Free"}},
+          {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+              {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}]
+    body = f"""<article class="wrap article money-basics">
+  <p class="crumbs"><a href="{u('/')}">Home</a> / <span>Money Basics in 7 days</span></p>
+  <h1>{esc(meta['title'])}</h1>
+  <p class="dek">{esc(meta['description'])}</p>
+  <p class="meta">Updated {fmt_date(updated)} · {byline()}</p>
+  {optin}
+  <div class="prose">
+{body_html}
+  </div>
+  <p class="disclaimer">{esc(CFG['disclaimer'])}</p>
+</article>"""
+    write("/money-basics/", layout(title=meta.get("seo_title", meta["title"]), description=meta["description"],
+                                   path="/money-basics/", body=body, og_type="article", jsonld=ld))
+    write("/money-basics/thanks/", layout(
+        title="You're in: Money Basics in 7 days", path="/money-basics/thanks/", noindex=True,
+        description="You're signed up.", body=f"""<section class="wrap landing thanks">
+  <h1>You're in.</h1>
+  <p class="dek">Day 1 is on its way. If you don't see it in a few minutes, check your promotions or spam folder, and confirm your email if we asked you to.</p>
+  <p>Before Day 1, find one recent payslip: the first task starts with it.</p>
+  <p><a href="{u('/money-basics/')}">Back to the course</a> · <a href="{u('/start/')}">Start here by goal</a></p>
+</section>"""))
+    return [("/money-basics/", updated)]
+
+
 def build_tools() -> list[tuple[str, str]]:
     """/tools/: every free tool. Site tools (related.json > tools) first, then the apps site's tools by group
     (apps.json, shown only when apps_url is set)."""
@@ -1500,7 +1851,15 @@ def build_tools() -> list[tuple[str, str]]:
     groups: dict[str, list[dict]] = {}
     for t in apps:
         groups.setdefault(t["group"], []).append(t)
-    apps_html = "".join(f'<h2>{esc(g)}</h2><ul class="tool-list">{"".join(apps_li(t) for t in ts)}</ul>'
+    upcoming = []
+    if apps and (CONTENT / "data" / "apps.json").exists():
+        upcoming = json.loads((CONTENT / "data" / "apps.json").read_text()).get("upcoming", [])
+    soon: dict[str, list[dict]] = {}
+    for t in upcoming:
+        soon.setdefault(t["group"], []).append(t)
+        groups.setdefault(t["group"], [])
+    soon_li = lambda t: f'<li class="soon"><strong>{esc(t["title"])}</strong> (coming soon): {esc(t["blurb"].replace(" Coming soon.", ""))}</li>'
+    apps_html = "".join(f'<h2>{esc(g)}</h2><ul class="tool-list">{"".join(apps_li(t) for t in ts)}{"".join(soon_li(t) for t in soon.get(g, []))}</ul>'
                         for g, ts in groups.items())
     intro_apps = (f'<p>The calculators and trackers below run on our tools site, '
                   f'<a href="{esc(apps_base())}/">{esc(urlparse(apps_base()).netloc)}</a>. What you type stays in '
@@ -1511,8 +1870,8 @@ def build_tools() -> list[tuple[str, str]]:
                                for i, (n, url) in enumerate(items)]}, org_ld()]
     body = f"""<article class="wrap article tools-page">
   <p class="crumbs"><a href="{u('/')}">Home</a> / <span>Free tools</span></p>
-  <h1>Free money tools</h1>
-  <p class="dek">Calculators, planners and checklists for budgets, debt, saving and taxes. All free.</p>
+  <h1>{esc(CFG['name'])} tools</h1>
+  <p class="dek">Every free calculator, planner, tracker and checklist we make, for budgets, bills, debt, saving, taxes, freelance income and scam safety. No sign-up.</p>
   <div class="prose">
   <h2>On this site</h2>
   <ul class="tool-list">{site_li}
@@ -1565,7 +1924,7 @@ def build_holiday(shop: dict) -> list[tuple[str, str]]:
         it = shop.get(slug)
         if it:
             price = "free" if not it["price"] else f"${it['price']:g}"
-            tools.append(f'<li><a href="{u(f"/shop/#item-{slug}")}">{esc(it["name"])}</a> ({price}): '
+            tools.append(f'<li><a href="{u(product_path(it))}">{esc(it["name"])}</a> ({price}): '
                          f'{esc(it.get("blurb", ""))}</li>')
     tools_html = (f'<section class="next"><h2>Tools and printables for the season</h2><ul class="related">{"".join(tools)}</ul></section>'
                   if tools else "")
@@ -1680,7 +2039,7 @@ def shop_card(it: dict, image: bool = True, eager: bool = False) -> str:
     img = (f'<img src="{u(it["image"])}" alt="{esc(it["name"])} cover" width="360" height="360" {load}>'
            if image and it.get("image") else "")
     return f"""<div class="shop-card{' has-img' if img else ''}" id="item-{esc(it['slug'])}">{img}<div class="shop-body">
-  <h3>{esc(it["name"])}</h3><p>{esc(it.get("blurb", ""))}</p>{shop_price(it)}
+  <h3><a href="{u(product_path(it))}">{esc(it["name"])}</a></h3><p>{esc(it.get("blurb", ""))}</p>{shop_price(it)}
   <p class="shop-buy">{shop_buttons(it)}</p></div></div>"""
 
 
@@ -1707,6 +2066,7 @@ def build_shop(items: list[dict]) -> None:
     body = f"""<section class="wrap shop">
   <h1>Shop</h1>
   <p class="dek">{count} money tools from {esc(CFG['name'])}: guide-and-spreadsheet kits, Google Sheets and Notion templates, and printables. One payment, no subscription, files you keep. Kits and templates are sold through Gumroad, printables through our Etsy shop.</p>
+  <p class="chips">By goal: {"".join(f'<a class="chip" href="{u(f"/shop/{g['id']}/")}">{esc(g["h1"].split(":")[0])}</a>' for g in load_placements()["goals"])}</p>
   <p class="chips"><a class="chip" href="#bundles">Bundles</a><a class="chip" href="#kits">Guide kits</a><a class="chip" href="#templates">Sheets and Notion</a><a class="chip" href="#printables">Printables</a></p>
   <h2 id="bundles">Bundles</h2>
   <p>The best value if you want more than one. Savings are against buying the same items one by one.</p>
@@ -1726,6 +2086,134 @@ def build_shop(items: list[dict]) -> None:
                            description=f"Every {CFG['name']} product: budget and debt payoff kits, Google Sheets and "
                                        "Notion templates, savings challenges and printables. Bundles save up to 85%.",
                            path="/shop/", body=body, jsonld=ld))
+
+
+def product_path(it: dict) -> str:
+    """Each product's own page: its landing page if it has one (shop.json > page), else /shop/<slug>/."""
+    return it.get("page") or f"/shop/{it['slug']}/"
+
+
+KIND_INFO = {
+    "kit": ("Guide and spreadsheet kit", "A short PDF guide plus a spreadsheet that does the maths. The spreadsheet works in Excel, Google Sheets or Numbers."),
+    "sheets": ("Google Sheets template", "A Google Sheets template. After checkout you get a link to make your own copy in your Google account."),
+    "notion": ("Notion template", "A Notion template. After checkout you get a link to duplicate it into your own Notion workspace."),
+    "printable": ("Printable PDF", "Letter and A4 PDFs to print at home or fill in on a tablet."),
+}
+
+
+def bundle_contains(bundle: dict, it: dict) -> bool:
+    name = re.sub(r" (Kit|Pack|Printable)$", "", re.sub(r"^The ", "", it["name"]))
+    return bundle is not it and bool(bundle.get("bundle")) and name.lower() in bundle.get("blurb", "").lower()
+
+
+def build_product_pages() -> list[tuple[str, str]]:
+    """/shop/<slug>/: one page per product, so pins and articles can link straight to it. Buy buttons use the
+    same (placeholder) store links as the shop; Product schema carries the price and the store link."""
+    items = list(shop_items().values())
+    goals = load_placements()["goals"]
+    goal_ids = {g["id"] for g in goals}
+    arts = load_placements()["articles"]
+    by_slug = {p["slug"]: p for p in LIVE_POSTS}
+    out = []
+    for it in items:
+        if it.get("page"):
+            continue  # has its own landing page already
+        if it["slug"] in goal_ids:
+            raise SystemExit(f"shop.json: item slug '{it['slug']}' clashes with a /shop/<goal>/ page")
+        path = product_path(it)
+        kind, how = KIND_INFO.get(it["kind"], ("Download", ""))
+        if it.get("bundle"):
+            kind = "Bundle"
+        img = (f'<img src="{u(it["image"])}" alt="{esc(it["name"])} cover" width="360" height="360" fetchpriority="high">'
+               if it.get("image") else "")
+        guides = [by_slug[a] for a, picks in arts.items() if it["slug"] in picks and a in by_slug][:4]
+        guides_html = ("<h2>Free guides that go with it</h2><ul class=\"related\">" + "".join(
+            f'<li><a href="{u(f"/blog/{p["slug"]}/")}">{esc(p["title"])}</a></li>' for p in guides) + "</ul>") if guides else ""
+        # Only bundles whose blurb names at least two of their items list contents (others say "every X" in prose).
+        inside_of = {b["slug"]: [i for i in items if bundle_contains(b, i)] for b in items if b.get("bundle")}
+        inside_of = {k: v for k, v in inside_of.items() if len(v) >= 2}
+        in_bundles = [b for b in items if it in inside_of.get(b["slug"], [])]
+        bundles_html = ("<p>Also included in " + ", ".join(
+            f'<a href="{u(product_path(b))}">{esc(b["name"])}</a> (${b["price"]:g})' for b in in_bundles) + ".</p>") if in_bundles else ""
+        inside = inside_of.get(it["slug"], [])
+        inside_html = ("<h2>What's inside</h2><ul class=\"related\">" + "".join(
+            f'<li><a href="{u(product_path(i))}">{esc(i["name"])}</a> (${i["price"]:g} on its own)</li>' for i in inside) + "</ul>") if inside else ""
+        in_goals = [g for g in goals if it["slug"] in g["items"]]
+        goals_html = ("<p class=\"chips\">For: " + "".join(
+            f'<a class="chip" href="{u(f"/shop/{g["id"]}/")}">{esc(g["h1"].split(":")[0])}</a>' for g in in_goals) + "</p>") if in_goals else ""
+        similar = [i for i in items if i is not it and (i.get("group") or i["kind"]) == (it.get("group") or it["kind"])][:4]
+        similar_html = ("<h2>More like this</h2><ul class=\"related\">" + "".join(
+            f'<li><a href="{u(product_path(i))}">{esc(i["name"])}</a> ({"free" if not i["price"] else f"${i['price']:g}"})</li>'
+            for i in similar) + "</ul>") if similar else ""
+        stores = " and ".join({"gumroad": "Gumroad", "etsy": "Etsy"}.get(x, x) for x in it["stores"])
+        ld = [{"@context": "https://schema.org", "@type": "Product", "name": it["name"], "sku": it["slug"],
+               "description": it.get("blurb", ""), "brand": {"@type": "Brand", "name": CFG["name"]},
+               "url": absu(path), **({"image": absu(it["image"])} if it.get("image") else {}),
+               "offers": {"@type": "Offer", "price": f'{it["price"]:.2f}', "priceCurrency": "USD",
+                          "availability": "https://schema.org/InStock", "url": store_url(it, it["stores"][0])}},
+              org_ld()]
+        body = f"""<section class="wrap shop product-page">
+  <p class="crumbs"><a href="{u('/')}">Home</a> / <a href="{u('/shop/')}">Shop</a></p>
+  <div class="product-head{' has-img' if img else ''}">{img}<div>
+  <p class="tc-label">{esc(kind)}</p>
+  <h1>{esc(it["name"])}</h1>
+  <p class="dek">{esc(it.get("blurb", ""))}</p>
+  {shop_price(it)}
+  <p class="shop-buy">{shop_buttons(it)}</p>
+  {goals_html}</div></div>
+  <h2>What you get</h2>
+  <p>{esc(how)} Sold through {stores}: one payment, no subscription, and the files are yours to keep.</p>
+  {bundles_html}
+  {inside_html}
+  {guides_html}
+  {similar_html}
+  <p><a href="{u('/shop/')}">See the whole shop</a></p>
+  <p class="disclaimer">This is our own product: we earn the full price when you buy it. Prices in US dollars; Etsy may show local currency and add sales tax. An educational tool, not financial advice. Refunds: email {esc(CFG.get('contact_email', ''))} within 14 days.</p>
+  {magnet_box(f"product-{it['slug']}")}
+</section>"""
+        desc = it.get("blurb", "")
+        if len(desc) > 155:
+            desc = desc[:152].rsplit(" ", 1)[0].rstrip(",;:.") + "..."
+        write(path, layout(title=f"{it['name']} ({kind.lower()})", description=desc, path=path, body=body, jsonld=ld))
+        out.append((path, date.today().isoformat()))
+    return out
+
+
+def build_shop_goals() -> list[tuple[str, str]]:
+    """/shop/<goal>/: one landing page per Start here goal (content/data/placements.json > goals), with that
+    goal's templates and the free guides for it first."""
+    items = shop_items()
+    starts = {g["id"]: g for g in load_start()["goals"]}
+    out = []
+    for g in load_placements()["goals"]:
+        path = f"/shop/{g['id']}/"
+        picks = [items[s] for s in g["items"] if s in items]
+        sg = starts.get(g["id"])
+        by_slug = {p["slug"]: p for p in LIVE_POSTS}
+        free = [by_slug[s] for s in (sg["articles"] if sg else []) if s in by_slug][:4]
+        free_html = "".join(f'<li><a href="{u(f"/blog/{p["slug"]}/")}">{esc(p["title"])}</a></li>' for p in free)
+        start_link = f'{u("/start/")}#{slug_id(sg["heading"])}' if sg else u("/start/")
+        others = "".join(f'<a class="chip" href="{u(f"/shop/{o["id"]}/")}">{esc(o["title"].replace("Templates for ", "").capitalize())}</a>'
+                         for o in load_placements()["goals"] if o["id"] != g["id"])
+        ld = [{"@context": "https://schema.org", "@type": "ItemList", "name": g["title"],
+               "itemListElement": [{"@type": "ListItem", "position": n + 1, "url": store_url(i, i["stores"][0]),
+                                    "name": i["name"]} for n, i in enumerate(picks)]}, org_ld()]
+        body = f"""<section class="wrap shop">
+  <p class="crumbs"><a href="{u('/')}">Home</a> / <a href="{u('/shop/')}">Shop</a></p>
+  <h1>{esc(g["h1"])}</h1>
+  <p class="dek">{esc(g["intro"])}</p>
+  <div class="free-first"><h2>Free first</h2><p>Everything these templates do is explained for free in our guides. <a href="{start_link}">The steps for this goal</a>{" and these guides:" if free_html else "."}</p>{f"<ul>{free_html}</ul>" if free_html else ""}</div>
+  <h2>{esc(g["title"])}</h2>
+  <div class="shop-grid">{''.join(shop_card(i, eager=(n == 0)) for n, i in enumerate(x for x in picks if x.get("image")))}</div>
+  <div class="shop-list">{''.join(shop_card(i, image=False) for i in picks if not i.get("image"))}</div>
+  <p class="chips">Other goals: {others} <a class="chip" href="{u('/shop/')}">The whole shop</a></p>
+  <p class="disclaimer">These are our own products: we earn the full price when you buy one. Prices in US dollars; Etsy may show local currency and add sales tax. Educational tools, not financial advice. Refunds: email {esc(CFG.get('contact_email', ''))} within 14 days.</p>
+  {magnet_box(f"shop-{g['id']}")}
+</section>"""
+        write(path, layout(title=g["h1"], description=g["intro"][:155].rsplit(" ", 1)[0].rstrip(",;:") + ".",
+                           path=path, body=body, jsonld=ld))
+        out.append((path, date.today().isoformat()))
+    return out
 
 
 def email_html(e: dict, body: str) -> str:

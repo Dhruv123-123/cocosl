@@ -1,20 +1,30 @@
-name: Website (weekly Netlify rebuild)
-# Netlify only rebuilds on a push, so a newsletter issue dated in the future (site/content/newsletter/)
-# would stay hidden until the next commit. This pings a Netlify build hook every Thursday instead.
+name: Website (scheduled Netlify rebuild)
+# Netlify only rebuilds on a push, so an article, newsletter issue or landing page dated in the future stays
+# hidden until something triggers a build. This checks every morning whether anything goes live today
+# (site/tools/due_today.py) and pings the Netlify build hook only then, so the free plan's 300 credits a month
+# (15 per production deploy) aren't spent on days when nothing changes: 8 to 13 deploys a month for the current
+# schedule instead of 30.
 # One-time setup: Netlify > Site configuration > Build & deploy > Build hooks > Add build hook,
 # then save its URL as the repo secret NETLIFY_BUILD_HOOK. Without the secret this job does nothing.
 on:
   schedule:
-    - cron: "0 13 * * *"  # daily, so scheduled articles go live on their date
+    - cron: "0 13 * * *"  # every day at 13:00 UTC, but it only deploys when something is due
   workflow_dispatch:
 
-permissions: {}
+permissions:
+  contents: read
 
 jobs:
   rebuild:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      - name: Anything going live today?
+        id: due
+        run: |
+          if python3 site/tools/due_today.py; then echo "due=yes" >> "$GITHUB_OUTPUT"; else echo "due=no" >> "$GITHUB_OUTPUT"; fi
       - name: Trigger Netlify build
+        if: steps.due.outputs.due == 'yes' || github.event_name == 'workflow_dispatch'
         env:
           HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: |

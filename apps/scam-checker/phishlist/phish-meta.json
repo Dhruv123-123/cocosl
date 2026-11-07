@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-07",
+  "entries": 153463,
+  "bytes": 394832,
+  "k": 19,
+  "falseMatchOdds": "about 1 in 524,288 per address",
+  "counts": {
+    "destroyList": 142703,
+    "phishingDatabaseBoth": 17033,
+    "kept": 153463
+  },
+  "sharedHostsSkipped": 104,
+  "sample": "0-105.com",
+  "sources": {
+    "primaryActive": "https://raw.githubusercontent.com/phishdestroy/destroylist/main/rootlist/formats/primary_active/domains.txt",
+    "primary": "https://raw.githubusercontent.com/phishdestroy/destroylist/main/rootlist/formats/primary/domains.txt",
+    "communityActive": "https://raw.githubusercontent.com/phishdestroy/destroylist/main/rootlist/formats/community_active/domains.txt",
+    "allow": "https://raw.githubusercontent.com/phishdestroy/destroylist/main/allow/allowlist.json",
+    "phishingDatabase": "https://raw.githubusercontent.com/Phishing-Database/Phishing.Database/master/phishing-domains-ACTIVE.txt"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "_how": "Make the Google Sheets copy links (SETUP.md), paste them here, then rebuild: python launch/dashboard-pro/kit.py",
+  "sheet_dashboard_pro": "TODO: Google Sheets link ending in /copy",
+  "sheet_tablero_pro": "TODO: Google Sheets link ending in /copy"
+}

@@ -35,7 +35,7 @@ factory = "contentfactory.cli:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-contentfactory = ["web/templates/*.html", "web/static/*", "business/templates/*.html", "funnel/templates/*.html", "funnel/templates/funnel/*.html", "brandkit/templates/*.html", "media/*.json", "media/assets/*", "examples/*"]
+contentfactory = ["web/templates/*.html", "web/static/*", "business/templates/*.html", "funnel/templates/*.html", "funnel/templates/funnel/*.html", "brandkit/templates/*.html", "media/*.json", "hooks_library.json", "media/assets/*", "examples/*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

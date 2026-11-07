@@ -11,6 +11,9 @@ Fails (exit 1) on:
   * an indexable page missing <title>, meta description, canonical, og:image or an <h1>
   * a page over the size budget (Lighthouse-style: HTML, and HTML + same-site CSS/JS/images it loads)
   * an http:// (mixed content) asset reference
+  * sitemap.xml that isn't valid XML, lists a URL that's missing, redirected, noindex, outside the site or whose
+    canonical differs, or leaves out an indexable page; robots.txt that's missing, has no Sitemap: line or
+    disallows a URL the sitemap lists
 Warns (does not fail) on: duplicate titles/descriptions, long titles/descriptions, images without alt,
 and, with --external, outbound links that don't answer 2xx/3xx.
 Standard library only.
@@ -213,6 +216,8 @@ def check(public: Path, base_path: str = "", external: bool = False) -> tuple[li
         if d and len(where) > 1:
             warnings.append(f"duplicate description on {', '.join(where)}")
 
+    errors += check_sitemap(public, pages)
+
     if external:
         def head(url: str) -> tuple[str, int | str]:
             req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": "site-link-check"})
@@ -229,6 +234,75 @@ def check(public: Path, base_path: str = "", external: bool = False) -> tuple[li
                     warnings.append(f"outbound {url} -> {status}")
     report.sort(reverse=True)
     return errors, warnings, report
+
+
+def check_sitemap(public: Path, pages: dict) -> list[str]:
+    """sitemap.xml and robots.txt agree with each other and with the pages that were built."""
+    import xml.etree.ElementTree as ET
+    errs: list[str] = []
+    home = pages.get(public / "index.html")
+    if home is None or not home.canonical:
+        return ["sitemap check: home page has no canonical URL"]
+    site = home.canonical.rstrip("/")
+    origin = "{0.scheme}://{0.netloc}".format(urlparse(site))
+    sm_file, robots_file = public / "sitemap.xml", public / "robots.txt"
+    if not sm_file.is_file():
+        return ["sitemap.xml is missing"]
+    try:
+        root = ET.parse(sm_file).getroot()
+    except ET.ParseError as e:
+        return [f"sitemap.xml is not valid XML: {e}"]
+    ns = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+    if root.tag != ns + "urlset":
+        errs.append("sitemap.xml: root element isn't a sitemaps.org <urlset>")
+    listed: set[str] = set()
+    for url in root.iter(ns + "url"):
+        loc = (url.findtext(ns + "loc") or "").strip()
+        lastmod = (url.findtext(ns + "lastmod") or "").strip()
+        if loc in listed:
+            errs.append(f"sitemap.xml: {loc} listed twice")
+        listed.add(loc)
+        if lastmod and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", lastmod):
+            errs.append(f"sitemap.xml: {loc} has lastmod {lastmod!r} (use YYYY-MM-DD)")
+        if not loc.startswith(site + "/"):
+            errs.append(f"sitemap.xml: {loc} is outside {site}/")
+            continue
+        page = public / loc[len(site) + 1:] / "index.html" if loc.endswith("/") else public / loc[len(site) + 1:]
+        pr = pages.get(page)
+        if pr is None:
+            errs.append(f"sitemap.xml: {loc} has no built page")
+            continue
+        text = page.read_text()[:600]
+        if "http-equiv" in text and "refresh" in text:
+            errs.append(f"sitemap.xml: {loc} is a redirect")
+        if "noindex" in pr.meta.get("robots", ""):
+            errs.append(f"sitemap.xml: {loc} is noindex")
+        if pr.canonical and pr.canonical != loc:
+            errs.append(f"sitemap.xml: {loc} has canonical {pr.canonical}")
+    if len(listed) > 50_000:
+        errs.append("sitemap.xml: more than 50,000 URLs; split it into a sitemap index")
+    for page, pr in pages.items():
+        rel = str(page.relative_to(public))
+        text = page.read_text()[:600]
+        if (rel == "404.html" or rel.startswith("emails/") or not rel.endswith("index.html")
+                or ("http-equiv" in text and "refresh" in text) or "noindex" in pr.meta.get("robots", "")):
+            continue
+        if pr.canonical and pr.canonical.startswith(site) and pr.canonical not in listed:
+            errs.append(f"sitemap.xml: indexable page {pr.canonical} is missing")
+    if not robots_file.is_file():
+        return errs + ["robots.txt is missing"]
+    robots = robots_file.read_text()
+    if f"Sitemap: {site}/sitemap.xml" not in robots:
+        errs.append(f"robots.txt: no 'Sitemap: {site}/sitemap.xml' line")
+    rules = [ln.split(":", 1)[1].strip() for ln in robots.splitlines() if ln.lower().startswith("disallow:")]
+    for loc in listed:
+        path = loc[len(origin):]
+        for r in rules:
+            if r and path.startswith(r):
+                errs.append(f"robots.txt: 'Disallow: {r}' blocks {loc}, which the sitemap lists")
+    if any(r == "/" for r in rules):
+        errs.append("robots.txt: 'Disallow: /' blocks the whole site")
+    return errs
 
 
 def main() -> int:

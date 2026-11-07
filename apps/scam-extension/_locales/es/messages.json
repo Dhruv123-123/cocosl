@@ -1,0 +1,20 @@
+{
+  "extName": {
+    "message": "Scam Shield: ¿Es una estafa?"
+  },
+  "extDescription": {
+    "message": "Revisa un mensaje, correo, enlace o la página en la que estás en busca de señales de estafa con un clic. Funciona en tu dispositivo; nada se envía."
+  },
+  "actionTitle": {
+    "message": "¿Es una estafa?"
+  },
+  "menuSelection": {
+    "message": "Revisar este texto con Scam Shield"
+  },
+  "menuLink": {
+    "message": "Revisar este enlace con Scam Shield"
+  },
+  "badgeTitle": {
+    "message": "Cuidado: este sitio parece falso. Haz clic para ver detalles."
+  }
+}

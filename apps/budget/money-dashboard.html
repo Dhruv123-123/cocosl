@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Money Dashboard Spreadsheet From Your Bank CSV (Google Sheets and Excel) | Money Made Simple</title>
+<meta name="description" content="Turn your bank's CSV download into a monthly money dashboard spreadsheet: every transaction sorted into categories, money in, spending and what's left each month, with live formulas. Opens in Google Sheets and Excel. Your file never leaves your browser.">
+<meta property="og:title" content="Make a money dashboard spreadsheet from your bank CSV">
+<meta property="og:description" content="Categories, monthly totals and live formulas, for Google Sheets or Excel. Runs in your browser.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="alternate" hreflang="en" href="money-dashboard.html">
+<link rel="alternate" hreflang="es" href="tablero-dinero.html">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Money dashboard maker","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="../" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Money dashboard</span></a>
+  <a class="badge" href="tablero-dinero.html" hreflang="es" lang="es">Español</a>
+</header>
+<main>
+  <h1 class="page-title">Make a money dashboard from your bank CSV</h1>
+  <p class="lede">Download your transactions from your bank as a CSV and drop the file here. We sort every transaction into a category and build a spreadsheet with money in, spending and what's left each month. It opens in Google Sheets or Excel, and its totals are formulas, so it keeps working when you change things. Your file is read on this device and never uploaded.</p>
+
+  <section class="card">
+    <label class="drop" id="drop">
+      <input id="file" type="file" accept=".csv,text/csv,.txt" multiple hidden>
+      <b>Choose CSV files</b> or drop them here
+      <span class="tiny">Checking and credit card files together work best. Most banks: Activity or Statements > Download > CSV.</span>
+    </label>
+    <div class="row" style="margin-top:12px">
+      <button id="sample" class="btn ghost small" type="button">Try it with sample data</button>
+      <span id="file-msg" class="tiny" aria-live="polite"></span>
+    </div>
+  </section>
+
+  <details class="card">
+    <summary><b>No CSV? Paste your transactions instead</b></summary>
+    <form id="paste-form" style="margin-top:10px">
+      <p class="tiny">Select the transactions in your online banking, copy and paste them here. Each line needs a date, a description and an amount.</p>
+      <textarea id="paste" rows="7" aria-label="Pasted transactions" placeholder="10/03  NETFLIX.COM 866-579-7172      15.49&#10;10/05  KROGER #555                 82.10"></textarea>
+      <div class="row" style="margin-top:8px"><button class="btn small" type="submit">Build my dashboard</button><span id="paste-msg" class="tiny" aria-live="polite"></span></div>
+    </form>
+  </details>
+
+  <section id="results" hidden aria-live="polite">
+    <div class="card">
+      <h2>Your months at a glance</h2>
+      <div class="stats" id="stats"></div>
+      <div class="table-scroll" id="summary" tabindex="0" role="region" aria-label="Monthly summary"></div>
+      <p class="tiny" id="dropped"></p>
+    </div>
+    <div class="card" id="sort"></div>
+    <div class="card">
+      <h2>Optional: monthly budgets</h2>
+      <p class="tiny">Add a target for any category and the spreadsheet compares your monthly average with it. You can also fill these in later in the sheet.</p>
+      <div class="deal-form" id="budgets"></div>
+    </div>
+    <div class="card">
+      <h2>Download your spreadsheet</h2>
+      <p>Four tabs: Summary, Transactions (change any category from a dropdown), Categories (add your own and set budgets) and How to use. If you use the <a href="networth.html">net worth tracker</a> in this browser, your net worth gets a tab too.</p>
+      <div class="row"><button id="download" class="btn" type="button">Download the .xlsx file</button></div>
+      <p id="saved" class="tiny" aria-live="polite"></p>
+      <p class="tiny"><b>Google Sheets:</b> go to drive.google.com, choose New > File upload, then open the file with Google Sheets. <b>Excel or Numbers:</b> just open it.</p>
+      <div class="offer-box" id="upsell" hidden></div>
+      <div class="offer-box"><h3>Rather do it in an app?</h3><p>The free <a href="./">20-Minute Budget app</a> plans each month ahead. The <a href="subscriptions.html">subscription finder</a> reads the same CSV and lists every recurring charge.</p></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>What it does with your file</h2>
+    <ul class="checks">
+      <li>Reads the date, description and amount columns, from one file or several (checking plus cards). Duplicate rows are removed.</li>
+      <li>Sorts each transaction by keywords: rent, groceries, gas, eating out, subscriptions and 14 more. Anything it can't place goes in Other for you to sort.</li>
+      <li>Counts transfers between your own accounts and credit card payments separately, so card spending isn't counted twice.</li>
+      <li>Keeps the latest 12 months. Everything happens in this browser tab: no upload, no account, no bank login.</li>
+    </ul>
+  </section>
+</main>
+<footer><p><a href="../">All free tools</a> · <a href="./">Budget</a> · Totals come from the transactions in your file. Not financial advice. Made by Money Made Simple.</p></footer>
+<script type="module" src="money-dashboard.js"></script>
+</body>
+</html>

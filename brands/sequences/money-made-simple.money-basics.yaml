@@ -1,0 +1,215 @@
+# "Money Basics in 7 days": the free email course on the website's /money-basics/ page (site/content/money-basics.md).
+# Same format as the welcome part of brands/sequences/money-made-simple.yaml. The site's signup form sends
+# source=money-basics-7-days; build this as its own automation in Sender:
+#   factory sequence-export money-made-simple --sequence money-basics --for sender
+# The factory's worker never sends this sequence itself (it only sends each brand's welcome).
+# Keep the day titles in step with the "### Day N:" headings on the landing page.
+# The worked examples are fictional and labelled as such; figures come from the linked guides' sources.
+
+name: money-basics
+min_gap_hours: 20
+max_late_days: 3
+signoff: "Talk tomorrow,\nMoney Made Simple"
+footer_note: "Educational content, not financial advice. For decisions about your own situation, talk to a qualified professional. Drafted with AI help, fact-checked by a person."
+
+links:
+  course: https://moneymadesimple.netlify.app/money-basics/
+  budget_guide: https://moneymadesimple.netlify.app/blog/how-to-make-a-budget-you-will-keep/
+  subscriptions_guide: https://moneymadesimple.netlify.app/blog/find-and-cancel-subscriptions/
+  sinking_guide: https://moneymadesimple.netlify.app/blog/sinking-funds-explained/
+  emergency_guide: https://moneymadesimple.netlify.app/blog/how-to-build-an-emergency-fund/
+  debt_guide: https://moneymadesimple.netlify.app/blog/debt-avalanche-vs-snowball/
+  credit_guide: https://moneymadesimple.netlify.app/blog/how-credit-scores-work/
+  freeze_guide: https://moneymadesimple.netlify.app/blog/how-to-freeze-your-credit/
+  match_guide: https://moneymadesimple.netlify.app/blog/401k-match-explained/
+  tools: https://moneymadesimple.netlify.app/tools/
+  start: https://moneymadesimple.netlify.app/start/
+
+steps:
+  - day_offset: 0
+    subject: "Day 1: your real take-home pay"
+    preheader: "Not your salary. The number that actually lands in your account."
+    cta_url_key: budget_guide
+    cta_label: Read the budget guide
+    body_markdown: |
+      Hi,
+
+      Welcome to Money Basics in 7 days. One email a day for a week, each with one idea, the numbers shown, and one task that takes less than 20 minutes.
+
+      Today starts with the number every other day depends on: **what actually lands in your account each month.**
+
+      Most people plan around their salary. But you can't spend your salary. Tax, retirement contributions and insurance come out first. Use your take-home pay instead.
+
+      **Turn one paycheck into a monthly number:**
+
+      - Paid weekly: one paycheck × 52 ÷ 12
+      - Paid every two weeks: one paycheck × 26 ÷ 12
+      - Paid twice a month: one paycheck × 2
+      - Income varies: use your lowest normal month from the last six
+
+      Every two weeks is the one people get wrong. Twice your paycheck undercounts, because 26 paychecks a year means two months have three. A fictional example: Ana's paycheck is $1,300 every two weeks. Twice that is $2,600, but × 26 ÷ 12 is about **$2,817** a month.
+
+      **Today's task (10 minutes):** find your last paycheck or deposit, work out your monthly number, and write it down somewhere you'll see it tomorrow.
+
+      If you want the full method, the guide below walks through a whole budget built on this number.
+
+      {signoff}
+
+  - day_offset: 1
+    subject: "Day 2: the subscription hunt"
+    preheader: "Find every repeating charge. Cancel one."
+    cta_url_key: subscriptions_guide
+    cta_label: How to find and cancel subscriptions
+    body_markdown: |
+      Hi,
+
+      Yesterday you found your real monthly number. Today is about keeping more of it, with the quickest win in personal finance: **forgotten subscriptions.**
+
+      Open the last two months of statements for your checking account and every card. Search for "monthly", "renewal" and "subscription", and look for anything that repeats: streaming, apps, cloud storage, gym, delivery memberships, the free trial that became a paid plan.
+
+      Two places charges hide:
+
+      - **Your phone's app store.** On iPhone: Settings, tap your name, then Subscriptions. On Android: Google Play, tap your profile, then Payments & subscriptions.
+      - **Yearly renewals.** Divide them by 12 to see the monthly cost.
+
+      Then ask one question of each charge:
+
+      > If this weren't already running, would I sign up for it today, at this price?
+
+      If the answer is no, cancel it while you're looking at it.
+
+      **Today's task (15 minutes):** list every repeating charge with its monthly cost, and cancel or downgrade at least one.
+
+      {signoff}
+
+  - day_offset: 2
+    subject: "Day 3: the bills that aren't on your list yet"
+    preheader: "Car registration, renewals, gifts: divided by 12, they stop being surprises."
+    cta_url_key: sinking_guide
+    cta_label: Sinking funds, explained
+    body_markdown: |
+      Hi,
+
+      Most budgets don't fail because of the monthly bills. They fail because of the ones that come once or twice a year and feel like emergencies: car registration, insurance renewals, school costs, birthdays, holidays, the annual software fee.
+
+      They aren't really surprises. You can see most of them coming.
+
+      **The fix is a sinking fund:** a small amount set aside every month for each known cost, so the money is there when the bill arrives.
+
+      A fictional example: Ben pays $180 for car registration, $480 for car insurance twice a year ($960), and about $600 on gifts. That's $1,740 a year, or **$145 a month**. Set aside monthly, it's a line in the budget. Ignored, it's a $500 surprise in December.
+
+      **Today's task (15 minutes):**
+
+      1. List what you paid in the last 12 months that wasn't monthly.
+      2. Add it up and divide by 12.
+      3. Pick where the money will sit: a separate savings account, or a labelled "bucket" if your bank offers them.
+
+      You don't need to fund the whole amount straight away. Start with the bill that's coming soonest.
+
+      {signoff}
+
+  - day_offset: 3
+    subject: "Day 4: a starter emergency fund"
+    preheader: "A small buffer comes before almost everything else. Here's why, and where to keep it."
+    cta_url_key: emergency_guide
+    cta_label: How to build an emergency fund
+    body_markdown: |
+      Hi,
+
+      Today is the one that makes everything else less fragile: **a starter emergency fund.**
+
+      Without a buffer, every surprise (a car repair, a vet bill, a short paycheck) goes on a credit card or turns into a late fee. With even a small one, it's an inconvenience instead of a setback.
+
+      **How big?** Start small. A first goal of $500 or one month of essential bills is a real cushion. You can build toward three to six months of essentials later.
+
+      **Where to keep it:**
+
+      - In a **separate** savings account from the one you spend from, so it doesn't quietly get used.
+      - Somewhere you can reach in a day or two, not invested in the stock market.
+      - At a bank that's **FDIC insured** or a credit union that's **NCUA insured**, with no monthly fee. A high-yield savings account pays more interest than most checking accounts.
+
+      **Make it automatic.** Set up a transfer on payday, even $20. A fictional example: $25 every two weeks is $650 in a year, without having to remember.
+
+      **Today's task (15 minutes):** open or choose a separate savings account, name it "Emergency," and set up one automatic payday transfer.
+
+      {signoff}
+
+  - day_offset: 4
+    subject: "Day 5: pick your debt plan"
+    preheader: "Avalanche or snowball, with the trade-off in dollars."
+    cta_url_key: debt_guide
+    cta_label: Debt avalanche vs snowball
+    body_markdown: |
+      Hi,
+
+      If you have debt, today turns "pay it off someday" into a plan. If you don't, skip the task and use the time to check that every bill is on autopay.
+
+      **First, put every debt on one page.** For each one, write the balance, the interest rate (APR) and the minimum payment. Set every debt to autopay at least the minimum, so you're never late.
+
+      **Then pick where extra money goes:**
+
+      - **Avalanche:** extra payments go to the highest interest rate first. It costs the least in interest.
+      - **Snowball:** extra payments go to the smallest balance first. You clear accounts sooner, which keeps many people going.
+
+      Both work. The best plan is the one you'll stick with. Once one debt is paid off, roll its payment into the next one.
+
+      A fictional example: Cara has a $900 store card at 28%, a $4,000 credit card at 22% and a $6,500 car loan at 7%. Avalanche starts with the store card (highest rate, and also the smallest balance, so both methods agree here). Next comes the $4,000 card either way.
+
+      **Today's task (20 minutes):** list your debts, set up autopay for the minimums, and choose avalanche or snowball. Our free debt payoff calculator, linked from the tools page, shows your debt-free date both ways.
+
+      {signoff}
+
+  - day_offset: 5
+    subject: "Day 6: your credit, checked and protected"
+    preheader: "Pull your free credit reports and decide whether a freeze makes sense."
+    cta_url_key: credit_guide
+    cta_label: How credit scores work
+    body_markdown: |
+      Hi,
+
+      Your credit report affects loans, apartments, insurance and sometimes jobs. Mistakes on it are common, and accounts you don't recognise can be the first sign of identity theft. Checking it is free.
+
+      **Get your reports.** You can check each of the three bureaus (Equifax, Experian and TransUnion) for free at **AnnualCreditReport.com**. It's the only official site for free reports; you never need to pay or enter a card.
+
+      **What to look for:**
+
+      - Personal details you don't recognise, like an address you've never lived at.
+      - Accounts you didn't open.
+      - Late payments you made on time.
+      - Collections you don't recognise.
+
+      If something's wrong, dispute it with the bureau and the company that reported it.
+
+      **What moves a score most:** paying on time, and keeping card balances low compared with your limits. Checking your own report doesn't hurt your score.
+
+      **Consider a credit freeze.** A freeze stops anyone opening new credit in your name, and it's free to place and lift at each bureau. You lift it when you apply for something.
+
+      **Today's task (20 minutes):** request all three reports and skim each one for anything you don't recognise.
+
+      {signoff}
+
+  - day_offset: 6
+    subject: "Day 7: your first step into investing"
+    preheader: "The employer match first, then small, regular amounts."
+    cta_url_key: match_guide
+    cta_label: The 401(k) match, explained
+    body_markdown: |
+      Hi,
+
+      Last day. You have your real number, fewer subscriptions, a plan for known costs, a starter buffer, a debt plan and a clean credit report. Today is the long game: **investing.**
+
+      *General education, not investment advice. Investing involves risk, including loss of principal.*
+
+      **Start with the employer match.** If your workplace retirement plan matches your contributions, contribute at least enough to get the full match. It's part of your pay; leaving it unclaimed is turning down money.
+
+      **Then small, regular amounts.** Time matters more than the amount at the start. Low-cost, broadly diversified funds, such as index funds or a target-date fund, are a common starting point. Check the fees: a lower expense ratio leaves more of the return for you.
+
+      **Keep the order sensible.** A starter emergency fund and a plan for high-interest card debt usually come first, because card interest often costs more than investments are likely to earn. The match is the exception: don't skip it.
+
+      **Today's task (15 minutes):** log in to your benefits portal and check whether you're getting your full match. If you don't have a workplace plan, note that an IRA is open to anyone with earned income.
+
+      That's the course. From next week you'll get the regular Money Made Simple email: one money move a week, explained plainly. If you're not sure what to work on next, the Start page routes you by goal.
+
+      Thanks for doing this. Small steps, finished, add up.
+
+      Money Made Simple

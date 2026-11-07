@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Free Bill Due Date Calendar: See Every Bill This Month, Mark Paid, Add to Your Calendar | Money Made Simple</title>
+<meta name="description" content="A free bill calendar app. Add your bills once, see what's due each day this month, tick them off as you pay, and send repeating reminders to your phone's calendar. Works offline, no account, nothing leaves your device.">
+<meta property="og:title" content="Every bill this month, on one calendar">
+<meta property="og:description" content="Add bills once, tick them off, get reminders in your own calendar. Free, offline, private.">
+<meta name="theme-color" content="#0b1d13">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Bills">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="alternate" hreflang="en" href="./">
+<link rel="alternate" hreflang="es" href="es.html">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Bill calendar","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="module" src="../lib/embed-page.js"></script>
+</head>
+<body class="billcal">
+<header class="top">
+  <a class="logo" href="../../" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Bill calendar</span></a>
+  <span class="row"><button id="install" class="badge" type="button" hidden>Install</button><a class="badge" href="es.html" hreflang="es" lang="es">Español</a></span>
+</header>
+<main>
+  <h1 class="page-title">Every bill this month, on one calendar</h1>
+  <p class="lede">Add each bill once. See what's due each day, tick bills off as you pay them, and send reminders to your phone's calendar. Your bills stay on this device: no account, works offline.</p>
+
+  <section class="card" id="soon-card">
+    <h2>Next 14 days</h2>
+    <div id="soon" aria-live="polite"></div>
+  </section>
+
+  <section class="card" id="cal">
+    <div class="cal-head">
+      <button id="prev" class="btn ghost small" type="button" aria-label="Previous month">‹</button>
+      <h2 id="month" aria-live="polite"></h2>
+      <button id="next" class="btn ghost small" type="button" aria-label="Next month">›</button>
+    </div>
+    <div class="stats" id="stats"></div>
+    <div class="cal-grid" aria-hidden="false">
+      <div class="weekdays" id="weekdays" aria-hidden="true"></div>
+      <div class="days" id="grid"></div>
+    </div>
+    <button id="this" class="link" type="button">Back to this month</button>
+    <h3>This month's bills</h3>
+    <ul class="dues" id="list"></ul>
+  </section>
+
+  <form id="bill-form" class="card deal-form" autocomplete="off">
+    <h2 class="full">Add a bill</h2>
+    <label>Name <input name="name" maxlength="60" placeholder="Rent, phone, car insurance" required></label>
+    <label>Amount ($) <input name="amount" inputmode="decimal" placeholder="85.00" required></label>
+    <label>Next due date <input name="start" type="date" required></label>
+    <label>Repeats <select name="freq"></select></label>
+    <label class="pick full"><input type="checkbox" name="autopay"> <span>It's on autopay<small>Still listed, so you know the money has to be there.</small></span></label>
+    <div class="row full"><button id="save" class="btn" type="submit" data-add="Add bill" data-save="Save changes">Add bill</button><span id="form-msg" class="tiny" aria-live="polite"></span></div>
+  </form>
+
+  <section class="card">
+    <h2>Your bills <span id="bill-count" class="tiny"></span></h2>
+    <ul class="bill-rows" id="bills" tabindex="-1"></ul>
+  </section>
+
+  <section class="card">
+    <h2>Reminders in your own calendar</h2>
+    <p class="tiny">Downloads one file. Open it on your phone or computer and every bill is added as a repeating all-day event with a reminder, in Google Calendar, Apple Calendar or Outlook.</p>
+    <div class="row">
+      <label class="inline">Remind me <select id="remind"><option value="0">on the day</option><option value="1">1 day before</option><option value="2" selected>2 days before</option><option value="3">3 days before</option><option value="7">a week before</option></select></label>
+      <button id="ics" class="btn small" type="button">Add to my calendar (.ics)</button>
+    </div>
+    <p id="ics-msg" class="tiny" aria-live="polite"></p>
+    <details><summary class="tiny">Back up or move to another device</summary>
+      <div class="row" style="margin-top:8px"><button id="backup" class="btn ghost small" type="button">Download a backup</button>
+      <label class="btn ghost small">Restore a backup <input id="restore" type="file" accept=".json,application/json" hidden></label></div>
+    </details>
+  </section>
+</main>
+<footer><p><a href="../../">All free tools</a> · <a href="../bills.html">Lower your bills</a> · <a href="../">Budget app</a> · Your bills are saved in this browser only. Made by Money Made Simple.</p></footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

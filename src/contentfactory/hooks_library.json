@@ -1,0 +1,623 @@
+{
+  "version": 1,
+  "updated": "2026-11-07",
+  "about": "Hook templates for personal-finance and scam-awareness short-form content. Each pattern has {slots} the writer fills with specifics from the script. Patterns are starting points to adapt, never lines to paste: the originality guardrail still compares every script with the brand's history. Any template with needs_verified_number=true puts its number on the fact-check list. Research behind them: research/scouting/creators.md.",
+  "niche_keywords": [
+    "finance",
+    "money",
+    "budget",
+    "invest",
+    "credit",
+    "debt",
+    "saving",
+    "scam",
+    "fraud",
+    "retire",
+    "tax"
+  ],
+  "templates": [
+    {
+      "id": "fine-print",
+      "pattern": "{company_type} won't tell you this, but it's in the fine print: {hidden_rule}.",
+      "slots": [
+        "company_type",
+        "hidden_rule"
+      ],
+      "example": "Your bank won't tell you this, but it's in the fine print: you can ask them to refund an overdraft fee.",
+      "mechanic": "insider secret",
+      "topics": [
+        "budgeting",
+        "credit-debt",
+        "tools"
+      ],
+      "formats": [
+        "short",
+        "carousel"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Fine-print and policy-reveal skits from consumer-rights finance creators"
+    },
+    {
+      "id": "cost-of-mistake",
+      "pattern": "This one {setting} costs the average {person} {amount} a year.",
+      "slots": [
+        "setting",
+        "person",
+        "amount"
+      ],
+      "example": "This one checking-account setting costs the average overdrafter $150 a year.",
+      "mechanic": "loss aversion with a number",
+      "topics": [
+        "budgeting",
+        "credit-debt",
+        "tools"
+      ],
+      "formats": [
+        "short",
+        "carousel"
+      ],
+      "needs_verified_number": true,
+      "inspired_by": "Mistake-framed explainers, OutlierKit finance breakout pattern"
+    },
+    {
+      "id": "if-i-started-today",
+      "pattern": "Starting {goal} from zero in {year}? Here's the exact order to do it in.",
+      "slots": [
+        "goal",
+        "year"
+      ],
+      "example": "Starting investing from zero in 2027? Here's the exact order to do it in.",
+      "mechanic": "restart / dated frame",
+      "topics": [
+        "investing",
+        "budgeting"
+      ],
+      "formats": [
+        "short",
+        "long",
+        "carousel"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Dated 'if I started in <year>' titles among top finance YouTube outliers"
+    },
+    {
+      "id": "visualize-the-number",
+      "pattern": "This is what {amount} {timeframe} turns into after {years} years.",
+      "slots": [
+        "amount",
+        "timeframe",
+        "years"
+      ],
+      "example": "This is what $100 a month turns into after 30 years.",
+      "mechanic": "visual payoff",
+      "topics": [
+        "investing"
+      ],
+      "formats": [
+        "short",
+        "carousel"
+      ],
+      "needs_verified_number": true,
+      "inspired_by": "Money-visualization explainers (stacks, jars, growth curves)"
+    },
+    {
+      "id": "x-vs-y-real-math",
+      "pattern": "{option_a} or {option_b}? We ran the real numbers on {scenario}.",
+      "slots": [
+        "option_a",
+        "option_b",
+        "scenario"
+      ],
+      "example": "Avalanche or snowball? We ran the real numbers on $12,000 of card debt.",
+      "mechanic": "comparison with proof",
+      "topics": [
+        "credit-debt",
+        "investing",
+        "tools"
+      ],
+      "formats": [
+        "short",
+        "carousel",
+        "long"
+      ],
+      "needs_verified_number": true,
+      "inspired_by": "Teacher-style math explainers on saving and investing"
+    },
+    {
+      "id": "stop-doing",
+      "pattern": "Stop {common_habit}. Do {better_habit} instead.",
+      "slots": [
+        "common_habit",
+        "better_habit"
+      ],
+      "example": "Stop budgeting monthly. Budget by paycheck instead.",
+      "mechanic": "contrarian instruction",
+      "topics": [
+        "budgeting",
+        "credit-debt"
+      ],
+      "formats": [
+        "short",
+        "carousel"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Contrarian / mistake-framed explainer family"
+    },
+    {
+      "id": "myth-check",
+      "pattern": "\"{myth}.\" That's the most expensive money myth I hear. Here's why.",
+      "slots": [
+        "myth"
+      ],
+      "example": "\"Checking your credit score lowers it.\" That's the most expensive money myth I hear. Here's why.",
+      "mechanic": "myth vs fact",
+      "topics": [
+        "credit-debt",
+        "investing",
+        "budgeting"
+      ],
+      "formats": [
+        "short",
+        "carousel"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Myth/fact carousels, the most-saved carousel style"
+    },
+    {
+      "id": "tonight-in-minutes",
+      "pattern": "Do this tonight. It takes {minutes} minutes and {benefit}.",
+      "slots": [
+        "minutes",
+        "benefit"
+      ],
+      "example": "Do this tonight. It takes 10 minutes and it makes your credit almost impossible to steal.",
+      "mechanic": "low-effort action",
+      "topics": [
+        "credit-debt",
+        "scams",
+        "tools"
+      ],
+      "formats": [
+        "short"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Urgent action verbs in finance outliers; credit-freeze explainers"
+    },
+    {
+      "id": "three-signs",
+      "pattern": "{n} signs {situation}, and the last one surprises most people.",
+      "slots": [
+        "n",
+        "situation"
+      ],
+      "example": "3 signs your budget is set up to fail, and the last one surprises most people.",
+      "mechanic": "numbered list with an open loop",
+      "topics": [
+        "budgeting",
+        "investing",
+        "scams"
+      ],
+      "formats": [
+        "short",
+        "carousel"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "'7 Signs...' curiosity-gap titles among top finance outliers"
+    },
+    {
+      "id": "pov-your-age",
+      "pattern": "You're {age}, earning {salary}. Here's where every dollar should go.",
+      "slots": [
+        "age",
+        "salary"
+      ],
+      "example": "You're 24, earning $52,000. Here's where every dollar should go.",
+      "mechanic": "identity / self-selection",
+      "topics": [
+        "budgeting",
+        "investing"
+      ],
+      "formats": [
+        "short",
+        "carousel"
+      ],
+      "needs_verified_number": true,
+      "inspired_by": "Direct-address explainers aimed at people starting out"
+    },
+    {
+      "id": "nobody-explains",
+      "pattern": "Nobody explains {topic} like this, so here it is in {seconds} seconds.",
+      "slots": [
+        "topic",
+        "seconds"
+      ],
+      "example": "Nobody explains a Roth IRA like this, so here it is in 30 seconds.",
+      "mechanic": "promise of clarity",
+      "topics": [
+        "investing",
+        "credit-debt",
+        "tools"
+      ],
+      "formats": [
+        "short"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "'Money basics explained simply' positioning"
+    },
+    {
+      "id": "word-on-statement",
+      "pattern": "If you see \"{term}\" on your {document}, read this first.",
+      "slots": [
+        "term",
+        "document"
+      ],
+      "example": "If you see \"expense ratio\" on your 401(k) statement, read this first.",
+      "mechanic": "document anchor",
+      "topics": [
+        "investing",
+        "credit-debt",
+        "tools"
+      ],
+      "formats": [
+        "short",
+        "carousel"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Document-walkthrough format (statements, reports, forms)"
+    },
+    {
+      "id": "free-money-left",
+      "pattern": "You're probably leaving {benefit} on the table, and it's free to claim.",
+      "slots": [
+        "benefit"
+      ],
+      "example": "You're probably leaving your 401(k) match on the table, and it's free to claim.",
+      "mechanic": "found money",
+      "topics": [
+        "investing",
+        "tools"
+      ],
+      "formats": [
+        "short",
+        "carousel"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Employer-match and unclaimed-benefit explainers"
+    },
+    {
+      "id": "same-income-different-result",
+      "pattern": "Two people earn {salary}. One ends up with {result_a}, the other with {result_b}. The only difference is {difference}.",
+      "slots": [
+        "salary",
+        "result_a",
+        "result_b",
+        "difference"
+      ],
+      "example": "Two people earn $60,000. One retires with $1.2M, the other with $400K. The only difference is when they started.",
+      "mechanic": "social comparison",
+      "topics": [
+        "investing",
+        "budgeting"
+      ],
+      "formats": [
+        "short",
+        "carousel"
+      ],
+      "needs_verified_number": true,
+      "inspired_by": "Social-comparison framing in finance outliers"
+    },
+    {
+      "id": "the-one-question",
+      "pattern": "{decision}? Answer one question and you'll know.",
+      "slots": [
+        "decision"
+      ],
+      "example": "Roth or traditional IRA? Answer one question and you'll know.",
+      "mechanic": "decision shortcut",
+      "topics": [
+        "investing",
+        "credit-debt",
+        "tools"
+      ],
+      "formats": [
+        "short",
+        "carousel"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Decision-framework carousels"
+    },
+    {
+      "id": "paid-off-but",
+      "pattern": "You {did_the_right_thing} and {bad_outcome} anyway. Here's why that happens.",
+      "slots": [
+        "did_the_right_thing",
+        "bad_outcome"
+      ],
+      "example": "You paid the card off in full and your score still dropped. Here's why that happens.",
+      "mechanic": "unexpected outcome",
+      "topics": [
+        "credit-debt"
+      ],
+      "formats": [
+        "short"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Counterintuitive credit-score explainers. Write it in second person: our presenter is faceless and never claims personal experience."
+    },
+    {
+      "id": "app-honest-review",
+      "pattern": "We compared {n} {category} on {criteria}. Only {winner_count} passed.",
+      "slots": [
+        "n",
+        "category",
+        "criteria",
+        "winner_count"
+      ],
+      "example": "We compared 5 budgeting apps on fees, privacy and effort. Only 2 passed.",
+      "mechanic": "curation / tested so you don't",
+      "topics": [
+        "tools"
+      ],
+      "formats": [
+        "carousel",
+        "long"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Software-review finance channels. Only claim testing that really happened, and disclose affiliate links."
+    },
+    {
+      "id": "calendar-surprise",
+      "pattern": "That '{surprise}' wasn't a surprise. It was on the calendar. Here's how to see it coming.",
+      "slots": [
+        "surprise"
+      ],
+      "example": "That 'surprise' car insurance bill wasn't a surprise. It was on the calendar. Here's how to see it coming.",
+      "mechanic": "reframe",
+      "topics": [
+        "budgeting"
+      ],
+      "formats": [
+        "short",
+        "carousel"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Sinking-fund and irregular-expense explainers"
+    },
+    {
+      "id": "percent-fee-eats",
+      "pattern": "A {fee} fee sounds tiny. Over {years} years it eats {amount}.",
+      "slots": [
+        "fee",
+        "years",
+        "amount"
+      ],
+      "example": "A 1% fee sounds tiny. Over 30 years it eats about $18,000 of a $10,000 investment.",
+      "mechanic": "hidden cost reveal",
+      "topics": [
+        "investing",
+        "tools"
+      ],
+      "formats": [
+        "short",
+        "carousel"
+      ],
+      "needs_verified_number": true,
+      "inspired_by": "Fee-drag visual explainers"
+    },
+    {
+      "id": "checklist-save",
+      "pattern": "The {n}-step {task} checklist. Save this for {moment}.",
+      "slots": [
+        "n",
+        "task",
+        "moment"
+      ],
+      "example": "The 6-step credit report checklist. Save this for your next free report.",
+      "mechanic": "utility / save prompt",
+      "topics": [
+        "budgeting",
+        "credit-debt",
+        "investing",
+        "scams"
+      ],
+      "formats": [
+        "carousel"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Saveable how-to carousels Instagram counts as original"
+    },
+    {
+      "id": "what-you-own",
+      "pattern": "When you buy {product}, here's what you actually own.",
+      "slots": [
+        "product"
+      ],
+      "example": "When you buy one share of an S&P 500 index fund, here's what you actually own.",
+      "mechanic": "demystify",
+      "topics": [
+        "investing"
+      ],
+      "formats": [
+        "short",
+        "carousel"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Deep-dive explainers with data visualization"
+    },
+    {
+      "id": "scam-script-reveal",
+      "pattern": "This is the exact script {scammer_type} use, line by line, so you'll recognise it.",
+      "slots": [
+        "scammer_type"
+      ],
+      "example": "This is the exact script fake bank-fraud callers use, line by line, so you'll recognise it.",
+      "mechanic": "pattern reveal",
+      "topics": [
+        "scams"
+      ],
+      "formats": [
+        "short",
+        "carousel",
+        "long"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Scam-baiting channels that replay real scam calls (Kitboga, Scammer Payback). Paraphrase public reports; never use real victims' audio."
+    },
+    {
+      "id": "scam-one-tell",
+      "pattern": "Every {scam_type} has the same tell: {tell}.",
+      "slots": [
+        "scam_type",
+        "tell"
+      ],
+      "example": "Every 'your account is locked' text has the same tell: it asks you to act before you can check.",
+      "mechanic": "single rule to remember",
+      "topics": [
+        "scams"
+      ],
+      "formats": [
+        "short",
+        "carousel"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Short-form scam-signal breakdowns (FraudFI-style Shorts)"
+    },
+    {
+      "id": "scam-real-or-fake",
+      "pattern": "Real or scam? {artifact}. You have 3 seconds.",
+      "slots": [
+        "artifact"
+      ],
+      "example": "Real or scam? A text from 'USPS' about a missed delivery. You have 3 seconds.",
+      "mechanic": "interactive quiz",
+      "topics": [
+        "scams"
+      ],
+      "formats": [
+        "short",
+        "carousel"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Quiz-style scam-spotting content. Use made-up examples with no real brand logos."
+    },
+    {
+      "id": "scam-what-happens-next",
+      "pattern": "You {mistake}. Here's what happens in the next {hours} hours, and how to stop it.",
+      "slots": [
+        "mistake",
+        "hours"
+      ],
+      "example": "You read a code out to a 'bank' caller. Here's what happens in the next 24 hours, and how to stop it.",
+      "mechanic": "consequence timeline",
+      "topics": [
+        "scams"
+      ],
+      "formats": [
+        "short",
+        "carousel"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Investigative scam breakdowns that open on what happens to the victim (Coffeezilla, Jim Browning)"
+    },
+    {
+      "id": "scam-too-good",
+      "pattern": "\"{offer}.\" Here's how this offer actually makes its money.",
+      "slots": [
+        "offer"
+      ],
+      "example": "\"Earn $500 a week liking videos.\" Here's how this offer actually makes its money.",
+      "mechanic": "follow the money",
+      "topics": [
+        "scams",
+        "investing"
+      ],
+      "formats": [
+        "short",
+        "long"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Follow-the-money investigations of influencer and get-rich-quick schemes. Quote the offer only to debunk it."
+    },
+    {
+      "id": "scam-protect-parents",
+      "pattern": "Send this to {person} before {scam_type} reaches them.",
+      "slots": [
+        "person",
+        "scam_type"
+      ],
+      "example": "Send this to your parents before the grandkid-in-jail call reaches them.",
+      "mechanic": "share to protect",
+      "topics": [
+        "scams"
+      ],
+      "formats": [
+        "short",
+        "carousel"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Protective share prompts in scam-awareness content. A share prompt with a real reason, not 'tag 3 friends'."
+    },
+    {
+      "id": "small-change-big-year",
+      "pattern": "One {small_change} a {period} adds up to {amount} by next {month}.",
+      "slots": [
+        "small_change",
+        "period",
+        "amount",
+        "month"
+      ],
+      "example": "Moving $25 a week adds up to $1,300 by next November.",
+      "mechanic": "tiny habit, concrete total",
+      "topics": [
+        "budgeting"
+      ],
+      "formats": [
+        "short",
+        "carousel"
+      ],
+      "needs_verified_number": true,
+      "inspired_by": "Savings-challenge explainers"
+    },
+    {
+      "id": "question-you-asked",
+      "pattern": "Someone asked: \"{question}\" Honest answer: {short_answer}.",
+      "slots": [
+        "question",
+        "short_answer"
+      ],
+      "example": "Someone asked: \"Is it too late to start a Roth IRA at 30?\" Honest answer: not even close.",
+      "mechanic": "Q&A / reply format",
+      "topics": [
+        "investing",
+        "budgeting",
+        "credit-debt",
+        "scams"
+      ],
+      "formats": [
+        "short"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Q&A replies to viewer questions. Only answer questions people really asked (comments, inbox)."
+    },
+    {
+      "id": "boring-wins",
+      "pattern": "The most boring {thing} is also the one that {result}.",
+      "slots": [
+        "thing",
+        "result"
+      ],
+      "example": "The most boring retirement fund is also the one most people should own.",
+      "mechanic": "anti-hype",
+      "topics": [
+        "investing",
+        "tools"
+      ],
+      "formats": [
+        "short",
+        "carousel"
+      ],
+      "needs_verified_number": false,
+      "inspired_by": "Anti-hype positioning against the misleading trading-tip content flagged in the 2026 Legalaes study"
+    }
+  ]
+}

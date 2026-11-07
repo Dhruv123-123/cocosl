@@ -1,0 +1,69 @@
+{
+  "brand": "money-made-simple",
+  "products": [
+    {
+      "slug": "bill-cut-kit",
+      "name": "The Bill Cut Kit",
+      "tier": "tripwire",
+      "price": 5,
+      "pdf": "The-Bill-Cut-Kit.pdf",
+      "xlsx": "Bill-Cut-Tracker.xlsx",
+      "builder": "build_bill_cut",
+      "zip": "The-Bill-Cut-Kit.zip",
+      "next": ["20-minute-budget"]
+    },
+    {
+      "slug": "credit-report-audit-kit",
+      "name": "The Credit Report Audit Kit",
+      "tier": "entry",
+      "price": 9,
+      "pdf": "The-Credit-Report-Audit-Kit.pdf",
+      "xlsx": "Credit-Audit-Tracker.xlsx",
+      "builder": "build_credit_audit",
+      "zip": "The-Credit-Report-Audit-Kit.zip",
+      "next": ["debt-free-date-planner", "money-toolkit-bundle"]
+    },
+    {
+      "slug": "debt-free-date-planner",
+      "name": "The Debt-Free Date Planner",
+      "tier": "core",
+      "price": 17,
+      "pdf": "The-Debt-Free-Date-Planner.pdf",
+      "xlsx": "Debt-Free-Date-Planner.xlsx",
+      "builder": "build_debt_planner",
+      "zip": "The-Debt-Free-Date-Planner.zip",
+      "next": ["money-toolkit-bundle"]
+    },
+    {
+      "slug": "investing-starter-kit",
+      "name": "Start Investing With $100 a Month",
+      "tier": "core",
+      "price": 19,
+      "pdf": "Start-Investing-With-100-a-Month.pdf",
+      "xlsx": "Investing-Starter-Calculators.xlsx",
+      "builder": "build_investing",
+      "zip": "Start-Investing-With-100-a-Month.zip",
+      "next": ["money-toolkit-bundle"]
+    },
+    {
+      "slug": "money-toolkit-bundle",
+      "name": "The Money Made Simple Toolkit",
+      "tier": "bundle",
+      "price": 39,
+      "pdf": "Start-Here-Toolkit-Map.pdf",
+      "zip": "The-Money-Made-Simple-Toolkit.zip",
+      "bundle": ["bill-cut-kit", "20-minute-budget", "credit-report-audit-kit", "debt-free-date-planner", "investing-starter-kit"]
+    }
+  ],
+  "existing": [
+    {
+      "slug": "20-minute-budget",
+      "name": "The 20-Minute Budget",
+      "tier": "core",
+      "price": 12,
+      "dir": "../product",
+      "files": ["The-20-Minute-Budget.pdf", "20-Minute-Budget-Template.xlsx"],
+      "next": ["debt-free-date-planner", "investing-starter-kit", "money-toolkit-bundle"]
+    }
+  ]
+}

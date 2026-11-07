@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tablero de dinero gratis: hoja de cálculo desde el CSV de tu banco (Google Sheets y Excel)</title>
+<meta name="description" content="Convierte el CSV de tu banco en una hoja de cálculo mensual: cada movimiento en su categoría, lo que entra, lo que gastas y lo que te sobra cada mes, con fórmulas. Se abre en Google Sheets y Excel. Tu archivo nunca sale de tu navegador.">
+<meta property="og:title" content="Haz un tablero de dinero con el CSV de tu banco">
+<meta property="og:description" content="Categorías, totales por mes y fórmulas, para Google Sheets o Excel. Funciona en tu navegador.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="alternate" hreflang="en" href="money-dashboard.html">
+<link rel="alternate" hreflang="es" href="tablero-dinero.html">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Tablero de dinero","applicationCategory":"FinanceApplication","operatingSystem":"Any","inLanguage":"es","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="../es/" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Tablero de dinero</span></a>
+  <a class="badge" href="money-dashboard.html" hreflang="en" lang="en">English</a>
+</header>
+<main>
+  <h1 class="page-title">Haz un tablero de dinero con el CSV de tu banco</h1>
+  <p class="lede">Descarga tus movimientos del banco en CSV y suelta el archivo aquí. Ponemos cada movimiento en una categoría y armamos una hoja de cálculo con lo que entra, lo que gastas y lo que te sobra cada mes. Se abre en Google Sheets o Excel, y los totales son fórmulas, así que sigue funcionando cuando cambias algo. Tu archivo se lee en este dispositivo y nunca se sube.</p>
+
+  <section class="card">
+    <label class="drop" id="drop">
+      <input id="file" type="file" accept=".csv,text/csv,.txt" multiple hidden>
+      <b>Elige archivos CSV</b> o suéltalos aquí
+      <span class="tiny">Funciona mejor con la cuenta de cheques y las tarjetas juntas. En casi todos los bancos: Actividad o Estados de cuenta > Descargar > CSV.</span>
+    </label>
+    <div class="row" style="margin-top:12px">
+      <button id="sample" class="btn ghost small" type="button">Probar con datos de ejemplo</button>
+      <span id="file-msg" class="tiny" aria-live="polite"></span>
+    </div>
+  </section>
+
+  <details class="card">
+    <summary><b>¿No tienes CSV? Pega tus movimientos</b></summary>
+    <form id="paste-form" style="margin-top:10px">
+      <p class="tiny">Selecciona los movimientos en tu banca en línea, cópialos y pégalos aquí. Cada línea necesita fecha, descripción y monto.</p>
+      <textarea id="paste" rows="7" aria-label="Movimientos pegados" placeholder="10/03  NETFLIX.COM 866-579-7172      15.49&#10;10/05  EL SUPER #12                82.10"></textarea>
+      <div class="row" style="margin-top:8px"><button class="btn small" type="submit">Armar mi tablero</button><span id="paste-msg" class="tiny" aria-live="polite"></span></div>
+    </form>
+  </details>
+
+  <section id="results" hidden aria-live="polite">
+    <div class="card">
+      <h2>Tus meses de un vistazo</h2>
+      <div class="stats" id="stats"></div>
+      <div class="table-scroll" id="summary" tabindex="0" role="region" aria-label="Resumen mensual"></div>
+      <p class="tiny" id="dropped"></p>
+    </div>
+    <div class="card" id="sort"></div>
+    <div class="card">
+      <h2>Opcional: presupuesto mensual</h2>
+      <p class="tiny">Pon una meta para cualquier categoría y la hoja compara tu promedio mensual con ella. También puedes llenarlo después en la hoja.</p>
+      <div class="deal-form" id="budgets"></div>
+    </div>
+    <div class="card">
+      <h2>Descarga tu hoja de cálculo</h2>
+      <p>Cuatro pestañas: Resumen, Movimientos (cambia cualquier categoría con una lista), Categorías (agrega las tuyas y pon presupuestos) y Cómo usarlo. Si usas el <a href="networth.html">registro de patrimonio</a> (en inglés) en este navegador, tu patrimonio neto también tiene su pestaña.</p>
+      <div class="row"><button id="download" class="btn" type="button">Descargar el archivo .xlsx</button></div>
+      <p id="saved" class="tiny" aria-live="polite"></p>
+      <p class="tiny"><b>Google Sheets:</b> entra a drive.google.com, elige Nuevo > Subir archivo y ábrelo con Hojas de cálculo de Google. <b>Excel o Numbers:</b> solo ábrelo.</p>
+      <div class="offer-box" id="upsell" hidden></div>
+      <div class="offer-box"><h3>¿Quieres ahorrar más este año?</h3><p>Prueba el <a href="reto-ahorro.html">reto de ahorro de 52 semanas</a> o mira todas las <a href="../es/">herramientas gratis en español</a>.</p></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Qué hace con tu archivo</h2>
+    <ul class="checks">
+      <li>Lee las columnas de fecha, descripción y monto (en inglés o en español), de un archivo o de varios. Quita las filas repetidas.</li>
+      <li>Pone cada movimiento en una categoría por palabras clave: renta, supermercado, gasolina, comer fuera, suscripciones y 14 más. Lo que no reconoce queda en Otros para que tú lo ordenes.</li>
+      <li>Cuenta aparte las transferencias entre tus cuentas y los pagos de tarjeta, para no contar dos veces lo que gastaste con tarjeta.</li>
+      <li>Guarda los últimos 12 meses. Todo pasa en esta pestaña: sin subir nada, sin cuenta y sin entrar a tu banco.</li>
+    </ul>
+  </section>
+</main>
+<footer><p><a href="../es/">Todas las herramientas</a> · Los totales salen de los movimientos de tu archivo. No es asesoría financiera. Hecho por Money Made Simple.</p></footer>
+<script type="module" src="money-dashboard.js"></script>
+</body>
+</html>

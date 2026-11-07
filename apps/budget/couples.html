@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Couples Budget: Split Bills Fairly by Income + Monthly Money Date | Money Made Simple</title>
+<meta name="description" content="Split shared bills with your partner 50/50, by income or your own way. See what each of you puts in the joint account or owes to settle up, and run a 30-minute monthly money date. Free and private: saved in this browser only.">
+<meta property="og:title" content="Money date: split bills fairly as a couple">
+<meta property="og:description" content="50/50 or by income, who owes what, and a monthly money date checklist. Free and private.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Money date: couples budget","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Should couples split bills 50/50 or by income?","acceptedAnswer":{"@type":"Answer","text":"50/50 is simple and works when you earn about the same. If one of you earns much more, splitting by income (each pays the same percentage of their pay) keeps things fair and leaves both of you similar room for your own spending."}},
+{"@type":"Question","name":"What is a money date?","acceptedAnswer":{"@type":"Answer","text":"A short, regular check-in, about 30 minutes once a month, where you look at shared spending, settle up, plan big expenses and goals, and agree on each person's no-questions fun money. Starting with a win keeps it friendly."}}
+]}</script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="./" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Money date</span></a>
+  <span class="badge">Free</span>
+</header>
+<main>
+  <h1 class="page-title">Split shared bills fairly, then have a money date</h1>
+  <p class="lede">Choose 50/50, split by income, or your own split. We work out what each of you puts in or owes, and give you a 30-minute monthly check-in. Saved in this browser only, so use one shared device or swap backups.</p>
+
+  <section class="card">
+    <h2>1. The two of you</h2>
+    <form id="partners" class="deal-form">
+      <label>Partner 1 name <input name="name0" maxlength="30" placeholder="Alex" autocomplete="off"></label>
+      <label>Partner 1 take-home pay a month ($) <input name="income0" inputmode="decimal" placeholder="4200"></label>
+      <label>Partner 2 name <input name="name1" maxlength="30" placeholder="Sam" autocomplete="off"></label>
+      <label>Partner 2 take-home pay a month ($) <input name="income1" inputmode="decimal" placeholder="2800"></label>
+      <fieldset class="full methods">
+        <legend>How do you split shared costs?</legend>
+        <div id="method-list" class="method-list"></div>
+        <label class="custom-only" hidden><span id="custom-label">Partner 1 pays (%)</span> <input name="customA" type="number" min="0" max="100" step="1" value="50"></label>
+      </fieldset>
+    </form>
+  </section>
+
+  <section id="stats" class="stats" aria-live="polite"></section>
+
+  <section class="card">
+    <h2>2. Shared expenses each month</h2>
+    <form id="expense-form" class="deal-form">
+      <label>Expense <input name="name" maxlength="60" required placeholder="Rent"></label>
+      <label>Amount a month ($) <input name="amount" inputmode="decimal" required placeholder="1800"></label>
+      <label>Category <select name="category" id="e-cat"></select></label>
+      <label>Who pays it now <select name="paidBy" id="e-paid"></select></label>
+      <div class="row full"><button class="btn" type="submit">Add expense</button></div>
+    </form>
+    <p id="expense-msg" class="tiny" aria-live="polite"></p>
+    <ul id="expenses" class="plain-list expense-list"></ul>
+  </section>
+
+  <section id="split" class="card" aria-live="polite"></section>
+
+  <section class="card">
+    <h2>3. This month's money date</h2>
+    <p class="tiny">About 30 minutes, once a month. Start with a win and keep it kind.</p>
+    <div class="row"><label class="inline">Month <input id="month" type="month"></label><span id="streak" class="tiny"></span></div>
+    <ul id="checklist" class="checklist"></ul>
+    <label class="full">Notes for this month <textarea id="note" rows="3" maxlength="2000" placeholder="What we decided, what to look at next time"></textarea></label>
+  </section>
+
+  <section class="card">
+    <div class="row">
+      <button id="backup" class="btn ghost small" type="button">Download backup</button>
+      <label class="btn ghost small file">Restore<input id="restore" type="file" accept="application/json,.json" hidden></label>
+      <button id="reset" class="btn ghost small" type="button">Start over</button>
+    </div>
+    <p id="data-msg" class="tiny" aria-live="polite">Everything stays in this browser. To share with your partner, download a backup and send it to them.</p>
+  </section>
+
+  <section class="card pro-slot">
+    <h2>Budget the rest together</h2>
+    <p>Put your shared plan into the free <a href="./">20-Minute Budget</a>. Budget Pro adds unlimited goals for the things you're saving for together, every past and future month and bank CSV import.</p>
+    <div class="row"><a class="btn small" href="./" data-upgrade="couples-app">Open the budget app</a><a class="btn ghost small" href="pricing.html?from=couples" data-upgrade="couples">See Budget Pro</a></div>
+  </section>
+
+  <section class="card faq">
+    <h2>Questions</h2>
+    <h3>Should couples split bills 50/50 or by income?</h3>
+    <p>50/50 is simple and works when you earn about the same. If one of you earns much more, splitting by income (each pays the same percentage of their pay) keeps things fair and leaves both of you similar room for your own spending.</p>
+    <h3>What is a money date?</h3>
+    <p>A short, regular check-in, about 30 minutes once a month, where you look at shared spending, settle up, plan big expenses and goals, and agree on each person's no-questions fun money. Starting with a win keeps it friendly.</p>
+    <h3>Joint account or settle up?</h3>
+    <p>With a joint account, each of you moves your share in every month and the shared bills come out of it. Without one, whoever pays a bill keeps track, and once a month the person who paid less sends the difference. This tool does both.</p>
+  </section>
+</main>
+<footer><p><a href="./">Budget</a> · <a href="holiday.html">Holiday planner</a> · <a href="afford.html">Can I afford this?</a> · Not financial advice. Nothing you type is sent anywhere. Made by <a id="site-link" href="#">Money Made Simple</a>.</p></footer>
+<script type="module" src="couples.js"></script>
+</body>
+</html>

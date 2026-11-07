@@ -1,0 +1,23 @@
+# Tutorial 4 in self-serve-kits/tutorials/TUTORIALS.md: the free Lite maker. Top of the kit funnel
+# (pinned on TikTok, linked from the Lite Gumroad page and email 1 of the kit sequence).
+id: lite-90s
+title: "Your first listing video, free"
+size: [1920, 1080]
+palette: ["#16181d", "#eef2ec", "#5e8a6e"]
+footage_dir: footage/lite-90s     # or pass --footage
+beats:
+  - footage: lite-hook.mp4
+    say: "A free tool that turns your product photos into a short listing video. This one was made from three photos."
+    seconds: 8
+  - footage: lite-photos.mp4
+    say: "Open it in your browser and add your photos. The whole product, a close-up, and one that shows the size."
+  - footage: lite-words.mp4
+    say: "Type an opening line and three true facts: what it's made of, the size, what's included."
+    seconds: 9
+  - footage: lite-export.mp4
+    say: "Click Make my video. It records in real time, so keep the tab open. Then download the MP4."
+    seconds: 13
+  - footage: lite-offline.mp4
+    say: "It all runs on your computer. Your photos aren't uploaded anywhere, and it works offline."
+  - footage: lite-upgrade.mp4
+    say: "The free version has one template and a small watermark. The full kit has five templates, vertical video and a guide. The link is below."

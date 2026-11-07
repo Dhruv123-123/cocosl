@@ -738,6 +738,7 @@ def build_debt(ctx: dict) -> list[tuple[str, str]]:
     <p><button type="submit" class="btn">Work it out</button></p>
     <div class="debt-out" id="debt-out" aria-live="polite"><noscript><p>The calculator needs JavaScript. The worked examples below don't, and the <a href="{esc(calc)}">full calculator</a> is another option.</p></noscript></div>
   </form>
+  {ctx["plan_optin"]("debt-payoff", hidden=True) if "plan_optin" in ctx else ""}
   <div class="prose">
 <p>How it works: you pay a fixed total each month (all the minimums plus your extra). The extra goes to one target debt; when a debt is paid off, its minimum rolls on to the next one. <strong>Avalanche</strong> targets the highest rate first, <strong>snowball</strong> the smallest balance. More in <a href="{u('/blog/debt-avalanche-vs-snowball/')}">debt avalanche vs snowball</a>.</p>
 {"".join(sections)}

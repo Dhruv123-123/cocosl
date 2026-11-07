@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Where to Report a Scam: FTC, FBI IC3, FCC and Your State Attorney General | Scam Shield</title>
+<meta name="description" content="Pick what happened and see the first thing to do and where to report it: the FTC, FBI IC3, FCC, Postal Inspectors, IRS and Social Security impersonation, and your state attorney general. Works offline.">
+<meta property="og:title" content="Report a scam">
+<meta property="og:description" content="Pick what happened and see the first thing to do and where to report it: the FTC, FBI IC3, FCC, Postal Inspectors, IRS and Social Security impersonation, and your state attorney general. Works offline.">
+<meta name="theme-color" content="#0d1b2a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Scam Shield">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="report">
+<header class="top"><a class="logo" href="./"><span class="mark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.9-4.9 1.4 1.4-6.3 6.3Z"/></svg></span><span>Scam Shield</span></a><a class="back" href="./">← Scam Shield</a></header>
+<main>
+  <h1>Report a scam</h1>
+  <p class="lede">Pick what happened. Reporting won&#x27;t always get your money back, but it helps stop the people behind it, and some reports are needed for your bank or insurance.</p>
+  <section class="card"><h2>What happened?</h2><div id="situations" class="chips" role="group" aria-label="What happened"></div><div id="advice" aria-live="polite"></div></section>
+  <section class="card"><h2>Your state attorney general</h2>
+    <label for="state">State or territory</label><select id="state"><option value="">Choose…</option></select>
+    <p id="ag" aria-live="polite"></p>
+    <p class="tiny">Links from the <a id="ag-dir" href="#">National Association of Attorneys General directory</a> (checked November 2026). If a link has moved, the directory has the current one.</p></section>
+  <section class="card"><h2>All the places to report</h2><ul id="places" class="places"></ul></section>
+</main>
+<footer><p><a href="../">Message checker</a> · <a href="../scams/">Scam guides</a> · <a href="../privacy.html">Privacy</a> · Not legal advice. If you're in danger, call 911.</p></footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 ---
 title: Acorns: round-ups are a great habit, but check the fee maths
-seo_title: Acorns explained: round-ups, fees and the small-balance catch
+seo_title: "Acorns explained: round-ups, fees and small balances"
 description: Acorns invests your spare change for a flat monthly fee. How the tiers work, why the fee hurts small balances, and who it suits.
 date: 2026-12-11
 pillar: investing

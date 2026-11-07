@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bill Negotiation Tracker: Lower Your Bills Yourself | Money Made Simple</title>
+<meta name="description" content="Track every bill and when its promo price ends, get a call script for internet, phone and insurance, log what you got, and see what you saved. Do it yourself and keep 100% of the savings. No logins, nothing leaves your browser.">
+<meta property="og:title" content="Lower your bills yourself and keep 100% of the savings">
+<meta property="og:description" content="Promo end dates, call scripts, a call log and a running savings total. Private: runs in your browser.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Bill negotiation tracker","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="./" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Bill tracker</span></a>
+  <a id="plan-badge" class="badge" href="pricing.html?from=badge" data-upgrade="badge">Free · Upgrade</a>
+</header>
+<main>
+  <h1 class="page-title">Lower your bills yourself</h1>
+  <p class="lede">Bill negotiation services keep 35% to 60% of what they save you and want your account logins. Do the call yourself instead: add your bills, call when a promo price is about to end, and log what you got. Everything stays in this browser.</p>
+
+  <section id="stats" class="stats" aria-live="polite"></section>
+
+  <section class="card">
+    <h2>Add a bill</h2>
+    <form id="bill-form" class="tx-form bill-form">
+      <label>Name <input id="b-name" required maxlength="60" placeholder="Internet"></label>
+      <label>Type <select id="b-kind"></select></label>
+      <label>Monthly cost ($) <input id="b-monthly" type="number" min="0" step="any" inputmode="decimal" required></label>
+      <label>Promo price ends <input id="b-end" type="date"></label>
+      <button class="btn small">Add bill</button>
+    </form>
+    <p id="bill-msg" class="tiny" aria-live="polite"></p>
+    <details class="import">
+      <summary>Or find your bills in a bank CSV</summary>
+      <p class="tiny">Download 3 to 12 months of transactions as a CSV from your bank or card. We find the monthly charges, on this device.</p>
+      <div class="row"><label class="file btn ghost small">Choose a CSV <input id="csv" type="file" accept=".csv,text/csv" hidden></label><button id="sample" class="btn ghost small" type="button">Try sample data</button></div>
+      <div id="found"></div>
+    </details>
+  </section>
+
+  <section class="card">
+    <div class="head"><h2>Your bills</h2><span class="tiny">Soonest promo end first</span></div>
+    <div id="bills"></div>
+  </section>
+
+  <section class="card">
+    <h2>Reminders <span class="pro-tag">PRO</span></h2>
+    <p class="tiny">Add a reminder to your phone or computer calendar two weeks before each promo price ends, with the call script attached.</p>
+    <div class="row"><button id="ics" class="btn small" type="button">Add reminders to my calendar</button><button id="backup" class="btn ghost small" type="button">Download my data</button></div>
+    <p id="ics-msg" class="tiny" aria-live="polite"></p>
+  </section>
+
+  <section id="kit" class="card" hidden></section>
+
+  <section class="card">
+    <h2>Before you call</h2>
+    <ul class="checks">
+      <li>Have your latest bill in front of you: the plan name, what you pay, and the account number.</li>
+      <li>Look up what the company charges new customers, and one competitor's price. A real number is your best tool.</li>
+      <li>Ask for the retention or loyalty team. The first person you reach often can't change prices.</li>
+      <li>Be polite and specific: "What can you do to bring my bill to $50?"</li>
+      <li>No deal? Thank them and call back another day. You'll often get a different person with different offers.</li>
+      <li>Write down the new price, how long it lasts and a confirmation number, then log the call here.</li>
+    </ul>
+  </section>
+</main>
+<footer><p><a href="./">Budget app</a> · <a href="deals.html">0% deal countdown</a> · <a href="subscriptions.html">Subscription finder</a> · Not financial advice. Nothing here connects to your accounts. Made by Money Made Simple.</p></footer>
+<script type="module" src="bills.js"></script>
+</body>
+</html>

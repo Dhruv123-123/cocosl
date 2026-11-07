@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Can I Afford It? Car and Phone Calculator: Cash vs Loan vs BNPL | Money Made Simple</title>
+<meta name="description" content="Thinking about a new car or phone? Compare paying cash, a loan and buy now, pay later: the monthly payment, the interest, the true total, and whether it fits what's left after your bills. Free and private.">
+<meta property="og:title" content="Can I afford this? Cash vs loan vs buy now, pay later">
+<meta property="og:description" content="See the true cost of a car or phone three ways, and whether the payment fits your budget. Free and private.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Can I afford this? Big purchase checker","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How much car can I afford?","acceptedAnswer":{"@type":"Answer","text":"A common guide is the 20/4/10 rule: put 20% down, borrow for 4 years or less, and keep all car costs (payment, insurance, gas and upkeep) to about 10% of gross income, or roughly 15% of take-home pay."}},
+{"@type":"Question","name":"Is it better to pay cash or finance a phone?","acceptedAnswer":{"@type":"Answer","text":"Cash costs the least if it doesn't drain your emergency fund. A 0% carrier or maker installment plan costs the same as cash and spreads it out, but may tie you to a plan. Avoid paying interest on a phone."}},
+{"@type":"Question","name":"Is buy now, pay later a good way to buy something big?","acceptedAnswer":{"@type":"Answer","text":"Pay-in-4 is interest-free only when every payment goes through on time, and it is often not offered for large amounts. Longer monthly plans can charge high interest. Compare the total you will pay, not just the payment."}}
+]}</script>
+<script type="module" src="lib/embed-page.js"></script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="./" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Can I afford this?</span></a>
+  <span class="badge">Free</span>
+</header>
+<main>
+  <h1 class="page-title">Can I afford this?</h1>
+  <p class="lede">Thinking about a car, a phone or another big buy? See the true cost three ways (cash, a loan, buy now, pay later) and whether the payment fits what's left after your bills. Nothing you type leaves this browser.</p>
+
+  <form id="afford-form" class="card deal-form">
+    <label class="full">What are you buying? <select name="kind" id="kind"></select></label>
+    <label>Price ($) <input name="price" inputmode="decimal"></label>
+    <label>Sales tax (%) <input name="salesTax" inputmode="decimal"></label>
+    <label class="car-only">Fees: title, registration, doc fee ($) <input name="fees" inputmode="decimal"></label>
+    <label class="car-only">Trade-in value ($) <input name="tradeIn" inputmode="decimal"></label>
+    <label>Down payment if you borrow ($) <input name="down" inputmode="decimal"></label>
+    <label><span class="car-only-text">Insurance, gas and upkeep a month ($)</span><span class="not-car-text" hidden>New monthly costs that come with it ($)</span> <input name="extraMonthly" inputmode="decimal"></label>
+
+    <h2 class="full">Your money</h2>
+    <label>Savings you have now ($) <input name="savings" inputmode="decimal" placeholder="5000"></label>
+    <label>Savings you want to keep, no matter what ($) <input name="keepSaved" inputmode="decimal" placeholder="2000"></label>
+    <label>Take-home pay a month ($) <input name="takeHome" inputmode="decimal" placeholder="4200"></label>
+    <label>Bills and spending a month, including debt payments ($) <input name="bills" inputmode="decimal" placeholder="3100"></label>
+
+    <h2 class="full" id="loan-title">The loan</h2>
+    <label>Loan APR (%) <input name="loanApr" inputmode="decimal"></label>
+    <label>Loan length (months) <input name="loanMonths" type="number" min="1" max="96"></label>
+
+    <h2 class="full">Buy now, pay later</h2>
+    <label>Plan type <select name="bnplType" id="bnpl-type"></select></label>
+    <label class="bnpl-monthly">Plan APR (%) <input name="bnplApr" inputmode="decimal"></label>
+    <label class="bnpl-monthly">Number of monthly payments <input name="bnplMonths" type="number" min="2" max="60"></label>
+    <p class="tiny full"><a href="../money-calculators/take-home-pay/" id="paycheck-link">Not sure of your take-home pay?</a> Use the free paycheck calculator by state.</p>
+  </form>
+
+  <section id="verdict" class="card" aria-live="polite"></section>
+  <section id="compare" class="card"></section>
+  <ul id="tips" class="warnings"></ul>
+
+  <section class="card pro-slot">
+    <h2>Save for it instead</h2>
+    <p>Add it as a goal in the free <a href="./">20-Minute Budget</a> and see how many months to go. Budget Pro adds unlimited goals, every past and future month, bank CSV import and a countdown for 0% deals so a promo never turns into back-dated interest.</p>
+    <div class="row"><a class="btn small" href="./" data-upgrade="afford-app">Open the budget app</a><a class="btn ghost small" href="pricing.html?from=afford" data-upgrade="afford">See Budget Pro</a></div>
+  </section>
+
+  <section class="card faq">
+    <h2>Questions</h2>
+    <h3>How much car can I afford?</h3>
+    <p>A common guide is the 20/4/10 rule: put 20% down, borrow for 4 years or less, and keep all car costs (payment, insurance, gas and upkeep) to about 10% of gross income, or roughly 15% of take-home pay.</p>
+    <h3>Is it better to pay cash or finance a phone?</h3>
+    <p>Cash costs the least if it doesn't drain your emergency fund. A 0% carrier or maker installment plan costs the same as cash and spreads it out, but may tie you to a plan. Avoid paying interest on a phone.</p>
+    <h3>Is buy now, pay later a good way to buy something big?</h3>
+    <p>Pay-in-4 is interest-free only when every payment goes through on time, and it is often not offered for large amounts. Longer monthly plans can charge high interest. Compare the total you will pay, not just the payment.</p>
+    <h3>How does it decide?</h3>
+    <p>An option "fits" when its monthly cost is no more than half of what's left after your bills, and paying it doesn't take your savings below the amount you want to keep. "Tight" means it uses most of what's left. It's a rule of thumb, not advice.</p>
+  </section>
+</main>
+<footer><p><a href="./">Budget</a> · <a href="holiday.html">Holiday planner</a> · <a href="deals.html">0% deal countdown</a> · Not financial advice. Nothing you type is sent anywhere. Made by <a id="site-link" href="#">Money Made Simple</a>.</p></footer>
+<script type="module" src="afford.js"></script>
+</body>
+</html>

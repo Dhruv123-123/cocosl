@@ -36,6 +36,9 @@ ETSY_SAME = {"20-minute-budget": "the-20-minute-budget", "bill-cut-kit": "bill-c
              "credit-report-audit-kit": "credit-report-audit-kit", "debt-free-date-planner": "debt-free-date-planner",
              "investing-starter-kit": "investing-starter-kit", "money-toolkit-bundle": "money-toolkit-bundle"}
 ETSY_BUNDLES = {"budget-binder-bundle", "savings-challenge-pack", "mega-budget-bundle"}
+# Goal bundles (printables only) for /shop/<goal>/, from the products thread's launch/etsy/listings_more.py BUNDLES.
+# They have a LISTING.md and mockups in etsy/<slug>/ but no row in listings.csv.
+ETSY_GOAL_BUNDLES = {"debt-payoff-bundle": 8, "first-paycheck-budget-bundle": 9, "freelance-budget-bundle": 10}
 
 
 def group(slug: str) -> str:
@@ -101,7 +104,7 @@ def main(src: Path) -> None:
                       "blurb": blurb, "image": card_image(cover, slug),
                       "bundle": slug == "money-toolkit-bundle",
                       "separately": (separately(md) or 62) if slug == "money-toolkit-bundle" else None,
-                      "stores": ["gumroad"] + (["etsy"] if etsy_slug in etsy_rows else []),
+                      "stores": ["gumroad"],  # Etsy bans AI-generated guides (Oct 22 2026): kits are Gumroad only
                       "page": "/products/the-20-minute-budget/" if slug == "the-20-minute-budget" else ""})
 
     # ---- templates
@@ -130,6 +133,19 @@ def main(src: Path) -> None:
         if slug in ETSY_BUNDLES:
             it["image"] = card_image(src / "etsy" / slug / "mockup-01-hero.png", slug)
         items.append(it)
+
+    for slug, price in ETSY_GOAL_BUNDLES.items():
+        folder = src / "etsy" / slug
+        if not (folder / "LISTING.md").exists() or any(i["slug"] == slug for i in items):
+            continue
+        md = (folder / "LISTING.md").read_text()
+        title = re.search(r"^## Title.*\n(.+)$", md, re.M).group(1)
+        name = re.sub(r" Printable", "", title.split(":")[0]).strip()
+        cover = folder / "mockup-01-clean.png"
+        items.append({"slug": slug, "name": name, "kind": "printable", "group": group(slug), "price": float(price),
+                      "blurb": re.sub(r"^This .+? in US Letter and A4\. ", "", first_desc_line(md)), "bundle": True,
+                      "separately": separately(md), "stores": ["etsy"],
+                      "image": card_image(cover if cover.exists() else folder / "mockup-02-hero.png", slug)})
 
     for it in items:  # keep links already pasted in
         if old.get(it["slug"], {}).get("url"):

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora de envíos de dinero: comisión, tipo de cambio y el impuesto de 1% | Calculadoras</title>
+<meta name="description" content="Mira cuánto te cuesta de verdad mandar dinero a tu familia: la comisión, el margen escondido en el tipo de cambio y el nuevo impuesto federal de 1% a envíos en efectivo. Solo usa los números que escribes, sin datos de empresas.">
+<link rel="canonical" href="https://moneymadesimple.netlify.app/calculators/es/remittance-cost/">
+<link rel="alternate" hreflang="en" href="https://moneymadesimple.netlify.app/calculators/remittance-cost/">
+<link rel="alternate" hreflang="es" href="https://moneymadesimple.netlify.app/calculators/es/remittance-cost/">
+<meta property="og:title" content="Calculadora de envíos de dinero: comisión, tipo de cambio y el impuesto de 1%">
+<meta property="og:description" content="Mira cuánto te cuesta de verdad mandar dinero a tu familia: la comisión, el margen escondido en el tipo de cambio y el nuevo impuesto federal de 1% a envíos en efectivo. Solo usa los números que escribes, sin datos de empresas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://moneymadesimple.netlify.app/calculators/es/remittance-cost/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0b1d13">
+<link rel="stylesheet" href="../../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Calculadora de envíos de dinero: cuánto llega de verdad","url":"https://moneymadesimple.netlify.app/calculators/es/remittance-cost/","inLanguage":"es","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"es","mainEntity":[{"@type":"Question","name":"¿Qué es el margen en el tipo de cambio?","acceptedAnswer":{"@type":"Answer","text":"Muchas empresas te dan menos pesos (o quetzales, lempiras, pesos dominicanos) por dólar que el tipo de cambio del mercado y se quedan con la diferencia. Es un cobro que no aparece como comisión. Para calcularlo, compara su tipo de cambio con el del mercado el mismo día: (tipo del mercado menos el de ellos) dividido entre el tipo del mercado."}},{"@type":"Question","name":"¿Dónde veo el tipo de cambio del mercado?","acceptedAnswer":{"@type":"Answer","text":"Busca la pareja de monedas (por ejemplo \"USD a MXN\") el día que envías. Ese tipo de cambio medio es al que cambian los bancos entre sí. Revísalo justo antes de pagar, porque cambia cada minuto."}},{"@type":"Question","name":"¿Qué es el impuesto de 1% a los envíos?","acceptedAnswer":{"@type":"Answer","text":"Desde el 1 de enero de 2026, los envíos al extranjero pagados en efectivo, giro postal o cheque de caja pagan un impuesto federal de 1% (sección 4475 del Código de Impuestos Internos). Si pagas desde una cuenta de banco de EE. UU. o con tarjeta de débito o crédito de EE. UU., no se cobra. La empresa lo cobra cuando pagas."}},{"@type":"Question","name":"¿Qué me tiene que decir la empresa?","acceptedAnswer":{"@type":"Answer","text":"Según la regla de envíos de dinero de la CFPB, antes de que pagues la empresa debe mostrarte las comisiones, el tipo de cambio, los impuestos que cobra y la cantidad que va a llegar. Te da un recibo, y casi siempre puedes cancelar dentro de 30 minutos y recibir todo tu dinero. Si el dinero no llega, la empresa tiene que investigar si lo reportas dentro de 180 días."}},{"@type":"Question","name":"¿Lo más barato siempre es lo mejor?","acceptedAnswer":{"@type":"Answer","text":"Casi siempre, pero revisa también qué tan rápido llega, cómo lo recibe tu familia (depósito en banco, retiro en efectivo o billetera en el celular) y si la empresa tiene licencia en tu estado."}}]}</script>
+</head>
+<body data-calc="remittance-cost" data-root="../../">
+<header class="top"><a class="logo" href="../../es/"><span class="mark">MS</span> <span>Calculadoras de dinero</span></a>
+<nav class="nav"><a class="home" href="../../remittance-cost/" hreflang="en">English</a></nav></header>
+<main>
+
+<h1>Calculadora de envíos de dinero: cuánto llega de verdad</h1>
+<p class="lede">Escribe la cantidad, la comisión y el tipo de cambio de la empresa o su margen, más el tipo de cambio del mercado del mismo día. Te mostramos cuánto llega, cuánto te cuesta el envío y cuánto suma en un año.</p>
+<div class="layout">
+  <form id="calc-form" class="card" autocomplete="off"><div id="fields" class="grid"></div>
+    <button type="button" id="share" class="link">Copiar un enlace con estos números</button>
+  </form>
+  <section class="card result" aria-live="polite"><div id="result"></div><div id="offers"></div></section>
+</div>
+
+<section class="card signup-box">
+  <h2>Un paso de dinero por semana, gratis</h2>
+  <p class="signup-pitch"></p>
+  <form class="signup" name="calculadoras-registro" method="POST" data-netlify="true" netlify-honeypot="website">
+    <input type="hidden" name="form-name" value="calculadoras-registro">
+    <p class="hp"><label>Deja esto vacío <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <label class="sr" for="signup-email">Correo</label>
+    <input id="signup-email" type="email" name="email" placeholder="tu@ejemplo.com" required autocomplete="email">
+    <button class="btn">Suscribirme</button>
+  </form>
+  <p class="tiny">Un correo útil por semana. Cancela con un clic.</p>
+</section>
+<section class="faq"><h2>Preguntas</h2><h3>¿Qué es el margen en el tipo de cambio?</h3><p>Muchas empresas te dan menos pesos (o quetzales, lempiras, pesos dominicanos) por dólar que el tipo de cambio del mercado y se quedan con la diferencia. Es un cobro que no aparece como comisión. Para calcularlo, compara su tipo de cambio con el del mercado el mismo día: (tipo del mercado menos el de ellos) dividido entre el tipo del mercado.</p>
+<h3>¿Dónde veo el tipo de cambio del mercado?</h3><p>Busca la pareja de monedas (por ejemplo &quot;USD a MXN&quot;) el día que envías. Ese tipo de cambio medio es al que cambian los bancos entre sí. Revísalo justo antes de pagar, porque cambia cada minuto.</p>
+<h3>¿Qué es el impuesto de 1% a los envíos?</h3><p>Desde el 1 de enero de 2026, los envíos al extranjero pagados en efectivo, giro postal o cheque de caja pagan un impuesto federal de 1% (sección 4475 del Código de Impuestos Internos). Si pagas desde una cuenta de banco de EE. UU. o con tarjeta de débito o crédito de EE. UU., no se cobra. La empresa lo cobra cuando pagas.</p>
+<h3>¿Qué me tiene que decir la empresa?</h3><p>Según la regla de envíos de dinero de la CFPB, antes de que pagues la empresa debe mostrarte las comisiones, el tipo de cambio, los impuestos que cobra y la cantidad que va a llegar. Te da un recibo, y casi siempre puedes cancelar dentro de 30 minutos y recibir todo tu dinero. Si el dinero no llega, la empresa tiene que investigar si lo reportas dentro de 180 días.</p>
+<h3>¿Lo más barato siempre es lo mejor?</h3><p>Casi siempre, pero revisa también qué tan rápido llega, cómo lo recibe tu familia (depósito en banco, retiro en efectivo o billetera en el celular) y si la empresa tiene licencia en tu estado.</p></section>
+<p class="more"><a href="../">Más calculadoras</a></p>
+</main>
+<footer>
+<p>Herramientas educativas, no asesoría financiera, fiscal ni de inversión. Los resultados son estimaciones con los números que ingresas. Revisa las reglas y tasas actuales con la fuente oficial antes de actuar.</p>
+<p>Tus números se quedan en tu navegador; nada de lo que escribes se envía a ningún lado. Algunos enlaces son de afiliado.</p>
+<p><a href="../../es/">Todas las calculadoras</a></p>
+</footer>
+<script type="module" src="../../app.js"></script>
+</body>
+</html>

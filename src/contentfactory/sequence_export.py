@@ -50,16 +50,18 @@ def _strip_footer(r: dict) -> tuple[str, str]:
     return html, text
 
 
-def export(factory, slug: str, platform: str = "sender", when: date | None = None):
+def export(factory, slug: str, platform: str = "sender", when: date | None = None, sequence: str = ""):
     from .funnel import mailer
     from .funnel.sequences import _IF_RE, load_sequence, render_step
     brand = factory.brand(slug)
-    seq = load_sequence(factory.settings, slug)
+    seq = load_sequence(factory.settings, slug, sequence)
     if seq is None:
-        raise SystemExit(f"{slug} has no welcome sequence (brands/sequences/{slug}.yaml)")
+        where = f"brands/sequences/{slug}.{sequence}.yaml" if sequence else f"brands/sequences/{slug}.yaml"
+        raise SystemExit(f"{slug} has no {sequence or 'welcome'} sequence ({where})")
     base = mailer.public_url(factory.settings, "")
     now = datetime.now(timezone.utc)
-    out = factory.settings.output_dir / "sequences" / slug / f"{(when or date.today()).isoformat()}-{platform}"
+    tag = f"-{sequence}" if sequence else ""
+    out = factory.settings.output_dir / "sequences" / slug / f"{(when or date.today()).isoformat()}{tag}-{platform}"
     out.mkdir(parents=True, exist_ok=True)
     prev, rows = 0, []
     for n, step in enumerate(seq.steps, 1):
@@ -80,7 +82,7 @@ def export(factory, slug: str, platform: str = "sender", when: date | None = Non
         (d / "DELAY.txt").write_text(f"Wait {delay} day(s) after the {'signup' if n == 1 else 'previous email'}, "
                                      f"then send this (day {step.day_offset} of the sequence).\n")
         rows.append((n, step.day_offset, delay, r["subject"], conditional))
-    lines = [f"# Build {brand.name}'s welcome automation in Sender", "",
+    lines = [f"# Build {brand.name}'s {sequence or 'welcome'} automation in Sender", "",
              "1. Sender > Automation > Create > Start from scratch. Trigger: **Subscriber joins a group** (the group "
              "your signup form adds people to).",
              "2. For each email below, in order: add a **Delay** step with the days shown, then an **Email** step. "
@@ -94,6 +96,12 @@ def export(factory, slug: str, platform: str = "sender", when: date | None = Non
              f"6. Import existing subscribers with `factory subscribers-export {slug} --for sender`: the -welcomed file "
              "with \"Trigger active automations upon import\" UNTICKED.", "",
              "| # | Delay | Day | Subject | Versions |", "|---|---|---|---|---|"]
+    if sequence:  # a course: started by its own signup source, not the welcome; the factory never sends it
+        lines = [ln for ln in lines if not ln.startswith(("5. ", "6. "))]
+        lines[2] = ("1. Sender > Automation > Create > Start from scratch. Trigger: **Subscriber joins a group**: the "
+                    f"group the {sequence} signup form adds people to (the site sends its signup source).")
+        idx = next(i for i, ln in enumerate(lines) if ln.startswith("4. "))
+        lines.insert(idx + 1, "5. Turn the automation on. The factory's worker doesn't send this sequence.")
     for n, day, delay, subject, cond in rows:
         lines.append(f"| {n} | {delay} day(s) | {day} | {subject} | {'launch + no-launch' if cond else 'one'} |")
     if any(r[4] for r in rows):
@@ -109,8 +117,10 @@ def register(sub, factory_fn) -> None:
     s = sub.add_parser("sequence-export", help="the welcome sequence as an automation to build in Sender (never sends)")
     s.add_argument("brand")
     s.add_argument("--for", dest="platform", choices=["sender"], default="sender")
+    s.add_argument("--sequence", default="", help="an extra sequence, brands/sequences/<brand>.<name>.yaml "
+                   "(e.g. money-basics); default: the welcome sequence")
 
     def cmd(a):
-        out, rows = export(factory_fn(a), a.brand, a.platform)
+        out, rows = export(factory_fn(a), a.brand, a.platform, sequence=a.sequence)
         print(f"{len(rows)} email(s), delays {', '.join(str(r[2]) for r in rows)} day(s) -> {out}")
     s.set_defaults(func=cmd)

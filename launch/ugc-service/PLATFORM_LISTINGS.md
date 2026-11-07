@@ -48,7 +48,7 @@ without paying for a shoot.
 
 WHAT YOU GET
 - 15-30 second vertical ads (9:16, 1080x1920 MP4)
-- Script written by a human from your product facts. You approve it before production
+- Script drafted with AI help from your product facts, edited by a person, and approved by you before production
 - AI-generated presenter and/or AI voice, plus your own product photos or footage
 - Burned-in captions and licensed music
 - An on-screen "AI-generated" label on every ad
@@ -110,7 +110,7 @@ Why brands use them: paid social rewards testing lots of creative. AI ads let yo
 the cost of one traditional shoot, then double down on what works.
 
 What you get on every project:
-- Human-written scripts based on your product facts, approved by you before production
+- Scripts drafted with AI help from your product facts, edited by a person, and approved by you before production
 - 15-30s vertical MP4s with captions and licensed music
 - 1-3 hook variations per ad for A/B testing
 - An on-screen AI label on every ad. I don't make fake testimonials or reviews.

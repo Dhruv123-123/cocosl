@@ -1,0 +1,12 @@
+/* Kindle EPUB styles: kept simple so Kindle's own fonts and reader settings work. */
+body { line-height: 1.45; }
+h1 { font-size: 1.6em; line-height: 1.2; margin: 1.2em 0 0.8em; page-break-before: always; }
+h1.part { text-align: center; margin-top: 30%; }
+h2 { font-size: 1.25em; line-height: 1.25; margin: 1.4em 0 0.4em; page-break-after: avoid; }
+h3 { font-size: 1.05em; margin: 1.1em 0 0.3em; page-break-after: avoid; }
+p { margin: 0 0 0.6em; text-indent: 0; }
+blockquote { margin: 0.6em 0 0.8em 1em; padding-left: 0.6em; border-left: 2px solid #999; }
+table { border-collapse: collapse; width: 100%; margin: 0.6em 0 1em; font-size: 0.9em; }
+th, td { border-bottom: 1px solid #bbb; padding: 0.25em 0.4em 0.25em 0; text-align: left; vertical-align: top; }
+th { border-bottom: 2px solid #333; }
+.line-block { margin-bottom: 0.6em; }

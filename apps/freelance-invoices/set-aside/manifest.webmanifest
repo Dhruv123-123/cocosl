@@ -1,0 +1,18 @@
+{
+  "name": "1099 Tax Set-Aside",
+  "short_name": "Set-Aside",
+  "description": "How much of each freelance payment to save for taxes, and what to send the IRS each quarter.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f3ea",
+  "theme_color": "#14213d",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ],
+  "shortcuts": [
+    { "name": "I got paid", "short_name": "Got paid", "url": "./?add=1", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] }
+  ]
+}

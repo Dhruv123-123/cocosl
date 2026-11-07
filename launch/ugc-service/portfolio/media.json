@@ -48,5 +48,105 @@
     "height": 1920,
     "label": "AI-generated \u00b7 Ad",
     "bytes": 6001684
+  },
+  "hollowick": {
+    "video": "videos/hollowick.mp4",
+    "poster": "posters/hollowick.jpg",
+    "captions": "videos/hollowick.srt",
+    "duration": 15.1,
+    "width": 1080,
+    "height": 1920,
+    "label": "AI-generated \u00b7 Ad",
+    "bytes": 3599763
+  },
+  "ninth-hour-coffee": {
+    "video": "videos/ninth-hour-coffee.mp4",
+    "poster": "posters/ninth-hour-coffee.jpg",
+    "captions": "videos/ninth-hour-coffee.srt",
+    "duration": 20.7,
+    "width": 1080,
+    "height": 1920,
+    "label": "AI-generated \u00b7 Ad",
+    "bytes": 4419652
+  },
+  "tumbletree": {
+    "video": "videos/tumbletree.mp4",
+    "poster": "posters/tumbletree.jpg",
+    "captions": "videos/tumbletree.srt",
+    "duration": 16.6,
+    "width": 1080,
+    "height": 1920,
+    "label": "AI-generated \u00b7 Ad",
+    "bytes": 4572138
+  },
+  "saltmeadow": {
+    "video": "videos/saltmeadow.mp4",
+    "poster": "posters/saltmeadow.jpg",
+    "captions": "videos/saltmeadow.srt",
+    "duration": 16.2,
+    "width": 1080,
+    "height": 1920,
+    "label": "AI-generated \u00b7 Ad",
+    "bytes": 4616515
+  },
+  "wren-and-wire": {
+    "video": "videos/wren-and-wire.mp4",
+    "poster": "posters/wren-and-wire.jpg",
+    "captions": "videos/wren-and-wire.srt",
+    "duration": 15.5,
+    "width": 1080,
+    "height": 1920,
+    "label": "AI-generated \u00b7 Ad",
+    "bytes": 4321834
+  },
+  "potbound": {
+    "video": "videos/potbound.mp4",
+    "poster": "posters/potbound.jpg",
+    "captions": "videos/potbound.srt",
+    "duration": 16.7,
+    "width": 1080,
+    "height": 1920,
+    "label": "AI-generated \u00b7 Ad",
+    "bytes": 4115947
+  },
+  "grate-escape": {
+    "video": "videos/grate-escape.mp4",
+    "poster": "posters/grate-escape.jpg",
+    "captions": "videos/grate-escape.srt",
+    "duration": 11.4,
+    "width": 1080,
+    "height": 1920,
+    "label": "AI-generated \u00b7 Ad",
+    "bytes": 2916249
+  },
+  "wrapsody": {
+    "video": "videos/wrapsody.mp4",
+    "poster": "posters/wrapsody.jpg",
+    "captions": "videos/wrapsody.srt",
+    "duration": 16.2,
+    "width": 1080,
+    "height": 1920,
+    "label": "AI-generated \u00b7 Ad",
+    "bytes": 4549307
+  },
+  "loopline": {
+    "video": "videos/loopline.mp4",
+    "poster": "posters/loopline.jpg",
+    "captions": "videos/loopline.srt",
+    "duration": 18.1,
+    "width": 1080,
+    "height": 1920,
+    "label": "AI-generated \u00b7 Ad",
+    "bytes": 4512550
+  },
+  "packwell": {
+    "video": "videos/packwell.mp4",
+    "poster": "posters/packwell.jpg",
+    "captions": "videos/packwell.srt",
+    "duration": 15.9,
+    "width": 1080,
+    "height": 1920,
+    "label": "AI-generated \u00b7 Ad",
+    "bytes": 4489272
   }
 }

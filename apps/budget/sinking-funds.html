@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sinking Funds Planner: How Much to Save Each Month for Bills You Know Are Coming | Money Made Simple</title>
+<meta name="description" content="List the big bills you know are coming, like car insurance, the holidays and repairs, and see exactly how much to put away each month and each paycheck. Pastes straight into Money Dashboard Pro. Free, private, no sign-up.">
+<meta property="og:title" content="Save a little each month for the big bills you know are coming">
+<meta property="og:description" content="List the big bills you know are coming, like car insurance, the holidays and repairs, and see exactly how much to put away each month and each paycheck. Pastes straight into Money Dashboard Pro. Free, private, no sign-up.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="alternate" hreflang="en" href="sinking-funds.html">
+<link rel="alternate" hreflang="es" href="fondos-ahorro.html">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Sinking funds","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a sinking fund?", "acceptedAnswer": {"@type": "Answer", "text": "Money you put aside a little at a time for a cost you know is coming. Instead of finding $900 for car insurance in one month, you save $150 a month for six months."}}, {"@type": "Question", "name": "Where should I keep sinking funds?", "acceptedAnswer": {"@type": "Answer", "text": "In a savings account separate from your checking, ideally a high-yield one. Many online banks let you open several labeled savings \"buckets\" in one account."}}, {"@type": "Question", "name": "How is \"save each month\" worked out?", "acceptedAnswer": {"@type": "Answer", "text": "What's still to save divided by the months left, counting the month it's due. If the date has already come, it shows the whole amount left. It's the same sum the Sinking Funds tab in Money Dashboard Pro uses."}}]}</script>
+<script type="module" src="lib/embed-page.js"></script>
+</head>
+<body class="sf">
+<header class="top">
+  <a class="logo" href="../" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Sinking funds</span></a>
+  <a class="badge" href="fondos-ahorro.html" hreflang="es" lang="es">Español</a>
+</header>
+<main>
+  <h1 class="page-title">Save a little each month for the big bills you know are coming</h1>
+  <p class="lede">Car insurance every six months, the holidays, new tires: none of them are surprises, they just feel like it. Add each one with what it costs and when it&#x27;s due, and we work out how much to put away each month and each paycheck. Saved in this browser only.</p>
+
+  <form id="fund-form" class="card deal-form">
+    <h2 class="full">Add a fund</h2>
+    <label class="full">What it&#x27;s for<input name="name" maxlength="60" autocomplete="off"></label>
+    <label>How much you need ($)<input name="target" type="number" min="1" step="1" inputmode="decimal"></label>
+    <label>Needed by<input name="due" type="date"></label>
+    <label>Saved already ($)<input name="saved" type="number" min="0" step="1" inputmode="decimal" placeholder="0"></label>
+    <div class="full row"><button class="btn" type="submit">Add fund</button><span id="form-msg" class="tiny" role="alert"></span></div>
+    <div class="full"><b class="tiny">Ideas to start from</b><div class="chips" id="ideas"></div></div>
+  </form>
+
+  <section class="card" aria-labelledby="h-plan">
+    <h2 id="h-plan">Your plan</h2>
+    <label>You&#x27;re paid<select id="per-pay"></select></label>
+    <div id="stats" class="stats" aria-live="polite"></div>
+    <p id="next" aria-live="polite"></p>
+    <ul id="funds" class="funds"></ul>
+  </section>
+
+  <section class="card" id="export" hidden>
+    <h2>Put it in Money Dashboard Pro</h2>
+    <p>Open the Sinking Funds tab. Click cell A5 and paste your funds; click cell K5 and paste what you&#x27;ve saved so far. The sheet keeps the plan up to date as you log each deposit.</p>
+    <label for="t-funds" class="sr-only">Copy funds (paste at A5)</label><textarea id="t-funds" rows="3" readonly></textarea>
+    <label for="t-deposits" class="sr-only">Copy saved so far (paste at K5)</label><textarea id="t-deposits" rows="2" readonly></textarea>
+    <div class="row" style="margin-top:10px"><button id="copy-funds" class="btn small" type="button">Copy funds (paste at A5)</button><button id="copy-deposits" class="btn ghost small" type="button">Copy saved so far (paste at K5)</button><button id="csv" class="btn ghost small" type="button">Download as CSV</button></div>
+    <p id="copy-msg" class="tiny" aria-live="polite"></p>
+    <div class="offer-box" id="upsell" hidden></div>
+  </section>
+
+  <section class="card faq">
+    <h3>What is a sinking fund?</h3>
+    <p>Money you put aside a little at a time for a cost you know is coming. Instead of finding $900 for car insurance in one month, you save $150 a month for six months.</p>
+    <h3>Where should I keep sinking funds?</h3>
+    <p>In a savings account separate from your checking, ideally a high-yield one. Many online banks let you open several labeled savings &quot;buckets&quot; in one account.</p>
+    <h3>How is &quot;save each month&quot; worked out?</h3>
+    <p>What&#x27;s still to save divided by the months left, counting the month it&#x27;s due. If the date has already come, it shows the whole amount left. It&#x27;s the same sum the Sinking Funds tab in Money Dashboard Pro uses.</p>
+  </section>
+</main>
+<footer><p><a href="../">All free tools</a> · <a href="paycheck-plan.html">Paycheck planner</a> · <a href="money-dashboard.html">Money dashboard</a> · Not financial advice. Nothing you type leaves this browser. Made by Money Made Simple.</p></footer>
+<script type="module" src="sinking-funds.js"></script>
+</body>
+</html>

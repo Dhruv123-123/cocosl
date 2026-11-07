@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paycheck to Budget Planner: 50/30/20 and Zero-Based Budget From Your Take-Home Pay | Money Made Simple</title>
+<meta name="description" content="Enter your take-home pay per paycheck and get a monthly budget two ways: the 50/30/20 split and a zero-based plan where every dollar gets a job. Export it to the free money dashboard spreadsheet. No sign-up, nothing leaves your browser.">
+<meta property="og:title" content="Turn your paycheck into a budget">
+<meta property="og:description" content="Enter your take-home pay per paycheck and get a monthly budget two ways: the 50/30/20 split and a zero-based plan where every dollar gets a job. Export it to the free money dashboard spreadsheet. No sign-up, nothing leaves your browser.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="alternate" hreflang="en" href="paycheck-plan.html">
+<link rel="alternate" hreflang="es" href="plan-quincena.html">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Paycheck planner","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Should I budget on take-home pay or salary?", "acceptedAnswer": {"@type": "Answer", "text": "Take-home: the amount that actually lands in your account after taxes, insurance and retirement contributions. That is the money you can plan."}}, {"@type": "Question", "name": "What if I am paid every two weeks?", "acceptedAnswer": {"@type": "Answer", "text": "Plan on two paychecks a month. Twice a year a month has three, and that extra paycheck can go straight to savings or debt without breaking the plan."}}, {"@type": "Question", "name": "What if my needs are more than 50%?", "acceptedAnswer": {"@type": "Answer", "text": "Common where rent is high. Use the zero-based plan with your real numbers, and close the gap from wants first. The split is a guide, not a rule."}}]}</script>
+<script type="module" src="lib/embed-page.js"></script>
+</head>
+<body class="pp">
+<header class="top">
+  <a class="logo" href="../" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Paycheck planner</span></a>
+  <a class="badge" href="plan-quincena.html" hreflang="es" lang="es">Español</a>
+</header>
+<main>
+  <h1 class="page-title">Turn your paycheck into a budget</h1>
+  <p class="lede">Enter what lands in your account each payday. We turn it into a monthly amount, split it 50/30/20, and help you build a zero-based plan where every dollar has a job. Your plan stays in this browser and goes straight into the money dashboard maker.</p>
+
+  <form id="pay-form" class="card deal-form">
+    <label>Take-home pay per paycheck ($)<input name="pay" type="number" min="0" step="0.01" inputmode="decimal" value="1600"></label>
+    <label>How often you are paid<select name="freq"></select></label>
+    <label class="full" id="plan-on-row">Plan on<select name="planOn"></select></label>
+    <div class="full" id="income" aria-live="polite"></div>
+  </form>
+
+  <div id="plans">
+  <section class="card">
+    <h2>The 50/30/20 split</h2>
+    <p class="tiny">A simple starting point: half on needs, 30% on wants and 20% on savings and paying debt down faster.</p>
+    <div class="split" id="split"></div>
+    <div class="row" style="margin-top:12px"><button id="use-split" class="btn small" type="button">Use these numbers as my plan</button></div>
+  </section>
+
+  <section class="card">
+    <h2>Your zero-based plan</h2>
+    <p class="tiny">Give every dollar a job, category by category, until $0 is left. Start from the 50/30/20 numbers or type your own.</p>
+    <div id="zero"></div>
+    <div id="left" class="plan-left" aria-live="polite"></div>
+    <div class="row" style="margin-top:12px"><button id="clear" class="btn ghost small" type="button">Clear</button></div>
+  </section>
+
+  <section class="card">
+    <h2>Take it further</h2>
+    <p>Open the money dashboard maker: your plan fills in its budgets, and your spreadsheet compares each month with them. Or download the plan as a CSV to keep, or to paste into the Pro sheet&#x27;s Categories tab.</p>
+    <div class="row"><a id="to-dashboard" class="btn" href="money-dashboard.html">Open the money dashboard</a><button id="csv" class="btn ghost" type="button">Download the plan (CSV)</button></div>
+  </section>
+  </div>
+
+  <section class="card faq">
+    <h3>Should I budget on take-home pay or salary?</h3>
+    <p>Take-home: the amount that actually lands in your account after taxes, insurance and retirement contributions. That is the money you can plan.</p>
+    <h3>What if I am paid every two weeks?</h3>
+    <p>Plan on two paychecks a month. Twice a year a month has three, and that extra paycheck can go straight to savings or debt without breaking the plan.</p>
+    <h3>What if my needs are more than 50%?</h3>
+    <p>Common where rent is high. Use the zero-based plan with your real numbers, and close the gap from wants first. The split is a guide, not a rule.</p>
+  </section>
+</main>
+<footer><p><a href="../">All free tools</a> · <a href="./">Budget</a> · Not financial advice. Nothing you type leaves this browser. Made by Money Made Simple.</p></footer>
+<script type="module" src="paycheck-plan.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "extName": {
+    "message": "Scam Decoded: Is This a Scam?"
+  },
+  "extDescription": {
+    "message": "Check a text, email, link or the page you're on for scam red flags in one click. Runs on your device; nothing is sent anywhere."
+  },
+  "actionTitle": {
+    "message": "Is this a scam?"
+  },
+  "menuSelection": {
+    "message": "Check this text with Scam Decoded"
+  },
+  "menuLink": {
+    "message": "Check this link with Scam Decoded"
+  },
+  "badgeTitle": {
+    "message": "Warning: this website looks like a fake. Click for details."
+  }
+}

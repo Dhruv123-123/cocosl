@@ -41,6 +41,8 @@ Often not as written. 50/30/20 puts 50% of take-home on needs, 30% on wants and 
 
 Use the same idea with honest numbers: write down what your needs actually cost, set a small but automatic savings amount (even 5%), and give what's left a weekly spending limit. Move the savings percentage up a point each time income rises or a bill goes away. A 70/20/10 or 80/15/5 split that you stick to beats a 50/30/20 you abandon in March.
 
+More, with a worked example: [the 50/30/20 rule](/blog/50-30-20-rule/).
+
 **Tools:** [50/30/20 worksheet](shop:50-30-20-budget-worksheet) · [budget plan for your salary](/budget/)
 
 ### How do couples split bills when one earns more?
@@ -151,6 +153,8 @@ It is if three things are true: the loan's APR (including any origination fee, w
 
 It's a bad idea if it only lowers the payment by stretching the term, or if the cleared cards get used again; then you have the loan and new card debt. Compare it against a balance transfer card and against paying the cards down with the avalanche method.
 
+A worked example on $12,000 of card debt: [debt consolidation explained](/blog/debt-consolidation-explained/).
+
 **Tools:** [debt payoff calculator](calc:debt-payoff) · [balance transfer cards compared](/compare/best-balance-transfer-cards/)
 
 ### Can I negotiate a medical bill?
@@ -226,6 +230,8 @@ Then set up the system while the habits are new: enroll in the 401(k) at least u
 Net worth is everything you own minus everything you owe. Add up assets (cash, savings, retirement and investment accounts, the realistic resale value of a car or home) and subtract liabilities (credit cards, student loans, car loan, mortgage, any other debts).
 
 A negative number is normal early on, especially with student loans. The useful part is the trend: update it on the same day every month or quarter and you'll see debt payments and savings moving it, even when month-to-month spending feels the same.
+
+A worked example: [how to calculate your net worth](/blog/how-to-calculate-net-worth/).
 
 **Tools:** [net worth tracker](shop:net-worth-tracker) · [monthly money review](shop:monthly-money-review)
 

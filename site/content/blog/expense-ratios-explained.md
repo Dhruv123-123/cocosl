@@ -1,7 +1,7 @@
 ---
 title: The fee that can cost you $18,000: expense ratios explained
 seo_title: Expense ratio explained: why a 1% fund fee costs so much
-description: Two funds can own the same stocks and leave you with very different money. How expense ratios work, a 30-year example, and how to check any fund's fee in a minute.
+description: "Two funds can own the same stocks and leave you with very different money. How expense ratios work, a 30-year example, and how to check a fund's fee."
 date: 2026-11-07
 pillar: investing
 keyword: expense ratio explained

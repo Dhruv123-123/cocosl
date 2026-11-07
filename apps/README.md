@@ -1,0 +1,171 @@
+# Apps
+
+Small web apps that earn money without needing an audience first. They pull in search traffic,
+capture emails and route people to affiliate offers and paid upgrades. All are static sites (plain
+HTML, CSS and JavaScript, no framework, no build step needed) and deploy free.
+
+| App | Brand | How it earns | Folder |
+|---|---|---|---|
+| **Money calculators** (7 tools, including 2026 take-home pay) | Money Made Simple | SEO traffic → email list, HYSA / brokerage / debt affiliates, The 20-Minute Budget product | `money-calculators/` |
+| **Is this a scam?** message checker | Scam Shield | Identity protection, password manager and VPN affiliates, weekly scam-alert list, $9 Family Scam-Proofing Kit | `scam-checker/` |
+| **The 20-Minute Budget** web app | Money Made Simple | Freemium: Pro at $3/month or $29 once via Lemon Squeezy, Gumroad or Stripe license keys; first-run setup, upgrade prompts at each free limit, pricing page (`budget/pricing.html`); setup in `budget/CHECKOUT.md` | `budget/` |
+| **Rate My Budget** (8 numbers → score, grade, 3 next moves; anonymous submissions for the video series) | Money Made Simple | Budget app upsell, $19 personal review, content for the "Rate My Budget" series | `budget/rate.html` |
+| **Subscription audit** (upload a bank CSV or paste statement text; every recurring charge and its yearly cost) | Money Made Simple | Free tool → budget app and Pro upsell, email list | `budget/subscriptions.html` |
+| **Bill negotiation tracker** (bills, promo end dates, call scripts, call log, "saved this year"; finds bills in a bank CSV) | Money Made Simple | Budget Pro feature (free: 3 bills, Pro: every bill + calendar reminders), Bill Cut Kit upsell | `budget/bills.html` |
+| **0% deal countdown** (deferred-interest and 0% APR deals: payment that clears it a month early, back-dated interest if you miss) | Money Made Simple | Free calculator for search traffic; Pro saves every deal + calendar reminders | `budget/deals.html` |
+| **Credit dispute tracker** (30-day bureau clocks, replies, next steps, calendar reminders; tracking only, no letters) | Money Made Simple | Free tool for search traffic; deliberately no paid features, which keeps it clear of credit repair law | `budget/disputes.html` |
+| **Net worth snapshot** (own vs owe, dated snapshots and trend, PDF made in the browser, CSV, backup; localStorage only) | Money Made Simple | Free tool with a Budget Pro upsell slot | `budget/networth.html` |
+| **Side hustle profit calculator** (drivers, Etsy, eBay, Poshmark: platform fees, real driving cost vs IRS 76-cent mileage deduction, SE tax, income tax after the QBI deduction; real hourly profit and weekly tax set-aside; sources in `lib/sidehustle.js`) | 1099 Money | Free SEO tool, leads into the invoice tracker | `freelance-invoices/side-hustle.html` |
+| **Quarterly tax set-aside app** (PWA with its own manifest, icons, offline cache and a "Got paid" shortcut: set-aside % from SE tax, bracket after half SE and QBI, state and costs; 2026–2027 Form 1040-ES periods and due dates, IRS Direct Pay link, sent-per-quarter tracking, safe harbor 100%/110%, CSV) | 1099 Money | Free home-screen app, email list for quarterly reminders | `freelance-invoices/set-aside/` |
+| **Spanish hub** (`/es/`: every Spanish calculator and scam tool, with its own search; built by `tools/build-es-hub.mjs` from `pages-es.mjs`) | Dinero Simple | Dinero Simple links to `/es/` | `es/` |
+| **First paycheck guide** (new grads: W-4 helper by situation, 401(k) match maths with the 2026 limit, emergency fund targets, three budget styles, first-job checklist; progress saved locally) | Money Made Simple | Free guide for grad-season content, links every relevant tool, Budget Pro slot | `budget/first-paycheck.html` |
+| **Annual money checkup** (20 questions in 7 areas, score out of 100 and grade, area bars, ranked fixes each linked to a tool, printable report) | Money Made Simple | Free yearly ritual (January content), routes people to every tool, Budget Pro slot | `budget/checkup.html` |
+| **Money personality quiz** (8 questions, 5 original types: Planner, Enjoyer, Avoider, Worrier, Builder; strength, blind spot, runner-up type and 3 tool links each; share link with `?type=`) | Money Made Simple | Hub entry point and social content hook, routes people to the right tools | `budget/money-personality.html` |
+| **Bill due date calendar** (installable PWA in `budget/bill-calendar/`, own offline worker: add bills once with monthly, weekly, every-2-weeks, quarterly, yearly or one-off repeats; month grid and list, tick off paid, next 14 days and overdue; .ics export as repeating events with a reminder 0 to 7 days before, 31st as last day of month; JSON backup and restore; EN `index.html` + ES `es.html`, shared data; logic `budget/lib/billcal.js`) | Money Made Simple / Dinero Simple | Free retention tool; links to the bill negotiation tracker and budget app | `budget/bill-calendar/` |
+| **Money dashboard spreadsheet maker** (drop one or more bank CSVs, English or Spanish headers, or paste a statement; 19 keyword categories, transfers and card payments kept out of spending, refunds net off; sort unknown merchants once and the choice is remembered in the browser; downloads a real .xlsx built in the browser by `budget/lib/xlsx.js` with Summary (SUMIFS formulas, budgets, share kept), Transactions (category dropdown, filter), Categories and How-to tabs; opens in Google Sheets, Excel, Numbers; EN `money-dashboard.html` + ES `tablero-dinero.html`) | Money Made Simple / Dinero Simple | Free tool; upsell slot `config.sheetTemplate` ($12 Pro template, hidden while REPLACE_ME) and the budget app | `budget/money-dashboard.html` |
+| **52-week savings challenge** (classic $1-$52 = $1,378, reverse, even or light-December styles scaled to any goal; tick-off grid, ahead/behind with a catch-up amount, streak, .ics weekly reminders, printable; EN `savings-challenge.html` + ES `reto-ahorro.html`, one saved challenge) | Money Made Simple / Dinero Simple | Free shareable challenge (January content), links to savings tools | `budget/savings-challenge.html` |
+| **Money date: couples budget** (split shared bills 50/50, by income or a custom split; joint-account amounts and settle-up; 8-step monthly money date checklist with streak and notes; backup file to share; localStorage only) | Money Made Simple | Free tool for couples content, Budget Pro slot | `budget/couples.html` |
+| **Can I afford this?** (a car, a phone or anything big: cash vs loan vs buy now, pay later; all-in price with tax, fees and trade-in, monthly fit against what's left after bills, 20/4/10 car checks, months to save; localStorage only) | Money Made Simple | Free search tool ("how much car can I afford"), Budget Pro upsell slot, links to the paycheck calculator | `budget/afford.html` |
+| **Student loan repayment chooser** (2026 rules: Standard, Graduated, Extended, IBR, RAP, Tiered Standard for loans from July 2026; rules hardcoded from StudentAid.gov with sources in `lib/student-loans.js`; "verify with your servicer" note; EN + ES) | Money Made Simple | Free SEO calculator, Budget Pro box | `money-calculators/student-loans/` |
+| **Tax refund estimator 2026** (federal: 2026 brackets for single, joint and head of household, standard deduction, $2,200 child credit with refundable part, tips/overtime/senior deductions with phase-outs; IRS sources cited in `lib/refund.js` and on the page; EITC and W-4 pointers; EN + ES) | Money Made Simple | Free SEO calculator for tax season, Budget Pro box | `money-calculators/tax-refund/` |
+| **Rent vs buy** (owning costs vs renting and investing the difference, break-even year; EN + ES) | Money Made Simple | Free SEO calculator, mortgage affiliate slot later | `money-calculators/rent-vs-buy/` |
+| **Paycheck calculator by state** (2026 federal brackets plus every state's and DC's 2026 brackets, standard deduction and exemptions, hardcoded from the Tax Foundation table with sources cited in `lib/state-tax-2026.js`; no API calls; custom-rate fallback) | Money Made Simple | Free SEO calculator, high-search "paycheck calculator [state]" | `money-calculators/take-home-pay/` |
+| **Holiday spending planner** (gift list, per-person budgets, total cap, extras, BNPL true cost and monthly schedule; localStorage only) | Money Made Simple | Free seasonal tool for the /holiday/ page, Budget Pro upsell slot | `budget/holiday.html` |
+| **Installable tools hub** (manifest, offline service worker `sw.js`, add-to-home-screen banner with iOS instructions) | All brands | The hub at `index.html` works as an app; tools you've opened work offline | `index.html`, `sw.js`, `install.js` |
+| **Freelance invoice tracker** (status per invoice, late fees under your own terms, 5 polite reminder emails, calendar and CSV) | 1099 Money | Free tool; upsell slot for the $29 Rate & Contract Kit (invoice templates), email list form `freelance-invoices` | `freelance-invoices/` |
+| **Medical bill letters** (guided form → itemized bill request, billing error dispute, financial assistance request, No Surprises Act letter; print, copy or download) | Money Made Simple | Free tool → email list; optional $19 letter pack (config link) | `medical-bills/` |
+| **Debt collector letters** (debt validation under the FDCPA and Regulation F, stop-contact letter; not-legal-advice framing) | Money Made Simple | Free tool, trust and search traffic | `medical-bills/debt.html` |
+| **Family scam-proofing checklist** (credit freezes at all 3 bureaus, family safe word, 2-step verification, phone number lock, child freezes; progress per person) | Scam Decoded / Scam Shield | Free tool → email list, Family Scam-Proofing Kit | `scam-checker/family/` |
+| **Vendor payment check** (bank-change and invoice fraud: look-alike sender domains, red flags, verify steps, printable payment rule) | Scam Shield | B2B lead magnet: free poster sign-up (Netlify form `vendor-check`), offers the $99 team training pack once its link is set | `scam-checker/vendor/` |
+| **Scam Decoded browser extension** (same engine as Scam Shield's, built with `node scam-extension/build.mjs --brand scam-decoded` into `scam-extension/build/scam-decoded/`: own name, colours and icon; checks the page address and, on click only, the page's words for pressure-plus-payment patterns; links each result to the matching scamdecoded.netlify.app/scams/ explainer; not submitted) | Scam Decoded | Discovery channel to the site and list; store listing draft doc | `scam-extension/build/scam-decoded/` |
+| **Text-us scam check** (Twilio webhook: forward a text, get a verdict; 5 free a month, family numbers unlimited) | Scam Shield | Family plan $3/month; setup in `scam-checker/sms/SMS_SETUP.md` | `scam-checker/sms/`, `/api/sms` |
+| **401(k) fee checker** (funds and expense ratios → fees in dollars, 30-year drag, lowest-cost fund per category in your own plan; EN/ES) | Money Made Simple | Free SEO tool → email list. Never recommends a fund | `money-calculators/401k-fees/` |
+| **Calculadoras en español**: all 7 calculators in Spanish with hreflang links | Money Made Simple / Dinero Simple | Spanish search traffic, Spanish email list | `money-calculators/es/` |
+| **¿Es una estafa?** Spanish checker (Dinero Simple audience): Spanish scam patterns and fully translated results | Scam Shield | Same offers, Spanish scam-alert list | `scam-checker/es/` |
+| **Link checker** ("Is this website legit?", EN `scam-checker/link/` + ES `scam-checker/es/enlace/`): look-alike spellings, brand on the wrong domain, risky endings | Scam Shield | Search traffic → checker, list, affiliates | `scam-checker/link/` |
+| **Scam guides**: 12 search pages (USPS, toll, IRS, Amazon...) feeding the checker, plus all 12 in Spanish (`scam-checker/es/estafas/`) with hreflang pairs | Scam Shield | Search traffic → checker, list, affiliates | `scam-checker/scams/` |
+| **Video ad script builder** for small product brands: hook, shot list, voiceover, on-screen text, 3 test hooks, caption, plus a lint for fake-testimonial and health-claim wording. No AI calls, so it's free to run | AI Ad Studio | Free-sample request form (Netlify Forms `ad-sample-request`) → inbound leads for the $249 Starter package | `ad-script-builder/` |
+| **Browser extension** (Chrome/Edge): check a text or link from the right-click menu or toolbar, optional red badge on look-alike sites, English and Spanish | Scam Shield | Free; drives people to the site, kit and list. Chrome Web Store listing is its own discovery channel | `scam-extension/` |
+
+Privacy is a selling point for all three: nothing the user types is sent anywhere. The only server code is
+one serverless function that checks budget-app license keys.
+
+## Test
+
+```bash
+cd apps
+npm test            # 130 unit tests, Node 20+, no dependencies
+npm run smoke       # opens every page in Chromium at desktop and phone width, and loads the extension (needs Playwright)
+```
+
+## Deploy (free)
+
+**One site for everything (quickest):** Netlify > Add new site > Import from GitHub > `cocosl` >
+base directory `apps`. You get `/money-calculators/`, `/budget/` and `/scam-checker/` on one URL.
+Use its own address, not the Money Made Simple site's: name it **`mms-tools`** (so `https://mms-tools.netlify.app`).
+The main site already uses `/budget/` for its budget-by-salary pages, and it links to these tools through `apps_url` in its `site.json`.
+`siteUrl` in each app's `config.js` is only the "Made by" link back to the main site, so it stays as is. If you pick a different name, update `apps_url` on the site.
+
+**One site per brand (better for SEO and branding):** create three Netlify sites with base directories
+`apps/money-calculators`, `apps/scam-checker` and `apps/budget`. Each has its own `netlify.toml`.
+Cloudflare Pages and GitHub Pages also work for the calculators and scam checker (no functions needed).
+The budget app's license check needs Netlify Functions (or port the 60-line function to a Cloudflare Worker).
+
+After deploying, update the URLs in each `config.js` (`siteUrl`, `calculatorsUrl`) and run
+`node money-calculators/build.mjs` so canonical links and the sitemap point at the real domain.
+
+## Turn on the money (all config, no code)
+
+Every link containing `REPLACE_ME` is hidden automatically, so the apps are safe to deploy today.
+
+1. **Email capture.** Works out of the box on Netlify (Forms > enable form detection, redeploy once).
+   For Kit, MailerLite, Buttondown or Formspree, set `email.provider` and `email.action` in `config.js`.
+2. **Affiliate links.** Paste your approved links into `affiliates` (calculators) and `offers` (scam checker).
+   Brokerage and adviser offers are marked `complianceReview: true`: check FINRA 2210 / SEC Marketing Rule
+   before turning them on (see `research/`).
+3. **Products.** Set `product.url` to the Gumroad or Stripe Payment Link for The 20-Minute Budget and the
+   Family Scam-Proofing Kit.
+4. **Budget app Pro.**
+   - Gumroad: make two products (monthly membership and one-time), tick "Generate a unique license key",
+     put the checkout links in `budget/config.js`, and set the env var `GUMROAD_PRODUCT_ID` on Netlify.
+     Buyers paste the key from their receipt into the app.
+   - Stripe: make a Payment Link, set its success URL to `https://YOUR-SITE/budget/?session_id={CHECKOUT_SESSION_ID}`,
+     put it in `pricing.stripe.url`, and set `STRIPE_SECRET_KEY` (a restricted read-only key) on Netlify.
+     Pro switches on automatically when the buyer comes back.
+   - Gumroad with several products: the function checks one `GUMROAD_PRODUCT_ID`; give the monthly and
+     lifetime options as variants of one product.
+5. **Analytics (optional).** Set `analytics.plausibleDomain` in each app's `config.js`. Every page then counts visits (no cookies), sends Affiliate Click / Product Click / Signup events, and tags Gumroad and Stripe links with the visit's UTM so sales are credited to the pin, post or bio that brought the buyer. Setup, goals and the link rules for bios, pins and newsletters: [docs/UTM.md](../docs/UTM.md). `node tools/utm.mjs bios` prints the bio link for every brand and platform; `node tools/utm.mjs check <files>` finds our links that are missing UTM.
+
+Nothing here takes a payment by itself, and nothing goes live until you paste in real links and keys.
+
+## Embeds and licences
+
+`embed.html` (built by `tools/build-embed-page.mjs`) makes the snippet for every calculator and for the other tools in its `TOOLS` list, which load through `embed.js` and run `lib/embed-page.js` (from `shared/`). Its plan prices ($0, $29 and $99 a month) are **drafts** for Dhruv to set; payment is still the contact link.
+
+`money-calculators/embed/` lets any site embed a calculator with two lines of HTML (`embed.js` makes a
+self-resizing iframe; no cookies). Free embeds carry a "Free calculator by Money Made Simple" link, so each
+one is a backlink. Partners can set `data-accent`, `data-theme`, `data-radius` and starting `data-values`.
+White-label licensees go in `embed.licensees` (`{ key, name, domains, cta }`): their `data-licence="KEY"` drops
+the credit link and shows their own button, on their domains only (checked from the referrer; the `demo` key works
+on localhost for the builder preview). Pricing and spec: the "Calculator widgets: pricing and spec" doc.
+Set `embed.licenceUrl` to your contact link.
+
+## Browser extension
+
+`scam-extension/` is a Manifest V3 extension built from the checker's own rule engine (`node scam-extension/build.mjs`
+copies it in; CI fails if the copy is stale). It asks only for `contextMenus`, `activeTab` and `storage`; the
+look-alike badge needs the optional `tabs` permission, which Chrome asks for only when the user turns it on.
+To publish: `node scam-extension/package.mjs`, then upload the zip from `scam-extension/dist/` to the Chrome
+Web Store (one-time $5 developer fee). Listing text, privacy answers and steps are in `scam-extension/STORE.md`.
+
+## Renaming the scam brand
+
+The brand name and domain live in `scam-checker/config.js`. To rename everywhere (pages, guides and the extension):
+`node scam-checker/rename-brand.mjs "Scam Decoded" scamdecoded.netlify.app`.
+The checker sells the brand's Family Scam-Proofing Kit (`launch/scam-decoded/product/`); set its URL in
+`scam-checker/config.js` > `product.url`.
+
+## Notes and limits
+
+- The free/Pro gate in the budget app runs in the browser, so a determined person could bypass it. That's
+  normal for a $3 tool: the cost of stronger DRM (accounts, a database) isn't worth it at this stage.
+- The scam checker is rule-based. It catches the common patterns (toll and delivery texts, gift cards,
+  crypto, code requests, look-alike links) but it can miss new scams, and the page says so. Add new
+  patterns to `RULES` in `scam-checker/lib/scan.js` with a test.
+- Scam guide pages are generated from `scam-checker/scams.mjs` by `scam-checker/build.mjs`. Every example
+  message there must score high risk in the checker, so adding a guide also tests the checker.
+- Spanish wording uses tú and neutral Latin American vocabulary to match Dinero Simple. The Spanish checker (`scam-checker/es/`, `scam-checker/lib/i18n.js`) and calculators need a native speaker's
+  read before you promote it, same as the Dinero Simple content. A test fails if any rule lacks Spanish text.
+- Calculator pages are generated from `money-calculators/pages.mjs` and `pages-es.mjs` (all on-page result
+  wording is in `money-calculators/lib/text.js`) by `build.mjs`; edit the copy there.
+
+See `IDEAS.md` for what to build next.
+
+## Hub search and accessibility
+
+- The hub has a search box over every tool. `node tools/build-search.mjs` writes `search-index.json`
+  from the hub's cards plus each page's title, description and headings. Netlify runs it on deploy, and a
+  test fails if the committed index is stale. Search runs in the browser; nothing typed is sent anywhere.
+- `node tools/a11y.mjs` runs axe-core (WCAG 2.1 A and AA) on the hub and every tool it links to, in
+  light and dark mode. It needs Playwright and axe-core (`npm i -D axe-core`, or `AXE_PATH=/path/to/axe.min.js`)
+  and skips if they're missing. All 60 page checks passed on 2026-11-07, after colour contrast fixes.
+
+Spanish pages: every one is on `NATIVE_REVIEW_ES.md` for a native speaker's check (a test enforces it). Paid template cards on both hubs come from `products.js` and stay "coming soon" until the checkout link in `budget/config.js` is real.
+
+## Accessibility and speed checks
+
+- `node tools/a11y.mjs` runs axe-core (contrast, labels, ARIA) on every hub-linked page, light and dark.
+- `node tools/audit.mjs` checks the same pages at phone width: page weight (under 350 KB, no third-party requests), load time, image sizes, tap targets of at least 24 px, a focus ring on every Tab stop, and the page basics.
+- CI runs all of these on every pull request (the `apps-browser` job), plus Lighthouse on 11 key pages
+  (`lighthouserc.json`: accessibility 95+, best practices and SEO 90+ fail the build; performance below 80 warns).
+- Email opt-in: `shared/optin.js` is one box mounted on every tool page by `initTracking`. It stays hidden
+  until `OPTIN.senderFormId` is filled in (preview any page with `?optin=preview`), and `OPTIN.enabled = false`
+  turns it off everywhere (then `node tools/sync-shared.mjs`). It posts to `/api/subscribe`
+  (`shared/sender.js`), which adds the address to a Sender group: set `SENDER_API_TOKEN` and `SENDER_GROUP_ID`.
+- Installable apps: `app/` (Money Made Simple, 10 tools) and `scam-checker/app/` (Scam Shield). After changing any
+  of their tools run `node tools/build-app-shell.mjs`; it rewrites `app/precache.json` and `scam-checker/sw.js`.
+- `shared/test/page-basics.test.js` runs on every `npm test` over every HTML page: lang, title, zoomable viewport, image alt and size, a label for every field, no third-party scripts.
+
+## Money Toolkit (offline download)
+
+`tools/toolkit.mjs` lists the 45 tools in the paid offline bundle; `tools/build-toolkit.mjs` builds it (needs esbuild). See `launch/money-toolkit/README.md`.

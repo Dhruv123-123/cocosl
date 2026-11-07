@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pricing: The 20-Minute Budget Free and Pro | Money Made Simple</title>
+<meta name="description" content="The 20-Minute Budget is free for one month at a time. Pro ($3/month or $29 once) adds every month, bank CSV import, unlimited goals, every bill and 0% deal, and calendar reminders. No account, your data stays on your device.">
+<meta property="og:title" content="The 20-Minute Budget: free, or Pro for $3/month">
+<meta property="og:description" content="A private budget app with no sign-up. Pro adds history, bank CSV import, every bill and 0% deal, and reminders.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"The 20-Minute Budget","applicationCategory":"FinanceApplication","operatingSystem":"Any (web, installable)","offers":[{"@type":"Offer","name":"Free","price":"0","priceCurrency":"USD"},{"@type":"Offer","name":"Pro monthly","price":"3","priceCurrency":"USD"},{"@type":"Offer","name":"Pro lifetime","price":"29","priceCurrency":"USD"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Do I need an account?","acceptedAnswer":{"@type":"Answer","text":"No. The budget is saved on your device. Pro is unlocked with the license key in your receipt, and that key is the only thing sent to our server, to check it is valid."}},
+{"@type":"Question","name":"What happens if I stop paying?","acceptedAnswer":{"@type":"Answer","text":"You keep everything you entered. The app goes back to the free limits: the current month, 10 categories, one goal, 3 bills and 1 deal. Backups and exports always work."}},
+{"@type":"Question","name":"Can I use Pro on my phone and my laptop?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter the same license key on each device. Move your budget between them with Download backup and Restore backup."}}
+]}</script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="./" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>The 20-Minute Budget</span></a>
+  <a class="badge" href="./">Open the app</a>
+</header>
+<main>
+  <h1 class="page-title">Free for the basics. Pro when you want the whole picture.</h1>
+  <p id="from" class="notice" hidden></p>
+  <p class="lede">No account and no bank logins. Your budget stays on your device on both plans.</p>
+
+  <section class="plans">
+    <div class="card plan-card">
+      <h2>Free</h2>
+      <p class="price">$0</p>
+      <ul class="checks">
+        <li>This month's budget, 10 categories</li>
+        <li>One savings goal</li>
+        <li>3 bills in the negotiation tracker, 1 deal countdown</li>
+        <li>Rate my budget and the subscription finder</li>
+        <li>Backup, restore and CSV export, always</li>
+      </ul>
+      <a class="btn ghost" href="./">Start free</a>
+    </div>
+    <div class="card plan-card best">
+      <h2>Pro</h2>
+      <p class="price" id="price-line">$3/month or $29 once</p>
+      <ul id="pro-features" class="checks"></ul>
+      <div id="buy" class="row"></div>
+      <p id="no-checkout" class="tiny" hidden></p>
+      <p class="tiny"><span id="refund-line"></span> Secure checkout; we never see your card.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Free and Pro side by side</h2>
+    <table class="plan compare"><thead><tr><th>Feature</th><th>Free</th><th>Pro</th></tr></thead><tbody id="compare"></tbody></table>
+  </section>
+
+  <section class="card" id="activate">
+    <h2>Already bought Pro?</h2>
+    <p class="tiny">Paste the license key from your receipt email. Pro turns on in this browser for the budget, bill tracker and deal countdown.</p>
+    <form id="license-form" class="inline-form">
+      <input id="license-key" placeholder="Paste your license key" autocomplete="off" aria-label="License key">
+      <button class="btn small" type="submit">Activate</button>
+    </form>
+    <p id="license-msg" class="tiny" aria-live="polite"></p>
+  </section>
+
+  <section class="card faq">
+    <h2>Questions</h2>
+    <h3>Do I need an account?</h3>
+    <p>No. The budget is saved on your device. Pro is unlocked with the license key in your receipt, and that key is the only thing sent to our server, to check it is valid.</p>
+    <h3>What happens if I stop paying?</h3>
+    <p>You keep everything you entered. The app goes back to the free limits: the current month, 10 categories, one goal, 3 bills and 1 deal. Backups and exports always work.</p>
+    <h3>Can I use Pro on my phone and my laptop?</h3>
+    <p>Yes. Enter the same license key on each device. Move your budget between them with Download backup and Restore backup.</p>
+    <div id="refund-faq" hidden><h3>Can I get a refund?</h3><p id="refund-text"></p></div>
+  </section>
+</main>
+<footer><p><a href="./">Budget</a> · <a href="bills.html">Bill tracker</a> · <a href="deals.html">0% deal countdown</a> · Not financial advice. Made by <a id="site-link" href="#">Money Made Simple</a>.</p></footer>
+<script type="module" src="pricing.js"></script>
+</body>
+</html>

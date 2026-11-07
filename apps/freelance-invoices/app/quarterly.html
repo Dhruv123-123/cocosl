@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Quarterly Estimated Tax Calculator for 1099 Workers, 2026 and 2027 Due Dates | 1099 Money</title>
+<meta name="description" content="Work out your quarterly estimated tax payments as a freelancer or gig worker: self-employment tax, income tax, the 90% rule and the safe harbor, with the 2026 and 2027 IRS due dates. Free, private, works offline.">
+<meta property="og:title" content="Quarterly estimated tax">
+<meta property="og:description" content="Work out your quarterly estimated tax payments as a freelancer or gig worker: self-employment tax, income tax, the 90% rule and the safe harbor, with the 2026 and 2027 IRS due dates. Free, private, works offline.">
+<meta name="theme-color" content="#14213d">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="1099 Money">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="app.css">
+</head>
+<body data-page="quarterly">
+<header class="top"><a class="logo" href="./"><span class="mark" aria-hidden="true" style="background:#ff7a45;color:#14213d;font-size:11px;font-weight:800">1099</span><span>1099 Money</span></a><a class="back" href="./">← 1099 Money</a></header>
+<main>
+  <h1>Quarterly estimated tax</h1>
+  <p class="lede">Enter what you expect to earn this year. We work out the self-employment and income tax, the least you need to pay to avoid a penalty, and how much to send by each due date.</p>
+<p class="note"><b>Not tax advice.</b> These are planning estimates from IRS rules for 2026 and 2027. Your real tax depends on your whole return. Check with a tax professional or the IRS before you file or pay.</p>
+  <form id="est" class="card form">
+    <label>Tax year<select name="year"><option value="2026">2026</option><option value="2027" selected>2027</option></select></label>
+    <label>Expected profit this year ($)<input name="profit" type="number" min="0" step="100" inputmode="decimal" placeholder="60000"></label>
+    <label>Federal tax bracket<select name="bracket"><option value="10">10%</option><option value="12" selected>12%</option><option value="22">22%</option><option value="24">24%</option><option value="32">32%</option><option value="35">35%</option><option value="37">37%</option></select></label>
+    <label>State income tax rate (%)<input name="stateRate" type="number" min="0" max="15" step="0.1" inputmode="decimal" placeholder="0"></label>
+    <label>Tax withheld from a W-2 job this year ($)<input name="withheld" type="number" min="0" step="1" inputmode="decimal" placeholder="0"></label>
+    <label>Last year's total tax ($, Form 1040 line 24)<input name="lastYearTax" type="number" min="0" step="1" inputmode="decimal" placeholder="Optional"></label>
+    <label class="check full"><input name="highIncome" type="checkbox"> Last year's AGI was over $150,000</label>
+    <fieldset class="full" style="border:0;padding:0;margin:0"><legend style="font-weight:600;font-size:14px;margin-bottom:6px">Already paid this year ($)</legend>
+      <div class="form"><label>Q1<input name="paid0" type="number" min="0" step="1" inputmode="decimal"></label><label>Q2<input name="paid1" type="number" min="0" step="1" inputmode="decimal"></label><label>Q3<input name="paid2" type="number" min="0" step="1" inputmode="decimal"></label><label>Q4<input name="paid3" type="number" min="0" step="1" inputmode="decimal"></label></div></fieldset>
+  </form>
+  <section class="card" aria-labelledby="h-res"><h2 id="h-res">Your payments</h2>
+    <div id="stats" class="stats" aria-live="polite"></div>
+    <p id="summary" aria-live="polite"></p>
+    <div class="table-scroll"><table><thead><tr><th scope="col">Quarter</th><th scope="col">Due</th><th scope="col" class="num">Even split</th><th scope="col" class="num">Pay now</th></tr></thead><tbody id="rows"></tbody></table></div>
+    <p class="tiny">Pay at IRS Direct Pay or with your IRS online account. Your state may want its own payments too.</p>
+  </section>
+</main>
+<footer><p><a href="../">Invoice tracker</a> · <a href="../set-aside/">Tax set-aside</a> · Not tax advice. Made by 1099 Money.</p></footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
