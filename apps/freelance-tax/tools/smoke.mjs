@@ -42,6 +42,16 @@ for (const [name, viewport] of [['desktop', { width: 1280, height: 900 }], ['pho
     console.log(name, slug, good ? 'ok' : 'FAIL', { cards, placeholder, wide, errors });
     if (shots) await page.screenshot({ path: `${shots}/${name}-${slug.replace(/\//g, '_')}.png`, fullPage: true });
   }
+  // Driver mileage page: the result renders from URL inputs and nothing overflows.
+  await page.goto(url + 'mileage/?earnings=30000&miles=15000&deliveries=3000');
+  {
+    const big = await page.locator('#result .big').textContent();
+    const wide = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
+    const good = /\$2,3\d\d/.test(big) && !wide && !errors.length;
+    if (!good) failed = true;
+    console.log(name, 'mileage/', good ? 'ok' : 'FAIL', { big, wide, errors });
+    if (shots) await page.screenshot({ path: `${shots}/${name}-mileage.png`, fullPage: true });
+  }
   for (const [slug, sel] of [['free/', 'form.signup'], ['free/thanks/', 'a[download]']]) {
     await page.goto(url + slug);
     const found = await page.locator(sel).count();

@@ -19,6 +19,7 @@ MONTH2 = "month-2/content.json"
 MONTH3 = "month-3/content.json"
 MONTH4 = "month-4/content.json"
 MONTH5 = "month-5/content.json"
+DRIVERS = "drivers/content.json"
 
 
 def test_brand_loads_with_placeholder_affiliates(factory):
@@ -32,7 +33,7 @@ def test_brand_loads_with_placeholder_affiliates(factory):
 import pytest
 
 
-@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5]), (MONTH4, [22, 13, 4]), (MONTH5, [22, 13, 5])])
+@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5]), (MONTH4, [22, 13, 4]), (MONTH5, [22, 13, 5]), (DRIVERS, [10, 0, 0])])
 def test_content_is_valid(factory, name, counts):
     from contentfactory.schemas import Script
     brand = factory.brand("1099-money")
@@ -231,3 +232,24 @@ def test_b2b_kit_builds_with_verified_leads_and_a_clean_schedule(tmp_path):
         sent = "".join(_re.findall(r"```\n(.*?)```", text, _re.S))
         assert "affiliate" not in sent.lower()
         assert "$600" not in text  # the 2026 1099-NEC threshold is $2,000
+
+
+def test_driver_series_is_new_and_matches_the_mileage_calculator():
+    earlier = {i["script"]["title"].lower() for n in ("content.json", MONTH1, MONTH2, MONTH3, MONTH4, MONTH5) for i in _items(n)}
+    drivers = _items(DRIVERS)
+    assert not earlier & {i["script"]["title"].lower() for i in drivers}
+    text = " ".join(i["script"]["caption"] for i in drivers)
+    assert "72.5¢" in text and "$2,000" in text and "$20,000" in text
+    assert "$600" not in text  # old 1099-NEC threshold
+    assert all("http" not in i["script"]["caption"] for i in drivers)
+    guide = (LAUNCH / "drivers" / "README.md").read_text()
+    for i in drivers:
+        assert i["script"]["title"] in guide
+
+
+def test_answer_bank_has_30_drafts_and_no_links():
+    text = (LAUNCH / "distribution" / "ANSWER_BANK.md").read_text()
+    assert len(re.findall(r"^### Q\d+\.", text, re.M)) == 18
+    assert len(re.findall(r"^### R\d+\.", text, re.M)) == 12
+    assert "http" not in text and "DM me" not in text.replace('No "DM me"', "")
+    assert "$2,000" in text and "72.5" in text and "$184,500" in text

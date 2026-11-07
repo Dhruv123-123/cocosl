@@ -11,6 +11,9 @@ Money and taxes for US freelancers. Brand file: `brands/1099-money.yaml`. Start 
 | `month-2/` | 40 scripts for Dec 30, 2026 – Jan 29, 2027 (22 Shorts, 14 carousels, 4 long at 8+ min): 1099 season, the Jan 15 payment, deductions + posting plan |
 | `month-3/` | 40 scripts for Jan 30 – Mar 1, 2027 (22 Shorts, 13 carousels, 5 long at 8+ min): filing season, Schedule C, home office, mileage + posting plan |
 | `month-4/` | 39 scripts for Mar 2 – Apr 1, 2027 (22 Shorts, 13 carousels, 4 long at 8+ min): filing, paying the IRS, extensions, the two Apr 15 payments + posting plan |
+| `month-5/` | 40 scripts for Apr 2 – May 2, 2027 (22 Shorts, 13 carousels, 5 long at 8+ min): tax day, extensions, the Jun 15 payment, withholding instead of quarterlies, mid-year planning + posting plan |
+| `drivers/` | Gig-driver series: 10 Shorts for Uber, Lyft, DoorDash, Uber Eats and Instacart drivers, paired with the site's driver mileage calculator (`apps/freelance-tax/mileage/`), with a Wednesday posting plan and the driver communities for each |
+| `distribution/ANSWER_BANK.md` | 30 Quora and Reddit answer drafts (18 Quora, 12 Reddit incl. driver subreddits), no links, disclosure and pacing rules |
 | `channels/` | `config.json`: launch–month 2 pins, threads and newsletter. `spring.json`: 40 pins from Jan 4, 2027 (month 3–4 content, the calculator, compare pages and 6 Etsy listing pins), 26 threads and 8 newsletter issues Feb 14 – Apr 4. `exclude` drops pins that only make sense on their posting day |
 | `b2b/` | Outreach kit: 75 coworking spaces and freelancer groups (45 coworking, 20 translator/interpreter associations, 10 writer, editor and other freelancer groups) with emails verified on their own sites. 3 emails each (free 2027 tax calendar, then the $49 bundle as a member code or group license), tracker at 8 a day from Wed Nov 11, reply branches and draft group-license terms. Nothing sent |
 | `etsy/` | `build_etsy.py` + Etsy listings for the three products (Etsy-safe guide wording, 2400x1800 listing images) |
@@ -34,6 +37,8 @@ Month 1: `factory pack export --brand 1099-money --file launch/1099-money/month-
 Month 2: `factory pack export --brand 1099-money --file launch/1099-money/month-2/content.json --start 2026-12-30 --days 31 --out month-2/`.
 Month 3: `factory pack export --brand 1099-money --file launch/1099-money/month-3/content.json --start 2027-01-30 --days 31 --out month-3/`.
 Month 4: `factory pack export --brand 1099-money --file launch/1099-money/month-4/content.json --start 2027-03-02 --days 31 --out month-4/`.
+Month 5: `factory pack export --brand 1099-money --file launch/1099-money/month-5/content.json --start 2027-04-02 --days 31 --out month-5/`.
+Driver series: `factory pack export --brand 1099-money --file launch/1099-money/drivers/content.json --start 2027-01-06 --days 14 --out drivers/` (post on the Wednesdays in `drivers/README.md`).
 Spring channels: `factory channels export --brand 1099-money --config launch/1099-money/channels/spring.json --out channels-spring/` (Etsy listing URLs are `REPLACE_ME` until the listings are live).
 B2B kit: `python3 launch/1099-money/b2b/build_b2b.py` (edit `leads_source.tsv` or `openers.py`, then rebuild).
 Etsy: `python launch/1099-money/etsy/build_etsy.py` (writes to project files).

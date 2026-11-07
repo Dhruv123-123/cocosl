@@ -1,0 +1,646 @@
+[
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "Logged miles are worth real money: 15,000 miles is a $10,875 deduction.",
+  "script": {
+   "title": "What 15,000 delivery miles are worth at tax time",
+   "hook": "If you drove fifteen thousand miles for the apps this year, that's worth over two thousand dollars. But only if you logged them.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "If you drove fifteen thousand miles for the apps this year, that's worth over two thousand dollars. But only if you logged them.",
+     "on_screen_text": "15,000 miles = $2,000+",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes next to a car odometer. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rate",
+     "narration": "For twenty twenty-six, the IRS standard mileage rate is seventy-two and a half cents a mile.",
+     "on_screen_text": "2026 rate: 72.5¢ a mile",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin stamped with a road. No text, no logos, no real people."
+    },
+    {
+     "heading": "Math",
+     "narration": "Fifteen thousand miles times seventy-two and a half cents is a ten thousand eight hundred seventy-five dollar deduction.",
+     "on_screen_text": "15,000 × 72.5¢ = $10,875",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calculator showing a big number. No text, no logos, no real people."
+    },
+    {
+     "heading": "Saving",
+     "narration": "On thirty thousand dollars of payouts, a single driver with no other job saves about two thousand three hundred forty dollars in federal tax.",
+     "on_screen_text": "≈ $2,340 less federal tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a stack of coins shrinking a tax bill. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "No log, no deduction. Start one today, even if the year's half over.",
+     "on_screen_text": "No log = no deduction",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a notebook and pen. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one driver tax move a week.",
+   "caption": "At the 2026 IRS standard mileage rate of 72.5¢, 15,000 business miles is a $10,875 deduction. On $30,000 of payouts, a single driver with no other job owes about $2,840 in 2026 federal tax instead of about $5,180. The deduction needs a mileage log made at or near the time.\n\nFree driver mileage calculator in the link in bio: it shows what your miles save and what to set aside.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one driver tax move a week.",
+   "hashtags": [
+    "doordashdriver",
+    "ubereats",
+    "instacartshopper",
+    "rideshare",
+    "mileagededuction",
+    "gigworker",
+    "1099money"
+   ],
+   "description": "What a year of logged delivery miles saves you in tax.",
+   "thumbnail_text": "15,000 miles = $2,340",
+   "sources": [
+    "https://www.irs.gov/tax-professionals/standard-mileage-rates",
+    "https://www.irs.gov/publications/p463",
+    "https://www.irs.gov/businesses/gig-economy-tax-center"
+   ],
+   "claims_to_verify": [
+    "2026 standard mileage rate 72.5 cents",
+    "$30K payouts, 15K miles, single, no W-2: tax ≈ $2,836 vs ≈ $5,181"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "The app's mileage figure often leaves out miles you can deduct.",
+  "script": {
+   "title": "The app's miles aren't all your miles",
+   "hook": "Your app's tax summary shows your miles. For a lot of drivers, it's not all the miles you can deduct.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Your app's tax summary shows your miles. For a lot of drivers, it's not all the miles you can deduct.",
+     "on_screen_text": "The app's miles ≠ your miles",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes comparing two odometers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why",
+     "narration": "Many apps count only on-trip miles, from pickup to drop-off. The drive to each pickup and between jobs can be missing.",
+     "on_screen_text": "Often on-trip only",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a map with half the route highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Gap",
+     "narration": "That gap can be a third of your driving or more. At seventy-two and a half cents a mile, it adds up fast.",
+     "on_screen_text": "The gap adds up at 72.5¢",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. coins falling through a gap. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "The IRS wants your own record made at the time: date, miles, and the business purpose. A mileage app that runs while you're online, or a notebook with start and end odometer readings, both work.",
+     "on_screen_text": "Your own log: date, miles, purpose",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone and a notebook side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Keep the app's summary too. It backs up your log.",
+     "on_screen_text": "Keep both",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding two papers. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one driver tax move a week.",
+   "caption": "Many apps report only on-trip miles. Driving to pickups and between jobs can also be business miles, and the IRS expects your own record made at or near the time (date, miles, business purpose). Keep the app's summary as backup.\n\nFree driver mileage calculator in the link in bio: it shows what your miles save and what to set aside.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one driver tax move a week.",
+   "hashtags": [
+    "doordashdriver",
+    "uberdriver",
+    "instacartshopper",
+    "mileagelog",
+    "gigworker",
+    "1099",
+    "1099money"
+   ],
+   "description": "Why your own mileage log beats the app's number.",
+   "thumbnail_text": "App miles ≠ your miles",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping",
+    "https://www.irs.gov/publications/p463",
+    "https://www.irs.gov/businesses/gig-economy-tax-center"
+   ],
+   "claims_to_verify": [
+    "Apps often report on-trip miles only (varies by app)",
+    "IRS log requirements: date, miles, business purpose, made at or near the time"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "Start the log when you go online; commuting doesn't count and home-to-first-pickup is a grey area.",
+  "script": {
+   "title": "When should a delivery driver start the mileage log?",
+   "hook": "When does the meter start on your mileage log? It matters more than you'd think.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "When does the meter start on your mileage log? It matters more than you'd think.",
+     "on_screen_text": "When does the log start?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a stopwatch and a car. No text, no logos, no real people."
+    },
+    {
+     "heading": "Counts",
+     "narration": "Miles to a pickup, on a delivery or ride, and driving between jobs are business miles.",
+     "on_screen_text": "Pickups, trips, between jobs",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a route with three highlighted legs. No text, no logos, no real people."
+    },
+    {
+     "heading": "Doesn't",
+     "narration": "Commuting to a regular workplace and personal errands don't count. Stopping for groceries mid-shift? Those miles are personal.",
+     "on_screen_text": "Not: commuting, errands",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a shopping cart crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Grey",
+     "narration": "Miles from home to your first pickup are a grey area. A common, defensible habit: start logging when you go online and stop when you go offline, and write it down every shift.",
+     "on_screen_text": "Online → offline, every shift",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a toggle switch labeled on and off. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Consistent and honest beats aggressive. That's what holds up if you're ever asked.",
+     "on_screen_text": "Consistent beats aggressive",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes giving a thumbs up. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one driver tax move a week.",
+   "caption": "Business miles: driving to pickups, on trips or deliveries, and between jobs. Not business: commuting to a regular workplace, personal errands. Home to first pickup is debated, so many drivers log from going online to going offline and keep that record every shift.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one driver tax move a week.",
+   "hashtags": [
+    "doordashdriver",
+    "ubereatsdriver",
+    "couriers",
+    "mileagelog",
+    "gigworker",
+    "taxtips",
+    "1099money"
+   ],
+   "description": "Which miles count, and when to start logging.",
+   "thumbnail_text": "When the log starts",
+   "sources": [
+    "https://www.irs.gov/publications/p463",
+    "https://www.irs.gov/tax-professionals/standard-mileage-rates",
+    "https://www.irs.gov/businesses/gig-economy-tax-center"
+   ],
+   "claims_to_verify": [
+    "Commuting not deductible (Pub 463)",
+    "Home-to-first-pickup treatment is unsettled; conservative approach suggested"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "After logging miles, many drivers need far less set aside than the 25-30% rule; find your own rate.",
+  "script": {
+   "title": "How much to set aside per delivery",
+   "hook": "How much of each delivery should you save for taxes? Probably less than you've been told, if you log your miles.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "How much of each delivery should you save for taxes? Probably less than you've been told, if you log your miles.",
+     "on_screen_text": "Save per delivery: your number",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a jar and a delivery bag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why",
+     "narration": "The usual twenty-five to thirty percent rule is for freelancers with few expenses. Drivers have a big one: mileage.",
+     "on_screen_text": "25–30% assumes few expenses",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a scale tipping. No text, no logos, no real people."
+    },
+    {
+     "heading": "Example",
+     "narration": "Thirty thousand dollars of payouts, fifteen thousand logged miles, single, no other job. Federal tax is about twenty-eight hundred dollars. That's about nine and a half percent of payouts.",
+     "on_screen_text": "Example: ≈ 9.5% of payouts",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a pie chart with a small slice. No text, no logos, no real people."
+    },
+    {
+     "heading": "Per",
+     "narration": "Over three thousand deliveries, that's about ninety-five cents each.",
+     "on_screen_text": "≈ 95¢ per delivery",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin dropping in a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "A second job, a state income tax, or fewer miles push it up. Work out your own number once, then move it to savings every payout.",
+     "on_screen_text": "Work out your own rate",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes pointing at a phone calculator. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one driver tax move a week.",
+   "caption": "Example: $30,000 of payouts, 15,000 logged miles, single, no W-2 job: about $2,840 of 2026 federal tax, about 9.5% of payouts or 95¢ a delivery over 3,000 deliveries. A W-2 job, state income tax or fewer miles raise it, so work out your own rate.\n\nFree driver mileage calculator in the link in bio: it shows what your miles save and what to set aside.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one driver tax move a week.",
+   "hashtags": [
+    "doordashdriver",
+    "instacartshopper",
+    "ubereats",
+    "savingmoney",
+    "gigworker",
+    "taxes",
+    "1099money"
+   ],
+   "description": "Your set-aside per delivery, worked out.",
+   "thumbnail_text": "Save ≈ 95¢ a delivery",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/tax-professionals/standard-mileage-rates",
+    "https://www.irs.gov/businesses/gig-economy-tax-center"
+   ],
+   "claims_to_verify": [
+    "$30K payouts, 15K miles: ≈ $2,836 federal, 9.45% of payouts",
+    "Per delivery ≈ $0.95 at 3,000 deliveries"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "Tips are taxable income; the new tips deduction may cut income tax but not self-employment tax.",
+  "script": {
+   "title": "Delivery tips are income, and there's a new deduction",
+   "hook": "Are your tips taxed? Yes. But there's a new deduction that may help.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Are your tips taxed? Yes. But there's a new deduction that may help.",
+     "on_screen_text": "Tips: taxed, but…",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a tip jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Income",
+     "narration": "App tips and cash tips are both income. They go on your return with the rest of your payouts.",
+     "on_screen_text": "App + cash tips = income",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone and paper bills together. No text, no logos, no real people."
+    },
+    {
+     "heading": "New",
+     "narration": "From twenty twenty-five through twenty twenty-eight, a new deduction for qualified tips, up to twenty-five thousand dollars a year, can lower your income tax, if your job is on the IRS list of tipped occupations. Check that yours is.",
+     "on_screen_text": "New: up to $25K tips deduction",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a stamp reading new on a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "But",
+     "narration": "It doesn't cut self-employment tax. You still owe about fifteen percent on tips as part of your profit. It also shrinks at higher incomes.",
+     "on_screen_text": "Still owe self-employment tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with a small bite missing. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "So keep a record of your tips from each app, and keep setting money aside.",
+     "on_screen_text": "Track tips per app",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a small ledger. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one driver tax move a week.",
+   "caption": "Tips (app and cash) are taxable income. For 2025–2028, a deduction for qualified tips of up to $25,000 a year can lower income tax for workers in occupations on the IRS list, phasing out above $150,000 of modified AGI ($300,000 joint). It doesn't reduce self-employment tax. Check irs.gov for whether your work qualifies.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one driver tax move a week.",
+   "hashtags": [
+    "doordashdriver",
+    "ubereats",
+    "instacartshopper",
+    "notaxontips",
+    "gigworker",
+    "tips",
+    "1099money"
+   ],
+   "description": "How tips are taxed for gig drivers, and the new deduction.",
+   "thumbnail_text": "Tips: still taxed?",
+   "sources": [
+    "https://www.irs.gov/newsroom/one-big-beautiful-bill-provisions",
+    "https://www.irs.gov/businesses/gig-economy-tax-center"
+   ],
+   "claims_to_verify": [
+    "Qualified tips deduction 2025-2028, up to $25K, phase-out $150K/$300K MAGI",
+    "Doesn't reduce SE tax",
+    "Rideshare and delivery occupations on Treasury list (verify final regs)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "1099-NEC and 1099-K thresholds; you owe tax with or without a form.",
+  "script": {
+   "title": "No 1099 from DoorDash or Uber? You still owe",
+   "hook": "Didn't get a ten ninety-nine from the app? You still owe tax on what it paid you.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Didn't get a ten ninety-nine from the app? You still owe tax on what it paid you.",
+     "on_screen_text": "No 1099 ≠ no tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with an empty mailbox. No text, no logos, no real people."
+    },
+    {
+     "heading": "NEC",
+     "narration": "Some apps send a ten ninety-nine N E C. For twenty twenty-six payments, they only have to if they paid you two thousand dollars or more.",
+     "on_screen_text": "1099-NEC: $2,000+ for 2026",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with a 2,000 tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "K",
+     "narration": "Others send a ten ninety-nine K, which is only required over twenty thousand dollars and two hundred payments. Some apps send one anyway.",
+     "on_screen_text": "1099-K: $20,000 and 200 payments",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with two tags. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule",
+     "narration": "Either way, the rule is the same: all of it is income, form or no form.",
+     "on_screen_text": "All of it is income",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. coins flowing into a box. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Download each app's annual tax summary in January, and add them up yourself.",
+     "on_screen_text": "Get every app's tax summary",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding three phone screens. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one driver tax move a week.",
+   "caption": "Depending on the app, you may get a 1099-NEC (required for $2,000 or more paid in 2026), a 1099-K (required over $20,000 and 200 transactions) or neither. All your earnings are taxable either way. Download each app's annual tax summary and total them.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one driver tax move a week.",
+   "hashtags": [
+    "doordashdriver",
+    "uberdriver",
+    "instacartshopper",
+    "1099",
+    "gigworker",
+    "taxseason",
+    "1099money"
+   ],
+   "description": "You owe tax on app income even without a 1099.",
+   "thumbnail_text": "No 1099? Still taxed",
+   "sources": [
+    "https://www.irs.gov/forms-pubs/about-form-1099-nec",
+    "https://www.irs.gov/businesses/understanding-your-form-1099-k",
+    "https://www.irs.gov/businesses/gig-economy-tax-center"
+   ],
+   "claims_to_verify": [
+    "1099-NEC threshold $2,000 for 2026 payments",
+    "1099-K threshold $20,000 and 200 transactions",
+    "Which form depends on the app"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "A rideshare 1099-K can show more than you were paid; the fees in the tax summary are expenses.",
+  "script": {
+   "title": "Why your rideshare 1099-K looks too high",
+   "hook": "Your rideshare ten ninety-nine K says you made way more than hit your bank. Don't panic.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Your rideshare ten ninety-nine K says you made way more than hit your bank. Don't panic.",
+     "on_screen_text": "1099-K looks too high?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes staring at a big number. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why",
+     "narration": "A ten ninety-nine K can show the gross amount riders paid, before the app took its service fee and other charges.",
+     "on_screen_text": "It can show gross fares",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a pie with a big slice taken out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "Your app's annual tax summary breaks out those fees. They're business expenses, so you report the gross and deduct the fees.",
+     "on_screen_text": "Report gross, deduct the fees",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with a minus sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Check",
+     "narration": "Then add your mileage and other costs. Profit is what's left.",
+     "on_screen_text": "Then add miles and costs",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a stack of receipts. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Don't just type in the payout number. The IRS matches the ten ninety-nine K, so the gross has to appear on your return.",
+     "on_screen_text": "IRS matches the 1099-K",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a magnifying glass. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one driver tax move a week.",
+   "caption": "A rideshare 1099-K can report gross fares, before the platform's service fee and other charges. Report the gross, then deduct the fees shown in the app's annual tax summary, plus mileage and other costs. Reporting only the payout can trigger a mismatch notice.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one driver tax move a week.",
+   "hashtags": [
+    "uberdriver",
+    "lyftdriver",
+    "rideshare",
+    "1099k",
+    "gigworker",
+    "taxtips",
+    "1099money"
+   ],
+   "description": "Reading a rideshare 1099-K without overpaying.",
+   "thumbnail_text": "1099-K too high?",
+   "sources": [
+    "https://www.irs.gov/businesses/understanding-your-form-1099-k",
+    "https://www.irs.gov/businesses/gig-economy-tax-center",
+    "https://www.irs.gov/forms-pubs/about-schedule-c-form-1040"
+   ],
+   "claims_to_verify": [
+    "Rideshare 1099-K may report gross fares including platform fees (varies)",
+    "Fees shown in tax summary are deductible expenses"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "Besides mileage: phone, bags, parking, tolls; not gas if you use the standard rate.",
+  "script": {
+   "title": "Driver deductions besides mileage",
+   "hook": "Mileage is the big one. Here are the other deductions drivers miss, and one they shouldn't take.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Mileage is the big one. Here are the other deductions drivers miss, and one they shouldn't take.",
+     "on_screen_text": "Beyond mileage",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a short checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "Phone",
+     "narration": "Your phone: the business share of the phone and the plan. If it's half for driving, deduct half.",
+     "on_screen_text": "Phone: business share",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone split in two colors. No text, no logos, no real people."
+    },
+    {
+     "heading": "Gear",
+     "narration": "Insulated bags, phone mounts, chargers, and an Instacart cooler. Things you bought for the job.",
+     "on_screen_text": "Bags, mounts, chargers",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a delivery bag and a phone mount. No text, no logos, no real people."
+    },
+    {
+     "heading": "Trips",
+     "narration": "Parking and tolls on jobs are deductible on top of the mileage rate.",
+     "on_screen_text": "Parking + tolls on top",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a toll booth and a parking meter. No text, no logos, no real people."
+    },
+    {
+     "heading": "Don't",
+     "narration": "What not to take: gas, oil, repairs and car insurance. The seventy-two and a half cent rate already covers them. Deduct them too and you've counted them twice.",
+     "on_screen_text": "Not gas: the rate covers it",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a gas pump crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Keep the receipts in one folder for the year.",
+     "on_screen_text": "One folder of receipts",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a folder. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one driver tax move a week.",
+   "caption": "Common driver deductions besides mileage: the business share of your phone and plan, insulated bags, mounts and chargers, and parking and tolls on jobs. With the standard mileage rate, don't also deduct gas, oil, repairs or insurance: the rate covers them.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one driver tax move a week.",
+   "hashtags": [
+    "doordashdriver",
+    "instacartshopper",
+    "ubereats",
+    "taxdeductions",
+    "gigworker",
+    "1099",
+    "1099money"
+   ],
+   "description": "The deductions delivery drivers miss, and one to skip.",
+   "thumbnail_text": "Driver write-offs",
+   "sources": [
+    "https://www.irs.gov/publications/p463",
+    "https://www.irs.gov/tax-professionals/standard-mileage-rates",
+    "https://www.irs.gov/businesses/gig-economy-tax-center"
+   ],
+   "claims_to_verify": [
+    "Standard rate covers gas, oil, repairs, insurance, depreciation",
+    "Parking and tolls deductible separately"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "Multi-apping: one log for the shift, count each mile once.",
+  "script": {
+   "title": "Running two apps at once? Log the miles once",
+   "hook": "Running DoorDash and Uber Eats at the same time? Here's how to log the miles without getting it wrong.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Running DoorDash and Uber Eats at the same time? Here's how to log the miles without getting it wrong.",
+     "on_screen_text": "Multi-apping? Log once",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes juggling two phones. No text, no logos, no real people."
+    },
+    {
+     "heading": "Once",
+     "narration": "Each mile counts once, no matter how many apps are open. Don't add up each app's miles. They overlap.",
+     "on_screen_text": "Each mile counts once",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two overlapping road shapes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Log",
+     "narration": "Log the shift, not the app: start and end odometer readings, and write which apps were on.",
+     "on_screen_text": "Log the shift: odometer start/end",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a notebook with two numbers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Income",
+     "narration": "Income is the other way round. Add every app's payouts together, tips included.",
+     "on_screen_text": "Income: add every app",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three coins merging into one pile. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "One log, every app's summary, and you're ready to file.",
+     "on_screen_text": "One log + every summary",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding one notebook and three phones. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one driver tax move a week.",
+   "caption": "When you run more than one app at once, count each mile once: log the shift (odometer start and end, apps on) instead of adding each app's miles. Add every app's payouts and tips together for income.\n\nFree driver mileage calculator in the link in bio: it shows what your miles save and what to set aside.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one driver tax move a week.",
+   "hashtags": [
+    "doordashdriver",
+    "ubereatsdriver",
+    "multiapping",
+    "mileagelog",
+    "gigworker",
+    "couriers",
+    "1099money"
+   ],
+   "description": "Mileage logs when you run two apps at once.",
+   "thumbnail_text": "2 apps, 1 log",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping",
+    "https://www.irs.gov/publications/p463",
+    "https://www.irs.gov/businesses/gig-economy-tax-center"
+   ],
+   "claims_to_verify": [
+    "A mile can only be deducted once",
+    "IRS record requirements for mileage"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Full-time drivers usually owe quarterly payments; save weekly, pay four times.",
+  "script": {
+   "title": "Full-time driver? You probably owe quarterly taxes",
+   "hook": "Driving full-time? Then the IRS wants your taxes four times a year, not once in April.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Driving full-time? Then the IRS wants your taxes four times a year, not once in April.",
+     "on_screen_text": "Taxes 4×, not once",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with four calendar pages. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule",
+     "narration": "If you expect to owe a thousand dollars or more when you file, you're generally expected to pay estimated tax each quarter.",
+     "on_screen_text": "Owe $1,000+? Pay quarterly",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with a 1,000 tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dates",
+     "narration": "The dates: mid-April, mid-June, mid-September and mid-January.",
+     "on_screen_text": "Apr · Jun · Sep · Jan",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four calendar dates. No text, no logos, no real people."
+    },
+    {
+     "heading": "Habit",
+     "narration": "The easy habit: every week, move your set-aside rate from your payouts into a separate savings account. Then pay from it on each date.",
+     "on_screen_text": "Weekly set-aside, quarterly pay",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small jar filling every week. No text, no logos, no real people."
+    },
+    {
+     "heading": "Day job",
+     "narration": "Got a W-2 job too? Raising withholding there can cover it instead.",
+     "on_screen_text": "W-2 job? Withholding works",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a pay stub with an arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Pay at irs dot gov slash payments. It's free with Direct Pay.",
+     "on_screen_text": "irs.gov/payments, free",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes pressing a button. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one driver tax move a week.",
+   "caption": "If you expect to owe $1,000 or more when you file, you're generally expected to pay estimated tax quarterly: mid-April, mid-June, mid-September and mid-January. Save your set-aside rate from payouts weekly and pay from that account. A W-2 job's withholding can cover it instead.\n\nFree driver mileage calculator in the link in bio: it shows what your miles save and what to set aside.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one driver tax move a week.",
+   "hashtags": [
+    "doordashdriver",
+    "uberdriver",
+    "instacartshopper",
+    "quarterlytaxes",
+    "gigworker",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "Quarterly taxes for full-time gig drivers.",
+   "thumbnail_text": "Pay 4× a year",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/payments",
+    "https://www.irs.gov/businesses/gig-economy-tax-center"
+   ],
+   "claims_to_verify": [
+    "$1,000 rule for estimated tax",
+    "Quarterly due dates Apr 15, Jun 15, Sep 15, Jan 15",
+    "Withholding counts as paid evenly"
+   ]
+  }
+ }
+]

@@ -4,6 +4,7 @@
 |---|---|
 | `/` | Quarterly estimated tax calculator |
 | `compare/` | Hub + 5 comparison pages: freelancer banking, tax software, invoicing tools, S corp services, health insurance |
+| `mileage/`, `lib/mileage.js` | Gig-driver mileage deduction calculator (72.5¢/mile for 2026): tax saved by logged miles, set-aside per payout and per delivery, own log vs the app's miles |
 | `free/`, `free/thanks/` | Lead magnet landing page and download page |
 | `emails/` | 7-email welcome sequence + 3 buyer emails |
 
@@ -38,7 +39,7 @@ Same layout as the other apps (plain HTML/CSS/JS, no build step). The math in `l
 ```bash
 cd apps/freelance-tax
 npm test              # unit tests (Node 20+, no dependencies)
-npm run smoke         # Chromium at desktop + phone width: calculator, compare pages, free/, free/thanks/ (needs Playwright)
+npm run smoke         # Chromium at desktop + phone width: calculator, mileage/, compare pages, free/, free/thanks/ (needs Playwright)
 node tools/build-pages.mjs   # regenerate compare/ and sitemap.xml after editing tools/compare-data.mjs
 ```
 

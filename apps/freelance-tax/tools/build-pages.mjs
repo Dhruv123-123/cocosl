@@ -15,7 +15,7 @@ const json = (o) => JSON.stringify(o).replace(/</g, '\\u003c');
 
 function shell({ title, description, path, pre, body, ld, current }) {
   const url = `${SITE}/${path}`;
-  const nav = [['', 'Calculator'], ['compare/', 'Compare tools'], ['free/', 'Free calendar']]
+  const nav = [['', 'Calculator'], ['mileage/', 'Driver mileage'], ['compare/', 'Compare tools'], ['free/', 'Free calendar']]
     .map(([p, l]) => `<a href="${pre}${p || ''}"${p === current ? ' aria-current="page"' : ''}>${l}</a>`).join('');
   return `<!doctype html>
 <html lang="en">
@@ -149,7 +149,7 @@ ${paths.map((p) => `  <url><loc>${SITE}/${p}</loc></url>`).join('\n')}
 
 export function build() {
   const out = [hubPage(), ...pages.map(comparePage)].map(([p, html]) => [`${p}index.html`, html]);
-  out.push(['sitemap.xml', sitemap(['', 'free/', 'compare/', ...pages.map((p) => `compare/${p.slug}/`)])]);
+  out.push(['sitemap.xml', sitemap(['', 'mileage/', 'free/', 'compare/', ...pages.map((p) => `compare/${p.slug}/`)])]);
   return out;
 }
 
