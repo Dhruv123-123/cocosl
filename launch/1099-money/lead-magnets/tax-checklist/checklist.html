@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Freelancer Tax Checklist</title>
+<style>
+:root{--ink:#14213d;--cream:#f7f3ea;--coral:#ff7a45;--mint:#3cc6a0;--muted:#56607a;--line:#ddd6c6;--paper:#fffdf8;--tint:#e8f7f1;--coral-t:#fff0e8}
+@page{size:Letter;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#cfc9ba;color:var(--ink);font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:10.2pt;line-height:1.45;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:8.5in;height:11in;margin:24px auto;background:var(--paper);position:relative;padding:.7in .8in .85in;overflow:hidden;page-break-after:always;break-after:page}
+.page:last-child{page-break-after:auto;break-after:auto}
+@media print{html,body{background:none}.page{margin:0}}
+.folio{position:absolute;left:.8in;right:.8in;bottom:.45in;display:flex;justify-content:space-between;font-size:8pt;color:var(--muted);border-top:1px solid var(--line);padding-top:6px}
+h1,h2,h3{line-height:1.15;margin:0}
+h2{font-size:23pt;font-weight:800;letter-spacing:-.02em;margin-bottom:6px}
+h3{font-size:12.5pt;font-weight:700;margin:16px 0 6px;display:flex;align-items:center;gap:8px}
+h3 .when{font-size:8pt;font-weight:700;text-transform:uppercase;letter-spacing:.12em;background:var(--ink);color:var(--cream);border-radius:999px;padding:2px 9px}
+p{margin:0 0 8px}
+.kicker{text-transform:uppercase;letter-spacing:.14em;font-size:8pt;font-weight:700;color:var(--coral);margin-bottom:6px}
+.lede{font-size:11pt;color:var(--muted);margin-bottom:10px}
+.check{list-style:none;padding-left:24px;margin:0 0 8px}
+.check li{position:relative;margin-bottom:5px}
+.check li::before{content:"";position:absolute;left:-22px;top:2px;width:12px;height:12px;border:1.5px solid var(--ink);border-radius:3px;background:#fff}
+.check li small{display:block;color:var(--muted);font-size:8.6pt}
+table{width:100%;border-collapse:collapse;margin:6px 0 10px;font-size:9.4pt}
+th{text-align:left;font-weight:700;background:var(--cream);border-bottom:2px solid var(--ink);padding:5px 8px}
+td{border-bottom:1px solid var(--line);padding:4px 8px;vertical-align:top}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
+.box{border-radius:10px;padding:10px 14px;margin:10px 0}
+.box.tip{background:var(--tint);border-left:4px solid var(--mint)}
+.box.warn{background:var(--coral-t);border-left:4px solid var(--coral)}
+.box p:last-child{margin-bottom:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.cover{background:var(--ink);color:var(--cream);padding:.9in}
+.cover .tag{color:var(--mint);letter-spacing:.2em;text-transform:uppercase;font-weight:700;font-size:9pt}
+.cover h1{font-size:56pt;font-weight:900;letter-spacing:-.035em;line-height:.95;margin:26px 0 18px}
+.cover h1 em{font-style:normal;color:var(--coral)}
+.cover .sub{font-size:14.5pt;max-width:5.6in;color:#d5dbe8;line-height:1.4}
+.cover .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:26px}
+.cover .chips span{border:1px solid #3a4a6e;border-radius:999px;padding:5px 12px;font-size:9pt}
+.cover .boxes{position:absolute;right:.9in;bottom:1.5in;display:grid;gap:14px}
+.cover .boxes div{display:flex;align-items:center;gap:14px;font-size:13pt;font-weight:700}
+.cover .boxes i{width:30px;height:30px;border:3px solid var(--cream);border-radius:6px;display:inline-grid;place-items:center;font-style:normal;color:var(--mint);font-size:20pt}
+.cover .bottom{position:absolute;left:.9in;right:.9in;bottom:.8in;display:flex;justify-content:space-between;font-size:9pt;color:#9aa6c0}
+</style>
+</head>
+<body>
+
+<section class="page cover">
+  <div class="tag">1099 Money · Free printable</div>
+  <h1>The<br><em>Freelancer</em><br>Tax Checklist</h1>
+  <p class="sub">Everything a US freelancer does about taxes, in the order you do it: once, every payment, every month, every quarter, at year-end and at tax time. Tick it off and April gets boring.</p>
+  <div class="chips"><span>Set up once</span><span>Every payment</span><span>Monthly</span><span>Quarterly, with 2027 dates</span><span>Year-end</span><span>Tax-time documents</span></div>
+  <div class="boxes"><div><i>✓</i>Separate account</div><div><i>✓</i>Set-aside %</div><div><i>✓</i>Four payments</div><div><i></i>A boring April</div></div>
+  <div class="bottom"><span>Edition 2027.1 · 2026 and 2027 federal figures</span><span>Educational content. Not tax advice.</span></div>
+</section>
+
+<section class="page">
+  <div class="kicker">Part 1</div>
+  <h2>Set up once</h2>
+  <p class="lede">An evening's work. Each item makes every later step faster.</p>
+  <div class="grid2">
+  <div>
+  <h3><span class="when">Money</span> Accounts</h3>
+  <ul class="check">
+    <li>Open a separate checking account for the business<small>Every client payment in, every business cost out.</small></li>
+    <li>Open a savings account just for tax<small>Name it "Taxes". FDIC-insured, ideally earning interest.</small></li>
+    <li>Choose your set-aside percentage<small>Use the table below, add your state's rate, round up.</small></li>
+    <li>Create an IRS Online Account at irs.gov<small>See every payment you've made and pay in a few clicks.</small></li>
+  </ul>
+  <h3><span class="when">Paperwork</span> Identity</h3>
+  <ul class="check">
+    <li>Decide whether to get an EIN<small>Free from irs.gov. Lets you give clients a number other than your SSN on W-9s.</small></li>
+    <li>Fill in a W-9 once and save it as a PDF<small>Clients ask for it before the first payment.</small></li>
+    <li>Check your state's estimated-tax and business-registration rules</li>
+  </ul>
+  </div>
+  <div>
+  <h3><span class="when">Records</span> Logs</h3>
+  <ul class="check">
+    <li>An income log: date, client, invoice number, amount</li>
+    <li>An expense log by category, with a receipts folder<small>A phone photo the day you get it is enough.</small></li>
+    <li>A mileage log, if you drive for work<small>Date, start and end, miles, purpose. 72.5¢ a mile for 2026.</small></li>
+    <li>Measure your home office, if you have one<small>Exclusive, regular use. Simplified method: $5 a sq ft, up to 300 sq ft.</small></li>
+  </ul>
+  <h3><span class="when">Benefits</span> No employer</h3>
+  <ul class="check">
+    <li>Choose a retirement account (SEP IRA, Solo 401(k) or IRA)</li>
+    <li>Sort out health insurance<small>Marketplace, a spouse's plan, or other coverage. Marketplace open enrollment for 2027 ends Jan 15, 2027.</small></li>
+    <li>Put the dates on page 4 in your calendar, with a reminder a week before each</li>
+  </ul>
+  </div>
+  </div>
+  <h3>Set-aside percentage, federal only</h3>
+  <table>
+    <tr><th>Yearly profit (single, no other income)</th><th class="r">$40,000</th><th class="r">$60,000</th><th class="r">$80,000</th><th class="r">$100,000</th></tr>
+    <tr><td>Federal tax (self-employment + income tax)</td><td class="r">≈ $7,430</td><td class="r">≈ $12,040</td><td class="r">≈ $16,650</td><td class="r">≈ $22,360</td></tr>
+    <tr><td><strong>Set aside from every payment</strong></td><td class="r"><strong>19%</strong></td><td class="r"><strong>20%</strong></td><td class="r"><strong>21%</strong></td><td class="r"><strong>22%</strong></td></tr>
+  </table>
+  <p style="font-size:8.5pt;color:var(--muted)">2026 federal figures: 15.3% self-employment tax on 92.35% of profit, the standard deduction ($16,100 single) and the 20% qualified business income deduction. Married filing jointly or other income changes these. Add your state.</p>
+  <div class="folio"><span>The Freelancer Tax Checklist</span><span>2</span></div>
+</section>
+
+<section class="page">
+  <div class="kicker">Part 2</div>
+  <h2>Every payment, every month</h2>
+  <p class="lede">Two small habits. Together they're most of what keeps tax time calm.</p>
+  <h3><span class="when">Every payment</span> When a client pays you</h3>
+  <ul class="check">
+    <li>Log it: date, client, invoice number, amount</li>
+    <li>Move your set-aside percentage to the tax account, the same day</li>
+    <li>Note how they paid (bank, card, PayPal and so on)<small>Card and payment-app payments may come back on a 1099-K instead of a 1099-NEC.</small></li>
+    <li>Mark the invoice paid</li>
+  </ul>
+  <h3><span class="when">Every month</span> The 30-minute close, on the 1st</h3>
+  <ul class="check">
+    <li>Categorize last month's business transactions</li>
+    <li>List unpaid invoices and send reminders</li>
+    <li>Add up miles driven for work</li>
+    <li>Total your profit for the year so far</li>
+    <li>Check the tax account: profit so far × set-aside % − estimated payments already made<small>Example: $30,000 × 20% − $3,000 paid = $3,000 should be in the account. Top it up if it's short.</small></li>
+    <li>Write down revenue, profit and the tax-account balance, to compare next month</li>
+  </ul>
+  <div class="box tip"><p><strong>Why profit, not deposits?</strong> Tax is on what's left after business costs. Setting aside on profit, not every deposit, keeps the amount right without overpaying.</p></div>
+  <h3><span class="when">When you pay others</span> Contractors</h3>
+  <ul class="check">
+    <li>Get a W-9 before the first payment</li>
+    <li>Pay against an invoice, from the business account</li>
+    <li>Track the year's total per contractor<small>Paid $2,000 or more in 2026 by bank, check or Zelle? You owe them a 1099-NEC by Feb 1, 2027. Card and PayPal goods-and-services payments are reported by the payment company instead.</small></li>
+  </ul>
+  <div class="folio"><span>The Freelancer Tax Checklist</span><span>3</span></div>
+</section>
+
+<section class="page">
+  <div class="kicker">Part 3</div>
+  <h2>Every quarter</h2>
+  <p class="lede">If you expect to owe $1,000 or more for the year, the IRS expects estimated payments. The periods aren't equal quarters.</p>
+  <table>
+    <tr><th style="width:26%">Due</th><th>Payment</th><th style="width:26%">Covers income from</th></tr>
+    <tr><td><strong>Fri Jan 15, 2027</strong></td><td>4th payment for 2026 (choose tax year 2026)</td><td>Sep 1 – Dec 31, 2026</td></tr>
+    <tr><td><strong>Thu Apr 15, 2027</strong></td><td>1st payment for 2027, on the same day as your 2026 return</td><td>Jan 1 – Mar 31, 2027</td></tr>
+    <tr><td><strong>Tue Jun 15, 2027</strong></td><td>2nd payment for 2027</td><td>Apr 1 – May 31</td></tr>
+    <tr><td><strong>Wed Sep 15, 2027</strong></td><td>3rd payment for 2027</td><td>Jun 1 – Aug 31</td></tr>
+    <tr><td><strong>Tue Jan 18, 2028*</strong></td><td>4th payment for 2027</td><td>Sep 1 – Dec 31</td></tr>
+  </table>
+  <p style="font-size:8.5pt;color:var(--muted)">*Jan 15, 2028 falls on a Saturday and Jan 17 is a federal holiday. Confirm on irs.gov when the 2027 Form 1040-ES is out. Your state may have different dates.</p>
+  <h3><span class="when">A week before</span> The 15-minute routine</h3>
+  <ul class="check">
+    <li>Catch up the income and expense logs</li>
+    <li>Pick the amount: the <em>smaller</em> of<small>• a quarter of last year's total tax (110% of it if last year's AGI was over $150,000), or<br>• 90% of this year's projected tax, spread across the year. Paying it on time generally avoids the underpayment penalty.</small></li>
+    <li>Pay at irs.gov/payments: Direct Pay or your Online Account → estimated tax → Form 1040-ES<small>Choose the right <strong>tax year</strong>. Using EFTPS? Schedule it at least a day ahead.</small></li>
+    <li>Save the confirmation number with the date and amount</li>
+    <li>Pay your state's estimate too, if it has one</li>
+  </ul>
+  <div class="box warn"><p><strong>Missed one?</strong> Pay as soon as you can. The underpayment penalty works like interest, so it grows with time; paying now stops it growing on that amount.</p></div>
+  <div class="folio"><span>The Freelancer Tax Checklist</span><span>4</span></div>
+</section>
+
+<section class="page">
+  <div class="kicker">Part 4</div>
+  <h2>Year-end and tax time</h2>
+  <div class="grid2">
+  <div>
+  <h3><span class="when">December</span> Before Dec 31</h3>
+  <ul class="check">
+    <li>Project this year's profit and compare it with what you've set aside</li>
+    <li>Plan the Jan 15 payment (or plan to file and pay in full by Feb 1)</li>
+    <li>Buy equipment only if the business needs it<small>It must be in service by Dec 31 to count this year. A $1,000 cost saves roughly $230 at $60,000 of profit, not $1,000.</small></li>
+    <li>Chase unpaid invoices<small>Most freelancers are taxed when paid, not when they invoice.</small></li>
+    <li>Total the year's miles and note the Dec 31 odometer</li>
+    <li>Collect W-9s from anyone you'll owe a 1099-NEC</li>
+  </ul>
+  <h3><span class="when">Deadlines</span> Retirement and health</h3>
+  <ul class="check">
+    <li>IRA and HSA for 2026: by Apr 15, 2027</li>
+    <li>SEP IRA for 2026: by your filing deadline, including an extension (Oct 15, 2027)</li>
+    <li>Solo 401(k): check the plan's setup and contribution deadlines with the provider</li>
+  </ul>
+  </div>
+  <div>
+  <h3><span class="when">Jan – Apr</span> Gather for the return</h3>
+  <ul class="check">
+    <li>Every 1099 you receive (NEC, K, INT, MISC)<small>Arrive by Feb 1, 2027. Report all income, even without a form.</small></li>
+    <li>Your own income total from the log<small>It won't match the 1099s exactly. Use your records.</small></li>
+    <li>Expense totals by Schedule C category</li>
+    <li>Business miles, and home office square footage</li>
+    <li>Health insurance premiums (Form 1095-A if marketplace)</li>
+    <li>Retirement and HSA contributions</li>
+    <li>Every 2026 estimated payment, with dates (your IRS Online Account lists them)</li>
+    <li>Last year's return</li>
+  </ul>
+  <h3><span class="when">By Apr 15</span> File</h3>
+  <ul class="check">
+    <li>File, or extend (an extension is more time to file, not to pay)</li>
+    <li>Pay any 2026 balance</li>
+    <li>Make the 1st 2027 estimated payment, same day</li>
+    <li>Keep the return and records for at least 3 years</li>
+  </ul>
+  </div>
+  </div>
+  <div class="box tip"><p><strong>Free tools that do the math:</strong> the quarterly tax calculator, the January 15 calculator, the deduction finder and the rate calculator, all at <strong>1099money.netlify.app</strong>. Nothing you type is sent anywhere.</p></div>
+  <p style="font-size:8.5pt;color:var(--muted)">Educational content, not tax, legal or financial advice. Figures are 2026 federal (IRS Rev. Proc. 2025-32, SSA wage base) for a calendar-year sole proprietor; dates checked against IRS rules as of November 2026. Confirm on irs.gov and with your state before acting.</p>
+  <div class="folio"><span>The Freelancer Tax Checklist · 1099 Money</span><span>5</span></div>
+</section>
+</body>
+</html>

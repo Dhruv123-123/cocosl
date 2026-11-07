@@ -383,3 +383,23 @@ def test_threads_x_kit_fits_both_platforms_and_is_ready():
     x_bio, threads_bio = re.findall(r"^  > (.+)$", readme, re.M)[:2]
     assert len(x_bio) <= 160 and len(threads_bio) <= 150
     assert (kit / "images" / "x-header.png").exists()
+
+
+def test_short_titles_fit_in_60_characters():
+    # Shorts titles get cut off in the feed past ~60 characters; YouTube's hard limit is 100 for any video.
+    files = ["content.json", MONTH1, MONTH2, MONTH3, MONTH4, MONTH5, MONTH6, DRIVERS]
+    for name in files:
+        for it in _items(name):
+            title = it["script"]["title"]
+            limit = 60 if it["format"] == "short" else 100
+            assert len(title) <= limit, (name, it["format"], len(title), title)
+
+
+def test_tax_checklist_lead_magnet_is_built_and_dated():
+    html = (LAUNCH / "lead-magnets" / "tax-checklist" / "checklist.html").read_text()
+    for fact in ("Fri Jan 15, 2027", "Thu Apr 15, 2027", "Tue Jun 15, 2027", "Wed Sep 15, 2027", "Tue Jan 18, 2028",
+                 "Feb 1, 2027", "72.5¢", "$16,100", "110%", "$2,000 or more"):
+        assert fact in html, fact
+    assert html.count('class="page') == 5 and "not tax" in html.lower()
+    pdf = ROOT / "apps" / "freelance-tax" / "downloads" / "freelancer-tax-checklist.pdf"
+    assert pdf.exists() and pdf.read_bytes()[:4] == b"%PDF" and pdf.stat().st_size > 20000
