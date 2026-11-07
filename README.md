@@ -83,6 +83,7 @@ factory review-gate [list|pass|require|send-back]  # draft → native_review →
 factory launch-mode [two-brand|all]          # two-brand launch: today, reslot and scorecard show MMS + Scam Decoded only
 factory scorecard --gate                     # the five brand-3 gates (time, clean accounts, thresholds, queue, list growth)
 factory time [log <minutes> --what routine]  # weekly time used vs the one-hour-a-day limit (also a form on Today)
+factory broll <post> [--apply]               # optional Pexels/Pixabay B-roll (free keys), max 1 beat in 3, logo-free, credited
 scripts/smoke_fresh_clone.sh                 # fresh clone → install → init → doctor → render one post per brand → launch-check
 factory ui                                   # one local page (127.0.0.1 only): calendar, review queue, recordings, launch check
 factory manual [build|copy <pub>|done <pub> --url]  # TikTok + Pinterest post-by-hand packages
