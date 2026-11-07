@@ -76,8 +76,9 @@ def test_export_writes_pack(factory, tmp_path):
     assert "NARRATION SCRIPT" in (vid / "caption.txt").read_text()
 
 
-@pytest.mark.parametrize("month,start", [("month-2", date(2026, 12, 21)), ("month-3", date(2027, 1, 21))])
-def test_tiktok_cuts_and_series(factory, month, start):
+@pytest.mark.parametrize("month,start,days", [("month-2", date(2026, 12, 21), 31), ("month-3", date(2027, 1, 21), 31),
+                                              ("month-4", date(2027, 2, 21), 28)])
+def test_tiktok_cuts_and_series(factory, month, start, days):
     items = _items(ROOT / "launch" / "money-made-simple" / month / "content.json")
     shorts = [i for i in items if i["format"] == "short"]
     assert shorts and all(i.get("tiktok_extra") for i in shorts)
@@ -92,7 +93,7 @@ def test_tiktok_cuts_and_series(factory, month, start):
     assert len(rmb) >= 4
     assert all("Fictional example" in i["script"]["caption"] for i in rmb)
     brand = factory.brand("money-made-simple")
-    slots, leftover = plan(brand, items, start, 31,
+    slots, leftover = plan(brand, items, start, days,
                            {"carousel": "mon,tue,wed,thu,fri"})
     assert len(leftover) <= 1  # a spare is fine when the window ends on a weekend
     txt = caption_txt(brand, rmb[0], None)
@@ -111,3 +112,8 @@ def test_evergreen_library_is_undated_and_unique():
             assert est_seconds(s["narration"] for s in it["script"]["segments"]) <= 20
     seen = {i["script"]["title"].lower() for m in MONTHS for i in _items(m)}
     assert not seen & {i["script"]["title"].lower() for i in items}
+
+
+def test_no_title_reused_across_months():
+    titles = [i["script"]["title"].lower() for m in MONTHS for i in _items(m)]
+    assert len(titles) == len(set(titles)), sorted(t for t in titles if titles.count(t) > 1)
