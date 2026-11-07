@@ -27,8 +27,8 @@ Written 2026-11-07 from public pages. **Docs only.** PR #13's prices (from `laun
   Valley Library System minutes, Aug 2024: Brainfuse $231,700, LearningExpress $97,915, a Gale package
   $33-63K). Single branches and senior centers have far smaller budgets, so **$19 a location is right for a
   branch**. But a **system price of $59 a month (up to 10 branches) is very low** next to what systems spend.
-  Suggest a system tier priced per branch ($15 a branch a month, so $150 for 10), and quote larger systems
-  on request.
+  Suggest a system tier priced per branch ($12 a branch a month, so $120 for 10), and quote larger systems
+  on request. The full proposal is in `b2b-library-tier-note.md`.
 - **A new route: sponsorship.** Banzai, used "by over 2,500 partners", is free to schools because a local
   bank or credit union pays for it. The same model fits Community Scam Watch: **a credit union sponsors the
   library's or senior center's scam alert**, with its name on it. One sale covers several locations, and it
@@ -56,7 +56,7 @@ No public price was found for scam-alert content sold to credit unions. The frau
 | CU scam alert | $49 / $99 / $149 | Keep | — |
 | CU scam alert | — | **Add "sponsor a library or senior center"**: $99 a month gives up to 5 local locations Community Scam Watch with "brought to you by [CU]" | Next sales-sheet update |
 | Employer wellness | $59 / $129 / $249 | Starter to **$79** once 3 pilots convert | Month 3 |
-| Community Scam Watch | $19 a location; $59 a system | Keep $19 for a single location; **system = $15 a branch a month** (10 branches = $150) | Now; there are no customers yet |
+| Community Scam Watch | $19 a location; $59 a system | Keep $19 for a single location; **system = $12 a branch a month** (see `b2b-library-tier-note.md`) | Now; there are no customers yet |
 | CPA client letter | $39 / $79 / $129 | Keep (no benchmark found) | — |
 
 **Why the caution:** these benchmarks are few, old (2019-2024) or quote-only. The model in
