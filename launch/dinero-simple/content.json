@@ -1757,5 +1757,231 @@
    "title_variants": [],
    "hook_variants": []
   }
+ },
+ {
+  "format": "long",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "A start-to-finish walkthrough for investing $100/month from age 25: order of operations, account choice, fund choice, automation, and surviving the first downturn.",
+  "source_index": 22,
+  "source_title": "How to start investing with $100 a month (complete beginner walkthrough)",
+  "script": {
+   "title": "Cómo empezar a invertir con $100 al mes (guía completa para principiantes)",
+   "hook": "Cien dólares al mes no suena a invertir. En cuarenta años, puede volverse una de las cosas más grandes que tengas.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Cien dólares al mes no suena a invertir. Suena al recibo del celular. Pero el dinero que inviertes a los veintitantos recibe lo único que nadie puede comprar después: tiempo. En este video vamos de cero a tener todo invirtiendo en automático, en el orden que de verdad tiene sentido. Qué hacer antes de invertir, qué cuenta abrir, qué comprar adentro, cómo ponerlo en automático y qué hacer la primera vez que el mercado baja y tu saldo se pone en rojo. Sin apostar por empresas, sin predicciones y sin prometer rendimientos. Solo lo que a casi todos nos hubiera gustado que alguien nos enseñara a los veintidós.",
+     "on_screen_text": "Invertir $100 al mes, de principio a fin",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf standing at the start of a long, gently winding garden path at sunrise. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué importa el tiempo",
+     "narration": "Un ejemplo hipotético para que veas la forma. Inviertes $100 al mes durante cuarenta años y supones un promedio de siete por ciento al año. Pondrías $48,000 y la cuenta valdría unos $262,000. Si empiezas diez años después, con los mismos $100 y el mismo supuesto, pondrías $36,000 y terminarías con unos $122,000. Diez años menos te cuestan más de la mitad del resultado, porque el crecimiento de las últimas décadas es crecimiento sobre crecimiento. Los mercados de verdad no dan un siete por ciento parejito, y nadie promete rendimientos. Pero la lección se mantiene: empezar con poco y temprano casi siempre le gana a empezar con mucho y tarde.",
+     "on_screen_text": "40 años ≈ $262k · 30 años ≈ $122k",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two coin trees, one planted earlier and much taller than the other, same-size watering cans. No text, no logos, no real people."
+    },
+    {
+     "heading": "Antes de invertir",
+     "narration": "Dos cosas van primero. Uno: un fondo de emergencia inicial, aunque sean $1,000 en una cuenta de ahorro aparte, para que un arreglo del carro no termine en la tarjeta de crédito. Dos: encárgate de las deudas con interés alto. Si una tarjeta te cobra más de veinte por ciento, pagarla es un rendimiento seguro de esa tasa, y eso es muy difícil de superar invirtiendo. Las deudas con tasa más baja, como muchos préstamos estudiantiles federales, son otra cosa; mucha gente invierte mientras las paga a tiempo. El orden no es de moral. Son cuentas: protégete de las sorpresas, acaba con la deuda cara y luego crece.",
+     "on_screen_text": "Primero un colchón, luego la deuda cara",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three stepping stones: a small jar, a broken chain, then a sprouting plant. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso uno: el match",
+     "narration": "Si tu trabajo te da match en el 401(k), normalmente ahí va tu dinero primero. Una fórmula común es que tu empleador pone el cincuenta por ciento de lo que aportas, hasta el seis por ciento de tu sueldo. Con un salario de $45,000, aportar el seis por ciento son $2,700 al año, y tu empleador agrega $1,350. Es un cincuenta por ciento inmediato sobre ese dinero, antes de que el mercado se mueva. Entra al portal de beneficios, busca la fórmula del match y pon tu aporte por lo menos en ese nivel. Revisa también el calendario de vesting, que dice cuánto tiempo tienes que quedarte para que el dinero de tu empleador sea todo tuyo. Lo que tú aportas siempre es tuyo.",
+     "on_screen_text": "Primero, todo el match del 401(k)",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two jars pouring into one larger jar, a small gift bow on the second stream. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso dos: la Roth IRA",
+     "narration": "¿No tienes match, o ya lo recibes completo? Para mucha gente que empieza a trabajar, una Roth IRA es un muy buen siguiente paso. Aportas dinero por el que ya pagaste impuestos, crece, y los retiros que cumplen las reglas en tu jubilación salen libres de impuestos. El límite de 2026 es de $7,500 si tienes menos de cincuenta años, así que $100 al mes, o $1,200 al año, caben sin problema. Necesitas ingresos de trabajo y hay límites de ingreso, así que revisa la página del IRS para los números actuales. La Roth IRA se abre en una casa de bolsa, no en tu trabajo, y en línea toma unos quince minutos.",
+     "on_screen_text": "Luego, una Roth IRA",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf opening a small door in a garden wall with a sun icon above it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué comprar",
+     "narration": "Aquí es donde la gente se congela, así que hazlo aburrido. Dos opciones simples. Un fondo índice con fecha objetivo, con un año cercano a cuando cumplirías sesenta y cinco: un solo fondo que tiene acciones y bonos y se vuelve más conservador con el tiempo. O un fondo índice amplio, de todo el mercado o del S&P 500, que reparte tu dinero entre cientos o miles de empresas. En los dos casos, busca la comisión anual, el expense ratio. Los fondos índice amplios de los proveedores grandes muchas veces cobran unas cuantas centésimas de por ciento al año. Si un fondo cobra uno por ciento o más por lo mismo, sigue buscando. Con uno o dos fondos basta. No necesitas una colección.",
+     "on_screen_text": "Hazlo aburrido: uno o dos fondos índice",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a single basket holding a mosaic of tiny squares, beside a small price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ponlo en automático",
+     "narration": "Ahora sácate a ti del proceso. Programa una transferencia automática de $100 de tu cuenta de cheques a tu IRA el día después de tu día de pago. Luego, si tu casa de bolsa lo ofrece, programa la inversión automática en el fondo que elegiste, para que el efectivo no se quede ahí parado. Esa parte importa: depositar dinero y comprar un fondo son dos pasos distintos, y mucha gente descubre meses después que su dinero estaba estacionado en efectivo. Después del primer mes, entra a la cuenta y confirma que ves acciones del fondo, no solo un saldo en efectivo. Y deja de revisar todos los días. Una vez al mes basta.",
+     "on_screen_text": "Automatiza la transferencia Y la compra",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a gentle conveyor belt carrying coins from a wallet into a basket. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tu primera bajada",
+     "narration": "En algún momento tu saldo va a bajar, tal vez mucho. Los mercados de acciones amplios han caído veinte por ciento o más varias veces en las últimas décadas, y va a volver a pasar. Cuando pase, tus $100 automáticos están comprando a precios más bajos: eso es el plan funcionando, no fallando. El error común es vender después de una caída, quedarte con la pérdida y volver a comprar cuando los precios ya se recuperaron. Decide ahora, con calma, que vas a dejar en paz el dinero de largo plazo. Si una bajada de verdad te arruinaría, ese dinero probablemente debía estar en ahorro, no en acciones.",
+     "on_screen_text": "Las bajadas pasan. Sigue comprando.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an umbrella calmly while a wavy line dips and rises behind. No text, no logos, no real people."
+    },
+    {
+     "heading": "Más allá de $100",
+     "narration": "Cien dólares son la línea de salida, no el techo. La forma más fácil de crecer es ligar los aumentos a momentos. Con cada aumento de sueldo, sube tu aporte la mitad de ese aumento. Cada enero, súmale uno por ciento a tu 401(k). Cuando termines de pagar una deuda, manda ese pago a invertir. Muchos planes 401(k) tienen un aumento automático cada año que activas en un minuto. Casi no sientes cada paso, pero en unos años $100 al mes se pueden volver $300 o $500 sin cambiar todo tu presupuesto.",
+     "on_screen_text": "Súbele con cada aumento",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a staircase of coin stacks, each step slightly higher. No text, no logos, no real people."
+    },
+    {
+     "heading": "Errores que evitar",
+     "narration": "Hay unas cuantas trampas para principiantes. Perseguir lo que más subió el año pasado; lo que pasó antes no predice el año que viene. Tener ocho fondos que tienen las mismas empresas. Revisar la app todos los días y reaccionar al ruido. Sacar dinero de una Roth IRA para cosas que no son emergencias, lo que te cuesta años de crecimiento aunque esté permitido. Y dejar los depósitos sin invertir, en efectivo. Ninguna requiere saber nada especial. Solo un plan simple que armas una vez y un poquito de paciencia.",
+     "on_screen_text": "Evita las cinco trampas comunes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. five small pitfalls along a path, with the mascot walking around them on stepping stones. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Aquí está todo en una pantalla. Junta un fondo de emergencia inicial. Paga las deudas con interés alto. Recibe todo el match de tu 401(k). Abre una Roth IRA si cumples los requisitos. Elige uno o dos fondos índice de bajo costo. Pon en automático la transferencia y la compra. No toques nada cuando el mercado baje. Y súbele cada vez que ganes más. Eso es todo. No es emocionante, y esa es la idea. Todo esto es educación, no asesoría personal, así que revisa los detalles con tu situación y con las fuentes oficiales de la descripción.",
+     "on_screen_text": "Colchón · deuda · match · Roth · automático",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at the end of the garden path, looking back at a row of tidy plants. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "De principio a fin: invertir $100 al mes.\n1. Fondo de emergencia inicial\n2. Paga las deudas con interés alto\n3. Recibe todo el match del 401(k)\n4. Roth IRA si cumples los requisitos\n5. Uno o dos fondos índice de bajo costo\n6. Automatiza la transferencia Y la compra\n7. No vendas cuando el mercado baja\n8. Súbele con cada aumento\n\nEjemplo hipotético: $100 al mes durante 40 años al 7% anual ≈ $262k de $48k aportados. Nadie promete rendimientos; los mercados también bajan.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "invertir",
+    "rothira",
+    "401k",
+    "fondosindexados",
+    "interescompuesto",
+    "finanzaspersonales",
+    "educacionfinanciera",
+    "dinerosimple"
+   ],
+   "description": "Todo lo que necesitas para empezar a invertir con $100 al mes, en el orden correcto: fondo de emergencia, deudas con interés alto, match del 401(k), Roth IRA, cómo elegir un fondo índice de bajo costo, ponerlo en automático y qué hacer en tu primera bajada del mercado.\n\nCapítulos\n0:00 Invertir $100 al mes\n0:45 Por qué importa el tiempo\n1:35 Antes de invertir\n2:20 Paso uno: el match\n3:15 Paso dos: la Roth IRA\n4:00 Qué comprar\n4:55 Ponlo en automático\n5:40 Tu primera bajada\n6:25 Más allá de $100\n7:05 Errores que evitar\n7:45 Resumen\n\nLos ejemplos son hipotéticos y solo educativos; nadie promete rendimientos. No es asesoría financiera.\n\nFuentes: irs.gov (Roth IRA y límites de IRA), investor.gov (calculadora de interés compuesto, fondos índice), irs.gov (vesting).",
+   "thumbnail_text": "$100 al mes, bien hecho",
+   "sources": [
+    "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator",
+    "https://www.irs.gov/retirement-plans/roth-iras",
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits",
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-vesting",
+    "https://www.investor.gov/introduction-investing/investing-basics/glossary/index-funds",
+    "https://www.sipc.org/for-investors/what-sipc-protects"
+   ],
+   "claims_to_verify": [
+    "$100/month for 40 years at 7%/yr (monthly compounding) ≈ $262,481 from $48,000 contributed; 30 years ≈ $121,997 from $36,000",
+    "2026 IRA contribution limit $7,500 for under 50",
+    "Roth IRA requires taxable compensation; MAGI income limits apply",
+    "Common 401(k) match example: 50% up to 6%; $45,000 × 6% = $2,700, match $1,350",
+    "Employee 401(k) contributions are always 100% vested",
+    "Broad US stock market has declined 20%+ multiple times in recent decades (e.g., 2000–02, 2008–09, 2020, 2022)",
+    "Broad index funds from large providers often charge a few hundredths of a percent",
+    "Spanish narration runs ~15% longer than English; re-time the chapter markers in the description after voicing"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A day-by-day 30-day reset for a 20-something who feels behind: see the numbers, fix fixed costs, set a weekly number, triage debt, start the fund, protect credit.",
+  "source_index": 23,
+  "source_title": "Feel behind on money? A 30-day reset plan",
+  "script": {
+   "title": "¿Sientes que vas atrasado con tu dinero? Un plan de 30 días",
+   "hook": "Sentir que vas atrasado con tu dinero es muy común. La solución no es un cambio radical. Son treinta días de pasos chiquitos y concretos.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Si sientes que vas atrasado con tu dinero, no estás solo. Tal vez tus amigos parecen tener ahorros, inversiones, un plan, y a ti te da un miedito cada vez que abres la app del banco. Y a lo mejor además le ayudas a tu familia. La cosa es esta: ir \"atrasado\" casi nunca es primero un problema de números. Es un problema de no ver. No puedes arreglar lo que evitas mirar. Así que esto es un plan de treinta días. Cada semana tiene un enfoque, y cada tarea toma menos de treinta minutos. Para el día treinta vas a conocer tus números, tener un sistema para gastar, un plan para tus deudas, un fondo de emergencia en camino y una cuenta de retiro funcionando.",
+     "on_screen_text": "Tu dinero en orden en 30 días",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf standing at the bottom of a short, friendly staircase with four landings. No text, no logos, no real people."
+    },
+    {
+     "heading": "Días 1–3: ver todo",
+     "narration": "Día uno: anota cada cuenta. Cheques, ahorro, cada tarjeta de crédito, préstamos estudiantiles, el préstamo del carro, los planes de compra ahora y paga después, y las cuentas de retiro de trabajos anteriores. Día dos: escribe al lado de cada una el saldo y la tasa de interés. Día tres: réstale lo que debes a lo que tienes. Ese número es tu patrimonio neto, y a los veintitantos muchas veces sale negativo, sobre todo con préstamos estudiantiles. Está bien. Es un punto de partida, no una calificación. La meta de estos tres días es solo esta: que ya no haya misterio. A casi todos el número real les da menos miedo que la neblina que traían cargando.",
+     "on_screen_text": "Días 1–3: anota cada cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a tidy table covered with simple account cards laid out in a row. No text, no logos, no real people."
+    },
+    {
+     "heading": "Días 4–7: mira, no cambies",
+     "narration": "Los siguientes cuatro días, solo anota lo que gastas. Cada compra, escrita o con captura de pantalla, sin cambiar nada todavía. Estás juntando datos reales en vez de adivinar. El día siete, también pide tus reportes de crédito gratis en AnnualCreditReport.com, el sitio oficial, y revísalos buscando cuentas que no reconoces o pagos atrasados que se ven mal. Tu reporte es la materia prima de tu puntaje de crédito, y los errores sí pasan. Leerlo toma veinte minutos y no cuesta nada. Cierra la semana con una nota corta: ¿qué te sorprendió más?",
+     "on_screen_text": "Días 4–7: anota gastos y revisa reportes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small notebook filling with simple icons: coffee cup, bus, grocery bag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Semana 2: baja los gastos fijos",
+     "narration": "La semana dos es de gastos fijos, porque recortar una cuenta que se repite te ahorra cada mes sin fuerza de voluntad. Día ocho: revisa tus suscripciones. Busca en noventa días de estados de cuenta los cobros que se repiten y cancela lo que ni sabías que tenías. Día nueve: llama o escribe por chat a tu compañía de celular y a tu aseguradora del carro y pregunta qué planes más baratos o descuentos tienen. Muchas atienden en español, y las cotizaciones de dos competidores te dan con qué negociar. Día diez: abre dos cuentas de cheques, una para gastos fijos que se llena sola el día de pago, y otra para todo lo demás. Los gastos fijos que arreglas una vez se quedan arreglados.",
+     "on_screen_text": "Semana 2: recorta lo que se repite, una vez",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pair of scissors trimming a long chain of small recurring loops. No text, no logos, no real people."
+    },
+    {
+     "heading": "Semana 2: un número semanal",
+     "narration": "Día once: toma tu sueldo neto, réstale los gastos fijos, incluido lo que le mandas a tu familia, réstale lo que quieres ahorrar, y lo que queda es tu gasto flexible. Multiplica esa cantidad mensual por doce y divídela entre cincuenta y dos. Ese es tu número semanal para gastar. Día doce: pasa esa cantidad a tu cuenta de gastos cada lunes. Días trece y catorce: vive con eso y fíjate qué pasa. Casi todos se pasan en un lugar predecible, como la comida a domicilio o los planes del fin de semana. No tienes que ser perfecto. Solo necesitas un número que te diga, a media semana, si vas bien.",
+     "on_screen_text": "Semana 2: un solo número semanal",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf refilling a small wallet on a Monday morning. No text, no logos, no real people."
+    },
+    {
+     "heading": "Semana 3: un plan para tus deudas",
+     "narration": "Día quince: haz una lista de todas tus deudas, de la tasa de interés más alta a la más baja. Día dieciséis: activa el pago automático de por lo menos el mínimo en cada una, para que nunca se te pase un pago, porque el historial de pagos es el factor más grande en casi todos los puntajes de crédito. Día diecisiete: elige un método para el dinero extra. Avalancha, primero la tasa más alta, ahorra más interés. Bola de nieve, primero el saldo más chico, te da victorias más rápido. Cualquiera de los dos le gana a pagar solo el mínimo. Para préstamos estudiantiles federales, usa el Loan Simulator de studentaid.gov para ver planes de pago que se ajusten a tus ingresos, porque las opciones cambiaron hace poco.",
+     "on_screen_text": "Semana 3: mínimos en automático, elige un método",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a row of chain links, the first one opening, a calendar with autopay loop arrows. No text, no logos, no real people."
+    },
+    {
+     "heading": "Semana 3: empieza el colchón",
+     "narration": "Días dieciocho al veintiuno: abre una cuenta de ahorro aparte para emergencias en un banco o cooperativa de crédito asegurados. Las cuentas de ahorro de alto rendimiento muchas veces pagan mucho más interés que una cuenta normal de un banco grande; revisa que esté asegurada por la FDIC o la NCUA y que no cobre cuota mensual. Luego programa una transferencia automática, aunque sean $25 a la semana. La primera meta es $1,000. La meta a largo plazo es de tres a seis meses de gastos básicos. Este fondo es lo que evita que la próxima sorpresa se vuelva deuda nueva en la tarjeta, que es como mucha gente se queda atorada.",
+     "on_screen_text": "Semana 3: empieza un colchón de $1,000",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar under an umbrella, slowly filling with a steady drip of coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Semana 4: activa tu retiro",
+     "narration": "Día veintidós: entra a tu portal de beneficios. Si hay match en el 401(k), pon tu aporte por lo menos en lo que necesitas para recibirlo completo. Día veintitrés: busca los 401(k) de trabajos anteriores y asegúrate de saber dónde están. Días veinticuatro y veinticinco: si no tienes plan en el trabajo, o ya recibes el match, considera abrir una Roth IRA y elige adentro un fondo con fecha objetivo o un fondo índice amplio de bajo costo. Hasta $50 al mes cuentan. No estás tratando de ponerte al día en un mes. Estás haciendo que el tiempo empiece a trabajar a tu favor.",
+     "on_screen_text": "Semana 4: primero el match, luego la IRA",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small seedling being planted in a pot beside a watering can. No text, no logos, no real people."
+    },
+    {
+     "heading": "Semana 4: protege lo que armaste",
+     "narration": "Días veintiséis y veintisiete: congela tu crédito en Equifax, Experian y TransUnion. Es gratis, no afecta tu puntaje y lo puedes quitar por un tiempo cuando pidas algo. Día veintiocho: activa tres alertas en las apps de tu banco y tus tarjetas: saldo bajo, compra grande y fecha de pago cinco días antes. Día veintinueve: anota dónde está cada cuenta y guarda tus contraseñas en un administrador de contraseñas. Protegerte no es emocionante, pero un robo de identidad o un pago que se te pasa pueden deshacer meses de avance.",
+     "on_screen_text": "Semana 4: congela tu crédito, activa alertas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf placing a snowflake-shaped lock on a filing cabinet, small bells on a shelf. No text, no logos, no real people."
+    },
+    {
+     "heading": "Día 30: tu primera cita con tu dinero",
+     "narration": "Día treinta: ten tu primera cita mensual con tu dinero. Veinte minutos. Abre cada cuenta, compara lo que gastaste este mes con tu número semanal, ajusta el mes que viene y elige un paso nuevo. Luego vuelve a calcular tu patrimonio neto del día tres. Puede que casi no se haya movido, y está bien. Lo que cambió es que ahora tienes sistemas: cuentas que se pagan solas, un número para gastar, un plan de deudas en automático, un colchón que crece y dinero para tu retiro que ya está invertido. La sensación de ir atrasado se va cuando ves que el sistema funciona.",
+     "on_screen_text": "Día 30: tu primera cita mensual con tu dinero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at a cafe table with a timer and a coffee, smiling at a simple chart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Aquí van los treinta días de corrido. Semana uno: anota cada cuenta y lo que gastas, sin juzgarte. Semana dos: recorta lo que se repite, separa tus cuentas y fija un número semanal para gastar. Semana tres: mínimos en automático, elige un método para pagar deudas y empieza un fondo de emergencia aparte. Semana cuatro: recibe el match de tu 401(k), considera una Roth IRA, congela tu crédito y activa alertas. Y luego, una cita de veinte minutos con tu dinero cada mes. Compararte con lo que otros presumen en redes no mueve tus números. Estos pasos sí. Y si te atrasas una semana, no empiezas de cero; solo sigues con el siguiente día de la lista.",
+     "on_screen_text": "Ver · simplificar · planear · proteger",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf standing on the top landing of the staircase, waving. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "¿Sientes que vas atrasado? Un plan de 30 días:\nSemana 1: anota cada cuenta, lo que gastas y revisa tus reportes de crédito\nSemana 2: recorta gastos que se repiten, separa tus cuentas de cheques y fija un número semanal\nSemana 3: mínimos en automático, elige avalancha o bola de nieve, empieza un colchón de $1,000\nSemana 4: recibe el match del 401(k), considera una Roth IRA, congela tu crédito, activa alertas\nDía 30: tu primera cita de 20 minutos con tu dinero\n\n¿Lo quieres ya armado? El Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "finanzaspersonales",
+    "presupuesto",
+    "salirdedeudas",
+    "fondodeemergencia",
+    "educacionfinanciera",
+    "ahorro",
+    "dinerosimple"
+   ],
+   "description": "Un plan práctico de 30 días para quien siente que va atrasado con su dinero: ve tus números, baja tus gastos fijos, fija un número semanal para gastar, arma un plan de deudas, empieza un fondo de emergencia, activa tu ahorro para el retiro y protege tu crédito.\n\nCapítulos\n0:00 Tu dinero en orden en 30 días\n0:45 Días 1–3: ver todo\n1:35 Días 4–7: mira, no cambies\n2:20 Semana 2: baja los gastos fijos\n3:10 Semana 2: un número semanal\n4:00 Semana 3: un plan para tus deudas\n4:50 Semana 3: empieza el colchón\n5:40 Semana 4: activa tu retiro\n6:30 Semana 4: protege lo que armaste\n7:15 Día 30: tu primera cita con tu dinero\n8:00 Resumen\n\nSolo educativo, no es asesoría financiera. El enlace de la bio incluye nuestro propio producto, El Presupuesto de 20 Minutos.",
+   "thumbnail_text": "¿Atrasado? Plan de 30 días",
+   "sources": [
+    "https://www.annualcreditreport.com",
+    "https://studentaid.gov/loan-simulator/",
+    "https://www.fdic.gov/resources/deposit-insurance",
+    "https://consumer.ftc.gov/articles/what-know-about-credit-freezes-fraud-alerts",
+    "https://www.myfico.com/credit-education/whats-in-your-credit-score",
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
+    "https://www.irs.gov/retirement-plans/roth-iras"
+   ],
+   "claims_to_verify": [
+    "Free weekly credit reports at AnnualCreditReport.com",
+    "Payment history is the largest factor in FICO scores (about 35%)",
+    "Federal student loan repayment options changed under 2025 legislation; Loan Simulator reflects current plans (verify wording is current as of posting)",
+    "Credit freezes are free and don't affect scores",
+    "Emergency fund guidance of 3–6 months of essential expenses",
+    "High-yield savings accounts often pay well above big-bank standard savings rates (check FDIC national rate)",
+    "Spanish narration runs ~15% longer than English; re-time the chapter markers after voicing",
+    "Confirm studentaid.gov Loan Simulator is still the right tool name and that the repayment-plan changes line is current"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
  }
 ]

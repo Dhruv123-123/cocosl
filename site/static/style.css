@@ -66,12 +66,12 @@ h3{font-size:19px;font-weight:750;margin-top:1.4em}
 .form-note{font-size:13px;color:var(--muted);margin:8px 0 0}
 
 /* hero */
-.hero{background:radial-gradient(90% 120% at 85% 0%,#1d3d2a 0%,var(--ink) 60%);color:var(--paper);padding:56px 0 64px}
+.hero{background:radial-gradient(90% 120% at 85% 0%,var(--glow,#1d3d2a) 0%,var(--ink) 60%);color:var(--paper);padding:56px 0 64px}
 .hero .kicker{color:var(--gold)}
 .hero .dek{color:#d4d8cf}
 .hero-grid,.landing-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}
 .hero .cover,.landing .cover{justify-self:center;max-width:300px;border-radius:8px;box-shadow:0 20px 50px rgba(0,0,0,.35);transform:rotate(2deg)}
-.hero-form{background:var(--ink2);border:1px solid #303f35;border-radius:var(--radius);padding:18px;max-width:560px}
+.hero-form{background:var(--ink2);border:1px solid var(--ink3,#303f35);border-radius:var(--radius);padding:18px;max-width:560px}
 .hero-offer{margin:0 0 6px;color:var(--paper)}
 .hero .form-note,.hero .form-note a{color:#a2a79d}
 .hero .signup-form button{background:var(--gold);color:var(--ink)}

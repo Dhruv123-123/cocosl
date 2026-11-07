@@ -21,4 +21,4 @@ node launch/dinero-simple/src/render_pdf.js $PWD/launch/dinero-simple/product/el
 factory pack launch/dinero-simple/content.json --brand dinero-simple --out output/dinero-simple-pack
 ```
 
-Not adapted yet: the two long-form videos, the link-in-bio page, the email sequence and the website. Visual prompts, sources and fact-check lists stay in English on purpose so the operator can check them.
+Also adapted: the two long-form videos (`videos/23`, `videos/24`), and the website, link-in-bio page, lead magnet and 10-email sequence in `sites/dinero-simple/` (see its README). Visual prompts, sources and fact-check lists stay in English on purpose so the operator can check them.

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /emails/
+Disallow: /free/thanks/
+Sitemap: https://dinerosimple.netlify.app/sitemap.xml

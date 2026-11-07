@@ -111,7 +111,7 @@ def test_pack_export_spanish_carousel(factory, tmp_path):
 def test_spanish_content_matches_english_structure():
     es = json.loads((ROOT / "launch" / "dinero-simple" / "content.json").read_text())
     en = json.loads((ROOT / "launch" / "money-made-simple" / "content.json").read_text())
-    assert len(es) == 22
+    assert len(es) == 24
     for item in es:
         src = en[item["source_index"]]
         assert item["format"] == src["format"]

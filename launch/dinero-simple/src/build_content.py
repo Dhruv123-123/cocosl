@@ -16,7 +16,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 sys.path.insert(0, str(HERE))
 
-import carousels_a, carousels_b, shorts_a, shorts_b  # noqa: E402
+import carousels_a, carousels_b, long_videos, shorts_a, shorts_b  # noqa: E402
 
 MASCOT_EN = "the small round green piggy bank mascot with big eyes"
 MASCOT_ES = "the small round coral piggy bank mascot with big eyes and a tiny teal scarf"
@@ -28,6 +28,9 @@ EXTRA_CLAIMS = {
     13: ["Most US bank/card statements show subscription charges with English words (monthly, subscription, "
          "renewal); confirm before saying 'casi todos los cargos llegan en inglés'"],
     9: ["App menu names are given in Spanish and English (Configuración / Settings); check they match common bank apps"],
+    22: ["Spanish narration runs ~15% longer than English; re-time the chapter markers in the description after voicing"],
+    23: ["Spanish narration runs ~15% longer than English; re-time the chapter markers after voicing",
+         "Confirm studentaid.gov Loan Simulator is still the right tool name and that the repayment-plan changes line is current"],
     21: ["Some readers may only have an ITIN; consider adding a line on whether the brokerages you recommend accept "
          "an ITIN instead of an SSN (do not claim this without checking)"],
 }
@@ -35,7 +38,7 @@ EXTRA_CLAIMS = {
 
 def build() -> list[dict]:
     english = json.loads((ROOT / "launch" / "money-made-simple" / "content.json").read_text())
-    spanish = {**shorts_a.ITEMS, **shorts_b.ITEMS, **carousels_a.ITEMS, **carousels_b.ITEMS}
+    spanish = {**shorts_a.ITEMS, **shorts_b.ITEMS, **carousels_a.ITEMS, **carousels_b.ITEMS, **long_videos.ITEMS}
     out = []
     for idx in sorted(spanish):
         src = english[idx]

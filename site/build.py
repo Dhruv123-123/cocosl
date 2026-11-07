@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the Money Made Simple static site.
+"""Build the Money Made Simple static site (or another brand's, with SITE_ROOT; see sites/).
 
 Standard library only, so it runs anywhere Python 3.9+ exists (your laptop,
 Netlify's build image, GitHub Actions) with no installs.
@@ -7,6 +7,8 @@ Netlify's build image, GitHub Actions) with no installs.
     python3 site/build.py                     # writes site/public/
     SITE_URL=https://example.com python3 site/build.py
     python3 site/build.py --serve             # build, then preview on http://localhost:8080
+    SITE_ROOT=sites/dinero-simple python3 site/build.py   # build another brand's site (its own
+                                              # site.json, content/ and static/; UI text from site.json "ui")
 
 Content lives in site/content/ as Markdown with a small front-matter block:
   blog/*.md      articles   (title, description, date, pillar, keyword, read_minutes)
@@ -27,9 +29,10 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(os.environ.get("SITE_ROOT") or Path(__file__).resolve().parent).resolve()
 CONTENT = ROOT / "content"
 STATIC = ROOT / "static"
+SHARED_STATIC = Path(__file__).resolve().parent / "static"  # style.css and site.js live here for every site
 OUT = Path(os.environ.get("SITE_OUT") or ROOT / "public")
 
 
@@ -49,6 +52,74 @@ def load_config() -> dict:
 
 
 CFG: dict = {}
+
+# Every piece of interface text the generator writes itself. A site.json "ui" block overrides any key,
+# which is how a site in another language (sites/dinero-simple) reuses this generator unchanged.
+UI_EN: dict = {
+    "lang": "en", "theme_color": "#0b1d13",
+    "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September",
+               "October", "November", "December"],
+    "date_format": "{month} {day}, {year}",
+    "nav_articles": "Articles", "nav_products": "Products", "nav_free": "Free reset", "nav_about": "About",
+    "skip": "Skip to content", "home": "Home", "articles": "Articles", "guide": "Guide",
+    "privacy": "Privacy", "disclosures": "Disclosures", "terms": "Terms", "links": "Links",
+    "form_button": "Send me the free reset", "form_button_short": "Send it", "honeypot": "Leave this empty",
+    "email_label": "Email address", "email_placeholder": "you@example.com",
+    "privacy_note": "One useful email a week. Unsubscribe in one click.",
+    "free_download": "Free download", "cover_of": "Cover of {title}",
+    "coming_soon": "Coming soon", "launch_price": "launch price",
+    "on_this_page": "On this page", "sources": "Sources", "updated": "Updated", "min_read": "min read",
+    "reviewed": "Reviewed by a human editor",
+    "aff_note": "This article contains affiliate links. If you sign up through them we may earn a commission at "
+                "no extra cost to you.",
+    "aff_how": "How we handle this", "tool_for_this": "Tool for this", "read_next": "Read next",
+    "blog_title": "Articles: budgeting, investing basics, credit and money tools",
+    "blog_description": "Plain-English guides for students and early-career workers: budgeting that sticks, "
+                        "first-time investing, credit scores, debt payoff and money apps, with the maths shown.",
+    "blog_h1": "Articles", "blog_dek": "One idea per article, explained properly, with the numbers shown. Pick a topic:",
+    "pillar_title": "{label}: articles", "pillar_description": "Every {site} article on {label_lower}.",
+    "products": "Products", "preview_alt": "{title} preview",
+    "not_on_sale": "Not on sale yet. Join the free email and you'll hear the day it opens.",
+    "waitlist_button": "Tell me when it opens", "buy_label": "Get instant access",
+    "products_title": "Guides and templates",
+    "products_description": "Low-cost, no-subscription money tools from {site}: guides and spreadsheets you keep.",
+    "products_dek": "Small, specific tools. One payment, no subscription, files you keep. Each one has a no-hoops refund.",
+    "free_title": "Free: {title}", "free_kicker": "Free PDF + checklist",
+    "free_days_h": "What you'll do, one 15-minute task a day", "day": "Day {n}",
+    "free_else_h": "What else you get",
+    "free_else": "After the reset, one short email a week: a single money move, explained with the numbers. No hype, "
+                 "no stock picks, no \"get rich\" anything. You can unsubscribe in one click from any email.",
+    "thanks_title": "You're in", "thanks_description": "Your free download.",
+    "thanks_h1": "You're in. Here's your reset.",
+    "thanks_note": "Check your inbox too: your first email is on its way (look in Promotions or Spam if you do not see it).",
+    "download": "Download {title} (PDF)",
+    "thanks_start": "Start with Day 1 today. It takes about 15 minutes and you'll need your banking app.",
+    "thanks_more": "Want the full system?",
+    "links_title": "Links", "links_free": "Free: {title}", "links_products": "Guides and templates",
+    "links_articles": "Popular articles", "links_tools": "Tools we recommend", "affiliate": "affiliate",
+    "links_aff_note": "Affiliate links: we may earn a commission at no extra cost to you.",
+    "home_title": "{site}: one money move a week, explained simply",
+    "home_kicker": "For students and early-career workers",
+    "home_h1": "Feel behind on money? Start with one move this week.",
+    "home_offer": "Get <strong>{title}</strong> free: seven 15-minute tasks that get your money organised in a week.",
+    "home_topics": "Start with a topic", "home_latest": "Latest articles", "home_all": "All articles",
+    "home_tools": "The tools", "home_how": "How we make this", "n_articles": "{n} articles",
+    "home_promise": [
+        ["Specific, not hype", "Every article and email is one idea you can use this week, with the maths shown. "
+                               "No stock picks, no crypto pumps, no income claims."],
+        ["Checked by a human", "We use AI tools for visuals and drafts. A human picks every topic, checks every "
+                               "number against primary sources (IRS, CFPB, FDIC, Investor.gov) and approves every post."],
+        ["Honest about money", "Some links are affiliate links and they're always labelled. Products have a no-hoops "
+                               "refund. Testimonials only ever come from real buyers, quoted word for word."]],
+    "nf_title": "Page not found", "nf_h1": "That page wandered off.",
+    "nf_dek": "Try the <a href=\"{blog}\">articles</a> or grab the <a href=\"{free}\">free reset</a>.",
+}
+
+
+def T(key: str, **kw) -> str:
+    """Interface text: site.json "ui" first, English default second."""
+    val = (CFG.get("ui") or {}).get(key, UI_EN[key])
+    return val.format(**kw) if kw and isinstance(val, str) else val
 
 
 def u(path: str) -> str:
@@ -211,7 +282,7 @@ def markdown(text: str, shortcodes=None) -> tuple[str, list[tuple[str, str]]]:
 
 def extract_faq(md: str) -> list[tuple[str, str]]:
     """Pull '### Question' + answer pairs from a '## ...FAQ...' or '## Common questions' section."""
-    m = re.search(r"^## (?:FAQ|Frequently asked questions|Common questions)[^\n]*\n(.*?)(?=^## |\Z)", md,
+    m = re.search(r"^## (?:FAQ|Frequently asked questions|Common questions|Preguntas frecuentes|Dudas comunes)[^\n]*\n(.*?)(?=^## |\Z)", md,
                   re.S | re.M | re.I)
     if not m:
         return []
@@ -233,7 +304,8 @@ def load_dir(name: str) -> list[dict]:
 
 
 # ----------------------------------------------------------------- templates
-def email_form(source: str, button: str = "Send me the free reset", compact: bool = False) -> str:
+def email_form(source: str, button: str = "", compact: bool = False) -> str:
+    button = button or T("form_button")
     e = CFG["email"]
     provider = e.get("provider", "netlify")
     thanks = u("/free/thanks/")
@@ -247,7 +319,7 @@ def email_form(source: str, button: str = "Send me the free reset", compact: boo
         attrs = ' name="lead-magnet" data-netlify="true" netlify-honeypot="website"'
         extra = '<input type="hidden" name="form-name" value="lead-magnet">'
     elif provider == "factory":
-        action = e.get("action") or "http://localhost:8000/subscribe/money-made-simple"
+        action = e.get("action") or f"http://localhost:8000/subscribe/{CFG.get('slug', 'money-made-simple')}"
     else:
         action = e.get("action") or "#configure-email-provider-in-site.json"
     if provider == "buttondown":
@@ -259,23 +331,23 @@ def email_form(source: str, button: str = "Send me the free reset", compact: boo
         extra += f'<input type="hidden" name="fields[source]" value="{esc(source)}">'
     else:
         extra += f'<input type="hidden" name="source" value="{esc(source)}">'
-    note = esc(e.get("privacy_note", "One useful email a week. Unsubscribe in one click."))
+    note = esc(e.get("privacy_note", T("privacy_note")))
     return f"""<form class="signup-form{' compact' if compact else ''}" method="post" action="{esc(action)}"{attrs} data-thanks="{thanks}">
   {extra}
-  <label class="hp" aria-hidden="true">Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
-  <label class="sr" for="em-{esc(source)}">Email address</label>
-  <input id="em-{esc(source)}" type="email" name="{esc(field)}" required autocomplete="email" inputmode="email" placeholder="you@example.com">
+  <label class="hp" aria-hidden="true">{esc(T("honeypot"))} <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+  <label class="sr" for="em-{esc(source)}">{esc(T("email_label"))}</label>
+  <input id="em-{esc(source)}" type="email" name="{esc(field)}" required autocomplete="email" inputmode="email" placeholder="{esc(T("email_placeholder"))}">
   <button type="submit">{esc(button)}</button>
 </form>
-<p class="form-note">{note} <a href="{u('/privacy/')}">Privacy</a>.</p>"""
+<p class="form-note">{note} <a href="{u('/privacy/')}">{esc(T("privacy"))}</a>.</p>"""
 
 
 def magnet_box(source: str) -> str:
     lm = CFG["lead_magnet"]
-    return f"""<aside class="magnet" aria-label="Free download">
-  <img src="{u('/img/lead-magnet-cover.png')}" alt="Cover of {esc(lm['title'])}" width="150" height="194" loading="lazy">
+    return f"""<aside class="magnet" aria-label="{esc(T('free_download'))}">
+  <img src="{u('/img/lead-magnet-cover.png')}" alt="{esc(T('cover_of', title=lm['title']))}" width="150" height="194" loading="lazy">
   <div>
-    <p class="kicker">Free download</p>
+    <p class="kicker">{esc(T('free_download'))}</p>
     <h2 class="magnet-title">{esc(lm['title'])}</h2>
     <p>{esc(lm['pitch'])}</p>
     {email_form(source)}
@@ -294,10 +366,10 @@ def product_card(p: dict) -> str:
 
 def price_html(p: dict) -> str:
     if p.get("status") == "coming-soon":
-        return '<span class="price soon">Coming soon</span>'
+        return f'<span class="price soon">{esc(T("coming_soon"))}</span>'
     if p.get("sale_price"):
         return (f'<span class="price"><s>${esc(p["price"])}</s> ${esc(p["sale_price"])} '
-                f'<small>{esc(p.get("sale_label", "launch price"))}</small></span>')
+                f'<small>{esc(p.get("sale_label", T("launch_price")))}</small></span>')
     return f'<span class="price">${esc(p["price"])}</span>'
 
 
@@ -320,14 +392,14 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
     full_title = title if CFG["name"] in title else f"{title} · {CFG['name']}"
     nav = "".join(
         f'<a href="{u(href)}"{" aria-current=page" if path.startswith(href) and href != "/" else ""}>{esc(t)}</a>'
-        for t, href in [("Articles", "/blog/"), ("Products", "/products/"), ("Free reset", "/free/"),
-                        ("About", "/about/")])
+        for t, href in [(T("nav_articles"), "/blog/"), (T("nav_products"), "/products/"),
+                        (T("nav_free"), "/free/"), (T("nav_about"), "/about/")])
     ld = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>'
                  for x in (jsonld or []))
     soc = " · ".join(f'<a href="{esc(h)}" rel="me noopener">{esc(n)}</a>' for n, h in CFG["socials"].items())
     analytics = CFG.get("analytics_snippet", "")
     return f"""<!doctype html>
-<html lang="en">
+<html lang="{esc(T('lang'))}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -342,15 +414,15 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
 <meta property="og:url" content="{esc(absu(path))}">
 <meta property="og:image" content="{esc(absu(image))}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0b1d13">
+<meta name="theme-color" content="{esc(T('theme_color'))}">
 <link rel="icon" type="image/png" href="{u('/img/favicon.png')}">
 <link rel="apple-touch-icon" href="{u('/img/apple-touch-icon.png')}">
 <link rel="alternate" type="application/rss+xml" title="{esc(CFG['name'])}" href="{u('/feed.xml')}">
-<link rel="stylesheet" href="{u('/style.css')}">
+<link rel="stylesheet" href="{u('/style.css')}">{theme_css()}
 {ld}{extra_head}{analytics}
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip" href="#main">{esc(T('skip'))}</a>
 <header class="site-head">
   <div class="wrap head-inner">
     <a class="brand" href="{u('/')}"><img src="{u('/img/logo.png')}" alt="" width="36" height="36">{esc(CFG['name'])}</a>
@@ -364,7 +436,7 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
   <div class="wrap">
     <p class="foot-brand"><strong>{esc(CFG['name'])}</strong> · {esc(CFG['tagline'])}</p>
     <p>{soc}</p>
-    <p><a href="{u('/privacy/')}">Privacy</a> · <a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/terms/')}">Terms</a> · <a href="{u('/links/')}">Links</a> · <a href="{u('/feed.xml')}">RSS</a></p>
+    <p><a href="{u('/privacy/')}">{esc(T('privacy'))}</a> · <a href="{u('/disclosures/')}">{esc(T('disclosures'))}</a> · <a href="{u('/terms/')}">{esc(T('terms'))}</a> · <a href="{u('/links/')}">{esc(T('links'))}</a> · <a href="{u('/feed.xml')}">RSS</a></p>
     <p class="small">{esc(CFG['disclaimer'])}</p>
     <p class="small">{esc(CFG['ai_disclosure'])}</p>
     <p class="small">&copy; {date.today().year} {esc(CFG['name'])}</p>
@@ -382,7 +454,8 @@ def org_ld() -> dict:
 
 
 def fmt_date(d: str) -> str:
-    return datetime.strptime(d, "%Y-%m-%d").strftime("%B %-d, %Y")
+    dt = datetime.strptime(d, "%Y-%m-%d")
+    return T("date_format", month=T("months")[dt.month - 1], day=dt.day, year=dt.year)
 
 
 # --------------------------------------------------------------------- pages
@@ -399,7 +472,11 @@ def build() -> list[str]:
     CFG = load_config()
     if OUT.exists():
         shutil.rmtree(OUT)
-    shutil.copytree(STATIC, OUT)
+    if STATIC != SHARED_STATIC:  # another brand's site: shared CSS/JS first, its own images and downloads on top
+        OUT.mkdir(parents=True)
+        for name in ("style.css", "site.js"):
+            shutil.copy2(SHARED_STATIC / name, OUT / name)
+    shutil.copytree(STATIC, OUT, dirs_exist_ok=True)
     urls: list[tuple[str, str]] = []
 
     posts = sorted(load_dir("blog"), key=lambda p: p["date"], reverse=True)
@@ -419,7 +496,7 @@ def build() -> list[str]:
         prod = products.get(p.get("product", "")) or (products_list[0] if products_list else None)
         toc_html = ""
         if len(toc) >= 3:
-            toc_html = '<nav class="toc" aria-label="On this page"><p>On this page</p><ol>' + "".join(
+            toc_html = f'<nav class="toc" aria-label="{esc(T("on_this_page"))}"><p>{esc(T("on_this_page"))}</p><ol>' + "".join(
                 f'<li><a href="#{i}">{t}</a></li>' for i, t in toc) + "</ol></nav>"
         ld = [{
             "@context": "https://schema.org", "@type": "Article", "headline": p["title"],
@@ -429,8 +506,8 @@ def build() -> list[str]:
             "author": {"@type": "Organization", "name": CFG["name"], "url": CFG["url"] + "/"},
             "publisher": org_ld(), "keywords": p.get("keyword", "")},
             {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-                {"@type": "ListItem", "position": 1, "name": "Home", "item": CFG["url"] + "/"},
-                {"@type": "ListItem", "position": 2, "name": "Articles", "item": absu("/blog/")},
+                {"@type": "ListItem", "position": 1, "name": T("home"), "item": CFG["url"] + "/"},
+                {"@type": "ListItem", "position": 2, "name": T("articles"), "item": absu("/blog/")},
                 {"@type": "ListItem", "position": 3, "name": p["title"], "item": absu(path)}]}]
         if faq:
             ld.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
@@ -440,18 +517,17 @@ def build() -> list[str]:
             f'<li><a href="{u(f"/blog/{x["slug"]}/")}">{esc(x["title"])}</a></li>' for x in related)
         sources = ""
         if p.get("sources"):
-            sources = '<section class="sources"><h2>Sources</h2><ul>' + "".join(
+            sources = f'<section class="sources"><h2>{esc(T("sources"))}</h2><ul>' + "".join(
                 f'<li><a href="{esc(s)}" rel="noopener">{esc(urlparse(s).netloc + urlparse(s).path)}</a></li>'
                 for s in p["sources"]) + "</ul></section>"
-        updated = f' · Updated {fmt_date(p["updated"])}' if p.get("updated") else ""
-        aff = ('<p class="aff-note">This article contains affiliate links. If you sign up through them we may '
-               f'earn a commission at no extra cost to you. <a href="{u("/disclosures/")}">How we handle this</a>.</p>'
+        updated = f' · {esc(T("updated"))} {fmt_date(p["updated"])}' if p.get("updated") else ""
+        aff = (f'<p class="aff-note">{esc(T("aff_note"))} <a href="{u("/disclosures/")}">{esc(T("aff_how"))}</a>.</p>'
                if p.get("affiliate") == "yes" else "")
         body = f"""<article class="wrap article">
-  <p class="crumbs"><a href="{u('/')}">Home</a> / <a href="{u('/blog/')}">Articles</a> / <span>{esc(pillars.get(p.get('pillar', ''), 'Guide'))}</span></p>
+  <p class="crumbs"><a href="{u('/')}">{esc(T('home'))}</a> / <a href="{u('/blog/')}">{esc(T('articles'))}</a> / <span>{esc(pillars.get(p.get('pillar', ''), T('guide')))}</span></p>
   <h1>{esc(p['title'])}</h1>
   <p class="dek">{esc(p['description'])}</p>
-  <p class="meta">{fmt_date(p['date'])}{updated} · {esc(p.get('read_minutes', '6'))} min read · Reviewed by a human editor</p>
+  <p class="meta">{fmt_date(p['date'])}{updated} · {esc(p.get('read_minutes', '6'))} {esc(T('min_read'))} · {esc(T('reviewed'))}</p>
   {aff}
   {toc_html}
   <div class="prose">
@@ -460,8 +536,8 @@ def build() -> list[str]:
   {sources}
   <p class="disclaimer">{esc(CFG['disclaimer'])}</p>
   {magnet_box(f"blog-{p['slug']}-end")}
-  {f'<section class="next"><h2>Tool for this</h2>{product_card(prod)}</section>' if prod else ''}
-  <section class="next"><h2>Read next</h2><ul class="related">{rel_html}</ul></section>
+  {f'<section class="next"><h2>{esc(T("tool_for_this"))}</h2>{product_card(prod)}</section>' if prod else ''}
+  <section class="next"><h2>{esc(T('read_next'))}</h2><ul class="related">{rel_html}</ul></section>
 </article>"""
         write(path, layout(title=p.get("seo_title", p["title"]), description=p["description"], path=path,
                            body=body, og_type="article", jsonld=ld, image=p.get("image", "/img/og-default.png")))
@@ -473,17 +549,15 @@ def build() -> list[str]:
   <p class="post-pillar">{esc(pillars.get(x.get('pillar', ''), ''))}</p>
   <h2><a href="{u(f"/blog/{x['slug']}/")}">{esc(x['title'])}</a></h2>
   <p>{esc(x['description'])}</p>
-  <p class="meta">{fmt_date(x['date'])} · {esc(x.get('read_minutes', '6'))} min read</p>
+  <p class="meta">{fmt_date(x['date'])} · {esc(x.get('read_minutes', '6'))} {esc(T('min_read'))}</p>
 </li>""" for x in items)
 
     chips = "".join(f'<a class="chip" href="{u(f"/blog/{k}/")}">{esc(v)}</a>' for k, v in pillars.items())
     write("/blog/", layout(
-        title="Articles: budgeting, investing basics, credit and money tools",
-        description="Plain-English guides for students and early-career workers: budgeting that sticks, first-time "
-                    "investing, credit scores, debt payoff and money apps, with the maths shown.",
+        title=T("blog_title"), description=T("blog_description"),
         path="/blog/", jsonld=[org_ld()], body=f"""<section class="wrap">
-  <h1>Articles</h1>
-  <p class="dek">One idea per article, explained properly, with the numbers shown. Pick a topic:</p>
+  <h1>{esc(T('blog_h1'))}</h1>
+  <p class="dek">{esc(T('blog_dek'))}</p>
   <p class="chips">{chips}</p>
   <ul class="posts">{post_list(posts)}</ul>
 </section>"""))
@@ -491,9 +565,10 @@ def build() -> list[str]:
     for key, label in pillars.items():
         items = [x for x in posts if x.get("pillar") == key]
         path = f"/blog/{key}/"
-        write(path, layout(title=f"{label}: articles", description=f"Every Money Made Simple article on {label.lower()}.",
+        write(path, layout(title=T("pillar_title", label=label),
+                           description=T("pillar_description", site=CFG["name"], label_lower=label.lower()),
                            path=path, body=f"""<section class="wrap">
-  <p class="crumbs"><a href="{u('/blog/')}">Articles</a></p>
+  <p class="crumbs"><a href="{u('/blog/')}">{esc(T('articles'))}</a></p>
   <h1>{esc(label)}</h1>
   <p class="chips">{chips}</p>
   <ul class="posts">{post_list(items)}</ul>
@@ -506,11 +581,11 @@ def build() -> list[str]:
         body_html, _ = markdown(p["body"], shortcode_factory(products, f"product-{p['slug']}"))
         faq = extract_faq(p["body"])
         if p.get("status") == "coming-soon":
-            buy = (f'<p class="buy-note">Not on sale yet. Join the free email and you\'ll hear the day it opens.</p>'
-                   f'{email_form(f"waitlist-{p["slug"]}", "Tell me when it opens")}')
+            buy = (f'<p class="buy-note">{esc(T("not_on_sale"))}</p>'
+                   f'{email_form(f"waitlist-{p["slug"]}", T("waitlist_button"))}')
         else:
             buy = (f'<a class="btn big" href="{esc(p["buy_url"])}" rel="noopener" data-buy="{esc(p["slug"])}">'
-                   f'{esc(p.get("buy_label", "Get instant access"))}</a>'
+                   f'{esc(p.get("buy_label", T("buy_label")))}</a>'
                    f'<p class="buy-note">{esc(p.get("guarantee", ""))}</p>')
         ld = [{"@context": "https://schema.org", "@type": "Product", "name": p["title"],
                "description": p["short"], "image": absu(p["image"]), "brand": {"@type": "Brand", "name": CFG["name"]},
@@ -522,9 +597,9 @@ def build() -> list[str]:
                 {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
         includes = "".join(f"<li>{inline(x)}</li>" for x in p.get("includes", []))
         body = f"""<article class="wrap product">
-  <p class="crumbs"><a href="{u('/products/')}">Products</a></p>
+  <p class="crumbs"><a href="{u('/products/')}">{esc(T('products'))}</a></p>
   <div class="product-hero">
-    <img src="{u(p['image'])}" alt="{esc(p['title'])} preview" width="640" height="360">
+    <img src="{u(p['image'])}" alt="{esc(T('preview_alt', title=p['title']))}" width="640" height="360">
     <div>
       <h1>{esc(p['title'])}</h1>
       <p class="dek">{esc(p['short'])}</p>
@@ -543,11 +618,11 @@ def build() -> list[str]:
                            og_type="product", jsonld=ld, image=p["image"]))
         urls.append((path, p.get("updated", date.today().isoformat())))
     write("/products/", layout(
-        title="Guides and templates", path="/products/",
-        description="Low-cost, no-subscription money tools from Money Made Simple: guides and spreadsheets you keep.",
+        title=T("products_title"), path="/products/",
+        description=T("products_description", site=CFG["name"]),
         body=f"""<section class="wrap">
-  <h1>Guides and templates</h1>
-  <p class="dek">Small, specific tools. One payment, no subscription, files you keep. Each one has a no-hoops refund.</p>
+  <h1>{esc(T('products_title'))}</h1>
+  <p class="dek">{esc(T('products_dek'))}</p>
   <div class="product-grid">{''.join(product_card(p) for p in products_list)}</div>
   {magnet_box('products-index')}
 </section>"""))
@@ -563,53 +638,55 @@ def build() -> list[str]:
 
     # ---- lead magnet landing + thanks
     lm = CFG["lead_magnet"]
-    days = "".join(f"<li><strong>Day {i}:</strong> {esc(d)}</li>" for i, d in enumerate(lm["days"], 1))
+    days = "".join(f"<li><strong>{esc(T('day', n=i))}:</strong> {esc(d)}</li>" for i, d in enumerate(lm["days"], 1))
     write("/free/", layout(
-        title=f"Free: {lm['title']}", path="/free/", description=lm["pitch"],
+        title=T("free_title", title=lm["title"]), path="/free/", description=lm["pitch"],
         body=f"""<section class="wrap landing">
   <div class="landing-grid">
     <div>
-      <p class="kicker">Free PDF + checklist</p>
+      <p class="kicker">{esc(T('free_kicker'))}</p>
       <h1>{esc(lm['headline'])}</h1>
       <p class="dek">{esc(lm['pitch'])}</p>
-      {email_form('free-page', 'Send me the free reset')}
+      {email_form('free-page')}
     </div>
-    <img class="cover" src="{u('/img/lead-magnet-cover.png')}" alt="Cover of {esc(lm['title'])}" width="300" height="388">
+    <img class="cover" src="{u('/img/lead-magnet-cover.png')}" alt="{esc(T('cover_of', title=lm['title']))}" width="300" height="388">
   </div>
-  <h2>What you'll do, one 15-minute task a day</h2>
+  <h2>{esc(T('free_days_h'))}</h2>
   <ol class="days">{days}</ol>
-  <h2>What else you get</h2>
-  <p>After the reset, one short email a week: a single money move, explained with the numbers. No hype, no stock picks, no "get rich" anything. You can unsubscribe in one click from any email.</p>
+  <h2>{esc(T('free_else_h'))}</h2>
+  <p>{esc(T('free_else'))}</p>
   {magnet_box('free-page-bottom')}
 </section>"""))
     urls.append(("/free/", date.today().isoformat()))
     write("/free/thanks/", layout(
-        title="You're in", path="/free/thanks/", noindex=True, description="Your free download.",
+        title=T("thanks_title"), path="/free/thanks/", noindex=True, description=T("thanks_description"),
         body=f"""<section class="wrap landing thanks">
-  <h1>You're in. Here's your reset.</h1>
-  <p class="dek">{esc(CFG['email'].get('thanks_note', 'Check your inbox too: your first email is on its way (look in Promotions or Spam if you do not see it).'))}</p>
-  <p><a class="btn big" href="{u('/downloads/' + lm['file'])}" download>Download {esc(lm['title'])} (PDF)</a></p>
-  <p>Start with Day 1 today. It takes about 15 minutes and you'll need your banking app.</p>
-  <h2>Want the full system?</h2>
+  <h1>{esc(T('thanks_h1'))}</h1>
+  <p class="dek">{esc(CFG['email'].get('thanks_note', T('thanks_note')))}</p>
+  <p><a class="btn big" href="{u('/downloads/' + lm['file'])}" download>{esc(T('download', title=lm['title']))}</a></p>
+  <p>{esc(T('thanks_start'))}</p>
+  <h2>{esc(T('thanks_more'))}</h2>
   <div class="product-grid">{''.join(product_card(p) for p in products_list[:2])}</div>
 </section>"""))
 
-    # ---- link in bio
+    # ---- link in bio (site.json "links_featured": article slugs to pin; default is the 4 newest)
+    by_slug = {p["slug"]: p for p in posts}
+    featured = [by_slug[x] for x in CFG.get("links_featured", []) if x in by_slug] or posts[:4]
     links = "".join(f'<a class="lb-link" href="{u(f"/products/{p["slug"]}/")}"><span>{esc(p["title"])}</span>{price_html(p)}</a>'
                     for p in products_list)
-    links += '<h2 class="lb-h">Popular articles</h2>' + "".join(f'<a class="lb-link" href="{u(f"/blog/{p["slug"]}/")}"><span>{esc(p["title"])}</span></a>'
-                     for p in posts[:4])
-    aff = "".join(f'<a class="lb-link" href="{esc(a["url"])}" rel="sponsored noopener"><span>{esc(a["name"])}</span><small>affiliate</small></a>'
+    links += f'<h2 class="lb-h">{esc(T("links_articles"))}</h2>' + "".join(f'<a class="lb-link" href="{u(f"/blog/{p["slug"]}/")}"><span>{esc(p["title"])}</span></a>'
+                     for p in featured)
+    aff = "".join(f'<a class="lb-link" href="{esc(a["url"])}" rel="sponsored noopener"><span>{esc(a["name"])}</span><small>{esc(T("affiliate"))}</small></a>'
                   for a in CFG.get("affiliates", []))
     write("/links/", layout(
-        title="Links", path="/links/", description=CFG["tagline"],
+        title=T("links_title"), path="/links/", description=CFG["tagline"],
         body=f"""<section class="linkbio">
   <img class="avatar" src="{u('/img/avatar.jpg')}" alt="" width="104" height="104">
   <h1>{esc(CFG['name'])}</h1>
   <p class="dek">{esc(CFG['tagline'])}</p>
-  <div class="lb-signup"><h2>Free: {esc(lm['title'])}</h2><p>{esc(lm['short'])}</p>{email_form('link-in-bio', 'Send it', compact=True)}</div>
-  <h2 class="lb-h">Guides and templates</h2>{links}
-  {f'<h2 class="lb-h">Tools we recommend</h2>{aff}<p class="small">Affiliate links: we may earn a commission at no extra cost to you.</p>' if aff else ''}
+  <div class="lb-signup"><h2>{esc(T('links_free', title=lm['title']))}</h2><p>{esc(lm['short'])}</p>{email_form('link-in-bio', T('form_button_short'), compact=True)}</div>
+  <h2 class="lb-h">{esc(T('links_products'))}</h2>{links}
+  {f'<h2 class="lb-h">{esc(T("links_tools"))}</h2>{aff}<p class="small">{esc(T("links_aff_note"))}</p>' if aff else ''}
 </section>"""))
     urls.append(("/links/", date.today().isoformat()))
 
@@ -617,53 +694,51 @@ def build() -> list[str]:
     latest = "".join(f"""<li class="post"><p class="post-pillar">{esc(pillars.get(x.get('pillar',''),''))}</p>
 <h3><a href="{u(f"/blog/{x['slug']}/")}">{esc(x['title'])}</a></h3><p>{esc(x['description'])}</p></li>""" for x in posts[:6])
     pillar_cards = "".join(
-        f'<a class="pillar" href="{u(f"/blog/{k}/")}"><span class="pillar-n">{len([x for x in posts if x.get("pillar") == k])} articles</span><strong>{esc(v)}</strong></a>'
+        f'<a class="pillar" href="{u(f"/blog/{k}/")}"><span class="pillar-n">{esc(T("n_articles", n=len([x for x in posts if x.get("pillar") == k])))}</span><strong>{esc(v)}</strong></a>'
         for k, v in pillars.items())
     home_ld = [org_ld(), {"@context": "https://schema.org", "@type": "WebSite", "name": CFG["name"],
                           "url": CFG["url"] + "/"}]
     write("/", layout(
-        title=f"{CFG['name']}: one money move a week, explained simply", path="/", jsonld=home_ld,
+        title=T("home_title", site=CFG["name"]), path="/", jsonld=home_ld,
         description=CFG["description"],
         body=f"""<section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="kicker">For students and early-career workers</p>
-      <h1>Feel behind on money? Start with one move this week.</h1>
+      <p class="kicker">{esc(T('home_kicker'))}</p>
+      <h1>{esc(T('home_h1'))}</h1>
       <p class="dek">{esc(CFG['description'])}</p>
-      <div class="hero-form"><p class="hero-offer">Get <strong>{esc(lm['title'])}</strong> free: seven 15-minute tasks that get your money organised in a week.</p>{email_form('home-hero', 'Send me the free reset')}</div>
+      <div class="hero-form"><p class="hero-offer">{T('home_offer', title=esc(lm['title']))}</p>{email_form('home-hero')}</div>
     </div>
-    <img class="cover" src="{u('/img/lead-magnet-cover.png')}" alt="Cover of {esc(lm['title'])}" width="300" height="388">
+    <img class="cover" src="{u('/img/lead-magnet-cover.png')}" alt="{esc(T('cover_of', title=lm['title']))}" width="300" height="388">
   </div>
 </section>
 <section class="wrap">
-  <h2 class="section-h">Start with a topic</h2>
+  <h2 class="section-h">{esc(T('home_topics'))}</h2>
   <div class="pillars">{pillar_cards}</div>
 </section>
 <section class="wrap">
-  <h2 class="section-h">Latest articles</h2>
+  <h2 class="section-h">{esc(T('home_latest'))}</h2>
   <ul class="posts grid">{latest}</ul>
-  <p><a class="btn ghost" href="{u('/blog/')}">All articles</a></p>
+  <p><a class="btn ghost" href="{u('/blog/')}">{esc(T('home_all'))}</a></p>
 </section>
 <section class="band">
   <div class="wrap">
-    <h2 class="section-h">The tools</h2>
+    <h2 class="section-h">{esc(T('home_tools'))}</h2>
     <div class="product-grid">{''.join(product_card(p) for p in products_list)}</div>
   </div>
 </section>
 <section class="wrap promise">
-  <h2 class="section-h">How we make this</h2>
+  <h2 class="section-h">{esc(T('home_how'))}</h2>
   <div class="three">
-    <div><h3>Specific, not hype</h3><p>Every article and email is one idea you can use this week, with the maths shown. No stock picks, no crypto pumps, no income claims.</p></div>
-    <div><h3>Checked by a human</h3><p>We use AI tools for visuals and drafts. A human picks every topic, checks every number against primary sources (IRS, CFPB, FDIC, Investor.gov) and approves every post.</p></div>
-    <div><h3>Honest about money</h3><p>Some links are affiliate links and they're always labelled. Products have a no-hoops refund. Testimonials only ever come from real buyers, quoted word for word.</p></div>
+    {''.join(f'<div><h3>{esc(h)}</h3><p>{esc(t)}</p></div>' for h, t in T('home_promise'))}
   </div>
 </section>"""))
     urls.append(("/", posts[0]["date"]))
 
     # ---- 404
     (OUT / "404.html").write_text(layout(
-        title="Page not found", path="/404.html", noindex=True, description="Page not found",
-        body=f'<section class="wrap landing"><h1>That page wandered off.</h1><p class="dek">Try the <a href="{u("/blog/")}">articles</a> or grab the <a href="{u("/free/")}">free reset</a>.</p></section>'))
+        title=T("nf_title"), path="/404.html", noindex=True, description=T("nf_title"),
+        body=f'<section class="wrap landing"><h1>{esc(T("nf_h1"))}</h1><p class="dek">{T("nf_dek", blog=u("/blog/"), free=u("/free/"))}</p></section>'))
 
     # ---- email sequence preview (noindex, for you to proofread)
     emails = load_dir("emails")
@@ -712,22 +787,35 @@ def build() -> list[str]:
     return [p for p, _ in urls]
 
 
+EMAIL_COLORS = {"ink": "#0b1d13", "paper": "#f4f1e8", "line": "#d9d3c3", "tint": "#eaf6ef", "gold": "#f2b134",
+                "gold-t": "#fdf3dd", "green-d": "#1a7a45", "muted": "#4b5a51"}
+
+
+def theme_css() -> str:
+    """site.json "colors" overrides the stylesheet's :root variables (ink, paper, green, green-d, gold...)."""
+    colors = CFG.get("colors") or {}
+    if not colors:
+        return ""
+    return "<style>:root{" + "".join(f"--{k}:{v};" for k, v in colors.items()) + "}</style>"
+
+
 def email_html(e: dict, body: str) -> str:
     """A plain, inline-styled email body that survives every email client. Paste into your provider's
     HTML editor; the provider adds the unsubscribe link and postal address footer."""
+    c = {**EMAIL_COLORS, **(CFG.get("colors") or {})}
     body = re.sub(r"<h(\d)[^>]*>", r'<h\1 style="font-size:20px;margin:24px 0 8px">', body)
     body = body.replace("<p>", '<p style="margin:0 0 16px">')
     body = body.replace("<table>", '<table style="border-collapse:collapse;width:100%;font-size:15px;margin:0 0 16px">')
-    body = body.replace("<th>", '<th style="border:1px solid #d9d3c3;padding:6px 8px;text-align:left;background:#eaf6ef">')
-    body = body.replace("<td>", '<td style="border:1px solid #d9d3c3;padding:6px 8px">')
-    body = body.replace("<blockquote>", '<blockquote style="margin:0 0 16px;padding:8px 14px;border-left:4px solid #f2b134;background:#fdf3dd">')
-    body = body.replace("<a ", '<a style="color:#1a7a45;font-weight:600" ')
+    body = body.replace("<th>", f'<th style="border:1px solid {c["line"]};padding:6px 8px;text-align:left;background:{c["tint"]}">')
+    body = body.replace("<td>", f'<td style="border:1px solid {c["line"]};padding:6px 8px">')
+    body = body.replace("<blockquote>", f'<blockquote style="margin:0 0 16px;padding:8px 14px;border-left:4px solid {c["gold"]};background:{c["gold-t"]}">')
+    body = body.replace("<a ", f'<a style="color:{c["green-d"]};font-weight:600" ')
     return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(e['subject'])}</title></head>
-<body style="margin:0;background:#f4f1e8">
+<body style="margin:0;background:{c["paper"]}">
 <span style="display:none;max-height:0;overflow:hidden">{esc(e.get('preheader', ''))}</span>
-<div style="max-width:560px;margin:0 auto;padding:24px 20px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#0b1d13;background:#ffffff">
+<div style="max-width:560px;margin:0 auto;padding:24px 20px;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:{c["ink"]};background:#ffffff">
 {body}
-<p style="margin:24px 0 0;font-size:12px;color:#4b5a51">{esc(CFG['disclaimer'])}</p>
+<p style="margin:24px 0 0;font-size:12px;color:{c["muted"]}">{esc(CFG['disclaimer'])}</p>
 </div></body></html>
 """
 

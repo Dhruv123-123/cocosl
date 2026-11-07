@@ -234,7 +234,7 @@ def cmd_pack(args):
     if args.format:
         items = [i for i in items if i.get("format") in args.format]
     folders = export_pack(f.settings, f.brand(args.brand), items[: args.limit or None], Path(args.out),
-                          video=args.video)
+                          video=args.video, start=args.start)
     for folder in folders:
         print(folder)
 
@@ -399,6 +399,7 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--format", action="append", help="only these formats (repeatable)")
     s.add_argument("--limit", type=int, default=0)
     s.add_argument("--video", action="store_true", help="also render full videos (needs a voice for narration)")
+    s.add_argument("--start", type=int, default=1, help="number of the first folder (to add to an existing pack)")
     s.set_defaults(func=cmd_pack)
 
     s = sub.add_parser("niche", help="score niche candidates (ad value, demand, risk, saturation)")

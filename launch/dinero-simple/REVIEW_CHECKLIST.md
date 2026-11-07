@@ -59,10 +59,27 @@ Budget about 2 to 3 hours for everything, or 5 minutes per carousel/short plus 4
 - [ ] `carousels/20` Avalancha contra bola de nieve, con números reales  _(from: Avalanche vs snowball, with real math)_
 - [ ] `carousels/21` App, hoja de cálculo o libreta  _(from: App vs spreadsheet vs notebook)_
 - [ ] `carousels/22` Cómo abrir tu primera cuenta de inversión  _(from: Opening your first investment account)_
+- [ ] `videos/23` Cómo empezar a invertir con $100 al mes (long video, ~7 min)  _(from: How to start investing with $100 a month)_
+- [ ] `videos/24` ¿Sientes que vas atrasado con tu dinero? Un plan de 30 días (long video, ~7.5 min)  _(from: Feel behind on money? A 30-day reset plan)_
 - [ ] Brand kit: bios (`brand-kit/bio-pack.txt`), banner tagline, highlight names (Presupuesto, Invertir, Crédito, Apps, Empieza aquí)
 - [ ] Guide PDF, all 14 pages (`product/El-Presupuesto-de-20-Minutos.pdf`)
 - [ ] Spreadsheet labels, dropdowns and status messages (`product/Presupuesto-20-Minutos-Plantilla.xlsx`)
 - [ ] Store listing (`product/LISTING.md`)
+
+### Website, link-in-bio page and emails (`sites/dinero-simple/`, built copy in `website/`)
+
+Read these in a browser (`website/index.html` or a Netlify preview), not only as Markdown.
+
+- [ ] Interface text: every string in the `ui` block of `sites/dinero-simple/site.json` (nav, buttons, form labels, dates such as "7 de noviembre de 2026")
+- [ ] Home page, `/free/` landing page and `/free/thanks/`
+- [ ] `/links/` link-in-bio page (this is what @dinerosimple's bio will point to)
+- [ ] Product page: El Presupuesto de 20 Minutos
+- [ ] Quiénes somos, Transparencia, Privacidad, Términos (legal pages: a lawyer, not only a translator, should glance at Privacidad and Términos if you can)
+- [ ] 13 articles in `content/blog/` (slugs and SEO keywords too: are these the words people actually search?)
+- [ ] Lead magnet PDF, all 10 pages: `static/downloads/tu-dinero-en-orden-en-7-dias.pdf`
+- [ ] 10 emails in `content/emails/`: subjects and preheaders especially (they decide open rates)
+
+Choices to confirm: "Quiénes somos" for About, "Transparencia" for Disclosures, "fondo de previsión" for sinking fund, "número semanal para gastar", nosotros voice in emails (English uses "I"), and the extra lines for this audience (sending money to family as a fixed bill, two surnames on credit reports, ITIN for secured cards, RobodeIdentidad.gov, Spanish-language phone support at the bureaus and NFCC agencies). Chapter times in the two long-video descriptions are estimates; re-time them after voicing.
 
 ## Facts to re-check (same as English, plus Spanish-only ones)
 
