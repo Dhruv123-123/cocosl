@@ -491,3 +491,18 @@ def test_couples_pack_fits_its_week_and_matches_the_tax_model(factory):
         assert figure in text, figure
     readme = (LAUNCH / "couples" / "README.md").read_text()
     assert "irs.gov" in readme and "$67,539" in readme
+
+
+def test_recordings_list_covers_every_long_waiting_on_footage_in_date_order():
+    text = (LAUNCH / "RECORDINGS.md").read_text()
+    files = ["content.json"] + [f"month-{n}/content.json" for n in range(1, 7)]
+    waiting = [i["script"]["title"] for f in files for i in _items(f)
+               if i["format"] == "long" and i["original_element"]["type"] != "worked-example-chart"]
+    assert len(waiting) == 14
+    shots = text.split("## Shot lists, by posting date")[1].split("## Also worth")[0]
+    headed = re.findall(r"^### (\w{3} \w{3} \d{1,2}, \d{4}) · (.+)$", shots, re.M)
+    assert sorted(t for _, t in headed) == sorted(waiting)
+    dates = [date(int(d[-4:]), "JanFebMarAprMayJunJulAugSepOctNovDec".index(d[4:7]) // 3 + 1, int(d[8:-6])) for d, _ in headed]
+    assert dates == sorted(dates)
+    assert shots.count("- **Footage path:**") == 14
+    assert "nothing submitted" in shots.lower()
