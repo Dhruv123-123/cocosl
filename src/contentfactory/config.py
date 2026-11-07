@@ -206,6 +206,9 @@ class BrandProfile(BaseModel):
     # "person" (you write them yourself). launch-check turns red if ai_disclosure claims a person wrote
     # scripts while this says ai_assisted: understating AI use is what platforms and the FTC call deceptive.
     scripts_by: Literal["ai_assisted", "person"] = "ai_assisted"
+    # Who sends the welcome sequence: the factory's own mailer, or an email platform you built it in
+    # (`factory sequence-export --for sender`). Anything but "factory" makes the worker skip this brand's welcomes.
+    welcome_via: Literal["factory", "sender", "kit"] = "factory"
     realistic_synthetic_media: bool = False  # True if visuals/voices could pass as real people/events
     require_human_review: bool = True
     own_voice: bool = False  # videos wait for the owner's recorded narration (`factory voice`) before scheduling

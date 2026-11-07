@@ -419,6 +419,9 @@ def run_sequences(factory, now: datetime | None = None, confirm: bool = False, *
         seq = load_sequence(factory.settings, b.slug)
         if seq is None:
             continue
+        if getattr(b, "welcome_via", "factory") != "factory":  # built in Sender / Kit instead: never double-send
+            result["brands"][b.slug] = {"sequence": seq.name, "handled_by": b.welcome_via}
+            continue
         stats = result["brands"].setdefault(b.slug, {"sequence": seq.name, "due": 0, "sent": 0, "failed": 0,
                                                      "dry_run": 0, "skipped": 0})
         history = _history(db, b.slug, seq.name)
