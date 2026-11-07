@@ -1748,6 +1748,18 @@
      "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with the first Sunday of each month marked and a coffee cup. No text, no logos, no real people."
     },
     {
+     "heading": "Ejemplo: la tarde",
+     "narration": "Un ejemplo inventado de la tarde completa. Elena ve que en 2026 le entraron cincuenta y dos mil dólares y que su deuda bajó de seis mil a cuatro mil ochocientos. Eso ya es avance. Su lista de los próximos treinta días cabe en su pago. Para los gastos 'sorpresa' encuentra tres: las placas, ciento ochenta al año; los regalos de cumpleaños, doscientos cuarenta; y el regreso a clases, trescientos. Son setecientos veinte al año: sesenta dólares al mes a un apartado. Pone la cita con su dinero el primer domingo de cada mes, a las seis de la tarde, en su calendario.",
+     "on_screen_text": "Ejemplo inventado: Elena y su tarde de enero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a notebook with three numbers and a calendar reminder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: qué copiar",
+     "narration": "Lo que puedes copiar de Elena: tres números de tu año pasado, la lista de los próximos treinta días, tus gastos 'sorpresa' divididos entre doce, y una cita fija con tu dinero cada mes.",
+     "on_screen_text": "Copia esto: tres números, una lista, una cita al mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a notebook and a calendar. No text, no logos, no real people."
+    },
+    {
      "heading": "Resumen",
      "narration": "Resumen. Mira atrás sin juzgarte. Planea los próximos treinta días. Un fondo para cada gasto 'sorpresa'. Todas las deudas en una lista. Colchón de mil dólares. Tu retiro, aunque sea poco. Tus reportes de crédito y la congelación. Y una cita mensual de veinte minutos. No tienes que hacer todo hoy: con los pasos uno y dos ya vas adelante. Todo esto es educación general, no asesoría personal.",
      "on_screen_text": "Tu plan 2027: 8 pasos, una tarde",
@@ -1866,6 +1878,12 @@
      "narration": "Octavo, las estafas de la temporada. El IRS normalmente te contacta primero por carta, no por llamada, texto o redes sociales, y nunca te exige pagar con tarjetas de regalo, criptomonedas o transferencias. Si alguien te dice que eres del IRS y te amenaza con la policía o con inmigración, cuelga. Y declara temprano: así es más difícil que alguien declare con tu número antes que tú. Si ya te pasó, el IRS tiene un proceso de robo de identidad y puedes pedir un PIN de protección.",
      "on_screen_text": "El IRS no te llama para exigir pago",
      "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a hook and a red X, next to a sealed letter. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: qué copiar",
+     "narration": "Un ejemplo inventado: Teresa junta todo en una carpeta en enero, revisa que el ITIN de su esposo esté vigente, saca cita en un sitio VITA cerca de su casa y pide depósito directo. Decide desde antes que la mitad del reembolso va a su fondo de emergencia.",
+     "on_screen_text": "Copia esto: carpeta, ITIN vigente, VITA, depósito directo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder, a calendar with a VITA appointment. No text, no logos, no real people."
     },
     {
      "heading": "Resumen",

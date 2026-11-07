@@ -153,7 +153,25 @@ def apply(items: list[dict]) -> list[dict]:
             if claim not in script["claims_to_verify"]:
                 script["claims_to_verify"].append(claim)
         script["original_element"] = ORIGINAL[name]
+        _add_example(name, script)
     return items
+
+
+def _add_example(name: str, script: dict) -> None:
+    """Insert the worked example from long_examples.py just before the closing summary (once)."""
+    from long_examples import EXAMPLES
+    from build_month1 import visual
+    extra = EXAMPLES.get(name, [])
+    have = {s["heading"] for s in script["segments"]}
+    segs = []
+    for heading, on_screen, narration, scene in extra:
+        if heading in have:
+            continue
+        if len(on_screen.split()) > 12:
+            raise SystemExit(f"{name}: on-screen text over 12 words: {on_screen}")
+        segs.append({"heading": heading, "narration": narration, "on_screen_text": on_screen, "visual_prompt": visual(scene)})
+    if segs:
+        script["segments"][-1:-1] = segs
 
 
 def _backed(chart: dict, said: str, narration: str) -> bool:

@@ -1903,6 +1903,24 @@
      "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a megaphone with a red X and a phone with a hook. No text, no logos, no real people."
     },
     {
+     "heading": "Ejemplo: Rosa",
+     "narration": "Un ejemplo inventado de principio a fin. Rosa prepara su declaración en marzo y ve que debe dos mil dólares. No los tiene. No se esconde: declara antes del 15 de abril, así evita la multa más grande, la de no declarar. Ese día paga quinientos, lo que puede. Para los otros mil quinientos pide un plan de pagos en línea: unos ciento veinticinco dólares al mes por doce meses, más intereses y una multa pequeña mientras paga. Pone el pago en automático desde su cuenta para no fallar ningún mes.",
+     "on_screen_text": "Ejemplo inventado: Rosa debe $2,000 en abril",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with April 15 circled and a payment plan screen. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: la carta",
+     "narration": "En agosto le llega una carta CP2000: dice que no reportó un 1099 de un trabajo de fin de semana. Rosa busca el 1099 en sus papeles y ve que es cierto. Firma que está de acuerdo antes de la fecha límite y suma esa cantidad a su plan. Si no hubiera sido suyo, habría mandado su explicación con copias. Para el año siguiente, aparta una parte de cada pago de ese trabajo extra en una cuenta aparte, y ajusta su W-4 en su trabajo principal.",
+     "on_screen_text": "La carta: compara, responde a tiempo, guarda copia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a CP2000-style letter, generic, with a deadline highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: qué copiar",
+     "narration": "Lo que puedes copiar de Rosa: declarar a tiempo aunque no puedas pagar todo, pagar lo que puedas ese día, pedir el plan de pagos y ponerlo en automático, y contestar cualquier carta antes de la fecha límite.",
+     "on_screen_text": "Copia esto: declarar, pagar algo, plan, responder",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a four-step checklist. No text, no logos, no real people."
+    },
+    {
      "heading": "Resumen",
      "narration": "Resumen. Declara a tiempo aunque no puedas pagar. Paga lo que puedas el 15 de abril. Pide un plan de pagos en irs.gov. Si no puedes pagar nada, pregunta por las opciones para dificultades. Lee cada carta y responde antes de la fecha. Si alguien usó tu número, formulario 14039 y PIN de protección. Y ajusta tu W-4 para que no se repita. Esto es información general, no asesoría fiscal.",
      "on_screen_text": "Declara, paga lo que puedas, plan, responde",

@@ -1570,6 +1570,24 @@
      "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder with a shield. No text, no logos, no real people."
     },
     {
+     "heading": "Ejemplo: Luis",
+     "narration": "Un ejemplo inventado para juntar todo. Luis necesita carro para trabajar. Saca su número: puede pagar setecientos dólares al mes en total. El seguro completo le sale en ciento ochenta, la gasolina en ciento veinte y deja cincuenta para mantenimiento. Le quedan trescientos cincuenta para el pago del préstamo. Va a su cooperativa y sale preaprobado con una tasa más baja que la que le ofrecían en el lote, y con un tope. Ahora sabe cuánto carro le alcanza antes de enamorarse de uno.",
+     "on_screen_text": "Ejemplo inventado: Luis, $700 al mes todo incluido",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a budget card: $350 + $180 + $120 + $50. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: el lote",
+     "narration": "En el lote, el vendedor le pregunta: '¿Qué mensualidad buscas?'. Luis contesta: 'Dime el precio total, con impuestos y cuotas'. Revisa la Guía del comprador en la ventana, busca el VIN gratis y lleva el carro con un mecánico de su confianza antes de firmar. En la oficina le ofrecen una garantía extendida de mil doscientos dólares y una protección de pintura. Las quita del contrato. No se lleva el carro hasta que el préstamo está firmado y final. Así evita el yo-yo y paga solo por el carro.",
+     "on_screen_text": "Precio total, VIN revisado, sin extras",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a contract with two lines crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: qué copiar",
+     "narration": "Lo que puedes copiar de Luis: tu número total al mes, con seguro, gasolina y mantenimiento. El préstamo preaprobado antes de ir al lote. Negociar el precio total, no la mensualidad. Revisar el VIN y llevar el carro con un mecánico. Quitar los extras que no quieres. Y no llevarte el carro hasta que el préstamo esté firmado y final. Si un vendedor se enoja porque preguntas, ese es el lote que debes dejar.",
+     "on_screen_text": "Copia esto: número total, preaprobación, precio total",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a checklist taped to a car window. No text, no logos, no real people."
+    },
+    {
      "heading": "Resumen",
      "narration": "Resumen. Saca tu número total antes de ver carros. Llega con tu préstamo aprobado. Negocia el precio total, no la mensualidad. Lee el letrero de la ventana. Revisa el VIN gratis y lleva a tu mecánico. Di que no a los extras. Y no entregues tu carro viejo hasta que el préstamo esté final. Información general, no es asesoría financiera.",
      "on_screen_text": "Precio total, préstamo aprobado, VIN y mecánico",
@@ -1687,6 +1705,30 @@
      "narration": "Antes de irte, pon en automático la renta, la luz y las tarjetas, o déjalas pagadas. Avísale a tu banco que vas a viajar si te lo piden, para que no te bloqueen la tarjeta. Así no regresas a cargos por atraso.",
      "on_screen_text": "Las cuentas de aquí, en automático",
      "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a repeating arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: el total",
+     "narration": "Hagamos el plan completo con una familia inventada. Los Hernández son cuatro y quieren ir en diciembre. Sacan el total de verdad: cuatro boletos de cuatrocientos cincuenta, mil ochocientos dólares; maletas, ciento cuarenta; transporte al aeropuerto y allá, ciento veinte; comida en el camino, noventa; y regalos, doscientos cincuenta. Total: dos mil cuatrocientos dólares. Es más que los boletos solos, y por eso tantas familias regresan con la tarjeta llena: solo planearon el boleto.",
+     "on_screen_text": "Ejemplo inventado: 4 personas, total $2,400",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a list with five lines adding up to $2,400. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: el fondo",
+     "narration": "Faltan treinta semanas. Dos mil cuatrocientos entre treinta son ochenta dólares a la semana. Abren un apartado que se llama 'Diciembre', y cada viernes, día de pago, sale una transferencia automática de ochenta dólares. No tienen que acordarse. Compran los boletos en julio, directo en la página de la aerolínea, con lo que ya juntaron más un empujón del reembolso de impuestos. Pagan con tarjeta, pero esa misma semana la pagan completa con el dinero del apartado, así que no pagan intereses.",
+     "on_screen_text": "30 semanas: $80 cada viernes, en automático",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a savings pocket named 'Diciembre' growing week by week. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: allá",
+     "narration": "Antes de salir, sacan una tarjeta que no cobra comisión por compras fuera del país. Si gastan seiscientos dólares allá con una tarjeta que cobra tres por ciento, son dieciocho dólares que se ahorran. En el cajero, cuando les preguntan si quieren pagar en dólares o en moneda local, escogen moneda local. Deciden desde aquí dejarle quinientos dólares a la abuela, y eso ya está en el plan. Dejan la renta y la luz en automático. Regresan el 2 de enero sin una deuda nueva, y el lunes vuelven a poner los ochenta dólares, ahora para el próximo viaje.",
+     "on_screen_text": "Sin comisión por compras fuera, y el regalo decidido",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a family arriving home with suitcases, a calendar showing January 2. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: qué copiar",
+     "narration": "Lo que puedes copiar de los Hernández: el total de verdad, con todo, no solo el boleto. Dividirlo entre las semanas que faltan y ponerlo en automático el día de pago. Comprar los boletos con dinero que ya tienes, o pagar la tarjeta completa esa misma semana. Una tarjeta sin comisión en el extranjero. Lo que vas a dejar a la familia, decidido desde aquí. Y las cuentas de aquí, pagadas antes de salir. Si este año ya es tarde para juntarlo todo, empieza ahora para el próximo viaje: aunque sean veinte dólares a la semana, en un año son más de mil.",
+     "on_screen_text": "Copia esto: total real, fondo automático, regalo decidido",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a checklist next to a suitcase. No text, no logos, no real people."
     },
     {
      "heading": "Resumen",

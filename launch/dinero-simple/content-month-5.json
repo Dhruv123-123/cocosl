@@ -1595,6 +1595,18 @@
      "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with April 15 and October circled. No text, no logos, no real people."
     },
     {
+     "heading": "Ejemplo: Mario",
+     "narration": "Un ejemplo inventado. Mario es pintor por su cuenta y cobra treinta mil dólares en el año. Guardó sus recibos: pintura, brochas, gasolina y su teléfono de trabajo suman seis mil. Su ganancia es de veinticuatro mil. Sobre eso paga el impuesto de trabajo por cuenta propia: quince punto tres por ciento sobre el noventa y dos punto treinta y cinco por ciento de su ganancia, unos tres mil trescientos noventa dólares, más el impuesto sobre el ingreso que le toque. Por eso aparta un cuarto de cada pago en una cuenta aparte y paga cada trimestre.",
+     "on_screen_text": "Ejemplo inventado: Mario, pintor, $30,000 con 1099",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipts folder and a savings pocket named 'Impuestos'. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: qué copiar",
+     "narration": "Lo que puedes copiar de Mario: guardar cada recibo del trabajo en una carpeta del celular, apartar un cuarto de cada pago en una cuenta aparte, y pagar los impuestos estimados cada trimestre para no llegar a abril con una deuda grande.",
+     "on_screen_text": "Copia esto: recibos, un cuarto aparte, pagos trimestrales",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone folder and a savings pocket. No text, no logos, no real people."
+    },
+    {
      "heading": "Resumen",
      "narration": "Resumen. Con W-2, tu patrón retiene por ti. Con 1099, aparta una parte de cada pago y guarda tus recibos. El efectivo también se declara. Las deducciones de propinas y horas extra piden Seguro Social. Con dos trabajos, revisa tu W-4. Y si no llegas al 15, pide la prórroga y paga lo que puedas. Información general, no es asesoría fiscal.",
      "on_screen_text": "W-2, 1099, recibos y a tiempo",
@@ -1709,6 +1721,30 @@
      "narration": "Y abril trae el reembolso. Si parte va a tu familia, decide cuánto antes de que llegue, y mándalo en un solo envío desde tu cuenta. Así pagas una sola comisión, no varias, y el resto se queda trabajando para ti: tu colchón, tu deuda más cara o tu meta.",
      "on_screen_text": "Tu reembolso: decide antes de que llegue",
      "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope splitting into a few jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: Ana",
+     "narration": "Un ejemplo inventado para ver el año completo. Ana manda doscientos dólares cada semana a su mamá. Paga cuatro dólares de comisión, en efectivo, y el tipo de cambio que le dan está dos por ciento por debajo del mercado. En el año manda diez mil cuatrocientos dólares. Las comisiones: cincuenta y dos por cuatro, doscientos ocho dólares. El tipo de cambio: dos por ciento de diez mil cuatrocientos, otros doscientos ocho. Y como paga en efectivo, el impuesto de uno por ciento: ciento cuatro. En total, quinientos veinte dólares al año se quedan en el camino.",
+     "on_screen_text": "Ejemplo inventado: Ana manda $200 cada semana",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a year calendar with 52 small envelopes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: los cambios",
+     "narration": "Ana hace tres cambios. Uno: junta y manda cuatrocientos cada dos semanas, el mismo total. Son veintiséis envíos, así que las comisiones bajan a ciento cuatro dólares. Dos: paga desde su cuenta de banco y ya no en efectivo, así que no paga el impuesto de uno por ciento. Tres: compara cuánto llega en dos o tres opciones antes de cada envío y encuentra una con un margen de uno por ciento, ciento cuatro dólares en el año. Ahora su total es de doscientos ocho dólares, no quinientos veinte. Su mamá recibe más de trescientos dólares extra al año, sin que Ana mande un dólar más.",
+     "on_screen_text": "Cada dos semanas, desde su cuenta, comparando cuánto llega",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two stacks: $520 versus $208. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: el resto del año",
+     "narration": "En abril, Ana recibe su reembolso y decide desde antes que trescientos van para su mamá. Los manda en un solo envío, desde su cuenta. Guarda cada recibo en una carpeta del celular. Y cuando una vez le escribe 'su sobrina' desde un número nuevo pidiéndole dinero urgente, Ana llama al número de siempre antes de mandar nada. Era estafa.",
+     "on_screen_text": "En abril, un solo envío del reembolso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone folder of receipts, a call to a saved contact. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: qué copiar",
+     "narration": "Haz tu propia cuenta como Ana: cuánto mandas en el año, cuánto pagas de comisión por envío y cuánto pierdes en el tipo de cambio. La calculadora gratis del enlace de la bio te ayuda. Luego cambia una sola cosa este mes: la frecuencia, la forma de pago o el servicio. El mes que viene, otra. Lo que ahorres llega a tu familia.",
+     "on_screen_text": "Copia esto: suma tu año y cambia una cosa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the calculator on a phone. No text, no logos, no real people."
     },
     {
      "heading": "Resumen",

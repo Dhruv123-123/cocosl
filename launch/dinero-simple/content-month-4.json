@@ -1683,6 +1683,12 @@
      "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a price tag with a big X. No text, no logos, no real people."
     },
     {
+     "heading": "Ejemplo: Sofía",
+     "narration": "Un ejemplo inventado. Sofía tiene ITIN y ningún historial. En enero abre una cuenta en una cooperativa y una tarjeta asegurada de doscientos dólares que reporta a las tres agencias. La usa solo para el teléfono, cuarenta dólares al mes, y la paga completa en automático. En marzo saca un préstamo para construir crédito de quinientos dólares. En junio pide sus reportes gratis por teléfono y ve que las dos cuentas aparecen, sin errores. A fin de año ya tiene un puntaje, y nunca pagó un dólar de intereses en su tarjeta. No fue suerte: fue un plan sencillo, en automático.",
+     "on_screen_text": "Ejemplo inventado: Sofía, con ITIN, su primer año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a one-year timeline with four checkpoints. No text, no logos, no real people."
+    },
+    {
      "heading": "Resumen",
      "narration": "Resumen: el crédito se construye con o sin Seguro Social. Empieza con una tarjeta asegurada, un préstamo para construir crédito, como usuario autorizado o con tu renta. Paga siempre a tiempo, usa poco de tu límite y revisa tus reportes. En un año ya tienes historial, y con eso todo lo demás se abre.",
      "on_screen_text": "Paga a tiempo, usa poco, revisa",
@@ -1806,6 +1812,24 @@
      "narration": "Y cuidado: ningún banco te llama para pedirte que muevas tu dinero a una 'cuenta segura', ni te pide los códigos que te llegan por mensaje. Si te llaman, cuelga y marca al número de atrás de tu tarjeta. Y nunca prestes tu cuenta para recibir y reenviar dinero de otros: eso es ser mula de dinero, y te pueden cerrar la cuenta.",
      "on_screen_text": "Nadie de tu banco te pide mover tu dinero",
      "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a warning sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: Don Ramón",
+     "narration": "Un ejemplo inventado. Don Ramón cambia su cheque de seiscientos dólares cada semana en una tienda que le cobra dos por ciento: doce dólares por cheque, seiscientos veinticuatro al año. Además guarda su ahorro en casa. Un sábado va a una cooperativa con su matrícula consular, su ITIN y un recibo de luz, y abre una cuenta de cheques sin cargo mensual y una de ahorro. Pide el depósito directo en su trabajo. Desde el primer pago, ya no paga por cambiar su cheque.",
+     "on_screen_text": "Ejemplo inventado: $624 al año por cambiar cheques",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a check cashing receipt next to a new debit card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: en automático",
+     "narration": "Al abrirla pide que no le cobren sobregiro en el débito, y activa alertas cuando su saldo baja de cien dólares. Programa veinticinco dólares al ahorro cada día de pago. En un año, con lo que dejó de pagar por cambiar cheques y esa transferencia, tiene casi dos mil dólares asegurados en lugar de en un cajón, y ningún cargo sorpresa.",
+     "on_screen_text": "Sobregiro apagado y $25 al ahorro cada pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a savings balance growing on a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo: qué copiar",
+     "narration": "Lo que puedes copiar de Don Ramón: abrir una cuenta asegurada con los papeles que sí tienes, pedir depósito directo, apagar el sobregiro, poner alertas y una transferencia automática al ahorro cada día de pago, aunque sea chica.",
+     "on_screen_text": "Copia esto: cuenta asegurada, depósito directo, sobregiro apagado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a five-item checklist. No text, no logos, no real people."
     },
     {
      "heading": "Resumen",
