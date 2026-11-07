@@ -134,6 +134,7 @@ def test_post_detail_and_404(client, factory):
     assert r.status_code == 200
     assert "HYSA rates are around 4% APY" in r.text
     assert f"/media/posts/1/video.mp4" in r.text
+    assert "Platform check" in r.text and "video file is missing" in r.text  # placeholder media isn't on disk
     assert client.get("/posts/9999").status_code == 404
 
 
