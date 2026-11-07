@@ -15,9 +15,9 @@ cold email rather than audience growth. **The ad studio is left out here**: it's
 
 | Scenario | Content: month 12 (Oct 2027) | Content: year 1 | B2B (PR #13): year 1 | Rough chance (judgment, not data) |
 |---|---:|---:|---:|---|
-| **Conservative** | **about $200** | **about $1,300** | about $50 | The most likely outcome for new faceless channels |
-| **Base** | **about $2,800** | **about $17,600** | about $700 | Maybe 1 in 4, and only if every launch step happens on time |
-| **Optimistic** | **about $22,600** | **about $138,000** | about $6,700 | 1 in 20 or less |
+| **Conservative** | **about $200** | **about $1,300** | about $60 | The most likely outcome for new faceless channels |
+| **Base** | **about $2,800** | **about $17,600** | about $770 | Maybe 1 in 4, and only if every launch step happens on time |
+| **Optimistic** | **about $22,600** | **about $138,000** | about $7,100 | 1 in 20 or less |
 
 1. **Products are the biggest line in every scenario** (about half to three-quarters of year 1). Etsy search and the
    email list sell them without needing YPP. The product thread's work matters more than any other.
@@ -29,7 +29,7 @@ cold email rather than audience growth. **The ad studio is left out here**: it's
 4. **B2B is small in year 1 at realistic close rates.** Public cold-email benchmarks multiply out to
    **about 1 paying customer per 350 emails** at the middle of their ranges (section 5). With hand-written, local emails and a free
    pilot, the base case assumes 1 per 250. At 20 emails a month per product, that's about 2 paying customers
-   by October 2027 and about $700 in year 1. It's still worth doing: each customer pays every month, and
+   by October 2027 and about $770 in year 1 (re-run with PR #13's new Scam Watch tiers). It's still worth doing: each customer pays every month, and
    one regional referral (a SHRM chapter, an Area Agency on Aging) can bring several.
 5. **Newsletter sponsors don't pay until about 2,500 subscribers.** At 2,500 with 40% opens and $25 per
    1,000 opens, four sends earn about $100 a month. Thank-you page referrals (SparkLoop-style, from 500
@@ -49,7 +49,7 @@ cold email rather than audience growth. **The ad studio is left out here**: it's
 | **Email: referrals** | From 500 subs | From 500 | From 500 | From 500 | Kit's paid recs need the Creator plan; SparkLoop partner links work on any plan (`thank-you-offers.md`) |
 | **Email: sponsors** | From about 2,500 subs | Same | Same | Same | Finance newsletters $18-30 per 1,000 opens (SenderCircle, 2026). Small lists usually go through networks; flat rates for under 5K aren't published |
 | **Subscription** | — | — | **Quarterly Tax Club** $5/mo or $39/yr from Jan 2027, if 50+ join the waitlist | — | `product-ideas-beyond-content.md` #3 |
-| **B2B** (section 5) | **Money Made Simple at Work** for employers ($59/$129/$249 a month) | **Weekly Scam Alert** for credit unions ($49/$99/$149), **Scam Watch** for libraries and senior centers ($19/$59, talks $150), team pack $99 | Park | — | PR #13 `launch/b2b/`, `product-ideas-beyond-content.md` #1 |
+| **B2B** (section 5) | **Money Made Simple at Work** for employers ($59/$129/$249 a month) | **Weekly Scam Alert** for credit unions ($49/$99/$149), **Scam Watch** for libraries and senior centers ($19/$49/$12 a location, $99 sponsored; talks $150), team pack $99 | Park | — | PR #13 `launch/b2b/`, `product-ideas-beyond-content.md` #1 |
 | **Sponsorships (video)** | After the `sponsor-kit.md` gate (about 1K+ subscribers and steady views) | Same | Same | Same | Not modelled in year 1. Treat any deal as upside |
 
 ## 2. Assumptions (month-12 levels; everything ramps up from month 1)
@@ -172,7 +172,7 @@ emails and 30 prospects from public lists. **Nothing has been sent.** Every emai
 |---|---|---|---|
 | Weekly Scam Alert | Credit unions ($77M-465M assets, MT/ID/OR/WA) | $49 / $99 / $149 a month; 2 free months for the first 3 | $99 |
 | Money Made Simple at Work | Employer HR and benefits brokers, SHRM chapters | $59 / $129 / $249 a month by headcount; 2 free months for the first 3 | $89 (small employers skew to Starter) |
-| Scam Watch (large print) | Libraries, senior centers, Area Agencies on Aging | $19 a location / $59 a system; talks $150 | $35 + one $150 talk a year |
+| Scam Watch (large print) | Libraries, senior centers, Area Agencies on Aging | $19 a site, $49 for 2-4, $12 a location for 5-20, $99 credit-union-sponsored (PR #13, aef8bb9); talks $150 | $49 mix + one $150 talk a year |
 
 ### Realistic close rates for B2B cold email (public benchmarks)
 
@@ -214,8 +214,8 @@ Credit unions start in December (month 2), employers in January.
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | Weekly Scam Alert (credit unions) | 0 | 0 | 0 | 1 | 1 | 2 | 2 | 3 | 3 | 4 | 4 | 5 | **25** | 0.0 | 0.3 |
 | Money Made Simple at Work (employers) | 0 | 0 | 0 | 0 | 1 | 1 | 2 | 2 | 3 | 3 | 3 | 4 | **18** | 0.0 | 0.2 |
-| Scam Watch (libraries, senior centers, AAAs) | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 1 | 2 | 2 | 2 | 2 | **12** | 0.0 | 0.3 |
-| **All B2B** | **0** | **0** | **0** | **1** | **2** | **4** | **5** | **6** | **8** | **9** | **10** | **11** | **55** | | |
+| Scam Watch (libraries, senior centers, AAAs) | 0 | 0 | 0 | 0 | 1 | 1 | 1 | 2 | 2 | 2 | 3 | 3 | **16** | 0.0 | 0.3 |
+| **All B2B** | **0** | **0** | **0** | **1** | **3** | **4** | **5** | **7** | **8** | **9** | **10** | **12** | **59** | | |
 
 ### B2B Base
 
@@ -223,8 +223,8 @@ Credit unions start in December (month 2), employers in January.
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | Weekly Scam Alert (credit unions) | 0 | 0 | 0 | 8 | 16 | 23 | 30 | 37 | 44 | 51 | 57 | 63 | **329** | 0.6 | 2.2 |
 | Money Made Simple at Work (employers) | 0 | 0 | 0 | 0 | 7 | 14 | 21 | 27 | 34 | 40 | 46 | 51 | **239** | 0.6 | 2.0 |
-| Scam Watch (libraries, senior centers, AAAs) | 0 | 0 | 0 | 4 | 7 | 11 | 15 | 18 | 21 | 24 | 27 | 30 | **158** | 0.6 | 2.2 |
-| **All B2B** | **0** | **0** | **0** | **12** | **30** | **48** | **66** | **82** | **99** | **115** | **130** | **145** | **727** | | |
+| Scam Watch (libraries, senior centers, AAAs) | 0 | 0 | 0 | 5 | 10 | 14 | 19 | 23 | 27 | 31 | 35 | 39 | **205** | 0.6 | 2.2 |
+| **All B2B** | **0** | **0** | **0** | **13** | **32** | **51** | **70** | **88** | **105** | **122** | **138** | **154** | **773** | | |
 
 ### B2B Optimistic
 
@@ -232,8 +232,8 @@ Credit unions start in December (month 2), employers in January.
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | Weekly Scam Alert (credit unions) | 0 | 0 | 0 | 71 | 141 | 210 | 277 | 342 | 407 | 470 | 532 | 593 | **3,042** | 6.0 | 13.2 |
 | Money Made Simple at Work (employers) | 0 | 0 | 0 | 0 | 64 | 127 | 188 | 249 | 308 | 366 | 423 | 478 | **2,202** | 5.4 | 12.0 |
-| Scam Watch (libraries, senior centers, AAAs) | 0 | 0 | 0 | 34 | 68 | 101 | 133 | 164 | 195 | 226 | 255 | 284 | **1,460** | 6.0 | 13.2 |
-| **All B2B** | **0** | **0** | **0** | **105** | **273** | **437** | **598** | **755** | **910** | **1,061** | **1,210** | **1,355** | **6,704** | | |
+| Scam Watch (libraries, senior centers, AAAs) | 0 | 0 | 0 | 44 | 88 | 130 | 172 | 213 | 253 | 292 | 330 | 368 | **1,890** | 6.0 | 13.2 |
+| **All B2B** | **0** | **0** | **0** | **116** | **293** | **467** | **637** | **804** | **967** | **1,128** | **1,285** | **1,439** | **7,135** | | |
 
 **What the B2B scenario says:**
 - **Base: about $700 in year 1 and about $145 a month by October 2027** (about 2 paying customers across the

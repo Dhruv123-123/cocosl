@@ -90,7 +90,7 @@ for s in S:
 B2B_PRODUCTS={
   "Weekly Scam Alert (credit unions)": dict(price=99, start=2),     # $49/$99/$149 tiers, middle tier as average
   "Money Made Simple at Work (employers)": dict(price=89, start=3), # $59/$129/$249; small employers skew to Starter
-  "Scam Watch (libraries, senior centers, AAAs)": dict(price=35+150/12, start=2), # $19/$59 mix + one $150 talk a year
+  "Scam Watch (libraries, senior centers, AAAs)": dict(price=49+150/12, start=2), # PR #13 tiers (aef8bb9): ~50% $19 single, 25% $49 2-4 sites, 15% $99 CU-sponsored, 10% $120 10-site system, + one $150 talk a year
 }
 B2B_SC={
   "C": dict(sends=10, yes=0.0025, convert=0.25, churn=0.04),

@@ -66,7 +66,7 @@ From `revenue-model-2027.md` (all four brands, after platform fees, ad studio no
 |---|---:|---:|---:|
 | Content, month 12 (Oct 2027) | about $200/mo | about $2,800/mo | about $22,600/mo |
 | Content, year 1 | about $1,300 | about $17,600 | about $138,000 |
-| B2B packs (PR #13), year 1 | about $50 | about $700 | about $6,700 |
+| B2B packs (PR #13), year 1 | about $60 | about $770 | about $7,100 |
 
 - **Products are the biggest line** in every case. YouTube Shorts pays $0 (10M views per 90 days needed),
   and YouTube long-form ads are $0 in year 1 in the conservative and base cases: new YPP applicants need
