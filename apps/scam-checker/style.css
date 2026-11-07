@@ -55,3 +55,16 @@ footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin
 #guide-check textarea{min-height:110px}
 .top{display:flex;justify-content:space-between;align-items:center}
 .lang{color:var(--muted);font-size:14px}
+
+/* Family setup */
+.members{list-style:none;padding:0;margin:8px 0 0}.members li{padding:4px 0}
+select{font:inherit;border:1px solid var(--line);border-radius:10px;padding:11px;background:var(--card);color:var(--ink)}
+.who{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:6px 14px;margin:8px 0 0;font-size:14px}
+.task{border-top:1px solid var(--line);padding:12px 0}.task:first-of-type{border-top:0}
+.tick{flex-direction:row;align-items:flex-start;gap:10px;font-weight:400;font-size:16px;cursor:pointer}
+.tick input{width:22px;height:22px;flex:none;margin-top:2px}
+.task.done b{text-decoration:line-through;color:var(--muted)}
+.task details{margin:6px 0 0 32px;color:var(--ink)}
+.tag{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:1px 8px}
+.plain{padding-left:18px}.plain li{margin-bottom:6px}
+@media print{.top,footer,#member-form,.row .link{display:none}.card{border:0;padding:0}}

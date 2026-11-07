@@ -5,4 +5,4 @@
   command = "node money-calculators/build.mjs && node scam-checker/build.mjs"
 
 [functions]
-  directory = "budget/netlify/functions"
+  directory = "functions"

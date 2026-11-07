@@ -141,3 +141,5 @@ textarea{font:inherit;padding:10px;border-radius:10px;border:1px solid var(--lin
 .faq h3{font-size:16px;margin:14px 0 4px}
 #print-letter{display:none}
 @media print{body>*:not(#print-letter){display:none!important}#print-letter{display:block!important;white-space:pre-wrap;font:12pt/1.45 Georgia,serif;color:#000;margin:0}}
+.notice{border-left:4px solid var(--gold);background:rgba(242,177,52,.12);padding:10px 14px;border-radius:8px}
+.grid .full{grid-column:1/-1}

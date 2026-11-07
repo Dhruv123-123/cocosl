@@ -28,6 +28,8 @@ const checks = [
   ['/money-calculators/compound-interest/', '#result .big'],
   ['/money-calculators/401k-fees/', '#result table.fees'],
   ['/money-calculators/es/401k-fees/', '#result table.fees'],
+  ['/medical-bills/debt.html', '#about', async (page) => { await page.fill('[name=name]', 'Sam'); await page.fill('[name=collector]', 'Apex'); await page.fill('[name=reference]', 'AR-1'); }],
+  ['/scam-checker/family/', '#steps .task', async (page) => { await page.check('#steps input[type=checkbox]'); }],
   ['/medical-bills/', '#plan b', async (page) => { await page.fill('[name=patient]', 'Jordan Lee'); await page.fill('[name=provider]', 'Riverside General'); await page.fill('[name=account]', 'RG-1'); await page.check('[name=haveItemized]'); await page.check('#extra-form [name=errors][value=duplicate]'); }],
   ['/money-calculators/emergency-fund/', '#result .big'],
   ['/money-calculators/savings-interest/', '#result .big'],

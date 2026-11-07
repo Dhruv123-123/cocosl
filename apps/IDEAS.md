@@ -40,3 +40,5 @@ Effort is for Claude to build; "your part" is what only Dhruv can do (accounts, 
 Also built from the scouting thread's ranked list (research/scouting/software-ideas.md): #1 bill negotiation tracker (`budget/bills.html`) and #2 the 0% / deferred-interest countdown (`budget/deals.html`), both as Budget Pro features.
 
 Also built from that list: #4 medical bill letters (`medical-bills/`) and #10 the 401(k) fee checker (`money-calculators/401k-fees/`). App store packaging notes for the budget app: `budget/STORES.md` (nothing submitted).
+
+Also built: family security setup checklist (`scam-checker/family/`, idea #5), debt collector letters (`medical-bills/debt.html`, idea #6), and the text-us scam check backend (`scam-checker/sms/`, idea #3; needs a Twilio number, see SMS_SETUP.md).
