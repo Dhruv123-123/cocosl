@@ -1,6 +1,6 @@
 # Go live: the one checklist
 
-Written 2026-11-07 for Dhruv and refreshed through the evening (last pass 08:15 UTC: PRs #1–#12 and `main` at
+Written 2026-11-07 for Dhruv and refreshed through the evening (last pass 08:20 UTC: PRs #1–#12 and `main` at
 `9cb0ca4`). This merges every "only you can do this" step from `docs/CREDENTIALS.md`, `docs/QUICKSTART.md`,
 `docs/DEPLOY.md`, `launch/LAUNCH_DAY.md`, `launch/VERIFY_BEFORE_POSTING.md`, the open PRs, the commits on `main`
 and the project files in `content-factory/`, with the duplicates removed. Everything else is already built.
@@ -24,7 +24,7 @@ Merge in this order (details and current blockers in [PR merge order](#pr-merge-
 **#1 → #3 → #2 → #4 → #5 → #6 → #8 → #12 → #11 → #9 → #10 → #7.**
 
 - [ ] Merge the ones marked ✅ in that order on GitHub (≈ 2 min each). Right now that's **#1, #3, #2, #4, #5,
-      #6, #8, #12, #11, #7**: checked together on top of `main`, all tests pass. Skip the rest until GitHub shows them
+      #6, #8, #12, #11, #9, #7**: checked together on top of `main`, all tests pass. Skip the rest until GitHub shows them
       green; the threads that opened them are fixing them. 15 min
 
 ---
@@ -729,7 +729,7 @@ after month 1. To check automatically: `factory stats import`, then
 
 ## PR merge order
 
-Checked 08:15 UTC on 2026-11-07 against `main` at `9cb0ca4`, merging every open PR in this order in a
+Checked 08:20 UTC on 2026-11-07 against `main` at `9cb0ca4`, merging every open PR in this order in a
 scratch copy and running the full test suite.
 
 | # | PR | Status now | What's in the way |
@@ -741,12 +741,12 @@ scratch copy and running the full test suite.
 | 5 | **#5** Months 1–8, channels, affiliate kit | ✅ safe | |
 | 6 | **#6** Products, Etsy, KDP, ebook | ✅ safe (fixed) | |
 | 7 | **#8** Web apps | ✅ safe | |
-| 8 | **#9** Scam Decoded | ⚠️ conflicts with `main` | `src/contentfactory/cli.py`, `cmd_import`: `main` now copies `original_element` into the script, #9 adds `platforms=`. Keep both |
-| 9 | **#11** Dinero Simple | ✅ safe (fixed, tested at `8a0e010`) | merge after #12 |
+| 8 | **#9** Scam Decoded | ✅ safe (fixed, tested at `308d612`) | merge after #11 |
+| 9 | **#11** Dinero Simple | ✅ safe (tested at `9a0e07b`) | merge after #12 |
 | 10 | **#10** 1099 Money | ⚠️ conflicts with #5 and others | `cli.py`, `channels/config.json`, `pyproject.toml`, `tests/test_pack.py`, `test_business.py`, `test_worker.py`. Merge last, after it brings in `main` again |
 | 11 | **#12** Ad studio portfolio + listing-video page | ✅ safe | |
 | 12 | **#7** This checklist | ✅ safe | docs only |
 
-**Safe to merge now, in order: #1, #3, #2, #4, #5, #6, #8, #12, #11, #7.** These ten were merged together on
-top of `main` and the full test suite passed. Then #9 and #10 once GitHub shows them green.
+**Safe to merge now, in order: #1, #3, #2, #4, #5, #6, #8, #12, #11, #9, #7.** These eleven were merged
+together on top of `main` and the full test suite passed. Then #10 once it has brought in `main` again.
 If a new PR lands, merge it after these unless its description says otherwise.
