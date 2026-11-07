@@ -67,6 +67,8 @@ factory auth youtube | tiktok | meta        # connect accounts
 
 With `--days 0`, `pack export` renders the whole file as an undated library, grouped by format (used for `launch/money-made-simple/evergreen/`).
 
+`factory channels export --brand <slug> --config <channels/config.json> --out channels/` repurposes the packs into Pinterest pins (images + bulk-upload CSV), weekly newsletter issues and X/Threads text threads (see `launch/money-made-simple/channels/config.json`).
+
 `factory --help` lists everything. Run it in production with `docker compose up -d`.
 
 ## Tests
