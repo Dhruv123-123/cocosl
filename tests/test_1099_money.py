@@ -279,3 +279,26 @@ def test_q4_year_end_pack_is_ready_to_post():
         body = e.read_text()
         assert re.search(r"^send_on: 2026-12-\d\d$", body, re.M) and "{{q4_url}}" in body
         assert "not tax, legal or financial advice" in body and "tracker" not in body.lower()
+
+
+def test_tax_season_posts_rotate_formats_and_are_ready():
+    posts = json.loads((LAUNCH / "tax-season" / "posts.json").read_text())
+    assert len(posts) == 20
+    dates = [p["date"] for p in posts]
+    assert dates == sorted(dates) and dates[0] >= "2027-01-16" and dates[-1] <= "2027-04-15"
+    assert all(a["format"] != b["format"] for a, b in zip(posts, posts[1:]))  # never the same structure twice in a row
+    assert len({p["format"] for p in posts}) == 6
+    assert {p["topic"] for p in posts} == {"filing", "schedulec", "deductions", "homeoffice", "mileage", "q1"}
+    q4_titles = {p["title"] for p in json.loads((LAUNCH / "q4" / "posts.json").read_text())}
+    assert not q4_titles & {p["title"] for p in posts}
+    for p in posts:
+        assert len(p["short"]) <= 280, (p["n"], len(p["short"]))
+        assert "http" not in p["facebook"] and "1099 Money" not in p["facebook"]
+        assert (LAUNCH / "tax-season" / p["card_file"]).exists() and p["sources"] and p["claims"]
+        if p["format"] == "myth-vs-fact":
+            assert p["linkedin"].count("Myth:") >= 3 and p["linkedin"].count("Fact:") >= 3
+        if p["format"] == "common-question":
+            assert p["linkedin"].startswith("A common question")
+    text = " ".join(p["linkedin"] for p in posts)
+    for fact in ("$12,037", "72.5", "$16,100", "January 18, 2028", "October 15", "$2,000"):
+        assert fact in text, fact
