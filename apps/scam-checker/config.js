@@ -29,5 +29,7 @@ export default {
   },
 
 
+  // Plausible (no cookies). Set the domain to turn on page views, outbound clicks and the
+  // Affiliate Click / Product Click / Signup events. Optional plausibleHost for self-hosting. See docs/UTM.md.
   analytics: { plausibleDomain: '' },
 };

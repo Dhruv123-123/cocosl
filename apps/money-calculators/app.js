@@ -4,6 +4,7 @@ import config from './config.js';
 import * as calc from './lib/calc.js';
 import { money, isLiveUrl, escapeHtml } from './lib/format.js';
 import { TEXT } from './lib/text.js';
+import { initTracking, withUtm } from './lib/track.js';
 
 const $ = (sel, root = document) => root.querySelector(sel);
 
@@ -172,11 +173,7 @@ function setupSignup() {
 }
 
 function setupAnalytics() {
-  const d = config.analytics.plausibleDomain;
-  if (!d) return;
-  const s = document.createElement('script');
-  s.defer = true; s.dataset.domain = d; s.src = 'https://plausible.io/js/script.js';
-  document.head.append(s);
+  initTracking({ config, app: 'money-calculators', page: document.body.dataset.calc || 'index' });
 }
 
 let run = () => {};
@@ -254,7 +251,7 @@ if (embedded) {
   document.documentElement.classList.add('embed');
   const credit = document.createElement('p');
   credit.className = 'embed-credit';
-  const href = location.href.split('?')[0];
+  const href = withUtm(location.href.split('?')[0], { source: 'embed', medium: 'referral', campaign: document.body.dataset.calc || 'calculator' });
   credit.innerHTML = params.get('brand') === '0' && config.embed.allowUnbranded
     ? ''
     : `<a href="${href}" target="_blank" rel="noopener">${lang === 'es' ? 'Calculadora gratis de' : 'Free calculator by'} ${escapeHtml(config.brand)}</a>`;

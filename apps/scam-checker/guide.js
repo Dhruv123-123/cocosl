@@ -2,6 +2,7 @@
 // never send to the server), show the relevant offers, and wire up the email signup.
 import config from './config.js';
 import { setupSignup } from './signup.js';
+import { initTracking } from './lib/track.js';
 
 const root = document.body.dataset.root || '../../';
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
@@ -23,3 +24,4 @@ if (box && offers.length) {
   box.hidden = false;
 }
 setupSignup(root);
+initTracking({ config, app: 'scam-checker', page: location.pathname.split('/').filter(Boolean).pop() || 'guides' });

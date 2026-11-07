@@ -2,6 +2,8 @@
 import { checkPage } from './lib/site.js';
 import { extractUrls } from './lib/scan.js';
 import { ES } from './lib/i18n.js';
+import config from './config.js';
+import { initTracking } from './lib/track.js';
 
 const es = document.documentElement.lang.startsWith('es');
 const $ = (s) => document.querySelector(s);
@@ -60,3 +62,4 @@ function check(e) {
 
 $('#link-form').addEventListener('submit', check);
 document.querySelectorAll('[data-url]').forEach((b) => b.addEventListener('click', () => { $('#url').value = b.dataset.url; check(); }));
+initTracking({ config, app: 'scam-checker', page: 'link-checker' });

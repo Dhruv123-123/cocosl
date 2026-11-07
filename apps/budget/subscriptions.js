@@ -1,4 +1,5 @@
 import config from './config.js';
+import { initTracking } from './lib/track.js';
 import { importBankCsv } from './lib/budget.js';
 import { findRecurring } from './lib/recurring.js';
 
@@ -83,3 +84,4 @@ else {
     catch { form.submit(); }
   });
 }
+initTracking({ config, app: 'budget', page: 'subscription-finder' });

@@ -71,6 +71,7 @@ export default {
     licenceUrl: 'mailto:hello@example.com?subject=Calculator%20licence',
   },
 
-  // Optional privacy-friendly analytics, e.g. Plausible: set the domain and it loads.
+  // Plausible (no cookies). Set the domain to turn on page views, outbound clicks and the
+  // Affiliate Click / Product Click / Signup events. Optional plausibleHost for self-hosting. See docs/UTM.md.
   analytics: { plausibleDomain: '' },
 };

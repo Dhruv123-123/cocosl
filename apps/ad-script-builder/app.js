@@ -1,5 +1,6 @@
 import config from './config.js';
 import { buildScript, scriptToText, NICHES, FORMATS } from './lib/scripts.js';
+import { initTracking } from './lib/track.js';
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
@@ -99,6 +100,4 @@ $('#sample-form').addEventListener('submit', async (e) => {
   }
 });
 
-if (config.analytics.plausibleDomain) {
-  const s = document.createElement('script'); s.defer = true; s.dataset.domain = config.analytics.plausibleDomain; s.src = 'https://plausible.io/js/script.js'; document.head.append(s);
-}
+initTracking({ config, app: 'ad-script-builder', page: 'builder' });

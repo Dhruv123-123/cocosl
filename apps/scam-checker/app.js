@@ -2,6 +2,7 @@ import config from './config.js';
 import { analyzeMessage } from './lib/scan.js';
 import { setupSignup } from './signup.js';
 import { ES } from './lib/i18n.js';
+import { initTracking } from './lib/track.js';
 
 const es = document.documentElement.lang.startsWith('es');
 
@@ -99,6 +100,4 @@ if (fromGuide) {
   check();
 }
 
-if (config.analytics.plausibleDomain) {
-  const s = document.createElement('script'); s.defer = true; s.dataset.domain = config.analytics.plausibleDomain; s.src = 'https://plausible.io/js/script.js'; document.head.append(s);
-}
+initTracking({ config, app: 'scam-checker', page: 'checker' });

@@ -1,4 +1,5 @@
 import config from './config.js';
+import { initTracking } from './lib/track.js';
 import { rateBudget, FIELDS } from './lib/rate.js';
 
 const $ = (s) => document.querySelector(s);
@@ -59,3 +60,4 @@ $('#submit-form').addEventListener('submit', async (e) => {
     f.querySelector('button').disabled = false;
   }
 });
+initTracking({ config, app: 'budget', page: 'rate-my-budget' });

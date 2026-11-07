@@ -9,5 +9,7 @@ export default {
   // Netlify Forms collects free-sample requests: Site > Forms > ad-sample-request. Each one is a warm lead.
   sampleForm: 'ad-sample-request',
   freeSamplesPerWeek: 3,
+  // Plausible (no cookies). Set the domain to turn on page views, outbound clicks and the
+  // Affiliate Click / Product Click / Signup events. Optional plausibleHost for self-hosting. See docs/UTM.md.
   analytics: { plausibleDomain: '' },
 };

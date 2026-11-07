@@ -32,6 +32,8 @@ export default {
     url: 'https://REPLACE_ME.gumroad.com/l/budget-review',
     pitch: 'Send your numbers and get a written review within 48 hours: what to change first, with the maths. Drafted with AI help, checked and signed off by a person.',
   },
+  // Privacy-friendly analytics (Plausible, no cookies). Set the domain to turn it on. See docs/UTM.md.
+  analytics: { plausibleDomain: '' },
   verifyEndpoint: '/api/verify-license',
   proFeatures: [
     'Unlimited categories',

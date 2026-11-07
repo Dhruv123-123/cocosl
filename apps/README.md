@@ -25,7 +25,7 @@ one serverless function that checks budget-app license keys.
 
 ```bash
 cd apps
-npm test            # 87 unit tests, Node 20+, no dependencies
+npm test            # 96 unit tests, Node 20+, no dependencies
 npm run smoke       # opens every page in Chromium at desktop and phone width, and loads the extension (needs Playwright)
 ```
 
@@ -62,7 +62,7 @@ Every link containing `REPLACE_ME` is hidden automatically, so the apps are safe
      Pro switches on automatically when the buyer comes back.
    - Gumroad with several products: the function checks one `GUMROAD_PRODUCT_ID`; give the monthly and
      lifetime options as variants of one product.
-5. **Analytics (optional).** Set `analytics.plausibleDomain` for privacy-friendly stats.
+5. **Analytics (optional).** Set `analytics.plausibleDomain` in each app's `config.js`. Every page then counts visits (no cookies), sends Affiliate Click / Product Click / Signup events, and tags Gumroad and Stripe links with the visit's UTM so sales are credited to the pin, post or bio that brought the buyer. Setup, goals and the link rules for bios, pins and newsletters: [docs/UTM.md](../docs/UTM.md). `node tools/utm.mjs bios` prints the bio link for every brand and platform; `node tools/utm.mjs check <files>` finds our links that are missing UTM.
 
 Nothing here takes a payment by itself, and nothing goes live until you paste in real links and keys.
 

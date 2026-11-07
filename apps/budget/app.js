@@ -1,4 +1,5 @@
 import config from './config.js';
+import { initTracking } from './lib/track.js';
 import * as B from './lib/budget.js';
 import { planFor, can } from './lib/plans.js';
 import { verifyLicense, isActive, needsRecheck } from './lib/license.js';
@@ -191,3 +192,4 @@ if (sessionId) {
 
 render();
 if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
+initTracking({ config, app: 'budget', page: 'budget' });
