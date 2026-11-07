@@ -43,6 +43,8 @@ const checks = [
     await page.click('#check');
   }],
   ['/scam-checker/es/', '#result', async (page) => { await page.click('[data-example=toll]'); }],
+  ['/scam-checker/link/', '#result .score', async (page) => { await page.click('[data-url*=paypa1]'); }],
+  ['/scam-checker/es/enlace/', '#result .score', async (page) => { await page.click('[data-url*=usps]'); }],
   ['/scam-checker/scams/', '.tiles'],
   ['/scam-checker/scams/toll-text-scam/', '#result', async (page) => {
     await page.fill('#guide-msg', 'URGENT: unpaid toll of $4.15, pay at ezpass-help.top now or face a late fee');

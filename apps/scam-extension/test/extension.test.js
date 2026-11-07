@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { checkPage, badgeFor, menuText } from '../verdict.js';
+import { checkPage, badgeFor, menuText } from '../lib/site.js';
 import { analyzeMessage } from '../lib/scan.js';
 import { translateResult } from '../lib/i18n.js';
 
@@ -30,7 +30,7 @@ test('a raw IP address is a caution, not a red badge (home routers use them)', (
 });
 
 test('browser pages and junk are ignored', () => {
-  for (const url of ['chrome://extensions', 'about:blank', 'file:///tmp/x.html', '', 'not a url']) assert.equal(checkPage(url).level, 'none', url);
+  for (const url of ['chrome://extensions', 'about:blank', 'file:///tmp/x.html', '', 'not a url', 'hello there']) assert.equal(checkPage(url).level, 'none', url);
 });
 
 test('right-click text: links send the URL, selections are trimmed and capped', () => {
@@ -49,7 +49,7 @@ test('Spanish results translate every user-facing string', () => {
 });
 
 test('the generated lib copies match the checker source', () => {
-  for (const f of ['scan.js', 'i18n.js']) {
+  for (const f of ['scan.js', 'i18n.js', 'site.js']) {
     const copy = readFileSync(new URL(`../lib/${f}`, import.meta.url), 'utf8');
     const original = readFileSync(new URL(`../../scam-checker/lib/${f}`, import.meta.url), 'utf8');
     assert.ok(copy.endsWith(original), `${f} is stale: run node scam-extension/build.mjs`);
@@ -62,4 +62,9 @@ test('manifest asks only for narrow permissions', () => {
   assert.deepEqual(m.permissions.sort(), ['activeTab', 'contextMenus', 'storage']);
   assert.equal(m.host_permissions, undefined);
   assert.deepEqual(m.optional_permissions, ['tabs']);
+});
+
+test('a bare domain without https:// is still checked', () => {
+  assert.equal(checkPage('paypa1-secure.com/login').level, 'high');
+  assert.equal(checkPage('www.paypal.com').level, 'official');
 });

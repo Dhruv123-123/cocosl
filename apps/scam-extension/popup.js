@@ -1,7 +1,7 @@
 import config from './lib/config.js';
 import { analyzeMessage } from './lib/scan.js';
 import { ES, translateResult } from './lib/i18n.js';
-import { checkPage } from './verdict.js';
+import { checkPage } from './lib/site.js';
 
 const ext = globalThis.chrome?.runtime?.id ? globalThis.chrome : null; // null when opened as a plain page (store screenshots)
 const lang = ext?.i18n?.getUILanguage?.() || navigator.language || 'en';

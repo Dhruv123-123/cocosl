@@ -1,6 +1,6 @@
 // Service worker: right-click menus, and (only if the user turns it on) a red badge on look-alike sites.
 // Nothing leaves the browser: every check runs on this device.
-import { checkPage, badgeFor, menuText } from './verdict.js';
+import { checkPage, badgeFor, menuText } from './lib/site.js';
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.removeAll(() => {

@@ -10,7 +10,7 @@ const here = dirname(fileURLToPath(import.meta.url));
 const src = join(here, '..', 'scam-checker');
 const header = '// GENERATED from scam-checker/ by scam-extension/build.mjs. Edit the original, then rebuild.\n';
 mkdirSync(join(here, 'lib'), { recursive: true });
-for (const f of ['scan.js', 'i18n.js']) writeFileSync(join(here, 'lib', f), header + readFileSync(join(src, 'lib', f), 'utf8'));
+for (const f of ['scan.js', 'i18n.js', 'site.js']) writeFileSync(join(here, 'lib', f), header + readFileSync(join(src, 'lib', f), 'utf8'));
 
 // Only what the popup needs; no email or analytics settings.
 const { brand, siteUrl, product } = config;

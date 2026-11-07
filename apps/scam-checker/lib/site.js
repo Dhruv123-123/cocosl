@@ -1,5 +1,5 @@
-// Page and link verdicts for the browser extension. Pure functions so node can test them.
-import { analyzeUrl, parseHost } from './lib/scan.js';
+// Website verdicts, shared by the link checker page and the browser extension. Pure functions so node can test them.
+import { analyzeUrl, parseHost } from './scan.js';
 
 // Big, legitimate hosts that contain a brand name but aren't that brand's site. The passive
 // warning must almost never fire on a real site, so these are skipped.
@@ -14,6 +14,9 @@ const onKnownOk = (host) => KNOWN_OK.some((d) => host === d || host.endsWith('.'
  * the extension warns about without being asked.
  */
 export function checkPage(url) {
+  url = String(url || '').trim();
+  // People paste "paypa1-login.com" without a scheme; treat it as a web address.
+  if (url && !/^[a-z][a-z0-9+.-]*:/i.test(url) && /^[^\s/]+\.[a-z]{2,}/i.test(url)) url = `https://${url}`;
   let protocol;
   try { protocol = new URL(url).protocol; } catch { return { level: 'none', host: null, issues: [] }; }
   if (protocol !== 'http:' && protocol !== 'https:') return { level: 'none', host: null, issues: [] };
