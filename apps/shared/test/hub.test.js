@@ -36,7 +36,7 @@ test('installable: manifest, icons, service worker, offline page', () => {
   const listed = [...sw.matchAll(/^const (?:SHELL|PAYCHECK|AFFORD) = \[([^\]]+)\]/gm)].flatMap((m) => [...m[1].matchAll(/'([^']+)'/g)].map((x) => x[1]));
   assert.ok(listed.length > 25, `precache list (${listed.length})`);
   for (const f of listed) assert.ok(exists(f === './' ? 'index.html' : f.endsWith('/') ? `${f}index.html` : f), f);
-  for (const f of ['money-calculators/lib/state-tax-2026.js', 'money-calculators/take-home-pay/', 'budget/afford.html', 'budget/lib/afford.js']) assert.ok(listed.includes(f), `${f} is saved for offline`);
+  for (const f of ['money-calculators/lib/state-tax-2026.js', 'money-calculators/student-loans/', 'money-calculators/rent-vs-buy/', 'money-calculators/lib/student-loans.js', 'money-calculators/take-home-pay/', 'budget/afford.html', 'budget/lib/afford.js']) assert.ok(listed.includes(f), `${f} is saved for offline`);
   assert.match(sw, /startsWith\('\/api\/'\)/, 'never caches the API');
   assert.match(read('netlify.toml'), /for = "\/sw\.js"[\s\S]*no-cache/);
 });

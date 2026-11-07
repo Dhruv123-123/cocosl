@@ -3,6 +3,9 @@
 import config from './config.js';
 import * as calc from './lib/calc.js';
 import { STATE_OPTIONS } from './lib/state-tax-2026.js';
+import { comparePlans } from './lib/student-loans.js';
+import { rentVsBuy } from './lib/rent-vs-buy.js';
+import { EXTRA } from './lib/text-extra.js';
 import { analyzeFees } from './lib/fees.js';
 import { money, isLiveUrl, escapeHtml } from './lib/format.js';
 import { TEXT } from './lib/text.js';
@@ -13,6 +16,8 @@ const $ = (sel, root = document) => root.querySelector(sel);
 const lang = document.documentElement.lang.startsWith('es') ? 'es' : 'en';
 const T = TEXT[lang];
 const F = T.fields;
+const X = EXTRA[lang];
+const XF = X.f;
 
 // Budget Pro upsell on calculators that lead into budgeting (English only: the app is in English).
 function budgetProBox(where) {
@@ -66,6 +71,23 @@ const CALCS = {
     fields: [['salary', F.salary, 60000], ['pretax401k', F.pretax401k, 3000], ['pretaxHealth', F.pretaxHealth, 0], ['stateRate', F.stateRate, 4, 0.1], ['payPeriods', F.payPeriods, 26]],
     select: [['filing', F.filing, [['single', F.single], ['married', F.married]]], ['state', F.state, [['custom', F.stateCustom], ...STATE_OPTIONS]]],
     render: (v) => T.takeHome(v, calc.takeHomePay(v)),
+  },
+  'student-loans': {
+    cta: 'credit',
+    fields: [['balance', XF.slBalance, 35000], ['rate', XF.slRate, 6.5, 0.01], ['agi', XF.slAgi, 45000], ['household', XF.slHousehold, 1], ['dependents', XF.slDependents, 0], ['growth', XF.slGrowth, 3, 0.1]],
+    select: [
+      ['cohort', XF.slCohort, [['before2026', XF.slBefore], ['after2026', XF.slAfter]]],
+      ['newBorrower2014', XF.slNew2014, [['yes', XF.yes], ['no', XF.no]]],
+      ['region', XF.slRegion, [['contiguous', XF.contiguous], ['alaska', XF.alaska], ['hawaii', XF.hawaii]]],
+    ],
+    render: (v) => X.loans(comparePlans(v)) + budgetProBox('student-loans'),
+  },
+  'rent-vs-buy': {
+    cta: 'hysa',
+    fields: [['price', XF.rbPrice, 400000], ['downPct', XF.rbDown, 20, 0.1], ['mortgageRate', XF.rbRate, 6.5, 0.01], ['termYears', XF.rbTerm, 30], ['rent', XF.rbRent, 2200], ['years', XF.rbYears, 7],
+      ['propertyTaxPct', XF.rbTax, 1.1, 0.01], ['insurance', XF.rbIns, 1800], ['hoa', XF.rbHoa, 0], ['maintenancePct', XF.rbUpkeep, 1, 0.1], ['closingPct', XF.rbClosing, 3, 0.1], ['sellingPct', XF.rbSelling, 6, 0.1],
+      ['appreciation', XF.rbApp, 3, 0.1], ['rentGrowth', XF.rbRentGrowth, 3, 0.1], ['rentersInsurance', XF.rbRentersIns, 15], ['investReturn', XF.rbReturn, 6, 0.1]],
+    render: (v) => X.rentBuy(rentVsBuy(v)),
   },
   'roth-vs-traditional': {
     cta: 'brokerage',

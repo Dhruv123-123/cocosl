@@ -5,10 +5,10 @@
 //   in localStorage, and this worker never touches requests other than GETs to this site.
 // - /api/ (license checks, SMS) is never cached.
 // The budget app registers its own worker for /budget/, which takes over there.
-const VERSION = 'tools-v2';
+const VERSION = 'tools-v3';
 // Saved at install so they work offline from day one: the hub, the paycheck calculator by state and
-// the "Can I afford this?" checker (the budget app's own worker also caches the checker under /budget/).
-const PAYCHECK = ['money-calculators/take-home-pay/', 'money-calculators/style.css', 'money-calculators/app.js', 'money-calculators/config.js', 'money-calculators/lib/calc.js', 'money-calculators/lib/fees.js', 'money-calculators/lib/format.js', 'money-calculators/lib/text.js', 'money-calculators/lib/track.js', 'money-calculators/lib/tax2026.js', 'money-calculators/lib/state-tax-2026.js'];
+// the student loan chooser, rent vs buy and the "Can I afford this?" checker (the budget app's own worker also caches the checker under /budget/).
+const PAYCHECK = ['money-calculators/take-home-pay/', 'money-calculators/student-loans/', 'money-calculators/rent-vs-buy/', 'money-calculators/style.css', 'money-calculators/app.js', 'money-calculators/config.js', 'money-calculators/lib/calc.js', 'money-calculators/lib/fees.js', 'money-calculators/lib/format.js', 'money-calculators/lib/text.js', 'money-calculators/lib/track.js', 'money-calculators/lib/tax2026.js', 'money-calculators/lib/state-tax-2026.js', 'money-calculators/lib/student-loans.js', 'money-calculators/lib/rent-vs-buy.js', 'money-calculators/lib/text-extra.js'];
 const AFFORD = ['budget/afford.html', 'budget/afford.js', 'budget/lib/afford.js', 'budget/lib/holiday.js', 'budget/lib/dates.js', 'budget/page.js', 'budget/lib/license.js', 'budget/lib/plans.js', 'budget/lib/checkout.js', 'budget/style.css'];
 const SHELL = ['./', 'index.html', 'offline.html', 'manifest.webmanifest', 'budget/icon-192.png', 'budget/icon-512.png', 'budget/config.js', 'budget/lib/track.js', ...PAYCHECK, ...AFFORD];
 

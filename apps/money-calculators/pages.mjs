@@ -89,6 +89,33 @@ export const pages = [
     ],
   },
   {
+    slug: 'student-loans',
+    title: 'Student Loan Repayment Plan Calculator 2026: Standard vs RAP vs IBR',
+    h1: 'Student loan repayment chooser (2026)',
+    tile: 'Student loan plans',
+    description: 'Compare federal student loan repayment plans for 2026: Standard, Graduated, Extended, Income-Based Repayment and the new Repayment Assistance Plan (RAP). Monthly payment, total paid and forgiveness.',
+    intro: 'Enter your federal loan balance and income. We run every plan you can use under the 2026 rules (SAVE has ended) and show the monthly payment, the total you would pay and any balance forgiven. Always confirm with your loan servicer before switching.',
+    faq: [
+      ['What is the Repayment Assistance Plan (RAP)?', 'RAP opened July 1, 2026. You pay 1% to 10% of your AGI a year depending on income, minus $50 a month for each dependent, with a $10 minimum. Unpaid interest is waived, the government adds up to $50 a month to principal on on-time payments, and any balance left after 30 years is forgiven.'],
+      ['Which plans can I use if I borrowed after July 1, 2026?', 'If any of your federal loans was first paid out on or after July 1, 2026, your choices are the Tiered Standard plan (10 to 25 years depending on balance) and RAP.'],
+      ['What happened to SAVE?', 'A court order ended SAVE in March 2026. Servicers are notifying SAVE borrowers, who have 90 days from their notice to pick another plan. PAYE and ICR close no later than July 1, 2028.'],
+      ['Is forgiveness taxed?', 'Forgiveness at the end of an income-driven plan may count as taxable income. Public Service Loan Forgiveness is not taxed.'],
+    ],
+  },
+  {
+    slug: 'rent-vs-buy',
+    title: 'Rent vs Buy Calculator: Is It Better to Rent or Buy a Home?',
+    h1: 'Rent vs buy calculator',
+    tile: 'Rent vs buy',
+    description: 'Should you rent or buy? Compare the true cost of owning (mortgage, tax, insurance, upkeep, closing and selling costs) with renting and investing the difference, and see your break-even year.',
+    intro: 'Owning costs more than the mortgage, and renting leaves cash you can invest. Enter a home and a rent, and we compare what you would have after the years you plan to stay.',
+    faq: [
+      ['How long do I need to stay for buying to make sense?', 'Buying and selling costs often 8% to 10% of the price, so buying usually needs several years to beat renting. The calculator shows your break-even year.'],
+      ['What costs does owning add beyond the mortgage?', 'Property tax, home insurance, HOA dues, upkeep (often 1% to 2% of the value a year), closing costs to buy and agent and closing costs to sell.'],
+      ['Is rent just throwing money away?', 'No. Mortgage interest, property tax and upkeep are also money you do not get back. The fair comparison is what each path leaves you with.'],
+    ],
+  },
+  {
     slug: '401k-fees',
     title: '401(k) Fee Checker: What Your Funds Cost in Dollars',
     h1: '401(k) fee checker',

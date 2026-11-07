@@ -45,6 +45,17 @@ const checks = [
     if (!/doesn't tax wages/.test(await page.textContent('#result'))) throw new Error('no-tax state line missing');
   }],
   ['/money-calculators/es/', '.tiles'],
+  ['/money-calculators/student-loans/', '#result .plans-table', async (page) => {
+    await page.selectOption('[name=cohort]', 'after2026');
+    if (!/Tiered Standard/.test(await page.textContent('#result'))) throw new Error('tiered plan missing');
+    if (!/Verify with your loan servicer/.test(await page.textContent('#result'))) throw new Error('servicer note missing');
+  }],
+  ['/money-calculators/es/student-loans/', '#result .plans-table'],
+  ['/money-calculators/rent-vs-buy/', '#result .big', async (page) => {
+    await page.fill('[name=years]', '25');
+    if (!/Buying comes out ahead/.test(await page.textContent('#result'))) throw new Error('rent vs buy result');
+  }],
+  ['/money-calculators/es/rent-vs-buy/', '#result .big'],
   ['/money-calculators/compound-interest/?embed=1', '.embed-credit'],
   ['/money-calculators/embed/', '#embed-form', async (page) => { await page.waitForSelector('#e-preview iframe'); }],
   ['/money-calculators/es/debt-payoff/', '#result .big'],

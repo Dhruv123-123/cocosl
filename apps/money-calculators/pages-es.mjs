@@ -92,6 +92,30 @@ export const pagesEs = [
     ],
   },
   {
+    slug: 'student-loans',
+    title: 'Calculadora de planes de pago de préstamos estudiantiles 2026',
+    h1: 'Elige tu plan de préstamos estudiantiles (2026)',
+    tile: 'Préstamos estudiantiles',
+    description: 'Compara los planes de pago federales de 2026: Estándar, Graduado, Extendido, IBR y el nuevo Plan de Asistencia de Pago (RAP). Pago mensual, total pagado y perdón.',
+    intro: 'Pon tu saldo de préstamos federales y tu ingreso. Calculamos cada plan disponible con las reglas de 2026 (SAVE ya terminó). Confírmalo siempre con tu administrador de préstamos antes de cambiar.',
+    faq: [
+      ['¿Qué es el Plan de Asistencia de Pago (RAP)?', 'RAP abrió el 1 de julio de 2026. Pagas del 1% al 10% de tu AGI al año según tu ingreso, menos $50 al mes por cada dependiente, con un mínimo de $10. El interés no pagado se perdona y lo que quede después de 30 años se perdona.'],
+      ['¿Qué pasó con SAVE?', 'Una orden judicial terminó SAVE en marzo de 2026. Tienes 90 días desde el aviso de tu administrador para elegir otro plan.'],
+    ],
+  },
+  {
+    slug: 'rent-vs-buy',
+    title: 'Calculadora rentar o comprar casa',
+    h1: 'Calculadora: ¿rentar o comprar?',
+    tile: 'Rentar o comprar',
+    description: '¿Te conviene rentar o comprar? Compara el costo real de ser dueño con rentar e invertir la diferencia, y ve en qué año comprar empieza a ganar.',
+    intro: 'Ser dueño cuesta más que la hipoteca, y rentar deja dinero que puedes invertir. Pon una casa y una renta, y comparamos con cuánto terminarías.',
+    faq: [
+      ['¿Cuánto tiempo debo quedarme para que comprar convenga?', 'Comprar y vender suele costar del 8% al 10% del precio, así que comprar necesita varios años para ganarle a rentar.'],
+      ['¿Rentar es tirar el dinero?', 'No. Los intereses de la hipoteca, el impuesto predial y el mantenimiento tampoco se recuperan. Lo justo es comparar con cuánto termina cada camino.'],
+    ],
+  },
+  {
     slug: '401k-fees',
     title: 'Revisa las comisiones de tu 401(k) en dólares',
     h1: 'Revisa las comisiones de tu 401(k)',
