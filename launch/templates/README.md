@@ -11,6 +11,7 @@ Template-only versions of the budget, debt payoff and savings tools, plus a free
 | `catalog.py` | Names, prices and store copy for all nine products. |
 | `previews.py` | Screenshots, covers and Start Here PDFs (HTML, rendered with Playwright). |
 | `build_templates.py` | Builds everything into `dist/` (git-ignored). |
+| `twins_sheets.py`, `twins_notion.py`, `twins_catalog.py` | Google Sheets + Notion versions of five Etsy printables (52-week, no-spend, bills, paycheck, debt coloring), registered into the same build. |
 | `links.json` | The copy/duplicate links, filled in once the templates are published. |
 
     python launch/templates/build_templates.py

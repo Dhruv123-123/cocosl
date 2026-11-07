@@ -11,5 +11,15 @@
   "store": "TODO: your Gumroad store URL",
   "newsletter": "TODO: your newsletter sign-up URL",
   "sheet_budget_2027": "TODO: Google Sheets link ending in /copy",
-  "notion_hq_2027": "TODO: published Notion page link (Duplicate as template on)"
+  "notion_hq_2027": "TODO: published Notion page link (Duplicate as template on)",
+  "sheet_52_week": "TODO: Google Sheets link ending in /copy",
+  "sheet_no_spend": "TODO: Google Sheets link ending in /copy",
+  "sheet_bills": "TODO: Google Sheets link ending in /copy",
+  "sheet_paycheck": "TODO: Google Sheets link ending in /copy",
+  "sheet_debt_coloring": "TODO: Google Sheets link ending in /copy",
+  "notion_52_week": "TODO: published Notion page link (Duplicate as template on)",
+  "notion_no_spend": "TODO: published Notion page link (Duplicate as template on)",
+  "notion_bills": "TODO: published Notion page link (Duplicate as template on)",
+  "notion_paycheck": "TODO: published Notion page link (Duplicate as template on)",
+  "notion_debt_coloring": "TODO: published Notion page link (Duplicate as template on)"
 }

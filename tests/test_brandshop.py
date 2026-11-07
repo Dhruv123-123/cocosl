@@ -183,3 +183,15 @@ def test_post_purchase_emails(tmp_path):
         assert seq["code"] not in seq["emails"][0]["body"] + seq["emails"][1]["body"]  # days 0 and 3: no pitch
     idx = PP.index_md()
     assert "SEMANA5" in idx and "TRACKER15" in idx and "Nothing is sent" in idx
+
+
+def test_money_reset_workbook():
+    import money_reset as MR
+    assert shop.validate(MR.LISTINGS) == []
+    assert [d[0] for d in MR.DAYS] == list(range(1, 31))
+    assert len(MR.pages()) == 21 and "21 printable pages" in MR.GET[0]
+    it = MR.LISTINGS[0]
+    assert it["price"] == 9 and "[LINK:" in it["gumroad"] and "http" not in it["gumroad"]
+    worksheets = {d[4] for d in MR.DAYS if d[4]}
+    titles = " ".join(MR.pages()).replace("<em>", "").replace("</em>", "")
+    assert all(w.split()[0] in titles for w in worksheets)

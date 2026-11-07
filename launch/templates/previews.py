@@ -368,6 +368,21 @@ def notion_shots(t: dict, today: date) -> list[tuple[str, str]]:
             ("goal", notion_page(t, blocks(L[4:6]) + table(g, rows["starter_goal"], ["Name", "Target", "Saved", "Progress"],
                                                             "Goal") + blocks(L[7:]), head=False)),
         ]
+    if "shots" in t:  # data-driven screenshots (twins_notion.py): blocks from the layout slice, then one table
+        out = []
+        for sh in t["shots"]:
+            d = dbs[sh["db"]]
+            rs = list(rows[sh["db"]])
+            key = sh.get("sort")
+            if key:
+                rs.sort(key=lambda r: r[key.lstrip("-")], reverse=key.startswith("-"))
+            tb = table(d, rs, sh["cols"], sh["view"], group=sh.get("group"), limit=sh.get("limit", 12), sums=sh.get("sums", ()))
+            bl = blocks(L[sh["layout"][0]:sh["layout"][1]])
+            body = bl + tb if sh.get("blocks_first", True) else tb + bl
+            if sh.get("after"):
+                body += blocks(L[sh["after"][0]:sh["after"][1]])
+            out.append((sh["label"], notion_page(t, body, head=sh.get("head", True))))
+        return out
     raise KeyError(slug)
 
 

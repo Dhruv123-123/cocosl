@@ -215,4 +215,7 @@ ITEMS = [
     },
 ]
 
+from twins_catalog import ITEMS as _TWINS  # noqa: E402  (Sheets + Notion versions of five printables)
+
+ITEMS += _TWINS
 BY_SLUG = {i["slug"]: i for i in ITEMS}

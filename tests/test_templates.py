@@ -108,7 +108,7 @@ def test_page_id_from_link():
 
 def test_catalog():
     paid = [i for i in C.ITEMS if i["price"]]
-    assert all(7 <= i["price"] <= (24 if "2027" in i["slug"] else 19) for i in paid)
+    assert all((5 if i.get("twin_of") else 7) <= i["price"] <= (24 if "2027" in i["slug"] else 19) for i in paid)
     assert [i["slug"] for i in C.ITEMS if i["price"] == 0] == ["notion-money-starter"]
     for i in C.ITEMS:
         if i["kind"] in ("notion", "notion-bundle", "free"):
@@ -144,3 +144,56 @@ def test_2027_editions():
     rent = next(r for r in rows["categories"] if r["Name"] == "Rent")
     assert rent["Jan 2027"] == 1400 and rent["Feb 2027"] == 1400 and rent["Mar 2027"] == 0 and rent["2027 total"] == 2800
     assert len(rows["months27"]) == 12 and rows["months27"][0]["Status"].startswith("✅")
+
+
+TWINS = ["52-week-savings-sheet", "no-spend-challenge-sheet", "bill-tracker-sheet", "paycheck-budget-sheet", "debt-coloring-sheet"]
+
+
+def test_printable_twins_cover_five_printables_in_both_apps():
+    sys.path.insert(0, str(TPL.parents[0] / "etsy"))
+    import listings as EL
+    twins = [i for i in C.ITEMS if i.get("twin_of")]
+    assert len(twins) == 10
+    for slug in {i["twin_of"] for i in twins}:
+        assert slug in EL.BY_SLUG                                  # a real Etsy printable
+        kinds = sorted(i["kind"] for i in twins if i["twin_of"] == slug)
+        assert kinds == ["notion", "sheets"]
+    assert all("Etsy shop" in " ".join(a for _, a in i["faq"]) for i in twins)
+
+
+def _recalc(path, tmp_path):
+    if not shutil.which("soffice"):
+        pytest.skip("LibreOffice not installed")
+    out = tmp_path / "rc"
+    subprocess.run(["soffice", "--headless", "--calc", "--convert-to", "xlsx", "--outdir", str(out), str(path)],
+                   capture_output=True, timeout=180, check=True)
+    return openpyxl.load_workbook(out / path.name, data_only=True)
+
+
+def test_paycheck_sheet_finds_bills_due_before_next_payday(tmp_path):
+    import twins_sheets as TS
+    p = TS.build_paycheck(tmp_path / "p.xlsx", date(2026, 11, 7))
+    wb = openpyxl.load_workbook(p)
+    wb["Setup"]["C6"] = TS.PAYFREQ[2]                              # 1st and 15th
+    wb["Setup"]["C5"] = date(2026, 10, 15)
+    wb.save(p)
+    ws = _recalc(p, tmp_path)["Paychecks"]
+    due = {d: a for _, a, d in TS.PBILLS}
+    for r in range(6, 12):
+        start, nxt = ws.cell(r, 3).value.date(), ws.cell(r, 4).value.date()
+        days = [start + __import__("datetime").timedelta(n) for n in range((nxt - start).days)]
+        want = sum(a for d, a in due.items() for x in days if x.day == d)
+        assert ws.cell(r, 7).value == pytest.approx(want), (start, nxt)
+        assert (start.day, nxt.day) in ((15, 1), (1, 15))
+
+
+def test_twin_sheets_examples_add_up(tmp_path):
+    import twins_sheets as TS
+    w = _recalc(TS.build_52_week(tmp_path / "w.xlsx", date(2026, 11, 7)), tmp_path)["Challenge"]
+    assert w["J5"].value == 1378 and w["J6"].value == sum(range(1, 10)) and w["J8"].value == 9
+    n = _recalc(TS.build_no_spend(tmp_path / "n.xlsx", date(2026, 11, 7)), tmp_path)["Challenge"]
+    assert (n["J5"].value, n["J6"].value, n["J7"].value, n["J8"].value) == (10, 12, 50.5, 150)
+    d = _recalc(TS.build_debt_coloring(tmp_path / "d.xlsx", date(2026, 11, 7)), tmp_path)["Color In"]
+    assert d["O5"].value == 20 and d["O12"].value == "$570 to go"
+    b = _recalc(TS.build_bill_tracker(tmp_path / "b.xlsx", date(2026, 11, 7)), tmp_path)["Bills"]
+    assert b["M6"].value == pytest.approx(1910.99) and b["M7"].value == pytest.approx((66 / 3) + 180 / 12 * 2)

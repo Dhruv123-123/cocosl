@@ -93,8 +93,12 @@ def template_rows() -> list[dict]:
         date = "Week of Nov 9" if dated else ("Week of Nov 16; on sale Nov 27-30" if "bundle" in i["kind"] else "Week of Nov 16")
         note = "Notion: run notion_build.py once and paste the duplicate link into links.json." if "notion" in i["kind"] else \
             "Paste the Sheets copy link into links.json and rebuild."
+        src = "calendar"
+        if i.get("twin_of"):  # Sheets/Notion versions of a printable: added after the calendar was made
+            date, src = "Week of Dec 14, ahead of the January budgeting and savings-challenge peak", "proposed"
+            note += f" Digital version of the Etsy printable '{i['twin_of']}'."
         out.append(row("Money Made Simple", i["name"], plat, money(i["price"]), f"templates/{s}/", f"templates/{s}/LISTING.md",
-                       date, "calendar", note))
+                       date, src, note))
     return out
 
 
@@ -126,19 +130,23 @@ def book_rows() -> list[dict]:
 
 def brandshop_rows() -> list[dict]:
     import dinero_simple as DS
+    import money_reset as MR
     import scam_decoded as SD
     import ten99 as T
     out = []
     dates = {"scam-decoded": ("Week of Nov 16 (holiday-scam season runs Nov 21-Dec 18)", "proposed"),
              "1099-money": ("Week of Nov 16, with the brand launch (dated 2027: list early)", "proposed"),
-             "dinero-simple": ("After native review; target week of Dec 7 (December remittance and aguinaldo season)", "proposed")}
+             "dinero-simple": ("After native review; target week of Dec 7 (December remittance and aguinaldo season)", "proposed"),
+             "money-made-simple": ("Week of Dec 14, for New Year resets (budget searches peak in January)", "proposed")}
     differ = {
         "scam-card-set": "Cards only (no guide), so it sits beside the Scam-Proofing Kit and the seniors guide rather than competing with them. Replaces the fridge cards, caller ID card, my kit and my bundle (see Merged).",
         "freelancer-tax-planner-2027": "Sold as the paper companion to the Quarterly Tax Tracker (the brand's spreadsheet). My sheet and bundle were merged away (see Merged).",
         "presupuesto-familiar": "Different from El Presupuesto de 20 Minutos ($12, a guide plus a spreadsheet): this is a printable household binder for the whole family.",
+        "money-reset-30-day": "A guided month of daily tasks, unlike the trackers (No-Spend Challenge) and the guide kits; leads into The 20-Minute Budget. Goes in the existing Money Made Simple Etsy shop.",
         "paquete-familia": "Different from El Paquete Dinero Simple ($29, the four guide kits): this bundles the three printables.",
     }
-    for key, mod, plat in (("scam-decoded", SD, "Etsy + Gumroad"), ("1099-money", T, "Etsy + Gumroad"), ("dinero-simple", DS, "Etsy + Gumroad")):
+    for key, mod, plat in (("scam-decoded", SD, "Etsy + Gumroad"), ("1099-money", T, "Etsy + Gumroad"), ("dinero-simple", DS, "Etsy + Gumroad"),
+                           ("money-made-simple", MR, "Etsy + Gumroad")):
         d, src = dates[key]
         for it in mod.LISTINGS:
             if it.get("status", "active") != "active":
@@ -146,7 +154,7 @@ def brandshop_rows() -> list[dict]:
             note = differ.get(it["slug"], "")
             if key == "dinero-simple":
                 note = ("NATIVE REVIEW PENDING: sign brands/dinero-simple/REVIEW_CHECKLIST_ES.md first. " + note).strip()
-            if key != "dinero-simple" and "Etsy" in plat:
+            if key in ("scam-decoded", "1099-money") and "Etsy" in plat:
                 note = (note + " Needs the brand's own Etsy shop (or a section in an existing one).").strip()
             out.append(row(mod.BRAND.name, it["name"], plat, money(it["price"]), f"brands/{key}/{it['slug']}/",
                            f"brands/{key}/{it['slug']}/LISTING.md", d, src, note))

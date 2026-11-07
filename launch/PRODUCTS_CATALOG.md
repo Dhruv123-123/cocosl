@@ -1,6 +1,6 @@
 # Products catalog: every product, every brand
 
-One sheet to list from. **109 listings** (Money Made Simple 82, Scam Decoded 6, 1099 Money 7, Dinero Simple 14). Nothing in this list has been uploaded, listed or
+One sheet to list from. **120 listings** (Money Made Simple 93, Scam Decoded 6, 1099 Money 7, Dinero Simple 14). Nothing in this list has been uploaded, listed or
 submitted anywhere.
 
 - **Files** and **Listing copy** paths are inside the project files folder `content-factory/` (the upload-ready copies).
@@ -13,7 +13,7 @@ submitted anywhere.
 - Regenerate after changing a price or name: `python launch/catalog/build_catalog.py`. Also as `PRODUCTS_CATALOG.csv`.
 
 
-## Money Made Simple (82)
+## Money Made Simple (93)
 
 | Product | Platform | Price | Files | Listing copy | Launch | Date | Notes |
 |---|---|---|---|---|---|---|---|
@@ -84,6 +84,16 @@ submitted anywhere.
 | 2027 Budget Sheet | Gumroad + Etsy | $12 | `templates/budget-sheet-2027/` | `templates/budget-sheet-2027/LISTING.md` | Week of Nov 9 | calendar | Paste the Sheets copy link into links.json and rebuild. |
 | 2027 Money HQ for Notion | Gumroad + Etsy | $24 | `templates/notion-money-hq-2027/` | `templates/notion-money-hq-2027/LISTING.md` | Week of Nov 9 | calendar | Notion: run notion_build.py once and paste the duplicate link into links.json. |
 | Notion Money Starter | Gumroad (free, email capture) | free | `templates/notion-money-starter/` | `templates/notion-money-starter/LISTING.md` | Week of Nov 16 | calendar | Paste the Sheets copy link into links.json and rebuild. |
+| 52-Week Savings Challenge Sheet | Gumroad | $5 | `templates/52-week-savings-sheet/` | `templates/52-week-savings-sheet/LISTING.md` | Week of Dec 14, ahead of the January budgeting and savings-challenge peak | proposed | Paste the Sheets copy link into links.json and rebuild. Digital version of the Etsy printable '52-week-savings-challenge'. |
+| No-Spend Challenge Sheet | Gumroad | $5 | `templates/no-spend-challenge-sheet/` | `templates/no-spend-challenge-sheet/LISTING.md` | Week of Dec 14, ahead of the January budgeting and savings-challenge peak | proposed | Paste the Sheets copy link into links.json and rebuild. Digital version of the Etsy printable 'no-spend-challenge'. |
+| Bill Payment Tracker Sheet | Gumroad | $7 | `templates/bill-tracker-sheet/` | `templates/bill-tracker-sheet/LISTING.md` | Week of Dec 14, ahead of the January budgeting and savings-challenge peak | proposed | Paste the Sheets copy link into links.json and rebuild. Digital version of the Etsy printable 'bill-payment-tracker'. |
+| Paycheck Budget Sheet | Gumroad | $7 | `templates/paycheck-budget-sheet/` | `templates/paycheck-budget-sheet/LISTING.md` | Week of Dec 14, ahead of the January budgeting and savings-challenge peak | proposed | Paste the Sheets copy link into links.json and rebuild. Digital version of the Etsy printable 'paycheck-budget-planner'. |
+| Debt Payoff Coloring Sheet | Gumroad | $7 | `templates/debt-coloring-sheet/` | `templates/debt-coloring-sheet/LISTING.md` | Week of Dec 14, ahead of the January budgeting and savings-challenge peak | proposed | Paste the Sheets copy link into links.json and rebuild. Digital version of the Etsy printable 'debt-payoff-coloring-tracker'. |
+| Notion 52-Week Savings Challenge | Gumroad | $5 | `templates/notion-52-week-savings/` | `templates/notion-52-week-savings/LISTING.md` | Week of Dec 14, ahead of the January budgeting and savings-challenge peak | proposed | Notion: run notion_build.py once and paste the duplicate link into links.json. Digital version of the Etsy printable '52-week-savings-challenge'. |
+| Notion No-Spend Challenge | Gumroad | $5 | `templates/notion-no-spend-challenge/` | `templates/notion-no-spend-challenge/LISTING.md` | Week of Dec 14, ahead of the January budgeting and savings-challenge peak | proposed | Notion: run notion_build.py once and paste the duplicate link into links.json. Digital version of the Etsy printable 'no-spend-challenge'. |
+| Notion Bill Payment Tracker | Gumroad | $7 | `templates/notion-bill-tracker/` | `templates/notion-bill-tracker/LISTING.md` | Week of Dec 14, ahead of the January budgeting and savings-challenge peak | proposed | Notion: run notion_build.py once and paste the duplicate link into links.json. Digital version of the Etsy printable 'bill-payment-tracker'. |
+| Notion Paycheck Budget Planner | Gumroad | $7 | `templates/notion-paycheck-budget/` | `templates/notion-paycheck-budget/LISTING.md` | Week of Dec 14, ahead of the January budgeting and savings-challenge peak | proposed | Notion: run notion_build.py once and paste the duplicate link into links.json. Digital version of the Etsy printable 'paycheck-budget-planner'. |
+| Notion Debt Payoff Coloring Tracker | Gumroad | $7 | `templates/notion-debt-coloring/` | `templates/notion-debt-coloring/LISTING.md` | Week of Dec 14, ahead of the January budgeting and savings-challenge peak | proposed | Notion: run notion_build.py once and paste the duplicate link into links.json. Digital version of the Etsy printable 'debt-payoff-coloring-tracker'. |
 | 100 Envelope Challenge Poster | Etsy (print on demand) | about $22-$32 | `pod/100-envelope-challenge-poster/` | `pod/100-envelope-challenge-poster/LISTING.md` | Week of Nov 16; last orders before the print partner's mid-Dec cutoff | calendar | Connect Printify, check base price and shipping (keep $6+ per size), order one sample. |
 | 52 Week Savings Challenge Poster | Etsy (print on demand) | about $22-$32 | `pod/52-week-savings-poster/` | `pod/52-week-savings-poster/LISTING.md` | Week of Nov 16; last orders before the print partner's mid-Dec cutoff | calendar | Connect Printify, check base price and shipping (keep $6+ per size), order one sample. |
 | $1,000 Savings Bingo Poster | Etsy (print on demand) | about $22-$32 | `pod/savings-bingo-poster/` | `pod/savings-bingo-poster/LISTING.md` | Week of Nov 16; last orders before the print partner's mid-Dec cutoff | calendar | Connect Printify, check base price and shipping (keep $6+ per size), order one sample. |
@@ -99,6 +109,7 @@ submitted anywhere.
 | 52-Week Savings Log (paperback) | Amazon KDP | $8.99-$10.99 | `kdp/52-Week-Savings-Log-KDP-*.pdf` | `kdp/KDP_NOTES.md` | Submit week of Nov 23, publish week of Dec 7 | calendar | Order the proof first. |
 | Money Made Simple (Kindle ebook) | Amazon KDP | $8.99 | `ebook/Money-Made-Simple.epub, ebook/Money-Made-Simple-Kindle-Cover.jpg` | `ebook/KDP_NOTES.md` | Submit week of Nov 30 | calendar | Decide the author name. Off Gumroad while in KDP Select. |
 | Money Made Simple (paperback) | Amazon KDP | $14.99 | `ebook/Money-Made-Simple-Paperback-*.pdf` | `ebook/KDP_NOTES.md` | Submit week of Nov 30, publish week of Dec 14 | calendar | Order the proof first. |
+| The Money Reset: 30-Day Challenge Workbook | Etsy + Gumroad | $9 | `brands/money-made-simple/money-reset-30-day/` | `brands/money-made-simple/money-reset-30-day/LISTING.md` | Week of Dec 14, for New Year resets (budget searches peak in January) | proposed | A guided month of daily tasks, unlike the trackers (No-Spend Challenge) and the guide kits; leads into The 20-Minute Budget. Goes in the existing Money Made Simple Etsy shop. |
 
 ## Scam Decoded (6)
 

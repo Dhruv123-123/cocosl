@@ -1,4 +1,4 @@
-"""Build the Scam Decoded and 1099 Money shop files: PDFs, the workbook, mockups, LISTING.md files and bundle zips.
+"""Build the brand shop files (Scam Decoded, 1099 Money, Dinero Simple, and Money Made Simple's Money Reset): PDFs, the workbook, mockups, LISTING.md files and bundle zips.
 
     python launch/brandshop/build_brandshop.py [--brand scam-decoded 1099-money] [--no-mockups] [--check]
 
@@ -25,6 +25,7 @@ import ten99 as T  # noqa: E402
 import ten99_sheet  # noqa: E402
 import dinero_simple as DS  # noqa: E402
 import remesas_sheet  # noqa: E402
+import money_reset as MR  # noqa: E402
 
 SIZES = shop.SIZES
 
@@ -41,6 +42,7 @@ MOCK = {
     "presupuesto-familiar": ("Presupuesto Familiar", "Lo que entra, lo que sale y un número semanal para toda la casa, en 12 páginas."),
     "registro-de-envios": ("El Registro de Envíos", "Compara antes de enviar y guarda cada envío. Para imprimir y en Google Sheets."),
     "construir-credito": ("Construye tu Crédito", "Tus primeros 12 meses paso a paso, también con ITIN, en 8 páginas."),
+    "money-reset-30-day": ("The Money Reset", "30 days, one 15-minute task a day: see it, cut it, plan it, pay it down."),
     "paquete-familia": ("Paquete de la Familia", "El presupuesto, el registro de envíos y la lista de crédito, en una descarga."),
 }
 CHIPS = {"sheet": ["Instant download", "Google Sheets + Excel"], "bundle": ["Instant download", "Printable + digital"]}
@@ -125,6 +127,19 @@ def dinero_jobs(out: Path, work: Path) -> tuple[list[dict], dict[str, list[Path]
             jobs.append({"src": str(src), "pdf": str(pdf)})
             files.setdefault(slug, []).append(pdf)
     files["registro-de-envios"].append(remesas_sheet.build(out / "registro-de-envios" / "Registro-de-Envios.xlsx"))
+    return jobs, files
+
+
+def mms_jobs(out: Path, work: Path) -> tuple[list[dict], dict[str, list[Path]]]:
+    B, jobs, files = MR.BRAND, [], {}
+    d = out / "money-reset-30-day"
+    d.mkdir(parents=True, exist_ok=True)
+    for size, (w, h, pn) in SIZES.items():
+        src = work / f"money-reset-{size}.html"
+        src.write_text(doc(B, [("page", p) for p in MR.pages()], "The Money Reset", w, h, pn, MR.CSS))
+        pdf = d / f"The-Money-Reset-30-Day-Challenge-{size}.pdf"
+        jobs.append({"src": str(src), "pdf": str(pdf)})
+        files.setdefault("money-reset-30-day", []).append(pdf)
     return jobs, files
 
 
@@ -227,7 +242,7 @@ def zip_bundle(name: Path, paths: list[Path]) -> Path:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--brand", nargs="*", default=["scam-decoded", "1099-money", "dinero-simple"])
+    ap.add_argument("--brand", nargs="*", default=["scam-decoded", "1099-money", "dinero-simple", "money-made-simple"])
     ap.add_argument("--out", default=str(HERE / "dist"))
     ap.add_argument("--no-mockups", action="store_true")
     ap.add_argument("--check", action="store_true", help="recalculate the workbook in LibreOffice")
@@ -235,7 +250,8 @@ def main() -> int:
     root = Path(a.out)
     work = Path(tempfile.mkdtemp(prefix="brandshop-"))
     failures: list[str] = []
-    brands = {"scam-decoded": (SD, scam_jobs), "1099-money": (T, ten99_jobs), "dinero-simple": (DS, dinero_jobs)}
+    brands = {"scam-decoded": (SD, scam_jobs), "1099-money": (T, ten99_jobs), "dinero-simple": (DS, dinero_jobs),
+              "money-made-simple": (MR, mms_jobs)}
     if a.check:
         sys.path.insert(0, str(shop.ROOT / "launch" / "products"))
         from build import recalc_check

@@ -615,3 +615,4 @@ def evaluate(template: dict, today: date) -> dict[str, list[dict]]:
                 for r in rows[k]:
                     r[name] = cfg["py"](r, today)
     return rows
+import twins_notion  # noqa: E402,F401  (registers the five printable twins in TEMPLATES)

@@ -102,6 +102,38 @@ For each folder, follow its `LISTING.md`: name, summary, description, tags, pric
    - Free starter: Free, **Email capture: Require**.
 3. Notion reviews each submission and emails you when it's live.
 
+## Printable twins (10 more templates, Nov 2026)
+
+Google Sheets and Notion versions of the five printables with the most search demand: 52-Week Savings Challenge,
+No-Spend Challenge, Bill Payment Tracker, Paycheck Budget Planner and Debt Payoff Coloring Tracker. (The Monthly Budget
+Planner and Sinking Funds Tracker already have twins: the Monthly Budget Sheet and Savings Goals Sheet.)
+
+| Printable (Etsy) | Google Sheets | Notion | Price each |
+|---|---|---|---|
+| 52-Week Savings Challenge | 52-Week Savings Challenge Sheet | Notion 52-Week Savings Challenge | $5 |
+| No-Spend Challenge | No-Spend Challenge Sheet | Notion No-Spend Challenge | $5 |
+| Bill Payment Tracker | Bill Payment Tracker Sheet | Notion Bill Payment Tracker | $7 |
+| Paycheck Budget Planner | Paycheck Budget Sheet | Notion Paycheck Budget Planner | $7 |
+| Debt Payoff Coloring Tracker | Debt Payoff Coloring Sheet | Notion Debt Payoff Coloring Tracker | $7 |
+
+Same steps as above, per template, about 15 minutes each:
+
+1. **Sheets:** upload `dist/<slug>/<file>.xlsx` to Google Drive, open it, File > Save as Google Sheets, check the Start
+   tab, then Share > anyone with the link can view, and change `/edit...` to `/copy`. Paste it into `links.json`
+   (`sheet_52_week`, `sheet_no_spend`, `sheet_bills`, `sheet_paycheck`, `sheet_debt_coloring`).
+2. **Notion:** `python launch/templates/notion_build.py <slug> --parent "<Templates page link>"` (or follow
+   `dist/<slug>/BUILD.md` by hand), do the finishing touches in BUILD.md, then Share > Publish > *Allow duplicate as
+   template*. Paste the link into `links.json` (`notion_52_week`, `notion_no_spend`, `notion_bills`, `notion_paycheck`,
+   `notion_debt_coloring`).
+3. **Rebuild** (`python launch/templates/build_templates.py`) so each Start Here PDF carries its real link, then list
+   each one on Gumroad from `dist/<slug>/LISTING.md`.
+4. **Check the formulas once in the real app.** The sheets are recalculated in LibreOffice on every build; open each
+   in Google Sheets and confirm the Paycheck sheet finds the right bills for your next payday and the Bill tracker's
+   red rule shows on an unpaid bill.
+
+Each listing says "Prefer paper? The printable version is in the Etsy shop." Etsy listings never link to Gumroad,
+so the cross-mention stays in words only.
+
 ## Email list rules (free starter)
 
 - People sign up for the template **and** the free weekly Money Made Simple email. The listing says so. Send them only that.
