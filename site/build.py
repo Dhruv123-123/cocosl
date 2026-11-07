@@ -1583,7 +1583,8 @@ def build() -> list[str]:
     biz = STATIC / "business" / "manifest.json"
     if biz.exists():
         for b in json.loads(biz.read_text()):
-            if (OUT / "business" / b["slug"] / "index.html").exists():
+            page = OUT / "business" / b["slug"] / "index.html"
+            if page.exists() and "noindex" not in page.read_text():
                 urls.append((f"/business/{b['slug']}/", str(b.get("updated", date.today().isoformat()))))
 
     # ---- sitemap, robots, feed
