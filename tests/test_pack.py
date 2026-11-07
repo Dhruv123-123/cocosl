@@ -333,3 +333,16 @@ def test_chart_element_videos_carry_a_real_chart():
         seg = next(s for s in it["script"]["segments"] if s["heading"] == it["original_element"]["chapter"])
         ChartSpec(**seg["chart"])
     assert all(i["script"].get("original_element") for i in longs)
+
+
+def test_no_spend_january_challenge_runs_on_january_sundays(factory):
+    brand = factory.brand("money-made-simple")
+    items = _items(ROOT / "launch" / "money-made-simple" / "no-spend-january" / "content.json")
+    assert [i["series_part"] for i in items] == list(range(1, 6))
+    for it in items:
+        sc = it["script"]
+        assert it["format"] == "mid" and 65 <= est_seconds([s["narration"] for s in sc["segments"]]) <= 90
+        assert "not a promise" in sc["caption"] and any(ch.isdigit() for ch in sc["hook"])
+    slots, leftover = plan(brand, items, date(2027, 1, 3), 29, {"mid": "sun"})
+    assert not leftover and [s.when.day for s in slots] == [3, 10, 17, 24, 31]
+    assert all(s.platforms == ["tiktok"] for s in slots)
