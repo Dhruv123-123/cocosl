@@ -72,6 +72,12 @@ factory batch-record [--days 21] [--minutes 45]  # group all recordings into ses
 factory batch-record attach <session folder>    # link recorded screen files into their posts' beats
 factory today --15min [--save]               # your daily routine (GO_LIVE R6) with today's real items
 factory export-week <brand> [--weeks 4] [--manual-only]  # one zip per week, posting order, captions ready to paste
+factory scorecard [--save] [--manual-template]  # GO_LIVE R8 weekly scorecard from your imports, stop/change/watch flags
+factory backup --archive [--with-media]       # one dated zip: database, brands, packs, recordings, notes
+factory restore <archive.zip> [--yes]        # lists first; --yes restores and keeps what it replaced
+factory sequence-export <brand> --for sender  # welcome emails as a Sender automation: one folder per step + CHECKLIST
+factory subscribers-export <brand> --for sender  # two CSVs (already welcomed / not) in Sender's date format
+scripts/smoke_fresh_clone.sh                 # fresh clone → install → init → doctor → render one post per brand → launch-check
 factory ui                                   # one local page (127.0.0.1 only): calendar, review queue, recordings, launch check
 factory manual [build|copy <pub>|done <pub> --url]  # TikTok + Pinterest post-by-hand packages
 factory numbers <post id>  (or --text "...")  # recompute loan, payoff, growth and federal tax figures (numpy-financial, Tax-Calculator)
