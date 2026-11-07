@@ -79,7 +79,8 @@
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small gift box with a bow. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
  },
  {
   "format": "short",
@@ -154,7 +155,8 @@
     "on_screen_text": "Auto-save the difference",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow from a paycheck into a jar. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -235,7 +237,8 @@
     "on_screen_text": "IRS2Go · bookmark IRS.gov",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a bookmark ribbon. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -316,7 +319,8 @@
     "on_screen_text": "Look for 'transfer' or 'processing' fees",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over small print. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -396,7 +400,8 @@
     "on_screen_text": "$2,000 → $800 · $900 · $300",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three jars filling with coins. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -477,7 +482,8 @@
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small party hat on the piggy bank. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
  },
  {
   "format": "short",
@@ -558,7 +564,8 @@
     "on_screen_text": "Emergency · goal · checking",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three labelled jars. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -638,7 +645,8 @@
     "on_screen_text": "Keep it or adjust it, on purpose",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fork in a path. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "list"
  },
  {
   "format": "short",
@@ -720,7 +728,8 @@
     "on_screen_text": "Job + side gig? Withhold extra",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two briefcases linked together. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -803,7 +812,8 @@
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four calendar pages. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
  },
  {
   "format": "short",
@@ -877,7 +887,8 @@
     "on_screen_text": "Don't run it back up",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card being put away in a drawer. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -952,7 +963,8 @@
     "on_screen_text": "Simple: 1 target-date fund",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. one balanced basket. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1031,7 +1043,8 @@
     "on_screen_text": "Pay off the trip the same week",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a suitcase with a check mark. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "list"
  },
  {
   "format": "short",
@@ -1113,7 +1126,8 @@
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two figures at a table with a note. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
  },
  {
   "format": "short",
@@ -1199,7 +1213,8 @@
     "on_screen_text": "Tonight: search 'monthly'",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a search bar. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "list"
  },
  {
   "format": "short",
@@ -1278,7 +1293,8 @@
     "on_screen_text": "$4,000 → $400 fun, $3,600 working",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big jar and a small gift. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1359,7 +1375,8 @@
     "on_screen_text": "Real site: irs.gov",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a shield. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1439,7 +1456,8 @@
     "on_screen_text": "No state texts with links",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a stop sign. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "list"
  },
  {
   "format": "short",
@@ -1521,7 +1539,8 @@
     "on_screen_text": "Offsets: you'll get a notice",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. coins diverted to another jar. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "list"
  },
  {
   "format": "short",
@@ -1608,7 +1627,8 @@
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four steps going up. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
  },
  {
   "format": "carousel",
@@ -3150,6 +3170,12 @@
     "$2,200 × 24% ÷ 12 ≈ $44; $1,500 off → ~$30/month less",
     "$2,800 ÷ 12 ≈ $233"
    ]
+  },
+  "format_style": "real-numbers",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Waterfall chart of the $2,800 refund flowing into buffer, debt, sinking funds and a treat",
+   "chapter": "The split"
   }
  },
  {
@@ -3158,67 +3184,55 @@
   "idea_angle": "How withholding works, what each W-4 step does, and how to aim for a small refund or small balance due, with a worked example.",
   "script": {
    "title": "Your W-4, explained: stop overpaying (or owing) every April",
-   "hook": "$3,000 refund every year? That's $250 a month. Here's how the W-4 controls it.",
+   "hook": "4 W-4 myths that cost you money, from a $3,000 refund to a surprise bill.",
    "segments": [
     {
      "heading": "Intro",
-     "narration": "Three thousand dollar refund every year? That's two hundred and fifty dollars a month that left your paychecks and came back a year later, with no interest. Or maybe you're the opposite and owe every April. Both come down to one form: the W-4. Let's go through it properly.",
-     "on_screen_text": "The W-4 controls your refund",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes standing next to a large form. No text, no logos, no real people."
+     "narration": "Four W-4 myths, and every one of them costs real money. Maybe you get a three thousand dollar refund every year, which is two hundred and fifty dollars a month that left your paychecks and came back late, with no interest. Or maybe you owe every April. Both come down to one form. Let's check the myths against the facts.",
+     "on_screen_text": "4 W-4 myths, checked",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a form with a magnifying glass. No text, no logos, no real people."
     },
     {
-     "heading": "Withholding",
-     "narration": "First, withholding. Your employer takes an estimate of your tax out of each paycheck and sends it to the IRS. At tax time you work out what you actually owed. Withheld too much, you get a refund. Too little, you owe.",
-     "on_screen_text": "Refund = withheld − owed",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale with coins on both sides. No text, no logos, no real people."
+     "heading": "Myth 1",
+     "narration": "Myth one: a big refund means you did taxes well. Fact: a refund means too much was withheld. Your employer takes an estimate of your tax out of each paycheck. Withheld too much, you get it back. Too little, you owe. The W-4 is the dial.",
+     "on_screen_text": "Myth: big refund = good taxes",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a dial with a coin. No text, no logos, no real people."
     },
     {
-     "heading": "Step 1",
-     "narration": "Step one of the W-4 is your details and filing status. Single, married filing jointly, or head of household. Picking the right one matters, because it sets the starting point for withholding.",
-     "on_screen_text": "Step 1: filing status",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a name card with three boxes. No text, no logos, no real people."
+     "heading": "Myth 2",
+     "narration": "Myth two: you claim allowances, zero or one. Fact: the current W-4 doesn't use allowances. It has steps instead. Step one is your filing status, which sets the starting point. Step three is credits for children and other dependents, which make paychecks bigger.",
+     "on_screen_text": "Myth: 'claim 0 or 1'",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a crossed-out old form next to a new one. No text, no logos, no real people."
     },
     {
-     "heading": "Step 2",
-     "narration": "Step two is for two jobs, or a married couple where both work. Skip it when it applies and you'll usually owe, because each employer withholds as if it's your only job.",
-     "on_screen_text": "Step 2: two jobs = owe if skipped",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two briefcases. No text, no logos, no real people."
+     "heading": "Myth 3",
+     "narration": "Myth three: two jobs sort themselves out. Fact: each employer withholds as if it's your only job, so two jobs, or two working spouses, usually means owing. That's what step two is for. Skip it when it applies and April gets expensive.",
+     "on_screen_text": "Myth: two jobs work themselves out",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two briefcases with a warning sign. No text, no logos, no real people."
     },
     {
-     "heading": "Step 3",
-     "narration": "Step three is for credits for children and other dependents. It reduces withholding, so your paychecks get bigger.",
-     "on_screen_text": "Step 3: dependents",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small family outline. No text, no logos, no real people."
+     "heading": "Myth 4",
+     "narration": "Myth four: you only touch the W-4 when you start a job. Fact: you can change it any time. Check it after a new job, a second job, marriage, a baby, a big raise, and once in spring when last year's numbers are fresh.",
+     "on_screen_text": "Myth: set it once, forever",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with several circled dates. No text, no logos, no real people."
     },
     {
-     "heading": "Step 4",
-     "narration": "Step four is the fine-tuning: other income like interest or a side gig, deductions beyond the standard one, and extra withholding per paycheck. Step four c, extra withholding, is the simplest dial there is.",
-     "on_screen_text": "Step 4: the dial",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a dial on a paycheck. No text, no logos, no real people."
-    },
-    {
-     "heading": "Example",
-     "narration": "Example. You got a three thousand dollar refund and want it closer to zero. Run the IRS Tax Withholding Estimator. If it says you're over-withholding by about that much, it will suggest W-4 entries that shrink it, roughly a hundred and fifteen dollars more per biweekly paycheck.",
+     "heading": "Real numbers: refund",
+     "narration": "Now the real numbers. You got a three thousand dollar refund and want it closer to zero. Run the free IRS Tax Withholding Estimator. If it says you're over-withholding by about that much, it will suggest entries that shrink it, roughly a hundred and fifteen dollars more per biweekly paycheck.",
      "on_screen_text": "$3,000 ÷ 26 ≈ $115/paycheck",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with 26 small coins. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calculator next to a paycheck. No text, no logos, no real people."
     },
     {
-     "heading": "Owing",
-     "narration": "If you owe every year, do the opposite. Owed nine hundred? Add about thirty-five dollars of extra withholding per biweekly paycheck in step four c.",
-     "on_screen_text": "Owed $900 → +$35/paycheck",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small slice added to a paycheck. No text, no logos, no real people."
-    },
-    {
-     "heading": "When",
-     "narration": "Check your W-4 after any big change: a new job, a second job, marriage, a baby, or a big raise. And once in spring, when last year's numbers are fresh.",
-     "on_screen_text": "Recheck after big changes",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a checklist with life icons. No text, no logos, no real people."
+     "heading": "Real numbers: owing",
+     "narration": "Owe instead? Do the opposite. Owed nine hundred? Step four c, extra withholding per paycheck, is the simplest dial: about thirty-five dollars per biweekly paycheck covers it.",
+     "on_screen_text": "$900 ÷ 26 ≈ $35/paycheck",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a slider moving up. No text, no logos, no real people."
     },
     {
      "heading": "Recap",
-     "narration": "Recap: refund means you overpaid, owing means you underpaid, and the W-4 sets the dial. Use the IRS estimator, change only what it suggests, and check again next spring. Educational, not tax advice.",
-     "on_screen_text": "Estimator → W-4 → recheck",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a loop of three arrows. No text, no logos, no real people."
+     "narration": "Recap: a refund means you overpaid, owing means you underpaid, there are no allowances any more, two jobs need step two, and you can change it any time. Use the IRS estimator, change only what it suggests, and check again next spring. Educational, not tax advice.",
+     "on_screen_text": "Refund = overpaid · owe = underpaid",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the mascot holding a balanced dial. No text, no logos, no real people."
     }
    ],
    "cta": "If this helped, follow for one money move a week, and grab the free checklist in the description.",
@@ -3231,7 +3245,7 @@
     "firstjob",
     "moneymadesimple"
    ],
-   "description": "How the W-4 controls your refund or tax bill, step by step, with worked examples.\n\nChapters\n0:00 Intro\n0:20 How withholding works\n0:40 Step 1\n0:55 Step 2\n1:15 Step 3\n1:25 Step 4\n1:45 Example: big refund\n2:10 Example: owing\n2:25 When to check\n2:40 Recap\n\nEducational, not tax advice.",
+   "description": "Four common W-4 myths checked against the facts, then the real numbers for shrinking a big refund or fixing a balance due.\n\nChapters\n0:00 Intro\n0:25 Myth 1\n0:45 Myth 2\n1:04 Myth 3\n1:22 Myth 4\n1:41 Real numbers: refund\n2:03 Real numbers: owing\n2:15 Recap\n\nEducational, not tax advice.",
    "thumbnail_text": "Your W-4, explained",
    "sources": [
     "https://www.irs.gov/forms-pubs/about-form-w-4",
@@ -3242,6 +3256,12 @@
     "$900 ÷ 26 ≈ $35",
     "Step 2 guidance per IRS W-4 instructions"
    ]
+  },
+  "format_style": "myth-vs-fact",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Screen recording of the IRS Tax Withholding Estimator with made-up inputs, ending on the suggested W-4 entries",
+   "chapter": "Real numbers: refund"
   }
  },
  {
@@ -3250,67 +3270,49 @@
   "idea_angle": "A long-form episode of Rate My Budget walking through the four fictional refund budgets from this month and the pattern behind each fix.",
   "script": {
    "title": "Rate My Budget: four refunds, four plans",
-   "hook": "4 refunds, from $1,900 to $6,200. Here's how we'd plan each one.",
+   "hook": "4 refund plans, ranked from least risky to most expensive. Number 1 wasn't even a refund.",
    "segments": [
     {
      "heading": "Intro",
-     "narration": "Four refunds, from nineteen hundred to sixty-two hundred dollars. This month we rated four refund plans, all fictional examples, and every one of them had the same weak spot. Let's go through them properly, with the numbers.",
-     "on_screen_text": "4 refunds, 4 plans",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to four envelopes of different sizes. No text, no logos, no real people."
+     "narration": "Four refund plans, ranked from least risky to most expensive. These are the fictional budgets we rated this month, from a nineteen hundred dollar refund to a sixty-two hundred dollar one. We'll count down from number four to number one, and number one wasn't even a refund. For each, the plan, what it would have cost, and the fix with the numbers.",
+     "on_screen_text": "Countdown: 4 refund plans",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small podium with four steps. No text, no logos, no real people."
     },
     {
-     "heading": "Budget 1",
-     "narration": "First: a forty-four thousand dollar salary, thirty-one hundred refund, forty-eight hundred on a card at twenty-four percent, and nothing saved. The plan was a weekend away for all of it.",
-     "on_screen_text": "#13: $3,100 · card $4,800",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a suitcase and a card. No text, no logos, no real people."
+     "heading": "Number 4: the phone",
+     "narration": "Number four, the least risky: forty-eight thousand salary, a nineteen hundred refund, three hundred saved, no debt, and a plan to replace a phone that works fine. Not a disaster, just a missed chance. The fix: fifteen hundred to savings, four hundred kept, and a forty dollar a month phone fund. In two years that's nine hundred and sixty dollars, so the next phone is paid in cash.",
+     "on_screen_text": "#4: a phone that works fine",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone on the fourth podium step. No text, no logos, no real people."
     },
     {
-     "heading": "Fix 1",
-     "narration": "Our split: a thousand to a starter emergency fund, two thousand to the card, a hundred for one planned treat. The card payment alone saves about forty dollars a month in interest.",
-     "on_screen_text": "$1,000 · $2,000 · $100",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three jars. No text, no logos, no real people."
+     "heading": "Number 3: the couch",
+     "narration": "Number three: a couple with six thousand a month take-home, two thousand on a card, no savings, and a sixty-two hundred refund. The plan: half on a couch, half we'll see. We'll see usually means it's gone by May. The fix: thirty-five hundred to a joint emergency fund, two thousand to clear the card, and three hundred and fifty each to spend, no questions asked.",
+     "on_screen_text": "#3: half a couch, half 'we'll see'",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a couch on the third podium step. No text, no logos, no real people."
     },
     {
-     "heading": "Budget 2",
-     "narration": "Second: forty-eight thousand salary, nineteen hundred refund, three hundred saved, no debt, and a plan to replace a phone that works fine.",
-     "on_screen_text": "#14: $1,900 · new phone",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone in a shop window. No text, no logos, no real people."
+     "heading": "Number 2: the trip",
+     "narration": "Number two: a forty-four thousand dollar salary, thirty-one hundred refund, forty-eight hundred on a card at twenty-four percent, nothing saved, and a plan to spend it all on a weekend away. The card keeps costing about ninety-six dollars a month. The fix: a thousand to a starter emergency fund, two thousand to the card, a hundred for one planned treat. That saves about forty dollars a month in interest.",
+     "on_screen_text": "#2: the whole refund on a trip",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a suitcase on the second podium step. No text, no logos, no real people."
     },
     {
-     "heading": "Fix 2",
-     "narration": "Fifteen hundred to savings, four hundred kept, and a forty dollar a month phone fund so the next phone is paid in cash. In two years that's nine hundred and sixty dollars.",
-     "on_screen_text": "$1,500 · phone fund $40/mo",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar shaped like a phone. No text, no logos, no real people."
-    },
-    {
-     "heading": "Budget 3",
-     "narration": "Third: a freelancer earning fifty-two thousand, no tax set aside, and a fifty-two hundred dollar bill instead of a refund.",
-     "on_screen_text": "#15: freelancer owes $5,200",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big bill and a laptop. No text, no logos, no real people."
-    },
-    {
-     "heading": "Fix 3",
-     "narration": "This year: file on time and set up an IRS payment plan. From now on: twenty-five percent of every payment into a separate tax account, and quarterly payments in April, June, September and January.",
-     "on_screen_text": "25% to tax · pay quarterly",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar catching a slice of every coin. No text, no logos, no real people."
-    },
-    {
-     "heading": "Budget 4",
-     "narration": "Fourth: a couple with six thousand a month take-home, two thousand on a card, no savings, and a sixty-two hundred refund. The plan: half on a couch, half 'we'll see'.",
-     "on_screen_text": "#16: couple, $6,200",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a couch and a question mark. No text, no logos, no real people."
-    },
-    {
-     "heading": "Fix 4",
-     "narration": "Thirty-five hundred to a joint emergency fund, two thousand to clear the card, and three hundred and fifty each, no questions asked.",
-     "on_screen_text": "$3,500 · $2,000 · $350 each",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three jars and two pouches. No text, no logos, no real people."
+     "heading": "Number 1: the tax bill",
+     "narration": "Number one, the most expensive: a freelancer earning fifty-two thousand with no tax set aside, facing a fifty-two hundred dollar bill instead of a refund. The risky move is waiting to file until the money's there, because late filing penalties are much bigger than late payment ones. The fix: file on time, set up an IRS payment plan, then put twenty-five percent of every payment into a separate tax account and pay quarterly.",
+     "on_screen_text": "#1: a $5,200 tax bill",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tax form on the top podium step. No text, no logos, no real people."
     },
     {
      "heading": "The pattern",
-     "narration": "The pattern in all four: no plan until the money arrived. The fix is the same order every time. Buffer first, then high-rate debt, then the costs you can see coming, then one planned treat. Decided before it lands. All four budgets were fictional examples, for education only.",
+     "narration": "Look at the ranking and the pattern is the same at every step: no plan until the money arrived. The order that fixes it doesn't change. Buffer first, then high-rate debt, then the costs you can see coming, then one planned treat, decided before the money lands.",
      "on_screen_text": "Buffer · debt · known costs · treat",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sticky note with four ticks. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four steps going up. No text, no logos, no real people."
+    },
+    {
+     "heading": "Your turn",
+     "narration": "Rank your own plan. Which step is it closest to? If you'd like yours rated, send the numbers by DM with no names; we anonymise everything. All four budgets here were fictional examples, for education only.",
+     "on_screen_text": "Where would yours rank?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the mascot holding up a question mark. No text, no logos, no real people."
     }
    ],
    "cta": "If this helped, follow for one money move a week, and grab the free checklist in the description.",
@@ -3323,7 +3325,7 @@
     "debtpayoff",
     "moneymadesimple"
    ],
-   "description": "Four fictional Rate My Budget refund episodes, walked through with the numbers and the pattern behind every fix.\n\nChapters\n0:00 Intro\n0:15 Budget 1\n0:35 Budget 2\n1:00 Budget 3\n1:25 Budget 4\n1:50 The pattern\n\nAll budgets are fictional examples.",
+   "description": "Four fictional refund plans from this month's Rate My Budget, counted down from least risky to most expensive, with the fix and the numbers for each.\n\nChapters\n0:00 Intro\n0:26 Number 4: the phone\n0:55 Number 3: the couch\n1:22 Number 2: the trip\n1:51 Number 1: the tax bill\n2:22 The pattern\n2:42 Your turn\n\nAll budgets are fictional examples.",
    "thumbnail_text": "4 refunds, 4 plans",
    "sources": [
     "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
@@ -3334,6 +3336,12 @@
     "Fictional examples (label on screen)",
     "Same figures as shorts #13–#16"
    ]
+  },
+  "format_style": "countdown",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Podium graphic ranking the four fictional refund plans with each one's cost of doing nothing",
+   "chapter": "Number 1: the tax bill"
   }
  },
  {
@@ -3429,6 +3437,12 @@
     "PATH Act hold for EITC/ACTC",
     "Treasury Offset Program"
    ]
+  },
+  "format_style": "explainer",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Screen recording of Where's My Refund on IRS.gov (logged-out, entry screen only) and the IRS2Go app's status screen",
+   "chapter": "How it works"
   }
  }
 ]

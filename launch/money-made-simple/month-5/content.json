@@ -81,7 +81,8 @@
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow from an invoice into a labelled jar. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
  },
  {
   "format": "short",
@@ -164,7 +165,8 @@
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow from a cancelled card into a jar. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
  },
  {
   "format": "short",
@@ -245,7 +247,8 @@
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two mugs and a small calendar. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
  },
  {
   "format": "short",
@@ -327,7 +330,8 @@
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a basket. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
  },
  {
   "format": "short",
@@ -335,35 +339,35 @@
   "idea_angle": "Fictional $61K earner spends $1,000 a month on a car (payment, insurance, gas), 26% of take-home; the fix is insurance shopping, refinancing and a plan for the next car.",
   "script": {
    "title": "Rate My Budget #21: $1,000 a month on one car",
-   "hook": "$1,000 a month on one car, on a $61K salary. Let's rate it.",
+   "hook": "Rate My Budget #21: a $1,000-a-month car. Let's add up the real cost on screen.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "A thousand dollars a month on one car, on a sixty-one thousand dollar salary. Let's rate it.",
-     "on_screen_text": "$1,000/month on a car",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a tiny car on a big price tag. No text, no logos, no real people."
+     "narration": "Rate My Budget number twenty-one: a thousand-dollar-a-month car. Let's add up the real cost on screen.",
+     "on_screen_text": "$1,000/month car: add it up",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a car next to a calculator. No text, no logos, no real people."
     },
     {
-     "heading": "Numbers",
-     "narration": "Fictional example. Take-home about thirty-nine hundred. Car payment six forty, insurance two ten, gas one fifty.",
-     "on_screen_text": "Fictional · $640 + $210 + $150",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a car with three coin stacks. No text, no logos, no real people."
+     "heading": "Add",
+     "narration": "Fictional example. Payment six forty, plus insurance two ten, plus gas one fifty. That's a thousand dollars a month.",
+     "on_screen_text": "Fictional · $640 + $210 + $150 = $1,000",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three coin stacks being added. No text, no logos, no real people."
     },
     {
-     "heading": "Problem",
-     "narration": "That's about twenty-six percent of take-home on transportation. It squeezes savings to almost zero.",
-     "on_screen_text": "26% of take-home",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pie chart with a big car slice. No text, no logos, no real people."
+     "heading": "Divide",
+     "narration": "Take-home is about thirty-nine hundred. A thousand divided by thirty-nine hundred is about twenty-six percent.",
+     "on_screen_text": "$1,000 ÷ $3,900 ≈ 26%",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big division sign. No text, no logos, no real people."
     },
     {
-     "heading": "Fix",
-     "narration": "Shop the insurance this month. Check if refinancing lowers the rate. And when it's paid off, keep paying yourself six forty toward the next car.",
-     "on_screen_text": "Shop insurance · refinance · save for the next one",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone call bubble and a jar labelled with a car. No text, no logos, no real people."
+     "heading": "Per year",
+     "narration": "Times twelve, that's twelve thousand dollars a year on one car, which is why savings is near zero.",
+     "on_screen_text": "× 12 = $12,000/yr",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar full of coins. No text, no logos, no real people."
     },
     {
      "heading": "Score",
-     "narration": "Score: four out of ten now. Seven out of ten after the fixes, and much better on the next car.",
+     "narration": "Score: four out of ten now. Seven after shopping the insurance and checking a refinance.",
      "on_screen_text": "4/10 → 7/10",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a score card flipping from 4 to 7. No text, no logos, no real people."
     }
@@ -391,24 +395,25 @@
   "tiktok_extra": [
    {
     "heading": "Don't panic-sell",
-    "narration": "Selling the car right away isn't always the answer. If you owe more than it's worth, selling can leave you with a loan and no car.",
-    "on_screen_text": "Check what you owe vs value first",
+    "narration": "Selling right away isn't always the answer. If you owe more than it's worth, selling can leave you with a loan and no car.",
+    "on_screen_text": "Owe more than it's worth? Careful",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale with a car and a loan paper. No text, no logos, no real people."
    },
    {
     "heading": "Refinancing",
-    "narration": "Refinancing can help if your credit improved since you bought it. Compare the new rate, the term and any fees, so you don't just stretch the loan longer.",
-    "on_screen_text": "Lower rate, not just longer term",
+    "narration": "Refinancing can help if your credit improved. Compare the rate, the term and any fees, so you don't just stretch the loan.",
+    "on_screen_text": "Lower rate, not longer term",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two arrows, one shorter. No text, no logos, no real people."
    },
    {
     "heading": "Next car",
-    "narration": "Six forty a month into savings for three years is over twenty-three thousand dollars, before any interest. That's most of the next car in cash.",
-    "on_screen_text": "$640 × 36 ≈ $23,000",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar slowly filling with a car on top. No text, no logos, no real people."
+    "narration": "And once it's paid off: six forty a month for thirty-six months is twenty-three thousand forty dollars, before any interest.",
+    "on_screen_text": "$640 × 36 = $23,040",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar filling with a car on top. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "on-screen-calculation"
  },
  {
   "format": "short",
@@ -416,31 +421,37 @@
   "idea_angle": "A tax extension (Form 4868) gives six more months to file, not to pay; estimate and pay by the April deadline.",
   "script": {
    "title": "A tax extension gives you 6 more months to file, not to pay",
-   "hook": "A tax extension gives you 6 more months to file. Not 6 more months to pay.",
+   "hook": "Myth: a tax extension gives you 6 more months to pay. 3 extension myths, checked.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "A tax extension gives you six more months to file. Not six more months to pay.",
-     "on_screen_text": "6 months to FILE, not pay",
+     "narration": "Myth: a tax extension gives you six more months to pay. Here are three extension myths, checked.",
+     "on_screen_text": "MYTH vs FACT: tax extensions",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a calendar and a small coin. No text, no logos, no real people."
     },
     {
-     "heading": "How",
-     "narration": "You request it with Form 4868, or by making a payment and marking it as an extension. It's generally automatic, and it moves the filing deadline to mid-October.",
-     "on_screen_text": "Form 4868 → October",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with an arrow to a later calendar page. No text, no logos, no real people."
+     "heading": "Myth 1",
+     "narration": "Myth: it's more time to pay. Fact: it's more time to file, generally to mid-October. Tax you owe is still due in April.",
+     "on_screen_text": "FACT: file later, pay now",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a clock pointing at April. No text, no logos, no real people."
     },
     {
-     "heading": "The catch",
-     "narration": "Any tax you owe is still due by the April deadline. If you don't pay by then, interest and late payment penalties can start.",
-     "on_screen_text": "Tax owed is still due in April",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a clock pointing at a date. No text, no logos, no real people."
+     "heading": "Myth 2",
+     "narration": "Myth: it's complicated. Fact: it's generally automatic with Form 4868, or by paying and marking it as an extension.",
+     "on_screen_text": "FACT: Form 4868, automatic",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a check mark. No text, no logos, no real people."
     },
     {
-     "heading": "What to do",
-     "narration": "Estimate what you owe, pay that amount by the deadline, and file the full return before October.",
-     "on_screen_text": "Estimate · pay · file by October",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small boxes being ticked. No text, no logos, no real people."
+     "heading": "Myth 3",
+     "narration": "Myth: extensions trigger audits. Fact: they're routine. Millions of people file them.",
+     "on_screen_text": "FACT: routine, not a red flag",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calm folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Do",
+     "narration": "So estimate what you owe, pay it by the deadline, and file the full return before October.",
+     "on_screen_text": "Estimate · pay · file by Oct",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small boxes ticked. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -483,7 +494,8 @@
     "on_screen_text": "Refund due? No late penalty, just later money",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an envelope arriving late. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "myth-vs-fact"
  },
  {
   "format": "short",
@@ -491,30 +503,36 @@
   "idea_angle": "Filing late is usually penalized ten times more per month than paying late (5% vs 0.5% of unpaid tax), so file on time even when you can't pay.",
   "script": {
    "title": "Can't pay your taxes? File anyway: 5% vs 0.5%",
-   "hook": "Can't pay your taxes? File anyway. The penalty is 5% a month vs 0.5%.",
+   "hook": "Owe $1,000 and file 3 months late? Let's work out both penalties on screen: $150 vs $15.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Can't pay your taxes? File anyway. The penalty for not filing is about ten times bigger.",
-     "on_screen_text": "File anyway",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a tax form with a check mark. No text, no logos, no real people."
+     "narration": "Owe a thousand dollars and you're three months late. Let's work out both penalties on screen.",
+     "on_screen_text": "$1,000 owed · 3 months late",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a calculator next to a tax form. No text, no logos, no real people."
     },
     {
-     "heading": "Filing late",
-     "narration": "The failure-to-file penalty is generally five percent of the unpaid tax for each month or part of a month the return is late, up to twenty-five percent.",
-     "on_screen_text": "Late filing: 5%/month",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tall stack of coins. No text, no logos, no real people."
+     "heading": "Didn't file",
+     "narration": "Didn't file: the failure-to-file penalty is generally five percent a month. Five percent times three months is fifteen percent: about a hundred fifty dollars.",
+     "on_screen_text": "5% × 3 × $1,000 ≈ $150",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tall coin stack. No text, no logos, no real people."
     },
     {
-     "heading": "Paying late",
-     "narration": "The failure-to-pay penalty is generally half a percent a month, also up to twenty-five percent. Interest applies too.",
-     "on_screen_text": "Late paying: 0.5%/month",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short stack of coins. No text, no logos, no real people."
+     "heading": "Filed, paid late",
+     "narration": "Filed on time but paid late: generally half a percent a month. Half a percent times three is one and a half percent: about fifteen dollars.",
+     "on_screen_text": "0.5% × 3 × $1,000 ≈ $15",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Difference",
+     "narration": "That's about ten times more for not filing. Interest applies either way.",
+     "on_screen_text": "~10× more for not filing",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two bars, one ten times taller. No text, no logos, no real people."
     },
     {
      "heading": "So",
-     "narration": "So file on time, pay what you can, and set up a payment plan for the rest.",
-     "on_screen_text": "File · pay what you can · plan",
+     "narration": "File on time, pay what you can, and set up a payment plan for the rest.",
+     "on_screen_text": "File · pay · plan",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three steps going up. No text, no logos, no real people."
     }
    ],
@@ -559,7 +577,8 @@
     "on_screen_text": "Open the letters",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an opened envelope. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "on-screen-calculation"
  },
  {
   "format": "short",
@@ -645,7 +664,8 @@
     "on_screen_text": "File anyway · payment plan",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a long arrow. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -653,31 +673,37 @@
   "idea_angle": "Paying the IRS from a bank account through Direct Pay is free; card payments go through processors that charge a fee.",
   "script": {
    "title": "Paying the IRS? The free way vs the 2% way",
-   "hook": "Paying the IRS by credit card can cost about 2% extra. Here's the free way.",
+   "hook": "A $3,000 tax bill by credit card vs bank: let's do the fee math on screen.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Paying the IRS by credit card can cost you around two percent extra. Here's the free way.",
-     "on_screen_text": "Card ≈ 2% fee · bank = free",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a credit card and a bank icon. No text, no logos, no real people."
+     "narration": "A three thousand dollar tax bill, paid by credit card or from your bank. Let's do the fee math on screen.",
+     "on_screen_text": "$3,000 tax bill: card vs bank",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a calculator between a card and a bank. No text, no logos, no real people."
     },
     {
-     "heading": "Free",
-     "narration": "IRS Direct Pay takes money straight from your checking or savings account. No fee, no account needed.",
-     "on_screen_text": "Direct Pay: free",
+     "heading": "Card",
+     "narration": "Card payments go through approved processors. At a fee around two percent: three thousand times point oh two is sixty dollars.",
+     "on_screen_text": "$3,000 × 2% = $60",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card with coins falling. No text, no logos, no real people."
+    },
+    {
+     "heading": "Bank",
+     "narration": "IRS Direct Pay from your checking or savings account: zero dollars. Same payment.",
+     "on_screen_text": "Direct Pay: $0",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bank with a check mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Carry it?",
+     "narration": "And if you carry that sixty-dollar-fee payment on a card at twenty-four percent for a year, that's roughly seven hundred more in interest. A payment plan is cheaper.",
+     "on_screen_text": "Carried at 24%: ~$720/yr",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a dripping tap over coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule",
+     "narration": "Card only if you'll pay it off right away. Otherwise Direct Pay, or an IRS payment plan.",
+     "on_screen_text": "Direct Pay or a payment plan",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a bank icon. No text, no logos, no real people."
-    },
-    {
-     "heading": "Fee",
-     "narration": "Card payments go through approved payment processors, and they charge a fee. Debit cards are usually a small flat fee; credit cards usually a percentage.",
-     "on_screen_text": "Cards: processor fees",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card with a small coin falling off. No text, no logos, no real people."
-    },
-    {
-     "heading": "Only if",
-     "narration": "A credit card only makes sense if you'll pay it off right away. Carrying it at twenty-plus percent APR is far worse than an IRS payment plan.",
-     "on_screen_text": "Never carry tax on a card",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a warning sign next to a card. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -726,7 +752,8 @@
     "on_screen_text": "$3,000 × 2% = $60",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small pile of coins being kept. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "on-screen-calculation"
  },
  {
   "format": "short",
@@ -734,31 +761,37 @@
   "idea_angle": "Most tax records can be discarded after about 3 years, with longer periods for specific situations; keep property and investment basis records longer.",
   "script": {
    "title": "How long to keep tax papers: 3 years for most",
-   "hook": "Keep most tax papers 3 years. Here's what to keep longer.",
+   "hook": "Common question: \"How long do I keep tax papers?\" Short answer: 3 years for most.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "You can shred most old tax papers after about three years. Here's what to keep longer.",
-     "on_screen_text": "Most: ~3 years",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a folder and a small shredder. No text, no logos, no real people."
+     "narration": "Common question during spring cleaning: how long do I keep tax papers? Short answer: three years for most.",
+     "on_screen_text": "Q: How long do I keep tax papers?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a speech bubble over a folder. No text, no logos, no real people."
     },
     {
      "heading": "Why 3",
-     "narration": "The IRS generally has three years from when you filed to assess more tax, so that's the usual keep period for your return and the forms behind it.",
+     "narration": "The IRS generally has three years from when you filed to assess more tax, so that's the usual keep period for a return and the forms behind it.",
      "on_screen_text": "3 years from filing",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with three pages. No text, no logos, no real people."
     },
     {
      "heading": "Longer",
-     "narration": "Keep them longer if you underreported income by a lot, claimed a loss from worthless securities or a bad debt, or didn't file.",
-     "on_screen_text": "Some cases: 6–7 years or more",
+     "narration": "Keep them longer if you underreported income by a lot, claimed worthless securities or a bad debt, or didn't file.",
+     "on_screen_text": "Special cases: 6–7 years+",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a taller stack of folders. No text, no logos, no real people."
     },
     {
      "heading": "Keep",
-     "narration": "And keep records for things you own, like a home or investments, until a few years after you sell them.",
-     "on_screen_text": "Home + investments: until after you sell",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a house and a small chart icon. No text, no logos, no real people."
+     "narration": "Keep records for things you own, like a home or investments, until a few years after you sell.",
+     "on_screen_text": "Home + investments: past the sale",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a house and a small chart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Toss",
+     "narration": "Everything else: shred it, don't recycle it whole.",
+     "on_screen_text": "Shred, don't recycle",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shredder. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -799,7 +832,8 @@
     "on_screen_text": "Copies of returns: keep",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small locked box. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "question-reply"
  },
  {
   "format": "short",
@@ -873,7 +907,8 @@
     "on_screen_text": "Also search unclaimed property",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a box. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -881,31 +916,37 @@
   "idea_angle": "Beneficiary forms on retirement accounts and life insurance generally override a will, so check and update them each spring.",
   "script": {
    "title": "Your 401(k) beneficiary form can beat your will",
-   "hook": "Your 401(k) beneficiary form can override your will. Check it in 5 minutes.",
+   "hook": "Myth: your will decides who gets your 401(k). 3 beneficiary myths, checked.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Your 401(k) beneficiary form can override your will. Check it in five minutes.",
-     "on_screen_text": "Beneficiary form > will",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small form with a heart. No text, no logos, no real people."
+     "narration": "Myth: your will decides who gets your 401(k). Here are three beneficiary myths, checked.",
+     "on_screen_text": "MYTH vs FACT: beneficiaries",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a form with a heart. No text, no logos, no real people."
     },
     {
-     "heading": "Why",
-     "narration": "Retirement accounts and life insurance generally pay whoever is listed as beneficiary, even if a will says something different.",
-     "on_screen_text": "Listed beneficiary gets it",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow from an account to a person icon. No text, no logos, no real people."
+     "heading": "Myth 1",
+     "narration": "Myth: the will covers everything. Fact: retirement accounts and life insurance generally go to whoever is on the beneficiary form.",
+     "on_screen_text": "FACT: the form usually wins",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form over a scroll. No text, no logos, no real people."
     },
     {
-     "heading": "Check",
-     "narration": "Log in to your 401(k), any IRAs and any life insurance. Look for the beneficiary section and make sure it's current.",
-     "on_screen_text": "401(k) · IRA · life insurance",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small folders. No text, no logos, no real people."
-    },
-    {
-     "heading": "Update",
-     "narration": "Update it after big changes: marriage, divorce, a baby, or losing someone you'd listed.",
-     "on_screen_text": "Update after life changes",
+     "heading": "Myth 2",
+     "narration": "Myth: you set it once. Fact: it needs updating after marriage, divorce, a baby, or a loss.",
+     "on_screen_text": "FACT: update after life changes",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a ring, a broken heart and a baby bottle. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 3",
+     "narration": "Myth: it's only for retirement accounts. Fact: many banks let you add a payable-on-death beneficiary too.",
+     "on_screen_text": "FACT: banks have one too",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bank with a small heart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Do",
+     "narration": "Log in to your 401(k), IRAs and life insurance today. It takes about five minutes.",
+     "on_screen_text": "Check 3 accounts, ~5 min",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small folders. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -959,7 +1000,8 @@
     "on_screen_text": "Splits must total 100%",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pie chart in two halves. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "myth-vs-fact"
  },
  {
   "format": "short",
@@ -1039,7 +1081,8 @@
     "on_screen_text": "Be specific · attach proof · ~30 days",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a paperclip. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1124,7 +1167,8 @@
     "on_screen_text": "Reused? Change it first",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a key with a crack. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1198,7 +1242,8 @@
     "on_screen_text": "Compare fund fees",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a percent sign. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1277,7 +1322,8 @@
     "on_screen_text": "Search SOLD listings",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a price tag. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1357,7 +1403,8 @@
     "on_screen_text": "Get a quote first",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small price tag next to an umbrella. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "list"
  },
  {
   "format": "short",
@@ -1442,7 +1489,8 @@
     "on_screen_text": "Coffee + 10 minutes",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two mugs and a small calendar. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1527,7 +1575,8 @@
     "on_screen_text": "1–2 a week keeps it clean",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small broom over an inbox. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1607,7 +1656,8 @@
     "on_screen_text": "Don't file a second 1040",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stop sign next to two forms. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1615,31 +1665,37 @@
   "idea_angle": "Common bank fees (monthly maintenance, overdraft, out-of-network ATM) can often be avoided by switching accounts or settings.",
   "script": {
    "title": "5 bank fees you can stop paying this month",
-   "hook": "5 bank fees you can stop paying this month.",
+   "hook": "5 bank fees, counted down to the 1 that costs the most.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Five bank fees you can probably stop paying this month.",
-     "on_screen_text": "5 fees to stop",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small receipt with lines crossed out. No text, no logos, no real people."
+     "narration": "Five bank fees you can stop paying, counted down to the one that usually costs the most.",
+     "on_screen_text": "Countdown: 5 bank fees",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a podium with five steps. No text, no logos, no real people."
     },
     {
-     "heading": "1 and 2",
-     "narration": "One: monthly maintenance fees. Many accounts waive them, or switch to a no-fee account. Two: overdraft fees. You can often opt out or link savings as a backup.",
-     "on_screen_text": "1. Monthly · 2. Overdraft",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bank with a small coin falling. No text, no logos, no real people."
+     "heading": "5 and 4",
+     "narration": "Number five: paper statement fees. Go paperless. Number four: foreign transaction fees. Travel with a card that doesn't charge them.",
+     "on_screen_text": "#5 paper · #4 foreign",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a folded paper and a passport. No text, no logos, no real people."
     },
     {
-     "heading": "3 and 4",
-     "narration": "Three: out-of-network ATM fees. Use your bank's ATM finder. Four: paper statement fees. Go paperless.",
-     "on_screen_text": "3. ATM · 4. Paper statements",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an ATM and a paper being folded. No text, no logos, no real people."
+     "heading": "3",
+     "narration": "Number three: out-of-network ATM fees. Use your bank's ATM finder, or get cash back at a store.",
+     "on_screen_text": "#3 ATM fees",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an ATM. No text, no logos, no real people."
     },
     {
-     "heading": "5",
-     "narration": "Five: foreign transaction fees on cards when you travel. Some cards charge none.",
-     "on_screen_text": "5. Foreign transaction fees",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a passport and a card. No text, no logos, no real people."
+     "heading": "2",
+     "narration": "Number two: monthly maintenance fees. Meet the waiver rule, or switch to a no-fee account.",
+     "on_screen_text": "#2 monthly fees",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bank with a coin falling. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Number one: overdraft fees. Opt out for debit, link savings as a backup, and set a low-balance alert.",
+     "on_screen_text": "#1 overdraft",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bell over an empty wallet. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -1692,7 +1748,8 @@
     "on_screen_text": "Low-balance alert at $100",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a bell icon. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "countdown"
  },
  {
   "format": "short",
@@ -1771,7 +1828,8 @@
     "on_screen_text": "Check the next statement",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a statement. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "carousel",
