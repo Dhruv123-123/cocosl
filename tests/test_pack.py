@@ -86,7 +86,8 @@ def test_export_writes_pack(factory, tmp_path):
                                               ("month-7", date(2027, 5, 21), 31),
                                               ("month-8", date(2027, 6, 21), 30),
                                               ("month-9", date(2027, 7, 21), 31),
-                                              ("month-10", date(2027, 8, 21), 31)])
+                                              ("month-10", date(2027, 8, 21), 31),
+                                              ("month-11", date(2027, 9, 21), 30)])
 def test_tiktok_cuts_and_series(factory, month, start, days):
     items = _items(ROOT / "launch" / "money-made-simple" / month / "content.json")
     shorts = [i for i in items if i["format"] == "short"]
@@ -302,6 +303,34 @@ def test_first_1000_investing_series_is_compliance_ready():
             assert not re.search(pat, text, re.I), (sc["title"], pat)
 
 
+MONEY_BY_AGE = ROOT / "launch" / "money-made-simple" / "youtube-money-by-age" / "content.json"
+
+
+def test_money_by_age_series_is_compliance_ready():
+    import re
+    from contentfactory.guardrails import HYPE_PATTERNS, TESTIMONIAL_PATTERNS
+    from contentfactory.schemas import ChartSpec
+    items = _items(MONEY_BY_AGE)
+    others = {i["script"]["title"].lower() for p in MONTHS + [EVERGREEN, SERIES, BASICS, FIRST_1000] for i in _items(p)}
+    assert [i["series_part"] for i in items] == list(range(1, 6))
+    assert len({i["format_style"] for i in items}) == 5
+    for decade, it in zip(("20s", "30s", "40s", "50s", "60s"), items):
+        sc = it["script"]
+        words = sum(len(s["narration"].split()) for s in sc["segments"])
+        assert 1200 <= words <= 1800, (sc["title"], words)
+        assert decade in sc["title"] and sc["title"].lower() not in others and len(sc["title"]) <= 70
+        assert sc["segments"][0]["narration"].split()[0] == sc["hook"].split()[0]
+        assert it["content_id"].startswith("yt-age-") and f"utm_campaign={it['content_id']}" in sc["description"]
+        assert "possible loss of money" in sc["description"] and "fact-checked by a person" in sc["description"]
+        assert "fictional" in " ".join(s["narration"] for s in sc["segments"][:3]).lower()
+        assert len(it["compliance_review"]) >= 3
+        seg = next(s for s in sc["segments"] if s["heading"] == it["original_element"]["chapter"])
+        assert re.search(r"hypothetical|fictional|example", ChartSpec(**seg["chart"]).note, re.I)
+        text = " ".join([sc["hook"], sc["caption"], sc["description"]] + [s["narration"] for s in sc["segments"]])
+        for pat in HYPE_PATTERNS + TESTIMONIAL_PATTERNS:
+            assert not re.search(pat, text, re.I), (sc["title"], pat)
+
+
 MYTH_VS_MATH = ROOT / "launch" / "money-made-simple" / "myth-vs-math" / "content.json"
 
 
@@ -357,7 +386,7 @@ def test_savings_challenge_is_tiktok_only_weekly_and_labelled(factory):
 
 def test_chart_element_videos_carry_a_real_chart():
     from contentfactory.schemas import ChartSpec
-    files = MONTHS + [SERIES, BASICS, FIRST_1000]
+    files = MONTHS + [SERIES, BASICS, FIRST_1000, MONEY_BY_AGE]
     longs = [i for p in files for i in _items(p) if i["format"] == "long"]
     charted = [i for i in longs if i["original_element"]["type"] == "worked-example-chart"]
     assert len(charted) >= 20
@@ -396,3 +425,46 @@ def test_rate_my_budget_items_are_labelled():
             assert set(sub) <= {"id", "consent_version", "consented_on", "confirmed_on"}
         else:
             assert "Fictional" in cap and real_label not in cap, it["script"]["title"]
+
+
+def test_each_platform_posts_at_its_own_time(factory):
+    """Cadence.platform_times: TikTok 18:00, Pinterest 11:00, YouTube Shorts 12:30; long pins 11:30 and
+    TikTok-only videos 19:00 (brand file), the rest at post_times. Rows, CSV and ICS split by time."""
+    from contentfactory.pack import plan_markdown, write_calendar_files
+    brand = factory.brand("money-made-simple")
+    items = _items(MONTHS[0])
+    slots, _ = plan(brand, items, date(2026, 11, 21), 30)
+    want = {("short", "tiktok"): "18:00", ("short", "youtube"): "12:30", ("short", "instagram"): "12:30",
+            ("short", "facebook"): "12:30", ("carousel", "pinterest"): "11:00", ("carousel", "instagram"): "19:00",
+            ("long", "pinterest"): "11:30", ("long", "youtube"): "19:00"}
+    seen = set()
+    for s in slots:
+        for p in s.platforms:
+            if (s.fmt, p) in want:
+                assert s.at(p).strftime("%H:%M") == want[(s.fmt, p)], (s.fmt, p, s.at(p))
+                seen.add((s.fmt, p))
+    assert seen == set(want)
+    md = plan_markdown(brand, items, slots, [], date(2026, 11, 21), 30)
+    assert "| 18:00 | tiktok |" in md and "| 11:00 | pinterest |" in md
+    out = factory.settings.home / "cal"
+    out.mkdir()
+    write_calendar_files(brand, slots, out)
+    rows = (out / "calendar.csv").read_text().splitlines()[1:]
+    assert len(rows) == sum(len(s.groups()) for s in slots) > len(slots)
+    assert (out / "calendar.ics").read_text().count("BEGIN:VEVENT") == len(rows)
+    ch = _items(CHALLENGE)
+    mid, _ = plan(brand, ch[:1], date(2026, 11, 15), 1, {"mid": "sun"})
+    assert mid[0].at("tiktok").strftime("%H:%M") == "19:00"
+
+
+def test_one_platform_never_gets_two_posts_at_one_minute(factory):
+    """Inside one plan a taken minute moves to the platform's next time, then the brand's other post times."""
+    brand = factory.brand("money-made-simple")
+    brand.cadence.platform_times["tiktok:mid"] = ["18:00"]  # same minute as the TikTok Short
+    short = next(i for i in _items(MONTHS[0]) if i["format"] == "short")
+    slots, leftover = plan(brand, [short, _items(CHALLENGE)[0]], date(2026, 11, 22), 1, {"short": "sun", "mid": "sun"})
+    assert not leftover and len(slots) == 2
+    tiktok = sorted(s.at("tiktok").strftime("%H:%M") for s in slots if "tiktok" in s.platforms)
+    assert tiktok == ["12:30", "18:00"] or tiktok == ["18:00", "19:00"]
+    taken = [(p, s.at(p)) for s in slots for p in s.platforms]
+    assert len(taken) == len(set(taken))

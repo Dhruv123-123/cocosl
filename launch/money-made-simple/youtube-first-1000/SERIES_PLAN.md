@@ -6,7 +6,7 @@ A six-part long-form series that walks a beginner from "I have $1,000" to an inv
 - **No specific securities, funds, tickers or providers** are named or shown anywhere in the series.
 - **Original element per video:** every part has a worked-example chart drawn from the video's own numbers on its chart chapter, so all six pass the original-element check (0 blocked in CHECKS.md).
 - **Compliance review before posting:** every item carries a `compliance_review` list of flags for the human reviewer. COMPLIANCE.md has the full checklist and the per-video flags. The two research claims are now sourced and cited in narration and in the description: part 4's best-and-worst-days claims cite Wells Fargo Investment Institute's S&P 500 study (1994–2024), and part 5's lump-sum line cites Vanguard's 2023 paper (lump sum ahead about two-thirds of the time, 1976–2022). Part 4's line about how often dips happen was softened instead of sourced.
-- **Schedule:** Sundays at 19:00 ET, **Sep 5 – Oct 10, 2027**, on YouTube and Pinterest.
+- **Schedule:** Sundays at 19:00 ET, **Sep 5 – Oct 10, 2027**, on YouTube (19:00) with a Pinterest pin at 11:30.
 - **Formats vary:** walkthrough, explainer, real-numbers, myth-vs-fact, on-screen-calculation and countdown.
 - **Examples** (Sam, Priya, Jordan, Alex, Riley) are fictional and labelled. There are no income promises or testimonials.
 

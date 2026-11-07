@@ -3148,6 +3148,48 @@
      }
     },
     {
+     "heading": "Why this order",
+     "narration": "Why this order and not another? The buffer comes first because without it, the next surprise goes straight back on the card, and the debt you just paid off comes back. The card comes second because twenty-four percent is the most expensive money in this budget. Every dollar there saves twenty-four cents a year, with no risk. The car fund comes third because the tyres are a known bill. Paying for them in cash keeps them off the card. And the treat comes last, but it's there on purpose, because a plan that leaves nothing for fun is easy to abandon.",
+     "on_screen_text": "Buffer → card → known cost → treat",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four steps going up. No text, no logos, no real people."
+    },
+    {
+     "heading": "What the card payment saves",
+     "narration": "Let's put a number on step two. Before the refund, the card balance is twenty-two hundred dollars at twenty-four percent, about forty-four dollars of interest a month. After the fifteen-hundred-dollar payment, the balance is seven hundred, and the interest drops to about fourteen a month. That's thirty dollars a month, or about three hundred sixty a year, kept. Keep paying the same amount you paid before, and the last seven hundred is gone in a few months. The refund didn't just pay down debt; it raised the amount of your monthly payment that goes to the balance, not to interest.",
+     "on_screen_text": "$44 → $14 a month · ≈ $360 a year kept",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shrinking card next to a coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "A smaller refund: $900",
+     "narration": "What if your refund is nine hundred dollars, not twenty-eight hundred? The order stays the same, but the amounts shrink. With three hundred in savings, the first six hundred takes the buffer to nine hundred. Two hundred goes to the card, and a hundred is the treat. The car fund waits for next month's budget. A smaller refund doesn't change the plan. It just means fewer steps get filled this time.",
+     "on_screen_text": "$900: $600 buffer · $200 card · $100 treat",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a smaller jar and a small gift. No text, no logos, no real people."
+    },
+    {
+     "heading": "A bigger refund: $5,000",
+     "narration": "And with five thousand? Seven hundred to the buffer, the whole twenty-two hundred card balance cleared, three hundred to the car fund, and five hundred for the treat, about ten percent. That leaves thirteen hundred. Many people put that toward the emergency fund to reach a full month of expenses, or into an IRA before the April fifteenth deadline. With no card balance left, next year's plan can start with saving, not catching up.",
+     "on_screen_text": "$5,000: card cleared · $1,300 to savings or an IRA",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar filling and a card with a tick. No text, no logos, no real people."
+    },
+    {
+     "heading": "Make the moves the same day",
+     "narration": "Timing matters too. Refunds that sit in checking tend to leak into everyday spending. So write the four amounts down before the refund arrives, and move them the day it lands: the buffer to savings, the payment to the card, the car money to its fund. Keep only the treat in checking. That way, each dollar does the job you gave it before anything else can claim it.",
+     "on_screen_text": "Move it the day it lands",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with an arrow to four jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "If you owe instead",
+     "narration": "And if you owe instead of getting a refund? File on time anyway, because the failure-to-file penalty is much bigger than the failure-to-pay one. Pay what you can, and set up an IRS payment plan for the rest. Then check your W-4, so next year's withholding covers the tax.",
+     "on_screen_text": "Owe? File on time · payment plan",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar and a small form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Your own split",
+     "narration": "To make your own split, list your savings balance, your highest card rate, and any cost due in the next three months. Then fill the four steps in order, writing a dollar amount next to each one. If the amounts don't add up to your refund, adjust the treat or the known cost, not the buffer.",
+     "on_screen_text": "Fill the 4 steps in order",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a notepad with four lines. No text, no logos, no real people."
+    },
+    {
      "heading": "If no debt",
      "narration": "If you don't have high-interest debt, step two changes. Many people put that money into a Roth or Traditional IRA instead, and before April fifteenth you can often choose to count it for last year. Remember that investing involves risk, including loss of principal.",
      "on_screen_text": "No card debt? IRA instead",
@@ -3176,7 +3218,7 @@
     "personalfinance20s",
     "moneymadesimple"
    ],
-   "description": "A step-by-step plan for a tax refund using a worked $2,800 example.\n\nChapters\n0:00 Intro\n0:25 The example\n0:45 Step 1: buffer\n1:10 Step 2: high-rate debt\n1:35 Step 3: known costs\n1:55 Step 4: the treat\n2:15 The split\n2:35 No debt?\n3:00 Next year\n3:20 Recap\n\nExamples are hypothetical and for education only.",
+   "description": "A step-by-step plan for a tax refund using a worked $2,800 example.\n\nChapters\n0:00 Intro\n0:26 The example\n0:45 Step 1: buffer\n1:02 Step 2: high-rate debt\n1:18 Step 3: known costs\n1:35 Step 4: the treat\n1:50 The split\n2:08 Why this order\n2:50 What the card payment saves\n3:31 A smaller refund: $900\n4:01 A bigger refund: $5,000\n4:32 Make the moves the same day\n5:01 If you owe instead\n5:22 Your own split\n5:46 No debt?\n6:05 Next year\n6:24 Recap\n\nExamples are hypothetical and for education only.",
    "thumbnail_text": "Refund plan, real numbers",
    "sources": [
     "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
@@ -3237,6 +3279,24 @@
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with several circled dates. No text, no logos, no real people."
     },
     {
+     "heading": "How withholding works",
+     "narration": "First, what the W-4 actually does. Your employer uses it, along with IRS tables, to estimate your yearly tax and take a slice of it from every paycheck. If you're paid every two weeks, that's twenty-six slices. The W-4 doesn't change how much tax you owe for the year. It only changes when you pay it: through the year from your paychecks, or as a lump sum in April. A refund is that overpayment coming back to you, with no interest.",
+     "on_screen_text": "W-4 = when you pay, not how much",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paycheck cut into small slices. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3, worked out",
+     "narration": "Step three is where many parents leave money in their paycheck by accident. It's for credits you expect, like the child tax credit. If you qualify for the credit for one child, you enter the credit amount for that child, and your withholding drops by about that amount over the year. Spread over twenty-six paychecks, a two-thousand-dollar credit is about seventy-seven dollars more in each paycheck. Check the current credit amount and the income limits on IRS dot gov before you fill it in, because they change.",
+     "on_screen_text": "Step 3: $2,000 credit ≈ $77 per paycheck",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paycheck with a small child icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 4, the three dials",
+     "narration": "Step four has three optional dials. Four a, other income, is for income without withholding, like interest or a small side hustle, so tax comes out of your paycheck instead of being due in April. Four b, deductions, is only for people who'll itemize or have certain other deductions, and it lowers withholding. Four c, extra withholding, adds a fixed dollar amount to every paycheck. For most people, four c is the simplest one to adjust.",
+     "on_screen_text": "4a other income · 4b deductions · 4c extra",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small dials on a form. No text, no logos, no real people."
+    },
+    {
      "heading": "Real numbers: refund",
      "narration": "Now the real numbers. You got a three thousand dollar refund and want it closer to zero. Run the free IRS Tax Withholding Estimator. If it says you're over-withholding by about that much, it will suggest entries that shrink it, roughly a hundred and fifteen dollars more per biweekly paycheck.",
      "on_screen_text": "$3,000 ÷ 26 ≈ $115/paycheck",
@@ -3260,10 +3320,34 @@
      }
     },
     {
+     "heading": "Two jobs, worked out",
+     "narration": "Here's why two jobs cause surprise bills. Say you earn thirty thousand at each job. Each employer withholds as if thirty thousand is your whole income, so each one applies the full standard deduction and the lowest brackets. But you can only use one standard deduction, and together, sixty thousand reaches the twelve percent bracket. The result is often owing several hundred dollars or more in April. The fix: tick the step two checkbox on both jobs' W-4s, or use the estimator and put an extra amount in step four c on one of them.",
+     "on_screen_text": "2 × $30,000 ≠ 2 standard deductions",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two paychecks and one small form. No text, no logos, no real people."
+    },
+    {
+     "heading": "When to check, and how",
+     "narration": "When should you check? Any time something changes: a new job or a second job, getting married or divorced, a new baby, a big raise, or starting side income. Also check after any surprise at tax time, in either direction. To check, have your most recent pay stub and last year's return ready, then run the IRS Tax Withholding Estimator. It takes about fifteen minutes. Then give your employer a new W-4, usually through the payroll portal. Look at your next pay stub to make sure the change went through.",
+     "on_screen_text": "Life change? 15-minute estimator check",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a small form. No text, no logos, no real people."
+    },
+    {
      "heading": "Real numbers: owing",
      "narration": "Owe instead? Do the opposite. Owed nine hundred? Step four c, extra withholding per paycheck, is the simplest dial: about thirty-five dollars per biweekly paycheck covers it.",
      "on_screen_text": "$900 ÷ 26 ≈ $35/paycheck",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a slider moving up. No text, no logos, no real people."
+    },
+    {
+     "heading": "Your pay stub, line by line",
+     "narration": "One last habit: actually read your pay stub once. Find federal income tax withholding, Social Security and Medicare, any state tax, and your 401(k) or other pre-tax deductions. Multiply the federal withholding by the number of paychecks left in the year, and add what's already been withheld. Compare that with the estimator's estimate of your tax. If the two are close, your W-4 is doing its job. If they're far apart, you've caught it in time to fix it before April.",
+     "on_screen_text": "Withheld so far + rest of year ≈ your tax?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pay stub with a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "A new job checklist",
+     "narration": "Starting a new job? Fill in the W-4 on day one with your filing status, step two if you'll have more than one job, and step three if you have children who qualify. Then run the estimator after your first pay stub, once you can see real numbers.",
+     "on_screen_text": "New job: W-4 day one · estimator after stub 1",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a new name badge next to a form. No text, no logos, no real people."
     },
     {
      "heading": "Recap",
@@ -3282,7 +3366,7 @@
     "firstjob",
     "moneymadesimple"
    ],
-   "description": "Four common W-4 myths checked against the facts, then the real numbers for shrinking a big refund or fixing a balance due.\n\nChapters\n0:00 Intro\n0:25 Myth 1\n0:45 Myth 2\n1:04 Myth 3\n1:22 Myth 4\n1:41 Real numbers: refund\n2:03 Real numbers: owing\n2:15 Recap\n\nEducational, not tax advice.",
+   "description": "Four common W-4 myths checked against the facts, then the real numbers for shrinking a big refund or fixing a balance due.\n\nChapters\n0:00 Intro\n0:25 Myth 1\n0:45 Myth 2\n1:04 Myth 3\n1:22 Myth 4\n1:41 How withholding works\n2:15 Step 3, worked out\n2:51 Step 4, the three dials\n3:23 Real numbers: refund\n3:45 Two jobs, worked out\n4:24 When to check, and how\n5:02 Real numbers: owing\n5:14 Your pay stub, line by line\n5:48 A new job checklist\n6:09 Recap\n\nEducational, not tax advice.",
    "thumbnail_text": "Your W-4, explained",
    "sources": [
     "https://www.irs.gov/forms-pubs/about-form-w-4",
@@ -3341,6 +3425,42 @@
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tax form on the top podium step. No text, no logos, no real people."
     },
     {
+     "heading": "Number 4, with the numbers",
+     "narration": "Let's put real numbers on each fix, starting with the phone. Fifteen hundred to savings takes the fund from three hundred to eighteen hundred, which covers most surprises. The four hundred kept is spending money with no guilt. And the forty-dollar phone fund means that in two years, when the old phone really does need replacing, there's nine hundred sixty dollars waiting. No payment plan, no interest. This budget was the least risky, but the fix still turns a one-time refund into a system that lasts years.",
+     "on_screen_text": "$300 → $1,800 saved · $960 phone fund",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone next to a growing jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 3, with the numbers",
+     "narration": "The couple's fix: thirty-five hundred to a joint emergency fund, two thousand to clear the card, and three hundred fifty each to spend. If the card charges twenty-two percent, the two-thousand-dollar payment saves about thirty-seven dollars a month in interest, about four hundred forty a year. And the couch? It goes on the list with its own couch fund of a hundred fifty a month. In about four months that's six hundred dollars, enough for a good second-hand or budget couch in cash, without touching the emergency fund.",
+     "on_screen_text": "Card cleared ≈ $440 a year · couch fund $150/mo",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a couch with a small jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 2, with the numbers",
+     "narration": "The trip budget: forty-eight hundred dollars on a card at twenty-four percent costs about ninety-six dollars a month. The two-thousand-dollar payment takes it to twenty-eight hundred, and the interest to about fifty-six. That's forty dollars a month back, every month. The thousand-dollar starter fund means the next car repair doesn't add to the card. And the trip isn't cancelled; it's planned. A hundred fifty a month in a trip fund pays for a weekend away by late summer, in cash.",
+     "on_screen_text": "$4,800 → $2,800 · interest $96 → $56",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a suitcase next to a small jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 1, with the numbers",
+     "narration": "And the freelancer's fifty-two-hundred-dollar bill. Filing on time matters most, because the failure-to-file penalty is generally five percent of the unpaid tax a month, against half a percent for paying late. On fifty-two hundred, that's about two hundred sixty dollars a month versus twenty-six. An IRS payment plan spreads the bill over time, with interest and smaller penalties. Then the fix for next year: twenty-five percent of every payment into a tax account. On fifty-two thousand of income, that's about thirteen thousand set aside, paid in four quarterly payments of about thirty-two fifty.",
+     "on_screen_text": "File on time: 5% vs 0.5% a month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar and a jar labelled tax. No text, no logos, no real people."
+    },
+    {
+     "heading": "Your plan, before it lands",
+     "narration": "To use the ranking on your own refund, write down three numbers before it arrives: your savings balance, your highest card rate and balance, and any known cost coming in the next three months. If savings is under a thousand, the buffer comes first. If a card charges more than about eight percent, it comes next. Then the known cost, then one planned treat. If you're a freelancer facing a bill instead, file on time and set up the plan.",
+     "on_screen_text": "Savings · card rate · known cost",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a notepad with three numbers. No text, no logos, no real people."
+    },
+    {
+     "heading": "What all four have in common",
+     "narration": "All four fixes share one feature: every dollar of the refund got a job before it arrived. The amounts changed with each budget, but the decision always came first. Even the freelancer's plan works the same way, just in reverse, with a tax account doing the job a refund would have done.",
+     "on_screen_text": "Every dollar gets a job first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four jars with labels. No text, no logos, no real people."
+    },
+    {
      "heading": "The pattern",
      "narration": "Look at the ranking and the pattern is the same at every step: no plan until the money arrived. The order that fixes it doesn't change. Buffer first, then high-rate debt, then the costs you can see coming, then one planned treat, decided before the money lands.",
      "on_screen_text": "Buffer · debt · known costs · treat",
@@ -3367,7 +3487,7 @@
     },
     {
      "heading": "Your turn",
-     "narration": "Rank your own plan. Which step is it closest to? If you'd like yours rated, send the numbers by DM with no names; we anonymise everything. All four budgets here were fictional examples, for education only.",
+     "narration": "Rank your own plan. Which step is it closest to? If you'd like yours rated, send the numbers through the form linked in our bio: numbers only, no names or screenshots. We change details before anything is posted, and every example we make up is labelled fictional. All four budgets here were fictional examples, for education only.",
      "on_screen_text": "Where would yours rank?",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the mascot holding up a question mark. No text, no logos, no real people."
     }
@@ -3382,7 +3502,7 @@
     "debtpayoff",
     "moneymadesimple"
    ],
-   "description": "Four fictional refund plans from this month's Rate My Budget, counted down from least risky to most expensive, with the fix and the numbers for each.\n\nChapters\n0:00 Intro\n0:26 Number 4: the phone\n0:55 Number 3: the couch\n1:22 Number 2: the trip\n1:51 Number 1: the tax bill\n2:22 The pattern\n2:42 Your turn\n\nAll budgets are fictional examples.",
+   "description": "Four fictional refund plans from this month's Rate My Budget, counted down from least risky to most expensive, with the fix and the numbers for each.\n\nChapters\n0:00 Intro\n0:26 Number 4: the phone\n0:55 Number 3: the couch\n1:22 Number 2: the trip\n1:51 Number 1: the tax bill\n2:22 Number 4, with the numbers\n2:58 Number 3, with the numbers\n3:35 Number 2, with the numbers\n4:08 Number 1, with the numbers\n4:47 Your plan, before it lands\n5:20 What all four have in common\n5:43 The pattern\n6:03 Your turn\n\nAll budgets are fictional examples.",
    "thumbnail_text": "4 refunds, 4 plans",
    "sources": [
     "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/",
@@ -3423,6 +3543,18 @@
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a conveyor belt with three stops. No text, no logos, no real people."
     },
     {
+     "heading": "A timeline, worked out",
+     "narration": "Here's a typical timeline for an e-filed return with direct deposit, using a fictional example. You file on February third. The IRS usually confirms it has accepted the return within a day or two, and your tax software will tell you. Where's My Refund shows Received within about twenty-four hours of e-filing. A week or two later, it moves to Approved, often with a date. A few days after that, it moves to Sent, and the money usually reaches your bank within a few days, depending on the bank. In this example, the refund lands around February twentieth, about seventeen days after filing. Many refunds follow this pattern, but some take longer.",
+     "on_screen_text": "Feb 3 filed → ≈ Feb 20 deposited (example)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with three ticks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Using the tool",
+     "narration": "To check your status, you'll need three things: your Social Security number or ITIN, your filing status, and the exact refund amount in whole dollars from your return. The tool generally updates once a day, usually overnight, so checking more often doesn't show anything new. The IRS2Go app shows the same information. If the tool says your return is still being processed after three weeks, that alone isn't a problem. The IRS's own guidance is to call only when the tool tells you to, or once the normal time has passed.",
+     "on_screen_text": "SSN · filing status · exact refund",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone showing three empty boxes. No text, no logos, no real people."
+    },
+    {
      "heading": "Paper",
      "narration": "Paper returns go through the same steps by hand, and that can add weeks. E-file with direct deposit is the fastest combination.",
      "on_screen_text": "Paper = weeks slower",
@@ -3453,16 +3585,46 @@
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. coins diverted to another jar. No text, no logos, no real people."
     },
     {
+     "heading": "Amended and state refunds",
+     "narration": "Two other refunds work differently. An amended return, filed to fix a mistake, has its own tool: Where's My Amended Return. Amended returns take much longer, often several months, so don't expect the same timeline as the original. And your state refund is completely separate from the federal one. Each state has its own website to check status, and state timelines vary a lot. A federal refund arriving doesn't mean the state one is close, or the other way around.",
+     "on_screen_text": "Amended: own tool, months · state: separate",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two envelopes with different stamps. No text, no logos, no real people."
+    },
+    {
      "heading": "When to call",
      "narration": "Calling the IRS usually only helps if it's been more than twenty-one days since you e-filed, six weeks since you mailed a paper return, or the tool tells you to call.",
      "on_screen_text": "Call after 21 days (e-file)",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a calendar. No text, no logos, no real people."
     },
     {
+     "heading": "Fees to skip",
+     "narration": "While you wait, watch for products that charge for speed. Some tax preparers offer a refund advance, which is a short-term loan against your refund. Some are free; others carry fees or interest. Some also offer to take their fees out of your refund, which can add an extra charge on top. If you file early with direct deposit, the standard refund is often only a couple of weeks away anyway. Read the fee terms carefully before agreeing to anything that pays you sooner.",
+     "on_screen_text": "Refund advance? Read the fees first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small price tag on an envelope. No text, no logos, no real people."
+    },
+    {
      "heading": "Scams",
      "narration": "While you wait, watch for scams. The IRS starts contact by mail, not texts or emails. Never click a refund link. Check your status yourself on IRS dot gov.",
      "on_screen_text": "IRS starts by mail",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a stop sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Plan it while you wait",
+     "narration": "The waiting time is useful. Decide where the refund goes before it lands, using the four steps from our refund plan video: a buffer first, then the highest-interest debt, then a known cost, then one planned treat. Write the amounts down. When the deposit arrives, move the money the same day. Refunds that arrive with no plan tend to disappear into everyday spending within a few weeks. A refund with a plan can wipe out a card balance or start an emergency fund.",
+     "on_screen_text": "Decide the plan before it lands",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with four small labels. No text, no logos, no real people."
+    },
+    {
+     "heading": "Next year, faster",
+     "narration": "To make next year's refund faster, do three things. E-file as soon as you have every W-2 and 1099, but not before, because a missing form is a common cause of delays. Choose direct deposit, and double-check the routing and account numbers. And create an IRS online account, where you can see your records and notices in one place. If you'd rather not wait for a refund at all, use the withholding estimator to get closer to zero.",
+     "on_screen_text": "E-file complete · direct deposit · IRS account",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a fast arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "If the amount is different",
+     "narration": "Sometimes the refund arrives but it's smaller than you expected. That usually means the IRS corrected something, like a math error or a credit, or applied part of it to a debt. You'll get a letter explaining the change. Read it, compare it with your return, and respond by the date on the letter if you disagree.",
+     "on_screen_text": "Smaller refund? Look for the letter",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an envelope with a small coin. No text, no logos, no real people."
     },
     {
      "heading": "Recap",
@@ -3481,7 +3643,7 @@
     "taxseason",
     "moneymadesimple"
    ],
-   "description": "How tax refund processing works and what slows a refund down.\n\nChapters\n0:00 Intro\n0:15 How it works\n0:35 Paper returns\n0:45 The mid-February hold\n1:05 Identity checks\n1:25 Errors\n1:40 Offsets\n1:55 When to call\n2:10 Scams\n2:25 Recap\n\nEducational, not tax advice.",
+   "description": "How tax refund processing works and what slows a refund down.\n\nChapters\n0:00 Intro\n0:15 How it works\n0:31 A timeline, worked out\n1:17 Using the tool\n1:55 Paper returns\n2:05 The mid-February hold\n2:23 Identity checks\n2:41 Errors\n2:56 Offsets\n3:09 Amended and state refunds\n3:42 When to call\n3:56 Fees to skip\n4:31 Scams\n4:44 Plan it while you wait\n5:19 Next year, faster\n5:52 If the amount is different\n6:16 Recap\n\nEducational, not tax advice.",
    "thumbnail_text": "Where's my refund?",
    "sources": [
     "https://www.irs.gov/refunds",

@@ -3,7 +3,7 @@
 Window: Sat Aug 21 – Mon Sep 20, 2027. All times America/New_York.
 22 shorts, 21 carousels, 0 long videos.
 
-**Sundays (long video, YouTube and Pinterest, 19:00):** Aug 22 and Aug 29 are Money Basics parts 11–12 (launch/money-made-simple/youtube-money-basics/). Sep 5, Sep 12 and Sep 19 are Your First $1,000 Invested parts 1–3 (launch/money-made-simple/youtube-first-1000/). Both are exported in their own packs. This month adds no long videos of its own.
+**Sundays (long video, YouTube 19:00, Pinterest pin 11:30):** Aug 22 and Aug 29 are Money Basics parts 11–12 (launch/money-made-simple/youtube-money-basics/). Sep 5, Sep 12 and Sep 19 are Your First $1,000 Invested parts 1–3 (launch/money-made-simple/youtube-first-1000/). Both are exported in their own packs. This month adds no long videos of its own.
 
 **Theme and formats:** Labor Day, National Preparedness Month (emergency kits), the Sep 15 estimated tax date for freelancers and side hustles, fall funds (winter heating, holidays, car, Halloween), open enrollment and FAFSA prep, insurance and lease renewals, football season, and first-time investing posts that tie into the new long series (match math, "deposited isn't invested", market-drop plan, lump sum vs monthly with Vanguard's research cited). The Shorts mix seven formats: 4 Rate My Budget (#38–41, all fictional), 4 on-screen calculations, 3 myth vs fact, 3 common questions, 3 countdowns, 3 real-numbers walk-throughs and 2 explainers. No two Shorts in a row share a format. Every Short has a 55–90s TikTok cut. Investing posts carry the risk line, and none of them names a fund or provider.
 

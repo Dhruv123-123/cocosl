@@ -3,7 +3,7 @@
 Window: Mon Jun 21 – Tue Jul 20, 2027. All times America/New_York.
 22 shorts, 22 carousels, 0 long videos.
 
-**Sundays (long video, YouTube and Pinterest, 19:00):** Jun 27, Jul 4, Jul 11 and Jul 18 are Money Basics parts 3–6 (launch/money-made-simple/youtube-money-basics/), exported in the Money Basics pack. This month adds no long videos of its own.
+**Sundays (long video, YouTube 19:00, Pinterest pin 11:30):** Jun 27, Jul 4, Jul 11 and Jul 18 are Money Basics parts 3–6 (launch/money-made-simple/youtube-money-basics/), exported in the Money Basics pack. This month adds no long videos of its own.
 
 **Theme and formats:** July 4th (cookouts, travel, the week after), heat-wave bills (thermostat, fan vs AC, budget billing), the mid-year reset, early back-to-school (tax-free weekends, lists, 0% laptop deals, buy now pay later) and summer travel. The Shorts mix seven formats: 4 Rate My Budget (#30–33, all fictional), 4 on-screen calculations, 3 myth vs fact, 3 common questions, 3 countdowns, 3 real-numbers walk-throughs and 2 explainers. No two Shorts in a row share a format. Every Short has a 55–90s TikTok cut.
 

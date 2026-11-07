@@ -3671,6 +3671,24 @@
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with four circled dates. No text, no logos, no real people."
     },
     {
+     "heading": "Worked example: Riley's hour",
+     "narration": "Here's the whole hour for one fictional person, Riley. The snapshot: twenty-one hundred dollars in checking and savings, a forty-two-hundred-dollar card balance and an eleven-thousand-dollar car loan. That's a net worth of about minus thirteen thousand, a starting point and not a grade. Last year's real costs, from three months of statements: fixed bills of twenty-two hundred a month and flexible spending of about nine hundred. Take-home pay is thirty-four hundred. That leaves three hundred a month, so Riley's savings rate is set at five percent, a hundred seventy dollars, with the transfer the day after payday. The other hundred thirty goes to the card on top of the minimum, the highest rate first.",
+     "on_screen_text": "Riley: 5% saved · $130 extra to the card",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes beside a fictional character's one-page plan. No text, no logos, no real people."
+    },
+    {
+     "heading": "Riley's weekly number",
+     "narration": "Riley's flexible nine hundred a month becomes a weekly number: nine hundred times twelve, divided by fifty-two, about two hundred and eight dollars a week. Groceries, eating out and fun all come out of that. Riley's sinking funds start small: forty dollars a month for car repairs and thirty for gifts, taken from the flexible line so the weekly number is about a hundred ninety. Then four check-ins go in the calendar. At the first one, at the end of March, Riley expects the card to be about four hundred dollars lower, and the savings to be about five hundred higher. Small, real progress is the point.",
+     "on_screen_text": "$900 × 12 ÷ 52 ≈ $208 a week",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a weekly number circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Writing it down",
+     "narration": "Before you close the laptop, write the plan on one page: net worth today, savings rate, the weekly number, the debt order and the four check-in dates. Stick it somewhere you'll see it. A one-page plan you can find in ten seconds beats a detailed spreadsheet you never open again.",
+     "on_screen_text": "The plan on one page",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single sheet pinned to a fridge. No text, no logos, no real people."
+    },
+    {
      "heading": "When it breaks",
      "narration": "And when it breaks, because some week it will, don't wait for next month. Start from today's balance, reset the weekly number, and keep going. A budget that breaks and restarts is still working. The people who succeed with money aren't the ones who never slip. They're the ones who restart quickly.",
      "on_screen_text": "When it breaks: restart today",
@@ -3695,7 +3713,7 @@
     "personalfinance20s",
     "moneymadesimple"
    ],
-   "description": "A complete New Year money reset in seven steps: snapshot, last year's spending, a three-line budget, a savings rate, a debt order, sinking funds and quarterly check-ins.\n\nChapters\n0:00 Intro\n0:34 Step 1: snapshot\n1:00 Step 2: last year\n1:27 Step 3: three lines\n1:59 Step 4: savings rate\n2:29 Step 5: debt order\n2:58 Step 6: sinking funds\n3:30 Step 7: check-ins\n3:52 When it breaks\n4:13 Recap\n\nExamples are hypothetical and for education only. Not financial or tax advice.",
+   "description": "A complete New Year money reset in seven steps: snapshot, last year's spending, a three-line budget, a savings rate, a debt order, sinking funds and quarterly check-ins.\n\nChapters\n0:00 Intro\n0:35 Step 1: snapshot\n1:02 Step 2: last year\n1:30 Step 3: three lines\n2:02 Step 4: savings rate\n2:34 Step 5: debt order\n3:03 Step 6: sinking funds\n3:36 Step 7: check-ins\n3:59 Worked example: Riley's hour\n4:46 Riley's weekly number\n5:31 Writing it down\n5:52 When it breaks\n6:14 Recap\n\nExamples are hypothetical and for education only. Not financial or tax advice.",
    "thumbnail_text": "2027 reset",
    "sources": [
     "https://www.consumerfinance.gov/about-us/blog/budgeting-how-to-create-a-budget-and-stick-with-it/",
@@ -3773,6 +3791,24 @@
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a reservoir jar with a steady tap, a separate small tax jar. No text, no logos, no real people."
     },
     {
+     "heading": "A fourth budget, scored live",
+     "narration": "Let's score one more, live, so you can see the scorecard work. Budget four is a fictional nurse with four thousand dollars a month take-home. Rent is fifteen hundred, which is about thirty-eight percent: two points. Savings is four hundred a month, ten percent: two points. There's a twelve-hundred-dollar card balance at twenty-two percent with no plan: zero points. Car repairs and gifts always land on that card, so irregular costs aren't covered: zero points. Bills are on autopay, but savings is a manual transfer that often gets skipped: one point. Total: five out of ten. A decent income and a reasonable rent, held back by two missing systems.",
+     "on_screen_text": "Fictional nurse: 2 + 2 + 0 + 0 + 1 = 5/10",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scorecard with five rows. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix 4",
+     "narration": "The fix. First, a payoff plan for the card: two hundred a month, which clears it in about seven months, and that alone earns two points. Second, a sinking fund of a hundred twenty a month for car repairs and gifts, so the card stops refilling: two more points. Third, make the four-hundred-dollar savings transfer automatic, the day after payday: the automation question goes from one to two. Where does the money come from? The two hundred for the card comes from cutting delivery and one unused subscription, and the hundred twenty comes from the savings line for now. New score: nine out of ten, without a raise.",
+     "on_screen_text": "Card plan + sinking fund + auto-save → 9/10",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scorecard with a 9. No text, no logos, no real people."
+    },
+    {
+     "heading": "Where the points usually go",
+     "narration": "Across every budget we've scored, the same two questions lose the most points: irregular costs and automation. Income and rent get the attention, but the points usually disappear in the systems. That's good news, because sinking funds and automatic transfers cost nothing to set up. You can fix both this week, with the income you already have.",
+     "on_screen_text": "Points lost: irregular costs + automation",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scorecard with two rows circled. No text, no logos, no real people."
+    },
+    {
      "heading": "Patterns",
      "narration": "Notice the pattern. None of these people had an income problem first. They had a system problem: money with no job gets spent, and costs with no plan go on a card. The fixes were the same three moves every time: automate savings first, give irregular costs a home, and make the hard number visible.",
      "on_screen_text": "Same 3 fixes every time",
@@ -3803,7 +3839,7 @@
     },
     {
      "heading": "Your turn",
-     "narration": "Score your own budget with the five questions. Seven or more is solid. Under five? Pick the lowest-scoring question and fix only that this month. If you want yours rated in a future episode, send the numbers by DM, no names. We anonymise everything and change details.",
+     "narration": "Score your own budget with the five questions. Seven or more is solid. Under five? Pick the lowest-scoring question and fix only that this month. If you want yours rated in a future episode, send the numbers through the form linked in our bio: numbers only, no names or screenshots. We change details before anything is posted, and every example we make up is labelled fictional.",
      "on_screen_text": "Score yours · DM your numbers",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding up a scorecard with a pencil. No text, no logos, no real people."
     }
@@ -3819,7 +3855,7 @@
     "personalfinance20s",
     "moneymadesimple"
    ],
-   "description": "Rate My Budget long-form: three fictional budgets scored on the five-question scorecard, with fixes and math.\n\nChapters\n0:00 Intro\n0:27 The scorecard\n0:53 Budget 1\n1:20 Fix 1\n1:42 Budget 2\n2:09 Fix 2\n2:36 Budget 3\n3:01 Fix 3\n3:30 Patterns\n3:53 Your turn\n\nAll budgets are fictional examples, not real people.\n\nExamples are hypothetical and for education only. Not financial or tax advice.",
+   "description": "Rate My Budget long-form: three fictional budgets scored on the five-question scorecard, with fixes and math.\n\nChapters\n0:00 Intro\n0:27 The scorecard\n0:55 Budget 1\n1:23 Fix 1\n1:45 Budget 2\n2:13 Fix 2\n2:41 Budget 3\n3:07 Fix 3\n3:37 A fourth budget, scored live\n4:22 Fix 4\n5:07 Where the points usually go\n5:31 Patterns\n5:55 Your turn\n\nAll budgets are fictional examples, not real people.\n\nExamples are hypothetical and for education only. Not financial or tax advice.",
    "thumbnail_text": "3 budgets rated",
    "sources": [
     "https://www.consumerfinance.gov/about-us/blog/budgeting-how-to-create-a-budget-and-stick-with-it/",
@@ -3897,6 +3933,18 @@
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin returning to a wallet, and a calendar with April circled. No text, no logos, no real people."
     },
     {
+     "heading": "Worked example: a first return",
+     "narration": "Here's a simple first return, worked out. A fictional student worked part time and earned twenty-four thousand dollars in wages, with fourteen hundred dollars of federal income tax withheld, shown on the W-2. Nobody can claim them as a dependent. Subtract the standard deduction, about sixteen thousand one hundred on 2026 returns, and taxable income is seventy-nine hundred dollars. All of that falls in the ten percent bracket, so the tax is seven hundred ninety. They had fourteen hundred withheld, so the refund is about six hundred ten dollars, before any credits they might qualify for. That's the whole return in four numbers: wages, deduction, tax, and withholding.",
+     "on_screen_text": "$24,000 − $16,100 = $7,900 · tax $790 · refund ≈ $610",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a W-2 next to a calculator. No text, no logos, no real people."
+    },
+    {
+     "heading": "Keep a copy",
+     "narration": "Once you've filed, save a PDF of the return and your W-2s in one folder, named with the year. Next year's software may ask for this year's numbers, and lenders or landlords sometimes ask for past returns. The IRS generally suggests keeping tax records for at least three years.",
+     "on_screen_text": "Save a PDF · keep 3+ years",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a folder with a year label. No text, no logos, no real people."
+    },
+    {
      "heading": "Deadlines",
      "narration": "Key dates: W-2s should arrive by the end of January. The filing deadline is usually April fifteenth. If you can't file by then, you can request an extension, but an extension to file isn't an extension to pay. And remember, contributions to an IRA for last year can still be made until that April deadline, which can also help you qualify for the Saver's Credit.",
      "on_screen_text": "Dates: late Jan forms · April deadline",
@@ -3927,7 +3975,7 @@
     "personalfinance20s",
     "moneymadesimple"
    ],
-   "description": "A beginner's walkthrough of a first federal tax return: whether to file, documents, free filing, status and dependents, deductions, credits, refunds, deadlines and scams.\n\nChapters\n0:00 Intro\n0:37 Do you need to file?\n1:11 Gather\n1:39 Free filing\n2:09 Filing status and dependents\n2:39 The standard deduction\n3:03 Credits\n3:30 Refund or owe\n3:58 Deadlines\n4:25 Scams\n4:52 Recap\n\nExamples are hypothetical and for education only. Not financial or tax advice.",
+   "description": "A beginner's walkthrough of a first federal tax return: whether to file, documents, free filing, status and dependents, deductions, credits, refunds, deadlines and scams.\n\nChapters\n0:00 Intro\n0:38 Do you need to file?\n1:13 Gather\n1:41 Free filing\n2:12 Filing status and dependents\n2:43 The standard deduction\n3:09 Credits\n3:36 Refund or owe\n4:06 Worked example: a first return\n4:50 Keep a copy\n5:11 Deadlines\n5:39 Scams\n6:06 Recap\n\nExamples are hypothetical and for education only. Not financial or tax advice.",
    "thumbnail_text": "First tax return",
    "sources": [
     "https://www.irs.gov/help/ita/do-i-need-to-file-a-tax-return",
@@ -4032,6 +4080,18 @@
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small jar catching a slice of every incoming coin. No text, no logos, no real people."
     },
     {
+     "heading": "Worked example: $8,000 of profit",
+     "narration": "Let's put it together with fictional numbers. A side hustle brings in ten thousand dollars, with two thousand of business expenses. Profit is eight thousand. Self-employment tax applies to about ninety-two percent of profit, at fifteen point three percent: roughly eleven hundred thirty dollars. Half of that is deductible, so about seventy-four hundred is left for income tax. In the twelve percent bracket, that's about eight hundred ninety dollars. Total: roughly two thousand dollars, about twenty-five percent of profit. That's why the twenty-five to thirty percent set-aside rule works for many people. Spread across four quarters, it's about five hundred dollars a payment.",
+     "on_screen_text": "$8,000 profit → ≈ $1,130 SE + ≈ $890 income tax ≈ $2,020",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a jar labelled tax. No text, no logos, no real people."
+    },
+    {
+     "heading": "The quarterly dates",
+     "narration": "The four estimated payment dates are usually April fifteenth, June fifteenth, September fifteenth and January fifteenth of the next year. When one falls on a weekend or holiday, it moves to the next business day. Put all four in your calendar now, with a reminder a week before each, and pay online at IRS dot gov slash payments. Missing one usually means a small penalty, charged like interest, so paying even part of it on time helps.",
+     "on_screen_text": "Apr 15 · Jun 15 · Sep 15 · Jan 15",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with four circles. No text, no logos, no real people."
+    },
+    {
      "heading": "When to get help",
      "narration": "When should you get help? If your side income is growing fast, you have employees, you sell physical inventory, or you're unsure about a deduction, a one-time session with a tax professional can pay for itself. Look for an enrolled agent or CPA, and check credentials. VITA volunteers can't handle every self-employment situation, so ask first.",
      "on_screen_text": "Growing fast? Talk to a pro once",
@@ -4056,7 +4116,7 @@
     "taxseason",
     "moneymadesimple"
    ],
-   "description": "How side hustle income is taxed: what counts, 1099 forms, self-employment tax, quarterly payments, safe harbor, deductions, records and a set-aside rule.\n\nChapters\n0:00 Intro\n0:29 What counts\n0:57 The forms\n1:25 Self-employment tax\n1:56 Quarterly payments\n2:27 Safe harbor\n2:55 Deductions\n3:21 Records\n3:49 Set-aside rule\n4:13 When to get help\n4:36 Recap\n\nExamples are hypothetical and for education only. Not financial or tax advice.",
+   "description": "How side hustle income is taxed: what counts, 1099 forms, self-employment tax, quarterly payments, safe harbor, deductions, records and a set-aside rule.\n\nChapters\n0:00 Intro\n0:29 What counts\n0:59 The forms\n1:27 Self-employment tax\n2:00 Quarterly payments\n2:31 Safe harbor\n3:00 Deductions\n3:27 Records\n3:56 Set-aside rule\n4:21 Worked example: $8,000 of profit\n5:04 The quarterly dates\n5:36 When to get help\n6:00 Recap\n\nExamples are hypothetical and for education only. Not financial or tax advice.",
    "thumbnail_text": "Side hustle taxes",
    "sources": [
     "https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes",

@@ -2,7 +2,7 @@
 
 This series follows recommendation 6 of the competitor teardown (research/scouting/faceless-teardown.md, PR #2). Each carousel states one common money claim and then the arithmetic that tests it, rendered in our own carousel style. Per the teardown, we don't copy Personal Finance Club's chart style, colours or myth list.
 
-- **Schedule:** Saturdays at 19:00 ET, on Instagram, from **Sat Nov 21, 2026 to Sat Feb 6, 2027**. Saturday is the only weekday with room on Instagram in every week of months 1–7: Saturday has a Short at 12:30 but no carousel. With every pack running together (months 1–7, the holiday add-on and this series), no platform goes over 2 posts a day. `tests/test_pack.py::test_myth_vs_math_saturdays_fit_under_the_cap` checks this.
+- **Schedule:** Saturdays at 19:00 ET on Instagram (the Pinterest copy goes at 11:00), from **Sat Nov 21, 2026 to Sat Feb 6, 2027**. Saturday is the only weekday with room on Instagram in every week of months 1–7: Saturday has a Short at 12:30 but no carousel. With every pack running together (months 1–7, the holiday add-on and this series), no platform goes over 2 posts a day. `tests/test_pack.py::test_myth_vs_math_saturdays_fit_under_the_cap` checks this.
 - **Slides:** each carousel has 7. The hook slide, the myth, three slides of math, the verdict and a rule to act on. Every number is worked out in the caption and listed in claims_to_verify.
 - **Rules:** every example is illustrative, and every return assumption is labelled as an assumption, not a promise. There are no income promises and no testimonials.
 
