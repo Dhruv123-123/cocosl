@@ -50,3 +50,24 @@ def test_welcome_via_sender_skips_worker(factory, monkeypatch):
     monkeypatch.setattr(factory, "brands", lambda: {"money-made-simple": brand})
     res = run_sequences(factory)
     assert res["brands"]["money-made-simple"]["handled_by"] == "sender"
+
+
+def test_money_basics_course_exports_as_its_own_sequence(factory):
+    from contentfactory.funnel.sequences import load_sequence, validate_sequence
+    seq = load_sequence(factory.settings, "money-made-simple", "money-basics")
+    assert seq is not None and seq.name == "money-basics" and [s.day_offset for s in seq.steps] == list(range(7))
+    assert validate_sequence(factory.settings, factory.brand("money-made-simple"), seq) == []
+    # the subjects match the landing page's day titles
+    from pathlib import Path
+    page = (Path(__file__).resolve().parents[1] / "site" / "content" / "money-basics.md").read_text()
+    for n, step in enumerate(seq.steps, 1):
+        title = step.subject.split(": ", 1)[1]
+        assert f"### Day {n}: " in page and title.lower() in page.lower(), step.subject
+    out, rows = se.export(factory, "money-made-simple", sequence="money-basics")
+    assert len(rows) == 7 and "money-basics" in out.name and [r[2] for r in rows] == [0, 1, 1, 1, 1, 1, 1]
+    check = (out / "CHECKLIST.md").read_text()
+    assert "money-basics automation" in check and "welcome_via" not in check
+    html = (sorted(p for p in out.iterdir() if p.is_dir())[0] / "body.html").read_text()
+    assert "moneymadesimple.netlify.app/blog/how-to-make-a-budget-you-will-keep/" in html
+    assert "fact-checked by a person" in html
+    assert load_sequence(factory.settings, "money-made-simple").name == "welcome"  # the welcome is unchanged
