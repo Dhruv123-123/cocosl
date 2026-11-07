@@ -75,6 +75,8 @@ factory export-week <brand> [--weeks 4] [--manual-only]  # one zip per week, pos
 factory scorecard [--save] [--manual-template]  # GO_LIVE R8 weekly scorecard from your imports, stop/change/watch flags
 factory backup --archive [--with-media]       # one dated zip: database, brands, packs, recordings, notes
 factory restore <archive.zip> [--yes]        # lists first; --yes restores and keeps what it replaced
+factory sequence-export <brand> --for sender  # welcome emails as a Sender automation: one folder per step + CHECKLIST
+factory subscribers-export <brand> --for sender  # two CSVs (already welcomed / not) in Sender's date format
 scripts/smoke_fresh_clone.sh                 # fresh clone → install → init → doctor → render one post per brand → launch-check
 factory ui                                   # one local page (127.0.0.1 only): calendar, review queue, recordings, launch check
 factory manual [build|copy <pub>|done <pub> --url]  # TikTok + Pinterest post-by-hand packages

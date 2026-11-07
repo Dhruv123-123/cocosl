@@ -321,6 +321,44 @@ border-radius:8px;font-weight:700;text-decoration:none">Yes, subscribe me</a></p
 
 
 # ---------------------------------------------------------------- export
+def _sender_ts(value) -> str:
+    """Sender's importer wants 'YYYY-MM-DD hh:mm:ss' in UTC."""
+    from datetime import datetime, timezone
+    if not value:
+        return ""
+    try:
+        dt = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+    except ValueError:
+        return str(value)
+    if dt.tzinfo:
+        dt = dt.astimezone(timezone.utc)
+    return dt.strftime("%Y-%m-%d %H:%M:%S")
+
+
+def export_subscribers_sender(factory, brand, out_dir: Path | None = None) -> list[Path]:
+    """Two CSVs for Sender: people who already got a live welcome email (import them with
+    "Trigger active automations upon import" unticked) and people who didn't (ticked)."""
+    b = _brand(factory, brand)
+    rows = store.list_subscribers(factory.db, b.slug, "confirmed", limit=1_000_000)
+    welcomed = {r["subscriber_id"] for r in factory.db.query(
+        "SELECT DISTINCT subscriber_id FROM emails_sent WHERE brand = ? AND kind LIKE 'sequence:%' AND status = 'sent'",
+        [b.slug])}
+    out_dir = out_dir or _newsletter_dir(factory, b)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    day = now_iso()[:10]
+    paths = []
+    for name, keep in (("welcomed", True), ("not-welcomed", False)):
+        path = out_dir / f"subscribers-{b.slug}-{day}-sender-{name}.csv"
+        with path.open("w", newline="") as f:
+            w = csv.writer(f)
+            w.writerow(["email", "source", "subscribed_at", "confirmed_at"])
+            for r in rows:
+                if (r["id"] in welcomed) == keep:
+                    w.writerow([r["email"], r["source"], _sender_ts(r["created_at"]), _sender_ts(r["confirmed_at"])])
+        paths.append(path)
+    return paths
+
+
 def export_subscribers_csv(factory, brand, path: Path | None = None) -> Path:
     """Confirmed subscribers as CSV (email first; works with Beehiiv, Kit and
     Mailchimp importers). Pending and unsubscribed people are never exported."""

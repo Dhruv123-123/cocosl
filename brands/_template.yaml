@@ -63,5 +63,6 @@ products:
   - {name: "The 20-Minute Budget (Notion + Sheets template)", url: "https://example.gumroad.com/l/budget", price: 12}
 ai_disclosure: "Visuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person. Not financial advice."
 scripts_by: ai_assisted   # or person, if you write the scripts yourself (then you may say so in ai_disclosure)
+welcome_via: factory      # or sender / kit once the welcome automation is built there (`factory sequence-export`)
 realistic_synthetic_media: false
 require_human_review: true
