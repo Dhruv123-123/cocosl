@@ -16,7 +16,7 @@ GOOD_TO_KNOW = """BUENO SABER
 - Todo está en español. La hoja viene llena con un ejemplo inventado para que veas cómo funciona. Las celdas amarillas son las que llenas tú.
 - Solo para uso personal. Por favor, no revendas, compartas ni redistribuyas los archivos.
 - Contenido educativo, no es asesoría financiera, fiscal, legal ni de inversión. Pensado para quien vive en Estados Unidos.
-- Cómo se hizo: escrito y verificado por una persona de Dinero Simple. Herramientas de IA ayudaron con borradores y diseño.
+- Cómo se hizo: redactado con ayuda de herramientas de IA y verificado por una persona de Dinero Simple. La IA también ayudó con el diseño.
 - ¿Una pregunta o algo no funciona? Escríbenos por mensajes de Etsy."""
 
 MORE = f"""MÁS EN LA TIENDA
