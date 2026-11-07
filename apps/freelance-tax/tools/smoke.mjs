@@ -112,11 +112,11 @@ for (const [name, viewport] of [['desktop', { width: 1280, height: 900 }], ['pho
     await page.goto(url + slug);
     const found = await page.locator(sel).count();
     const wide = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
-    // Every download link on the thanks page (calendar + bonus checklist) must resolve.
+    // Every download link on the thanks page (calendar + bonus checklist + jar tracker) must resolve.
     const hrefs = slug.includes('thanks') ? await page.locator(sel).evaluateAll((as) => as.map((a) => a.href)) : [];
     const codes = await Promise.all(hrefs.map(async (h) => (await fetch(h)).status));
     const pdf = codes.every((c) => c === 200) ? 200 : codes.find((c) => c !== 200);
-    const good = found === (slug.includes('thanks') ? 2 : 1) && !wide && pdf === 200 && !errors.length;
+    const good = found === (slug.includes('thanks') ? 3 : 1) && !wide && pdf === 200 && !errors.length;
     if (!good) failed = true;
     console.log(name, slug, good ? 'ok' : 'FAIL', { found, wide, pdf, errors });
     if (shots) await page.screenshot({ path: `${shots}/${name}-${slug.replace(/\//g, '_')}.png`, fullPage: true });

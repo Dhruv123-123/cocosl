@@ -22,6 +22,7 @@ MONTH5 = "month-5/content.json"
 MONTH6 = "month-6/content.json"
 DRIVERS = "drivers/content.json"
 YT6 = "youtube-6wk/content.json"
+JAR = "jar-challenge/content.json"
 
 
 def test_brand_loads_with_placeholder_affiliates(factory):
@@ -35,7 +36,7 @@ def test_brand_loads_with_placeholder_affiliates(factory):
 import pytest
 
 
-@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5]), (MONTH4, [22, 13, 4]), (MONTH5, [22, 13, 5]), (MONTH6, [22, 14, 4]), (DRIVERS, [10, 0, 0]), (YT6, [0, 0, 6])])
+@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5]), (MONTH4, [22, 13, 4]), (MONTH5, [22, 13, 5]), (MONTH6, [22, 14, 4]), (DRIVERS, [10, 0, 0]), (YT6, [0, 0, 6]), (JAR, [10, 1, 0])])
 def test_content_is_valid(factory, name, counts):
     from contentfactory.schemas import Script
     brand = factory.brand("1099-money")
@@ -388,7 +389,7 @@ def test_threads_x_kit_fits_both_platforms_and_is_ready():
 
 def test_short_titles_fit_in_60_characters():
     # Shorts titles get cut off in the feed past ~60 characters; YouTube's hard limit is 100 for any video.
-    files = ["content.json", MONTH1, MONTH2, MONTH3, MONTH4, MONTH5, MONTH6, DRIVERS, YT6]
+    files = ["content.json", MONTH1, MONTH2, MONTH3, MONTH4, MONTH5, MONTH6, DRIVERS, YT6, JAR]
     for name in files:
         for it in _items(name):
             title = it["script"]["title"]
@@ -429,3 +430,26 @@ def test_six_week_youtube_plan_has_charts_end_slates_and_new_titles(factory):
     slots, leftover = plan(factory.brand("1099-money"), plan_items, date(2027, 6, 6), 36)
     assert not leftover
     assert sorted(s.when.date() for s in slots) == [date(2027, 6, 6) + timedelta(weeks=k) for k in range(6)]
+
+
+def test_tax_jar_challenge_runs_weekly_to_jan_15_and_stays_honest():
+    items = _items(JAR)
+    earlier = {i["script"]["title"].lower() for n in ["content.json", MONTH1, MONTH2, MONTH3, MONTH4, MONTH5, MONTH6, DRIVERS, YT6]
+               for i in _items(n)}
+    assert not earlier & {i["script"]["title"].lower() for i in items}
+    shorts = [i for i in items if i["format"] == "short"]
+    days = [date.fromisoformat(i["post_on"]) for i in shorts]
+    assert days[0] == date(2026, 11, 16) and days[-1] == date(2027, 1, 15)
+    assert days[1:-1] == [date(2026, 11, 23) + timedelta(weeks=k) for k in range(8)]  # every Monday
+    assert [i["series"] for i in shorts] == [f"Tax Jar Challenge {k}/10" for k in range(1, 11)]
+    assert len({i["format_style"] for i in shorts}) == 10  # each check-in built differently
+    for it in items:
+        text = " ".join(s["narration"] for s in it["script"]["segments"]) + it["script"]["caption"]
+        assert not re.search(r"\byou will save\b|\bI saved\b|\bcomment [A-Z]{3,}\b", text), it["script"]["title"]
+        if re.search(r"\bSam\b", text):
+            assert "fictional" in text.lower()
+    for it in shorts[1:-1]:
+        assert "pinned" in " ".join(s["narration"] for s in it["script"]["segments"])  # points back to day 1
+    pdf = ROOT / "apps" / "freelance-tax" / "downloads" / "tax-jar-tracker.pdf"
+    assert pdf.exists() and pdf.read_bytes()[:4] == b"%PDF"
+    assert "tax-jar-tracker.pdf" in (ROOT / "apps" / "freelance-tax" / "free" / "thanks" / "index.html").read_text()
