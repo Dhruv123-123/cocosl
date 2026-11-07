@@ -4,7 +4,7 @@
 {% block refresh %}{% endblock %}
 {% block content %}
 <div class="page-head">
-  <div><h1>Review queue</h1><p class="muted">{{ items|length }} post{{ 's' if items|length != 1 }} waiting. Watch it, fix the caption, fact-check every claim, then approve.</p></div>
+  <div><h1>Review queue</h1><p class="muted">{{ items|length }} post{{ 's' if items|length != 1 }} waiting. Watch it, fix the caption, fact-check every claim, then approve. <a href="/review/fast{{ '?brand=' ~ brand if brand }}">Fast review with the keyboard →</a></p></div>
   {% if brands|length > 1 %}
   <div class="tabs" style="margin:0"><a href="/review" class="{{ 'active' if not brand }}">All</a>{% for slug, b in brands.items() %}<a href="/review?brand={{ slug }}" class="{{ 'active' if slug == brand }}">{{ b.name }}</a>{% endfor %}</div>
   {% endif %}
