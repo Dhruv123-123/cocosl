@@ -3,6 +3,7 @@
 import config from './config.js';
 import { quarterlyPlan, nextPayment, TAX_YEAR } from './lib/tax.js';
 import { setupSignup } from './signup.js';
+import { setupSite } from './site.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const money = (x) => '$' + Math.round(x).toLocaleString('en-US');
@@ -85,11 +86,7 @@ function init() {
   });
   $('#offers').innerHTML = offers();
   setupSignup();
-  if (config.analytics.plausibleDomain) {
-    const s = document.createElement('script');
-    s.defer = true; s.dataset.domain = config.analytics.plausibleDomain; s.src = 'https://plausible.io/js/script.js';
-    document.head.appendChild(s);
-  }
+  setupSite();
   update();
 }
 

@@ -10,7 +10,7 @@
 </head>
 <body>
 <header class="top"><a class="logo" href="../../"><span class="mark">1M</span> <span>1099 Money</span></a>
-<span class="home">Free tools for freelancers</span></header>
+<nav class="nav"><a href="../../">Calculator</a><a href="../../compare/">Compare tools</a><a href="../../free/">Free calendar</a></nav></header>
 <main>
 <h1>You're in. Here's your calendar.</h1>
 <p class="lede">It's also on its way to your inbox. Print page 5 and put it where you'll see it.</p>
@@ -42,6 +42,7 @@
 </footer>
 <script type="module">
 import config from '../../config.js';
+import { setupSite } from '../../site.js';
 // The tracker first, then the rest of the ladder; anything still on a REPLACE_ME link stays hidden.
 const tpl = document.getElementById('offer'), box = document.getElementById('offers');
 for (const p of [config.product, ...(config.upsells || [])]) {
@@ -53,6 +54,7 @@ for (const p of [config.product, ...(config.upsells || [])]) {
   n.querySelector('[data-url]').href = p.url;
   box.appendChild(n);
 }
+setupSite();
 </script>
 </body>
 </html>

@@ -41,18 +41,39 @@ export default {
   ],
 
   // Affiliate offers. Keep the disclosure on anything that pays you.
+  // `banking` and `invoicing` are the two offers under the calculator result.
   affiliates: {
     banking: {
       label: 'Open a separate business checking account',
       blurb: 'Keep client money and tax savings out of your personal account. Look for no monthly fee and FDIC insurance (for apps, check the partner bank).',
-      url: 'https://REPLACE_ME/novo',
+      url: 'https://REPLACE_ME/found',
     },
     invoicing: {
       label: 'Invoicing and bookkeeping software',
       blurb: 'Send invoices with a pay-now link and track expenses in one place, so your profit number is always current.',
       url: 'https://REPLACE_ME/freshbooks',
     },
+    // Comparison pages (compare/). Until a URL is real, the button goes to the provider's own homepage
+    // with no affiliate label. Programs and payouts: research/06-freelancer-affiliate-programs.md.
+    found: { url: 'https://REPLACE_ME/found' },            // Impact
+    lili: { url: 'https://REPLACE_ME/lili' },              // email Lili (no public creator program)
+    bluevine: { url: 'https://REPLACE_ME/bluevine' },      // partnerinquiry@bluevine.com
+    novo: { url: 'https://REPLACE_ME/novo' },              // PartnerStack
+    relay: { url: 'https://REPLACE_ME/relay' },
+    keeper: { url: 'https://REPLACE_ME/keeper' },          // Tune, up to $50 per referral
+    freetaxusa: { url: 'https://REPLACE_ME/freetaxusa' },  // direct, 50% per sale
+    turbotax: { url: 'https://REPLACE_ME/turbotax' },
+    hrblock: { url: 'https://REPLACE_ME/hrblock' },
+    quickbooks: { url: 'https://REPLACE_ME/quickbooks' },  // QuickBooks Business Affiliate Program (needs an EIN)
+    freshbooks: { url: 'https://REPLACE_ME/freshbooks' },  // PartnerStack, up to $200 per paid subscriber
+    wave: { url: 'https://REPLACE_ME/wave' },
+    collective: { url: 'https://REPLACE_ME/collective' },  // $600 per S corp referral; confirm publisher use first
+    gusto: { url: 'https://REPLACE_ME/gusto' },
+    healthsherpa: { url: 'https://REPLACE_ME/healthsherpa' },
+    stride: { url: 'https://REPLACE_ME/stride' },
   },
 
-  analytics: { plausibleDomain: '' },
+  // Plausible (cookieless). Add this domain in Plausible with the goals in docs/UTM.md section 3.
+  // Empty turns analytics off. Never loads on localhost.
+  analytics: { plausibleDomain: '1099money.netlify.app', plausibleHost: 'https://plausible.io' },
 };

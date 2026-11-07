@@ -31,6 +31,17 @@ for (const [name, viewport] of [['desktop', { width: 1280, height: 900 }], ['pho
   console.log(name, ok ? 'ok' : 'FAIL', { big, overflow, errors });
   if (shots) await page.screenshot({ path: `${shots}/${name}.png`, fullPage: name === 'phone' });
   // The funnel pages: landing page with the signup form, and the download page.
+  // Comparison pages: provider cards render, buttons fall back to homepages, nothing overflows.
+  for (const slug of ['compare/', 'compare/freelancer-banking/', 'compare/tax-software/', 'compare/invoicing-tools/', 'compare/s-corp-services/', 'compare/health-insurance/']) {
+    await page.goto(url + slug);
+    const cards = await page.locator(slug === 'compare/' ? '.hub a' : '.pick').count();
+    const placeholder = await page.locator('a[href*="REPLACE_ME"]:visible').count();
+    const wide = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
+    const good = cards >= 3 && !placeholder && !wide && !errors.length;
+    if (!good) failed = true;
+    console.log(name, slug, good ? 'ok' : 'FAIL', { cards, placeholder, wide, errors });
+    if (shots) await page.screenshot({ path: `${shots}/${name}-${slug.replace(/\//g, '_')}.png`, fullPage: true });
+  }
   for (const [slug, sel] of [['free/', 'form.signup'], ['free/thanks/', 'a[download]']]) {
     await page.goto(url + slug);
     const found = await page.locator(sel).count();

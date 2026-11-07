@@ -23,6 +23,8 @@ export function setupSignup() {
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: new URLSearchParams(new FormData(form)).toString(),
         });
+        const source = form.querySelector('input[name=source]');
+        window.plausible?.('Signup', { props: { brand: '1099-money', form: source ? source.value : form.name } });
         location.href = form.dataset.thanks || 'free/thanks/';
       } catch { form.submit(); }
     });
