@@ -8,7 +8,7 @@ link_clicks. Sales are revenue rows with source 'product' or 'affiliate'.
 from __future__ import annotations
 
 from ..db import DB
-from . import store
+from . import attribution, store
 
 
 def _rate(num: int, den: int) -> float:
@@ -26,10 +26,16 @@ def _views(db: DB, since: str | None) -> dict[str, dict[str, int]]:
     return {r["brand"]: {"views": int(r["views"]), "platform_clicks": int(r["clicks"])} for r in rows}
 
 
+def revenue_by_campaign(db: DB, brand: str | None = None, since: str | None = None) -> list[dict]:
+    """Product + affiliate revenue grouped by utm_campaign (see attribution.py)."""
+    return attribution.revenue_by_campaign(db, brand, since)
+
+
 def funnel_stats(db: DB, brands: list[str] | None = None, since: str | None = None) -> list[dict]:
     """One dict per brand:
     {brand, views, link_clicks, subscribers, pending, sales, revenue_cents,
-     click_rate, signup_rate, sale_rate}  (rates are percentages of the previous step).
+     click_rate, signup_rate, sale_rate, campaigns}  (rates are percentages of the previous step;
+    campaigns = [{campaign, source, medium, sales, revenue_cents}] from UTM in revenue notes).
 
     `since` (ISO date) limits views, signups and sales to that period; the
     affiliate click counter is all-time because it has no timestamps."""
@@ -47,6 +53,10 @@ def funnel_stats(db: DB, brands: list[str] | None = None, since: str | None = No
     sales = {r["brand"]: (int(r["n"]), int(r["c"])) for r in db.query(
         "SELECT brand, COUNT(*) n, COALESCE(SUM(amount_cents), 0) c FROM revenue "
         f"WHERE source IN ('product', 'affiliate') {rev_where} GROUP BY brand", [since] if since else [])}
+    by_campaign: dict[str, list[dict]] = {}
+    for c in attribution.revenue_by_campaign(db, since=since):
+        by_campaign.setdefault(c["brand"], []).append({k: c[k] for k in ("campaign", "source", "medium", "sales",
+                                                                          "revenue_cents")})
     names = brands if brands is not None else sorted(
         {b for b in [*views, *clicks, *subs, *pending, *sales] if b})
     out = []
@@ -57,5 +67,5 @@ def funnel_stats(db: DB, brands: list[str] | None = None, since: str | None = No
         n, cents = sales.get(b, (0, 0))
         out.append({"brand": b, "views": v, "link_clicks": c, "subscribers": s, "pending": pending.get(b, 0),
                     "sales": n, "revenue_cents": cents, "click_rate": _rate(c, v), "signup_rate": _rate(s, c),
-                    "sale_rate": _rate(n, s)})
+                    "sale_rate": _rate(n, s), "campaigns": by_campaign.get(b, [])})
     return out

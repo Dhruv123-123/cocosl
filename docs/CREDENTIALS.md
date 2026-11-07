@@ -50,7 +50,7 @@ Upload the brand kit (`output/<brand>/brand-kit/`): profile picture, banner, bio
 
 ### Meta: Instagram, Facebook Page, Threads
 1. developers.facebook.com → Create app → use case "Manage everything on your Page" / Facebook Login for Business. Add the Instagram product (and the Threads use case for Threads).
-2. Permissions: `instagram_basic`, `instagram_content_publish`, `instagram_manage_insights`, `pages_show_list`, `pages_read_engagement`, `pages_manage_posts`, `read_insights`; Threads: `threads_basic`, `threads_content_publish`, `threads_manage_insights`.
+2. Permissions: `instagram_basic`, `instagram_content_publish`, `instagram_manage_insights`, `pages_show_list`, `pages_read_engagement`, `pages_manage_posts`, `read_insights`, `instagram_manage_comments` (comment inbox; App Review for Advanced Access); Threads: `threads_basic`, `threads_content_publish`, `threads_manage_insights`.
 3. Your own accounts work in Development mode (add yourself as an app role / Threads tester). No App Review is needed for your own accounts.
 4. In Graph API Explorer, generate a user token with those permissions, then:
    `factory auth meta --token <short-lived-token>` → writes `FB_PAGE_ID`, `FB_PAGE_TOKEN`, `IG_USER_ID`, `IG_ACCESS_TOKEN`.
@@ -61,7 +61,7 @@ Limits: Instagram 100 API posts per 24h, Facebook Reels 30 per 24h, Threads 250 
 
 ### YouTube
 1. console.cloud.google.com → new project → enable **YouTube Data API v3**.
-2. OAuth consent screen (External), add yourself as a test user, scopes `youtube.upload`, `youtube.readonly`.
+2. OAuth consent screen (External), add yourself as a test user, scopes `youtube.upload`, `youtube.readonly`, `youtube.force-ssl` (needed to send comment replies from the inbox; re-run `factory auth youtube` if you connected before).
 3. Credentials → OAuth client ID → **Desktop app** → `YT_CLIENT_ID`, `YT_CLIENT_SECRET`.
 4. `factory auth youtube` → browser consent → writes `YT_REFRESH_TOKEN`.
 5. While the consent screen is in "Testing", refresh tokens expire after 7 days. Publish the app (Google verification for sensitive scopes) for permanent tokens, or re-run step 4 weekly.

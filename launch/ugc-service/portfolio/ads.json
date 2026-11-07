@@ -1,0 +1,124 @@
+{
+  "note": "Portfolio sample ads for FICTIONAL brands, transcribed from launch/ugc-service/SAMPLE_ADS.md. Every brand, product and price here is made up. Spokesperson/demo only: no first-person use, results or reviews. Render with: factory portfolio build",
+  "ads": [
+    {
+      "slug": "trailsip",
+      "brand": "TrailSip",
+      "product": "TrailSip collapsible bottle",
+      "category": "Outdoor gear",
+      "style": "Demo + spokesperson",
+      "presenter": "voice",
+      "fictional_price": "$24",
+      "palette": ["#0b2a2a", "#f3f7f2", "#3ddc97", "#ffb347"],
+      "script": {
+        "concept": "Show a full-size bottle folding to pocket size in one push, then the three features that matter on the move.",
+        "hook": "This is a full-size water bottle. Watch.",
+        "segments": [
+          {"heading": "Hook", "narration": "This is a full-size water bottle. Watch.", "on_screen_text": "Full size → pocket size", "visual_prompt": "hand squashing a silicone water bottle flat, bright outdoor light"},
+          {"heading": "Fold", "narration": "When it's empty, it folds down to a third of its height.", "on_screen_text": "Folds to 1/3", "visual_prompt": "collapsed bottle sliding into a jacket pocket"},
+          {"heading": "Fill", "narration": "When you need it, pop it open, 600 millilitres, and clip it anywhere.", "on_screen_text": "600 ml · clip-on", "visual_prompt": "bottle being filled at a tap, carabiner on a backpack strap"},
+          {"heading": "Seal", "narration": "The cap seals, so it's bag-safe. And it's dishwasher safe.", "on_screen_text": "Leak-proof · dishwasher safe", "visual_prompt": "bottle held upside down, cap sealed, no drips"},
+          {"heading": "CTA", "narration": "TrailSip. Link below.", "on_screen_text": "TrailSip · $24", "visual_prompt": "product shot on white with space for a price card"}
+        ],
+        "cta": "Link below.",
+        "on_screen_disclosure": "AI-generated voice · Ad",
+        "variations": ["Your bag is full of air. Specifically, your water bottle.", "Airport security tip nobody tells you: bring it empty, fold it flat."]
+      }
+    },
+    {
+      "slug": "lumen-and-loaf",
+      "brand": "Lumen & Loaf",
+      "product": "Lumen & Loaf bread proofing kit",
+      "category": "Kitchen",
+      "style": "Product demo voiceover",
+      "presenter": "voice",
+      "fictional_price": "$39",
+      "palette": ["#2b1a10", "#fbf4e8", "#e8a54b", "#c8553d"],
+      "script": {
+        "concept": "Same dough, two loaves: show that the basket is the difference, then walk through the four-piece kit.",
+        "hook": "Same recipe. The difference is the basket.",
+        "segments": [
+          {"heading": "Hook", "narration": "Same recipe. The difference is the basket.", "on_screen_text": "Same dough. Different shape.", "visual_prompt": "flat loaf next to a tall scored loaf on a wooden board"},
+          {"heading": "Kit", "narration": "The Lumen and Loaf kit has the four things beginners usually skip.", "on_screen_text": "4-piece proofing kit", "visual_prompt": "basket, linen liner, scoring lame and timing card laid out"},
+          {"heading": "Proof", "narration": "The basket holds the dough's shape while it rises, so it bakes up instead of out.", "on_screen_text": "Holds shape while it proofs", "visual_prompt": "dough resting in a floured banneton basket overnight"},
+          {"heading": "Bake", "narration": "Flip it out, score it, bake. The timing card walks you through each step.", "on_screen_text": "Step-by-step timing card", "visual_prompt": "dough being scored with a lame before going into the oven"},
+          {"heading": "CTA", "narration": "The Lumen and Loaf proofing kit. Link below.", "on_screen_text": "Lumen & Loaf · $39", "visual_prompt": "kit on a wooden board with space for a price card"}
+        ],
+        "cta": "Link below.",
+        "on_screen_disclosure": "AI-generated voice · Ad",
+        "variations": ["If your sourdough spreads like a pancake, read this.", "Four tools. One taller loaf."]
+      }
+    },
+    {
+      "slug": "hound-and-hollow",
+      "brand": "Hound & Hollow",
+      "product": "Hound & Hollow hands-free leash",
+      "category": "Pet",
+      "style": "Spokesperson",
+      "presenter": "presenter",
+      "fictional_price": "$32",
+      "palette": ["#14213d", "#f6f1e9", "#fca311", "#4ea8de"],
+      "script": {
+        "concept": "Both hands full, dog still on the leash: a spokesperson walks through the belt, the bungee and the pocket.",
+        "hook": "Both hands full. Dog still on the leash.",
+        "segments": [
+          {"heading": "Hook", "narration": "Both hands full. Dog still on the leash.", "on_screen_text": "Hands-free walking", "visual_prompt": "coffee cup and phone in hand, leash belt around the waist"},
+          {"heading": "Belt", "narration": "The leash clips around your waist and adjusts to fit.", "on_screen_text": "Adjustable waist belt", "visual_prompt": "close-up of a belt clip and adjustable strap"},
+          {"heading": "Bungee", "narration": "This stretch section takes the edge off sudden pulls.", "on_screen_text": "Shock-absorbing bungee", "visual_prompt": "stretch section of a leash extending in slow motion"},
+          {"heading": "Pocket", "narration": "And there's a zip pocket for keys, phone, and bags.", "on_screen_text": "Zip pocket", "visual_prompt": "zip pocket on a belt opened to show keys and a phone"},
+          {"heading": "CTA", "narration": "Hound and Hollow. Link below.", "on_screen_text": "Hound & Hollow · $32", "visual_prompt": "product on white with space for a price card"}
+        ],
+        "cta": "Link below.",
+        "on_screen_disclosure": "AI-generated presenter · Ad",
+        "variations": ["Running with a dog, minus the arm workout.", "Three things this leash does that yours doesn't."]
+      }
+    },
+    {
+      "slug": "deskline",
+      "brand": "Deskline",
+      "product": "Deskline cable tray",
+      "category": "Home office",
+      "style": "Demo voiceover",
+      "presenter": "voice",
+      "fictional_price": "$29",
+      "palette": ["#111827", "#f5f7fa", "#22d3ee", "#a78bfa"],
+      "script": {
+        "concept": "Before and after under the desk: a tool-free tray gets every cable off the floor in one shot.",
+        "hook": "This is what's under most desks.",
+        "segments": [
+          {"heading": "Hook", "narration": "This is what's under most desks.", "on_screen_text": "Be honest.", "visual_prompt": "tangle of cables under a desk"},
+          {"heading": "Install", "narration": "Deskline clamps on by hand. No drilling, no screws.", "on_screen_text": "Tool-free install", "visual_prompt": "hands clamping a steel tray to a desk edge"},
+          {"heading": "Tidy", "narration": "Your power strip and cables go in the tray, off the floor.", "on_screen_text": "Off the floor", "visual_prompt": "power strip and cables laid into an under-desk tray"},
+          {"heading": "CTA", "narration": "Deskline cable tray. Link below.", "on_screen_text": "Deskline · $29", "visual_prompt": "clean desk underside with space for a price card"}
+        ],
+        "cta": "Link below.",
+        "on_screen_disclosure": "AI-generated voice · Ad",
+        "variations": ["A 2-minute desk upgrade you'll notice every day.", "No drill? No problem."]
+      }
+    },
+    {
+      "slug": "fern-street-studio",
+      "brand": "Fern Street Studio",
+      "product": "Fern Street Studio intro offer",
+      "category": "Local fitness",
+      "style": "Spokesperson promo",
+      "presenter": "presenter",
+      "fictional_price": "3 classes for $39",
+      "palette": ["#1f2d24", "#f7f3ee", "#9bc59d", "#f28482"],
+      "script": {
+        "concept": "An easy way in for people who have never tried pilates: small beginner classes and one clear intro offer.",
+        "hook": "Never tried pilates? This is the easy way in.",
+        "segments": [
+          {"heading": "Hook", "narration": "Never tried pilates? This is the easy way in.", "on_screen_text": "New to pilates?", "visual_prompt": "bright studio entrance with plants"},
+          {"heading": "Classes", "narration": "Fern Street Studio runs beginner classes with a maximum of eight people.", "on_screen_text": "Beginner classes · max 8", "visual_prompt": "small calm pilates class in a sunlit room"},
+          {"heading": "Setup", "narration": "Instructors show you how to set up the equipment before you start.", "on_screen_text": "Setup shown first", "visual_prompt": "reformer machine being adjusted"},
+          {"heading": "Offer", "narration": "New clients get three classes for thirty-nine dollars.", "on_screen_text": "3 classes · $39 · new clients", "visual_prompt": "offer card over a soft studio background"},
+          {"heading": "CTA", "narration": "Fern Street Studio. Book through the link.", "on_screen_text": "Book now", "visual_prompt": "map pin and booking button area"}
+        ],
+        "cta": "Book through the link.",
+        "on_screen_disclosure": "AI-generated presenter · Ad",
+        "variations": ["Three classes, thirty-nine dollars, no contract.", "Pilates for people who've never done pilates."]
+      }
+    }
+  ]
+}

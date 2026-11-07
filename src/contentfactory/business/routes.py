@@ -10,9 +10,9 @@ from typing import Any
 from urllib.parse import quote_plus
 
 from fastapi import APIRouter, Depends, File, Form, Request, UploadFile
-from fastapi.responses import HTMLResponse, RedirectResponse, Response
+from fastapi.responses import FileResponse, HTMLResponse, PlainTextResponse, RedirectResponse, Response
 
-from . import affiliates, invoices as inv_mod, pitch, products as prod_mod, revenue as rev_mod, ugc
+from . import affiliates, invoices as inv_mod, onboarding, pitch, products as prod_mod, proposals, revenue as rev_mod, ugc
 from ._util import money
 
 router = APIRouter(prefix="/business", tags=["business"])
@@ -56,8 +56,72 @@ def business_index():
 # --------------------------------------------------------------------------- clients
 @router.get("/clients", response_class=HTMLResponse)
 def clients_page(request: Request, f=Depends(_factory)):
+    outreach = pitch.outreach_today(f.db)
+    in_plan = {x["client"]["id"] for x in outreach["follow_ups"] + outreach["first_touch"]}
     return _render(request, "biz_clients.html", title="Clients", board=ugc.pipeline(f.db),
-                   statuses=ugc.CLIENT_STATUSES, due=ugc.due_follow_ups(f.db), today=datetime.now().date().isoformat())
+                   statuses=ugc.CLIENT_STATUSES, due=[c for c in ugc.due_follow_ups(f.db) if c["id"] not in in_plan],
+                   today=datetime.now().date().isoformat(), outreach=outreach, mailto=_mailto)
+
+
+def _mailto(client: dict, subject: str, body: str) -> str:
+    """mailto: link that opens a pre-filled draft in the user's own mail app (nothing is sent from here)."""
+    from urllib.parse import quote
+    return f"mailto:{quote(client.get('email') or '')}?subject={quote(subject)}&body={quote(body)}"
+
+
+@router.post("/clients/{client_id}/sent")
+def client_sent(client_id: int, back: str = Form(""), f=Depends(_factory)):
+    """'I sent the next email': first pitch (schedules +3/+7 follow-ups) or the next follow-up."""
+    target = _safe_back(back) if back else f"/business/clients/{client_id}"
+    try:
+        res = pitch.mark_sent(f.db, client_id)
+    except (ValueError, KeyError) as e:
+        return _go(target, err=str(e))
+    if res["kind"] == "pitch":
+        dues = ", ".join(st["due"] for st in res["cadence"]["steps"])
+        return _go(target, msg=f"Pitch marked sent. Follow-up drafts scheduled for {dues}.")
+    return _go(target, msg=f"Follow-up {res['step']['n']} marked sent.")
+
+
+@router.post("/clients/{client_id}/proposal")
+def client_proposal(client_id: int, package: str = Form("growth"), addons: list[str] = Form([]),
+                    rush: str = Form(""), products: str = Form(""), discount: str = Form(""),
+                    f=Depends(_factory)):
+    try:
+        proposals.build_proposal(f.db, client_id, package, addons, llm=f.llm, settings=f.settings, rush=bool(rush),
+                                 discount_pct=float(discount or 0),
+                                 products=[p.strip() for p in products.split(",") if p.strip()] or None)
+    except (KeyError, ValueError, ugc.TestimonialError) as e:
+        return _go(f"/business/clients/{client_id}", err=f"Proposal failed: {e}")
+    return _go(f"/business/clients/{client_id}", msg="Proposal ready. Open it, review it, then send it yourself.")
+
+
+@router.get("/clients/{client_id}/proposal")
+def client_proposal_view(client_id: int, pdf: int = 0, f=Depends(_factory)):
+    try:
+        latest = proposals.latest_proposal(ugc.get_client(f.db, client_id))
+    except KeyError:
+        return HTMLResponse("Client not found", status_code=404)
+    if not latest:
+        return HTMLResponse("No proposal yet. Generate one from the client page.", status_code=404)
+    path = _output_file(f, latest.get("pdf") if pdf else latest.get("html"))
+    if path is None:
+        return HTMLResponse("Proposal file not found (PDF needs Chromium; the HTML version is always saved).",
+                            status_code=404)
+    if pdf:
+        return FileResponse(path, media_type="application/pdf", filename=path.name)
+    return HTMLResponse(path.read_text(encoding="utf-8"))
+
+
+def _output_file(f, stored: str | None):
+    """Resolve a stored path, only if it lives inside the output folder."""
+    from pathlib import Path
+    if not stored:
+        return None
+    root = Path(f.settings.output_dir).resolve()
+    p = Path(stored)
+    p = (p if p.is_absolute() else root / p).resolve()
+    return p if p.is_file() and p.is_relative_to(root) else None
 
 
 @router.post("/clients")
@@ -105,6 +169,7 @@ def client_page(request: Request, client_id: int, f=Depends(_factory)):
         return _go("/business/clients", err=f"No client #{client_id}")
     return _render(request, "biz_client.html", title=client["name"], client=client,
                    statuses=ugc.CLIENT_STATUSES, draft=pitch.latest_draft(client),
+                   cadence=client["meta"].get("cadence"), proposal=proposals.latest_proposal(client),
                    orders=ugc.orders(f.db, client_id=client_id), invoices=inv_mod.invoices(f.db, client_id=client_id),
                    packages=ugc.PACKAGES, addons=ugc.ADDONS, order_statuses=ugc.ORDER_STATUSES,
                    revenue_cents=f.db.scalar("SELECT COALESCE(SUM(amount_cents),0) FROM revenue WHERE client_id = ?",
@@ -166,7 +231,7 @@ def client_order(client_id: int, package: str = Form(...), addons: list[str] = F
                                brief={"notes": notes, "product": product})
     except (KeyError, ValueError) as e:
         return _go(f"/business/clients/{client_id}", err=str(e))
-    return _go(f"/business/clients/{client_id}", msg=f"Order #{oid} created")
+    return _go(f"/business/orders/{oid}/brief", msg=f"Order #{oid} created. Send the client the brief questionnaire.")
 
 
 # --------------------------------------------------------------------------- orders
@@ -186,6 +251,75 @@ def order_status(order_id: int, status: str = Form(...), back: str = Form("/busi
     except (ValueError, KeyError) as e:
         return _go(_safe_back(back), err=str(e))
     return _go(_safe_back(back), msg=f"Order #{order_id}: {status}")
+
+
+@router.get("/orders/{order_id}/brief", response_class=HTMLResponse)
+def order_brief_page(request: Request, order_id: int, f=Depends(_factory)):
+    try:
+        order = ugc.get_order(f.db, order_id)
+    except KeyError:
+        return _go("/business/orders", err=f"No order #{order_id}")
+    client = ugc.get_client(f.db, order["client_id"])
+    onboarding.setup_order(f.db, order_id)  # orders created before onboarding existed
+    order = ugc.get_order(f.db, order_id)
+    brief = order.get("brief") or {}
+    return _render(request, "biz_brief.html", title=f"Brief: order #{order_id}", order=order, client=client,
+                   brief=brief, answers=brief.get("answers") or {}, acks=brief.get("acknowledgements") or [],
+                   questions=onboarding.QUESTIONS, acknowledgements=onboarding.ACKNOWLEDGEMENTS,
+                   checklist=brief.get("checklist") or [], progress=onboarding.progress(order),
+                   package=ugc.PACKAGES.get(order["package"]),
+                   markdown=onboarding.questionnaire_markdown(order, client, pitch.SenderProfile.from_env().name))
+
+
+@router.post("/orders/{order_id}/brief")
+async def order_brief_save(request: Request, order_id: int, f=Depends(_factory)):
+    form = await request.form()
+    answers = {q["key"]: form.get(q["key"], "") for q in onboarding.QUESTIONS}
+    try:
+        res = onboarding.save_answers(f.db, order_id, answers, acknowledgements=form.getlist("ack"))
+    except KeyError as e:
+        return _go("/business/orders", err=str(e))
+    if res["complete"]:
+        return _go(f"/business/orders/{order_id}/brief", msg="Brief complete. Next: write the scripts.")
+    return _go(f"/business/orders/{order_id}/brief", err="Saved. Still missing: " + ", ".join(res["missing"]))
+
+
+@router.get("/orders/{order_id}/brief.md")
+def order_brief_markdown(order_id: int, f=Depends(_factory)):
+    try:
+        order = ugc.get_order(f.db, order_id)
+    except KeyError:
+        return PlainTextResponse("Order not found", status_code=404)
+    text = onboarding.questionnaire_markdown(order, ugc.get_client(f.db, order["client_id"]),
+                                             pitch.SenderProfile.from_env().name)
+    return PlainTextResponse(text, media_type="text/markdown; charset=utf-8",
+                             headers={"Content-Disposition": f'inline; filename="order-{order_id}-brief.md"'})
+
+
+@router.post("/orders/{order_id}/checklist")
+def order_checklist(order_id: int, key: str = Form(...), done: str = Form(""), f=Depends(_factory)):
+    try:
+        onboarding.set_check(f.db, order_id, key, done=bool(done))
+    except KeyError as e:
+        return _go(f"/business/orders/{order_id}/brief", err=str(e))
+    return _go(f"/business/orders/{order_id}/brief#checklist")
+
+
+@router.post("/orders/{order_id}/ad-script-from-brief")
+def order_ad_script_from_brief(order_id: int, f=Depends(_factory)):
+    try:
+        brief = onboarding.ad_brief_from_answers(f.db, order_id)
+        ad = ugc.write_ad_script(f.llm, brief)
+    except ugc.TestimonialError as e:
+        return _go(f"/business/orders/{order_id}/brief", err=str(e))
+    except Exception as e:
+        return _go(f"/business/orders/{order_id}/brief", err=f"Ad script failed: {e}")
+    order = ugc.get_order(f.db, order_id)
+    data = order.get("brief") or {}
+    data.setdefault("ad_scripts", []).append({"brief": brief.model_dump(), "script": ad.model_dump(),
+                                              "created_at": datetime.now().isoformat(timespec="seconds")})
+    f.db.update("orders", order_id, {"brief": data})
+    return _go(f"/business/orders/{order_id}/brief", msg="Ad script written from the brief (see Orders page).")
 
 
 @router.post("/orders/{order_id}/invoice")
@@ -361,9 +495,10 @@ def affiliates_add(name: str = Form(...), url: str = Form(...), slug: str = Form
 
 # --------------------------------------------------------------------------- public
 @public_router.get("/go/{slug}", include_in_schema=False)
-def go(slug: str, p: str = "", s: str = "", f=Depends(_factory)):
-    """Public tracked redirect: count the click, 302 to the merchant URL."""
-    url = affiliates.resolve_click(f.db, slug, post_id=p or None, platform=s)
+def go(slug: str, request: Request, p: str = "", s: str = "", f=Depends(_factory)):
+    """Public tracked redirect: count the click, 302 to the merchant URL (incoming utm_* are passed on)."""
+    utm = {k: v for k, v in request.query_params.items() if k.startswith("utm_")}
+    url = affiliates.resolve_click(f.db, slug, post_id=p or None, platform=s, utm=utm)
     if not url:
         return Response("Link not found", status_code=404, media_type="text/plain")
     return RedirectResponse(url, status_code=302, headers={"Cache-Control": "no-store",

@@ -65,7 +65,7 @@ footer p{margin:6px 0}
 
   <section class="signup" aria-labelledby="signup-h">
     <h2 id="signup-h">Free: {{ magnet.title }}</h2>
-    <p>{{ magnet.pitch }} One useful email a week.</p>
+    <p>{{ magnet.pitch }}{{ magnet.after }}</p>
     <form method="post" action="{{ subscribe_url }}">
       <label class="hp" aria-hidden="true">Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
       <input type="hidden" name="source" value="link-page">
@@ -85,7 +85,7 @@ footer p{margin:6px 0}
   {% if products %}
   <h3>Guides &amp; templates</h3>
   <div class="links">
-    {% for p in products %}<a class="link" href="{{ p.url }}" target="_blank" rel="noopener"><span class="t">{{ p.name }}</span>{% if p.price %}<span class="p">{{ p.price }}</span>{% endif %}</a>{% endfor %}
+    {% for p in products %}<a class="link" href="{{ p.page_url }}"><span class="t">{{ p.name }}</span>{% if p.price %}<span class="p">{% if p.regular_price %}<s style="opacity:.7;font-weight:600">{{ p.regular_price }}</s> {% endif %}{{ p.price }}</span>{% endif %}</a>{% endfor %}
   </div>
   {% endif %}
 

@@ -5,6 +5,7 @@ import json
 
 
 def register(sub, factory_fn) -> None:
+    register_sequences(sub, factory_fn)
     s = sub.add_parser("brandkit", help="profile picture, banners, highlight covers, style sheet, bios")
     s.add_argument("brand")
 
@@ -56,3 +57,46 @@ def register(sub, factory_fn) -> None:
     s = sub.add_parser("funnel", help="views -> clicks -> subscribers -> sales per brand")
     s.set_defaults(func=lambda a: print(json.dumps(
         __import__('contentfactory.funnel.analytics', fromlist=['x']).funnel_stats(factory_fn(a).db), indent=2, default=str)))
+
+
+def register_sequences(sub, factory_fn) -> None:
+    """Welcome-sequence and sales-page commands. Not called by register(): wire it
+    from cli.py (`funnel.cli.register_sequences(sub, _factory)`) if you want these."""
+    s = sub.add_parser("sequences", help="send due welcome-sequence emails (dry run unless --confirm)")
+    s.add_argument("--brand")
+    s.add_argument("--confirm", action="store_true", help="really send (also needs FACTORY_DRY_RUN=0, SMTP, address)")
+    s.add_argument("--limit", type=int, default=500)
+
+    def run(a):
+        from .sequences import run_sequences
+        print(json.dumps(run_sequences(factory_fn(a), confirm=a.confirm, brand=a.brand, limit=a.limit,
+                                       strict=a.confirm), indent=2, default=str))
+    s.set_defaults(func=run)
+
+    s = sub.add_parser("sequence-check", help="validate a brand's welcome sequence and show per-step counts")
+    s.add_argument("brand")
+
+    def check(a):
+        from .sequences import sequence_status, validate_sequence
+        f = factory_fn(a)
+        problems = validate_sequence(f.settings, f.brand(a.brand))
+        print(json.dumps({"problems": problems, **sequence_status(f, a.brand)}, indent=2, default=str))
+        if problems:
+            raise SystemExit(1)
+    s.set_defaults(func=check)
+
+    s = sub.add_parser("sequence-preview", help="render every welcome email to .html/.eml for review")
+    s.add_argument("brand")
+    s.set_defaults(func=lambda a: [print(p) for p in __import__(
+        "contentfactory.funnel.sequences", fromlist=["x"]).preview_sequence(factory_fn(a), a.brand)])
+
+    s = sub.add_parser("salespage", help="build static sales pages for a brand's products")
+    s.add_argument("brand")
+    s.add_argument("--base-url")
+
+    def sales(a):
+        from .salespage import build_all_sales_pages
+        f = factory_fn(a)
+        for p in build_all_sales_pages(f.settings, f.db, f.brand(a.brand), base_url=a.base_url):
+            print(p)
+    s.set_defaults(func=sales)
