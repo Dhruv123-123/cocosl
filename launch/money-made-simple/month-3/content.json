@@ -80,7 +80,8 @@
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sun over a jar that's already half full. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
  },
  {
   "format": "short",
@@ -88,37 +89,37 @@
   "idea_angle": "Three IRS-flagged signs of a dishonest 'ghost' preparer: won't sign the return, charges a percentage of the refund, wants the refund in their account.",
   "script": {
    "title": "3 signs your tax preparer is a scam",
-   "hook": "3 signs a tax preparer could get you in trouble, and the IRS will come after you, not them.",
+   "hook": "3 tax preparer red flags, counted down to the 1 that costs the most.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Three signs a tax preparer could get you in trouble. And the IRS comes after you, not them.",
-     "on_screen_text": "3 tax preparer red flags",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes looking warily at a small desk with a shady sign. No text, no logos, no real people."
+     "narration": "Three tax preparer red flags, counted down to the one that can cost you the most.",
+     "on_screen_text": "Countdown: 3 preparer red flags",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a podium with three steps. No text, no logos, no real people."
     },
     {
-     "heading": "1",
-     "narration": "One: they won't sign the return or put their Preparer Tax Identification Number on it. Paid preparers are required to.",
-     "on_screen_text": "1. Won't sign or add a PTIN",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with an empty signature line. No text, no logos, no real people."
+     "heading": "Number 3",
+     "narration": "Number three: they charge a percentage of your refund, or promise a bigger refund than anyone else.",
+     "on_screen_text": "#3: % of your refund",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a podium step labelled three. No text, no logos, no real people."
     },
     {
-     "heading": "2",
-     "narration": "Two: they charge a percentage of your refund, or promise a bigger refund than anyone else.",
-     "on_screen_text": "2. Fee = % of refund",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pie chart taking a big slice of a coin. No text, no logos, no real people."
+     "heading": "Number 2",
+     "narration": "Number two: they want the refund deposited into their account, not yours.",
+     "on_screen_text": "#2: their bank account",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin going to the wrong jar. No text, no logos, no real people."
     },
     {
-     "heading": "3",
-     "narration": "Three: they want your refund deposited into their account.",
-     "on_screen_text": "3. Refund to their account",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow diverting a coin to a different jar. No text, no logos, no real people."
+     "heading": "Number 1",
+     "narration": "Number one: they won't sign the return or include their Preparer Tax Identification Number. Paid preparers are required to.",
+     "on_screen_text": "#1: won't sign",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a blank signature line. No text, no logos, no real people."
     },
     {
      "heading": "Why",
-     "narration": "You're legally responsible for what's on your return, even if someone else filled it out.",
-     "on_screen_text": "You're responsible either way",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small shield with the small round green piggy bank mascot with big eyes's face on a form. No text, no logos, no real people."
+     "narration": "It matters because you're legally responsible for what's on your return, even if someone else filled it out.",
+     "on_screen_text": "You're responsible",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small figure holding a form. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -146,23 +147,30 @@
   "tiktok_extra": [
    {
     "heading": "Check",
-    "narration": "Before you hire anyone, look them up in the IRS Directory of Federal Tax Return Preparers. Credentials like CPA or enrolled agent are a good sign.",
+    "narration": "Before you hire anyone, look them up in the IRS Directory of Federal Tax Return Preparers.",
     "on_screen_text": "Check the IRS directory",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a small ID card. No text, no logos, no real people."
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a list. No text, no logos, no real people."
    },
    {
     "heading": "Free option",
-    "narration": "And for a simple return, IRS-certified VITA volunteers do it free if you're under the income limit. No upsells, no refund-percentage fees.",
-    "on_screen_text": "Simple return? VITA is free",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small table with two chairs and a green check. No text, no logos, no real people."
+    "narration": "For a simple return, IRS-certified VITA volunteers do it free if you're under the income limit.",
+    "on_screen_text": "VITA: free",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small table with volunteers. No text, no logos, no real people."
    },
    {
     "heading": "Before you sign",
-    "narration": "Before you sign anything, ask for a copy of the full return and read the refund amount and bank account number. If the refund on the return is bigger than what they told you, or the account isn't yours, walk away and keep your documents.",
-    "on_screen_text": "Read the return before signing",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a full form up to the light. No text, no logos, no real people."
+    "narration": "Ask for a copy of the full return and read the refund amount and bank account number before you sign.",
+    "on_screen_text": "Read the refund + account",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pen hovering over a form. No text, no logos, no real people."
+   },
+   {
+    "heading": "Already filed?",
+    "narration": "Already used a preparer like this? Get a transcript from your IRS online account and check what was actually filed in your name.",
+    "on_screen_text": "Check your IRS transcript",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a document with lines. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "countdown"
  },
  {
   "format": "short",
@@ -170,37 +178,37 @@
   "idea_angle": "The IRS issues most e-filed direct-deposit refunds within 21 days; Where's My Refund updates daily, and paper returns or EITC claims take longer.",
   "script": {
    "title": "21 days: when your tax refund usually shows up",
-   "hook": "21 days. That's how long most e-filed refunds take. Here's what makes yours slower.",
+   "hook": "3 things that slow down your tax refund, counted down to the most common.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Twenty-one days. That's the usual window for an e-filed refund with direct deposit.",
-     "on_screen_text": "Refund: usually < 21 days",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes waiting by a mailbox with a calendar. No text, no logos, no real people."
+     "narration": "Three things that slow down a tax refund, counted down to the most common one. Most e-filed refunds with direct deposit arrive within 21 days.",
+     "on_screen_text": "Countdown: 3 refund slowdowns",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a podium with three steps and an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 3",
+     "narration": "Number three: claiming the Earned Income Tax Credit. By law those refunds can't be paid before mid-February.",
+     "on_screen_text": "#3: EITC timing rule",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with mid-February circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 2",
+     "narration": "Number two: filing on paper or asking for a paper check.",
+     "on_screen_text": "#2: paper",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paper envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 1",
+     "narration": "Number one: errors, like a wrong Social Security number or missing form. Double-check before you file.",
+     "on_screen_text": "#1: errors",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a red circle. No text, no logos, no real people."
     },
     {
      "heading": "Track",
-     "narration": "Track it with Where's My Refund on irs.gov. It updates once a day, so checking hourly won't help.",
-     "on_screen_text": "Where's My Refund: updates daily",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a progress bar and a small moon. No text, no logos, no real people."
-    },
-    {
-     "heading": "Slower",
-     "narration": "Slower if you file on paper, request a check, have errors, or claim the Earned Income Tax Credit, which can't be paid out before mid-February.",
-     "on_screen_text": "Paper, errors, EITC = slower",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small snail carrying an envelope. No text, no logos, no real people."
-    },
-    {
-     "heading": "Faster",
-     "narration": "Fastest: e-file, direct deposit, double-checked numbers.",
-     "on_screen_text": "E-file + direct deposit",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with an arrow straight into a jar. No text, no logos, no real people."
-    },
-    {
-     "heading": "Plan",
-     "narration": "Don't spend a refund before it lands, and decide its job now.",
-     "on_screen_text": "Plan it before it lands",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sticky note with three short lines. No text, no logos, no real people."
+     "narration": "Track it on Where's My Refund at irs dot gov. It updates once a day.",
+     "on_screen_text": "Where's My Refund: once a day",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a refresh icon. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -229,23 +237,24 @@
   "tiktok_extra": [
    {
     "heading": "Paid apps",
-    "narration": "Third-party 'refund tracker' apps can't see anything the IRS tool can't. Skip anyone charging to speed up a refund.",
-    "on_screen_text": "No one can pay to speed it up",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a hand waving off a paid ticket. No text, no logos, no real people."
+    "narration": "Third-party refund tracker apps can't see anything the IRS tool can't. Skip anyone charging to speed up a refund.",
+    "on_screen_text": "Skip paid trackers",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stop sign over an app. No text, no logos, no real people."
    },
    {
     "heading": "If it's late",
-    "narration": "Past twenty-one days for an e-filed return? Where's My Refund will say if the IRS needs something. Watch your mail too, because the IRS sends real requests by letter.",
-    "on_screen_text": "Late? Check the tool + your mail",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a mailbox with a single official envelope. No text, no logos, no real people."
+    "narration": "Past twenty-one days? The tool will say if the IRS needs something. Watch your mail, because real requests come by letter.",
+    "on_screen_text": "Watch your mail",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a mailbox. No text, no logos, no real people."
    },
    {
     "heading": "Offsets",
-    "narration": "One more reason a refund can be smaller than expected: offsets. If you owe things like past-due child support or certain federal debts, part of the refund can be taken to pay them. You'd get a letter explaining it, and the Treasury Offset Program has a line to call.",
-    "on_screen_text": "Smaller refund? Possible offset",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin with a small slice diverted. No text, no logos, no real people."
+    "narration": "A refund can also be reduced to pay certain debts, like past-due child support. You'd get a letter explaining it.",
+    "on_screen_text": "Offsets come with a letter",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin diverted to another jar. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "countdown"
  },
  {
   "format": "short",
@@ -253,37 +262,37 @@
   "idea_angle": "Up to $2,500 of student loan interest is deductible even without itemizing, under income limits; Form 1098-E shows the amount.",
   "script": {
    "title": "$2,500: the student loan deduction people miss",
-   "hook": "$2,500. That's how much student loan interest you might deduct, even without itemizing.",
+   "hook": "$1,200 of student loan interest in a 12% bracket: here's what the deduction saves, on screen.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Twenty-five hundred dollars. That's how much student loan interest you might be able to deduct, without itemizing.",
+     "narration": "Twelve hundred dollars of student loan interest, twelve percent tax bracket. Let's work out what the deduction saves you.",
+     "on_screen_text": "$1,200 interest · 12% bracket",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a graduation cap and a calculator. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "The student loan interest deduction lets you deduct up to twenty-five hundred dollars of interest, even with the standard deduction.",
      "on_screen_text": "Up to $2,500 deductible",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a graduation cap with a coin coming back. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small form with a check mark. No text, no logos, no real people."
     },
     {
-     "heading": "What",
-     "narration": "It's the student loan interest deduction. It lowers your taxable income, and you can take it with the standard deduction.",
-     "on_screen_text": "Works with standard deduction",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shield over a slice of a coin stack. No text, no logos, no real people."
+     "heading": "Math",
+     "narration": "Twelve hundred times twelve percent is a hundred forty-four dollars off your tax bill.",
+     "on_screen_text": "$1,200 × 12% = $144",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big multiplication sign. No text, no logos, no real people."
     },
     {
-     "heading": "The form",
-     "narration": "Your servicer sends Form 1098-E if you paid six hundred dollars or more in interest. You can often download it from their site.",
-     "on_screen_text": "Look for Form 1098-E",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small form being downloaded. No text, no logos, no real people."
-    },
-    {
-     "heading": "Limits",
-     "narration": "There are income limits, and you can't take it if you're married filing separately or someone claims you as a dependent.",
-     "on_screen_text": "Income limits apply",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gauge with a cutoff mark. No text, no logos, no real people."
+     "heading": "At the cap",
+     "narration": "At the twenty-five hundred cap, in the twenty-two percent bracket, it's up to five hundred fifty.",
+     "on_screen_text": "$2,500 × 22% = $550",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a taller coin stack. No text, no logos, no real people."
     },
     {
      "heading": "Do it",
-     "narration": "When your software asks about student loan interest, don't skip it.",
-     "on_screen_text": "Don't skip the question",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a check box being ticked. No text, no logos, no real people."
+     "narration": "Look for Form 1098-E from your servicer, and don't skip the question in your tax software. Income limits apply.",
+     "on_screen_text": "Find your 1098-E",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a form. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -311,24 +320,25 @@
   },
   "tiktok_extra": [
    {
-    "heading": "Example",
-    "narration": "Example: you paid twelve hundred in interest and you're in the twelve percent bracket. Deducting it saves about a hundred forty-four dollars.",
-    "on_screen_text": "$1,200 × 12% ≈ $144",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin stack with a small slice returning. No text, no logos, no real people."
-   },
-   {
     "heading": "Under $600",
     "narration": "Paid less than six hundred? You may not get a 1098-E, but you can still deduct it. Find the amount on your servicer's site.",
     "on_screen_text": "Under $600? Still deductible",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a small number circled. No text, no logos, no real people."
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a statement. No text, no logos, no real people."
+   },
+   {
+    "heading": "Who can't",
+    "narration": "You can't take it if you're married filing separately or someone claims you as a dependent.",
+    "on_screen_text": "Not if MFS or a dependent",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small stop sign. No text, no logos, no real people."
    },
    {
     "heading": "Who paid",
-    "narration": "One catch for people whose parents help. The deduction generally goes to the person legally obligated on the loan who paid the interest. If your parents pay your loan and you're not their dependent, the IRS treats it as if you paid, so you may still be able to claim it.",
-    "on_screen_text": "Parents paid? You may still claim it",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two hands passing a coin, then a small form. No text, no logos, no real people."
+    "narration": "If your parents pay your loan and you're not their dependent, the IRS generally treats it as if you paid, so you may still be able to claim it.",
+    "on_screen_text": "Parents paid? You may still claim",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two figures and a coin. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "on-screen-calculation"
  },
  {
   "format": "short",
@@ -411,7 +421,8 @@
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with payday nudged two days earlier. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
  },
  {
   "format": "short",
@@ -419,37 +430,37 @@
   "idea_angle": "File early to get your refund sooner and to beat identity thieves who file fraudulent returns using your Social Security number.",
   "script": {
    "title": "2 reasons to file your taxes early",
-   "hook": "2 reasons to file in February instead of April, and one of them is identity theft.",
+   "hook": "3 reasons to file your taxes early, counted down to the 1 that protects you.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Two reasons to file in February instead of April. One of them is identity theft.",
-     "on_screen_text": "File early: 2 reasons",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes mailing an envelope with snow outside. No text, no logos, no real people."
+     "narration": "Three reasons to file in February instead of April, counted down to the one that protects you.",
+     "on_screen_text": "Countdown: 3 reasons to file early",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a podium with three steps and a calendar. No text, no logos, no real people."
     },
     {
-     "heading": "1",
-     "narration": "One: if you're getting a refund, it comes sooner, and you can put it to work.",
-     "on_screen_text": "1. Refund sooner",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin arriving early on a calendar. No text, no logos, no real people."
+     "heading": "Number 3",
+     "narration": "Number three: if you owe, you can still file early and schedule the payment for April fifteenth.",
+     "on_screen_text": "#3: file now, pay in April",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a pinned date. No text, no logos, no real people."
     },
     {
-     "heading": "2",
-     "narration": "Two: tax identity theft. If someone files a fake return with your Social Security number first, yours gets rejected and the cleanup takes months.",
-     "on_screen_text": "2. Beat identity thieves",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two envelopes racing, one with a mask. No text, no logos, no real people."
+     "heading": "Number 2",
+     "narration": "Number two: a refund arrives sooner, and you can put it to work.",
+     "on_screen_text": "#2: refund sooner",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an envelope arriving. No text, no logos, no real people."
     },
     {
-     "heading": "Wait for forms",
-     "narration": "But don't file before you have every W-2 and 1099. Filing with missing forms means amending later.",
-     "on_screen_text": "But wait for every form",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a folder with a checklist. No text, no logos, no real people."
+     "heading": "Number 1",
+     "narration": "Number one: tax identity theft. If someone files a fake return with your number first, yours gets rejected and the cleanup takes months.",
+     "on_screen_text": "#1: beat identity thieves",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shield in front of a form. No text, no logos, no real people."
     },
     {
-     "heading": "Protect",
-     "narration": "Extra protection: get a free IRS Identity Protection PIN.",
-     "on_screen_text": "Get an IP PIN",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small padlock on a form. No text, no logos, no real people."
+     "heading": "But",
+     "narration": "Just don't file before every W-2 and 1099 has arrived, or you'll be amending later.",
+     "on_screen_text": "Wait for every form",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stack of forms with one missing. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -477,24 +488,31 @@
   },
   "tiktok_extra": [
    {
-    "heading": "Owe money?",
-    "narration": "If you owe, you can still file early and schedule the payment for April fifteenth through IRS Direct Pay. You lock in the return without paying early.",
-    "on_screen_text": "Owe? File now, pay in April",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a scheduled payment flag. No text, no logos, no real people."
+    "heading": "IP PIN",
+    "narration": "Extra protection: get a free IRS Identity Protection PIN.",
+    "on_screen_text": "Free IP PIN",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small key. No text, no logos, no real people."
    },
    {
     "heading": "Rejected?",
-    "narration": "If your e-filed return is rejected because one was already filed with your number, that's a red flag. Follow the IRS identity theft steps and file Form 14039.",
+    "narration": "E-file rejected because a return was already filed with your number? Follow the IRS identity theft steps and file Form 14039.",
     "on_screen_text": "Rejected? Form 14039",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small warning triangle on an envelope. No text, no logos, no real people."
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a warning. No text, no logos, no real people."
    },
    {
-    "heading": "What to have ready",
-    "narration": "To file quickly once your forms arrive, keep a folder with last year's return, your bank routing and account numbers, and your IP PIN if you have one. When the last W-2 shows up, you can file the same evening.",
-    "on_screen_text": "Folder ready = file same day",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small folder with three items inside. No text, no logos, no real people."
+    "heading": "Ready folder",
+    "narration": "Keep a folder with last year's return, bank details and your IP PIN, so you can file the evening the last W-2 arrives.",
+    "on_screen_text": "Ready folder",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a folder with a check mark. No text, no logos, no real people."
+   },
+   {
+    "heading": "Owe money?",
+    "narration": "Owe instead? Filing early still helps. You lock in the return, and the money stays in your account until the deadline.",
+    "on_screen_text": "Owe? File early, pay later",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar and a coin. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "countdown"
  },
  {
   "format": "short",
@@ -576,7 +594,8 @@
     "on_screen_text": "Job insurance: 1095-B/C, no need to wait",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two small forms, one with a pause icon removed. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -659,7 +678,8 @@
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paycheck arrow splitting into two jars. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
  },
  {
   "format": "short",
@@ -741,7 +761,8 @@
     "on_screen_text": "Choose: pay fees now",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a screen with two buttons, one highlighted. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -749,37 +770,37 @@
   "idea_angle": "Before moving in, agree on how rent and shared costs split (50/50 vs proportional), using real numbers.",
   "script": {
    "title": "1 question to ask before you move in together",
-   "hook": "1 money question to answer before you move in together, with real numbers.",
+   "hook": "Common question: \"Should we split rent 50/50?\" Honest answer: it depends on 1 number.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "One money question to answer before you sign a lease together.",
-     "on_screen_text": "Moving in? Ask this first",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two piggy banks looking at a small apartment. No text, no logos, no real people."
+     "narration": "Common question before moving in together: should we split rent fifty-fifty? Honest answer: it depends on one number.",
+     "on_screen_text": "Q: Split rent 50/50?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes two figures with a speech bubble. No text, no logos, no real people."
     },
     {
-     "heading": "The question",
-     "narration": "How will we split rent and shared bills: fifty-fifty, or by income?",
-     "on_screen_text": "50/50 or by income?",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a seesaw balanced and a seesaw tilted. No text, no logos, no real people."
+     "heading": "The number",
+     "narration": "The number is the income gap. If you earn about the same, fifty-fifty is simple and fair.",
+     "on_screen_text": "Similar pay → 50/50",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balanced seesaw. No text, no logos, no real people."
     },
     {
-     "heading": "50/50",
-     "narration": "Fifty-fifty works when incomes are close.",
-     "on_screen_text": "50/50: incomes are close",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two equal coin stacks. No text, no logos, no real people."
+     "heading": "If not",
+     "narration": "If not, split by income. If one person earns sixty percent of the total, they pay sixty percent of shared bills.",
+     "on_screen_text": "Different pay → by income",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an uneven pie chart. No text, no logos, no real people."
     },
     {
-     "heading": "By income",
-     "narration": "By income works when they're not. If one earns sixty percent of the total, they pay sixty percent of shared bills.",
-     "on_screen_text": "Proportional: 60% earner pays 60%",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two stacks of different height pushing proportional piles. No text, no logos, no real people."
+     "heading": "Agree",
+     "narration": "Agree what's shared: rent, utilities, groceries, internet. And what isn't: personal subscriptions and individual debts.",
+     "on_screen_text": "Agree what counts as shared",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list with two columns. No text, no logos, no real people."
     },
     {
      "heading": "Write it",
-     "narration": "Write the answer down before you sign anything. It's a lot easier now than after the first argument.",
-     "on_screen_text": "Decide before the lease",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small note with two signatures. No text, no logos, no real people."
+     "narration": "Write it down before you sign the lease. It's easier now than after the first argument.",
+     "on_screen_text": "Write it down first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pen and a lease. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -804,24 +825,31 @@
   },
   "tiktok_extra": [
    {
-    "heading": "What's shared",
-    "narration": "Also agree on what counts as shared: rent, utilities, groceries, internet. And what doesn't: personal subscriptions, individual debts, solo dinners out.",
-    "on_screen_text": "Agree what's shared",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two lists with a shared middle column. No text, no logos, no real people."
-   },
-   {
     "heading": "Lease",
-    "narration": "And remember, if you both sign the lease, you're each usually responsible for the full rent, not just your half. Pick a partner you'd trust with that.",
-    "on_screen_text": "Both on lease = both liable",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lease page with two signature lines linked. No text, no logos, no real people."
+    "narration": "If you both sign the lease, you're each usually responsible for the full rent, not just your half.",
+    "on_screen_text": "Both sign = both on the hook",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lease with two signatures. No text, no logos, no real people."
    },
    {
     "heading": "Example",
-    "narration": "Example. One partner takes home forty-two hundred, the other twenty-eight hundred. That's sixty and forty. With twenty-four hundred of shared bills, that's fourteen-forty and nine-sixty. Both keep about two-thirds of their pay. That feels fair to most couples.",
-    "on_screen_text": "$2,400 bills → $1,440 / $960",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two coin stacks pushing proportional piles into a house. No text, no logos, no real people."
+    "narration": "Example: take-home of forty-two hundred and twenty-eight hundred is sixty-forty. On twenty-four hundred of shared bills, that's fourteen-forty and nine-sixty.",
+    "on_screen_text": "$2,400 → $1,440 / $960",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pie chart split 60/40. No text, no logos, no real people."
+   },
+   {
+    "heading": "Check in",
+    "narration": "Then check in once a month. Incomes change, and the split can change with them.",
+    "on_screen_text": "Revisit monthly",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small calendar. No text, no logos, no real people."
+   },
+   {
+    "heading": "Fun money",
+    "narration": "And each of you keeps some money that's yours alone, no questions asked. That's what stops small purchases turning into fights.",
+    "on_screen_text": "Keep your own fun money",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two small wallets. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "question-reply"
  },
  {
   "format": "short",
@@ -907,7 +935,8 @@
     "on_screen_text": "Indoor picnic · open mic · tourist day",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a blanket with a small basket on a floor. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "list"
  },
  {
   "format": "short",
@@ -989,7 +1018,8 @@
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a moving box with two small tags. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
  },
  {
   "format": "short",
@@ -1069,7 +1099,8 @@
     "on_screen_text": "Shared $2,800 → $1,600 + $1,200",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two streams of different sizes flowing into a middle jar. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1077,37 +1108,37 @@
   "idea_angle": "Three FTC-identified red flags of romance scams: they can't meet in person, they ask for money or crypto, they offer investment tips.",
   "script": {
    "title": "3 romance scam red flags",
-   "hook": "3 red flags that the person you're talking to online is after your money.",
+   "hook": "3 romance scam red flags, counted down to the 1 that's always a scam.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Three red flags that someone you met online is after your money.",
-     "on_screen_text": "3 romance scam red flags",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes looking at a phone with a heart that has a small hook. No text, no logos, no real people."
+     "narration": "Three romance scam red flags, counted down to the one that's always a scam.",
+     "on_screen_text": "Countdown: 3 romance scam flags",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a podium with three steps and a small heart. No text, no logos, no real people."
     },
     {
-     "heading": "1",
-     "narration": "One: they always have a reason they can't meet or video call. Overseas job, broken camera, emergency.",
-     "on_screen_text": "1. Never meets or video calls",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a crossed-out camera. No text, no logos, no real people."
+     "heading": "Number 3",
+     "narration": "Number three: they always have a reason they can't meet or video call. Overseas job, broken camera, emergency.",
+     "on_screen_text": "#3: never on video",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a broken camera icon. No text, no logos, no real people."
     },
     {
-     "heading": "2",
-     "narration": "Two: they ask for money, gift cards, crypto or a wire, often for an emergency or a ticket to see you.",
-     "on_screen_text": "2. Asks for money or crypto",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gift card and a coin with a red cross. No text, no logos, no real people."
+     "heading": "Number 2",
+     "narration": "Number two: they bring up an investment or crypto app that's making them rich.",
+     "on_screen_text": "#2: the crypto 'tip'",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin with a hook. No text, no logos, no real people."
     },
     {
-     "heading": "3",
-     "narration": "Three: they share an investment opportunity or a crypto app that's 'making them rich'.",
-     "on_screen_text": "3. Investment tips",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a rising chart with a fishing hook on it. No text, no logos, no real people."
+     "heading": "Number 1",
+     "narration": "Number one: they ask you for money, gift cards, crypto or a wire. For an emergency, or a ticket to come see you.",
+     "on_screen_text": "#1: they ask for money",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gift card with a warning. No text, no logos, no real people."
     },
     {
      "heading": "Rule",
      "narration": "Never send money to someone you haven't met in person. No exceptions.",
-     "on_screen_text": "Never send money to someone you haven't met",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shield in front of a coin. No text, no logos, no real people."
+     "on_screen_text": "Never send money",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stop sign. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -1136,21 +1167,28 @@
     "heading": "Check",
     "narration": "Do a reverse image search on their photos. Scammers often use pictures stolen from someone else.",
     "on_screen_text": "Reverse image search",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a small photo frame. No text, no logos, no real people."
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a photo. No text, no logos, no real people."
    },
    {
     "heading": "Report",
-    "narration": "If it's happened to you or someone you love, stop contact, tell your bank right away, and report it at ReportFraud.ftc.gov. It happens to smart people, and reporting helps.",
-    "on_screen_text": "Report at ReportFraud.ftc.gov",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow forwarding an envelope to a small government building. No text, no logos, no real people."
+    "narration": "Already sent money? Stop contact, call your bank right away, and report it at ReportFraud dot ftc dot gov.",
+    "on_screen_text": "Call the bank · report it",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone and a shield. No text, no logos, no real people."
    },
    {
     "heading": "Help someone",
-    "narration": "If you think a friend or parent is being targeted, don't shame them. Ask gentle questions, like whether they've ever video called. Scammers tell victims to keep the relationship secret, so being someone they can talk to openly matters more than being right.",
-    "on_screen_text": "Help without shame",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two figures-free shapes: two mugs side by side on a table. No text, no logos, no real people."
+    "narration": "Worried about a parent or friend? Don't shame them. Ask gentle questions, like whether they've ever video called.",
+    "on_screen_text": "Ask, don't shame",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two figures talking. No text, no logos, no real people."
+   },
+   {
+    "heading": "Platforms",
+    "narration": "These scams start on dating apps, social media and even wrong-number texts. A stranger who moves fast to private chat is a warning sign.",
+    "on_screen_text": "Moves fast to private chat? Careful",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with two speech bubbles. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "countdown"
  },
  {
   "format": "short",
@@ -1231,7 +1269,8 @@
     "on_screen_text": "Pre-marriage debts usually stay yours",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two separate small chains, each attached to its own jar. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1239,37 +1278,37 @@
   "idea_angle": "Share three numbers about each debt (balance, rate, monthly payment) so couples can plan without judgment.",
   "script": {
    "title": "3 debt numbers to share with your partner",
-   "hook": "3 numbers to share about your debt before things get serious.",
+   "hook": "Common question: \"What should we tell each other about debt?\" Answer: 3 numbers.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Three numbers to share about your debt before things get serious.",
-     "on_screen_text": "3 debt numbers to share",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two piggy banks with a small notebook between them. No text, no logos, no real people."
+     "narration": "Common question: what should we actually tell each other about our debt? Answer: three numbers.",
+     "on_screen_text": "Q: What do we share about debt?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes two speech bubbles. No text, no logos, no real people."
     },
     {
      "heading": "1",
-     "narration": "One: the balance on each debt.",
+     "narration": "The balance on each debt.",
      "on_screen_text": "1. Balance",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stack of small bills. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bar. No text, no logos, no real people."
     },
     {
      "heading": "2",
-     "narration": "Two: the interest rate. A ten-thousand-dollar student loan at five percent is a different problem from a card at twenty-five.",
+     "narration": "The interest rate. Ten thousand at five percent is a different problem from a card at twenty-five.",
      "on_screen_text": "2. Interest rate",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two percent signs of different sizes. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small percent sign. No text, no logos, no real people."
     },
     {
      "heading": "3",
-     "narration": "Three: the monthly payment, because that's what actually hits the shared budget.",
+     "narration": "The monthly payment, because that's what hits the shared budget.",
      "on_screen_text": "3. Monthly payment",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a coin on one day. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a coin. No text, no logos, no real people."
     },
     {
      "heading": "How",
      "narration": "Swap them at the same time. It's information, not a confession.",
-     "on_screen_text": "Swap at the same time",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two hands exchanging notes. No text, no logos, no real people."
+     "on_screen_text": "Information, not a confession",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two hands passing a note. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -1295,24 +1334,31 @@
   },
   "tiktok_extra": [
    {
-    "heading": "Then plan",
-    "narration": "Then each of you picks a payoff method for your own debts, and you agree how shared goals fit around them. Being on the same page matters more than whose number is bigger.",
-    "on_screen_text": "Plan around them together",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shared calendar with two payoff flags. No text, no logos, no real people."
+    "heading": "Plan",
+    "narration": "Then each of you picks a payoff method for your own debts, and you agree how shared goals fit around them.",
+    "on_screen_text": "Each picks a method",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two paths merging. No text, no logos, no real people."
    },
    {
-    "heading": "Credit reports",
-    "narration": "If it feels hard to start, pull your free credit reports together at AnnualCreditReport.com. It turns the conversation into a checklist.",
+    "heading": "Reports",
+    "narration": "Hard to start? Pull your free credit reports together at AnnualCreditReport dot com. It turns the talk into a checklist.",
     "on_screen_text": "Pull reports together",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two laptops showing simple report pages. No text, no logos, no real people."
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three folders on a table. No text, no logos, no real people."
    },
    {
     "heading": "Example",
-    "narration": "Example: one partner has twelve thousand in student loans at five percent, three hundred a month. The other has twenty-four hundred on a card at twenty-five percent, ninety a month minimum. The card is smaller but more urgent, and knowing that changes the plan.",
-    "on_screen_text": "Smaller balance, higher rate = urgent",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small card with a big percent sign next to a bigger loan. No text, no logos, no real people."
+    "narration": "Example: twelve thousand in student loans at five percent, three hundred a month, versus twenty-four hundred on a card at twenty-five percent. The card is smaller but more urgent.",
+    "on_screen_text": "Smaller ≠ less urgent",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small card with a big percent sign. No text, no logos, no real people."
+   },
+   {
+    "heading": "When",
+    "narration": "Pick a calm moment, not right after a big purchase. A walk or a coffee works better than the middle of an argument.",
+    "on_screen_text": "Pick a calm moment",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two mugs on a table. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "question-reply"
  },
  {
   "format": "short",
@@ -1395,7 +1441,8 @@
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a notebook with seven small columns. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
  },
  {
   "format": "short",
@@ -1477,7 +1524,8 @@
     "on_screen_text": "Save receipts, reimburse later",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a folder of receipts next to a growing jar. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1558,7 +1606,8 @@
     "on_screen_text": "Planned + cheaper + cash = yes",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two items, one with three checks and one with a cross. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "list"
  },
  {
   "format": "short",
@@ -1640,7 +1689,8 @@
     "on_screen_text": "Over the limit? Check options first",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gauge with a needle near a cutoff. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1725,7 +1775,8 @@
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a ceiling line over two blocks that fit under it. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
  },
  {
   "format": "short",
@@ -1808,7 +1859,8 @@
     "on_screen_text": "Beware 'pennies on the dollar' ads",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a megaphone with a red cross. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "list"
  },
  {
   "format": "short",
@@ -1888,7 +1940,8 @@
     "on_screen_text": "Life change = update W-4",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with small stars on a few dates. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "carousel",
@@ -3701,7 +3754,24 @@
      "heading": "Step 4",
      "narration": "Step four: add them up. Twelve forty plus thirty-seven eighty is five thousand twenty dollars of federal income tax. Divide by sixty thousand and the effective rate is about eight point four percent. This person's top bracket is twelve percent, but they pay eight point four percent overall.",
      "on_screen_text": "Total ≈ $5,020 · effective ≈ 8.4%",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small coin pile next to a big one with a percent tag. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small coin pile next to a big one with a percent tag. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Tax on a $60,000 salary",
+      "labels": [
+       "10% bucket",
+       "12% bucket",
+       "Total federal tax"
+      ],
+      "values": [
+       1240,
+       3780,
+       5020
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "2026 single filer, standard deduction, example"
+     }
     },
     {
      "heading": "The raise myth",
@@ -3765,7 +3835,14 @@
     "$1,240 + $3,780 = $5,020; 5,020/60,000 = 8.37%",
     "$3,600 × 12% = $432",
     "Bonus supplemental withholding flat rate (22%) note kept general"
-   ]
+   ],
+   "original_element": "worked-example-chart: Bracket staircase chart for the $60K example, layer by layer, with the effective rate marked (chapter \"Step 4\")"
+  },
+  "format_style": "on-screen-calculation",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Bracket staircase chart for the $60K example, layer by layer, with the effective rate marked",
+   "chapter": "Step 4"
   }
  },
  {
@@ -3822,7 +3899,30 @@
      "heading": "Pattern",
      "narration": "Pattern across all three: none of them needed to give up small pleasures first. The teacher needed a calendar fix, the retail worker needed due dates moved, and the ninety-thousand earner needed to shrink the two biggest bills. Find your biggest structural problem before cutting coffee.",
      "on_screen_text": "Fix structure before coffee",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big gear and a tiny cup. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big gear and a tiny cup. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Scores before and after the fix",
+      "labels": [
+       "Teacher: before",
+       "Teacher: after",
+       "Retail: before",
+       "Retail: after",
+       "$90K renter: before",
+       "$90K renter: after"
+      ],
+      "values": [
+       3,
+       8,
+       3,
+       7,
+       5,
+       8
+      ],
+      "unit_prefix": "",
+      "unit_suffix": "/10",
+      "note": "Fictional budgets, out of 10"
+     }
     },
     {
      "heading": "Your turn",
@@ -3854,7 +3954,14 @@
     "$105 × 12 = $1,260",
     "$700 × 12 = $8,400",
     "Scores here may differ slightly from the Shorts versions (long-form uses the full rubric); align before posting"
-   ]
+   ],
+   "original_element": "worked-example-chart: Side-by-side spending bars for the three fictional budgets with the fix applied (chapter \"Pattern\")"
+  },
+  "format_style": "rate-my-budget",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Side-by-side spending bars for the three fictional budgets with the fix applied",
+   "chapter": "Pattern"
   }
  },
  {
@@ -3893,7 +4000,26 @@
      "heading": "Real math",
      "narration": "Real math. Fifty thousand salary, twelve percent bracket, a fifty-percent match up to six percent. Putting six percent, three thousand, into the 401(k) gets fifteen hundred from the employer and saves about three hundred sixty of federal tax. Three thousand of your money becomes forty-five hundred invested, at a paycheck cost of about twenty-six forty. That's hard to beat anywhere.",
      "on_screen_text": "$3,000 in → $4,500 invested",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small pile turning into a bigger pile. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small pile turning into a bigger pile. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "6% into the 401(k) on $50,000",
+      "labels": [
+       "Your contribution",
+       "Employer match",
+       "Federal tax saved",
+       "Paycheck cost"
+      ],
+      "values": [
+       3000,
+       1500,
+       360,
+       2640
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "12% bracket, 50% match up to 6%, example"
+     }
     },
     {
      "heading": "Roth vs traditional",
@@ -3950,7 +4076,14 @@
     "HSA payroll contributions exempt from FICA (cafeteria plan)",
     "Roth IRA contribution withdrawals tax/penalty-free",
     "Traditional IRA deductibility depends on income and workplace plan coverage"
-   ]
+   ],
+   "original_element": "worked-example-chart: Account-order chart: the same $500 a month routed through 401(k) match, HSA and IRA, with the tax effect of each (chapter \"Real math\")"
+  },
+  "format_style": "real-numbers",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Account-order chart: the same $500 a month routed through 401(k) match, HSA and IRA, with the tax effect of each",
+   "chapter": "Real math"
   }
  },
  {
@@ -3983,7 +4116,22 @@
      "heading": "Splitting: 3 ways",
      "narration": "Three ways to split. Fifty-fifty: simple, fair when incomes are close. By income: each pays the same percentage of their pay. All in one pot: everything joint, decided together. Example by income: one takes home forty-two hundred, the other twenty-eight hundred. That's sixty and forty. With twenty-four hundred of shared bills, they pay fourteen-forty and nine-sixty, and both keep about two-thirds of their pay.",
      "on_screen_text": "50/50 · by income · one pot",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three seesaws in a row. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three seesaws in a row. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$2,400 of shared bills, split by income",
+      "labels": [
+       "Partner A ($4,200)",
+       "Partner B ($2,800)"
+      ],
+      "values": [
+       1440,
+       960
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "60/40 by take-home, fictional"
+     }
     },
     {
      "heading": "Accounts",
@@ -4045,7 +4193,14 @@
     "4,200/7,000 = 60%; $2,400 × 60% = $1,440; both keep ~66%",
     "Community property states treat some marital debts differently",
     "'Couples who talk about money regularly fight about it less' is general; soften or cite before posting"
-   ]
+   ],
+   "original_element": "human-segment: Dhruv records the 'Money date' chapter in his own voice, with his real check-in routine if he has one, or a plainly-stated suggestion (chapter \"Money date\")"
+  },
+  "format_style": "question-reply",
+  "original_element": {
+   "type": "human-segment",
+   "detail": "Dhruv records the 'Money date' chapter in his own voice, with his real check-in routine if he has one, or a plainly-stated suggestion",
+   "chapter": "Money date"
   }
  }
 ]

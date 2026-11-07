@@ -5,11 +5,11 @@
   "idea_angle": "Leave non-essential items over a set amount in the cart for 24 hours; most impulse urges fade, and real needs survive the wait.",
   "script": {
    "title": "The 24-hour cart rule",
-   "hook": "Every online store is designed so you buy in the next five minutes. Here's how to break that.",
+   "hook": "Stop buying in the 5 minutes a store gives you. Wait 24 hours instead.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Every online store is designed so you buy in the next five minutes. Here's how to break that.",
+     "narration": "Stop buying in the 5 minutes a store gives you. Wait 24 hours instead.",
      "on_screen_text": "Stores want you to buy in 5 minutes",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shopping cart icon with a countdown timer and flashing arrows around it. No text, no logos, no real people."
     },
@@ -57,7 +57,41 @@
    "claims_to_verify": [
     "$50 threshold is a personal example, not a recommendation"
    ]
-  }
+  },
+  "hook_template": "stop-doing",
+  "format_style": "explainer",
+  "tiktok_extra": [
+   {
+    "heading": "Your number",
+    "narration": "Not sure where to set the threshold? Look at your last three impulse buys. Set the number just below the smallest one you regret.",
+    "on_screen_text": "Set it below your regrets",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small dial. No text, no logos, no real people."
+   },
+   {
+    "heading": "Why it works",
+    "narration": "Stores design checkout to be fast on purpose. Saved cards, one-click buttons and free-shipping bars all shorten the time between wanting and paying.",
+    "on_screen_text": "Checkout is built to be fast",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a cart with a lightning bolt. No text, no logos, no real people."
+   },
+   {
+    "heading": "Make it easy",
+    "narration": "Make waiting easy: remove saved cards from shopping sites, and log out of store apps for the holiday season.",
+    "on_screen_text": "Remove saved cards",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card with a cross. No text, no logos, no real people."
+   },
+   {
+    "heading": "Next day",
+    "narration": "Next day, most carts look different. You'll still buy some things, and you'll feel good about those.",
+    "on_screen_text": "Tomorrow, decide calmly",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sunrise over a cart. No text, no logos, no real people."
+   },
+   {
+    "heading": "Track it",
+    "narration": "Keep a note of what you skipped and how much. By January it's a satisfying number.",
+    "on_screen_text": "Track what you skipped",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a list. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
@@ -126,7 +160,28 @@
     "Store/private-label card APRs often near or above 30% (check current CFPB data)",
     "Opening a card usually involves a hard inquiry"
    ]
-  }
+  },
+  "format_style": "explainer",
+  "tiktok_extra": [
+   {
+    "heading": "The math",
+    "narration": "Example: twenty percent off a two-hundred-dollar order saves forty dollars. Carry that two hundred for a year at near thirty percent and the interest is about sixty.",
+    "on_screen_text": "Save $40 · pay ~$60 interest",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two coin stacks compared. No text, no logos, no real people."
+   },
+   {
+    "heading": "Pressure",
+    "narration": "Cashiers are often asked to offer the card. A simple 'no thanks' is enough. You don't need a reason.",
+    "on_screen_text": "'No thanks' is enough",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble. No text, no logos, no real people."
+   },
+   {
+    "heading": "If you do",
+    "narration": "If you do open one, set autopay for the full statement balance, and put the promo end date in your calendar.",
+    "on_screen_text": "Autopay in full + calendar",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a pin. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
@@ -134,11 +189,11 @@
   "idea_angle": "For online purchases a credit card is safer: federal law caps unauthorized-charge liability at $50 and fraud doesn't drain your checking while it's disputed.",
   "script": {
    "title": "Debit or credit for online shopping?",
-   "hook": "If you shop online with a debit card, a stolen card number empties your rent money, not the bank's.",
+   "hook": "Debit or credit online? On a $500 fraud charge, one is the bank's money and one is your rent.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "If you shop online with a debit card, a stolen number takes your rent money, not the bank's.",
+     "narration": "Debit or credit online? On a $500 fraud charge, one is the bank's money and one is your rent.",
      "on_screen_text": "Debit fraud = your money missing",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a small hook reaching out of the screen toward a coin jar. No text, no logos, no real people."
     },
@@ -189,7 +244,9 @@
     "Debit (EFTA) liability depends on reporting time ($50 / $500 / more)",
     "Virtual card numbers availability varies by bank"
    ]
-  }
+  },
+  "hook_template": "x-vs-y-real-math",
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -197,43 +254,37 @@
   "idea_angle": "Before buying a deal, divide the price by how many times you'll realistically use it; a cheap thing you never use is the expensive one.",
   "script": {
    "title": "The Black Friday cost-per-use test",
-   "hook": "That 60% off deal can still be the most expensive thing you buy this year.",
+   "hook": "$90 or $40: which Black Friday deal actually costs more? Let's do the math on screen.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "That 60% off deal can still be the most expensive thing you buy this year.",
-     "on_screen_text": "60% off can still cost you",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes staring at a giant red sale tag on a shopping cart, eyebrows raised. No text, no logos, no real people."
+     "narration": "$90 or $40: which Black Friday deal actually costs more? Let's do the math on screen.",
+     "on_screen_text": "$90 vs $40: which costs more?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a calculator between two shopping bags. No text, no logos, no real people."
     },
     {
-     "heading": "The test",
-     "narration": "Before you check out, do one division: price divided by how many times you'll actually use it.",
-     "on_screen_text": "Price ÷ real uses",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple division sign between a shopping bag and a tally of small check marks. No text, no logos, no real people."
+     "heading": "Deal A",
+     "narration": "Deal A: a ninety dollar air fryer. Used twice a week for a year, that's about a hundred uses. Ninety divided by a hundred: about ninety cents a use.",
+     "on_screen_text": "$90 ÷ ~100 uses ≈ $0.90",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big division sign with an air fryer. No text, no logos, no real people."
     },
     {
-     "heading": "Example one",
-     "narration": "A $90 air fryer you'll use twice a week for a year is about 90 cents a use.",
-     "on_screen_text": "$90 ÷ 100 uses ≈ $0.90",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small kitchen appliance on a counter with a long row of tally marks beside it. No text, no logos, no real people."
+     "heading": "Deal B",
+     "narration": "Deal B: a forty dollar gadget at sixty percent off. You'll realistically use it three times. Forty divided by three: over thirteen dollars a use.",
+     "on_screen_text": "$40 ÷ 3 uses ≈ $13.33",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big division sign with a small gadget. No text, no logos, no real people."
     },
     {
-     "heading": "Example two",
-     "narration": "A $40 gadget you'll use three times is over $13 a use. That's the expensive one.",
-     "on_screen_text": "$40 ÷ 3 uses ≈ $13",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a dusty gadget on a high shelf with only three tally marks beside it. No text, no logos, no real people."
+     "heading": "Answer",
+     "narration": "So the cheap one costs about fifteen times more per use. Count uses honestly: look at how often you used the last thing like it.",
+     "on_screen_text": "Cheaper price, 15× the cost per use",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two bars, one much taller. No text, no logos, no real people."
     },
     {
-     "heading": "Be honest",
-     "narration": "Use your real number, not your fantasy number. Count how often you used the last thing like it.",
-     "on_screen_text": "Use your real number",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes looking at a closet full of barely used items with a thoughtful face. No text, no logos, no real people."
-    },
-    {
-     "heading": "The rule",
-     "narration": "If the cost per use looks silly, the discount doesn't matter. Skip it.",
-     "on_screen_text": "Bad cost per use? Skip it.",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes walking past a sale rack with a calm, satisfied smile. No text, no logos, no real people."
+     "heading": "Rule",
+     "narration": "If the cost per use looks silly, the discount doesn't matter.",
+     "on_screen_text": "Silly cost per use? Skip it",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a check mark next to a calculator. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -255,7 +306,28 @@
    "claims_to_verify": [
     "Examples ($90 air fryer, $40 gadget) are illustrative, not price claims"
    ]
-  }
+  },
+  "format_style": "on-screen-calculation",
+  "tiktok_extra": [
+   {
+    "heading": "Your turn",
+    "narration": "Try it on the thing in your cart right now. Price, divided by the honest number of uses in the next year. Under a dollar is usually a good buy.",
+    "on_screen_text": "Price ÷ honest uses",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a cart and a calculator. No text, no logos, no real people."
+   },
+   {
+    "heading": "Subscriptions too",
+    "narration": "It works for subscriptions too. A fifteen dollar app you open twice a month is seven fifty a use.",
+    "on_screen_text": "$15 ÷ 2 = $7.50 a use",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with an app icon. No text, no logos, no real people."
+   },
+   {
+    "heading": "Gifts",
+    "narration": "And for gifts, think about uses for the person getting it, not how impressive it looks in the box.",
+    "on_screen_text": "Count their uses, not the box",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gift box with a small calculator. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
@@ -263,43 +335,37 @@
   "idea_angle": "Buy now, pay later is fine for one planned purchase; it goes wrong with stacking plans, autopay from a thin checking account and late fees.",
   "script": {
    "title": "Pay-in-4 without the hangover",
-   "hook": "Pay in four sounds free. It is, until you have five of them at once.",
+   "hook": "Common question: is pay in 4 actually free? Honest answer: it can be, if you follow 4 rules.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Pay in four sounds free. It is, until you have five of them at once.",
-     "on_screen_text": "5 pay-in-4s at once",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. five overlapping payment calendars stacked like cards, the small round green piggy bank mascot with big eyes peeking from behind. No text, no logos, no real people."
+     "narration": "Common question: is pay in 4 actually free? Honest answer: it can be, if you follow 4 rules.",
+     "on_screen_text": "Q: Is pay-in-4 free?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a speech bubble with a question mark. No text, no logos, no real people."
     },
     {
-     "heading": "Rule one",
+     "heading": "Rule 1",
      "narration": "One plan at a time. Stacking plans is how a fifty-dollar payment becomes two hundred a week.",
      "on_screen_text": "1. One plan at a time",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single calendar with four neat dots, others set aside. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single card, others faded. No text, no logos, no real people."
     },
     {
-     "heading": "Rule two",
-     "narration": "Check the late fee and whether it pulls from debit. A payment that hits an empty account can mean a late fee and an overdraft.",
-     "on_screen_text": "2. Know the late fee",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bank card connected to a nearly empty jar with a warning triangle. No text, no logos, no real people."
+     "heading": "Rule 2",
+     "narration": "Know the late fee and whether it pulls from debit. An empty account can mean a late fee and an overdraft.",
+     "on_screen_text": "2. Know the fees",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card with a small warning. No text, no logos, no real people."
     },
     {
-     "heading": "Rule three",
-     "narration": "Some providers now report to credit bureaus. Treat it like credit, because it is.",
+     "heading": "Rule 3",
+     "narration": "Treat it as credit. Some providers now report to credit bureaus.",
      "on_screen_text": "3. It's credit",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small credit report page with a new line item glowing. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small credit report. No text, no logos, no real people."
     },
     {
-     "heading": "Rule four",
-     "narration": "Only use it for something you could buy with cash today. It's a payment schedule, not extra money.",
-     "on_screen_text": "4. Only if you could pay today",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a full coin jar next to a shopping bag. No text, no logos, no real people."
-    },
-    {
-     "heading": "Wrap",
-     "narration": "One plan, known fees, money already in the account. Then pay in four really is free.",
-     "on_screen_text": "Then it's actually free",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes relaxed with a single checked-off calendar. No text, no logos, no real people."
+     "heading": "Rule 4",
+     "narration": "Only for things you could buy with cash today. It's a payment schedule, not extra money.",
+     "on_screen_text": "4. Cash you already have",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a wallet with coins. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -322,7 +388,41 @@
     "Some BNPL providers report payments to credit bureaus (confirm current provider practices)",
     "BNPL late fees and payment sources vary by provider"
    ]
-  }
+  },
+  "hook_template": "question-you-asked",
+  "format_style": "question-reply",
+  "tiktok_extra": [
+   {
+    "heading": "Debit risk",
+    "narration": "If a plan pulls from debit and your balance is low that day, you could pay a late fee and an overdraft fee for one payment. Link a card you pay in full, or keep a buffer.",
+    "on_screen_text": "Keep a buffer",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small cushion under a coin. No text, no logos, no real people."
+   },
+   {
+    "heading": "Stacking",
+    "narration": "Here's how stacking looks. Four plans at fifty dollars each, all due the same week, is two hundred dollars, on top of rent and groceries.",
+    "on_screen_text": "4 plans × $50 = $200/week",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four small calendars. No text, no logos, no real people."
+   },
+   {
+    "heading": "Returns",
+    "narration": "Returned something? The plan may keep charging until the refund is processed. Keep paying, and follow up.",
+    "on_screen_text": "Returns can lag",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a box with a clock. No text, no logos, no real people."
+   },
+   {
+    "heading": "Calendar",
+    "narration": "Put every payment date in your calendar the moment you check out.",
+    "on_screen_text": "Calendar every date",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with pins. No text, no logos, no real people."
+   },
+   {
+    "heading": "Better",
+    "narration": "If you're reaching for pay later for a gift, a cheaper gift paid in cash is usually the kinder choice for January you.",
+    "on_screen_text": "Cheaper gift, cash",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small gift with a coin. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
@@ -330,11 +430,11 @@
   "idea_angle": "Set one total for gifts, divide it by a written list of names, and the per-person number makes every buying decision for you.",
   "script": {
    "title": "Your holiday gift budget is one number",
-   "hook": "If you're going to overspend this December, it'll be on gifts, one 'small' purchase at a time.",
+   "hook": "How much should you spend on gifts this year? Answer 1 question and you'll know.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "If you're going to overspend this December, it'll be on gifts, one 'small' purchase at a time.",
+     "narration": "How much should you spend on gifts this year? Answer 1 question and you'll know.",
      "on_screen_text": "December overspending = gifts",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tall wobbly stack of small wrapped presents, the small round green piggy bank mascot with big eyes looking up at it. No text, no logos, no real people."
     },
@@ -388,7 +488,41 @@
    "claims_to_verify": [
     "$300 / 12 people example is illustrative"
    ]
-  }
+  },
+  "hook_template": "the-one-question",
+  "format_style": "explainer",
+  "tiktok_extra": [
+   {
+    "heading": "Not about money",
+    "narration": "And remember, people rarely remember the price. They remember that you thought of them. A note with the gift goes a long way.",
+    "on_screen_text": "Add a note",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card with a heart. No text, no logos, no real people."
+   },
+   {
+    "heading": "Shop early",
+    "narration": "Buying early, with your list, is how you avoid paying for rush shipping in the last week.",
+    "on_screen_text": "Shop early",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a gift. No text, no logos, no real people."
+   },
+   {
+    "heading": "Forgotten",
+    "narration": "Add a line for wrapping, cards and shipping. That's often thirty to fifty dollars people forget.",
+    "on_screen_text": "Wrapping + shipping line",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. wrapping paper and a stamp. No text, no logos, no real people."
+   },
+   {
+    "heading": "Talk",
+    "narration": "Big family? Suggest a gift exchange or a price limit early. Most people are relieved someone asked.",
+    "on_screen_text": "Suggest a limit early",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two speech bubbles. No text, no logos, no real people."
+   },
+   {
+    "heading": "Track",
+    "narration": "Write what you actually spend next to each name. Over on one? Take it from another name on purpose.",
+    "on_screen_text": "Track spent vs budget",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list with coins. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
@@ -396,11 +530,11 @@
   "idea_angle": "Gross pay minus taxes, FICA and pre-tax deductions explains why your paycheck looks small, and the stub is where mistakes hide.",
   "script": {
    "title": "Read your pay stub in 60 seconds",
-   "hook": "Your salary says $50,000. Your paycheck says something much smaller. Here's where it went.",
+   "hook": "If you see \"FICA 7.65%\" on your pay stub, read this first. It's where your paycheck went.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Your offer said fifty thousand. Your paycheck says something much smaller. Here's where it went.",
+     "narration": "If you see \"FICA 7.65%\" on your pay stub, read this first. It's where your paycheck went.",
      "on_screen_text": "Where did my paycheck go?",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a long paper pay stub that trails onto the floor. No text, no logos, no real people."
     },
@@ -456,7 +590,9 @@
     "FICA employee rate 7.65% (6.2% Social Security up to the wage base + 1.45% Medicare)",
     "Pre-tax health premiums and traditional 401(k) reduce federal taxable income (state rules vary)"
    ]
-  }
+  },
+  "hook_template": "word-on-statement",
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -464,43 +600,37 @@
   "idea_angle": "A hard inquiry usually costs a few points, fades within a year and drops off after two, and rate-shopping windows count several loan pulls as one.",
   "script": {
    "title": "What a hard inquiry actually costs you",
-   "hook": "People skip comparing loan rates because they're scared of hard inquiries. That fear costs more than the inquiry.",
+   "hook": "Myth: shopping around for a loan wrecks your credit. Fact: 1 hard inquiry is usually under 5 points.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "People skip comparing loan rates because they're scared of hard inquiries. That fear costs more than the inquiry.",
-     "on_screen_text": "Scared of hard inquiries?",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes hiding behind a couch from a small cartoon magnifying glass. No text, no logos, no real people."
+     "narration": "Myth: shopping around for a loan wrecks your credit. Fact: 1 hard inquiry is usually under 5 points.",
+     "on_screen_text": "MYTH vs FACT: hard inquiries",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a split card, one side crossed, one ticked. No text, no logos, no real people."
     },
     {
-     "heading": "The cost",
-     "narration": "For most people, one hard inquiry drops a FICO score by less than five points.",
-     "on_screen_text": "Usually under 5 points",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a score dial nudged down by a tiny sliver. No text, no logos, no real people."
+     "heading": "Myth 1",
+     "narration": "Myth: every application tanks your score for years. Fact: an inquiry only counts in FICO scores for twelve months, and leaves your report after two years.",
+     "on_screen_text": "FACT: counts for 12 months",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a ring around twelve. No text, no logos, no real people."
     },
     {
-     "heading": "How long",
-     "narration": "It only counts in FICO scores for twelve months, and it falls off your report after two years.",
-     "on_screen_text": "Counts 12 months, gone in 2 years",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a fading mark that disappears by the end. No text, no logos, no real people."
+     "heading": "Myth 2",
+     "narration": "Myth: comparing car loans means five hits. Fact: rate shopping for a car, mortgage or student loan in a short window is generally counted as one.",
+     "on_screen_text": "FACT: rate shopping = 1 inquiry",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. five small arrows merging into one. No text, no logos, no real people."
     },
     {
-     "heading": "Rate shopping",
-     "narration": "Shopping for a car, mortgage or student loan? Multiple pulls in a short window are counted as one.",
-     "on_screen_text": "Loan shopping window = 1 inquiry",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small envelopes merging into one. No text, no logos, no real people."
+     "heading": "Myth 3",
+     "narration": "Myth: checking your own score hurts it. Fact: that's a soft pull. It never does.",
+     "on_screen_text": "FACT: checking your own = soft",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass with a check. No text, no logos, no real people."
     },
     {
-     "heading": "Soft pulls",
-     "narration": "And checking your own score is a soft pull. It never hurts.",
-     "on_screen_text": "Checking your own score: free",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone showing a score dial with a green check. No text, no logos, no real people."
-    },
-    {
-     "heading": "Takeaway",
-     "narration": "Compare offers. A lower rate on a car loan is worth far more than a few temporary points.",
-     "on_screen_text": "Compare offers anyway",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes comparing two price tags side by side, picking the smaller one. No text, no logos, no real people."
+     "heading": "Verdict",
+     "narration": "Compare offers. A lower rate is worth far more than a few temporary points.",
+     "on_screen_text": "Compare offers",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance tipping toward a coin. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -525,7 +655,35 @@
     "Inquiries count 12 months in FICO, stay 2 years on report",
     "Rate-shopping window counts multiple auto/mortgage/student loan inquiries as one (window length varies by score version)"
    ]
-  }
+  },
+  "hook_template": "myth-check",
+  "format_style": "myth-vs-fact",
+  "tiktok_extra": [
+   {
+    "heading": "New cards",
+    "narration": "Opening several new cards in a short time is different. That can lower your average account age and look riskier to lenders.",
+    "on_screen_text": "Many new cards = different",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. several cards fanned out. No text, no logos, no real people."
+   },
+   {
+    "heading": "Freeze",
+    "narration": "Not applying for anything? A free credit freeze stops new accounts being opened in your name. Lift it when you need to apply.",
+    "on_screen_text": "Freeze when not applying",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lock on a report. No text, no logos, no real people."
+   },
+   {
+    "heading": "Check",
+    "narration": "Check your reports for inquiries you don't recognize. That can be an early sign of identity theft.",
+    "on_screen_text": "Spot unknown inquiries",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a report. No text, no logos, no real people."
+   },
+   {
+    "heading": "Bottom line",
+    "narration": "Shopping for a better rate is usually worth a few temporary points. Shop within a short window.",
+    "on_screen_text": "Rate shop in a short window",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small calendar. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
@@ -533,43 +691,37 @@
   "idea_angle": "For most people in their 20s a flat cash-back card beats points: points only win if you redeem at a high value and would have spent the money anyway.",
   "script": {
    "title": "Cash back vs points, honestly",
-   "hook": "Points cards look exciting. For most people, boring cash back wins.",
+   "hook": "Myth: points cards always beat boring cash back. Here are 3 rewards myths, checked.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Points cards look exciting. For most people, boring cash back wins.",
-     "on_screen_text": "Points vs cash back",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shiny treasure chest of stars next to a plain jar of coins, the small round green piggy bank mascot with big eyes between them. No text, no logos, no real people."
+     "narration": "Myth: points cards always beat boring cash back. Here are 3 rewards myths, checked.",
+     "on_screen_text": "MYTH vs FACT: rewards cards",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes two cards side by side. No text, no logos, no real people."
     },
     {
-     "heading": "Cash back",
-     "narration": "A flat 2% card means every $1,000 you spend returns twenty dollars. No math, no expiration games.",
-     "on_screen_text": "2% = $20 per $1,000",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple coin jar with a steady drip of coins. No text, no logos, no real people."
+     "heading": "Myth 1",
+     "narration": "Myth: points are always worth more. Fact: only if you redeem for travel at a good rate. Gift cards often get you less. A flat two percent card returns twenty dollars on every thousand, no math.",
+     "on_screen_text": "FACT: 2% = $20 per $1,000",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin stack next to a plane ticket. No text, no logos, no real people."
     },
     {
-     "heading": "Points",
-     "narration": "Points can be worth more, but only if you redeem them for travel at a good rate. Redeem for gift cards and they're often worth less.",
-     "on_screen_text": "Points: value depends on redemption",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a star turning into a small airplane on one path and a tiny coin on another. No text, no logos, no real people."
+     "heading": "Myth 2",
+     "narration": "Myth: the annual fee pays for itself. Fact: on a ninety-five dollar fee, you need more than ninety-five dollars extra in rewards just to break even.",
+     "on_screen_text": "FACT: $95 fee = $95 to beat",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a price tag with a small bar. No text, no logos, no real people."
     },
     {
-     "heading": "Annual fee",
-     "narration": "If the card has a $95 fee, you need to earn more than $95 extra in rewards just to break even.",
-     "on_screen_text": "$95 fee = $95 to break even",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small gate with a fee sign in front of a pile of stars. No text, no logos, no real people."
+     "heading": "Myth 3",
+     "narration": "Myth: rewards help if you carry a balance. Fact: interest wipes out any reward in about a month.",
+     "on_screen_text": "FACT: interest beats rewards",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a dripping tap over coins. No text, no logos, no real people."
     },
     {
-     "heading": "The real rule",
-     "narration": "None of it matters if you carry a balance. Interest wipes out any reward in a month.",
-     "on_screen_text": "Carry a balance? Rewards = zero",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big wave of red coins washing over a tiny reward pile. No text, no logos, no real people."
-    },
-    {
-     "heading": "Pick",
-     "narration": "Pay in full every month, no annual fee, flat cash back. Upgrade later if you travel a lot.",
-     "on_screen_text": "Pay in full + flat cash back",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding up a simple card with a check mark. No text, no logos, no real people."
+     "heading": "Verdict",
+     "narration": "Pay in full, no annual fee, flat cash back. Upgrade later if you travel a lot.",
+     "on_screen_text": "Pay in full · no fee · flat cash back",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a plain card with a check mark. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -592,7 +744,9 @@
     "2% flat cash-back cards exist with no annual fee (confirm current offers before naming any)",
     "Point values vary by program and redemption"
    ]
-  }
+  },
+  "hook_template": "boring-wins",
+  "format_style": "myth-vs-fact"
  },
  {
   "format": "short",
@@ -600,11 +754,11 @@
   "idea_angle": "Health FSA balances are generally use-it-or-lose-it at the plan year end unless your plan has a grace period or carryover, so check now and spend on eligible items.",
   "script": {
    "title": "Your FSA money may vanish Dec 31",
-   "hook": "If you have an FSA, there might be money in it that disappears at the end of the year.",
+   "hook": "Have an FSA? You may be leaving money on the table on December 31, and it's yours to claim.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "If you have an FSA through work, some of that money might disappear at the end of the year.",
+     "narration": "Have an FSA? You may be leaving money on the table on December 31, and it's yours to claim.",
      "on_screen_text": "Your FSA might expire",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin jar with a small clock on it about to strike midnight. No text, no logos, no real people."
     },
@@ -661,7 +815,35 @@
     "OTC medicines and menstrual products eligible since 2020 CARES Act",
     "Deadline depends on plan year, not always Dec 31"
    ]
-  }
+  },
+  "hook_template": "free-money-left",
+  "format_style": "explainer",
+  "tiktok_extra": [
+   {
+    "heading": "Find it",
+    "narration": "Not sure what's eligible? Many FSA providers have a list on their site or app. Search before you buy.",
+    "on_screen_text": "Check your provider's list",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a list. No text, no logos, no real people."
+   },
+   {
+    "heading": "Receipts",
+    "narration": "Keep receipts. Some FSA cards ask you to prove a purchase was eligible later.",
+    "on_screen_text": "Keep receipts",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a receipt. No text, no logos, no real people."
+   },
+   {
+    "heading": "Book now",
+    "narration": "Eye exams and dental cleanings fill up in December. Book this week if you need one.",
+    "on_screen_text": "Book appointments now",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a tooth. No text, no logos, no real people."
+   },
+   {
+    "heading": "HSA is different",
+    "narration": "Have an HSA instead? That money generally rolls over and stays yours, so there's no year-end rush.",
+    "on_screen_text": "HSA rolls over",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with an arrow. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
@@ -669,43 +851,37 @@
   "idea_angle": "If your health plan is HSA-eligible, an HSA gives a tax break going in, tax-free growth and tax-free medical withdrawals, and the money is yours forever.",
   "script": {
    "title": "The HSA is a secret retirement account",
-   "hook": "There's an account with three tax breaks, and most people use it like a checking account.",
+   "hook": "Myth: an HSA is just a doctor bill account. Here are 3 HSA myths, checked.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "There's an account with three tax breaks, and most people use it like a checking account.",
-     "on_screen_text": "Three tax breaks in one",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with three small gold stars on its lid, the small round green piggy bank mascot with big eyes admiring it. No text, no logos, no real people."
+     "narration": "Myth: an HSA is just a doctor bill account. Here are 3 HSA myths, checked.",
+     "on_screen_text": "MYTH vs FACT: the HSA",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a small medical cross and a jar. No text, no logos, no real people."
     },
     {
-     "heading": "Who",
-     "narration": "It's an HSA, a health savings account. You need an HSA-eligible health plan, so check with HR.",
+     "heading": "Myth 1",
+     "narration": "Myth: you lose it at the end of the year. Fact: that's an FSA. An HSA rolls over every year and stays yours if you change jobs.",
+     "on_screen_text": "FACT: it rolls over",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar rolling forward. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 2",
+     "narration": "Myth: it just sits in cash. Fact: many HSAs let you invest it, and growth isn't taxed.",
+     "on_screen_text": "FACT: it can be invested",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small plant in a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 3",
+     "narration": "Myth: there's one tax break. Fact: there are three. Money goes in pre-tax, grows tax-free, and comes out tax-free for qualified medical costs.",
+     "on_screen_text": "FACT: 3 tax breaks",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small check marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Catch",
+     "narration": "The catch: you need an HSA-eligible health plan. Check with HR.",
      "on_screen_text": "Needs an HSA-eligible plan",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a health insurance card with a small check mark. No text, no logos, no real people."
-    },
-    {
-     "heading": "Break one",
-     "narration": "Money goes in before tax, or you deduct it.",
-     "on_screen_text": "1. Tax break going in",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin dropping into a jar past a tax gate that's open. No text, no logos, no real people."
-    },
-    {
-     "heading": "Break two",
-     "narration": "It can be invested, and growth isn't taxed.",
-     "on_screen_text": "2. Grows tax-free",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small sprout growing out of the jar. No text, no logos, no real people."
-    },
-    {
-     "heading": "Break three",
-     "narration": "Withdrawals for qualified medical costs are tax-free, at any age.",
-     "on_screen_text": "3. Medical withdrawals tax-free",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a first aid kit next to the jar with a coin moving out. No text, no logos, no real people."
-    },
-    {
-     "heading": "And",
-     "narration": "Unlike an FSA, it rolls over every year and stays yours if you change jobs. If you can, invest part of it and leave it growing.",
-     "on_screen_text": "Rolls over. Yours forever.",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes carrying the jar to a new office building, smiling. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an office building. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -730,7 +906,9 @@
     "2026 HSA limits: $4,400 self-only / $8,750 family (confirm with IRS)",
     "Non-medical withdrawals before 65 are taxed plus 20% penalty"
    ]
-  }
+  },
+  "hook_template": "myth-check",
+  "format_style": "myth-vs-fact"
  },
  {
   "format": "short",
@@ -738,43 +916,37 @@
   "idea_angle": "Calling your card issuer and asking for a lower APR is free, takes minutes, and often works for customers with on-time history.",
   "script": {
    "title": "The two-minute call that can lower your APR",
-   "hook": "You can lower your credit card interest rate with one phone call. Here's exactly what to say.",
+   "hook": "28% versus 22% on a $3,000 balance. Here's what one phone call is worth, worked out on screen.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "You can sometimes lower your credit card interest rate with one phone call. Here's what to say.",
-     "on_screen_text": "One call, lower rate",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a phone with a small downward arrow beside a percent sign. No text, no logos, no real people."
+     "narration": "28% versus 22% on a $3,000 balance. Here's what one phone call is worth, worked out on screen.",
+     "on_screen_text": "28% vs 22% on $3,000",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a phone and a calculator. No text, no logos, no real people."
     },
     {
-     "heading": "Before",
-     "narration": "Know your current APR, how long you've had the card, and that you pay on time.",
-     "on_screen_text": "Know: APR, years, on-time",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small note card with three check boxes. No text, no logos, no real people."
+     "heading": "At 28%",
+     "narration": "At twenty-eight percent, a month of interest is three thousand times point two eight, divided by twelve: about seventy dollars.",
+     "on_screen_text": "$3,000 × 28% ÷ 12 ≈ $70",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big coin stack. No text, no logos, no real people."
     },
     {
-     "heading": "The script",
-     "narration": "Say: 'I've been a customer for three years and always pay on time. I'm comparing balance transfer offers. Can you lower my APR?'",
-     "on_screen_text": "'Can you lower my APR?'",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a speech bubble shape with a percent sign shrinking. No text, no logos, no real people."
+     "heading": "At 22%",
+     "narration": "At twenty-two percent: three thousand times point two two, divided by twelve: about fifty-five dollars.",
+     "on_screen_text": "$3,000 × 22% ÷ 12 ≈ $55",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a smaller coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Difference",
+     "narration": "That's about fifteen dollars a month, or around a hundred eighty a year, for a two-minute call. Say: I always pay on time, I'm comparing balance transfer offers, can you lower my APR?",
+     "on_screen_text": "~$15/month · ~$180/year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone call bubble. No text, no logos, no real people."
     },
     {
      "heading": "If no",
-     "narration": "If they say no, ask: 'Is there a hardship program or a temporary rate?' Then ask to try again in six months.",
-     "on_screen_text": "No? Ask about hardship programs",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a small reminder flag six months ahead. No text, no logos, no real people."
-    },
-    {
-     "heading": "Math",
-     "narration": "On a $3,000 balance, going from 28% to 22% saves roughly fifteen dollars a month in interest.",
-     "on_screen_text": "28% → 22% ≈ $15/mo on $3K",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin jar with a small stream of coins flowing back in. No text, no logos, no real people."
-    },
-    {
-     "heading": "Rule",
-     "narration": "The worst outcome is a polite no. Make the call.",
-     "on_screen_text": "Worst case: a polite no",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes hanging up a phone with a small satisfied smile. No text, no logos, no real people."
+     "narration": "If they say no, ask about a hardship program, and try again in six months.",
+     "on_screen_text": "No? Ask again in 6 months",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a small arrow. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -797,7 +969,35 @@
     "$3,000 at 28% vs 22%: monthly interest ≈ $70 vs $55 (≈$15 difference, simple monthly approximation)",
     "Success isn't guaranteed; issuers decide case by case"
    ]
-  }
+  },
+  "hook_template": "tonight-in-minutes",
+  "format_style": "on-screen-calculation",
+  "tiktok_extra": [
+   {
+    "heading": "No luck?",
+    "narration": "If they won't move, ask whether you qualify for any balance transfer offers, or a hardship plan if money is tight. Write down who you spoke to and when.",
+    "on_screen_text": "Ask about other options",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a notebook and a phone. No text, no logos, no real people."
+   },
+   {
+    "heading": "Script",
+    "narration": "Keep it short: 'I've been a customer for two years and always pay on time. Other cards are offering lower rates. Can you lower my APR?'",
+    "on_screen_text": "Use a short script",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a speech bubble. No text, no logos, no real people."
+   },
+   {
+    "heading": "Best time",
+    "narration": "It tends to work better with a good payment history, so call after a few on-time months.",
+    "on_screen_text": "Call after on-time months",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with check marks. No text, no logos, no real people."
+   },
+   {
+    "heading": "Then",
+    "narration": "If it works, put the savings toward the balance. Fifteen dollars a month extra pays it down faster.",
+    "on_screen_text": "Put savings on the balance",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin going into a card. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
@@ -805,43 +1005,37 @@
   "idea_angle": "The IRS Tax Withholding Estimator tells you in about 15 minutes whether you're on track for a big refund or a bill, and December is the time to fix it.",
   "script": {
    "title": "Do a W-4 check before January",
-   "hook": "A huge tax refund isn't a bonus. It's your money, interest-free, held by the government.",
+   "hook": "Myth: a big tax refund is a bonus. Fact: it's your own money, handed back up to 12 months late.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "A huge tax refund isn't a bonus. It's your own money, held interest-free all year.",
-     "on_screen_text": "Big refund = your money, late",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes waving goodbye to a stack of coins in a small envelope flying away. No text, no logos, no real people."
+     "narration": "Myth: a big tax refund is a bonus. Fact: it's your own money, handed back up to 12 months late.",
+     "on_screen_text": "MYTH vs FACT: big refunds",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes an envelope with a coin coming back. No text, no logos, no real people."
     },
     {
-     "heading": "The tool",
-     "narration": "The IRS has a free Tax Withholding Estimator. Search 'IRS withholding estimator'. It takes about fifteen minutes.",
-     "on_screen_text": "Free IRS Withholding Estimator",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop showing a simple calculator icon with a government building shape. No text, no logos, no real people."
+     "heading": "Myth 2",
+     "narration": "Myth: you can't change what comes out of your paycheck. Fact: your W-4 controls it, and you can update it any time.",
+     "on_screen_text": "FACT: your W-4 controls it",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a slider. No text, no logos, no real people."
     },
     {
-     "heading": "What you need",
-     "narration": "Grab your latest pay stub and last year's return if you have it.",
-     "on_screen_text": "Have: pay stub + last return",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pay stub and a folder side by side. No text, no logos, no real people."
-    },
-    {
-     "heading": "Result",
-     "narration": "It tells you if you're headed for a big refund or a bill, and fills in a new W-4 for you.",
-     "on_screen_text": "Refund or bill? It tells you.",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance scale with a small envelope on one side and a bill on the other. No text, no logos, no real people."
+     "heading": "Myth 3",
+     "narration": "Myth: fixing it is complicated. Fact: the free IRS Tax Withholding Estimator takes about fifteen minutes with a pay stub and last year's return.",
+     "on_screen_text": "FACT: ~15 minutes, free",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a small clock. No text, no logos, no real people."
     },
     {
      "heading": "When",
-     "narration": "Do it after a raise, a new job, a side gig, or any big life change. And once in December.",
-     "on_screen_text": "After a raise, new job or gig",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with small stars on a few dates. No text, no logos, no real people."
+     "narration": "Do it after a raise, a new job, a side gig, a big life change, and once in December.",
+     "on_screen_text": "After any big change",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a ring, a briefcase and a calendar. No text, no logos, no real people."
     },
     {
-     "heading": "Wrap",
+     "heading": "Then",
      "narration": "Then hand the new W-4 to HR or update it in your payroll app.",
-     "on_screen_text": "Update W-4 with HR",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes handing a sheet of paper across a desk. No text, no logos, no real people."
+     "on_screen_text": "Give HR the new W-4",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow from a form to an office. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -864,7 +1058,41 @@
     "IRS Tax Withholding Estimator is free at irs.gov",
     "Time estimate (~15 min) is approximate"
    ]
-  }
+  },
+  "hook_template": "myth-check",
+  "format_style": "myth-vs-fact",
+  "tiktok_extra": [
+   {
+    "heading": "Timing",
+    "narration": "A December change shows up on your first January paychecks, so you start the new year with the right amount coming out.",
+    "on_screen_text": "Fix now, right in January",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a paycheck. No text, no logos, no real people."
+   },
+   {
+    "heading": "Refund plan",
+    "narration": "Prefer a refund anyway? That's fine. Just choose the size on purpose.",
+    "on_screen_text": "Refund size: on purpose",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small dial. No text, no logos, no real people."
+   },
+   {
+    "heading": "Owe instead?",
+    "narration": "The opposite problem matters too. If you owed a lot last April, the estimator can raise withholding so you don't again.",
+    "on_screen_text": "Owed last year? Adjust",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with an arrow. No text, no logos, no real people."
+   },
+   {
+    "heading": "Two jobs",
+    "narration": "Two jobs or a working spouse is the most common reason withholding is off. The estimator handles that.",
+    "on_screen_text": "2 jobs? Use the estimator",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two buildings. No text, no logos, no real people."
+   },
+   {
+    "heading": "Side income",
+    "narration": "Side income with no withholding can be covered by extra withholding at your main job instead of quarterly payments.",
+    "on_screen_text": "Cover side income",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop and a paycheck. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
@@ -872,11 +1100,11 @@
   "idea_angle": "Your own 401(k) contributions are always yours, but the employer match may vest over years; check your schedule before you change jobs.",
   "script": {
    "title": "Vesting: the money you lose when you quit",
-   "hook": "Before you quit, check one number in your 401(k). It could be worth thousands.",
+   "hook": "Your employer won't lead with this, but it's in the fine print: your 401(k) match can take up to 6 years to be yours.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Before you quit, check one number in your 401(k). It could be worth thousands.",
+     "narration": "Your employer won't lead with this, but it's in the fine print: your 401(k) match can take up to 6 years to be yours.",
      "on_screen_text": "Check this before you quit",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a box of desk items, pausing at a door. No text, no logos, no real people."
     },
@@ -931,7 +1159,9 @@
     "Employee deferrals always 100% vested",
     "Employer match: cliff vesting max 3 years, graded max 6 years (IRS)"
    ]
-  }
+  },
+  "hook_template": "fine-print",
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -939,11 +1169,11 @@
   "idea_angle": "A 0% balance transfer only helps if the transfer fee is smaller than the interest you'd pay and you can clear the balance before the promo ends.",
   "script": {
    "title": "Balance transfer math in 30 seconds",
-   "hook": "A zero percent balance transfer isn't free. But it can still save you hundreds. Here's the math.",
+   "hook": "A 3% transfer fee or 24% interest? We ran the real numbers on a $3,000 balance.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "A zero percent balance transfer isn't free. But it can still save you hundreds.",
+     "narration": "A 3% transfer fee or 24% interest? We ran the real numbers on a $3,000 balance.",
      "on_screen_text": "0% isn't free. Still worth it?",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two credit cards with an arrow carrying coins from one to the other. No text, no logos, no real people."
     },
@@ -999,7 +1229,29 @@
     "$3,000 × 24% ÷ 12 = $60/month interest (approximation)",
     "Promo lengths vary (often 12–21 months)"
    ]
-  }
+  },
+  "hook_template": "x-vs-y-real-math",
+  "format_style": "explainer",
+  "tiktok_extra": [
+   {
+    "heading": "Check",
+    "narration": "Check whether the promo rate applies to transfers only, and when the transfer has to happen to qualify.",
+    "on_screen_text": "Read the promo terms",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a document with a magnifying glass. No text, no logos, no real people."
+   },
+   {
+    "heading": "Credit",
+    "narration": "A new card means a hard inquiry, usually a small, temporary dip. Worth it if the math works.",
+    "on_screen_text": "Small inquiry dip",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a report with a tiny dip. No text, no logos, no real people."
+   },
+   {
+    "heading": "Autopay",
+    "narration": "Set autopay for the monthly number you worked out, not the minimum. Minimums won't clear it before the promo ends.",
+    "on_screen_text": "Autopay your number",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small gear and a card. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
@@ -1007,11 +1259,11 @@
   "idea_angle": "Round-up investing apps move small amounts; a monthly fee can eat a big share of them, so check fee ÷ monthly round-ups before signing up.",
   "script": {
    "title": "Round-up apps: the honest math",
-   "hook": "Round-up apps feel like free money. Check what the fee takes first.",
+   "hook": "A $3 monthly fee sounds tiny. On round-up apps it can eat 10% of what you invest.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Round-up apps feel like free money. Check what the fee takes first.",
+     "narration": "A $3 monthly fee sounds tiny. On round-up apps it can eat 10% of what you invest.",
      "on_screen_text": "Round-ups: check the fee",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coffee cup with a small coin hopping off into a tiny jar. No text, no logos, no real people."
     },
@@ -1066,7 +1318,9 @@
     "Purchase counts and average round-up (60 × $0.50) are illustrative",
     "Monthly fees vary by app and tier; don't name a specific app without checking"
    ]
-  }
+  },
+  "hook_template": "percent-fee-eats",
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1074,11 +1328,11 @@
   "idea_angle": "Investing a windfall all at once has historically beaten spreading it out about two-thirds of the time, but dollar-cost averaging lowers regret, and paycheck investing already does it.",
   "script": {
    "title": "Lump sum or a bit each month?",
-   "hook": "Got a chunk of money to invest? All at once, or a little each month? The data has an answer.",
+   "hook": "Lump sum or a bit each month? The data says one wins about 2 times out of 3.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Got a chunk of money to invest? All at once, or a little each month?",
+     "narration": "Lump sum or a bit each month? The data says one wins about 2 times out of 3.",
      "on_screen_text": "All at once or spread out?",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a big bag of coins next to a row of small monthly jars. No text, no logos, no real people."
     },
@@ -1134,7 +1388,9 @@
     "Lump sum outperformed DCA roughly two-thirds of the time historically (Vanguard research; confirm figure and period)",
     "Past performance does not guarantee future results"
    ]
-  }
+  },
+  "hook_template": "x-vs-y-real-math",
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1142,43 +1398,37 @@
   "idea_angle": "Schedule savings to move the morning after payday so it happens before spending, instead of saving whatever is left.",
   "script": {
    "title": "Pay yourself first, literally on payday",
-   "hook": "Saving what's left at the end of the month doesn't work, because nothing is left.",
+   "hook": "Pay yourself first, with real numbers: twenty-five dollars a paycheck for 1 year, and what it turns into.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Saving whatever's left at the end of the month doesn't work, because nothing is left.",
-     "on_screen_text": "Nothing left to save?",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes shaking an empty coin jar upside down. No text, no logos, no real people."
+     "narration": "Pay yourself first, with real numbers: twenty-five dollars a paycheck for 1 year, and what it turns into.",
+     "on_screen_text": "$25 a paycheck, for 1 year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a calendar with small coins. No text, no logos, no real people."
     },
     {
-     "heading": "Flip it",
-     "narration": "Flip the order. Savings come out first, the morning after payday. You spend what's left.",
-     "on_screen_text": "Save first, spend the rest",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two arrows on a paycheck, one going to a savings jar first, then a spending wallet. No text, no logos, no real people."
+     "heading": "Set up",
+     "narration": "Schedule a twenty-five dollar transfer for the day after each payday. The day after, so a late deposit never bounces it.",
+     "on_screen_text": "Day after payday: $25",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a scheduled arrow. No text, no logos, no real people."
     },
     {
-     "heading": "Set it up",
-     "narration": "In your bank app, schedule a recurring transfer for the day after each payday. Start small: twenty-five dollars works.",
-     "on_screen_text": "Recurring transfer, day after payday",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone calendar with a small repeat arrow on one day. No text, no logos, no real people."
+     "heading": "Month 3",
+     "narration": "Paid every two weeks, that's twenty-six transfers a year. By month three: about a hundred fifty.",
+     "on_screen_text": "Month 3: ~$150",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small jar a quarter full. No text, no logos, no real people."
     },
     {
-     "heading": "Why the day after",
-     "narration": "The day after, not the day of, so a late deposit never bounces the transfer.",
-     "on_screen_text": "Day after = no bounce",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar showing payday and the next day highlighted. No text, no logos, no real people."
+     "heading": "Month 12",
+     "narration": "By month twelve: six hundred fifty dollars, before interest, without ever deciding to save again.",
+     "on_screen_text": "Month 12: $650",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fuller jar. No text, no logos, no real people."
     },
     {
-     "heading": "Grow it",
-     "narration": "Every time you get a raise, bump it up. You won't miss money you never got used to.",
-     "on_screen_text": "Raise → bump it up",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small staircase of coin stacks growing taller. No text, no logos, no real people."
-    },
-    {
-     "heading": "Wrap",
-     "narration": "One scheduled transfer. That's the whole system.",
-     "on_screen_text": "One transfer. Done.",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes relaxing with a full savings jar beside it. No text, no logos, no real people."
+     "heading": "Raise it",
+     "narration": "Raise it to fifty after your next raise, and year two is thirteen hundred.",
+     "on_screen_text": "$50 × 26 = $1,300",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar overflowing. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -1200,7 +1450,9 @@
    "claims_to_verify": [
     "No numeric claims; $25 is an example amount"
    ]
-  }
+  },
+  "hook_template": "stop-doing",
+  "format_style": "real-numbers"
  },
  {
   "format": "short",
@@ -1208,43 +1460,37 @@
   "idea_angle": "Increase your 401(k) contribution by 1% at every raise (or turn on auto-escalation) so savings grow without your take-home ever shrinking.",
   "script": {
    "title": "The 1% raise rule",
-   "hook": "You can double your retirement savings rate without ever feeling poorer. One percent at a time.",
+   "hook": "Raising your 401(k) by one percent sounds painful. Let's work out on screen what it actually costs per paycheck.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "You can grow your retirement savings rate without ever feeling poorer. One percent at a time.",
-     "on_screen_text": "Save more, never feel it",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes climbing a gentle staircase made of coins. No text, no logos, no real people."
+     "narration": "Raising your 401(k) by one percent sounds painful. Let's work out on screen what it actually costs per paycheck.",
+     "on_screen_text": "+1%: the real cost per paycheck",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a calculator next to a paycheck. No text, no logos, no real people."
     },
     {
-     "heading": "The rule",
-     "narration": "Every time you get a raise, bump your 401(k) contribution up by one percent.",
-     "on_screen_text": "Every raise: +1%",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a dial clicking up one notch next to a small up arrow. No text, no logos, no real people."
+     "heading": "Step 1",
+     "narration": "One percent of a fifty thousand dollar salary is five hundred dollars a year.",
+     "on_screen_text": "$50,000 × 1% = $500/yr",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big multiplication sign. No text, no logos, no real people."
     },
     {
-     "heading": "Why it's painless",
-     "narration": "A 3% raise minus a 1% increase still means a bigger paycheck than before.",
-     "on_screen_text": "3% raise − 1% = still more pay",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two paychecks side by side, the second slightly taller. No text, no logos, no real people."
+     "heading": "Step 2",
+     "narration": "Paid every two weeks, that's twenty-six paychecks. Five hundred divided by twenty-six: about nineteen dollars.",
+     "on_screen_text": "$500 ÷ 26 ≈ $19",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big division sign. No text, no logos, no real people."
     },
     {
-     "heading": "Math",
-     "narration": "On a $50,000 salary, 1% is $500 a year, about $19 a paycheck if you're paid every two weeks, and less after the tax break.",
-     "on_screen_text": "1% of $50K ≈ $19/paycheck",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single small coin stack labeled only with a calendar icon. No text, no logos, no real people."
+     "heading": "Step 3",
+     "narration": "It comes out before tax, so in a twelve percent bracket, your take-home drops by roughly seventeen.",
+     "on_screen_text": "~$17 less take-home",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a smaller coin stack. No text, no logos, no real people."
     },
     {
-     "heading": "Automate",
-     "narration": "Many plans have auto-escalation. Turn it on once and it raises your rate every year.",
-     "on_screen_text": "Turn on auto-escalation",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone toggle switch flipped on with a sparkle. No text, no logos, no real people."
-    },
-    {
-     "heading": "Wrap",
-     "narration": "Small bumps, every year. It adds up quietly.",
-     "on_screen_text": "Small bumps add up",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tall jar filled steadily across a long timeline. No text, no logos, no real people."
+     "heading": "So",
+     "narration": "About seventeen dollars a paycheck, to save five hundred a year. Do it every time you get a raise and you never feel it.",
+     "on_screen_text": "~$17/paycheck → $500/yr",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a staircase of small steps. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -1267,7 +1513,9 @@
     "$50,000 × 1% = $500/yr ÷ 26 paychecks ≈ $19",
     "Auto-escalation availability depends on plan"
    ]
-  }
+  },
+  "hook_template": "small-change-big-year",
+  "format_style": "on-screen-calculation"
  },
  {
   "format": "short",
@@ -1275,43 +1523,37 @@
   "idea_angle": "StudentAid.gov shows every federal loan, its servicer, balance and rate in one place; private loans aren't there, so check your credit report for those.",
   "script": {
    "title": "Find all your federal student loans in 5 minutes",
-   "hook": "Not sure how many student loans you have or who you pay? There's one official site with all of it.",
+   "hook": "Common question: how many student loans do I even have, and who do I pay? Here's the 5-minute answer.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Not sure how many student loans you have, or who you even pay? There's one official place to look.",
-     "on_screen_text": "How many loans do you have?",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes surrounded by a messy pile of envelopes, looking puzzled. No text, no logos, no real people."
+     "narration": "Common question: how many student loans do I even have, and who do I pay? Here's the 5-minute answer.",
+     "on_screen_text": "Q: How many loans do I have?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a speech bubble over a graduation cap. No text, no logos, no real people."
     },
     {
-     "heading": "The site",
-     "narration": "Log in at StudentAid.gov with your FSA ID. It's the official Department of Education site, and it's free.",
-     "on_screen_text": "StudentAid.gov (free, official)",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop showing a simple graduation cap icon. No text, no logos, no real people."
+     "heading": "Answer",
+     "narration": "Log in at StudentAid dot gov with your FSA ID. It's the official, free Department of Education site, and it lists every federal loan, its balance, rate and servicer.",
+     "on_screen_text": "StudentAid.gov lists them all",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a shield. No text, no logos, no real people."
     },
     {
-     "heading": "What you'll see",
-     "narration": "Every federal loan, its balance, interest rate, and which servicer you pay.",
-     "on_screen_text": "Balance, rate, servicer",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a neat table with three columns of simple shapes. No text, no logos, no real people."
+     "heading": "Then",
+     "narration": "Copy each loan into one list: balance, rate, servicer, payment. Highest rate first.",
+     "on_screen_text": "One list, highest rate first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short list with a pencil. No text, no logos, no real people."
     },
     {
-     "heading": "Write it down",
-     "narration": "Copy each loan into one list: balance, rate, servicer, monthly payment. Highest rate first.",
-     "on_screen_text": "List them, highest rate first",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a notebook with a short ranked list. No text, no logos, no real people."
+     "heading": "Private?",
+     "narration": "Private loans aren't there. Your free credit report shows those.",
+     "on_screen_text": "Private loans: credit report",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small folders. No text, no logos, no real people."
     },
     {
-     "heading": "Private loans",
-     "narration": "Private loans aren't on StudentAid.gov. Check your free credit report to find those.",
-     "on_screen_text": "Private loans: check credit report",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a credit report page with one line highlighted. No text, no logos, no real people."
-    },
-    {
-     "heading": "Scams",
-     "narration": "And you never need to pay anyone to manage federal loans. Anything a company charges for, you can do free there.",
-     "on_screen_text": "Never pay for federal loan help",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shield blocking a hand holding a bill. No text, no logos, no real people."
+     "heading": "Warning",
+     "narration": "And you never need to pay a company to manage federal loans. Anything they charge for, you can do free.",
+     "on_screen_text": "Never pay to manage federal loans",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stop sign over a price tag. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -1336,7 +1578,9 @@
     "StudentAid.gov lists federal loans and servicers; private loans not included",
     "Federal repayment plan options changed under 2025 legislation; don't describe specific plans without checking current rules"
    ]
-  }
+  },
+  "hook_template": "question-you-asked",
+  "format_style": "question-reply"
  },
  {
   "format": "short",
@@ -1344,43 +1588,37 @@
   "idea_angle": "Double-digit drops inside a year are common even in years that end positive; knowing that in advance is what stops panic selling.",
   "script": {
    "title": "Your first market drop is normal",
-   "hook": "At some point your investments will drop ten percent. Here's why that's in the plan.",
+   "hook": "Myth: a 10% market drop means it's time to sell. Here are 3 myths about your first drop.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "At some point your investments will drop ten percent or more. That's part of the plan.",
-     "on_screen_text": "A 10% drop is coming",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a line chart with a dip in the middle, the small round green piggy bank mascot with big eyes calmly standing beside it. No text, no logos, no real people."
+     "narration": "Myth: a 10% market drop means it's time to sell. Here are 3 myths about your first drop.",
+     "on_screen_text": "MYTH vs FACT: market drops",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a gentle wavy line with a question mark. No text, no logos, no real people."
     },
     {
-     "heading": "History",
-     "narration": "Since 1980, the S&P 500 has had an average drop of around fourteen percent at some point within the year, yet most years still ended up.",
-     "on_screen_text": "Avg intra-year drop ≈ 14%",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a series of small yearly charts, each with a dip, most ending higher. No text, no logos, no real people."
+     "heading": "Myth 1",
+     "narration": "Myth: drops are rare. Fact: since 1980, the S and P 500 has had an average dip of around fourteen percent at some point within the year, and most years still ended up.",
+     "on_screen_text": "FACT: dips happen most years",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a wavy line trending up. No text, no logos, no real people."
     },
     {
-     "heading": "Selling",
-     "narration": "Selling during a drop turns a temporary dip into a permanent loss, and you have to guess when to buy back.",
-     "on_screen_text": "Selling locks in the loss",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a padlock on a down arrow. No text, no logos, no real people."
+     "heading": "Myth 2",
+     "narration": "Myth: selling protects you. Fact: selling turns a temporary dip into a permanent loss, and you have to guess when to get back in.",
+     "on_screen_text": "FACT: selling locks the loss in",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lock on a falling arrow. No text, no logos, no real people."
     },
     {
-     "heading": "Your edge",
-     "narration": "If you're in your twenties, you're buying for decades. Drops mean your regular contributions buy more shares.",
-     "on_screen_text": "Drops = shares on sale",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shopping basket filling with small share icons. No text, no logos, no real people."
+     "heading": "Myth 3",
+     "narration": "Myth: drops are bad for beginners. Fact: if you're investing for decades, your regular contributions buy more shares when prices are lower.",
+     "on_screen_text": "FACT: you buy more shares",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. more small coins in a basket. No text, no logos, no real people."
     },
     {
-     "heading": "Plan ahead",
-     "narration": "Write it down now: 'When it drops twenty percent, I keep my automatic investments running.'",
-     "on_screen_text": "Write your rule now",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes writing a note and pinning it to a corkboard. No text, no logos, no real people."
-    },
-    {
-     "heading": "Wrap",
-     "narration": "Don't check daily. Check at your monthly money date.",
-     "on_screen_text": "Check monthly, not daily",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with one circled day and a closed laptop. No text, no logos, no real people."
+     "heading": "Plan",
+     "narration": "Write it down now: when it drops twenty percent, I keep my automatic investments running.",
+     "on_screen_text": "Write your plan now",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a notepad with a pen. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -1404,7 +1642,35 @@
     "S&P 500 average intra-year decline ~14% since 1980, positive calendar returns in most years (J.P. Morgan Guide to the Markets; confirm current figures)",
     "Past performance does not guarantee future results"
    ]
-  }
+  },
+  "hook_template": "myth-check",
+  "format_style": "myth-vs-fact",
+  "tiktok_extra": [
+   {
+    "heading": "Rebalance",
+    "narration": "Once a year, check your mix still matches your plan. A target-date fund does this for you.",
+    "on_screen_text": "Check your mix yearly",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale with two baskets. No text, no logos, no real people."
+   },
+   {
+    "heading": "Emergency fund",
+    "narration": "The real protection is an emergency fund, so you never have to sell during a drop to pay a bill.",
+    "on_screen_text": "Emergency fund = protection",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small umbrella over a jar. No text, no logos, no real people."
+   },
+   {
+    "heading": "Stop checking",
+    "narration": "Checking every day makes drops feel worse. Many long-term investors check a few times a year.",
+    "on_screen_text": "Check less often",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone face down. No text, no logos, no real people."
+   },
+   {
+    "heading": "Risk",
+    "narration": "Investing does involve risk, and past patterns don't promise future results. That's why time and diversification matter.",
+    "on_screen_text": "Risk is real · time helps",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a basket of many small items. No text, no logos, no real people."
+   }
+  ]
  },
  {
   "format": "short",
@@ -1412,43 +1678,37 @@
   "idea_angle": "Calculate net worth (what you own minus what you owe) once a quarter; the trend matters more than the number, and starting negative is normal.",
   "script": {
    "title": "Your one money number",
-   "hook": "There's one number that tells you if you're actually making progress. It's not your salary.",
+   "hook": "Let's work out 1 net worth with real numbers: a fictional 26-year-old, line by line.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "There's one number that tells you if you're making progress with money. It's not your salary.",
-     "on_screen_text": "The number that matters",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding up a single large card with a question mark. No text, no logos, no real people."
-    },
-    {
-     "heading": "It's",
-     "narration": "It's net worth: everything you own minus everything you owe.",
-     "on_screen_text": "Own − owe = net worth",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale with a house, savings jar and car on one side and loan papers on the other. No text, no logos, no real people."
+     "narration": "Let's work out 1 net worth with real numbers: a fictional 26-year-old, line by line.",
+     "on_screen_text": "Net worth, line by line",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a balance scale with small labels. No text, no logos, no real people."
     },
     {
      "heading": "Own",
-     "narration": "Own: checking, savings, investments, retirement accounts, and your car at a realistic resale value.",
-     "on_screen_text": "Own: cash, investments, car",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a row of small jars and a little car icon. No text, no logos, no real people."
+     "narration": "Fictional example. Checking twelve hundred, savings three thousand, 401(k) eight thousand five hundred, car worth six thousand. Own: eighteen thousand seven hundred.",
+     "on_screen_text": "Own: $18,700 (fictional)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four small stacks on one side. No text, no logos, no real people."
     },
     {
      "heading": "Owe",
-     "narration": "Owe: credit cards, student loans, car loan, anything else.",
-     "on_screen_text": "Owe: cards, loans",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small stack of bills and loan papers. No text, no logos, no real people."
+     "narration": "Owe: student loans twenty-two thousand, credit card eleven hundred, car loan four thousand. Owe: twenty-seven thousand one hundred.",
+     "on_screen_text": "Owe: $27,100",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three stacks on the other side. No text, no logos, no real people."
     },
     {
-     "heading": "Negative?",
-     "narration": "Negative because of student loans? Completely normal in your twenties. You're tracking direction, not judging.",
-     "on_screen_text": "Negative is normal at first",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a line starting below zero and rising steadily. No text, no logos, no real people."
+     "heading": "Net worth",
+     "narration": "Eighteen-seven minus twenty-seven-one: negative eighty-four hundred. That's completely normal with student loans in your twenties.",
+     "on_screen_text": "Net worth: −$8,400",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale tipped the other way. No text, no logos, no real people."
     },
     {
-     "heading": "Do it",
-     "narration": "Write it down once a quarter in a note or spreadsheet. If it's going up, your system is working.",
-     "on_screen_text": "Track it every quarter",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes writing a number in a notebook with a small upward arrow. No text, no logos, no real people."
+     "heading": "Track",
+     "narration": "What matters is direction. Write it down once a quarter. If it's rising, your system works.",
+     "on_screen_text": "Track the direction quarterly",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small arrow pointing up. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -1470,7 +1730,9 @@
    "claims_to_verify": [
     "No numeric claims"
    ]
-  }
+  },
+  "hook_template": "nobody-explains",
+  "format_style": "real-numbers"
  },
  {
   "format": "carousel",
@@ -2519,9 +2781,28 @@
     },
     {
      "heading": "Four categories",
-     "narration": "Now split that total into four categories. One: gifts. Two: travel, door to door, including gas, parking, rideshares to the airport and the pet sitter. Three: food and hosting, like groceries for a big meal, the dish you bring to a potluck, drinks. Four: extras. This is the category people forget: outfits for parties, decorations, tips for building staff or the mail carrier, the white elephant gift, the ugly sweater. Give each one a number. If they add up to more than your total, shrink the biggest one first, because that's where the room usually is.",
+     "narration": "Now split that total into four categories. One: gifts. Two: travel, door to door, including gas, parking, rideshares to the airport and the pet sitter. Three: food and hosting, like groceries for a big meal, the dish you bring to a potluck, drinks. Four: extras. This is the category people forget: outfits for parties, decorations, tips for building staff or the mail carrier, the white elephant gift, the ugly sweater. Give each one a number. On a six-hundred-dollar total, that might be three hundred for gifts, one twenty for travel, one twenty for food and hosting, and sixty for extras. If they add up to more than your total, shrink the biggest one first, because that's where the room usually is.",
      "on_screen_text": "Step 2: four categories",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four envelopes in a row with small icons: a gift, a suitcase, a pie and a string of lights. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four envelopes in a row with small icons: a gift, a suitcase, a pie and a string of lights. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "A $600 holiday plan",
+      "labels": [
+       "Gifts",
+       "Travel",
+       "Food + hosting",
+       "Extras"
+      ],
+      "values": [
+       300,
+       120,
+       120,
+       60
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Example split"
+     }
     },
     {
      "heading": "Per-person gifts",
@@ -2598,7 +2879,14 @@
     "Fair Credit Billing Act $50 liability cap",
     "$300 / 12 = $25 example is illustrative",
     "Template has a holiday section (confirm before saying so, or cut the line)"
-   ]
+   ],
+   "original_element": "worked-example-chart: The four-category holiday budget chart built from the video's $600 example, filled in live (chapter \"Four categories\")"
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "The four-category holiday budget chart built from the video's $600 example, filled in live",
+   "chapter": "Four categories"
   }
  },
  {
@@ -2625,7 +2913,28 @@
      "heading": "The five factors",
      "narration": "FICO scores are built from five categories. Payment history is about thirty-five percent: do you pay on time? Amounts owed are about thirty percent, mostly how much of your credit limits you're using. Length of credit history is about fifteen percent. New credit, meaning recent applications, is about ten percent. And credit mix, the variety of account types, is about ten percent. Notice the first two add up to sixty-five percent. Two habits drive most of your score: pay on time and keep balances low.",
      "on_screen_text": "35 / 30 / 15 / 10 / 10",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pie chart with five slices, the two biggest glowing. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pie chart with five slices, the two biggest glowing. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "What a FICO score is made of",
+      "labels": [
+       "Payment history",
+       "Amounts owed",
+       "History length",
+       "New credit",
+       "Credit mix"
+      ],
+      "values": [
+       35,
+       30,
+       15,
+       10,
+       10
+      ],
+      "unit_prefix": "",
+      "unit_suffix": "%",
+      "note": "Approximate weights"
+     }
     },
     {
      "heading": "Payment history",
@@ -2704,7 +3013,14 @@
     "Bureaus generally have 30 days to investigate disputes (FCRA)",
     "Top scorers often use under 10% utilization (general claim; confirm source)",
     "~6 months of history to generate a FICO score"
-   ]
+   ],
+   "original_element": "screen-recording: Screen recording of AnnualCreditReport.com: requesting all three reports and where the account list sits (no personal data on screen) (chapter \"Check your reports\")"
+  },
+  "format_style": "explainer",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Screen recording of AnnualCreditReport.com: requesting all three reports and where the account list sits (no personal data on screen)",
+   "chapter": "Check your reports"
   }
  },
  {
@@ -2729,9 +3045,26 @@
     },
     {
      "heading": "The match",
-     "narration": "Many employers match part of what you put in. A common example: they match fifty percent of your contributions up to six percent of your salary. On a fifty-thousand-dollar salary, if you put in six percent, three thousand dollars, they add fifteen hundred. That's an instant fifty percent return on that money, before any investment growth. So step one, always: contribute at least enough to get the full match. Check your plan's exact formula in the benefits portal; they vary a lot.",
+     "narration": "Many employers match part of what you put in. A common example: they match fifty percent of your contributions up to six percent of your salary. On a fifty-thousand-dollar salary, if you put in six percent, three thousand dollars, they add fifteen hundred. Put in three percent and they add seven fifty. Put in ten percent and it's still fifteen hundred, because the match stops at six. That's an instant fifty percent return on that money, before any investment growth. So step one, always: contribute at least enough to get the full match. Check your plan's exact formula in the benefits portal; they vary a lot.",
      "on_screen_text": "Step 1: get the full match",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two coins dropping in, a second smaller coin following each one. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two coins dropping in, a second smaller coin following each one. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Match on a $50,000 salary",
+      "labels": [
+       "You put in 3%",
+       "You put in 6%",
+       "You put in 10%"
+      ],
+      "values": [
+       750,
+       1500,
+       1500
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Employer match: 50% up to 6% (example)"
+     }
     },
     {
      "heading": "Traditional vs Roth",
@@ -2810,7 +3143,14 @@
     "Early withdrawal: income tax + 10% penalty under 59½ (exceptions exist)",
     "Saving ~15% including match is a common guideline (attribute as a rule of thumb)",
     "Index fund expense ratios often well under 0.25%"
-   ]
+   ],
+   "original_element": "worked-example-chart: Match chart: the video's salary example at 3%, 6% and 10% contribution showing where the match stops (chapter \"The match\")"
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Match chart: the video's salary example at 3%, 6% and 10% contribution showing where the match stops",
+   "chapter": "The match"
   }
  },
  {
@@ -2879,7 +3219,30 @@
      "heading": "9. Sinking funds",
      "narration": "Move nine: turn that list into sinking funds. Divide each cost by the number of months until it's due and set up an automatic transfer to a separate savings account. Six hundred dollars of travel in June, starting in January, is a hundred dollars a month. Now those costs come from savings instead of a credit card.",
      "on_screen_text": "9. Start sinking funds",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a row of small jars, each filling at its own pace. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a row of small jars, each filling at its own pace. No text, no logos, no real people.",
+     "chart": {
+      "kind": "line",
+      "title": "$600 June trip, saved from January",
+      "labels": [
+       "Jan",
+       "Feb",
+       "Mar",
+       "Apr",
+       "May",
+       "Jun"
+      ],
+      "values": [
+       100,
+       200,
+       300,
+       400,
+       500,
+       600
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "$100 a month, example"
+     }
     },
     {
      "heading": "10. Three goals",
@@ -2927,7 +3290,14 @@
     "IRA and HSA contributions for a tax year allowed until the filing deadline (confirm April 2027 date)",
     "Credit freezes free and don't affect scores",
     "$600 / 6 months = $100 example"
-   ]
+   ],
+   "original_element": "screen-recording: Screen recording of the IRS Tax Withholding Estimator start page and a credit freeze page (test inputs only) (chapter \"3. Withholding\")"
+  },
+  "format_style": "countdown",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Screen recording of the IRS Tax Withholding Estimator start page and a credit freeze page (test inputs only)",
+   "chapter": "3. Withholding"
   }
  }
 ]

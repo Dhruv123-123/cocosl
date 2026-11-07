@@ -1,0 +1,20 @@
+# Your First $1,000 Invested: YouTube series (6 parts)
+
+A six-part long-form series that walks a beginner from "I have $1,000" to an invested, automated account. It goes deeper than the single investing, IRA and 401(k)-match videos in the first series (launch/money-made-simple/youtube-series/) and follows straight on from Money Basics, which ends Aug 29, 2027. No titles repeat.
+
+- **All 6 parts are written**, in `content.json`, at about 8 minutes each. Each has chapters, UTM-tagged links (`utm_campaign=yt-invest-NN`), the AI line, and an investing risk line in the description: "Investing involves risk, including the possible loss of money you invest. Past performance doesn't predict future results. Returns shown are hypothetical illustrations, not forecasts." Parts 3 and 6 link /compare/best-robo-advisors/ and carry the commission note.
+- **No specific securities, funds, tickers or providers** are named or shown anywhere in the series.
+- **Original element per video:** every part has a worked-example chart drawn from the video's own numbers on its chart chapter, so all six pass the original-element check (0 blocked in CHECKS.md).
+- **Compliance review before posting:** every item carries a `compliance_review` list of flags for the human reviewer. COMPLIANCE.md has the full checklist and the per-video flags. The two research claims are now sourced and cited in narration and in the description: part 4's best-and-worst-days claims cite Wells Fargo Investment Institute's S&P 500 study (1994–2024), and part 5's lump-sum line cites Vanguard's 2023 paper (lump sum ahead about two-thirds of the time, 1976–2022). Part 4's line about how often dips happen was softened instead of sourced.
+- **Schedule:** Sundays at 19:00 ET, **Sep 5 – Oct 10, 2027**, on YouTube and Pinterest.
+- **Formats vary:** walkthrough, explainer, real-numbers, myth-vs-fact, on-screen-calculation and countdown.
+- **Examples** (Sam, Priya, Jordan, Alex, Riley) are fictional and labelled. There are no income promises or testimonials.
+
+| # | Sunday | Title | Format | Original element | Status |
+|---|---|---|---|---|---|
+| 1 | Sun Sep 5, 2027 | **Before You Invest Your First $1,000: The 4-Box Checklist** | walkthrough | worked-example-chart: Bar chart from the video's own numbers: $1,000 on a 24% card costs about $240 a year vs about $70 of hypothetical growth at 7% (chapter "The chart: card vs investing") | Written: 1,258 words, about 8 min |
+| 2 | Sun Sep 12, 2027 | **Where to Put Your First $1,000: 401(k), IRA or Brokerage?** | explainer | worked-example-chart: Day-one dollars invested: $1,500 in a 401(k) with a 50% match vs $1,000 in a Roth IRA or taxable account (chapter "The match on a chart") | Written: 1,231 words, about 8 min |
+| 3 | Sun Sep 19, 2027 | **Index Fund, Target-Date Fund or Robo-Advisor for Your First $1,000?** | real-numbers | worked-example-chart: 30-year fee chart on a $1,000 lump sum at a hypothetical 7%: 0.03% ≈ $7,548, 0.12% ≈ $7,360, 0.25% ≈ $7,096, 1% ≈ $5,743 (chapter "The fee chart: 30 years") | Written: 1,219 words, about 8 min |
+| 4 | Sun Sep 26, 2027 | **What Happens to Your First $1,000 When the Market Drops?** | myth-vs-fact | worked-example-chart: Hypothetical line chart of $1,000 falling 30% to $700 and recovering to $1,160 over two years, with the seller's path compared in narration (chapter "The chart: a hypothetical drop") | Written: 1,297 words, about 9 min |
+| 5 | Sun Oct 3, 2027 | **Invest $1,000 All at Once or $100 a Month? The Math** | on-screen-calculation | worked-example-chart: Lump sum vs $100 a month for 10 months in two hypothetical markets: rising 1% a month (≈ $1,105 vs ≈ $1,057) and down 3% a month for 5 months then up 3% for 5 (≈ $996 vs ≈ $1,076) (chapter "The chart: four results") | Written: 1,253 words, about 8 min |
+| 6 | Sun Oct 10, 2027 | **How to Open a Brokerage Account and Invest Your First $1,000** | countdown | worked-example-chart: One year on $1,000: about $0.10 in cash at 0.01%, about $40 at a hypothetical 4% cash rate, about $70 invested at a hypothetical 7% (chapter "The chart: cash vs invested") | Written: 1,214 words, about 8 min |

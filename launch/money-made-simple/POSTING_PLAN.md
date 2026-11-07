@@ -27,7 +27,7 @@ Rules this plan follows:
 | Day 8 · Sat Nov 14 | 12:30 | TikTok + YouTube Shorts + Instagram Reels | #10 | short | That 'surprise' bill was on the calendar · **template** |
 | Day 9 · Sun Nov 15 | 12:30 | TikTok + YouTube Shorts + Instagram Reels | #2 | short | Roth IRA money isn't locked away |
 | Day 9 · Sun Nov 15 | 19:00 | Instagram (carousel) | #16 | carousel | Roth or Traditional IRA? One question |
-| Day 9 · Sun Nov 15 | 19:00 | YouTube (long-form) | #22 | long | How to start investing with $100 a month (complete beginner walkthrough) |
+| Day 9 · Sun Nov 15 | 19:00 | YouTube (long-form) | #22 | long | How to start investing with $100 a month (beginner walkthrough) |
 | Day 10 · Mon Nov 16 | 12:30 | TikTok + YouTube Shorts + Instagram Reels | #7 | short | $60 vs $150 on a $3,000 card |
 | Day 11 · Tue Nov 17 | 12:30 | TikTok + YouTube Shorts + Instagram Reels | #9 | short | Set these 3 bank alerts today |
 | Day 11 · Tue Nov 17 | 19:00 | Instagram (carousel) | #19 | carousel | Avalanche vs snowball, with real math |

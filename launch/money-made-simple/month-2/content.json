@@ -74,7 +74,8 @@
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small jars side by side filling evenly. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
  },
  {
   "format": "short",
@@ -152,7 +153,8 @@
     "on_screen_text": "Paying with gift cards = scam",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shield blocking a phone screen showing a gift card. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -234,7 +236,8 @@
     "on_screen_text": "$350 → $175 fun / $175 saved",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three greeting cards with coins splitting into two jars. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -311,7 +314,8 @@
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. both piggy banks dropping coins into the shared jar. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
  },
  {
   "format": "short",
@@ -392,7 +396,8 @@
     "on_screen_text": "$500 → $150 = $350 saved",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar month with coins flowing into a jar each week. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -472,7 +477,8 @@
     "on_screen_text": "Over? Take it from next week",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two weekly blocks, one borrowing a little from the next. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -549,7 +555,8 @@
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small envelopes with different-height coin stacks. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
  },
  {
   "format": "short",
@@ -633,7 +640,8 @@
     "on_screen_text": "Missed dates = penalties",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with three small warning triangles. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -641,37 +649,37 @@
   "idea_angle": "Pick a savings rate (percent of take-home saved automatically) for the year, set it as a payday transfer, and raise it at mid-year.",
   "script": {
    "title": "1 number to pick on January 1: your savings rate",
-   "hook": "1 number decides how your 2027 money goes. It's not your income. It's your savings rate.",
+   "hook": "Your savings rate, with real numbers: $3,000 take-home, 7% now, 9% in July.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "One number decides how your 2027 goes. Not your income. Your savings rate.",
-     "on_screen_text": "Pick 1 number: savings rate",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a single card with a percent sign. No text, no logos, no real people."
+     "narration": "One number decides your 2027: your savings rate. Let's run real numbers on a three thousand dollar take-home.",
+     "on_screen_text": "Savings rate: real numbers",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a jar with a percent sign. No text, no logos, no real people."
     },
     {
-     "heading": "Define it",
-     "narration": "Savings rate is the percent of take-home pay you save on purpose. Two hundred out of thirty-two hundred is about six percent.",
-     "on_screen_text": "$200 ÷ $3,200 ≈ 6%",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin stack with a small slice highlighted. No text, no logos, no real people."
+     "heading": "January",
+     "narration": "Seven percent of three thousand is two hundred ten a month, moved the day after payday.",
+     "on_screen_text": "7% × $3,000 = $210/mo",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small jar. No text, no logos, no real people."
     },
     {
-     "heading": "Pick it",
-     "narration": "Pick one you can hit every month, not a heroic one. Five to ten percent is a strong start.",
-     "on_screen_text": "Start 5–10%",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a dial set to a modest mark. No text, no logos, no real people."
+     "heading": "June",
+     "narration": "By the end of June, that's twelve hundred sixty.",
+     "on_screen_text": "June: $1,260",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar half full. No text, no logos, no real people."
     },
     {
-     "heading": "Automate",
-     "narration": "Set it as a transfer the day after payday. Then forget it.",
-     "on_screen_text": "Automate it after payday",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a repeat arrow on one day. No text, no logos, no real people."
+     "heading": "July",
+     "narration": "On July first, raise it to nine percent: two seventy a month for the second half.",
+     "on_screen_text": "July: 9% = $270/mo",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a slider moving up. No text, no logos, no real people."
     },
     {
-     "heading": "Raise it",
-     "narration": "On July first, raise it by one or two points. That's the whole New Year's resolution.",
-     "on_screen_text": "July 1: raise it 1–2 points",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small step up on a staircase with a July calendar. No text, no logos, no real people."
+     "heading": "December",
+     "narration": "Year end: twelve-sixty plus sixteen-twenty is twenty-eight eighty saved, from deciding twice.",
+     "on_screen_text": "Total ≈ $2,880",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a full jar with a small flag. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -697,24 +705,37 @@
   },
   "tiktok_extra": [
    {
-    "heading": "Why percent",
-    "narration": "Why a percent and not a dollar goal? Because it scales. When your income goes up, a percent grows with it. A flat dollar goal quietly shrinks.",
-    "on_screen_text": "Percent grows with income",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two jars, one growing alongside a rising pay line. No text, no logos, no real people."
+    "heading": "Why a percent",
+    "narration": "A percent scales. When your income rises, the savings rises with it. A flat dollar goal quietly shrinks.",
+    "on_screen_text": "A percent grows with you",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two bars rising together. No text, no logos, no real people."
    },
    {
-    "heading": "Counts",
-    "narration": "Count 401(k) contributions in your rate if you want, but track take-home savings separately. That's your cushion for this year.",
+    "heading": "What counts",
+    "narration": "Count 401(k) contributions if you want, but track take-home savings separately. That's this year's cushion.",
     "on_screen_text": "Track take-home savings separately",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two separate jars, one long-term and one cushion. No text, no logos, no real people."
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two jars side by side. No text, no logos, no real people."
    },
    {
-    "heading": "Example",
-    "narration": "Example. Take-home is three thousand. Seven percent is two-ten a month. That's about twenty-five hundred by December. Raise it to nine percent in July, and you end the year closer to twenty-seven hundred, without ever deciding again after today.",
-    "on_screen_text": "7% of $3,000 = $210/mo ≈ $2,500/yr",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar filling along a year timeline with a small step up in July. No text, no logos, no real people."
+    "heading": "Start lower",
+    "narration": "Seven percent too much? Start at three and raise it every quarter. The habit matters more than the number.",
+    "on_screen_text": "Too much? Start at 3%",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small staircase. No text, no logos, no real people."
+   },
+   {
+    "heading": "Make it automatic",
+    "narration": "The day after payday, not the day of, so a late deposit never bounces the transfer.",
+    "on_screen_text": "Day after payday",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a small arrow. No text, no logos, no real people."
+   },
+   {
+    "heading": "Windfalls",
+    "narration": "Bonus or tax refund? Send a slice straight to the same savings account. Even ten percent of a windfall lifts your yearly number without changing your monthly budget.",
+    "on_screen_text": "10% of windfalls → savings",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an envelope dropping coins into a jar. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "real-numbers"
  },
  {
   "format": "short",
@@ -792,7 +813,8 @@
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with four small envelopes spaced out. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
  },
  {
   "format": "short",
@@ -874,7 +896,8 @@
     "on_screen_text": "Check name, SSN, wages, state",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a simple form. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -882,37 +905,37 @@
   "idea_angle": "For 2026 returns the standard deduction for single filers is about $16,100, so most early-career filers take it instead of itemizing.",
   "script": {
    "title": "$16,100: why you probably won't itemize",
-   "hook": "$16,100. For most single filers, that's the deduction that makes itemizing pointless.",
+   "hook": "$16,100 vs your itemized total: let's add it up on screen for a renter.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Sixteen thousand one hundred dollars. For most single filers, that's why itemizing doesn't matter.",
-     "on_screen_text": "$16,100 standard deduction",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a big check-shaped card. No text, no logos, no real people."
+     "narration": "Sixteen thousand one hundred dollars versus your itemized deductions. Let's add it up on screen for a typical renter.",
+     "on_screen_text": "$16,100 vs itemizing",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a calculator next to a small apartment. No text, no logos, no real people."
     },
     {
-     "heading": "What it is",
-     "narration": "The standard deduction is income the IRS doesn't tax, no receipts needed. For 2026 returns, it's about sixteen thousand one hundred if you're single.",
-     "on_screen_text": "No receipts needed",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shield over the bottom slice of a coin stack. No text, no logos, no real people."
+     "heading": "Standard",
+     "narration": "For 2026 returns, the standard deduction is about sixteen thousand one hundred if you're single. No receipts needed.",
+     "on_screen_text": "Standard ≈ $16,100 (single)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big number badge. No text, no logos, no real people."
     },
     {
-     "heading": "Itemizing",
-     "narration": "Itemizing means adding up things like mortgage interest, state taxes and donations instead. You pick whichever is bigger.",
-     "on_screen_text": "You pick the bigger one",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two coin stacks on a scale. No text, no logos, no real people."
+     "heading": "Itemized",
+     "narration": "Now a renter's itemized list. State and local taxes, say twenty-five hundred. Donations, five hundred. No mortgage interest. Total: three thousand.",
+     "on_screen_text": "$2,500 + $500 + $0 = $3,000",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short list adding up. No text, no logos, no real people."
     },
     {
-     "heading": "Reality",
-     "narration": "If you rent and don't have big medical bills, your itemized total is usually way under the standard deduction.",
-     "on_screen_text": "Renters: usually standard",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small apartment building next to a short receipt. No text, no logos, no real people."
+     "heading": "Compare",
+     "narration": "Three thousand versus sixteen thousand one hundred. The standard deduction wins by about thirteen thousand.",
+     "on_screen_text": "Standard wins by ~$13,100",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two bars, one much taller. No text, no logos, no real people."
     },
     {
      "heading": "So",
-     "narration": "So don't stress about saving every receipt for itemizing. Your time's better spent on credits you might be missing.",
-     "on_screen_text": "Focus on credits instead",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes putting down a pile of receipts and picking up a small star. No text, no logos, no real people."
+     "narration": "So skip the receipt shoebox and spend the time on credits you might be missing.",
+     "on_screen_text": "Time → credits, not receipts",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a small form. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -939,18 +962,31 @@
   },
   "tiktok_extra": [
    {
-    "heading": "Example",
-    "narration": "Example: earn fifty thousand, take the standard deduction, and roughly thirty-four thousand is taxable before other adjustments. Contributions to a traditional 401(k) lower that further.",
-    "on_screen_text": "$50K − $16,100 ≈ $33,900 taxable",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin tower with a slice removed and a smaller slice for a 401(k). No text, no logos, no real people."
+    "heading": "Taxable income",
+    "narration": "Earn fifty thousand, take the standard deduction, and roughly thirty-four thousand is taxable before other adjustments.",
+    "on_screen_text": "$50,000 − $16,100 ≈ $33,900",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big subtraction sign. No text, no logos, no real people."
    },
    {
     "heading": "Credits",
-    "narration": "Credits are worth more than deductions because they cut your tax bill dollar for dollar. Look up the Saver's Credit and the Earned Income Tax Credit. Lots of people in their twenties qualify and miss them.",
-    "on_screen_text": "Credits cut tax dollar for dollar",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pair of scissors cutting a bill in half. No text, no logos, no real people."
+    "narration": "Credits cut your tax bill dollar for dollar. Look up the Saver's Credit and the Earned Income Tax Credit.",
+    "on_screen_text": "Credits: dollar for dollar",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin being removed from a bill. No text, no logos, no real people."
+   },
+   {
+    "heading": "When itemizing wins",
+    "narration": "Itemizing usually only wins with a mortgage, big medical bills, or large donations.",
+    "on_screen_text": "Mortgage · big medical · big giving",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a house, a cross and a heart. No text, no logos, no real people."
+   },
+   {
+    "heading": "Bunching",
+    "narration": "Close to the line? Some people bunch two years of donations into one year to itemize once, then take the standard deduction the next.",
+    "on_screen_text": "Bunching donations",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two gift boxes stacked. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "on-screen-calculation"
  },
  {
   "format": "short",
@@ -958,37 +994,37 @@
   "idea_angle": "Three free filing routes (IRS Free File, VITA volunteer prep, and military MilTax) so beginners don't pay for simple returns.",
   "script": {
    "title": "3 free ways to file your taxes",
-   "hook": "3 free ways to file. If your return is simple, paying to file is optional.",
+   "hook": "3 free ways to file your taxes, counted down to the 1 most people should try first.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Three free ways to file your taxes. If your return is simple, paying is optional.",
-     "on_screen_text": "3 free ways to file",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding three small envelopes with green checks. No text, no logos, no real people."
+     "narration": "Three free ways to file your taxes, counted down to the one most people should try first.",
+     "on_screen_text": "Countdown: 3 free ways to file",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a podium with three steps and a form. No text, no logos, no real people."
     },
     {
-     "heading": "1",
-     "narration": "IRS Free File: brand-name software, free through the IRS site if your income is under the limit. Start at IRS dot gov slash Free File so you get the free version.",
-     "on_screen_text": "1. IRS Free File",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a small government building icon. No text, no logos, no real people."
+     "heading": "Number 3",
+     "narration": "Number three: MilTax, free filing software for military members and families.",
+     "on_screen_text": "#3: MilTax",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small badge. No text, no logos, no real people."
     },
     {
-     "heading": "2",
-     "narration": "VITA: free in-person tax prep by IRS-certified volunteers, generally for people under an income limit.",
-     "on_screen_text": "2. VITA volunteers",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small table with two chairs and a document. No text, no logos, no real people."
+     "heading": "Number 2",
+     "narration": "Number two: VITA, free in-person tax prep by IRS-certified volunteers, generally under an income limit.",
+     "on_screen_text": "#2: VITA",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a table with volunteers. No text, no logos, no real people."
     },
     {
-     "heading": "3",
-     "narration": "MilTax: free filing software for military members and families.",
-     "on_screen_text": "3. MilTax (military)",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small star-shaped badge and a laptop. No text, no logos, no real people."
+     "heading": "Number 1",
+     "narration": "Number one: IRS Free File, brand-name software free through the IRS site if your income is under the limit.",
+     "on_screen_text": "#1: IRS Free File",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a check mark. No text, no logos, no real people."
     },
     {
      "heading": "Tip",
-     "narration": "Start from the official IRS page. Ads for 'free' filing can lead to paid upgrades.",
-     "on_screen_text": "Start from irs.gov",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a signpost pointing to an official building. No text, no logos, no real people."
+     "narration": "Start from the official IRS page. Ads for free filing can lead to paid upgrades.",
+     "on_screen_text": "Start at IRS.gov",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a shield. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -1019,23 +1055,30 @@
   "tiktok_extra": [
    {
     "heading": "Fillable forms",
-    "narration": "Comfortable doing it yourself? IRS Free File Fillable Forms has no income limit. It's basic, like doing paper forms online, but it's free.",
+    "narration": "Comfortable doing it yourself? Free File Fillable Forms has no income limit. It's basic, but free.",
     "on_screen_text": "Fillable Forms: no income limit",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple online form with blank lines. No text, no logos, no real people."
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a blank form. No text, no logos, no real people."
    },
    {
-    "heading": "Watch the upsell",
-    "narration": "Whatever you use, watch for upsells: add-ons like audit protection or 'max refund' packages. A simple W-2 return usually doesn't need any of them.",
+    "heading": "Upsells",
+    "narration": "Watch for upsells like audit protection or max refund packages. A simple W-2 return usually doesn't need them.",
     "on_screen_text": "Skip the upsells",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a hand politely declining a box with a bow on it. No text, no logos, no real people."
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a price tag crossed out. No text, no logos, no real people."
    },
    {
-    "heading": "What's simple",
-    "narration": "What counts as a simple return? Usually W-2 income, maybe some bank interest, the standard deduction and common credits like the Earned Income Tax Credit or student loan interest. That covers a lot of people in their twenties, and all of it can be filed free.",
-    "on_screen_text": "Simple = W-2 + standard deduction",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short form with only a few filled lines. No text, no logos, no real people."
+    "heading": "Simple?",
+    "narration": "A simple return is usually W-2 income, maybe bank interest, the standard deduction and common credits. All of it can be filed free.",
+    "on_screen_text": "W-2 + standard deduction = simple",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short checklist. No text, no logos, no real people."
+   },
+   {
+    "heading": "What you need",
+    "narration": "Have your W-2s, any 1099s, last year's return, and your bank details for direct deposit. Then a simple return can take under an hour.",
+    "on_screen_text": "W-2s · 1099s · last year · bank info",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small folder. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "countdown"
  },
  {
   "format": "short",
@@ -1113,7 +1156,8 @@
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. one card kept in a wallet, others in a closed drawer. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
  },
  {
   "format": "short",
@@ -1192,7 +1236,8 @@
     "on_screen_text": "Set aside 25–30% per payment",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small separate jar catching a slice of every incoming coin. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1274,7 +1319,8 @@
     "on_screen_text": "E-file + direct deposit ≈ 3 weeks",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a small envelope arriving. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1282,37 +1328,37 @@
   "idea_angle": "Explain 1099-NEC (clients) vs 1099-K (payment apps and marketplaces), the reporting threshold, and that all income is taxable whether or not a form arrives.",
   "script": {
    "title": "1099-K, 1099-NEC: 3 things side hustlers should know",
-   "hook": "3 things about 1099 forms, because getting one in January surprises a lot of people.",
+   "hook": "Common question: \"I got a 1099. Do I owe more tax?\" Honest answer in 3 parts.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Three things about 1099 forms, because one in your mailbox in January surprises a lot of people.",
-     "on_screen_text": "1099s: 3 things",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes opening an envelope with a surprised face. No text, no logos, no real people."
+     "narration": "Common question in January: I got a 1099, so do I owe more tax? Honest answer in three parts.",
+     "on_screen_text": "Q: Got a 1099. Owe more?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes an envelope with a speech bubble. No text, no logos, no real people."
     },
     {
-     "heading": "1",
-     "narration": "One. A 1099-NEC comes from a client who paid you six hundred dollars or more for freelance work.",
-     "on_screen_text": "1. 1099-NEC: clients, $600+",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small office building handing over a form. No text, no logos, no real people."
+     "heading": "Part 1",
+     "narration": "If it's a 1099-NEC, a client paid you six hundred dollars or more for freelance work. That income was always taxable. The form just reports it.",
+     "on_screen_text": "1099-NEC: freelance income",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small invoice. No text, no logos, no real people."
     },
     {
-     "heading": "2",
-     "narration": "Two. A 1099-K comes from payment apps and marketplaces. After 2025 changes, the federal threshold is generally over twenty thousand dollars and two hundred transactions.",
-     "on_screen_text": "2. 1099-K: apps & marketplaces",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a payment icon handing over a form. No text, no logos, no real people."
+     "heading": "Part 2",
+     "narration": "If it's a 1099-K, it's from a payment app or marketplace. After 2025 changes, the federal threshold is generally over twenty thousand dollars and two hundred transactions.",
+     "on_screen_text": "1099-K: apps and marketplaces",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a payment icon. No text, no logos, no real people."
     },
     {
-     "heading": "3",
-     "narration": "Three. All income is taxable, form or no form. The form is just a report.",
-     "on_screen_text": "3. Taxable form or no form",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin stack with or without a paper form, both under a tax gate. No text, no logos, no real people."
-    },
-    {
-     "heading": "Personal payments",
-     "narration": "And money from friends for splitting dinner isn't income. Label personal payments as personal in the app.",
+     "heading": "Part 3",
+     "narration": "Money from friends splitting dinner isn't income. Label personal payments as personal in the app.",
      "on_screen_text": "Splitting dinner ≠ income",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two piggy banks sharing a pizza. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two plates and a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "So",
+     "narration": "Form or no form, business income is taxable, and your expenses lower it.",
+     "on_screen_text": "Expenses lower the tax",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale with receipts. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -1342,17 +1388,24 @@
   "tiktok_extra": [
    {
     "heading": "Selling stuff",
-    "narration": "Sold your old stuff online? Selling personal items for less than you paid generally isn't a taxable gain. Keep a rough record of what you paid in case a form shows up.",
-    "on_screen_text": "Selling old stuff at a loss: generally not a gain",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a box of old items with a small price tag. No text, no logos, no real people."
+    "narration": "Sold your old stuff online for less than you paid? That generally isn't a taxable gain. Keep a rough record of what you paid.",
+    "on_screen_text": "Sold at a loss? Usually no gain",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a box with a price tag. No text, no logos, no real people."
    },
    {
     "heading": "Records",
-    "narration": "Keep a simple spreadsheet: date, who paid, amount, and expenses like supplies or mileage. That's what lowers your tax, not the form.",
-    "on_screen_text": "Track income + expenses",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple spreadsheet grid with a few filled rows. No text, no logos, no real people."
+    "narration": "Keep a simple spreadsheet: date, who paid, amount, and expenses like supplies or mileage.",
+    "on_screen_text": "Date · payer · amount · expenses",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple grid. No text, no logos, no real people."
+   },
+   {
+    "heading": "Set it aside",
+    "narration": "Side income? Move a set percentage of every payment into a separate tax account as it lands, so April isn't a surprise.",
+    "on_screen_text": "Set aside tax as you earn",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow from an invoice into a jar. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "question-reply"
  },
  {
   "format": "short",
@@ -1360,36 +1413,36 @@
   "idea_angle": "Fictional $78K earner with a healthy income but a 2% savings rate and $180/month of subscriptions; trimming and automation get them to 12%.",
   "script": {
    "title": "Rate My Budget #6: $78K, saving 2%, $180 in subscriptions",
-   "hook": "$78,000 a year and saving 2%. Let's rate this budget.",
+   "hook": "Rate My Budget #6: one month of a $78K budget, walked through dollar by dollar.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Seventy-eight thousand a year, and saving two percent. Let's rate this budget.",
-     "on_screen_text": "$78K · saving 2%",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes next to a big paycheck and a tiny savings jar. No text, no logos, no real people."
+     "narration": "Rate My Budget number six: seventy-eight thousand a year, saving two percent. Let's walk through one month, dollar by dollar.",
+     "on_screen_text": "$78K, saving 2%: one month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a long receipt unrolling. No text, no logos, no real people."
     },
     {
-     "heading": "Numbers",
-     "narration": "Fictional example. Take-home about forty-six hundred. Rent sixteen-fifty. Savings: ninety dollars a month. Subscriptions: one hundred eighty.",
-     "on_screen_text": "Subscriptions $180 > savings $90",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a row of small streaming and app icons taller than a coin jar. No text, no logos, no real people."
+     "heading": "In",
+     "narration": "Fictional example. Take-home: forty-six hundred. Out first: rent sixteen-fifty, bills and groceries about fourteen hundred.",
+     "on_screen_text": "Fictional · $4,600 in · $3,050 out",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. coins flowing in and out. No text, no logos, no real people."
     },
     {
-     "heading": "Good news",
-     "narration": "Good news: no card debt, and they get the 401(k) match. That's a solid base.",
-     "on_screen_text": "No card debt · gets the match",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two green check marks. No text, no logos, no real people."
+     "heading": "Leaks",
+     "narration": "Then subscriptions one-eighty, eating out six hundred, shopping three-eighty. Savings last: ninety dollars.",
+     "on_screen_text": "Subs $180 · food out $600 · savings $90",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small leaking pipes. No text, no logos, no real people."
     },
     {
-     "heading": "The fix",
-     "narration": "Cut subscriptions to three you actually used last month, about sixty dollars. Send the hundred-twenty saved plus a raise of three hundred to savings on payday.",
-     "on_screen_text": "Cut to ~$60 · save $510/mo",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. scissors trimming a row of icons, coins flowing into the jar. No text, no logos, no real people."
+     "heading": "Fix",
+     "narration": "Cut subscriptions to sixty, eating out to four hundred, shopping to two-eighty. That frees four-twenty, so savings becomes five-ten, first, on payday.",
+     "on_screen_text": "Savings: $90 → $510",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar filling. No text, no logos, no real people."
     },
     {
      "heading": "Score",
-     "narration": "That's about eleven percent savings. Score: five out of ten now, eight after.",
-     "on_screen_text": "2% → ~11% · 5/10 → 8/10",
+     "narration": "That's about eleven percent. Score: five out of ten now, eight after.",
+     "on_screen_text": "5/10 → 8/10",
      "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a score card flipping from 5 to 8. No text, no logos, no real people."
     }
    ],
@@ -1417,25 +1470,26 @@
   },
   "tiktok_extra": [
    {
-    "heading": "Where the $300 comes from",
-    "narration": "Where does the extra three hundred come from? Their eating-out line is six hundred. Two hundred less there, plus a hundred from shopping. Still plenty of life left in the budget.",
-    "on_screen_text": "$300 = eating out −$200, shopping −$100",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two small piles shrinking slightly, a bigger jar growing. No text, no logos, no real people."
-   },
-   {
     "heading": "A year later",
-    "narration": "Five hundred ten a month is about sixty-one hundred a year. That's a full emergency fund in year one, from a budget that already felt fine.",
+    "narration": "Five-ten a month is about sixty-one hundred a year. That's a full emergency fund in year one.",
     "on_screen_text": "$510 × 12 ≈ $6,100",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar year ending with a full jar. No text, no logos, no real people."
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a full jar. No text, no logos, no real people."
    },
    {
     "heading": "The match",
-    "narration": "And one more point: they get the 401(k) match at four percent. If they raised it to six when they got their next raise, they'd barely notice the paycheck change, and their total savings rate including retirement would pass sixteen percent.",
-    "on_screen_text": "401(k) 4% → 6% at next raise",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a dial clicking up two notches. No text, no logos, no real people."
+    "narration": "They already get the 401(k) match at four percent. Raise it to six at the next raise, and total savings passes sixteen percent.",
+    "on_screen_text": "401(k) 4% → 6%",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a slider moving up. No text, no logos, no real people."
+   },
+   {
+    "heading": "Still fun",
+    "narration": "Four hundred for eating out is still about a hundred a week. The budget still has a life in it.",
+    "on_screen_text": "Still ~$100/week out",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small café table. No text, no logos, no real people."
    }
   ],
-  "series": "Rate My Budget"
+  "series": "Rate My Budget",
+  "format_style": "real-numbers"
  },
  {
   "format": "short",
@@ -1513,7 +1567,8 @@
     "on_screen_text": "2026 IRA: until April 2027",
     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with April circled. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "explainer"
  },
  {
   "format": "short",
@@ -1521,37 +1576,37 @@
   "idea_angle": "Three IRS-impersonation red flags (texts about refunds, gift card or crypto payment demands, threats of immediate arrest), and where to verify.",
   "script": {
    "title": "3 'IRS' messages that are always scams",
-   "hook": "3 messages the IRS will never send you. If you get one, it's a scam.",
+   "hook": "Myth: the IRS will text you about your refund. 3 'IRS' message myths.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Three messages the real IRS doesn't send. Get one, it's a scam.",
-     "on_screen_text": "3 fake 'IRS' messages",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a phone with a suspicious hook icon on the screen. No text, no logos, no real people."
+     "narration": "Myth: the IRS might text you about your refund. Here are three IRS message myths that scammers rely on.",
+     "on_screen_text": "MYTH vs FACT: IRS messages",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a phone with a warning sign. No text, no logos, no real people."
     },
     {
-     "heading": "1",
-     "narration": "One: a text or social media message about your refund with a link to 'claim' it. The IRS doesn't start contact that way.",
-     "on_screen_text": "1. Refund text with a link",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone text bubble with a fishing hook. No text, no logos, no real people."
+     "heading": "Myth 1",
+     "narration": "Myth: the IRS texts or DMs you a link to claim a refund. Fact: the IRS doesn't start contact that way.",
+     "on_screen_text": "FACT: no refund texts with links",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a crossed-out text bubble. No text, no logos, no real people."
     },
     {
-     "heading": "2",
-     "narration": "Two: a demand to pay with gift cards, crypto or a wire. The IRS doesn't take payment that way.",
-     "on_screen_text": "2. Pay in gift cards or crypto",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gift card and a coin with a red cross. No text, no logos, no real people."
+     "heading": "Myth 2",
+     "narration": "Myth: you can settle a tax bill with gift cards, crypto or a wire. Fact: the IRS doesn't take payment that way.",
+     "on_screen_text": "FACT: no gift cards, ever",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gift card with a stop sign. No text, no logos, no real people."
     },
     {
-     "heading": "3",
-     "narration": "Three: a threat of immediate arrest or deportation. Real tax problems come by letter, with appeal rights.",
-     "on_screen_text": "3. Threat of arrest",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a megaphone with a red cross over it. No text, no logos, no real people."
+     "heading": "Myth 3",
+     "narration": "Myth: they'll arrest you today. Fact: real tax problems come by letter, with appeal rights.",
+     "on_screen_text": "FACT: real issues come by letter",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an envelope with a seal. No text, no logos, no real people."
     },
     {
      "heading": "Check",
-     "narration": "To check, log in to your IRS online account at irs.gov by typing it yourself. If there's a real issue, it's there.",
-     "on_screen_text": "Check at irs.gov yourself",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes typing on a laptop with a shield on screen. No text, no logos, no real people."
+     "narration": "To check, type irs dot gov yourself and log in to your account. If there's a real issue, it's there.",
+     "on_screen_text": "Type IRS.gov yourself",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a shield. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -1582,23 +1637,24 @@
   "tiktok_extra": [
    {
     "heading": "Report",
-    "narration": "Report IRS impersonation scams to the Treasury Inspector General, TIGTA, and forward suspicious texts to 7726, which spells SPAM. Don't reply to the message itself.",
-    "on_screen_text": "Forward texts to 7726",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow forwarding a text bubble into a bin. No text, no logos, no real people."
+    "narration": "Forward suspicious texts to 7726, which spells SPAM, and report IRS impersonation to TIGTA. Don't reply to the message.",
+    "on_screen_text": "Forward to 7726",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with an arrow. No text, no logos, no real people."
    },
    {
     "heading": "Protect",
-    "narration": "And get an Identity Protection PIN from the IRS. It's free, and it stops someone else from filing a return in your name.",
-    "on_screen_text": "Get a free IP PIN",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small padlock on a tax form. No text, no logos, no real people."
+    "narration": "Get a free IRS Identity Protection PIN. It stops someone else filing a return in your name.",
+    "on_screen_text": "Free IP PIN",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small key and a form. No text, no logos, no real people."
    },
    {
     "heading": "Already clicked?",
-    "narration": "Already clicked a link or shared information? Change the passwords for your email and bank, turn on two-factor login, and report it at IdentityTheft.gov if you shared your Social Security number. Acting the same day makes a big difference.",
-    "on_screen_text": "Clicked? Change passwords today",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a padlock snapping shut on a laptop. No text, no logos, no real people."
+    "narration": "Already clicked or shared info? Change your email and bank passwords, turn on two-factor, and report it at IdentityTheft dot gov if you shared your Social Security number.",
+    "on_screen_text": "Clicked? Act the same day",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lock being reset. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "myth-vs-fact"
  },
  {
   "format": "short",
@@ -1606,37 +1662,37 @@
   "idea_angle": "The Earned Income Tax Credit goes unclaimed by about one in five eligible workers; childless workers 25-64 with low earnings can qualify too.",
   "script": {
    "title": "1 in 5 who qualify for this tax credit miss it",
-   "hook": "1 in 5 people who qualify for the Earned Income Tax Credit don't claim it. Here's who should check.",
+   "hook": "3 groups most likely to miss the EITC, counted down to the biggest.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "About one in five people who qualify for this tax credit never claim it.",
-     "on_screen_text": "1 in 5 miss this credit",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. five small piggy banks, one standing apart with a question mark. No text, no logos, no real people."
+     "narration": "About 1 in 5 people who qualify for the Earned Income Tax Credit miss it. Here are three groups most likely to, counted down.",
+     "on_screen_text": "Countdown: who misses the EITC",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a podium with three steps and a coin. No text, no logos, no real people."
     },
     {
-     "heading": "What",
-     "narration": "It's the Earned Income Tax Credit, the EITC, for people who work and earn under certain limits. Unlike many credits, it can give you a refund even if you owe no tax.",
-     "on_screen_text": "EITC: can mean a refund",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin flowing back out of a small envelope. No text, no logos, no real people."
+     "heading": "Number 3",
+     "narration": "Number three: people whose income dropped this year and don't realize they now qualify.",
+     "on_screen_text": "#3: income dropped",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bar getting shorter. No text, no logos, no real people."
     },
     {
-     "heading": "Who",
-     "narration": "It's biggest for families with kids, but workers without kids can qualify too, generally if you're twenty-five to sixty-four with low earnings.",
-     "on_screen_text": "No kids? 25–64 can qualify",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single piggy bank with a work bag. No text, no logos, no real people."
+     "heading": "Number 2",
+     "narration": "Number two: workers without kids. You can generally qualify if you're twenty-five to sixty-four with low earnings.",
+     "on_screen_text": "#2: workers without kids",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single figure with a briefcase. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 1",
+     "narration": "Number one: people who earned too little to think they had to file. Filing can still get you money back.",
+     "on_screen_text": "#1: didn't think they had to file",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an unopened envelope. No text, no logos, no real people."
     },
     {
      "heading": "Check",
-     "narration": "Use the IRS EITC Assistant online. It takes a few minutes and tells you if you qualify.",
-     "on_screen_text": "Use the IRS EITC Assistant",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a small check mark. No text, no logos, no real people."
-    },
-    {
-     "heading": "Claim",
-     "narration": "Then claim it when you file. Free File and VITA both handle it.",
-     "on_screen_text": "Claim it when you file",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a star stamp. No text, no logos, no real people."
+     "narration": "Use the IRS EITC Assistant. It takes a few minutes. Free File and VITA both handle the credit.",
+     "on_screen_text": "IRS EITC Assistant",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a check mark. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -1664,18 +1720,25 @@
   },
   "tiktok_extra": [
    {
-    "heading": "Who misses it",
-    "narration": "People most likely to miss it: first-time filers, people whose income dropped, and people who didn't think they had to file because they earned too little. Filing can still get you money.",
-    "on_screen_text": "Low income? File anyway",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small envelope with a path leading to a coin. No text, no logos, no real people."
+    "heading": "Refund anyway",
+    "narration": "Unlike many credits, it can give you a refund even if you owe no tax.",
+    "on_screen_text": "Refund even with $0 tax",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin coming out of an envelope. No text, no logos, no real people."
    },
    {
     "heading": "Timing",
-    "narration": "One thing to know: by law, refunds that include the EITC can't be issued before mid-February, so those refunds usually arrive in late February or early March.",
-    "on_screen_text": "EITC refunds: late Feb–March",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with late February highlighted. No text, no logos, no real people."
+    "narration": "By law, refunds that include the EITC can't be issued before mid-February, so they usually arrive in late February or early March.",
+    "on_screen_text": "Arrives late Feb / early March",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a circle. No text, no logos, no real people."
+   },
+   {
+    "heading": "Kids",
+    "narration": "Families with kids can get the most, and the amount depends on income and the number of qualifying children.",
+    "on_screen_text": "Biggest with kids",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a family of small figures. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "countdown"
  },
  {
   "format": "short",
@@ -1683,37 +1746,37 @@
   "idea_angle": "Restart a broken January budget in three steps (no backfilling, reset this week's number, automate one thing) instead of waiting for February.",
   "script": {
    "title": "3 weeks in and the budget broke? Restart in 3 steps",
-   "hook": "3 weeks into January is when most new budgets break. Here's how to restart in 10 minutes.",
+   "hook": "Common question: \"My budget broke in week 3. Start over?\" Answer: restart in 10 minutes.",
    "segments": [
     {
      "heading": "Hook",
-     "narration": "Three weeks into January is when a lot of new budgets break. Here's a ten-minute restart.",
-     "on_screen_text": "Budget broke? 10-min restart",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes gluing a cracked piggy bank back together, smiling. No text, no logos, no real people."
+     "narration": "Common question in late January: my budget broke in week 3, do I start over? Answer: no, restart in ten minutes.",
+     "on_screen_text": "Q: Budget broke. Start over?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a speech bubble over a cracked notepad. No text, no logos, no real people."
     },
     {
-     "heading": "Step 1",
-     "narration": "Don't backfill. Forget tracking every receipt from the last two weeks. Start from today's balance.",
-     "on_screen_text": "1. Start from today's balance",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with past days greyed out and today highlighted. No text, no logos, no real people."
+     "heading": "Don't backfill",
+     "narration": "Don't backfill the last two weeks of receipts. Start from today's balance.",
+     "on_screen_text": "Start from today",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with today circled. No text, no logos, no real people."
     },
     {
-     "heading": "Step 2",
-     "narration": "Reset this week's number. Bills due before next payday, minus your balance. What's left, divided by days, is your daily number.",
-     "on_screen_text": "2. New weekly number",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small calculator with a coin. No text, no logos, no real people."
+     "heading": "Daily number",
+     "narration": "Bills due before payday, subtracted from your balance, divided by the days left. That's your daily number.",
+     "on_screen_text": "(Balance − bills) ÷ days",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big division sign. No text, no logos, no real people."
     },
     {
-     "heading": "Step 3",
-     "narration": "Automate one thing today: savings transfer or bill autopay. Automation survives bad weeks.",
-     "on_screen_text": "3. Automate 1 thing",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gear turning a small coin wheel. No text, no logos, no real people."
+     "heading": "Automate",
+     "narration": "Automate one thing today: a savings transfer or a bill autopay. Automation survives bad weeks.",
+     "on_screen_text": "Automate 1 thing",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small gear. No text, no logos, no real people."
     },
     {
      "heading": "Mindset",
-     "narration": "A budget that breaks and restarts in January is still a budget. Most people just don't restart.",
-     "on_screen_text": "Restarting is the skill",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes walking forward past a small crack in the road. No text, no logos, no real people."
+     "narration": "A budget that breaks and restarts is still a budget. Most people just don't restart.",
+     "on_screen_text": "Restarting counts",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a path with a small loop. No text, no logos, no real people."
     }
    ],
    "cta": "Follow for one money move a week.",
@@ -1739,23 +1802,30 @@
   "tiktok_extra": [
    {
     "heading": "Find the break",
-    "narration": "Look at what broke it. Usually it's one category: food, rides, or a single big purchase. Raise that line to something real instead of pretending.",
-    "on_screen_text": "Fix the line that broke it",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bar chart with one bar raised to a realistic level. No text, no logos, no real people."
+    "narration": "Look at what broke it. Usually it's one category, like food or rides. Raise that line to something real.",
+    "on_screen_text": "Fix the one line that broke",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single highlighted row. No text, no logos, no real people."
    },
    {
-    "heading": "Make it smaller",
-    "narration": "And if the budget had twenty categories, cut it to three: bills, savings, everything else. Simpler budgets break less.",
-    "on_screen_text": "Too many categories? Cut to 3",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a long list being folded into a short three-line note. No text, no logos, no real people."
+    "heading": "Simpler",
+    "narration": "Twenty categories? Cut to three: bills, savings, everything else.",
+    "on_screen_text": "Cut to 3 categories",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three boxes. No text, no logos, no real people."
    },
    {
     "heading": "Example",
-    "narration": "Example. It's the twentieth, you've got six hundred in checking, and two hundred fifty of bills before payday on the first. That leaves three-fifty for eleven days, about thirty-two dollars a day. Tight, but now it's a number you can actually hit.",
-    "on_screen_text": "$600 − $250 = $350 ÷ 11 days ≈ $32/day",
-    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar strip of eleven days with small coin stacks. No text, no logos, no real people."
+    "narration": "Example: six hundred in checking, two-fifty of bills before payday, eleven days to go. Three-fifty over eleven days is about thirty-two dollars a day.",
+    "on_screen_text": "$350 ÷ 11 ≈ $32/day",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calculator with a calendar. No text, no logos, no real people."
+   },
+   {
+    "heading": "Next payday",
+    "narration": "On payday, set next pay period's number before you spend anything. That one habit stops most breaks.",
+    "on_screen_text": "Set the number on payday",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a pinned date. No text, no logos, no real people."
    }
-  ]
+  ],
+  "format_style": "question-reply"
  },
  {
   "format": "carousel",
@@ -3636,7 +3706,14 @@
     "$3,200 − $1,850 − $160 = $1,190 ≈ $275/week",
     "$600 ÷ 6 = $100",
     "Avalanche saves the most interest (math), snowball gives faster wins"
-   ]
+   ],
+   "original_element": "human-segment: Dhruv records the 'When it breaks' chapter on camera or as his own voice: one honest, true restart tip (chapter \"When it breaks\")"
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "human-segment",
+   "detail": "Dhruv records the 'When it breaks' chapter on camera or as his own voice: one honest, true restart tip",
+   "chapter": "When it breaks"
   }
  },
  {
@@ -3699,7 +3776,30 @@
      "heading": "Patterns",
      "narration": "Notice the pattern. None of these people had an income problem first. They had a system problem: money with no job gets spent, and costs with no plan go on a card. The fixes were the same three moves every time: automate savings first, give irregular costs a home, and make the hard number visible.",
      "on_screen_text": "Same 3 fixes every time",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small gears turning together. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small gears turning together. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Scores before and after the fix",
+      "labels": [
+       "New grad: before",
+       "New grad: after",
+       "Couple: before",
+       "Couple: after",
+       "Freelancer: before",
+       "Freelancer: after"
+      ],
+      "values": [
+       4,
+       8,
+       5,
+       8,
+       3,
+       8
+      ],
+      "unit_prefix": "",
+      "unit_suffix": "/10",
+      "note": "Fictional budgets, out of 10"
+     }
     },
     {
      "heading": "Your turn",
@@ -3730,7 +3830,14 @@
     "$210/$3,100 ≈ 6.8%",
     "Couple split: 63.3%/36.7%; both keep ~57% after bills",
     "~25% freelance tax set-aside is a rough rule of thumb"
-   ]
+   ],
+   "original_element": "worked-example-chart: Scorecard chart: the five questions as bars for each fictional budget, before and after the fix (chapter \"Patterns\")"
+  },
+  "format_style": "scorecard",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Scorecard chart: the five questions as bars for each fictional budget, before and after the fix",
+   "chapter": "Patterns"
   }
  },
  {
@@ -3835,7 +3942,14 @@
     "Filing deadline April 15, 2027 (confirm)",
     "Extension to file ≠ extension to pay",
     "IP PIN open to anyone who verifies identity (confirm)"
-   ]
+   ],
+   "original_element": "screen-recording: Screen recording of the IRS Free File landing page and the 'Do you need to file?' interactive tool (chapter \"Free filing\")"
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Screen recording of the IRS Free File landing page and the 'Do you need to file?' interactive tool",
+   "chapter": "Free filing"
   }
  },
  {
@@ -3868,7 +3982,24 @@
      "heading": "Self-employment tax",
      "narration": "Now the surprise. At a regular job, your employer pays half of Social Security and Medicare and withholds the other half. When you work for yourself, you pay both halves: self-employment tax, fifteen point three percent of your net earnings, roughly. Example: if you net ten thousand from deliveries after expenses, self-employment tax is around fourteen hundred, before any income tax. You do get to deduct half of it when figuring income tax, which softens it a little.",
      "on_screen_text": "Self-employment tax ≈ 15.3%",
-     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin tower with two thin slices peeled off. No text, no logos, no real people."
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin tower with two thin slices peeled off. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$10,000 net from side work",
+      "labels": [
+       "Net earnings",
+       "Self-employment tax",
+       "Half you can deduct"
+      ],
+      "values": [
+       10000,
+       1413,
+       706
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "15.3% on 92.35% of net earnings, illustrative"
+     }
     },
     {
      "heading": "Quarterly payments",
@@ -3941,7 +4072,14 @@
     "Safe harbor 100% / 110% if AGI > $150K",
     "Quarterly due dates (Apr 15, Jun 15, Sep 15, Jan 15)",
     "25–30% set-aside is a rule of thumb"
-   ]
+   ],
+   "original_element": "worked-example-chart: Chart: the video's side-income example split into set-aside, self-employment tax and income tax (chapter \"Self-employment tax\")"
+  },
+  "format_style": "explainer",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Chart: the video's side-income example split into set-aside, self-employment tax and income tax",
+   "chapter": "Self-employment tax"
   }
  }
 ]

@@ -1,0 +1,3501 @@
+[
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Work out the yearly saving from setting the thermostat back 7–10°F for 8 hours a day, using the DOE's up-to-10% estimate on a $1,800 yearly heating and cooling bill.",
+  "script": {
+   "title": "Thermostat back 7 degrees: the yearly math",
+   "hook": "Set your thermostat back 7 degrees for 8 hours a day. Here's the yearly math.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Set your thermostat back seven degrees for eight hours a day. Here's the yearly math.",
+     "on_screen_text": "7° back · 8 hours a day",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a thermostat with a small arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "The estimate",
+     "narration": "The Department of Energy says that can save up to about ten percent a year on heating and cooling.",
+     "on_screen_text": "Up to ~10% a year (DOE)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lightbulb next to a percent sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Example bill",
+     "narration": "Example: a household spending eighteen hundred dollars a year to heat and cool their home.",
+     "on_screen_text": "Example: $1,800/yr heat + cool",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small house with a sun and a snowflake. No text, no logos, no real people."
+    },
+    {
+     "heading": "The math",
+     "narration": "Ten percent of eighteen hundred is up to one hundred eighty dollars a year, from a setting you change once.",
+     "on_screen_text": "$1,800 × 10% = up to $180",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin stack growing. No text, no logos, no real people."
+    },
+    {
+     "heading": "Do it",
+     "narration": "In summer, set it higher while you're at work or asleep. A programmable thermostat does it for you.",
+     "on_screen_text": "Higher while out · automate it",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a thermostat with a clock. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Thermostat math (example):\nHeating + cooling: $1,800/year\nDOE estimate: up to ~10% a year by setting back 7–10°F for 8 hours a day\nSaving: up to ~$180/year\n\nIn summer, set it higher while you're out or asleep. Results vary by home and climate.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "summerbills",
+    "energysaving",
+    "utilities",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "The yearly math on setting your thermostat back.",
+   "thumbnail_text": "Thermostat: up to $180/yr",
+   "sources": [
+    "https://www.energy.gov/energysaver/thermostats"
+   ],
+   "claims_to_verify": [
+    "DOE: up to ~10% a year, setting back 7–10°F for 8 hours a day",
+    "$1,800 × 10% = $180"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Pets and health",
+    "narration": "Have pets, a baby or someone sensitive to heat at home? Comfort and safety come first. Save elsewhere.",
+    "on_screen_text": "Safety first in a heat wave",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a cat beside a fan. No text, no logos, no real people."
+   },
+   {
+    "heading": "Fans",
+    "narration": "Ceiling fans cool people, not rooms. Turn them off when you leave.",
+    "on_screen_text": "Fans off when you leave",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a ceiling fan with a small off switch. No text, no logos, no real people."
+   },
+   {
+    "heading": "Check filters",
+    "narration": "A clogged AC filter makes the system work harder. Check it monthly in summer.",
+    "on_screen_text": "Check the filter monthly",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an air filter with a magnifying glass. No text, no logos, no real people."
+   },
+   {
+    "heading": "Smart or not",
+    "narration": "You don't need a smart thermostat. A basic programmable one, or a phone reminder to change the setting, does most of the job.",
+    "on_screen_text": "Basic programmable works",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple thermostat with a clock. No text, no logos, no real people."
+   },
+   {
+    "heading": "Upkeep",
+    "narration": "Have the system serviced before peak season. A unit that runs efficiently costs less to run, every single hour it's on.",
+    "on_screen_text": "Service before peak season",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a wrench next to an AC unit. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "on-screen-calculation"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Fictional new grad moving for a first job in July: $52K salary, about $3,350 take-home, eyeing a $1,650 studio. Fix: a roommate or a cheaper area.",
+  "script": {
+   "title": "Rate My Budget #30: first job, $1,650 studio",
+   "hook": "$52K first job, $1,650 studio. Half the paycheck on rent. Let's rate it.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Fifty-two thousand dollar first job, a sixteen-fifty studio. Half the paycheck on rent. Let's rate it.",
+     "on_screen_text": "$52K · $1,650 studio",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a small apartment building with a key. No text, no logos, no real people."
+    },
+    {
+     "heading": "Numbers",
+     "narration": "Fictional example. New grad, about thirty-three fifty take-home. Student loan, two hundred. Phone and transit, one fifty.",
+     "on_screen_text": "Fictional · $3,350/mo take-home",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paycheck and a short list. No text, no logos, no real people."
+    },
+    {
+     "heading": "Problem",
+     "narration": "Rent would be about half of take-home. That leaves very little for food, savings and the move itself.",
+     "on_screen_text": "Rent ≈ 49% of take-home",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pie chart with one huge slice. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "A two-bedroom with a roommate at nine fifty each, or a studio a few stops out at twelve hundred. Either frees four hundred to seven hundred a month.",
+     "on_screen_text": "Roommate or farther out",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two keys on one ring. No text, no logos, no real people."
+    },
+    {
+     "heading": "Score",
+     "narration": "Score: three out of ten as planned. Eight out of ten with a roommate and a starter emergency fund.",
+     "on_screen_text": "3/10 → 8/10",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a score card flipping from 3 to 8. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Rate My Budget #30 (fictional example): new grad, $52K, ~$3,350/month take-home, considering a $1,650 studio.\n\nProblem: rent ≈ 49% of take-home, little left for food, savings or move-in costs.\n\nFix: roommate at ~$950 each, or a studio farther out at ~$1,200. Frees $450–700/month. First goal: a $1,000 starter fund.\n\nScore: 3/10 → 8/10.\n\nFictional example budget for illustration, not a real person or submission. Want yours rated? DM us your numbers (no names, no screenshots with account details) and we'll anonymise them.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "ratemybudget",
+    "firstapartment",
+    "newgrad",
+    "budgetreview",
+    "rent",
+    "moneymadesimple"
+   ],
+   "description": "Rate My Budget #30: a fictional new grad's first apartment.",
+   "thumbnail_text": "$1,650 studio?",
+   "sources": [
+    "https://www.consumerfinance.gov/renters/",
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "Fictional example (label on screen)",
+    "1,650 ÷ 3,350 ≈ 49%",
+    "3,350 − 950 = 2,400 left; 1,650 − 950 = 700 freed"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Move-in cash",
+    "narration": "Move-in often needs first month, a deposit and sometimes fees. Price that before signing.",
+    "on_screen_text": "Price move-in cash first",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stack of envelopes with a key. No text, no logos, no real people."
+   },
+   {
+    "heading": "Commute",
+    "narration": "Farther out only works if the commute cost and time don't eat the savings.",
+    "on_screen_text": "Count the commute too",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bus and a clock. No text, no logos, no real people."
+   },
+   {
+    "heading": "Roommate rules",
+    "narration": "With a roommate, agree on bills, guests and the lease in writing on day one.",
+    "on_screen_text": "Agree roommate rules in writing",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two hands over a sheet of paper. No text, no logos, no real people."
+   },
+   {
+    "heading": "The 30% guide",
+    "narration": "A common guide is rent around thirty percent of gross pay. Here that's about thirteen hundred, so the roommate plan fits well.",
+    "on_screen_text": "≈ 30% of gross ≈ $1,300",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pie chart with a smaller slice. No text, no logos, no real people."
+   }
+  ],
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Three bulk-buying myths: bulk is always cheaper, a big membership pays for itself automatically, and buying more means saving more.",
+  "script": {
+   "title": "3 bulk buying myths",
+   "hook": "Buying in bulk saves money. Sometimes. Here are 3 myths.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Buying in bulk saves money. Sometimes. Here are three myths.",
+     "on_screen_text": "3 bulk buying myths",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a big box next to a small box. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 1",
+     "narration": "Myth one: bulk is always cheaper. Check the unit price on the shelf label. Sales on regular sizes often beat it.",
+     "on_screen_text": "Check the unit price",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shelf label with a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 2",
+     "narration": "Myth two: a warehouse membership pays for itself. Only if your yearly savings beat the fee. Track three months of trips to see.",
+     "on_screen_text": "Savings must beat the fee",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a membership card and a scale. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 3",
+     "narration": "Myth three: more is saving. Food you throw out cost full price. Bulk works for things you use up, like paper towels.",
+     "on_screen_text": "Waste costs full price",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bin with a banana peel. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule",
+     "narration": "Buy bulk only for what you use often, have room for, and won't let expire.",
+     "on_screen_text": "Use often · room · won't expire",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pantry shelf with three ticks. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "3 bulk buying myths:\n1. Bulk is always cheaper: check the unit price\n2. A membership pays for itself: only if savings beat the fee\n3. More is saving: wasted food cost full price\n\nBest bulk buys: things you use up and can store.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "bulkbuying",
+    "groceries",
+    "budgeting",
+    "moneytips",
+    "frugal",
+    "moneymadesimple"
+   ],
+   "description": "Three myths about buying in bulk.",
+   "thumbnail_text": "Bulk isn't always cheaper",
+   "sources": [
+    "https://consumer.ftc.gov/shopping-and-donating"
+   ],
+   "claims_to_verify": [
+    "Unit prices vary by store",
+    "Example guidance, not a rule"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Split it",
+    "narration": "Split a bulk pack with a friend or neighbour if it's too much for one home.",
+    "on_screen_text": "Split big packs",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two bags from one box. No text, no logos, no real people."
+   },
+   {
+    "heading": "Freezer",
+    "narration": "Freezing meat and bread in portions helps bulk food last.",
+    "on_screen_text": "Freeze in portions",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a freezer with small labelled bags. No text, no logos, no real people."
+   },
+   {
+    "heading": "List",
+    "narration": "Shop from a list, even at a warehouse store. The extras add up fast.",
+    "on_screen_text": "Shop from a list",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list on a cart handle. No text, no logos, no real people."
+   },
+   {
+    "heading": "Do the math",
+    "narration": "Shelf labels usually show price per ounce or per unit. Compare that number, not the sticker price, every time.",
+    "on_screen_text": "Compare per-unit prices",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two price tags with small scales. No text, no logos, no real people."
+   },
+   {
+    "heading": "Gas and time",
+    "narration": "Count the drive too. A far-away warehouse trip can cancel out a small saving.",
+    "on_screen_text": "Count the trip cost",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a car and a small coin. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "myth-vs-fact"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Five ways a heat wave raises costs beyond the AC, counting down: eating out, extra fuel for car AC, the fridge, outings to stay cool, and the AC itself.",
+  "script": {
+   "title": "5 heat wave costs, counting down",
+   "hook": "A heat wave costs more than the AC. 5 costs, counting down.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "A heat wave costs more than the AC. Five costs, counting down.",
+     "on_screen_text": "5 heat wave costs",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a sun with a thermometer. No text, no logos, no real people."
+    },
+    {
+     "heading": "5 and 4",
+     "narration": "Five: eating out because it's too hot to cook. Four: more fuel, since car AC uses extra gas.",
+     "on_screen_text": "5. Takeout · 4. Car AC fuel",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a takeout bag and a car. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Three: the fridge and freezer work harder. Keep them full-ish and the doors closed.",
+     "on_screen_text": "3. Fridge works harder",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fridge with a small sweat drop. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Two: paid outings to stay cool. Libraries, malls and public pools are cheaper or free.",
+     "on_screen_text": "2. Paid outings · try free ones",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a library with a sun. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "And number one: the AC itself. Raise the setting a few degrees when you can, and close sunny blinds.",
+     "on_screen_text": "1. The AC: blinds + a higher setting",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a window with blinds half down. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "5 heat wave costs:\n5. Takeout when it's too hot to cook\n4. Extra fuel for car AC\n3. A fridge and freezer working harder\n2. Paid outings to stay cool\n1. The AC itself\n\nCheap fixes: no-cook meals, free cool spaces, blinds and a slightly higher setting.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "heatwave",
+    "summerbills",
+    "budgeting",
+    "energysaving",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Five costs a heat wave adds, counting down.",
+   "thumbnail_text": "Heat wave costs",
+   "sources": [
+    "https://www.energy.gov/energysaver/thermostats",
+    "https://www.ready.gov/hurricanes"
+   ],
+   "claims_to_verify": [
+    "General guidance",
+    "Car AC increases fuel use"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "No-cook meals",
+    "narration": "Plan three no-cook dinners: wraps, salads, cold noodles. Cheaper than takeout and cooler.",
+    "on_screen_text": "3 no-cook dinners",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bowl of salad. No text, no logos, no real people."
+   },
+   {
+    "heading": "Cooling centres",
+    "narration": "Many cities open free cooling centres in extreme heat. Check your city's website.",
+    "on_screen_text": "Free cooling centres",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a building with a snowflake sign. No text, no logos, no real people."
+   },
+   {
+    "heading": "Bill help",
+    "narration": "Struggling with a summer bill? Ask your utility about payment plans or assistance programs.",
+    "on_screen_text": "Ask about bill help",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone and a bill. No text, no logos, no real people."
+   },
+   {
+    "heading": "Cool the body",
+    "narration": "Cool showers, wet cloths and cold drinks cost almost nothing and help a lot.",
+    "on_screen_text": "Cool the body cheaply",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a glass of water with ice. No text, no logos, no real people."
+   },
+   {
+    "heading": "Night cooking",
+    "narration": "Cook in the cooler morning or evening, or use a microwave or slow cooker that heats the kitchen less.",
+    "on_screen_text": "Cook when it's cooler",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a slow cooker and a moon. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "countdown"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Common question: should I update my W-4 mid-year? When it helps (a big refund or bill last year, a new job, marriage, a side gig) and how to check with the IRS estimator.",
+  "script": {
+   "title": "\"Should I update my W-4 mid-year?\" Common question",
+   "hook": "Common question: should I update my W-4 halfway through the year? Here are 4 times to check.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Common question: should I update my W-4 halfway through the year? Here are four times to check.",
+     "on_screen_text": "Update your W-4 mid-year?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a form with a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Big refund or bill",
+     "narration": "One: you got a big refund or a big bill last spring. That means your withholding was off.",
+     "on_screen_text": "1. Big refund or big bill",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a refund cheque and a bill. No text, no logos, no real people."
+    },
+    {
+     "heading": "Life changes",
+     "narration": "Two: you married or divorced, or had a baby. Three: you started a second job or a side gig.",
+     "on_screen_text": "2. Life change · 3. Second income",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a ring and a small backpack. No text, no logos, no real people."
+    },
+    {
+     "heading": "New job",
+     "narration": "Four: you started a new job this year, especially mid-year, since withholding can assume a full year at that pay.",
+     "on_screen_text": "4. New job mid-year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an office badge. No text, no logos, no real people."
+    },
+    {
+     "heading": "Check",
+     "narration": "Use the free IRS Tax Withholding Estimator with your latest pay stub. It tells you what to change.",
+     "on_screen_text": "Use the IRS estimator",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a pay stub. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Check your W-4 mid-year if:\n1. You got a big refund or a big bill\n2. You married, divorced or had a baby\n3. You started a second job or side gig\n4. You started a new job this year\n\nUse the IRS Tax Withholding Estimator with your latest pay stub.\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "w4",
+    "taxes",
+    "paycheck",
+    "taxwithholding",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "When to check your W-4 in the middle of the year.",
+   "thumbnail_text": "Check your W-4 now?",
+   "sources": [
+    "https://www.irs.gov/individuals/tax-withholding-estimator"
+   ],
+   "claims_to_verify": [
+    "IRS Tax Withholding Estimator is free on IRS.gov",
+    "Mid-year changes affect the rest of the year"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Halfway point",
+    "narration": "Halfway through the year, a change affects fewer paychecks, so the per-check adjustment is bigger.",
+    "on_screen_text": "Fewer checks left = bigger change",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with half shaded. No text, no logos, no real people."
+   },
+   {
+    "heading": "Have ready",
+    "narration": "Have your latest pay stub and last year's return handy. It takes about fifteen minutes.",
+    "on_screen_text": "Pay stub + last return",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pay stub and a folder. No text, no logos, no real people."
+   },
+   {
+    "heading": "Not too low",
+    "narration": "A smaller refund means more in each paycheck, but aim to avoid owing a penalty.",
+    "on_screen_text": "Bigger checks, no penalty",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin and a small shield. No text, no logos, no real people."
+   },
+   {
+    "heading": "Both jobs",
+    "narration": "Two jobs, or two earners? Fill in the multiple jobs part of the W-4, or the estimator will tell you how much extra to withhold.",
+    "on_screen_text": "2 jobs? Use that section",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two office badges. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "question-reply"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Price a July 4th cookout for 12 people line by line: about $155 total, about $13 a person, and roughly half if it's a potluck.",
+  "script": {
+   "title": "Cookout for 12: the real per-person cost",
+   "hook": "A cookout for 12 people. Here's the real cost, line by line.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "A cookout for twelve people. Here's the real cost, line by line.",
+     "on_screen_text": "Cookout for 12",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a grill with a small flag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mains",
+     "narration": "Burgers, thirty. Hot dogs, fifteen. Buns, eight. That's fifty-three dollars.",
+     "on_screen_text": "Mains: $53",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. burgers and hot dogs on a grill. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sides and drinks",
+     "narration": "Sides, thirty-five. Drinks, thirty. Ice, ten. Another seventy-five.",
+     "on_screen_text": "Sides + drinks + ice: $75",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a cooler and a bowl of salad. No text, no logos, no real people."
+    },
+    {
+     "heading": "Extras",
+     "narration": "Plates and cups, twelve. Charcoal, fifteen. Total: about one fifty-five, or thirteen dollars a person.",
+     "on_screen_text": "Total ≈ $155 · ≈ $13/person",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. paper plates and a bag of charcoal. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cut it",
+     "narration": "Make it a potluck: you do the mains, guests bring sides and drinks. Your cost drops to about seventy-five.",
+     "on_screen_text": "Potluck → ≈ $75",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. several hands holding dishes. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Cookout for 12 (example prices):\nBurgers $30 · hot dogs $15 · buns $8\nSides $35 · drinks $30 · ice $10\nPlates/cups $12 · charcoal $15\nTotal ≈ $155 (≈ $13/person)\n\nPotluck version: you cover mains + plates + charcoal ≈ $80.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "july4th",
+    "cookout",
+    "budgeting",
+    "partyonabudget",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "The real cost of a cookout for 12, line by line.",
+   "thumbnail_text": "Cookout: $13/person",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "30+15+8 = 53; 35+30+10 = 75; 12+15 = 27; total 155",
+    "155 ÷ 12 ≈ 12.9",
+    "Example prices; yours will vary"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Store brand",
+    "narration": "Store-brand buns, chips and drinks can trim another fifteen to twenty percent.",
+    "on_screen_text": "Store brand: trim 15–20%",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two jars, one with a plain label. No text, no logos, no real people."
+   },
+   {
+    "heading": "Leftovers",
+    "narration": "Plan for leftovers: freeze extra burgers, and send guests home with sides.",
+    "on_screen_text": "Plan the leftovers",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a container with a lid. No text, no logos, no real people."
+   },
+   {
+    "heading": "One trip",
+    "narration": "Make one list and one shopping trip. Extra runs for forgotten ice add up.",
+    "on_screen_text": "One list, one trip",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shopping list with a tick. No text, no logos, no real people."
+   },
+   {
+    "heading": "Veggie option",
+    "narration": "Adding a veggie option? Grilled vegetables or bean burgers are often cheaper than another pound of meat.",
+    "on_screen_text": "Veggie options cost less",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. grilled vegetables on a skewer. No text, no logos, no real people."
+   },
+   {
+    "heading": "Drinks",
+    "narration": "Drinks are often the biggest surprise. A big jug of iced tea or lemonade costs far less than cans.",
+    "on_screen_text": "Make a big jug of drinks",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jug of lemonade. No text, no logos, no real people."
+   },
+   {
+    "heading": "Borrow",
+    "narration": "Borrow a cooler, folding chairs or a bigger grill from neighbours rather than buying for one day.",
+    "on_screen_text": "Borrow, don't buy",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a folding chair with a small heart. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "real-numbers"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Fictional 29-year-old with $300 in savings has $900 in a summer sale cart. Fix: the 48-hour rule, keep two real needs, and spend about $180.",
+  "script": {
+   "title": "Rate My Budget #31: $900 sale cart, $300 saved",
+   "hook": "$900 in a summer sale cart, $300 in savings. Let's rate it.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Nine hundred dollars in a summer sale cart, three hundred in savings. Let's rate it.",
+     "on_screen_text": "$900 cart · $300 saved",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a shopping cart full of boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Numbers",
+     "narration": "Fictional example. Twenty-nine, about thirty-eight hundred take-home, a card balance of eleven hundred.",
+     "on_screen_text": "Fictional · $3,800/mo take-home",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paycheck and a credit card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Problem",
+     "narration": "The cart is mostly wants on sale: a speaker, a watch, extra kitchen gadgets. It would go on the card.",
+     "on_screen_text": "Mostly wants · going on the card",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gadget pile with a card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "Wait forty-eight hours. Keep the two things that replace something broken. That's about one eighty, paid in cash.",
+     "on_screen_text": "48 hours · keep 2 · ≈ $180 cash",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an hourglass next to two boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Score",
+     "narration": "Score: two out of ten for the full cart. Eight out of ten with the trimmed one, and the rest toward the card.",
+     "on_screen_text": "2/10 → 8/10",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a score card flipping from 2 to 8. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Rate My Budget #31 (fictional example): 29, ~$3,800/month take-home, $300 saved, $1,100 card balance, $900 summer sale cart.\n\nProblem: mostly wants, headed for the card.\n\nFix: 48-hour wait, keep the 2 items that replace broken ones (~$180, cash). Put $200 toward the card instead.\n\nScore: 2/10 → 8/10.\n\nFictional example budget for illustration, not a real person or submission. Want yours rated? DM us your numbers (no names, no screenshots with account details) and we'll anonymise them.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "ratemybudget",
+    "sales",
+    "impulsebuying",
+    "budgetreview",
+    "spendless",
+    "moneymadesimple"
+   ],
+   "description": "Rate My Budget #31: a fictional summer sale cart.",
+   "thumbnail_text": "$900 cart, $300 saved",
+   "sources": [
+    "https://consumer.ftc.gov/shopping-and-donating",
+    "https://www.consumerfinance.gov/consumer-tools/credit-cards/"
+   ],
+   "claims_to_verify": [
+    "Fictional example (label on screen)",
+    "Example item prices"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Price history",
+    "narration": "A sale price isn't always the lowest price. Price-history tools can show if it's really a deal.",
+    "on_screen_text": "Is it really a deal?",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small line chart with a price tag. No text, no logos, no real people."
+   },
+   {
+    "heading": "Returns",
+    "narration": "Check the return window before buying anything on sale. Some sale items are final.",
+    "on_screen_text": "Check the return policy",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a box with a return arrow. No text, no logos, no real people."
+   },
+   {
+    "heading": "Unsubscribe",
+    "narration": "Unsubscribe from a few store emails. Fewer sale alerts, fewer carts.",
+    "on_screen_text": "Fewer sale emails",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an envelope with an X. No text, no logos, no real people."
+   },
+   {
+    "heading": "Want list",
+    "narration": "Keep a want list. If you still want something after a month, budget for it and buy it, guilt-free.",
+    "on_screen_text": "Keep a want list",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a notebook with a small star. No text, no logos, no real people."
+   }
+  ],
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "How back-to-school sales tax holidays work: which items usually qualify, price caps, and why to check your own state's dates and rules.",
+  "script": {
+   "title": "Back-to-school tax-free weekends: 4 things to know",
+   "hook": "Tax-free weekends are coming. 4 things to know before you shop.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Tax-free weekends are coming. Four things to know before you shop.",
+     "on_screen_text": "Tax-free weekends: 4 things",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a calendar with a shopping bag. No text, no logos, no real people."
+    },
+    {
+     "heading": "What",
+     "narration": "One: some states drop sales tax for a few days, usually in July or August, on back-to-school items.",
+     "on_screen_text": "1. Some states · a few days",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a map with a few states highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Which items",
+     "narration": "Two: it usually covers clothes, shoes and school supplies, and sometimes computers.",
+     "on_screen_text": "2. Clothes · supplies · sometimes laptops",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a backpack, shoes and a laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "Caps",
+     "narration": "Three: there are often price caps per item. A pair of shoes over the cap may be fully taxed.",
+     "on_screen_text": "3. Per-item price caps",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a price tag with a ceiling line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Check",
+     "narration": "Four: rules and dates change each year. Check your state's revenue department website before you go.",
+     "on_screen_text": "4. Check your state's site",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a state outline. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Back-to-school tax-free weekends:\n1. Some states hold them, usually July or August\n2. Usually clothes, shoes and supplies; sometimes computers\n3. Per-item price caps often apply\n4. Dates and rules change: check your state's revenue department\n\nMake your list first, so the tax saving doesn't turn into extra spending.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "backtoschool",
+    "taxfreeweekend",
+    "budgeting",
+    "shoppingtips",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "How back-to-school sales tax holidays work.",
+   "thumbnail_text": "Tax-free weekend tips",
+   "sources": [
+    "https://consumer.ftc.gov/shopping-and-donating"
+   ],
+   "claims_to_verify": [
+    "Not every state holds one",
+    "Item categories and caps vary by state and year"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "The math",
+    "narration": "At seven percent sales tax, three hundred dollars of qualifying items saves about twenty-one dollars.",
+    "on_screen_text": "$300 × 7% ≈ $21 saved",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a receipt with a small coin. No text, no logos, no real people."
+   },
+   {
+    "heading": "Online too",
+    "narration": "Many states apply it to online orders placed during the window. Check the rules.",
+    "on_screen_text": "Online orders may count",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a shopping cart. No text, no logos, no real people."
+   },
+   {
+    "heading": "Crowds",
+    "narration": "Stores are busy. Shopping early in the day, with a list, keeps it quick.",
+    "on_screen_text": "Go early, with a list",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sunrise over a shop. No text, no logos, no real people."
+   },
+   {
+    "heading": "Price match",
+    "narration": "Some stores add their own sales on top. Compare prices before the weekend so you know a real deal.",
+    "on_screen_text": "Compare prices first",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two price tags side by side. No text, no logos, no real people."
+   },
+   {
+    "heading": "Receipts",
+    "narration": "Keep receipts, in case something doesn't fit. Returns may follow special rules after the holiday.",
+    "on_screen_text": "Keep every receipt",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a receipt pinned to a board. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "explainer"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Driving vs flying for a 400-mile July 4th trip for two: about $93 in gas against about $630 for flights, bags and airport rides, worked out on screen.",
+  "script": {
+   "title": "Drive or fly 400 miles? The math for 2 people",
+   "hook": "400 miles each way, 2 people. Drive or fly? Let's do the math.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Four hundred miles each way, two people. Drive or fly? Let's do the math.",
+     "on_screen_text": "400 miles · 2 people",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a car and a plane side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Drive",
+     "narration": "Eight hundred miles round trip, at thirty miles per gallon, is about twenty-seven gallons.",
+     "on_screen_text": "800 ÷ 30 ≈ 27 gallons",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fuel gauge. No text, no logos, no real people."
+    },
+    {
+     "heading": "Gas",
+     "narration": "At three fifty a gallon, that's about ninety-three dollars for the whole trip.",
+     "on_screen_text": "27 × $3.50 ≈ $93",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fuel pump with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fly",
+     "narration": "Flying: two tickets at two fifty, bags at seventy, airport rides at sixty. About six thirty.",
+     "on_screen_text": "$500 + $70 + $60 ≈ $630",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a plane ticket and a suitcase. No text, no logos, no real people."
+    },
+    {
+     "heading": "Verdict",
+     "narration": "Driving saves about five hundred here. Flying saves around twelve hours of driving. Price your own trip both ways.",
+     "on_screen_text": "Drive saves ≈ $537 · costs time",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale with a clock and coins. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Drive vs fly, 400 miles each way, 2 people (example):\nDrive: 800 mi ÷ 30 mpg ≈ 27 gal × $3.50 ≈ $93\nFly: 2 × $250 + $70 bags + $60 rides ≈ $630\nDriving saves ≈ $537, but costs about 12 hours on the road.\n\nAdd wear on the car and any hotel stops to the driving side.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "roadtrip",
+    "july4th",
+    "travelbudget",
+    "summertravel",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "The math on driving vs flying a 400-mile trip.",
+   "thumbnail_text": "Drive: $93 · Fly: $630",
+   "sources": [
+    "https://www.fueleconomy.gov/",
+    "https://www.transportation.gov/airconsumer"
+   ],
+   "claims_to_verify": [
+    "800 ÷ 30 = 26.7 gal; × 3.50 = $93",
+    "2×250 + 70 + 60 = 630",
+    "Example prices"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Car wear",
+    "narration": "Count wear on the car too. Some people add ten to twenty cents a mile for tyres and maintenance.",
+    "on_screen_text": "Add car wear",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tyre and a wrench. No text, no logos, no real people."
+   },
+   {
+    "heading": "Solo?",
+    "narration": "Travelling alone, the gap shrinks, since the car costs the same with one person.",
+    "on_screen_text": "Solo: the gap shrinks",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. one person next to a car. No text, no logos, no real people."
+   },
+   {
+    "heading": "Holiday prices",
+    "narration": "Flights around July 4th are often pricier. Flying a day earlier can help.",
+    "on_screen_text": "Fly a day earlier",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with an arrow. No text, no logos, no real people."
+   },
+   {
+    "heading": "Food on the road",
+    "narration": "Pack snacks and lunch for the drive. Road-stop food can add forty dollars or more for two.",
+    "on_screen_text": "Pack road food",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a cooler with sandwiches. No text, no logos, no real people."
+   },
+   {
+    "heading": "Parking",
+    "narration": "Flying? Price airport parking against a ride both ways. For a long trip, a ride can be cheaper.",
+    "on_screen_text": "Parking vs ride",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a parking sign and a car. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "on-screen-calculation"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Three extended warranty myths before buying a summer appliance: they're always a scam, the store plan is the only option, and they cover everything.",
+  "script": {
+   "title": "3 extended warranty myths",
+   "hook": "Buying an AC or a laptop? 3 extended warranty myths first.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Buying an AC or a laptop this summer? Three extended warranty myths first.",
+     "on_screen_text": "3 extended warranty myths",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes an AC unit with a small shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 1",
+     "narration": "Myth one: they're always a scam. They're usually priced to profit the seller, so often skip them, but not always.",
+     "on_screen_text": "Often skip · not always",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale with a shield and a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 2",
+     "narration": "Myth two: the store plan is your only option. The manufacturer's warranty may already cover the first year, and some credit cards extend it.",
+     "on_screen_text": "Check maker + card coverage",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a credit card and a warranty card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 3",
+     "narration": "Myth three: they cover everything. Many exclude accidents, wear and tear, or normal use. Read what's covered.",
+     "on_screen_text": "Read the exclusions",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a document with a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule",
+     "narration": "If you could replace it from savings, you may not need one. Put the money in a repair fund instead.",
+     "on_screen_text": "Could you self-insure?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar labelled with a wrench icon. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "3 extended warranty myths:\n1. Always a scam: often skip, but not always\n2. Store plan is the only option: check the manufacturer warranty and your card's benefits\n3. Covers everything: check the exclusions\n\nIf you could replace it from savings, a repair fund may beat the plan.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "warranty",
+    "shoppingtips",
+    "budgeting",
+    "moneytips",
+    "consumertips",
+    "moneymadesimple"
+   ],
+   "description": "Three myths about extended warranties.",
+   "thumbnail_text": "Extended warranty myths",
+   "sources": [
+    "https://consumer.ftc.gov/articles/warranties"
+   ],
+   "claims_to_verify": [
+    "Card benefits vary by issuer and change",
+    "General guidance, not advice"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Ask",
+    "narration": "Ask who actually provides the plan. It's often a third-party company, not the store.",
+    "on_screen_text": "Who runs the plan?",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a store and a separate small office. No text, no logos, no real people."
+   },
+   {
+    "heading": "Cancel",
+    "narration": "Many plans can be cancelled for a refund within a set window. Check the terms.",
+    "on_screen_text": "Cancellation window?",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a small arrow. No text, no logos, no real people."
+   },
+   {
+    "heading": "Register",
+    "narration": "Register the product with the maker. It can make warranty claims easier.",
+    "on_screen_text": "Register the product",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone scanning a box. No text, no logos, no real people."
+   },
+   {
+    "heading": "Price check",
+    "narration": "A useful test: if the plan costs more than a fifth of the item's price, think twice.",
+    "on_screen_text": "Plan > 20% of price? Pause",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a price tag with a small warning. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "myth-vs-fact"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Five money moves for the week after a holiday weekend, counting down: log the spending, return unused items, check the card, reset the weekly number, move what's left.",
+  "script": {
+   "title": "5 money moves after July 4th weekend, counting down",
+   "hook": "Holiday weekend's over. 5 money moves for this week, counting down.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Holiday weekend's over. Five money moves for this week, counting down.",
+     "on_screen_text": "5 moves after the holiday",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a calendar with a firework doodle. No text, no logos, no real people."
+    },
+    {
+     "heading": "5 and 4",
+     "narration": "Five: add up what the weekend actually cost. Four: return anything unused while the receipt's fresh.",
+     "on_screen_text": "5. Add it up · 4. Return extras",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a receipt and a box. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Three: check your card for duplicate or wrong charges from shops and restaurants.",
+     "on_screen_text": "3. Check the card",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card statement with a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Two: reset this week's spending number, so the rest of the month stays on track.",
+     "on_screen_text": "2. Reset the weekly number",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a weekly calendar with a reset arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "And number one: anything left in the holiday budget goes straight to savings.",
+     "on_screen_text": "1. Leftovers → savings",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin dropping into a jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "5 money moves after a holiday weekend:\n5. Add up what it really cost\n4. Return anything unused\n3. Check your card for wrong charges\n2. Reset this week's spending number\n1. Move leftovers to savings\n\nWrite down one thing to plan differently next holiday.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "july4th",
+    "budgeting",
+    "moneytips",
+    "personalfinance",
+    "moneyreset",
+    "moneymadesimple"
+   ],
+   "description": "Five money moves for the week after a holiday.",
+   "thumbnail_text": "After the holiday",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/",
+    "https://www.consumerfinance.gov/consumer-tools/credit-cards/"
+   ],
+   "claims_to_verify": [
+    "General guidance"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Note it",
+    "narration": "Write down one thing you'd plan differently next holiday. It's the cheapest lesson you'll get.",
+    "on_screen_text": "1 note for next time",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sticky note. No text, no logos, no real people."
+   },
+   {
+    "heading": "Over budget?",
+    "narration": "Went over? Trim one category for the next two weeks instead of panicking.",
+    "on_screen_text": "Over? Trim 1 category",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pair of scissors and a coin. No text, no logos, no real people."
+   },
+   {
+    "heading": "Next one",
+    "narration": "Labor Day is next. Start a small fund now, if you plan to spend.",
+    "on_screen_text": "Start the next fund",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a small calendar. No text, no logos, no real people."
+   },
+   {
+    "heading": "Subscriptions",
+    "narration": "Signed up for a free trial over the holiday? Set a reminder to cancel before it bills.",
+    "on_screen_text": "Cancel holiday free trials",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a calendar reminder. No text, no logos, no real people."
+   },
+   {
+    "heading": "Gift cards",
+    "narration": "Got any gift cards or store credit? Log them somewhere, so they actually get used.",
+    "on_screen_text": "Log gift cards",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gift card in a wallet. No text, no logos, no real people."
+   },
+   {
+    "heading": "Pay it off",
+    "narration": "Put holiday card charges on this month's full payment, so nothing carries interest.",
+    "on_screen_text": "Pay holiday charges in full",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card with a tick. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "countdown"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Fictional single parent, $3,800 take-home, two kids, a $1,000 back-to-school list, $200 saved, 6 weeks to go. Fix: inventory first, tax-free weekend, $100 a week.",
+  "script": {
+   "title": "Rate My Budget #32: $1,000 back-to-school list, $200 saved",
+   "hook": "$1,000 back-to-school list, $200 saved, 6 weeks to go. Let's rate the plan.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "A thousand-dollar back-to-school list, two hundred saved, six weeks to go. Let's rate the plan.",
+     "on_screen_text": "$1,000 list · $200 saved",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a backpack with a long list. No text, no logos, no real people."
+    },
+    {
+     "heading": "Numbers",
+     "narration": "Fictional example. Single parent, two kids, about thirty-eight hundred take-home. No card debt.",
+     "on_screen_text": "Fictional · $3,800/mo take-home",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a parent with two small backpacks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Problem",
+     "narration": "The list assumes everything new: clothes, shoes, a tablet, supplies. Eight hundred short.",
+     "on_screen_text": "$800 short",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gap between two coin stacks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "Check what still fits and works first. Cut the list to six fifty. Shop the tax-free weekend if your state has one. Save a hundred a week.",
+     "on_screen_text": "Inventory · $650 list · $100/wk",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a closet with a tick list. No text, no logos, no real people."
+    },
+    {
+     "heading": "Score",
+     "narration": "Score: four out of ten as planned. Eight out of ten with the inventory and the weekly number.",
+     "on_screen_text": "4/10 → 8/10",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a score card flipping from 4 to 8. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Rate My Budget #32 (fictional example): single parent, two kids, ~$3,800/month take-home, $1,000 back-to-school list, $200 saved, 6 weeks out.\n\nProblem: $800 short, assuming everything new.\n\nFix: inventory what still fits and works, trim the list to ~$650, use a tax-free weekend if your state has one. $200 + $100 × 6 weeks = $800, a little to spare.\n\nScore: 4/10 → 8/10.\n\nFictional example budget for illustration, not a real person or submission. Want yours rated? DM us your numbers (no names, no screenshots with account details) and we'll anonymise them.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "ratemybudget",
+    "backtoschool",
+    "familybudget",
+    "budgetreview",
+    "parenting",
+    "moneymadesimple"
+   ],
+   "description": "Rate My Budget #32: a fictional back-to-school budget.",
+   "thumbnail_text": "Back-to-school: $200 saved",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/",
+    "https://consumer.ftc.gov/shopping-and-donating"
+   ],
+   "claims_to_verify": [
+    "Fictional example (label on screen)",
+    "$200 + $100 × 6 = $800 ≥ $650"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "School list",
+    "narration": "Ask the school for the official supply list before buying. Some items are shared or supplied.",
+    "on_screen_text": "Get the official list",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a school building with a list. No text, no logos, no real people."
+   },
+   {
+    "heading": "Swap",
+    "narration": "Ask other parents about swaps for outgrown uniforms and shoes.",
+    "on_screen_text": "Swap outgrown items",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two hands passing a small shirt. No text, no logos, no real people."
+   },
+   {
+    "heading": "Fall fund",
+    "narration": "Next year, a small monthly back-to-school fund from January makes August easy.",
+    "on_screen_text": "Start next year's fund",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a small backpack label. No text, no logos, no real people."
+   },
+   {
+    "heading": "Kids help",
+    "narration": "Give older kids a set amount for clothes. They choose, and they learn to stretch it.",
+    "on_screen_text": "Give kids a set amount",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small wallet and a shirt. No text, no logos, no real people."
+   },
+   {
+    "heading": "Library",
+    "narration": "Libraries often lend calculators, laptops or hotspots, and some run free school-supply drives in August.",
+    "on_screen_text": "Check the library",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a library with a small backpack. No text, no logos, no real people."
+   }
+  ],
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Common question: how much should I spend on a vacation? An answer with a method: what you can pay in cash without pausing essentials, built from a sinking fund.",
+  "script": {
+   "title": "\"How much should I spend on a vacation?\" Common question",
+   "hook": "Common question: how much should I spend on a vacation? Here's a 3-step way to find your number.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Common question: how much should I spend on a vacation? Here's a three-step way to find your number.",
+     "on_screen_text": "Your vacation number in 3 steps",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a suitcase with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1",
+     "narration": "One: what's left each month after bills, debt payments and regular saving? That's your room.",
+     "on_screen_text": "1. What's left after essentials",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin pile after bills. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2",
+     "narration": "Two: multiply that by the months until the trip. Say a hundred fifty a month for eight months: twelve hundred.",
+     "on_screen_text": "2. $150 × 8 = $1,200",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3",
+     "narration": "Three: add what's already saved for travel. That total, paid in cash, is your vacation number.",
+     "on_screen_text": "3. + what's saved = your number",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a plane label. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule",
+     "narration": "If the trip costs more than that, change the trip, not your emergency fund.",
+     "on_screen_text": "Change the trip, not the fund",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a map with a smaller circle. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "How much to spend on a vacation:\n1. What's left monthly after bills, debts and saving\n2. × months until the trip\n3. + what's already saved for travel\n= your vacation number, in cash\n\nExample: $150 × 8 months = $1,200.\n\nIf the trip costs more, change the trip, not your emergency fund.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "vacation",
+    "travelbudget",
+    "sinkingfunds",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "A three-step way to set a vacation budget.",
+   "thumbnail_text": "Your vacation number",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/",
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
+   ],
+   "claims_to_verify": [
+    "$150 × 8 = $1,200",
+    "Example method, not a rule"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Shoulder season",
+    "narration": "Going just before or after peak season can mean the same trip for less.",
+    "on_screen_text": "Try shoulder season",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a half-shaded month. No text, no logos, no real people."
+   },
+   {
+    "heading": "Split it",
+    "narration": "Price the big three first: travel, stays and food. Fun gets what's left.",
+    "on_screen_text": "Price travel, stays, food first",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small boxes. No text, no logos, no real people."
+   },
+   {
+    "heading": "No debt",
+    "narration": "A trip paid off in cash is more fun than one you pay for until winter.",
+    "on_screen_text": "Cash beats card debt",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card with a small snowflake. No text, no logos, no real people."
+   },
+   {
+    "heading": "Daily number",
+    "narration": "Once you have your total, divide by the days away. A daily number keeps spending on track during the trip.",
+    "on_screen_text": "Total ÷ days = daily number",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a coin per day. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "question-reply"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A back-to-school list for 2 kids priced line by line: supplies, clothes, shoes, backpacks and fees, about $680 total.",
+  "script": {
+   "title": "Back-to-school for 2 kids: the real numbers",
+   "hook": "Back-to-school for 2 kids. Here are the real numbers, line by line.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Back-to-school for two kids. Here are the real numbers, line by line.",
+     "on_screen_text": "2 kids · line by line",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes two backpacks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Supplies",
+     "narration": "Supplies: sixty per kid, so a hundred twenty.",
+     "on_screen_text": "Supplies: $120",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. pencils and notebooks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Clothes and shoes",
+     "narration": "Clothes, one fifty per kid: three hundred. Shoes, sixty each: one twenty.",
+     "on_screen_text": "Clothes $300 · shoes $120",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small stack of shirts and shoes. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rest",
+     "narration": "Backpacks, thirty each: sixty. School and activity fees: eighty. Total: about six eighty.",
+     "on_screen_text": "Backpacks $60 · fees $80 = $680",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a receipt totalling up. No text, no logos, no real people."
+    },
+    {
+     "heading": "Plan",
+     "narration": "Six eighty over six weeks is about one fifteen a week. Starting in January, it's about fifty-seven a month.",
+     "on_screen_text": "≈ $115/wk now · ≈ $57/mo from Jan",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with two arrows. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Back-to-school for 2 kids (example prices):\nSupplies $120 · clothes $300 · shoes $120\nBackpacks $60 · fees $80\nTotal ≈ $680\n\n6 weeks out: ≈ $115/week. Starting in January: ≈ $57/month.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "backtoschool",
+    "familybudget",
+    "budgeting",
+    "parenting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "The real numbers on back-to-school for two kids.",
+   "thumbnail_text": "Back-to-school: $680",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "120+300+120+60+80 = 680",
+    "680 ÷ 6 ≈ 113; 680 ÷ 12 ≈ 57",
+    "Example prices; yours will vary"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Reuse",
+    "narration": "Last year's backpack and binders often have another year in them.",
+    "on_screen_text": "Reuse what works",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a backpack with a small heart patch. No text, no logos, no real people."
+   },
+   {
+    "heading": "Stagger",
+    "narration": "Buy supplies now and clothes later. Kids may grow before October.",
+    "on_screen_text": "Stagger the shopping",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with two dots. No text, no logos, no real people."
+   },
+   {
+    "heading": "Fees first",
+    "narration": "Ask the school about fees and field trips early, so they're in the plan.",
+    "on_screen_text": "Ask about fees early",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a school bell. No text, no logos, no real people."
+   },
+   {
+    "heading": "Secondhand",
+    "narration": "Thrift stores and online resale groups can cut clothing costs a lot, especially for younger kids.",
+    "on_screen_text": "Try secondhand clothes",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a hanger with a small tag. No text, no logos, no real people."
+   },
+   {
+    "heading": "Bulk supplies",
+    "narration": "Buying supplies with another family can unlock multi-pack prices on pencils and notebooks.",
+    "on_screen_text": "Share multi-packs",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two small bags from one box. No text, no logos, no real people."
+   },
+   {
+    "heading": "Track it",
+    "narration": "Write down what you actually spend this year. Next year's number gets easier to plan.",
+    "on_screen_text": "Track this year's real cost",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a notebook with a pencil. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "real-numbers"
+ },
+ {
+  "format": "short",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "0% financing on a $1,200 laptop for 12 months: $100 a month works, but with deferred interest at 29.99%, one missed payoff can add close to $200, worked out on screen.",
+  "script": {
+   "title": "0% for 12 months on a $1,200 laptop: the math",
+   "hook": "0% for 12 months on a $1,200 laptop. Here's the math, and the catch.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Zero percent for twelve months on a twelve-hundred-dollar laptop. Here's the math, and the catch.",
+     "on_screen_text": "$1,200 · 0% · 12 months",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a laptop with a small calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Payment",
+     "narration": "Twelve hundred divided by twelve is a hundred a month. Pay that, and it costs nothing extra.",
+     "on_screen_text": "$1,200 ÷ 12 = $100/mo",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with twelve coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "The catch",
+     "narration": "Many store cards use deferred interest. Miss the payoff, and interest is charged back to day one.",
+     "on_screen_text": "Deferred interest: charged from day 1",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a backwards arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "The cost",
+     "narration": "At twenty-nine ninety-nine percent on an average balance near six fifty, that's close to two hundred dollars.",
+     "on_screen_text": "≈ $650 × 29.99% ≈ $195",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin stack with a warning sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule",
+     "narration": "Set autopay to the full monthly amount, not the minimum. Read whether it's true zero percent or deferred.",
+     "on_screen_text": "Autopay $100 · read the terms",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with an autopay toggle. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "0% for 12 months on $1,200 (example):\nPay $100/month → $0 interest.\n\nThe catch: deferred interest. If it's not paid off in time, interest can be charged back to the purchase date.\nAverage balance ≈ $650 × 29.99% ≈ $195.\n\nSet autopay to $100, not the minimum. Check if it's true 0% APR or deferred interest.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "0apr",
+    "deferredinterest",
+    "backtoschool",
+    "creditcards",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "The math, and the catch, on 0% laptop financing.",
+   "thumbnail_text": "0% laptop: the catch",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/credit-cards/"
+   ],
+   "claims_to_verify": [
+    "1200 ÷ 12 = 100",
+    "Average balance over 12 months ≈ $650; × 29.99% ≈ $195 (approximation)",
+    "Terms vary by lender"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Minimum trap",
+    "narration": "The minimum payment is often set below a hundred, so paying only that misses the deadline.",
+    "on_screen_text": "Minimum ≠ payoff",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small coin and a big gap. No text, no logos, no real people."
+   },
+   {
+    "heading": "True 0%",
+    "narration": "A true zero percent APR card only charges interest on what's left after the promo, not from day one.",
+    "on_screen_text": "True 0% vs deferred",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two cards side by side. No text, no logos, no real people."
+   },
+   {
+    "heading": "Student pricing",
+    "narration": "Check education discounts first. Many brands offer student pricing.",
+    "on_screen_text": "Check student pricing",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a graduation cap and a tag. No text, no logos, no real people."
+   },
+   {
+    "heading": "Calendar",
+    "narration": "Put the promo end date in your calendar a month early, in case anything goes wrong.",
+    "on_screen_text": "Promo end date: a month early",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a flag. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "on-screen-calculation"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "How utility budget billing works: the provider averages your yearly usage into equal monthly bills, then settles up once a year, with pros and cons.",
+  "script": {
+   "title": "Utility budget billing, explained in 4 steps",
+   "hook": "Summer electric bill spiking? Budget billing explained in 4 steps.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Summer electric bill spiking? Budget billing explained in four steps.",
+     "on_screen_text": "Budget billing in 4 steps",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes an electric bill with a small level line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1",
+     "narration": "One: the utility looks at your last twelve months of usage.",
+     "on_screen_text": "1. Looks at 12 months",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a lightning bolt. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2",
+     "narration": "Two: it splits that into equal monthly bills, so summer and winter cost the same.",
+     "on_screen_text": "2. Equal monthly bills",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. twelve equal coin stacks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3",
+     "narration": "Three: once a year, or every few months, it checks real usage and adjusts, up or down.",
+     "on_screen_text": "3. Settles up yearly",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale balancing. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 4",
+     "narration": "Four: it doesn't lower your total. It just makes the bill predictable. Ask your utility if it's offered.",
+     "on_screen_text": "4. Same total · predictable",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a steady line chart. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Utility budget billing:\n1. Uses your last 12 months of usage\n2. Splits it into equal monthly bills\n3. Settles up once a year (or adjusts periodically)\n4. Same total, just predictable\n\nAsk your utility. Watch for a catch-up bill if you used more than usual.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "utilities",
+    "summerbills",
+    "budgeting",
+    "electricbill",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "How utility budget billing works.",
+   "thumbnail_text": "Budget billing explained",
+   "sources": [
+    "https://www.energy.gov/energysaver/thermostats"
+   ],
+   "claims_to_verify": [
+    "Programs vary by utility",
+    "Doesn't reduce total usage cost"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Catch-up bill",
+    "narration": "Used much more than last year? The settle-up month can bring a bigger bill. Keep a small buffer.",
+    "on_screen_text": "Watch for a catch-up bill",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bill with an exclamation mark. No text, no logos, no real people."
+   },
+   {
+    "heading": "Help programs",
+    "narration": "Behind on a bill? The federal LIHEAP program helps with heating and cooling costs in many states.",
+    "on_screen_text": "Ask about LIHEAP",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a house with a helping hand. No text, no logos, no real people."
+   },
+   {
+    "heading": "Still save",
+    "narration": "Budget billing plus a higher thermostat setting is the combo: predictable and lower.",
+    "on_screen_text": "Predictable + lower",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a thermostat and a level line. No text, no logos, no real people."
+   },
+   {
+    "heading": "Read the bill",
+    "narration": "Your bill still shows actual usage. Keep checking it, so the yearly settle-up isn't a surprise.",
+    "on_screen_text": "Still check actual usage",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bill with a small chart. No text, no logos, no real people."
+   },
+   {
+    "heading": "Moving",
+    "narration": "Moving out? The plan settles up when you close the account, so expect a final adjustment.",
+    "on_screen_text": "Moving: final settle-up",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a box with a lightning bolt. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "explainer"
+ },
+ {
+  "format": "short",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Fictional 30-year-old earning $85K with nothing saved for retirement and a 4% match unused. Fix: contribute 4% to get the match, raise 1% a year.",
+  "script": {
+   "title": "Rate My Budget #33: $85K at 30, nothing for retirement",
+   "hook": "$85K at 30, $0 saved for retirement, a 4% match unused. Let's rate it.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Eighty-five thousand at thirty, zero saved for retirement, and a four percent match unused. Let's rate it.",
+     "on_screen_text": "$85K · $0 retirement · match unused",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a small plant pot with no plant. No text, no logos, no real people."
+    },
+    {
+     "heading": "Numbers",
+     "narration": "Fictional example. About fifty-two hundred take-home. Rent sixteen hundred. Car two fifty. No card debt. Six thousand in savings.",
+     "on_screen_text": "Fictional · $5,200/mo take-home",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paycheck and a short list. No text, no logos, no real people."
+    },
+    {
+     "heading": "Problem",
+     "narration": "The employer matches up to four percent. Skipping it leaves thirty-four hundred dollars a year on the table.",
+     "on_screen_text": "Missing ≈ $3,400/yr in match",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. coins falling past an open hand. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "Contribute four percent to get the full match. That's about two eighty-three a month before tax, so take-home drops by less.",
+     "on_screen_text": "4% ≈ $283/mo · get the full match",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with two coin streams. No text, no logos, no real people."
+    },
+    {
+     "heading": "Score",
+     "narration": "Score: four out of ten now. Eight out of ten with the match, and one percent more every year.",
+     "on_screen_text": "4/10 → 8/10",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a score card flipping from 4 to 8. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Rate My Budget #33 (fictional example): 30, $85K, ~$5,200/month take-home, $6,000 savings, no card debt, $0 in retirement accounts, 4% match unused.\n\nProblem: missing ~$3,400/year in employer match.\n\nFix: contribute 4% (~$283/month pre-tax) to get the full match, then raise 1% each year.\n\nScore: 4/10 → 8/10.\n\nFictional example budget for illustration, not a real person or submission. Want yours rated? DM us your numbers (no names, no screenshots with account details) and we'll anonymise them.\n\nInvesting involves risk.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "ratemybudget",
+    "401k",
+    "retirement",
+    "employermatch",
+    "budgetreview",
+    "moneymadesimple"
+   ],
+   "description": "Rate My Budget #33: a fictional missed 401(k) match.",
+   "thumbnail_text": "Unused 401(k) match",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/401k-plans",
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-401k-and-profit-sharing-plan-contribution-limits"
+   ],
+   "claims_to_verify": [
+    "Fictional example (label on screen)",
+    "4% × $85,000 = $3,400/yr; ÷ 12 ≈ $283",
+    "Pre-tax contributions reduce take-home by less than the contribution"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Vesting",
+    "narration": "Check the vesting schedule. Some matches need a year or more of service to keep.",
+    "on_screen_text": "Check the vesting schedule",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a key. No text, no logos, no real people."
+   },
+   {
+    "heading": "Fund choice",
+    "narration": "No idea what to pick? Many plans offer a low-cost target-date fund. Check the fees.",
+    "on_screen_text": "Target-date fund · check fees",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small chart with a date. No text, no logos, no real people."
+   },
+   {
+    "heading": "Auto-increase",
+    "narration": "Many plans have an auto-increase setting. Turn it on once, and the yearly raise is done.",
+    "on_screen_text": "Turn on auto-increase",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a staircase with a gear. No text, no logos, no real people."
+   },
+   {
+    "heading": "Emergency fund",
+    "narration": "The six thousand in savings stays as the emergency fund. Retirement money is for the long term.",
+    "on_screen_text": "Keep the emergency fund",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar next to a small plant. No text, no logos, no real people."
+   }
+  ],
+  "series": "Rate My Budget",
+  "format_style": "rate-my-budget"
+ },
+ {
+  "format": "short",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Three buy now, pay later myths before back-to-school: it's always interest-free, it can't affect anything else, and it's easy to keep track of.",
+  "script": {
+   "title": "3 buy now, pay later myths",
+   "hook": "Buy now, pay later at checkout? 3 myths first.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Buy now, pay later at checkout? Three myths first.",
+     "on_screen_text": "3 BNPL myths",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a checkout screen with four small coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 1",
+     "narration": "Myth one: it's always interest-free. Pay-in-four plans often are, but longer plans can charge interest, and late fees apply.",
+     "on_screen_text": "Not always free · late fees",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin with a small clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 2",
+     "narration": "Myth two: it can't affect anything else. Missed payments can lead to fees and collections, and some providers report to credit bureaus.",
+     "on_screen_text": "Missed payments can follow you",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a credit report with a pin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 3",
+     "narration": "Myth three: it's easy to track. Several plans at once, on different dates, add up fast.",
+     "on_screen_text": "Several plans add up fast",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four calendars overlapping. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule",
+     "narration": "Use one plan at a time, only for a need you'd buy anyway, and put every payment date in your calendar.",
+     "on_screen_text": "1 plan · a need · dates in calendar",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with one circled date. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "3 buy now, pay later myths:\n1. Always interest-free: longer plans can charge interest; late fees apply\n2. Can't affect anything else: missed payments can lead to fees, collections, and some providers report to bureaus\n3. Easy to track: several plans add up fast\n\nOne plan at a time, for a need, with dates in your calendar.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "buynowpaylater",
+    "bnpl",
+    "backtoschool",
+    "debt",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Three myths about buy now, pay later.",
+   "thumbnail_text": "BNPL myths",
+   "sources": [
+    "https://www.consumerfinance.gov/about-us/blog/buy-now-pay-later-what-you-need-to-know/",
+    "https://www.consumerfinance.gov/consumer-tools/credit-cards/"
+   ],
+   "claims_to_verify": [
+    "Terms vary by provider",
+    "Credit reporting practices vary and are changing"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Returns",
+    "narration": "Returning an item? Check how the plan handles refunds. Payments may continue until it's processed.",
+    "on_screen_text": "Returns can be slow",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a box with a return arrow. No text, no logos, no real people."
+   },
+   {
+    "heading": "Autopay",
+    "narration": "Most plans autopay from your debit card. Make sure the money's there on each date.",
+    "on_screen_text": "Autopay needs the cash",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a debit card with a calendar. No text, no logos, no real people."
+   },
+   {
+    "heading": "Budget line",
+    "narration": "Add BNPL payments as a line in your budget, like any other bill.",
+    "on_screen_text": "Treat it like a bill",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a budget list with a new line. No text, no logos, no real people."
+   },
+   {
+    "heading": "Card vs BNPL",
+    "narration": "Paying the card in full each month may offer more protection on purchases than some plans.",
+    "on_screen_text": "Card protections may differ",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card and a small shield. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "myth-vs-fact"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Five back-to-school costs families forget, counting down: activity fees, field trips, lunch money, a mid-year supply refill, and tech like a calculator or headphones.",
+  "script": {
+   "title": "5 back-to-school costs people forget, counting down",
+   "hook": "Back-to-school costs more than the supply list. 5 forgotten costs, counting down.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Back-to-school costs more than the supply list. Five forgotten costs, counting down.",
+     "on_screen_text": "5 forgotten school costs",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a backpack with a long receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "5 and 4",
+     "narration": "Five: sports and club fees. Four: field trips, which often come with a few days' notice.",
+     "on_screen_text": "5. Activity fees · 4. Field trips",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a ball and a bus. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Three: lunch money, or more groceries for packed lunches, every school day.",
+     "on_screen_text": "3. Lunches, every day",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lunchbox. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Two: the mid-year refill. Pencils, glue and notebooks run out by January.",
+     "on_screen_text": "2. Mid-year supply refill",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a box of pencils with a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "And number one: tech. Calculators, headphones, chargers, and sometimes a device fee.",
+     "on_screen_text": "1. Tech: calculator, headphones",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calculator and headphones. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "5 forgotten back-to-school costs:\n5. Sports and club fees\n4. Field trips\n3. Lunches, every school day\n2. The mid-year supply refill\n1. Tech: calculators, headphones, device fees\n\nAdd a small monthly line for school costs, not just an August one.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "backtoschool",
+    "familybudget",
+    "parenting",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Five back-to-school costs people forget.",
+   "thumbnail_text": "Forgotten school costs",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "General guidance"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Ask early",
+    "narration": "Ask the school or coach for the year's fee schedule on day one.",
+    "on_screen_text": "Get the fee schedule",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a clipboard with dates. No text, no logos, no real people."
+   },
+   {
+    "heading": "Free lunch",
+    "narration": "Check whether your family qualifies for free or reduced-price school meals. Applications are usually simple.",
+    "on_screen_text": "Check meal programs",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lunch tray with a tick. No text, no logos, no real people."
+   },
+   {
+    "heading": "Monthly line",
+    "narration": "A school line in your monthly budget beats an August scramble.",
+    "on_screen_text": "Monthly school line",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a pencil label. No text, no logos, no real people."
+   },
+   {
+    "heading": "Uniforms",
+    "narration": "Uniform schools? Ask about uniform swaps or secondhand sales run by parent groups.",
+    "on_screen_text": "Ask about uniform swaps",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small shirt with a tag. No text, no logos, no real people."
+   },
+   {
+    "heading": "Pictures",
+    "narration": "School picture day and yearbooks are optional. Decide ahead of time what you'll buy.",
+    "on_screen_text": "Picture day: decide ahead",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a camera. No text, no logos, no real people."
+   },
+   {
+    "heading": "Spread it",
+    "narration": "Spread the costs: some fees can be paid in instalments if you ask.",
+    "on_screen_text": "Ask about instalments",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with small coins. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "countdown"
+ },
+ {
+  "format": "short",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Common question: 0% APR car deal or the $2,500 cash rebate? Worked out for a $30,000 car over 60 months: 0% totals $30,000; rebate plus a 5% loan totals about $31,140.",
+  "script": {
+   "title": "\"0% car deal or the cash rebate?\" Common question",
+   "hook": "Common question: 0% APR or $2,500 cash back on a new car? Let's do the math.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Common question: zero percent APR, or twenty-five hundred cash back on a new car? Let's do the math.",
+     "on_screen_text": "0% or $2,500 back?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a car with two price tags. No text, no logos, no real people."
+    },
+    {
+     "heading": "Option A",
+     "narration": "Thirty thousand dollar car. Option A: zero percent for sixty months. That's five hundred a month, thirty thousand total.",
+     "on_screen_text": "A: $500/mo · $30,000 total",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with sixty coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Option B",
+     "narration": "Option B: take the rebate, borrow twenty-seven five at five percent from a credit union. About five nineteen a month.",
+     "on_screen_text": "B: $27,500 at 5% ≈ $519/mo",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a credit union building. No text, no logos, no real people."
+    },
+    {
+     "heading": "Total",
+     "narration": "Over sixty months, that's about thirty-one thousand one forty. In this example, zero percent wins by about eleven hundred.",
+     "on_screen_text": "B ≈ $31,140 · A wins by ≈ $1,140",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale tipping toward A. No text, no logos, no real people."
+    },
+    {
+     "heading": "Your numbers",
+     "narration": "With a lower outside rate, or a bigger rebate, B can win. Run both with your real offers.",
+     "on_screen_text": "Lower rate or bigger rebate? Rerun it",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calculator with two tags. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "0% APR vs $2,500 rebate (example, $30,000 car, 60 months):\nA: 0% → $500/month, $30,000 total\nB: $27,500 at 5% → ≈ $519/month, ≈ $31,140 total\nIn this example, 0% wins by ≈ $1,140.\n\nA lower outside rate or a bigger rebate can flip it. Run both with your real offers. 0% deals often need excellent credit.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "carbuying",
+    "0apr",
+    "autoloan",
+    "moneytips",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "The math on 0% APR vs a cash rebate.",
+   "thumbnail_text": "0% vs $2,500 back",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/auto-loans/"
+   ],
+   "claims_to_verify": [
+    "30,000 ÷ 60 = 500",
+    "Payment on $27,500 at 5% for 60 months ≈ $518.96; × 60 ≈ $31,138",
+    "Example rates"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Credit needed",
+    "narration": "Zero percent offers often need excellent credit. Get pre-approved elsewhere first, so you know your real rate.",
+    "on_screen_text": "Get pre-approved first",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a document with a stamp. No text, no logos, no real people."
+   },
+   {
+    "heading": "Shorter terms",
+    "narration": "Some 0% deals are only for shorter terms, with higher payments. Check it fits your budget.",
+    "on_screen_text": "Check the term length",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short calendar. No text, no logos, no real people."
+   },
+   {
+    "heading": "Out the door",
+    "narration": "Negotiate the car's price first, then talk financing. Keep them separate.",
+    "on_screen_text": "Price first, financing second",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two separate boxes. No text, no logos, no real people."
+   },
+   {
+    "heading": "Total cost",
+    "narration": "Compare total cost, not monthly payments. A longer loan can look cheaper per month and cost more overall.",
+    "on_screen_text": "Compare totals, not payments",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two receipts side by side. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "question-reply"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Eating out 3 times a week vs cooking at home over a 12-week summer: $18 vs $5 a meal, about $468 difference.",
+  "script": {
+   "title": "Eating out 3 times a week all summer: the real numbers",
+   "hook": "Eating out 3 times a week all summer. Here are the real numbers.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Eating out three times a week all summer. Here are the real numbers.",
+     "on_screen_text": "3 meals out a week · 12 weeks",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a takeout bag with a sun. No text, no logos, no real people."
+    },
+    {
+     "heading": "Meals",
+     "narration": "Twelve weeks of summer, three meals a week. That's thirty-six meals.",
+     "on_screen_text": "12 × 3 = 36 meals",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with plates. No text, no logos, no real people."
+    },
+    {
+     "heading": "Out",
+     "narration": "At eighteen dollars a meal out, including tip and delivery, that's six forty-eight.",
+     "on_screen_text": "36 × $18 = $648",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a receipt with a fork. No text, no logos, no real people."
+    },
+    {
+     "heading": "Home",
+     "narration": "At about five dollars a meal at home, it's one eighty. The difference: four sixty-eight.",
+     "on_screen_text": "36 × $5 = $180 · diff $468",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pot on a stove. No text, no logos, no real people."
+    },
+    {
+     "heading": "Middle",
+     "narration": "Cut it to one meal out a week, and you keep the fun and save about three hundred.",
+     "on_screen_text": "1 a week out ≈ $312 saved",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a plate with a small flag. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Eating out vs cooking, 12-week summer (example):\n36 meals × $18 out = $648\n36 meals × $5 home = $180\nDifference: $468\n\nMiddle ground: 1 meal out a week saves ≈ $312 and keeps the fun.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "eatingout",
+    "mealprep",
+    "summerbudget",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "The real numbers on eating out all summer.",
+   "thumbnail_text": "Eating out: $468",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "12 × 3 = 36; 36 × 18 = 648; 36 × 5 = 180",
+    "Middle: 24 home meals save 24 × 13 = $312",
+    "Example prices"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Batch",
+    "narration": "Cook a big batch on Sunday. Two easy dinners are ready when it's too hot to cook.",
+    "on_screen_text": "Sunday batch cook",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big pot with two containers. No text, no logos, no real people."
+   },
+   {
+    "heading": "Grill",
+    "narration": "Grilling outside keeps the kitchen cool and the AC from working harder.",
+    "on_screen_text": "Grill outside",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small grill. No text, no logos, no real people."
+   },
+   {
+    "heading": "Plan it",
+    "narration": "Pick your eating-out night in advance. It's a treat, not a default.",
+    "on_screen_text": "Plan the treat night",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a star. No text, no logos, no real people."
+   },
+   {
+    "heading": "Delivery fees",
+    "narration": "Delivery adds fees, tips and higher menu prices. Picking up yourself can cut a few dollars per order.",
+    "on_screen_text": "Pick up, skip delivery fees",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a takeout bag with a small car. No text, no logos, no real people."
+   },
+   {
+    "heading": "Lunch",
+    "narration": "Packing lunch twice a week is often an easier win than cooking every dinner.",
+    "on_screen_text": "Pack lunch twice a week",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lunchbox with a sun. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "real-numbers"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Fan vs AC by the hour: a 50-watt fan costs under 1 cent an hour, a 1,000-watt AC about 17 cents, worked out on screen with a $0.17/kWh example rate.",
+  "script": {
+   "title": "Fan vs AC: the cost per hour",
+   "hook": "A fan costs under 1 cent an hour. AC costs about 17. Here's the math.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "A fan costs under one cent an hour. AC costs about seventeen. Here's the math.",
+     "on_screen_text": "Fan < 1¢ · AC ≈ 17¢ an hour",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes a fan and an AC unit side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fan",
+     "narration": "A fifty-watt fan uses point zero five kilowatt-hours an hour. At seventeen cents, that's under one cent.",
+     "on_screen_text": "0.05 kWh × $0.17 ≈ 0.9¢",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fan with a small coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "AC",
+     "narration": "A thousand-watt window unit uses one kilowatt-hour an hour. That's seventeen cents.",
+     "on_screen_text": "1 kWh × $0.17 = 17¢",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an AC unit with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Month",
+     "narration": "Eight hours a day for a month: about two dollars for the fan, about forty-one for the AC.",
+     "on_screen_text": "Fan ≈ $2/mo · AC ≈ $41/mo",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two coin stacks, one tiny. No text, no logos, no real people."
+    },
+    {
+     "heading": "Combo",
+     "narration": "Fans cool people, not rooms. Use both, and set the AC a few degrees higher.",
+     "on_screen_text": "Fan + AC set higher",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fan beside a thermostat. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Fan vs AC (example, $0.17/kWh):\nFan: 50 W = 0.05 kWh/hr ≈ 0.9¢/hr → ≈ $2/month at 8 hrs/day\nAC: 1,000 W = 1 kWh/hr = 17¢/hr → ≈ $41/month at 8 hrs/day\n\nFans cool people, not rooms: turn them off when you leave. Check your rate on your bill.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "summerbills",
+    "energysaving",
+    "utilities",
+    "heatwave",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "The hourly cost of a fan vs an AC unit.",
+   "thumbnail_text": "Fan vs AC per hour",
+   "sources": [
+    "https://www.energy.gov/energysaver/thermostats"
+   ],
+   "claims_to_verify": [
+    "0.05 × 0.17 = $0.0085/hr; × 240 hrs ≈ $2.04",
+    "1 × 0.17 × 240 ≈ $40.80",
+    "Example wattages and rate"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Heat safety",
+    "narration": "In extreme heat, fans alone may not keep you safe. Use AC or a cooling centre when it's dangerous.",
+    "on_screen_text": "Extreme heat: use AC",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a thermometer with a warning sign. No text, no logos, no real people."
+   },
+   {
+    "heading": "Night air",
+    "narration": "If nights are cool, open windows and use a fan to pull in fresh air.",
+    "on_screen_text": "Cool nights: open up",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a window with a moon. No text, no logos, no real people."
+   },
+   {
+    "heading": "Your rate",
+    "narration": "Rates vary a lot. Your bill shows your price per kilowatt-hour.",
+    "on_screen_text": "Check your rate",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bill with a magnifying glass. No text, no logos, no real people."
+   },
+   {
+    "heading": "Box fan trick",
+    "narration": "Put a box fan in a window at night facing out, to push warm air outside.",
+    "on_screen_text": "Fan in the window at night",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a box fan in a window. No text, no logos, no real people."
+   },
+   {
+    "heading": "Unplug",
+    "narration": "Unplug a fan or AC in rooms nobody uses. Cooling empty rooms is pure cost.",
+    "on_screen_text": "Don't cool empty rooms",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an empty room with a small plug. No text, no logos, no real people."
+   }
+  ],
+  "format_style": "on-screen-calculation"
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A July money checklist: six things to do this month, from the holiday budget to a mid-year review.",
+  "script": {
+   "title": "July money checklist: 6 things to do",
+   "hook": "July's here. 6 money things to do this month.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "July's here. 6 money things to do this month.",
+     "on_screen_text": "July money checklist",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Set a July 4th budget before the weekend.",
+     "on_screen_text": "1. Holiday budget",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small flag and a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Do a 30-minute mid-year review.",
+     "on_screen_text": "2. Mid-year review",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with half shaded. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Check your W-4 with the IRS estimator.",
+     "on_screen_text": "3. Check withholding",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a tick. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Price back-to-school before August.",
+     "on_screen_text": "4. Price back-to-school",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a backpack with a tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Look at your summer utility bill.",
+     "on_screen_text": "5. Check the power bill",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lightbulb and a bill. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Start a small fund for Labor Day or fall.",
+     "on_screen_text": "6. Next fund",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a leaf. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "July money checklist:\n1. Set a July 4th budget\n2. 30-minute mid-year review\n3. Check your W-4 (IRS estimator)\n4. Price back-to-school\n5. Check your summer utility bill\n6. Start a fund for Labor Day or fall\n\nFollow for one money move a week.",
+   "hashtags": [
+    "july",
+    "moneychecklist",
+    "budgeting",
+    "moneytips",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "Six money things to do in July.",
+   "thumbnail_text": "July money checklist",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/",
+    "https://www.irs.gov/individuals/tax-withholding-estimator"
+   ],
+   "claims_to_verify": [
+    "Example checklist"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A mid-year budget reset in five steps: compare plan vs actual, fix the category that slipped, and reset goals for the second half.",
+  "script": {
+   "title": "Mid-year budget reset: 5 steps",
+   "hook": "Halfway through the year. 5 steps to reset your budget.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Halfway through the year. 5 steps to reset your budget.",
+     "on_screen_text": "Mid-year reset",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Pull six months of spending.",
+     "on_screen_text": "1. Pull 6 months",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stack of statements. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Compare plan vs actual, by category.",
+     "on_screen_text": "2. Plan vs actual",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two bars side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Pick the one category that slipped most.",
+     "on_screen_text": "3. Find the leak",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass on a bar. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Set a realistic number for it.",
+     "on_screen_text": "4. Set a real number",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pencil and a number. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Reset two goals for July to December.",
+     "on_screen_text": "5. Reset 2 goals",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a flag at the end of a path. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Mid-year budget reset:\n1. Pull 6 months of spending\n2. Compare plan vs actual\n3. Find the category that slipped most\n4. Set a realistic number for it\n5. Reset 2 goals for July–December\n\nFollow for one money move a week.",
+   "hashtags": [
+    "midyear",
+    "budgeting",
+    "moneyreset",
+    "moneytips",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "Five steps to reset your budget at mid-year.",
+   "thumbnail_text": "Mid-year reset",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "Example method"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A cookout budget in six lines, with how to keep each one low.",
+  "script": {
+   "title": "Cookout budget: 6 lines to plan",
+   "hook": "Hosting a cookout? Plan these 6 lines.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Hosting a cookout? Plan these 6 lines.",
+     "on_screen_text": "Cookout budget",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Mains: price per person, not per pack.",
+     "on_screen_text": "1. Mains",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. burgers on a grill. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Sides: ask guests to bring one.",
+     "on_screen_text": "2. Sides",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bowl of salad. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Drinks: a big jug beats cans.",
+     "on_screen_text": "3. Drinks",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jug of lemonade. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Ice and charcoal: easy to forget.",
+     "on_screen_text": "4. Ice + charcoal",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bag of ice. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Plates, cups and napkins.",
+     "on_screen_text": "5. Paper goods",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stack of paper plates. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "A small buffer for a last-minute run.",
+     "on_screen_text": "6. Buffer",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small coin. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Cookout budget lines:\n1. Mains (per person)\n2. Sides (potluck)\n3. Drinks (a jug beats cans)\n4. Ice + charcoal\n5. Paper goods\n6. A small buffer\n\nFollow for one money move a week.",
+   "hashtags": [
+    "cookout",
+    "july4th",
+    "partyonabudget",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Six lines to plan for a cookout budget.",
+   "thumbnail_text": "Cookout budget",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "Example categories"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Six free or low-cost ideas for a July 4th weekend.",
+  "script": {
+   "title": "July 4th weekend on a budget: 6 ideas",
+   "hook": "6 ways to enjoy July 4th weekend for little or nothing.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "6 ways to enjoy July 4th weekend for little or nothing.",
+     "on_screen_text": "July 4th on a budget",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Public fireworks shows are usually free.",
+     "on_screen_text": "1. Public fireworks",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. fireworks over a park. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "A potluck picnic in the park.",
+     "on_screen_text": "2. Potluck picnic",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a picnic blanket. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Free community parades and concerts.",
+     "on_screen_text": "3. Parades + concerts",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small drum. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "A backyard games day.",
+     "on_screen_text": "4. Backyard games",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a ball and cones. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "A local beach, lake or pool day.",
+     "on_screen_text": "5. Water day",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lake with a sun. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Movie night outside with a sheet.",
+     "on_screen_text": "6. Outdoor movie",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sheet hung in a yard with a projector. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "July 4th weekend on a budget:\n1. Public fireworks shows\n2. A potluck picnic\n3. Community parades and concerts\n4. A backyard games day\n5. A beach, lake or pool day\n6. An outdoor movie night\n\nFollow for one money move a week.",
+   "hashtags": [
+    "july4th",
+    "freethingstodo",
+    "budgeting",
+    "familyfun",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Six budget ideas for July 4th weekend.",
+   "thumbnail_text": "July 4th on a budget",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "Free events vary by area"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A five-step plan for a heat-wave electric bill, before it arrives.",
+  "script": {
+   "title": "Heat wave bill plan: 5 steps",
+   "hook": "Heat wave this week? 5 steps before the bill arrives.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Heat wave this week? 5 steps before the bill arrives.",
+     "on_screen_text": "Heat wave bill plan",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Check your rate and any peak-hour pricing.",
+     "on_screen_text": "1. Know your rate",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bill with a clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Pre-cool before peak hours, then raise the setting.",
+     "on_screen_text": "2. Pre-cool early",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a thermostat with a sunrise. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Close blinds on sunny windows.",
+     "on_screen_text": "3. Close the blinds",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a window with blinds. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Ask about budget billing or a payment plan.",
+     "on_screen_text": "4. Ask about plans",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone and a bill. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Behind? Ask about LIHEAP, which helps with cooling in many states.",
+     "on_screen_text": "5. Ask about LIHEAP",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a house with a helping hand. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Heat wave bill plan:\n1. Know your rate and peak hours\n2. Pre-cool early, then raise the setting\n3. Close sunny blinds\n4. Ask about budget billing or a payment plan\n5. Behind? Ask about LIHEAP\n\nSafety first: in dangerous heat, use AC or a cooling centre.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "heatwave",
+    "summerbills",
+    "utilities",
+    "budgeting",
+    "energysaving",
+    "moneymadesimple"
+   ],
+   "description": "Five steps for a heat-wave electric bill.",
+   "thumbnail_text": "Heat wave bill plan",
+   "sources": [
+    "https://www.energy.gov/energysaver/thermostats",
+    "https://www.acf.hhs.gov/ocs/programs/liheap"
+   ],
+   "claims_to_verify": [
+    "LIHEAP availability varies by state"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Five airport costs travellers can often skip or cut.",
+  "script": {
+   "title": "5 airport costs to skip",
+   "hook": "Flying this summer? 5 airport costs you can often skip.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Flying this summer? 5 airport costs you can often skip.",
+     "on_screen_text": "Airport costs to skip",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Checked bags: pack carry-on only if you can.",
+     "on_screen_text": "1. Checked bags",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small suitcase. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Airport parking: compare with a ride.",
+     "on_screen_text": "2. Parking",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a parking sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Food: bring snacks and an empty bottle.",
+     "on_screen_text": "3. Food + water",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an empty water bottle. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Seat selection: often optional.",
+     "on_screen_text": "4. Seat fees",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a plane seat. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Currency exchange desks: use an ATM or card instead.",
+     "on_screen_text": "5. Exchange desks",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin and a card. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "5 airport costs to skip:\n1. Checked bags (carry-on if you can)\n2. Parking (compare with a ride)\n3. Food (bring snacks, refill a bottle)\n4. Seat selection (often optional)\n5. Exchange desks (ATM or card instead)\n\nFollow for one money move a week.",
+   "hashtags": [
+    "travel",
+    "summertravel",
+    "airport",
+    "travelbudget",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Five airport costs to skip.",
+   "thumbnail_text": "Airport costs to skip",
+   "sources": [
+    "https://www.transportation.gov/airconsumer"
+   ],
+   "claims_to_verify": [
+    "Fees vary by airline and airport"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Five lines to check on a hotel bill or booking: resort fees, parking, taxes, Wi-Fi and early check-in.",
+  "script": {
+   "title": "Hotel bill: 5 fees to check",
+   "hook": "Booking a hotel? Check these 5 fees.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Booking a hotel? Check these 5 fees.",
+     "on_screen_text": "Hotel fees",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Resort or destination fees, charged per night.",
+     "on_screen_text": "1. Resort fees",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a hotel with a small tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Parking, sometimes thirty dollars or more a night.",
+     "on_screen_text": "2. Parking",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a car with a hotel sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Local taxes added at checkout.",
+     "on_screen_text": "3. Taxes",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Wi-Fi charges at some hotels.",
+     "on_screen_text": "4. Wi-Fi",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a Wi-Fi symbol. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Early check-in or late checkout fees.",
+     "on_screen_text": "5. Early or late",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a clock. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Hotel fees to check:\n1. Resort/destination fees (per night)\n2. Parking\n3. Taxes\n4. Wi-Fi\n5. Early check-in / late checkout\n\nCompare the total price, not the nightly rate.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "travel",
+    "hotels",
+    "hiddenfees",
+    "travelbudget",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Five hotel fees to check before you book.",
+   "thumbnail_text": "Hotel fees",
+   "sources": [
+    "https://consumer.ftc.gov/shopping-and-donating"
+   ],
+   "claims_to_verify": [
+    "Fees vary by hotel"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A back-to-school budget in six lines, for families.",
+  "script": {
+   "title": "Back-to-school budget: 6 lines",
+   "hook": "Back-to-school soon. Budget these 6 lines.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Back-to-school soon. Budget these 6 lines.",
+     "on_screen_text": "Back-to-school budget",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Supplies, from the school's official list.",
+     "on_screen_text": "1. Supplies",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. pencils and notebooks. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Clothes, after checking what still fits.",
+     "on_screen_text": "2. Clothes",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small stack of shirts. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Shoes.",
+     "on_screen_text": "3. Shoes",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pair of sneakers. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Backpack and lunchbox, if needed.",
+     "on_screen_text": "4. Bags",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a backpack and a lunchbox. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Fees: activities, sports, field trips.",
+     "on_screen_text": "5. Fees",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a ball and a bus. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Tech: calculator, headphones, chargers.",
+     "on_screen_text": "6. Tech",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calculator. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Back-to-school budget lines:\n1. Supplies (official list)\n2. Clothes (after an inventory)\n3. Shoes\n4. Backpack + lunchbox\n5. Fees\n6. Tech\n\nAdd them up, then divide by the weeks left.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "backtoschool",
+    "familybudget",
+    "budgeting",
+    "parenting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Six lines for a back-to-school budget.",
+   "thumbnail_text": "Back-to-school budget",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "Example categories"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Five tips for shopping a sales tax holiday without overspending.",
+  "script": {
+   "title": "Tax-free weekend: 5 shopping tips",
+   "hook": "Your state has a tax-free weekend? 5 tips first.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Your state has a tax-free weekend? 5 tips first.",
+     "on_screen_text": "Tax-free weekend tips",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Check your state's dates and item rules.",
+     "on_screen_text": "1. Check the rules",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a state outline. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Make a list before you go.",
+     "on_screen_text": "2. Make a list",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Note per-item price caps.",
+     "on_screen_text": "3. Mind the caps",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a price tag with a line. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Compare prices the week before.",
+     "on_screen_text": "4. Compare first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two price tags. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Keep receipts for returns.",
+     "on_screen_text": "5. Keep receipts",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a receipt. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Tax-free weekend tips:\n1. Check your state's dates and rules\n2. Make a list\n3. Mind per-item caps\n4. Compare prices the week before\n5. Keep receipts\n\nNot every state holds one.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "taxfreeweekend",
+    "backtoschool",
+    "shoppingtips",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Five tips for a sales tax holiday.",
+   "thumbnail_text": "Tax-free weekend tips",
+   "sources": [
+    "https://consumer.ftc.gov/shopping-and-donating"
+   ],
+   "claims_to_verify": [
+    "Rules vary by state and year"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Five questions to ask before choosing buy now, pay later at checkout.",
+  "script": {
+   "title": "Buy now, pay later: 5 questions first",
+   "hook": "About to tap buy now, pay later? Ask these 5 questions.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "About to tap buy now, pay later? Ask these 5 questions.",
+     "on_screen_text": "BNPL: 5 questions",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Is it a need, or a want on impulse?",
+     "on_screen_text": "1. Need or want?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a cart with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Is there interest, or only fees if late?",
+     "on_screen_text": "2. Interest or fees?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin with a clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Will the money be there on every date?",
+     "on_screen_text": "3. Cash on each date?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Do I already have another plan running?",
+     "on_screen_text": "4. Other plans?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two overlapping calendars. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "How do returns work?",
+     "on_screen_text": "5. Returns?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a box with an arrow. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Buy now, pay later: 5 questions first:\n1. Need or want?\n2. Interest, or fees if late?\n3. Will the money be there on every date?\n4. Any other plans running?\n5. How do returns work?\n\nFollow for one money move a week.",
+   "hashtags": [
+    "bnpl",
+    "buynowpaylater",
+    "debt",
+    "backtoschool",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Five questions before using buy now, pay later.",
+   "thumbnail_text": "BNPL: 5 questions",
+   "sources": [
+    "https://www.consumerfinance.gov/about-us/blog/buy-now-pay-later-what-you-need-to-know/"
+   ],
+   "claims_to_verify": [
+    "Terms vary by provider"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Deferred interest vs a true 0% APR, in four differences.",
+  "script": {
+   "title": "Deferred interest vs true 0% APR: 4 differences",
+   "hook": "\"No interest if paid in full\" isn't the same as 0% APR. 4 differences.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "\"No interest if paid in full\" isn't the same as 0% APR. 4 differences.",
+     "on_screen_text": "Deferred vs 0%",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "True 0%: no interest during the promo, ever.",
+     "on_screen_text": "1. True 0%: none charged",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card with a zero. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Deferred: interest builds in the background.",
+     "on_screen_text": "2. Deferred: it builds",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a hidden coin pile. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Deferred: miss the payoff, it's all charged back.",
+     "on_screen_text": "3. Miss it: all back",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a backwards arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Look for the words \"if paid in full\".",
+     "on_screen_text": "4. Read the wording",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a document with a magnifying glass. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Deferred interest vs true 0% APR:\n1. True 0%: no interest during the promo\n2. Deferred: interest builds in the background\n3. Deferred: miss the payoff, it's charged back to day one\n4. Look for \"no interest if paid in full\"\n\nEither way: divide the balance by the months and autopay that.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "0apr",
+    "deferredinterest",
+    "creditcards",
+    "debt",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Four differences between deferred interest and true 0% APR.",
+   "thumbnail_text": "Deferred vs 0%",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/credit-cards/"
+   ],
+   "claims_to_verify": [
+    "General description; read your terms"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Where a teen's or student's summer job paycheck should go: five buckets.",
+  "script": {
+   "title": "Summer job paycheck: 5 buckets",
+   "hook": "First summer paycheck? Split it into 5 buckets.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "First summer paycheck? Split it into 5 buckets.",
+     "on_screen_text": "Summer paycheck buckets",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Savings first, even ten percent.",
+     "on_screen_text": "1. Savings",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "School costs coming in the fall.",
+     "on_screen_text": "2. School",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a backpack. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Phone, gas or transit you pay for.",
+     "on_screen_text": "3. Bills",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone and a bus. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "A Roth IRA, if you have earned income.",
+     "on_screen_text": "4. Roth IRA",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small plant. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Fun money, guilt-free.",
+     "on_screen_text": "5. Fun",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sun over a coin. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Summer paycheck buckets:\n1. Savings (even 10%)\n2. Fall school costs\n3. Bills you pay\n4. A Roth IRA (needs earned income)\n5. Fun money\n\nA parent can help a minor open a custodial Roth IRA.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "summerjob",
+    "teenmoney",
+    "budgeting",
+    "rothira",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Five buckets for a summer job paycheck.",
+   "thumbnail_text": "Summer paycheck buckets",
+   "sources": [
+    "https://www.irs.gov/newsroom/tips-for-taxpayers-who-work-a-summer-job",
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-401k-and-profit-sharing-plan-contribution-limits"
+   ],
+   "claims_to_verify": [
+    "Roth IRA needs earned income; limits apply"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A four-step mid-year net worth check.",
+  "script": {
+   "title": "Mid-year net worth check: 4 steps",
+   "hook": "Halfway through 2027. Check your net worth in 4 steps.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Halfway through 2027. Check your net worth in 4 steps.",
+     "on_screen_text": "Mid-year net worth",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "List what you own: cash, accounts, car value.",
+     "on_screen_text": "1. List assets",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list with coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "List what you owe: cards, loans.",
+     "on_screen_text": "2. List debts",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list with a card. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Assets minus debts is your net worth.",
+     "on_screen_text": "3. Subtract",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a minus sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Compare with January. Up is the goal.",
+     "on_screen_text": "4. Compare with January",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small line going up. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Mid-year net worth check:\n1. List assets\n2. List debts\n3. Assets − debts = net worth\n4. Compare with January\n\nNegative is normal early on. The direction matters most.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "networth",
+    "midyear",
+    "moneycheckin",
+    "personalfinance",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Four steps for a mid-year net worth check.",
+   "thumbnail_text": "Mid-year net worth",
+   "sources": [
+    "https://www.mymoney.gov/"
+   ],
+   "claims_to_verify": [
+    "Example method"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Six move-in costs for a first apartment, beyond the first month's rent.",
+  "script": {
+   "title": "First apartment: 6 move-in costs",
+   "hook": "Signing your first lease? 6 move-in costs to plan.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Signing your first lease? 6 move-in costs to plan.",
+     "on_screen_text": "Move-in costs",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "First month's rent.",
+     "on_screen_text": "1. First month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a key. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Security deposit.",
+     "on_screen_text": "2. Deposit",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Application and admin fees.",
+     "on_screen_text": "3. Fees",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Movers or a rental truck.",
+     "on_screen_text": "4. Moving",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small truck. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Utility setup and deposits.",
+     "on_screen_text": "5. Utilities",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lightbulb. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Basics: bed, kitchen, cleaning supplies.",
+     "on_screen_text": "6. Basics",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a mop and a pan. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "First apartment move-in costs:\n1. First month's rent\n2. Security deposit\n3. Application/admin fees\n4. Movers or a truck\n5. Utility setup/deposits\n6. Basics: bed, kitchen, cleaning\n\nRenters insurance is cheap: add it on day one.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "firstapartment",
+    "moving",
+    "renting",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Six move-in costs for a first apartment.",
+   "thumbnail_text": "Move-in costs",
+   "sources": [
+    "https://www.consumerfinance.gov/ask-cfpb/what-is-a-security-deposit-en-1855/",
+    "https://www.consumerfinance.gov/renters/",
+    "https://www.fmcsa.dot.gov/protect-your-move"
+   ],
+   "claims_to_verify": [
+    "Fees vary by state and landlord"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Five things to compare before renting a car vs driving your own on a summer trip.",
+  "script": {
+   "title": "Rental car vs your own: 5 things to compare",
+   "hook": "Road trip: rent a car or take yours? Compare 5 things.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Road trip: rent a car or take yours? Compare 5 things.",
+     "on_screen_text": "Rent or drive yours?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Fuel economy of each.",
+     "on_screen_text": "1. MPG",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fuel gauge. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Wear on your car: tyres, oil, miles.",
+     "on_screen_text": "2. Wear",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tyre. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Rental price, taxes and fees.",
+     "on_screen_text": "3. Rental total",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Insurance: your policy and card cover.",
+     "on_screen_text": "4. Insurance",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Mileage limits on the rental.",
+     "on_screen_text": "5. Mileage limits",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an odometer. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Rental vs your own car:\n1. Fuel economy\n2. Wear on your car\n3. Rental total with fees\n4. Insurance coverage\n5. Mileage limits\n\nFor long trips in an older car, renting can make sense.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "roadtrip",
+    "rentalcar",
+    "travelbudget",
+    "summertravel",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Five things to compare before renting a car for a trip.",
+   "thumbnail_text": "Rent or drive yours?",
+   "sources": [
+    "https://consumer.ftc.gov/articles/renting-car",
+    "https://www.fueleconomy.gov/"
+   ],
+   "claims_to_verify": [
+    "Depends on car and trip"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Five staycation ideas for under $50.",
+  "script": {
+   "title": "Staycation: 5 ideas under $50",
+   "hook": "Not travelling this summer? 5 staycation ideas under $50.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Not travelling this summer? 5 staycation ideas under $50.",
+     "on_screen_text": "Staycation under $50",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "A day trip to a state park.",
+     "on_screen_text": "1. State park",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tree and a trail. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "A local museum on a free day.",
+     "on_screen_text": "2. Free museum day",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a museum. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "A picnic and a swim.",
+     "on_screen_text": "3. Picnic + swim",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a picnic basket. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "A themed dinner night at home.",
+     "on_screen_text": "4. Theme night",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a plate with a small flag. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "A sunrise or stargazing trip.",
+     "on_screen_text": "5. Sunrise or stars",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a moon and stars. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Staycation ideas under $50:\n1. A state park day trip\n2. A museum free day\n3. A picnic and a swim\n4. A themed dinner night\n5. Sunrise or stargazing\n\nFollow for one money move a week.",
+   "hashtags": [
+    "staycation",
+    "freethingstodo",
+    "summer",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Five staycation ideas under $50.",
+   "thumbnail_text": "Staycation under $50",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "Costs vary by area"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Six dorm and college move-in costs to plan.",
+  "script": {
+   "title": "College move-in: 6 costs to plan",
+   "hook": "Heading to college? Plan these 6 move-in costs.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Heading to college? Plan these 6 move-in costs.",
+     "on_screen_text": "College move-in",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Bedding, including extra-long sheets.",
+     "on_screen_text": "1. Bedding",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pillow. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Storage bins and organisers.",
+     "on_screen_text": "2. Storage",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bin. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Books and course materials.",
+     "on_screen_text": "3. Books",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stack of books. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Laptop and accessories, if needed.",
+     "on_screen_text": "4. Tech",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Travel to campus.",
+     "on_screen_text": "5. Travel",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a car with boxes. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "A first-month spending buffer.",
+     "on_screen_text": "6. Buffer",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "College move-in costs:\n1. Bedding\n2. Storage\n3. Books and materials\n4. Tech\n5. Travel\n6. A first-month buffer\n\nAsk the college for a packing list before buying.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "college",
+    "dormlife",
+    "backtoschool",
+    "budgeting",
+    "studentmoney",
+    "moneymadesimple"
+   ],
+   "description": "Six college move-in costs to plan.",
+   "thumbnail_text": "College move-in",
+   "sources": [
+    "https://studentaid.gov/",
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "Example categories"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "How to read a utility bill in five lines.",
+  "script": {
+   "title": "Utility bill: 5 lines to read",
+   "hook": "Summer bill high? Read these 5 lines.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Summer bill high? Read these 5 lines.",
+     "on_screen_text": "Read your power bill",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Usage: kilowatt-hours this month.",
+     "on_screen_text": "1. Usage (kWh)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lightning bolt. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Rate: price per kilowatt-hour.",
+     "on_screen_text": "2. Rate",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Fixed charges you pay regardless.",
+     "on_screen_text": "3. Fixed charges",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Comparison with last year.",
+     "on_screen_text": "4. Last year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two bars. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Due date and payment options.",
+     "on_screen_text": "5. Due date",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Utility bill lines:\n1. Usage (kWh)\n2. Rate per kWh\n3. Fixed charges\n4. Comparison with last year\n5. Due date and payment options\n\nUsage × rate + fixed charges ≈ your bill.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "utilities",
+    "electricbill",
+    "summerbills",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Five lines to read on a utility bill.",
+   "thumbnail_text": "Read your power bill",
+   "sources": [
+    "https://www.energy.gov/energysaver/thermostats"
+   ],
+   "claims_to_verify": [
+    "Bill layouts vary"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Five tips for selling unused items in a summer declutter.",
+  "script": {
+   "title": "Declutter and sell: 5 tips",
+   "hook": "Summer clear-out? 5 tips to sell what you don't use.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Summer clear-out? 5 tips to sell what you don't use.",
+     "on_screen_text": "Declutter and sell",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Start with what sells: furniture, tools, kids' gear.",
+     "on_screen_text": "1. Sell what sells",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a chair with a tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Clean it and take photos in daylight.",
+     "on_screen_text": "2. Clean + good photos",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone camera. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Price by checking similar listings.",
+     "on_screen_text": "3. Price smart",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two price tags. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Meet safely in public places.",
+     "on_screen_text": "4. Meet safely",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Move the money to savings the same day.",
+     "on_screen_text": "5. Money → savings",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin into a jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Declutter and sell:\n1. Start with what sells\n2. Clean it, photo in daylight\n3. Price from similar listings\n4. Meet safely in public\n5. Move the money to savings that day\n\nFollow for one money move a week.",
+   "hashtags": [
+    "declutter",
+    "sideincome",
+    "budgeting",
+    "moneytips",
+    "frugal",
+    "moneymadesimple"
+   ],
+   "description": "Five tips for selling unused items.",
+   "thumbnail_text": "Declutter and sell",
+   "sources": [
+    "https://consumer.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "General guidance"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Four summer surprise costs an emergency fund is for.",
+  "script": {
+   "title": "Emergency fund: 4 summer surprises it covers",
+   "hook": "What's an emergency fund for in summer? 4 examples.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "What's an emergency fund for in summer? 4 examples.",
+     "on_screen_text": "Emergency fund uses",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "A broken AC or fridge.",
+     "on_screen_text": "1. Broken appliance",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fridge with a wrench. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "A car repair on a road trip.",
+     "on_screen_text": "2. Car repair",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a car with a wrench. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "An urgent care visit.",
+     "on_screen_text": "3. Medical",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a cross. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "A last-minute flight for family.",
+     "on_screen_text": "4. Family travel",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a plane. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Emergency fund summer surprises:\n1. A broken AC or fridge\n2. A car repair on a trip\n3. An urgent care visit\n4. A last-minute family flight\n\nNot for: sales, concerts, planned trips. Those get sinking funds.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "emergencyfund",
+    "savings",
+    "budgeting",
+    "moneytips",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "Four summer costs an emergency fund covers.",
+   "thumbnail_text": "Emergency fund uses",
+   "sources": [
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
+   ],
+   "claims_to_verify": [
+    "Example uses"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Five car costs to plan for in summer heat.",
+  "script": {
+   "title": "Car in the heat: 5 costs to plan",
+   "hook": "Hot summer? 5 car costs to plan for.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Hot summer? 5 car costs to plan for.",
+     "on_screen_text": "Car in the heat",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Battery: heat shortens battery life.",
+     "on_screen_text": "1. Battery",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a car battery. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Tyres: check pressure when it's hot.",
+     "on_screen_text": "2. Tyres",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tyre gauge. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "AC service if it's blowing warm.",
+     "on_screen_text": "3. AC service",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fan icon on a dashboard. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Coolant level.",
+     "on_screen_text": "4. Coolant",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coolant bottle. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "A sunshade to protect the interior.",
+     "on_screen_text": "5. Sunshade",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a windshield shade. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Car summer costs:\n1. Battery\n2. Tyres\n3. AC service\n4. Coolant\n5. A sunshade\n\nA small monthly car fund covers these without a card.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "carcare",
+    "summer",
+    "budgeting",
+    "sinkingfunds",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Five car costs to plan in summer heat.",
+   "thumbnail_text": "Car in the heat",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/auto-loans/",
+    "https://www.fueleconomy.gov/"
+   ],
+   "claims_to_verify": [
+    "General maintenance guidance"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Six ways to spend less on back-to-school shopping.",
+  "script": {
+   "title": "Back-to-school shopping: 6 ways to spend less",
+   "hook": "Back-to-school shopping? 6 ways to spend less.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Back-to-school shopping? 6 ways to spend less.",
+     "on_screen_text": "Spend less on school",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Inventory first: what still fits and works.",
+     "on_screen_text": "1. Inventory first",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a closet with ticks. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Use the official school list only.",
+     "on_screen_text": "2. Official list",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Buy secondhand clothes and gear.",
+     "on_screen_text": "3. Secondhand",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a hanger with a tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Shop a tax-free weekend if your state has one.",
+     "on_screen_text": "4. Tax-free weekend",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Split multi-packs with another family.",
+     "on_screen_text": "5. Split packs",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two bags from one box. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Check free and reduced-price school meals.",
+     "on_screen_text": "6. School meals",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lunch tray. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Back-to-school: spend less:\n1. Inventory first\n2. Official list only\n3. Secondhand\n4. Tax-free weekend\n5. Split multi-packs\n6. Check school meal programs\n\nFollow for one money move a week.",
+   "hashtags": [
+    "backtoschool",
+    "familybudget",
+    "frugal",
+    "parenting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Six ways to spend less on back-to-school.",
+   "thumbnail_text": "Spend less on school",
+   "sources": [
+    "https://www.fns.usda.gov/nslp",
+    "https://consumer.ftc.gov/shopping-and-donating"
+   ],
+   "claims_to_verify": [
+    "General guidance"
+   ]
+  }
+ }
+]
