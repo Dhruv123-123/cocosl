@@ -36,11 +36,11 @@ is left in the brand, and warns if the issues still need native-language review.
 
 ## Outreach dates: `outreach_dates.py`
 
-`OUTREACH_DATES.md` (and `.csv`) give every B2B prospect an Email 1 date and two follow-up dates that fit
-inside the ad studio's shared cap of 10 emails a day, 5 of them new. It reads the ad studio's
-`OUTREACH_CALENDAR.md` and changes nothing there. Because the ad studio uses every new-email slot until
-mid-April, B2B starts on 13 Apr 2027. `OUTREACH_DATES_OWN_INBOX.md` shows the same plan from a separate B2B
-inbox, which would start in November but costs money, so it's Dhruv's call. Rerun after either calendar changes.
+`OUTREACH_DATES.md` (and `.csv`) give every B2B prospect an Email 1 date and two follow-up dates in the one
+inbox shared with the ad studio. The cap is 10 emails a day (5 new), and from 1 Dec 2026 B2B gets 4 of them
+(at most 2 new) while the ad studio keeps 6. Accounting firms go first, in December and early January. The script
+reads the ad studio's `OUTREACH_CALENDAR.md` and warns if that calendar uses more than its 6. Rerun it after either
+calendar changes. `OUTREACH_DATES_OWN_INBOX.md` is the second-inbox alternative, which costs money, so it isn't the plan.
 
 ## Pitch attachments
 

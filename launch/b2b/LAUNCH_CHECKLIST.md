@@ -31,11 +31,11 @@ you do every send by hand. Plan on about 2 hours of setup, then 30 to 45 minutes
 
 ## 3. Send first: credit unions, then accounting firms, libraries, employers
 
-**Dated plan:** `OUTREACH_DATES.md` puts every B2B email on a day that still fits the ad studio's shared
-cap (10 a day, 5 new). That cap is full of ad studio first emails until mid-April, so in that plan B2B starts
-13 Apr 2027 and accounting firms go after tax season. If you'd rather start now, either send B2B in place of
-some ad studio first emails, or use a second inbox (`OUTREACH_DATES_OWN_INBOX.md`, costs about $6–7 a
-month). The order below is the order to use whichever you pick.
+**Dated plan:** `OUTREACH_DATES.md` gives every B2B email a day. B2B shares your one inbox with the ad studio:
+from 1 Dec 2026, 4 of the 10 daily sends are B2B (at most 2 new). Accounting firms go first, so 26 of them
+(the best fits) hear from you before tax season, and the rest go after Apr 19. Then credit unions from January,
+Scam Watch from February, and employers from late March. `OUTREACH_DATES_OWN_INBOX.md` is the faster plan with a
+second inbox, which costs about $6–7 a month, so it's only there if you choose it.
 
 | Week | Who | Why this order | Files |
 |---|---|---|---|

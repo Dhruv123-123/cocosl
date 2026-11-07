@@ -27,6 +27,10 @@ HOLIDAYS = {dt.date(2026, 11, 26), dt.date(2026, 11, 27), dt.date(2026, 12, 24),
 # CPA firms can't read email in the last weeks of tax season
 TAX_BLACKOUT = (dt.date(2027, 1, 16), dt.date(2027, 4, 19))
 FU_DAYS = (4, 10)
+# Agreed split of the shared inbox from 1 Dec 2026: B2B gets 4 of the 10 daily sends (at most 2 new first
+# emails), the ad studio keeps 6 (at most 3 new). Before that date B2B only uses leftover room.
+SHARE_FROM = dt.date(2026, 12, 1)
+B2B_CAP, B2B_NEW = 4, 2
 
 
 def load_calendar(path: Path):
@@ -78,16 +82,30 @@ def main():
     def workday(d):
         return d.weekday() < 5 and d not in HOLIDAYS
 
+    shared = not own
+    b_used, b_new = {}, {}
+
     def room(d, first):
         if not workday(d):
             return False
+        if shared and d >= SHARE_FROM:
+            return b_used.get(d, 0) < B2B_CAP and (not first or b_new.get(d, 0) < B2B_NEW)
         u, n = used.get(d, 0), new.get(d, 0)
         return u < CAP and (not first or n < NEW_CAP)
 
     def take(d, first):
         used[d] = used.get(d, 0) + 1
+        b_used[d] = b_used.get(d, 0) + 1
         if first:
             new[d] = new.get(d, 0) + 1
+            b_new[d] = b_new.get(d, 0) + 1
+
+    if shared:
+        over = [d for d in used if d >= SHARE_FROM and used[d] > CAP - B2B_CAP]
+        if over:
+            print(f"note: the ad studio calendar still has {len(over)} days after {SHARE_FROM} with more than "
+                  f"{CAP - B2B_CAP} sends. Regenerate it with the 6-a-day cap so the total stays at {CAP}.",
+                  file=sys.stderr)
 
     def slot_from(d, first, limit=4):
         for k in range(limit):
@@ -143,30 +161,29 @@ def main():
         L += ["", f"Last email: {dt.date.fromisoformat(last):%a %d %b %Y}. A new inbox needs 2 to 4 weeks of warm-up "
               "at low volume first, so add that before the first date.", ""]
     else:
-        L = ["# B2B outreach dates (inside the ad studio's daily cap)", "",
-             f"Made by `outreach_dates.py` from `{cal.name}`. **Nothing has been sent.** Dhruv sends every email by hand.",
-             "", f"The ad studio calendar already uses most of the {CAP}-a-day cap ({NEW_CAP} new first emails a day). "
-             "These dates use only the room left over, so the combined total never goes over the cap. "
-             "Follow-ups land about 4 and 10 days after Email 1, on the next day with room.", "",
-             "**Why so late:** from 10 Nov to 12 Apr every ad studio day that has spare sends already uses all 5 "
-             "new-first-email slots, so the spare room can only take follow-ups, and a B2B prospect can't get a "
-             "follow-up before an Email 1. Accounting firms therefore miss the pre-January window and start after tax "
-             "season.", "",
-             f"**{len(rows)} prospects, {3 * len(rows)} emails.** {inside} prospects finish their 3 emails while the ad studio "
-             f"calendar runs (to {cal_end:%a %d %b %Y}); the other {len(rows) - inside} start after it ends, when the full cap is free. "
-             f"Last email: {dt.date.fromisoformat(last):%a %d %b %Y}.", "",
+        L = ["# B2B outreach dates (sharing the ad studio's inbox)", "",
+             f"Made by `outreach_dates.py` from `{cal.name}`. **Nothing has been sent.** Dhruv sends every email by hand.", "",
+             f"**The split:** one inbox, at most {CAP} emails a day and {NEW_CAP} new first emails. From "
+             f"{SHARE_FROM:%a %d %b %Y}, B2B gets {B2B_CAP} sends a day (at most {B2B_NEW} new) and the ad studio keeps "
+             f"{CAP - B2B_CAP} (at most {NEW_CAP - B2B_NEW} new); the ad studio's `OUTREACH_CALENDAR.md` uses the same split. "
+             "Before then the ad studio has the whole cap. Follow-ups land about 4 and 10 days after Email 1, on the "
+             "next day with B2B room.", "",
+             "**Order:** accounting firms first, highest fit score first, so they hear from us before tax season. "
+             "Any firm whose 3 emails can't finish by Jan 15 moves to after Apr 19. Then credit unions 1–30, Scam Watch, "
+             "employer partners and employers (by fit score), then credit unions 31–60.", "",
+             f"**{len(rows)} prospects, {3 * len(rows)} emails.** Last email: {dt.date.fromisoformat(last):%a %d %b %Y}. "
+             f"{sum(r['type'] == 'Accounting firm' and r['follow_up_2'] < TAX_BLACKOUT[0].isoformat() for r in rows)} of the "
+             "accounting firms finish before tax season; the rest (the lower fit scores) start after Apr 19.", "",
              "| Group | Prospects | First Email 1 | Last Email 1 |", "|---|---|---|---|"]
         for k, (n, a, b) in kinds.items():
             L.append(f"| {k} | {n} | {a} | {b} |")
-        L += ["", "**Want them sooner?** The only way without breaking the cap is a second sending inbox for B2B "
-              "(about $6 to $7 a month for a Google Workspace or similar seat, plus warm-up time). That's a spending decision "
-              "for Dhruv, so it isn't assumed here. Accounting firms are skipped from mid-January to Apr 19 (tax season).", "",
-              "Templates: each product's `COLD_EMAILS.md` (freelancer emails are in its `README.md`). "
-              "Stop a prospect's later rows the moment they reply or say no.", ""]
+        L += ["", "Templates: each product's `COLD_EMAILS.md` (freelancer emails are in its `README.md`). "
+              "Stop a prospect's later rows the moment they reply or say no. "
+              "`OUTREACH_DATES_OWN_INBOX.md` shows the alternative with a second inbox (costs money; not the plan).", ""]
     for d in sorted(by_day):
         items = by_day[d]
         date = dt.date.fromisoformat(d)
-        L.append(f"### {date:%a %d %b %Y} · {len(items)} B2B (ad studio: {used[date] - len(items)})")
+        L.append(f"### {date:%a %d %b %Y} · {len(items)} B2B")
         L.append("")
         for step, r in sorted(items, key=lambda x: x[0] != "Email 1"):
             fit = f" · fit {r['fit_score']}" if r["fit_score"] else ""
