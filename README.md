@@ -65,6 +65,8 @@ factory revenue report
 factory auth youtube | tiktok | meta        # connect accounts
 ```
 
+With `--days 0`, `pack export` renders the whole file as an undated library, grouped by format (used for `launch/money-made-simple/evergreen/`).
+
 `factory --help` lists everything. Run it in production with `docker compose up -d`.
 
 ## Tests

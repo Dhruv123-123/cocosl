@@ -257,7 +257,7 @@ def export(factory, brand_slug: str, items: list[dict], out: Path, start: date, 
         fmt = item["format"]
         slot = by_index.get(idx)
         group = "carousels" if fmt == "carousel" else ("videos" if render_video else "videos-need-voice")
-        if slot is None:
+        if slot is None and days:  # with --days 0 the whole file is an undated library
             group = "spares"
         folder = f"{group}/{n:02d}-{slugify(item['script']['title'])}"
         dest = out / folder
