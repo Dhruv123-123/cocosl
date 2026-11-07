@@ -26,6 +26,9 @@ you do every send by hand. Plan on about 2 hours of setup, then 30 to 45 minutes
 - [ ] **Leave every `{{PAYMENT_LINK…}}` as it is.** Set up payments only after the first yes; most
       clients want an invoice anyway.
 - [ ] Rebuild everything: `cd launch/b2b && python3 build.py && python3 site/build_site.py`.
+- [ ] The `/business/` pages on the Money Made Simple site (`site/static/business/`) use the same email from
+      `site/config.js`. Re-run `python3 site/business_pages.py` after changing it, and remove their `noindex` line
+      when you're ready for them to be found.
 - [ ] Optional: publish the landing page by dragging `site/dist/` onto Netlify Drop (free). Do this only
       if you want a link to put in follow-ups; email 1 has no link anyway.
 
@@ -60,6 +63,8 @@ Never guess an address, buy a list or scrape a directory.
 | 10 | Follow-up 2: give something useful | The free sample alert, with no strings attached. |
 | 21 | Final note | Only if they replied once and then went quiet. Otherwise stop after day 10. |
 
+- **Track everything in `PIPELINE.xlsx`** (or `PIPELINE.csv`): stage, last contact, next step and date.
+  Overdue next steps turn red. Common pushback and honest answers: `OBJECTIONS.md`.
 - **Stop at the first "no" or "unsubscribe"**, and note it in the CSV.
 - **Got the sample, then went quiet?** Use that product's `FOLLOW_UP_SEQUENCE.md` (days 3, 10, 21). It links the
   live sample page: `https://YOUR-SITE.netlify.app/samples/<offer>/` once the landing page is up.

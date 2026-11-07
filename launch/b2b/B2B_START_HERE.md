@@ -50,3 +50,5 @@ skip their later rows.
 
 **Every email carries your name, your mailing address and an opt-out line.** Don't add links or attachments
 to a first email, don't guess an address, and don't buy a list.
+
+Track every send and reply in `PIPELINE.xlsx` (`python3 pipeline_tracker.py`), and use `OBJECTIONS.md` for pushback.

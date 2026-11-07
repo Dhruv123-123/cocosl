@@ -29,7 +29,7 @@ def b2b(tmp_path, monkeypatch):
     """A scratch copy of launch/b2b (without built output) with build, deliver, outreach_dates and paperwork
     imported from it, and the image renderer switched off."""
     root = tmp_path / "b2b"
-    shutil.copytree(B2B, root, ignore=shutil.ignore_patterns("out", "clients", "dist", "node_modules", "*.zip", "*.pdf"))
+    shutil.copytree(B2B, root, ignore=shutil.ignore_patterns("out", "clients", "dist", "node_modules", "*.zip", "*.pdf", "PIPELINE.*"))
     monkeypatch.syspath_prepend(str(root))
     mods = {}
     for name in ("build", "deliver", "outreach_dates", "paperwork"):
@@ -275,3 +275,68 @@ def test_paperwork_writes_agreement_and_invoice(b2b, monkeypatch):
         assert "lawyer" in agreement.lower()
         assert "{{PAYMENT_LINK" in invoice or "PAYMENT" in invoice
         assert not re.search(r"\{[a-z_]+\}", agreement), "an unformatted template field was left in"
+
+
+# ------------------------------------------------------------------ /business/ pages and the pipeline tracker
+
+def test_business_pages_have_no_broken_internal_links(b2b, monkeypatch, tmp_path):
+    root, _ = b2b
+    monkeypatch.syspath_prepend(str(root / "site"))
+    sys.modules.pop("business_pages", None)
+    bp = importlib.import_module("business_pages")
+    out = tmp_path / "static" / "business"
+    monkeypatch.setattr(bp, "OUT", out)
+    bp.main()
+    manifest = json.loads((out / "manifest.json").read_text())
+    assert {m["slug"] for m in manifest} == {"scam-watch", "accounting-firms", "consumer-protection-week", "schools"}
+    for m in manifest:
+        assert set(m) == {"slug", "title", "description", "updated"}
+        page = (out / m["slug"] / "index.html").read_text()
+        assert 'name="viewport"' in page and "prefers-color-scheme:dark" in page
+        for href in re.findall(r'href="([^"]+)"', page):
+            assert "{{" not in href and "YOUR-SITE" not in href, f"placeholder in a live link: {href}"
+            if href.startswith(("mailto:", "#", "/", "http")):
+                continue
+            assert (out / m["slug"] / href).resolve().exists(), f"{m['slug']}: broken link {href}"
+    sys.modules.pop("business_pages", None)
+
+
+def test_pipeline_tracker_keeps_edits(b2b, monkeypatch):
+    root, _ = b2b
+    sys.modules.pop("pipeline_tracker", None)
+    pt = importlib.import_module("pipeline_tracker")
+    rows = pt.rows()
+    dates = list(csv.DictReader(open(root / "OUTREACH_DATES.csv", newline="")))
+    assert len(rows) == len(dates)
+    assert all(r["expected_value"] == "0" for r in rows)  # nothing contacted yet
+    assert any(r["ncpw_add_on"] == "pitch" for r in rows if r["product"] == "credit-union-alert")
+    # mark one as Sample sent, write, re-read: the stage sticks and the expected value follows
+    rows[0].update(stage="Sample sent", notes="asked for the sample")
+    with open(root / "PIPELINE.csv", "w", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=pt.COLS)
+        w.writeheader()
+        w.writerows(rows)
+    again = pt.rows()
+    assert again[0]["stage"] == "Sample sent" and again[0]["notes"] == "asked for the sample"
+    assert float(again[0]["expected_value"]) == pytest.approx(float(again[0]["deal_value"]) * 0.25, abs=1)
+    rows[1]["stage"] = "Maybe"
+    with open(root / "PIPELINE.csv", "w", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=pt.COLS)
+        w.writeheader()
+        w.writerows(rows)
+    with pytest.raises(SystemExit, match="unknown stage"):
+        pt.rows()
+    sys.modules.pop("pipeline_tracker", None)
+
+
+def test_pipeline_xlsx(b2b, tmp_path):
+    pytest.importorskip("openpyxl")
+    from openpyxl import load_workbook
+    sys.modules.pop("pipeline_tracker", None)
+    pt = importlib.import_module("pipeline_tracker")
+    path = tmp_path / "p.xlsx"
+    pt.write_xlsx(pt.rows(), path)
+    wb = load_workbook(path)
+    assert wb.sheetnames == ["How to use", "Summary", "Pipeline", "Stages"]
+    assert wb["Pipeline"]["P2"].value.startswith("=")
+    sys.modules.pop("pipeline_tracker", None)

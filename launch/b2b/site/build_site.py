@@ -30,6 +30,8 @@ FILES = {
     "downloads/accounting-firm-sales-sheet.pdf": "freelancer-client-letter/out/sales-sheet.pdf",
     "downloads/schools-sample-pack.zip": "schools/out/demo-packet.zip",
     "downloads/schools-sales-sheet.pdf": "schools/out/sales-sheet.pdf",
+    "downloads/ncpw-sample-pack.zip": "ncpw-sponsor/out/demo-packet.zip",
+    "downloads/ncpw-sales-sheet.pdf": "ncpw-sponsor/out/sales-sheet.pdf",
     "img/fc-social.png": "freelancer-client-letter/out/sample-ledger/month-1-2027-01/social.png",
     "img/cu-social.png": "credit-union-alert/out/sample-community-cu/week-1-2027-01-a/social.png",
     "img/hr-lobby.png": "employer-wellness/out/sample-outfitters/month-4-2027-04/lobby.png",
@@ -47,6 +49,8 @@ SAMPLE_PAGES = {
                    "libraries and senior centers", "Sample County Library", "sw"),
     "accounting-firm": ("freelancer-client-letter/out/sample-ledger/month-1-2027-01/email.html",
                         "accounting firms", "Sample Ledger & Tax Co.", "fc"),
+    "consumer-protection-week": ("ncpw-sponsor/out/sample-community-cu-ncpw/day-1-2027-ncpw-1/email.html",
+                                 "credit unions (Consumer Protection Week)", "Sample Community Credit Union", "cu"),
     "schools": ("schools/out/sample-valley-high/week-1-2027-w02/email.html",
                 "high schools and colleges", "Sample Valley High School", "sc"),
 }

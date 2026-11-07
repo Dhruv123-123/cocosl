@@ -59,6 +59,18 @@ inbox shared with the ad studio. The cap is 10 emails a day (5 new), and from 1 
 reads the ad studio's `OUTREACH_CALENDAR.md` and warns if that calendar uses more than its 6. Rerun it after either
 calendar changes. `OUTREACH_DATES_OWN_INBOX.md` is the second-inbox alternative, which costs money, so it isn't the plan.
 
+## Pipeline tracker, objections, /business/ pages
+
+- `python3 pipeline_tracker.py` → `PIPELINE.csv` + `PIPELINE.xlsx`: every prospect from `OUTREACH_DATES.csv` with
+  stage, planned follow-ups, next step, deal value and expected value (value × stage chance), plus a per-offer
+  summary. Re-running keeps the stage, dates, values and notes you've typed in `PIPELINE.csv`.
+- `OBJECTIONS.md`: the top 10 objections for each offer, with short, honest answers.
+- `python3 site/business_pages.py` → `site/static/business/` at the repo root: one landing page each for Scam
+  Watch, accounting firms, the Consumer Protection Week package and schools, served at `/business/<slug>/` on the
+  Money Made Simple site (PR #4 copies `site/static/` as-is, and `manifest.json` feeds its sitemap). The pages are
+  noindexed. The contact email comes from `site/config.js`, and the sample, download and payment buttons stay
+  hidden until their placeholder links are real.
+
 ## Live sample pages
 
 `python3 site/build_site.py` also writes one sample issue per offer, as readers get it, with a banner that says it's a
