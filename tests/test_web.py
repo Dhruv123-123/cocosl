@@ -278,7 +278,7 @@ def test_calendar_publish_due_and_metrics(client, factory):
     assert "due now" in client.get("/calendar").text
     r = client.post("/publish/due")
     assert "dry run" in r.text
-    assert {p["status"] for p in factory.db.query("SELECT status FROM publications WHERE post_id = ?", [pid])} == {"dry_run"}
+    assert {p["status"] for p in factory.db.query("SELECT status FROM publications WHERE post_id = ?", [pid])} <= {"dry_run", "manual"}
     assert "Captured" in client.post("/metrics/collect").text
 
 
@@ -381,3 +381,18 @@ def test_deps_contract():
     assert any(d.endswith("business/templates") for d in loader_dirs)
     for f in ("money", "humanize", "pretty_json", "localtime", "media_url"):
         assert f in templates.env.filters
+
+
+def test_today_post_by_hand(client, factory):
+    from datetime import datetime, timedelta, timezone
+    pid = factory.db.insert("posts", {"brand": BRAND, "format": "short", "status": "scheduled", "title": "Hand post",
+                                      "caption": "Copy me", "script": {}, "hashtags": [], "disclosure": "",
+                                      "meta": {}, "assets": {}})
+    pub = factory.db.insert("publications", {"post_id": pid, "platform": "tiktok", "status": "queued",
+                                             "scheduled_at": (datetime.now(timezone.utc) + timedelta(days=1)).isoformat()})
+    r = client.get("/today")
+    assert "Post by hand" in r.text and "Hand post" in r.text and "Copy caption" in r.text
+    assert "post by hand" in client.get("/calendar").text
+    r = client.post(f"/manual/{pub}/done", data={"url": "https://www.tiktok.com/@x/video/1"}, follow_redirects=False)
+    assert r.status_code in (302, 303)
+    assert factory.db.get("publications", pub)["status"] == "published"

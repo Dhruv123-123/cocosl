@@ -1,5 +1,9 @@
 """TikTok Direct Post via the official Content Posting API.
 
+NOT USED BY DEFAULT. TikTok's guidelines don't allow tools that upload to accounts you or your team
+manage, so TikTok is post-by-hand (see contentfactory/manual.py, MANUAL_PLATFORMS). This publisher only
+runs if you remove tiktok from MANUAL_PLATFORMS, i.e. you operate an audited app other creators use.
+
 Docs used:
 - Direct Post reference (video/init, post_info incl. is_aigc,
   brand_content_toggle, brand_organic_toggle; source_info; unaudited clients):

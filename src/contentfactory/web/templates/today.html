@@ -1,5 +1,11 @@
 {% extends "base.html" %}
-{% block title %}Today{% endblock %}
+{% block title %}Today<script>
+document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = 'Copied'; }
+  catch (e) { prompt('Copy the caption:', b.dataset.copy); }
+}));
+</script>
+{% endblock %}
 {% block content %}
 <div class="page-head">
   <div><h1>Today</h1><p class="muted">Everything that needs you, in one place · {{ now }}</p></div>
@@ -36,6 +42,23 @@
 </div>
 
 <div class="card section">
+  <div class="card-head"><h2>Post by hand</h2><span class="small muted">TikTok doesn't allow tools to upload to your own accounts, so these are yours to post from the app.</span></div>
+  {% if by_hand_items %}<ul class="list">
+    {% for r in by_hand_items %}<li><span class="grow">
+      <strong {% if r.due %}style="color:var(--warn)"{% endif %}>{{ 'Due now' if r.due else r.scheduled_at|localtime }}</strong> ·
+      <a href="/posts/{{ r.post_id }}">{{ r.title }}</a> <span class="small muted">{{ r.brand }} · {{ r.platform }} · {{ r.format }}{% if r.account %} · {{ r.account }}{% endif %}</span><br>
+      <span class="small">
+        {% if r.package.video %}<a href="/media/{{ r.package.video }}" download>Download video</a> · {% endif %}
+        <button type="button" class="btn btn-sm" data-copy="{{ r.caption }}">Copy caption</button>
+        {% if r.package.dir %}<span class="muted mono">output/{{ r.package.dir }}</span>{% else %}<span class="muted">package is written when it's due (or run <code>factory manual build</code>)</span>{% endif %}
+      </span></span>
+      <form method="post" action="/manual/{{ r.id }}/done" class="inline">
+        <input name="url" type="url" placeholder="https://www.tiktok.com/@…/video/…" style="min-width:16em">
+        <button class="btn btn-sm btn-primary" type="submit">Mark posted</button></form></li>{% endfor %}
+  </ul>{% else %}<p class="muted">Nothing to post by hand.</p>{% endif %}
+</div>
+
+<div class="card section">
   <div class="card-head"><h2>Next 7 days, all brands</h2><a class="btn btn-sm" href="/calendar">Full calendar</a></div>
   {% if problems %}<div class="banner banner-warn"><ul>{% for p in problems %}<li>{{ p }}</li>{% endfor %}</ul></div>{% endif %}
   {% if calendar %}
@@ -43,8 +66,14 @@
     {% for r in calendar %}<tr>
       <td class="mono">{{ r.at.strftime('%a %d %b %H:%M') }}</td><td>{{ r.brand }}</td><td>{{ r.platform }} · {{ r.format }}</td>
       <td><a href="/posts/{{ r.post_id }}">{{ r.title }}</a></td>
-      <td>{% if r.flags %}<span style="color:var(--warn)">{{ r.flags|join('; ') }}</span>{% else %}{{ r.status }}{% endif %}</td></tr>{% endfor %}
+      <td>{% if r.by_hand and r.status in ('queued', 'manual') %}<span style="color:var(--warn)">post by hand</span> {% endif %}{% if r.flags %}<span style="color:var(--warn)">{{ r.flags|join('; ') }}</span>{% else %}{{ r.status }}{% endif %}</td></tr>{% endfor %}
   </tbody></table>
   {% else %}<p class="muted">Nothing scheduled in the next 7 days.</p>{% endif %}
 </div>
+<script>
+document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = 'Copied'; }
+  catch (e) { prompt('Copy the caption:', b.dataset.copy); }
+}));
+</script>
 {% endblock %}

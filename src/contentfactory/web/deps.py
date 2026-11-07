@@ -168,7 +168,9 @@ def _common_context(request: Request) -> dict:
     authed = bool(getattr(request.state, "authed", False))
     active = next((href for _, href in sorted(NAV, key=lambda x: -len(x[1]))
                    if href != "/" and (path == href or path.startswith(href + "/"))), "/" if path == "/" else "")
+    from ..manual import is_manual
     return {
+        "by_hand": is_manual,
         "authed": authed,
         "nav": NAV if authed else [],
         "active_nav": active,

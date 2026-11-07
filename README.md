@@ -69,6 +69,7 @@ factory cleanup --older-than 60 [--yes]     # free disk from posts live everywhe
 factory voice 12 take.m4a                   # your own narration for post 12 (one take, or one file per line); re-renders it
 factory recordings                           # posts waiting on your voice or a screen recording, soonest first
 factory ui                                   # one local page (127.0.0.1 only): calendar, review queue, recordings, launch check
+factory manual [build|copy <pub>|done <pub> --url]  # TikTok post-by-hand packages: video, caption, time
 factory brand new <slug> --name ... --import  # scaffold a brand: YAML, caps, voice/footage folders, 3 sample posts
 factory brand remove <slug> --yes            # undo a scaffold (refuses if anything is scheduled or published)
 factory launch-check [--online]             # red/yellow/green: links, UTM tags, placeholders, disclosures, caption limits
