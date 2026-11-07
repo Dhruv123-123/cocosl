@@ -105,15 +105,20 @@ def hero(o: dict, pages: list[Path], w: int, h: int) -> str:
     return _doc(w, h, body, o.get("bg", CREAM), INK if o.get("bg", CREAM) == CREAM else CREAM)
 
 
+WHATS_INSIDE = "What's inside"
+
+
 def inside(o: dict, pages: list[Path], w: int, h: int, count: int | None = None) -> str:
     n = len(pages)
     cols = 5 if n > 8 else (4 if n > 3 else max(n, 1))
     rows = (n + cols - 1) // cols
     tw = min(460, int((w - 180 - (cols - 1) * 34) / cols), int((h - 330 - (rows - 1) * 34) / max(rows, 1) / 1.294))
     imgs = "".join(f'<img src="file://{p}" style="width:100%;box-shadow:0 18px 40px rgba(0,0,0,.35);border-radius:4px;background:#fff">' for p in pages)
-    what = f"{count} items" if count else f"{n} of the pages"
-    body = (f'<div style="padding:80px 90px 0"><div class="kick" style="font-size:30px">What\'s inside</div>'
-            f'<h1 style="font-size:84px;margin:12px 0 30px">{what} you get</h1></div>'
+    t = o.get("text") or {}  # optional wording for other languages; English by default
+    what = (t["inside_count"].format(n=count) if count else t["inside_pages"].format(n=n)) if "inside_pages" in t else \
+        (f"{count} items you get" if count else f"{n} of the pages you get")
+    body = (f'<div style="padding:80px 90px 0"><div class="kick" style="font-size:30px">{E(t.get("inside_kick", WHATS_INSIDE))}</div>'
+            f'<h1 style="font-size:84px;margin:12px 0 30px">{E(what)}</h1></div>'
             f'<div style="display:grid;gap:34px;justify-content:center;grid-template-columns:repeat({cols},{tw}px);padding:0 90px">{imgs}</div>')
     return _doc(w, h, body, INK, CREAM)
 
@@ -127,9 +132,11 @@ def details(o: dict, pages: list[Path], w: int, h: int) -> str:
                  f'<div style="font-size:34px;line-height:1.35;color:#4b5a51">{E(b)}</div></div>' for i, (a, b) in enumerate(steps, 1))
     bullets = "".join(f"<li style='margin-bottom:8px'>{E(b)}</li>" for b in (o.get("bullets") or [])[:3])
     side = _img(pages[0], "left:1460px;top:800px;width:430px;transform:rotate(4deg)") if pages else ""
-    body = (f'<div style="padding:90px"><div class="kick" style="font-size:30px">How it works</div><h1 style="font-size:84px;margin:12px 0 30px">Ready in minutes</h1>'
+    t = o.get("text") or {}
+    body = (f'<div style="padding:90px"><div class="kick" style="font-size:30px">{E(t.get("how_kick", "How it works"))}</div>'
+            f'<h1 style="font-size:84px;margin:12px 0 30px">{E(t.get("how_title", "Ready in minutes"))}</h1>'
             f'<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px">{st}</div>'
-            + (f'<div class="kick" style="font-size:30px;margin-top:56px">What you get</div><ul style="font-size:36px;line-height:1.45;width:1280px;'
+            + (f'<div class="kick" style="font-size:30px;margin-top:56px">{E(t.get("get_kick", "What you get"))}</div><ul style="font-size:36px;line-height:1.45;width:1280px;'
                f'padding-left:38px">{bullets}</ul>' if bullets else "") + f'</div>{side}'
             f'<div class="brand" style="left:90px;right:90px;bottom:60px;font-size:28px;display:flex;justify-content:space-between">'
             f'<span>{E(o.get("brand", ""))}</span><span>{E(o.get("footer", ""))}</span></div>')

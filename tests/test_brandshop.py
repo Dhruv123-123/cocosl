@@ -14,15 +14,17 @@ import scam_decoded as SD  # noqa: E402
 import shop  # noqa: E402
 import ten99 as T  # noqa: E402
 import ten99_sheet  # noqa: E402
+import dinero_simple as DS  # noqa: E402
+import remesas_sheet  # noqa: E402
 
 
-@pytest.mark.parametrize("mod", [SD, T], ids=["scam-decoded", "1099-money"])
+@pytest.mark.parametrize("mod", [SD, T, DS], ids=["scam-decoded", "1099-money", "dinero-simple"])
 def test_listings_pass_etsy_and_copy_rules(mod):
-    assert shop.validate(mod.LISTINGS) == []
+    assert shop.validate(mod.LISTINGS, mod.BRAND.lang) == []
     assert len({it["slug"] for it in mod.LISTINGS}) == len(mod.LISTINGS)
     for it in mod.LISTINGS:
         md = shop.listing_md(it, mod.BRAND)
-        assert "Nothing here has been listed" in md and "AI" in it["description"]
+        assert "Nothing here has been listed" in md and "IA" in it["description"] if mod is DS else "AI" in it["description"]
 
 
 def test_brand_banned_phrases_absent_everywhere():
@@ -66,3 +68,45 @@ def test_workbook_formulas(tmp_path):
         sys.path.insert(0, str(SHOP.parents[0] / "products"))
         from build import recalc_check
         assert recalc_check(path) == []
+
+
+def test_dinero_simple_is_spanish_and_flagged_for_review():
+    pages = DS.presupuesto_pages() + DS.remesas_pages() + DS.credito_pages()
+    assert [len(DS.presupuesto_pages()), len(DS.remesas_pages()), len(DS.credito_pages())] == [12, 7, 8]
+    text = " ".join(pages).lower()
+    banned = ("garantizad", "sin riesgo", "dinero fácil", "este truco", "rendimientos garantizados", "libertad financiera de la noche")
+    assert [w for w in banned if w in text] == []
+    for it in DS.LISTINGS:
+        assert it["review"] == "pending native review"
+        md = shop.listing_md(it, DS.BRAND)
+        assert "NATIVE REVIEW PENDING" in md and "QUÉ INCLUYE" in it["description"]
+    assert DS.BRAND.lang == "es" and 'lang="es"' in DS.BRAND.html(["x"], "t", "8.5in", "11in", "Letter")
+    # the facts the pages rely on
+    for s in ("30 minutos", "180 días", "consumerfinance.gov", "AnnualCreditReport.com", "1%"):
+        assert s.lower() in text, s
+
+
+def test_remittance_workbook(tmp_path):
+    import openpyxl
+    path = remesas_sheet.build(tmp_path / "r.xlsx")
+    wb = openpyxl.load_workbook(path)
+    assert {"Empieza", "Comparar", "Envíos", "Meses", "Servicios"} == set(wb.sheetnames)
+    assert wb["Envíos"]["G5"].value.startswith("=") and "'Envíos'!" in wb["Meses"]["C5"].value
+    if shutil.which("soffice"):
+        sys.path.insert(0, str(SHOP.parents[0] / "products"))
+        from build import recalc_check
+        assert recalc_check(path) == []
+
+
+def test_products_catalog_covers_every_brand():
+    sys.path.insert(0, str(SHOP.parents[0] / "catalog"))
+    import build_catalog as C
+    rows = C.all_rows()
+    brands = {r["brand"] for r in rows}
+    assert {"Money Made Simple", "Scam Decoded", "1099 Money", "Dinero Simple"} <= brands
+    assert all(r[k] for r in rows for k in ("product", "platform", "price", "files", "listing", "launch", "date_source"))
+    assert {r["date_source"] for r in rows} <= {"calendar", "proposed"}
+    assert all("NATIVE REVIEW" in r["notes"] for r in rows if r["brand"] == "Dinero Simple")
+    names = {r["product"] for r in rows}
+    for mod in (SD, T, DS):
+        assert {it["name"] for it in mod.LISTINGS} <= names

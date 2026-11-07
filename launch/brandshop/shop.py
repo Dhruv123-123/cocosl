@@ -22,14 +22,16 @@ SIZES = {"Letter": ("8.5in", "11in", "Letter"), "A4": ("210mm", "297mm", "A4")}
 
 class Brand:
     def __init__(self, name: str, handle: str, ink: str, cream: str, accent: str, accent_d: str, warm: str, tint: str,
-                 muted: str = "#5b6470", line: str = "#c8c6bd"):
-        self.name, self.handle = name, handle
+                 muted: str = "#5b6470", line: str = "#c8c6bd", lang: str = "en", foot_text: str | None = None,
+                 review: str | None = None):
+        self.name, self.handle, self.lang, self.foot_text = name, handle, lang, foot_text
+        self.review = review  # a banner for LISTING.md when the copy needs a native-speaker review first
         self.ink, self.cream, self.accent, self.accent_d, self.warm, self.tint = ink, cream, accent, accent_d, warm, tint
         self.muted, self.line = muted, line
 
     @property
     def foot(self) -> str:
-        return f"&copy; {self.name} &middot; for personal use only, please don't resell or share the file"
+        return f"&copy; {self.name} &middot; " + (self.foot_text or "for personal use only, please don't resell or share the file")
 
     def css(self, w: str = "8.5in", h: str = "11in") -> str:
         base = (ETSY / "printables.css").read_text().replace("--w:8.5in; --h:11in;", f"--w:{w}; --h:{h};")
@@ -44,7 +46,7 @@ class Brand:
     def html(self, pages: list[str], title: str, w: str, h: str, page_name: str, extra_css: str = "",
              cls: str = "page") -> str:
         body = "".join(f'<section class="{cls}">{p}</section>\n' for p in pages)
-        return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>{title}</title><style>'
+        return (f'<!doctype html><html lang="{self.lang}"><head><meta charset="utf-8"><title>{title}</title><style>'
                 f'@page{{size:{page_name};margin:0}}\n{self.css(w, h)}{extra_css}</style></head><body>{body}</body></html>')
 
     @contextlib.contextmanager
@@ -89,8 +91,17 @@ def etsy_description(hook: str, get: list[str], how: list[str], good: list[str],
     return f"{hook}\n\nWHAT YOU GET\n{g}\n\nHOW IT WORKS\n{h}\n\nGOOD TO KNOW\n{gd}\n- {disclosure}"
 
 
-def validate(items: list[dict]) -> list[str]:
+# What every Etsy description must say, per language: the download note, how it's made, and the advice disclaimer.
+MARKERS = {"en": ("DIGITAL DOWNLOAD", "How it's made", "not "),
+           "es": ("DESCARGA DIGITAL", "Cómo se hizo", "no es asesoría")}
+BANNED_ES = ("garantizad", "sin riesgo", "100% seguro", "dinero fácil", "este truco", "rendimientos garantizados",
+             "libertad financiera de la noche a la mañana", "hazte rico")
+
+
+def validate(items: list[dict], lang: str = "en") -> list[str]:
     bad = []
+    banned = BANNED + (BANNED_ES if lang == "es" else ())
+    marks = MARKERS[lang]
     for it in items:
         s = it["slug"]
         if len(it["title"]) > 140 or len(it["title"].split()) > 15:
@@ -101,11 +112,11 @@ def validate(items: list[dict]) -> list[str]:
             bad.append(f"{s}: tags use only lowercase letters, numbers and spaces")
         for field in ("description", "gumroad"):
             text = it[field].lower()
-            hit = [w for w in BANNED if w in text]
+            hit = [w for w in banned if w in text]
             if hit:
                 bad.append(f"{s}: banned wording in {field}: {hit}")
         d = it["description"]
-        if "DIGITAL DOWNLOAD" not in d or "How it's made" not in d or "not " not in d.lower():
+        if marks[0] not in d or marks[1] not in d or marks[2] not in d.lower():
             bad.append(f"{s}: description needs the download note, How it's made and the advice disclaimer")
         if re.search(r"https?://|www\.|gumroad", d, re.I):
             bad.append(f"{s}: Etsy description must not link off Etsy")
@@ -117,8 +128,9 @@ def listing_md(it: dict, brand: Brand) -> str:
     tags = "\n".join(f"{i}. {t}" for i, t in enumerate(it["tags"], start=1))
     attrs = "\n".join(f"- **{k}:** {v}" for k, v in it.get("attributes", {}).items())
     files = "\n".join(f"- `{x}`" for x in it.get("files", []))
+    banner = f"\n> **{brand.review}**\n" if brand.review else ""
     return f"""# {brand.name}: {it['name']}
-
+{banner}
 Nothing here has been listed. Copy each field into Etsy (Shop Manager > Listings > Add a listing) and Gumroad. Upload
 the mockups in order (01 is the thumbnail).
 

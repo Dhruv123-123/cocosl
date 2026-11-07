@@ -1,4 +1,4 @@
-# Brand shops: Scam Decoded and 1099 Money
+# Brand shops: Scam Decoded, 1099 Money and Dinero Simple
 
 Printables, a spreadsheet, mockups and listing copy for two more brands. **Nothing has been listed or uploaded.**
 
@@ -19,6 +19,18 @@ fails on page overflow, Etsy title/tag limits, banned wording, off-Etsy links, o
 | 1099 Money | 2027 Freelancer Tax-Year Planner | $12 | 25 pages, Letter + A4 |
 | 1099 Money | 2027 Freelancer Tax Tracker (Sheets) | $14 | .xlsx (opens in Google Sheets, Excel, Numbers) + start-here PDF |
 | 1099 Money | 2027 Freelancer Tax Bundle | $19 | Planner + tracker (zip) |
+| Dinero Simple | El Presupuesto Familiar | $9 | 12 pages, Carta + A4 |
+| Dinero Simple | El Registro de Envíos | $7 | 7 pages, Carta + A4, plus a remittance workbook (.xlsx) |
+| Dinero Simple | La Lista para Construir tu Crédito | $6 | 8 pages, Carta + A4 |
+| Dinero Simple | El Paquete de la Familia | $16 | All three (zip) |
+
+**Dinero Simple is Spanish and needs a fluent speaker's review before anything is listed.** Every `LISTING.md` opens
+with a NATIVE REVIEW PENDING banner, `listings.csv` has a `review` column, and the build writes
+`dist/dinero-simple/REVIEW_CHECKLIST_ES.md` for the reviewer to sign.
+
+Every product across every brand (with platform, paths and launch date) is in `launch/PRODUCTS_CATALOG.md`, built by
+`launch/catalog/build_catalog.py`. It flags where these products overlap with the Scam Decoded and 1099 Money products
+on PRs #9 and #10.
 
 ## Before listing
 

@@ -1,0 +1,146 @@
+# Products catalog: every product, every brand
+
+One sheet to list from. **113 listings** (Money Made Simple 81, Scam Decoded 9, 1099 Money 9, Dinero Simple 14). Nothing in this list has been uploaded, listed or
+submitted anywhere.
+
+- **Files** and **Listing copy** paths are inside the project files folder `content-factory/` (the upload-ready copies).
+  Each `LISTING.md` has the title, tags, price, description and the files to upload.
+- **Launch** dates marked *calendar* come from the [launch calendar](https://claude.ai/artifact/MoXNajcfVEBSaFXESAyPRp); *proposed* ones are suggestions that
+  follow the same logic (dated products first, gifts before the holiday cutoffs, everything live by mid-December).
+- **Overlaps** between brands' products are flagged in the notes: decide those before listing either one.
+- Dinero Simple is blocked on a fluent Spanish speaker's review; nothing in Spanish goes up before that.
+- Regenerate after changing a price or name: `python launch/catalog/build_catalog.py`. Also as `PRODUCTS_CATALOG.csv`.
+
+
+## Money Made Simple (81)
+
+| Product | Platform | Price | Files | Listing copy | Launch | Date | Notes |
+|---|---|---|---|---|---|---|---|
+| Monthly Budget Planner | Etsy | $6 | `etsy/monthly-budget-planner/` | `etsy/monthly-budget-planner/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Paycheck Budget Planner | Etsy | $4 | `etsy/paycheck-budget-planner/` | `etsy/paycheck-budget-planner/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Savings Challenge Tracker | Etsy | $3 | `etsy/savings-challenge-tracker/` | `etsy/savings-challenge-tracker/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. |
+| 52-Week Savings Challenge | Etsy | $3 | `etsy/52-week-savings-challenge/` | `etsy/52-week-savings-challenge/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. |
+| Bill Payment Tracker | Etsy | $4 | `etsy/bill-payment-tracker/` | `etsy/bill-payment-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Sinking Funds Tracker | Etsy | $4 | `etsy/sinking-funds-tracker/` | `etsy/sinking-funds-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Debt Payoff Coloring Tracker | Etsy | $4 | `etsy/debt-payoff-coloring-tracker/` | `etsy/debt-payoff-coloring-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Monthly Expense Tracker | Etsy | $3 | `etsy/monthly-expense-tracker/` | `etsy/monthly-expense-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| No-Spend Challenge | Etsy | $3 | `etsy/no-spend-challenge/` | `etsy/no-spend-challenge/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. |
+| Subscription Tracker | Etsy | $3 | `etsy/subscription-tracker/` | `etsy/subscription-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| The Bill Cut Kit | Etsy | $5 | `etsy/bill-cut-kit/` | `etsy/bill-cut-kit/LISTING.md` | Week of Nov 9 (with the shop) | proposed | Etsy edition: no Gumroad codes or links. |
+| The 20-Minute Budget | Etsy | $12 | `etsy/20-minute-budget/` | `etsy/20-minute-budget/LISTING.md` | Week of Nov 9 (with the shop) | proposed | Etsy edition: no Gumroad codes or links. |
+| The Credit Report Audit Kit | Etsy | $9 | `etsy/credit-report-audit-kit/` | `etsy/credit-report-audit-kit/LISTING.md` | Week of Nov 9 (with the shop) | proposed | Etsy edition: no Gumroad codes or links. |
+| The Debt-Free Date Planner | Etsy | $17 | `etsy/debt-free-date-planner/` | `etsy/debt-free-date-planner/LISTING.md` | Week of Nov 9 (with the shop) | proposed | Etsy edition: no Gumroad codes or links. |
+| Start Investing With $100 a Month | Etsy | $19 | `etsy/investing-starter-kit/` | `etsy/investing-starter-kit/LISTING.md` | Week of Nov 9 (with the shop) | proposed | Etsy edition: no Gumroad codes or links. |
+| Printable Budget Binder (all 10 printables) | Etsy | $12 | `etsy/budget-binder-bundle/` | `etsy/budget-binder-bundle/LISTING.md` | Week of Nov 9; on sale Nov 27-30 (25% off) | calendar | Black Friday sale is bundles only. |
+| The Money Made Simple Toolkit | Etsy | $39 | `etsy/money-toolkit-bundle/` | `etsy/money-toolkit-bundle/LISTING.md` | Week of Nov 9 (with the shop) | proposed | Etsy edition: no Gumroad codes or links. |
+| 100 Envelope Challenge | Etsy | $3 | `etsy/100-envelope-challenge/` | `etsy/100-envelope-challenge/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. |
+| 26-Paycheck Savings Challenge | Etsy | $3 | `etsy/paycheck-savings-challenge/` | `etsy/paycheck-savings-challenge/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. |
+| 30-Day Savings Challenge | Etsy | $3 | `etsy/30-day-savings-challenge/` | `etsy/30-day-savings-challenge/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. |
+| Roll & Save Dice Savings Challenge | Etsy | $3 | `etsy/roll-and-save-challenge/` | `etsy/roll-and-save-challenge/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. |
+| Spare Change Jar Tracker | Etsy | $3 | `etsy/spare-change-jar-tracker/` | `etsy/spare-change-jar-tracker/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. |
+| Savings Bingo | Etsy | $3 | `etsy/savings-bingo/` | `etsy/savings-bingo/LISTING.md` | Week of Nov 9; featured from Dec 7 | calendar | Savings challenges to the top of the shop in December. |
+| Travel Fund Tracker | Etsy | $3 | `etsy/travel-fund-tracker/` | `etsy/travel-fund-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Emergency Fund Tracker | Etsy | $3 | `etsy/emergency-fund-tracker/` | `etsy/emergency-fund-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Home Fund Brick Tracker | Etsy | $3 | `etsy/home-fund-tracker/` | `etsy/home-fund-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Holiday Savings Planner | Etsy | $3 | `etsy/holiday-savings-planner/` | `etsy/holiday-savings-planner/LISTING.md` | Week of Nov 9 (pin it) | calendar | Peaks before Thanksgiving. |
+| Weekly Budget Planner | Etsy | $3 | `etsy/weekly-budget-planner/` | `etsy/weekly-budget-planner/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Zero-Based Budget Worksheet | Etsy | $3 | `etsy/zero-based-budget-worksheet/` | `etsy/zero-based-budget-worksheet/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| 50/30/20 Budget Worksheet | Etsy | $3 | `etsy/50-30-20-budget-worksheet/` | `etsy/50-30-20-budget-worksheet/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Cash Envelope Trackers | Etsy | $3 | `etsy/cash-envelope-trackers/` | `etsy/cash-envelope-trackers/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Daily Spending Log | Etsy | $3 | `etsy/daily-spending-log/` | `etsy/daily-spending-log/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Grocery Budget Tracker | Etsy | $3 | `etsy/grocery-budget-tracker/` | `etsy/grocery-budget-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Irregular Income Budget | Etsy | $3 | `etsy/irregular-income-budget/` | `etsy/irregular-income-budget/LISTING.md` | Week of Nov 9; featured from Jan 25 | calendar | Tax-season item. |
+| Utility Bill Tracker | Etsy | $3 | `etsy/utility-bill-tracker/` | `etsy/utility-bill-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Car Expense Tracker | Etsy | $3 | `etsy/car-expense-tracker/` | `etsy/car-expense-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Financial Goals Planner | Etsy | $3 | `etsy/financial-goals-planner/` | `etsy/financial-goals-planner/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Net Worth Tracker | Etsy | $3 | `etsy/net-worth-tracker/` | `etsy/net-worth-tracker/LISTING.md` | Week of Nov 9; featured from Jan 25 | calendar | Tax-season item. |
+| Monthly Money Review | Etsy | $3 | `etsy/monthly-money-review/` | `etsy/monthly-money-review/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Credit Card Payoff Tracker | Etsy | $3 | `etsy/credit-card-payoff-tracker/` | `etsy/credit-card-payoff-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Debt Snowball Worksheet | Etsy | $3 | `etsy/debt-snowball-worksheet/` | `etsy/debt-snowball-worksheet/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Debt Mountain Coloring Chart | Etsy | $3 | `etsy/debt-mountain-coloring-chart/` | `etsy/debt-mountain-coloring-chart/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Loan Payoff Tracker | Etsy | $3 | `etsy/loan-payoff-tracker/` | `etsy/loan-payoff-tracker/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Savings Account Register | Etsy | $3 | `etsy/savings-account-register/` | `etsy/savings-account-register/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Checking Account Register | Etsy | $3 | `etsy/checking-account-register/` | `etsy/checking-account-register/LISTING.md` | Week of Nov 9 (with the shop) | proposed |  |
+| Gift Budget Planner | Etsy | $3 | `etsy/gift-budget-planner/` | `etsy/gift-budget-planner/LISTING.md` | Week of Nov 9 (pin it) | calendar | Peaks before Thanksgiving. |
+| Side Hustle Income Tracker | Etsy | $3 | `etsy/side-hustle-income-tracker/` | `etsy/side-hustle-income-tracker/LISTING.md` | Week of Nov 9; featured from Jan 25 | calendar | Tax-season item. |
+| 2027 Budget Planner | Etsy | $12 | `etsy/2027-budget-planner/` | `etsy/2027-budget-planner/LISTING.md` | Week of Nov 9 (list first) | calendar | Dated: 4 PDFs (Sun/Mon start x Letter/A4). Drop the price after Jan 31. |
+| Savings Challenge Pack (12 printables) | Etsy | $8 | `etsy/savings-challenge-pack/` | `etsy/savings-challenge-pack/LISTING.md` | Week of Nov 9; on sale Nov 27-30 (25% off) | calendar | Black Friday sale is bundles only. |
+| Mega Budget Bundle (all 40 printables) | Etsy | $19 | `etsy/mega-budget-bundle/` | `etsy/mega-budget-bundle/LISTING.md` | Week of Nov 9; on sale Nov 27-30 (25% off) | calendar | Black Friday sale is bundles only. |
+| The Bill Cut Kit | Gumroad | $5 | `products/bill-cut-kit/` | `products/bill-cut-kit/LISTING.md` | Week of Nov 16; featured Jan 25 | calendar | Create the discount codes in launch/products/UPSELL_PATH.md first; replace [your store link] and rebuild. |
+| The Credit Report Audit Kit | Gumroad | $9 | `products/credit-report-audit-kit/` | `products/credit-report-audit-kit/LISTING.md` | Week of Nov 16; featured Jan 25 | calendar | Create the discount codes in launch/products/UPSELL_PATH.md first; replace [your store link] and rebuild. |
+| The Debt-Free Date Planner | Gumroad | $17 | `products/debt-free-date-planner/` | `products/debt-free-date-planner/LISTING.md` | Week of Nov 16; featured Jan 4 | calendar | Create the discount codes in launch/products/UPSELL_PATH.md first; replace [your store link] and rebuild. |
+| Start Investing With $100 a Month | Gumroad | $19 | `products/investing-starter-kit/` | `products/investing-starter-kit/LISTING.md` | Week of Nov 16 | calendar | Create the discount codes in launch/products/UPSELL_PATH.md first; replace [your store link] and rebuild. |
+| The Money Made Simple Toolkit | Gumroad | $39 | `products/money-toolkit-bundle/` | `products/money-toolkit-bundle/LISTING.md` | Week of Nov 16; on sale Nov 27-30 | calendar | Create the discount codes in launch/products/UPSELL_PATH.md first; replace [your store link] and rebuild. |
+| Monthly Budget Sheet | Gumroad | $9 | `templates/budget-sheet/` | `templates/budget-sheet/LISTING.md` | Week of Nov 16 | calendar | Paste the Sheets copy link into links.json and rebuild. |
+| Debt Payoff Sheet | Gumroad | $12 | `templates/debt-payoff-sheet/` | `templates/debt-payoff-sheet/LISTING.md` | Week of Nov 16 | calendar | Paste the Sheets copy link into links.json and rebuild. |
+| Savings Goals Sheet | Gumroad | $7 | `templates/savings-goals-sheet/` | `templates/savings-goals-sheet/LISTING.md` | Week of Nov 16 | calendar | Paste the Sheets copy link into links.json and rebuild. |
+| Money Sheets Bundle | Gumroad | $19 | `templates/money-sheets-bundle/` | `templates/money-sheets-bundle/LISTING.md` | Week of Nov 16; on sale Nov 27-30 | calendar | Paste the Sheets copy link into links.json and rebuild. |
+| Notion Budget Planner | Gumroad | $9 | `templates/notion-budget/` | `templates/notion-budget/LISTING.md` | Week of Nov 16 | calendar | Notion: run notion_build.py once and paste the duplicate link into links.json. |
+| Notion Debt Payoff Tracker | Gumroad | $12 | `templates/notion-debt-payoff/` | `templates/notion-debt-payoff/LISTING.md` | Week of Nov 16 | calendar | Notion: run notion_build.py once and paste the duplicate link into links.json. |
+| Notion Savings Goals Tracker | Gumroad | $7 | `templates/notion-savings-goals/` | `templates/notion-savings-goals/LISTING.md` | Week of Nov 16 | calendar | Notion: run notion_build.py once and paste the duplicate link into links.json. |
+| Notion Money HQ | Gumroad | $19 | `templates/notion-money-hq/` | `templates/notion-money-hq/LISTING.md` | Week of Nov 16; on sale Nov 27-30 | calendar | Notion: run notion_build.py once and paste the duplicate link into links.json. |
+| 2027 Budget Sheet | Gumroad + Etsy | $12 | `templates/budget-sheet-2027/` | `templates/budget-sheet-2027/LISTING.md` | Week of Nov 9 | calendar | Paste the Sheets copy link into links.json and rebuild. |
+| 2027 Money HQ for Notion | Gumroad + Etsy | $24 | `templates/notion-money-hq-2027/` | `templates/notion-money-hq-2027/LISTING.md` | Week of Nov 9 | calendar | Notion: run notion_build.py once and paste the duplicate link into links.json. |
+| Notion Money Starter | Gumroad (free, email capture) | free | `templates/notion-money-starter/` | `templates/notion-money-starter/LISTING.md` | Week of Nov 16 | calendar | Paste the Sheets copy link into links.json and rebuild. |
+| 100 Envelope Challenge Poster | Etsy (print on demand) | about $22-$32 | `pod/100-envelope-challenge-poster/` | `pod/100-envelope-challenge-poster/LISTING.md` | Week of Nov 16; last orders before the print partner's mid-Dec cutoff | calendar | Connect Printify, check base price and shipping (keep $6+ per size), order one sample. |
+| 52 Week Savings Challenge Poster | Etsy (print on demand) | about $22-$32 | `pod/52-week-savings-poster/` | `pod/52-week-savings-poster/LISTING.md` | Week of Nov 16; last orders before the print partner's mid-Dec cutoff | calendar | Connect Printify, check base price and shipping (keep $6+ per size), order one sample. |
+| $1,000 Savings Bingo Poster | Etsy (print on demand) | about $22-$32 | `pod/savings-bingo-poster/` | `pod/savings-bingo-poster/LISTING.md` | Week of Nov 16; last orders before the print partner's mid-Dec cutoff | calendar | Connect Printify, check base price and shipping (keep $6+ per size), order one sample. |
+| Debt Free Mountain Poster | Etsy (print on demand) | about $22-$32 | `pod/debt-mountain-poster/` | `pod/debt-mountain-poster/LISTING.md` | Week of Nov 16; last orders before the print partner's mid-Dec cutoff | calendar | Connect Printify, check base price and shipping (keep $6+ per size), order one sample. |
+| Savings Jar Poster | Etsy (print on demand) | about $22-$32 | `pod/savings-jar-poster/` | `pod/savings-jar-poster/LISTING.md` | Week of Nov 16; last orders before the print partner's mid-Dec cutoff | calendar | Connect Printify, check base price and shipping (keep $6+ per size), order one sample. |
+| Travel Fund Poster | Etsy (print on demand) | about $22-$32 | `pod/travel-fund-poster/` | `pod/travel-fund-poster/LISTING.md` | Week of Nov 16; last orders before the print partner's mid-Dec cutoff | calendar | Connect Printify, check base price and shipping (keep $6+ per size), order one sample. |
+| Emergency Fund Poster | Etsy (print on demand) | about $22-$32 | `pod/emergency-fund-poster/` | `pod/emergency-fund-poster/LISTING.md` | Week of Nov 16; last orders before the print partner's mid-Dec cutoff | calendar | Connect Printify, check base price and shipping (keep $6+ per size), order one sample. |
+| House Fund Poster | Etsy (print on demand) | about $22-$32 | `pod/house-fund-poster/` | `pod/house-fund-poster/LISTING.md` | Week of Nov 16; last orders before the print partner's mid-Dec cutoff | calendar | Connect Printify, check base price and shipping (keep $6+ per size), order one sample. |
+| 30 Day No Spend Challenge Poster | Etsy (print on demand) | about $22-$32 | `pod/no-spend-challenge-poster/` | `pod/no-spend-challenge-poster/LISTING.md` | Week of Nov 16; last orders before the print partner's mid-Dec cutoff | calendar | Connect Printify, check base price and shipping (keep $6+ per size), order one sample. |
+| Save $1,000 Challenge Poster | Etsy (print on demand) | about $22-$32 | `pod/save-1000-poster/` | `pod/save-1000-poster/LISTING.md` | Week of Nov 16; last orders before the print partner's mid-Dec cutoff | calendar | Connect Printify, check base price and shipping (keep $6+ per size), order one sample. |
+| 2027 Budget Planner (paperback) | Amazon KDP | $9.99-$12.99 | `kdp/2027-Budget-Planner-KDP-*.pdf` | `kdp/KDP_NOTES.md` | Submit week of Nov 9, publish after proof (week of Nov 16) | calendar | Order the proof first. |
+| Debt Payoff Journal (paperback) | Amazon KDP | $8.99-$10.99 | `kdp/Debt-Payoff-Journal-KDP-*.pdf` | `kdp/KDP_NOTES.md` | Submit week of Nov 23, publish week of Dec 7 | calendar | Order the proof first. |
+| 52-Week Savings Log (paperback) | Amazon KDP | $8.99-$10.99 | `kdp/52-Week-Savings-Log-KDP-*.pdf` | `kdp/KDP_NOTES.md` | Submit week of Nov 23, publish week of Dec 7 | calendar | Order the proof first. |
+| Money Made Simple (Kindle ebook) | Amazon KDP | $8.99 | `ebook/Money-Made-Simple.epub, ebook/Money-Made-Simple-Kindle-Cover.jpg` | `ebook/KDP_NOTES.md` | Submit week of Nov 30 | calendar | Decide the author name. Off Gumroad while in KDP Select. |
+| Money Made Simple (paperback) | Amazon KDP | $14.99 | `ebook/Money-Made-Simple-Paperback-*.pdf` | `ebook/KDP_NOTES.md` | Submit week of Nov 30, publish week of Dec 14 | calendar | Order the proof first. |
+
+## Scam Decoded (9)
+
+| Product | Platform | Price | Files | Listing copy | Launch | Date | Notes |
+|---|---|---|---|---|---|---|---|
+| Family Scam-Safety Kit | Etsy + Gumroad | $9 | `brands/scam-decoded/family-scam-safety-kit/` | `brands/scam-decoded/family-scam-safety-kit/LISTING.md` | Week of Nov 16 (holiday-scam season runs Nov 21-Dec 18) | proposed | OVERLAP: same $9 slot as The Family Scam-Proofing Kit (PR #9). Suggest Gumroad/site funnel keeps the Scam-Proofing Kit and Etsy gets this one. Needs the brand's own Etsy shop (or a section in an existing one). |
+| Scam Fridge Card Set | Etsy + Gumroad | $5 | `brands/scam-decoded/scam-fridge-cards/` | `brands/scam-decoded/scam-fridge-cards/LISTING.md` | Week of Nov 16 (holiday-scam season runs Nov 21-Dec 18) | proposed | Pairs with the seniors pack; keep the wording distinct from its fridge checklist. Needs the brand's own Etsy shop (or a section in an existing one). |
+| Caller ID Script Card for Seniors | Etsy + Gumroad | $4 | `brands/scam-decoded/caller-id-script-card/` | `brands/scam-decoded/caller-id-script-card/LISTING.md` | Week of Nov 16 (holiday-scam season runs Nov 21-Dec 18) | proposed | OVERLAP: close to the $7 Scam Decoded for Seniors pack (PR #9, wallet cards + fridge checklist). Pick one for Etsy, or bundle them. Needs the brand's own Etsy shop (or a section in an existing one). |
+| Family Scam-Safety Bundle | Etsy + Gumroad | $12 | `brands/scam-decoded/scam-safety-bundle/` | `brands/scam-decoded/scam-safety-bundle/LISTING.md` | Week of Nov 16 (holiday-scam season runs Nov 21-Dec 18) | proposed | Needs the brand's own Etsy shop (or a section in an existing one). |
+| The Family Scam-Proofing Kit | Gumroad (site funnel) | $9 | `scam-decoded/product-family-scam-proofing-kit/` | `scam-decoded/product-family-scam-proofing-kit/LISTING.md` | With the brand launch (posting plan Day 1 is Sat Nov 7) | proposed | PR #9. Funnel emails and the scam checker sell this kit. Code LAUNCH ($5 for 7 days, only while true). |
+| Protect Your Parents (guide) | Gumroad | $29 | `scam-decoded/products/protect-your-parents/` | `scam-decoded/products/protect-your-parents/LISTING.md` | Week of Nov 16 | proposed | PR #9. Codes KITPARENTS, GUIDEKIT, LAUNCH. |
+| Scam Decoded for Seniors (large print) | Etsy | $7 | `scam-decoded/products/seniors-pack/` | `scam-decoded/products/seniors-pack/LISTING.md` | Week of Nov 16 | proposed | PR #9. See the caller ID card overlap. |
+| Seniors pack group print license | Gumroad | $49 (+$19 per extra site) | `scam-decoded/products/seniors-pack/` | `scam-decoded/products/seniors-pack/GROUP_LICENSE_LISTING.md` | When the first talk is booked | proposed | PR #9. For libraries and senior centers. |
+| Spot It, Stop It team training pack | Gumroad | $99 | `scam-decoded/products/team-training/` | `scam-decoded/products/team-training/LISTING.md` | Before the B2B outreach starts (Tue Nov 10) | proposed | PR #9. Code TEAMLAUNCH. |
+
+## 1099 Money (9)
+
+| Product | Platform | Price | Files | Listing copy | Launch | Date | Notes |
+|---|---|---|---|---|---|---|---|
+| 2027 Freelancer Tax-Year Planner (printable) | Etsy + Gumroad | $12 | `brands/1099-money/freelancer-tax-planner-2027/` | `brands/1099-money/freelancer-tax-planner-2027/LISTING.md` | Week of Nov 16, with the brand launch (dated 2027: list early) | proposed | Needs the brand's own Etsy shop (or a section in an existing one). |
+| 2027 Freelancer Tax Tracker (Google Sheets) | Etsy + Gumroad | $14 | `brands/1099-money/freelancer-tax-sheet-2027/` | `brands/1099-money/freelancer-tax-sheet-2027/LISTING.md` | Week of Nov 16, with the brand launch (dated 2027: list early) | proposed | OVERLAP: the $15 Quarterly Tax Tracker (PR #10) is also a sheet. Suggest keeping that one and selling this planner printable beside it. Needs the brand's own Etsy shop (or a section in an existing one). |
+| 2027 Freelancer Tax Bundle (printable + Sheets) | Etsy + Gumroad | $19 | `brands/1099-money/freelancer-tax-bundle-2027/` | `brands/1099-money/freelancer-tax-bundle-2027/LISTING.md` | Week of Nov 16, with the brand launch (dated 2027: list early) | proposed | Depends on the sheet decision above. Needs the brand's own Etsy shop (or a section in an existing one). |
+| The Quarterly Tax Tracker | Gumroad | $15 | `1099-money/product-quarterly-tax-tracker/` | `1099-money/product-quarterly-tax-tracker/LISTING.md` | Mon Nov 16 (brand launch day 1) | proposed | PR #10. Code LAUNCH ($9 for 7 days). |
+| The Rate & Contract Kit | Gumroad | $29 | `1099-money/products/rate-contract-kit/` | `1099-money/products/rate-contract-kit/LISTING.md` | Week of Nov 16 | proposed | PR #10. Codes LAUNCH, TRACKER5, KIT29. |
+| The Freelancer Money Bundle | Gumroad | $49 | `1099-money/products/bundle/` | `1099-money/products/bundle/LISTING.md` | Week of Nov 16 | proposed | PR #10. Codes LAUNCH, TRACKER15, KIT29. |
+| The Quarterly Tax Tracker | Etsy | $15 | `etsy/1099-money/quarterly-tax-tracker/files/` | `etsy/1099-money/quarterly-tax-tracker/LISTING-ETSY.md` | Week of Nov 16 | proposed | PR #10. Etsy edition. |
+| The Rate & Contract Kit | Etsy | $29 | `etsy/1099-money/rate-and-contract-kit/files/` | `etsy/1099-money/rate-and-contract-kit/LISTING-ETSY.md` | Week of Nov 16 | proposed | PR #10. Etsy edition. |
+| The Freelancer Money Bundle | Etsy | $49 | `etsy/1099-money/freelancer-money-bundle/files/` | `etsy/1099-money/freelancer-money-bundle/LISTING-ETSY.md` | Week of Nov 16 | proposed | PR #10. Etsy edition. |
+
+## Dinero Simple (14)
+
+| Product | Platform | Price | Files | Listing copy | Launch | Date | Notes |
+|---|---|---|---|---|---|---|---|
+| El Presupuesto Familiar | Etsy + Gumroad | $9 | `brands/dinero-simple/presupuesto-familiar/` | `brands/dinero-simple/presupuesto-familiar/LISTING.md` | After native review; target week of Dec 7 (December remittance and aguinaldo season) | proposed | NATIVE REVIEW PENDING: sign brands/dinero-simple/REVIEW_CHECKLIST_ES.md first. |
+| El Registro de Envíos | Etsy + Gumroad | $7 | `brands/dinero-simple/registro-de-envios/` | `brands/dinero-simple/registro-de-envios/LISTING.md` | After native review; target week of Dec 7 (December remittance and aguinaldo season) | proposed | NATIVE REVIEW PENDING: sign brands/dinero-simple/REVIEW_CHECKLIST_ES.md first. |
+| La Lista para Construir tu Crédito | Etsy + Gumroad | $6 | `brands/dinero-simple/construir-credito/` | `brands/dinero-simple/construir-credito/LISTING.md` | After native review; target week of Dec 7 (December remittance and aguinaldo season) | proposed | NATIVE REVIEW PENDING: sign brands/dinero-simple/REVIEW_CHECKLIST_ES.md first. |
+| El Paquete de la Familia | Etsy + Gumroad | $16 | `brands/dinero-simple/paquete-familia/` | `brands/dinero-simple/paquete-familia/LISTING.md` | After native review; target week of Dec 7 (December remittance and aguinaldo season) | proposed | NATIVE REVIEW PENDING: sign brands/dinero-simple/REVIEW_CHECKLIST_ES.md first. |
+| El Kit para Recortar Gastos | Gumroad | $5 | `dinero-simple/products/recorte-de-gastos/` | `dinero-simple/products/recorte-de-gastos/LISTING.md` | After native review (reviewer brief: cheapest path launches El Presupuesto first) | proposed | PR #11. NATIVE REVIEW PENDING. Codes RECORTE5, FECHA5, INVERTIR5. |
+| El Kit para Recortar Gastos | Etsy | $5 | `etsy/dinero-simple/recorte-de-gastos/` | `etsy/dinero-simple/recorte-de-gastos/LISTING.md` | After native review | proposed | PR #11. NATIVE REVIEW PENDING. Etsy edition. |
+| El Presupuesto de 20 Minutos | Gumroad | $12 | `dinero-simple/product/` | `dinero-simple/product/LISTING.md` | After native review (reviewer brief: cheapest path launches El Presupuesto first) | proposed | PR #11. NATIVE REVIEW PENDING. Codes RECORTE5, FECHA5, INVERTIR5. |
+| El Presupuesto de 20 Minutos | Etsy | $12 | `etsy/dinero-simple/presupuesto-20-minutos/` | `etsy/dinero-simple/presupuesto-20-minutos/LISTING.md` | After native review | proposed | PR #11. NATIVE REVIEW PENDING. Etsy edition. |
+| Tu Fecha Sin Deudas | Gumroad | $17 | `dinero-simple/products/fecha-sin-deudas/` | `dinero-simple/products/fecha-sin-deudas/LISTING.md` | After native review (reviewer brief: cheapest path launches El Presupuesto first) | proposed | PR #11. NATIVE REVIEW PENDING. Codes RECORTE5, FECHA5, INVERTIR5. |
+| Tu Fecha Sin Deudas | Etsy | $17 | `etsy/dinero-simple/fecha-sin-deudas/` | `etsy/dinero-simple/fecha-sin-deudas/LISTING.md` | After native review | proposed | PR #11. NATIVE REVIEW PENDING. Etsy edition. |
+| Empieza a Invertir con $100 al Mes | Gumroad | $19 | `dinero-simple/products/invertir-con-100/` | `dinero-simple/products/invertir-con-100/LISTING.md` | After native review (reviewer brief: cheapest path launches El Presupuesto first) | proposed | PR #11. NATIVE REVIEW PENDING. Codes RECORTE5, FECHA5, INVERTIR5. |
+| Empieza a Invertir con $100 al Mes | Etsy | $19 | `etsy/dinero-simple/invertir-con-100/` | `etsy/dinero-simple/invertir-con-100/LISTING.md` | After native review | proposed | PR #11. NATIVE REVIEW PENDING. Etsy edition. |
+| El Paquete Dinero Simple | Gumroad | $29 | `dinero-simple/products/paquete/` | `dinero-simple/products/paquete/LISTING.md` | After native review (reviewer brief: cheapest path launches El Presupuesto first) | proposed | PR #11. NATIVE REVIEW PENDING. Codes RECORTE5, FECHA5, INVERTIR5. |
+| El Paquete Dinero Simple | Etsy | $29 | `etsy/dinero-simple/paquete/` | `etsy/dinero-simple/paquete/LISTING.md` | After native review | proposed | PR #11. NATIVE REVIEW PENDING. Etsy edition. |

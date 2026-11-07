@@ -23,6 +23,8 @@ import build_etsy  # noqa: E402
 import scam_decoded as SD  # noqa: E402
 import ten99 as T  # noqa: E402
 import ten99_sheet  # noqa: E402
+import dinero_simple as DS  # noqa: E402
+import remesas_sheet  # noqa: E402
 
 SIZES = shop.SIZES
 
@@ -35,14 +37,27 @@ MOCK = {
     "freelancer-tax-planner-2027": ("2027 Freelancer Tax Planner", "Income, expenses, mileage and the four estimated-tax dates, in 25 printable pages."),
     "freelancer-tax-sheet-2027": ("2027 Freelancer Tax Tracker", "A Google Sheets and Excel tracker that adds itself up by month, quarter and category."),
     "freelancer-tax-bundle-2027": ("2027 Freelancer Tax Bundle", "The 25-page printable planner and the spreadsheet tracker together."),
+    "presupuesto-familiar": ("Presupuesto Familiar", "Lo que entra, lo que sale y un número semanal para toda la casa, en 12 páginas."),
+    "registro-de-envios": ("El Registro de Envíos", "Compara antes de enviar y guarda cada envío. Para imprimir y en Google Sheets."),
+    "construir-credito": ("Construye tu Crédito", "Tus primeros 12 meses paso a paso, también con ITIN, en 8 páginas."),
+    "paquete-familia": ("Paquete de la Familia", "El presupuesto, el registro de envíos y la lista de crédito, en una descarga."),
 }
 CHIPS = {"sheet": ["Instant download", "Google Sheets + Excel"], "bundle": ["Instant download", "Printable + digital"]}
+# Spanish mockup wording (Dinero Simple). Needs the same native review as the rest.
+ES = {"chips": {"print": ["Descarga inmediata", "Carta + A4", "En español"],
+                "print+sheet": ["Descarga inmediata", "PDF + Google Sheets", "En español"],
+                "bundle": ["Descarga inmediata", "3 en 1", "En español"]},
+      "footer": "Educativo, no es asesoría",
+      "text": {"inside_kick": "Lo que incluye", "inside_pages": "{n} de las páginas", "inside_count": "{n} archivos",
+               "how_kick": "Cómo funciona", "how_title": "Listo en minutos", "get_kick": "Qué incluye"},
+      "steps": [("Descarga", "Tus archivos están listos en cuanto pagas."), ("Imprime", "Carta o A4, en casa, las veces que quieras."),
+                ("Llena", "Con pluma, o en una tablet con cualquier app para PDF.")]}
 
 
 def doc(brand: shop.Brand, sections: list[tuple[str, str]], title: str, w: str, h: str, page_name: str,
         extra_css: str = "") -> str:
     body = "".join(f'<section class="{cls}">{html}</section>\n' for cls, html in sections)
-    return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>{title}</title><style>'
+    return (f'<!doctype html><html lang="{brand.lang}"><head><meta charset="utf-8"><title>{title}</title><style>'
             f'@page{{size:{page_name};margin:0}}\n{brand.css(w, h)}{extra_css}</style></head><body>{body}</body></html>')
 
 
@@ -86,6 +101,48 @@ def scam_jobs(out: Path, work: Path) -> tuple[list[dict], dict[str, list[Path]]]
                         "2in", "3.5in 2in", CARD_EXTRA + ".page.wallet{ margin:0; }"))
     jobs.append({"src": str(wsrc), "pdf": str(work / "wallet-check.pdf")})
     return jobs, files
+
+
+def dinero_jobs(out: Path, work: Path) -> tuple[list[dict], dict[str, list[Path]]]:
+    B, jobs, files = DS.BRAND, [], {}
+    parts = {"presupuesto-familiar": ("El-Presupuesto-Familiar", "El Presupuesto Familiar", DS.presupuesto_pages),
+             "registro-de-envios": ("El-Registro-de-Envios", "El Registro de Envíos", DS.remesas_pages),
+             "construir-credito": ("Construye-tu-Credito", "La Lista para Construir tu Crédito", DS.credito_pages)}
+    for slug, (stem, title, pages) in parts.items():
+        d = out / slug
+        d.mkdir(parents=True, exist_ok=True)
+        for size, (w, h, pn) in SIZES.items():
+            src = work / f"{slug}-{size}.html"
+            src.write_text(doc(B, [("page", p) for p in pages()], title, w, h, pn))
+            pdf = d / f"{stem}-{'Carta' if size == 'Letter' else size}.pdf"
+            jobs.append({"src": str(src), "pdf": str(pdf)})
+            files.setdefault(slug, []).append(pdf)
+    files["registro-de-envios"].append(remesas_sheet.build(out / "registro-de-envios" / "Registro-de-Envios.xlsx"))
+    return jobs, files
+
+
+def review_checklist(mod, files: dict[str, list[Path]]) -> str:
+    rows = "\n".join(f"| {it['name']} | `{it['slug']}/` | {', '.join(f'`{x}`' for x in it['files'])} | | |" for it in mod.LISTINGS)
+    return f"""# Revisión nativa: Dinero Simple, productos para Etsy y Gumroad
+
+**Nothing here can be listed until this is signed.** A fluent Spanish speaker reads every listed item: the Etsy title,
+the 13 tags, the Etsy description, the Gumroad copy (all in each `LISTING.md`), every page of each PDF, the spreadsheet
+tabs and the mockup images.
+
+Check for: natural, neutral US-Latino Spanish in the tú form; no anglicisms that read as errors; the money and legal
+facts (remittance rights, the 1% cash remittance tax from 2026, AnnualCreditReport.com, CROA, CPN warning) still
+current; nothing that reads as a promise or as financial, tax or legal advice.
+
+| Producto | Carpeta | Archivos | Revisado por | Fecha |
+|---|---|---|---|---|
+{rows}
+
+Cambios pedidos:
+
+-
+
+Firmado (nombre y fecha): ______________________
+"""
 
 
 def ten99_jobs(out: Path, work: Path) -> tuple[list[dict], dict[str, list[Path]]]:
@@ -162,7 +219,7 @@ def zip_bundle(name: Path, paths: list[Path]) -> Path:
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--brand", nargs="*", default=["scam-decoded", "1099-money"])
+    ap.add_argument("--brand", nargs="*", default=["scam-decoded", "1099-money", "dinero-simple"])
     ap.add_argument("--out", default=str(HERE / "dist"))
     ap.add_argument("--no-mockups", action="store_true")
     ap.add_argument("--check", action="store_true", help="recalculate the workbook in LibreOffice")
@@ -170,11 +227,14 @@ def main() -> int:
     root = Path(a.out)
     work = Path(tempfile.mkdtemp(prefix="brandshop-"))
     failures: list[str] = []
-    brands = {"scam-decoded": (SD, scam_jobs), "1099-money": (T, ten99_jobs)}
+    brands = {"scam-decoded": (SD, scam_jobs), "1099-money": (T, ten99_jobs), "dinero-simple": (DS, dinero_jobs)}
+    if a.check:
+        sys.path.insert(0, str(shop.ROOT / "launch" / "products"))
+        from build import recalc_check
     for key in a.brand:
         mod, make = brands[key]
         out = root / key
-        failures += [f"{key}: {x}" for x in shop.validate(mod.LISTINGS)]
+        failures += [f"{key}: {x}" for x in shop.validate(mod.LISTINGS, mod.BRAND.lang)]
         jobs, files = make(out, work)
         for r in build_etsy.run_jobs(jobs):
             if r["overflow"]:
@@ -184,14 +244,19 @@ def main() -> int:
             b.mkdir(parents=True, exist_ok=True)
             files["scam-safety-bundle"] = [zip_bundle(b / "Family-Scam-Safety-Bundle.zip",
                                                       [p for s in ("family-scam-safety-kit", "scam-fridge-cards", "caller-id-script-card") for p in files[s]])]
+        elif key == "dinero-simple":
+            b = out / "paquete-familia"
+            b.mkdir(parents=True, exist_ok=True)
+            files["paquete-familia"] = [zip_bundle(b / "El-Paquete-de-la-Familia.zip",
+                                                   [p for s in ("presupuesto-familiar", "registro-de-envios", "construir-credito") for p in files[s]])]
+            if a.check:
+                failures += recalc_check(files["registro-de-envios"][-1])
         else:
             b = out / "freelancer-tax-bundle-2027"
             b.mkdir(parents=True, exist_ok=True)
             files["freelancer-tax-bundle-2027"] = [zip_bundle(b / "2027-Freelancer-Tax-Bundle.zip",
                                                               files["freelancer-tax-planner-2027"] + files["freelancer-tax-sheet-2027"])]
             if a.check:
-                sys.path.insert(0, str(shop.ROOT / "launch" / "products"))
-                from build import recalc_check
                 failures += recalc_check(files["freelancer-tax-sheet-2027"][0])
         for it in mod.LISTINGS:
             it["files"] = [p.name for p in files[it["slug"]]]
@@ -205,26 +270,32 @@ def main() -> int:
                     if it["kind"] == "bundle":
                         parts = [s for s in files if s != it["slug"]]
                         pdfs = [p for s in parts for p in files[s] if p.suffix == ".pdf" and "A4" not in p.name and "4x6" not in p.name]
+                    n_pages = 9 if it["kind"] in ("kit", "print") else 3
                     if it["kind"] == "sheet":
                         pages = sheet_preview_pages(files[it["slug"]][0], work)
                     else:
                         pages = []
                         for p in pdfs:
-                            pages += build_etsy.page_images(p, work / "pg" / it["slug"], p.stem, 1, 3 if it["kind"] != "kit" and it["kind"] != "print" else 9, 80)
+                            pages += build_etsy.page_images(p, work / "pg" / it["slug"], p.stem, 1, n_pages, 80)
                     hero = pages[:3] if it["kind"] not in ("bundle",) else [pages[0], pages[len(pages) // 2], pages[-1]]
                     mt, ms = MOCK[it["slug"]]
                     o = {"title": mt, "label": mod.BRAND.name, "price": it["price"], "brand": mod.BRAND.name.upper(),
                          "subtitle": ms, "chips": CHIPS.get(it["kind"], ["Instant download", "US Letter + A4"]),
                          "footer": "Educational, not advice"}
+                    if mod.BRAND.lang == "es":
+                        o.update(chips=ES["chips"][it["kind"]], footer=ES["footer"], text=ES["text"], steps=ES["steps"])
                     mg.generate(o, hero, d, sizes=("etsy", "gumroad", "square", "pin"), run=build_etsy.run_jobs,
                                 inside_pages=pages[:10])
         for it in mod.LISTINGS:
             (out / it["slug"] / "LISTING.md").write_text(shop.listing_md(it, mod.BRAND))
         with open(out / "listings.csv", "w", newline="") as fh:
             w = csv.writer(fh)
-            w.writerow(["slug", "title", "price", "tags", "files"])
+            w.writerow(["slug", "title", "price", "tags", "files", "review"])
             for it in mod.LISTINGS:
-                w.writerow([it["slug"], it["title"], f"{it['price']:.2f}", ", ".join(it["tags"]), " | ".join(it["files"])])
+                w.writerow([it["slug"], it["title"], f"{it['price']:.2f}", ", ".join(it["tags"]), " | ".join(it["files"]),
+                            it.get("review", "")])
+        if mod.BRAND.review:
+            (out / "REVIEW_CHECKLIST_ES.md").write_text(review_checklist(mod, files))
     shutil.rmtree(work, ignore_errors=True)
     for f in failures:
         print("FAIL", f)
