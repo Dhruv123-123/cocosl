@@ -108,9 +108,10 @@ def test_requeue_failed_publication(factory, scheduled):
 def test_backlog_after_downtime_is_spread_out_not_dumped(factory, scheduled, monkeypatch):
     monkeypatch.setenv("PUBLISH_LATE_HOURS", "6")
     pid, pubs = scheduled
-    sched = datetime.fromisoformat(factory.db.get("publications", pubs[0])["scheduled_at"])
+    yt = next(p for p in pubs if factory.db.get("publications", p)["platform"] not in ("tiktok", "pinterest"))
+    sched = datetime.fromisoformat(factory.db.get("publications", yt)["scheduled_at"])
     on_time = factory.publish_due(sched + timedelta(hours=1))
-    assert on_time and on_time[0]["status"] == "dry_run"                 # an hour late is fine
+    assert [r["status"] for r in on_time if r["publication"] == yt] == ["dry_run"]   # an hour late is fine
     pid2 = factory.db.insert("posts", {"brand": "money-made-simple", "format": "short", "status": "scheduled",
                                        "title": "late"})
     late = factory.db.insert("publications", {"post_id": pid2, "platform": "youtube", "status": "queued",
