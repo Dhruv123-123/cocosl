@@ -447,3 +447,50 @@ def test_seniors_guide_is_large_print_spanish_and_flags_immigration():
     assert "1-833-372-8311" in booklet and "1-877-382-4357" in booklet
     assert len(b.booklet()) == 15
     assert "font-size:16pt" in b.LARGE
+
+
+def test_immigrant_series_use_free_days_flag_reviews_and_name_no_providers():
+    import re
+    series = {"envios-2027": "ENVIOS_2027", "credito-sin-ss-2027": "CREDITO_SIN_SS_2027",
+              "alertas-inmigrantes-2027": "ALERTAS_INMIGRANTES_2027"}
+    day_re = re.compile(r"^\| (\w+ \d+ \w+) \|")
+    taken = {}
+    for f in DS.glob("POSTING_PLAN*.md"):
+        days = {m.group(1) for r in f.read_text().splitlines() if (m := day_re.match(r))}
+        taken[f.name] = days
+    ours = {f"POSTING_PLAN_{n}.md" for n in series.values()}
+    others = set().union(*(d for name, d in taken.items() if name not in ours))
+    mine = [d for name in ours for d in taken[name]]
+    assert len(mine) == 20 and len(set(mine)) == 20 and not set(mine) & others
+    providers = ("remitly", "wise", "xoom", "western union", "moneygram", "ria ", "viamericas", "intermex", "paypal", "zelle")
+    for folder, name in series.items():
+        items = json.loads((DS / f"content-{folder}.json").read_text())
+        review = (DS / f"REVIEW_CHECKLIST_{name}.md").read_text()
+        for i in items:
+            s = i["script"]
+            text = " ".join([s["title"], s["caption"]] + [g["narration"] + " " + g["on_screen_text"] for g in s["segments"]]).lower()
+            assert s["title"] in review, i["key"]
+            if "itin" in text or folder != "envios-2027" and i["key"] != "a-prestamo-sin-ss":
+                assert any(c.startswith("ATTORNEY REVIEW") for c in s["claims_to_verify"]), i["key"]
+            if folder == "credito-sin-ss-2027":
+                assert any(c.startswith("CREDIT EXPERT REVIEW") for c in s["claims_to_verify"]) or i["key"] == "c-2-itin"
+            if folder == "envios-2027":
+                assert not any(p in text for p in providers), i["key"]
+            if folder == "alertas-inmigrantes-2027":
+                assert "notario" in s["caption"].lower() or i["key"] == "a-prestamo-sin-ss"
+
+
+def test_credit_lead_magnet_matches_its_source_and_is_on_the_site():
+    b = _load(DS / "credito" / "build_credito.py", "build_credito")
+    r = b.renderer()
+    r.check()
+    assert (DS / "GUIA_CREDITO_SIN_SS.md").read_text() == r.markdown_doc()
+    assert (DS / "REVIEW_CHECKLIST_CREDITO_SIN_SS_GUIA.md").read_text() == b.review_doc(r)
+    page = ROOT / "sites" / "dinero-simple" / "content" / "pages" / "credito-sin-seguro-social.md"
+    assert page.read_text() == b.site_page(r)
+    assert (ROOT / "sites" / "dinero-simple" / "static" / "downloads" / b.PDF_NAME).exists()
+    text = r.markdown_doc()
+    assert "CPN" in text and "notario" in text and "https://" not in text
+    for s in r.SECTIONS:
+        if "ITIN" in s["title"] + s["body"]:
+            assert f"{s['title']} · **ATTORNEY REVIEW**" in b.review_doc(r)

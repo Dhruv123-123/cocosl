@@ -1,0 +1,517 @@
+[
+ {
+  "key": "c-1-si-se-puede",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Part 1 of 6: you can build a US credit history without a Social Security number. Some banks, credit unions and card issuers accept an ITIN, and the credit bureaus can keep a file under your name, birth date, address and ITIN.",
+  "script": {
+   "title": "Crédito sin Seguro Social: sí se puede (1 de 6)",
+   "hook": "No tener Seguro Social no significa no poder tener crédito.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "No tener Seguro Social no significa no poder tener crédito.",
+     "on_screen_text": "Sin Seguro Social, ¿sin crédito? No",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a blank credit report turning into a filled one. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Algunos bancos, cooperativas de crédito y tarjetas aceptan el ITIN para abrir cuentas.",
+     "on_screen_text": "Algunos bancos y cooperativas aceptan el ITIN",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a credit union front door, no logo. No text, no logos, no real people."
+    },
+    {
+     "heading": "El reporte",
+     "narration": "Y las agencias de crédito pueden guardar tu historial con tu nombre, fecha de nacimiento, dirección y tu ITIN.",
+     "on_screen_text": "Tu historial va con tu nombre y tus datos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a credit file folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ojo",
+     "narration": "Ojo: el ITIN es solo para impuestos. No te da permiso de trabajo ni cambia tu situación migratoria.",
+     "on_screen_text": "El ITIN es solo para impuestos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a tax form with an ITIN box. No text, no logos, no real people."
+    },
+    {
+     "heading": "La serie",
+     "narration": "En seis partes te explico los pasos, cada jueves.",
+     "on_screen_text": "6 pasos, cada jueves",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a staircase with six steps. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y la guía gratis con todo está en el enlace de la bio.",
+     "on_screen_text": "Guía gratis en la bio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a PDF cover on a phone. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Crédito sin Seguro Social, parte 1 de 6: sí se puede.\n• Algunos bancos, cooperativas de crédito y tarjetas aceptan el ITIN.\n• Las agencias de crédito pueden guardar tu historial con tu nombre, fecha de nacimiento, dirección e ITIN.\nCada jueves, un paso.\n\nLa guía gratis 'Crédito sin Seguro Social' (PDF en español, con lista para imprimir) está en el enlace de la bio.\nEl ITIN es solo para impuestos: no da permiso de trabajo ni cambia tu situación migratoria. Para preguntas de inmigración, consulta a un abogado con licencia o a un representante acreditado por el DOJ, nunca a un notario. Información general, no es asesoría legal ni financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "creditosinseguro",
+    "itin",
+    "historialdecredito",
+    "dinerosimple",
+    "finanzasenespañol"
+   ],
+   "description": "Serie Crédito sin Seguro Social, parte 1: sí se puede construir crédito con ITIN.",
+   "thumbnail_text": "Crédito sin Seguro Social",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://www.irs.gov/es/individuals/individual-taxpayer-identification-number"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "CREDIT EXPERT REVIEW: a HUD-approved housing counselor, NFCC credit counselor or credit union lender confirms the credit facts in this piece",
+    "Some US banks, credit unions and card issuers accept an ITIN application (CFPB)",
+    "Credit bureaus can maintain a file without an SSN, matched on name, address and date of birth"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "c-2-itin",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Part 2: the ITIN itself. What it is (a 9-digit IRS tax number), who gets one (people who must file and can't get an SSN), how (Form W-7 with a tax return, in person at an IRS office by appointment, or through a Certifying Acceptance Agent), and that it expires if unused for 3 years.",
+  "script": {
+   "title": "Paso 1: el ITIN, qué es y cómo se pide (2 de 6)",
+   "hook": "El primer paso para tu crédito no es una tarjeta. Es un número.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "El primer paso para tu crédito no es una tarjeta. Es un número.",
+     "on_screen_text": "Paso 1: un número, no una tarjeta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a nine-digit number on a card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "El ITIN es un número de nueve dígitos que da el IRS para declarar impuestos.",
+     "on_screen_text": "ITIN: número del IRS de 9 dígitos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an IRS-style form, no logo. No text, no logos, no real people."
+    },
+    {
+     "heading": "Quién",
+     "narration": "Es para quien tiene que declarar y no puede tener número de Seguro Social.",
+     "on_screen_text": "Para quien declara y no puede tener Seguro Social",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a family at a kitchen table with papers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Se pide con el formulario W-7, junto con tu declaración: con cita en el IRS o con un Agente Certificador.",
+     "on_screen_text": "Formulario W-7, con tu declaración",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a W-7 form and a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Vence",
+     "narration": "Si no lo usas en una declaración tres años seguidos, vence. Renuévalo antes de declarar.",
+     "on_screen_text": "Si no lo usas 3 años, vence",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with three years crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y nunca lo tramites con un notario que promete arreglar papeles. El W-7 es gratis.",
+     "on_screen_text": "Nunca con un notario",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a 'no' sign over a notario storefront. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Crédito sin Seguro Social, parte 2 de 6: el ITIN.\n• Número de 9 dígitos del IRS para declarar impuestos.\n• Para quien declara y no puede tener Seguro Social.\n• Formulario W-7 con tu declaración: con cita en el IRS o con un Agente Certificador de Aceptación.\n• Vence si no lo usas en una declaración 3 años seguidos.\n• El formulario es gratis.\n\nLa guía gratis 'Crédito sin Seguro Social' (PDF en español, con lista para imprimir) está en el enlace de la bio.\nEl ITIN es solo para impuestos: no da permiso de trabajo ni cambia tu situación migratoria. Para preguntas de inmigración, consulta a un abogado con licencia o a un representante acreditado por el DOJ, nunca a un notario. Información general, no es asesoría legal ni financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "creditosinseguro",
+    "itin",
+    "historialdecredito",
+    "dinerosimple",
+    "finanzasenespañol"
+   ],
+   "description": "Serie Crédito sin Seguro Social, parte 2: el ITIN.",
+   "thumbnail_text": "Paso 1: el ITIN",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://www.irs.gov/es/individuals/individual-taxpayer-identification-number"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "ITIN: 9-digit IRS number for people who must file and are not eligible for an SSN; W-7 options: with return by mail, IRS Taxpayer Assistance Center by appointment, Certifying Acceptance Agent",
+    "ITINs not used on a federal return for 3 consecutive years expire Dec 31 of the third year",
+    "Form W-7 has no IRS fee (preparers and agents may charge for their help)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "c-3-cuenta",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Part 3: open a bank or credit union account with an ITIN and a passport or consular ID where accepted; check deposit insurance (FDIC or NCUA); this account is where you'll pay your card from.",
+  "script": {
+   "title": "Paso 2: una cuenta de banco con ITIN (3 de 6)",
+   "hook": "Antes del crédito, necesitas una cuenta. Y sí la puedes abrir sin Seguro Social.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Antes del crédito, necesitas una cuenta. Y sí la puedes abrir sin Seguro Social.",
+     "on_screen_text": "Paso 2: tu cuenta, sin Seguro Social",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a debit card next to a passport. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dónde",
+     "narration": "Pregunta en cooperativas de crédito y bancos de tu zona si aceptan ITIN.",
+     "on_screen_text": "Pregunta en cooperativas y bancos de tu zona",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a street with a credit union, no logo. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué llevar",
+     "narration": "Lleva tu ITIN, una identificación como pasaporte o matrícula consular, y prueba de domicilio.",
+     "on_screen_text": "ITIN + pasaporte o matrícula consular",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. documents laid out on a table. No text, no logos, no real people."
+    },
+    {
+     "heading": "Asegurada",
+     "narration": "Revisa que esté asegurada: que diga FDIC si es banco o NCUA si es cooperativa.",
+     "on_screen_text": "Que diga FDIC o NCUA",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a deposit insurance sign, generic. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Desde esta cuenta vas a pagar tu tarjeta cada mes. Es la base.",
+     "on_screen_text": "Desde aquí pagarás tu tarjeta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank app paying a card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "El jueves: tu primera tarjeta.",
+     "on_screen_text": "Jueves: tu primera tarjeta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with Thursday circled. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Crédito sin Seguro Social, parte 3 de 6: tu cuenta.\n• Pregunta en cooperativas de crédito y bancos si aceptan ITIN.\n• Lleva ITIN, pasaporte o matrícula consular y prueba de domicilio (cada lugar pide cosas distintas).\n• Revisa que esté asegurada: FDIC (banco) o NCUA (cooperativa).\n\nLa guía gratis 'Crédito sin Seguro Social' (PDF en español, con lista para imprimir) está en el enlace de la bio.\nEl ITIN es solo para impuestos: no da permiso de trabajo ni cambia tu situación migratoria. Para preguntas de inmigración, consulta a un abogado con licencia o a un representante acreditado por el DOJ, nunca a un notario. Información general, no es asesoría legal ni financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "creditosinseguro",
+    "itin",
+    "historialdecredito",
+    "dinerosimple",
+    "finanzasenespañol"
+   ],
+   "description": "Serie Crédito sin Seguro Social, parte 3: abrir una cuenta con ITIN.",
+   "thumbnail_text": "Paso 2: tu cuenta",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://www.irs.gov/es/individuals/individual-taxpayer-identification-number",
+    "https://www.fdic.gov/es",
+    "https://mycreditunion.gov/"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "CREDIT EXPERT REVIEW: a HUD-approved housing counselor, NFCC credit counselor or credit union lender confirms the credit facts in this piece",
+    "Some banks and credit unions accept an ITIN plus a foreign passport or consular ID (requirements vary by institution)",
+    "FDIC insures bank deposits; NCUA insures credit union deposits, up to $250,000 per depositor, per institution, per ownership category"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "c-4-asegurada",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Part 4: a secured credit card. You put down a deposit (often $200-$500) that becomes the limit; use it for one small bill, pay the full statement balance every month, and check it reports to all three bureaus.",
+  "script": {
+   "title": "Paso 3: la tarjeta asegurada (4 de 6)",
+   "hook": "La tarjeta más aburrida es la que mejor construye tu crédito.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "La tarjeta más aburrida es la que mejor construye tu crédito.",
+     "on_screen_text": "La tarjeta aburrida que construye crédito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a plain card on a table. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "Con una tarjeta asegurada dejas un depósito, por ejemplo doscientos dólares, y ese es tu límite.",
+     "on_screen_text": "Dejas un depósito: ese es tu límite",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. $200 going into a card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta",
+     "narration": "Antes de abrirla, pregunta si reporta a las tres agencias de crédito. Si no, no te sirve.",
+     "on_screen_text": "¿Reporta a las 3 agencias de crédito?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three folders labelled 1, 2, 3. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo usarla",
+     "narration": "Úsala para un solo gasto chico, como el teléfono.",
+     "on_screen_text": "Un solo gasto chico al mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone bill. No text, no logos, no real people."
+    },
+    {
+     "heading": "La regla",
+     "narration": "Y paga el total del estado de cuenta, siempre a tiempo. Así no pagas intereses.",
+     "on_screen_text": "Paga el total, siempre a tiempo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a check mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "El jueves: el préstamo que existe solo para construir crédito.",
+     "on_screen_text": "Jueves: el préstamo para crédito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with Thursday circled. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Crédito sin Seguro Social, parte 4 de 6: la tarjeta asegurada.\n• Dejas un depósito (por ejemplo $200) y ese es tu límite.\n• Pregunta si reporta a las 3 agencias de crédito.\n• Úsala para un gasto chico al mes.\n• Paga el total del estado de cuenta, a tiempo.\nOjo con tarjetas con cuota anual alta o cargos por 'mantenimiento'.\n\nLa guía gratis 'Crédito sin Seguro Social' (PDF en español, con lista para imprimir) está en el enlace de la bio.\nEl ITIN es solo para impuestos: no da permiso de trabajo ni cambia tu situación migratoria. Para preguntas de inmigración, consulta a un abogado con licencia o a un representante acreditado por el DOJ, nunca a un notario. Información general, no es asesoría legal ni financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "creditosinseguro",
+    "itin",
+    "historialdecredito",
+    "dinerosimple",
+    "finanzasenespañol"
+   ],
+   "description": "Serie Crédito sin Seguro Social, parte 4: la tarjeta asegurada.",
+   "thumbnail_text": "Paso 3: tarjeta asegurada",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://www.irs.gov/es/individuals/individual-taxpayer-identification-number"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "CREDIT EXPERT REVIEW: a HUD-approved housing counselor, NFCC credit counselor or credit union lender confirms the credit facts in this piece",
+    "A secured card's deposit usually equals the credit limit; some secured cards accept ITIN applications",
+    "Not every card reports to all three bureaus (Equifax, Experian, TransUnion)",
+    "Paying the full statement balance by the due date avoids interest on purchases"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "c-5-prestamo",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Part 5: a credit-builder loan from a credit union or community lender: the money is held in savings while you make small monthly payments, then released to you; each on-time payment builds history. Ask about fees and reporting.",
+  "script": {
+   "title": "Paso 4: el préstamo para construir crédito (5 de 6)",
+   "hook": "Hay un préstamo donde primero pagas tú y al final te dan el dinero.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Hay un préstamo donde primero pagas tú y al final te dan el dinero.",
+     "on_screen_text": "Un préstamo al revés",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a piggy bank filling up. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo funciona",
+     "narration": "Se llama préstamo para construir crédito. El dinero se queda guardado mientras haces pagos chicos cada mes.",
+     "on_screen_text": "El dinero se guarda mientras pagas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a locked savings box. No text, no logos, no real people."
+    },
+    {
+     "heading": "Al final",
+     "narration": "Al terminar, te lo dan. Y cada pago a tiempo quedó en tu historial.",
+     "on_screen_text": "Al terminar, el dinero es tuyo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the box opening. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dónde",
+     "narration": "Búscalo en cooperativas de crédito y prestamistas comunitarios. Muchos aceptan ITIN.",
+     "on_screen_text": "Cooperativas de crédito y prestamistas comunitarios",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a community lender front, no logo. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pregunta",
+     "narration": "Pregunta cuánto cuesta en total y si reporta a las tres agencias.",
+     "on_screen_text": "¿Cuánto cuesta y a quién reporta?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a checklist with two questions. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "El jueves, el último paso: cuidar tu puntaje.",
+     "on_screen_text": "Jueves: cómo cuidar tu puntaje",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with Thursday circled. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Crédito sin Seguro Social, parte 5 de 6: el préstamo para construir crédito.\n• El dinero se guarda mientras haces pagos chicos cada mes.\n• Al terminar, es tuyo, y cada pago a tiempo construyó tu historial.\n• Búscalo en cooperativas de crédito y prestamistas comunitarios.\n• Pregunta el costo total y si reporta a las 3 agencias.\n\nLa guía gratis 'Crédito sin Seguro Social' (PDF en español, con lista para imprimir) está en el enlace de la bio.\nEl ITIN es solo para impuestos: no da permiso de trabajo ni cambia tu situación migratoria. Para preguntas de inmigración, consulta a un abogado con licencia o a un representante acreditado por el DOJ, nunca a un notario. Información general, no es asesoría legal ni financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "creditosinseguro",
+    "itin",
+    "historialdecredito",
+    "dinerosimple",
+    "finanzasenespañol"
+   ],
+   "description": "Serie Crédito sin Seguro Social, parte 5: el préstamo para construir crédito.",
+   "thumbnail_text": "Paso 4: préstamo de crédito",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://www.irs.gov/es/individuals/individual-taxpayer-identification-number",
+    "https://www.cdfifund.gov/"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "CREDIT EXPERT REVIEW: a HUD-approved housing counselor, NFCC credit counselor or credit union lender confirms the credit facts in this piece",
+    "Credit-builder loans: funds held in a savings account or CD until the loan is repaid (CFPB)",
+    "Some credit unions and CDFIs offer credit-builder loans to ITIN holders"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "c-6-cuidar",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Part 6: keep the score growing: pay on time every month, use under 30% of the limit, don't open many accounts at once, and check your reports free at AnnualCreditReport.com (by mail or phone if the online check doesn't work without an SSN).",
+  "script": {
+   "title": "Paso 5: cómo cuidar tu nuevo crédito (6 de 6)",
+   "hook": "Ya tienes crédito. Estas tres reglas lo hacen crecer.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Ya tienes crédito. Estas tres reglas lo hacen crecer.",
+     "on_screen_text": "3 reglas para que crezca",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small plant growing. No text, no logos, no real people."
+    },
+    {
+     "heading": "Regla 1",
+     "narration": "Uno: paga a tiempo, cada mes. Es lo que más pesa.",
+     "on_screen_text": "Paga a tiempo, cada mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar full of check marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Regla 2",
+     "narration": "Dos: usa menos del treinta por ciento de tu límite. Con doscientos, menos de sesenta.",
+     "on_screen_text": "Usa menos del 30% del límite",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bar filled under 30%. No text, no logos, no real people."
+    },
+    {
+     "heading": "Regla 3",
+     "narration": "Tres: no abras muchas cuentas al mismo tiempo.",
+     "on_screen_text": "No abras muchas cuentas de golpe",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. several cards with a stop sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Revisa",
+     "narration": "Y revisa tus reportes gratis en AnnualCreditReport.com. Si en línea no funciona sin Seguro Social, pídelos por teléfono o por correo.",
+     "on_screen_text": "Reportes gratis: AnnualCreditReport.com",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a credit report on a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Toda la serie está en la guía gratis del enlace de la bio.",
+     "on_screen_text": "Toda la serie en una guía gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a PDF cover on a phone. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Crédito sin Seguro Social, parte 6 de 6: cuida tu nuevo crédito.\n1. Paga a tiempo, cada mes.\n2. Usa menos del 30% de tu límite (con $200, menos de $60).\n3. No abras muchas cuentas al mismo tiempo.\nRevisa tus reportes gratis en AnnualCreditReport.com o al 1-877-322-8228; si en línea no funciona sin Seguro Social, pídelos por teléfono o por correo.\n\nLa guía gratis 'Crédito sin Seguro Social' (PDF en español, con lista para imprimir) está en el enlace de la bio.\nEl ITIN es solo para impuestos: no da permiso de trabajo ni cambia tu situación migratoria. Para preguntas de inmigración, consulta a un abogado con licencia o a un representante acreditado por el DOJ, nunca a un notario. Información general, no es asesoría legal ni financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "creditosinseguro",
+    "itin",
+    "historialdecredito",
+    "dinerosimple",
+    "finanzasenespañol"
+   ],
+   "description": "Serie Crédito sin Seguro Social, parte 6: cuidar tu nuevo crédito.",
+   "thumbnail_text": "Paso 5: cuida tu crédito",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://www.irs.gov/es/individuals/individual-taxpayer-identification-number",
+    "https://www.annualcreditreport.com/"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "CREDIT EXPERT REVIEW: a HUD-approved housing counselor, NFCC credit counselor or credit union lender confirms the credit facts in this piece",
+    "Payment history is the biggest factor in FICO scores; utilization under 30% is common guidance",
+    "Free weekly reports at AnnualCreditReport.com; phone 1-877-322-8228; mail request form available",
+    "Check how ITIN holders can request reports (online identity checks may need an SSN)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "cc-del-itin-al-credito",
+  "format": "carousel",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Save-this summary of the series: the 5 steps from ITIN to a growing credit history on one carousel, with the warnings (no notarios, no 'credit repair' that charges up front, no loans that ask for a fee first) and the free guide.",
+  "script": {
+   "title": "Del ITIN al crédito en 5 pasos",
+   "hook": "Toda la serie en una sola publicación. Guárdala.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Toda la serie en una sola publicación. Guárdala.",
+     "on_screen_text": "Del ITIN al crédito: 5 pasos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a staircase with five steps. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 1",
+     "narration": "Paso uno: el ITIN, con el formulario W-7.",
+     "on_screen_text": "El ITIN (formulario W-7)",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a W-7 form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 2",
+     "narration": "Paso dos: una cuenta de banco o cooperativa asegurada.",
+     "on_screen_text": "Una cuenta asegurada con ITIN",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a debit card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 3",
+     "narration": "Paso tres: una tarjeta asegurada que reporte a las tres agencias.",
+     "on_screen_text": "Una tarjeta asegurada que reporte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a plain card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 4",
+     "narration": "Paso cuatro: un préstamo para construir crédito.",
+     "on_screen_text": "Un préstamo para construir crédito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a locked savings box. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 5",
+     "narration": "Paso cinco: paga a tiempo, usa menos del treinta por ciento y revisa tus reportes.",
+     "on_screen_text": "A tiempo · menos del 30% · revisa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a growing plant. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuidado",
+     "narration": "Cuidado: un préstamo o 'arreglo de crédito' que te cobra antes es una estafa.",
+     "on_screen_text": "Nadie cobra por adelantado por darte crédito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a red flag over a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Guía gratis",
+     "narration": "La guía completa, con lista para imprimir, está gratis en el enlace de la bio.",
+     "on_screen_text": "La guía completa, gratis en la bio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a PDF cover on a phone. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Del ITIN al crédito, en 5 pasos:\n1. El ITIN (W-7).\n2. Una cuenta asegurada que acepte ITIN.\n3. Una tarjeta asegurada que reporte a las 3 agencias.\n4. Un préstamo para construir crédito.\n5. Paga a tiempo, usa menos del 30% y revisa tus reportes.\nCuidado: si te cobran antes de darte un préstamo o por 'arreglar' tu crédito, es una estafa.\n\nLa guía gratis 'Crédito sin Seguro Social' (PDF en español, con lista para imprimir) está en el enlace de la bio.\nEl ITIN es solo para impuestos: no da permiso de trabajo ni cambia tu situación migratoria. Para preguntas de inmigración, consulta a un abogado con licencia o a un representante acreditado por el DOJ, nunca a un notario. Información general, no es asesoría legal ni financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "creditosinseguro",
+    "itin",
+    "historialdecredito",
+    "dinerosimple",
+    "finanzasenespañol"
+   ],
+   "description": "Resumen de la serie: del ITIN al crédito en 5 pasos.",
+   "thumbnail_text": "Del ITIN al crédito",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://www.irs.gov/es/individuals/individual-taxpayer-identification-number",
+    "https://consumidor.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "CREDIT EXPERT REVIEW: a HUD-approved housing counselor, NFCC credit counselor or credit union lender confirms the credit facts in this piece",
+    "Credit repair companies can't charge before they perform services (Credit Repair Organizations Act); legitimate lenders don't require an upfront fee to 'guarantee' a loan (FTC)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ }
+]

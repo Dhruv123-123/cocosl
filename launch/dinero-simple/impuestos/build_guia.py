@@ -22,7 +22,12 @@ HERE = Path(__file__).resolve().parent
 DS = HERE.parent
 ROOT = DS.parents[1]
 sys.path.insert(0, str(HERE))
+import guia as G  # noqa: E402
 from guia import ATTORNEY_NOTE, CHECKLIST_1PAGE, DEADLINE, INTRO, SECTIONS, SUBTITLE, TITLE  # noqa: E402
+
+# credito/build_credito.py renders another guide of the same shape through these functions; its FOOTER replaces this one.
+FOOTER = getattr(G, "FOOTER", "*Dinero Simple · Información general, no es asesoría fiscal ni legal. Hecho con ayuda de IA y "
+                 "revisado por personas. Cifras para el año fiscal 2026; confírmalas en irs.gov/es antes de declarar.*")
 
 SITE_URL = json.loads((ROOT / "sites" / "dinero-simple" / "site.json").read_text())["url"]
 DIST = HERE / "dist"
@@ -59,8 +64,7 @@ def markdown_doc() -> str:
     for h, s in zip(heads, SECTIONS):
         parts.append(f"## {h}\n\n" + s["body"].strip())
     parts.append("## Tu lista de una página\n\n" + "\n".join(f"- [ ] {c}" for c in CHECKLIST_1PAGE))
-    parts.append("---\n*Dinero Simple · Información general, no es asesoría fiscal ni legal. Hecho con ayuda de IA y "
-                 "revisado por personas. Cifras para el año fiscal 2026; confírmalas en irs.gov/es antes de declarar.*")
+    parts.append("---\n" + FOOTER)
     return "\n\n".join(parts) + "\n"
 
 

@@ -224,6 +224,15 @@
       ]
     },
     {
+      "name": "Guía gratis: Crédito sin Seguro Social",
+      "base": "site",
+      "path": "/credito-sin-seguro-social/",
+      "short": "Cómo construir tu historial de crédito con ITIN en cinco pasos, y las trampas que debes evitar. Con PDF y lista para imprimir.",
+      "posts": [
+        "cuenta-y-tarjeta-con-itin"
+      ]
+    },
+    {
       "name": "¿Es una estafa? Verificador gratis",
       "base": "scam_checker",
       "path": "/",

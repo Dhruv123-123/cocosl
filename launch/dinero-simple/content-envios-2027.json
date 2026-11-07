@@ -1,0 +1,422 @@
+[
+ {
+  "key": "e-dos-costos",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Series opener: every transfer has two costs, the fee you see and the exchange-rate markup you don't. Worked example: $300, a $3.99 fee and a rate 2% under the market rate cost about $10 in total, not $3.99.",
+  "script": {
+   "title": "Tu envío tiene dos costos, y uno está escondido",
+   "hook": "Cuando mandas dinero a casa pagas dos veces, y solo una sale en letras grandes.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Cuando mandas dinero a casa pagas dos veces, y solo una sale en letras grandes.",
+     "on_screen_text": "Pagas dos veces cada envío",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone showing a transfer screen with a small fee line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Costo 1",
+     "narration": "El primer costo es la comisión. Esa la ves: por ejemplo, tres noventa y nueve.",
+     "on_screen_text": "1. La comisión: la que sí ves",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with the fee circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Costo 2",
+     "narration": "El segundo está en el tipo de cambio. Si el mercado está a veinte y a ti te dan diecinueve sesenta, esa diferencia también la pagas tú.",
+     "on_screen_text": "2. El tipo de cambio: el que no ves",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two exchange rates side by side, one lower. No text, no logos, no real people."
+    },
+    {
+     "heading": "La cuenta",
+     "narration": "Con trescientos dólares, ese dos por ciento menos son unos seis dólares. En total pagas casi diez, no tres noventa y nueve.",
+     "on_screen_text": "$300: $3.99 + unos $6 en el cambio",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple sum on a notepad. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "Por eso no compares la comisión. Compara cuánto llega allá, con la misma cantidad y el mismo día.",
+     "on_screen_text": "Compara cuánto llega, no la comisión",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two receipts with the received amount highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Cada martes te enseño una parte. Guarda este video para tu próximo envío.",
+     "on_screen_text": "Cada martes: una parte de la serie",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with Tuesdays marked. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Cada envío tiene dos costos:\n1. La comisión (la ves).\n2. El margen en el tipo de cambio (no lo ves).\nEjemplo: $300 con $3.99 de comisión y un tipo de cambio 2% por debajo del mercado = unos $10 en total.\nCompara cuánto llega allá, no solo la comisión.\n\nLa calculadora de envíos gratis, en español, está en el enlace de la bio: escribes lo que te muestra cada servicio y te dice cuánto llega.\nEjemplo con números redondos. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "remesas",
+    "enviardinero",
+    "tipodecambio",
+    "dinerosimple",
+    "finanzasenespañol"
+   ],
+   "description": "Serie Mandar dinero a casa, parte 1: la comisión y el tipo de cambio.",
+   "thumbnail_text": "El costo escondido",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://remittanceprices.worldbank.org/"
+   ],
+   "claims_to_verify": [
+    "Example arithmetic: 2% of $300 = $6; $3.99 + $6 = $9.99",
+    "Providers must show the fee, exchange rate and amount received before you pay (CFPB Remittance Transfer Rule)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "ec-cuanto-llega",
+  "format": "carousel",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Save-this carousel: how to work out what really arrives in 4 steps (market rate, the rate you're offered, the fee, the amount received) with one worked example, then the calculator does it for you.",
+  "script": {
+   "title": "Cuánto llega de verdad: la cuenta en 4 pasos",
+   "hook": "Guárdala para tu próximo envío.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdala para tu próximo envío.",
+     "on_screen_text": "¿Cuánto llega de verdad? 4 pasos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone and a calculator on a table. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 1",
+     "narration": "Paso uno: busca el tipo de cambio del mercado de hoy. Es el punto de comparación.",
+     "on_screen_text": "Busca el tipo de cambio del mercado de hoy",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a search result showing a market rate. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 2",
+     "narration": "Paso dos: anota el que te ofrece el servicio, antes de pagar.",
+     "on_screen_text": "Anota el tipo de cambio que te ofrecen",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a transfer screen with the offered rate circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 3",
+     "narration": "Paso tres: suma la comisión, y cualquier cargo por pagar con tarjeta.",
+     "on_screen_text": "Suma la comisión",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with fee lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paso 4",
+     "narration": "Paso cuatro: mira la línea que dice cuánto recibe tu familia. Esa es la que importa.",
+     "on_screen_text": "Mira la línea 'monto a recibir'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the amount-received line highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "Ejemplo: trescientos dólares, mercado a veinte, te dan diecinueve sesenta y pagas tres noventa y nueve. Llegan 5,880 en vez de 6,000.",
+     "on_screen_text": "$300 · mercado 20.00 · te dan 19.60 · $3.99",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a worked example card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Más fácil",
+     "narration": "La calculadora gratis lo hace por ti y compara hasta cinco opciones.",
+     "on_screen_text": "La calculadora lo hace por ti",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the calculator on a phone screen. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Cuánto llega de verdad, en 4 pasos:\n1. Tipo de cambio del mercado hoy.\n2. Tipo de cambio que te ofrecen.\n3. Comisión (y cargos por tarjeta).\n4. La línea 'monto a recibir'.\nEjemplo: $300, mercado 20.00, te dan 19.60, comisión $3.99: llegan 5,880 en vez de 6,000.\n\nLa calculadora de envíos gratis, en español, está en el enlace de la bio: escribes lo que te muestra cada servicio y te dice cuánto llega.\nEjemplo con números redondos. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "remesas",
+    "enviardinero",
+    "tipodecambio",
+    "dinerosimple",
+    "finanzasenespañol"
+   ],
+   "description": "Cómo saber cuánto llega de verdad cuando mandas dinero.",
+   "thumbnail_text": "¿Cuánto llega?",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://remittanceprices.worldbank.org/"
+   ],
+   "claims_to_verify": [
+    "Example arithmetic: 300 x 20.00 = 6,000; 300 x 19.60 = 5,880 (the fee is paid on top of the $300)",
+    "The pre-payment disclosure must show the amount to be received (CFPB Remittance Transfer Rule)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "e-impuesto-1",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "The 1% federal tax on remittances paid in cash, money order or cashier's check (from Jan 1, 2026); transfers paid from a US bank account or with a US-issued debit or credit card are not taxed. Example: $300 in cash adds $3.",
+  "script": {
+   "title": "El impuesto de 1% a los envíos en efectivo",
+   "hook": "Desde enero de 2026, mandar dinero pagando en efectivo cuesta uno por ciento más.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Desde enero de 2026, mandar dinero pagando en efectivo cuesta uno por ciento más.",
+     "on_screen_text": "Envíos en efectivo: 1% más desde 2026",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. cash on a counter next to a transfer receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "Es un impuesto federal nuevo sobre los envíos al extranjero.",
+     "on_screen_text": "Un impuesto federal nuevo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a simple 'nuevo' label on a receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuándo aplica",
+     "narration": "Aplica si pagas el envío en efectivo, con giro postal o con cheque de caja.",
+     "on_screen_text": "Efectivo, giro postal o cheque de caja",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. cash, a money order and a cashier's check. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuándo no",
+     "narration": "No aplica si lo pagas desde tu cuenta de banco en Estados Unidos o con una tarjeta de débito o crédito de aquí.",
+     "on_screen_text": "No: desde tu cuenta o con tarjeta de EE. UU.",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank app and a debit card. No text, no logos, no real people."
+    },
+    {
+     "heading": "La cuenta",
+     "narration": "Con trescientos en efectivo son tres dólares más, cada vez.",
+     "on_screen_text": "$300 en efectivo = $3 más",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small sum on a notepad. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ojo",
+     "narration": "Ojo: con tarjeta de crédito algunos servicios cobran un cargo extra. Revisa el total antes de pagar.",
+     "on_screen_text": "Pagar con tarjeta de crédito puede costar más",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a warning sign over a credit card. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Impuesto federal de 1% a los envíos de dinero al extranjero (desde el 1 de enero de 2026):\n• Aplica si pagas en efectivo, giro postal o cheque de caja.\n• No aplica si pagas desde una cuenta de banco de EE. UU. o con tarjeta de débito o crédito de EE. UU.\nEjemplo: $300 en efectivo = $3 más.\nCon tarjeta de crédito, revisa si hay un cargo extra.\n\nLa calculadora de envíos gratis, en español, está en el enlace de la bio: escribes lo que te muestra cada servicio y te dice cuánto llega.\nInformación general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "remesas",
+    "enviardinero",
+    "tipodecambio",
+    "dinerosimple",
+    "finanzasenespañol"
+   ],
+   "description": "El impuesto de 1% a los envíos pagados en efectivo, explicado.",
+   "thumbnail_text": "1% si pagas en efectivo",
+   "sources": [
+    "https://www.irs.gov/es",
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "1% excise tax on remittance transfers paid in cash, money order, cashier's check or similar physical instrument, for transfers made after Dec 31, 2025 (One Big Beautiful Bill Act, IRC sec. 4475)",
+    "Exempt when funded from an account at a US financial institution or with a US-issued debit or credit card",
+    "Check for any IRS guidance issued since November 2026"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "e-mismo-dia",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "How to compare fairly: same amount, same day, same delivery method (bank deposit vs cash pickup), and look at the amount received; rates move daily and some services price pickup differently. No provider is named.",
+  "script": {
+   "title": "Para comparar envíos: mismo día, misma cantidad",
+   "hook": "Si comparas envíos en días distintos, la comparación no sirve.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si comparas envíos en días distintos, la comparación no sirve.",
+     "on_screen_text": "Comparar en días distintos no sirve",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two calendars with different dates crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Regla 1",
+     "narration": "El tipo de cambio se mueve todos los días. Compara el mismo día.",
+     "on_screen_text": "Mismo día, misma hora",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a rate ticker moving. No text, no logos, no real people."
+    },
+    {
+     "heading": "Regla 2",
+     "narration": "Usa la misma cantidad. A veces la comisión cambia según cuánto mandas.",
+     "on_screen_text": "Misma cantidad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the same $300 typed in three apps. No text, no logos, no real people."
+    },
+    {
+     "heading": "Regla 3",
+     "narration": "Y el mismo método: depósito a cuenta o recoger en efectivo pueden tener precios distintos.",
+     "on_screen_text": "Mismo método: depósito o recoger en efectivo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank icon and a cash pickup icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué ver",
+     "narration": "Luego mira una sola línea: cuánto recibe tu familia. Gana la que deja más allá.",
+     "on_screen_text": "Solo una línea: cuánto recibe tu familia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three receipts, amount received highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Anótalo en la calculadora gratis y guárdalo para el mes que viene.",
+     "on_screen_text": "Anótalo en la calculadora",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the calculator on a phone. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Para comparar envíos de verdad:\n1. El mismo día.\n2. La misma cantidad.\n3. El mismo método (depósito o efectivo).\n4. Mira solo cuánto recibe tu familia.\n\nLa calculadora de envíos gratis, en español, está en el enlace de la bio: escribes lo que te muestra cada servicio y te dice cuánto llega.\nEjemplo con números redondos. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "remesas",
+    "enviardinero",
+    "tipodecambio",
+    "dinerosimple",
+    "finanzasenespañol"
+   ],
+   "description": "Cómo comparar servicios de envío de dinero de forma justa.",
+   "thumbnail_text": "Compara bien",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://remittanceprices.worldbank.org/"
+   ],
+   "claims_to_verify": [
+    "Exchange rates offered change daily; fees can vary by amount, funding method and delivery method"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "e-tus-derechos",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Your rights under the CFPB Remittance Transfer Rule: a disclosure before you pay, a receipt, generally 30 minutes to cancel for a full refund, and 180 days to report an error; complaints go to the CFPB (in Spanish).",
+  "script": {
+   "title": "Mandaste dinero y algo salió mal: tus derechos",
+   "hook": "Si mandas dinero desde Estados Unidos, la ley te da derechos. Casi nadie los conoce.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si mandas dinero desde Estados Unidos, la ley te da derechos. Casi nadie los conoce.",
+     "on_screen_text": "Tus derechos al mandar dinero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with a shield icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Antes de pagar",
+     "narration": "Antes de pagar, te deben mostrar la comisión, el tipo de cambio y cuánto llega.",
+     "on_screen_text": "Te deben mostrar cuánto llega",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a disclosure screen. No text, no logos, no real people."
+    },
+    {
+     "heading": "30 minutos",
+     "narration": "En general tienes treinta minutos para cancelar y recibir todo tu dinero, si todavía no lo recogieron.",
+     "on_screen_text": "En general: 30 minutos para cancelar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a 30-minute timer. No text, no logos, no real people."
+    },
+    {
+     "heading": "Errores",
+     "narration": "Si llegó menos o no llegó, tienes ciento ochenta días para reportar el error al servicio.",
+     "on_screen_text": "180 días para reportar un error",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar counting days. No text, no logos, no real people."
+    },
+    {
+     "heading": "Si no responden",
+     "narration": "Si no te lo resuelven, pon una queja gratis ante el CFPB. Atienden en español.",
+     "on_screen_text": "Queja gratis al CFPB, en español",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone showing a complaint form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y guarda siempre tu recibo. Es tu prueba.",
+     "on_screen_text": "Guarda tu recibo siempre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt going into a wallet. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Tus derechos cuando mandas dinero desde EE. UU.:\n• Antes de pagar: la comisión, el tipo de cambio y cuánto llega.\n• En general, 30 minutos para cancelar con reembolso completo (si no lo han recogido).\n• 180 días para reportar un error.\n• Si no te lo resuelven: queja gratis en consumerfinance.gov/es o al 855-411-2372.\nGuarda tu recibo.\n\nInformación general, no es asesoría legal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "remesas",
+    "enviardinero",
+    "tipodecambio",
+    "dinerosimple",
+    "finanzasenespañol"
+   ],
+   "description": "Tus derechos cuando mandas dinero: cancelar, errores y quejas.",
+   "thumbnail_text": "Tus derechos al enviar",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "CFPB Remittance Transfer Rule (Reg. E subpart B): pre-payment disclosure, receipt, 30-minute cancellation right (generally), 180 days to report an error",
+    "CFPB phone 855-411-2372 offers Spanish; complaints at consumerfinance.gov/es"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "ec-cuanto-llega-mes",
+  "format": "carousel",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "The monthly 'cuánto llega' template: the same $300 sent the same day through three anonymised options (Opción A, B, C), typed from public prices on posting day; shows fee, rate and amount received, never ranks or names providers.",
+  "script": {
+   "title": "¿Cuánto llega este mes? Mismo envío, 3 opciones",
+   "hook": "Mandamos el mismo envío por tres opciones. Mira cuánto llega.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Mismo envío, mismo día, tres opciones. Mira cuánto llega.",
+     "on_screen_text": "Este mes: $300, el mismo día, 3 opciones",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. three phones side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Opción A",
+     "narration": "Opción A: comisión, tipo de cambio y cuánto llega.",
+     "on_screen_text": "Opción A: comisión · cambio · llega [LLENAR]",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. receipt card A. No text, no logos, no real people."
+    },
+    {
+     "heading": "Opción B",
+     "narration": "Opción B, igual.",
+     "on_screen_text": "Opción B: comisión · cambio · llega [LLENAR]",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. receipt card B. No text, no logos, no real people."
+    },
+    {
+     "heading": "Opción C",
+     "narration": "Opción C, igual.",
+     "on_screen_text": "Opción C: comisión · cambio · llega [LLENAR]",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. receipt card C. No text, no logos, no real people."
+    },
+    {
+     "heading": "La diferencia",
+     "narration": "La diferencia entre la que más deja y la que menos.",
+     "on_screen_text": "Diferencia entre la que más y menos deja [LLENAR]",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bar showing the gap. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tu turno",
+     "narration": "Los precios cambian cada día y según tu país. Haz tu propia cuenta antes de mandar.",
+     "on_screen_text": "Tus precios cambian: hazlo tú hoy",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the calculator on a phone. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "¿Cuánto llega este mes? El mismo envío de $300, el mismo día, por tres opciones (precios públicos tomados el [FECHA] a las [HORA], hacia [PAÍS], depósito a cuenta):\nOpción A: [LLENAR]\nOpción B: [LLENAR]\nOpción C: [LLENAR]\nLos precios cambian cada día. Haz tu propia cuenta antes de mandar.\n\nLa calculadora de envíos gratis, en español, está en el enlace de la bio: escribes lo que te muestra cada servicio y te dice cuánto llega.\nEjemplo con números redondos. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "remesas",
+    "enviardinero",
+    "tipodecambio",
+    "dinerosimple",
+    "finanzasenespañol"
+   ],
+   "description": "Plantilla mensual: el mismo envío por tres opciones, cuánto llega.",
+   "thumbnail_text": "¿Cuánto llega este mes?",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://remittanceprices.worldbank.org/"
+   ],
+   "claims_to_verify": [
+    "OPERATOR: fill every [LLENAR], [FECHA], [HORA] and [PAÍS] from each provider's public quote page on posting day; screenshot each quote and keep it",
+    "Options stay anonymised (A/B/C) on screen and in the caption: no provider is named or ranked",
+    "Re-post monthly with the same amount, corridor and delivery method"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ }
+]
