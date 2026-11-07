@@ -1,7 +1,7 @@
 import config from './lib/config.js';
 import { analyzeMessage } from './lib/scan.js';
 import { ES, translateResult } from './lib/i18n.js';
-import { checkPage } from './lib/site.js';
+import { checkPage, pageTextVerdict, explainerUrl } from './lib/site.js';
 
 const ext = globalThis.chrome?.runtime?.id ? globalThis.chrome : null; // null when opened as a plain page (store screenshots)
 const lang = ext?.i18n?.getUILanguage?.() || navigator.language || 'en';
@@ -19,6 +19,7 @@ const TEXT = {
     level: { high: ['High risk', 'Several signs of a scam. Don\'t click, reply or pay.'], medium: ['Be careful', 'Some warning signs. Check with the company directly.'], low: ['No common red flags', 'A good sign, not proof. Be careful if it asks for money or info.'] },
     page: { official: (h) => `<b>${h}</b> is an official site we know.`, low: (h) => `No look-alike signs on <b>${h}</b>.`, medium: (h) => `<b>${h}</b> has some warning signs:`, high: (h) => `<b>${h}</b> looks like a fake site:` },
     looksLike: 'Looks like:', whatToDo: 'What to do',
+    explainer: 'How this scam works', pageText: { high: 'The words on this page match a scam pattern:', medium: 'The words on this page have some warning signs:' },
   },
   es: {
     message: 'Pega un mensaje, correo o enlace', check: 'Revisar', warnings: 'Avísame con una señal roja en sitios que imitan a otros',
@@ -26,6 +27,7 @@ const TEXT = {
     level: ES.ui.level,
     page: { official: (h) => `<b>${h}</b> es un sitio oficial que conocemos.`, low: (h) => `No vemos señales de imitación en <b>${h}</b>.`, medium: (h) => `<b>${h}</b> tiene algunas señales de alerta:`, high: (h) => `<b>${h}</b> parece un sitio falso:` },
     looksLike: ES.ui.looksLike, whatToDo: ES.ui.whatToDo,
+    explainer: 'Cómo funciona esta estafa', pageText: { high: 'El texto de esta página coincide con una estafa:', medium: 'El texto de esta página tiene algunas señales de alerta:' },
   },
 };
 const T = es ? TEXT.es : TEXT.en;
@@ -41,6 +43,11 @@ $('#site').href = `${config.siteUrl}/${es ? 'es/' : ''}`;
 if (live(config.product.url)) $('#kit').innerHTML = ` · <a href="${esc(config.product.url)}" target="_blank" rel="noopener">${T.kit} (${esc(config.product.price)})</a>`;
 if (ext && !new URLSearchParams(location.search).has('window')) document.body.classList.add('ext');
 
+const explainerLink = (categoryId) => {
+  const u = explainerUrl(config.explainers, categoryId, es ? 'es' : 'en');
+  return u ? `<p class="explainer"><a href="${esc(u)}" target="_blank" rel="noopener">${T.explainer} →</a></p>` : '';
+};
+
 function render(r) {
   if (es) r = translateResult(r);
   const [title, sub] = T.level[r.level];
@@ -51,7 +58,7 @@ function render(r) {
       <p class="score">${esc(title)} <small>${r.score}/100</small></p>
       <p>${esc(sub)}${r.category && r.level !== 'low' ? ` ${T.looksLike} <b>${esc(r.category)}</b>.` : ''}</p></div>
     ${flags.length || linkIssues.length ? `<ul class="flags">${flags.map((s) => `<li><b>${esc(s.label)}</b> ${esc(s.advice)}</li>`).join('')}${linkIssues.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : ''}
-    <p class="h">${T.whatToDo}</p><ol>${r.steps.map((s) => `<li>${esc(s)}</li>`).join('')}</ol>`;
+    <p class="h">${T.whatToDo}</p><ol>${r.steps.map((s) => `<li>${esc(s)}</li>`).join('')}</ol>${explainerLink(r.level !== 'low' ? r.categoryId : null)}`;
   $('#result').hidden = false;
 }
 
@@ -75,8 +82,16 @@ async function showPage() {
   if (v.level === 'none') return;
   const issues = v.issues.map((i) => `<li>${esc(issueLabel(i))}</li>`).join('');
   $('#page').className = `page ${v.level}`;
-  $('#page').innerHTML = `<p>${T.page[v.level](esc(v.host))}</p>${issues ? `<ul>${issues}</ul>` : ''}`;
+  $('#page').innerHTML = `<p>${T.page[v.level](esc(v.host))}</p>${issues ? `<ul>${issues}</ul>` : ''}${v.level === 'high' || v.level === 'medium' ? explainerLink('lookalike') : ''}`;
   $('#page').hidden = false;
+  // The page's own words: read once, on this click only (activeTab), checked here, never stored or sent.
+  if (v.level === 'official' || !ext.scripting || !tab?.id) return;
+  const [res] = await ext.scripting.executeScript({ target: { tabId: tab.id }, func: () => (document.body ? document.body.innerText : '').slice(0, 20000) }).catch(() => []);
+  const t = pageTextVerdict(res?.result || '', tab.url);
+  if (t.level !== 'high' && t.level !== 'medium') return;
+  const tr = es ? translateResult({ score: t.score, level: t.level, signals: t.signals, links: [], senderIssues: [], steps: [], stepIds: [], categoryId: t.categoryId, category: '' }) : t;
+  if (v.level === 'low') $('#page').className = `page ${t.level}`;
+  $('#page').insertAdjacentHTML('beforeend', `<p class="page-text">${T.pageText[t.level]}</p><ul>${tr.signals.map((x) => `<li><b>${esc(x.label)}</b> <span class="quote">"${esc(x.evidence)}"</span></li>`).join('')}</ul>${explainerLink(t.categoryId)}`);
 }
 showPage().catch(() => {});
 

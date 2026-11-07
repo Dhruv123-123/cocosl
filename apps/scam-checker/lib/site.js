@@ -1,5 +1,5 @@
 // Website verdicts, shared by the link checker page and the browser extension. Pure functions so node can test them.
-import { analyzeUrl, parseHost } from './scan.js';
+import { analyzeUrl, parseHost, analyzeMessage } from './scan.js';
 
 // Big, legitimate hosts that contain a brand name but aren't that brand's site. The passive
 // warning must almost never fire on a real site, so these are skipped.
@@ -39,4 +39,35 @@ export function badgeFor(level) {
 export function menuText(info) {
   const raw = info.menuItemId === 'check-link' ? info.linkUrl : info.selectionText;
   return String(raw || '').trim().slice(0, 4000);
+}
+
+// Words on the page itself, checked only when the person opens the extension on that page.
+// A page needs pressure (a deadline, a threat, "keep this secret") plus a scam pattern to be flagged,
+// so ordinary shops and news pages with the word "urgent" stay quiet. Known official sites are skipped.
+const PRESSURE = ['urgency', 'threat', 'secrecy'];
+export function pageTextVerdict(text, url) {
+  const page = checkPage(url);
+  const host = page.host;
+  if (page.level === 'none' || page.level === 'official' || (host && onKnownOk(host))) return { level: 'none', host, signals: [], categoryId: null };
+  // Links in the page text are judged by the address bar check, not here.
+  const plain = String(text || '').slice(0, 20000).replace(/\bhttps?:\/\/\S+/gi, ' ');
+  const r = analyzeMessage(plain);
+  const signals = r.signals.filter((x) => x.id !== 'money-amount' && x.id !== 'generic-greeting');
+  const pressure = signals.some((x) => PRESSURE.includes(x.id));
+  const pattern = signals.some((x) => !PRESSURE.includes(x.id));
+  const level = pressure && pattern ? (r.score >= 60 ? 'high' : 'medium') : 'low';
+  return { level, host, signals: level === 'low' ? [] : signals.slice(0, 4), categoryId: level === 'low' ? null : r.categoryId, score: r.score };
+}
+
+/**
+ * The explainer for a scam type. explainers = { base, es?, map: { categoryId: slug | [enSlug, esSlug] } }.
+ * Returns a full URL or null.
+ */
+export function explainerUrl(explainers, categoryId, lang = 'en') {
+  if (!explainers || !categoryId) return null;
+  const slug = explainers.map?.[categoryId];
+  if (!slug) return null;
+  const es = lang === 'es' && Array.isArray(slug) && slug[1] && explainers.es;
+  const s = Array.isArray(slug) ? (es ? slug[1] : slug[0]) : slug;
+  return /^[a-z0-9-]+$/.test(s) ? `${es ? explainers.es : explainers.base}${s}/` : null;
 }

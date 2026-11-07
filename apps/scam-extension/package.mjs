@@ -1,5 +1,6 @@
 // Packs the extension into dist/<name>-<version>.zip for the Chrome Web Store upload.
-//   node scam-extension/package.mjs
+//   node scam-extension/package.mjs                       Scam Shield (this folder)
+//   node scam-extension/package.mjs build/scam-decoded    a branded build from build.mjs --brand
 // Plain zip writer (deflate via zlib) so there's nothing to install.
 import { readFileSync, writeFileSync, readdirSync, statSync, mkdirSync } from 'node:fs';
 import { join, dirname, relative, sep } from 'node:path';
@@ -7,7 +8,8 @@ import { fileURLToPath } from 'node:url';
 import { deflateRawSync } from 'node:zlib';
 
 const here = dirname(fileURLToPath(import.meta.url));
-const SKIP = new Set(['dist', 'test', 'build.mjs', 'package.mjs', 'render.mjs', 'icon.svg', 'STORE.md', 'README.md', '.gitignore', 'store-shots.mjs']);
+const root = process.argv[2] ? join(here, process.argv[2]) : here;
+const SKIP = new Set(['dist', 'build', 'brands', 'test', 'build.mjs', 'package.mjs', 'render.mjs', 'icon.svg', 'STORE.md', 'README.md', '.gitignore', 'store-shots.mjs']);
 
 const files = [];
 (function walk(dir) {
@@ -16,14 +18,14 @@ const files = [];
     const p = join(dir, f);
     if (statSync(p).isDirectory()) walk(p); else files.push(p);
   }
-})(here);
+})(root);
 
 const table = new Uint32Array(256).map((_, n) => { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1; return c >>> 0; });
 const crc32 = (buf) => { let c = 0xffffffff; for (const b of buf) c = table[(c ^ b) & 0xff] ^ (c >>> 8); return (c ^ 0xffffffff) >>> 0; };
 
 const locals = []; const centrals = []; let offset = 0;
 for (const file of files) {
-  const name = Buffer.from(relative(here, file).split(sep).join('/'));
+  const name = Buffer.from(relative(root, file).split(sep).join('/'));
   const data = readFileSync(file);
   const packed = deflateRawSync(data);
   const crc = crc32(data);
@@ -43,7 +45,7 @@ const cd = Buffer.concat(centrals);
 const end = Buffer.alloc(22);
 end.writeUInt32LE(0x06054b50, 0); end.writeUInt16LE(files.length, 8); end.writeUInt16LE(files.length, 10); end.writeUInt32LE(cd.length, 12); end.writeUInt32LE(offset, 16);
 
-const manifest = JSON.parse(readFileSync(join(here, 'manifest.json'), 'utf8'));
+const manifest = JSON.parse(readFileSync(join(root, 'manifest.json'), 'utf8'));
 const slug = manifest.short_name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 mkdirSync(join(here, 'dist'), { recursive: true });
 const out = join(here, 'dist', `${slug}-extension-${manifest.version}.zip`);

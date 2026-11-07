@@ -1,5 +1,10 @@
 # Publishing the Scam Shield extension
 
+A Scam Decoded build of the same extension (its own name, colours, icon and explainer links) is made with
+`node scam-extension/build.mjs --brand scam-decoded` into `build/scam-decoded/`; zip it with
+`node scam-extension/package.mjs build/scam-decoded`. Its listing draft is the "Scam Decoded extension: store
+listing draft" doc. Publish one brand or the other, not both: two near-identical listings can be rejected as spam.
+
 Everything below is ready to paste into the Chrome Web Store developer dashboard. Edge Add-ons takes the
 same zip and the same text. If the brand is renamed, run `node scam-checker/rename-brand.mjs ...` first:
 it rebuilds the extension with the new name.
@@ -59,6 +64,7 @@ Scam Shield is an educational tool. It looks for the patterns common scams use, 
 **Permission justifications:**
 - `contextMenus`: adds "Check this text/link with Scam Shield" to the right-click menu.
 - `activeTab`: when the user opens the extension, reads the current tab's address to say whether it looks like a fake site.
+- `scripting`: on that same click, reads the visible words of the current page once, to check them for scam patterns (pressure to pay plus gift cards, unpaid tolls and similar). Runs locally; nothing is stored or sent. No host permissions.
 - `storage`: saves one on/off setting for look-alike warnings.
 - `tabs` (optional, requested only when the user turns on look-alike warnings): reads each page's address so the extension can show a warning badge on look-alike sites. The check runs locally and nothing is stored or sent.
 
