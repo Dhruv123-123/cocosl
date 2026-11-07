@@ -45,5 +45,183 @@
     "plausible_domain": "moneymadesimple.netlify.app",
     "plausible_host": "https://plausible.io"
   },
-  "analytics_snippet": ""
+  "analytics_snippet": "",
+  "programs_note": "Comparison-page links: paste your approved affiliate URL into affiliate_url. Empty = link to the official site with no commission and no 'sponsored' label. Payout notes come from research/02-affiliate-programs.md; confirm in the network dashboard.",
+  "programs": {
+    "sofi": {
+      "name": "SoFi",
+      "site": "https://www.sofi.com/",
+      "affiliate_url": "",
+      "network": "Impact / direct",
+      "note": "$100-$150 per lead (confirm qualifying action)"
+    },
+    "cit": {
+      "name": "CIT Bank",
+      "site": "https://www.cit.com/",
+      "affiliate_url": "",
+      "network": "CJ",
+      "note": "~$100 per order"
+    },
+    "ally": {
+      "name": "Ally Bank",
+      "site": "https://www.ally.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": ""
+    },
+    "marcus": {
+      "name": "Marcus by Goldman Sachs",
+      "site": "https://www.marcus.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": ""
+    },
+    "capital_one": {
+      "name": "Capital One",
+      "site": "https://www.capitalone.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": ""
+    },
+    "rocket_money": {
+      "name": "Rocket Money",
+      "site": "https://www.rocketmoney.com/",
+      "affiliate_url": "",
+      "network": "Impact",
+      "note": "$4-$10 per action"
+    },
+    "ynab": {
+      "name": "YNAB",
+      "site": "https://www.ynab.com/",
+      "affiliate_url": "",
+      "network": "Direct (invite-only)",
+      "note": ""
+    },
+    "monarch": {
+      "name": "Monarch Money",
+      "site": "https://www.monarchmoney.com/",
+      "affiliate_url": "",
+      "network": "Impact",
+      "note": "not published"
+    },
+    "copilot": {
+      "name": "Copilot Money",
+      "site": "https://www.copilot.money/",
+      "affiliate_url": "",
+      "network": "",
+      "note": ""
+    },
+    "everydollar": {
+      "name": "EveryDollar",
+      "site": "https://www.everydollar.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": ""
+    },
+    "goodbudget": {
+      "name": "Goodbudget",
+      "site": "https://goodbudget.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": ""
+    },
+    "discover": {
+      "name": "Discover",
+      "site": "https://www.discover.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": ""
+    },
+    "chime": {
+      "name": "Chime",
+      "site": "https://www.chime.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": ""
+    },
+    "self": {
+      "name": "Self",
+      "site": "https://www.self.inc/",
+      "affiliate_url": "",
+      "network": "",
+      "note": ""
+    },
+    "betterment": {
+      "name": "Betterment",
+      "site": "https://www.betterment.com/",
+      "affiliate_url": "",
+      "network": "Impact",
+      "note": "$25-$1,250 tiered; SEC Marketing Rule applies"
+    },
+    "wealthfront": {
+      "name": "Wealthfront",
+      "site": "https://www.wealthfront.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": ""
+    },
+    "empower": {
+      "name": "Empower",
+      "site": "https://www.empower.com/",
+      "affiliate_url": "",
+      "network": "Impact",
+      "note": "~$115 per lead"
+    },
+    "acorns": {
+      "name": "Acorns",
+      "site": "https://www.acorns.com/",
+      "affiliate_url": "",
+      "network": "Impact",
+      "note": "~$10 per lead"
+    },
+    "schwab": {
+      "name": "Charles Schwab",
+      "site": "https://www.schwab.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": ""
+    },
+    "vanguard": {
+      "name": "Vanguard",
+      "site": "https://investor.vanguard.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": ""
+    },
+    "aura": {
+      "name": "Aura",
+      "site": "https://www.aura.com/",
+      "affiliate_url": "",
+      "network": "Impact",
+      "note": "$65 per enrollment"
+    },
+    "lifelock": {
+      "name": "LifeLock",
+      "site": "https://www.lifelock.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": ""
+    },
+    "identity_guard": {
+      "name": "Identity Guard",
+      "site": "https://www.identityguard.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": ""
+    },
+    "experian": {
+      "name": "Experian",
+      "site": "https://www.experian.com/",
+      "affiliate_url": "",
+      "network": "",
+      "note": ""
+    },
+    "nfcc": {
+      "name": "NFCC",
+      "site": "https://www.nfcc.org/",
+      "affiliate_url": "",
+      "network": "",
+      "note": ""
+    }
+  }
 }

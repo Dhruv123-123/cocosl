@@ -71,3 +71,30 @@ def test_plausible_analytics(tmp_path):
     assert "plausible-event-name=Product+Click" in prod
     off = _build(tmp_path / "off", "https://example.org", PLAUSIBLE_DOMAIN="")
     assert "plausible.io" not in (off / "index.html").read_text()
+
+
+def test_comparison_pages_affiliate_placeholders(tmp_path):
+    out = _build(tmp_path, "https://example.org")
+    pages = sorted(p.parent.name for p in (out / "compare").glob("*/index.html"))
+    assert len(pages) == 8
+    hysa = (out / "compare" / "best-high-yield-savings-accounts" / "index.html").read_text()
+    assert "Checked as of" in hysa and "Disclosure:" in hysa
+    # No affiliate URL configured yet: plain official link, no sponsored label, and the notice says so.
+    assert 'href="https://www.sofi.com/" rel="noopener nofollow"' in hysa
+    assert "earn anything from the companies" in hysa and 'rel="sponsored' not in hysa
+
+
+def test_comparison_page_names_paying_programs(tmp_path):
+    cfg = json.loads((SITE / "site.json").read_text())
+    cfg["programs"]["sofi"]["affiliate_url"] = "https://aff.example/sofi"
+    alt = tmp_path / "site"
+    import shutil
+    shutil.copytree(SITE, alt, ignore=shutil.ignore_patterns("public"))
+    (alt / "site.json").write_text(json.dumps(cfg))
+    out = tmp_path / "pub"
+    env = {**os.environ, "SITE_OUT": str(out), "SITE_URL": "https://example.org"}
+    env.pop("URL", None)
+    subprocess.run([sys.executable, str(alt / "build.py")], check=True, env=env, capture_output=True)
+    hysa = (out / "compare" / "best-high-yield-savings-accounts" / "index.html").read_text()
+    assert 'href="https://aff.example/sofi" rel="sponsored noopener" class="plausible-event-name=Affiliate+Click"' in hysa
+    assert "through links to: SoFi" in hysa

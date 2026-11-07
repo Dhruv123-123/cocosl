@@ -102,6 +102,8 @@ def inline(s: str) -> str:
 
     def link(m):
         text, href = m.group(1), m.group(2)
+        if href.startswith("aff:"):
+            return aff_link(href[4:], text)
         ext = href.startswith("http") and urlparse(href).netloc not in CFG["url"]
         rel = ' rel="noopener"' if ext else ""
         if "sponsored" in href or "/go/" in href:
@@ -113,6 +115,23 @@ def inline(s: str) -> str:
     s = re.sub(r"(?<![\w*])\*(?!\s)(.+?)(?<!\s)\*(?![\w*])", r"<em>\1</em>", s)
     s = re.sub(r"\x00(\d+)\x00", lambda m: codes[int(m.group(1))], s)
     return s
+
+
+AFF_USED: list[str] = []
+
+
+def aff_link(key: str, text: str) -> str:
+    """[text](aff:sofi) -> the program's affiliate URL from site.json once you're approved, otherwise its
+    plain official site (no commission, no 'sponsored' label). Unknown keys fail the build."""
+    progs = CFG.get("programs", {})
+    if key not in progs:
+        raise SystemExit(f"Unknown affiliate program 'aff:{key}'. Add it to site.json > programs.")
+    p = progs[key]
+    AFF_USED.append(key)
+    if p.get("affiliate_url"):
+        return (f'<a href="{esc(p["affiliate_url"])}" rel="sponsored noopener" '
+                f'class="plausible-event-name=Affiliate+Click" data-program="{esc(key)}">{text}</a>')
+    return f'<a href="{esc(p["site"])}" rel="noopener nofollow" data-program="{esc(key)}">{text}</a>'
 
 
 def slug_id(text: str) -> str:
@@ -336,7 +355,7 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
     full_title = title if CFG["name"] in title else f"{title} · {CFG['name']}"
     nav = "".join(
         f'<a href="{u(href)}"{" aria-current=page" if path.startswith(href) and href != "/" else ""}>{esc(t)}</a>'
-        for t, href in [("Articles", "/blog/"), ("Products", "/products/"), ("Free reset", "/free/"),
+        for t, href in [("Articles", "/blog/"), ("Compare", "/compare/"), ("Products", "/products/"), ("Free reset", "/free/"),
                         ("About", "/about/")])
     ld = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>'
                  for x in (jsonld or []))
@@ -482,6 +501,75 @@ def build() -> list[str]:
         write(path, layout(title=p.get("seo_title", p["title"]), description=p["description"], path=path,
                            body=body, og_type="article", jsonld=ld, image=p.get("image", "/img/og-default.png")))
         urls.append((path, p.get("updated", p["date"])))
+
+    # ---- comparison pages (affiliate)
+    comps = sorted(load_dir("compare"), key=lambda c: int(c.get("order", 99)))
+    for c in comps:
+        path = f"/compare/{c['slug']}/"
+        AFF_USED.clear()
+        body_html, toc = markdown(c["body"], shortcode_factory(products, f"compare-{c['slug']}"))
+        used = list(dict.fromkeys(AFF_USED))
+        earning = [CFG["programs"][k]["name"] for k in used if CFG["programs"][k].get("affiliate_url")]
+        if earning and c.get("compliance_review") == "required":
+            print(f"NOTE: /compare/{c['slug']}/ has paid adviser/broker links ({', '.join(earning)}). FINRA/SEC "
+                  "rules apply: get the firm's sign-off on this page before publishing (research/02-affiliate-programs.md).")
+        if earning:
+            who = ("We may earn a commission if you sign up through links to: " + ", ".join(earning) +
+                   ". Those links are marked as sponsored. It costs you nothing extra.")
+        else:
+            who = ("Right now we don't earn anything from the companies on this page. If we join their "
+                   "affiliate programs, this notice will name them.")
+        disclosure = f"""<div class="ftc"><p><strong>Disclosure:</strong> {esc(who)} Commissions never decide
+  what we recommend, and we include options that don't pay us. <a href="{u('/disclosures/')}">How we make money</a>.</p></div>"""
+        asof = f"""<p class="asof"><strong>Checked as of {esc(c['as_of'])}.</strong> Rates, fees and features change
+  often, sometimes weekly. Confirm the current terms on the provider's own site before you sign up.</p>"""
+        faq = extract_faq(c["body"])
+        toc_html = ('<nav class="toc" aria-label="On this page"><p>On this page</p><ol>' + "".join(
+            f'<li><a href="#{i}">{t}</a></li>' for i, t in toc) + "</ol></nav>") if len(toc) >= 3 else ""
+        ld = [{"@context": "https://schema.org", "@type": "Article", "headline": c["title"],
+               "description": c["description"], "datePublished": c["date"],
+               "dateModified": c.get("updated", c["date"]), "mainEntityOfPage": absu(path),
+               "image": absu("/img/og-default.png"),
+               "author": {"@type": "Organization", "name": CFG["name"], "url": CFG["url"] + "/"},
+               "publisher": org_ld()}]
+        if faq:
+            ld.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+                {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]})
+        sources = ""
+        if c.get("sources"):
+            sources = '<section class="sources"><h2>Sources</h2><ul>' + "".join(
+                f'<li><a href="{esc(s)}" rel="noopener">{esc(urlparse(s).netloc + urlparse(s).path)}</a></li>'
+                for s in c["sources"]) + "</ul></section>"
+        body = f"""<article class="wrap article compare">
+  <p class="crumbs"><a href="{u('/')}">Home</a> / <a href="{u('/compare/')}">Comparisons</a></p>
+  <h1>{esc(c['title'])}</h1>
+  <p class="dek">{esc(c['description'])}</p>
+  {disclosure}
+  {asof}
+  {toc_html}
+  <div class="prose">
+{body_html}
+  </div>
+  {sources}
+  <p class="disclaimer">{esc(CFG['disclaimer'])}</p>
+  {magnet_box(f"compare-{c['slug']}-end")}
+</article>"""
+        write(path, layout(title=c.get("seo_title", c["title"]), description=c["description"], path=path,
+                           body=body, og_type="article", jsonld=ld))
+        urls.append((path, c.get("updated", c["date"])))
+    if comps:
+        cards = "".join(f"""<li class="post"><p class="post-pillar">Comparison · checked {esc(c['as_of'])}</p>
+<h2><a href="{u(f"/compare/{c['slug']}/")}">{esc(c['title'])}</a></h2><p>{esc(c['description'])}</p></li>""" for c in comps)
+        write("/compare/", layout(
+            title="Honest comparisons: savings accounts, budgeting apps, cards and more", path="/compare/",
+            description="Side-by-side comparisons of savings accounts, budgeting apps, credit-builder cards, robo-advisors "
+                        "and more, with what each costs and who it's not for.",
+            body=f"""<section class="wrap">
+  <h1>Comparisons</h1>
+  <p class="dek">Side-by-side tables, what each option costs, and who it's <em>not</em> for. Some links are affiliate links; every page says which.</p>
+  <ul class="posts">{cards}</ul>
+</section>"""))
+        urls.append(("/compare/", comps[0]["date"]))
 
     # ---- blog index (+ one page per pillar)
     def post_list(items):
@@ -635,6 +723,11 @@ def build() -> list[str]:
     pillar_cards = "".join(
         f'<a class="pillar" href="{u(f"/blog/{k}/")}"><span class="pillar-n">{len([x for x in posts if x.get("pillar") == k])} articles</span><strong>{esc(v)}</strong></a>'
         for k, v in pillars.items())
+    compare_home = ""
+    if comps:
+        compare_home = ('<section class="wrap"><h2 class="section-h">Compare before you sign up</h2><p class="chips">' +
+                        "".join(f'<a class="chip" href="{u(f"/compare/{c["slug"]}/")}">{esc(c.get("short", c["title"].split(":")[0]))}</a>'
+                                for c in comps) + "</p></section>")
     home_ld = [org_ld(), {"@context": "https://schema.org", "@type": "WebSite", "name": CFG["name"],
                           "url": CFG["url"] + "/"}]
     write("/", layout(
@@ -660,6 +753,7 @@ def build() -> list[str]:
   <ul class="posts grid">{latest}</ul>
   <p><a class="btn ghost" href="{u('/blog/')}">All articles</a></p>
 </section>
+{compare_home}
 <section class="band">
   <div class="wrap">
     <h2 class="section-h">The tools</h2>

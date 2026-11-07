@@ -120,6 +120,23 @@ Tip: add a rule that skips emails 5, 9 and the product line of 10 for people who
 - [ ] Proofread the facts: every article lists its sources. Contribution limits and rates change; re-check
       the IRS limits each November.
 
+## Comparison pages (affiliate)
+
+`content/compare/` holds 8 comparison pages at `/compare/` (high-yield savings, budgeting apps, credit-builder
+cards, robo-advisors, bill negotiation, identity theft protection, balance transfer cards, Rocket Money vs YNAB
+vs Monarch). Each has a side-by-side table, an FTC disclosure box at the top, and a "Checked as of" date with
+a note to verify rates. Update `as_of` whenever you re-check a page.
+
+Links are written as `[text](aff:sofi)`. The key points to `site.json` > `programs`:
+
+- `affiliate_url` empty (now): the link goes to the provider's official site, with no commission and no
+  "sponsored" label, and the disclosure says we earn nothing from the page.
+- Paste your approved link into `affiliate_url`: the link becomes `rel="sponsored"`, sends a Plausible
+  `Affiliate Click`, and the disclosure names that company automatically.
+- Payout notes from `research/02-affiliate-programs.md` are kept beside each program for reference.
+- `compliance_review: required` (robo-advisors): the build prints a reminder when a broker/adviser link
+  is paid, because FINRA/SEC rules mean the firm may need to approve the page first.
+
 ## Everyday edits
 
 - **New article:** copy any file in `content/blog/`, change the front matter (`title`, `description`, `date`,

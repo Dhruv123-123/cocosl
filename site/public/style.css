@@ -148,6 +148,12 @@ th{background:var(--tint)}
 .related{padding-left:20px}
 .related li{margin:6px 0;font-size:18px}
 
+.ftc{background:var(--gold-t);border:1px solid #ecd9a8;border-radius:12px;padding:10px 16px;max-width:var(--prose);font-size:15px;margin:8px 0}
+.ftc p{margin:0}
+.asof{font-size:15px;color:var(--muted);max-width:var(--prose)}
+.compare .table table{font-size:15px}
+.compare .table td:first-child{font-weight:700}
+
 /* lead magnet box */
 .magnet{display:grid;grid-template-columns:150px 1fr;gap:24px;align-items:center;background:var(--ink);color:var(--paper);
   border-radius:20px;padding:24px;margin:40px 0;max-width:820px}
