@@ -236,6 +236,15 @@ def cmd_new_brand(args):
     print(f"Wrote {path}. Edit it, then: factory ideas generate --brand {args.slug or slug}")
 
 
+def cmd_report(args):
+    from .reports import save_report, to_markdown, weekly_report
+    f = _factory(args)
+    if args.save:
+        print(save_report(f))
+    else:
+        print(to_markdown(weekly_report(f)))
+
+
 def cmd_serve(args):
     import uvicorn
     from .web.app import create_app
@@ -373,6 +382,10 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--platform", action="append")
     s.add_argument("--force", action="store_true")
     s.set_defaults(func=cmd_new_brand)
+
+    s = sub.add_parser("report", help="weekly business report: money, content, funnel, pipeline, next actions")
+    s.add_argument("--save", action="store_true", help="write to output/reports/")
+    s.set_defaults(func=cmd_report)
 
     s = sub.add_parser("serve", help="run the dashboard")
     s.add_argument("--host", default="127.0.0.1")

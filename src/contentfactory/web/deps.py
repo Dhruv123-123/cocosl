@@ -31,6 +31,7 @@ NAV = [
     ("Clients", "/business/clients"),
     ("Products", "/business/products"),
     ("Funnel", "/funnel"),
+    ("Report", "/report"),
     ("Settings", "/settings"),
 ]
 
