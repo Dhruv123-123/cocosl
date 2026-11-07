@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Today{% endblock %}
+{% block content %}
+<div class="page-head">
+  <div><h1>Today</h1><p class="muted">Everything that needs you, in one place · {{ now }}</p></div>
+</div>
+
+<div class="banner {{ {'green': 'banner-info', 'yellow': 'banner-warn', 'red': 'banner-block'}[launch.status] }}">
+  <strong>Launch check: {{ launch.status|upper }}</strong> ·
+  {{ {'green': 'everything scheduled is ready to go out.', 'yellow': 'fine for dry run; fix the yellow items before going live.', 'red': 'fix the red items before anything goes out.'}[launch.status] }}
+  {% if launch.findings %}
+  <details class="mt"><summary>{{ launch.findings|length }} item(s)</summary><ul>
+    {% for f in launch.findings|sort(attribute='level', reverse=True) %}<li><strong>{{ f.level }}</strong> · {{ f.brand }} · {{ f.where }}: {{ f.message }}</li>{% endfor %}
+  </ul></details>
+  {% endif %}
+</div>
+
+<div class="grid grid-2">
+  <div class="card">
+    <div class="card-head"><h2>Review queue</h2><a class="btn btn-sm" href="/review">Open review</a></div>
+    {% if review %}<ul class="list">
+      {% for p in review[:10] %}<li><span class="grow"><a href="/posts/{{ p.id }}">{{ p.title or 'Post #' ~ p.id }}</a>
+        <span class="small muted">{{ p.brand }} · {{ p.format }}</span></span><span class="small {{ 'muted' if p.status == 'in_review' }}" {% if p.status == 'blocked' %}style="color:var(--block)"{% endif %}>{{ p.status }}</span></li>{% endfor %}
+    </ul>{% if review|length > 10 %}<p class="small muted">and {{ review|length - 10 }} more</p>{% endif %}
+    {% else %}<p class="muted">Nothing waiting for review.</p>{% endif %}
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h2>Recordings to do</h2></div>
+    {% if recordings %}<ul class="list">
+      {% for t in recordings %}<li><span class="grow"><a href="/posts/{{ t.post_id }}">{{ t.title }}</a>
+        <span class="small muted">{{ t.brand }} · {{ t.format }} · {{ (t.publish_at[:16]|replace('T', ' ') ~ ' UTC') if t.publish_at else 'not scheduled' }}</span>
+        <br><span class="small">{{ t.needs|join(' · ') }}</span></span></li>{% endfor %}
+    </ul>{% else %}<p class="muted">Nothing waiting on your voice or a screen recording.</p>{% endif %}
+  </div>
+</div>
+
+<div class="card section">
+  <div class="card-head"><h2>Next 7 days, all brands</h2><a class="btn btn-sm" href="/calendar">Full calendar</a></div>
+  {% if problems %}<div class="banner banner-warn"><ul>{% for p in problems %}<li>{{ p }}</li>{% endfor %}</ul></div>{% endif %}
+  {% if calendar %}
+  <table class="table small"><thead><tr><th>When (UTC)</th><th>Brand</th><th>Platform</th><th>Post</th><th></th></tr></thead><tbody>
+    {% for r in calendar %}<tr>
+      <td class="mono">{{ r.at.strftime('%a %d %b %H:%M') }}</td><td>{{ r.brand }}</td><td>{{ r.platform }} · {{ r.format }}</td>
+      <td><a href="/posts/{{ r.post_id }}">{{ r.title }}</a></td>
+      <td>{% if r.flags %}<span style="color:var(--warn)">{{ r.flags|join('; ') }}</span>{% else %}{{ r.status }}{% endif %}</td></tr>{% endfor %}
+  </tbody></table>
+  {% else %}<p class="muted">Nothing scheduled in the next 7 days.</p>{% endif %}
+</div>
+{% endblock %}

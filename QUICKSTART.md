@@ -43,6 +43,8 @@ factory launch-check
 | You want to | Run |
 |---|---|
 | See every brand's schedule in your calendar app | `factory calendar --export output/calendar` (open `calendar.ics`) |
+| See calendar, review queue, recordings and launch check on one page | `factory ui` (opens http://127.0.0.1:8000/today, this computer only) |
+| Add another brand in 5 minutes | `factory brand new rent-smart --name "Rent Smart" --niche "money for renters" --import` |
 | Know what's waiting on you (voice, screen recordings) | `factory recordings` |
 | Use your own narration on a video | `factory voice <post id> take.m4a` |
 | Check that every real link answers | `factory launch-check --online` |

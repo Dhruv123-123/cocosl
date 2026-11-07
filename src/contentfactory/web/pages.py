@@ -120,6 +120,26 @@ def overview(request: Request, factory: Factory = Depends(get_factory)) -> HTMLR
     )
 
 
+@router.get("/today")
+def today(request: Request, factory: Factory = Depends(get_factory)) -> HTMLResponse:
+    """Calendar, review queue, recordings to do and the launch check on one page."""
+    from datetime import datetime, timezone
+
+    from ..launch_check import Report
+    from ..launch_check import run as launch_run
+    from ..planner import entries, flag, recordings
+    rows = entries(factory, 7)
+    problems = flag(factory, rows)
+    try:
+        launch = launch_run(factory)
+    except Exception as e:  # the page must still load
+        launch = Report()
+        launch.add("red", "-", "launch check", f"couldn't run: {e}")
+    return render(request, "today.html", calendar=rows, problems=problems, review=queries.review_queue(factory),
+                  recordings=recordings(factory), launch=launch,
+                  now=datetime.now(timezone.utc).strftime("%a %d %b %Y, %H:%M UTC"))
+
+
 def _ops(factory: Factory) -> dict | None:
     try:
         from ..health import system_status

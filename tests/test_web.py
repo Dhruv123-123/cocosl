@@ -120,7 +120,7 @@ def client(factory) -> TestClient:
 
 # --------------------------------------------------------------------------- pages
 @pytest.mark.parametrize("path", ["/", "/ideas", f"/ideas?brand={BRAND}&show_rejected=1", "/review",
-                                  "/calendar", "/published", "/settings"])
+                                  "/calendar", "/published", "/settings", "/today"])
 def test_pages_render(client, path):
     r = client.get(path)
     assert r.status_code == 200, r.text[:500]

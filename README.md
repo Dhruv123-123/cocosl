@@ -68,6 +68,9 @@ factory preflight --scheduled               # check queued media against each pl
 factory cleanup --older-than 60 [--yes]     # free disk from posts live everywhere 60+ days (lists unless --yes)
 factory voice 12 take.m4a                   # your own narration for post 12 (one take, or one file per line); re-renders it
 factory recordings                           # posts waiting on your voice or a screen recording, soonest first
+factory ui                                   # one local page (127.0.0.1 only): calendar, review queue, recordings, launch check
+factory brand new <slug> --name ... --import  # scaffold a brand: YAML, caps, voice/footage folders, 3 sample posts
+factory brand remove <slug> --yes            # undo a scaffold (refuses if anything is scheduled or published)
 factory launch-check [--online]             # red/yellow/green: links, UTM tags, placeholders, disclosures, caption limits
 factory stats import --brand <slug> *.csv   # YouTube Studio / TikTok / Plausible exports → weekly scorecard (`factory stats`)
 factory repurpose 12 --text-only              # blog post, newsletter section, 3 pins and a thread as drafts from a published long video
