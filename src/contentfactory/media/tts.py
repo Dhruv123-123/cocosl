@@ -471,7 +471,7 @@ def human_voice_source(settings: Settings, brand: BrandProfile, post_id) -> Path
     return None
 
 
-def _to_wav(src: Path, dst: Path, start: float | None = None, length: float | None = None) -> Path:
+def _audio_to_wav(src: Path, dst: Path, start: float | None = None, length: float | None = None) -> Path:
     args = []
     if start is not None:
         args += ["-ss", f"{start:.3f}"]
@@ -550,9 +550,9 @@ def human_voice(settings: Settings, brand: BrandProfile, post_id, texts: list[st
         if len(files) != len(texts):
             raise MediaError(f"{src} has {len(files)} recording(s) but the script has {len(texts)} lines "
                              "(including the closing CTA); record one file per line or a single take")
-        paths = [_to_wav(f, out_dir / f"seg-{i:02d}.wav") for i, f in enumerate(files)]
+        paths = [_audio_to_wav(f, out_dir / f"seg-{i:02d}.wav") for i, f in enumerate(files)]
     else:
-        whole = _to_wav(src, out_dir / "take.wav")
+        whole = _audio_to_wav(src, out_dir / "take.wav")
         total = probe(whole)["duration"]
         weights = [max(1, len(t.split())) for t in texts]
         targets, acc = [], 0
@@ -561,7 +561,7 @@ def human_voice(settings: Settings, brand: BrandProfile, post_id, texts: list[st
             targets.append(total * acc / sum(weights))
         cuts = _match_pauses(targets, _quiet_runs(whole))
         bounds = [0.0, *cuts, total]
-        paths = [_to_wav(whole, out_dir / f"seg-{i:02d}.wav", bounds[i], max(0.2, bounds[i + 1] - bounds[i]))
+        paths = [_audio_to_wav(whole, out_dir / f"seg-{i:02d}.wav", bounds[i], max(0.2, bounds[i + 1] - bounds[i]))
                  for i in range(len(texts))]
         notes.append("single take split at pauses")
     for p in paths:
