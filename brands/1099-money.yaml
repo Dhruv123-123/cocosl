@@ -90,6 +90,7 @@ products:
   - {name: "The Quarterly Tax Tracker (guide + spreadsheet)", url: "https://example.gumroad.com/l/quarterly-tax-tracker", price: 15}
   - {name: "The Rate & Contract Kit (rate calculator + proposal, contract, invoice templates)", url: "https://example.gumroad.com/l/rate-contract-kit", price: 29}
   - {name: "The Freelancer Money Bundle (tracker + kit + client email scripts)", url: "https://example.gumroad.com/l/freelancer-money-bundle", price: 49}
-ai_disclosure: "Visuals and voice made with AI tools. Script written and fact-checked by a human. Educational only, not tax, legal or financial advice."
+ai_disclosure: "Visuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person. Educational only, not tax, legal or financial advice."
+scripts_by: ai_assisted   # or person, if you write the scripts yourself (then you may say so in ai_disclosure)
 realistic_synthetic_media: false
 require_human_review: true
