@@ -18,7 +18,7 @@ Output per product: <product>/out/<brand slug>/<unit>-<n>-<issue id>/ with
     handout.pdf              large-print, full-content handout (products that list it)
     brief.txt                staff / manager / group-leader notes (not in the "essentials" tier)
     sources.md               every claim's source
-plus <product>/out/<brand slug>.zip, out/sales-sheet.pdf and out/COMPLIANCE_NOTE.pdf.
+plus <product>/out/<brand slug>.zip, out/sales-sheet.pdf, out/roi.pdf (if roi.html exists) and out/COMPLIANCE_NOTE.pdf.
 
 Every {{TOKEN}} in a client pack must be filled, or the build fails. PNG/PDF use render.mjs
 (Node + Playwright); without them the HTML pages are kept and images are skipped.
@@ -388,8 +388,9 @@ def sales_doc_jobs(pdir: Path) -> list[dict]:
     out = pdir / "out"
     out.mkdir(exist_ok=True)
     jobs = []
-    if (pdir / "sales-sheet.html").exists():
-        jobs.append({"html": str(pdir / "sales-sheet.html"), "out": str(out / "sales-sheet.pdf"), "w": 816, "h": 1056})
+    for name in ("sales-sheet", "roi"):
+        if (pdir / f"{name}.html").exists():
+            jobs.append({"html": str(pdir / f"{name}.html"), "out": str(out / f"{name}.pdf"), "w": 816, "h": 1056})
     if (pdir / "COMPLIANCE_NOTE.md").exists() and shutil.which("pandoc"):
         body = subprocess.run(["pandoc", str(pdir / "COMPLIANCE_NOTE.md"), "-f", "gfm", "-t", "html"],
                               check=True, capture_output=True, text=True).stdout

@@ -18,6 +18,7 @@ Nothing was bought.
 | `brands/example.json` | A **fictional** credit union ("Sample Community Credit Union", 555 phone, example.org) used for the sample pack. |
 | `brands/placeholders.json` | Renders the pack with `{{TOKENS}}` visible, for compliance teams. |
 | `sales-sheet.html` | One-page sales sheet with pricing tiers (`build.py` renders it to `out/sales-sheet.pdf`, plus `out/COMPLIANCE_NOTE.pdf` via pandoc). |
+| `roi.html` | ROI one-pager: cost vs writing it in-house, break-even, fill-in table for their own numbers (renders to `out/roi.pdf`). |
 | `COMPLIANCE_NOTE.md` | No legal advice; sourcing rules; NCUA advertising, UDAAP, Reg E, CAN-SPAM, GLBA/vendor, accessibility, social, SMS; fact-check list. |
 | `COLD_EMAILS.md` | Email 1 (two versions), contact form, LinkedIn note, 2 follow-ups, final note, and replies to 9 common answers. |
 | `PROSPECTS.csv` + `PROSPECTS.md` | 30 credit unions in MT/ID/OR/WA from NCUA call report data (Q2 2026). |

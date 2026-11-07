@@ -6,7 +6,7 @@
 |---|---|---|
 | Montana Area Agencies on Aging (Regions I, II, IV to IX) | 8 | Montana DPHHS Area Agencies on Aging page (websites as listed there) |
 | Idaho senior centers in larger towns | 10 | Idaho Commission on Aging's public senior center list (2024 PDF), with the phone numbers it lists |
-| Public libraries in Idaho and Montana | 12 | Named from general knowledge: **confirm each on its own website** before writing |
+| Public libraries in Idaho and Montana | 12 | Each checked by web search on 2026-11-07 (own site, Idaho Commission for Libraries directory, or local news). All 12 exist. One name was corrected: **Billings Public Library** (not Parmly Billings, which is now a museum). Websites were found for 8; 4 (Ada Community, Marshall, Community Library Network, Missoula) still need their site looked up. |
 
 **Why these:** an Area Agency on Aging buys once for a whole region (System tier) and has senior
 centers to pass it to. Senior centers and libraries run regular groups for older adults and always

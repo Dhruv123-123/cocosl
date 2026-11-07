@@ -1,0 +1,16 @@
+# Netlify: drag the dist/ folder onto app.netlify.com/drop, or connect the repo with base "launch/b2b/site"
+# and publish "dist" after running build_site.py locally (Netlify's build image has no Playwright for the PNG/PDF step).
+[build]
+  publish = "dist"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+
+[[headers]]
+  for = "/downloads/*"
+  [headers.values]
+    Content-Disposition = "attachment"

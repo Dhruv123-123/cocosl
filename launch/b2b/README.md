@@ -28,5 +28,20 @@ python3 build.py employer-wellness --brand employer-wellness/clients/acme.json -
 
 `build.py` uses only the Python standard library; PNG and PDF need Node + Playwright (`render.mjs`)
 and the compliance PDF needs pandoc. A client pack fails to build if any `{{TOKEN}}` is unfilled.
-`*/out/` and `*/clients/` are gitignored. Rendered copies are in project files under
+`*/out/`, `*/clients/` and `site/dist/` are gitignored. The credit union folder also has `roi.html`, rendered to `out/roi.pdf`. Rendered copies are in project files under
 `content-factory/b2b/`.
+
+## Landing page (`site/`)
+
+One static page for all three offers: offer cards, how it works, sample images, downloads (sample
+packs, sales sheets, the credit union ROI one-pager, compliance notes), a credit union break-even
+calculator and a "request a sample" button that opens the visitor's own email app (mailto).
+
+```bash
+python3 build.py && python3 site/build_site.py    # writes site/dist/ (about 4 MB)
+```
+
+Before deploying, set `salesEmail` in `site/config.js` (it's `REPLACE_ME@example.com`). Then drag
+`site/dist/` onto Netlify Drop, or connect the repo with base `launch/b2b/site` and publish `dist`
+(build locally first: Netlify's build image has no Playwright for the PNG/PDF step). No analytics,
+forms backend or cookies.

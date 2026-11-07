@@ -142,7 +142,7 @@ news, such as a merger, a new branch, a fraud warning they posted), `{Your name}
 > me your logo, brand color and member service number, I'll make a version with your branding so your
 > team can see it as members would.
 
-Attach: `sample-community-cu.zip`, `sales-sheet.pdf`, `COMPLIANCE_NOTE.pdf` (print the markdown to PDF).
+Attach: `sample-community-cu.zip`, `sales-sheet.pdf`, `roi.pdf` and `COMPLIANCE_NOTE.pdf` (all in `out/`).
 
 **"Send me the branded version."** Make `clients/<slug>.json` (see `DELIVERY_WORKFLOW.md`), run
 `python3 build.py credit-union-alert --brand credit-union-alert/clients/<slug>.json` (from `launch/b2b/`), and send the zip. Ask them to confirm the "never ask"
