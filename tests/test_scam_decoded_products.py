@@ -60,3 +60,20 @@ def test_parents_guide_and_listings():
     assert "KITPARENTS" in (PRODUCT / "LISTING.md").read_text()
     for listing in (PRODUCT / "protect-your-parents" / "LISTING.md", TRAINING / "LISTING.md", PRODUCT / "LISTING.md"):
         assert "guarantee" not in listing.read_text().lower()
+
+
+def test_b2b_outreach_kit_is_complete_and_unsent():
+    import csv
+    kit = PRODUCT.parent / "b2b"
+    leads = list(csv.DictReader(open(kit / "leads_research.csv")))
+    assert len(leads) == 75
+    assert len({r["email"].lower() for r in leads}) == 75
+    assert all(r["email_source_url"].startswith("http") for r in leads)
+    tracker = list(csv.DictReader(open(kit / "TRACKER.csv")))
+    assert all(r["status"] == "not sent" and not r["email1_sent"] for r in tracker)
+    pitches = sorted((kit / "pitches").glob("*.md"))
+    assert len(pitches) == 75
+    for p in pitches:
+        text = p.read_text()
+        assert text.count('Reply "no thanks"') == 3, p.name
+        assert "{Pack link}" in text and "compliant" not in text.lower(), p.name
