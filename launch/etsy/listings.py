@@ -232,7 +232,7 @@ LISTINGS: list[dict] = [
          tags=["budget binder", "budget bundle", "budget planner", "printable bundle", "finance planner",
                "savings challenge", "bill tracker", "sinking funds", "debt tracker", "expense tracker",
                "no spend challenge", "budget printable", "money planner"],
-         hook="Every printable in the shop in one download: a complete budget binder for less than half the price of buying them one by one.",
+         hook="The 10 core budget printables in one download: a complete budget binder for less than half the price of buying them one by one.",
          get=["All 10 printables (about 50 pages), each in US Letter and A4: Monthly Budget Planner, Paycheck Budget Planner, Savings Challenge Tracker, 52-Week Savings Challenge, Bill Payment Tracker, Sinking Funds Tracker, Debt Payoff Coloring Trackers, Monthly Expense Tracker, No-Spend Challenge, Subscription Tracker",
               "One zip file, organised in numbered folders",
               "Bought separately: $37. Bundle: $12"],
@@ -256,6 +256,40 @@ LISTINGS: list[dict] = [
          bundle=["bill-cut-kit", "20-minute-budget", "credit-report-audit-kit", "debt-free-date-planner", "investing-starter-kit"],
          hero=[1, 2, 3], grid=[1, 2, 3]),
 ]
+
+def _more_listings() -> list[dict]:
+    """The 30 extra printables (listings_more.py) and the two new bundles, in the same shape as above."""
+    import listings_more as M
+    import printables_more
+
+    def tags(own, pool):
+        seen = {t.lower() for t in own}
+        return (list(own) + [t for t in M.POOL[pool] if t.lower() not in seen])[:13]
+
+    out = []
+    for d in M.ITEMS:
+        n = len(printables_more.MORE[d["slug"]]())
+        out.append(dict(slug=d["slug"], kind="printable", name=d["name"], price=d["price"],
+                        file_stem=re.sub(r"[^A-Za-z0-9]+", "-", d["name"]).strip("-"), title=d["title"],
+                        tags=tags(d["tags"], d["pool"]), hook=d["hook"], get=d["get"] + ["US Letter and A4 PDFs"],
+                        how=d["how"], hero=[4, 3, 2] if n >= 4 else [3, 2] if n == 3 else [1, 2], grid=list(range(1, n + 1))))
+    printable_slugs = [x["slug"] for x in LISTINGS if x["kind"] == "printable"] + [x["slug"] for x in out]
+    prices = {x["slug"]: x["price"] for x in LISTINGS + out}
+    names = {x["slug"]: x["name"] for x in LISTINGS + out}
+    for d in M.BUNDLES:
+        subs = d["bundle"] or printable_slugs
+        worth = sum(prices[s] for s in subs)
+        out.append(dict(slug=d["slug"], kind="bundle", name=d["name"], price=d["price"], file_stem=d["file_stem"],
+                        title=d["title"], tags=tags(d["tags"], d["pool"]), hook=d["hook"],
+                        get=[f"All {len(subs)} printables, each in US Letter and A4: " + ", ".join(names[s] for s in subs),
+                             "One zip file, organised in numbered folders",
+                             f"Bought separately: ${worth:.0f}. Bundle: ${d['price']:.0f}"],
+                        how=["Download and unzip.", "Print the pages you need.", "Put them in a binder.", "Reprint any page any time."],
+                        bundle=subs))
+    return out
+
+
+LISTINGS += _more_listings()
 
 for it in LISTINGS:
     it.setdefault("category", GUIDE_CAT if it["kind"] == "product" else PRINT_CAT)

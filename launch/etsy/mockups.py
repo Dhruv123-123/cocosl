@@ -56,7 +56,7 @@ def _pages_for(it: dict, out_dir: Path, work: Path, page_images) -> tuple[list[P
                 sd / "The-20-Minute-Budget.pdf" if slug == "20-minute-budget" else next(sd.glob("*.pdf")))
             n = sub.get("hero", [1])[0] if sub["kind"] == "printable" else 1
             firsts += page_images(spdf, work / f"m-{it['slug']}", slug, n, n, 90)
-        return firsts[:3], firsts
+        return firsts[:3], firsts[:15]
     imgs = page_images(pdf, work / f"m-{it['slug']}", "p", 1, 99, 90)
     pick = lambda idx: [imgs[i - 1] for i in idx if 0 < i <= len(imgs)]  # noqa: E731
     return pick(it.get("hero", [1, 2, 3])), pick(it.get("grid", list(range(1, 9))))
@@ -94,7 +94,7 @@ def render(it: dict, out_dir: Path, work: Path, run_jobs, page_images) -> list[P
     rows_ = (n + cols - 1) // cols
     tw = min(460, int((1820 - (cols - 1) * 34) / cols), int((1500 - 330 - (rows_ - 1) * 34) / rows_ / 1.294))
     grid = "".join(f'<img src="file://{p}">' for p in inside)
-    body2 = f'''<div style="padding:80px 90px 0"><div class="kick">What's inside</div><h2>{len(inside)} {"items" if it.get("bundle") else "of the pages"} you get</h2></div>
+    body2 = f'''<div style="padding:80px 90px 0"><div class="kick">What's inside</div><h2>{len(it["bundle"]) if it.get("bundle") else len(inside)} {"items" if it.get("bundle") else "of the pages"} you get</h2></div>
       <div class="grid" style="grid-template-columns:repeat({cols},{tw}px);padding:0 90px">{grid}</div>'''
     # 03 details
     if it["kind"] == "product":
@@ -119,4 +119,8 @@ def render(it: dict, out_dir: Path, work: Path, run_jobs, page_images) -> list[P
         jobs.append({"src": str(src), "png": str(out), "w": W, "h": H})
         outs.append(out)
     run_jobs(jobs)
+    import mockgen  # Pinterest pin for every listing, from the same real pages
+    outs += mockgen.generate(dict(title=it["name"].split(" (")[0], price=it["price"], brand="MONEY MADE SIMPLE",
+                                  label=kick.replace("&middot;", "·"), chips=_chips(it)[:3]),
+                             hero, out_dir, ("pin",), run=run_jobs)
     return outs
