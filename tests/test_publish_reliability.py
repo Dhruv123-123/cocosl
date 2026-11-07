@@ -21,6 +21,8 @@ def scheduled(factory, fake_render):
 
 
 def _use(monkeypatch, factory, fn):
+    monkeypatch.setenv("MANUAL_PLATFORMS", "")  # these tests are about API publishers
+
     class P:
         def __init__(self, platform):
             self.platform = platform

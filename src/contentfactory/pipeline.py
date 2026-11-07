@@ -262,6 +262,8 @@ class Factory:
             }))
         self.db.update("posts", post_id, {"status": "scheduled", "scheduled_at": min(s for _, s in plan).isoformat()})
         self.db.log("post.scheduled", "post", post_id, {"publications": pub_ids})
+        from .manual import prepare
+        prepare(self, pub_ids)  # post-by-hand platforms get their package now, so they can be batched
         return pub_ids
 
     def unschedule(self, post_id: int, actor: str = "human") -> int:
