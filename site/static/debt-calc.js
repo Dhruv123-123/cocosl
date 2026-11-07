@@ -61,6 +61,12 @@
       '<p>' + (Math.abs(diff) < 1 ? 'Both methods cost the same here, so pick the one you\'ll stick with.'
         : diff > 0 ? 'Avalanche saves ' + fmt(diff) + ' in interest. Snowball clears its first debt in month ' + Math.min.apply(null, Object.values(s.paid)) + ' (avalanche: month ' + Math.min.apply(null, Object.values(a.paid)) + ').'
         : 'Snowball comes out ' + fmt(-diff) + ' cheaper with these debts.') + '</p>';
+    var box = document.getElementById('plan-debt-payoff');
+    if (box) {
+      box.hidden = false;
+      var plan = box.querySelector('input[name=plan]');
+      if (plan) plan.value = ('Avalanche: ' + yrs(a.months) + ', ' + fmt(a.interest) + ' interest. Snowball: ' + yrs(s.months) + ', ' + fmt(s.interest) + ' interest. ' + fmt(a.budget) + '/month.').slice(0, 300);
+    }
     if (window.plausible) window.plausible('Debt Calc', { props: { debts: String(debts.length) } });
   }
   form.addEventListener('submit', function (e) { e.preventDefault(); show(); });

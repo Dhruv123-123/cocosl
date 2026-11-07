@@ -475,6 +475,29 @@
     "gumroad": "https://example.gumroad.com",
     "etsy": "https://www.etsy.com/shop/REPLACE_ME"
   },
+  "sister_brands_note": "Other brands from the same team, shown in a homepage section. Two-brand launch: only Money Made Simple and Scam Decoded. Each brand appears only when \"show\" is true AND its \"stage\" is at or before \"launch_stage\" (two-brand, then brand-3 after the week-8 gates around Jan 10 2027, then all). Flip launch_stage to \"brand-3\" when GO_LIVE.md's five gates pass.",
+  "launch_stage": "two-brand",
+  "sister_brands": [
+    {"slug": "scam-decoded", "name": "Scam Decoded", "url": "https://scamdecoded.netlify.app", "stage": "two-brand", "show": true,
+     "tagline": "One scam, decoded in 60 seconds, so you spot it first.",
+     "blurb": "Plain-English explainers on scams, fraud and identity theft: how each scam works, the tell that gives it away, and what to do. Short enough to forward to your parents.",
+     "button": "Visit Scam Decoded"},
+    {"slug": "1099-money", "name": "1099 Money", "url": "https://1099money.netlify.app", "stage": "brand-3", "show": true,
+     "tagline": "Money and taxes for freelancers and gig workers.",
+     "blurb": "Quarterly tax reminders, rate and mileage tools and plain-English guides for 1099 workers.",
+     "button": "Visit 1099 Money"},
+    {"slug": "dinero-simple", "name": "Dinero Simple", "url": "https://dinerosimple.netlify.app", "stage": "all", "show": false,
+     "tagline": "Dinero, explicado en simple.",
+     "blurb": "Guías de dinero en español. En pausa hasta que una persona revise el español.",
+     "button": "Visitar Dinero Simple"}
+  ],
+  "plan_optin_note": "The 'Email me this plan' box under every calculator on this site (embedded apps calculators and /debt-payoff/). Copy is the mms line of apps/shared/optin.js on PR #8; keep them the same (a test checks when that file is present). Signups carry source plan-<tool>.",
+  "plan_optin": {
+    "enabled": true,
+    "title": "Email me this plan",
+    "pitch": "Get your numbers and the matching printable, plus one short money email a week. Unsubscribe any time.",
+    "button": "Email me"
+  },
   "ab_test": {
     "_how": "Two-by-two test on the email capture: hero copy (h) x lead-magnet title (m). Each visitor gets a 90-day first-party cookie mms_ab (e.g. 'ab' = hero A, magnet B). Plausible gets an 'AB Exposure' event on pages that show the test and the same test/hero/magnet props on every Signup. Preview a variant with ?ab=ba. Set active to false to end the test, then copy the winner into the A slots (and lead_magnet.title).",
     "id": "capture-1",

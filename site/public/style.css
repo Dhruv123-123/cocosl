@@ -310,3 +310,12 @@ th{background:var(--tint)}
 .tool-embed{margin:28px 0;padding:18px 20px;border:2px solid var(--green-d);border-radius:var(--radius);background:var(--card)}
 .tool-embed .mms-calc{margin:12px -8px 0;min-height:200px}
 .tool-open{font-size:15px;margin:8px 0 0}
+/* "Email me this plan" under calculators, and the homepage's other-site cards */
+.plan-optin{margin:16px 0 0;padding:14px 16px;border:1px dashed var(--green-d);border-radius:var(--radius);background:var(--tint)}
+.plan-optin .plan-title{margin:0 0 4px;font-weight:800;font-size:1.1rem}
+.plan-optin p{margin:0 0 10px}
+.plan-optin[hidden]{display:none}
+.brand-cards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.brand-card{padding:18px 20px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
+.brand-card h3{margin:2px 0 4px}
+.brand-card .brand-tag{font-weight:600;margin:0 0 6px}

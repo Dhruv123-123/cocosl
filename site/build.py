@@ -569,6 +569,31 @@ def templates_section(slug: str, prod: dict | None, pillar: str = "") -> str:
     return ""
 
 
+STAGES = ["two-brand", "brand-3", "all"]
+
+
+def visible_brands() -> list[dict]:
+    """site.json > sister_brands that the current launch_stage allows (two-brand launch: Scam Decoded only)."""
+    stage = CFG.get("launch_stage", "two-brand")
+    cut = STAGES.index(stage) if stage in STAGES else 0
+    return [b for b in CFG.get("sister_brands", [])
+            if b.get("show") and b.get("url") and STAGES.index(b.get("stage", "all")) <= cut]
+
+
+def plan_optin(tool: str, hidden: bool = False) -> str:
+    """'Email me this plan' right under a calculator result (scouting's email memo: offer the visitor's own
+    result, never gate it). Same copy as the mms line of apps/shared/optin.js (PR #8); that component skips
+    embedded iframes, so the host page carries the box. hidden=True: shown by the page's script once there's a result."""
+    o = CFG.get("plan_optin", {})
+    if not o.get("enabled"):
+        return ""
+    return (f'<div class="plan-optin" data-no-optin id="plan-{esc(tool)}"{" hidden" if hidden else ""}>'
+            f'<p class="plan-title">{esc(o["title"])}</p><p>{esc(o["pitch"])}</p>'
+            + email_form(f"plan-{tool}", o.get("button", "Email me"), compact=True).replace(
+                '<input type="hidden"', f'<input type="hidden" name="plan_tool" value="{esc(tool)}"><input type="hidden" name="plan" value=""><input type="hidden"', 1)
+            + '</div>')
+
+
 def load_embeds() -> dict:
     f = CONTENT / "data" / "embeds.json"
     return json.loads(f.read_text()) if f.exists() else {"tools": {}, "articles": {}}
@@ -587,7 +612,7 @@ def embed_block(key: str) -> str:
     if t["kind"] == "calc":
         return (f'<div class="tool-embed">{head}<div class="mms-calc" data-calc="{esc(t["calc"])}" data-title="{esc(t["title"])}"></div>'
                 f'<script src="{esc(base)}/money-calculators/embed.js" async></script>'
-                f'<p class="tool-open"><a href="{full}">Open the full calculator</a></p></div>')
+                f'<p class="tool-open"><a href="{full}">Open the full calculator</a></p>{plan_optin(key)}</div>')
     return (f'<div class="tool-embed">{head}<p class="shop-buy"><a class="btn" href="{full}">'
             f'{esc(t.get("button", "Open the tool"))}</a></p></div>')
 
@@ -1363,6 +1388,13 @@ def build() -> list[str]:
         compare_home = ('<section class="wrap"><h2 class="section-h">Compare before you sign up</h2><p class="chips">' +
                         "".join(f'<a class="chip" href="{u(f"/compare/{c["slug"]}/")}">{esc(c.get("short", c["title"].split(":")[0]))}</a>'
                                 for c in comps) + "</p></section>")
+    def brands_home() -> str:
+        bs = visible_brands()
+        if not bs:
+            return ""
+        cards = "".join(f'''<div class="brand-card"><p class="kicker">Also from our team</p><h3>{esc(b['name'])}</h3>
+<p class="brand-tag">{esc(b['tagline'])}</p><p>{esc(b['blurb'])}</p><p><a class="btn ghost" href="{esc(b['url'])}/">{esc(b['button'])}</a></p></div>''' for b in bs)
+        return f'<section class="wrap brands"><h2 class="section-h">Our other site{"s" if len(bs) > 1 else ""}</h2><div class="brand-cards">{cards}</div></section>'
     _ab = CFG.get("ab_test", {}).get("hero", {})
     hero_a = _ab.get("a", {"headline": "Feel behind on money? Start with one move this week.",
                            "offer": "seven 15-minute tasks that get your money organised in a week."})
@@ -1400,6 +1432,7 @@ def build() -> list[str]:
     <div class="product-grid">{''.join(product_card(p) for p in products_list)}</div>
   </div>
 </section>
+{brands_home()}
 <section class="wrap promise">
   <h2 class="section-h">How we make this</h2>
   <div class="three">
@@ -1457,7 +1490,7 @@ def build() -> list[str]:
     _shop = {i["slug"]: i for i in json.loads((CONTENT / "shop.json").read_text())["items"]} \
         if (CONTENT / "shop.json").exists() else {}
     urls += pseo.build_debt({"CFG": CFG, "markdown": markdown, "author_ld": author_ld, "apps_tools": apps_tools_html, "redirects": extra_redirects, "u": u, "absu": absu, "layout": layout, "write": write, "org_ld": org_ld,
-                             "magnet_box": magnet_box, "product_card": product_card, "product": None, "shop": _shop,
+                             "magnet_box": magnet_box, "product_card": product_card, "product": None, "shop": _shop, "plan_optin": plan_optin,
                              "today": os.environ.get("BUILD_DATE") or date.today().isoformat(),
                              "as_of": fmt_date(os.environ.get("BUILD_DATE") or date.today().isoformat())})
 

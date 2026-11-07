@@ -1,5 +1,7 @@
 # Money Made Simple website and email funnel
 
+**New here? Read [`SITE_START_HERE.md`](SITE_START_HERE.md) first:** the Netlify setup, the blanks to fill in, and when the site deploys.
+
 A complete static site for the brand, a free lead magnet, and a 10-email welcome and nurture sequence
 that sells the products. No server, no database, no monthly cost: it deploys free to Netlify or GitHub Pages.
 
@@ -186,7 +188,7 @@ An issue only goes public on a build on or after its `date`, so write ahead, sen
 that day, and let the site catch up. Netlify rebuilds only on a push, so add a build hook and save it as the
 repo secret `NETLIFY_BUILD_HOOK`; `.github/workflows/netlify-rebuild.yml` checks every morning with
 `python3 site/tools/due_today.py` and pings it only when an article, issue or landing page goes live that day
-(about 6 deploys a month for 2027, against the free plan's 300 credits at 15 per deploy). `netlify.toml`'s
+(8 to 13 deploys a month on the current schedule, so 120 to 195 credits, against the free plan's 300 credits at 15 per deploy). `netlify.toml`'s
 `ignore` rule also skips deploys for pushes that don't touch `site/`, while build-hook builds always run. Preview scheduled issues locally with
 `NEWSLETTER_SHOW_SCHEDULED=1 python3 site/build.py`, or pretend it's another day with `BUILD_DATE=2026-11-20`.
 
