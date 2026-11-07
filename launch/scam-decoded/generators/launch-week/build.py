@@ -17,6 +17,7 @@ ROOT = HERE.parent.parent          # launch/scam-decoded
 OUT = ROOT / "LAUNCH_WEEK.md"
 CHECKED = "2026-11-07"
 SITE = "https://scamdecoded.netlify.app"
+DAY1_REC = "Sat Nov 14 2026"
 
 LONG_A = "How to protect your parents from scams: the complete guide"
 LONG_B = "Identity theft recovery, step by step (what to do in the first week)"
@@ -352,10 +353,21 @@ def render(content, longs, keys):
          "Pick Day 1, then post only what this file lists for 14 days. All times America/New_York. "
          "Same-number Shorts and Reels are the same file. TikToks are the longer cuts (#14–27) in Dhruv's own voice.",
          "",
+         "## Day 1: Dhruv's call",
+         "",
+         f"**Recommended: {DAY1_REC}.** Scouting's plan launches Scam Decoded in weeks 2–3 of Money Made Simple. MMS's own "
+         "plan (launch/money-made-simple/POSTING_PLAN.md) has its Day 1 on Sat Nov 7 2026, so Sat Nov 14 is MMS day 8: "
+         "Dhruv's MMS routine has had a week to settle, there's a week to do the recording session below, and Scam Decoded "
+         "reaches full cadence (its week 2) in Black Friday week, Nov 21–27. The cost: the 08:30 alert cards "
+         "Nov 16–27 and the dated posts Nov 21–27 are skipped. If MMS started later than Nov 7, keep the rule, not the "
+         "date: Scam Decoded Day 1 = MMS day 8 (latest MMS day 15).",
+         "",
          "## Before Day 1",
          "",
          "1. Create @scamdecoded on Instagram, YouTube and TikTok, with the bios below. Turn on each platform's AI label for every post.",
-         "2. Record the channel trailer (script below) and the three long videos' screen recordings (LONG_VIDEO_RECORDINGS.md).",
+         "2. Do the one recording session in `launch-recording/` (SHOT_LIST.md + teleprompter.html, about 26 minutes with retakes): "
+         "the trailer, the three long videos' screen recordings, the face-cam and hands-on inserts, and week 1's four TikTok voice takes. "
+         "Week 2's TikTok voices and the long-video narration go in the next `factory batch-record` session.",
          "3. Affiliate links (Aura, 1Password, NordVPN) are still placeholders. If one isn't approved by its day, delete the affiliate sentence from that caption; the post still works.",
          "4. Open every source in the fact-check table once more on the day before posting; agencies move pages.",
          "",

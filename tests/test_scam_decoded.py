@@ -946,3 +946,15 @@ def test_launch_week_plan_is_current_and_fact_checked():
     text = json.dumps(content)
     for gone in ("3 seconds of audio", "tells them your number is live", "Both let you freeze for free"):
         assert gone not in text, gone
+
+
+def test_launch_recording_session_is_current():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("scam_decoded_launch_rec", CONTENT.parent / "generators" / "launch-week" / "recordings.py")
+    rec = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(rec)
+    s = rec.plan()
+    rec.check(s)                       # <= 30 minutes, setup order, long-video paths match LONG_VIDEO_RECORDINGS.md
+    for name, text in rec.files(s).items():
+        assert (CONTENT.parent / "launch-recording" / name).read_text() == text, f"{name} stale: run recordings.py"
+    assert {"Channel trailer"} <= {t["title"] for t in s["tasks"]}

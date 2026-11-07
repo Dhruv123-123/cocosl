@@ -1151,12 +1151,12 @@
     ],
     "script": {
       "title": "Credit freeze, the full walkthrough (3 bureaus + 2 bonus)",
-      "hook": "3 bureaus, 2 bonus freezes almost nobody does, and 1 for your kids. All free.",
+      "hook": "3 bureaus, 2 bonus freezes almost nobody does, and 1 for your kids.",
       "segments": [
         {
           "heading": "Hook",
-          "narration": "Three bureaus, two bonus freezes almost nobody does, and one for your kids. Every one of them is free.",
-          "on_screen_text": "3 + 2 bonus + kids. All free.",
+          "narration": "Three bureaus, two bonus freezes almost nobody does, and one for your kids. The big three are free by law.",
+          "on_screen_text": "3 + 2 bonus + kids. The big 3 are free.",
           "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes with a checklist and three padlocks lined up No text, no logos, no real people."
         },
         {
