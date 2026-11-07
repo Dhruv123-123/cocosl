@@ -12,7 +12,7 @@ Where something has a waiting period (verification, affiliate approval), start i
 Totals: **Stage 1–3 ≈ 5–6 hours** gets you able to take money. Stages 0–8 (one brand, fully live)
 ≈ 13–16 hours over two weeks. Stage 9 adds the other brands, one at a time, ≈ 2–4 hours each. The
 [launch runbook](#launch-runbook-after-the-merges) near the end covers the sites, placeholders, first-week
-posts, recording sessions, a 15-minutes-a-day routine and each brand's launch day once everything is merged.
+posts, recording sessions, a 15-minutes-a-day routine, each brand's launch day and a weekly scorecard once everything is merged.
 
 Nothing in this repo sends, posts or charges on its own. You press every button.
 
@@ -678,6 +678,43 @@ Do this once per brand, the morning its first post goes out. ≈ 45 minutes the 
 | 1099 Money | short *Your first 1099 has no tax taken out*, **Mon Nov 16** 12:30 ET | confirm the 2026 figures and 2027 dates against irs.gov and ssa.gov; the $15 Quarterly Tax Tracker is live before the Day 1 product carousel |
 | Dinero Simple | short *El truco de las dos cuentas que evita sobregiros*, 12:30 ET | **the fluent reviewer has signed off** (`factory review-language <id> --by NAME` on every post); `RECORTE5` and `FECHA5` exist; Spanish voice, never the English one |
 | Ad studio | Post 1 *Before → after*, **Mon Nov 16** | studio site and order page are live; the caption says the sample is a spec ad for a made-up shop; first cold emails went out Nov 10, so the account is live when leads look it up |
+
+### R8 · Week 1 numbers: scorecard template
+
+From `research/scouting/launch-metrics-30-days.md` (PR #2). Copy this block once per brand each **Monday**
+(≈ 20 min). Day 7 is for stop rules only; judge content from day 14. Each threshold needs its minimum sample
+before it counts, so blanks are fine in week 1.
+
+```
+Brand: __________   Week of: ______   Day since launch: __
+
+YouTube    impressions ____  CTR ___%  watch hours ____  subs ____
+TikTok     posts ____  avg views ____  avg watch time ____  shares ____
+Instagram  reach ____  sends/1,000 reach ____  non-follower share ___%  saves ____
+Pinterest  pins ____  impressions ____  saves ____  outbound clicks ____
+Site       visitors ____  sign-ups ____ (= ___%)  outbound clicks ____
+Etsy       visits ____  listings under 20 visits ___%  conversion ___%
+Gumroad    views ____  sales ____ (= ___%)
+Email      welcome opens ___%  clicks ___%  unsubs ___%  bounces ___%  complaints ___%
+Warnings   any strike / reduced distribution / monetization notice?  Y / N
+Money      orders ____  revenue $____  affiliate clicks ____   (log only in month 1)
+
+The ONE change per platform this week: ______________________________
+```
+
+| Severity | Rule (minimum sample) | From day |
+|---|---|---|
+| **Stop: fix today** | any platform warning · email bounces > 2% · spam complaints > 0.1% | 1 |
+| **Change: one fix this week** | YouTube CTR < 2% (after 1,000 impressions) · site sign-ups < 2% (after 200 visitors) · Etsy: over half the listings < 20 visits in 14 days · welcome opens < 30% · Instagram sends < 2 per 1,000 reach (after 2,000 reach) | 14 |
+| | TikTok avg < 200 views (after 10+ posts) · Etsy conversion < 0.5% (after 300 visits) · Gumroad conversion < 1% (after 150 views) · email clicks < 2% · unsubscribes > 0.5% per send · YouTube < 500 impressions | 21 |
+| **Watch: act if it holds 2 weeks** | Instagram non-followers < 30% of reach · site < 100 visitors · YouTube < 50 watch hours · Pinterest < 10 saves after 20+ pins, < 20 outbound clicks per 5,000 impressions | 21–30 |
+| **Go / drop (day 30)** | double the 2 formats that cleared their thresholds, drop the 1 that missed most, and re-run `revenue_model.py` with real numbers | 30 |
+
+The research sets no rule for shutting a whole brand in month 1; the numbers are too small to judge. The
+"our judgment" thresholds (TikTok 200 views, 2% sign-ups, Pinterest saves) get reset to your own medians
+after month 1. To check automatically: `factory stats import`, then
+`python3 research/scouting/check_thresholds.py --day <N> --scorecard card.json --manual manual.json`
+(steps in the research doc).
 
 ---
 
