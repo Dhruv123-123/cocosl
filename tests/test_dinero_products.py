@@ -353,3 +353,30 @@ def test_how_we_make_money_page_is_linked_from_the_footer_and_about():
     assert ["Cómo ganamos dinero", "/como-ganamos-dinero/"] in cfg["footer_links"]
     assert "/como-ganamos-dinero/" in (pages / "about.md").read_text()
     assert "/como-ganamos-dinero/" in (pages / "disclosures.md").read_text()
+
+
+def test_reto_de_ahorro_series_fits_the_december_calendar_and_promises_nothing():
+    items = json.loads((DS / "content-reto-ahorro-2026.json").read_text())
+    fmts = [i["format"] for i in items]
+    assert len(items) == 7 and all(a != b for a, b in zip(fmts, fmts[1:]))
+    platforms = {"short": {"tiktok", "youtube", "instagram", "facebook"}, "mid": {"tiktok"}, "carousel": {"instagram", "tiktok"},
+                 "image": {"instagram", "facebook"}, "long": {"youtube"}}
+
+    def rows(name):
+        return [(r.split("|")[1].strip(), r.split("|")[2].strip(), r.split("|")[5].strip())
+                for r in (DS / name).read_text().splitlines() if r.startswith("| ") and (" nov |" in r or " dic |" in r)]
+    reto = rows("POSTING_PLAN_RETO_AHORRO_2026.md")
+    others = rows("POSTING_PLAN_MONTH_1.md") + rows("POSTING_PLAN_HOLIDAY_2026.md")
+    assert len(reto) == 7 and not {r[:2] for r in reto} & {r[:2] for r in others}
+    per_day = {}
+    for day, _, fmt in reto + others:
+        for p in platforms[fmt]:
+            per_day[(day, p)] = per_day.get((day, p), 0) + 1
+    assert max(per_day[(d, p)] for d, _, f in reto for p in platforms[f]) <= 2
+    for i in items:
+        text = " ".join([i["script"]["caption"]] + [s["narration"] + " " + s["on_screen_text"] for s in i["script"]["segments"]])
+        assert "vas a ahorrar" not in text.lower() and "ahorré" not in text.lower(), i["key"]
+        assert "$5" in i["script"]["caption"] or "$2" in i["script"]["caption"] or "Si ya lo tocaste" in i["script"]["caption"], i["key"]
+        if i["format"] == "mid":
+            words = sum(len(s["narration"].split()) for s in i["script"]["segments"])
+            assert 190 <= words <= 250 and 8 <= len(i["script"]["segments"]) <= 11
