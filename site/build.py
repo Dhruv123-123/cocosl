@@ -367,6 +367,38 @@ def reviews_box(compare_slug: str, posts: list[dict]) -> str:
     return f'<section class="next"><h2>Go deeper</h2><ul class="related">{lis}</ul></section>'
 
 
+def load_related() -> dict:
+    f = ROOT / "content" / "data" / "related.json"
+    return json.loads(f.read_text()) if f.exists() else {"tools": {}, "articles": {}}
+
+
+def related_for(p: dict, posts: list[dict]) -> tuple[list[dict], dict | None]:
+    """content/data/related.json: the first 3 published of an article's hand-picked related slugs, and its free tool.
+    Falls back to same-pillar articles if fewer than 3 of the picks are live yet."""
+    data = load_related()
+    entry = data["articles"].get(p["slug"], {})
+    live = {x["slug"]: x for x in posts}
+    related = [live[s] for s in entry.get("related", []) if s in live][:3]
+    for x in posts:
+        if len(related) >= 3:
+            break
+        if x is not p and x not in related and x.get("pillar") == p.get("pillar"):
+            related.append(x)
+    for x in posts:
+        if len(related) >= 3:
+            break
+        if x is not p and x not in related:
+            related.append(x)
+    return related, data["tools"].get(entry.get("tool", ""))
+
+
+def tool_box(t: dict | None) -> str:
+    if not t:
+        return ""
+    return (f'<section class="next tool-box"><h2>Free tool for this</h2><p><a href="{u(t["path"])}"><strong>'
+            f'{esc(t["title"])}</strong></a>: {esc(t["blurb"])}</p></section>')
+
+
 def product_card(p: dict) -> str:
     price = price_html(p)
     return f"""<a class="product-card" href="{u(f"/products/{p['slug']}/")}">
@@ -555,6 +587,8 @@ def build() -> list[str]:
     UNPUBLISHED.clear()
     UNPUBLISHED.update(f"/blog/{p['slug']}/" for p in all_posts if not live(p))
     UNPUBLISHED.update(f"/compare/{c['slug']}/" for c in all_comps if not live(c))
+    if (CONTENT / "new-year.md").exists() and not new_year_live():
+        UNPUBLISHED.add("/new-year/")
     posts = sorted((p for p in all_posts if live(p)), key=lambda p: (str(p["date"]), p.get("order", "")), reverse=True)
     comps_by_slug = {c["slug"]: c for c in all_comps if live(c)}
     products_list = [p for p in load_dir("products") if p.get("status") != "draft"]
@@ -568,8 +602,7 @@ def build() -> list[str]:
         path = f"/blog/{p['slug']}/"
         body_html, toc = markdown(p["body"], shortcode_factory(products, f"blog-{p['slug']}"))
         faq = extract_faq(p["body"])
-        related = [x for x in posts if x is not p and x.get("pillar") == p.get("pillar")][:2]
-        related += [x for x in posts if x is not p and x not in related][: 3 - len(related)]
+        related, tool = related_for(p, posts)
         prod = products.get(p.get("product", "")) or (products_list[0] if products_list else None)
         toc_html = ""
         if len(toc) >= 3:
@@ -615,7 +648,8 @@ def build() -> list[str]:
   <p class="disclaimer">{esc(CFG['disclaimer'])}</p>
   {compare_box(p['slug'], comps_by_slug)}
   {magnet_box(f"blog-{p['slug']}-end")}
-  {f'<section class="next"><h2>Tool for this</h2>{product_card(prod)}</section>' if prod else ''}
+  {tool_box(tool)}
+  {f'<section class="next"><h2>Template for this</h2>{product_card(prod)}</section>' if prod else ''}
   <section class="next"><h2>Read next</h2><ul class="related">{rel_html}</ul></section>
 </article>"""
         write(path, layout(title=p.get("seo_title", p["title"]), description=p["description"], path=path,
@@ -1059,6 +1093,7 @@ def build() -> list[str]:
 
     urls += build_ask(_shop, pseo)
     urls += build_holiday(_shop)
+    urls += build_new_year()
 
     # ---- newsletter archive: content/newsletter/*.md, one page per issue that has gone out.
     # An issue dated in the future stays unpublished until a build on or after its date
@@ -1175,7 +1210,7 @@ def build() -> list[str]:
     sm = "".join(f"<url><loc>{esc(absu(p))}</loc><lastmod>{d}</lastmod></url>" for p, d in urls)
     (OUT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')
-    (OUT / "robots.txt").write_text(f"User-agent: *\nDisallow: {u('/emails/')}\nDisallow: {u('/free/thanks/')}\nDisallow: {u('/holiday/thanks/')}\n"
+    (OUT / "robots.txt").write_text(f"User-agent: *\nDisallow: {u('/emails/')}\nDisallow: {u('/free/thanks/')}\nDisallow: {u('/holiday/thanks/')}\nDisallow: {u('/new-year/thanks/')}\n"
                                     f"Sitemap: {absu('/sitemap.xml')}\n")
     items = "".join(f"""<item><title>{esc(p['title'])}</title><link>{absu(f"/blog/{p['slug']}/")}</link>
 <guid>{absu(f"/blog/{p['slug']}/")}</guid><pubDate>{datetime.strptime(p['date'], '%Y-%m-%d').replace(tzinfo=timezone.utc).strftime('%a, %d %b %Y 00:00:00 +0000')}</pubDate>
@@ -1251,6 +1286,77 @@ def build_ask(shop: dict, pseo) -> list[tuple[str, str]]:
     return [("/ask/", updated)]
 
 
+def new_year_live() -> bool:
+    src = CONTENT / "new-year.md"
+    if not src.exists():
+        return False
+    meta, _ = parse_front_matter(src.read_text())
+    day = os.environ.get("BUILD_DATE") or date.today().isoformat()
+    return os.environ.get("BLOG_SHOW_SCHEDULED") == "1" or str(meta.get("live", "")) <= day
+
+
+def build_new_year() -> list[tuple[str, str]]:
+    """/new-year/: landing page for the 5-email New Year Money Reset mini-course (content/new-year.md). Built from
+    its `live` date (links to it render as text before then). The form sends source=new-year-reset (or the
+    page's course_source); the email provider starts the course from that source. Thanks page: /new-year/thanks/."""
+    src = CONTENT / "new-year.md"
+    if not src.exists():
+        return []
+    if not new_year_live():
+        return []
+    meta, md = parse_front_matter(src.read_text())
+    md = re.sub(r"<!--.*?-->", "", md, flags=re.S)
+    faq = extract_faq(md)
+    days = re.findall(r"^### (Day \d+): (.+)$", md, re.M)
+    body_html, _toc = markdown(md)
+    source = meta.get("course_source", "new-year-reset")
+    day_list = "".join(f"<li><strong>{esc(d)}:</strong> {esc(t)}</li>" for d, t in days)
+    optin = f"""<div class="magnet no-img" id="signup">
+  <div>
+    <p class="kicker">Free 5-day email course</p>
+    <h2 class="magnet-title">Start the New Year Money Reset</h2>
+    <p>Five emails, January 1 to 5. One 15-minute task a day. By January 5, you'll have a money plan you can actually run in 2027.</p>
+    <ol class="course-days">{day_list}</ol>
+    {email_form(source, button="Start the reset (free)", thanks_path="/new-year/thanks/")}
+  </div>
+</div>"""
+    updated = str(meta.get("updated", meta.get("live", date.today().isoformat())))
+    ld = [{"@context": "https://schema.org", "@type": "Course", "name": meta["title"],
+           "description": meta["description"], "provider": org_ld(), "isAccessibleForFree": True,
+           "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "online",
+                                 "courseWorkload": "PT1H15M"},
+           "offers": {"@type": "Offer", "price": 0, "priceCurrency": "USD", "category": "Free"}},
+          {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+              {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}]
+    body = f"""<article class="wrap article new-year">
+  <p class="crumbs"><a href="{u('/')}">Home</a> / <span>New Year money reset</span></p>
+  <h1>{esc(meta['title'])}</h1>
+  <p class="dek">{esc(meta['description'])}</p>
+  <p class="meta">Updated {fmt_date(updated)} · {byline()}</p>
+  {optin}
+  <div class="prose">
+{body_html}
+  </div>
+  <section class="next"><h2>Start before day 1</h2><ul class="related">
+    <li><a href="{u('/budget/')}">Budget by salary</a>: a full monthly plan for your salary band.</li>
+    <li><a href="{u('/debt-payoff/')}">Debt payoff calculator</a>: avalanche or snowball, month by month.</li>
+    <li>{inline('[How to make a budget you will keep](/blog/how-to-make-a-budget-you-will-keep/)')}</li>
+  </ul></section>
+  <p class="disclaimer">{esc(CFG['disclaimer'])}</p>
+</article>"""
+    write("/new-year/", layout(title=meta.get("seo_title", meta["title"]), description=meta["description"],
+                               path="/new-year/", body=body, og_type="article", jsonld=ld))
+    write("/new-year/thanks/", layout(
+        title="Your New Year Money Reset", path="/new-year/thanks/", noindex=True, description="You're signed up.",
+        body=f"""<section class="wrap landing thanks">
+  <h1>You're in.</h1>
+  <p class="dek">Day 1 arrives on January 1 at 7am Eastern (or within a few minutes if that's already passed), and the other four follow one a day. Check the promotions tab if you don't see it.</p>
+  <p>Before then, find a recent payslip and your bank and card balances: Day 1 starts with them.</p>
+  <p><a href="{u('/new-year/')}">Back to the reset</a> · <a href="{u('/free/')}">Also free: the 7-Day Money Reset</a></p>
+</section>"""))
+    return [("/new-year/", updated)]
+
+
 def build_holiday(shop: dict) -> list[tuple[str, str]]:
     """/holiday/: Black Friday traps, a holiday budget, BNPL rules and the year-end checklist (content/holiday.md),
     with the free printable Year-End Money Checklist as the email opt-in (thanks page: /holiday/thanks/)."""
@@ -1274,13 +1380,21 @@ def build_holiday(shop: dict) -> list[tuple[str, str]]:
   </div>
 </div>"""
     tools = []
+    planner = holiday_planner_url()
+    if planner:
+        tools.append(f'<li><a href="{esc(planner)}">Holiday spending planner</a> (free app): a gift list with a budget per '
+                     'person, a total cap, extras like travel and food, and what pay-in-4 really costs. It saves in your '
+                     'browser only.</li>')
+    if new_year_live():
+        tools.append(f'<li><a href="{u("/new-year/")}">The New Year Money Reset</a> (free): a 5-day email course '
+                     'that turns January resolutions into a plan.</li>')
     for slug in ("holiday-savings-planner", "gift-budget-planner", "no-spend-challenge"):
         it = shop.get(slug)
         if it:
             price = "free" if not it["price"] else f"${it['price']:g}"
             tools.append(f'<li><a href="{u(f"/shop/#item-{slug}")}">{esc(it["name"])}</a> ({price}): '
                          f'{esc(it.get("blurb", ""))}</li>')
-    tools_html = (f'<section class="next"><h2>Printables for the season</h2><ul class="related">{"".join(tools)}</ul></section>'
+    tools_html = (f'<section class="next"><h2>Tools and printables for the season</h2><ul class="related">{"".join(tools)}</ul></section>'
                   if tools else "")
     updated = str(meta.get("updated", date.today().isoformat()))
     ld = [{"@context": "https://schema.org", "@type": "Article", "headline": meta["title"],
@@ -1295,6 +1409,7 @@ def build_holiday(shop: dict) -> list[tuple[str, str]]:
   <p class="dek">A holiday budget in four numbers, the Black Friday and pay-later traps, and ten money moves to make before January 1.</p>
   <p class="meta">Updated {fmt_date(updated)} · {byline()}</p>
   {optin}
+  {f'<p class="planner-link">Prefer to plan on screen? <a href="{esc(planner)}">Open the free holiday spending planner</a>: gift list, per-person budgets and the real cost of pay-in-4.</p>' if planner else ''}
   {toc_html}
   <div class="prose">
 {body_html}
@@ -1358,9 +1473,19 @@ def product_hero_img(p: dict) -> str:
     return f'<img {src} alt="{esc(p["title"])} preview" width="640" height="360" fetchpriority="high">'
 
 
+def holiday_planner_url() -> str:
+    """The apps' holiday spending planner (apps/budget/holiday.html, PR #8). It deploys as its own Netlify site, so
+    the link appears once site.json > apps_url is set to that site's address (or env APPS_URL)."""
+    base = (os.environ["APPS_URL"] if "APPS_URL" in os.environ else CFG.get("apps_url", "")).rstrip("/")
+    return f"{base}/budget/holiday.html" if base else ""
+
+
 def holiday_note() -> str:
     """Home-page pointer to /holiday/, shown only Nov 1 - Dec 31 of the build date (the daily build turns it on and off)."""
     day = os.environ.get("BUILD_DATE") or date.today().isoformat()
+    if (day[5:7] == "12" and day[8:] >= "26" or day[5:7] == "01") and new_year_live():
+        return (f'\n      <p class="quiz-link">New year: <a href="{u("/new-year/")}">take the free 5-day New Year '
+                f'Money Reset</a>.</p>')
     if day[5:7] not in ("11", "12"):
         return ""
     return (f'\n      <p class="quiz-link">Holiday season: <a href="{u("/holiday/")}">plan it in four numbers and '

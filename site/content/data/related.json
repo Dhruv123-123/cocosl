@@ -1,0 +1,325 @@
+{
+ "_readme": "Internal links for each article (/blog/<slug>/). 'related': up to 4 article slugs, best first; the page shows the first 3 that are published. 'tool': a key from 'tools', shown as the free tool for that article. tests/test_site.py checks every article has an entry.",
+ "tools": {
+  "budget": {
+   "title": "Budget by salary",
+   "path": "/budget/",
+   "blurb": "a full monthly plan for your salary band, with take-home pay after 2026 federal tax."
+  },
+  "debt": {
+   "title": "Debt payoff calculator",
+   "path": "/debt-payoff/",
+   "blurb": "enter your debts and compare avalanche and snowball month by month."
+  },
+  "col": {
+   "title": "City budgets",
+   "path": "/cost-of-living/",
+   "blurb": "rent, getting around and a monthly plan for the 25 largest US cities."
+  },
+  "quiz": {
+   "title": "Money personality quiz",
+   "path": "/quiz/",
+   "blurb": "a one-minute quiz that picks your first money move."
+  },
+  "holiday": {
+   "title": "Holiday money plan",
+   "path": "/holiday/",
+   "blurb": "plan the season in four numbers, with a free printable year-end checklist."
+  },
+  "ask": {
+   "title": "Money questions",
+   "path": "/ask/",
+   "blurb": "thirty short answers to the money questions people ask most."
+  }
+ },
+ "articles": {
+  "401k-match-explained": {
+   "related": [
+    "roth-vs-traditional-ira",
+    "how-to-start-investing-with-100-a-month",
+    "expense-ratios-explained",
+    "where-to-open-a-roth-ira"
+   ],
+   "tool": "budget"
+  },
+  "acorns-review": {
+   "related": [
+    "how-to-start-investing-with-100-a-month",
+    "are-robo-advisors-worth-it",
+    "expense-ratios-explained",
+    "betterment-review"
+   ],
+   "tool": "quiz"
+  },
+  "ally-bank-review": {
+   "related": [
+    "how-to-open-a-high-yield-savings-account",
+    "high-yield-savings-vs-money-market",
+    "how-to-build-an-emergency-fund",
+    "cit-bank-review"
+   ],
+   "tool": "budget"
+  },
+  "are-robo-advisors-worth-it": {
+   "related": [
+    "expense-ratios-explained",
+    "how-to-start-investing-with-100-a-month",
+    "roth-vs-traditional-ira",
+    "betterment-review"
+   ],
+   "tool": "quiz"
+  },
+  "aura-review": {
+   "related": [
+    "how-to-freeze-your-credit",
+    "how-credit-scores-work",
+    "find-and-cancel-subscriptions",
+    "self-credit-builder-review"
+   ],
+   "tool": "ask"
+  },
+  "best-bank-account-for-college-students": {
+   "related": [
+    "how-to-make-a-budget-you-will-keep",
+    "how-to-build-an-emergency-fund",
+    "is-my-savings-app-fdic-insured",
+    "how-to-open-a-high-yield-savings-account"
+   ],
+   "tool": "col"
+  },
+  "best-tax-software-for-simple-returns": {
+   "related": [
+    "401k-match-explained",
+    "roth-vs-traditional-ira",
+    "how-to-make-a-budget-you-will-keep",
+    "freetaxusa-review"
+   ],
+   "tool": "budget"
+  },
+  "betterment-review": {
+   "related": [
+    "are-robo-advisors-worth-it",
+    "expense-ratios-explained",
+    "how-to-start-investing-with-100-a-month",
+    "where-to-open-a-roth-ira"
+   ],
+   "tool": "quiz"
+  },
+  "budgeting-app-vs-spreadsheet": {
+   "related": [
+    "how-to-make-a-budget-you-will-keep",
+    "find-and-cancel-subscriptions",
+    "how-to-choose-a-budgeting-app",
+    "ynab-review"
+   ],
+   "tool": "budget"
+  },
+  "cit-bank-review": {
+   "related": [
+    "how-to-open-a-high-yield-savings-account",
+    "how-to-build-an-emergency-fund",
+    "high-yield-savings-vs-money-market",
+    "ally-bank-review"
+   ],
+   "tool": "budget"
+  },
+  "debt-avalanche-vs-snowball": {
+   "related": [
+    "how-credit-scores-work",
+    "how-to-make-a-budget-you-will-keep",
+    "find-and-cancel-subscriptions",
+    "self-credit-builder-review"
+   ],
+   "tool": "debt"
+  },
+  "empower-review": {
+   "related": [
+    "expense-ratios-explained",
+    "401k-match-explained",
+    "how-to-start-investing-with-100-a-month",
+    "are-robo-advisors-worth-it"
+   ],
+   "tool": "quiz"
+  },
+  "expense-ratios-explained": {
+   "related": [
+    "how-to-start-investing-with-100-a-month",
+    "roth-vs-traditional-ira",
+    "401k-match-explained",
+    "are-robo-advisors-worth-it"
+   ],
+   "tool": "quiz"
+  },
+  "find-and-cancel-subscriptions": {
+   "related": [
+    "how-to-make-a-budget-you-will-keep",
+    "sinking-funds-explained",
+    "budgeting-app-vs-spreadsheet",
+    "rocket-money-review"
+   ],
+   "tool": "budget"
+  },
+  "freetaxusa-review": {
+   "related": [
+    "401k-match-explained",
+    "roth-vs-traditional-ira",
+    "how-to-make-a-budget-you-will-keep",
+    "best-tax-software-for-simple-returns"
+   ],
+   "tool": "budget"
+  },
+  "high-yield-savings-vs-money-market": {
+   "related": [
+    "how-to-build-an-emergency-fund",
+    "sinking-funds-explained",
+    "how-to-open-a-high-yield-savings-account",
+    "is-my-savings-app-fdic-insured"
+   ],
+   "tool": "budget"
+  },
+  "how-credit-scores-work": {
+   "related": [
+    "how-to-freeze-your-credit",
+    "debt-avalanche-vs-snowball",
+    "how-to-make-a-budget-you-will-keep",
+    "self-credit-builder-review"
+   ],
+   "tool": "debt"
+  },
+  "how-to-build-an-emergency-fund": {
+   "related": [
+    "sinking-funds-explained",
+    "how-to-make-a-budget-you-will-keep",
+    "find-and-cancel-subscriptions",
+    "how-to-open-a-high-yield-savings-account"
+   ],
+   "tool": "budget"
+  },
+  "how-to-choose-a-budgeting-app": {
+   "related": [
+    "budgeting-app-vs-spreadsheet",
+    "how-to-make-a-budget-you-will-keep",
+    "find-and-cancel-subscriptions",
+    "ynab-review"
+   ],
+   "tool": "quiz"
+  },
+  "how-to-freeze-your-credit": {
+   "related": [
+    "how-credit-scores-work",
+    "find-and-cancel-subscriptions",
+    "debt-avalanche-vs-snowball",
+    "aura-review"
+   ],
+   "tool": "ask"
+  },
+  "how-to-make-a-budget-you-will-keep": {
+   "related": [
+    "sinking-funds-explained",
+    "how-to-build-an-emergency-fund",
+    "budgeting-app-vs-spreadsheet",
+    "find-and-cancel-subscriptions"
+   ],
+   "tool": "budget"
+  },
+  "how-to-open-a-high-yield-savings-account": {
+   "related": [
+    "how-to-build-an-emergency-fund",
+    "sinking-funds-explained",
+    "high-yield-savings-vs-money-market",
+    "is-my-savings-app-fdic-insured"
+   ],
+   "tool": "budget"
+  },
+  "how-to-start-investing-with-100-a-month": {
+   "related": [
+    "expense-ratios-explained",
+    "roth-vs-traditional-ira",
+    "401k-match-explained",
+    "are-robo-advisors-worth-it"
+   ],
+   "tool": "quiz"
+  },
+  "is-my-savings-app-fdic-insured": {
+   "related": [
+    "how-to-build-an-emergency-fund",
+    "how-to-open-a-high-yield-savings-account",
+    "sinking-funds-explained",
+    "high-yield-savings-vs-money-market"
+   ],
+   "tool": "ask"
+  },
+  "monarch-money-review": {
+   "related": [
+    "budgeting-app-vs-spreadsheet",
+    "how-to-make-a-budget-you-will-keep",
+    "how-to-choose-a-budgeting-app",
+    "ynab-review"
+   ],
+   "tool": "budget"
+  },
+  "rocket-money-review": {
+   "related": [
+    "find-and-cancel-subscriptions",
+    "budgeting-app-vs-spreadsheet",
+    "how-to-make-a-budget-you-will-keep",
+    "monarch-money-review"
+   ],
+   "tool": "budget"
+  },
+  "roth-vs-traditional-ira": {
+   "related": [
+    "401k-match-explained",
+    "how-to-start-investing-with-100-a-month",
+    "expense-ratios-explained",
+    "where-to-open-a-roth-ira"
+   ],
+   "tool": "budget"
+  },
+  "self-credit-builder-review": {
+   "related": [
+    "how-credit-scores-work",
+    "debt-avalanche-vs-snowball",
+    "how-to-freeze-your-credit",
+    "how-to-make-a-budget-you-will-keep"
+   ],
+   "tool": "debt"
+  },
+  "sinking-funds-explained": {
+   "related": [
+    "how-to-build-an-emergency-fund",
+    "how-to-make-a-budget-you-will-keep",
+    "find-and-cancel-subscriptions",
+    "how-to-open-a-high-yield-savings-account"
+   ],
+   "tool": "holiday"
+  },
+  "sofi-review": {
+   "related": [
+    "how-to-open-a-high-yield-savings-account",
+    "how-to-build-an-emergency-fund",
+    "is-my-savings-app-fdic-insured",
+    "high-yield-savings-vs-money-market"
+   ],
+   "tool": "col"
+  },
+  "where-to-open-a-roth-ira": {
+   "related": [
+    "roth-vs-traditional-ira",
+    "how-to-start-investing-with-100-a-month",
+    "expense-ratios-explained",
+    "are-robo-advisors-worth-it"
+   ],
+   "tool": "quiz"
+  },
+  "ynab-review": {
+   "related": [
+    "budgeting-app-vs-spreadsheet",
+    "how-to-make-a-budget-you-will-keep",
+    "how-to-choose-a-budgeting-app",
+    "monarch-money-review"
+   ],
+   "tool": "budget"
+  }
+ }
+}

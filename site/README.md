@@ -277,6 +277,29 @@ the download button for `static/downloads/year-end-money-checklist.pdf`. Edit th
 The home page shows a one-line link to /holiday/ only when the build date is in November or December, and the
 daily scheduled build turns it on and off. The footer always links it.
 
+## New Year Money Reset (/new-year/)
+
+`content/new-year.md` is the landing page for the 5-email New Year Money Reset (emails: project files
+`content-factory/new-year-reset/`, sent Jan 1–5 2027 at 7am ET). The page isn't built before its `live` date
+(Dec 26), and links to it render as plain text until then. From Dec 26 to Jan 31 the home page links it instead of
+/holiday/, and /holiday/ lists it under "Tools and printables". The form sends `source=new-year-reset`, and the
+email provider starts the course from that tag. People who sign up before Jan 1 get Day 1 on Jan 1. The thanks
+page is /new-year/thanks/ (noindex). Keep the five "### Day N:" titles in step with the email subjects.
+
+## Related articles and tools
+
+`content/data/related.json` hand-picks up to four related articles and one free tool (budget by salary, debt
+payoff, city budgets, quiz, holiday, money questions) for every article. Each article shows the first three related
+articles that are published, filling in from the same pillar while some are still scheduled, plus a "Free tool for
+this" box. A test fails if a new article has no entry.
+
+## Apps site links
+
+`site.json > apps_url` is the address of the separate apps site (PR #8, `apps/`, planned as
+`https://mms-tools.netlify.app`). /holiday/ links its holiday spending planner at `<apps_url>/budget/holiday.html`.
+Set `apps_url` to `""` to hide the link (or override it with env `APPS_URL`), and update it if the Netlify site
+gets a different name.
+
 ## Page speed (Core Web Vitals)
 
 Lighthouse on Nov 7 2026 scored 100 for performance, accessibility and SEO on 11 key pages, both mobile and desktop.

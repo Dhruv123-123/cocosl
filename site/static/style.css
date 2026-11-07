@@ -280,3 +280,6 @@ th{background:var(--tint)}
 .debt-headline{font-size:19px}
 .link-btn{background:none;border:0;padding:8px 0;font:inherit;color:var(--green-d);text-decoration:underline;text-underline-offset:2px;cursor:pointer}
 .link-btn:hover{color:var(--ink)}
+.magnet.no-img{grid-template-columns:1fr}
+.course-days{margin:4px 0 14px;padding-left:22px;color:#d4d8cf}
+.course-days li{margin:4px 0}

@@ -509,3 +509,48 @@ def test_core_web_vitals_basics(tmp_path):
     assert "fonts.googleapis" not in (out / "index.html").read_text()
     headers = (out / "_headers").read_text()
     assert "/img/*\n  Cache-Control: public, max-age=604800" in headers
+
+
+def test_every_article_links_related_articles_and_a_tool(tmp_path):
+    data = json.loads((SITE / "content" / "data" / "related.json").read_text())
+    slugs = {f.stem for f in (SITE / "content" / "blog").glob("*.md")}
+    assert set(data["articles"]) == slugs
+    for slug, e in data["articles"].items():
+        assert slug not in e["related"] and set(e["related"]) <= slugs and e["tool"] in data["tools"], slug
+    # launch day: only live articles are linked, and every article still gets 3
+    out = _build(tmp_path, "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2026-11-07")
+    for page in (out / "blog").glob("*/index.html"):
+        html = page.read_text()
+        if "Read next" not in html:
+            continue  # category index or redirect stub
+        rel = re.search(r'<h2>Read next</h2><ul class="related">(.*?)</ul>', html).group(1)
+        links = re.findall(r'href="(/blog/[^"]+/)"', rel)
+        assert len(links) == 3 and all((out / l[1:] / "index.html").is_file() for l in links), page
+        tool = re.search(r'<section class="next tool-box">.*?href="([^"]+)"', html, re.S).group(1)
+        assert (out / tool[1:] / "index.html").is_file(), page
+    roth = (out / "blog" / "roth-vs-traditional-ira" / "index.html").read_text()
+    assert 'href="/blog/401k-match-explained/"' in roth.split("Read next")[1]
+
+
+def test_holiday_planner_link_only_when_apps_url_set(tmp_path):
+    out = _build(tmp_path, "https://example.org", APPS_URL="")
+    assert "/budget/holiday.html" not in (out / "holiday" / "index.html").read_text()
+    out = _build(tmp_path / "apps", "https://example.org", APPS_URL="https://apps.example.net/")
+    assert (out / "holiday" / "index.html").read_text().count('href="https://apps.example.net/budget/holiday.html"') == 2
+
+
+def test_new_year_page_goes_live_in_late_december(tmp_path):
+    early = _build(tmp_path, "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2026-12-20")
+    assert not (early / "new-year").exists() and "/new-year/" not in (early / "sitemap.xml").read_text()
+    out = _build(tmp_path / "late", "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2026-12-27")
+    page = (out / "new-year" / "index.html").read_text()
+    form = re.search(r'<form[^>]*data-thanks="/new-year/thanks/"[^>]*>.*?</form>', page, re.S).group(0)
+    assert 'value="new-year-reset"' in form
+    assert len(re.findall(r"<li><strong>Day \d:</strong>", page)) == 5
+    ld = [json.loads(m) for m in re.findall(r'<script type="application/ld\+json">(.*?)</script>', page)]
+    assert {x["@type"] for x in ld} >= {"Course", "FAQPage"}
+    assert 'content="noindex"' in (out / "new-year" / "thanks" / "index.html").read_text()
+    assert "/new-year/" in (out / "sitemap.xml").read_text()
+    home = (out / "index.html").read_text().split("<footer")[0]
+    assert 'href="/new-year/"' in home and 'href="/holiday/"' not in home
+    assert 'href="/new-year/"' in (out / "holiday" / "index.html").read_text()
