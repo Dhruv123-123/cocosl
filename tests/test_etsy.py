@@ -102,3 +102,19 @@ def test_seo_covers_every_listing():
         assert it["attributes"]["Primary color"] and len(it["tags"]) == 13
         assert "Attributes" in listings.listing_md(it)
     assert "debt snowball" in listings.BY_SLUG["debt-free-date-planner"]["tags"]
+
+
+def test_pod_posters_copy_and_layout():
+    import sys as _s
+    _s.path.insert(0, str(Path(__file__).resolve().parents[1] / "launch" / "pod"))
+    import posters
+    import build_pod
+    assert len(posters.POSTERS) == 10 and len({p["slug"] for p in posters.POSTERS}) == 10
+    for p in posters.POSTERS:
+        assert len(p["title"]) <= 140 and len(p["title"].split()) <= 15
+        assert len(p["tags"]) == 13 and len(set(p["tags"])) == 13 and all(len(t) <= 20 for t in p["tags"])
+        d = posters.description(p)
+        assert "production partner" in d and "not financial advice" in d and "AI" in d
+        for k in posters.RATIOS:
+            h = build_pod.poster_html(p, k)
+            assert '<div class="chart">' in h and "please don't resell" not in h

@@ -44,7 +44,7 @@ const { chromium } = require('playwright');
   const report = [];
   try {
     for (const j of jobs) {
-      const page = await browser.newPage({ viewport: { width: j.w || 1200, height: j.h || 900 } });
+      const page = await browser.newPage({ viewport: { width: j.w || 1200, height: j.h || 900 }, deviceScaleFactor: j.scale || 1 });
       if (j.html) await page.setContent(j.html, { waitUntil: 'load' });
       else await page.goto('file://' + j.src, { waitUntil: 'load' });
       if (j.pdf) {
