@@ -32,6 +32,7 @@ class Beat:
     start: float
     duration: float
     clip: Path | None = None  # an animated chart (Manim) used instead of the still, last frame held
+    still: bool = False       # no pan/zoom (charts: every number must stay on screen)
 
 
 @dataclass
@@ -104,12 +105,12 @@ def render_clip(spec: VideoSpec, beat: Beat, index: int, frames: int, cues: list
     w, h = spec.size
     fps = spec.options.fps
     overlay = work / f"overlay-{index:02d}.png"
-    draw_overlay(spec, "" if beat.clip else beat.headline, overlay)  # charts carry their own title
+    draw_overlay(spec, "" if (beat.clip or beat.still) else beat.headline, overlay)  # charts carry their own title
     ass = work / f"captions-{index:02d}.ass"
     style = CaptionStyle.for_format(spec.fmt, fonts.family_name(fonts.font_path(spec.font_family, "extrabold")))
     write_ass(cues, style, ass, offset=beat.start)
     motion = MOTIONS[(seed_of(str(beat.image)) + index) % len(MOTIONS)]
-    if beat.clip:
+    if beat.clip or beat.still:
         bg = (f"[0:v]scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},fps={fps},"
               f"tpad=stop_mode=clone:stop_duration={frames / fps + 1:.3f},setsar=1[bg];")
     else:

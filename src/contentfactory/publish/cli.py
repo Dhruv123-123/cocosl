@@ -30,7 +30,7 @@ def cmd_auth(args, factory_fn):
                                                   open_browser=not args.no_browser)
         if not tok.get("refresh_token"):
             sys.exit("Google returned no refresh token. Remove the app's access at myaccount.google.com/permissions and retry.")
-        write_env(env, {"YT_REFRESH_TOKEN": tok["refresh_token"]})
+        write_env(env, {"YT_REFRESH_TOKEN": tok["refresh_token"], "YT_REFRESH_TOKEN_SET_AT": str(int(time.time()))})
         print("YouTube connected. YT_REFRESH_TOKEN saved to .env")
     elif args.platform == "tiktok":
         _need(s, "TIKTOK_CLIENT_KEY", "TIKTOK_CLIENT_SECRET")

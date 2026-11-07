@@ -233,3 +233,33 @@ def test_render_chart_sizes_and_line(media_env, tmp_path):
         assert img.size == size and ImageStat.Stat(img.convert("L")).stddev[0] > 5
     assert _fmt(12_345, "$", "") == "$12k" and _fmt(1.5, "", "%") == "1.50%" and _fmt(2_500_000, "", "") == "2.5M"
     assert render_chart_clip(spec, (1080, 1920), pal, tmp_path / "x.mp4") is None  # FACTORY_CHARTS unset
+
+
+def test_own_footage_beat(media_env, monkeypatch):
+    settings, brand = media_env
+    clip = settings.home / "footage" / "irs.mp4"
+    clip.parent.mkdir(parents=True, exist_ok=True)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", "testsrc=s=1280x720:d=3",
+                    "-pix_fmt", "yuv420p", str(clip)], check=True)
+    post = make_post(7, "long", 3)
+    post["script"]["segments"][1]["footage"] = "footage/irs.mp4"
+    assets = render_post(settings, brand, post)
+    own = [p for p in assets["provenance"] if p["source"] == "own"]
+    assert own and own[0]["tool"] == "footage"
+    post["script"]["segments"][1]["footage"] = "footage/missing.mp4"
+    from contentfactory.media.util import MediaError
+    with pytest.raises(MediaError, match="footage not found"):
+        render_post(settings, brand, post)
+
+
+def test_long_video_needs_original_element():
+    from contentfactory.guardrails import check_original_element
+    seg = {"heading": "h", "narration": "n", "on_screen_text": "o", "visual_prompt": "v"}
+    long = {"format": "long", "script": {"segments": [dict(seg)] * 3}}
+    assert check_original_element(long).level == "block"
+    long["script"]["original_element"] = "Record the IRS payment page"
+    c = check_original_element(long)
+    assert c.level == "block" and "not in the video yet" in c.message
+    long["script"]["segments"] = [dict(seg, footage="footage/irs.mp4"), seg]
+    assert check_original_element(long).level == "ok"
+    assert check_original_element({"format": "short", "script": {}}) is None

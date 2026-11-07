@@ -126,7 +126,9 @@ def score_idea(d: IdeaDraft, brand: BrandProfile) -> float:
 
 def generate_ideas(db: DB, llm: LLM, brand: BrandProfile, n: int = 10, online: bool = True,
                    dedupe_threshold: float = 0.5) -> list[int]:
+    from .insights import winners_prompt
     signals = gather_signals(brand, online=online)
+    learned = winners_prompt(db, brand.slug)
     recent = db.query("SELECT title FROM ideas WHERE brand = ? ORDER BY id DESC LIMIT 300", [brand.slug])
     recent_titles = [r["title"] for r in recent]
     system = (
@@ -150,6 +152,8 @@ What people are searching for right now (signals, may be noisy):
 
 Recent ideas already in the backlog (do NOT repeat or lightly reword these):
 {chr(10).join('- ' + t for t in recent_titles[:60]) or '- (none yet)'}
+
+{learned}
 
 Each idea must have a distinct angle, not a template with the noun swapped.{_lang(brand)}"""
     seed = int(hashlib.sha1(f"{brand.slug}{len(recent_titles)}".encode()).hexdigest(), 16) % 10_000

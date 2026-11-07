@@ -14,6 +14,7 @@ from PIL import Image
 
 from ..config import BrandProfile, Settings
 from ..schemas import Script, Segment
+from . import chapters
 from .captions import time_segment, time_segment_words, write_srt
 from .carousel import SlideKit, SlideText, render_carousel
 from .images import generate_images
@@ -64,7 +65,8 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     segments = script.segments
     family = f"{brand.slug}:{script.title}"
 
-    imgs = _images_with_charts(settings, brand, segments, size, ASPECTS[fmt], out / "images", family, palette)
+    imgs = _images_with_charts(settings, brand, segments, size, ASPECTS[fmt], out / "images", family, palette,
+                               reserve_bottom=0.22 if fmt == "long" else 0.36)  # caption zone
     lines = [(s.narration or s.on_screen_text or s.heading).strip() for s in segments]
     heads = [s.on_screen_text for s in segments]
     images = [r.path for r in imgs]
@@ -74,7 +76,7 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
         images.append(images[-1])
 
     tts = synthesize_segments(settings, brand, lines, work / "voice")
-    beats, cues, slots, t = [], [], [], 0.0
+    beats, cues, slots, t, starts, owned = [], [], [], 0.0, [], []
     seg_words = tts.words or [None] * len(lines)
     from .charts import render_chart_clip
     for i, (line, head, img, dur) in enumerate(zip(lines, heads, images, tts.durations)):
@@ -82,12 +84,17 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
         chart = segments[i].chart if i < len(segments) else None
         clip = render_chart_clip(chart, size, palette, work / f"chart-{i:02d}.mp4", seconds=min(slot, 4.0)) \
             if chart else None
-        beats.append(Beat(img, "" if chart else head, t, slot, clip=clip))  # charts carry their own title
+        own = _footage(settings, segments[i]) if i < len(segments) else None
+        if own:
+            clip, chart = own, None  # the person's own recording beats any generated visual
+            owned.append(own)
+        beats.append(Beat(img, "" if chart else head, t, slot, clip=clip, still=bool(chart)))  # charts: own title, no pan
         if seg_words[i]:
             cues += time_segment_words(line, t, dur, seg_words[i])
         else:
             cues += time_segment(line, t + LEAD, max(0.4, dur - LEAD))
         slots.append(slot)
+        starts.append((round(t, 2), segments[i].heading if i < len(segments) else ""))
         t += slot
 
     audio = out / "audio.wav"
@@ -130,12 +137,14 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
                            note="JPEG copy for APIs that require JPEG"))
     prov.append(provenance(str(video), "rendered", "ffmpeg", "", fps=opts.fps, notes=notes,
                            music=music.name if music else None))
+    for own in dict.fromkeys(owned):
+        prov.append(provenance(str(own), "own", "footage", "", "recorded by the channel owner"))
     if music:
         prov.append(provenance(str(music), "licensed", "user-music", "",
                                "user-supplied via FACTORY_MUSIC_DIR; keep the licence on file"))
     return {"video": video, "audio": audio, "captions_srt": srt, "images": [r.path for r in imgs], "slides": [],
             "thumbnail": thumb, "thumbnail_variants": [thumb, *variants], "duration": round(duration, 3),
-            "provenance": prov}
+            "chapters": chapters.build(starts, duration) if fmt == "long" else [], "provenance": prov}
 
 
 # ---------------------------------------------------------------- slides
@@ -208,7 +217,19 @@ def _script(post: dict) -> Script:
     return script
 
 
-def _images_with_charts(settings, brand, segments, size, aspect, out_dir, family, palette):
+def _footage(settings, seg) -> Path | None:
+    """A person's own screen recording or camera clip for this beat (Segment.footage), if it exists."""
+    raw = (getattr(seg, "footage", "") or "").strip()
+    if not raw:
+        return None
+    p = Path(raw).expanduser()
+    p = p if p.is_absolute() else settings.home / p
+    if not p.is_file():
+        raise MediaError(f"footage not found: {raw} (paths are relative to {settings.home})")
+    return p
+
+
+def _images_with_charts(settings, brand, segments, size, aspect, out_dir, family, palette, reserve_bottom=0.0):
     """Illustrations for ordinary beats; exact data charts (no AI) for beats that carry a chart."""
     import json as _json
 
@@ -221,7 +242,8 @@ def _images_with_charts(settings, brand, segments, size, aspect, out_dir, family
     out = []
     for i, s in enumerate(segments):
         if s.chart:
-            path = render_chart(s.chart, size, palette, brand.visual.font, out_dir / f"chart-{i:02d}.png")
+            path = render_chart(s.chart, size, palette, brand.visual.font, out_dir / f"chart-{i:02d}.png",
+                                reserve_bottom=reserve_bottom)
             out.append(ImageResult(path, "chart", "contentfactory.charts", _json.dumps(s.chart.model_dump())[:500],
                                    note="drawn from the script's numbers; check them"))
         else:

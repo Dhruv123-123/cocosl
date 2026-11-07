@@ -199,6 +199,28 @@ def check_cadence(db: DB, brand: BrandProfile, platform: str, when: datetime) ->
     return Check("cadence", "ok", f"{n}/{cap} posts on {platform} that day")
 
 
+def check_original_element(post: dict) -> Check | None:
+    """Long videos need one thing a template can't make (YouTube judges whole channels for
+    'inauthentic content': slideshows with the same narration). A chart drawn from the video's own
+    numbers or the person's own footage counts; a planned element only counts once it's in the video."""
+    if post.get("format") != "long":
+        return None
+    script = post.get("script") or {}
+    segs = script.get("segments") or []
+    footage = [s for s in segs if (s.get("footage") or "").strip()]
+    charts = [s for s in segs if s.get("chart")]
+    if footage:
+        return Check("original_element", "ok", f"{len(footage)} beat(s) with your own footage")
+    if charts:
+        return Check("original_element", "ok", f"{len(charts)} chart(s) drawn from this video's numbers")
+    planned = (script.get("original_element") or "").strip()
+    if planned:
+        return Check("original_element", "block", f"Planned original element not in the video yet: {planned[:160]}. "
+                     "Add the footage to a beat (or a chart), then re-render")
+    return Check("original_element", "block", "Long video with nothing a template can't make: add a chart with "
+                 "this video's own numbers or a beat with your own screen recording")
+
+
 def run_content_checks(db: DB, brand: BrandProfile, post: dict) -> list[Check]:
     script = post.get("script") or {}
     text = script_text(script)
@@ -221,6 +243,8 @@ def run_content_checks(db: DB, brand: BrandProfile, post: dict) -> list[Check]:
         checks.append(lang_check)
     if post.get("assets"):
         checks.append(check_assets_licensed(post["assets"]))
+    if (orig := check_original_element(post)) is not None:
+        checks.append(orig)
     unverified = script.get("claims_to_verify") or []
     if unverified:
         checks.append(Check("fact_check", "warn", f"{len(unverified)} claim(s) need a human fact-check"))
