@@ -1,0 +1,30 @@
+# Tutorial 2 in TUTORIALS.md: Pin Maker for Small Shops, about 2½ minutes.
+id: pin-maker
+title: "Pins and video pins from your photos"
+size: [1920, 1080]
+palette: ["#16181d", "#f6efe6", "#c8775a"]
+footage_dir: footage/pin-maker
+beats:
+  - image: pin-hook.png
+    say: "Product pins and video pins, all from the same photos, in a few minutes."
+  - footage: pin-open.mp4
+    say: "Open pin-maker dot html in Chrome, Edge or Safari, and add a photo."
+  - footage: pin-sizes.mp4
+    say: "Pin image is a thousand by fifteen hundred PNG, the tall two by three shape. The other two buttons make video pins."
+  - footage: pin-title.mp4
+    say: "Write the title the way someone would search for it. Not 'new drop', but what it is."
+  - footage: pin-save.mp4
+    say: "Save my image gives you the PNG."
+  - footage: pin-giftguide.mp4
+    say: "Gift guide: two to four products, each with a caption."
+  - footage: pin-collection.mp4
+    say: "Collection works the same way, for a set or colourways."
+  - footage: pin-honest.mp4
+    say: "Sale pins only save after you confirm the discount and the dates are real."
+  - footage: pin-video.mp4
+    say: "Now a video pin: same words, click video pin, and make it."
+    seconds: 12
+  - image: pin-post.png
+    say: "When you post, link each pin to the exact listing, and put the product first in the title and description."
+  - image: pin-guide.png
+    say: "The guide has a weekly routine: make six on Monday, then post one or two a day."

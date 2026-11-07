@@ -1,0 +1,99 @@
+# Kit sales funnel: free Lite download -> 3 emails -> the Small Shop Bundle. Plan: ../../KIT_SALES_FUNNEL.md
+# Check:  FACTORY_BRANDS=launch/ugc-service/kits-funnel/brands factory sequence-check small-shop-kits
+# Export: FACTORY_BRANDS=launch/ugc-service/kits-funnel/brands factory sequence-export small-shop-kits --for sender
+#
+# Rules for this copy: real prices only, and a discount code only while it's really live (the {if launch}
+# block shows only while launch_price is set and today <= launch_ends; none is used yet). No fake "was" prices, no income or
+# sales promises, no testimonials. The kits never change the seller's product, so the emails don't suggest it.
+#
+# BEFORE GOING LIVE
+#   1. Replace YOURNAME / YOUR-STUDIO-SITE in the links below and in ../small-shop-kits.yaml.
+#   2. Set vars.price to the bundle's real price. No discount code is in the copy: if you ever run one,
+#      see "Optional: a real subscriber offer" in KIT_SALES_FUNNEL.md.
+
+name: kits-welcome
+min_gap_hours: 20
+max_late_days: 3
+signoff: "Talk soon,\n[Your Name], Small Shop Kits"
+footer_note: "Drafted with AI help, edited by a person. Not affiliated with Etsy, Shopify or Gumroad."
+
+vars:
+  product: small-shop-bundle
+  product_name: the Small Shop Video and Graphics Bundle
+  price: 35                 # the bundle's real Gumroad price; change it here if you change it there
+
+links:
+  lite_download: https://YOURNAME.gumroad.com/l/listing-video-maker-lite
+  listing_kit: https://YOURNAME.gumroad.com/l/listing-video-kit
+  bundle: checkout:small-shop-bundle
+  help: https://YOUR-STUDIO-SITE/kits-help.html
+
+steps:
+  - day_offset: 0
+    subject: "Your free Listing Video Maker Lite"
+    preheader: "Download it, add 3 photos, and you'll have a video in about 10 minutes."
+    cta_url_key: lite_download
+    cta_label: Download the Lite maker
+    body_markdown: |
+      Hi,
+
+      Thanks for grabbing the free **Listing Video Maker Lite**. Here's your download: **[Listing Video Maker Lite]({link:lite_download})**.
+
+      Your first video in about 10 minutes:
+
+      1. Open the file in Chrome, Edge or Safari on a computer. Nothing to install, and your photos never leave your computer.
+      2. Add 3 photos you took yourself: the whole product, a close-up, and one that shows its size.
+      3. Type your shop name, the product name, an opening line and 3 true facts (material, size, what's included).
+      4. Click **Make my video**, watch it once with the sound off, then upload it to your listing.
+
+      Etsy plays listing videos without sound, so the words on screen do the work. Keep the opening line short and specific: "Light enough to forget you're wearing them" beats "Beautiful handmade earrings".
+
+      In two days I'll send the three things that make a silent listing video work. That's it: three emails in total, and the unsubscribe link at the bottom works with one click.
+
+      {signoff}
+
+  - day_offset: 2
+    subject: "3 things that make a silent listing video work"
+    preheader: "Show the product in the first second, one idea per scene, and only true facts."
+    cta_url_key: listing_kit
+    cta_label: See the full Listing Video Kit
+    body_markdown: |
+      Hi,
+
+      If you've made a video with the Lite maker, here's how to make the next one better. If you haven't yet, these will help with the first.
+
+      **1. Show the product in the first second.** People scroll fast. Start on your best photo, not on your logo.
+
+      **2. One idea per scene.** One line of text per photo, short enough to read in two seconds. If you need a second sentence, you need a second photo.
+
+      **3. Only facts you can back up.** Material, size, what's in the box, how it ships. Skip "best" and "perfect". They read as filler, and a buyer can't check them.
+
+      The free Lite version gives you one template, square video and a small watermark. The **full DIY Listing Video Kit** ({link:listing_kit}) removes the watermark and adds 5 templates (spotlight, details, line-up, sale and new in), vertical video for Reels and TikTok, 36 overlays for your own video editor, and a step-by-step guide.
+
+      No need to decide now. In a few days I'll tell you about the bundle, which is the better deal if you'd also use pins or seasonal sale graphics.
+
+      {signoff}
+
+  - day_offset: 5
+    subject: "The bundle: listing videos, pins and holiday sale graphics"
+    preheader: "Three kits for ${price}, instead of $49 bought separately."
+    cta_url_key: bundle
+    cta_label: Get the bundle
+    body_markdown: |
+      Hi,
+
+      Last email in this series. If you sell on Etsy, Shopify or your own site, here's the kit set for listing videos, pins and seasonal sales:
+
+      - **DIY Listing Video Kit**: 5 listing video templates, square and vertical, plus 36 overlays.
+      - **Pin Maker for Small Shops**: tall product pins and short video pins from your photos.
+      - **Seasonal Sale Kit**: Valentine's Day to Black Friday and Cyber Monday graphics and videos, with a sale, a gift idea or a last-call style.
+
+      Bought separately they're $49. **The bundle is ${price}.**
+
+      Everything runs in your browser, offline, from your own photos. Each kit includes a PDF guide, and if a kit isn't right for you, there's a 30-day refund, no questions asked ({link:help}).
+
+      **[Get the bundle]({link:bundle})**
+
+      Thanks for trying the Lite maker. Whatever you decide, I hope your next listing video sells something.
+
+      {signoff}

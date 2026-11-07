@@ -32,7 +32,9 @@ def _lead(db, name="Glow Co", email="hi@glow.example", **kw):
 def test_portfolio_ads_are_clean_and_fictional():
     ads = portfolio.load_ads(ADS_JSON)
     assert [a["slug"] for a in ads] == ["trailsip", "lumen-and-loaf", "hound-and-hollow", "deskline",
-                                        "fern-street-studio"]
+                                        "fern-street-studio", "hollowick", "ninth-hour-coffee", "tumbletree",
+                                        "saltmeadow", "wren-and-wire", "potbound", "grate-escape", "wrapsody",
+                                        "loopline", "packwell"]
     assert portfolio.check_portfolio_ads(ads) == []
     for a in ads:
         assert "AI-generated" in a["script"].on_screen_disclosure
