@@ -18,7 +18,9 @@ FORMAT_SPECS = {
             "It must contain one thing a template can't make: at least one worked example with this video's "
             "own numbers as a `chart`, and/or name in original_element a screen recording a person should make "
             "(e.g. 'record the IRS payment page while filling in the example'). Not a slideshow of generic "
-            "illustrations with narration.",
+            "illustrations with narration. Keep the closing CTA under 40 words and end on one 'watch next' "
+            "line (e.g. 'If you're building a budget, watch this next'): a 20-second end slate follows for the "
+            "end screen.",
     "mid": "A 65-90 second vertical video for TikTok only (its Creator Rewards count videos over one minute). "
            "8-11 beats; total narration 190-250 words. Hook in the first sentence, then one idea developed "
            "with a concrete example, ending on the CTA. Must stand on its own, not a stretched short.",
@@ -77,7 +79,7 @@ def _offline_script(brand: BrandProfile, title: str, angle: str, fmt: str) -> Sc
         segs[2].chart = ChartSpec(kind="bars", title=f"Worked example: {topic}"[:60], labels=["Before", "After"],
                                   values=[100, 160], note="Placeholder numbers: replace with the real example")
         original = "The worked-example chart (replace its placeholder numbers)"
-    tags = (brand.hashtags or [brand.slug])[:8]
+    tags = (brand.hashtags or [brand.slug])[:5]
     return Script(
         title=title, hook=segs[0].narration, segments=segs, cta=brand.cta, original_element=original,
         caption=f"{title}\n\n{angle}.\n\n{brand.cta}",

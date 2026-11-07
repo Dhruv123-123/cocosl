@@ -11,9 +11,9 @@ For every brand it checks, in one pass:
   contains REPLACE_ME or another placeholder; that is red.
 * disclosures: affiliate posts say so (FTC), and every post has the AI label.
 * caption limits per platform each post is queued for (Instagram 2,200 chars
-  and 30 hashtags, TikTok 2,200, Threads 500, YouTube title 100 / description
+  and 5 hashtags, TikTok 2,200, Threads 500, YouTube title 100 / description
   5,000 bytes). Over the limit is yellow: the publisher trims, but you should
-  choose what goes.
+  choose what goes. YouTube Shorts titles over 60 chars and long-video titles over 70 are yellow too.
 
 Red = something would go out wrong. Yellow = fine for dry run, fix before
 going live. Nothing is posted or changed.
@@ -30,9 +30,10 @@ PLACEHOLDER_RE = re.compile(r"REPLACE[_-]?ME|YOUR[_-](?:LINK|URL|HANDLE|CODE|ID)
                             r"\bexample\.(?:com|org|net)\b|\bexample\.gumroad\.com\b|\blocalhost\b|(?-i:\bXXX+\b)", re.I)
 UTM_VALUE_RE = re.compile(r"^[A-Za-z0-9_.-]+$")
 CAPTION_LIMITS = {  # platform -> (max chars, max hashtags)
-    "instagram": (2200, 30), "tiktok": (2200, None), "threads": (500, None), "facebook": (63206, None),
+    "instagram": (2200, 5), "tiktok": (2200, None), "threads": (500, None), "facebook": (63206, None),
 }
 LEVELS = {"green": 0, "yellow": 1, "red": 2}
+SHORT_TITLE_MAX, LONG_TITLE_MAX = 60, 70  # YouTube SEO playbook: mobile and search cut longer titles
 
 
 @dataclass
@@ -171,8 +172,15 @@ def run(factory, days: int = 14, online: bool = False, now: datetime | None = No
                 if tags and ntags > tags:
                     rep.add("yellow", slug, where, f"{ntags} hashtags, {platform} takes {tags}; extras are dropped")
             if platform == "youtube":
-                if len(req.title or "") > 100:
-                    rep.add("yellow", slug, where, f"title {len(req.title)} chars, YouTube takes 100; it will be cut")
+                n_title = len(req.title or "")
+                if n_title > 100:
+                    rep.add("yellow", slug, where, f"title {n_title} chars, YouTube takes 100; it will be cut")
+                elif row["format"] in ("short", "mid") and n_title > SHORT_TITLE_MAX:
+                    rep.add("yellow", slug, where, f"Shorts title {n_title} chars; keep it to {SHORT_TITLE_MAX} "
+                                                   "(search phrase first) so it isn't cut off")
+                elif row["format"] == "long" and n_title > LONG_TITLE_MAX:
+                    rep.add("yellow", slug, where, f"title {n_title} chars; keep it to {LONG_TITLE_MAX}, search "
+                                                   "phrase in the first 40-60")
                 if utf8_len(req.description or "") > 5000:
                     rep.add("yellow", slug, where, "description over 5,000 bytes; it will be trimmed")
                 if re.search(r"[<>]", f"{req.title}{req.description}"):

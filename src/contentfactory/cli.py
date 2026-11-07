@@ -306,6 +306,11 @@ def cmd_new_brand(args):
 def cmd_report(args):
     from .reports import save_report, to_markdown, weekly_report
     f = _factory(args)
+    if args.html:
+        from .weekly_html import save as save_html
+        for path in save_html(f):
+            print(path)
+        return
     if args.save:
         print(save_report(f))
     else:
@@ -487,7 +492,9 @@ def build_parser() -> argparse.ArgumentParser:
     s.set_defaults(func=cmd_new_brand)
 
     s = sub.add_parser("report", help="weekly business report: money, content, funnel, pipeline, next actions")
-    s.add_argument("--save", action="store_true", help="write to output/reports/")
+    s.add_argument("--save", action="store_true", help="write to output/reports/ (also writes the HTML pages)")
+    s.add_argument("--html", action="store_true", help="one HTML page per brand from imported stats: best and "
+                                                       "worst posts, formats, pillars, next topics")
     s.set_defaults(func=cmd_report)
 
     s = sub.add_parser("serve", help="run the dashboard")
@@ -515,7 +522,7 @@ def _extend(sub) -> None:
                 "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup",
                 "contentfactory.publish.preflight", "contentfactory.cleanup",
                 "contentfactory.planner", "contentfactory.launch_check", "contentfactory.stats",
-                "contentfactory.scaffold", "contentfactory.manual", "contentfactory.numbercheck"):
+                "contentfactory.scaffold", "contentfactory.manual", "contentfactory.numbercheck", "contentfactory.ytplan", "contentfactory.triage"):
         try:
             module = __import__(mod, fromlist=["register"])
         except ImportError:

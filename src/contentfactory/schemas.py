@@ -50,7 +50,7 @@ class Script(BaseModel):
     segments: list[Segment]
     cta: str = Field(description="Closing call to action")
     caption: str = Field(description="Platform caption, 1-3 short paragraphs, no hashtags")
-    hashtags: list[str] = Field(description="5-10 relevant hashtags without the # sign")
+    hashtags: list[str] = Field(description="3-5 descriptive topic hashtags (Instagram allows 5) without the # sign")
     description: str = Field(description="Long description for YouTube with chapters if long-form")
     thumbnail_text: str = Field(description="2-5 word thumbnail text")
     sources: list[str] = Field(description="URLs or references a human should check")
@@ -64,6 +64,9 @@ class Script(BaseModel):
         "{kind: loan_payment|total_interest|payoff_months|future_value|federal_tax|payroll_tax, the inputs "
         "(principal/balance, rate as a percent, months or years, payment, monthly, initial, wages, married, year), "
         "claimed: the number the script says}"))
+    related_video: str = Field(default="", description="Shorts: the title of this brand's long video the Short "
+                               "should link to (YouTube's related video, set by hand in Studio). Empty otherwise")
+    playlist: str = Field(default="", description="Long videos: the series playlist it belongs in, if known")
     original_element: str = Field(default="", description="Long videos: the one thing a template can't make, e.g. "
                                   "a worked example charted with this video's own numbers, or a screen recording of "
                                   "a real tool a person should record (say exactly what to record). Empty for shorts")
