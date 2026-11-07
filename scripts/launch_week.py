@@ -9,6 +9,10 @@ starts (Sat Nov 21, 2026), because month 1, the holiday add-on and the savings c
 dates (Black Friday, December). From then on the dated packs take over, and the unused launch pieces become
 swap-ins. Every platform gets its own time (brand platform_times), and the script refuses a calendar where a
 platform has two posts at one minute or more than the daily cap.
+
+It also writes each scheduled launch piece's day into content.json as "date": "YYYY-MM-DD", so
+`factory import` + approving keeps the table's days whatever order Dhruv approves in, and removes the date
+from the swap-ins (they then take the next free slot). Re-run `factory import` after changing Day 1.
 """
 from __future__ import annotations
 
@@ -47,6 +51,30 @@ def launch_days() -> list[tuple[int, int, str]]:
             seen.add((d, i))
             out.append((int(d), int(i), f))
     return out
+
+
+def launch_dates(day1: date) -> dict[int, str]:
+    """Content index -> "YYYY-MM-DD" for the launch pieces that post before the dated packs take over."""
+    out = {}
+    for d, i, _ in launch_days():
+        when = day1 + timedelta(days=d - 1)
+        if when < HANDOFF:
+            out[i] = when.isoformat()
+    return out
+
+
+def dated_content(day1: date) -> str:
+    """content.json with "date" (right after "format") on the scheduled pieces and none on the swap-ins."""
+    want = launch_dates(day1)
+    out = []
+    for i, it in enumerate(items(M / "content.json")):
+        it = {k: v for k, v in it.items() if k != "date"}
+        if i in want:
+            keys = list(it)
+            at = keys.index("format") + 1 if "format" in keys else 0
+            it = dict(list(it.items())[:at] + [("date", want[i])] + list(it.items())[at:])
+        out.append(it)
+    return json.dumps(out, indent=2, ensure_ascii=False)
 
 
 def dated_packs(day1: date) -> list[tuple[str, list[dict], date, int, dict]]:
@@ -145,10 +173,12 @@ def main() -> None:
         return
     text = DOC.read_text()
     cur = text[text.index(START): text.index(END) + len(END)]
+    content = dated_content(date.fromisoformat(a.day1))
     if a.check:
-        sys.exit(0 if cur == new else 1)
+        sys.exit(0 if cur == new and (M / "content.json").read_text() == content else 1)
     DOC.write_text(text.replace(cur, new))
-    print(f"wrote {DOC.relative_to(ROOT)} for Day 1 = {a.day1}")
+    (M / "content.json").write_text(content)
+    print(f"wrote {DOC.relative_to(ROOT)} and the launch dates in content.json for Day 1 = {a.day1}")
 
 
 if __name__ == "__main__":

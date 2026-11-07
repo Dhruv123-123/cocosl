@@ -49,7 +49,7 @@ cadence:
   # at a time, so two formats that can share a day on one platform get different minutes: TikTok-only
   # videos keep 19:00 (the Short is at 18:00) and Sunday long-video pins go at 11:30 (holiday carousels
   # take 11:00).
-  platform_times: {"tiktok:mid": ["19:00"], "pinterest:long": ["11:30"]}
+  platform_times: {"tiktok:mid": ["19:00"], "pinterest:long": ["11:30"], "instagram:carousel": ["19:00"], "youtube:long": ["19:00"]}
   timezone: America/New_York
 accounts:
   - {platform: instagram, handle: "@moneymadesimple", formats: [short, carousel, image]}

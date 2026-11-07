@@ -13,6 +13,7 @@ Everything for the first 14 days on one page: every post, the bio for each platf
 2. **Captions.** Each caption gets the AI disclosure from the brand file: "Visuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person. Not financial advice." Turn on the platform's AI label where it applies (TikTok, YouTube "altered or synthetic", Instagram/Facebook "AI info").
 3. **Product and affiliate posts.** Product posts say "It's our own product". Affiliate posts carry the affiliate line. Don't add UTM tags to affiliate links.
 4. **Human review.** Every post gets a human review in the dashboard, and someone ticks CHECK BEFORE POSTING.
+5. **Dates.** `scripts/launch_week.py` also writes each launch piece's day into `content.json` (`"date"`), so `factory import launch/money-made-simple/content.json` then approving keeps the days in the table, whatever order you approve in. The swap-ins have no date. If Day 1 changes, rerun the script and then `factory import` again, which updates the dates on posts that are already imported.
 
 ## The 14 days
 
@@ -146,7 +147,7 @@ Pin each post once it's live, on the day it goes out.
 
 This follows scouting's playbook (PR #2, `research/scouting/pinterest-playbook-2026.md`): start a new account at 3–5 pins a week.
 
-- **The table above already holds them.** Carousels and long videos also go to Pinterest. `scripts/launch_week.py` keeps the first 4 a week, at 11:00 (long-video pins at 11:30). The rest post on their other platforms only, and the notes list them.
+- **The table above already holds them.** Carousels and long videos also go to Pinterest. `scripts/launch_week.py` keeps the first 4 a week, at 11:00 (long-video pins at 11:30). The rest post on their other platforms only, and the notes list them. `factory manual` still builds a pin package for every carousel and long video, so in the first 14 days post only the pins in the table and skip the packages the notes list. (The other option, taking carousel and long out of the Pinterest account's formats for the fortnight, would also drop the 4 pins a week the table keeps.)
 - **From week 3,** rise to 1–2 pins a day. Start with these site pins (PR #4, `site/pins/`). Each links to its own page and leads with the search phrase:
   - "Money personality quiz: find your budget style in 1 minute" → /quiz/
   - "How to freeze your credit for free (and check your report like an auditor)" → /blog/how-to-freeze-your-credit/
