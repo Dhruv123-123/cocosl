@@ -28,3 +28,5 @@ mentioned in four emails out of seven, never more than once per email as a link.
 switch `email.provider` in `../config.js` to post straight to Kit, MailerLite or Buttondown.
 
 **Buyers:** people who buy the tracker move to the 3-email buyers sequence in `buyers/` (setup, first payment, one bundle upgrade offer). Pull them out of this sequence when they buy.
+
+**Deadline reminders:** `reminders/` has 12 dated emails (a week before, the day before and the day after each 2027 estimated-tax deadline: Jan 15, Apr 15, Jun 15, Sep 15). Send them as scheduled broadcasts to the whole list. They keep email 7's promise.

@@ -173,3 +173,49 @@ def test_spring_channels_point_at_etsy_calculator_and_compare_pages(factory, tmp
             assert "utm_" not in p["link"]
         else:
             assert "utm_source=pinterest" in p["link"]
+
+
+def test_b2b_kit_builds_with_verified_leads_and_a_clean_schedule(tmp_path):
+    import csv as _csv
+    import datetime as _dt
+    import importlib.util
+    import re as _re
+
+    spec = importlib.util.spec_from_file_location("build_b2b", LAUNCH / "b2b" / "build_b2b.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    tracker = mod.build(tmp_path)
+
+    n = len(tracker)
+    assert 70 <= n <= 80
+    rows = list(_csv.DictReader(open(tmp_path / "leads_research.csv")))
+    assert len({r["email"].lower() for r in rows}) == n
+    for r in rows:
+        assert _re.fullmatch(r"[^@\s]+@[^@\s]+\.[a-z]{2,}", r["email"], _re.I), r["email"]
+        assert r["email_source_url"].startswith("http"), r["name"]
+        assert r["opener"], r["name"]
+
+    holidays = {"2026-11-26", "2026-11-27", "2026-12-24", "2026-12-25"}
+    days = sorted({t["email1_planned"] for t in tracker})
+    assert days[0] == "2026-11-11"
+    for t in tracker:
+        for k in ("email1_planned", "fu1_planned", "fu2_planned"):
+            d = _dt.date.fromisoformat(t[k])
+            assert d.weekday() < 5 and t[k] not in holidays, (t["name"], k, t[k])
+        assert t["email1_planned"] < t["fu1_planned"] < t["fu2_planned"]
+    from collections import Counter
+    per_day = Counter(t["email1_planned"] for t in tracker)
+    assert max(per_day.values()) == 8 and all(v == 8 for d, v in per_day.items() if d != days[-1])
+
+    pitches = sorted((tmp_path / "pitches").glob("*.md"))
+    assert len(pitches) == n
+    allowed = {"{Your Name}", "{Bundle link}", "{Street address or PO box / registered mailbox}",
+               "{City, Postcode}", "{Country}"}
+    for p in pitches:
+        text = p.read_text()
+        assert text.count('Not interested? Reply "no thanks"') == 3, p.name
+        assert set(_re.findall(r"\{[^{}]+\}", text)) <= allowed, p.name
+        assert "Jan 15, 2027" in text and "$49" in text
+        sent = "".join(_re.findall(r"```\n(.*?)```", text, _re.S))
+        assert "affiliate" not in sent.lower()
+        assert "$600" not in text  # the 2026 1099-NEC threshold is $2,000
