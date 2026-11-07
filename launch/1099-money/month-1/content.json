@@ -1,0 +1,2959 @@
+[
+ {
+  "format": "short",
+  "pillar": "benefits without an employer",
+  "idea_angle": "Open enrollment timing: Dec 15 is the healthcare.gov cut-off for coverage starting Jan 1.",
+  "script": {
+   "title": "Freelancers: Dec 15 is your health insurance deadline",
+   "hook": "No employer, no health plan? The date that matters this month is December fifteenth.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "No employer, no health plan? The date that matters this month is December fifteenth.",
+     "on_screen_text": "Dec 15: the date that matters",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes circling a date on a December calendar next to a small medical cross shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why",
+     "narration": "On healthcare.gov, open enrollment runs November first to January fifteenth. But to be covered from January first, you generally need to pick a plan by December fifteenth.",
+     "on_screen_text": "Pick by Dec 15 → covered Jan 1",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar strip with a coral marker on the 15th and a mint marker on the 1st. No text, no logos, no real people."
+    },
+    {
+     "heading": "Later",
+     "narration": "Sign up between December sixteenth and January fifteenth and coverage usually starts February first. That's a month uninsured.",
+     "on_screen_text": "Dec 16–Jan 15 → starts Feb 1",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small gap between two calendar pages. No text, no logos, no real people."
+    },
+    {
+     "heading": "Your state",
+     "narration": "Some states run their own marketplace with different dates, so check your state's site.",
+     "on_screen_text": "State marketplace? Check its dates",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a simple map outline with a small calendar pin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Income",
+     "narration": "The application asks for next year's expected income. Freelancers estimate it. Use your best honest guess and update it if it changes.",
+     "on_screen_text": "Estimate next year's income honestly",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a pencil over a simple form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "And keep the receipts: premiums for a plan in your name are often deductible for the self-employed.",
+     "on_screen_text": "Premiums may be deductible",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a receipt tucked into a folder with a medical cross. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Healthcare.gov open enrollment runs Nov 1, 2026 to Jan 15, 2027. Pick a plan by Dec 15 for coverage from Jan 1; sign up Dec 16–Jan 15 and it usually starts Feb 1. State-run marketplaces can have different dates.\n\nPut next year's income in as an honest estimate and update it if it changes. Self-employed premiums are often deductible.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "healthinsurance",
+    "openenrollment",
+    "selfemployed",
+    "freelancetips",
+    "obamacare",
+    "1099money"
+   ],
+   "description": "The healthcare.gov open enrollment dates that matter for freelancers buying their own coverage.",
+   "thumbnail_text": "Dec 15 deadline",
+   "sources": [
+    "https://www.healthcare.gov/quick-guide/dates-and-deadlines/"
+   ],
+   "claims_to_verify": [
+    "Open enrollment Nov 1, 2026 – Jan 15, 2027 on healthcare.gov",
+    "Enroll by Dec 15 for Jan 1 start; Dec 16–Jan 15 → Feb 1 start",
+    "State-based marketplace dates vary"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "benefits without an employer",
+  "idea_angle": "The self-employed health insurance deduction and its two catches (employer-plan eligibility, profit limit).",
+  "script": {
+   "title": "Your health insurance might be a tax deduction",
+   "hook": "Paying for your own health insurance as a freelancer? Those premiums might come off your taxable income.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Paying for your own health insurance as a freelancer? Those premiums might come off your taxable income.",
+     "on_screen_text": "Premiums might be deductible",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a medical shield and a receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "What",
+     "narration": "It's the self-employed health insurance deduction. It covers medical, dental and qualifying long-term care premiums for you, your spouse and dependents.",
+     "on_screen_text": "You, spouse, dependents",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three small shields of different sizes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Catch one",
+     "narration": "You can't take it for any month you were eligible for an employer's subsidized plan, including your spouse's. Eligible counts, even if you didn't sign up.",
+     "on_screen_text": "Not if eligible for an employer plan",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a door marked with a briefcase icon, slightly open. No text, no logos, no real people."
+    },
+    {
+     "heading": "Catch two",
+     "narration": "It can't be more than your business profit. No profit, no deduction.",
+     "on_screen_text": "Capped at your profit",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin stack with a ceiling line. No text, no logos, no real people."
+    },
+    {
+     "heading": "What it cuts",
+     "narration": "It lowers income tax, not self-employment tax. On a twelve percent bracket, five thousand of premiums saves around six hundred dollars.",
+     "on_screen_text": "Cuts income tax, not SE tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a seesaw tipping slightly. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "It's figured on Form 7206. Keep a year's worth of premium statements.",
+     "on_screen_text": "Form 7206 · keep statements",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a tidy folder of monthly statements. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "The self-employed health insurance deduction covers premiums for you, a spouse and dependents.\n\nCatches: not for months you were eligible for an employer's subsidized plan (including a spouse's), and capped at your business profit. It lowers income tax, not SE tax: $5,000 of premiums in the 12% bracket saves roughly $600 (less with the QBI interaction). Form 7206.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "healthinsurance",
+    "taxdeductions",
+    "selfemployed",
+    "freelancetaxes",
+    "1099",
+    "1099money"
+   ],
+   "description": "How the self-employed health insurance deduction works, who can't take it, and what it saves.",
+   "thumbnail_text": "Deduct your premiums",
+   "sources": [
+    "https://www.irs.gov/forms-pubs/about-form-7206",
+    "https://www.irs.gov/publications/p334"
+   ],
+   "claims_to_verify": [
+    "Eligibility rule: no deduction for months eligible for employer-subsidized plan incl. spouse's",
+    "Limited to net profit",
+    "$5,000 × 12% = $600 (approximate; QBI reduces it slightly)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Four things to do before Dec 31: buy needed equipment, fund retirement, send invoices, update your tax estimate.",
+  "script": {
+   "title": "4 money moves before December 31",
+   "hook": "Four freelancer money moves to make before December thirty-first.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Four freelancer money moves to make before December thirty-first.",
+     "on_screen_text": "4 moves before Dec 31",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a short checklist under a December calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "One",
+     "narration": "One: if you need equipment in the next few months, buying it and using it before year-end can move the deduction into this year.",
+     "on_screen_text": "1. Needed gear? Buy + use it",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop being unboxed. No text, no logos, no real people."
+    },
+    {
+     "heading": "Two",
+     "narration": "Two: ask your retirement provider about Solo 401(k) deadlines now. A SEP IRA can wait until you file.",
+     "on_screen_text": "2. Retirement deadlines",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a plant pot with a small calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Three",
+     "narration": "Three: decide on December invoices. On the cash method, money received in January is next year's income.",
+     "on_screen_text": "3. Invoice timing",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an invoice with an arrow crossing into January. No text, no logos, no real people."
+    },
+    {
+     "heading": "Four",
+     "narration": "Four: update your full-year estimate so the January fifteenth payment is the right size.",
+     "on_screen_text": "4. Update your estimate",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calculator with a January calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Don't do anything just for a deduction. Do the things you were going to do anyway, at the better time.",
+     "on_screen_text": "Better timing, not new spending",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes ticking the last box. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Before Dec 31:\n1. Need equipment soon? Buy and start using it this year to move the deduction earlier\n2. Ask about Solo 401(k) deadlines now (a SEP can wait until you file)\n3. Invoice timing: cash-method freelancers report income when received\n4. Update your full-year estimate for the Jan 15 payment\n\nBetter timing, not new spending.\n\nFree quarterly tax calculator in the link in bio: it shows what to pay by Jan 15.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "yearendtax",
+    "freelancetaxes",
+    "taxtips",
+    "selfemployed",
+    "smallbusinesstips",
+    "1099money"
+   ],
+   "description": "Four year-end money moves for freelancers before December 31.",
+   "thumbnail_text": "4 moves by Dec 31",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/retirement-plans/plan-sponsor/simplified-employee-pension-plan-sep",
+    "https://www.irs.gov/publications/p334"
+   ],
+   "claims_to_verify": [
+    "Cash method timing",
+    "SEP deadline = filing deadline incl. extensions",
+    "Equipment placed in service rule"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "Don't buy gear in December just for the deduction: a $1,000 deduction saves about $230 at $60K profit.",
+  "script": {
+   "title": "Don't buy a laptop just for the tax write-off",
+   "hook": "Every December someone tells freelancers to buy stuff for the write-off. Here's the math.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Every December someone tells freelancers to buy stuff for the write-off. Here's the math.",
+     "on_screen_text": "Buy it for the write-off?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes staring at a shopping bag with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "The idea",
+     "narration": "Equipment you buy and start using for the business by December thirty-first can often be deducted for this year.",
+     "on_screen_text": "Placed in service by Dec 31",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop being plugged in under a December calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "The math",
+     "narration": "But a deduction isn't a refund. At sixty thousand of profit, a thousand-dollar deduction saves about two hundred thirty dollars in federal tax.",
+     "on_screen_text": "$1,000 deduction ≈ $230 saved",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a large coin labeled with a minus sign next to a small coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "So",
+     "narration": "You still spent seven hundred seventy dollars. If you didn't need the laptop, you're just poorer.",
+     "on_screen_text": "You're still out $770",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an open wallet with a small moth flying out. No text, no logos, no real people."
+    },
+    {
+     "heading": "When it makes sense",
+     "narration": "If you were going to buy it in January anyway, buying it in December moves the deduction a year earlier. That's the real move.",
+     "on_screen_text": "Needed it anyway? Buy now.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar arrow moving a box from January to December. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Keep the receipt, and note what share you use for business.",
+     "on_screen_text": "Receipt + business-use %",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a receipt pinned to a laptop. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "A deduction isn't free money. At $60K profit (single, 2026), a $1,000 business deduction cuts federal tax by about $230. You're still out $770.\n\nThe real year-end move: if you need the equipment anyway, buy it and start using it by Dec 31 to take the deduction a year earlier. Keep the receipt and the business-use share.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "taxdeductions",
+    "yearendtax",
+    "freelancetaxes",
+    "selfemployed",
+    "smallbusinesstips",
+    "1099money"
+   ],
+   "description": "Why buying equipment just for a tax write-off rarely pays, and when buying before year-end does make sense.",
+   "thumbnail_text": "Write-off math",
+   "sources": [
+    "https://www.irs.gov/publications/p334",
+    "https://www.irs.gov/publications/p946"
+   ],
+   "claims_to_verify": [
+    "$1,000 deduction at $60K single ≈ $230.51 federal saving (SE + income tax, QBI interaction)",
+    "Equipment placed in service in the year is often deductible (de minimis / Section 179 / bonus); keep wording general"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "benefits without an employer",
+  "idea_angle": "Missed retirement savings this year? A SEP IRA can be opened and funded up to the filing deadline (with extensions) and still count for 2026.",
+  "script": {
+   "title": "It's not too late to cut your 2026 tax",
+   "hook": "Freelancers, there's a 2026 tax move you can still make next April.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Freelancers, there's a 2026 tax move you can still make next April.",
+     "on_screen_text": "A 2026 move you can make in April",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a small plant pot next to an April calendar page. No text, no logos, no real people."
+    },
+    {
+     "heading": "What",
+     "narration": "A SEP IRA can be opened and funded right up to your tax filing deadline, including extensions, and still count for twenty twenty-six.",
+     "on_screen_text": "SEP IRA: fund by your filing deadline",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a plant pot being filled from a coin jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "How much",
+     "narration": "As a self-employed person, you can put in about twenty percent of profit after half of self-employment tax. At sixty thousand of profit, about eleven thousand.",
+     "on_screen_text": "~20% of adjusted profit",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin stack beside the pot. No text, no logos, no real people."
+    },
+    {
+     "heading": "What it saves",
+     "narration": "It lowers income tax. It doesn't lower self-employment tax.",
+     "on_screen_text": "Cuts income tax, not SE tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a stack where only the top layer shrinks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Careful",
+     "narration": "Don't count on the April money to pay your April tax bill. Fund it from savings you won't need.",
+     "on_screen_text": "Use money you won't need",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two jars, one labeled with a clock icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "If you also want to save as an employee, a Solo 401(k) has stricter setup deadlines. Ask your provider now.",
+     "on_screen_text": "Solo 401(k)? Ask now",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with a small flag on December. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "A SEP IRA can be opened and funded up to your filing deadline (including extensions) and still count for 2026. Self-employed limit ≈ 20% of profit after half SE tax (≈ $11,152 at $60K profit).\n\nIt cuts income tax, not SE tax. Solo 401(k) deadlines are stricter: ask your provider before Dec 31.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "sepira",
+    "retirement",
+    "selfemployed",
+    "freelancetaxes",
+    "taxtips",
+    "1099money"
+   ],
+   "description": "How a SEP IRA can still lower a freelancer's 2026 taxes when funded before the filing deadline.",
+   "thumbnail_text": "SEP by April",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/plan-sponsor/simplified-employee-pension-plan-sep"
+   ],
+   "claims_to_verify": [
+    "SEP can be established and funded by filing deadline incl. extensions",
+    "≈20% effective rate for self-employed; $11,152 at $60K",
+    "Solo 401(k) setup/deferral deadlines differ (SECURE 2.0 rules); keep wording general"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Check the 1099s that arrive in January against your own log and ask for corrections before you file.",
+  "script": {
+   "title": "Your 1099 might be wrong. Here's what to do.",
+   "hook": "Clients make mistakes on 1099s. If yours is wrong, don't just file it.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Clients make mistakes on 1099s. If yours is wrong, don't just file it.",
+     "on_screen_text": "Wrong 1099? Don't just file it",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a form with one box circled in coral. No text, no logos, no real people."
+    },
+    {
+     "heading": "When",
+     "narration": "Clients send 1099-NEC forms by the end of January. Payment platforms send 1099-Ks if you passed the threshold.",
+     "on_screen_text": "They arrive by end of January",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a mailbox with two envelopes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Check",
+     "narration": "Compare each one to your own income log: same name, same taxpayer ID, same total.",
+     "on_screen_text": "Name · ID · total",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two sheets side by side with three check marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Common error",
+     "narration": "A common one: a December invoice they paid in January counted in the wrong year. Freelancers on the cash method report income in the year they received it.",
+     "on_screen_text": "Paid in Jan? It's next year's",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar page tearing between December and January with a coin crossing. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "Email the client, explain the difference, and ask for a corrected form. Keep the email.",
+     "on_screen_text": "Ask for a corrected form",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a paper airplane leaving a laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "If they won't fix it, report the correct amount and keep records that show why.",
+     "on_screen_text": "Report the right number",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a tidy folder with a small check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "1099-NEC and 1099-K forms arrive by the end of January. Check each against your own income log: name, taxpayer ID, total.\n\nCommon error: a payment you received in January counted in the prior year (cash-method freelancers report income when received). Ask the client for a corrected form and keep the email. If it isn't fixed, report the correct figure and keep your records.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "1099",
+    "1099nec",
+    "freelancetaxes",
+    "taxseason",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "How to check January 1099 forms against your records and get errors corrected.",
+   "thumbnail_text": "Wrong 1099?",
+   "sources": [
+    "https://www.irs.gov/forms-pubs/about-form-1099-nec",
+    "https://www.irs.gov/businesses/understanding-your-form-1099-k",
+    "https://www.irs.gov/publications/p334"
+   ],
+   "claims_to_verify": [
+    "1099-NEC due to recipients by Jan 31 (Feb 1, 2027 since Jan 31 is a Sunday)",
+    "Cash method: income reported when received"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "invoicing and getting paid",
+  "idea_angle": "If you paid other freelancers $2,000+ in 2026, you may need to send them 1099-NECs; collect W-9s in December.",
+  "script": {
+   "title": "Hired another freelancer? You might owe them a form",
+   "hook": "If your business paid another freelancer this year, you might owe them a tax form by the end of January.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "If your business paid another freelancer this year, you might owe them a tax form by the end of January.",
+     "on_screen_text": "You might owe a 1099",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes handing a form to a smaller receipt character. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "For payments made in twenty twenty-six, a business generally sends a 1099-NEC to a contractor it paid two thousand dollars or more for services.",
+     "on_screen_text": "$2,000+ for services → 1099-NEC",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a measuring stick with a mark near the top. No text, no logos, no real people."
+    },
+    {
+     "heading": "Not always",
+     "narration": "Payments you made by card or through a payment platform are usually reported by the platform instead, so you skip those.",
+     "on_screen_text": "Paid by card/platform? Usually skip",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a card and a phone with a small arrow away from the form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Do it now",
+     "narration": "Ask each contractor for a W-9 in December, while they still answer emails quickly.",
+     "on_screen_text": "Collect W-9s in December",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a stack of simple forms arriving in an inbox. No text, no logos, no real people."
+    },
+    {
+     "heading": "Deadline",
+     "narration": "The forms go to the contractor and the IRS by January thirty-first. For twenty twenty-seven that's Monday, February first, because the thirty-first is a Sunday.",
+     "on_screen_text": "Due Feb 1, 2027",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar page with a coral circle on the 1st. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "File them online through the IRS's free system or your accounting software.",
+     "on_screen_text": "File online",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop with a check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Paid another freelancer $2,000+ for services in 2026 (the new threshold)? You generally need to send them a 1099-NEC. Payments by card or through payment platforms are usually reported by the platform instead.\n\nCollect W-9s now. Forms are due to the contractor and the IRS by Feb 1, 2027 (Jan 31 is a Sunday). File online via the IRS's free IRIS system or your software.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "1099nec",
+    "contractors",
+    "smallbusinesstips",
+    "freelancetips",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "When a freelancer has to send 1099-NEC forms to contractors, the 2026 threshold and the deadline.",
+   "thumbnail_text": "Send a 1099?",
+   "sources": [
+    "https://www.irs.gov/forms-pubs/about-form-1099-nec",
+    "https://www.irs.gov/forms-pubs/about-form-w-9",
+    "https://www.irs.gov/filing/e-file-information-returns-with-iris"
+   ],
+   "claims_to_verify": [
+    "$2,000 threshold for payments made in 2026",
+    "Card/third-party network payments reported on 1099-K instead",
+    "Due date Feb 1, 2027",
+    "IRIS free e-file system"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "invoicing and getting paid",
+  "idea_angle": "Announce a rate increase in December, effective February, with a short script.",
+  "script": {
+   "title": "How to raise your freelance rates in January",
+   "hook": "If you want higher rates next year, the email goes out now, not in January.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "If you want higher rates next year, the email goes out now, not in January.",
+     "on_screen_text": "Raise rates? Email now.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes typing on a laptop with a small arrow pointing up. No text, no logos, no real people."
+    },
+    {
+     "heading": "Notice",
+     "narration": "Give existing clients at least thirty days. Send it in December, effective February first.",
+     "on_screen_text": "30+ days notice",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with an arrow from December to February. No text, no logos, no real people."
+    },
+    {
+     "heading": "Script",
+     "narration": "Keep it short. 'From February first my rate for this work will be X. I'm glad to keep working together. Anything booked before then stays at the current rate.'",
+     "on_screen_text": "Short. Date. New rate. Thanks.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small envelope with three short lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Don't",
+     "narration": "Don't apologise, and don't list your expenses. One sentence of context is plenty.",
+     "on_screen_text": "No apologies, no essay",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a long scroll crossed out next to a short note. No text, no logos, no real people."
+    },
+    {
+     "heading": "New clients",
+     "narration": "New clients get the new rate immediately. Update your proposal template today.",
+     "on_screen_text": "New clients: new rate today",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a proposal page with a fresh price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Some clients may leave. That's the point of pricing: the ones who stay are paying what the work is worth.",
+     "on_screen_text": "Some will leave. That's OK.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes waving at a small door closing gently. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Rate increase for next year? Send the email in December, effective Feb 1, so existing clients get 30+ days' notice.\n\nScript: \"From February 1, my rate for [work] will be [$X]. Anything booked before then stays at the current rate. I'm glad to keep working together.\" No apology, no expense list. New clients get the new rate today.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancetips",
+    "pricing",
+    "freelancebusiness",
+    "raiseyourrates",
+    "smallbusinesstips",
+    "1099money"
+   ],
+   "description": "When and how to tell freelance clients about a rate increase, with a short email script.",
+   "thumbnail_text": "Raise your rates",
+   "sources": [
+    "https://www.freelancersunion.org/resources/"
+   ],
+   "claims_to_verify": [
+    "No factual claims; 30 days is a common courtesy, not a legal rule"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "invoicing and getting paid",
+  "idea_angle": "A three-step late-payment follow-up: friendly nudge, firm reminder with late fee, final notice.",
+  "script": {
+   "title": "Client hasn't paid? Send these 3 emails",
+   "hook": "Invoice overdue? Don't stew. Send three emails, on a schedule.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Invoice overdue? Don't stew. Send three emails, on a schedule.",
+     "on_screen_text": "Overdue? 3 emails",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding three envelopes fanned out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Day 1",
+     "narration": "The day after it's due: a friendly nudge. 'Just checking this reached the right person. Here's the pay link again.'",
+     "on_screen_text": "Day 1: friendly + pay link",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a single envelope with a small smile. No text, no logos, no real people."
+    },
+    {
+     "heading": "Day 7",
+     "narration": "One week late: firmer. Restate the amount, the due date, and the late fee from your contract.",
+     "on_screen_text": "Day 7: amount, date, late fee",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an envelope with a small clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Day 14",
+     "narration": "Two weeks late: final notice. Work on new requests is paused until the balance is paid.",
+     "on_screen_text": "Day 14: pause new work",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an envelope with a pause symbol. No text, no logos, no real people."
+    },
+    {
+     "heading": "Then",
+     "narration": "Still nothing? A phone call, then small claims court for bigger amounts.",
+     "on_screen_text": "Then: call · small claims",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone and a small courthouse icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Next time, take a deposit up front. It solves most of this before it starts.",
+     "on_screen_text": "Next time: deposit first",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin placed at a starting line. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Overdue invoice, three emails:\nDay 1 after due: friendly nudge + pay link\nDay 7: amount, due date, contract late fee\nDay 14: final notice, new work paused until paid\nThen a call, then small claims for bigger amounts.\n\nNext time: deposit up front.\n\nThe invoicing software link in our bio is an affiliate link: we may earn a commission if you sign up, at no extra cost to you. Compare options yourself first.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "gettingpaid",
+    "invoicing",
+    "freelancetips",
+    "latepayments",
+    "freelancebusiness",
+    "1099money"
+   ],
+   "description": "A three-email schedule for chasing a late freelance invoice.",
+   "thumbnail_text": "Chase late invoices",
+   "sources": [
+    "https://www.freelancersunion.org/resources/",
+    "https://www.uscourts.gov/"
+   ],
+   "claims_to_verify": [
+    "Small claims limits vary by state"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "separating business money",
+  "idea_angle": "Seasonal income: hold one month of business expenses plus your tax money as a December/January buffer.",
+  "script": {
+   "title": "Freelance income dries up in December. Plan for it.",
+   "hook": "For a lot of freelancers, December and January are the slowest months of the year. And the Jan fifteen tax payment lands right in the middle.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "For a lot of freelancers, December and January are the slowest months of the year. And the Jan fifteen tax payment lands right in the middle.",
+     "on_screen_text": "Slow months + a tax bill",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes standing in a quiet snowy scene holding an empty jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Buffer",
+     "narration": "The fix is a buffer in the business account: one month of business and personal costs, on top of your tax savings.",
+     "on_screen_text": "1 month buffer + tax savings",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two jars, one labeled with a calendar and one coral. No text, no logos, no real people."
+    },
+    {
+     "heading": "Example",
+     "narration": "If you pay yourself three thousand a month and the business costs four hundred, the buffer is thirty-four hundred.",
+     "on_screen_text": "$3,000 + $400 = $3,400",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small calculator next to a coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule",
+     "narration": "Never borrow from the tax account to cover a slow month. That's how January turns into a penalty.",
+     "on_screen_text": "Never raid the tax account",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a padlock on the coral jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Refill",
+     "narration": "When work picks up, refill the buffer before you raise your own pay.",
+     "on_screen_text": "Refill first, then raise pay",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an arrow pouring coins back into the jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Check it this week: do you have December covered?",
+     "on_screen_text": "Is December covered?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes checking a list by a window. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "December and January are slow for many freelancers, and the Jan 15 estimated payment lands in the middle.\n\nKeep a buffer in the business account: one month of what you pay yourself plus business costs (e.g. $3,000 + $400 = $3,400), separate from tax savings. Don't borrow from the tax account. Refill the buffer before raising your own pay.\n\nFree quarterly tax calculator in the link in bio: it shows what to pay by Jan 15.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancetips",
+    "irregularincome",
+    "selfemployed",
+    "budgeting",
+    "cashflow",
+    "1099money"
+   ],
+   "description": "Why freelancers need a slow-season buffer separate from tax savings, and how big to make it.",
+   "thumbnail_text": "Slow-month buffer",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes"
+   ],
+   "claims_to_verify": [
+    "Example figures are illustrative",
+    "Seasonality varies by field; 'a lot of freelancers' is general"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "separating business money",
+  "idea_angle": "An LLC doesn't change your taxes by default; a single-member LLC is taxed like a sole proprietor.",
+  "script": {
+   "title": "An LLC won't lower your taxes",
+   "hook": "Thinking about an LLC to save on taxes? By default, it doesn't change them at all.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Thinking about an LLC to save on taxes? By default, it doesn't change them at all.",
+     "on_screen_text": "LLC ≠ lower taxes",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a small certificate and shrugging. No text, no logos, no real people."
+    },
+    {
+     "heading": "Default",
+     "narration": "A single-member LLC is a 'disregarded entity' for federal tax. You still file Schedule C and pay the same self-employment tax.",
+     "on_screen_text": "Same Schedule C, same SE tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two identical forms side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "What it does",
+     "narration": "What an LLC can do is separate business liability from your personal assets, if you keep the finances separate and follow your state's rules.",
+     "on_screen_text": "It's about liability",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small wall between a briefcase and a house. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cost",
+     "narration": "It also costs money: state filing fees and, in some states, an annual fee. California's minimum is eight hundred dollars a year.",
+     "on_screen_text": "Fees: some states charge yearly",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small coin dropping into a state outline. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tax change",
+     "narration": "The tax change people talk about is electing S corp status. That's a separate decision with payroll and extra paperwork.",
+     "on_screen_text": "S corp = separate decision",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a fork in a path. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Choose an LLC for liability, not for a tax break. And check your state's fees first.",
+     "on_screen_text": "Choose it for liability",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes nodding at a checklist. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "A single-member LLC is a disregarded entity for federal tax by default: same Schedule C, same self-employment tax. What it can do is help separate business liability from personal assets (if you keep finances separate).\n\nIt has costs: state filing fees and, in some states, annual fees (California's minimum franchise tax is $800/yr). The tax change people mean is an S corp election, which is a separate decision.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "llc",
+    "soleproprietor",
+    "smallbusinesstips",
+    "freelancetips",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "Why a single-member LLC doesn't change federal taxes by default, what it does do, and what it costs.",
+   "thumbnail_text": "LLC myth",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/limited-liability-company-llc",
+    "https://www.sba.gov/business-guide/launch-your-business/choose-business-structure",
+    "https://www.ftb.ca.gov/file/business/types/limited-liability-company/index.html"
+   ],
+   "claims_to_verify": [
+    "Single-member LLC disregarded by default",
+    "California $800 minimum annual tax (first-year exemption rules have changed over time; verify)",
+    "Liability protection depends on state law and keeping finances separate"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "separating business money",
+  "idea_angle": "S corp election only helps once profit is high enough to cover payroll costs, a reasonable salary and an extra return.",
+  "script": {
+   "title": "Should you be an S corp? Probably not yet",
+   "hook": "Someone told you to become an S corp to save on taxes. At most first-year freelance incomes, it's probably too early.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Someone told you to become an S corp to save on taxes. At most first-year freelance incomes, it's probably too early.",
+     "on_screen_text": "S corp? Probably not yet",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes looking at a tall ladder with the first rungs missing. No text, no logos, no real people."
+    },
+    {
+     "heading": "How it works",
+     "narration": "With an S corp, you pay yourself a salary through payroll, which has Social Security and Medicare taxes. Profit beyond that salary isn't hit by self-employment tax.",
+     "on_screen_text": "Salary taxed · rest isn't SE-taxed",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin stack split into two parts. No text, no logos, no real people."
+    },
+    {
+     "heading": "The catch",
+     "narration": "The salary has to be reasonable for your work. You can't pay yourself ten thousand and take the rest as profit.",
+     "on_screen_text": "Salary must be 'reasonable'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a balance scale. No text, no logos, no real people."
+    },
+    {
+     "heading": "The costs",
+     "narration": "You add payroll software, a separate business tax return, often an accountant, and in some states extra fees. That's often a few thousand a year.",
+     "on_screen_text": "Payroll · extra return · CPA",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three small receipts lined up. No text, no logos, no real people."
+    },
+    {
+     "heading": "So",
+     "narration": "The savings only beat the costs once profit is well above a reasonable salary. Run the numbers with a CPA before you elect.",
+     "on_screen_text": "Run the numbers with a CPA",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calculator next to a small handshake icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Till then, a clean sole proprietorship with good records is the strong move.",
+     "on_screen_text": "Clean records first",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes filing papers into a tidy box. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "S corp basics: you pay yourself a reasonable salary through payroll (Social Security + Medicare apply) and remaining profit isn't subject to SE tax. But you add payroll, a separate business return (Form 1120-S), usually an accountant, and sometimes state fees.\n\nIt only pays once profit is well above a reasonable salary for your work. Run the numbers with a CPA before electing.\n\nThe payroll software link in our bio is an affiliate link: we may earn a commission if you sign up, at no extra cost to you. Compare options yourself first.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "scorp",
+    "smallbusinesstips",
+    "freelancetaxes",
+    "selfemployed",
+    "llc",
+    "1099money"
+   ],
+   "description": "What an S corp election changes for a freelancer, the reasonable-salary rule, and the costs to weigh.",
+   "thumbnail_text": "S corp: not yet",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/s-corporations",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/s-corporation-compensation-and-medical-insurance-issues"
+   ],
+   "claims_to_verify": [
+    "Reasonable compensation requirement",
+    "'A few thousand a year' in costs is an estimate; varies widely",
+    "No specific break-even figure stated on purpose"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Two common IRS payment mistakes: paying a third-party site's fee and choosing the wrong tax year for the January payment.",
+  "script": {
+   "title": "Paying the IRS online? Don't pick the wrong year",
+   "hook": "The January fifteenth estimated payment is for last year. Pick the wrong year online and it lands in the wrong place.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "The January fifteenth estimated payment is for last year. Pick the wrong year online and it lands in the wrong place.",
+     "on_screen_text": "Jan 15 is for LAST year",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes pointing at a calendar with two years on it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Where",
+     "narration": "Go to irs.gov slash payments. Use IRS Direct Pay from a bank account, free, or your IRS online account.",
+     "on_screen_text": "irs.gov/payments",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop with a shield icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Reason",
+     "narration": "Choose estimated tax, form 1040-ES, and the tax year twenty twenty-six for the January twenty twenty-seven payment.",
+     "on_screen_text": "1040-ES · tax year 2026",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a simple dropdown menu highlighted in mint. No text, no logos, no real people."
+    },
+    {
+     "heading": "Avoid",
+     "narration": "Search ads can show third-party payment sites that charge fees. Card payments through IRS-approved processors also charge a fee. Direct Pay doesn't.",
+     "on_screen_text": "Direct Pay = no fee",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a search result with a small coral warning flag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save",
+     "narration": "Save the confirmation number with the date and amount. You'll need it when you file.",
+     "on_screen_text": "Save the confirmation",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small receipt in a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Wrong year already? Call the IRS and ask them to move it. It's fixable.",
+     "on_screen_text": "Wrong year? Call to move it",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone with a small arrow. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Paying the Jan 15, 2027 estimate: it's for tax year 2026. At irs.gov/payments choose Direct Pay (free, from a bank account) or your IRS Online Account → Estimated tax → 1040-ES → tax year 2026. Avoid third-party sites from search ads. Save the confirmation number.\n\nPicked the wrong year? Call the IRS to have it applied correctly.\n\nFree quarterly tax calculator in the link in bio: it shows what to pay by Jan 15.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "estimatedtaxes",
+    "irs",
+    "freelancetaxes",
+    "quarterlytaxes",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "How to pay a January estimated tax payment online without choosing the wrong tax year or paying a fee.",
+   "thumbnail_text": "Pick the right year",
+   "sources": [
+    "https://www.irs.gov/payments",
+    "https://www.irs.gov/payments/direct-pay"
+   ],
+   "claims_to_verify": [
+    "Direct Pay is free from a bank account",
+    "Card processors charge fees",
+    "IRS can reapply a misapplied payment (by phone/letter)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "The little-known exception: file your 2026 return and pay in full by the end of January and you can skip the Jan 15 estimate.",
+  "script": {
+   "title": "The way to skip the January tax payment",
+   "hook": "There's a rule that lets you skip the January fifteenth estimated payment entirely.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "There's a rule that lets you skip the January fifteenth estimated payment entirely.",
+     "on_screen_text": "Skip the Jan 15 payment?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes jumping over a small January hurdle. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "If you file your full twenty twenty-six tax return by the end of January and pay everything you owe, you don't need to make the January fifteenth payment.",
+     "on_screen_text": "File + pay in full by end of Jan",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a completed form and a coin stack both checked. No text, no logos, no real people."
+    },
+    {
+     "heading": "Who it suits",
+     "narration": "It suits freelancers with simple taxes and all their 1099s in hand early. Most forms arrive by January thirty-first, so it's tight.",
+     "on_screen_text": "Simple taxes, forms in early",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a mailbox with forms arriving quickly. No text, no logos, no real people."
+    },
+    {
+     "heading": "Who it doesn't",
+     "narration": "If you're waiting on forms, have a complicated return, or won't have the cash by then, just make the January payment.",
+     "on_screen_text": "Otherwise: just pay Jan 15",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a fork in a path pointing to a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Bonus",
+     "narration": "Filing early also means any refund arrives early and nobody can file a fake return in your name first.",
+     "on_screen_text": "Bonus: blocks fake returns",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small padlock on a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Pick one plan now so January doesn't decide for you.",
+     "on_screen_text": "Pick a plan now",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes ticking a box. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "IRS rule: you don't have to make the Jan 15 estimated payment if you file your 2026 return by the end of January (Feb 1, 2027, as Jan 31 is a Sunday) and pay the full balance.\n\nGood for simple returns with all forms in hand early. Otherwise, make the Jan 15 payment.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "estimatedtaxes",
+    "taxtips",
+    "freelancetaxes",
+    "taxseason",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "The IRS exception that lets you skip the fourth-quarter estimated payment by filing and paying early.",
+   "thumbnail_text": "Skip Jan 15",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/publications/p505"
+   ],
+   "claims_to_verify": [
+    "Pub 505: no Jan 15 payment needed if return filed by Jan 31 and all tax paid (verify 2027 weekend rollover to Feb 1)",
+    "Early filing reduces identity-theft return risk (general statement)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Overpaid estimates? You can apply the overpayment to next year's first estimate instead of taking a refund.",
+  "script": {
+   "title": "Overpaid your quarterly taxes? Use this option",
+   "hook": "Paid too much in estimated taxes this year? You don't have to take it as a refund.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Paid too much in estimated taxes this year? You don't have to take it as a refund.",
+     "on_screen_text": "Overpaid? Not just a refund",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a coin out with two arrows behind it. No text, no logos, no real people."
+    },
+    {
+     "heading": "The option",
+     "narration": "On your return you can apply all or part of the overpayment to next year's estimated tax.",
+     "on_screen_text": "Apply it to next year",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin moving along an arrow to a new calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "How it counts",
+     "narration": "It's treated as paid on April fifteenth, so it counts toward your first-quarter payment.",
+     "on_screen_text": "Counts as your Q1 payment",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an April calendar with a coin already in place. No text, no logos, no real people."
+    },
+    {
+     "heading": "When it's smart",
+     "narration": "It's smart if your income is growing and you'd only send that money back to the IRS in April anyway.",
+     "on_screen_text": "Good if income is growing",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a rising line with a coin on top. No text, no logos, no real people."
+    },
+    {
+     "heading": "When it isn't",
+     "narration": "If you need the cash, take the refund. Once applied, it generally can't be switched back to a refund.",
+     "on_screen_text": "Need cash? Take the refund",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an open hand receiving a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Note your choice in the tracker so Q1 starts with the credit.",
+     "on_screen_text": "Log it in your tracker",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a spreadsheet grid with one cell filled mint. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Overpaid your 2026 estimates? On your return you can apply all or part of the overpayment to 2027 estimated tax. It's treated as paid on Apr 15, so it counts toward Q1. Smart if income is growing; take the refund if you need the cash (the choice generally can't be reversed).\n\nThe Quarterly Tax Tracker (guide + spreadsheet) is in the link in bio if you want the math done for you.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "estimatedtaxes",
+    "taxrefund",
+    "freelancetaxes",
+    "quarterlytaxes",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "How applying an overpayment to next year's estimated tax works and when it's a good idea.",
+   "thumbnail_text": "Apply it forward",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/publications/p505"
+   ],
+   "claims_to_verify": [
+    "Overpayment applied is treated as paid on the due date of the first installment",
+    "Election generally irrevocable"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "separating business money",
+  "idea_angle": "Payment apps: mark business payments correctly, keep personal transfers out of the business account, and know the 1099-K threshold.",
+  "script": {
+   "title": "Getting paid on payment apps? Read this first",
+   "hook": "Clients paying you through a payment app? How it's sent matters at tax time.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Clients paying you through a payment app? How it's sent matters at tax time.",
+     "on_screen_text": "Paid by app? Read this",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a phone with a coin notification. No text, no logos, no real people."
+    },
+    {
+     "heading": "Business",
+     "narration": "Client payments should come in as goods and services, or through a business profile. That's business income.",
+     "on_screen_text": "Clients: goods & services",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone with a small briefcase icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Personal",
+     "narration": "Money from friends for dinner isn't income. Keep it in a personal account so it never gets mixed up with client money.",
+     "on_screen_text": "Dinner money: personal account",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone with a small pizza icon in a separate wallet. No text, no logos, no real people."
+    },
+    {
+     "heading": "Forms",
+     "narration": "For twenty twenty-six, the app sends a 1099-K only after twenty thousand dollars and two hundred transactions. Below that, you still report every client payment.",
+     "on_screen_text": "1099-K: $20K + 200",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a tall measuring stick with a coin stack below it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fees",
+     "narration": "The app's fees on business payments are a business expense. Download the yearly statement.",
+     "on_screen_text": "Fees are deductible",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with a small slice missing. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Connect the app to your business bank account, not your personal one.",
+     "on_screen_text": "Link to business checking",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone connected by a line to a briefcase vault. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Client payments by app: use goods & services or a business profile, and link the app to business checking. Personal transfers (splitting dinner) aren't income; keep them in a personal account.\n\n1099-K for 2026: only after $20,000 and 200 transactions. You still report all business income. App fees on business payments are deductible.\n\nThe business checking link in our bio is an affiliate link: we may earn a commission if you open an account, at no extra cost to you. Compare options yourself first.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "paymentapps",
+    "1099k",
+    "freelancetips",
+    "selfemployed",
+    "bookkeeping",
+    "1099money"
+   ],
+   "description": "How freelancers should take client payments through apps, keep personal transfers separate, and the 2026 1099-K threshold.",
+   "thumbnail_text": "Paid by app?",
+   "sources": [
+    "https://www.irs.gov/businesses/understanding-your-form-1099-k",
+    "https://www.fdic.gov/resources/deposit-insurance/"
+   ],
+   "claims_to_verify": [
+    "1099-K threshold $20,000 and 200 transactions (OBBBA)",
+    "Personal reimbursements are not income"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "Receipt habit: photograph and annotate the business purpose within 24 hours; digital records are acceptable.",
+  "script": {
+   "title": "You don't need a shoebox of receipts",
+   "hook": "You don't need a shoebox of paper receipts. A photo works.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "You don't need a shoebox of paper receipts. A photo works.",
+     "on_screen_text": "No shoebox needed",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes happily tossing a shoebox aside and holding a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Photo",
+     "narration": "The IRS accepts electronic records, as long as they're clear and complete. Snap the receipt the day you get it.",
+     "on_screen_text": "Snap it the same day",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone camera framing a receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "Note",
+     "narration": "Add one line: what it was for and, for meals, who you met and why. That note is what makes it a business expense.",
+     "on_screen_text": "Add: what for · who · why",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a receipt with a small sticky note. No text, no logos, no real people."
+    },
+    {
+     "heading": "Store",
+     "narration": "Save photos in one folder per year, or let your accounting app attach them to the transaction.",
+     "on_screen_text": "One folder per year",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a folder labeled with a calendar icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Keep",
+     "narration": "Keep them at least three years after you file. Longer for equipment you're still depreciating.",
+     "on_screen_text": "Keep 3+ years",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small hourglass next to the folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Ten seconds per receipt now saves a weekend in April.",
+     "on_screen_text": "10 seconds now · weekend saved",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes relaxing in a chair. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Receipts: the IRS accepts electronic records if they're clear and complete. Photo the receipt the same day and add a one-line note (what it was for; for meals, who and why). One folder per year, or attach it in your accounting app. Keep records at least 3 years after filing (longer for depreciated equipment).\n\nThe accounting app link in our bio is an affiliate link: we may earn a commission if you sign up, at no extra cost to you. Compare options yourself first.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "receipts",
+    "bookkeeping",
+    "taxdeductions",
+    "freelancetips",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "A simple digital receipt habit for freelancers and how long to keep records.",
+   "thumbnail_text": "Snap your receipts",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records"
+   ],
+   "claims_to_verify": [
+    "IRS accepts electronic records (Rev. Proc. 97-22)",
+    "3-year general retention; longer for assets"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "Business meals are 50% deductible with a business purpose; entertainment is not deductible; solo lunches usually aren't.",
+  "script": {
+   "title": "Is that lunch really a business expense?",
+   "hook": "Took a client to lunch? You can usually deduct half. Ate lunch alone at your desk? Usually not.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Took a client to lunch? You can usually deduct half. Ate lunch alone at your desk? Usually not.",
+     "on_screen_text": "Client lunch: 50%. Solo lunch: no.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes at a cafe table across from a faceless client silhouette. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "Business meals are generally fifty percent deductible when there's a real business purpose and a client, customer or contractor is there.",
+     "on_screen_text": "50% with a business purpose",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. half a plate shaded mint. No text, no logos, no real people."
+    },
+    {
+     "heading": "Not this",
+     "narration": "Your own everyday lunch isn't a business expense, even on a work day. Entertainment like concerts or games isn't deductible at all.",
+     "on_screen_text": "Solo lunch & entertainment: no",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a ticket and a sandwich with a small stop sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Travel",
+     "narration": "Meals while traveling away from home overnight for work can also count at fifty percent.",
+     "on_screen_text": "Overnight work travel: 50%",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a suitcase next to a small plate. No text, no logos, no real people."
+    },
+    {
+     "heading": "Proof",
+     "narration": "Write on the receipt who you met and what you discussed.",
+     "on_screen_text": "Note who + why",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a receipt with a small note. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Fifty percent of a real business lunch beats a hundred percent of a deduction you can't defend.",
+     "on_screen_text": "Defensible > bigger",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a balance scale tipping toward a small tidy folder. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Business meals: generally 50% deductible with a business purpose and a client, customer or contractor present (or while traveling overnight for work). Your own everyday lunch isn't deductible; entertainment isn't deductible at all. Note who and why on the receipt.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "taxdeductions",
+    "businessmeals",
+    "freelancetaxes",
+    "selfemployed",
+    "smallbusinesstips",
+    "1099money"
+   ],
+   "description": "When freelancers can deduct business meals, what doesn't count, and what to write down.",
+   "thumbnail_text": "Lunch: deductible?",
+   "sources": [
+    "https://www.irs.gov/publications/p463"
+   ],
+   "claims_to_verify": [
+    "50% limit on business meals",
+    "Entertainment not deductible (TCJA)",
+    "Travel meals while away overnight"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "Start-up costs: up to $5,000 deductible in the first year, the rest spread over 15 years.",
+  "script": {
+   "title": "Spent money before your first client? It counts.",
+   "hook": "Spent money getting your freelance business started before your first client paid? Some of it is deductible.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Spent money getting your freelance business started before your first client paid? Some of it is deductible.",
+     "on_screen_text": "Pre-launch costs count",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a small 'open' sign and a receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "What counts",
+     "narration": "Things like market research, a website before launch, or training to open the business can be start-up costs.",
+     "on_screen_text": "Research · site · launch prep",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three small icons in a row. No text, no logos, no real people."
+    },
+    {
+     "heading": "The limit",
+     "narration": "You can generally deduct up to five thousand dollars of start-up costs in the year the business starts. The rest is spread over fifteen years.",
+     "on_screen_text": "Up to $5,000 in year one",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin stack with a line at 5. No text, no logos, no real people."
+    },
+    {
+     "heading": "Equipment",
+     "narration": "Equipment like a laptop is handled separately as an asset, not a start-up cost.",
+     "on_screen_text": "Equipment: handled separately",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop in its own box. No text, no logos, no real people."
+    },
+    {
+     "heading": "Proof",
+     "narration": "Keep receipts dated before your first invoice and a note on what each was for.",
+     "on_screen_text": "Keep dated receipts",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small timeline with receipts placed on it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "If your first year is now, go back through your card statements. You may have missed a few.",
+     "on_screen_text": "Check old statements",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes flipping through a statement with a magnifying glass. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Start-up costs (research, a pre-launch website, launch prep): you can generally deduct up to $5,000 in the year the business begins; the rest is amortized over 180 months (15 years). The $5,000 phases down if start-up costs exceed $50,000. Equipment is handled separately.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "startupcosts",
+    "taxdeductions",
+    "newfreelancer",
+    "selfemployed",
+    "smallbusinesstips",
+    "1099money"
+   ],
+   "description": "How start-up costs are deducted in a freelancer's first year and what doesn't count.",
+   "thumbnail_text": "Start-up costs",
+   "sources": [
+    "https://www.irs.gov/publications/p535"
+   ],
+   "claims_to_verify": [
+    "$5,000 first-year start-up deduction, reduced if total > $50,000",
+    "Remainder amortized over 180 months"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "invoicing and getting paid",
+  "idea_angle": "Your real hourly rate: $75/hour billed becomes about $35/hour worked after unbilled time and federal tax.",
+  "script": {
+   "title": "Your $75/hour is really about $35",
+   "hook": "You charge seventy-five dollars an hour. After unbilled time and tax, you're earning about half that.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "You charge seventy-five dollars an hour. After unbilled time and tax, you're earning about half that.",
+     "on_screen_text": "$75/hr ≈ $35/hr",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a price tag that is folded in half. No text, no logos, no real people."
+    },
+    {
+     "heading": "Billed hours",
+     "narration": "Most freelancers can't bill every hour. Email, sales, admin. Say you bill twenty-five hours of a forty-hour week.",
+     "on_screen_text": "Bill 25 of 40 hours",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a clock with a portion shaded coral. No text, no logos, no real people."
+    },
+    {
+     "heading": "Revenue",
+     "narration": "Seventy-five times twenty-five times forty-eight working weeks is ninety thousand. Minus six thousand of expenses is eighty-four thousand profit.",
+     "on_screen_text": "$90K revenue → $84K profit",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin stack with a small slice removed. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tax",
+     "narration": "Federal tax on that, single filer, is about seventeen thousand six hundred.",
+     "on_screen_text": "Federal tax ≈ $17,570",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coral slice taken off the stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Per hour",
+     "narration": "That leaves about sixty-six thousand over nineteen hundred twenty hours worked: about thirty-four sixty an hour. Before health insurance and state tax.",
+     "on_screen_text": "≈ $34.60 per hour worked",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small clock next to a small coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Price for the hours you can't bill. That's why freelance rates look high.",
+     "on_screen_text": "Price for unbilled hours",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes adjusting a price tag upward. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Real hourly rate math (single, 2026 federal): $75/hr × 25 billable hrs × 48 weeks = $90,000 revenue. Minus $6,000 expenses = $84,000 profit. Federal tax ≈ $17,570. After tax ≈ $66,430 ÷ 1,920 hours worked ≈ $34.60/hour, before health insurance and state tax.\n\nIllustrative numbers. Price for the hours you can't bill.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancerates",
+    "pricing",
+    "freelancetips",
+    "selfemployed",
+    "freelancebusiness",
+    "1099money"
+   ],
+   "description": "Why a freelancer's billed rate is roughly double what they earn per hour worked, with 2026 tax math.",
+   "thumbnail_text": "$75 is really $35",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes"
+   ],
+   "claims_to_verify": [
+    "$84,000 profit single 2026: federal tax $17,570 (SE + income, QBI)",
+    "($84,000 − $17,570) / 1,920 = $34.60",
+    "25 billable hours is illustrative"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "benefits without an employer",
+  "idea_angle": "Freelancers can still use a Roth or traditional IRA ($7,500 for 2026) alongside a SEP or Solo 401(k).",
+  "script": {
+   "title": "Freelancers can still open an IRA",
+   "hook": "No workplace retirement plan? You can still open a regular IRA, and contribute for twenty twenty-six until April.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "No workplace retirement plan? You can still open a regular IRA, and contribute for twenty twenty-six until April.",
+     "on_screen_text": "IRA: still open for 2026",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes planting a small seed in a pot. No text, no logos, no real people."
+    },
+    {
+     "heading": "Limit",
+     "narration": "The IRA limit for twenty twenty-six is seventy-five hundred dollars, or eighty-six hundred if you're fifty or older.",
+     "on_screen_text": "$7,500 (2026) · $8,600 at 50+",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two coin stacks of slightly different heights. No text, no logos, no real people."
+    },
+    {
+     "heading": "Roth or traditional",
+     "narration": "Roth: no deduction now, tax-free later. Traditional: a deduction now if you're eligible. Roth has income limits.",
+     "on_screen_text": "Roth: later · Traditional: now",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two paths splitting from one pot. No text, no logos, no real people."
+    },
+    {
+     "heading": "Deadline",
+     "narration": "You can contribute for twenty twenty-six until the April fifteenth filing deadline. Extensions don't extend it.",
+     "on_screen_text": "Deadline: Apr 15, no extension",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an April calendar with a small padlock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Stack",
+     "narration": "It sits alongside a SEP IRA or Solo 401(k). Many freelancers do both.",
+     "on_screen_text": "Stacks with SEP / Solo 401(k)",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two plant pots side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Even fifty dollars a month, automated, beats waiting for the perfect plan.",
+     "on_screen_text": "Start small, automate",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small calendar with a repeating arrow. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "IRAs for freelancers: 2026 limit $7,500 ($8,600 if 50+). Roth: no deduction now, tax-free qualified withdrawals later, income limits apply. Traditional: deductible if eligible. Contribute for 2026 until Apr 15, 2027 (extensions don't extend it). It stacks with a SEP or Solo 401(k).\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "rothira",
+    "retirement",
+    "selfemployed",
+    "freelancetips",
+    "investingforbeginners",
+    "1099money"
+   ],
+   "description": "How IRAs work for freelancers alongside a SEP or Solo 401(k), with the 2026 limit and deadline.",
+   "thumbnail_text": "IRA for freelancers",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits"
+   ],
+   "claims_to_verify": [
+    "2026 IRA limit $7,500; catch-up $1,100 (total $8,600 at 50+)",
+    "Roth income limits apply",
+    "Contribution deadline = filing due date without extensions"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "benefits without an employer",
+  "idea_angle": "The upside of SE tax: it builds your Social Security record (credits and future benefit).",
+  "script": {
+   "title": "The upside of self-employment tax",
+   "hook": "Self-employment tax stings. But it's also building something most freelancers forget about.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Self-employment tax stings. But it's also building something most freelancers forget about.",
+     "on_screen_text": "SE tax has an upside",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a coin and a small plant growing from it. No text, no logos, no real people."
+    },
+    {
+     "heading": "What",
+     "narration": "The Social Security part of it goes on your earnings record, the same as an employee's payroll tax.",
+     "on_screen_text": "It builds your Social Security record",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a simple record card being stamped. No text, no logos, no real people."
+    },
+    {
+     "heading": "Credits",
+     "narration": "You need forty credits over your career to qualify for retirement benefits. In twenty twenty-six, each eighteen hundred ninety dollars of earnings is one credit, up to four a year.",
+     "on_screen_text": "$1,890 = 1 credit (2026), max 4/yr",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four small coins in a row. No text, no logos, no real people."
+    },
+    {
+     "heading": "Four",
+     "narration": "So seventy-five hundred sixty dollars of net self-employment earnings gets you all four credits for the year.",
+     "on_screen_text": "$7,560 → 4 credits",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small coin stack with four stars. No text, no logos, no real people."
+    },
+    {
+     "heading": "Underreporting",
+     "narration": "This is why underreporting freelance income backfires: it shrinks your future benefit, and disability and survivor coverage too.",
+     "on_screen_text": "Underreporting shrinks benefits",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a shrinking coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Close",
+     "narration": "Check your record once a year at ssa.gov with a my Social Security account. Errors are easier to fix early.",
+     "on_screen_text": "Check ssa.gov yearly",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop with a check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "The Social Security part of self-employment tax goes on your earnings record. 2026: each $1,890 of earnings = 1 credit, up to 4 a year ($7,560). You need 40 credits for retirement benefits. Underreporting income shrinks future retirement, disability and survivor benefits.\n\nCheck your record yearly at ssa.gov.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "socialsecurity",
+    "selfemploymenttax",
+    "selfemployed",
+    "freelancetips",
+    "retirement",
+    "1099money"
+   ],
+   "description": "How self-employment tax builds a freelancer's Social Security record, with 2026 credit amounts.",
+   "thumbnail_text": "SE tax upside",
+   "sources": [
+    "https://www.ssa.gov/oact/cola/QC.html",
+    "https://www.ssa.gov/myaccount/"
+   ],
+   "claims_to_verify": [
+    "2026 quarter of coverage $1,890 (SSA)",
+    "40 credits for retirement eligibility"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Year-end checklist with seven concrete tasks and dates.",
+  "script": {
+   "title": "The freelancer year-end checklist",
+   "hook": "7 money tasks for freelancers before the year ends.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "7 money tasks for freelancers before the year ends.",
+     "on_screen_text": "Your year-end checklist",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a clipboard under a December calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "1. Catch up your income and expense logs through November. Match them to the business bank statement.",
+     "on_screen_text": "1. Logs caught up",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a ledger with rows filled in. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "2. Update your full-year profit estimate and work out the Jan 15 payment.",
+     "on_screen_text": "2. Size the Jan 15 payment",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calculator next to a January page. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "3. Check your tax savings covers what's left: Jan 15 plus any April balance.",
+     "on_screen_text": "3. Tax savings enough?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coral vault with a gauge. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "4. Collect W-9s from any contractor you paid $2,000+ (2026 threshold).",
+     "on_screen_text": "4. Collect W-9s",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a stack of forms. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "5. Buy equipment you need soon, and start using it before Dec 31.",
+     "on_screen_text": "5. Needed gear before Dec 31",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop being unboxed. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "6. Ask about Solo 401(k) deadlines; note the SEP IRA can wait until you file.",
+     "on_screen_text": "6. Retirement deadlines",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a plant pot with a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "7",
+     "narration": "7. Health insurance: pick a plan by Dec 15 for Jan 1 coverage on healthcare.gov.",
+     "on_screen_text": "7. Health plan by Dec 15",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a medical shield with a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save",
+     "narration": "Do one a day this week. The Quarterly Tax Tracker in our link in bio covers 1–3.",
+     "on_screen_text": "Save it. One a day.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes ticking the last box. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this. Follow for one freelancer money move a week.",
+   "caption": "Freelancer year-end checklist:\n1. Logs caught up and matched to the bank statement\n2. Full-year estimate → size the Jan 15 payment\n3. Tax savings cover Jan 15 + April balance\n4. W-9s from contractors paid $2,000+\n5. Needed equipment bought and in use by Dec 31\n6. Solo 401(k) deadlines checked (SEP can wait)\n7. Health plan picked by Dec 15 for Jan 1 coverage\n\nThe Quarterly Tax Tracker (guide + spreadsheet) is in the link in bio if you want the math done for you.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSave this. Follow for one freelancer money move a week.",
+   "hashtags": [
+    "yearendtax",
+    "freelancetaxes",
+    "taxchecklist",
+    "selfemployed",
+    "1099",
+    "1099money"
+   ],
+   "description": "A seven-step year-end money checklist for US freelancers.",
+   "thumbnail_text": "Year-end checklist",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/forms-pubs/about-form-1099-nec",
+    "https://www.healthcare.gov/quick-guide/dates-and-deadlines/",
+    "https://www.irs.gov/retirement-plans/plan-sponsor/simplified-employee-pension-plan-sep"
+   ],
+   "claims_to_verify": [
+    "1099-NEC $2,000 threshold",
+    "Healthcare.gov Dec 15 for Jan 1",
+    "Confirm product name, price ($15) and link"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "deductions with sources",
+  "idea_angle": "What a deduction is worth at three profit levels, so people stop treating write-offs as free.",
+  "script": {
+   "title": "What a $1,000 write-off actually saves you",
+   "hook": "A $1,000 'write-off' doesn't save you $1,000. Here's what it saves.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "A $1,000 'write-off' doesn't save you $1,000. Here's what it saves.",
+     "on_screen_text": "What a $1,000 write-off saves",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a big coin next to a much smaller one. No text, no logos, no real people."
+    },
+    {
+     "heading": "How",
+     "narration": "A business deduction lowers profit, which lowers SE tax (about 14.1%) and income tax (your bracket, a bit less after the QBI deduction).",
+     "on_screen_text": "Lowers SE tax + income tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two small stacks each losing a sliver. No text, no logos, no real people."
+    },
+    {
+     "heading": "$30K",
+     "narration": "At $30,000 profit (single, 2026): a $1,000 deduction saves about $216.",
+     "on_screen_text": "$30K profit → ~$216",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a short coin stack with a small coin beside it. No text, no logos, no real people."
+    },
+    {
+     "heading": "$60K",
+     "narration": "At $60,000 profit: about $231.",
+     "on_screen_text": "$60K profit → ~$231",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a medium coin stack with a small coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "$120K",
+     "narration": "At $120,000 profit: about $305.",
+     "on_screen_text": "$120K profit → ~$305",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a tall coin stack with a slightly bigger coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Plus state",
+     "narration": "Add your state rate on top: often 3–6% more.",
+     "on_screen_text": "+ your state rate",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small state outline with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "So",
+     "narration": "You keep 70–78% of the cost. Spend on what grows the business, not on what lowers the bill.",
+     "on_screen_text": "You still pay ~75% of it",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a wallet with most of its coins gone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Real move",
+     "narration": "The real move: don't miss deductions you already earned. Log mileage, home office, software and fees.",
+     "on_screen_text": "Don't miss real ones",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a receipt box being filled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save",
+     "narration": "Run your own number in the free calculator in our link in bio.",
+     "on_screen_text": "Save this.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a calculator. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this. Follow for one freelancer money move a week.",
+   "caption": "A $1,000 business deduction (single, 2026 federal):\n$30K profit → saves ~$216\n$60K → ~$231\n$120K → ~$305\nPlus your state rate. You still pay ~70–78% of the cost. Spend for the business, not the deduction, and don't miss the ones you've already earned.\n\nFree calculator in the link in bio.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSave this. Follow for one freelancer money move a week.",
+   "hashtags": [
+    "taxdeductions",
+    "writeoffs",
+    "freelancetaxes",
+    "selfemployed",
+    "taxmath",
+    "1099money"
+   ],
+   "description": "How much a $1,000 business deduction saves a freelancer at three profit levels in 2026.",
+   "thumbnail_text": "Write-off math",
+   "sources": [
+    "https://www.irs.gov/publications/p334",
+    "https://www.irs.gov/newsroom/qualified-business-income-deduction"
+   ],
+   "claims_to_verify": [
+    "Savings computed with lib/tax.js: $215.64 / $230.51 / $304.86",
+    "SE tax effect 15.3% × 92.35% ≈ 14.13% minus half-SE deduction effect"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "separating business money",
+  "idea_angle": "LLC vs sole proprietor side by side: taxes, liability, cost, paperwork.",
+  "script": {
+   "title": "LLC vs sole proprietor: what actually changes",
+   "hook": "LLC or sole proprietor? Here's what actually changes, and what doesn't.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "LLC or sole proprietor? Here's what actually changes, and what doesn't.",
+     "on_screen_text": "LLC vs sole proprietor",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes standing between two simple buildings. No text, no logos, no real people."
+    },
+    {
+     "heading": "Taxes",
+     "narration": "Federal tax: no change by default. A single-member LLC still files Schedule C and pays the same SE tax.",
+     "on_screen_text": "Taxes: same by default",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two identical forms. No text, no logos, no real people."
+    },
+    {
+     "heading": "Liability",
+     "narration": "Liability: an LLC can shield personal assets from business debts and claims, if you keep finances separate.",
+     "on_screen_text": "Liability: LLC can help",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small wall between a briefcase and a house. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cost",
+     "narration": "Cost: sole proprietor ≈ $0. LLC: a state filing fee plus, in some states, an annual fee or tax.",
+     "on_screen_text": "Cost: LLC has fees",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin dropping into a state outline. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paperwork",
+     "narration": "Paperwork: an LLC adds a yearly state report in many states and a separate bank account (which you should have anyway).",
+     "on_screen_text": "Paperwork: a bit more",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small stack of forms. No text, no logos, no real people."
+    },
+    {
+     "heading": "Insurance",
+     "narration": "Professional liability insurance covers mistakes in your work. An LLC doesn't. Many freelancers need the insurance more.",
+     "on_screen_text": "Insurance ≠ LLC",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a shield with a small check mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "S corp",
+     "narration": "Electing S corp tax status is a separate step with payroll. It's not automatic with an LLC.",
+     "on_screen_text": "S corp is separate",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a fork in the road. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule of thumb",
+     "narration": "Start as a sole proprietor with clean records. Add an LLC when you have assets or risk worth protecting.",
+     "on_screen_text": "Start simple, add when needed",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small plant growing into a bigger one. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save",
+     "narration": "State rules vary. Check your state's fees before filing.",
+     "on_screen_text": "Save it. Check your state.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a map. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this. Follow for one freelancer money move a week.",
+   "caption": "LLC vs sole proprietor:\nTaxes: same by default (Schedule C, SE tax)\nLiability: an LLC can help if finances stay separate\nCost: state filing fee; some states charge yearly\nPaperwork: a bit more\nInsurance: covers mistakes in your work; an LLC doesn't\nS corp: a separate election\n\nStart simple; add an LLC when there's something worth protecting.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSave this. Follow for one freelancer money move a week.",
+   "hashtags": [
+    "llc",
+    "soleproprietor",
+    "smallbusinesstips",
+    "freelancetips",
+    "businessstructure",
+    "1099money"
+   ],
+   "description": "What changes and what doesn't between an LLC and a sole proprietorship for a US freelancer.",
+   "thumbnail_text": "LLC vs sole prop",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/limited-liability-company-llc",
+    "https://www.sba.gov/business-guide/launch-your-business/choose-business-structure"
+   ],
+   "claims_to_verify": [
+    "Disregarded entity default",
+    "State fees vary",
+    "Liability protection depends on state law"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "benefits without an employer",
+  "idea_angle": "Health insurance for freelancers in one carousel: dates, subsidies, HSA option and deduction.",
+  "script": {
+   "title": "Health insurance when you work for yourself",
+   "hook": "Self-employed and buying your own health insurance? The essentials in 8 slides.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Self-employed and buying your own health insurance? The essentials in 8 slides.",
+     "on_screen_text": "Health insurance, self-employed",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a medical shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Where",
+     "narration": "Healthcare.gov or your state's marketplace. Open enrollment for 2027: Nov 1 – Jan 15.",
+     "on_screen_text": "Marketplace: Nov 1 – Jan 15",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar strip with two markers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Timing",
+     "narration": "Pick by Dec 15 for coverage from Jan 1. Later sign-ups usually start Feb 1.",
+     "on_screen_text": "By Dec 15 → Jan 1 start",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coral marker on the 15th. No text, no logos, no real people."
+    },
+    {
+     "heading": "Income",
+     "narration": "Premium help depends on next year's income. Freelancers estimate it; report changes during the year.",
+     "on_screen_text": "Estimate next year's income",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a pencil over a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Metal levels",
+     "narration": "Bronze: low premium, high deductible. Silver/gold: higher premium, lower costs when you use care.",
+     "on_screen_text": "Bronze · Silver · Gold",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three shields in different colors. No text, no logos, no real people."
+    },
+    {
+     "heading": "HSA",
+     "narration": "From 2026, bronze and catastrophic marketplace plans count as HSA-compatible. HSA limit: $4,400 self-only.",
+     "on_screen_text": "Bronze → HSA possible",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small vault next to a bronze shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Deduction",
+     "narration": "Premiums are often deductible for the self-employed (not for months you were eligible for an employer plan).",
+     "on_screen_text": "Premiums: often deductible",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a receipt in a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mid-year",
+     "narration": "Lost other coverage or had a life change? That can open a special enrollment period outside the dates.",
+     "on_screen_text": "Life change → special enrollment",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a door opening. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save",
+     "narration": "Check your exact plan and your state's dates before you pick.",
+     "on_screen_text": "Save this.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes ticking a checklist. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this. Follow for one freelancer money move a week.",
+   "caption": "Health insurance for freelancers:\n• Marketplace open enrollment Nov 1, 2026 – Jan 15, 2027; pick by Dec 15 for Jan 1\n• Premium help depends on estimated income\n• Bronze/catastrophic plans HSA-compatible from 2026 (HSA $4,400 self-only)\n• Premiums often deductible for the self-employed\n• Life changes can open special enrollment\n\nThe HSA provider link in our bio is an affiliate link: we may earn a commission if you open an account, at no extra cost to you. Compare options yourself first.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSave this. Follow for one freelancer money move a week.",
+   "hashtags": [
+    "healthinsurance",
+    "selfemployed",
+    "openenrollment",
+    "hsa",
+    "freelancetips",
+    "1099money"
+   ],
+   "description": "Health insurance essentials for self-employed people: dates, plan levels, HSA eligibility and the deduction.",
+   "thumbnail_text": "Freelancer health insurance",
+   "sources": [
+    "https://www.healthcare.gov/quick-guide/dates-and-deadlines/",
+    "https://www.irs.gov/publications/p969",
+    "https://www.irs.gov/forms-pubs/about-form-7206"
+   ],
+   "claims_to_verify": [
+    "Healthcare.gov dates",
+    "OBBBA: bronze/catastrophic HSA-compatible from 2026",
+    "HSA 2026 $4,400 self-only"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "How to read the 1099s you'll get in January and match them to your books.",
+  "script": {
+   "title": "How to read the 1099s you'll get in January",
+   "hook": "1099 season starts in 5 weeks. Here's how to read them.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "1099 season starts in 5 weeks. Here's how to read them.",
+     "on_screen_text": "Reading your 1099s",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding two forms side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "1099-NEC",
+     "narration": "1099-NEC: from clients who paid you $2,000+ for services in 2026. Box 1 is the total.",
+     "on_screen_text": "1099-NEC: box 1 = total",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with one box highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "1099-K",
+     "narration": "1099-K: from payment platforms, only after $20,000 and 200 transactions. It shows gross payments, before fees and refunds.",
+     "on_screen_text": "1099-K: gross, before fees",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone with a long coin trail. No text, no logos, no real people."
+    },
+    {
+     "heading": "Missing",
+     "narration": "No form from a client? You still report the income. Your own log is the record.",
+     "on_screen_text": "No form? Still report it",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an empty mailbox next to a full ledger. No text, no logos, no real people."
+    },
+    {
+     "heading": "Match",
+     "narration": "Add up every form. The total should be at or below your logged income, never above.",
+     "on_screen_text": "Forms ≤ your log",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a scale tipping toward the ledger. No text, no logos, no real people."
+    },
+    {
+     "heading": "Double",
+     "narration": "Same payment on a 1099-NEC and a 1099-K? Report it once, and keep notes on why.",
+     "on_screen_text": "On two forms? Report once",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two forms overlapping with one check mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Wrong",
+     "narration": "Wrong amount or year? Ask the client for a corrected form.",
+     "on_screen_text": "Wrong? Ask for a correction",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a paper airplane. No text, no logos, no real people."
+    },
+    {
+     "heading": "File",
+     "narration": "All of it goes on Schedule C as gross receipts. Fees go in expenses.",
+     "on_screen_text": "All → Schedule C",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a single form with arrows pointing in. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save",
+     "narration": "Forms arrive by Feb 1, 2027. Your income log makes this a 10-minute job.",
+     "on_screen_text": "Save this for February.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a clock and a smile. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this. Follow for one freelancer money move a week.",
+   "caption": "Reading January 1099s:\n• 1099-NEC: clients who paid you $2,000+ (2026); box 1\n• 1099-K: platforms, $20K + 200 transactions; gross before fees\n• No form? Still report it\n• Forms should total ≤ your own log\n• Same payment on two forms: report once, keep notes\n• Wrong? Ask for a correction\nAll goes on Schedule C.\n\nThe Quarterly Tax Tracker (guide + spreadsheet) is in the link in bio if you want the math done for you.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSave this. Follow for one freelancer money move a week.",
+   "hashtags": [
+    "1099",
+    "1099nec",
+    "1099k",
+    "taxseason",
+    "freelancetaxes",
+    "1099money"
+   ],
+   "description": "How freelancers read 1099-NEC and 1099-K forms and match them to their records.",
+   "thumbnail_text": "Read your 1099s",
+   "sources": [
+    "https://www.irs.gov/forms-pubs/about-form-1099-nec",
+    "https://www.irs.gov/businesses/understanding-your-form-1099-k",
+    "https://www.irs.gov/forms-pubs/about-schedule-c-form-1040"
+   ],
+   "claims_to_verify": [
+    "Thresholds $2,000 / $20,000+200",
+    "1099-K reports gross",
+    "Due date Feb 1, 2027"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "invoicing and getting paid",
+  "idea_angle": "Decision flow for whether a freelancer must send 1099-NECs to their own contractors.",
+  "script": {
+   "title": "Do YOU need to send 1099s? A 5-question check",
+   "hook": "Paid other freelancers this year? 5 questions decide if you send 1099s.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Paid other freelancers this year? 5 questions decide if you send 1099s.",
+     "on_screen_text": "Do you send 1099s?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes at a fork with five signposts. No text, no logos, no real people."
+    },
+    {
+     "heading": "Q1",
+     "narration": "1. Did your business pay them (not a personal payment)? If no, stop.",
+     "on_screen_text": "1. Business payment?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a briefcase icon with a check. No text, no logos, no real people."
+    },
+    {
+     "heading": "Q2",
+     "narration": "2. Was it for services (not goods)? If no, stop.",
+     "on_screen_text": "2. For services?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a toolbox icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Q3",
+     "narration": "3. Is the payee a person, partnership or LLC (not a C or S corporation, usually)? If a corp, usually stop.",
+     "on_screen_text": "3. Not a corporation?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two simple buildings, one crossed. No text, no logos, no real people."
+    },
+    {
+     "heading": "Q4",
+     "narration": "4. Did you pay them $2,000+ in 2026? If no, stop.",
+     "on_screen_text": "4. $2,000 or more?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a measuring stick. No text, no logos, no real people."
+    },
+    {
+     "heading": "Q5",
+     "narration": "5. Did you pay by check, bank transfer or cash? Card and platform payments are usually reported by the platform, so stop.",
+     "on_screen_text": "5. Paid directly (not card/app)?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a check and a bank icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Yes to all",
+     "narration": "Yes to all 5? Send a 1099-NEC to them and the IRS by Feb 1, 2027.",
+     "on_screen_text": "All yes → 1099-NEC by Feb 1",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "How",
+     "narration": "Get their W-9 now. File free through the IRS IRIS portal or your accounting software.",
+     "on_screen_text": "W-9 now · file via IRIS",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop with a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save",
+     "narration": "Save this for January.",
+     "on_screen_text": "Save this.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes saluting. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this. Follow for one freelancer money move a week.",
+   "caption": "Send a 1099-NEC if ALL are true:\n1. Your business paid them\n2. For services\n3. They're not a corporation (usually)\n4. $2,000+ in 2026\n5. Paid by check/bank/cash (card and app payments are usually reported by the platform)\nDue Feb 1, 2027 to them and the IRS. Get W-9s now; file via IRIS.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSave this. Follow for one freelancer money move a week.",
+   "hashtags": [
+    "1099nec",
+    "contractors",
+    "smallbusinesstips",
+    "freelancetips",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "A five-question check for whether a freelancer has to issue 1099-NEC forms for 2026.",
+   "thumbnail_text": "Send 1099s?",
+   "sources": [
+    "https://www.irs.gov/forms-pubs/about-form-1099-nec",
+    "https://www.irs.gov/forms-pubs/about-form-w-9"
+   ],
+   "claims_to_verify": [
+    "Corporation exception (attorneys and some others are exceptions)",
+    "$2,000 threshold 2026",
+    "Card/TPSO payments reported on 1099-K"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "invoicing and getting paid",
+  "idea_angle": "A copy-paste rate increase email in parts, with timing.",
+  "script": {
+   "title": "The rate increase email (copy this)",
+   "hook": "Raising your rates next year? Here's the email, line by line.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Raising your rates next year? Here's the email, line by line.",
+     "on_screen_text": "The rate increase email",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding an envelope with an up arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Timing",
+     "narration": "Send it in early December, effective Feb 1. That's 30+ days' notice.",
+     "on_screen_text": "Send now, effective Feb 1",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar arrow from Dec to Feb. No text, no logos, no real people."
+    },
+    {
+     "heading": "Line 1",
+     "narration": "\"Hi [name], a quick heads-up about my rates for next year.\"",
+     "on_screen_text": "Line 1: the heads-up",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a single envelope line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Line 2",
+     "narration": "\"From February 1, my rate for [work] will be [$X] (currently [$Y]).\"",
+     "on_screen_text": "Line 2: date + new rate",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Line 3",
+     "narration": "\"Anything booked before then stays at the current rate.\"",
+     "on_screen_text": "Line 3: grace period",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Line 4",
+     "narration": "\"I've really enjoyed [specific project] and I'm looking forward to more next year.\"",
+     "on_screen_text": "Line 4: one warm, specific line",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small heart icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Skip",
+     "narration": "Skip: apologies, long explanations, discounts you didn't plan to give.",
+     "on_screen_text": "Skip the apology",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a crossed-out long scroll. No text, no logos, no real people."
+    },
+    {
+     "heading": "Replies",
+     "narration": "If they push back: offer a smaller scope at the new rate, not the old rate.",
+     "on_screen_text": "Pushback? Smaller scope",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a smaller box with the same price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save",
+     "narration": "Save this and send it this week.",
+     "on_screen_text": "Save it. Send it.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes pressing send. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this. Follow for one freelancer money move a week.",
+   "caption": "Rate increase email (send early Dec, effective Feb 1):\n\"Hi [name], a quick heads-up about my rates for next year. From February 1, my rate for [work] will be [$X] (currently [$Y]). Anything booked before then stays at the current rate. I've really enjoyed [project] and I'm looking forward to more next year.\"\n\nPushback? Offer a smaller scope at the new rate.\n\nSave this. Follow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancetips",
+    "pricing",
+    "raiseyourrates",
+    "freelancebusiness",
+    "clientemails",
+    "1099money"
+   ],
+   "description": "A four-line freelance rate increase email and when to send it.",
+   "thumbnail_text": "Rate email",
+   "sources": [
+    "https://www.freelancersunion.org/resources/"
+   ],
+   "claims_to_verify": [
+    "No factual claims"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "invoicing and getting paid",
+  "idea_angle": "Real hourly rate math in steps with taxes and unbilled hours.",
+  "script": {
+   "title": "Your real hourly rate, worked out",
+   "hook": "You charge $75 an hour. Here's what you actually earn per hour worked.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "You charge $75 an hour. Here's what you actually earn per hour worked.",
+     "on_screen_text": "Your real hourly rate",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a price tag and a clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Billable",
+     "narration": "Billable hours: 25 of a 40-hour week (the rest is email, sales, admin).",
+     "on_screen_text": "25 billable of 40",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a clock partly shaded. No text, no logos, no real people."
+    },
+    {
+     "heading": "Weeks",
+     "narration": "Working weeks: 48 (holidays, sick days, slow weeks).",
+     "on_screen_text": "48 working weeks",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with a few days crossed. No text, no logos, no real people."
+    },
+    {
+     "heading": "Revenue",
+     "narration": "$75 × 25 × 48 = $90,000 revenue.",
+     "on_screen_text": "$90,000 revenue",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a tall coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Profit",
+     "narration": "Minus $6,000 of business expenses = $84,000 profit.",
+     "on_screen_text": "$84,000 profit",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a slice removed from the stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tax",
+     "narration": "2026 federal tax, single: ≈ $17,570 (SE tax + income tax).",
+     "on_screen_text": "Federal tax ≈ $17,570",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coral slice removed. No text, no logos, no real people."
+    },
+    {
+     "heading": "Per hour",
+     "narration": "$66,430 ÷ 1,920 hours worked ≈ $34.60/hour. Before health insurance, retirement and state tax.",
+     "on_screen_text": "≈ $34.60 per hour worked",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small coin next to a clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "So",
+     "narration": "To net about $50/hour worked, this freelancer would need to bill about $110/hour.",
+     "on_screen_text": "Want $50/hr? Bill ~$110",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a price tag moving up. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save",
+     "narration": "Plug in your own numbers. Illustrative example, not a promise.",
+     "on_screen_text": "Save it. Run yours.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a calculator. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this. Follow for one freelancer money move a week.",
+   "caption": "$75/hr × 25 billable hrs × 48 weeks = $90,000. − $6,000 expenses = $84,000 profit. − ≈ $17,570 federal tax (single, 2026) = $66,430 ÷ 1,920 hours worked ≈ $34.60/hour, before health insurance and state tax. To net ~$50/hour worked, bill ~$110/hour.\n\nIllustrative.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSave this. Follow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancerates",
+    "pricing",
+    "freelancetips",
+    "selfemployed",
+    "taxmath",
+    "1099money"
+   ],
+   "description": "A worked example of a freelancer's real hourly earnings after unbilled time and 2026 federal tax.",
+   "thumbnail_text": "Real hourly rate",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes"
+   ],
+   "claims_to_verify": [
+    "$84K federal $17,570",
+    "$110/hr: $132,000 − $6,000 = $126,000 profit; federal ≈ $30,291; (126,000 − 30,291)/1,920 ≈ $49.85"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "separating business money",
+  "idea_angle": "Two separate pots for freelancers: emergency fund and tax savings, with sizing.",
+  "script": {
+   "title": "Freelancer emergency fund: how big?",
+   "hook": "Freelancers need a bigger emergency fund than employees. Here's how to size it.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Freelancers need a bigger emergency fund than employees. Here's how to size it.",
+     "on_screen_text": "How big is your emergency fund?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes next to a large jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why bigger",
+     "narration": "No paid leave, uneven income, and clients that pay late. Gaps are normal, not emergencies.",
+     "on_screen_text": "Gaps are normal",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a bumpy line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Size",
+     "narration": "Common target: 3–6 months of essential personal costs. Closer to 6 if one client is most of your income.",
+     "on_screen_text": "3–6 months of essentials",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a row of six small jars, three filled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Example",
+     "narration": "Essentials of $2,500/month → $7,500 to $15,000.",
+     "on_screen_text": "$2,500/mo → $7.5K–$15K",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two coin stacks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Separate",
+     "narration": "Keep it separate from tax savings. Tax money is already owed; it's not your safety net.",
+     "on_screen_text": "Not the tax account",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two jars with a wall between them. No text, no logos, no real people."
+    },
+    {
+     "heading": "Where",
+     "narration": "A separate, FDIC-insured savings account you can reach in a day or two.",
+     "on_screen_text": "Insured, separate, reachable",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a vault with a shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Start",
+     "narration": "Start with 1 month. Then add a fixed % of every payment, like the tax set-aside.",
+     "on_screen_text": "Start with 1 month",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a single filled jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Use",
+     "narration": "Use it for gaps in income, then refill before raising your own pay.",
+     "on_screen_text": "Use it. Refill it.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an arrow pouring coins back. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save",
+     "narration": "Save this and check your number.",
+     "on_screen_text": "Save this.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this. Follow for one freelancer money move a week.",
+   "caption": "Freelancer emergency fund: 3–6 months of essential personal costs (closer to 6 if one client is most of your income). $2,500/month essentials → $7,500–$15,000. Keep it separate from tax savings, in an FDIC-insured account. Start with one month and add a fixed % of every payment.\n\nThe business checking link in our bio is an affiliate link: we may earn a commission if you open an account, at no extra cost to you. Compare options yourself first.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSave this. Follow for one freelancer money move a week.",
+   "hashtags": [
+    "emergencyfund",
+    "freelancetips",
+    "irregularincome",
+    "selfemployed",
+    "savings",
+    "1099money"
+   ],
+   "description": "How to size and fund an emergency fund as a freelancer, separate from tax savings.",
+   "thumbnail_text": "Emergency fund",
+   "sources": [
+    "https://www.fdic.gov/resources/deposit-insurance/",
+    "https://www.consumerfinance.gov/consumer-tools/save-as-you-go/"
+   ],
+   "claims_to_verify": [
+    "3–6 months is a common guideline",
+    "FDIC coverage up to $250,000 per depositor per bank per category"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "deductions with sources",
+  "idea_angle": "Business meals and travel rules in one carousel.",
+  "script": {
+   "title": "Business meals and travel: what counts",
+   "hook": "Meals and travel are where freelancers overclaim most. Here's what counts.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Meals and travel are where freelancers overclaim most. Here's what counts.",
+     "on_screen_text": "Meals + travel: what counts",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a suitcase and a plate. No text, no logos, no real people."
+    },
+    {
+     "heading": "Meals",
+     "narration": "Business meals with a client, customer or contractor: generally 50% deductible.",
+     "on_screen_text": "Client meals: 50%",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. half a plate shaded. No text, no logos, no real people."
+    },
+    {
+     "heading": "Solo",
+     "narration": "Your own everyday lunch: not deductible, even on a work day.",
+     "on_screen_text": "Solo lunch: no",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a sandwich with a stop sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Entertainment",
+     "narration": "Concerts, games, golf: not deductible (since 2018).",
+     "on_screen_text": "Entertainment: no",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a ticket with a stop sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Travel",
+     "narration": "Travel away from home overnight for business: flights, hotels, rides are deductible.",
+     "on_screen_text": "Overnight work trip: yes",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a suitcase and a plane. No text, no logos, no real people."
+    },
+    {
+     "heading": "Travel meals",
+     "narration": "Meals on that trip: 50%, or use the IRS per diem rates.",
+     "on_screen_text": "Trip meals: 50% / per diem",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small plate next to a suitcase. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mixed trips",
+     "narration": "Mixed trip? Travel costs count only if the trip is mainly for business; personal days aren't deductible.",
+     "on_screen_text": "Mainly business only",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with some days shaded. No text, no logos, no real people."
+    },
+    {
+     "heading": "Proof",
+     "narration": "Keep receipts plus a note: who, where, business purpose.",
+     "on_screen_text": "Who · where · why",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a receipt with a note. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save",
+     "narration": "When in doubt, leave it out or ask a tax pro.",
+     "on_screen_text": "Save this.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes nodding. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this. Follow for one freelancer money move a week.",
+   "caption": "Business meals with a client/customer/contractor: generally 50%. Solo everyday lunch: no. Entertainment: no. Overnight business travel: yes (flights, hotel, rides); meals on the trip 50% or per diem. Mixed trips must be mainly for business. Keep receipts + who/where/why.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSave this. Follow for one freelancer money move a week.",
+   "hashtags": [
+    "taxdeductions",
+    "businesstravel",
+    "businessmeals",
+    "freelancetaxes",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "What freelancers can and can't deduct for meals, entertainment and travel.",
+   "thumbnail_text": "Meals + travel",
+   "sources": [
+    "https://www.irs.gov/publications/p463"
+   ],
+   "claims_to_verify": [
+    "Entertainment disallowed since 2018 (TCJA)",
+    "50% meal limit",
+    "Per diem option for self-employed covers meals and incidentals only"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "Step-by-step IRS Direct Pay walkthrough for the January payment.",
+  "script": {
+   "title": "Pay your Jan 15 tax in 6 steps",
+   "hook": "Your Jan 15 estimated payment, step by step. About 5 minutes.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Your Jan 15 estimated payment, step by step. About 5 minutes.",
+     "on_screen_text": "Jan 15 in 6 steps",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a laptop and a timer. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "1. Go to irs.gov/payments and choose Direct Pay (free, from a bank account).",
+     "on_screen_text": "1. irs.gov/payments → Direct Pay",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop with a shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "2. Reason: Estimated Tax. Apply to: 1040ES. Tax period: 2026.",
+     "on_screen_text": "2. Estimated tax · 1040ES · 2026",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a dropdown highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "3. Verify your identity with last year's return details (filing status, address).",
+     "on_screen_text": "3. Verify with last year's info",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an ID card with a check. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "4. Enter the amount and your bank details. Pick a date on or before Jan 15.",
+     "on_screen_text": "4. Amount + date",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with a coin on the 15th. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "5. Save the confirmation number. Screenshot it or email it to yourself.",
+     "on_screen_text": "5. Save the confirmation",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "6. Log it in your tracker so your April filing shows it.",
+     "on_screen_text": "6. Log it",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a spreadsheet with a filled cell. No text, no logos, no real people."
+    },
+    {
+     "heading": "State",
+     "narration": "Your state may want its own estimate on its own site. Check it the same day.",
+     "on_screen_text": "Then your state",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small state outline. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save",
+     "narration": "Not sure of the amount? The free calculator in our link in bio works it out.",
+     "on_screen_text": "Save this for Jan 15.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this. Follow for one freelancer money move a week.",
+   "caption": "Jan 15 payment in 6 steps:\n1. irs.gov/payments → Direct Pay\n2. Estimated Tax · 1040ES · tax period 2026\n3. Verify with last year's return info\n4. Amount + date on/before Jan 15\n5. Save the confirmation\n6. Log it\nThen check your state.\n\nFree quarterly tax calculator in the link in bio: it shows what to pay by Jan 15.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSave this. Follow for one freelancer money move a week.",
+   "hashtags": [
+    "estimatedtaxes",
+    "irs",
+    "quarterlytaxes",
+    "freelancetaxes",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "How to make the January 15 estimated tax payment on IRS Direct Pay in six steps.",
+   "thumbnail_text": "Pay Jan 15",
+   "sources": [
+    "https://www.irs.gov/payments/direct-pay",
+    "https://www.irs.gov/payments"
+   ],
+   "claims_to_verify": [
+    "Direct Pay menu labels (verify current wording)",
+    "Direct Pay verification uses prior-year return info"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "deductions with sources",
+  "idea_angle": "First-year deductions checklist: start-up costs, equipment, home office, software.",
+  "script": {
+   "title": "First year freelancing? Don't miss these",
+   "hook": "First year freelancing? These are the first-year deductions people miss.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "First year freelancing? These are the first-year deductions people miss.",
+     "on_screen_text": "First-year deductions",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a small 'year 1' badge. No text, no logos, no real people."
+    },
+    {
+     "heading": "Start-up",
+     "narration": "Start-up costs before your first client: up to $5,000 deductible in year one.",
+     "on_screen_text": "Start-up costs: up to $5K",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small open sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Equipment",
+     "narration": "Equipment bought for the business: often deductible in the year you start using it.",
+     "on_screen_text": "Equipment in use",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "Home office",
+     "narration": "A dedicated workspace: $5/sq ft simplified, up to $1,500.",
+     "on_screen_text": "Home office: up to $1,500",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a desk corner. No text, no logos, no real people."
+    },
+    {
+     "heading": "Software",
+     "narration": "Software and subscriptions: design tools, accounting, domain, hosting.",
+     "on_screen_text": "Software + domain + hosting",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an app grid. No text, no logos, no real people."
+    },
+    {
+     "heading": "Phone",
+     "narration": "Phone and internet: business share only.",
+     "on_screen_text": "Phone: business %",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a split phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Learning",
+     "narration": "Courses that improve skills for your current work count. Training for a new career doesn't.",
+     "on_screen_text": "Courses for current work",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small book. No text, no logos, no real people."
+    },
+    {
+     "heading": "SE tax",
+     "narration": "Half of your SE tax, automatically on your return.",
+     "on_screen_text": "Half your SE tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a split coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save",
+     "narration": "Go through your card statements from the start of the year. Receipts first, then claim.",
+     "on_screen_text": "Save it. Check your statements.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a magnifying glass. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this. Follow for one freelancer money move a week.",
+   "caption": "First-year deductions to check: start-up costs (up to $5,000), equipment placed in service, home office (simplified up to $1,500), software/domain/hosting, phone and internet (business %), courses for your current work, half of SE tax.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSave this. Follow for one freelancer money move a week.",
+   "hashtags": [
+    "newfreelancer",
+    "taxdeductions",
+    "freelancetaxes",
+    "selfemployed",
+    "smallbusinesstips",
+    "1099money"
+   ],
+   "description": "First-year deductions for new freelancers to check before filing.",
+   "thumbnail_text": "First-year deductions",
+   "sources": [
+    "https://www.irs.gov/publications/p535",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/home-office-deduction"
+   ],
+   "claims_to_verify": [
+    "$5,000 start-up rule",
+    "$1,500 simplified home office",
+    "Education must relate to current trade"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "benefits without an employer",
+  "idea_angle": "Freelancer retirement menu in 2026: IRA, SEP, Solo 401(k), with limits and deadlines.",
+  "script": {
+   "title": "Freelancer retirement accounts, compared",
+   "hook": "No 401(k) at work? You have 3 options. Here they are side by side.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "No 401(k) at work? You have 3 options. Here they are side by side.",
+     "on_screen_text": "Your 3 retirement options",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with three plant pots. No text, no logos, no real people."
+    },
+    {
+     "heading": "IRA",
+     "narration": "IRA (Roth or traditional): $7,500 for 2026 ($8,600 at 50+). Deadline: Apr 15, 2027.",
+     "on_screen_text": "IRA: $7,500 · Apr 15",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small pot. No text, no logos, no real people."
+    },
+    {
+     "heading": "SEP",
+     "narration": "SEP IRA: ~20% of profit after half SE tax, up to $72,000. Open and fund by your filing deadline incl. extensions.",
+     "on_screen_text": "SEP: ~20% · filing deadline",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a medium pot. No text, no logos, no real people."
+    },
+    {
+     "heading": "Solo 401(k)",
+     "narration": "Solo 401(k): up to $24,500 as employee + ~20% as employer, $72,000 total. Stricter setup deadlines.",
+     "on_screen_text": "Solo 401(k): $24.5K + ~20%",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a large pot. No text, no logos, no real people."
+    },
+    {
+     "heading": "Combine",
+     "narration": "An IRA stacks with either a SEP or a Solo 401(k).",
+     "on_screen_text": "IRA + one of the others",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two pots together. No text, no logos, no real people."
+    },
+    {
+     "heading": "At $60K",
+     "narration": "At $60K profit: IRA $7,500 · SEP ≈ $11,152 · Solo 401(k) up to ≈ $35,652.",
+     "on_screen_text": "At $60K: $7.5K / $11K / $35K",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three coin stacks of rising height. No text, no logos, no real people."
+    },
+    {
+     "heading": "Taxes",
+     "narration": "Traditional contributions cut income tax now, not SE tax. Roth: tax-free later.",
+     "on_screen_text": "Cuts income tax, not SE tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a stack losing only its top layer. No text, no logos, no real people."
+    },
+    {
+     "heading": "Start",
+     "narration": "Can't decide? An IRA with automatic monthly deposits is the easiest start.",
+     "on_screen_text": "Easiest start: an IRA",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with a repeating arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Save",
+     "narration": "Ask a tax pro which fits. Limits are 2026 figures.",
+     "on_screen_text": "Save this.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes watering a plant. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this. Follow for one freelancer money move a week.",
+   "caption": "Freelancer retirement (2026):\n• IRA: $7,500 ($8,600 at 50+), deadline Apr 15, 2027\n• SEP IRA: ~20% of adjusted profit, up to $72,000, by filing deadline incl. extensions\n• Solo 401(k): $24,500 employee + ~20% employer, $72,000 total, stricter setup\nAt $60K profit: $7,500 / ≈ $11,152 / up to ≈ $35,652. An IRA stacks with either.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSave this. Follow for one freelancer money move a week.",
+   "hashtags": [
+    "retirement",
+    "sepira",
+    "solo401k",
+    "rothira",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "IRA vs SEP IRA vs Solo 401(k) for freelancers, with 2026 limits and deadlines.",
+   "thumbnail_text": "Retirement options",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits",
+    "https://www.irs.gov/retirement-plans/plan-sponsor/simplified-employee-pension-plan-sep",
+    "https://www.irs.gov/retirement-plans/one-participant-401k-plans"
+   ],
+   "claims_to_verify": [
+    "2026 limits: IRA $7,500/$1,100 catch-up; 401(k) $24,500; 415(c) $72,000",
+    "SEP/Solo amounts at $60K from launch content"
+   ]
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "deductions with sources",
+  "idea_angle": "December guide: the year-end moves that actually matter for freelancers, and the ones that don't.",
+  "script": {
+   "title": "Year-end tax moves for freelancers (and the ones to skip)",
+   "hook": "December is when freelancers get the worst tax advice of the year: buy a car, buy a laptop, write everything off. Some year-end moves really do lower your bill. Most of the popular ones just move money from you to a store. Here's how to tell the difference, with twenty twenty-six numbers. Education, not tax advice.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "December is when freelancers get the worst tax advice of the year: buy a car, buy a laptop, write everything off. Some year-end moves really do lower your bill. Most of the popular ones just move money from you to a store. Here's how to tell the difference, with twenty twenty-six numbers. Education, not tax advice.",
+     "on_screen_text": "Year-end moves that matter",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes under a December calendar holding a short checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "Write-off math",
+     "narration": "First, the math everyone skips. A business deduction lowers your profit, which lowers both self-employment tax and income tax. At sixty thousand of profit, a single filer saves about two hundred thirty dollars per thousand dollars of deductions. At a hundred and twenty thousand, about three hundred five. So a deduction saves you a quarter to a third of the cost. You still pay the rest.",
+     "on_screen_text": "$1,000 deduction ≈ $230 saved",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a big coin next to a small coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Timing",
+     "narration": "That's why the real year-end move is timing, not spending. If you were going to buy a laptop in February anyway, buying it and starting to use it in December moves the deduction a year earlier. If you weren't going to buy it, don't.",
+     "on_screen_text": "Timing, not spending",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a box moving from February to December. No text, no logos, no real people."
+    },
+    {
+     "heading": "Invoices",
+     "narration": "Second, invoice timing. Most freelancers use the cash method: income counts when you receive it. A payment that arrives January second is next year's income. Don't play games with clients' payment dates, but don't rush to collect a December invoice if it suits you to receive it in January either.",
+     "on_screen_text": "Received in Jan = next year",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an invoice crossing into January. No text, no logos, no real people."
+    },
+    {
+     "heading": "Retirement",
+     "narration": "Third, retirement. A SEP IRA can be opened and funded until your filing deadline, including extensions, and still count for this year. That's roughly twenty percent of profit after half of self-employment tax. A Solo 401(k) allows more, but its setup and election deadlines are stricter, so ask your provider before December thirty-first. An IRA works too, seventy-five hundred dollars for twenty twenty-six, until April fifteenth.",
+     "on_screen_text": "SEP · Solo 401(k) · IRA",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three plant pots. No text, no logos, no real people."
+    },
+    {
+     "heading": "Estimate",
+     "narration": "Fourth, update your estimate. Take your profit so far, add what you expect in December, and work out the full-year bill. That tells you how big the January fifteenth payment needs to be, and whether your tax savings will cover the April balance.",
+     "on_screen_text": "Size the Jan 15 payment",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calculator and a January page. No text, no logos, no real people."
+    },
+    {
+     "heading": "Health",
+     "narration": "Fifth, health insurance. If you buy your own, pick next year's plan on the marketplace by December fifteenth for coverage from January first. Bronze and catastrophic plans now count as HSA-compatible, and self-employed premiums are often deductible.",
+     "on_screen_text": "Health plan by Dec 15",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a medical shield and a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paperwork",
+     "narration": "Sixth, paperwork. If you paid another freelancer two thousand dollars or more directly this year, ask for their W-9 now so you can send a 1099-NEC by February first. And catch up your income and expense logs while December is quiet.",
+     "on_screen_text": "W-9s + logs",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a stack of forms and a ledger. No text, no logos, no real people."
+    },
+    {
+     "heading": "Skip",
+     "narration": "Now the ones to skip. Buying a vehicle you don't need for the deduction. Prepaying next year's subscriptions just to pull the deduction forward, which often isn't allowed beyond twelve months anyway. And anything a stranger online calls a loophole. If you couldn't explain it calmly to an auditor, don't do it.",
+     "on_screen_text": "Skip: the 'loopholes'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a shopping cart with a small stop sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Recap: time purchases you needed anyway, know when income counts, fund retirement, size the January payment, sort health insurance, and collect W-9s. The free calculator in the description does the January math. Subscribe for one freelancer money move a week.",
+     "on_screen_text": "Recap",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes ticking six boxes. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Subscribe for one freelancer money move a week.",
+   "caption": "December year-end moves for freelancers: write-off math (≈ $230 saved per $1,000 at $60K profit), timing purchases you needed anyway, invoice timing on the cash method, SEP/Solo 401(k)/IRA deadlines, sizing the Jan 15 payment, health insurance by Dec 15, W-9s, and the 'loopholes' to skip.\n\nFree quarterly tax calculator in the link in bio: it shows what to pay by Jan 15.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSubscribe for one freelancer money move a week.",
+   "hashtags": [
+    "yearendtax",
+    "freelancetaxes",
+    "selfemployed",
+    "taxtips",
+    "smallbusinesstips",
+    "1099money"
+   ],
+   "description": "Year-end tax moves for US freelancers in December 2026, with the math on deductions.\n\nChapters\n0:00 Year-end moves that matter\n0:22 $1,000 deduction ≈ $230 saved\n0:47 Timing, not spending\n1:05 Received in Jan = next year\n1:25 SEP · Solo 401(k) · IRA\n1:50 Size the Jan 15 payment\n2:07 Health plan by Dec 15\n2:22 W-9s + logs\n2:39 Skip: the 'loopholes'\n2:59 Recap\n\nFree quarterly tax calculator: https://1099money.netlify.app/\nThe Quarterly Tax Tracker: https://example.gumroad.com/l/quarterly-tax-tracker\n\nSources: irs.gov (Pub 334, SEP, IRA limits, 1099-NEC, estimated taxes), healthcare.gov.\n\nEducational only, not tax, legal or financial advice. Figures are 2026 federal; check your state.",
+   "thumbnail_text": "Year-end tax moves",
+   "sources": [
+    "https://www.irs.gov/publications/p334",
+    "https://www.irs.gov/retirement-plans/plan-sponsor/simplified-employee-pension-plan-sep",
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-ira-contribution-limits",
+    "https://www.irs.gov/forms-pubs/about-form-1099-nec",
+    "https://www.healthcare.gov/quick-guide/dates-and-deadlines/",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes"
+   ],
+   "claims_to_verify": [
+    "Deduction savings from lib/tax.js",
+    "12-month rule for prepaid expenses",
+    "All 2026 limits as in shorts",
+    "Chapter timestamps must match final edit"
+   ]
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "separating business money",
+  "idea_angle": "Sole proprietor vs LLC vs S corp explained with what changes for taxes, liability and cost.",
+  "script": {
+   "title": "LLC, S corp or sole proprietor? What actually changes",
+   "hook": "Every new freelancer gets told to form an LLC, and every freelancer earning decent money gets told to become an S corp. Both can be right. Both are often wrong. Here's what each one actually changes, so you can decide on purpose. Education only; state rules vary.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Every new freelancer gets told to form an LLC, and every freelancer earning decent money gets told to become an S corp. Both can be right. Both are often wrong. Here's what each one actually changes, so you can decide on purpose. Education only; state rules vary.",
+     "on_screen_text": "Sole prop · LLC · S corp",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes standing before three simple buildings. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sole prop",
+     "narration": "The default is the sole proprietorship. You start one the moment you take paid work under your own name. No filing needed. You report profit on Schedule C and pay self-employment tax. Your business and personal assets aren't legally separate.",
+     "on_screen_text": "Default: sole proprietor",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a single small building. No text, no logos, no real people."
+    },
+    {
+     "heading": "LLC taxes",
+     "narration": "An LLC is a state legal entity. For federal tax, a single-member LLC is ignored by default. Same Schedule C, same self-employment tax, same deductions. So an LLC by itself doesn't save tax.",
+     "on_screen_text": "LLC: same taxes by default",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two identical forms. No text, no logos, no real people."
+    },
+    {
+     "heading": "LLC liability",
+     "narration": "What an LLC can do is limit your personal liability for business debts and some claims, as long as you keep the money separate and follow your state's rules. It won't protect you from your own professional mistakes. That's what professional liability insurance is for.",
+     "on_screen_text": "LLC: liability, not tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a wall between a briefcase and a house. No text, no logos, no real people."
+    },
+    {
+     "heading": "LLC cost",
+     "narration": "LLCs cost money. Every state charges a filing fee, many require an annual report, and some charge an annual fee or tax. California's minimum is eight hundred dollars a year. Check your state before you form one.",
+     "on_screen_text": "Fees vary by state",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin dropping into a state outline. No text, no logos, no real people."
+    },
+    {
+     "heading": "S corp",
+     "narration": "An S corp is a tax election, available to an LLC or a corporation. You pay yourself a reasonable salary through payroll, with Social Security and Medicare taxes withheld. Profit above that salary isn't subject to self-employment tax. That's the saving.",
+     "on_screen_text": "S corp: salary + profit",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin stack split in two. No text, no logos, no real people."
+    },
+    {
+     "heading": "S corp cost",
+     "narration": "The costs: payroll software, a separate business tax return, usually an accountant, sometimes state taxes, and the salary must be reasonable for your work. The saving only beats the cost once profit is well above that salary. Run the numbers with a CPA before electing, and plan for the extra paperwork.",
+     "on_screen_text": "Costs + 'reasonable salary'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three receipts in a row. No text, no logos, no real people."
+    },
+    {
+     "heading": "When",
+     "narration": "A simple rule of thumb: start as a sole proprietor with a separate business account and good records. Add an LLC when you have something to protect or a client requires it. Consider an S corp when your profit is high and steady and a CPA shows the saving after costs.",
+     "on_screen_text": "When to switch",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small plant growing taller in stages. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Recap: an LLC is about liability, not tax. An S corp is about tax, with real costs. A sole proprietorship with clean books is a strong place to start. Subscribe for one freelancer money move a week.",
+     "on_screen_text": "Recap",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three buildings with check marks. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Subscribe for one freelancer money move a week.",
+   "caption": "Sole proprietor vs LLC vs S corp for US freelancers: what each changes for taxes, liability and cost, and when to switch.\n\nThe payroll software link in our bio is an affiliate link: we may earn a commission if you sign up, at no extra cost to you. Compare options yourself first.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSubscribe for one freelancer money move a week.",
+   "hashtags": [
+    "llc",
+    "scorp",
+    "soleproprietor",
+    "smallbusinesstips",
+    "freelancetips",
+    "1099money"
+   ],
+   "description": "What sole proprietorships, single-member LLCs and S corp elections change for a US freelancer.\n\nChapters\n0:00 Sole prop · LLC · S corp\n0:18 Default: sole proprietor\n0:34 LLC: same taxes by default\n0:48 LLC: liability, not tax\n1:05 Fees vary by state\n1:20 S corp: salary + profit\n1:37 Costs + 'reasonable salary'\n1:57 When to switch\n2:17 Recap\n\nSources: irs.gov (LLC, S corporations, reasonable compensation), sba.gov (business structures), California FTB.\n\nSome links are affiliate links; we may earn a commission at no extra cost to you. Educational only, not tax, legal or financial advice.",
+   "thumbnail_text": "LLC vs S corp",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/limited-liability-company-llc",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/s-corporations",
+    "https://www.sba.gov/business-guide/launch-your-business/choose-business-structure"
+   ],
+   "claims_to_verify": [
+    "Disregarded entity default",
+    "Reasonable compensation",
+    "California $800 minimum",
+    "Chapter timestamps must match final edit"
+   ]
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "invoicing and getting paid",
+  "idea_angle": "How to set a freelance rate from a target income, working backwards through taxes, benefits and unbilled time.",
+  "script": {
+   "title": "How to set your freelance rate (with the tax math)",
+   "hook": "Most freelancers pick a rate by looking at what other people charge. Then they find out in April that it doesn't cover taxes, health insurance or the weeks they couldn't bill. Let's work backwards from what you want to take home, with twenty twenty-six numbers. Illustrative, not advice.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Most freelancers pick a rate by looking at what other people charge. Then they find out in April that it doesn't cover taxes, health insurance or the weeks they couldn't bill. Let's work backwards from what you want to take home, with twenty twenty-six numbers. Illustrative, not advice.",
+     "on_screen_text": "Set your rate backwards",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a price tag and a calculator. No text, no logos, no real people."
+    },
+    {
+     "heading": "Target",
+     "narration": "Start with what you want to live on, after tax. Say fifty-five thousand dollars a year.",
+     "on_screen_text": "Target: $55K take-home",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin stack with a flag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Costs",
+     "narration": "Add what an employer used to pay for: health insurance, say six thousand a year, retirement, say five thousand, and business costs like software and equipment, say six thousand.",
+     "on_screen_text": "+ health, retirement, business costs",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three small stacks added. No text, no logos, no real people."
+    },
+    {
+     "heading": "Taxes",
+     "narration": "Then taxes. Profit has to cover self-employment tax and income tax. Using the twenty twenty-six federal figures for a single filer, about eighty-four thousand of profit leaves roughly sixty-six thousand after federal tax. Enough for the take-home and most of the extras. State tax would add more.",
+     "on_screen_text": "≈ $84K profit needed",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coral slice taken off a tall stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Revenue",
+     "narration": "So revenue needs to be about ninety thousand: eighty-four thousand profit plus six thousand of business costs.",
+     "on_screen_text": "Revenue ≈ $90K",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a tall coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Hours",
+     "narration": "Now the hours. Forty-eight working weeks after holidays and sick days. And you won't bill forty hours a week. Twenty-five is realistic for many freelancers once you count sales, email and admin. That's twelve hundred billable hours.",
+     "on_screen_text": "1,200 billable hours",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a clock partly shaded. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rate",
+     "narration": "Ninety thousand divided by twelve hundred is seventy-five dollars an hour. That's the floor for this target, not the goal.",
+     "on_screen_text": "Rate floor: $75/hour",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Project",
+     "narration": "If you price by project, convert: estimate the hours honestly, multiply by your rate, and add a margin for revisions.",
+     "on_screen_text": "Project price = hours × rate + margin",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a project box with a tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Check",
+     "narration": "Then sanity-check against the market. If you're far below it, raise your rate. If you're far above, narrow your niche or improve your offer so the price makes sense.",
+     "on_screen_text": "Check the market",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a balance scale. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Recap: start from take-home pay, add benefits and costs, gross up for tax, divide by billable hours, not total hours. Subscribe for one freelancer money move a week.",
+     "on_screen_text": "Recap",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes adjusting a price tag upward. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Subscribe for one freelancer money move a week.",
+   "caption": "Work backwards to a freelance rate: target take-home ($55K) + health, retirement and business costs → ≈ $84K profit (2026 federal, single) → ≈ $90K revenue ÷ 1,200 billable hours ≈ $75/hour floor.\n\nIllustrative. Free quarterly tax calculator in the link in bio: it shows what to pay by Jan 15.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSubscribe for one freelancer money move a week.",
+   "hashtags": [
+    "freelancerates",
+    "pricing",
+    "freelancebusiness",
+    "freelancetips",
+    "selfemployed",
+    "1099money"
+   ],
+   "description": "A worked method to set a freelance hourly rate from a take-home target, including 2026 federal taxes.\n\nChapters\n0:00 Set your rate backwards\n0:19 Target: $55K take-home\n0:26 + health, retirement, business costs\n0:37 ≈ $84K profit needed\n0:56 Revenue ≈ $90K\n1:03 1,200 billable hours\n1:18 Rate floor: $75/hour\n1:27 Project price = hours × rate + margin\n1:35 Check the market\n1:47 Recap\n\nFree quarterly tax calculator: https://1099money.netlify.app/\n\nIllustrative example. Educational only, not tax, legal or financial advice.",
+   "thumbnail_text": "Set your rate",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes"
+   ],
+   "claims_to_verify": [
+    "$84K profit → ≈ $66,430 after federal (single 2026)",
+    "$55K + $6K health + $5K retirement = $66K ≈ $66.4K",
+    "Chapter timestamps must match final edit"
+   ]
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "A freelancer's January-to-April tax season plan, week by week.",
+  "script": {
+   "title": "Your freelancer tax season plan: January to April",
+   "hook": "Tax season for freelancers isn't one deadline. It's four months with three dates that matter. Here's the plan, week by week, so April is boring. Education, not tax advice.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Tax season for freelancers isn't one deadline. It's four months with three dates that matter. Here's the plan, week by week, so April is boring. Education, not tax advice.",
+     "on_screen_text": "Tax season, Jan to April",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a four-month calendar strip. No text, no logos, no real people."
+    },
+    {
+     "heading": "Jan 15",
+     "narration": "January fifteenth: the last estimated payment for twenty twenty-six. Use the safe harbor or ninety percent of your actual tax. Or file your full return and pay everything by the end of January, and you can skip it.",
+     "on_screen_text": "Jan 15: Q4 payment",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a January page with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Forms",
+     "narration": "By February first: your 1099-NEC and 1099-K forms arrive. Match every one to your income log. Ask for corrections now, not in April. And if you paid contractors, your own 1099-NECs are due the same day.",
+     "on_screen_text": "Feb 1: forms in and out",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a mailbox with forms. No text, no logos, no real people."
+    },
+    {
+     "heading": "February",
+     "narration": "February: close the books. Final income total, expenses by category, mileage total, home office measurements, health insurance premiums, retirement contributions. Your tracker or accounting app should give you these in one sitting.",
+     "on_screen_text": "February: close the books",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a ledger being closed. No text, no logos, no real people."
+    },
+    {
+     "heading": "March",
+     "narration": "March: file, or hand it to your preparer. Filing in March gives you time to fix surprises and get any refund early. Decide on a SEP IRA contribution before you file, because it changes the numbers.",
+     "on_screen_text": "March: file early",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a form with a check mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Balance",
+     "narration": "If you owe a balance, pay it by April fifteenth, from the tax savings account. If you can't pay it all, file on time anyway and pay what you can. Penalties for not filing are much bigger than for not paying.",
+     "on_screen_text": "Apr 15: pay the balance",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coral vault opening. No text, no logos, no real people."
+    },
+    {
+     "heading": "Extension",
+     "narration": "An extension to October fifteenth gives you more time to file, not to pay. Estimate and pay what you owe by April fifteenth even if you extend.",
+     "on_screen_text": "Extension ≠ more time to pay",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a stopwatch with a coin that didn't move. No text, no logos, no real people."
+    },
+    {
+     "heading": "Q1",
+     "narration": "Also April fifteenth: your first estimated payment for twenty twenty-seven. Your new safe harbor is this year's total tax. Update your tracker's setup now.",
+     "on_screen_text": "Apr 15: Q1 for 2027",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a new calendar page. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Recap: January fifteenth payment, forms by February first, books closed in February, file in March, pay by April fifteenth, and start the new year's estimates. The Quarterly Tax Tracker in the description handles the logs and the math. Subscribe for one freelancer money move a week.",
+     "on_screen_text": "Recap",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four calendar pages checked. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Subscribe for one freelancer money move a week.",
+   "caption": "The freelancer tax season plan: Jan 15 payment (or file + pay by end of January), forms by Feb 1, close the books in February, file in March, pay by Apr 15, extension rules, and the first 2027 estimate.\n\nThe Quarterly Tax Tracker (guide + spreadsheet) is in the link in bio if you want the math done for you.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSubscribe for one freelancer money move a week.",
+   "hashtags": [
+    "taxseason",
+    "freelancetaxes",
+    "estimatedtaxes",
+    "selfemployed",
+    "1099",
+    "1099money"
+   ],
+   "description": "A month-by-month January to April tax season plan for US freelancers filing 2026 returns.\n\nChapters\n0:00 Tax season, Jan to April\n0:11 Jan 15: Q4 payment\n0:27 Feb 1: forms in and out\n0:41 February: close the books\n0:54 March: file early\n1:09 Apr 15: pay the balance\n1:25 Extension ≠ more time to pay\n1:36 Apr 15: Q1 for 2027\n1:46 Recap\n\nThe Quarterly Tax Tracker: https://example.gumroad.com/l/quarterly-tax-tracker\n\nSources: irs.gov (estimated taxes, Pub 505, 1099-NEC, extensions, failure-to-file vs failure-to-pay penalties).\n\nEducational only, not tax, legal or financial advice.",
+   "thumbnail_text": "Tax season plan",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/forms-pubs/about-form-1099-nec",
+    "https://www.irs.gov/filing/get-an-extension-to-file-your-tax-return",
+    "https://www.irs.gov/payments/penalties"
+   ],
+   "claims_to_verify": [
+    "Failure-to-file penalty larger than failure-to-pay (5% vs 0.5% per month)",
+    "Pub 505 Jan 31 file-and-pay exception",
+    "Chapter timestamps must match final edit"
+   ]
+  }
+ }
+]

@@ -9,8 +9,11 @@ LAUNCH = ROOT / "launch" / "1099-money"
 SPEC = {"short": "mon,tue,wed,thu,fri,sat,sun", "carousel": "mon,wed,fri,sat", "long": "sun"}
 
 
-def _items():
-    return json.loads((LAUNCH / "content.json").read_text())
+def _items(name="content.json"):
+    return json.loads((LAUNCH / name).read_text())
+
+
+MONTH1 = "month-1/content.json"
 
 
 def test_brand_loads_with_placeholder_affiliates(factory):
@@ -21,11 +24,15 @@ def test_brand_loads_with_placeholder_affiliates(factory):
     assert all(a.url.startswith("https://example.com/go/") for a in brand.affiliates)  # replace when approved
 
 
-def test_launch_content_is_valid(factory):
+import pytest
+
+
+@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4])])
+def test_content_is_valid(factory, name, counts):
     from contentfactory.schemas import Script
     brand = factory.brand("1099-money")
-    items = _items()
-    assert [sum(i["format"] == f for i in items) for f in ("short", "carousel", "long")] == [14, 8, 2]
+    items = _items(name)
+    assert [sum(i["format"] == f for i in items) for f in ("short", "carousel", "long")] == counts
     assert len({i["script"]["title"] for i in items}) == len(items)
     for it in items:
         sc = Script.model_validate(it["script"])
@@ -39,6 +46,15 @@ def test_launch_content_is_valid(factory):
         if it["format"] == "short":
             words = sum(len(s.narration.split()) for s in sc.segments)
             assert words <= 160, (sc.title, words)  # under ~60s at 160 wpm
+
+
+def test_month_1_has_no_repeat_titles_and_fills_30_days(factory):
+    launch = {i["script"]["title"].lower() for i in _items()}
+    month = _items(MONTH1)
+    assert not launch & {i["script"]["title"].lower() for i in month}
+    slots, leftover = plan(factory.brand("1099-money"), month, date(2026, 11, 30), 30)
+    assert not leftover
+    assert {s.day for s in slots} == set(range(1, 31))
 
 
 def test_two_week_plan_fits_and_respects_cap(factory):
@@ -55,7 +71,6 @@ def test_two_week_plan_fits_and_respects_cap(factory):
 
 def test_tracker_builds(tmp_path):
     import importlib.util
-    import pytest
     load_workbook = pytest.importorskip("openpyxl").load_workbook
     spec = importlib.util.spec_from_file_location("build_tracker", LAUNCH / "product" / "build_tracker.py")
     mod = importlib.util.module_from_spec(spec)
