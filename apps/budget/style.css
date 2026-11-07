@@ -81,3 +81,13 @@ footer{color:var(--muted);font-size:13px;padding:16px;text-align:center}
 .subs .num{white-space:nowrap}
 @media (max-width:560px){.subs .when{display:none}.subs th:first-child{width:auto}}
 .plan.subs{table-layout:auto}
+
+.rate-grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media (min-width:700px){.rate-grid{grid-template-columns:1fr 1fr}.rate-grid .btn{grid-column:1/-1;justify-self:start}}
+.grade-row{display:flex;gap:16px;align-items:center}
+.grade{width:76px;height:76px;border-radius:18px;display:grid;place-items:center;font-size:42px;font-weight:800;color:#0b1d13;flex:none}
+.gA{background:var(--green)}.gB{background:#8fd694}.gC{background:var(--gold)}.gD{background:#f59e5b}.gF{background:#f07167}
+.score-big{font-size:34px;font-weight:800;margin:0}.score-big small{font-size:16px;color:var(--muted)}
+.moves li{margin-bottom:8px}
+.breakdown td small{display:block;color:var(--muted);font-size:12px}
+.breakdown .num{width:110px;white-space:nowrap}

@@ -25,6 +25,13 @@ export default {
     url: 'https://REPLACE_ME.gumroad.com/l/bill-cut-kit',
     pitch: 'Scripts and a checklist for calling your phone, internet and insurance providers to get a lower rate.',
   },
+  // Paid add-on shown on Rate My Budget (Gumroad, Stripe Payment Link or a Calendly paid booking).
+  review: {
+    name: 'Personal budget review',
+    price: '$19',
+    url: 'https://REPLACE_ME.gumroad.com/l/budget-review',
+    pitch: 'Send your numbers and get a written review within 48 hours: what to change first, with the maths. Drafted with AI help, checked and signed off by a person.',
+  },
   verifyEndpoint: '/api/verify-license',
   proFeatures: [
     'Unlimited categories',

@@ -48,6 +48,7 @@ const checks = [
     await page.waitForURL(/scam-checker\/$/);
   }],
   ['/budget/subscriptions.html', '#results', async (page) => { await page.click('#sample'); }],
+  ['/budget/rate.html', '#rate-result .grade', async (page) => { await page.click('#rate-form button'); }],
   ['/budget/', '#summary', async (page) => {
     await page.fill('#income', '3200');
     await page.fill('#tx-amount', '42.50');
