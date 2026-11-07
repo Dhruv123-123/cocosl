@@ -6,7 +6,8 @@ spreadsheet-only tracker listing.
 
     python launch/1099-money/products/build_gumroad.py [OUT_DIR] [--edition 2027]
 
-Writes OUT_DIR/freelancer-tax-kit/ (1-Start-Here.pdf + Freelancer-Tax-Kit.zip). Default OUT_DIR is
+Writes OUT_DIR/freelancer-tax-kit/ (1-Start-Here.pdf + Freelancer-Tax-Kit.zip) and
+OUT_DIR/freelancer-tax-season-bundle/ (Start Here + S corp check PDF + zip). Default OUT_DIR is
 /mnt/project-files/content-factory/1099-money/gumroad.
 """
 from __future__ import annotations
@@ -28,6 +29,7 @@ CALENDAR = DOWNLOADS / "freelancer-tax-calendar-2027.pdf"
 CHECKLIST = DOWNLOADS / "freelancer-tax-checklist.pdf"
 JAR = DOWNLOADS / "tax-jar-tracker.pdf"
 TAXKIT = HERE / "tax-kit"
+SEASON = HERE / "tax-season-bundle"
 
 
 def tracker_dir(edition: int) -> Path:
@@ -68,7 +70,27 @@ def build_tax_kit(out_root: Path, edition: int = 2026) -> list[Path]:
     return sorted(d.iterdir())
 
 
-BUILDERS = {"tax-kit": build_tax_kit}
+def build_tax_season_bundle(out_root: Path, edition: int = 2026) -> list[Path]:
+    """The Freelancer Tax Season Bundle: the tracker, the checklist and the S corp check pages."""
+    d = out_root / "freelancer-tax-season-bundle"
+    if d.exists():
+        shutil.rmtree(d)
+    d.mkdir(parents=True)
+    with tempfile.TemporaryDirectory() as t:
+        stage = Path(t) / "season"
+        for sub, srcs in (("2-Quarterly-Tax-Tracker", tracker_files(edition)), ("3-Tax-Checklist", [CHECKLIST])):
+            (stage / sub).mkdir(parents=True)
+            for src in srcs:
+                shutil.copy(src, stage / sub)
+        start = d / "1-Start-Here-and-S-Corp-Check.pdf"
+        if not html_to_pdf(SEASON / "the-tax-season-bundle.html", start):
+            raise SystemExit("tax season bundle: could not print the Start Here PDF")
+        zip_dir(stage, d / "Freelancer-Tax-Season-Bundle.zip", "Freelancer-Tax-Season-Bundle")
+    shutil.copy(SEASON / "LISTING.md", d / "LISTING.md")
+    return sorted(d.iterdir())
+
+
+BUILDERS = {"tax-kit": build_tax_kit, "tax-season-bundle": build_tax_season_bundle}
 
 
 def main(argv: list[str]) -> dict[str, list[Path]]:

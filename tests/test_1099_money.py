@@ -674,3 +674,18 @@ def test_tax_season_push_fills_open_sundays_jan_3_to_apr_11():
         cap = it["script"]["caption"]
         if "$60,000 of profit" in cap:
             assert "fictional" in cap.lower()
+
+
+def test_tax_season_bundle_is_gumroad_only_and_matches_the_calculator():
+    d = LAUNCH / "products" / "tax-season-bundle"
+    listing = (d / "LISTING.md").read_text()
+    assert "[PRICE]" in listing and "Not sold on Etsy" in listing
+    assert "free on the site" in listing and "value" in listing and "crossed-out" in listing
+    html = (d / "the-tax-season-bundle.html").read_text()
+    # sole prop $60,000 = the tax model's $12,037; the S corp rows come from lib/scorp.js with $2,500 of costs
+    for row in ("$12,037", "$7,450", "$2,087", "&minus;$603", "$6,841"):
+        assert row in html
+    assert "72.5&cent;" in html and "76&cent;" in html and "$2,000" in html
+    src = (LAUNCH / "products" / "build_gumroad.py").read_text()
+    assert '"tax-season-bundle": build_tax_season_bundle' in src
+    assert not list((LAUNCH / "etsy").glob("*season*"))
