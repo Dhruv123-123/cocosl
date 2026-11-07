@@ -269,7 +269,8 @@ def check_original_element(post: dict) -> Check | None:
         return Check("original_element", "ok", f"{len(footage)} beat(s) with your own footage")
     if charts:
         return Check("original_element", "ok", f"{len(charts)} chart(s) drawn from this video's numbers")
-    planned = (script.get("original_element") or "").strip()
+    from .originality import element_text
+    planned = element_text(script.get("original_element"))
     if planned:
         return Check("original_element", "block", f"Planned original element not in the video yet: {planned[:160]}. "
                      "Add the footage to a beat (or a chart), then re-render")
