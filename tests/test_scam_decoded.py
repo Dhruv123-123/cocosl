@@ -181,3 +181,62 @@ def test_answer_bank_has_30_link_free_drafts():
     assert not re.search(r"https?://|www\.", bank)
     assert "guarantee" not in bank.lower() and "Nothing has been posted" in bank
     assert "DM me" not in bank.replace('No "DM me"', "").replace('(No "DM me".', "")
+
+
+def _load_originality(name):
+    import importlib.util
+    import sys
+    d = CONTENT.parent / "originality"
+    sys.path.insert(0, str(d))
+    try:
+        spec = importlib.util.spec_from_file_location(f"originality_{name}", d / f"{name}.py")
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        return mod
+    finally:
+        sys.path.remove(str(d))
+
+
+def test_originality_formats_render_to_html(tmp_path, monkeypatch):
+    b = _load_originality("build")
+    F = b.F
+    assert len(F.WALKTHROUGHS) == len(F.QUIZZES) == 6 and len(F.CHARTS) == 4
+    for w in F.WALKTHROUGHS:
+        page, secs = b.walkthrough_html(w)
+        assert 35 <= secs <= 75 and page.count('class="b ') == len(w["messages"])
+        assert all(f'id="f{n}"' in page for n in range(1, len(w["flags"]) + 1)), w["id"]
+        assert "555-01" in page or "●" in page
+    for q in F.QUIZZES:
+        slides = b.quiz_slides(q)
+        assert len(slides) == len(q["flags"]) + 3
+        assert all(f'data-i="{n}"' in slides[0] for n in range(1, len(q["flags"]) + 1)), q["id"]
+    for c in F.CHARTS:
+        assert len(c["labels"]) == len(c["values"]) == len(c["value_labels"])
+        assert c["url"].startswith("https://www.ftc.gov/") and "Source:" in b.chart_slide(c)
+    text = (CONTENT.parent / "originality" / "formats.py").read_text()
+    assert "NORTON" not in text.upper()
+
+
+def test_tiktok_minute_cuts_clear_one_minute_and_are_new():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    items = json.loads((CONTENT.parent / "tiktok-minute-cuts.json").read_text())
+    assert len(items) == 10 and all(i["platforms"] == ["tiktok"] for i in items)
+    earlier = {}
+    for name in ("content.json", "weeks-3-6.json", "weeks-7-12.json", "weeks-13-21.json", "weeks-22-26.json"):
+        for i in json.loads((CONTENT.parent / name).read_text()):
+            earlier[i["script"]["title"]] = G.shingles(G.script_text(i["script"]))
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        words = sum(len(s.narration.split()) for s in sc.segments)
+        assert 165 <= words <= 230, (sc.title, words)  # 66-92 s at 150 wpm
+        assert sc.title not in earlier and any(ch.isdigit() for ch in sc.hook)
+        assert item["original_element"] and "No AI voice" in item["original_element"]
+        assert any("pause" in s.heading.lower() or "quiz" in s.heading.lower() or "Pause" in s.narration
+                   for s in sc.segments), sc.title
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        assert sc.sources and sc.claims_to_verify and "guarantee" not in G.script_text(item["script"]).lower()
+        mine = G.shingles(G.script_text(item["script"]))
+        assert max(G.jaccard(mine, v) for v in earlier.values()) < 0.25, sc.title
+    plan = (CONTENT.parent / "ORIGINALITY_PASS.md").read_text()
+    assert all(i["script"]["title"] in plan for i in items)
