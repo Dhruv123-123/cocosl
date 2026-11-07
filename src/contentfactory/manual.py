@@ -68,12 +68,13 @@ def _pin_art(factory, post: dict) -> Path | None:
     return None
 
 
-def build_package(factory, pub: dict, post: dict | None = None) -> dict:
-    """Write (or refresh) the package for one publication; returns its paths, relative to output/."""
+def build_package(factory, pub: dict, post: dict | None = None, dest: Path | None = None) -> dict:
+    """Write (or refresh) the package for one publication; returns its paths, relative to output/
+    (or to `dest`'s parent when given: `factory export-week` writes packages into its own folder)."""
     post = post or factory.db.get("posts", pub["post_id"])
     req = factory.build_request(post, pub["platform"])
     brand = factory.brand(post["brand"])
-    d = package_dir(factory, pub, post)
+    d = dest or package_dir(factory, pub, post)
     d.mkdir(parents=True, exist_ok=True)
     out = {"dir": d}
     if req.video_path and Path(req.video_path).is_file():
@@ -126,7 +127,8 @@ def build_package(factory, pub: dict, post: dict | None = None) -> dict:
         f"Post #{post['id']}: {post.get('title', '')}\n\n" + steps +
         f"Then: factory manual done {pub['id']} --url <link to the post>  (or Mark posted on the Today page)\n")
     out["post_at"] = d / "POST_AT.txt"
-    return {k: str(v.relative_to(factory.settings.output_dir)) for k, v in out.items()}
+    base = d.parent if dest else factory.settings.output_dir
+    return {k: str(Path(v).relative_to(base)) for k, v in out.items()}
 
 
 def prepare(factory, pub_ids: list[int]) -> None:

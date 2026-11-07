@@ -43,3 +43,52 @@ def test_green_when_clean(factory, monkeypatch):
     _scheduled(factory, "One money move a week. Affiliate link: https://moneymadesimple.co/go/hysa. Made with AI tools.")
     rep = run(factory)
     assert rep.status == "green", render_text(rep, 14)
+
+
+def _video(f, fmt, title, narration, segs=4, **seg_extra):
+    script = {"title": title, "hook": title, "segments": [dict({"narration": narration}, **seg_extra) for _ in range(segs)]}
+    return f.db.insert("posts", {"brand": "money-made-simple", "format": fmt, "status": "approved", "title": title,
+                                 "caption": "", "script": script, "hashtags": [], "disclosure": "", "meta": {}, "assets": {}})
+
+
+def test_originality_signal(factory):
+    for k in range(2):  # too few videos: no signal
+        _video(factory, "long", f"Thin video {k}", "Short narration here about money and budgets for everyone today.")
+    rep = run(factory)
+    assert not any("originality" in f.where for f in rep.findings)
+    for k in range(2, 4):
+        _video(factory, "long", f"Thin video {k}", "Short narration here about money and budgets for everyone today.")
+    rep = run(factory)
+    hits = [f for f in rep.findings if "originality" in f.where]
+    assert hits and hits[0].level == "red" and "audit-originality" in hits[0].message
+    assert "originality risk" in render_text(rep, 14)
+
+
+def test_originality_medium_is_yellow(factory):
+    import random
+    rnd = random.Random(1)
+    words = "budget rent savings card loan interest paycheck grocery coupon refund bill debt fund goal".split()
+    for k in range(4):
+        text = " ".join(" ".join(rnd.choice(words) for _ in range(12)) + "." for _ in range(80))
+        _video(factory, "long", f"Topic number {k} {rnd.choice(words)}", text, segs=1, chart={"kind": "bar"})
+    rep = run(factory)
+    hits = [f for f in rep.findings if "originality" in f.where]
+    assert hits and hits[0].level == "yellow", hits
+
+
+def test_disclosure_honesty_and_facebook_reminder(factory, monkeypatch):
+    from contentfactory.launch_check import HUMAN_WRITTEN_RE
+    assert HUMAN_WRITTEN_RE.search("Script written and fact-checked by a human.")
+    assert HUMAN_WRITTEN_RE.search("Researched and written by a human; sources below")
+    assert not HUMAN_WRITTEN_RE.search("Script drafted with AI help and fact-checked by a person.")
+    brand = factory.brand("money-made-simple")
+    assert "drafted with AI help" in brand.ai_disclosure and brand.scripts_by == "ai_assisted"
+    brand.ai_disclosure = "Visuals made with AI tools. Script written and fact-checked by a human."
+    monkeypatch.setattr(factory, "brands", lambda: {"money-made-simple": brand})
+    rep = run(factory)
+    assert any(f.level == "red" and "ai_disclosure" in f.where for f in rep.findings)
+    brand.scripts_by = "person"
+    rep = run(factory)
+    assert not any("ai_disclosure" in f.where for f in rep.findings)
+    if brand.account("facebook"):
+        assert "AI info" in render_text(rep, 14)

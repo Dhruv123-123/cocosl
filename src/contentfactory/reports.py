@@ -188,5 +188,10 @@ def save_report(factory: Factory, end: date | None = None) -> str:
     out.mkdir(parents=True, exist_ok=True)
     path = out / f"week-{r['end']}.md"
     path.write_text(to_markdown(r))
+    try:  # the per-brand HTML pages from imported stats sit next to it
+        from .weekly_html import save as save_html
+        save_html(factory, end)
+    except Exception as e:  # never lose the Markdown report over the HTML one
+        factory.db.log("report.html_failed", "", None, {"error": str(e)[:300]})
     factory.db.log("report.weekly", "", None, {"path": str(path)})
     return str(path)

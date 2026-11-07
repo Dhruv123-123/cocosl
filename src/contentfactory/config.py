@@ -163,6 +163,21 @@ class PlatformAccount(BaseModel):
     board: str = ""  # Pinterest board the pin goes on
 
 
+class PlaylistPlan(BaseModel):
+    title: str  # lead with the search phrase, e.g. "Budgeting for beginners: start here"
+    description: str = ""
+    pillars: list[str] = Field(default_factory=list)  # posts in these pillars go here
+    keywords: list[str] = Field(default_factory=list)  # ...or whose title contains one of these
+
+
+class YouTubePlan(BaseModel):
+    """Set by hand in Studio (the Data API has no end-screen or related-video endpoint)."""
+    playlists: list[PlaylistPlan] = Field(default_factory=list)  # empty = one per pillar
+    start_here: str = "Start here"  # a playlist of the 3-5 best videos, featured on the channel page
+    end_screen: list[str] = Field(default_factory=lambda: [
+        "Left: the next video in this series (specific video)", "Right: Best for viewer", "Subscribe button"])
+
+
 class BrandProfile(BaseModel):
     slug: str
     name: str
@@ -182,10 +197,15 @@ class BrandProfile(BaseModel):
     voice: VoiceStyle = Field(default_factory=VoiceStyle)
     cadence: Cadence = Field(default_factory=Cadence)
     accounts: list[PlatformAccount] = Field(default_factory=list)
+    youtube: YouTubePlan = Field(default_factory=YouTubePlan)
     affiliates: list[AffiliateOffer] = Field(default_factory=list)
     products: list[dict] = Field(default_factory=list)  # {name, url, price}
     # Compliance switches. The defaults are the safe ones; flipping them is on you.
-    ai_disclosure: str = "Made with AI tools; written and fact-checked by a human."
+    ai_disclosure: str = "Visuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person."
+    # Who writes the scripts. "ai_assisted" (the default: writer.py drafts them, you fact-check) or
+    # "person" (you write them yourself). launch-check turns red if ai_disclosure claims a person wrote
+    # scripts while this says ai_assisted: understating AI use is what platforms and the FTC call deceptive.
+    scripts_by: Literal["ai_assisted", "person"] = "ai_assisted"
     realistic_synthetic_media: bool = False  # True if visuals/voices could pass as real people/events
     require_human_review: bool = True
     own_voice: bool = False  # videos wait for the owner's recorded narration (`factory voice`) before scheduling

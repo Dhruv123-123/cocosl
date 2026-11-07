@@ -9,11 +9,15 @@ For every brand it checks, in one pass:
   campaign comes with a source and medium.
 * placeholders: nothing scheduled in the next N days (default 14) still
   contains REPLACE_ME or another placeholder; that is red.
-* disclosures: affiliate posts say so (FTC), and every post has the AI label.
+* disclosures: affiliate posts say so (FTC), and every post has the AI label. The brand's ai_disclosure
+  must not claim a person wrote the scripts while `scripts_by: ai_assisted` (red). Facebook Reels
+  get a reminder: Meta's AI label has to be ticked by hand in Business Suite.
 * caption limits per platform each post is queued for (Instagram 2,200 chars
-  and 30 hashtags, TikTok 2,200, Threads 500, YouTube title 100 / description
+  and 5 hashtags, TikTok 2,200, Threads 500, YouTube title 100 / description
   5,000 bytes). Over the limit is yellow: the publisher trims, but you should
-  choose what goes.
+  choose what goes. YouTube Shorts titles over 60 chars and long-video titles over 70 are yellow too.
+* originality: the channel-level `factory audit-originality` score of each brand's videos in the
+  database (once it has 3+ long videos or 10+ videos). Medium risk is yellow, high is red.
 
 Red = something would go out wrong. Yellow = fine for dry run, fix before
 going live. Nothing is posted or changed.
@@ -22,17 +26,20 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass, field
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from urllib.parse import parse_qsl, urlsplit
 
 URL_RE = re.compile(r"https?://[^\s<>\"')\]]+")
 PLACEHOLDER_RE = re.compile(r"REPLACE[_-]?ME|YOUR[_-](?:LINK|URL|HANDLE|CODE|ID)|(?-i:\bTODO\b|\bTBD\b)|\{\{.*?\}\}|"
-                            r"\bexample\.(?:com|org|net)\b|\bexample\.gumroad\.com\b|\blocalhost\b|(?-i:\bXXX+\b)", re.I)
+                            r"\bexample\.(?:com|org|net)\b|\bexample\.gumroad\.com\b|\blocalhost\b|(?-i:\bXXX+\b)", re.IGNORECASE)
 UTM_VALUE_RE = re.compile(r"^[A-Za-z0-9_.-]+$")
 CAPTION_LIMITS = {  # platform -> (max chars, max hashtags)
-    "instagram": (2200, 30), "tiktok": (2200, None), "threads": (500, None), "facebook": (63206, None),
+    "instagram": (2200, 5), "tiktok": (2200, None), "threads": (500, None), "facebook": (63206, None),
 }
 LEVELS = {"green": 0, "yellow": 1, "red": 2}
+HUMAN_WRITTEN_RE = re.compile(r"\b(?:script(?:s|ed)?\s+)?(?:researched\s+and\s+)?(?:written|scripted)"
+                              r"(?:\s+and\s+[\w-]+)?\s+by\s+(?:a\s+)?(?:human|person|people|me|us|hand)\b", re.I)
+SHORT_TITLE_MAX, LONG_TITLE_MAX = 60, 70  # YouTube SEO playbook: mobile and search cut longer titles
 
 
 @dataclass
@@ -47,6 +54,7 @@ class Finding:
 class Report:
     findings: list[Finding] = field(default_factory=list)
     checked: dict = field(default_factory=dict)
+    reminders: list[str] = field(default_factory=list)  # by-hand steps; they don't change the colour
 
     def add(self, level: str, brand: str, where: str, message: str) -> None:
         self.findings.append(Finding(level, brand, where, message))
@@ -111,7 +119,7 @@ def _online(urls: set[str]) -> dict[str, str]:
 def run(factory, days: int = 14, online: bool = False, now: datetime | None = None) -> Report:
     from .guardrails import AFFILIATE_DISCLOSURE, AI_DISCLOSURE
     from .publish._text import utf8_len
-    now = now or datetime.now(timezone.utc)
+    now = now or datetime.now(UTC)
     horizon = (now + timedelta(days=days)).isoformat()
     rep = Report()
     real_urls: dict[str, tuple[str, str]] = {}
@@ -129,6 +137,14 @@ def run(factory, days: int = 14, online: bool = False, now: datetime | None = No
             if PLACEHOLDER_RE.search(text) and not URL_RE.search(text):
                 rep.add("yellow", slug, f"brand file: {path}", f"placeholder text: {text[:80]}")
         rep.checked.setdefault(slug, {})["brand_links"] = n_urls
+        if brand.scripts_by == "ai_assisted" and HUMAN_WRITTEN_RE.search(brand.ai_disclosure or ""):
+            rep.add("red", slug, "brand file: ai_disclosure",
+                    f"says a person wrote the scripts (“{HUMAN_WRITTEN_RE.search(brand.ai_disclosure).group(0)}”), but "
+                    "scripts_by is ai_assisted: say “Script drafted with AI help and fact-checked by a person.” "
+                    "(or set scripts_by: person if you write them yourself)")
+        if brand.account("facebook"):
+            rep.reminders.append(f"{slug}: Facebook Reels need Meta's AI label ticked by hand (Business Suite → "
+                                 "AI info) on every post with the AI voice; the API has no field for it.")
 
         pubs = factory.db.query(
             "SELECT s.*, pub.platform AS pub_platform, pub.scheduled_at AS pub_at FROM publications pub JOIN posts s ON s.id = pub.post_id "
@@ -171,17 +187,46 @@ def run(factory, days: int = 14, online: bool = False, now: datetime | None = No
                 if tags and ntags > tags:
                     rep.add("yellow", slug, where, f"{ntags} hashtags, {platform} takes {tags}; extras are dropped")
             if platform == "youtube":
-                if len(req.title or "") > 100:
-                    rep.add("yellow", slug, where, f"title {len(req.title)} chars, YouTube takes 100; it will be cut")
+                n_title = len(req.title or "")
+                if n_title > 100:
+                    rep.add("yellow", slug, where, f"title {n_title} chars, YouTube takes 100; it will be cut")
+                elif row["format"] in ("short", "mid") and n_title > SHORT_TITLE_MAX:
+                    rep.add("yellow", slug, where, f"Shorts title {n_title} chars; keep it to {SHORT_TITLE_MAX} "
+                                                   "(search phrase first) so it isn't cut off")
+                elif row["format"] == "long" and n_title > LONG_TITLE_MAX:
+                    rep.add("yellow", slug, where, f"title {n_title} chars; keep it to {LONG_TITLE_MAX}, search "
+                                                   "phrase in the first 40-60")
                 if utf8_len(req.description or "") > 5000:
                     rep.add("yellow", slug, where, "description over 5,000 bytes; it will be trimmed")
                 if re.search(r"[<>]", f"{req.title}{req.description}"):
                     rep.add("yellow", slug, where, "YouTube strips < and > from titles and descriptions")
+    _originality(factory, rep, brands)
     if online and real_urls:
         for url, problem in _online(set(real_urls)).items():
             slug, where = real_urls[url]
             rep.add("red", slug, where, f"{url} {problem}")
     return rep
+
+
+ORIGINALITY_MIN_LONGS, ORIGINALITY_MIN_VIDEOS = 3, 10  # too few videos and the score means nothing
+
+
+def _originality(factory, rep: Report, brands: dict) -> None:
+    from .originality import WEIGHTS, audit, from_db
+    for slug, items in from_db(factory).items():
+        if slug not in brands:
+            continue
+        longs = sum(1 for i in items if i["format"] == "long")
+        if longs < ORIGINALITY_MIN_LONGS and len(items) < ORIGINALITY_MIN_VIDEOS:
+            continue
+        r = audit(items, slug, brands[slug].cta, factory.settings.home)
+        rep.checked.setdefault(slug, {})["originality"] = r.score
+        if r.level == "low":
+            continue
+        worst = max(r.signals, key=lambda s: s.value * WEIGHTS[s.name])
+        rep.add("red" if r.level == "high" else "yellow", slug, "originality (YouTube inauthentic content)",
+                f"channel risk {r.score}/100 {r.level}; biggest: {worst.detail}. "
+                f"First fix: {r.fixes[0] if r.fixes else '-'} (factory audit-originality --brand {slug})")
 
 
 def render_text(rep: Report, days: int) -> str:
@@ -191,10 +236,13 @@ def render_text(rep: Report, days: int) -> str:
         mine = [f for f in rep.findings if f.brand == slug]
         worst = max((LEVELS[f.level] for f in mine), default=0)
         lines.append(f"{slug}: {['green', 'yellow', 'red'][worst]} · {c.get('scheduled', 0)} publication(s) in the "
-                     f"next {days} days · {c.get('brand_links', 0)} link(s) in the brand file")
+                     f"next {days} days · {c.get('brand_links', 0)} link(s) in the brand file"
+                     + (f" · originality risk {c['originality']}/100" if "originality" in c else ""))
         for level in ("red", "yellow"):
             for f in [f for f in mine if f.level == level]:
                 lines.append(f"  [{level}] {f.where}: {f.message}")
+    if rep.reminders:
+        lines += ["", "Reminders (by hand, every post):"] + [f"  - {r}" for r in rep.reminders]
     if rep.status == "green":
         lines += ["", "Everything scheduled is ready to go out."]
     elif rep.status == "yellow":
