@@ -200,7 +200,8 @@ def test_every_dinero_long_video_has_an_original_element():
     brand = load_brand(ROOT / "brands", "dinero-simple")
     longs = 0
     for f in ("content.json", "content-month-1.json", "content-month-2.json", "content-month-3.json", "content-month-4.json",
-              "content-month-5.json", "content-month-6.json", "content-month-7.json", "content-month-8.json"):
+              "content-month-5.json", "content-month-6.json", "content-month-7.json", "content-month-8.json",
+              "content-month-9.json"):
         for it in json.loads((DS / f).read_text()):
             if it["format"] != "long":
                 continue
@@ -212,7 +213,7 @@ def test_every_dinero_long_video_has_an_original_element():
                 if seg.get("chart"):
                     assert any(c.startswith(f"Chart '{seg['chart']['title']}'") for c in s["claims_to_verify"])
             assert "--- ORIGINAL ELEMENT" in caption_text(brand, it)
-    assert longs == 18
+    assert longs == 20
 
 
 def test_month5_plan_is_complete_and_flags_itin_pieces_for_an_attorney():
@@ -327,8 +328,8 @@ def test_month6_plan_is_complete():
     assert len(rows) == 24 and len({(r.split("|")[1], r.split("|")[2]) for r in rows}) == 24
 
 
-@pytest.mark.parametrize("month, tag, itin", [(7, " jun |", 0), (8, " jul |", 6)])
-def test_months_7_and_8_plans_are_complete(month, tag, itin):
+@pytest.mark.parametrize("month, tag, itin", [(7, " jun |", 0), (8, " jul |", 6), (9, " ago |", 3)])
+def test_months_7_to_9_plans_are_complete(month, tag, itin):
     items = json.loads((DS / f"content-month-{month}.json").read_text())
     fmts = [i["format"] for i in items]
     assert fmts.count("short") == 14 and fmts.count("carousel") == 8 and fmts.count("long") == 2
@@ -494,3 +495,20 @@ def test_credit_lead_magnet_matches_its_source_and_is_on_the_site():
     for s in r.SECTIONS:
         if "ITIN" in s["title"] + s["body"]:
             assert f"{s['title']} · **ATTORNEY REVIEW**" in b.review_doc(r)
+
+
+def test_month9_renting_pieces_carry_a_legal_check_and_name_nobody():
+    """Tenant law varies by state and city: every renting piece says so in its caption and carries a LEGAL CHECK
+    claim; first-year pieces that mention the ITIN or immigration send people to a licensed attorney."""
+    items = json.loads((DS / "content-month-9.json").read_text())
+    renting = [i for i in items if "rentar" in i["script"]["hashtags"] or "inquilinos" in i["script"]["hashtags"]]
+    assert len(renting) == 8
+    for i in renting:
+        s = i["script"]
+        assert "no es asesoría legal" in s["caption"] + s["description"] and any("LEGAL CHECK" in c for c in s["claims_to_verify"]), i["key"]
+    for i in items:
+        s = i["script"]
+        text = " ".join([s["caption"]] + [g["narration"] for g in s["segments"]]).lower()
+        if "inmigra" in text:
+            assert "abogado de inmigración con licencia" in text and "notario" in text, i["key"]
+        assert not any(b in text for b in ("venmo", "zelle", "cash app", "paypal", "chime", "wells fargo")), i["key"]

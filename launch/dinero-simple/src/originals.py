@@ -101,6 +101,17 @@ CHARTS = {
         "El enganche": _c("bars", "Enganche para una casa de $250,000", ["3%", "3.5%", "10%", "20%"],
                           [7500, 8750, 25000, 50000], note="Ejemplo; con menos de 20% pagas seguro hipotecario"),
     },
+    "l-primer-ano": {
+        "El presupuesto": _c("bars", "Presupuesto de ejemplo, $3,200 al mes",
+                             ["Renta", "Comida", "Servicios", "Transporte", "Envíos", "Sobra"],
+                             [1400, 800, 250, 200, 200, 350], note="Ejemplo inventado: Rosa y Daniel",
+                             said="mil cuatrocientos"),
+    },
+    "l-rentar": {
+        "Para entrar": _c("bars", "Para entrar a $1,200 al mes", ["Sin el último mes", "Con el último mes"],
+                          [2450, 3650], note="Ejemplo: primer mes, depósito y $50 de solicitud",
+                          said="dos mil cuatrocientos cincuenta"),
+    },
     "l-seguro-de-vida": {
         "El costo": _c("bars", "Al mes por $250,000 de cobertura", ["A plazo (20 años)", "Permanente"], [20, 250],
                        note="Ejemplo ilustrativo; tu precio depende de edad y salud"),
@@ -125,6 +136,8 @@ ORIGINAL = {
     "l-tanda": "Graba la pantalla de una hoja de cálculo sencilla con la lista de la tanda (nombres de ejemplo, montos, fechas y turnos) y una foto de la lista en un chat de grupo",
     "l-primera-casa": "Graba la pantalla de la Estimación del préstamo de ejemplo de la CFPB (la versión en español) marcando la tasa, el APR y los gastos de cierre",
     "l-tu-sueldo-completo": "Graba la pantalla de una libreta de horas en el celular (una nota con fechas, entrada, comida y salida) junto a un talón de pago de ejemplo con la línea de 'overtime' marcada",
+    "l-primer-ano": "Graba la pantalla del buscador de cooperativas de MyCreditUnion.gov y de la página de seguro de depósitos de la FDIC en español (sin poner datos)",
+    "l-rentar": "Graba la pantalla de un video de ejemplo recorriendo un departamento vacío cuarto por cuarto, y la nota con la lista de daños con fecha que se manda al administrador",
     "l-seguro-de-vida": "Graba la pantalla del buscador de licencias de agentes de seguros de la página del departamento de seguros de un estado (sin datos personales)",
 }
 
