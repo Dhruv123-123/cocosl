@@ -11,7 +11,7 @@ The credit union gets it **7 days earlier**.
 | **Day −21** | Pick the topic for the issue 3 weeks out. | You |
 | **Day −14** | Write the issue in `issues.json`. | You (AI-assisted draft) |
 | **Day −10** | Fact-check against the list in `COMPLIANCE_NOTE.md` §3. | You |
-| **Day −8** | Build every client's pack: `python3 build.py --brand clients/<slug>.json --issue <id>`. | You |
+| **Day −8** | Build every client's pack: `python3 build.py credit-union-alert --brand credit-union-alert/clients/<slug>.json --issue <id>` (from `launch/b2b/`). | You |
 | **Day −7 (Tuesday)** | Email each client their pack (the delivery email is below). | You |
 | Day −7 to −4 | Client's compliance review. | Client |
 | **Day −4 (Friday)** | Edit deadline. Apply edits, rebuild, resend within 1 business day. | You |
@@ -63,13 +63,13 @@ of `issues.json` to today's date.
 ## 4. Build (day −8)
 
 ```bash
-cd launch/scam-decoded/credit-union-alert
-python3 build.py                                          # rebuilds the sample + placeholder master
-python3 build.py --brand clients/<slug>.json --issue <id> # one client, one issue
+cd launch/b2b
+python3 build.py credit-union-alert                       # rebuilds the sample + placeholder master
+python3 build.py credit-union-alert --brand credit-union-alert/clients/<slug>.json --issue <id>
 ```
 
-Each build writes `out/<slug>/week-N-<id>/` (email.html, email.txt, social.png + social.txt,
-lobby.png, poster.pdf, staff-brief.txt, sources.md) and `out/<slug>.zip`. It **fails** if any
+Each build writes `credit-union-alert/out/<slug>/week-N-<id>/` (email.html, email.txt, social.png + social.txt,
+lobby.png, poster.pdf, brief.txt, sources.md) and `out/<slug>.zip`. It **fails** if any
 `{{TOKEN}}` is left unfilled. PNG and PDF need Node with Playwright (`render.mjs`); without them you
 get the HTML only.
 
@@ -77,7 +77,7 @@ Open `email.html` in a browser and look at `social.png` and `lobby.png` for ever
 send. Check the logo, the color and the phone number.
 
 Tier contents: Essentials clients get `email.*`, `social.*`, `lobby.png` and `sources.md`. Standard
-and Plus also get `poster.pdf` and `staff-brief.txt`. Set `"tier": "essentials"` in the client's brand
+and Plus also get `poster.pdf` and `brief.txt`. Set `"tier": "essentials"` in the client's brand
 file and the build leaves the extras out.
 
 ## 5. Deliver (day −7)

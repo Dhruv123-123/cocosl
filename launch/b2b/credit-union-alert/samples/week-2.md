@@ -1,8 +1,8 @@
 # Week 2: Task job scams and the fake check that comes with them
 
-- Member send date: **2027-01-12** · delivered to the credit union by **2027-01-05** (7-day review window)
+- Send date: **2027-01-12** · delivered to the client by **2027-01-05**
 - Built from: Scam Decoded newsletter #8 (new-year job scams)
-- Brand slots: `{{CU_NAME}}`, `{{CU_SHORT}}`, `{{CU_PHONE}}`, `{{CU_NEVER_ASK}}`, `{{CU_ADDRESS}}`, `{{CU_INSURANCE_STATEMENT}}`, `{{UNSUBSCRIBE_LINK}}`, plus logo and brand colour
+- Brand slots: `{{CU_NAME}}`, `{{CU_SHORT}}`, `{{CU_PHONE}}`, `{{CU_NEVER_ASK}}`, `{{CU_ADDRESS}}`, `{{CU_INSURANCE_STATEMENT}}`, `{{UNSUBSCRIBE_LINK}}`, plus logo and brand colors
 
 ## Email version
 
@@ -38,9 +38,9 @@ Another version mails you a check to buy equipment from their "vendor". The mone
 
 Forward this to the person in your life who's job hunting right now.
 
-> Not sure about a call, text or email? Call us at {{CU_PHONE}} or the number on the back of your card.
+> Not sure about a call, text or email? Call us at **{{CU_PHONE}}** or the number on the back of your card.
 
-*Footer:* {{CU_NEVER_ASK}} This alert is general information to help you spot scams. It isn't legal, tax or financial advice. Sources (below). {{CU_ADDRESS}} · {{CU_INSURANCE_STATEMENT}} · {{UNSUBSCRIBE_LINK}}
+*Footer:* This alert is general information to help you spot scams. It isn't legal, tax or financial advice. Sources (below), plus the client's footer lines.
 
 ## Lobby screen and poster
 
@@ -49,8 +49,7 @@ Forward this to the person in your life who's job hunting right now.
 - No deposits to unlock earnings.
 - A check to send money on will bounce.
 - Ask us before you spend a check from a stranger.
-- Footer: Not sure? Call us at {{CU_PHONE}} or the number on your card.
-- Poster adds the three "What to do" steps and the disclaimer.
+- Footer: Not sure? Call us at **{{CU_PHONE}}** or the number on your card.
 
 ## Social post (Facebook, Instagram, LinkedIn, Nextdoor)
 
@@ -58,7 +57,7 @@ Forward this to the person in your life who's job hunting right now.
 
 **Image alt text:** Scam alert from {{CU_SHORT}}: a real job never asks you to pay to get paid. No deposits to unlock earnings. A check to send money on will bounce. Ask us before you spend a check from a stranger.
 
-## Staff huddle brief (Standard and Plus)
+## Staff huddle brief
 
 - **Members may ask:** "When will this check clear? My new job sent it for equipment."
 - **What to say:** "Funds showing as available doesn't mean the check is good. Can you tell me about the job? A check you're asked to send part of somewhere else is a common scam."

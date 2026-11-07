@@ -1,0 +1,23 @@
+{
+  "_about": "Renders the master pack with every brand slot visible as a token, for HR and benefits review.",
+  "slug": "placeholders",
+  "name": "{{EMPLOYER_NAME}}",
+  "initials": "LOGO",
+  "logo": "",
+  "color": "#3B4A5A",
+  "accent": "#E0A526",
+  "tier": "growth",
+  "tokens": {
+    "EMPLOYER_NAME": "{{EMPLOYER_NAME}}",
+    "EMPLOYER_SHORT": "{{EMPLOYER_SHORT}}",
+    "BENEFITS_CONTACT": "{{BENEFITS_CONTACT}}",
+    "BENEFITS_PORTAL": "{{BENEFITS_PORTAL}}",
+    "RETIREMENT_PLAN": "{{RETIREMENT_PLAN}}",
+    "MATCH_LINE": "{{MATCH_LINE}}",
+    "EAP_LINE": "{{EAP_LINE}}"
+  },
+  "promise": "{{HR_NOTE}}",
+  "footer_lines": ["{{SENDER_LINE}}"],
+  "unsubscribe": "",
+  "credit_line": ""
+}

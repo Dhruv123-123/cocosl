@@ -11,9 +11,10 @@ Nothing was bought.
 
 | File | What it is |
 |---|---|
+| `product.json` | Labels, call-to-action line and formats for this product. |
 | `issues.json` | The 4 sample issues (Jan 5, 12, 19, 26 2027 member send dates), rewritten for credit unions from Scam Decoded newsletter research (#22, #8, #9, #11/#13). One source of truth for every format. |
 | `samples/week-1.md` … `week-4.md` | Readable master copy of each issue with every brand slot shown as a token: email, lobby, poster, social post, staff brief and sources. |
-| `build.py` (+ `render.mjs`) | Builds a branded pack per credit union: email HTML + text, 1080×1080 social image + caption + alt text, 1920×1080 lobby slide, letter poster PDF, staff brief, sources. Fails on any unfilled token. |
+| `../build.py` (+ `../render.mjs`, shared by all B2B products) | Builds a branded pack per credit union: email HTML + text, 1080×1080 social image + caption + alt text, 1920×1080 lobby slide, letter poster PDF, staff brief, sources. Fails on any unfilled token. |
 | `brands/example.json` | A **fictional** credit union ("Sample Community Credit Union", 555 phone, example.org) used for the sample pack. |
 | `brands/placeholders.json` | Renders the pack with `{{TOKENS}}` visible, for compliance teams. |
 | `sales-sheet.html` | One-page sales sheet with pricing tiers (`build.py` renders it to `out/sales-sheet.pdf`, plus `out/COMPLIANCE_NOTE.pdf` via pandoc). |
@@ -23,14 +24,14 @@ Nothing was bought.
 | `DELIVERY_WORKFLOW.md` | How each weekly issue is picked, written, checked, built, delivered and corrected; client onboarding. |
 
 `out/` and `clients/` are gitignored. Rendered copies live in project files at
-`content-factory/scam-decoded/credit-union-alert/`.
+`content-factory/b2b/credit-union-alert/`.
 
 ## Build
 
 ```bash
-cd launch/scam-decoded/credit-union-alert
-python3 build.py                                   # sample pack + placeholder pack + samples/*.md
-python3 build.py --brand clients/<slug>.json       # a real client
+cd launch/b2b
+python3 build.py credit-union-alert                # sample pack + placeholder pack + samples/*.md + PDFs
+python3 build.py credit-union-alert --brand credit-union-alert/clients/<slug>.json   # a real client
 ```
 
 Python standard library only; images need Node with Playwright (already in the cloud sessions).
@@ -38,7 +39,7 @@ Python standard library only; images need Node with Playwright (already in the c
 ## Dhruv's next steps
 
 1. Fill `{{YOUR_NAME}}`, `{{YOUR_EMAIL}}`, `{{YOUR_PHONE}}` in `sales-sheet.html` and run
-   `python3 build.py` (it also writes `out/sales-sheet.pdf` and `out/COMPLIANCE_NOTE.pdf`).
+   `python3 build.py credit-union-alert` from `launch/b2b/` (it also writes `out/sales-sheet.pdf` and `out/COMPLIANCE_NOTE.pdf`).
 2. Fill `website` and `contact_route` for the first 8 rows of `PROSPECTS.csv` (about 3 minutes each).
 3. Send email 1 from `COLD_EMAILS.md` to 5 to 8 a day. Attach nothing to the first email.
 4. When someone says yes: send `out/sample-community-cu.zip`, `out/sales-sheet.pdf` and the compliance

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Scam Watch for Libraries and Senior Centers</title>
+<!-- One-page sales sheet. Fill the 3 {{YOUR_...}} tokens, then run python3 build.py (writes out/sales-sheet.pdf)
+     (or open in a browser and Print > Save as PDF, Letter, no margins, background graphics on). -->
+<style>
+@page{size:8.5in 11in;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;color:#17202a;background:#fff}
+.page{width:8.5in;height:10.98in;overflow:hidden;padding:.45in .5in .4in;display:flex;flex-direction:column}
+.top{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:4px solid #E0A526;padding-bottom:10px}
+.brand{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6B3FA0}
+h1{font-size:30px;line-height:1.1;margin-top:4px}
+.sub{font-size:14px;color:#41505e;margin-top:6px;max-width:5.2in;line-height:1.4}
+.tag{background:#6B3FA0;color:#fff;font-size:12px;font-weight:700;padding:8px 10px;border-radius:6px;text-align:center;line-height:1.35}
+.cols{display:flex;gap:22px;margin-top:14px}
+.col{flex:1}
+h2{font-size:15px;color:#6B3FA0;margin:12px 0 6px;text-transform:uppercase;letter-spacing:.04em}
+p,li{font-size:12.5px;line-height:1.45}
+ul,ol{padding-left:17px}
+li{margin-bottom:4px}
+table{width:100%;border-collapse:collapse;margin-top:6px}
+th,td{font-size:12px;padding:7px 6px;text-align:left;vertical-align:top;border-bottom:1px solid #dfe4e9}
+th{background:#f1f4f7;font-size:12px}
+.price{font-size:20px;font-weight:800;color:#6B3FA0}
+.pilot{margin-top:12px;background:#fff6dc;border-left:5px solid #E0A526;padding:10px 12px;font-size:13px;line-height:1.45}
+.foot{margin-top:auto;display:flex;justify-content:space-between;font-size:11.5px;color:#41505e;border-top:1px solid #dfe4e9;padding-top:8px}
+.check li{list-style:none;position:relative;padding-left:2px}
+.check li:before{content:"✓";position:absolute;left:-15px;color:#6B3FA0;font-weight:700}
+</style></head><body><div class="page">
+<div class="top">
+  <div><div class="brand">Scam Decoded · for libraries and senior centers</div>
+  <h1>Scam Watch: a monthly large-print scam alert</h1>
+  <p class="sub">One scam a month, explained simply for older adults: a large-print handout, a bulletin board flyer, a screen slide and a 10-minute talk guide for whoever leads your group. Your name and your help line on every page.</p></div>
+  <div class="tag">Free to copy<br>for your patrons</div>
+</div>
+<div class="cols">
+<div class="col">
+  <h2>Why now</h2>
+  <p>Imposter scams were the most-reported fraud in the US in 2025, with more than $3.5 billion lost (FTC, March 2026). Older adults often hear about them first from the library or the senior center.</p>
+  <h2>Each month you get</h2>
+  <ul class="check"><li><b>Large-print handout</b> (18 pt), front and back</li><li><b>Bulletin board flyer</b> (letter size)</li><li><b>Screen slide</b> and a Facebook post</li><li><b>10-minute talk guide</b> for a group leader or volunteer</li><li><b>Newsletter blurb</b> for your email or print newsletter</li></ul>
+  <h2>How it works</h2>
+  <ol><li>Send your logo, colors and the help line you want printed, once.</li><li>We deliver each month's pack 3 weeks early.</li><li>Print it, post it, or run the 10-minute talk at your next group.</li></ol>
+</div>
+<div class="col">
+  <h2>Plans</h2>
+  <table>
+    <tr><th>Plan</th><th>Best for</th><th>Per month</th></tr>
+    <tr><td><b>Single site</b><br>Everything, one library or center</td><td>One location</td><td class="price">$19</td></tr><tr><td><b>System</b><br>Everything, for up to 10 branches or every center in an Area Agency on Aging region</td><td>Library systems, AAAs</td><td class="price">$59</td></tr><tr><td><b>Add a talk</b><br>A 45-minute in-person or online scam-awareness talk</td><td>Any plan</td><td class="price">$150 each</td></tr>
+  </table>
+  <p style="margin-top:6px">Pay yearly and get 2 months free; we can work with purchase orders. Annual plans include the Scam Decoded for Seniors group print license (large-print booklet, fridge checklist and wallet cards) at no extra cost.</p>
+  <div class="pilot"><b>Founding pilot:</b> the first 3 organizations get <b>2 months free</b>. No contract for the pilot.</div>
+  <h2>Built for review</h2>
+  <ul class="check"><li>No patron data, ads, products or affiliate links</li><li>Every claim checked against FTC, DOJ, Social Security and Medicare sources</li><li>Real help numbers only, like the free Elder Fraud Hotline (1-833-372-8311)</li><li>Large print, plain words, high contrast</li></ul>
+</div>
+</div>
+<h2>What it looks like (sample, fictional organization)</h2>
+<div style="display:flex;gap:14px;align-items:flex-start;margin-top:4px">
+  <img src="out/sample-county-library/month-1-2027-01/lobby.png" style="width:2.84in;height:1.6in;border:1px solid #dfe4e9">
+  <img src="out/sample-county-library/month-3-2027-03/social.png" style="width:1.24in;height:1.6in;border:1px solid #dfe4e9;object-fit:cover;object-position:top">
+  <p style="font-size:11.5px;color:#41505e;flex:1">January's screen slide and March's post from the free sample pack.</p>
+</div>
+<div class="foot" style="margin-top:12px">
+  <div><b>{{YOUR_NAME}}</b> · {{YOUR_EMAIL}} · {{YOUR_PHONE}}</div>
+  <div>Ask for the free 4-month sample pack.</div>
+</div>
+</div></body></html>

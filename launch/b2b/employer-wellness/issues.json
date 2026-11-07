@@ -1,0 +1,194 @@
+{
+  "_about": "Master content for Money Made Simple at Work, the monthly employee financial-wellness newsletter. Built from Money Made Simple (MMS) evergreen posts and 1099 Money tax content, rewritten for employees. Education only: no fund or product recommendations, no affiliate links, no brand links. Tokens like {{BENEFITS_CONTACT}} are filled per employer from its brand file.",
+  "reviewed": "2026-11-07",
+  "issues": [
+    {
+      "id": "2027-01",
+      "n": 1,
+      "send_date": "2027-01-05",
+      "deliver_by": "2026-12-22",
+      "source": "MMS evergreen: '5 automations that run your money', 'Emergency fund: how much, where, when', 'The 4 layers of a financial safety net'",
+      "topic": "A 20-minute money reset for the new year",
+      "subject": "Your 20-minute money reset for 2027",
+      "preheader": "Three checks that pay off all year, starting with your paycheck.",
+      "headline": "A 20-minute money reset for the new year",
+      "explain": [
+        "New year, new plan year. Before January gets busy, take 20 minutes for three checks. None of them need a budget app or a spreadsheet, and each one keeps working for you all year.",
+        "The idea is simple: decide once, then let automatic transfers do the work. Money you never see in your checking account is money you don't have to resist spending."
+      ],
+      "tell": "Decide once, automate it, and stop relying on willpower.",
+      "steps": [
+        "**Check your {{RETIREMENT_PLAN}} contribution** in {{BENEFITS_PORTAL}}. {{MATCH_LINE}} If you're putting in less than the match, you're leaving part of your pay on the table.",
+        "**Set up one automatic transfer** to savings on payday, even $25. Name the account \"Emergency fund\". A common first goal is $1,000, then one month of essential bills.",
+        "**Pull your free credit reports** at [AnnualCreditReport.com](https://www.annualcreditreport.com), typed in yourself. They're free every week, and checking your own credit never lowers your score."
+      ],
+      "quick_hits": [
+        "**Your benefits elections took effect January 1.** Look at your first paycheck of the year and make sure the deductions match what you picked.",
+        "**Free trials:** when you sign up for one, set a reminder to cancel the same day."
+      ],
+      "job": "Open your first 2027 pay stub and find three numbers: take-home pay, your {{RETIREMENT_PLAN}} contribution, and your health plan deduction. If any look wrong, contact {{BENEFITS_CONTACT}} this week.",
+      "promise": false,
+      "lobby": {
+        "kicker": "Money Made Simple",
+        "headline": "Your 20-minute money reset.",
+        "bullets": ["Check your retirement contribution.", "Automate $25 a payday to savings.", "Pull your free credit reports."]
+      },
+      "social": {
+        "caption": "New year, 20-minute money reset: 1) Check your {{RETIREMENT_PLAN}} contribution in {{BENEFITS_PORTAL}}. 2) Set up an automatic transfer to savings on payday, even $25. 3) Pull your free credit reports at AnnualCreditReport.com. Questions about your benefits? Contact {{BENEFITS_CONTACT}}.",
+        "alt": "Money Made Simple at Work: your 20-minute money reset. Check your retirement contribution. Automate $25 a payday to savings. Pull your free credit reports."
+      },
+      "brief": {
+        "Say in your team huddle": "\"The January newsletter has a 20-minute money reset. The big one: check your retirement contribution against the match.\"",
+        "If someone asks for advice": "\"I can't tell you what to do with your money, but {{BENEFITS_CONTACT}} can explain how our plan works.\"",
+        "Don't": "Recommend specific funds, accounts or amounts, or ask anyone what they earn or save."
+      },
+      "sources": [
+        {"name": "FTC: Free credit reports (weekly, from AnnualCreditReport.com)", "url": "https://consumer.ftc.gov/articles/free-credit-reports"},
+        {"name": "FTC: You now have permanent access to free weekly credit reports (Oct 2023)", "url": "https://consumer.ftc.gov/consumer-alerts/2023/10/you-now-have-permanent-access-free-weekly-credit-reports"},
+        {"name": "US Department of Labor: Top 10 Ways to Prepare for Retirement", "url": "https://www.dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/publications/dol-top-10-ways-to-prepare-for-retirement-booklet-2023.pdf"},
+        {"name": "CFPB: How do I get a free copy of my credit reports?", "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-get-a-free-copy-of-my-credit-reports-en-5/"}
+      ]
+    },
+    {
+      "id": "2027-02",
+      "n": 2,
+      "send_date": "2027-02-02",
+      "deliver_by": "2027-01-19",
+      "source": "1099 Money tax-season pack (side income, set-aside rule, estimated taxes) and Scam Decoded IRS-text research",
+      "topic": "Tax season: your W-2, your withholding and side income",
+      "subject": "Your W-2 is here. Three tax checks worth 15 minutes",
+      "preheader": "Check your withholding, plan for side income, and skip the IRS text scam.",
+      "headline": "Tax season, minus the surprises",
+      "explain": [
+        "Your W-2 should arrive by the end of January. Before you file, three quick checks can save you from a surprise bill next year, or a refund that's much smaller than you expected.",
+        "Tax rules changed for 2025 and 2026, so last year's habits may not fit this year. The IRS updated its free withholding estimator to include the changes."
+      ],
+      "tell": "Your withholding is a choice you can change any time, and side income needs its own tax plan.",
+      "steps": [
+        "**Run the IRS [Tax Withholding Estimator](https://www.irs.gov/individuals/tax-withholding-estimator)** once you've filed or have your W-2. If it says to change your W-4, update it in {{BENEFITS_PORTAL}}.",
+        "**Earn money on the side** (rideshare, freelancing, reselling)? No tax is taken out of that money. A common rule of thumb is to set aside 25 to 30% of what you earn on the side, and the IRS may expect [estimated tax payments](https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes) during the year.",
+        "**File for free if you can.** Check the IRS's free filing options at IRS.gov before you pay for software."
+      ],
+      "quick_hits": [
+        "**The IRS doesn't text or email you out of the blue** about refunds or your account. Delete those messages and type IRS.gov yourself.",
+        "**Payroll will never ask** you to confirm your direct deposit details through a link in an email. If you get one, report it to {{BENEFITS_CONTACT}}."
+      ],
+      "job": "Find your W-2 (paper or in {{BENEFITS_PORTAL}}) and put it in one folder with any 1099 forms. Everything in one place is half the work of filing.",
+      "promise": true,
+      "lobby": {
+        "kicker": "Tax season",
+        "headline": "Tax season, minus the surprises.",
+        "bullets": ["Run the IRS withholding estimator.", "Side income? Set some aside.", "The IRS isn't texting you."]
+      },
+      "social": {
+        "caption": "Tax season checklist: run the free IRS Tax Withholding Estimator, update your W-4 in {{BENEFITS_PORTAL}} if it says to, and if you earn money on the side, set some aside for taxes. One more thing: the IRS doesn't text you about refunds. Questions? Contact {{BENEFITS_CONTACT}}.",
+        "alt": "Money Made Simple at Work: tax season, minus the surprises. Run the IRS withholding estimator. Side income? Set some aside. The IRS isn't texting you."
+      },
+      "brief": {
+        "Say in your team huddle": "\"W-2s are out. The newsletter has the IRS withholding check, and a reminder that payroll never asks for bank details by email.\"",
+        "If someone asks a tax question": "\"I'm not a tax adviser. The IRS estimator is free, and a tax professional can help with your situation.\"",
+        "Escalate": "Any email asking an employee to change direct deposit through a link: forward it to IT and {{BENEFITS_CONTACT}} the same day."
+      },
+      "sources": [
+        {"name": "IRS: Tax Withholding Estimator", "url": "https://www.irs.gov/individuals/tax-withholding-estimator"},
+        {"name": "IRS: Updated Tax Withholding Estimator reflects recent law changes", "url": "https://www.irs.gov/newsroom/updated-tax-withholding-estimator-lets-millions-of-taxpayers-take-one-big-beautiful-bill-changes-into-account-when-calculating-their-withholding"},
+        {"name": "IRS: Estimated taxes", "url": "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes"},
+        {"name": "IRS: Report fake IRS, Treasury or tax-related emails and messages", "url": "https://www.irs.gov/help/report-fraud/report-fake-irs-treasury-or-tax-related-emails-and-messages"}
+      ]
+    },
+    {
+      "id": "2027-03",
+      "n": 3,
+      "send_date": "2027-03-02",
+      "deliver_by": "2027-02-16",
+      "source": "MMS evergreen quick facts #01, #02, #08, #11, #18, #23 and carousels #29, #31 (credit scores)",
+      "topic": "What actually moves your credit score",
+      "subject": "5 credit score myths, and what actually moves it",
+      "preheader": "Checking your score doesn't hurt it. Here's what does.",
+      "headline": "What actually moves your credit score",
+      "explain": [
+        "Your credit score affects more than loans. It can change what you pay for car insurance, whether you need a deposit for utilities, and what a landlord thinks of your application.",
+        "A lot of what people believe about credit scores is wrong. Checking your own score doesn't lower it. Your income isn't part of it. And a high balance hurts only while it's high."
+      ],
+      "tell": "Pay on time, keep card balances low compared with your limits, and check your reports for mistakes.",
+      "steps": [
+        "**Set up autopay for at least the minimum** on every card and loan. Late payments are the single biggest drag on a score, and they can stay on your report for years.",
+        "**Pay the statement balance in full** if you can. You'll pay $0 interest on purchases, and lower balances help your score.",
+        "**Check your free credit reports** at [AnnualCreditReport.com](https://www.annualcreditreport.com) and dispute anything that isn't yours with the credit bureau."
+      ],
+      "quick_hits": [
+        "**Your report and your score aren't the same thing.** The report is the record; the score is a number calculated from it.",
+        "**A credit freeze is free** at each of the three bureaus. It stops new accounts being opened in your name, and you can lift it when you need credit."
+      ],
+      "job": "Turn on autopay for the minimum payment on every card you have. It takes about 2 minutes a card.",
+      "promise": false,
+      "lobby": {
+        "kicker": "Money Made Simple",
+        "headline": "Checking your score never lowers it.",
+        "bullets": ["Autopay at least the minimum.", "Keep card balances low.", "Freezing your credit is free."]
+      },
+      "social": {
+        "caption": "Credit score myth: checking your own score lowers it. It doesn't. What actually moves it: paying on time (set up autopay for at least the minimum), keeping card balances low compared with your limits, and fixing mistakes on your free reports at AnnualCreditReport.com.",
+        "alt": "Money Made Simple at Work: checking your score never lowers it. Autopay at least the minimum. Keep card balances low. Freezing your credit is free."
+      },
+      "brief": {
+        "Say in your team huddle": "\"This month's newsletter busts five credit score myths. The quickest win is autopay for the minimum on every card.\"",
+        "If someone is struggling with debt": "Privately point them to {{BENEFITS_CONTACT}}, and to the Employee Assistance Program if you have one.",
+        "Don't": "Ask about anyone's credit, or recommend a lender, card or credit repair company."
+      },
+      "sources": [
+        {"name": "FTC: Credit scores", "url": "https://consumer.ftc.gov/articles/credit-scores"},
+        {"name": "FTC: Understanding your credit", "url": "https://consumer.ftc.gov/articles/understanding-your-credit"},
+        {"name": "FTC: Free credit reports", "url": "https://consumer.ftc.gov/articles/free-credit-reports"},
+        {"name": "CFPB: Consumer reporting companies", "url": "https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/consumer-reporting-companies/"}
+      ]
+    },
+    {
+      "id": "2027-04",
+      "n": 4,
+      "send_date": "2027-04-06",
+      "deliver_by": "2027-03-23",
+      "source": "MMS evergreen: 'The Rule of 72', 'Direct rollovers avoid tax on old 401(k)s', 'Turn on dividend reinvestment', carousel #43 (April is Financial Literacy Month)",
+      "topic": "Your retirement plan in 10 minutes",
+      "subject": "Financial Literacy Month: your {{RETIREMENT_PLAN}} in 10 minutes",
+      "preheader": "The Rule of 72, the fee that's easy to miss, and what not to do when you change jobs.",
+      "headline": "Your {{RETIREMENT_PLAN}} in 10 minutes",
+      "explain": [
+        "April is Financial Literacy Month, so here's the shortest useful guide to your retirement plan. You don't need to pick investments today. You just need to know three things.",
+        "**The Rule of 72:** divide 72 by a yearly growth rate to see roughly how many years it takes money to double. At 6%, about 12 years. At 8%, about 9. That's why starting early matters more than starting big."
+      ],
+      "tell": "Time does most of the work. Start, keep going, and don't cash out early.",
+      "steps": [
+        "**Log in to {{BENEFITS_PORTAL}}** and check three things: what you contribute, what the match is, and how your money is invested. {{MATCH_LINE}}",
+        "**Look at the fees.** Your plan sends a fee disclosure each year. Small percentages add up over decades, so it's worth a look.",
+        "**Changing jobs one day?** Ask for a direct rollover into your new plan or an IRA instead of cashing out. Cashing out early usually means taxes and, often, a penalty."
+      ],
+      "quick_hits": [
+        "**Add 1% when you get a raise.** You won't miss money you never got used to.",
+        "**Try a free calculator:** the SEC's [compound interest calculator](https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator) shows what steady saving can grow to."
+      ],
+      "job": "Find your plan's beneficiary page in {{BENEFITS_PORTAL}} and check that the right person is named. It's the most-skipped step in retirement planning.",
+      "promise": false,
+      "lobby": {
+        "kicker": "Financial Literacy Month",
+        "headline": "Your retirement plan in 10 minutes.",
+        "bullets": ["Check your contribution and match.", "Look at the fees.", "Changing jobs? Roll it over, don't cash out."]
+      },
+      "social": {
+        "caption": "April is Financial Literacy Month. Spend 10 minutes on your {{RETIREMENT_PLAN}}: check your contribution and the match, look at the fees, and make sure your beneficiary is up to date. Changing jobs one day? Roll it over instead of cashing out. Log in at {{BENEFITS_PORTAL}}.",
+        "alt": "Money Made Simple at Work: your retirement plan in 10 minutes. Check your contribution and match. Look at the fees. Changing jobs? Roll it over, don't cash out."
+      },
+      "brief": {
+        "Say in your team huddle": "\"April is Financial Literacy Month. The newsletter's 10-minute job is checking your beneficiary in the benefits portal.\"",
+        "If someone asks which fund to pick": "\"I can't advise on investments. {{BENEFITS_CONTACT}} can explain the plan's options and any advice service it offers.\"",
+        "Don't": "Suggest funds, allocations or contribution amounts. That's investment advice, and it isn't ours to give."
+      },
+      "sources": [
+        {"name": "US Department of Labor: A Look at 401(k) Plan Fees", "url": "https://www.dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/publications/401k-plan-fees.pdf"},
+        {"name": "US Department of Labor: Top 10 Ways to Prepare for Retirement", "url": "https://www.dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/publications/dol-top-10-ways-to-prepare-for-retirement-booklet-2023.pdf"},
+        {"name": "IRS: Rollovers of retirement plan and IRA distributions", "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/rollovers-of-retirement-plan-and-ira-distributions"},
+        {"name": "SEC Investor.gov: Compound interest calculator", "url": "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"}
+      ]
+    }
+  ]
+}

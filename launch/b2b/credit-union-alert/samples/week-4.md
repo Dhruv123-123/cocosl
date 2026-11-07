@@ -1,8 +1,8 @@
 # Week 4: Fake IRS texts and refund scams at the start of tax season
 
-- Member send date: **2027-01-26** · delivered to the credit union by **2027-01-19** (7-day review window)
+- Send date: **2027-01-26** · delivered to the client by **2027-01-19**
 - Built from: Scam Decoded newsletter #11 and #13 (IRS season texts, refund send-backs)
-- Brand slots: `{{CU_NAME}}`, `{{CU_SHORT}}`, `{{CU_PHONE}}`, `{{CU_NEVER_ASK}}`, `{{CU_ADDRESS}}`, `{{CU_INSURANCE_STATEMENT}}`, `{{UNSUBSCRIBE_LINK}}`, plus logo and brand colour
+- Brand slots: `{{CU_NAME}}`, `{{CU_SHORT}}`, `{{CU_PHONE}}`, `{{CU_NEVER_ASK}}`, `{{CU_ADDRESS}}`, `{{CU_INSURANCE_STATEMENT}}`, `{{UNSUBSCRIBE_LINK}}`, plus logo and brand colors
 
 ## Email version
 
@@ -36,9 +36,9 @@ The link opens a copy of a real sign-in page. It takes your login, then asks for
 
 Get a free IRS Identity Protection PIN. It stops anyone else filing a return with your Social Security number. Start at [IRS.gov's Identity Theft Central](https://www.irs.gov/identity-theft-central) and make sure the address is irs.gov.
 
-> Not sure about a call, text or email? Call us at {{CU_PHONE}} or the number on the back of your card.
+> Not sure about a call, text or email? Call us at **{{CU_PHONE}}** or the number on the back of your card.
 
-*Footer:* {{CU_NEVER_ASK}} This alert is general information to help you spot scams. It isn't legal, tax or financial advice. Sources (below). {{CU_ADDRESS}} · {{CU_INSURANCE_STATEMENT}} · {{UNSUBSCRIBE_LINK}}
+*Footer:* This alert is general information to help you spot scams. It isn't legal, tax or financial advice. Sources (below), plus the client's footer lines.
 
 ## Lobby screen and poster
 
@@ -47,8 +47,7 @@ Get a free IRS Identity Protection PIN. It stops anyone else filing a return wit
 - Don't tap tax links in texts.
 - Type IRS.gov yourself.
 - Unexpected refund and a send-it-back call? Ask us first.
-- Footer: Not sure? Call us at {{CU_PHONE}} or the number on your card.
-- Poster adds the three "What to do" steps and the disclaimer.
+- Footer: Not sure? Call us at **{{CU_PHONE}}** or the number on your card.
 
 ## Social post (Facebook, Instagram, LinkedIn, Nextdoor)
 
@@ -56,7 +55,7 @@ Get a free IRS Identity Protection PIN. It stops anyone else filing a return wit
 
 **Image alt text:** Tax season scam alert from {{CU_SHORT}}: the IRS isn't texting you. Don't tap tax links in texts. Type IRS.gov yourself. Unexpected refund and a send-it-back call? Ask us first.
 
-## Staff huddle brief (Standard and Plus)
+## Staff huddle brief
 
 - **Members may ask:** "The IRS deposited a refund by mistake and says I have to send it back by gift card or wire."
 - **What to say:** "The IRS won't ask you to send a refund back that way. Let's not send anything yet and look at where this deposit came from."

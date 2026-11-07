@@ -145,7 +145,7 @@ news, such as a merger, a new branch, a fraud warning they posted), `{Your name}
 Attach: `sample-community-cu.zip`, `sales-sheet.pdf`, `COMPLIANCE_NOTE.pdf` (print the markdown to PDF).
 
 **"Send me the branded version."** Make `clients/<slug>.json` (see `DELIVERY_WORKFLOW.md`), run
-`python3 build.py --brand clients/<slug>.json`, and send the zip. Ask them to confirm the "never ask"
+`python3 build.py credit-union-alert --brand credit-union-alert/clients/<slug>.json` (from `launch/b2b/`), and send the zip. Ask them to confirm the "never ask"
 line is accurate for them.
 
 **"What does it cost?"**

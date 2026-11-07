@@ -1,8 +1,8 @@
 # Week 1: Fake fraud department calls that ask for a code
 
-- Member send date: **2027-01-05** · delivered to the credit union by **2026-12-29** (7-day review window)
+- Send date: **2027-01-05** · delivered to the client by **2026-12-29**
 - Built from: Scam Decoded newsletter #22 (breach follow-ups) and the fraud-call research behind it
-- Brand slots: `{{CU_NAME}}`, `{{CU_SHORT}}`, `{{CU_PHONE}}`, `{{CU_NEVER_ASK}}`, `{{CU_ADDRESS}}`, `{{CU_INSURANCE_STATEMENT}}`, `{{UNSUBSCRIBE_LINK}}`, plus logo and brand colour
+- Brand slots: `{{CU_NAME}}`, `{{CU_SHORT}}`, `{{CU_PHONE}}`, `{{CU_NEVER_ASK}}`, `{{CU_ADDRESS}}`, `{{CU_INSURANCE_STATEMENT}}`, `{{UNSUBSCRIBE_LINK}}`, plus logo and brand colors
 
 ## Email version
 
@@ -40,9 +40,9 @@ That code isn't for blocking anything. It's the code that lets someone sign in t
 
 Save {{CU_PHONE}} in your phone as "{{CU_SHORT}} (real number)", and tell one family member the rule: we never ask you to read back a code.
 
-> Not sure about a call, text or email? Call us at {{CU_PHONE}} or the number on the back of your card.
+> Not sure about a call, text or email? Call us at **{{CU_PHONE}}** or the number on the back of your card.
 
-*Footer:* {{CU_NEVER_ASK}} This alert is general information to help you spot scams. It isn't legal, tax or financial advice. Sources (below). {{CU_ADDRESS}} · {{CU_INSURANCE_STATEMENT}} · {{UNSUBSCRIBE_LINK}}
+*Footer:* This alert is general information to help you spot scams. It isn't legal, tax or financial advice. Sources (below), plus the client's footer lines.
 
 ## Lobby screen and poster
 
@@ -51,8 +51,7 @@ Save {{CU_PHONE}} in your phone as "{{CU_SHORT}} (real number)", and tell one fa
 - Caller ID can be faked.
 - Hang up. Call the number on your card.
 - No real "safe account" exists.
-- Footer: Not sure? Call us at {{CU_PHONE}} or the number on your card.
-- Poster adds the three "What to do" steps and the disclaimer.
+- Footer: Not sure? Call us at **{{CU_PHONE}}** or the number on your card.
 
 ## Social post (Facebook, Instagram, LinkedIn, Nextdoor)
 
@@ -60,7 +59,7 @@ Save {{CU_PHONE}} in your phone as "{{CU_SHORT}} (real number)", and tell one fa
 
 **Image alt text:** Scam alert from {{CU_SHORT}}: we will never ask you to read back a code. Caller ID can be faked. Hang up and call the number on your card. There is no real safe account.
 
-## Staff huddle brief (Standard and Plus)
+## Staff huddle brief
 
 - **Members may ask:** "Did you just call me about a charge?"
 - **What to say:** "We never ask members to read back a code or move money to a safe account. Let's look at your account together right now."

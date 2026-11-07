@@ -1,0 +1,205 @@
+{
+  "_about": "Master content for Scam Watch, the monthly large-print pack for libraries, senior centers and Area Agencies on Aging. Built from the Scam Decoded for Seniors pack (/seniors/, seniors_content.py) and its official-numbers list (checked Nov 2026). Short sentences, no jargon, no links members must tap. No products, affiliates or Scam Decoded links. Everything in example messages is made up.",
+  "reviewed": "2026-11-07",
+  "issues": [
+    {
+      "id": "2027-01",
+      "n": 1,
+      "send_date": "2027-01-04",
+      "deliver_by": "2026-12-14",
+      "source": "Scam Decoded for Seniors: 'The grandchild in trouble' call, golden rules 1-2, hang-up lines",
+      "topic": "The grandchild in trouble call (and AI voices)",
+      "subject": "Scam Watch: the grandchild in trouble call",
+      "preheader": "The voice may sound just like them. One family word stops it.",
+      "headline": "\"Grandma, it's me. I'm in trouble.\"",
+      "example_label": "What it sounds like (made-up example)",
+      "example": "\"Grandma, it's me. I was in a car accident and I'm at the police station. Please don't tell Mom. A lawyer is going to call you about bail.\"",
+      "explain": [
+        "The caller sounds upset and in a hurry. Then a \"lawyer\" or \"officer\" asks for money for bail or fees, often in cash, gift cards or a wire. Sometimes they send a courier to pick up cash at your door.",
+        "Scammers can now copy a voice from a short video online. So even if it sounds exactly like your grandchild, it may not be them."
+      ],
+      "tell": "Hurry + secret + an unusual way to pay = a scam. Real family emergencies can wait 5 minutes while you call back.",
+      "steps": [
+        "**Hang up.** Call your grandchild, or their parent, on the number you already have.",
+        "**Never pay** with gift cards, a wire transfer, cryptocurrency, or cash handed to a courier. Only scammers ask for these.",
+        "**Already paid?** Call your bank right away, then call the Elder Fraud Hotline at 1-833-372-8311."
+      ],
+      "quick_hits": [
+        "**Pick a family safe word** that only your family knows. If a caller can't say it, hang up.",
+        "**\"Don't tell Mom\"** is the scammer's way to stop you checking. Always tell someone."
+      ],
+      "job": "Choose a family safe word this month and tell it to your children and grandchildren. Write it somewhere private, not on your phone's lock screen.",
+      "promise": false,
+      "lobby": {
+        "kicker": "Scam Watch",
+        "headline": "\"Grandma, I'm in trouble\"? Hang up and call back.",
+        "bullets": ["Voices can be faked.", "Call them on the number you have.", "Never pay with gift cards or cash."]
+      },
+      "social": {
+        "caption": "Scam Watch: a caller sounds just like your grandchild, says they're in trouble and asks you not to tell anyone. Hang up and call your grandchild on the number you already have. Voices can be copied with AI. Never pay with gift cards, wires or cash by courier. Questions? {{HELP_LINE_SHORT}}.",
+        "alt": "Scam Watch: Grandma, I'm in trouble? Hang up and call back. Voices can be faked. Call them on the number you have. Never pay with gift cards or cash."
+      },
+      "brief": {
+        "Open with": "\"Has anyone here had a call from someone saying they were family and needed money?\" Let 2 or 3 people share.",
+        "Teach": "Read the made-up example out loud. Ask: what were the warning signs? (Hurry, secret, unusual payment.)",
+        "Practise": "Have pairs practise the hang-up line: \"I'm going to call you back on the number I have.\"",
+        "Close with": "Hand out the large-print sheet and ask everyone to pick a family safe word this week."
+      },
+      "sources": [
+        {"name": "FTC: Scammers use AI to enhance their family emergency schemes", "url": "https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes"},
+        {"name": "FTC: Family emergency scams", "url": "https://consumer.ftc.gov/all-scams/family-emergency-scams"},
+        {"name": "FTC: Scammers use fake emergencies to steal your money", "url": "https://consumer.ftc.gov/articles/scammers-use-fake-emergencies-steal-your-money"},
+        {"name": "US Department of Justice: National Elder Fraud Hotline", "url": "https://ovc.ojp.gov/program/elder-fraud-abuse/national-elder-fraud-hotline"}
+      ]
+    },
+    {
+      "id": "2027-02",
+      "n": 2,
+      "send_date": "2027-02-01",
+      "deliver_by": "2027-01-11",
+      "source": "Scam Decoded for Seniors: 'Online' section (romance warning signs) and newsletter #12 (Valentine's)",
+      "topic": "Romance scams around Valentine's Day",
+      "subject": "Scam Watch: when an online sweetheart needs money",
+      "preheader": "Three signs of a romance scam, and what to do if it's happening to someone you know.",
+      "headline": "When an online sweetheart needs money",
+      "example_label": "What it sounds like (made-up example)",
+      "example": "\"I've never felt this way about anyone, my darling. I want to come and see you, but my bank account is frozen while I'm working overseas. Could you help with the plane ticket? I'll pay you back the day I land.\"",
+      "explain": [
+        "Romance scammers spend weeks or months building trust, often on Facebook, dating sites or games. They say they're working far away: on an oil rig, in the military, or as a doctor overseas.",
+        "Then there's a problem only money can fix: a ticket, a medical bill, customs fees, or an investment that's \"sure\" to pay off."
+      ],
+      "tell": "Someone you've only met online who soon says they love you, can never meet or video chat, and then needs money.",
+      "steps": [
+        "**Never send money or gift cards** to someone you haven't met in person.",
+        "**Talk to someone you trust** before you send anything. Scammers try to keep you to themselves.",
+        "**Report the profile** to the site or app, and report the scam at ReportFraud.ftc.gov or by calling 1-877-382-4357."
+      ],
+      "quick_hits": [
+        "**Search their photo.** A family member or librarian can help you check whether the pictures belong to someone else.",
+        "**It's not your fault.** These are professional criminals. Feeling embarrassed is normal, and telling someone is how it stops."
+      ],
+      "job": "If you know someone who is lonely or newly widowed, call them this week. Scammers look for people no one else is talking to.",
+      "promise": false,
+      "lobby": {
+        "kicker": "Scam Watch",
+        "headline": "Met online and needs money? It's a scam.",
+        "bullets": ["Says \"I love you\" fast.", "Can never meet or video chat.", "Then needs money."]
+      },
+      "social": {
+        "caption": "Scam Watch for Valentine's Day: if someone you've only met online says they love you, can never meet or video chat, and then needs money, it's a scam. Never send money or gift cards to someone you haven't met in person. Talk to someone you trust first. Questions? {{HELP_LINE_SHORT}}.",
+        "alt": "Scam Watch: met online and needs money? It's a scam. Says I love you fast. Can never meet or video chat. Then needs money."
+      },
+      "brief": {
+        "Open with": "\"Valentine's Day is this month. Today we'll talk about a scam that targets kind, caring people.\"",
+        "Teach": "Read the made-up message. Ask the group to spot the 3 warning signs.",
+        "Discuss": "\"What would you say to a friend who told you about a new online sweetheart who needs money?\" Stress kindness, not blame.",
+        "Close with": "Hand out the sheet. Remind everyone that the Elder Fraud Hotline (1-833-372-8311) is free."
+      },
+      "sources": [
+        {"name": "FTC: Romance scams", "url": "https://consumer.ftc.gov/romance-scams"},
+        {"name": "FTC: Romance scammers love... to take your money (Feb 2024)", "url": "https://consumer.ftc.gov/consumer-alerts/2024/02/romance-scammers-love-take-your-money"},
+        {"name": "FTC: How to avoid imposter scams", "url": "https://consumer.ftc.gov/features/how-avoid-imposter-scams"},
+        {"name": "US Department of Justice: National Elder Fraud Hotline", "url": "https://ovc.ojp.gov/program/elder-fraud-abuse/national-elder-fraud-hotline"}
+      ]
+    },
+    {
+      "id": "2027-03",
+      "n": 3,
+      "send_date": "2027-03-01",
+      "deliver_by": "2027-02-08",
+      "source": "Scam Decoded for Seniors: 'The government' call, official numbers list; newsletter #15 (government imposters)",
+      "topic": "Fake Social Security and Medicare calls",
+      "subject": "Scam Watch: Social Security won't threaten you",
+      "preheader": "Government agencies don't call to threaten you or demand payment.",
+      "headline": "\"Your Social Security number has been suspended.\"",
+      "example_label": "What it sounds like (made-up example)",
+      "example": "\"This is an officer with the Social Security Administration. Your number was used in a crime and has been suspended. Press 1 now, or a warrant will be issued for your arrest.\"",
+      "explain": [
+        "Scammers pretend to be from Social Security, Medicare or the IRS. They say your number is suspended, your benefits will stop, or you'll be arrested. Then they ask you to confirm your number, or to pay a \"fine\".",
+        "A Medicare version offers a \"new card\", free medical supplies or a free test, and asks for your Medicare number."
+      ],
+      "tell": "Real government agencies don't call to threaten you, and never ask you to pay with gift cards, wires, crypto or cash.",
+      "steps": [
+        "**Hang up.** Don't press any buttons.",
+        "**Call the agency yourself** on its real number: Social Security 1-800-772-1213, Medicare 1-800-633-4227 (1-800-MEDICARE).",
+        "**Guard your Medicare number** like a credit card. Only give it to your own doctor, pharmacy or insurer."
+      ],
+      "quick_hits": [
+        "**Caller ID can lie.** It can show \"Social Security\" or a real government number. That means nothing.",
+        "**Letters too:** a real letter won't ask you to pay with gift cards. If you're not sure, call the agency's number above."
+      ],
+      "job": "Write the real Social Security and Medicare numbers on a card by your phone. When a call says it's from them, use your card, not the number they give you.",
+      "promise": false,
+      "lobby": {
+        "kicker": "Scam Watch",
+        "headline": "Social Security won't threaten you.",
+        "bullets": ["Hang up. Don't press buttons.", "Call 1-800-772-1213 yourself.", "Guard your Medicare number."]
+      },
+      "social": {
+        "caption": "Scam Watch: a caller says your Social Security number is suspended or you'll be arrested. It's a scam. Real government agencies don't call to threaten you or ask for gift cards. Hang up and call Social Security yourself at 1-800-772-1213. Questions? {{HELP_LINE_SHORT}}.",
+        "alt": "Scam Watch: Social Security won't threaten you. Hang up and don't press buttons. Call 1-800-772-1213 yourself. Guard your Medicare number."
+      },
+      "brief": {
+        "Open with": "\"Raise your hand if you've had a call that said it was from Social Security or Medicare.\" (Most hands go up.)",
+        "Teach": "Read the made-up example. Point out the threat, the hurry and the button to press.",
+        "Practise": "Everyone writes the two real numbers on a card or on the back of their sheet.",
+        "Close with": "\"When in doubt, hang up and call the number you wrote down.\""
+      },
+      "sources": [
+        {"name": "Social Security Administration: How to avoid a scam (handout)", "url": "https://www.ssa.gov/fraud/assets/materials/EN-05-10597.pdf"},
+        {"name": "FTC: Scammers impersonate the Social Security Administration (Apr 2025)", "url": "https://consumer.ftc.gov/consumer-alerts/2025/04/scammers-impersonate-social-security-administration"},
+        {"name": "FTC: How to avoid imposter scams", "url": "https://consumer.ftc.gov/features/how-avoid-imposter-scams"},
+        {"name": "US Department of Justice: National Elder Fraud Hotline", "url": "https://ovc.ojp.gov/program/elder-fraud-abuse/national-elder-fraud-hotline"}
+      ]
+    },
+    {
+      "id": "2027-04",
+      "n": 4,
+      "send_date": "2027-04-05",
+      "deliver_by": "2027-03-15",
+      "source": "Scam Decoded for Seniors: 'Computer support' call, golden rules, if-it-happens steps",
+      "topic": "Computer \"virus\" pop-ups and tech support calls",
+      "subject": "Scam Watch: the pop-up that says call this number",
+      "preheader": "A loud warning on your screen is not from Microsoft or Apple.",
+      "headline": "The pop-up that says \"Call this number\"",
+      "example_label": "What it looks like (made-up example)",
+      "example": "A loud alarm, and a red box: \"WARNING! Your computer has been infected. Do not turn it off. Call Microsoft Support now at 1-8XX-XXX-XXXX.\"",
+      "explain": [
+        "The \"support agent\" asks to connect to your computer to fix it. Once they're in, they may show you fake problems, charge you for a repair, or say they refunded you too much and need you to send money back.",
+        "Some versions start with a phone call instead: \"This is Microsoft. Your computer is sending us errors.\""
+      ],
+      "tell": "Microsoft and Apple don't put phone numbers in pop-up warnings, and they don't call you. Never let a caller on to your computer.",
+      "steps": [
+        "**Don't call the number.** Close the browser. If it won't close, turn the computer off and back on.",
+        "**Never let anyone connect** to your computer unless you contacted them first, using a number you looked up yourself.",
+        "**Already let them in or paid?** Turn off the computer, call your bank, change your passwords from a different device, and report it at ReportFraud.ftc.gov."
+      ],
+      "quick_hits": [
+        "**\"We refunded you too much\"** is part of the same scam. Real companies don't ask you to send back money by gift card or wire.",
+        "**Free help is close:** many libraries offer help with computers and phones. Ask before you call any number on your screen."
+      ],
+      "job": "Ask a family member or library staff to show you how to close a stuck web page on your own computer or tablet, so you know what to do if it happens.",
+      "promise": false,
+      "lobby": {
+        "kicker": "Scam Watch",
+        "headline": "A pop-up says call this number? Don't.",
+        "bullets": ["Close it or restart.", "Microsoft and Apple don't call you.", "Never let a caller on your computer."]
+      },
+      "social": {
+        "caption": "Scam Watch: a loud pop-up says your computer is infected and to call \"Microsoft Support\". Don't call. Close the page, or turn the computer off and on. Real tech companies don't put phone numbers in warnings or call you. Never let a caller on to your computer. Questions? {{HELP_LINE_SHORT}}.",
+        "alt": "Scam Watch: a pop-up says call this number? Don't. Close it or restart. Microsoft and Apple don't call you. Never let a caller on your computer."
+      },
+      "brief": {
+        "Open with": "\"Has your computer ever suddenly shown a scary warning with a phone number?\"",
+        "Show": "If you have a screen, show the flyer. Explain that the warning is just a web page, not a real virus check.",
+        "Practise": "Show how to close a browser tab and how to restart a computer.",
+        "Close with": "\"If you ever see one, come and ask us before you call anyone.\""
+      },
+      "sources": [
+        {"name": "FTC: Warn your friends about tech support scams", "url": "https://consumer.ftc.gov/consumer-alerts/2018/07/warn-your-friends-about-tech-support-scams"},
+        {"name": "FTC: How to avoid imposter scams", "url": "https://consumer.ftc.gov/features/how-avoid-imposter-scams"},
+        {"name": "US Department of Justice: National Elder Fraud Hotline", "url": "https://ovc.ojp.gov/program/elder-fraud-abuse/national-elder-fraud-hotline"}
+      ]
+    }
+  ]
+}

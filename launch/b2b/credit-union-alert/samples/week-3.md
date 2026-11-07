@@ -1,8 +1,8 @@
 # Week 3: Wrong-number texts that turn into crypto "investments"
 
-- Member send date: **2027-01-19** · delivered to the credit union by **2027-01-12** (7-day review window)
+- Send date: **2027-01-19** · delivered to the client by **2027-01-12**
 - Built from: Scam Decoded newsletter #9 (wrong-number texts that turn into crypto investing)
-- Brand slots: `{{CU_NAME}}`, `{{CU_SHORT}}`, `{{CU_PHONE}}`, `{{CU_NEVER_ASK}}`, `{{CU_ADDRESS}}`, `{{CU_INSURANCE_STATEMENT}}`, `{{UNSUBSCRIBE_LINK}}`, plus logo and brand colour
+- Brand slots: `{{CU_NAME}}`, `{{CU_SHORT}}`, `{{CU_PHONE}}`, `{{CU_NEVER_ASK}}`, `{{CU_ADDRESS}}`, `{{CU_INSURANCE_STATEMENT}}`, `{{UNSUBSCRIBE_LINK}}`, plus logo and brand colors
 
 ## Email version
 
@@ -38,9 +38,9 @@ The site shows your balance growing. When you try to take money out, there's a "
 
 Don't reply to any wrong-number texts this week. Delete and block. It's the cheapest scam protection there is.
 
-> Not sure about a call, text or email? Call us at {{CU_PHONE}} or the number on the back of your card.
+> Not sure about a call, text or email? Call us at **{{CU_PHONE}}** or the number on the back of your card.
 
-*Footer:* {{CU_NEVER_ASK}} This alert is general information to help you spot scams. It isn't legal, tax or financial advice. Sources (below). {{CU_ADDRESS}} · {{CU_INSURANCE_STATEMENT}} · {{UNSUBSCRIBE_LINK}}
+*Footer:* This alert is general information to help you spot scams. It isn't legal, tax or financial advice. Sources (below), plus the client's footer lines.
 
 ## Lobby screen and poster
 
@@ -49,8 +49,7 @@ Don't reply to any wrong-number texts this week. Delete and block. It's the chea
 - Don't reply to wrong-number texts.
 - A fee to withdraw means there's no money.
 - Talk to us before you buy crypto or wire money.
-- Footer: Not sure? Call us at {{CU_PHONE}} or the number on your card.
-- Poster adds the three "What to do" steps and the disclaimer.
+- Footer: Not sure? Call us at **{{CU_PHONE}}** or the number on your card.
 
 ## Social post (Facebook, Instagram, LinkedIn, Nextdoor)
 
@@ -58,7 +57,7 @@ Don't reply to any wrong-number texts this week. Delete and block. It's the chea
 
 **Image alt text:** Scam alert from {{CU_SHORT}}: met online? Don't invest with them. Don't reply to wrong-number texts. A fee to withdraw means there's no money. Talk to us before you buy crypto or wire money.
 
-## Staff huddle brief (Standard and Plus)
+## Staff huddle brief
 
 - **Members may ask:** "I need to send a wire to my trading account. It's urgent, there's a fee to release my profits."
 - **What to say:** "Can I ask how you found this platform? Fees to release profits are a common sign of an investment scam. Let's take a minute before we send anything."

@@ -2,14 +2,18 @@
   "_about": "FICTIONAL demo credit union for the sample pack. 555-01xx numbers and example.org are reserved for fiction. Copy this file to clients/<slug>.json for a real client.",
   "slug": "sample-community-cu",
   "name": "Sample Community Credit Union",
-  "short": "Sample Community CU",
-  "phone": "(555) 010-0142",
-  "website": "https://www.example.org",
-  "logo": "",
   "initials": "SC",
+  "logo": "",
   "color": "#1F5C8B",
   "accent": "#F2B134",
-  "never_ask": "Sample Community CU will never call, text or email you to ask for your password, PIN or a one-time code, or ask you to move money to keep it safe.",
+  "tier": "standard",
+  "tokens": {
+    "CU_NAME": "Sample Community Credit Union",
+    "CU_SHORT": "Sample Community CU",
+    "CU_PHONE": "(555) 010-0142",
+    "CU_WEBSITE": "https://www.example.org"
+  },
+  "promise": "Sample Community CU will never call, text or email you to ask for your password, PIN or a one-time code, or ask you to move money to keep it safe.",
   "footer_lines": [
     "Sample Community Credit Union · 100 Main Street · Anytown, MT 59000",
     "Federally insured by NCUA."
