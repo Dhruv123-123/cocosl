@@ -7,7 +7,7 @@ Effort is for Claude to build; "your part" is what only Dhruv can do (accounts, 
 | # | Idea | Brand | How it earns | Effort | Your part |
 |---|---|---|---|---|---|
 | 1 | ✅ Built: **"Is this text a scam?" landing pages** for each big scam (USPS, E-ZPass/toll, IRS, Amazon, Geek Squad, Zelle, job texts, wrong-number) feeding the checker | Scam Shield | Search traffic → same affiliates and list as the checker | 1 day | None |
-| 2 | ✅ Scam checker built (calculators next): **Spanish versions** of the calculators and scam checker | Dinero Simple | Same as English; far less competition in Spanish search | 1–2 days | Native-speaker review |
+| 2 | ✅ Built: **Spanish versions** of the calculators and scam checker | Dinero Simple | Same as English; far less competition in Spanish search | 1–2 days | Native-speaker review |
 | 3 | ✅ Built: **Subscription finder**: upload a bank CSV, see every recurring charge and the yearly total | Money Made Simple | Free tool → Budget Pro upsell and email list; reuses the budget app's CSV import | 1 day | None |
 | 4 | **Spreadsheet templates on Etsy and Gumroad** (budget, debt snowball, sinking funds, wedding, baby) in Google Sheets and Excel | Money Made Simple | $7–19 each; Etsy brings its own buyers | 2 days for 6 | Etsy shop ($0.20/listing) |
 | 5 | **1099 quarterly tax estimator** with a reminders/Pro tier | 1099 Money | FreshBooks / Gusto / QuickBooks affiliates (high payouts) + $5/month Pro | 2–3 days | Tax figures reviewed each year |

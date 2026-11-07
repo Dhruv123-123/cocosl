@@ -1,0 +1,81 @@
+// Spanish page copy (Dinero Simple audience). Same slugs as pages.mjs under /es/.
+export const pagesEs = [
+  {
+    slug: 'debt-payoff',
+    title: 'Calculadora para pagar deudas: avalancha vs bola de nieve',
+    h1: 'Calculadora para pagar deudas: avalancha vs bola de nieve',
+    tile: 'Pagar deudas',
+    description: 'Anote sus deudas y vea cuándo quedará libre de deudas, cuánto pagará de intereses y cuánto ahorra el método avalancha frente a la bola de nieve.',
+    intro: 'Anote lo que debe. Calculamos los dos órdenes de pago mes a mes y le mostramos su fecha sin deudas y cuánto cuesta cada uno en intereses.',
+    faq: [
+      ['¿Qué es el método avalancha?', 'Paga el mínimo en todo y pone cada dólar extra en la deuda con la tasa (APR) más alta. Cuando la liquida, pasa ese pago a la siguiente. Es el que menos intereses cuesta.'],
+      ['¿Qué es el método bola de nieve?', 'La misma idea, pero empieza por el saldo más chico. Paga un poco más de intereses, pero liquida deudas completas antes, y eso motiva a mucha gente.'],
+      ['¿Cuál me conviene?', 'El que va a mantener. Si la avalancha ahorra poco, la bola de nieve está bien. Si ahorra cientos de dólares, suele valer la pena.'],
+    ],
+  },
+  {
+    slug: 'compound-interest',
+    title: 'Calculadora de interés compuesto con aportes mensuales',
+    h1: 'Calculadora de interés compuesto',
+    tile: 'Interés compuesto',
+    description: 'Vea cómo podría crecer un monto inicial más un aporte mensual con el tiempo, y qué parte del total es crecimiento y no dinero que usted puso.',
+    intro: 'Elija un monto inicial, un aporte mensual y un rendimiento anual. La gráfica muestra cómo el crecimiento supera lo que usted aporta.',
+    faq: [
+      ['¿Qué rendimiento debo usar?', 'Los fondos indexados amplios de acciones de EE. UU. han promediado cerca de 7% al año después de inflación en periodos largos, con altibajos fuertes. Use un número más bajo para ser prudente. El pasado no garantiza el futuro.'],
+      ['¿Por qué importa tanto empezar temprano?', 'El crecimiento genera más crecimiento. El dinero invertido a los veintitantos tiene décadas más para crecer que el que se agrega después.'],
+      ['¿Incluye comisiones o impuestos?', 'No. Reste el costo anual (expense ratio) de su fondo al rendimiento, y use cuentas con ventajas fiscales como un 401(k) o una IRA.'],
+    ],
+  },
+  {
+    slug: 'emergency-fund',
+    title: 'Calculadora de fondo de emergencia: cuánto y en cuánto tiempo',
+    h1: 'Calculadora de fondo de emergencia',
+    tile: 'Fondo de emergencia',
+    description: 'Calcule de cuánto debe ser su fondo de emergencia y cuántos meses le tomará juntarlo, con los intereses de una cuenta de ahorro de alto rendimiento.',
+    intro: 'Sume los gastos que no puede dejar de pagar (renta, comida, transporte, seguros, pagos mínimos), elija cuántos meses cubrir y vea su plazo.',
+    faq: [
+      ['¿Cuántos meses debo ahorrar?', 'Tres meses de gastos esenciales es una meta común; seis si sus ingresos son irregulares o mantiene a otras personas. Empiece con un fondo inicial de $1,000.'],
+      ['¿Dónde lo guardo?', 'En una cuenta de ahorro separada, asegurada por la FDIC o la NCUA, a la que pueda acceder en uno o dos días, pero no con su tarjeta de gastos.'],
+      ['¿Primero pago deudas?', 'Mucha gente junta primero un fondo inicial para no poner un gasto inesperado en la tarjeta, luego ataca las deudas con intereses altos y después completa el fondo.'],
+    ],
+  },
+  {
+    slug: 'savings-interest',
+    title: 'Calculadora de ahorro de alto rendimiento: ¿cuánto interés ganaré?',
+    h1: 'Calculadora de intereses de una cuenta de ahorro de alto rendimiento',
+    tile: 'Intereses de ahorro',
+    description: 'Compare los intereses de una cuenta de ahorro de alto rendimiento con una cuenta típica de un banco grande, según su saldo y sus depósitos.',
+    intro: 'La mayoría de las cuentas de ahorro de bancos grandes pagan casi nada. Ponga su saldo y vea cuánto sumaría un APY más alto.',
+    faq: [
+      ['¿Qué es el APY?', 'El rendimiento porcentual anual: lo que gana en un año contando el interés compuesto. Un APY de 4% sobre $10,000 da unos $400 en un año si la tasa no cambia.'],
+      ['¿Son seguras estas cuentas?', 'Las de bancos asegurados por la FDIC o cooperativas aseguradas por la NCUA están protegidas hasta $250,000 por depositante, por banco y por tipo de cuenta. Revise el seguro antes de abrirla.'],
+      ['¿Cambian las tasas?', 'Sí. Las tasas de ahorro son variables y suelen moverse con la tasa de la Reserva Federal. Revíselas cada pocos meses.'],
+    ],
+  },
+  {
+    slug: 'credit-card-minimum',
+    title: 'Calculadora de pago mínimo de tarjeta de crédito',
+    h1: 'Calculadora de pago mínimo de tarjeta de crédito',
+    tile: 'Pago mínimo de tarjeta',
+    description: 'Vea cuánto tarda y cuánto cuesta en intereses pagar solo el mínimo de una tarjeta de crédito, comparado con un pago fijo mensual.',
+    intro: 'El pago mínimo baja a medida que baja el saldo, y eso alarga la deuda por años. Vea el costo real.',
+    faq: [
+      ['¿Cómo se calcula el pago mínimo?', 'Muchas veces es el interés del mes más el 1% del saldo, con un mínimo como $25 o $35. Su contrato de tarjeta tiene la fórmula exacta.'],
+      ['¿Por qué ayuda tanto un pago fijo?', 'Un monto fijo no baja cuando baja el saldo, así que cada mes más dinero va al capital.'],
+      ['¿Y una transferencia de saldo?', 'Una transferencia al 0% ayuda si la comisión es baja y liquida el saldo antes de que termine la promoción. No vuelva a usar la tarjeta vieja.'],
+    ],
+  },
+  {
+    slug: 'roth-vs-traditional',
+    title: 'Calculadora Roth vs Tradicional (IRA y 401(k))',
+    h1: 'Calculadora Roth vs Tradicional',
+    tile: 'Roth vs Tradicional',
+    description: 'Compare el valor después de impuestos de aportar a una cuenta Roth o Tradicional según su tasa de impuestos hoy y la que espera al jubilarse.',
+    intro: 'Los mismos dólares antes de impuestos, dos tratamientos fiscales. Todo se reduce a una pregunta: ¿su tasa de impuestos es más alta hoy o después?',
+    faq: [
+      ['¿Cuándo gana la Roth?', 'Cuando su tasa de impuestos al jubilarse será más alta que hoy, algo común en estudiantes y personas que empiezan su carrera.'],
+      ['¿Cuándo gana la Tradicional?', 'Cuando hoy está en una tasa alta y espera una más baja al jubilarse. Recibe el beneficio fiscal desde el principio.'],
+      ['¿Puedo hacer las dos?', 'Sí. Dividir los aportes es una forma razonable de cubrirse si no sabe cómo serán sus impuestos. Revise los límites de ingreso y aporte del IRS para el año.'],
+    ],
+  },
+];

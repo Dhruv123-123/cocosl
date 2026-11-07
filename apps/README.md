@@ -10,6 +10,7 @@ HTML, CSS and JavaScript, no framework, no build step needed) and deploy free.
 | **Is this a scam?** message checker | Scam Shield | Identity protection, password manager and VPN affiliates, weekly scam-alert list, $9 Family Scam Safety Kit | `scam-checker/` |
 | **The 20-Minute Budget** web app | Money Made Simple | Freemium: Pro at $3/month or $29 once via Gumroad or Stripe | `budget/` |
 | **Subscription finder** (upload a bank CSV, see every recurring charge and its yearly cost) | Money Made Simple | Free tool → budget app and Pro upsell, email list | `budget/subscriptions.html` |
+| **Calculadoras en español**: all 6 calculators in Spanish with hreflang links | Money Made Simple / Dinero Simple | Spanish search traffic, Spanish email list | `money-calculators/es/` |
 | **¿Es una estafa?** Spanish checker (Dinero Simple audience): Spanish scam patterns and fully translated results | Scam Shield | Same offers, Spanish scam-alert list | `scam-checker/es/` |
 | **Scam guides**: 12 search pages (USPS, toll, IRS, Amazon...) feeding the checker | Scam Shield | Search traffic → checker, list, affiliates | `scam-checker/scams/` |
 
@@ -72,6 +73,7 @@ Nothing here takes a payment by itself, and nothing goes live until you paste in
   message there must score high risk in the checker, so adding a guide also tests the checker.
 - The Spanish checker's wording (`scam-checker/es/`, `scam-checker/lib/i18n.js`) needs a native speaker's
   read before you promote it, same as the Dinero Simple content. A test fails if any rule lacks Spanish text.
-- Calculator pages are generated from `money-calculators/pages.mjs` by `build.mjs`; edit the copy there.
+- Calculator pages are generated from `money-calculators/pages.mjs` and `pages-es.mjs` (all on-page result
+  wording is in `money-calculators/lib/text.js`) by `build.mjs`; edit the copy there.
 
 See `IDEAS.md` for what to build next.

@@ -2,134 +2,72 @@
 // keeps inputs in the URL so results can be shared, and shows the right offer.
 import config from './config.js';
 import * as calc from './lib/calc.js';
-import { money, duration, isLiveUrl, escapeHtml } from './lib/format.js';
+import { money, isLiveUrl, escapeHtml } from './lib/format.js';
+import { TEXT } from './lib/text.js';
 
 const $ = (sel, root = document) => root.querySelector(sel);
+
+const lang = document.documentElement.lang.startsWith('es') ? 'es' : 'en';
+const T = TEXT[lang];
+const F = T.fields;
 
 const CALCS = {
   'compound-interest': {
     cta: 'brokerage',
-    fields: [
-      ['initial', 'Starting amount ($)', 1000],
-      ['monthly', 'Added each month ($)', 200],
-      ['annualRate', 'Yearly return (%)', 7, 0.1],
-      ['years', 'Years', 30],
-    ],
+    fields: [['initial', F.initial, 1000], ['monthly', F.monthly, 200], ['annualRate', F.annualRate, 7, 0.1], ['years', F.years, 30]],
     render(v) {
       const r = calc.compoundGrowth(v);
-      return `
-        <p class="big">${money(r.finalBalance)}</p>
-        <p>After ${v.years} years you would have put in <b>${money(r.totalContributed)}</b> and growth would add
-        <b>${money(r.totalGrowth)}</b>. That growth share is ${Math.round((r.totalGrowth / Math.max(r.finalBalance, 1)) * 100)}% of the total.</p>
-        ${lineChart(r.rows)}
-        <p class="note">Assumes a steady ${v.annualRate}% a year, compounded monthly. Real returns go up and down, and are not guaranteed.</p>`;
+      return `${T.growth(v, r)}${lineChart(r.rows)}<p class="note">${T.growthNote(v)}</p>`;
     },
   },
-
   'emergency-fund': {
     cta: 'hysa',
-    fields: [
-      ['monthlyExpenses', 'Essential monthly costs ($)', 2000],
-      ['monthsTarget', 'Months to cover', 3],
-      ['currentSaved', 'Already saved ($)', 500],
-      ['monthlySave', 'You can save each month ($)', 250],
-      ['apy', 'Savings APY (%)', 4, 0.01],
-    ],
+    fields: [['monthlyExpenses', F.monthlyExpenses, 2000], ['monthsTarget', F.monthsTarget, 3], ['currentSaved', F.currentSaved, 500], ['monthlySave', F.monthlySave, 250], ['apy', F.apy, 4, 0.01]],
     render(v) {
       const r = calc.emergencyFund(v);
-      if (r.gap === 0) return `<p class="big">You're there</p><p>Your ${money(r.target)} goal is already covered. Keep it somewhere boring, insured and separate from spending money.</p>`;
-      if (!r.reachable) return `<p class="big">Add a monthly amount</p><p>Your goal is ${money(r.target)}. Even $25 a week gets you moving.</p>`;
-      const starter = r.starterGoal < r.target ? `<p>First milestone: <b>${money(r.starterGoal)}</b>. It covers most surprise bills and is the hardest part.</p>` : '';
-      return `
-        <p class="big">${duration(r.months)}</p>
-        <p>That's how long until you have <b>${money(r.target)}</b> (${v.monthsTarget} months of costs). You need ${money(r.gap)} more.</p>
-        ${starter}`;
+      if (r.gap === 0) return T.efDone(r);
+      if (!r.reachable) return T.efNoSave(r);
+      return T.ef(v, r) + (r.starterGoal < r.target ? T.efStarter(r) : '');
     },
   },
-
   'savings-interest': {
     cta: 'hysa',
-    fields: [
-      ['balance', 'Savings balance ($)', 5000],
-      ['monthlyDeposit', 'Added each month ($)', 100],
-      ['apy', 'High-yield APY (%)', 4, 0.01],
-      ['compareApy', 'Your current APY (%)', 0.01, 0.01],
-      ['months', 'Months', 12],
-    ],
-    render(v) {
-      const r = calc.savingsInterest(v);
-      return `
-        <p class="big">+${money(r.difference, 2)}</p>
-        <p>At ${v.apy}% APY you'd earn <b>${money(r.interest, 2)}</b> in interest over ${duration(v.months)}, versus
-        <b>${money(r.compareInterest, 2)}</b> at ${v.compareApy}%.</p>
-        <p class="note">APYs change. Check the current rate and that the bank is FDIC insured (or the credit union NCUA insured).</p>`;
-    },
+    fields: [['balance', F.balance, 5000], ['monthlyDeposit', F.monthlyDeposit, 100], ['apy', F.hyApy, 4, 0.01], ['compareApy', F.compareApy, 0.01, 0.01], ['months', F.months, 12]],
+    render: (v) => T.savings(v, calc.savingsInterest(v)),
   },
-
   'credit-card-minimum': {
     cta: 'debt',
-    fields: [
-      ['balance', 'Card balance ($)', 5000],
-      ['apr', 'APR (%)', 22.99, 0.01],
-      ['minPercent', 'Minimum: % of balance + interest', 1, 0.1],
-      ['minFloor', 'Minimum payment floor ($)', 25],
-      ['fixedPayment', 'What if you paid each month ($)', 250],
-    ],
+    fields: [['balance', F.cardBalance, 5000], ['apr', F.apr, 22.99, 0.01], ['minPercent', F.minPercent, 1, 0.1], ['minFloor', F.minFloor, 25], ['fixedPayment', F.fixedPayment, 250]],
     render(v) {
       const r = calc.minimumPaymentTrap(v);
-      const m = r.minimumOnly;
       let fixed = '';
-      if (r.fixed) {
-        fixed = Number.isFinite(r.fixed.months)
-          ? `<p>Paying a flat <b>${money(v.fixedPayment)}</b> a month clears it in <b>${duration(r.fixed.months)}</b> with ${money(r.fixed.interest)} interest.
-             You'd keep <b>${money(r.interestSaved)}</b>.</p>`
-          : `<p>${money(v.fixedPayment)} a month doesn't cover the interest, so the balance would never shrink.</p>`;
-      }
-      return `
-        <p class="big">${duration(m.months)}</p>
-        <p>That's how long the minimum payment takes. You'd pay <b>${money(m.interest)}</b> in interest, ${money(m.paid)} in total.</p>
-        ${fixed}
-        <p class="note">Card issuers calculate minimums differently. Your statement's "minimum payment warning" box shows your card's real numbers.</p>`;
+      if (r.fixed) fixed = Number.isFinite(r.fixed.months) ? T.ccFixed(v, r.fixed, r.interestSaved) : T.ccFixedNever(v);
+      return T.cc(r.minimumOnly, fixed);
     },
   },
-
   'roth-vs-traditional': {
     cta: 'brokerage',
-    fields: [
-      ['annualContribution', 'Yearly contribution, before tax ($)', 6000],
-      ['currentRate', 'Your tax bracket now (%)', 22],
-      ['retirementRate', 'Expected tax rate in retirement (%)', 15],
-      ['years', 'Years until you withdraw', 35],
-      ['annualReturn', 'Yearly return (%)', 7, 0.1],
-    ],
-    render(v) {
-      const r = calc.rothVsTraditional(v);
-      const head = r.winner === 'tie' ? "It's a tie" : r.winner === 'roth' ? 'Roth comes out ahead' : 'Traditional comes out ahead';
-      return `
-        <p class="big">${head}</p>
-        <p>After tax: Roth <b>${money(r.roth)}</b>, Traditional <b>${money(r.traditional)}</b>${r.winner === 'tie' ? '' : `, a difference of <b>${money(r.difference)}</b>`}.</p>
-        <p>The one question that decides it: <b>is your tax rate higher now, or later?</b> Higher now favours Traditional. Higher later favours Roth. Unsure? Many people split contributions.</p>
-        <p class="note">Simplified: same pre-tax dollars, flat tax rates, no employer match or income limits. Check IRS contribution and income limits for the current year.</p>`;
-    },
+    fields: [['annualContribution', F.annualContribution, 6000], ['currentRate', F.currentRate, 22], ['retirementRate', F.retirementRate, 15], ['years', F.yearsToWithdraw, 35], ['annualReturn', F.annualReturn, 7, 0.1]],
+    render: (v) => T.roth(calc.rothVsTraditional(v)),
   },
 };
 
 // ---------- debt payoff (dynamic rows) ----------
-const DEFAULT_DEBTS = [
-  { name: 'Credit card', balance: 3200, apr: 24.99, minPayment: 95 },
-  { name: 'Store card', balance: 650, apr: 29.99, minPayment: 30 },
-  { name: 'Car loan', balance: 7800, apr: 6.9, minPayment: 230 },
+const DEFAULT_DEBTS = () => [
+  { name: T.defaultDebts[0], balance: 3200, apr: 24.99, minPayment: 95 },
+  { name: T.defaultDebts[1], balance: 650, apr: 29.99, minPayment: 30 },
+  { name: T.defaultDebts[2], balance: 7800, apr: 6.9, minPayment: 230 },
 ];
 
 function debtRow(d = { name: '', balance: '', apr: '', minPayment: '' }) {
   const row = document.createElement('div');
   row.className = 'debt-row';
   row.innerHTML = `
-    <label>Name<input name="name" value="${escapeHtml(d.name)}" maxlength="40"></label>
-    <label>Balance ($)<input name="balance" type="number" min="0" step="any" value="${d.balance}" required></label>
-    <label>APR (%)<input name="apr" type="number" min="0" max="100" step="any" value="${d.apr}" required></label>
-    <label>Minimum ($)<input name="minPayment" type="number" min="0" step="any" value="${d.minPayment}" required></label>
-    <button type="button" class="link remove" aria-label="Remove this debt">Remove</button>`;
+    <label>${F.debtName}<input name="name" value="${escapeHtml(d.name)}" maxlength="40"></label>
+    <label>${F.debtBalance}<input name="balance" type="number" min="0" step="any" value="${d.balance}" required></label>
+    <label>${F.debtApr}<input name="apr" type="number" min="0" max="100" step="any" value="${d.apr}" required></label>
+    <label>${F.debtMin}<input name="minPayment" type="number" min="0" step="any" value="${d.minPayment}" required></label>
+    <button type="button" class="link remove" aria-label="${F.removeAria}">${F.remove}</button>`;
   row.querySelector('.remove').addEventListener('click', () => { row.remove(); run(); });
   return row;
 }
@@ -148,18 +86,9 @@ function renderDebt(form) {
   const extra = Number(form.extra.value || 0);
   const c = calc.compareDebtStrategies(debts, extra);
   const { avalanche: a, snowball: s } = c;
-  if (!a.feasible) return `<p class="big">Not paid off at this budget</p><p>The payments don't outrun the interest. Raise the extra amount, or look at a lower-rate option.</p>`;
-  const list = (r) => `<ol>${r.paidOff.map((p) => `<li>${escapeHtml(p.name)}: paid off in ${duration(p.month)}</li>`).join('')}</ol>`;
-  const verdict = c.interestSaved > 0
-    ? `Avalanche saves <b>${money(c.interestSaved)}</b> in interest${c.monthsSaved > 0 ? ` and ${duration(c.monthsSaved)}` : ''}. Snowball gives you quicker wins. Pick the one you'll stick with.`
-    : 'Both orders cost about the same here, so go with snowball for the quick wins.';
-  return `
-    <p class="big">Debt-free in ${duration(a.months)}</p>
-    <p>Paying <b>${money(a.budget)}</b> a month in total. ${verdict}</p>
-    <div class="two">
-      <div><h3>Avalanche (highest APR first)</h3><p>${money(a.totalInterest)} interest, ${duration(a.months)}</p>${list(a)}</div>
-      <div><h3>Snowball (smallest balance first)</h3><p>${money(s.totalInterest)} interest, ${duration(s.months)}</p>${list(s)}</div>
-    </div>`;
+  if (!a.feasible) return T.debtInfeasible;
+  const list = (r) => `<ol>${r.paidOff.map((p) => `<li>${T.debtPaidIn(escapeHtml(p.name), p.month)}</li>`).join('')}</ol>`;
+  return T.debt(a, s, T.debtVerdict(c), list(a), list(s));
 }
 
 // ---------- shared UI ----------
@@ -169,22 +98,24 @@ function lineChart(rows) {
   const x = (i) => pad + (i / Math.max(rows.length - 1, 1)) * (w - pad * 2);
   const y = (v) => h - pad - (v / max) * (h - pad * 2);
   const path = (key) => rows.map((r, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(r[key]).toFixed(1)}`).join(' ');
-  return `<svg class="chart" viewBox="0 0 ${w} ${h}" role="img" aria-label="Balance grows from ${money(rows[0].balance)} to ${money(rows.at(-1).balance)}">
+  return `<svg class="chart" viewBox="0 0 ${w} ${h}" role="img" aria-label="${T.chartLabel(money(rows[0].balance), money(rows.at(-1).balance))}">
     <path d="${path('balance')}" class="line-total"/><path d="${path('contributed')}" class="line-in"/></svg>
-    <p class="legend"><span class="key total"></span> Total balance <span class="key in"></span> What you put in</p>`;
+    <p class="legend"><span class="key total"></span> ${T.legendTotal} <span class="key in"></span> ${T.legendIn}</p>`;
 }
 
 function offerHtml(key) {
   const blocks = [];
-  const aff = config.affiliates[key];
+  const affBase = config.affiliates[key];
+  const aff = affBase && lang === 'es' && affBase.es ? { ...affBase, ...affBase.es } : affBase;
   if (aff && isLiveUrl(aff.url)) {
-    blocks.push(`<div class="offer"><h3>Next step</h3><p>${escapeHtml(aff.blurb)}</p>
+    blocks.push(`<div class="offer"><h3>${T.nextStep}</h3><p>${escapeHtml(aff.blurb)}</p>
       <a class="btn" href="${escapeHtml(aff.url)}" rel="sponsored noopener" target="_blank" data-event="affiliate-${key}">${escapeHtml(aff.label)}</a>
-      <p class="tiny">Affiliate link: we may earn a commission at no cost to you.</p></div>`);
+      <p class="tiny">${T.affiliateNote}</p></div>`);
   }
-  if (isLiveUrl(config.product.url)) {
-    blocks.push(`<div class="offer"><h3>${escapeHtml(config.product.name)} (${escapeHtml(config.product.price)})</h3><p>${escapeHtml(config.product.pitch)}</p>
-      <a class="btn alt" href="${escapeHtml(config.product.url)}" data-event="product">Get it</a></div>`);
+  const product = lang === 'es' ? config.product.es : config.product;
+  if (product && isLiveUrl(product.url)) {
+    blocks.push(`<div class="offer"><h3>${escapeHtml(product.name)} (${escapeHtml(product.price)})</h3><p>${escapeHtml(product.pitch)}</p>
+      <a class="btn alt" href="${escapeHtml(product.url)}" data-event="product">${T.getIt}</a></div>`);
   }
   return blocks.join('');
 }
@@ -192,7 +123,7 @@ function offerHtml(key) {
 function setupSignup() {
   const form = $('form.signup');
   if (!form) return;
-  const e = config.email;
+  const e = lang === 'es' ? { ...config.email, ...config.email.es } : config.email;
   $('.signup-pitch', form.parentElement).textContent = e.pitch;
   if (e.provider === 'none') { form.parentElement.hidden = true; return; }
   if (e.provider !== 'netlify') {
@@ -202,17 +133,17 @@ function setupSignup() {
   }
   form.addEventListener('submit', async (ev) => {
     if (form.website.value) { ev.preventDefault(); return; } // honeypot
-    if (e.provider !== 'netlify' && !e.action) { ev.preventDefault(); alert('Email signup is not connected yet: set email.action in config.js.'); return; }
+    if (e.provider !== 'netlify' && !e.action) { ev.preventDefault(); alert(T.notConnected); return; }
     ev.preventDefault();
     const btn = form.querySelector('button');
-    btn.disabled = true; btn.textContent = 'Sending…';
+    btn.disabled = true; btn.textContent = T.sending;
     const body = new URLSearchParams(new FormData(form)).toString();
     try {
       await fetch(e.provider === 'netlify' ? '/' : form.action, {
         method: 'POST', mode: e.provider === 'netlify' ? 'same-origin' : 'no-cors',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body,
       });
-      window.location.href = e.thanksUrl;
+      window.location.href = new URL(e.thanksUrl, new URL(document.body.dataset.root || './', location.href)).href;
     } catch { form.submit(); }
   });
 }
@@ -247,7 +178,7 @@ function mountCalculator(id) {
 
   if (id === 'debt-payoff') {
     const rows = $('#debts');
-    let initial = DEFAULT_DEBTS;
+    let initial = DEFAULT_DEBTS();
     try { if (qs.get('d')) initial = JSON.parse(qs.get('d')); } catch { /* bad share link: use defaults */ }
     initial.slice(0, 15).forEach((d) => rows.append(debtRow(d)));
     if (qs.get('extra')) form.extra.value = qs.get('extra');
@@ -279,8 +210,8 @@ function mountCalculator(id) {
   form.addEventListener('input', run);
   form.addEventListener('submit', (e) => { e.preventDefault(); run(); });
   $('#share')?.addEventListener('click', async () => {
-    try { await navigator.clipboard.writeText(location.href); $('#share').textContent = 'Link copied'; }
-    catch { prompt('Copy this link', location.href); }
+    try { await navigator.clipboard.writeText(location.href); $('#share').textContent = T.copied; }
+    catch { prompt(T.copyPrompt, location.href); }
   });
   run();
 }

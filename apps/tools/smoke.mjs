@@ -27,6 +27,10 @@ const checks = [
   ['/money-calculators/savings-interest/', '#result .big'],
   ['/money-calculators/credit-card-minimum/', '#result .big'],
   ['/money-calculators/roth-vs-traditional/', '#result .big'],
+  ['/money-calculators/es/', '.tiles'],
+  ['/money-calculators/es/debt-payoff/', '#result .big'],
+  ['/money-calculators/es/compound-interest/', '#result .big'],
+  ['/money-calculators/es/credit-card-minimum/', '#result .big'],
   ['/scam-checker/', '#result', async (page) => {
     await page.fill('#message', 'USPS: Your package is on hold due to an unpaid fee of $1.99. Pay now at https://usps-redelivery.top/pay or it will be returned.');
     await page.click('#check');
