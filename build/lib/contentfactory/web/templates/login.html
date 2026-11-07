@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Log in{% endblock %}
+{% block content %}
+<div class="card login">
+  <h1>Log in</h1>
+  <p class="muted">Enter the <code>DASHBOARD_TOKEN</code> from your <code>.env</code>.</p>
+  {% if error %}<div class="banner banner-block">{{ error }}</div>{% endif %}
+  <form method="post" action="/login">
+    <input type="hidden" name="next" value="{{ next }}">
+    <div class="form-row"><label for="token">Token</label>
+      <input id="token" type="password" name="token" autocomplete="current-password" required autofocus></div>
+    <button class="btn btn-primary" type="submit" style="width:100%">Log in</button>
+  </form>
+</div>
+{% endblock %}

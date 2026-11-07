@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block title %}Overview{% endblock %}
+{% block content %}
+<div class="page-head">
+  <div>
+    <h1>Overview</h1>
+    <p class="muted">LLM: <strong>{{ llm_provider }}</strong> · Publishing: <strong>{{ 'dry run (nothing is posted)' if dry_run else 'LIVE' }}</strong></p>
+  </div>
+  <div class="btn-row">
+    <a class="btn btn-primary" href="/review">Review queue{% if k.in_review %} ({{ k.in_review }}){% endif %}</a>
+    <a class="btn" href="/ideas">Ideas</a>
+  </div>
+</div>
+
+
+{% if ops and (ops.alerts or ops.needs_check or ops.render_queue.queued or ops.render_queue.running) %}
+<div class="card section" id="ops">
+  <div class="card-head"><h2>Needs attention</h2><span class="muted small">
+    Worker: {% if ops.worker.heartbeat %}last tick {{ ops.worker.minutes_since }} min ago{% else %}not running{% endif %}
+    · Render queue: {{ ops.render_queue.queued or 0 }} queued{% if ops.render_queue.running %}, {{ ops.render_queue.running }} rendering{% endif %}{% if ops.render_queue.waiting_for_voice %} ({{ ops.render_queue.waiting_for_voice }} waiting for a voice){% endif %}</span></div>
+  {% if ops.alerts %}<ul class="list">{% for a in ops.alerts %}<li>{{ a }}</li>{% endfor %}</ul>{% endif %}
+  {% for p in ops.needs_check %}
+  <div class="list-row" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px">
+    <span class="grow">Post <a href="/posts/{{ p.post_id }}">#{{ p.post_id }}</a> on {{ p.platform }} was interrupted mid-upload. Check the platform, then:</span>
+    <form class="inline" method="post" action="/publications/{{ p.id }}/resolve" style="display:flex;gap:6px;flex-wrap:wrap">
+      <input name="url" placeholder="URL if it's live" style="min-width:0;flex:1 1 160px">
+      <button class="btn btn-sm btn-primary" name="action" value="live">It's live</button>
+      <button class="btn btn-sm" name="action" value="requeue">Not live: requeue</button>
+      <button class="btn btn-sm" name="action" value="drop">Drop</button>
+    </form>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
+<div class="grid grid-kpi">
+  <div class="card kpi {{ 'attn' if k.in_review }}"><div class="label">In review</div><a class="value" href="/review">{{ k.in_review }}</a><div class="sub">{{ k.blocked }} blocked</div></div>
+  <div class="card kpi"><div class="label">Scheduled · 7d</div><a class="value" href="/calendar">{{ k.scheduled_7d }}</a><div class="sub">queued publications</div></div>
+  <div class="card kpi"><div class="label">Published · 30d</div><a class="value" href="/published">{{ k.published_30d }}</a><div class="sub">{{ k.dry_run_30d }} dry-run</div></div>
+  <div class="card kpi"><div class="label">Views · 30d</div><div class="value">{{ k.views_30d|compact }}</div><div class="sub">from metrics snapshots</div></div>
+  <div class="card kpi"><div class="label">Revenue · 30d</div>
+    <a class="value" href="/business/revenue">{% if k.revenue_30d %}{{ k.revenue_30d[0].cents|money(k.revenue_30d[0].currency) }}{% else %}{{ 0|money }}{% endif %}</a>
+    <div class="sub">{% for r in k.revenue_30d[1:] %}+ {{ r.cents|money(r.currency) }} {% else %}all sources{% endfor %}</div></div>
+  <div class="card kpi"><div class="label">LLM spend · 30d</div><div class="value">{{ (k.llm_30d.cost * 100)|round|int|money }}</div><div class="sub">{{ k.llm_30d.calls }} call{{ 's' if k.llm_30d.calls != 1 }} · {{ (k.llm_total * 100)|round|int|money }} all-time</div></div>
+</div>
+
+<div class="card section">
+  <div class="card-head"><h2>Posts by status</h2><span class="muted small">{{ k.ideas_new }} ideas in backlog</span></div>
+  <div class="statusbar">
+    {% for s, n in counts.items() %}
+    <span class="badge status-{{ s }}" style="text-decoration:none">{{ s|replace('_', ' ') }} <b>{{ n }}</b></span>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="grid grid-2 section">
+  <div class="card">
+    <div class="card-head"><h2>Next up</h2><a class="small" href="/calendar">Calendar →</a></div>
+    {% if upcoming %}
+    <ul class="list">
+      {% for p in upcoming %}
+      <li>
+        <span class="grow"><a href="/posts/{{ p.post_id }}">{{ p.title or 'Post #' ~ p.post_id }}</a><br>
+          <span class="small muted" title="{{ p.scheduled_at }}">{{ p.scheduled_at|localtime(tz, '%a %d %b %H:%M') }} · {{ p.scheduled_at|humanize }} · {{ p.format }}</span></span>
+        <span class="pill-row">{% for pl in p.platforms %}{{ m.platform(pl) }}{% endfor %}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}<div class="empty">Nothing scheduled. Approve posts in <a href="/review">Review</a>.</div>{% endif %}
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h2>Compliance</h2>{% if blocked %}<span class="badge badge-block">{{ blocked|length }} blocked</span>{% else %}<span class="badge badge-ok">all clear</span>{% endif %}</div>
+    {% if blocked %}
+    <ul class="list">
+      {% for p in blocked %}
+      <li><span class="grow"><a href="/posts/{{ p.id }}">{{ p.title or 'Post #' ~ p.id }}</a>
+        {% for c in p.reasons %}<br><span class="small"><strong>{{ c.name|replace('_', ' ') }}:</strong> <span class="muted">{{ c.message }}</span></span>{% endfor %}</span></li>
+      {% endfor %}
+    </ul>
+    {% else %}<p class="muted">No posts are blocked by guardrails.</p>{% endif %}
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h2>Platforms</h2>{% if dry_run %}<span class="badge badge-warn">dry run on</span>{% else %}<span class="badge badge-ok">live</span>{% endif %}</div>
+    <ul class="list">
+      {% for platform, c in creds.items() %}
+      <li><span class="grow"><strong>{{ platform }}</strong>
+        {% if c.missing %}<br><span class="small muted">missing {{ c.missing|join(', ') }}</span>{% elif c.note %}<br><span class="small muted">{{ c.note }}</span>{% endif %}</span>
+        {% if c.ready %}<span class="badge badge-ok">ready</span>{% elif c.note %}<span class="badge">n/a</span>{% else %}<span class="badge badge-warn">needs keys</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% if dry_run %}<p class="small muted mt">Dry run records what would be posted. Set <code>FACTORY_DRY_RUN=0</code> to publish for real.</p>{% endif %}
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h2>Recent activity</h2></div>
+    {% if activity %}
+    <ul class="list">{% for a in activity %}{{ m.activity_item(a) }}{% endfor %}</ul>
+    {% else %}<div class="empty">No activity yet.</div>{% endif %}
+  </div>
+</div>
+{% endblock %}

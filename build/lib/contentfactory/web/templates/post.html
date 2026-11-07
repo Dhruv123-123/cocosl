@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block title %}{{ post.title or 'Post #' ~ post.id }}{% endblock %}
+{% block refresh %}{% endblock %}
+{% block content %}
+<div class="page-head">
+  <div>
+    <p class="small muted" style="margin:0"><a href="/review">Review</a> / post #{{ post.id }}</p>
+    <h1>{{ post.title or 'Untitled' }}</h1>
+    <span class="pill-row">{{ m.status(post.status) }}<span class="badge">{{ post.format }}</span><span class="badge">{{ post.brand }}</span>
+      {% if (post.meta or {}).human_edited %}<span class="badge badge-ok">human edited</span>{% endif %}
+      {% if (post.meta or {}).claims_verified %}<span class="badge badge-ok">claims verified</span>{% endif %}</span>
+  </div>
+  <div class="btn-row">
+    {% if post.status in ('in_review', 'blocked') %}<a class="btn btn-primary" href="/review#post-{{ post.id }}">Review this post</a>{% endif %}
+    {% if post.status == 'approved' %}
+    <form class="inline" method="post" action="/posts/{{ post.id }}/schedule"><button class="btn btn-primary" type="submit">Schedule next slot</button></form>
+    {% endif %}
+    {% if post.status not in ('scheduled', 'published') %}
+    <form class="inline" method="post" action="/posts/{{ post.id }}/rerender"><button class="btn" type="submit" {{ 'disabled' if job }}>Re-render</button></form>
+    {% endif %}
+  </div>
+</div>
+
+{% if post.review_notes %}<div class="banner {{ 'banner-block' if post.status in ('failed', 'rejected') else 'banner-info' }}"><strong>Notes:</strong> {{ post.review_notes }}</div>{% endif %}
+
+<div class="grid grid-2">
+  <div class="card">
+    <div class="card-head"><h2>Media</h2></div>
+    {{ m.media(post, assets) }}
+    {% if assets.provenance %}
+    <details class="mt"><summary>Provenance ({{ assets.provenance|length }} file{{ 's' if assets.provenance|length != 1 }})</summary>
+      <table class="table small"><thead><tr><th>File</th><th>Source</th><th>Tool</th></tr></thead><tbody>
+      {% for a in assets.provenance %}<tr><td class="mono">{{ a.path }}</td><td>{{ a.source }}</td><td>{{ a.tool }}</td></tr>{% endfor %}
+      </tbody></table></details>
+    {% endif %}
+  </div>
+
+  <div class="card stack">
+    <div><h2>Caption</h2><p style="white-space:pre-wrap">{{ post.caption }}</p>
+      <p class="small muted">{{ post.disclosure }}<br>{% for h in post.hashtags or [] %}#{{ h|replace('#', '') }} {% endfor %}</p></div>
+    <div><h3>Guardrails {% if check_status %}{{ m.level(check_status) }}{% endif %}</h3>{{ m.checks_list(checks) }}</div>
+    {% if claims %}
+    <div class="claims"><h3>Claims to verify</h3>
+      <ul class="small">{% for c in claims %}<li>{{ c }}</li>{% endfor %}</ul>
+      {% if (post.meta or {}).claims_verified %}<p class="small muted">Verified by {{ post.meta.claims_verified.by }} {{ post.meta.claims_verified.at|humanize }}</p>{% endif %}
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h2>Script</h2></div>
+    {{ m.segments(script) }}
+    {% if script.description %}<details class="mt"><summary>Long description</summary><p class="small" style="white-space:pre-wrap">{{ script.description }}</p></details>{% endif %}
+    {% if script.sources %}<p class="small mt"><strong>Sources:</strong></p><ul class="small">{% for s in script.sources %}<li>{% if s.startswith('http') %}<a href="{{ s }}" target="_blank" rel="noopener noreferrer">{{ s }}</a>{% else %}{{ s }}{% endif %}</li>{% endfor %}</ul>{% endif %}
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h2>Editor critique</h2></div>
+    {{ m.editor_block(editor) }}
+    {% if idea %}<hr><p class="small"><strong>From idea #{{ idea.id }}:</strong> {{ idea.title }}<br><span class="muted">{{ idea.angle }}</span></p>{% endif %}
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h2>Publications</h2></div>
+    {% if pubs %}
+    <ul class="list">
+      {% for p in pubs %}
+      <li><span class="grow">{{ m.platform(p.platform) }} {{ m.status(p.status) }}
+        <br><span class="small muted">{{ p.scheduled_at|localtime(tz) }} ({{ tz }}) · {{ p.scheduled_at|humanize }}{% if p.attempts %} · {{ p.attempts }} attempt(s){% endif %}</span>
+        {% if p.error %}<br><span class="small" style="color:var(--block)">{{ p.error }}</span>{% endif %}</span>
+        {% if p.url %}<a class="small" href="{{ p.url }}" target="_blank" rel="noopener noreferrer">open ↗</a>{% elif p.remote_id %}<span class="small mono muted">{{ p.remote_id }}</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}<div class="empty">Not scheduled.</div>{% endif %}
+  </div>
+
+  <div class="card">
+    <div class="card-head"><h2>History</h2></div>
+    {% if history %}<ul class="list">{% for a in history %}{{ m.activity_item(a) }}{% endfor %}</ul>
+    {% else %}<div class="empty">No history.</div>{% endif %}
+  </div>
+</div>
+
+<details class="card section"><summary>Raw data</summary><pre>{{ post|pretty_json }}</pre></details>
+{% endblock %}

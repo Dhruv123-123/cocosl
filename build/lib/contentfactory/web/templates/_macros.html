@@ -1,0 +1,98 @@
+{% macro status(s) -%}
+<span class="badge status-{{ s }}">{{ (s or '?')|replace('_', ' ') }}</span>
+{%- endmacro %}
+
+{% macro level(l) -%}
+<span class="badge {{ {'ok': 'badge-ok', 'warn': 'badge-warn', 'block': 'badge-block'}.get(l, '') }}">{{ l }}</span>
+{%- endmacro %}
+
+{% macro platform(p) -%}
+<span class="badge platform">{{ p }}</span>
+{%- endmacro %}
+
+{% macro media(post, assets, compact=False) -%}
+{% set fmt = post.format %}
+{% if assets.video %}
+  <video class="player{{ ' landscape' if fmt == 'long' }}" controls playsinline preload="metadata"
+         {% if assets.thumbnail %}poster="{{ assets.thumbnail|media_url }}"{% endif %}>
+    <source src="{{ assets.video|media_url }}" type="video/mp4">
+    {% if assets.captions_srt %}<a href="{{ assets.captions_srt|media_url }}">captions</a>{% endif %}
+  </video>
+  <div class="small muted mt">
+    {% if assets.duration %}{{ '%.0f'|format(assets.duration) }}s · {% endif %}
+    <a href="{{ assets.video|media_url }}" target="_blank" rel="noopener">open video</a>
+    {% if assets.captions_srt %} · <a href="{{ assets.captions_srt|media_url }}" target="_blank" rel="noopener">captions</a>{% endif %}
+  </div>
+{% elif assets.slides or assets.images %}
+  {% set imgs = assets.slides or assets.images %}
+  <div class="slides" aria-label="Slides">
+    {% for img in imgs %}
+    <a href="{{ img|media_url }}" target="_blank" rel="noopener"><img src="{{ img|media_url }}" alt="Slide {{ loop.index }}" loading="lazy"></a>
+    {% endfor %}
+  </div>
+  <div class="small muted">{{ imgs|length }} slide{{ 's' if imgs|length != 1 }} · swipe to see all</div>
+{% else %}
+  <div class="media-missing">No rendered media yet.<br>{% if post.status == 'failed' %}Rendering failed; see notes.{% else %}Use Re-render to build it.{% endif %}</div>
+{% endif %}
+{%- endmacro %}
+
+{% macro checks_list(checks) -%}
+{% if checks %}
+{% set flagged = checks|rejectattr('level', 'equalto', 'ok')|list %}
+{% set passed = checks|selectattr('level', 'equalto', 'ok')|list %}
+{% if flagged %}
+<ul class="checks">
+  {% for c in flagged %}
+  <li>{{ level(c.level) }}<span><strong>{{ c.name|replace('_', ' ') }}</strong> <span class="muted">{{ c.message }}</span></span></li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% if passed %}
+<details class="small"><summary class="muted" style="font-weight:500">{{ passed|length }} check{{ 's' if passed|length != 1 }} passed</summary>
+<ul class="checks">
+  {% for c in passed %}
+  <li>{{ level(c.level) }}<span><strong>{{ c.name|replace('_', ' ') }}</strong> <span class="muted">{{ c.message }}</span></span></li>
+  {% endfor %}
+</ul></details>
+{% endif %}
+{% else %}<p class="muted small">No checks run yet.</p>{% endif %}
+{%- endmacro %}
+
+{% macro editor_block(editor) -%}
+{% if editor %}
+<div class="editor-scores">
+  <span class="badge badge-accent">score {{ editor.score }}/10</span>
+  <span class="badge">hook {{ editor.hook_strength }}/10</span>
+  <span class="badge">originality {{ editor.originality }}/10</span>
+  <span class="badge {{ 'badge-block' if (editor.accuracy_risk or 0) >= 7 else 'badge-warn' if (editor.accuracy_risk or 0) >= 4 else 'badge-ok' }}">accuracy risk {{ editor.accuracy_risk }}/10</span>
+</div>
+{% if editor.problems %}<p class="small"><strong>Problems:</strong></p><ul class="small">{% for p in editor.problems %}<li>{{ p }}</li>{% endfor %}</ul>{% endif %}
+{% if editor.suggested_fixes %}<p class="small"><strong>Suggested fixes:</strong></p><ul class="small">{% for p in editor.suggested_fixes %}<li>{{ p }}</li>{% endfor %}</ul>{% endif %}
+{% else %}<p class="muted small">No editor pass recorded.</p>{% endif %}
+{%- endmacro %}
+
+{% macro segments(script) -%}
+{% if script.hook %}<p><span class="badge badge-accent">hook</span> {{ script.hook }}</p>{% endif %}
+<ol class="segments">
+  {% for seg in script.segments or [] %}
+  <li>
+    {% if seg.on_screen_text %}<div class="ost">{{ seg.on_screen_text }}</div>{% endif %}
+    {% if seg.narration %}<div>{{ seg.narration }}</div>{% endif %}
+    {% if seg.heading %}<div class="small muted">{{ seg.heading }}</div>{% endif %}
+  </li>
+  {% endfor %}
+</ol>
+{% if script.cta %}<p class="mt"><span class="badge">cta</span> {{ script.cta }}</p>{% endif %}
+{%- endmacro %}
+
+{% macro activity_item(a) -%}
+<li>
+  <span class="grow"><span class="mono">{{ a.action }}</span>
+    {% if a.entity == 'post' and a.entity_id %}<a href="/posts/{{ a.entity_id }}">post #{{ a.entity_id }}</a>
+    {% elif a.entity and a.entity_id %}<span class="muted">{{ a.entity }} #{{ a.entity_id }}</span>{% endif %}
+    {% set d = a.detail if a.detail is mapping else {} %}
+    {% if d.reason %}<span class="muted">· {{ d.reason }}</span>{% elif d.error %}<span class="muted">· {{ d.error|truncate(90) }}</span>{% elif d.notes %}<span class="muted">· {{ d.notes|truncate(90) }}</span>{% endif %}
+  </span>
+  <span class="small muted nowrap" title="{{ a.ts }}">{{ a.actor }} · {{ a.ts|humanize }}</span>
+</li>
+{%- endmacro %}
