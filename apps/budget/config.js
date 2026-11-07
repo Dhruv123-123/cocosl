@@ -10,6 +10,14 @@ export default {
     // https://YOUR-SITE/?session_id={CHECKOUT_SESSION_ID}
     stripe: { label: 'Pay by card', url: '' },
   },
+  // Email capture for the free subscription finder (same options as the calculators' config).
+  email: {
+    provider: 'netlify',
+    formName: 'subscription-finder',
+    action: '',
+    emailField: 'email',
+    thanksUrl: 'https://moneymadesimple.netlify.app/free/thanks/',
+  },
   verifyEndpoint: '/api/verify-license',
   proFeatures: [
     'Unlimited categories',

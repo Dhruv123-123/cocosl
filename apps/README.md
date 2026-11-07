@@ -9,6 +9,8 @@ HTML, CSS and JavaScript, no framework, no build step needed) and deploy free.
 | **Money calculators** (6 tools) | Money Made Simple | SEO traffic → email list, HYSA / brokerage / debt affiliates, The 20-Minute Budget product | `money-calculators/` |
 | **Is this a scam?** message checker | Scam Shield | Identity protection, password manager and VPN affiliates, weekly scam-alert list, $9 Family Scam Safety Kit | `scam-checker/` |
 | **The 20-Minute Budget** web app | Money Made Simple | Freemium: Pro at $3/month or $29 once via Gumroad or Stripe | `budget/` |
+| **Subscription finder** (upload a bank CSV, see every recurring charge and its yearly cost) | Money Made Simple | Free tool → budget app and Pro upsell, email list | `budget/subscriptions.html` |
+| **Scam guides**: 12 search pages (USPS, toll, IRS, Amazon...) feeding the checker | Scam Shield | Search traffic → checker, list, affiliates | `scam-checker/scams/` |
 
 Privacy is a selling point for all three: nothing the user types is sent anywhere. The only server code is
 one serverless function that checks budget-app license keys.
@@ -17,7 +19,7 @@ one serverless function that checks budget-app license keys.
 
 ```bash
 cd apps
-npm test            # 50 unit tests, Node 20+, no dependencies
+npm test            # 58 unit tests, Node 20+, no dependencies
 npm run smoke       # opens every page in Chromium at desktop and phone width (needs Playwright)
 ```
 
@@ -65,6 +67,8 @@ Nothing here takes a payment by itself, and nothing goes live until you paste in
 - The scam checker is rule-based. It catches the common patterns (toll and delivery texts, gift cards,
   crypto, code requests, look-alike links) but it can miss new scams, and the page says so. Add new
   patterns to `RULES` in `scam-checker/lib/scan.js` with a test.
+- Scam guide pages are generated from `scam-checker/scams.mjs` by `scam-checker/build.mjs`. Every example
+  message there must score high risk in the checker, so adding a guide also tests the checker.
 - Calculator pages are generated from `money-calculators/pages.mjs` by `build.mjs`; edit the copy there.
 
 See `IDEAS.md` for what to build next.

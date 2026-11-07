@@ -68,3 +68,16 @@ dialog::backdrop{background:rgba(0,0,0,.5)}
 .close{position:absolute;right:12px;top:8px}
 .close button{background:none;border:0;font-size:26px;color:var(--muted);cursor:pointer}
 footer{color:var(--muted);font-size:13px;padding:16px;text-align:center}
+.page-title{font-size:clamp(28px,5vw,40px);line-height:1.15;margin:16px 0 8px}
+.lede{color:var(--muted);font-size:17px}
+.drop{display:flex;flex-direction:column;align-items:center;gap:6px;border:2px dashed var(--line);border-radius:14px;padding:28px 16px;text-align:center;cursor:pointer;font-weight:400;font-size:16px}
+.drop.over,.drop:hover{border-color:var(--gold)}
+.subs th:first-child{width:50%}
+.pick{flex-direction:row;align-items:flex-start;gap:8px;font-weight:400;font-size:15px}
+.pick input{width:auto;margin-top:4px}
+.pick small{display:block;color:var(--muted);font-size:12px}
+.offer-box{border-top:1px solid var(--line);margin-top:14px;padding-top:6px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.subs .num{white-space:nowrap}
+@media (max-width:560px){.subs .when{display:none}.subs th:first-child{width:auto}}
+.plan.subs{table-layout:auto}
