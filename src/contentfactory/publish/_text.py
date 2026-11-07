@@ -14,6 +14,22 @@ def count_hashtags(text: str) -> int:
     return len(HASHTAG.findall(text))
 
 
+GENERIC_TAGS = {"didyouknow", "fyp", "foryou", "foryoupage", "viral", "explore", "explorepage", "trending",
+                "reels", "instagood", "followme", "like4like"}
+PLATFORM_HASHTAG_MAX = {"instagram": 5}  # Instagram: 5 per post or Reel since Dec 2025
+
+
+def pick_hashtags(tags: list[str], limit: int, brand_tag: str = "") -> list[str]:
+    """The `limit` most descriptive tags: drop reach-bait tags (#fyp, #didyouknow...), keep the topic
+    tags in the writer's order, and keep the brand tag last if there's room."""
+    clean = list(dict.fromkeys(t.lstrip("#").replace(" ", "") for t in tags if t and t.strip("# ")))
+    brand = next((t for t in clean if t.lower() == brand_tag.lower()), "") if brand_tag else ""
+    topic = [t for t in clean if t.lower() not in GENERIC_TAGS and t != brand]
+    if len(topic) + bool(brand) <= limit:
+        return topic + ([brand] if brand else [])
+    return topic[:limit - 1] + [brand] if brand and limit > 1 else topic[:limit]
+
+
 def _drop_last_hashtag(text: str, protected: list[str]) -> str | None:
     spans = _protected_spans(text, protected)
     for m in reversed(list(HASHTAG.finditer(text))):

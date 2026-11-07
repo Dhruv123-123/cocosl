@@ -272,7 +272,11 @@ def cmd_import(args):
             print(f"post #{existing['id']} [{existing['status']}] {title}: already imported, skipped")
             continue
         else:
-            pid = f.import_script(args.brand, item["script"], item["format"], item.get("pillar", ""),
+            script = dict(item["script"])
+            for key in ("original_element", "related_video", "playlist"):  # packs sometimes keep these on the item
+                if item.get(key) and not script.get(key):
+                    script[key] = item[key]
+            pid = f.import_script(args.brand, script, item["format"], item.get("pillar", ""),
                                   item.get("idea_angle", ""), render=not args.no_render)
         post = f.db.get("posts", pid)
         print(f"post #{pid} [{post['format']}/{post['status']}] {post['title']}")
@@ -295,6 +299,11 @@ def cmd_new_brand(args):
 def cmd_report(args):
     from .reports import save_report, to_markdown, weekly_report
     f = _factory(args)
+    if args.html:
+        from .weekly_html import save as save_html
+        for path in save_html(f):
+            print(path)
+        return
     if args.save:
         print(save_report(f))
     else:
@@ -468,7 +477,9 @@ def build_parser() -> argparse.ArgumentParser:
     s.set_defaults(func=cmd_new_brand)
 
     s = sub.add_parser("report", help="weekly business report: money, content, funnel, pipeline, next actions")
-    s.add_argument("--save", action="store_true", help="write to output/reports/")
+    s.add_argument("--save", action="store_true", help="write to output/reports/ (also writes the HTML pages)")
+    s.add_argument("--html", action="store_true", help="one HTML page per brand from imported stats: best and "
+                                                       "worst posts, formats, pillars, next topics")
     s.set_defaults(func=cmd_report)
 
     s = sub.add_parser("serve", help="run the dashboard")
@@ -496,7 +507,7 @@ def _extend(sub) -> None:
                 "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup",
                 "contentfactory.publish.preflight", "contentfactory.cleanup",
                 "contentfactory.planner", "contentfactory.launch_check", "contentfactory.stats",
-                "contentfactory.scaffold", "contentfactory.manual", "contentfactory.numbercheck"):
+                "contentfactory.scaffold", "contentfactory.manual", "contentfactory.numbercheck", "contentfactory.ytplan", "contentfactory.triage", "contentfactory.challenge", "contentfactory.whitelabel", "contentfactory.originality", "contentfactory.newsletter_export", "contentfactory.batch_record"):
         try:
             module = __import__(mod, fromlist=["register"])
         except ImportError:
