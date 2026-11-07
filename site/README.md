@@ -188,8 +188,30 @@ repo secret `NETLIFY_BUILD_HOOK`; `.github/workflows/netlify-rebuild.yml` pings 
 GitHub Pages workflow has the same weekly schedule. Preview scheduled issues locally with
 `NEWSLETTER_SHOW_SCHEDULED=1 python3 site/build.py`, or pretend it's another day with `BUILD_DATE=2026-11-20`.
 
-Three issues are written and scheduled (Nov 12, 19 and 26, 2026). They aren't in the welcome sequence; send
+Seven issues are written and scheduled (weekly, Nov 12 to Dec 24, 2026). They aren't in the welcome sequence; send
 them to everyone on the list.
+
+## Budget by salary and cost of living by city
+
+`pseo.py` builds 47 pages from two data files, so every number on them is computed, not typed:
+
+- `/budget/<salary>-salary/` for 20 salaries ($25k to $200k) plus the `/budget/` hub: 2026 take-home pay
+  (federal maths identical to the take-home pay calculator), Texas / North Carolina / California / NYC
+  side by side, a four-line monthly plan, which of the 25 cities' rents fit, emergency fund and 401(k) maths,
+  bracket explanation, FAQ schema.
+- `/cost-of-living/<city>/` for the 25 largest US cities plus the `/cost-of-living/` hub: HUD fair market
+  rent, salary needed at 30% of gross, take-home after state and city tax at six salaries, a monthly budget,
+  rank against the other 24 cities, FAQ schema and sources.
+
+Every page links to the take-home pay calculator (PR #8), pre-filled with the page's salary and state rate.
+Set its address in `site.json` > `calculators_url` (default `https://moneymadesimple.netlify.app/calculators`,
+the same URL as the calculator's own `config.js`). If the calculators end up somewhere else, change it there.
+
+**Update every year:** `content/data/tax_rules.json` each November (federal, state and city tax rules) and
+`content/data/cities.json` each October, when HUD publishes new fair market rents. **Before promoting these
+pages:** the rents were read from sites that republish HUD's tables (HUD's own site was unreachable from the
+build machine), so spot-check a few against HUD's FMR tool. Oklahoma City and Las Vegas are still FY2026
+figures, and Indianapolis uses Marion County's long-standing 2.02% rate; confirm both.
 
 ## Deploy check
 

@@ -209,3 +209,44 @@ def test_newsletter_archive_and_feed_after_send_date(tmp_path):
     r = subprocess.run([sys.executable, str(SITE / "tools" / "check_site.py"), "--dir", str(out)],
                        capture_output=True, text=True)
     assert r.returncode == 0, r.stdout
+
+
+def test_salary_and_city_pages(tmp_path):
+    import json
+    import re
+    sys.path.insert(0, str(SITE))
+    import pseo
+    rules, cdata = pseo.load()
+    # Federal maths matches the take-home pay calculator (lib/tax2026.js), checked against its takeHomePay().
+    for salary, net in [(25000, 22197.5), (50000, 42355), (100000, 79180), (175000, 130878.5), (250000, 183182)]:
+        assert round(pseo.take_home(rules, salary)["net"], 2) == net
+    assert round(pseo.take_home(rules, 100000, pretax401k=5000)["net"], 2) == 75280
+    # NYC city tax on $80k (taxable $72k) = $2,665.89; Texas has none; Philadelphia's wage tax is on wages.
+    assert round(pseo.take_home(rules, 80000, "NY", "nyc")["local"], 2) == 2665.89
+    assert pseo.take_home(rules, 80000, "TX")["state"] == 0
+    assert round(pseo.take_home(rules, 60000, "PA", "philadelphia")["local"], 2) == round(60000 * 0.03735, 2)
+    assert len(cdata["cities"]) == 25 and len(pseo.SALARIES) == 20
+
+    out = _build(tmp_path, "https://example.org")
+    sitemap = (out / "sitemap.xml").read_text()
+    pages = [out / "budget" / f"{s}-salary" / "index.html" for s in pseo.SALARIES]
+    pages += [out / "cost-of-living" / c["slug"] / "index.html" for c in cdata["cities"]]
+    bodies = []
+    for p in pages:
+        h = p.read_text()
+        assert "/calculators/take-home-pay/?salary=" in h, p
+        assert '"@type": "FAQPage"' in h and 'id="common-questions"' in h
+        assert p.parent.relative_to(out).as_posix() in sitemap
+        main = re.sub(r"<[^>]+>", " ", h[h.index("<h1"):h.index('class="disclaimer"')])
+        assert len(main.split()) > 600, f"{p} is thin"
+        bodies.append(set(main.split()))
+    # No two pages are near-duplicates: compare word sets pairwise within each family.
+    for fam in (bodies[:20], bodies[20:]):
+        for i in range(len(fam)):
+            for j in range(i + 1, len(fam)):
+                assert len(fam[i] & fam[j]) / len(fam[i] | fam[j]) < 0.9
+    austin = (out / "cost-of-living" / "austin" / "index.html").read_text()
+    assert "$1,530" in austin and "no state income tax" in austin
+    sf = (out / "cost-of-living" / "san-francisco" / "index.html").read_text()
+    assert "the highest of the 25 largest US cities" in sf
+    assert (out / "budget" / "index.html").exists() and (out / "cost-of-living" / "index.html").exists()
