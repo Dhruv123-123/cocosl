@@ -133,3 +133,11 @@ Nothing here posts or sends on its own: publishing is a dry run until FACTORY_DR
 | `factory restore` | restore a `factory backup --archive` zip (lists first; --yes restores) |
 | `factory cleanup` | free disk space from old published posts (lists unless --yes) |
 | `factory demo` | offline end-to-end demo that renders sample posts |
+
+## Other
+
+| Command | What it does |
+|---|---|
+| `factory launch-pack` | export a postable launch pack (slides, thumbnails, captions, brand kit) |
+| `factory pack` | plan or export a ready-to-post content pack from a content.json |
+| `factory channels` | repurpose content packs into Pinterest pins, newsletters and text threads |
