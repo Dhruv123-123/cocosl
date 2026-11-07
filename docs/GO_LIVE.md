@@ -12,7 +12,7 @@ Where something has a waiting period (verification, affiliate approval), start i
 Totals: **Stage 1–3 ≈ 5–6 hours** gets you able to take money. Stages 0–8 (one brand, fully live)
 ≈ 13–16 hours over two weeks. Stage 9 adds the other brands, one at a time, ≈ 2–4 hours each. The
 [launch runbook](#launch-runbook-after-the-merges) near the end covers the sites, placeholders, first-week
-posts, recording sessions and a 15-minutes-a-day routine once everything is merged.
+posts, recording sessions, a 15-minutes-a-day routine and each brand's launch day once everything is merged.
 
 Nothing in this repo sends, posts or charges on its own. You press every button.
 
@@ -632,7 +632,7 @@ can do. Open `factory ui` (the Today page) and do these in order; stop at 15 min
 |---|---|---|
 | Mon–Fri, from Nov 10 | +45 min | 15 ad-studio first emails and due follow-ups (Stage 2). This is the fastest money; don't let the 15 minutes crowd it out |
 | Mondays | +20 min | `factory report` and its "Next actions"; `factory launch-check` |
-| Saturdays | +45–60 min | the recording session from R5 (prep sheet for Nov 14: `docs/RECORDING_PREP_2026-11-14.md`) |
+| Saturdays | +45–60 min | the recording session from R5 (prep sheets: `docs/RECORDING_PREP_2026-11-14.md`, `-11-21`, `-11-28`, `-12-05`) |
 | Sat Nov 14 | +10 min | the `LAUNCH` codes end today (the welcome emails print that date): check they've expired on Gumroad |
 | Day 7 | +30 min | if Money Made Simple is steady, start the next brand's accounts (Stage 9) |
 | Day 10 | +30 min | ~10 posts are live: apply to the affiliate programs (Stage 7) with the kit's answers |
@@ -641,6 +641,43 @@ can do. Open `factory ui` (the Today page) and do these in order; stop at 15 min
 | Day 30 | +30 min | swap the financial model's assumptions for real numbers (`docs/FINANCIAL_MODEL.md`) and decide what to do more of |
 
 Skip a day and nothing breaks: posts wait in the queue, and nothing goes out without your approval.
+
+### R7 · Launch day: each brand's first public post
+
+Do this once per brand, the morning its first post goes out. ≈ 45 minutes the first time, 30 after that.
+
+**Every brand, before the first post (30 min)**
+
+- [ ] Profile is finished on every platform: picture, banner, bio from the brand kit, link in bio pointing at
+      the brand's live `/links/` page (open it on your phone and tap every link).
+- [ ] Instagram is a Professional account linked to its Facebook Page; YouTube channel is phone-verified.
+- [ ] 2FA is on for every account, and each password is in your password manager.
+- [ ] The brand's email signup works: submit your own address, get the lead magnet, confirm the double opt-in.
+- [ ] Any product the first week mentions is live on Gumroad (test-buy with a 100%-off code) and its
+      `brands/<slug>.yaml` URL is real. Codes printed in that product's PDF exist.
+- [ ] `factory launch-check --online` is **green** for this brand (yellow only for links you haven't
+      got yet, such as unapproved affiliates).
+- [ ] First 3 posts are approved in Review, with every fact ticked against `launch/VERIFY_BEFORE_POSTING.md`.
+- [ ] Each caption carries the AI disclosure; affiliate posts carry the affiliate disclosure.
+- [ ] `FACTORY_DRY_RUN=0` only once all of the above is true (or post the first one by hand).
+
+**On the day (15 min)**
+
+- [ ] Post at the plan's time. TikTok by hand from `factory ui` → Post by hand, **AI-generated label on**.
+- [ ] Open each post on a second device: video plays, captions are right, link in bio works.
+- [ ] Reply to the first comments yourself within the first hour.
+- [ ] Note the post URLs in the Today page (or a note) so the weekly report has them.
+
+**Brand by brand**
+
+| Brand | First post | Extra checks for its launch day |
+|---|---|---|
+| Money Made Simple | short *The two-account trick that stops overdrafts*, 12:30 ET | the six Gumroad products and `BILLCUT5`/`BUDGET5`/`AUDIT5`/`DEBTFREE5`/`INVEST5` exist; `LAUNCH` ends Nov 14; swap in the real HYSA APY before any savings post; affiliate link only once approved |
+| Tiny Histories | long *Why your keyboard says QWERTY*, 17:00 ET | open the four source links in `VERIFY_BEFORE_POSTING.md`; contested stories stay worded as uncertain; no product link yet |
+| Scam Decoded | short *$0 and 10 minutes: freeze your credit* plus its TikTok cut | check `@scamdecoded` handles are yours; no real phone numbers or links on any slide; captions say a credit freeze is free; the $9 kit is live before the Day 2 kit post; Aura/1Password/NordVPN links only once approved |
+| 1099 Money | short *Your first 1099 has no tax taken out*, **Mon Nov 16** 12:30 ET | confirm the 2026 figures and 2027 dates against irs.gov and ssa.gov; the $15 Quarterly Tax Tracker is live before the Day 1 product carousel |
+| Dinero Simple | short *El truco de las dos cuentas que evita sobregiros*, 12:30 ET | **the fluent reviewer has signed off** (`factory review-language <id> --by NAME` on every post); `RECORTE5` and `FECHA5` exist; Spanish voice, never the English one |
+| Ad studio | Post 1 *Before → after*, **Mon Nov 16** | studio site and order page are live; the caption says the sample is a spec ad for a made-up shop; first cold emails went out Nov 10, so the account is live when leads look it up |
 
 ---
 

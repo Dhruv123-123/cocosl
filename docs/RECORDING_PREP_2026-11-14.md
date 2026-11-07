@@ -58,11 +58,12 @@ hand writing "Monthly hour" on a calendar or sticky note.
 
 ## Export and wire in (15 minutes)
 
-All paths are inside your factory home folder (the one `factory init` created).
+All paths are inside your factory home folder (the one `factory init` created). File names were
+copied on Nov 7; if one has changed since, `factory recordings` shows the current name.
 
 | Clip | Export | Save as | Then |
 |---|---|---|---|
-| 1 | MP4 (H.264), 1080p, trim to 10–30 s | `footage/scam-decoded/9-holiday-scams-that-peak-before-new-year-and-ho-beat2.mp4` | it's already listed in the video's beat 2, so it's picked up at render |
+| 1 | MP4 (H.264), 1080p, trim to 10–30 s | `footage/scam-decoded/9-holiday-scams-that-peak-before-new-yea--1-fake-stores.mp4` | it's already listed in the video's beat 2, so it's picked up at render |
 | 2 | MP4 (H.264), **1080×1920 vertical**, 20–30 s, music bed from `etsy-shopify-line/samples/reel/music/` (licences in `MUSIC_LICENSES.md`) | `ai-ad-studio-v2/social-posts/04-process.mp4` | post Thu Nov 19 on Instagram Reels and TikTok with Post 4's caption |
 | 3 | MP4 (H.264), 1080p landscape, the best take, ≈ 17 s (+10 s spare) | `footage/1099-money/your-first-year-freelancing-the-complete-money-s.mp4` | in `launch/1099-money/content.json`, set `"footage"` on the "Monthly hour" segment to that path |
 
