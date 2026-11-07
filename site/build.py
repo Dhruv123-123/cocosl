@@ -40,6 +40,9 @@ def load_config() -> dict:
     url = os.environ.get("SITE_URL") or os.environ.get("URL") or cfg["url"]
     cfg["url"] = url.rstrip("/")
     cfg["base_path"] = urlparse(cfg["url"]).path.rstrip("/")  # "/cocosl" on a GitHub project page
+    cfg.setdefault("analytics", {})
+    if "PLAUSIBLE_DOMAIN" in os.environ:  # empty string turns analytics off
+        cfg["analytics"]["plausible_domain"] = os.environ["PLAUSIBLE_DOMAIN"]
     provider = os.environ.get("EMAIL_PROVIDER")
     if provider:
         cfg["email"]["provider"] = provider
@@ -102,7 +105,7 @@ def inline(s: str) -> str:
         ext = href.startswith("http") and urlparse(href).netloc not in CFG["url"]
         rel = ' rel="noopener"' if ext else ""
         if "sponsored" in href or "/go/" in href:
-            rel = ' rel="sponsored noopener"'
+            rel = ' rel="sponsored noopener" class="plausible-event-name=Affiliate+Click"'
         return f'<a href="{esc(u(href))}"{rel}>{text}</a>'
 
     s = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", link, s)
@@ -314,6 +317,19 @@ def shortcode_factory(products: dict, source: str):
     return sc
 
 
+def plausible_tag() -> str:
+    """Cookieless Plausible analytics (docs/UTM.md section 3). Outbound clicks are tracked automatically;
+    elements with class plausible-event-name=... send custom events (Product Click, Affiliate Click)."""
+    a = CFG.get("analytics", {})
+    domain = a.get("plausible_domain", "")
+    if not domain:
+        return ""
+    host = a.get("plausible_host", "https://plausible.io").rstrip("/")
+    return (f'<script defer data-domain="{esc(domain)}" '
+            f'src="{esc(host)}/js/script.outbound-links.tagged-events.js"></script>'
+            '<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>')
+
+
 def layout(*, title: str, description: str, path: str, body: str, og_type: str = "website",
            jsonld: list | None = None, image: str = "/img/og-default.png", noindex: bool = False,
            extra_head: str = "") -> str:
@@ -325,7 +341,7 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
     ld = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>'
                  for x in (jsonld or []))
     soc = " · ".join(f'<a href="{esc(h)}" rel="me noopener">{esc(n)}</a>' for n, h in CFG["socials"].items())
-    analytics = CFG.get("analytics_snippet", "")
+    analytics = plausible_tag() + CFG.get("analytics_snippet", "")
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -509,7 +525,7 @@ def build() -> list[str]:
             buy = (f'<p class="buy-note">Not on sale yet. Join the free email and you\'ll hear the day it opens.</p>'
                    f'{email_form(f"waitlist-{p["slug"]}", "Tell me when it opens")}')
         else:
-            buy = (f'<a class="btn big" href="{esc(p["buy_url"])}" rel="noopener" data-buy="{esc(p["slug"])}">'
+            buy = (f'<a class="btn big plausible-event-name=Product+Click" href="{esc(p["buy_url"])}" rel="noopener" data-buy="{esc(p["slug"])}">'
                    f'{esc(p.get("buy_label", "Get instant access"))}</a>'
                    f'<p class="buy-note">{esc(p.get("guarantee", ""))}</p>')
         ld = [{"@context": "https://schema.org", "@type": "Product", "name": p["title"],
@@ -599,7 +615,7 @@ def build() -> list[str]:
                     for p in products_list)
     links += '<h2 class="lb-h">Popular articles</h2>' + "".join(f'<a class="lb-link" href="{u(f"/blog/{p["slug"]}/")}"><span>{esc(p["title"])}</span></a>'
                      for p in posts[:4])
-    aff = "".join(f'<a class="lb-link" href="{esc(a["url"])}" rel="sponsored noopener"><span>{esc(a["name"])}</span><small>affiliate</small></a>'
+    aff = "".join(f'<a class="lb-link plausible-event-name=Affiliate+Click" href="{esc(a["url"])}" rel="sponsored noopener"><span>{esc(a["name"])}</span><small>affiliate</small></a>'
                   for a in CFG.get("affiliates", []))
     write("/links/", layout(
         title="Links", path="/links/", description=CFG["tagline"],

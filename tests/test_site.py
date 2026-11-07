@@ -60,3 +60,14 @@ def test_email_provider_switch(tmp_path):
     home = (out / "index.html").read_text()
     assert 'action="https://app.kit.com/forms/123/subscriptions"' in home
     assert 'name="email_address"' in home and "data-netlify" not in home
+
+
+def test_plausible_analytics(tmp_path):
+    out = _build(tmp_path, "https://example.org", PLAUSIBLE_DOMAIN="mms.example")
+    for page in out.rglob("index.html"):
+        assert 'data-domain="mms.example"' in page.read_text(), page
+    assert "script.outbound-links.tagged-events.js" in (out / "index.html").read_text()
+    prod = (out / "products" / "the-20-minute-budget" / "index.html").read_text()
+    assert "plausible-event-name=Product+Click" in prod
+    off = _build(tmp_path / "off", "https://example.org", PLAUSIBLE_DOMAIN="")
+    assert "plausible.io" not in (off / "index.html").read_text()

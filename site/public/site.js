@@ -10,6 +10,8 @@
       var action = form.getAttribute("action") || "";
       if (action.charAt(0) === "#") { ev.preventDefault(); alert("Signup isn't connected yet: set the email provider in site/site.json."); return; }
       ev.preventDefault();
+      var src = form.querySelector('input[name="source"],input[name="tag"],input[name="fields[source]"]');
+      if (window.plausible) window.plausible("Signup", { props: { form: src ? src.value : "signup", brand: "money-made-simple" } });
       var btn = form.querySelector("button");
       if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
       var data = new URLSearchParams(new FormData(form));

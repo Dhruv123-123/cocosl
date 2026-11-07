@@ -114,7 +114,7 @@ Tip: add a rule that skips emails 5, 9 and the product line of 10 for people who
 - [ ] `content/products/the-20-minute-budget.md` > `buy_url`: your real Gumroad / Lemon Squeezy link.
 - [ ] `site.json` > `url`, `contact_email`, `socials`, and `affiliates` (leave empty until you have real, approved affiliate links; they render with an "affiliate" label and `rel="sponsored"`).
 - [ ] `site.json` > `email` provider (step 2).
-- [ ] Optional analytics: paste a privacy-friendly snippet (e.g. Plausible, GoatCounter, Cloudflare Web Analytics) into `site.json` > `analytics_snippet`.
+- [ ] Analytics: Plausible (cookieless) is on every page, set by `site.json` > `analytics.plausible_domain` (default `moneymadesimple.netlify.app`; env `PLAUSIBLE_DOMAIN` overrides, empty turns it off). Add that site in Plausible with goals `Product Click`, `Affiliate Click`, `Signup` and `Outbound Link: Click` (see `docs/UTM.md` section 3). Buy buttons and affiliate links carry the event classes; signups send `Signup` with a `form` property.
 - [ ] Only set `sale_price` on a product while a launch price is actually running. No fake countdowns.
 - [ ] Submit `https://<your-site>/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
 - [ ] Proofread the facts: every article lists its sources. Contribution limits and rates change; re-check

@@ -33,6 +33,7 @@ jobs:
           SITE_URL: ${{ vars.SITE_URL || steps.pages.outputs.base_url }}
           EMAIL_PROVIDER: ${{ vars.EMAIL_PROVIDER }}
           EMAIL_FORM_ACTION: ${{ vars.EMAIL_FORM_ACTION }}
+          PLAUSIBLE_DOMAIN: ${{ vars.PLAUSIBLE_DOMAIN || 'moneymadesimple.netlify.app' }}
         run: python3 site/build.py
       - uses: actions/upload-pages-artifact@v3
         with:
