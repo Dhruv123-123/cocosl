@@ -42,6 +42,7 @@ Nothing here posts or sends on its own: publishing is a dry run until FACTORY_DR
 |---|---|
 | `factory review` | list the review queue or show one post |
 | `factory review-gate` | review status per post (draft, native_review, legal_review, approved); pass, require or send back a review |
+| `factory review-language` | record that a fluent speaker checked a non-English post |
 | `factory approve` | approve a post (optionally schedule it) |
 | `factory reject` | reject a post |
 | `factory audit-originality` | per-channel YouTube inauthentic-content risk score |
@@ -58,6 +59,7 @@ Nothing here posts or sends on its own: publishing is a dry run until FACTORY_DR
 | `factory calendar` | upcoming publications |
 | `factory publish` | publish everything that is due |
 | `factory manual` | post-by-hand packages (TikTok, Pinterest): list, copy caption, mark posted |
+| `factory handoff-pack` | export a content.json as a hand-off folder (slides, thumbnails, captions) |
 | `factory export-week` | one zip per week: every scheduled post in posting order, captions ready to paste, for posting by hand |
 | `factory youtube-plan` | playlists, end screens and Shorts related videos for a pack (set by hand in Studio) |
 
