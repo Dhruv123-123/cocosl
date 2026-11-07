@@ -145,3 +145,4 @@ details.import{margin-top:10px}details.import summary{cursor:pointer;font-weight
 .state.answered{border-color:var(--green)}
 .dispute .steps{margin:8px 0;padding-left:20px;font-size:15px}
 .dispute .outcome select,.dispute .outcome input{width:auto;flex:1 1 140px}
+textarea{font:inherit;padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--paper);color:var(--ink);width:100%}

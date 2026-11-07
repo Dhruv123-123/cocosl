@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Free Subscription Finder: Find Every Recurring Charge | Money Made Simple</title>
-<meta name="description" content="Upload your bank or card CSV and see every subscription and recurring charge, what it costs a year, and which prices went up. Private: your file never leaves your browser.">
+<title>Free Subscription Audit: Find Every Recurring Charge in Your Bank Statement | Money Made Simple</title>
+<meta name="description" content="Upload your bank or card CSV, or paste your statement, and see every subscription and recurring charge, what it costs a year, and which prices went up. Private: your file never leaves your browser.">
 <meta property="og:title" content="Find every subscription you're paying for">
-<meta property="og:description" content="Upload a bank CSV, see every recurring charge and its yearly cost. Runs in your browser.">
+<meta property="og:description" content="Upload a bank CSV or paste a statement, see every recurring charge and its yearly cost. Runs in your browser.">
 <meta name="theme-color" content="#0b1d13">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
@@ -19,7 +19,7 @@
 </header>
 <main>
   <h1 class="page-title">What are you still paying for?</h1>
-  <p class="lede">Download the last 3 to 12 months of transactions from your bank or card as a CSV, then drop it here. We list every charge that repeats, what it costs a year, and which ones went up. Your file never leaves this browser.</p>
+  <p class="lede">Download the last 3 to 12 months of transactions from your bank or card as a CSV and drop it here, or paste them from your statement. We list every charge that repeats, what it costs a year, and which ones went up. Nothing leaves this browser.</p>
 
   <section class="card">
     <label class="drop" id="drop">
@@ -31,6 +31,15 @@
       <button id="sample" class="btn ghost small" type="button">Try it with sample data</button>
       <span id="file-msg" class="tiny" aria-live="polite"></span>
     </div>
+  </section>
+
+  <section class="card">
+    <h2>No CSV? Paste your statement instead</h2>
+    <p class="tiny">Open your online banking or a PDF statement, select the transactions (3 months or more), copy, and paste them here. Each line needs a date, a description and an amount. Nothing is uploaded: it's read on this device.</p>
+    <form id="paste-form">
+      <textarea id="paste" rows="8" aria-label="Pasted transactions" placeholder="10/03  NETFLIX.COM 866-579-7172      15.49&#10;10/09  SPOTIFY USA                 11.99&#10;Oct 14 PLANET FITNESS #1022        24.99"></textarea>
+      <div class="row" style="margin-top:8px"><button class="btn small" type="submit">Find my subscriptions</button><span id="paste-msg" class="tiny" aria-live="polite"></span></div>
+    </form>
   </section>
 
   <section id="results" class="card" hidden aria-live="polite"></section>

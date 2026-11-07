@@ -2,6 +2,7 @@ import config from './config.js';
 import { initTracking } from './lib/track.js';
 import { importBankCsv } from './lib/budget.js';
 import { findRecurring } from './lib/recurring.js';
+import { parseStatement } from './lib/statement.js';
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
@@ -26,11 +27,13 @@ function sampleCsv() {
   return rows.join('\n');
 }
 
-function render(csvText, label) {
-  const { transactions, skipped, error } = importBankCsv(csvText);
-  if (error) { $('#file-msg').textContent = error + '. Check it\'s the CSV download, not a PDF statement.'; return; }
+function render(csvText, label, parsed = importBankCsv(csvText)) {
+  const { transactions, skipped, error } = parsed;
+  const msg = label === 'Pasted text' ? '#paste-msg' : '#file-msg';
+  if (error) { $(msg).textContent = label === 'Pasted text' ? `${error}. Copy whole rows: date, description and amount.` : `${error}. Check it's the CSV download, not a PDF statement.`; return; }
+  $('#file-msg').textContent = ''; $('#paste-msg').textContent = '';
   const r = findRecurring(transactions, { today });
-  $('#file-msg').textContent = `${label}: read ${transactions.length} transactions${skipped ? `, skipped ${skipped}` : ''}.`;
+  $(msg).textContent = `${label}: read ${transactions.length} transactions${skipped ? `, skipped ${skipped} lines we couldn't read` : ''}.`;
   const active = r.subscriptions.filter((s) => !s.stale);
   const stale = r.subscriptions.filter((s) => s.stale);
   if (!r.subscriptions.length) {
@@ -68,6 +71,10 @@ const drop = $('#drop');
 ['dragleave', 'drop'].forEach((t) => drop.addEventListener(t, (e) => { e.preventDefault(); drop.classList.remove('over'); }));
 drop.addEventListener('drop', (e) => readFile(e.dataTransfer.files[0]));
 $('#sample').addEventListener('click', () => render(sampleCsv(), 'Sample data'));
+$('#paste-form').addEventListener('submit', (ev) => {
+  ev.preventDefault();
+  render('', 'Pasted text', parseStatement($('#paste').value, { today }));
+});
 
 // Email signup
 const form = document.querySelector('form.signup');

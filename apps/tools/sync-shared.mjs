@@ -6,7 +6,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-export const APPS = ['scam-checker', 'money-calculators', 'ad-script-builder', 'budget', 'medical-bills'];
+export const APPS = ['scam-checker', 'money-calculators', 'ad-script-builder', 'budget', 'medical-bills', 'freelance-invoices'];
 const HEADER = '// GENERATED from apps/shared/ by tools/sync-shared.mjs. Edit the shared copy, not this one.\n';
 
 export function expected(file) {

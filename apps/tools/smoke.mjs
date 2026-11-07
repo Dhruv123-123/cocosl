@@ -74,6 +74,12 @@ const checks = [
   ['/budget/bills.html', '#bills .bill', async (page) => { await page.fill('#b-name', 'Internet'); await page.fill('#b-monthly', '80'); await page.click('#bill-form button'); }],
   ['/budget/deals.html', '#result .countdown', async (page) => { await page.fill('[name=balance]', '400'); await page.fill('[name=end]', '2030-01-15'); await page.fill('[name=apr]', '29.99'); await page.fill('[name=payment]', '50'); await page.click('#deal-form button[type=submit]'); }],
   ['/budget/rate.html', '#rate-result .grade', async (page) => { await page.click('#rate-form button'); }],
+  ['/freelance-invoices/', '#invoices .inv', async (page) => {
+    await page.fill('[name=client]', 'Northwind Studio'); await page.fill('[name=clientEmail]', 'ap@northwind.com'); await page.fill('[name=amount]', '1800');
+    await page.fill('[name=issued]', '2026-01-05'); await page.selectOption('#f-fee', 'percent'); await page.click('#inv-form button[type=submit]');
+    await page.click('[data-act=remind]'); if (!(await page.inputValue('#rem-body')).includes('Northwind')) throw new Error('no reminder text'); await page.click('#reminder .close button');
+  }],
+  ['/budget/subscriptions.html', '#results', async (page) => { await page.fill('#paste', ['08', '09', '10'].map((m) => `${m}/03 NETFLIX.COM 15.49\n${m}/09 SPOTIFY USA 11.99`).join('\n')); await page.click('#paste-form button'); }],
   ['/budget/disputes.html', '#disputes .dispute', async (page) => { await page.fill('[name=item]', 'Metro Bank Card'); await page.click('#dispute-form button[type=submit]'); await page.selectOption('[data-outcome] select', 'verified'); await page.click('[data-outcome] button'); }],
   ['/scam-checker/vendor/', '#result .score', async (page) => { await page.click('#example'); }],
   ['/budget/pricing.html?from=goals', '#compare tr', async (page) => { if (!(await page.locator('#from').isVisible())) throw new Error('limit message hidden'); }],
