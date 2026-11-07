@@ -295,11 +295,16 @@ class Factory:
             for p in [*(assets.get("slides") or []), *(assets.get("images") or []), assets.get("video"), assets.get("thumbnail")]:
                 if p:
                     public[str(out / p)] = f"{base}/{p}"
-        description = "\n\n".join(x for x in [script.get("description", ""), disclosure] if x)
+        body = script.get("description", "")
+        if post["format"] == "long" and assets.get("chapters"):
+            from .media.chapters import with_chapters
+            body = with_chapters(body, assets["chapters"])
+        description = "\n\n".join(x for x in [body, disclosure] if x)
         return PublishRequest(
             platform=platform, brand=brand, settings=self.settings, format=post["format"],
             title=post.get("title", ""), caption=caption, description=description, tags=tags,
             video_path=video, image_paths=images, thumbnail_path=thumb, public_urls=public,
+            captions_path=out / assets["captions_srt"] if assets.get("captions_srt") else None,
             ai_generated=True, realistic_synthetic=brand.realistic_synthetic_media,
             has_paid_promotion=bool((post.get("meta") or {}).get("sponsored")),
         )

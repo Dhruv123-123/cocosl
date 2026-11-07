@@ -14,6 +14,7 @@ from PIL import Image
 
 from ..config import BrandProfile, Settings
 from ..schemas import Script, Segment
+from . import chapters
 from .captions import time_segment, time_segment_words, write_srt
 from .carousel import SlideKit, SlideText, render_carousel
 from .images import generate_images
@@ -74,7 +75,7 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
         images.append(images[-1])
 
     tts = synthesize_segments(settings, brand, lines, work / "voice")
-    beats, cues, slots, t = [], [], [], 0.0
+    beats, cues, slots, t, starts = [], [], [], 0.0, []
     seg_words = tts.words or [None] * len(lines)
     from .charts import render_chart_clip
     for i, (line, head, img, dur) in enumerate(zip(lines, heads, images, tts.durations)):
@@ -88,6 +89,7 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
         else:
             cues += time_segment(line, t + LEAD, max(0.4, dur - LEAD))
         slots.append(slot)
+        starts.append((t, segments[i].heading if i < len(segments) else ""))
         t += slot
 
     audio = out / "audio.wav"
@@ -135,7 +137,7 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
                                "user-supplied via FACTORY_MUSIC_DIR; keep the licence on file"))
     return {"video": video, "audio": audio, "captions_srt": srt, "images": [r.path for r in imgs], "slides": [],
             "thumbnail": thumb, "thumbnail_variants": [thumb, *variants], "duration": round(duration, 3),
-            "provenance": prov}
+            "chapters": chapters.build(starts, duration) if fmt == "long" else [], "provenance": prov}
 
 
 # ---------------------------------------------------------------- slides

@@ -28,6 +28,12 @@
   <div class="card">
     <div class="card-head"><h2>Media</h2></div>
     {{ m.media(post, assets) }}
+    {% if media_checks %}
+    <div class="banner {{ 'banner-block' if media_checks|selectattr('level', 'equalto', 'block')|list else 'banner-info' }} mt">
+      <strong>Platform check:</strong>
+      <ul style="margin:4px 0 0 18px">{% for i in media_checks %}<li>{{ i.platform }}: {{ i.message }}{{ '' if i.level == 'block' else ' (warning)' }}</li>{% endfor %}</ul>
+    </div>
+    {% endif %}
     {% if assets.thumbnail_variants and assets.thumbnail_variants|length > 1 %}
     <h3 class="mt">Thumbnail</h3>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px">
