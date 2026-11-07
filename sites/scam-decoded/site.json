@@ -39,5 +39,24 @@
   "affiliates": [],
   "disclaimer": "Educational content, not legal or financial advice. Example messages, names and numbers are fictional. Check current rules with the official source before acting.",
   "ai_disclosure": "We use AI tools to help with visuals and drafts. A human chooses every topic, checks the facts and approves everything before it is published.",
-  "analytics_snippet": ""
+  "analytics_snippet": "",
+  "ladder": [
+    {
+      "slug": "parents",
+      "name": "Protect Your Parents",
+      "price": 29,
+      "code": "KITPARENTS",
+      "code_off": 10,
+      "buy_url": "https://example.gumroad.com/l/protect-your-parents",
+      "pages": 20,
+      "cover": "/img/parents-cover.png"
+    },
+    {
+      "slug": "teams",
+      "name": "Spot It, Stop It: Scam Awareness Training Pack",
+      "price": 99,
+      "buy_url": "https://example.gumroad.com/l/spot-it-stop-it",
+      "cover": "/img/teams-cover.png"
+    }
+  ]
 }

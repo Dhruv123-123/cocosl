@@ -12,7 +12,7 @@ Copy-paste listing for Gumroad, Stan Store or Lemon Squeezy. Replace anything in
 
 - **Price:** $9 (impulse price; the audience is buying for parents, so keep it under $10)
 - **Launch:** $5 for the first 7 days with code `LAUNCH`, only while that's actually true. No fake countdowns or "only 3 left".
-- **Bundle later:** with a "Parents' Phone Setup" checklist at $15.
+- **Next step up:** Protect Your Parents ($29, $19 for kit buyers with `KITPARENTS`). See `LADDER.md`.
 
 ## Title options
 
@@ -49,6 +49,8 @@ scams, fraud prevention, elder fraud, identity theft, credit freeze, family safe
 ## Thank-you / delivery message
 
 > Thanks for getting the kit. Start with page 2 and book the 15-minute family meeting this week. If you have a question, reply to the receipt email.
+>
+> Helping a parent? Our 20-page **Protect Your Parents** guide has every setting to change on their phone, bank and credit, plus 10 word-for-word phone scripts. Kit buyers get $10 off with code `KITPARENTS`.
 
 ## Rules for promoting it
 

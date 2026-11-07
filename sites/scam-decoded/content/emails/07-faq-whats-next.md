@@ -24,3 +24,5 @@ Two weeks in. Quick recap, then the questions people ask before getting the kit.
 Thanks for reading. Forward this to the person in your family who answers every text.
 
 The Scam Decoded team
+
+P.S. Two more things we make, if they fit: **[Protect Your Parents](/parents/)** is a 20-page setup guide with 10 phone scripts for older parents (kit buyers get $10 off with code KITPARENTS), and **[Spot It, Stop It](/teams/)** is a ready-to-run scam training session if you manage a team at work.

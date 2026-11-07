@@ -9,7 +9,7 @@ Check @scamdecoded is free on Instagram, TikTok and YouTube before creating acco
 | `../../brands/scam-decoded.yaml` | Brand profile: pillars, voice, palette, accounts, affiliates, AI disclosure |
 | `content.json` | 14 Shorts (30–45s), 14 TikTok cuts (60–90s, second worked example each), 8 carousels. Every hook opens with a number. |
 | `lead-magnet.json` | Free checklist for the link-in-bio email signup |
-| `product/` | The Family Scam-Proofing Kit: PDF, source HTML, store listing |
+| `product/` | The product ladder (see `product/LADDER.md`): Family Scam-Proofing Kit ($9), Protect Your Parents guide ($29, `protect-your-parents/`), Spot It, Stop It team training pack ($99, `team-training/`, build with `python3 build.py`); PDFs, sources and store listings |
 | `POSTING_PLAN.md` | 14-day schedule |
 | `weeks-3-6.json`, `POSTING_PLAN_WEEKS_3-6.md` | Nov 21 – Dec 18: 12 Shorts, 12 TikTok cuts, 8 carousels, 4 YouTube long-form (holiday-season scams) |
 

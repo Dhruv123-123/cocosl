@@ -61,3 +61,17 @@ def test_provider_switch_and_checker_url(tmp_path, monkeypatch):
     assert 'href="/scam/kit/"' in home
     seq = json.loads((out / "emails" / "sequence.json").read_text())
     assert "https://checker.example.org/" in "".join(e["html"] for e in seq)
+
+
+def test_product_ladder_pages_and_upsells(tmp_path, monkeypatch):
+    mod, out = build(tmp_path, monkeypatch)
+    parents = (out / "parents" / "index.html").read_text()
+    teams = (out / "teams" / "index.html").read_text()
+    assert "$29" in parents and "KITPARENTS" in parents
+    assert "$99" in teams and "One organization" in teams
+    assert 'href="/parents/"' in (out / "kit" / "index.html").read_text()
+    assert any("parents buy_url" in w for w in mod.WARNINGS)
+    seq = json.loads((out / "emails" / "sequence.json").read_text())
+    assert "/parents/" in seq[-1]["html"] and "/teams/" in seq[-1]["html"]
+    sitemap = (out / "sitemap.xml").read_text()
+    assert "/parents/" in sitemap and "/teams/" in sitemap

@@ -224,6 +224,7 @@ def layout(*, title: str, description: str, path: str, body: str, noindex: bool 
 <main>{body}</main>
 <footer><div class="wrap">
 <p>{socials}</p>
+<p><a href="{u('/parents/')}">Protect Your Parents</a> · <a href="{u('/teams/')}">Training for teams</a></p>
 <p><a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/privacy/')}">Privacy</a> · {esc(CFG['contact_email'])}</p>
 <p class="small">{esc(CFG['disclaimer'])} {esc(CFG['ai_disclosure'])}</p>
 </div></footer>
@@ -337,6 +338,106 @@ def kit() -> str:
   <li>General education, not legal or financial advice.</li></ul>
   <p><a class="button" href="{esc(buy)}">Get the kit for {price(p)}</a></p>
   {checker_box()}
+  <div class="product">
+    <img src="{u('/img/parents-cover.png')}" alt="Cover of Protect Your Parents" width="170" height="220" loading="lazy">
+    <div><h2>Helping a parent?</h2>
+    <p><strong>Protect Your Parents</strong> is our 20-page setup guide: every setting to change on their phone, bank and credit, plus 10 word-for-word phone scripts. Kit buyers get $10 off.</p>
+    <p><a href="{u('/parents/')}">See the guide →</a></p></div>
+  </div>
+</section>"""
+
+
+def ladder(slug: str) -> dict:
+    return next(x for x in CFG.get("ladder", []) if x["slug"] == slug)
+
+
+def buy_link(p: dict) -> str:
+    if "example." in p["buy_url"] or is_placeholder(p["buy_url"]):
+        WARNINGS.append(f"{p['slug']} buy_url is still a placeholder: {p['buy_url']}")
+    return p["buy_url"]
+
+
+def product_ld(p: dict, description: str) -> str:
+    ld = {"@context": "https://schema.org", "@type": "Product", "name": p["name"], "image": absu(p["cover"]),
+          "description": description, "brand": {"@type": "Brand", "name": CFG["name"]},
+          "offers": {"@type": "Offer", "price": str(p["price"]), "priceCurrency": "USD", "url": p["buy_url"],
+                     "availability": "https://schema.org/InStock"}}
+    return f'<script type="application/ld+json">{json.dumps(ld)}</script>'
+
+
+def parents_page() -> str:
+    p = ladder("parents")
+    buy = buy_link(p)
+    inside = [
+        ("A three-visit plan", "The conversation, the setup, then practice. Fits a holiday or a weekend."),
+        ("What to say, and what not to", "Openers that work, and answers to \"I'd never fall for that\"."),
+        ("40+ setup checks", "Phone, email, bank, credit and computer, in plain English: silence unknown callers, carrier PIN, bank alerts, a trusted contact, credit freezes, remote-access apps."),
+        ("10 phone scripts", "Word-for-word lines for the grandchild-in-trouble call, the \"bank fraud department\", Medicare, the IRS, tech support, utility shut-offs, prizes and online romance."),
+        ("Scripts for you", "Calling their bank together, the sibling who isn't worried, and a parent still talking to a scammer."),
+        ("Fill-in sheets", "Family Plan, Important Numbers (official numbers included), monthly check-in tracker, phone-side card."),
+        ("If it happens", "Warning signs, the first hour, and how to spot the \"recovery\" scam that follows."),
+    ]
+    items = "".join(f"<li><strong>{esc(a)}.</strong> {esc(b)}</li>" for a, b in inside)
+    code = (f'<p class="small">Bought the {esc(CFG["product"]["name"])}? Use code <strong>{esc(p["code"])}</strong> '
+            f'for ${p["code_off"]:g} off.</p>') if p.get("code") else ""
+    return f"""{product_ld(p, "A setup guide and phone scripts to protect older parents from scams.")}
+<section class="hero"><div class="wrap grid">
+  <div>
+    <p class="kicker">Our own product · {price(p)}</p>
+    <h1>{esc(p['name'])}</h1>
+    <p class="lede">Your parents answer the phone. Scammers know it. This {p['pages']}-page guide walks you through three short visits that make them much harder to scam, without making them feel foolish.</p>
+    <p><a class="button" href="{esc(buy)}">Get the guide for {price(p)}</a></p>
+    {code}
+    <p class="small">Printable PDF, US Letter. {CFG['product']['refund_days']}-day refund.</p>
+  </div>
+  <img class="cover" src="{u(p['cover'])}" alt="Cover of {esc(p['name'])}" width="306" height="396">
+</div></section>
+<section class="wrap">
+  <h2>What's inside</h2>
+  <ul class="inside">{items}</ul>
+  <h2>Kit or guide?</h2>
+  <p>The <a href="{u('/kit/')}">{esc(CFG['product']['name'])}</a> ({price(CFG['product'])}) is a whole-family plan: kids' credit freezes, a family meeting, fridge and wallet cards. <strong>Protect Your Parents</strong> goes deep on one job: setting up and coaching a parent. Many families get both; guide buyers get the kit free.</p>
+  <h2>Honest notes</h2>
+  <ul><li>No guide can promise your parents will never be scammed. This one helps them slow down and check.</li>
+  <li>Phone menus change with updates; the guide tells you what to look for, not just where to tap.</li>
+  <li>General education, not legal or financial advice.</li></ul>
+  <p><a class="button" href="{esc(buy)}">Get the guide for {price(p)}</a></p>
+</section>"""
+
+
+def teams_page() -> str:
+    p = ladder("teams")
+    buy = buy_link(p)
+    inside = [
+        ("25 editable slides with speaker notes", "The 3 tells, phishing, the fake boss, invoice and bank-change fraud, payroll diversion, fake IT calls and code theft, AI voice clones, QR codes, the verify rule and reporting."),
+        ("3 practice scenarios", "With model answers, for pairs or breakout rooms."),
+        ("A 12-question quiz", "With answer key and explanations."),
+        ("Certificates and an attendance log", "Editable PowerPoint and printable PDF."),
+        ("A verification policy template", "One page on bank changes, new payees, gift cards, employee data and codes."),
+        ("Follow-up emails and a poster", "\"Verify before you pay\", for the office or the finance desk."),
+    ]
+    items = "".join(f"<li><strong>{esc(a)}.</strong> {esc(b)}</li>" for a, b in inside)
+    return f"""{product_ld(p, "A ready-to-run 45-minute scam awareness training session for small teams.")}
+<section class="hero"><div class="wrap grid">
+  <div>
+    <p class="kicker">For small businesses · {price(p)}</p>
+    <h1>Spot It, Stop It: scam awareness training for your team</h1>
+    <p class="lede">Most scams that hit small businesses don't hack anything. They ask a person to pay an invoice, change bank details, buy gift cards or read out a code. Run a 45-minute session yourself, no security background needed.</p>
+    <p><a class="button" href="{esc(buy)}">Get the training pack for {price(p)}</a></p>
+    <p class="small">One organization, any number of employees. Zip download: PPTX, PDF.</p>
+  </div>
+  <img class="cover" src="{u(p['cover'])}" alt="Title slide of the Spot It, Stop It training deck" width="400" height="225">
+</div></section>
+<section class="wrap">
+  <h2>What's inside</h2>
+  <ul class="inside">{items}</ul>
+  <h2>Who it's for</h2>
+  <p>Owners and office managers of teams of 3 to 100, HR and finance leads, and anyone who pays invoices or runs payroll. If you already pay for a security awareness platform, you probably don't need this.</p>
+  <h2>Honest notes</h2>
+  <ul><li>Training reduces risk; it can't remove it. The policy template and the verify rule do the heavy lifting.</li>
+  <li>It doesn't make you "compliant" with any specific law, standard or insurer. The attendance log helps you keep records.</li>
+  <li>General education, not legal, compliance or financial advice.</li></ul>
+  <p><a class="button" href="{esc(buy)}">Get the training pack for {price(p)}</a></p>
 </section>"""
 
 
@@ -415,6 +516,10 @@ def build() -> list[str]:
         ("/free/thanks/", "Your checklist", "Download your checklist.", thanks(), True),
         ("/kit/", f"{CFG['product']['name']} ({price(CFG['product'])})",
          "A printable family plan against scams: meeting script, freeze trackers, scam decoder, fridge card.", kit(), False),
+        ("/parents/", f"{ladder('parents')['name']} ({price(ladder('parents'))})",
+         "A setup guide and 10 phone scripts to protect older parents from scams.", parents_page(), False),
+        ("/teams/", "Scam awareness training for small teams ($99)",
+         "A ready-to-run 45-minute scam awareness session: slides, quiz, certificates.", teams_page(), False),
         ("/checker/", "Is this a scam? Free checker", "Check a suspicious text or email.", checker_page(), False),
     ]
     for p in load_dir("pages"):
