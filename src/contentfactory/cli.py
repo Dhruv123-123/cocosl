@@ -64,6 +64,15 @@ def cmd_status(args):
     print("\nPlatform credentials:")
     for platform, missing in credential_status(f.settings).items():
         print(f"  {platform:10s} {'ready' if not missing else 'missing ' + ', '.join(missing)}")
+    from .health import system_status
+    st = system_status(f)
+    print("\nPublications: " + (", ".join(f"{k}={v}" for k, v in st["publications"].items()) or "none"))
+    rq = {k: v for k, v in st["render_queue"].items() if k != "recent_failures" and v}
+    print("Render queue: " + (", ".join(f"{k}={v}" for k, v in rq.items()) or "empty"))
+    hb = st["worker"]["heartbeat"]
+    print("Worker: " + (f"last tick {st['worker']['minutes_since']} min ago" if hb else "not running"))
+    for a in st["alerts"]:
+        print(f"  ! {a}")
 
 
 def cmd_brands(args):
@@ -403,7 +412,8 @@ def build_parser() -> argparse.ArgumentParser:
 def _extend(sub) -> None:
     """Optional command groups that live in their own modules."""
     for mod in ("contentfactory.business.cli", "contentfactory.publish.cli", "contentfactory.funnel.cli",
-                "contentfactory.community.cli", "contentfactory.site"):
+                "contentfactory.community.cli", "contentfactory.site",
+                "contentfactory.renderq"):
         try:
             module = __import__(mod, fromlist=["register"])
         except ImportError:
