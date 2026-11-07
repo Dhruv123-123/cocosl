@@ -452,3 +452,121 @@ def _to_wav(data: bytes, suffix: str, out: Path) -> None:
         ffmpeg(["-i", str(tmp), "-ar", str(SAMPLE_RATE), "-ac", "1", "-c:a", "pcm_s16le", str(out)])
     finally:
         tmp.unlink(missing_ok=True)
+
+
+# ---------------------------------------------------------------- your own voice
+VOICE_EXTS = (".wav", ".mp3", ".m4a", ".aac", ".flac", ".ogg")
+
+
+def human_voice_source(settings: Settings, brand: BrandProfile, post_id) -> Path | None:
+    """voice/<brand>/post-<id>.<ext> (one take) or voice/<brand>/post-<id>/ (one file per line)."""
+    if post_id is None:
+        return None
+    base = settings.home / "voice" / brand.slug / f"post-{post_id}"
+    if base.is_dir() and any(p.suffix.lower() in VOICE_EXTS for p in base.iterdir()):
+        return base
+    for ext in VOICE_EXTS:
+        if base.with_suffix(ext).is_file():
+            return base.with_suffix(ext)
+    return None
+
+
+def _to_wav(src: Path, dst: Path, start: float | None = None, length: float | None = None) -> Path:
+    args = []
+    if start is not None:
+        args += ["-ss", f"{start:.3f}"]
+    args += ["-i", str(src)]
+    if length is not None:
+        args += ["-t", f"{length:.3f}"]
+    ffmpeg([*args, "-ac", "1", "-ar", "44100", "-c:a", "pcm_s16le", str(dst)])
+    return dst
+
+
+def _quiet_runs(path: Path, min_gap: float = 0.25, threshold_db: float = -40.0) -> list[float]:
+    """Midpoints (seconds) of pauses at least `min_gap` long."""
+    import math
+    import wave
+    from array import array
+    with wave.open(str(path)) as w:
+        rate = w.getframerate()
+        samples = array("h", w.readframes(w.getnframes()))
+    win = max(1, int(rate * 0.02))
+    limit = 32768 * 10 ** (threshold_db / 20)
+    mids, run_start = [], None
+    for i in range(0, len(samples), win):
+        chunk = samples[i:i + win]
+        quiet = math.sqrt(sum(x * x for x in chunk) / max(1, len(chunk))) < limit
+        t = i / rate
+        if quiet and run_start is None:
+            run_start = t
+        elif not quiet and run_start is not None:
+            if t - run_start >= min_gap:
+                mids.append((run_start + t) / 2)
+            run_start = None
+    return mids
+
+
+def _match_pauses(targets: list[float], pauses: list[float]) -> list[float]:
+    """Pick one pause per target, in order, minimising total distance; fall back to the targets
+    themselves when the take has fewer pauses than lines."""
+    k, m = len(targets), len(pauses)
+    if k == 0:
+        return []
+    if m < k:
+        return targets
+    inf = float("inf")
+    best = [[inf] * m for _ in range(k)]
+    back = [[-1] * m for _ in range(k)]
+    for j in range(m):
+        best[0][j] = abs(pauses[j] - targets[0])
+    for i in range(1, k):
+        run, arg = inf, -1
+        for j in range(m):
+            if j - 1 >= 0 and best[i - 1][j - 1] < run:
+                run, arg = best[i - 1][j - 1], j - 1
+            if arg >= 0:
+                best[i][j] = run + abs(pauses[j] - targets[i])
+                back[i][j] = arg
+    j = min(range(m), key=lambda x: best[k - 1][x])
+    out = []
+    for i in range(k - 1, -1, -1):
+        out.append(pauses[j])
+        j = back[i][j]
+    return out[::-1]
+
+
+def human_voice(settings: Settings, brand: BrandProfile, post_id, texts: list[str], out_dir: Path) -> TTSResult | None:
+    """Use the owner's recorded narration instead of a synthetic voice, if they dropped one in.
+
+    One file per line (sorted by name) is used as-is. A single take is cut at the pauses nearest to
+    where each line should end (by word count), so the beats follow the recording."""
+    src = human_voice_source(settings, brand, post_id)
+    if src is None:
+        return None
+    out_dir.mkdir(parents=True, exist_ok=True)
+    notes = [f"your own narration: {src.name}"]
+    if src.is_dir():
+        files = sorted(p for p in src.iterdir() if p.suffix.lower() in VOICE_EXTS)
+        if len(files) != len(texts):
+            raise MediaError(f"{src} has {len(files)} recording(s) but the script has {len(texts)} lines "
+                             "(including the closing CTA); record one file per line or a single take")
+        paths = [_to_wav(f, out_dir / f"seg-{i:02d}.wav") for i, f in enumerate(files)]
+    else:
+        whole = _to_wav(src, out_dir / "take.wav")
+        total = probe(whole)["duration"]
+        weights = [max(1, len(t.split())) for t in texts]
+        targets, acc = [], 0
+        for wgt in weights[:-1]:
+            acc += wgt
+            targets.append(total * acc / sum(weights))
+        cuts = _match_pauses(targets, _quiet_runs(whole))
+        bounds = [0.0, *cuts, total]
+        paths = [_to_wav(whole, out_dir / f"seg-{i:02d}.wav", bounds[i], max(0.2, bounds[i + 1] - bounds[i]))
+                 for i in range(len(texts))]
+        notes.append("single take split at pauses")
+    for p in paths:
+        trim_silence(p)
+    res = TTSResult("human", "own recording", paths, [probe(p)["duration"] for p in paths], notes,
+                    [None] * len(paths))
+    align_with_whisper(res)
+    return res
