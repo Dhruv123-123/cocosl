@@ -141,3 +141,32 @@ def test_weeks_13_21_content_is_valid_routed_and_new(factory):
     sext = [i for i in items if "sextortion" in i["script"]["hashtags"]]
     assert sext and all("988" in (i["script"]["caption"] + i["script"]["description"] + " ".join(
         s["narration"] for s in i["script"]["segments"])) for i in sext)
+
+
+def test_weeks_22_26_april_content_is_valid_and_new(factory):
+    from contentfactory.schemas import Script
+    brand = factory.brand("scam-decoded")
+    items = json.loads((CONTENT.parent / "weeks-22-26.json").read_text())
+    formats = [i["format"] for i in items]
+    assert formats.count("carousel") == 10 and formats.count("long") == 5
+    tiktok = [i for i in items if i.get("platforms") == ["tiktok"]]
+    shorts = [i for i in items if i.get("platforms") == ["instagram", "youtube"]]
+    assert len(tiktok) == len(shorts) == 15
+    words = lambda i: sum(len(s["narration"].split()) for s in i["script"]["segments"])
+    assert all(60 <= words(i) <= 120 for i in shorts)
+    assert all(150 <= words(i) <= 230 for i in tiktok)
+    earlier = set()
+    for name in ("content.json", "weeks-3-6.json", "weeks-7-12.json", "weeks-13-21.json"):
+        earlier |= {i["script"]["title"] for i in json.loads((CONTENT.parent / name).read_text())}
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        assert sc.title not in earlier, sc.title
+        assert any(ch.isdigit() for ch in sc.hook), sc.hook
+        assert sc.claims_to_verify and sc.sources
+        assert all(brand.account(p) for p in item.get("platforms", []))
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments), sc.title
+        assert "guarantee" not in (sc.caption + " ".join(s.narration for s in sc.segments)).lower()
+    affiliate = [i for i in items if "comparison (link in bio)" in i["script"]["caption"]]
+    assert affiliate and all("affiliate" in i["script"]["caption"] for i in affiliate)
+    plan = (CONTENT.parent / "POSTING_PLAN_WEEKS_22-26.md").read_text()
+    assert all(f"#{n} " in plan for n in range(len(items)))
