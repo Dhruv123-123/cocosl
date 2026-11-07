@@ -37,13 +37,7 @@ HIGH_RISK = ("the deferred-interest example (re-run the arithmetic), holiday hou
 
 
 def posting_plan(items: list[dict]) -> str:
-    by_key = {it["key"]: (n, it) for n, it in enumerate(items, 1)}
-    assert sorted(k for *_, k in SCHEDULE) == sorted(by_key), "schedule must list every piece exactly once"
-    rows = []
-    for day, time, key in SCHEDULE:
-        n, it = by_key[key]
-        sub = "carousels" if it["format"] in ("carousel", "image") else "videos"
-        rows.append(f"| {day} | {time} | {WHERE[it['format']]} | {sub}/{n:02d}-… | {it['format']} | {it['script']['title']} |")
+    rows = plan_rows(items, SCHEDULE)
     counts = {f: sum(1 for i in items if i["format"] == f) for f in ("short", "mid", "carousel", "image")}
     return f"""# Dinero Simple: holiday pack posting plan (Nov 20 – Dec 31, 2026)
 
@@ -64,12 +58,13 @@ Source: `launch/dinero-simple/content-holiday-2026.json`. Folder numbers match t
 """ + "\n".join(rows) + "\n"
 
 
-def review_checklist(items: list[dict]) -> str:
-    parts = [f"""# Dinero Simple holiday pack 2026: review checklist
+def review_checklist(items: list[dict], title: str = "holiday pack 2026", folder: str = "holiday-2026",
+                     high_risk: str = HIGH_RISK, note: str = "Store terms and provider hours change; check them the week you post.") -> str:
+    parts = [f"""# Dinero Simple {title}: review checklist
 
-Nothing in `content-factory/dinero-simple/holiday-2026/` goes out until both boxes for that piece are ticked: a fluent Spanish speaker has read every word (on screen, caption, narration) and fixed anything that sounds translated, and every fact listed under it has been checked. Each folder's `caption.txt` has the same facts under CHECK BEFORE POSTING.
+Nothing in `content-factory/dinero-simple/{folder}/` goes out until both boxes for that piece are ticked: a fluent Spanish speaker has read every word (on screen, caption, narration) and fixed anything that sounds translated, and every fact listed under it has been checked. Each folder's `caption.txt` has the same facts under CHECK BEFORE POSTING.
 
-Highest-risk facts (check these first): {HIGH_RISK}. Store terms and provider hours change; check them the week you post.
+Highest-risk facts (check these first): {high_risk}. {note}
 """]
     for n, it in enumerate(items, 1):
         sub = "carousels" if it["format"] in ("carousel", "image") else "videos"
@@ -77,6 +72,17 @@ Highest-risk facts (check these first): {HIGH_RISK}. Store terms and provider ho
         lines += [f"- [ ] {c}" for c in it["script"]["claims_to_verify"]]
         parts.append("\n".join(lines) + "\n")
     return "\n".join(parts)
+
+
+def plan_rows(items: list[dict], schedule: list) -> list[str]:
+    by_key = {it["key"]: (n, it) for n, it in enumerate(items, 1)}
+    assert sorted(k for *_, k in schedule) == sorted(by_key), "schedule must list every piece exactly once"
+    rows = []
+    for day, time, key in schedule:
+        n, it = by_key[key]
+        sub = "carousels" if it["format"] in ("carousel", "image") else "videos"
+        rows.append(f"| {day} | {time} | {WHERE[it['format']]} | {sub}/{n:02d}-… | {it['format']} | {it['script']['title']} |")
+    return rows
 
 
 if __name__ == "__main__":

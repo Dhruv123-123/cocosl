@@ -260,3 +260,38 @@ def test_remittance_calculator_page_builds_and_is_linked(tmp_path):
         assert needle in page, needle
     assert "fetch(" not in page and "XMLHttpRequest" not in page  # no scraping, nothing leaves the browser
     assert "/calculadora-de-envios/" in (site / "public" / "links" / "index.html").read_text()
+
+
+def test_newyear_pack_rotates_formats_and_never_takes_a_january_slot():
+    items = json.loads((DS / "content-newyear-2027.json").read_text())
+    fmts = [i["format"] for i in items]
+    assert len(items) == 8 and all(a != b for a, b in zip(fmts, fmts[1:]))
+    rows = lambda text: [(r.split("|")[1].strip(), r.split("|")[2].strip(), r.split("|")[3]) for r in text.splitlines()  # noqa: E731
+                         if r.startswith("| ") and " ene |" in r]
+    taken = rows((DS / "POSTING_PLAN_MONTH_2.md").read_text()) + rows((DS / "POSTING_PLAN_ESTAFAS.md").read_text())
+    mine = rows((DS / "POSTING_PLAN_NEWYEAR_2027.md").read_text())
+    assert len(mine) == 8 and not {(d, t) for d, t, _ in mine} & {(d, t) for d, t, _ in taken}
+    for day in {d for d, _, _ in mine}:  # at most two posts a day on any platform
+        on = [p for d, _, p in taken + mine if d == day]
+        for platform in ("TikTok", "Instagram", "YouTube"):
+            assert sum(platform in p for p in on) <= 2, (day, platform)
+    for i in items:
+        if i["format"] == "mid":
+            assert 190 <= sum(len(s["narration"].split()) for s in i["script"]["segments"]) <= 250, i["key"]
+
+
+def test_paycheck_calculator_uses_the_cited_2026_tables():
+    import re
+    page = (ROOT / "sites" / "dinero-simple" / "content" / "pages" / "calculadora-de-sueldo.md").read_text()
+    js = page[page.index("// Federal tables"):page.index("var $ =")]
+    # IRS Rev. Proc. 2025-32 and the SSA 2026 fact sheet
+    for frag in ("single: [[12400, .10], [50400, .12], [105700, .22], [201775, .24], [256225, .32], [640600, .35]",
+                 "mfj: [[24800, .10], [100800, .12], [211400, .22], [403550, .24], [512450, .32], [768700, .35]",
+                 "hoh: [[17700, .10], [67450, .12], [105700, .22], [201750, .24], [256200, .32], [640600, .35]",
+                 "standard: { single: 16100, mfj: 32200, hoh: 24150, mfs: 16100 }", "childCredit: 2200",
+                 "ssRate: .062, ssWageBase: 184500, medicareRate: .0145, addlMedicareRate: .009, addlMedicareOver: 200000"):
+        assert frag in js, frag
+    assert "Rev. Proc. 2025-32" in js and "SSA" in js
+    assert not re.search(r"fetch\(|XMLHttpRequest|https?://", page.split("<script>")[1].split("</script>")[0])
+    # the printed table on the page matches the script
+    assert "| Soltero | $16,100 | $12,400 | $50,400 | $105,700 | $201,775 | $256,225 | $640,600 |" in page

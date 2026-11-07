@@ -201,6 +201,18 @@
   },
   "free_tools": [
     {
+      "name": "Calculadora de sueldo neto",
+      "base": "site",
+      "path": "/calculadora-de-sueldo/",
+      "short": "Cuánto te llega en cada cheque después del impuesto federal, Seguro Social y Medicare. Tablas de 2026; nada sale de tu celular.",
+      "posts": [
+        "como-hacer-un-presupuesto"
+      ],
+      "pillars": [
+        "presupuesto"
+      ]
+    },
+    {
       "name": "Calculadora de envíos de dinero",
       "base": "site",
       "path": "/calculadora-de-envios/",
