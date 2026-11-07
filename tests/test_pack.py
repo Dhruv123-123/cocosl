@@ -8,6 +8,7 @@ from contentfactory.pack import caption_txt, est_seconds, plan, platforms_for, r
 
 ROOT = Path(__file__).resolve().parents[1]
 MONTHS = sorted((ROOT / "launch" / "money-made-simple").glob("month-*/content.json"))
+MONTHS_BY_NAME = {p.parent.name: p for p in MONTHS}
 MONTH = MONTHS[0]
 EVERGREEN = ROOT / "launch" / "money-made-simple" / "evergreen" / "content.json"
 SERIES = ROOT / "launch" / "money-made-simple" / "youtube-series" / "content.json"
@@ -468,3 +469,37 @@ def test_one_platform_never_gets_two_posts_at_one_minute(factory):
     assert tiktok == ["12:30", "18:00"] or tiktok == ["18:00", "19:00"]
     taken = [(p, s.at(p)) for s in slots for p in s.platforms]
     assert len(taken) == len(set(taken))
+
+
+SEARCH_GAPS = ROOT / "launch" / "money-made-simple" / "search-gaps" / "content.json"
+
+
+def test_search_gap_scripts_lead_with_the_phrase_and_fit_the_calendar(factory):
+    """Scouting's five search gaps: phrase-first titles, number hooks, TikTok cuts, in open slots only."""
+    brand = factory.brand("money-made-simple")
+    items = _items(SEARCH_GAPS)
+    shorts = [i for i in items if i["format"] == "short"]
+    assert len(shorts) == 5 and len(items) == 7
+    phrases = ["net worth", "good credit score", "high-yield savings rates", "irs free file", "how much house"]
+    for p, it in zip(phrases, shorts):
+        sc = it["script"]
+        assert sc["title"].lower().startswith(p) or p in sc["title"].lower()[:30], sc["title"]
+        assert any(ch.isdigit() for ch in sc["hook"])
+        assert est_seconds([s["narration"] for s in sc["segments"]]) <= 50
+        assert 55 <= est_seconds([s["narration"] for s in tiktok_segments(it)]) <= 90
+    others = {i["script"]["title"].lower() for p in MONTHS + [EVERGREEN, SERIES, BASICS, FIRST_1000, MONEY_BY_AGE]
+              for i in _items(p)}
+    assert not others & {i["script"]["title"].lower() for i in items}
+    slots, leftover = plan(brand, items, date(2027, 1, 6), 32, {"short": "wed", "carousel": "sun"})
+    assert not leftover
+    allslots = list(slots)
+    for path, start, days in [(MONTHS_BY_NAME["month-2"], date(2026, 12, 21), 31),
+                              (MONTHS_BY_NAME["month-3"], date(2027, 1, 21), 31)]:
+        allslots += plan(brand, _items(path), start, days, {"carousel": "mon,tue,wed,thu,fri"})[0]
+    minute, day = {}, {}
+    for s in allslots:
+        for p in s.platforms:
+            minute[(p, s.at(p))] = minute.get((p, s.at(p)), 0) + 1
+            day[(p, s.at(p).date())] = day.get((p, s.at(p).date()), 0) + 1
+    assert max(minute.values()) == 1
+    assert max(day.values()) <= brand.cadence.max_posts_per_day_per_platform
