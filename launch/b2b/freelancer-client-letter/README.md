@@ -11,12 +11,12 @@ nothing was bought.
 | File | What it is |
 |---|---|
 | `product.json` | Labels, call to action (firm phone + booking link) and formats: email, social image, printable handout. |
-| `issues.json` | 3 sample issues: Jan 5 (Jan 15 payment, fewer 1099s), Feb 2 (what to bring), Mar 2 (2027 quarterly payments and the safe harbor). Delivered to the firm 2 weeks early. |
+| `issues.json` | 12 issues, Jan to Dec 2027. The 3 samples: Jan 5 (Jan 15 payment, fewer 1099s), Feb 2 (what to bring), Mar 2 (2027 quarterly payments and the safe harbor). Then: April 15 and extensions, records and a business account, the June 15 payment, home office, mileage log, Sept 15 payment and IRS scams, retirement plans, health insurance open enrollment, year-end and W-9s. Delivered to the firm 2 weeks early. |
 | `brands/example.json` | A **fictional** firm ("Sample Ledger & Tax Co.", 555 phone, example.com). |
 | `brands/placeholders.json` | Every brand slot shown as a token, for the firm's review. |
 | `samples/month-1.md` … `month-3.md` | Readable master copy of each issue. |
 | `sales-sheet.html` | One-page sales sheet with the 3 plans; `../build.py` writes `out/sales-sheet.pdf`. |
-| `PROSPECTS.csv` | 30 firms in Montana (15) and Idaho (15). |
+| `PROSPECTS.csv` | 40 firms in Montana (25) and Idaho (15), sorted by a 1–5 `fit_score` (tax and bookkeeping practices first). |
 
 Build from `launch/b2b/`: `python3 build.py freelancer-client-letter` (or `--brand freelancer-client-letter/clients/<slug>.json` for a client).
 
@@ -44,8 +44,8 @@ The firm sends this to its own clients, so it carries the firm's professional na
 
 ## Prospects (`PROSPECTS.csv`)
 
-30 firms from public directory listings: the Montana CPA lists on cpadirectory.com for Missoula and
-Bozeman, the Lantern Boise-area accounting listing, Lantern Twin Falls listings, and the Coeur d'Alene
+40 firms from public directory listings: the Montana CPA lists on cpadirectory.com for Missoula,
+Bozeman and Billings, the Lantern Boise-area accounting listing, Lantern Twin Falls listings, and the Coeur d'Alene
 Chamber member directory. Each row's `listed_in` column links the page. National chains (Jackson
 Hewitt, Liberty Tax, H&R Block) and franchise offices were left out, because local owners can't buy.
 

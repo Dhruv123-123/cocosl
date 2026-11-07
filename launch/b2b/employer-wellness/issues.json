@@ -31,7 +31,11 @@
       "lobby": {
         "kicker": "Money Made Simple",
         "headline": "Your 20-minute money reset.",
-        "bullets": ["Check your retirement contribution.", "Automate $25 a payday to savings.", "Pull your free credit reports."]
+        "bullets": [
+          "Check your retirement contribution.",
+          "Automate $25 a payday to savings.",
+          "Pull your free credit reports."
+        ]
       },
       "social": {
         "caption": "New year, 20-minute money reset: 1) Check your {{RETIREMENT_PLAN}} contribution in {{BENEFITS_PORTAL}}. 2) Set up an automatic transfer to savings on payday, even $25. 3) Pull your free credit reports at AnnualCreditReport.com. Questions about your benefits? Contact {{BENEFITS_CONTACT}}.",
@@ -43,10 +47,22 @@
         "Don't": "Recommend specific funds, accounts or amounts, or ask anyone what they earn or save."
       },
       "sources": [
-        {"name": "FTC: Free credit reports (weekly, from AnnualCreditReport.com)", "url": "https://consumer.ftc.gov/articles/free-credit-reports"},
-        {"name": "FTC: You now have permanent access to free weekly credit reports (Oct 2023)", "url": "https://consumer.ftc.gov/consumer-alerts/2023/10/you-now-have-permanent-access-free-weekly-credit-reports"},
-        {"name": "US Department of Labor: Top 10 Ways to Prepare for Retirement", "url": "https://www.dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/publications/dol-top-10-ways-to-prepare-for-retirement-booklet-2023.pdf"},
-        {"name": "CFPB: How do I get a free copy of my credit reports?", "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-get-a-free-copy-of-my-credit-reports-en-5/"}
+        {
+          "name": "FTC: Free credit reports (weekly, from AnnualCreditReport.com)",
+          "url": "https://consumer.ftc.gov/articles/free-credit-reports"
+        },
+        {
+          "name": "FTC: You now have permanent access to free weekly credit reports (Oct 2023)",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2023/10/you-now-have-permanent-access-free-weekly-credit-reports"
+        },
+        {
+          "name": "US Department of Labor: Top 10 Ways to Prepare for Retirement",
+          "url": "https://www.dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/publications/dol-top-10-ways-to-prepare-for-retirement-booklet-2023.pdf"
+        },
+        {
+          "name": "CFPB: How do I get a free copy of my credit reports?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-get-a-free-copy-of-my-credit-reports-en-5/"
+        }
       ]
     },
     {
@@ -78,7 +94,11 @@
       "lobby": {
         "kicker": "Tax season",
         "headline": "Tax season, minus the surprises.",
-        "bullets": ["Run the IRS withholding estimator.", "Side income? Set some aside.", "The IRS isn't texting you."]
+        "bullets": [
+          "Run the IRS withholding estimator.",
+          "Side income? Set some aside.",
+          "The IRS isn't texting you."
+        ]
       },
       "social": {
         "caption": "Tax season checklist: run the free IRS Tax Withholding Estimator, update your W-4 in {{BENEFITS_PORTAL}} if it says to, and if you earn money on the side, set some aside for taxes. One more thing: the IRS doesn't text you about refunds. Questions? Contact {{BENEFITS_CONTACT}}.",
@@ -90,10 +110,22 @@
         "Escalate": "Any email asking an employee to change direct deposit through a link: forward it to IT and {{BENEFITS_CONTACT}} the same day."
       },
       "sources": [
-        {"name": "IRS: Tax Withholding Estimator", "url": "https://www.irs.gov/individuals/tax-withholding-estimator"},
-        {"name": "IRS: Updated Tax Withholding Estimator reflects recent law changes", "url": "https://www.irs.gov/newsroom/updated-tax-withholding-estimator-lets-millions-of-taxpayers-take-one-big-beautiful-bill-changes-into-account-when-calculating-their-withholding"},
-        {"name": "IRS: Estimated taxes", "url": "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes"},
-        {"name": "IRS: Report fake IRS, Treasury or tax-related emails and messages", "url": "https://www.irs.gov/help/report-fraud/report-fake-irs-treasury-or-tax-related-emails-and-messages"}
+        {
+          "name": "IRS: Tax Withholding Estimator",
+          "url": "https://www.irs.gov/individuals/tax-withholding-estimator"
+        },
+        {
+          "name": "IRS: Updated Tax Withholding Estimator reflects recent law changes",
+          "url": "https://www.irs.gov/newsroom/updated-tax-withholding-estimator-lets-millions-of-taxpayers-take-one-big-beautiful-bill-changes-into-account-when-calculating-their-withholding"
+        },
+        {
+          "name": "IRS: Estimated taxes",
+          "url": "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes"
+        },
+        {
+          "name": "IRS: Report fake IRS, Treasury or tax-related emails and messages",
+          "url": "https://www.irs.gov/help/report-fraud/report-fake-irs-treasury-or-tax-related-emails-and-messages"
+        }
       ]
     },
     {
@@ -125,7 +157,11 @@
       "lobby": {
         "kicker": "Money Made Simple",
         "headline": "Checking your score never lowers it.",
-        "bullets": ["Autopay at least the minimum.", "Keep card balances low.", "Freezing your credit is free."]
+        "bullets": [
+          "Autopay at least the minimum.",
+          "Keep card balances low.",
+          "Freezing your credit is free."
+        ]
       },
       "social": {
         "caption": "Credit score myth: checking your own score lowers it. It doesn't. What actually moves it: paying on time (set up autopay for at least the minimum), keeping card balances low compared with your limits, and fixing mistakes on your free reports at AnnualCreditReport.com.",
@@ -137,10 +173,22 @@
         "Don't": "Ask about anyone's credit, or recommend a lender, card or credit repair company."
       },
       "sources": [
-        {"name": "FTC: Credit scores", "url": "https://consumer.ftc.gov/articles/credit-scores"},
-        {"name": "FTC: Understanding your credit", "url": "https://consumer.ftc.gov/articles/understanding-your-credit"},
-        {"name": "FTC: Free credit reports", "url": "https://consumer.ftc.gov/articles/free-credit-reports"},
-        {"name": "CFPB: Consumer reporting companies", "url": "https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/consumer-reporting-companies/"}
+        {
+          "name": "FTC: Credit scores",
+          "url": "https://consumer.ftc.gov/articles/credit-scores"
+        },
+        {
+          "name": "FTC: Understanding your credit",
+          "url": "https://consumer.ftc.gov/articles/understanding-your-credit"
+        },
+        {
+          "name": "FTC: Free credit reports",
+          "url": "https://consumer.ftc.gov/articles/free-credit-reports"
+        },
+        {
+          "name": "CFPB: Consumer reporting companies",
+          "url": "https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/consumer-reporting-companies/"
+        }
       ]
     },
     {
@@ -172,7 +220,11 @@
       "lobby": {
         "kicker": "Financial Literacy Month",
         "headline": "Your retirement plan in 10 minutes.",
-        "bullets": ["Check your contribution and match.", "Look at the fees.", "Changing jobs? Roll it over, don't cash out."]
+        "bullets": [
+          "Check your contribution and match.",
+          "Look at the fees.",
+          "Changing jobs? Roll it over, don't cash out."
+        ]
       },
       "social": {
         "caption": "April is Financial Literacy Month. Spend 10 minutes on your {{RETIREMENT_PLAN}}: check your contribution and the match, look at the fees, and make sure your beneficiary is up to date. Changing jobs one day? Roll it over instead of cashing out. Log in at {{BENEFITS_PORTAL}}.",
@@ -184,10 +236,470 @@
         "Don't": "Suggest funds, allocations or contribution amounts. That's investment advice, and it isn't ours to give."
       },
       "sources": [
-        {"name": "US Department of Labor: A Look at 401(k) Plan Fees", "url": "https://www.dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/publications/401k-plan-fees.pdf"},
-        {"name": "US Department of Labor: Top 10 Ways to Prepare for Retirement", "url": "https://www.dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/publications/dol-top-10-ways-to-prepare-for-retirement-booklet-2023.pdf"},
-        {"name": "IRS: Rollovers of retirement plan and IRA distributions", "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/rollovers-of-retirement-plan-and-ira-distributions"},
-        {"name": "SEC Investor.gov: Compound interest calculator", "url": "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"}
+        {
+          "name": "US Department of Labor: A Look at 401(k) Plan Fees",
+          "url": "https://www.dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/publications/401k-plan-fees.pdf"
+        },
+        {
+          "name": "US Department of Labor: Top 10 Ways to Prepare for Retirement",
+          "url": "https://www.dol.gov/sites/dolgov/files/ebsa/about-ebsa/our-activities/resource-center/publications/dol-top-10-ways-to-prepare-for-retirement-booklet-2023.pdf"
+        },
+        {
+          "name": "IRS: Rollovers of retirement plan and IRA distributions",
+          "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/rollovers-of-retirement-plan-and-ira-distributions"
+        },
+        {
+          "name": "SEC Investor.gov: Compound interest calculator",
+          "url": "https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator"
+        }
+      ]
+    },
+    {
+      "id": "2027-05",
+      "n": 5,
+      "send_date": "2027-05-04",
+      "deliver_by": "2027-04-20",
+      "source": "MMS evergreen: 'Start a starter emergency fund', 'Automate the boring part'",
+      "topic": "A starter emergency fund",
+      "subject": "A $500 cushion changes more than you'd think",
+      "preheader": "Why a small emergency fund beats a big plan you never start, and how to automate it.",
+      "headline": "Start a small emergency fund",
+      "explain": [
+        "A surprise bill, a car repair or a vet visit is often what pushes people onto a credit card or a payday loan. A small cushion breaks that chain.",
+        "You don't need three months of expenses to start. A first goal of $500, saved a little at a time, covers a lot of the surprises that cause the most stress."
+      ],
+      "tell": "Small and automatic beats big and someday. Start with a first goal you can reach.",
+      "steps": [
+        "**Pick a first goal**, like $500, and give it its own savings account so it isn't mixed with spending money.",
+        "**Automate it.** Ask payroll if your pay can be split between two accounts, or set an automatic transfer for payday. {{BENEFITS_CONTACT}} can help with direct deposit.",
+        "**Refill it after you use it.** That's what it's for."
+      ],
+      "quick_hits": [
+        "**Tax refund or bonus?** Putting part of it in the cushion gets you there fast.",
+        "**Struggling right now?** {{EAP_LINE}}"
+      ],
+      "job": "Open or rename a savings account \"Emergencies only\" and set up one automatic transfer, even $10 a payday.",
+      "promise": false,
+      "lobby": {
+        "kicker": "This month's money topic",
+        "headline": "Start with $500.",
+        "bullets": [
+          "Give it its own account.",
+          "Automate it on payday.",
+          "Refill it after you use it."
+        ]
+      },
+      "social": {
+        "caption": "This month: a starter emergency fund. You don't need months of savings to begin. Pick a first goal like $500, give it its own account, and automate a little each payday. Questions about splitting your direct deposit? Contact {{BENEFITS_CONTACT}}.",
+        "alt": "Money Made Simple at Work: start with $500. Give it its own account. Automate it on payday. Refill it after you use it."
+      },
+      "brief": {
+        "Say in your team huddle": "\"This month's 10-minute task is one automatic transfer to savings. Even $10 a payday counts.\"",
+        "If someone asks how much they should save": "\"There's no right number for everyone. The newsletter suggests a first goal of $500. A financial professional can help with a bigger plan.\"",
+        "Don't": "Ask anyone how much they have saved, or suggest specific products or banks."
+      },
+      "sources": [
+        {
+          "name": "Consumer Financial Protection Bureau: An essential guide to building an emergency fund",
+          "url": "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
+        },
+        {
+          "name": "America Saves (Consumer Federation of America)",
+          "url": "https://americasaves.org"
+        }
+      ]
+    },
+    {
+      "id": "2027-06",
+      "n": 6,
+      "send_date": "2027-06-01",
+      "deliver_by": "2027-05-18",
+      "source": "MMS evergreen: 'The subscription audit', 'The 30-day list'",
+      "topic": "Summer spending and the subscription audit",
+      "subject": "The $14.99 you forgot about",
+      "preheader": "A 15-minute subscription audit, and the 30-day list for summer impulse buys.",
+      "headline": "Find the subscriptions you forgot about",
+      "explain": [
+        "Free trials that turn into monthly charges, streaming services you stopped watching, apps that renew every year: they're easy to forget because they're small.",
+        "Summer adds its own pressure: trips, kids home from school, sales everywhere. Two habits help without making you give anything up."
+      ],
+      "tell": "Small charges you don't notice add up to real money. Look once, cancel what you don't use.",
+      "steps": [
+        "**Do a subscription audit.** Scroll through the last two months of your bank and card statements and list every repeating charge.",
+        "**Cancel what you don't use**, and turn off auto-renew on anything you only want for a while.",
+        "**Try the 30-day list** for non-essential buys: write it down, and if you still want it in 30 days, buy it."
+      ],
+      "quick_hits": [
+        "**Free trial?** Put the end date in your phone the day you sign up.",
+        "**Your phone keeps a list too:** the subscriptions page in your app store shows what renews and when."
+      ],
+      "job": "Open your bank or card app and search for the word \"subscription\" or \"monthly\". Cancel one you don't use.",
+      "promise": false,
+      "lobby": {
+        "kicker": "This month's money topic",
+        "headline": "Find the $14.99 you forgot about.",
+        "bullets": [
+          "List every repeating charge.",
+          "Cancel what you don't use.",
+          "Wait 30 days on impulse buys."
+        ]
+      },
+      "social": {
+        "caption": "This month: the subscription audit. Look at two months of statements, list every repeating charge, and cancel the ones you don't use. For summer impulse buys, try the 30-day list. Questions about your benefits? Contact {{BENEFITS_CONTACT}}.",
+        "alt": "Money Made Simple at Work: find the $14.99 you forgot about. List every repeating charge. Cancel what you don't use. Wait 30 days on impulse buys."
+      },
+      "brief": {
+        "Say in your team huddle": "\"Ten minutes with your statements this month could find a subscription you forgot. Search for 'monthly'.\"",
+        "If someone asks for help with debt": "\"The EAP can connect you with free, confidential help: {{EAP_LINE}}\"",
+        "Don't": "Comment on anyone's spending."
+      },
+      "sources": [
+        {
+          "name": "FTC: How to stop subscriptions you never ordered",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2023/05/how-stop-subscriptions-you-never-ordered"
+        },
+        {
+          "name": "FTC: Free trials and tribulations",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2019/09/free-trials-and-tribulations"
+        }
+      ]
+    },
+    {
+      "id": "2027-07",
+      "n": 7,
+      "send_date": "2027-07-06",
+      "deliver_by": "2027-06-22",
+      "source": "MMS evergreen: 'Avalanche vs snowball', carousel #21 (pay down debt)",
+      "topic": "Paying down debt: avalanche or snowball",
+      "subject": "Two ways to pay off debt, and how to pick one",
+      "preheader": "The avalanche saves the most interest. The snowball keeps you going. Either beats waiting.",
+      "headline": "Avalanche or snowball?",
+      "explain": [
+        "If you have more than one debt, you'll pay off all of them faster with a plan than by spreading extra money around. There are two common plans.",
+        "**The avalanche:** pay the minimum on everything, and put every extra dollar on the debt with the highest interest rate. It saves the most money. **The snowball:** put the extra on the smallest balance first. You get quick wins, which helps many people keep going."
+      ],
+      "tell": "The best plan is the one you'll stick with. Always pay at least the minimum on every debt.",
+      "steps": [
+        "**List your debts** with the balance, the interest rate and the minimum payment.",
+        "**Pick avalanche or snowball**, and choose one debt to put extra money on.",
+        "**When one is paid off,** move its payment to the next one. That's the part that speeds up."
+      ],
+      "quick_hits": [
+        "**Be careful with offers to \"settle\" your debt for a fee up front.** That's often a scam. A nonprofit credit counselor is a safer place to start.",
+        "**Feeling buried?** {{EAP_LINE}}"
+      ],
+      "job": "Write your debts on one page, smallest to largest and highest rate to lowest. Circle the one you'll pay extra on.",
+      "promise": false,
+      "lobby": {
+        "kicker": "This month's money topic",
+        "headline": "Pick one debt and attack it.",
+        "bullets": [
+          "List every debt.",
+          "Avalanche saves money; snowball keeps you going.",
+          "Roll each payment into the next."
+        ]
+      },
+      "social": {
+        "caption": "This month: paying down debt. The avalanche puts extra money on the highest interest rate first and saves the most. The snowball starts with the smallest balance for quick wins. Pick one, pay the minimum on the rest, and roll each payment into the next. {{EAP_LINE}}",
+        "alt": "Money Made Simple at Work: pick one debt and attack it. List every debt. Avalanche saves money, snowball keeps you going. Roll each payment into the next."
+      },
+      "brief": {
+        "Say in your team huddle": "\"This month's newsletter compares two ways to pay off debt. The 10-minute task is listing your debts on one page.\"",
+        "If someone asks about consolidating or a 401(k) loan": "\"That's a big decision with trade-offs. {{BENEFITS_CONTACT}} can explain the plan rules, and the EAP can connect you with a counselor.\"",
+        "Don't": "Recommend a lender, a debt relief company, or borrowing from the retirement plan."
+      },
+      "sources": [
+        {
+          "name": "Consumer Financial Protection Bureau: How to reduce your debt",
+          "url": "https://www.consumerfinance.gov/about-us/blog/how-reduce-your-debt/"
+        },
+        {
+          "name": "FTC: How to get out of debt",
+          "url": "https://consumer.ftc.gov/articles/how-get-out-debt"
+        }
+      ]
+    },
+    {
+      "id": "2027-08",
+      "n": 8,
+      "send_date": "2027-08-03",
+      "deliver_by": "2027-07-20",
+      "source": "MMS evergreen: 'Do a paycheck checkup', 'Free credit reports every week'",
+      "topic": "The mid-year paycheck checkup",
+      "subject": "A 15-minute checkup on your paycheck",
+      "preheader": "Check your withholding with the IRS estimator, and your credit reports for free.",
+      "headline": "Your mid-year paycheck checkup",
+      "explain": [
+        "Halfway through the year is a good time to check that the right amount of tax is coming out of your pay. A big life change, like marriage, a new baby, a second job or side income, can throw it off.",
+        "The IRS has a free online Tax Withholding Estimator. With your latest pay stub, it tells you whether to change your W-4."
+      ],
+      "tell": "Fix your withholding in August, not in April. A small change now can avoid a big bill later.",
+      "steps": [
+        "**Grab your latest pay stub** and run the IRS [Tax Withholding Estimator](https://www.irs.gov/individuals/tax-withholding-estimator).",
+        "**Need to change it?** Submit a new W-4 in {{BENEFITS_PORTAL}} or ask {{BENEFITS_CONTACT}}.",
+        "**Check your credit reports too.** They're free every week at [AnnualCreditReport.com](https://www.annualcreditreport.com), the official site."
+      ],
+      "quick_hits": [
+        "**Side income?** You may need to raise withholding or make estimated payments.",
+        "**Wrong item on a credit report?** You can dispute it with the credit bureau for free."
+      ],
+      "job": "Run the IRS Tax Withholding Estimator with this month's pay stub. It takes about 15 minutes.",
+      "promise": false,
+      "lobby": {
+        "kicker": "This month's money topic",
+        "headline": "Give your paycheck a checkup.",
+        "bullets": [
+          "Run the IRS withholding estimator.",
+          "Update your W-4 if needed.",
+          "Check your credit reports free."
+        ]
+      },
+      "social": {
+        "caption": "This month: a mid-year paycheck checkup. Run the free IRS Tax Withholding Estimator with your latest pay stub, and update your W-4 in {{BENEFITS_PORTAL}} if it says to. Your credit reports are free every week at AnnualCreditReport.com.",
+        "alt": "Money Made Simple at Work: give your paycheck a checkup. Run the IRS withholding estimator. Update your W-4 if needed. Check your credit reports free."
+      },
+      "brief": {
+        "Say in your team huddle": "\"This month's task is the IRS withholding estimator. Bring a pay stub and it takes about 15 minutes.\"",
+        "If someone asks what to put on their W-4": "\"I can't advise on taxes. The IRS estimator walks you through it, and a tax professional can help with your situation.\"",
+        "Don't": "Tell anyone what to claim on a W-4."
+      },
+      "sources": [
+        {
+          "name": "IRS: Tax Withholding Estimator",
+          "url": "https://www.irs.gov/individuals/tax-withholding-estimator"
+        },
+        {
+          "name": "FTC: Free credit reports",
+          "url": "https://consumer.ftc.gov/articles/free-credit-reports"
+        }
+      ]
+    },
+    {
+      "id": "2027-09",
+      "n": 9,
+      "send_date": "2027-09-07",
+      "deliver_by": "2027-08-24",
+      "source": "Scam Decoded small-business blocks (fake invoices) and newsletter coverage of payroll direct-deposit phishing",
+      "topic": "Scams that target employees",
+      "subject": "The email that asks you to \"update your direct deposit\"",
+      "preheader": "Fake HR emails, fake invoices and fake job offers: one habit stops all three.",
+      "headline": "The scams that come to work",
+      "explain": [
+        "Scammers send emails that look like they're from HR or payroll: \"Update your direct deposit before Friday's payroll.\" The link goes to a fake sign-in page, and the next paycheck goes to the scammer.",
+        "Others send past-due invoices for things nobody ordered, or texts offering a remote job that asks you to deposit a check and send part of it back."
+      ],
+      "tell": "Any message that changes where money goes, and is in a hurry, gets checked with a person you already know.",
+      "steps": [
+        "**Never change direct deposit from an email link.** Go to {{BENEFITS_PORTAL}} yourself, or ask {{BENEFITS_CONTACT}}.",
+        "**Match every invoice** to a real order before it's paid, and follow the approval steps even if it says \"final notice\".",
+        "**Report it** to your IT or security team, and at [ReportFraud.ftc.gov](https://reportfraud.ftc.gov)."
+      ],
+      "quick_hits": [
+        "**Job offer that sends you a check** and asks you to send some back? That's a fake check scam.",
+        "**Clicked or shared a password?** Tell IT right away. Fast is better than perfect."
+      ],
+      "job": "Find out who to tell at work if you click a bad link, and save their contact in your phone.",
+      "promise": false,
+      "lobby": {
+        "kicker": "This month's money topic",
+        "headline": "Changing where money goes? Check with a person.",
+        "bullets": [
+          "Never update direct deposit from a link.",
+          "Match invoices to real orders.",
+          "Report it fast."
+        ]
+      },
+      "social": {
+        "caption": "This month: scams that target employees. A fake HR email asks you to update your direct deposit, and the next paycheck goes to a scammer. Never change payroll details from an email link. Go to {{BENEFITS_PORTAL}} yourself, or contact {{BENEFITS_CONTACT}}.",
+        "alt": "Money Made Simple at Work: changing where money goes? Check with a person. Never update direct deposit from a link. Match invoices to real orders. Report it fast."
+      },
+      "brief": {
+        "Say in your team huddle": "\"Payroll will never ask you to update direct deposit through an email link. If you see one, forward it to IT.\"",
+        "If someone asks whether an email is real": "\"When in doubt, don't click. Go to the portal yourself or call HR on a number you already have.\"",
+        "Don't": "Embarrass anyone who clicked. Fast reporting matters more."
+      },
+      "sources": [
+        {
+          "name": "FBI IC3: Business email compromise",
+          "url": "https://www.ic3.gov/PSA/2024/PSA240911"
+        },
+        {
+          "name": "FTC: How to avoid a fake check scam",
+          "url": "https://consumer.ftc.gov/articles/fake-checks"
+        },
+        {
+          "name": "FTC: Scams and your small business",
+          "url": "https://www.ftc.gov/business-guidance/resources/scams-your-small-business-guide-business"
+        }
+      ]
+    },
+    {
+      "id": "2027-10",
+      "n": 10,
+      "send_date": "2027-10-05",
+      "deliver_by": "2027-09-21",
+      "source": "MMS evergreen: 'HSA vs FSA in one minute', open enrollment checklist",
+      "topic": "Open enrollment: what to check",
+      "subject": "Open enrollment: 5 things worth 20 minutes",
+      "preheader": "HSA or FSA, the plan you actually use, and the beneficiary nobody updates.",
+      "headline": "Open enrollment in 20 minutes",
+      "explain": [
+        "Open enrollment is the one time a year most people can change their health, dental and other benefits without a life event. It's easy to click \"keep the same\". Twenty minutes can be worth a lot more.",
+        "**HSA or FSA?** A Health Savings Account is only for people on a qualifying high-deductible plan; the money is yours and carries over year to year. A Flexible Spending Account is usually use-it-or-lose-it, though some plans allow a grace period or a small carryover. Your plan documents say which rules apply."
+      ],
+      "tell": "Check what you used this year before you choose next year. Last year's choice may not fit anymore.",
+      "steps": [
+        "**Look back:** how many doctor visits, prescriptions or big bills did you have this year?",
+        "**Compare the total cost**, not just the paycheck deduction: premiums plus the deductible and what you'd pay out of pocket.",
+        "**Check the dates and details** in {{BENEFITS_PORTAL}}, and ask {{BENEFITS_CONTACT}} anything that isn't clear."
+      ],
+      "quick_hits": [
+        "**Using an FSA?** Plan for what you'll actually spend. Money left over may be lost.",
+        "**Update your beneficiaries** for life insurance and your {{RETIREMENT_PLAN}} while you're logged in."
+      ],
+      "job": "Write down how much you spent on health care this year, from your statements or insurer's app. Use it to compare plans.",
+      "promise": true,
+      "lobby": {
+        "kicker": "Open enrollment",
+        "headline": "20 minutes now, all year better.",
+        "bullets": [
+          "Look back at what you used.",
+          "Compare total cost, not just premium.",
+          "Update your beneficiaries."
+        ]
+      },
+      "social": {
+        "caption": "Open enrollment is here. Before you click \"keep the same\", look at what you used this year, compare the total cost of each plan, and check your HSA or FSA rules. Dates and details are in {{BENEFITS_PORTAL}}. Questions? Contact {{BENEFITS_CONTACT}}.",
+        "alt": "Money Made Simple at Work: open enrollment. 20 minutes now, all year better. Look back at what you used. Compare total cost, not just premium. Update your beneficiaries."
+      },
+      "brief": {
+        "Say in your team huddle": "\"Open enrollment closes soon. The newsletter has a 20-minute checklist. The key step is looking at what you used this year.\"",
+        "If someone asks which plan to pick": "\"I can't recommend a plan. {{BENEFITS_CONTACT}} can walk you through the options and costs.\"",
+        "Don't": "Recommend a plan or guess at anyone's health needs."
+      },
+      "sources": [
+        {
+          "name": "IRS: Publication 969, Health Savings Accounts and other tax-favored health plans",
+          "url": "https://www.irs.gov/publications/p969"
+        },
+        {
+          "name": "HealthCare.gov: Flexible Spending Account (glossary)",
+          "url": "https://www.healthcare.gov/glossary/flexible-spending-account-fsa/"
+        },
+        {
+          "name": "HealthCare.gov: Health Savings Account (glossary)",
+          "url": "https://www.healthcare.gov/glossary/health-savings-account-hsa/"
+        }
+      ]
+    },
+    {
+      "id": "2027-11",
+      "n": 11,
+      "send_date": "2027-11-02",
+      "deliver_by": "2027-10-19",
+      "source": "MMS evergreen: 'Buy now, pay later is still debt', 'The holiday number'",
+      "topic": "Holiday spending and buy now, pay later",
+      "subject": "Set your holiday number before the sales start",
+      "preheader": "One number for the season, and what to know before you split a purchase into four.",
+      "headline": "Set your holiday number",
+      "explain": [
+        "The easiest way to avoid a January hangover is to decide on one number for the season before the sales begin: gifts, travel, food and all.",
+        "Buy now, pay later can feel like free money. It's still a loan. Several plans at once are easy to lose track of, and a missed payment can mean fees."
+      ],
+      "tell": "Decide what the holidays cost before the stores decide for you.",
+      "steps": [
+        "**Pick your holiday number** and write it down. Divide it between people and events.",
+        "**Track it** in a note on your phone as you go.",
+        "**Using buy now, pay later?** Keep a list of every plan and payment date, and make sure the payments fit next month's budget."
+      ],
+      "quick_hits": [
+        "**Start a holiday fund for next year** in January: a small amount each payday makes next December easier.",
+        "**Gift card or package text you weren't expecting?** It may be a scam. Don't click the link."
+      ],
+      "job": "Write your holiday number on a note in your phone today, before Black Friday.",
+      "promise": false,
+      "lobby": {
+        "kicker": "This month's money topic",
+        "headline": "Pick your holiday number.",
+        "bullets": [
+          "Decide one number for the season.",
+          "Track it as you go.",
+          "List every pay-later plan."
+        ]
+      },
+      "social": {
+        "caption": "This month: set your holiday number before the sales start. One amount for gifts, travel and food, written down and tracked. Using buy now, pay later? It's still a loan, so list every plan and payment date. {{EAP_LINE}}",
+        "alt": "Money Made Simple at Work: pick your holiday number. Decide one number for the season. Track it as you go. List every pay-later plan."
+      },
+      "brief": {
+        "Say in your team huddle": "\"The task this month is picking one number for the holidays and writing it down before Black Friday.\"",
+        "If someone asks about holiday stress or money worries": "\"The EAP is free and confidential: {{EAP_LINE}}\"",
+        "Don't": "Talk about anyone's spending or gifts."
+      },
+      "sources": [
+        {
+          "name": "Consumer Financial Protection Bureau: What is a Buy Now, Pay Later loan?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-buy-now-pay-later-bnpl-loan-en-2119/"
+        },
+        {
+          "name": "FTC: Shopping online",
+          "url": "https://consumer.ftc.gov/articles/shopping-online"
+        }
+      ]
+    },
+    {
+      "id": "2027-12",
+      "n": 12,
+      "send_date": "2027-12-07",
+      "deliver_by": "2027-11-23",
+      "source": "MMS evergreen: 'The year-end five', 'Give yourself a raise in January'",
+      "topic": "Year-end money checklist",
+      "subject": "Five money moves before December 31",
+      "preheader": "Use your FSA, check your contribution for next year, and one thing that takes 2 minutes.",
+      "headline": "Five money moves before the year ends",
+      "explain": [
+        "A few things have a December 31 deadline, and a few are just easier to do before the new year gets busy.",
+        "None of this takes long. Pick the ones that apply to you."
+      ],
+      "tell": "A little end-of-year tidying makes January easier.",
+      "steps": [
+        "**Use your FSA money** if your plan is use-it-or-lose-it. Check the deadline and any grace period in {{BENEFITS_PORTAL}}.",
+        "**Raise your {{RETIREMENT_PLAN}} contribution** for the new year, even by 1%. {{MATCH_LINE}} The IRS publishes next year's contribution limits each fall.",
+        "**Gather your records** for tax season: an envelope or folder for the forms that arrive in January."
+      ],
+      "quick_hits": [
+        "**Moved or changed your name this year?** Update your address with payroll so your W-2 reaches you.",
+        "**Beneficiaries:** check them once more, especially after a marriage, divorce or new baby."
+      ],
+      "job": "Check your address in {{BENEFITS_PORTAL}} so your W-2 goes to the right place. It takes 2 minutes.",
+      "promise": true,
+      "lobby": {
+        "kicker": "This month's money topic",
+        "headline": "Five moves before Dec 31.",
+        "bullets": [
+          "Use your FSA money.",
+          "Raise your contribution 1%.",
+          "Check your address for your W-2."
+        ]
+      },
+      "social": {
+        "caption": "Five money moves before December 31: use your FSA money if it expires, raise your {{RETIREMENT_PLAN}} contribution for the new year, check your address for your W-2, check your beneficiaries, and set up a folder for tax forms. Details in {{BENEFITS_PORTAL}}.",
+        "alt": "Money Made Simple at Work: five moves before Dec 31. Use your FSA money. Raise your contribution 1%. Check your address for your W-2."
+      },
+      "brief": {
+        "Say in your team huddle": "\"If you have FSA money left, check the deadline in the portal. And check your address so your W-2 reaches you.\"",
+        "If someone asks how much to contribute": "\"I can't advise on that. {{BENEFITS_CONTACT}} can explain the plan and the match.\"",
+        "Don't": "Recommend contribution amounts or investments."
+      },
+      "sources": [
+        {
+          "name": "IRS: 401(k) and profit-sharing plan contribution limits",
+          "url": "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-401k-and-profit-sharing-plan-contribution-limits"
+        },
+        {
+          "name": "IRS: Publication 969 (FSA rules)",
+          "url": "https://www.irs.gov/publications/p969"
+        }
       ]
     }
   ]

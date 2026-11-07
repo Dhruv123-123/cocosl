@@ -12,11 +12,35 @@ links stay as placeholders, and nothing was bought.
 | `community-scam-watch/` | Scam Watch (large print) | Public libraries, senior centers, Area Agencies on Aging | $19 one site, $49 for 2–4, $12 a location for 5–20, quote 21+; CU-sponsored $99 for 5 sites; talks $150 | Monthly |
 | `freelancer-client-letter/` | Freelancer Money Notes | Small CPA, tax and bookkeeping firms, for their 1099 clients | $39 / $79 / $129 a month | Monthly |
 
-The first three folders each have: `product.json` (labels, call to action, formats), `issues.json` (4 sample issues),
+The first three folders each have: `product.json` (labels, call to action, formats), `issues.json` (12 issues: 3 months for the weekly credit union alert, Jan to Dec 2027 for the monthly products),
 `samples/*.md` (readable masters with brand slots shown), `brands/` (a fictional sample brand and a
 placeholders brand), `sales-sheet.html`, `COMPLIANCE_NOTE.md`, `COLD_EMAILS.md`, `PROSPECTS.csv` + `.md`
-(30 public-info prospects) and `README.md`. The credit union folder also has the full
-`DELIVERY_WORKFLOW.md`; the others describe only what's different. `freelancer-client-letter/` is the lean one: 3 samples, a sales sheet, 30 prospects, and its cold emails and compliance notes inside its README.
+(public-info prospects, with a fit score for employers and accounting firms) and `README.md`. The credit union folder also has the full
+`DELIVERY_WORKFLOW.md`; the others describe only what's different. `freelancer-client-letter/` is the lean one: 12 issues, a sales sheet, 40 prospects, and its cold emails and compliance notes inside its README.
+
+## Delivering to a client: `deliver.py`
+
+When a client signs, one command renders a month of issues with their name and logo swapped in:
+
+```
+python3 deliver.py credit-union-alert --month 2027-02 --name "Big Sky Credit Union" --short "Big Sky CU" \
+    --logo ~/Downloads/logo.png --color "#1D4E89" --set CU_PHONE="(406) 123-4567" --promise "..." --footer "..."
+```
+
+It saves the client as `<product>/clients/<slug>.json` (gitignored), so next month is just
+`python3 deliver.py credit-union-alert --client credit-union-alert/clients/big-sky-cu.json --month 2027-03`.
+Output: `<product>/out/deliveries/<slug>-<month>.zip`, every format for that month's issues, ready to email
+to the client yourself. It refuses to build while any sample detail (555 numbers, example.com, "Sample")
+is left in the brand, and warns if the issues still need native-language review. Run
+`python3 deliver.py --help` for every option.
+
+## Outreach dates: `outreach_dates.py`
+
+`OUTREACH_DATES.md` (and `.csv`) give every B2B prospect an Email 1 date and two follow-up dates that fit
+inside the ad studio's shared cap of 10 emails a day, 5 of them new. It reads the ad studio's
+`OUTREACH_CALENDAR.md` and changes nothing there. Because the ad studio uses every new-email slot until
+mid-April, B2B starts on 13 Apr 2027. `OUTREACH_DATES_OWN_INBOX.md` shows the same plan from a separate B2B
+inbox, which would start in November but costs money, so it's Dhruv's call. Rerun after either calendar changes.
 
 ## Pitch attachments
 

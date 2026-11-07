@@ -1,6 +1,6 @@
 # 12-week content calendar: Weekly Scam Alert (Feb 2 to Apr 20 2027)
 
-Weeks 1 to 4 are the sample issues already in `issues.json` (Jan 5 to Jan 26 2027). This calendar plans
+Weeks 1 to 4 are the sample issues already in `issues.json` (Jan 5 to Jan 26 2027), and **weeks 5 to 12 are now written there too** (status `written` in the CSV; fact-check each again at delivery). This calendar plans
 weeks 5 to 16, so every topic, date and source is fixed before the first client signs. The same data is in
 `CONTENT_CALENDAR.csv` (with fact-check and write-by dates) for a spreadsheet.
 

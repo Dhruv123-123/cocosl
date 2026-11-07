@@ -9,13 +9,13 @@ months free for the first 3 employers. Annual plans get 2 months free.
 
 | File | What it is |
 |---|---|
-| `issues.json`, `samples/month-1..4.md` | 4 sample issues for Jan, Feb, Mar, Apr 2027: new-year money reset, tax season (withholding, side income, IRS scams), credit scores, retirement plan in 10 minutes (Financial Literacy Month). |
+| `issues.json`, `samples/month-1..12.md` | 12 issues, Jan to Dec 2027. May to Dec: starter emergency fund, subscription audit, paying down debt, mid-year paycheck checkup, scams that target employees, open enrollment, holiday spending and BNPL, year-end checklist. Jan to Apr: new-year money reset, tax season (withholding, side income, IRS scams), credit scores, retirement plan in 10 minutes (Financial Literacy Month). |
 | `brands/example.json` | **Fictional** employer "Sample Outfitters Co." used for the sample pack. |
 | `product.json` | Labels and formats. Brand slots: `{{EMPLOYER_SHORT}}`, `{{BENEFITS_CONTACT}}`, `{{BENEFITS_PORTAL}}`, `{{RETIREMENT_PLAN}}`, `{{MATCH_LINE}}`, `{{EAP_LINE}}`, plus HR's own note and sender line. |
 | `sales-sheet.html` | One-page sales sheet (renders to `out/sales-sheet.pdf`). |
 | `COMPLIANCE_NOTE.md` | Education vs advice (ERISA, DOL Interpretive Bulletin 96-1), tax, privacy, accessibility, what the employer must supply. |
 | `COLD_EMAILS.md` | Emails for HR managers, SHRM chapters and benefits brokers; follow-ups; replies. |
-| `PROSPECTS.csv`, `PROSPECTS.md` | 30 prospects: 8 HR associations, 2 benefits brokers, 20 employers from public "Top Workplaces" and "Top Companies" lists in Montana and Idaho. |
+| `PROSPECTS.csv`, `PROSPECTS.md` | 51 prospects: 11 partners (8 HR associations, 2 benefits brokers, 1 PEO) and 40 employers from public "Top Workplaces" and "Top Companies" lists in Montana and Idaho, each with a 1–5 `fit_score` and reason. |
 
 Each issue builds into: employee email (HTML + text), an intranet, Teams or Slack post with a
 1080×1080 image, a 1920×1080 breakroom screen slide, a letter breakroom flyer (Growth and Plus), manager

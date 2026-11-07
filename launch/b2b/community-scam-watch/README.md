@@ -17,7 +17,7 @@ free for the first 3 organizations.
 
 | File | What it is |
 |---|---|
-| `issues.json`, `samples/month-1..4.md` | 4 sample issues for Jan, Feb, Mar, Apr 2027: the grandchild-in-trouble call (AI voices, safe word), romance scams, fake Social Security and Medicare calls, tech-support pop-ups. |
+| `issues.json`, `samples/month-1..12.md` | 12 issues, Jan to Dec 2027. May to Dec: "you've won" prizes, utility shutoff threats, package texts, "free" tests and your Medicare number, disaster charity scams, Medicare open enrollment calls, gift card scams, "bank fraud department" calls. Jan to Apr: the grandchild-in-trouble call (AI voices, safe word), romance scams, fake Social Security and Medicare calls, tech-support pop-ups. |
 | `brands/example.json` | **Fictional** "Sample County Library" used for the sample pack. |
 | `product.json` | Labels and formats. Brand slots: `{{ORG_NAME}}`, `{{HELP_LINE}}`, `{{HELP_LINE_SHORT}}`, `{{ORG_FOOTER}}`. |
 | `sales-sheet.html` | One-page sales sheet (renders to `out/sales-sheet.pdf`). |

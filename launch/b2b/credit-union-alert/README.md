@@ -12,7 +12,7 @@ Nothing was bought.
 | File | What it is |
 |---|---|
 | `product.json` | Labels, call-to-action line and formats for this product. |
-| `issues.json` | The 4 sample issues (Jan 5, 12, 19, 26 2027 member send dates), rewritten for credit unions from Scam Decoded newsletter research (#22, #8, #9, #11/#13). One source of truth for every format. |
+| `issues.json` | 12 issues, member send dates Jan 5 to Mar 23 2027: the 4 samples plus weeks 5–12 of the content calendar (2027-02-a to 2027-03-d), rewritten for credit unions from Scam Decoded newsletter research (#22, #8, #9, #11/#13). One source of truth for every format. |
 | `samples/week-1.md` … `week-4.md` | Readable master copy of each issue with every brand slot shown as a token: email, lobby, poster, social post, staff brief and sources. |
 | `../build.py` (+ `../render.mjs`, shared by all B2B products) | Builds a branded pack per credit union: email HTML + text, 1080×1080 social image + caption + alt text, 1920×1080 lobby slide, letter poster PDF, staff brief, sources. Fails on any unfilled token. |
 | `brands/example.json` | A **fictional** credit union ("Sample Community Credit Union", 555 phone, example.org) used for the sample pack. |
