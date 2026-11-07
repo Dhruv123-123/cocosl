@@ -311,7 +311,9 @@ def test_weekly_scam_of_the_week_email_reuses_alerts(tmp_path, monkeypatch):
     nw = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(nw)
     content = tmp_path / "content"
-    shutil.copytree(ROOT / "content" / "alerts", content / "alerts")
+    (content / "alerts").mkdir(parents=True)
+    for f in ["_TEMPLATE.md", *(p.name for p in (ROOT / "content" / "alerts").glob("0[123]-*.md"))]:
+        shutil.copy(ROOT / "content" / "alerts" / f, content / "alerts" / f)
     shutil.copy(ROOT / "content" / "quiz.json", content / "quiz.json")
     (content / "weekly").mkdir()
     shutil.copy(ROOT / "content" / "weekly" / "_TEMPLATE.md", content / "weekly" / "_TEMPLATE.md")
@@ -330,6 +332,43 @@ def test_weekly_scam_of_the_week_email_reuses_alerts(tmp_path, monkeypatch):
         text.split("intro: ")[1].split("\n")[0], "Toll texts are back."))
     with pytest.raises(SystemExit, match="no alert called no-such-alert"):
         mod.weekly_items()
+
+
+def test_scam_alert_of_the_day_cards(tmp_path, monkeypatch):
+    import datetime as dt
+    import sys
+    import pytest
+    from PIL import Image
+    monkeypatch.syspath_prepend(str(ROOT))
+    spec = importlib.util.spec_from_file_location("make_alert_cards", ROOT / "make_alert_cards.py")
+    mc = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mc)
+    monkeypatch.setattr(mc, "OUT", tmp_path)
+    paths = mc.main()
+    alerts = mc.B.alert_items()
+    assert len(paths) == len(alerts) >= 12 and all(a["flag_list"] for a in alerts)
+    days = [dt.date.fromisoformat(str(a["alert_date"])) for a in alerts]
+    run = [d for d in days if dt.date(2026, 11, 16) <= d <= dt.date(2026, 11, 27)]
+    assert len(run) == 10 and all(d.weekday() < 5 for d in run), "two full weeks of weekday cards"
+    for a in alerts:
+        assert len(a["flag_list"]) == 3 and all(f in a["example"] for f in a["flag_list"])
+        assert any(h in a["source_url"] for h in ("ftc.gov", "ic3.gov", "fbi.gov", "bbb.org", "irs.gov"))
+        cap = mc.caption(a)
+        assert cap.count("#") <= 5 and "made up" in cap and "guarantee" not in cap.lower()
+    for p in paths:
+        assert Image.open(p).size == (1080, 1350)
+    md = (tmp_path / "CARDS.md").read_text()
+    assert "08:30" in md and md.count("### ") == len(paths)
+    content = tmp_path / "content"
+    (content / "alerts").mkdir(parents=True)
+    src = next((ROOT / "content" / "alerts").glob("01-*.md")).read_text()
+    (content / "alerts" / "01-x.md").write_text(src.replace("flags: ", "flags: not in the example | ", 1))
+    monkeypatch.setattr(mc.B, "CONTENT", content)
+    with pytest.raises(SystemExit, match="flags must be up to 3 exact phrases"):
+        mc.B.alert_items()
+    big = dict(alerts[0], tell_1=" ".join(["word"] * 400))
+    with pytest.raises(SystemExit, match="too much text"):
+        mc.card(big)
 
 
 def test_could_you_spot_it_quiz_and_share_cards(tmp_path, monkeypatch):

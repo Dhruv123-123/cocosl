@@ -700,9 +700,12 @@ def alert_items() -> list[dict]:
         missing = [f for f in ALERT_FIELDS if not str(a.get(f, "")).strip()]
         if missing:
             raise SystemExit(f"alert {a['slug']}: missing {', '.join(missing)}")
-        todo = [f for f in (*ALERT_FIELDS, "explainer", "body_md") if str(a.get(f, "")).lstrip().startswith("[")]
+        todo = [f for f in (*ALERT_FIELDS, "explainer", "flags", "body_md") if str(a.get(f, "")).lstrip().startswith("[")]
         if todo or a["source_url"].strip() == "https://":
             raise SystemExit(f"alert {a['slug']}: still has template text in {', '.join(todo) or 'source_url'}")
+        a["flag_list"] = [x.strip() for x in str(a.get("flags", "")).split("|") if x.strip()]
+        if not todo and (len(a["flag_list"]) > 3 or any(x not in a["example"] for x in a["flag_list"])):
+            raise SystemExit(f"alert {a['slug']}: flags must be up to 3 exact phrases from the example")
         if a["severity"] not in SEVERITY:
             raise SystemExit(f"alert {a['slug']}: severity must be one of {', '.join(SEVERITY)}")
         out.append(a)
