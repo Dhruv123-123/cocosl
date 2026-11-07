@@ -184,6 +184,8 @@ def visual_html(issue: dict, brand: dict, prod: dict, kind: str) -> str:
     w, h = SIZES[kind]
     lob = issue["lobby"]
     foot = md_html(fill(prod["visual_footer"], brand), c).replace(f'style="color:{c};text-decoration:underline"', "")
+    if brand.get("credit_line"):
+        foot += f'<div style="margin-top:6px;font-size:.8em;font-weight:700">{html.escape(fill(brand["credit_line"], brand))}</div>'
     if kind == "handout":
         return handout_html(issue, brand, prod, foot)
     s = {"social": 1.0, "lobby": 1.05, "poster": None}[kind]
@@ -204,7 +206,7 @@ html,body{{background:#fff}}
 .card{{{size_css}display:flex;flex-direction:column;background:#ffffff;font-family:Arial,Helvetica,sans-serif;color:#111820;overflow:hidden}}
 .top{{background:{c};color:#fff;padding:{pad*0.45:.0f}px {pad}px;display:flex;align-items:center;gap:{pad*0.3:.0f}px}}
 .top .name{{font-size:{bul*0.8:.0f}px;font-weight:700}}
-.body{{flex:1;padding:{pad*0.8:.0f}px {pad}px;display:flex;flex-direction:column;justify-content:center}}
+.body{{flex:1 1 auto;min-height:0;padding:{pad*0.8:.0f}px {pad}px;display:flex;flex-direction:column;justify-content:center}}
 .kicker{{display:inline-block;align-self:flex-start;background:{a};color:#111;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:{bul*0.62:.0f}px;padding:{bul*0.18:.0f}px {bul*0.4:.0f}px;border-radius:6px;margin-bottom:{pad*0.4:.0f}px}}
 h1{{font-size:{head:.0f}px;line-height:1.08;letter-spacing:-.01em;margin-bottom:{pad*0.5:.0f}px}}
 ul{{list-style:none}}
@@ -214,7 +216,7 @@ li{{font-size:{bul:.0f}px;line-height:1.3;margin-bottom:{bul*0.45:.0f}px;display
 .steps h3{{font-size:28px;color:{c};margin-bottom:10px}}
 .steps ol{{padding-left:28px}}
 .steps ol li{{display:list-item;font-size:22px;line-height:1.4;margin-bottom:10px}}
-.foot{{background:#f3f5f7;padding:{pad*0.4:.0f}px {pad}px;font-size:{bul*0.72:.0f}px;line-height:1.3;border-top:6px solid {a}}}
+.foot{{flex:none;background:#f3f5f7;padding:{pad*0.4:.0f}px {pad}px;font-size:{bul*0.72:.0f}px;line-height:1.3;border-top:6px solid {a}}}
 .foot strong{{color:{c}}}
 .small{{font-size:{bul*0.42:.0f}px;color:#4a5561;margin-top:6px}}
 </style></head><body><div class="card">
@@ -400,7 +402,8 @@ def sales_doc_jobs(pdir: Path) -> list[dict]:
     out = pdir / "out"
     out.mkdir(exist_ok=True)
     jobs = []
-    pages = [pdir / f"{n}.html" for n in ("sales-sheet", "roi")] + sorted((pdir / "onboarding").glob("*.html"))
+    pages = [pdir / f"{n}.html" for n in ("sales-sheet", "roi")]
+    pages += [p for sub in ("onboarding", "broker") for p in sorted((pdir / sub).glob("*.html"))]
     for page in pages:
         if page.exists():
             dest = out / page.relative_to(pdir).with_suffix(".pdf")
@@ -413,6 +416,46 @@ def sales_doc_jobs(pdir: Path) -> list[dict]:
                 dest.parent.mkdir(parents=True, exist_ok=True)
                 jobs.append(md_to_pdf_job(md, dest, FORM_CSS if md.name == "BRAND_INTAKE.md" else ""))
     return jobs
+
+
+def demo_packet(pdir: Path, count: int = 3) -> None:
+    """A pitch attachment: the first 3 sample issues (email HTML + email PDF + print files) for the fictional
+    example brand, plus the sales sheet, in out/demo-packet/, zipped, and one combined PDF (sales sheet + emails)."""
+    out = pdir / "out"
+    slug = json.loads((pdir / "brands/example.json").read_text())["slug"]
+    issue_dirs = sorted((out / slug).iterdir(), key=lambda d: int(d.name.split("-")[1]))[:count]
+    demo = out / "demo-packet"
+    if demo.exists():
+        shutil.rmtree(demo)
+    demo.mkdir()
+    jobs = []
+    for d in issue_dirs:
+        dest = demo / d.name
+        dest.mkdir()
+        for name in ("email.html", "email.txt", "social.png", "poster.pdf", "handout.pdf", "lobby.png"):
+            if (d / name).exists():
+                shutil.copy(d / name, dest / name)
+        # the PDF keeps the email's 600 px layout, centred on a letter page
+        page = dest / "_email_print.html"
+        page.write_text((d / "email.html").read_text().replace(
+            "</head>", "<style>@page{size:8.5in 11in;margin:.4in}body,table[role=presentation]{background:transparent!important}</style></head>", 1))
+        jobs.append({"html": str(page), "out": str(dest / "email.pdf"), "w": 816, "h": 1056})
+    render_all(jobs)
+    for j in jobs:
+        Path(j["html"]).unlink(missing_ok=True)
+    for name in ("sales-sheet.pdf", "roi.pdf"):
+        if (out / name).exists():
+            shutil.copy(out / name, demo / name)
+    pdfs = [str(demo / "sales-sheet.pdf")] if (demo / "sales-sheet.pdf").exists() else []
+    pdfs += [str(demo / d.name / "email.pdf") for d in issue_dirs]
+    if shutil.which("pdfunite") and len(pdfs) > 1:
+        subprocess.run(["pdfunite", *pdfs, str(out / "demo-packet.pdf")], check=True)
+    zpath = out / "demo-packet.zip"
+    with zipfile.ZipFile(zpath, "w", zipfile.ZIP_DEFLATED) as z:
+        for p in sorted(demo.rglob("*")):
+            if p.is_file():
+                z.write(p, p.relative_to(out))
+    print(f"built {zpath.relative_to(ROOT)} and demo-packet.pdf ({len(issue_dirs)} issues)")
 
 
 def products() -> list[Path]:
@@ -434,7 +477,7 @@ def main() -> None:
     images = not a.no_images and have_renderer()
     if not a.no_images and not images:
         print("warning: node + playwright not found; skipping PNG/PDF (HTML pages kept)", file=sys.stderr)
-    packs, extra = [], []
+    packs, extra, demos = [], [], []
     for pdir in pdirs:
         prod = json.loads((pdir / "product.json").read_text())
         issues = json.loads((pdir / "issues.json").read_text())["issues"]
@@ -450,13 +493,19 @@ def main() -> None:
         else:
             packs.append(build(pdir, prod, pdir / "brands/example.json", issues, False, images))
             packs.append(build(pdir, prod, pdir / "brands/placeholders.json", issues, True, images))
+            for other in sorted((pdir / "brands").glob("*.json")):
+                if other.stem not in ("example", "placeholders"):
+                    packs.append(build(pdir, prod, other, issues, False, images))
             if images:
                 extra += sales_doc_jobs(pdir)
+                demos.append(pdir)
     finish(packs)
     if extra:
         render_all(extra)
     for j in extra:
         print(f"built {Path(j['out']).relative_to(ROOT)}")
+    for pdir in demos:
+        demo_packet(pdir)
 
 
 if __name__ == "__main__":

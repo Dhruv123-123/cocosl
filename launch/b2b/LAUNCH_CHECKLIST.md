@@ -56,8 +56,10 @@ Never guess an address, buy a list or scrape a directory.
 - **Stop at the first "no" or "unsubscribe"**, and note it in the CSV.
 - Replies to common questions ("send pricing", "talk to compliance", "we already do this") are in each
   `COLD_EMAILS.md` under **Replies**.
-- **When someone asks for a sample,** send the fictional sample pack zip, the sales sheet and the
-  compliance note (plus `roi.pdf` for credit unions). Never brand a pack with their logo until they ask.
+- **When someone asks for a sample,** attach `out/demo-packet.pdf` (sales sheet and 3 sample emails in one
+  file), plus the compliance note (and `roi.pdf` for credit unions). Send the full sample pack zip if they want
+  every format. For brokers, send `employer-wellness/out/broker/broker-one-pager.pdf` and the co-branded zip
+  (`employer-wellness/broker/BROKER_PARTNER_KIT.md`). Fill in its referral-fee placeholders first. Never brand a pack with their logo until they ask.
 - **When someone says yes,** follow `credit-union-alert/onboarding/README.md`. It covers kickoff,
   intake, approval, the first send and the invoice. For the other two products, use the same kit and
   change the product name.

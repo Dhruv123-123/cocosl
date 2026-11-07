@@ -18,6 +18,14 @@ placeholders brand), `sales-sheet.html`, `COMPLIANCE_NOTE.md`, `COLD_EMAILS.md`,
 (30 public-info prospects) and `README.md`. The credit union folder also has the full
 `DELIVERY_WORKFLOW.md`; the others describe only what's different. `freelancer-client-letter/` is the lean one: 3 samples, a sales sheet, 30 prospects, and its cold emails and compliance notes inside its README.
 
+## Pitch attachments
+
+Every product's build also writes `out/demo-packet.pdf`: the sales sheet, then the first 3 sample emails, as
+one file to attach to a pitch. `out/demo-packet.zip` holds the same 3 issues as email HTML, email PDF and print
+files. The Spanish editions (`credit-union-alert/es/`, `community-scam-watch/es/`) get one too.
+The employer product also has a **broker partner kit** (`employer-wellness/broker/`): a one-pager with referral fee
+placeholders and a co-branded sample pack.
+
 ## Build
 
 ```bash

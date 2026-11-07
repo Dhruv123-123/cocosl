@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Money Made Simple at Work: broker partner program</title>
+<!-- One-page sales sheet. Fill the 3 {{YOUR_...}} tokens, then run python3 build.py (writes out/sales-sheet.pdf)
+     (or open in a browser and Print > Save as PDF, Letter, no margins, background graphics on). -->
+<style>
+@page{size:8.5in 11in;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;color:#17202a;background:#fff}
+.page{width:8.5in;height:10.98in;overflow:hidden;padding:.45in .5in .4in;display:flex;flex-direction:column}
+.top{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:4px solid #E0A526;padding-bottom:10px}
+.brand{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#2E6B4F}
+h1{font-size:30px;line-height:1.1;margin-top:4px}
+.sub{font-size:14px;color:#41505e;margin-top:6px;max-width:5.2in;line-height:1.4}
+.tag{background:#2E6B4F;color:#fff;font-size:12px;font-weight:700;padding:8px 10px;border-radius:6px;text-align:center;line-height:1.35}
+.cols{display:flex;gap:22px;margin-top:14px}
+.col{flex:1}
+h2{font-size:15px;color:#2E6B4F;margin:12px 0 6px;text-transform:uppercase;letter-spacing:.04em}
+p,li{font-size:12.5px;line-height:1.45}
+ul,ol{padding-left:17px}
+li{margin-bottom:4px}
+table{width:100%;border-collapse:collapse;margin-top:6px}
+th,td{font-size:12px;padding:7px 6px;text-align:left;vertical-align:top;border-bottom:1px solid #dfe4e9}
+th{background:#f1f4f7;font-size:12px}
+.price{font-size:20px;font-weight:800;color:#2E6B4F}
+.pilot{margin-top:12px;background:#fff6dc;border-left:5px solid #E0A526;padding:10px 12px;font-size:13px;line-height:1.45}
+.foot{margin-top:auto;display:flex;justify-content:space-between;font-size:11.5px;color:#41505e;border-top:1px solid #dfe4e9;padding-top:8px}
+.check li{list-style:none;position:relative;padding-left:2px}
+.check li:before{content:"✓";position:absolute;left:-15px;color:#2E6B4F;font-weight:700}
+.two{display:flex;gap:14px;margin-top:6px}.box{flex:1;background:#f1f4f7;border-radius:8px;padding:12px 14px}.box h3{font-size:14px;color:#2E6B4F;margin-bottom:6px}.box p,.box li{font-size:12px}
+</style></head><body><div class="page">
+<div class="top">
+  <div><div class="brand">Money Made Simple · broker partner program</div>
+  <h1>A financial-wellness extra for every employer client, with your name on it</h1>
+  <p class="sub">A monthly, plain-English money newsletter that your employer clients send to their employees: email, intranet post, breakroom slide and manager talking points. Branded for the employer, with a line crediting you as their benefits advisor. Education only, so it never competes with the plans you place.</p></div>
+  <div class="tag">For benefits<br>brokers and<br>consultants</div>
+</div>
+<h2>Two ways to partner</h2>
+<div class="two">
+  <div class="box"><h3>1. Refer</h3><ul class="check"><li>Introduce an employer client; we sign and bill them directly.</li><li>You earn <b>{{REFERRAL_FEE}}</b> for each referred client, paid {{REFERRAL_PAYMENT_TERMS}}.</li><li>Your client gets <b>{{REFERRED_CLIENT_DISCOUNT}}</b>.</li><li>No admin for you after the introduction.</li></ul></div>
+  <div class="box"><h3>2. Include it in your service</h3><ul class="check"><li>We bill you one partner rate: <b>{{BROKER_WHOLESALE_RATE}}</b> a client a month (5+ clients).</li><li>You include it in your service or resell it at your own price.</li><li>Every issue credits you: "Provided by [your firm], your benefits advisor."</li><li>One review contact on your side, or each employer's HR.</li></ul></div>
+</div>
+<div class="cols">
+<div class="col">
+  <h2>What each client gets, every month</h2>
+  <ul class="check"><li><b>Employee email</b>, HTML and plain text, about 350 words</li><li><b>Intranet, Teams or Slack post</b> with a 1080×1080 image</li><li><b>Breakroom screen slide</b> and printable flyer</li><li><b>Manager talking points</b> and a sources page</li></ul>
+  <h2>Topics that support renewals</h2>
+  <p>January reset and the retirement match, tax season and W-4s, credit and debt, retirement in 10 minutes, open enrollment in the fall: the questions employees bring to HR, answered before they ask.</p>
+</div>
+<div class="col">
+  <h2>Built for your compliance team</h2>
+  <ul class="check"><li>Education only: no plan, fund, carrier or amount is ever recommended</li><li>Plan details come only from the employer's own wording</li><li>No employee data reaches us; nothing is sent by us</li><li>Every rule sourced to DOL, IRS, CFPB, FTC or SEC</li></ul>
+  <div class="pilot"><b>Check your state's rules first.</b> Some states limit the value-added services or gifts a licensed producer can give clients, and referral fees may need disclosing. Your compliance team decides how to offer it. We'll fit the model they choose.</div>
+</div>
+</div>
+<h2>Co-branded sample (fictional employer and broker)</h2>
+<div style="display:flex;gap:14px;align-items:flex-start;margin-top:4px">
+  <img src="../out/sample-outfitters-broker-cobrand/month-4-2027-04/lobby.png" style="width:2.84in;height:1.6in;border:1px solid #dfe4e9">
+  <p style="font-size:11.5px;color:#41505e;flex:1">April's breakroom slide for "Sample Outfitters Co.", with the credit line for "Sample Benefits Group" at the bottom. The full co-branded 4-month pack is in the partner kit.</p>
+</div>
+<div class="foot" style="margin-top:12px">
+  <div><b>{{YOUR_NAME}}</b> · {{YOUR_EMAIL}} · {{YOUR_PHONE}}</div>
+  <div>Ask for the co-branded sample pack.</div>
+</div>
+</div></body></html>

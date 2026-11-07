@@ -1,0 +1,21 @@
+{
+  "_about": "FICTIONAL demo library for the sample pack. 555-01xx numbers are reserved for fiction. Copy to clients/<slug>.json for a real client. Spanish edition.",
+  "slug": "sample-county-library-es",
+  "name": "Sample County Library",
+  "initials": "SCL",
+  "logo": "",
+  "color": "#6B3FA0",
+  "accent": "#F2B134",
+  "tier": "single",
+  "tokens": {
+    "ORG_SHORT": "la biblioteca",
+    "HELP_LINE": "Pregunte en el mostrador o llame a la biblioteca al (555) 010-0123. Le ayudamos a buscar información.",
+    "HELP_LINE_SHORT": "Llame a la biblioteca: (555) 010-0123"
+  },
+  "promise": "",
+  "footer_lines": [
+    "Sample County Library · Ayuda gratis cada mes para reconocer estafas."
+  ],
+  "unsubscribe": "",
+  "credit_line": ""
+}

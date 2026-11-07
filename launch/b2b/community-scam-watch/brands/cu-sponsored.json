@@ -1,0 +1,21 @@
+{
+  "_about": "FICTIONAL credit-union-sponsored sample: the fictional library's Scam Watch, paid for by the fictional Sample Community Credit Union ($99 a month sponsor tier, up to 5 sites). The sponsor line prints on every format.",
+  "slug": "sample-county-library-cu-sponsored",
+  "name": "Sample County Library",
+  "initials": "SCL",
+  "logo": "",
+  "color": "#6B3FA0",
+  "accent": "#F2B134",
+  "tier": "single",
+  "tokens": {
+    "ORG_SHORT": "the library",
+    "HELP_LINE": "Ask at the front desk or call the library at (555) 010-0123. We can help you look things up.",
+    "HELP_LINE_SHORT": "Ask at the front desk or call (555) 010-0123"
+  },
+  "promise": "",
+  "footer_lines": [
+    "Sample County Library \u00b7 Free scam-awareness help every month."
+  ],
+  "unsubscribe": "",
+  "credit_line": "Brought to you free by Sample Community Credit Union \u00b7 (555) 010-0142 \u00b7 Federally insured by NCUA"
+}
