@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Quarterly Tax Tracker</title>
+<style>
+  :root{
+    --ink:#14213d; --cream:#f7f3ea; --green:#3cc6a0; --green-d:#1f8f72; --gold:#ff7a45;
+    --muted:#4d566b; --line:#d9d3c3; --paper:#fffdf8; --tint:#e8f7f2; --gold-t:#ffece3;
+  }
+  @page{ size: Letter; margin:0; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#c9cbd3; color:var(--ink);
+    font-family:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size:10.2pt; line-height:1.48; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:8.5in; height:11in; margin:24px auto; background:var(--paper); position:relative;
+    padding:0.7in 0.85in 0.85in; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,.18);
+    page-break-after:always; break-after:page; }
+  .page:last-child{ page-break-after:auto; break-after:auto; }
+  @media print{ html,body{ background:none; } .page{ margin:0; box-shadow:none; } }
+
+  .folio{ position:absolute; left:0.85in; right:0.85in; bottom:0.45in; display:flex;
+    justify-content:space-between; font-size:8pt; color:var(--muted); border-top:1px solid var(--line); padding-top:6px; }
+
+  h1,h2,h3,h4{ font-family:"Inter Display","Inter",system-ui,sans-serif; line-height:1.15; margin:0; }
+  h2{ font-size:24pt; font-weight:800; letter-spacing:-.02em; margin-bottom:6px; }
+  h3{ font-size:13pt; font-weight:700; margin:18px 0 6px; }
+  h4{ font-size:10.5pt; font-weight:700; margin:12px 0 4px; }
+  p{ margin:0 0 9px; }
+  .kicker{ text-transform:uppercase; letter-spacing:.14em; font-size:8pt; font-weight:700; color:var(--green-d); margin-bottom:6px; }
+  .lede{ font-size:11.5pt; color:var(--muted); margin-bottom:12px; }
+  ul,ol{ margin:0 0 10px; padding-left:20px; } li{ margin-bottom:4px; }
+  strong{ font-weight:700; }
+  .num{ font-variant-numeric:tabular-nums; }
+
+  .box{ border-radius:10px; padding:12px 16px; margin:12px 0; }
+  .box.tip{ background:var(--tint); border-left:4px solid var(--green); }
+  .box.warn{ background:var(--gold-t); border-left:4px solid var(--gold); }
+  .box.dark{ background:var(--ink); color:var(--cream); }
+  .box.dark .kicker{ color:var(--gold); }
+  .box p:last-child, .box ul:last-child{ margin-bottom:0; }
+
+  table{ width:100%; border-collapse:collapse; margin:8px 0 12px; font-size:9.5pt; }
+  th{ text-align:left; font-weight:700; background:var(--cream); border-bottom:2px solid var(--ink); padding:5px 8px; }
+  td{ border-bottom:1px solid var(--line); padding:4px 8px; }
+  td.r, th.r{ text-align:right; font-variant-numeric:tabular-nums; }
+  tr.total td{ font-weight:800; border-top:2px solid var(--ink); border-bottom:none; background:var(--tint); }
+  tr.sub td{ font-weight:700; background:#f3f0e8; }
+
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .grid4{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:14px 0; }
+  .card{ border:1.5px solid var(--ink); border-radius:12px; padding:12px; background:#fff; }
+  .card .big{ font-size:20pt; font-weight:800; font-family:"Inter Display","Inter",sans-serif; }
+  .card .lbl{ font-size:8pt; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); font-weight:700; }
+  .pill{ display:inline-block; background:var(--green); color:#fff; font-weight:700; border-radius:999px; padding:1px 9px; font-size:8.5pt; }
+  .step{ display:flex; gap:12px; margin:10px 0; }
+  .step .n{ flex:0 0 30px; height:30px; border-radius:50%; background:var(--ink); color:var(--cream);
+    display:flex; align-items:center; justify-content:center; font-weight:800; }
+  .step .b{ flex:1; }
+  .timer{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin:12px 0 16px; border:1.5px solid var(--ink); border-radius:12px; overflow:hidden; }
+  .timer div{ padding:10px 12px; border-right:1.5px solid var(--ink); background:#fff; }
+  .timer div:last-child{ border-right:none; }
+  .timer .t{ font-weight:800; font-size:16pt; color:var(--green-d); }
+  .timer .h{ font-weight:700; font-size:9.5pt; }
+  .timer .d{ font-size:8.5pt; color:var(--muted); }
+  .formula{ font-family:"JetBrains Mono", ui-monospace, monospace; background:var(--ink); color:var(--cream);
+    padding:10px 14px; border-radius:8px; font-size:10pt; margin:10px 0; }
+  .check li{ list-style:none; position:relative; padding-left:4px; }
+  .check{ padding-left:22px; }
+  .check li::before{ content:""; position:absolute; left:-20px; top:3px; width:12px; height:12px; border:1.5px solid var(--ink); border-radius:3px; }
+  .faq h4{ margin-top:12px; }
+  .blank td{ height:24px; }
+  .toc{ list-style:none; padding:0; margin:12px 0; }
+  .toc li{ display:flex; border-bottom:1px dotted var(--line); padding:6px 0; margin:0; font-size:11pt; }
+  .toc li span:first-child{ flex:1; } .toc li span:last-child{ font-weight:700; }
+
+  /* cover */
+  .cover{ background:var(--ink); color:var(--cream); padding:0.9in; }
+  .cover .tag{ color:var(--gold); letter-spacing:.2em; text-transform:uppercase; font-weight:700; font-size:9pt; }
+  .cover h1{ font-size:58pt; font-weight:900; letter-spacing:-.035em; line-height:.95; margin:24px 0 18px; }
+  .cover h1 em{ font-style:normal; color:var(--green); }
+  .cover .sub{ font-size:15pt; max-width:5.2in; color:#c9d0de; line-height:1.4; }
+  .cover .clock{ position:absolute; right:0.9in; bottom:1.4in; width:3.1in; height:3.1in; }
+  .cover .bottom{ position:absolute; left:0.9in; right:0.9in; bottom:0.8in; display:flex; justify-content:space-between; align-items:flex-end; font-size:9pt; color:#9aa5bd; }
+  .cover .chips{ display:flex; gap:8px; flex-wrap:wrap; margin-top:28px; }
+  .cover .chips span{ border:1px solid #33456b; border-radius:999px; padding:5px 12px; font-size:9pt; color:var(--cream); }
+</style>
+</head>
+<body>
+
+<!-- ============ 1. COVER ============ -->
+<section class="page cover">
+  <div class="tag">1099 Money &middot; Guide + Spreadsheet &middot; 2026 tax year</div>
+  <h1>The<br><em>Quarterly</em><br>Tax Tracker</h1>
+  <p class="sub">Know what you owe, pay it four times a year, and never open an April bill you weren't expecting. Built for US freelancers, creators and side hustlers.</p>
+  <div class="chips"><span>Income + expense + mileage logs</span><span>Quarterly payment, calculated</span><span>Safe harbor built in</span><span>Excel &middot; Google Sheets &middot; Numbers</span></div>
+  <svg class="clock" viewBox="0 0 200 200" aria-hidden="true">
+    <circle cx="100" cy="100" r="92" fill="none" stroke="#3cc6a0" stroke-width="6"/>
+    <path d="M100 100 L100 8 A92 92 0 0 1 192 100 Z" fill="#ff7a45" opacity=".95"/>
+    <path d="M100 100 L192 100 A92 92 0 0 1 100 192 Z" fill="#3cc6a0" opacity=".9"/>
+    <path d="M100 100 L100 192 A92 92 0 0 1 8 100 Z" fill="#ff7a45" opacity=".55"/>
+    <path d="M100 100 L8 100 A92 92 0 0 1 100 8 Z" fill="#3cc6a0" opacity=".45"/>
+    <circle cx="100" cy="100" r="66" fill="#14213d"/>
+    <text x="100" y="100" text-anchor="middle" font-family="Inter Display, Inter, sans-serif" font-weight="900" font-size="46" fill="#f7f3ea">4&times;</text>
+    <text x="100" y="125" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="12" letter-spacing="3" fill="#ff7a45">A YEAR</text>
+  </svg>
+  <div class="bottom"><span>Edition 2026.1</span><span>Educational content. Not tax, legal or financial advice.</span></div>
+</section>
+
+<!-- ============ 2. CONTENTS ============ -->
+<section class="page">
+  <div class="kicker">Start here</div>
+  <h2>What's inside</h2>
+  <p class="lede">Read pages 3&ndash;6 once, fill in Setup, then use page 7 before every deadline.</p>
+  <ul class="toc">
+    <li><span>1. Why freelancers pay four times a year</span><span>3</span></li>
+    <li><span>2. What you actually owe: a $60,000 worked example</span><span>4</span></li>
+    <li><span>3. The set-aside: how much to save from every payment</span><span>5</span></li>
+    <li><span>4. Two ways to calculate a payment (and the safe harbor)</span><span>6</span></li>
+    <li><span>5. The 15-minute pre-deadline routine</span><span>7</span></li>
+    <li><span>6. Sam's year: the spreadsheet example, explained</span><span>8</span></li>
+    <li><span>7. Records that make tax time boring</span><span>9</span></li>
+    <li><span>8. FAQ, 2026 figures and your checklist</span><span>10</span></li>
+  </ul>
+  <h3>How to use the spreadsheet</h3>
+  <p><strong>Quarterly-Tax-Tracker.xlsx</strong> opens in Excel, Google Sheets (File &rarr; Import &rarr; Upload) and Apple Numbers. Tabs:</p>
+  <table>
+    <tr><th>Tab</th><th>What you do there</th></tr>
+    <tr><td><strong>Setup</strong></td><td>Once a year: filing status, last year's total tax and AGI, set-aside %, state rate estimate.</td></tr>
+    <tr><td><strong>Quarterly</strong></td><td>Before each deadline: read the <em>Suggested payment</em> row, pay it, type what you paid.</td></tr>
+    <tr><td><strong>Income &middot; Expenses &middot; Mileage</strong></td><td>Log every payment (1099 or not), every business cost (with business-use %) and every business drive.</td></tr>
+    <tr><td><strong>Deadlines &middot; Tax Tables</strong></td><td>The year's dates for your calendar &middot; 2026 federal figures (update each January).</td></tr>
+  </table>
+  <p><strong>Yellow cells</strong> are inputs; everything else calculates. It comes filled in with a fictional freelancer, Sam (page 8): look around, then delete Sam's rows and add yours.</p>
+  <div class="box warn">
+    <div class="kicker" style="color:#b14a1c">Please read</div>
+    <p>This is general education and a planning tool, not tax, legal or financial advice. It assumes a sole proprietor filing Schedule C, the standard deduction, no tax credits and income below the QBI phase-in threshold. Itemising, S corp, capital gains, big credits or income above ~$200,000? Use Form 1040-ES or a tax professional.</p>
+  </div>
+  <div class="folio"><span>The Quarterly Tax Tracker</span><span>2</span></div>
+</section>
+
+<!-- ============ 3. WHY QUARTERLY ============ -->
+<section class="page">
+  <div class="kicker">Chapter 1</div>
+  <h2>Why freelancers pay four times a year</h2>
+  <p class="lede">The US tax system is pay-as-you-go. Employees pay through withholding on every paycheck. Nobody withholds from a freelancer, so the IRS asks you to send estimated payments during the year instead.</p>
+  <h3>Who has to pay estimates</h3>
+  <p>Generally, you need to make estimated payments if you expect to owe <strong>$1,000 or more</strong> when you file, after withholding and credits. Once your net earnings from self-employment reach <strong>$400</strong>, you also owe self-employment tax and generally need to file.</p>
+  <h3>The four deadlines</h3>
+  <div class="timer">
+    <div><div class="t">Apr 15</div><div class="h">Q1</div><div class="d">Covers Jan 1 &ndash; Mar 31</div></div>
+    <div><div class="t">Jun 15</div><div class="h">Q2</div><div class="d">Covers Apr 1 &ndash; May 31</div></div>
+    <div><div class="t">Sep 15</div><div class="h">Q3</div><div class="d">Covers Jun 1 &ndash; Aug 31</div></div>
+    <div><div class="t">Jan 15</div><div class="h">Q4</div><div class="d">Covers Sep 1 &ndash; Dec 31 (paid next year)</div></div>
+  </div>
+  <p>The "quarters" are uneven on purpose: 3, 2, 3 and 4 months. June's payment comes just two months after April's, which is why it catches people. A deadline on a weekend or holiday moves to the next business day.</p>
+  <h3>What happens if you don't</h3>
+  <p>If you pay too little, too late, the IRS can charge an <strong>underpayment penalty</strong>. It works like interest: it's figured on how much was short and for how long. It isn't a fine for being a freelancer, and it's avoidable. Chapter 4 shows the two ways to stay clear of it.</p>
+  <div class="box tip">
+    <div class="kicker">The one-sentence version</div>
+    <p>Save a fixed percentage of every payment the day it lands, pay a calculated amount on four dates, and settle the small remainder when you file in April.</p>
+  </div>
+  <h3>Forms you might (or might not) get</h3>
+  <p>For payments made in 2026, a client generally only has to send you a <strong>1099-NEC</strong> once they've paid you <strong>$2,000</strong> in the year (it was $600 before). Payment platforms send a <strong>1099-K</strong> after <strong>$20,000 and 200 transactions</strong>. Many freelancers will get few forms or none. None of that changes the rule: <strong>all business income is reportable</strong>. That's why the Income tab exists.</p>
+  <div class="folio"><span>The Quarterly Tax Tracker</span><span>3</span></div>
+</section>
+
+<!-- ============ 4. WORKED EXAMPLE ============ -->
+<section class="page">
+  <div class="kicker">Chapter 2</div>
+  <h2>What you actually owe: $60,000 of profit</h2>
+  <p class="lede">Freelancers owe two federal taxes: <strong>self-employment tax</strong> (Social Security and Medicare, both halves) and ordinary <strong>income tax</strong>. Here's both for a single filer with $60,000 of net profit and no other income, using 2026 figures.</p>
+  <table>
+    <tr><th>Step</th><th class="r">Amount</th></tr>
+    <tr><td>Net profit (income minus business expenses)</td><td class="r">$60,000.00</td></tr>
+    <tr><td>&times; 92.35% = net earnings from self-employment</td><td class="r">$55,410.00</td></tr>
+    <tr class="sub"><td>Self-employment tax: 15.3% (12.4% Social Security + 2.9% Medicare)</td><td class="r">$8,477.73</td></tr>
+    <tr><td>Profit minus half of SE tax ($4,238.86) = adjusted gross income</td><td class="r">$55,761.14</td></tr>
+    <tr><td>Minus 2026 standard deduction (single)</td><td class="r">&minus;$16,100.00</td></tr>
+    <tr><td>Taxable income before QBI</td><td class="r">$39,661.14</td></tr>
+    <tr><td>Minus qualified business income deduction (20%, capped at 20% of taxable income)</td><td class="r">&minus;$7,932.23</td></tr>
+    <tr><td>Taxable income</td><td class="r">$31,728.91</td></tr>
+    <tr class="sub"><td>Income tax: 10% of first $12,400 + 12% of the rest</td><td class="r">$3,559.47</td></tr>
+    <tr class="total"><td>Total federal tax (about 20% of profit)</td><td class="r">$12,037.20</td></tr>
+  </table>
+  <div class="grid4">
+    <div class="card"><div class="lbl">SE tax</div><div class="big">$8,478</div></div>
+    <div class="card"><div class="lbl">Income tax</div><div class="big">$3,559</div></div>
+    <div class="card"><div class="lbl">Per quarter</div><div class="big">&asymp;$3,009</div></div>
+    <div class="card"><div class="lbl">Effective</div><div class="big">20%</div></div>
+  </div>
+  <h3>Three things this shows</h3>
+  <ol>
+    <li><strong>Self-employment tax is the big one</strong> at this income: more than double the income tax. It starts with your first dollar of profit, with no standard deduction.</li>
+    <li><strong>Both taxes are figured on profit, not revenue.</strong> Every legitimate business expense lowers both.</li>
+    <li><strong>State tax is extra.</strong> Most states add somewhere between 0% and about 10% of income. That's why the usual set-aside is 25&ndash;30%, not 20%.</li>
+  </ol>
+  <div class="box warn"><p>Social Security's 12.4% part stops at the 2026 wage base of <strong>$184,500</strong> of combined wages and self-employment earnings. If you also have a W-2 job, your wages count toward that first. The spreadsheet handles this from the Setup tab.</p></div>
+  <div class="folio"><span>The Quarterly Tax Tracker</span><span>4</span></div>
+</section>
+
+<!-- ============ 5. SET-ASIDE ============ -->
+<section class="page">
+  <div class="kicker">Chapter 3</div>
+  <h2>The set-aside: how much to save</h2>
+  <p class="lede">The habit that makes everything else easy: the day a payment lands, move a fixed slice of it into a separate savings account that you don't touch.</p>
+  <h3>Pick your starting percentage</h3>
+  <table>
+    <tr><th>Your situation (single filer, rough guide)</th><th class="r">Start at</th></tr>
+    <tr><td>Profit under ~$30,000, state with no income tax</td><td class="r">20%</td></tr>
+    <tr><td>Profit $30,000&ndash;$100,000, average state</td><td class="r">25&ndash;30%</td></tr>
+    <tr><td>Profit over $100,000, or a high-tax state</td><td class="r">30&ndash;35%</td></tr>
+    <tr><td>Freelancing on top of a full-time job (your wages already use the low brackets)</td><td class="r">30&ndash;35%</td></tr>
+  </table>
+  <p>These are starting points, not calculations. The spreadsheet's <strong>Set-aside check</strong> (bottom of the Quarterly tab) tells you whether your savings will cover the rest of the year. Positive: you're fine. Negative: raise your percentage.</p>
+  <h3>The three-account system</h3>
+  <div class="step"><div class="n">1</div><div class="b"><strong>Income</strong> (business checking). Every client payment lands here. Business costs come out of here. Nothing personal.</div></div>
+  <div class="step"><div class="n">2</div><div class="b"><strong>Tax</strong> (a separate savings account). Same day a payment lands, move your percentage here. Pay each estimate from this account. A high-yield savings account earns a little while the money waits.</div></div>
+  <div class="step"><div class="n">3</div><div class="b"><strong>Pay</strong> (your personal account). Every two weeks, transfer yourself a fixed amount, like a salary. Leave the rest in Income as a buffer for slow months.</div></div>
+  <div class="box tip">
+    <div class="kicker">Example</div>
+    <p>A client pays $3,000. At 30%, $900 moves to Tax the same day. $2,100 stays in Income. On payday you transfer your usual $1,800 to Pay. Nothing to remember in April: the money is already there.</p>
+  </div>
+  <h3>When the set-aside is too much</h3>
+  <p>If the check is comfortably positive after you file, you've over-saved. Good problem. Leave a cushion for next year's first payment, then move the extra to an emergency fund or a retirement account (SEP IRA or Solo 401(k)), which also lowers next year's income tax.</p>
+  <div class="folio"><span>The Quarterly Tax Tracker</span><span>5</span></div>
+</section>
+
+<!-- ============ 6. TWO METHODS ============ -->
+<section class="page">
+  <div class="kicker">Chapter 4</div>
+  <h2>Two ways to calculate a payment</h2>
+  <p class="lede">To avoid the underpayment penalty, your payments by each deadline generally need to reach the <strong>lesser</strong> of two amounts. The spreadsheet works out both and suggests the smaller.</p>
+  <div class="grid2">
+    <div class="card">
+      <div class="lbl">Method A</div>
+      <h3 style="margin-top:4px">Prior-year safe harbor</h3>
+      <p>Pay <strong>100% of last year's total tax</strong> in four equal parts. If last year's AGI was over <strong>$150,000</strong> ($75,000 married filing separately), it's <strong>110%</strong>.</p>
+      <p>Pros: you know the number on January 1, and it holds even if this year is much bigger.</p>
+      <p>Cons: if this year is bigger, you'll owe the difference in April, so keep saving your percentage.</p>
+    </div>
+    <div class="card">
+      <div class="lbl">Method B</div>
+      <h3 style="margin-top:4px">Current-year (annualized)</h3>
+      <p>Pay <strong>90% of this year's tax</strong>, spread by when you earn it. At each deadline the sheet annualizes your profit so far and requires 22.5%, 45%, 67.5% and 90% of the resulting tax.</p>
+      <p>Pros: smaller payments in a slow year or slow start.</p>
+      <p>Cons: changes every quarter. Lumpy-income years may need Form 2210 when you file.</p>
+    </div>
+  </div>
+  <h3>Which should you use?</h3>
+  <ul>
+    <li><strong>Your income is growing</strong> (common in year two or three): the safe harbor is usually smaller and simpler.</li>
+    <li><strong>Your income dropped</strong>, or most of it comes late in the year: the current-year method is usually smaller.</li>
+    <li><strong>First year freelancing</strong> after a salaried job: last year's tax might be low because your employer withheld most of it, so the safe harbor can be small. That's fine for the penalty, but the April balance will be big. Keep saving your percentage.</li>
+    <li><strong>Last year's tax was zero</strong> and you were a US citizen or resident for all of last year (and it was a full 12-month year): you generally owe no penalty this year at all. The sheet still shows the current-year amount so you can pay along anyway.</li>
+  </ul>
+  <div class="formula">Suggested payment = lesser(Method A so far, Method B so far) &minus; W-2 withholding so far &minus; estimates already paid</div>
+  <div class="box warn"><p>Paying on time matters as much as paying enough: the penalty is calculated per installment. A late payment is still much better than none, because the penalty grows with time.</p></div>
+  <div class="folio"><span>The Quarterly Tax Tracker</span><span>6</span></div>
+</section>
+
+<!-- ============ 7. ROUTINE ============ -->
+<section class="page">
+  <div class="kicker">Chapter 5</div>
+  <h2>The 15-minute pre-deadline routine</h2>
+  <p class="lede">Put a reminder one week before each deadline. When it goes off, do this.</p>
+  <div class="step"><div class="n">1</div><div class="b"><strong>Catch up the logs (5 min).</strong> Compare your business bank statement with the Income and Expenses tabs. Add anything missing. Add any drives to Mileage.</div></div>
+  <div class="step"><div class="n">2</div><div class="b"><strong>Open Quarterly (1 min).</strong> Find the column for this deadline. Read <strong>Suggested payment</strong>.</div></div>
+  <div class="step"><div class="n">3</div><div class="b"><strong>Pay the IRS (5 min).</strong> Go to <strong>irs.gov/payments</strong>. Use IRS Direct Pay (free, from a bank account) or your IRS Online Account. Choose <em>Estimated tax</em>, <em>1040ES</em> and the right <strong>tax year</strong> (the January payment is for the previous year). Card payments work too, but processors charge a fee.</div></div>
+  <div class="step"><div class="n">4</div><div class="b"><strong>Record it (1 min).</strong> Type the amount in the yellow <em>Actually paid</em> row. Save the confirmation number in a note or in your email.</div></div>
+  <div class="step"><div class="n">5</div><div class="b"><strong>Pay your state (2 min).</strong> If your state has an income tax, it usually has its own estimated payments, on its own schedule and website. The <em>State estimate</em> row is a rough guide; your state's worksheet is the real one.</div></div>
+  <div class="step"><div class="n">6</div><div class="b"><strong>Check the set-aside (1 min).</strong> Look at <strong>Set-aside check</strong> at the bottom. Negative? Raise your percentage on Setup.</div></div>
+  <h3>Avoid these</h3>
+  <ul>
+    <li>Paying for the wrong tax year (common with the January payment). If it happens, call the IRS to have it moved.</li>
+    <li>Using a site that isn't irs.gov. Searching "pay IRS" can show ads for third-party processors that charge extra.</li>
+    <li>Skipping a quarter because money's tight. Pay what you can; partial is better than nothing.</li>
+  </ul>
+  <div class="box dark">
+    <div class="kicker">Calendar it now</div>
+    <p>The Deadlines tab lists every date for the tax year on Setup. Copy all seven into your calendar with a one-week reminder.</p>
+  </div>
+  <div class="folio"><span>The Quarterly Tax Tracker</span><span>7</span></div>
+</section>
+
+<!-- ============ 8. SAM ============ -->
+<section class="page">
+  <div class="kicker">Chapter 6</div>
+  <h2>Sam's year: the example, explained</h2>
+  <p class="lede">Sam is fictional: a single freelance designer in their first full year, with no other job. Last year Sam had a salaried job, total federal tax $6,500 and AGI $52,000. Sam's rows come pre-filled in the spreadsheet.</p>
+  <table>
+    <tr><th></th><th class="r">Q1 (Apr 15)</th><th class="r">Q2 (Jun 15)</th><th class="r">Q3 (Sep 15)</th><th class="r">Q4 (Jan 15)*</th></tr>
+    <tr><td>Profit so far</td><td class="r">$12,483</td><td class="r">$20,297</td><td class="r">$38,256</td><td class="r">$50,066</td></tr>
+    <tr><td>Full-year tax at that pace</td><td class="r">$9,716</td><td class="r">$9,435</td><td class="r">$11,434</td><td class="r">$9,747</td></tr>
+    <tr><td>Current-year method, so far</td><td class="r">$2,186</td><td class="r">$4,246</td><td class="r">$7,718</td><td class="r">$8,772</td></tr>
+    <tr><td>Safe harbor, so far</td><td class="r">$1,625</td><td class="r">$3,250</td><td class="r">$4,875</td><td class="r">$6,500</td></tr>
+    <tr class="sub"><td>Suggested payment</td><td class="r">$1,625</td><td class="r">$1,625</td><td class="r">$1,625</td><td class="r">$1,625</td></tr>
+  </table>
+  <p style="font-size:8.5pt;color:var(--muted)">*Q4 shows Sam's numbers as of late October, before November and December income is logged. Your figures will change as you add rows.</p>
+  <h3>What Sam's numbers say</h3>
+  <ul>
+    <li><strong>The safe harbor wins every quarter.</strong> Sam's tax last year ($6,500) is lower than this year's pace, so a quarter of it, $1,625, is all Sam needs to pay on time to avoid the penalty.</li>
+    <li><strong>But it isn't the whole bill.</strong> Sam's full-year federal tax is heading for $10,000&ndash;$12,000. After four payments of $1,625 ($6,500), the rest is due in April.</li>
+    <li><strong>The set-aside covers it.</strong> Sam saves 30% of every payment. With $9,000 in tax savings after three payments, the Set-aside check shows Sam is ahead, even after a rough 5% state estimate.</li>
+    <li><strong>Year two changes.</strong> Next year Sam's safe harbor becomes this year's full tax, so quarterly payments roughly double. The sheet picks this up when Sam updates Setup in January.</li>
+  </ul>
+  <div class="box tip"><p><strong>Try it:</strong> change Sam's filing status to Married filing jointly on Setup, or set last year's total tax to 0, and watch the Suggested payment row change. Then delete Sam's rows and add your own.</p></div>
+  <div class="folio"><span>The Quarterly Tax Tracker</span><span>8</span></div>
+</section>
+
+<!-- ============ 9. RECORDS ============ -->
+<section class="page">
+  <div class="kicker">Chapter 7</div>
+  <h2>Records that make tax time boring</h2>
+  <p class="lede">Self-employment tax and income tax are both figured on profit. Good records lower your bill legitimately and make filing an afternoon instead of a weekend.</p>
+  <h3>What to keep</h3>
+  <ul class="check">
+    <li><strong>Income:</strong> every payment with date, client, what for and amount (Income tab), plus bank statements.</li>
+    <li><strong>Expenses:</strong> receipts or invoices for every business cost, with a note on what it was for.</li>
+    <li><strong>Mileage:</strong> date, where, business purpose and miles, written the same day (2026 standard rate in Tax Tables).</li>
+    <li><strong>Home office:</strong> measurements and a photo of the space, if you claim it.</li>
+    <li><strong>Mixed-use items:</strong> how you worked out the business-use % (for example, a month of phone logs).</li>
+    <li><strong>Estimated payments:</strong> every IRS and state confirmation number.</li>
+  </ul>
+  <p>The IRS generally recommends keeping records for at least three years after you file; some situations need longer. Cloud storage plus a photo of each receipt is enough.</p>
+  <h3>Commonly deductible for freelancers</h3>
+  <table>
+    <tr><th>Expense</th><th>The rule to know</th></tr>
+    <tr><td>Software, subscriptions, equipment</td><td>Used for the business. Mixed use: business share only.</td></tr>
+    <tr><td>Phone and internet</td><td>Business-use percentage only, documented.</td></tr>
+    <tr><td>Home office</td><td>Regular and exclusive business use. Simplified: $5/sq ft, up to 300 sq ft.</td></tr>
+    <tr><td>Business mileage</td><td>Not your commute. Logged with purpose.</td></tr>
+    <tr><td>Professional fees, insurance, education</td><td>Education must maintain or improve skills for your current work.</td></tr>
+    <tr><td>Business meals</td><td>Generally 50%, with a business purpose. The Expenses tab applies the 50%.</td></tr>
+    <tr><td>Payment and bank fees</td><td>Platform and processing fees are business costs.</td></tr>
+  </table>
+  <p>Some valuable deductions aren't business expenses and don't go in the Expenses tab: <strong>half of self-employment tax</strong> (the sheet already applies it), <strong>self-employed health insurance</strong> premiums, <strong>SEP IRA / Solo 401(k)</strong> contributions and <strong>HSA</strong> contributions. They lower income tax, not self-employment tax, so the tracker's estimate will run slightly high if you have them. That's the safe direction to be wrong.</p>
+  <div class="folio"><span>The Quarterly Tax Tracker</span><span>9</span></div>
+</section>
+
+<!-- ============ 10. FAQ + FIGURES ============ -->
+<section class="page">
+  <div class="kicker">Chapter 8</div>
+  <h2>FAQ, 2026 figures and your checklist</h2>
+  <div class="grid2">
+    <div class="faq">
+      <h4>I started freelancing mid-year. Do I owe the earlier quarters?</h4>
+      <p>Each payment is generally for income earned in that period, so start with the next deadline after your income began. The annualized method (Form 2210, Schedule AI) recognises this when you file.</p>
+      <h4>I also have a W-2 job.</h4>
+      <p>Enter your expected wages and withholding on Setup. Another option is a new W-4 at work to withhold extra; withholding counts as paid evenly through the year.</p>
+      <h4>Married?</h4>
+      <p>Pick Married filing jointly on Setup. Enter your household's combined other wages and withholding.</p>
+      <h4>Do I need an LLC or an EIN?</h4>
+      <p>Neither changes this method. A free EIN from irs.gov lets you avoid putting your Social Security number on client W-9s.</p>
+      <h4>Will this match my tax return exactly?</h4>
+      <p>No. It's a planning estimate built to keep you safe from the penalty. Your return (or your tax professional) has the final number.</p>
+    </div>
+    <div>
+      <h3 style="margin-top:0">2026 federal figures used</h3>
+      <table>
+        <tr><td>SE tax rate</td><td class="r">15.3% on 92.35%</td></tr>
+        <tr><td>Social Security wage base</td><td class="r">$184,500</td></tr>
+        <tr><td>Standard deduction, single / MFJ</td><td class="r">$16,100 / $32,200</td></tr>
+        <tr><td>10% bracket ends, single / MFJ</td><td class="r">$12,400 / $24,800</td></tr>
+        <tr><td>12% bracket ends, single / MFJ</td><td class="r">$50,400 / $100,800</td></tr>
+        <tr><td>QBI deduction</td><td class="r">20% (limits apply)</td></tr>
+        <tr><td>Standard mileage rate</td><td class="r">72.5&cent;/mile</td></tr>
+        <tr><td>Safe harbor</td><td class="r">100% / 110% over $150K AGI</td></tr>
+        <tr><td>1099-NEC threshold (2026 payments)</td><td class="r">$2,000</td></tr>
+      </table>
+      <p style="font-size:8.5pt;color:var(--muted)">Sources: IRS Rev. Proc. 2025-32, IRS estimated taxes and Form 1040-ES pages, SSA contribution and benefit base, IRS standard mileage rates. Figures change every year: check irs.gov each January and update the Tax Tables tab.</p>
+    </div>
+  </div>
+  <h3>Your checklist</h3>
+  <ul class="check">
+    <li>Separate business checking and a separate tax savings account are open.</li>
+    <li>Set-aside % chosen and moved the same day for every payment.</li>
+    <li>Setup tab filled in from last year's Form 1040.</li>
+    <li>All seven dates from the Deadlines tab are in my calendar with one-week reminders.</li>
+    <li>Income, Expenses and Mileage tabs are current.</li>
+    <li>Each payment made at irs.gov/payments, confirmation saved, amount typed in.</li>
+    <li>State estimated payments checked on my state's tax website.</li>
+  </ul>
+  <p style="font-size:8.5pt;color:var(--muted)">&copy; 1099 Money. Educational content only, not tax, legal or financial advice. Sam is a fictional example. For personal use; please don't resell or redistribute.</p>
+  <div class="folio"><span>The Quarterly Tax Tracker</span><span>10</span></div>
+</section>
+
+</body>
+</html>
