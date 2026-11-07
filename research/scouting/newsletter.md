@@ -86,9 +86,11 @@ until then (the sequences already pitch the $9-15 products on day 7).
 
 1. **$0 up to 10,000 subscribers each.** beehiiv's free plan stops at 2,500, and its ad network and paid
    recommendations both need a paid plan. Four beehiiv Lite plans at 10k cost about $476-556 a month.
-2. **Paid recommendations work from day one** through the Creator Network and SparkLoop, which is the only
-   network income a list under 5k realistically makes.
-3. **The free plan's limit fits what we built.** One sequence and one visual automation per account is
+2. **Recommendations earn from about 500 subscribers, without a paid plan,** through SparkLoop's Partner
+   Network partner links, which is the only network income a list under 5k realistically makes.
+   *Correction (2026-11-07):* Kit's own paid recommendations need the Creator plan ($33/mo at 1k); Free
+   gets unpaid swaps only. See `thank-you-offers.md`.
+3. **The free plan's limit fits what we built** (*to confirm in the app: Kit's pricing page now marks sequences and automations as paid on Free; see `thank-you-offers.md`*). One sequence and one visual automation per account is
    exactly one welcome sequence plus the automation that routes people around it (below). 1099 Money's
    buyers sequence moves to Gumroad's own post-purchase emails, so it doesn't need a second sequence.
 4. **The sites already support it:** `email.provider: kit` plus the form URL.
@@ -207,7 +209,7 @@ if a label has moved, Kit's search box finds it.
     and turn on recommendations, which show on the thank-you step after someone confirms.
 19. Recommend 3 newsletters we'd honestly send a friend to (start from the swap list below). Only list
     ones that fit: anything that sells trading signals or "get rich" content breaks our own guardrails.
-20. **Paid recommendations:** in the Creator Network settings, enable paid recommendations, connect
+20. **Paid recommendations (Creator plan only; on Free use SparkLoop partner links, `thank-you-offers.md`):** in the Creator Network settings, enable paid recommendations, connect
     SparkLoop and a Stripe account, and wait for approval (usually within a day). Only add paid partners
     who pass the same check as step 19. Being paid doesn't change the rule.
 21. Ask the newsletters you recommend to recommend you back (free swap). That's the point of the list.
