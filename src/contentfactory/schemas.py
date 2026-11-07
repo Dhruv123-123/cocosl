@@ -50,7 +50,7 @@ class Script(BaseModel):
     segments: list[Segment]
     cta: str = Field(description="Closing call to action")
     caption: str = Field(description="Platform caption, 1-3 short paragraphs, no hashtags")
-    hashtags: list[str] = Field(description="5-10 relevant hashtags without the # sign")
+    hashtags: list[str] = Field(description="3-5 descriptive topic hashtags (Instagram allows 5) without the # sign")
     description: str = Field(description="Long description for YouTube with chapters if long-form")
     thumbnail_text: str = Field(description="2-5 word thumbnail text")
     sources: list[str] = Field(description="URLs or references a human should check")

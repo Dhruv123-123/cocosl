@@ -75,7 +75,7 @@ def _offline_script(brand: BrandProfile, title: str, angle: str, fmt: str) -> Sc
         segs[2].chart = ChartSpec(kind="bars", title=f"Worked example: {topic}"[:60], labels=["Before", "After"],
                                   values=[100, 160], note="Placeholder numbers: replace with the real example")
         original = "The worked-example chart (replace its placeholder numbers)"
-    tags = (brand.hashtags or [brand.slug])[:8]
+    tags = (brand.hashtags or [brand.slug])[:5]
     return Script(
         title=title, hook=segs[0].narration, segments=segs, cta=brand.cta, original_element=original,
         caption=f"{title}\n\n{angle}.\n\n{brand.cta}",

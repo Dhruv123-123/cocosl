@@ -37,10 +37,11 @@ def fake_render(monkeypatch):
     def _render(settings, brand, post):
         d = settings.output_dir / brand.slug / f"post-{post['id']}"
         d.mkdir(parents=True, exist_ok=True)
-        (d / "video.mp4").write_bytes(b"\x00")
+        unique = f"\x00{brand.slug}:{post['id']}".encode()  # real renders differ per post (Instagram repost check)
+        (d / "video.mp4").write_bytes(unique)
         carousel = post.get("format") == "carousel"
         if carousel:
-            (d / "slide-01.png").write_bytes(b"\x00")
+            (d / "slide-01.png").write_bytes(unique)
         return {"video": None if carousel else f"{brand.slug}/post-{post['id']}/video.mp4", "images": [],
                 "slides": [f"{brand.slug}/post-{post['id']}/slide-01.png"] if carousel else [],
                 "thumbnail": None, "audio": None, "captions_srt": None, "duration": 30.0,
