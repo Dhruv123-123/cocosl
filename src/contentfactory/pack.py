@@ -223,8 +223,12 @@ def caption_txt(brand: BrandProfile, item: dict, slot: Slot | None) -> str:
 
 def times_rule(brand: BrandProfile) -> str:
     pt = brand.cadence.platform_times
-    return ", ".join(f"{k.replace(':', ' ')}s at {' / '.join(v)}" if ":" in k else f"{k} at {' / '.join(v)}"
-                     for k, v in sorted(pt.items())) or "none set"
+    names = {"short": "Shorts", "carousel": "carousels", "long": "long videos", "mid": "TikTok-only videos"}
+
+    def name(k: str) -> str:
+        p, _, f = k.partition(":")
+        return f"{p} {names.get(f, f)}" if f else p
+    return ", ".join(f"{name(k)} at {' / '.join(v)}" for k, v in sorted(pt.items())) or "none set"
 
 
 def plan_markdown(brand: BrandProfile, items: list[dict], slots: list[Slot], leftover: list[int],
