@@ -527,7 +527,7 @@ def _extend(sub) -> None:
                 "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup",
                 "contentfactory.publish.preflight", "contentfactory.cleanup",
                 "contentfactory.planner", "contentfactory.launch_check", "contentfactory.stats",
-                "contentfactory.scaffold", "contentfactory.manual", "contentfactory.numbercheck", "contentfactory.ytplan", "contentfactory.triage", "contentfactory.challenge", "contentfactory.whitelabel", "contentfactory.originality", "contentfactory.newsletter_export", "contentfactory.batch_record", "contentfactory.routine", "contentfactory.export_week", "contentfactory.scorecard", "contentfactory.sequence_export", "contentfactory.scheduler", "contentfactory.review", "contentfactory.launchmode", "contentfactory.timelog", "contentfactory.media.stock"):
+                "contentfactory.scaffold", "contentfactory.manual", "contentfactory.numbercheck", "contentfactory.ytplan", "contentfactory.triage", "contentfactory.challenge", "contentfactory.whitelabel", "contentfactory.originality", "contentfactory.newsletter_export", "contentfactory.batch_record", "contentfactory.routine", "contentfactory.export_week", "contentfactory.scorecard", "contentfactory.sequence_export", "contentfactory.scheduler", "contentfactory.review", "contentfactory.launchmode", "contentfactory.timelog", "contentfactory.media.stock", "contentfactory.keywords", "contentfactory.weekly_review"):
         try:
             module = __import__(mod, fromlist=["register"])
         except ImportError:

@@ -29,11 +29,11 @@ def _queue(factory: Factory, brand: str | None) -> list[dict]:
     return queries.review_queue(factory, brand)
 
 
-def ready(factory: Factory, post: dict) -> str:
+def ready(factory: Factory, post: dict, brands: dict | None = None) -> str:
     """'' when the post can be approved without more input, else why not."""
     if post["status"] == "blocked":
         return "blocked by a guardrail"
-    waiting = gate.pending(post, factory.brands().get(post["brand"]))
+    waiting = gate.pending(post, (brands if brands is not None else factory.brands()).get(post["brand"]))
     if waiting:
         return "needs " + ", ".join(w.replace("_", " ") for w in waiting)
     missing = actions.unverified_claims(post, _ticked(post))
@@ -57,10 +57,11 @@ def fast_page(request: Request, brand: str | None = None, i: int = 0,
     i = max(0, min(i, len(items) - 1)) if items else 0
     view = _post_view(factory, request, items[i]) if items else None
     weeks: dict = {}
+    brands = factory.brands()
     for p in items:
         w = weeks.setdefault(week_of(p).isoformat(), {"total": 0, "ready": 0})
         w["total"] += 1
-        w["ready"] += 0 if ready(factory, p) else 1
+        w["ready"] += 0 if ready(factory, p, brands) else 1
     post = items[i] if items else None
     brand_obj = factory.brands().get(post["brand"]) if post else None
     return render(request, "review_fast.html", it=view, i=i, n=len(items), brand=brand or "", brands=factory.brands(),
