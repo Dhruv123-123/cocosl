@@ -42,6 +42,23 @@ def _affiliates_in(brand: BrandProfile, caption: str, title: str) -> tuple[list[
     return present, fits
 
 
+def _plan_day(post: dict, brand: BrandProfile) -> datetime | None:
+    """Start of the post's planned local day (`"date"` on a pack item), or None when it has none or it's past."""
+    from datetime import date as _date
+    from zoneinfo import ZoneInfo
+    raw = (post.get("meta") or {}).get("plan_date")
+    if not raw:
+        return None
+    try:
+        tz = ZoneInfo(brand.cadence.timezone)
+        day = _date.fromisoformat(str(raw)[:10])
+    except (ValueError, KeyError):
+        return None
+    if day < datetime.now(tz).date():
+        return None  # the plan slid: fall back to the next free slot
+    return datetime.combine(day, datetime.min.time(), tzinfo=tz) - timedelta(seconds=1)
+
+
 @dataclass
 class Factory:
     settings: Settings
@@ -262,9 +279,16 @@ class Factory:
             raise PermissionError("Media check failed: " + "; ".join(map(str, stop)))
         # Work out every slot first so a cadence block can't leave a half-scheduled post behind.
         plan = []
-        from .scheduler import platform_cap_reached
+        from .scheduler import platform_cap_reached, same_day_slots
+        plan_day = _plan_day(post, brand)
+        if at:
+            slots = {p: at for p in targets}
+        elif plan_day:  # a pack's planned date: that day's slots; the plan already set the weekly mix
+            slots = same_day_slots(self.db, brand, targets, post["format"], after=plan_day, weekly_cap=False)
+        else:
+            slots = same_day_slots(self.db, brand, targets, post["format"])
         for platform in list(targets):
-            slot = at or next_slot(self.db, brand, platform, fmt=post["format"])
+            slot = slots[platform]
             cap = platform_cap_reached(self.db, brand, platform, post["format"], slot)
             if cap is not None:
                 if platforms:
@@ -311,7 +335,10 @@ class Factory:
             sql += " AND brand = ?"
             params.append(brand)
         out: dict = {"scheduled": {}, "skipped": {}}
-        for row in self.db.query(sql + " ORDER BY updated_at, id", params)[: limit or None]:
+        # planned posts first, in plan order; on one day Shorts, then long videos, then carousels take the slots
+        order = (" ORDER BY json_extract(meta, '$.plan_date') IS NULL, json_extract(meta, '$.plan_date'), "
+                 "CASE format WHEN 'short' THEN 0 WHEN 'mid' THEN 1 WHEN 'long' THEN 2 ELSE 3 END, updated_at, id")
+        for row in self.db.query(sql + order, params)[: limit or None]:
             try:
                 pubs = self.schedule(row["id"])
                 out["scheduled"][row["id"]] = [self.db.get("publications", p)["scheduled_at"] for p in pubs]

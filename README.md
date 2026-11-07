@@ -72,6 +72,7 @@ factory approve 12 --yes-i-checked --schedule
 factory batch-record                          # recordings grouped into sessions: shot list + teleprompter
 factory voice 12 take.m4a                     # your own narration for post 12
 factory broll 12 [--apply]                    # optional Pexels/Pixabay B-roll (free keys), max 1 beat in 3, credited
+factory motion 12 [--write|--apply]           # optional HyperFrames motion cards for number beats (FACTORY_MOTION=hyperframes)
 factory audit-originality --packs             # YouTube inauthentic-content risk per channel
 factory launch-check                          # red/yellow/green: links, placeholders, disclosures, caption limits
 
