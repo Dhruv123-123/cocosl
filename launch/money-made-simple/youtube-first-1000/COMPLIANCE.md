@@ -43,18 +43,20 @@ A human reviewer ticks every line below for each part before it's uploaded. This
 ### Part 4: What Happens to Your First $1,000 When the Market Drops?
 
 - [ ] Recovery path is hypothetical: labelled on the chart, in narration and in the caption; narration says recoveries can take years
-- [ ] Historical claims ('biggest up days near worst days', frequency of dips) are general: confirm wording against a FINRA/SEC source before posting
+- [ ] Sourced: best/worst-day claims cite Wells Fargo Investment Institute (https://www.wellsfargo.com/investment-institute/sr-perils-time-volatile-markets); dip-frequency line softened to 'many times' with no frequency stated. Re-check the study page is still live before posting
 - [ ] Holding through drops described as what many investors choose, not a recommendation; the 'can't sleep' step points to a calmer mix
 - [ ] No market prediction or timing advice
-- [ ] Verify the numbers: Hypothetical path 1000 → 700 → 820 → 950 → 1080 → 1160; Seller: 700 buys 700/950 of original shares ≈ 73.7%; × 1160 ≈ $855; Large up days often cluster near large down days (historical observation, verify source); Bear market = 20%+ drop (common definition)
+- [ ] Naming the research firm in narration is a citation, not an endorsement of the firm or its products; keep it that way in the edit
+- [ ] Verify the numbers: Hypothetical path 1000 → 700 → 820 → 950 → 1080 → 1160; Seller: 700 buys 700/950 of original shares ≈ 73.7%; × 1160 ≈ $855; Wells Fargo Investment Institute, S&P 500 Feb 1994 – Jan 2024: all 10 best days during recessions; 5 of the 30 worst and 3 of the 30 best days fell in 8 trading days, Mar 9–18 2020; missing the 30 best days cut average annual return from 8.0% to 1.8%; Bear market = 20%+ drop (common definition)
 
 ### Part 5: Invest $1,000 All at Once or $100 a Month? The Math
 
 - [ ] Both market paths are hypothetical: labelled on the chart, in narration and caption
-- [ ] 'Studies have found lump sum ahead more often': needs a named, linked source in the description before posting, or soften the line
+- [ ] Sourced: lump-sum line now names Vanguard research (2023, 1976–2022, about two-thirds of the time) and says spreading did better about a third of the time; the paper is listed in sources (https://corporate.vanguard.com/content/dam/corp/research/pdf/cost_averaging_invest_now_or_temporarily_hold_your_cash.pdf). Check the PDF link is still live before posting
 - [ ] Presented as two reasonable approaches; no recommendation of one for the viewer
 - [ ] Past performance disclaimer spoken in narration and in the description
-- [ ] Verify the numbers: 1000 × 1.01^10 ≈ 1,104.62; Σ 100 × 1.01^k, k=1..10 ≈ 1,056.68; 1000 × 0.97^5 × 1.03^5 ≈ 995.51; Monthly in dip scenario ≈ 1,076.35 (contribution at start of month, then the month's return); 'Studies found lump sum ahead more often' — cite a specific study (e.g. Vanguard research) before posting
+- [ ] Naming the research firm in narration is a citation, not an endorsement of the firm or its products; keep it that way in the edit
+- [ ] Verify the numbers: 1000 × 1.01^10 ≈ 1,104.62; Σ 100 × 1.01^k, k=1..10 ≈ 1,056.68; 1000 × 0.97^5 × 1.03^5 ≈ 995.51; Monthly in dip scenario ≈ 1,076.35 (contribution at start of month, then the month's return); Vanguard, Cost averaging: invest now or temporarily hold your cash? (Finlay & Zorn, Feb 2023): lump sum beat a 3-month cost-averaging plan 68% of the time, MSCI World 1976–2022, one-year rolling periods, 100% equity
 
 ### Part 6: How to Open a Brokerage Account and Invest Your First $1,000
 
