@@ -1,7 +1,7 @@
 ---
-issue: 8
+issue: 16
 send_date: 2027-03-11
-subject: Scam Alert #8: the half-price beach house
+subject: Scam Alert #16: the half-price beach house
 preheader: Spring break rentals, March Madness "sure wins", and the one way to pay for travel.
 ---
 Hi,

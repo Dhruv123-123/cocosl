@@ -17,14 +17,22 @@ One scam a week, every Thursday. Each issue follows `TEMPLATE.md`:
 |---|---|---|---|
 | 1 | Nov 19 2026 | Holiday deliveries: "package on hold" texts, marketplace payment emails, Black Friday shops · /checker/ | Holiday pack #0, #2, #3 |
 | 2 | Dec 3 2026 | Year-end giving: fake charity texts, boss gift card texts, tampered gift cards · /checker/ | Holiday pack #4–#8 |
-| 3 | Feb 4 2027 | IRS "verify your account" texts, arrest calls · IP PIN | Shorts #0, #2 |
-| 4 | Feb 11 | Valentine's gift-card asks, flower text, fake soldier · teen sextortion talk | Safer Internet Day, Valentine's Day |
-| 5 | Feb 18 | Erroneous refund "send it back", tax relief ads | Shorts #1, #6 |
-| 6 | Feb 25 | "Hi Mom" new number, AI voice, 1099-K text · safe word · Protect Your Parents | Shorts #10, #12 |
-| 7 | Mar 4 | Slam the Scam Day: government imposters · Family kit | Slam the Scam Day |
-| 8 | Mar 11 | Spring break rentals, March Madness picks, utility shutoff · /compare/ (affiliate) | Shorts #16, #15 |
+| 3 | Dec 10 2026 | Fake shops in social ads, shipping-confirm emails, discounted gift cards | Holiday pack |
+| 4 | Dec 17 | Home for the holidays: canceled-flight texts, the scam talk · /holiday/ guide + /seniors/ ($7) | Holiday guide |
+| 5 | Dec 24 | Short holiday edition: gift card balance texts, new phones for parents | Christmas Eve |
+| 6 | Dec 31 | New Year 15-minute reset, fake auto-renewal emails · Family kit | New Year's |
+| 7 | Jan 7 2027 | Fake return/refund emails, new device setup | Returns season |
+| 8 | Jan 14 | Task and recruiter job scams for January job hunters | Job hunting season |
+| 9 | Jan 21 | Wrong-number texts that become crypto 'investments' | FTC social media data |
+| 10 | Jan 28 | Data Privacy Day: fake breach settlements, 3 locks | Data Privacy Day |
+| 11 | Feb 4 2027 | IRS "verify your account" texts, arrest calls · IP PIN | Shorts #0, #2 |
+| 12 | Feb 11 | Valentine's gift-card asks, flower text, fake soldier · teen sextortion talk | Safer Internet Day, Valentine's Day |
+| 13 | Feb 18 | Erroneous refund "send it back", tax relief ads | Shorts #1, #6 |
+| 14 | Feb 25 | "Hi Mom" new number, AI voice, 1099-K text · safe word · Protect Your Parents | Shorts #10, #12 |
+| 15 | Mar 4 | Slam the Scam Day: government imposters · Family kit | Slam the Scam Day |
+| 16 | Mar 11 | Spring break rentals, March Madness picks, utility shutoff · /compare/ (affiliate) | Shorts #16, #15 |
 
-Weekly issues from Dec 10 2026 to Jan 28 2027 aren't written yet; numbering assumes none go out (renumber if they do).
+Issues 5 (Christmas Eve) and 6 (New Year's Eve) land on holidays: send them in the morning, or skip and renumber.
 
 Before sending:
 

@@ -1,7 +1,7 @@
 ---
-issue: 7
+issue: 15
 send_date: 2027-03-04
-subject: Scam Alert #7: Social Security numbers don't get "suspended"
+subject: Scam Alert #15: Social Security numbers don't get "suspended"
 preheader: Slam the Scam Day: 6 government imposters and the one rule that beats them.
 ---
 Hi,

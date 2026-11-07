@@ -1,7 +1,7 @@
 ---
-issue: 4
+issue: 12
 send_date: 2027-02-11
-subject: Scam Alert #4: "send me a photo of the back of the card"
+subject: Scam Alert #12: "send me a photo of the back of the card"
 preheader: Valentine's week scams, and one conversation worth having with your teen.
 ---
 Hi,
