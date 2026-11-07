@@ -18,7 +18,7 @@ on the model card. "Weights" means the downloadable model, which often has a dif
    clip carries Resemble's inaudible PerTh watermark, which is fine for us (we label AI voice anyway).
    Second choice: **VoxCPM2** (Apache-2.0 code and weights, "commercial-ready", 30 languages including
    Spanish), but it wants about 8 GB of GPU memory.
-3. **Fix Spanish caption timing (bug-sized).** `align_with_whisper()` in `media/tts.py` defaults to
+3. **Fix Spanish caption timing (bug-sized). Fixed on `main` the same day** ("Use a multilingual whisper model and the brand language for caption alignment"). `align_with_whisper()` in `media/tts.py` defaults to
    `WHISPER_MODEL=base.en`, an English-only model. On a Spanish brand that gives wrong words and timings.
    Fix: default to `base` (multilingual) and pass `language=brand.language` to `transcribe()`.
 4. **Exact captions: ctc-forced-aligner (BSD-2).** Whisper *transcribes*, so a misheard word ends up in
@@ -95,7 +95,7 @@ separate program and don't ship it, so neither affects our content.
 ## Suggested order for the factory thread
 
 1. Set `em_alex` (or `ef_dora`) for Dinero Simple and render 3 test clips for a fluent listener (an hour).
-2. Fix the whisper default for non-English brands (`base` + `language`), with a test (an hour).
+2. ~~Fix the whisper default for non-English brands~~ (done on `main`).
 3. Optional `FACTORY_ALIGN=ctc` using ctc-forced-aligner, falling back to whisper (half a day).
 4. Only if (1) sounds wrong: add a `chatterbox` provider with the LatAm Spanish finetune (a day).
 
