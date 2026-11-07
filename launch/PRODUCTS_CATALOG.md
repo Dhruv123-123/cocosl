@@ -1,6 +1,6 @@
 # Products catalog: every product, every brand
 
-One sheet to list from. **123 listings** (Money Made Simple 94, Scam Decoded 6, 1099 Money 8, Dinero Simple 15). Nothing in this list has been uploaded, listed or
+One sheet to list from. **124 listings** (Money Made Simple 95, Scam Decoded 6, 1099 Money 8, Dinero Simple 15). Nothing in this list has been uploaded, listed or
 submitted anywhere.
 
 - **Files** and **Listing copy** paths are inside the project files folder `content-factory/` (the upload-ready copies).
@@ -13,7 +13,7 @@ submitted anywhere.
 - Regenerate after changing a price or name: `python launch/catalog/build_catalog.py`. Also as `PRODUCTS_CATALOG.csv`.
 
 
-## Money Made Simple (94)
+## Money Made Simple (95)
 
 | Product | Platform | Price | Files | Listing copy | Launch | Date | Notes |
 |---|---|---|---|---|---|---|---|
@@ -111,6 +111,7 @@ submitted anywhere.
 | Money Made Simple (paperback) | Amazon KDP | $14.99 | `ebook/Money-Made-Simple-Paperback-*.pdf` | `ebook/KDP_NOTES.md` | Submit week of Nov 30, publish week of Dec 14 | calendar | Order the proof first. |
 | The Money Reset: 30-Day Challenge Workbook | Etsy + Gumroad | $9 | `brands/money-made-simple/money-reset-30-day/` | `brands/money-made-simple/money-reset-30-day/LISTING.md` | Week of Dec 14, for New Year resets (budget searches peak in January) | proposed | A guided month of daily tasks, unlike the trackers (No-Spend Challenge) and the guide kits; leads into The 20-Minute Budget. Goes in the existing Money Made Simple Etsy shop. |
 | Money Dashboard Pro | Gumroad (Etsy optional) | $12 | `templates/money-dashboard-pro/` | `templates/money-dashboard-pro/LISTING.md` | Week of Nov 16, with the other Sheets | proposed | PR #8. Paste the Sheets copy link into launch/dashboard-pro/links.json and rebuild (python launch/dashboard-pro/kit.py). Paid step up from the free Money Dashboard maker. Starts from the bank download and adds 12-month trends, budget vs actual and sinking funds. Logging by hand month by month is the 2027 Budget Sheet; the Monthly Budget Sheet plans the month ahead, so neither is a near-duplicate. |
+| The January Reset Bundle | Gumroad | $24 | `storefront/money-made-simple/ (a Gumroad bundle of the four products; no new files)` | `storefront/money-made-simple/JANUARY_RESET.md` | Fri Jan 1 to Sun Jan 31 2027 only | proposed | Monthly Budget Sheet, Paycheck Budget Sheet, Money Dashboard Pro, No-Spend Challenge Sheet: $33 bought separately at today's prices. Needs Money Dashboard Pro (PR #8) live first. Unpublish Feb 1. |
 
 ## Scam Decoded (6)
 
@@ -254,6 +255,8 @@ After Jan 31, swap the tags back if their views fell, and keep them if not.
 | 1099 Money | The Freelancer Money Bundle | $49 | $39, or keep $49 with a "worth $59 separately" line | PR #10's product: its thread decides. |
 
 On or after Jan 1, rebuild (`python launch/etsy/build_etsy.py`, then this catalog): the build switches to the new prices by itself, including the "bought separately" lines: Printable Budget Binder (all 10 printables): $42 separately, $12 together; The Money Made Simple Toolkit: $62 separately, $39 together; Savings Challenge Pack (12 printables): $48 separately, $10 together; Mega Budget Bundle (all 40 printables): $162 separately, $19 together.
+
+**The January Reset Bundle** (Fri Jan 1 to Sun Jan 31 2027, Gumroad, $24): Monthly Budget Sheet ($9), Paycheck Budget Sheet ($7), Money Dashboard Pro ($12), No-Spend Challenge Sheet ($5). Steps and page copy: `storefront/money-made-simple/JANUARY_RESET.md`.
 
 
 ## Merged or retired (6), reversible

@@ -188,6 +188,7 @@ def problems(rows: list[dict], listings: list[dict]) -> list[str]:
             bad.append(f"{code}: discount must be a percent or a dollar amount")
     names = {r["product"] for r in rows}
     bad += [f"January featured '{n}' isn't in the catalog" for n in JAN_FEATURED if n not in names]
+    bad += jan_reset_problems(rows)
     for t in jan_tag_rows(listings):
         if not t["ok"]:
             bad.append(f"January tags: {t['slug']} can't swap '{t['old']}' for '{t['new']}'")
@@ -243,6 +244,9 @@ Etsy searches for "budget planner" peak in January, so this is the bigger push, 
     after = [(names[sl]["name"], sum(jan[x] for x in names[sl]["bundle"]), jan[sl]) for sl in sep]
     out.append("\nOn or after Jan 1, rebuild (`python launch/etsy/build_etsy.py`, then this catalog): the build switches to the "
                "new prices by itself, including the \"bought separately\" lines: " + "; ".join(f"{n}: ${t:,.0f} separately, ${p:,.0f} together" for n, t, p in after) + ".")
+    j = JAN_RESET
+    out.append(f"\n**{j['name']}** ({j['window']}, Gumroad, {j['price']}): " + ", ".join(f"{n} ({p})" for n, p in jan_reset_parts(rows))
+               + ". Steps and page copy: `storefront/money-made-simple/JANUARY_RESET.md`.")
     return "\n".join(out) + "\n"
 
 
@@ -265,4 +269,97 @@ def storefront_section(brand: str, rows: list[dict]) -> str:
     out += [f"\n{p}: add at the top of the description, {when}: \"{line}\"" for p, line, when in tweaks]
     if brand == "Money Made Simple":
         out.append("\nJanuary (Dec 26 to Jan 31): " + JAN_STEPS[2])
+        out.append(f"\nJanuary Reset ({JAN_RESET['window']}): publish {JAN_RESET['name']} ({JAN_RESET['price']}) on Jan 1 "
+                   "with its section at the top, unpublish it Feb 1. Steps and copy: `JANUARY_RESET.md`.")
     return "\n".join(out) + "\n"
+
+
+# The January Reset collection (coordinator, Nov 7): one Gumroad bundle of products that already exist, on sale Jan 1-31
+# 2027 only. YEAREND10 rules: real dates set in Gumroad, the "separately" figure is today's prices of the parts (never
+# a former price), and it comes down on Feb 1 as stated. Money Dashboard Pro is PR #8's product: the bundle waits for it.
+JAN_RESET = dict(
+    name="The January Reset Bundle", brand="Money Made Simple", platform="Gumroad", price="$24",
+    start=date(2027, 1, 1), end=date(2027, 1, 31), window="Fri Jan 1 to Sun Jan 31 2027",
+    parts=["Monthly Budget Sheet", "Paycheck Budget Sheet", "Money Dashboard Pro", "No-Spend Challenge Sheet"],
+    next="The 20-Minute Budget",
+)
+JAN_RESET_STEPS = [
+    "Before: Money Dashboard Pro (PR #8) must be live on Gumroad, with its Sheets copy link set.",
+    "Dec 30: Gumroad > Products > New product > Bundle. Add the four products, set the price, paste the copy below, "
+    "and leave it unpublished. Cover: the Money Made Simple cover (dist/money-made-simple/cover.png).",
+    "Jan 1: publish it and move the \"January Reset (Jan 1-31)\" section to the top of the profile.",
+    "Feb 1: unpublish it and remove the section, as the description says. Buyers keep their files.",
+    "No code, no countdown timer, no \"was\" price. The Jan 2 email can mention it beside The 20-Minute Budget.",
+]
+
+
+def jan_reset_parts(rows: list[dict]) -> list[tuple[str, str]]:
+    price = {r["product"]: r["price"] for r in rows if r["brand"] == JAN_RESET["brand"] and "Gumroad" in r["platform"]}
+    return [(p, price.get(p, "?")) for p in JAN_RESET["parts"]]
+
+
+def jan_reset_row(rows: list[dict]) -> dict:
+    parts = jan_reset_parts(rows)
+    total = sum(_price(p) for _n, p in parts if p != "?")
+    j = JAN_RESET
+    return dict(brand=j["brand"], product=j["name"], platform=j["platform"], price=j["price"],
+                files="storefront/money-made-simple/ (a Gumroad bundle of the four products; no new files)",
+                listing="storefront/money-made-simple/JANUARY_RESET.md", launch=f"{j['window']} only", date_source="proposed",
+                notes=f"{', '.join(n for n, _p in parts)}: ${total:,.0f} bought separately at today's prices. "
+                      "Needs Money Dashboard Pro (PR #8) live first. Unpublish Feb 1.")
+
+
+def jan_reset_problems(rows: list[dict]) -> list[str]:
+    bad = []
+    parts = jan_reset_parts(rows)
+    bad += [f"January Reset: '{n}' isn't a Gumroad product of {JAN_RESET['brand']}" for n, p in parts if p == "?"]
+    if not bad:
+        total = sum(_price(p) for _n, p in parts)
+        if _price(JAN_RESET["price"]) >= total:
+            bad.append("January Reset: the bundle must cost less than the parts bought separately")
+    if JAN_RESET["end"] <= JAN_RESET["start"] or JAN_RESET["end"].month != 1:
+        bad.append("January Reset: it runs Jan 1-31 only")
+    return bad
+
+
+def jan_reset_md(rows: list[dict]) -> str:
+    j, parts = JAN_RESET, jan_reset_parts(rows)
+    total = sum(_price(p) for _n, p in parts)
+    lines = "\n".join(f"- {n} ({p})" for n, p in parts)
+    return f"""# {j['name']} (Gumroad, {j['window']})
+
+A Gumroad bundle of four Money Made Simple Google Sheets that already exist. Nothing is created or published yet.
+
+**Price:** {j['price']}. The four bought separately cost ${total:,.0f} today; that's the only comparison shown. No "was"
+price, no strikethrough, no code, no countdown.
+
+## Steps
+
+""" + "\n".join(f"{i}. {s}" for i, s in enumerate(JAN_RESET_STEPS, 1)) + f"""
+
+## Product page copy
+
+**Name:** {j['name']}
+
+**Summary:** Four Google Sheets to start the year: plan the month, budget each paycheck, see where last year's money
+went, and run a no-spend challenge. ${total:,.0f} bought separately, {j['price']} together, January only.
+
+**Description:**
+
+This January Reset Bundle is four Google Sheets templates in one purchase:
+
+{lines}
+
+Start with the dashboard: paste in your bank download and see where the money went. Then plan the month with the
+Monthly Budget Sheet, give each paycheck a job, and use the No-Spend Challenge to test one change for a few weeks.
+
+Each sheet opens as your own copy in Google Sheets (a free Google account is needed). Nothing connects to your bank;
+you paste or type the numbers yourself.
+
+The bundle is on sale from January 1 to January 31, 2027, and comes down on February 1. Each sheet is still sold on
+its own after that, at its own price.
+
+Educational tools, not financial advice. Made with the help of AI tools and checked by a person.
+
+**Receipt note:** Next step: The 20-Minute Budget turns these sheets into a weekly number you can check in 20 minutes.
+"""

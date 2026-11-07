@@ -236,6 +236,8 @@ def merged_rows() -> list[dict]:
 def all_rows() -> list[dict]:
     rows = etsy_rows() + gumroad_rows() + template_rows() + poster_rows() + book_rows() + brandshop_rows()
     rows += [row(*r) for r in OTHER_BRANCHES]
+    import promos
+    rows.append(promos.jan_reset_row(rows))
     return rows
 
 

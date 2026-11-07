@@ -25,6 +25,8 @@ import build_catalog as CAT  # noqa: E402  (also puts etsy/, templates/, pod/, b
 import gumroad_es as ES  # noqa: E402
 import promos  # noqa: E402  (launch/catalog/promos.py: the BFCM codes and the January push)
 import post_purchase as PP  # noqa: E402
+import cross_sell_map as XS  # noqa: E402
+import listings as L  # noqa: E402
 
 BRANDS = {
     "Money Made Simple": dict(
@@ -34,7 +36,8 @@ BRANDS = {
         about=("Money Made Simple makes the tools we wanted when money felt messy: a weekly number instead of a 40-line "
                "budget, a real debt-free date, a credit report you can actually read. Every guide comes with a spreadsheet "
                "that does the sums. Educational, not financial advice. Made with the help of AI tools and checked by a person."),
-        sections=[("Start here", ["The Bill Cut Kit", "The 20-Minute Budget", "The Money Reset: 30-Day Challenge Workbook"]),
+        sections=[("January Reset (Jan 1-31)", ["The January Reset Bundle"]),
+                  ("Start here", ["The Bill Cut Kit", "The 20-Minute Budget", "The Money Reset: 30-Day Challenge Workbook"]),
                   ("Get out of debt and fix your credit", ["The Debt-Free Date Planner", "The Credit Report Audit Kit"]),
                   ("Start investing", ["Start Investing With $100 a Month"]),
                   ("2027 planners", ["2027 Budget Sheet", "2027 Money HQ for Notion"]),
@@ -113,6 +116,7 @@ CROSS_SELL = {
     "Notion Savings Goals Tracker": ("Notion Money HQ", "Adds the budget and debt trackers for the difference.", "Checkout upsell", ""),
     "Notion Money HQ": ("2027 Money HQ for Notion", "The same HQ, dated month by month for 2027.", "Email", ""),
     "Money Dashboard Pro": ("The 20-Minute Budget", "The dashboard shows where the money went; the 20-Minute Budget plans where it goes next.", "Receipt note", ""),
+    "The January Reset Bundle": ("The 20-Minute Budget", "The sheets show the numbers; the 20-Minute Budget turns them into one weekly number.", "Receipt note + Jan 2 email", "BUDGET5"),
     "The Money Reset: 30-Day Challenge Workbook": ("The 20-Minute Budget", "The Week 3 budget, turned into a weekly system with a spreadsheet.", "Receipt note + email", ""),
     # printable twins (launch/templates/twins_catalog.py): the same next step as each listing's checkout upsell
     "52-Week Savings Challenge Sheet": ("Savings Goals Sheet", "Once the habit sticks, give each goal its own target and date.", "Checkout upsell", ""),
@@ -181,6 +185,7 @@ def problems() -> list[str]:
     bad += promos.problems(CAT.all_rows(), L.LISTINGS)
     bad += es_problems(prods.get("Dinero Simple", []))
     bad += email_problems()
+    bad += XS.problems(CAT.all_rows(), L.LISTINGS, CROSS_SELL)
     return bad
 
 
@@ -302,7 +307,7 @@ Same as every listing: no fake urgency or countdowns, no income promises, no tes
 
 def cross_sell_md(prods: dict[str, list[dict]]) -> str:
     out = ["# Cross-sell map: what to recommend after each purchase\n",
-           "One row per Gumroad product, every brand. Recommendations stay inside the brand. Codes are the ones the "
+           "One row per Gumroad product, every brand (Etsy, posters and books too: `NEXT_STEP_ALL_PRODUCTS.md`). Recommendations stay inside the brand. Codes are the ones the "
            "products already print; create them in each Gumroad account before the first sale. Built by "
            "`launch/storefront/build_storefront.py` from the same product list as `PRODUCTS_CATALOG.md`.\n"]
     for brand, rows in prods.items():
@@ -344,6 +349,13 @@ def main() -> int:
             (em / seq["key"] / f"0{i}-{PP.slug(e['subject'])}.md").write_text(PP.email_md(brand, i, e))
     (em / "README.md").write_text(PP.index_md())
     (out / "CROSS_SELL.md").write_text(cross_sell_md(prods))
+    cat = CAT.all_rows()
+    (out / "NEXT_STEP_ALL_PRODUCTS.md").write_text(XS.markdown(cat, L.LISTINGS, CROSS_SELL))
+    with open(out / "next_step_all_products.csv", "w", newline="") as fh:
+        wr = csv.DictWriter(fh, ["brand", "product", "platform", "price", "next", "next_price", "why", "where", "code"])
+        wr.writeheader()
+        wr.writerows(XS.rows(cat, L.LISTINGS, CROSS_SELL))
+    (out / "money-made-simple" / "JANUARY_RESET.md").write_text(promos.jan_reset_md(cat))
     with open(out / "cross_sell.csv", "w", newline="") as fh:
         wr = csv.writer(fh)
         wr.writerow(["brand", "after_buying", "recommend", "why", "where", "code"])

@@ -262,3 +262,23 @@ def test_bfcm_codes_and_january_push():
     assert not any(w in md for w in shop.BANNED)
     # the catalog no longer promises a percent-off "sale" on the bundles
     assert not any("on sale Nov 27-30" in r["launch"] for r in rows)
+
+
+def test_january_reset_bundle_and_full_cross_sell_map():
+    """Jan 1-31 Gumroad bundle of existing sheets, honest 'separately' figure; every product has an in-brand next step."""
+    import build_catalog as C
+    import listings as L
+    import promos as P
+    import build_storefront as S
+    import cross_sell_map as XS
+    rows = C.all_rows()
+    assert P.jan_reset_problems(rows) == [] and XS.problems(rows, L.LISTINGS, S.CROSS_SELL) == []
+    md = P.jan_reset_md(rows)
+    assert "$33 bought separately, $24 together" in md and "February 1" in md
+    assert not any(w in md.lower() for w in ("was $", "guarantee", "risk-free", "bestseller", "hurry"))
+    assert "not financial advice" in md and "AI tools" in md
+    m = XS.rows(rows, L.LISTINGS, S.CROSS_SELL)
+    assert len(m) == len({(r["brand"], r["product"], XS._kind(r["platform"])) for r in rows})
+    poster = next(r for r in m if r["product"] == "Savings Jar Poster")
+    assert poster["next"] == "Spare Change Jar Tracker" and "Etsy" in poster["where"]
+    assert next(r for r in m if r["product"] == "The January Reset Bundle")["next"] == "The 20-Minute Budget"
