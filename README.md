@@ -23,7 +23,7 @@ factory demo                      # renders sample posts offline, no keys needed
 factory serve                     # dashboard at http://127.0.0.1:8000
 ```
 
-New here? **`docs/QUICKSTART.md`** gets you from clone to first scheduled post in 15 minutes. Then read **`launch/LAUNCH_DAY.md`** (the plan for day one) and **`docs/CREDENTIALS.md`** (the steps
+New here? **`QUICKSTART.md`** is the one-page version (ten commands). **`docs/QUICKSTART.md`** gets you from clone to first scheduled post in 15 minutes. Then read **`launch/LAUNCH_DAY.md`** (the plan for day one) and **`docs/CREDENTIALS.md`** (the steps
 only you can do: payouts, accounts, API keys).
 
 ## What's in the box
@@ -66,7 +66,20 @@ factory revenue report
 factory auth youtube | tiktok | meta        # connect accounts
 factory renderq revoice                     # re-voice silent renders once KOKORO_URL (or another voice) is set
 factory status                              # credentials, queues, worker heartbeat, anything needing you
-factory doctor [--online]                   # is this install ready to make and post content?
+factory doctor [--online | --offline]       # is this install ready? --offline: fresh-laptop check, no network
+factory preflight --scheduled               # check queued media against each platform's limits (runs automatically too)
+factory cleanup --older-than 60 [--yes]     # free disk from posts live everywhere 60+ days (lists unless --yes)
+factory voice 12 take.m4a                   # your own narration for post 12 (one take, or one file per line); re-renders it
+factory recordings                           # posts waiting on your voice or a screen recording, soonest first
+factory ui                                   # one local page (127.0.0.1 only): calendar, review queue, recordings, launch check
+factory manual [build|copy <pub>|done <pub> --url]  # TikTok + Pinterest post-by-hand packages
+factory numbers <post id>  (or --text "...")  # recompute loan, payoff, growth and federal tax figures (numpy-financial, Tax-Calculator)
+factory brand new <slug> --name ... --import  # scaffold a brand: YAML, caps, voice/footage folders, 3 sample posts
+factory brand remove <slug> --yes            # undo a scaffold (refuses if anything is scheduled or published)
+factory launch-check [--online]             # red/yellow/green: links, UTM tags, placeholders, disclosures, caption limits
+factory stats import --brand <slug> *.csv   # YouTube Studio / TikTok / Plausible exports → weekly scorecard (`factory stats`)
+factory repurpose 12 --text-only              # blog post, newsletter section, 3 pins and a thread as drafts from a published long video
+factory calendar --export output/calendar  # all brands: calendar.ics + calendar.html, flags caps and collisions
 ```
 
 `factory --help` lists everything. Run it in production with `docker compose up -d`.

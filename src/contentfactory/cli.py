@@ -39,11 +39,16 @@ def _table(rows: list[dict], cols: list[str]) -> None:
 def cmd_init(args):
     home = Path(args.home or ".").resolve()
     pkg_root = Path(__file__).resolve().parents[2]
+    examples = Path(__file__).resolve().parent / "examples"  # shipped in the wheel for pip installs
     (home / "brands").mkdir(parents=True, exist_ok=True)
     example_brand = pkg_root / "brands" / "money-made-simple.yaml"
+    if not example_brand.exists():
+        example_brand = examples / "money-made-simple.yaml"
     if example_brand.exists() and not any((home / "brands").glob("*.yaml")):
         shutil.copy(example_brand, home / "brands" / example_brand.name)
     env_example = pkg_root / ".env.example"
+    if not env_example.exists():
+        env_example = examples / "env.example"
     if env_example.exists() and not (home / ".env").exists():
         shutil.copy(env_example, home / ".env")
     s = Settings.load(home)
@@ -194,9 +199,18 @@ def cmd_rerender(args):
 
 
 def cmd_calendar(args):
+    from .planner import entries, export, flag
     from .scheduler import calendar
-    rows = calendar(_factory(args).db, days=args.days, brand=args.brand)
+    f = _factory(args)
+    rows = calendar(f.db, days=args.days, brand=args.brand)
     _table(rows, ["scheduled_at", "platform", "status", "brand", "format", "title"])
+    problems = flag(f, entries(f, args.days))
+    print("\nProblems:" if problems else "\nNo cap or collision problems.")
+    for p in problems:
+        print("  - " + p)
+    if args.export:
+        res = export(f, Path(args.export), days=max(args.days, 7))
+        print(f"Wrote {res['ics']} (subscribe or import in any calendar app) and {res['html']}")
 
 
 def cmd_publish(args):
@@ -215,8 +229,15 @@ def cmd_daily(args):
 
 
 def cmd_repurpose(args):
-    from .repurpose import repurpose_post
+    from .repurpose import repurpose_post, text_drafts
     f = _factory(args)
+    if args.text or args.text_only:
+        paths = text_drafts(f, args.id, force=args.force)
+        print("Drafts (edit, then post by hand):")
+        for name, path in paths.items():
+            print(f"  {name}: {path}")
+        if args.text_only:
+            return
     for pid in repurpose_post(f, args.id, n_shorts=args.shorts, carousel=not args.no_carousel,
                               render=not args.no_render):
         post = f.db.get("posts", pid)
@@ -296,6 +317,21 @@ def cmd_serve(args):
     from .web.app import create_app
     app = create_app(_factory(args))
     uvicorn.run(app, host=args.host, port=args.port)
+
+
+def cmd_ui(args):
+    """The dashboard on this machine only, opened at /today."""
+    import threading
+    import webbrowser
+
+    import uvicorn
+
+    from .web.app import create_app
+    url = f"http://127.0.0.1:{args.port}/today"
+    print(f"Dashboard: {url} (only reachable from this computer; Ctrl+C to stop)")
+    if not args.no_browser:
+        threading.Timer(1.5, lambda: webbrowser.open(url)).start()
+    uvicorn.run(create_app(_factory(args)), host="127.0.0.1", port=args.port, log_level="warning")
 
 
 def cmd_demo(args):
@@ -390,6 +426,7 @@ def build_parser() -> argparse.ArgumentParser:
     s = sub.add_parser("calendar", help="upcoming publications")
     s.add_argument("--days", type=int, default=14)
     s.add_argument("--brand")
+    s.add_argument("--export", metavar="DIR", help="also write calendar.ics and calendar.html (all brands) there")
     s.set_defaults(func=cmd_calendar)
 
     sub.add_parser("publish", help="publish everything that is due").set_defaults(func=cmd_publish)
@@ -402,8 +439,12 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--offline", action="store_true")
     s.set_defaults(func=cmd_daily)
 
-    s = sub.add_parser("repurpose", help="cut a long post into standalone Shorts + a carousel")
+    s = sub.add_parser("repurpose", help="cut a long post into standalone Shorts + a carousel; --text adds "
+                                         "blog, newsletter, pin and thread drafts")
     s.add_argument("id", type=int)
+    s.add_argument("--text", action="store_true", help="also write blog / newsletter / 3 pins / thread drafts")
+    s.add_argument("--text-only", action="store_true", help="only the written drafts, no new videos")
+    s.add_argument("--force", action="store_true", help="draft text even if the video isn't published yet")
     s.add_argument("--shorts", type=int, default=3)
     s.add_argument("--no-carousel", action="store_true")
     s.add_argument("--no-render", action="store_true")
@@ -454,6 +495,11 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--port", type=int, default=8000)
     s.set_defaults(func=cmd_serve)
 
+    s = sub.add_parser("ui", help="local dashboard (127.0.0.1 only): calendar, review queue, recordings, launch check")
+    s.add_argument("--port", type=int, default=8000)
+    s.add_argument("--no-browser", action="store_true")
+    s.set_defaults(func=cmd_ui)
+
     s = sub.add_parser("demo", help="offline end-to-end demo that renders sample posts")
     s.add_argument("--brand")
     s.set_defaults(func=cmd_demo)
@@ -466,7 +512,10 @@ def _extend(sub) -> None:
     """Optional command groups that live in their own modules."""
     for mod in ("contentfactory.business.cli", "contentfactory.publish.cli", "contentfactory.funnel.cli",
                 "contentfactory.community.cli", "contentfactory.site",
-                "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup"):
+                "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup",
+                "contentfactory.publish.preflight", "contentfactory.cleanup",
+                "contentfactory.planner", "contentfactory.launch_check", "contentfactory.stats",
+                "contentfactory.scaffold", "contentfactory.manual", "contentfactory.numbercheck"):
         try:
             module = __import__(mod, fromlist=["register"])
         except ImportError:
