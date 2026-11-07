@@ -1,4 +1,5 @@
 import json
+import re
 from pathlib import Path
 
 import pytest
@@ -170,3 +171,13 @@ def test_weeks_22_26_april_content_is_valid_and_new(factory):
     assert affiliate and all("affiliate" in i["script"]["caption"] for i in affiliate)
     plan = (CONTENT.parent / "POSTING_PLAN_WEEKS_22-26.md").read_text()
     assert all(f"#{n} " in plan for n in range(len(items)))
+
+
+def test_answer_bank_has_30_link_free_drafts():
+    bank = (CONTENT.parent / "distribution" / "ANSWER_BANK.md").read_text()
+    drafts = re.findall(r"^### ([QF]\d+)\.", bank, re.M)
+    assert len(drafts) == 30 and len(set(drafts)) == 30
+    assert sum(d.startswith("Q") for d in drafts) == 18
+    assert not re.search(r"https?://|www\.", bank)
+    assert "guarantee" not in bank.lower() and "Nothing has been posted" in bank
+    assert "DM me" not in bank.replace('No "DM me"', "").replace('(No "DM me".', "")
