@@ -81,6 +81,14 @@ CHARTS = {
         "Cada cuándo": _c("bars", "Comisiones de un año", ["Cada semana", "Cada mes"], [208, 48],
                           note="Ejemplo: comisión fija de $4 por envío"),
     },
+    "l-carro-usado": {
+        "La tasa": _c("bars", "Intereses de $15,000 a 60 meses", ["Al 8%", "Al 20%"], [3249, 8845],
+                      note="Ejemplo: mismo carro, mismo plazo, distinta tasa"),
+    },
+    "l-viaje-a-casa": {
+        "El fondo": _c("line", "Fondo del viaje: $75 semanales", ["Sem 6", "Sem 12", "Sem 18", "Sem 24"],
+                       [450, 900, 1350, 1800], note="Ejemplo: viaje de $1,800 en 24 semanas"),
+    },
 }
 
 ORIGINAL = {
@@ -96,6 +104,8 @@ ORIGINAL = {
     "¿Sientes que vas atrasado con tu dinero? Un plan de 30 días": "Graba la pantalla de El Presupuesto con números de ejemplo: el número semanal de la semana 2",
     "l-impuestos-trabajador": "Graba la pantalla del calculador de retenciones del IRS (irs.gov) en español, sin poner datos reales, mostrando dónde está el paso de dos trabajos",
     "l-envios-del-ano": "Graba la pantalla cotizando el mismo envío de $300 con dos métodos de entrega (depósito y efectivo) en una app, sin iniciar sesión",
+    "l-carro-usado": "Graba la pantalla del buscador de llamados a reparación de la NHTSA con un VIN de ejemplo (no el tuyo), y la Guía del comprador en español de la FTC",
+    "l-viaje-a-casa": "Graba la pantalla creando un apartado de ahorro llamado 'Viaje' con transferencia semanal en una app de banco de demostración",
 }
 
 

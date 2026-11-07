@@ -183,7 +183,7 @@ def test_every_dinero_long_video_has_an_original_element():
     brand = load_brand(ROOT / "brands", "dinero-simple")
     longs = 0
     for f in ("content.json", "content-month-1.json", "content-month-2.json", "content-month-3.json", "content-month-4.json",
-              "content-month-5.json"):
+              "content-month-5.json", "content-month-6.json"):
         for it in json.loads((DS / f).read_text()):
             if it["format"] != "long":
                 continue
@@ -195,7 +195,7 @@ def test_every_dinero_long_video_has_an_original_element():
                 if seg.get("chart"):
                     assert any(c.startswith(f"Chart '{seg['chart']['title']}'") for c in s["claims_to_verify"])
             assert "--- ORIGINAL ELEMENT" in caption_text(brand, it)
-    assert longs == 12
+    assert longs == 14
 
 
 def test_month5_plan_is_complete_and_flags_itin_pieces_for_an_attorney():
@@ -295,3 +295,27 @@ def test_paycheck_calculator_uses_the_cited_2026_tables():
     assert not re.search(r"fetch\(|XMLHttpRequest|https?://", page.split("<script>")[1].split("</script>")[0])
     # the printed table on the page matches the script
     assert "| Soltero | $16,100 | $12,400 | $50,400 | $105,700 | $201,775 | $256,225 | $640,600 |" in page
+
+
+def test_month6_plan_is_complete():
+    items = json.loads((DS / "content-month-6.json").read_text())
+    fmts = [i["format"] for i in items]
+    assert fmts.count("short") == 14 and fmts.count("carousel") == 8 and fmts.count("long") == 2
+    plan = (DS / "POSTING_PLAN_MONTH_6.md").read_text()
+    review = (DS / "REVIEW_CHECKLIST_MONTH_6.md").read_text()
+    for i in items:
+        s = i["script"]
+        assert s["title"] in plan and s["title"] in review and s["claims_to_verify"], i["key"]
+    rows = [r for r in plan.splitlines() if r.startswith("| ") and " may |" in r]
+    assert len(rows) == 24 and len({(r.split("|")[1], r.split("|")[2]) for r in rows}) == 24
+
+
+def test_whatsapp_kit_has_30_linkless_messages_and_is_current():
+    sys.path.insert(0, str(DS / "whatsapp"))
+    import build_whatsapp
+    assert (DS / "WHATSAPP_CHANNEL.md").read_text() == build_whatsapp.build()
+    assert len(build_whatsapp.M) == 30 and len(build_whatsapp.DESCRIPTION) < 500
+    with pytest.raises(SystemExit):
+        build_whatsapp.check(1, "consejo", "Visita irs.gov", None)
+    polls = [m[3] for m in build_whatsapp.M if m[3]]
+    assert polls and all(2 <= len(p[1]) <= 12 for p in polls)

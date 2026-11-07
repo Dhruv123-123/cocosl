@@ -1,0 +1,1726 @@
+[
+ {
+  "key": "m6-envio-10-de-mayo",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Mother's Day (May 10 in Mexico and much of Latin America) is one of the biggest sending days of the year: send by May 5, compare the amount received, and pay from your account.",
+  "script": {
+   "title": "Tu envío del 10 de mayo: mándalo antes del 5",
+   "hook": "El 10 de mayo es de los días con más envíos del año. Por eso conviene mandarlo antes.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "El 10 de mayo es de los días con más envíos del año. Por eso conviene mandarlo antes.",
+     "on_screen_text": "El 10 de mayo, todos mandan a la vez",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding an envelope with a flower. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Los días antes hay filas para recoger, y tu mamá quiere el dinero para la comida o el regalo, no el lunes después.",
+     "on_screen_text": "Filas, y tu mamá esperando",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a long line in front of a small shop. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuándo",
+     "narration": "Mándalo a más tardar el 5 de mayo, y si va a una cuenta, todavía mejor.",
+     "on_screen_text": "Mándalo a más tardar el 5",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with the 5 circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Compara cuánto llega en dos o tres servicios y paga desde tu cuenta, no en efectivo.",
+     "on_screen_text": "Compara cuánto llega y paga desde tu cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two phones side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Así llega a tiempo, y llega completo.",
+     "on_screen_text": "Llega a tiempo y llega completo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf smiling with a phone. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El 10 de mayo es de los días con más envíos del año. Mándalo a más tardar el 5 de mayo, compara cuánto llega allá en 2 o 3 servicios y paga desde tu cuenta (los envíos pagados en efectivo tienen un impuesto de 1%). La calculadora gratis de envíos está en el enlace de la bio.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "diadelasmadres",
+    "10demayo",
+    "remesas",
+    "envios",
+    "dinerosimple"
+   ],
+   "description": "Cuándo mandar tu envío del Día de las Madres.",
+   "thumbnail_text": "Envío del 10 de mayo",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Mother's Day is May 10 in Mexico, Guatemala, El Salvador and others (dates vary by country)",
+    "1% excise tax on cash-funded remittances"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6-regalo-que-sirve",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "A Mother's Day gift doesn't need debt: pay one of her bills, add to her savings, or give your time; set the amount before you shop.",
+  "script": {
+   "title": "El regalo del Día de las Madres que sí le sirve",
+   "hook": "El mejor regalo para mamá no tiene que salir de la tarjeta.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "El mejor regalo para mamá no tiene que salir de la tarjeta.",
+     "on_screen_text": "Un regalo que no sale de la tarjeta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a small gift and a card with an X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Uno",
+     "narration": "Uno: pagarle una cuenta del mes, la luz o el celular. Se lo quitas de encima.",
+     "on_screen_text": "Pagarle una cuenta del mes",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bill with a heart stamp. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dos",
+     "narration": "Dos: ponerle algo en su ahorro, con nombre: 'para ti, mamá'.",
+     "on_screen_text": "Sumar a su ahorro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar with a ribbon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tres",
+     "narration": "Tres: tu tiempo, con fecha. Una comida que cocinas tú, un día de paseo.",
+     "on_screen_text": "Tu tiempo, con fecha",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a heart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Lo que elijas, decide el monto antes de salir de la casa.",
+     "on_screen_text": "Decide el monto antes de salir",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf writing a number on a note. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Ideas para el Día de las Madres que no salen de la tarjeta: pagarle una cuenta del mes, ponerle algo en su ahorro, o tu tiempo con fecha (una comida que cocinas tú, un día de paseo). Decide el monto antes de salir de la casa.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "diadelasmadres",
+    "regalos",
+    "presupuesto",
+    "familia",
+    "dinerosimple"
+   ],
+   "description": "Regalos del Día de las Madres sin deudas.",
+   "thumbnail_text": "Un regalo que sirve",
+   "sources": [],
+   "claims_to_verify": [
+    "No numeric claims"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6-graduacion-cuenta",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "A graduation gift that lasts: help the graduate open a fee-free checking account and a savings account, and deposit the cash gifts there instead of carrying them.",
+  "script": {
+   "title": "Tu graduado y su primera cuenta de banco",
+   "hook": "Si alguien en tu familia se gradúa este mes, el mejor regalo cabe en una cuenta.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si alguien en tu familia se gradúa este mes, el mejor regalo cabe en una cuenta.",
+     "on_screen_text": "El mejor regalo de graduación cabe en una cuenta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a graduation cap. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué",
+     "narration": "Ayúdale a abrir una cuenta de cheques sin cargo mensual, y una de ahorro al lado.",
+     "on_screen_text": "Cuenta de cheques sin cargos y una de ahorro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two small piggy banks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Los regalos",
+     "narration": "El dinero de los regalos va directo al ahorro, no a la bolsa.",
+     "on_screen_text": "El dinero de los regalos, directo al ahorro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope going into a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Débito",
+     "narration": "Que empiece con tarjeta de débito y alertas en el celular. El crédito, con calma y con un plan.",
+     "on_screen_text": "Con débito, no con crédito todavía",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a debit card with a bell. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Es un regalo que dura más que cualquier otro.",
+     "on_screen_text": "Un hábito que dura más que el regalo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf handing over a small card. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si alguien en tu familia se gradúa: ayúdale a abrir una cuenta de cheques sin cargo mensual y una de ahorro al lado, y que el dinero de los regalos vaya directo al ahorro. Que empiece con débito y alertas; el crédito, con un plan. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "graduacion",
+    "cuentadebanco",
+    "jovenes",
+    "ahorro",
+    "dinerosimple"
+   ],
+   "description": "Un regalo de graduación que dura: su primera cuenta.",
+   "thumbnail_text": "Su primera cuenta",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Fee-free student checking accounts exist (terms vary; minors may need a joint owner)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6-factura-medica",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "A big hospital bill is negotiable: ask for an itemized bill, ask about the hospital's financial assistance policy (nonprofit hospitals must have one), and don't put it on a credit card first.",
+  "script": {
+   "title": "Una factura del hospital se puede negociar",
+   "hook": "Te llegó una factura del hospital de miles de dólares. Antes de pagarla, haz tres preguntas.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Te llegó una factura del hospital de miles de dólares. Antes de pagarla, haz tres preguntas.",
+     "on_screen_text": "Antes de pagar, tres preguntas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a long bill. No text, no logos, no real people."
+    },
+    {
+     "heading": "Uno",
+     "narration": "Una: pide la factura detallada, línea por línea. A veces hay cobros repetidos o cosas que no te hicieron.",
+     "on_screen_text": "Pide la factura detallada",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a long receipt with a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dos",
+     "narration": "Dos: pregunta por su programa de ayuda financiera. Los hospitales sin fines de lucro tienen que tener uno, y puede bajar o borrar la cuenta.",
+     "on_screen_text": "Pregunta por la ayuda financiera",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a hospital with a heart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tres",
+     "narration": "Tres: pide un plan de pagos sin intereses directo con el hospital.",
+     "on_screen_text": "Pide un plan de pagos sin intereses",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with small equal marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y no la pases a tu tarjeta de crédito primero: ahí sí cobra intereses.",
+     "on_screen_text": "No la pases a la tarjeta primero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card with an X. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si te llega una factura grande del hospital, antes de pagar:\n1. Pide la factura detallada (busca cobros repetidos).\n2. Pregunta por su programa de ayuda financiera: los hospitales sin fines de lucro tienen que tener uno.\n3. Pide un plan de pagos sin intereses con el hospital.\nY no la pases a la tarjeta de crédito primero. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "facturamedica",
+    "hospital",
+    "deudas",
+    "salud",
+    "dinerosimple"
+   ],
+   "description": "Cómo negociar una factura del hospital.",
+   "thumbnail_text": "Factura del hospital",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://www.irs.gov/charities-non-profits/financial-assistance-policies-faps"
+   ],
+   "claims_to_verify": [
+    "Nonprofit hospitals must have a written financial assistance policy (IRC 501(r))",
+    "Itemized bills can be requested; billing errors are common (avoid citing a % unless sourced)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6-deuda-medica-credito",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Medical debt and your credit: the big credit bureaus no longer report paid medical collections or ones under $500, and new medical collections wait a year before they show up; check your reports.",
+  "script": {
+   "title": "Las deudas médicas y tu crédito: lo que cambió",
+   "hook": "Si te preocupa que una cuenta del doctor arruine tu crédito, esto te interesa.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si te preocupa que una cuenta del doctor arruine tu crédito, esto te interesa.",
+     "on_screen_text": "¿Una cuenta del doctor y tu crédito?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a medical bill and a credit gauge. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pagadas",
+     "narration": "Las tres agencias ya no muestran deudas médicas en cobranza que ya pagaste.",
+     "on_screen_text": "Las deudas médicas pagadas ya no salen",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bill with a checkmark disappearing. No text, no logos, no real people."
+    },
+    {
+     "heading": "Chicas",
+     "narration": "Tampoco las menores de 500 dólares.",
+     "on_screen_text": "Las menores de $500 tampoco",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small bill with an X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tiempo",
+     "narration": "Y una cuenta médica nueva espera un año antes de aparecer, para que tengas tiempo de arreglarla con el seguro.",
+     "on_screen_text": "Las nuevas esperan un año",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with one year marked. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Revisa tus reportes gratis. Si aparece una que no debería, dispútala.",
+     "on_screen_text": "Revisa tus reportes gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over a report. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Deudas médicas y tu crédito: las tres agencias ya no muestran deudas médicas en cobranza que ya pagaste, ni las menores de $500, y una nueva espera un año antes de aparecer. Revisa tus reportes gratis y disputa lo que no debería estar. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "credito",
+    "deudamedica",
+    "reportedecredito",
+    "salud",
+    "dinerosimple"
+   ],
+   "description": "Cómo afectan hoy las deudas médicas a tu crédito.",
+   "thumbnail_text": "Deuda médica y crédito",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "HIGH RISK: Equifax, Experian and TransUnion voluntary policies (2022-2023): paid medical collections removed, under-$500 not reported, one-year wait; the 2025 CFPB rule banning medical debt from reports was vacated; confirm current status",
+    "Some states restrict medical debt reporting further"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6-carro-precio-total",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "At the dealer, negotiate the total price, not the monthly payment: a lower payment over 84 months can cost far more interest.",
+  "script": {
+   "title": "En el carro, pregunta el precio total, no la mensualidad",
+   "hook": "'¿Cuánto quiere pagar al mes?' es la pregunta más cara del lote de carros.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "'¿Cuánto quiere pagar al mes?' es la pregunta más cara del lote de carros.",
+     "on_screen_text": "La pregunta más cara del lote",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at a car lot with a question bubble. No text, no logos, no real people."
+    },
+    {
+     "heading": "El truco",
+     "narration": "Si dices una mensualidad, la alcanzan alargando el plazo. Y entre más meses, más intereses.",
+     "on_screen_text": "Alargan el plazo y la mensualidad baja",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a long calendar stretching. No text, no logos, no real people."
+    },
+    {
+     "heading": "Ejemplo",
+     "narration": "En un préstamo de 15 mil al ocho por ciento, a 84 meses pagas unos 1,400 dólares más de intereses que a 60.",
+     "on_screen_text": "84 meses en vez de 60: más intereses",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two receipts of different lengths. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué decir",
+     "narration": "Tú di: 'Dígame el precio total, con impuestos y cargos'. Y negocia ese número.",
+     "on_screen_text": "'Dígame el precio total, con todo'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a paper with one number. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Mejor aún: llega con un préstamo preaprobado de tu banco o cooperativa.",
+     "on_screen_text": "Lleva tu préstamo aprobado de tu cooperativa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small bank with a checkmark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "En el lote de carros, no digas cuánto quieres pagar al mes: la mensualidad se alcanza alargando el plazo, y entre más meses, más intereses. Ejemplo: $15,000 al 8%, a 84 meses pagas unos $1,400 más de intereses que a 60. Pide el precio total con impuestos y cargos, y llega con un préstamo preaprobado de tu banco o cooperativa. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "carros",
+    "prestamo",
+    "carrousado",
+    "deudas",
+    "dinerosimple"
+   ],
+   "description": "Por qué negociar el precio total del carro y no la mensualidad.",
+   "thumbnail_text": "El precio total",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Example arithmetic: $15,000 at 8% APR: 60 months about $3,249 interest, 84 months about $4,639 (difference about $1,390)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6-vin-gratis",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Before buying a used car, run the VIN through two free checks: NICB VINCheck (theft and salvage) and NHTSA's recall lookup; then pay a mechanic for an inspection.",
+  "script": {
+   "title": "Revisa el carro usado gratis con su número VIN",
+   "hook": "Antes de comprar un carro usado, dos revisiones gratis con un solo número.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Antes de comprar un carro usado, dos revisiones gratis con un solo número.",
+     "on_screen_text": "Dos revisiones gratis con un número",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf pointing at a car windshield. No text, no logos, no real people."
+    },
+    {
+     "heading": "VIN",
+     "narration": "El VIN son 17 letras y números. Está abajo del parabrisas y en la puerta del chofer. Que coincida con el título.",
+     "on_screen_text": "El VIN está en el parabrisas y la puerta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a windshield with a small plate. No text, no logos, no real people."
+    },
+    {
+     "heading": "Robo",
+     "narration": "Uno: el buscador gratis de la NICB te dice si lo reportaron robado o como pérdida total.",
+     "on_screen_text": "Revisa si fue robado o de pérdida total",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a car with a warning sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recall",
+     "narration": "Dos: el buscador de la NHTSA te dice si tiene llamados a reparación sin arreglar. Esos se arreglan gratis.",
+     "on_screen_text": "Revisa si tiene llamados a reparación",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a wrench with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y antes de firmar, que lo revise un mecánico de tu confianza.",
+     "on_screen_text": "Y un mecánico de tu confianza",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf shaking hands with a mechanic. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Antes de comprar un carro usado, revisa su VIN (17 caracteres, abajo del parabrisas y en la puerta; que coincida con el título):\n1. El buscador gratis de la NICB: robo o pérdida total.\n2. El buscador de la NHTSA: llamados a reparación sin arreglar (se arreglan gratis).\nY que lo revise un mecánico de tu confianza antes de firmar.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "carrousado",
+    "carros",
+    "vin",
+    "compras",
+    "dinerosimple"
+   ],
+   "description": "Dos revisiones gratis de un carro usado con su VIN.",
+   "thumbnail_text": "Revisa el VIN",
+   "sources": [
+    "https://www.nhtsa.gov/recalls",
+    "https://www.nicb.org/vincheck"
+   ],
+   "claims_to_verify": [
+    "NICB VINCheck is free and shows theft and total-loss records reported by participating insurers",
+    "NHTSA recall lookup by VIN is free; recall repairs are free at dealers"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6-yo-yo",
+  "format": "short",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Yo-yo (spot delivery) financing: you drive the car home, then the dealer calls saying the financing 'fell through' and pushes a worse deal; know your rights and don't hand over your trade-in until financing is final.",
+  "script": {
+   "title": "Te llevaste el carro y te llaman para 'volver a firmar'",
+   "hook": "Te llevas el carro, y a la semana te llaman: 'su préstamo no pasó, venga a firmar otro'. Cuidado.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Te llevas el carro, y a la semana te llaman: 'su préstamo no pasó, venga a firmar otro'. Cuidado.",
+     "on_screen_text": "'Su préstamo no pasó, venga a firmar'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf on the phone next to a car. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "Se llama financiamiento yo-yo: te dejan llevarte el carro antes de que el préstamo esté aprobado de verdad.",
+     "on_screen_text": "Se llama financiamiento yo-yo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a yo-yo next to a car key. No text, no logos, no real people."
+    },
+    {
+     "heading": "La trampa",
+     "narration": "Luego te piden firmar uno con tasa más alta o más enganche, porque ya te encariñaste con el carro.",
+     "on_screen_text": "El nuevo contrato es peor",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a contract with a higher number. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué hacer",
+     "narration": "No firmes nada nuevo con prisa. Pide por escrito por qué cambió y, si lo devuelves, que te regresen tu enganche y tu carro viejo.",
+     "on_screen_text": "No firmes nada nuevo con prisa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a hand stopping a pen. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Lo más seguro: llegar con tu préstamo ya aprobado por tu banco o cooperativa.",
+     "on_screen_text": "Mejor llega con tu préstamo aprobado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank with a checkmark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Financiamiento yo-yo: te llevas el carro y a la semana te llaman porque 'el préstamo no pasó', para que firmes uno peor. No firmes nada nuevo con prisa; pide por escrito por qué cambió, y si lo devuelves, que te regresen tu enganche y tu carro viejo. Si te presionan, puedes quejarte con la FTC o el fiscal general de tu estado. Lo más seguro: llegar con tu préstamo ya aprobado. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "carros",
+    "estafas",
+    "prestamo",
+    "derechos",
+    "dinerosimple"
+   ],
+   "description": "Qué es el financiamiento yo-yo y cómo protegerte.",
+   "thumbnail_text": "'Venga a firmar otra vez'",
+   "sources": [
+    "https://consumidor.ftc.gov/",
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Spot delivery / yo-yo financing described by FTC and CFPB; state laws on returning the down payment and trade-in vary"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6-primer-trabajo-teen",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "A teen's first summer job: fill out the W-4 carefully, read the first pay stub together, and if they earn little they may get back federal income tax withheld by filing a return.",
+  "script": {
+   "title": "El primer trabajo de verano de tu hijo",
+   "hook": "Si tu hijo empieza a trabajar este verano, siéntense juntos con su primer talón de pago.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si tu hijo empieza a trabajar este verano, siéntense juntos con su primer talón de pago.",
+     "on_screen_text": "Su primer talón, juntos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf and a teen looking at a paper. No text, no logos, no real people."
+    },
+    {
+     "heading": "W-4",
+     "narration": "Primero, el W-4. Llénenlo juntos y con calma: dice cuánto le van a retener.",
+     "on_screen_text": "Llenen juntos el W-4",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form with a pencil. No text, no logos, no real people."
+    },
+    {
+     "heading": "Talón",
+     "narration": "Luego el talón: que vea su bruto, el Seguro Social, Medicare y lo que le llega.",
+     "on_screen_text": "Que vea a dónde se fue cada dólar",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pay stub with highlighted lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Reembolso",
+     "narration": "Si gana poco en el año, puede que le regresen lo que le retuvieron de impuesto federal, pero tiene que declarar para recibirlo.",
+     "on_screen_text": "Si gana poco, puede que le regresen",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with an arrow back. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Y desde el primer cheque, una parte al ahorro. Es el mejor momento para el hábito.",
+     "on_screen_text": "Y una parte al ahorro desde el primer cheque",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a coin going into a jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si tu hijo empieza a trabajar este verano: llenen juntos el W-4, lean juntos su primer talón (bruto, Seguro Social, Medicare, neto), y si gana poco en el año, puede que le regresen el impuesto federal retenido, pero tiene que declarar para recibirlo. Y desde el primer cheque, una parte al ahorro. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "primertrabajo",
+    "adolescentes",
+    "w4",
+    "ahorro",
+    "dinerosimple"
+   ],
+   "description": "Lo que tu hijo debe saber de su primer trabajo.",
+   "thumbnail_text": "Su primer trabajo",
+   "sources": [
+    "https://www.irs.gov/es/individuals/students"
+   ],
+   "claims_to_verify": [
+    "A dependent with wages below the filing threshold may still file to get withheld federal income tax refunded"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6-roth-para-jovenes",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "A teen with earned income can have a custodial Roth IRA: contributions up to what they earned (within the annual limit), and decades of growth.",
+  "script": {
+   "title": "Si tu hijo ya gana dinero, puede tener una Roth IRA",
+   "hook": "Si tu hijo ya tiene trabajo, puede empezar a invertir para su retiro. Sí, a los 15.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si tu hijo ya tiene trabajo, puede empezar a invertir para su retiro. Sí, a los 15.",
+     "on_screen_text": "Una cuenta de retiro a los 15",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf next to a teen with a small plant. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué",
+     "narration": "Se llama Roth IRA de custodia: tú la abres y la manejas hasta que sea mayor de edad.",
+     "on_screen_text": "Una Roth IRA de custodia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small safe with two keys. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuánto",
+     "narration": "Puede poner hasta lo que ganó trabajando en el año, con un límite anual.",
+     "on_screen_text": "Hasta lo que ganó, con un límite",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar with a line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por qué",
+     "narration": "Lo bueno es el tiempo: ese dinero tiene cincuenta años para crecer, y en la Roth sale sin impuestos en el retiro.",
+     "on_screen_text": "Tiene décadas para crecer",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small plant becoming a tree. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Aunque sea una parte del sueldo del verano, ya cuenta.",
+     "on_screen_text": "Aunque sea una parte del sueldo de verano",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf smiling at the teen. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si tu hijo ya gana dinero trabajando, puede tener una Roth IRA de custodia: tú la abres y la manejas hasta que sea mayor de edad. Puede poner hasta lo que ganó en el año (con un límite anual), y tiene décadas para crecer; en el retiro sale sin impuestos (con sus reglas). Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "rothira",
+    "jovenes",
+    "invertir",
+    "retiro",
+    "dinerosimple"
+   ],
+   "description": "La Roth IRA de custodia para jóvenes que trabajan.",
+   "thumbnail_text": "Roth IRA a los 15",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/roth-iras"
+   ],
+   "claims_to_verify": [
+    "Custodial Roth IRA: contributions limited to the lesser of earned income or the annual IRA limit (2027 limit: check)",
+    "Qualified Roth withdrawals are tax-free (age 59½ and 5-year rule)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6-boletos-falsos",
+  "format": "short",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Fake flight-ticket sellers on Facebook and WhatsApp before the summer trip home: 'cheap tickets' paid by Zelle or cash to a person; buy from the airline or a known agency and check the reservation on the airline's site.",
+  "script": {
+   "title": "Boletos de avión 'baratos' por Facebook: cuidado",
+   "hook": "Si alguien te vende boletos para ir a tu país 'más baratos' por Facebook, revisa esto antes de pagar.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si alguien te vende boletos para ir a tu país 'más baratos' por Facebook, revisa esto antes de pagar.",
+     "on_screen_text": "¿Boletos baratos por Facebook?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf looking at a phone with a plane icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "La trampa",
+     "narration": "Te mandan una 'reservación' que se ve real, pagas por Zelle o en efectivo, y en el aeropuerto no hay nada.",
+     "on_screen_text": "Te mandan una reservación que no existe",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a ticket fading away. No text, no logos, no real people."
+    },
+    {
+     "heading": "Señal",
+     "narration": "La señal: te piden pagar a una persona, por Zelle o en efectivo. Las aerolíneas no cobran así.",
+     "on_screen_text": "Si te piden Zelle o efectivo, no",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone payment with an X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Revisa",
+     "narration": "Con el código, revisa la reservación en la página de la aerolínea, no en el enlace que te mandaron.",
+     "on_screen_text": "Revisa la reservación en la aerolínea",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a laptop with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Compra directo o con una agencia que puedas visitar. El ahorro no vale el viaje perdido.",
+     "on_screen_text": "Compra directo o con una agencia conocida",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a real boarding pass. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Boletos de avión 'baratos' por Facebook o WhatsApp: muchas veces te mandan una reservación que no existe. Señal: te piden pagar a una persona por Zelle o en efectivo. Revisa el código en la página de la aerolínea (no en el enlace que te mandaron) y compra directo o con una agencia conocida. Si te estafaron, repórtalo a la FTC, en español.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "estafas",
+    "viajes",
+    "boletos",
+    "verano",
+    "dinerosimple"
+   ],
+   "description": "Cómo reconocer a los vendedores de boletos falsos.",
+   "thumbnail_text": "Boletos falsos",
+   "sources": [
+    "https://consumidor.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "Fake travel/ticket sellers on social media are a reported scam type (FTC); Zelle payments generally can't be reversed"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6-campamento-credito",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Summer day camp so you can work can count toward the Child and Dependent Care Credit (overnight camp doesn't); keep receipts with the camp's tax ID number.",
+  "script": {
+   "title": "El campamento de verano puede bajar tus impuestos",
+   "hook": "Si pagas campamento de día para poder trabajar, guarda ese recibo: puede bajar tus impuestos.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si pagas campamento de día para poder trabajar, guarda ese recibo: puede bajar tus impuestos.",
+     "on_screen_text": "Ese recibo del campamento vale",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a receipt next to a kid with a backpack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué",
+     "narration": "Existe un crédito por cuidado de hijos menores de 13 mientras trabajas o buscas trabajo.",
+     "on_screen_text": "Crédito por cuidado de niños",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small house with a heart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuenta",
+     "narration": "El campamento de día cuenta. El campamento donde se quedan a dormir, no.",
+     "on_screen_text": "El de día cuenta; el de dormir allá, no",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a sun and a moon, the moon with an X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Guarda",
+     "narration": "Pide recibo con el nombre, la dirección y el número de impuestos del campamento.",
+     "on_screen_text": "Pide recibo con su número de impuestos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with a number. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "En abril se lo das a quien te prepara los impuestos.",
+     "on_screen_text": "En abril, se lo das a tu preparador",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf handing a folder. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si pagas campamento de verano de día para poder trabajar, guarda el recibo: puede contar para el crédito por cuidado de hijos menores de 13. El de día cuenta; el de quedarse a dormir, no. Pide recibo con nombre, dirección y número de impuestos del campamento. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "verano",
+    "campamento",
+    "impuestos",
+    "niños",
+    "dinerosimple"
+   ],
+   "description": "El campamento de día y el crédito por cuidado de niños.",
+   "thumbnail_text": "Campamento y créditos",
+   "sources": [
+    "https://www.irs.gov/es/credits-deductions/individuals/child-and-dependent-care-credit-information"
+   ],
+   "claims_to_verify": [
+    "Day camp counts as a work-related care expense for the Child and Dependent Care Credit; overnight camp does not (IRS Pub 503)",
+    "Qualifying child under 13; care provider's TIN required"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6-calor-luz",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Summer electric bills: ask the utility for budget billing (an even monthly amount) and ask about cooling help (LIHEAP) before the bill gets big.",
+  "script": {
+   "title": "El recibo de la luz del verano: pide esto antes de que llegue",
+   "hook": "En verano el recibo de la luz se dispara. Hay dos cosas que puedes pedir antes.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "En verano el recibo de la luz se dispara. Hay dos cosas que puedes pedir antes.",
+     "on_screen_text": "En verano, la luz se dispara",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf fanning next to a high bill. No text, no logos, no real people."
+    },
+    {
+     "heading": "Uno",
+     "narration": "Una: el pago parejo. Muchas compañías te cobran lo mismo cada mes, promediado en el año, y no te llega un recibo enorme en julio.",
+     "on_screen_text": "El pago parejo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with equal marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Dos",
+     "narration": "Dos: ayuda para pagar. El programa LIHEAP ayuda con la luz y, en muchos estados, con el aire en verano.",
+     "on_screen_text": "Ayuda para pagar la luz",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a light bulb with a heart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cómo",
+     "narration": "Llama al número de tu recibo y pregunta por las dos. Muchas atienden en español.",
+     "on_screen_text": "Llama a tu compañía de luz",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a speech bubble. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Pide antes de atrasarte: es más fácil que arreglar un corte.",
+     "on_screen_text": "Pide antes de atrasarte",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf calmly on the phone. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Antes de que llegue el recibo de la luz del verano:\n1. Pide el pago parejo (budget billing): lo mismo cada mes, promediado.\n2. Pregunta por ayuda para pagar: LIHEAP ayuda con la luz, y en muchos estados con el aire en verano.\nLlama al número de tu recibo; muchas compañías atienden en español.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "luz",
+    "verano",
+    "presupuesto",
+    "ahorro",
+    "dinerosimple"
+   ],
+   "description": "Dos cosas que pedir antes del recibo de luz del verano.",
+   "thumbnail_text": "La luz en verano",
+   "sources": [
+    "https://www.acf.hhs.gov/ocs/programs/liheap"
+   ],
+   "claims_to_verify": [
+    "LIHEAP helps with heating and cooling costs; cooling help and dates vary by state; check that the program is funded for 2027",
+    "Budget billing is offered by many utilities (varies)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6-deposito-renta",
+  "format": "short",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Getting the rent deposit back when moving: photos on the way in and out, a written forwarding address, and your state's deadline for the landlord to return it or itemize deductions.",
+  "script": {
+   "title": "Te mudas: así recuperas tu depósito",
+   "hook": "Si te mudas este verano, tu depósito es tu dinero. Así lo recuperas.",
+   "segments": [
+    {
+     "heading": "Gancho",
+     "narration": "Si te mudas este verano, tu depósito es tu dinero. Así lo recuperas.",
+     "on_screen_text": "Tu depósito es tu dinero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf carrying a moving box. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fotos",
+     "narration": "Toma fotos y video de cada cuarto al salir, con fecha. Igual que cuando entraste.",
+     "on_screen_text": "Fotos y video al salir",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone taking a photo of a room. No text, no logos, no real people."
+    },
+    {
+     "heading": "Por escrito",
+     "narration": "Dale tu nueva dirección por escrito, y guarda copia.",
+     "on_screen_text": "Tu nueva dirección, por escrito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with a house icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Plazo",
+     "narration": "Tu estado le da un plazo al dueño para regresarlo o darte la lista de lo que descontó.",
+     "on_screen_text": "Tu estado le da un plazo al dueño",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a deadline. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Si no llega, reclámalo por escrito. Muchas veces basta con eso.",
+     "on_screen_text": "Si no llega, reclámalo por escrito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf writing a letter. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si te mudas, así recuperas tu depósito: fotos y video de cada cuarto al salir (con fecha), tu nueva dirección por escrito y con copia, y conoce el plazo de tu estado para que el dueño lo regrese o te dé la lista de descuentos. Si no llega, reclámalo por escrito. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "renta",
+    "deposito",
+    "mudanza",
+    "inquilinos",
+    "dinerosimple"
+   ],
+   "description": "Cómo recuperar tu depósito de renta al mudarte.",
+   "thumbnail_text": "Tu depósito de vuelta",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "State laws set deadlines for returning deposits or itemizing deductions (varies by state)"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6c-10-de-mayo",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Mother's Day without debt in five moves: a set amount, the remittance by May 5, a gift that helps, a shared family gift, and no 'pay in 4'.",
+  "script": {
+   "title": "Día de las Madres sin deudas: 5 ideas",
+   "hook": "Guárdalo para el chat de los hermanos.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "5 ideas. Guárdalo para el chat de los hermanos.",
+     "on_screen_text": "Día de las Madres sin deudas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a flower and a list. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Decide cuánto vas a gastar antes de ver los anuncios.",
+     "on_screen_text": "1. Un número antes de salir",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a sticky note with a number. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Si mamá está lejos, que el dinero llegue a tiempo y completo.",
+     "on_screen_text": "2. El envío, antes del 5 de mayo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "La luz, el celular o una cita del doctor.",
+     "on_screen_text": "3. Un regalo que le quite un pago",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bill with a heart stamp. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Cada uno pone su parte. Uno junta y compra.",
+     "on_screen_text": "4. Un regalo entre todos los hermanos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. four hands holding one gift. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Si no cabe este mes, no cabe en cuatro.",
+     "on_screen_text": "5. Nada de 'paga en 4'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. four small receipts with an X. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Incluso en junio, cuando lleguen los cobros.",
+     "on_screen_text": "Lo que más quiere es verte bien",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf hugging a smiling older woman. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Día de las Madres sin deudas, 5 ideas:\n1. Un número antes de salir.\n2. Si mamá está lejos, el envío antes del 5 de mayo.\n3. Un regalo que le quite un pago.\n4. Un regalo entre todos los hermanos.\n5. Nada de 'paga en 4': si no cabe este mes, no cabe en cuatro.\n\nEl Presupuesto de 20 Minutos (guía + hoja de cálculo en español) está en el enlace de la bio. Es nuestro producto.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "diadelasmadres",
+    "10demayo",
+    "regalos",
+    "familia",
+    "dinerosimple"
+   ],
+   "description": "Cinco ideas para el Día de las Madres sin deudas.",
+   "thumbnail_text": "10 de mayo sin deudas",
+   "sources": [],
+   "claims_to_verify": [
+    "No numeric claims"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6c-factura-medica",
+  "format": "carousel",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "A big medical bill, step by step: don't pay yet, check the insurance explanation of benefits, get the itemized bill, apply for financial assistance, negotiate, ask for a no-interest plan, and keep it off the credit card.",
+  "script": {
+   "title": "Te llegó una factura médica grande: qué hacer, en orden",
+   "hook": "Guárdalo para el día que llegue la carta.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo para el día que llegue.",
+     "on_screen_text": "Factura médica grande: qué hacer, en orden",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding a long bill calmly. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Tienes tiempo. Primero, revisa.",
+     "on_screen_text": "1. No pagues el mismo día",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a pause sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Si tienes seguro, revisa su explicación de beneficios.",
+     "on_screen_text": "2. Compárala con lo que dice tu seguro",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two papers side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Busca cobros repetidos o cosas que no te hicieron.",
+     "on_screen_text": "3. Pide la factura detallada",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over a receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Los hospitales sin fines de lucro tienen que tener un programa.",
+     "on_screen_text": "4. Pide ayuda financiera",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a hospital with a heart. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Pregunta si hay descuento por pagar de contado o una parte.",
+     "on_screen_text": "5. Ofrece pagar menos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a price tag going down. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Directo con el hospital, por escrito.",
+     "on_screen_text": "6. Un plan de pagos sin intereses",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with equal marks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Ahí sí empieza a cobrar intereses.",
+     "on_screen_text": "Y no la pases a la tarjeta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card with an X. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Si te llega una factura médica grande, en orden:\n1. No pagues el mismo día.\n2. Compárala con la explicación de beneficios de tu seguro.\n3. Pide la factura detallada.\n4. Pide ayuda financiera (los hospitales sin fines de lucro tienen que tener un programa).\n5. Pregunta por descuento.\n6. Plan de pagos sin intereses, por escrito.\nY no la pases a la tarjeta. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "facturamedica",
+    "hospital",
+    "seguromedico",
+    "deudas",
+    "dinerosimple"
+   ],
+   "description": "Qué hacer con una factura médica grande, paso a paso.",
+   "thumbnail_text": "Factura médica: en orden",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://www.irs.gov/charities-non-profits/financial-assistance-policies-faps"
+   ],
+   "claims_to_verify": [
+    "Nonprofit hospitals must have a financial assistance policy (IRC 501(r))",
+    "Explanation of Benefits (EOB) comes from the insurer"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6c-antes-de-comprar-carro",
+  "format": "carousel",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Eight questions before signing for a used car: total out-the-door price, APR and term, preapproval comparison, add-ons, Buyers Guide (as-is or warranty), VIN checks, mechanic inspection, and whether financing is final.",
+  "script": {
+   "title": "Antes de firmar por un carro usado: 8 preguntas",
+   "hook": "Guárdalo y llévalo al lote.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "8 preguntas. Llévalo al lote.",
+     "on_screen_text": "Antes de firmar por un carro usado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a car key and a list. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Con impuestos, placas y todos los cargos.",
+     "on_screen_text": "1. ¿Cuál es el precio total?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a price tag with a total. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Compárala con la de tu banco o cooperativa.",
+     "on_screen_text": "2. ¿Qué tasa y cuántos meses?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a percent sign and a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Garantías, seguros, grabado de vidrios: casi todos se pueden quitar.",
+     "on_screen_text": "3. ¿Qué extras me están cobrando?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with extra lines crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Lo dice el letrero de la ventana.",
+     "on_screen_text": "4. ¿Se vende 'tal como está'?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a window sticker. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Revísalo gratis: robo, pérdida total y llamados a reparación.",
+     "on_screen_text": "5. ¿El VIN está limpio?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a windshield plate with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Si dicen que no, vete.",
+     "on_screen_text": "6. ¿Lo puede revisar mi mecánico?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a mechanic with a wrench. No text, no logos, no real people."
+    },
+    {
+     "heading": "7",
+     "narration": "Si no, no entregues tu carro viejo todavía.",
+     "on_screen_text": "7. ¿El préstamo ya está aprobado?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a contract with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "8",
+     "narration": "Y en español, si lo negociaste en español.",
+     "on_screen_text": "8. ¿Me da copia de todo lo que firmo?",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder with copies. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Antes de firmar por un carro usado, 8 preguntas:\n1. Precio total con todo.\n2. Tasa y meses (compara con tu banco o cooperativa).\n3. Extras que te cobran (casi todos se quitan).\n4. ¿'Tal como está'? Lo dice el letrero de la ventana.\n5. ¿VIN limpio?\n6. ¿Lo revisa tu mecánico?\n7. ¿El préstamo ya está aprobado?\n8. Copia de todo. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "carrousado",
+    "carros",
+    "prestamo",
+    "compras",
+    "dinerosimple"
+   ],
+   "description": "Ocho preguntas antes de firmar por un carro usado.",
+   "thumbnail_text": "8 preguntas",
+   "sources": [
+    "https://consumidor.ftc.gov/",
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "FTC Used Car Rule requires a Buyers Guide on used cars at dealers (as-is or warranty)",
+    "Some states require a Spanish copy of the contract when negotiated mainly in Spanish (e.g., California); varies"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6c-letrero-ventana",
+  "format": "carousel",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "The Buyers Guide sticker on a used car's window, explained: as-is vs warranty, what the warranty covers, that it becomes part of the contract, and the Spanish version.",
+  "script": {
+   "title": "El letrero de la ventana del carro usado: qué dice",
+   "hook": "Ese papel en la ventana del carro usado vale más que lo que te dice el vendedor.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Vale más que lo que te dice el vendedor.",
+     "on_screen_text": "El letrero de la ventana del carro usado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf pointing at a car window sticker. No text, no logos, no real people."
+    },
+    {
+     "heading": "Qué es",
+     "narration": "Los vendedores de carros usados tienen que ponerla en la ventana.",
+     "on_screen_text": "La 'Guía del comprador'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a window with a sticker. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tal como está",
+     "narration": "Si se descompone al salir del lote, el problema es tuyo.",
+     "on_screen_text": "'Tal como está': sin garantía",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a car with a small cloud. No text, no logos, no real people."
+    },
+    {
+     "heading": "Garantía",
+     "narration": "Lee qué partes cubre, cuánto tiempo y qué porcentaje paga el vendedor.",
+     "on_screen_text": "'Garantía': qué cubre y por cuánto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a shield with a checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "Contrato",
+     "narration": "Lo que dice el letrero manda sobre lo que te prometan de palabra.",
+     "on_screen_text": "Es parte de tu contrato",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a contract with the sticker attached. No text, no logos, no real people."
+    },
+    {
+     "heading": "Español",
+     "narration": "Si negocias en español, te tienen que mostrar la versión en español.",
+     "on_screen_text": "Existe en español",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a sticker with a speech bubble. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Junto con tu contrato.",
+     "on_screen_text": "Pide copia y guárdala",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf putting papers in a folder. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El letrero de la ventana del carro usado ('Guía del comprador'):\n'Tal como está' = sin garantía.\n'Garantía' = lee qué cubre, cuánto tiempo y qué porcentaje paga el vendedor.\nEs parte de tu contrato y manda sobre lo que te prometan de palabra.\nSi negocias en español, te tienen que mostrar la versión en español. Pide copia. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "carrousado",
+    "carros",
+    "derechos",
+    "garantia",
+    "dinerosimple"
+   ],
+   "description": "Qué dice la Guía del comprador de un carro usado.",
+   "thumbnail_text": "El letrero de la ventana",
+   "sources": [
+    "https://consumidor.ftc.gov/"
+   ],
+   "claims_to_verify": [
+    "FTC Used Car Rule: Buyers Guide required on used cars sold by dealers; it overrides contrary contract terms",
+    "If the sale is conducted in Spanish, the dealer must display a Spanish Buyers Guide (FTC Used Car Rule)",
+    "Some states (e.g., Maine, Wisconsin) have their own forms"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6c-primer-trabajo",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Five money things for a teen's first job: the W-4, reading the stub, a bank account with direct deposit, a savings split, and filing to get withheld tax back.",
+  "script": {
+   "title": "El primer trabajo de tu hijo: 5 cosas de dinero",
+   "hook": "Guárdalo y siéntate con tu hijo antes de su primer cheque.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Siéntense juntos antes del primer cheque.",
+     "on_screen_text": "El primer trabajo de tu hijo: 5 cosas de dinero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf and a teen at a table. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Dice cuánto le retienen de impuesto federal.",
+     "on_screen_text": "1. El W-4, juntos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a form with a pencil. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Sin cargo mensual. Así no paga por cambiar cheques.",
+     "on_screen_text": "2. Su propia cuenta, con depósito directo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a bank with an arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Bruto, Seguro Social, Medicare y lo que le llega.",
+     "on_screen_text": "3. Lean el talón línea por línea",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a pay stub with highlighted lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Desde el primer cheque. Aunque sea 10%.",
+     "on_screen_text": "4. Una parte al ahorro, automático",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a coin going into a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Si gana poco, puede recibir lo que le retuvieron.",
+     "on_screen_text": "5. Declarar puede regresarle dinero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with an arrow back. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Información general, no asesoría fiscal.",
+     "on_screen_text": "El hábito vale más que el sueldo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf giving a high five to the teen. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El primer trabajo de tu hijo, 5 cosas de dinero:\n1. Llenen juntos el W-4.\n2. Su propia cuenta sin cargos, con depósito directo.\n3. Lean el talón línea por línea.\n4. Una parte al ahorro desde el primer cheque.\n5. Si gana poco, declarar puede regresarle lo que le retuvieron. Información general, no es asesoría fiscal.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "primertrabajo",
+    "adolescentes",
+    "ahorro",
+    "w4",
+    "dinerosimple"
+   ],
+   "description": "Cinco cosas de dinero para el primer trabajo de tu hijo.",
+   "thumbnail_text": "Su primer trabajo",
+   "sources": [
+    "https://www.irs.gov/es/individuals/students"
+   ],
+   "claims_to_verify": [
+    "Dependents may file to recover withheld federal income tax",
+    "Minors may need a joint account owner"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6c-viaje-a-casa",
+  "format": "carousel",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Six money steps for the summer trip home: a trip fund by weeks, buy tickets from the airline, beware fake sellers, the phone plan abroad, foreign transaction fees and ATM fees, and bills on autopay while you're away.",
+  "script": {
+   "title": "El viaje a casa en 6 pasos de dinero",
+   "hook": "Guárdalo si este verano vas a ver a tu familia.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo si este verano vas a ver a tu familia.",
+     "on_screen_text": "El viaje a casa en 6 pasos de dinero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a suitcase and a plane. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Total del viaje entre las semanas que faltan.",
+     "on_screen_text": "1. Un fondo del viaje, por semanas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar with a plane icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Nunca a una persona por Zelle o en efectivo.",
+     "on_screen_text": "2. Boletos: directo o agencia conocida",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a ticket with a checkmark. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Pregunta el plan internacional antes de salir.",
+     "on_screen_text": "3. Tu celular allá",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a globe. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Muchas cobran 3% por compra fuera del país.",
+     "on_screen_text": "4. Tarjetas sin comisión extranjera",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card with a globe. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Cada retiro puede tener dos comisiones.",
+     "on_screen_text": "5. Cajeros: menos veces, más cantidad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an ATM with two small tags. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Renta, luz y tarjetas, para no regresar con atrasos.",
+     "on_screen_text": "6. Tus pagos de aquí, en automático",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a repeating arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Guárdalo y compártelo.",
+     "on_screen_text": "Buen viaje, sin sustos al regreso",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf waving from a plane window. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El viaje a casa, 6 pasos de dinero:\n1. Un fondo del viaje por semanas.\n2. Boletos directo o con agencia conocida (nunca a una persona por Zelle o en efectivo).\n3. Pregunta tu plan de celular internacional.\n4. Usa una tarjeta sin comisión por compras en el extranjero (muchas cobran 3%).\n5. Cajeros: menos veces, más cantidad.\n6. Tus pagos de aquí en automático.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "viajes",
+    "verano",
+    "familia",
+    "ahorro",
+    "dinerosimple"
+   ],
+   "description": "Seis pasos de dinero para tu viaje a casa.",
+   "thumbnail_text": "El viaje a casa",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Foreign transaction fees of about 3% are common on cards that charge them (varies)",
+    "ATM withdrawals abroad may carry fees from both banks"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6c-verano-ninos",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "The kids' summer without breaking the budget: SUN Bucks (Summer EBT) where the state participates, free summer meal sites, library and park programs, day-camp receipts for the tax credit, and a weekly summer number.",
+  "script": {
+   "title": "El verano de los niños sin romper el presupuesto",
+   "hook": "Guárdalo: el verano de los niños cuesta menos de lo que crees.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "Guárdalo y compártelo con otras mamás y papás.",
+     "on_screen_text": "El verano de los niños, sin romper el presupuesto",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with two kids and a sun. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Dinero para comida en verano para niños que califican.",
+     "on_screen_text": "1. SUN Bucks, si tu estado participa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a shopping bag with a sun. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Muchas escuelas y parques dan comida gratis a menores de 18.",
+     "on_screen_text": "2. Comidas gratis de verano",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a lunch tray with a heart. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Programas gratis de lectura, talleres y actividades.",
+     "on_screen_text": "3. La biblioteca y el parque",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a library with a sun. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Puede contar para el crédito por cuidado de niños.",
+     "on_screen_text": "4. Campamento de día: guarda el recibo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with a backpack. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Salidas, antojos y helados, con tope.",
+     "on_screen_text": "5. Un número semanal para el verano",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a small number. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Ahí te dicen qué hay en tu zona.",
+     "on_screen_text": "Pregunta en la escuela antes de que cierre",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf talking to a teacher. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El verano de los niños sin romper el presupuesto:\n1. SUN Bucks (si tu estado participa): dinero para comida en verano para niños que califican.\n2. Comidas gratis de verano para menores de 18 en escuelas y parques.\n3. Programas gratis de la biblioteca y el parque.\n4. Campamento de día: guarda el recibo para el crédito por cuidado de niños.\n5. Un número semanal para salidas.\nPregunta en la escuela antes de que cierre.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "verano",
+    "niños",
+    "familia",
+    "presupuesto",
+    "dinerosimple"
+   ],
+   "description": "Ideas para el verano de los niños sin gastar de más.",
+   "thumbnail_text": "El verano de los niños",
+   "sources": [
+    "https://www.fns.usda.gov/summer",
+    "https://www.irs.gov/es/credits-deductions/individuals/child-and-dependent-care-credit-information"
+   ],
+   "claims_to_verify": [
+    "SUN Bucks (Summer EBT): $120 per eligible child in participating states; check which states run it in 2027",
+    "USDA summer meal sites serve children 18 and under free",
+    "Day camp counts for the Child and Dependent Care Credit"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "m6c-deposito-de-renta",
+  "format": "carousel",
+  "pillar": "presupuesto que sí funciona",
+  "idea_angle": "Six steps to get the rent deposit back: read the lease, give notice in writing, clean and repair, photos and video, forwarding address in writing, and know the state deadline and how to claim.",
+  "script": {
+   "title": "Recupera tu depósito de renta: 6 pasos",
+   "hook": "Guárdalo antes de entregar las llaves.",
+   "segments": [
+    {
+     "heading": "Portada",
+     "narration": "6 pasos. Guárdalo antes de entregar las llaves.",
+     "on_screen_text": "Recupera tu depósito de renta",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf holding keys and a box. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Cuántos días de aviso y cómo darlo.",
+     "on_screen_text": "1. Lee tu contrato",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a contract with a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Con fecha, y guarda copia.",
+     "on_screen_text": "2. Avisa por escrito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a letter with a date. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Hoyitos de clavos, focos, filtros.",
+     "on_screen_text": "3. Limpia y arregla lo chico",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a broom and a small toolbox. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Cada cuarto, con fecha. Compáralas con las de cuando entraste.",
+     "on_screen_text": "4. Fotos y video al salir",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone filming a room. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Para que no digan que no sabían dónde mandarlo.",
+     "on_screen_text": "5. Tu nueva dirección, por escrito",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with a house. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Si no llega a tiempo, reclámalo por escrito.",
+     "on_screen_text": "6. Conoce el plazo de tu estado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a deadline. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cierre",
+     "narration": "Pintura gastada o alfombra usada son desgaste normal.",
+     "on_screen_text": "El desgaste normal no se cobra",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf smiling with the keys. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Recupera tu depósito de renta, 6 pasos:\n1. Lee tu contrato.\n2. Avisa por escrito.\n3. Limpia y arregla lo chico.\n4. Fotos y video al salir.\n5. Tu nueva dirección por escrito.\n6. Conoce el plazo de tu estado y reclama por escrito.\nEl desgaste normal (pintura gastada, alfombra usada) generalmente no se descuenta. Información general, no es asesoría financiera.\n\nSíguenos para un paso de dinero cada semana.",
+   "hashtags": [
+    "renta",
+    "deposito",
+    "mudanza",
+    "inquilinos",
+    "dinerosimple"
+   ],
+   "description": "Seis pasos para recuperar tu depósito de renta.",
+   "thumbnail_text": "Tu depósito de vuelta",
+   "sources": [
+    "https://www.consumerfinance.gov/es/"
+   ],
+   "claims_to_verify": [
+    "Normal wear and tear generally can't be deducted (state law)",
+    "State deadlines to return deposits vary"
+   ],
+   "title_variants": [],
+   "hook_variants": []
+  }
+ },
+ {
+  "key": "l-carro-usado",
+  "format": "long",
+  "pillar": "puntaje de crédito y salir de deudas",
+  "idea_angle": "Complete Spanish guide to buying a used car without getting taken: budget by total cost, preapproval, the rate's real cost with a worked example, the Buyers Guide, free VIN checks, a mechanic, add-ons, yo-yo financing, buy-here-pay-here lots, and your rights.",
+  "script": {
+   "title": "Cómo comprar un carro usado sin que te roben (guía completa)",
+   "hook": "La diferencia entre un buen y un mal préstamo de carro puede ser de más de cinco mil dólares. Por el mismo carro.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Comprar carro usado es de las compras más grandes que hacemos, y de las más fáciles de hacer mal. En este video vemos cuánto carro te alcanza, por qué conviene llegar con el préstamo aprobado, cuánto cuesta de verdad la tasa con un ejemplo en números, el letrero de la ventana, las revisiones gratis del VIN, los extras que te meten, el financiamiento yo-yo y tus derechos. Es información general, no asesoría financiera.",
+     "on_screen_text": "Carro usado sin trampas: la guía completa",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf at the entrance of a car lot. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuánto",
+     "narration": "Antes de ver carros, saca tu número. No es solo la mensualidad: suma el seguro, que con carro financiado suele ser cobertura completa, la gasolina, las placas y un apartado para reparaciones. Si todo junto pasa de lo que puedes pagar cómodo cada mes, busca un carro más barato, no un plazo más largo.",
+     "on_screen_text": "Cuánto carro te alcanza",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calculator next to a car key. No text, no logos, no real people."
+    },
+    {
+     "heading": "Preaprobado",
+     "narration": "Pide un préstamo preaprobado en tu banco o cooperativa antes de ir al lote. Muchas cooperativas tienen tasas más bajas, y algunas prestan con ITIN. Con eso en la mano, el vendedor tiene que mejorar esa tasa o usas la tuya. Y ya no te pueden marear con la mensualidad.",
+     "on_screen_text": "Llega con tu préstamo aprobado",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small bank handing over a document. No text, no logos, no real people."
+    },
+    {
+     "heading": "La tasa",
+     "narration": "Veamos cuánto pesa la tasa. Un préstamo de $15,000 a 60 meses al 8% te cuesta unos $3,249 de intereses en total. El mismo préstamo al 20% te cuesta unos $8,845. Es el mismo carro, y la diferencia es de más de 5,500 dólares. Por eso vale la pena trabajar tu crédito antes, llegar con tu préstamo y comparar.",
+     "on_screen_text": "La tasa: miles de dólares de diferencia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. two stacks of coins of very different heights. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Intereses de $15,000 a 60 meses",
+      "labels": [
+       "Al 8%",
+       "Al 20%"
+      ],
+      "values": [
+       3249,
+       8845
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo: mismo carro, mismo plazo, distinta tasa"
+     }
+    },
+    {
+     "heading": "El letrero",
+     "narration": "Todo carro usado en un lote tiene que tener en la ventana la Guía del comprador. Dice si se vende 'tal como está', sin garantía, o con garantía, y qué cubre. Es parte de tu contrato y manda sobre lo que te prometan de palabra. Si negocias en español, te tienen que mostrar la versión en español.",
+     "on_screen_text": "El letrero de la ventana",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a window sticker on a car. No text, no logos, no real people."
+    },
+    {
+     "heading": "El VIN",
+     "narration": "Toma el VIN, los 17 caracteres que están abajo del parabrisas y en la puerta, y que coincidan con el título. Con el buscador gratis de la NICB ves si lo reportaron robado o como pérdida total. Con el de la NHTSA ves si tiene llamados a reparación sin arreglar, que se arreglan gratis. Y antes de firmar, que lo revise un mecánico tuyo: si no te dejan, vete.",
+     "on_screen_text": "Revisa el VIN gratis",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a magnifying glass over a windshield plate. No text, no logos, no real people."
+    },
+    {
+     "heading": "Los extras",
+     "narration": "En la oficina de finanzas aparecen los extras: garantías extendidas, seguros de deuda, grabado de vidrios, protección de pintura. Casi todos se pueden quitar, y muchos se meten al préstamo, así que pagas intereses sobre ellos. Pide la lista de cada cargo y di que no a lo que no pediste.",
+     "on_screen_text": "Los extras que te meten",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a receipt with extra lines crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Yo-yo",
+     "narration": "El financiamiento yo-yo: te llevas el carro antes de que el préstamo esté aprobado de verdad, y a la semana te llaman para firmar uno peor. Si te pasa, no firmes con prisa, pide por escrito por qué cambió, y si lo devuelves, que te regresen tu enganche y tu carro viejo. Mejor aún: no entregues tu carro viejo hasta que el préstamo esté final.",
+     "on_screen_text": "Cuidado con el yo-yo",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a yo-yo next to a contract. No text, no logos, no real people."
+    },
+    {
+     "heading": "Compra aquí, paga aquí",
+     "narration": "Los lotes de 'compra aquí, paga aquí' prestan sin revisar crédito, pero muchas veces con tasas muy altas, carros caros para lo que valen y pagos semanales en persona. Algunos ponen un aparato para apagar el carro si te atrasas. Si es tu única opción, lee todo, pide que reporten tus pagos al buró y compara antes con una cooperativa.",
+     "on_screen_text": "Los lotes de 'compra aquí, paga aquí'",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a small lot with a big sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tus derechos",
+     "narration": "Si algo sale mal, guarda todos tus papeles y quéjate por escrito con el vendedor. Si no responde, puedes presentar una queja ante el fiscal general de tu estado, la FTC o la CFPB, también en español. Y si te prometieron algo que no está en el contrato, por eso conviene que todo quede por escrito.",
+     "on_screen_text": "Si algo sale mal",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a folder with a shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Resumen. Saca tu número total antes de ver carros. Llega con tu préstamo aprobado. Negocia el precio total, no la mensualidad. Lee el letrero de la ventana. Revisa el VIN gratis y lleva a tu mecánico. Di que no a los extras. Y no entregues tu carro viejo hasta que el préstamo esté final. Información general, no es asesoría financiera.",
+     "on_screen_text": "Precio total, préstamo aprobado, VIN y mecánico",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf driving away happily. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "Cómo comprar un carro usado sin que te roben: cuánto carro te alcanza, el préstamo preaprobado, cuánto pesa la tasa ($15,000 a 60 meses: unos $3,249 de intereses al 8% contra unos $8,845 al 20%), el letrero de la ventana, el VIN gratis, los extras, el yo-yo y tus derechos. Información general, no es asesoría financiera.",
+   "hashtags": [
+    "carrousado",
+    "carros",
+    "prestamo",
+    "credito",
+    "dinerosimple"
+   ],
+   "description": "La guía completa en español para comprar un carro usado sin trampas: presupuesto, préstamo preaprobado, la tasa en números, la Guía del comprador, el VIN, los extras, el financiamiento yo-yo y tus derechos. Información general, no asesoría financiera.\n\nCapítulos (estimados)\n0:00 Intro\n0:40 Cuánto carro te alcanza\n1:30 Llega con tu préstamo aprobado\n2:20 La tasa en números\n3:10 El letrero de la ventana\n4:00 Revisa el VIN gratis\n4:50 Los extras\n5:40 El yo-yo\n6:30 Compra aquí, paga aquí\n7:20 Si algo sale mal\n8:00 Resumen\n\nEnlaces (los productos de pago son nuestros):\nCuenta de banco y tarjeta con ITIN: https://dinerosimple.netlify.app/blog/cuenta-y-tarjeta-con-itin/?utm_source=youtube&utm_medium=social&utm_campaign=l-carro-usado\nTu Fecha Sin Deudas ($17): https://dinerosimple.netlify.app/products/tu-fecha-sin-deudas/?utm_source=youtube&utm_medium=social&utm_campaign=l-carro-usado\nGuía gratis: Tu dinero en orden en 7 días: https://dinerosimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=l-carro-usado",
+   "thumbnail_text": "Carro usado sin trampas",
+   "sources": [
+    "https://consumidor.ftc.gov/",
+    "https://www.consumerfinance.gov/es/",
+    "https://www.nhtsa.gov/recalls",
+    "https://www.nicb.org/vincheck"
+   ],
+   "claims_to_verify": [
+    "ATTORNEY REVIEW: a licensed immigration attorney or DOJ-accredited representative has read this piece the week it posts (it mentions the ITIN)",
+    "Example arithmetic: $15,000, 60 months: 8% APR = $304.15/month, $3,249 interest; 20% APR = $397.41/month, $8,845 interest",
+    "FTC Used Car Rule: Buyers Guide, Spanish version when the sale is conducted in Spanish",
+    "Starter-interrupt devices are used by some buy-here-pay-here dealers (state rules vary)",
+    "Some credit unions lend with an ITIN (varies)",
+    "Chart 'Intereses de $15,000 a 60 meses': Al 8% 3249, Al 20% 8845 (Ejemplo: mismo carro, mismo plazo, distinta tasa)"
+   ],
+   "title_variants": [],
+   "hook_variants": [],
+   "original_element": "Graba la pantalla del buscador de llamados a reparación de la NHTSA con un VIN de ejemplo (no el tuyo), y la Guía del comprador en español de la FTC"
+  }
+ },
+ {
+  "key": "l-viaje-a-casa",
+  "format": "long",
+  "pillar": "apps y herramientas de dinero, comparadas sin rodeos",
+  "idea_angle": "Complete Spanish guide to paying for the summer trip home without debt: the real total, a weekly trip fund with a worked example, when and where to buy tickets, fake sellers, the phone abroad, cards and ATMs abroad, money for the family there, and the bills here.",
+  "script": {
+   "title": "El viaje a tu país sin deudas: el plan de dinero completo",
+   "hook": "Un viaje a casa de $1,800 se puede pagar sin tarjeta. Solo hay que empezar con tiempo.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Ir a ver a la familia es de los gastos que más valen la pena, y de los que más deuda dejan si se pagan con tarjeta. En este video armamos el plan: cuánto cuesta de verdad, cómo juntarlo por semanas, cuándo y dónde comprar boletos, las estafas de boletos, el celular, las tarjetas y los cajeros allá, el dinero para la familia y las cuentas de aquí.",
+     "on_screen_text": "El viaje a casa, sin deudas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf with a suitcase and a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "El total",
+     "narration": "Primero, el total de verdad, no solo el boleto. Suma los boletos de todos, las maletas, el transporte al aeropuerto y allá, la comida en el camino, los regalos que vas a llevar, el dinero que vas a dejar a la familia y un colchón para imprevistos. Ese número es tu meta.",
+     "on_screen_text": "El total de verdad",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a list with many small items adding up. No text, no logos, no real people."
+    },
+    {
+     "heading": "El fondo",
+     "narration": "Ahora divide. Si el viaje completo te sale en $1,800 y faltan 24 semanas, son $75 a la semana. Abre un apartado de ahorro que se llame 'viaje', y que la transferencia salga sola el día de pago. A las seis semanas ya llevas $450, a las doce, $900, y llegas sin tocar la tarjeta.",
+     "on_screen_text": "Un fondo por semanas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a jar with a plane filling up. No text, no logos, no real people.",
+     "chart": {
+      "kind": "line",
+      "title": "Fondo del viaje: $75 semanales",
+      "labels": [
+       "Sem 6",
+       "Sem 12",
+       "Sem 18",
+       "Sem 24"
+      ],
+      "values": [
+       450,
+       900,
+       1350,
+       1800
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Ejemplo: viaje de $1,800 en 24 semanas"
+     }
+    },
+    {
+     "heading": "Los boletos",
+     "narration": "Para temporada alta, como el verano y diciembre, conviene comprar con meses de anticipación. Compara en las páginas de las aerolíneas y en buscadores de vuelos, y compra directo con la aerolínea o con una agencia que puedas visitar. Revisa cuánto cobran por maleta antes de pagar: un boleto barato con dos maletas puede salir más caro.",
+     "on_screen_text": "Cuándo y dónde comprar boletos",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a plane icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Estafas",
+     "narration": "La estafa del verano: alguien en Facebook o WhatsApp vende boletos 'más baratos', te pide pagar por Zelle o en efectivo, y te manda una reservación que no existe. Las aerolíneas no cobran así. Con tu código de reservación, revisa en la página de la aerolínea, no en el enlace que te mandaron.",
+     "on_screen_text": "Boletos falsos y otras estafas",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a ticket fading away. No text, no logos, no real people."
+    },
+    {
+     "heading": "El celular",
+     "narration": "Antes de salir, llama a tu compañía de celular y pregunta por el plan internacional. Muchos planes ya incluyen México y Canadá; para otros países, un paquete por días o un chip de allá puede salir mucho más barato que pagar por uso.",
+     "on_screen_text": "Tu celular allá",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a phone with a globe. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tarjetas y cajeros",
+     "narration": "Muchas tarjetas cobran una comisión de alrededor de 3% por cada compra fuera del país; busca una que no la cobre. Y si el cajero o la tienda te pregunta si quieres pagar en dólares o en moneda local, escoge moneda local: la conversión que te ofrecen suele salir más cara. En los cajeros, saca menos veces y más cantidad, porque cada retiro puede tener comisión de los dos bancos.",
+     "on_screen_text": "Tarjetas y cajeros en el extranjero",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a card and an ATM with small tags. No text, no logos, no real people."
+    },
+    {
+     "heading": "La familia",
+     "narration": "Si vas a dejar dinero a la familia, decide la cantidad desde el plan, no allá con la emoción. Y piensa si conviene llevarlo o mandarlo: viajar con mucho efectivo tiene riesgos, y si sales con más de diez mil dólares en efectivo lo tienes que declarar.",
+     "on_screen_text": "El dinero para la familia",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. an envelope with a heart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Las cuentas de aquí",
+     "narration": "Antes de irte, pon en automático la renta, la luz y las tarjetas, o déjalas pagadas. Avísale a tu banco que vas a viajar si te lo piden, para que no te bloqueen la tarjeta. Así no regresas a cargos por atraso.",
+     "on_screen_text": "Las cuentas de aquí, en automático",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. a calendar with a repeating arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Resumen",
+     "narration": "Resumen. Saca el total de verdad. Divídelo entre las semanas que faltan y ponlo en automático. Compra boletos directo o con una agencia conocida. Pregunta tu plan de celular. Usa una tarjeta sin comisión extranjera y paga en moneda local. Decide desde aquí cuánto dejas a la familia. Y deja tus cuentas de aquí en automático. Buen viaje.",
+     "on_screen_text": "Total, fondo, boleto seguro y cuentas al día",
+     "visual_prompt": "Warm flat vector illustration, coral, teal and cream, simple shapes. the small round coral piggy bank mascot with big eyes and a tiny teal scarf waving from a plane window. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Síguenos para un paso de dinero cada semana.",
+   "caption": "El viaje a tu país sin deudas: el total de verdad, un fondo por semanas ($1,800 en 24 semanas son $75 a la semana), cuándo y dónde comprar boletos, las estafas de boletos, el celular, tarjetas y cajeros allá, el dinero para la familia y tus cuentas de aquí.",
+   "hashtags": [
+    "viajes",
+    "familia",
+    "ahorro",
+    "verano",
+    "dinerosimple"
+   ],
+   "description": "El plan de dinero completo para viajar a tu país sin deudas: el total, un fondo por semanas, boletos, estafas, celular, tarjetas y cajeros en el extranjero, el dinero para la familia y tus cuentas de aquí.\n\nCapítulos (estimados)\n0:00 Intro\n0:40 El total de verdad\n1:20 Un fondo por semanas\n2:10 Los boletos\n3:00 Estafas\n3:40 Tu celular allá\n4:20 Tarjetas y cajeros\n5:20 El dinero para la familia\n6:00 Las cuentas de aquí\n6:40 Resumen\n\nEnlaces (los productos de pago son nuestros):\nRemitly, Wise o Xoom: cuál conviene para mandar dinero: https://dinerosimple.netlify.app/blog/remitly-wise-o-xoom/?utm_source=youtube&utm_medium=social&utm_campaign=l-viaje-a-casa\nEl Presupuesto de 20 Minutos ($12): https://dinerosimple.netlify.app/products/el-presupuesto-de-20-minutos/?utm_source=youtube&utm_medium=social&utm_campaign=l-viaje-a-casa\nGuía gratis: Tu dinero en orden en 7 días: https://dinerosimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=l-viaje-a-casa",
+   "thumbnail_text": "El viaje a casa sin deudas",
+   "sources": [
+    "https://www.consumerfinance.gov/es/",
+    "https://consumidor.ftc.gov/",
+    "https://www.cbp.gov/travel/international-visitors/kbyg/money"
+   ],
+   "claims_to_verify": [
+    "Example arithmetic: $1,800 / 24 weeks = $75; 6 weeks = $450, 12 weeks = $900",
+    "Foreign transaction fees around 3% are common on cards that charge them",
+    "Dynamic currency conversion usually costs more than paying in local currency",
+    "Travelers carrying over $10,000 in currency must report it to CBP (FinCEN 105)",
+    "Chart 'Fondo del viaje: $75 semanales': Sem 6 450, Sem 12 900, Sem 18 1350, Sem 24 1800 (Ejemplo: viaje de $1,800 en 24 semanas)"
+   ],
+   "title_variants": [],
+   "hook_variants": [],
+   "original_element": "Graba la pantalla creando un apartado de ahorro llamado 'Viaje' con transferencia semanal en una app de banco de demostración"
+  }
+ }
+]
