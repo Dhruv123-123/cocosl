@@ -94,5 +94,10 @@ test('every Netlify site skips the build when its folder did not change (free pl
   const { readdirSync } = await import('node:fs');
   const tomls = ['netlify.toml', ...readdirSync(root, { withFileTypes: true }).filter((d) => d.isDirectory() && existsSync(join(root, d.name, 'netlify.toml'))).map((d) => `${d.name}/netlify.toml`)];
   assert.ok(tomls.length >= 7);
-  for (const t of tomls) assert.match(readFileSync(join(root, t), 'utf8'), /\[build\][^[]*ignore = "git diff --quiet \$CACHED_COMMIT_REF \$COMMIT_REF -- \."/, t);
+  // A site that publishes on a schedule through a Netlify build hook may add `&& test -z "$INCOMING_HOOK_URL"`,
+  // so hook builds run even with no new commit (INCOMING_HOOK_URL is set only on build-hook builds).
+  const rule = /\[build\][^[]*ignore = "git diff --quiet \$CACHED_COMMIT_REF \$COMMIT_REF -- \.( && test -z \\"\$INCOMING_HOOK_URL\\")?"/;
+  for (const t of tomls) assert.match(readFileSync(join(root, t), 'utf8'), rule, t);
+  assert.match('[build]\n  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . && test -z \\"$INCOMING_HOOK_URL\\""', rule);
+  assert.doesNotMatch('[build]\n  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . || true"', rule);
 });
