@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>cover</title>
+<style>
+:root{ --ink:#0b1d13; --cream:#f4f1e8; --green:#2fbf71; --green-d:#1e8a50; --gold:#f2b134; --muted:#aab8ad; }
+*{ box-sizing:border-box; margin:0; padding:0; }
+html,body{ width:1600px; height:1200px; overflow:hidden; background:var(--ink); color:var(--cream);
+  font-family:"Inter",system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+.wrap{ position:relative; width:1600px; height:1200px; padding:170px 0 0 110px; }
+.left{ max-width:780px; }
+.tag{ color:var(--gold); letter-spacing:.22em; text-transform:uppercase; font-weight:800; font-size:24px; }
+h1{ font-family:"Inter Display","Inter",sans-serif; font-weight:900; letter-spacing:-.04em; line-height:.94; font-size:118px; margin:34px 0 30px; }
+h1 em{ font-style:normal; color:var(--green); }
+.sub{ font-size:34px; line-height:1.35; color:#cfd8cf; max-width:690px; }
+.list{ margin-top:44px; display:flex; flex-direction:column; gap:16px; }
+.list div{ font-size:28px; font-weight:600; display:flex; align-items:center; gap:16px; }
+.list div::before{ content:""; width:30px; height:30px; flex:0 0 30px; border-radius:8px; background:var(--green);
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path d='M5 10.5l3.2 3.2L15 7' fill='none' stroke='%230b1d13' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/></svg>"); background-size:100%; }
+.foot{ position:absolute; left:110px; right:110px; bottom:64px; display:flex; justify-content:space-between; font-size:22px; color:var(--muted); }
+.foot b{ color:var(--cream); font-weight:800; letter-spacing:.02em; }
+.page{ position:absolute; background:#fffdf8; border-radius:10px; box-shadow:0 30px 70px rgba(0,0,0,.55); overflow:hidden; }
+.page img{ width:100%; height:100%; display:block; }
+.sheet{ position:absolute; background:#fff; border-radius:12px; box-shadow:0 30px 70px rgba(0,0,0,.55); overflow:hidden; color:#0b1d13; font-family:Arial, sans-serif; }
+.sheet .bar{ background:#e9e6dc; height:38px; display:flex; align-items:center; gap:8px; padding:0 14px; }
+.sheet .bar i{ width:12px; height:12px; border-radius:50%; background:#c9c2b0; display:block; }
+.sheet .tabs{ display:flex; gap:4px; padding:0 12px; background:#e9e6dc; }
+.sheet .tabs span{ font-size:15px; padding:6px 12px; border-radius:6px 6px 0 0; background:#d9d3c3; }
+.sheet .tabs span.on{ background:#fff; font-weight:700; }
+.sheet h4{ font-size:24px; padding:16px 20px 8px; }
+.sheet table{ border-collapse:collapse; margin:0 20px; width:calc(100% - 40px); font-size:17px; }
+.sheet th{ background:#0b1d13; color:#f4f1e8; text-align:left; padding:7px 9px; font-size:15px; }
+.sheet td{ border:1px solid #d9d3c3; padding:7px 9px; }
+.sheet td.r, .sheet th.r{ text-align:right; }
+.sheet td.g{ background:#d5f2e1; font-weight:700; }
+.sheet td.y{ background:#fff4cc; }
+.badge{ position:absolute; background:var(--gold); color:var(--ink); font-weight:900; font-size:30px; padding:14px 26px; border-radius:999px; letter-spacing:.02em; box-shadow:0 14px 30px rgba(0,0,0,.35); }
+.days{ position:absolute; right:110px; top:190px; width:560px; display:grid; grid-template-columns:1fr; gap:14px; }
+.days div{ background:#fffdf8; color:var(--ink); border-radius:14px; padding:16px 22px; display:flex; align-items:center; gap:18px; font-size:27px; font-weight:700; box-shadow:0 12px 30px rgba(0,0,0,.35); }
+.days div b{ font-family:"Inter Display","Inter",sans-serif; font-weight:900; color:var(--green-d); font-size:34px; width:34px; }
+.days div i{ margin-left:auto; width:30px; height:30px; border:3px solid var(--ink); border-radius:7px; }
+.days div i.on{ background:var(--green); border-color:var(--green-d); }
+</style>
+</head>
+<body>
+<div class="wrap">
+{% if which == "reset" %}
+  <div class="tag">Free printable &middot; Money Made Simple</div>
+  <h1>The 7-Day<br><em>Money Reset</em></h1>
+  <p class="sub">One small action a day. A week from now: your numbers known, bills on autopilot, a buffer started.</p>
+  <div class="list"><div>7 daily actions, 5 printable pages</div><div>10&ndash;25 minutes a day</div><div>Free when you join the weekly email</div></div>
+  <div class="days">
+    {% for t in ["Money snapshot","Cancel one subscription","Bill calendar + autopay","Three bank alerts","Start an emergency fund","List debts, pick an order","Your weekly number"] %}
+    <div><b>{{ loop.index }}</b>{{ t }}<i class="{{ 'on' if loop.index <= 3 else '' }}"></i></div>
+    {% endfor %}
+  </div>
+  <div class="foot"><span>PDF &middot; US Letter, print at home</span><span>Educational content. Not financial advice.</span></div>
+
+{% elif which == "planner" %}
+  {% set c = ctx %}
+  <div class="tag">Spreadsheet + guide &middot; Money Made Simple</div>
+  <h1>Debt<br><em>Payoff</em><br>Planner</h1>
+  <p class="sub">See the month you'll be debt-free. Avalanche, snowball or your own order, compared side by side.</p>
+  <div class="list"><div>Up to 8 debts, month-by-month plan</div><div>Payoff chart + loan amortization</div><div>Excel, Google Sheets &amp; Numbers</div></div>
+  <div class="page" style="width:400px;height:518px;right:110px;top:120px;transform:rotate(4deg)"><img src="{{ img_planner_guide }}"></div>
+  <div class="sheet" style="width:650px;right:80px;top:600px;transform:rotate(-2deg)">
+    <div class="bar"><i></i><i></i><i></i></div>
+    <div class="tabs"><span>My Debts</span><span class="on">Compare</span><span>Payoff Plan</span><span>Loan Amortization</span></div>
+    <h4>Compare plans <span style="font-size:15px;color:#4b5a51;font-weight:400">(example data, fictional)</span></h4>
+    <table>
+      <tr><th></th><th class="r">Avalanche</th><th class="r">Snowball</th><th class="r">Minimums only</th></tr>
+      <tr><td>Months to debt-free</td><td class="r g">{{ c.m.avalanche.months }}</td><td class="r g">{{ c.m.snowball.months }}</td><td class="r g">{{ c.m.minimums.months }}</td></tr>
+      <tr><td>Debt-free month</td><td class="r">{{ c.m.avalanche.date }}</td><td class="r">{{ c.m.snowball.date }}</td><td class="r">{{ c.m.minimums.date }}</td></tr>
+      <tr><td>Total interest</td><td class="r g">{{ c.m.avalanche.interest|money }}</td><td class="r g">{{ c.m.snowball.interest|money }}</td><td class="r g">{{ c.m.minimums.interest|money }}</td></tr>
+    </table>
+    <div style="height:20px"></div>
+  </div>
+  <div class="foot"><span>.xlsx + 8-page PDF guide</span><span>Educational tool. Not financial advice.</span></div>
+
+{% elif which == "invest" %}
+  <div class="tag">Starter kit &middot; Money Made Simple</div>
+  <h1 style="font-size:100px">Open your<br>first <em>investing</em><br><em>account</em></h1>
+  <p class="sub">In one weekend. Account types in plain English, how to compare providers, and index fund basics.</p>
+  <div class="list"><div>401(k), Roth &amp; Traditional IRA, brokerage</div><div>Provider comparison worksheet</div><div>Weekend checklist + glossary</div></div>
+  <div class="page" style="width:400px;height:518px;right:250px;top:190px;transform:rotate(-5deg)"><img src="{{ img_invest_ws }}"></div>
+  <div class="page" style="width:400px;height:518px;right:90px;top:290px;transform:rotate(4deg)"><img src="{{ img_invest }}"></div>
+  <div class="foot"><span>17-page PDF guide</span><span>Education, not financial advice. No company named or recommended.</span></div>
+
+{% elif which == "bundle" %}
+  <div class="tag">Bundle &middot; Money Made Simple</div>
+  <h1>Starter<br><em>Bundle</em></h1>
+  <p class="sub">Budget, debt plan and first investing account: the whole starter set in one download.</p>
+  <div class="list"><div>The 20-Minute Budget (guide + template)</div><div>Debt Payoff Planner (spreadsheet + guide)</div><div>First Investing Account Kit (guide)</div></div>
+  <div class="page" style="width:330px;height:427px;right:420px;top:380px;transform:rotate(-8deg)"><img src="{{ img_budget }}"></div>
+  <div class="page" style="width:330px;height:427px;right:255px;top:310px;transform:rotate(-1deg)"><img src="{{ img_planner_guide }}"></div>
+  <div class="page" style="width:330px;height:427px;right:90px;top:380px;transform:rotate(7deg)"><img src="{{ img_invest }}"></div>
+  <div class="badge" style="right:110px;top:190px">3 products, 1 download</div>
+  <div class="foot"><span>PDF guides + 2 spreadsheets</span><span>Educational content. Not financial advice.</span></div>
+{% endif %}
+</div>
+</body>
+</html>

@@ -1,7 +1,8 @@
 """HTTP routes for the funnel.
 
-* `public_router` (no auth): /l/{brand}, /subscribe/{brand}, /confirm/{token},
-  /freebie/{token}, /unsubscribe/{token}, /webhooks/stripe, /webhooks/gumroad.
+* `public_router` (no auth): /l/{brand}, /p/{brand}/{product}, /subscribe/{brand},
+  /confirm/{token}, /freebie/{token}, /unsubscribe/{token}, /webhooks/stripe,
+  /webhooks/gumroad.
 * `router` (dashboard auth, prefix /funnel): subscribers, CSV export, digest
   drafts + send, link page and brand kit rebuilds.
 """
@@ -18,7 +19,7 @@ from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, Redirect
 from fastapi.templating import Jinja2Templates
 
 from ..pipeline import Factory
-from . import analytics, linkpage, newsletter, payments, store
+from . import analytics, attribution, linkpage, newsletter, payments, salespage, sequences, store
 
 try:
     from ..web.deps import get_factory, templates as _web_templates
@@ -88,6 +89,27 @@ def link_page(brand: str, request: Request, factory: Factory = Depends(get_facto
     return HTMLResponse(html, headers={"Cache-Control": "public, max-age=300"})
 
 
+@public_router.get("/p/{brand}/{product}", response_class=HTMLResponse)
+def sales_page(brand: str, product: str, request: Request, factory: Factory = Depends(get_factory)):
+    b = _brand_or_404(factory, brand)
+    item = salespage.find_product(factory.settings, factory.db, b, product) if b else None
+    if not b or not item:
+        return _page(linkpage.render_message(b, "Page not found", "This product page doesn't exist.",
+                                             status="error"), 404)
+    utm = attribution.utm_from_query(dict(request.query_params))
+    html = salespage.render_sales_page(factory.settings, b, item, base_url=_base_url(request), utm=utm)
+    return HTMLResponse(html, headers={"Cache-Control": "no-store" if utm else "public, max-age=300"})
+
+
+def _welcome_now(factory: Factory, subscriber_id: int, base_url: str) -> None:
+    """Send the day-0 welcome email right after confirming (same gates as the worker)."""
+    try:
+        sequences.run_sequences(factory, confirm=True, subscriber_id=subscriber_id, base_url=base_url)
+    except Exception:  # never break the confirm page; the hourly worker retries
+        import logging
+        logging.getLogger("factory.funnel").exception("welcome email failed")
+
+
 @public_router.post("/subscribe/{brand}")
 def subscribe(brand: str, request: Request, background: BackgroundTasks,
               email: str = Form(""), website: str = Form(""), source: str = Form("link-page"),
@@ -117,17 +139,20 @@ def subscribe(brand: str, request: Request, background: BackgroundTasks,
         return JSONResponse({"ok": True, "message": "Check your inbox to confirm."})
     return _page(linkpage.render_message(
         b, "Check your inbox", "We just sent you a confirmation link. Tap it to confirm and get your free "
-        f"{linkpage.lead_magnet(b)['title']}. (Check spam or promotions if you don't see it.)"))
+        f"{linkpage.lead_magnet(b, factory.settings)['title']}. (Check spam or promotions if you don't see it.)"))
 
 
 @public_router.get("/confirm/{token}", response_class=HTMLResponse)
-def confirm(token: str, request: Request, factory: Factory = Depends(get_factory)):
+def confirm(token: str, request: Request, background: BackgroundTasks, factory: Factory = Depends(get_factory)):
+    before = store.by_token(factory.db, token)
     row = store.confirm(factory.db, token)
     b = _brand_or_404(factory, row["brand"]) if row else None
     if not row or not b:
         return _page(linkpage.render_message(None, "Link expired", "This confirmation link isn't valid any "
                                              "more. Sign up again from the link page.", status="error"), 404)
-    magnet = linkpage.lead_magnet(b)
+    if before and before["status"] == "pending":
+        background.add_task(_welcome_now, factory, row["id"], _base_url(request))
+    magnet = linkpage.lead_magnet(b, factory.settings)
     url = magnet["url"] or f"{_base_url(request)}/freebie/{token}"
     return _page(linkpage.render_message(b, "You're in!", f"Thanks for confirming. Here's {magnet['title']}.",
                                          button=("Download your free guide", url)))
@@ -288,6 +313,19 @@ def rebuild_brand_kit(brand: str, factory: Factory = Depends(get_factory)):
     from ..brandkit import build_brand_kit
     paths = build_brand_kit(factory.settings, factory.brand(brand), llm=factory.llm)
     return _back("/funnel", msg=f"Brand kit built: {len(paths)} files in output/{brand}/brand-kit.")
+
+
+@router.post("/{brand}/sales-pages")
+def rebuild_sales_pages(brand: str, factory: Factory = Depends(get_factory)):
+    paths = salespage.build_all_sales_pages(factory.settings, factory.db, factory.brand(brand))
+    return _back("/funnel", msg=f"Built {len(paths)} sales page(s) in output/{brand}/site (live at /p/{brand}/...).")
+
+
+@router.get("/{brand}/sequence.json")
+def sequence_json(brand: str, factory: Factory = Depends(get_factory)) -> Response:
+    b = factory.brand(brand)
+    return JSONResponse({**sequences.sequence_status(factory, b.slug),
+                         "problems": sequences.validate_sequence(factory.settings, b)})
 
 
 @router.get("/stats.json")

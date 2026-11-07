@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sample Ads Portfolio</title>
+<meta name="description" content="Sample vertical video ads for fictional brands, made with clearly labeled AI.">
+<meta name="robots" content="noindex">
+<!--
+  HOW TO HOST: this page plays videos from ./videos/<slug>.mp4 (relative path).
+  The repo copy keeps only posters (videos are too big for git). Rendered videos live in
+  /mnt/project-files/content-factory/ugc-portfolio/videos/ ; copy that folder next to this file
+  (or upload the whole ugc-portfolio folder) before sharing the link. Rebuild: `factory portfolio build`.
+-->
+<script>
+  /* EDIT THESE (same values as index.html) */
+  const STUDIO = {"name": "Your Studio Name", "email": "hello@yourdomain.com", "site": "../index.html"};
+</script>
+<style>
+  :root{
+    --bg:#0c0f14; --bg2:#121722; --card:#161c29; --line:#263044; --text:#eef1f7; --muted:#9aa5bb;
+    --accent:#7cf0c5; --accent2:#ffcf5c; --accent-ink:#06261a; --radius:18px;
+  }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg:#f7f6f2; --bg2:#ffffff; --card:#ffffff; --line:#e3e0d6; --text:#121722; --muted:#5b6476;
+      --accent:#0f9d6e; --accent2:#b77900; --accent-ink:#ffffff;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+  h1,h2,h3{line-height:1.12;margin:0 0 .5em;letter-spacing:-.02em}
+  h1{font-size:clamp(2rem,6.5vw,3.2rem);font-weight:850}
+  h3{font-size:1.25rem;font-weight:780;margin-top:8px}
+  p{margin:0 0 .9em}
+  .muted{color:var(--muted)}
+  .eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+  nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+  .logo{font-weight:850;letter-spacing:-.02em;text-decoration:none;display:flex;align-items:center;gap:8px}
+  .logo i{width:22px;height:22px;border-radius:7px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:inline-block}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 18px;border-radius:999px;font-weight:700;text-decoration:none;border:1.5px solid var(--accent);font-size:.92rem;white-space:nowrap}
+  .btn.primary{background:var(--accent);color:var(--accent-ink)}
+  header{padding:40px 0 8px}
+  .notice{background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 14%,var(--card)),var(--card));border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;margin:18px 0 8px}
+  .notice ul{margin:0;padding-left:20px}
+  .notice li{margin-bottom:6px}
+  .grid{display:grid;gap:22px;padding:24px 0 40px}
+  @media(min-width:700px){.grid{grid-template-columns:1fr 1fr}}
+  @media(min-width:1020px){.grid{grid-template-columns:1fr 1fr 1fr}}
+  .ad{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+  .frame{aspect-ratio:9/16;background:#000;position:relative;max-height:78vh}
+  .frame video,.frame img{width:100%;height:100%;object-fit:cover;display:block}
+  .missing{position:absolute;inset:0}
+  .missing p{position:absolute;left:12px;right:12px;bottom:12px;margin:0;background:rgba(0,0,0,.72);color:#fff;font-size:.85rem;padding:10px 12px;border-radius:12px}
+  .meta{padding:16px 18px 18px}
+  .row{display:flex;flex-wrap:wrap;gap:6px}
+  .pill{border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:.78rem;color:var(--muted)}
+  .hook{font-weight:700;margin-bottom:6px}
+  .hook b,.hooks b{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:7px;background:color-mix(in srgb,var(--accent) 18%,transparent);color:var(--accent);font-size:.78rem;margin-right:6px}
+  .hooks{list-style:none;padding:0;margin:0 0 10px;font-size:.93rem;color:var(--muted)}
+  .hooks li{margin-bottom:6px}
+  details{border-top:1px solid var(--line);padding-top:10px;margin-top:6px}
+  summary{cursor:pointer;font-weight:700;font-size:.92rem}
+  table{width:100%;border-collapse:collapse;font-size:.82rem;margin-top:8px}
+  th,td{text-align:left;padding:6px 4px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--muted);font-weight:600}
+  .fine{font-size:.78rem;color:var(--muted);margin:10px 0 0}
+  code{font-size:.85em}
+  footer{border-top:1px solid var(--line);padding:28px 0 44px;font-size:.88rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" data-site href="../index.html"><i></i><span data-studio="name">Your Studio Name</span></a>
+  <a class="btn primary" data-mail href="mailto:hello@yourdomain.com">Get a free sample</a>
+</div></nav>
+
+<header class="wrap">
+  <span class="eyebrow">Portfolio · 5 sample ads</span>
+  <h1>Sample ads for brands that don’t exist.</h1>
+  <p class="muted" style="max-width:62ch">Every brand, product and price on this page is <strong>fictional</strong>. These are concept ads made to show the format: vertical 9:16, a hook in the first three seconds, burned-in captions, one clear call to action, and hook variants (A/B/C) for testing.</p>
+  <div class="notice">
+    <ul>
+      <li><strong>AI-made and labeled.</strong> Each video carries an on-screen “AI-generated” label for its full length, plus “Concept ad for a fictional brand · Sample”.</li>
+      <li><strong>No fake reviews.</strong> Scripts are spokesperson and demo style. Nobody claims to have bought or used anything.</li>
+      <li><strong>These are caption-led cuts</strong> with generated abstract visuals. Ads for a real client use your own product photos or footage, an AI voice or presenter, and licensed music.</li>
+    </ul>
+  </div>
+</header>
+
+<main class="wrap"><div class="grid">
+<article class="ad" id="trailsip">
+  <div class="frame">
+    <video controls playsinline preload="none" poster="posters/trailsip.jpg" aria-label="Sample ad for TrailSip">
+      <source src="videos/trailsip.mp4" type="video/mp4">
+    </video>
+    <div class="missing" hidden><img src="posters/trailsip.jpg" alt="Poster frame of the TrailSip sample ad"><p>Video file not uploaded next to this page yet. Copy the <code>videos/</code> folder here.</p></div>
+  </div>
+  <div class="meta">
+    <div class="row"><span class="pill">Outdoor gear</span><span class="pill">Demo + spokesperson</span><span class="pill">19s</span></div>
+    <h3>TrailSip</h3>
+    <p class="muted">Show a full-size bottle folding to pocket size in one push, then the three features that matter on the move.</p>
+    <p class="hook"><b>A</b> This is a full-size water bottle. Watch.</p>
+    <ul class="hooks"><li><b>B</b> Your bag is full of air. Specifically, your water bottle.</li><li><b>C</b> Airport security tip nobody tells you: bring it empty, fold it flat.</li></ul>
+    <details><summary>Script and on-screen text</summary>
+      <table><tr><th>Beat</th><th>Voice</th><th>On screen</th></tr><tr><td>Hook</td><td>This is a full-size water bottle. Watch.</td><td>Full size → pocket size</td></tr><tr><td>Fold</td><td>When it&#x27;s empty, it folds down to a third of its height.</td><td>Folds to 1/3</td></tr><tr><td>Fill</td><td>When you need it, pop it open, 600 millilitres, and clip it anywhere.</td><td>600 ml · clip-on</td></tr><tr><td>Seal</td><td>The cap seals, so it&#x27;s bag-safe. And it&#x27;s dishwasher safe.</td><td>Leak-proof · dishwasher safe</td></tr><tr><td>CTA</td><td>TrailSip. Link below.</td><td>TrailSip · $24</td></tr></table>
+    </details>
+    <p class="fine">Fictional brand and price ($24). Label on screen: “AI-generated · Ad” + “Concept ad for a fictional brand · Sample”.</p>
+  </div>
+</article>
+<article class="ad" id="lumen-and-loaf">
+  <div class="frame">
+    <video controls playsinline preload="none" poster="posters/lumen-and-loaf.jpg" aria-label="Sample ad for Lumen &amp; Loaf">
+      <source src="videos/lumen-and-loaf.mp4" type="video/mp4">
+    </video>
+    <div class="missing" hidden><img src="posters/lumen-and-loaf.jpg" alt="Poster frame of the Lumen &amp; Loaf sample ad"><p>Video file not uploaded next to this page yet. Copy the <code>videos/</code> folder here.</p></div>
+  </div>
+  <div class="meta">
+    <div class="row"><span class="pill">Kitchen</span><span class="pill">Product demo voiceover</span><span class="pill">23s</span></div>
+    <h3>Lumen &amp; Loaf</h3>
+    <p class="muted">Same dough, two loaves: show that the basket is the difference, then walk through the four-piece kit.</p>
+    <p class="hook"><b>A</b> Same recipe. The difference is the basket.</p>
+    <ul class="hooks"><li><b>B</b> If your sourdough spreads like a pancake, read this.</li><li><b>C</b> Four tools. One taller loaf.</li></ul>
+    <details><summary>Script and on-screen text</summary>
+      <table><tr><th>Beat</th><th>Voice</th><th>On screen</th></tr><tr><td>Hook</td><td>Same recipe. The difference is the basket.</td><td>Same dough. Different shape.</td></tr><tr><td>Kit</td><td>The Lumen and Loaf kit has the four things beginners usually skip.</td><td>4-piece proofing kit</td></tr><tr><td>Proof</td><td>The basket holds the dough&#x27;s shape while it rises, so it bakes up instead of out.</td><td>Holds shape while it proofs</td></tr><tr><td>Bake</td><td>Flip it out, score it, bake. The timing card walks you through each step.</td><td>Step-by-step timing card</td></tr><tr><td>CTA</td><td>The Lumen and Loaf proofing kit. Link below.</td><td>Lumen &amp; Loaf · $39</td></tr></table>
+    </details>
+    <p class="fine">Fictional brand and price ($39). Label on screen: “AI-generated · Ad” + “Concept ad for a fictional brand · Sample”.</p>
+  </div>
+</article>
+<article class="ad" id="hound-and-hollow">
+  <div class="frame">
+    <video controls playsinline preload="none" poster="posters/hound-and-hollow.jpg" aria-label="Sample ad for Hound &amp; Hollow">
+      <source src="videos/hound-and-hollow.mp4" type="video/mp4">
+    </video>
+    <div class="missing" hidden><img src="posters/hound-and-hollow.jpg" alt="Poster frame of the Hound &amp; Hollow sample ad"><p>Video file not uploaded next to this page yet. Copy the <code>videos/</code> folder here.</p></div>
+  </div>
+  <div class="meta">
+    <div class="row"><span class="pill">Pet</span><span class="pill">Spokesperson</span><span class="pill">18s</span></div>
+    <h3>Hound &amp; Hollow</h3>
+    <p class="muted">Both hands full, dog still on the leash: a spokesperson walks through the belt, the bungee and the pocket.</p>
+    <p class="hook"><b>A</b> Both hands full. Dog still on the leash.</p>
+    <ul class="hooks"><li><b>B</b> Running with a dog, minus the arm workout.</li><li><b>C</b> Three things this leash does that yours doesn&#x27;t.</li></ul>
+    <details><summary>Script and on-screen text</summary>
+      <table><tr><th>Beat</th><th>Voice</th><th>On screen</th></tr><tr><td>Hook</td><td>Both hands full. Dog still on the leash.</td><td>Hands-free walking</td></tr><tr><td>Belt</td><td>The leash clips around your waist and adjusts to fit.</td><td>Adjustable waist belt</td></tr><tr><td>Bungee</td><td>This stretch section takes the edge off sudden pulls.</td><td>Shock-absorbing bungee</td></tr><tr><td>Pocket</td><td>And there&#x27;s a zip pocket for keys, phone, and bags.</td><td>Zip pocket</td></tr><tr><td>CTA</td><td>Hound and Hollow. Link below.</td><td>Hound &amp; Hollow · $32</td></tr></table>
+    </details>
+    <p class="fine">Fictional brand and price ($32). Label on screen: “AI-generated · Ad” + “Concept ad for a fictional brand · Sample”.</p>
+  </div>
+</article>
+<article class="ad" id="deskline">
+  <div class="frame">
+    <video controls playsinline preload="none" poster="posters/deskline.jpg" aria-label="Sample ad for Deskline">
+      <source src="videos/deskline.mp4" type="video/mp4">
+    </video>
+    <div class="missing" hidden><img src="posters/deskline.jpg" alt="Poster frame of the Deskline sample ad"><p>Video file not uploaded next to this page yet. Copy the <code>videos/</code> folder here.</p></div>
+  </div>
+  <div class="meta">
+    <div class="row"><span class="pill">Home office</span><span class="pill">Demo voiceover</span><span class="pill">14s</span></div>
+    <h3>Deskline</h3>
+    <p class="muted">Before and after under the desk: a tool-free tray gets every cable off the floor in one shot.</p>
+    <p class="hook"><b>A</b> This is what&#x27;s under most desks.</p>
+    <ul class="hooks"><li><b>B</b> A 2-minute desk upgrade you&#x27;ll notice every day.</li><li><b>C</b> No drill? No problem.</li></ul>
+    <details><summary>Script and on-screen text</summary>
+      <table><tr><th>Beat</th><th>Voice</th><th>On screen</th></tr><tr><td>Hook</td><td>This is what&#x27;s under most desks.</td><td>Be honest.</td></tr><tr><td>Install</td><td>Deskline clamps on by hand. No drilling, no screws.</td><td>Tool-free install</td></tr><tr><td>Tidy</td><td>Your power strip and cables go in the tray, off the floor.</td><td>Off the floor</td></tr><tr><td>CTA</td><td>Deskline cable tray. Link below.</td><td>Deskline · $29</td></tr></table>
+    </details>
+    <p class="fine">Fictional brand and price ($29). Label on screen: “AI-generated · Ad” + “Concept ad for a fictional brand · Sample”.</p>
+  </div>
+</article>
+<article class="ad" id="fern-street-studio">
+  <div class="frame">
+    <video controls playsinline preload="none" poster="posters/fern-street-studio.jpg" aria-label="Sample ad for Fern Street Studio">
+      <source src="videos/fern-street-studio.mp4" type="video/mp4">
+    </video>
+    <div class="missing" hidden><img src="posters/fern-street-studio.jpg" alt="Poster frame of the Fern Street Studio sample ad"><p>Video file not uploaded next to this page yet. Copy the <code>videos/</code> folder here.</p></div>
+  </div>
+  <div class="meta">
+    <div class="row"><span class="pill">Local fitness</span><span class="pill">Spokesperson promo</span><span class="pill">20s</span></div>
+    <h3>Fern Street Studio</h3>
+    <p class="muted">An easy way in for people who have never tried pilates: small beginner classes and one clear intro offer.</p>
+    <p class="hook"><b>A</b> Never tried pilates? This is the easy way in.</p>
+    <ul class="hooks"><li><b>B</b> Three classes, thirty-nine dollars, no contract.</li><li><b>C</b> Pilates for people who&#x27;ve never done pilates.</li></ul>
+    <details><summary>Script and on-screen text</summary>
+      <table><tr><th>Beat</th><th>Voice</th><th>On screen</th></tr><tr><td>Hook</td><td>Never tried pilates? This is the easy way in.</td><td>New to pilates?</td></tr><tr><td>Classes</td><td>Fern Street Studio runs beginner classes with a maximum of eight people.</td><td>Beginner classes · max 8</td></tr><tr><td>Setup</td><td>Instructors show you how to set up the equipment before you start.</td><td>Setup shown first</td></tr><tr><td>Offer</td><td>New clients get three classes for thirty-nine dollars.</td><td>3 classes · $39 · new clients</td></tr><tr><td>CTA</td><td>Fern Street Studio. Book through the link.</td><td>Book now</td></tr></table>
+    </details>
+    <p class="fine">Fictional brand and price (3 classes for $39). Label on screen: “AI-generated · Ad” + “Concept ad for a fictional brand · Sample”.</p>
+  </div>
+</article></div></main>
+
+<footer><div class="wrap">
+  <p><strong data-studio="name">Your Studio Name</strong> · <a data-mail href="mailto:hello@yourdomain.com">hello@yourdomain.com</a> · <a data-site href="../index.html">Packages and pricing</a></p>
+  <p>All brands shown are fictional; any resemblance to a real business is unintended. All ads we produce use AI-generated visuals, presenters and/or voices and are labeled as such.</p>
+</div></footer>
+<script>
+  (function(){
+    document.title = STUDIO.name + " · Sample ads";
+    document.querySelectorAll('[data-studio]').forEach(function(el){ el.textContent = STUDIO[el.getAttribute('data-studio')] || ''; });
+    document.querySelectorAll('[data-mail]').forEach(function(el){ el.href = 'mailto:' + STUDIO.email + '?subject=' + encodeURIComponent('Free sample ad'); if (el.tagName === 'A' && el.textContent.indexOf('@') > -1) el.textContent = STUDIO.email; });
+    document.querySelectorAll('[data-site]').forEach(function(el){ if (STUDIO.site) el.href = STUDIO.site; });
+    document.querySelectorAll('.ad').forEach(function(card){
+      var v = card.querySelector('video'), s = card.querySelector('source'), miss = card.querySelector('.missing');
+      function fail(){ v.hidden = true; miss.hidden = false; }
+      s.addEventListener('error', fail);
+      v.addEventListener('error', fail);
+      v.addEventListener('play', function(){ document.querySelectorAll('video').forEach(function(o){ if (o !== v) o.pause(); }); });
+    });
+  })();
+</script>
+</body>
+</html>

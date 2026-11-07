@@ -1,0 +1,338 @@
+# Funnel file for Money Made Simple: lead magnet, welcome sequence, sales page copy.
+# Loaded by contentfactory.funnel (brandfunnel.py). Edit the copy freely, then check it with
+#   factory sequence-check money-made-simple     (funnel.sequences.validate_sequence)
+#   factory sequence-preview money-made-simple   (renders every email to output/.../preview/)
+# Emails go only to confirmed subscribers, at most one per run, never the same step twice.
+#
+# Placeholders: {brand} {signoff} {price} {launch_price} {launch_code} {launch_ends_human}
+#   {product_name} {link:<key>} {affiliate_name:<slug>}
+# Conditionals: {if launch}...{/if} / {if no_launch}...{/if}. The launch is "on" only while
+#   launch_price is set and today <= launch_ends, so nothing claims a discount that ended.
+#
+# BEFORE GOING LIVE
+#   1. Create the Gumroad offer code below (LAUNCH, $5 off) or clear launch_price.
+#   2. Set launch_ends to the real last day of your launch window (7 days from launch).
+#   3. Replace the example HYSA in brands/money-made-simple.yaml with your real affiliate link.
+
+lead_magnet:
+  title: The 7-Day Money Reset Checklist
+  pitch: "One 15-minute money task a day for a week. No app, no new account needed."
+  sections:
+    - heading: "Day 1: Find your real number"
+      items:
+        - Look at your last two paychecks and write down what actually landed in your account (take-home, not salary).
+        - "Turn it into a monthly figure: weekly x 52 / 12, every two weeks x 26 / 12, twice a month x 2."
+        - List the bills that leave every month (rent, phone, insurance, utilities, minimum debt payments).
+        - Take-home minus bills. Write that number down. That's what you actually get to decide about.
+    - heading: "Day 2: Subscription sweep"
+      items:
+        - Open the last two months of statements for your bank account and every card.
+        - List every repeating charge and its monthly cost (divide yearly ones by 12).
+        - Check your phone's app store subscriptions list too.
+        - Cancel or downgrade one thing you wouldn't sign up for again today.
+    - heading: "Day 3: The costs that aren't surprises"
+      items:
+        - List what you paid in the last 12 months that isn't monthly (car repairs, gifts, renewals, travel).
+        - Add it up and divide by 12. That's your monthly set-aside.
+        - Pick a place to keep it (a separate savings account or a labelled "bucket").
+    - heading: "Day 4: Start a small buffer"
+      items:
+        - Keep savings in a separate account from the one you spend from.
+        - Set up an automatic transfer on payday. Any amount counts; $20 is a real start.
+        - Check the account is FDIC (bank) or NCUA (credit union) insured and has no monthly fee.
+    - heading: "Day 5: Debts on one page"
+      items:
+        - For each debt write the balance, the interest rate (APR) and the minimum payment.
+        - Set every debt to autopay at least the minimum.
+        - Pick a method for extra payments, highest rate first (avalanche) or smallest balance first (snowball).
+    - heading: "Day 6: Your weekly spending number"
+      items:
+        - Take-home minus bills minus your Day 3 set-aside minus savings and extra debt payments.
+        - Divide by 4.33 (the average number of weeks in a month).
+        - That's what you can spend each week on everything else. Write it somewhere you'll see it.
+    - heading: "Day 7: Book the check-in"
+      items:
+        - Put a recurring 20-minute "money check-in" in your calendar, same time every week.
+        - "At each check-in: how much of the weekly number is left, anything due soon, one thing to adjust."
+        - Done. You've reset. Keep the check-in and the rest gets easier.
+
+# ----------------------------------------------------------------- welcome sequence
+name: welcome
+min_gap_hours: 20       # never two sequence emails to one person within 20 hours
+max_late_days: 3        # if a step is 3+ days overdue (e.g. after downtime), skip it instead of sending late
+signoff: "Talk soon,\nMoney Made Simple"
+footer_note: "Educational content, not financial advice. For decisions about your own situation, talk to a qualified professional. Written with help from AI tools and reviewed by a human."
+
+vars:
+  product: 20-minute-budget          # which products: entry below holds price / launch details
+  product_name: The 20-Minute Budget
+
+links:
+  checklist: freebie
+  budget_page: product:20-minute-budget
+  hysa: affiliate:hysa
+
+steps:
+  - day_offset: 0
+    subject: "Your 7-Day Money Reset is here"
+    preheader: "One 15-minute task a day. Start with Day 1."
+    cta_url_key: checklist
+    cta_label: Open the checklist
+    body_markdown: |
+      Hi,
+
+      Thanks for confirming. Here's your checklist: **[The 7-Day Money Reset]({link:checklist})**.
+
+      It's one small task a day for a week. Each one takes about 15 minutes, and none of them need an app, a new bank account or a spreadsheet.
+
+      How to get the most out of it:
+
+      1. Bookmark the link or print it (there's a print button at the bottom of the page).
+      2. Do Day 1 today or tomorrow. It's the one that makes the rest easier.
+      3. Don't try to do all seven at once. The point is small steps you actually finish.
+
+      Over the next few days I'll send a short email for each part of the reset: the reason behind it and the snags people usually hit. After that it's one email a week, one money move, explained plainly.
+
+      If you'd rather not get these, the unsubscribe link at the bottom works with one click.
+
+      {signoff}
+
+  - day_offset: 1
+    subject: "Day 1: the only number you need to start"
+    preheader: "Take-home pay, turned into a monthly figure. 10 minutes."
+    cta_url_key: checklist
+    cta_label: Open the checklist
+    body_markdown: |
+      Hi,
+
+      Most budgets start with categories. This one starts with a single number: what actually lands in your account each month.
+
+      **Use take-home pay, not salary.** Taxes, retirement contributions and insurance come out before you ever see the money, so salary makes everything look roomier than it is. Open your last two paychecks or deposits and use that figure.
+
+      **Turn it into a monthly number:**
+
+      - Paid weekly: multiply by 52, divide by 12
+      - Paid every two weeks: multiply by 26, divide by 12
+      - Paid twice a month: multiply by 2
+
+      The one people get wrong is every two weeks. Twice the paycheck undercounts, because 26 paychecks a year means two months have three.
+
+      **Then list the bills that leave every month** (rent, phone, insurance, utilities, minimum debt payments) and subtract them.
+
+      What's left is the money you actually get to make decisions about. If it's small or negative, that's not a failure. It's the most useful thing you can know, and the next few days are about making room.
+
+      {signoff}
+
+  - day_offset: 2
+    subject: "Day 2: the 15-minute subscription sweep"
+    preheader: "Find every repeating charge, cancel one."
+    body_markdown: |
+      Hi,
+
+      Today's task is quick and usually finds something.
+
+      Open the last two months of statements for your checking account and every card you use. Look for anything that repeats: streaming, apps, gym, cloud storage, delivery memberships, software, the free trial that quietly turned into a paid plan.
+
+      For each one, write down the monthly cost. Yearly charges count too: divide them by 12.
+
+      Two places charges hide:
+
+      - **Your phone's app store.** On iPhone: Settings, tap your name, then Subscriptions. On Android: the Google Play app, tap your profile, then Payments & subscriptions.
+      - **A card you rarely use.** Old sign-ups often live there.
+
+      Then sort each one into keep, cancel or downgrade, and cancel or downgrade **one** today. Not all of them. One you wouldn't sign up for again if it asked today.
+
+      Whatever you free up goes toward Day 3 and Day 4.
+
+      {signoff}
+
+  - day_offset: 3
+    subject: "Day 3: the expenses that aren't really surprises"
+    preheader: "Car repairs, gifts, renewals. Plan for them once."
+    body_markdown: |
+      Hi,
+
+      A lot of budgets break in the same way: a car repair, a wedding gift, an annual renewal. It feels like an emergency, but it happens every year. It's just not monthly.
+
+      Today, list everything you paid in the last 12 months that isn't a monthly bill. Here's a made-up example to show the maths:
+
+      - Car registration: $120
+      - Car maintenance and repairs: $480
+      - Gifts and holidays: $600
+      - Annual subscriptions: $96
+
+      That's $1,296 a year, or **$108 a month**. Setting aside $108 every month means the next repair comes out of money that was already waiting for it, not your credit card.
+
+      This is called a sinking fund. It can be a separate savings account, or one account with labelled "buckets" if your bank offers them.
+
+      Your numbers will look different. Use your own statements, round up, and don't worry about being exact. A rough set-aside beats none.
+
+      {signoff}
+
+  - day_offset: 4
+    subject: "Day 4: a small buffer beats a perfect plan"
+    preheader: "Separate account, automatic transfer, any amount."
+    body_markdown: |
+      Hi,
+
+      Today is about a buffer: money that sits between you and the next unexpected bill.
+
+      Three things matter more than the amount:
+
+      1. **Keep it separate** from the account you spend from. Out of sight really does help.
+      2. **Make it automatic.** Set a transfer for payday so saving happens before spending. Any amount counts; $20 a paycheck is a real start.
+      3. **Check where it lives.** Look for FDIC insurance (banks) or NCUA insurance (credit unions), no monthly fees, and no minimum balance you might trip over.
+
+      A note on interest: rates on savings accounts vary a lot between banks and change over time, so it's worth comparing the current APY on a few accounts rather than leaving savings wherever your checking account is. I'll come back to this in a few days.
+
+      Don't wait to pick the perfect account before starting. Start the transfer today; you can move the money later.
+
+      {signoff}
+
+  - day_offset: 5
+    subject: "Day 5: debts on one page (and finishing the reset)"
+    preheader: "Balance, rate, minimum. Then your weekly number."
+    cta_url_key: checklist
+    cta_label: See Days 5 to 7 on the checklist
+    body_markdown: |
+      Hi,
+
+      Last stretch. Today covers Days 5 to 7 of the checklist.
+
+      ## Day 5: debts on one page
+
+      For each debt, write three things: **the balance, the interest rate (APR) and the minimum payment.** Then set every one to autopay at least the minimum, so nothing is ever late.
+
+      If you have money for extra payments, there are two common approaches:
+
+      - **Avalanche:** extra money goes to the highest interest rate first. You pay the least interest overall.
+      - **Snowball:** extra money goes to the smallest balance first. You clear whole debts sooner, which keeps some people going.
+
+      Both work if you stick with them. Pick one and don't second-guess it for a month.
+
+      ## Day 6: your weekly spending number
+
+      Take-home pay, minus bills, minus your Day 3 set-aside, minus savings and extra debt payments. Divide by **4.33** (the average number of weeks in a month). That's what you can spend each week on everything else: groceries, eating out, fun.
+
+      ## Day 7: book the check-in
+
+      Put a recurring 20-minute "money check-in" in your calendar. Same time every week. Check what's left of the weekly number, what's due soon, and one thing to adjust.
+
+      That's the reset. Tomorrow's email is the one where I tell you about something I made and sell. If you don't need it, skip it; the checklist covers the method on its own.
+
+      {signoff}
+
+  - day_offset: 6
+    subject: "If you'd rather the spreadsheet did the maths"
+    preheader: "{product_name}: the reset as a weekly system, {if launch}{launch_price} this week{/if}{if no_launch}{price}{/if}."
+    cta_url_key: budget_page
+    cta_label: "See what's inside"
+    body_markdown: |
+      Hi,
+
+      Quick one, as promised.
+
+      Everything in the reset works with a pen and paper. But if you'd like it set up for you, I made **{product_name}**: a 14-page guide plus a spreadsheet that turns the reset into a system you run in about 20 minutes a week.
+
+      What it does:
+
+      - Splits take-home pay into four lines: bills, funds (your Day 3 set-asides), goals (paid first) and one weekly spending number
+      - Converts weekly, biweekly or twice-monthly pay for you
+      - Tracks the weekly number, including overspends and leftovers
+      - Plans up to six debts, comparing avalanche and snowball side by side with a payoff date for each
+      - Works in Excel, Google Sheets and Apple Numbers. No subscription, no bank connection
+
+      Who it's **not** for: if you want automatic transaction syncing and categories, a budgeting app is a better fit. This is deliberately low-tech.
+
+      {if launch}It's **{launch_price}** with code **{launch_code}** until {launch_ends_human} (launch price; it's {price} after that).{/if}{if no_launch}It's **{price}**, one payment, yours to keep.{/if} If it's not what you expected, there's a 14-day refund, no forms.
+
+      [See what's inside {product_name}]({link:budget_page})
+
+      And if you don't need it, no problem at all. The weekly emails stay free.
+
+      {signoff}
+
+  - day_offset: 9
+    subject: "{if launch}Launch price ends {launch_ends_human} (plus a savings tip){/if}{if no_launch}Last note on the template (plus a savings tip){/if}"
+    preheader: "{if launch}Last reminder, then back to the weekly email.{/if}{if no_launch}One savings tip, then back to the weekly email.{/if}"
+    cta_url_key: budget_page
+    cta_label: "Look at {product_name}"
+    body_markdown: |
+      Hi,
+
+      Two quick things, then this welcome series is done and you'll get the regular weekly email.
+
+      **1. {product_name}.** {if launch}The launch price of {launch_price} (code {launch_code}) ends on {launch_ends_human}. After that it goes back to {price}. This is the last reminder.{/if}{if no_launch}This is the last time I'll mention it in this series. It's {price} and comes with a 14-day refund.{/if} [Here's the page]({link:budget_page}) if you want another look. If the free checklist is doing the job, that's great too.
+
+      **2. Where your buffer lives.** Back on Day 4 I said savings rates vary a lot. If your buffer is sitting in an account paying very little, comparing a few high-yield savings accounts takes about 10 minutes. Look at the current APY, monthly fees, minimum balance and FDIC or NCUA insurance.
+
+      One option to include in your comparison: [{affiliate_name:hysa}]({link:hysa}). *Disclosure: that's an affiliate link. If you open an account through it I may earn a commission, at no extra cost to you.* It isn't a recommendation for your situation; rates change, so compare a few before you choose.
+
+      Thanks for doing the reset. See you in the weekly email.
+
+      {signoff}
+
+# ----------------------------------------------------------------- sales pages
+products:
+  - slug: 20-minute-budget
+    match: "20-Minute Budget"
+    name: The 20-Minute Budget
+    headline: A budget you set up once and run in 20 minutes a week
+    subhead: "A 14-page guide and a spreadsheet that does the maths: four lines, one weekly spending number, and a debt payoff plan."
+    price: "$12"
+    launch_price: "$7"
+    launch_code: LAUNCH
+    launch_ends: "2026-11-14"
+    includes: "PDF guide (14 pages) + spreadsheet (.xlsx) · instant download"
+    problem_title: Why most budgets stop working
+    problem:
+      - Most budgets ask you to make dozens of small decisions every day. Track every coffee, police twelve categories, reconcile every receipt. Nobody keeps that up for long.
+      - "Then the \"surprises\" arrive: a car repair, a wedding gift, a yearly renewal. They aren't really surprises, but they weren't in the plan, so the plan breaks."
+      - The 20-Minute Budget asks for one decision a month and a 20-minute check-in once a week.
+    how_title: How it works
+    how:
+      - {title: Bills, text: "Everything that leaves every month. Set once, then forget it."}
+      - {title: Funds, text: "Monthly set-asides for the irregular costs that usually wreck budgets."}
+      - {title: Goals, text: "Savings and extra debt payments, paid first, not from whatever is left."}
+      - {title: One weekly number, text: "Groceries, eating out, fun: all from one number. When it's gone, the week's done."}
+    inside:
+      - {title: "The guide (PDF, 14 pages)", text: "The method, a 6-step setup, a fully worked example (fictional person, real maths), automating it with your bank, the weekly routine, the monthly reset, avalanche vs snowball, irregular income and couples, FAQ and a printable worksheet."}
+      - {title: "Setup tab", text: "Converts weekly, biweekly or twice-monthly pay into a monthly figure."}
+      - {title: "Monthly Plan tab", text: "Bills, goals and your weekly number. Warns you if you've planned more than you earn."}
+      - {title: "Weekly Check-in tab", text: "Type one number a week; it handles overspend and rollover."}
+      - {title: "Sinking Funds tab", text: "Monthly amounts and progress for irregular costs."}
+      - {title: "Debt Payoff tab", text: "Up to 6 debts, avalanche vs snowball side by side, payoff month for each, total interest and a debt-free date."}
+    previews: []      # add image paths (relative to the factory home) or https URLs, e.g. output/money-made-simple/previews/p1.png
+    for_who:
+      - You've tried budgeting apps and stopped opening them
+      - You're early in your career and want a simple system you understand
+      - You're paying off debt and want to see an actual plan and a date
+      - You're paid weekly, biweekly or twice a month (or your income varies)
+    not_for:
+      - You want automatic bank syncing and transaction categories (an app is a better fit)
+      - You want someone to tell you what to invest in
+      - You're looking for a get-out-of-debt-fast promise. This is a steady system, not a shortcut
+    faq:
+      - {q: "What format is it?", a: "A PDF guide (14 pages) and an .xlsx spreadsheet. You download them right after purchase."}
+      - {q: "Do I need Excel?", a: "No. It works in Google Sheets (free) and Apple Numbers too."}
+      - {q: "Is it a subscription?", a: "No. One payment, yours to keep, including future updates to this edition."}
+      - {q: "Does it connect to my bank?", a: "No, on purpose. You type one number a week. Nothing to sync, nothing to break, no account access."}
+      - {q: "My income varies. Will it work?", a: "Yes. The Setup tab converts weekly, biweekly or twice-monthly pay, and the guide has a section on irregular income."}
+      - {q: "Will it work outside the US?", a: "The method works in any currency. A few references (FDIC, NCUA, NFCC) are US-specific."}
+      - {q: "Is this financial advice?", a: "No. It's an educational guide and a tool for organising your own money. For advice about your situation, talk to a qualified professional."}
+    refund: "Not what you expected? Email {support} within 14 days of purchase for a full refund. No forms, no hoops."
+    disclaimer: "Educational content, not financial, tax or investment advice. The worked example in the guide is fictional."
+    ai_disclosure: "This guide and spreadsheet were made with help from AI tools, then checked and edited by a human."
+
+# ----------------------------------------------------------------- facts used above (verify before sending)
+claims_to_verify:
+  - claim: "FDIC insures deposits up to $250,000 per depositor, per insured bank, per ownership category."
+    source: https://www.fdic.gov/resources/deposit-insurance
+  - claim: "NCUA insures credit union deposits on the same $250,000 basis."
+    source: https://ncua.gov/support-services/share-insurance-fund
+  - claim: "Average weeks per month is 4.33 (52 / 12)."
+    source: arithmetic
+  - claim: "Paid every two weeks = 26 paychecks a year, so two months have three paychecks."
+    source: arithmetic
+  - claim: "iPhone: Settings > [your name] > Subscriptions; Android: Google Play > profile > Payments & subscriptions > Subscriptions."
+    source: https://support.apple.com/en-us/118428 and https://support.google.com/googleplay/answer/7018481

@@ -45,11 +45,28 @@
     {% else %}
       <p class="muted">No draft yet.</p>
     {% endif %}
-    <form method="post" action="/business/clients/{{ client.id }}/pitch" class="inline-form"><button class="btn btn-primary">{{ 'Redraft' if draft else 'Draft pitch' }}</button></form>
+    <form method="post" action="/business/clients/{{ client.id }}/pitch" class="inline-form"><button class="btn {{ '' if draft else 'btn-primary' }}">{{ 'Redraft' if draft else 'Draft pitch' }}</button></form>
+    {% if draft and not client.meta.opted_out and not cadence %}
+    <form method="post" action="/business/clients/{{ client.id }}/sent" class="inline-form"><button class="btn btn-primary">Mark pitch sent</button></form>
+    {% endif %}
     {% if not client.meta.opted_out %}
     <form method="post" action="/business/clients/{{ client.id }}/optout" class="inline-form"><button class="btn">Record opt-out</button></form>
     {% endif %}
     <p class="muted">Drafts only. Send from your own mail client after reviewing.</p>
+    {% if cadence %}
+    <h3>Follow-up cadence</h3>
+    <p class="muted">First email sent {{ cadence.sent_at }}{% if cadence.stopped %} · stopped ({{ cadence.stopped }}){% endif %}</p>
+    <table class="table">
+      <tr><th>#</th><th>Due</th><th>Status</th></tr>
+      {% for st in cadence.steps %}
+      <tr><td>{{ st.n }}</td><td>{{ st.due }}</td><td><span class="badge {{ 'badge-ok' if st.status == 'sent' else 'badge-block' if st.status == 'cancelled' else 'badge-warn' }}">{{ st.status }}{% if st.sent_at %} {{ st.sent_at }}{% endif %}</span></td></tr>
+      {% endfor %}
+    </table>
+    {% for st in cadence.steps if st.status == 'pending' %}{% if loop.first %}
+    <details><summary>Next follow-up draft ({{ st.due }})</summary><pre class="email">{{ st.body }}</pre></details>
+    <form method="post" action="/business/clients/{{ client.id }}/sent" class="inline-form"><button class="btn">Mark follow-up {{ st.n }} sent</button></form>
+    {% endif %}{% endfor %}
+    {% endif %}
 
     <details style="margin-top:12px"><summary>Edit details</summary>
       <form method="post" action="/business/clients/{{ client.id }}/update">
@@ -60,6 +77,30 @@
       </form>
     </details>
   </div>
+</div>
+
+<div class="card" id="proposal">
+  <h2>Proposal</h2>
+  {% if proposal %}
+  <p><strong>{{ proposal.number }}</strong> · {{ proposal.package }} · {{ proposal.total_cents|money }} <span class="muted">· valid until {{ proposal.valid_until }} · made {{ proposal.created_at[:10] }}</span></p>
+  <div class="btn-row" style="margin-bottom:12px">
+    <a class="btn btn-primary" href="/business/clients/{{ client.id }}/proposal" target="_blank">View proposal</a>
+    {% if proposal.pdf %}<a class="btn" href="/business/clients/{{ client.id }}/proposal?pdf=1">Download PDF</a>{% endif %}
+  </div>
+  {% else %}<p class="muted">No proposal yet. Pick a package: you get a 3-page proposal (HTML + PDF) with their notes, 3 ad concepts, timeline, pricing and payment steps.</p>{% endif %}
+  <form method="post" action="/business/clients/{{ client.id }}/proposal">
+    <div class="form-row">
+      <select name="package">{% for key, p in packages.items() %}<option value="{{ key }}" {{ 'selected' if key == 'growth' }}>{{ p.name }}: {{ p.price_cents|money }}{{ '/mo' if p.recurring }} ({{ p.videos }} videos)</option>{% endfor %}</select>
+    </div>
+    <div class="form-row">
+      {% for key, a in addons.items() if key != 'rush' %}
+      <label style="display:inline-block;margin-right:12px;font-weight:400"><input type="checkbox" name="addons" value="{{ key }}"> {{ a.name }}</label>
+      {% endfor %}
+      <label style="display:inline-block;font-weight:400"><input type="checkbox" name="rush" value="1"> Rush</label>
+    </div>
+    <div class="form-row"><input type="text" name="products" placeholder="Products to feature, comma-separated (optional)"></div>
+    <button class="btn {{ '' if proposal else 'btn-primary' }}">{{ 'New proposal' if proposal else 'Generate proposal' }}</button>
+  </form>
 </div>
 
 <div class="card">
@@ -79,6 +120,7 @@
           <button class="btn">Set</button>
         </form>
         <form method="post" action="/business/orders/{{ o.id }}/invoice" class="inline-form"><button class="btn">Invoice</button></form>
+        <a class="btn" href="/business/orders/{{ o.id }}/brief">Brief &amp; checklist</a>
       </td>
     </tr>
     {% endfor %}
@@ -94,7 +136,7 @@
       {% for key, a in addons.items() if key != 'rush' %}
       <label style="display:inline-block;margin-right:12px"><input type="checkbox" name="addons" value="{{ key }}"> {{ a.name }} (+{{ a.price_cents|money }}{{ '/video' if a.per_video }})</label>
       {% endfor %}
-      <label style="display:inline-block"><input type="checkbox" name="rush" value="1"> Rush (+{{ addons['rush'].percent }}%)</label>
+      <label style="display:inline-block"><input type="checkbox" name="rush" value="1"> Rush (+{{ (addons['rush'].percent ~ '%') if addons['rush'].percent else addons['rush'].price_cents|money }})</label>
     </div>
     <div class="form-row"><input type="text" name="product" placeholder="Product to feature"></div>
     <div class="form-row"><textarea name="notes" rows="2" placeholder="Brief notes"></textarea></div>
