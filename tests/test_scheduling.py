@@ -73,3 +73,24 @@ def test_rejected_duplicate_does_not_block_originality(factory, fake_render):
     assert factory.db.get("posts", b)["status"] == "blocked"
     factory.reject(a, "duplicate")
     assert factory.check(b)["status"] != "block"
+
+
+def test_weekly_format_cadence_spreads_posts(factory):
+    from datetime import timedelta
+    from zoneinfo import ZoneInfo
+    brand = factory.brand("money-made-simple")
+    brand.cadence.long_per_week = 1
+    brand.cadence.max_posts_per_day_per_platform = 2
+    tz = ZoneInfo(brand.cadence.timezone)
+    after = datetime(2026, 12, 1, 6, 0, tzinfo=timezone.utc)
+    days = []
+    for i in range(3):
+        slot = next_slot(factory.db, brand, "youtube", after=after, fmt="long")
+        pid = factory.db.insert("posts", {"brand": brand.slug, "format": "long", "status": "scheduled", "title": f"l{i}"})
+        factory.db.insert("publications", {"post_id": pid, "platform": "youtube", "status": "queued",
+                                           "scheduled_at": slot.isoformat(), "created_at": "x"})
+        days.append(slot.astimezone(tz).date())
+    assert days[1] - days[0] >= timedelta(days=7) and days[2] - days[1] >= timedelta(days=7)
+    # other formats aren't held back by the long-video cadence
+    short = next_slot(factory.db, brand, "youtube", after=after, fmt="short")
+    assert short.astimezone(tz).date() <= days[0] + timedelta(days=1)

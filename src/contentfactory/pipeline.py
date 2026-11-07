@@ -212,7 +212,7 @@ class Factory:
         # Work out every slot first so a cadence block can't leave a half-scheduled post behind.
         plan = []
         for platform in targets:
-            slot = at or next_slot(self.db, brand, platform)
+            slot = at or next_slot(self.db, brand, platform, fmt=post["format"])
             cadence = check_cadence(self.db, brand, platform, slot)
             if cadence.level == "block":
                 raise PermissionError(cadence.message)
