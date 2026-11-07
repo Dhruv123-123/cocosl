@@ -59,3 +59,12 @@ def test_newsletter_export_kit_and_sender(factory):
     sh = (snd["dir"] / "email.html").read_text()
     assert "Unsubscribe" not in sh and "%%" not in sh and "made with AI" in sh.lower() or "AI tools" in sh
     assert "postal address" in (snd["dir"] / "CHECKLIST.md").read_text()
+
+
+def test_element_as_dict():
+    from contentfactory.originality import _element, audit, element_text
+    el = {"type": "human-segment", "detail": "Dhruv records the monthly hour", "chapter": "Monthly hour"}
+    assert "human-segment" in element_text(el) and element_text(None) == ""
+    script = {"title": "t", "segments": [{"narration": "x"}], "original_element": el}
+    assert _element(script, None) == "planned"
+    audit([{"id": 1, "format": "long", "script": script}], "b")

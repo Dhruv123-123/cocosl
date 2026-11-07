@@ -217,7 +217,8 @@ def recordings(factory) -> list[dict]:
             f = (s.get("footage") or "").strip()
             if f and not ((Path(f).expanduser() if Path(f).is_absolute() else home / f).is_file()):
                 needs.append(f"footage: beat {i + 1} expects {f}")
-        planned = (script.get("original_element") or "").strip()
+        from .originality import element_text
+        planned = element_text(script.get("original_element"))
         if post["format"] == "long" and planned and not any(s.get("chart") or s.get("footage") for s in segs):
             needs.append(f"screen recording: {planned[:140]}")
         if not needs:

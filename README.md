@@ -70,6 +70,8 @@ factory voice 12 take.m4a                   # your own narration for post 12 (on
 factory recordings                           # posts waiting on your voice or a screen recording, soonest first
 factory batch-record [--days 21] [--minutes 45]  # group all recordings into sessions: shot list + teleprompter each
 factory batch-record attach <session folder>    # link recorded screen files into their posts' beats
+factory today --15min [--save]               # your daily routine (GO_LIVE R6) with today's real items
+factory export-week <brand> [--weeks 4] [--manual-only]  # one zip per week, posting order, captions ready to paste
 factory ui                                   # one local page (127.0.0.1 only): calendar, review queue, recordings, launch check
 factory manual [build|copy <pub>|done <pub> --url]  # TikTok + Pinterest post-by-hand packages
 factory numbers <post id>  (or --text "...")  # recompute loan, payoff, growth and federal tax figures (numpy-financial, Tax-Calculator)
