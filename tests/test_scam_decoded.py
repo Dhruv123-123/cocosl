@@ -347,3 +347,39 @@ def test_tax_2027_pack_covers_tax_scams_on_free_saturdays():
             assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
     plan = (CONTENT.parent / "POSTING_PLAN_TAX_2027.md").read_text()
     assert all(f"#{n} " in plan for n in range(12))
+
+
+def test_weeks_31_34_june_content_rotates_formats():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    items = json.loads((CONTENT.parent / "weeks-31-34.json").read_text())
+    fmt = lambda f, p=None: [i for i in items if i["format"] == f and (p is None or i["platforms"] == p)]
+    assert len(fmt("long")) == 4 and len(fmt("carousel")) == 8
+    assert len(fmt("short", ["tiktok"])) == len(fmt("short", ["instagram", "youtube"])) == 12
+    dates = [i["post_on"] for i in items]
+    assert dates == sorted(dates) and dates[0].startswith("2027-06-06") and dates[-1] < "2027-07-04"
+    videos = [i for i in items if i["format"] != "carousel"]
+    assert all(a["look"] != b["look"] for a, b in zip(videos, videos[1:])), "two videos in a row look alike"
+    earlier = set()
+    for name in ("content.json", "weeks-3-6.json", "weeks-7-12.json", "weeks-13-21.json", "weeks-22-26.json",
+                 "tiktok-minute-cuts.json", "holiday-2026.json", "weeks-27-30.json", "tax-2027.json"):
+        earlier |= {i["script"]["title"] for i in json.loads((CONTENT.parent / name).read_text())}
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        words = sum(len(s.narration.split()) for s in sc.segments)
+        if item["platforms"] == ["tiktok"]:
+            assert 165 <= words <= 230 and "No AI voice" in item["original_element"], sc.title
+            assert any(s.heading == "Pause" for s in sc.segments), sc.title
+        elif item["format"] == "short":
+            assert 60 <= words <= 120, sc.title
+        if item["format"] == "long":
+            assert item["original_element"] and "Chapters" in sc.description
+        assert sc.title not in earlier and any(ch.isdigit() for ch in sc.hook)
+        assert sc.sources and sc.claims_to_verify
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        text = G.script_text(item["script"])
+        assert "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+    plan = (CONTENT.parent / "POSTING_PLAN_WEEKS_31-34.md").read_text()
+    assert all(f"#{n} " in plan for n in range(len(items)))

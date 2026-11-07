@@ -226,3 +226,16 @@ def test_breach_checklist_page_is_static_and_links_official_sites():
     assert html.count('type="checkbox"') == 8
     assert '/breached/' in (ROOT / "public" / "checker" / "index.html").read_text()
     assert '/breached/' in (ROOT / "public" / "scams" / "index.html").read_text()
+
+
+def test_how_we_make_money_lists_every_product_and_partner():
+    import json
+    cfg = json.loads((ROOT / "site.json").read_text())
+    html = (ROOT / "public" / "how-we-make-money" / "index.html").read_text()
+    for p in [cfg["product"], *cfg["ladder"]]:
+        assert p["name"].replace("'", "&#x27;") in html and f"${p['price']:g}" in html, p["slug"]
+    for a in cfg["affiliates"]:
+        assert a["name"] in html, a["slug"]
+    assert cfg["ai_disclosure"] in html and "never message you first" in html
+    assert "/how-we-make-money/" in (ROOT / "public" / "index.html").read_text()
+    assert "/how-we-make-money/" in (ROOT / "public" / "disclosures" / "index.html").read_text()

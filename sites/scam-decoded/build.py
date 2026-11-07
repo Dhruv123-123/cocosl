@@ -322,7 +322,7 @@ def layout(*, title: str, description: str, path: str, body: str, noindex: bool 
 <main>{body}</main>
 <footer><div class="wrap">
 <p>{socials}</p>
-<p><a href="{u('/parents/')}">Protect Your Parents</a> · <a href="{u('/teams/')}">Training for teams</a> · <a href="{u('/newsletter/')}">Weekly Scam Alert</a> · <a href="{u('/compare/')}">Tools compared</a> · <a href="{u('/scams/')}">Scam explainers</a> · <a href="{u('/breached/')}">Data breach checklist</a></p>
+<p><a href="{u('/parents/')}">Protect Your Parents</a> · <a href="{u('/teams/')}">Training for teams</a> · <a href="{u('/newsletter/')}">Weekly Scam Alert</a> · <a href="{u('/compare/')}">Tools compared</a> · <a href="{u('/scams/')}">Scam explainers</a> · <a href="{u('/breached/')}">Data breach checklist</a> · <a href="{u('/how-we-make-money/')}">How we make money</a></p>
 <p><a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/privacy/')}">Privacy</a> · {esc(CFG['contact_email'])}</p>
 <p class="small">{esc(CFG['disclaimer'])} {esc(CFG['ai_disclosure'])}</p>
 </div></footer>
@@ -476,7 +476,8 @@ def checker_cta() -> str:
 
 
 # ---------------------------------------------------------------- shortcodes
-SHORTCODES = {"checker_box", "checker_cta", "checker_tool", "scam_index", "download", "buy", "signup", "aff"}
+SHORTCODES = {"checker_box", "checker_cta", "checker_tool", "scam_index", "download", "buy", "signup", "aff",
+              "money_products", "money_affiliates"}
 
 
 def articles() -> list[dict]:
@@ -512,6 +513,20 @@ def checker_tool() -> str:
 <script src="{u('/checker.js')}" defer></script>"""
 
 
+def money_products() -> str:
+    """Every product we sell, with its price, straight from site.json (for /how-we-make-money/)."""
+    rows = "".join(f'<li><a href="{u("/" + p["slug"] + "/")}">{esc(p["name"])}</a>, {esc(price(p))}</li>'
+                   for p in [CFG["product"], *CFG["ladder"]])
+    return f'<ul class="reads">{rows}</ul>'
+
+
+def money_affiliates() -> str:
+    """Every affiliate partner in site.json, by category, linking to the comparison page."""
+    names = {"identity": "identity protection", "passwords": "password manager", "vpn": "VPN"}
+    rows = "".join(f'<li>{esc(a["name"])} ({esc(names.get(a["category"], a["category"]))})</li>' for a in CFG["affiliates"])
+    return f'<ul class="reads">{rows}</ul>'
+
+
 def shortcode(name: str, args: list[str], ctx: dict) -> str | None:
     """HTML-producing {{name:arg|arg}} shortcodes for content files."""
     if name == "checker_box":
@@ -520,6 +535,10 @@ def shortcode(name: str, args: list[str], ctx: dict) -> str | None:
         return checker_tool()
     if name == "scam_index":
         return scam_index()
+    if name == "money_products":
+        return money_products()
+    if name == "money_affiliates":
+        return money_affiliates()
     if name == "checker_cta":
         return checker_cta()
     if name == "signup":

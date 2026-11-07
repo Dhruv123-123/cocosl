@@ -10,3 +10,5 @@ title: Disclosures
 **Not advice.** {{disclaimer}}
 
 **No fake reviews.** We only quote real buyers, word for word, with permission.
+
+The longer version, with every product and partner listed, is on [How we make money](/how-we-make-money/).
