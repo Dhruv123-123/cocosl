@@ -98,7 +98,7 @@ def test_seo_covers_every_listing():
     import seo
     assert set(seo.S) == set(listings.BY_SLUG)
     for it in listings.LISTINGS:
-        assert len(it["title"].split()) <= 15 and it["title"] == seo.S[it["slug"]][0]
+        assert len(it["title"].split()) <= 15 and it["title"] == seo.TITLE_FIX.get(it["slug"], seo.S[it["slug"]][0])
         assert it["attributes"]["Primary color"] and len(it["tags"]) == 13
         assert "Attributes" in listings.listing_md(it)
     assert "debt snowball" in listings.BY_SLUG["debt-free-date-planner"]["tags"]
@@ -151,3 +151,22 @@ def test_dated_planner_listing_is_consistent():
     d = L.BY_SLUG["2027-budget-planner"]["description"]
     assert "undated" not in d.lower() and "Two PDFs" not in d
     assert "Dated for 2027" in d and "4 PDFs" in d
+
+
+def test_scouting_etsy_fixes():
+    """research/scouting/etsy-seo-playbook.md (PR #2): first line names the item, no repeated title words,
+    multi-word tags, a clean first photo and 7 photos at 2700x2025."""
+    import listings
+    import mockgen
+    for it in listings.LISTINGS:
+        first = it["description"].split("\n")[0]
+        assert first.startswith(f"This {it['name'].split(' (')[0].removeprefix('The ')} is "), it["slug"]
+        assert "google sheets" not in it["tags"] or it["kind"] == "printable"
+    assert listings.validate() == []
+    pages = [Path("/x/p1.png"), Path("/x/p2.png"), Path("/x/p3.png")]
+    o = dict(title="Savings Bingo", price=3, chips=["Instant download"])
+    names = [n for n, _ in mockgen.etsy_set(o, pages, 2000, 1500)]
+    assert names[0] == "mockup-01-clean" and len(names) == 7
+    first = mockgen.etsy_set(o, pages, 2000, 1500)[0][1]
+    assert "<h1" not in first and "Savings Bingo" not in first      # no text on the first photo
+    assert round(2000 * mockgen.ETSY_SCALE) == 2700 and round(1500 * mockgen.ETSY_SCALE) == 2025

@@ -80,11 +80,37 @@ print-area preview for every size you enable. Turn off any size whose preview cr
 - **Section:** Wall Posters. **Category:** Art & Collectibles > Prints > Posters (or the closest Etsy offers).
 - **Attributes:** Orientation: Vertical. Primary color: White. Secondary color: Green. Framing: Unframed (or as chosen).
 
+## Photos
+First photo: `listing-01-framed-square.jpg` (2400x2400, square, no text: Etsy wants the first photo landscape or
+square). Then Printify's own room and frame mockups for the sizes you enable. `preview.jpg` is for your own checks.
+
 ## Description
 ```
 {posters.description(p)}
 ```
 """
+
+
+def framed_square(poster) -> "Image.Image":
+    """Etsy's first photo must be landscape or square: the real poster in a plain frame, centred on a wall, no text.
+    2400x2400. Printify's room mockups can follow as photos 2 onwards."""
+    from PIL import Image, ImageDraw, ImageFilter
+    S = 2400
+    img = Image.new("RGB", (S, S), "#ece8df")
+    ph = 1500
+    pw = ph * 3 // 4
+    art = poster.convert("RGB").resize((pw, ph), Image.LANCZOS)
+    mat, frame = 70, 26
+    fw, fh = pw + 2 * (mat + frame), ph + 2 * (mat + frame)
+    x, y = (S - fw) // 2, (S - fh) // 2 - 60
+    shadow = Image.new("L", (S, S), 0)
+    ImageDraw.Draw(shadow).rectangle([x + 18, y + 40, x + fw + 18, y + fh + 40], fill=120)
+    img.paste(Image.new("RGB", (S, S), "#b9b3a6"), (0, 0), shadow.filter(ImageFilter.GaussianBlur(40)))
+    d = ImageDraw.Draw(img)
+    d.rectangle([x, y, x + fw, y + fh], fill="#1d1d1b")
+    d.rectangle([x + frame, y + frame, x + fw - frame, y + fh - frame], fill="#fbfaf6")
+    img.paste(art, (x + frame + mat, y + frame + mat))
+    return img
 
 
 def main() -> int:
@@ -120,6 +146,7 @@ def main() -> int:
                     failures.append(f"{f.name}: {im.size} != {r['px']}")
                 if k == "3x4":
                     im.convert("RGB").resize((900, 1200)).save(d / "preview.jpg", quality=85)
+                    framed_square(im).save(d / "listing-01-framed-square.jpg", quality=90)
             if f.stat().st_size > 100 * 1024 * 1024:
                 failures.append(f"{f.name}: over Printify's 100 MB limit")
     if items and not args.only:

@@ -84,6 +84,23 @@ BANNED = ("guarantee", "risk-free", "100% safe", "never get scammed", "you've be
           "write off everything", "the irs won't know", "bestseller", "best seller", "i've used")
 
 
+FORMAT = {"en": {"print": "a printable PDF in US Letter and A4", "cards": "a set of printable PDF cards in US Letter and A4",
+                  "kit": "a printable PDF kit in US Letter and A4", "sheet": "a spreadsheet for Google Sheets and Excel, with a PDF guide",
+                  "bundle": "a bundle of printable files in one download"},
+          "es": {"print": "un PDF para imprimir en tamaño Carta y A4", "print+sheet": "un PDF para imprimir en Carta y A4 con una hoja de cálculo para Google Sheets y Excel",
+                 "bundle": "un paquete de PDF para imprimir y una hoja de cálculo en una sola descarga"}}
+
+
+def opener(it: dict, lang: str = "en", what: str | None = None) -> str:
+    """The description's first sentence names the item and its format (Etsy: keywords in the first few sentences)."""
+    n = it["name"].split(" (")[0]
+    what = what or FORMAT[lang][it["kind"]]
+    if lang == "es":
+        art = "Esta" if n.startswith("La ") else "Este"
+        return f"{art} {n.split(' ', 1)[1] if n.split(' ', 1)[0] in ('El', 'La') else n} es {what}."
+    return f"This {n.removeprefix('The ')} is {what}."
+
+
 def etsy_description(hook: str, get: list[str], how: list[str], good: list[str], disclosure: str) -> str:
     g = "\n".join(f"- {x}" for x in get)
     h = "\n".join(f"{i}. {x}" for i, x in enumerate(how, start=1))
@@ -98,12 +115,24 @@ BANNED_ES = ("garantizad", "sin riesgo", "100% seguro", "dinero fácil", "este t
              "libertad financiera de la noche a la mañana", "hazte rico")
 
 
+STOP = set("and or for the a an to of with your in on by de y para en con el la los las del e o".split())
+
+
+def title_problems(slug: str, title: str, tags: list[str]) -> list[str]:
+    """Etsy's handbook: don't repeat words in a title; use multi-word tag phrases."""
+    words = [w.lower() for w in re.findall(r"[A-Za-z0-9$'áéíóúñ]+", title) if w.lower() not in STOP]
+    bad = [f"{slug}: title repeats '{w}'" for w in sorted({w for w in words if words.count(w) > 1})]
+    return bad + [f"{slug}: single-word tag '{t}'" for t in tags if len(t.split()) == 1]
+
+
 def validate(items: list[dict], lang: str = "en") -> list[str]:
     bad = []
     banned = BANNED + (BANNED_ES if lang == "es" else ())
     marks = MARKERS[lang]
     for it in items:
         s = it["slug"]
+        if it.get("status", "active") == "active":  # retired listings are never listed
+            bad += title_problems(s, it["title"], it["tags"])
         if len(it["title"]) > 140 or len(it["title"].split()) > 15:
             bad.append(f"{s}: title too long ({len(it['title'].split())} words)")
         if len(it["tags"]) != 13 or len(set(it["tags"])) != 13 or any(len(t) > 20 for t in it["tags"]):

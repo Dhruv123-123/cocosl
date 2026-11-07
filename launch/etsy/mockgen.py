@@ -6,7 +6,9 @@
     python launch/etsy/mockgen.py --images p1.png p2.png p3.png --title "Savings Bingo" --sizes pin,square
 
 Sizes (pick with --sizes, default all):
-    etsy       2000x1500  three images: 01 hero (fanned pages), 02 inside (page grid), 03 details
+    etsy       2700x2025  seven images (laid out at 2000x1500, rendered at 1.35x): 01 clean (fanned pages, no text,
+                          as Etsy advises for the first photo), 02 hero (title + pages), 03 inside (page grid),
+                          04 details, 05-07 single-page close-ups
     gumroad    1280x720   cover
     square     600x600    thumbnail (Gumroad, Notion Marketplace)
     pin        1000x1500  Pinterest pin
@@ -26,6 +28,7 @@ import tempfile
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
+ETSY_SCALE = 1.35   # Etsy recommends at least 2000 px on both sides: 2000x1500 layouts render at 2700x2025
 SIZES = {"etsy": (2000, 1500), "gumroad": (1280, 720), "square": (600, 600), "pin": (1000, 1500), "insta": (1080, 1350)}
 FONT = "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif"
 INK, CREAM, GREEN, GREEN_D, GOLD = "#0b1d13", "#f4f1e8", "#2fbf71", "#1e8a50", "#f2b134"
@@ -105,6 +108,37 @@ def hero(o: dict, pages: list[Path], w: int, h: int) -> str:
     return _doc(w, h, body, o.get("bg", CREAM), INK if o.get("bg", CREAM) == CREAM else CREAM)
 
 
+def clean(pages: list[Path], w: int, h: int, bg: str = CREAM) -> str:
+    """The first photo: real pages fanned and centred, no text, so square and portrait crops keep the item."""
+    pw = int(min(w * .4, h * .72 / 1.294))
+    spread = int(pw * .42)
+    x = (w - pw - 2 * spread) // 2 if len(pages) > 1 else (w - pw) // 2 - spread
+    return _doc(w, h, fan(pages, x, int((h - pw * 1.294) / 2) - 40, pw, spread), bg)
+
+
+def closeup(page: Path, w: int, h: int, bg: str = CREAM) -> str:
+    """One page, big enough to read, centred."""
+    ph = int(h * .9)
+    return _doc(w, h, f'<img class="pg" src="file://{page}" style="left:50%;top:{(h - ph) // 2}px;height:{ph}px;'
+                      f'transform:translateX(-50%)">', bg)
+
+
+def etsy_set(o: dict, pages: list[Path], w: int, h: int, inside_pages: list[Path] | None = None,
+             count: int | None = None) -> list[tuple[str, str]]:
+    """(name, html) for the Etsy photo set, in upload order."""
+    bg = o.get("bg", CREAM)
+    out = [("mockup-01-clean", clean(pages, w, h, bg)), ("mockup-02-hero", hero(o, pages, w, h)),
+           ("mockup-03-inside", inside(o, inside_pages or pages, w, h, count)), ("mockup-04-details", details(o, pages, w, h))]
+    out += [(f"mockup-{5 + i:02d}-page-{i + 1}", closeup(p, w, h, bg)) for i, p in enumerate(pages[:3])]
+    return out
+
+
+def clear_old(out: Path) -> None:
+    """Remove mockups from an earlier layout (only our own mockup-*.png files in this listing folder)."""
+    for p in out.glob("mockup-*.png"):
+        p.unlink()
+
+
 WHATS_INSIDE = "What's inside"
 
 
@@ -153,18 +187,19 @@ def generate(o: dict, pages: list[Path], out: Path, sizes=tuple(SIZES), run=None
     work = Path(tempfile.mkdtemp(prefix="mockgen-"))
     jobs, outs = [], []
 
-    def add(name, doc, w, h):
+    def add(name, doc, w, h, scale=1):
         src = work / f"{name}.html"
         src.write_text(doc)
         png = out / f"{prefix}{name}.png"
-        jobs.append({"src": str(src), "png": str(png), "w": w, "h": h})
+        jobs.append({"src": str(src), "png": str(png), "w": w, "h": h, "scale": scale})
         outs.append(png)
     for size in sizes:
         w, h = SIZES[size]
         if size == "etsy":
-            add("mockup-01-hero", hero(o, pages, w, h), w, h)
-            add("mockup-02-inside", inside(o, inside_pages or pages, w, h, count), w, h)
-            add("mockup-03-details", details(o, pages, w, h), w, h)
+            if not prefix:
+                clear_old(out)
+            for name, doc in etsy_set(o, pages, w, h, inside_pages, count):
+                add(name, doc, w, h, ETSY_SCALE)
         else:
             add({"gumroad": "cover", "square": "cover-square", "pin": "pin", "insta": "insta"}[size],
                 hero({**o, "bg": INK} if size in ("gumroad", "square") else o, pages, w, h), w, h)

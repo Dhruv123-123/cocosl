@@ -276,17 +276,17 @@ SHEET_GET = ["An income log, expense log and mileage log that total themselves b
 
 LISTINGS = [
     dict(slug="freelancer-tax-planner-2027", name="2027 Freelancer Tax-Year Planner (printable)", price=12.00, kind="print",
-         title="2027 Freelancer Tax Planner Printable, 1099 Income Expense and Quarterly Tax Tracker",
+         title="2027 Freelancer Tax Planner Printable, 1099 Income, Expense and Quarterly Estimate Tracker",
          tags=["freelancer planner", "1099 tax planner", "self employed", "quarterly taxes", "2027 planner",
                "income tracker", "expense tracker", "tax organizer", "small business", "mileage log",
-               "side hustle", "estimated taxes", "bookkeeping"],
+               "side hustle", "estimated taxes", "bookkeeping log"],
          attributes={"Paper size": "US Letter, A4", "File type": "PDF", "Dated or undated": "Dated (2027)",
                      "Primary colour": "Blue", "Secondary colour": "Orange"},
          hook="Every freelance dollar in and out of 2027 in one printable, with the quarterly estimated-tax dates already worked out."),
     dict(slug="freelancer-tax-sheet-2027", name="2027 Freelancer Tax Tracker (Google Sheets)", price=14.00, kind="sheet",
          title="2027 Freelancer Tax Tracker Spreadsheet, Google Sheets 1099 Income and Expense Tracker",
          tags=["freelancer tracker", "1099 spreadsheet", "google sheets", "self employed", "quarterly taxes",
-               "income tracker", "expense tracker", "small business", "bookkeeping", "mileage tracker",
+               "income tracker", "expense tracker", "small business", "bookkeeping log", "mileage tracker",
                "side hustle", "estimated taxes", "excel template"],
          attributes={"File type": "XLSX, PDF", "Software": "Google Sheets, Microsoft Excel, Apple Numbers",
                      "Dated or undated": "Dated (2027)", "Primary colour": "Blue", "Secondary colour": "Orange"},
@@ -295,7 +295,7 @@ LISTINGS = [
          title="2027 Freelancer Tax Bundle, Printable Planner and Google Sheets 1099 Tracker",
          tags=["freelancer planner", "1099 tax planner", "google sheets", "self employed", "quarterly taxes",
                "2027 planner", "income tracker", "expense tracker", "small business", "side hustle",
-               "estimated taxes", "bookkeeping", "tax organizer"],
+               "estimated taxes", "bookkeeping log", "tax organizer"],
          attributes={"File type": "PDF, XLSX", "Dated or undated": "Dated (2027)", "Primary colour": "Blue",
                      "Secondary colour": "Orange"},
          hook="The printable planner and the spreadsheet together: paper for the desk, a sheet that does the sums ($26 separately)."),
@@ -319,5 +319,5 @@ _FILES = {"print": "PDFs in US Letter and A4", "sheet": "an .xlsx workbook and a
 for _it in LISTINGS:
     _it["status"] = "retired" if _it["slug"] in RETIRED else "active"
     _it["category"] = CAT if _it["kind"] != "sheet" else "Paper & Party Supplies > Paper > Calendars & Planners (digital)"
-    _it["description"] = __import__("shop").etsy_description(_it["hook"], _GET[_it["kind"]], _HOW[_it["kind"]], GOOD, DISCLOSURE)
+    _it["description"] = __import__("shop").etsy_description(__import__("shop").opener(_it) + " " + _it["hook"], _GET[_it["kind"]], _HOW[_it["kind"]], GOOD, DISCLOSURE)
     _it["gumroad"] = _gumroad(_it["hook"], _GET[_it["kind"]], _it["price"], _FILES[_it["kind"]])

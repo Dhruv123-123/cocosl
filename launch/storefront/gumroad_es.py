@@ -199,6 +199,22 @@ PRODUCTOS = [
          etiquetas=["presupuesto familiar", "remesas", "crédito", "imprimible", "finanzas personales",
                     "hoja de cálculo", "paquete", "en español"],
          archivos="un .zip con los PDF en carta y A4 y la hoja de cálculo"),
+    # PR #8 (apps thread, launch/dashboard-pro/): copy taken from its LISTING.md, same native review.
+    dict(nombre="Tablero de dinero Pro", enlace="tablero-de-dinero-pro", precio=12,
+         titulo="Tablero de dinero Pro: presupuesto en Google Sheets con lo que descargas de tu banco",
+         resumen="Pega tus movimientos del banco y ve 12 meses de lo que entra, lo que gastas y lo que te sobra, cada categoría contra su presupuesto y tus fondos de ahorro, con gráficas.",
+         gancho="Tu banco ya tiene todos tus números. Esto los pone en una sola página: toma lo que descargas de tu banco (o el archivo del Tablero de dinero gratis) y lo convierte en un tablero que sí vas a revisar cada mes.",
+         incluye=["**Tablero:** elige un mes y ve lo que entra, lo que gastas, lo que ahorras y lo que te sobra, con tres gráficas",
+                  "**Presupuesto vs real, Tendencias de 12 meses y Fondos de ahorro**, más la pestaña Movimientos para pegar y listo"],
+         puntos=["Funciona con lo que descargas de tu banco: pegas y listo.",
+                 "Las transferencias y pagos de tarjeta no cuentan como gasto, para no contar nada dos veces.",
+                 "Hecha para Google Sheets (gratis); el .xlsx también funciona en Excel y Numbers."],
+         boton="Quiero mi tablero",
+         gracias=["Abre el PDF Empieza aquí.", "Haz clic en el enlace y elige Hacer una copia: la hoja queda en tu Google Drive.",
+                  "Pega tus movimientos y pon tu presupuesto en las celdas amarillas."],
+         etiquetas=["presupuesto", "hoja de cálculo", "Google Sheets", "finanzas personales", "fondos de ahorro",
+                    "control de gastos", "presupuesto mensual", "en español"],
+         archivos="un .zip con el PDF Empieza aquí y la hoja .xlsx"),
 ]
 
 

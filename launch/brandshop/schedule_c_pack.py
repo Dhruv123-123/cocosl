@@ -586,13 +586,13 @@ LISTINGS = [
     dict(slug="schedule-c-setup-pack", name="Schedule C Setup Pack for TaxHacker", price=12.00, kind="kit",
          title="Schedule C Expense Categories and Year End Tax Packet Spreadsheet for Freelancers, Mileage Log",
          tags=["schedule c", "1099 tax", "freelancer taxes", "self employed", "tax spreadsheet", "expense categories",
-               "mileage log", "receipt tracker", "year end taxes", "tax organizer", "small business", "bookkeeping",
-               "google sheets"],
+               "mileage log", "receipt tracker", "year end taxes", "tax organizer", "small business", "bookkeeping log",
+               "freelance expenses"],
          attributes={"File type": "PDF, XLSX, CSV, JSON", "Software": "TaxHacker, Google Sheets, Microsoft Excel",
                      "Primary colour": "Blue", "Secondary colour": "Orange"},
          category="Paper & Party Supplies > Paper > Calendars & Planners (digital)", status="active", review=BLOCKER,
          hook=HOOK)
 ]
 for _it in LISTINGS:
-    _it["description"] = etsy_description(HOOK, GET, HOW, GOOD, DISCLOSURE)
+    _it["description"] = etsy_description(__import__("shop").opener(_it, what="a digital download for TaxHacker users: a PDF setup guide, Schedule C category lists and a year-end spreadsheet") + " " + HOOK, GET, HOW, GOOD, DISCLOSURE)
     _it["gumroad"] = _gumroad()

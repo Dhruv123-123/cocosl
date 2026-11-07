@@ -246,7 +246,7 @@ def sheet_preview_pages(xlsx: Path, work: Path) -> list[Path]:
                 break
     imgs = []
     for n in picks:
-        imgs += build_etsy.page_images(pdf, work / "sheetprev", f"p{n}", n, n, 90)
+        imgs += build_etsy.page_images(pdf, work / "sheetprev", f"p{n}", n, n, 130)
     return imgs
 
 
@@ -325,7 +325,7 @@ def main() -> int:
                     else:
                         pages = []
                         for p in pdfs:
-                            pages += build_etsy.page_images(p, work / "pg" / it["slug"], p.stem, 1, n_pages, 80)
+                            pages += build_etsy.page_images(p, work / "pg" / it["slug"], p.stem, 1, n_pages, 150)
                     hero = pages[:3] if it["kind"] not in ("bundle",) else [pages[0], pages[len(pages) // 2], pages[-1]]
                     mt, ms = MOCK[it["slug"]]
                     o = {"title": mt, "label": mod.BRAND.name, "price": it["price"], "brand": mod.BRAND.name.upper(),

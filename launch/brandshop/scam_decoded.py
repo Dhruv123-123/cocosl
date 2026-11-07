@@ -443,7 +443,7 @@ CARDSET_GET = ["7 cards, 6 x 4 in: the six fridge cards (Stop. Is it a scam? / G
                "One card per page (for photo or card printing), and Letter and A4 sheets with cut lines"]
 LISTINGS.append(dict(
     slug="scam-card-set", name="Scam Decoded Card Set", price=6.00, kind="cards",
-    title="Scam Warning Cards Printable, Fridge Cards, Phone Script Card and Wallet Cards for Seniors",
+    title="Scam Warning Cards Printable, Fridge, Phone Script and Wallet Set for Seniors",
     tags=["scam awareness", "fridge cards", "senior safety", "elderly parents", "phone scam",
           "wallet card", "large print", "caregiver gift", "scam prevention", "printable cards",
           "family safe word", "gift card scam", "elder care"],
@@ -470,5 +470,5 @@ _HOW = {"kit": ["Print the pages you need.", "Fill in the safety plan and truste
 for _it in LISTINGS:
     _it["status"] = "retired" if _it["slug"] in RETIRED else "active"
     _it["category"] = CAT
-    _it["description"] = __import__("shop").etsy_description(_it["hook"], _GET[_it["slug"]], _HOW[_it["kind"]], GOOD, DISCLOSURE)
+    _it["description"] = __import__("shop").etsy_description(__import__("shop").opener(_it) + " " + _it["hook"], _GET[_it["slug"]], _HOW[_it["kind"]], GOOD, DISCLOSURE)
     _it["gumroad"] = _gumroad(_it["hook"], _GET[_it["slug"]], _it["price"])

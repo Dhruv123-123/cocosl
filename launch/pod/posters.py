@@ -18,25 +18,25 @@ PRICE_NOTE = ("Suggested starting prices: 12x16 or 12x18 about $22, 18x24 about 
 
 POSTERS = [
     dict(slug="100-envelope-challenge-poster", source="100-envelope-challenge", page=2, name="100 Envelope Challenge Poster",
-         title="100 Envelope Challenge Poster, $5050 Savings Challenge Wall Chart to Color In",
+         title="100 Envelope Challenge Poster, $5050 Savings Wall Chart to Color In",
          tags=["100 envelope", "envelope challenge", "savings poster", "savings challenge", "5050 challenge",
                "money challenge", "savings chart", "color in poster", "cash stuffing", "savings wall art",
                "new year savings", "savings goal", "money saving gift"],
          hook="The 100 Envelope Challenge as a wall chart. Colour in each envelope as you save it; all 100 add up to $5,050."),
     dict(slug="52-week-savings-poster", source="52-week-savings-challenge", page=2, zoom=0.95, name="52 Week Savings Challenge Poster",
-         title="52 Week Savings Challenge Poster, $1378 Money Challenge Wall Chart",
+         title="52 Week Savings Challenge Poster, $1378 Money Wall Chart",
          tags=["52 week challenge", "52 week savings", "savings poster", "savings challenge", "1378 challenge",
                "money challenge", "weekly savings", "savings chart", "new year savings", "savings wall art",
                "family savings", "savings goal", "money saving gift"],
          hook="Save $1 in week one, $2 in week two, up to $52. Tick each week on the wall; the full year adds up to $1,378."),
     dict(slug="savings-bingo-poster", source="savings-bingo", page=2, zoom=1.0, name="$1,000 Savings Bingo Poster",
-         title="Savings Bingo Poster, $1000 Money Challenge Bingo Board for Your Wall",
+         title="Savings Bingo Poster, $1000 Money Challenge Board for Your Wall",
          tags=["savings bingo", "money bingo", "bingo challenge", "savings poster", "savings challenge",
                "money challenge", "savings game", "1000 savings", "couples challenge", "savings wall art",
                "fun savings", "savings goal", "money saving gift"],
          hook="A savings challenge you play like bingo. Every square is an amount; cover them all and you've saved $1,000."),
     dict(slug="debt-mountain-poster", source="debt-mountain-coloring-chart", page=2, name="Debt Free Mountain Poster",
-         title="Debt Free Chart Poster, Debt Mountain Payoff Tracker to Color In",
+         title="Debt Free Chart Poster, Mountain Payoff Tracker to Color In",
          tags=["debt free chart", "debt tracker", "debt payoff tracker", "debt snowball", "debt poster",
                "debt free", "debt coloring page", "pay off debt", "debt free journey", "payoff wall chart",
                "color in poster", "debt mountain", "debt free gift"],
@@ -60,13 +60,13 @@ POSTERS = [
                "financial goals", "money tracker", "6 month savings"],
          hook="Build your safety net where you can see it. Set your target, split it into steps and colour each one in."),
     dict(slug="house-fund-poster", source="home-fund-tracker", page=2, name="House Fund Poster",
-         title="House Fund Poster, Down Payment Savings Tracker, Build the House Wall Chart",
+         title="House Fund Poster, Down Payment Savings Tracker, Build a Home Wall Chart",
          tags=["house fund", "down payment", "home savings", "savings poster", "first home", "house savings",
                "savings goal", "color in poster", "home buying", "savings chart", "new home fund",
                "savings wall art", "couples savings"],
          hook="Build the house brick by brick: each brick is part of your down payment. Colour them in as you save."),
     dict(slug="no-spend-challenge-poster", source="no-spend-challenge", page=2, name="30 Day No Spend Challenge Poster",
-         title="No Spend Challenge Poster, 30 Day No Spend Tracker for Your Wall",
+         title="No Spend Challenge Poster, 30 Day Tracker for Your Wall",
          tags=["no spend challenge", "no spend tracker", "no spend month", "frugal living", "spending challenge",
                "money challenge", "savings poster", "no buy challenge", "budget challenge", "savings wall art",
                "low buy year", "save money", "budget poster"],
@@ -84,7 +84,7 @@ DISCLOSURE = ("Designed by Money Made Simple with digital design tools (layouts 
 
 
 def description(p: dict) -> str:
-    return f"""{p['hook']}
+    return f"""This {p['name']} is a printed paper poster, made to order and shipped by our production partner. {p['hook']}
 
 WHAT YOU GET
 - A printed poster on matte paper (frame not included unless you choose a framed size)

@@ -42,6 +42,20 @@ def _good_to_know_dated(year: int, n_pdfs: int) -> str:
                      f"- Dated for {year}: every calendar page has the real {year} dates, with US holidays marked."))
 
 
+def opener(it: dict) -> str:
+    """First sentence: name the item and its format, as Etsy advises ("keywords in the first few sentences")."""
+    n = it["name"].split(" (")[0].removeprefix("The ")
+    if it.get("dated"):
+        return f"This {n} is a dated {it['year']} printable PDF planner in US Letter and A4."
+    if it.get("product") and it.get("bundle"):
+        return f"This {n} is a digital download of {len(it['bundle'])} PDF guides, each with a spreadsheet for Excel and Google Sheets."
+    if it.get("product"):
+        return f"This {n} is a digital download: a PDF guide plus a spreadsheet for Excel and Google Sheets."
+    if it["kind"] == "bundle":
+        return f"This {n} is a bundle of {len(it['bundle'])} undated printable PDFs in US Letter and A4."
+    return f"This {n} is an undated printable PDF in US Letter and A4."
+
+
 def _desc(hook: str, get: list[str], how: list[str], product: bool = False, good: str | None = None) -> str:
     g = "\n".join(f"- {x}" for x in get)
     h = "\n".join(f"{i}. {x}" for i, x in enumerate(how, start=1))
@@ -312,8 +326,18 @@ seo.apply(LISTINGS)
 for it in LISTINGS:
     it.setdefault("category", GUIDE_CAT if it["kind"] == "product" else PRINT_CAT)
     good = _good_to_know_dated(it["year"], 2 * len(it["variants"])) if it.get("dated") else None
-    it["description"] = _desc(it["hook"], it["get"], it["how"], product=it.get("product", False), good=good)
+    it["description"] = _desc(opener(it) + " " + it["hook"], it["get"], it["how"], product=it.get("product", False), good=good)
 BY_SLUG = {it["slug"]: it for it in LISTINGS}
+
+STOP = set("and or for the a an to of with your in on by".split())
+
+
+def _title_problems(slug: str, title: str, tags: list[str]) -> list[str]:
+    """Etsy's handbook: don't repeat words in a title; use multi-word tag phrases (same rule as brandshop/shop.py)."""
+    words = [w.lower() for w in re.findall(r"[A-Za-z0-9$']+", title) if w.lower() not in STOP]
+    bad = [f"{slug}: title repeats '{w}'" for w in sorted({w for w in words if words.count(w) > 1})]
+    return bad + [f"{slug}: single-word tag '{t}'" for t in tags if len(t.split()) == 1]
+
 
 TAG_OK = re.compile(r"^[A-Za-z0-9 '\-]+$")
 
@@ -328,6 +352,7 @@ def validate() -> list[str]:
         if it["title"] in seen_titles:
             errs.append(f"{s}: duplicate title")
         seen_titles.add(it["title"])
+        errs += _title_problems(s, it["title"], it["tags"])
         if len(it["title"].split()) > 15:
             errs.append(f"{s}: title is {len(it['title'].split())} words (Etsy suggests under 15)")
         if len(it["tags"]) != 13:
@@ -393,6 +418,7 @@ ${it['price']:.2f}. Etsy fees per sale about ${f['total']:.2f} (listing $0.20, t
 See the PDF/XLSX/ZIP files in this folder. Etsy allows up to 5 files, 20 MB each.
 
 ## Images
-Upload `mockup-01-hero.png`, `mockup-02-inside.png`, `mockup-03-details.png` in that order. Optionally add a short
+Upload the `mockup-*.png` files in number order (2700x2025). 01 is the thumbnail: pages only, no text, as Etsy
+advises for search. 02 has the title and formats, 03 the pages inside, 04 how it works, 05-07 page close-ups. Optionally add a short
 video later (Etsy shows it in search). Don't use photos of real people or brand logos you don't own.
 """

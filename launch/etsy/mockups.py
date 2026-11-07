@@ -1,7 +1,9 @@
-"""Listing images for Etsy: 2000x1500 (4:3) PNGs built from the real pages of each product.
+"""Listing images for Etsy: 2700x2025 (4:3) PNGs built from the real pages of each product (laid out at 2000x1500 and
+rendered at 1.35x, since Etsy recommends at least 2000 px on both sides).
 
-01 hero (the thumbnail), 02 what's inside, 03 how it works / details. Only real pages are shown, so the
-images never promise anything the download doesn't contain.
+01 clean (the thumbnail: pages only, no text, as Etsy advises), 02 hero (title, chips, pages), 03 what's inside,
+04 how it works / details, 05-07 single-page close-ups. Only real pages are shown, so the images never promise
+anything the download doesn't contain.
 """
 from __future__ import annotations
 
@@ -11,6 +13,8 @@ from pathlib import Path
 import listings
 
 W, H = 2000, 1500
+SCALE = 1.35        # rendered size 2700x2025
+HERO_DPI = 170      # a Letter page is about 1450 px wide: sharp in a full-height close-up at 1.35x
 CSS = """
 *{box-sizing:border-box} body{margin:0;width:2000px;height:1500px;overflow:hidden;font-family:Inter,system-ui,sans-serif;color:#0b1d13}
 .cream{background:#f4f1e8} .ink{background:#0b1d13;color:#f4f1e8}
@@ -55,11 +59,13 @@ def _pages_for(it: dict, out_dir: Path, work: Path, page_images) -> tuple[list[P
             spdf = next(sd.glob("*-Letter.pdf")) if sub["kind"] == "printable" else (
                 sd / "The-20-Minute-Budget.pdf" if slug == "20-minute-budget" else next(sd.glob("*.pdf")))
             n = sub.get("hero", [1])[0] if sub["kind"] == "printable" else 1
-            firsts += page_images(spdf, work / f"m-{it['slug']}", slug, n, n, 90)
+            firsts += page_images(spdf, work / f"m-{it['slug']}", slug, n, n, HERO_DPI)
         return firsts[:3], firsts[:15]
     imgs = page_images(pdf, work / f"m-{it['slug']}", "p", 1, 99, 90)
     pick = lambda idx: [imgs[i - 1] for i in idx if 0 < i <= len(imgs)]  # noqa: E731
-    return pick(it.get("hero", [1, 2, 3])), pick(it.get("grid", list(range(1, 9))))
+    sharp = [page_images(pdf, work / f"m-{it['slug']}", f"h{i}", i, i, HERO_DPI)[0]
+             for i in it.get("hero", [1, 2, 3]) if 0 < i <= len(imgs)]   # hero and close-up pages, sharp at 2700 px
+    return sharp, pick(it.get("grid", list(range(1, 9))))
 
 
 def _chips(it: dict) -> list[str]:
@@ -113,15 +119,19 @@ def render(it: dict, out_dir: Path, work: Path, run_jobs, page_images) -> list[P
     body3 = f'''<div style="padding:90px"><div class="kick">How it works</div><h2>Ready in minutes</h2><div class="steps">{st}</div>
       <div class="kick" style="margin-top:56px">What you get</div><ul class="inc" style="width:1280px;font-size:36px">{inc}</ul></div>{side}
       <div class="foot"><span>MONEY MADE SIMPLE</span><span>Educational / organising tool, not financial advice</span></div>'''
+    import mockgen  # the clean first photo, close-ups and the Pinterest pin, from the same real pages
     jobs, outs = [], []
-    for i, (body, cls, label) in enumerate([(body1, "cream", "hero"), (body2, "ink", "inside"), (body3, "cream", "details")], 1):
-        src = work / f"mock-{it['slug']}-{i}.html"
-        src.write_text(_doc(body, cls))
-        out = out_dir / f"mockup-{i:02d}-{label}.png"
-        jobs.append({"src": str(src), "png": str(out), "w": W, "h": H})
+    docs = [("mockup-01-clean", mockgen.clean(hero, W, H)), ("mockup-02-hero", _doc(body1, "cream")),
+            ("mockup-03-inside", _doc(body2, "ink")), ("mockup-04-details", _doc(body3, "cream"))]
+    docs += [(f"mockup-{5 + i:02d}-page-{i + 1}", mockgen.closeup(p, W, H)) for i, p in enumerate(hero[:3])]
+    mockgen.clear_old(out_dir)
+    for name, doc in docs:
+        src = work / f"mock-{it['slug']}-{name}.html"
+        src.write_text(doc)
+        out = out_dir / f"{name}.png"
+        jobs.append({"src": str(src), "png": str(out), "w": W, "h": H, "scale": SCALE})
         outs.append(out)
     run_jobs(jobs)
-    import mockgen  # Pinterest pin for every listing, from the same real pages
     outs += mockgen.generate(dict(title=it["name"].split(" (")[0], price=it["price"], brand="MONEY MADE SIMPLE",
                                   label=kick.replace("&middot;", "·"), chips=_chips(it)[:3]),
                              hero, out_dir, ("pin",), run=run_jobs)

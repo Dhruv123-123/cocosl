@@ -38,7 +38,8 @@ BRANDS = {
                   ("Get out of debt and fix your credit", ["The Debt-Free Date Planner", "The Credit Report Audit Kit"]),
                   ("Start investing", ["Start Investing With $100 a Month"]),
                   ("2027 planners", ["2027 Budget Sheet", "2027 Money HQ for Notion"]),
-                  ("Google Sheets templates", ["Monthly Budget Sheet", "Debt Payoff Sheet", "Savings Goals Sheet", "Money Sheets Bundle"]),
+                  ("Google Sheets templates", ["Monthly Budget Sheet", "Debt Payoff Sheet", "Savings Goals Sheet", "Money Sheets Bundle",
+                                              "Money Dashboard Pro"]),
                   ("Challenges and trackers for Google Sheets", ["52-Week Savings Challenge Sheet", "No-Spend Challenge Sheet",
                                                                  "Bill Payment Tracker Sheet", "Paycheck Budget Sheet",
                                                                  "Debt Payoff Coloring Sheet"]),
@@ -81,7 +82,7 @@ BRANDS = {
                "gastar, un plan para tus deudas, tu crédito desde cero (también con ITIN) y cuánto llega de verdad cuando "
                "envías dinero. Contenido educativo, no es asesoría financiera, fiscal ni legal. Hecho con ayuda de "
                "herramientas de IA y revisado por una persona."),
-        sections=[("Empieza aquí", ["El Kit para Recortar Gastos", "El Presupuesto de 20 Minutos"]),
+        sections=[("Empieza aquí", ["El Kit para Recortar Gastos", "El Presupuesto de 20 Minutos", "Tablero de dinero Pro"]),
                   ("Para la familia", ["El Presupuesto Familiar", "El Registro de Envíos", "La Lista para Construir tu Crédito",
                                        "El Paquete de la Familia"]),
                   ("Deudas e inversión", ["Tu Fecha Sin Deudas", "Empieza a Invertir con $100 al Mes"]),
@@ -111,6 +112,7 @@ CROSS_SELL = {
     "Notion Debt Payoff Tracker": ("Notion Money HQ", "Adds the budget and savings trackers for the difference.", "Checkout upsell", ""),
     "Notion Savings Goals Tracker": ("Notion Money HQ", "Adds the budget and debt trackers for the difference.", "Checkout upsell", ""),
     "Notion Money HQ": ("2027 Money HQ for Notion", "The same HQ, dated month by month for 2027.", "Email", ""),
+    "Money Dashboard Pro": ("The 20-Minute Budget", "The dashboard shows where the money went; the 20-Minute Budget plans where it goes next.", "Receipt note", ""),
     "The Money Reset: 30-Day Challenge Workbook": ("The 20-Minute Budget", "The Week 3 budget, turned into a weekly system with a spreadsheet.", "Receipt note + email", ""),
     # printable twins (launch/templates/twins_catalog.py): the same next step as each listing's checkout upsell
     "52-Week Savings Challenge Sheet": ("Savings Goals Sheet", "Once the habit sticks, give each goal its own target and date.", "Checkout upsell", ""),
@@ -144,6 +146,7 @@ CROSS_SELL = {
     "El Presupuesto Familiar": ("El Registro de Envíos", "Si el envío a la familia es un gasto fijo, vale la pena compararlo.", "Receipt note", ""),
     "El Registro de Envíos": ("La Lista para Construir tu Crédito", "El siguiente paso para la familia: crédito propio.", "Receipt note", ""),
     "La Lista para Construir tu Crédito": ("Tu Fecha Sin Deudas", "Construir crédito y salir de deudas van juntos.", "Receipt note", ""),
+    "Tablero de dinero Pro": ("El Presupuesto de 20 Minutos", "El tablero muestra a dónde se fue el dinero; el presupuesto decide a dónde va.", "Receipt note", ""),
     "El Paquete de la Familia": ("El Presupuesto de 20 Minutos", "La guía y la hoja de cálculo detrás del número semanal.", "Email", ""),
 }
 

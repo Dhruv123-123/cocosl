@@ -1,6 +1,6 @@
 # Products catalog: every product, every brand
 
-One sheet to list from. **121 listings** (Money Made Simple 93, Scam Decoded 6, 1099 Money 8, Dinero Simple 14). Nothing in this list has been uploaded, listed or
+One sheet to list from. **123 listings** (Money Made Simple 94, Scam Decoded 6, 1099 Money 8, Dinero Simple 15). Nothing in this list has been uploaded, listed or
 submitted anywhere.
 
 - **Files** and **Listing copy** paths are inside the project files folder `content-factory/` (the upload-ready copies).
@@ -13,7 +13,7 @@ submitted anywhere.
 - Regenerate after changing a price or name: `python launch/catalog/build_catalog.py`. Also as `PRODUCTS_CATALOG.csv`.
 
 
-## Money Made Simple (93)
+## Money Made Simple (94)
 
 | Product | Platform | Price | Files | Listing copy | Launch | Date | Notes |
 |---|---|---|---|---|---|---|---|
@@ -110,6 +110,7 @@ submitted anywhere.
 | Money Made Simple (Kindle ebook) | Amazon KDP | $8.99 | `ebook/Money-Made-Simple.epub, ebook/Money-Made-Simple-Kindle-Cover.jpg` | `ebook/KDP_NOTES.md` | Submit week of Nov 30 | calendar | Decide the author name. Off Gumroad while in KDP Select. |
 | Money Made Simple (paperback) | Amazon KDP | $14.99 | `ebook/Money-Made-Simple-Paperback-*.pdf` | `ebook/KDP_NOTES.md` | Submit week of Nov 30, publish week of Dec 14 | calendar | Order the proof first. |
 | The Money Reset: 30-Day Challenge Workbook | Etsy + Gumroad | $9 | `brands/money-made-simple/money-reset-30-day/` | `brands/money-made-simple/money-reset-30-day/LISTING.md` | Week of Dec 14, for New Year resets (budget searches peak in January) | proposed | A guided month of daily tasks, unlike the trackers (No-Spend Challenge) and the guide kits; leads into The 20-Minute Budget. Goes in the existing Money Made Simple Etsy shop. |
+| Money Dashboard Pro | Gumroad (Etsy optional) | $12 | `templates/money-dashboard-pro/` | `templates/money-dashboard-pro/LISTING.md` | Week of Nov 16, with the other Sheets | proposed | PR #8. Paste the Sheets copy link into launch/dashboard-pro/links.json and rebuild (python launch/dashboard-pro/kit.py). Paid step up from the free Money Dashboard maker. Starts from the bank download and adds 12-month trends, budget vs actual and sinking funds. Logging by hand month by month is the 2027 Budget Sheet; the Monthly Budget Sheet plans the month ahead, so neither is a near-duplicate. |
 
 ## Scam Decoded (6)
 
@@ -135,7 +136,7 @@ submitted anywhere.
 | The Rate & Contract Kit | Etsy | $29 | `etsy/1099-money/rate-and-contract-kit/files/` | `etsy/1099-money/rate-and-contract-kit/LISTING-ETSY.md` | Week of Nov 16 | proposed | PR #10. Etsy edition. |
 | The Freelancer Money Bundle | Etsy | $49 | `etsy/1099-money/freelancer-money-bundle/files/` | `etsy/1099-money/freelancer-money-bundle/LISTING-ETSY.md` | Week of Nov 16 | proposed | PR #10. Etsy edition. |
 
-## Dinero Simple (14)
+## Dinero Simple (15)
 
 | Product | Platform | Price | Files | Listing copy | Launch | Date | Notes |
 |---|---|---|---|---|---|---|---|
@@ -143,6 +144,7 @@ submitted anywhere.
 | El Registro de Envíos | Etsy + Gumroad | $7 | `brands/dinero-simple/registro-de-envios/` | `brands/dinero-simple/registro-de-envios/LISTING.md` | After native review; target week of Dec 7 (December remittance and aguinaldo season) | proposed | NATIVE REVIEW PENDING: sign brands/dinero-simple/REVIEW_CHECKLIST_ES.md first. |
 | La Lista para Construir tu Crédito | Etsy + Gumroad | $6 | `brands/dinero-simple/construir-credito/` | `brands/dinero-simple/construir-credito/LISTING.md` | After native review; target week of Dec 7 (December remittance and aguinaldo season) | proposed | NATIVE REVIEW PENDING: sign brands/dinero-simple/REVIEW_CHECKLIST_ES.md first. |
 | El Paquete de la Familia | Etsy + Gumroad | $16 | `brands/dinero-simple/paquete-familia/` | `brands/dinero-simple/paquete-familia/LISTING.md` | After native review; target week of Dec 7 (December remittance and aguinaldo season) | proposed | NATIVE REVIEW PENDING: sign brands/dinero-simple/REVIEW_CHECKLIST_ES.md first. Different from El Paquete Dinero Simple ($29, the four guide kits): this bundles the three printables. |
+| Tablero de dinero Pro | Gumroad | $12 | `templates/tablero-de-dinero-pro/` | `templates/tablero-de-dinero-pro/LISTING.md` | After native review | proposed | PR #8. NATIVE REVIEW PENDING, like the rest of Dinero Simple. Spanish twin of Money Dashboard Pro. |
 | El Kit para Recortar Gastos | Gumroad | $5 | `dinero-simple/products/recorte-de-gastos/` | `dinero-simple/products/recorte-de-gastos/LISTING.md` | After native review (reviewer brief: cheapest path launches El Presupuesto first) | proposed | PR #11. NATIVE REVIEW PENDING. Codes RECORTE5, FECHA5, INVERTIR5. |
 | El Kit para Recortar Gastos | Etsy | $5 | `etsy/dinero-simple/recorte-de-gastos/` | `etsy/dinero-simple/recorte-de-gastos/LISTING.md` | After native review | proposed | PR #11. NATIVE REVIEW PENDING. Etsy edition. |
 | El Presupuesto de 20 Minutos | Gumroad | $12 | `dinero-simple/product/` | `dinero-simple/product/LISTING.md` | After native review (reviewer brief: cheapest path launches El Presupuesto first) | proposed | PR #11. NATIVE REVIEW PENDING. Codes RECORTE5, FECHA5, INVERTIR5. |

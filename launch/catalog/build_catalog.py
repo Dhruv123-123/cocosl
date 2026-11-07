@@ -196,6 +196,18 @@ OTHER_BRANCHES = [
     ("1099 Money", "The Freelancer Money Bundle", "Etsy", "$49", "etsy/1099-money/freelancer-money-bundle/files/",
      "etsy/1099-money/freelancer-money-bundle/LISTING-ETSY.md", "Week of Nov 16", "proposed", "PR #10. Etsy edition."),
 ]
+# Money Dashboard Pro and its Spanish twin, PR #8 (apps thread, branch claude/project-thread-3r16y2), added Nov 7 2026
+OTHER_BRANCHES += [
+    ("Money Made Simple", "Money Dashboard Pro", "Gumroad (Etsy optional)", "$12", "templates/money-dashboard-pro/",
+     "templates/money-dashboard-pro/LISTING.md", "Week of Nov 16, with the other Sheets", "proposed",
+     "PR #8. Paste the Sheets copy link into launch/dashboard-pro/links.json and rebuild (python launch/dashboard-pro/kit.py). "
+     "Paid step up from the free Money Dashboard maker. Starts from the bank download and adds 12-month trends, budget vs "
+     "actual and sinking funds. Logging by hand month by month is the 2027 Budget Sheet; the Monthly Budget Sheet plans "
+     "the month ahead, so neither is a near-duplicate."),
+    ("Dinero Simple", "Tablero de dinero Pro", "Gumroad", "$12", "templates/tablero-de-dinero-pro/",
+     "templates/tablero-de-dinero-pro/LISTING.md", "After native review", "proposed",
+     "PR #8. NATIVE REVIEW PENDING, like the rest of Dinero Simple. Spanish twin of Money Dashboard Pro."),
+]
 _DS = [("El Kit para Recortar Gastos", 5, "recorte-de-gastos", "recorte-de-gastos"),
        ("El Presupuesto de 20 Minutos", 12, None, "presupuesto-20-minutos"),
        ("Tu Fecha Sin Deudas", 17, "fecha-sin-deudas", "fecha-sin-deudas"),

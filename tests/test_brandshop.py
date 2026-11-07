@@ -153,14 +153,14 @@ def test_spanish_gumroad_storefront():
     import build_storefront as S
     import gumroad_es as ES
     rows = S.gumroad_products()["Dinero Simple"]
-    assert S.es_problems(rows) == [] and len(ES.PRODUCTOS) == len(rows) == 9
+    assert S.es_problems(rows) == [] and len(ES.PRODUCTOS) == len(rows) == 10
     md = ES.markdown(S.BRANDS["Dinero Simple"]["sections"], S.CROSS_SELL)
     low = md.lower()
     assert low.startswith("# dinero simple") and "native review pending" in low
     assert not [w for w in BANNED_ALL if w in low] and "http" not in low
-    assert md.count("**Mensaje de agradecimiento") == md.count("**Descripción:**") == 9
+    assert md.count("**Mensaje de agradecimiento") == md.count("**Descripción:**") == 10
     assert md.count("no es asesoría financiera") >= 10 and md.count("herramientas de IA") >= 10
-    assert len({p["enlace"] for p in ES.PRODUCTOS}) == 9
+    assert len({p["enlace"] for p in ES.PRODUCTOS}) == 10
     for p in ES.PRODUCTOS:
         assert len(p["resumen"]) <= 230 and 5 <= len(p["etiquetas"]) <= 10
     # bundle maths in the copy add up

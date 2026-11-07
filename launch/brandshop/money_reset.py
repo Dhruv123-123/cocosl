@@ -254,7 +254,7 @@ def _gumroad() -> str:
 
 LISTINGS = [
     dict(slug="money-reset-30-day", name="The Money Reset: 30-Day Challenge Workbook", price=9.00, kind="print",
-         title="30 Day Money Challenge Workbook Printable, Money Reset Budget Planner, Finance Reset",
+         title="30 Day Money Challenge Workbook Printable, Reset Budget Planner and Finance Tracker",
          tags=["money challenge", "30 day challenge", "money reset", "budget workbook", "finance planner",
                "budget printable", "financial reset", "money planner", "budget challenge", "save money",
                "debt payoff", "new year budget", "money workbook"],
@@ -263,5 +263,5 @@ LISTINGS = [
          category="Paper & Party Supplies > Paper > Calendars & Planners", status="active")
 ]
 for _it in LISTINGS:
-    _it["description"] = etsy_description(HOOK, GET, HOW, GOOD, DISCLOSURE)
+    _it["description"] = etsy_description(__import__("shop").opener(_it, what="a 21-page printable PDF workbook in US Letter and A4") + " " + HOOK, GET, HOW, GOOD, DISCLOSURE)
     _it["gumroad"] = _gumroad()

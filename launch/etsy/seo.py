@@ -246,8 +246,49 @@ def attributes(slug: str, kind: str) -> dict:
     return out
 
 
+# Nov 7 2026 pass from scouting's etsy-seo-playbook.md (PR #2): each title word used once (Etsy: "try not to repeat
+# words"), multi-word tags only, and no tag that repeats an attribute (Software already says Google Sheets).
+TITLE_FIX = {
+    'monthly-budget-planner': 'Monthly Budget Planner Printable, Undated Binder Pages with Bill and Savings Tracker',
+    'paycheck-budget-planner': 'Paycheck Budget Planner Printable, Biweekly Pay Period Sheets with Bill Tracker',
+    'savings-challenge-tracker': 'Savings Challenge Printable, $1000 Color In Money Tracker, Four Goal Charts',
+    '52-week-savings-challenge': '52 Week Savings Challenge Printable, $1378 Money Tracker and Reverse Chart',
+    'bill-payment-tracker': 'Bill Tracker Printable, Monthly Payment Checklist and Yearly Due Date Organizer',
+    'debt-payoff-coloring-tracker': 'Debt Payoff Tracker Printable, Snowball Coloring Pages and Progress Chart',
+    'no-spend-challenge': 'No Spend Challenge Printable, 30 Day Tracker and Money Calendar',
+    'bill-cut-kit': 'Bill Cut Kit: Subscription Audit, Negotiation Scripts and Savings Spreadsheet',
+    '20-minute-budget': 'Budget Spreadsheet and Guide, Weekly 20 Minute Plan, Excel and Google Sheets Template',
+    'credit-report-audit-kit': 'Credit Report Audit Kit, Dispute Letter Templates, Freeze Guide and Spreadsheet',
+    'debt-free-date-planner': 'Debt Snowball Spreadsheet, Payoff Planner and Guide, Excel Google Sheets',
+    'investing-starter-kit': 'Investing for Beginners Guide, Start With $100 a Month, Calculator Spreadsheet',
+    'budget-binder-bundle': 'Budget Binder Printable Bundle, 10 Planner Inserts for Bills, Savings and Debt',
+    '100-envelope-challenge': '100 Envelope Challenge Printable, $5050 Savings Tracker and Smaller 50 Chart',
+    'paycheck-savings-challenge': 'Biweekly Savings Challenge Printable, 26 Paycheck Money Tracker',
+    'spare-change-jar-tracker': 'Savings Jar Tracker Printable, Spare Change Coloring Chart and Money Goal',
+    'savings-bingo': 'Savings Bingo Printable, $1000 and $2000 Money Challenge Cards',
+    'weekly-budget-planner': 'Weekly Budget Planner Printable, Undated Spending Tracker',
+    '50-30-20-budget-worksheet': '50 30 20 Budget Worksheet Printable, Needs Wants Savings Template',
+    'cash-envelope-trackers': 'Cash Stuffing Envelope Tracker Printable, Budget Sheets for Your Binder',
+    'daily-spending-log': 'Daily Spending Tracker Printable, Need vs Want Money Journal',
+    'irregular-income-budget': 'Irregular Income Budget Printable, Freelancer and Self Employed Planner',
+    'utility-bill-tracker': 'Utility Bill Tracker Printable, Yearly Electric Gas and Water Log',
+    'car-expense-tracker': 'Car Expense Tracker Printable, Fuel Log, Mileage and Maintenance Record',
+    'financial-goals-planner': 'Financial Goals Planner Printable, Money Worksheet and Vision Page',
+    'debt-snowball-worksheet': 'Debt Snowball Worksheet Printable, Avalanche Payoff Plan',
+    'debt-mountain-coloring-chart': 'Debt Coloring Chart Printable, Mountain Payoff Tracker',
+    'loan-payoff-tracker': 'Loan Payoff Tracker Printable, Car and Student Debt Payment Chart',
+    'checking-account-register': 'Checking Account Register Printable, Checkbook Balance and Transaction Log',
+    'gift-budget-planner': 'Gift Budget Planner Printable, Christmas and Birthday Present Tracker',
+    'side-hustle-income-tracker': 'Side Hustle Income Tracker Printable, Small Business Expense Log',
+    '2027-budget-planner': '2027 Budget Planner Printable, Dated Monthly Calendar and Finance Organizer',
+    'mega-budget-bundle': 'Mega Budget Planner Bundle, 40 Printable Finance Pages: Savings and Debt Trackers',
+}
+TAG_FIX = {'subscription-tracker': {'subscriptions': 'cancel checklist'}, 'bill-cut-kit': {'google sheets': 'phone bill savings'}, 'credit-report-audit-kit': {'google sheets': 'credit audit'}, 'debt-free-date-planner': {'google sheets': 'payoff date planner'}, 'investing-starter-kit': {'google sheets': 'investing calculator', '401k': '401k match'}, 'money-toolkit-bundle': {'google sheets': 'money spreadsheets'}, 'side-hustle-income-tracker': {'bookkeeping': 'bookkeeping log'}}
+
+
 def apply(listings: list[dict]) -> None:
     for it in listings:
         title, tags, _ = S[it["slug"]]
-        it["title"], it["tags"] = title, list(tags)
+        fix = TAG_FIX.get(it["slug"], {})
+        it["title"], it["tags"] = TITLE_FIX.get(it["slug"], title), [fix.get(t, t) for t in tags]
         it["attributes"] = attributes(it["slug"], it["kind"])
