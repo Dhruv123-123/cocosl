@@ -76,6 +76,8 @@ factory report --html                         # weekly one-page HTML per brand f
 factory triage [--save]                       # everything waiting on you across brands, most urgent first
 factory challenge new --brand <slug> --days 30 [--kind ladder|fixed|envelope|no-spend] --import   # daily tracker posts + printable tracker
 factory whitelabel <brand> --client client.json [--posts 1,2]   # rebrand a batch for a B2B client (name, colours, links)
+factory audit-originality [--packs]           # per-channel YouTube inauthentic-content risk score (exit 2 on high)
+factory newsletter --brand <slug> --for kit|sender [--upcoming]   # a week of posts as a draft email (never sent)
 factory brand new <slug> --name ... --import  # scaffold a brand: YAML, caps, voice/footage folders, 3 sample posts
 factory brand remove <slug> --yes            # undo a scaffold (refuses if anything is scheduled or published)
 factory launch-check [--online]             # red/yellow/green: links, UTM tags, placeholders, disclosures, caption limits
