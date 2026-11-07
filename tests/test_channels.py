@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 
+import pytest
+
 from contentfactory import channels
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -56,3 +58,14 @@ def test_split_keeps_sentences_under_limit():
     text = "One short sentence. " * 30
     parts = channels._split(text.strip(), 100)
     assert all(len(p) <= 100 for p in parts) and " ".join(parts) == text.strip()
+
+
+@pytest.mark.parametrize("brand", ["scam-decoded", "1099-money"])
+def test_other_brand_configs(factory, tmp_path, brand):
+    """Runs once those brands' packs and brand files are on the branch (they live in their own PRs)."""
+    cfg_path = ROOT / "launch" / brand / "channels" / "config.json"
+    cfg = channels.load_config(cfg_path)
+    if not all(p.exists() for p, _ in cfg["_sources"]) or brand not in factory.brands():
+        pytest.skip(f"{brand} packs not merged yet")
+    res = channels.export(factory, brand, cfg_path, tmp_path, render=False)
+    assert res["pins"] == 60 and res["issues"] == 12 and res["block"] == 0 and res["warn"] == 0

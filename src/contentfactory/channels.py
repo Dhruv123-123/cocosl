@@ -41,6 +41,7 @@ YEAR = re.compile(r"\b20[2-3]\d\b")
 URL = re.compile(r"https?://\S+")
 TEXT_AI_NOTE = "Drafted with AI tools and fact-checked by a human. Not financial advice."
 PIN_AI_NOTE = "Image made with AI tools. Not financial advice."
+SOCIAL_CTA = re.compile(r"\b(?:in (?:our|the|my) bio|link in bio|follow (?:for|us)|save this|comment\b)", re.I)
 
 
 def slugify(text: str) -> str:
@@ -81,15 +82,17 @@ class Links:
     products: dict  # slug -> {name, url}
     utm: str = "utm_source={src}&utm_medium=social&utm_campaign={camp}"
     min_score: int = 3
+    free_path: str = "/free/"
+    free_label: str = "The free download"
 
     def url(self, target: str, src: str, camp: str, medium: str = "social") -> str:
         kind, _, slug = target.partition(":")
         if kind == "article":
-            base = f"{self.site}/blog/{slug}/"
+            base = self.site + self.articles[slug].get("path", f"/blog/{slug}/")
         elif kind == "product":
             base = self.products[slug]["url"]
         elif kind == "free":
-            base = f"{self.site}/free/"
+            base = self.site + self.free_path
         else:
             base = target
         if not base.startswith(self.site):  # leave store links clean; Gumroad keeps its own stats
@@ -102,7 +105,14 @@ class Links:
             return self.articles[slug]["title"]
         if kind == "product":
             return self.products[slug]["name"]
-        return "The 7-Day Money Reset (free)"
+        return self.free_label
+
+    def lead_in(self, target: str) -> str:
+        """How a post introduces its link: a guide, a free download or a product."""
+        kind, _, slug = target.partition(":")
+        if kind == "article" and self.articles.get(slug, {}).get("lead_in"):
+            return self.articles[slug]["lead_in"]
+        return {"article": "Read the full guide", "product": "More"}.get(kind, "Free download")
 
     def match(self, item: dict) -> tuple[str, int]:
         """Closest article by keyword hits (title counts triple). Falls back to the lead magnet."""
@@ -146,32 +156,42 @@ def _fit(text: str, limit: int) -> str:
     return cut + "…"
 
 
-def pin_from_carousel(item: dict, links: Links, boards: dict, target: str) -> Pin:
+def pin_from_item(item: dict, links: Links, boards: dict, target: str, brand_name: str) -> Pin:
     sc = item["script"]
     segs = sc["segments"]
     points = [re.sub(r"^(?:#?\d+[.):]?|\d+[–-]\d+)\s+", "", s["on_screen_text"]) for s in segs[1:-1]
               if s.get("on_screen_text")][:6]
     dest = links.label(target)
-    lead = segs[0]["narration"]
+    lead = segs[0]["narration"] or sc.get("hook", "")
     body = f"{lead} Inside: " + "; ".join(p.rstrip(".") for p in points) + "."
-    tail = f" Read the full guide: {dest}. {PIN_AI_NOTE}"
+    tail = f" {links.lead_in(target)}: {dest}. {PIN_AI_NOTE}"
     description = _fit(body, 500 - len(tail)) + tail
-    keywords = [h.replace("#", "") for h in sc["hashtags"] if h != "moneymadesimple"][:6]
-    return Pin(0, _fit(sc["title"], 100), description, "", target, boards.get(item["pillar"], "Money Made Simple"),
-               _fit(f"Illustrated pin titled '{sc['title']}', a {len(points)}-point money checklist from Money Made Simple.", 500),
+    own = re.sub(r"[^a-z0-9]", "", brand_name.lower())
+    keywords = [h.replace("#", "") for h in sc["hashtags"] if h.replace("#", "").lower() != own][:6]
+    return Pin(0, _fit(sc["title"], 100), description, "", target, boards.get(item["pillar"], brand_name),
+               _fit(f"Illustrated pin titled '{sc['title']}', a {len(points)}-point checklist from {brand_name}.", 500),
                sc["title"], item["pillar"].split(" (")[0], segs[0]["visual_prompt"], keywords,
                source=f"{item['_source']}: {sc['title']}")
 
 
-def pick_carousels(items: list[dict], links: Links, count: int, per_target: int = 5) -> list[tuple[dict, str]]:
-    """Strongest article matches first, at most `per_target` pins per destination, pillars interleaved."""
+def _pin_visible(item: dict) -> str:
+    """The text a pin shows (title, lead line, on-screen points); a year here dates the pin."""
+    sc = item["script"]
+    return " ".join([sc["title"], sc["segments"][0]["narration"]] + [s.get("on_screen_text", "") for s in sc["segments"]])
+
+
+def pick_items(items: list[dict], links: Links, count: int, per_target: int = 5,
+               formats: tuple[str, ...] = ("carousel",), free_cap: int | None = None) -> list[tuple[dict, str]]:
+    """Strongest article matches first (carousels before shorts), at most `per_target` pins per article and
+    `free_cap` for the lead magnet, pillars interleaved."""
     pool = []
     for it in items:
-        if it["format"] != "carousel" or YEAR.search(json.dumps(it["script"])):
+        if (it["format"] not in formats or it.get("platforms") == ["tiktok"]  # TikTok cuts repeat a Short
+                or YEAR.search(_pin_visible(it))):
             continue
         target, score = links.match(it)
         pool.append((score, it, target))
-    pool.sort(key=lambda x: -x[0])
+    pool.sort(key=lambda x: (-x[0], formats.index(x[1]["format"])))
     taken, used = [], {}
     firsts = []  # every article gets its best two before anyone gets a third
     for row in pool:
@@ -179,7 +199,7 @@ def pick_carousels(items: list[dict], links: Links, count: int, per_target: int 
             firsts.append(row)
     pool = firsts + [r for r in pool if r not in firsts]
     for score, it, target in pool:
-        cap = per_target if target != "free" else per_target * 2
+        cap = per_target if target != "free" else (free_cap if free_cap is not None else per_target * 2)
         if used.get(target, 0) < cap:
             taken.append((it, target))
             used[target] = used.get(target, 0) + 1
@@ -235,13 +255,14 @@ def render_pin(factory, brand, pin: Pin, dest: Path) -> Path:
 def build_pins(brand, items, links: Links, cfg: dict) -> list[Pin]:
     boards = cfg.get("boards", {})
     hand = cfg.get("product_pins", [])
-    picks = pick_carousels(items, links, cfg.get("count", 60) - len(hand), cfg.get("per_article", 5))
-    pins = [pin_from_carousel(it, links, boards, t) for it, t in picks]
+    picks = pick_items(items, links, cfg.get("count", 60) - len(hand), cfg.get("per_article", 5),
+                       tuple(cfg.get("formats", ["carousel"])), cfg.get("free_cap"))
+    pins = [pin_from_item(it, links, boards, t, brand.name) for it, t in picks]
     every = max(1, len(pins) // max(1, len(hand)) + 1)
     for i, hp in enumerate(hand):  # spread product pins through the schedule
         tail = f" {PIN_AI_NOTE}"
         p = Pin(0, _fit(hp["title"], 100), _fit(hp["description"], 500 - len(tail)) + tail, "", hp["target"],
-                boards.get("products", "Free Money Printables"), hp.get("alt_text", hp["title"]),
+                boards.get("products", f"{brand.name} Printables"), hp.get("alt_text", hp["title"]),
                 hp.get("image_text", hp["title"]), hp.get("kicker", "Free + printable"), hp["prompt"],
                 hp.get("keywords", []), source="hand-written")
         pins.insert(min(len(pins), (i + 1) * every - 1), p)
@@ -295,11 +316,11 @@ def _split(text: str, limit: int, measure=len) -> list[str]:
     return parts + [cur] if cur else parts
 
 
-def thread_posts(item: dict, link: str, label: str, platform: str) -> list[str]:
+def thread_posts(item: dict, link: str, label: str, platform: str, lead_in: str = "The full guide") -> list[str]:
     segs = item["script"]["segments"]
     limit, measure = (X_LIMIT - 8, x_len) if platform == "x" else (THREADS_LIMIT, len)
     body = [s["narration"] for s in segs]
-    end = f"The full guide: {label}\n{link}\n\n{TEXT_AI_NOTE}"
+    end = f"{lead_in}: {label}\n{link}\n\n{TEXT_AI_NOTE}"
     if platform == "threads":  # fewer, fuller posts
         merged, cur = [], ""
         for b in body[1:]:
@@ -331,7 +352,7 @@ def build_threads(brand, items, links: Links) -> list[dict]:
         rec = {"title": it["script"]["title"], "source": it["_source"], "target": target}
         for plat in ("x", "threads"):
             link = links.url(target, plat, "thread-" + slugify(it["script"]["title"])[:40])
-            posts = thread_posts(it, link, label, plat)
+            posts = thread_posts(it, link, label, plat, links.lead_in(target))
             rec[plat] = posts
             rec[f"{plat}_checks"] = check_text(brand, "\n".join(posts))
         assert all(x_len(p) <= X_LIMIT for p in rec["x"]), rec["title"]
@@ -367,23 +388,28 @@ def _find(items: list[dict], title: str) -> dict:
 def build_issue(brand, items, links: Links, issue: dict, n: int, day: date, products: dict) -> dict:
     move = _find(items, issue["move"])
     fact = _find(items, issue["fact"])
-    read = f"article:{issue['read']}"
-    prod = products[issue["product"]]
+    read = issue.get("read")
+    if read and ":" not in read and read != "free":
+        read = f"article:{read}"
+    fsegs = [s for s in fact["script"]["segments"] if not re.search(r"\bfollow\b", s["narration"], re.I)][:4]
+    prod = products.get(issue.get("product") or "", {})
     camp = f"newsletter-{n:02d}"
     msegs = move["script"]["segments"]
     blocks = {
         "subject": issue["subject"], "preview": issue["preview"], "date": day.isoformat(), "n": n,
         "intro": issue["intro"],
         "move_title": move["script"]["title"],
-        "move_lead": msegs[0]["narration"],
-        "move_points": [s["narration"] for s in msegs[1:-1]],
-        "move_close": msegs[-1]["narration"],
+        "move_lead": msegs[0]["narration"] or move["script"].get("hook", ""),
+        "move_points": [s["narration"] for s in msegs[1:-1] if not SOCIAL_CTA.search(s["narration"])],
+        "move_close": "" if SOCIAL_CTA.search(msegs[-1]["narration"]) else msegs[-1]["narration"],
         "fact_title": fact["script"]["title"],
-        "fact": " ".join(s["narration"] for s in fact["script"]["segments"]),
-        "read_title": links.label(read), "read_url": links.url(read, "newsletter", camp, "email"),
-        "read_blurb": links.articles[issue["read"]].get("blurb", ""),
-        "product_name": prod["name"], "product_url": links.url(f"product:{issue['product']}", "newsletter", camp, "email"),
-        "product_blurb": prod["blurb"],
+        "fact": " ".join(s["narration"] for s in fsegs),
+        "move_label": issue.get("move_label", "This week's money move"),
+        "read_title": links.label(read) if read else "", "read_url": links.url(read, "newsletter", camp, "email") if read else "",
+        "read_blurb": issue.get("read_blurb") or (links.articles[read[8:]].get("blurb", "") if read and read.startswith("article:") else ""),
+        "product_name": prod.get("name", ""),
+        "product_url": links.url(f"product:{issue['product']}", "newsletter", camp, "email") if prod else "",
+        "product_blurb": prod.get("blurb", ""),
         "ps": issue.get("ps", ""),
         "sources": sorted(set(move["script"]["sources"] + fact["script"]["sources"])),
         "claims_to_verify": move["script"]["claims_to_verify"] + fact["script"]["claims_to_verify"],
@@ -401,11 +427,13 @@ FOOTER = ("You're getting this because you signed up for {site} emails. Unsubscr
 
 def issue_text(brand, b: dict) -> str:
     lines = [f"Subject: {b['subject']}", f"Preview: {b['preview']}", "", b["intro"], "",
-             f"THIS WEEK'S MONEY MOVE: {b['move_title']}", "", b["move_lead"], ""]
+             f"{b['move_label'].upper()}: {b['move_title']}", "", b["move_lead"], ""]
     lines += [f"• {p}" for p in b["move_points"]]
-    lines += ["", b["move_close"], "", f"QUICK FACT: {b['fact_title']}", "", b["fact"], "",
-              f"WORTH READING: {b['read_title']}", b["read_blurb"], b["read_url"], "",
-              f"FROM US: {b['product_name']}", b["product_blurb"], b["product_url"], ""]
+    lines += (["", b["move_close"]] if b["move_close"] else []) + ["", f"QUICK FACT: {b['fact_title']}", "", b["fact"], ""]
+    if b["read_url"]:
+        lines += [f"WORTH READING: {b['read_title']}", b["read_blurb"], b["read_url"], ""]
+    if b["product_url"]:
+        lines += [f"FROM US: {b['product_name']}", b["product_blurb"], b["product_url"], ""]
     if b["ps"]:
         lines += [f"P.S. {b['ps']}", ""]
     lines += ["See you next Sunday,", brand.name, "", "—", FOOTER.replace("{site}", brand.name)]
@@ -420,25 +448,30 @@ def issue_html(brand, b: dict) -> str:
     e = html.escape
     pts = "".join(f"<li style='margin:0 0 8px'>{e(p)}</li>" for p in b["move_points"])
     ps = f"<p><b>P.S.</b> {e(b['ps'])}</p>" if b["ps"] else ""
-    foot = e(FOOTER.replace("{site}", brand.name)).replace("\n", "<br>")
     btn = (f"display:inline-block;background:{dark};color:#fff;padding:10px 16px;border-radius:8px;"
            "text-decoration:none;font-weight:600")
+    read = (f"<h3 style='margin:24px 0 6px'>Worth reading</h3><p><b>{e(b['read_title'])}</b><br>{e(b['read_blurb'])}</p>"
+            f"<p><a href=\"{e(b['read_url'])}\" style=\"{btn}\">Read it</a></p>") if b["read_url"] else ""
+    paper = hexc(pal.light)
+    close = f"<p>{e(b['move_close'])}</p>" if b["move_close"] else ""
+    prod = (f"<h3 style='margin:24px 0 6px'>From us: {e(b['product_name'])}</h3><p>{e(b['product_blurb'])}</p>"
+            f"<p><a href=\"{e(b['product_url'])}\" style=\"color:{dark};font-weight:600\">Take a look →</a></p>"
+            ) if b["product_url"] else ""
+    foot = e(FOOTER.replace("{site}", brand.name)).replace("\n", "<br>")
     return f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(b['subject'])}</title></head>
-<body style="margin:0;background:#f4f1e8;font:16px/1.55 -apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1d2a22">
+<body style="margin:0;background:{paper};font:16px/1.55 -apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#1d2a22">
 <span style="display:none;max-height:0;overflow:hidden">{e(b['preview'])}</span>
 <div style="max-width:600px;margin:0 auto;padding:24px 16px">
-<div style="background:{dark};color:#f4f1e8;padding:18px 22px;border-radius:12px 12px 0 0;font-weight:700">{e(brand.name)} · Issue {b['n']}</div>
+<div style="background:{dark};color:{paper};padding:18px 22px;border-radius:12px 12px 0 0;font-weight:700">{e(brand.name)} · Issue {b['n']}</div>
 <div style="background:#fff;padding:22px;border-radius:0 0 12px 12px">
 <p>{e(b['intro'])}</p>
-<h2 style="font-size:20px;margin:24px 0 8px;color:{dark}">This week's money move: {e(b['move_title'])}</h2>
-<p>{e(b['move_lead'])}</p><ul style="padding-left:20px">{pts}</ul><p>{e(b['move_close'])}</p>
-<div style="background:#f4f1e8;border-left:4px solid {accent};padding:12px 16px;margin:20px 0;border-radius:6px">
+<h2 style="font-size:20px;margin:24px 0 8px;color:{dark}">{e(b['move_label'])}: {e(b['move_title'])}</h2>
+<p>{e(b['move_lead'])}</p><ul style="padding-left:20px">{pts}</ul>{close}
+<div style="background:{paper};border-left:4px solid {accent};padding:12px 16px;margin:20px 0;border-radius:6px">
 <b>Quick fact: {e(b['fact_title'])}</b><br>{e(b['fact'])}</div>
-<h3 style="margin:24px 0 6px">Worth reading</h3><p><b>{e(b['read_title'])}</b><br>{e(b['read_blurb'])}</p>
-<p><a href="{e(b['read_url'])}" style="{btn}">Read the guide</a></p>
-<h3 style="margin:24px 0 6px">From us: {e(b['product_name'])}</h3><p>{e(b['product_blurb'])}</p>
-<p><a href="{e(b['product_url'])}" style="color:{dark};font-weight:600">Take a look →</a></p>
+{read}
+{prod}
 {ps}<p>See you next Sunday,<br>{e(brand.name)}</p></div>
 <p style="font-size:12px;color:#5b665f;margin-top:16px">{foot}</p></div></body></html>"""
 
@@ -455,13 +488,13 @@ def write_newsletter(brand, issues: list[dict], out: Path) -> None:
     d.mkdir(parents=True, exist_ok=True)
     rows = ["# Newsletter run", "", "Send each issue on its Sunday. Paste the .html into your email tool (or the .txt "
             "for plain-text), fill {{unsubscribe_url}} and {{business_address}} (your tool usually does both), and tick "
-            "the fact checks first.", "", "| # | Send | Subject | Money move | Product |", "|---|---|---|---|---|"]
+            "the fact checks first.", "", "| # | Send | Subject | Main piece | Product |", "|---|---|---|---|---|"]
     for b in issues:
         stem = f"{b['n']:02d}-{b['date']}-{slugify(b['subject'])[:40]}"
         checks = "\n".join(f"[ ] {c}" for c in b["claims_to_verify"]) + "\n\nSources:\n" + "\n".join(b["sources"])
         (d / f"{stem}.txt").write_text(b["text"] + "\n\n--- CHECK BEFORE SENDING (delete this part) ---\n" + checks + "\n")
         (d / f"{stem}.html").write_text(issue_html(brand, b))
-        rows.append(f"| {b['n']} | {b['date']} | {b['subject']} | {b['move_title']} | {b['product_name']} |")
+        rows.append(f"| {b['n']} | {b['date']} | {b['subject']} | {b['move_title']} | {b['product_name'] or '—'} |")
     (d / "ISSUES.md").write_text("\n".join(rows) + "\n")
     (d / "issues.json").write_text(json.dumps(issues, indent=1, ensure_ascii=False))
 
@@ -476,13 +509,14 @@ def load_config(path: Path) -> dict:
 
 
 def make_links(brand, cfg: dict) -> Links:
-    products = {p["slug"]: {"name": p["name"], "url": p["url"]} for p in brand.products}
+    products = {p.get("slug") or slugify(p["name"]): {"name": p["name"], "url": p["url"]} for p in brand.products}
     for slug, over in cfg.get("product_urls", {}).items():  # e.g. a product that has its own site page
         products.setdefault(slug, {"name": slug, "url": ""})["url"] = over.replace("{site}", cfg["site_url"])
     for slug, p in cfg.get("newsletter", {}).get("products", {}).items():
         products.setdefault(slug, {"name": p.get("name", slug), "url": ""})
         p.setdefault("name", products[slug]["name"])
-    return Links(cfg["site_url"].rstrip("/"), cfg["articles"], products)
+    return Links(cfg["site_url"].rstrip("/"), cfg.get("articles", {}), products,
+                 free_path=cfg.get("free_path", "/free/"), free_label=cfg.get("free_label", "The free download"))
 
 
 def export(factory, brand_slug: str, config: Path, out: Path, render: bool = True) -> dict:

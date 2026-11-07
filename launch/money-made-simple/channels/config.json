@@ -1,5 +1,6 @@
 {
  "site_url": "https://moneymadesimple.netlify.app",
+ "free_label": "The 7-Day Money Reset (free)",
  "sources": [["../evergreen/content.json", "evergreen"], ["../content.json", "launch-weeks-1-2"],
              ["../content-weeks-3-4.json", "launch-weeks-3-4"], ["../month-1/content.json", "month-1"],
              ["../month-2/content.json", "month-2"], ["../month-3/content.json", "month-3"]],
