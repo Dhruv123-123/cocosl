@@ -1,16 +1,19 @@
-"""Build Etsy-ready versions of the four 1099 Money products.
+"""Build the Etsy listing for 1099 Money's one Etsy product, the Quarterly Tax Tracker spreadsheet.
 
-    python launch/1099-money/etsy/build_etsy.py [out_dir]
+    python launch/1099-money/etsy/build_etsy.py [out_dir] [--edition 2027]
     (default out_dir: /mnt/project-files/content-factory/etsy/1099-money)
 
-For each product it writes:
-  files/    the digital files to upload (Etsy: max 5 files per listing, 20 MB each)
-  images/   listing images, 2400x1800 (4:3), made from the real guide pages and spreadsheet
+Etsy's 22 Oct 2026 rule bans AI-generated functional guides (instructions buyers rely on must be the seller's own
+work). Our guides say honestly that AI helped draft them, so on Etsy we sell only the spreadsheet tracker, without
+its PDF guide. The Rate & Contract Kit, the Freelancer Money Bundle and the Freelancer Tax Kit are Gumroad and
+site only (`../products/build_gumroad.py`). The check in PR #6's launch/catalog/etsy_rules.py enforces the same rule.
+
+It writes quarterly-tax-tracker/:
+  files/    the digital file to upload (the .xlsx)
+  images/   8 listing photos at 2700x2025, made from the real spreadsheet tabs
   LISTING-ETSY.md is copied from this folder.
 
-Etsy editions differ from the Gumroad ones only where Etsy's rules need it: no off-Etsy purchase
-paths (upgrade codes by email become "see our Etsy shop"), and downloads come from Etsy's Purchases page.
-Needs LibreOffice (spreadsheet screenshots), poppler (pdftoppm) and Playwright/Chromium.
+Needs LibreOffice (spreadsheet pages), poppler (pdftoppm) and Playwright/Chromium.
 """
 from __future__ import annotations
 
@@ -18,30 +21,15 @@ import shutil
 import subprocess
 import sys
 import tempfile
-import zipfile
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 BRAND = HERE.parent
 ROOT = BRAND.parents[1]
 sys.path.insert(0, str(ROOT / "src"))
-from contentfactory.business.pdf import html_to_pdf  # noqa: E402
 
 EDITION = 2026  # `--edition 2027` packs the 2027 tax-year tracker (product/edition-2027/)
 TRACKER = BRAND / "product"
-KIT = BRAND / "products" / "rate-contract-kit"
-BUNDLE = BRAND / "products" / "bundle"
-CALENDAR = ROOT / "apps" / "freelance-tax" / "downloads" / "freelancer-tax-calendar-2027.pdf"
-CHECKLIST = CALENDAR.with_name("freelancer-tax-checklist.pdf")
-JAR = CALENDAR.with_name("tax-jar-tracker.pdf")
-TAXKIT = BRAND / "products" / "tax-kit"
-
-# Gumroad wording -> Etsy wording (keeps buyers on Etsy, per Etsy's fee-avoidance rules).
-ETSY_SWAPS = [
-    ("Already bought one? Email [your-email] for your upgrade code.",
-     "It is in our Etsy shop. Already bought one there? Message us on Etsy for a coupon."),
-    ("re-download from your purchase email.", "re-download any time from your Etsy Purchases page."),
-]
 
 W, H = 2400, 1800
 CSS = """
@@ -70,8 +58,9 @@ def page_pngs(pdf: Path, out: Path, prefix: str, dpi: int = 110) -> list[Path]:
     return sorted(out.glob(f"{prefix}-*.png"))
 
 
-def sheet_png(xlsx: Path, sheet_keyword: str, out: Path, prefix: str) -> Path | None:
-    """Print the workbook with LibreOffice and return the page that contains `sheet_keyword`."""
+def sheet_pages(xlsx: Path, titles: list[str], out: Path, prefix: str) -> list[Path]:
+    """Print the workbook with LibreOffice (each tab one page wide, landscape) and return, for each title, the first
+    page whose first line starts with it. Titles that aren't found are skipped."""
     from openpyxl import load_workbook
     wb = load_workbook(xlsx)  # temp copy printed one page wide, landscape, so columns aren't split
     for ws in wb.worksheets:
@@ -79,21 +68,33 @@ def sheet_png(xlsx: Path, sheet_keyword: str, out: Path, prefix: str) -> Path | 
         ws.page_setup.fitToWidth, ws.page_setup.fitToHeight = 1, 0
         ws.sheet_properties.pageSetUpPr.fitToPage = True
         ws.print_area = f"A1:{ws.cell(row=min(ws.max_row, 30), column=ws.max_column).coordinate}"
-    copy = out / xlsx.name
+    work = out / prefix
+    work.mkdir(parents=True, exist_ok=True)
+    copy = work / xlsx.name
     wb.save(copy)
-    xlsx = copy
     try:
-        subprocess.run(["soffice", "--headless", "--calc", "--convert-to", "pdf", "--outdir", str(out), str(xlsx)],
+        subprocess.run(["soffice", "--headless", "--calc", "--convert-to", "pdf", "--outdir", str(work), str(copy)],
                        check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=180)
     except (OSError, subprocess.SubprocessError):
-        return None
-    pdf = out / (xlsx.stem + ".pdf")
-    pages = page_pngs(pdf, out, prefix, dpi=170)
-    for i, png in enumerate(pages, 1):
+        return []
+    pdf = work / (copy.stem + ".pdf")
+    pages = page_pngs(pdf, work, prefix, dpi=170)
+    firsts = []
+    for i in range(1, len(pages) + 1):
         txt = subprocess.run(["pdftotext", "-f", str(i), "-l", str(i), str(pdf), "-"], capture_output=True, text=True).stdout
-        if sheet_keyword.lower() in txt.lower() and "how to use it" not in txt.lower() and "how it works" not in txt.lower():
-            return png
-    return None
+        firsts.append(txt.strip().split("\n")[0].strip().lower() if txt.strip() else "")
+    found = []
+    for t in titles:
+        k = next((i for i, f in enumerate(firsts) if f.startswith(t.lower())), None)
+        if k is not None:
+            found.append(pages[k])
+    return found
+
+
+def sheet_png(xlsx: Path, sheet_keyword: str, out: Path, prefix: str) -> Path | None:
+    """The page of the printed workbook for one tab (see sheet_pages)."""
+    got = sheet_pages(xlsx, [sheet_keyword], out, prefix)
+    return got[0] if got else None
 
 
 SHOT_JS = """
@@ -183,160 +184,43 @@ def images(name: str, kicker: str, title_html: str, chips: list[str], inside: li
     return [Path(o) for _, o in _QUEUE if Path(o).parent == out]
 
 
-def etsy_guide(folder: Path, html_name: str, pdf_name: str, out_pdf: Path, tmp: Path) -> Path:
-    html = (folder / html_name).read_text()
-    for a, b in ETSY_SWAPS:
-        html = html.replace(a, b)
-    f = tmp / html_name
-    f.write_text(html)
-    if not html_to_pdf(f, out_pdf):
-        shutil.copy(folder / pdf_name, out_pdf)
-    return out_pdf
-
-
-def zip_dir(src: Path, dest: Path, arc_root: str) -> Path:
-    with zipfile.ZipFile(dest, "w", zipfile.ZIP_DEFLATED) as z:
-        for p in sorted(src.rglob("*")):
-            if p.is_file():
-                z.write(p, f"{arc_root}/{p.relative_to(src)}")
-    return dest
-
-
 def build(out_root: Path) -> dict[str, list[Path]]:
     made: dict[str, list[Path]] = {}
     with tempfile.TemporaryDirectory() as t:
         tmp = Path(t)
-        # ---------------- tracker ($15)
+        # ---------------- tracker ($15). The only 1099 Money product on Etsy, and spreadsheet only: Etsy's 22 Oct 2026
+        # rule bans AI-generated functional guides, so the PDF guide, the Rate & Contract Kit, the bundle and the Tax
+        # Kit are sold on Gumroad (and the site) only. See README.md.
         d = out_root / "quarterly-tax-tracker"
         files = d / "files"
-        files.mkdir(parents=True, exist_ok=True)
+        if files.exists():
+            shutil.rmtree(files)
+        files.mkdir(parents=True)
         shutil.copy(TRACKER / "Quarterly-Tax-Tracker.xlsx", files / "Quarterly-Tax-Tracker.xlsx")
-        shutil.copy(TRACKER / "The-Quarterly-Tax-Tracker.pdf", files / "The-Quarterly-Tax-Tracker-Guide.pdf")
-        pages = page_pngs(TRACKER / "The-Quarterly-Tax-Tracker.pdf", tmp, "tr")
-        sheet = sheet_png(TRACKER / "Quarterly-Tax-Tracker.xlsx", "Suggested payment", tmp, "trx")
+        tabs = sheet_pages(TRACKER / "Quarterly-Tax-Tracker.xlsx",
+                           ["The Quarterly Tax Tracker", "Quarterly estimate", "Income log", "Setup", "Mileage log",
+                            "Deadlines"], tmp, "trx")
+        if len(tabs) < 6:
+            raise SystemExit("tracker: could not print the spreadsheet tabs (needs LibreOffice)")
+        cover, quarterly, income, setup, mileage, deadlines = tabs
         imgs = images("The Quarterly Tax Tracker",
-                      "Spreadsheet + 10-page guide", "Quarterly<br><em>Tax</em><br>Tracker",
+                      "Spreadsheet", "Quarterly<br><em>Tax</em><br>Tracker",
                       ["Excel", "Google Sheets", "Numbers", f"{EDITION} tax year"],
                       ["What to pay the IRS before each deadline, from your own logs",
                        "Safe harbor vs this year's tax, side by side",
                        "Income, expense (with categories) and mileage logs",
                        "Set-aside check: is your tax savings enough?",
-                       f"Every {EDITION} deadline + all federal tax tables",
-                       "10-page guide with a $60,000 worked example"],
+                       f"Every {EDITION} deadline + all federal tax tables"],
                       ["Setup tab: filing status and last year's tax (about 5 minutes)",
                        "Log income, expenses and miles as you go",
                        "Before each deadline, pay the Suggested payment row",
                        "Type what you paid; the year updates itself"],
-                      pages[0], pages, sheet, "Excel, Google Sheets, Apple Numbers (.xlsx) · PDF guide", d / "images", tmp,
-                      ["Quarterly-Tax-Tracker.xlsx: the spreadsheet (7 tabs)", "The-Quarterly-Tax-Tracker-Guide.pdf: 10 pages, Letter size",
-                       f"Tax tables for the {EDITION} tax year"])
+                      cover, [cover, income, mileage, setup, deadlines], quarterly,
+                      "Excel, Google Sheets, Apple Numbers (.xlsx)", d / "images", tmp,
+                      ["Quarterly-Tax-Tracker.xlsx: the spreadsheet (9 tabs)",
+                       f"Tax tables and deadlines for the {EDITION} tax year"])
         shutil.copy(HERE / "quarterly-tax-tracker.md", d / "LISTING-ETSY.md")
         made["tracker"] = sorted(files.iterdir()) + imgs
-
-        # ---------------- kit ($29)
-        d = out_root / "rate-and-contract-kit"
-        files = d / "files"
-        files.mkdir(parents=True, exist_ok=True)
-        shutil.copy(KIT / "Rate-and-Invoice-Kit.xlsx", files / "Rate-and-Invoice-Kit.xlsx")
-        etsy_guide(KIT, "the-rate-and-contract-kit.html", "The-Rate-and-Contract-Kit.pdf",
-                   files / "The-Rate-and-Contract-Kit-Guide.pdf", tmp)
-        zip_dir(KIT / "templates", files / "Contract-and-Proposal-Templates.zip", "Templates")
-        pages = page_pngs(files / "The-Rate-and-Contract-Kit-Guide.pdf", tmp, "kt")
-        sheet = sheet_png(KIT / "Rate-and-Invoice-Kit.xlsx", "Your hourly floor", tmp, "ktx")
-        imgs = images("The Rate & Contract Kit",
-                      "Rate calculator + 4 templates", "Charge<br><em>enough.</em><br>Get paid.",
-                      ["Excel", "Google Sheets", "Word", "Google Docs"],
-                      ["Rate calculator with 2026 federal tax built in: your hourly floor",
-                       "Project pricer with revision buffer and deposit",
-                       "Proposal template that ends in one clear next step",
-                       "13-clause freelance services agreement (plain English)",
-                       "Change order for out-of-scope requests",
-                       "Invoice template + invoice log that flags overdue clients"],
-                      ["Rate Calculator: take-home, costs and real billable hours in",
-                       "Price the project, send the proposal",
-                       "Sign the agreement, invoice the deposit",
-                       "Invoice on delivery; the log tracks who owes you"],
-                      pages[0], pages, sheet, "Excel, Google Sheets, Numbers (.xlsx) · Word, Google Docs (.docx) · PDF guide",
-                      d / "images", tmp,
-                      ["Rate-and-Invoice-Kit.xlsx: rate calculator, project pricer, invoice log",
-                       "Contract-and-Proposal-Templates.zip: 4 Word templates", "The-Rate-and-Contract-Kit-Guide.pdf: 7 pages"])
-        shutil.copy(HERE / "rate-and-contract-kit.md", d / "LISTING-ETSY.md")
-        made["kit"] = sorted(files.iterdir()) + imgs
-
-        # ---------------- bundle ($49)
-        d = out_root / "freelancer-money-bundle"
-        files = d / "files"
-        files.mkdir(parents=True, exist_ok=True)
-        stage = tmp / "bundle"
-        (stage / "2-Quarterly-Tax-Tracker").mkdir(parents=True)
-        (stage / "3-Rate-and-Contract-Kit").mkdir()
-        (stage / "4-Client-Email-Scripts").mkdir()
-        (stage / "5-Tax-Calendar").mkdir()
-        shutil.copy(out_root / "quarterly-tax-tracker" / "files" / "Quarterly-Tax-Tracker.xlsx", stage / "2-Quarterly-Tax-Tracker")
-        shutil.copy(out_root / "quarterly-tax-tracker" / "files" / "The-Quarterly-Tax-Tracker-Guide.pdf", stage / "2-Quarterly-Tax-Tracker")
-        for f in (out_root / "rate-and-contract-kit" / "files").iterdir():
-            shutil.copy(f, stage / "3-Rate-and-Contract-Kit")
-        shutil.copy(BUNDLE / "Client-Email-Scripts.docx", stage / "4-Client-Email-Scripts")
-        if CALENDAR.exists():
-            shutil.copy(CALENDAR, stage / "5-Tax-Calendar")
-        start = etsy_guide(BUNDLE, "the-freelancer-money-bundle.html", "Start-Here-Freelancer-Money-Bundle.pdf",
-                           files / "1-Start-Here.pdf", tmp)
-        zip_dir(stage, files / "Freelancer-Money-Bundle.zip", "Freelancer-Money-Bundle")
-        pages = page_pngs(start, tmp, "bd")
-        imgs = images("The Freelancer Money Bundle",
-                      "Both kits + bonus", "Freelancer<br><em>Money</em><br>Bundle",
-                      ["Tax tracker", "Rate & contract kit", "14 client emails", "2027 calendar"],
-                      ["The Quarterly Tax Tracker (spreadsheet + 10-page guide)",
-                       "The Rate & Contract Kit (spreadsheet + 4 templates + guide)",
-                       "Bonus, bundle only: 14 client email scripts, inquiry to final notice",
-                       "The 2027 Freelancer Tax Calendar (printable)",
-                       "3-page start guide: set it all up in one afternoon"],
-                      ["Open 1-Start-Here.pdf",
-                       "Rate Calculator, then the tracker's Setup tab",
-                       "Put your terms into the proposal and agreement once",
-                       "Save the invoice and reminder emails as templates"],
-                      pages[0], pages, sheet, "Excel, Google Sheets, Numbers · Word, Google Docs · PDF", d / "images", tmp,
-                      ["1-Start-Here.pdf: 3-page setup guide", "Freelancer-Money-Bundle.zip: tracker, kit, email scripts, calendar",
-                       "Spreadsheets (.xlsx), templates (.docx), guides (PDF)"])
-        shutil.copy(HERE / "freelancer-money-bundle.md", d / "LISTING-ETSY.md")
-        made["bundle"] = sorted(files.iterdir()) + imgs
-
-        # ---------------- tax kit ([PRICE]): the tracker + the three free tax printables
-        d = out_root / "freelancer-tax-kit"
-        files = d / "files"
-        files.mkdir(parents=True, exist_ok=True)
-        stage = tmp / "taxkit"
-        for sub, src in (("2-Quarterly-Tax-Tracker", None), ("3-Tax-Calendar-2027", CALENDAR),
-                         ("4-Tax-Checklist", CHECKLIST), ("5-Tax-Jar-Tracker", JAR)):
-            (stage / sub).mkdir(parents=True)
-            if src is not None:
-                shutil.copy(src, stage / sub)
-        for f in (out_root / "quarterly-tax-tracker" / "files").iterdir():
-            shutil.copy(f, stage / "2-Quarterly-Tax-Tracker")
-        start = files / "1-Start-Here.pdf"
-        if not html_to_pdf(TAXKIT / "the-freelancer-tax-kit.html", start):
-            raise SystemExit("tax kit: could not print the Start Here PDF")
-        zip_dir(stage, files / "Freelancer-Tax-Kit.zip", "Freelancer-Tax-Kit")
-        pages = page_pngs(start, tmp, "tk") + page_pngs(CALENDAR, tmp, "tkc")[:1] + page_pngs(JAR, tmp, "tkj")[:1]
-        tsheet = sheet_png(TRACKER / "Quarterly-Tax-Tracker.xlsx", "Suggested payment", tmp, "tkx")
-        imgs = images("The Freelancer Tax Kit",
-                      "Tracker + 3 printables", "Freelancer<br><em>Tax</em><br>Kit",
-                      ["Tax tracker", "2027 calendar", "Checklist", "Tax jar log"],
-                      ["The Quarterly Tax Tracker (spreadsheet + 10-page guide)",
-                       "The 2027 Freelancer Tax Calendar (printable)",
-                       "The Freelancer Tax Checklist (printable)",
-                       "The Tax Jar Tracker: log every set-aside (printable)",
-                       "3-page start guide: set up in about 30 minutes"],
-                      ["Open 1-Start-Here.pdf",
-                       "Fill in the tracker's Setup tab",
-                       "Print the calendar, checklist and jar log",
-                       "Before each deadline, pay the Suggested payment"],
-                      pages[0], [pages[0]] + pages[-2:] + pages[1:2], tsheet, "Excel, Google Sheets, Numbers (.xlsx) · PDF printables",
-                      d / "images", tmp,
-                      ["1-Start-Here.pdf: 3-page setup guide", "Freelancer-Tax-Kit.zip: tracker + guide, calendar, checklist, tax jar log",
-                       "Spreadsheet (.xlsx) and printable PDFs, Letter size"])
-        shutil.copy(HERE / "freelancer-tax-kit.md", d / "LISTING-ETSY.md")
-        made["taxkit"] = sorted(files.iterdir()) + imgs
         flush(tmp)
     shutil.copy(HERE / "README.md", out_root / "README.md")
     return made
@@ -348,6 +232,8 @@ def check(made: dict[str, list[Path]]) -> None:
         assert 1 <= len(files) <= 5, (name, files)               # Etsy: up to 5 files per listing
         assert all(f.stat().st_size < 20 * 1024 * 1024 for f in files), name  # 20 MB each
         assert sum(f.suffix == ".png" for f in fs) >= 7, name
+        assert not any(f.suffix in (".pdf", ".zip", ".docx") for f in files), (name, "no guides on Etsy (AI-guide rule)")
+    assert set(made) == {"tracker"}, "only the spreadsheet tracker is sold on Etsy"
 
 
 if __name__ == "__main__":

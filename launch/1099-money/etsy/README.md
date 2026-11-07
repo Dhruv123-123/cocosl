@@ -1,17 +1,23 @@
 # 1099 Money on Etsy
 
-Etsy-ready versions of the four products. Each folder has `files/` (upload as the digital files),
-`images/` (listing photos, 2400x1800, upload in number order) and `LISTING-ETSY.md` (title, tags,
-description, attributes, coupons, fees).
+Etsy's 22 Oct 2026 rule bans AI-generated functional guides: instructions buyers rely on must be the seller's own
+work. Our guides say honestly that AI helped draft them, so **only the Quarterly Tax Tracker spreadsheet is sold on
+Etsy**, without its PDF guide. Everything else is Gumroad and site only:
 
-| Folder | Price | Files |
+| Product | Etsy | Gumroad |
 |---|---|---|
-| quarterly-tax-tracker | $15 | xlsx + guide PDF |
-| rate-and-contract-kit | $29 | xlsx + templates zip + guide PDF |
-| freelancer-money-bundle | $49 | Start Here PDF + bundle zip |
-| freelancer-tax-kit | [PRICE] (placeholder, $19–$24 suggested) | Start Here PDF + kit zip (tracker + calendar, checklist, tax jar log) |
+| The Quarterly Tax Tracker ($15) | Spreadsheet only (`quarterly-tax-tracker.md`) | Spreadsheet + 10-page guide |
+| The Rate & Contract Kit ($29) | No (guide kit) | Yes |
+| The Freelancer Money Bundle ($49) | No (includes guides) | Yes |
+| The Freelancer Tax Kit ([PRICE]) | No (includes guides) | Yes (`../products/build_gumroad.py`) |
 
-Etsy rules this follows: no links or instructions that send buyers to buy off Etsy (upgrade codes go
-through Etsy messages and private coupons), downloads come from the Etsy Purchases page, at most 5
-files of 20 MB each, and the description discloses AI assistance. Rebuild with
-`python launch/1099-money/etsy/build_etsy.py`. Nothing here is listed yet; listing is a manual step.
+PR #6's `launch/catalog/etsy_rules.py` checks the same rule across every brand's catalog. A guide can go back on
+Etsy only if Dhruv rewrites it so it really is his own work.
+
+`python launch/1099-money/etsy/build_etsy.py [out] [--edition 2027]` writes `quarterly-tax-tracker/` with `files/`
+(the .xlsx), `images/` (8 photos at 2700x2025, made from the real spreadsheet tabs, upload in number order) and
+`LISTING-ETSY.md`. The build fails if a PDF, zip or Word file would go on Etsy.
+
+Other Etsy rules this follows: no links or instructions that send buyers to buy off Etsy, downloads come from the
+Etsy Purchases page, at most 5 files of 20 MB each, and the description discloses AI help. Nothing here is listed
+yet; listing is a manual step.

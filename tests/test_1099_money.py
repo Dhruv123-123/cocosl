@@ -201,8 +201,8 @@ def test_spring_channels_point_at_etsy_calculator_and_compare_pages(factory, tmp
     assert res["block"] == 0 and res["warn"] == 0 and res["issues"] == 8 and res["pins"] >= 36
     pins = json.loads((tmp_path / "pinterest" / "pins.json").read_text())
     targets = [p["target"] for p in pins]
-    for listing in ("quarterly-tax-tracker", "rate-contract-kit", "freelancer-money-bundle"):
-        assert sum(t == f"product:etsy-{listing}".replace("rate-contract", "rate-and-contract") for t in targets) == 2
+    for target in ("etsy-quarterly-tax-tracker", "gumroad-rate-and-contract-kit", "gumroad-freelancer-money-bundle"):
+        assert sum(t == f"product:{target}" for t in targets) == 2
     assert sum(t == "article:calculator" for t in targets) >= 4
     assert any(t.startswith("article:") and "calculator" not in t for t in targets)
     assert not {p["title"] for p in pins} & {"Six weeks to April 15: the freelancer countdown", "Your 1099s are due Monday: check these 3 things"}
@@ -534,15 +534,11 @@ def test_month_8_runs_jul_19_to_aug_18_after_the_couples_week(factory):
 
 
 def test_freelancer_tax_kit_listing_bundles_only_existing_products_honestly():
-    etsy = (LAUNCH / "etsy" / "freelancer-tax-kit.md").read_text()
     gum = (LAUNCH / "products" / "tax-kit" / "LISTING.md").read_text()
-    for text in (etsy, gum):
-        assert "[PRICE]" in text  # placeholder until Dhruv picks the price
-        assert "free" in text and "not tax, legal or financial advice" in text
-        assert not re.search(r"\bworth \$|\$\d+ value", text.replace('"worth $X"', "").replace('"a $60 value"', ""))
-    tags = re.search(r"\*\*Tags\*\*.*?\n(.+)\n", etsy).group(1).split(" · ")
-    assert len(tags) == 13 and all(len(t.strip("`")) <= 20 for t in tags)
-    assert len(re.search(r"\*\*Title\*\*.*\n(.+)\n", etsy).group(1)) <= 140
+    assert "[PRICE]" in gum  # placeholder until Dhruv picks the price
+    assert "free" in gum and "not tax, legal or financial advice" in gum
+    assert not re.search(r"\bworth \$|\$\d+ value", gum.replace('"worth $X"', "").replace('"a $60 value"', ""))
+    assert "Not sold on Etsy" in gum and "TAXKITUP" not in gum  # it includes guides (Etsy's AI-guide rule)
     for f in ("freelancer-tax-calendar-2027.pdf", "freelancer-tax-checklist.pdf", "tax-jar-tracker.pdf"):
         assert (ROOT / "apps" / "freelance-tax" / "downloads" / f).exists()
     assert (LAUNCH / "product" / "Quarterly-Tax-Tracker.xlsx").exists()
@@ -550,9 +546,25 @@ def test_freelancer_tax_kit_listing_bundles_only_existing_products_honestly():
     assert "Jan 18, 2028" in start and "also free" in start
 
 
+def test_only_the_tracker_spreadsheet_is_on_etsy():
+    """Etsy's 22 Oct 2026 rule bans AI-generated functional guides: the kits, bundles and PDF guides are Gumroad only."""
+    etsy = LAUNCH / "etsy"
+    assert sorted(p.name for p in etsy.glob("*.md")) == ["README.md", "quarterly-tax-tracker.md"]
+    listing = (etsy / "quarterly-tax-tracker.md").read_text()
+    files = listing.split("**Files to upload**")[1].split("**Images**")[0]
+    assert "Quarterly-Tax-Tracker.xlsx" in files and ".pdf" not in files
+    desc = listing.split("## Description")[1].split("## Shop coupons")[0]
+    assert "guide" not in desc.lower() and "bundle" not in desc.lower() and "AI tools helped" in desc
+    src = (etsy / "build_etsy.py").read_text()
+    assert "no guides on Etsy" in src and '{"tracker"}' in src
+    spring = json.loads((LAUNCH / "channels" / "spring.json").read_text())
+    etsy_urls = [k for k, v in spring["product_urls"].items() if "etsy.com" in v]
+    assert etsy_urls == ["etsy-quarterly-tax-tracker"]
+
+
 def test_etsy_listings_follow_the_title_and_first_line_rules():
     etsy = LAUNCH / "etsy"
-    for f in ("quarterly-tax-tracker", "rate-and-contract-kit", "freelancer-money-bundle", "freelancer-tax-kit"):
+    for f in ("quarterly-tax-tracker",):
         text = (etsy / f"{f}.md").read_text()
         title = re.search(r"\*\*Title\*\*.*\n(.+)\n", text).group(1)
         words = [w.lower() for w in re.findall(r"[\w'$]+", title)]

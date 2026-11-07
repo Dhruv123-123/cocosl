@@ -1,21 +1,20 @@
 # The Freelancer Tax Kit ([PRICE]): store listing kit
 
 Gumroad (or Lemon Squeezy / Stan Store) listing for a tax-only bundle built from products that already exist.
-The Etsy version is `../../etsy/freelancer-tax-kit.md`. Replace anything in `[brackets]`.
+Not sold on Etsy: it includes guides, and Etsy's 22 Oct 2026 rule bans AI-generated functional guides. Replace anything in `[brackets]`.
 
 ## Files to upload
 
 | File | From |
 |---|---|
-| `Start-Here-Freelancer-Tax-Kit.pdf` | `the-freelancer-tax-kit.html` in this folder (3 pages; built by `etsy/build_etsy.py`) |
+| `Start-Here-Freelancer-Tax-Kit.pdf` | `the-freelancer-tax-kit.html` in this folder (3 pages; built by `products/build_gumroad.py`) |
 | `Quarterly-Tax-Tracker.xlsx` + `The-Quarterly-Tax-Tracker.pdf` | `../../product/` |
 | `freelancer-tax-calendar-2027.pdf` | `apps/freelance-tax/downloads/` (free lead magnet) |
 | `freelancer-tax-checklist.pdf` | `apps/freelance-tax/downloads/` (free lead magnet) |
 | `tax-jar-tracker.pdf` | `apps/freelance-tax/downloads/` (free lead magnet) |
 
-`python launch/1099-money/etsy/build_etsy.py` builds the zip (`Freelancer-Tax-Kit.zip`, folders `2-Quarterly-Tax-Tracker`,
-`3-Tax-Calendar-2027`, `4-Tax-Checklist`, `5-Tax-Jar-Tracker`) plus the Start Here PDF and 5 listing images.
-The same zip works on Gumroad.
+`python launch/1099-money/products/build_gumroad.py` builds the zip (`Freelancer-Tax-Kit.zip`, folders `2-Quarterly-Tax-Tracker`,
+`3-Tax-Calendar-2027`, `4-Tax-Checklist`, `5-Tax-Jar-Tracker`) plus the Start Here PDF. Add `--edition 2027` for the 2027 tracker.
 
 ## Pricing
 
@@ -70,6 +69,6 @@ Set aside the right amount, pay the IRS on time each quarter, and be ready at fi
 
 ## Before it goes live (manual)
 
-- [ ] Pick the price and replace every `[PRICE]` here and in the Etsy listing.
-- [ ] Create `TAXKIT15` (Gumroad) / `TAXKITUP` (Etsy private coupon).
+- [ ] Pick the price and replace every `[PRICE]` here.
+- [ ] Create `TAXKIT15` on Gumroad.
 - [ ] Add the product URL to `apps/freelance-tax/config.js` only if you want it on the thank-you page.

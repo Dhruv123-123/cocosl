@@ -20,9 +20,9 @@ Money and taxes for US freelancers. Brand file: `brands/1099-money.yaml`. Start 
 | `linkedin/` | LinkedIn growth kit for freelancers and solo consultants: page profile (tagline, overview, specialties), page cover, personal banner and logo, 30 daily posts Nov 16 – Dec 15, 2026 (rates, clients, contracts, invoicing, taxes; links only in first comments), 24 comment templates. Posted by hand from the personal profile. Pairs with the site's rate calculator |
 | `drivers/` | Gig-driver series: 10 Shorts for Uber, Lyft, DoorDash, Uber Eats and Instacart drivers, paired with the site's driver mileage calculator (`apps/freelance-tax/mileage/`), with a Wednesday posting plan and the driver communities for each |
 | `distribution/ANSWER_BANK.md` | 30 Quora and Reddit answer drafts (18 Quora, 12 Reddit incl. driver subreddits), no links, disclosure and pacing rules |
-| `channels/` | `config.json`: launch–month 2 pins, threads and newsletter. `spring.json`: 40 pins from Jan 4, 2027 (month 3–4 content, the calculator, compare pages and 6 Etsy listing pins), 26 threads and 8 newsletter issues Feb 14 – Apr 4. `exclude` drops pins that only make sense on their posting day |
+| `channels/` | `config.json`: launch–month 2 pins, threads and newsletter. `spring.json`: 40 pins from Jan 4, 2027 (month 3–4 content, the calculator, compare pages and 6 store listing pins), 26 threads and 8 newsletter issues Feb 14 – Apr 4. `exclude` drops pins that only make sense on their posting day |
 | `b2b/` | Outreach kit: 75 coworking spaces and freelancer groups (45 coworking, 20 translator/interpreter associations, 10 writer, editor and other freelancer groups) with emails verified on their own sites. 3 emails each (free 2027 tax calendar, then the $49 bundle as a member code or group license), tracker at 8 a day from Wed Nov 11, reply branches and draft group-license terms. Nothing sent |
-| `etsy/` | `build_etsy.py` + Etsy listings for the three products (Etsy-safe guide wording, 2400x1800 listing images) |
+| `etsy/` | `build_etsy.py` + the Etsy listing for the Quarterly Tax Tracker, spreadsheet only (Etsy bans AI-generated guides, so kits and bundles are Gumroad only) |
 | `../../apps/freelance-tax/` | Free quarterly estimated tax calculator + funnel: free 2027 tax calendar (PDF), landing and download pages, 7-email sequence selling the tracker |
 | `product/` | The Quarterly Tax Tracker: spreadsheet builder, the built .xlsx, 10-page guide (HTML + PDF), store listing |
 | `products/` | The ladder above it: **Rate & Contract Kit** ($29: rate calculator, project pricer, proposal, agreement, change order, invoices, 7-page guide) and the **Freelancer Money Bundle** ($49: tracker + kit + 14 client email scripts), listings, `UPSELL_PATH.md` with codes and checkout upsells |
@@ -48,7 +48,7 @@ Month 6: `factory pack export --brand 1099-money --file launch/1099-money/month-
 Driver series: `factory pack export --brand 1099-money --file launch/1099-money/drivers/content.json --start 2027-01-06 --days 14 --out drivers/` (post on the Wednesdays in `drivers/README.md`).
 Spring channels: `factory channels export --brand 1099-money --config launch/1099-money/channels/spring.json --out channels-spring/` (Etsy listing URLs are `REPLACE_ME` until the listings are live).
 B2B kit: `python3 launch/1099-money/b2b/build_b2b.py` (edit `leads_source.tsv` or `openers.py`, then rebuild).
-Etsy: `python launch/1099-money/etsy/build_etsy.py` (writes to project files).
+Etsy: `python launch/1099-money/etsy/build_etsy.py` (tracker spreadsheet only). Gumroad Tax Kit: `python launch/1099-money/products/build_gumroad.py`. Both write to project files.
 
 Long videos from month 1 on are written to run 8+ minutes (about 1,300 words at 160 wpm) so YouTube allows mid-roll ads. Re-time the chapter list in each description after the voice-over is recorded.
 
