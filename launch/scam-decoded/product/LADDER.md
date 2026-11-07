@@ -6,8 +6,8 @@
 | 1 | The Family Scam-Proofing Kit | $9 | Families; the impulse buy | `family-scam-proofing-kit.html`, `LISTING.md` |
 | 2 | Protect Your Parents | $29 | Adult children helping parents | `protect-your-parents/` |
 | 3 | Spot It, Stop It team training pack | $99 | Small-business owners, office managers, HR | `team-training/` |
-| Side | Scam Decoded for Seniors (large print, Etsy) | $7 | Older adults; gift from adult children | `seniors-pack/` |
-| Side | Scam-Proof Your Parents printable kit (Etsy + Gumroad) | [PRICE] | Adult child and parent, together | `parents-printable-kit/` |
+| Side | Scam Decoded for Seniors (large print, Gumroad) | $7 | Older adults; gift from adult children | `seniors-pack/` |
+| Side | Scam-Proof Your Parents printable kit (Gumroad) | [PRICE] | Adult child and parent, together | `parents-printable-kit/` |
 | Side | Community talks (libraries, senior centers, churches) | $0–$300 | Venues; drives pack sales and email sign-ups | `speaking-kit/` |
 
 ## Upsell path
@@ -38,3 +38,7 @@ cd seniors-pack && python3 build.py && cd ..   # large-print booklet, fridge che
 cd speaking-kit && python3 build.py && cd ..   # talk deck (PPTX + PDF), handout, pricing sheet
 cd team-training && python3 build.py      # slides (PPTX + PDF via LibreOffice), guide, quiz, key, certificate, poster
 ```
+
+## Etsy
+
+Etsy's 22 Oct 2026 rule bans AI-generated functional guides (instructions buyers rely on must be the seller's own work). Our guides say honestly that AI helped draft them, so the Seniors pack, its group license and the Scam-Proof Your Parents kit sell on Gumroad only. Only the Scam Decoded Card Set (reference cards, PR #6) stays on Etsy. A guide can go back on Etsy only if Dhruv rewrites it as his own work. The catalog check is `launch/catalog/etsy_rules.py` on PR #6.

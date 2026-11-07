@@ -1,6 +1,6 @@
 # Group print license ($49): listing kit
 
-This is the second listing for the seniors pack. It's what makes the "free talk with the pack" option on the speaking kit's pricing sheet work. Post it on **Gumroad** (organizations need receipts, and Gumroad emails them), and optionally on Etsy too. Same PDFs as the $7 pack, plus `dist/Group-Print-License.pdf`.
+This is the second listing for the seniors pack. It's what makes the "free talk with the pack" option on the speaking kit's pricing sheet work. Post it on **Gumroad** only (organizations need receipts, and Gumroad emails them). Not Etsy: Etsy's 22 Oct 2026 rule bans AI-generated functional guides. Same PDFs as the $7 pack, plus `dist/Group-Print-License.pdf`.
 
 ## Files to upload
 
@@ -43,10 +43,6 @@ Print unlimited large-print scam awareness guides, fridge checklists and wallet 
 > **Please note:** you can't resell the files or post them online, and the license covers one location. Have several branches? Message us for the multi-site price.
 >
 > General education, not legal or financial advice. All example calls and texts are made up. Designed by Scam Decoded with help from AI tools; every page is human-reviewed.
-
-## Etsy version (optional)
-
-Use the same title (140 characters max) and description. Tags: group license · senior center · library program · church resource · scam awareness · large print · elder fraud · printable handout · caregiver resource · fraud prevention · senior activity · scam prevention · community program.
 
 ## Before listing
 

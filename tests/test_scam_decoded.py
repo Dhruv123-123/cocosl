@@ -598,13 +598,9 @@ def test_parents_printable_kit_and_listing(tmp_path, monkeypatch):
     assert all(any(h in u for h in ("ftc.gov", "fbi.gov", "ic3.gov", "ojp.gov", "justice.gov")) for _, u in mod.SOURCES)
     assert "guarantee" not in html_text.lower()
     listing = (kit / "LISTING.md").read_text()
-    assert "[PRICE]" in listing and "## Etsy" in listing and "## Gumroad" in listing
-    title = listing.split("**Title (13 words):**\n")[1].split("\n")[0]
-    assert len(title.split()) == 13 and len(title) <= 140
-    tags = re.findall(r"^\| \d+ \| ([a-z ]+) \| (\d+) \|$", listing, flags=re.M)
-    assert len(tags) == 13 and len({t for t, _ in tags}) == 13
-    assert all(len(t) <= 20 and len(t) == int(n) for t, n in tags)
-    assert "How it's made" in listing and "Personal use only" in listing
+    assert "[PRICE]" in listing and "## Gumroad" in listing
+    assert "## Etsy" not in listing and "Gumroad only" in listing  # Etsy's Oct 2026 AI-guide rule
+    assert "Personal use only" in listing
 
 
 def test_small_business_series_feeds_site_alerts_and_b2b_blocks():
@@ -623,3 +619,52 @@ def test_small_business_series_feeds_site_alerts_and_b2b_blocks():
         alert = next((site / "alerts").glob(f"*-{b['key']}*.md"), None) or next(
             p for p in (site / "alerts").glob("*.md") if f"explainer: {b['key']}" in p.read_text())
         assert "flags:" in alert.read_text()
+
+
+def test_valentines_pack_new_romance_angles_in_free_slots():
+    import datetime as dt
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    root = CONTENT.parent
+    items = json.loads((root / "valentines-2027.json").read_text())
+    assert len(items) == 8
+    dates = [i["post_on"] for i in items]
+    assert dates == sorted(dates) and "2027-02-01" <= dates[0] and dates[-1] <= "2027-02-14 23:59"
+    assert {i["topic"] for i in items} >= {"pig butchering", "fake military", "crypto romance"}
+    # taken: every dated pack, plus the weeks 13-21 plan (Shorts/TikTok 12:00, carousels 19:30, long 10:00)
+    taken, earlier = set(), set()
+    for f in root.glob("*.json"):
+        if f.name == "valentines-2027.json":
+            continue
+        data = json.loads(f.read_text())
+        for i in data if isinstance(data, list) else []:
+            if isinstance(i, dict) and "script" in i:
+                earlier.add(i["script"]["title"])
+                if i.get("post_on"):
+                    taken.add(i["post_on"])
+    for line in (root / "POSTING_PLAN_WEEKS_13-21.md").read_text().splitlines():
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        m = re.match(r"\w{3} Feb (\d+)$", cells[0]) if len(cells) == 5 else None
+        if m:
+            day = f"2027-02-{int(m.group(1)):02d}"
+            for col, time in ((1, "12:00"), (2, "12:00"), (3, "19:30"), (4, "10:00")):
+                if cells[col]:
+                    taken.add(f"{day} {time}")
+    assert not taken & set(dates), taken & set(dates)
+    videos = [i for i in items if i["format"] != "carousel"]
+    assert all(a["look"] != b["look"] for a, b in zip(videos, videos[1:]))
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        words = sum(len(s.narration.split()) for s in sc.segments)
+        if item["format"] == "short":
+            assert 60 <= words <= 120 and len(sc.title) <= 60, sc.title
+        assert sc.title not in earlier and any(ch.isdigit() for ch in sc.hook.split(".")[0][:60])
+        assert sc.claims_to_verify and item["original_element"] and len(sc.hashtags) <= 5
+        assert all("ftc.gov" in u or "ic3.gov" in u for u in sc.sources), sc.title
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        text = G.script_text(item["script"])
+        assert "checker" in sc.caption and "guarantee" not in text.lower()
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+    plan = (root / "POSTING_PLAN_VALENTINES_2027.md").read_text()
+    assert all(f"#{n} " in plan for n in range(8))

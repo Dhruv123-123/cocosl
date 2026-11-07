@@ -63,7 +63,7 @@ Confirm each date and theme with its official source before publishing (ACL for 
 
 ## Products and outreach timed to the plan
 
-- **Seniors pack ($7) and group license ($49):** push weeks 26, 27 and 32. List both on Etsy/Gumroad by mid-April.
+- **Seniors pack ($7) and group license ($49):** push weeks 26, 27 and 32. List both on Gumroad by mid-April (not Etsy: its Oct 2026 AI-guide rule).
 - **Speaking kit:** venues plan May and June programs 6–8 weeks ahead, so send library and senior center pitches **Mar 15 – Apr 9** for Older Americans Month and WEAAD talks. Dhruv sends by hand.
 - **Protect Your Parents:** Mother's Day (wk 27) and Father's Day (wk 33).
 - **Compare page:** password spring clean (wk 24). Swap in the real affiliate links first.

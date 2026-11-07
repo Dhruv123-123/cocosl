@@ -1,4 +1,4 @@
-"""Build the "Scam-Proof Your Parents" printable kit (Etsy + Gumroad, price [PRICE]).
+"""Build the "Scam-Proof Your Parents" printable kit (Gumroad only, price [PRICE]; not Etsy, see LISTING.md).
 
     python3 build.py            # dist/*.pdf + dist/mockup-*.png (needs Chromium via contentfactory.business.pdf, and pdftoppm)
     python3 build.py --no-pdf   # dist/*.html only

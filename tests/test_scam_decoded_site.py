@@ -207,7 +207,7 @@ def test_holiday_parents_guide_opt_in_and_seniors_upsell(tmp_path, monkeypatch):
     thanks = (out / "holiday" / "thanks" / "index.html").read_text()
     assert f'/downloads/{cfg["holiday_guide"]["file"]}' in thanks and 'href="/seniors/"' in thanks and "noindex" in thanks
     seniors = (out / "seniors" / "index.html").read_text()
-    assert "$7" in seniors and "etsy" in seniors
+    assert "$7" in seniors and "gumroad" in seniors and "etsy" not in seniors  # Etsy AI-guide rule
     assert "/holiday/thanks/" in (out / "robots.txt").read_text()
     assert "/holiday/</loc>" in (out / "sitemap.xml").read_text()
 
