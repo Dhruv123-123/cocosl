@@ -128,6 +128,12 @@ def _ops(factory: Factory) -> dict | None:
         return None
 
 
+@router.post("/posts/{post_id}/thumbnail")
+def post_thumbnail(post_id: int, request: Request, index: int = Form(...), factory: Factory = Depends(get_factory)):
+    factory.choose_thumbnail(post_id, index)
+    return back(request, f"/posts/{post_id}", msg="Thumbnail updated")
+
+
 @router.post("/publications/{pub_id}/resolve")
 def publication_resolve(pub_id: int, request: Request, action: str = Form(...), url: str = Form(""),
                         factory: Factory = Depends(get_factory)):

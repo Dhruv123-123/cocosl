@@ -72,6 +72,11 @@ def test_render_video(media_env, tmp_path, fmt, size):
     assert abs(info["duration"] - assets["duration"]) < 0.5
     assert len(assets["images"]) == 3 and assets["slides"] == []
     assert probe(settings.output_dir / assets["thumbnail"])["width"] == 1280
+    if fmt == "long":
+        variants = assets["thumbnail_variants"]
+        assert len(variants) == 3 and variants[0] == assets["thumbnail"]
+        assert all((settings.output_dir / v).is_file() and (settings.output_dir / v[:-4]).with_suffix(".jpg").is_file()
+                   for v in variants)
     srt = (settings.output_dir / assets["captions_srt"]).read_text()
     assert "Follow for one" in srt and "-->" in srt
     video_prov = next(p for p in assets["provenance"] if p["path"] == assets["video"])
