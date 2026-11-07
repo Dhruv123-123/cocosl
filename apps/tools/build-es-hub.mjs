@@ -17,6 +17,7 @@ const SCAMS = [
   { u: '../scam-checker/es/estafas/', t: 'Guías de estafas comunes', d: 'USPS, peajes, IRS, Amazon, alertas de fraude, empleos falsos y más, explicados en español.' },
 ];
 const SAVE = [
+  { u: '../budget/bill-calendar/es.html', t: 'Calendario de pagos', d: 'Agrega cada recibo una vez y ve todas las fechas de pago del mes en un calendario. Márcalos al pagar y manda recordatorios a tu teléfono. Funciona sin internet.' },
   { u: '../budget/tablero-dinero.html', t: 'Tablero de dinero en hoja de cálculo', d: 'Sube el CSV de tu banco y descarga una hoja de cálculo para Google Sheets o Excel: cada gasto en su categoría y lo que entra, gastas y te sobra cada mes. Tu archivo no sale de tu navegador.' },
   { u: '../budget/reto-ahorro.html', t: 'Reto de ahorro de 52 semanas', d: 'Ahorra $1 más cada semana y junta $1,378 en un año, o pon tu propia meta. Marca cada semana, recibe recordatorios e imprime la tabla.' },
 ];
@@ -69,8 +70,20 @@ ${[...calcs, ...SAVE].map(card).join('\n')}
 ${SCAMS.map(card).join('\n')}
     </div>
   </section>
+
+  <aside id="plantillas" aria-labelledby="h-plantillas" class="products">
+    <h2 id="h-plantillas">Plantillas de hoja de cálculo</h2>
+    <div class="grid">
+      <div class="card product" data-product="sheetTemplate" data-lang="es"><span class="tag soon">Muy pronto · $12</span><h3>Tablero de dinero Pro</h3><p>El tablero de dinero gratis, para usarlo cada mes: pega tus movimientos y ve tendencias de 12 meses, presupuesto vs real y fondos de ahorro, con gráficas. Google Sheets y Excel.</p><p class="tiny-note">Prueba ya el <a href="../budget/tablero-dinero.html">tablero de dinero gratis</a>.</p></div>
+    </div>
+  </aside>
 </main>
 <footer><p>No es asesoría financiera ni legal. Privado por diseño: sin cuentas, y las herramientas funcionan en tu navegador.</p></footer>
+<script type="module">
+import config from '../budget/config.js';
+import { showProducts } from '../products.js';
+showProducts(config);
+</script>
 <script type="module" src="../hub-search.js"></script>
 </body>
 </html>

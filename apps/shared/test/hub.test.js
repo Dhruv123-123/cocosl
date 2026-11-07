@@ -51,3 +51,20 @@ test('install banner: not when installed, quiet for 30 days after "Not now", iOS
   assert.equal(isIos('Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0)', 0), false);
   assert.equal(isIos('Mozilla/5.0 (Linux; Android 15)'), false);
 });
+
+test('paid template cards: placeholder until the checkout link is real, then a link', async () => {
+  const { productCard } = await import('../../products.js');
+  const p = { name: 'Money Dashboard Pro', nameEs: 'Tablero de dinero Pro', price: '$12', pitch: 'EN <b>', pitchEs: 'ES', url: 'https://REPLACE_ME.gumroad.com/l/x' };
+  assert.equal(productCard(p), null);
+  assert.equal(productCard({ ...p, url: 'javascript:alert(1)' }), null);
+  const live = productCard({ ...p, url: 'https://shop.gumroad.com/l/x' }, 'es');
+  assert.match(live, /^<a class="card" href="https:\/\/shop\.gumroad\.com\/l\/x">/);
+  assert.match(live, /Tablero de dinero Pro/);
+  const en = productCard({ ...p, url: 'https://shop.gumroad.com/l/x' });
+  assert.match(en, /EN &lt;b&gt;/);
+  for (const f of ['index.html', 'es/index.html']) {
+    const html = read(f);
+    assert.match(html, /<div class="card product" data-product="sheetTemplate"/, f);
+    assert.match(html, /showProducts\(config\)/, f);
+  }
+});

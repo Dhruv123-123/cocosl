@@ -79,6 +79,29 @@ const checks = [
     await page.fill('[name=goal]', '5200');
     if (!/\$100\.00/.test(await page.textContent('#weeks'))) throw new Error('even goal');
   }],
+  ['/budget/bill-calendar/', '#list .due', async (page) => {
+    const d = new Date(); const iso = (x) => `${x.getFullYear()}-${String(x.getMonth() + 1).padStart(2, '0')}-${String(x.getDate()).padStart(2, '0')}`;
+    const soon = new Date(d.getFullYear(), d.getMonth(), Math.min(d.getDate() + 2, 28));
+    await page.fill('[name=name]', 'Phone'); await page.fill('[name=amount]', '85'); await page.fill('[name=start]', iso(soon));
+    await page.click('#save');
+    await page.fill('[name=name]', 'Rent'); await page.fill('[name=amount]', '1450'); await page.fill('[name=start]', iso(new Date(d.getFullYear(), d.getMonth() + 1, 1)));
+    await page.click('#save');
+    if (!/Phone/.test(await page.textContent('#bills')) || !/Rent/.test(await page.textContent('#bills'))) throw new Error('bills list');
+    if ((await page.locator('#grid .cell.has').count()) < 1) throw new Error('grid shows no bill');
+    await page.locator('#list input[type=checkbox]').first().check();
+    if (!/\$85/.test(await page.textContent('#stats'))) throw new Error(`paid total: ${await page.textContent('#stats')}`);
+    await page.click('#next');
+    if (!/Rent/.test(await page.textContent('#list'))) throw new Error('next month');
+    const [dl] = await Promise.all([page.waitForEvent('download'), page.click('#ics')]);
+    const ics = await (await import('node:fs/promises')).readFile(await dl.path(), 'utf8');
+    if (!/RRULE:FREQ=MONTHLY/.test(ics) || !/SUMMARY:Pay Rent due/.test(ics) && !/SUMMARY:Pay Rent/.test(ics)) throw new Error('ics');
+    await page.reload();
+    if (!/Phone/.test(await page.textContent('#bills'))) throw new Error('not saved');
+  }],
+  ['/budget/bill-calendar/es.html', '#bills li', async (page) => {
+    if (!/Dom/.test(await page.textContent('#weekdays'))) throw new Error('es weekdays');
+    if (!/Cada mes/.test(await page.textContent('[name=freq]'))) throw new Error('es freqs');
+  }],
   ['/budget/money-dashboard.html', '#summary table', async (page) => {
     await page.click('#sample');
     await page.waitForSelector('#summary table');

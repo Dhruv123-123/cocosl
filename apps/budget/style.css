@@ -241,3 +241,38 @@ textarea{font:inherit;width:100%;padding:10px 12px;border-radius:10px;border:1px
 .sort-list small{display:block;color:var(--muted);font-size:12px}
 #budgets label{font-size:14px}
 details.card summary{cursor:pointer}
+
+/* Bill calendar (bill-calendar/) */
+.cal-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.cal-head h2{margin:0;text-transform:capitalize;text-align:center;flex:1}
+.cal-grid{margin:8px 0 4px}
+.weekdays,.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.weekdays span{font-size:12px;color:var(--muted);text-align:center;font-weight:600}
+.days .cell{min-height:58px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font:inherit;padding:4px;display:flex;flex-direction:column;align-items:flex-start;gap:2px;cursor:pointer;text-align:left;min-width:0}
+.days .cell.empty{border:0;background:none;cursor:default}
+.days .cell .n{font-size:13px;font-weight:600}
+.days .cell .sum{font-size:12px;font-weight:700;line-height:1.1}
+.days .cell .dots{display:flex;gap:2px;flex-wrap:wrap}
+.days .cell .dots i{width:7px;height:7px;border-radius:50%;background:var(--gold)}
+.days .cell .dots i.p{background:var(--green)}
+.days .cell.has{border-color:var(--gold)}
+.days .cell.all-paid{border-color:var(--green);opacity:.75}
+.days .cell.late{border-color:var(--neg);border-width:2px}
+.days .cell.today{outline:2px solid var(--ink);outline-offset:1px}
+.days .cell:focus-visible{outline:3px solid var(--gold);outline-offset:1px}
+.dues,.bill-rows{list-style:none;padding:0;margin:8px 0 0}
+.dues li,.bill-rows li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.dues li .pick{flex:1;min-width:0;margin:0}
+.dues .d{display:block;font-size:12px;color:var(--muted);text-transform:capitalize}
+.dues .amt{font-weight:700;white-space:nowrap}
+.dues li.is-paid b,.dues li.is-paid .amt{text-decoration:line-through;color:var(--muted)}
+.dues .late,.late-head{color:var(--neg);font-weight:700}
+.dues li.empty,.bill-rows li.empty{color:var(--muted);font-size:14px}
+.bill-rows small{display:block;color:var(--muted);font-size:12px}
+.bill-rows .acts{display:flex;gap:6px;align-items:center}
+.bill-rows .link{margin:0;padding:4px 8px;font-size:16px;text-decoration:none}
+label.inline{flex-direction:row;align-items:center;gap:6px}
+label.inline select{width:auto}
+@media (max-width:420px){.days .cell{min-height:50px;padding:3px}.days .cell .sum{font-size:11px}}
+.billcal .link{background:none;border:0;color:var(--muted);font:inherit;text-decoration:underline;cursor:pointer;padding:8px 0}
+.billcal .bill-rows .link{padding:4px 8px;text-decoration:none;color:var(--ink)}
