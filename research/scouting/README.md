@@ -47,6 +47,7 @@ official Business Discovery API (see `watchlist.py`).
 | [`software-ideas.md`](software-ideas.md) | 10 small software products ranked, with demand evidence, competitors, pricing, build effort and how each makes money |
 | [`distribution.md`](distribution.md), [`distribution-drafts.md`](distribution-drafts.md) | Where each brand's audience gathers off the big platforms, the self-promotion rules, a 30-day plan, and draft posts (nothing posted) |
 | [`newsletter.md`](newsletter.md) | beehiiv vs Kit vs MailerLite (cost at 0-10k, ad network, paid recommendations, payout per subscriber), the pick (Kit, one free account per brand), exact setup and automations for the existing sequences, and 20 swap partners |
+| [`youtube-monetization.md`](youtube-monetization.md) | YouTube money beyond AdSense: sponsors that fit 1k-10k finance channels and their rates, the inauthentic-content and AI-label rules audited against our pipeline (with fixes), and Shopping/Amazon eligibility |
 | [`hooks.md`](hooks.md) | 30 hook templates, now used by the writer (`src/contentfactory/hooks_library.json`) |
 | [`repos.csv`](repos.csv) | Raw repo metadata pulled 2026-11-07 |
 | [`watchlist.csv`](watchlist.csv), [`watchlist.py`](watchlist.py) | Accounts to watch, and a script that snapshots their public follower and engagement numbers through the official Business Discovery API |

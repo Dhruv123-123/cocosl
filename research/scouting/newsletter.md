@@ -93,8 +93,12 @@ until then (the sequences already pitch the $9-15 products on day 7).
    buyers sequence moves to Gumroad's own post-purchase emails, so it doesn't need a second sequence.
 4. **The sites already support it:** `email.provider: kit` plus the form URL.
 
-**When to move to beehiiv:** once a newsletter has about 5,000 engaged readers and you want the ad network
-more than the cost saving. Kit exports CSVs and beehiiv imports them, so it's a one-afternoon move.
+**Decision (2026-11-07): start on Kit.**
+
+> **Open question for Dhruv:** should a newsletter move to beehiiv once it has about 5,000 engaged
+> readers? That's roughly when beehiiv's ad network could earn more than the Lite plan costs (about $139
+> a month at 10k). Kit exports CSVs and beehiiv imports them, so the move takes one afternoon either way.
+> Until you decide, everything stays on Kit.
 MailerLite only wins if you want a website builder too, and the sites already handle that.
 
 ## 2. Exact Kit setup (repeat once per newsletter)

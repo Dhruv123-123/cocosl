@@ -325,6 +325,17 @@ def test_youtube_short_no_thumbnail_and_schedule(settings, brand, files, yt_env)
     assert res.url.endswith("/shorts/VID1") and not r.find("POST", "thumbnails/set")
 
 
+def test_youtube_sponsored_stays_private_for_studio(settings, brand, files, yt_env, monkeypatch):
+    monkeypatch.setenv("YT_PRIVACY", "public")
+    r = yt_router()
+    pub = YouTubePublisher(settings, transport=r.transport, sleep=noop_sleep)
+    res = pub.publish(make_req(brand, settings, "youtube", "short", files, has_paid_promotion=True,
+                               scheduled_at="2026-12-01T17:00:00Z"))
+    meta = body_json(r.find("POST", "upload/youtube/v3/videos")[0])
+    assert meta["status"]["privacyStatus"] == "private" and "publishAt" not in meta["status"]
+    assert "paid promotion" in res.raw["needs_studio"]
+
+
 def test_youtube_resumes_after_server_error(settings, brand, files, yt_env):
     calls = {"n": 0}
 

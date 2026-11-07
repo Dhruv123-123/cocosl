@@ -11,6 +11,11 @@ Docs used:
 - thumbnails.set (<=50MB JPEG/PNG; Shorts only after processing):
   https://developers.google.com/youtube/v3/docs/thumbnails/set
 - containsSyntheticMedia / unverified-project changes: https://developers.google.com/youtube/v3/revision_history
+- Paid promotion: YouTube requires the "includes paid promotion" box for sponsored
+  videos. The Data API documents paidProductPlacementDetails.hasPaidProductPlacement
+  only as a response field, so a sponsored upload is always kept private (no
+  publishAt) and flagged in raw["needs_studio"] for a person to tick the box in
+  Studio and publish. See research/scouting/youtube-monetization.md.
 - Token refresh: https://developers.google.com/identity/protocols/oauth2/native-app
 
 Setup / review:
@@ -99,12 +104,14 @@ class YouTubePublisher(HttpPublisher):
         privacy = (self.settings.env("YT_PRIVACY", "private") or "private").lower()
         if privacy not in PRIVACY:
             raise PublishError(f"youtube: YT_PRIVACY must be one of {PRIVACY}", retryable=False)
+        if req.has_paid_promotion:
+            privacy = "private"  # the paid-promotion box has to be ticked in Studio before it goes public
         status = {
             "privacyStatus": privacy,
             "selfDeclaredMadeForKids": False,
             "containsSyntheticMedia": bool(req.realistic_synthetic),
         }
-        if req.scheduled_at:
+        if req.scheduled_at and not req.has_paid_promotion:
             if privacy != "private":
                 raise PublishError("youtube: publishAt requires YT_PRIVACY=private", retryable=False)
             status["publishAt"] = req.scheduled_at
@@ -137,6 +144,9 @@ class YouTubePublisher(HttpPublisher):
         raw = {"privacy": resource["status"]["privacyStatus"],
                "containsSyntheticMedia": resource["status"]["containsSyntheticMedia"],
                "probe": probe, "upload_status": (video.get("status") or {}).get("uploadStatus")}
+        if req.has_paid_promotion:
+            raw["needs_studio"] = ("sponsored: tick 'includes paid promotion' in YouTube Studio, then publish "
+                                   "(uploaded as private, schedule ignored)")
         if req.format == "long" and req.thumbnail_path:
             raw["thumbnail"] = self._set_thumbnail(video_id, Path(req.thumbnail_path))
         url = f"https://www.youtube.com/shorts/{video_id}" if req.format == "short" \
