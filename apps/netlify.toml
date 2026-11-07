@@ -19,6 +19,10 @@
   [headers.values]
     Cache-Control = "no-cache"
 [[headers]]
+  for = "/freelance-invoices/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+[[headers]]
   for = "/budget/sw.js"
   [headers.values]
     Cache-Control = "no-cache"

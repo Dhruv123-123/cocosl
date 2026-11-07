@@ -55,3 +55,24 @@ test('subscribe function: honeypot, validation, not connected, Sender call', asy
   const failing = async () => new Response('', { status: 422 });
   assert.equal((await handleSubscribe(req({ email: 'a@b.co' }), env, failing)).status, 502);
 });
+
+test('older signup forms: Sender first, Netlify Forms while Sender is not connected', async () => {
+  const { submitSignup } = await import('../optin.js');
+  const form = { _d: [['form-name', 'scam-alerts'], ['email', 'a@b.co'], ['website', '']] };
+  globalThis.FormData = class { constructor(f) { this.d = f._d; } get(k) { return (this.d.find((x) => x[0] === k) || [])[1] ?? null; } [Symbol.iterator]() { return this.d[Symbol.iterator](); } };
+  const calls = [];
+  const win = (status) => ({ fetch: async (url, opts) => { calls.push([url, opts]); return new Response('{}', { status: url === '/' ? 200 : status }); } });
+  assert.equal(await submitSignup(form, { app: 'scam-checker', win: win(200) }), 'sender');
+  assert.deepEqual(JSON.parse(calls[0][1].body), { email: 'a@b.co', website: '', brand: 'scam', app: 'scam-checker', page: '' });
+  calls.length = 0;
+  assert.equal(await submitSignup(form, { app: 'budget', win: win(503) }), 'netlify');
+  assert.equal(calls[1][0], '/');
+  assert.match(calls[1][1].body, /form-name=scam-alerts&email=a%40b.co/);
+  assert.equal(await submitSignup(form, { app: 'budget', win: win(404) }), 'netlify');
+  await assert.rejects(submitSignup(form, { app: 'budget', win: win(422) }));
+});
+
+test('every older signup form uses Sender', () => {
+  for (const f of ['scam-checker/config.js', 'money-calculators/config.js', 'budget/config.js', 'medical-bills/config.js']) assert.match(readFileSync(join(root, f), 'utf8'), /provider: 'sender'/, f);
+  for (const f of ['scam-checker/signup.js', 'money-calculators/app.js', 'budget/subscriptions.js', 'medical-bills/app.js']) assert.match(readFileSync(join(root, f), 'utf8'), /submitSignup\(form/, f);
+});

@@ -293,6 +293,57 @@ const checks = [
     await page.selectOption('#state', 'TX');
     if (!(await page.getAttribute('#ag a', 'href')).includes('texasattorneygeneral.gov')) throw new Error('AG');
   }],
+  ['/freelance-invoices/app/', '.tiles .tile', async (page) => {
+    if (!/Not tax advice/.test(await page.textContent('.note'))) throw new Error('note');
+    await page.waitForSelector('#status.ready', { timeout: 30000 });
+    await page.waitForFunction(() => !!navigator.serviceWorker.controller, null, { timeout: 15000 });
+    await page.context().setOffline(true);
+    try {
+      for (const [u, sel] of [['/freelance-invoices/app/mileage.html', 'h1'], ['/freelance-invoices/app/quarterly.html', '#rows tr'], ['/freelance-invoices/side-hustle.html', 'h1'], ['/freelance-invoices/app/?source=pwa', '.tiles .tile']]) {
+        await page.goto(`${new URL(page.url()).origin}${u}`);
+        if (!(await page.locator(sel).first().textContent())?.trim()) throw new Error(`offline: ${u}`);
+      }
+    } finally { await page.context().setOffline(false); }
+  }],
+  ['/freelance-invoices/app/quarterly.html', '#rows tr', async (page) => {
+    await page.selectOption('[name=year]', '2027');
+    await page.fill('[name=profit]', '60000'); await page.selectOption('[name=bracket]', '22');
+    if (!/\$16,463/.test(await page.textContent('#stats'))) throw new Error(`90%: ${await page.textContent('#stats')}`);
+    if (!/Jan 18, 2028/.test(await page.textContent('#rows'))) throw new Error('2027 Q4 date');
+    await page.fill('[name=lastYearTax]', '12000');
+    if (!/safe harbor/.test(await page.textContent('#summary'))) throw new Error('safe harbor');
+  }],
+  ['/freelance-invoices/app/mileage.html', '#rows tr', async (page) => {
+    await page.fill('[name=date]', '2026-08-03'); await page.fill('[name=miles]', '12.5'); await page.fill('[name=purpose]', 'Client meeting, Acme');
+    await page.click('#trip button[type=submit]');
+    await page.selectOption('#year', '2026');
+    if (!/\$9\.50/.test(await page.textContent('#rows'))) throw new Error('deduction');
+    const dl = page.waitForEvent('download'); await page.click('#csv');
+    const csv = await (await import('node:fs/promises')).readFile(await (await dl).path(), 'utf8');
+    if (!/^Date,Business purpose,From,To,Miles,IRS rate,Deduction\r\n2026-08-03,"Client meeting, Acme",,,12.5,0.760,9.50/.test(csv)) throw new Error(`csv ${csv}`);
+    await page.reload();
+    await page.selectOption('#year', '2026');
+    if (!/Acme/.test(await page.textContent('#rows'))) throw new Error('not saved');
+  }],
+  ['/freelance-invoices/app/deductions.html', '#list li', async (page) => {
+    await page.selectOption('#who', 'drivers');
+    if (!/Business miles/.test(await page.textContent('#list'))) throw new Error('drivers');
+    await page.check('[data-id=mileage]');
+    if (!/^1 of/.test(await page.textContent('#count'))) throw new Error('count');
+  }],
+  ['/budget/moving-cost.html', '#cats .wcat', async (page) => {
+    await page.fill('#trip [name=miles]', '20'); await page.selectOption('#trip [name=size]', '2br');
+    await page.fill('#trip [name=newRent]', '1500'); await page.fill('#trip [name=overlapDays]', '10');
+    await page.click('#trip button[type=submit]');
+    if ((await page.inputValue('[data-k=movers][data-f=estimate]')) !== '170') throw new Error('movers estimate');
+    if ((await page.inputValue('[data-k=overlap][data-f=estimate]')) !== '500') throw new Error('overlap');
+    await page.fill('[data-k=movers][data-f=actual]', '250');
+    if (!/\$80 over estimate/.test(await page.textContent('[data-out=movers]'))) throw new Error('over');
+    if (!/^Movers or truck rental\t170\t250\t\n/.test(await page.inputValue('#t-rows'))) throw new Error('tsv');
+    await page.reload();
+    if ((await page.inputValue('[data-k=movers][data-f=actual]')) !== '250') throw new Error('not saved');
+  }],
+  ['/budget/costo-mudanza.html', '#cats .wcat'],
   ['/budget/wedding-budget.html', '#cats .wcat', async (page) => {
     await page.fill('[name=total]', '30000'); await page.fill('[name=guests]', '100');
     await page.click('#split');
@@ -354,7 +405,7 @@ const checks = [
     if (!/mms-calc/.test(await page.inputValue('#code'))) throw new Error('calc snippet');
   }],
   ['/apps.html', '#apps .app', async (page) => {
-    if ((await page.locator('#apps .app').count()) !== 6) throw new Error('six apps');
+    if ((await page.locator('#apps .app').count()) !== 7) throw new Error('seven apps');
     for (const src of await page.locator('#apps img').evaluateAll((els) => els.map((e) => e.complete && e.naturalWidth))) if (!src) throw new Error('icon did not load');
     const m = await (await page.request.get(new URL('manifest.webmanifest', page.url()).href)).json();
     if (!m.icons?.length) throw new Error('hub manifest');

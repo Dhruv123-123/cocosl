@@ -1,6 +1,7 @@
 import config from './config.js';
 import { initTracking } from './lib/track.js';
 import { LETTERS, ERRORS, SURPRISE, buildLetter, suggest } from './lib/letters.js';
+import { submitSignup } from './lib/optin.js';
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
@@ -109,13 +110,13 @@ const form = document.querySelector('form.signup');
 const e = config.email;
 if (e.provider === 'none') form.closest('section').hidden = true;
 else {
-  if (e.provider !== 'netlify') { form.removeAttribute('data-netlify'); form.action = e.action || '#'; form.querySelector('input[type=email]').name = e.emailField || 'email'; }
+  if (!['netlify', 'sender'].includes(e.provider)) { form.removeAttribute('data-netlify'); form.action = e.action || '#'; form.querySelector('input[type=email]').name = e.emailField || 'email'; }
   form.addEventListener('submit', async (ev) => {
     ev.preventDefault();
     if (form.website.value) return;
-    if (e.provider !== 'netlify' && !e.action) { alert('Email signup is not connected yet: set email.action in config.js.'); return; }
+    if (!['netlify', 'sender'].includes(e.provider) && !e.action) { alert('Email signup is not connected yet: set email.action in config.js.'); return; }
     form.querySelector('button').disabled = true;
-    try { await fetch(e.provider === 'netlify' ? '/' : form.action, { method: 'POST', mode: e.provider === 'netlify' ? 'same-origin' : 'no-cors', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() }); location.href = e.thanksUrl; }
+    try { e.provider === 'sender' ? await submitSignup(form, { app: 'medical-bills' }) : await fetch(e.provider === 'netlify' ? '/' : form.action, { method: 'POST', mode: e.provider === 'netlify' ? 'same-origin' : 'no-cors', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() }); location.href = e.thanksUrl; }
     catch { form.submit(); }
   });
 }

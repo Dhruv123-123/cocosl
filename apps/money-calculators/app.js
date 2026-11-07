@@ -13,6 +13,7 @@ import { money, isLiveUrl, escapeHtml } from './lib/format.js';
 import { TEXT } from './lib/text.js';
 import { initTracking, withUtm } from './lib/track.js';
 import { embedOptions } from './lib/embed-options.js';
+import { submitSignup } from './lib/optin.js';
 
 const $ = (sel, root = document) => root.querySelector(sel);
 
@@ -251,20 +252,20 @@ function setupSignup() {
   const e = lang === 'es' ? { ...config.email, ...config.email.es } : config.email;
   $('.signup-pitch', form.parentElement).textContent = e.pitch;
   if (e.provider === 'none') { form.parentElement.hidden = true; return; }
-  if (e.provider !== 'netlify') {
+  if (!['netlify', 'sender'].includes(e.provider)) {
     form.removeAttribute('data-netlify');
     form.action = e.action || '#';
     form.querySelector('input[type=email]').name = e.emailField || 'email';
   }
   form.addEventListener('submit', async (ev) => {
     if (form.website.value) { ev.preventDefault(); return; } // honeypot
-    if (e.provider !== 'netlify' && !e.action) { ev.preventDefault(); alert(T.notConnected); return; }
+    if (!['netlify', 'sender'].includes(e.provider) && !e.action) { ev.preventDefault(); alert(T.notConnected); return; }
     ev.preventDefault();
     const btn = form.querySelector('button');
     btn.disabled = true; btn.textContent = T.sending;
     const body = new URLSearchParams(new FormData(form)).toString();
     try {
-      await fetch(e.provider === 'netlify' ? '/' : form.action, {
+      e.provider === 'sender' ? await submitSignup(form, { app: 'money-calculators' }) : await fetch(e.provider === 'netlify' ? '/' : form.action, {
         method: 'POST', mode: e.provider === 'netlify' ? 'same-origin' : 'no-cors',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body,
       });

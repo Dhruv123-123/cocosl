@@ -1,3 +1,11 @@
 # Deploy on its own: Netlify > Add new site > Import > base directory apps/freelance-invoices.
 [build]
+  # Save Netlify build credits: skip the deploy when nothing in this folder changed.
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- ."
   publish = "."
+
+# The service worker must never be served stale, or updates get stuck.
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"

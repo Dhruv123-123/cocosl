@@ -24,6 +24,7 @@ const SAVE = [
   { u: '../budget/fondos-ahorro.html', t: 'Fondos de ahorro', d: 'Anota los gastos grandes que sabes que vienen, como el seguro del carro o las fiestas, y ve cuánto guardar cada mes y en cada cheque. Se pega en el Tablero de dinero Pro.' },
   { u: '../app/', t: 'App Money Made Simple', d: 'Las diez herramientas más usadas en una sola pantalla: presupuesto, salario neto, pagos, deudas, ahorro, dividir gastos y revisar estafas. Agrégala a tu teléfono y úsala sin internet y sin cuenta.' },
   { u: '../budget/dividir-gastos.html', t: 'Dividir gastos entre roomies o en pareja', d: 'Divide la renta, los servicios y el súper entre 2 a 6 personas: igual, según el ingreso o con tus porcentajes. Ve quién le debe a quién y copia un resumen para el chat del grupo.' },
+  { u: '../budget/costo-mudanza.html', t: 'Costo de mudanza', d: 'Calcula cuánto te costará la mudanza: camión o mudanceros, gasolina, depósitos, renta doble, hotel y días sin trabajar. Cambia los estimados por cotizaciones y lleva lo que ya pagaste.' },
   { u: '../budget/presupuesto-boda.html', t: 'Presupuesto de boda', d: 'Escribe tu presupuesto total y tus invitados y reparte el dinero en 20 categorías. Anota cotizaciones, anticipos y pagos, el costo por invitado y cuánto ahorrar al mes.' },
   { u: '../budget/calendario-dinero.html', t: 'Calendario de dinero', d: 'Fechas de impuestos, Black Friday, el reinicio de enero y el reto de ahorro: una descarga agrega las fechas de dinero de los próximos 12 meses a tu calendario.' },
 ];

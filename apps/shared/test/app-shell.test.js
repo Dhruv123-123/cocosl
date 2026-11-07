@@ -81,3 +81,18 @@ test('scam-checker/sw.js is generated, up to date and stays inside scam-checker'
   for (const f of ['app/', 'app/report.html', 'lib/scamapp.js', 'lib/scan.js', 'link/', 'es/']) assert.ok(sw.includes(`"${f}"`), f);
   assert.doesNotMatch(sw, /"\.\.\//);
 });
+
+test('freelance-invoices/sw.js is generated, up to date and stays inside freelance-invoices', async () => {
+  const { buildTen99Sw } = await import('../../tools/build-app-shell.mjs');
+  const sw = buildTen99Sw();
+  assert.equal(readFileSync(join(root, 'freelance-invoices', 'sw.js'), 'utf8'), sw, 'run: node tools/build-app-shell.mjs');
+  for (const f of ['app/', 'app/mileage.html', 'lib/ten99.js', 'lib/setaside.js', 'set-aside/']) assert.ok(sw.includes(`"${f}"`), f);
+  assert.doesNotMatch(sw, /"\.\.\//);
+});
+
+test('every Netlify site skips the build when its folder did not change (free plan: 300 credits, 15 a deploy)', async () => {
+  const { readdirSync } = await import('node:fs');
+  const tomls = ['netlify.toml', ...readdirSync(root, { withFileTypes: true }).filter((d) => d.isDirectory() && existsSync(join(root, d.name, 'netlify.toml'))).map((d) => `${d.name}/netlify.toml`)];
+  assert.ok(tomls.length >= 7);
+  for (const t of tomls) assert.match(readFileSync(join(root, t), 'utf8'), /\[build\][^[]*ignore = "git diff --quiet \$CACHED_COMMIT_REF \$COMMIT_REF -- \."/, t);
+});

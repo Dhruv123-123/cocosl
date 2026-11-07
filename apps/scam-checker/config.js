@@ -4,7 +4,7 @@ export default {
   siteUrl: 'https://scamshield.netlify.app',
 
   email: {
-    provider: 'netlify', // 'netlify' | 'buttondown' | 'kit' | 'mailerlite' | 'formspree' | 'none'
+    provider: 'sender', // 'sender' (posts to /api/subscribe; falls back to Netlify Forms until Sender is connected) | 'netlify' | 'buttondown' | 'kit' | 'mailerlite' | 'formspree' | 'none'
     formName: 'scam-alerts',
     action: '',
     emailField: 'email',

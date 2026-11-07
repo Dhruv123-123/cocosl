@@ -35,7 +35,7 @@ const server = createServer(async (req, res) => {
 
 const only = process.argv.includes('--only') ? process.argv[process.argv.indexOf('--only') + 1] : '';
 const hubPages = (dir) => cardsFromHub(readFileSync(join(root, dir, 'index.html'), 'utf8')).map((c) => new URL(c.u, `http://x/${dir ? `${dir}/` : ''}`).pathname);
-const pages = [...new Set(['/', '/es/', ...hubPages(''), ...hubPages('es'), '/apps.html', '/es/apps.html', '/embed.html', '/scam-checker/app/checklist.html', '/scam-checker/app/quiz.html', '/scam-checker/app/report.html'])].filter((p) => p.includes(only));
+const pages = [...new Set(['/', '/es/', ...hubPages(''), ...hubPages('es'), '/apps.html', '/es/apps.html', '/embed.html', '/scam-checker/app/checklist.html', '/scam-checker/app/quiz.html', '/scam-checker/app/report.html', '/freelance-invoices/app/quarterly.html', '/freelance-invoices/app/mileage.html', '/freelance-invoices/app/deductions.html'])].filter((p) => p.includes(only));
 
 await new Promise((r) => server.listen(0, r));
 const base = `http://127.0.0.1:${server.address().port}`;

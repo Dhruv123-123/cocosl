@@ -14,7 +14,9 @@
         "http://localhost/scam-checker/index.html",
         "http://localhost/scam-checker/app/index.html",
         "http://localhost/scam-checker/app/checklist.html",
-        "http://localhost/scam-checker/app/report.html"
+        "http://localhost/scam-checker/app/report.html",
+        "http://localhost/freelance-invoices/app/index.html",
+        "http://localhost/freelance-invoices/app/quarterly.html"
       ],
       "settings": { "chromeFlags": "--no-sandbox --headless=new", "onlyCategories": ["accessibility", "best-practices", "seo", "performance"] }
     },

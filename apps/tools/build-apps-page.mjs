@@ -24,6 +24,8 @@ export const APPS = [
   { manifest: 'budget/bill-calendar/manifest.webmanifest', open: 'budget/bill-calendar/index.html', what: 'Every bill this month on a calendar. Tick them off as you pay and send reminders to your phone\'s calendar.' },
   { manifest: 'budget/bill-calendar/manifest-es.webmanifest', open: 'budget/bill-calendar/es.html', lang: 'es',
     es: { what: 'Todos tus recibos del mes en un calendario. Márcalos al pagar y manda recordatorios al calendario de tu teléfono.' } },
+  { manifest: 'freelance-invoices/app/manifest.webmanifest', open: 'freelance-invoices/app/index.html', what: 'Quarterly estimated tax with the 2026 and 2027 due dates, a mileage log that exports to CSV, and a deduction checklist. Works offline. Not tax advice.',
+    es: { name: '1099 Money', what: 'Impuestos trimestrales, registro de millas y deducciones para trabajadores independientes. Por ahora solo en inglés.', englishOnly: true } },
   { manifest: 'freelance-invoices/set-aside/manifest.webmanifest', open: 'freelance-invoices/set-aside/index.html', what: 'Log each client payment and see how much to save for taxes and what to send the IRS each quarter.',
     es: { name: '1099 Tax Set-Aside', what: 'Para trabajadores independientes: cuánto guardar de cada pago para impuestos. Por ahora solo en inglés.', englishOnly: true } },
 ];

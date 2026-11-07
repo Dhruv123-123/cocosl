@@ -5,10 +5,10 @@ export default {
   siteUrl: 'https://moneymadesimple.netlify.app',       // the main brand site (site/ in the repo)
   calculatorsUrl: 'https://moneymadesimple.netlify.app/calculators',
 
-  // Email capture. provider: 'netlify' (works with zero setup on Netlify), 'buttondown', 'kit',
+  // Email capture. provider: 'sender' (Sender via /api/subscribe, Netlify Forms until it's connected), 'netlify' (works with zero setup on Netlify), 'buttondown', 'kit',
   // 'mailerlite', 'formspree' or 'none'. For anything except netlify, paste the form action URL.
   email: {
-    provider: 'netlify',
+    provider: 'sender', // 'sender' (posts to /api/subscribe; falls back to Netlify Forms until Sender is connected) | 'netlify' | 'buttondown' | 'kit' | 'mailerlite' | 'formspree' | 'none'
     formName: 'calculator-signup',
     action: '',
     emailField: 'email',

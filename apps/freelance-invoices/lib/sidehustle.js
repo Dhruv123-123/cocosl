@@ -47,10 +47,10 @@ export function normalize(input = {}) {
 }
 
 /** Self-employment tax on a year's net profit. */
-export function seTax(yearProfit) {
+export function seTax(yearProfit, wageBase = SS_WAGE_BASE) {
   const base = Math.max(0, yearProfit) * SE_FACTOR;
   if (base < 400) return 0;
-  return cents(Math.min(base, SS_WAGE_BASE) * 0.124 + base * 0.029);
+  return cents(Math.min(base, wageBase) * 0.124 + base * 0.029);
 }
 
 export function profit(raw) {

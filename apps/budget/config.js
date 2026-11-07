@@ -22,7 +22,7 @@ export default {
   refundPolicy: 'Changed your mind? Reply to your receipt within 30 days for a full refund.',
   // Email capture for the free subscription finder (same options as the calculators' config).
   email: {
-    provider: 'netlify',
+    provider: 'sender', // 'sender' (posts to /api/subscribe; falls back to Netlify Forms until Sender is connected) | 'netlify' | 'buttondown' | 'kit' | 'mailerlite' | 'formspree' | 'none'
     formName: 'subscription-finder',
     action: '',
     emailField: 'email',
@@ -50,6 +50,14 @@ export default {
     url: 'https://REPLACE_ME.gumroad.com/l/wedding-budget-sheet', // TODO: real link once Dhruv lists it
     pitch: 'Vendors, deposits and due dates, guest list and RSVPs in one sheet. Click "Copy rows" here and paste into its "Planner paste" tab at cell B7. Google Sheets and Excel.',
     pitchEs: 'Proveedores, anticipos y fechas de pago, lista de invitados y confirmaciones en una sola hoja. Pega aquí tu plan. Google Sheets y Excel.',
+  },
+  // Moving Budget Sheet (products thread). Shown on moving-cost.html once the URL is live.
+  movingTemplate: {
+    name: 'Moving Budget Sheet', nameEs: 'Hoja de presupuesto de mudanza',
+    price: '$9',
+    url: 'https://REPLACE_ME.gumroad.com/l/moving-budget-sheet', // TODO: real link once Dhruv lists it
+    pitch: 'Every moving cost in one sheet with estimate vs actual, plus what\'s still to pay. Click "Copy rows" here and paste into its "Planner paste" tab at cell B7. Google Sheets and Excel.',
+    pitchEs: 'Todos los costos de la mudanza en una hoja, estimado contra real y lo que falta pagar. Copia las filas aquí y pégalas en la pestaña "Planner paste", celda B7. Google Sheets y Excel.',
   },
   // Paid add-on shown on Rate My Budget (Gumroad, Stripe Payment Link or a Calendly paid booking).
   review: {

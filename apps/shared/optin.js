@@ -81,3 +81,17 @@ export function mountOptin({ app, page = '', win = globalThis.window, doc = glob
     return true;
   } catch { return false; }
 }
+
+/**
+ * Send one of the older signup forms (form.signup with a Netlify form-name) when email.provider is 'sender':
+ * POST to /api/subscribe so the address reaches Sender and its welcome email. While Sender isn't connected
+ * (503, or 404 on a single-app site with no function) the address is kept in Netlify Forms instead, so nobody is lost. Returns 'sender' or 'netlify'.
+ */
+export async function submitSignup(form, { app = '', page = '', endpoint = OPTIN.endpoint, win = globalThis.window } = {}) {
+  const data = new FormData(form);
+  const res = await win.fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: String(data.get('email') || ''), website: String(data.get('website') || ''), brand: brandOf(app), app, page }) }).catch(() => null);
+  if (res && res.ok) return 'sender';
+  if (res && ![404, 503].includes(res.status)) throw new Error(`signup ${res.status}`);
+  await win.fetch('/', { method: 'POST', mode: 'same-origin', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() });
+  return 'netlify';
+}

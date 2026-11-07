@@ -47,7 +47,7 @@ jobs:
         with:
           node-version: "22"
       - name: Install browser test tools
-        run: npm i --no-save --no-audit --no-fund playwright@1.48.2 axe-core@4.10.2 @lhci/cli@0.14.0 && npx playwright install --with-deps chromium
+        run: npm i --no-save --no-audit --no-fund playwright@1.63.0 axe-core@4.10.2 @lhci/cli@0.16.0 && npx playwright install --with-deps chromium
       - name: Smoke test
         run: node tools/smoke.mjs
       - name: Accessibility (axe-core, WCAG 2.1 AA)
