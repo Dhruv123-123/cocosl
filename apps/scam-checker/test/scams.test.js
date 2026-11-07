@@ -49,3 +49,15 @@ test('every Spanish guide example is flagged high risk and matches an English gu
   }
   assert.equal(scamsEs.length, scams.length, 'every English guide has a Spanish version');
 });
+
+test('each scam category links to an existing guide, in English and Spanish', async () => {
+  const { GUIDES, guideFor, CATEGORIES } = await import('../lib/scan.js');
+  const { existsSync } = await import('node:fs');
+  for (const [id] of CATEGORIES) {
+    if (!GUIDES[id]) continue;
+    assert.ok(existsSync(new URL(`../${guideFor(id)}index.html`, import.meta.url)), guideFor(id));
+    assert.ok(existsSync(new URL(`../es/${guideFor(id, 'es')}index.html`, import.meta.url)), guideFor(id, 'es'));
+  }
+  assert.equal(guideFor('nope'), null);
+  assert.equal(guideFor(analyzeMessage('Your toll balance is overdue. Pay now at https://ezpass-pay.top to avoid a fine.').categoryId), 'scams/toll-text-scam/');
+});

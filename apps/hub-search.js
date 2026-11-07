@@ -17,6 +17,7 @@ export const SYNONYMS = {
   grad: ['first', 'paycheck'], graduate: ['first', 'paycheck'], job: ['first', 'paycheck'], w4: ['withholding', 'first'], checkup: ['checkup'], health: ['checkup'], review: ['checkup'],
   deductions: ['refund', 'tax'], deduction: ['refund', 'tax'],
   challenge: ['challenge', 'week'], '52': ['challenge', 'week'], weekly: ['challenge'], ahorro: ['ahorro', 'reto'], ahorrar: ['ahorro', 'reto'],
+  quarterly: ['quarterly', 'set'], estimated: ['quarterly', 'estimated'], '1099': ['1099', 'freelance', 'quarterly'], freelancer: ['freelance', 'quarterly', 'invoice'], setaside: ['set', 'quarterly'],
   personality: ['personality'], quiz: ['personality', 'quiz'], type: ['personality'], start: ['personality'],
   savings: ['saving', 'emergency', 'interest'], retirement: ['401', 'roth'], ira: ['roth'], tax: ['tax', 'paycheck', 'refund'], refund: ['refund', 'tax'], irs: ['tax', 'refund'], w2: ['refund', 'tax'], reembolso: ['reembolso', 'impuestos'], impuestos: ['impuestos', 'reembolso'],
 };

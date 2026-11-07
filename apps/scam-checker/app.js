@@ -1,5 +1,5 @@
 import config from './config.js';
-import { analyzeMessage } from './lib/scan.js';
+import { analyzeMessage, guideFor } from './lib/scan.js';
 import { setupSignup } from './signup.js';
 import { ES } from './lib/i18n.js';
 import { initTracking } from './lib/track.js';
@@ -29,6 +29,7 @@ const UI_EN = {
   looksLike: 'Looks like:', flags: 'Red flags we found', sender: 'Sender', links: 'Links in the message', official: 'official site',
   noIssues: 'No specific problems found with this address, but only open it if you trust the sender.', whatToDo: 'What to do',
   warn: 'Copy a warning to send to family', copied: 'Copied. Paste it into your family chat.', protect: 'Protect yourself next time',
+  readGuide: 'Read how this scam works and what to do',
   affiliate: 'Affiliate links: we may earn a commission at no cost to you.', getKit: 'Get the kit',
   warning: (cat, flags) => `Heads up: I got a ${cat ? cat.toLowerCase() : 'scam message'} today. ${flags}. If you get one, don't click the link or reply. Check in the official app instead.`,
 };
@@ -64,6 +65,7 @@ function render(r) {
       <p class="score">${esc(title)} <small>${r.score}/100</small></p>
       <p>${esc(sub)}${r.category && r.level !== 'low' ? ` ${UI.looksLike} <b>${esc(r.category)}</b>.` : ''}</p>
     </div>
+    ${r.level !== 'low' && guideFor(r.categoryId, es ? 'es' : 'en') ? `<p class="guide-link"><a href="${guideFor(r.categoryId, es ? 'es' : 'en')}">${UI.readGuide}</a></p>` : ''}
     ${signalHtml}${sender}${links}
     <h3>${UI.whatToDo}</h3><ol>${r.steps.map((s) => `<li>${esc(s)}</li>`).join('')}</ol>
     ${share}${offerHtml}${product}`;

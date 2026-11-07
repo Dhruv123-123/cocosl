@@ -65,7 +65,7 @@ export const ES = {
       medium: ['Ten cuidado', 'Tiene algunas señales de alerta. Verifica directamente con la empresa antes de hacer nada.'],
       low: ['No encontramos señales comunes', 'Es buena señal, pero no es prueba. Ten cuidado si te piden dinero o datos.'],
     },
-    looksLike: 'Parece:', flags: 'Señales de alerta', sender: 'Remitente', links: 'Enlaces en el mensaje', official: 'sitio oficial',
+    readGuide: 'Lee cómo funciona esta estafa y qué hacer', looksLike: 'Parece:', flags: 'Señales de alerta', sender: 'Remitente', links: 'Enlaces en el mensaje', official: 'sitio oficial',
     noIssues: 'No encontramos problemas con esta dirección, pero ábrela solo si confías en el remitente.', whatToDo: 'Qué hacer',
     warn: 'Copiar un aviso para enviar a la familia', copied: 'Copiado. Pégalo en el chat familiar.', protect: 'Protégete la próxima vez',
     affiliate: 'Enlaces de afiliado: podemos ganar una comisión sin costo para ti.', getKit: 'Obtener el kit',

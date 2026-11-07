@@ -48,6 +48,23 @@ const checks = [
     await page.check('[data-done=w4]');
     if (!/1 of 5 steps done/.test(await page.textContent('#progress'))) throw new Error('progress');
   }],
+  ['/freelance-invoices/set-aside/', '#widget .w-date', async (page) => {
+    await page.fill('#amount', '2000');
+    await page.fill('#paid [name=date]', '2026-10-02');
+    await page.click('#paid button[type=submit]');
+    if (!/Move \$420\.00/.test(await page.textContent('#move'))) throw new Error('set-aside at 21%');
+    await page.selectOption('#year', '2026');
+    await page.fill('[data-sent="2026-Q4"]', '100');
+    await page.dispatchEvent('[data-sent="2026-Q4"]', 'change');
+    await page.waitForTimeout(50);
+    if (!/\$420/.test(await page.textContent('#quarters'))) throw new Error('quarter total');
+  }],
+  ['/scam-checker/', '#check', async (page) => {
+    await page.fill('#message', 'USPS: your package is on hold due to an unpaid fee. Pay within 24 hours at https://usps-redelivery-help.top/pay');
+    await page.click('#check');
+    await page.waitForSelector('#result .guide-link a');
+    if (!/scams\/usps-text-scam\//.test(await page.getAttribute('#result .guide-link a', 'href'))) throw new Error('guide link');
+  }],
   ['/budget/money-personality.html', '#result h2', async (page) => {
     for (const q of await page.locator('.q-options').all()) await q.locator('input').nth(3).check();
     if (!/The Worrier/.test(await page.textContent('#result'))) throw new Error('worrier result');

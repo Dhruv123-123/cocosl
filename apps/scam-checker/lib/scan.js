@@ -252,6 +252,20 @@ export const CATEGORIES = [
   ['gift-card', 'Gift card payment scam'], ['verify-account', 'Phishing (fake account alert)'],
 ];
 
+// The scam guide for each category: English pages in scams/, Spanish pages in es/estafas/.
+export const GUIDES = {
+  toll: ['toll-text-scam', 'mensaje-peaje-sin-pagar'], delivery: ['usps-text-scam', 'mensaje-usps-falso'], government: ['irs-scam', 'estafa-irs'],
+  'remote-access': ['geek-squad-renewal-scam', 'correo-falso-de-renovacion'], 'tech-support': ['geek-squad-renewal-scam', 'correo-falso-de-renovacion'],
+  'fraud-alert-callback': ['bank-fraud-alert-scam', 'alerta-de-fraude-bancaria-falsa'], job: ['job-text-scam', 'estafa-de-empleo-por-mensaje'],
+  prize: ['prize-scam', 'estafa-de-premios'], 'wrong-number': ['wrong-number-text-scam', 'mensaje-numero-equivocado'], 'romance-money': ['wrong-number-text-scam', 'mensaje-numero-equivocado'],
+  investment: ['wrong-number-text-scam', 'mensaje-numero-equivocado'], 'code-request': ['verification-code-scam', 'estafa-codigo-de-verificacion'],
+  refund: ['paypal-scam', 'estafa-paypal'], 'verify-account': ['paypal-scam', 'estafa-paypal'],
+};
+export const guideFor = (categoryId, lang = 'en') => {
+  const g = GUIDES[categoryId];
+  return g ? (lang === 'es' ? `estafas/${g[1]}/` : `scams/${g[0]}/`) : null;
+};
+
 /**
  * Analyze a message. Returns { score 0-100, level, signals[], links[], category, steps[] }.
  * options.sender: optional "Name <address>" or phone number of who sent it.
