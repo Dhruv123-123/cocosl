@@ -483,3 +483,11 @@ SHEETS = {
     "debt-payoff-sheet": ("Debt-Payoff-Sheet.xlsx", build_debt_sheet),
     "savings-goals-sheet": ("Savings-Goals-Sheet.xlsx", build_savings_sheet),
 }
+
+
+def _budget_2027(path: Path, today: date | None = None) -> Path:
+    import sheets_2027
+    return sheets_2027.build_budget_2027(path, today)
+
+
+SHEETS["budget-sheet-2027"] = ("2027-Budget-Sheet.xlsx", _budget_2027)

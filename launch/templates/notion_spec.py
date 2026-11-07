@@ -461,7 +461,110 @@ STARTER = {
     ],
 }
 
-TEMPLATES = {t["slug"]: t for t in (BUDGET, DEBT, SAVINGS, HQ, STARTER)}
+
+# ---- 2027 editions (dated) --------------------------------------------------------------------------
+Y27 = 2027
+_MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+
+def _month_expr(m: int, year: int = Y27) -> str:
+    return (f'prop("Transactions").filter(formatDate(current.prop("Date"), "YYYY-MM") == "{year}-{m:02d}")'
+            f'.map(current.prop("Amount")).sum()')
+
+
+def _month_py(m: int, year: int = Y27):
+    return lambda r, t: round(sum(x["Amount"] for x in r["Transactions"] if (x["Date"].year, x["Date"].month) == (year, m)), 2)
+
+
+BUDGET27_CATEGORIES = {
+    **BUDGET_CATEGORIES,
+    "props": BUDGET_CATEGORIES["props"] + [
+        (f"{_MON[m - 1]} {Y27}", "formula", {"expr": _month_expr(m), "format": "dollar", "py": _month_py(m)})
+        for m in range(1, 13)] + [
+        (f"{Y27} total", "formula", {"expr": " + ".join(P(f"{x} {Y27}") for x in _MON), "format": "dollar",
+                                     "py": lambda r, t: round(sum(r[f"{x} {Y27}"] for x in _MON), 2)}),
+        (f"{Y27} budget", "formula", {"expr": f'{P("Monthly budget")} * 12', "format": "dollar",
+                                      "py": lambda r, t: r["Monthly budget"] * 12}),
+    ],
+    "views": BUDGET_CATEGORIES["views"] + [
+        f"Table view **{Y27} by month**: group by *Group*; show Name, Jan {Y27} ... Dec {Y27}, {Y27} total, {Y27} budget; "
+        "footer sum on every month and the totals."],
+}
+
+_ex27 = [(1, "Paycheck", "Paycheck", 1900), (1, "Rent", "Rent", 1400), (2, "Grocery run", "Groceries", 112.35),
+         (3, "Electric + water", "Utilities", 96.4), (4, "Streaming x2", "Subscriptions", 28.98), (5, "Fuel", "Transport", 48),
+         (6, "Tacos with friends", "Eating out", 38.5), (7, "Car + renters insurance", "Insurance", 140),
+         (9, "Grocery run", "Groceries", 98.1), (10, "Phone + internet", "Phone + internet", 110),
+         (12, "Bus pass", "Transport", 64), (13, "Movie tickets", "Fun", 32), (15, "Paycheck", "Paycheck", 1900),
+         (16, "Grocery run", "Groceries", 121.6), (16, "Transfer to savings", "Emergency fund", 250),
+         (16, "Gifts + car fund", "Sinking funds", 150), (17, "Extra on credit card", "Extra debt payment", 200),
+         (18, "Gas bill", "Utilities", 61.2), (20, "Concert", "Fun", 68), (22, "Freelance logo job", "Side income", 280),
+         (23, "Market", "Groceries", 44.8), (8, "Shoes", "Shopping", 74.99)]
+
+BUDGET27_TRANSACTIONS = {
+    **BUDGET_TRANSACTIONS,
+    "rows": [{"Name": n, "Date": date(Y27, m, d), "Amount": a, "Category": c}
+             for m in (1, 2) for d, n, c, a in _ex27 if m == 1 or d <= 17],
+}
+
+BUDGET_2027 = {
+    **BUDGET,
+    "slug": "notion-budget-2027", "name": f"{Y27} Budget", "icon": "📅",
+    "dbs": [BUDGET27_TRANSACTIONS, BUDGET27_CATEGORIES],
+    "layout": [
+        ("callout", "📅", f"Your {Y27} budget. Plan each category, log every transaction, and the {Y27} by month view "
+                         f"fills in January to December on its own. Example data covers January and early February {Y27}."),
+        *BUDGET["layout"][1:],
+    ],
+}
+
+_month_checks = ["Budget set", "All logged", "Reviewed"]
+MONTHS_2027 = {
+    "key": "months27", "title": f"{Y27} month by month", "icon": "🗓️",
+    "props": [("Name", "title", {}), ("Month", "date", {})] + [(c, "checkbox", {}) for c in _month_checks] + [
+        ("Big win", "rich_text", {}), ("Next month I'll", "rich_text", {}),
+        ("Status", "formula", {"expr": (f'if({" and ".join(P(c) for c in _month_checks)}, "✅ Done", '
+                                        f'if({P("Budget set")}, "⏳ In progress", "○ Not started"))'),
+                               "py": lambda r, t: ("✅ Done" if all(r[c] for c in _month_checks) else
+                                                   "⏳ In progress" if r["Budget set"] else "○ Not started")}),
+    ],
+    "rows": [{"Name": f"{calendar.month_name[m]} {Y27}", "Month": date(Y27, m, 1),
+              **{c: (m == 1) or (m == 2 and c == "Budget set") for c in _month_checks},
+              "Big win": "Paid the card $200 extra" if m == 1 else "", "Next month I'll": "Cook at home twice more" if m == 1 else ""}
+             for m in range(1, 13)],
+    "views": [f"Board view **{Y27}**: group by *Status*; or a Calendar view by *Month*. Open a month's page for your "
+              "own notes; the checkboxes are the monthly review."],
+}
+
+CHECKIN_2027 = {
+    **CHECKIN,
+    "rows": [{"Name": f"Week {i + 1}", "Date": date(Y27, 1, 1 + 7 * i), **{c: v for c, v in zip(_checks, flags)}, "Notes": note}
+             for i, (flags, note) in enumerate([((1, 1, 0, 0, 1), "First week of the year. Set up the budget."),
+                                                ((1, 1, 1, 1, 1), ""), ((1, 1, 1, 0, 1), ""),
+                                                ((1, 1, 1, 1, 1), "January done: under on groceries.")])],
+}
+
+HQ_2027 = {
+    "slug": "notion-money-hq-2027", "name": f"{Y27} Money HQ", "icon": "🗓️",
+    "dbs": [MONTHS_2027, CHECKIN_2027],
+    "children": [BUDGET_2027, DEBT, SAVINGS],
+    "layout": [
+        ("callout", "🗓️", f"Your {Y27} money year: a dated budget that fills in month by month, debt payoff, savings goals, "
+                          "a monthly review for each month and a 10-minute weekly check-in."),
+        ("h2", "Your money pages"),
+        ("children",),
+        ("h2", f"{Y27} month by month"),
+        ("p", "At the end of each month: tick the review boxes, write one win and one change. Takes ten minutes."),
+        ("db", "months27"),
+        ("h2", "Weekly check-in (10 minutes, same time every week)"),
+        ("p", "New row each week. Tick what you did. Showing up is the point."),
+        ("db", "checkins"),
+        ("divider",),
+        ("small", "Educational organising tool, not financial advice. Personal use only. Money Made Simple"),
+    ],
+}
+
+TEMPLATES = {t["slug"]: t for t in (BUDGET, DEBT, SAVINGS, HQ, STARTER, HQ_2027)}
 
 
 def all_dbs(t: dict) -> list[dict]:

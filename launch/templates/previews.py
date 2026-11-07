@@ -328,6 +328,28 @@ def notion_shots(t: dict, today: date) -> list[tuple[str, str]]:
                     reverse=True), ["Name", "Date", "Amount", "Goal"], "All deposits", limit=10, sums=("Amount",))
                     + blocks(L[7:10]), head=False)),
         ]
+    if slug == "notion-budget-2027":
+        cats = dbs["categories"]
+        jan = [r for r in rows["transactions"] if (r["Date"].year, r["Date"].month) == (2027, 1)]
+        jan.sort(key=lambda r: r["Date"], reverse=True)
+        return [
+            ("page", notion_page(t, blocks(L[:3]) + table(cats, rows["categories"], ["Name", "Group", "Jan 2027", "Feb 2027",
+                    "Mar 2027", "2027 total", "2027 budget"], "2027 by month", group="Group", limit=10,
+                    sums=("Jan 2027", "Feb 2027", "Mar 2027", "2027 total", "2027 budget")))),
+            ("transactions", notion_page(t, blocks(L[4:6]) + table(dbs["transactions"], jan, ["Name", "Date", "Amount",
+                    "Category", "Group"], "January 2027", limit=14, sums=("Amount",)), head=False)),
+        ]
+    if slug == "notion-money-hq-2027":
+        c, mo = dbs["checkins"], dbs["months27"]
+        kids = [("page", ch["icon"], ch["name"]) for ch in t["children"]]
+        home = notion_page(t, blocks(L[:2]) + blocks(kids) + blocks(L[3:5]) + table(
+            mo, rows["months27"], ["Name", "Budget set", "All logged", "Reviewed", "Big win", "Status"], "2027", limit=6))
+        checks = notion_page(t, blocks(L[6:8]) + table(c, rows["checkins"], ["Name", "Date"] +
+                             [p[0] for p in c["props"] if p[1] == "checkbox"] + ["Score"], "Check-ins"), head=False)
+        return [("home", home), ("checkins", checks)] + [
+            (f"{ch['slug']}", notion_shots(ch, today)[0][1]
+             .replace(f'{ch["icon"]} {E(ch["name"])}<i>', f'{t["icon"]} {E(t["name"])} / {ch["icon"]} {E(ch["name"])}<i>'))
+            for ch in t["children"][:1]]
     if slug == "notion-money-hq":
         c = dbs["checkins"]
         kids = [("page", ch["icon"], ch["name"]) for ch in t["children"]]

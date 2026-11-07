@@ -161,6 +161,45 @@ ITEMS = [
         "notion_category": "Personal finance", "next": None,
     },
     {
+        "slug": "budget-sheet-2027", "kind": "sheets", "name": "2027 Budget Sheet", "price": 12,
+        "xlsx": "2027-Budget-Sheet.xlsx", "link": "sheet_budget_2027",
+        "title": "2027 Budget Spreadsheet for Google Sheets: monthly tabs Jan to Dec 2027 + year dashboard",
+        "tagline": "A dated 2027 budget: one tab per month, each with its own budget and spending log, and the whole year on one page.",
+        "hook": "A fresh year, already set up: open January 2027, type your numbers, and the year page fills itself in.",
+        "gets": ["**Setup:** up to 30 categories in five groups, with a default monthly budget and a 'left to assign' check.",
+                 "**Twelve dated month tabs (Jan 2027 to Dec 2027):** that month's budget (change any line for that month only), "
+                 "planned vs actual by group, every category with a progress bar, and a 120-row spending log that only "
+                 "accepts dates in that month.",
+                 "**2027 tab:** every category month by month, group totals, average per month and an income vs left-over chart.",
+                 "A Start tab with the 5-minute setup, and example data in January and February to delete."],
+        "who": "Anyone starting 2027 with a budget, who likes one tab per month instead of one long list.",
+        "faq": [("Do I need Excel?", "No. It's made for Google Sheets (free). The .xlsx also works in Excel and Numbers."),
+                ("What about 2028?", "This one is dated 2027. The undated Monthly Budget Sheet works for any year.")],
+        "tags": ["2027 budget", "budget spreadsheet", "google sheets budget", "monthly budget", "2027 planner",
+                 "budget template", "personal finance"],
+        "next": None, "shots": [("Jan 2027", "B1:H32"), ("2027", "B1:Q22"), ("Setup", "B1:E28")],
+    },
+    {
+        "slug": "notion-money-hq-2027", "kind": "notion", "name": "2027 Money HQ for Notion", "price": 24,
+        "link": "notion_hq_2027",
+        "title": "2027 Notion Money HQ: dated budget by month, debt payoff, savings goals + monthly reviews",
+        "tagline": "The Money HQ, dated for 2027: a budget that fills in January to December, a review page for every month, "
+                   "debt payoff, savings goals and a weekly check-in.",
+        "hook": "Your 2027 money year on one Notion page, with each month's numbers and review in one place.",
+        "gets": ["**2027 Budget:** categories with a column for every month of 2027, a 2027 total and a 2027 budget, "
+                 "plus this month, last month and left.",
+                 "**2027 month by month:** twelve dated pages with a monthly review (budget set, all logged, reviewed), "
+                 "a big win and one change for next month.",
+                 "**Debt Payoff Tracker** and **Savings Goals Tracker**, the same as in the Money HQ.",
+                 "**Weekly money check-in** with a 5-point score. Example data in January 2027."],
+        "who": "Notion users who want to run 2027's money in one place and see the year fill in.",
+        "faq": [("Free Notion plan OK?", "Yes. Everything works on the free plan."),
+                ("Already have the Money HQ?", "Reply to your receipt email and we'll send a code for the difference.")],
+        "tags": ["notion template", "2027 planner", "notion budget", "finance dashboard", "debt payoff",
+                 "savings tracker", "personal finance"],
+        "notion_category": "Personal finance", "next": None,
+    },
+    {
         "slug": "notion-money-starter", "kind": "free", "name": "Notion Money Starter", "price": 0, "link": "notion_starter",
         "title": "Free Notion Money Starter: simple budget, one savings goal + weekly check-in",
         "tagline": "A free, simple start: one month's budget, one savings goal and a 10-minute weekly check-in.",

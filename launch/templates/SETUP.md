@@ -1,7 +1,8 @@
 # Google Sheets + Notion templates: setup and launch
 
-Nine products: three Google Sheets templates and a bundle, three Notion templates and a bundle, plus a free
-Notion starter that collects emails. Every folder has the files to upload, three screenshots, store covers and
+Eleven products: three Google Sheets templates and a bundle, three Notion templates and a bundle, a free
+Notion starter that collects emails, and two dated 2027 editions (a Sheets budget with a tab per month, and a 2027
+Money HQ for Notion). Every folder has the files to upload, three screenshots, store covers and
 `LISTING.md` with the copy to paste. Notion folders also have `BUILD.md` and example-data CSVs.
 
 | # | Template | Price | You keep: Gumroad | You keep: Notion Marketplace |
@@ -15,6 +16,8 @@ Notion starter that collects emails. Every folder has the files to upload, three
 | 7 | Notion Savings Goals Tracker | $7 | $5.30 | $6.04 |
 | 8 | **Notion Money HQ** (5 to 7 + weekly check-in) | $19 | $15.75 | $17.08 |
 | 9 | **Notion Money Starter** | Free | builds the email list | builds the email list |
+| 10 | 2027 Budget Sheet (tabs Jan 2027 to Dec 2027 + year page) | $12 | $9.65 | n/a |
+| 11 | **2027 Money HQ for Notion** (dated budget, 12 monthly reviews, debt, savings, check-in) | $24 | $20.10 | $21.68 |
 
 Fees checked November 2026: Gumroad direct sales are 10% + $0.50, plus card processing (about 2.9% + $0.30). Sales that come
 through Gumroad's Discover marketplace pay a flat 30%. Selling directly on Notion Marketplace costs 8% + $0.40, and Notion
@@ -44,14 +47,14 @@ For each `.xlsx` (Monthly Budget, Debt Payoff, Savings Goals):
 5. Copy the link, then replace everything from `/edit` onwards with `/copy`:
    `https://docs.google.com/spreadsheets/d/<long id>/copy`
 6. Test it in a private/incognito window: you should see *"Would you like to make a copy of ...?"*
-7. Paste it into `links.json` (`sheet_budget`, `sheet_debt`, `sheet_savings`).
+7. Paste it into `links.json` (`sheet_budget`, `sheet_debt`, `sheet_savings`, `sheet_budget_2027`).
 
 If a link ever gets shared publicly, make a new master (repeat 1 to 7), update `links.json` and rebuild. Buyers keep their copies.
 
 ## 2. Notion: build, then publish with "Duplicate as template"
 
 Build each template with the script in `BUILD.md` (recommended) or by hand. The script needs a Notion integration token, which you
-keep on your own computer: never commit it or paste it into a chat. Build **all five as separate pages**: the three single
+keep on your own computer: never commit it or paste it into a chat. Build **all six as separate pages** (the 2027 Money HQ builds its own copies too: `notion_build.py notion-money-hq-2027`): the three single
 templates, the HQ (it builds its own copies of the three inside it) and the free starter. Don't sell links to the HQ's sub-pages.
 
 Without the repo on your computer, use the copy in the `notion-builder/` folder next to this file: `python notion-builder/notion_build.py notion-budget --parent "<link>"` (Python 3.10+, nothing to install).
@@ -63,7 +66,7 @@ Then for each one:
 2. **Share > Publish > Publish.** Turn on **Allow duplicate as template**. Leave editing and comments off. For paid templates,
    turn off search engine indexing.
 3. Open the published link in a private window, press **Duplicate**, and check it lands working in a test workspace.
-4. Paste the link into `links.json` (`notion_budget`, `notion_debt`, `notion_savings`, `notion_hq`, `notion_starter`).
+4. Paste the link into `links.json` (`notion_budget`, `notion_debt`, `notion_savings`, `notion_hq`, `notion_starter`, `notion_hq_2027`).
 
 Anyone with a paid template's link can duplicate it. That's how Notion templates are sold everywhere. The link only lives inside
 the Start Here PDF. Notion's own access locking covers templates sold directly through Notion Marketplace.

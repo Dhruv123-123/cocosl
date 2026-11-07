@@ -108,7 +108,7 @@ def test_page_id_from_link():
 
 def test_catalog():
     paid = [i for i in C.ITEMS if i["price"]]
-    assert all(7 <= i["price"] <= 19 for i in paid)
+    assert all(7 <= i["price"] <= (24 if "2027" in i["slug"] else 19) for i in paid)
     assert [i["slug"] for i in C.ITEMS if i["price"] == 0] == ["notion-money-starter"]
     for i in C.ITEMS:
         if i["kind"] in ("notion", "notion-bundle", "free"):
@@ -123,3 +123,24 @@ def test_catalog():
         for banned in ("guarantee", "bestseller", "get rich", "limited time"):
             assert banned not in text
     assert {i["link"] for i in C.ITEMS if i.get("link")} <= set(__import__("json").loads((TPL / "links.json").read_text()))
+
+
+def test_2027_editions():
+    import calendar
+    from datetime import date as _d
+    import sheets_2027
+    import notion_spec as NS
+    import openpyxl
+    import tempfile as _t
+    from pathlib import Path as _P
+    with _t.TemporaryDirectory() as tmp:
+        p = sheets_2027.build_budget_2027(_P(tmp) / "b.xlsx")
+        wb = openpyxl.load_workbook(p)
+        assert wb.sheetnames == ["Start", "2027", "Setup"] + [f"{calendar.month_abbr[m]} 2027" for m in range(1, 13)]
+        assert wb["Jan 2027"]["C5"].value.date() == _d(2027, 1, 1) and wb["Feb 2027"]["D5"].value.date() == _d(2027, 2, 28)
+        assert "'Dec 2027'!E" in wb["2027"]["O6"].value
+    t = NS.TEMPLATES["notion-money-hq-2027"]
+    rows = NS.evaluate(t, _d(2026, 11, 7))
+    rent = next(r for r in rows["categories"] if r["Name"] == "Rent")
+    assert rent["Jan 2027"] == 1400 and rent["Feb 2027"] == 1400 and rent["Mar 2027"] == 0 and rent["2027 total"] == 2800
+    assert len(rows["months27"]) == 12 and rows["months27"][0]["Status"].startswith("✅")
