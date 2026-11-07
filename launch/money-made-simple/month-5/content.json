@@ -1,0 +1,3267 @@
+[
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Fictional freelancer owes $2,600 on April 15 with $1,100 saved and plans not to file until they can pay; the fix is file on time, pay what they can, and use a short-term plan.",
+  "script": {
+   "title": "Rate My Budget #17: owes $2,600 in April, has $1,100",
+   "hook": "Owes the IRS $2,600, has $1,100 saved. Let's rate the plan.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Owes the IRS twenty-six hundred dollars on April fifteenth, has eleven hundred saved. Let's rate the plan.",
+     "on_screen_text": "Owes $2,600 · has $1,100",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a tax form and a small jar of coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Numbers",
+     "narration": "Fictional example. A freelance designer, about fifty-five thousand a year, no tax set aside from invoices.",
+     "on_screen_text": "Fictional · freelancer · $55K",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with invoice papers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Plan",
+     "narration": "The plan: don't file until the full amount is saved. That's the expensive part. Filing late usually costs far more than paying late.",
+     "on_screen_text": "Plan: wait to file",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with pages flying off. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "Better: file on time, pay the eleven hundred now, and set up a short-term IRS payment plan for the rest.",
+     "on_screen_text": "File · pay $1,100 · plan the rest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three steps going up. No text, no logos, no real people."
+    },
+    {
+     "heading": "Score",
+     "narration": "Score: two out of ten as planned. Eight out of ten with the fix.",
+     "on_screen_text": "2/10 → 8/10",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a score card flipping from 2 to 8. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Rate My Budget #17 (fictional example): freelancer, ~$55K, owes $2,600 on April 15, has $1,100 saved.\n\nPlan: don't file until the full $2,600 is saved. The failure-to-file penalty is generally 5% of unpaid tax per month, versus 0.5% for paying late.\n\nFix: file on time, pay $1,100 now, short-term payment plan for $1,500, and save 25% of every invoice from now on.\n\nScore: 2/10 → 8/10.\n\nFictional example budget for illustration, not a real person or submission. Want yours rated? DM us your numbers (no names, no screenshots with account details) and we'll anonymise them.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "ratemybudget",
+    "taxseason",
+    "freelancer",
+    "irs",
+    "budgetreview",
+    "moneymadesimple"
+   ],
+   "description": "Rate My Budget #17: a fictional freelancer who owes more than they have on April 15.",
+   "thumbnail_text": "Owes more than saved",
+   "sources": [
+    "https://www.irs.gov/payments/failure-to-file-penalty",
+    "https://www.irs.gov/payments/failure-to-pay-penalty",
+    "https://www.irs.gov/payments/payment-plans-installment-agreements"
+   ],
+   "claims_to_verify": [
+    "Fictional example (label on screen)",
+    "Failure-to-file 5%/month (max 25%); failure-to-pay 0.5%/month (max 25%)",
+    "On $1,500 unpaid: ~$75/month vs ~$7.50/month"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "The penalty math",
+    "narration": "On the fifteen hundred still owed, a late filing penalty is about seventy-five dollars a month. A late payment penalty is about seven fifty. Interest applies to both, but filing on time removes the big one.",
+    "on_screen_text": "Late file ≈ $75/mo · late pay ≈ $7.50/mo",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two coin stacks, one much taller. No text, no logos, no real people."
+   },
+   {
+    "heading": "The plan",
+    "narration": "A short-term plan gives up to a hundred and eighty days. Fifteen hundred over three months is five hundred a month. You can apply online.",
+    "on_screen_text": "$1,500 ÷ 3 = $500/month",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small calendar with three months circled. No text, no logos, no real people."
+   },
+   {
+    "heading": "Next year",
+    "narration": "The real fix is next year. Move twenty-five percent of every invoice into a separate tax account the day it's paid, and make quarterly payments.",
+    "on_screen_text": "25% of every invoice → tax account",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow from an invoice into a labelled jar. No text, no logos, no real people."
+   }
+  ],
+  "series": "Rate My Budget"
+ },
+ {
+  "format": "short",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Fictional $52K earner spends $310 a month on subscriptions and apps; a spring audit cuts $140 a month.",
+  "script": {
+   "title": "Rate My Budget #18: $310 a month in subscriptions",
+   "hook": "$310 a month in subscriptions on a $52K salary. Let's rate it.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Three hundred and ten dollars a month in subscriptions, on a fifty-two thousand dollar salary. Let's rate it.",
+     "on_screen_text": "$310/month in subscriptions",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a long receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "Numbers",
+     "narration": "Fictional example. Take-home about thirty-three fifty. Four streaming services, two music apps, a gym, three app subscriptions, and a box delivery.",
+     "on_screen_text": "Fictional · 11 subscriptions",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone covered in small app icons. No text, no logos, no real people."
+    },
+    {
+     "heading": "Problem",
+     "narration": "Nothing here is crazy on its own. Together, it's almost ten percent of take-home pay, and three of them haven't been opened in months.",
+     "on_screen_text": "~9% of take-home",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stack of small coins becoming a tall stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "Keep the five they use every week. Rotate streaming: one at a time, switching monthly. That cuts about a hundred and forty a month.",
+     "on_screen_text": "Keep 5 · rotate streaming · −$140",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a revolving door with TV icons. No text, no logos, no real people."
+    },
+    {
+     "heading": "Score",
+     "narration": "Score: five out of ten now. Eight out of ten after the audit, with the hundred and forty going to savings.",
+     "on_screen_text": "5/10 → 8/10",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a score card flipping from 5 to 8. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Rate My Budget #18 (fictional example): $52K salary, ~$3,350 take-home, 11 subscriptions totalling $310/month.\n\nProblem: ~9% of take-home, and 3 haven't been used in months.\n\nFix: keep the 5 used weekly, rotate streaming services one at a time, cancel the unused ones. Saves ~$140/month (~$1,680/year), sent straight to savings.\n\nScore: 5/10 → 8/10.\n\nFictional example budget for illustration, not a real person or submission. Want yours rated? DM us your numbers (no names, no screenshots with account details) and we'll anonymise them.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "ratemybudget",
+    "subscriptions",
+    "budgeting",
+    "springcleaning",
+    "budgetreview",
+    "moneymadesimple"
+   ],
+   "description": "Rate My Budget #18: a fictional $310 a month subscription habit and a spring audit.",
+   "thumbnail_text": "$310/month in subs",
+   "sources": [
+    "https://consumer.ftc.gov/articles/how-cancel-subscriptions",
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "Fictional example (label on screen)",
+    "$310 ÷ $3,350 ≈ 9.3%",
+    "$140 × 12 = $1,680"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "How to find them",
+    "narration": "Check four places: bank and card statements, your phone's app store subscriptions, your email for the word receipt, and any PayPal account.",
+    "on_screen_text": "Statements · app store · email · PayPal",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. four small windows each showing an icon. No text, no logos, no real people."
+   },
+   {
+    "heading": "The rotation trick",
+    "narration": "Rotating streaming works because most shows are watched in a burst. Subscribe, watch what you wanted, cancel, switch. You lose very little.",
+    "on_screen_text": "Subscribe · binge · cancel · switch",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a circular arrow around a TV. No text, no logos, no real people."
+   },
+   {
+    "heading": "Redirect it",
+    "narration": "And move the hundred and forty to savings the same day you cancel. Otherwise it quietly turns into takeout.",
+    "on_screen_text": "Cancel → transfer the same day",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow from a cancelled card into a jar. No text, no logos, no real people."
+   }
+  ],
+  "series": "Rate My Budget"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Fictional couple earning $60K and $36K split $3,000 of shared bills 50/50 and one is always short; a proportional split fixes it.",
+  "script": {
+   "title": "Rate My Budget #19: a couple splitting bills 50/50 on very different pay",
+   "hook": "$60K and $36K, splitting $3,000 of bills 50/50. Let's rate it.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Sixty thousand and thirty-six thousand, splitting three thousand dollars of bills fifty-fifty. Let's rate it.",
+     "on_screen_text": "$60K + $36K · 50/50",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes two small figures holding one big bill. No text, no logos, no real people."
+    },
+    {
+     "heading": "Numbers",
+     "narration": "Fictional example. Shared rent, utilities and groceries come to three thousand a month. Each pays fifteen hundred.",
+     "on_screen_text": "Fictional · $3,000 shared",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a house icon with a grocery bag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Problem",
+     "narration": "Fifteen hundred is over half of the lower earner's take-home. They're saving nothing, and the higher earner is saving a lot. That builds resentment fast.",
+     "on_screen_text": "One saves, one can't",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a seesaw tipped heavily to one side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "Split by income instead. Sixty over ninety-six is about sixty-two percent. So eighteen seventy-five and eleven twenty-five.",
+     "on_screen_text": "62.5% / 37.5% → $1,875 / $1,125",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pie chart split unevenly. No text, no logos, no real people."
+    },
+    {
+     "heading": "Score",
+     "narration": "Score: four out of ten as is. Eight out of ten with the proportional split and a monthly money chat.",
+     "on_screen_text": "4/10 → 8/10",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a score card flipping from 4 to 8. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Rate My Budget #19 (fictional example): a couple earning $60K and $36K split $3,000/month of shared bills 50/50.\n\nProblem: $1,500 is over half the lower earner's take-home, so they save nothing.\n\nFix: split by income. $60K ÷ $96K = 62.5%, so $1,875 and $1,125. Each keeps their own fun money, plus a 15-minute money check-in each month.\n\nScore: 4/10 → 8/10.\n\nFictional example budget for illustration, not a real person or submission. Want yours rated? DM us your numbers (no names, no screenshots with account details) and we'll anonymise them.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "ratemybudget",
+    "couplesfinance",
+    "budgeting",
+    "movingin",
+    "budgetreview",
+    "moneymadesimple"
+   ],
+   "description": "Rate My Budget #19: a fictional couple on very different incomes and a fairer bill split.",
+   "thumbnail_text": "50/50 isn't always fair",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "Fictional example (label on screen)",
+    "60/96 = 62.5%; $3,000 × 62.5% = $1,875; × 37.5% = $1,125"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "How it works",
+    "narration": "Each person moves their share into a joint account for shared bills on payday. Everything else stays in their own account.",
+    "on_screen_text": "Shares → joint bills account",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two arrows into one shared jar. No text, no logos, no real people."
+   },
+   {
+    "heading": "Not the only way",
+    "narration": "Fifty-fifty works fine when incomes are close. Some couples combine everything. The best split is the one you both agreed to out loud.",
+    "on_screen_text": "Agree on it, out loud",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two speech bubbles meeting. No text, no logos, no real people."
+   },
+   {
+    "heading": "The monthly chat",
+    "narration": "Fifteen minutes a month: what's coming up, what changed, and what you're saving for together. It prevents most money fights.",
+    "on_screen_text": "15 minutes, once a month",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two mugs and a small calendar. No text, no logos, no real people."
+   }
+  ],
+  "series": "Rate My Budget"
+ },
+ {
+  "format": "short",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Fictional new grad on $48K gets a $650 refund and contributes 0% to a 401(k) with a 50%-up-to-6% match; the fix captures $1,440 a year.",
+  "script": {
+   "title": "Rate My Budget #20: first job, $650 refund, 0% to the 401(k)",
+   "hook": "First job, $48K, 0% into the 401(k). That's $1,440 a year left behind.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "First job, forty-eight thousand, zero percent into the 401(k). That's fourteen hundred and forty dollars a year left behind.",
+     "on_screen_text": "$48K · 0% · $1,440 missed",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding an unopened gift box. No text, no logos, no real people."
+    },
+    {
+     "heading": "Numbers",
+     "narration": "Fictional example. The employer matches fifty percent up to six percent of salary. A six fifty tax refund just landed.",
+     "on_screen_text": "Fictional · 50% up to 6%",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small office building with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Problem",
+     "narration": "At zero percent, the match is zero. Six percent of forty-eight thousand is twenty-eight eighty a year, and the employer would add half: fourteen forty.",
+     "on_screen_text": "6% = $2,880 → match $1,440",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two bars, one half the height of the other. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "Set the contribution to six percent today. Then use the six fifty refund as a buffer while you adjust to the smaller paycheck.",
+     "on_screen_text": "6% today · refund = buffer",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a slider moving up and a small jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Score",
+     "narration": "Score: five out of ten now. Nine out of ten with the full match.",
+     "on_screen_text": "5/10 → 9/10",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a score card flipping from 5 to 9. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Rate My Budget #20 (fictional example): new grad, $48K, 401(k) match 50% up to 6%, contributing 0%. $650 refund just landed.\n\nProblem: 0% in = $0 match. 6% = $2,880/year, and the employer adds $1,440.\n\nFix: set 6% today, keep the $650 refund as a cushion while getting used to the smaller paycheck, and check the vesting schedule.\n\nScore: 5/10 → 9/10.\n\nFictional example budget for illustration, not a real person or submission. Want yours rated? DM us your numbers (no names, no screenshots with account details) and we'll anonymise them.\n\nInvesting involves risk. Not financial advice.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "ratemybudget",
+    "401k",
+    "firstjob",
+    "employermatch",
+    "budgetreview",
+    "moneymadesimple"
+   ],
+   "description": "Rate My Budget #20: a fictional new grad leaving a 401(k) match on the table.",
+   "thumbnail_text": "$1,440 left behind",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/401k-plans"
+   ],
+   "claims_to_verify": [
+    "Fictional example (label on screen)",
+    "$48,000 × 6% = $2,880; × 50% = $1,440",
+    "$2,880 ÷ 26 ≈ $111 per paycheck before tax"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Per paycheck",
+    "narration": "Six percent is about a hundred and eleven dollars per paycheck before tax. Because it comes out pre-tax, take-home drops by less than that.",
+    "on_screen_text": "~$111/paycheck, less after tax",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paycheck with a small slice taken. No text, no logos, no real people."
+   },
+   {
+    "heading": "Vesting",
+    "narration": "Check the vesting schedule. Your contributions are always yours, but the match may take a few years to fully belong to you.",
+    "on_screen_text": "Check vesting",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small staircase with coins on each step. No text, no logos, no real people."
+   },
+   {
+    "heading": "What it buys",
+    "narration": "Then check what the money is invested in. Many plans default to a target-date fund. Make sure it isn't sitting in cash.",
+    "on_screen_text": "Make sure it's invested",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a basket. No text, no logos, no real people."
+   }
+  ],
+  "series": "Rate My Budget"
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Fictional $61K earner spends $1,000 a month on a car (payment, insurance, gas), 26% of take-home; the fix is insurance shopping, refinancing and a plan for the next car.",
+  "script": {
+   "title": "Rate My Budget #21: $1,000 a month on one car",
+   "hook": "$1,000 a month on one car, on a $61K salary. Let's rate it.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "A thousand dollars a month on one car, on a sixty-one thousand dollar salary. Let's rate it.",
+     "on_screen_text": "$1,000/month on a car",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a tiny car on a big price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Numbers",
+     "narration": "Fictional example. Take-home about thirty-nine hundred. Car payment six forty, insurance two ten, gas one fifty.",
+     "on_screen_text": "Fictional · $640 + $210 + $150",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a car with three coin stacks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Problem",
+     "narration": "That's about twenty-six percent of take-home on transportation. It squeezes savings to almost zero.",
+     "on_screen_text": "26% of take-home",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pie chart with a big car slice. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "Shop the insurance this month. Check if refinancing lowers the rate. And when it's paid off, keep paying yourself six forty toward the next car.",
+     "on_screen_text": "Shop insurance · refinance · save for the next one",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone call bubble and a jar labelled with a car. No text, no logos, no real people."
+    },
+    {
+     "heading": "Score",
+     "narration": "Score: four out of ten now. Seven out of ten after the fixes, and much better on the next car.",
+     "on_screen_text": "4/10 → 7/10",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a score card flipping from 4 to 7. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Rate My Budget #21 (fictional example): $61K, ~$3,900 take-home, $1,000/month on one car ($640 payment, $210 insurance, $150 gas). That's ~26% of take-home.\n\nFix: shop insurance quotes, check whether refinancing lowers the rate, and once it's paid off, keep \"paying\" $640/month into a next-car fund.\n\nScore: 4/10 → 7/10.\n\nFictional example budget for illustration, not a real person or submission. Want yours rated? DM us your numbers (no names, no screenshots with account details) and we'll anonymise them.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "ratemybudget",
+    "carpayment",
+    "budgeting",
+    "carinsurance",
+    "budgetreview",
+    "moneymadesimple"
+   ],
+   "description": "Rate My Budget #21: a fictional $1,000 a month car and how to loosen it.",
+   "thumbnail_text": "$1,000/month car",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/auto-loans/"
+   ],
+   "claims_to_verify": [
+    "Fictional example (label on screen)",
+    "$1,000 ÷ $3,900 ≈ 25.6%"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Don't panic-sell",
+    "narration": "Selling the car right away isn't always the answer. If you owe more than it's worth, selling can leave you with a loan and no car.",
+    "on_screen_text": "Check what you owe vs value first",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale with a car and a loan paper. No text, no logos, no real people."
+   },
+   {
+    "heading": "Refinancing",
+    "narration": "Refinancing can help if your credit improved since you bought it. Compare the new rate, the term and any fees, so you don't just stretch the loan longer.",
+    "on_screen_text": "Lower rate, not just longer term",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two arrows, one shorter. No text, no logos, no real people."
+   },
+   {
+    "heading": "Next car",
+    "narration": "Six forty a month into savings for three years is over twenty-three thousand dollars, before any interest. That's most of the next car in cash.",
+    "on_screen_text": "$640 × 36 ≈ $23,000",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar slowly filling with a car on top. No text, no logos, no real people."
+   }
+  ],
+  "series": "Rate My Budget"
+ },
+ {
+  "format": "short",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "A tax extension (Form 4868) gives six more months to file, not to pay; estimate and pay by the April deadline.",
+  "script": {
+   "title": "A tax extension gives you 6 more months to file, not to pay",
+   "hook": "A tax extension gives you 6 more months to file. Not 6 more months to pay.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "A tax extension gives you six more months to file. Not six more months to pay.",
+     "on_screen_text": "6 months to FILE, not pay",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a calendar and a small coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "How",
+     "narration": "You request it with Form 4868, or by making a payment and marking it as an extension. It's generally automatic, and it moves the filing deadline to mid-October.",
+     "on_screen_text": "Form 4868 → October",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with an arrow to a later calendar page. No text, no logos, no real people."
+    },
+    {
+     "heading": "The catch",
+     "narration": "Any tax you owe is still due by the April deadline. If you don't pay by then, interest and late payment penalties can start.",
+     "on_screen_text": "Tax owed is still due in April",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a clock pointing at a date. No text, no logos, no real people."
+    },
+    {
+     "heading": "What to do",
+     "narration": "Estimate what you owe, pay that amount by the deadline, and file the full return before October.",
+     "on_screen_text": "Estimate · pay · file by October",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small boxes being ticked. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "A tax extension (IRS Form 4868) gives you about 6 more months to FILE, generally to mid-October.\n\nIt doesn't give you more time to PAY. Estimate what you owe and pay it by the April deadline to avoid late-payment penalties and interest.\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "taxextension",
+    "taxdeadline",
+    "irs",
+    "taxseason",
+    "personalfinance20s",
+    "moneymadesimple"
+   ],
+   "description": "What a tax extension does and doesn't do: more time to file, not to pay.",
+   "thumbnail_text": "Extension ≠ pay later",
+   "sources": [
+    "https://www.irs.gov/filing/get-an-extension-to-file-your-tax-return",
+    "https://www.irs.gov/payments/failure-to-pay-penalty"
+   ],
+   "claims_to_verify": [
+    "Form 4868: automatic 6-month extension to file",
+    "Payment still due by the original deadline"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Who uses it",
+    "narration": "Extensions are common and normal. People use them when a form is missing, a business return is complicated, or life just got busy.",
+    "on_screen_text": "Extensions are normal",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stack of papers with one missing. No text, no logos, no real people."
+   },
+   {
+    "heading": "Pay online",
+    "narration": "You can pay through IRS Direct Pay from your bank account for free and select extension as the reason. That counts as your extension request.",
+    "on_screen_text": "Direct Pay → choose 'extension'",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a bank icon. No text, no logos, no real people."
+   },
+   {
+    "heading": "Refund coming?",
+    "narration": "If you're due a refund, there's generally no penalty for filing late. But you're waiting longer for your own money, so most people file anyway.",
+    "on_screen_text": "Refund due? No late penalty, just later money",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an envelope arriving late. No text, no logos, no real people."
+   }
+  ]
+ },
+ {
+  "format": "short",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Filing late is usually penalized ten times more per month than paying late (5% vs 0.5% of unpaid tax), so file on time even when you can't pay.",
+  "script": {
+   "title": "Can't pay your taxes? File anyway: 5% vs 0.5%",
+   "hook": "Can't pay your taxes? File anyway. The penalty is 5% a month vs 0.5%.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Can't pay your taxes? File anyway. The penalty for not filing is about ten times bigger.",
+     "on_screen_text": "File anyway",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a tax form with a check mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Filing late",
+     "narration": "The failure-to-file penalty is generally five percent of the unpaid tax for each month or part of a month the return is late, up to twenty-five percent.",
+     "on_screen_text": "Late filing: 5%/month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tall stack of coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paying late",
+     "narration": "The failure-to-pay penalty is generally half a percent a month, also up to twenty-five percent. Interest applies too.",
+     "on_screen_text": "Late paying: 0.5%/month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short stack of coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "So",
+     "narration": "So file on time, pay what you can, and set up a payment plan for the rest.",
+     "on_screen_text": "File · pay what you can · plan",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three steps going up. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Owe taxes you can't pay yet? File on time anyway.\n\n• Failure-to-file penalty: generally 5% of unpaid tax per month, up to 25%\n• Failure-to-pay penalty: generally 0.5% per month, up to 25%\n• Interest applies to unpaid tax as well\n\nFile, pay what you can, and look at IRS payment plans for the rest.\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "taxes",
+    "taxdeadline",
+    "irs",
+    "owetaxes",
+    "personalfinance20s",
+    "moneymadesimple"
+   ],
+   "description": "Why you should file on time even if you can't pay: the late-filing penalty is about ten times bigger.",
+   "thumbnail_text": "5% vs 0.5%",
+   "sources": [
+    "https://www.irs.gov/payments/failure-to-file-penalty",
+    "https://www.irs.gov/payments/failure-to-pay-penalty",
+    "https://www.irs.gov/payments/payment-plans-installment-agreements"
+   ],
+   "claims_to_verify": [
+    "FTF 5%/month max 25%; FTP 0.5%/month max 25%",
+    "When both apply, FTF reduced by FTP for that month"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Example",
+    "narration": "Owe a thousand dollars and don't file for three months? That could be about a hundred and fifty in late filing penalties. File on time and only pay late, and it's about fifteen, plus interest.",
+    "on_screen_text": "$1,000, 3 months: ~$150 vs ~$15",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two piles of coins side by side. No text, no logos, no real people."
+   },
+   {
+    "heading": "Payment plans",
+    "narration": "The IRS has short-term plans up to a hundred and eighty days, and longer monthly plans. You can apply online, and setup fees are usually lower online.",
+    "on_screen_text": "Short-term up to 180 days",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a long arrow. No text, no logos, no real people."
+   },
+   {
+    "heading": "Don't ignore letters",
+    "narration": "And if a letter arrives, open it. Most problems get more expensive the longer they're ignored.",
+    "on_screen_text": "Open the letters",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an opened envelope. No text, no logos, no real people."
+   }
+  ]
+ },
+ {
+  "format": "short",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Side hustlers and freelancers often owe twice in April: the prior-year balance plus the first quarterly estimated payment for the new year.",
+  "script": {
+   "title": "Freelancers: April 15 can mean 2 tax payments",
+   "hook": "Freelancers: April 15 can mean 2 tax payments, not 1.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Freelancers: April fifteenth can mean two tax payments, not one.",
+     "on_screen_text": "April 15 = 2 payments",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding two envelopes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Payment 1",
+     "narration": "Payment one: anything you still owe for last year, due with your return.",
+     "on_screen_text": "1. Last year's balance",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an envelope marked with a past calendar page. No text, no logos, no real people."
+    },
+    {
+     "heading": "Payment 2",
+     "narration": "Payment two: your first quarterly estimated payment for this year. It's due the same day.",
+     "on_screen_text": "2. Q1 estimate for this year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an envelope marked with a new calendar page. No text, no logos, no real people."
+    },
+    {
+     "heading": "Plan",
+     "narration": "Plan for both. If you're short, pay last year's first, then make the estimate as soon as you can.",
+     "on_screen_text": "Plan for both",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two jars side by side. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Self-employed or side income? April 15 can bring two payments:\n1. Any balance due for last year (with your return)\n2. Your Q1 estimated tax payment for this year\n\nThe other quarterly due dates are usually in June, September and January. Keep 25–30% of each payment in a separate tax account as a rough starting point.\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "quarterlytaxes",
+    "freelancer",
+    "sidehustle",
+    "taxdeadline",
+    "1099",
+    "moneymadesimple"
+   ],
+   "description": "Why self-employed people can owe two payments on April 15.",
+   "thumbnail_text": "2 payments in April",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes"
+   ],
+   "claims_to_verify": [
+    "Q1 estimated tax due April 15",
+    "Other due dates June 15, Sept 15, Jan 15 (adjusted for weekends)"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Who needs estimates",
+    "narration": "Generally, if you expect to owe a thousand dollars or more for the year after withholding and credits, the IRS expects quarterly payments.",
+    "on_screen_text": "Owe $1,000+? Pay quarterly",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with four dots. No text, no logos, no real people."
+   },
+   {
+    "heading": "Easier option",
+    "narration": "Have a W-2 job too? Raising your withholding there can cover your side income, so you might skip the quarterly payments.",
+    "on_screen_text": "W-2 job? Withhold extra",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paycheck with a slider. No text, no logos, no real people."
+   },
+   {
+    "heading": "Set it aside",
+    "narration": "Simplest habit: every time a client pays you, move a set percentage to a separate tax savings account before you spend any of it.",
+    "on_screen_text": "Every payment → tax account",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow from an invoice into a labelled jar. No text, no logos, no real people."
+   },
+   {
+    "heading": "Example",
+    "narration": "Example: a freelancer still owes eighteen hundred for last year, and expects to owe about eight thousand this year. That's eighteen hundred plus a two thousand dollar first estimate, both on the same day.",
+    "on_screen_text": "$1,800 + $2,000 on one day",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two coin stacks on one calendar date. No text, no logos, no real people."
+   },
+   {
+    "heading": "Short on cash",
+    "narration": "Can't cover both? File on time and look at an IRS payment plan for last year's balance, rather than skipping the return.",
+    "on_screen_text": "File anyway · payment plan",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a long arrow. No text, no logos, no real people."
+   }
+  ]
+ },
+ {
+  "format": "short",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Paying the IRS from a bank account through Direct Pay is free; card payments go through processors that charge a fee.",
+  "script": {
+   "title": "Paying the IRS? The free way vs the 2% way",
+   "hook": "Paying the IRS by credit card can cost about 2% extra. Here's the free way.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Paying the IRS by credit card can cost you around two percent extra. Here's the free way.",
+     "on_screen_text": "Card ≈ 2% fee · bank = free",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a credit card and a bank icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Free",
+     "narration": "IRS Direct Pay takes money straight from your checking or savings account. No fee, no account needed.",
+     "on_screen_text": "Direct Pay: free",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a bank icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fee",
+     "narration": "Card payments go through approved payment processors, and they charge a fee. Debit cards are usually a small flat fee; credit cards usually a percentage.",
+     "on_screen_text": "Cards: processor fees",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card with a small coin falling off. No text, no logos, no real people."
+    },
+    {
+     "heading": "Only if",
+     "narration": "A credit card only makes sense if you'll pay it off right away. Carrying it at twenty-plus percent APR is far worse than an IRS payment plan.",
+     "on_screen_text": "Never carry tax on a card",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a warning sign next to a card. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Ways to pay the IRS:\n• Direct Pay from your bank account: free\n• Debit card: usually a small flat processor fee\n• Credit card: usually a percentage fee (often around 2%)\n\nOnly use a credit card if you'll pay it off right away. If you can't pay in full, compare an IRS payment plan instead.\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "taxes",
+    "irs",
+    "taxdeadline",
+    "moneytips",
+    "personalfinance20s",
+    "moneymadesimple"
+   ],
+   "description": "The free way to pay the IRS, and why card payments cost extra.",
+   "thumbnail_text": "Free vs 2% fee",
+   "sources": [
+    "https://www.irs.gov/payments",
+    "https://www.irs.gov/payments/payment-plans-installment-agreements"
+   ],
+   "claims_to_verify": [
+    "Direct Pay is free",
+    "Card processing fees vary by processor; credit ~1.8–3%"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Schedule it",
+    "narration": "Direct Pay lets you schedule the payment ahead of time. File early, set the payment for the deadline, and keep your cash until then.",
+    "on_screen_text": "Schedule for the deadline",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a pinned date. No text, no logos, no real people."
+   },
+   {
+    "heading": "Confirmation",
+    "narration": "Save the confirmation number. It's your proof the payment went through.",
+    "on_screen_text": "Save the confirmation",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a receipt with a check mark. No text, no logos, no real people."
+   },
+   {
+    "heading": "Fake sites",
+    "narration": "And type the address yourself. Scammers buy search ads that look like official payment pages.",
+    "on_screen_text": "Type IRS.gov yourself",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a shield. No text, no logos, no real people."
+   },
+   {
+    "heading": "The math",
+    "narration": "On a three thousand dollar tax bill, a two percent card fee is sixty dollars. Direct Pay costs zero, for the exact same payment.",
+    "on_screen_text": "$3,000 × 2% = $60",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small pile of coins being kept. No text, no logos, no real people."
+   }
+  ]
+ },
+ {
+  "format": "short",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Most tax records can be discarded after about 3 years, with longer periods for specific situations; keep property and investment basis records longer.",
+  "script": {
+   "title": "How long to keep tax papers: 3 years for most",
+   "hook": "Keep most tax papers 3 years. Here's what to keep longer.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "You can shred most old tax papers after about three years. Here's what to keep longer.",
+     "on_screen_text": "Most: ~3 years",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a folder and a small shredder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why 3",
+     "narration": "The IRS generally has three years from when you filed to assess more tax, so that's the usual keep period for your return and the forms behind it.",
+     "on_screen_text": "3 years from filing",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with three pages. No text, no logos, no real people."
+    },
+    {
+     "heading": "Longer",
+     "narration": "Keep them longer if you underreported income by a lot, claimed a loss from worthless securities or a bad debt, or didn't file.",
+     "on_screen_text": "Some cases: 6–7 years or more",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a taller stack of folders. No text, no logos, no real people."
+    },
+    {
+     "heading": "Keep",
+     "narration": "And keep records for things you own, like a home or investments, until a few years after you sell them.",
+     "on_screen_text": "Home + investments: until after you sell",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a house and a small chart icon. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "How long to keep tax records (general IRS guidance):\n• Most returns and supporting docs: 3 years from filing\n• Underreported income by more than 25%: 6 years\n• Loss from worthless securities or bad debt: 7 years\n• Records for property or investments: until the period ends for the year you sell\n\nShred what you toss. Keep digital copies of returns.\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "taxrecords",
+    "springcleaning",
+    "organization",
+    "taxes",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "How long to keep tax records, and what to keep longer.",
+   "thumbnail_text": "Shred after 3 years",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records"
+   ],
+   "claims_to_verify": [
+    "3 years general; 6 years if >25% underreported; 7 years for worthless securities/bad debt"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Go digital",
+    "narration": "Scan or download your returns and keep them in one folder with a backup. Paper you can't find doesn't help anyway.",
+    "on_screen_text": "Scan · one folder · backup",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a cloud with a folder. No text, no logos, no real people."
+   },
+   {
+    "heading": "Shred it",
+    "narration": "Shred anything with your Social Security number or account numbers when you toss it. Don't put it in the recycling whole.",
+    "on_screen_text": "Shred, don't recycle",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shredder with paper strips. No text, no logos, no real people."
+   },
+   {
+    "heading": "Keep forever",
+    "narration": "Some people keep a copy of every return forever, since it's tiny digitally and helpful for things like Social Security records. That's fine too.",
+    "on_screen_text": "Copies of returns: keep",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small locked box. No text, no logos, no real people."
+   }
+  ]
+ },
+ {
+  "format": "short",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "You generally have 3 years to claim a refund; for a 2023 return, the window closes in April 2027.",
+  "script": {
+   "title": "Never filed for 2023? April 2027 is the last chance for that refund",
+   "hook": "Never filed for 2023? You have until April 2027 to claim that refund.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Never filed a 2023 tax return? You generally have until April 2027 to claim any refund.",
+     "on_screen_text": "2023 refund? Deadline April 2027",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding an old envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "You usually have three years from the original due date to claim a refund. After that, the money generally goes to the Treasury.",
+     "on_screen_text": "3-year window",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with three pages and a stop sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Who",
+     "narration": "This catches people who had taxes withheld from a part-time or student job and assumed they didn't need to file.",
+     "on_screen_text": "Part-time and student jobs",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small apron and a backpack. No text, no logos, no real people."
+    },
+    {
+     "heading": "Do it",
+     "narration": "Get your W-2s from the employer or an IRS transcript, file the 2023 return, and check for credits you might have qualified for.",
+     "on_screen_text": "Get W-2s · file 2023",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a pencil. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "You generally have 3 years from the original due date to claim a tax refund. For 2023 returns, that window closes in April 2027.\n\nCommon case: a part-time or student job withheld tax, and no return was filed. You may be owed some of it back.\n\nGet missing W-2s from the employer or a free IRS wage and income transcript.\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "taxrefund",
+    "unclaimedmoney",
+    "taxes",
+    "irs",
+    "personalfinance20s",
+    "moneymadesimple"
+   ],
+   "description": "The 3-year rule for unclaimed tax refunds and the 2023 deadline.",
+   "thumbnail_text": "Unclaimed 2023 refund",
+   "sources": [
+    "https://www.irs.gov/refunds"
+   ],
+   "claims_to_verify": [
+    "3-year rule for refund claims",
+    "2023 returns: deadline April 15, 2027"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Transcripts",
+    "narration": "Lost the forms? An IRS wage and income transcript shows what employers reported, and you can request one through your IRS online account.",
+    "on_screen_text": "Wage & income transcript",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a document with lines. No text, no logos, no real people."
+   },
+   {
+    "heading": "Offsets",
+    "narration": "Heads up: a refund can be reduced to cover certain other debts, like past-due child support. You'd get a notice explaining it.",
+    "on_screen_text": "Refunds can be offset",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin diverted to another jar. No text, no logos, no real people."
+   },
+   {
+    "heading": "While you're at it",
+    "narration": "And search your state's official unclaimed property site too. Old paychecks and deposits end up there more often than people think.",
+    "on_screen_text": "Also search unclaimed property",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a box. No text, no logos, no real people."
+   }
+  ]
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Beneficiary forms on retirement accounts and life insurance generally override a will, so check and update them each spring.",
+  "script": {
+   "title": "Your 401(k) beneficiary form can beat your will",
+   "hook": "Your 401(k) beneficiary form can override your will. Check it in 5 minutes.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Your 401(k) beneficiary form can override your will. Check it in five minutes.",
+     "on_screen_text": "Beneficiary form > will",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small form with a heart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why",
+     "narration": "Retirement accounts and life insurance generally pay whoever is listed as beneficiary, even if a will says something different.",
+     "on_screen_text": "Listed beneficiary gets it",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow from an account to a person icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Check",
+     "narration": "Log in to your 401(k), any IRAs and any life insurance. Look for the beneficiary section and make sure it's current.",
+     "on_screen_text": "401(k) · IRA · life insurance",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small folders. No text, no logos, no real people."
+    },
+    {
+     "heading": "Update",
+     "narration": "Update it after big changes: marriage, divorce, a baby, or losing someone you'd listed.",
+     "on_screen_text": "Update after life changes",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a ring, a broken heart and a baby bottle. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Spring money check: your beneficiaries.\n\nRetirement accounts and life insurance generally go to the person named on the beneficiary form, even if your will says otherwise.\n\nCheck your 401(k), IRAs and life insurance today, and add a contingent (backup) beneficiary.\n\nEducational, not legal advice.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "beneficiary",
+    "401k",
+    "springcleaning",
+    "lifeinsurance",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Why beneficiary forms matter and how to check yours in five minutes.",
+   "thumbnail_text": "Check your beneficiary",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/rollovers-of-retirement-plan-and-ira-distributions"
+   ],
+   "claims_to_verify": [
+    "Beneficiary designations generally control over a will for these accounts",
+    "Spousal consent rules may apply for 401(k)s"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Backup",
+    "narration": "Add a contingent beneficiary too. That's the backup if your first choice can't inherit.",
+    "on_screen_text": "Add a backup",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two person icons, one behind the other. No text, no logos, no real people."
+   },
+   {
+    "heading": "Bank accounts",
+    "narration": "Many banks also let you add a payable-on-death beneficiary to checking and savings. It's usually a quick form.",
+    "on_screen_text": "Banks: payable on death",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bank with a small heart. No text, no logos, no real people."
+   },
+   {
+    "heading": "Married?",
+    "narration": "If you're married and want someone other than your spouse on a 401(k), federal rules usually require your spouse's written consent.",
+    "on_screen_text": "401(k): spouse consent rules",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two rings and a pen. No text, no logos, no real people."
+   },
+   {
+    "heading": "Where it hides",
+    "narration": "On most 401(k) sites, it's under profile, account settings or beneficiaries. Life insurance through work is often in your benefits portal, separate from the 401(k).",
+    "on_screen_text": "Profile · settings · benefits portal",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a small menu. No text, no logos, no real people."
+   },
+   {
+    "heading": "Percentages",
+    "narration": "You can usually split it by percentage, like fifty-fifty between two people. Just make sure the numbers add up to one hundred.",
+    "on_screen_text": "Splits must total 100%",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a pie chart in two halves. No text, no logos, no real people."
+   }
+  ]
+ },
+ {
+  "format": "short",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Free weekly credit reports from all three bureaus at AnnualCreditReport.com; a 10-minute spring check for errors and unfamiliar accounts.",
+  "script": {
+   "title": "Spring check: your 3 credit reports in 10 minutes",
+   "hook": "Your 3 credit reports are free, every week. Here's the 10-minute check.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Your three credit reports are free, every week. Here's the ten-minute spring check.",
+     "on_screen_text": "3 reports · free · 10 minutes",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding three small folders. No text, no logos, no real people."
+    },
+    {
+     "heading": "Where",
+     "narration": "Go to AnnualCreditReport dot com. That's the official free site. Pull Equifax, Experian and TransUnion.",
+     "on_screen_text": "AnnualCreditReport.com",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "Look for",
+     "narration": "Accounts you don't recognize, late payments you know were on time, wrong balances, and addresses you never lived at.",
+     "on_screen_text": "Unknown accounts · wrong lates",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "Found an error? Dispute it with each bureau that shows it. It's free, and you don't need a company to do it.",
+     "on_screen_text": "Dispute it yourself, free",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "10-minute spring credit check:\n1. Go to AnnualCreditReport.com (the official free site)\n2. Pull all 3: Equifax, Experian, TransUnion\n3. Look for unknown accounts, wrong late payments, wrong balances, strange addresses\n4. Dispute errors directly with each bureau, for free\n\nChecking your own report never hurts your score.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "creditreport",
+    "creditscore",
+    "springcleaning",
+    "identitytheft",
+    "credittips",
+    "moneymadesimple"
+   ],
+   "description": "A 10-minute spring check of your three free credit reports.",
+   "thumbnail_text": "Free credit check",
+   "sources": [
+    "https://www.annualcreditreport.com/"
+   ],
+   "claims_to_verify": [
+    "Free weekly reports at AnnualCreditReport.com",
+    "Disputes are free"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Unknown accounts",
+    "narration": "An account you never opened can be a sign of identity theft. Report it at IdentityTheft dot gov and freeze your credit.",
+    "on_screen_text": "Unknown account? IdentityTheft.gov",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small shield over a document. No text, no logos, no real people."
+   },
+   {
+    "heading": "Score vs report",
+    "narration": "Your report isn't the same as your score. The report is the record; the score is math on top of it. Fixing the record fixes the math.",
+    "on_screen_text": "Report = record · score = math",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a folder next to a number badge. No text, no logos, no real people."
+   },
+   {
+    "heading": "Calendar it",
+    "narration": "Put a reminder in your calendar to do this every spring, or every few months. Ten minutes is cheap insurance.",
+    "on_screen_text": "Repeat every spring",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a flower. No text, no logos, no real people."
+   },
+   {
+    "heading": "How to dispute",
+    "narration": "When you dispute, be specific: which account, what's wrong, and what it should say. Attach proof, like a bank statement. Bureaus generally have about thirty days to investigate.",
+    "on_screen_text": "Be specific · attach proof · ~30 days",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a paperclip. No text, no logos, no real people."
+   }
+  ]
+ },
+ {
+  "format": "short",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "A 15-minute spring security clean-up: password manager, two-factor on email and bank, and recovery details.",
+  "script": {
+   "title": "Your email password protects your bank. 3 security fixes in 15 minutes",
+   "hook": "Your email password protects your bank account. 3 fixes in 15 minutes.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Your email password is protecting your bank account. Here are three fixes in fifteen minutes.",
+     "on_screen_text": "Email protects your bank",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a key and an envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why",
+     "narration": "Most password resets go to your email. If someone gets into your email, they can reset almost everything else.",
+     "on_screen_text": "Email = master key",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big key over smaller keys. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix 1 and 2",
+     "narration": "One: give your email a long, unique password. Two: turn on two-factor authentication for email and your bank.",
+     "on_screen_text": "Unique password · 2FA",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lock with two layers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix 3",
+     "narration": "Three: check your recovery phone number and backup email are current, so you can get back in if something goes wrong.",
+     "on_screen_text": "Update recovery info",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "15-minute spring security clean-up:\n1. Long, unique password on your email (a password manager helps)\n2. Two-factor authentication on email and your bank\n3. Current recovery phone and backup email\n\nBonus: a free credit freeze at all 3 bureaus blocks most new-account fraud.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "cybersecurity",
+    "passwords",
+    "identitytheft",
+    "springcleaning",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Three quick security fixes that protect your bank account, starting with your email.",
+   "thumbnail_text": "3 security fixes",
+   "sources": [
+    "https://consumer.ftc.gov/articles/what-know-about-credit-freezes-fraud-alerts"
+   ],
+   "claims_to_verify": [
+    "Email is commonly used for account recovery"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Password manager",
+    "narration": "A password manager remembers a different strong password for every site, so you only have to remember one.",
+    "on_screen_text": "One password to remember",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small vault with many keys. No text, no logos, no real people."
+   },
+   {
+    "heading": "Authenticator apps",
+    "narration": "If you can, use an authenticator app or a security key instead of text codes. They're harder to intercept.",
+    "on_screen_text": "App or key > text codes",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a small key. No text, no logos, no real people."
+   },
+   {
+    "heading": "Freeze too",
+    "narration": "And while you're in security mode, freeze your credit at all three bureaus. It's free and takes about fifteen minutes.",
+    "on_screen_text": "Free credit freeze",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three file cabinets with padlocks. No text, no logos, no real people."
+   },
+   {
+    "heading": "Old accounts",
+    "narration": "Bonus: delete old accounts you don't use anymore, especially shopping sites with a saved card. Fewer accounts means fewer places to get breached.",
+    "on_screen_text": "Delete old accounts",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a trash bin with small app icons. No text, no logos, no real people."
+   },
+   {
+    "heading": "Check breaches",
+    "narration": "If you've reused a password anywhere, assume it's been leaked at some point, and change it first on email and banking.",
+    "on_screen_text": "Reused? Change it first",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a key with a crack. No text, no logos, no real people."
+   }
+  ]
+ },
+ {
+  "format": "short",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "An old 401(k) from a previous job can be left, rolled into a new plan, or rolled into an IRA; cashing out usually costs tax plus a 10% penalty.",
+  "script": {
+   "title": "Forgot an old 401(k)? 3 places it can go",
+   "hook": "Left a job with a 401(k)? Here are 3 places it can go, and 1 to avoid.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Left a job with a 401(k) behind? Here are three places it can go, and one to avoid.",
+     "on_screen_text": "3 options + 1 to avoid",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small suitcase with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Option 1",
+     "narration": "Leave it in the old plan, if the plan allows it. Fine if the funds are good and cheap, but easy to forget.",
+     "on_screen_text": "1. Leave it",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin left in an old office. No text, no logos, no real people."
+    },
+    {
+     "heading": "Options 2 and 3",
+     "narration": "Roll it into your new employer's plan, or into an IRA, where you usually get more investment choices. Ask for a direct rollover.",
+     "on_screen_text": "2. New plan · 3. IRA",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin rolling to a new building. No text, no logos, no real people."
+    },
+    {
+     "heading": "Avoid",
+     "narration": "Avoid cashing it out early. You'll usually owe income tax plus a ten percent penalty, and lose the growth.",
+     "on_screen_text": "Avoid: cash-out (tax + 10%)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a warning sign over an open wallet. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Old 401(k) from a previous job? Options:\n1. Leave it in the old plan (if allowed)\n2. Roll it into your new employer's plan\n3. Roll it into an IRA\n\nAvoid cashing out before retirement age: usually income tax plus a 10% early withdrawal penalty, with exceptions. Ask for a direct rollover so nothing is withheld.\n\nInvesting involves risk. Not financial advice.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "401k",
+    "rollover",
+    "ira",
+    "springcleaning",
+    "retirementsavings",
+    "moneymadesimple"
+   ],
+   "description": "What to do with an old 401(k), and the option to avoid.",
+   "thumbnail_text": "Old 401(k)? 3 options",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/rollovers-of-retirement-plan-and-ira-distributions"
+   ],
+   "claims_to_verify": [
+    "Early distribution: income tax + 10% additional tax, with exceptions",
+    "Direct rollover avoids mandatory withholding"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Find it",
+    "narration": "Can't remember the details? Call your old employer's HR, or look for old statements from the plan provider. Your money is still yours.",
+    "on_screen_text": "Call old HR · check old statements",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a building icon. No text, no logos, no real people."
+   },
+   {
+    "heading": "Direct rollover",
+    "narration": "A direct rollover sends money straight from the old plan to the new account. If they mail you a check instead, taxes may be withheld and there's a deadline to redeposit.",
+    "on_screen_text": "Direct beats a check",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow straight between two buildings. No text, no logos, no real people."
+   },
+   {
+    "heading": "Check fees",
+    "narration": "Comparing options? Look at the fund fees in each place. A cheaper fund can matter more than which account it's in.",
+    "on_screen_text": "Compare fund fees",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a percent sign. No text, no logos, no real people."
+   }
+  ]
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Sell 3 unused items this spring and send the money straight to an emergency fund or a debt.",
+  "script": {
+   "title": "Sell 3 things this weekend, fund your emergency jar",
+   "hook": "Sell 3 things you don't use this weekend. Here's where the money should go.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Sell three things you don't use this weekend. Here's where that money should go.",
+     "on_screen_text": "Sell 3 things",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small box of items. No text, no logos, no real people."
+    },
+    {
+     "heading": "Pick",
+     "narration": "Look for things worth selling: old phones and tablets, furniture you don't use, gear from a hobby you stopped, unused gift cards.",
+     "on_screen_text": "Electronics · furniture · gear",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone, a chair and a bike. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sell safely",
+     "narration": "Meet in a public place, take cash or a payment app you trust, and never accept overpayments or send money back.",
+     "on_screen_text": "Public place · no overpayment",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two people meeting near a small shop. No text, no logos, no real people."
+    },
+    {
+     "heading": "Send it",
+     "narration": "Then move the money the same day: to your emergency fund if it's under a thousand, or to your highest-rate debt.",
+     "on_screen_text": "Same day → savings or debt",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow from cash into a jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Spring clean-out with a purpose:\n1. Pick 3 things you don't use (old electronics, furniture, hobby gear, unused gift cards)\n2. Sell safely: public meeting spot, trusted payment, never accept overpayment\n3. Move the money the same day: emergency fund under $1,000? Start there. Otherwise, the highest-rate debt.\n\nNo emergency fund yet? This is a great start.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "springcleaning",
+    "declutter",
+    "sidehustle",
+    "emergencyfund",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Turn three unused things into savings or a debt payment this weekend.",
+   "thumbnail_text": "Sell 3, save it",
+   "sources": [
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
+   ],
+   "claims_to_verify": [
+    "Overpayment scams are common in online marketplaces"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Wipe devices",
+    "narration": "Selling a phone or laptop? Back it up, sign out of every account, and do a full factory reset first.",
+    "on_screen_text": "Back up · sign out · reset",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a circular arrow. No text, no logos, no real people."
+   },
+   {
+    "heading": "Overpayment scam",
+    "narration": "If a buyer sends more than the price and asks for the difference back, that's a common scam. The original payment usually bounces later.",
+    "on_screen_text": "Overpaid? It's a scam",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a check with a warning sign. No text, no logos, no real people."
+   },
+   {
+    "heading": "Name the money",
+    "narration": "Give the money a name before it lands, like emergency fund. Money without a job tends to become takeout.",
+    "on_screen_text": "Name it before it lands",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a labelled jar. No text, no logos, no real people."
+   },
+   {
+    "heading": "Price it",
+    "narration": "To price it, search sold listings for the same item, not asking prices. Sold prices show what people actually paid.",
+    "on_screen_text": "Search SOLD listings",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a price tag. No text, no logos, no real people."
+   }
+  ]
+ },
+ {
+  "format": "short",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Renters insurance often covers liability, belongings stolen away from home, and extra living costs if your place becomes unlivable.",
+  "script": {
+   "title": "Renters insurance covers 3 things people don't expect",
+   "hook": "Renters insurance covers 3 things most people don't expect.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Renters insurance usually covers three things most people don't expect.",
+     "on_screen_text": "3 surprise coverages",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small umbrella over a house. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "One: liability. If someone gets hurt in your place, or you accidentally damage someone else's property, it can help cover costs.",
+     "on_screen_text": "1. Liability",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small figure slipping on a wet floor. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Two: your stuff away from home. A laptop stolen from your car or a suitcase from a hotel may be covered, subject to your deductible.",
+     "on_screen_text": "2. Belongings away from home",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop in a car window. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Three: extra living costs. If a fire makes your place unlivable, it can help pay for temporary housing.",
+     "on_screen_text": "3. Temporary housing",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small hotel with a bed. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Renters insurance often covers more than your stuff at home:\n1. Liability, if someone's hurt or you damage others' property\n2. Belongings stolen away from home (subject to the deductible)\n3. Additional living expenses if your place becomes unlivable\n\nPolicies vary. Read yours and check the limits and deductible. Your landlord's insurance generally doesn't cover your belongings.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "rentersinsurance",
+    "insurance",
+    "renting",
+    "moneytips",
+    "personalfinance20s",
+    "moneymadesimple"
+   ],
+   "description": "Three things renters insurance often covers that people don't expect.",
+   "thumbnail_text": "Renters insurance, decoded",
+   "sources": [
+    "https://content.naic.org/consumer/renters-insurance"
+   ],
+   "claims_to_verify": [
+    "Coverage varies by policy",
+    "Landlord policy generally doesn't cover tenant belongings"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Landlord's policy",
+    "narration": "Your landlord's insurance covers the building, not your belongings. That's the most common surprise after a fire or a break-in.",
+    "on_screen_text": "Landlord's policy ≠ your stuff",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a building with a separate small box. No text, no logos, no real people."
+   },
+   {
+    "heading": "Cash value or replacement",
+    "narration": "Check whether your policy pays actual cash value or replacement cost. Replacement cost pays closer to what it costs to buy new.",
+    "on_screen_text": "Actual cash value vs replacement",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two price tags. No text, no logos, no real people."
+   },
+   {
+    "heading": "List your stuff",
+    "narration": "Take a quick video of every room and save it in the cloud. If you ever file a claim, it makes listing what you had much easier.",
+    "on_screen_text": "Video every room",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone recording a room. No text, no logos, no real people."
+   },
+   {
+    "heading": "Cost",
+    "narration": "Get a quote before deciding it's too expensive. Prices depend on where you live and how much coverage you choose, and many people are surprised it's less than a streaming bundle.",
+    "on_screen_text": "Get a quote first",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small price tag next to an umbrella. No text, no logos, no real people."
+   }
+  ]
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "The end of March is the end of Q1: three questions to check whether this year's money goals are on track.",
+  "script": {
+   "title": "90 days into 2027: 3 money questions to ask now",
+   "hook": "90 days into the year. 3 questions tell you if your money goals are on track.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Ninety days into the year. Three questions tell you if your money goals are on track.",
+     "on_screen_text": "90 days · 3 questions",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small calendar with three pages torn. No text, no logos, no real people."
+    },
+    {
+     "heading": "Q1",
+     "narration": "One: what did I save in the last three months? Look at the actual number, not the plan.",
+     "on_screen_text": "1. What did I actually save?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a ruler next to it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Q2",
+     "narration": "Two: is my debt lower than on January first? Check the balances, not just the payments.",
+     "on_screen_text": "2. Is debt lower than Jan 1?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bar getting shorter. No text, no logos, no real people."
+    },
+    {
+     "heading": "Q3",
+     "narration": "Three: what's one thing to change for the next ninety days? Just one.",
+     "on_screen_text": "3. One change for the next 90 days",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single arrow pointing forward. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Quarter check-in (about 90 days into the year):\n1. What did I actually save in the last 3 months?\n2. Is my debt lower than on January 1?\n3. What's one thing I'll change for the next 90 days?\n\nWrite the answers down and set a reminder for the end of June.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "moneygoals",
+    "budgeting",
+    "quarterlyreview",
+    "savingmoney",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "A three-question quarter check-in for this year's money goals.",
+   "thumbnail_text": "Q1 money check",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "End of Q1 = March 31"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Behind?",
+    "narration": "Behind on your goal? That's useful information, not a failure. Either the plan was too ambitious or something changed. Adjust the number.",
+    "on_screen_text": "Behind = adjust, not quit",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a path with a small detour. No text, no logos, no real people."
+   },
+   {
+    "heading": "Ahead?",
+    "narration": "Ahead? Great. Pick where the extra goes now, before it becomes spending: savings, debt, or the next goal.",
+    "on_screen_text": "Ahead = give it a job",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar overflowing into another. No text, no logos, no real people."
+   },
+   {
+    "heading": "Calendar it",
+    "narration": "Put the next check-in in your calendar for the end of June. Four short check-ins a year beats one big resolution.",
+    "on_screen_text": "Next: end of June",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a star in June. No text, no logos, no real people."
+   },
+   {
+    "heading": "Write it down",
+    "narration": "Write the three answers in a note on your phone. Next quarter, you'll compare, and seeing your own progress is more motivating than any app.",
+    "on_screen_text": "Write it in a note",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a small notepad. No text, no logos, no real people."
+   },
+   {
+    "heading": "Make it a date",
+    "narration": "Some people turn it into a money date: a coffee, ten minutes, three questions. If you share finances, do it together.",
+    "on_screen_text": "Coffee + 10 minutes",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two mugs and a small calendar. No text, no logos, no real people."
+   }
+  ]
+ },
+ {
+  "format": "short",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Marketing emails and app notifications are designed to trigger spending; unsubscribing from 10 is a free spending cut.",
+  "script": {
+   "title": "Unsubscribe from 10 store emails: a free spending cut",
+   "hook": "Unsubscribe from 10 store emails today. It's the easiest spending cut there is.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Unsubscribe from ten store emails today. It's the easiest spending cut there is.",
+     "on_screen_text": "Unsubscribe from 10",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a stack of envelopes. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why",
+     "narration": "Sale emails and app notifications are designed to make you want something you weren't thinking about five minutes ago.",
+     "on_screen_text": "Built to create wants",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnet pulling a wallet. No text, no logos, no real people."
+    },
+    {
+     "heading": "How",
+     "narration": "Search your inbox for the word unsubscribe, start with the stores you buy from most, and click through ten.",
+     "on_screen_text": "Search 'unsubscribe'",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a search bar over an inbox. No text, no logos, no real people."
+    },
+    {
+     "heading": "Apps",
+     "narration": "Then turn off promotional notifications for shopping and food delivery apps in your phone settings.",
+     "on_screen_text": "Mute shopping app alerts",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a bell crossed out. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Free spending cut, 10 minutes:\n1. Search your inbox for \"unsubscribe\"\n2. Unsubscribe from the 10 stores that email you most\n3. Turn off promo notifications for shopping and delivery apps\n\nYou can still shop when you actually need something. You just stop getting asked every day.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "springcleaning",
+    "spendingless",
+    "budgeting",
+    "minimalism",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Unsubscribe from ten store emails and mute shopping app notifications: a free spending cut.",
+   "thumbnail_text": "Unsubscribe from 10",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "Marketing emails are designed to drive purchases"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Need a deal?",
+    "narration": "Worried about missing a sale? When you actually need something, search for a code then. You'll get the deal without the daily temptation.",
+    "on_screen_text": "Need it? Search for a code then",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a tag. No text, no logos, no real people."
+   },
+   {
+    "heading": "Saved cards",
+    "narration": "While you're at it, remove saved cards from shopping sites. Typing the number in adds just enough friction to make you think twice.",
+    "on_screen_text": "Remove saved cards",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card being removed from a phone. No text, no logos, no real people."
+   },
+   {
+    "heading": "Wishlist",
+    "narration": "Try a wishlist note instead. Add the thing, wait a week, and see if you still want it.",
+    "on_screen_text": "Wishlist · wait a week",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small notepad with a heart. No text, no logos, no real people."
+   },
+   {
+    "heading": "Texts too",
+    "narration": "Signed up for store texts to get a discount once? Reply stop. Those messages land on your lock screen, which is even harder to ignore.",
+    "on_screen_text": "Reply STOP to store texts",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a speech bubble. No text, no logos, no real people."
+   },
+   {
+    "heading": "Do it weekly",
+    "narration": "New ones will sneak back in. Unsubscribe from one or two every week as they arrive, and it stays manageable.",
+    "on_screen_text": "1–2 a week keeps it clean",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small broom over an inbox. No text, no logos, no real people."
+   }
+  ]
+ },
+ {
+  "format": "short",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "An amended return (Form 1040-X) fixes mistakes on a filed return; generally within 3 years, and you can often e-file it.",
+  "script": {
+   "title": "Made a mistake on your taxes? Form 1040-X in 4 steps",
+   "hook": "Made a mistake on your tax return? Here's the fix in 4 steps.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Made a mistake on a tax return you already filed? Here's the fix in four steps.",
+     "on_screen_text": "Fix it in 4 steps",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a form with a pencil eraser. No text, no logos, no real people."
+    },
+    {
+     "heading": "When",
+     "narration": "Use an amended return, Form 1040-X, for things like a missing W-2 or 1099, the wrong filing status, or a credit you forgot. Simple math errors are often fixed by the IRS.",
+     "on_screen_text": "Missing form · wrong status · missed credit",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a circled line. No text, no logos, no real people."
+    },
+    {
+     "heading": "How",
+     "narration": "Wait for the original return to process, then file the 1040-X, often electronically through your tax software, with the corrected numbers.",
+     "on_screen_text": "Wait · then file 1040-X",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Time",
+     "narration": "You generally have three years from when you filed, or two from when you paid, to claim a refund with it.",
+     "on_screen_text": "Usually up to 3 years",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with three pages. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "Mistake on a filed return? Amend it with IRS Form 1040-X:\n1. Wait for the original return to be processed\n2. Gather the corrected or missing forms\n3. File the 1040-X (often e-file through your tax software)\n4. Track it with the IRS \"Where's My Amended Return?\" tool\n\nGenerally: within 3 years of filing or 2 years of paying, whichever is later, to claim a refund.\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "taxes",
+    "amendedreturn",
+    "irs",
+    "taxseason",
+    "personalfinance20s",
+    "moneymadesimple"
+   ],
+   "description": "How to fix a mistake on a filed tax return with Form 1040-X.",
+   "thumbnail_text": "Fix a tax mistake",
+   "sources": [
+    "https://www.irs.gov/filing/amended-return-frequently-asked-questions"
+   ],
+   "claims_to_verify": [
+    "1040-X time limit: 3 years from filing or 2 years from payment",
+    "Amended returns can often be e-filed"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Owe more?",
+    "narration": "If the fix means you owe more, file and pay as soon as you can. Interest generally runs from the original due date.",
+    "on_screen_text": "Owe more? Fix it fast",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small clock and a coin. No text, no logos, no real people."
+   },
+   {
+    "heading": "Processing",
+    "narration": "Amended returns take longer to process than regular ones, often several months, so be patient.",
+    "on_screen_text": "Takes months, not weeks",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a slow snail carrying an envelope. No text, no logos, no real people."
+   },
+   {
+    "heading": "State too",
+    "narration": "If the change affects your state return, you may need to amend that one too.",
+    "on_screen_text": "Check your state return",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a map pin and a form. No text, no logos, no real people."
+   },
+   {
+    "heading": "Don't refile",
+    "narration": "Don't file a second regular return to fix a mistake. That can cause delays. The amended form is the right path.",
+    "on_screen_text": "Don't file a second 1040",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stop sign next to two forms. No text, no logos, no real people."
+   }
+  ]
+ },
+ {
+  "format": "short",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Common bank fees (monthly maintenance, overdraft, out-of-network ATM) can often be avoided by switching accounts or settings.",
+  "script": {
+   "title": "5 bank fees you can stop paying this month",
+   "hook": "5 bank fees you can stop paying this month.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Five bank fees you can probably stop paying this month.",
+     "on_screen_text": "5 fees to stop",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small receipt with lines crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "1 and 2",
+     "narration": "One: monthly maintenance fees. Many accounts waive them, or switch to a no-fee account. Two: overdraft fees. You can often opt out or link savings as a backup.",
+     "on_screen_text": "1. Monthly · 2. Overdraft",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bank with a small coin falling. No text, no logos, no real people."
+    },
+    {
+     "heading": "3 and 4",
+     "narration": "Three: out-of-network ATM fees. Use your bank's ATM finder. Four: paper statement fees. Go paperless.",
+     "on_screen_text": "3. ATM · 4. Paper statements",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an ATM and a paper being folded. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Five: foreign transaction fees on cards when you travel. Some cards charge none.",
+     "on_screen_text": "5. Foreign transaction fees",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a passport and a card. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "5 bank fees to stop paying:\n1. Monthly maintenance: check the waiver rules or switch to a no-fee account\n2. Overdraft: opt out, link savings, or set low-balance alerts\n3. Out-of-network ATMs: use your bank's ATM finder or get cash back at stores\n4. Paper statements: go paperless\n5. Foreign transaction fees: use a card without them when traveling\n\nLook through one month of statements and add up what you paid.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "bankfees",
+    "springcleaning",
+    "banking",
+    "savemoney",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Five common bank fees and how to stop paying each one.",
+   "thumbnail_text": "5 fees to cut",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/bank-accounts/"
+   ],
+   "claims_to_verify": [
+    "Overdraft opt-in rules apply to ATM and one-time debit transactions"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Find them",
+    "narration": "Search your last two statements for the word fee. Add them up. That's money you can usually get back every month.",
+    "on_screen_text": "Search statements for 'fee'",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a statement. No text, no logos, no real people."
+   },
+   {
+    "heading": "Ask for a refund",
+    "narration": "Got charged an overdraft fee once? Call and ask them to waive it. Banks often do for a first time.",
+    "on_screen_text": "Ask for a one-time waiver",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone call bubble. No text, no logos, no real people."
+   },
+   {
+    "heading": "Switch",
+    "narration": "If your bank won't budge, many online banks and credit unions offer checking with no monthly fee. Switching takes about an hour.",
+    "on_screen_text": "Switching takes ~1 hour",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow from one bank to another. No text, no logos, no real people."
+   },
+   {
+    "heading": "Add it up",
+    "narration": "Ten dollars a month in maintenance fees plus a couple of thirty-dollar overdrafts a year is about a hundred and eighty dollars a year, for nothing.",
+    "on_screen_text": "$10/mo + 2 × $30 ≈ $180/yr",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small pile of coins growing. No text, no logos, no real people."
+   },
+   {
+    "heading": "Alerts",
+    "narration": "Set a low-balance alert in your banking app, say at a hundred dollars. It's free, and it's the easiest way to stop overdrafts before they happen.",
+    "on_screen_text": "Low-balance alert at $100",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a bell icon. No text, no logos, no real people."
+   }
+  ]
+ },
+ {
+  "format": "short",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "When a card is replaced (expired, lost or after fraud), autopays tied to the old number can quietly fail and trigger late fees.",
+  "script": {
+   "title": "New card number? 5 autopays that quietly fail",
+   "hook": "Got a new card number? These 5 autopays can quietly fail.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Got a new card number after fraud or a lost card? These five autopays can quietly fail.",
+     "on_screen_text": "New card = 5 autopays to update",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a new card and an old one. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why",
+     "narration": "Some companies get your new card number automatically. Many don't, and the first sign is a late fee or a cancelled service.",
+     "on_screen_text": "Not all update automatically",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a broken chain link. No text, no logos, no real people."
+    },
+    {
+     "heading": "The 5",
+     "narration": "Check your phone bill, streaming services, insurance, utilities, and any gym or membership. They're the most common ones tied to cards.",
+     "on_screen_text": "Phone · streaming · insurance · utilities · gym",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. five small icons in a row. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "Pull up last month's card statement and update every recurring charge you see, today.",
+     "on_screen_text": "Update from last month's statement",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a statement with check marks. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one money move a week.",
+   "caption": "New card number (lost, expired or replaced after fraud)? Update your autopays before they fail:\n1. Phone bill\n2. Streaming and app subscriptions\n3. Insurance\n4. Utilities\n5. Gym and memberships\n\nEasiest method: go down last month's statement and update every recurring charge.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "autopay",
+    "creditcard",
+    "fraud",
+    "springcleaning",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "When your card number changes, update these autopays before they fail.",
+   "thumbnail_text": "Update 5 autopays",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/bank-accounts/"
+   ],
+   "claims_to_verify": [
+    "Some merchants receive updated card numbers automatically; many don't"
+   ]
+  },
+  "tiktok_extra": [
+   {
+    "heading": "Bills to checking",
+    "narration": "Better long-term: put fixed bills like rent, utilities and insurance on autopay from checking, not a card. Bank account numbers change far less often.",
+    "on_screen_text": "Fixed bills → checking",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow from a bank to a house. No text, no logos, no real people."
+   },
+   {
+    "heading": "Calendar it",
+    "narration": "Card expiring? The month is on the front of the card. Put a reminder in your calendar for the month before.",
+    "on_screen_text": "Remind yourself the month before",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a card icon. No text, no logos, no real people."
+   },
+   {
+    "heading": "After fraud",
+    "narration": "If the new card came after fraud, also check that the old card is fully closed in your banking app, and review the last two statements for any other charges you don't recognize.",
+    "on_screen_text": "Check for other unknown charges",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a card. No text, no logos, no real people."
+   },
+   {
+    "heading": "Watch the first month",
+    "narration": "After you switch, watch the next statement to make sure each payment actually went through.",
+    "on_screen_text": "Check the next statement",
+    "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass over a statement. No text, no logos, no real people."
+   }
+  ]
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "A deadline-week checklist for the April 15, 2027 tax deadline: forms, file or extend, pay, split the refund, save copies.",
+  "script": {
+   "title": "Tax deadline week: the 6-step checklist",
+   "hook": "Tax deadline week? The 6-step checklist.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Tax deadline week? The 6-step checklist.",
+     "on_screen_text": "Deadline week checklist",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Gather every form: W-2s, 1099s, 1098s for student loan interest or a mortgage.",
+     "on_screen_text": "1. Every form",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stack of small forms. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Check last year's return for anything you might have forgotten this year.",
+     "on_screen_text": "2. Compare to last year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two forms side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Not ready? File an extension by April 15. It's more time to file, not to pay.",
+     "on_screen_text": "3. Extend if needed",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with an arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Owe? Pay free with IRS Direct Pay, or set up a payment plan.",
+     "on_screen_text": "4. Pay (Direct Pay is free)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a bank icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Getting a refund? Pick direct deposit, and split it if you want.",
+     "on_screen_text": "5. Direct deposit",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an arrow into a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Save a PDF of the return and your confirmation in one folder.",
+     "on_screen_text": "6. Save copies",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a folder with a check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Tax deadline week checklist (deadline Thursday, April 15, 2027):\n1. Gather every W-2, 1099 and 1098\n2. Compare against last year's return\n3. Not ready? File an extension (Form 4868)\n4. Owe? IRS Direct Pay is free, or ask about a payment plan\n5. Refund? Choose direct deposit (you can split it)\n6. Save a PDF of the return and the confirmation\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "taxdeadline",
+    "taxseason",
+    "irs",
+    "taxchecklist",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "A six-step checklist for tax deadline week.",
+   "thumbnail_text": "Deadline week checklist",
+   "sources": [
+    "https://www.irs.gov/filing/get-an-extension-to-file-your-tax-return",
+    "https://www.irs.gov/payments",
+    "https://www.irs.gov/refunds"
+   ],
+   "claims_to_verify": [
+    "April 15, 2027 is a Thursday",
+    "Form 4868 extends filing, not payment"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "What a tax extension does and doesn't do, in five slides.",
+  "script": {
+   "title": "Tax extension: 5 things it does and doesn't do",
+   "hook": "5 things a tax extension does, and doesn't do.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "5 things a tax extension does, and doesn't do.",
+     "on_screen_text": "Extension: yes and no",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Does",
+     "narration": "It gives you about six more months to file, generally to mid-October.",
+     "on_screen_text": "✓ More time to file",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar flipping forward. No text, no logos, no real people."
+    },
+    {
+     "heading": "Does",
+     "narration": "It's generally automatic. File Form 4868, or pay and mark the payment as an extension.",
+     "on_screen_text": "✓ Usually automatic",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a check mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Doesn't",
+     "narration": "It doesn't give you more time to pay. Tax owed is still due in April.",
+     "on_screen_text": "✗ More time to pay",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a clock with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Doesn't",
+     "narration": "It doesn't stop interest or late-payment penalties on unpaid tax.",
+     "on_screen_text": "✗ Stop interest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small meter ticking. No text, no logos, no real people."
+    },
+    {
+     "heading": "Doesn't",
+     "narration": "It doesn't trigger an audit. Extensions are routine.",
+     "on_screen_text": "✗ Trigger an audit",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calm folder. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Tax extension (Form 4868):\n✓ About 6 more months to file\n✓ Generally automatic\n✗ Doesn't extend time to pay\n✗ Doesn't stop interest or late-payment penalties\n✗ Isn't a red flag. Extensions are routine\n\nEstimate what you owe and pay by April 15.\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "taxextension",
+    "taxdeadline",
+    "irs",
+    "taxes",
+    "taxseason",
+    "moneymadesimple"
+   ],
+   "description": "What a tax extension does and doesn't do.",
+   "thumbnail_text": "Extension: yes and no",
+   "sources": [
+    "https://www.irs.gov/filing/get-an-extension-to-file-your-tax-return",
+    "https://www.irs.gov/payments/failure-to-pay-penalty"
+   ],
+   "claims_to_verify": [
+    "Automatic 6-month extension to file",
+    "Extensions are routine"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Compare late filing vs late payment penalties with a $1,000 example.",
+  "script": {
+   "title": "Late filing vs late paying: the $1,000 example",
+   "hook": "Owe $1,000 and file 3 months late? Here's what it costs vs paying late.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Owe $1,000 and file 3 months late? Here's what it costs vs paying late.",
+     "on_screen_text": "~$150 vs ~$15",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Late filing",
+     "narration": "Generally 5% of unpaid tax per month or part of a month, up to 25%.",
+     "on_screen_text": "File late: 5%/month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tall stack of coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Late paying",
+     "narration": "Generally 0.5% per month, up to 25%.",
+     "on_screen_text": "Pay late: 0.5%/month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short stack of coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Example",
+     "narration": "$1,000 unpaid for 3 months: about $150 if you didn't file, about $15 if you filed but paid late.",
+     "on_screen_text": "~$150 vs ~$15",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two piles side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "Plus",
+     "narration": "Interest applies to unpaid tax either way.",
+     "on_screen_text": "+ interest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small percent sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "So",
+     "narration": "File on time, even if you can't pay in full.",
+     "on_screen_text": "Always file on time",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a check mark on a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Owe $1,000 and are 3 months late? (Simplified)\n• Didn't file: failure-to-file penalty ≈ 5% × 3 = ~$150\n• Filed on time, paid late: failure-to-pay ≈ 0.5% × 3 = ~$15\n• Interest applies in both cases\n\nFile on time even if you can't pay.\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "taxes",
+    "irs",
+    "taxdeadline",
+    "owetaxes",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Late filing vs late payment penalties, compared with a simple $1,000 example.",
+   "thumbnail_text": "~$150 vs ~$15",
+   "sources": [
+    "https://www.irs.gov/payments/failure-to-file-penalty",
+    "https://www.irs.gov/payments/failure-to-pay-penalty"
+   ],
+   "claims_to_verify": [
+    "Simplified: when both apply, FTF is reduced by FTP; minimum penalty rules apply over 60 days late"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Four ways to pay the IRS and what each costs.",
+  "script": {
+   "title": "4 ways to pay the IRS, and what each costs",
+   "hook": "4 ways to pay the IRS, and what each one costs.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "4 ways to pay the IRS, and what each one costs.",
+     "on_screen_text": "4 ways to pay",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Direct Pay from your bank account. Free, no sign-up.",
+     "on_screen_text": "1. Direct Pay: free",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a bank icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Your IRS online account, which also shows your balance and history. Free.",
+     "on_screen_text": "2. IRS online account: free",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a small profile. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Debit or credit card through an approved processor. Processing fees apply.",
+     "on_screen_text": "3. Card: fees apply",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card with a coin falling. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "A payment plan if you can't pay in full. Setup fees vary; online is usually cheaper.",
+     "on_screen_text": "4. Payment plan",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a long arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Avoid",
+     "narration": "Never pay with gift cards or crypto to someone who calls you. That's a scam.",
+     "on_screen_text": "Gift cards? Scam",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gift card with a warning sign. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "4 ways to pay the IRS:\n1. Direct Pay (bank account): free\n2. IRS online account: free\n3. Debit/credit card via approved processors: fees apply\n4. Payment plan: setup fees vary, usually lower online\n\nThe IRS doesn't demand gift cards, wire transfers to strangers, or crypto by phone.\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "taxes",
+    "irs",
+    "payingtaxes",
+    "taxscam",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Four ways to pay the IRS and what each one costs.",
+   "thumbnail_text": "4 ways to pay",
+   "sources": [
+    "https://www.irs.gov/payments",
+    "https://www.irs.gov/payments/payment-plans-installment-agreements"
+   ],
+   "claims_to_verify": [
+    "Direct Pay free",
+    "Card processor fees",
+    "IRS doesn't demand gift cards"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "IRS payment plans: short-term vs long-term, who qualifies, and how to apply.",
+  "script": {
+   "title": "Owe the IRS? Short-term vs long-term payment plans",
+   "hook": "Owe the IRS? 2 kinds of payment plans, explained.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Owe the IRS? 2 kinds of payment plans, explained.",
+     "on_screen_text": "IRS payment plans",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Short-term",
+     "narration": "Pay in full within 180 days. Generally no setup fee.",
+     "on_screen_text": "Short-term: up to 180 days",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Long-term",
+     "narration": "Monthly payments, often by automatic debit. Setup fees vary by method.",
+     "on_screen_text": "Long-term: monthly",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a long calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Online",
+     "narration": "Many people can apply online through the IRS website and get an answer right away.",
+     "on_screen_text": "Apply online",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a check mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Costs",
+     "narration": "Interest and a smaller late-payment penalty still apply until it's paid.",
+     "on_screen_text": "Interest still applies",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small meter. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tip",
+     "narration": "Compare it to other options. A plan usually beats carrying tax on a 24% credit card.",
+     "on_screen_text": "Plan > 24% card",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a scale tipping. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "IRS payment plans:\n• Short-term: pay in full within 180 days, generally no setup fee\n• Long-term: monthly payments; setup fees vary (lower for online + direct debit)\n• Interest and a reduced late-payment penalty still apply\n• Many people can apply online\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "irs",
+    "owetaxes",
+    "paymentplan",
+    "taxes",
+    "taxseason",
+    "moneymadesimple"
+   ],
+   "description": "Short-term vs long-term IRS payment plans.",
+   "thumbnail_text": "IRS payment plans",
+   "sources": [
+    "https://www.irs.gov/payments/payment-plans-installment-agreements"
+   ],
+   "claims_to_verify": [
+    "Short-term up to 180 days",
+    "Online application thresholds apply"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "A keep-or-shred guide for tax and money paperwork.",
+  "script": {
+   "title": "Keep or shred: the paperwork guide",
+   "hook": "Keep or shred? The money paperwork guide.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Keep or shred? The money paperwork guide.",
+     "on_screen_text": "Keep or shred",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Shred after use",
+     "narration": "ATM receipts and store receipts, once they match your statement (keep ones for returns or warranties).",
+     "on_screen_text": "Receipts: once matched",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a receipt and a shredder. No text, no logos, no real people."
+    },
+    {
+     "heading": "1 year",
+     "narration": "Monthly bank and card statements, unless they back up a tax item.",
+     "on_screen_text": "Statements: ~1 year",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small stack of statements. No text, no logos, no real people."
+    },
+    {
+     "heading": "3 years",
+     "narration": "Most tax returns and supporting documents.",
+     "on_screen_text": "Tax docs: ~3 years",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a folder labelled with a 3. No text, no logos, no real people."
+    },
+    {
+     "heading": "7 years",
+     "narration": "Tax records if you claimed a bad debt or worthless securities.",
+     "on_screen_text": "Special cases: 7 years",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a taller folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Keep long",
+     "narration": "Records for a home or investments until a few years after you sell. Birth certificates, Social Security cards, titles: keep safe.",
+     "on_screen_text": "Property + IDs: keep",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small locked box. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Keep or shred (general guide):\n• Receipts: once matched to statements (keep warranty/return ones)\n• Bank and card statements: about 1 year, unless needed for taxes\n• Tax returns and supporting docs: 3 years (longer in special cases)\n• Home and investment records: until a few years after you sell\n• IDs, titles, birth certificates: keep, securely\n\nShred anything with account or Social Security numbers.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "springcleaning",
+    "organization",
+    "taxrecords",
+    "declutter",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "What money paperwork to keep and what to shred.",
+   "thumbnail_text": "Keep or shred",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records"
+   ],
+   "claims_to_verify": [
+    "IRS general 3-year rule; 7 years for bad debt/worthless securities"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A 7-day spring clean for your finances, about 15 minutes a day.",
+  "script": {
+   "title": "Spring clean your money in 7 days, 15 minutes each",
+   "hook": "Spring clean your money in 7 days. 15 minutes a day.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Spring clean your money in 7 days. 15 minutes a day.",
+     "on_screen_text": "7-day money spring clean",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Day 1",
+     "narration": "Subscriptions: find and cancel what you don't use.",
+     "on_screen_text": "Day 1: subscriptions",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with icons. No text, no logos, no real people."
+    },
+    {
+     "heading": "Day 2",
+     "narration": "Bank fees: search statements for 'fee'.",
+     "on_screen_text": "Day 2: bank fees",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "Day 3",
+     "narration": "Credit reports: pull all 3 free.",
+     "on_screen_text": "Day 3: credit reports",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three folders. No text, no logos, no real people."
+    },
+    {
+     "heading": "Day 4",
+     "narration": "Passwords and two-factor on email and bank.",
+     "on_screen_text": "Day 4: security",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Day 5",
+     "narration": "Beneficiaries on retirement accounts and insurance.",
+     "on_screen_text": "Day 5: beneficiaries",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small heart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Day 6",
+     "narration": "Paperwork: keep, scan or shred.",
+     "on_screen_text": "Day 6: paperwork",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shredder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Day 7",
+     "narration": "Budget refresh: update your numbers for spring and summer.",
+     "on_screen_text": "Day 7: budget refresh",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a notepad with a sun. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Spring money clean-up, 15 minutes a day:\nDay 1: subscriptions\nDay 2: bank fees\nDay 3: free credit reports (all 3)\nDay 4: passwords + two-factor\nDay 5: beneficiaries\nDay 6: paperwork (keep, scan, shred)\nDay 7: budget refresh for spring and summer\n\nSave this and start Monday.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "springcleaning",
+    "budgeting",
+    "moneytips",
+    "financialhealth",
+    "declutter",
+    "moneymadesimple"
+   ],
+   "description": "A seven-day, 15-minutes-a-day spring clean for your finances.",
+   "thumbnail_text": "7-day money spring clean",
+   "sources": [
+    "https://consumer.ftc.gov/articles/how-cancel-subscriptions",
+    "https://www.annualcreditreport.com/",
+    "https://www.consumerfinance.gov/consumer-tools/bank-accounts/"
+   ],
+   "claims_to_verify": [
+    "Free weekly credit reports at AnnualCreditReport.com"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Where to find every subscription: four places to look.",
+  "script": {
+   "title": "Find every subscription: 4 places to look",
+   "hook": "Paying for subscriptions you forgot? Look in these 4 places.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Paying for subscriptions you forgot? Look in these 4 places.",
+     "on_screen_text": "Find every subscription",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Bank and card statements: the last 3 months, line by line.",
+     "on_screen_text": "1. Statements",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a statement with lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Your phone's app store subscriptions list.",
+     "on_screen_text": "2. App store",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with an app icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Email: search 'receipt', 'renewal' and 'trial'.",
+     "on_screen_text": "3. Email search",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a search bar. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "PayPal and other payment apps' automatic payments.",
+     "on_screen_text": "4. Payment apps",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with an arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Then",
+     "narration": "Keep, cancel or downgrade each one. Screenshot every cancellation.",
+     "on_screen_text": "Keep · cancel · downgrade",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small buttons. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Find every subscription:\n1. Bank and card statements (last 3 months, and scan 12 for annual ones)\n2. App store subscriptions on your phone\n3. Email: search \"receipt\", \"renewal\", \"trial\"\n4. PayPal and payment apps' automatic payments\n\nKeep, cancel or downgrade, and screenshot each cancellation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "subscriptions",
+    "springcleaning",
+    "budgeting",
+    "savemoney",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Four places to find every subscription you pay for.",
+   "thumbnail_text": "Find every subscription",
+   "sources": [
+    "https://consumer.ftc.gov/articles/how-cancel-subscriptions"
+   ],
+   "claims_to_verify": [
+    "App store subscription locations differ by phone"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Five things to look for on your credit reports during a spring check.",
+  "script": {
+   "title": "Credit report check: 5 things to look for",
+   "hook": "Checking your credit report? Look for these 5 things.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Checking your credit report? Look for these 5 things.",
+     "on_screen_text": "5 report red flags",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Accounts you never opened.",
+     "on_screen_text": "1. Unknown accounts",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a document with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Late payments you know were on time.",
+     "on_screen_text": "2. Wrong late payments",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a cross. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Wrong balances or credit limits.",
+     "on_screen_text": "3. Wrong balances",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bar with a wrong level. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Addresses or names you've never used.",
+     "on_screen_text": "4. Strange addresses",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a house with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Hard inquiries you didn't apply for.",
+     "on_screen_text": "5. Unknown inquiries",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "Dispute errors with each bureau for free. Unknown accounts? IdentityTheft.gov and a credit freeze.",
+     "on_screen_text": "Dispute free · freeze",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shield and a form. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Pull all 3 reports free at AnnualCreditReport.com and look for:\n1. Accounts you never opened\n2. Late payments that were actually on time\n3. Wrong balances or limits\n4. Addresses or names you never used\n5. Hard inquiries you didn't apply for\n\nDispute errors directly with each bureau, for free. Signs of identity theft? Start at IdentityTheft.gov and freeze your credit.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "creditreport",
+    "creditscore",
+    "identitytheft",
+    "credittips",
+    "springcleaning",
+    "moneymadesimple"
+   ],
+   "description": "Five things to look for when you check your credit reports.",
+   "thumbnail_text": "5 report red flags",
+   "sources": [
+    "https://www.annualcreditreport.com/",
+    "https://consumer.ftc.gov/articles/what-know-about-credit-freezes-fraud-alerts"
+   ],
+   "claims_to_verify": [
+    "Disputes are free with each bureau"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Four places to check beneficiaries.",
+  "script": {
+   "title": "Check your beneficiaries in 4 places",
+   "hook": "Your beneficiaries need checking in 4 places. Most people forget 2.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Your beneficiaries need checking in 4 places. Most people forget 2.",
+     "on_screen_text": "Check 4 beneficiaries",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Your 401(k) or 403(b) at work.",
+     "on_screen_text": "1. Workplace retirement plan",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an office building. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Any IRAs, including old ones.",
+     "on_screen_text": "2. IRAs",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Life insurance, including the policy through work.",
+     "on_screen_text": "3. Life insurance",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an umbrella with a heart. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Bank accounts, with a payable-on-death beneficiary.",
+     "on_screen_text": "4. Bank accounts (POD)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bank with a heart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Note",
+     "narration": "Beneficiary forms generally override a will for these accounts. Add a backup beneficiary too.",
+     "on_screen_text": "Forms beat wills · add a backup",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form over a scroll. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "4 places to check your beneficiaries:\n1. Workplace retirement plan (401(k)/403(b))\n2. IRAs, including old ones\n3. Life insurance, including through work\n4. Bank accounts (payable-on-death)\n\nBeneficiary forms generally control over a will for these. Update after marriage, divorce, a baby or a loss, and add a contingent beneficiary.\n\nEducational, not legal advice.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "beneficiary",
+    "estateplanning",
+    "401k",
+    "lifeinsurance",
+    "springcleaning",
+    "moneymadesimple"
+   ],
+   "description": "Four places to check and update your beneficiaries.",
+   "thumbnail_text": "Check 4 beneficiaries",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/rollovers-of-retirement-plan-and-ira-distributions"
+   ],
+   "claims_to_verify": [
+    "Beneficiary designations generally override wills for these accounts"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "A five-step digital security clean-up for your money accounts.",
+  "script": {
+   "title": "5-step security clean-up for your money accounts",
+   "hook": "5 steps to lock down your money accounts this spring.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "5 steps to lock down your money accounts this spring.",
+     "on_screen_text": "Lock it down",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "A password manager, so every account gets a unique password.",
+     "on_screen_text": "1. Password manager",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small vault with keys. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Two-factor authentication on email, bank and investment accounts.",
+     "on_screen_text": "2. Two-factor",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a lock with two layers. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Current recovery phone and backup email.",
+     "on_screen_text": "3. Recovery info",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone with a check. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Transaction alerts on every card.",
+     "on_screen_text": "4. Alerts",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bell icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "A free credit freeze at all 3 bureaus.",
+     "on_screen_text": "5. Credit freeze",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three file cabinets with padlocks. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Spring security clean-up:\n1. Password manager: unique password everywhere\n2. Two-factor on email, bank and investments (authenticator app beats texts)\n3. Update recovery phone and backup email\n4. Transaction alerts on every card\n5. Free credit freeze at Equifax, Experian and TransUnion\n\nStart with your email. It's the key to everything else.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "cybersecurity",
+    "identitytheft",
+    "creditfreeze",
+    "springcleaning",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Five steps to secure your money accounts.",
+   "thumbnail_text": "Lock it down",
+   "sources": [
+    "https://consumer.ftc.gov/articles/what-know-about-credit-freezes-fraud-alerts"
+   ],
+   "claims_to_verify": [
+    "Credit freezes are free by federal law"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "Four choices for an old 401(k), with pros and cons.",
+  "script": {
+   "title": "Old 401(k)? 4 choices, compared",
+   "hook": "Old 401(k) from a past job? 4 choices, compared.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Old 401(k) from a past job? 4 choices, compared.",
+     "on_screen_text": "Old 401(k) options",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Leave it",
+     "narration": "Leave it in the old plan, if allowed. Easy, but easy to forget, and choices may be limited.",
+     "on_screen_text": "1. Leave it",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin in an old building. No text, no logos, no real people."
+    },
+    {
+     "heading": "New plan",
+     "narration": "Roll into your new 401(k). Everything in one place.",
+     "on_screen_text": "2. Roll to new plan",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin rolling to a new building. No text, no logos, no real people."
+    },
+    {
+     "heading": "IRA",
+     "narration": "Roll into an IRA. Usually more investment choices.",
+     "on_screen_text": "3. Roll to an IRA",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a coin rolling into a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cash out",
+     "narration": "Cash it out. Usually income tax plus a 10% penalty if early. Generally the costliest choice.",
+     "on_screen_text": "4. Cash out (costly)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a warning sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tip",
+     "narration": "Ask for a direct rollover, so the money moves straight across.",
+     "on_screen_text": "Ask for a direct rollover",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a straight arrow. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Old 401(k)? Your choices:\n1. Leave it in the old plan (if allowed)\n2. Roll it into your new employer's plan\n3. Roll it into an IRA\n4. Cash it out (usually income tax + 10% penalty if early)\n\nAsk for a direct rollover so nothing is withheld. Compare fund fees wherever it lands.\n\nInvesting involves risk. Not financial advice.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "401k",
+    "rollover",
+    "ira",
+    "retirementsavings",
+    "springcleaning",
+    "moneymadesimple"
+   ],
+   "description": "Four choices for an old 401(k), compared.",
+   "thumbnail_text": "Old 401(k) options",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/rollovers-of-retirement-plan-and-ira-distributions"
+   ],
+   "claims_to_verify": [
+    "Early distribution: tax + 10%, exceptions apply",
+    "Direct rollover avoids 20% withholding"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Recap of Rate My Budget #17–21: five fictional budgets and the one lesson from each.",
+  "script": {
+   "title": "Rate My Budget: 5 budgets, 5 lessons (#17–21)",
+   "hook": "5 budgets we rated this month, and the 1 lesson from each.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "5 budgets we rated this month, and the 1 lesson from each.",
+     "on_screen_text": "5 budgets, 5 lessons",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "#17",
+     "narration": "Owed $2,600 with $1,100 saved. Lesson: file on time, then plan the rest.",
+     "on_screen_text": "#17: file on time",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tax form with a check mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "#18",
+     "narration": "$310 a month in subscriptions. Lesson: rotate, don't stack.",
+     "on_screen_text": "#18: rotate subscriptions",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a revolving door. No text, no logos, no real people."
+    },
+    {
+     "heading": "#19",
+     "narration": "50/50 bills on $60K and $36K. Lesson: split by income.",
+     "on_screen_text": "#19: split by income",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an uneven pie chart. No text, no logos, no real people."
+    },
+    {
+     "heading": "#20",
+     "narration": "0% to a matched 401(k). Lesson: get the full match first.",
+     "on_screen_text": "#20: take the match",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gift box. No text, no logos, no real people."
+    },
+    {
+     "heading": "#21",
+     "narration": "$1,000 a month on one car. Lesson: the next car starts saving now.",
+     "on_screen_text": "#21: save for the next car",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a car on top. No text, no logos, no real people."
+    },
+    {
+     "heading": "Note",
+     "narration": "All examples are fictional, for illustration.",
+     "on_screen_text": "Fictional examples",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a sticky note. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Rate My Budget, this month's lessons (fictional examples):\n#17 Owed $2,600, had $1,100 → file on time, pay what you can, plan the rest\n#18 $310/month in subscriptions → rotate, don't stack\n#19 50/50 bills on very different incomes → split by income\n#20 0% into a matched 401(k) → take the full match first\n#21 $1,000/month car → the next car fund starts now\n\nFictional example budget for illustration, not a real person or submission. Want yours rated? DM us your numbers (no names, no screenshots with account details) and we'll anonymise them.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "ratemybudget",
+    "budgeting",
+    "moneylessons",
+    "budgetreview",
+    "personalfinance20s",
+    "moneymadesimple"
+   ],
+   "description": "Five fictional budgets rated this month and the lesson from each.",
+   "thumbnail_text": "5 budgets, 5 lessons",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "Fictional examples (label on screen)"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "How many bank accounts you actually need, and a simple setup with 3–4 accounts.",
+  "script": {
+   "title": "How many bank accounts do you need? The 4-account setup",
+   "hook": "How many bank accounts do you need? This 4-account setup covers most people.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "How many bank accounts do you need? This 4-account setup covers most people.",
+     "on_screen_text": "4-account setup",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Checking for bills: rent, utilities, autopays.",
+     "on_screen_text": "1. Bills checking",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a house with a bank icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Spending: your weekly money, on its own debit card (optional).",
+     "on_screen_text": "2. Spending (optional)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a wallet. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Emergency fund: high-yield savings, untouched.",
+     "on_screen_text": "3. Emergency savings",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an umbrella over a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Goals: sinking funds for car, gifts, travel, often as buckets.",
+     "on_screen_text": "4. Goal buckets",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. several small jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "Clean up",
+     "narration": "Old accounts you don't use? Close them, after moving every autopay and deposit.",
+     "on_screen_text": "Close old ones carefully",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a broom near a small bank. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "A simple account setup most people can use:\n1. Bills checking (rent, utilities, autopays)\n2. Spending account or card (optional, for weekly money)\n3. Emergency fund in high-yield savings\n4. Goal savings, often as named buckets\n\nClosing an old account? Move every autopay and direct deposit first, and wait for pending charges to clear.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "banking",
+    "budgeting",
+    "emergencyfund",
+    "springcleaning",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "A simple four-account setup and how to close old accounts safely.",
+   "thumbnail_text": "4-account setup",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/bank-accounts/",
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
+   ],
+   "claims_to_verify": [
+    "Account structures vary; this is a common approach"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Summer sinking funds to start in spring: six costs people forget.",
+  "script": {
+   "title": "6 summer costs to start saving for now",
+   "hook": "6 summer costs to start saving for now, while there's time.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "6 summer costs to start saving for now, while there's time.",
+     "on_screen_text": "Summer costs, saved early",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Weddings: travel, gifts, outfits, bachelor and bachelorette trips.",
+     "on_screen_text": "1. Weddings",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small wedding cake. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Travel: flights, stays, and the spending once you're there.",
+     "on_screen_text": "2. Travel",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a suitcase. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Higher utility bills from air conditioning.",
+     "on_screen_text": "3. AC bills",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a fan and a sun. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Kids' camps or childcare gaps, if you're a parent.",
+     "on_screen_text": "4. Camps or childcare",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a tent. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Birthdays and graduations.",
+     "on_screen_text": "5. Birthdays + grads",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gift box. No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Car trips: tires, maintenance before a road trip.",
+     "on_screen_text": "6. Road-trip car prep",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a car with a wrench. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Summer sinking funds to start in spring:\n1. Weddings (travel, gifts, outfits, parties)\n2. Travel, including spending at the destination\n3. Higher AC and utility bills\n4. Camps or childcare gaps\n5. Birthdays and graduations\n6. Car maintenance before road trips\n\nAdd up your summer costs, divide by the months left until June, and automate it.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "sinkingfunds",
+    "summerbudget",
+    "budgeting",
+    "savingmoney",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Six summer costs to start a sinking fund for in spring.",
+   "thumbnail_text": "Summer costs, saved early",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "Divide total by months remaining"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Form 1040-X basics in five slides.",
+  "script": {
+   "title": "Amending a tax return: 5 things to know",
+   "hook": "Need to fix a tax return you already filed? 5 things to know.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Need to fix a tax return you already filed? 5 things to know.",
+     "on_screen_text": "Fix a filed return",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Use Form 1040-X for a missing form, wrong filing status, or a missed credit.",
+     "on_screen_text": "1. What it's for",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a form with a circled line. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Wait until the original return is processed.",
+     "on_screen_text": "2. Wait for the original",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "You can often e-file it through tax software.",
+     "on_screen_text": "3. Often e-file",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Generally within 3 years of filing or 2 of paying to claim a refund.",
+     "on_screen_text": "4. Usually 3 years",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Track it with 'Where's My Amended Return?'. Processing can take months.",
+     "on_screen_text": "5. Track it",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Amending a return (Form 1040-X):\n1. For missing forms, wrong filing status, missed credits or deductions\n2. Wait until the original return is processed\n3. Often e-file through tax software\n4. Generally within 3 years of filing or 2 years of paying (to claim a refund)\n5. Track it with \"Where's My Amended Return?\"; processing can take months\n\nEducational, not tax or financial advice. Check IRS.gov for your situation.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "amendedreturn",
+    "taxes",
+    "irs",
+    "taxseason",
+    "personalfinance20s",
+    "moneymadesimple"
+   ],
+   "description": "Five things to know about amending a tax return.",
+   "thumbnail_text": "Fix a filed return",
+   "sources": [
+    "https://www.irs.gov/filing/amended-return-frequently-asked-questions"
+   ],
+   "claims_to_verify": [
+    "1040-X time limits",
+    "Processing times can be long"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A quarterly money review with five numbers to track.",
+  "script": {
+   "title": "Your quarterly money review: 5 numbers",
+   "hook": "Track these 5 numbers every 3 months and you'll always know where you stand.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Track these 5 numbers every 3 months and you'll always know where you stand.",
+     "on_screen_text": "5 numbers, every quarter",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Net worth: what you own minus what you owe.",
+     "on_screen_text": "1. Net worth",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a balance scale. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Savings rate: what you saved ÷ take-home pay.",
+     "on_screen_text": "2. Savings rate",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar with a percent. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Total debt balance, and the highest rate left.",
+     "on_screen_text": "3. Debt + top rate",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bar getting shorter. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Credit utilization: card balances ÷ limits.",
+     "on_screen_text": "4. Utilization",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card with a bar. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Emergency fund in months of essentials.",
+     "on_screen_text": "5. Months of cushion",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an umbrella over a calendar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Quarterly money review, 5 numbers:\n1. Net worth (own − owe)\n2. Savings rate (saved ÷ take-home)\n3. Total debt, and the highest rate left\n4. Credit utilization (balances ÷ limits; under 30% is a common guideline)\n5. Emergency fund, in months of essentials\n\nWrite them in one note every 3 months. Direction matters more than the number.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "moneygoals",
+    "networth",
+    "budgeting",
+    "quarterlyreview",
+    "personalfinance20s",
+    "moneymadesimple"
+   ],
+   "description": "Five numbers to track in a quarterly money review.",
+   "thumbnail_text": "5 numbers, every quarter",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/",
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
+   ],
+   "claims_to_verify": [
+    "Utilization guideline under 30%"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Six categories of unused stuff people commonly sell, and how to sell safely.",
+  "script": {
+   "title": "6 things worth selling in a spring clear-out",
+   "hook": "6 things worth selling in a spring clear-out.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "6 things worth selling in a spring clear-out.",
+     "on_screen_text": "Sell these 6",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Old phones, tablets and laptops (wipe them first).",
+     "on_screen_text": "1. Electronics",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a phone and a tablet. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Furniture you don't use.",
+     "on_screen_text": "2. Furniture",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a chair. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Hobby gear: bikes, cameras, instruments.",
+     "on_screen_text": "3. Hobby gear",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bike and a camera. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Clothes and shoes in good condition.",
+     "on_screen_text": "4. Clothes",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a folded jacket. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Unused gift cards, through reputable exchanges.",
+     "on_screen_text": "5. Gift cards",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a gift card. No text, no logos, no real people."
+    },
+    {
+     "heading": "Safety",
+     "narration": "Meet in public, use trusted payment, never accept overpayment.",
+     "on_screen_text": "Meet in public · no overpayment",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shield. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Spring clear-out, things worth selling:\n1. Old electronics (back up, sign out, factory reset)\n2. Furniture\n3. Hobby gear (bikes, cameras, instruments)\n4. Clothes and shoes in good condition\n5. Unused gift cards (reputable exchanges only)\n\nSell safely: public place, trusted payment, never accept overpayments. Send the money straight to savings or debt.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "declutter",
+    "springcleaning",
+    "sidehustle",
+    "savemoney",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Six things worth selling in a spring clear-out, and how to sell safely.",
+   "thumbnail_text": "Sell these 6",
+   "sources": [
+    "https://www.consumerfinance.gov/an-essential-guide-to-building-an-emergency-fund/"
+   ],
+   "claims_to_verify": [
+    "Overpayment scams are common"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "A five-check autopay audit.",
+  "script": {
+   "title": "Autopay audit: 5 checks in 15 minutes",
+   "hook": "Autopay saves you from late fees. Until it doesn't. 5 checks.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Autopay saves you from late fees. Until it doesn't. 5 checks.",
+     "on_screen_text": "5 autopay checks",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Amount: is it the full statement balance, or just the minimum?",
+     "on_screen_text": "1. Full balance or minimum?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a slider on a card. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Date: does it land after payday, not before?",
+     "on_screen_text": "2. After payday?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Account: is it pulling from the right account?",
+     "on_screen_text": "3. Right account?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two bank icons. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Card: is any autopay tied to an expired card number?",
+     "on_screen_text": "4. Expired cards?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card with a clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Still needed: is it paying for something you stopped using?",
+     "on_screen_text": "5. Still using it?",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a question mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Autopay audit, 15 minutes:\n1. Credit cards: autopay the full statement balance if you can, at least the minimum\n2. Dates: land after payday (many companies will move a due date if you ask)\n3. Right source account\n4. Any autopays still tied to an old card number?\n5. Anything you no longer use?\n\nSet low-balance alerts as a backup.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "autopay",
+    "budgeting",
+    "creditcard",
+    "springcleaning",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Five checks for every autopay you have.",
+   "thumbnail_text": "5 autopay checks",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/bank-accounts/"
+   ],
+   "claims_to_verify": [
+    "Many billers will change a due date on request"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Two places to look for unclaimed money: unclaimed tax refunds and state unclaimed property.",
+  "script": {
+   "title": "2 places to look for money that's already yours",
+   "hook": "There might be money with your name on it. 2 places to look.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "There might be money with your name on it. 2 places to look.",
+     "on_screen_text": "Unclaimed money",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Unfiled tax years. You generally have 3 years to claim a refund. 2023's window closes in April 2027.",
+     "on_screen_text": "1. Unclaimed tax refunds",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an old envelope. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "State unclaimed property: old paychecks, deposits, refunds, forgotten accounts.",
+     "on_screen_text": "2. State unclaimed property",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a box with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "How",
+     "narration": "Search your state's official site, linked from unclaimed.org. Searching and claiming are free.",
+     "on_screen_text": "Free on official sites",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "Every state",
+     "narration": "Search every state you've lived or worked in.",
+     "on_screen_text": "Search every state you've lived in",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a map with pins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Avoid",
+     "narration": "Be wary of anyone charging a fee to 'find' your money. You can do it free.",
+     "on_screen_text": "Don't pay finders",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a warning sign. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Money that might already be yours:\n1. Unclaimed tax refunds. Generally a 3-year window (2023 returns: April 2027)\n2. State unclaimed property: old paychecks, deposits, refunds and accounts\n\nSearch your state's official site (listed at unclaimed.org) for every state you've lived or worked in. Searching and claiming through official sites is free.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "unclaimedmoney",
+    "taxrefund",
+    "moneytips",
+    "springcleaning",
+    "personalfinance20s",
+    "moneymadesimple"
+   ],
+   "description": "Two places to search for money that's already yours.",
+   "thumbnail_text": "Unclaimed money",
+   "sources": [
+    "https://www.irs.gov/refunds",
+    "https://unclaimed.org/"
+   ],
+   "claims_to_verify": [
+    "3-year refund rule",
+    "Official state searches are free"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Four numbers to set before booking summer travel in spring.",
+  "script": {
+   "title": "Booking summer travel? Set these 4 numbers first",
+   "hook": "Booking summer travel? Set 4 numbers before you buy anything.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Booking summer travel? Set 4 numbers before you buy anything.",
+     "on_screen_text": "Trip budget, 4 numbers",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Total trip budget, including food and activities.",
+     "on_screen_text": "1. Total budget",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a suitcase with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "How much you'll have saved by the trip date.",
+     "on_screen_text": "2. Saved by the date",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Monthly amount to close the gap: total ÷ months left.",
+     "on_screen_text": "3. Monthly amount",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a jar filling. No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "A daily spending number for once you're there.",
+     "on_screen_text": "4. Daily number",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small wallet. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rule",
+     "narration": "Book with money you have, or a card you'll pay off the same month.",
+     "on_screen_text": "Pay it off the same month",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a card with a check mark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Before you book summer travel:\n1. Total trip budget (flights, stay, food, activities)\n2. What you'll have saved by then\n3. Monthly amount to close the gap (total ÷ months left)\n4. A daily spending number for the trip\n\nExample: $1,500 trip, 3 months away, $300 saved → $400/month.\n\nBook with cash you have, or a card you'll pay off the same month.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "travelbudget",
+    "summertravel",
+    "sinkingfunds",
+    "budgeting",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Four numbers to set before booking summer travel.",
+   "thumbnail_text": "Trip budget, 4 numbers",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/"
+   ],
+   "claims_to_verify": [
+    "($1,500 − $300) ÷ 3 = $400"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "money apps and tools, honestly compared",
+  "idea_angle": "Five bank fees to stop paying, with the fix for each.",
+  "script": {
+   "title": "Bank fee audit: 5 fees and how to stop each",
+   "hook": "5 bank fees, and how to stop paying each one.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "5 bank fees, and how to stop paying each one.",
+     "on_screen_text": "Stop 5 bank fees",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a fan of illustrated cards. No text, no logos, no real people."
+    },
+    {
+     "heading": "Monthly",
+     "narration": "Monthly maintenance: meet the waiver rule or switch to no-fee checking.",
+     "on_screen_text": "Monthly fee → waive or switch",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bank with a coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Overdraft",
+     "narration": "Overdraft: opt out for debit, link savings, set alerts.",
+     "on_screen_text": "Overdraft → opt out + alerts",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a bell. No text, no logos, no real people."
+    },
+    {
+     "heading": "ATM",
+     "narration": "Out-of-network ATMs: use your bank's ATM finder or cash back at a store.",
+     "on_screen_text": "ATM → in-network",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. an ATM. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paper",
+     "narration": "Paper statements: go paperless.",
+     "on_screen_text": "Paper → paperless",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a folded paper. No text, no logos, no real people."
+    },
+    {
+     "heading": "Foreign",
+     "narration": "Foreign transaction fees: travel with a card that doesn't charge them.",
+     "on_screen_text": "Foreign → no-fee card",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a passport. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Save this for your next money check-in. Follow for one money move a week.",
+   "caption": "Bank fee audit:\n• Monthly maintenance → meet the waiver or switch to a no-fee account\n• Overdraft → opt out on debit, link savings, low-balance alerts\n• Out-of-network ATM → bank's ATM finder or store cash back\n• Paper statements → go paperless\n• Foreign transaction → use a card without them\n\nSearch your statements for \"fee\" and add it up.\n\nFollow for one money move a week.",
+   "hashtags": [
+    "bankfees",
+    "banking",
+    "savemoney",
+    "springcleaning",
+    "moneytips",
+    "moneymadesimple"
+   ],
+   "description": "Five bank fees and the fix for each.",
+   "thumbnail_text": "Stop 5 bank fees",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/bank-accounts/"
+   ],
+   "claims_to_verify": [
+    "Overdraft opt-in rules for ATM/one-time debit"
+   ]
+  }
+ }
+]

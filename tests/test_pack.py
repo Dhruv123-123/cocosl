@@ -78,7 +78,8 @@ def test_export_writes_pack(factory, tmp_path):
 
 
 @pytest.mark.parametrize("month,start,days", [("month-2", date(2026, 12, 21), 31), ("month-3", date(2027, 1, 21), 31),
-                                              ("month-4", date(2027, 2, 21), 28)])
+                                              ("month-4", date(2027, 2, 21), 28),
+                                              ("month-5", date(2027, 3, 21), 31)])
 def test_tiktok_cuts_and_series(factory, month, start, days):
     items = _items(ROOT / "launch" / "money-made-simple" / month / "content.json")
     shorts = [i for i in items if i["format"] == "short"]
