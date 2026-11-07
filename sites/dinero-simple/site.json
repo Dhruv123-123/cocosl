@@ -198,9 +198,10 @@
   "tool_urls": {
     "calculators": "https://REPLACE_ME/money-calculators/es",
     "scam_checker": "https://REPLACE_ME/scam-checker/es",
-    "_note": "Set these to the deployed PR #8 apps (e.g. https://YOUR-APPS-SITE/money-calculators/es). Until then every free-tool link stays hidden."
+    "apps_es": "https://REPLACE_ME/es", "_note": "Set these to the deployed PR #8 apps (e.g. https://YOUR-APPS-SITE/money-calculators/es). apps_es is the apps site's Spanish hub with all 13 Spanish tools (planned: https://mms-tools.netlify.app/es; confirm the name at deploy). Until a URL is set its links stay hidden."
   },
   "free_tools": [
+    {"name": "Todas las herramientas gratis en español", "base": "apps_es", "path": "/", "short": "Calculadoras de sueldo por estado, deudas, préstamos estudiantiles, rentar o comprar y más, junto con el verificador de estafas. Todo gratis y en tu navegador.", "posts": []},
     {
       "name": "Calculadora de sueldo neto",
       "base": "site",

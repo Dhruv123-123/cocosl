@@ -64,11 +64,13 @@ def test_free_tools_hidden_until_their_url_is_set(tmp_path):
     shutil.copytree(DS, site, ignore=shutil.ignore_patterns("public"))
     cfg = json.loads((site / "site.json").read_text())
     cfg["tool_urls"] = {"calculators": "https://apps.example.org/money-calculators/es",
-                        "scam_checker": "https://apps.example.org/scam-checker/es"}
+                        "scam_checker": "https://apps.example.org/scam-checker/es",
+                        "apps_es": "https://apps.example.org/es"}
     (site / "site.json").write_text(json.dumps(cfg, ensure_ascii=False))
     out = _build(tmp_path / "b", "https://example.org", SITE_ROOT=str(site))
     links = (out / "links" / "index.html").read_text()
     assert "Herramientas gratis" in links and 'href="https://apps.example.org/scam-checker/es/"' in links
+    assert 'href="https://apps.example.org/es/"' in links  # the apps site's Spanish hub
     art = (out / "blog" / "avalancha-o-bola-de-nieve" / "index.html").read_text()
     assert 'href="https://apps.example.org/money-calculators/es/debt-payoff/"' in art
     assert (out / "products" / "el-paquete-dinero-simple" / "index.html").is_file()
