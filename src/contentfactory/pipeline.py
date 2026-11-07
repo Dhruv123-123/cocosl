@@ -296,12 +296,18 @@ class Factory:
         results = []
         if due and not self.settings.dry_run:
             from .publish.tokens import refresh_long_lived, refresh_tiktok_if_needed
-            try:
-                if any(p["platform"] == "tiktok" for p in due):
-                    refresh_tiktok_if_needed(self.settings)
-                refresh_long_lived(self.settings)
-            except Exception as e:  # a failed refresh surfaces as a publish error below
-                self.db.log("tokens.refresh_failed", "", None, {"error": str(e)})
+            brands_due: dict[str, set] = {}
+            for p in due:
+                b = self.db.scalar("SELECT brand FROM posts WHERE id = ?", [p["post_id"]]) or ""
+                brands_due.setdefault(b, set()).add(p["platform"])
+            for b, platforms in brands_due.items():
+                scoped = self.settings.for_brand(b)
+                try:
+                    if "tiktok" in platforms:
+                        refresh_tiktok_if_needed(scoped)
+                    refresh_long_lived(scoped)
+                except Exception as e:  # a failed refresh surfaces as a publish error below
+                    self.db.log("tokens.refresh_failed", "", None, {"error": str(e), "brand": b})
         for pub in due:
             post = self.db.get("posts", pub["post_id"])
             if not post or post["status"] not in ("scheduled", "published"):
@@ -330,7 +336,7 @@ class Factory:
                 continue
             attempts = pub["attempts"] + 1
             try:
-                publisher = get_publisher(pub["platform"], self.settings)
+                publisher = get_publisher(pub["platform"], self.settings.for_brand(post["brand"]))
                 res = publisher.publish(self.build_request(post, pub["platform"]))
             except Exception as e:  # PublishError, network errors, bad files: never leave it 'publishing'
                 retryable = getattr(e, "retryable", isinstance(e, (OSError, TimeoutError))
@@ -393,11 +399,13 @@ class Factory:
     # ------------------------------------------------------------------ analytics
     def collect_metrics(self) -> int:
         from .publish import get_publisher
-        pubs = self.db.query("SELECT * FROM publications WHERE status = 'published' AND remote_id != ''")
+        pubs = self.db.query("SELECT p.*, s.brand FROM publications p JOIN posts s ON s.id = p.post_id "
+                             "WHERE p.status = 'published' AND p.remote_id != ''")
         n = 0
         for pub in pubs:
             try:
-                snap = get_publisher(pub["platform"], self.settings, dry_run=False).fetch_metrics(pub["remote_id"])
+                snap = get_publisher(pub["platform"], self.settings.for_brand(pub["brand"]),
+                                     dry_run=False).fetch_metrics(pub["remote_id"])
             except Exception as e:
                 self.db.log("metrics.failed", "publication", pub["id"], {"error": str(e)})
                 continue
