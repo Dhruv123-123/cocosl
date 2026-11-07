@@ -611,7 +611,7 @@ def test_small_business_series_feeds_site_alerts_and_b2b_blocks():
     assert [b["key"] for b in data["blocks"]] == ["fake-invoices", "google-listing-calls", "domain-renewal-notices"]
     for b in data["blocks"]:
         assert keys <= set(b) and b["promise"] is False and "made-up" in b["example_label"]
-        assert all("ftc.gov" in u for u in b["sources"])
+        assert all("ftc.gov" in s["url"] and s["name"] for s in b["sources"])
         body = json.dumps({k: v for k, v in b.items() if k not in ("explainer", "key")}).lower()
         assert "scamdecoded" not in body and "guarantee" not in body and "http" not in json.dumps(b["steps"])
         article = next((site / "articles").glob(f"*-{b['key']}.md")).read_text()
@@ -668,3 +668,28 @@ def test_valentines_pack_new_romance_angles_in_free_slots():
             assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
     plan = (root / "POSTING_PLAN_VALENTINES_2027.md").read_text()
     assert all(f"#{n} " in plan for n in range(8))
+
+
+def test_scam_watch_weekly_issues_from_alert_cards():
+    import datetime as dt
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("scam_watch", CONTENT.parent / "scam-watch" / "build.py")
+    sw = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(sw)
+    issues = sw.build()
+    saved = json.loads((CONTENT.parent / "scam-watch" / "issues.json").read_text())["issues"]
+    assert [i["id"] for i in saved] == [i["id"] for i in issues], "issues.json is stale: run scam-watch/build.py"
+    assert len(issues) >= 11 and issues[0]["send_date"] == "2026-11-16"
+    keys = {"id", "n", "send_date", "deliver_by", "source", "topic", "subject", "preheader", "headline", "example_label",
+            "example", "explain", "tell", "promise", "steps", "quick_hits", "job", "lobby", "social", "brief", "sources"}
+    for i in issues:
+        assert set(i) == keys
+        assert dt.date.fromisoformat(i["send_date"]).weekday() == 0
+        assert dt.date.fromisoformat(i["deliver_by"]) < dt.date.fromisoformat(i["send_date"])
+        assert len(i["steps"]) == 3 and len(i["lobby"]["bullets"]) == 3 and "made-up" in i["example_label"]
+        assert all(s["name"] and s["url"].startswith("https://") for s in i["sources"])
+        member = json.dumps({k: v for k, v in i.items() if k not in ("source", "sources", "id")}).lower()
+        assert "scamdecoded" not in member and "scam decoded" not in member and "guarantee" not in member
+    # the week with the urgent toll alert leads with it
+    jan11 = next(i for i in issues if i["send_date"] == "2027-01-11")
+    assert "toll" in jan11["headline"].lower()
