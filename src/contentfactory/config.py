@@ -127,6 +127,7 @@ class Cadence(BaseModel):
     carousels_per_week: int = 3
     max_posts_per_day_per_platform: int = 2
     post_times: list[str] = Field(default_factory=lambda: ["12:30", "18:30"])  # local times
+    platform_times: dict[str, list[str]] = Field(default_factory=dict)  # e.g. {tiktok: ["19:00", "21:00"]}
     timezone: str = "America/New_York"
     # Worker settings for this brand (multi-brand runner)
     daily_at: str = ""            # local HH:MM for the daily ideas+drafts run; "" = DAILY_AT env (07:00)

@@ -62,7 +62,8 @@ def next_slot(db: DB, brand: BrandProfile, platform: str, after: datetime | None
             if sum(fdays.get(first + timedelta(days=i), 0) for i in range(7)) >= weekly:
                 return True
         return False
-    times = sorted(_parse_hhmm(t) for t in brand.cadence.post_times) or [time(12, 0)]
+    wanted = brand.cadence.platform_times.get(platform) or brand.cadence.post_times
+    times = sorted(_parse_hhmm(t) for t in wanted) or [time(12, 0)]
     cap = brand.cadence.max_posts_per_day_per_platform
     for day in range(horizon_days):
         date = (after + timedelta(days=day)).date()

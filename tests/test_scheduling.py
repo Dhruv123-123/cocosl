@@ -94,3 +94,14 @@ def test_weekly_format_cadence_spreads_posts(factory):
     # other formats aren't held back by the long-video cadence
     short = next_slot(factory.db, brand, "youtube", after=after, fmt="short")
     assert short.astimezone(tz).date() <= days[0] + timedelta(days=1)
+
+
+def test_platform_specific_post_times(factory):
+    from zoneinfo import ZoneInfo
+    brand = factory.brand("money-made-simple")
+    brand.cadence.platform_times = {"tiktok": ["21:15"]}
+    after = datetime(2026, 12, 1, 6, 0, tzinfo=timezone.utc)
+    tt = next_slot(factory.db, brand, "tiktok", after=after).astimezone(ZoneInfo(brand.cadence.timezone))
+    assert (tt.hour, tt.minute) == (21, 15)
+    yt = next_slot(factory.db, brand, "youtube", after=after).astimezone(ZoneInfo(brand.cadence.timezone))
+    assert f"{yt.hour:02d}:{yt.minute:02d}" in brand.cadence.post_times
