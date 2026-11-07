@@ -516,5 +516,514 @@
    "detail": "An animated tax staircase chart from the video's own example: $34,500 of taxable income filling the 10% and 12% steps, with marginal and effective rates labelled",
    "chapter": "Climbing the staircase"
   }
+ },
+ {
+  "format": "long",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "A net worth sheet built live for a fictional 26-year-old with a negative net worth: what counts as an asset, what to leave out, how to value a car, and why the six-month trend matters more than the number.",
+  "series": "money-basics",
+  "series_part": 5,
+  "content_id": "yt-basics-05",
+  "search_terms": [
+   "how to calculate net worth",
+   "net worth for beginners",
+   "negative net worth",
+   "net worth tracker"
+  ],
+  "thumbnail_alt": "Net worth sheet, live",
+  "script": {
+   "title": "Net Worth: How to Calculate Yours in 10 Minutes",
+   "hook": "Minus $3,000. That's the net worth of the person we're building a sheet for today, and it's a perfectly normal place to start.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Minus three thousand dollars. That's the net worth of the person we're building a sheet for today, and it's a perfectly normal place to start. A budget tells you what happens in a month. Net worth tells you where you stand overall, and whether you're moving forward over time. It's one number: everything you own, minus everything you owe. In this video we'll build a net worth sheet live, for a fictional twenty-six-year-old with student loans, a car loan and a small credit card balance. You'll see what to count, what to leave out, how to value the tricky stuff, and how to track it in ten minutes every six months. Open a blank spreadsheet or grab a piece of paper and follow along.",
+     "on_screen_text": "Net worth = own − owe",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a balance scale with coins on one side and bills on the other. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why net worth matters",
+     "narration": "Why bother? Because income alone can fool you. Someone earning a hundred thousand dollars a year who spends all of it and carries debt can be further behind than someone earning fifty thousand who saves steadily. Net worth captures the result of every decision at once: paying down debt raises it, saving raises it, and borrowing for things that lose value lowers it. It's also the number that keeps you motivated during the slow middle stretch of paying off debt, when the monthly budget feels the same but the bigger picture is quietly improving. You don't need to check it often. Twice a year is plenty. What matters is the direction.",
+     "on_screen_text": "Income ≠ progress",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two people with different paychecks and very different scales. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1: list your assets",
+     "narration": "Step one: list what you own that has real money value. Start with cash: checking and savings. Then retirement accounts like a 401(k) or IRA, and any brokerage account. Use the current balance from each app or statement. Then big things you could sell, like a car. For our fictional person: checking, twenty-four hundred dollars. Savings, five thousand. 401(k), ninety-eight hundred. Roth IRA, thirty-two hundred. That's twenty thousand four hundred in financial assets. We'll add the car in a moment, because it needs its own rule. Write each one on its own line with the date, so you can compare next time.",
+     "on_screen_text": "Cash + retirement + investments",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short list of labelled jars with small numbers. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2: value the tricky stuff",
+     "narration": "Now the car. The mistake people make is writing down what they paid. A car is worth what you could sell it for today, which is usually much less. Look up the private-sale value on a car pricing site, and if you want to be conservative, use the trade-in value instead. Our person's car is worth about eleven thousand dollars on resale. So total assets come to thirty-one thousand four hundred. What about furniture, clothes, a laptop or a phone? Leave them out. They're hard to value, they lose value quickly, and adding them makes the number look better without making you any better off. A home, if you own one, goes in at a realistic sale value, not the price you hope for.",
+     "on_screen_text": "Car = resale value · skip the furniture",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a car with a small price tag that is smaller than the original. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3: list every debt",
+     "narration": "Step three: list everything you owe, using the current payoff balances. Student loans, car loans, credit cards, personal loans, buy-now-pay-later plans, money owed to family, and a mortgage if you have one. For credit cards, use the current balance, not the minimum payment. Our person owes twenty-four thousand on student loans, eighty-five hundred on the car loan, and nineteen hundred on a credit card. Total debts: thirty-four thousand four hundred. While you're here, note each interest rate next to the balance. You'll want those when you decide what to pay off first, and having them in one place is surprisingly useful.",
+     "on_screen_text": "Debts: $34,400 (note the rates)",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a stack of bills with small percent tags. No text, no logos, no real people."
+    },
+    {
+     "heading": "Build the sheet",
+     "narration": "Now let's build the actual sheet. Column A is the account name. Column B is the type: asset or debt. Column C is today's balance. At the bottom, one formula adds up the assets, another adds up the debts, and a third subtracts debts from assets. For our person: thirty-one thousand four hundred minus thirty-four thousand four hundred. Net worth: minus three thousand dollars. Then add a new column each time you update it, every six months, with the date at the top. After a year you'll have three columns side by side, and the bottom row tells the story. That's the whole tool. No app required, though many budgeting apps can calculate this automatically if you link your accounts.",
+     "on_screen_text": "Assets $31,400 − debts $34,400 = −$3,000",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple spreadsheet with three columns and a total row. No text, no logos, no real people."
+    },
+    {
+     "heading": "Negative is normal",
+     "narration": "Let's talk about that minus sign. A negative net worth in your twenties is extremely common, mostly because of student loans. It doesn't mean you're failing. It means you invested in your education or bought a car before you had savings, and you're early in the process of paying it back. What matters is whether the number is rising. If our person pays down about four hundred dollars a month of debt and saves three hundred, net worth goes up by roughly seven hundred a month before any investment growth or the car losing value. Within six months, minus three thousand could be close to plus one thousand. That's real progress, even if the budget feels the same month to month.",
+     "on_screen_text": "Negative early is common · watch the trend",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a line chart rising from below zero toward the axis. No text, no logos, no real people."
+    },
+    {
+     "heading": "What moves the number",
+     "narration": "Here's what pushes net worth up: paying down debt principal, saving, investing, and your investments growing. Here's what pulls it down: new debt, spending savings, investments falling, and things like cars losing value over time. Notice that paying off a credit card and saving money have the same effect on net worth. Both add the payment to your side of the scale. That's why paying off high-interest debt is such a strong move. Also notice what doesn't help: buying something nice on a payment plan. The item usually loses value faster than the debt shrinks, so net worth drops even if the monthly payment feels fine.",
+     "on_screen_text": "Up: pay down, save, invest · down: new debt",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. arrows pushing a scale up and down. No text, no logos, no real people."
+    },
+    {
+     "heading": "How often to check",
+     "narration": "How often should you update it? Every six months is a good rhythm. January and July work well for most people. Checking weekly is a mistake, especially once you have investments, because markets move every day and you'll see noise instead of progress. Put two dates in your calendar right now, and make it a fifteen-minute job: open each account, update the balance, check the bottom row. If you want a single motivating number on your fridge, use the change since last time rather than the total. Plus three thousand eight hundred since January feels better and is more useful than staring at one big figure.",
+     "on_screen_text": "Every 6 months · track the change",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a calendar with two circled months. No text, no logos, no real people."
+    },
+    {
+     "heading": "Common mistakes",
+     "narration": "A few mistakes to avoid. Counting things at purchase price instead of resale value. Forgetting small debts like a buy-now-pay-later plan or money owed to a friend. Comparing your net worth with people online, many of whom are older, earn more, or aren't telling the full story. Leaving out retirement accounts because the money feels far away. They count. And panicking when the number dips because the market fell. Short dips are normal for investments, which is exactly why we only check twice a year. Your net worth is your scoreboard against your past self, nobody else.",
+     "on_screen_text": "Compare with past you, not others",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes looking in a mirror next to a small chart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. Net worth is everything you own minus everything you owe. List cash, retirement and investment accounts at today's balance. Value a car at what you could sell it for, and leave out furniture and gadgets. List every debt at its payoff balance, with the rate. Subtract, and write the date at the top. Our fictional person started at minus three thousand, which is normal, and can be positive within months by paying down debt and saving. Update it every six months and watch the change. The links below go to our debt payoff guide and our emergency fund guide. Next in the Money Basics series: index funds, explained for complete beginners.",
+     "on_screen_text": "Own − owe · every 6 months",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small chart that rises over time. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Net worth = what you own minus what you owe. We build the sheet live for a fictional 26-year-old who starts at −$3,000, and show why the six-month trend matters more than the number.\n\nExamples are hypothetical and for education only. Not financial advice.",
+   "hashtags": [
+    "networth",
+    "personalfinance",
+    "debtpayoff",
+    "moneytips",
+    "budgeting",
+    "moneymadesimple"
+   ],
+   "description": "How to calculate your net worth in 10 minutes, built live on a fictional 26-year-old: listing assets, valuing a car at resale, skipping furniture, listing debts with rates, building a simple sheet, and why a negative net worth early on is normal as long as the six-month trend rises.\n\nChapters\n0:00 Intro\n0:51 Why net worth matters\n1:37 Step 1: list your assets\n2:19 Step 2: value the tricky stuff\n3:10 Step 3: list every debt\n3:52 Build the sheet\n4:41 Negative is normal\n5:31 What moves the number\n6:15 How often to check\n6:59 Common mistakes\n7:39 Recap\n\nLinks\nDebt avalanche vs snowball: https://moneymadesimple.netlify.app/blog/debt-avalanche-vs-snowball/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-05\nHow to build an emergency fund: https://moneymadesimple.netlify.app/blog/how-to-build-an-emergency-fund/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-05\nBudgeting apps compared (some track net worth automatically): https://moneymadesimple.netlify.app/compare/best-budgeting-apps/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-05\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-05\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script written and fact-checked by a human.",
+   "thumbnail_text": "Negative net worth? Normal.",
+   "sources": [
+    "https://www.consumerfinance.gov/consumer-tools/budgeting/",
+    "https://www.investor.gov/introduction-investing/getting-started/assessing-your-risk-tolerance",
+    "https://www.consumerfinance.gov/consumer-tools/auto-loans/"
+   ],
+   "claims_to_verify": [
+    "2,400 + 5,000 + 9,800 + 3,200 + 11,000 = 31,400",
+    "24,000 + 8,500 + 1,900 = 34,400",
+    "31,400 − 34,400 = −3,000",
+    "Fictional example"
+   ],
+   "title_variants": [
+    "What's Your Net Worth? A 10-Minute Walkthrough",
+    "Negative Net Worth at 25? Here's Why That's Normal (and What to Track)"
+   ],
+   "hook_variants": [
+    "One number tells you if your money is actually moving forward. It takes 10 minutes to find.",
+    "Your budget shows a month. Your net worth shows the whole picture. Let's build it."
+   ]
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Screen recording of the net worth spreadsheet being built from scratch with the video's fictional numbers: three columns, three formulas, ending at −$3,000 with a second dated column added",
+   "chapter": "Build the sheet"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "first-time investing basics (index funds, retirement accounts)",
+  "idea_angle": "What an index fund is, index vs active, the main kinds (total market, S&P 500, international, bonds, target-date), and a fee-drag chart showing $200 a month for 30 years at an assumed 7% with a 0.03% vs a 1% fee. No fund picks.",
+  "series": "money-basics",
+  "series_part": 6,
+  "content_id": "yt-basics-06",
+  "search_terms": [
+   "index funds explained",
+   "what is an index fund",
+   "index fund vs mutual fund",
+   "expense ratio explained"
+  ],
+  "thumbnail_alt": "Fee drag over 30 years",
+  "script": {
+   "title": "Index Funds Explained for Complete Beginners",
+   "hook": "A 1% fee sounds tiny. On $200 a month for 30 years, it can cost about $42,000. Here's how index funds work, and why fees matter so much.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "A one percent fee sounds tiny. On two hundred dollars a month for thirty years, it can cost about forty-two thousand dollars. Here's how index funds work, and why fees matter so much. If you've heard people say just buy index funds, and nodded without being sure what that means, this is the video. We'll cover what a fund is, what makes an index fund different, the main kinds you'll see in a 401(k) or brokerage account, and the one number on a fund's page that matters most. We won't recommend specific funds, and nothing here is a promise about returns. Investing involves risk. The goal is that you understand what you're choosing.",
+     "on_screen_text": "Index funds, plain English",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a basket filled with many tiny different items. No text, no logos, no real people."
+    },
+    {
+     "heading": "What a fund is",
+     "narration": "Start with a fund. A fund pools money from lots of investors and buys a collection of investments, like stocks or bonds. When you buy a share of the fund, you own a small slice of everything inside it. That's the main advantage: with one purchase, even a small one, you can own pieces of hundreds or thousands of companies. You'll see two main structures. Mutual funds are bought and sold once a day at the day's closing price. ETFs, or exchange-traded funds, trade during the day like a stock. For long-term investors who just buy and hold, the difference matters much less than what the fund holds and what it costs.",
+     "on_screen_text": "1 share = a slice of everything",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a large basket with a small slice being lifted out. No text, no logos, no real people."
+    },
+    {
+     "heading": "What makes it an index fund",
+     "narration": "An index is simply a list of investments chosen by a rule. The S&P 500, for example, is a list of about five hundred large US companies. An index fund buys everything on the list, in the same proportions, and doesn't try to pick winners. That's called passive investing. The alternative is an actively managed fund, where a manager picks investments they think will do better than the market. Active funds usually charge higher fees for that work. And here's the key evidence: S&P's own long-running SPIVA reports have found that most actively managed large US stock funds trailed the S&P 500 over fifteen-year periods. Picking winners is hard, and the fees make it harder.",
+     "on_screen_text": "Index follows · active tries to beat",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a list on a clipboard next to a basket that matches it. No text, no logos, no real people."
+    },
+    {
+     "heading": "The main kinds you'll see",
+     "narration": "Here are the main kinds of index funds you'll see. A total US stock market fund holds thousands of US companies, large and small. An S&P 500 fund holds about five hundred large US companies. An international fund holds companies outside the US. A bond index fund holds many bonds, which are loans to governments and companies, and usually moves up and down less than stocks. And a target-date fund is a fund of funds: it mixes stock and bond index funds, and slowly shifts toward bonds as its target year, usually your rough retirement year, gets closer. In many 401(k) plans, the target-date fund is the default. For beginners, it's often the simplest one-fund choice.",
+     "on_screen_text": "Total market · S&P 500 · international · bonds · target-date",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. five small baskets in a row, each a different shape. No text, no logos, no real people."
+    },
+    {
+     "heading": "The one number: expense ratio",
+     "narration": "Now the most important number on any fund's page: the expense ratio. It's the yearly fee, as a percentage of what you have invested, taken out automatically. You never get a bill. It just quietly reduces your return. Broad index funds from large providers often charge somewhere around zero point zero three to zero point two percent a year. Actively managed funds often charge much more, sometimes around one percent or higher. On ten thousand dollars, zero point zero three percent is three dollars a year. One percent is a hundred dollars a year. That doesn't sound like much, but fees compound just like returns do, in the wrong direction. Let's see what that looks like over a career.",
+     "on_screen_text": "Expense ratio = the yearly fee",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small coin being skimmed off the top of a growing pile. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fee drag: the 30-year chart",
+     "narration": "Same investor, same deposits, two funds. Two hundred dollars a month for thirty years, and let's assume the investments themselves return seven percent a year on average. That's an assumption for illustration, not a promise, and real returns jump around. Fund A charges zero point zero three percent, so the investor keeps about six point nine seven percent. Fund B charges one percent, so they keep about six percent. Seventy-two thousand dollars goes in either way. After thirty years, Fund A grows to about two hundred forty-three thousand. Fund B grows to about two hundred one thousand. The difference is about forty-two thousand dollars, from a fee that looked like one percent. That's why the expense ratio is the first number to check.",
+     "on_screen_text": "0.03% → ~$243K · 1% → ~$201K",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two growth curves that start together and slowly separate. No text, no logos, no real people."
+    },
+    {
+     "heading": "Diversification and risk",
+     "narration": "Index funds spread your money across many companies, which is called diversification. If one company fails, it's a tiny part of the fund. But diversification doesn't remove market risk. When the whole market falls, index funds fall with it. Broad stock markets have had drops of thirty percent or more, and recoveries have sometimes taken years. That's why stock index funds are for money you won't need for at least five years, and why your emergency fund belongs in savings, not in the market. Bond funds and target-date funds can soften the swings, at the cost of usually lower long-term growth. There's no free lunch, just tradeoffs you choose on purpose.",
+     "on_screen_text": "Diversified still carries risk",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a basket on a gently rocking boat. No text, no logos, no real people."
+    },
+    {
+     "heading": "How to actually buy one",
+     "narration": "How do you actually buy one? If you have a 401(k), you already can. Log in, look at the fund list, and check the expense ratios. Many plans have a target-date fund and a few low-cost index funds. If you have an IRA or a brokerage account, search for the kind of fund you want, like total stock market index, and compare the expense ratios of a few options from large providers. Then set up an automatic monthly purchase. Buying a fixed amount every month, whatever the market is doing, is called dollar-cost averaging. It takes the guesswork out of timing, and it's how most people invest from their paycheck anyway.",
+     "on_screen_text": "401(k) list · IRA search · automate it",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a small recurring calendar icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Common mistakes",
+     "narration": "A few common mistakes. Owning five funds that all hold the same companies, which looks diversified but isn't. Checking the balance every day and selling during a drop. Chasing whichever fund did best last year. Ignoring fees, especially in older 401(k) plans with expensive options. And putting money in an IRA without choosing an investment, so it sits in cash for years. That last one is surprisingly common. After you contribute, check that the money actually bought the fund you picked. Simple, low-cost, automatic and left alone beats clever for most people.",
+     "on_screen_text": "Overlap · panic · chasing · fees · cash",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. five small warning signs along a path. No text, no logos, no real people."
+    },
+    {
+     "heading": "How much to put in",
+     "narration": "A common question: how much should go into index funds, and in what order? A typical sequence looks like this. First, a starter emergency fund in savings. Second, enough in your 401(k) to get the full employer match, which is often the best return available anywhere. Third, pay off high-interest debt like credit cards. Fourth, build the emergency fund to a few months of expenses. Then increase retirement contributions, often toward around fifteen percent of income including any match, through a 401(k), an IRA, or both. The exact order can vary with your situation. But notice that index funds come after the safety net, not before it. Money you might need next year doesn't belong in the stock market.",
+     "on_screen_text": "Safety net first, then invest",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a short staircase with a jar on the bottom step and a plant at the top. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. A fund pools money to buy many investments, so one share gives you a slice of all of them. An index fund follows a list, like the S&P 500, instead of trying to beat it, and usually charges much less. The main kinds are total market, S&P 500, international, bonds and target-date. The expense ratio is the first number to check: in our example, a one percent fee cost about forty-two thousand dollars over thirty years compared with zero point zero three percent. Diversification still leaves market risk, so only invest money you won't need for years. Next in the Money Basics series: how to buy your first car without overpaying.",
+     "on_screen_text": "Fund · index · kinds · fees · risk",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small basket and a tiny fee tag. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Index funds explained: what they are, the main kinds, and why the expense ratio matters. In our example a 1% fee costs about $42,000 over 30 years vs 0.03%.\n\nExamples use an assumed 7% return for illustration. Investing involves risk, including loss. Not financial advice.",
+   "hashtags": [
+    "indexfunds",
+    "investingforbeginners",
+    "expenseratio",
+    "retirement",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "Index funds explained for complete beginners: what a fund is, index vs actively managed funds, the main kinds (total market, S&P 500, international, bonds, target-date), the expense ratio, and a 30-year fee-drag chart at an assumed 7% showing how a 1% fee compares with 0.03%. No fund recommendations.\n\nChapters\n0:00 Intro\n0:46 What a fund is\n1:33 What makes it an index fund\n2:20 The main kinds you'll see\n3:08 The one number: expense ratio\n3:57 Fee drag: the 30-year chart\n4:48 Diversification and risk\n5:34 How to actually buy one\n6:19 Common mistakes\n6:58 How much to put in\n7:47 Recap\n\nLinks\nExpense ratios explained: https://moneymadesimple.netlify.app/blog/expense-ratios-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-06\nHow to start investing with $100 a month: https://moneymadesimple.netlify.app/blog/how-to-start-investing-with-100-a-month/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-06\nRobo-advisors compared: https://moneymadesimple.netlify.app/compare/best-robo-advisors/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-06\n401(k) match explained: https://moneymadesimple.netlify.app/blog/401k-match-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-06\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-06\n\nSome pages linked above include affiliate links. If you sign up through one, we may earn a commission at no cost to you. It never changes what we recommend.\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script written and fact-checked by a human.",
+   "thumbnail_text": "1% fee = $42K?",
+   "sources": [
+    "https://www.investor.gov/introduction-investing/investing-basics/investment-products/mutual-funds-and-exchange-traded-1",
+    "https://www.spglobal.com/spdji/en/research-insights/spiva/",
+    "https://www.investor.gov/financial-tools-calculators/calculators/mutual-fund-analyzer"
+   ],
+   "claims_to_verify": [
+    "$200/mo, 360 months: at 6.97%/12 ≈ $243K; at 6.0%/12 ≈ $201K; difference ≈ $42K",
+    "SPIVA: most active US large-cap funds underperformed the S&P 500 over 15 years (check latest report)",
+    "Typical broad index expense ratios ~0.03–0.2%",
+    "Assumed 7% is illustrative"
+   ],
+   "title_variants": [
+    "What Is an Index Fund? (Explained Simply, With Real Numbers)",
+    "Why a 1% Fee Can Cost You $42,000: Index Funds Explained"
+   ],
+   "hook_variants": [
+    "Instead of picking stocks, you can own a slice of hundreds of companies at once. That's an index fund.",
+    "Index funds explained in plain English: what they are, the main types, and the one number to check."
+   ]
+  },
+  "format_style": "explainer",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "A 30-year fee-drag chart from the video's own numbers: $200 a month at an assumed 7%, with a 0.03% fee reaching about $243K and a 1% fee about $201K",
+   "chapter": "Fee drag: the 30-year chart"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "credit scores and debt payoff",
+  "idea_angle": "Seven steps for a first car, counted down from budget to signing: total cost of ownership, pre-approval, used vs new, a pre-purchase inspection, the out-the-door price worksheet (filled in on camera), add-ons to decline and the long-loan trap.",
+  "series": "money-basics",
+  "series_part": 7,
+  "content_id": "yt-basics-07",
+  "search_terms": [
+   "how to buy a used car",
+   "first car buying tips",
+   "out the door price",
+   "car loan pre approval"
+  ],
+  "thumbnail_alt": "Out-the-door price",
+  "script": {
+   "title": "How to Buy Your First Car Without Overpaying (7 Steps)",
+   "hook": "7 steps to buy your first car without overpaying, counting down to the one most people skip: the out-the-door price.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "7 steps to buy your first car without overpaying, counting down to the one most people skip: the out-the-door price. A car is usually the second-biggest purchase people make, and for a first car it's often the biggest yet. It's also where a lot of people end up with a payment that squeezes their budget for six years. The good news is that most overpaying comes from doing things in the wrong order: falling in love with a car before setting a budget, or negotiating the monthly payment instead of the price. We'll go through seven steps, from budget to signing. Our example is a fictional buyer looking at a used car listed at fourteen thousand dollars.",
+     "on_screen_text": "7 steps, in order",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a car key with a small checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 7: set a total budget, not a payment",
+     "narration": "Step seven, the starting point: decide what you can afford in total, not per month. Include the car payment, insurance, gas or charging, maintenance, registration and parking. One common guideline is to keep total car costs around ten to fifteen percent of take-home pay. On a take-home of thirty-five hundred dollars, that's roughly three hundred fifty to five hundred twenty-five a month for everything, not just the loan. Insurance alone can be a hundred fifty or more for a young driver. So before you shop, get an insurance quote for the kind of car you're considering. Two cars at the same price can cost very different amounts to insure and repair.",
+     "on_screen_text": "Total car costs ≈ 10–15% of take-home",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small pie chart with a car-shaped slice. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 6: get pre-approved",
+     "narration": "Step six: get pre-approved for a loan before you visit a dealer. Apply with your bank or a credit union, which often offer good auto loan rates. Pre-approval tells you the rate and the maximum you can borrow, and it turns you into a cash buyer at the dealership: you're negotiating the car's price, not the financing. If the dealer offers a lower rate, great, take it. But now you have something to compare against. Several loan applications within a short window, often around two weeks, are usually treated as one inquiry for credit scoring, so shopping around for a rate is fine.",
+     "on_screen_text": "Pre-approval = a rate to beat",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a document with a check mark and a small bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 5: new, used or certified",
+     "narration": "Step five: decide between new, used and certified pre-owned. New cars lose value fastest in the first few years. Used cars cost less upfront but may need more repairs. Certified pre-owned cars are used cars inspected by the manufacturer's dealers, usually with an extended warranty, and they cost a bit more than regular used. For many first-time buyers, a reliable used car a few years old hits the sweet spot: someone else absorbed the steepest drop in value, and there's plenty of life left. Look up reliability ratings and common problems for the exact model and year, and check the vehicle history report for accidents and title issues.",
+     "on_screen_text": "New · used · certified pre-owned",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three small cars side by side with different tags. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 4: inspect before you buy",
+     "narration": "Step four: get a pre-purchase inspection for any used car. Take it to an independent mechanic you choose, not one the seller recommends. It often costs about a hundred to two hundred dollars and can uncover problems worth thousands. If the seller won't allow an inspection, walk away. At a dealership, look for the Buyers Guide sticker on the window, which federal rules require on used cars. It tells you whether the car comes with a warranty or is sold as is. Also take a proper test drive: highway, city, braking, parking. Turn the radio off and listen.",
+     "on_screen_text": "Independent inspection · Buyers Guide",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a mechanic looking under a car with a flashlight. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3: negotiate the out-the-door price",
+     "narration": "Step three is the one most people skip: negotiate the out-the-door price. That's the total you'll pay, including the car's price, sales tax, title and registration, and every dealer fee. Ask for it in writing, by email if you can, from more than one dealer. Never negotiate the monthly payment. A dealer can hit any monthly number by stretching the loan to seventy-two or eighty-four months, which costs you more in interest. If a salesperson asks what monthly payment you want, the answer is: I'm focused on the out-the-door price. Let's fill in the worksheet for our example on camera.",
+     "on_screen_text": "Negotiate the OUT-THE-DOOR price",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a single price tag with several smaller tags attached. No text, no logos, no real people."
+    },
+    {
+     "heading": "On camera: the out-the-door worksheet",
+     "narration": "This chapter is filmed on camera, with the host filling in an out-the-door worksheet by hand for our fictional car. Listed price: fourteen thousand. Negotiated price after comparing two other dealers: thirteen thousand two hundred. Sales tax at an example seven percent: about nine hundred twenty-four dollars. Title and registration: about two hundred fifty. Dealer documentation fee: three hundred ninety-nine, which varies a lot by state. Total out-the-door: about fourteen thousand seven hundred seventy-three dollars. Then the host crosses out two add-ons that were on the first quote: a twelve-hundred-dollar paint protection package and an eight-hundred-dollar extended warranty. Those two lines alone would have added two thousand dollars.",
+     "on_screen_text": "OTD ≈ $14,773 · add-ons crossed out",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a desk with a handwritten worksheet and a pen. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2: decline the extras",
+     "narration": "Step two: in the finance office, decline the extras you didn't plan for. Common ones are extended warranties, paint and fabric protection, VIN etching, nitrogen-filled tyres and pre-paid maintenance. Some can be useful, like gap insurance if you're putting very little down, but you can often buy those cheaper elsewhere, including from your own insurer or credit union. Read every line of the contract before you sign. Check that the price, rate and loan length match what you agreed. If something new appears, ask what it is, and ask for it to be removed. You're allowed to take time and say no.",
+     "on_screen_text": "Read every line · decline what you didn't plan",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a contract with several items crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1: keep the loan short",
+     "narration": "Step one, the final check: keep the loan as short as you can afford. On a twelve-thousand-dollar loan at eight percent, a forty-eight month loan costs about two thousand and sixty dollars in interest, at about two hundred ninety-three a month. Stretch it to seventy-two months and the payment drops to about two hundred ten, but interest rises to about three thousand one hundred fifty. And with a long loan, you can owe more than the car is worth for years, which is a problem if it's totalled or you need to sell. A bigger down payment helps too. If the shorter loan doesn't fit your budget, the car may be too expensive.",
+     "on_screen_text": "48 mo: ~$2,060 interest · 72 mo: ~$3,150",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two roads, one short and one long, with coins along them. No text, no logos, no real people."
+    },
+    {
+     "heading": "After you buy",
+     "narration": "After you buy, a few quick jobs. Set up autopay for the loan, and if you can, pay a little extra toward principal each month. Add the car to your insurance before you drive it home. Put the maintenance schedule from the owner's manual in your calendar, because regular oil changes and tyre rotations prevent the big repairs. And start a small car sinking fund, even thirty or forty dollars a month, for tyres, brakes and surprises. When the loan is paid off, keep sending the same payment into savings. That's how your next car gets paid for in cash.",
+     "on_screen_text": "Autopay · insurance · maintenance · sinking fund",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a car parked next to a small labelled jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Private sellers",
+     "narration": "Buying from a private seller instead of a dealer can save money, but you take on more of the work. Ask for maintenance records and the title, and check that the name on the title matches the seller's ID. Run the vehicle history report yourself using the VIN. Still get the independent inspection. Meet in a safe public place, or at the mechanic's shop. Pay with a cashier's check or a bank transfer at your bank, not cash in a parking lot, and get a signed bill of sale. Then handle the title transfer, sales tax and registration at your state's motor vehicle office, which you'd otherwise pay through the dealer.",
+     "on_screen_text": "Private sale: title, history, inspection, safe payment",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. two people shaking hands next to a car and a document. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap the seven steps. Seven: set a total monthly budget for all car costs, around ten to fifteen percent of take-home. Six: get pre-approved, so you have a rate to beat. Five: choose new, used or certified, and check reliability and history. Four: get an independent inspection. Three: negotiate the out-the-door price in writing, never the monthly payment. Two: decline extras you didn't plan for, and read every line. One: keep the loan short. Our fictional buyer saved about two thousand dollars just by crossing out two add-ons. Next in the Money Basics series: insurance basics, and the five policies most adults need.",
+     "on_screen_text": "Budget → pre-approve → inspect → OTD → short loan",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a car key and a neat checklist. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Seven steps to buy your first car without overpaying, including the out-the-door price worksheet filled in on camera. Our fictional buyer saved about $2,000 by declining two add-ons.\n\nExamples are hypothetical and for education only. Fees and taxes vary by state. Not financial advice.",
+   "hashtags": [
+    "carbuying",
+    "firstcar",
+    "usedcar",
+    "carloan",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "How to buy your first car without overpaying, in seven steps: a total budget, pre-approval, new vs used vs certified, an independent inspection, negotiating the out-the-door price (worksheet filled in on camera for a fictional $14,000 used car), declining add-ons, and keeping the loan short.\n\nChapters\n0:00 Intro\n0:48 Step 7: set a total budget, not a payment\n1:34 Step 6: get pre-approved\n2:16 Step 5: new, used or certified\n3:01 Step 4: inspect before you buy\n3:42 Step 3: negotiate the out-the-door price\n4:23 On camera: the out-the-door worksheet\n5:08 Step 2: decline the extras\n5:50 Step 1: keep the loan short\n6:37 After you buy\n7:18 Private sellers\n8:04 Recap\n\nLinks\nExample budget on a $45,000 salary: https://moneymadesimple.netlify.app/budget/45000-salary/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-07\nSinking funds explained: https://moneymadesimple.netlify.app/blog/sinking-funds-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-07\nHow credit scores work: https://moneymadesimple.netlify.app/blog/how-credit-scores-work/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-07\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-07\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script written and fact-checked by a human.",
+   "thumbnail_text": "Negotiate THIS number",
+   "sources": [
+    "https://consumer.ftc.gov/articles/buying-used-car-dealer",
+    "https://www.consumerfinance.gov/consumer-tools/auto-loans/",
+    "https://www.ftc.gov/legal-library/browse/rules/used-car-rule"
+   ],
+   "claims_to_verify": [
+    "13,200 × 7% = 924; 13,200 + 924 + 250 + 399 = 14,773",
+    "$12,000 at 8%: 48 mo ≈ $293/mo, ~$2,060 interest; 72 mo ≈ $210/mo, ~$3,150 interest",
+    "FTC Used Car Rule requires a Buyers Guide on dealer used cars",
+    "Rate-shopping window treated as one inquiry (often ~14–45 days depending on score model)",
+    "Doc fees vary by state"
+   ],
+   "title_variants": [
+    "First Car? 7 Steps So You Don't Overpay",
+    "The Out-the-Door Price: How to Buy a Used Car Without Getting Played"
+   ],
+   "hook_variants": [
+    "The monthly payment is how dealers win. The out-the-door price is how you do.",
+    "Buying your first car? Do these 7 things in this order."
+   ]
+  },
+  "format_style": "countdown",
+  "original_element": {
+   "type": "human-segment",
+   "detail": "The host on camera filling in an out-the-door price worksheet by hand for the fictional $14,000 used car, then crossing out two add-ons worth $2,000",
+   "chapter": "On camera: the out-the-door worksheet"
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "budgeting systems that actually stick",
+  "idea_angle": "Five policies most adults should understand (health, auto, renters or home, disability, life), mapped onto a fictional 27-year-old renter's risks, plus deductibles vs premiums and how to compare quotes.",
+  "series": "money-basics",
+  "series_part": 8,
+  "content_id": "yt-basics-08",
+  "search_terms": [
+   "what insurance do i need",
+   "insurance basics",
+   "disability insurance explained",
+   "do i need life insurance"
+  ],
+  "thumbnail_alt": "Insurance coverage map",
+  "script": {
+   "title": "Insurance Basics: The 5 Policies Most Adults Need",
+   "hook": "5 insurance policies most adults need, and 1 that a lot of 27-year-olds don't need yet. Let's map them onto one person's real risks.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "5 insurance policies most adults need, and 1 that a lot of 27-year-olds don't need yet. Let's map them onto one person's real risks. Insurance can feel like paying for nothing, until the day it pays for everything. The idea is simple: you pay a predictable amount, called a premium, so that a rare but expensive event, like a hospital stay, a car accident or a fire, doesn't wipe out your savings or put you in debt. In this video we'll go through the five policies most adults should understand, using a fictional twenty-seven-year-old who rents an apartment, drives to work, and has no kids. For each one: what it covers, when you need it, and what to check.",
+     "on_screen_text": "5 policies · 1 person's risks",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes holding a small umbrella over a coin jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "How insurance works: premium vs deductible",
+     "narration": "First, two words that decide what you pay. The premium is what you pay every month or year to keep the policy. The deductible is what you pay out of pocket when you make a claim, before insurance starts paying. They move in opposite directions. A higher deductible means a lower premium, and a lower deductible means a higher premium. The right choice depends on your savings. A good rule: never choose a deductible larger than you could pay from your emergency fund tomorrow. If you have five thousand saved, a twenty-five-hundred-dollar deductible might be fine. If you have five hundred, it isn't, even if the premium is cheaper.",
+     "on_screen_text": "Premium ↔ deductible",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a seesaw with a small coin on one end and a bigger coin on the other. No text, no logos, no real people."
+    },
+    {
+     "heading": "1. Health insurance",
+     "narration": "One: health insurance. Medical bills are one of the most common causes of serious debt, and even one emergency room visit can cost thousands. Most people get coverage through an employer, a parent's plan until age twenty-six, the Health Insurance Marketplace at HealthCare dot gov, or Medicaid. When comparing plans, look at three numbers: the premium, the deductible, and the out-of-pocket maximum, which is the most you'd pay in a year for covered care. Also check that your doctors and prescriptions are covered. Our twenty-seven-year-old picks their employer's mid-level plan, with a deductible they could cover from savings.",
+     "on_screen_text": "Premium · deductible · out-of-pocket max",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a shield with a small medical cross. No text, no logos, no real people."
+    },
+    {
+     "heading": "2. Auto insurance",
+     "narration": "Two: auto insurance, required in almost every state if you drive. The most important part is liability coverage, which pays for injuries and damage you cause to other people. State minimum limits are often very low compared with what a serious accident can cost, so many people choose higher limits for a modest increase in premium. Collision and comprehensive cover damage to your own car. If your car is older and worth little, you might drop those. If you have a car loan, the lender usually requires them. Our example person raises liability limits above the state minimum and keeps a one-thousand-dollar deductible on collision.",
+     "on_screen_text": "Liability first · minimums are low",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a car with a shield over it. No text, no logos, no real people."
+    },
+    {
+     "heading": "3. Renters or home insurance",
+     "narration": "Three: renters or homeowners insurance. Your landlord's policy covers the building, not your belongings or your liability. Renters insurance covers your stuff against things like fire and theft, includes liability if someone is hurt in your place, and pays for somewhere to stay if your apartment becomes unlivable after a covered event. It's often around fifteen to twenty dollars a month, though prices vary. Ask for replacement cost coverage, so you're paid what it costs to buy new. Flood and earthquake are usually separate. Homeowners insurance is the same idea, plus the building itself, and a mortgage lender will require it.",
+     "on_screen_text": "Your stuff + liability + a place to stay",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small apartment with an umbrella over it. No text, no logos, no real people."
+    },
+    {
+     "heading": "4. Disability insurance",
+     "narration": "Four: disability insurance, the one most people forget. For someone at the start of their career, the most valuable financial asset isn't savings. It's decades of future paychecks. Disability insurance replaces part of your income, commonly around sixty percent, if illness or injury stops you working. Many employers offer short-term and long-term disability, sometimes free. Check your benefits portal for it. Long-term coverage is the one that protects against the big risk. If your employer doesn't offer it, individual policies exist, though they cost more. Our twenty-seven-year-old discovers their employer includes long-term disability at no cost, and adds a small optional top-up.",
+     "on_screen_text": "Protect your paycheck",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a paycheck under a small shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "5. Life insurance, and when you don't need it",
+     "narration": "Five: life insurance. Its job is to replace your income for people who depend on it: a partner, children, or anyone relying on your paycheck. If nobody depends on your income, like our single twenty-seven-year-old with no kids, you often don't need it yet, beyond any small free policy from work. When you do need it, term life insurance is the simple, lower-cost option for most families. It covers you for a set period, like twenty or thirty years, while kids are growing up or the mortgage is being paid. Be cautious if someone pushes a complex policy that's also sold as an investment. Ask what it costs, and compare with plain term.",
+     "on_screen_text": "Dependents? Term life · no dependents? Often not yet",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a small family silhouette next to a shield. No text, no logos, no real people."
+    },
+    {
+     "heading": "The coverage map",
+     "narration": "Here's the coverage map for our fictional person. Health: employer plan, deductible within savings. Auto: higher liability limits, one-thousand-dollar collision deductible. Renters: replacement cost, about eighteen dollars a month. Disability: long-term through work, plus a small top-up. Life: not needed yet, beyond the free employer policy. The gap we found: no umbrella of savings big enough for two deductibles at once, so the emergency fund goal goes up. That's the point of mapping it out. You see the risks that are covered, the ones that aren't, and where your savings have to fill the gap.",
+     "on_screen_text": "Covered · not needed yet · gap",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a simple map with five labelled shields, one dashed. No text, no logos, no real people."
+    },
+    {
+     "heading": "How to compare quotes",
+     "narration": "How to compare quotes. Get at least three for auto and renters, with identical coverage limits and deductibles, so you're comparing like with like. Ask about discounts: bundling auto and renters, good driving, paying the year upfront, safety features. Check the insurer's complaint record through your state's insurance department. And review every policy once a year, or after a big change: a new car, a move, a marriage, a baby. Rates change, and loyalty isn't always rewarded. Shopping around every year or two is often worth an hour.",
+     "on_screen_text": "3 quotes · same limits · review yearly",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. three documents side by side with a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "Insurance you probably don't need",
+     "narration": "Just as important: insurance you probably don't need. Extended warranties on small electronics and appliances are often expensive relative to the chance of a claim, and your credit card may already extend the manufacturer's warranty. Rental car coverage at the counter may duplicate your own auto policy or card benefits. Flight insurance sold at the airport usually duplicates coverage you already have. Phone insurance can make sense for an expensive phone you're likely to break, but compare the monthly cost with the deductible. The general rule: insure against costs that would seriously hurt you, and self-insure the small stuff with your emergency fund.",
+     "on_screen_text": "Insure big risks · self-insure small ones",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a big umbrella over a house and a tiny one over a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Where to start this week",
+     "narration": "If this feels like a lot, here's where to start this week. Log in to your employer's benefits portal and write down what you already have: health plan, any life insurance, short- and long-term disability. Many people find coverage they didn't know about. Then check your auto policy's liability limits on the declarations page, and get one quote with higher limits. If you rent and have no renters insurance, get two quotes. That's three small tasks, about an hour in total, and they close the biggest gaps for most people. Put a reminder in your calendar to review everything once a year.",
+     "on_screen_text": "Benefits portal · auto limits · renters quote",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. a laptop with a short three-item checklist. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Let's recap. Premium is what you pay to keep a policy; the deductible is what you pay when you claim, and it should never be more than you could pay from savings. Health insurance protects against huge medical bills. Auto liability protects other people from you, and state minimums are low. Renters insurance covers your stuff and your liability for little money. Disability insurance protects your paycheck, and it's often available through work. And life insurance is for people who depend on your income, usually as simple term coverage. The link below goes to our emergency fund guide. Next in the Money Basics series: how to read a credit card statement.",
+     "on_screen_text": "Health · auto · renters · disability · life",
+     "visual_prompt": "Warm flat vector illustration, muted greens and cream with a mustard accent, simple shapes. the small round green piggy bank mascot with big eyes under a large umbrella with five small icons. No text, no logos, no real people."
+    }
+   ],
+   "cta": "If this helped, subscribe for one money system a week, and grab the free 7-day money reset in the description.",
+   "caption": "Health, auto, renters, disability and life insurance, mapped onto one fictional 27-year-old renter, plus premiums vs deductibles and how to compare quotes.\n\nExamples are hypothetical and for education only. Coverage varies by policy and state. Not insurance or financial advice.",
+   "hashtags": [
+    "insurance",
+    "rentersinsurance",
+    "healthinsurance",
+    "disabilityinsurance",
+    "personalfinance",
+    "moneymadesimple"
+   ],
+   "description": "Insurance basics for adults: premium vs deductible, then health, auto, renters or homeowners, disability and life insurance, mapped onto a fictional 27-year-old renter's risks, with how to compare quotes and when you don't need life insurance yet.\n\nChapters\n0:00 Intro\n0:49 How insurance works: premium vs deductible\n1:34 1. Health insurance\n2:14 2. Auto insurance\n2:58 3. Renters or home insurance\n3:40 4. Disability insurance\n4:22 5. Life insurance, and when you don't need it\n5:09 The coverage map\n5:48 How to compare quotes\n6:25 Insurance you probably don't need\n7:08 Where to start this week\n7:50 Recap\n\nLinks\nHow to build an emergency fund: https://moneymadesimple.netlify.app/blog/how-to-build-an-emergency-fund/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-08\nSinking funds explained: https://moneymadesimple.netlify.app/blog/sinking-funds-explained/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-08\nExample budget on a $50,000 salary: https://moneymadesimple.netlify.app/budget/50000-salary/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-08\nFree 7-day money reset: https://moneymadesimple.netlify.app/free/?utm_source=youtube&utm_medium=social&utm_campaign=yt-basics-08\n\nExamples are hypothetical and for education only. Not financial, tax or investment advice.\nVisuals and voice made with AI tools. Script written and fact-checked by a human.",
+   "thumbnail_text": "5 policies. 1 you may skip.",
+   "sources": [
+    "https://www.healthcare.gov/",
+    "https://content.naic.org/consumer",
+    "https://www.ssa.gov/disability"
+   ],
+   "claims_to_verify": [
+    "Dependent coverage on a parent's plan generally to age 26",
+    "Long-term disability commonly replaces ~60% of income",
+    "Renters insurance often ~$15–20/month; varies",
+    "State minimum liability limits vary"
+   ],
+   "title_variants": [
+    "Which Insurance Do You Actually Need? (5 Policies, Explained)",
+    "Insurance for Beginners: Health, Auto, Renters, Disability and Life"
+   ],
+   "hook_variants": [
+    "Insurance is just paying a little now so one bad day doesn't cost you everything. Here's what to cover first.",
+    "The insurance most people forget isn't life insurance. It's the one that protects your paycheck."
+   ]
+  },
+  "format_style": "list",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "A coverage map chart for the fictional 27-year-old renter: five policies as shields (covered, not needed yet, gap), with the gap showing two deductibles at once exceeding savings",
+   "chapter": "The coverage map"
+  }
  }
 ]

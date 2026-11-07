@@ -265,3 +265,37 @@ def test_money_basics_series_parts_are_long_form_and_tagged():
         text = " ".join([sc["hook"], sc["caption"], sc["description"]] + [s["narration"] for s in sc["segments"]])
         for pat in HYPE_PATTERNS + TESTIMONIAL_PATTERNS:
             assert not re.search(pat, text, re.I), (sc["title"], pat)
+
+
+MYTH_VS_MATH = ROOT / "launch" / "money-made-simple" / "myth-vs-math" / "content.json"
+
+
+def test_myth_vs_math_saturdays_fit_under_the_cap(factory):
+    """12 weekly Myth vs Math carousels on Saturdays (Nov 21, 2026 – Feb 6, 2027), on top of every other pack."""
+    brand = factory.brand("money-made-simple")
+    items = _items(MYTH_VS_MATH)
+    assert len(items) == 12 and all(i["format"] == "carousel" and i["series"] == "Myth vs Math" for i in items)
+    others = {i["script"]["title"].lower() for p in MONTHS + [EVERGREEN, SERIES, BASICS] for i in _items(p)}
+    for part, _, _ in HOLIDAY_PARTS:
+        others |= {i["script"]["title"].lower() for i in _items(HOLIDAY / part / "content.json")}
+    assert not others & {i["script"]["title"].lower() for i in items}
+    assert all(i["script"]["hook"].startswith(f"Myth vs Math #{n}:") for n, i in enumerate(items, 1))
+    busy = {}
+
+    def count(slots):
+        for s in slots:
+            for p in s.platforms:
+                busy[(s.when.date(), p)] = busy.get((s.when.date(), p), 0) + 1
+
+    starts = {"month-1": (date(2026, 11, 21), 30, None)}
+    for m, st, d in [("month-2", date(2026, 12, 21), 31), ("month-3", date(2027, 1, 21), 31),
+                     ("month-4", date(2027, 2, 21), 28)]:
+        starts[m] = (st, d, {"carousel": "mon,tue,wed,thu,fri"})
+    for m, (st, d, spec) in starts.items():
+        count(plan(brand, _items(ROOT / "launch" / "money-made-simple" / m / "content.json"), st, d, spec)[0])
+    for part, st, d in HOLIDAY_PARTS:
+        count(plan(brand, _items(HOLIDAY / part / "content.json"), st, d, HOLIDAY_DAYS)[0])
+    slots, leftover = plan(brand, items, date(2026, 11, 21), 78, {"carousel": "sat"})
+    assert not leftover and all(s.when.weekday() == 5 for s in slots)
+    count(slots)
+    assert max(busy.values()) <= brand.cadence.max_posts_per_day_per_platform
