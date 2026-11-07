@@ -1,7 +1,8 @@
 # B2B launch checklist (for Dhruv)
 
-Three offers are ready to sell: **credit unions** (Weekly Scam Alert), **libraries and senior centers**
-(Scam Watch) and **employers** (Money Made Simple at Work). Nothing has been sent, posted or deployed;
+Four offers are ready to sell: **credit unions** (Weekly Scam Alert), **libraries and senior centers**
+(Scam Watch), **employers** (Money Made Simple at Work) and **CPA and bookkeeping firms** (Freelancer
+Money Notes, for their 1099 clients). Nothing has been sent, posted or deployed;
 you do every send by hand. Plan on about 2 hours of setup, then 30 to 45 minutes a day.
 
 ## 1. Decide (10 minutes)
@@ -16,7 +17,8 @@ you do every send by hand. Plan on about 2 hours of setup, then 30 to 45 minutes
 
 - [ ] `{{YOUR_NAME}}`, `{{YOUR_EMAIL}}`, `{{YOUR_PHONE}}` in these files:
       - `credit-union-alert/sales-sheet.html` and `credit-union-alert/roi.html`
-      - `employer-wellness/sales-sheet.html` and `community-scam-watch/sales-sheet.html`
+      - `employer-wellness/sales-sheet.html`, `community-scam-watch/sales-sheet.html` and
+        `freelancer-client-letter/sales-sheet.html`
       - `credit-union-alert/onboarding/KICKOFF_EMAIL.md`
       Find any you missed with `grep -rn "{{YOUR_" launch/b2b --include=*.html --include=*.md`.
 - [ ] `{{YOUR_BUSINESS_NAME}}` and `{{YOUR_ADDRESS}}` in `credit-union-alert/onboarding/invoice.html`.
@@ -27,11 +29,12 @@ you do every send by hand. Plan on about 2 hours of setup, then 30 to 45 minutes
 - [ ] Optional: publish the landing page by dragging `site/dist/` onto Netlify Drop (free). Do this only
       if you want a link to put in follow-ups; email 1 has no link anyway.
 
-## 3. Send first: credit unions, then libraries, then employers
+## 3. Send first: credit unions, then accounting firms, libraries, employers
 
 | Week | Who | Why this order | Files |
 |---|---|---|---|
 | **1** | **Credit unions, rows 1 to 30** (Montana first) | Biggest recurring price, weekly cadence, and the ROI page makes the case. | `credit-union-alert/COLD_EMAILS.md`, `PROSPECTS.csv` |
+| **1 to 2** | **CPA and bookkeeping firms** (MT and ID, 30) | Send before mid-January: after that they're buried in tax season until late April. Small firms decide fast, and it's the cheapest yes to get. | `freelancer-client-letter/README.md` (emails inside), `PROSPECTS.csv` |
 | **2** | **Libraries and Area Agencies on Aging** | Cheap and quick to say yes; good first logos and testimonials. Call the senior centers (phone script). | `community-scam-watch/COLD_EMAILS.md` |
 | **3** | **Employers**, via SHRM chapters and the 2 brokers first | Longer buying cycle. A single broker or chapter can open many doors. | `employer-wellness/COLD_EMAILS.md` |
 | 4+ | **Credit unions, rows 31 to 60** (WY, UT, CO) | Use what you learned from batch 1's replies. | same |

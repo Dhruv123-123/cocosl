@@ -1,6 +1,6 @@
 # B2B newsletter products (white label)
 
-Three products, one engine. Each sells a ready-made, branded monthly or weekly pack that an
+Four products, one engine. Each sells a ready-made, branded monthly or weekly pack that an
 organization sends to its own people. Built from existing brand content (Scam Decoded, Money Made
 Simple, 1099 Money). **Start with `LAUNCH_CHECKLIST.md`**: what to fill in, what to send first, how to follow up. **Nothing here has been sent or posted.** Dhruv sends every email by hand, payment
 links stay as placeholders, and nothing was bought.
@@ -10,12 +10,13 @@ links stay as placeholders, and nothing was bought.
 | `credit-union-alert/` | Weekly Scam Alert | Credit unions | $49 / $99 / $149 a month | Weekly |
 | `employer-wellness/` | Money Made Simple at Work | Employer HR and benefits teams (and benefits brokers) | $59 / $129 / $249 a month | Monthly |
 | `community-scam-watch/` | Scam Watch (large print) | Public libraries, senior centers, Area Agencies on Aging | $19 / $59 a month, talks $150 | Monthly |
+| `freelancer-client-letter/` | Freelancer Money Notes | Small CPA, tax and bookkeeping firms, for their 1099 clients | $39 / $79 / $129 a month | Monthly |
 
-Each folder has: `product.json` (labels, call to action, formats), `issues.json` (4 sample issues),
+The first three folders each have: `product.json` (labels, call to action, formats), `issues.json` (4 sample issues),
 `samples/*.md` (readable masters with brand slots shown), `brands/` (a fictional sample brand and a
 placeholders brand), `sales-sheet.html`, `COMPLIANCE_NOTE.md`, `COLD_EMAILS.md`, `PROSPECTS.csv` + `.md`
 (30 public-info prospects) and `README.md`. The credit union folder also has the full
-`DELIVERY_WORKFLOW.md`; the other two describe only what's different.
+`DELIVERY_WORKFLOW.md`; the others describe only what's different. `freelancer-client-letter/` is the lean one: 3 samples, a sales sheet, 30 prospects, and its cold emails and compliance notes inside its README.
 
 ## Build
 
@@ -34,7 +35,7 @@ and the compliance PDF needs pandoc. A client pack fails to build if any `{{TOKE
 
 ## Landing page (`site/`)
 
-One static page for all three offers: offer cards, how it works, sample images, downloads (sample
+One static page for all four offers: offer cards, how it works, sample images, downloads (sample
 packs, sales sheets, the credit union ROI one-pager, compliance notes), a credit union break-even
 calculator and a "request a sample" button that opens the visitor's own email app (mailto).
 

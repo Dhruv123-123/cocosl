@@ -1,0 +1,35 @@
+{
+  "_about": "Labels and formats for the monthly freelancer client newsletter that CPA and bookkeeping firms send their 1099 clients. Built from 1099 Money content. Read by ../build.py.",
+  "series": "Freelancer Money Notes",
+  "unit": "month",
+  "labels": {
+    "eyebrow": "This month for freelancers",
+    "tell": "The one thing to remember",
+    "promise": "A note from our office",
+    "steps": "Do it this month",
+    "hits": "Good to know",
+    "job": "Your 10-minute task",
+    "brief": "Notes for your team",
+    "screen": "Client handout (printable)",
+    "post": "Social post (Facebook, LinkedIn, Instagram)"
+  },
+  "cta": "Questions about your situation? Call **{{FIRM_PHONE}}** or book a time: {{BOOKING_LINK}}",
+  "visual_footer": "Questions? Call **{{FIRM_PHONE}}**.",
+  "disclaimer": "This newsletter is general information for self-employed people. It isn't tax, legal or financial advice for your situation. Rules and amounts change; we'll apply them to your return.",
+  "visuals": [
+    "social",
+    "poster"
+  ],
+  "not_in_essentials": [
+    "poster"
+  ],
+  "tokens": [
+    "{{FIRM_NAME}}",
+    "{{FIRM_SHORT}}",
+    "{{FIRM_PHONE}}",
+    "{{BOOKING_LINK}}",
+    "{{CLIENT_PORTAL}}",
+    "{{FIRM_NOTE}}"
+  ],
+  "promise_token": "{{FIRM_NOTE}}"
+}

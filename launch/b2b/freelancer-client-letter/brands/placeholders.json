@@ -1,0 +1,24 @@
+{
+  "_about": "Every brand slot visible as a token, for the firm's review. build.py skips the leftover-token check for this file.",
+  "slug": "placeholders",
+  "name": "{{FIRM_NAME}}",
+  "initials": "LOGO",
+  "logo": "",
+  "color": "#3B4A5A",
+  "accent": "#E0A526",
+  "tier": "standard",
+  "tokens": {
+    "FIRM_NAME": "{{FIRM_NAME}}",
+    "FIRM_SHORT": "{{FIRM_SHORT}}",
+    "FIRM_PHONE": "{{FIRM_PHONE}}",
+    "BOOKING_LINK": "{{BOOKING_LINK}}",
+    "CLIENT_PORTAL": "{{CLIENT_PORTAL}}"
+  },
+  "promise": "{{FIRM_NOTE}}",
+  "footer_lines": [
+    "{{FIRM_ADDRESS}}",
+    "{{WHY_YOU_GET_THIS}}"
+  ],
+  "unsubscribe": "{{UNSUBSCRIBE_LINK}}",
+  "credit_line": ""
+}

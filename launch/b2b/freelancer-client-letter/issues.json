@@ -1,0 +1,191 @@
+{
+  "_about": "Master content for the white-label freelancer client newsletter, monthly. Built from 1099 Money content (see each issue's source). Education only; the firm reviews every issue and applies the rules to each client. [text](url) and **bold** only.",
+  "reviewed": "2026-11-07",
+  "issues": [
+    {
+      "id": "2027-01",
+      "n": 1,
+      "send_date": "2027-01-05",
+      "deliver_by": "2026-12-22",
+      "source": "1099 Money Shorts #06 (no 1099, still taxable), #08 (the Jan 15 deadline) and carousel #04 (2027 tax calendar)",
+      "topic": "January: the Jan 15 payment and why fewer 1099s are coming",
+      "subject": "Two January dates every freelancer needs",
+      "preheader": "The last 2026 estimated payment is due Jan 15. And your 1099s may not tell the whole story.",
+      "headline": "January: one payment, and fewer forms",
+      "explain": [
+        "The fourth estimated tax payment for 2026 is due **Friday, January 15, 2027**. If you've been paying quarterly, this one closes out the year.",
+        "You'll also start getting 1099 forms from clients and payment apps. For payments made in 2026, a client generally has to send a 1099-NEC only once they've paid you **$2,000** in the year (it used to be $600), and payment apps send a 1099-K only after **$20,000 and 200 transactions**. So many freelancers will get fewer forms than last year."
+      ],
+      "tell": "All your business income is taxable, whether or not a form shows up. The forms are paperwork, not permission.",
+      "promise": false,
+      "steps": [
+        "**Make the Jan 15 payment** if you've been paying quarterly, through [IRS.gov/payments](https://www.irs.gov/payments). Not sure what you owe? Call us at {{FIRM_PHONE}} before the 15th, not after.",
+        "**Start an income list** for 2026 if you don't have one: every client, every payment, from your invoices or bank deposits. When forms arrive, check them against it.",
+        "**Upload forms as they arrive** to {{CLIENT_PORTAL}}, so nothing's missing when we prepare your return."
+      ],
+      "quick_hits": [
+        "**Your state may have its own estimated payment due the same day.** We'll tell you if yours does.",
+        "**The IRS doesn't text or email you out of the blue** about your account or a refund. Delete those messages and type IRS.gov yourself."
+      ],
+      "job": "Make a folder (paper or on your computer) called \"2026 taxes\" and put every 1099, receipt and statement in it as it comes.",
+      "lobby": {
+        "kicker": "Freelancer taxes",
+        "headline": "No 1099? It's still income.",
+        "bullets": [
+          "2026 estimated tax due Jan 15.",
+          "1099-NEC now starts at $2,000.",
+          "Keep your own income list."
+        ]
+      },
+      "social": {
+        "caption": "Freelancers: your last 2026 estimated tax payment is due Jan 15. And this year you may get fewer 1099s, because clients now generally send a 1099-NEC only after paying you $2,000 (it was $600). The income is still taxable either way, so keep your own list. Questions? Call {{FIRM_PHONE}}.",
+        "alt": "{{FIRM_SHORT}}: No 1099? It's still income. 2026 estimated tax due Jan 15. 1099-NEC now starts at $2,000. Keep your own income list."
+      },
+      "brief": {
+        "Clients may ask": "\"I didn't get a 1099 from one client. Do I still report it?\"",
+        "What to say": "\"Yes, all business income goes on the return. Send us your own list or bank deposits and we'll match it.\"",
+        "Watch for": "Clients who relied on 1099s to know their income last year: 2026 forms will be missing more often under the $2,000 and $20,000 thresholds."
+      },
+      "sources": [
+        {
+          "name": "IRS: About Form 1099-NEC",
+          "url": "https://www.irs.gov/forms-pubs/about-form-1099-nec"
+        },
+        {
+          "name": "IRS: Understanding your Form 1099-K",
+          "url": "https://www.irs.gov/businesses/understanding-your-form-1099-k"
+        },
+        {
+          "name": "IRS: Estimated taxes",
+          "url": "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes"
+        },
+        {
+          "name": "IRS: Make a payment",
+          "url": "https://www.irs.gov/payments"
+        }
+      ]
+    },
+    {
+      "id": "2027-02",
+      "n": 2,
+      "send_date": "2027-02-02",
+      "deliver_by": "2027-01-19",
+      "source": "1099 Money carousel #11 (9 expenses to track), Shorts #14 (home office), #15 (car log) and #17 (phone bill)",
+      "topic": "February: what to bring for your return",
+      "subject": "Your tax appointment checklist (freelancer edition)",
+      "preheader": "The 8 things that make a self-employed return faster, and the deductions that need records.",
+      "headline": "Your return, minus the scramble",
+      "explain": [
+        "A self-employed return takes longer than a W-2 return because your expenses are your own records, not a form someone sends you. The more you bring in one go, the faster and cheaper it is to prepare.",
+        "Deductions need records. A car, a home office or a phone bill can all count, but only the business part, and only if you can show how you worked it out."
+      ],
+      "tell": "If you can't show it, you can't deduct it. A rough log now beats a perfect guess in April.",
+      "promise": true,
+      "steps": [
+        "**Gather the 8 things** below and upload them to {{CLIENT_PORTAL}} in one go.",
+        "**Add up business miles** from your calendar, mileage app or notes if you used your car for work. Business miles only; the commute to a regular workplace doesn't count.",
+        "**Book your appointment** for February or March: {{BOOKING_LINK}}. Late March and April fill up fast."
+      ],
+      "quick_hits": [
+        "**The 8 things:** your income list and any 1099s; business bank and card statements; receipts for equipment and software; mileage log; home office size and your home's total size; health insurance premiums you paid; retirement contributions (SEP, Solo 401(k), IRA); and any estimated payments you made in 2026, with dates.",
+        "**Phone and internet:** only the business share counts. Tell us your rough percentage and how you got it."
+      ],
+      "job": "Open your bank app and download your 2026 statements as PDFs. It's the single most useful thing you can send us.",
+      "lobby": {
+        "kicker": "Tax season",
+        "headline": "Bring these and your return goes faster.",
+        "bullets": [
+          "Income list and every 1099.",
+          "Statements, receipts, mileage log.",
+          "Estimated payments, with dates."
+        ]
+      },
+      "social": {
+        "caption": "Freelancer tax checklist: your income list and 1099s, business bank and card statements, receipts, your mileage log, home office measurements, health insurance premiums, retirement contributions, and the estimated payments you made. Bring them all at once and your return is faster and simpler. Book a time: {{BOOKING_LINK}}",
+        "alt": "{{FIRM_SHORT}}: Bring these and your return goes faster. Income list and every 1099. Statements, receipts, mileage log. Estimated payments, with dates."
+      },
+      "brief": {
+        "Clients may ask": "\"Can I just deduct my whole phone bill and my car?\"",
+        "What to say": "\"Only the business share, and we need to see how you worked it out. A mileage log or a month of notes is enough to start.\"",
+        "Watch for": "Missing estimated-payment dates: ask clients to check IRS Online Account rather than guess."
+      },
+      "sources": [
+        {
+          "name": "IRS Publication 334: Tax Guide for Small Business",
+          "url": "https://www.irs.gov/publications/p334"
+        },
+        {
+          "name": "IRS: Home office deduction",
+          "url": "https://www.irs.gov/businesses/small-businesses-self-employed/home-office-deduction"
+        },
+        {
+          "name": "IRS: Standard mileage rates",
+          "url": "https://www.irs.gov/tax-professionals/standard-mileage-rates"
+        },
+        {
+          "name": "IRS: Your online account",
+          "url": "https://www.irs.gov/payments/your-online-account"
+        }
+      ]
+    },
+    {
+      "id": "2027-03",
+      "n": 3,
+      "send_date": "2027-03-02",
+      "deliver_by": "2027-02-16",
+      "source": "1099 Money Shorts #10 (safe harbor), #18 (quarterly taxes with one real number) and carousel #07 (quarterly payment in 5 steps)",
+      "topic": "March: set up 2027's quarterly payments before April",
+      "subject": "The rule that takes the guesswork out of quarterly taxes",
+      "preheader": "The first 2027 estimated payment is due April 15. Here's how to make it boring.",
+      "headline": "Quarterly taxes, without the guessing",
+      "explain": [
+        "The first estimated payment for 2027 is due **April 15**, the same day as your 2026 return. The other three are **June 15**, **September 15** and **January 15, 2028**.",
+        "There's a rule that makes the amount easier. It's called the safe harbor: if you pay at least **100% of last year's total tax** (110% if last year's adjusted gross income was over $150,000), split across the four dates and paid on time, you generally avoid the underpayment penalty, even if you earn more this year. You still owe any balance in April."
+      ],
+      "tell": "Pay on time, pay enough of last year's tax, and set the rest aside. Quarterly taxes should be boring.",
+      "promise": false,
+      "steps": [
+        "**Let us work out your 2027 payments** when we finish your 2026 return. We'll give you four amounts and four dates.",
+        "**Open a separate savings account** for taxes, if you don't have one, and move a share of every payment you receive into it.",
+        "**Put the four dates in your calendar** now: Apr 15, Jun 15, Sep 15 and Jan 15."
+      ],
+      "quick_hits": [
+        "**Income changed a lot?** If this year will be much lower or higher, tell us. The safe harbor isn't always the cheapest choice.",
+        "**Pay online** at [IRS.gov/payments](https://www.irs.gov/payments) and keep the confirmation. Your state may want its own payments too."
+      ],
+      "job": "Find last year's total tax on your 2025 return (Form 1040) and write it down. That number is where your 2027 plan starts.",
+      "lobby": {
+        "kicker": "Quarterly taxes",
+        "headline": "Make quarterly taxes boring.",
+        "bullets": [
+          "Due Apr 15, Jun 15, Sep 15, Jan 15.",
+          "Safe harbor: 100% of last year's tax.",
+          "Set a share of every payment aside."
+        ]
+      },
+      "social": {
+        "caption": "Freelancers: your first 2027 estimated tax payment is due April 15, along with your return. The safe harbor rule helps: pay at least 100% of last year's total tax (110% if your income was over $150,000) across the four dates, on time, and you generally avoid the underpayment penalty. Want your four amounts worked out? Call {{FIRM_PHONE}}.",
+        "alt": "{{FIRM_SHORT}}: Make quarterly taxes boring. Due Apr 15, Jun 15, Sep 15, Jan 15. Safe harbor: 100% of last year's tax. Set a share of every payment aside."
+      },
+      "brief": {
+        "Clients may ask": "\"Can't I just pay it all in April?\"",
+        "What to say": "\"You can, but you may owe an underpayment penalty. Four on-time payments based on last year's tax usually avoid it. We'll work out the amounts with your return.\"",
+        "Watch for": "High earners (AGI over $150,000, or $75,000 married filing separately) need 110%, not 100%."
+      },
+      "sources": [
+        {
+          "name": "IRS: Estimated taxes",
+          "url": "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes"
+        },
+        {
+          "name": "IRS: Underpayment of estimated tax by individuals penalty",
+          "url": "https://www.irs.gov/payments/underpayment-of-estimated-tax-by-individuals-penalty"
+        },
+        {
+          "name": "IRS: About Form 1040-ES",
+          "url": "https://www.irs.gov/forms-pubs/about-form-1040-es"
+        }
+      ]
+    }
+  ]
+}

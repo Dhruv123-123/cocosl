@@ -3,7 +3,7 @@
 
     cd launch/b2b && python3 build.py && python3 site/build_site.py
 
-Copies index.html, config.js and netlify.toml, three sample images and every sample pack, sales
+Copies index.html, config.js and netlify.toml, four sample images and every sample pack, sales
 sheet, ROI sheet and compliance note into dist/. Fails if a download is missing (run ../build.py first).
 """
 import shutil
@@ -25,6 +25,9 @@ FILES = {
     "downloads/scam-watch-sample-pack.zip": "community-scam-watch/out/sample-county-library.zip",
     "downloads/scam-watch-sales-sheet.pdf": "community-scam-watch/out/sales-sheet.pdf",
     "downloads/scam-watch-compliance-note.pdf": "community-scam-watch/out/COMPLIANCE_NOTE.pdf",
+    "downloads/accounting-firm-sample-pack.zip": "freelancer-client-letter/out/sample-ledger.zip",
+    "downloads/accounting-firm-sales-sheet.pdf": "freelancer-client-letter/out/sales-sheet.pdf",
+    "img/fc-social.png": "freelancer-client-letter/out/sample-ledger/month-1-2027-01/social.png",
     "img/cu-social.png": "credit-union-alert/out/sample-community-cu/week-1-2027-01-a/social.png",
     "img/hr-lobby.png": "employer-wellness/out/sample-outfitters/month-4-2027-04/lobby.png",
     "img/sw-lobby.png": "community-scam-watch/out/sample-county-library/month-1-2027-01/lobby.png",
