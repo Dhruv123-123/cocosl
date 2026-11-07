@@ -206,19 +206,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "1 question ends the 'free Medicare DNA test' call. Here's how the call goes first. One cheek swab, free with Medicare. That's the pitch, by phone, at a health fair, or at the door.",
+     "narration": "1 question ends the 'free Medicare DNA test' call. Here's how the call goes first. It's sold as a free cheek swab that Medicare pays for, offered on the phone, at a booth, or on your doorstep.",
      "on_screen_text": "The 'free' DNA test",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes looking at a cotton swab with a price tag No text, no logos, no real people."
     },
     {
      "heading": "The catch",
-     "narration": "To send the kit, they need your Medicare number. Then they bill Medicare for a test you didn't need, and your number can be used again.",
+     "narration": "The kit needs your Medicare number to ship, and that number is the real prize. It gets billed for a test nobody needed, and it can be billed again later.",
      "on_screen_text": "They want your Medicare number",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a Medicare-style card with a hook No text, no logos, no real people."
     },
     {
      "heading": "The cost",
-     "narration": "If your own doctor didn't order it and Medicare denies the claim, the bill can come back to you.",
+     "narration": "And when Medicare turns the claim down because no doctor of yours asked for it, you can end up holding the bill.",
      "on_screen_text": "The bill can come to you",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. an envelope with a large bill No text, no logos, no real people."
     },
@@ -242,7 +242,7 @@
     },
     {
      "heading": "The rule",
-     "narration": "Only take a test your own doctor orders. Never give your Medicare number to a caller or a stranger at a booth.",
+     "narration": "So the only test you take is one your doctor ordered. Your Medicare number stays with you, whoever's asking.",
      "on_screen_text": "Only tests your doctor orders",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a stop sign No text, no logos, no real people."
     }
@@ -425,19 +425,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "3 things to do today if a brace or medical kit shows up that nobody ordered. One call. Do you have back or knee pain? Medicare will cover a brace at no cost to you.",
+     "narration": "3 things to do today if a brace or medical kit shows up that nobody ordered. The call opens with a question: any pain in your back or knees? Good news, a brace is covered and costs you nothing.",
      "on_screen_text": "Free brace? Hang up.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. phone screen mockup: incoming call, 'Medical Benefits' No text, no logos, no real people."
     },
     {
      "heading": "The ask",
-     "narration": "Then: just confirm your Medicare number so we can ship it. A brace you didn't need arrives. Medicare gets the bill, and your number gets sold on.",
+     "narration": "All they need is your Medicare number for shipping. Then a brace shows up you never needed, Medicare pays for it, and your number is passed along to others.",
      "on_screen_text": "'Just confirm your number'",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a box on a doorstep No text, no logos, no real people."
     },
     {
      "heading": "The tell",
-     "narration": "Medicare and your doctor don't cold-call to sell you equipment. A caller who wants your number is the scam.",
+     "narration": "Your doctor doesn't phone you to sell braces, and neither does Medicare. Wanting your number is the whole scheme.",
      "on_screen_text": "Medicare doesn't cold-call",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone with a red X No text, no logos, no real people."
     },
@@ -461,7 +461,7 @@
     },
     {
      "heading": "Do this",
-     "narration": "Hang up. If a box arrives that nobody ordered, refuse the delivery, and call 1-800-MEDICARE to report it.",
+     "narration": "End the call. If an unordered box turns up, don't accept it, and report it by calling 1-800-MEDICARE.",
      "on_screen_text": "Hang up. Report boxes you didn't order.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes pointing at a phone number No text, no logos, no real people."
     }
@@ -643,19 +643,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "1 word, picked at Mother's Day lunch, stops the grandparent courier scam. Grandma, it's me. I was in an accident, I'm in jail, and I need bail. Don't tell Mom.",
+     "narration": "1 word, picked at Mother's Day lunch, stops the grandparent courier scam. The voice cries: it's me, there was a crash, they've locked me up, I need bail, and please keep it from Mom.",
      "on_screen_text": "Never hand cash to a courier",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv on camera, reading from a phone No text, no logos, no real people."
     },
     {
      "heading": "The twist",
-     "narration": "Then: a courier will come by to pick up the cash. No wire, no gift cards. Just a stranger at the door.",
+     "narration": "The new part: nobody asks for a wire or gift cards. A man just turns up at your door to take the cash.",
      "on_screen_text": "'A courier will pick it up'",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a front door with a shadow No text, no logos, no real people."
     },
     {
      "heading": "The tell",
-     "narration": "No court, lawyer or bail office sends someone to your house to collect cash. And a panicked voice can be faked now.",
+     "narration": "Bail offices, courts and lawyers don't send people door to door for cash. And a voice that sounds just like family is easy to fake today.",
      "on_screen_text": "Courts don't send couriers",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a gavel with a red X No text, no logos, no real people."
     },
@@ -679,7 +679,7 @@
     },
     {
      "heading": "The fix",
-     "narration": "Hang up and call your grandchild, or their parents, on a number you already have. And pick a family safe word this Mother's Day.",
+     "narration": "End the call and ring your grandchild or their mom or dad on a number you trust. Then set a family safe word together.",
      "on_screen_text": "Hang up. Call them back. Safe word.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes with a family photo No text, no logos, no real people."
     }
@@ -930,19 +930,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "3 messages give away a fake job offer. Here's the whole chat, step by step. One interview, all by text on a chat app. An hour later: congratulations, you're hired.",
+     "narration": "3 messages give away a fake job offer. Here's the whole chat, step by step. The whole interview happens in a chat app, by text, and sixty minutes later you get the job.",
      "on_screen_text": "Chat-app interview? Walk away.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. phone mockup: chat app interview messages No text, no logos, no real people."
     },
     {
      "heading": "The check",
-     "narration": "Next, a check arrives to buy your laptop, from their approved vendor. You deposit it and pay the vendor.",
+     "narration": "Then they mail you a check for your work laptop, and tell you to pay their approved vendor out of it.",
      "on_screen_text": "'Buy equipment from our vendor'",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. phone mockup: a check image in chat No text, no logos, no real people."
     },
     {
      "heading": "The bounce",
-     "narration": "Days later the check bounces. The bank takes the money back, and what you paid the vendor is gone.",
+     "narration": "A few days on, the check is fake. Your bank pulls back the deposit, and the money you sent the vendor doesn't come back.",
      "on_screen_text": "The check bounces. You pay.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a rubber check bouncing No text, no logos, no real people."
     },
@@ -972,7 +972,7 @@
     },
     {
      "heading": "The rule",
-     "narration": "Real employers interview by video or in person, and never send you money to buy their equipment.",
+     "narration": "A real company meets you on video or face to face, and won't send you a check to buy your own equipment.",
      "on_screen_text": "Real jobs don't send checks first",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes in a graduation cap holding a stop sign No text, no logos, no real people."
     }
@@ -1163,19 +1163,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "3 scholarship offers, 1 is real. Pause and pick before I tell you. Zero real scholarships make you pay to apply, or pay a fee to collect. Here's what the fake ones look like.",
+     "narration": "3 scholarship offers, 1 is real. Pause and pick before I tell you. Not one genuine scholarship charges you to apply or to collect. Here's how the fakes sound.",
      "on_screen_text": "Scholarships don't charge",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes in a graduation cap No text, no logos, no real people."
     },
     {
      "heading": "The letter",
-     "narration": "Congratulations, you've been selected for a scholarship you never applied for. Just pay a small processing fee.",
+     "narration": "You've won an award you don't remember applying for, and there's a small fee to process it.",
      "on_screen_text": "'Just pay a small fee'",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. an envelope with a gold seal No text, no logos, no real people."
     },
     {
      "heading": "The service",
-     "narration": "Or a company charges to fill in the FAFSA, or promises money in exchange for a fee. The FAFSA is free, and you can do it yourself.",
+     "narration": "Or someone wants money to do your FAFSA, or sells a promise of aid for a fee. The FAFSA costs nothing and you can file it on your own.",
      "on_screen_text": "The FAFSA is free",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a form with a free tag No text, no logos, no real people."
     },
@@ -1199,7 +1199,7 @@
     },
     {
      "heading": "Do this",
-     "narration": "Get free help from your school's financial aid office. Never pay to apply or to claim a prize.",
+     "narration": "Your school's financial aid office will help for free. Paying to get free money is the red flag.",
      "on_screen_text": "Ask the aid office. Never pay.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a school building with a help sign No text, no logos, no real people."
     }
@@ -1394,19 +1394,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "4 red flags in 1 apartment listing. Pause and count them before I say them. One line ends the deal. I'm out of the country, so I can't show you the apartment, but send the deposit to hold it.",
+     "narration": "4 red flags in 1 apartment listing. Pause and count them before I say them. Here's the sentence that should end it: the landlord's overseas, can't let you in, but wants a deposit to hold the place.",
      "on_screen_text": "Can't see it? Don't pay.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. an apartment door with a padlock No text, no logos, no real people."
     },
     {
      "heading": "The setup",
-     "narration": "The photos are copied from a real listing. The rent is low. Two other people are interested, so pay today.",
+     "narration": "The pictures are lifted from a real ad, the rent is suspiciously low, and others are supposedly about to pay, so hurry.",
      "on_screen_text": "Copied photos. Low rent. Rush.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a listing photo with a copy icon No text, no logos, no real people."
     },
     {
      "heading": "The number",
-     "narration": "People reported losing sixty-five million dollars to rental scams to the FTC, and that's only the ones who reported it.",
+     "narration": "Renters told the FTC they lost sixty-five million dollars to scams like this, and many never report it at all.",
      "on_screen_text": "$65M reported lost to rental scams",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a bold amber number on navy No text, no logos, no real people."
     },
@@ -1430,7 +1430,7 @@
     },
     {
      "heading": "The rule",
-     "narration": "Never pay before you, or someone you trust, has been inside and met the landlord or agent.",
+     "narration": "No money changes hands until you, or a person you trust, has walked through it and met whoever's renting it.",
      "on_screen_text": "See it first. Then pay.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a key No text, no logos, no real people."
     }
@@ -1675,19 +1675,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "3 questions to ask anyone offering to help a veteran with a VA pension. One free lunch seminar about your VA pension. Then a fee, and a plan to move your savings into an annuity.",
+     "narration": "3 questions to ask anyone offering to help a veteran with a VA pension. It starts with a free lunch about VA pensions, and ends with a fee and a plan to put your savings in an annuity.",
      "on_screen_text": "VA help is free",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv on camera holding a flyer No text, no logos, no real people."
     },
     {
      "heading": "The pitch",
-     "narration": "They promise to qualify you for more pension, fast. They charge to fill in forms, and sell products that lock up your money.",
+     "narration": "They say they'll get you a bigger pension quickly, bill you for paperwork, and sell products that tie up your money for years.",
      "on_screen_text": "'More pension, fast'",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a stack of forms with a dollar sign No text, no logos, no real people."
     },
     {
      "heading": "The tell",
-     "narration": "Help with a VA claim is free from accredited representatives. Fees and investment products are the tell.",
+     "narration": "Accredited representatives help with VA claims for free. A fee, or an investment pitch, is how you spot the scheme.",
      "on_screen_text": "Real help is free",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a veteran's cap with a green check No text, no logos, no real people."
     },
@@ -1711,7 +1711,7 @@
     },
     {
      "heading": "Do this",
-     "narration": "Look up an accredited representative on VA's own website, or ask a veterans service organization.",
+     "narration": "Search VA's own site for an accredited representative, or go through a veterans service organization.",
      "on_screen_text": "Use a VA-accredited rep",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes saluting No text, no logos, no real people."
     }
@@ -1887,19 +1887,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "1 Memorial Day charity call, line by line, and the 2-minute check that beats it. Two minutes before you give to a veterans' charity. Quiz first: which of these is a red flag?",
+     "narration": "1 Memorial Day charity call, line by line, and the 2-minute check that beats it. Before you give to a veterans' group this weekend, take two minutes. Which of these should worry you?",
      "on_screen_text": "Check before you give",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. three cards: name, pressure, payment No text, no logos, no real people."
     },
     {
      "heading": "The asks",
-     "narration": "A name that sounds like a big charity. A caller who wants the money today. And a request for a gift card or a wire.",
+     "narration": "A name that's nearly a famous charity's. Pressure to give before you hang up. A request for gift cards or a wire.",
      "on_screen_text": "Lookalike name · today · gift card",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the three cards lit amber No text, no logos, no real people."
     },
     {
      "heading": "Answer",
-     "narration": "All three. Real charities take your gift next week too, and never ask for gift cards or wires.",
+     "narration": "Every one of them. A real charity will still take your donation next week, and never by gift card or wire.",
      "on_screen_text": "All 3 are red flags",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a green check over the answer No text, no logos, no real people."
     },
@@ -1923,7 +1923,7 @@
     },
     {
      "heading": "The check",
-     "narration": "Look the charity up yourself, check it with a watchdog like Give.org or Charity Navigator, and give on its own website.",
+     "narration": "Find the charity on your own, check a watchdog like Give.org or Charity Navigator, and donate on its own site.",
      "on_screen_text": "Look it up · check it · give direct",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a flag and a heart No text, no logos, no real people."
     }
@@ -2109,19 +2109,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "1 rule beats every romance scam, including the fake soldier. Here's why it matters. Four tells of a fake soldier profile. One: deployed overseas, so they can never video call.",
+     "narration": "1 rule beats every romance scam, including the fake soldier. Here's why it matters. Here are four signs a soldier's profile is fake. First: they're deployed, so a video call is never possible.",
      "on_screen_text": "Fake soldier: 4 tells",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. phone mockup: dating app chat No text, no logos, no real people."
     },
     {
      "heading": "Two and three",
-     "narration": "Two: they move fast to love and marriage. Three: they want to move to WhatsApp or email.",
+     "narration": "Second, it's love and marriage talk within weeks. Third, they push you off the app to WhatsApp or email.",
      "on_screen_text": "2: fast love · 3: off the app",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. phone mockup: chat moving apps No text, no logos, no real people."
     },
     {
      "heading": "Four",
-     "narration": "Four: they need money. For leave, a flight home, a package, or a fee to end their deployment. That's not how the military works.",
+     "narration": "Fourth, money: for leave, a ticket home, a parcel, or to end the deployment early. The military doesn't work like that.",
      "on_screen_text": "4: they need money",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. phone mockup: money request highlighted No text, no logos, no real people."
     },
@@ -2145,7 +2145,7 @@
     },
     {
      "heading": "The fix",
-     "narration": "Reverse search their photos, keep chatting in the app, and never send money to someone you haven't met.",
+     "narration": "Run their photos through a reverse search, stay on the app, and don't send money to anyone you've never met.",
      "on_screen_text": "Never send money to someone you haven't met",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a reverse search icon No text, no logos, no real people."
     }
@@ -2395,19 +2395,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "2 airline help numbers on your screen, 1 is a scammer. Pause and pick. One text: your flight has been canceled. Call this number to rebook.",
+     "narration": "2 airline help numbers on your screen, 1 is a scammer. Pause and pick. The text says your flight's cancelled and gives you a number to call to rebook.",
      "on_screen_text": "Flight canceled? Check the app.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. phone mockup: flight cancellation text No text, no logos, no real people."
     },
     {
      "heading": "The call",
-     "narration": "A friendly agent finds you a new flight, for a rebooking fee. They take your card, and your new ticket never shows up.",
+     "narration": "Someone helpful books you a new seat, charges a fee to your card, and the new ticket never arrives.",
      "on_screen_text": "'Small rebooking fee'",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. phone mockup: call with fee No text, no logos, no real people."
     },
     {
      "heading": "The tell",
-     "narration": "The number came from a text, not from the airline's app or your booking. Scammers also buy search ads for airline help lines.",
+     "narration": "That number came from a text, not your airline's app or confirmation. Scammers buy ads for fake airline help lines too.",
      "on_screen_text": "Wrong number, not the airline",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a search result with a fake badge No text, no logos, no real people."
     },
@@ -2431,7 +2431,7 @@
     },
     {
      "heading": "Do this",
-     "narration": "Open the airline's own app, or the website you typed yourself. Your real flight status is there.",
+     "narration": "Check in the airline's app, or on the site you typed in. That's where your real status is.",
      "on_screen_text": "Check the airline's own app",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a boarding pass No text, no logos, no real people."
     }
@@ -2627,19 +2627,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "1 phone call to the hotel shows whether your booking is real. Here's the walkthrough. One search ad looks exactly like the hotel's own website. Same photos, great price.",
+     "narration": "1 phone call to the hotel shows whether your booking is real. Here's the walkthrough. A search ad copies the hotel's site perfectly: the same pictures and a lower rate.",
      "on_screen_text": "Is it the real hotel site?",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes looking at a search result No text, no logos, no real people."
     },
     {
      "heading": "The catch",
-     "narration": "You pay, and get a confirmation that the hotel has never heard of. Or the price doubles with fees at checkout.",
+     "narration": "You book and get a confirmation the hotel can't find, or fees pile up at checkout until the price doubles.",
      "on_screen_text": "A booking the hotel's never seen",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a hotel front desk with a question mark No text, no logos, no real people."
     },
     {
      "heading": "The tell",
-     "narration": "Look at the web address. If it isn't the hotel's real address, it's a reseller at best, and a scam at worst.",
+     "narration": "Read the address bar. If it's not the hotel's own address, you're on a reseller at best, a fake at worst.",
      "on_screen_text": "Read the web address",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. an address bar zoomed in No text, no logos, no real people."
     },
@@ -2663,7 +2663,7 @@
     },
     {
      "heading": "Do this",
-     "narration": "Type the hotel's address yourself, call the hotel to confirm, and pay by credit card.",
+     "narration": "Type the hotel's address in yourself, phone the front desk to confirm, and use a credit card.",
      "on_screen_text": "Type it yourself. Confirm. Card.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes with a suitcase No text, no logos, no real people."
     }
@@ -2851,19 +2851,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "4 road trip habits protect your card at the pump, and 1 matters most. One tug on the card reader before you pay at the pump. Here's why.",
+     "narration": "4 road trip habits protect your card at the pump, and 1 matters most. Give the card reader one tug before you pay for gas. Here's the reason.",
      "on_screen_text": "Tug the reader",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv at a gas pump, filmed on his phone No text, no logos, no real people."
     },
     {
      "heading": "The skimmer",
-     "narration": "Skimmers copy your card at the pump. Some sit on top of the reader, some are hidden inside, behind a broken seal.",
+     "narration": "A skimmer copies your card. Some fit over the reader, others hide inside the pump behind a tampered seal.",
      "on_screen_text": "Skimmers hide in pumps",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a pump with an open panel No text, no logos, no real people."
     },
     {
      "heading": "The checks",
-     "narration": "Wiggle the reader. Check the security tape on the panel. Pick a pump near the store, where staff can see it.",
+     "narration": "Pull on the reader, look at the tape on the pump door, and use a pump the cashier can see.",
      "on_screen_text": "Wiggle · check the seal · pump near the door",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. three pumps, one highlighted No text, no logos, no real people."
     },
@@ -2887,7 +2887,7 @@
     },
     {
      "heading": "Pay smart",
-     "narration": "Better still, tap to pay or pay inside. Use a credit card, not debit, and turn on card alerts.",
+     "narration": "Even better, tap or pay at the counter. Pay with credit instead of debit, and switch on alerts for your card.",
      "on_screen_text": "Tap, or pay inside. Credit, not debit.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes with a credit card No text, no logos, no real people."
     }

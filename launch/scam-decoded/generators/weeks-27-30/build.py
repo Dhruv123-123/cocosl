@@ -13,6 +13,7 @@ sys.path.insert(0, str(HERE))
 sys.path.insert(1, str(HERE.parent / "weeks-22-26"))
 from common import CTA, CTA_TIKTOK, KIT, seg  # noqa: E402
 from shorts import SHORTS  # noqa: E402
+from tt_rewrites import TT  # noqa: E402
 from carousels import CAROUSELS  # noqa: E402
 from long import LONG  # noqa: E402
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
@@ -75,8 +76,9 @@ def build():
                                      "caption": s["caption"] + plug + "\n\n" + CTA, "hashtags": s["hashtags"],
                                      "description": s["description"], "thumbnail_text": s["thumb"],
                                      "sources": s["sources"], "claims_to_verify": s["claims"]}})
-            tt_rows = [("Hook", s["tt_hook"] + " " + s["short"][0][1], s["thumb"], s["short"][0][3])]
-            tt_rows += list(s["short"][1:-1]) + list(s["tt_extra"]) + [s["short"][-1]]
+            sh = [(r[0], n, *r[2:]) for r, n in zip(s["short"], TT[s["title"]])]  # reworded, not repeated
+            tt_rows = [("Hook", s["tt_hook"] + " " + sh[0][1], s["thumb"], sh[0][3])]
+            tt_rows += list(sh[1:-1]) + list(s["tt_extra"]) + [sh[-1]]
             items.append({"format": "short", "pillar": s["pillar"], "platforms": ["tiktok"], "week": w,
                           "post_on": f"{day(d)} 18:00", "look": s["tt_look"],
                           "original_element": LOOK_NOTE[s["tt_look"]] + " " + VOICE,

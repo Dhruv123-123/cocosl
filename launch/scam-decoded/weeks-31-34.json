@@ -206,19 +206,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "1 talk with your teen before their first summer paycheck hits a payment app. One post. Send fifty dollars, get five hundred back. Screenshots of happy customers, a timer, spots running out.",
+     "narration": "1 talk with your teen before their first summer paycheck hits a payment app. The post promises to turn fifty dollars into five hundred, with screenshots, a countdown and only a few spots left.",
      "on_screen_text": "Money flips aren't real",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes looking at a phone full of money emojis No text, no logos, no real people."
     },
     {
      "heading": "The catch",
-     "narration": "There's no flip. Once you send it, the fifty is gone. Then comes a message: your five hundred is ready, just pay a release fee first.",
+     "narration": "Nothing gets flipped. The fifty disappears the moment you send it, and then a message says your five hundred is waiting behind a release fee.",
      "on_screen_text": "Then a 'release fee'",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a padlock on a pile of cash No text, no logos, no real people."
     },
     {
      "heading": "The tell",
-     "narration": "Nobody can multiply money you send them. Payment apps don't run giveaways where you pay first. The screenshots are fake.",
+     "narration": "No one can grow money you send to a stranger. Payment apps don't run pay-first giveaways, and those screenshots are made up.",
      "on_screen_text": "Nobody multiplies your money",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a calculator with a red X No text, no logos, no real people."
     },
@@ -242,7 +242,7 @@
     },
     {
      "heading": "Do this",
-     "narration": "Scroll past. Payment apps are for people you know. If a friend's account posts a flip, their account was hacked. Tell them another way.",
+     "narration": "Keep scrolling. Use payment apps only with people you know, and if a friend's account posts one, message them somewhere else to say they've been hacked.",
      "on_screen_text": "Pay only people you know",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes with a stop hand No text, no logos, no real people."
     }
@@ -433,19 +433,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "3 'free coins' offers, and only 1 answer is right. Play along with your kid. One video in your kid's feed: free coins, unlimited, just enter your username and password.",
+     "narration": "3 'free coins' offers, and only 1 answer is right. Play along with your kid. Your kid sees a video: endless free coins, just type in your username and password.",
      "on_screen_text": "Free coins? No such thing.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough: a game-style site with a coin pile No text, no logos, no real people."
     },
     {
      "heading": "The catch",
-     "narration": "There's no generator. The site saves the login, and the scammer takes the account, the items and anything bought with real money.",
+     "narration": "No generator exists. The site keeps the login, then the account, the skins, and everything bought with real money are taken.",
      "on_screen_text": "It saves the login",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough: login box glowing red No text, no logos, no real people."
     },
     {
      "heading": "The tell",
-     "narration": "Game companies sell their currency through the game and gift cards. Any site that gives it away free and asks for a password is a scam.",
+     "narration": "Games sell their currency inside the game or on gift cards. A site handing it out for your password is a scam every time.",
      "on_screen_text": "Real coins come from the game",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a game controller with a coin No text, no logos, no real people."
     },
@@ -469,7 +469,7 @@
     },
     {
      "heading": "Do this",
-     "narration": "Tell your kid the rule: never type the password anywhere but the game. Then turn on two-step verification and a parent PIN together.",
+     "narration": "Teach the rule: the password only goes into the game itself. Then set up two-step verification and a parent PIN side by side.",
      "on_screen_text": "Password goes in the game only",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes with a game controller No text, no logos, no real people."
     }
@@ -653,19 +653,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "3 messages turn a summer babysitting job into a bounced check. One summer job by text. Babysitting, six hundred a week, and the family will mail a check before you meet.",
+     "narration": "3 messages turn a summer babysitting job into a bounced check. A babysitting job arrives by text: six hundred a week, and they'll post you a check before you've even met.",
      "on_screen_text": "The check-first nanny job",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv's screen: a message thread No text, no logos, no real people."
     },
     {
      "heading": "The ask",
-     "narration": "The check is for more than your pay. Keep your wages, they say, and send the rest to our supplier for a car seat and a stroller.",
+     "narration": "The check is bigger than your wages. Keep your pay, they say, and send the rest to a supplier for baby gear.",
      "on_screen_text": "'Send the rest to our supplier'",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv's screen: a check photo No text, no logos, no real people."
     },
     {
      "heading": "The trap",
-     "narration": "The check looks real and the bank shows the money. Days later, it bounces, and you owe the bank every dollar you sent.",
+     "narration": "The bank shows the money, so it looks fine. Then the check bounces, and every dollar you sent is yours to repay.",
      "on_screen_text": "It bounces. You owe it.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv's screen: bank app balance No text, no logos, no real people."
     },
@@ -689,7 +689,7 @@
     },
     {
      "heading": "The rule",
-     "narration": "Meet the family first, on video and in person. Never send money back from a check. A real job doesn't pay you in advance.",
+     "narration": "Meet the family on video and then in person. Never forward money from a check, and remember real jobs pay after the work.",
      "on_screen_text": "No job pays you to pay someone",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a stop sign No text, no logos, no real people."
     }
@@ -927,19 +927,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "3 questions end the 'final notice' car warranty call. Dad can try them this week. One call. This is your final notice. Your vehicle's warranty is about to expire. Press one to speak to a specialist.",
+     "narration": "3 questions end the 'final notice' car warranty call. Dad can try them this week. The robocall calls it your final notice: your car's warranty is ending, press one for a specialist.",
      "on_screen_text": "'Final notice'? Hang up.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough: incoming call, 'Vehicle Services' No text, no logos, no real people."
     },
     {
      "heading": "Who it is",
-     "narration": "It's not your carmaker or your dealer. It's someone selling a service contract, and some of them take a down payment and disappear.",
+     "narration": "This isn't the carmaker or the dealer. It's a service contract seller, and some take a deposit and vanish.",
      "on_screen_text": "Not your carmaker",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough: a postcard stamped FINAL No text, no logos, no real people."
     },
     {
      "heading": "The tell",
-     "narration": "They don't say which car, they want payment today, and pressing one gets you more calls.",
+     "narration": "They can't name your car, they need payment today, and pressing one only brings more calls.",
      "on_screen_text": "Which car? Pay today?",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone ringing off the hook No text, no logos, no real people."
     },
@@ -963,7 +963,7 @@
     },
     {
      "heading": "Do this",
-     "narration": "Hang up. Your dealer or the manual tells you what warranty you already have. Want more coverage? Compare it yourself, in writing.",
+     "narration": "End the call. Your manual or your dealer can say what coverage you have, and any extra is a decision to compare in writing.",
      "on_screen_text": "Ask your dealer, not the caller",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding car keys No text, no logos, no real people."
     }
@@ -1158,19 +1158,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "3 calls a small business gets in 1 week. Pause and pick the real one. One robocall. Your business listing will be removed from Google today unless you verify now. Press one.",
+     "narration": "3 calls a small business gets in 1 week. Pause and pick the real one. A recording says your business comes off Google today unless you press one to verify.",
      "on_screen_text": "Google didn't call",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes next to a shop sign No text, no logos, no real people."
     },
     {
      "heading": "The pitch",
-     "narration": "A person comes on and offers to fix it, or get you on the first page, for a fee. Some are sales pitches, some are scams.",
+     "narration": "A live person then offers to fix it, or to rank you first, for a fee. Some are pushy sales, some are outright scams.",
      "on_screen_text": "'Pay us to fix it'",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a search page with a price tag No text, no logos, no real people."
     },
     {
      "heading": "The tell",
-     "narration": "A basic Google Business Profile is free, and you manage it yourself. A threat with a deadline is the sales tactic.",
+     "narration": "Claiming and running a basic Google Business Profile costs nothing. The deadline is a pressure tactic.",
      "on_screen_text": "A Google listing is free",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a storefront with a free tag No text, no logos, no real people."
     },
@@ -1194,7 +1194,7 @@
     },
     {
      "heading": "Do this",
-     "narration": "Hang up. Sign in to your own business profile and check it yourself. Pass this to anyone who runs a small business.",
+     "narration": "Hang up and sign in to your profile yourself to see that it's fine. Send this to a friend who runs a shop.",
      "on_screen_text": "Check your own profile",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes hanging up a phone No text, no logos, no real people."
     }
@@ -1378,19 +1378,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "4 messages from a car 'buyer' and the 1 that gives the scam away. One buyer. Full asking price for Dad's truck, doesn't need to see it, and the check is two thousand too much.",
+     "narration": "4 messages from a car 'buyer' and the 1 that gives the scam away. A buyer offers the full price for Dad's truck, sight unseen, and mails a check for two thousand more than you asked.",
      "on_screen_text": "The overpaying buyer",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv on camera holding a phone No text, no logos, no real people."
     },
     {
      "heading": "The ask",
-     "narration": "Just send back the extra to my shipper, they say, and he'll pick up the truck. The check looks perfect.",
+     "narration": "Please wire the extra to my shipper, who'll collect the truck, they say. The check looks flawless.",
      "on_screen_text": "'Send the extra to my shipper'",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a tow truck with a question mark No text, no logos, no real people."
     },
     {
      "heading": "The trap",
-     "narration": "Days later the check bounces. The two thousand you sent is gone, and sometimes so is the truck.",
+     "narration": "Then the check bounces. The two thousand you wired is lost, and sometimes the truck goes with it.",
      "on_screen_text": "Check bounces. Money's gone.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a check tearing in half No text, no logos, no real people."
     },
@@ -1414,7 +1414,7 @@
     },
     {
      "heading": "The rule",
-     "narration": "Sell to buyers who see the car and pay in a way you can confirm, like meeting at your bank. Never send back an overpayment.",
+     "narration": "Sell to someone who sees the truck and pays in a way you can check, like at your own bank. Never refund an overpayment.",
      "on_screen_text": "Never refund an overpayment",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes with car keys No text, no logos, no real people."
     }
@@ -1653,19 +1653,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "3 tricks make the fake jury duty call sound real. Here they are, one at a time. One call. You missed jury duty, there's a warrant for your arrest, and you can pay the fine right now.",
+     "narration": "3 tricks make the fake jury duty call sound real. Here they are, one at a time. The caller says you skipped jury duty, a warrant is out, and you can settle the fine right now.",
      "on_screen_text": "Missed jury duty? No.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv on camera holding a phone No text, no logos, no real people."
     },
     {
      "heading": "The ask",
-     "narration": "The caller sounds official, gives a badge number, and wants a payment app, gift cards or a prepaid card, to cancel the warrant.",
+     "narration": "He sounds official, reads a badge number, and wants a payment app, gift cards or a prepaid card to clear it.",
      "on_screen_text": "'Pay now to cancel it'",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a badge next to a gift card No text, no logos, no real people."
     },
     {
      "heading": "The tell",
-     "narration": "The federal courts say they don't call demanding fines, and don't ask for your Social Security number or card by phone.",
+     "narration": "The federal courts say they don't phone people demanding fines, and won't ask for your card or Social Security number that way.",
      "on_screen_text": "Courts don't take fines by phone",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a courthouse No text, no logos, no real people."
     },
@@ -1689,7 +1689,7 @@
     },
     {
      "heading": "Do this",
-     "narration": "Hang up. Call the court yourself, using the number on its own website, and ask if anything is real.",
+     "narration": "End the call, find the court's number on its official website, and ask them directly.",
      "on_screen_text": "Call the court yourself",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes hanging up a phone No text, no logos, no real people."
     }
@@ -1869,19 +1869,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "10 seconds in Settings tells you if the 'storage full' email is real. Here's the screen. One email. Your cloud storage is full, and your photos and videos will be deleted. Upgrade now, with a loyalty discount.",
+     "narration": "10 seconds in Settings tells you if the 'storage full' email is real. Here's the screen. The email warns your storage is full and your photos and videos are about to be wiped, unless you upgrade at a special discount.",
      "on_screen_text": "Storage full? Check Settings.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough: an email with a full storage bar No text, no logos, no real people."
     },
     {
      "heading": "The catch",
-     "narration": "The link goes to a lookalike page that takes your card details, and sometimes your account password too.",
+     "narration": "The button opens a copycat page that collects your card, and sometimes your account password as well.",
      "on_screen_text": "The link takes your card",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough: a fake payment form No text, no logos, no real people."
     },
     {
      "heading": "The tell",
-     "narration": "Fear about your photos, a deadline, and a discount you never asked for. Real storage warnings show up in your phone's settings.",
+     "narration": "Panic about photos, a deadline, a deal you didn't request. Genuine storage warnings appear in your phone's settings.",
      "on_screen_text": "Fear, deadline, discount",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a photo album with a clock No text, no logos, no real people."
     },
@@ -1905,7 +1905,7 @@
     },
     {
      "heading": "Do this",
-     "narration": "Don't click. Open Settings on your phone, tap your name, and look at storage. That's the real number.",
+     "narration": "Skip the link. Go to Settings, tap your name, then storage, and read the real figure.",
      "on_screen_text": "Settings, then storage",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a phone No text, no logos, no real people."
     }
@@ -2084,19 +2084,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "2 kinds of 'property notice' letters show up after people buy a home. Here's what they want. One letter. Official seal, your parcel number, response due in ten days. Get a certified copy of your deed, eighty-nine dollars.",
+     "narration": "2 kinds of 'property notice' letters show up after people buy a home. Here's what they want. The letter has a seal, your parcel number, a ten-day deadline, and an offer of a certified deed copy for eighty-nine dollars.",
      "on_screen_text": "Your deed isn't $89",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a letter with a seal on a doormat No text, no logos, no real people."
     },
     {
      "heading": "Pause",
-     "narration": "Pause. Government notice, or a company selling something? Look for the small print.",
+     "narration": "Stop for a second. Is this from the government, or is a company selling you something? Find the fine print.",
      "on_screen_text": "Pause: government or company?",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a full-screen countdown card No text, no logos, no real people."
     },
     {
      "heading": "Answer",
-     "narration": "A company. The small print says it's not a government agency. Your county recorder has your deed, often for a few dollars, or free online.",
+     "narration": "It's a company, and the fine print admits it isn't a government agency. The county recorder keeps your deed, often free online or for a few dollars.",
      "on_screen_text": "A company, not the county",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. small print under a magnifying glass No text, no logos, no real people."
     },
@@ -2120,7 +2120,7 @@
     },
     {
      "heading": "Do this",
-     "narration": "Don't pay. If you need a copy, go to your county recorder's own website. Check Mom and Dad's mail for these too.",
+     "narration": "Skip it. Need a copy? Use your county recorder's own site. And look through your parents' mail for letters like this.",
      "on_screen_text": "Go to your county's website",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a letter No text, no logos, no real people."
     }
@@ -2359,19 +2359,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "2 kinds of texts come after a lost pet flyer goes up. Neither is the finder. One text, right after you post a lost dog flyer. I think I found your dog. Send me the code I'm about to text, so I know you're really the owner.",
+     "narration": "2 kinds of texts come after a lost pet flyer goes up. Neither is the finder. Minutes after your lost dog flyer goes up: I may have your dog, I'll text you a code, send it back to prove you're the owner.",
      "on_screen_text": "Found your dog? Prove it.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a lost dog flyer No text, no logos, no real people."
     },
     {
      "heading": "The catch",
-     "narration": "The code isn't from them. It's a sign-up code for an account in your name, like a phone number they can use for other scams.",
+     "narration": "That code is from a service setting up an account with your phone number, which they'll use for other scams.",
      "on_screen_text": "The code opens an account",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone with a key No text, no logos, no real people."
     },
     {
      "heading": "The tell",
-     "narration": "Someone who has your dog sends a photo or meets you. They don't need a code, or money first.",
+     "narration": "A real finder sends a photo or meets you. They never need a code or money up front.",
      "on_screen_text": "Real finders send a photo",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a dog with a camera No text, no logos, no real people."
     },
@@ -2395,7 +2395,7 @@
     },
     {
      "heading": "Do this",
-     "narration": "Never send a code. Ask for a current photo with something you name, and meet in a public place. Bring a friend.",
+     "narration": "Don't share codes. Ask for a fresh photo with an object you choose, and meet somewhere public with a friend.",
      "on_screen_text": "No codes. Ask for a photo.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes with a leash No text, no logos, no real people."
     }
@@ -2582,19 +2582,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "3 ways to answer the 'I sent you $300 by mistake' message. Only 1 is safe. One payment from a stranger, three hundred dollars, and a message. So sorry, I sent that by mistake. Can you send it back?",
+     "narration": "3 ways to answer the 'I sent you $300 by mistake' message. Only 1 is safe. Three hundred dollars arrives from a name you don't know, then a message: oops, wrong person, could you send it back?",
      "on_screen_text": "Sent by mistake? Don't send back.",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv on camera holding a phone No text, no logos, no real people."
     },
     {
      "heading": "The catch",
-     "narration": "Their payment came from a stolen card or account. It gets reversed, and the three hundred you sent from your own money doesn't.",
+     "narration": "That money came from a stolen account and will be pulled back. What you sent from your own balance won't be.",
      "on_screen_text": "Their payment gets reversed",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a payment arrow bouncing back No text, no logos, no real people."
     },
     {
      "heading": "The tell",
-     "narration": "A stranger, a polite rush, and a request to send it back yourself instead of asking the app.",
+     "narration": "Watch for it: a stranger, polite urgency, and a push to send it yourself instead of going through the app.",
      "on_screen_text": "They ask you, not the app",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a speech bubble with a clock No text, no logos, no real people."
     },
@@ -2618,7 +2618,7 @@
     },
     {
      "heading": "Do this",
-     "narration": "Don't send it back. Contact the app's support from inside the app, and let them reverse it.",
+     "narration": "Leave it alone. Reach the app's support from inside the app, and let the app return it.",
      "on_screen_text": "Let the app reverse it",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes pointing at a phone No text, no logos, no real people."
     }
@@ -2799,19 +2799,19 @@
    "segments": [
     {
      "heading": "Hook",
-     "narration": "3 signs the celebrity in that ad never said a word of it. One ad in your feed. A famous face, a 4th of July sale, a product they 'use every day', seventy percent off.",
+     "narration": "3 signs the celebrity in that ad never said a word of it. An ad shows a celebrity pushing a holiday sale on something they supposedly use daily, at seventy percent off.",
      "on_screen_text": "That celebrity didn't say it",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv's screen: a feed with a blurred ad No text, no logos, no real people."
     },
     {
      "heading": "The catch",
-     "narration": "The video can be made with AI, or the face borrowed without asking. The store behind it may not ship anything.",
+     "narration": "The clip might be AI-made, or the face used without permission, and the shop may never send anything.",
      "on_screen_text": "The face can be fake",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a face with a pixel grid No text, no logos, no real people."
     },
     {
      "heading": "The check",
-     "narration": "Search the celebrity's name plus the product. If they really endorsed it, it's on their own pages, not only in an ad.",
+     "narration": "Search the star's name with the product. A real endorsement shows up on their own pages, not just in ads.",
      "on_screen_text": "Search name + product",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv's screen: a search bar No text, no logos, no real people."
     },
@@ -2835,7 +2835,7 @@
     },
     {
      "heading": "Do this",
-     "narration": "Scroll past, and report the ad. Here's the menu. Two taps.",
+     "narration": "Keep scrolling and report the ad. The menu is right here, and it takes two taps.",
      "on_screen_text": "Report the ad: 2 taps",
      "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv's screen: the report ad menu No text, no logos, no real people."
     }
