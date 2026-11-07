@@ -205,7 +205,7 @@ def pins() -> list[dict]:
         html=page("light", '<h1 style="font-size:96px">How much rent fits your salary?</h1><div class="rows">' + "".join(
                 f'<div class="row"><b>${s // 1000}k</b><em>{money(s * 0.3 / 12)}/mo</em></div>' for s in (50000, 60000, 75000))
             + '</div><p class="note">30% of gross pay. Take-home, budgets and city rents for your salary →</p>')))
-    P.append(dict(slug="shop-toolkit-1", path="/shop/#bundles", board="Budget printables",
+    P.append(dict(slug="shop-toolkit-1", path="/shop/money-toolkit-bundle/", board="Budget printables",
         title=f"5 money kits in one: budget, bills, credit, debt and investing (${kit['price']:g})",
         desc="All five Money Made Simple guide-and-spreadsheet kits in one download, with a Start Here map and a 30-day plan that uses all five. Excel, Google Sheets or Numbers. One payment, no subscription.",
         alt=f"The Money Made Simple Toolkit cover with five kits listed and a ${kit['price']:g} price tag.",
@@ -217,7 +217,7 @@ def pins() -> list[dict]:
                 f'<div><i style="width:20px;height:20px;background:var(--gold)"></i>{t}</div>' for t in [
                     "Bill Cut Kit", "20-Minute Budget", "Credit Report Audit", "Debt-Free Date Planner",
                     "Start Investing With $100 a Month"]) + "</div>")))
-    P.append(dict(slug="shop-savings-pack-1", path="/shop/#bundles", board="Budget printables",
+    P.append(dict(slug="shop-savings-pack-1", path="/shop/savings-challenge-pack/", board="Budget printables",
         title=f"12 printable savings challenges in one pack (${pack['price']:g})",
         desc="Make saving a habit (and a bit of a game): every savings challenge from the shop in one printable pack, from the 52-week challenge to savings bingo. Letter and A4 PDFs.",
         alt="Six tiles showing printable savings challenges, including 52-week, 100 envelopes and savings bingo.",
@@ -353,7 +353,7 @@ def library() -> list[dict]:
             ["Letter + A4 PDF", "Print at home or fill on a tablet", "Instant download"]
         if it.get("separately"):
             inc[1] = f"${it['separately']:g} if bought separately"
-        add("shop-" + it["slug"], "shop", f"/shop/#item-{it['slug']}", (board, "Budget printables"
+        add("shop-" + it["slug"], "shop", it.get("page") or f"/shop/{it['slug']}/", (board, "Budget printables"
             if board != "Budget printables" else "Budgeting for beginners"),
             f"{it['name']} ({price.lower() if price == 'Free' else price})", it.get("blurb", it["name"]), f"the {it['name']}",
             design_a(f"{label} · {price}", it["name"], pitch, "Get it in the shop", art),

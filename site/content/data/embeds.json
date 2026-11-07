@@ -1,0 +1,31 @@
+{
+ "_readme": "Tools from the apps site (PR #8, site.json > apps_url) embedded in articles, right after the worked example. 'calc' tools load as a live calculator through the apps site's embed.js (an iframe that sizes itself); 'link' tools show as a card with a button. Hidden while apps_url is empty. 'articles' maps article slug -> tool key. Write {{embed:<key>}} in an article to place one by hand.",
+ "tools": {
+  "tax-refund": {"kind": "calc", "calc": "tax-refund", "path": "/money-calculators/tax-refund/",
+   "title": "Tax refund estimator (2026 tax year)",
+   "blurb": "Enter your pay, withholding and family, and see whether you're likely to get a refund or owe."},
+  "debt-payoff": {"kind": "calc", "calc": "debt-payoff", "path": "/money-calculators/debt-payoff/",
+   "title": "Debt payoff calculator with chart",
+   "blurb": "Add your debts and extra payment, and see avalanche and snowball side by side, with a payoff chart and a printable plan."},
+  "52-week": {"kind": "link", "path": "/budget/savings-challenge.html",
+   "title": "52-week savings challenge tracker",
+   "blurb": "Save $1 in week 1, $2 in week 2, up to $52: $1,378 in a year. Pick your own goal, tick off each week, and print the chart. Free, and your progress stays in your browser.",
+   "button": "Start the challenge"}
+ },
+ "articles": {
+  "what-to-do-with-your-tax-refund": "tax-refund",
+  "how-to-fill-out-a-w-4": "tax-refund",
+  "how-to-file-taxes-for-the-first-time": "tax-refund",
+  "earned-income-tax-credit": "tax-refund",
+  "tax-deductions-vs-tax-credits": "tax-refund",
+  "standard-deduction-vs-itemizing": "tax-refund",
+  "debt-avalanche-vs-snowball": "debt-payoff",
+  "debt-consolidation-explained": "debt-payoff",
+  "how-credit-card-interest-works": "debt-payoff",
+  "how-to-stop-living-paycheck-to-paycheck": "debt-payoff",
+  "no-spend-challenge": "52-week",
+  "how-to-build-an-emergency-fund": "52-week",
+  "sinking-funds-explained": "52-week",
+  "how-much-emergency-fund-do-i-need": "52-week"
+ }
+}

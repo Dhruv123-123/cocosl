@@ -423,10 +423,12 @@ def test_ask_page_answers_30_new_questions_with_schema(tmp_path):
     visible = re.findall(r'<div class="ask-q" id="[^"]+"><h3>(.*?)</h3>', page)
     assert [html_unescape(q) for q in visible] == [q["name"] for q in faq]
     assert all(len(q["acceptedAnswer"]["text"]) > 150 and "{" not in q["acceptedAnswer"]["text"] for q in faq)
-    # every answer links a tool, and every shop link points at a real card
+    # every answer links a tool, and every shop link points at a real product page
     assert page.count('class="ask-tools"') == 30
-    for slug in re.findall(r'href="/shop/#item-([a-z0-9-]+)"', page):
-        assert f'id="item-{slug}"' in (out / "shop" / "index.html").read_text(), slug
+    shop_links = re.findall(r'href="(/(?:shop|products)/[a-z0-9-]+/)"', page)
+    assert shop_links and "/shop/#item-" not in page
+    for path in shop_links:
+        assert (out / path.strip("/") / "index.html").exists(), path
     assert "/ask/" in (out / "sitemap.xml").read_text()
     assert 'href="/ask/"' in (out / "index.html").read_text()
     # No overlap with what the site already answers: article/compare/newsletter titles and their FAQ questions.
@@ -844,7 +846,7 @@ def test_product_placements_match_the_catalog_and_sit_after_the_worked_example(t
         first = pl["articles"][slug][0]
         card = h.find('class="template-card')
         assert card > h.find('id="a-worked-example') > 0 and card < h.find('id="common-questions"'), slug
-        assert f'href="/shop/#item-{first}"' in h, slug
+        assert f'href="/shop/{first}/"' in h or f'href="/products/{first}/"' in h, slug
         assert "example.gumroad.com/l/" in h or "etsy.com/shop/REPLACE_ME" in h, slug  # placeholder store links until real ones are set
     # the FAQ schema never carries shortcodes
     for m in re.findall(r'<script type="application/ld\+json">(.*?)</script>', (out / "blog" / "debt-avalanche-vs-snowball" / "index.html").read_text()):
@@ -865,3 +867,50 @@ def test_shop_has_a_landing_page_per_goal(tmp_path):
         assert "example.gumroad.com/l/" in h or "REPLACE_ME" in h, g  # placeholder store links
         assert f"https://example.org/shop/{g}/" in sitemap, g
         assert f'href="/shop/{g}/"' in shop and f'href="/shop/{g}/"' in start, g
+
+
+def test_every_product_has_its_own_page_with_product_schema(tmp_path):
+    import json
+    items = json.loads((SITE / "content" / "shop.json").read_text())["items"]
+    out = _build(tmp_path, "https://example.org")
+    sitemap = (out / "sitemap.xml").read_text()
+    shop = (out / "shop" / "index.html").read_text()
+    for it in items:
+        path = it.get("page") or f"/shop/{it['slug']}/"
+        h = (out / path.strip("/") / "index.html").read_text()
+        assert f"https://example.org{path}" in sitemap, path
+        assert f'href="{path}"' in shop, path  # shop cards link to the product page
+        if it.get("page"):
+            continue
+        ld = [json.loads(m) for m in re.findall(r'<script type="application/ld\+json">(.*?)</script>', h)]
+        prod = next(x for x in ld if x.get("@type") == "Product")
+        assert prod["name"] == it["name"] and prod["url"] == f"https://example.org{path}"
+        assert prod["offers"]["price"] == f"{it['price']:.2f}" and prod["offers"]["priceCurrency"] == "USD"
+        assert "example.gumroad.com/l/" in prod["offers"]["url"] or "REPLACE_ME" in prod["offers"]["url"]  # placeholder
+        assert "{{" not in h and h.count("<h1") == 1
+    # the toolkit page lists all five kits, and each kit points back to the toolkit
+    tk = (out / "shop" / "money-toolkit-bundle" / "index.html").read_text()
+    assert tk.split("inside</h2>")[1].split("</ul>")[0].count("<li>") == 5
+    assert 'href="/shop/money-toolkit-bundle/"' in (out / "shop" / "bill-cut-kit" / "index.html").read_text()
+    # product pins link straight to the product page
+    pins = (SITE / "pins" / "pins.csv").read_text()
+    assert "/shop/?" not in pins and "#item-" not in pins
+
+
+def test_apps_tools_are_embedded_in_matching_articles(tmp_path):
+    import json
+    em = json.loads((SITE / "content" / "data" / "embeds.json").read_text())
+    for slug, key in em["articles"].items():
+        assert (SITE / "content" / "blog" / f"{slug}.md").exists() and key in em["tools"], slug
+    out = _build(tmp_path, "https://example.org", APPS_URL="https://tools.example.net", BUILD_DATE="2027-04-30")
+    h = (out / "blog" / "debt-avalanche-vs-snowball" / "index.html").read_text()
+    tool = h.find('class="tool-embed"')
+    assert h.find('id="a-worked-example') < tool < h.find('class="template-card')
+    assert 'data-calc="debt-payoff"' in h and 'src="https://tools.example.net/money-calculators/embed.js"' in h
+    assert 'data-calc="tax-refund"' in (out / "blog" / "what-to-do-with-your-tax-refund" / "index.html").read_text()
+    ns = (out / "blog" / "no-spend-challenge" / "index.html").read_text()
+    assert 'href="https://tools.example.net/budget/savings-challenge.html"' in ns and "mms-calc" not in ns
+    # hidden until the apps site has an address
+    off = _build(tmp_path / "off", "https://example.org", APPS_URL="", BUILD_DATE="2027-04-30")
+    h = (off / "blog" / "debt-avalanche-vs-snowball" / "index.html").read_text()
+    assert "tool-embed" not in h and "{{" not in h

@@ -501,6 +501,8 @@ def shortcode_factory(products: dict, source: str):
             return money_shop_summary()
         if name == "money:partners":
             return money_partners()
+        if name.startswith("embed:"):
+            return embed_block(name.split(":", 1)[1])
         if name.startswith("template:"):
             it = shop_items().get(name.split(":", 1)[1])
             return template_card(it) if it else ""
@@ -532,7 +534,7 @@ def template_card(it: dict) -> str:
            if it.get("image") else "")
     return f"""<aside class="template-card{' has-img' if img else ''}" aria-label="Template: {esc(it['name'])}">{img}<div>
   <p class="tc-label">Our template · {"Free" if not it["price"] else f"${it['price']:g}"}</p>
-  <p class="tc-name"><a href="{u(f"/shop/#item-{it['slug']}")}">{esc(it["name"])}</a></p>
+  <p class="tc-name"><a href="{u(product_path(it))}">{esc(it["name"])}</a></p>
   <p class="tc-blurb">{esc(it.get("blurb", ""))}</p>
   <p class="shop-buy">{shop_buttons(it)}</p></div></aside>"""
 
@@ -547,13 +549,39 @@ def templates_section(slug: str, prod: dict | None) -> str:
     return f'<section class="next"><h2>Template for this</h2>{product_card(prod)}</section>' if prod else ""
 
 
+def load_embeds() -> dict:
+    f = CONTENT / "data" / "embeds.json"
+    return json.loads(f.read_text()) if f.exists() else {"tools": {}, "articles": {}}
+
+
+def embed_block(key: str) -> str:
+    """An apps-site tool inside an article: a live calculator (the apps site's embed.js makes a self-sizing
+    iframe) or a link card. Nothing while site.json > apps_url is empty."""
+    t = load_embeds()["tools"].get(key)
+    base = apps_base()
+    if not t or not base:
+        return ""
+    full = esc(base + t["path"])
+    head = (f'<p class="tc-label">Free tool</p><p class="tc-name"><a href="{full}">{esc(t["title"])}</a></p>'
+            f'<p class="tc-blurb">{esc(t["blurb"])}</p>')
+    if t["kind"] == "calc":
+        return (f'<div class="tool-embed">{head}<div class="mms-calc" data-calc="{esc(t["calc"])}" data-title="{esc(t["title"])}"></div>'
+                f'<script src="{esc(base)}/money-calculators/embed.js" async></script>'
+                f'<p class="tool-open"><a href="{full}">Open the full calculator</a></p></div>')
+    return (f'<div class="tool-embed">{head}<p class="shop-buy"><a class="btn" href="{full}">'
+            f'{esc(t.get("button", "Open the tool"))}</a></p></div>')
+
+
 def with_inline_template(body: str, slug: str) -> str:
     """Put the article's first related template right after its worked example section (or before
     'Common questions' if there's no worked example), as {{template:<slug>}}."""
     picks = load_placements()["articles"].get(slug, [])
-    if not picks:
+    tool = load_embeds()["articles"].get(slug)
+    if tool and f"{{{{embed:{tool}}}}}" in body:
+        tool = None  # placed by hand
+    if not picks and not tool:
         return body
-    code = f"\n{{{{template:{picks[0]}}}}}\n\n"
+    code = (f"\n{{{{embed:{tool}}}}}\n" if tool else "") + (f"\n{{{{template:{picks[0]}}}}}\n" if picks else "") + "\n"
     m = re.search(r"^## A worked example.*$", body, re.M)
     if m:
         nxt = re.search(r"^## ", body[m.end():], re.M)
@@ -1140,6 +1168,7 @@ def build() -> list[str]:
         build_shop(json.loads(shop_file.read_text())["items"])
         urls.append(("/shop/", date.today().isoformat()))
         urls += build_shop_goals()
+        urls += build_product_pages()
 
     # ---- static pages
     for pg in pages:
@@ -1560,7 +1589,7 @@ def build_ask(shop: dict, pseo) -> list[tuple[str, str]]:
     def shop_link(m):
         if m.group(1) not in shop:
             raise SystemExit(f"content/ask.md: unknown shop item '{m.group(1)}'")
-        return f"(/shop/#item-{m.group(1)})"
+        return f"({product_path(shop[m.group(1)])})"
     md = re.sub(r"\(shop:([a-z0-9-]+)\)", shop_link, md)
     md = re.sub(r"\(calc:([a-z-]+)\)", lambda m: f"({calc}/{m.group(1)}/)", md)
 
@@ -1750,7 +1779,7 @@ def build_holiday(shop: dict) -> list[tuple[str, str]]:
         it = shop.get(slug)
         if it:
             price = "free" if not it["price"] else f"${it['price']:g}"
-            tools.append(f'<li><a href="{u(f"/shop/#item-{slug}")}">{esc(it["name"])}</a> ({price}): '
+            tools.append(f'<li><a href="{u(product_path(it))}">{esc(it["name"])}</a> ({price}): '
                          f'{esc(it.get("blurb", ""))}</li>')
     tools_html = (f'<section class="next"><h2>Tools and printables for the season</h2><ul class="related">{"".join(tools)}</ul></section>'
                   if tools else "")
@@ -1865,7 +1894,7 @@ def shop_card(it: dict, image: bool = True, eager: bool = False) -> str:
     img = (f'<img src="{u(it["image"])}" alt="{esc(it["name"])} cover" width="360" height="360" {load}>'
            if image and it.get("image") else "")
     return f"""<div class="shop-card{' has-img' if img else ''}" id="item-{esc(it['slug'])}">{img}<div class="shop-body">
-  <h3>{esc(it["name"])}</h3><p>{esc(it.get("blurb", ""))}</p>{shop_price(it)}
+  <h3><a href="{u(product_path(it))}">{esc(it["name"])}</a></h3><p>{esc(it.get("blurb", ""))}</p>{shop_price(it)}
   <p class="shop-buy">{shop_buttons(it)}</p></div></div>"""
 
 
@@ -1912,6 +1941,97 @@ def build_shop(items: list[dict]) -> None:
                            description=f"Every {CFG['name']} product: budget and debt payoff kits, Google Sheets and "
                                        "Notion templates, savings challenges and printables. Bundles save up to 85%.",
                            path="/shop/", body=body, jsonld=ld))
+
+
+def product_path(it: dict) -> str:
+    """Each product's own page: its landing page if it has one (shop.json > page), else /shop/<slug>/."""
+    return it.get("page") or f"/shop/{it['slug']}/"
+
+
+KIND_INFO = {
+    "kit": ("Guide and spreadsheet kit", "A short PDF guide plus a spreadsheet that does the maths. The spreadsheet works in Excel, Google Sheets or Numbers."),
+    "sheets": ("Google Sheets template", "A Google Sheets template. After checkout you get a link to make your own copy in your Google account."),
+    "notion": ("Notion template", "A Notion template. After checkout you get a link to duplicate it into your own Notion workspace."),
+    "printable": ("Printable PDF", "Letter and A4 PDFs to print at home or fill in on a tablet."),
+}
+
+
+def bundle_contains(bundle: dict, it: dict) -> bool:
+    name = re.sub(r" (Kit|Pack|Printable)$", "", re.sub(r"^The ", "", it["name"]))
+    return bundle is not it and bool(bundle.get("bundle")) and name.lower() in bundle.get("blurb", "").lower()
+
+
+def build_product_pages() -> list[tuple[str, str]]:
+    """/shop/<slug>/: one page per product, so pins and articles can link straight to it. Buy buttons use the
+    same (placeholder) store links as the shop; Product schema carries the price and the store link."""
+    items = list(shop_items().values())
+    goals = load_placements()["goals"]
+    goal_ids = {g["id"] for g in goals}
+    arts = load_placements()["articles"]
+    by_slug = {p["slug"]: p for p in LIVE_POSTS}
+    out = []
+    for it in items:
+        if it.get("page"):
+            continue  # has its own landing page already
+        if it["slug"] in goal_ids:
+            raise SystemExit(f"shop.json: item slug '{it['slug']}' clashes with a /shop/<goal>/ page")
+        path = product_path(it)
+        kind, how = KIND_INFO.get(it["kind"], ("Download", ""))
+        if it.get("bundle"):
+            kind = "Bundle"
+        img = (f'<img src="{u(it["image"])}" alt="{esc(it["name"])} cover" width="360" height="360" fetchpriority="high">'
+               if it.get("image") else "")
+        guides = [by_slug[a] for a, picks in arts.items() if it["slug"] in picks and a in by_slug][:4]
+        guides_html = ("<h2>Free guides that go with it</h2><ul class=\"related\">" + "".join(
+            f'<li><a href="{u(f"/blog/{p["slug"]}/")}">{esc(p["title"])}</a></li>' for p in guides) + "</ul>") if guides else ""
+        # Only bundles whose blurb names at least two of their items list contents (others say "every X" in prose).
+        inside_of = {b["slug"]: [i for i in items if bundle_contains(b, i)] for b in items if b.get("bundle")}
+        inside_of = {k: v for k, v in inside_of.items() if len(v) >= 2}
+        in_bundles = [b for b in items if it in inside_of.get(b["slug"], [])]
+        bundles_html = ("<p>Also included in " + ", ".join(
+            f'<a href="{u(product_path(b))}">{esc(b["name"])}</a> (${b["price"]:g})' for b in in_bundles) + ".</p>") if in_bundles else ""
+        inside = inside_of.get(it["slug"], [])
+        inside_html = ("<h2>What's inside</h2><ul class=\"related\">" + "".join(
+            f'<li><a href="{u(product_path(i))}">{esc(i["name"])}</a> (${i["price"]:g} on its own)</li>' for i in inside) + "</ul>") if inside else ""
+        in_goals = [g for g in goals if it["slug"] in g["items"]]
+        goals_html = ("<p class=\"chips\">For: " + "".join(
+            f'<a class="chip" href="{u(f"/shop/{g["id"]}/")}">{esc(g["h1"].split(":")[0])}</a>' for g in in_goals) + "</p>") if in_goals else ""
+        similar = [i for i in items if i is not it and (i.get("group") or i["kind"]) == (it.get("group") or it["kind"])][:4]
+        similar_html = ("<h2>More like this</h2><ul class=\"related\">" + "".join(
+            f'<li><a href="{u(product_path(i))}">{esc(i["name"])}</a> ({"free" if not i["price"] else f"${i['price']:g}"})</li>'
+            for i in similar) + "</ul>") if similar else ""
+        stores = " and ".join({"gumroad": "Gumroad", "etsy": "Etsy"}.get(x, x) for x in it["stores"])
+        ld = [{"@context": "https://schema.org", "@type": "Product", "name": it["name"], "sku": it["slug"],
+               "description": it.get("blurb", ""), "brand": {"@type": "Brand", "name": CFG["name"]},
+               "url": absu(path), **({"image": absu(it["image"])} if it.get("image") else {}),
+               "offers": {"@type": "Offer", "price": f'{it["price"]:.2f}', "priceCurrency": "USD",
+                          "availability": "https://schema.org/InStock", "url": store_url(it, it["stores"][0])}},
+              org_ld()]
+        body = f"""<section class="wrap shop product-page">
+  <p class="crumbs"><a href="{u('/')}">Home</a> / <a href="{u('/shop/')}">Shop</a></p>
+  <div class="product-head{' has-img' if img else ''}">{img}<div>
+  <p class="tc-label">{esc(kind)}</p>
+  <h1>{esc(it["name"])}</h1>
+  <p class="dek">{esc(it.get("blurb", ""))}</p>
+  {shop_price(it)}
+  <p class="shop-buy">{shop_buttons(it)}</p>
+  {goals_html}</div></div>
+  <h2>What you get</h2>
+  <p>{esc(how)} Sold through {stores}: one payment, no subscription, and the files are yours to keep.</p>
+  {bundles_html}
+  {inside_html}
+  {guides_html}
+  {similar_html}
+  <p><a href="{u('/shop/')}">See the whole shop</a></p>
+  <p class="disclaimer">This is our own product: we earn the full price when you buy it. Prices in US dollars; Etsy may show local currency and add sales tax. An educational tool, not financial advice. Refunds: email {esc(CFG.get('contact_email', ''))} within 14 days.</p>
+  {magnet_box(f"product-{it['slug']}")}
+</section>"""
+        desc = it.get("blurb", "")
+        if len(desc) > 155:
+            desc = desc[:152].rsplit(" ", 1)[0].rstrip(",;:.") + "..."
+        write(path, layout(title=f"{it['name']} ({kind.lower()})", description=desc, path=path, body=body, jsonld=ld))
+        out.append((path, date.today().isoformat()))
+    return out
 
 
 def build_shop_goals() -> list[tuple[str, str]]:

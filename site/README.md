@@ -266,6 +266,22 @@ end, in place of the old single product card. You can also place a card anywhere
 `{{template:<item-slug>}}`. Cards use the same buy buttons as the shop, so they share its placeholder store
 links and its `Product Click` event. A test checks every article has an entry and every slug is in `shop.json`.
 
+### A page for each product (/shop/<slug>/)
+
+Every item in `shop.json` gets its own page with the cover, price, buy buttons, what you get, the bundle it's
+in (or what's inside a bundle, when the bundle's blurb names its items), the free guides it goes with, and
+Product schema (price, USD, and the store link as the offer URL). An item with `page` (the 20-Minute Budget)
+uses that landing page instead. Shop cards, template cards in articles, /ask/ and pins link to these pages.
+Buy links are the same placeholders as the shop until the store URLs are set.
+
+### Tools from the apps site inside articles
+
+`content/data/embeds.json` puts an apps-site tool (PR #8) right after an article's worked example: the tax
+refund estimator and the debt payoff calculator (with its chart) load live through the apps site's
+`embed.js`, and the 52-week savings challenge shows as a card with a button. They use `site.json > apps_url`
+(still the placeholder `https://mms-tools.netlify.app`) and disappear if it's emptied. Map more articles in
+`articles`, or place one by hand with `{{embed:<key>}}`.
+
 ### Shop pages per goal (/shop/debt/, /shop/saving/, /shop/first-job/, /shop/freelance/)
 
 `placements.json > goals` lists each goal's title, intro and items. Each page starts with the free guides for

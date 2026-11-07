@@ -302,3 +302,11 @@ th{background:var(--tint)}
 .free-first{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:4px 18px 10px;margin:16px 0 24px}
 .free-first h2{font-size:18px;margin:12px 0 6px}
 @media (max-width:640px){.template-card img{width:64px;height:64px}}
+.product-head{display:grid;gap:24px;align-items:start;margin:8px 0 24px}
+.product-head.has-img{grid-template-columns:240px 1fr}
+.product-head img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--line)}
+.shop-card h3 a{color:inherit;text-decoration:none}.shop-card h3 a:hover{text-decoration:underline}
+@media (max-width:640px){.product-head.has-img{grid-template-columns:1fr}.product-head img{max-width:200px}}
+.tool-embed{margin:28px 0;padding:18px 20px;border:2px solid var(--green-d);border-radius:var(--radius);background:var(--card)}
+.tool-embed .mms-calc{margin:12px -8px 0;min-height:200px}
+.tool-open{font-size:15px;margin:8px 0 0}
