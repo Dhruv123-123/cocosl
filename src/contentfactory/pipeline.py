@@ -209,21 +209,53 @@ class Factory:
                                 if a.enabled and post["format"] in a.formats]
         if not targets:
             raise ValueError(f"No enabled account in {brand.slug} accepts format '{post['format']}'")
-        pub_ids = []
+        # Work out every slot first so a cadence block can't leave a half-scheduled post behind.
+        plan = []
         for platform in targets:
             slot = at or next_slot(self.db, brand, platform)
             cadence = check_cadence(self.db, brand, platform, slot)
             if cadence.level == "block":
                 raise PermissionError(cadence.message)
+            plan.append((platform, slot))
+        pub_ids = []
+        for platform, slot in plan:
             acct = brand.account(platform)
             pub_ids.append(self.db.insert("publications", {
                 "post_id": post_id, "platform": platform, "account": acct.handle if acct else "",
                 "status": "queued", "scheduled_at": slot.isoformat(),
             }))
-        self.db.update("posts", post_id, {"status": "scheduled", "scheduled_at": min(
-            self.db.get("publications", p)["scheduled_at"] for p in pub_ids)})
+        self.db.update("posts", post_id, {"status": "scheduled", "scheduled_at": min(s for _, s in plan).isoformat()})
         self.db.log("post.scheduled", "post", post_id, {"publications": pub_ids})
         return pub_ids
+
+    def unschedule(self, post_id: int, actor: str = "human") -> int:
+        """Cancel a post's queued publications and put it back to approved. Returns how many were cancelled."""
+        post = self._post(post_id)
+        if post["status"] != "scheduled":
+            raise ValueError(f"Post #{post_id} is {post['status']}, not scheduled")
+        cur = self.db.execute("UPDATE publications SET status = 'cancelled', error = 'unscheduled', updated_at = ? "
+                              "WHERE post_id = ? AND status = 'queued'", [now_iso(), post_id])
+        live = self.db.scalar("SELECT COUNT(*) FROM publications WHERE post_id = ? AND status IN "
+                              "('publishing','published','dry_run','needs_check')", [post_id])
+        self.db.update("posts", post_id, {"status": "published" if live else "approved", "scheduled_at": None})
+        self.db.log("post.unscheduled", "post", post_id, {"cancelled": cur.rowcount}, actor=actor)
+        return cur.rowcount or 0
+
+    def schedule_approved(self, brand: str | None = None, limit: int | None = None) -> dict:
+        """Put every approved, rendered post into the next free slots (oldest approval first).
+        Posts that can't be scheduled are reported, not raised."""
+        sql, params = "SELECT id FROM posts WHERE status = 'approved'", []
+        if brand:
+            sql += " AND brand = ?"
+            params.append(brand)
+        out: dict = {"scheduled": {}, "skipped": {}}
+        for row in self.db.query(sql + " ORDER BY updated_at, id", params)[: limit or None]:
+            try:
+                pubs = self.schedule(row["id"])
+                out["scheduled"][row["id"]] = [self.db.get("publications", p)["scheduled_at"] for p in pubs]
+            except (PermissionError, ValueError, RuntimeError) as e:
+                out["skipped"][row["id"]] = str(e)
+        return out
 
     # ------------------------------------------------------------------ publish
     def build_request(self, post: dict, platform: str):
