@@ -79,6 +79,30 @@ const checks = [
     await page.fill('[name=goal]', '5200');
     if (!/\$100\.00/.test(await page.textContent('#weeks'))) throw new Error('even goal');
   }],
+  ['/budget/money-dashboard.html', '#summary table', async (page) => {
+    await page.click('#sample');
+    await page.waitForSelector('#summary table');
+    const sum = await page.textContent('#summary');
+    if (!/Groceries/.test(sum) || !/Left over/.test(sum)) throw new Error(`summary rows: ${sum}`);
+    if (!/\$5,300/.test(await page.textContent('#stats'))) throw new Error('average money in');
+    const pick = page.locator('#sort select').first();
+    if (!(await pick.count())) throw new Error('no merchants to sort');
+    await pick.selectOption('fun');
+    if (!/Fun & going out/.test(await page.textContent('#summary'))) throw new Error('sorting did not update the summary');
+    await page.fill('[data-budget=groceries]', '350'); await page.dispatchEvent('[data-budget=groceries]', 'change');
+    const [dl] = await Promise.all([page.waitForEvent('download'), page.click('#download')]);
+    if (!/^money-dashboard-\d{4}-\d{2}-to-\d{4}-\d{2}\.xlsx$/.test(dl.suggestedFilename())) throw new Error(`file name ${dl.suggestedFilename()}`);
+    const buf = await (await import('node:fs/promises')).readFile(await dl.path());
+    if (buf.readUInt32LE(0) !== 0x04034b50 || buf.length < 4000) throw new Error('not an xlsx zip');
+    await page.evaluate(() => localStorage.clear());
+  }],
+  ['/budget/tablero-dinero.html', '#summary table', async (page) => {
+    await page.click('#sample');
+    await page.waitForSelector('#summary table');
+    if (!/Supermercado/.test(await page.textContent('#summary'))) throw new Error('es categories');
+    const [dl] = await Promise.all([page.waitForEvent('download'), page.click('#download')]);
+    if (!/^tablero-de-dinero-.*-a-.*\.xlsx$/.test(dl.suggestedFilename())) throw new Error(`es file name ${dl.suggestedFilename()}`);
+  }],
   ['/budget/reto-ahorro.html', '#progress .score-big', async (page) => {
     if (!/Semana 1/.test(await page.textContent('#weeks'))) throw new Error('es weeks');
   }],

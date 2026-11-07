@@ -18,6 +18,8 @@ export const SYNONYMS = {
   deductions: ['refund', 'tax'], deduction: ['refund', 'tax'],
   challenge: ['challenge', 'week'], '52': ['challenge', 'week'], weekly: ['challenge'], ahorro: ['ahorro', 'reto'], ahorrar: ['ahorro', 'reto'],
   quarterly: ['quarterly', 'set'], estimated: ['quarterly', 'estimated'], '1099': ['1099', 'freelance', 'quarterly'], freelancer: ['freelance', 'quarterly', 'invoice'], setaside: ['set', 'quarterly'],
+  spreadsheet: ['dashboard', 'spreadsheet'], sheets: ['dashboard', 'spreadsheet'], excel: ['dashboard', 'spreadsheet'], csv: ['dashboard', 'csv'], categorize: ['dashboard'], categories: ['dashboard'], spending: ['dashboard', 'spending'], tracker: ['dashboard'],
+  hoja: ['tablero', 'hoja'], tablero: ['tablero'], gastos: ['tablero', 'gastas'], calculo: ['hoja', 'tablero'],
   personality: ['personality'], quiz: ['personality', 'quiz'], type: ['personality'], start: ['personality'],
   savings: ['saving', 'emergency', 'interest'], retirement: ['401', 'roth'], ira: ['roth'], tax: ['tax', 'paycheck', 'refund'], refund: ['refund', 'tax'], irs: ['tax', 'refund'], w2: ['refund', 'tax'], reembolso: ['reembolso', 'impuestos'], impuestos: ['impuestos', 'reembolso'],
 };

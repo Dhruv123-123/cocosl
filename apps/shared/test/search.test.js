@@ -47,9 +47,10 @@ test('Spanish hub: every Spanish calculator, savings challenge and scam tool, li
   const html = read('es/index.html');
   assert.match(html, /<html lang="es">/);
   for (const p of pagesEs) assert.ok(html.includes(`href="../money-calculators/es/${p.slug}/"`), p.slug);
-  for (const u of ['../budget/reto-ahorro.html', '../scam-checker/es/', '../scam-checker/es/enlace/', '../scam-checker/es/estafas/']) assert.ok(html.includes(`href="${u}"`), u);
+  for (const u of ['../budget/reto-ahorro.html', '../budget/tablero-dinero.html', '../scam-checker/es/', '../scam-checker/es/enlace/', '../scam-checker/es/estafas/']) assert.ok(html.includes(`href="${u}"`), u);
   const es = buildIndex('es');
-  assert.equal(es.length, pagesEs.length + 4);
+  assert.equal(es.length, pagesEs.length + 5);
+  assert.equal(search(es, 'hoja de calculo de gastos')[0].u, '../budget/tablero-dinero.html');
   assert.equal(search(es, 'reto de ahorro')[0].u, '../budget/reto-ahorro.html');
   for (const item of es) assert.ok(item.k, `${item.u} resolved to a page`);
   assert.deepEqual(JSON.parse(read('es/search-index.json')), es, 'run: node tools/build-es-hub.mjs && node tools/build-search.mjs');

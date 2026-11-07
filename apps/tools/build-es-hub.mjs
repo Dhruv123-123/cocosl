@@ -17,6 +17,7 @@ const SCAMS = [
   { u: '../scam-checker/es/estafas/', t: 'Guías de estafas comunes', d: 'USPS, peajes, IRS, Amazon, alertas de fraude, empleos falsos y más, explicados en español.' },
 ];
 const SAVE = [
+  { u: '../budget/tablero-dinero.html', t: 'Tablero de dinero en hoja de cálculo', d: 'Sube el CSV de tu banco y descarga una hoja de cálculo para Google Sheets o Excel: cada gasto en su categoría y lo que entra, gastas y te sobra cada mes. Tu archivo no sale de tu navegador.' },
   { u: '../budget/reto-ahorro.html', t: 'Reto de ahorro de 52 semanas', d: 'Ahorra $1 más cada semana y junta $1,378 en un año, o pon tu propia meta. Marca cada semana, recibe recordatorios e imprime la tabla.' },
 ];
 const calcs = pagesEs.map((p) => ({ u: `../money-calculators/es/${p.slug}/`, t: p.tile || p.h1, d: p.description }));

@@ -190,11 +190,11 @@ export function importBankCsv(text, { spendingIsNegative = 'auto' } = {}) {
   if (rows.length < 2) return { transactions: [], skipped: 0, error: 'No rows found' };
   const header = rows[0].map((h) => h.trim().toLowerCase());
   const find = (...names) => header.findIndex((h) => names.some((n) => h === n || h.includes(n)));
-  const di = find('transaction date', 'posted date', 'posting date', 'date');
-  const ni = find('description', 'payee', 'merchant', 'name', 'memo', 'details');
-  const ai = header.findIndex((h) => h === 'amount' || /^amount\b/.test(h));
-  const debit = find('debit', 'withdrawal', 'money out');
-  const credit = find('credit', 'deposit', 'money in');
+  const di = find('transaction date', 'posted date', 'posting date', 'date', 'fecha');
+  const ni = find('description', 'payee', 'merchant', 'name', 'memo', 'details', 'descripción', 'descripcion', 'concepto', 'detalle', 'comercio');
+  const ai = header.findIndex((h) => h === 'amount' || /^amount\b/.test(h) || /^(monto|importe|cantidad)\b/.test(h));
+  const debit = find('debit', 'withdrawal', 'money out', 'cargo', 'débito', 'debito', 'retiro');
+  const credit = find('credit', 'deposit', 'money in', 'abono', 'crédito', 'credito', 'depósito', 'deposito');
   if (di < 0 || (ai < 0 && debit < 0)) return { transactions: [], skipped: rows.length - 1, error: 'Could not find Date and Amount columns' };
 
   const body = rows.slice(1);
