@@ -140,3 +140,46 @@ def test_gumroad_storefront_kit():
         assert "Nothing here has been set up" in md
         assert ("NATIVE REVIEW PENDING" in md) == (brand == "Dinero Simple")
     assert "CROSS_SELL" not in S.cross_sell_md(prods) and all(r["product"] in S.cross_sell_md(prods) for rs in prods.values() for r in rs)
+
+
+BANNED_ALL = ["guarantee", "risk-free", "i've used", "bestseller", "best seller", "libertad financiera de la noche a la mañana",
+              "este truco", "rendimientos garantizados", "dinero fácil", "garantizad", "sin riesgo", "100% seguro", "hazte rico"]
+
+
+def test_spanish_gumroad_storefront():
+    sys.path.insert(0, str(SHOP.parents[0] / "storefront"))
+    import build_storefront as S
+    import gumroad_es as ES
+    rows = S.gumroad_products()["Dinero Simple"]
+    assert S.es_problems(rows) == [] and len(ES.PRODUCTOS) == len(rows) == 9
+    md = ES.markdown(S.BRANDS["Dinero Simple"]["sections"], S.CROSS_SELL)
+    low = md.lower()
+    assert low.startswith("# dinero simple") and "native review pending" in low
+    assert not [w for w in BANNED_ALL if w in low] and "http" not in low
+    assert md.count("**Mensaje de agradecimiento") == md.count("**Descripción:**") == 9
+    assert md.count("no es asesoría financiera") >= 10 and md.count("herramientas de IA") >= 10
+    assert len({p["enlace"] for p in ES.PRODUCTOS}) == 9
+    for p in ES.PRODUCTOS:
+        assert len(p["resumen"]) <= 230 and 5 <= len(p["etiquetas"]) <= 10
+    # bundle maths in the copy add up
+    assert 5 + 12 + 17 + 19 == 53 and "$53" in md and 9 + 7 + 6 == 22 and "$22" in md
+
+
+def test_post_purchase_emails(tmp_path):
+    sys.path.insert(0, str(SHOP.parents[0] / "storefront"))
+    import build_storefront as S
+    import post_purchase as PP
+    assert S.email_problems() == []
+    assert set(PP.SEQUENCES) | set(PP.ELSEWHERE) == set(S.BRANDS)
+    for brand, seq in PP.SEQUENCES.items():
+        for i, e in enumerate(seq["emails"], 1):
+            md = PP.email_md(brand, i, e)
+            low = md.lower()
+            assert md.startswith("---\norder:") and not [w for w in BANNED_ALL if w in low]
+            assert "not financial advice" in low or "not legal or financial advice" in low or "no es asesoría" in low
+            assert ("NATIVE REVIEW PENDING" in md) == (brand == "Dinero Simple")
+            assert "\n> NATIVE" not in md or "revise. No se envían antes de eso.\n\nHola" in md
+        assert "{{download_url}}" in seq["emails"][0]["body"]
+        assert seq["code"] not in seq["emails"][0]["body"] + seq["emails"][1]["body"]  # days 0 and 3: no pitch
+    idx = PP.index_md()
+    assert "SEMANA5" in idx and "TRACKER15" in idx and "Nothing is sent" in idx

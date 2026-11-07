@@ -6,7 +6,8 @@ Per brand (dist/<brand>/): STOREFRONT.md (profile name, username, bio, about tex
 order, checkout upsells, receipt notes) plus a profile picture (800x800) and a cover/banner (2400x800). Across brands:
 CROSS_SELL.md and cross_sell.csv, one row per Gumroad product: what to recommend after it's bought, why, where, and
 the code. The product list comes from the catalog (launch/catalog/build_catalog.py), so it matches PRODUCTS_CATALOG.md.
-Nothing is uploaded or changed on Gumroad.
+Also dist/dinero-simple/GUMROAD_ES.md (the whole Dinero Simple storefront in Spanish, gumroad_es.py) and dist/emails/
+(three post-purchase emails per brand's lead product, post_purchase.py). Nothing is uploaded, sent or changed on Gumroad.
 """
 from __future__ import annotations
 
@@ -21,6 +22,8 @@ HERE = Path(__file__).resolve().parent
 LAUNCH = HERE.parent
 sys.path.insert(0, str(LAUNCH / "catalog"))
 import build_catalog as CAT  # noqa: E402  (also puts etsy/, templates/, pod/, brandshop/ on the path)
+import gumroad_es as ES  # noqa: E402
+import post_purchase as PP  # noqa: E402
 
 BRANDS = {
     "Money Made Simple": dict(
@@ -84,7 +87,7 @@ BRANDS = {
 CROSS_SELL = {
     # Money Made Simple (launch/products/UPSELL_PATH.md)
     "The Bill Cut Kit": ("The 20-Minute Budget", "The money the kit frees up needs a plan.", "Receipt note + email 2", "BILLCUT5"),
-    "The 20-Minute Budget": ("The Debt-Free Date Planner", "Once the weekly number works, the extra goes to debt.", "Receipt note + email", "BUDGET5"),
+    "The 20-Minute Budget": ("The Debt-Free Date Planner", "Once the weekly number works, the extra goes to debt.", "Receipt note + email 3", "BUDGET5"),
     "The Credit Report Audit Kit": ("The Debt-Free Date Planner", "Most people who audit their credit have debt to plan.", "Receipt note", "AUDIT5"),
     "The Debt-Free Date Planner": ("Start Investing With $100 a Month", "What to do with the payment once the debt is gone.", "Receipt note", "DEBTFREE5"),
     "Start Investing With $100 a Month": ("The 20-Minute Budget", "Finding the $100 a month starts with a budget.", "Receipt note", "INVEST5"),
@@ -101,7 +104,7 @@ CROSS_SELL = {
     "Notion Savings Goals Tracker": ("Notion Money HQ", "Adds the budget and debt trackers for the difference.", "Checkout upsell", ""),
     "Notion Money HQ": ("2027 Money HQ for Notion", "The same HQ, dated month by month for 2027.", "Email", ""),
     # Scam Decoded (scam-decoded/products/LADDER.md)
-    "The Family Scam-Proofing Kit": ("Protect Your Parents (guide)", "Families who make the plan usually want to help their parents next.", "Receipt note + email 7", "KITPARENTS"),
+    "The Family Scam-Proofing Kit": ("Protect Your Parents (guide)", "Families who make the plan usually want to help their parents next.", "Receipt note + list email 7 + buyer email 3", "KITPARENTS"),
     "Protect Your Parents (guide)": ("Scam Decoded Card Set", "The guide's plan, as cards by the phone and in the wallet. (The kit itself comes free with GUIDEKIT.)", "Receipt note", ""),
     "Scam Decoded Card Set": ("The Family Scam-Proofing Kit", "The cards are the reminders; the kit is the plan behind them.", "Receipt note", ""),
     "Spot It, Stop It team training pack": ("Seniors pack group print license", "Teams that serve older clients can hand out the large-print pack.", "Email", ""),
@@ -113,7 +116,7 @@ CROSS_SELL = {
     "2027 Freelancer Tax-Year Planner (printable)": ("The Quarterly Tax Tracker", "The planner is for the desk; the tracker does the sums.", "Receipt note", ""),
     # Dinero Simple (dinero-simple product pages and LISTING files)
     "El Kit para Recortar Gastos": ("El Presupuesto de 20 Minutos", "Lo que recortas necesita un plan.", "Receipt note", "RECORTE5"),
-    "El Presupuesto de 20 Minutos": ("Tu Fecha Sin Deudas", "Con el número semanal, lo que sobra va a las deudas.", "Receipt note", ""),
+    "El Presupuesto de 20 Minutos": ("Tu Fecha Sin Deudas", "Con el número semanal, lo que sobra va a las deudas.", "Receipt note + email 3", "SEMANA5 (new)"),
     "Tu Fecha Sin Deudas": ("Empieza a Invertir con $100 al Mes", "Qué hacer con el pago cuando terminas la deuda.", "Receipt note", "FECHA5"),
     "Empieza a Invertir con $100 al Mes": ("El Presupuesto de 20 Minutos", "De dónde sacar los $100.", "Receipt note", "INVERTIR5"),
     "El Paquete Dinero Simple": ("El Paquete de la Familia", "Los cuatro kits son para ti; este paquete es para toda la casa.", "Email", ""),
@@ -150,6 +153,44 @@ def problems() -> list[str]:
                 bad.append(f"{brand}: cross-sell for '{n}' points at '{CROSS_SELL[n][0]}', not another product of the brand")
         if BRANDS[brand]["featured"] not in names:
             bad.append(f"{brand}: featured product isn't a Gumroad product")
+    bad += es_problems(prods.get("Dinero Simple", []))
+    bad += email_problems()
+    return bad
+
+
+def es_problems(rows: list[dict]) -> list[str]:
+    """The Spanish storefront covers every Dinero Simple product once, at the catalog's price."""
+    bad, have = [], {p["nombre"]: p for p in ES.PRODUCTOS}
+    for r in rows:
+        p = have.get(r["product"])
+        if not p:
+            bad.append(f"GUMROAD_ES: no Spanish page for '{r['product']}'")
+        elif f"${p['precio']}" != r["price"]:
+            bad.append(f"GUMROAD_ES: '{r['product']}' is ${p['precio']}, catalog says {r['price']}")
+    bad += [f"GUMROAD_ES: '{n}' isn't a Dinero Simple Gumroad product" for n in have if n not in {r["product"] for r in rows}]
+    return bad
+
+
+def email_problems() -> list[str]:
+    """Each sequence is day 0/3/7 for the brand's featured product; the day-7 code matches the cross-sell map."""
+    bad = []
+    for brand, seq in PP.SEQUENCES.items():
+        if seq["product"] != BRANDS[brand]["featured"]:
+            bad.append(f"emails: {brand} sequence is for '{seq['product']}', storefront features '{BRANDS[brand]['featured']}'")
+        if [e["day"] for e in seq["emails"]] != [0, 3, 7]:
+            bad.append(f"emails: {brand} isn't day 0/3/7")
+        rec, _why, _where, code = CROSS_SELL[seq["product"]]
+        code = code.split(" ")[0]
+        if (rec, code) != (seq["next"], seq["code"]):
+            bad.append(f"emails: {brand} day 7 recommends {seq['next']}/{seq['code']}, cross-sell map says {rec}/{code}")
+        last = seq["emails"][-1]["body"]
+        if code and f"**{code}**" not in last:
+            bad.append(f"emails: {brand} day-7 email doesn't use {code}")
+        for ph in seq["placeholders"]:
+            if not any(ph in e["body"] for e in seq["emails"]):
+                bad.append(f"emails: {brand} placeholder {ph} is unused")
+        if "http" in "".join(e["body"] for e in seq["emails"]):
+            bad.append(f"emails: {brand} has a real link; use a placeholder")
     return bad
 
 
@@ -267,6 +308,14 @@ def main() -> int:
             src = work / f"{BRANDS[brand]['key']}-{name}.html"
             src.write_text(_img_doc(brand, w, h, av))
             jobs.append({"src": str(src), "png": str(d / f"{name}.png"), "w": w, "h": h, "scale": 1})
+    ds = BRANDS["Dinero Simple"]
+    (out / ds["key"] / "GUMROAD_ES.md").write_text(ES.markdown(ds["sections"], CROSS_SELL))
+    em = out / "emails"
+    for brand, seq in PP.SEQUENCES.items():
+        (em / seq["key"]).mkdir(parents=True, exist_ok=True)
+        for i, e in enumerate(seq["emails"], 1):
+            (em / seq["key"] / f"0{i}-{PP.slug(e['subject'])}.md").write_text(PP.email_md(brand, i, e))
+    (em / "README.md").write_text(PP.index_md())
     (out / "CROSS_SELL.md").write_text(cross_sell_md(prods))
     with open(out / "cross_sell.csv", "w", newline="") as fh:
         wr = csv.writer(fh)
