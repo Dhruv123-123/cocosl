@@ -266,7 +266,7 @@ def test_bfcm_codes_and_january_push():
 
 def test_january_reset_bundle_and_full_cross_sell_map():
     """Jan 1-31 Gumroad bundle of existing sheets, honest 'separately' figure; every product has an in-brand next step."""
-    sys.path.insert(0, str(SHOP.parent / "storefront"))
+    sys.path[:0] = [str(SHOP.parent / "catalog"), str(SHOP.parent / "storefront")]
     import build_catalog as C
     import listings as L
     import promos as P
@@ -279,7 +279,7 @@ def test_january_reset_bundle_and_full_cross_sell_map():
     assert not any(w in md.lower() for w in ("was $", "guarantee", "risk-free", "bestseller", "hurry"))
     assert "not financial advice" in md and "AI tools" in md
     m = XS.rows(rows, L.LISTINGS, S.CROSS_SELL)
-    assert len(m) == len({(r["brand"], r["product"], XS._kind(r["platform"])) for r in rows})
+    assert len(m) == len({(r["brand"], r["product"], XS._kind(r["platform"])) for r in rows if not r["platform"].startswith("On hold")})
     poster = next(r for r in m if r["product"] == "Savings Jar Poster")
     assert poster["next"] == "Spare Change Jar Tracker" and "Etsy" in poster["where"]
     assert next(r for r in m if r["product"] == "The January Reset Bundle")["next"] == "The 20-Minute Budget"
@@ -287,6 +287,7 @@ def test_january_reset_bundle_and_full_cross_sell_map():
 
 def test_etsy_ai_guide_rule_keeps_guides_off_etsy():
     """Etsy's 22 Oct 2026 ban on AI-generated functional guides: every guide is Gumroad only (or on hold)."""
+    sys.path.insert(0, str(SHOP.parent / "catalog"))
     import build_catalog as C
     import etsy_rules as R
     import listings as L

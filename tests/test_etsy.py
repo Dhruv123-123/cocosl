@@ -101,7 +101,7 @@ def test_seo_covers_every_listing():
         assert len(it["title"].split()) <= 15 and it["title"] == seo.TITLE_FIX.get(it["slug"], seo.S[it["slug"]][0])
         assert it["attributes"]["Primary color"] and len(it["tags"]) == 13
         assert "Attributes" in listings.listing_md(it)
-    assert "debt snowball" in listings.BY_SLUG["debt-free-date-planner"]["tags"]
+    assert "debt snowball" in listings.BY_SLUG["debt-snowball-worksheet"]["tags"]
 
 
 def test_pod_posters_copy_and_layout():
