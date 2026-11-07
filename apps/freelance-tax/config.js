@@ -24,6 +24,22 @@ export default {
     pitch: 'Log income, expenses and miles as you go. Before each deadline it tells you what to pay, with the safe harbor and a set-aside check built in. Spreadsheet + 10-page guide.',
   },
 
+  // The rest of the ladder (launch/1099-money/products/). Shown on the download page once the URL is real.
+  upsells: [
+    {
+      name: 'The Freelancer Money Bundle',
+      price: '$49',
+      url: 'https://REPLACE_ME.gumroad.com/l/freelancer-money-bundle',
+      pitch: 'The tracker, plus a tax-aware rate calculator, proposal, contract, change order and invoice templates, and 14 client email scripts (bundle only).',
+    },
+    {
+      name: 'The Rate & Contract Kit',
+      price: '$29',
+      url: 'https://REPLACE_ME.gumroad.com/l/rate-contract-kit',
+      pitch: 'Work out a rate that covers your taxes, then get it in writing: rate calculator, project pricer, proposal, services agreement, change order and invoices.',
+    },
+  ],
+
   // Affiliate offers. Keep the disclosure on anything that pays you.
   affiliates: {
     banking: {

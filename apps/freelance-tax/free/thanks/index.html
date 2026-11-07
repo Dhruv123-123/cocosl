@@ -25,13 +25,16 @@
   </ol>
 </section>
 
-<section class="card signup-box" id="product" hidden>
+<div id="offers"></div>
+<template id="offer">
+<section class="card signup-box">
   <p class="kicker">Optional · <span data-price></span></p>
   <h2 data-name></h2>
   <p data-pitch></p>
-  <p><a class="btn alt" data-url href="#">See the tracker</a></p>
-  <p class="tiny">Spreadsheet for Excel and Google Sheets. 14-day refund if it isn't for you.</p>
+  <p><a class="btn alt" data-url href="#">Take a look</a></p>
+  <p class="tiny">Instant download. 14-day refund if it isn't for you.</p>
 </section>
+</template>
 </main>
 <footer>
 <p>Educational content, not tax, legal or financial advice.</p>
@@ -39,13 +42,16 @@
 </footer>
 <script type="module">
 import config from '../../config.js';
-const p = config.product, box = document.getElementById('product');
-if (p && p.url && !p.url.includes('REPLACE_ME')) {
-  box.querySelector('[data-name]').textContent = p.name;
-  box.querySelector('[data-price]').textContent = p.price;
-  box.querySelector('[data-pitch]').textContent = p.pitch;
-  box.querySelector('[data-url]').href = p.url;
-  box.hidden = false;
+// The tracker first, then the rest of the ladder; anything still on a REPLACE_ME link stays hidden.
+const tpl = document.getElementById('offer'), box = document.getElementById('offers');
+for (const p of [config.product, ...(config.upsells || [])]) {
+  if (!p || !p.url || p.url.includes('REPLACE_ME')) continue;
+  const n = tpl.content.cloneNode(true);
+  n.querySelector('[data-name]').textContent = p.name;
+  n.querySelector('[data-price]').textContent = p.price;
+  n.querySelector('[data-pitch]').textContent = p.pitch;
+  n.querySelector('[data-url]').href = p.url;
+  box.appendChild(n);
 }
 </script>
 </body>

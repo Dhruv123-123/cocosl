@@ -26,3 +26,5 @@ mentioned in four emails out of seven, never more than once per email as a link.
 
 **Getting Netlify Forms signups into your email tool:** Netlify > Forms > tax-calendar > export CSV, or
 switch `email.provider` in `../config.js` to post straight to Kit, MailerLite or Buttondown.
+
+**Buyers:** people who buy the tracker move to the 3-email buyers sequence in `buyers/` (setup, first payment, one bundle upgrade offer). Pull them out of this sequence when they buy.

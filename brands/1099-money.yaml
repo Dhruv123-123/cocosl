@@ -88,6 +88,8 @@ affiliates:
     commission: "$10 per sale (Impact)"
 products:
   - {name: "The Quarterly Tax Tracker (guide + spreadsheet)", url: "https://example.gumroad.com/l/quarterly-tax-tracker", price: 15}
+  - {name: "The Rate & Contract Kit (rate calculator + proposal, contract, invoice templates)", url: "https://example.gumroad.com/l/rate-contract-kit", price: 29}
+  - {name: "The Freelancer Money Bundle (tracker + kit + client email scripts)", url: "https://example.gumroad.com/l/freelancer-money-bundle", price: 49}
 ai_disclosure: "Visuals and voice made with AI tools. Script written and fact-checked by a human. Educational only, not tax, legal or financial advice."
 realistic_synthetic_media: false
 require_human_review: true

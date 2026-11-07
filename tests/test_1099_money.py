@@ -48,7 +48,7 @@ def test_content_is_valid(factory, name, counts):
         if it["format"] == "short":
             words = sum(len(s.narration.split()) for s in sc.segments)
             assert words <= 160, (sc.title, words)  # under ~60s at 160 wpm
-        if it["format"] == "long" and name != "content.json":
+        if it["format"] == "long":
             words = sum(len(s.narration.split()) for s in sc.segments)
             seconds = words / 160 * 60 + len(sc.segments)  # 160 wpm + a beat per chapter (as in the chapter maker)
             assert seconds >= 485, (sc.title, seconds)  # 8+ minutes, so YouTube allows mid-roll ads
@@ -114,3 +114,24 @@ def test_funnel_emails_and_lead_magnet():
     assert days == sorted(days) and days[0] == 0
     assert (app / "downloads" / "freelancer-tax-calendar-2027.pdf").stat().st_size > 10_000
     assert "tax-calendar" in (app / "free" / "index.html").read_text()
+
+
+def test_product_ladder_builds(tmp_path):
+    pytest.importorskip("openpyxl")
+    pytest.importorskip("docx")
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("build_kit", LAUNCH / "products" / "build_kit.py")
+    kit = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(kit)
+    files = kit.build_all(tmp_path)
+    assert len(files) == 6 and all(f.stat().st_size > 5000 for f in files)
+    from openpyxl import load_workbook
+    wb = load_workbook(files[0])
+    assert wb.sheetnames[:5] == ["Start Here", "Rate Calculator", "Project Pricer", "Invoice", "Invoice Log"]
+    assert wb["Grossup"].sheet_state == "hidden"
+    assert wb["Rate Calculator"]["C6"].value == 55000  # matches the rate video's example
+    # The prices in the brand file, listings and upsell path agree.
+    text = (LAUNCH / "products" / "UPSELL_PATH.md").read_text()
+    assert "$15" in text and "$29" in text and "$49" in text and "TRACKER15" in text and "KIT29" in text
+    assert "$29" in (LAUNCH / "products" / "rate-contract-kit" / "LISTING.md").read_text()
+    assert "$49" in (LAUNCH / "products" / "bundle" / "LISTING.md").read_text()

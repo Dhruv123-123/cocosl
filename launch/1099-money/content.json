@@ -1652,7 +1652,7 @@
   "idea_angle": "A complete first-year freelancer money setup in order: accounts, set-aside, records, quarterly payments, deductions, retirement and health.",
   "script": {
    "title": "Your first year freelancing: the complete money setup",
-   "hook": "Going freelance changes how you get paid, how you pay tax and how you retire. Here's the whole setup, in the order you should do it.",
+   "hook": "Going freelance changes three things at once: how you get paid, how you pay tax, and how you save for later. Nobody hands you a checklist, so here's one. We'll go in the order you should actually do it, with real twenty twenty-six numbers, and by the end you'll have a system that runs in about an hour a month. Quick note: this is education, not tax advice, and state rules vary.",
    "segments": [
     {
      "heading": "Intro",
@@ -1673,6 +1673,12 @@
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three small vaults in a row connected by arrows. No text, no logos, no real people."
     },
     {
+     "heading": "Business budget",
+     "narration": "Before the tax percentage, one more account decision: how much buffer to keep in the business account. Freelance income arrives in lumps, and the gap between finishing work and getting paid is often thirty to sixty days. A buffer of one to two months of your own paychecks, plus a month of business costs, lets you keep paying yourself the same amount even when a client is late. Build it slowly from your first few payments. It's the difference between a steady paycheck and a stressful one.",
+     "on_screen_text": "Buffer: 1–2 months of paychecks",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small reservoir feeding a steady stream. No text, no logos, no real people."
+    },
+    {
      "heading": "Set-aside",
      "narration": "Step three: decide your tax set-aside. Clients don't withhold anything, so the day a payment lands, move a fixed percentage to tax savings. Twenty-five to thirty percent is a common starting point. Here's why. At sixty thousand of net profit, a single filer owes about twelve thousand in federal tax in twenty twenty-six: about eight and a half thousand in self-employment tax and about three and a half thousand in income tax. That's twenty percent, before state tax. Thirty percent covers most states with room to spare.",
      "on_screen_text": "Set aside 25–30% same day",
@@ -1685,10 +1691,22 @@
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a tidy grid of rows next to a small receipt box. No text, no logos, no real people."
     },
     {
+     "heading": "Pricing",
+     "narration": "Before taxes get complicated, a word about your rate, because it determines everything else. Your rate has to cover what an employer used to pay for: both halves of Social Security and Medicare, health insurance, retirement, paid time off, and the hours you spend selling and doing admin. A common mistake is taking your old salary, dividing by two thousand hours and charging that. Most freelancers bill far fewer hours than that, so the rate needs to be much higher. Work it out from what you want to take home, not from what others charge.",
+     "on_screen_text": "Your rate must cover what an employer paid",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a price tag stretched to cover several small icons. No text, no logos, no real people."
+    },
+    {
      "heading": "Quarterly",
      "narration": "Step five: quarterly estimated taxes. If you expect to owe a thousand dollars or more when you file, you're expected to pay during the year, on April fifteenth, June fifteenth, September fifteenth and January fifteenth. The simplest way to avoid the underpayment penalty is the safe harbor: pay a quarter of last year's total tax at each deadline, or a hundred and ten percent of it if last year's adjusted gross income was over a hundred and fifty thousand. In your first year, when last year had little self-employment income, the safe harbor might be small, so keep saving your percentage too.",
      "on_screen_text": "Apr 15 · Jun 15 · Sep 15 · Jan 15",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four calendar pages along a path. No text, no logos, no real people."
+    },
+    {
+     "heading": "First payment",
+     "narration": "Here's what your first quarterly payment might look like. Say you started freelancing in March and expect forty thousand of profit this year, and last year you were an employee with all your tax withheld. Your safe harbor is last year's total tax, say four thousand dollars, so paying a thousand by each deadline generally protects you from the penalty. But your real bill this year might be around seven thousand four hundred federal. So pay your safe harbor amounts on time, and keep saving your full percentage for April.",
+     "on_screen_text": "Year 1: safe harbor on time + keep saving",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two coin stacks: a small one on time and a larger one in a vault. No text, no logos, no real people."
     },
     {
      "heading": "Deductions",
@@ -1703,6 +1721,12 @@
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two plant pots growing from coin jars. No text, no logos, no real people."
     },
     {
+     "heading": "Insurance",
+     "narration": "While you're thinking about protection, consider business insurance. Professional liability, sometimes called errors and omissions, covers claims that your work caused a client a loss. General liability covers injuries or damage if you work at a client's site or they visit you. Some clients require one or both in their contracts. Policies for solo freelancers are often affordable, and the premiums are a business expense. An LLC doesn't replace this; insurance is what actually pays when something goes wrong.",
+     "on_screen_text": "Professional + general liability",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a shield over a small laptop. No text, no logos, no real people."
+    },
+    {
      "heading": "Health",
      "narration": "Step eight: health. If you buy your own marketplace insurance and aren't eligible for an employer plan, including a spouse's, your premiums are generally deductible. And from twenty twenty-six, bronze and catastrophic marketplace plans are treated as HSA-compatible, so you may be able to open a health savings account and contribute up to forty-four hundred dollars for self-only coverage. Confirm your plan qualifies first.",
      "on_screen_text": "Premiums + HSA",
@@ -1713,6 +1737,12 @@
      "narration": "Step nine: get paid on time. Use a short contract with scope, price, a deposit, and late terms. Put a real due date on every invoice, add a pay-now link, and send a friendly reminder three days before it's due. Cash flow is the thing that actually ends freelance careers, so this matters as much as tax.",
      "on_screen_text": "Deposit · due date · pay link",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an invoice with a big friendly button and a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Year one traps",
+     "narration": "Let's name the year-one traps, so you can step around them. Spending the tax money because it was sitting in the same account. Underpricing because the first client set the rate. Saying yes to every project with no contract. Waiting until April to discover you owe twelve thousand dollars. And not keeping records, then guessing at deductions. Every step in this video exists to prevent one of these. If you only do three things, separate the accounts, set aside a percentage on the day you're paid, and keep an income log.",
+     "on_screen_text": "5 year-one traps",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. five small pitfalls on a path, with a mascot stepping around them. No text, no logos, no real people."
     },
     {
      "heading": "Monthly hour",
@@ -1737,7 +1767,7 @@
     "smallbusinesstips",
     "1099money"
    ],
-   "description": "Everything a first-year US freelancer needs to set up, in order, with 2026 numbers.\n\nChapters\n0:00 Your first-year money setup\n0:28 Free EIN. LLC optional.\n0:57 Income · Tax · Pay\n1:24 Set aside 25–30% same day\n1:58 Log income. Keep receipts.\n2:28 Apr 15 · Jun 15 · Sep 15 · Jan 15\n3:07 Ordinary + necessary + receipt\n3:34 SEP or Solo 401(k)\n4:06 Premiums + HSA\n4:31 Deposit · due date · pay link\n4:53 One hour a month\n5:11 The whole setup, recapped\n\nLinks (some are affiliate links; we may earn a commission at no extra cost to you):\n• The Quarterly Tax Tracker: https://example.gumroad.com/l/quarterly-tax-tracker\n• Business checking: https://example.com/go/novo\n• Invoicing: https://example.com/go/freshbooks\n\nSources: irs.gov (estimated taxes, self-employment tax, EIN, home office, SEP, one-participant 401(k), Publication 969), ssa.gov (2026 wage base).\n\nEducational only, not tax, legal or financial advice. Figures are 2026 federal; check your state.",
+   "description": "Everything a first-year US freelancer needs to set up, in order, with 2026 numbers.\n\nChapters\n0:00 Your first-year money setup\n0:28 Free EIN. LLC optional.\n0:57 Income · Tax · Pay\n1:24 Buffer: 1–2 months of paychecks\n1:58 Set aside 25–30% same day\n2:32 Log income. Keep receipts.\n3:01 Your rate must cover what an employer paid\n3:38 Apr 15 · Jun 15 · Sep 15 · Jan 15\n4:17 Year 1: safe harbor on time + keep saving\n4:52 Ordinary + necessary + receipt\n5:19 SEP or Solo 401(k)\n5:51 Professional + general liability\n6:21 Premiums + HSA\n6:46 Deposit · due date · pay link\n7:09 5 year-one traps\n7:44 One hour a month\n8:02 The whole setup, recapped\n\nLinks (some are affiliate links; we may earn a commission at no extra cost to you):\n• The Quarterly Tax Tracker: https://example.gumroad.com/l/quarterly-tax-tracker\n• Business checking: https://example.com/go/novo\n• Invoicing: https://example.com/go/freshbooks\n\nSources: irs.gov (estimated taxes, self-employment tax, EIN, home office, SEP, one-participant 401(k), Publication 969), ssa.gov (2026 wage base).\n\nEducational only, not tax, legal or financial advice. Figures are 2026 federal; check your state.",
    "thumbnail_text": "First-year freelancer setup",
    "sources": [
     "https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number",
@@ -1754,6 +1784,7 @@
     "All 2026 figures as in the shorts/carousels: SD $16,100, 401(k) $24,500, HSA $4,400, 1099-NEC $2,000",
     "$60K example ≈ $12,037 total federal",
     "Chapter timestamps must match the final edit",
+    "$40K profit → ~$7,427 federal (2026 single)",
     "Replace placeholder links with real ones before publishing"
    ]
   }
@@ -1764,11 +1795,11 @@
   "idea_angle": "Quarterly estimated taxes explained end to end with one fictional freelancer's full year: how much, when, how to pay, and what happens if you miss.",
   "script": {
    "title": "Quarterly estimated taxes, explained with one real-numbers year",
-   "hook": "If you freelance, the IRS expects to be paid four times a year. Here's exactly how much, when, and how, following one freelancer through a whole year.",
+   "hook": "If you freelance, the IRS expects to be paid four times a year, not once in April. Most first-year freelancers find this out the hard way, with a bill and a penalty. So let's walk one fictional freelancer, Sam, through a whole year with real twenty twenty-six numbers. Education only, not tax advice. We'll cover who has to pay, how Sam's tax is figured, the two ways to choose a payment, how the year plays out, how to pay, lumpy and falling income, filing time, having a job as well, and the mistakes to avoid.",
    "segments": [
     {
      "heading": "Intro",
-     "narration": "If you freelance, the IRS expects to be paid four times a year, not once in April. Most first-year freelancers find this out the hard way, with a bill and a penalty. So let's walk one fictional freelancer, Sam, through a whole year with real twenty twenty-six numbers. Education only, not tax advice.",
+     "narration": "If you freelance, the IRS expects to be paid four times a year, not once in April. Most first-year freelancers find this out the hard way, with a bill and a penalty. So let's walk one fictional freelancer, Sam, through a whole year with real twenty twenty-six numbers. Education only, not tax advice. We'll cover who has to pay, how Sam's tax is figured, the two ways to choose a payment, how the year plays out, how to pay, lumpy and falling income, filing time, having a job as well, and the mistakes to avoid.",
      "on_screen_text": "Quarterly taxes, one real year",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes next to a long timeline with four coral markers. No text, no logos, no real people."
     },
@@ -1777,6 +1808,12 @@
      "narration": "The US tax system is pay as you go. Employees pay through withholding on every check. Freelancers have no withholding, so they're expected to make estimated payments. If you expect to owe a thousand dollars or more when you file, you generally need to pay along the way, or you can owe an underpayment penalty, which works like interest on the amount that was late.",
      "on_screen_text": "Pay as you go",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a paycheck with a withholding box next to a calendar with four dots. No text, no logos, no real people."
+    },
+    {
+     "heading": "Who owes",
+     "narration": "First, who actually has to make these payments? Generally, anyone who expects to owe at least a thousand dollars of federal tax for the year after subtracting withholding and refundable credits. That includes freelancers, gig workers, creators with sponsorships, landlords, and people with big investment gains. If you also have a job, you can sometimes cover your freelance tax by increasing your withholding at work instead, because withholding counts as if it were paid evenly through the year. Your state may have its own threshold and rules.",
+     "on_screen_text": "Owe $1,000+? You likely need to pay",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small threshold line with coins above it. No text, no logos, no real people."
     },
     {
      "heading": "Meet Sam",
@@ -1797,6 +1834,12 @@
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two paths splitting from one point. No text, no logos, no real people."
     },
     {
+     "heading": "Sam's year",
+     "narration": "Here's how Sam's year actually plays out. In April, Sam pays sixteen twenty-five and has about four thousand five hundred in tax savings, because thirty percent of the first months' income went straight there. In June, another sixteen twenty-five. A big project lands in the summer, so in September Sam pays sixteen twenty-five again, and the tax savings account keeps growing. In January, Sam pays the last sixteen twenty-five. That's sixty-five hundred paid, and the savings account holds more than enough for the April balance.",
+     "on_screen_text": "Sam: $1,625 × 4 + savings for April",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a timeline with four coins and a growing vault. No text, no logos, no real people."
+    },
+    {
      "heading": "Sam's choice",
      "narration": "Sam picks the safe harbor, because last year's number is known and it generally protects against the penalty even if this year's income jumps. But Sam keeps setting aside thirty percent of every payment, because the remaining balance, about fifty-five hundred dollars, is still due in April.",
      "on_screen_text": "Safe harbor + keep saving",
@@ -1809,10 +1852,22 @@
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four calendar pages spaced unevenly. No text, no logos, no real people."
     },
     {
+     "heading": "Wrong year",
+     "narration": "One mistake to avoid when paying: choosing the wrong tax year. The January payment is for the previous year, even though you're paying in the new year. If you pick the wrong year, the money sits on the wrong account, and you may get a penalty notice for the year that looks short. If it happens, contact the IRS to move the payment. And always keep the confirmation numbers in one place, because you'll need the totals and dates when you file.",
+     "on_screen_text": "January = last year's tax year",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a dropdown menu with the previous year highlighted. No text, no logos, no real people."
+    },
+    {
      "heading": "How to pay",
      "narration": "To pay, Sam uses IRS Direct Pay, or signs in to an IRS online account, and picks estimated tax for the right year. It takes about five minutes. Sam saves each confirmation number. Paying by debit or credit card works too, but processors charge a fee. Sam's state has an income tax, so Sam makes state estimated payments on its own schedule.",
      "on_screen_text": "IRS Direct Pay + your state",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop with a check mark and a small state outline. No text, no logos, no real people."
+    },
+    {
+     "heading": "If Sam's income fell",
+     "narration": "What if Sam's income had dropped instead? Say Sam only earned twenty thousand this year. The tax would be about three thousand. Ninety percent of that is about twenty-seven hundred, much less than last year's six thousand five hundred. In that case the current-year method is the better choice, and Sam could pay around six hundred eighty a quarter. The rule is: you can pay the smaller of the two, as long as you estimate honestly. Recheck mid-year so you're not overpaying.",
+     "on_screen_text": "Income fell? Current-year may be smaller",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a down arrow next to two coin stacks. No text, no logos, no real people."
     },
     {
      "heading": "Lumpy income",
@@ -1821,10 +1876,22 @@
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a bumpy line chart with steps beneath it. No text, no logos, no real people."
     },
     {
+     "heading": "Filing",
+     "narration": "When Sam files in the spring, the four estimated payments are listed on the return as payments already made, just like withholding for an employee. The return compares the total tax with everything paid. Sam owes the difference, about fifty-five hundred, which comes straight from the tax savings account. If Sam had paid more than the total, the extra would come back as a refund, or Sam could apply it to next year's first estimated payment.",
+     "on_screen_text": "Filing: payments made vs total tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a balance scale with coins on both sides. No text, no logos, no real people."
+    },
+    {
      "heading": "Year two",
      "narration": "In year two, Sam's safe harbor becomes this year's full twelve thousand thirty-seven. If Sam's adjusted gross income ever goes above a hundred and fifty thousand, the safe harbor becomes a hundred and ten percent. Each April, update the number.",
      "on_screen_text": "Year 2: new safe harbor",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar page turning to a new year. No text, no logos, no real people."
+    },
+    {
+     "heading": "W-2 too",
+     "narration": "A quick note if you have a job as well. Your employer withholds tax from your salary based on your W-4. Freelance profit on top of that is taxed at your highest bracket, plus self-employment tax, and nothing is withheld for it. You can make estimated payments, or you can ask your employer to withhold more through a new W-4, which is often easier. Either way, check your numbers mid-year with the IRS withholding estimator or a calculator.",
+     "on_screen_text": "Got a job too? Raise withholding",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a briefcase and a small coin stack side by side. No text, no logos, no real people."
     },
     {
      "heading": "System",
@@ -1833,8 +1900,14 @@
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes relaxing beside four ticked calendar pages. No text, no logos, no real people."
     },
     {
+     "heading": "Mistakes",
+     "narration": "Let's finish with the five most common estimated tax mistakes. Not paying at all in year one. Paying the safe harbor and spending the rest of the set-aside, then being short in April. Choosing the wrong tax year online. Forgetting the state. And waiting until a payment is months late before paying. Every one of these is avoidable with the system we just walked through: a tax account, a percentage, four reminders and a monthly check-in.",
+     "on_screen_text": "5 common mistakes",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. five small crossed-out icons in a row. No text, no logos, no real people."
+    },
+    {
      "heading": "Recap",
-     "narration": "Recap: you pay four times a year if you'll owe a thousand or more. Use the safe harbor for peace of mind, keep saving your percentage for the April balance, pay on IRS Direct Pay, and don't forget your state. Subscribe for one freelancer money move a week.",
+     "narration": "Recap: you pay four times a year if you'll owe a thousand or more. Use the safe harbor for peace of mind, keep saving your percentage for the April balance, pay on IRS Direct Pay, and don't forget your state. Put the four dates in your calendar today with a reminder a week before each, and the whole thing takes about an hour a year. Subscribe for one freelancer money move a week.",
      "on_screen_text": "Recap",
      "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the long timeline from the intro, all four markers checked. No text, no logos, no real people."
     }
@@ -1849,7 +1922,7 @@
     "1099",
     "1099money"
    ],
-   "description": "How US freelancers pay quarterly estimated taxes, with one fictional freelancer's full 2026 year in real numbers.\n\nChapters\n0:00 Quarterly taxes, one real year\n0:20 Pay as you go\n0:46 Meet Sam (fictional)\n1:02 ≈ $12,037: $8,478 SE + $3,559 income\n1:27 90% this year or 100% last year\n1:50 Safe harbor + keep saving\n2:09 Apr 15 · Jun 15 · Sep 15 · Jan 15\n2:25 IRS Direct Pay + your state\n2:50 Lumpy income? Annualize.\n3:13 Year 2: new safe harbor\n3:29 The whole system\n3:53 Recap\n\nThe Quarterly Tax Tracker: https://example.gumroad.com/l/quarterly-tax-tracker\n\nSources: irs.gov (estimated taxes, Form 1040-ES, underpayment penalty, Form 2210, payments), ssa.gov (2026 wage base).\n\nSam is a fictional example. Educational only, not tax, legal or financial advice. Figures are 2026 federal; check your state.",
+   "description": "How US freelancers pay quarterly estimated taxes, with one fictional freelancer's full 2026 year in real numbers.\n\nChapters\n0:00 Quarterly taxes, one real year\n0:36 Pay as you go\n1:02 Owe $1,000+? You likely need to pay\n1:35 Meet Sam (fictional)\n1:51 ≈ $12,037: $8,478 SE + $3,559 income\n2:16 90% this year or 100% last year\n2:39 Sam: $1,625 × 4 + savings for April\n3:12 Safe harbor + keep saving\n3:31 Apr 15 · Jun 15 · Sep 15 · Jan 15\n3:48 January = last year's tax year\n4:19 IRS Direct Pay + your state\n4:44 Income fell? Current-year may be smaller\n5:15 Lumpy income? Annualize.\n5:39 Filing: payments made vs total tax\n6:09 Year 2: new safe harbor\n6:25 Got a job too? Raise withholding\n6:55 The whole system\n7:19 5 common mistakes\n7:48 Recap\n\nThe Quarterly Tax Tracker: https://example.gumroad.com/l/quarterly-tax-tracker\n\nSources: irs.gov (estimated taxes, Form 1040-ES, underpayment penalty, Form 2210, payments), ssa.gov (2026 wage base).\n\nSam is a fictional example. Educational only, not tax, legal or financial advice. Figures are 2026 federal; check your state.",
    "thumbnail_text": "Quarterly taxes explained",
    "sources": [
     "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
@@ -1863,6 +1936,8 @@
     "90% × $12,037 = $10,833 / 4 = $2,708 per quarter",
     "$12,037 − $6,500 = $5,537 balance in April",
     "Form 2210 annualized installment method",
+    "$20K profit → ~$3,025; 90% ÷ 4 ≈ $681",
+    "$1,000 threshold after withholding and refundable credits",
     "Chapter timestamps must match final edit"
    ]
   }
