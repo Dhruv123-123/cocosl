@@ -70,3 +70,21 @@ def test_scam_series_is_complete_and_points_to_real_help():
     text = json.dumps(items, ensure_ascii=False)
     # The immigration pieces send people to a licensed attorney or accredited representative, never a notario.
     assert "abogado con licencia" in text and "acreditado" in text
+
+
+def test_month2_plan_is_complete_and_avoids_scam_series_slots():
+    items = json.loads((DS / "content-month-2.json").read_text())
+    fmts = [i["format"] for i in items]
+    assert fmts.count("short") == 14 and fmts.count("carousel") == 8 and fmts.count("long") == 2
+    assert len({i["key"] for i in items}) == len(items)
+    plan = (DS / "POSTING_PLAN_MONTH_2.md").read_text()
+    review = (DS / "REVIEW_CHECKLIST_MONTH_2.md").read_text()
+    for i in items:
+        assert i["script"]["title"] in plan and i["script"]["title"] in review, i["key"]
+        assert i["script"]["claims_to_verify"], i["key"]
+    scam_slots = {(r.split("|")[1].strip(), r.split("|")[2].strip())
+                  for r in (DS / "POSTING_PLAN_ESTAFAS.md").read_text().splitlines() if r.startswith("| ") and "ene" in r}
+    month2_slots = {(r.split("|")[1].strip(), r.split("|")[2].strip()) for r in plan.splitlines() if r.startswith("| ") and "ene" in r}
+    assert month2_slots and not (scam_slots & month2_slots)
+    taxes = [i for i in items if "impuesto" in json.dumps(i, ensure_ascii=False).lower() and i["key"] != "m2c-fondos-2027"]
+    assert all("no es asesoría fiscal" in i["script"]["caption"] for i in taxes if "irs" in i["script"]["hashtags"])
