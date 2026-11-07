@@ -110,3 +110,41 @@ caption timing, and nicer motion graphics, not another generator.
 breaks Instagram's terms and our own compliance rules (no scrapers or downloaders), so none were used for
 this research and none should be added to cocosl. Use the official Business Discovery API instead
 (`watchlist.py`).
+
+---
+
+# Round 2 (2026-11-07): 16 more tools for captions, B-roll, thumbnails, scheduling and clipping
+
+Same method as above. "90d" = commits since 2026-08-07. Every pick can be used commercially; where the
+model weights or a non-standard licence need care, it says so.
+
+| # | Repo | Area | Stars | Licence | 90d | How it fits cocosl | Verdict |
+|---|---|---|---|---|---|---|---|
+| 1 | francozanardi/pycaps | Captions | 231 | MIT | 19 | Animated word-by-word captions styled with CSS, from Python. Could replace our hand-written `.ass` styles for "word pop" captions. | **Try** (small but active) |
+| 2 | Softcatala/whisper-ctranslate2 | Captions | 1.4K | MIT | 9 | CLI for faster-whisper with word timestamps; easiest way to get per-word timing for `media/captions.py`. | **Use** |
+| 3 | snakers4/silero-vad | Captions / audio | 10.6K | MIT | 24 | Finds speech vs silence in narration so captions and cuts snap to real speech; also trims dead air. | **Use** |
+| 4 | slhck/ffmpeg-normalize | Audio | 1.5K | GitHub can't detect it (check the LICENSE file; it's commonly listed as MIT) | 12 | Normalises every video to platform loudness (about -14 LUFS) so voice and music levels match. | **Use after a licence check** |
+| 5 | Breakthrough/PySceneDetect | B-roll / clipping | 5.4K | BSD-3-Clause | 78 | Cuts stock or own footage at scene boundaries so B-roll never starts mid-shot; also finds clip points in our long videos. | **Use** |
+| 6 | danielgatis/rembg | Thumbnails / B-roll | 25.4K | MIT (its default u2net model is Apache-2.0) | 24 | Background removal for thumbnail cut-outs (product shots, icons, our own photos). | **Use** |
+| 7 | ZhengPeng7/BiRefNet | Thumbnails | 4.4K | MIT | 4 | Higher-quality matting than rembg's default; rembg can load it. | **Use** via rembg |
+| 8 | black-forest-labs/flux | Images | 26K | Apache-2.0 code; **FLUX.1 [schnell] weights Apache-2.0, [dev] weights non-commercial** | 0 | Fast local image generation through ComfyUI (already integrated). Use **schnell only** for monetized posts. | **Use schnell** |
+| 9 | ManimCommunity/manim | Motion graphics | 42.3K | MIT | 77 | Python animation engine for finance charts (compound growth, debt payoff, fee drag). Unlike Remotion it has no company-size licence limit and stays in Python. | **Use** (strong alternative to Remotion) |
+| 10 | xinntao/Real-ESRGAN | Thumbnails / B-roll | 37.4K | BSD-3-Clause | 0 (last push Aug 2024) | Upscales low-resolution generated images to 1080p+ for thumbnails and carousels. Stable; no longer maintained. | **Use** (pin the version) |
+| 11 | vercel/satori | Thumbnails / carousels | 14.2K | MPL-2.0 | 116 | HTML and CSS to SVG to PNG; lets us design thumbnails and carousel slides as templates. MPL is file-level copyleft, fine as an unmodified dependency. | **Try** |
+| 12 | facebookresearch/sam2 | Thumbnails / B-roll | 20.1K | Apache-2.0 | 0 | Segment any object in an image or video for cut-outs and tracking text behind subjects. Heavier than rembg. | **Borrow** for advanced edits |
+| 13 | n8n-io/n8n | Scheduling / automation | 210K | Sustainable Use Licence (fair-code) | 4,099 | Already in `integrations/n8n`. Self-hosting for our own business is allowed; reselling n8n itself or hosting it for clients isn't. | **Keep** (fine for internal use) |
+| 14 | linyqh/NarratoAI | Clipping / narration | 11.7K | MIT | 9 | LLM-written commentary cut against footage. Useful reference for scripting cuts to our own long videos. | **Borrow** |
+| 15 | mifi/lossless-cut | Clipping (manual) | 45.8K | GPL-2.0 | 401 | Desktop app for fast lossless trimming of our own recordings. A tool for Dhruv, not a library. | **Use** as an app |
+| 16 | Zulko/moviepy | Editing | 15.1K | MIT | 2 | Python video editing. We already drive ffmpeg directly; only worth it for quick experiments. | **Optional** |
+
+## Checked and rejected in round 2
+
+| Repo | Why not |
+|---|---|
+| linto-ai/whisper-timestamped | AGPL-3.0; faster-whisper and stable-ts do the same under MIT |
+| readbeyond/aeneas | AGPL-3.0 forced alignment |
+| ultralytics/ultralytics | AGPL-3.0 (commercial licence needed to embed) |
+| Sanster/IOPaint | Archived |
+| kkroening/ffmpeg-python | No commits since Aug 2024; we already call ffmpeg directly |
+| kleZ799/clipmint | 504 commits in 90 days with 31 stars; activity doesn't look organic, so review it before trusting it |
+| yt-dlp/yt-dlp | Downloads other people's videos; against our no-downloader rule |

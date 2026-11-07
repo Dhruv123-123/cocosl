@@ -41,8 +41,10 @@ official Business Discovery API (see `watchlist.py`).
 | File | What it is |
 |---|---|
 | [`instagram-formats.md`](instagram-formats.md) | Platform rule changes, format data, account types that are growing, and what to make for Money Made Simple |
-| [`github-repos.md`](github-repos.md) | 56 repos scored for licence, health and fit, with a verdict for each |
+| [`github-repos.md`](github-repos.md) | 56 repos scored for licence, health and fit, plus 16 more in round 2 (captions, B-roll, thumbnails, scheduling, clipping) |
 | [`integration-plan.md`](integration-plan.md) | Ranked changes to cocosl, each with the file it touches and effort |
+| [`creators.md`](creators.md) | 20 finance and scam-awareness creators: hooks, formats, cadence, how they make money |
+| [`hooks.md`](hooks.md) | 30 hook templates, now used by the writer (`src/contentfactory/hooks_library.json`) |
 | [`repos.csv`](repos.csv) | Raw repo metadata pulled 2026-11-07 |
 | [`watchlist.csv`](watchlist.csv), [`watchlist.py`](watchlist.py) | Accounts to watch, and a script that snapshots their public follower and engagement numbers through the official Business Discovery API |
 

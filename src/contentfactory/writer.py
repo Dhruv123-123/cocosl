@@ -7,6 +7,7 @@ draft plus a list of claims the human must check, not a finished product.
 from __future__ import annotations
 
 from .config import BrandProfile
+from .hooks import prompt_block as hook_patterns
 from .llm import LLM
 from .schemas import ReviewVerdict, Script, Segment
 
@@ -89,7 +90,8 @@ Angle: {angle}
 
 Caption: write it for Instagram/TikTok (value first, then CTA). If you mention an affiliate offer,
 the caption must say it's an affiliate link. Hashtags: specific, not generic spam.
-Also give 2-3 title_variants and 2-3 hook_variants that test genuinely different angles (not synonyms)."""
+Also give 2-3 title_variants and 2-3 hook_variants that test genuinely different angles (not synonyms).
+{hook_patterns(brand, title, fmt)}"""
     return llm.structured(Script, system=SYSTEM, prompt=prompt, purpose=f"script:{fmt}",
                           offline=lambda: _offline_script(brand, title, angle, fmt))
 
