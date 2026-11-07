@@ -42,6 +42,8 @@ class Segment(BaseModel):
                                     "instead of an illustration (only when the beat is about numbers)")
     footage: str = Field(default="", description="Leave empty. Set by a person: path to their own screen "
                          "recording or camera clip shown on this beat instead of an illustration")
+    motion: str = Field(default="", description="Leave empty. Set by `factory motion`: a motion card rendered "
+                        "from this beat's own number and text (HyperFrames)")
     broll: str = Field(default="", description="Leave empty. Set by `factory broll`: a licensed stock clip "
                        "(Pexels/Pixabay) for this beat; never counts as an original element")
 

@@ -26,7 +26,9 @@ def test_launch_mode_filters(factory, capsys):
     from contentfactory.cli import main
     assert launchmode.active_brands(factory) is None
     data = launchmode.set_mode(factory, "two-brand")
-    assert data["brands"] == ["money-made-simple", "scam-decoded"] and "scam-decoded" in data["note"]
+    assert data["brands"] == ["money-made-simple", "scam-decoded"]
+    missing = [b for b in data["brands"] if b not in factory.brands()]
+    assert ("note" in data) == bool(missing) and all(b in data.get("note", "") for b in missing)
     assert launchmode.in_play(factory, "money-made-simple") and not launchmode.in_play(factory, "tiny-histories")
     main(["--home", str(factory.settings.home), "launch-mode"])
     assert "Left out" in capsys.readouterr().out

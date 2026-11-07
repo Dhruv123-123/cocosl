@@ -227,12 +227,20 @@ def idea_produce(idea_id: int, request: Request, notes: str = Form(""),
 
 
 # --------------------------------------------------------------------------- review
+REVIEW_PER_PAGE = 20
+
+
 @router.get("/review")
-def review_page(request: Request, brand: str | None = None,
+def review_page(request: Request, brand: str | None = None, page: int = 1,
                 factory: Factory = Depends(get_factory)) -> HTMLResponse:
-    posts = [_post_view(factory, request, p) for p in queries.review_queue(factory, brand)]
+    queue = queries.review_queue(factory, brand)
+    pages = max(1, -(-len(queue) // REVIEW_PER_PAGE))
+    page = max(1, min(page, pages))
+    start = (page - 1) * REVIEW_PER_PAGE  # one page of full previews at a time: 300 posts made a 1 MB page
+    posts = [_post_view(factory, request, p) for p in queue[start:start + REVIEW_PER_PAGE]]
     failed = factory.db.query("SELECT * FROM posts WHERE status = 'failed' ORDER BY updated_at DESC LIMIT 10")
-    return render(request, "review.html", items=posts, failed=failed, brands=factory.brands(), brand=brand or "")
+    return render(request, "review.html", items=posts, total=len(queue), page=page, pages=pages, failed=failed,
+                  brands=factory.brands(), brand=brand or "")
 
 
 @router.post("/posts/{post_id}/edit")
