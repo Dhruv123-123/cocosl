@@ -1,7 +1,7 @@
 # Go live: the one checklist
 
-Written 2026-11-07 for Dhruv and refreshed through the evening (last pass 04:30 UTC: PRs #1–#12 and `main` at
-`2902e0a`). This merges every "only you can do this" step from `docs/CREDENTIALS.md`, `docs/QUICKSTART.md`,
+Written 2026-11-07 for Dhruv and refreshed through the evening (last pass 06:30 UTC: PRs #1–#12 and `main` at
+`740e84f`). This merges every "only you can do this" step from `docs/CREDENTIALS.md`, `docs/QUICKSTART.md`,
 `docs/DEPLOY.md`, `launch/LAUNCH_DAY.md`, `launch/VERIFY_BEFORE_POSTING.md`, the open PRs, the commits on `main`
 and the project files in `content-factory/`, with the duplicates removed. Everything else is already built.
 
@@ -21,7 +21,7 @@ Nothing in this repo sends, posts or charges on its own. You press every button.
 Merge in this order (details and current blockers in [PR merge order](#pr-merge-order) at the bottom):
 **#1 → #3 → #2 → #4 → #5 → #6 → #8 → #9 → #11 → #10 → #12 → #7.**
 
-- [ ] Merge the ones marked ✅ in that order on GitHub (≈ 2 min each). Right now that's **#1, #3, #4, #6, #8,
+- [ ] Merge the ones marked ✅ in that order on GitHub (≈ 2 min each). Right now that's **#1, #3, #2, #4, #8,
       #12, #7**: checked together on top of `main`, all tests pass. Skip the rest until GitHub shows them
       green; the threads that opened them are fixing them. 15 min
 
@@ -191,17 +191,23 @@ Manual posting is fine for the first weeks. Do this when it isn't.
 - [ ] **YouTube:** Cloud project, YouTube Data API v3, OAuth consent (you as test user) with scopes
       `youtube.upload`, `youtube.readonly`, `youtube.force-ssl` (comment replies), Desktop client,
       `factory auth youtube`. Optional `YT_CHANNEL_ID` and `IG_USERNAME` so the inbox skips your own comments. Testing-mode tokens expire every 7 days. 30 min
-- [ ] **TikTok:** developer app with Login Kit + Content Posting API, `factory auth tiktok`, submit the audit
-      (posts are private until it passes; post from the app meanwhile). 30 min
+- [ ] **TikTok: nothing to connect.** TikTok doesn't allow tools to post to your own accounts, so the worker
+      writes a post-by-hand package (video, caption, time). Post it from `factory ui` → Post by hand (or
+      `factory manual`) with the AI-generated label on, then mark it posted. 5 min per post
 - [ ] **Server:** a $5–10 VPS + domain, follow `docs/DEPLOY.md` (Caddy, `DASHBOARD_TOKEN`,
       `PUBLIC_MEDIA_BASE_URL`, `FUNNEL_PUBLIC_URL`). 45 min
 - [ ] Webhooks: Stripe → `/webhooks/stripe`; Gumroad ping → `/webhooks/gumroad?secret=...`. 10 min
+- [ ] Backups: `BACKUP_DIR=/data/backups` and the worker backs up the database daily. 2 min
 - [ ] Sender identity in `.env`: `FACTORY_SENDER_*`, `BUSINESS_ADDRESS`; SMTP if the server sends newsletters. 10 min
-- [ ] Keep `FACTORY_DRY_RUN=1` until `factory status` is green and one manual test post looks right, then set `0`.
+- [ ] Run `factory launch-check` (add `--online` to test every real link). Keep `FACTORY_DRY_RUN=1` until it's
+      **green** and one manual test post looks right, then set `0`. Yellow usually means placeholder links in
+      `brands/<slug>.yaml`; red names the post to fix. 10 min
 
 ## Stage 9 · More brands, one at a time (after Money Made Simple is posting)
 
-Each brand repeats Stage 4 (accounts, brand kit, first posts) and the relevant parts of 3, 5 and 7. Do one
+Each brand repeats Stage 4 (accounts, brand kit, first posts) and the relevant parts of 3, 5 and 7. Each
+brand gets its own accounts: run the auth commands with `--brand <slug>` (e.g.
+`factory auth youtube --brand scam-decoded`) and the tokens are saved under that brand's name. Do one
 brand properly before starting the next. Order below is by how soon each can earn.
 
 ### 9a · Free web apps (PR #8, ≈ 1 h): search traffic with no audience needed
@@ -253,24 +259,24 @@ brand properly before starting the next. Order below is by how soon each can ear
 
 ## PR merge order
 
-Checked 04:30 UTC on 2026-11-07 against `main` at `2902e0a` (which now includes Kokoro, the render queue,
-`factory doctor` and the canonical product list) by merging every open PR in this order in a scratch copy.
+Final check of the evening: 06:30 UTC on 2026-11-07, against `main` at `740e84f` (TikTok post-by-hand,
+`factory launch-check`, per-brand accounts), merging every open PR in this order in a scratch copy.
 
 | # | PR | Status now | What's in the way |
 |---|---|---|---|
 | 1 | **#1** Research | ✅ clean | |
 | 2 | **#3** Financial model | ✅ clean | |
-| 3 | **#2** Scouting, Kokoro, Trial Reels | ⚠️ conflicts with `main` | `main` built Kokoro itself: `.env.example`, `docker-compose.yml`, `media/tts.py`. Probably only the scouting docs and Trial Reels are still needed |
+| 3 | **#2** Scouting, hooks, Trial Reels | ✅ clean (fixed since last pass) | |
 | 4 | **#4** Website and emails | ✅ clean | |
-| 5 | **#5** Months 1–3, channels, affiliate kit | ✅ clean, but one test fails with #4 | `tests/test_site.py::test_plausible_analytics`: #5's `/go/` redirect pages have no analytics snippet |
-| 6 | **#6** Product line + Etsy | ✅ clean | |
+| 5 | **#5** Months 1–3, channels, affiliate kit | ⚠️ conflicts with `main` | `src/contentfactory/cli.py` |
+| 6 | **#6** Products, Etsy, KDP, ebook | ⚠️ breaks #4's site tests | `tests/test_site.py`: duplicate waitlist form IDs on two product pages, and the home/products/shop pages go over the page-weight limit |
 | 7 | **#8** Web apps | ✅ clean | |
-| 8 | **#9** Scam Decoded | ✅ clean, but one test fails | its new brand breaks `tests/test_worker.py::test_each_brand_runs_daily_once_on_its_own_clock` |
-| 9 | **#11** Dinero Simple | ⚠️ conflicts | 10 files, mostly with `main`'s new pipeline (tts, cli, pipeline, site build) |
-| 10 | **#10** 1099 Money | ⚠️ conflicts | `pyproject.toml`, `tests/test_business.py`; stacked on #5 |
-| 11 | **#12** Ad studio portfolio | ✅ clean | |
+| 8 | **#9** Scam Decoded | ⚠️ conflicts | `src/contentfactory/media/render.py` |
+| 9 | **#11** Dinero Simple | ⚠️ conflicts | 13 files, mostly with #2's scouting docs and #4's site |
+| 10 | **#10** 1099 Money | ⚠️ conflicts | `pyproject.toml`; stacked on #5 |
+| 11 | **#12** Ad studio portfolio + listing-video page | ✅ clean | |
 | 12 | **#7** This checklist | ✅ clean | docs only |
 
-Safe to merge tonight, in order: **#1, #3, #4, #6, #8, #12, #7.** The rest need their threads to bring in
-`main` and fix the noted test first; GitHub will show them green when they're ready.
+Safe to merge now, in order: **#1, #3, #2, #4, #8, #12, #7.** These were merged together on top of `main`
+and the full test suite passed. Merge the others once GitHub shows them green.
 If a new PR lands, merge it after these unless its description says otherwise.
