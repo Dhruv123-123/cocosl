@@ -94,9 +94,15 @@ def test_month2_plan_is_complete_and_avoids_scam_series_slots():
 @pytest.fixture
 def _forget_products_build():
     """launch/dinero-simple/products/build.py is imported as "build"; drop it afterwards so another test's
-    `import build` (the site generator in tests/test_site.py) doesn't get this module from the cache."""
+    `import build` (the site generator in tests/test_site.py) doesn't get this module from the cache. Drop them
+    beforehand too: other branches' tests import their own "build" and "listings" modules first."""
+    names = ("build", "build_etsy", "listings")
+    for name in names:
+        sys.modules.pop(name, None)
+    saved = list(sys.path)
     yield
-    for name in ("build", "build_etsy", "listings"):
+    sys.path[:] = saved
+    for name in names:
         sys.modules.pop(name, None)
 
 
@@ -403,7 +409,10 @@ def _load(path: Path, name: str):
     spec = importlib.util.spec_from_file_location(name, path)
     mod = importlib.util.module_from_spec(spec)
     sys.path.insert(0, str(path.parent))
-    spec.loader.exec_module(mod)
+    try:
+        spec.loader.exec_module(mod)
+    finally:
+        sys.path.remove(str(path.parent))
     return mod
 
 
