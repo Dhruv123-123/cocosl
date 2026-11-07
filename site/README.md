@@ -265,6 +265,34 @@ worked examples ($5k, $15k, $30k) with hand-written notes from `content/debt-exa
 button that loads it into the calculator. The ten per-amount pages it replaced (Nov 2026, after the scouting
 audit) 301 to it.
 
+## Holiday page (/holiday/)
+
+`content/holiday.md` is the Black Friday and holiday landing page: key dates, a holiday budget in four numbers,
+Black Friday traps, four buy-now-pay-later rules, the ten-step year-end checklist, an FAQ and sources. Themes and
+claims come from the content thread's holiday pack; update the key dates each season.
+
+The opt-in box sends the form with `source=holiday-checklist`, then goes to `/holiday/thanks/` (noindex), which has
+the download button for `static/downloads/year-end-money-checklist.pdf`. Edit the printable in
+`lead-magnet/year-end-money-checklist.html` and rebuild it, with its cover image, using `python3 tools/make_assets.py`.
+The home page shows a one-line link to /holiday/ only when the build date is in November or December, and the
+daily scheduled build turns it on and off. The footer always links it.
+
+## Page speed (Core Web Vitals)
+
+Lighthouse on Nov 7 2026 scored 100 for performance, accessibility and SEO on 11 key pages, both mobile and desktop.
+Best practices scored 96, but only because the test machine blocked the Plausible script. Mobile LCP was 1.1 to 1.5 s,
+CLS 0 and TBT 0 ms. Keep it that way:
+
+- Every `<img>` needs `width` and `height`. Images below the fold get `loading="lazy"`, and the hero image gets
+  `fetchpriority="high"`. On /shop/ that means only the first card loads eagerly.
+- Show small images. The header uses `img/logo-72.png` (1.7 KB). The big PNGs (`og-default.png`, `lead-magnet-cover.png`,
+  `product-20-minute-budget.png`) are for social cards only. Pages use JPGs, and `tests/test_site.py` checks this.
+- No web fonts: the CSS uses the system font stack (Inter only if it's already installed).
+- `public/_headers` caches images and downloads for a week, and CSS and JS for an hour. Netlify compresses text itself.
+
+To re-run Lighthouse: `npx lighthouse http://localhost:8000/shop/ --chrome-flags="--headless=new"`, adding
+`--preset=desktop` for the desktop scores.
+
 ## Scheduled publishing and the editor
 
 **Articles and comparisons go live on their `date`.** A page dated after the build date isn't built, isn't in the

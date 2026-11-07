@@ -267,10 +267,11 @@ def load_dir(name: str) -> list[dict]:
 
 
 # ----------------------------------------------------------------- templates
-def email_form(source: str, button: str = "Send me the free reset", compact: bool = False) -> str:
+def email_form(source: str, button: str = "Send me the free reset", compact: bool = False,
+               thanks_path: str = "/free/thanks/") -> str:
     e = CFG["email"]
     provider = e.get("provider", "netlify")
-    thanks = u("/free/thanks/")
+    thanks = u(thanks_path)
     field = e.get("email_field") or {
         "kit": "email_address", "mailerlite": "fields[email]", "buttondown": "email",
         "factory": "email", "netlify": "email"}.get(provider, "email")
@@ -473,7 +474,7 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="wrap head-inner">
-    <a class="brand" href="{u('/')}"><img src="{u('/img/logo.png')}" alt="" width="36" height="36">{esc(CFG['name'])}</a>
+    <a class="brand" href="{u('/')}"><img src="{u('/img/logo-72.png')}" alt="" width="36" height="36">{esc(CFG['name'])}</a>
     <nav aria-label="Main">{nav}</nav>
   </div>
 </header>
@@ -484,7 +485,7 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
   <div class="wrap">
     <p class="foot-brand"><strong>{esc(CFG['name'])}</strong> · {esc(CFG['tagline'])}</p>
     <p>{soc}</p>
-    <p><a href="{u('/about/')}">About</a> · <a href="{u('/resources/')}">Resources</a> · <a href="{u('/quiz/')}">Money quiz</a> · <a href="{u('/budget/')}">Budget by salary</a> · <a href="{u('/cost-of-living/')}">City budgets</a> · <a href="{u('/debt-payoff/')}">Debt payoff</a> · <a href="{u('/ask/')}">Money questions</a> · <a href="{u('/shop/')}">Shop</a> · <a href="{u('/privacy/')}">Privacy</a> · <a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/terms/')}">Terms</a> · <a href="{u('/links/')}">Links</a> · <a href="{u('/newsletter/')}">Newsletter</a> · <a href="{u('/feed.xml')}">RSS</a></p>
+    <p><a href="{u('/about/')}">About</a> · <a href="{u('/resources/')}">Resources</a> · <a href="{u('/quiz/')}">Money quiz</a> · <a href="{u('/budget/')}">Budget by salary</a> · <a href="{u('/cost-of-living/')}">City budgets</a> · <a href="{u('/debt-payoff/')}">Debt payoff</a> · <a href="{u('/ask/')}">Money questions</a> · <a href="{u('/holiday/')}">Holiday money</a> · <a href="{u('/shop/')}">Shop</a> · <a href="{u('/privacy/')}">Privacy</a> · <a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/terms/')}">Terms</a> · <a href="{u('/links/')}">Links</a> · <a href="{u('/newsletter/')}">Newsletter</a> · <a href="{u('/feed.xml')}">RSS</a></p>
     <p class="small">{esc(CFG['disclaimer'])}</p>
     <p class="small">{esc(CFG['ai_disclosure'])}</p>
     <p class="small">&copy; {date.today().year} {esc(CFG['name'])}</p>
@@ -750,7 +751,7 @@ def build() -> list[str]:
         body = f"""<article class="wrap product">
   <p class="crumbs"><a href="{u('/products/')}">Products</a></p>
   <div class="product-hero">
-    <img src="{u(p['image'])}" alt="{esc(p['title'])} preview" width="640" height="360">
+    {product_hero_img(p)}
     <div>
       <h1>{esc(p['title'])}</h1>
       <p class="dek">{esc(p['short'])}</p>
@@ -908,7 +909,7 @@ def build() -> list[str]:
       <p class="dek">{esc(lm['pitch'])}</p>
       {email_form('free-page', 'Send me the free reset')}
     </div>
-    <img class="cover" src="{u('/img/lead-magnet-cover-sm.jpg')}" alt="Cover of {esc(lm['title'])}" width="300" height="388">
+    <img class="cover" src="{u('/img/lead-magnet-cover-sm.jpg')}" alt="Cover of {esc(lm['title'])}" width="300" height="388" fetchpriority="high">
   </div>
   <h2>What you'll do, one 15-minute task a day</h2>
   <ol class="days">{days}</ol>
@@ -976,9 +977,9 @@ def build() -> list[str]:
       <h1>{ab("hero", hero_a["headline"], hero_b["headline"])}</h1>
       <p class="dek">{esc(CFG['description'])}</p>
       <div class="hero-form"><p class="hero-offer">Get <strong>{magnet_name()}</strong> free: {ab("hero", hero_a["offer"], hero_b["offer"])}</p>{email_form('home-hero', 'Send me the free reset')}</div>
-      <p class="quiz-link">Not sure where to start? <a href="{u('/quiz/')}">Take the 1-minute money personality quiz</a> or see <a href="{u('/start/')}">Start here</a>.</p>
+      <p class="quiz-link">Not sure where to start? <a href="{u('/quiz/')}">Take the 1-minute money personality quiz</a> or see <a href="{u('/start/')}">Start here</a>.</p>{holiday_note()}
     </div>
-    <img class="cover" src="{u('/img/lead-magnet-cover-sm.jpg')}" alt="Cover of {esc(lm['title'])}" width="300" height="388">
+    <img class="cover" src="{u('/img/lead-magnet-cover-sm.jpg')}" alt="Cover of {esc(lm['title'])}" width="300" height="388" fetchpriority="high">
   </div>
 </section>
 <section class="wrap">
@@ -1057,6 +1058,7 @@ def build() -> list[str]:
                              "as_of": fmt_date(os.environ.get("BUILD_DATE") or date.today().isoformat())})
 
     urls += build_ask(_shop, pseo)
+    urls += build_holiday(_shop)
 
     # ---- newsletter archive: content/newsletter/*.md, one page per issue that has gone out.
     # An issue dated in the future stays unpublished until a build on or after its date
@@ -1163,12 +1165,17 @@ def build() -> list[str]:
 """)
         rules.append(f"{u(old)} {u(new)} 301!")  # ! = redirect even though the stub file exists
     (OUT / "_redirects").write_text("\n".join(rules) + "\n")
+    # Netlify cache headers. File names aren't fingerprinted, so images and downloads cache for a week and
+    # CSS/JS for an hour (Netlify revalidates by ETag after that). Netlify gzips/brotlis text on its own.
+    week, hour = "public, max-age=604800", "public, max-age=3600, stale-while-revalidate=86400"
+    (OUT / "_headers").write_text("".join(f"{u(p)}\n  Cache-Control: {v}\n" for p, v in [
+        ("/img/*", week), ("/downloads/*", week), ("/*.css", hour), ("/*.js", hour)]))
 
     # ---- sitemap, robots, feed
     sm = "".join(f"<url><loc>{esc(absu(p))}</loc><lastmod>{d}</lastmod></url>" for p, d in urls)
     (OUT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{sm}</urlset>\n')
-    (OUT / "robots.txt").write_text(f"User-agent: *\nDisallow: {u('/emails/')}\nDisallow: {u('/free/thanks/')}\n"
+    (OUT / "robots.txt").write_text(f"User-agent: *\nDisallow: {u('/emails/')}\nDisallow: {u('/free/thanks/')}\nDisallow: {u('/holiday/thanks/')}\n"
                                     f"Sitemap: {absu('/sitemap.xml')}\n")
     items = "".join(f"""<item><title>{esc(p['title'])}</title><link>{absu(f"/blog/{p['slug']}/")}</link>
 <guid>{absu(f"/blog/{p['slug']}/")}</guid><pubDate>{datetime.strptime(p['date'], '%Y-%m-%d').replace(tzinfo=timezone.utc).strftime('%a, %d %b %Y 00:00:00 +0000')}</pubDate>
@@ -1244,6 +1251,71 @@ def build_ask(shop: dict, pseo) -> list[tuple[str, str]]:
     return [("/ask/", updated)]
 
 
+def build_holiday(shop: dict) -> list[tuple[str, str]]:
+    """/holiday/: Black Friday traps, a holiday budget, BNPL rules and the year-end checklist (content/holiday.md),
+    with the free printable Year-End Money Checklist as the email opt-in (thanks page: /holiday/thanks/)."""
+    src = CONTENT / "holiday.md"
+    if not src.exists():
+        return []
+    meta, md = parse_front_matter(src.read_text())
+    md = re.sub(r"<!--.*?-->", "", md, flags=re.S)
+    faq = extract_faq(md)
+    body_html, toc = markdown(md)
+    toc_html = '<nav class="toc" aria-label="On this page"><p>On this page</p><ol>' + "".join(
+        f'<li><a href="#{i}">{t}</a></li>' for i, t in toc if i not in ("common-questions", "sources")) + "</ol></nav>"
+    pdf = "year-end-money-checklist.pdf"
+    optin = f"""<div class="magnet holiday-optin" id="checklist">
+  <img src="{u('/img/year-end-checklist-cover.jpg')}" alt="Cover of the Year-End Money Checklist" width="150" height="194">
+  <div>
+    <p class="kicker">Free printable</p>
+    <h2 class="magnet-title">The Year-End Money Checklist</h2>
+    <p>Four pages: the 10 money moves to make before January 1 (with their deadlines), a one-page holiday plan in four numbers, and the Black Friday and pay-in-4 checks. Print it or fill it in on a tablet.</p>
+    {email_form("holiday-checklist", button="Send me the checklist", thanks_path="/holiday/thanks/")}
+  </div>
+</div>"""
+    tools = []
+    for slug in ("holiday-savings-planner", "gift-budget-planner", "no-spend-challenge"):
+        it = shop.get(slug)
+        if it:
+            price = "free" if not it["price"] else f"${it['price']:g}"
+            tools.append(f'<li><a href="{u(f"/shop/#item-{slug}")}">{esc(it["name"])}</a> ({price}): '
+                         f'{esc(it.get("blurb", ""))}</li>')
+    tools_html = (f'<section class="next"><h2>Printables for the season</h2><ul class="related">{"".join(tools)}</ul></section>'
+                  if tools else "")
+    updated = str(meta.get("updated", date.today().isoformat()))
+    ld = [{"@context": "https://schema.org", "@type": "Article", "headline": meta["title"],
+           "description": meta["description"], "datePublished": updated, "dateModified": updated,
+           "mainEntityOfPage": absu("/holiday/"), "image": absu("/img/og-default.png"),
+           "author": author_ld(), "publisher": org_ld()},
+          {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+              {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}]
+    body = f"""<article class="wrap article holiday">
+  <p class="crumbs"><a href="{u('/')}">Home</a> / <span>Holiday money</span></p>
+  <h1>{esc(meta['title'])}</h1>
+  <p class="dek">A holiday budget in four numbers, the Black Friday and pay-later traps, and ten money moves to make before January 1.</p>
+  <p class="meta">Updated {fmt_date(updated)} · {byline()}</p>
+  {optin}
+  {toc_html}
+  <div class="prose">
+{body_html}
+  </div>
+  {tools_html}
+  <p class="disclaimer">Examples are hypothetical. {esc(CFG['disclaimer'])}</p>
+</article>"""
+    write("/holiday/", layout(title=meta.get("seo_title", meta["title"]), description=meta["description"],
+                              path="/holiday/", body=body, og_type="article", jsonld=ld))
+    write("/holiday/thanks/", layout(
+        title="Your year-end checklist", path="/holiday/thanks/", noindex=True, description="Your free download.",
+        body=f"""<section class="wrap landing thanks">
+  <h1>You're in. Here's your checklist.</h1>
+  <p class="dek">{esc(CFG['email'].get('thanks_note', 'Check your inbox too: your first email is on its way.'))}</p>
+  <p><a class="btn big" href="{u('/downloads/' + pdf)}" download>Download the Year-End Money Checklist (PDF)</a></p>
+  <p>Start with the holiday plan on page 3: it takes about 30 minutes. Then tick off one year-end move a day.</p>
+  <p><a href="{u('/holiday/')}">Back to holiday money</a> · <a href="{u('/free/')}">Also free: the 7-Day Money Reset</a></p>
+</section>"""))
+    return [("/holiday/", updated)]
+
+
 SHOP_GROUPS = [("budget", "Budget planners"), ("savings", "Savings challenges"), ("debt", "Debt payoff"),
                ("trackers", "Trackers and records")]
 
@@ -1276,6 +1348,25 @@ def shop_buttons(it: dict) -> str:
     return "".join(out)
 
 
+def product_hero_img(p: dict) -> str:
+    """Product hero: the 640px card JPG at 1x and a 1280px JPG at 2x when they exist; the PNG stays for og:image."""
+    big = p["image"].rsplit(".", 1)[0] + "-1280.jpg"
+    if p.get("thumb") and (STATIC / big.lstrip("/")).is_file():
+        src = f'src="{u(p["thumb"])}" srcset="{u(p["thumb"])} 640w, {u(big)} 1280w" sizes="(max-width: 700px) 100vw, 640px"'
+    else:
+        src = f'src="{u(p["image"])}"'
+    return f'<img {src} alt="{esc(p["title"])} preview" width="640" height="360" fetchpriority="high">'
+
+
+def holiday_note() -> str:
+    """Home-page pointer to /holiday/, shown only Nov 1 - Dec 31 of the build date (the daily build turns it on and off)."""
+    day = os.environ.get("BUILD_DATE") or date.today().isoformat()
+    if day[5:7] not in ("11", "12"):
+        return ""
+    return (f'\n      <p class="quiz-link">Holiday season: <a href="{u("/holiday/")}">plan it in four numbers and '
+            f'get the free year-end checklist</a>.</p>')
+
+
 def shop_price(it: dict) -> str:
     p = it["price"]
     txt = "Free" if not p else f"${p:g}"
@@ -1285,8 +1376,10 @@ def shop_price(it: dict) -> str:
     return f'<p class="price">{txt}</p>'
 
 
-def shop_card(it: dict, image: bool = True) -> str:
-    img = (f'<img src="{u(it["image"])}" alt="{esc(it["name"])} cover" width="360" height="360" loading="lazy">'
+def shop_card(it: dict, image: bool = True, eager: bool = False) -> str:
+    # The first card is the mobile LCP image, so it loads eagerly with high priority; the rest are lazy.
+    load = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
+    img = (f'<img src="{u(it["image"])}" alt="{esc(it["name"])} cover" width="360" height="360" {load}>'
            if image and it.get("image") else "")
     return f"""<div class="shop-card{' has-img' if img else ''}" id="item-{esc(it['slug'])}">{img}<div class="shop-body">
   <h3>{esc(it["name"])}</h3><p>{esc(it.get("blurb", ""))}</p>{shop_price(it)}
@@ -1319,7 +1412,7 @@ def build_shop(items: list[dict]) -> None:
   <p class="chips"><a class="chip" href="#bundles">Bundles</a><a class="chip" href="#kits">Guide kits</a><a class="chip" href="#templates">Sheets and Notion</a><a class="chip" href="#printables">Printables</a></p>
   <h2 id="bundles">Bundles</h2>
   <p>The best value if you want more than one. Savings are against buying the same items one by one.</p>
-  <div class="shop-grid">{''.join(shop_card(i) for i in bundles)}</div>
+  <div class="shop-grid">{''.join(shop_card(i, eager=(n == 0)) for n, i in enumerate(bundles))}</div>
   <h2 id="kits">Guide and spreadsheet kits</h2>
   <p>Each kit is a short PDF guide plus a spreadsheet that does the maths (Excel, Google Sheets or Numbers). Start with the one that matches your problem: leaking subscriptions, no system, credit, debt or investing.</p>
   <div class="shop-grid">{''.join(shop_card(i) for i in kits)}</div>

@@ -460,3 +460,52 @@ def test_pin_specs_match_pages():
         assert "utm_campaign=pin-" + p["slug"] in p["link"] and p["title"] and p["alt"] and p["board"]
         assert (SITE / "content").exists() and len(p["desc"]) <= 500 and len(p["title"]) <= 100
     assert "$3,530" in pins[6]["html"]  # $50k take-home, same maths as /budget/50000-salary/
+
+
+def test_holiday_page_with_checklist_optin(tmp_path):
+    out = _build(tmp_path, "https://example.org", BUILD_DATE="2026-11-20")
+    page = (out / "holiday" / "index.html").read_text()
+    for h in ("Black Friday traps", "Your holiday budget in four numbers", "Buy now, pay later: four rules",
+              "The year-end checklist"):
+        assert h in page
+    form = re.search(r'<form[^>]*data-thanks="/holiday/thanks/"[^>]*>.*?</form>', page, re.S).group(0)
+    assert 'value="holiday-checklist"' in form
+    ld = [json.loads(m) for m in re.findall(r'<script type="application/ld\+json">(.*?)</script>', page)]
+    faq = next(x for x in ld if x["@type"] == "FAQPage")["mainEntity"]
+    assert len(faq) == 4
+    thanks = (out / "holiday" / "thanks" / "index.html").read_text()
+    assert 'content="noindex"' in thanks and "/downloads/year-end-money-checklist.pdf" in thanks
+    pdf = out / "downloads" / "year-end-money-checklist.pdf"
+    assert pdf.read_bytes()[:5] == b"%PDF-" and pdf.stat().st_size < 400_000
+    assert "/holiday/" in (out / "sitemap.xml").read_text()
+    assert "/holiday/thanks/" not in (out / "sitemap.xml").read_text()
+    assert "Disallow: /holiday/thanks/" in (out / "robots.txt").read_text()
+    # the home page points at it in Nov/Dec only
+    assert 'href="/holiday/"' in (out / "index.html").read_text().split("<footer")[0]
+    spring = _build(tmp_path / "spring", "https://example.org", BUILD_DATE="2027-03-01")
+    assert 'href="/holiday/"' not in (spring / "index.html").read_text().split("<footer")[0]
+
+
+def test_core_web_vitals_basics(tmp_path):
+    """Every <img> has width/height (no layout shift); the header logo is small; only the first shop card loads
+    eagerly; hero covers get fetchpriority; no web fonts; cache headers for static files."""
+    out = _build(tmp_path, "https://example.org")
+    for page in out.rglob("*.html"):
+        for img in re.findall(r"<img\b[^>]*>", page.read_text()):
+            assert "width=" in img and "height=" in img, f"{page}: {img}"
+    assert (SITE / "static" / "img" / "logo-72.png").stat().st_size < 5_000
+    for img in (SITE / "static" / "img").rglob("*"):
+        if img.is_file() and img.name not in ("og-default.png", "product-20-minute-budget.png", "lead-magnet-cover.png"):
+            assert img.stat().st_size < 60_000, img  # big PNGs are og/social images only, never shown in pages
+    for page in out.rglob("*.html"):
+        assert not re.search(r'<img[^>]*src="[^"]*(og-default|product-20-minute-budget|lead-magnet-cover)\.png', page.read_text()), page
+    shop = (out / "shop" / "index.html").read_text()
+    cards = re.findall(r'<img src="/img/shop/[^>]*>', shop)
+    assert 'fetchpriority="high"' in cards[0] and "lazy" not in cards[0]
+    assert all('loading="lazy"' in c for c in cards[1:])
+    assert 'fetchpriority="high"' in (out / "index.html").read_text()
+    css = (SITE / "static" / "style.css").read_text()
+    assert "@font-face" not in css and "@import" not in css
+    assert "fonts.googleapis" not in (out / "index.html").read_text()
+    headers = (out / "_headers").read_text()
+    assert "/img/*\n  Cache-Control: public, max-age=604800" in headers
