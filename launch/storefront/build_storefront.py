@@ -23,6 +23,7 @@ LAUNCH = HERE.parent
 sys.path.insert(0, str(LAUNCH / "catalog"))
 import build_catalog as CAT  # noqa: E402  (also puts etsy/, templates/, pod/, brandshop/ on the path)
 import gumroad_es as ES  # noqa: E402
+import promos  # noqa: E402  (launch/catalog/promos.py: the BFCM codes and the January push)
 import post_purchase as PP  # noqa: E402
 
 BRANDS = {
@@ -173,6 +174,8 @@ def problems() -> list[str]:
                 bad.append(f"{brand}: cross-sell for '{n}' points at '{CROSS_SELL[n][0]}', not another product of the brand")
         if BRANDS[brand]["featured"] not in names:
             bad.append(f"{brand}: featured product isn't a Gumroad product")
+    import listings as L
+    bad += promos.problems(CAT.all_rows(), L.LISTINGS)
     bad += es_problems(prods.get("Dinero Simple", []))
     bad += email_problems()
     return bad
@@ -286,6 +289,7 @@ create them before the first sale. Full map across brands: `CROSS_SELL.md`.
 |---|---|---|---|---|
 {chr(10).join(upsells)}
 
+{promos.storefront_section(brand, CAT.all_rows())}
 ## Rules
 
 Same as every listing: no fake urgency or countdowns, no income promises, no testimonials until real buyers give them,

@@ -240,3 +240,25 @@ def test_year_end_packet_reads_taxhacker_csv(tmp_path):
     mn = wb["Missing notes"]
     assert mn["G1"].value == 2 and mn["C5"].value == "Computer store" and mn["C6"].value == "Coworking space"
     assert all(r[2] == "found" for r in wb["Settings"].iter_rows(min_row=10, max_row=19, max_col=3, values_only=True))
+
+
+def test_bfcm_codes_and_january_push():
+    sys.path.insert(0, str(SHOP.parents[0] / "catalog"))
+    sys.path.insert(0, str(SHOP.parents[0] / "etsy"))
+    import build_catalog as CAT
+    import listings as L
+    import promos
+    rows = CAT.all_rows()
+    assert promos.problems(rows, L.LISTINGS) == []
+    assert (promos.START.isoformat(), promos.END.isoformat()) == ("2026-11-27", "2026-11-30")
+    cr = {(r["code"], r["product"], r["platform"]): r["after"] for r in promos.code_rows(rows)}
+    assert cr[("BF25", "Mega Budget Bundle (all 40 printables)", "Etsy")] == "$14.25"
+    assert cr[("BF10", "The Money Made Simple Toolkit", "Gumroad")] == "$29"
+    assert cr[("YEAREND10", "The Freelancer Money Bundle", "Etsy")] == "$39"
+    # bundles only: every discounted product is a bundle or toolkit
+    assert all(any(w in p for w in ("Bundle", "Binder", "Pack", "Toolkit", "HQ")) for _, p, _ in cr)
+    md = promos.markdown(rows, L.LISTINGS).lower()
+    assert "was $" not in md.replace('"was $x"', "") and "strikethrough" not in md
+    assert not any(w in md for w in shop.BANNED)
+    # the catalog no longer promises a percent-off "sale" on the bundles
+    assert not any("on sale Nov 27-30" in r["launch"] for r in rows)

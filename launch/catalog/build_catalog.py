@@ -51,7 +51,7 @@ def etsy_rows() -> list[dict]:
         if it.get("dated"):
             date, src, note = "Week of Nov 9 (list first)", "calendar", "Dated: 4 PDFs (Sun/Mon start x Letter/A4). Drop the price after Jan 31."
         elif k == "bundle":
-            date, src, note = "Week of Nov 9; on sale Nov 27-30 (25% off)", "calendar", "Black Friday sale is bundles only."
+            date, src, note = "Week of Nov 9; code BF25 Nov 27-30", "calendar", "Black Friday: code only, no crossed-out price (see the BFCM section)."
         elif k == "product":
             date, src, note = "Week of Nov 9 (with the shop)", "proposed", "Etsy edition: no Gumroad codes or links."
         elif any(w in s for w in SAVINGS):
@@ -72,7 +72,7 @@ def gumroad_rows() -> list[dict]:
     cat = [{"slug": "20-minute-budget", "name": "The 20-Minute Budget", "price": 12}] + cat
     feature = {"20-minute-budget": "featured Jan 4", "debt-free-date-planner": "featured Jan 4",
                "credit-report-audit-kit": "featured Jan 25", "bill-cut-kit": "featured Jan 25",
-               "money-toolkit-bundle": "on sale Nov 27-30"}
+               "money-toolkit-bundle": "code BF10 Nov 27-30"}
     out = []
     for p in cat:
         s = p["slug"]
@@ -90,7 +90,7 @@ def template_rows() -> list[dict]:
         s = i["slug"]
         dated = s.endswith("2027")
         plat = "Gumroad + Etsy" if dated else ("Gumroad (free, email capture)" if i["kind"] == "free" else "Gumroad")
-        date = "Week of Nov 9" if dated else ("Week of Nov 16; on sale Nov 27-30" if "bundle" in i["kind"] else "Week of Nov 16")
+        date = "Week of Nov 9" if dated else ("Week of Nov 16; code BF5 Nov 27-30" if "bundle" in i["kind"] else "Week of Nov 16")
         note = "Notion: run notion_build.py once and paste the duplicate link into links.json." if "notion" in i["kind"] else \
             "Paste the Sheets copy link into links.json and rebuild."
         src = "calendar"
@@ -250,6 +250,9 @@ submitted anywhere.
         for r in br:
             out.append("| " + " | ".join(esc(r[k]) if k not in ("files", "listing") else f"`{esc(r[k])}`"
                                          for k in ("product", "platform", "price", "files", "listing", "launch", "date_source", "notes")) + " |")
+    import listings as L
+    import promos
+    out.append("\n" + promos.markdown(rows, L.LISTINGS))
     m = merged_rows()
     out.append(f"\n## Merged or retired ({len(m)}), reversible\n\nBuilt, checked and kept in the repo, but not listed, so the "
                "catalog has no near-duplicates. These were default choices; undo any of them as shown.\n\n"
