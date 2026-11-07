@@ -125,7 +125,7 @@ safety, product ideas a small creator could make, and affiliate categories (not 
                    "mascot": d.mascot, "watermark": handle},
         "accounts": [{"platform": p, "handle": handle, "formats": fmt_for.get(p, ["short"])} for p in platforms],
         "affiliates": [], "products": [{"name": p, "url": "", "price": 9} for p in d.product_ideas[:2]],
-        "ai_disclosure": "Made with AI tools; written and fact-checked by a human.",
+        "ai_disclosure": "Visuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person.",
         "realistic_synthetic_media": False, "require_human_review": True,
         "_notes": {"affiliate_categories": d.affiliate_categories},
     }, d.slug

@@ -51,6 +51,10 @@ def cmd_init(args):
         env_example = examples / "env.example"
     if env_example.exists() and not (home / ".env").exists():
         shutil.copy(env_example, home / ".env")
+        try:
+            (home / ".env").chmod(0o600)  # it will hold API keys and tokens: owner only
+        except OSError:
+            pass
     s = Settings.load(home)
     from .db import DB
     DB(s.db_path)
@@ -507,7 +511,7 @@ def _extend(sub) -> None:
                 "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup",
                 "contentfactory.publish.preflight", "contentfactory.cleanup",
                 "contentfactory.planner", "contentfactory.launch_check", "contentfactory.stats",
-                "contentfactory.scaffold", "contentfactory.manual", "contentfactory.numbercheck", "contentfactory.ytplan", "contentfactory.triage", "contentfactory.challenge", "contentfactory.whitelabel", "contentfactory.originality", "contentfactory.newsletter_export", "contentfactory.batch_record", "contentfactory.routine", "contentfactory.export_week"):
+                "contentfactory.scaffold", "contentfactory.manual", "contentfactory.numbercheck", "contentfactory.ytplan", "contentfactory.triage", "contentfactory.challenge", "contentfactory.whitelabel", "contentfactory.originality", "contentfactory.newsletter_export", "contentfactory.batch_record", "contentfactory.routine", "contentfactory.export_week", "contentfactory.scorecard"):
         try:
             module = __import__(mod, fromlist=["register"])
         except ImportError:
