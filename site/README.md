@@ -236,6 +236,24 @@ payoff tool: results at five payment levels, which debt is cleared when, a yearl
 payment for debt-free in two or three years, and FAQ schema. The "Run these numbers" button opens the debt payoff
 calculator pre-filled with the page's debts.
 
+## Email-capture A/B test
+
+`site.json > ab_test` runs a two-by-two test on the signup offer: two hero versions on the home page
+(headline + offer line) and two lead-magnet titles (in the home hero, the `/free/` page and every
+"Free download" box). Each visitor is assigned one of four combinations (AA, AB, BA, BB) at random, stored for
+90 days in a first-party cookie `mms_ab` (the privacy page says so). Without JavaScript everyone sees A.
+
+**Reading the result in Plausible:** add the goals `AB Exposure` and `Signup`, then the custom properties
+`variant`, `hero`, `magnet` and `test`. Open the `Signup` goal and break it down by `variant`, and compare
+with the `AB Exposure` count per variant: signup rate = Signups / Exposures. Compare `hero` A vs B and
+`magnet` A vs B the same way. As a rule of thumb, wait for at least ~100 signups per arm before calling it;
+small differences on a few dozen signups are noise.
+
+**Preview** a variant with `?ab=ba` (hero B, magnet A); previews don't set the cookie. **End the test:** set
+`active` to `false`, put the winning copy in the `a` slots (and in `lead_magnet.title` if title B wins),
+and start a new test by changing `id`. The PDF and welcome email still say "The 7-Day Money Reset"; if title B
+wins, rename them too.
+
 ## Deploy check
 
 `python3 site/tools/check_site.py` runs after every build on Netlify and GitHub Pages, and in the tests.

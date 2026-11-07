@@ -301,13 +301,44 @@ def email_form(source: str, button: str = "Send me the free reset", compact: boo
 <p class="form-note">{note} <a href="{u('/privacy/')}">Privacy</a>.</p>"""
 
 
+def ab_on() -> bool:
+    return bool(CFG.get("ab_test", {}).get("active"))
+
+
+def ab(kind: str, a: str, b: str) -> str:
+    """Both variants in the HTML; CSS shows the one the visitor's cookie picked (A without JavaScript)."""
+    if not ab_on() or a == b:
+        return esc(a)
+    return f'<span class="ab-{kind}-a">{esc(a)}</span><span class="ab-{kind}-b">{esc(b)}</span>'
+
+
+def magnet_name() -> str:
+    t = CFG.get("ab_test", {})
+    m = t.get("magnet", {})
+    return ab("magnet", m.get("a", CFG["lead_magnet"]["title"]), m.get("b", CFG["lead_magnet"]["title"]))
+
+
+def ab_head() -> str:
+    """Assigns the variant before first paint (no flicker) and remembers it for 90 days."""
+    if not ab_on():
+        return ""
+    tid = json.dumps(CFG["ab_test"]["id"])
+    return ("<script>(function(){var d=document,q=location.search.match(/[?&]ab=([ab])([ab])/),"
+            "c=d.cookie.match(/(?:^|; )mms_ab=([ab])([ab])/),r=function(){return Math.random()<.5?'a':'b'},"
+            "v=q?q[1]+q[2]:c?c[1]+c[2]:r()+r();if(!q)d.cookie='mms_ab='+v+'; path=/; max-age=7776000; SameSite=Lax';"
+            "d.documentElement.className+=' ab-h-'+v[0]+' ab-m-'+v[1];"
+            f"window.mmsAB={{test:{tid},hero:v[0].toUpperCase(),magnet:v[1].toUpperCase()}};}})();</script>"
+            "<style>.ab-hero-b,.ab-magnet-b{display:none}.ab-h-b .ab-hero-a,.ab-m-b .ab-magnet-a{display:none}"
+            ".ab-h-b .ab-hero-b,.ab-m-b .ab-magnet-b{display:inline}</style>")
+
+
 def magnet_box(source: str) -> str:
     lm = CFG["lead_magnet"]
     return f"""<aside class="magnet" aria-label="Free download">
   <img src="{u('/img/lead-magnet-cover-sm.jpg')}" alt="Cover of {esc(lm['title'])}" width="150" height="194" loading="lazy">
   <div>
     <p class="kicker">Free download</p>
-    <h2 class="magnet-title">{esc(lm['title'])}</h2>
+    <h2 class="magnet-title">{magnet_name()}</h2>
     <p>{esc(lm['pitch'])}</p>
     {email_form(source)}
   </div>
@@ -432,7 +463,7 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
 <link rel="icon" type="image/png" href="{u('/img/favicon.png')}">
 <link rel="apple-touch-icon" href="{u('/img/apple-touch-icon.png')}">
 <link rel="alternate" type="application/rss+xml" title="{esc(CFG['name'])}" href="{u('/feed.xml')}">
-<link rel="stylesheet" href="{u('/style.css')}">
+{ab_head()}<link rel="stylesheet" href="{u('/style.css')}">
 {ld}{extra_head}{analytics}
 </head>
 <body>
@@ -816,7 +847,7 @@ def build() -> list[str]:
         body=f"""<section class="wrap landing">
   <div class="landing-grid">
     <div>
-      <p class="kicker">Free PDF + checklist</p>
+      <p class="kicker">Free PDF + checklist: {magnet_name()}</p>
       <h1>{esc(lm['headline'])}</h1>
       <p class="dek">{esc(lm['pitch'])}</p>
       {email_form('free-page', 'Send me the free reset')}
@@ -873,6 +904,10 @@ def build() -> list[str]:
         compare_home = ('<section class="wrap"><h2 class="section-h">Compare before you sign up</h2><p class="chips">' +
                         "".join(f'<a class="chip" href="{u(f"/compare/{c["slug"]}/")}">{esc(c.get("short", c["title"].split(":")[0]))}</a>'
                                 for c in comps) + "</p></section>")
+    _ab = CFG.get("ab_test", {}).get("hero", {})
+    hero_a = _ab.get("a", {"headline": "Feel behind on money? Start with one move this week.",
+                           "offer": "seven 15-minute tasks that get your money organised in a week."})
+    hero_b = _ab.get("b", hero_a)
     home_ld = [org_ld(), {"@context": "https://schema.org", "@type": "WebSite", "name": CFG["name"],
                           "url": CFG["url"] + "/"}]
     write("/", layout(
@@ -882,9 +917,9 @@ def build() -> list[str]:
   <div class="wrap hero-grid">
     <div>
       <p class="kicker">For students and early-career workers</p>
-      <h1>Feel behind on money? Start with one move this week.</h1>
+      <h1>{ab("hero", hero_a["headline"], hero_b["headline"])}</h1>
       <p class="dek">{esc(CFG['description'])}</p>
-      <div class="hero-form"><p class="hero-offer">Get <strong>{esc(lm['title'])}</strong> free: seven 15-minute tasks that get your money organised in a week.</p>{email_form('home-hero', 'Send me the free reset')}</div>
+      <div class="hero-form"><p class="hero-offer">Get <strong>{magnet_name()}</strong> free: {ab("hero", hero_a["offer"], hero_b["offer"])}</p>{email_form('home-hero', 'Send me the free reset')}</div>
       <p class="quiz-link">Not sure where to start? <a href="{u('/quiz/')}">Take the 1-minute money personality quiz</a> or see <a href="{u('/start/')}">Start here</a>.</p>
     </div>
     <img class="cover" src="{u('/img/lead-magnet-cover-sm.jpg')}" alt="Cover of {esc(lm['title'])}" width="300" height="388">

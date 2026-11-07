@@ -419,5 +419,24 @@
   "stores": {
     "gumroad": "https://example.gumroad.com",
     "etsy": "https://www.etsy.com/shop/REPLACE_ME"
+  },
+  "ab_test": {
+    "_how": "Two-by-two test on the email capture: hero copy (h) x lead-magnet title (m). Each visitor gets a 90-day first-party cookie mms_ab (e.g. 'ab' = hero A, magnet B). Plausible gets an 'AB Exposure' event on pages that show the test and the same test/hero/magnet props on every Signup. Preview a variant with ?ab=ba. Set active to false to end the test, then copy the winner into the A slots (and lead_magnet.title).",
+    "id": "capture-1",
+    "active": true,
+    "hero": {
+      "a": {
+        "headline": "Feel behind on money? Start with one move this week.",
+        "offer": "seven 15-minute tasks that get your money organised in a week."
+      },
+      "b": {
+        "headline": "Get your money organised in 15 minutes a day.",
+        "offer": "one short task a night for seven nights: your real numbers, bank alerts and savings on autopilot."
+      }
+    },
+    "magnet": {
+      "a": "The 7-Day Money Reset",
+      "b": "The 15-Minute Money Checklist"
+    }
   }
 }

@@ -10,6 +10,7 @@ Short version: if you join the email list, we keep your email address so we can 
 
 - **Your email address** (and the page you signed up from), when you sign up for the free reset or the newsletter.
 - **Basic, aggregate site statistics** (pages viewed, rough location by country, referrer), if analytics is enabled. We don't use advertising trackers.
+- **One test cookie** (`mms_ab`), while we're testing two versions of the signup offer. It holds two letters (which version you see) so the page stays the same on your next visit, and expires after 90 days. It contains nothing about you and isn't shared with anyone.
 - **Purchase details** are handled by our checkout provider (for example Gumroad, Lemon Squeezy or Stripe). We see your name, email and what you bought; we never see your full card number.
 
 ## Who processes it

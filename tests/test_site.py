@@ -291,3 +291,31 @@ def test_shop_and_debt_pages(tmp_path):
     for i in range(len(bodies)):
         for j in range(i + 1, len(bodies)):
             assert len(bodies[i] & bodies[j]) / len(bodies[i] | bodies[j]) < 0.9
+
+
+def test_email_capture_ab_test(tmp_path):
+    import json
+    out = _build(tmp_path, "https://example.org")
+    cfg = json.loads((SITE / "site.json").read_text())["ab_test"]
+    home = (out / "index.html").read_text()
+    assert "mms_ab=" in home and "max-age=7776000" in home and "window.mmsAB" in home
+    assert f'<span class="ab-hero-a">{cfg["hero"]["a"]["headline"]}' in home
+    assert f'<span class="ab-hero-b">{cfg["hero"]["b"]["headline"]}' in home
+    assert '<span class="ab-magnet-b">' in home
+    assert '<span class="ab-magnet-b">' in (out / "free" / "index.html").read_text()
+    js = (out / "site.js").read_text()
+    assert '"AB Exposure"' in js and "abProps(" in js and "p.variant" in js
+    assert "mms_ab" in (out / "privacy" / "index.html").read_text()
+    # Switched off: one plain version, no cookie script.
+    import shutil
+    site2 = tmp_path / "site2" / "site"
+    shutil.copytree(SITE, site2, ignore=shutil.ignore_patterns("public"))
+    c = json.loads((site2 / "site.json").read_text())
+    c["ab_test"]["active"] = False
+    (site2 / "site.json").write_text(json.dumps(c))
+    out2 = tmp_path / "out2"
+    e = {**os.environ, "SITE_OUT": str(out2), "SITE_URL": "https://example.org"}
+    e.pop("URL", None)
+    subprocess.run([sys.executable, str(site2 / "build.py")], check=True, env=e, capture_output=True)
+    h2 = (out2 / "index.html").read_text()
+    assert "mms_ab=" not in h2 and "ab-hero-b" not in h2 and cfg["hero"]["a"]["headline"] in h2
