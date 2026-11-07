@@ -351,3 +351,35 @@ def test_linkedin_kit_is_complete_and_ready_to_post():
     assert len(tagline) <= 120
     for img in ("page-cover.png", "profile-banner.png", "page-logo.png"):
         assert (kit / "images" / img).exists(), img
+
+
+def test_threads_x_kit_fits_both_platforms_and_is_ready():
+    import importlib.util
+    kit = LAUNCH / "threads-x"
+    spec = importlib.util.spec_from_file_location("build_threads_x", kit / "build_threads_x.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    days = json.loads((kit / "posts.json").read_text())
+    assert len(days) == 30
+    dates = [date.fromisoformat(d["date"]) for d in days]
+    assert dates[0] == date(2026, 11, 16) and all((b - a).days == 1 for a, b in zip(dates, dates[1:]))
+    assert all(a["format"] != b["format"] for a, b in zip(days, days[1:]))
+    assert len({d["format"] for d in days}) == 7
+    for d in days:
+        assert (len(d["posts"]) > 1) == (d["format"] == "thread"), d["n"]
+        for t in d["posts"]:
+            assert mod.xlen(t) <= 280, (d["n"], mod.xlen(t))  # X's weighted count; Threads allows 500
+            assert "http" not in t and ".app" not in t  # links go in the link reply only
+            assert not re.search(r"\b(I|my|me|I've|I'm)\b", re.sub(r'"[^"]*"', "", t)), d["n"]
+        if d["link_reply"]:
+            assert "1099money.netlify.app" in d["link_reply"]
+    assert mod.xlen("☐ → 🧵") == 8 and mod.xlen("abc") == 3
+    text = " ".join(t for d in days for t in d["posts"])
+    for fact in ("$75/hour", "15.3%", "92.35%", "$91,800", "Jan 15"):
+        assert fact in text, fact
+    replies = (kit / "REPLIES.md").read_text()
+    assert len(re.findall(r"^\*\*\d+\.", replies, re.M)) >= 20 and "http" not in replies
+    readme = (kit / "README.md").read_text()
+    x_bio, threads_bio = re.findall(r"^  > (.+)$", readme, re.M)[:2]
+    assert len(x_bio) <= 160 and len(threads_bio) <= 150
+    assert (kit / "images" / "x-header.png").exists()
