@@ -10,6 +10,8 @@ The Spanish-language sister brand of Money Made Simple, for US Hispanic viewers.
 | `src/` | The Spanish copy (`shorts_*.py`, `carousels_*.py`) and the build scripts for content.json, the spreadsheet and the PDF |
 | `product/` | El Presupuesto de 20 Minutos: guide (HTML + PDF), spreadsheet, store listing |
 | `POSTING_PLAN.md` | 14-day plan, mirroring the English one |
+| `content-month-1.json`, `POSTING_PLAN_MONTH_1.md`, `REVIEW_CHECKLIST_MONTH_1.md` | Month 1 after launch (Nov 21 – Dec 31): 20 Shorts, 10 carousels, 2 long videos on the holidays, aguinaldo, sending money home, the cuesta de enero and New Year. Sources in `src/month1_*.py`, built by `src/build_month1.py` |
+| `products/` | Spanish editions of the $5 Bill Cut Kit (*El Kit para Recortar Gastos*) and the $17 Debt-Free Date Planner (*Tu Fecha Sin Deudas*): guides, translated workbooks, covers, listings. `python launch/dinero-simple/products/build.py --check` |
 | `REVIEW_CHECKLIST.md` | What the native-speaker reviewer checks, and the translation choices to confirm |
 
 Rebuild everything after editing the Spanish:
@@ -19,6 +21,9 @@ python launch/dinero-simple/src/build_content.py
 python launch/dinero-simple/src/build_xlsx.py
 node launch/dinero-simple/src/render_pdf.js $PWD/launch/dinero-simple/product/el-presupuesto-de-20-minutos.html $PWD/launch/dinero-simple/product/El-Presupuesto-de-20-Minutos.pdf
 factory pack launch/dinero-simple/content.json --brand dinero-simple --out output/dinero-simple-pack
+python launch/dinero-simple/src/build_month1.py
+factory pack launch/dinero-simple/content-month-1.json --brand dinero-simple --out output/dinero-simple-month-1
+python launch/dinero-simple/products/build.py --check
 ```
 
 Also adapted: the two long-form videos (`videos/23`, `videos/24`), and the website, link-in-bio page, lead magnet and 10-email sequence in `sites/dinero-simple/` (see its README). Visual prompts, sources and fact-check lists stay in English on purpose so the operator can check them.
