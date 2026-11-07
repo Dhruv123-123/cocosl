@@ -136,10 +136,19 @@ def today(request: Request, factory: Factory = Depends(get_factory)) -> HTMLResp
         launch = Report()
         launch.add("red", "-", "launch check", f"couldn't run: {e}")
     from ..manual import pending
-    return render(request, "today.html", calendar=rows, problems=problems, review=queries.review_queue(factory),
+    from ..timelog import CATEGORIES, weeks
+    return render(request, "today.html", time_week=weeks(factory, 1)[0], time_categories=CATEGORIES, calendar=rows, problems=problems, review=queries.review_queue(factory),
                   recordings=recordings(factory), launch=launch, by_hand_items=pending(factory)[:20],
                   studio=__import__("contentfactory.ytplan", fromlist=["x"]).studio_todos(factory),
                   now=datetime.now(timezone.utc).strftime("%a %d %b %Y, %H:%M UTC"))
+
+
+@router.post("/time/log")
+def time_log(request: Request, minutes: int = Form(...), what: str = Form("routine"), brand: str = Form(""),
+             factory: Factory = Depends(get_factory)):
+    from ..timelog import log
+    log(factory, minutes, what, brand)
+    return back(request, "/today", msg=f"Logged {minutes} min ({what})")
 
 
 @router.post("/manual/{pub_id}/done")
