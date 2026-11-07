@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Consumer Protection Week handout</title>
+<!-- Large-print handout for the library / senior center add-on. Replace {{SPONSOR_NAME}}, {{SPONSOR_PHONE}}
+     and {{VENUE_NAME}} for each venue, then python3 build.py ncpw-sponsor (writes out/library-handout.pdf). -->
+<style>
+@page{size:8.5in 11in;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;color:#111;background:#fff}
+.page{width:8.5in;height:10.98in;overflow:hidden;padding:.5in .6in;display:flex;flex-direction:column}
+.k{font-size:18px;font-weight:700;color:#1F5C8B;text-transform:uppercase;letter-spacing:.05em}
+h1{font-size:40px;line-height:1.1;margin:6px 0 10px;border-bottom:5px solid #E0A526;padding-bottom:10px}
+.row{display:flex;gap:16px;margin-top:30px;align-items:flex-start}
+.n{flex:0 0 46px;height:46px;border-radius:50%;background:#1F5C8B;color:#fff;font-size:24px;font-weight:800;display:flex;align-items:center;justify-content:center}
+h2{font-size:25px;line-height:1.2}
+p{font-size:21px;line-height:1.35;margin-top:3px}
+.box{margin-top:auto;background:#fff6dc;border-left:8px solid #E0A526;padding:14px 16px;font-size:20px;line-height:1.4}
+.foot{font-size:15px;color:#333;margin-top:10px;display:flex;justify-content:space-between}
+</style></head><body><div class="page">
+<div class="k">Consumer Protection Week · {{VENUE_NAME}}</div>
+<h1>Five scams to know, and the one rule for each</h1>
+<div class="row"><div class="n">1</div><div><h2>"We can get your lost money back"</h2><p>Never pay upfront for a refund or help with a refund.</p></div></div>
+<div class="row"><div class="n">2</div><div><h2>A call from "the FTC" or another agency</h2><p>The FTC will never call to demand money, threaten arrest or promise a prize. Hang up.</p></div></div>
+<div class="row"><div class="n">3</div><div><h2>A "free" trial that only costs shipping</h2><p>Read how to cancel before you give your card. Check your statement every month.</p></div></div>
+<div class="row"><div class="n">4</div><div><h2>A debt collector who threatens jail</h2><p>That's not allowed. Ask for the debt details in writing. Don't pay on the first call.</p></div></div>
+<div class="row"><div class="n">5</div><div><h2>Credit repair for a fee up front</h2><p>They can't charge first. Your credit reports are free at AnnualCreditReport.com.</p></div></div>
+<div class="box"><b>Lost money, or not sure?</b> Call your bank or credit union using the number on your card. Report scams free at <b>ReportFraud.ftc.gov</b>.</div>
+<div class="foot"><span>Shared by <b>{{SPONSOR_NAME}}</b> · {{SPONSOR_PHONE}}</span><span>Sources: consumer.ftc.gov · consumerfinance.gov</span></div>
+</div></body></html>

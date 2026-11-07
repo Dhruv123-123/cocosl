@@ -1,6 +1,6 @@
 # B2B newsletter products (white label)
 
-Four products, one engine. Each sells a ready-made, branded monthly or weekly pack that an
+Five products plus a one-week package, one engine. Each sells a ready-made, branded monthly or weekly pack that an
 organization sends to its own people. Built from existing brand content (Scam Decoded, Money Made
 Simple, 1099 Money). **Start with `LAUNCH_CHECKLIST.md`**: what to fill in, what to send first, how to follow up. **Nothing here has been sent or posted.** Dhruv sends every email by hand, payment
 links stay as placeholders, and nothing was bought.
@@ -11,6 +11,7 @@ links stay as placeholders, and nothing was bought.
 | `employer-wellness/` | Money Made Simple at Work | Employer HR and benefits teams (and benefits brokers) | $59 / $129 / $249 a month | Monthly |
 | `community-scam-watch/` | Scam Watch (large print) | Public libraries, senior centers, Area Agencies on Aging | $19 one site, $49 for 2–4, $12 a location for 5–20, quote 21+; CU-sponsored $99 for 5 sites; talks $150 | Monthly |
 | `freelancer-client-letter/` | Freelancer Money Notes | Small CPA, tax and bookkeeping firms, for their 1099 clients | $39 / $79 / $129 a month | Monthly |
+| `ncpw-sponsor/` | Consumer Protection Week package (Mar 1–5, 2027) | Credit unions (+ up to 3 local libraries) | $149 one-time, $249 with the library add-on, included for CU Standard/Plus | Daily for one week |
 | `schools/` | Money Made Simple for Schools | High school teachers and college advisors (districts, community colleges) | $79 teacher / $299 school / $899 district / $399 college, per school year; or credit-union sponsored | Weekly in the school year |
 
 The first three folders each have: `product.json` (labels, call to action, formats), `issues.json` (12 issues: 3 months for the weekly credit union alert, Jan to Dec 2027 for the monthly products),

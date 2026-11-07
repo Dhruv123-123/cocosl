@@ -1,0 +1,23 @@
+{
+  "_about": "Test fixture: a filled-in client brand for credit-union-alert (fictional, but with no sample markers).",
+  "slug": "test-river-cu",
+  "name": "Test River Credit Union",
+  "initials": "TRC",
+  "tier": "standard",
+  "color": "#1D4E89",
+  "accent": "#E0A526",
+  "logo": "",
+  "promise": "Test River CU will never call, text or email to ask for your PIN, password or a one-time code.",
+  "footer_lines": [
+    "Test River Credit Union, 1 Main St, Testville, MT 59000",
+    "Federally insured by NCUA."
+  ],
+  "unsubscribe": "*|UNSUB|*",
+  "tokens": {
+    "CU_NAME": "Test River Credit Union",
+    "CU_SHORT": "Test River CU",
+    "CU_PHONE": "(406) 200-3000",
+    "CU_WEBSITE": "https://www.testriver.test"
+  },
+  "credit_line": ""
+}

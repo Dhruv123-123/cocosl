@@ -29,7 +29,7 @@ from pathlib import Path
 import build as engine
 
 ROOT = Path(__file__).resolve().parent
-FICTIONAL = re.compile(r"555[-) ]*01\d\d|example\.(com|org)|\bSample\b")
+FICTIONAL = re.compile(r"\(555\)|555[-) ]*01\d\d|example\.(com|org)|\bSample\b")
 
 
 def slugify(text: str) -> str:

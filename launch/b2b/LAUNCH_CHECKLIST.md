@@ -96,6 +96,9 @@ Never guess an address, buy a list or scrape a directory.
   the FTC's week for talking about scams. Offer credit unions and libraries a pilot that starts that week. The
   credit union issue for Mar 2 (government imposters) fits it, and Scam Decoded's NCPW week (PR #9) has 5 more
   FTC-sourced alerts. The FTC posts its NCPW materials in January.
+- **Sell the week on its own:** `ncpw-sponsor/` is a five-day package (Mar 1–5) for $149, or $249 with a library
+  handout and talk for up to 3 local venues, free for Standard and Plus subscribers. Order deadline Jan 29, delivered
+  Feb 15. Pitch, press note and talk outline: `ncpw-sponsor/SPONSOR_PACKAGE.md`.
 
 ## Not ready yet
 

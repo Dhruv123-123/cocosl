@@ -418,7 +418,7 @@ def sales_doc_jobs(pdir: Path) -> list[dict]:
     out = pdir / "out"
     out.mkdir(exist_ok=True)
     jobs = []
-    pages = [pdir / f"{n}.html" for n in ("sales-sheet", "roi")]
+    pages = [pdir / f"{n}.html" for n in ("sales-sheet", "roi", "library-handout")]
     pages += [p for sub in ("onboarding", "broker") for p in sorted((pdir / sub).glob("*.html"))]
     for page in pages:
         if page.exists():
