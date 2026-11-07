@@ -17,7 +17,7 @@ ROOT = HERE.parent.parent          # launch/scam-decoded
 OUT = ROOT / "LAUNCH_WEEK.md"
 CHECKED = "2026-11-07"
 SITE = "https://scamdecoded.netlify.app"
-DAY1_REC = "Sat Nov 14 2026"
+DAY1_REC = "Mon Nov 30 2026"
 
 LONG_A = "How to protect your parents from scams: the complete guide"
 LONG_B = "Identity theft recovery, step by step (what to do in the first week)"
@@ -355,12 +355,20 @@ def render(content, longs, keys):
          "",
          "## Day 1: Dhruv's call",
          "",
-         f"**Recommended: {DAY1_REC}.** Scouting's plan launches Scam Decoded in weeks 2–3 of Money Made Simple. MMS's own "
-         "plan (launch/money-made-simple/POSTING_PLAN.md) has its Day 1 on Sat Nov 7 2026, so Sat Nov 14 is MMS day 8: "
-         "Dhruv's MMS routine has had a week to settle, there's a week to do the recording session below, and Scam Decoded "
-         "reaches full cadence (its week 2) in Black Friday week, Nov 21–27. The cost: the 08:30 alert cards "
-         "Nov 16–27 and the dated posts Nov 21–27 are skipped. If MMS started later than Nov 7, keep the rule, not the "
-         "date: Scam Decoded Day 1 = MMS day 8 (latest MMS day 15).",
+         f"**Default: {DAY1_REC}.** Scouting's plan launches Scam Decoded in weeks 2–3 of Money Made Simple, so "
+         "Scam Decoded Day 1 = MMS day 8 to day 15. MMS's Day 1 defaults to Mon Nov 16 2026 (also Dhruv's call), which "
+         "makes the window Mon Nov 23 – Mon Nov 30. Keep the rule if MMS moves, not the date.",
+         "",
+         "- **Mon Nov 30 (MMS day 15, the default).** Cyber Monday. The launch posts on delivery texts, gift cards and "
+         "tolls land in peak holiday shopping, and 6 dated holiday-pack posts still run after day 14 (Dec 14–31). "
+         "MMS has had two weeks to settle into a routine, and there are two weeks for the recording session.",
+         "- **Mon Nov 23 (MMS day 8), the earlier option.** Week 1 runs Thanksgiving and Black Friday week, when the toll, "
+         "delivery and gift card posts in this plan are most timely. But week 1 is half cadence on purpose, so most of "
+         "that timing is spent on a quiet week, and Dhruv carries two brand launches in the same holiday week. "
+         "My read: the default is better; take Nov 23 only if MMS's first week went smoothly.",
+         "",
+         "Anything dated before Day 1 (weeks 3–6 from Nov 21, news Shorts, alert cards) never runs; that includes the "
+         "Nov 29 slot of the parents guide, which this plan posts on Day 1 instead.",
          "",
          "## Before Day 1",
          "",
