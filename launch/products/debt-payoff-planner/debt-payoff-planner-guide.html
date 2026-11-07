@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Debt Payoff Planner: Guide</title>
+<style>
+  :root{
+    --ink:#0b1d13; --cream:#f4f1e8; --green:#2fbf71; --green-d:#1e8a50; --gold:#f2b134;
+    --muted:#4b5a51; --line:#d9d3c3; --paper:#fffdf8; --tint:#eaf6ef; --gold-t:#fdf3dd;
+  }
+  @page{ size: Letter; margin:0; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#cfc9ba; color:var(--ink);
+    font-family:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size:10.2pt; line-height:1.48; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:8.5in; height:11in; margin:24px auto; background:var(--paper); position:relative;
+    padding:0.7in 0.85in 0.85in; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,.18);
+    page-break-after:always; break-after:page; }
+  .page:last-child{ page-break-after:auto; break-after:auto; }
+  @media print{ html,body{ background:none; } .page{ margin:0; box-shadow:none; } }
+
+  .folio{ position:absolute; left:0.85in; right:0.85in; bottom:0.45in; display:flex;
+    justify-content:space-between; font-size:8pt; color:var(--muted); border-top:1px solid var(--line); padding-top:6px; }
+
+  h1,h2,h3,h4{ font-family:"Inter Display","Inter",system-ui,sans-serif; line-height:1.15; margin:0; }
+  h2{ font-size:24pt; font-weight:800; letter-spacing:-.02em; margin-bottom:6px; }
+  h3{ font-size:13pt; font-weight:700; margin:18px 0 6px; }
+  h4{ font-size:10.5pt; font-weight:700; margin:12px 0 4px; }
+  p{ margin:0 0 9px; }
+  .kicker{ text-transform:uppercase; letter-spacing:.14em; font-size:8pt; font-weight:700; color:var(--green-d); margin-bottom:6px; }
+  .lede{ font-size:11.5pt; color:var(--muted); margin-bottom:12px; }
+  ul,ol{ margin:0 0 10px; padding-left:20px; } li{ margin-bottom:4px; }
+  strong{ font-weight:700; }
+  .num{ font-variant-numeric:tabular-nums; }
+
+  .box{ border-radius:10px; padding:12px 16px; margin:12px 0; }
+  .box.tip{ background:var(--tint); border-left:4px solid var(--green); }
+  .box.warn{ background:var(--gold-t); border-left:4px solid var(--gold); }
+  .box.dark{ background:var(--ink); color:var(--cream); }
+  .box.dark .kicker{ color:var(--gold); }
+  .box p:last-child, .box ul:last-child{ margin-bottom:0; }
+
+  table{ width:100%; border-collapse:collapse; margin:8px 0 12px; font-size:9.5pt; }
+  th{ text-align:left; font-weight:700; background:var(--cream); border-bottom:2px solid var(--ink); padding:5px 8px; }
+  td{ border-bottom:1px solid var(--line); padding:4px 8px; }
+  td.r, th.r{ text-align:right; font-variant-numeric:tabular-nums; }
+  tr.total td{ font-weight:800; border-top:2px solid var(--ink); border-bottom:none; background:var(--tint); }
+  tr.sub td{ font-weight:700; background:#f7f4ec; }
+
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .grid4{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:14px 0; }
+  .card{ border:1.5px solid var(--ink); border-radius:12px; padding:12px; background:#fff; }
+  .card .big{ font-size:20pt; font-weight:800; font-family:"Inter Display","Inter",sans-serif; }
+  .card .lbl{ font-size:8pt; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); font-weight:700; }
+  .pill{ display:inline-block; background:var(--green); color:#fff; font-weight:700; border-radius:999px; padding:1px 9px; font-size:8.5pt; }
+  .step{ display:flex; gap:12px; margin:10px 0; }
+  .step .n{ flex:0 0 30px; height:30px; border-radius:50%; background:var(--ink); color:var(--cream);
+    display:flex; align-items:center; justify-content:center; font-weight:800; }
+  .step .b{ flex:1; }
+  .timer{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin:12px 0 16px; border:1.5px solid var(--ink); border-radius:12px; overflow:hidden; }
+  .timer div{ padding:10px 12px; border-right:1.5px solid var(--ink); background:#fff; }
+  .timer div:last-child{ border-right:none; }
+  .timer .t{ font-weight:800; font-size:16pt; color:var(--green-d); }
+  .timer .h{ font-weight:700; font-size:9.5pt; }
+  .timer .d{ font-size:8.5pt; color:var(--muted); }
+  .formula{ font-family:"JetBrains Mono", ui-monospace, monospace; background:var(--ink); color:var(--cream);
+    padding:10px 14px; border-radius:8px; font-size:10pt; margin:10px 0; }
+  .check li{ list-style:none; position:relative; padding-left:4px; }
+  .check{ padding-left:22px; }
+  .check li::before{ content:""; position:absolute; left:-20px; top:3px; width:12px; height:12px; border:1.5px solid var(--ink); border-radius:3px; }
+  .faq h4{ margin-top:12px; }
+  .blank td{ height:24px; }
+  .toc{ list-style:none; padding:0; margin:12px 0; }
+  .toc li{ display:flex; border-bottom:1px dotted var(--line); padding:6px 0; margin:0; font-size:11pt; }
+  .toc li span:first-child{ flex:1; } .toc li span:last-child{ font-weight:700; }
+
+  /* cover */
+  .cover{ background:var(--ink); color:var(--cream); padding:0.9in; }
+  .cover .tag{ color:var(--gold); letter-spacing:.2em; text-transform:uppercase; font-weight:700; font-size:9pt; }
+  .cover h1{ font-size:58pt; font-weight:900; letter-spacing:-.035em; line-height:.95; margin:24px 0 18px; }
+  .cover h1 em{ font-style:normal; color:var(--green); }
+  .cover .sub{ font-size:15pt; max-width:5.2in; color:#cfd8cf; line-height:1.4; }
+  .cover .clock{ position:absolute; right:0.9in; bottom:1.4in; width:3.1in; height:3.1in; }
+  .cover .bottom{ position:absolute; left:0.9in; right:0.9in; bottom:0.8in; display:flex; justify-content:space-between; align-items:flex-end; font-size:9pt; color:#aab8ad; }
+  .cover .chips{ display:flex; gap:8px; flex-wrap:wrap; margin-top:28px; }
+  .cover .chips span{ border:1px solid #3c5446; border-radius:999px; padding:5px 12px; font-size:9pt; color:var(--cream); }
+
+.cover .graph{ position:absolute; right:0.9in; bottom:1.45in; width:3.6in; height:2.9in; }
+.tabs td:first-child{ font-weight:700; white-space:nowrap; }
+.order{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:10px 0 12px; }
+.order .card ol{ margin:6px 0 0; padding-left:18px; font-size:9.3pt; }
+.order .card .lbl{ margin-bottom:2px; }
+.small{ font-size:8.5pt; color:var(--muted); }
+table.tight td, table.tight th{ padding:3px 6px; font-size:8.6pt; }
+.thermo{ display:grid; grid-template-columns:1.6in repeat(10,1fr); gap:0; border:1.5px solid var(--ink); border-radius:10px; overflow:hidden; margin:10px 0 14px; }
+.thermo div{ border-right:1.5px solid #bdb6a3; border-bottom:1.5px solid #bdb6a3; height:44px; display:flex; align-items:center; justify-content:center; font-size:8pt; color:var(--muted); background:#fff; }
+.thermo div.h{ background:var(--cream); font-weight:700; color:var(--ink); height:26px; }
+.thermo div.n{ justify-content:flex-start; padding-left:8px; }
+</style>
+</head>
+<body>
+
+<!-- ============ 1. COVER ============ -->
+<section class="page cover">
+  <div class="tag">Money Made Simple &middot; Spreadsheet + Guide</div>
+  <h1>Debt<br><em>Payoff</em><br>Planner</h1>
+  <p class="sub">See the month you'll be debt-free. Compare avalanche, snowball and your own order side by side, then follow one simple payment plan.</p>
+  <div class="chips"><span>Up to 8 debts</span><span>Avalanche &middot; Snowball &middot; Custom</span><span>Month-by-month plan</span><span>Loan amortization</span></div>
+  <svg class="graph" viewBox="0 0 360 290" aria-hidden="true">
+    
+    <rect x="8" y="12" width="26" height="250" rx="4" fill="#2fbf71" opacity="1.0"/>
+    
+    <rect x="43" y="40" width="26" height="222" rx="4" fill="#2fbf71" opacity="0.955"/>
+    
+    <rect x="78" y="66" width="26" height="196" rx="4" fill="#2fbf71" opacity="0.91"/>
+    
+    <rect x="113" y="92" width="26" height="170" rx="4" fill="#2fbf71" opacity="0.865"/>
+    
+    <rect x="148" y="119" width="26" height="143" rx="4" fill="#2fbf71" opacity="0.8200000000000001"/>
+    
+    <rect x="183" y="144" width="26" height="118" rx="4" fill="#2fbf71" opacity="0.775"/>
+    
+    <rect x="218" y="170" width="26" height="92" rx="4" fill="#2fbf71" opacity="0.73"/>
+    
+    <rect x="253" y="196" width="26" height="66" rx="4" fill="#2fbf71" opacity="0.685"/>
+    
+    <rect x="288" y="222" width="26" height="40" rx="4" fill="#2fbf71" opacity="0.64"/>
+    
+    <rect x="323" y="246" width="26" height="16" rx="4" fill="#f2b134" opacity="1"/>
+    
+    <line x1="0" y1="264" x2="360" y2="264" stroke="#3c5446" stroke-width="2"/>
+    <text x="352" y="286" text-anchor="end" font-family="Inter, sans-serif" font-weight="800" font-size="13" letter-spacing="2" fill="#f2b134">DEBT-FREE</text>
+  </svg>
+  <div class="bottom"><span>Edition 1.0</span><span>Educational content. Not financial advice.</span></div>
+</section>
+
+<!-- ============ 2. START HERE ============ -->
+<section class="page">
+  <div class="kicker">Start here</div>
+  <h2>Your plan in 15 minutes</h2>
+  <p class="lede">Open <strong>Debt-Payoff-Planner.xlsx</strong> in Excel, Google Sheets (File &rarr; Import &rarr; Upload) or Apple Numbers. It comes filled in with a fictional example so you can see how it behaves before you add your own numbers.</p>
+
+  <table class="tabs">
+    <tr><th>Tab</th><th>What it does</th></tr>
+    <tr><td>Start Here</td><td>Quick instructions and the color key.</td></tr>
+    <tr><td>My Debts</td><td>The only tab you type in. Your debts, your extra payment, your chosen plan. Shows each debt's payoff month, your debt-free date, total interest and a chart of your balances shrinking.</td></tr>
+    <tr><td>Compare</td><td>Avalanche, snowball and custom side by side, plus "minimums only" as a baseline, with a chart.</td></tr>
+    <tr><td>Payoff Plan</td><td>Month-by-month: what to pay on each debt and what's left. This is the page you follow.</td></tr>
+    <tr><td>Loan Amortization</td><td>A separate calculator for one fixed-payment loan: interest vs principal in every payment, and what an extra payment saves.</td></tr>
+    <tr><td>Calc &middot; and Chart Data</td><td>The engine (grey tabs). No inputs. Leave them alone.</td></tr>
+  </table>
+
+  <div class="grid2">
+    <div>
+      <h3 style="margin-top:6px">Color key</h3>
+      <ul>
+        <li><strong style="background:#fff4cc;padding:0 4px">Yellow</strong> cells are inputs. Type over them.</li>
+        <li><strong>White</strong> cells are formulas. Leave them alone.</li>
+        <li><strong style="background:#d5f2e1;padding:0 4px">Green</strong> cells are your key results.</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="margin-top:6px">The four inputs that matter</h3>
+      <ol>
+        <li>Each debt's <strong>balance</strong>, <strong>APR</strong> and <strong>minimum</strong>.</li>
+        <li>Your <strong>extra</strong> monthly payment.</li>
+        <li>Which <strong>plan</strong>: avalanche, snowball or custom.</li>
+        <li>Optional: a <strong>one-time</strong> extra payment (tax refund, bonus).</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="box warn">
+    <div class="kicker" style="color:#9a6a00">Please read</div>
+    <p>This is general education and a calculator for organizing your own plan. It is not financial, tax, legal or credit advice, and it doesn't know your situation. The example debts are made up. The planner uses a simple monthly model (interest = balance &times; APR &divide; 12); lenders usually charge interest daily and card minimums shrink as balances fall, so real dates can land a month or two either side. If you're behind on payments or dealing with collections, a non-profit credit counselor (in the US, an NFCC member agency) is a good, low-cost first stop, before any paid debt-relief company.</p>
+  </div>
+  <div class="folio"><span>Debt Payoff Planner</span><span>2</span></div>
+</section>
+
+<!-- ============ 3. SETUP ============ -->
+<section class="page">
+  <div class="kicker">Setup</div>
+  <h2>Three steps on the My Debts tab</h2>
+  <p class="lede">Grab your latest statements or open each lender's app. You need three numbers per debt.</p>
+
+  <div class="step"><div class="n">1</div><div class="b">
+    <h4 style="margin-top:4px">List every debt</h4>
+    <p>Credit cards, store cards, personal loans, car loans, student loans, buy-now-pay-later plans, money owed to family if you want to plan it. Up to eight. For each one:</p>
+    <table style="width:auto;min-width:80%">
+      <tr><th>Column</th><th>Where to find it</th></tr>
+      <tr><td><strong>Balance</strong></td><td>Current balance on the statement or app (not the credit limit).</td></tr>
+      <tr><td><strong>APR %</strong></td><td>The annual rate, e.g. 24.49. Cards often list a purchase APR; use that. A 0% promo? Enter 0, but note when it ends.</td></tr>
+      <tr><td><strong>Minimum / mo</strong></td><td>"Minimum payment due". For loans, your regular monthly payment.</td></tr>
+      <tr><td><strong>Custom order</strong></td><td>Only if you'll use the Custom plan: 1 = pay first, 2 = next&hellip; Blanks go last.</td></tr>
+    </table>
+    <p>The <strong>Check</strong> column flags missing numbers and any debt whose minimum doesn't cover its monthly interest (that balance grows if you only pay the minimum).</p>
+  </div></div>
+
+  <div class="step"><div class="n">2</div><div class="b">
+    <h4 style="margin-top:4px">Set your extra payment</h4>
+    <p>The amount you can pay <em>on top of</em> all your minimums, every month. This is the engine of the whole plan. Even $25 moves your date. Set it to something you can keep up for a year, not your most optimistic month. If you use The 20-Minute Budget, this is the "extra debt payment" goal.</p>
+    <p>Got a tax refund or bonus coming? Put it in <strong>One-time extra payment</strong> and choose the month it arrives.</p>
+  </div></div>
+
+  <div class="step"><div class="n">3</div><div class="b">
+    <h4 style="margin-top:4px">Pick a plan, read your date</h4>
+    <p>Choose <strong>Avalanche</strong>, <strong>Snowball</strong> or <strong>Custom</strong> from the dropdown. My Debts then shows each debt's payoff month and date, the interest you'll pay on it, your debt-free month and how much sooner (and cheaper) that is than paying minimums only. Not sure which plan? Look at the <strong>Compare</strong> tab first. The next page explains the difference.</p>
+  </div></div>
+
+  <div class="box tip"><strong>How the plan works:</strong> every debt gets its minimum, every month. All the extra goes to one target debt. When the target is paid off, its minimum doesn't disappear: it rolls into the next target along with the extra, so your payments snowball (whichever order you choose) while your total monthly payment stays the same.</div>
+  <div class="folio"><span>Debt Payoff Planner</span><span>3</span></div>
+</section>
+
+<!-- ============ 4. THE THREE PLANS ============ -->
+<section class="page">
+  <div class="kicker">The three plans</div>
+  <h2>Avalanche, snowball or your own order</h2>
+  <p class="lede">All three pay the same total each month. The only difference is which debt gets the extra first.</p>
+
+  <h3>The example (fictional)</h3>
+  <table>
+    <tr><th>Debt</th><th class="r">Balance</th><th class="r">APR</th><th class="r">Minimum</th><th class="r">Interest / mo now</th><th class="r">Custom order</th></tr>
+    <tr><td>Store card</td><td class="r">$850</td><td class="r">29.99%</td><td class="r">$35</td><td class="r">$21.24</td><td class="r">1</td></tr><tr><td>Credit card</td><td class="r">$4,200</td><td class="r">24.49%</td><td class="r">$105</td><td class="r">$85.72</td><td class="r">2</td></tr><tr><td>Personal loan</td><td class="r">$3,100</td><td class="r">12.50%</td><td class="r">$120</td><td class="r">$32.29</td><td class="r">4</td></tr><tr><td>Car loan</td><td class="r">$9,800</td><td class="r">7.40%</td><td class="r">$265</td><td class="r">$60.43</td><td class="r">3</td></tr><tr><td>Student loan</td><td class="r">$18,500</td><td class="r">5.80%</td><td class="r">$205</td><td class="r">$89.42</td><td class="r">5</td></tr>
+    <tr class="total"><td>Total</td><td class="r">$36,450</td><td></td><td class="r">$730</td><td class="r">$289.10</td><td></td></tr>
+  </table>
+  <p>Extra payment: <strong>$250/month</strong>, so the total monthly debt budget is <strong>$980</strong>. First payment: December 2026.</p>
+
+  <div class="order">
+    <div class="card"><div class="lbl">Avalanche</div><strong>Highest APR first</strong><ol><li>Store card</li><li>Credit card</li><li>Personal loan</li><li>Car loan</li><li>Student loan</li></ol></div>
+    <div class="card"><div class="lbl">Snowball</div><strong>Smallest balance first</strong><ol><li>Store card</li><li>Personal loan</li><li>Credit card</li><li>Car loan</li><li>Student loan</li></ol></div>
+    <div class="card"><div class="lbl">Custom</div><strong>Your order</strong><ol><li>Store card</li><li>Credit card</li><li>Car loan</li><li>Personal loan</li><li>Student loan</li></ol></div>
+  </div>
+
+  <div class="grid2">
+    <div>
+      <h4>Avalanche: least interest</h4>
+      <p>Extra goes to the highest interest rate first. Mathematically it costs the least interest (with fixed minimums, as modeled here). The catch: if your highest-rate debt is also big, the first win can take a while.</p>
+      <h4>Snowball: fastest first wins</h4>
+      <p>Extra goes to the smallest balance first. You usually pay a bit more interest, but you clear whole debts sooner, and each one frees up its minimum. If motivation is what's failed you before, that's worth something real.</p>
+    </div>
+    <div>
+      <h4>Custom: when life isn't a formula</h4>
+      <p>Some reasons to choose your own order:</p>
+      <ul>
+        <li>A 0% promo ends soon and the rate will jump.</li>
+        <li>Clearing one loan frees a big minimum (or a co-signer).</li>
+        <li>One debt is with someone you'd rather not owe.</li>
+        <li>You want the car paid off before it needs repairs.</li>
+      </ul>
+      <p>Type 1, 2, 3&hellip; in <strong>Custom order</strong> and compare the cost on the Compare tab.</p>
+    </div>
+  </div>
+  <div class="folio"><span>Debt Payoff Planner</span><span>4</span></div>
+</section>
+
+<!-- ============ 5. RESULTS ============ -->
+<section class="page">
+  <div class="kicker">Reading the results</div>
+  <h2>What the example shows</h2>
+  <p class="lede">These are the spreadsheet's results for the fictional example, exactly as the Compare tab calculates them.</p>
+  <table>
+    <tr><th></th><th class="r">Avalanche</th><th class="r">Snowball</th><th class="r">Custom</th><th class="r">Minimums only</th></tr>
+    <tr><td>Months to debt-free</td><td class="r"><strong>43</strong></td><td class="r"><strong>43</strong></td><td class="r"><strong>43</strong></td><td class="r"><strong>119</strong></td></tr>
+    <tr><td>Debt-free month</td><td class="r">Jun 2030</td><td class="r">Jun 2030</td><td class="r">Jun 2030</td><td class="r">Oct 2036</td></tr>
+    <tr><td>Total interest</td><td class="r"><strong>$5,174</strong></td><td class="r"><strong>$5,429</strong></td><td class="r"><strong>$5,216</strong></td><td class="r"><strong>$12,832</strong></td></tr>
+    <tr><td>Total paid</td><td class="r">$41,624</td><td class="r">$41,879</td><td class="r">$41,666</td><td class="r">$49,282</td></tr>
+    <tr><td>First debt gone (month #)</td><td class="r">4</td><td class="r">4</td><td class="r">4</td><td class="r">31</td></tr>
+  </table>
+
+  <h3>Paid off in month&hellip;</h3>
+  <table>
+    <tr><th>Debt</th><th class="r">Avalanche</th><th class="r">Snowball</th><th class="r">Custom</th><th class="r">Minimums only</th></tr>
+    <tr><td>Store card</td><td class="r">4</td><td class="r">4</td><td class="r">4</td><td class="r">38</td></tr><tr><td>Credit card</td><td class="r">16</td><td class="r">19</td><td class="r">16</td><td class="r">84</td></tr><tr><td>Personal loan</td><td class="r">19</td><td class="r">11</td><td class="r">27</td><td class="r">31</td></tr><tr><td>Car loan</td><td class="r">27</td><td class="r">27</td><td class="r">26</td><td class="r">43</td></tr><tr><td>Student loan</td><td class="r">43</td><td class="r">43</td><td class="r">43</td><td class="r">119</td></tr>
+  </table>
+
+  <h3>Three things to notice</h3>
+  <ol>
+    <li><strong>The extra payment is what matters most.</strong> Adding $250 a month (and rolling minimums forward) gets this example debt-free in 43 months instead of 119, and saves about $7,658 in interest compared with paying minimums only.</li>
+    <li><strong>Avalanche vs snowball is a smaller gap.</strong> Here snowball costs about $255 more over 43 months, and both finish in the same month. In return, snowball clears the personal loan in month 11 instead of 19. Your numbers will differ, which is why the Compare tab exists.</li>
+    <li><strong>"Minimums only" is slow even with fixed payments.</strong> And real card minimums usually shrink as the balance falls, which makes the minimums-only path slower still than shown here.</li>
+  </ol>
+  <div class="box tip"><strong>Try this:</strong> change the extra payment by $50 up or down and watch the debt-free month move. Seeing what $50 buys you is often the most useful number in the whole file.</div>
+  <div class="folio"><span>Debt Payoff Planner</span><span>5</span></div>
+</section>
+
+<!-- ============ 6. PAYOFF PLAN + AMORTIZATION ============ -->
+<section class="page">
+  <div class="kicker">Following the plan</div>
+  <h2>The Payoff Plan tab</h2>
+  <p class="lede">One row per month: what to pay on each debt, and what's left after you pay it. Here are the first six months of the example on the avalanche plan.</p>
+  <table class="tight">
+    <tr><th>Month</th><th class="r">Store card</th><th class="r">Credit card</th><th class="r">Personal loan</th><th class="r">Car loan</th><th class="r">Student loan</th><th class="r">Total</th><th class="r">Still owed</th></tr>
+    <tr><td>Dec 2026</td><td class="r">$285.00</td><td class="r">$105.00</td><td class="r">$120.00</td><td class="r">$265.00</td><td class="r">$205.00</td><td class="r"><strong>$980</strong></td><td class="r">$35,759</td></tr><tr><td>Jan 2027</td><td class="r">$285.00</td><td class="r">$105.00</td><td class="r">$120.00</td><td class="r">$265.00</td><td class="r">$205.00</td><td class="r"><strong>$980</strong></td><td class="r">$35,058</td></tr><tr><td>Feb 2027</td><td class="r">$285.00</td><td class="r">$105.00</td><td class="r">$120.00</td><td class="r">$265.00</td><td class="r">$205.00</td><td class="r"><strong>$980</strong></td><td class="r">$34,348</td></tr><tr><td>Mar 2027</td><td class="r">$39.76</td><td class="r">$350.24</td><td class="r">$120.00</td><td class="r">$265.00</td><td class="r">$205.00</td><td class="r"><strong>$980</strong></td><td class="r">$33,627</td></tr><tr><td>Apr 2027</td><td class="r">$0.00</td><td class="r">$390.00</td><td class="r">$120.00</td><td class="r">$265.00</td><td class="r">$205.00</td><td class="r"><strong>$980</strong></td><td class="r">$32,897</td></tr><tr><td>May 2027</td><td class="r">$0.00</td><td class="r">$390.00</td><td class="r">$120.00</td><td class="r">$265.00</td><td class="r">$205.00</td><td class="r"><strong>$980</strong></td><td class="r">$32,158</td></tr>
+  </table>
+  <p>The store card is paid off in month 4. From month 5 its $35 minimum and the $250 extra both go to the credit card. The total you pay each month stays the same; it just keeps getting aimed at fewer debts.</p>
+  <ul>
+    <li>Set up <strong>autopay for every minimum</strong>, then make the extra payment by hand on payday, to the target debt only.</li>
+    <li>Paid-off months are highlighted green. Rows go blank after your debt-free month.</li>
+    <li>When a balance on your statement drifts from the plan, just update the balance on My Debts. The whole plan recalculates from today.</li>
+  </ul>
+
+  <h3>The Loan Amortization tab</h3>
+  <p>For one fixed-payment loan (car, student, personal), this shows where every payment goes. The example: a $18,500 loan at 5.8% over 120 months.</p>
+  <div class="grid4">
+    <div class="card"><div class="lbl">Monthly payment</div><div class="big">$204</div></div>
+    <div class="card"><div class="lbl">Interest, as scheduled</div><div class="big">$5,924</div></div>
+    <div class="card"><div class="lbl">With +$50/mo</div><div class="big">91 mo</div></div>
+    <div class="card" style="background:var(--tint);border-color:var(--green-d)"><div class="lbl">Interest saved</div><div class="big">$1,555</div></div>
+  </div>
+  <p>In month 1, $89.42 of the $203.53 payment is interest. By the last payment, it's $0.98. Early extra payments cut the most interest because they shrink the balance that every later month's interest is charged on.</p>
+  <div class="box warn"><strong>Before paying extra on a loan:</strong> check the lender applies extra to principal (some hold it as an early "next payment"), and that there's no prepayment penalty. For federal student loans, check studentaid.gov first: income-driven plans and forgiveness programs can change which loan is worth paying early.</div>
+  <div class="folio"><span>Debt Payoff Planner</span><span>6</span></div>
+</section>
+
+<!-- ============ 7. MAKING IT STICK + FAQ ============ -->
+<section class="page faq">
+  <div class="kicker">Making it stick</div>
+  <h2>Habits, pitfalls and FAQ</h2>
+  <div class="grid2">
+    <div>
+      <h4>Keep a small buffer first</h4>
+      <p>Without some cash set aside, the first surprise bill goes back on a card. Many people keep a starter emergency fund (say, one month of bills) while they attack debt.</p>
+      <h4>Stop adding new debt</h4>
+      <p>The plan assumes balances only go down. If you're still using a card you're paying off, consider moving that spending to debit for now.</p>
+      <h4>Update once a month</h4>
+      <p>On the same day each month, type in the real balances. Five minutes. Seeing the date move closer is the motivation.</p>
+      <h4>Windfalls</h4>
+      <p>Tax refund, bonus, side income: put it in the one-time payment box and see what it does before you decide.</p>
+      <h4>Lower rates can help (read the fine print)</h4>
+      <p>Balance transfers and consolidation loans can lower your rate, but often charge fees, and promo rates end. Model the new rate and fee in the planner and compare before you sign anything.</p>
+    </div>
+    <div>
+      <h4>Should I invest or pay off debt?</h4>
+      <p>It depends on rates, any employer retirement match and your safety buffer. Paying off a 25% card is a guaranteed 25% "return"; a common approach is to clear high-rate debt before investing beyond any match. That's general education, not advice for your situation.</p>
+      <h4>Why doesn't my lender's payoff date match?</h4>
+      <p>Lenders compute interest daily and minimums change. Treat the planner as a close estimate and update balances monthly.</p>
+      <h4>Can I use it in Google Sheets?</h4>
+      <p>Yes. File &rarr; Import &rarr; Upload, or open it from Google Drive. Numbers works too.</p>
+      <h4>It says "30+ years". What's wrong?</h4>
+      <p>A minimum is smaller than that debt's monthly interest, or there's no extra payment and a debt never shrinks. The Check column shows which.</p>
+      <h4>I have more than 8 debts.</h4>
+      <p>Combine the smallest similar ones (say, two store cards) into one row with a blended APR, or plan the first eight and add the rest as they clear.</p>
+    </div>
+  </div>
+  <div class="folio"><span>Debt Payoff Planner</span><span>7</span></div>
+</section>
+
+<!-- ============ 8. TRACKER ============ -->
+<section class="page">
+  <div class="kicker">Printable</div>
+  <h2>Debt-free tracker</h2>
+  <p class="lede">Write your debts in the order of your plan. Shade a box each time you pay off another 10% of a debt's starting balance. Stick it on the fridge.</p>
+  <div class="thermo">
+    <div class="h n">Debt &amp; start balance</div><div class="h">10%</div><div class="h">20%</div><div class="h">30%</div><div class="h">40%</div><div class="h">50%</div><div class="h">60%</div><div class="h">70%</div><div class="h">80%</div><div class="h">90%</div><div class="h">100%</div>
+    <div class="n"></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div class="n"></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div class="n"></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div class="n"></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div class="n"></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div class="n"></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div class="n"></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div class="n"></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+  </div>
+  <div class="grid2">
+    <div>
+      <h3 style="margin-top:4px">My plan</h3>
+      <table class="blank">
+        <tr><td style="width:55%">Method</td><td></td></tr>
+        <tr><td>Extra per month</td><td></td></tr>
+        <tr><td>Total monthly debt payment</td><td></td></tr>
+        <tr><td>Debt-free month (planner)</td><td></td></tr>
+        <tr><td>Started on</td><td></td></tr>
+      </table>
+    </div>
+    <div>
+      <h3 style="margin-top:4px">Monthly update</h3>
+      <table class="blank">
+        <tr><th>Month</th><th class="r">Total owed</th><th class="r">Debt-free date</th></tr>
+        <tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr>
+      </table>
+    </div>
+  </div>
+  <p class="small" style="margin-top:14px">Personal use only; please don't resell or share the files. Educational content, not financial advice. The example in this guide is fictional. &copy; Money Made Simple.</p>
+  <div class="folio"><span>Debt Payoff Planner</span><span>8</span></div>
+</section>
+
+</body>
+</html>

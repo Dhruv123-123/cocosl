@@ -10,6 +10,11 @@ can only be confirmed by you on the day. Tick them in the Review page's fact-che
 - **Rules that change:** the 0.25% federal student-loan autopay discount; HSA/FSA limits in the open-enrollment carousel.
 - **Offer:** the Gumroad code `LAUNCH` and the launch end date (2026-11-14) in the welcome emails must match what you set up on Gumroad.
 
+## Products (launch/products/)
+- **2026 limits** in the First Investing Account Kit ($24,500 workplace plans, $8,000 catch-up, $11,250 ages 60–63, $7,500 IRA, $1,100 IRA catch-up, Roth phase-outs $153k–$168k single / $242k–$252k married): check each at irs.gov.
+- **Disclaimer** on page 17 says you're not a registered investment adviser or tax professional. Confirm that's true.
+- **Placeholders:** replace every `[your-email]`, `[you].gumroad.com` and `[host]` in the listings, and the example URLs in `brands/money-made-simple.yaml` `products:`.
+
 ## Tiny Histories
 - **Links never fetched from here:** the Smithsonian QWERTY page, the history.com handshake article, the loc.gov "today in history" page and the okhistory.org encyclopedia link. Open each one.
 - **Contested stories** are worded as uncertain on screen and marked CONTESTED/LEGEND/UNPROVEN in `claims_to_verify`. Keep that wording; don't sharpen it into fact.

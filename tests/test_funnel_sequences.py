@@ -236,7 +236,7 @@ def test_preview_sequence(factory):
 def test_sales_page_build(factory, monkeypatch):
     monkeypatch.setenv("SUPPORT_EMAIL", "help@example.com")
     b = factory.brand(BRAND)
-    product = b.products[0]
+    product = next(p for p in b.products if p.get("slug") == "20-minute-budget")
     path = salespage.build_sales_page(factory.settings, b, product)
     assert path == factory.settings.output_dir / BRAND / "site" / "20-minute-budget.html"
     html = salespage.render_sales_page(factory.settings, b, product, now=BEFORE_LAUNCH_END)

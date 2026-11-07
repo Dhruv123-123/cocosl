@@ -170,10 +170,10 @@ def build_sales_page(settings: Settings, brand: BrandProfile, product: dict, *, 
 
 
 def build_all_sales_pages(settings: Settings, db, brand: BrandProfile, *, base_url: str | None = None) -> list[Path]:
-    """One page per product that has a checkout URL."""
+    """One page per paid product that has a checkout URL (the free lead magnet is delivered by signup)."""
     from .linkpage import products
     return [build_sales_page(settings, brand, p["raw"], base_url=base_url)
-            for p in products(db, brand, settings=settings)]
+            for p in products(db, brand, settings=settings) if float(p["raw"].get("price") or 0) > 0]
 
 
 __all__ = ["build_sales_page", "build_all_sales_pages", "render_sales_page", "sales_page_context", "product_slug",

@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The 7-Day Money Reset</title>
+<style>
+  :root{
+    --ink:#0b1d13; --cream:#f4f1e8; --green:#2fbf71; --green-d:#1e8a50; --gold:#f2b134;
+    --muted:#4b5a51; --line:#d9d3c3; --paper:#fffdf8; --tint:#eaf6ef; --gold-t:#fdf3dd;
+  }
+  @page{ size: Letter; margin:0; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#cfc9ba; color:var(--ink);
+    font-family:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size:10.2pt; line-height:1.48; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:8.5in; height:11in; margin:24px auto; background:var(--paper); position:relative;
+    padding:0.7in 0.85in 0.85in; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,.18);
+    page-break-after:always; break-after:page; }
+  .page:last-child{ page-break-after:auto; break-after:auto; }
+  @media print{ html,body{ background:none; } .page{ margin:0; box-shadow:none; } }
+
+  .folio{ position:absolute; left:0.85in; right:0.85in; bottom:0.45in; display:flex;
+    justify-content:space-between; font-size:8pt; color:var(--muted); border-top:1px solid var(--line); padding-top:6px; }
+
+  h1,h2,h3,h4{ font-family:"Inter Display","Inter",system-ui,sans-serif; line-height:1.15; margin:0; }
+  h2{ font-size:24pt; font-weight:800; letter-spacing:-.02em; margin-bottom:6px; }
+  h3{ font-size:13pt; font-weight:700; margin:18px 0 6px; }
+  h4{ font-size:10.5pt; font-weight:700; margin:12px 0 4px; }
+  p{ margin:0 0 9px; }
+  .kicker{ text-transform:uppercase; letter-spacing:.14em; font-size:8pt; font-weight:700; color:var(--green-d); margin-bottom:6px; }
+  .lede{ font-size:11.5pt; color:var(--muted); margin-bottom:12px; }
+  ul,ol{ margin:0 0 10px; padding-left:20px; } li{ margin-bottom:4px; }
+  strong{ font-weight:700; }
+  .num{ font-variant-numeric:tabular-nums; }
+
+  .box{ border-radius:10px; padding:12px 16px; margin:12px 0; }
+  .box.tip{ background:var(--tint); border-left:4px solid var(--green); }
+  .box.warn{ background:var(--gold-t); border-left:4px solid var(--gold); }
+  .box.dark{ background:var(--ink); color:var(--cream); }
+  .box.dark .kicker{ color:var(--gold); }
+  .box p:last-child, .box ul:last-child{ margin-bottom:0; }
+
+  table{ width:100%; border-collapse:collapse; margin:8px 0 12px; font-size:9.5pt; }
+  th{ text-align:left; font-weight:700; background:var(--cream); border-bottom:2px solid var(--ink); padding:5px 8px; }
+  td{ border-bottom:1px solid var(--line); padding:4px 8px; }
+  td.r, th.r{ text-align:right; font-variant-numeric:tabular-nums; }
+  tr.total td{ font-weight:800; border-top:2px solid var(--ink); border-bottom:none; background:var(--tint); }
+  tr.sub td{ font-weight:700; background:#f7f4ec; }
+
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .grid4{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:14px 0; }
+  .card{ border:1.5px solid var(--ink); border-radius:12px; padding:12px; background:#fff; }
+  .card .big{ font-size:20pt; font-weight:800; font-family:"Inter Display","Inter",sans-serif; }
+  .card .lbl{ font-size:8pt; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); font-weight:700; }
+  .pill{ display:inline-block; background:var(--green); color:#fff; font-weight:700; border-radius:999px; padding:1px 9px; font-size:8.5pt; }
+  .step{ display:flex; gap:12px; margin:10px 0; }
+  .step .n{ flex:0 0 30px; height:30px; border-radius:50%; background:var(--ink); color:var(--cream);
+    display:flex; align-items:center; justify-content:center; font-weight:800; }
+  .step .b{ flex:1; }
+  .timer{ display:grid; grid-template-columns:repeat(4,1fr); gap:0; margin:12px 0 16px; border:1.5px solid var(--ink); border-radius:12px; overflow:hidden; }
+  .timer div{ padding:10px 12px; border-right:1.5px solid var(--ink); background:#fff; }
+  .timer div:last-child{ border-right:none; }
+  .timer .t{ font-weight:800; font-size:16pt; color:var(--green-d); }
+  .timer .h{ font-weight:700; font-size:9.5pt; }
+  .timer .d{ font-size:8.5pt; color:var(--muted); }
+  .formula{ font-family:"JetBrains Mono", ui-monospace, monospace; background:var(--ink); color:var(--cream);
+    padding:10px 14px; border-radius:8px; font-size:10pt; margin:10px 0; }
+  .check li{ list-style:none; position:relative; padding-left:4px; }
+  .check{ padding-left:22px; }
+  .check li::before{ content:""; position:absolute; left:-20px; top:3px; width:12px; height:12px; border:1.5px solid var(--ink); border-radius:3px; }
+  .faq h4{ margin-top:12px; }
+  .blank td{ height:24px; }
+  .toc{ list-style:none; padding:0; margin:12px 0; }
+  .toc li{ display:flex; border-bottom:1px dotted var(--line); padding:6px 0; margin:0; font-size:11pt; }
+  .toc li span:first-child{ flex:1; } .toc li span:last-child{ font-weight:700; }
+
+  /* cover */
+  .cover{ background:var(--ink); color:var(--cream); padding:0.9in; }
+  .cover .tag{ color:var(--gold); letter-spacing:.2em; text-transform:uppercase; font-weight:700; font-size:9pt; }
+  .cover h1{ font-size:58pt; font-weight:900; letter-spacing:-.035em; line-height:.95; margin:24px 0 18px; }
+  .cover h1 em{ font-style:normal; color:var(--green); }
+  .cover .sub{ font-size:15pt; max-width:5.2in; color:#cfd8cf; line-height:1.4; }
+  .cover .clock{ position:absolute; right:0.9in; bottom:1.4in; width:3.1in; height:3.1in; }
+  .cover .bottom{ position:absolute; left:0.9in; right:0.9in; bottom:0.8in; display:flex; justify-content:space-between; align-items:flex-end; font-size:9pt; color:#aab8ad; }
+  .cover .chips{ display:flex; gap:8px; flex-wrap:wrap; margin-top:28px; }
+  .cover .chips span{ border:1px solid #3c5446; border-radius:999px; padding:5px 12px; font-size:9pt; color:var(--cream); }
+
+/* ---- lead magnet: printable, light pages ---- */
+.page{ padding:0.6in 0.75in 0.8in; }
+.folio{ left:0.75in; right:0.75in; }
+.band{ margin:-0.6in -0.75in 0; padding:0.55in 0.75in 0.45in; background:var(--ink); color:var(--cream); }
+.band .tag{ color:var(--gold); letter-spacing:.2em; text-transform:uppercase; font-weight:700; font-size:8.5pt; }
+.band h1{ font-size:44pt; font-weight:900; letter-spacing:-.035em; line-height:.98; margin:14px 0 10px; }
+.band h1 em{ font-style:normal; color:var(--green); }
+.band .sub{ font-size:12.5pt; color:#cfd8cf; max-width:5.9in; line-height:1.4; margin:0; }
+.week{ display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:6px; margin:14px 0 8px; }
+.week > div{ border:1.5px solid var(--ink); border-radius:9px; padding:8px 7px 9px; background:#fff; min-height:1.05in; position:relative; }
+.week .d{ font-size:7.5pt; text-transform:uppercase; letter-spacing:.12em; font-weight:800; color:var(--green-d); }
+.week .t{ font-weight:700; font-size:9pt; line-height:1.25; margin-top:4px; }
+.week .m{ position:absolute; bottom:7px; left:7px; font-size:7.5pt; color:var(--muted); }
+.week .bx{ position:absolute; bottom:7px; right:7px; width:13px; height:13px; border:1.5px solid var(--ink); border-radius:3px; }
+.day{ margin:0 0 6px; }
+.dayhead{ display:flex; align-items:baseline; gap:12px; border-bottom:2px solid var(--ink); padding-bottom:5px; margin-bottom:8px; }
+.dayhead .no{ font-family:"Inter Display","Inter",sans-serif; font-weight:900; font-size:30pt; line-height:.9; color:var(--green); letter-spacing:-.03em; }
+.dayhead h2{ font-size:19pt; flex:1; margin:0; }
+.dayhead .time{ font-size:8.5pt; font-weight:700; color:var(--muted); white-space:nowrap; }
+.why{ color:var(--muted); font-size:10pt; margin-bottom:6px; }
+.check{ margin:4px 0 8px; }
+.check li{ margin-bottom:4px; }
+.fill{ border:1.5px dashed #b9b19c; border-radius:10px; padding:8px 12px 10px; background:#fff; }
+.fill .kicker{ margin-bottom:4px; }
+.fill table{ margin:0; font-size:9pt; }
+.fill th{ background:var(--cream); padding:4px 8px; border-bottom:1.5px solid var(--ink); }
+.fill td{ height:22px; border-bottom:1px solid var(--line); }
+.line{ display:flex; gap:8px; align-items:flex-end; margin:7px 0; font-size:9.5pt; }
+.line span.u{ flex:1; border-bottom:1px solid #9c9583; height:16px; }
+.us, .line span.us{ width:1.1in; border-bottom:1px solid #9c9583; height:16px; display:inline-block; }
+.opt{ white-space:nowrap; display:inline-flex; align-items:center; gap:6px; margin-right:18px; font-weight:600; }
+.opt i{ width:12px; height:12px; border:1.5px solid var(--ink); border-radius:3px; display:inline-block; }
+.sep{ height:16px; }
+.next{ border:2px solid var(--green-d); border-radius:12px; padding:14px 18px; background:var(--tint); }
+.next h3{ margin-top:0; }
+.small{ font-size:8.5pt; color:var(--muted); }
+.formula{ font-size:9.5pt; }
+</style>
+</head>
+<body>
+
+<!-- ============ 1. START ============ -->
+<section class="page">
+  <div class="band">
+    <div class="tag">Money Made Simple &middot; Free printable</div>
+    <h1>The 7-Day<br><em>Money Reset</em></h1>
+    <p class="sub">One small action a day, 10 to 25 minutes each. In a week you'll know exactly where your money is, have a safety buffer started and a plan for your debt.</p>
+  </div>
+
+  <h3 style="margin-top:18px">How it works</h3>
+  <ul>
+    <li><strong>Print this, or fill it in on screen.</strong> Each day has one action, a short checklist and a space to write things down.</li>
+    <li><strong>Do the days in order.</strong> Each one builds on the last. Missed a day? Just pick up where you left off.</li>
+    <li><strong>Keep it rough.</strong> Round numbers are fine. The goal is a clear picture, not a perfect spreadsheet.</li>
+  </ul>
+
+  <h3>Your week at a glance</h3>
+  <div class="week">
+    <div><div class="d">Day 1</div><div class="t">Money snapshot</div><div class="m">~20 min</div><span class="bx"></span></div><div><div class="d">Day 2</div><div class="t">Cancel one subscription</div><div class="m">~15 min</div><span class="bx"></span></div><div><div class="d">Day 3</div><div class="t">Bill calendar + autopay</div><div class="m">~20 min</div><span class="bx"></span></div><div><div class="d">Day 4</div><div class="t">Three bank alerts</div><div class="m">~10 min</div><span class="bx"></span></div><div><div class="d">Day 5</div><div class="t">Start an emergency fund</div><div class="m">~15 min</div><span class="bx"></span></div><div><div class="d">Day 6</div><div class="t">List debts, pick an order</div><div class="m">~20 min</div><span class="bx"></span></div><div><div class="d">Day 7</div><div class="t">Your weekly number</div><div class="m">~25 min</div><span class="bx"></span></div>
+  </div>
+  <p class="small">Tick the box when a day is done.</p>
+
+  <h3>What you'll need</h3>
+  <div class="grid2">
+    <ul class="check" style="margin:0">
+      <li>Your phone or laptop, logged in to your bank and card apps</li>
+      <li>Your last two months of statements (the apps have them)</li>
+    </ul>
+    <ul class="check" style="margin:0">
+      <li>A pen, if you printed this</li>
+      <li>Your calendar app, for Days 3 and 7</li>
+    </ul>
+  </div>
+
+  <div class="box tip" style="margin-top:16px">
+    <strong>Why seven small days instead of one big afternoon?</strong> Because a 15-minute task is easy to start, and starting is the hard part. By Day 7 you'll have done every piece of a working money system without ever sitting down for a dreaded "budget day".
+  </div>
+
+  <div class="box warn">
+    <p class="small" style="color:var(--ink);margin:0">General education, not financial advice. It doesn't know your situation. If you're behind on payments or dealing with collections, a non-profit credit counselor (in the US, an NFCC member agency) is a good, low-cost next step.</p>
+  </div>
+  <div class="folio"><span>The 7-Day Money Reset &middot; Money Made Simple</span><span>1</span></div>
+</section>
+
+<!-- ============ 2. DAYS 1-2 ============ -->
+<section class="page">
+  <div class="day">
+    <div class="dayhead"><span class="no">1</span><h2>Take a money snapshot</h2><span class="time">~20 min</span></div>
+    <p class="why">You can't plan from a vague feeling. Today you write down where every dollar is right now. No judging, no fixing. It's just your starting line.</p>
+    <ul class="check">
+      <li>Log in to every account: checking, savings, credit cards, loans, retirement.</li>
+      <li>Write each balance below. For debts, add the interest rate (APR). It's on the statement.</li>
+      <li>Find your <strong>monthly take-home pay</strong>: what actually lands in your account after tax, not your salary.</li>
+    </ul>
+    <div class="fill">
+      <div class="kicker">My snapshot &middot; date: ________</div>
+      <table>
+        <tr><th style="width:38%">Account</th><th style="width:22%">Type</th><th class="r" style="width:20%">Balance</th><th class="r">APR (debts)</th></tr>
+        <tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr>
+      </table>
+      <div class="line"><strong>Monthly take-home pay:</strong> $<span class="us"></span></div>
+      <div class="line"><strong style="margin-right:6px">I'm paid:</strong> <span class="opt"><i></i>weekly</span><span class="opt"><i></i>every 2 weeks</span><span class="opt"><i></i>twice a month</span><span class="opt"><i></i>monthly</span></div>
+    </div>
+  </div>
+  <div class="sep"></div>
+  <div class="day">
+    <div class="dayhead"><span class="no">2</span><h2>Cancel one subscription</h2><span class="time">~15 min</span></div>
+    <p class="why">Recurring charges are the easiest money to get back, because cancelling once saves you every month after. Most people find at least one they forgot about.</p>
+    <ul class="check">
+      <li>Search your last two statements for: <em>subscription, monthly, renewal, membership, auto-pay</em>.</li>
+      <li>Check your phone's app store subscriptions page (both iPhone and Android have one in settings).</li>
+      <li>List them below, mark keep or cancel, and <strong>cancel at least one today</strong>.</li>
+    </ul>
+    <div class="fill">
+      <div class="kicker">My subscriptions</div>
+      <table>
+        <tr><th style="width:52%">Subscription</th><th class="r" style="width:18%">$ / month</th><th style="width:15%">Keep</th><th>Cancel</th></tr>
+        <tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr>
+      </table>
+      <div class="line"><strong>Saved per month:</strong> $<span class="us"></span> &nbsp;&times; 12 = $<span class="us"></span> a year</div>
+    </div>
+  </div>
+  <div class="folio"><span>The 7-Day Money Reset &middot; Money Made Simple</span><span>2</span></div>
+</section>
+
+<!-- ============ 3. DAYS 3-4 ============ -->
+<section class="page">
+  <div class="day">
+    <div class="dayhead"><span class="no">3</span><h2>Build your bill calendar</h2><span class="time">~20 min</span></div>
+    <p class="why">Late fees and missed payments usually come from forgetting, not from being broke. Payment history is the biggest single factor in common credit scores, so make "on time" automatic.</p>
+    <ul class="check">
+      <li>List every fixed bill and its due date: rent, utilities, phone, insurance, every debt's minimum.</li>
+      <li>Turn on autopay for at least the <strong>minimum</strong> on every debt. You can always pay more by hand.</li>
+      <li>Put any bill without autopay in your calendar, two days before it's due.</li>
+    </ul>
+    <div class="fill">
+      <div class="kicker">My bills</div>
+      <table>
+        <tr><th style="width:40%">Bill</th><th class="r" style="width:18%">Amount</th><th style="width:20%">Due (day of month)</th><th>Autopay on?</th></tr>
+        <tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr>
+      </table>
+      <div class="line"><strong>Total fixed bills per month:</strong> $<span class="us"></span></div>
+    </div>
+  </div>
+  <div class="sep"></div>
+  <div class="day">
+    <div class="dayhead"><span class="no">4</span><h2>Set three bank alerts</h2><span class="time">~10 min</span></div>
+    <p class="why">Alerts catch problems while they're still small: a low balance before it overdraws, a strange charge before it becomes three. Every major bank app has them, usually under Settings &rarr; Alerts or Notifications.</p>
+    <ul class="check">
+      <li><strong>Low balance</strong> on checking, below $<span class="us" style="width:.6in"></span></li>
+      <li><strong>Large transaction</strong> on every card and account, over $<span class="us" style="width:.6in"></span></li>
+      <li><strong>Payment due</strong> reminders on each credit card (in the card's app), <span class="us" style="width:.4in"></span> days before.</li>
+      <li>While you're there: check whether overdraft "coverage" is on, and decide if you want it.</li>
+    </ul>
+    <div class="fill">
+      <div class="kicker">My alerts</div>
+      <table>
+        <tr><th style="width:34%">Account or card</th><th style="width:30%">Alert</th><th class="r" style="width:18%">Threshold</th><th>Done</th></tr>
+        <tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="folio"><span>The 7-Day Money Reset &middot; Money Made Simple</span><span>3</span></div>
+</section>
+
+<!-- ============ 4. DAYS 5-6 ============ -->
+<section class="page">
+  <div class="day">
+    <div class="dayhead"><span class="no">5</span><h2>Start your emergency fund</h2><span class="time">~15 min</span></div>
+    <p class="why">A small cash buffer is what stops a flat tire or a vet bill from turning into new credit card debt. The amount matters less than making it automatic.</p>
+    <ul class="check">
+      <li>Open a separate savings account, or a savings "bucket" inside your bank, and name it <em>Emergency</em>.</li>
+      <li>Check it's insured: FDIC for banks, NCUA for credit unions (you can look a bank up at fdic.gov).</li>
+      <li>Set an <strong>automatic transfer on payday</strong>. Even $10 or $25 is a real start.</li>
+    </ul>
+    <div class="fill">
+      <div class="line"><strong>Account:</strong> <span class="u"></span></div>
+      <div class="line"><strong>Auto-transfer:</strong> $<span class="us"></span> every <span class="u"></span></div>
+      <div class="line"><strong>First goal:</strong> $<span class="us"></span> by <span class="u"></span> <span style="font-size:8.5pt;color:var(--muted)">(try $500 first, then one month of bills)</span></div>
+    </div>
+  </div>
+  <div class="sep"></div>
+  <div class="day">
+    <div class="dayhead"><span class="no">6</span><h2>List your debts, pick an order</h2><span class="time">~20 min</span></div>
+    <p class="why">Paying a bit extra on everything feels responsible but spreads your effort thin. Pay the minimum on all of them, then send every extra dollar to <strong>one</strong> target. When it's gone, roll its payment into the next.</p>
+    <div class="grid2" style="gap:12px;margin-bottom:8px">
+      <div class="card"><div class="lbl">Avalanche</div><strong>Highest interest rate first.</strong> <span style="font-size:9pt">Costs the least interest overall.</span></div>
+      <div class="card"><div class="lbl">Snowball</div><strong>Smallest balance first.</strong> <span style="font-size:9pt">Quick wins that keep you going.</span></div>
+    </div>
+    <div class="fill">
+      <table>
+        <tr><th style="width:36%">Debt</th><th class="r" style="width:20%">Balance</th><th class="r" style="width:14%">APR</th><th class="r" style="width:16%">Minimum</th><th class="r">Order</th></tr>
+        <tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr>
+      </table>
+      <div class="line"><strong>My method:</strong> <span class="opt"><i></i>Avalanche</span><span class="opt"><i></i>Snowball</span> <strong>Target debt:</strong> <span class="u"></span></div>
+      <div class="line"><strong>Extra I'll pay on it each month:</strong> $<span class="us"></span></div>
+    </div>
+    <div class="box tip"><strong>Can't decide?</strong> If one debt has a much higher rate than the rest (say 25% vs 7%), avalanche usually saves real money. If the rates are close, pick snowball and enjoy the early wins. Either way, the plan you stick with beats the perfect one you don't.</div>
+  </div>
+  <div class="folio"><span>The 7-Day Money Reset &middot; Money Made Simple</span><span>4</span></div>
+</section>
+
+<!-- ============ 5. DAY 7 + NEXT ============ -->
+<section class="page">
+  <div class="day">
+    <div class="dayhead"><span class="no">7</span><h2>Find your weekly spending number</h2><span class="time">~25 min</span></div>
+    <p class="why">Everything you've done this week feeds one number: how much you can spend each week on groceries, eating out, gas and fun, with bills, savings and debt already handled.</p>
+    <div class="fill">
+      <div class="line"><span style="width:2.6in">Monthly take-home pay <span class="small">(Day 1)</span></span>$<span class="us"></span></div>
+      <div class="line"><span style="width:2.6in">&minus; Fixed bills <span class="small">(Day 3)</span></span>$<span class="us"></span></div>
+      <div class="line"><span style="width:2.6in">&minus; Emergency fund transfer <span class="small">(Day 5)</span></span>$<span class="us"></span></div>
+      <div class="line"><span style="width:2.6in">&minus; Extra debt payment <span class="small">(Day 6)</span></span>$<span class="us"></span></div>
+      <div class="line"><span style="width:2.6in">&minus; Irregular costs &divide; 12 <span class="small">(gifts, car, renewals)</span></span>$<span class="us"></span></div>
+      <div class="line"><span style="width:2.6in"><strong>= Monthly spending pool</strong></span>$<span class="us"></span></div>
+      <div class="line"><span style="width:2.6in"><strong>&times; 12 &divide; 52 = my weekly number</strong></span>$<span class="us" style="border-bottom:2px solid var(--green-d)"></span></div>
+    </div>
+    <p class="small" style="margin-top:6px">Why &times;12&divide;52 and not &divide;4? A month is about 4.33 weeks. Dividing by 4 hands you a week of spending money you don't have. If the pool comes out negative, trim the extra debt payment or savings first, then look at the biggest bills.</p>
+    <ul class="check">
+      <li>Put a <strong>recurring 20-minute "money check-in"</strong> in your calendar, same time every week.</li>
+      <li>At each check-in: how much of this week's number is left? Anything odd on the statements? Any bills coming?</li>
+    </ul>
+  </div>
+
+  <div class="box dark" style="margin-top:12px">
+    <div class="kicker">You did it</div>
+    <p style="margin:0;font-size:11pt">Seven days ago this was a vague worry. Now you know your numbers, your bills run on time, your buffer is growing on autopilot and your debt has a plan. That's a money system. The weekly check-in is how you keep it.</p>
+  </div>
+
+  <div class="next">
+    <h3>Want the spreadsheet version?</h3>
+    <p style="margin-bottom:6px">If you'd like Day 7's math done for you every month, I made <strong>The 20-Minute Budget</strong>: a 14-page guide plus a spreadsheet that turns this reset into a 20-minute weekly routine, with a weekly check-in tab and a debt payoff planner. It's my own product, $12, and the link is on the Money Made Simple link page.</p>
+    <p class="small" style="margin:0">Totally optional. Everything in this reset works on paper.</p>
+  </div>
+
+  <p class="small" style="margin-top:12px">You're getting this because you joined the Money Made Simple weekly email: one money move a week, no spam, unsubscribe any time with the link at the bottom of every email.</p>
+  <p class="small">General education, not financial, tax or investment advice. Bank features and names of settings vary. &copy; Money Made Simple. Free to print for your own use.</p>
+  <div class="folio"><span>The 7-Day Money Reset &middot; Money Made Simple</span><span>5</span></div>
+</section>
+
+</body>
+</html>
