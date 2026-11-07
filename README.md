@@ -33,7 +33,7 @@ only you can do: payouts, accounts, API keys).
 | Niche & brand | Score niches by ad value, demand, risk, saturation; generate a brand profile; brand kit (logo, banners, bios) | `niche.py`, `brandkit/` |
 | Ideas | Trend signals (YouTube autocomplete, Reddit questions), Claude pitches, scoring, de-duplication, learned re-scoring from performance | `ideas.py`, `insights.py` |
 | Writing | Research grounding, draft → editor critique → revision, claims to verify, sources | `writer.py`, `research.py` |
-| Media | TTS (Piper, espeak, ElevenLabs, OpenAI), images (ComfyUI, OpenAI, Replicate, built-in art), 9:16 and 16:9 video with burned captions, carousels, thumbnails | `media/` |
+| Media | TTS (Kokoro, Piper, espeak, ElevenLabs, OpenAI), images (ComfyUI, OpenAI, Replicate, built-in art), 9:16 and 16:9 video with burned captions, carousels, thumbnails | `media/` |
 | Repurposing | One long video → 3 standalone Shorts + a carousel | `repurpose.py` |
 | Guardrails | Originality, fake testimonials, disclosures, risky claims, engagement bait, asset rights, cadence | `guardrails.py` |
 | Review | Dashboard queue with video/slide preview, caption editing, fact-check gate, approve & schedule | `web/` |
@@ -41,7 +41,7 @@ only you can do: payouts, accounts, API keys).
 | Analytics | Metrics collection, rollups by format/pillar/platform/hour, feedback into idea scores | `insights.py` |
 | Funnel | Link-in-bio page, double opt-in email capture, weekly digest, Stripe/Gumroad sale webhooks | `funnel/` |
 | Business | UGC clients CRM, packages & quotes, ad scripts (no fake testimonials), pitch drafts, invoices (PDF), digital products (PDF), affiliate link tracking, P&L, goal tracking | `business/` |
-| Ops | CLI, Docker Compose (app, worker, media host), n8n workflow, CI | `cli.py`, `worker.py`, `integrations/` |
+| Ops | CLI, Docker Compose (app, worker, renderer, media host, optional Kokoro voice), multi-brand worker on per-brand clocks, render queue, `factory status` / `/api/status` health, n8n workflow, CI | `cli.py`, `worker.py`, `renderq.py`, `health.py`, `integrations/` |
 
 Ready-made launch material lives in `launch/`: two weeks of scripts for the example finance brand,
 a sellable product (guide PDF + spreadsheet), the ad studio's website, rate card, pitch templates,
@@ -64,6 +64,9 @@ factory clients import --file leads.csv && factory pitch draft && factory pitch 
 factory order create --client 3 --package starter && factory order invoice --id 1
 factory revenue report
 factory auth youtube | tiktok | meta        # connect accounts
+factory renderq revoice                     # re-voice silent renders once KOKORO_URL (or another voice) is set
+factory status                              # credentials, queues, worker heartbeat, anything needing you
+factory doctor [--online]                   # is this install ready to make and post content?
 ```
 
 `factory --help` lists everything. Run it in production with `docker compose up -d`.

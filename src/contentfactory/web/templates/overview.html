@@ -13,6 +13,27 @@
   </div>
 </div>
 
+
+{% if ops and (ops.alerts or ops.needs_check or ops.render_queue.queued or ops.render_queue.running) %}
+<div class="card section" id="ops">
+  <div class="card-head"><h2>Needs attention</h2><span class="muted small">
+    Worker: {% if ops.worker.heartbeat %}last tick {{ ops.worker.minutes_since }} min ago{% else %}not running{% endif %}
+    · Render queue: {{ ops.render_queue.queued or 0 }} queued{% if ops.render_queue.running %}, {{ ops.render_queue.running }} rendering{% endif %}{% if ops.render_queue.waiting_for_voice %} ({{ ops.render_queue.waiting_for_voice }} waiting for a voice){% endif %}</span></div>
+  {% if ops.alerts %}<ul class="list">{% for a in ops.alerts %}<li>{{ a }}</li>{% endfor %}</ul>{% endif %}
+  {% for p in ops.needs_check %}
+  <div class="list-row" style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px">
+    <span class="grow">Post <a href="/posts/{{ p.post_id }}">#{{ p.post_id }}</a> on {{ p.platform }} was interrupted mid-upload. Check the platform, then:</span>
+    <form class="inline" method="post" action="/publications/{{ p.id }}/resolve" style="display:flex;gap:6px;flex-wrap:wrap">
+      <input name="url" placeholder="URL if it's live" style="min-width:0;flex:1 1 160px">
+      <button class="btn btn-sm btn-primary" name="action" value="live">It's live</button>
+      <button class="btn btn-sm" name="action" value="requeue">Not live: requeue</button>
+      <button class="btn btn-sm" name="action" value="drop">Drop</button>
+    </form>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
+
 <div class="grid grid-kpi">
   <div class="card kpi {{ 'attn' if k.in_review }}"><div class="label">In review</div><a class="value" href="/review">{{ k.in_review }}</a><div class="sub">{{ k.blocked }} blocked</div></div>
   <div class="card kpi"><div class="label">Scheduled · 7d</div><a class="value" href="/calendar">{{ k.scheduled_7d }}</a><div class="sub">queued publications</div></div>

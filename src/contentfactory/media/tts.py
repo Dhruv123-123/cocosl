@@ -1,6 +1,11 @@
 """Text to speech, one audio file per script segment.
 
 Providers (settings.tts_provider; "auto" tries them in this order):
+  kokoro     - Kokoro-82M (Apache-2.0 open weights, free, natural voices). Either a
+               Kokoro-FastAPI server at KOKORO_URL (OpenAI-compatible /v1/audio/speech;
+               `docker compose --profile kokoro up`), or the local `kokoro` Python
+               package (pip install "contentfactory[kokoro]"). Voice: brand.voice.tts_voice
+               if it is a Kokoro id like af_heart, else KOKORO_VOICE (default af_heart)
   piper      - local `piper` CLI, model path in PIPER_MODEL (.onnx)
   espeak     - local `espeak-ng` / `espeak` (robotic, but free and offline)
   elevenlabs - REST API, ELEVENLABS_API_KEY; voice id from brand.voice.tts_voice or ELEVENLABS_VOICE_ID
@@ -19,6 +24,7 @@ from __future__ import annotations
 
 import os
 import random
+import re
 import shutil
 import struct
 import wave
@@ -30,7 +36,7 @@ import httpx
 from ..config import BrandProfile, Settings
 from .util import MediaError, ProviderError, ffmpeg, probe, seed_of, word_count
 
-ORDER = ["piper", "espeak", "elevenlabs", "openai", "silent"]
+ORDER = ["kokoro", "piper", "espeak", "elevenlabs", "openai", "silent"]
 SAMPLE_RATE = 44100
 HTTP_TIMEOUT = httpx.Timeout(90.0, connect=10.0)
 
@@ -95,6 +101,80 @@ class Provider:
 
     def speak(self, text: str, out: Path) -> None:
         raise NotImplementedError
+
+
+KOKORO_VOICE_RE = re.compile(r"^[abefhijpz][fm]_[a-z]+$")
+
+
+class Kokoro(Provider):
+    """Kokoro-82M via a Kokoro-FastAPI server (KOKORO_URL) or the local `kokoro` package."""
+    tool = "kokoro"
+    _pipelines: dict = {}
+
+    def voice(self) -> str:
+        v = (self.brand.voice.tts_voice or "").strip()
+        return v if KOKORO_VOICE_RE.match(v) else os.environ.get("KOKORO_VOICE", "af_heart")
+
+    def speed(self) -> float:
+        try:
+            return float(os.environ.get("KOKORO_SPEED", "") or 1.0)
+        except ValueError:
+            return 1.0
+
+    @staticmethod
+    def _url() -> str:
+        return os.environ.get("KOKORO_URL", "").rstrip("/")
+
+    @staticmethod
+    def _local() -> bool:
+        import importlib.util
+        return importlib.util.find_spec("kokoro") is not None and os.environ.get("KOKORO_LOCAL", "1") != "0"
+
+    def available(self) -> bool:
+        return bool(self._url()) or self._local()
+
+    def speak(self, text: str, out: Path) -> None:
+        if self._url():
+            return self._speak_http(text, out)
+        if self._local():
+            return self._speak_local(text, out)
+        raise ProviderError("Kokoro needs KOKORO_URL (a Kokoro-FastAPI server) or the `kokoro` package installed")
+
+    def _speak_http(self, text: str, out: Path) -> None:
+        body = {"model": os.environ.get("KOKORO_MODEL", "kokoro"), "input": _clean(text), "voice": self.voice(),
+                "response_format": "wav", "speed": self.speed()}
+        headers = {"Authorization": f"Bearer {os.environ['KOKORO_API_KEY']}"} if os.environ.get("KOKORO_API_KEY") else {}
+        try:
+            resp = httpx.post(f"{self._url()}/v1/audio/speech", json=body, headers=headers, timeout=HTTP_TIMEOUT)
+        except httpx.HTTPError as e:
+            raise ProviderError(f"Kokoro server at {self._url()} unreachable: {e}") from e
+        _raise_for(resp, "Kokoro")
+        self.tool = f"kokoro:{self.voice()}"
+        _to_wav(resp.content, ".wav", out)
+
+    def _speak_local(self, text: str, out: Path) -> None:
+        try:
+            import numpy as np
+            from kokoro import KPipeline
+        except Exception as e:  # torch/espeak missing, etc.
+            raise ProviderError(f"local kokoro failed to load: {e}") from e
+        voice = self.voice()
+        lang = voice[0]
+        if lang not in self._pipelines:
+            self._pipelines[lang] = KPipeline(lang_code=lang)
+        chunks = [np.asarray(audio, dtype="float32") for _, _, audio in
+                  self._pipelines[lang](_clean(text), voice=voice, speed=self.speed())]
+        if not chunks:
+            raise ProviderError("kokoro returned no audio")
+        pcm = (np.clip(np.concatenate(chunks), -1, 1) * 32767).astype("<i2").tobytes()
+        tmp = out.with_suffix(".k24.wav")
+        with wave.open(str(tmp), "wb") as w:
+            w.setnchannels(1); w.setsampwidth(2); w.setframerate(24000); w.writeframes(pcm)  # noqa: E702
+        try:
+            _to_wav(tmp.read_bytes(), ".wav", out)
+        finally:
+            tmp.unlink(missing_ok=True)
+        self.tool = f"kokoro-local:{voice}"
 
 
 class Piper(Provider):
@@ -217,7 +297,7 @@ def write_room_tone(out: Path, seconds: float, seed: int = 0, level_db: float = 
         w.writeframes(bytes(frames))
 
 
-PROVIDERS = {"piper": Piper, "espeak": Espeak, "elevenlabs": ElevenLabs, "openai": OpenAITTS, "silent": Silent}
+PROVIDERS = {"kokoro": Kokoro, "piper": Piper, "espeak": Espeak, "elevenlabs": ElevenLabs, "openai": OpenAITTS, "silent": Silent}
 
 
 # ---------------------------------------------------------------- helpers
