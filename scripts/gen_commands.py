@@ -12,7 +12,7 @@ from pathlib import Path
 GROUPS = [
     ("Your routine", ["today", "triage", "time", "weekly-review", "launch-mode", "keyword-check", "ui", "serve"]),
     ("Make content", ["ideas", "idea", "produce", "daily", "import", "repurpose", "challenge", "voice", "recordings",
-                      "batch-record", "broll", "numbers", "rerender", "renderq", "brandkit"]),
+                      "batch-record", "broll", "numbers", "rerender", "renderq", "brandkit", "launch-pack"]),
     ("Review", ["review", "review-gate", "approve", "reject", "audit-originality", "launch-check", "preflight"]),
     ("Schedule and post", ["schedule", "unschedule", "reslot", "calendar", "publish", "manual", "export-week",
                            "youtube-plan"]),
