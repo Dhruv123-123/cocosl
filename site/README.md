@@ -238,11 +238,12 @@ and FAQs, so the build stays free of near-duplicates. Tokens in answers: `{month
 writes `pins/pins.csv` with each pin's title, description, alt text, board and tracked link, ready for Pinterest's
 bulk upload or to paste by hand.
 
-`python3 tools/make_pins.py --all --start YYYY-MM-DD` also renders two designs (A: dark, headline + one-line
-pitch; B: light, gold headline block + what's inside) for every shop product, comparison and article, 196 more
+`python3 tools/make_pins.py --all` (optionally `--start YYYY-MM-DD`; the default is week 3 after launch Day 1, Nov 30 2026) also renders two designs (A: dark, headline + one-line
+pitch; B: light, gold headline block + what's inside) for every shop product, comparison and article, 346 more
 pins in `pins/library/` (not committed; they're in the project files), and writes `pins/schedule.csv`: 60 days
 of fresh pins, 1 a day for two weeks, then 2, then 3 (what the scouting audit recommends for a new account), each
-page's design B at least 14 days after its A, and never before the page is live. Pins that don't fit in 60 days
+page's design B at least 14 days after its A, no two pins for the same page within 7 days, LAUNCH_WEEK.md's eight
+site pins (quiz plus seven articles) first, and never before the page is live. Pins that don't fit in 60 days
 are listed at the end, undated, as the backlog. All text on a pin comes from its page's title, description and
 headings, so re-run it after editing a page. The $50k numbers come from `pseo.py`; re-run after the tax data or shop prices
 change. Needs Playwright and Chromium (`pip install playwright && python -m playwright install chromium`).

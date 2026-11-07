@@ -1357,8 +1357,17 @@ def build() -> list[str]:
 </section>"""))
 
     # ---- link in bio
+    # The three links LAUNCH_WEEK.md (PR #5) puts in every bio, in order: the free reset (the form above),
+    # the 20-Minute Budget, and the high-yield savings comparison (it carries the affiliate disclosure).
+    lead = [p for p in products_list if p["slug"] == "the-20-minute-budget"]
+    lb_top = "".join(f'<a class="lb-link" href="{u(f"/products/{p["slug"]}/")}"><span>{esc(p["title"])}</span>{price_html(p)}</a>'
+                     for p in lead)
+    hysa = next((c for c in comps if c["slug"] == "best-high-yield-savings-accounts"), None)
+    if hysa:
+        lb_top += (f'<a class="lb-link" href="{u("/compare/best-high-yield-savings-accounts/")}"><span>Compare high-yield savings accounts</span>'
+                   '<small>affiliate links</small></a>')
     links = "".join(f'<a class="lb-link" href="{u(f"/products/{p["slug"]}/")}"><span>{esc(p["title"])}</span>{price_html(p)}</a>'
-                    for p in products_list)
+                    for p in products_list if p not in lead)
     links += '<h2 class="lb-h">Popular articles</h2>' + "".join(f'<a class="lb-link" href="{u(f"/blog/{p["slug"]}/")}"><span>{esc(p["title"])}</span></a>'
                      for p in posts[:4])
     aff = "".join(f'<a class="lb-link plausible-event-name=Affiliate+Click" href="{esc(a["url"])}" rel="sponsored noopener"><span>{esc(a["name"])}</span><small>affiliate</small></a>'
@@ -1370,6 +1379,7 @@ def build() -> list[str]:
   <h1>{esc(CFG['name'])}</h1>
   <p class="dek">{esc(CFG['tagline'])}</p>
   <div class="lb-signup"><h2>Free: {esc(lm['title'])}</h2><p>{esc(lm['short'])}</p>{email_form('link-in-bio', 'Send it', compact=True)}</div>
+  {lb_top}
   <a class="lb-link" href="{u('/quiz/')}"><span>What's your money personality? (1-minute quiz)</span></a>
   <a class="lb-link" href="{u('/start/')}"><span>New here? Start here</span></a>
   <h2 class="lb-h">Guides and templates</h2>{links}

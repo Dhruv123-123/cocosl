@@ -2,7 +2,7 @@
 title: Is your savings app actually insured? How to check in 5 minutes
 seo_title: "Is my savings app FDIC insured? Pass-through explained"
 description: "Many savings apps aren't banks, and FDIC insurance covers bank failure, not the app failing. How to find the partner bank and check it in BankFind."
-date: 2026-11-20
+date: 2026-11-16
 pillar: money-tools
 keyword: is my savings app fdic insured
 read_minutes: 6

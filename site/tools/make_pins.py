@@ -364,6 +364,18 @@ def library() -> list[dict]:
 
 RAMP = [(14, 1), (16, 2), (30, 3)]  # (days, new pins a day): 1 a day for two weeks, then 2, then 3 (days 31-60)
 B_GAP = 14  # days between a page's design A and design B
+URL_GAP = 7  # days between any two pins that link to the same page (scouting's Pinterest playbook)
+DAY1 = date(2026, 11, 16)  # launch Day 1 in launch/money-made-simple/LAUNCH_WEEK.md (PR #5); site pins start in week 3
+# LAUNCH_WEEK.md's "start with these site pins", in its order: they go first in the schedule.
+LAUNCH_LEAD = ["/quiz/", "/blog/how-to-freeze-your-credit/", "/blog/401k-match-explained/",
+               "/blog/how-to-build-an-emergency-fund/", "/blog/sinking-funds-explained/",
+               "/blog/find-and-cancel-subscriptions/", "/blog/how-to-start-investing-with-100-a-month/",
+               "/blog/expense-ratios-explained/"]
+
+
+def _page(p: dict) -> str:
+    """The page a pin links to, without the domain or UTM tags."""
+    return urlparse(p["link"]).path
 
 
 def schedule(featured: list[dict], lib: list[dict], start: date) -> list[dict]:
@@ -383,7 +395,15 @@ def schedule(featured: list[dict], lib: list[dict], start: date) -> list[dict]:
                 order.append(queues[k].pop(0))
     b_of = {p["page"]: p for p in lib if p["variant"] == "b"}
     pending = [dict(p, live="") for p in featured] + order
+    lead = []
+    for path in LAUNCH_LEAD:  # first pin for each launch page, in LAUNCH_WEEK's order
+        hit = next((p for p in pending if _page(p) == path and p.get("variant", "a") == "a"), None)
+        if hit:
+            pending.remove(hit)
+            lead.append(hit)
+    pending = lead + pending
     posted_a: dict[str, date] = {}
+    last_url: dict[str, date] = {}
     rows, day = [], 0
     for span, per_day in RAMP:
         for _ in range(span):
@@ -397,8 +417,11 @@ def schedule(featured: list[dict], lib: list[dict], start: date) -> list[dict]:
                     continue  # page not published yet
                 if p.get("variant") == "b" and (d - posted_a[p["page"]]).days < B_GAP:
                     continue
+                if _page(p) in last_url and (d - last_url[_page(p)]).days < URL_GAP:
+                    continue
                 todays.append(p)
                 pending.remove(p)
+                last_url[_page(p)] = d
                 if p.get("variant") == "a":
                     posted_a[p["page"]] = d
                     pending.append(b_of[p["page"]])  # B goes to the back of the queue
@@ -430,7 +453,8 @@ def main() -> None:
     ap.add_argument("--out", default=str(SITE / "pins"))
     ap.add_argument("--all", action="store_true", help="also render a pin pair for every shop product, Compare "
                     "page and article into <out>/library/, and write <out>/schedule.csv")
-    ap.add_argument("--start", default=(date.today() + timedelta(days=1)).isoformat(), help="schedule day 1")
+    ap.add_argument("--start", default=(DAY1 + timedelta(days=14)).isoformat(),
+                    help="first pin date (default: week 3 after launch Day 1, as LAUNCH_WEEK.md says)")
     ap.add_argument("--no-render", action="store_true", help="write the CSVs only")
     a = ap.parse_args()
     out = Path(a.out)
