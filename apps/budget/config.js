@@ -40,5 +40,7 @@ export default {
     'Import your bank\'s CSV export, auto-sorted into categories',
     'Every month kept: look back and plan ahead',
     'Unlimited savings goals',
+    'Bill negotiation tracker for every bill, with call scripts and promo-end reminders',
+    'Countdown for every 0% and deferred-interest deal, with calendar reminders',
   ],
 };

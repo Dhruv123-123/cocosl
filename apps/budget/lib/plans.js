@@ -6,6 +6,9 @@ export const PLANS = {
     csvImport: false,
     history: false,  // free shows the current month only
     goals: 1,
+    bills: 3,          // bill negotiation tracker (bills.html)
+    deals: 1,          // 0% / deferred-interest countdown (deals.html)
+    reminders: false,  // calendar reminders for promo end dates
     backup: true,    // never lock people out of their own data
   },
   pro: {
@@ -14,6 +17,9 @@ export const PLANS = {
     csvImport: true,
     history: true,
     goals: Infinity,
+    bills: Infinity,
+    deals: Infinity,
+    reminders: true,
     backup: true,
   },
 };

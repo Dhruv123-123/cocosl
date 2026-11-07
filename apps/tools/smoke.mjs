@@ -66,6 +66,8 @@ const checks = [
     await page.click('#another');
   }],
   ['/budget/subscriptions.html', '#results', async (page) => { await page.click('#sample'); }],
+  ['/budget/bills.html', '#bills .bill', async (page) => { await page.fill('#b-name', 'Internet'); await page.fill('#b-monthly', '80'); await page.click('#bill-form button'); }],
+  ['/budget/deals.html', '#result .countdown', async (page) => { await page.fill('[name=balance]', '400'); await page.fill('[name=end]', '2030-01-15'); await page.fill('[name=apr]', '29.99'); await page.fill('[name=payment]', '50'); await page.click('#deal-form button[type=submit]'); }],
   ['/budget/rate.html', '#rate-result .grade', async (page) => { await page.click('#rate-form button'); }],
   ['/budget/', '#summary', async (page) => {
     await page.fill('#income', '3200');

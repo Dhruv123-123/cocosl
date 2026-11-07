@@ -192,4 +192,5 @@ if (sessionId) {
 
 render();
 if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
+if (location.hash === '#upgrade' && !pro()) { history.replaceState(null, '', location.pathname + location.search); upsell('Pro unlocks every bill and deal, calendar reminders, CSV import and more.'); }
 initTracking({ config, app: 'budget', page: 'budget' });

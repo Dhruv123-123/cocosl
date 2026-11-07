@@ -36,3 +36,5 @@ Effort is for Claude to build; "your part" is what only Dhruv can do (accounts, 
 - **Stock/crypto signal tools**: regulatory risk and they'd undercut the brand's "no hype" promise.
 - **Bank-connected budgeting (Plaid)**: per-user fees and security obligations before there's revenue to cover them. Revisit if Budget Pro passes ~200 subscribers.
 - **Credit card rewards optimizer**: needs constant offer data upkeep and issuer affiliate approval, which usually requires existing traffic.
+
+Also built from the scouting thread's ranked list (research/scouting/software-ideas.md): #1 bill negotiation tracker (`budget/bills.html`) and #2 the 0% / deferred-interest countdown (`budget/deals.html`), both as Budget Pro features.

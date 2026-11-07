@@ -91,3 +91,34 @@ footer{color:var(--muted);font-size:13px;padding:16px;text-align:center}
 .moves li{margin-bottom:8px}
 .breakdown td small{display:block;color:var(--muted);font-size:12px}
 .breakdown .num{width:110px;white-space:nowrap}
+
+/* Bill tracker and deal countdown */
+[hidden]{display:none!important}
+a.badge{text-decoration:none}
+.bill{border-top:1px solid var(--line);padding:12px 0;position:relative}
+.bill:first-child{border-top:0;padding-top:0}
+.bill-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.bill-price{text-align:right;white-space:nowrap}
+.bill-price b{font-size:20px}.bill-price small{display:block;font-size:12px;color:var(--muted)}
+.pill{display:inline-block;font-size:12px;border-radius:999px;padding:2px 9px;margin-top:4px;background:rgba(47,191,113,.15);color:var(--ink)}
+.pill.warn{background:rgba(242,177,52,.3)}.pill.bad{background:rgba(192,57,43,.18);color:var(--neg);font-weight:700}.pill.muted{background:var(--line)}
+.bill details{margin-top:8px}
+.bill summary{cursor:pointer;font-weight:600;font-size:14px}
+.script{padding-left:20px;margin:6px 0}.script li{margin-bottom:6px}
+.calls{list-style:none;padding:0;margin:8px 0 0;font-size:14px}
+.calls li{padding:3px 0}.calls .d{color:var(--muted);font-size:12px;margin-right:6px}
+.del{position:static;font-size:12px;margin-top:6px;padding:0}
+.call-form,.bal-form{margin-top:8px}
+@media (min-width:700px){.bal-form{grid-template-columns:1fr 1fr auto}}
+@media (min-width:700px){.call-form{grid-template-columns:1fr 1fr .8fr 1.6fr auto}.bill-form{grid-template-columns:1.2fr 1.1fr .9fr 1fr auto}}
+details.import{margin-top:10px}details.import summary{cursor:pointer;font-weight:600}
+.deal-form{display:grid;grid-template-columns:1fr;gap:10px}
+@media (min-width:700px){.deal-form{grid-template-columns:1fr 1fr}}
+.deal-form .full{grid-column:1/-1}
+.countdown{font-size:34px;font-weight:800;line-height:1.1}
+.countdown small{font-size:14px;font-weight:600;color:var(--muted)}
+.result-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0}
+@media (min-width:700px){.result-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.alert{border-left:4px solid var(--neg);padding:8px 12px;background:rgba(192,57,43,.08);border-radius:8px}
+.okay{border-left:4px solid var(--green);padding:8px 12px;background:rgba(47,191,113,.1);border-radius:8px}
+.faq h3{font-size:16px;margin:14px 0 4px}
