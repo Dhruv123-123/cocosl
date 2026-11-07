@@ -13,5 +13,5 @@ Program data is in `programs.json`; brand answers are in `kit.py`. Nothing is su
 the [BRACKETS] with real analytics only. Payout figures come from the Nov 2026 research
 (`research/02-affiliate-programs.md`) and must be confirmed in each dashboard.
 
-When a program approves you, paste the tracking link into `site/site.json > programs.<key>.affiliate_url` (see
+When a program approves you, paste the tracking link into `site/go-links.json` on the site (see
 `site/AFFILIATE_ARTICLES.md`).
