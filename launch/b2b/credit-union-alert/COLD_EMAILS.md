@@ -33,7 +33,9 @@ Never guess an email address, buy a list, or scrape a directory.
 - 5 to 8 new credit unions a day, Tuesday to Thursday mornings. Follow-ups count separately.
 - Plain text, no images, no attachment and no link in email 1 (it keeps you out of spam folders).
 - Stop at the first "no" or "unsubscribe" and mark it in `PROSPECTS.csv` → `notes`.
-- Every email ends with your name, mailing address and an opt-out line.
+- **Every email ends with your name, mailing address and an opt-out line, follow-ups included**
+  (CAN-SPAM). Each template below already has `{Your mailing address}` and the "no thanks" line;
+  don't trim them. Honor an opt-out within 10 business days (in practice, at once).
 - Log every send in the tracker columns you add to `PROSPECTS.csv` (sent, follow-up 1, follow-up 2,
   reply, outcome).
 
@@ -93,13 +95,20 @@ news, such as a merger, a new branch, a fraud warning they posted), `{Your name}
 > Hi, I'm {Your name} from Scam Decoded. I make a weekly scam alert that credit unions send to members
 > under their own brand (email, social post and lobby slide, delivered 7 days early for compliance
 > review, no member data shared). Could you pass this to whoever handles marketing or member
-> education? I'd be glad to send a free 4-week sample. {Your email}
+> education? I'd be glad to send a free 4-week sample. {Your email} · {Your mailing address} · Reply
+> "no thanks" and I won't write again.
+
+A form message isn't email, but keep the address and opt-out anyway: it's often forwarded as one.
+Check it still fits the form's character limit.
 
 ## LinkedIn connection note (under 300 characters)
 
 > Hi {First name}, I make a weekly scam alert credit unions send to members under their own brand,
 > reviewed by their compliance team before it goes out. Happy to share a free sample if it's useful
 > for {CU name}.
+
+LinkedIn notes aren't email and have no room for a footer. If the conversation moves to email, every
+email from then on gets the full signature with address and opt-out line.
 
 ---
 
@@ -109,6 +118,8 @@ news, such as a merger, a new branch, a fraud warning they posted), `{Your name}
 > someone else handles member education, I'd be grateful for their name.
 >
 > {Your name}
+> Scam Decoded · {Your mailing address}
+> Reply "no thanks" and I won't write again.
 
 ## Follow-up 2 (day 10, same thread): give something useful
 
@@ -131,10 +142,16 @@ news, such as a merger, a new branch, a fraud warning they posted), `{Your name}
 
 > Hi {First name}, I'll stop following up here. If member scam education comes up later this year,
 > the offer stands. Wishing the {CU name} team a quiet fraud season.
+>
+> {Your name}
+> Scam Decoded · {Your mailing address}
+> Reply "no thanks" and I won't write again.
 
 ---
 
 ## Replies
+
+Every reply below goes out with the same signature as email 1: your name, `{Your mailing address}` and the "no thanks" line.
 
 **"Yes, send the sample."**
 > Here it is: the 4-week sample (emails, social images, lobby slides, posters, staff briefs and

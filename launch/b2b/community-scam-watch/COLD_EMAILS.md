@@ -59,6 +59,8 @@ and mark it.
 
 > Hi {First name}, floating this back up. Happy to send the free sample; if someone else plans your
 > programs for older adults, I'd be grateful for their name.
+>
+> {Your name} · Scam Decoded · {Your mailing address} · Reply "no thanks" and I won't write again.
 
 ## Follow-up 2 (day 10): something useful
 
@@ -72,6 +74,8 @@ and mark it.
 ---
 
 ## Replies
+
+Every reply below goes out with the same signature as email 1: your name, `{Your mailing address}` and the "no thanks" line.
 
 - **"Send the sample."** Attach `out/sample-county-library.zip` and `out/sales-sheet.pdf`. Offer a
   branded version: ask for their logo, color and the help line to print.

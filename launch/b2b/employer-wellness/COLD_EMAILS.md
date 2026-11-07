@@ -80,6 +80,8 @@ Workplaces award), `{Your name}`, `{Your mailing address}`.
 
 > Hi {First name}, floating this back up. Happy to send the 4-month sample; if someone else handles
 > benefits communication, I'd be grateful for their name.
+>
+> {Your name} · Money Made Simple · {Your mailing address} · Reply "no thanks" and I won't write again.
 
 ## Follow-up 2 (day 10): something useful
 
@@ -93,6 +95,8 @@ Workplaces award), `{Your name}`, `{Your mailing address}`.
 ---
 
 ## Replies
+
+Every reply below goes out with the same signature as email 1: your name, `{Your mailing address}` and the "no thanks" line.
 
 - **"Send the sample."** Attach `out/sample-outfitters.zip`, `out/sales-sheet.pdf` and `out/COMPLIANCE_NOTE.pdf`.
   Offer a branded version: ask for their logo, colors, benefits contact, portal name and exact match wording.

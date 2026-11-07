@@ -79,11 +79,13 @@ Subject: A monthly note for your freelance clients, under your name
 > {Your mailing address} · Reply "no thanks" and I won't write again.
 
 **Follow-up 1 (day 4, same thread):** "Hi {First name}, just checking this reached you. Happy to send
-the sample if it's useful, or I'll leave it there."
+the sample if it's useful, or I'll leave it there." Sign it with the same two lines as email 1
+(`{Your name}`, then `{Your mailing address} · Reply "no thanks" and I won't write again.`).
 
 **Follow-up 2 (day 10): give something useful.** Paste the January issue's "Do it this month" steps
 as plain text and say: "Feel free to send that to your clients as it is. If you'd like one like it every
-month with your branding, the first 3 firms get 2 months free." Then stop.
+month with your branding, the first 3 firms get 2 months free." Sign it with the same two lines
+as email 1. Then stop.
 
 **When they reply "yes" or "send it":** send `out/sample-ledger.zip` and `out/sales-sheet.pdf`. When
 they want to go ahead, use `../credit-union-alert/onboarding/` and change the product name. The
