@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import Literal
 
 import yaml
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 
 def _load_dotenv(path: Path) -> None:
@@ -131,6 +131,10 @@ class VoiceStyle(BaseModel):
     banned_phrases: list[str] = Field(default_factory=list)
 
 
+DEFAULT_PLATFORM_TIMES = {"tiktok": ["18:00"], "pinterest": ["11:00"], "youtube:short": ["12:30"]}
+DEFAULT_WEEKLY_CAPS: dict[str, int] = {}  # scouting dropped the 3 Reels/week idea: 6-9 posts a week grows faster
+
+
 class Cadence(BaseModel):
     """Posting limits. Defaults are deliberately conservative."""
     shorts_per_week: int = 7
@@ -138,13 +142,42 @@ class Cadence(BaseModel):
     carousels_per_week: int = 3
     max_posts_per_day_per_platform: int = 2
     post_times: list[str] = Field(default_factory=lambda: ["12:30", "18:30"])  # local times
-    platform_times: dict[str, list[str]] = Field(default_factory=dict)  # e.g. {tiktok: ["19:00", "21:00"]}
+    # Local posting times per platform, or per "platform:format" (that wins). Defaults from scouting's
+    # posting-times memo (PR #2): TikTok 6pm, Pinterest 11am, YouTube Shorts 12:30. Anything not listed
+    # uses post_times. A brand file's platform_times entries are merged over these defaults.
+    platform_times: dict[str, list[str]] = Field(default_factory=lambda: dict(DEFAULT_PLATFORM_TIMES))
+    # Optional: at most N posts in any 7 days per "platform:format" (or "platform"), e.g.
+    # {"instagram:short": 3}. Past the cap the scheduler leaves that platform out (the post still goes to
+    # the others); asked for explicitly, it refuses. None by default.
+    platform_weekly_caps: dict[str, int] = Field(default_factory=lambda: dict(DEFAULT_WEEKLY_CAPS))
     timezone: str = "America/New_York"
     # Worker settings for this brand (multi-brand runner)
     daily_at: str = ""            # local HH:MM for the daily ideas+drafts run; "" = DAILY_AT env (07:00)
     daily_ideas: int = 8
     daily_drafts: int = 2         # posts drafted into the review queue per day
     paused: bool = False          # true = the worker skips this brand's daily run (publishing still runs)
+
+    @field_validator("platform_times", mode="after")
+    @classmethod
+    def _merge_times(cls, v: dict) -> dict:
+        return {**DEFAULT_PLATFORM_TIMES, **(v or {})}
+
+    @field_validator("platform_weekly_caps", mode="after")
+    @classmethod
+    def _merge_caps(cls, v: dict) -> dict:
+        return {**DEFAULT_WEEKLY_CAPS, **(v or {})}
+
+    def times_for(self, platform: str, fmt: str | None = None) -> list[str]:
+        return (self.platform_times.get(f"{platform}:{fmt}") if fmt else None) or self.platform_times.get(platform) \
+            or self.post_times
+
+    def weekly_cap(self, platform: str, fmt: str | None = None) -> int | None:
+        v = (self.platform_weekly_caps.get(f"{platform}:{fmt}") if fmt else None)
+        if v is None:
+            v = self.platform_weekly_caps.get(platform)
+        if v is None and fmt == "mid":
+            v = self.platform_weekly_caps.get(f"{platform}:short")
+        return v
 
 
 class AffiliateOffer(BaseModel):
