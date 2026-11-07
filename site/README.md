@@ -154,6 +154,29 @@ Articles and comparisons add `article:published_time`, `article:modified_time`, 
 `article:section`; products add `product:price:amount`/`currency` and availability. That's what Pinterest
 reads for article and product rich pins: claim the domain in Pinterest, then rich pins apply automatically.
 
+## Affiliate articles from the content thread
+
+16 review and "best of" articles from PR #5 are in `content/blog/` (see `AFFILIATE_ARTICLES.md` for the
+pre-publish checklist). They link out through `/go/<slug>/` redirect pages made from `go-links.json`.
+
+- **One place for approved links:** paste a tracking link into `go-links.json` > `affiliate_url` and run
+  `python3 site/tools/make_go_links.py`. The build also copies it into the matching `site.json` program, so
+  comparison pages, the resources page and their disclosures update too.
+- **No duplicates:** `site.json` > `blog_redirects` retires blog slugs a comparison page already covers
+  (best budgeting apps, best HYSAs, best robo-advisors, Monarch vs YNAB). Those articles are skipped even if
+  present, links to them are rewritten, and the old URL 301-redirects (`_redirects` on Netlify, a noindex
+  stub elsewhere).
+- **Cross-links:** `site.json` > `article_compare` adds a "Compare your options" box to an article and a
+  "Go deeper" list on the comparison page.
+
+## Deploy check
+
+`python3 site/tools/check_site.py` runs after every build on Netlify and GitHub Pages, and in the tests.
+It fails the deploy on broken internal links or #anchors, missing title/description/canonical/og:image/h1,
+insecure assets, or a page over budget (HTML 100 KB; HTML + same-site CSS/JS/images 350 KB; any image
+200 KB), and prints the five heaviest pages. It warns on long or duplicate titles and descriptions.
+Add `--external` locally to HEAD-check every outbound link.
+
 ## Everyday edits
 
 - **New article:** copy any file in `content/blog/`, change the front matter (`title`, `description`, `date`,

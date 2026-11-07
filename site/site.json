@@ -297,6 +297,46 @@
       "category": "Debt help",
       "blurb": "Network of nonprofit credit counselling agencies.",
       "compare": "best-balance-transfer-cards"
+    },
+    "freetaxusa": {
+      "name": "FreeTaxUSA",
+      "site": "https://www.freetaxusa.com/",
+      "affiliate_url": "",
+      "network": "FreeTaxUSA (direct)",
+      "note": "",
+      "category": "Taxes",
+      "blurb": "Low-cost tax filing; federal filing free, state return extra.",
+      "compare": ""
+    },
+    "taxact": {
+      "name": "TaxAct",
+      "site": "https://www.taxact.com/",
+      "affiliate_url": "",
+      "network": "TaxAct (CJ / TaxAct Alliance)",
+      "note": "",
+      "category": "Taxes",
+      "blurb": "Tax filing software with several paid tiers.",
+      "compare": ""
+    },
+    "kikoff": {
+      "name": "Kikoff",
+      "site": "https://kikoff.com/",
+      "affiliate_url": "",
+      "network": "Kikoff (FlexOffers)",
+      "note": "",
+      "category": "Building credit",
+      "blurb": "Credit-builder account with a small monthly fee.",
+      "compare": "best-credit-builder-cards"
+    },
+    "fidelity": {
+      "name": "Fidelity",
+      "site": "https://www.fidelity.com/retirement-ira/roth-ira",
+      "affiliate_url": "",
+      "network": "none (no affiliate)",
+      "note": "",
+      "category": "Investing",
+      "blurb": "Brokerage with no-minimum IRAs and index funds.",
+      "compare": ""
     }
   },
   "free_tools": [
@@ -336,5 +376,40 @@
       "blurb": "Free spreadsheets; opens our templates.",
       "category": "Budgeting apps"
     }
-  ]
+  ],
+  "blog_redirects_note": "Blog slugs whose topic is covered by a /compare/ page. The build skips any article with these slugs (so a duplicate never ships), rewrites links to them, and leaves a 301/noindex redirect at the old URL.",
+  "blog_redirects": {
+    "best-budgeting-apps": "/compare/best-budgeting-apps/",
+    "best-high-yield-savings-accounts": "/compare/best-high-yield-savings-accounts/",
+    "best-robo-advisors-for-beginners": "/compare/best-robo-advisors/",
+    "monarch-vs-ynab": "/compare/rocket-money-vs-ynab-vs-monarch/"
+  },
+  "article_compare_note": "Article slug -> comparison page shown in a 'Compare your options' box on the article; each comparison page lists the articles that point at it.",
+  "article_compare": {
+    "sofi-review": "best-high-yield-savings-accounts",
+    "cit-bank-review": "best-high-yield-savings-accounts",
+    "ally-bank-review": "best-high-yield-savings-accounts",
+    "high-yield-savings-vs-money-market": "best-high-yield-savings-accounts",
+    "best-bank-account-for-college-students": "best-high-yield-savings-accounts",
+    "how-to-build-an-emergency-fund": "best-high-yield-savings-accounts",
+    "is-my-savings-app-fdic-insured": "best-high-yield-savings-accounts",
+    "sinking-funds-explained": "best-high-yield-savings-accounts",
+    "rocket-money-review": "rocket-money-vs-ynab-vs-monarch",
+    "ynab-review": "rocket-money-vs-ynab-vs-monarch",
+    "monarch-money-review": "rocket-money-vs-ynab-vs-monarch",
+    "budgeting-app-vs-spreadsheet": "best-budgeting-apps",
+    "how-to-make-a-budget-you-will-keep": "best-budgeting-apps",
+    "find-and-cancel-subscriptions": "best-bill-negotiation-services",
+    "betterment-review": "best-robo-advisors",
+    "empower-review": "best-robo-advisors",
+    "acorns-review": "best-robo-advisors",
+    "how-to-start-investing-with-100-a-month": "best-robo-advisors",
+    "where-to-open-a-roth-ira": "best-robo-advisors",
+    "expense-ratios-explained": "best-robo-advisors",
+    "self-credit-builder-review": "best-credit-builder-cards",
+    "how-credit-scores-work": "best-credit-builder-cards",
+    "aura-review": "best-identity-theft-protection",
+    "how-to-freeze-your-credit": "best-identity-theft-protection",
+    "debt-avalanche-vs-snowball": "best-balance-transfer-cards"
+  }
 }

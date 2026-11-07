@@ -35,6 +35,8 @@ jobs:
           EMAIL_FORM_ACTION: ${{ vars.EMAIL_FORM_ACTION }}
           PLAUSIBLE_DOMAIN: ${{ vars.PLAUSIBLE_DOMAIN || 'moneymadesimple.netlify.app' }}
         run: python3 site/build.py
+      - name: Deploy check (links, SEO basics, page-weight budget)
+        run: python3 site/tools/check_site.py
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site/public

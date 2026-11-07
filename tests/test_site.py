@@ -65,6 +65,8 @@ def test_email_provider_switch(tmp_path):
 def test_plausible_analytics(tmp_path):
     out = _build(tmp_path, "https://example.org", PLAUSIBLE_DOMAIN="mms.example")
     for page in out.rglob("index.html"):
+        if 'http-equiv="refresh"' in page.read_text():
+            continue  # redirect stubs
         assert 'data-domain="mms.example"' in page.read_text(), page
     assert "script.outbound-links.tagged-events.js" in (out / "index.html").read_text()
     prod = (out / "products" / "the-20-minute-budget" / "index.html").read_text()
@@ -119,6 +121,55 @@ def test_hub_resources_quiz_and_rich_pins(tmp_path):
         assert 'property="article:published_time"' in html, page
     for page in out.rglob("index.html"):
         html = page.read_text()
+        if 'http-equiv="refresh"' in html:
+            continue  # redirect stubs
         assert 'property="og:image"' in html and 'name="pinterest-rich-pin"' in html, page
     prod = (out / "products" / "the-20-minute-budget" / "index.html").read_text()
     assert 'property="product:price:amount" content="12"' in prod
+
+
+@pytest.mark.parametrize("url", ["https://example.org", "https://someone.github.io/cocosl"])
+def test_deploy_check_passes(tmp_path, url):
+    sys.path.insert(0, str(SITE / "tools"))
+    import check_site
+    out = _build(tmp_path, url)
+    errors, _, report = check_site.check(out, urlparse(url).path.rstrip("/"))
+    assert not errors, errors
+    assert len(report) > 60
+
+
+def test_deploy_check_catches_problems(tmp_path):
+    sys.path.insert(0, str(SITE / "tools"))
+    import check_site
+    out = _build(tmp_path, "https://example.org")
+    page = out / "about" / "index.html"
+    page.write_text(page.read_text().replace("</main>", '<a href="/nope/">x</a><a href="#missing">y</a></main>'))
+    (out / "img" / "huge.png").write_bytes(b"0" * 300_000)
+    home = out / "index.html"
+    home.write_text(home.read_text().replace("</main>", '<img src="/img/huge.png" alt=""></main>'))
+    errors, _, _ = check_site.check(out, "")
+    text = "\n".join(errors)
+    assert "broken a -> /nope/" in text and "anchor #missing" in text and "huge.png" in text
+
+
+def test_affiliate_articles_merged_without_duplicates(tmp_path):
+    out = _build(tmp_path, "https://example.org")
+    cfg = json.loads((SITE / "site.json").read_text())
+    # Retired duplicate slugs redirect to the comparison page and never appear in the sitemap.
+    sitemap = (out / "sitemap.xml").read_text()
+    for old, new in cfg["blog_redirects"].items():
+        assert f"/blog/{old}/" not in sitemap
+        assert f"url={new}" in (out / "blog" / old / "index.html").read_text()
+        assert f"/blog/{old}/ {new} 301" in (out / "_redirects").read_text()
+    # Reviews link to their comparison page, and the comparison page links back.
+    sofi = (out / "blog" / "sofi-review" / "index.html").read_text()
+    assert "Compare your options" in sofi and "/compare/best-high-yield-savings-accounts/" in sofi
+    assert 'href="/go/sofi/"' in sofi and (out / "go" / "sofi" / "index.html").is_file()
+    hysa = (out / "compare" / "best-high-yield-savings-accounts" / "index.html").read_text()
+    assert "/blog/sofi-review/" in hysa
+    # No article links to a retired slug (links are rewritten to the comparison page).
+    for page in (out / "blog").glob("*/index.html"):
+        if page.parent.name in cfg["blog_redirects"]:
+            continue
+        for old in cfg["blog_redirects"]:
+            assert f'href="/blog/{old}/"' not in page.read_text(), page

@@ -40,6 +40,13 @@ def load_config() -> dict:
     url = os.environ.get("SITE_URL") or os.environ.get("URL") or cfg["url"]
     cfg["url"] = url.rstrip("/")
     cfg["base_path"] = urlparse(cfg["url"]).path.rstrip("/")  # "/cocosl" on a GitHub project page
+    # One place to paste approved affiliate links: site/go-links.json (also used by /go/<slug>/ redirects).
+    go_file = ROOT / "go-links.json"
+    cfg["go_links"] = json.loads(go_file.read_text())["links"] if go_file.exists() else {}
+    for key, prog in cfg.get("programs", {}).items():
+        go = cfg["go_links"].get(key.replace("_", "-"), {})
+        if not prog.get("affiliate_url") and go.get("affiliate_url"):
+            prog["affiliate_url"] = go["affiliate_url"]
     cfg.setdefault("analytics", {})
     if "PLAUSIBLE_DOMAIN" in os.environ:  # empty string turns analytics off
         cfg["analytics"]["plausible_domain"] = os.environ["PLAUSIBLE_DOMAIN"]
@@ -104,6 +111,8 @@ def inline(s: str) -> str:
         text, href = m.group(1), m.group(2)
         if href.startswith("aff:"):
             return aff_link(href[4:], text)
+        href = CFG.get("blog_redirects", {}).get(href.rstrip("/").rsplit("/", 1)[-1], href) \
+            if href.startswith("/blog/") else href
         ext = href.startswith("http") and urlparse(href).netloc not in CFG["url"]
         rel = ' rel="noopener"' if ext else ""
         if "sponsored" in href or "/go/" in href:
@@ -295,7 +304,7 @@ def email_form(source: str, button: str = "Send me the free reset", compact: boo
 def magnet_box(source: str) -> str:
     lm = CFG["lead_magnet"]
     return f"""<aside class="magnet" aria-label="Free download">
-  <img src="{u('/img/lead-magnet-cover.png')}" alt="Cover of {esc(lm['title'])}" width="150" height="194" loading="lazy">
+  <img src="{u('/img/lead-magnet-cover-sm.jpg')}" alt="Cover of {esc(lm['title'])}" width="150" height="194" loading="lazy">
   <div>
     <p class="kicker">Free download</p>
     <h2 class="magnet-title">{esc(lm['title'])}</h2>
@@ -305,10 +314,28 @@ def magnet_box(source: str) -> str:
 </aside>"""
 
 
+def compare_box(slug: str, comps: dict) -> str:
+    target = comps.get(CFG.get("article_compare", {}).get(slug, ""))
+    if not target:
+        return ""
+    return (f'<aside class="callout cmp-box"><p class="kicker">Compare your options</p>'
+            f'<p><a href="{u(f"/compare/{target["slug"]}/")}"><strong>{esc(target["title"])}</strong></a></p>'
+            f'<p>{esc(target["description"])}</p></aside>')
+
+
+def reviews_box(compare_slug: str, posts: list[dict]) -> str:
+    slugs = [s for s, c in CFG.get("article_compare", {}).items() if c == compare_slug]
+    items = [p for p in posts if p["slug"] in slugs]
+    if not items:
+        return ""
+    lis = "".join(f'<li><a href="{u(f"/blog/{p["slug"]}/")}">{esc(p["title"])}</a></li>' for p in items)
+    return f'<section class="next"><h2>Go deeper</h2><ul class="related">{lis}</ul></section>'
+
+
 def product_card(p: dict) -> str:
     price = price_html(p)
     return f"""<a class="product-card" href="{u(f"/products/{p['slug']}/")}">
-  <img src="{u(p['image'])}" alt="" width="640" height="360" loading="lazy">
+  <img src="{u(p.get('thumb') or p['image'])}" alt="" width="640" height="360" loading="lazy">
   <span class="pc-body"><span class="pc-title">{esc(p['title'])}</span>
   <span class="pc-short">{esc(p['short'])}</span>{price}</span>
 </a>"""
@@ -369,7 +396,8 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
            extra_head: str = "", og: dict | None = None) -> str:
     """og: extra Open Graph properties, e.g. article:published_time (article pins) or
     product:price:amount (product pins). Pinterest rich pins read these same tags."""
-    full_title = title if CFG["name"] in title else f"{title} · {CFG['name']}"
+    # Brand suffix only when it still fits in what Google shows (~60 chars).
+    full_title = title if CFG["name"] in title or len(title) > 40 else f"{title} · {CFG['name']}"
     nav = "".join(
         f'<a href="{u(href)}"{" aria-current=page" if path.startswith(href) and href != "/" else ""}>{esc(t)}</a>'
         for t, href in [("Start here", "/start/"), ("Articles", "/blog/"), ("Compare", "/compare/"),
@@ -460,7 +488,10 @@ def build() -> list[str]:
     shutil.copytree(STATIC, OUT)
     urls: list[tuple[str, str]] = []
 
-    posts = sorted(load_dir("blog"), key=lambda p: p["date"], reverse=True)
+    redirects = CFG.get("blog_redirects", {})
+    posts = sorted((p for p in load_dir("blog") if p["slug"] not in redirects and p.get("status") != "draft"),
+                   key=lambda p: (p["date"], p.get("order", "")), reverse=True)
+    comps_by_slug = {c["slug"]: c for c in load_dir("compare")}
     products_list = [p for p in load_dir("products") if p.get("status") != "draft"]
     products_list.sort(key=lambda p: int(p.get("order", 99)))
     products = {p["slug"]: p for p in products_list}
@@ -517,6 +548,7 @@ def build() -> list[str]:
   </div>
   {sources}
   <p class="disclaimer">{esc(CFG['disclaimer'])}</p>
+  {compare_box(p['slug'], comps_by_slug)}
   {magnet_box(f"blog-{p['slug']}-end")}
   {f'<section class="next"><h2>Tool for this</h2>{product_card(prod)}</section>' if prod else ''}
   <section class="next"><h2>Read next</h2><ul class="related">{rel_html}</ul></section>
@@ -576,6 +608,7 @@ def build() -> list[str]:
   </div>
   {sources}
   <p class="disclaimer">{esc(CFG['disclaimer'])}</p>
+  {reviews_box(c['slug'], posts)}
   {magnet_box(f"compare-{c['slug']}-end")}
 </article>"""
         write(path, layout(title=c.get("seo_title", c["title"]), description=c["description"], path=path,
@@ -755,7 +788,7 @@ def build() -> list[str]:
     <h3>Your next three moves</h3>
     <ol id="r-moves" class="days"></ol>
     <div class="magnet quiz-cta">
-      <img src="{u('/img/lead-magnet-cover.png')}" alt="" width="150" height="194" loading="lazy">
+      <img src="{u('/img/lead-magnet-cover-sm.jpg')}" alt="" width="150" height="194" loading="lazy">
       <div><p class="kicker">Free</p><h2 class="magnet-title">Get the 7-Day Money Reset</h2>
       <p>Your three moves, plus four more, as seven 15-minute tasks with worksheets. Free PDF.</p>
       {email_form('quiz', 'Send me the free reset')}</div>
@@ -781,7 +814,7 @@ def build() -> list[str]:
       <p class="dek">{esc(lm['pitch'])}</p>
       {email_form('free-page', 'Send me the free reset')}
     </div>
-    <img class="cover" src="{u('/img/lead-magnet-cover.png')}" alt="Cover of {esc(lm['title'])}" width="300" height="388">
+    <img class="cover" src="{u('/img/lead-magnet-cover-sm.jpg')}" alt="Cover of {esc(lm['title'])}" width="300" height="388">
   </div>
   <h2>What you'll do, one 15-minute task a day</h2>
   <ol class="days">{days}</ol>
@@ -847,7 +880,7 @@ def build() -> list[str]:
       <div class="hero-form"><p class="hero-offer">Get <strong>{esc(lm['title'])}</strong> free: seven 15-minute tasks that get your money organised in a week.</p>{email_form('home-hero', 'Send me the free reset')}</div>
       <p class="quiz-link">Not sure where to start? <a href="{u('/quiz/')}">Take the 1-minute money personality quiz</a> or see <a href="{u('/start/')}">Start here</a>.</p>
     </div>
-    <img class="cover" src="{u('/img/lead-magnet-cover.png')}" alt="Cover of {esc(lm['title'])}" width="300" height="388">
+    <img class="cover" src="{u('/img/lead-magnet-cover-sm.jpg')}" alt="Cover of {esc(lm['title'])}" width="300" height="388">
   </div>
 </section>
 <section class="wrap">
@@ -910,6 +943,18 @@ def build() -> list[str]:
     (OUT / "emails" / "sequence.json").write_text(json.dumps(export, indent=2, ensure_ascii=False))
     write("/emails/", layout(title="Email sequence preview", path="/emails/", noindex=True, description="Preview",
                              body=f'<section class="wrap"><h1>Welcome and nurture sequence</h1><p class="dek">Preview only (not linked, not indexed). Copy these into your email provider; see site/README.md.</p><div class="table"><table><thead><tr><th>#</th><th>Send</th><th>Subject</th><th>Job</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div></section>'))
+
+    # ---- redirects for retired blog slugs (stub page everywhere, real 301 on Netlify)
+    rules = []
+    for old, new in redirects.items():
+        target = absu(new)
+        write(f"/blog/{old}/", f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="robots" content="noindex"><link rel="canonical" href="{esc(target)}">
+<meta http-equiv="refresh" content="0; url={esc(u(new))}"><title>Moved</title></head>
+<body><p>This page moved to <a href="{esc(u(new))}">{esc(target)}</a>.</p></body></html>
+""")
+        rules.append(f"{u(f'/blog/{old}/')} {u(new)} 301")
+    (OUT / "_redirects").write_text("\n".join(rules) + "\n")
 
     # ---- sitemap, robots, feed
     sm = "".join(f"<url><loc>{esc(absu(p))}</loc><lastmod>{d}</lastmod></url>" for p, d in urls)
