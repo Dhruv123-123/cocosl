@@ -1,6 +1,6 @@
 import json
 import re
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 from contentfactory.pack import plan
@@ -21,6 +21,7 @@ MONTH4 = "month-4/content.json"
 MONTH5 = "month-5/content.json"
 MONTH6 = "month-6/content.json"
 DRIVERS = "drivers/content.json"
+YT6 = "youtube-6wk/content.json"
 
 
 def test_brand_loads_with_placeholder_affiliates(factory):
@@ -34,7 +35,7 @@ def test_brand_loads_with_placeholder_affiliates(factory):
 import pytest
 
 
-@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5]), (MONTH4, [22, 13, 4]), (MONTH5, [22, 13, 5]), (MONTH6, [22, 14, 4]), (DRIVERS, [10, 0, 0])])
+@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5]), (MONTH4, [22, 13, 4]), (MONTH5, [22, 13, 5]), (MONTH6, [22, 14, 4]), (DRIVERS, [10, 0, 0]), (YT6, [0, 0, 6])])
 def test_content_is_valid(factory, name, counts):
     from contentfactory.schemas import Script
     brand = factory.brand("1099-money")
@@ -387,7 +388,7 @@ def test_threads_x_kit_fits_both_platforms_and_is_ready():
 
 def test_short_titles_fit_in_60_characters():
     # Shorts titles get cut off in the feed past ~60 characters; YouTube's hard limit is 100 for any video.
-    files = ["content.json", MONTH1, MONTH2, MONTH3, MONTH4, MONTH5, MONTH6, DRIVERS]
+    files = ["content.json", MONTH1, MONTH2, MONTH3, MONTH4, MONTH5, MONTH6, DRIVERS, YT6]
     for name in files:
         for it in _items(name):
             title = it["script"]["title"]
@@ -403,3 +404,28 @@ def test_tax_checklist_lead_magnet_is_built_and_dated():
     assert html.count('class="page') == 5 and "not tax" in html.lower()
     pdf = ROOT / "apps" / "freelance-tax" / "downloads" / "freelancer-tax-checklist.pdf"
     assert pdf.exists() and pdf.read_bytes()[:4] == b"%PDF" and pdf.stat().st_size > 20000
+
+
+def test_six_week_youtube_plan_has_charts_end_slates_and_new_titles(factory):
+    plan_items = _items(YT6)
+    earlier = {i["script"]["title"].lower() for n in ["content.json", MONTH1, MONTH2, MONTH3, MONTH4, MONTH5, MONTH6, DRIVERS]
+               for i in _items(n)}
+    assert not earlier & {i["script"]["title"].lower() for i in plan_items}
+    for it in plan_items:
+        segs = it["script"]["segments"]
+        # A real chart drawn from the video's own numbers, so the pack's original-element check passes.
+        charts = [s for s in segs if s.get("chart")]
+        assert charts and all(len(c["chart"]["labels"]) == len(c["chart"]["values"]) >= 2 for c in charts)
+        assert all(v > 0 for c in charts for v in c["chart"]["values"])  # the chart renderer draws bars up from zero
+        # 20-second end slate: the last beat, ~20s of narration at 160 wpm, with end-screen cards planned.
+        end = segs[-1]
+        seconds = len(end["narration"].split()) / 160 * 60 + 1
+        assert end["heading"] == "End slate" and 19 <= seconds <= 21, (it["script"]["title"], seconds)
+        assert it["end_slate"]["seconds"] == 20 and len(it["end_slate"]["cards"]) >= 2
+        assert segs[-2]["heading"] == "Recap"
+    # Each end slate points at the next week's video; the last one points back to the first.
+    titles = [i["script"]["title"] for i in plan_items]
+    assert [i["end_slate"]["watch_next"] for i in plan_items] == titles[1:] + titles[:1]
+    slots, leftover = plan(factory.brand("1099-money"), plan_items, date(2027, 6, 6), 36)
+    assert not leftover
+    assert sorted(s.when.date() for s in slots) == [date(2027, 6, 6) + timedelta(weeks=k) for k in range(6)]

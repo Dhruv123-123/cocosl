@@ -1,0 +1,1106 @@
+[
+ {
+  "format": "long",
+  "pillar": "benefits without an employer",
+  "idea_angle": "Retirement accounts for people with no employer plan.",
+  "script": {
+   "title": "SEP IRA or Solo 401(k)? Freelance retirement accounts with real numbers",
+   "hook": "Two freelancers earn exactly the same, sixty thousand dollars of profit. One can put about eleven thousand dollars into a retirement account this year. The other can put in over thirty-five thousand. Same income, same tax bracket, different account. In this video we'll compare the two accounts most freelancers choose between, the SEP IRA and the Solo 401(k), with twenty twenty-six limits and real numbers on screen, then cover deadlines, paperwork and which one fits which kind of freelancer. Education, not advice.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Two freelancers earn exactly the same, sixty thousand dollars of profit. One can put about eleven thousand dollars into a retirement account this year. The other can put in over thirty-five thousand. Same income, same tax bracket, different account. In this video we'll compare the two accounts most freelancers choose between, the SEP IRA and the Solo 401(k), with twenty twenty-six limits and real numbers on screen, then cover deadlines, paperwork and which one fits which kind of freelancer. Education, not advice.",
+     "on_screen_text": "SEP IRA vs Solo 401(k)",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding two different piggy banks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why it matters",
+     "narration": "When you leave a job, you lose two things at once: the workplace plan, and the employer match. Nobody is going to save for you now. The good news is that the accounts available to self-employed people have higher limits than most workplace plans. The catch is that you have to open one yourself, choose the amounts yourself, and get the deadlines right. That's what this video is for.",
+     "on_screen_text": "No employer, no match, higher limits",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an empty office chair next to a piggy bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "The IRA baseline",
+     "narration": "First, the account everyone can use. A traditional or Roth IRA lets you contribute up to seven thousand five hundred dollars for twenty twenty-six, plus a one thousand one hundred dollar catch-up if you're fifty or older. That's a good start, but for many freelancers it's not enough. If you used to put ten percent of a seventy-thousand-dollar salary into a 401(k) and got a match, you were saving more than this.",
+     "on_screen_text": "IRA: $7,500 for 2026",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small piggy bank on a shelf. No text, no logos, no real people."
+    },
+    {
+     "heading": "SEP IRA",
+     "narration": "The SEP IRA is the simple one. You open it at a brokerage in a few minutes, there's no annual filing for a one-person plan, and you contribute as the employer. The limit is a percentage of your earnings. On paper it's twenty-five percent of compensation, but for a sole proprietor it works out to about twenty percent of your net profit after you subtract half of your self-employment tax. There's also a dollar cap of seventy-two thousand for twenty twenty-six.",
+     "on_screen_text": "SEP: ≈20% of adjusted profit",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a single piggy bank with a percent sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "SEP math",
+     "narration": "Let's do it at sixty thousand of profit. Self-employment tax is about eight thousand four hundred seventy-eight, so half of it is about four thousand two hundred thirty-nine. Sixty thousand minus that is fifty-five thousand seven hundred sixty-one. Twenty percent of that is about eleven thousand one hundred fifty. That's the most a sole proprietor at sixty thousand can put into a SEP. At a hundred and twenty thousand of profit, the same math gives about twenty-two thousand three hundred.",
+     "on_screen_text": "$60K profit → SEP max ≈ $11,150",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calculator next to a piggy bank. No text, no logos, no real people."
+    },
+    {
+     "heading": "Solo 401(k)",
+     "narration": "The Solo 401(k) is for a business with no employees other than you, and your spouse if they work in it. You contribute in two roles. As the employee, you can defer up to twenty-four thousand five hundred dollars for twenty twenty-six, plus an eight thousand dollar catch-up from age fifty, or eleven thousand two hundred fifty if you're sixty to sixty-three. Then as the employer, you can add the same twenty percent you'd get in a SEP. Both together are capped at seventy-two thousand, before catch-ups.",
+     "on_screen_text": "Solo 401(k): employee + employer",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two piggy banks stacked. No text, no logos, no real people."
+    },
+    {
+     "heading": "Solo math",
+     "narration": "Back to sixty thousand of profit. Employee deferral: twenty-four thousand five hundred. Employer contribution: the same eleven thousand one hundred fifty. Total: about thirty-five thousand six hundred fifty. That's more than three times the SEP. At a hundred and twenty thousand, it's twenty-four thousand five hundred plus twenty-two thousand three hundred, about forty-six thousand eight hundred. One limit to remember: your total can't be more than your net earnings, which matters for a small side business.",
+     "on_screen_text": "$60K profit → Solo max ≈ $35,650",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a taller stack of coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Comparison chart",
+     "narration": "Here are both accounts side by side. At sixty thousand of profit, about eleven thousand one hundred fifty in a SEP and about thirty-five thousand six hundred fifty in a Solo 401(k). At a hundred and twenty thousand, about twenty-two thousand three hundred versus forty-six thousand eight hundred. The gap is the employee deferral, and it matters most at lower incomes. If you can only save ten thousand this year anyway, both accounts let you do it. If you want to save more, the SEP may be the one holding you back.",
+     "on_screen_text": "SEP vs Solo at $60K and $120K",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a bar chart with four bars. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Max contribution, 2026",
+      "labels": [
+       "SEP $60K",
+       "Solo $60K",
+       "SEP $120K",
+       "Solo $120K"
+      ],
+      "values": [
+       11152,
+       35652,
+       22304,
+       46804
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Single sole proprietor, under 50, 2026 limits. Illustrative."
+     }
+    },
+    {
+     "heading": "Tax effect",
+     "narration": "Traditional contributions to either account are deducted on Schedule 1, line sixteen, as a self-employed retirement contribution. That lowers your income tax. It doesn't lower your self-employment tax, which is figured on your Schedule C profit before the contribution. So a contribution saves you roughly your top income tax bracket, not your whole tax rate. Roth contributions save nothing now but come out tax-free later, which can suit a year when your income is low.",
+     "on_screen_text": "Lowers income tax, not SE tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a receipt with one line crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Roth options",
+     "narration": "Both accounts can now have a Roth side, though not every provider offers it yet. A Solo 401(k) can let you make your employee deferral as Roth. Since the SECURE two point oh law, SEP IRAs can accept Roth contributions too. If having Roth money matters to you, check what the provider supports before you open the account, because moving later is more paperwork.",
+     "on_screen_text": "Roth: check your provider",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two piggy banks, one with a sun. No text, no logos, no real people."
+    },
+    {
+     "heading": "Deadlines",
+     "narration": "Deadlines are where these two accounts differ most. A SEP can be opened and funded up to your tax filing deadline, including extensions. So in April twenty twenty-seven, you can still open a SEP and count it for twenty twenty-six. A Solo 401(k) can also be set up for a year by your filing deadline, and recent law lets a sole proprietor make the first year's employee deferral by the filing date too. But the rules differ by plan year, so confirm the dates with your provider before you rely on a late start.",
+     "on_screen_text": "SEP: up to your filing deadline",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with April circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Paperwork",
+     "narration": "The SEP has almost no paperwork for a one-person business. The Solo 401(k) has a little more: a plan document from the provider, and once the plan's assets go over two hundred fifty thousand dollars, an annual Form fifty-five hundred EZ. That form is short, but missing it can mean penalties, so put it in your calendar the year your balance gets close.",
+     "on_screen_text": "Solo 401(k): Form 5500-EZ over $250K",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a short form with a pen. No text, no logos, no real people."
+    },
+    {
+     "heading": "Employees",
+     "narration": "One thing changes everything: hiring. If you have employees who meet the eligibility rules, a SEP generally requires you to contribute the same percentage for them as for yourself, and a Solo 401(k) stops being a solo plan. Contractors don't count as employees here. If you expect to hire, read the eligibility rules first, or talk to the provider about which plan you'd move to.",
+     "on_screen_text": "Hiring changes the rules",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a second chair appearing at a desk. No text, no logos, no real people."
+    },
+    {
+     "heading": "Which fits",
+     "narration": "So who picks which? The SEP fits if you want the simplest setup, you're saving a percentage of a high profit, or it's already tax season and you need an account for last year. The Solo 401(k) fits if your profit is moderate and you want to save more than twenty percent of it, you want Roth deferrals, or you have a day job's 401(k) already. One note there: the employee deferral limit is shared across all your 401(k)s, so a day-job plan uses up some of it.",
+     "on_screen_text": "SEP: simple · Solo: saves more",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two signposts. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mistakes",
+     "narration": "Four mistakes to avoid. Using twenty-five percent of profit instead of about twenty percent for the employer part. Forgetting the shared employee limit when you also have a workplace 401(k). Opening a Solo 401(k) in late December and assuming every contribution can wait until April. And never increasing the amount: set a percentage, and when your profit rises, the contribution rises with it.",
+     "on_screen_text": "4 retirement mistakes",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four small warning signs. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Recap. An IRA is seven thousand five hundred. A SEP is about twenty percent of profit after half your self-employment tax. A Solo 401(k) adds a twenty-four thousand five hundred employee deferral on top. Both cap at seventy-two thousand, and both lower income tax but not self-employment tax. At sixty thousand of profit, that's about eleven thousand versus thirty-five thousand. Pick the one that fits how much you want to save, and check the deadlines before you count on them.",
+     "on_screen_text": "Recap",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes closing a notebook and smiling. No text, no logos, no real people."
+    },
+    {
+     "heading": "End slate",
+     "narration": "Next Sunday: how much of every client payment to set aside for taxes, with the exact percentage at four income levels. The video's on screen now, so you can go straight there. And if you want one freelancer money move a week, the subscribe button is right there. See you next Sunday.",
+     "on_screen_text": "Next: what to set aside",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes waving from the left third of the frame; the right two thirds are plain, empty background for YouTube end-screen cards. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Subscribe for one freelancer money move a week.",
+   "caption": "SEP IRA vs Solo 401(k) for freelancers, with 2026 limits: IRA $7,500; SEP ≈ 20% of profit after half SE tax; Solo 401(k) adds a $24,500 employee deferral; both capped at $72,000. At $60K profit: ≈ $11,150 vs ≈ $35,650. At $120K: ≈ $22,300 vs ≈ $46,800. Tax effect, Roth options, deadlines, Form 5500-EZ, hiring, which fits whom.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSubscribe for one freelancer money move a week.",
+   "hashtags": [
+    "solo401k",
+    "sepira",
+    "retirement",
+    "selfemployed",
+    "freelancing",
+    "1099money"
+   ],
+   "description": "SEP IRA or Solo 401(k)? How much a freelancer can save in each, with 2026 limits and real numbers.\n\nChapters\n0:00 SEP IRA vs Solo 401(k)\n0:31 No employer, no match, higher limits\n0:58 IRA: $7,500 for 2026\n1:26 SEP: ≈20% of adjusted profit\n1:58 $60K profit → SEP max ≈ $11,150\n2:29 Solo 401(k): employee + employer\n3:02 $60K profit → Solo max ≈ $35,650\n3:32 SEP vs Solo at $60K and $120K\n4:07 Lowers income tax, not SE tax\n4:36 Roth: check your provider\n5:01 SEP: up to your filing deadline\n5:38 Solo 401(k): Form 5500-EZ over $250K\n6:02 Hiring changes the rules\n6:28 SEP: simple · Solo: saves more\n7:02 4 retirement mistakes\n7:26 Recap\n7:57 Next: what to set aside\n\nFree quarterly tax calculator: https://1099money.netlify.app/\n\nSources: irs.gov (SEP plans, one-participant 401(k) plans, 2026 contribution limits).\n\nEducational only, not tax, legal or financial advice.",
+   "thumbnail_text": "SEP or Solo 401(k)?",
+   "sources": [
+    "https://www.irs.gov/retirement-plans/plan-sponsor/simplified-employee-pension-plan-sep",
+    "https://www.irs.gov/retirement-plans/one-participant-401k-plans",
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-401k-and-profit-sharing-plan-contribution-limits",
+    "https://www.irs.gov/retirement-plans/plan-participant-employee/sep-contribution-limits-including-grandfathered-sarseps",
+    "https://www.irs.gov/forms-pubs/about-schedule-se-form-1040"
+   ],
+   "claims_to_verify": [
+    "2026 limits: 401(k) deferral $24,500; catch-up 50+ $8,000; age 60-63 $11,250; annual additions $72,000; IRA $7,500, catch-up $1,100",
+    "$60K profit: SE tax $8,478, half $4,239, 20% of $55,761 ≈ $11,152",
+    "$120K profit: SE tax $16,955, half ≈ $8,478, 20% of $111,522 ≈ $22,304",
+    "SEP Roth contributions permitted since SECURE 2.0 (provider support varies)",
+    "Sole proprietor first-year Solo 401(k) deferral by the filing date (SECURE 2.0): confirm current rule",
+    "Form 5500-EZ required when one-participant plan assets exceed $250,000",
+    "Chapter timestamps must match final edit"
+   ]
+  },
+  "format_style": "comparison",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Bar chart of the maximum SEP IRA and Solo 401(k) contributions at $60,000 and $120,000 of profit, computed in the video from 2026 limits",
+   "chapter": "Comparison chart"
+  },
+  "end_slate": {
+   "seconds": 20,
+   "watch_next": "How much of every freelance payment to set aside for taxes",
+   "cards": [
+    "Video: How much of every freelance payment to set aside for taxes",
+    "Subscribe button",
+    "Playlist: Freelance money, start here"
+   ],
+   "layout": "Mascot on the left third; cards on the right two thirds. No new information on screen."
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "quarterly estimated taxes",
+  "idea_angle": "A set-aside percentage you can apply to every payment.",
+  "script": {
+   "title": "How much of every freelance payment to set aside for taxes",
+   "hook": "Twenty, twenty-five, thirty percent. Everyone has a different answer for how much of a freelance payment to save for taxes, and most of them are guesses. Today we'll work out the real number at four levels of profit with twenty twenty-six federal figures, then add state tax, a day job, and business expenses, so you end up with one percentage you can use on every payment that comes in. Education, not tax advice. All examples are fictional single filers.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Twenty, twenty-five, thirty percent. Everyone has a different answer for how much of a freelance payment to save for taxes, and most of them are guesses. Today we'll work out the real number at four levels of profit with twenty twenty-six federal figures, then add state tax, a day job, and business expenses, so you end up with one percentage you can use on every payment that comes in. Education, not tax advice. All examples are fictional single filers.",
+     "on_screen_text": "What to set aside, worked out",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes dropping a coin into a jar labeled with a percent sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why a percentage",
+     "narration": "Why a percentage and not a dollar amount? Because freelance income is lumpy. You might be paid twelve thousand in March and nothing in April. If you set aside a fixed percentage of every payment the day it arrives, the tax money grows with your income automatically, and you never have to remember what you've earned so far. The trick is picking a percentage that's high enough without being so high that you're short on rent.",
+     "on_screen_text": "Every payment, same percent",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. coins of different sizes falling into one jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Two taxes",
+     "narration": "Two federal taxes come out of freelance profit. Self-employment tax is fifteen point three percent of ninety-two point three five percent of profit, which is about fourteen point one percent of every dollar, up to the Social Security wage base of one hundred eighty-four thousand five hundred for twenty twenty-six. Then income tax, which depends on your bracket and is lowered by the standard deduction, half of your self-employment tax and the twenty percent qualified business income deduction.",
+     "on_screen_text": "SE tax ≈ 14.1% + income tax",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two jars side by side. No text, no logos, no real people."
+    },
+    {
+     "heading": "$30K",
+     "narration": "First example: thirty thousand dollars of profit. Self-employment tax is about four thousand two hundred thirty-nine. After the deductions, income tax is only about nine hundred forty. Total federal tax: about five thousand one hundred eighty, or seventeen point three percent of profit. Notice that most of it is self-employment tax. At this level, income tax is small, but self-employment tax starts on almost the first dollar.",
+     "on_screen_text": "$30K profit → 17.3%",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a short coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "$60K",
+     "narration": "Sixty thousand of profit. Self-employment tax: about eight thousand four hundred seventy-eight. Income tax: about three thousand five hundred sixty. Total: about twelve thousand thirty-seven, or twenty point one percent. This is the number many freelancers are closest to, and it's why twenty percent is a common rule of thumb. It's right on the line, with nothing spare for state tax.",
+     "on_screen_text": "$60K profit → 20.1%",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a medium coin stack. No text, no logos, no real people."
+    },
+    {
+     "heading": "$90K and $120K",
+     "narration": "Ninety thousand: about nineteen thousand three hundred sixteen, or twenty-one point five percent. A hundred and twenty thousand: about twenty-eight thousand four hundred sixty-two, or twenty-three point seven percent. The percentage climbs slowly, because more of your income lands in the twenty-two and twenty-four percent brackets. It doesn't jump, because only the income above each bracket line is taxed at the higher rate.",
+     "on_screen_text": "$90K → 21.5% · $120K → 23.7%",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two taller coin stacks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Rate chart",
+     "narration": "Here are all four on one chart. Seventeen point three percent at thirty thousand, twenty point one at sixty, twenty-one point five at ninety, and twenty-three point seven at a hundred and twenty. The line is flatter than most people expect. Pick the bar closest to the profit you expect this year, not last year, and that's your federal starting point.",
+     "on_screen_text": "Federal set-aside by profit",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a bar chart with four rising bars. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Federal set-aside, 2026",
+      "labels": [
+       "$30K",
+       "$60K",
+       "$90K",
+       "$120K"
+      ],
+      "values": [
+       17.3,
+       20.1,
+       21.5,
+       23.7
+      ],
+      "unit_prefix": "",
+      "unit_suffix": "%",
+      "note": "Single filer, no other income, standard deduction, QBI. Before state tax."
+     }
+    },
+    {
+     "heading": "State tax",
+     "narration": "Next, state tax. Nine states have no tax on wage income, and the rest range from a few percent to more than ten at the top. A simple way to handle it: look up your state's rate for your income level and add it to the federal number. At sixty thousand of profit in a state with a five percent rate, that's twenty point one plus five, about twenty-five percent. Your state's revenue department website lists its brackets.",
+     "on_screen_text": "Add your state's rate",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a map outline with a small coin. No text, no logos, no real people."
+    },
+    {
+     "heading": "Day job",
+     "narration": "If you also have a day job, the set-aside goes up, not down. Your wages already fill the lower brackets and the standard deduction, so every freelance dollar is taxed at your top rate. Say you earn sixty thousand in wages and thirty thousand freelancing. The extra tax caused by the freelance income is about eight thousand five hundred, which is twenty-eight point three percent of it. That's eleven points more than the same thirty thousand on its own.",
+     "on_screen_text": "Day job + $30K side → 28.3%",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a briefcase next to a laptop. No text, no logos, no real people."
+    },
+    {
+     "heading": "Expenses",
+     "narration": "These percentages are of profit, not of payments. If you spend money to do the work, your profit is smaller than what clients pay you. So if a fifth of your revenue goes on expenses, twenty-five percent of profit is about twenty percent of each payment. The simple, safe version: apply the percentage to the whole payment and treat anything left over in April as a bonus.",
+     "on_screen_text": "Percent of profit, not revenue",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a payment with a slice cut off. No text, no logos, no real people."
+    },
+    {
+     "heading": "A payment",
+     "narration": "Let's use it. A client pays two thousand dollars. Our sixty-thousand-dollar freelancer in a five percent state sets aside twenty-five percent: five hundred dollars, the same day, into a separate savings account. Fifteen hundred goes to checking for the business and for pay. When a quarterly deadline arrives, the payment comes out of that account, not out of whatever is left in checking.",
+     "on_screen_text": "$2,000 in → $500 to tax savings",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin splitting into two jars. No text, no logos, no real people."
+    },
+    {
+     "heading": "Quarterly",
+     "narration": "Setting money aside isn't the same as paying it. The IRS wants estimated payments through the year: April fifteenth, June fifteenth, September fifteenth and January fifteenth. If your tax savings account holds the right percentage, each payment is just a transfer. And if you're using the prior-year safe harbor, you may owe less in each quarter than you've saved, which is fine. The rest waits for April.",
+     "on_screen_text": "Save it, then pay it quarterly",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four calendar pages. No text, no logos, no real people."
+    },
+    {
+     "heading": "Check-ins",
+     "narration": "Once a quarter, check the percentage against reality. Add up your profit so far, multiply by the number of quarters left in the year, and see if your forecast has moved into a different bar on the chart. If you're on track for ninety thousand instead of sixty, raise the set-aside by a point or two. The free quarterly tax calculator in the description does this check with your own numbers.",
+     "on_screen_text": "Recheck every quarter",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a magnifying glass over a bar chart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Big payments",
+     "narration": "What about a single big payment, like a fifteen-thousand-dollar project? The same percentage still works, as long as your forecast for the year includes it. Where people go wrong is the year their income jumps. If one big contract will push you from sixty thousand to ninety, use the ninety-thousand rate from the moment you sign it, not after the money is spent.",
+     "on_screen_text": "Big contract? Use the new rate now",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a large coin dropping into a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Leftovers",
+     "narration": "If you end the year with more in tax savings than you owe, you have options. Leave it there as the start of next year's set-aside. Use it for a retirement contribution before your filing deadline, which can lower the tax itself. Or move it to your emergency fund. The one thing not to do is lower the percentage just because one year had a surplus.",
+     "on_screen_text": "Extra in April? Three good uses",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a jar with a few coins left. No text, no logos, no real people."
+    },
+    {
+     "heading": "Married",
+     "narration": "Married and filing jointly? The brackets and standard deduction roughly double, so a freelancer whose spouse has little income often ends up a little lower than the single numbers here. If your spouse has a good salary, it's the day-job case again: the freelance income sits on top of their wages and the set-aside goes up. Run it with both incomes in the calculator.",
+     "on_screen_text": "Married: depends on the other income",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two rings next to a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mistakes",
+     "narration": "The common mistakes: using last year's percentage after a big raise. Forgetting state tax. Treating the day-job case like a solo freelancer. Keeping the tax money in the same account as everything else, so it slowly gets spent. And saving the money but skipping the quarterly payments, which can still mean a penalty in April even though the cash was there.",
+     "on_screen_text": "5 set-aside mistakes",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. five small warning signs. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Recap. Federal set-aside is about seventeen percent at thirty thousand of profit, twenty at sixty, twenty-one and a half at ninety, and twenty-four at a hundred and twenty. Add your state's rate. If you have a day job, expect closer to thirty. Apply it to every payment the day it arrives, keep it in a separate account, pay quarterly from it, and recheck the percentage every quarter.",
+     "on_screen_text": "Recap",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes closing a notebook and smiling. No text, no logos, no real people."
+    },
+    {
+     "heading": "End slate",
+     "narration": "Next Sunday: is an S corp worth it? Three freelancers at sixty, one hundred and one hundred fifty thousand run the real numbers. That video is on screen now. Subscribe for one freelancer money move every week, and I'll see you next Sunday for the S corp math. Thanks for watching.",
+     "on_screen_text": "Next: S corp or not?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes waving from the left third of the frame; the right two thirds are plain, empty background for YouTube end-screen cards. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Subscribe for one freelancer money move a week.",
+   "caption": "How much of each freelance payment to set aside for 2026 federal tax: ≈ 17.3% at $30K profit, 20.1% at $60K, 21.5% at $90K, 23.7% at $120K (single). Plus state tax, the day-job case (≈ 28.3% on a $30K side income), expenses, a $2,000 payment worked through, quarterly payments and check-ins.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSubscribe for one freelancer money move a week.",
+   "hashtags": [
+    "freelancetaxes",
+    "quarterlytaxes",
+    "selfemployed",
+    "1099",
+    "taxtips",
+    "1099money"
+   ],
+   "description": "The set-aside percentage for freelance taxes, worked out at four income levels with 2026 numbers.\n\nChapters\n0:00 What to set aside, worked out\n0:30 Every payment, same percent\n1:00 SE tax ≈ 14.1% + income tax\n1:30 $30K profit → 17.3%\n1:56 $60K profit → 20.1%\n2:20 $90K → 21.5% · $120K → 23.7%\n2:45 Federal set-aside by profit\n3:08 Add your state's rate\n3:39 Day job + $30K side → 28.3%\n4:09 Percent of profit, not revenue\n4:35 $2,000 in → $500 to tax savings\n5:00 Save it, then pay it quarterly\n5:26 Recheck every quarter\n5:54 Big contract? Use the new rate now\n6:18 Extra in April? Three good uses\n6:44 Married: depends on the other income\n7:09 5 set-aside mistakes\n7:33 Recap\n7:59 Next: S corp or not?\n\nFree quarterly tax calculator: https://1099money.netlify.app/\n\nSources: irs.gov (estimated taxes, Schedule SE, Publication 505), SSA wage base.\n\nEducational only, not tax, legal or financial advice.",
+   "thumbnail_text": "What to set aside",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.irs.gov/forms-pubs/about-schedule-se-form-1040",
+    "https://www.irs.gov/publications/p505",
+    "https://www.ssa.gov/oact/cola/cbb.html"
+   ],
+   "claims_to_verify": [
+    "2026 single, standard deduction $16,100, QBI 20%: total federal tax $5,181 at $30K, $12,037 at $60K, $19,316 at $90K, $28,462 at $120K",
+    "$60K wages + $30K freelance: extra federal tax ≈ $8,496 (28.3%)",
+    "2026 Social Security wage base $184,500",
+    "Nine states with no tax on wage income (check current list)",
+    "Chapter timestamps must match final edit"
+   ]
+  },
+  "format_style": "real-numbers",
+  "original_element": {
+   "type": "worked-example-chart",
+   "detail": "Bar chart of the federal set-aside percentage at $30K, $60K, $90K and $120K of profit, computed with the free calculator's 2026 method",
+   "chapter": "Rate chart"
+  },
+  "end_slate": {
+   "seconds": 20,
+   "watch_next": "S corp or not? Three freelancers run the numbers",
+   "cards": [
+    "Video: S corp or not? Three freelancers run the numbers",
+    "Subscribe button",
+    "Playlist: Freelance money, start here"
+   ],
+   "layout": "Mascot on the left third; cards on the right two thirds. No new information on screen."
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "deductions with sources",
+  "idea_angle": "S corp savings worked out with the new calculator.",
+  "script": {
+   "title": "S corp or not? Three freelancers run the numbers",
+   "hook": "You've probably heard that an S corp saves freelancers ten thousand dollars a year. For some people it saves something. For many, it saves almost nothing once you count everything. Today three fictional freelancers, at sixty thousand, a hundred thousand and a hundred and fifty thousand of profit, put their numbers into the free S corp calculator, using twenty twenty-six federal figures. We'll see who saves, who loses, and the one setting that changes everything. Education, not advice.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "You've probably heard that an S corp saves freelancers ten thousand dollars a year. For some people it saves something. For many, it saves almost nothing once you count everything. Today three fictional freelancers, at sixty thousand, a hundred thousand and a hundred and fifty thousand of profit, put their numbers into the free S corp calculator, using twenty twenty-six federal figures. We'll see who saves, who loses, and the one setting that changes everything. Education, not advice.",
+     "on_screen_text": "S corp: three real-number cases",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes at a desk with three folders. No text, no logos, no real people."
+    },
+    {
+     "heading": "How it works",
+     "narration": "Quick refresher. As a sole proprietor, all of your profit is hit by self-employment tax. With an S corp election, you become an employee of your own company. You pay yourself a salary, and Social Security and Medicare apply only to that salary. The profit left over passes to your return without payroll tax. That gap is the whole saving. Everything else in this video is about what eats into it.",
+     "on_screen_text": "Payroll tax only on your salary",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a pie split into salary and profit. No text, no logos, no real people."
+    },
+    {
+     "heading": "Four costs",
+     "narration": "There are four things the online math usually skips. One: running payroll and an extra business tax return, Form eleven twenty S, costs money every year. Two: you lose the deduction for half of self-employment tax. Three: the twenty percent qualified business income deduction only applies to profit after your salary, so it shrinks. Four: the company pays a small federal unemployment tax on your wages. The calculator includes all four.",
+     "on_screen_text": "4 costs the hype skips",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four small coins leaving a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Maya, $60K",
+     "narration": "Maya is a designer with sixty thousand of profit. She pays herself a salary of thirty-six thousand, sixty percent of profit, and running the S corp costs her three thousand a year. Payroll tax on the salary is about two thousand nine hundred seventy less than her old self-employment tax. But her income tax goes up about three hundred thirty, unemployment tax is forty-two, and costs are three thousand. Net result: she's about four hundred dollars worse off.",
+     "on_screen_text": "$60K: about $400 worse off",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a folder with a small minus sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "Jordan, $100K",
+     "narration": "Jordan writes code and has a hundred thousand of profit, with a sixty-thousand-dollar salary and the same three thousand of costs. The payroll tax gap is about four thousand nine hundred fifty. Income tax goes up about eighteen hundred thirty, unemployment tax is forty-two, costs are three thousand. Left over: about seventy-six dollars a year. That's a wash, and it comes with payroll every month and a second tax return.",
+     "on_screen_text": "$100K: about $76 a year",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a balance scale almost level. No text, no logos, no real people."
+    },
+    {
+     "heading": "Jordan's chart",
+     "narration": "Here's Jordan's hundred thousand broken into pieces. Payroll tax saved: about four thousand nine hundred fifty. Then the extra income tax: about eighteen hundred thirty. Running costs plus unemployment tax: about three thousand forty. What's left: about seventy-six dollars. Seen like this, it's clear why the headline saving shrinks. The first bar is what people quote. The last bar is what you keep.",
+     "on_screen_text": "$4,950 saved → $76 kept",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a bar chart shrinking left to right. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$100K profit, $60K salary",
+      "labels": [
+       "Payroll saved",
+       "More income tax",
+       "Costs + FUTA",
+       "Kept"
+      ],
+      "values": [
+       4950,
+       1832,
+       3042,
+       76
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "2026 federal, single, $3,000 costs, from the free S corp calculator. No state tax."
+     }
+    },
+    {
+     "heading": "Priya, $150K",
+     "narration": "Priya consults and has a hundred and fifty thousand of profit, with a ninety-thousand-dollar salary. The payroll tax gap is about seven thousand four hundred twenty. Income tax up about three thousand five hundred thirty, unemployment tax forty-two, costs three thousand. Net: about eight hundred fifty dollars a year. Real money, but not life-changing, and well short of the numbers on social media.",
+     "on_screen_text": "$150K: about $850 a year",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a folder with a small plus sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "The salary lever",
+     "narration": "So where do the big savings come from? The salary. If Priya paid herself sixty thousand instead of ninety, the calculator shows a saving of about six thousand four hundred. That's why people quote big numbers: they assume a low salary. But the IRS requires reasonable compensation for the work you do, judged by things like what similar businesses pay for similar services. A salary picked to save tax is the first thing an examiner looks at.",
+     "on_screen_text": "Lower salary = bigger saving, more risk",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a slider with a warning sign. No text, no logos, no real people."
+    },
+    {
+     "heading": "On the calculator",
+     "narration": "Here's the calculator itself. Type your expected profit, your salary and your yearly S corp costs. Choose your filing status. It shows the sole proprietor tax, the S corp tax, the costs and the difference, with every line spelled out underneath. Try moving the salary up and down, and watch the result change. It uses the same twenty twenty-six federal figures as everything else on the site, and it doesn't include state tax.",
+     "on_screen_text": "Try it: the free S corp calculator",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop screen with a simple form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Break-even",
+     "narration": "Where does it start to make sense? With a salary at sixty percent of profit and three thousand of costs, the calculator's break-even is around seventy-five thousand of profit. But break-even means zero. With these settings, the saving stays under a thousand dollars until well past a hundred and fifty thousand. If your profit is under a hundred thousand, the honest answer is usually: not yet.",
+     "on_screen_text": "Break-even ≈ $75K; small until $150K+",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a line slowly crossing a dotted line. No text, no logos, no real people."
+    },
+    {
+     "heading": "State costs",
+     "narration": "Then your state. Some states charge S corps their own tax or fees. California, for example, charges one and a half percent of an S corp's net income, with an eight hundred dollar minimum. Others charge an annual report fee. Add these to the costs box in the calculator. In a state with a minimum tax, a small S corp can lose money every year.",
+     "on_screen_text": "Add state fees to the costs",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a map outline with a price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Other effects",
+     "narration": "Two more effects, in both directions. A lower Social Security wage means smaller Social Security benefits later, since benefits are based on earnings you paid into. On the plus side, an S corp salary can make some retirement plan contributions simpler to calculate. Neither is a reason on its own, but both belong in the decision.",
+     "on_screen_text": "Lower wages, lower future benefits",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a scale with two small weights. No text, no logos, no real people."
+    },
+    {
+     "heading": "If yes",
+     "narration": "If the numbers say yes, the election is Form twenty-five fifty-three, filed within two months and fifteen days of the start of the tax year you want it to apply to. You'll need payroll set up before your first salary payment, quarterly Form nine forty-one filings, an annual Form nine forty, and Form eleven twenty S by March fifteenth. Most people use a payroll service and an accountant for the first year.",
+     "on_screen_text": "Form 2553, payroll, 1120-S by Mar 15",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a stack of forms with a calendar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Salary test",
+     "narration": "What does a reasonable salary look like? The IRS points to factors like your training and experience, your duties and hours, what comparable businesses pay for similar services, and what the business can afford. A practical check: what would you have to pay someone else to do your job? If your answer is ninety thousand and your salary is forty, that's a gap that's hard to defend.",
+     "on_screen_text": "Ask: what would you pay someone else?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a job posting with a price tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "LLC",
+     "narration": "One common mix-up: an LLC is not an S corp. An LLC is a state legal structure. By default, a single-member LLC is taxed exactly like a sole proprietor, with the same self-employment tax. The S corp is a tax election that an LLC or a corporation can make. So forming an LLC on its own changes nothing on your federal tax return. The calculator compares the sole proprietor or default LLC against the election.",
+     "on_screen_text": "LLC ≠ S corp",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two labels, one crossed out. No text, no logos, no real people."
+    },
+    {
+     "heading": "Timing",
+     "narration": "If you're close to the line, there's no rush. You can run the numbers each January with last year's real profit and next year's forecast. Electing too early is costly: you pay for payroll and the extra return every year, and undoing an election means waiting five years to make it again in most cases. Electing a year late usually costs you only that year's small saving. So when the numbers are close, waiting is the cheaper mistake.",
+     "on_screen_text": "Close to the line? Wait a year",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Recap. Payroll tax only on salary is the whole saving, and four costs eat into it. At sixty thousand, Maya loses about four hundred. At a hundred thousand, Jordan keeps about seventy-six. At a hundred and fifty thousand, Priya keeps about eight hundred fifty. Big savings need a low salary, and the IRS requires a reasonable one. Run your own numbers in the free calculator, add your state's fees, and decide with real numbers.",
+     "on_screen_text": "Recap",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes closing a notebook and smiling. No text, no logos, no real people."
+    },
+    {
+     "heading": "End slate",
+     "narration": "Next Sunday: a thirty-minute monthly bookkeeping routine, so tax time stops being a weekend of digging through receipts. That one's on screen now, and it takes about ten minutes. If you'd like a money move like this every week, hit subscribe. Thanks for watching, and I'll see you next Sunday.",
+     "on_screen_text": "Next: 30-minute bookkeeping",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes waving from the left third of the frame; the right two thirds are plain, empty background for YouTube end-screen cards. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Subscribe for one freelancer money move a week.",
+   "caption": "Three fictional freelancers test an S corp election with 2026 federal figures and the free S corp calculator: $60K profit / $36K salary ≈ $400 worse off; $100K / $60K ≈ $76 a year; $150K / $90K ≈ $850. Why: payroll tax saved minus lost half-SE deduction, smaller QBI, FUTA and running costs. The salary lever and reasonable compensation, break-even, state fees, Form 2553.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSubscribe for one freelancer money move a week.",
+   "hashtags": [
+    "scorp",
+    "llc",
+    "freelancetaxes",
+    "selfemployed",
+    "smallbusiness",
+    "1099money"
+   ],
+   "description": "Is an S corp worth it for a freelancer? Three cases worked out with the free calculator and 2026 numbers.\n\nChapters\n0:00 S corp: three real-number cases\n0:30 Payroll tax only on your salary\n0:57 4 costs the hype skips\n1:25 $60K: about $400 worse off\n1:55 $100K: about $76 a year\n2:23 $4,950 saved → $76 kept\n2:47 $150K: about $850 a year\n3:12 Lower salary = bigger saving, more risk\n3:42 Try it: the free S corp calculator\n4:10 Break-even ≈ $75K; small until $150K+\n4:36 Add state fees to the costs\n5:01 Lower wages, lower future benefits\n5:23 Form 2553, payroll, 1120-S by Mar 15\n5:51 Ask: what would you pay someone else?\n6:17 LLC ≠ S corp\n6:46 Close to the line? Wait a year\n7:17 Recap\n7:45 Next: 30-minute bookkeeping\n\nFree S corp calculator: https://1099money.netlify.app/s-corp-calculator/\nFree quarterly tax calculator: https://1099money.netlify.app/\n\nSources: irs.gov (S corporations, Form 2553, wage compensation for S corporation officers).\n\nEducational only, not tax, legal or financial advice.",
+   "thumbnail_text": "S corp or not?",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/s-corporations",
+    "https://www.irs.gov/forms-pubs/about-form-2553",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/wage-compensation-for-s-corporation-officers",
+    "https://www.ssa.gov/oact/cola/cbb.html"
+   ],
+   "claims_to_verify": [
+    "Calculator, 2026, single, $3,000 costs: $60K/$36K saving ≈ -$400; $100K/$60K ≈ $76; $150K/$90K ≈ $848; $150K/$60K ≈ $6,437",
+    "$100K breakdown: payroll gap $4,950, extra income tax $1,832, FUTA $42, costs $3,000",
+    "Break-even at 60% salary and $3,000 costs ≈ $75,000",
+    "California S corp tax 1.5% of net income, $800 minimum",
+    "Form 2553 due within 2 months and 15 days of the start of the tax year",
+    "Chapter timestamps must match final edit"
+   ]
+  },
+  "format_style": "on-screen-calculation",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Your own 40-second screen recording of the free S corp calculator: type Jordan's $100,000 profit and $60,000 salary, then drag the salary to $50,000 and back",
+   "chapter": "On the calculator"
+  },
+  "end_slate": {
+   "seconds": 20,
+   "watch_next": "A 30-minute monthly bookkeeping routine for freelancers",
+   "cards": [
+    "Video: A 30-minute monthly bookkeeping routine for freelancers",
+    "Subscribe button",
+    "Playlist: Freelance money, start here"
+   ],
+   "layout": "Mascot on the left third; cards on the right two thirds. No new information on screen."
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "separating business money",
+  "idea_angle": "Monthly bookkeeping that keeps tax time short.",
+  "script": {
+   "title": "A 30-minute monthly bookkeeping routine for freelancers",
+   "hook": "If your bookkeeping happens once a year, in April, with a shoebox, this video is for you. Thirty minutes a month is enough for most freelancers to have clean books, know their profit, catch late invoices and keep their tax money on track. We'll walk through the routine step by step, in the order you'd do it, with a simple spreadsheet on screen. You can use any bookkeeping app instead. The steps are the same. Education, not tax advice.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "If your bookkeeping happens once a year, in April, with a shoebox, this video is for you. Thirty minutes a month is enough for most freelancers to have clean books, know their profit, catch late invoices and keep their tax money on track. We'll walk through the routine step by step, in the order you'd do it, with a simple spreadsheet on screen. You can use any bookkeeping app instead. The steps are the same. Education, not tax advice.",
+     "on_screen_text": "30 minutes a month",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a stopwatch and a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Before you start",
+     "narration": "Two things make the routine fast, and you only set them up once. First, a separate bank account and card used only for the business. Every transaction on it is business, so there's nothing to untangle. Second, a short list of categories that match the expense lines on Schedule C, like advertising, car expenses, contract labor, insurance, office expense, supplies, travel and meals. When your categories match the form, filing is copying totals.",
+     "on_screen_text": "Separate account + Schedule C categories",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a bank card next to a short list. No text, no logos, no real people."
+    },
+    {
+     "heading": "When",
+     "narration": "Pick a fixed day. The first Monday of the month works, or the day after your last invoice goes out. Put a thirty-minute block in your calendar with a reminder, and treat it like a client meeting. The routine works because it's small and regular. Skipping two months turns thirty minutes into three hours.",
+     "on_screen_text": "Same day every month",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with one day circled. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1: Pull",
+     "narration": "Step one, five minutes: pull last month's transactions. Download the statement from your business bank and card as a spreadsheet file, or let your bookkeeping app sync them. Paste them into a tab for the month. You want date, description and amount for every transaction, money in and money out.",
+     "on_screen_text": "Step 1: pull transactions (5 min)",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a download arrow into a spreadsheet. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2: Categorize",
+     "narration": "Step two, ten minutes, the longest one: give every transaction a category. Most will repeat each month, like the same software subscriptions, so you'll get fast. Income from clients gets marked as income. Transfers between your own accounts, like moving tax money to savings, get marked as transfers so they don't count as expenses. Anything you're not sure about gets a question mark and a note, and you look it up after.",
+     "on_screen_text": "Step 2: categorize (10 min)",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. colored tags on rows. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3: Receipts",
+     "narration": "Step three, five minutes: receipts and notes. For anything over a small amount, and for every meal, trip or gift, make sure there's a receipt or invoice saved, and a few words on the business purpose. Who you met, what the trip was for. A photo in a monthly folder is fine. A bank statement shows you paid. It doesn't show what you bought or why, and that's what the IRS asks about.",
+     "on_screen_text": "Step 3: receipts + why (5 min)",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone photographing a receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 4: Invoices",
+     "narration": "Step four, five minutes: money owed to you. Look at every invoice you've sent that isn't paid. Anything past due gets a polite reminder today. Anything over thirty days late gets a phone call or a firmer email that mentions your late fee, if your contract has one. This step alone often pays for the whole routine.",
+     "on_screen_text": "Step 4: chase invoices (5 min)",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an envelope with a small clock. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 5: Profit & tax",
+     "narration": "Step five, five minutes: profit and tax. Total the month's income and expenses, and the year so far. Income minus expenses is your profit. Multiply the month's profit by your set-aside percentage and check that much has gone into your tax savings account. If not, move the difference now. Then glance at the next quarterly due date and whether the account will cover it.",
+     "on_screen_text": "Step 5: profit + tax check (5 min)",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin moving into a jar. No text, no logos, no real people."
+    },
+    {
+     "heading": "Where the time goes",
+     "narration": "Here's how the thirty minutes break down: five to pull transactions, ten to categorize, five for receipts, five to chase invoices and five for profit and tax. Categorizing takes the longest, and it's the step that gets faster every month as the same transactions repeat. After a few months, many freelancers finish in twenty.",
+     "on_screen_text": "Where the 30 minutes go",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a bar chart with five bars. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "The 30-minute routine",
+      "labels": [
+       "Pull",
+       "Categorize",
+       "Receipts",
+       "Invoices",
+       "Profit + tax"
+      ],
+      "values": [
+       5,
+       10,
+       5,
+       5,
+       5
+      ],
+      "unit_prefix": "",
+      "unit_suffix": " min",
+      "note": "Minutes per step in this video's routine. Gets faster with repeat transactions."
+     }
+    },
+    {
+     "heading": "Screen walkthrough",
+     "narration": "Here's what the spreadsheet looks like with a month of made-up transactions. One row per transaction: date, description, amount, category and a note. A summary tab adds up each category with a formula, by month and for the year. At the bottom: income, total expenses, profit, and what should be in tax savings. Twelve monthly tabs and one summary is the whole system.",
+     "on_screen_text": "One row per transaction",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop showing a simple table. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mileage",
+     "narration": "If you drive for work, add a mileage line to the routine. Keep the log as you go, in an app or a notebook in the car, with the date, where you went, the business purpose and the miles. During your monthly session, add up the month's business miles and write the total in the summary. A log written at the time is far stronger than one rebuilt from memory a year later.",
+     "on_screen_text": "Mileage: log as you go, total monthly",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small car next to a notebook. No text, no logos, no real people."
+    },
+    {
+     "heading": "Quarterly extra",
+     "narration": "Once a quarter, add ten minutes. Compare your profit so far with your forecast and update your set-aside percentage if it's moved. Make the estimated tax payment. And look at your categories for anything odd, like a big jump in one line, which is easier to explain now than in April.",
+     "on_screen_text": "Quarterly: +10 minutes",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four calendar pages, one highlighted. No text, no logos, no real people."
+    },
+    {
+     "heading": "Year-end",
+     "narration": "At the end of the year, your summary tab already has twelve months of totals by category, which match the Schedule C lines. Add up business miles, check that every client's ten ninety-nine matches what you recorded as income, and hand the summary to your tax software or your accountant. What used to take a weekend takes an hour.",
+     "on_screen_text": "Year-end: totals already done",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a closed folder with a check mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tools",
+     "narration": "Which tool should you use? A spreadsheet is free and teaches you how your money moves, which is why we used one here. A bookkeeping app saves time by syncing your bank, suggesting categories and matching receipts, and usually costs a monthly fee. Either is fine. The routine matters far more than the tool, so start with whatever you'll actually open every month. You can always switch later, because the categories stay the same.",
+     "on_screen_text": "Spreadsheet or app: both work",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a spreadsheet next to a phone app. No text, no logos, no real people."
+    },
+    {
+     "heading": "Income check",
+     "narration": "When you categorize income, add one more column: the client's name. At year-end you'll compare each client's ten ninety-nine with your own total for them. If a client reports more than you received, you'll want to know before you file, not when an IRS letter arrives. Payment apps and card processors may send ten ninety-nine Ks too, so note which payments came through them.",
+     "on_screen_text": "Track income by client",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a table with a column of names. No text, no logos, no real people."
+    },
+    {
+     "heading": "Refunds",
+     "narration": "Two transaction types catch people out. Refunds you give clients are a reduction of income, not an expense, so record them against the income line. And money you put into the business from personal savings is an owner contribution, not income, so it doesn't get taxed. Mark both clearly so your profit number is right.",
+     "on_screen_text": "Refunds and owner money: label them",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two arrows pointing opposite ways. No text, no logos, no real people."
+    },
+    {
+     "heading": "Your numbers",
+     "narration": "Once you have three months of clean books, the routine starts paying you back in another way: you can see your business. Which clients bring in the most for the time they take. Which months are slow. Which subscriptions you forgot you were paying for. Spend two of the thirty minutes just looking at the summary, and you'll make better decisions about rates and clients.",
+     "on_screen_text": "Clean books show your business",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a magnifying glass over a chart. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mistakes",
+     "narration": "Four mistakes that break the routine. Mixing personal spending into the business account. Counting transfers to your own savings as expenses. Saving receipts without the business purpose. And letting the session slide for a few months, then trying to catch up all at once. If you fall behind, do just one month at a time, oldest first.",
+     "on_screen_text": "4 bookkeeping mistakes",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four small warning signs. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Recap. Set up a business-only account and categories that match Schedule C. Then once a month: pull transactions, categorize them, attach receipts and the reason, chase unpaid invoices, and check profit and tax savings. Thirty minutes. Add ten minutes each quarter and an hour at year-end, and tax season becomes copying totals.",
+     "on_screen_text": "Recap",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes closing a notebook and smiling. No text, no logos, no real people."
+    },
+    {
+     "heading": "End slate",
+     "narration": "Next Sunday: paying yourself a steady salary when your freelance income is anything but steady. It's on screen now, and it builds on the routine and the set-aside you've seen in this series. Subscribe if you want one freelancer money move a week. Thanks for watching, and see you next Sunday.",
+     "on_screen_text": "Next: a steady salary",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes waving from the left third of the frame; the right two thirds are plain, empty background for YouTube end-screen cards. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Subscribe for one freelancer money move a week.",
+   "caption": "A five-step, 30-minute monthly bookkeeping routine for freelancers: pull transactions (5 min), categorize to Schedule C lines (10), receipts and business purpose (5), chase unpaid invoices (5), profit and tax set-aside check (5). Setup, mileage, the quarterly and year-end extras, and a spreadsheet walkthrough.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSubscribe for one freelancer money move a week.",
+   "hashtags": [
+    "bookkeeping",
+    "freelancetips",
+    "smallbusiness",
+    "selfemployed",
+    "taxprep",
+    "1099money"
+   ],
+   "description": "A 30-minute monthly bookkeeping routine that keeps a freelancer's tax time short.\n\nChapters\n0:00 30 minutes a month\n0:30 Separate account + Schedule C categories\n0:59 Same day every month\n1:20 Step 1: pull transactions (5 min)\n1:40 Step 2: categorize (10 min)\n2:08 Step 3: receipts + why (5 min)\n2:36 Step 4: chase invoices (5 min)\n2:58 Step 5: profit + tax check (5 min)\n3:23 Where the 30 minutes go\n3:45 One row per transaction\n4:09 Mileage: log as you go, total monthly\n4:38 Quarterly: +10 minutes\n4:58 Year-end: totals already done\n5:21 Spreadsheet or app: both work\n5:50 Track income by client\n6:15 Refunds and owner money: label them\n6:36 Clean books show your business\n7:02 4 bookkeeping mistakes\n7:24 Recap\n7:44 Next: a steady salary\n\nFree quarterly tax calculator: https://1099money.netlify.app/\nFree invoice template: https://1099money.netlify.app/invoice-template/\n\nSources: irs.gov (recordkeeping, what kind of records to keep, Schedule C).\n\nEducational only, not tax, legal or financial advice.",
+   "thumbnail_text": "30-minute bookkeeping",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/what-kind-of-records-should-i-keep",
+    "https://www.irs.gov/forms-pubs/about-schedule-c-form-1040",
+    "https://www.irs.gov/publications/p463"
+   ],
+   "claims_to_verify": [
+    "Schedule C expense categories named (advertising, car, contract labor, insurance, office, supplies, travel, meals) match the current form",
+    "Bank statements show payment but not business purpose (IRS recordkeeping guidance)",
+    "Chapter timestamps must match final edit"
+   ]
+  },
+  "format_style": "walkthrough",
+  "original_element": {
+   "type": "screen-recording",
+   "detail": "Your own 60-second screen recording of the monthly spreadsheet with made-up transactions: categorize three rows, then show the summary tab totals",
+   "chapter": "Screen walkthrough"
+  },
+  "end_slate": {
+   "seconds": 20,
+   "watch_next": "Irregular income: how to pay yourself a steady freelance salary",
+   "cards": [
+    "Video: Irregular income: how to pay yourself a steady freelance salary",
+    "Subscribe button",
+    "Playlist: Freelance money, start here"
+   ],
+   "layout": "Mascot on the left third; cards on the right two thirds. No new information on screen."
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "separating business money",
+  "idea_angle": "Smoothing lumpy freelance income into a monthly paycheck.",
+  "script": {
+   "title": "Irregular income: how to pay yourself a steady freelance salary",
+   "hook": "If you've had a twelve-thousand-dollar month followed by a two-thousand-dollar month, you know the problem. The average is fine, but the months aren't. In this video we'll set up a simple system that turns lumpy freelance income into the same paycheck every month, work out how big the buffer needs to be, and test it against six months of made-up income on a chart. Education, not financial advice.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "If you've had a twelve-thousand-dollar month followed by a two-thousand-dollar month, you know the problem. The average is fine, but the months aren't. In this video we'll set up a simple system that turns lumpy freelance income into the same paycheck every month, work out how big the buffer needs to be, and test it against six months of made-up income on a chart. Education, not financial advice.",
+     "on_screen_text": "Lumpy income, steady pay",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes riding a wavy line on a surfboard. No text, no logos, no real people."
+    },
+    {
+     "heading": "The idea",
+     "narration": "The idea is to stop paying yourself from whatever is in the account. Instead, every client payment goes into a business account. Taxes come off the top. What's left sits in a buffer. And once a month, on the same day, you pay yourself the same amount from the buffer into your personal account. Your personal life sees a salary. Only the business account sees the swings.",
+     "on_screen_text": "Pay yourself from a buffer",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. water flowing into a tank, then a tap. No text, no logos, no real people."
+    },
+    {
+     "heading": "Three accounts",
+     "narration": "You need three accounts. A business checking account where all income lands and business expenses are paid. A tax savings account that gets your set-aside percentage of every payment. And your personal checking, which gets one transfer a month, your salary. Many freelancers add a fourth, a business savings account, to hold the buffer separately so it doesn't look spendable.",
+     "on_screen_text": "Business · Tax · Personal",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three jars in a row. No text, no logos, no real people."
+    },
+    {
+     "heading": "Set the salary",
+     "narration": "How much should the salary be? Start with your real yearly profit, not your best year. Take off your tax set-aside percentage, then divide by twelve. If last year's profit was seventy-eight thousand and you set aside twenty-five percent, that's fifty-eight thousand five hundred after tax, or about four thousand eight hundred seventy-five a month. Then round down, so the system can build a cushion. Our example uses four thousand.",
+     "on_screen_text": "Salary: profit after tax ÷ 12, rounded down",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a paycheck with a downward arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "The buffer",
+     "narration": "The buffer is what makes a slow month boring. A common target is two to three months of salary, plus your regular business expenses, before you start the system. With a four-thousand-dollar salary, a two-month starting buffer is eight thousand. If you don't have that yet, start with a lower salary and let the buffer build, or start with one month and increase it over time.",
+     "on_screen_text": "Buffer: 2-3 months of salary",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a tank filled to a line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Six months",
+     "narration": "Let's test it. Our fictional freelancer starts with an eight-thousand-dollar buffer. Over six months, clients pay nine thousand, three thousand, six thousand, twelve thousand, two thousand and seven thousand. Twenty-five percent of each goes to tax savings. The rest goes into the buffer, and four thousand comes out every month as salary. Month two and month five bring in less than the salary. Nothing bad happens.",
+     "on_screen_text": "6 months, salary $4,000",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with six different-sized coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Buffer chart",
+     "narration": "Here's the buffer at the end of each month. Ten thousand seven hundred fifty after month one. Nine thousand after the slow second month. Nine thousand five hundred, then fourteen thousand five hundred after the big month. Twelve thousand after the two-thousand-dollar month. And thirteen thousand two hundred fifty after month six. The paycheck never changed. The buffer absorbed every swing, and it ended higher than it started.",
+     "on_screen_text": "Buffer by month",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a line chart that wobbles upward. No text, no logos, no real people.",
+     "chart": {
+      "kind": "line",
+      "title": "Buffer at month end",
+      "labels": [
+       "M1",
+       "M2",
+       "M3",
+       "M4",
+       "M5",
+       "M6"
+      ],
+      "values": [
+       10750,
+       9000,
+       9500,
+       14500,
+       12000,
+       13250
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "Fictional: $8,000 start, 25% to tax, $4,000 salary a month."
+     }
+    },
+    {
+     "heading": "Raises",
+     "narration": "When the buffer grows past your target, that's a signal, not just spare money. Review the salary once a quarter. If the buffer has been above three months of pay for a full quarter, give yourself a raise, or move the extra to retirement savings or a goal. In our example, the buffer reached over three months of salary, so a raise to around forty-five hundred would be reasonable.",
+     "on_screen_text": "Buffer above target? Raise",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a paycheck with an upward arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Cuts",
+     "narration": "And if the buffer keeps falling, the system is warning you early. If it drops below one month of salary, lower the salary for a while and look at the pipeline. That's much better than discovering in month eight that the money ran out. The rule of thumb: decide on raises and cuts at the quarterly review, not in a panic during one slow month.",
+     "on_screen_text": "Buffer below a month? Cut early",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a tank with a low-level line. No text, no logos, no real people."
+    },
+    {
+     "heading": "Your system",
+     "narration": "This is the part where you show your own setup. Film yourself for about a minute, walking through your three accounts in your bank app or on paper, with the balances blurred. Say which day your salary moves, how you picked the amount, and what you'd do differently. Viewers trust a real system far more than a diagram, and nobody needs to see the numbers.",
+     "on_screen_text": "Show your own setup",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone camera icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Taxes",
+     "narration": "One thing the salary doesn't change: taxes. For a sole proprietor or single-member LLC, the salary transfer is not a payroll paycheck. It's just moving your own money. You're taxed on the business's profit, whatever you transfer. That's exactly why the tax set-aside comes off the top of every client payment, before anything goes to the buffer.",
+     "on_screen_text": "Salary transfer isn't taxable pay",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with an arrow, no form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Automate it",
+     "narration": "Automate as much as you can. Most banks let you schedule a recurring transfer from business checking to personal checking on the same day each month. Some let you set rules to move a percentage of every deposit to savings automatically. If yours doesn't, do the tax transfer the day a payment lands and the salary transfer on your fixed day. Two transfers, both habits.",
+     "on_screen_text": "Schedule the transfers",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with a repeating arrow. No text, no logos, no real people."
+    },
+    {
+     "heading": "Expenses",
+     "narration": "Don't forget business expenses. They come out of business checking before anything reaches the buffer. If you pay three hundred a month for software and insurance, the buffer needs to cover that too, on top of your salary. A simple approach: keep one month of business expenses in business checking at all times, and treat everything above that as buffer.",
+     "on_screen_text": "Keep a month of expenses in checking",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small stack of bills. No text, no logos, no real people."
+    },
+    {
+     "heading": "Starting small",
+     "narration": "Starting with no buffer at all? You can still begin. Pick a lower starting salary, say half your average monthly profit after tax, and let every month above that build the buffer. Once it reaches one month of salary, raise the salary a little. Once it reaches two, move to your full target. It takes a few months, and it's much calmer than starting from zero with a full salary.",
+     "on_screen_text": "No buffer? Start with half",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a tank slowly filling. No text, no logos, no real people."
+    },
+    {
+     "heading": "Spouses",
+     "narration": "If you share finances with a partner, the salary makes conversations easier. You can both plan around one predictable number instead of guessing what this month will bring. Agree on what the buffer is for, and that it isn't spending money, so a big month doesn't turn into a big purchase that leaves nothing for the slow month after. Write the rule down in one sentence and keep it next to the account details.",
+     "on_screen_text": "One number to plan around",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two mugs on a table. No text, no logos, no real people."
+    },
+    {
+     "heading": "Big months",
+     "narration": "A big month feels like a raise. It isn't, yet. In our example, month four brought in twelve thousand, three times the salary. The system sent three thousand to tax savings, five thousand more to the buffer than usual, and paid the same four thousand. That's what let month five, at two thousand, go by without any stress. Wait for the quarterly review before you spend a big month. If the next two months are slow too, you'll be glad that money is still there, and if they're not, the raise will still be waiting for you.",
+     "on_screen_text": "A big month isn't a raise yet",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a large coin going into a tank. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mistakes",
+     "narration": "Four mistakes that break the system. Setting the salary from your best month instead of your real average. Starting with no buffer at all. Dipping into the tax savings account to cover a slow month. And paying personal bills straight from the business account, so the salary stops meaning anything.",
+     "on_screen_text": "4 salary mistakes",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. four small warning signs. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Recap. All income lands in business checking. Your tax percentage comes off the top into tax savings. The rest builds a buffer of two to three months of salary. Pay yourself the same amount on the same day every month. Review once a quarter: raise when the buffer is high, cut early when it's low. Your income stays lumpy. Your paycheck doesn't.",
+     "on_screen_text": "Recap",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes closing a notebook and smiling. No text, no logos, no real people."
+    },
+    {
+     "heading": "End slate",
+     "narration": "Next Sunday: the records the IRS expects freelancers to keep, how long to keep them, and five myths that cost people money. It's on screen now, right next to the subscribe button. If this helped, subscribe for one freelancer money move every week. Thanks for watching, and see you next Sunday.",
+     "on_screen_text": "Next: what records to keep",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes waving from the left third of the frame; the right two thirds are plain, empty background for YouTube end-screen cards. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Subscribe for one freelancer money move a week.",
+   "caption": "A steady freelance salary from irregular income: three accounts (business, tax, personal), salary from real profit after the tax set-aside ÷ 12, rounded down, a 2–3 month buffer, a fictional six-month test on a chart, quarterly raises and cuts, and automation.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSubscribe for one freelancer money move a week.",
+   "hashtags": [
+    "irregularincome",
+    "freelancefinance",
+    "budgeting",
+    "selfemployed",
+    "freelancing",
+    "1099money"
+   ],
+   "description": "How to pay yourself a steady monthly salary when freelance income goes up and down.\n\nChapters\n0:00 Lumpy income, steady pay\n0:26 Pay yourself from a buffer\n0:52 Business · Tax · Personal\n1:16 Salary: profit after tax ÷ 12, rounded down\n1:43 Buffer: 2-3 months of salary\n2:09 6 months, salary $4,000\n2:34 Buffer by month\n3:01 Buffer above target? Raise\n3:28 Buffer below a month? Cut early\n3:53 Show your own setup\n4:19 Salary transfer isn't taxable pay\n4:41 Schedule the transfers\n5:06 Keep a month of expenses in checking\n5:30 No buffer? Start with half\n5:57 One number to plan around\n6:26 A big month isn't a raise yet\n7:03 4 salary mistakes\n7:23 Recap\n7:47 Next: what records to keep\n\nFree quarterly tax calculator: https://1099money.netlify.app/\n\nSources: irs.gov (Publication 334, estimated taxes).\n\nEducational only, not tax, legal or financial advice.",
+   "thumbnail_text": "A steady salary",
+   "sources": [
+    "https://www.irs.gov/publications/p334",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/estimated-taxes",
+    "https://www.fdic.gov/resources/deposit-insurance/"
+   ],
+   "claims_to_verify": [
+    "$78,000 × 75% ÷ 12 = $4,875",
+    "Buffer example: $8,000 start; income 9,000/3,000/6,000/12,000/2,000/7,000; 25% to tax; $4,000 salary → 10,750/9,000/9,500/14,500/12,000/13,250",
+    "Owner draws from a sole proprietorship are not wages (taxed on profit)",
+    "Chapter timestamps must match final edit"
+   ]
+  },
+  "format_style": "explainer",
+  "original_element": {
+   "type": "human-segment",
+   "detail": "You on camera for about a minute walking through your own three accounts (balances blurred): the salary day, how you picked the amount, what you'd change",
+   "chapter": "Your system"
+  },
+  "end_slate": {
+   "seconds": 20,
+   "watch_next": "Freelance records: what to keep, for how long, and 5 myths",
+   "cards": [
+    "Video: Freelance records: what to keep, for how long, and 5 myths",
+    "Subscribe button",
+    "Playlist: Freelance money, start here"
+   ],
+   "layout": "Mascot on the left third; cards on the right two thirds. No new information on screen."
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "deductions with sources",
+  "idea_angle": "Recordkeeping myths with what the IRS actually says.",
+  "script": {
+   "title": "Freelance records: what to keep, for how long, and 5 myths",
+   "hook": "Do you really need to keep every receipt? Is a bank statement enough? Can you throw everything out after three years? Freelancers hear all of these, and some of the answers can cost you a deduction you were entitled to. In this video: what records the IRS expects you to keep, how long to keep each kind, and five common myths, each followed by the fact, from the IRS's own guidance. Education, not tax advice.",
+   "segments": [
+    {
+     "heading": "Intro",
+     "narration": "Do you really need to keep every receipt? Is a bank statement enough? Can you throw everything out after three years? Freelancers hear all of these, and some of the answers can cost you a deduction you were entitled to. In this video: what records the IRS expects you to keep, how long to keep each kind, and five common myths, each followed by the fact, from the IRS's own guidance. Education, not tax advice.",
+     "on_screen_text": "Records: what, how long, myths",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes next to a filing box with a question mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why records",
+     "narration": "Records do two jobs. They help you file a correct return, and they prove your numbers if the IRS ever asks. The tax law puts the burden on you: if you claim a deduction, you need to be able to show you spent the money, and that it was for the business. Good records make that a ten-minute job instead of a crisis.",
+     "on_screen_text": "Records prove your numbers",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a folder with a check mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "What to keep",
+     "narration": "What counts as a record? For income: invoices, deposit records and your ten ninety-nines. For expenses: receipts, invoices, bank and card statements, and canceled checks. For your car: a mileage log. For equipment: proof of what you paid and when you started using it. And for anything involving meals, travel or gifts, a note of the business purpose.",
+     "on_screen_text": "Income, expenses, car, equipment",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. five small document icons. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 1",
+     "narration": "Myth: a bank statement is enough. Fact: a statement shows that you paid, how much and when. It usually doesn't show what you bought or why. The IRS suggests keeping the receipt or invoice too, and for meals and travel, the business purpose. A charge from an office supply store could be printer paper or a gift for your niece. The receipt answers that.",
+     "on_screen_text": "Myth: bank statements are enough",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a bank statement next to a receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 2",
+     "narration": "Myth: you don't need receipts under seventy-five dollars. Fact: that rule is narrower than it sounds. For travel, meals and gift expenses other than lodging, you don't need documentary evidence like a receipt under seventy-five dollars. But you still need a record of the amount, date, place and business purpose, and the rule doesn't cover your other business expenses. Keeping the receipt is still the easy way.",
+     "on_screen_text": "Myth: under $75 needs nothing",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small receipt with a magnifying glass. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 3",
+     "narration": "Myth: paper originals are required. Fact: the IRS accepts electronic records, including scans and photos of receipts, as long as they're accurate, complete and readable, and you can produce them if asked. A monthly folder of receipt photos, backed up somewhere other than your phone, is a perfectly good system.",
+     "on_screen_text": "Myth: you need paper originals",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone photographing a receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "Myth 4",
+     "narration": "Myth: after three years, throw everything out. Fact: three years is the usual period, from the date you filed, but not the only one. If you leave out income worth more than twenty-five percent of the income on your return, it's six years. Claiming a bad debt or a worthless security loss, seven. Employment tax records, if you have employees, at least four. And if a return was never filed, or was fraudulent, there's no time limit.",
+     "on_screen_text": "Myth: 3 years for everything",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with several years marked. No text, no logos, no real people."
+    },
+    {
+     "heading": "Retention chart",
+     "narration": "Here are those periods on one chart. Three years for most records. Four years for employment tax records. Six years if income was underreported by more than twenty-five percent. Seven years for bad debts and worthless securities. Many people simply keep everything for seven years, which covers all of these, as long as a return was filed.",
+     "on_screen_text": "How long to keep records",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a bar chart with four bars. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "How long to keep records",
+      "labels": [
+       "Most records",
+       "Payroll",
+       "Income left out",
+       "Bad debt"
+      ],
+      "values": [
+       3,
+       4,
+       6,
+       7
+      ],
+      "unit_prefix": "",
+      "unit_suffix": " yrs",
+      "note": "Years from filing, per irs.gov. No limit if no return was filed or fraud."
+     }
+    },
+    {
+     "heading": "Myth 5",
+     "narration": "Myth: equipment records can go when the receipt is three years old. Fact: for property you use in the business, like a computer or a car, keep records until the period of limitations ends for the year you sell or dispose of it. That's because you need the purchase price and depreciation to work out any gain or loss when you sell. A laptop bought in twenty twenty-seven and sold in twenty thirty needs its records until at least twenty thirty-four.",
+     "on_screen_text": "Myth: equipment follows the 3-year rule",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop with a long ribbon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Your system",
+     "narration": "Here's where you show a real system. Film yourself for about forty-five seconds with your own receipts folder or app, no personal details on screen. Show where a receipt goes the day you get it, how you note the business purpose, and where the backup lives. A real person's simple system is more convincing than any checklist.",
+     "on_screen_text": "Show your own receipt system",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone camera icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "A simple system",
+     "narration": "If you don't have a system yet, here's one. A folder for each tax year, with a subfolder for each month. Receipts go in the month's folder as photos, named with the date and the vendor. Your monthly bookkeeping spreadsheet sits at the top level. At year-end, add a copy of your return and all your ten ninety-nines. Back it all up to a second place.",
+     "on_screen_text": "Year → month → receipts",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. folders nested inside folders. No text, no logos, no real people."
+    },
+    {
+     "heading": "Mileage",
+     "narration": "Your mileage log deserves its own mention, because it's the record most often missing. The IRS expects it to be made at or near the time of the trip, with the date, destination, business purpose and miles. A log rebuilt from memory in April is weak. A notes app or a small notebook in the car, filled in as you go, is strong.",
+     "on_screen_text": "Mileage: log it at the time",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a car next to a notebook. No text, no logos, no real people."
+    },
+    {
+     "heading": "Income records",
+     "narration": "Income records matter as much as expenses. Keep every invoice you send, and a record of when and how each was paid. Clients send ten ninety-nine NECs for six hundred dollars or more, but you have to report all your income, including payments with no form. Your own records are how you check the forms, and how you show the IRS what you actually earned if a form is wrong.",
+     "on_screen_text": "Report all income, form or not",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an invoice next to a form. No text, no logos, no real people."
+    },
+    {
+     "heading": "Home office",
+     "narration": "Claiming the home office deduction? Keep a simple floor plan with the office measured, photos showing it's used for work, and, if you use the regular method, your rent or mortgage interest, utilities and insurance for the year. Those records need to last as long as the return they support, and longer if you own the home and claimed depreciation.",
+     "on_screen_text": "Home office: measurements + photos",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small floor plan. No text, no logos, no real people."
+    },
+    {
+     "heading": "Old returns",
+     "narration": "Keep copies of your filed tax returns for good. They take up almost no space as files, and they help with things you can't predict: a mortgage application, a student aid form, proving earnings for Social Security, or working out the basis of something you sold years later. You can also get transcripts from your IRS online account, but your own copy is faster.",
+     "on_screen_text": "Keep your returns permanently",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a folder labeled with years. No text, no logos, no real people."
+    },
+    {
+     "heading": "If asked",
+     "narration": "If the IRS does send a letter asking about a deduction, records turn it into a simple reply. Read what they're asking about, find the records for that line, and send copies, never originals, by the deadline in the letter. Many letters are resolved by mail. That's the real payoff of the folder system: a letter becomes an hour of copying, not weeks of rebuilding.",
+     "on_screen_text": "A letter? Send copies by the deadline",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. an envelope with a check mark. No text, no logos, no real people."
+    },
+    {
+     "heading": "Digital tips",
+     "narration": "Three habits make digital records work. Name files so they sort: year, month, day, then vendor. Back up to a second place automatically, like a cloud drive. And don't rely only on email: download receipts that arrive by email into the month's folder, because accounts get closed and inboxes get cleaned out. Once a year, open a few random files from three years ago and check they still open. A backup you've never tested is only a hope, and the whole point of records is that they're there on the one day you need them.",
+     "on_screen_text": "Name, back up, download",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a folder with a cloud above it. No text, no logos, no real people."
+    },
+    {
+     "heading": "Recap",
+     "narration": "Recap. Keep proof of income, expenses, mileage and equipment, plus the business purpose for meals, travel and gifts. Bank statements alone often aren't enough. Photos and scans are fine. Keep most records three years from filing, longer in the cases on the chart, and equipment records until the limitation period ends after you sell it. When in doubt, seven years and a backup.",
+     "on_screen_text": "Recap",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes closing a notebook and smiling. No text, no logos, no real people."
+    },
+    {
+     "heading": "End slate",
+     "narration": "That's the end of this six-week series. The playlist with all six videos is on screen now, starting with retirement accounts and ending with this one. Subscribe for one freelancer money move every Sunday, and if a question came up while you watched, leave it in the comments. Thanks for watching.",
+     "on_screen_text": "Watch the whole series",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes waving from the left third of the frame; the right two thirds are plain, empty background for YouTube end-screen cards. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Subscribe for one freelancer money move a week.",
+   "caption": "What records freelancers should keep and for how long, with five myths and the facts from IRS guidance: bank statements alone, the under-$75 rule, digital copies, the 3/4/6/7-year periods, and equipment records. Plus a simple folder system and mileage logs.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nSubscribe for one freelancer money move a week.",
+   "hashtags": [
+    "recordkeeping",
+    "freelancetaxes",
+    "receipts",
+    "selfemployed",
+    "taxtips",
+    "1099money"
+   ],
+   "description": "What records a freelancer should keep, how long to keep them, and five myths, with the IRS's own rules.\n\nChapters\n0:00 Records: what, how long, myths\n0:29 Records prove your numbers\n0:53 Income, expenses, car, equipment\n1:16 Myth: bank statements are enough\n1:41 Myth: under $75 needs nothing\n2:07 Myth: you need paper originals\n2:27 Myth: 3 years for everything\n2:57 How long to keep records\n3:19 Myth: equipment follows the 3-year rule\n3:51 Show your own receipt system\n4:13 Year → month → receipts\n4:39 Mileage: log it at the time\n5:03 Report all income, form or not\n5:31 Home office: measurements + photos\n5:54 Keep your returns permanently\n6:19 A letter? Send copies by the deadline\n6:44 Name, back up, download\n7:21 Recap\n7:46 Watch the whole series\n\nFree quarterly tax calculator: https://1099money.netlify.app/\n\nSources: irs.gov (how long should I keep records, what kind of records, Publication 463).\n\nEducational only, not tax, legal or financial advice.",
+   "thumbnail_text": "What records to keep",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/what-kind-of-records-should-i-keep",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping",
+    "https://www.irs.gov/publications/p463"
+   ],
+   "claims_to_verify": [
+    "Retention: 3 years general; 6 if >25% of gross income omitted; 7 for bad debt/worthless securities; 4 for employment tax; no limit if no return or fraud",
+    "Under-$75 documentary evidence rule applies to travel, meals and gifts, not lodging (Pub 463)",
+    "IRS accepts electronic copies that are accurate and legible",
+    "Property records: keep until the limitation period ends for the year of disposal",
+    "Chapter timestamps must match final edit"
+   ]
+  },
+  "format_style": "myth-vs-fact",
+  "original_element": {
+   "type": "human-segment",
+   "detail": "You on camera for about 45 seconds with your own receipts folder or app (no personal details): where a receipt goes, how you note the purpose, where the backup lives",
+   "chapter": "Your system"
+  },
+  "end_slate": {
+   "seconds": 20,
+   "watch_next": "SEP IRA or Solo 401(k)? Freelance retirement accounts with real numbers",
+   "cards": [
+    "Video: SEP IRA or Solo 401(k)? Freelance retirement accounts with real numbers",
+    "Subscribe button",
+    "Playlist: Freelance money, start here"
+   ],
+   "layout": "Mascot on the left third; cards on the right two thirds. No new information on screen."
+  }
+ }
+]

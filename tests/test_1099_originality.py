@@ -8,6 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1] / "launch" / "1099-money"
 FILES = [ROOT / "content.json"] + sorted(ROOT.glob("month-*/content.json")) + [ROOT / "drivers" / "content.json"]
+FILES += [ROOT / "youtube-6wk" / "content.json"]
 NEW_FORMATS = {"on-screen-calculation", "myth-vs-fact", "question-reply", "countdown", "real-numbers"}
 ELEMENTS = {"worked-example-chart", "screen-recording", "human-segment"}
 
@@ -40,6 +41,8 @@ def test_every_video_has_a_format_and_batches_are_mixed():
     assert all(shorts[f] >= 4 for f in NEW_FORMATS), shorts
     for batch in {b for b, _ in vids}:
         styles = [it["format_style"] for b, it in vids if b == batch and it["format"] == "short"]
+        if not styles:  # a long-form-only plan has no Shorts to mix
+            continue
         top = collections.Counter(styles).most_common(1)[0][1]
         assert top <= len(styles) / 2, (batch, collections.Counter(styles))
 

@@ -2632,7 +2632,26 @@
      "heading": "Write-off math",
      "narration": "First, the math everyone skips. A business deduction lowers your profit, which lowers both self-employment tax and income tax. At sixty thousand of profit, a single filer saves about two hundred thirty dollars per thousand dollars of deductions. At a hundred and twenty thousand, about three hundred five. So a deduction saves you a quarter to a third of the cost. You still pay the rest.",
      "on_screen_text": "$1,000 deduction ≈ $230 saved",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a big coin next to a small coin. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a big coin next to a small coin. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "What a $1,000 deduction saves",
+      "labels": [
+       "Saved at $60K",
+       "Spent at $60K",
+       "Saved at $120K",
+       "Spent at $120K"
+      ],
+      "values": [
+       230,
+       770,
+       305,
+       695
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "2026 federal, single, SE + income tax. Illustrative."
+     }
     },
     {
      "heading": "Timing",
@@ -2757,7 +2776,7 @@
   "format_style": "walkthrough",
   "original_element": {
    "type": "worked-example-chart",
-   "detail": "Bar chart of the $1,000 purchase: $230 of tax saved next to the $770 still spent, from the script's example",
+   "detail": "Bar chart of a $1,000 deduction at $60K and $120K of profit: tax saved ($230, $305) next to what's still spent, from the script's numbers",
    "chapter": "Write-off math"
   }
  },
@@ -2827,7 +2846,26 @@
      "heading": "Numbers",
      "narration": "Let's put rough numbers on the S corp. Say your profit is a hundred thousand dollars. As a sole proprietor, self-employment tax is about fourteen thousand one hundred. As an S corp paying yourself a sixty thousand dollar salary, payroll taxes on that salary are about nine thousand two hundred, employer and employee halves together. That's roughly five thousand dollars of difference before costs. Then subtract payroll software, the extra business return, state fees and a bookkeeper or accountant, which can easily be two to four thousand a year. And the income tax side shifts a little too. And there's a catch most posts skip: your income tax goes up by around two thousand, because you lose the deduction for half of self-employment tax and the twenty percent QBI deduction only applies to the profit left after your salary. So the real result here is somewhere between losing about seven hundred dollars and saving about nine hundred, not the ten thousand people promise online.",
      "on_screen_text": "$100K profit: ~$5K gross saving, less costs",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two coin stacks with a few coins removed from one for fees. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two coin stacks with a few coins removed from one for fees. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "$100K profit, $60K salary",
+      "labels": [
+       "Payroll saved",
+       "More income tax",
+       "Costs + FUTA",
+       "Kept"
+      ],
+      "values": [
+       4950,
+       1832,
+       3042,
+       76
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "2026 federal, single, $3,000 costs, from the free S corp calculator."
+     }
     },
     {
      "heading": "Reasonable",
@@ -2914,7 +2952,7 @@
   "format_style": "comparison",
   "original_element": {
    "type": "worked-example-chart",
-   "detail": "S corp savings vs running costs at several profit levels, drawn from the script's numbers, showing where the lines cross",
+   "detail": "Bar chart of the $100K S corp example from the free S corp calculator: payroll tax saved, the extra income tax, running costs, and what's left",
    "chapter": "Numbers"
   }
  },
@@ -2990,7 +3028,28 @@
      "heading": "Rate",
      "narration": "Ninety thousand divided by twelve hundred is seventy-five dollars an hour. That's the floor for this target, not the goal. If you're currently charging fifty, you now know you're working below your target, and by how much. That's not a reason to panic; it's a reason to plan your next rate increase and the clients you'll raise first.",
      "on_screen_text": "Rate floor: $75/hour",
-     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a price tag. No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a price tag. No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Building the $90,000 target",
+      "labels": [
+       "Take-home",
+       "Health + retire",
+       "Federal tax",
+       "Costs",
+       "Revenue"
+      ],
+      "values": [
+       55000,
+       11000,
+       17570,
+       6000,
+       90000
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "",
+      "note": "2026 federal, single, no state tax. ÷ 1,200 hours = $75/hour."
+     }
     },
     {
      "heading": "Packages",
@@ -3073,7 +3132,7 @@
   "format_style": "on-screen-calculation",
   "original_element": {
    "type": "worked-example-chart",
-   "detail": "Stacked bar from target pay plus costs plus tax down to the hourly rate, built from the script's example",
+   "detail": "Bar chart building the $90,000 revenue target from take-home, benefits, 2026 federal tax and costs, from the script's example ($75/hour at 1,200 hours)",
    "chapter": "Rate"
   }
  },
