@@ -53,9 +53,9 @@ affiliates:
     slug: hysa
     keywords: [savings account, hysa, emergency fund]
     commission: "$50 per funded account"
-products:   # ladder and upsell codes: launch/products/UPSELL_PATH.md
-  - {name: "The Bill Cut Kit", slug: bill-cut-kit, url: "https://example.gumroad.com/l/bill-cut-kit", price: 5}
+products:   # flagship first; ladder and upsell codes: launch/products/UPSELL_PATH.md
   - {name: "The 20-Minute Budget (guide + Excel/Sheets/Numbers template)", slug: 20-minute-budget, url: "https://example.gumroad.com/l/budget", price: 12}
+  - {name: "The Bill Cut Kit", slug: bill-cut-kit, url: "https://example.gumroad.com/l/bill-cut-kit", price: 5}
   - {name: "The Credit Report Audit Kit", slug: credit-report-audit-kit, url: "https://example.gumroad.com/l/credit-audit-kit", price: 9}
   - {name: "The Debt-Free Date Planner", slug: debt-free-date-planner, url: "https://example.gumroad.com/l/debt-free-date", price: 17}
   - {name: "Start Investing With $100 a Month", slug: investing-starter-kit, url: "https://example.gumroad.com/l/start-investing", price: 19}
