@@ -44,6 +44,18 @@ adds about **$300-600 in Jan-Mar 2027**, and only if the gates pass.
 | 21 | **Affiliate applications** | Apply to **Impact and CJ** this week (Stage 7). First fix the untrue Dinero line in PR #5's kit ("every post is reviewed by a native Spanish speaker"; the fix has been sent to the thread that owns it). Use `affiliate-answers-five-programs.md` for Aura, NordVPN, Keeper and Wise. Hold Remitly until Dinero resumes | $0 | Every affiliate link on the sites |
 | 22 | **B2B cold email** | **Yes, from Tue 1 Dec**, by hand, 4 a day, accounting firms first (they must hear from you before mid-January). Conditions: the postal address (#5) is in place, and before the **first signed deal** a lawyer reads the services agreement once | $0 to send. About **$35** for a 30-minute bar referral consult before the first contract | All five B2B offers (PR #13) |
 
+## 2 (continued). The three free changes that move revenue most
+
+From the sensitivity analysis (`research/scouting/revenue-sensitivity-two-brands.md`, and the Sensitivity sheet in
+`two-brand-revenue-model-2027.xlsx`). Each dollar figure is that change alone, with the base case's year-1 net at
+$4,614. They overlap, so don't add them together. None of them costs money.
+
+| # | Decision | Recommendation | Cost | What it moves |
+|---|---|---|---|---|
+| 22a | **Affiliate offer boxes on the free tools** | Yes: one matched offer box, with the disclosure, on the results pages of the three most-used tools (scam checker, subscription audit, tax tools). Pick the higher payout where two programs fit. Apply to Impact and CJ this week (row 21) | $0 | Affiliate clicks, conversion and payout, the #1 lever: about **±$580** for each 25% change |
+| 22b | **Welcome offer and email frequency** | Yes: the day-7 welcome email leads with the bundle (singles as the fallback), and send **two broadcasts a week** while unsubscribes stay under 0.5% per send | $0, plus about 10 min a week of review | Net per order (about ±$340) and broadcast count (about **+$840** a year for 8 sends a month instead of 4) |
+| 22c | **"Email me this plan" on every tool** | Yes: the signup sits under each tool's result, and the apps' Netlify Forms are fixed so they feed Sender's double opt-in | $0 | List size, about −$340 / +$280. Above 2,500 subscribers across both lists, Sender starts charging |
+
 ## 3. January to March 2027: only if the gates pass
 
 | # | Decision | Recommendation | Cost | What waits on it |

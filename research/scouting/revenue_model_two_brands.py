@@ -293,5 +293,110 @@ for t, u in LINKS:
 wsrc.append([]); wsrc.append(["Source tags used on Inputs:"])
 for k, v in SOURCES.items(): wsrc.append([k, v])
 wsrc.column_dimensions["A"].width = 70; wsrc.column_dimensions["B"].width = 110
+
+
+# ---------------- Sensitivity (Python copy of the Model formulas) ----------------
+def values(case):
+    """{(key, brand): value} for one case, from INPUTS and COSTS."""
+    i = CASES.index(case); v = {}
+    for key, _l, _u, vals, _s in INPUTS:
+        per = vals if isinstance(vals, dict) else {b: vals for b in BRANDS}
+        for b in BRANDS: v[(key, b)] = per[b][i]
+    for key, _l, vals, _s in COSTS: v[(key, "Both")] = vals[i]
+    return v
+
+
+def simulate(v):
+    """Same arithmetic as the Model sheet. Returns (revenue by stream summed over brands, costs, subs by month)."""
+    streams = {k: 0.0 for k, _ in STREAMS}; subs_tot = [0.0] * 12
+    for b in BRANDS:
+        g = lambda k: v[(k, b)]
+        cum = 0.0; ypp_prev = 0; subs_prev = 0.0
+        for i in range(12):
+            m = i + 1
+            active = max(0, m - g("start") + 1)
+            ramp = 0 if active == 0 else min(1, active / 12) ** g("ramp_exp")
+            ytv = g("yt_views") * ramp; cum += ytv * g("yt_watch") / 60; yts = g("yt_subs") * ramp
+            need = g("ypp_hours_old") if m <= 3 else g("ypp_hours_new")
+            ypp = 1 if (yts >= g("ypp_subs") and cum >= need) else ypp_prev
+            if i > 0 and ypp_prev == 1: streams["yt_rev"] += ytv / 1000 * g("yt_rpm")
+            shv = g("shorts_views") * ramp
+            if ypp == 1 and shv * 3 >= g("shorts_gate"): streams["shorts_rev"] += shv / 1000 * g("shorts_rpm")
+            ttf = g("tt_followers") * ramp; ttv = g("tt_views") * ramp
+            if ttf >= g("tt_min_followers") and ttv >= g("tt_min_views"):
+                streams["tt_rev"] += ttv * g("tt_long_share") / 1000 * g("tt_rpm")
+            subs = g("email_subs") * ramp; new = subs - subs_prev
+            streams["prod_rev"] += new * g("welcome_conv") * g("net_order") + subs_prev * g("campaign_conv") * g("sends") * g("net_order")
+            streams["mkt_rev"] += g("market_orders") * ramp * (g("jan_boost") if m == 3 else 1) * g("market_net")
+            if m >= g("aff_start"): streams["aff_rev"] += g("aff_clicks") * ramp * g("aff_conv") * g("aff_payout")
+            if subs >= g("spon_min"): streams["spon_rev"] += g("spon_place") * subs / 1000 * g("spon_per1k")
+            subs_tot[i] += subs; ypp_prev = ypp; subs_prev = subs
+    fixed = sum(v[(k, "Both")] for k in ("c_domains", "c_api", "c_mailbox", "c_etsy"))
+    costs = sum(fixed + (v[("c_sender", "Both")] if s > 2500 else 0) for s in subs_tot)
+    return streams, costs
+
+
+def net(v):
+    s, c = simulate(v); return sum(s.values()) - c
+
+
+BASE = values("Base"); BASE_NET = net(BASE)
+STEP = 0.25
+# Rates and levels we can actually move; fixed platform rules (gates) are left out on purpose.
+SENS_KEYS = ["email_subs", "welcome_conv", "campaign_conv", "net_order", "market_orders", "market_net",
+             "aff_clicks", "aff_conv", "aff_payout", "yt_views", "yt_watch", "yt_subs", "yt_rpm",
+             "tt_views", "tt_followers", "tt_long_share", "shorts_views", "sends", "spon_per1k"]
+LABEL = {k: lab for k, lab, *_ in INPUTS}
+sens = []
+for k in SENS_KEYS:
+    out = []
+    for f in (1 - STEP, 1 + STEP):
+        v = dict(BASE)
+        for b in BRANDS: v[(k, b)] = BASE[(k, b)] * f
+        out.append(net(v))
+    sens.append((k, out[0], out[1], max(abs(out[0] - BASE_NET), abs(out[1] - BASE_NET))))
+sens.sort(key=lambda t: -t[3])
+# Discrete what-ifs: timing and step changes a person controls.
+WHATIF = []
+def whatif(label, changes):
+    v = dict(BASE)
+    for (k, b), val in changes.items(): v[(k, b)] = val
+    WHATIF.append((label, net(v)))
+whatif("Affiliate links approved one month earlier (month 2, not 3)", {("aff_start", b): 2 for b in BRANDS})
+whatif("Affiliate links approved two months late (month 5)", {("aff_start", b): 5 for b in BRANDS})
+whatif("Scam Decoded launches with MMS (month 1)", {("start", "Scam Decoded"): 1})
+whatif("Faster early growth (curve exponent 1.0, not 1.5)", {("ramp_exp", b): 1.0 for b in BRANDS})
+whatif("Slower early growth (curve exponent 2.0)", {("ramp_exp", b): 2.0 for b in BRANDS})
+whatif("Weekly broadcasts doubled (8 a month)", {("sends", b): 8 for b in BRANDS})
+whatif("Long-form views x2.5 (MMS 50K, Scam 30K a month by month 12)", {("yt_views", b): BASE[("yt_views", b)] * 2.5 for b in BRANDS})
+
+wsn = wb.create_sheet("Sensitivity", 1)
+wsn.append(["Sensitivity: which inputs move the BASE case's year-1 net the most"]); wsn["A1"].font = Font(bold=True, size=13)
+wsn.append([f"Each input is moved {int(STEP*100)}% down and up for both brands at once; everything else stays at Base. "
+            f"Base year-1 net = ${BASE_NET:,.0f}. Values are computed by revenue_model_two_brands.py with a Python copy of the Model formulas "
+            "(cross-checked against LibreOffice). They are static: re-run the script after changing Inputs."])
+wsn.append([])
+wsn.append(["Rank", "Input", "Key", "Base (MMS / Scam)", f"Net at -{int(STEP*100)}%", f"Net at +{int(STEP*100)}%", "Swing ($)", "Swing (% of base net)"])
+for c in wsn[4]: c.font = hdr; c.fill = hfill
+for n, (k, lo, hi, sw) in enumerate(sens, 1):
+    bm, bs = BASE[(k, "MMS")], BASE[(k, "Scam Decoded")]
+    wsn.append([n, LABEL[k], k, f"{bm:g} / {bs:g}", round(lo), round(hi), round(sw), sw / BASE_NET])
+    for col in (5, 6, 7): wsn.cell(wsn.max_row, col).number_format = "$#,##0"
+    wsn.cell(wsn.max_row, 8).number_format = "0%"
+    if n <= 5:
+        for cc in wsn[wsn.max_row]: cc.font = bold
+wsn.append([])
+wsn.append(["", "What-ifs (timing and step changes)", "", "", "Net year 1", "Change vs base"]); [setattr(c, "font", bold) for c in wsn[wsn.max_row]]
+for label, val in WHATIF:
+    wsn.append(["", label, "", "", round(val), round(val - BASE_NET)])
+    for col in (5, 6): wsn.cell(wsn.max_row, col).number_format = "$#,##0"
+wsn.append([])
+wsn.append(["", "Note: in the base case YouTube and TikTok inputs show $0 swing because no +/-25% change gets either brand through the YPP or Creator Rewards gate. B2B is not in this model (see revenue-model-2027.md)."])
+for col, w in zip("ABCDEFGH", (6, 62, 15, 18, 13, 13, 12, 20)): wsn.column_dimensions[col].width = w
+
+if __name__ == "__main__":
+    print(f"Base net ${BASE_NET:,.0f}")
+    for n, (k, lo, hi, sw) in enumerate(sens, 1): print(n, k, round(lo), round(hi), round(sw))
+    for label, val in WHATIF: print(label, round(val), round(val - BASE_NET))
 wb.save(OUT)
 print("wrote", OUT)
