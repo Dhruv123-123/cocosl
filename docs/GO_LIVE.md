@@ -383,28 +383,32 @@ Record at 1080p or better, never show personal data (blur account numbers, codes
 10–30 s, and save each one where its brand's file says (Scam Decoded:
 `launch/scam-decoded/LONG_VIDEO_RECORDINGS.md`). `factory recordings` shows what's still missing, soonest first.
 
-⛔ = currently blocked by `factory launch-check` (Money Made Simple's 5 on PR #5). Times: about 15 min per
+Times: about 15 min per
 screen recording, 30 min per on-camera or own-voice segment.
 
-Sources: Scam Decoded's 31 from `LONG_VIDEO_RECORDINGS.md`, Money Made Simple's and 1099 Money's from each
-brand's `ORIGINALITY.md` (1099 Money's own RECORDINGS.md, with 14, is being written and will replace those
-rows), and the ad studio's 5 from `ai-ad-studio-v2/social-posts/README.md`. Dinero Simple's 21 screen
-recordings come after its Spanish review and are not scheduled yet.
+Sources: Scam Decoded's 31 from `launch/scam-decoded/LONG_VIDEO_RECORDINGS.md`, 1099 Money's 14 from
+`launch/1099-money/RECORDINGS.md` (shot lists and file names there), Money Made Simple's 5 that
+`factory launch-check` blocks on PR #5, and the ad studio's 5 from `ai-ad-studio-v2/social-posts/README.md`.
+Dinero Simple's screen recordings come after its Spanish review and aren't scheduled yet.
+
+Once everything is imported, `factory batch-record --days 21 --minutes 45` builds these sessions for you
+(shot list, teleprompter page and `session.json` per session), and `factory batch-record attach <session
+folder>` links the recorded files into their videos. Use the table below to plan the Saturdays; use
+batch-record on the day.
 
 **Sat Nov 14, 2026** · 3 items · ≈ 60 min
 
 | Due | Brand | Video | Record |
 |---|---|---|---|
 | 11-19 | Studio | Post 4 · Process | screen-recording: Screen-record the plan → frames → export workflow |
-| 11-22 | 1099 | Your first year freelancing: the complete money setup | human-segment: Dhruv records the monthly money hour in his own voice: the routine he actually runs, or plainly framed as the routine he's starting now (beat: Monthly hour) |
 | 11-22 | Scam | 9 holiday scams that peak before New Year (and how to beat each one) | screen-recording: Screen-record checking an unfamiliar store: search its name plus 'scam' and 'reviews', then open its contact and returns pages. (beat: 2. 1. Fake stores) |
+| 11-22 | 1099 | Your first year freelancing: the complete money setup | human-segment: on-camera clip for the chapter, ~27s (shot list in launch/1099-money/RECORDINGS.md) (beat: Monthly hour) |
 
-**Sat Nov 21, 2026** · 3 items · ≈ 45 min
+**Sat Nov 21, 2026** · 2 items · ≈ 30 min
 
 | Due | Brand | Video | Record |
 |---|---|---|---|
 | 11-24 | Studio | Post 7 · Seller tip | phone footage: Film 5 short phone clips of one product |
-| 11-29 | MMS | Credit scores explained from zero | screen-recording: Screen recording of AnnualCreditReport.com: requesting all three reports and where the account list sits (no personal data on screen) (beat: Check your reports) |
 | 11-29 | Scam | How to protect your parents from scams: the complete guide | screen-recording: Screen-record your own phone: silence unknown callers, the carrier spam filter, and adding a contact as a favorite. (beat: 5. Phone settings) |
 
 **Sat Nov 28, 2026** · 3 items · ≈ 40 min
@@ -415,12 +419,11 @@ recordings come after its Spanish review and are not scheduled yet.
 | 12-03 | Studio | Post 14 · Process | screen-recording: Screen-record the delivery folder and an Etsy video upload |
 | 12-06 | Scam | Credit freeze vs fraud alert vs monitoring: what you actually need | screen-recording: Screen-record typing one credit bureau's freeze page address and finding the freeze button. Stop at sign-in. (beat: 2. Freeze) |
 
-**Sat Dec 5, 2026** · 3 items · ≈ 45 min
+**Sat Dec 5, 2026** · 2 items · ≈ 30 min
 
 | Due | Brand | Video | Record |
 |---|---|---|---|
 | 12-10 | Studio | Post 19 · Process + offer | screen-recording: Screen-record the Shop Trio batch |
-| 12-13 | MMS | 10 money moves to make before January 1 | screen-recording: Screen recording of the IRS Tax Withholding Estimator start page and a credit freeze page (test inputs only) (beat: 3. Withholding) |
 | 12-13 | Scam | Identity theft recovery, step by step (what to do in the first week) | screen-recording: Screen-record IdentityTheft.gov (typed in): start a report, pick a category, stop before personal details. (beat: 5. 3. Report) |
 
 **Sat Dec 12, 2026** · 1 item · ≈ 15 min
@@ -433,8 +436,8 @@ recordings come after its Spanish review and are not scheduled yet.
 
 | Due | Brand | Video | Record |
 |---|---|---|---|
-| 12-27 | MMS | The 2027 money reset: a complete plan in one sitting ⛔ | human-segment: Dhruv records the 'When it breaks' chapter on camera or as his own voice: one honest, true restart tip (beat: When it breaks) |
-| 12-27 | 1099 | Your freelancer tax season plan: January to April | screen-recording: Screen recording of IRS Direct Pay's start page, showing the reason, form and tax-year choices for an estimated payment (nothing submitted, no personal data) (beat: Jan 15) |
+| 12-27 | MMS | The 2027 money reset: a complete plan in one sitting | human-segment: Dhruv records the 'When it breaks' chapter on camera or as his own voice: one honest, true restart tip (beat: When it breaks) |
+| 12-27 | 1099 | Your freelancer tax season plan: January to April | screen-recording: screen recording for the chapter, ~24s (shot list in launch/1099-money/RECORDINGS.md) (beat: Jan 15) |
 
 **Sat Dec 26, 2026** · 1 item · ≈ 15 min
 
@@ -446,9 +449,9 @@ recordings come after its Spanish review and are not scheduled yet.
 
 | Due | Brand | Video | Record |
 |---|---|---|---|
-| 01-10 | MMS | Your first tax return, start to finish ⛔ | screen-recording: Screen recording of the IRS Free File landing page and the 'Do you need to file?' interactive tool (beat: Free filing) |
-| 01-10 | 1099 | Your 1099s explained: every form, every mistake, every fix | screen-recording: Screen recording of the IRS 'Understanding your Form 1099-K' page, scrolling to the thresholds and what to do if a form is wrong (beat: 1099-K) |
+| 01-10 | MMS | Your first tax return, start to finish | screen-recording: Screen recording of the IRS Free File landing page and the 'Do you need to file?' interactive tool (beat: Free filing) |
 | 01-10 | Scam | Tax season scams 2027: 8 to know before you file | screen-recording: Screen-record irs.gov (typed in): the Get an IP PIN page. Stop at sign-in. (beat: 10. The IP PIN) |
+| 01-10 | 1099 | Your 1099s explained: every form, every mistake, every fix | screen-recording: screen recording for the chapter, ~44s (shot list in launch/1099-money/RECORDINGS.md) (beat: 1099-K) |
 
 **Sat Jan 9, 2027** · 1 item · ≈ 15 min
 
@@ -460,15 +463,15 @@ recordings come after its Spanish review and are not scheduled yet.
 
 | Due | Brand | Video | Record |
 |---|---|---|---|
-| 01-24 | 1099 | Get your freelance taxes ready to file in one weekend | human-segment: Dhruv films his own Friday-night prep on screen or at his desk: downloading statements into one folder, using a demo account clearly labeled as a demo if he doesn't… (beat: Prep) |
 | 01-24 | Scam | How a wrong-number text becomes a $100,000 loss (crypto investment scams explained) | screen-recording: Screen-record FINRA BrokerCheck and the SEC's investor.gov search: look up a made-up 'platform' name and show that nothing comes back. (beat: 4. Stage 3: the tip) |
+| 01-24 | 1099 | Get your freelance taxes ready to file in one weekend | human-segment: on-camera clip for the chapter, ~52s (shot list in launch/1099-money/RECORDINGS.md) (beat: Prep) |
 
 **Sat Jan 23, 2027** · 2 items · ≈ 30 min
 
 | Due | Brand | Video | Record |
 |---|---|---|---|
-| 01-31 | 1099 | Schedule C explained, section by section, for freelancers | screen-recording: Screen recording of the blank Schedule C PDF from irs.gov, scrolled section by section with Jo's fictional numbers overlaid (beat: Header) |
 | 01-31 | Scam | Romance scams before Valentine's: how to spot one, and how to help someone in one | screen-recording: Screen-record a reverse image search of a stock photo of a person, showing where else the photo appears. (beat: 5. Video and AI) |
+| 01-31 | 1099 | Schedule C explained, section by section, for freelancers | screen-recording: screen recording for the chapter, ~39s (shot list in launch/1099-money/RECORDINGS.md) (beat: Header) |
 
 **Sat Jan 30, 2027** · 1 item · ≈ 15 min
 
@@ -476,13 +479,12 @@ recordings come after its Spanish review and are not scheduled yet.
 |---|---|---|---|
 | 02-07 | Scam | Sextortion: what every parent and teen should know (and do) | screen-recording: Screen-record the Take It Down start page (takeitdown.ncmec.org, typed in) and scroll its how-it-works steps. Don't upload anything. (beat: 7. Take It Down) |
 
-**Sat Feb 6, 2027** · 3 items · ≈ 60 min
+**Sat Feb 6, 2027** · 2 items · ≈ 30 min
 
 | Due | Brand | Video | Record |
 |---|---|---|---|
-| 02-14 | MMS | Money and relationships: how to combine finances without fighting | human-segment: Dhruv records the 'Money date' chapter in his own voice, with his real check-in routine if he has one, or a plainly-stated suggestion (beat: Money date) |
-| 02-14 | 1099 | The mileage deduction: logs, rates, commuting rules and mistakes | screen-recording: Screen recording of a demo mileage log being filled in, plus the IRS standard mileage rates page showing the 2026 rate (beat: The log) |
 | 02-14 | Scam | Valentine's Day: the 4 ways romance scammers ask for money | screen-recording: Screen-record reportfraud.ftc.gov (typed in): pick the romance option and stop before any personal details. (beat: 8. If money's gone) |
+| 02-14 | 1099 | The mileage deduction: logs, rates, commuting rules and mistakes | screen-recording: screen recording for the chapter, ~47s (shot list in launch/1099-money/RECORDINGS.md) (beat: The log) |
 
 **Sat Feb 13, 2027** · 1 item · ≈ 15 min
 
@@ -490,28 +492,27 @@ recordings come after its Spanish review and are not scheduled yet.
 |---|---|---|---|
 | 02-21 | Scam | IRS scams 2027: every way scammers fake the IRS, and how the real IRS contacts you | screen-recording: Screen-record typing irs.gov and finding the Individual Online Account sign-in and the Payments page. Stop at sign-in. (beat: 8. Check and pay) |
 
-**Sat Feb 20, 2027** · 3 items · ≈ 60 min
+**Sat Feb 20, 2027** · 2 items · ≈ 45 min
 
 | Due | Brand | Video | Record |
 |---|---|---|---|
-| 02-28 | MMS | Your W-4, explained: stop overpaying (or owing) every April | screen-recording: Screen recording of the IRS Tax Withholding Estimator with made-up inputs, ending on the suggested W-4 entries (beat: Real numbers: refund) |
-| 02-28 | 1099 | 12 freelance tax mistakes that lead to IRS letters | human-segment: Dhruv reads the pre-filing routine in his own voice, saying truthfully whether he uses it or presenting it plainly as a suggestion (beat: Before you file) |
 | 02-28 | Scam | Owe the IRS? Free help first, and how to spot a tax relief scam | screen-recording: Screen-record the Taxpayer Advocate Service site and the Low Income Taxpayer Clinic list on irs.gov (find your state). (beat: 6. Free help) |
+| 02-28 | 1099 | 12 freelance tax mistakes that lead to IRS letters | human-segment: on-camera clip for the chapter, ~31s (shot list in launch/1099-money/RECORDINGS.md) (beat: Before you file) |
 
 **Sat Feb 27, 2027** · 2 items · ≈ 30 min
 
 | Due | Brand | Video | Record |
 |---|---|---|---|
-| 03-07 | 1099 | How to file your freelance tax return, step by step | screen-recording: Screen recording of the IRS Free File landing page and the online account's payment history view (logged-out or demo screens only) (beat: Step one) |
 | 03-07 | Scam | Government imposter scams: Social Security, Medicare, courts and more (Slam the Scam Day) | screen-recording: Screen-record ssa.gov/scam (typed in) and its 'report a scam' button. Stop before the form. (beat: 2. Social Security) |
+| 03-07 | 1099 | How to file your freelance tax return, step by step | screen-recording: screen recording for the chapter, ~41s (shot list in launch/1099-money/RECORDINGS.md) (beat: Step one) |
 
 **Sat Mar 6, 2027** · 3 items · ≈ 45 min
 
 | Due | Brand | Video | Record |
 |---|---|---|---|
-| 03-14 | MMS | Where's my tax refund? How refunds work, and what slows them down ⛔ | screen-recording: Screen recording of Where's My Refund on IRS.gov (logged-out, entry screen only) and the IRS2Go app's status screen (beat: How it works) |
-| 03-14 | 1099 | Owe the IRS more than you expected? Every option, explained | screen-recording: Screen recording of the IRS Online Payment Agreement landing page, showing short-term vs long-term options (nothing submitted) (beat: Long) |
+| 03-14 | MMS | Where's my tax refund? How refunds work, and what slows them down | screen-recording: Screen recording of Where's My Refund on IRS.gov (logged-out, entry screen only) and the IRS2Go app's status screen (beat: How it works) |
 | 03-14 | Scam | Spring break scams: fake rentals, fake booking sites and 'free trips' | screen-recording: Screen-record a search for a big hotel chain: point at the 'Sponsored' result, then type the chain's real address yourself and compare the domains. Book nothing. (beat: 3. Fake booking sites) |
+| 03-14 | 1099 | Owe the IRS more than you expected? Every option, explained | screen-recording: screen recording for the chapter, ~38s (shot list in launch/1099-money/RECORDINGS.md) (beat: Long) |
 
 **Sat Mar 13, 2027** · 1 item · ≈ 15 min
 
@@ -525,21 +526,19 @@ recordings come after its Spanish review and are not scheduled yet.
 |---|---|---|---|
 | 03-28 | Scam | Filing last minute? How to beat the tax deadline safely (and the scams waiting for you) | screen-recording: Screen-record irs.gov (typed in): the Free File page and the extension page for Form 4868. (beat: 4. Free extensions) |
 
-**Sat Mar 27, 2027** · 3 items · ≈ 45 min
+**Sat Mar 27, 2027** · 2 items · ≈ 30 min
 
 | Due | Brand | Video | Record |
 |---|---|---|---|
-| 04-04 | MMS | How to Build an Emergency Fund (Even on a Tight Budget) | screen-recording: Screen recording of the FDIC BankFind tool checking a bank's insurance (any public bank) and setting a recurring transfer in a demo banking screen (beat: Where to keep it) |
-| 04-04 | 1099 | Tax extensions for freelancers: how, when, and what they really cost | screen-recording: Screen recording of IRS Direct Pay showing the 'extension' reason option (nothing submitted, no personal data) (beat: How one) |
 | 04-04 | Scam | After the storm: how home repair scams work, and how to hire safely | screen-recording: Screen-record your state's contractor license lookup: search a common business name and show the license status field. (beat: 6. Hiring safely) |
+| 04-04 | 1099 | Tax extensions for freelancers: how, when, and what they really cost | screen-recording: screen recording for the chapter, ~39s (shot list in launch/1099-money/RECORDINGS.md) (beat: How one) |
 
-**Sat Apr 3, 2027** · 3 items · ≈ 45 min
+**Sat Apr 3, 2027** · 2 items · ≈ 30 min
 
 | Due | Brand | Video | Record |
 |---|---|---|---|
-| 04-11 | MMS | How Credit Scores Actually Work (and How to Raise Yours) | screen-recording: Screen recording of AnnualCreditReport.com and the dispute page of one bureau (no personal data), plus a utilization bar chart (beat: Check and dispute your report free) |
-| 04-11 | 1099 | Day job, side gig or working spouse: freelance tax without quarterly payments | screen-recording: Screen recording of the IRS Tax Withholding Estimator with made-up inputs, ending on the suggested extra withholding for line 4(c) (beat: How) |
 | 04-11 | Scam | After Tax Day: the scams that follow you (and what the IRS really does next) | screen-recording: Screen-record typing irs.gov and opening Where's My Refund. Stop before entering anything. (beat: 2. Refund trackers) |
+| 04-11 | 1099 | Day job, side gig or working spouse: freelance tax without quarterly payments | screen-recording: screen recording for the chapter, ~36s (shot list in launch/1099-money/RECORDINGS.md) (beat: How) |
 
 **Sat Apr 10, 2027** · 1 item · ≈ 15 min
 
@@ -551,8 +550,8 @@ recordings come after its Spanish review and are not scheduled yet.
 
 | Due | Brand | Video | Record |
 |---|---|---|---|
-| 04-25 | 1099 | Mid-year tax planning for freelancers: project 2027 now and fix it early | human-segment: Dhruv records the check-in routine in his own voice, saying truthfully when he does his own mid-year check, or plainly that he's starting one (beat: Repeat) |
 | 04-25 | Scam | Moving this spring? Rental listing scams and moving company scams, decoded | screen-recording: Screen-record the FMCSA mover search: search a moving company by name and show its USDOT number and complaint history link. (beat: 6. Check a mover) |
+| 04-25 | 1099 | Mid-year tax planning for freelancers: project 2027 now and fix it early | human-segment: on-camera clip for the chapter, ~29s (shot list in launch/1099-money/RECORDINGS.md) (beat: Repeat) |
 
 **Sat Apr 24, 2027** · 1 item · ≈ 15 min
 
@@ -566,18 +565,20 @@ recordings come after its Spanish review and are not scheduled yet.
 |---|---|---|---|
 | 05-09 | Scam | Medicare fraud: free tests, free braces, and the card thieves want | screen-recording: Medicare's own sample Medicare Summary Notice on screen: circle where fake tests and equipment would show up (face cam intro and outro). (beat: 7. Read the statement) |
 
-**Sat May 8, 2027** · 2 items · ≈ 45 min
+**Sat May 8, 2027** · 3 items · ≈ 60 min
 
 | Due | Brand | Video | Record |
 |---|---|---|---|
-| 05-16 | MMS | Budgeting App vs Spreadsheet: Which One Should You Use? ⛔ | human-segment: Dhruv records 'Try it for 30 days' in his own voice, saying truthfully which method he uses (or that he's choosing one now) (beat: Try it for 30 days) |
+| 05-16 | MMS | Budgeting App vs Spreadsheet: Which One Should You Use? | human-segment: Dhruv records 'Try it for 30 days' in his own voice, saying truthfully which method he uses (or that he's choosing one now) (beat: Try it for 30 days) |
 | 05-16 | Scam | Graduates' guide: fake jobs, fake landlords and scholarship scams | screen-recording: Screen-record checking a real, public company's careers page and a recruiter's email domain, then a reverse image search of a listing photo. (beat: 2. The chat interview) |
+| 05-16 | 1099 | Business travel for freelancers: what a working trip lets you deduct | screen-recording: screen recording for the chapter, ~43s (shot list in launch/1099-money/RECORDINGS.md) (beat: Per diem) |
 
-**Sat May 15, 2027** · 1 item · ≈ 15 min
+**Sat May 15, 2027** · 2 items · ≈ 45 min
 
 | Due | Brand | Video | Record |
 |---|---|---|---|
 | 05-23 | Scam | Veterans' benefit scams and fake military charities: what to know before Memorial Day | screen-recording: Screen-record VA's accreditation search (search a common surname, no personal data) and a charity watchdog lookup. (beat: 3. Free help) |
+| 05-23 | 1099 | Hiring help as a freelancer: contractors, family and the forms you need | human-segment: on-camera clip for the chapter, ~40s (shot list in launch/1099-money/RECORDINGS.md) (beat: Three questions) |
 
 **Sat May 22, 2027** · 1 item · ≈ 15 min
 
@@ -589,7 +590,7 @@ recordings come after its Spanish review and are not scheduled yet.
 
 | Due | Brand | Video | Record |
 |---|---|---|---|
-| 06-06 | MMS | How to Freeze Your Credit (Free, 15 Minutes, All 3 Bureaus) ⛔ | screen-recording: Screen recording of each bureau's official freeze page (landing pages only, no personal data entered) (beat: Step by step: Equifax, Experian, TransUnion) |
+| 06-06 | MMS | How to Freeze Your Credit (Free, 15 Minutes, All 3 Bureaus) | screen-recording: Screen recording of each bureau's official freeze page (landing pages only, no personal data entered) (beat: Step by step: Equifax, Experian, TransUnion) |
 | 06-06 | Scam | Teens and summer money: money flips, free game coins and check-first babysitting jobs | screen-recording: Screen-record the security settings in a payment app and a game account on your own phone (2-step verification, private payments, parent PIN). (beat: 5. Settings) |
 
 **Sat Jun 5, 2027** · 1 item · ≈ 15 min
@@ -609,8 +610,6 @@ recordings come after its Spanish review and are not scheduled yet.
 | Due | Brand | Video | Record |
 |---|---|---|---|
 | 06-27 | Scam | 4th of July weekend scams: lost pet texts, money 'sent by mistake' and fake celebrity ads | screen-recording: Screen-record two settings on your own phone: making a payment app private, and the 'report ad' menu in a social app. (beat: 5. Settings) |
-
-Not on a calendar yet: MMS · High-Yield Savings Accounts Explained: Are They Safe, and Are They Worth It? (screen-recording: Screen recording of FDIC BankFind, plus a $5,000 interest bar chart at 0.5% vs 4% (hypothetical)).
 
 ---
 
