@@ -11,6 +11,7 @@ Check @scamdecoded is free on Instagram, TikTok and YouTube before creating acco
 | `lead-magnet.json` | Free checklist for the link-in-bio email signup |
 | `product/` | The Family Scam-Proofing Kit: PDF, source HTML, store listing |
 | `POSTING_PLAN.md` | 14-day schedule |
+| `weeks-3-6.json`, `POSTING_PLAN_WEEKS_3-6.md` | Nov 21 – Dec 18: 12 Shorts, 12 TikTok cuts, 8 carousels, 4 YouTube long-form (holiday-season scams) |
 
 Build the postable pack (slides, thumbnails, captions, brand kit, link page) and queue everything for review:
 

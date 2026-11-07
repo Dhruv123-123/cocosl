@@ -77,3 +77,18 @@ def test_build_pack_writes_postable_folders(factory, tmp_path):
     magnet = json.loads((out / "link-in-bio-page" / "lead-magnet.json").read_text())
     assert magnet["sections"][0]["heading"] == "Tonight (10 minutes)"
     assert "| 1 | short | tiktok |" in (out / "CONTENTS.md").read_text()
+
+
+def test_weeks_3_6_content_is_valid_and_routed(factory):
+    from contentfactory.schemas import Script
+    brand = factory.brand("scam-decoded")
+    items = json.loads((CONTENT.parent / "weeks-3-6.json").read_text())
+    formats = [i["format"] for i in items]
+    assert formats.count("carousel") == 8 and formats.count("long") == 4
+    assert len([i for i in items if i.get("platforms") == ["tiktok"]]) == 12
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        assert any(ch.isdigit() for ch in sc.hook), sc.hook
+        assert sc.claims_to_verify and sc.sources
+        assert all(brand.account(p) for p in item.get("platforms", []))
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments), sc.title
