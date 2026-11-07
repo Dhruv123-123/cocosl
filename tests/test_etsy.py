@@ -12,7 +12,7 @@ import printables_more  # noqa: E402
 
 def test_listings_follow_etsy_limits():
     assert listings.validate() == []
-    assert len(listings.LISTINGS) == 49 and len(listings.OFF_ETSY) == 6  # guide kits are Gumroad only
+    assert len(listings.LISTINGS) == 51 and len(listings.OFF_ETSY) == 6  # guide kits are Gumroad only
     for it in listings.LISTINGS:
         assert len(it["title"]) <= 140 and len(it["tags"]) == 13
         assert "DIGITAL DOWNLOAD" in it["description"] and "How it's made" in it["description"]
@@ -27,7 +27,7 @@ def test_every_printable_has_a_listing_and_pages():
 
 
 def test_printable_prices_are_low_cost():
-    prices = [it["price"] for it in listings.LISTINGS if it["kind"] == "printable" and not it.get("dated") and not it.get("digital") and not it.get("seasonal")]
+    prices = [it["price"] for it in listings.LISTINGS if it["kind"] == "printable" and not it.get("dated") and not it.get("digital") and not it.get("standalone")]
     assert len(prices) == 40 and all(3 <= p <= 8 for p in prices)
     binder = listings.BY_SLUG["budget-binder-bundle"]
     assert binder["price"] < sum(listings.BY_SLUG[s]["price"] for s in binder["bundle"])
@@ -47,7 +47,7 @@ def test_new_printables_are_new_and_bundled():
     assert len(printables_more.MORE) == 30
     assert not set(printables_more.MORE) & set(printables.PRINTABLES)
     mega = listings.BY_SLUG["mega-budget-bundle"]
-    every = [x["slug"] for x in listings.LISTINGS if x["kind"] == "printable" and not x.get("dated") and not x.get("digital") and not x.get("seasonal")]
+    every = [x["slug"] for x in listings.LISTINGS if x["kind"] == "printable" and not x.get("dated") and not x.get("digital") and not x.get("standalone")]
     assert sorted(mega["bundle"]) == sorted(every) and len(every) == 40
     for b in ("mega-budget-bundle", "savings-challenge-pack", "budget-binder-bundle"):
         it = listings.BY_SLUG[b]
@@ -205,3 +205,23 @@ def test_couples_pack_is_seasonal_and_adds_up():
     assert it["slug"] not in listings.BY_SLUG["mega-budget-bundle"]["bundle"]
     assert CP.HEART_GOAL == 500 and len(CP.HEARTS) == 50 and len(CP.pages()) == 9
     assert all("moneymadesimple" in p for p in CP.pages())
+
+
+def test_life_planner_says_it_is_not_legal_and_holds_no_passwords():
+    import life_planner as LP
+    pages = LP.pages()
+    assert len(pages) == 15 and all("Not a legal document" in p for p in pages)
+    text = " ".join(pages).lower()
+    assert ">password" not in text and "password:" not in text and "never write passwords here" in text
+    it = listings.BY_SLUG["if-something-happens-planner"]
+    assert "isn't a legal document" in it["description"] and it["slug"] not in listings.BY_SLUG["mega-budget-bundle"]["bundle"]
+
+
+def test_moving_planner_matches_the_sheet_and_the_calculator():
+    import moving_planner as MP
+    sys.path.insert(0, str(ETSY.parent / "templates"))
+    import moving_sheet as MS
+    calc = ["Movers or truck rental", "Fuel and mileage", "Packing supplies", "Storage", "Travel and lodging",
+            "Deposits (new place)", "Overlap rent", "Utility setup", "Cleaning", "Time off work", "Buffer"]
+    assert MP.CATEGORIES == MS.CATEGORIES == calc and MP.UTILITIES == MS.UTILITIES
+    assert len(MP.pages()) == 10 and listings.BY_SLUG["moving-planner"]["standalone"]

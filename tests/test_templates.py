@@ -209,3 +209,32 @@ def test_wedding_sheet_uses_the_planner_tool_categories(tmp_path):
     wb = openpyxl.load_workbook(W.build_wedding(tmp_path / "w.xlsx", TODAY))
     ws = wb["Planner paste"]
     assert [ws.cell(r, 2).value for r in range(7, 27)] == [None] * 20   # the paste area starts empty
+
+
+def test_sinking_sheet_matches_the_planner_layout(tmp_path):
+    import sinking_sheet as SS
+    assert [p[0] for p in SS.PRESETS][:2] == ["Car insurance", "Holidays and gifts"] and len(SS.PRESETS) == 8
+    assert SS.preset_date("Holidays and gifts", 0, date(2026, 11, 7)) == date(2026, 12, 1)
+    assert SS.preset_date("Back to school", 0, date(2026, 11, 7)) == date(2027, 8, 1)
+    wb = openpyxl.load_workbook(SS.build_sinking(tmp_path / "s.xlsx", TODAY))
+    f = wb["Funds"]
+    assert [f.cell(4, c).value for c in (1, 2, 3)] == ["Fund", "Target", "Needed by"]
+    assert [f.cell(4, c).value for c in (11, 12, 13)] == ["Date", "Fund", "Amount"]
+    assert f["A5"].value == "Car insurance" and "DATEDIF(TODAY(),C5" in f["F5"].value
+
+
+@pytest.mark.skipif(not shutil.which("soffice"), reason="LibreOffice not installed")
+def test_moving_sheet_uses_the_paste_for_blank_cells(tmp_path):
+    import moving_sheet as MS
+    p = MS.build_moving(tmp_path / "m.xlsx", TODAY)
+    wb = openpyxl.load_workbook(p)
+    bd, pp = wb["Budget"], wb["Planner paste"]
+    for r in range(7, 7 + MS.NB):
+        for c in "CDE":
+            bd[f"{c}{r}"].value = None
+    pp["B7"], pp["C7"], pp["D7"], pp["E7"] = "Movers or truck rental", 2000, 1900, 500
+    wb.save(p)
+    out = tmp_path / "out"
+    subprocess.run(["soffice", "--headless", "--convert-to", "xlsx", "--outdir", str(out), str(p)], capture_output=True, timeout=120)
+    v = openpyxl.load_workbook(out / "m.xlsx", data_only=True)["Budget"]
+    assert v["F7"].value == 1400 and v["G7"].value == 100 and v["H7"].value == "Planner paste" and v["C18"].value == 2000

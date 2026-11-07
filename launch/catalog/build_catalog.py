@@ -50,6 +50,12 @@ def etsy_rows() -> list[dict]:
         base = f"etsy/{s}/"
         if it.get("dated"):
             date, src, note = "Week of Nov 9 (list first)", "calendar", "Dated: 4 PDFs (Sun/Mon start x Letter/A4). Drop the price after Jan 31."
+        elif it["slug"] == "if-something-happens-planner":
+            date, src, note = ("Week of Jan 11 2027 (scouting: list by Jan 15; searches peak May and Aug)", "proposed",
+                               "Fill-in organiser, not a will: the listing and every page say so. No passwords in it. Not in the bundles.")
+        elif it["slug"] == "moving-planner":
+            date, src, note = ("Week of Mar 1 2027, ahead of the May-Aug moving peak", "proposed",
+                               "Same 11 cost categories as the Moving Budget Sheet and the apps thread's moving cost calculator. Not in the bundles.")
         elif it.get("seasonal"):
             date, src, note = ("Week of Jan 25 2027, live by Feb 1 for Valentine's Day (Feb 14)", "proposed",
                                "Seasonal, so it isn't in the undated bundles. Swap it to the second featured slot Feb 1-14.")
@@ -113,6 +119,14 @@ def template_rows() -> list[dict]:
             date, src = "Week of Dec 7 (engagement season peaks Dec-Feb)", "proposed"
             note += (" Pairs with the free wedding budget planner on PR #8 (same 20 categories; its Copy rows paste into the "
                      "Planner paste tab). Etsy is optional: it's a spreadsheet, not a guide.")
+        if s == "sinking-funds-sheet":
+            date, src = "Week of Dec 14 (scouting: by Dec 20; sinking-funds searches peak in January)", "proposed"
+            note += (" Pairs with the free sinking-funds planner on PR #8: same eight presets, and its Copy output pastes "
+                     "into the Funds tab (funds at A5, deposits at K5). Upsell from the $3 sinking funds printable.")
+        if s == "moving-budget-sheet":
+            date, src = "Week of Mar 1 2027, ahead of the May-Aug moving peak", "proposed"
+            note += (" Pairs with the moving cost calculator on PR #8 (same 11 categories; its Copy rows paste into the "
+                     "Planner paste tab) and the Moving Planner printable.")
         out.append(row("Money Made Simple", i["name"], plat, money(i["price"]), f"templates/{s}/", f"templates/{s}/LISTING.md",
                        date, src, note))
     return out

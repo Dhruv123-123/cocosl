@@ -1,6 +1,6 @@
 # Products catalog: every product, every brand
 
-One sheet to list from. **124 listings** (Money Made Simple 95, Scam Decoded 8, 1099 Money 8, Dinero Simple 13). Nothing in this list has been uploaded, listed or
+One sheet to list from. **128 listings** (Money Made Simple 99, Scam Decoded 8, 1099 Money 8, Dinero Simple 13). Nothing in this list has been uploaded, listed or
 submitted anywhere.
 
 - **Files** and **Listing copy** paths are inside the project files folder `content-factory/` (the upload-ready copies).
@@ -13,7 +13,7 @@ submitted anywhere.
 - Regenerate after changing a price or name: `python launch/catalog/build_catalog.py`. Also as `PRODUCTS_CATALOG.csv`.
 
 
-## Money Made Simple (95)
+## Money Made Simple (99)
 
 | Product | Platform | Price | Files | Listing copy | Launch | Date | Notes |
 |---|---|---|---|---|---|---|---|
@@ -61,6 +61,8 @@ submitted anywhere.
 | 2027 Budget Planner | Etsy | $12 | `etsy/2027-budget-planner/` | `etsy/2027-budget-planner/LISTING.md` | Week of Nov 9 (list first) | calendar | Dated: 4 PDFs (Sun/Mon start x Letter/A4). Drop the price after Jan 31. |
 | Digital Budget Planner (undated, hyperlinked) | Etsy | $12 | `etsy/digital-budget-planner/` | `etsy/digital-budget-planner/LISTING.md` | Week of Dec 7, for the January peak | proposed | Digital planner for tablet note apps: 2 PDFs (iPad portrait, landscape), 47 pages, about 1,000 links checked by the build. Open it in GoodNotes once and tap a few tabs before listing. |
 | Couples Money Date Pack | Etsy | $6 | `etsy/couples-money-date-pack/` | `etsy/couples-money-date-pack/LISTING.md` | Week of Jan 25 2027, live by Feb 1 for Valentine's Day (Feb 14) | proposed | Seasonal, so it isn't in the undated bundles. Swap it to the second featured slot Feb 1-14. |
+| If Something Happens to Me Planner | Etsy | $14 | `etsy/if-something-happens-planner/` | `etsy/if-something-happens-planner/LISTING.md` | Week of Jan 11 2027 (scouting: list by Jan 15; searches peak May and Aug) | proposed | Fill-in organiser, not a will: the listing and every page say so. No passwords in it. Not in the bundles. |
+| Moving Planner | Etsy | $7 | `etsy/moving-planner/` | `etsy/moving-planner/LISTING.md` | Week of Mar 1 2027, ahead of the May-Aug moving peak | proposed | Same 11 cost categories as the Moving Budget Sheet and the apps thread's moving cost calculator. Not in the bundles. |
 | Savings Challenge Pack (12 printables) | Etsy | $8 | `etsy/savings-challenge-pack/` | `etsy/savings-challenge-pack/LISTING.md` | Week of Nov 9; code BF25 Nov 27-30 | calendar | Black Friday: code only, no crossed-out price (see the BFCM section). From Jan 1 2027: $10 (scheduled). |
 | Debt Payoff Printable Bundle (5 printables) | Etsy | $8 | `etsy/debt-payoff-bundle/` | `etsy/debt-payoff-bundle/LISTING.md` | Week of Nov 16 | proposed | Goal bundle for the site's /shop/debt/ page. Full price; BF25 stays on the three launch bundles. |
 | First Paycheck Budget Bundle (6 printables) | Etsy | $9 | `etsy/first-paycheck-budget-bundle/` | `etsy/first-paycheck-budget-bundle/LISTING.md` | Week of Nov 16 | proposed | Goal bundle for the site's /shop/first-job/ page. Full price; BF25 stays on the three launch bundles. |
@@ -94,6 +96,8 @@ submitted anywhere.
 | Notion Paycheck Budget Planner | Gumroad | $7 | `templates/notion-paycheck-budget/` | `templates/notion-paycheck-budget/LISTING.md` | Week of Dec 14, ahead of the January budgeting and savings-challenge peak | proposed | Notion: run notion_build.py once and paste the duplicate link into links.json. Digital version of the Etsy printable 'paycheck-budget-planner'. |
 | Notion Debt Payoff Coloring Tracker | Gumroad | $7 | `templates/notion-debt-coloring/` | `templates/notion-debt-coloring/LISTING.md` | Week of Dec 14, ahead of the January budgeting and savings-challenge peak | proposed | Notion: run notion_build.py once and paste the duplicate link into links.json. Digital version of the Etsy printable 'debt-payoff-coloring-tracker'. |
 | Wedding Budget Sheet | Gumroad | $12 | `templates/wedding-budget-sheet/` | `templates/wedding-budget-sheet/LISTING.md` | Week of Dec 7 (engagement season peaks Dec-Feb) | proposed | Paste the Sheets copy link into links.json and rebuild. Pairs with the free wedding budget planner on PR #8 (same 20 categories; its Copy rows paste into the Planner paste tab). Etsy is optional: it's a spreadsheet, not a guide. |
+| Sinking Funds Sheet | Gumroad | $7 | `templates/sinking-funds-sheet/` | `templates/sinking-funds-sheet/LISTING.md` | Week of Dec 14 (scouting: by Dec 20; sinking-funds searches peak in January) | proposed | Paste the Sheets copy link into links.json and rebuild. Pairs with the free sinking-funds planner on PR #8: same eight presets, and its Copy output pastes into the Funds tab (funds at A5, deposits at K5). Upsell from the $3 sinking funds printable. |
+| Moving Budget Sheet | Gumroad | $9 | `templates/moving-budget-sheet/` | `templates/moving-budget-sheet/LISTING.md` | Week of Mar 1 2027, ahead of the May-Aug moving peak | proposed | Paste the Sheets copy link into links.json and rebuild. Pairs with the moving cost calculator on PR #8 (same 11 categories; its Copy rows paste into the Planner paste tab) and the Moving Planner printable. |
 | 100 Envelope Challenge Poster | Etsy (print on demand) | about $22-$32 | `pod/100-envelope-challenge-poster/` | `pod/100-envelope-challenge-poster/LISTING.md` | Week of Nov 16; last orders before the print partner's mid-Dec cutoff | calendar | Connect Printify, check base price and shipping (keep $6+ per size), order one sample. |
 | 52 Week Savings Challenge Poster | Etsy (print on demand) | about $22-$32 | `pod/52-week-savings-poster/` | `pod/52-week-savings-poster/LISTING.md` | Week of Nov 16; last orders before the print partner's mid-Dec cutoff | calendar | Connect Printify, check base price and shipping (keep $6+ per size), order one sample. |
 | $1,000 Savings Bingo Poster | Etsy (print on demand) | about $22-$32 | `pod/savings-bingo-poster/` | `pod/savings-bingo-poster/LISTING.md` | Week of Nov 16; last orders before the print partner's mid-Dec cutoff | calendar | Connect Printify, check base price and shipping (keep $6+ per size), order one sample. |

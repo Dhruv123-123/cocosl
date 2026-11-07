@@ -240,4 +240,44 @@ ITEMS.append({
              "wedding checklist", "personal finance"],
     "next": "budget-sheet", "shots": [("Dashboard", "B1:C16"), ("Payments", "B1:J20"), ("Budget", "B1:H28")],
 })
+# Scouting's product-ideas-round2.md (PR #2): sinking funds (27,100 searches, January peak) and moving (14,800, May-Aug peak).
+ITEMS.append({
+    "slug": "sinking-funds-sheet", "kind": "sheets", "name": "Sinking Funds Sheet", "price": 7,
+    "xlsx": "Sinking-Funds-Sheet.xlsx", "link": "sheet_sinking",
+    "title": "Sinking Funds Spreadsheet for Google Sheets: monthly and per-paycheck savings for the bills you know are coming",
+    "tagline": "List the bills you know are coming, and the sheet works out how much to set aside each month and each payday.",
+    "hook": "Car insurance, the holidays, the vet: list them once and see exactly what to move to savings each payday.",
+    "gets": ["**Funds:** each fund's target and date, with saved, still to save, months left, save each month and a progress bar. "
+             "Late funds turn red; full ones turn green.",
+             "**Deposits:** log each deposit and pick the fund from a list.",
+             "**Dashboard:** the total to move each month and each paycheck, the next fund due, and a saved-vs-target chart.",
+             "**Year ahead:** what comes due in each of the next 12 months.",
+             "**Pairs with our free sinking-funds planner:** its Copy buttons paste straight into the Funds tab."],
+    "who": "Anyone tired of the same 'surprise' bills every year: insurance, holidays, car repairs, school.",
+    "faq": [("Do I need Excel?", "No. It's made for Google Sheets (free). The .xlsx also opens in Excel and Numbers."),
+            ("How does it work out the monthly amount?", "Still to save divided by the months left, counting the month it's due."),
+            ("Can I add my own funds?", "Yes, up to 20. Type over the examples.")],
+    "tags": ["sinking funds", "savings tracker", "google sheets", "budget spreadsheet", "cash stuffing",
+             "savings goals", "personal finance"],
+    "next": "budget-sheet", "shots": [("Funds", "A1:I14"), ("Dashboard", "B1:C17"), ("Year ahead", "B1:D18")],
+})
+ITEMS.append({
+    "slug": "moving-budget-sheet", "kind": "sheets", "name": "Moving Budget Sheet", "price": 9,
+    "xlsx": "Moving-Budget-Sheet.xlsx", "link": "sheet_moving",
+    "title": "Moving Budget Spreadsheet for Google Sheets: moving costs, mover quotes and a utilities tracker",
+    "tagline": "Estimate every moving cost, compare movers side by side, and track each utility you stop and start.",
+    "hook": "The move in one sheet: what it will cost, what you've paid, which mover is cheapest, and which utilities are sorted.",
+    "gets": ["**Budget:** 11 moving costs with estimate, actual, paid, still to pay and estimate minus actual, plus a chart.",
+             "**Quotes:** three movers or truck rentals side by side, with the cheapest picked out.",
+             "**Utilities:** stop, start or transfer each service, with dates, deposits and confirmation numbers.",
+             "**Setup:** moving date, days to go and your total budget.",
+             "**Pairs with our free moving cost calculator:** its Copy rows paste into the Planner paste tab."],
+    "who": "Renters and homeowners planning a move who want the costs and the to-dos in one place.",
+    "faq": [("Do I need Excel?", "No. It's made for Google Sheets (free). The .xlsx also opens in Excel and Numbers."),
+            ("Does it tell me what a move should cost?", "No. You type your own estimates and quotes; the sheet keeps the totals."),
+            ("Is there a printable version?", "Yes: the Moving Planner printable has the same categories, a checklist and a utilities page.")],
+    "tags": ["moving budget", "moving checklist", "google sheets", "moving planner", "budget tracker",
+             "new home", "personal finance"],
+    "next": "budget-sheet", "shots": [("Budget", "B1:H20"), ("Quotes", "B1:E19"), ("Utilities", "B1:I20")],
+})
 BY_SLUG = {i["slug"]: i for i in ITEMS}

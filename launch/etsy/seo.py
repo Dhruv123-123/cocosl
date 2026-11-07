@@ -122,6 +122,14 @@ add("couples-money-date-pack", "Couples Money Date Printable, Valentine's Budget
     ["couples budget", "money date", "couples planner", "valentines printable", "budget for two", "shared goals",
      "couples finance", "valentines gift", "savings tracker", "joint budget", "marriage planner", "relationship goals",
      "budget printable"], planner_type="Budget", dated="Undated", **{"Holiday": "Valentine's Day"})
+add("if-something-happens-planner", "If Something Happens to Me Planner Printable, End of Life Organizer, Important Documents Binder",
+    ["end of life planner", "in case of death", "important documents", "estate planning", "legacy planner",
+     "emergency binder", "family binder", "final wishes", "death planner", "life organizer", "household binder",
+     "what if binder", "beneficiary list"], planner_type="Organizer", dated="Undated")
+add("moving-planner", "Moving Planner Printable, Checklist, Budget and Utilities Tracker, New Home Organizer",
+    ["moving checklist", "moving planner", "moving budget", "new home planner", "utilities tracker", "change of address",
+     "box inventory", "moving binder", "house move list", "first home", "packing checklist", "relocation planner",
+     "apartment move"], planner_type="Organizer", dated="Undated")
 add("mega-budget-bundle", "Mega Budget Planner Bundle, 40 Printable Finance Pages: Budget, Savings, Debt Trackers",
     ["budget bundle", "budget binder", "budget planner", "finance planner", "printable bundle", "savings challenge",
      "debt tracker", "bill tracker", "sinking funds", "cash stuffing", "expense tracker", "money planner",

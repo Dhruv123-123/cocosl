@@ -282,6 +282,7 @@ DIGITAL = [
 # Seasonal: Valentine's / couples (live early February). Not in the undated bundles, which keep the 40 core printables.
 SEASONAL = [
     dict(slug="couples-money-date-pack", pool="budget", price=6.00, name="Couples Money Date Pack", season="Valentine's Day",
+         module="couples_pack", hero=[7, 2, 3],
          title="Couples Money Date Printable, Valentine's Budget Planner for Two, Shared Goals and Savings Tracker",
          tags=["couples budget", "money date", "couples planner", "valentines printable", "budget for two",
                "shared goals", "couples finance"],
@@ -291,4 +292,30 @@ SEASONAL = [
               "A date night log and a year of monthly check-ins"],
          how=["Pick a night for your first money date.", "Print the agenda and the money stories page.",
               "Choose up to three shared goals.", "Colour a heart each time you save $10 together."]),
+]
+
+# Own-module printables (scouting's product-ideas-round2.md, PR #2), kept out of the undated bundles.
+STANDALONE = [
+    dict(slug="if-something-happens-planner", pool="record", price=14.00, name="If Something Happens to Me Planner",
+         module="life_planner", hero=[2, 4, 14],
+         title="If Something Happens to Me Planner Printable, End of Life Organizer, Important Documents Binder",
+         tags=["end of life planner", "in case of death", "important documents", "estate planning", "legacy planner",
+               "emergency binder", "family binder"],
+         hook="Everything your family would need to find, in one fill-in planner: contacts, where papers are kept, accounts, bills, insurance, digital life, pets and your wishes. It isn't a legal document or a will.",
+         get=["15 pages: about me, key contacts, where to find things, bank and investment accounts, retirement and insurance",
+              "Debts, bills and autopays, subscriptions, digital life (where passwords are kept, never the passwords)",
+              "Home and property, people and pets in my care, medical information, my wishes, and a yearly review log",
+              "Not a legal document: talk to an estate lawyer about a will"],
+         how=["Fill in what you can today; blanks are fine.", "Write locations and last 4 digits only, never full numbers or passwords.",
+              "Tell one or two people where it's kept.", "Review it once a year."]),
+    dict(slug="moving-planner", pool="record", price=7.00, name="Moving Planner", module="moving_planner", hero=[3, 5, 7],
+         title="Moving Planner Printable, Checklist, Budget and Utilities Tracker, New Home Organizer",
+         tags=["moving checklist", "moving planner", "moving budget", "new home planner", "utilities tracker",
+               "change of address", "box inventory"],
+         hook="The whole move on paper: a moving day plan, a budget for 11 moving costs, three mover quotes side by side, an 8-week checklist, a utilities tracker, a change-of-address list, a box inventory and a first-night box list.",
+         get=["10 pages: moving day plan, moving budget (estimate, actual, paid), mover quotes",
+              "Week-by-week checklist from 8 weeks out to the first week in the new place",
+              "Utilities tracker (stop, start, confirmation), change of address list, box inventory, first night box"],
+         how=["Fill in the moving day plan and budget.", "Get quotes and tick off the checklist week by week.",
+              "Track utilities and address changes as you go.", "Number each box on the inventory."]),
 ]

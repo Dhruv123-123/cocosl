@@ -493,3 +493,5 @@ def _budget_2027(path: Path, today: date | None = None) -> Path:
 SHEETS["budget-sheet-2027"] = ("2027-Budget-Sheet.xlsx", _budget_2027)
 import twins_sheets  # noqa: E402,F401  (registers the five printable twins in SHEETS)
 import wedding_sheet  # noqa: E402,F401  (registers the Wedding Budget Sheet in SHEETS)
+import sinking_sheet  # noqa: E402,F401  (registers the Sinking Funds Sheet in SHEETS)
+import moving_sheet  # noqa: E402,F401  (registers the Moving Budget Sheet in SHEETS)
