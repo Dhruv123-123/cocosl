@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Weekly Scam Alert for Credit Unions</title>
+<!-- One-page sales sheet. Fill the 3 {{YOUR_...}} tokens, then run python3 build.py (writes out/sales-sheet.pdf)
+     (or open in a browser and Print > Save as PDF, Letter, no margins, background graphics on). -->
+<style>
+@page{size:8.5in 11in;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;color:#17202a;background:#fff}
+.page{width:8.5in;height:10.98in;overflow:hidden;padding:.45in .5in .4in;display:flex;flex-direction:column}
+.top{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:4px solid #E0A526;padding-bottom:10px}
+.brand{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1F5C8B}
+h1{font-size:30px;line-height:1.1;margin-top:4px}
+.sub{font-size:14px;color:#41505e;margin-top:6px;max-width:5.2in;line-height:1.4}
+.tag{background:#1F5C8B;color:#fff;font-size:12px;font-weight:700;padding:8px 10px;border-radius:6px;text-align:center;line-height:1.35}
+.cols{display:flex;gap:22px;margin-top:14px}
+.col{flex:1}
+h2{font-size:15px;color:#1F5C8B;margin:12px 0 6px;text-transform:uppercase;letter-spacing:.04em}
+p,li{font-size:12.5px;line-height:1.45}
+ul,ol{padding-left:17px}
+li{margin-bottom:4px}
+table{width:100%;border-collapse:collapse;margin-top:6px}
+th,td{font-size:12px;padding:7px 6px;text-align:left;vertical-align:top;border-bottom:1px solid #dfe4e9}
+th{background:#f1f4f7;font-size:12px}
+.price{font-size:20px;font-weight:800;color:#1F5C8B}
+.pilot{margin-top:12px;background:#fff6dc;border-left:5px solid #E0A526;padding:10px 12px;font-size:13px;line-height:1.45}
+.foot{margin-top:auto;display:flex;justify-content:space-between;font-size:11.5px;color:#41505e;border-top:1px solid #dfe4e9;padding-top:8px}
+.check li{list-style:none;position:relative;padding-left:2px}
+.check li:before{content:"✓";position:absolute;left:-15px;color:#1F5C8B;font-weight:700}
+</style></head><body><div class="page">
+<div class="top">
+  <div><div class="brand">Scam Decoded · for credit unions</div>
+  <h1>Weekly Scam Alert, under your brand</h1>
+  <p class="sub">One timely scam each week, written for members, ready to send from your email platform, post on your social channels and run on your lobby screens. Your logo, your colors, your phone number. You never share member data with us.</p></div>
+  <div class="tag">Delivered 7 days early<br>for compliance review</div>
+</div>
+
+<div class="cols">
+<div class="col">
+  <h2>Why now</h2>
+  <p>Americans reported losing <b>$15.9 billion</b> to fraud in 2025, and imposter scams were the most-reported type, at more than <b>$3.5 billion</b> (FTC, March 2026). When members get a strange call, they call you. A steady weekly reminder is cheaper than one drained account.</p>
+  <h2>Each week you get</h2>
+  <ul class="check">
+    <li><b>Member email</b>: HTML and plain text, about 350 words, with "the tell" and 3 things to do</li>
+    <li><b>Social post</b>: 1080×1080 image, caption and alt text</li>
+    <li><b>Lobby screen slide</b> (1920×1080)</li>
+    <li><b>Sources page</b>: every claim linked to the FTC, FBI, IRS, CFPB or another official source</li>
+  </ul>
+  <h2>How it works</h2>
+  <ol>
+    <li>You send your logo, colors, phone number and approved "we will never ask" line, once.</li>
+    <li>We deliver each pack 7 days before its send date.</li>
+    <li>Your compliance team reviews and edits anything. Changes are back within 1 business day.</li>
+    <li>You send it from your own email platform and post it on your channels.</li>
+  </ol>
+</div>
+<div class="col">
+  <h2>Plans</h2>
+  <table>
+    <tr><th>Plan</th><th>Best for</th><th>Per month</th></tr>
+    <tr><td><b>Essentials</b><br>Email, social post, lobby slide, sources</td><td>Under $100M in assets</td><td class="price">$49</td></tr>
+    <tr><td><b>Standard</b><br>Essentials plus a printable branch poster, a 5-minute staff huddle brief, and the topic calendar a quarter ahead</td><td>$100M to $500M</td><td class="price">$99</td></tr>
+    <tr><td><b>Plus</b><br>Standard plus a Spanish edition, local exclusivity in your market, and 2 custom issues a year on a scam your members are reporting</td><td>Over $500M, or anyone who wants exclusivity</td><td class="price">$149</td></tr>
+  </table>
+  <p style="margin-top:6px">Monthly, cancel with 30 days' notice. Pay yearly and get 2 months free. Invoiced; ACH or card.</p>
+  <div class="pilot"><b>Founding pilot:</b> the first 3 credit unions get <b>2 months free</b>, then keep their founding price for 12 months. No contract for the pilot.</div>
+  <h2>Built for review</h2>
+  <ul class="check">
+    <li>No member data ever reaches us</li>
+    <li>No tracking pixels, ads or affiliate links</li>
+    <li>Links go only to your site or .gov pages</li>
+    <li>Plain language, alt text and a text version for accessibility</li>
+    <li>Never tells a member they will be reimbursed</li>
+  </ul>
+</div>
+</div>
+
+<h2>What members see (sample, fictional credit union)</h2>
+<div style="display:flex;gap:14px;align-items:flex-start;margin-top:4px">
+  <img src="out/sample-community-cu/week-1-2027-01-a/social.png" style="width:1.6in;height:1.6in;border:1px solid #dfe4e9">
+  <img src="out/sample-community-cu/week-4-2027-01-d/lobby.png" style="width:2.84in;height:1.6in;border:1px solid #dfe4e9">
+  <p style="font-size:11.5px;color:#41505e;flex:1">Week 1 social post and week 4 lobby slide from the free sample pack. Your version carries your logo, colors and number.</p>
+</div>
+<div class="foot" style="margin-top:12px">
+  <div><b>{{YOUR_NAME}}</b> · {{YOUR_EMAIL}} · {{YOUR_PHONE}}</div>
+  <div>Ask for the free 4-week sample pack, with your logo on it.</div>
+</div>
+</div></body></html>

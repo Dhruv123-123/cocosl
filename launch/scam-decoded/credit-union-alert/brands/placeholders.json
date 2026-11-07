@@ -1,0 +1,16 @@
+{
+  "_about": "Renders the master pack with every brand slot visible as a token, so a credit union's marketing or compliance team can see exactly what gets filled in. build.py --placeholders skips the leftover-token check for this file only.",
+  "slug": "placeholders",
+  "name": "{{CU_NAME}}",
+  "short": "{{CU_SHORT}}",
+  "phone": "{{CU_PHONE}}",
+  "website": "{{CU_WEBSITE}}",
+  "logo": "",
+  "initials": "LOGO",
+  "color": "#3B4A5A",
+  "accent": "#E0A526",
+  "never_ask": "{{CU_NEVER_ASK}}",
+  "footer_lines": ["{{CU_ADDRESS}}", "{{CU_INSURANCE_STATEMENT}}"],
+  "unsubscribe": "{{UNSUBSCRIBE_LINK}}",
+  "credit_line": ""
+}
