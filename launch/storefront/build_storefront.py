@@ -61,7 +61,8 @@ BRANDS = {
                "rings: a safe word, a call-back rule, and cards by the phone. Contacts checked against the FTC, FBI and DOJ. "
                "General education, not legal or financial advice. Made with the help of AI tools and checked by a person."),
         sections=[("For your family", ["The Family Scam-Proofing Kit", "Scam Decoded Card Set"]),
-                  ("For your parents", ["Protect Your Parents (guide)"]),
+                  ("For your parents", ["Scam Decoded for Seniors (large print)", "Scam-Proof Your Parents printable kit",
+                                        "Protect Your Parents (guide)"]),
                   ("For teams and venues", ["Spot It, Stop It team training pack", "Seniors pack group print license"])],
         featured="The Family Scam-Proofing Kit"),
     "1099 Money": dict(
@@ -133,6 +134,8 @@ CROSS_SELL = {
     "The Family Scam-Proofing Kit": ("Protect Your Parents (guide)", "Families who make the plan usually want to help their parents next.", "Receipt note + list email 7 + buyer email 3", "KITPARENTS"),
     "Protect Your Parents (guide)": ("Scam Decoded Card Set", "The guide's plan, as cards by the phone and in the wallet. (The kit itself comes free with GUIDEKIT.)", "Receipt note", ""),
     "Scam Decoded Card Set": ("The Family Scam-Proofing Kit", "The cards are the reminders; the kit is the plan behind them.", "Receipt note", ""),
+    "Scam Decoded for Seniors (large print)": ("Scam Decoded Card Set", "The booklet explains each scam; the cards go by the phone and in the wallet.", "Receipt note", ""),
+    "Scam-Proof Your Parents printable kit": ("Protect Your Parents (guide)", "The kit is one afternoon together; the guide covers the settings and the next visits.", "Receipt note", ""),
     "Spot It, Stop It team training pack": ("Seniors pack group print license", "Teams that serve older clients can hand out the large-print pack.", "Email", ""),
     "Seniors pack group print license": ("Spot It, Stop It team training pack", "Staff training to go with the handouts.", "Email", "TEAMLAUNCH (first 14 days)"),
     # 1099 Money (1099-money/products/UPSELL_PATH.md)

@@ -308,7 +308,7 @@ def _more_listings() -> list[dict]:
     for d in M.BUNDLES:
         subs = d["bundle"] or printable_slugs
         worth = sum(prices[s] for s in subs)
-        out.append(dict(slug=d["slug"], kind="bundle", name=d["name"], price=d["price"], file_stem=d["file_stem"],
+        out.append(dict(slug=d["slug"], kind="bundle", goal=d.get("goal"), name=d["name"], price=d["price"], file_stem=d["file_stem"],
                         title=d["title"], tags=tags(d["tags"], d["pool"]), hook=d["hook"],
                         get=[f"All {len(subs)} printables, each in US Letter and A4: " + ", ".join(names[s] for s in subs),
                              "One zip file, organised in numbered folders",

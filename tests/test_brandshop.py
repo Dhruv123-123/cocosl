@@ -299,8 +299,39 @@ def test_etsy_ai_guide_rule_keeps_guides_off_etsy():
     gum = {(r["brand"], r["product"]) for r in rows if "Gumroad" in r["platform"]}
     assert ("Money Made Simple", "The 20-Minute Budget") in gum and ("Money Made Simple", "The Money Reset: 30-Day Challenge Workbook") in gum
     held = [r for r in rows if r["platform"] == R.HOLD]
-    assert [r["product"] for r in held] == ["Scam Decoded for Seniors (large print)"]
+    assert held == []  # PR #9 moved the seniors pack to Gumroad
     bad = R.problems(rows + [dict(rows[0], product="The Side Hustle Guide", platform="Etsy")])
     assert len(bad) == 1 and "looks like a guide" in bad[0]
     md = shop.listing_md(next(it for it in DS.LISTINGS if it["slug"] == "construir-credito"), DS.BRAND)
     assert "Gumroad only. Don't list this on Etsy." in md
+
+
+def test_goal_bundles_and_launch_kit(tmp_path):
+    """Goal bundles match the site's /shop/ goals; the launch kit orders every listing and shows gaps."""
+    sys.path[:0] = [str(SHOP.parent / "catalog"), str(SHOP.parent / "storefront")]
+    import build_catalog as C
+    import launch_kit as K
+    import listings as L
+    goals = {it["goal"]: it for it in L.LISTINGS if it.get("goal")}
+    assert set(goals) == {"debt", "first-job", "freelance"} and L.validate() == []
+    for it in goals.values():
+        parts = sum(L.BY_SLUG[s]["price"] for s in it["bundle"])
+        assert it["price"] < parts and all(L.BY_SLUG[s]["kind"] == "printable" for s in it["bundle"])
+    rows = C.all_rows()
+    (tmp_path / "products/bill-cut-kit").mkdir(parents=True)
+    (tmp_path / "products/bill-cut-kit/LISTING.md").write_text("# Bill Cut\n\n## Title\nThe Bill Cut Kit\n\n## Tags\n1. bills\n2. cut costs\n")
+    for n in ("mockup-02-hero.png", "cover.png", "mockup-01-clean.png", "The-Bill-Cut-Kit.zip"):
+        (tmp_path / "products/bill-cut-kit" / n).write_bytes(b"x")
+    docs, csv_rows = K.build(tmp_path, rows)
+    g = [r for r in csv_rows if r["sitting"] == "Gumroad"]
+    e = [r for r in csv_rows if r["sitting"] == "Etsy"]
+    names = [r["product"] for r in g]
+    assert names.index("The 20-Minute Budget") < names.index("The Bill Cut Kit")  # cross-sell target goes up first
+    assert len(names) == len(set(names)) and not any(r["brand"] == "Dinero Simple" for r in csv_rows)
+    assert "Schedule C Setup Pack for TaxHacker" not in names and "The January Reset Bundle" not in names
+    assert e[0]["product"] == "2027 Budget Planner" and e[-1]["product"] != "Monthly Budget Planner"
+    first_bundle = next(i for i, r in enumerate(e) if "Bundle" in r["product"] or "Binder" in r["product"])
+    assert all("Bundle" not in r["product"] for r in e[:first_bundle])
+    bc = next(r for r in g if r["product"] == "The Bill Cut Kit")
+    assert bc["images"] == "mockup-01-clean.png; mockup-02-hero.png; cover.png" and bc["title"] == "The Bill Cut Kit"
+    assert "MISSING" in docs["LAUNCH_KIT.md"] and "BLOCKER before listing" in docs["LAUNCH_KIT.md"]

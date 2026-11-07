@@ -101,6 +101,18 @@ add("savings-challenge-pack", "Savings Challenge Bundle Printable, 12 Money Chal
     ["savings challenge", "savings challenges", "money challenge", "100 envelope", "52 week challenge",
      "savings bingo", "cash stuffing", "savings tracker", "challenge bundle", "money saving", "new year savings",
      "savings printable", "budget binder"], planner_type="Tracker", dated="Undated", holiday="New Year's")
+add("debt-payoff-bundle", "Debt Payoff Printable Bundle: Credit Card, Snowball, Loan Trackers and Coloring Charts",
+    ["debt payoff bundle", "debt tracker", "debt snowball", "credit card payoff", "loan payoff", "debt coloring page",
+     "debt free chart", "debt printable", "payoff tracker", "debt free planner", "pay off debt", "debt worksheet",
+     "budget binder"], planner_type="Tracker", dated="Undated")
+add("first-paycheck-budget-bundle", "First Paycheck Budget Printable Bundle: Weekly Planner, Bill Tracker, Goals, Spending Log",
+    ["first job budget", "paycheck budget", "first paycheck", "budget for beginner", "weekly budget", "50 30 20 budget",
+     "bill tracker", "financial goals", "spending log", "new grad budget", "budget printable", "biweekly budget",
+     "budget binder"], planner_type="Budget", dated="Undated")
+add("freelance-budget-bundle", "Freelance Budget Printable Bundle: Irregular Income, Side Hustle Tracker, Sinking Funds",
+    ["freelance budget", "irregular income", "side hustle tracker", "self employed budget", "variable income",
+     "gig worker budget", "sinking funds", "emergency fund", "expense tracker", "bill tracker", "money review",
+     "budget printable", "budget binder"], planner_type="Budget", dated="Undated")
 add("mega-budget-bundle", "Mega Budget Planner Bundle, 40 Printable Finance Pages: Budget, Savings, Debt Trackers",
     ["budget bundle", "budget binder", "budget planner", "finance planner", "printable bundle", "savings challenge",
      "debt tracker", "bill tracker", "sinking funds", "cash stuffing", "expense tracker", "money planner",

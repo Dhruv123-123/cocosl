@@ -18,6 +18,9 @@ BOOK_WHERE = "Last page of the book (add on the next upload)"
 ETSY_NEXT = {
     "Printable Budget Binder (all 10 printables)": ("2027 Budget Planner", "The binder is undated; the 2027 planner runs the year date by date."),
     "Savings Challenge Pack (12 printables)": ("Printable Budget Binder (all 10 printables)", "The budget pages that find the money for the challenges."),
+    "Debt Payoff Printable Bundle (5 printables)": ("Printable Budget Binder (all 10 printables)", "The budget pages that find the extra payment each month."),
+    "First Paycheck Budget Bundle (6 printables)": ("Savings Challenge Pack (12 printables)", "Once each paycheck has a job, make saving a game."),
+    "Freelance and Side Income Budget Bundle (7 printables)": ("2027 Budget Planner", "A dated year for planning around the slow months."),
     "Mega Budget Bundle (all 40 printables)": ("2027 Budget Planner", "The 40 pages are undated; the 2027 planner runs the year month by month."),
     "2027 Budget Planner": ("Printable Budget Binder (all 10 printables)", "Adds the 10 core trackers: bills, sinking funds, subscriptions and debt."),
     "The Quarterly Tax Tracker": ("2027 Freelancer Tax-Year Planner (printable)", "A paper year-planner beside the spreadsheet: dates, months and the tax-time checklist."),
@@ -26,7 +29,7 @@ ETSY_NEXT = {
     "2027 Money HQ for Notion": ("2027 Budget Planner", "The same year on paper, for the fridge or the binder."),
     "Money Dashboard Pro": ("2027 Budget Planner", "The dashboard looks back; the planner plans the year ahead on paper."),
     "El Registro de Envíos": ("El Presupuesto Familiar", "El envío es un gasto fijo; el presupuesto familiar le da su lugar."),
-    "Scam Decoded Card Set": (None, "No other Scam Decoded product is on Etsy now (the seniors pack is on hold), so Etsy buyers get no recommendation."),
+    "Scam Decoded Card Set": (None, "No other Scam Decoded product is on Etsy (the guides are Gumroad only), so Etsy buyers get no recommendation."),
 }
 # Posters point at the printable of the same challenge, so the wall chart has a pen-and-paper log.
 POSTER_NEXT = {

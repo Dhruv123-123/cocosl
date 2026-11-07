@@ -12,7 +12,7 @@ import printables_more  # noqa: E402
 
 def test_listings_follow_etsy_limits():
     assert listings.validate() == []
-    assert len(listings.LISTINGS) == 44 and len(listings.OFF_ETSY) == 6  # guide kits are Gumroad only
+    assert len(listings.LISTINGS) == 47 and len(listings.OFF_ETSY) == 6  # guide kits are Gumroad only
     for it in listings.LISTINGS:
         assert len(it["title"]) <= 140 and len(it["tags"]) == 13
         assert "DIGITAL DOWNLOAD" in it["description"] and "How it's made" in it["description"]

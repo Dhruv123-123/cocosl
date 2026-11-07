@@ -50,6 +50,9 @@ def etsy_rows() -> list[dict]:
         base = f"etsy/{s}/"
         if it.get("dated"):
             date, src, note = "Week of Nov 9 (list first)", "calendar", "Dated: 4 PDFs (Sun/Mon start x Letter/A4). Drop the price after Jan 31."
+        elif it.get("goal"):
+            date, src, note = "Week of Nov 16", "proposed", (f"Goal bundle for the site's /shop/{it['goal']}/ page. Full price; BF25 "
+                                                              "stays on the three launch bundles.")
         elif k == "bundle":
             date, src, note = "Week of Nov 9; code BF25 Nov 27-30", "calendar", "Black Friday: code only, no crossed-out price (see the BFCM section)."
         elif k == "product":
@@ -178,8 +181,13 @@ OTHER_BRANCHES = [
      "PR #9. Funnel emails and the scam checker sell this kit. Code LAUNCH ($5 for 7 days, only while true)."),
     ("Scam Decoded", "Protect Your Parents (guide)", "Gumroad", "$29", "scam-decoded/products/protect-your-parents/",
      "scam-decoded/products/protect-your-parents/LISTING.md", "Week of Nov 16", "proposed", "PR #9. Codes KITPARENTS, GUIDEKIT, LAUNCH."),
-    ("Scam Decoded", "Scam Decoded for Seniors (large print)", "Etsy", "$7", "scam-decoded/products/seniors-pack/",
-     "scam-decoded/products/seniors-pack/LISTING.md", "Week of Nov 16", "proposed", "PR #9. See the caller ID card overlap."),
+    ("Scam Decoded", "Scam Decoded for Seniors (large print)", "Gumroad", "$7", "scam-decoded/products/seniors-pack/",
+     "scam-decoded/products/seniors-pack/LISTING.md", "Week of Nov 16", "proposed",
+     "PR #9. Gumroad only since Nov 7 (Etsy's AI-guide rule). See the caller ID card overlap."),
+    ("Scam Decoded", "Scam-Proof Your Parents printable kit", "Gumroad", "[PRICE] (PR #9 suggests $9-$12)",
+     "scam-decoded/parents-printable-kit/", "scam-decoded/parents-printable-kit/LISTING.md", "Week of Nov 16", "proposed",
+     "PR #9. Gumroad only (Etsy's AI-guide rule). 9 pages to fill in with a parent: fridge card, 8 call scripts, code "
+     "word guide, setup checklist. Sits between the $7 seniors pack and the $29 guide. Price not set yet."),
     ("Scam Decoded", "Seniors pack group print license", "Gumroad", "$49 (+$19 per extra site)", "scam-decoded/products/seniors-pack/",
      "scam-decoded/products/seniors-pack/GROUP_LICENSE_LISTING.md", "When the first talk is booked", "proposed", "PR #9. For libraries and senior centers."),
     ("Scam Decoded", "Spot It, Stop It team training pack", "Gumroad", "$99", "scam-decoded/products/team-training/",
