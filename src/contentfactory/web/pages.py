@@ -138,6 +138,7 @@ def today(request: Request, factory: Factory = Depends(get_factory)) -> HTMLResp
     from ..manual import pending
     return render(request, "today.html", calendar=rows, problems=problems, review=queries.review_queue(factory),
                   recordings=recordings(factory), launch=launch, by_hand_items=pending(factory)[:20],
+                  studio=__import__("contentfactory.ytplan", fromlist=["x"]).studio_todos(factory),
                   now=datetime.now(timezone.utc).strftime("%a %d %b %Y, %H:%M UTC"))
 
 
