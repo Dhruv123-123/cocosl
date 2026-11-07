@@ -21,11 +21,9 @@ this doc picks the offer and writes the copy for the site threads to drop in.
 4. **The thank-you page is the better first earner.** All four sites already have a `/free/thanks/` page
    showing products. The change is: one offer instead of a grid, the download always first, and a short
    honest pitch. Copy for all four brands is in section 4.
-5. **A second thing to check on day 1 in Kit:** the pricing page also marks "automated email sequences"
-   and the visual automation builder as *not* included on Free, while a November 2026 review says Free
-   gets 1 sequence and 1 basic automation, and that the app shows a "Paid feature" badge on both. Our whole
-   Kit plan assumes one free welcome sequence, so open **Send > Sequences** in a new free account before
-   building anything (details in section 2).
+5. **Kit Free can't run the welcome sequence.** Kit's Free-plan help article (23 Sep 2026) says sequences
+   and visual automations need a paid plan. `newsletter.md` now compares free tools that can, and recommends
+   Sender. Switching is Dhruv's call.
 
 ## 1. Paid recommendations: the three networks
 
@@ -69,10 +67,7 @@ it's his call under the organic-only rule.
    recommendations on.
 4. Ask each one you recommend to recommend you back.
 
-**Check while you're there:** open **Send > Sequences** and **Automate > Visual Automations** in the
-free account. If both work on Free, the plan in `newsletter.md` stands. If either shows "Paid feature",
-stop and tell the coordinator before building the welcome sequence, because the welcome sequence
-and the in-welcome tag are built on them.
+Section A only applies if we stay on Kit. On Sender, skip it: SparkLoop partner links (B) work with any tool.
 
 **Also check the redirect:** our sites already post to Kit and then send people to `/free/thanks/`.
 If turning on Creator Network recommendations makes Kit show its own recommendation screen instead of our
@@ -289,7 +284,7 @@ measure first: the Plausible event in section 3 gives it within the first few hu
 
 ## Open questions for Dhruv
 
-1. **Kit Free features:** when you make the first Kit account, do Sequences and Visual Automations work, or
-   do they show "Paid feature"? The answer decides whether the Kit plan in `newsletter.md` still costs $0.
+1. **Email tool:** stay on Kit (Creator, $33/mo per brand, for the sequences) or switch to Sender Free? See
+   `newsletter.md`.
 2. **Kit Creator upgrade:** OK to revisit at about 100 new subscribers a month on one list, or stay
    SparkLoop links only until you say otherwise?

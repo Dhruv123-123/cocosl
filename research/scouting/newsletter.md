@@ -1,4 +1,4 @@
-# Newsletter platform: beehiiv vs Kit vs MailerLite, setup, and swap partners
+# Newsletter platform: beehiiv vs Kit vs MailerLite vs Sender vs Brevo, setup, and swap partners
 
 Researched 2026-11-07 from the platforms' own help pages and pricing write-ups (sources are linked next to
 each figure). Prices change often, and beehiiv changed its plans on 1 Oct 2026, so **check each pricing
@@ -90,12 +90,82 @@ until then (the sequences already pitch the $9-15 products on day 7).
    Network partner links, which is the only network income a list under 5k realistically makes.
    *Correction (2026-11-07):* Kit's own paid recommendations need the Creator plan ($33/mo at 1k); Free
    gets unpaid swaps only. See `thank-you-offers.md`.
-3. **The free plan's limit fits what we built** (*to confirm in the app: Kit's pricing page now marks sequences and automations as paid on Free; see `thank-you-offers.md`*). One sequence and one visual automation per account is
+3. ~~**The free plan's limit fits what we built.**~~ *Wrong since 23 Sep 2026: Kit Free has no sequences (see the update below).* One sequence and one visual automation per account is
    exactly one welcome sequence plus the automation that routes people around it (below). 1099 Money's
    buyers sequence moves to Gumroad's own post-purchase emails, so it doesn't need a second sequence.
 4. **The sites already support it:** `email.provider: kit` plus the form URL.
 
-**Decision (2026-11-07): start on Kit.**
+**Decision (2026-11-07): start on Kit.** *Superseded by the update below if Dhruv agrees: Kit Free no
+longer runs a welcome sequence.*
+
+### Update (2026-11-07, later): Kit Free lost sequences, so the recommendation is now Sender
+
+**Switching tools is Dhruv's call.** Nothing has been signed up for. This only changes the recommendation.
+
+Kit's own help article on the Free plan, dated **23 Sep 2026**, says email sequences and visual automations
+"require a paid plan", and that automations stop running on Free
+([Kit help](https://intercom.help/convertkit/en/articles/16627071-the-kit-free-plan)). Kit's pricing page
+agrees ([kit.com/pricing](https://kit.com/pricing)). The older "Newsletter plan" article that promised one
+sequence and one automation ([Kit help](https://help.kit.com/en/articles/9053626-automations-on-the-newsletter-plan),
+"updated over 5 months ago") predates the rename. On Kit Free, our 7-10 email welcome sequences, which
+carry the day-7 product pitch, can't run. Keeping Kit means Creator at **$33/mo per brand** at 1,000
+subscribers, or $132/mo for all four.
+
+#### Free plans with welcome automations, compared (checked 2026-11-07)
+
+| | **Sender** Free Forever | **Kit** Free | **MailerLite** Free | **Brevo** Free | **beehiiv** Free |
+|---|---|---|---|---|---|
+| Subscriber cap | **2,500** | 10,000 | **250** (sending locks above it) | 100,000 stored contacts | 2,500 |
+| Emails | **15,000 a month**, no daily limit | not limited on the pages checked | 2,500 a month | **300 a day**, all emails combined | not stated |
+| Welcome automation | **Yes**: "Unlimited" triggers and automation steps | **No** (paid only since Sep 2026) | Yes: 3 active automations, 5 steps each | Yes, but only **2,000 contacts** can go through automations | **No** (automations start on Lite, $49/mo at 1k billed yearly) |
+| Own sending domain (SPF/DKIM) | **Yes**, plus custom DKIM | Yes (Settings > Email, all plans) | not stated on the pricing page | guided DKIM/DMARC setup (plan not stated) | not stated |
+| Their logo in emails | Required | not stated | Yes (removed on paid) | Yes, "Sent with Brevo" can't be removed | Yes |
+| Spanish | Template setting changes the unsubscribe and browser links' language, **Spanish listed** ([Sender help](https://www.sender.net/help/email-campaigns/change-browser-preview-unsubscribe-links)) | Form text and emails are editable; system pages *unverified* | *Not checked* | *Not checked* | *Not checked* |
+| Our sites support it today | **No** (needs a `sender` provider, below) | Yes | Yes | No | No |
+| First paid step | Standard, $9/mo shown at 500 subscribers | Creator $33/mo at 1k | Comfort from $12/mo | Starter $9/mo (500 contacts) | Lite $49/mo at 1k |
+
+Sources: [Sender pricing](https://www.sender.net/pricing/), [MailerLite pricing](https://www.mailerlite.com/pricing)
+(the pricing page shows 250 subscribers, 2,500 emails and 3 automations; a 2025 write-up still says 500 and
+12,000, so the official page is newer), [Brevo free plan per Dreamlit, updated 1 Oct 2026](https://dreamlit.ai/blog/brevo-review)
+(Brevo's own page didn't load its numbers), [Brevo pricing](https://www.brevo.com/pricing.md),
+[beehiiv pricing](https://www.beehiiv.com/pricing).
+
+#### Recommendation: Sender Free Forever, one account per brand
+
+1. **It's the only free plan that runs our whole welcome sequence at a useful size.** 2,500 subscribers,
+   15,000 emails a month, and unlimited automation steps cover a 10-email welcome sequence plus a weekly issue.
+   The math: 2,000 subscribers × 4.3 weekly issues ≈ 8,600 emails, plus 10 welcome emails for each of
+   ~200 new people ≈ 2,000, about 10,600 a month in total.
+2. **It authenticates our own domain** (SPF and DKIM), which Gmail and Yahoo require for bulk senders.
+3. **Spanish works for Dinero Simple:** the template language setting covers the unsubscribe and browser
+   links, and everything else is our own text.
+4. **What we give up:** Kit's Creator Network swaps. The paying route, SparkLoop partner links
+   (`thank-you-offers.md`), works with any tool, so the money side doesn't change. The "Sender" logo stays
+   in the footer until a paid plan.
+5. **When to move up:** at about 2,000 subscribers on a list, or once one list has passed the paid-ads gate
+   in `paid-acquisition.md`. Then compare Sender Standard, Kit Creator and beehiiv on that day's prices.
+   All of them import a CSV.
+
+**Why not the others:** MailerLite Free locks at 250 subscribers, about one good week of a working
+funnel. Brevo's 300-a-day cap means a 1,000-person issue takes four days to send, and its automation stops
+taking new people at 2,000. beehiiv Free has no automations. Kit Free has no sequences.
+
+**Before relying on Sender, check two things on its site:**
+- Its terms allow **one free account per brand** (four in all). If not, use one account with four groups and
+  four sender identities. That's workable, but the four brands then share one 2,500 cap.
+- How a static form posts to it. Sender's forms are an embed script, and its API needs a secret key, which
+  can't sit in a static page.
+
+**Site work this needs (for the site threads):** add `sender` to each site's provider switch. The simplest
+route is Sender's own embedded form. The cleaner one is a small Netlify Function that takes our form post and calls
+Sender's subscriber API with the key from a Netlify environment variable, which keeps our own forms and the
+`/free/thanks/` redirect. *Unverified: the API details weren't checked this round.*
+
+**$0 fallback that's already built:** the factory's own funnel (`src/contentfactory/funnel/`) does double
+opt-in, runs the welcome sequences from `brands/sequences/*.yaml` (`factory sequences --confirm`) and sends
+over any SMTP service. It costs nothing in software, but it needs a public server for the confirm links,
+an SMTP account, and someone to watch deliverability. That's a lot more to look after than a hosted
+tool, so it's the backup.
 
 > **Open question for Dhruv:** should a newsletter move to beehiiv once it has about 5,000 engaged
 > readers? That's roughly when beehiiv's ad network could earn more than the Lite plan costs (about $139
@@ -104,6 +174,10 @@ until then (the sequences already pitch the $9-15 products on day 7).
 MailerLite only wins if you want a website builder too, and the sites already handle that.
 
 ## 2. Exact Kit setup (repeat once per newsletter)
+
+*Written for Kit before the Sep 2026 Free-plan change. It still applies on Kit Creator. On Sender, the same
+steps map across: form with double opt-in, tags as groups, one automation per brand for the welcome
+sequence, and the in-welcome rule for weekly issues.*
 
 Do Money Made Simple first. Each step takes minutes. Menu names are Kit's as of the sources above;
 if a label has moved, Kit's search box finds it.
