@@ -11,7 +11,7 @@ For every brand it checks, in one pass:
   contains REPLACE_ME or another placeholder; that is red.
 * disclosures: affiliate posts say so (FTC), and every post has the AI label.
 * caption limits per platform each post is queued for (Instagram 2,200 chars
-  and 30 hashtags, TikTok 2,200, Threads 500, YouTube title 100 / description
+  and 5 hashtags, TikTok 2,200, Threads 500, YouTube title 100 / description
   5,000 bytes). Over the limit is yellow: the publisher trims, but you should
   choose what goes.
 
@@ -30,7 +30,7 @@ PLACEHOLDER_RE = re.compile(r"REPLACE[_-]?ME|YOUR[_-](?:LINK|URL|HANDLE|CODE|ID)
                             r"\bexample\.(?:com|org|net)\b|\bexample\.gumroad\.com\b|\blocalhost\b|(?-i:\bXXX+\b)", re.I)
 UTM_VALUE_RE = re.compile(r"^[A-Za-z0-9_.-]+$")
 CAPTION_LIMITS = {  # platform -> (max chars, max hashtags)
-    "instagram": (2200, 30), "tiktok": (2200, None), "threads": (500, None), "facebook": (63206, None),
+    "instagram": (2200, 5), "tiktok": (2200, None), "threads": (500, None), "facebook": (63206, None),
 }
 LEVELS = {"green": 0, "yellow": 1, "red": 2}
 

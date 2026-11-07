@@ -241,6 +241,16 @@ class Factory:
                     (voice_of_assets(assets) or "") != "human":
                 raise PermissionError("Waiting for your narration: `factory voice "
                                       f"{post_id} <recording>` (see `factory recordings`)")
+        from .guardrails import check_no_repost
+        for platform in list(targets):
+            rp = check_no_repost(self.db, post, platform, output_dir=self.settings.output_dir)
+            if rp.level == "block":
+                if platforms:  # asked for explicitly: say no
+                    raise ValueError(f"Not scheduling on {platform}: {rp.message}")
+                targets.remove(platform)  # automatic: skip that platform, schedule the rest
+                self.db.log("post.skipped_repost", "post", post_id, {"platform": platform, "reason": rp.message})
+        if not targets:
+            raise ValueError("Every platform for this post would be a repost; nothing scheduled")
         from .publish.preflight import blocking, check_post
         stop = blocking(check_post(self, post, targets), self.settings.dry_run)
         if stop:
@@ -302,6 +312,9 @@ class Factory:
         assets = post.get("assets") or {}
         out = self.settings.output_dir
         tags = post.get("hashtags") or []
+        from .publish._text import PLATFORM_HASHTAG_MAX, pick_hashtags
+        if platform in PLATFORM_HASHTAG_MAX:  # choose which tags go, rather than letting the publisher cut the last ones
+            tags = pick_hashtags(tags, PLATFORM_HASHTAG_MAX[platform], brand.slug.replace("-", ""))
         hashtag_line = " ".join("#" + t.lstrip("#").replace(" ", "") for t in tags)
         disclosure = post.get("disclosure") or ""
         caption = "\n\n".join(x for x in [post.get("caption", ""), disclosure, hashtag_line] if x)
@@ -377,6 +390,14 @@ class Factory:
             if is_manual(pub["platform"]):  # never uploaded by the factory: package it for you to post by hand
                 rel = hand_off(self, pub, post)
                 results.append({"publication": pub["id"], "status": "manual", "package": rel["dir"]})
+                continue
+            from .guardrails import check_no_repost
+            rp = check_no_repost(self.db, post, pub["platform"], exclude_pub_id=pub["id"],
+                                 output_dir=self.settings.output_dir)
+            if rp.level == "block":
+                self.db.update("publications", pub["id"], {"status": "cancelled", "error": rp.message[:1000]})
+                self.db.log("publication.cancelled_repost", "publication", pub["id"], {"error": rp.message})
+                results.append({"publication": pub["id"], "status": "cancelled", "error": rp.message})
                 continue
             from .publish.preflight import blocking, check
             stop = blocking(check(post, pub["platform"], self.settings.output_dir,
