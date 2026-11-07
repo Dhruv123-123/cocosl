@@ -122,8 +122,8 @@ class Factory:
         from .media import render_post
         post = self._post(post_id)
         brand = self.brand(post["brand"])
-        if post["format"] in ("short", "long"):  # vary the look against this channel's recent videos
-            recent = self.db.query("SELECT assets FROM posts WHERE brand = ? AND id != ? AND format IN ('short','long') "
+        if post["format"] in ("short", "mid", "long"):  # vary the look against this channel's recent videos
+            recent = self.db.query("SELECT assets FROM posts WHERE brand = ? AND id != ? AND format IN ('short','mid','long') "
                                    "AND status != 'rejected' ORDER BY id DESC LIMIT 8", [brand.slug, post_id])
             post["_recent_looks"] = [(r["assets"] or {}).get("look") for r in recent if (r["assets"] or {}).get("look")]
         try:

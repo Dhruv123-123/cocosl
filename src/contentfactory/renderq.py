@@ -211,7 +211,7 @@ def use_own_voice(factory: Factory, post_id: int, files: list) -> int | None:
 
     from .media.tts import VOICE_EXTS
     post = factory._post(post_id)
-    if post["format"] not in ("short", "long"):
+    if post["format"] not in ("short", "mid", "long"):
         raise ValueError(f"Post #{post_id} is a {post['format']}; only videos have narration")
     if post["status"] in LOCKED_STATUSES:
         raise ValueError(f"Post #{post_id} is {post['status']}; unschedule it first")

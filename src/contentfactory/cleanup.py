@@ -35,7 +35,7 @@ def candidates(factory, older_than_days: int) -> list[dict]:
     for post in rows:
         assets = post.get("assets") or {}
         files = [assets.get(k) for k in HEAVY_KEYS if assets.get(k)]
-        if post["format"] in ("short", "long"):  # carousel images are the post itself; keep them
+        if post["format"] in ("short", "mid", "long"):  # carousel images are the post itself; keep them
             files += assets.get("images") or []
         paths = [root / f for f in files if f and not Path(f).is_absolute() and (root / f).is_file()]
         if paths:

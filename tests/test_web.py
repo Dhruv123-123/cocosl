@@ -218,7 +218,7 @@ def test_form_approve_requires_every_claim(client, factory):
     assert post["status"] == "scheduled"
     assert post["meta"]["claims_verified"]["claims"][0].startswith("HYSA")
     pubs = factory.db.query("SELECT * FROM publications WHERE post_id = ?", [pid])
-    assert {p["platform"] for p in pubs} == {"instagram", "youtube", "tiktok"}
+    assert {p["platform"] for p in pubs} == {"instagram", "youtube", "tiktok", "facebook"}
     assert all(p["status"] == "queued" for p in pubs)
 
 
