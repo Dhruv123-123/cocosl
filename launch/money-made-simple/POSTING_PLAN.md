@@ -12,43 +12,43 @@ Rules this plan follows:
 
 | Day | Time | Platform(s) | # | Format | Piece |
 |---|---|---|---|---|---|
-| Day 1 · Sat Nov 7 | 12:30 | YouTube Shorts + Instagram Reels | #0 | short | The two-account trick that stops overdrafts |
-| Day 1 · Sat Nov 7 | 18:00 | TikTok | #0 | short | The two-account trick that stops overdrafts |
+| Day 1 · Sat Nov 7 | 12:30 | YouTube Shorts + Instagram Reels | #0 | short | Stop overdraft fees: the two-account trick |
+| Day 1 · Sat Nov 7 | 18:00 | TikTok | #0 | short | Stop overdraft fees: the two-account trick |
 | Day 1 · Sat Nov 7 | 19:00 | Instagram (carousel) | #14 | carousel | The 20-minute monthly money date · **template** |
 | Day 2 · Sun Nov 8 | 12:30 | YouTube Shorts + Instagram Reels | #6 | short | Freeze your credit for free tonight |
 | Day 2 · Sun Nov 8 | 18:00 | TikTok | #6 | short | Freeze your credit for free tonight |
-| Day 2 · Sun Nov 8 | 19:00 | YouTube (long-form) | #23 | long | Feel behind on money? A 30-day reset plan · **HYSA affiliate + template** |
+| Day 2 · Sun Nov 8 | 19:00 | YouTube (long-form) | #23 | long | How to get your finances in order: a 30-day money reset · **HYSA affiliate + template** |
 | Day 3 · Mon Nov 9 | 12:30 | YouTube Shorts + Instagram Reels | #1 | short | Budget weekly, not monthly · **template** |
 | Day 3 · Mon Nov 9 | 18:00 | TikTok | #1 | short | Budget weekly, not monthly · **template** |
 | Day 3 · Mon Nov 9 | 19:00 | Instagram (carousel) | #15 | carousel | $1,000 emergency fund in 8 weeks · **HYSA affiliate** |
-| Day 4 · Tue Nov 10 | 12:30 | YouTube Shorts + Instagram Reels | #3 | short | The raise you're ignoring: your 401(k) match |
-| Day 4 · Tue Nov 10 | 18:00 | TikTok | #3 | short | The raise you're ignoring: your 401(k) match |
-| Day 5 · Wed Nov 11 | 12:30 | YouTube Shorts + Instagram Reels | #5 | short | Paid in full, score still dropped? |
-| Day 5 · Wed Nov 11 | 18:00 | TikTok | #5 | short | Paid in full, score still dropped? |
+| Day 4 · Tue Nov 10 | 12:30 | YouTube Shorts + Instagram Reels | #3 | short | 401(k) match explained: the raise you're ignoring |
+| Day 4 · Tue Nov 10 | 18:00 | TikTok | #3 | short | 401(k) match explained: the raise you're ignoring |
+| Day 5 · Wed Nov 11 | 12:30 | YouTube Shorts + Instagram Reels | #5 | short | Why did my credit score drop after paying in full? |
+| Day 5 · Wed Nov 11 | 18:00 | TikTok | #5 | short | Why did my credit score drop after paying in full? |
 | Day 5 · Wed Nov 11 | 19:00 | Instagram (carousel) | #18 | carousel | Check your credit report like an auditor |
-| Day 6 · Thu Nov 12 | 12:30 | YouTube Shorts + Instagram Reels | #8 | short | Is your savings app actually insured? · **HYSA affiliate** |
-| Day 6 · Thu Nov 12 | 18:00 | TikTok | #8 | short | Is your savings app actually insured? · **HYSA affiliate** |
-| Day 7 · Fri Nov 13 | 12:30 | YouTube Shorts + Instagram Reels | #4 | short | The fee that eats $18,000 |
-| Day 7 · Fri Nov 13 | 18:00 | TikTok | #4 | short | The fee that eats $18,000 |
+| Day 6 · Thu Nov 12 | 12:30 | YouTube Shorts + Instagram Reels | #8 | short | Is your savings app FDIC insured? Check in 1 minute · **HYSA affiliate** |
+| Day 6 · Thu Nov 12 | 18:00 | TikTok | #8 | short | Is your savings app FDIC insured? Check in 1 minute · **HYSA affiliate** |
+| Day 7 · Fri Nov 13 | 12:30 | YouTube Shorts + Instagram Reels | #4 | short | The expense ratio that eats $18,000 |
+| Day 7 · Fri Nov 13 | 18:00 | TikTok | #4 | short | The expense ratio that eats $18,000 |
 | Day 7 · Fri Nov 13 | 19:00 | Instagram (carousel) | #17 | carousel | What you actually own in an index fund |
-| Day 8 · Sat Nov 14 | 12:30 | YouTube Shorts + Instagram Reels | #10 | short | That 'surprise' bill was on the calendar · **template** |
-| Day 8 · Sat Nov 14 | 18:00 | TikTok | #10 | short | That 'surprise' bill was on the calendar · **template** |
-| Day 9 · Sun Nov 15 | 12:30 | YouTube Shorts + Instagram Reels | #2 | short | Roth IRA money isn't locked away |
-| Day 9 · Sun Nov 15 | 18:00 | TikTok | #2 | short | Roth IRA money isn't locked away |
+| Day 8 · Sat Nov 14 | 12:30 | YouTube Shorts + Instagram Reels | #10 | short | Sinking funds: the 'surprise' bill was on the calendar · **template** |
+| Day 8 · Sat Nov 14 | 18:00 | TikTok | #10 | short | Sinking funds: the 'surprise' bill was on the calendar · **template** |
+| Day 9 · Sun Nov 15 | 12:30 | YouTube Shorts + Instagram Reels | #2 | short | Can you withdraw from a Roth IRA? Your contributions, yes |
+| Day 9 · Sun Nov 15 | 18:00 | TikTok | #2 | short | Can you withdraw from a Roth IRA? Your contributions, yes |
 | Day 9 · Sun Nov 15 | 19:00 | Instagram (carousel) | #16 | carousel | Roth or Traditional IRA? One question |
 | Day 9 · Sun Nov 15 | 19:00 | YouTube (long-form) | #22 | long | How to start investing with $100 a month (beginner walkthrough) |
-| Day 10 · Mon Nov 16 | 12:30 | YouTube Shorts + Instagram Reels | #7 | short | $60 vs $150 on a $3,000 card |
-| Day 10 · Mon Nov 16 | 18:00 | TikTok | #7 | short | $60 vs $150 on a $3,000 card |
-| Day 11 · Tue Nov 17 | 12:30 | YouTube Shorts + Instagram Reels | #9 | short | Set these 3 bank alerts today |
-| Day 11 · Tue Nov 17 | 18:00 | TikTok | #9 | short | Set these 3 bank alerts today |
+| Day 10 · Mon Nov 16 | 12:30 | YouTube Shorts + Instagram Reels | #7 | short | Minimum payment vs $150 on a $3,000 card |
+| Day 10 · Mon Nov 16 | 18:00 | TikTok | #7 | short | Minimum payment vs $150 on a $3,000 card |
+| Day 11 · Tue Nov 17 | 12:30 | YouTube Shorts + Instagram Reels | #9 | short | 3 bank alerts to turn on today |
+| Day 11 · Tue Nov 17 | 18:00 | TikTok | #9 | short | 3 bank alerts to turn on today |
 | Day 11 · Tue Nov 17 | 19:00 | Instagram (carousel) | #19 | carousel | Avalanche vs snowball, with real math |
-| Day 12 · Wed Nov 18 | 12:30 | YouTube Shorts + Instagram Reels | #12 | short | Don't cancel that old card yet |
-| Day 12 · Wed Nov 18 | 18:00 | TikTok | #12 | short | Don't cancel that old card yet |
+| Day 12 · Wed Nov 18 | 12:30 | YouTube Shorts + Instagram Reels | #12 | short | Should you close an old credit card? Not yet |
+| Day 12 · Wed Nov 18 | 18:00 | TikTok | #12 | short | Should you close an old credit card? Not yet |
 | Day 12 · Wed Nov 18 | 19:00 | Instagram (carousel) | #21 | carousel | Opening your first investment account |
-| Day 13 · Thu Nov 19 | 12:30 | YouTube Shorts + Instagram Reels | #11 | short | The one-fund retirement option |
-| Day 13 · Thu Nov 19 | 18:00 | TikTok | #11 | short | The one-fund retirement option |
-| Day 14 · Fri Nov 20 | 12:30 | YouTube Shorts + Instagram Reels | #13 | short | Find your forgotten subscriptions in 10 minutes |
-| Day 14 · Fri Nov 20 | 18:00 | TikTok | #13 | short | Find your forgotten subscriptions in 10 minutes |
+| Day 13 · Thu Nov 19 | 12:30 | YouTube Shorts + Instagram Reels | #11 | short | Target date funds: the one-fund retirement option |
+| Day 13 · Thu Nov 19 | 18:00 | TikTok | #11 | short | Target date funds: the one-fund retirement option |
+| Day 14 · Fri Nov 20 | 12:30 | YouTube Shorts + Instagram Reels | #13 | short | How to find and cancel forgotten subscriptions |
+| Day 14 · Fri Nov 20 | 18:00 | TikTok | #13 | short | How to find and cancel forgotten subscriptions |
 | Day 14 · Fri Nov 20 | 19:00 | Instagram (carousel) | #20 | carousel | App vs spreadsheet vs notebook · **template** |
 
 After Day 14: check which pillar's posts earned the most saves and follows, and weight the next batch toward it. Pin the 30-day reset video (#23) on YouTube and the money-date carousel (#14) on Instagram, since both point to the template.
@@ -72,8 +72,8 @@ What changes in this batch:
 
 | Day | Time | Platform(s) | # | Format | Piece |
 |---|---|---|---|---|---|
-| Day 15 · Sat Nov 21 | 12:30 | YouTube Shorts + Instagram Reels | #12 | short | Pay for December in November · **template** |
-| Day 15 · Sat Nov 21 | 18:00 | TikTok | #12 | short | Pay for December in November · **template** |
+| Day 15 · Sat Nov 21 | 12:30 | YouTube Shorts + Instagram Reels | #12 | short | Holiday budget: pay for December in November · **template** |
+| Day 15 · Sat Nov 21 | 18:00 | TikTok | #12 | short | Holiday budget: pay for December in November · **template** |
 | Day 15 · Sat Nov 21 | 19:00 | Instagram (carousel) | #21 | carousel | Your open enrollment checklist |
 | Day 16 · Sun Nov 22 | 12:30 | YouTube Shorts + Instagram Reels | #1 | short | APR vs APY: the sneaky difference |
 | Day 16 · Sun Nov 22 | 18:00 | TikTok | #1 | short | APR vs APY: the sneaky difference |
@@ -81,24 +81,24 @@ What changes in this batch:
 | Day 17 · Mon Nov 23 | 19:00 | Instagram (carousel) | #16 | carousel | A whole budget in four lines · **template** |
 | Day 18 · Tue Nov 24 | 12:30 | YouTube Shorts + Instagram Reels | #10 | short | Buy now, pay later: the stacking problem |
 | Day 18 · Tue Nov 24 | 18:00 | TikTok | #10 | short | Buy now, pay later: the stacking problem |
-| Day 19 · Wed Nov 25 | 12:30 | YouTube Shorts + Instagram Reels | #0 | short | Your savings account pays you 50 cents · **HYSA affiliate** |
-| Day 19 · Wed Nov 25 | 18:00 | TikTok | #0 | short | Your savings account pays you 50 cents · **HYSA affiliate** |
+| Day 19 · Wed Nov 25 | 12:30 | YouTube Shorts + Instagram Reels | #0 | short | Your savings account pays 50 cents: switch to high-yield · **HYSA affiliate** |
+| Day 19 · Wed Nov 25 | 18:00 | TikTok | #0 | short | Your savings account pays 50 cents: switch to high-yield · **HYSA affiliate** |
 | Day 19 · Wed Nov 25 | 19:00 | Instagram (carousel) | #19 | carousel | What your credit score is made of |
 | Day 20 · Thu Nov 26 | — | — | — | — | Thanksgiving: rest day, no posts |
-| Day 21 · Fri Nov 27 | 12:30 | YouTube Shorts + Instagram Reels | #11 | short | The 72-hour cart rule (Black Friday) |
-| Day 21 · Fri Nov 27 | 18:00 | TikTok | #11 | short | The 72-hour cart rule (Black Friday) |
+| Day 21 · Fri Nov 27 | 12:30 | YouTube Shorts + Instagram Reels | #11 | short | How to stop impulse buying: the 72-hour rule (Black Friday) |
+| Day 21 · Fri Nov 27 | 18:00 | TikTok | #11 | short | How to stop impulse buying: the 72-hour rule (Black Friday) |
 | Day 22 · Sat Nov 28 | 19:00 | Instagram (carousel) | #14 | carousel | Before you open a high-yield savings account · **HYSA affiliate** |
 | Day 23 · Sun Nov 29 | 12:30 | YouTube Shorts + Instagram Reels | #6 | short | Is a balance transfer worth the 3% fee? |
 | Day 23 · Sun Nov 29 | 18:00 | TikTok | #6 | short | Is a balance transfer worth the 3% fee? |
 | Day 23 · Sun Nov 29 | 19:00 | YouTube (long-form) | #22 | long | Build your whole budget in one evening · **template** |
-| Day 24 · Mon Nov 30 | 12:30 | YouTube Shorts + Instagram Reels | #8 | short | Why $55k isn't $4,583 a month (Cyber Monday) |
-| Day 24 · Mon Nov 30 | 18:00 | TikTok | #8 | short | Why $55k isn't $4,583 a month (Cyber Monday) |
+| Day 24 · Mon Nov 30 | 12:30 | YouTube Shorts + Instagram Reels | #8 | short | $55k a year: how much a month after taxes? (Cyber Monday) |
+| Day 24 · Mon Nov 30 | 18:00 | TikTok | #8 | short | $55k a year: how much a month after taxes? (Cyber Monday) |
 | Day 24 · Mon Nov 30 | 19:00 | Instagram (carousel) | #17 | carousel | The Sunday 20-minute money check-in · **template** |
-| Day 25 · Tue Dec 1 | 12:30 | YouTube Shorts + Instagram Reels | #2 | short | Why there's never anything left to save · **template** |
-| Day 25 · Tue Dec 1 | 18:00 | TikTok | #2 | short | Why there's never anything left to save · **template** |
+| Day 25 · Tue Dec 1 | 12:30 | YouTube Shorts + Instagram Reels | #2 | short | How to save money when there's never anything left · **template** |
+| Day 25 · Tue Dec 1 | 18:00 | TikTok | #2 | short | How to save money when there's never anything left · **template** |
 | Day 26 · Wed Dec 2 | 19:00 | Instagram (carousel) | #18 | carousel | How big should your emergency fund be? · **HYSA affiliate** |
-| Day 27 · Thu Dec 3 | 12:30 | YouTube Shorts + Instagram Reels | #5 | short | Why your card charged interest on today's coffee |
-| Day 27 · Thu Dec 3 | 18:00 | TikTok | #5 | short | Why your card charged interest on today's coffee |
+| Day 27 · Thu Dec 3 | 12:30 | YouTube Shorts + Instagram Reels | #5 | short | Why was I charged interest? Losing your grace period |
+| Day 27 · Thu Dec 3 | 18:00 | TikTok | #5 | short | Why was I charged interest? Losing your grace period |
 | Day 28 · Fri Dec 4 | 12:30 | YouTube Shorts + Instagram Reels | #13 | short | Money market account vs money market fund |
 | Day 28 · Fri Dec 4 | 18:00 | TikTok | #13 | short | Money market account vs money market fund |
 
@@ -108,7 +108,7 @@ What changes in this batch:
 |---|---|---|---|
 | #3 | short | The 50/30/20 budget on $3,200 | **template** |
 | #4 | short | Missed a payment? The 30-day window | |
-| #7 | short | The free student loan rate cut | re-check studentaid.gov autopay terms |
+| #7 | short | Student loan autopay discount: the free rate cut | re-check studentaid.gov autopay terms |
 | #9 | short | The 50/50 rule for every raise | good for January raise season |
 | #15 | carousel | Where should this money live? | **HYSA affiliate** |
 | #20 | carousel | How to get one month ahead | **template**, good for January |
