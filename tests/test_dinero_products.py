@@ -146,3 +146,12 @@ def test_workshop_kits_build_with_notes_and_safety_rules(tmp_path):
     scam = build_workshops.content_estafas
     text = " ".join(str(x) for s in scam.S for x in s)
     assert "abogado con licencia" in text and "nunca se paga a una cuenta personal" in text
+
+
+def test_answer_bank_has_30_linkless_answers_and_is_current():
+    sys.path.insert(0, str(DS / "community"))
+    import build_answers
+    assert len(build_answers.A) == 30
+    assert (DS / "ANSWER_BANK.md").read_text() == build_answers.build()
+    for _, q, a, _ in build_answers.A:
+        assert "notario" not in a.lower() or "no con un notario" in a.lower() or "un notario público solo certifica" in a.lower(), q
