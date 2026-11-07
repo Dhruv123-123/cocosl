@@ -64,6 +64,9 @@ class Script(BaseModel):
         "{kind: loan_payment|total_interest|payoff_months|future_value|federal_tax|payroll_tax, the inputs "
         "(principal/balance, rate as a percent, months or years, payment, monthly, initial, wages, married, year), "
         "claimed: the number the script says}"))
+    related_video: str = Field(default="", description="Shorts: the title of this brand's long video the Short "
+                               "should link to (YouTube's related video, set by hand in Studio). Empty otherwise")
+    playlist: str = Field(default="", description="Long videos: the series playlist it belongs in, if known")
     original_element: str = Field(default="", description="Long videos: the one thing a template can't make, e.g. "
                                   "a worked example charted with this video's own numbers, or a screen recording of "
                                   "a real tool a person should record (say exactly what to record). Empty for shorts")

@@ -18,7 +18,9 @@ FORMAT_SPECS = {
             "It must contain one thing a template can't make: at least one worked example with this video's "
             "own numbers as a `chart`, and/or name in original_element a screen recording a person should make "
             "(e.g. 'record the IRS payment page while filling in the example'). Not a slideshow of generic "
-            "illustrations with narration.",
+            "illustrations with narration. Keep the closing CTA under 40 words and end on one 'watch next' "
+            "line (e.g. 'If you're building a budget, watch this next'): a 20-second end slate follows for the "
+            "end screen.",
     "mid": "A 65-90 second vertical video for TikTok only (its Creator Rewards count videos over one minute). "
            "8-11 beats; total narration 190-250 words. Hook in the first sentence, then one idea developed "
            "with a concrete example, ending on the CTA. Must stand on its own, not a stretched short.",

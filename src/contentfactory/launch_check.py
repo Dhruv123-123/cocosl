@@ -13,7 +13,7 @@ For every brand it checks, in one pass:
 * caption limits per platform each post is queued for (Instagram 2,200 chars
   and 5 hashtags, TikTok 2,200, Threads 500, YouTube title 100 / description
   5,000 bytes). Over the limit is yellow: the publisher trims, but you should
-  choose what goes.
+  choose what goes. YouTube Shorts titles over 60 chars and long-video titles over 70 are yellow too.
 
 Red = something would go out wrong. Yellow = fine for dry run, fix before
 going live. Nothing is posted or changed.
@@ -33,6 +33,7 @@ CAPTION_LIMITS = {  # platform -> (max chars, max hashtags)
     "instagram": (2200, 5), "tiktok": (2200, None), "threads": (500, None), "facebook": (63206, None),
 }
 LEVELS = {"green": 0, "yellow": 1, "red": 2}
+SHORT_TITLE_MAX, LONG_TITLE_MAX = 60, 70  # YouTube SEO playbook: mobile and search cut longer titles
 
 
 @dataclass
@@ -171,8 +172,15 @@ def run(factory, days: int = 14, online: bool = False, now: datetime | None = No
                 if tags and ntags > tags:
                     rep.add("yellow", slug, where, f"{ntags} hashtags, {platform} takes {tags}; extras are dropped")
             if platform == "youtube":
-                if len(req.title or "") > 100:
-                    rep.add("yellow", slug, where, f"title {len(req.title)} chars, YouTube takes 100; it will be cut")
+                n_title = len(req.title or "")
+                if n_title > 100:
+                    rep.add("yellow", slug, where, f"title {n_title} chars, YouTube takes 100; it will be cut")
+                elif row["format"] in ("short", "mid") and n_title > SHORT_TITLE_MAX:
+                    rep.add("yellow", slug, where, f"Shorts title {n_title} chars; keep it to {SHORT_TITLE_MAX} "
+                                                   "(search phrase first) so it isn't cut off")
+                elif row["format"] == "long" and n_title > LONG_TITLE_MAX:
+                    rep.add("yellow", slug, where, f"title {n_title} chars; keep it to {LONG_TITLE_MAX}, search "
+                                                   "phrase in the first 40-60")
                 if utf8_len(req.description or "") > 5000:
                     rep.add("yellow", slug, where, "description over 5,000 bytes; it will be trimmed")
                 if re.search(r"[<>]", f"{req.title}{req.description}"):

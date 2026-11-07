@@ -108,8 +108,25 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
         starts.append((round(t, 2), segments[i].heading if i < len(segments) else ""))
         t += slot
 
+    voice_paths = list(tts.paths)
+    slate_s = 0.0
+    if fmt == "long":  # closing slate: room for the Studio end screen, so it never covers content
+        from .endslate import render_end_slate
+        from .endslate import seconds as slate_seconds
+        slate_s = slate_seconds()
+        if slate_s:
+            slate = render_end_slate(size, palette, brand.visual.font, brand.name, brand.visual.watermark, sig,
+                                     work / "end-slate.png")
+            beats.append(Beat(slate, "", t, slate_s, still=True))
+            hush = work / "voice" / "end-slate-silence.wav"
+            hush.parent.mkdir(parents=True, exist_ok=True)
+            from .util import ffmpeg as _ff
+            _ff(["-f", "lavfi", "-i", "anullsrc=r=24000:cl=mono", "-t", "0.2", str(hush)])
+            voice_paths.append(hush)
+            slots.append(slate_s)
+            t += slate_s
     audio = out / "audio.wav"
-    concat_narration(tts.paths, slots, audio)
+    concat_narration(voice_paths, slots, audio)
     srt = out / "captions.srt"
     write_srt(cues, srt)
     music = pick_music(f"{brand.slug}:{post.get('id')}:{script.title}")
@@ -163,6 +180,7 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     return {"video": video, "audio": audio, "captions_srt": srt, "images": [r.path for r in imgs], "slides": [],
             "thumbnail": thumb, "thumbnail_variants": [thumb, *variants], "duration": round(duration, 3),
             "chapters": chapters.build(starts, duration) if fmt == "long" else [], "look": look,
+            "end_slate_seconds": slate_s,
             "signature": sig["device"] if sig else None, "provenance": prov}
 
 
