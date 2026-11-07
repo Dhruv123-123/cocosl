@@ -109,6 +109,22 @@ WALKTHROUGHS = [
          ("Rule: a stranger who becomes a friend and then talks about investing is a scam. Every time.", 6),
          ("Don't reply to wrong number texts. Just block and delete.", 5)],
   do="Wrong-number texts: don't reply. Block and delete."),
+ dict(id="w7-boss-gift-cards", title="The 'boss' who needs gift cards for the team, walked through", app="Messages", sender="+1 (555) 014-7731",
+  messages=[("in", "Hi, it's Karen. Are you free? I'm stuck in meetings all day and can't talk."),
+            ("out", "Hi Karen, sure. What's up?"),
+            ("in", "I want to surprise the team with holiday gifts. Pick up 5 $100 gift cards on your way in, scratch the backs and "
+                   "text me photos of the codes. I'll pay you back today. Keep it quiet, it's a surprise!")],
+  flags=[(0, "can't talk", "Can't talk, so you can't check"),
+         (2, "gift cards", "Gift cards: only scammers ask for these"),
+         (2, "text me photos of the codes", "The codes are the money"),
+         (2, "Keep it quiet", "Secrecy")],
+  steps=[("A text from your boss, in December. It looks like a nice gesture. Watch it closely.", 5),
+         ("First: she's in meetings and can't talk. That's so you can't call and check her voice.", 6),
+         ("Second: gift cards. Gift cards are for gifts, not for paying anyone back.", 5),
+         ("Third: photos of the codes. The moment you send them, the money is spent.", 5),
+         ("And fourth: keep it quiet. Secrecy stops a coworker from saying, wait, that's a scam.", 6),
+         ("So call your boss on the number you already have, or walk over to her desk. Never send gift card codes by text.", 7)],
+  do="Call your boss on a number you already have. Never text gift card codes."),
 ]
 
 # ------------------------------------------------------------------ quizzes
@@ -158,6 +174,14 @@ QUIZZES = [
          ("within 48 hours", "A countdown"),
          ("[Verify now]", "A sign-in button: the fake page that steals your password")],
   fix="Open the app or type the site yourself. Then turn on two-step sign-in."),
+ dict(id="q7-charity", kind="text", sender="+1 (555) 014-9902", title="Spot the red flags: the 'holiday relief' text",
+  message="Thank you for your generous pledge last year! Families in need are counting on you again this season. "
+          "Renew your $75 gift today by gift card or Zelle: https://holiday-relief-●●●●.xyz",
+  flags=[("Thank you for your generous pledge last year!", "Thanks for a gift you don't remember making"),
+         ("today", "Pressure to give right now"),
+         ("by gift card or Zelle", "Gift cards and payment apps: no real charity asks for these"),
+         ("holiday-relief-●●●●.xyz", "A new site with an odd ending, not a charity you can look up")],
+  fix="Look the charity up yourself at Give.org or Charity Navigator, and give on its own site by card or check."),
 ]
 
 # ------------------------------------------------------------------ charts (real FTC data)

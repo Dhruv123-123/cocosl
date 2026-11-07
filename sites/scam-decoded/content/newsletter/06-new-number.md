@@ -1,7 +1,7 @@
 ---
-issue: 4
+issue: 6
 send_date: 2027-02-25
-subject: Scam Alert #4: "Hi Mom, this is my new number"
+subject: Scam Alert #6: "Hi Mom, this is my new number"
 preheader: 6 texts from hello to a $1,900 bill, and the 2-minute fix.
 ---
 Hi,

@@ -1,0 +1,44 @@
+---
+issue: 1
+send_date: 2026-11-19
+subject: Scam Alert #1: your package isn't really on hold
+preheader: Fake delivery texts, marketplace "payment pending" emails, and a free checker for anything you're not sure about.
+---
+Hi,
+
+Black Friday is next week, which means two things: everyone is waiting on a package, and everyone is buying and selling on marketplaces. Scammers plan for both.
+
+## This week's scam: the "package on hold" text
+
+**Spotted this week (fictional example):** *"USPS: Your package is on hold due to an incomplete address. Update your details within 12 hours or it will be returned: usps-redeliver-●●●●.top/track. A $0.30 redelivery fee applies."*
+
+The thirty cents isn't the point. The page wants your name, address and card number, and once you've typed them in, the charges that follow aren't thirty cents.
+
+## The tell
+
+**A delivery text you didn't sign up for, with a link and a fee.** Carriers don't text you out of the blue asking for an address update or money. And the link isn't the carrier's real site: read the part right before the first single slash.
+
+## What to do
+
+1. Don't tap. Track the package with the tracking number from the shop's own order email or app.
+2. Already entered card details? Call your card issuer now and cancel the card.
+3. Forward the text to 7726 (SPAM), then delete it.
+
+## Quick hits
+
+- **Selling gifts on Marketplace?** If an email says a buyer's payment is "pending" until you upgrade to a business account, it's fake. Payment apps don't charge you to receive money. Check the app itself.
+- **Buying a sold-out gift?** Never send a deposit by payment app to "hold" an item you haven't seen. Meet in person or use a checkout with a credit card.
+- **Black Friday deal from a site you've never heard of?** Search the shop's name plus "scam" or "reviews" before you pay, and pay by credit card so you can dispute it.
+
+## Your 5-minute job this week
+
+Bookmark our free **[Is this a scam? checker](/checker/)**. Paste in any text, email or link you're unsure about, and it lists the red flags and what to do. It runs on your own phone or computer, so nothing you paste is sent anywhere. Send it to the person in your family who gets the most texts.
+
+## From Scam Decoded
+
+Not sure what a scam looks like? Our new [scam explainers](/scams/) cover sixteen of the most common ones in plain English, including [package delivery texts](/scams/package-delivery-texts/) and [marketplace scams](/scams/online-marketplace-scams/).
+
+Stay safe out there,
+Scam Decoded
+
+P.S. Got a strange delivery text this week? Hit reply and tell me what it said (delete your personal details first). The best examples become future issues.

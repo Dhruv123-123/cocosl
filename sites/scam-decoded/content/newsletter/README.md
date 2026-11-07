@@ -15,12 +15,16 @@ One scam a week, every Thursday. Each issue follows `TEMPLATE.md`:
 
 | # | Send (Thu) | Topic | Ties into |
 |---|---|---|---|
-| 1 | Feb 4 2027 | IRS "verify your account" texts, arrest calls · IP PIN | Shorts #0, #2 |
-| 2 | Feb 11 | Valentine's gift-card asks, flower text, fake soldier · teen sextortion talk | Safer Internet Day, Valentine's Day |
-| 3 | Feb 18 | Erroneous refund "send it back", tax relief ads | Shorts #1, #6 |
-| 4 | Feb 25 | "Hi Mom" new number, AI voice, 1099-K text · safe word · Protect Your Parents | Shorts #10, #12 |
-| 5 | Mar 4 | Slam the Scam Day: government imposters · Family kit | Slam the Scam Day |
-| 6 | Mar 11 | Spring break rentals, March Madness picks, utility shutoff · /compare/ (affiliate) | Shorts #16, #15 |
+| 1 | Nov 19 2026 | Holiday deliveries: "package on hold" texts, marketplace payment emails, Black Friday shops · /checker/ | Holiday pack #0, #2, #3 |
+| 2 | Dec 3 2026 | Year-end giving: fake charity texts, boss gift card texts, tampered gift cards · /checker/ | Holiday pack #4–#8 |
+| 3 | Feb 4 2027 | IRS "verify your account" texts, arrest calls · IP PIN | Shorts #0, #2 |
+| 4 | Feb 11 | Valentine's gift-card asks, flower text, fake soldier · teen sextortion talk | Safer Internet Day, Valentine's Day |
+| 5 | Feb 18 | Erroneous refund "send it back", tax relief ads | Shorts #1, #6 |
+| 6 | Feb 25 | "Hi Mom" new number, AI voice, 1099-K text · safe word · Protect Your Parents | Shorts #10, #12 |
+| 7 | Mar 4 | Slam the Scam Day: government imposters · Family kit | Slam the Scam Day |
+| 8 | Mar 11 | Spring break rentals, March Madness picks, utility shutoff · /compare/ (affiliate) | Shorts #16, #15 |
+
+Weekly issues from Dec 10 2026 to Jan 28 2027 aren't written yet; numbering assumes none go out (renumber if they do).
 
 Before sending:
 

@@ -50,3 +50,15 @@ footer .small{color:#9aa8b6}
 .scroll{overflow-x:auto}.compare th{width:22%}.compare td{width:39%}.compare .button{font-size:15px;padding:10px 14px}
 .disclosure{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:15px}
 .disclosure p:last-child{margin-bottom:0}
+.checker-tool{background:var(--paper);border:2px solid var(--ink);border-radius:14px;padding:18px;margin:16px 0}
+.checker-tool textarea{width:100%;font:16px/1.5 system-ui,sans-serif;padding:12px;border:2px solid var(--line);border-radius:10px;background:#fff;margin:8px 0;resize:vertical}
+.checker-tool .row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.checker-tool button{font-size:17px;font-weight:700;padding:12px 22px;border-radius:10px;border:2px solid var(--ink);background:var(--ink);color:var(--cream);cursor:pointer}
+.checker-tool button.ghost{background:transparent;color:var(--ink)}
+.checker-result:focus{outline:none}
+.verdict{border-radius:14px;padding:16px 18px;margin:16px 0;border:2px solid}
+.verdict p{margin:4px 0 0}.verdict strong{font-size:20px}
+.verdict.high{background:#fde8e4;border-color:#c0392b}.verdict.medium{background:#fff3e0;border-color:var(--amber)}
+.verdict.low{background:#fff9e8;border-color:#e0c060}.verdict.none{background:#e6f6f4;border-color:var(--teal)}
+.flags li{margin-bottom:10px}.flags span{color:#24364a}
+.reads li{margin-bottom:6px}

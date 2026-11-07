@@ -100,9 +100,9 @@ def test_weekly_scam_alert_newsletter_six_issues(tmp_path, monkeypatch):
     src = ROOT / "content" / "newsletter"
     assert (src / "TEMPLATE.md").exists() and (src / "README.md").exists()
     issues = json.loads((out / "newsletter" / "issues.json").read_text())
-    assert [i["issue"] for i in issues] == [1, 2, 3, 4, 5, 6]
+    assert [i["issue"] for i in issues] == [1, 2, 3, 4, 5, 6, 7, 8]
     dates = [i["send_date"] for i in issues]
-    assert dates == sorted(dates) and len(set(dates)) == 6
+    assert dates == sorted(dates) and len(set(dates)) == 8
     sections = ["## This week's scam", "## The tell", "## What to do", "## Quick hits", "## Your 5-minute job"]
     for meta in mod.newsletter_issues():
         body = meta["body_md"]
@@ -148,3 +148,47 @@ def test_page_copy_lives_in_content_files(tmp_path, monkeypatch):
     assert "<table class=\"compare\">" in (out / "compare" / "index.html").read_text()
     assert "/free/</loc>" not in (out / "sitemap.xml").read_text()
     assert 'noindex' in (out / "free" / "thanks" / "index.html").read_text()
+
+
+def test_in_browser_scam_checker_and_explainers(tmp_path, monkeypatch):
+    import shutil
+    import subprocess
+    mod, out = build(tmp_path, monkeypatch)
+    page = (out / "checker" / "index.html").read_text()
+    assert 'id="sd-checker"' in page and 'src="/checker.js"' in page and "window.SD_ARTICLES" in page
+    js = (out / "checker.js").read_text()
+    for banned in ("fetch(", "XMLHttpRequest", "sendBeacon", "WebSocket", "localStorage", "sessionStorage", "import("):
+        assert banned not in js, banned
+    articles = sorted((ROOT / "content" / "articles").glob("*.md"))
+    assert len(articles) >= 16
+    slugs = {p.stem.split("-", 1)[1] for p in articles}
+    for slug in slugs:
+        html = (out / "scams" / slug / "index.html").read_text()
+        assert "The tell" in html and "What to do" in html and "ftc.gov" in html, slug
+    index = (out / "scams" / "index.html").read_text()
+    assert all(f"/scams/{s}/" in index for s in slugs)
+    # every rule that points at an article points at one that exists
+    referenced = set(re.findall(r'article: "([a-z-]+)"', js)) | {"lookalike-links"}
+    assert referenced <= slugs, referenced - slugs
+    if not shutil.which("node"):
+        return
+    cases = {
+        "TOLL SERVICES NOTICE: You owe $4.15. Pay by 11:59 PM today to avoid a late fee: https://toll-paycenter-help.top/pay": ("high", "toll-texts"),
+        "USPS: Your package is on hold due to an incomplete address. Update within 12 hours: usps-redelivery.com/track": ("high", "package-delivery-texts"),
+        "Hi Mom, I dropped my phone, this is my new number. Can you pay a bill for me? Don't tell Dad": ("high", "family-emergency-scams"),
+        "I sent you a verification code by mistake, can you read it back to me?": ("high", "verification-code-scams"),
+        "Buy 4 Google Play gift cards and send me the numbers on the back. Keep this between us.": ("high", "gift-card-scams"),
+        "Help families in need this holiday! Donate today by gift card or Zelle.": ("high", "fake-charity-scams"),
+        "The buyer paid $450 but the payment is pending until you upgrade to a business account.": ("high", "online-marketplace-scams"),
+        "Hey, are we still on for dinner at 7? I'll bring the salad.": ("none", None),
+        "Your order has shipped. Track it at https://www.amazon.com/gp/your-account/order-history": ("none", None),
+        "http://paypa1.com.secure-login.xyz/verify": ("high", "lookalike-links"),
+    }
+    script = ("const c=require(process.argv[1]);const cases=JSON.parse(process.argv[2]);"
+              "console.log(JSON.stringify(Object.keys(cases).map(k=>{const r=c.analyze(k);return [r.level,r.articles];})));")
+    res = json.loads(subprocess.run(["node", "-e", script, str(out / "checker.js"), json.dumps(cases)],
+                                    capture_output=True, text=True, check=True).stdout)
+    for (text, (level, article)), (got, arts) in zip(cases.items(), res):
+        assert got == level, (text, got)
+        if article:
+            assert article in arts, (text, arts)

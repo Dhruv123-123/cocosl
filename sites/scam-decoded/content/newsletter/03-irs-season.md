@@ -1,7 +1,7 @@
 ---
-issue: 1
+issue: 3
 send_date: 2027-02-04
-subject: Scam Alert #1: the IRS isn't texting you
+subject: Scam Alert #3: the IRS isn't texting you
 preheader: Tax season's fakes are out. 1 rule beats all of them.
 ---
 Hi,

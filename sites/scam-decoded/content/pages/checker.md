@@ -1,6 +1,6 @@
 ---
 title: Is this a scam? Free checker
-description: Check a suspicious text or email.
+description: Paste a suspicious text, email or link. Our free checker looks for the red flags scammers use, right in your browser, and tells you what to do next.
 path: /checker/
 layout: narrow
 order: 8
@@ -9,8 +9,14 @@ order: 8
 
 # Is this a scam?
 
-{{checker_cta}}
+Paste the message or link you're not sure about. The checker looks for the patterns behind toll, delivery, bank, family emergency, job, gift card, charity and marketplace scams, and for look-alike links.
 
-Get the free checklist so you know the patterns before the next message arrives:
+{{checker_tool}}
+
+## How it works
+
+It runs a set of plain rules, the same red flags we teach in our videos: rush, threats, secrecy, unusual ways to pay, requests for codes, and web addresses that borrow a brand's name. It is a second opinion and can't promise a message is safe, so when in doubt, contact the company on a number you found yourself.
+
+Want to know the patterns before the next message arrives? Get the free checklist:
 
 {{signup:checker-page}}

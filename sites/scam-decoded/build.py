@@ -288,7 +288,10 @@ def email_form(source: str, button: str = "Send me the free checklist") -> str:
 def checker_box() -> str:
     link = CFG["scam_checker"]["url"]
     if is_placeholder(link):
-        return ""
+        msg = "scam_checker.url is a placeholder: linking to the built-in /checker/ instead"
+        if msg not in WARNINGS:
+            WARNINGS.append(msg)
+        link = u("/checker/")
     return (f'<a class="checker" href="{esc(link)}"><span class="badge">Free tool</span>'
             f'<strong>{esc(CFG["scam_checker"]["label"])}</strong><span aria-hidden="true">→</span></a>')
 
@@ -319,7 +322,7 @@ def layout(*, title: str, description: str, path: str, body: str, noindex: bool 
 <main>{body}</main>
 <footer><div class="wrap">
 <p>{socials}</p>
-<p><a href="{u('/parents/')}">Protect Your Parents</a> · <a href="{u('/teams/')}">Training for teams</a> · <a href="{u('/newsletter/')}">Weekly Scam Alert</a> · <a href="{u('/compare/')}">Tools compared</a></p>
+<p><a href="{u('/parents/')}">Protect Your Parents</a> · <a href="{u('/teams/')}">Training for teams</a> · <a href="{u('/newsletter/')}">Weekly Scam Alert</a> · <a href="{u('/compare/')}">Tools compared</a> · <a href="{u('/scams/')}">Scam explainers</a></p>
 <p><a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/privacy/')}">Privacy</a> · {esc(CFG['contact_email'])}</p>
 <p class="small">{esc(CFG['disclaimer'])} {esc(CFG['ai_disclosure'])}</p>
 </div></footer>
@@ -473,13 +476,50 @@ def checker_cta() -> str:
 
 
 # ---------------------------------------------------------------- shortcodes
-SHORTCODES = {"checker_box", "checker_cta", "download", "buy", "signup", "aff"}
+SHORTCODES = {"checker_box", "checker_cta", "checker_tool", "scam_index", "download", "buy", "signup", "aff"}
+
+
+def articles() -> list[dict]:
+    """content/articles/NN-slug.md -> /scams/<slug>/ (the explainers the checker links to)."""
+    out = []
+    for m in load_dir("articles"):
+        m.setdefault("path", f"/scams/{m['slug']}/")
+        out.append(m)
+    return out
+
+
+def article_map() -> dict:
+    return {m["slug"]: {"title": m["title"], "url": u(m["path"])} for m in articles()}
+
+
+def scam_index() -> str:
+    rows = "".join(f'<li><a href="{esc(a["url"])}">{esc(a["title"])}</a></li>' for a in article_map().values())
+    return f'<ul class="reads">{rows}</ul>'
+
+
+def checker_tool() -> str:
+    """The in-browser checker: rules in static/checker.js, no network calls, nothing stored."""
+    data = json.dumps(article_map()).replace("</", "<\\/")
+    return f"""<form id="sd-checker" class="checker-tool" autocomplete="off">
+  <label for="sd-input"><strong>Paste the text, email or link</strong></label>
+  <textarea id="sd-input" rows="7" maxlength="20000" spellcheck="false" placeholder="e.g. USPS: Your package is on hold. Update your address within 12 hours: usps-redelivery.com"></textarea>
+  <div class="row"><button type="submit">Check it</button><button type="reset" class="ghost">Clear</button></div>
+  <p class="form-note">Checked on your device. Nothing you paste is sent anywhere or saved, and links are never opened.</p>
+</form>
+<noscript><p>The checker needs JavaScript. Until then, use the three tells: rush, secrecy, and an unusual way to pay.</p></noscript>
+<div id="sd-result" class="checker-result" tabindex="-1" aria-live="polite"></div>
+<script>window.SD_ARTICLES = {data};</script>
+<script src="{u('/checker.js')}" defer></script>"""
 
 
 def shortcode(name: str, args: list[str], ctx: dict) -> str | None:
     """HTML-producing {{name:arg|arg}} shortcodes for content files."""
     if name == "checker_box":
         return checker_box()
+    if name == "checker_tool":
+        return checker_tool()
+    if name == "scam_index":
+        return scam_index()
     if name == "checker_cta":
         return checker_cta()
     if name == "signup":
@@ -558,7 +598,7 @@ def render_page(meta: dict) -> tuple:
 
 
 def content_pages() -> list[tuple]:
-    items = [render_page(m) for m in load_dir("pages") + load_dir("products")]
+    items = [render_page(m) for m in load_dir("pages") + load_dir("products") + articles()]
     items.sort(key=lambda x: int(x[5].get("order", 99)))
     pages = []
     for path, title, desc, body, noindex, fm in items:
