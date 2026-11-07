@@ -108,7 +108,7 @@ for (const [name, viewport] of [['desktop', { width: 1280, height: 900 }], ['pho
     console.log(name, 'mileage/', good ? 'ok' : 'FAIL', { big, wide, errors });
     if (shots) await page.screenshot({ path: `${shots}/${name}-mileage.png`, fullPage: true });
   }
-  for (const [slug, sel] of [['free/', 'form.signup'], ['free/thanks/', 'a[download]']]) {
+  for (const [slug, sel] of [['free/', 'form.signup'], ['first-year/', 'form.signup'], ['free/thanks/', 'a[download]']]) {
     await page.goto(url + slug);
     const found = await page.locator(sel).count();
     const wide = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);

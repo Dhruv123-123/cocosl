@@ -238,7 +238,7 @@ ${sponsors}
   return ['how-we-make-money/', shell({ title: 'How 1099 Money Makes Money: Products, Affiliates, Sponsors', description: 'Exactly how 1099 Money pays for its free tax tools: our own products, labeled affiliate links, sponsors (none yet), and what we never do for money.', path: 'how-we-make-money/', pre, body, ld, current: 'how-we-make-money/' })];
 }
 
-const ALL_PATHS = ['', 'q4/', 'rate-calculator/', 'invoice-template/', 's-corp-calculator/', 'deduction-finder/', 'mileage/', 'free/', 'compare/', ...pages.map((p) => `compare/${p.slug}/`), 'about/', 'how-we-make-money/'];
+const ALL_PATHS = ['', 'q4/', 'rate-calculator/', 'invoice-template/', 's-corp-calculator/', 'deduction-finder/', 'mileage/', 'free/', 'first-year/', 'compare/', ...pages.map((p) => `compare/${p.slug}/`), 'about/', 'how-we-make-money/'];
 
 // today: null builds every page (the committed files); a YYYY-MM-DD builds only what's due by then.
 export function build(today = null) {

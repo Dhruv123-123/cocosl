@@ -20,6 +20,7 @@ MONTH3 = "month-3/content.json"
 MONTH4 = "month-4/content.json"
 MONTH5 = "month-5/content.json"
 MONTH6 = "month-6/content.json"
+MONTH7 = "month-7/content.json"
 DRIVERS = "drivers/content.json"
 YT6 = "youtube-6wk/content.json"
 JAR = "jar-challenge/content.json"
@@ -36,7 +37,7 @@ def test_brand_loads_with_placeholder_affiliates(factory):
 import pytest
 
 
-@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5]), (MONTH4, [22, 13, 4]), (MONTH5, [22, 13, 5]), (MONTH6, [22, 14, 4]), (DRIVERS, [10, 0, 0]), (YT6, [0, 0, 6]), (JAR, [10, 1, 0])])
+@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5]), (MONTH4, [22, 13, 4]), (MONTH5, [22, 13, 5]), (MONTH6, [22, 14, 4]), (MONTH7, [23, 13, 0]), (DRIVERS, [10, 0, 0]), (YT6, [0, 0, 6]), (JAR, [10, 1, 0])])
 def test_content_is_valid(factory, name, counts):
     from contentfactory.schemas import Script
     brand = factory.brand("1099-money")
@@ -389,7 +390,7 @@ def test_threads_x_kit_fits_both_platforms_and_is_ready():
 
 def test_short_titles_fit_in_60_characters():
     # Shorts titles get cut off in the feed past ~60 characters; YouTube's hard limit is 100 for any video.
-    files = ["content.json", MONTH1, MONTH2, MONTH3, MONTH4, MONTH5, MONTH6, DRIVERS, YT6, JAR]
+    files = ["content.json", MONTH1, MONTH2, MONTH3, MONTH4, MONTH5, MONTH6, DRIVERS, YT6, JAR, MONTH7]
     for name in files:
         for it in _items(name):
             title = it["script"]["title"]
@@ -453,3 +454,21 @@ def test_tax_jar_challenge_runs_weekly_to_jan_15_and_stays_honest():
     pdf = ROOT / "apps" / "freelance-tax" / "downloads" / "tax-jar-tracker.pdf"
     assert pdf.exists() and pdf.read_bytes()[:4] == b"%PDF"
     assert "tax-jar-tracker.pdf" in (ROOT / "apps" / "freelance-tax" / "free" / "thanks" / "index.html").read_text()
+
+
+def test_month_7_fills_jun_3_to_jul_3_with_the_youtube_plan_on_sundays(factory):
+    earlier = {i["script"]["title"].lower() for n in ("content.json", MONTH1, MONTH2, MONTH3, MONTH4, MONTH5, MONTH6, DRIVERS, YT6, JAR)
+               for i in _items(n)}
+    month = _items(MONTH7)
+    assert not earlier & {i["script"]["title"].lower() for i in month}
+    brand = factory.brand("1099-money")
+    slots, leftover = plan(brand, month, date(2027, 6, 3), 31)
+    assert not leftover
+    sundays = {s.when.date() for s in plan(brand, _items(YT6), date(2027, 6, 6), 36)[0]}
+    covered = {s.when.date() for s in slots} | sundays
+    assert {date(2027, 6, 3) + timedelta(days=k) for k in range(31)} <= covered
+    shorts = [i for i in month if i["format"] == "short"]
+    assert all(a["format_style"] != b["format_style"] for a, b in zip(shorts, shorts[1:]))
+    assert len({i["format_style"] for i in shorts}) >= 8
+    by_day = {s.when.date(): month[s.index]["script"]["title"] for s in slots if s.fmt == "short"}
+    assert by_day[date(2027, 6, 14)].startswith("Tomorrow")  # the day before the Jun 15 payment
