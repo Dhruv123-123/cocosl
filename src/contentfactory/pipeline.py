@@ -304,6 +304,7 @@ class Factory:
             platform=platform, brand=brand, settings=self.settings, format=post["format"],
             title=post.get("title", ""), caption=caption, description=description, tags=tags,
             video_path=video, image_paths=images, thumbnail_path=thumb, public_urls=public,
+            captions_path=out / assets["captions_srt"] if assets.get("captions_srt") else None,
             ai_generated=True, realistic_synthetic=brand.realistic_synthetic_media,
             has_paid_promotion=bool((post.get("meta") or {}).get("sponsored")),
         )
