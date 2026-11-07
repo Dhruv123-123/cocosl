@@ -92,3 +92,13 @@ def test_2027_planner_dates_are_right():
     it = listings.BY_SLUG["2027-budget-planner"]
     assert it["dated"] and it["price"] == 12 and len(it["variants"]) * 2 <= 5
     assert "2027-budget-planner" not in listings.BY_SLUG["mega-budget-bundle"]["bundle"]
+
+
+def test_seo_covers_every_listing():
+    import seo
+    assert set(seo.S) == set(listings.BY_SLUG)
+    for it in listings.LISTINGS:
+        assert len(it["title"].split()) <= 15 and it["title"] == seo.S[it["slug"]][0]
+        assert it["attributes"]["Primary color"] and len(it["tags"]) == 13
+        assert "Attributes" in listings.listing_md(it)
+    assert "debt snowball" in listings.BY_SLUG["debt-free-date-planner"]["tags"]

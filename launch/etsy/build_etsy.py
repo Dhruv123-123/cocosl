@@ -165,9 +165,9 @@ def main() -> int:
         (out / it["slug"] / "LISTING.md").write_text(listings.listing_md(it))
     with open(out / "listings.csv", "w", newline="") as fh:
         w = csv.writer(fh)
-        w.writerow(["slug", "title", "price", "tags", "category", "files"])
+        w.writerow(["slug", "title", "price", "tags", "category", "attributes", "files"])
         for it in listings.LISTINGS:
-            w.writerow([it["slug"], it["title"], f'{it["price"]:.2f}', ", ".join(it["tags"]), it["category"],
+            w.writerow([it["slug"], it["title"], f'{it["price"]:.2f}', ", ".join(it["tags"]), it["category"], "; ".join(f"{k}: {v}" for k, v in it["attributes"].items()),
                         " | ".join(f.name for f in upload_files(out / it["slug"]))])
     for it in items:
         files = upload_files(out / it["slug"])

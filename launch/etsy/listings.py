@@ -297,6 +297,9 @@ def _more_listings() -> list[dict]:
 
 LISTINGS += _more_listings()
 
+import seo  # noqa: E402  (titles, tags and attributes from the Nov 2026 SEO pass)
+seo.apply(LISTINGS)
+
 for it in LISTINGS:
     it.setdefault("category", GUIDE_CAT if it["kind"] == "product" else PRINT_CAT)
     it["description"] = _desc(it["hook"], it["get"], it["how"], product=it.get("product", False))
@@ -315,6 +318,8 @@ def validate() -> list[str]:
         if it["title"] in seen_titles:
             errs.append(f"{s}: duplicate title")
         seen_titles.add(it["title"])
+        if len(it["title"].split()) > 15:
+            errs.append(f"{s}: title is {len(it['title'].split())} words (Etsy suggests under 15)")
         if len(it["tags"]) != 13:
             errs.append(f"{s}: {len(it['tags'])} tags (use all 13)")
         if len(set(t.lower() for t in it["tags"])) != len(it["tags"]):
@@ -345,6 +350,7 @@ def fees(price: float) -> dict:
 def listing_md(it: dict) -> str:
     f = fees(it["price"])
     tags = "\n".join(f"{i}. {t}" for i, t in enumerate(it["tags"], start=1))
+    attrs = "\n".join(f"- **{k}:** {v}" for k, v in it.get("attributes", {}).items())
     return f"""# Etsy listing: {it['name']}
 
 Copy each field into Etsy (Shop Manager > Listings > Add a listing). Upload the mockups in order (01 is the
@@ -361,6 +367,9 @@ ${it['price']:.2f}. Etsy fees per sale about ${f['total']:.2f} (listing $0.20, t
 - **Who made it:** I did. **What is it:** A finished product. **When was it made:** the most recent range
 - **Category:** {it['category']}
 - **Renewal:** Automatic. **Quantity:** 999
+
+## Attributes (fill every one Etsy shows; pick the closest option it offers)
+{attrs}
 
 ## Tags (13, each 20 characters or less; paste one at a time)
 {tags}

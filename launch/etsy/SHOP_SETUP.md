@@ -2,7 +2,8 @@
 
 A second sales channel for Money Made Simple: 50 listings, all digital downloads (40 undated printables, the dated 2027 Budget Planner, 5 guide + spreadsheet kits and 4 bundles). Every listing folder has the
 files to upload, three mockup images and `LISTING.md` with the title, 13 tags, price and description to paste in.
-`listings.csv` has everything on one sheet.
+`listings.csv` has everything on one sheet. Titles, tags and attributes come from the November 2026 SEO pass
+(`seo.py`); `SEO_NOTES.md` explains them and has the seasonal calendar: which listings to push in which month.
 
 ## The 50 listings
 
