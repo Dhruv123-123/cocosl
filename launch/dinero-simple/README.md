@@ -40,9 +40,9 @@ Rebuild everything after editing the Spanish:
 python launch/dinero-simple/src/build_content.py
 python launch/dinero-simple/src/build_xlsx.py
 node launch/dinero-simple/src/render_pdf.js $PWD/launch/dinero-simple/product/el-presupuesto-de-20-minutos.html $PWD/launch/dinero-simple/product/El-Presupuesto-de-20-Minutos.pdf
-factory pack launch/dinero-simple/content.json --brand dinero-simple --out output/dinero-simple-pack
+factory handoff-pack launch/dinero-simple/content.json --brand dinero-simple --out output/dinero-simple-pack
 python launch/dinero-simple/src/build_month1.py
-factory pack launch/dinero-simple/content-month-1.json --brand dinero-simple --out output/dinero-simple-month-1
+factory handoff-pack launch/dinero-simple/content-month-1.json --brand dinero-simple --out output/dinero-simple-month-1
 python launch/dinero-simple/products/build.py --check
 python launch/dinero-simple/src/build_estafas.py
 python launch/dinero-simple/src/build_month2.py

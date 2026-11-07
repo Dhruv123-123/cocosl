@@ -278,23 +278,6 @@ def cmd_import(args):
         print(f"post #{pid} [{post['format']}/{post['status']}] {post['title']}")
 
 
-def cmd_review_language(args):
-    result = _factory(args).mark_language_reviewed(args.id, args.by)
-    print(f"Post #{args.id}: native-speaker review recorded ({args.by}); checks now {result['status']}")
-
-
-def cmd_pack(args):
-    from .launchpack import export_pack
-    f = _factory(args)
-    items = json.loads(Path(args.file).read_text())
-    if args.format:
-        items = [i for i in items if i.get("format") in args.format]
-    folders = export_pack(f.settings, f.brand(args.brand), items[: args.limit or None], Path(args.out),
-                          video=args.video, start=args.start)
-    for folder in folders:
-        print(folder)
-
-
 def cmd_niche(args):
     from .niche import score_niche
     for n in args.niches:
@@ -307,6 +290,23 @@ def cmd_new_brand(args):
     data, slug = generate_brand(f.llm, args.niche, args.audience or "", args.platform)
     path = write_brand(f.settings.brands_dir, data, args.slug or slug, overwrite=args.force)
     print(f"Wrote {path}. Edit it, then: factory ideas generate --brand {args.slug or slug}")
+
+
+def cmd_review_language(args):
+    result = _factory(args).mark_language_reviewed(args.id, args.by)
+    print(f"Post #{args.id}: native-speaker review recorded ({args.by}); checks now {result['status']}")
+
+
+def cmd_handoff_pack(args):
+    from .launchpack import export_pack
+    f = _factory(args)
+    items = json.loads(Path(args.file).read_text())
+    if args.format:
+        items = [i for i in items if i.get("format") in args.format]
+    folders = export_pack(f.settings, f.brand(args.brand), items[: args.limit or None], Path(args.out),
+                          video=args.video, start=args.start)
+    for folder in folders:
+        print(folder)
 
 
 def cmd_report(args):
@@ -476,21 +476,6 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--force", action="store_true", help="import even if a post with the same title exists")
     s.set_defaults(func=cmd_import)
 
-    s = sub.add_parser("review-language", help="record that a fluent speaker checked a non-English post")
-    s.add_argument("id", type=int)
-    s.add_argument("--by", required=True, help="reviewer's name")
-    s.set_defaults(func=cmd_review_language)
-
-    s = sub.add_parser("pack", help="export a content.json as a hand-off folder (slides, thumbnails, captions)")
-    s.add_argument("file")
-    s.add_argument("--brand", required=True)
-    s.add_argument("--out", required=True)
-    s.add_argument("--format", action="append", help="only these formats (repeatable)")
-    s.add_argument("--limit", type=int, default=0)
-    s.add_argument("--video", action="store_true", help="also render full videos (needs a voice for narration)")
-    s.add_argument("--start", type=int, default=1, help="number of the first folder (to add to an existing pack)")
-    s.set_defaults(func=cmd_pack)
-
     s = sub.add_parser("niche", help="score niche candidates (ad value, demand, risk, saturation)")
     s.add_argument("niches", nargs="+")
     s.add_argument("--offline", action="store_true")
@@ -503,6 +488,21 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--platform", action="append")
     s.add_argument("--force", action="store_true")
     s.set_defaults(func=cmd_new_brand)
+
+    s = sub.add_parser("review-language", help="record that a fluent speaker checked a non-English post")
+    s.add_argument("id", type=int)
+    s.add_argument("--by", required=True, help="reviewer's name")
+    s.set_defaults(func=cmd_review_language)
+
+    s = sub.add_parser("handoff-pack", help="export a content.json as a hand-off folder (slides, thumbnails, captions)")
+    s.add_argument("file")
+    s.add_argument("--brand", required=True)
+    s.add_argument("--out", required=True)
+    s.add_argument("--format", action="append", help="only these formats (repeatable)")
+    s.add_argument("--limit", type=int, default=0)
+    s.add_argument("--video", action="store_true", help="also render full videos (needs a voice for narration)")
+    s.add_argument("--start", type=int, default=1, help="number of the first folder (to add to an existing pack)")
+    s.set_defaults(func=cmd_handoff_pack)
 
     s = sub.add_parser("report", help="weekly business report: money, content, funnel, pipeline, next actions")
     s.add_argument("--save", action="store_true", help="write to output/reports/ (also writes the HTML pages)")

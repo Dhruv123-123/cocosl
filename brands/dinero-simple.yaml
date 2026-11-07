@@ -59,12 +59,13 @@ accounts:
   - {platform: tiktok, handle: "@dinerosimple", formats: [short, mid]}   # mid = TikTok-only 65-90 s cut
   # Reels go natively to the Facebook Page too (same `factory auth meta` login as Instagram)
   - {platform: facebook, handle: "Dinero Simple", formats: [short]}
-affiliates:
-  - name: Example HYSA (placeholder; pick one with Spanish-language support)
-    url: https://example.com/go/ahorro
-    slug: ahorro
-    keywords: [cuenta de ahorro, alto rendimiento, fondo de emergencia, hysa]
-    commission: "$50 per funded account"
+# No affiliate yet: add one only after approval, with Spanish-language support, in this shape:
+#   - name: <program name>
+#     url: <tracked link>
+#     slug: ahorro
+#     keywords: [cuenta de ahorro, alto rendimiento, fondo de emergencia, hysa]
+#     commission: "<what it pays>"
+affiliates: []
 products:
   - {name: "El Kit para Recortar Gastos", url: "https://example.gumroad.com/l/recortar-gastos", price: 5}
   - {name: "El Presupuesto de 20 Minutos (plantilla Notion + Sheets)", url: "https://example.gumroad.com/l/presupuesto", price: 12}

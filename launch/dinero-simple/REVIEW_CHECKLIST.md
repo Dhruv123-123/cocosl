@@ -7,7 +7,7 @@ Budget about 2 to 3 hours for everything, or 5 minutes per carousel/short plus 4
 ## How to sign off
 
 - Edit the text, not the images: fix the Spanish in `launch/dinero-simple/src/*.py`, then rebuild with
-  `python launch/dinero-simple/src/build_content.py` and `factory pack launch/dinero-simple/content.json --brand dinero-simple --out <folder>`.
+  `python launch/dinero-simple/src/build_content.py` and `factory handoff-pack launch/dinero-simple/content.json --brand dinero-simple --out <folder>`.
 - In the software, each post shows a `language_review` warning until you record the reviewer:
   `factory review-language <post id> --by "Reviewer name"`.
 - Tick the box in each item's `caption.txt` ("A fluent es-US speaker has read every word...").

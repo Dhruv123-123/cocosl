@@ -18,7 +18,7 @@ def test_each_brand_runs_daily_once_on_its_own_clock(factory):
     brands = factory.brands()
     assert len(brands) >= 2
     slugs = list(brands)[:2]
-    brands = {s: brands[s] for s in slugs}  # exactly two brands, whatever else is in brands/
+    brands = {s: brands[s] for s in slugs}  # the test is about two clocks; ignore any other brands
     brands[slugs[0]].cadence.timezone = "America/New_York"
     brands[slugs[1]].cadence.timezone = "Europe/London"
     brands[slugs[1]].cadence.daily_drafts = 1
