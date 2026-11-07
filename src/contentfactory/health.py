@@ -61,3 +61,19 @@ def system_status(factory: Factory, now: datetime | None = None) -> dict:
     return {"dry_run": factory.settings.dry_run, "worker": {"heartbeat": hb, "minutes_since": age},
             "publications": pubs, "next_up": next_up, "needs_check": needs_check, "failed_recent": failed_recent,
             "render_queue": rq, "alerts": alerts}
+
+
+def main() -> int:
+    """Container healthcheck: `python -m contentfactory.health worker` exits 1 if the worker heartbeat is stale."""
+    import sys
+    f = Factory.create()
+    if sys.argv[1:] == ["worker"]:
+        st = system_status(f)
+        mins = st["worker"]["minutes_since"]
+        return 0 if mins is not None and mins < 15 else 1
+    f.db.scalar("SELECT 1")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

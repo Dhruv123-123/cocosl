@@ -10,7 +10,7 @@ Jobs live in the `render_jobs` table. A failed render is retried with backoff
 crash is picked up again after RENDER_STALE_MINUTES (default 120).
 
 Voice jobs (reason "voice") wait in the queue until a real voice is
-configured (Kokoro, Piper, espeak, ElevenLabs or OpenAI), so you can queue
+configured (Kokoro, Piper, ElevenLabs or OpenAI; espeak only if FACTORY_TTS=espeak), so you can queue
 everything now and it voices itself the moment KOKORO_URL is set.
 
 Re-rendering changes what people will see and hear, so a re-rendered post
@@ -64,7 +64,8 @@ def voice_ready(factory: Factory, brand_slug: str) -> bool:
     if wanted == "silent":
         return False
     brand = factory.brand(brand_slug)
-    names = [n for n in tts.ORDER if n != "silent"] if wanted == "auto" else [wanted]
+    # In auto mode espeak doesn't count: re-voicing finished videos with a robotic voice isn't an upgrade.
+    names = [n for n in tts.ORDER if n not in ("silent", "espeak")] if wanted == "auto" else [wanted]
     return any(tts.PROVIDERS[n](factory.settings, brand).available() for n in names if n in tts.PROVIDERS)
 
 
