@@ -409,3 +409,32 @@ def test_breach_shorts_promote_the_checklist_on_free_saturdays():
         text = G.script_text(item["script"])
         for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
             assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+
+
+def test_how_the_scam_actually_worked_series():
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    root = CONTENT.parent
+    import sys
+    sys.path.insert(0, str(root / "how-it-worked"))
+    from series import OUTLINE, PARTS
+    assert [o["part"] for o in OUTLINE] == list(range(1, 9))
+    assert all(o["source"].startswith("https://") and ("justice.gov" in o["source"] or "ftc.gov" in o["source"]) for o in OUTLINE)
+    items = json.loads((root / "how-it-worked.json").read_text())
+    assert [i["part"] for i in items] == [1, 2, 3] and all(i["format"] == "long" for i in items)
+    taken = set()
+    for name in ("weeks-22-26.json", "weeks-27-30.json", "weeks-31-34.json"):
+        taken |= {i["post_on"][:10] for i in json.loads((root / name).read_text()) if i.get("post_on")}
+    for item, part in zip(items, PARTS):
+        assert item["post_on"][:10] not in taken
+        sc = Script.model_validate(item["script"])
+        assert 450 <= sum(len(s.narration.split()) for s in sc.segments) <= 900, sc.title
+        assert sc.title.startswith("How the scam actually worked:") and any(ch.isdigit() for ch in sc.hook)
+        assert "Chapters" in sc.description and sc.segments[-1].heading == "Three checks"
+        assert "Case board" in item["original_element"] and "no AI voice" in item["original_element"]
+        assert len(sc.sources) >= 2 and len(sc.claims_to_verify) >= 3
+        assert (root / "how-it-worked" / "out" / f"{part['slug']}.html").exists()
+        text = G.script_text(item["script"])
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+    assert "presumed innocent" in G.script_text(items[0]["script"])

@@ -1,0 +1,285 @@
+[
+ {
+  "format": "long",
+  "pillar": "protecting older parents and family",
+  "platforms": [
+   "youtube"
+  ],
+  "series": "How the scam actually worked",
+  "part": 1,
+  "post_on": "2027-07-11 10:00",
+  "look": "screen recording",
+  "original_element": "Case board c1 (how-it-worked/out/bail-money-calls.png), drawn by us from the DOJ release: the five steps of the call, timed to the narration. Dhruv on camera holding a printout of the press release, highlighting each line as he reads it. Dhruv on camera and in his own voice throughout; no AI voice.",
+  "idea_angle": "Part 1 of How the scam actually worked: the grandparent 'bail money' case announced by the US Attorney's Office in Vermont in March 2025, told from the public record. The charges are allegations, and the defendants are presumed innocent unless proven guilty.",
+  "script": {
+   "title": "How the scam actually worked: the 'bail money' calls from Montreal",
+   "hook": "25 people charged, more than 40 states, more than $21 million. This is how prosecutors say one grandparent scam network ran.",
+   "segments": [
+    {
+     "heading": "Cold open",
+     "narration": "Imagine the phone rings at your grandmother's house. Grandma, it's me. I was in a car accident, and I've been arrested. Please don't tell Mom. A few minutes later a lawyer calls with the amount for bail. A few hours later someone knocks on the door to collect it in cash. According to federal prosecutors, a version of that call was made again and again, for about three years, from call centers in and around Montreal. In March 2025, twenty-five Canadian nationals were charged. Prosecutors say the scheme took more than twenty-one million dollars from older Americans in Vermont and more than forty other states. These are charges, not convictions, so everyone named is presumed innocent. But the method is laid out in the public record, and it's worth knowing in detail.",
+     "on_screen_text": "Cold open",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1: the grandchild",
+     "narration": "Step one is the call. The caller claims to be a relative, usually a grandchild, who has been arrested after a car crash and needs bail. The details are vague on purpose. Scammers don't need to know your grandchild's name if the grandparent says it first: is that you, Michael? Yes, it's me. The panic does the rest.",
+     "on_screen_text": "Step 1: the grandchild",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2: the lawyer",
+     "narration": "Step two, the indictment alleges, is a second person posing as the grandchild's attorney. This matters. A second voice, with a calm professional tone and a specific dollar amount, makes the story feel checked. It's also what moves the conversation from feelings to logistics: how much, and how fast.",
+     "on_screen_text": "Step 2: the lawyer",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3: the gag order",
+     "narration": "Step three is secrecy. According to prosecutors, victims were often told there was a gag order, so they couldn't tell anyone about the arrest. That one line does two jobs. It stops the grandparent calling the parents, who would know in ten seconds that the grandchild is fine. And it explains away anything odd, because the courts said so.",
+     "on_screen_text": "Step 3: the gag order",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 4: the courier",
+     "narration": "Step four is the knock at the door. Victims allegedly handed cash to someone posing as a bail bondsman who came to their home. Notice why that's clever. A bank teller might ask questions about a large wire. Nobody asks questions about an envelope handed over at your own front door.",
+     "on_screen_text": "Step 4: the courier",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 5: the money",
+     "narration": "Step five is moving the money. The indictment alleges the cash was sent to Canada through cash deliveries and financial transactions, sometimes involving cryptocurrency, to hide where it came from and who had it. By the time a family finds out, the money has usually crossed a border.",
+     "on_screen_text": "Step 5: the money",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "How it came apart",
+     "narration": "So how did it come apart? On June 4, 2024, Canadian police executed search warrants at several call centers and, according to the release, found many of the defendants in the middle of placing calls to older victims in Virginia. The case was investigated by Homeland Security Investigations, IRS Criminal Investigation, and Canadian police, with help from many other agencies. Nine other people had already been charged in Vermont in connection with the same scheme.",
+     "on_screen_text": "How it came apart",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "Three checks",
+     "narration": "Here are the three checks that break every step. One: hang up and call the grandchild, or their parent, on a number you already have. That alone ends almost every version of this call. Two: a family safe word, agreed in person, that anyone calling in a panic has to say. Three: no court, lawyer or bail bondsman sends a stranger to your house to collect cash. If someone is coming to the door, call the police. And if it already happened, report it to the police and to the FBI's IC3, and tell the family. Shame keeps people quiet, and quiet is how the next call works.",
+     "on_screen_text": "Three checks",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "caption": "A call from a 'grandchild' in jail, a 'lawyer', a gag order and a 'bail bondsman' at the door. How federal prosecutors say a Montreal-based network ran, step by step, and the three checks that stop it. The people charged are presumed innocent unless proven guilty.",
+   "hashtags": [
+    "grandparentscam",
+    "howitworked",
+    "elderfraud",
+    "truecrime",
+    "scamalert",
+    "scamdecoded"
+   ],
+   "description": "Part 1 of How the scam actually worked: the grandparent 'bail money' case announced by the US Attorney's Office in Vermont in March 2025, told from the public record. The charges are allegations, and the defendants are presumed innocent unless proven guilty.\n\nChapters\n0:00 Cold open\n0:52 Step 1: the grandchild\n1:16 Step 2: the lawyer\n1:35 Step 3: the gag order\n1:59 Step 4: the courier\n2:19 Step 5: the money\n2:38 How it came apart\n3:08 Three checks\n\nSources\nhttps://www.justice.gov/usao-vt/pr/25-canadian-nationals-charged-vermont-connection-nationwide-multimillion-dollar\nhttps://www.justice.gov/usao-vt/case/united-states-v-gareth-west-et-al\nhttps://consumer.ftc.gov/articles/scammers-use-fake-emergencies-steal-your-money\n\nOther examples in this video are fictional.",
+   "thumbnail_text": "The 'bail money' calls",
+   "sources": [
+    "https://www.justice.gov/usao-vt/pr/25-canadian-nationals-charged-vermont-connection-nationwide-multimillion-dollar",
+    "https://www.justice.gov/usao-vt/case/united-states-v-gareth-west-et-al",
+    "https://consumer.ftc.gov/articles/scammers-use-fake-emergencies-steal-your-money"
+   ],
+   "claims_to_verify": [
+    "25 Canadian nationals were charged in an indictment unsealed March 4 2025 (DOJ, D. Vt.)",
+    "Prosecutors allege the scheme took more than $21 million from older Americans in Vermont and more than 40 other states (DOJ)",
+    "The scheme allegedly ran from summer 2021 to June 4 2024 from call centers in and around Montreal (DOJ)",
+    "Victims were allegedly told a 'gag order' barred them from telling anyone (DOJ)"
+   ],
+   "title_variants": [
+    "Inside a grandparent scam network: fake grandkids, fake lawyers, real cash",
+    "$21 million in 'bail money': how prosecutors say a grandparent scam ran"
+   ]
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "account security basics (passwords, 2FA, SIM swap)",
+  "platforms": [
+   "youtube"
+  ],
+  "series": "How the scam actually worked",
+  "part": 2,
+  "post_on": "2027-08-08 10:00",
+  "look": "screen recording",
+  "original_element": "Case board c2 (how-it-worked/out/pop-up-that-always-finds-viruses.png) drawn by us from the FTC release. Dhruv screen-records our own harmless, clearly labelled mock pop-up on a test laptop and shows how to close a frozen browser tab, then the FTC refund page for this case. Dhruv on camera and in his own voice throughout; no AI voice.",
+  "idea_angle": "Part 2 of How the scam actually worked: the FTC's March 2024 case against Restoro and Reimage, two Cyprus-based companies that agreed to pay $26 million, told from the FTC's public record.",
+  "script": {
+   "title": "How the scam actually worked: the pop-up that found viruses on every computer",
+   "hook": "1 pop-up, 1 'free scan', and the scan found problems no matter what. The FTC case behind it ended in a $26 million settlement.",
+   "segments": [
+    {
+     "heading": "Cold open",
+     "narration": "You're reading a news site, and a window pops up that looks like Windows itself. Your computer may be infected. Scan now to avoid more damage. You click, a scan runs, and it finds problems. Lots of them. According to the Federal Trade Commission, scans like this one found problems regardless of the actual condition of the computer. In March 2024, the two companies behind them, Restoro and Reimage, both based in Cyprus, agreed to pay twenty-six million dollars to settle the FTC's charges. Here's how the FTC says it worked, step by step.",
+     "on_screen_text": "Cold open",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1: the pop-up",
+     "narration": "Step one is the pop-up. The FTC says the companies used pop-ups that imitated Windows security warnings and urged people to run a scan to avoid more damage. The trick is borrowing trust. You already believe Windows warnings, so the fake one inherits that belief.",
+     "on_screen_text": "Step 1: the pop-up",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2: the scan",
+     "narration": "Step two is the scan. It looks technical, with progress bars and long lists of files, and it always finds something. The FTC alleged the scans flagged serious problems no matter what state the computer was really in. A test that can't come back clean isn't a test. It's a sales pitch with a progress bar.",
+     "on_screen_text": "Step 2: the scan",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3: cheap software",
+     "narration": "Step three is a small purchase. The software typically cost between twenty-seven and fifty-eight dollars, according to the FTC. That's low enough that people buy it just to make the warnings stop. But the low price is the hook, not the business.",
+     "on_screen_text": "Step 3: cheap software",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 4: the phone call",
+     "narration": "Step four is the call. After buying, people were told to call a number to activate the software. On the call, telemarketers accessed the computer and, the FTC says, pointed to routine errors, the ordinary messages every computer logs, as signs of viruses or malware. Then the pitch: the software alone can't fix this, you need a technician, and that costs hundreds of dollars more.",
+     "on_screen_text": "Step 4: the phone call",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "Why it works",
+     "narration": "Look at the shape of it. A scary warning, a test that always fails, a cheap first step, then a person on the phone with access to your screen. Each step is small. Nobody decides to pay hundreds for a fake repair. They decide to click a scan, then to spend thirty dollars, then to make one phone call.",
+     "on_screen_text": "Why it works",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "What happened next",
+     "narration": "The settlement requires the companies to pay twenty-six million dollars for refunds and bars them from misrepresenting security or performance problems and from deceptive telemarketing. In March 2025, the FTC announced it was sending more than twenty-five and a half million dollars to people affected. On screen is the FTC's refund page for this case.",
+     "on_screen_text": "What happened next",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "Three checks",
+     "narration": "Three checks stop every version of this. One: real security warnings don't ask you to call a number or buy something from a pop-up. Close the browser tab, and if it won't close, restart the computer. Two: never give remote access to someone you reached through a pop-up or an ad. Three: if you think something's wrong, use the security tools already built into your computer, or take it to a repair shop you chose yourself. Already paid? Call your card company and dispute the charge, and if someone had remote access, change your passwords from a different device.",
+     "on_screen_text": "Three checks",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "caption": "A fake Windows pop-up, a scan that flagged problems regardless of the computer's real condition, cheap software, then a call to 'activate' it and a technician for hundreds more. How the FTC's Restoro and Reimage case worked, and the three checks that stop it.",
+   "hashtags": [
+    "techsupportscam",
+    "howitworked",
+    "popup",
+    "ftc",
+    "scamalert",
+    "scamdecoded"
+   ],
+   "description": "Part 2 of How the scam actually worked: the FTC's March 2024 case against Restoro and Reimage, two Cyprus-based companies that agreed to pay $26 million, told from the FTC's public record.\n\nChapters\n0:00 Cold open\n0:37 Step 1: the pop-up\n0:55 Step 2: the scan\n1:18 Step 3: cheap software\n1:34 Step 4: the phone call\n2:00 Why it works\n2:24 What happened next\n2:46 Three checks\n\nSources\nhttps://www.ftc.gov/news-events/news/press-releases/2024/03/tech-support-firms-will-pay-26-million-settle-ftc-charges-they-deceived-consumers-buying-repair\nhttps://www.ftc.gov/enforcement/refunds/restoro-reimage-refunds\nhttps://consumer.ftc.gov/consumer-alerts/2024/03/what-know-you-click-free-computer-security-scan\n\nOther examples in this video are fictional.",
+   "thumbnail_text": "The scan always found something",
+   "sources": [
+    "https://www.ftc.gov/news-events/news/press-releases/2024/03/tech-support-firms-will-pay-26-million-settle-ftc-charges-they-deceived-consumers-buying-repair",
+    "https://www.ftc.gov/enforcement/refunds/restoro-reimage-refunds",
+    "https://consumer.ftc.gov/consumer-alerts/2024/03/what-know-you-click-free-computer-security-scan"
+   ],
+   "claims_to_verify": [
+    "Restoro and Reimage agreed to pay $26 million to settle FTC charges (FTC, Mar 14 2024)",
+    "The FTC alleged fake Windows pop-ups led to scans that flagged problems regardless of the computer's actual condition (FTC)",
+    "The software typically cost $27 to $58, and telemarketers then pitched technician services costing hundreds more (FTC)",
+    "The FTC later sent refunds to affected consumers (FTC, Mar 2025)"
+   ],
+   "title_variants": [
+    "The $26 million 'free scan': a tech support case, step by step",
+    "Why the scan always found something: inside an FTC tech support case"
+   ]
+  }
+ },
+ {
+  "format": "long",
+  "pillar": "text and email scams, decoded",
+  "platforms": [
+   "youtube"
+  ],
+  "series": "How the scam actually worked",
+  "part": 3,
+  "post_on": "2027-09-12 10:00",
+  "look": "screen recording",
+  "original_element": "Case board c3 (how-it-worked/out/fake-invoices-120-million.png) drawn by us: the money's path from the victims' payments through banks in six countries, from the DOJ release. Dhruv on camera with a printed fake invoice he made (clearly marked SAMPLE) and circles the one line that changed. Dhruv on camera and in his own voice throughout; no AI voice.",
+  "idea_angle": "Part 3 of How the scam actually worked: the business email compromise case against Evaldas Rimasauskas, sentenced in the Southern District of New York in December 2019, told from the public record.",
+  "script": {
+   "title": "How the scam actually worked: the fake invoices that took over $120 million from two tech giants",
+   "hook": "2 of the biggest tech companies in the world, 1 fake supplier, and over $120 million wired away by email.",
+   "segments": [
+    {
+     "heading": "Cold open",
+     "narration": "Two of the biggest technology companies in the world. Prosecutors described them only as a multinational technology company and a multinational online social media company. Both were sending millions of dollars to a hardware supplier they'd worked with for years. Between 2013 and 2015, more than one hundred twenty million dollars of those payments went somewhere else. The man behind it, Evaldas Rimasauskas, pleaded guilty to wire fraud and in December 2019 was sentenced to five years in federal prison. Here's how the Justice Department says he did it.",
+     "on_screen_text": "Cold open",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1: borrow a name",
+     "narration": "Step one was a name. He registered a company in Latvia with the same name as a real computer hardware maker based in Asia, one the victims really did business with. Then he opened bank accounts in Latvia and Cyprus in that name. So when a payment arrived, the name on the account matched the name on the invoice.",
+     "on_screen_text": "Step 1: borrow a name",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2: the emails",
+     "narration": "Step two was email. He sent messages to employees and agents at the two companies, made to look like they came from the real supplier's staff, from accounts designed to look genuine. The real supplier never sent them.",
+     "on_screen_text": "Step 2: the emails",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3: the new account",
+     "narration": "Step three was the ask, and it's always the same ask: please send what you owe to these accounts. Nothing else on the invoice had to change. Same supplier name, same kind of amounts, same kind of request the finance teams handled every week. One line changed: where the money goes. And according to prosecutors, the companies paid.",
+     "on_screen_text": "Step 3: the new account",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 4: move it fast",
+     "narration": "Step four was speed. Once money landed, he quickly moved it on to accounts in Latvia, Cyprus, Slovakia, Lithuania, Hungary and Hong Kong. When banks asked questions, prosecutors say he gave them forged invoices, contracts and letters that looked signed by executives at the victim companies, with fake corporate stamps.",
+     "on_screen_text": "Step 4: move it fast",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "How it ended",
+     "narration": "Lithuanian authorities arrested him in March 2017, and he was extradited to New York that August. Along with the prison sentence, he was ordered to forfeit about forty-nine point seven million dollars and pay about twenty-six point five million in restitution.",
+     "on_screen_text": "How it ended",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "Why it matters to you",
+     "narration": "You might think this only happens to giant companies. It's the opposite. This is the same scam that hits a landlord, a small contractor, or someone buying a house, when an email that looks like the title company says the wiring instructions have changed. The FBI calls it business email compromise, and it reports billions in losses every year. If it worked on two tech giants with whole finance departments, it can work on anyone.",
+     "on_screen_text": "Why it matters to you",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    },
+    {
+     "heading": "Three checks",
+     "narration": "Three checks stop it at any size. One: any change to where money goes gets confirmed by a phone call, to a number you already had, never the one in the email. Two: two people sign off on new or changed bank details. Three: slow down on urgency. A real supplier can wait a day for a call back. And if money already went out, call your bank right away and ask them to recall the wire, then report it at the FBI's IC3. Speed matters more than anything else in getting it back.",
+     "on_screen_text": "Three checks",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "caption": "A company registered with a real supplier's name, lookalike emails, and invoices that sent payments to the wrong bank. How a Lithuanian man took over $120 million from two US tech companies, according to federal prosecutors, and the three checks that stop it at any size of business.",
+   "hashtags": [
+    "businessemailcompromise",
+    "howitworked",
+    "phishing",
+    "smallbusiness",
+    "truecrime",
+    "scamdecoded"
+   ],
+   "description": "Part 3 of How the scam actually worked: the business email compromise case against Evaldas Rimasauskas, sentenced in the Southern District of New York in December 2019, told from the public record.\n\nChapters\n0:00 Cold open\n0:35 Step 1: borrow a name\n0:59 Step 2: the emails\n1:14 Step 3: the new account\n1:37 Step 4: move it fast\n1:57 How it ended\n2:14 Why it matters to you\n2:44 Three checks\n\nSources\nhttps://www.justice.gov/usao-sdny/pr/lithuanian-man-sentenced-5-years-prison-theft-over-120-million-fraudulent-business\nhttps://www.justice.gov/usao-sdny/pr/lithuanian-man-pleads-guilty-wire-fraud-theft-over-100-million-fraudulent-business\nhttps://www.ic3.gov/\n\nOther examples in this video are fictional.",
+   "thumbnail_text": "$120M by fake invoice",
+   "sources": [
+    "https://www.justice.gov/usao-sdny/pr/lithuanian-man-sentenced-5-years-prison-theft-over-120-million-fraudulent-business",
+    "https://www.justice.gov/usao-sdny/pr/lithuanian-man-pleads-guilty-wire-fraud-theft-over-100-million-fraudulent-business",
+    "https://www.ic3.gov/"
+   ],
+   "claims_to_verify": [
+    "Evaldas Rimasauskas was sentenced to 5 years in prison for a scheme that took over $120 million from two US-based internet companies (DOJ SDNY, Dec 19 2019)",
+    "He registered a Latvian company with the same name as an Asian computer hardware maker and sent emails posing as its staff (DOJ)",
+    "The funds were moved through accounts in Latvia, Cyprus, Slovakia, Lithuania, Hungary and Hong Kong (DOJ)",
+    "He was ordered to forfeit $49,738,559.41 and pay $26,479,079.24 in restitution (DOJ)",
+    "The FBI's IC3 reports business email compromise losses in the billions of dollars each year (check the latest IC3 annual report)"
+   ],
+   "title_variants": [
+    "$120 million by email: the business email compromise case, step by step",
+    "Two of the biggest tech companies paid a fake supplier. Here's how."
+   ]
+  }
+ }
+]
