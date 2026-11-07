@@ -296,6 +296,9 @@ def checker_box() -> str:
             f'<strong>{esc(CFG["scam_checker"]["label"])}</strong><span aria-hidden="true">→</span></a>')
 
 
+OG_IMAGES: dict[str, str] = {}  # page path -> its own share image (default: the lead magnet cover)
+
+
 def layout(*, title: str, description: str, path: str, body: str, noindex: bool = False) -> str:
     socials = " · ".join(f'<a href="{esc(v)}" rel="me">{esc(k)}</a>' for k, v in CFG["socials"].items())
     robots = '<meta name="robots" content="noindex">' if noindex else ""
@@ -311,7 +314,7 @@ def layout(*, title: str, description: str, path: str, body: str, noindex: bool 
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:url" content="{absu(path)}">
-<meta property="og:image" content="{absu('/img/lead-magnet-cover.png')}">
+<meta property="og:image" content="{absu(OG_IMAGES.get(path, '/img/lead-magnet-cover.png'))}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="{u('/style.css')}">
 {CFG.get('analytics_snippet', '')}
@@ -322,7 +325,7 @@ def layout(*, title: str, description: str, path: str, body: str, noindex: bool 
 <main>{body}</main>
 <footer><div class="wrap">
 <p>{socials}</p>
-<p><a href="{u('/parents/')}">Protect Your Parents</a> · <a href="{u('/teams/')}">Training for teams</a> · <a href="{u('/newsletter/')}">Weekly Scam Alert</a> · <a href="{u('/compare/')}">Tools compared</a> · <a href="{u('/scams/')}">Scam explainers</a> · <a href="{u('/breached/')}">Data breach checklist</a> · <a href="{u('/how-we-make-money/')}">How we make money</a></p>
+<p><a href="{u('/parents/')}">Protect Your Parents</a> · <a href="{u('/teams/')}">Training for teams</a> · <a href="{u('/newsletter/')}">Weekly Scam Alert</a> · <a href="{u('/alerts/')}">Scam alerts</a> · <a href="{u('/quiz/')}">Could you spot it? Quiz</a> · <a href="{u('/compare/')}">Tools compared</a> · <a href="{u('/scams/')}">Scam explainers</a> · <a href="{u('/breached/')}">Data breach checklist</a> · <a href="{u('/how-we-make-money/')}">How we make money</a></p>
 <p><a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/privacy/')}">Privacy</a> · {esc(CFG['contact_email'])}</p>
 <p class="small">{esc(CFG['disclaimer'])} {esc(CFG['ai_disclosure'])}</p>
 </div></footer>
@@ -477,7 +480,7 @@ def checker_cta() -> str:
 
 # ---------------------------------------------------------------- shortcodes
 SHORTCODES = {"checker_box", "checker_cta", "checker_tool", "scam_index", "download", "buy", "signup", "aff",
-              "money_products", "money_affiliates"}
+              "money_products", "money_affiliates", "quiz_tool"}
 
 
 def articles() -> list[dict]:
@@ -513,6 +516,56 @@ def checker_tool() -> str:
 <script src="{u('/checker.js')}" defer></script>"""
 
 
+def quiz_data() -> dict:
+    return json.loads((CONTENT / "quiz.json").read_text())
+
+
+def quiz_tool() -> str:
+    """The 'Could you spot it?' quiz: questions in content/quiz.json, logic in static/quiz.js. No network, nothing stored."""
+    q = quiz_data()
+    data = json.dumps({"questions": q["questions"], "tiers": q["tiers"], "site": absu("/").rstrip("/")}).replace("</", "<\\/")
+    n = len(q["questions"])
+    sources = "".join(f'<li><a href="{esc(h)}">{esc(t)}</a></li>' for t, h in q["sources"])
+    answers = "".join(f'<li><strong>{esc(x["answer"].capitalize())}.</strong> {esc(x["channel"])} from {esc(x["sender"])}: '
+                      f'{esc(x["tell"])}.</li>' for x in q["questions"])
+    return f"""<div id="sd-quiz" class="quiz-tool" tabindex="-1" aria-live="polite">
+  <p class="quiz-progress">{n} questions · about 3 minutes</p>
+  <p>{esc(q["intro"])}</p>
+  <p><button type="button" id="sd-quiz-start">Start the quiz</button></p>
+  <p class="form-note">Runs on your device. Your answers aren't sent anywhere or saved.</p>
+</div>
+<noscript><p>The quiz needs JavaScript. The answers are listed below.</p></noscript>
+<div id="sd-quiz-after" hidden>
+<h2>Get one scam a week, explained</h2>
+<p>Every Thursday: one real scam, its tells and the fix, in a 3-minute read.</p>
+{email_form("quiz", "Send me the weekly scam")}
+<p>Want the people you love to score 12/12? The <a href="{u('/kit/')}">Family kit</a> walks through these with them.</p>
+</div>
+<details class="quiz-answers"><summary>See all {n} answers</summary><ol>{answers}</ol></details>
+<h2>Sources</h2><ul class="small">{sources}</ul>
+<script>window.SD_QUIZ = {data};</script>
+<script src="{u('/quiz.js')}" defer></script>"""
+
+
+def quiz_pages() -> list[tuple]:
+    """/quiz/score/N/: what a shared result link opens. Each has its own share image (static/img/quiz/score-N.png,
+    made by make_quiz_cards.py) so the preview shows the score. Not indexed."""
+    q, pages = quiz_data(), []
+    n = len(q["questions"])
+    for s in range(n + 1):
+        tier = next(t for t in q["tiers"] if s >= t["min"])
+        path = f"/quiz/score/{s}/"
+        OG_IMAGES[path] = f"/img/quiz/score-{s}.png"
+        pages.append((path, f"I got {s}/{n} on Could you spot it? · {CFG['name']}",
+                      f"{s}/{n}: {tier['name']}. 12 messages, scam or legit? Take the free quiz and see if you can beat it.",
+                      f'<section class="wrap narrow"><p class="kicker">Could you spot it?</p><h1>Someone scored {s}/{n}: '
+                      f'{esc(tier["name"])}</h1><img class="quiz-card" src="{u(OG_IMAGES[path])}" alt="Result card: {s} out of {n}" '
+                      f'width="1200" height="630"><p class="lede">12 real-looking messages. Scam or legit? It takes about 3 minutes, '
+                      f'and you see the tell after every answer.</p><p><a class="button" href="{u("/quiz/")}">Take the quiz</a></p></section>',
+                      True))
+    return pages
+
+
 def money_products() -> str:
     """Every product we sell, with its price, straight from site.json (for /how-we-make-money/)."""
     rows = "".join(f'<li><a href="{u("/" + p["slug"] + "/")}">{esc(p["name"])}</a>, {esc(price(p))}</li>'
@@ -537,6 +590,8 @@ def shortcode(name: str, args: list[str], ctx: dict) -> str | None:
         return scam_index()
     if name == "money_products":
         return money_products()
+    if name == "quiz_tool":
+        return quiz_tool()
     if name == "money_affiliates":
         return money_affiliates()
     if name == "checker_cta":
@@ -627,6 +682,121 @@ def content_pages() -> list[tuple]:
     return pages
 
 
+# --------------------------------------------------------------- scam of the week alerts
+SEVERITY = {"watch": ("Watch for this", "#2ec4b6", "#0d1b2a"),
+            "warning": ("Scam warning", "#ff9f1c", "#0d1b2a"),
+            "urgent": ("Urgent scam alert", "#d7263d", "#ffffff")}
+ALERT_FIELDS = ("alert_date", "severity", "scam", "channel", "subject", "preheader", "example", "sender",
+                "tell_1", "tell_2", "tell_3", "do_1", "do_2", "do_3", "if_already", "source_title", "source_url")
+
+
+def alert_items() -> list[dict]:
+    """content/alerts/NN-slug.md: one 'scam of the week' alert, all fields in the front matter.
+    _TEMPLATE.md has no alert_date and isn't published. Missing fields fail the build loudly."""
+    out = []
+    for a in load_dir("alerts"):
+        if not a.get("alert_date"):
+            continue
+        missing = [f for f in ALERT_FIELDS if not str(a.get(f, "")).strip()]
+        if missing:
+            raise SystemExit(f"alert {a['slug']}: missing {', '.join(missing)}")
+        todo = [f for f in (*ALERT_FIELDS, "explainer", "body_md") if str(a.get(f, "")).lstrip().startswith("[")]
+        if todo or a["source_url"].strip() == "https://":
+            raise SystemExit(f"alert {a['slug']}: still has template text in {', '.join(todo) or 'source_url'}")
+        if a["severity"] not in SEVERITY:
+            raise SystemExit(f"alert {a['slug']}: severity must be one of {', '.join(SEVERITY)}")
+        out.append(a)
+    return sorted(out, key=lambda a: str(a["alert_date"]))
+
+
+def alert_links(a: dict, link) -> list[tuple[str, str]]:
+    links = [("Paste a message into our free scam checker", link("/checker/"))]
+    if a.get("explainer") and a["explainer"] in article_map():
+        links.insert(0, (f"How it works: {article_map()[a['explainer']]['title']}", link(f"/scams/{a['explainer']}/")))
+    return links
+
+
+def alert_email_html(a: dict) -> str:
+    label, bg, fg = SEVERITY[a["severity"]]
+    tells = "".join(f'<li style="margin:0 0 8px">{esc(a[f"tell_{n}"])}</li>' for n in (1, 2, 3))
+    dos = "".join(f'<li style="margin:0 0 8px">{esc(a[f"do_{n}"])}</li>' for n in (1, 2, 3))
+    extra = markdown(expand(a["body_md"])) if a["body_md"].strip() else ""
+    links = "".join(f'<p style="margin:0 0 8px"><a style="color:#178a80;font-weight:600" href="{esc(h)}">{esc(t)}</a></p>'
+                    for t, h in alert_links(a, absu))
+    return f"""<!doctype html><html><head><meta charset="utf-8"><title>{esc(a['subject'])}</title></head>
+<body style="margin:0;background:#f4f1ea">
+<span style="display:none;max-height:0;overflow:hidden">{esc(a['preheader'])}</span>
+<div style="max-width:560px;margin:0 auto;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:1.6;color:#0d1b2a;background:#ffffff">
+<div style="background:{bg};color:{fg};padding:14px 20px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px">{esc(label)} · Scam of the week · {esc(str(a['alert_date']))}</div>
+<div style="padding:20px">
+<h1 style="font-size:24px;line-height:1.25;margin:0 0 12px">{esc(a['scam'])}</h1>
+<p style="margin:0 0 8px;font-size:13px;color:#4a5868">Arrives by: {esc(a['channel'])} · From: {esc(a['sender'])} (fictional example)</p>
+<div style="background:#eef2f4;border-radius:16px;padding:14px 16px;margin:0 0 20px;font-style:italic">{esc(a['example'])}</div>
+<h2 style="font-size:18px;margin:0 0 8px">3 tells</h2><ol style="margin:0 0 16px;padding-left:22px">{tells}</ol>
+<h2 style="font-size:18px;margin:0 0 8px">Do this</h2><ol style="margin:0 0 16px;padding-left:22px">{dos}</ol>
+<p style="margin:0 0 16px;background:#fff4e0;border-left:4px solid #ff9f1c;padding:10px 12px"><strong>Already clicked, paid or shared?</strong> {esc(a['if_already'])}</p>
+{extra}
+{links}
+<p style="margin:16px 0 0;font-size:13px;color:#4a5868">Source: <a style="color:#178a80" href="{esc(a['source_url'])}">{esc(a['source_title'])}</a>. Forward this to someone who'd get this message.</p>
+<p style="margin:16px 0 0;font-size:12px;color:#4a5868">{esc(CFG['disclaimer'])}</p>
+</div></div></body></html>
+"""
+
+
+def alert_email_text(a: dict) -> str:
+    label = SEVERITY[a["severity"]][0]
+    lines = [f"{label.upper()} · SCAM OF THE WEEK · {a['alert_date']}", "", a["scam"], "",
+             f"Arrives by: {a['channel']} · From: {a['sender']} (fictional example)", f"\"{a['example']}\"", "",
+             "3 TELLS", *[f"{n}. {a[f'tell_{n}']}" for n in (1, 2, 3)], "",
+             "DO THIS", *[f"{n}. {a[f'do_{n}']}" for n in (1, 2, 3)], "",
+             f"Already clicked, paid or shared? {a['if_already']}", ""]
+    if a["body_md"].strip():
+        lines += [email_text(markdown(expand(a["body_md"]))).rsplit("\n\n", 1)[0], ""]
+    lines += [f"{t}: {h}" for t, h in alert_links(a, absu)]
+    lines += ["", f"Source: {a['source_title']} ({a['source_url']})", "Forward this to someone who'd get this message.",
+              "", CFG["disclaimer"]]
+    return "\n".join(lines) + "\n"
+
+
+def alerts() -> list[tuple]:
+    """Scam of the week alerts: fill the fields in content/alerts/_TEMPLATE.md, get a ready-to-send email (HTML +
+    text) and a public page. Separate from the Thursday newsletter: send one when a scam spikes."""
+    items, pages = [], []
+    for a in alert_items():
+        CFG["_absolute_links"] = True
+        try:
+            html_doc, text = alert_email_html(a), alert_email_text(a)
+        finally:
+            CFG["_absolute_links"] = False
+        write(f"/alerts/{a['slug']}/email.html", html_doc)
+        (OUT / "alerts" / a["slug"] / "email.txt").write_text(text)
+        items.append({"slug": a["slug"], "alert_date": str(a["alert_date"]), "severity": a["severity"],
+                      "subject": a["subject"], "preheader": a["preheader"], "html": html_doc, "text": text})
+        label, bg, fg = SEVERITY[a["severity"]]
+        tells = "".join(f"<li>{esc(a[f'tell_{n}'])}</li>" for n in (1, 2, 3))
+        dos = "".join(f"<li>{esc(a[f'do_{n}'])}</li>" for n in (1, 2, 3))
+        links = "".join(f'<li><a href="{esc(h)}">{esc(t)}</a></li>' for t, h in alert_links(a, u))
+        extra = markdown(expand(a["body_md"])) if a["body_md"].strip() else ""
+        pages.append((f"/alerts/{a['slug']}/", f"{a['scam']} · {CFG['name']}", a["preheader"],
+                      f'<section class="wrap narrow"><p class="alert-badge" style="background:{bg};color:{fg}">{esc(label)} · '
+                      f'{esc(str(a["alert_date"]))}</p><h1>{esc(a["scam"])}</h1>'
+                      f'<p class="small">Arrives by: {esc(a["channel"])} · From: {esc(a["sender"])} (fictional example)</p>'
+                      f'<blockquote class="alert-example">{esc(a["example"])}</blockquote>'
+                      f'<h2>3 tells</h2><ol>{tells}</ol><h2>Do this</h2><ol>{dos}</ol>'
+                      f'<p class="alert-already"><strong>Already clicked, paid or shared?</strong> {esc(a["if_already"])}</p>'
+                      f'{extra}<ul>{links}</ul><p class="small">Source: <a href="{esc(a["source_url"])}">{esc(a["source_title"])}</a></p>'
+                      f'<h2>Get alerts like this</h2>{email_form("alert-" + a["slug"], "Send me scam alerts")}</section>', False))
+    (OUT / "alerts").mkdir(parents=True, exist_ok=True)
+    (OUT / "alerts" / "alerts.json").write_text(json.dumps(items, indent=2))
+    rows = "".join(f'<li><a href="{u("/alerts/" + x["slug"] + "/")}">{esc(x["subject"])}</a> '
+                   f'<span class="small">{esc(x["alert_date"])}</span></li>' for x in reversed(items))
+    pages.insert(0, ("/alerts/", f"Scam alerts · {CFG['name']}", "Short alerts when a scam is spiking: the message, 3 tells, and what to do.",
+                     f'<section class="wrap narrow"><h1>Scam alerts</h1><p class="lede">When a scam spikes, we send a short alert: '
+                     f'the message, 3 tells, and what to do. The full weekly read is the <a href="{u("/newsletter/")}">Thursday newsletter</a>.</p>'
+                     f'{email_form("alerts-archive", "Send me scam alerts")}<h2>Recent alerts</h2><ul>{rows}</ul></section>', False))
+    return pages
+
+
 def build() -> list[str]:
     global CFG
     CFG = load_config()
@@ -635,6 +805,8 @@ def build() -> list[str]:
     shutil.copytree(STATIC, OUT)
     pages = content_pages()
     pages += newsletter()
+    pages += alerts()
+    pages += quiz_pages()
     for path, title, desc, body, noindex in pages:
         write(path, layout(title=title, description=desc, path=path, body=body, noindex=noindex))
     write("/404.html", layout(title="Not found", description="Page not found.", path="/404.html", noindex=True,

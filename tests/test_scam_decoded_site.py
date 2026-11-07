@@ -250,3 +250,65 @@ def test_breach_follow_up_explainer_and_checker_rule():
           "Pay a $25 processing fee to claim now.');console.log(r.level, r.articles.join(','))")
     out = subprocess.run(["node", "-e", js, str(ROOT / "static" / "checker.js")], capture_output=True, text=True).stdout
     assert out.startswith("high") and "breach-follow-ups" in out
+
+
+def test_scam_of_the_week_alert_templates(tmp_path, monkeypatch):
+    import sys
+    mod, out = build(tmp_path, monkeypatch, SITE_URL="https://example.org")
+    data = json.loads((out / "alerts" / "alerts.json").read_text())
+    assert len(data) >= 3 and {a["severity"] for a in data} == set(mod.SEVERITY)
+    for a in data:
+        assert "{{" not in a["html"] and "[" not in a["subject"] and len(a["subject"]) <= 60
+        hrefs = re.findall(r'href="([^"]+)"', a["html"])
+        assert hrefs and all(h.startswith("https://") for h in hrefs), hrefs
+        assert "https://example.org/checker/" in a["text"] and "fictional example" in a["text"]
+        assert (out / "alerts" / a["slug"] / "index.html").exists()
+        assert (out / "alerts" / a["slug"] / "email.txt").read_text() == a["text"]
+    assert "Recent alerts" in (out / "alerts" / "index.html").read_text()
+    # new_alert.py scaffolds the next numbered file; an unfilled one fails the build loudly
+    spec = importlib.util.spec_from_file_location("new_alert", ROOT / "new_alert.py")
+    na = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(na)
+    tmp_alerts = tmp_path / "alerts"
+    tmp_alerts.mkdir()
+    (tmp_alerts / "_TEMPLATE.md").write_text((ROOT / "content" / "alerts" / "_TEMPLATE.md").read_text())
+    (tmp_alerts / "04-x.md").write_text("---\n---\n")
+    monkeypatch.setattr(na, "ALERTS", tmp_alerts)
+    monkeypatch.setattr(sys, "argv", ["new_alert.py", "Fake jury duty calls", "--date", "2027-02-01", "--severity", "urgent"])
+    dest = na.main()
+    assert dest.name == "05-fake-jury-duty-calls.md"
+    text = dest.read_text()
+    assert "alert_date: 2027-02-01" in text and "severity: urgent" in text and "scam: Fake jury duty calls" in text
+    import pytest
+    content = tmp_path / "content"
+    content.mkdir()
+    (content / "alerts").symlink_to(tmp_alerts)
+    monkeypatch.setattr(mod, "CONTENT", content)
+    with pytest.raises(SystemExit, match="template text"):
+        mod.alert_items()
+
+
+def test_could_you_spot_it_quiz_and_share_cards(tmp_path, monkeypatch):
+    import subprocess
+    mod, out = build(tmp_path, monkeypatch, SITE_URL="https://example.org")
+    q = json.loads((ROOT / "content" / "quiz.json").read_text())
+    qs = q["questions"]
+    assert len(qs) == 12 and {x["answer"] for x in qs} == {"scam", "legit"}
+    assert sum(x["answer"] == "legit" for x in qs) >= 3
+    for x in qs:
+        assert x["tell"] and x["why"] and x["message"] and "guarantee" not in json.dumps(x).lower()
+    page = (out / "quiz" / "index.html").read_text()
+    assert "window.SD_QUIZ" in page and "/quiz.js" in page and "sd-quiz-after" in page
+    assert '"site": "https://example.org"' in page
+    for s in range(13):
+        html = (out / "quiz" / "score" / str(s) / "index.html").read_text()
+        assert f"https://example.org/img/quiz/score-{s}.png" in html and 'name="robots" content="noindex"' in html
+        assert (ROOT / "static" / "img" / "quiz" / f"score-{s}.png").exists()
+    assert "/quiz/score/" not in (out / "sitemap.xml").read_text() and "/quiz/" in (out / "sitemap.xml").read_text()
+    js = ("const Q=require(process.argv[1]);const t=" + json.dumps(q["tiers"]) + ";"
+          "console.log([12,11,10,9,7,6,0].map(s=>Q.tierFor(s,t).name).join('|'), Q.scoreUrl('https://x.org/',9))")
+    res = subprocess.run(["node", "-e", js, str(ROOT / "static" / "quiz.js")], capture_output=True, text=True).stdout.strip()
+    assert res == ("Scam-proof|Sharp eye|Sharp eye|Getting there|Getting there|Prime target|Prime target "
+                   "https://x.org/quiz/score/9/")
+    js_src = (ROOT / "static" / "quiz.js").read_text()
+    assert "fetch(" not in js_src and "localStorage" not in js_src and "XMLHttpRequest" not in js_src

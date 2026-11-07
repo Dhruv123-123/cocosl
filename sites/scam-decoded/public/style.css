@@ -69,3 +69,29 @@ footer .small{color:#9aa8b6}
 .breach-steps input{margin-top:6px;width:18px;height:18px;flex:0 0 18px}
 .breach-steps>li:has(input:checked){opacity:.6}
 .breach-steps>li p,.breach-steps>li ul{margin:8px 0 0 36px}
+.alert-badge{display:inline-block;font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px;padding:6px 12px;border-radius:999px;margin:0 0 8px}
+.alert-example{background:#eef2f4;border-radius:16px;padding:14px 18px;margin:0 0 20px;font-style:italic;border:0}
+.alert-already{background:#fff4e0;border-left:4px solid var(--amber,#ff9f1c);padding:10px 14px;border-radius:4px}
+.quiz-tool{background:var(--paper);border:2px solid var(--ink);border-radius:14px;padding:20px;margin:16px 0}
+.quiz-tool:focus{outline:none}
+.quiz-progress{font-size:14px;font-weight:700;color:var(--muted);margin:0 0 8px;text-transform:uppercase;letter-spacing:.06em}
+.quiz-bar{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin:0 0 16px}
+.quiz-bar span{display:block;height:100%;background:var(--teal)}
+.quiz-message{background:#eef2f4;border-radius:16px;padding:14px 16px;margin:0 0 12px}
+.quiz-meta{font-size:14px;color:var(--muted);margin:0 0 6px}
+.quiz-text{margin:0;font-size:18px;overflow-wrap:anywhere}
+.quiz-ask{font-weight:700;margin:12px 0 8px}
+.quiz-row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 12px}
+.quiz-pick{flex:1 1 140px}
+.quiz-pick:disabled{opacity:.55;cursor:default}
+.quiz-pick.is-answer{opacity:1;background:var(--teal)}
+.quiz-feedback.is-right,.quiz-feedback.is-wrong{border-left:5px solid var(--teal);background:#e6f6f4;padding:12px 14px;border-radius:8px}
+.quiz-feedback.is-wrong{border-color:#d7263d;background:#fbe9eb}
+.quiz-verdict{font-weight:800;font-size:19px;margin:0 0 4px}
+.quiz-tell{font-weight:700;margin:0 0 6px}
+.quiz-next{margin-top:4px}
+.quiz-tool .ghost,.quiz-share.ghost{background:transparent}
+.quiz-score{margin-top:0}
+.quiz-card{display:block;width:100%;max-width:540px;height:auto;border-radius:12px;margin:12px 0}
+.quiz-answers{margin:24px 0}
+.quiz-answers summary{cursor:pointer;font-weight:700}
