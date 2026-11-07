@@ -199,6 +199,47 @@ def check_cadence(db: DB, brand: BrandProfile, platform: str, when: datetime) ->
     return Check("cadence", "ok", f"{n}/{cap} posts on {platform} that day")
 
 
+def _shape(text: str, words: int = 3) -> str:
+    """'7 Ways to Save $500' -> '# ways to': the template, not the topic."""
+    toks = re.sub(r"\d[\d,.$%]*", "#", (text or "").lower()).split()
+    return " ".join(toks[:words])
+
+
+def structure(post: dict) -> dict:
+    script = post.get("script") or {}
+    segs = script.get("segments") or []
+    look = (post.get("assets") or {}).get("look") or {}
+    meta = post.get("meta") or {}
+    return {"format": post.get("format", ""), "beats": min(len(segs), 12) // 2,
+            "title": _shape(script.get("title") or post.get("title", "")), "hook": _shape(script.get("hook", ""), 4),
+            "hook_template": str(meta.get("hook_template") or meta.get("hook_id") or ""),
+            "look": "|".join(str(look.get(k, "")) for k in sorted(look))}
+
+
+def check_sameness(db: DB, brand: str, post: dict, window: int = 20, min_history: int = 6) -> Check:
+    """Channel-level sameness: does this post share its *structure* (format, beat count, title and hook
+    pattern, hook template, visual look) with more than half of the brand's recent posts? The text
+    originality check can't see this: two scripts with no shared sentences can still be the same video."""
+    rows = db.query("SELECT id, format, title, script, assets, meta FROM posts WHERE brand = ? AND id != ? "
+                    "AND status != 'rejected' AND format = ? ORDER BY id DESC LIMIT ?",
+                    [brand, post.get("id") or -1, post.get("format", ""), window])
+    if len(rows) < min_history:
+        return Check("sameness", "ok", f"only {len(rows)} earlier {post.get('format')} post(s) to compare")
+    mine = structure(post)
+    keys = [k for k in mine if k != "format" and mine[k] not in ("", "|")]
+    alike = 0
+    for r in rows:
+        other = structure(r)
+        if sum(mine[k] == other[k] for k in keys) >= max(2, len(keys) - 2):
+            alike += 1
+    if alike * 2 > len(rows):
+        same = [k for k in keys if sum(mine[k] == structure(r)[k] for r in rows) * 2 > len(rows)]
+        return Check("sameness", "warn", f"Built like {alike} of the last {len(rows)} {post.get('format')} posts "
+                     f"(same {', '.join(same) or 'structure'}). YouTube reviews whole channels for repetitive "
+                     "videos: change the opening, the title pattern or the number of beats")
+    return Check("sameness", "ok", f"structure differs from most recent posts ({alike}/{len(rows)} alike)")
+
+
 def check_original_element(post: dict) -> Check | None:
     """Long videos need one thing a template can't make (YouTube judges whole channels for
     'inauthentic content': slideshows with the same narration). A chart drawn from the video's own
@@ -243,6 +284,7 @@ def run_content_checks(db: DB, brand: BrandProfile, post: dict) -> list[Check]:
         checks.append(lang_check)
     if post.get("assets"):
         checks.append(check_assets_licensed(post["assets"]))
+    checks.append(check_sameness(db, brand.slug, post))
     if (orig := check_original_element(post)) is not None:
         checks.append(orig)
     unverified = script.get("claims_to_verify") or []

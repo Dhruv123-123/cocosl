@@ -180,6 +180,7 @@ class BrandProfile(BaseModel):
     ai_disclosure: str = "Made with AI tools; written and fact-checked by a human."
     realistic_synthetic_media: bool = False  # True if visuals/voices could pass as real people/events
     require_human_review: bool = True
+    own_voice: bool = False  # videos wait for the owner's recorded narration (`factory voice`) before scheduling
 
     def account(self, platform: str) -> PlatformAccount | None:
         return next((a for a in self.accounts if a.platform == platform and a.enabled), None)

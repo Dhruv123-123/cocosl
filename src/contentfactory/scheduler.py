@@ -23,7 +23,7 @@ def taken_slots(db: DB, brand: str, platform: str) -> set[str]:
     return {r["scheduled_at"] for r in rows}
 
 
-WEEKLY_CAP = {"short": "shorts_per_week", "long": "long_per_week", "carousel": "carousels_per_week"}
+WEEKLY_CAP = {"short": "shorts_per_week", "mid": "shorts_per_week", "long": "long_per_week", "carousel": "carousels_per_week"}
 
 
 def format_days(db: DB, brand: str, platform: str, fmt: str, tz) -> dict:

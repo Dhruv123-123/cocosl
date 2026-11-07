@@ -143,7 +143,7 @@ Niche: {brand.niche}
 Audience: {brand.audience}
 Promise to viewers: {brand.promise}
 Pillars: {', '.join(brand.pillars)}
-Formats available: {', '.join(brand.formats)} (short = 30-60s vertical video, long = 6-12 min video, carousel = 6-10 slide image post)
+Formats available: {', '.join(brand.formats)} (short = 30-60s vertical video, mid = 65-90s vertical video for TikTok only, long = 6-12 min video, carousel = 6-10 slide image post)
 Topics to avoid: {', '.join(brand.avoid_topics) or 'none'}
 Monetization: affiliate offers [{', '.join(a.name for a in brand.affiliates) or 'none'}], products [{', '.join(p.get('name', '') for p in brand.products) or 'none'}]
 

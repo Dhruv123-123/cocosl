@@ -60,7 +60,7 @@ def _check_provenance(assets: dict, settings) -> None:
     assert all(p["source"] in ("generated", "rendered", "own", "licensed") for p in assets["provenance"])
 
 
-@pytest.mark.parametrize("fmt,size", [("short", (1080, 1920)), ("long", (1920, 1080))])
+@pytest.mark.parametrize("fmt,size", [("short", (1080, 1920)), ("mid", (1080, 1920)), ("long", (1920, 1080))])
 def test_render_video(media_env, tmp_path, fmt, size):
     settings, brand = media_env
     assets = render_post(settings, brand, make_post(1, fmt, 3))

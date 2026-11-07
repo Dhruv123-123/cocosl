@@ -32,7 +32,7 @@ LEAD = 0.1          # captions start just after the cut
 
 def render_post(settings: Settings, brand: BrandProfile, post: dict) -> dict:
     fmt = post.get("format") or "short"
-    if fmt not in ("short", "long", "carousel", "image"):
+    if fmt not in ("short", "mid", "long", "carousel", "image"):
         raise MediaError(f"Unknown post format '{fmt}'")
     script = _script(post)
     root = Path(settings.output_dir).resolve()
@@ -41,7 +41,7 @@ def render_post(settings: Settings, brand: BrandProfile, post: dict) -> dict:
     shutil.rmtree(build, ignore_errors=True)
     build.mkdir(parents=True)
     try:
-        if fmt in ("short", "long"):
+        if fmt in ("short", "mid", "long"):
             assets = _render_video(settings, brand, script, fmt, build, post)
         else:
             assets = _render_slides(settings, brand, script, fmt, build, post)
@@ -69,13 +69,19 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
                                reserve_bottom=0.22 if fmt == "long" else 0.36)  # caption zone
     lines = [(s.narration or s.on_screen_text or s.heading).strip() for s in segments]
     heads = [s.on_screen_text for s in segments]
-    images = [r.path for r in imgs]
+    from .looks import choose, compose
+    look = post.get("look") or choose(post.get("_recent_looks") or [], seed=int(post.get("id") or 0))
+    images = [r.path if (i < len(segments) and segments[i].chart) else
+              compose(r.path, size, look["layout"], palette, work / f"look-{i:02d}.png")
+              for i, r in enumerate(imgs)]
     if script.cta and _norm(script.cta) not in _norm(" ".join(lines)):
         lines.append(script.cta)
         heads.append(brand.name)
         images.append(images[-1])
 
-    tts = synthesize_segments(settings, brand, lines, work / "voice")
+    from .tts import human_voice
+    tts = human_voice(settings, brand, post.get("id"), lines, work / "voice") \
+        or synthesize_segments(settings, brand, lines, work / "voice")
     beats, cues, slots, t, starts, owned = [], [], [], 0.0, [], []
     seg_words = tts.words or [None] * len(lines)
     from .charts import render_chart_clip
@@ -102,7 +108,7 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     srt = out / "captions.srt"
     write_srt(cues, srt)
     music = pick_music(f"{brand.slug}:{post.get('id')}:{script.title}")
-    spec = VideoSpec(fmt, size, palette, brand.visual.font, brand.visual.watermark, opts)
+    spec = VideoSpec(fmt, size, palette, brand.visual.font, brand.visual.watermark, opts, look=look)
     video = out / "video.mp4"
     duration = assemble(spec, beats, cues, audio, video, work, music=music, voiced=tts.provider != "silent")
     duration = probe(video)["duration"] or duration
@@ -111,6 +117,9 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     if fmt == "short" and duration > SHORT_MAX_SECONDS:
         notes.append(f"WARNING: short runs {duration:.1f}s (> {SHORT_MAX_SECONDS:.0f}s); trim the script "
                      "before posting as a Reel/Short. Nothing was cut automatically.")
+    if fmt == "mid" and not 61 <= duration <= 95:
+        notes.append(f"WARNING: TikTok cut runs {duration:.1f}s; aim for 65-90s (TikTok's Creator Rewards "
+                     "only count videos over a minute).")
     thumb = render_thumbnail(images[0], script.thumbnail_text or script.title, palette, brand.visual.font,
                              brand.visual.watermark, out / "thumbnail.png")
 
@@ -127,7 +136,8 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     for v in variants:
         prov.append(provenance(str(v), "rendered", "pillow", "thumbnail variant"))
         prov.append(provenance(str(v.with_suffix(".jpg")), "rendered", "pillow", "thumbnail variant (JPEG)"))
-    prov.append(provenance(str(audio), "generated", tts.tool, " ".join(lines), provider=tts.provider,
+    prov.append(provenance(str(audio), "own" if tts.provider == "human" else "generated", tts.tool, " ".join(lines),
+                           provider=tts.provider,
                            note="Voice must be your own or licensed."))
     prov.append(provenance(str(srt), "rendered", "contentfactory.captions",
                            note="word timing from the voice" if tts.timing != "estimated"
@@ -144,7 +154,7 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
                                "user-supplied via FACTORY_MUSIC_DIR; keep the licence on file"))
     return {"video": video, "audio": audio, "captions_srt": srt, "images": [r.path for r in imgs], "slides": [],
             "thumbnail": thumb, "thumbnail_variants": [thumb, *variants], "duration": round(duration, 3),
-            "chapters": chapters.build(starts, duration) if fmt == "long" else [], "provenance": prov}
+            "chapters": chapters.build(starts, duration) if fmt == "long" else [], "look": look, "provenance": prov}
 
 
 # ---------------------------------------------------------------- slides
