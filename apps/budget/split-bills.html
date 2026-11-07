@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bill Splitter for Roommates and Couples: Split Rent and Bills Fairly by Income | Money Made Simple</title>
+<meta name="description" content="Split rent, utilities and groceries between 2 to 6 roommates or a couple: equally, by income or your own percentages. See who owes whom in the fewest payments, then copy a summary for the group chat or download a CSV. Free, private, no sign-up.">
+<meta property="og:title" content="Split rent and bills fairly, by income or equally">
+<meta property="og:description" content="Split rent, utilities and groceries between 2 to 6 roommates or a couple: equally, by income or your own percentages. See who owes whom in the fewest payments, then copy a summary for the group chat or download a CSV. Free, private, no sign-up.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="alternate" hreflang="en" href="split-bills.html">
+<link rel="alternate" hreflang="es" href="dividir-gastos.html">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Split bills", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is it fairer to split rent by income?", "acceptedAnswer": {"@type": "Answer", "text": "When incomes are close, splitting equally is simple and fair. When one person earns a lot more, splitting by income means everyone pays the same share of what they take home, so nobody is stretched. Many households split rent by income and small shared bills like internet equally: pick the split for each bill."}}, {"@type": "Question", "name": "How does \"by income\" work?", "acceptedAnswer": {"@type": "Answer", "text": "Each person pays their share of the group's total take-home pay. If Ana takes home $6,000 and Ben and Cy $3,000 each, Ana pays half of each bill and Ben and Cy a quarter each."}}, {"@type": "Question", "name": "How is settling up worked out?", "acceptedAnswer": {"@type": "Answer", "text": "We add up what each person's share is and what they actually paid, then find the fewest payments that even it out. Amounts are split to the cent and always add up to the bill."}}]}</script>
+<script type="module" src="lib/embed-page.js"></script>
+</head>
+<body class="sf sb">
+<header class="top">
+  <a class="logo" href="../" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Split bills</span></a>
+  <a class="badge" href="dividir-gastos.html" hreflang="es" lang="es">Español</a>
+</header>
+<main>
+  <h1 class="page-title">Split rent and bills fairly, by income or equally</h1>
+  <p class="lede">Add everyone who shares the bills and what they take home. Split each bill equally, by income (everyone pays the same share of what they earn) or your own percentages, and see who owes whom. Saved in this browser only.</p>
+
+  <section class="card" aria-labelledby="h-people">
+    <h2 id="h-people">Who shares the bills</h2>
+    <label class="inline">How to split<select id="method"></select></label>
+    <p id="custom-msg" class="tiny warn-text" aria-live="polite"></p>
+    <ul id="people" class="people"></ul>
+    <button id="add-person" class="btn ghost small" type="button">Add a person</button>
+  </section>
+
+  <section class="card" aria-labelledby="h-bills">
+    <h2 id="h-bills">Shared bills</h2>
+    <form id="bill-form" class="deal-form">
+      <label>Bill<input name="name" maxlength="60" autocomplete="off"></label>
+      <label>Amount ($)<input name="amount" type="number" min="0.01" step="0.01" inputmode="decimal"></label>
+      <label>Paid by<select name="paidBy" id="b-paid"></select></label>
+      <label>Split<select name="split" id="b-split"></select></label>
+      <div class="full row"><button class="btn" type="submit">Add bill</button><span id="bill-msg" class="tiny" role="alert"></span></div>
+    </form>
+    <ul id="bills" class="funds bills"></ul>
+  </section>
+
+  <section class="card" id="result" aria-labelledby="h-result" hidden>
+    <h2 id="h-result">Who owes whom</h2>
+    <div class="table-scroll"><table class="plan dash-table"><thead><tr><th scope="col">Person</th><th scope="col" class="num">Their share</th><th scope="col" class="num">Paid</th><th scope="col" class="num">Balance</th></tr></thead><tbody id="result-body"></tbody></table></div>
+    <ul id="moves" class="moves" aria-live="polite"></ul>
+    <label for="t-text" class="sr-only">Summary for the group chat</label><textarea id="t-text" rows="5" readonly></textarea>
+    <div class="row" style="margin-top:10px"><button id="copy" class="btn small" type="button">Copy summary</button><button id="csv" class="btn ghost small" type="button">Download as CSV</button></div>
+    <p id="copy-msg" class="tiny" aria-live="polite"></p>
+  </section>
+
+  <section class="card faq">
+    <h3>Is it fairer to split rent by income?</h3>
+    <p>When incomes are close, splitting equally is simple and fair. When one person earns a lot more, splitting by income means everyone pays the same share of what they take home, so nobody is stretched. Many households split rent by income and small shared bills like internet equally: pick the split for each bill.</p>
+    <h3>How does &quot;by income&quot; work?</h3>
+    <p>Each person pays their share of the group&#x27;s total take-home pay. If Ana takes home $6,000 and Ben and Cy $3,000 each, Ana pays half of each bill and Ben and Cy a quarter each.</p>
+    <h3>How is settling up worked out?</h3>
+    <p>We add up what each person&#x27;s share is and what they actually paid, then find the fewest payments that even it out. Amounts are split to the cent and always add up to the bill.</p>
+  </section>
+</main>
+<footer><p><a href="../">All free tools</a> · <a href="couples.html">Couples money date</a> · <a href="wedding-budget.html">Wedding budget</a> · Not financial advice. Nothing you type leaves this browser. Made by Money Made Simple.</p></footer>
+<script type="module" src="split-bills.js"></script>
+</body>
+</html>

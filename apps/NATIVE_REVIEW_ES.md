@@ -34,6 +34,8 @@ Do the **first three** first: they are the most-used tools and the ones Dinero S
 | `budget/plan-quincena.html` (de tu cheque a tu presupuesto) | `plan-quincena.html`, `budget/paycheck-plan.js` (`es` text) | needs review |
 | `budget/fondos-ahorro.html` (fondos de ahorro) | `fondos-ahorro.html`, `budget/sinking-funds.js` (`es` text), `budget/lib/sinking.js` (`PRESETS.es`) | needs review |
 | `budget/calendario-dinero.html` (calendario de dinero) | `calendario-dinero.html`, `budget/money-calendar.js` (`es` names), `budget/lib/moneycal.js` (the `es` titles and descriptions) | needs review |
+| `budget/presupuesto-boda.html` (presupuesto de boda) | `presupuesto-boda.html`, `budget/wedding-budget.js` (`es` text), `budget/lib/wedding.js` (Spanish category names, CSV header) | needs review |
+| `budget/dividir-gastos.html` (dividir gastos entre roomies o en pareja) | `dividir-gastos.html`, `budget/split-bills.js` (`es` text), `budget/lib/splitbills.js` (`H.es`, `splitText`) | needs review |
 | `budget/tablero-dinero.html` (tablero de dinero) | `tablero-dinero.html`, `budget/money-dashboard.js`, `budget/lib/dashboard.js` (category names, sheet text) | needs review |
 | `money-calculators/es/index.html` | `money-calculators/pages-es.mjs` | needs review |
 | `money-calculators/es/take-home-pay/` | `pages-es.mjs`, `lib/text-extra.js` | needs review |

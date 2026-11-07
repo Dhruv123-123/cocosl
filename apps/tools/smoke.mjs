@@ -247,6 +247,36 @@ const checks = [
     if ((await page.locator('#funds .fund').count()) !== 2) throw new Error('not saved');
   }],
   ['/budget/fondos-ahorro.html', '#ideas .chip'],
+  ['/budget/wedding-budget.html', '#cats .wcat', async (page) => {
+    await page.fill('[name=total]', '30000'); await page.fill('[name=guests]', '100');
+    await page.click('#split');
+    if ((await page.inputValue('[data-k=venue][data-f=budget]')) !== '4800') throw new Error('split');
+    await page.fill('[data-k=venue][data-f=estimate]', '6300');
+    await page.fill('[data-k=venue][data-f=paid]', '2000');
+    if (!/Over plan: Venue/.test(await page.textContent('#notes'))) throw new Error('over warning');
+    if (!/\$315\.00/.test(await page.textContent('#stats'))) throw new Error('per guest');
+    if (!/^Venue\t4800\t6300\t2000\n/.test(await page.inputValue('#t-rows'))) throw new Error('tsv');
+    await page.reload();
+    if ((await page.inputValue('[data-k=venue][data-f=paid]')) !== '2000') throw new Error('not saved');
+  }],
+  ['/budget/presupuesto-boda.html', '#cats .wcat'],
+  ['/budget/split-bills.html', '#moves li', async (page) => {
+    await page.click('#add-person');
+    for (const [i, n, inc] of [[0, 'Ana', '6000'], [1, 'Ben', '3000'], [2, 'Cy', '3000']]) { await page.fill(`[data-i="${i}"][data-f=name]`, n); await page.fill(`[data-i="${i}"][data-f=income]`, inc); }
+    await page.fill('#bill-form [name=name]', 'Rent'); await page.fill('#bill-form [name=amount]', '2400');
+    await page.click('#bill-form button[type=submit]');
+    await page.fill('#bill-form [name=name]', 'Internet'); await page.fill('#bill-form [name=amount]', '90');
+    await page.selectOption('#b-paid', '1'); await page.selectOption('#b-split', 'equal');
+    await page.click('#bill-form button[type=submit]');
+    const moves = await page.textContent('#moves');
+    if (!/Cy pays Ana \$630\.00/.test(moves) || !/Ben pays Ana \$540\.00/.test(moves)) throw new Error(`moves: ${moves}`);
+    const dl = page.waitForEvent('download'); await page.click('#csv');
+    const csv = await (await import('node:fs/promises')).readFile(await (await dl).path(), 'utf8');
+    if (!/^Bill,Amount,Paid by,Split,Ana,Ben,Cy/.test(csv)) throw new Error('csv');
+    await page.reload();
+    if ((await page.locator('#bills li').count()) !== 2) throw new Error('not saved');
+  }],
+  ['/budget/dividir-gastos.html', '#h-people'],
   ['/budget/money-calendar.html?brand=1099', '#preview li', async (page) => {
     if (!/1099 Money/.test(await page.textContent('#brand'))) throw new Error('brand');
     if (!/estimated tax/i.test(await page.textContent('#preview'))) throw new Error('freelancer dates');
@@ -394,7 +424,7 @@ await new Promise((r) => server.listen(0, r));
 const base = `http://127.0.0.1:${server.address().port}`;
 const browser = await playwright.chromium.launch();
 let failed = 0;
-for (const [path, selector, act] of checks) {
+for (const [path, selector, act] of checks.filter(([p]) => !process.env.SMOKE_ONLY || process.env.SMOKE_ONLY.split(",").some((x) => p.includes(x)))) {
   for (const viewport of [{ width: 1280, height: 900 }, { width: 390, height: 844 }]) {
     const page = await browser.newPage({ viewport });
     const errors = [];

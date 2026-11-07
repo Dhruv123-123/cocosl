@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wedding Budget Planner: Split Your Budget, Cost per Guest and What to Save Each Month | Money Made Simple</title>
+<meta name="description" content="Enter your total wedding budget and guest count and get a starting split for venue, photos, attire and every other category, then track quotes, final costs and what you have paid. Free, private, no sign-up. Exports to CSV and pastes into the wedding budget spreadsheet.">
+<meta property="og:title" content="Plan your wedding budget without the surprises">
+<meta property="og:description" content="Enter your total wedding budget and guest count and get a starting split for venue, photos, attire and every other category, then track quotes, final costs and what you have paid. Free, private, no sign-up. Exports to CSV and pastes into the wedding budget spreadsheet.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="alternate" hreflang="en" href="wedding-budget.html">
+<link rel="alternate" hreflang="es" href="presupuesto-boda.html">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Wedding budget", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How should I split a wedding budget?", "acceptedAnswer": {"@type": "Answer", "text": "A common starting point is about 40% on the venue, catering and bar, around 12% on photos and video, and smaller shares for attire, flowers, music and the rest, plus a buffer of about 5% for the extras every wedding has. The honeymoon starts at zero because many couples budget it separately. It's a rule of thumb, not a rule: move money to what matters most to you."}}, {"@type": "Question", "name": "How do I work out the cost per guest?", "acceptedAnswer": {"@type": "Answer", "text": "Divide the expected total by the number of guests. The page also shows the venue, catering and bar cost per guest, because that's the part that grows with every name you add."}}, {"@type": "Question", "name": "How is \"save each month\" worked out?", "acceptedAnswer": {"@type": "Answer", "text": "What's still to pay, minus what you've saved, divided by the months until the wedding month. Vendors often want deposits earlier, so check each contract's due dates."}}]}</script>
+<script type="module" src="lib/embed-page.js"></script>
+</head>
+<body class="sf wd">
+<header class="top">
+  <a class="logo" href="../" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Wedding budget</span></a>
+  <a class="badge" href="presupuesto-boda.html" hreflang="es" lang="es">Español</a>
+</header>
+<main>
+  <h1 class="page-title">Plan your wedding budget without the surprises</h1>
+  <p class="lede">Start with the total you can spend and how many guests you&#x27;re inviting. We split it across the usual categories, then you fill in quotes and what you&#x27;ve paid as you book. Saved in this browser only.</p>
+
+  <form id="basics" class="card deal-form">
+    <h2 class="full">The basics</h2>
+    <label>Total budget ($)<input name="total" type="number" min="0" step="100" inputmode="decimal"></label>
+    <label>Guests<input name="guests" type="number" min="0" step="1" inputmode="numeric"></label>
+    <label>Wedding date<input name="date" type="date"></label>
+    <label>Saved so far ($)<input name="saved" type="number" min="0" step="1" inputmode="decimal" placeholder="0"></label>
+    <div class="full row"><button id="split" class="btn" type="button">Split my budget</button><span id="split-msg" class="tiny" role="status"></span></div>
+  </form>
+
+  <section class="card" aria-labelledby="h-plan">
+    <h2 id="h-plan">Your plan</h2>
+    <div id="stats" class="stats" aria-live="polite"></div>
+    <div id="notes" aria-live="polite"></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-cats">
+    <h2 id="h-cats">Categories</h2>
+    <p class="tiny">Each category shows what&#x27;s left to pay. The bar fills as you pay. If you have a quote or a final cost, we use that instead of the budget.</p>
+    <ul id="cats" class="funds"></ul>
+  </section>
+
+  <section class="card" id="export" hidden>
+    <h2>Put it in your spreadsheet</h2>
+    <p>Copy the rows and paste them into the budget table of the wedding budget spreadsheet (Category, Budget, Actual, Paid; Actual is your final cost, or the quote until you have one), or download a CSV for Google Sheets or Excel.</p>
+    <label for="t-rows" class="sr-only">Rows to paste into the spreadsheet</label><textarea id="t-rows" rows="4" readonly></textarea>
+    <div class="row" style="margin-top:10px"><button id="copy" class="btn small" type="button">Copy rows</button><button id="csv" class="btn ghost small" type="button">Download as CSV</button></div>
+    <p id="copy-msg" class="tiny" aria-live="polite"></p>
+    <div class="offer-box" id="upsell" hidden></div>
+  </section>
+
+  <section class="card faq">
+    <h3>How should I split a wedding budget?</h3>
+    <p>A common starting point is about 40% on the venue, catering and bar, around 12% on photos and video, and smaller shares for attire, flowers, music and the rest, plus a buffer of about 5% for the extras every wedding has. The honeymoon starts at zero because many couples budget it separately. It&#x27;s a rule of thumb, not a rule: move money to what matters most to you.</p>
+    <h3>How do I work out the cost per guest?</h3>
+    <p>Divide the expected total by the number of guests. The page also shows the venue, catering and bar cost per guest, because that&#x27;s the part that grows with every name you add.</p>
+    <h3>How is &quot;save each month&quot; worked out?</h3>
+    <p>What&#x27;s still to pay, minus what you&#x27;ve saved, divided by the months until the wedding month. Vendors often want deposits earlier, so check each contract&#x27;s due dates.</p>
+  </section>
+</main>
+<footer><p><a href="../">All free tools</a> · <a href="sinking-funds.html">Sinking funds</a> · <a href="split-bills.html">Split bills</a> · Not financial advice. Nothing you type leaves this browser. Made by Money Made Simple.</p></footer>
+<script type="module" src="wedding-budget.js"></script>
+</body>
+</html>

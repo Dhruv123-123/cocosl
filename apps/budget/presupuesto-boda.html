@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presupuesto de boda: reparte tu presupuesto, costo por invitado y cuánto ahorrar al mes | Dinero Simple</title>
+<meta name="description" content="Escribe tu presupuesto total y el número de invitados y te damos un reparto inicial para el lugar, fotos, vestuario y cada categoría. Luego anota cotizaciones, costos reales y lo que ya pagaste. Gratis, privado, sin registro. Se exporta a CSV.">
+<meta property="og:title" content="Planea el presupuesto de tu boda sin sorpresas">
+<meta property="og:description" content="Escribe tu presupuesto total y el número de invitados y te damos un reparto inicial para el lugar, fotos, vestuario y cada categoría. Luego anota cotizaciones, costos reales y lo que ya pagaste. Gratis, privado, sin registro. Se exporta a CSV.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="alternate" hreflang="en" href="wedding-budget.html">
+<link rel="alternate" hreflang="es" href="presupuesto-boda.html">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Presupuesto de boda", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cómo reparto el presupuesto de una boda?", "acceptedAnswer": {"@type": "Answer", "text": "Un punto de partida común es cerca del 40% para el lugar, el banquete y el bar, alrededor del 12% para fotos y video, y partes más pequeñas para vestuario, flores, música y lo demás, más un colchón de un 5% para los extras que siempre salen. La luna de miel empieza en cero porque muchas parejas la presupuestan aparte. Es una guía, no una regla: mueve el dinero a lo que más les importa."}}, {"@type": "Question", "name": "¿Cómo saco el costo por invitado?", "acceptedAnswer": {"@type": "Answer", "text": "Divide el total esperado entre el número de invitados. La página también muestra el costo del lugar, el banquete y el bar por invitado, porque esa es la parte que crece con cada nombre que agregas."}}, {"@type": "Question", "name": "¿Cómo se calcula \"guardar al mes\"?", "acceptedAnswer": {"@type": "Answer", "text": "Lo que falta pagar, menos lo que ya ahorraste, dividido entre los meses hasta el mes de la boda. Muchos proveedores piden anticipos antes, así que revisa las fechas de cada contrato."}}]}</script>
+<script type="module" src="lib/embed-page.js"></script>
+</head>
+<body class="sf wd">
+<header class="top">
+  <a class="logo" href="../es/" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Presupuesto de boda</span></a>
+  <a class="badge" href="wedding-budget.html" hreflang="en" lang="en">English</a>
+</header>
+<main>
+  <h1 class="page-title">Planea el presupuesto de tu boda sin sorpresas</h1>
+  <p class="lede">Empieza con lo que pueden gastar en total y cuántos invitados tendrán. Lo repartimos entre las categorías de siempre y tú anotas cotizaciones y pagos mientras contratas. Se guarda solo en este navegador.</p>
+
+  <form id="basics" class="card deal-form">
+    <h2 class="full">Lo básico</h2>
+    <label>Presupuesto total ($)<input name="total" type="number" min="0" step="100" inputmode="decimal"></label>
+    <label>Invitados<input name="guests" type="number" min="0" step="1" inputmode="numeric"></label>
+    <label>Fecha de la boda<input name="date" type="date"></label>
+    <label>Ahorrado hasta hoy ($)<input name="saved" type="number" min="0" step="1" inputmode="decimal" placeholder="0"></label>
+    <div class="full row"><button id="split" class="btn" type="button">Repartir mi presupuesto</button><span id="split-msg" class="tiny" role="status"></span></div>
+  </form>
+
+  <section class="card" aria-labelledby="h-plan">
+    <h2 id="h-plan">Tu plan</h2>
+    <div id="stats" class="stats" aria-live="polite"></div>
+    <div id="notes" aria-live="polite"></div>
+  </section>
+
+  <section class="card" aria-labelledby="h-cats">
+    <h2 id="h-cats">Categorías</h2>
+    <p class="tiny">Cada categoría muestra lo que falta pagar. La barra se llena conforme pagas. Si tienes cotización o costo real, usamos ese en vez del presupuesto.</p>
+    <ul id="cats" class="funds"></ul>
+  </section>
+
+  <section class="card" id="export" hidden>
+    <h2>Pásalo a tu hoja de cálculo</h2>
+    <p>Copia las filas y pégalas en la tabla de presupuesto de la hoja de boda (Categoría, Presupuesto, Real, Pagado; Real es el costo final, o la cotización mientras no lo tengas), o descarga un CSV para Google Sheets o Excel.</p>
+    <label for="t-rows" class="sr-only">Filas para pegar en la hoja</label><textarea id="t-rows" rows="4" readonly></textarea>
+    <div class="row" style="margin-top:10px"><button id="copy" class="btn small" type="button">Copiar filas</button><button id="csv" class="btn ghost small" type="button">Descargar CSV</button></div>
+    <p id="copy-msg" class="tiny" aria-live="polite"></p>
+    <div class="offer-box" id="upsell" hidden></div>
+  </section>
+
+  <section class="card faq">
+    <h3>¿Cómo reparto el presupuesto de una boda?</h3>
+    <p>Un punto de partida común es cerca del 40% para el lugar, el banquete y el bar, alrededor del 12% para fotos y video, y partes más pequeñas para vestuario, flores, música y lo demás, más un colchón de un 5% para los extras que siempre salen. La luna de miel empieza en cero porque muchas parejas la presupuestan aparte. Es una guía, no una regla: mueve el dinero a lo que más les importa.</p>
+    <h3>¿Cómo saco el costo por invitado?</h3>
+    <p>Divide el total esperado entre el número de invitados. La página también muestra el costo del lugar, el banquete y el bar por invitado, porque esa es la parte que crece con cada nombre que agregas.</p>
+    <h3>¿Cómo se calcula &quot;guardar al mes&quot;?</h3>
+    <p>Lo que falta pagar, menos lo que ya ahorraste, dividido entre los meses hasta el mes de la boda. Muchos proveedores piden anticipos antes, así que revisa las fechas de cada contrato.</p>
+  </section>
+</main>
+<footer><p><a href="../es/">Todas las herramientas</a> · <a href="fondos-ahorro.html">Fondos de ahorro</a> · <a href="dividir-gastos.html">Dividir gastos</a> · No es asesoría financiera. Nada de lo que escribes sale de este navegador. Hecho por Dinero Simple.</p></footer>
+<script type="module" src="wedding-budget.js"></script>
+</body>
+</html>

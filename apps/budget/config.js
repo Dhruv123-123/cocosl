@@ -43,6 +43,14 @@ export default {
     pitch: 'The version you keep using: paste each month in and get 12-month trends, budget vs actual in red and green, sinking funds and charts. Google Sheets and Excel.',
     pitchEs: 'La versión para usar cada mes: pega tus movimientos y ve tendencias de 12 meses, presupuesto vs real, fondos de ahorro y gráficas. Google Sheets y Excel.',
   },
+  // Wedding budget spreadsheet (products thread). Shown on wedding-budget.html once the URL is live.
+  weddingTemplate: {
+    name: 'Wedding Budget Spreadsheet', nameEs: 'Hoja de presupuesto de boda',
+    price: '[PRICE]',
+    url: 'https://REPLACE_ME.etsy.com/listing/wedding-budget-spreadsheet',
+    pitch: 'Vendors, deposits and due dates, guest list and RSVP tracker in one sheet. Paste your plan from this page straight in. Google Sheets and Excel.',
+    pitchEs: 'Proveedores, anticipos y fechas de pago, lista de invitados y confirmaciones en una sola hoja. Pega aquí tu plan. Google Sheets y Excel.',
+  },
   // Paid add-on shown on Rate My Budget (Gumroad, Stripe Payment Link or a Calendly paid booking).
   review: {
     name: 'Personal budget review',

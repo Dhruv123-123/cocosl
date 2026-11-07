@@ -20,6 +20,8 @@ export const TOOLS = [
   { id: 'vendor-check', group: 'Scam safety', name: 'Vendor payment check (for businesses)', en: 'scam-checker/vendor/', h: 900 },
   { id: 'paycheck-plan', group: 'Budgeting', name: 'Paycheck-to-budget planner (50/30/20 and zero-based)', en: 'budget/paycheck-plan.html', es: 'budget/plan-quincena.html', h: 1400 },
   { id: 'sinking-funds', group: 'Budgeting', name: 'Sinking funds planner', en: 'budget/sinking-funds.html', es: 'budget/fondos-ahorro.html', h: 1100 },
+  { id: 'split-bills', group: 'Budgeting', name: 'Bill splitter for roommates and couples', en: 'budget/split-bills.html', es: 'budget/dividir-gastos.html', h: 1400 },
+  { id: 'wedding-budget', group: 'Budgeting', name: 'Wedding budget planner', en: 'budget/wedding-budget.html', es: 'budget/presupuesto-boda.html', h: 2200 },
   { id: 'money-calendar', group: 'Budgeting', name: 'Money calendar download (tax dates, Black Friday, reset)', en: 'budget/money-calendar.html', es: 'budget/calendario-dinero.html', h: 1000 },
   { id: 'bill-calendar', group: 'Budgeting', name: 'Bill due date calendar', en: 'budget/bill-calendar/', es: 'budget/bill-calendar/es.html', h: 1100 },
   { id: 'savings-challenge', group: 'Budgeting', name: '52-week savings challenge', en: 'budget/savings-challenge.html', es: 'budget/reto-ahorro.html', h: 1200 },
