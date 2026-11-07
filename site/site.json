@@ -1,0 +1,45 @@
+{
+  "name": "Money Made Simple",
+  "url": "https://moneymadesimple.netlify.app",
+  "tagline": "One money move you can make this week, explained in under a minute.",
+  "description": "Plain-English money guides for students and early-career workers: budgets that stick, first-time investing, credit scores and debt payoff, with the maths shown and no hype.",
+  "pillars": {
+    "budgeting": "Budgeting that sticks",
+    "investing": "First-time investing",
+    "credit-and-debt": "Credit and debt payoff",
+    "money-tools": "Money apps and tools"
+  },
+  "socials": {
+    "Instagram": "https://www.instagram.com/moneymadesimple/",
+    "YouTube": "https://www.youtube.com/@moneymadesimple",
+    "TikTok": "https://www.tiktok.com/@moneymadesimple"
+  },
+  "contact_email": "hello@example.com",
+  "email": {
+    "provider": "netlify",
+    "action": "",
+    "email_field": "",
+    "privacy_note": "One useful email a week. Unsubscribe in one click.",
+    "thanks_note": "Your download is below. Your first email is on its way too (check Promotions or Spam if you don't see it in a few minutes)."
+  },
+  "lead_magnet": {
+    "title": "The 7-Day Money Reset",
+    "file": "the-7-day-money-reset.pdf",
+    "headline": "Get your money organised in 7 days, 15 minutes a day.",
+    "short": "Seven 15-minute tasks, a printable checklist and worksheets. Free.",
+    "pitch": "A free 10-page PDF: seven 15-minute tasks that find your real numbers, stop surprise fees, protect your credit and set up a weekly spending number. Printable checklist and worksheets included.",
+    "days": [
+      "Find your real monthly take-home pay and list every fixed bill.",
+      "Hunt down forgotten subscriptions and cancel the ones you don't use.",
+      "Set three bank alerts that stop overdrafts before they happen.",
+      "Open (or check) a separate, insured savings account and automate a first transfer.",
+      "Pull your free credit reports, check them like an auditor, and freeze your credit.",
+      "Check whether you're getting your full 401(k) match, or note when you'll start.",
+      "Set your one weekly spending number and book a 20-minute weekly check-in."
+    ]
+  },
+  "affiliates": [],
+  "disclaimer": "Educational content, not financial, tax or investment advice. Examples are illustrations with assumed numbers, not promises. Check current rules and rates with the official source before acting.",
+  "ai_disclosure": "We use AI tools to help with visuals and drafts. A human chooses every topic, checks the facts and approves everything before it is published.",
+  "analytics_snippet": ""
+}
