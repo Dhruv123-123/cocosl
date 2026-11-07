@@ -1,15 +1,16 @@
 import config from './config.js';
-import { initTracking } from './lib/track.js';
+import { initTracking, trackEvent, EVENTS } from './lib/track.js';
 import * as B from './lib/budget.js';
 import { planFor, can } from './lib/plans.js';
 import { verifyLicense, isActive, needsRecheck } from './lib/license.js';
+import { checkoutOptions, reasonText, keyFromUrl, limitPrompt, pricingHref, starterPlan, needsOnboarding } from './lib/checkout.js';
 
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const money = (n) => (Number(n) || 0).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
-const live = (u) => typeof u === 'string' && /^https:\/\//.test(u) && !/REPLACE_ME/i.test(u);
 const KEY = 'mms-budget-v1';
 const LKEY = 'mms-budget-license';
+const OKEY = 'mms-budget-onboarded';
 
 const store = {
   get(k) { try { return localStorage.getItem(k); } catch { return null; } },
@@ -79,39 +80,62 @@ function render() {
   }).join('');
 }
 
-function upsell(reason) {
-  $('#license-msg').textContent = reason || '';
+function upsell(reason, where = 'badge') {
+  $('#license-msg').textContent = '';
+  $('#upgrade-reason').textContent = reason || limitPrompt('');
   $('#pro-features').innerHTML = config.proFeatures.map((f) => `<li>${esc(f)}</li>`).join('');
   const inStore = (config.distribution || 'web') !== 'web';
-  const links = inStore ? [] : Object.values(config.pricing).filter((p) => live(p.url));
-  $('#buy').innerHTML = links.map((p) => `<a class="btn" href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.label)}</a>`).join('');
+  const links = checkoutOptions(config);
+  $('#buy').innerHTML = links.map((p) => `<a class="btn${p.best ? '' : ' ghost'}" href="${esc(p.url)}" data-id="budget-pro-${esc(p.id)}" data-upgrade="${esc(where)}" target="_blank" rel="noopener">${esc(p.label)}</a>`).join('');
   $('#no-checkout').textContent = inStore ? 'Already have Pro? Enter your license key below.' : "Checkout isn't connected yet (set pricing links in config.js).";
   $('#no-checkout').hidden = links.length > 0;
-  $('#upgrade').showModal();
+  $('#compare').href = pricingHref(where);
+  $('#compare').dataset.upgrade = where;
+  if (!$('#upgrade').open) $('#upgrade').showModal();
+  trackEvent(EVENTS.upgradeShown, { where });
 }
 
 async function activate(key) {
   $('#license-msg').textContent = 'Checking…';
   license = await verifyLicense(key, { endpoint: config.verifyEndpoint, previous: license });
   store.set(LKEY, JSON.stringify(license));
-  const reasons = { not_found: "We couldn't find that key. Check for typos.", refunded: 'That purchase was refunded.', subscription_ended: 'That subscription has ended.', network: "Couldn't reach the license server. Try again in a minute.", gumroad_not_configured: 'License checks are not set up on this site yet.', stripe_not_configured: 'License checks are not set up on this site yet.' };
-  $('#license-msg').textContent = license.valid ? 'Pro is on. Thank you!' : reasons[license.reason] || 'That key did not work.';
+  $('#license-msg').textContent = license.valid ? 'Pro is on. Thank you!' : reasonText(license.reason);
   render();
   return license.valid;
+}
+
+// ---------- first run ----------
+function onboard() {
+  const d = $('#welcome');
+  const step = (n) => { for (const s of d.querySelectorAll('[data-step]')) s.hidden = s.dataset.step !== String(n); };
+  step(1);
+  d.showModal();
+  d.addEventListener('close', () => store.set(OKEY, new Date().toISOString()), { once: true });
+  $('#welcome-pay').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const pay = Number($('#welcome-income').value);
+    if (pay > 0) {
+      B.setIncome(state, month, pay);
+      if ($('#welcome-split').checked) for (const [id, amt] of Object.entries(starterPlan(state.categories, pay))) B.setPlan(state, month, id, amt);
+      save(); render();
+    }
+    step(2);
+  });
+  $('#welcome-next').addEventListener('click', () => step(3));
 }
 
 // ---------- events ----------
 $('#prev').addEventListener('click', () => {
   const target = shiftMonth(month, -1);
-  if (!plan().history && target !== B.thisMonth()) return upsell('Looking back at past months is a Pro feature.');
+  if (!plan().history && target !== B.thisMonth()) return upsell(limitPrompt('history'), 'history');
   month = target; B.ensureMonth(state, month); save(); render();
 });
 $('#next').addEventListener('click', () => {
   const target = shiftMonth(month, 1);
-  if (!plan().history && target !== B.thisMonth()) return upsell('Planning ahead is a Pro feature.');
+  if (!plan().history && target !== B.thisMonth()) return upsell(limitPrompt('history'), 'history');
   month = target; B.ensureMonth(state, month); save(); render();
 });
-$('#plan-badge').addEventListener('click', () => (pro() ? null : upsell()));
+$('#plan-badge').addEventListener('click', () => (pro() ? null : upsell('', 'badge')));
 
 $('#income').addEventListener('input', (e) => { B.setIncome(state, month, e.target.value); save(); render(); });
 $('#rows').addEventListener('change', (e) => {
@@ -126,14 +150,14 @@ document.addEventListener('click', (e) => {
 $('#cat-form').addEventListener('submit', (e) => {
   e.preventDefault();
   try { B.addCategory(state, $('#cat-name').value, $('#cat-group').value, { limit: plan().maxCategories }); $('#cat-name').value = ''; save(); render(); }
-  catch (err) { if (err instanceof B.LimitError) upsell(err.message); else alert(err.message); }
+  catch (err) { if (err instanceof B.LimitError) upsell(limitPrompt('categories', plan()), 'categories'); else alert(err.message); }
 });
 $('#tx-date').value = new Date().toISOString().slice(0, 10);
 $('#tx-form').addEventListener('submit', (e) => {
   e.preventDefault();
   try {
     const date = $('#tx-date').value;
-    if (!plan().history && B.monthOf(date) !== B.thisMonth()) return upsell('Logging spending in other months is a Pro feature.');
+    if (!plan().history && B.monthOf(date) !== B.thisMonth()) return upsell(limitPrompt('history'), 'history');
     B.addTransaction(state, { date, amount: $('#tx-amount').value, categoryId: $('#tx-cat').value || null, note: $('#tx-note').value });
     $('#tx-amount').value = ''; $('#tx-note').value = '';
     month = B.monthOf(date);
@@ -143,7 +167,7 @@ $('#tx-form').addEventListener('submit', (e) => {
 $('#goal-deadline').value = shiftMonth(B.thisMonth(), 6);
 $('#goal-form').addEventListener('submit', (e) => {
   e.preventDefault();
-  if (state.goals.length >= plan().goals) return upsell(`The free plan includes ${plan().goals} goal. Pro has unlimited goals.`);
+  if (state.goals.length >= plan().goals) return upsell(limitPrompt('goals', plan()), 'goals');
   state.goals.push({ name: $('#goal-name').value.trim(), target: Number($('#goal-target').value), saved: Number($('#goal-saved').value || 0), deadline: $('#goal-deadline').value });
   e.target.reset(); $('#goal-deadline').value = shiftMonth(B.thisMonth(), 6);
   save(); render();
@@ -164,7 +188,7 @@ $('#restore').addEventListener('change', async (e) => {
   state = next; month = B.thisMonth(); B.ensureMonth(state, month); save(); render();
   $('#data-msg').textContent = 'Backup restored.';
 });
-$('#import-csv').addEventListener('click', (e) => { if (!can(pro() ? license : null, 'csvImport')) { e.preventDefault(); upsell('Importing your bank\'s CSV is a Pro feature.'); } });
+$('#import-csv').addEventListener('click', (e) => { if (!can(pro() ? license : null, 'csvImport')) { e.preventDefault(); upsell(limitPrompt('csv'), 'csv'); } });
 $('#import-csv').addEventListener('change', async (e) => {
   const f = e.target.files[0]; if (!f) return;
   const { transactions, skipped, error } = B.importBankCsv(await f.text());
@@ -183,16 +207,21 @@ $('#import-csv').addEventListener('change', async (e) => {
 $('#license-form').addEventListener('submit', (e) => { e.preventDefault(); activate($('#license-key').value); });
 $('#site-link').href = config.siteUrl;
 
-// Returning from Stripe checkout: ?session_id=cs_... activates Pro automatically.
-const sessionId = new URLSearchParams(location.search).get('session_id');
-if (sessionId) {
+// Returning from checkout: ?session_id=cs_... (Stripe) or ?license_key=... activates Pro.
+const returnedKey = keyFromUrl(location.search);
+if (returnedKey) {
   history.replaceState(null, '', location.pathname);
-  activate(sessionId).then((ok) => { if (ok) upsell(); });
+  activate(returnedKey).then((ok) => { $('#data-msg').textContent = ok ? 'Pro is on. Thank you for supporting the app!' : `${reasonText(license.reason)} You can paste your key from the receipt under Upgrade.`; });
 } else if (needsRecheck(license)) {
   verifyLicense(license.key, { endpoint: config.verifyEndpoint, previous: license }).then((l) => { license = l; store.set(LKEY, JSON.stringify(l)); render(); });
 }
 
+initTracking({ config, app: 'budget', page: 'budget' });
 render();
 if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
-if (location.hash === '#upgrade' && !pro()) { history.replaceState(null, '', location.pathname + location.search); upsell('Pro unlocks every bill and deal, calendar reminders, CSV import and more.'); }
-initTracking({ config, app: 'budget', page: 'budget' });
+if (location.hash === '#upgrade' && !pro()) {
+  history.replaceState(null, '', location.pathname + location.search);
+  upsell('', 'link');
+} else if (!returnedKey && !pro() && needsOnboarding(state, store.get(OKEY))) {
+  onboard();
+}

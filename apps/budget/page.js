@@ -1,6 +1,9 @@
 // Small helpers shared by the bill tracker and deal countdown pages.
 import { isActive } from './lib/license.js';
 import { planFor } from './lib/plans.js';
+import { trackEvent, EVENTS } from './lib/track.js';
+import { limitPrompt, pricingHref } from './lib/checkout.js';
+import config from './config.js';
 
 export const $ = (s, root = document) => root.querySelector(s);
 export const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
@@ -30,7 +33,11 @@ export function download(name, text, type) {
   setTimeout(() => URL.revokeObjectURL(a.href), 1000);
 }
 
-/** A message with a link to upgrade in the budget app (index.html#upgrade opens the Pro dialog). */
-export function upsellHtml(text) {
-  return `${esc(text)} <a href="./#upgrade">Get Pro</a> ($3/month or $29 once).`;
+/**
+ * The upgrade prompt shown when a free limit is hit, linking to the pricing page.
+ * `where` names the limit (see LIMIT_PROMPTS) for the Upgrade Shown / Upgrade Click events.
+ */
+export function upsellHtml(where, plan) {
+  trackEvent(EVENTS.upgradeShown, { where });
+  return `${esc(limitPrompt(where, plan))} <a href="${pricingHref(where)}" data-upgrade="${esc(where)}">Get Pro</a> (${esc(config.priceLine || '$3/month or $29 once')}).`;
 }

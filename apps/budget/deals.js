@@ -70,7 +70,7 @@ $('#save').addEventListener('click', () => {
     render();
     $('#deal-msg').textContent = 'Saved. It stays on this device.';
   } catch (err) {
-    $('#deal-msg').innerHTML = err instanceof Deals.LimitError ? upsellHtml(err.message) : esc(err.message);
+    $('#deal-msg').innerHTML = err instanceof Deals.LimitError ? upsellHtml('deals', plan) : esc(err.message);
   }
 });
 
@@ -110,7 +110,7 @@ $('#deals').addEventListener('click', (e) => {
 });
 
 $('#ics').addEventListener('click', () => {
-  if (!plan.reminders) { $('#ics-msg').innerHTML = upsellHtml('Calendar reminders are a Pro feature.'); return; }
+  if (!plan.reminders) { $('#ics-msg').innerHTML = upsellHtml('reminders'); return; }
   const events = Deals.dealReminders(data, today);
   if (!events.length) { $('#ics-msg').textContent = 'Save a deal with a balance and a future end date first.'; return; }
   download('deal-reminders.ics', buildIcs(events, { name: '0% deal reminders' }), 'text/calendar');

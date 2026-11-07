@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { clean, clientReference, tagLink, utmFrom, checkoutUtm, classify, rememberVisit, initTracking, EVENTS } from '../track.js';
+import { clean, clientReference, tagLink, utmFrom, checkoutUtm, classify, rememberVisit, initTracking, EVENTS, trackEvent, isLemonLink } from '../track.js';
 import { APPS, ROOT, expected, sharedFiles } from '../../tools/sync-shared.mjs';
 import { main, tagText, channelFor, bioLinks, wantsUtm } from '../../tools/utm.mjs';
 
@@ -21,6 +21,16 @@ const PY = [
   ['https://buy.stripe.com/abc?client_reference_id=z', { source: 's', medium: 'm', campaign: 'c' },
     'https://buy.stripe.com/abc?client_reference_id=z&utm_source=s&utm_medium=m&utm_campaign=c'],
 ];
+
+test('Lemon Squeezy checkouts are product links and keep the source on the order', () => {
+  const url = 'https://mms.lemonsqueezy.com/buy/2f1a';
+  assert.equal(isLemonLink(url), true);
+  assert.equal(isLemonLink('https://lemonsqueezy.com.evil.top/buy'), false);
+  assert.equal(classify(url), 'product');
+  assert.equal(tagLink(url, { source: 'budget', medium: 'app', campaign: 'pricing' }),
+    `${url}?utm_source=budget&utm_medium=app&utm_campaign=pricing&checkout%5Bcustom%5D%5Bref%5D=budget__app__pricing`);
+  assert.equal(tagLink(url, {}), url);
+});
 
 test('tagLink matches the factory attribution.py output', () => {
   for (const [url, utm, want] of PY) assert.equal(tagLink(url, utm), want);
@@ -104,6 +114,12 @@ test('initTracking loads Plausible and sends click and signup events', () => {
 
   p.listeners.submit({ target: { querySelector: () => ({}), getAttribute: () => 'debt-signup' } });
   assert.deepEqual(p.calls.at(-1), [EVENTS.signup, { props: { brand: 'Money Made Simple', app: 'money-calculators', form: 'debt-signup' } }]);
+
+  const up = { dataset: { upgrade: 'goal-limit' } };
+  p.listeners.click({ target: { closest: (sel) => (sel === '[data-upgrade]' ? up : null) } });
+  assert.deepEqual(p.calls.at(-1), [EVENTS.upgrade, { props: { brand: 'Money Made Simple', app: 'money-calculators', where: 'goal-limit' } }]);
+  assert.equal(trackEvent(EVENTS.upgradeShown, { where: 'bills-limit' }), true);
+  assert.deepEqual(p.calls.at(-1), ['Upgrade Shown', { props: { brand: 'Money Made Simple', app: 'money-calculators', where: 'bills-limit' } }]);
 });
 
 test('utm tool tags own links and checkout, never affiliate links', () => {

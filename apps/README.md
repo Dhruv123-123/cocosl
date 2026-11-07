@@ -8,7 +8,7 @@ HTML, CSS and JavaScript, no framework, no build step needed) and deploy free.
 |---|---|---|---|
 | **Money calculators** (7 tools, including 2026 take-home pay) | Money Made Simple | SEO traffic → email list, HYSA / brokerage / debt affiliates, The 20-Minute Budget product | `money-calculators/` |
 | **Is this a scam?** message checker | Scam Shield | Identity protection, password manager and VPN affiliates, weekly scam-alert list, $9 Family Scam-Proofing Kit | `scam-checker/` |
-| **The 20-Minute Budget** web app | Money Made Simple | Freemium: Pro at $3/month or $29 once via Gumroad or Stripe | `budget/` |
+| **The 20-Minute Budget** web app | Money Made Simple | Freemium: Pro at $3/month or $29 once via Lemon Squeezy, Gumroad or Stripe license keys; first-run setup, upgrade prompts at each free limit, pricing page (`budget/pricing.html`); setup in `budget/CHECKOUT.md` | `budget/` |
 | **Rate My Budget** (8 numbers → score, grade, 3 next moves; anonymous submissions for the video series) | Money Made Simple | Budget app upsell, $19 personal review, content for the "Rate My Budget" series | `budget/rate.html` |
 | **Subscription finder** (upload a bank CSV, see every recurring charge and its yearly cost) | Money Made Simple | Free tool → budget app and Pro upsell, email list | `budget/subscriptions.html` |
 | **Bill negotiation tracker** (bills, promo end dates, call scripts, call log, "saved this year"; finds bills in a bank CSV) | Money Made Simple | Budget Pro feature (free: 3 bills, Pro: every bill + calendar reminders), Bill Cut Kit upsell | `budget/bills.html` |

@@ -7,9 +7,15 @@
 //            Subscriptions is enough). Set the Payment Link's success URL to
 //            https://YOUR-SITE/?session_id={CHECKOUT_SESSION_ID} and the app activates itself.
 //
+//   Lemon Squeezy: set LEMONSQUEEZY_STORE_ID (Settings > Stores, the number) and, optionally,
+//            LEMONSQUEEZY_PRODUCT_IDS (comma-separated). Turn on "Generate license keys" on the
+//            product; buyers get a key in their receipt. No API key is needed to validate.
+//
 // Nothing here takes payments; it only reads whether a purchase is valid.
 
 const GUMROAD_URL = 'https://api.gumroad.com/v2/licenses/verify';
+const LEMON_URL = 'https://api.lemonsqueezy.com/v1/licenses/validate';
+const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const STRIPE_URL = 'https://api.stripe.com/v1/checkout/sessions/';
 
 export async function verifyGumroad(key, { productId, fetchImpl = fetch }) {
@@ -25,6 +31,25 @@ export async function verifyGumroad(key, { productId, fetchImpl = fetch }) {
     if (end && Date.parse(end) <= Date.now()) return { valid: false, reason: 'subscription_ended' };
   }
   return { valid: true, plan: p.recurrence ? `pro-${p.recurrence}` : 'pro-lifetime', email: p.email || null };
+}
+
+export const isLemonKey = (key) => UUID.test(String(key || '').trim());
+
+export async function verifyLemonSqueezy(key, { storeId, productIds = [], fetchImpl = fetch }) {
+  const body = new URLSearchParams({ license_key: key });
+  const res = await fetchImpl(LEMON_URL, { method: 'POST', body, headers: { Accept: 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' } });
+  if (res.status >= 500) throw new Error(`lemonsqueezy ${res.status}`);
+  const data = await res.json().catch(() => ({}));
+  const meta = data.meta || {};
+  // A key from somebody else's store must never unlock this app.
+  if (String(meta.store_id ?? '') !== String(storeId)) return { valid: false, reason: 'not_found' };
+  if (productIds.length && !productIds.includes(String(meta.product_id ?? ''))) return { valid: false, reason: 'not_found' };
+  const status = data.license_key && data.license_key.status;
+  if (status === 'expired') return { valid: false, reason: 'subscription_ended' };
+  if (status === 'disabled') return { valid: false, reason: 'refunded' };
+  if (!data.valid) return { valid: false, reason: 'not_found' };
+  const expires = data.license_key && data.license_key.expires_at;
+  return { valid: true, plan: expires ? 'pro-subscription' : 'pro-lifetime', email: meta.customer_email || null };
 }
 
 export async function verifyStripe(sessionId, { secretKey, fetchImpl = fetch }) {
@@ -53,7 +78,14 @@ export async function verify(licenseKey, { env = process.env, fetchImpl = fetch 
       if (!env.STRIPE_SECRET_KEY) return { status: 503, body: { valid: false, reason: 'stripe_not_configured' } };
       return { status: 200, body: await verifyStripe(key, { secretKey: env.STRIPE_SECRET_KEY, fetchImpl }) };
     }
-    if (!env.GUMROAD_PRODUCT_ID) return { status: 503, body: { valid: false, reason: 'gumroad_not_configured' } };
+    if (isLemonKey(key) && env.LEMONSQUEEZY_STORE_ID) {
+      const productIds = String(env.LEMONSQUEEZY_PRODUCT_IDS || '').split(',').map((x) => x.trim()).filter(Boolean);
+      return { status: 200, body: await verifyLemonSqueezy(key, { storeId: env.LEMONSQUEEZY_STORE_ID, productIds, fetchImpl }) };
+    }
+    if (!env.GUMROAD_PRODUCT_ID) {
+      const reason = isLemonKey(key) ? 'lemonsqueezy_not_configured' : 'gumroad_not_configured';
+      return { status: 503, body: { valid: false, reason } };
+    }
     return { status: 200, body: await verifyGumroad(key, { productId: env.GUMROAD_PRODUCT_ID, fetchImpl }) };
   } catch (err) {
     return { status: 502, body: { valid: false, reason: 'provider_error' } };

@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { verifyLicense, isActive, needsRecheck, OFFLINE_GRACE_MS, RECHECK_MS } from '../lib/license.js';
-import { verify, verifyGumroad, verifyStripe } from '../netlify/functions/verify-license.mjs';
+import { verify, verifyGumroad, verifyStripe, verifyLemonSqueezy, isLemonKey } from '../netlify/functions/verify-license.mjs';
 
 const jsonRes = (data, status = 200) => ({ status, ok: status < 400, json: async () => data });
 
@@ -67,4 +67,37 @@ test('endpoint routes by key type and reports missing config', async () => {
   assert.equal((await verify('cs_test_x', { env: {} })).body.reason, 'stripe_not_configured');
   const r = await verify('ABC-123', { env: { GUMROAD_PRODUCT_ID: 'p' }, fetchImpl: async () => { throw new Error('down'); } });
   assert.equal(r.status, 502);
+});
+
+const LEMON_KEY = '38b1460a-5104-4067-a91d-77b872934d51';
+
+test('lemon squeezy: store and product must match, status maps to reasons', async () => {
+  const call = (data, opts = {}) => verifyLemonSqueezy(LEMON_KEY, { storeId: '42', productIds: opts.products || [], fetchImpl: async (url, o) => {
+    assert.equal(url, 'https://api.lemonsqueezy.com/v1/licenses/validate');
+    assert.match(String(o.body), /license_key=38b1460a/);
+    return jsonRes(data, opts.status || 200);
+  } });
+  const ok = { valid: true, license_key: { status: 'active', expires_at: null }, meta: { store_id: 42, product_id: 7, customer_email: 'a@b.co' } };
+  assert.deepEqual(await call(ok), { valid: true, plan: 'pro-lifetime', email: 'a@b.co' });
+  assert.equal((await call({ ...ok, license_key: { status: 'active', expires_at: '2027-01-01' } })).plan, 'pro-subscription');
+  assert.equal((await call({ ...ok, meta: { ...ok.meta, store_id: 99 } })).valid, false, 'other stores are rejected');
+  assert.equal((await call(ok, { products: ['8'] })).valid, false, 'other products are rejected');
+  assert.equal((await call(ok, { products: ['7', '8'] })).valid, true);
+  assert.equal((await call({ valid: false, license_key: { status: 'expired' }, meta: ok.meta })).reason, 'subscription_ended');
+  assert.equal((await call({ valid: false, license_key: { status: 'disabled' }, meta: ok.meta })).reason, 'refunded');
+  assert.equal((await call({ valid: false, error: 'license_key not found.' }, { status: 404 })).reason, 'not_found');
+  await assert.rejects(call({}, { status: 500 }));
+});
+
+test('endpoint routes UUID keys to Lemon Squeezy when configured', async () => {
+  assert.equal(isLemonKey(LEMON_KEY), true);
+  assert.equal(isLemonKey('ABC-123'), false);
+  assert.equal((await verify(LEMON_KEY, { env: {} })).body.reason, 'lemonsqueezy_not_configured');
+  let hit = '';
+  const fetchImpl = async (url) => { hit = url; return jsonRes({ valid: true, license_key: { status: 'active' }, meta: { store_id: '1', product_id: '2' } }); };
+  const r = await verify(LEMON_KEY, { env: { LEMONSQUEEZY_STORE_ID: '1', LEMONSQUEEZY_PRODUCT_IDS: ' 2 , 3' , GUMROAD_PRODUCT_ID: 'p' }, fetchImpl });
+  assert.equal(r.body.valid, true);
+  assert.match(hit, /lemonsqueezy/);
+  await verify('ABC-123', { env: { LEMONSQUEEZY_STORE_ID: '1', GUMROAD_PRODUCT_ID: 'p' }, fetchImpl });
+  assert.match(hit, /gumroad/, 'Gumroad keys still go to Gumroad');
 });

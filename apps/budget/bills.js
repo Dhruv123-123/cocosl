@@ -67,7 +67,7 @@ function tryAdd(values) {
     save();
     return true;
   } catch (err) {
-    $('#bill-msg').innerHTML = err instanceof Bills.LimitError ? upsellHtml(err.message) : esc(err.message);
+    $('#bill-msg').innerHTML = err instanceof Bills.LimitError ? upsellHtml('bills', plan) : esc(err.message);
     return false;
   }
 }
@@ -126,7 +126,7 @@ $('#sample').addEventListener('click', () => {
 });
 
 $('#ics').addEventListener('click', () => {
-  if (!plan.reminders) { $('#ics-msg').innerHTML = upsellHtml('Calendar reminders are a Pro feature.'); return; }
+  if (!plan.reminders) { $('#ics-msg').innerHTML = upsellHtml('reminders'); return; }
   const events = Bills.billReminders(data, today);
   if (!events.length) { $('#ics-msg').textContent = 'Add a promo end date to a bill first.'; return; }
   download('bill-reminders.ics', buildIcs(events, { name: 'Bill reminders' }), 'text/calendar');

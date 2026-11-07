@@ -9,7 +9,7 @@
 const CLEAN = /[^A-Za-z0-9_.-]+/g;
 export const UTM_KEYS = ['source', 'medium', 'campaign', 'content'];
 export const REF_SEP = '__';
-export const EVENTS = { affiliate: 'Affiliate Click', product: 'Product Click', signup: 'Signup' };
+export const EVENTS = { affiliate: 'Affiliate Click', product: 'Product Click', signup: 'Signup', upgrade: 'Upgrade Click', upgradeShown: 'Upgrade Shown' };
 
 export function clean(value, limit = 60) {
   return String(value ?? '').trim().replace(CLEAN, '-').replace(/^-+|-+$/g, '').slice(0, limit);
@@ -52,6 +52,13 @@ export function isGumroadLink(url) {
   return h === 'gumroad.com' || h.endsWith('.gumroad.com') || h === 'gum.co';
 }
 
+export function isLemonLink(url) {
+  const h = hostOf(url);
+  return h === 'lemonsqueezy.com' || h.endsWith('.lemonsqueezy.com');
+}
+
+export const isCheckoutLink = (url) => isGumroadLink(url) || isStripeLink(url) || isLemonLink(url);
+
 /** `pinterest__social__pin-emergency-fund-3`: Stripe-safe form of the three UTM values. */
 export function clientReference({ source = '', medium = '', campaign = '' } = {}) {
   return [source, medium, campaign]
@@ -59,13 +66,18 @@ export function clientReference({ source = '', medium = '', campaign = '' } = {}
     .join(REF_SEP).slice(0, 200);
 }
 
-/** withUtm, plus client_reference_id on Stripe Payment Links (Stripe drops utm_* at checkout). */
+/**
+ * withUtm, plus a field the checkout keeps on the order (checkouts drop utm_* on the receipt):
+ * client_reference_id on Stripe Payment Links, checkout[custom][ref] on Lemon Squeezy.
+ */
 export function tagLink(url, utm = {}) {
   let out = withUtm(url, utm);
-  if (isStripeLink(out) && !out.includes('client_reference_id=') && (utm.source || utm.medium || utm.campaign)) {
+  if (!(utm.source || utm.medium || utm.campaign)) return out;
+  const field = isStripeLink(out) ? 'client_reference_id' : isLemonLink(out) ? 'checkout[custom][ref]' : '';
+  if (field) {
     const { base, query, hash } = split(out);
     const params = new URLSearchParams(query);
-    params.append('client_reference_id', clientReference(utm));
+    if (!params.has(field)) params.append(field, clientReference(utm));
     out = `${base}?${params}${hash}`;
   }
   return out;
@@ -91,8 +103,17 @@ export function checkoutUtm(visit, app, page = '') {
 /** What a click on this link means: 'affiliate', 'product' or '' (other links). */
 export function classify(href, rel = '') {
   if (/\bsponsored\b/i.test(rel)) return 'affiliate';
-  if (isGumroadLink(href) || isStripeLink(href)) return 'product';
+  if (isCheckoutLink(href)) return 'product';
   return '';
+}
+
+const state = { win: null, base: {} };
+
+/** Send a custom event once initTracking has run (no-op otherwise), e.g. 'Upgrade Shown'. */
+export function trackEvent(name, props = {}) {
+  if (!state.win || typeof state.win.plausible !== 'function') return false;
+  state.win.plausible(name, { props: { ...state.base, ...props } });
+  return true;
 }
 
 /** Remember the first UTM seen in this browser session; returns the one to use. */
@@ -109,8 +130,8 @@ export function rememberVisit(search, storage) {
 /**
  * Turn on analytics for an app page. Does nothing until config.analytics.plausibleDomain is set.
  * - Loads Plausible's outbound-links script (cookieless; counts page views and outbound clicks).
- * - Sends "Affiliate Click", "Product Click" and "Signup" events with brand/app/link props.
- * - Tags Gumroad and Stripe links with UTM at click time so sales are attributed (see checkoutUtm).
+ * - Sends "Affiliate Click", "Product Click", "Signup" and "Upgrade Click" events with brand/app props.
+ * - Tags Gumroad, Stripe and Lemon Squeezy links with UTM at click time so sales are attributed (see checkoutUtm).
  */
 export function initTracking({ config, app, page = '', win = globalThis.window, doc = globalThis.document } = {}) {
   const a = config?.analytics || {};
@@ -127,7 +148,12 @@ export function initTracking({ config, app, page = '', win = globalThis.window, 
   const visit = rememberVisit(win.location?.search, storage);
   const base = { brand: config.brand || '', app };
 
+  state.win = win;
+  state.base = base;
   doc.addEventListener('click', (ev) => {
+    // Any button or link marked data-upgrade="<where>" counts as an upgrade click.
+    const up = ev.target?.closest?.('[data-upgrade]');
+    if (up?.dataset && 'upgrade' in up.dataset) win.plausible(EVENTS.upgrade, { props: { ...base, where: up.dataset.upgrade || page || app } });
     const link = ev.target?.closest?.('a[href]');
     if (!link) return;
     const kind = classify(link.href, link.rel);

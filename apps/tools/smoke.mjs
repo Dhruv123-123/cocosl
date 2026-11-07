@@ -74,8 +74,15 @@ const checks = [
   ['/budget/bills.html', '#bills .bill', async (page) => { await page.fill('#b-name', 'Internet'); await page.fill('#b-monthly', '80'); await page.click('#bill-form button'); }],
   ['/budget/deals.html', '#result .countdown', async (page) => { await page.fill('[name=balance]', '400'); await page.fill('[name=end]', '2030-01-15'); await page.fill('[name=apr]', '29.99'); await page.fill('[name=payment]', '50'); await page.click('#deal-form button[type=submit]'); }],
   ['/budget/rate.html', '#rate-result .grade', async (page) => { await page.click('#rate-form button'); }],
+  ['/budget/pricing.html?from=goals', '#compare tr', async (page) => { if (!(await page.locator('#from').isVisible())) throw new Error('limit message hidden'); }],
   ['/budget/', '#summary', async (page) => {
-    await page.fill('#income', '3200');
+    // First run: the welcome steps set income and a 50/30/20 plan.
+    await page.fill('#welcome-income', '3200');
+    await page.click('#welcome-pay button[type=submit]');
+    await page.click('#welcome-next');
+    await page.click('#welcome [data-step="3"] button');
+    if (await page.locator('#welcome').evaluate((d) => d.open)) throw new Error('welcome did not close');
+    if ((await page.inputValue('#income')) !== '3200') throw new Error('onboarding income not saved');
     await page.fill('#tx-amount', '42.50');
     await page.click('#tx-add');
   }],

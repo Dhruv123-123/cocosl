@@ -3,13 +3,23 @@ export default {
   appName: 'The 20-Minute Budget',
   brand: 'Money Made Simple',
   siteUrl: 'https://moneymadesimple.netlify.app',
+  // Buy buttons for Pro (index.html upgrade dialog and pricing.html). Paste a checkout link from
+  // ONE provider per plan; links containing REPLACE_ME stay hidden. Lemon Squeezy is the easiest
+  // (it handles sales tax as merchant of record and issues license keys):
+  //   Lemon Squeezy  https://STORE.lemonsqueezy.com/buy/VARIANT-ID   + LEMONSQUEEZY_STORE_ID on Netlify
+  //   Gumroad        https://STORE.gumroad.com/l/PRODUCT              + GUMROAD_PRODUCT_ID on Netlify
+  //   Stripe         https://buy.stripe.com/LINK-ID                   + STRIPE_SECRET_KEY on Netlify,
+  //                  success URL https://YOUR-SITE/budget/?session_id={CHECKOUT_SESSION_ID}
+  // Full steps: CHECKOUT.md.
   pricing: {
-    monthly: { label: '$3/month', url: 'https://REPLACE_ME.gumroad.com/l/budget-pro-monthly' },
-    lifetime: { label: '$29 once', url: 'https://REPLACE_ME.gumroad.com/l/budget-pro-lifetime' },
-    // Stripe alternative: paste a Payment Link here and set its success URL to
-    // https://YOUR-SITE/?session_id={CHECKOUT_SESSION_ID}
-    stripe: { label: 'Pay by card', url: '' },
+    monthly: { label: '$3/month', note: 'Cancel any time', url: 'https://REPLACE_ME.lemonsqueezy.com/buy/budget-pro-monthly' },
+    lifetime: { label: '$29 once', note: 'Pay once, keep Pro', best: true, url: 'https://REPLACE_ME.lemonsqueezy.com/buy/budget-pro-lifetime' },
+    stripe: { label: 'Pay by card', note: 'Stripe checkout', url: '' },
   },
+  // Price wording used in upgrade prompts and the pricing page.
+  priceLine: '$3/month or $29 once',
+  // Shown on pricing.html. Your call: set the policy you will honour, or '' to hide it.
+  refundPolicy: 'Changed your mind? Reply to your receipt within 30 days for a full refund.',
   // Email capture for the free subscription finder (same options as the calculators' config).
   email: {
     provider: 'netlify',

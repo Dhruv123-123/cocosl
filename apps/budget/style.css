@@ -122,3 +122,18 @@ details.import{margin-top:10px}details.import summary{cursor:pointer;font-weight
 .alert{border-left:4px solid var(--neg);padding:8px 12px;background:rgba(192,57,43,.08);border-radius:8px}
 .okay{border-left:4px solid var(--green);padding:8px 12px;background:rgba(47,191,113,.1);border-radius:8px}
 .faq h3{font-size:16px;margin:14px 0 4px}
+
+/* Pricing page and onboarding */
+.plans{display:grid;gap:14px;grid-template-columns:1fr}
+@media (min-width:700px){.plans{grid-template-columns:1fr 1fr}}
+.plan-card{display:flex;flex-direction:column;gap:6px;margin:0}
+.plan-card.best{border:2px solid var(--gold)}
+.plan-card .checks{flex:1;padding-left:0;list-style:none}
+.price{font-size:28px;font-weight:800;margin:0}
+.compare td,.compare th{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left}
+.compare td:not(:first-child),.compare th:not(:first-child){width:24%}
+.compare .yes{color:var(--green);font-weight:700}
+.notice{background:var(--card);border-left:4px solid var(--gold);padding:10px 14px;border-radius:8px}
+#welcome .row{margin-top:12px}
+#welcome .pick{margin-top:10px}
+.btn small{display:block;font-weight:400;font-size:12px;opacity:.85}
