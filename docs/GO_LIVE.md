@@ -1,7 +1,7 @@
 # Go live: the one checklist
 
-Written 2026-11-07 for Dhruv and refreshed through the evening (last pass 08:20 UTC: PRs #1–#12 and `main` at
-`9cb0ca4`). This merges every "only you can do this" step from `docs/CREDENTIALS.md`, `docs/QUICKSTART.md`,
+Written 2026-11-07 for Dhruv and refreshed through the evening (last pass 09:10 UTC: PRs #1–#12 and `main` at
+`a57f479`). This merges every "only you can do this" step from `docs/CREDENTIALS.md`, `docs/QUICKSTART.md`,
 `docs/DEPLOY.md`, `launch/LAUNCH_DAY.md`, `launch/VERIFY_BEFORE_POSTING.md`, the open PRs, the commits on `main`
 and the project files in `content-factory/`, with the duplicates removed. Everything else is already built.
 
@@ -24,7 +24,7 @@ Merge in this order (details and current blockers in [PR merge order](#pr-merge-
 **#1 → #3 → #2 → #4 → #5 → #6 → #8 → #12 → #11 → #9 → #10 → #7.**
 
 - [ ] Merge the ones marked ✅ in that order on GitHub (≈ 2 min each). Right now that's **#1, #3, #2, #4, #5,
-      #6, #8, #12, #11, #9, #7**: checked together on top of `main`, all tests pass. Skip the rest until GitHub shows them
+      #6, #8, #12, #11, #7**: checked together on top of `main`, all tests pass. Skip the rest until GitHub shows them
       green; the threads that opened them are fixing them. 15 min
 
 ---
@@ -740,13 +740,13 @@ scratch copy and running the full test suite.
 | 4 | **#4** Website and emails | ✅ safe | |
 | 5 | **#5** Months 1–8, channels, affiliate kit | ✅ safe | |
 | 6 | **#6** Products, Etsy, KDP, ebook | ✅ safe (fixed) | |
-| 7 | **#8** Web apps | ✅ safe | |
-| 8 | **#9** Scam Decoded | ✅ safe (fixed, tested at `308d612`) | merge after #11 |
-| 9 | **#11** Dinero Simple | ✅ safe (tested at `9a0e07b`) | merge after #12 |
-| 10 | **#10** 1099 Money | ⚠️ conflicts with #5 and others | `cli.py`, `channels/config.json`, `pyproject.toml`, `tests/test_pack.py`, `test_business.py`, `test_worker.py`. Merge last, after it brings in `main` again |
+| 7 | **#8** Web apps | ✅ safe (test clash fixed, tested at `12634b8`) | |
+| 8 | **#9** Scam Decoded | ⏳ being fixed | its scam-watch build loads the site's `build.py` under the plain name `build`, which breaks the MMS site tests in a combined run. Merge after #11 once fixed |
+| 9 | **#11** Dinero Simple | ✅ safe (tested at `0562072`) | merge after #12 |
+| 10 | **#10** 1099 Money | ⚠️ conflicts | `brands/scam-decoded.yaml` with #9, and it needs #5's latest head. Merge last, after it brings in `main` and #5 again |
 | 11 | **#12** Ad studio portfolio + listing-video page | ✅ safe | |
 | 12 | **#7** This checklist | ✅ safe | docs only |
 
-**Safe to merge now, in order: #1, #3, #2, #4, #5, #6, #8, #12, #11, #9, #7.** These eleven were merged
-together on top of `main` and the full test suite passed. Then #10 once it has brought in `main` again.
+**Safe to merge now, in order: #1, #3, #2, #4, #5, #6, #8, #12, #11, #7.** These ten were merged
+together on top of `main` and the full test suite passed. Then #9 once its test fix lands, and #10 last.
 If a new PR lands, merge it after these unless its description says otherwise.
