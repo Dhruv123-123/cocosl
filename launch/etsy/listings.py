@@ -33,11 +33,20 @@ MORE = """MORE FROM THE SHOP
 Search "{shop}" on Etsy for the matching budget planner, savings trackers and money guides, or get everything in one of the bundles."""
 
 
-def _desc(hook: str, get: list[str], how: list[str], product: bool = False) -> str:
+def _good_to_know_dated(year: int, n_pdfs: int) -> str:
+    """The printable notes for a dated planner: says how many PDFs ship and that it's dated (not "undated")."""
+    return (GOOD_TO_KNOW_PRINTABLE
+            .replace("- Two PDFs: US Letter (8.5 x 11 in) and A4.",
+                     f"- {n_pdfs} PDFs: Sunday-start and Monday-start, each in US Letter (8.5 x 11 in) and A4.")
+            .replace("- Undated, so you can start any month of any year.",
+                     f"- Dated for {year}: every calendar page has the real {year} dates, with US holidays marked."))
+
+
+def _desc(hook: str, get: list[str], how: list[str], product: bool = False, good: str | None = None) -> str:
     g = "\n".join(f"- {x}" for x in get)
     h = "\n".join(f"{i}. {x}" for i, x in enumerate(how, start=1))
-    return (f"{hook}\n\nWHAT YOU GET\n{g}\n\nHOW IT WORKS\n{h}\n\n"
-            f"{GOOD_TO_KNOW_PRODUCT if product else GOOD_TO_KNOW_PRINTABLE}\n\n{MORE.format(shop=SHOP)}")
+    good = good or (GOOD_TO_KNOW_PRODUCT if product else GOOD_TO_KNOW_PRINTABLE)
+    return f"{hook}\n\nWHAT YOU GET\n{g}\n\nHOW IT WORKS\n{h}\n\n{good}\n\n{MORE.format(shop=SHOP)}"
 
 
 LISTINGS: list[dict] = [
@@ -279,7 +288,7 @@ def _more_listings() -> list[dict]:
         n = len(planner_2027.build(d["year"]))
         out.append(dict(slug=d["slug"], kind="printable", dated=True, name=d["name"], price=d["price"], file_stem=d["file_stem"],
                         title=d["title"], tags=tags(d["tags"], d["pool"]), hook=d["hook"], get=d["get"], how=d["how"],
-                        variants=d["variants"], hero=[11, 10, 1], grid=[1, 3, 4, 5, 6, 8, 10, 11, 12, 46]))
+                        year=d["year"], variants=d["variants"], hero=[11, 10, 1], grid=[1, 3, 4, 5, 6, 8, 10, 11, 12, 46]))
     prices = {x["slug"]: x["price"] for x in LISTINGS + out}
     names = {x["slug"]: x["name"] for x in LISTINGS + out}
     for d in M.BUNDLES:
@@ -302,7 +311,8 @@ seo.apply(LISTINGS)
 
 for it in LISTINGS:
     it.setdefault("category", GUIDE_CAT if it["kind"] == "product" else PRINT_CAT)
-    it["description"] = _desc(it["hook"], it["get"], it["how"], product=it.get("product", False))
+    good = _good_to_know_dated(it["year"], 2 * len(it["variants"])) if it.get("dated") else None
+    it["description"] = _desc(it["hook"], it["get"], it["how"], product=it.get("product", False), good=good)
 BY_SLUG = {it["slug"]: it for it in LISTINGS}
 
 TAG_OK = re.compile(r"^[A-Za-z0-9 '\-]+$")

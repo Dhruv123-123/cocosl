@@ -143,3 +143,11 @@ def test_kdp_journals():
     log = K.book_pages("savings-log")
     assert sum('Week <em>' in p for p in log) == 52 and sum("Quarter <em>" in p for p in log) == 4
     assert sum(range(1, 53)) == 1378
+
+
+def test_dated_planner_listing_is_consistent():
+    """The 2027 planner says it's dated (never "undated") and counts the four PDFs it ships."""
+    import listings as L
+    d = L.BY_SLUG["2027-budget-planner"]["description"]
+    assert "undated" not in d.lower() and "Two PDFs" not in d
+    assert "Dated for 2027" in d and "4 PDFs" in d
