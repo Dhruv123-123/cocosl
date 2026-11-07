@@ -19,6 +19,7 @@ MONTH2 = "month-2/content.json"
 MONTH3 = "month-3/content.json"
 MONTH4 = "month-4/content.json"
 MONTH5 = "month-5/content.json"
+MONTH6 = "month-6/content.json"
 DRIVERS = "drivers/content.json"
 
 
@@ -33,7 +34,7 @@ def test_brand_loads_with_placeholder_affiliates(factory):
 import pytest
 
 
-@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5]), (MONTH4, [22, 13, 4]), (MONTH5, [22, 13, 5]), (DRIVERS, [10, 0, 0])])
+@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5]), (MONTH4, [22, 13, 4]), (MONTH5, [22, 13, 5]), (MONTH6, [22, 14, 4]), (DRIVERS, [10, 0, 0])])
 def test_content_is_valid(factory, name, counts):
     from contentfactory.schemas import Script
     brand = factory.brand("1099-money")
@@ -103,6 +104,23 @@ def test_month_5_has_no_repeat_titles_and_fills_31_days(factory):
     assert {s.day for s in slots} == set(range(1, 32))
     tax_day = [s for s in slots if s.when.date() == date(2027, 4, 15) and s.fmt == "short"]
     assert tax_day and month[tax_day[0].index]["script"]["title"].startswith("Tax day")
+
+
+def test_month_6_has_no_repeat_titles_rotates_formats_and_fills_31_days(factory):
+    earlier = {i["script"]["title"].lower() for n in ("content.json", MONTH1, MONTH2, MONTH3, MONTH4, MONTH5, DRIVERS) for i in _items(n)}
+    month = _items(MONTH6)
+    assert not earlier & {i["script"]["title"].lower() for i in month}
+    slots, leftover = plan(factory.brand("1099-money"), month, date(2027, 5, 3), 31)
+    assert not leftover
+    assert {s.day for s in slots} == set(range(1, 32))
+    shorts = [i for i in month if i["format"] == "short"]
+    assert all(a["format_style"] != b["format_style"] for a, b in zip(shorts, shorts[1:]))  # no style twice in a row
+    assert len({i["format_style"] for i in shorts}) >= 8
+    assert all(i.get("original_element") for i in month if i["format"] == "long")
+    june = [s for s in slots if s.fmt == "short" and month[s.index]["script"]["title"].startswith("June 15")]
+    assert june and date(2027, 5, 31) <= june[0].when.date() <= date(2027, 6, 2)
+    text = " ".join(seg["narration"] for i in month for seg in i["script"]["segments"])
+    assert "seventy-five dollars an hour" in text and "seventy-two and a half cents" in text
 
 
 def test_two_week_plan_fits_and_respects_cap(factory):

@@ -50,7 +50,7 @@ ${body}
 </main>
 <footer>
 <p>Educational content, not tax, legal or financial advice. Features and prices change: check each provider's site before you sign up. Picks are ours; some links are affiliate links, and we may earn a commission at no cost to you. That never changes the order.</p>
-<p>1099 Money · get paid, keep more, never fear April. Written with help from AI tools. <a href="${pre}about/">About these pages</a></p>
+<p>1099 Money · get paid, keep more, never fear April. Written with help from AI tools. <a href="${pre}about/">About these pages</a> · <a href="${pre}how-we-make-money/">How we make money</a></p>
 </footer>
 <script type="module">
 import config from '${pre}config.js';
@@ -172,7 +172,7 @@ ${editor}
 <p>Pages are drafted with help from AI tools. The tax figures come from IRS, SSA and healthcare.gov publications, and each page names its sources or the form it relies on. A person decides what gets published and when, and each comparison page shows the date it went up. Figures are for the 2026 tax year and are re-checked each January.</p>
 <p>The calculators run entirely in your browser. Nothing you type is sent anywhere.</p>
 <h2>How the site makes money</h2>
-<p>Some links on the comparison pages are affiliate links, labeled on the page: we may earn a commission at no cost to you. We also sell our own spreadsheets and templates. Neither changes which tools we pick or the order they're in, and every comparison page says how its picks were made.</p>
+<p>Some links on the comparison pages are affiliate links, labeled on the page: we may earn a commission at no cost to you. We also sell our own spreadsheets and templates. Neither changes which tools we pick or the order they're in, and every comparison page says how its picks were made. The full list is on <a href="${pre}how-we-make-money/">How we make money</a>.</p>
 <h2>What this isn't</h2>
 <p>This is educational content, not tax, legal or financial advice. For your own situation, check irs.gov or talk to a CPA or enrolled agent.</p>
 </section>`;
@@ -181,13 +181,70 @@ ${editor}
   return ['about/', shell({ title: 'About 1099 Money: How These Pages Are Made', description: 'What 1099 Money is, how its tax pages and calculators are made and checked, and how the site makes money.', path: 'about/', pre, body, ld, current: 'about/' })];
 }
 
-const ALL_PATHS = ['', 'q4/', 'rate-calculator/', 'deduction-finder/', 'mileage/', 'free/', 'compare/', ...pages.map((p) => `compare/${p.slug}/`), 'about/'];
+// "How we make money": built from config.js, so it only lists products that are on sale, affiliate partners
+// whose links are live, and sponsors that exist. Re-run the build after changing config.js.
+// research/scouting/faceless-teardown.md (PR #2), change 7.
+const isLive = (url) => typeof url === 'string' && /^https?:\/\//.test(url) && !url.includes('REPLACE_ME');
+const PARTNER_NAMES = Object.fromEntries(pages.flatMap((p) => p.providers)
+  .filter((x) => x && x.aff).map((x) => [x.aff, x.name]));
+
+export function moneyFacts(cfg = config) {
+  const products = [cfg.product, ...(cfg.upsells || [])].filter(Boolean)
+    .map((x) => ({ name: x.name, price: x.price, onSale: isLive(x.url) }));
+  const partners = [...new Set(Object.entries(cfg.affiliates || {})
+    .filter(([, v]) => isLive(v.url)).map(([k]) => PARTNER_NAMES[k] || k))].sort();
+  const sponsors = (cfg.disclosures && cfg.disclosures.sponsors) || [];
+  return { products, partners, sponsors, analytics: Boolean(cfg.analytics && cfg.analytics.plausibleDomain) };
+}
+
+function moneyPage() {
+  const pre = '../';
+  const f = moneyFacts();
+  const li = (xs) => `<ul>\n${xs.map((x) => `<li>${x}</li>`).join('\n')}\n</ul>`;
+  const products = li(f.products.map((x) => `<b>${esc(x.name)}</b>, ${esc(x.price)}${x.onSale ? '' : ' (not on sale yet)'}`));
+  const partners = f.partners.length
+    ? `<p>We currently have affiliate partnerships with:</p>\n${li(f.partners.map(esc))}\n<p>If you sign up through one of their buttons on a comparison page, we may earn a commission, at no extra cost to you. Those buttons are labeled on the page.</p>`
+    : '<p>We have no active affiliate partnerships right now. Buttons on the comparison pages go straight to each provider\'s own site, and we earn nothing from them. When that changes, partners will be listed here and every affiliate button will be labeled.</p>';
+  const sponsors = f.sponsors.length
+    ? `<p>Current sponsors:</p>\n${li(f.sponsors.map(esc))}\n<p>Sponsored videos and posts are labeled as paid promotion on the platform and in the description.</p>`
+    : '<p>None. If that changes, sponsors will be listed here, and sponsored videos and posts will be labeled as paid promotion.</p>';
+  const body = `<h1>How 1099 Money makes money</h1>
+<p class="lede">Everything on this site is free to use. Here's exactly how it pays for itself, and what we don't do for money.</p>
+<section class="prose">
+<h2>1. Our own products</h2>
+<p>We sell spreadsheets, templates and guides that do the same math as the free tools in more depth. This is the main way the site is meant to earn.</p>
+${products}
+<p>The free calculators never need a purchase, and they aren't cut down to push you toward one.</p>
+<h2>2. Affiliate links</h2>
+${partners}
+<p>An affiliate payment doesn't change which tools a comparison page includes or the order they're in. Each comparison page says how its picks were made, and some picks can never pay us, like HealthCare.gov and a local CPA or enrolled agent.</p>
+<h2>3. Sponsors</h2>
+${sponsors}
+<h2>What we don't do</h2>
+<ul>
+<li>We don't take money for a review, a better position in a comparison, or a mention in a guide.</li>
+<li>We don't give investment or trading tips, and we don't sell courses that promise income.</li>
+<li>We don't sell or rent email addresses. Emails come from us, about taxes and money, and every one has a one-click unsubscribe.</li>
+<li>We never ask for your Social Security number, bank details or tax documents.</li>
+<li>Calculator inputs stay in your browser. The one exception: if you ask the deduction finder to email you your list, the items you ticked are sent with your email address.</li>
+</ul>
+<h2>How AI is used</h2>
+<p>Pages, posts and videos are drafted with help from AI tools, then checked against IRS, SSA and healthcare.gov sources before they're published. Video narration may use an AI voice. A person decides what goes up. See <a href="${pre}about/">About these pages</a> for how pages are made and checked.</p>
+<h2>What we collect</h2>
+<p>${f.analytics ? 'We count visits with Plausible, which uses no cookies and doesn\'t track you across sites. ' : ''}If you sign up for the free calendar or the deduction list, we keep your email address (and, for the list, the items you ticked) to send it and the reminders. That's all.</p>
+<p class="tiny">This page is built from the same settings file as the rest of the site, so the lists above update when a product goes on sale or a partnership starts.</p>
+</section>`;
+  const ld = [breadcrumbs([['1099 Money', ''], ['How we make money', 'how-we-make-money/']])];
+  return ['how-we-make-money/', shell({ title: 'How 1099 Money Makes Money: Products, Affiliates, Sponsors', description: 'Exactly how 1099 Money pays for its free tax tools: our own products, labeled affiliate links, sponsors (none yet), and what we never do for money.', path: 'how-we-make-money/', pre, body, ld, current: 'how-we-make-money/' })];
+}
+
+const ALL_PATHS = ['', 'q4/', 'rate-calculator/', 'deduction-finder/', 'mileage/', 'free/', 'compare/', ...pages.map((p) => `compare/${p.slug}/`), 'about/', 'how-we-make-money/'];
 
 // today: null builds every page (the committed files); a YYYY-MM-DD builds only what's due by then.
 export function build(today = null) {
   const due = (path) => !today || released(path, today);
   const live = pages.filter((p) => due(`compare/${p.slug}/`));
-  const out = [hubPage(live), ...live.map(comparePage), aboutPage()].map(([p, html]) => [`${p}index.html`, html]);
+  const out = [hubPage(live), ...live.map(comparePage), aboutPage(), moneyPage()].map(([p, html]) => [`${p}index.html`, html]);
   out.push(['sitemap.xml', sitemap(ALL_PATHS.filter(due))]);
   return out;
 }

@@ -7,7 +7,7 @@ import { pages } from './compare-data.mjs';
 export const LAUNCH = '2026-11-16';
 
 export const releases = {
-  '': LAUNCH, 'free/': LAUNCH, 'free/thanks/': LAUNCH, 'compare/': LAUNCH, 'about/': LAUNCH, 'q4/': LAUNCH, 'rate-calculator/': LAUNCH,
+  '': LAUNCH, 'free/': LAUNCH, 'free/thanks/': LAUNCH, 'compare/': LAUNCH, 'about/': LAUNCH, 'q4/': LAUNCH, 'rate-calculator/': LAUNCH, 'how-we-make-money/': LAUNCH,
   ...Object.fromEntries(pages.map((p) => [`compare/${p.slug}/`, p.published])),
   'mileage/': '2026-12-21',
   'deduction-finder/': '2026-12-28',

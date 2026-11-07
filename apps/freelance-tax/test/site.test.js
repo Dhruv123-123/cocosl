@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import config from '../config.js';
 import { pages } from '../tools/compare-data.mjs';
-import { build, notYet } from '../tools/build-pages.mjs';
+import { build, notYet, moneyFacts } from '../tools/build-pages.mjs';
 import { releases, LAUNCH } from '../tools/schedule.mjs';
 import { audit, LIMIT_SHARED } from '../tools/seo-audit.mjs';
 import { tagCheckout, pageName, live } from '../site.js';
@@ -76,7 +76,25 @@ test('release build leaves out pages that are not due yet', () => {
 });
 
 test('every page links to about/', () => {
-  for (const f of ['index.html', 'q4/index.html', 'rate-calculator/index.html', 'deduction-finder/index.html', 'mileage/index.html', 'free/index.html', 'free/thanks/index.html', 'compare/index.html', 'about/index.html']) {
-    assert.match(readFileSync(new URL(`../${f}`, import.meta.url), 'utf8'), /href="(\.\.\/)*about\/">About these pages/, f);
+  for (const f of ['index.html', 'q4/index.html', 'rate-calculator/index.html', 'deduction-finder/index.html', 'mileage/index.html', 'free/index.html', 'free/thanks/index.html', 'compare/index.html', 'about/index.html', 'how-we-make-money/index.html']) {
+    const html = readFileSync(new URL(`../${f}`, import.meta.url), 'utf8');
+    assert.match(html, /href="(\.\.\/)*about\/">About these pages/, f);
+    assert.match(html, /href="(\.\.\/)*how-we-make-money\/">How we make money/, f);
   }
+});
+
+test('how-we-make-money/ only lists what is true in config.js', () => {
+  const none = moneyFacts(config);
+  assert.ok(none.products.length === 3 && none.products.every((p) => !p.onSale), 'placeholder store links: nothing on sale yet');
+  assert.deepEqual(none.partners, []);
+  assert.deepEqual(none.sponsors, []);
+  const html = build().find(([f]) => f === 'how-we-make-money/index.html')[1];
+  assert.match(html, /no active affiliate partnerships/);
+  assert.match(html, /not on sale yet/);
+  const later = moneyFacts({ ...config, product: { ...config.product, url: 'https://x.gumroad.com/l/t' },
+    affiliates: { ...config.affiliates, freshbooks: { url: 'https://fb.example/ref' }, found: { url: 'https://found.example/ref' } },
+    disclosures: { sponsors: ['Example Co'] } });
+  assert.equal(later.products[0].onSale, true);
+  assert.deepEqual(later.partners, ['Found', 'FreshBooks']);
+  assert.deepEqual(later.sponsors, ['Example Co']);
 });

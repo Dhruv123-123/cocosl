@@ -8,6 +8,7 @@
 | `q4/`, `lib/q4.js` | January 15 (Q4) estimated payment calculator: the Jan 15, 2027 amount, the catch-up share for missed quarters, the file-by-Feb-1 alternative, what's left for April |
 | `rate-calculator/`, `lib/rate.js` | Freelance rate calculator: take-home + health + retirement + costs → profit needed after 2026 SE and income tax → hourly floor, day rate, revenue per month, set-aside %. Same method as the paid kit's Rate Calculator sheet ($55K take-home → $75/hour) |
 | `mileage/`, `lib/mileage.js` | Gig-driver mileage deduction calculator (72.5¢/mile for 2026): tax saved by logged miles, set-aside per payout and per delivery, own log vs the app's miles |
+| `how-we-make-money/` | Built from `config.js`: our products (and whether each is on sale), affiliate partners whose links are live, sponsors (`disclosures.sponsors`, none yet), what we don't do for money, how AI is used, what we collect. Linked from every footer. Pinned-post versions: `launch/1099-money/distribution/PINNED_POSTS.md` |
 | `about/` | Who writes the site, how pages are made (AI-assisted, sourced, dated), how it makes money |
 | `free/`, `free/thanks/` | Lead magnet landing page and download page |
 | `emails/` | 7-email welcome sequence + 3 buyer emails |

@@ -77,6 +77,9 @@ export default {
     stride: { url: 'https://REPLACE_ME/stride' },
   },
 
+  // Sponsors, listed on how-we-make-money/. Add a name only once a deal is signed; label every sponsored post.
+  disclosures: { sponsors: [] },
+
   // Plausible (cookieless). Add this domain in Plausible with the goals in docs/UTM.md section 3.
   // Empty turns analytics off. Never loads on localhost.
   analytics: { plausibleDomain: '1099money.netlify.app', plausibleHost: 'https://plausible.io' },
