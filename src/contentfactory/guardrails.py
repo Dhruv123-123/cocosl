@@ -139,6 +139,55 @@ def check_assets_licensed(assets: dict) -> Check:
     return Check("asset_rights", "ok", "All assets generated or licensed")
 
 
+NO_REPOST_PLATFORMS = ("instagram",)
+_ON_PLATFORM = ("queued", "publishing", "published", "needs_check", "manual")
+
+
+def _media_fingerprint(assets: dict, output_dir) -> str:
+    """sha1 of the post's main media file (video, else first slide), '' if there's none on disk."""
+    import hashlib
+    from pathlib import Path
+    rel = assets.get("video") or next(iter(assets.get("slides") or []), None)
+    if not rel or output_dir is None:
+        return ""
+    path = Path(output_dir) / rel
+    if not path.is_file():
+        return ""
+    h = hashlib.sha1()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def check_no_repost(db: DB, post: dict, platform: str, exclude_pub_id: int | None = None,
+                    output_dir=None, block_at: float = 0.6) -> Check:
+    """Instagram stops recommending accounts that repost (Apr 2026, now photos and carousels too).
+    Blocks a second Instagram publication of the same post, the same media file posted by any of our
+    accounts, or a script that's a near-copy of one already on Instagram (any brand)."""
+    if platform not in NO_REPOST_PLATFORMS:
+        return Check("no_repost", "ok", f"{platform}: no repost rule")
+    marks = ",".join("?" * len(_ON_PLATFORM))
+    same = db.query(f"SELECT id, status FROM publications WHERE post_id = ? AND platform = ? AND id != ? "
+                    f"AND status IN ({marks})", [post["id"], platform, exclude_pub_id or -1, *_ON_PLATFORM])
+    if same:
+        return Check("no_repost", "block", f"post #{post['id']} is already on {platform} "
+                     f"(publication #{same[0]['id']}, {same[0]['status']}); Instagram penalises reposts")
+    others = db.query(f"""SELECT DISTINCT s.id, s.brand, s.script, s.assets FROM posts s JOIN publications p ON p.post_id = s.id
+                          WHERE p.platform = ? AND s.id != ? AND p.status IN ({marks})
+                          ORDER BY s.id DESC LIMIT 500""", [platform, post["id"], *_ON_PLATFORM])
+    fp = _media_fingerprint(post.get("assets") or {}, output_dir)
+    mine = shingles(script_text(post.get("script") or {}))
+    for o in others:
+        if fp and _media_fingerprint(o["assets"] or {}, output_dir) == fp:
+            return Check("no_repost", "block", f"same media file as post #{o['id']} ({o['brand']}), already on "
+                         f"{platform}; make a new cut instead of reposting")
+        if mine and jaccard(mine, shingles(script_text(o["script"] if isinstance(o["script"], dict) else {}))) >= block_at:
+            return Check("no_repost", "block", f"near-copy of post #{o['id']} ({o['brand']}), already on {platform}; "
+                         "Instagram treats that as a repost")
+    return Check("no_repost", "ok", "original on Instagram")
+
+
 def check_cadence(db: DB, brand: BrandProfile, platform: str, when: datetime) -> Check:
     """Keep posting volume human-scale. Floods of near-identical uploads are
     exactly what spam classifiers look for. Days are the brand's local days,
