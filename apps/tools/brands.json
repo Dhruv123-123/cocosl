@@ -1,0 +1,14 @@
+{
+  "_note": "Where each brand's links point. Used by tools/utm.mjs. Edit the URLs once the sites are live.",
+  "platforms": ["instagram", "tiktok", "youtube", "pinterest", "x", "threads", "facebook"],
+  "brands": [
+    { "slug": "money-made-simple", "name": "Money Made Simple", "site": "https://moneymadesimple.netlify.app", "bio_path": "/links/",
+      "apps": ["https://moneymadesimple.netlify.app"] },
+    { "slug": "scam-decoded", "name": "Scam Decoded", "site": "https://scamdecoded.netlify.app", "bio_path": "/links/",
+      "apps": ["https://scamshield.netlify.app"] },
+    { "slug": "dinero-simple", "name": "Dinero Simple", "site": "https://dinerosimple.netlify.app", "bio_path": "/links/",
+      "apps": [] },
+    { "slug": "1099-money", "name": "1099 Money", "site": "https://1099money.netlify.app", "bio_path": "/links/",
+      "apps": [] }
+  ]
+}

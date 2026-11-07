@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Holiday Budget Planner: Gift List, Spending Cap and BNPL True Cost | Money Made Simple</title>
+<meta name="description" content="Plan holiday spending before you shop: a gift list with a budget per person, a total cap, extras like travel and food, and what buy now, pay later really costs. Free and private: saved in your browser only.">
+<meta property="og:title" content="Plan the holidays without a January hangover">
+<meta property="og:description" content="Gift list, per-person budgets, a total cap and the true cost of buy now, pay later. Free and private.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Holiday spending planner","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How much should I spend on holiday gifts?","acceptedAnswer":{"@type":"Answer","text":"Start from what you can pay in cash by January without touching your emergency fund or bills. Set that as your cap, split it between the people on your list, and leave room for travel, food and wrapping."}},
+{"@type":"Question","name":"Is buy now, pay later free?","acceptedAnswer":{"@type":"Answer","text":"Pay-in-4 plans usually charge no interest if every payment is on time, but late fees can apply. Longer monthly plans often charge interest. Several plans at once are easy to lose track of, and the payments land in January and February."}}
+]}</script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="./" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Holiday planner</span></a>
+  <span class="badge">Free</span>
+</header>
+<main>
+  <h1 class="page-title">Plan the holidays without a January hangover</h1>
+  <p class="lede">Set a cap, give everyone on your list a budget, and add gifts as you find them. We'll keep the total honest, including what buy now, pay later really costs. Saved in this browser only.</p>
+
+  <section class="card">
+    <div class="head"><h2>1. Your total cap</h2></div>
+    <label class="inline">The most you'll spend this season ($) <input id="cap" inputmode="decimal" placeholder="800"></label>
+    <div id="cap-bar"></div>
+    <p class="tiny">Pick a number you can pay in cash by January without touching bills or your emergency fund.</p>
+  </section>
+
+  <section id="stats" class="stats" aria-live="polite"></section>
+  <ul id="warnings" class="warnings" aria-live="polite"></ul>
+
+  <section class="card">
+    <h2>2. Who's on your list?</h2>
+    <form id="person-form" class="inline-form">
+      <input name="name" maxlength="40" placeholder="Name" aria-label="Name" required>
+      <input name="budget" inputmode="decimal" placeholder="Budget $" aria-label="Budget for this person">
+      <button class="btn small">Add person</button>
+    </form>
+    <p id="person-msg" class="tiny" aria-live="polite"></p>
+    <div id="people"></div>
+  </section>
+
+  <section class="card">
+    <h2>3. Add a gift</h2>
+    <form id="gift-form" class="deal-form">
+      <label>For <select name="personId" id="g-person"></select></label>
+      <label>Gift <input name="item" maxlength="80" required placeholder="Wireless headphones"></label>
+      <label>Price ($) <input name="price" inputmode="decimal" required placeholder="59.99"></label>
+      <label>How you'll pay <select name="pay" id="g-pay"></select></label>
+      <label class="bnpl-only" hidden>Plan type <select name="bnplType" id="g-bnpl"></select></label>
+      <label class="bnpl-monthly" hidden>Number of monthly payments <input name="months" type="number" min="2" max="60" value="6"></label>
+      <label class="bnpl-monthly" hidden>Plan APR (%) <input name="apr" inputmode="decimal" value="29.99"></label>
+      <label class="pick full"><input type="checkbox" name="bought"> Already bought</label>
+      <div class="row full"><button class="btn" type="submit">Add gift</button></div>
+    </form>
+    <p id="gift-msg" class="tiny" aria-live="polite"></p>
+  </section>
+
+  <section class="card">
+    <h2>4. Everything else</h2>
+    <form id="extra-form" class="inline-form">
+      <select name="kind" id="e-kind" aria-label="Kind"></select>
+      <input name="amount" inputmode="decimal" placeholder="Amount $" aria-label="Amount" required>
+      <button class="btn small">Add</button>
+    </form>
+    <p class="tiny">Travel, hosting, decorations, cards and wrapping add up fast. Count them in the cap.</p>
+    <ul id="extras" class="plain-list"></ul>
+  </section>
+
+  <section id="bnpl" class="card" hidden></section>
+
+  <section class="card">
+    <div class="row">
+      <button id="backup" class="btn ghost small" type="button">Download backup</button>
+      <label class="btn ghost small file">Restore<input id="restore" type="file" accept="application/json,.json" hidden></label>
+      <button id="reset" class="btn ghost small" type="button">Start a new year</button>
+    </div>
+    <p id="data-msg" class="tiny" aria-live="polite"></p>
+  </section>
+
+  <section class="card pro-slot">
+    <h2>Make next December easier</h2>
+    <p>Put a little aside each month: add a "Holidays" goal in the free <a href="./">20-Minute Budget</a>. Budget Pro adds unlimited goals, every past and future month, and a countdown for 0% deals so a holiday purchase never turns into back-dated interest.</p>
+    <div class="row"><a class="btn small" href="./" data-upgrade="holiday-app">Open the budget app</a><a class="btn ghost small" href="pricing.html?from=holiday" data-upgrade="holiday">See Budget Pro</a></div>
+  </section>
+
+  <section class="card faq">
+    <h2>Questions</h2>
+    <h3>How much should I spend on holiday gifts?</h3>
+    <p>Start from what you can pay in cash by January without touching your emergency fund or bills. Set that as your cap, split it between the people on your list, and leave room for travel, food and wrapping.</p>
+    <h3>Is buy now, pay later free?</h3>
+    <p>Pay-in-4 plans usually charge no interest if every payment is on time, but late fees can apply. Longer monthly plans often charge interest. Several plans at once are easy to lose track of, and the payments land in January and February.</p>
+  </section>
+</main>
+<footer><p><a href="./">Budget</a> · <a href="deals.html">0% deal countdown</a> · Not financial advice. Nothing you type is sent anywhere. Made by <a id="site-link" href="#">Money Made Simple</a>.</p></footer>
+<script type="module" src="holiday.js"></script>
+</body>
+</html>

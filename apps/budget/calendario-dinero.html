@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calendario de dinero gratis: fechas de impuestos, Black Friday y recordatorios de ahorro</title>
+<meta name="description" content="Un archivo de calendario gratis con las fechas de dinero de los próximos 12 meses: impuestos, Black Friday, el reinicio de enero y el reto de ahorro. Se agrega a Google, Apple u Outlook.">
+<meta property="og:title" content="Tu calendario de dinero para los próximos 12 meses">
+<meta property="og:description" content="Un archivo de calendario gratis con las fechas de dinero de los próximos 12 meses: impuestos, Black Friday, el reinicio de enero y el reto de ahorro. Se agrega a Google, Apple u Outlook.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="alternate" hreflang="en" href="money-calendar.html">
+<link rel="alternate" hreflang="es" href="calendario-dinero.html">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Tu calendario de dinero para los próximos 12 meses","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="module" src="lib/embed-page.js"></script>
+</head>
+<body class="mc">
+<header class="top">
+  <a class="logo" href="../" style="color:inherit;text-decoration:none"><span class="mark">$</span><span>De <span id="brand">Money Made Simple</span></span></a>
+  <a class="badge" href="money-calendar.html" hreflang="en" lang="en">English</a>
+</header>
+<main>
+  <h1 class="page-title">Tu calendario de dinero para los próximos 12 meses</h1>
+  <p class="lede">Fechas de impuestos, Black Friday, el reinicio de dinero de enero y más, como recordatorios en tu teléfono. Elige lo que quieres, descarga un archivo y ábrelo para agregar todas las fechas a Google Calendar, Apple Calendar u Outlook. Sin registrarte.</p>
+  <section class="card">
+    <h2>Qué incluir</h2>
+    <div id="groups" class="mc-groups"></div>
+    <div class="row" style="margin-top:12px"><button id="download" class="btn" type="button">Descargar el calendario (.ics)</button><span id="count" class="tiny" aria-live="polite"></span></div>
+    <p id="done" class="tiny" role="status"></p>
+  </section>
+  <section class="card">
+    <h2 id="h-next">Lo que viene</h2>
+    <ul id="preview" class="mc-list" tabindex="0" aria-labelledby="h-next"></ul>
+  </section>
+  <section class="card">
+    <h2>Cómo agregarlo</h2>
+    <p><b>iPhone:</b> abre el archivo descargado y toca Agregar todo. <b>Android o Google Calendar:</b> en una computadora, entra a calendar.google.com, Configuración, Importar, y elige el archivo. <b>Outlook:</b> abre el archivo o usa Archivo, Abrir, Importar. Cada fecha tiene un recordatorio a las 9 a.m.</p>
+  </section>
+</main>
+<footer><p><a href="../es/">Todas las herramientas</a> · <a href="bill-calendar/es.html">Calendario de pagos</a> · <a href="reto-ahorro.html">Reto de 52 semanas</a> · Fechas revisadas con los calendarios del IRS y HealthCare.gov. No es asesoría de impuestos.</p></footer>
+<script type="module" src="money-calendar.js"></script>
+</body>
+</html>

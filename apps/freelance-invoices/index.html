@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Freelance Invoice Tracker and Late Fee Calculator, Free | 1099 Money</title>
+<meta name="description" content="Free invoice tracker for freelancers: see what's due, what's late and the late fee owed under your terms, then send a polite payment reminder email in one click. No sign-up; nothing leaves your browser.">
+<meta property="og:title" content="Get paid on time: a free invoice tracker and late fee calculator">
+<meta property="og:description" content="Track every invoice, work out late fees and send polite reminder emails. Free and private.">
+<meta name="theme-color" content="#14213d">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Freelance invoice tracker and late fee calculator","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Can I charge a late fee on an invoice?","acceptedAnswer":{"@type":"Answer","text":"Generally only if the client agreed to it before the work, in your contract or in the payment terms on the invoice. Many freelancers use 1% to 1.5% a month on the unpaid amount. Some states limit late fees and interest, so check your state's rules."}},
+{"@type":"Question","name":"How do I ask a client to pay a late invoice politely?","acceptedAnswer":{"@type":"Answer","text":"Start friendly: assume it slipped through the cracks, restate the invoice number, amount and due date, and include a way to pay. Get firmer at two weeks late, ask for a date, and offer a payment plan. At 30 days, send a final notice that says what happens next."}},
+{"@type":"Question","name":"What does Net 30 mean?","acceptedAnswer":{"@type":"Answer","text":"The invoice is due 30 days after the invoice date. Net 15 is 15 days, and due on receipt means it's due right away."}}
+]}</script>
+</head>
+<body>
+<header class="top">
+  <div class="logo"><span class="mark">1099</span><span>Invoice tracker</span></div>
+  <span class="badge">Free</span>
+</header>
+<main>
+  <h1 class="page-title">Get paid on time, without the awkward emails</h1>
+  <p class="lede">Add your invoices to see what's due, what's late and the late fee owed under your terms. When a client is late, we write a polite reminder for you to send. Everything stays in this browser.</p>
+
+  <section id="stats" class="stats" aria-live="polite"></section>
+
+  <section class="card">
+    <h2>Add an invoice</h2>
+    <form id="inv-form" class="deal-form">
+      <label>Client <input name="client" maxlength="80" required placeholder="Northwind Studio"></label>
+      <label>Client email <input name="clientEmail" type="email" maxlength="120" placeholder="ap@northwind.com"></label>
+      <label>Invoice number <input name="number" maxlength="30" placeholder="2026-014"></label>
+      <label>Project <input name="project" maxlength="120" placeholder="October website updates"></label>
+      <label>Amount ($) <input name="amount" inputmode="decimal" required placeholder="1,800"></label>
+      <label>Invoice date <input name="issued" type="date" required></label>
+      <label>Payment terms <select name="terms" id="f-terms"></select></label>
+      <label id="due-wrap" hidden>Due date <input name="due" type="date"></label>
+      <label>Late fee in your terms <select name="feeType" id="f-fee"></select></label>
+      <label class="fee-percent" hidden>Late fee per month (%) <input name="feeRate" inputmode="decimal" value="1.5"></label>
+      <label class="fee-flat" hidden>Flat late fee ($) <input name="feeFlat" inputmode="decimal" placeholder="25"></label>
+      <label class="fee-any" hidden>Grace period (days) <input name="grace" type="number" min="0" max="60" value="0"></label>
+      <label class="pick full"><input type="checkbox" name="sentNow" checked> I've already sent it to the client</label>
+      <div class="row full"><button class="btn" type="submit">Add invoice</button></div>
+    </form>
+    <p id="form-msg" class="tiny" aria-live="polite"></p>
+    <p class="tiny">Only charge a late fee your client agreed to in your contract or invoice terms, and check your state's limits.</p>
+  </section>
+
+  <section class="card">
+    <div class="head"><h2>My invoices</h2><span class="tiny">Most urgent first</span></div>
+    <div id="invoices"></div>
+    <div class="row" style="margin-top:12px">
+      <button id="ics" class="btn small" type="button">Add due dates to my calendar</button>
+      <button id="csv" class="btn ghost small" type="button">Export CSV</button>
+      <button id="backup" class="btn ghost small" type="button">Download backup</button>
+      <label class="btn ghost small file">Restore<input id="restore" type="file" accept="application/json,.json" hidden></label>
+    </div>
+    <p id="data-msg" class="tiny" aria-live="polite"></p>
+  </section>
+
+  <section class="card">
+    <h2>Your details for reminder emails</h2>
+    <form id="me-form" class="deal-form">
+      <label>Your name <input name="name" maxlength="80" autocomplete="name"></label>
+      <label>Business name <input name="business" maxlength="80" autocomplete="organization"></label>
+      <label class="full">How to pay you <input name="payHow" maxlength="300" placeholder="A payment link, or 'bank transfer details are on the invoice'"></label>
+    </form>
+    <p class="tiny">Saved in this browser only.</p>
+  </section>
+
+  <dialog id="reminder" aria-labelledby="rem-title">
+    <form method="dialog" class="close"><button aria-label="Close">×</button></form>
+    <h2 id="rem-title">Reminder email</h2>
+    <div id="stages" class="tabs" role="tablist"></div>
+    <label>Subject <input id="rem-subject"></label>
+    <label>Email <textarea id="rem-body" rows="14"></textarea></label>
+    <div class="row">
+      <a id="rem-mail" class="btn small" href="#">Open in my email app</a>
+      <button id="rem-copy" class="btn ghost small" type="button">Copy</button>
+      <button id="rem-log" class="btn ghost small" type="button">I sent it</button>
+    </div>
+    <p class="tiny">Read it and edit anything before you send it. Nothing is sent from here.</p>
+  </dialog>
+
+  <section id="product" class="card" hidden></section>
+
+  <section class="card signup-box">
+    <h2>Freelance money, one email a week</h2>
+    <p>Getting paid, setting rates and quarterly taxes, in plain English. Free.</p>
+    <form class="signup inline-form" name="freelance-invoices" method="POST" data-netlify="true" netlify-honeypot="website">
+      <input type="hidden" name="form-name" value="freelance-invoices">
+      <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+      <input type="email" name="email" placeholder="you@example.com" required autocomplete="email" aria-label="Email">
+      <button class="btn small">Sign me up</button>
+    </form>
+  </section>
+
+  <section class="card faq">
+    <h2>Questions</h2>
+    <h3>Can I charge a late fee on an invoice?</h3>
+    <p>Generally only if the client agreed to it before the work, in your contract or in the payment terms on the invoice. Many freelancers use 1% to 1.5% a month on the unpaid amount. Some states limit late fees and interest, so check your state's rules.</p>
+    <h3>How do I ask a client to pay a late invoice politely?</h3>
+    <p>Start friendly: assume it slipped through the cracks, restate the invoice number, amount and due date, and include a way to pay. Get firmer at two weeks late, ask for a date, and offer a payment plan. At 30 days, send a final notice that says what happens next.</p>
+    <h3>What does Net 30 mean?</h3>
+    <p>The invoice is due 30 days after the invoice date. Net 15 is 15 days, and due on receipt means it's due right away.</p>
+  </section>
+</main>
+<footer><p>General information, not legal or tax advice. Nothing you type is sent anywhere. Made by <a data-site href="https://1099money.netlify.app">1099 Money</a>.</p></footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

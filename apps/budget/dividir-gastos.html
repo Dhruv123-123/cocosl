@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dividir gastos entre roomies o en pareja: renta y recibos justos según el ingreso | Dinero Simple</title>
+<meta name="description" content="Divide la renta, los servicios y el súper entre 2 a 6 roomies o en pareja: igual, según el ingreso o con tus propios porcentajes. Ve quién le debe a quién con los menos pagos posibles y copia un resumen para el chat del grupo o descarga un CSV. Gratis, privado, sin registro.">
+<meta property="og:title" content="Divide la renta y los recibos de forma justa">
+<meta property="og:description" content="Divide la renta, los servicios y el súper entre 2 a 6 roomies o en pareja: igual, según el ingreso o con tus propios porcentajes. Ve quién le debe a quién con los menos pagos posibles y copia un resumen para el chat del grupo o descarga un CSV. Gratis, privado, sin registro.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="alternate" hreflang="en" href="split-bills.html">
+<link rel="alternate" hreflang="es" href="dividir-gastos.html">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Dividir gastos", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Es más justo dividir la renta según el ingreso?", "acceptedAnswer": {"@type": "Answer", "text": "Si ganan parecido, dividir igual es sencillo y justo. Si alguien gana mucho más, dividir según el ingreso hace que todos paguen la misma parte de lo que ganan y nadie quede apretado. Muchas casas dividen la renta según el ingreso y gastos chicos como el internet por igual: elige la división de cada gasto."}}, {"@type": "Question", "name": "¿Cómo funciona \"por ingreso\"?", "acceptedAnswer": {"@type": "Answer", "text": "Cada persona paga su parte del ingreso total del grupo. Si Ana gana $6,000 y Ben y Cy $3,000 cada uno, Ana paga la mitad de cada gasto y Ben y Cy una cuarta parte cada uno."}}, {"@type": "Question", "name": "¿Cómo se calcula quién le paga a quién?", "acceptedAnswer": {"@type": "Answer", "text": "Sumamos lo que le toca a cada quien y lo que de verdad pagó, y buscamos los menos pagos posibles para quedar a mano. Los montos se dividen al centavo y siempre suman el total del gasto."}}]}</script>
+<script type="module" src="lib/embed-page.js"></script>
+</head>
+<body class="sf sb">
+<header class="top">
+  <a class="logo" href="../es/" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Dividir gastos</span></a>
+  <a class="badge" href="split-bills.html" hreflang="en" lang="en">English</a>
+</header>
+<main>
+  <h1 class="page-title">Divide la renta y los recibos de forma justa</h1>
+  <p class="lede">Agrega a todos los que comparten gastos y lo que gana cada quien. Divide cada gasto igual, según el ingreso (todos pagan la misma parte de lo que ganan) o con tus porcentajes, y ve quién le debe a quién. Se guarda solo en este navegador.</p>
+
+  <section class="card" aria-labelledby="h-people">
+    <h2 id="h-people">Quiénes comparten gastos</h2>
+    <label class="inline">Cómo dividir<select id="method"></select></label>
+    <p id="custom-msg" class="tiny warn-text" aria-live="polite"></p>
+    <ul id="people" class="people"></ul>
+    <button id="add-person" class="btn ghost small" type="button">Agregar persona</button>
+  </section>
+
+  <section class="card" aria-labelledby="h-bills">
+    <h2 id="h-bills">Gastos compartidos</h2>
+    <form id="bill-form" class="deal-form">
+      <label>Gasto<input name="name" maxlength="60" autocomplete="off"></label>
+      <label>Monto ($)<input name="amount" type="number" min="0.01" step="0.01" inputmode="decimal"></label>
+      <label>Pagó<select name="paidBy" id="b-paid"></select></label>
+      <label>División<select name="split" id="b-split"></select></label>
+      <div class="full row"><button class="btn" type="submit">Agregar gasto</button><span id="bill-msg" class="tiny" role="alert"></span></div>
+    </form>
+    <ul id="bills" class="funds bills"></ul>
+  </section>
+
+  <section class="card" id="result" aria-labelledby="h-result" hidden>
+    <h2 id="h-result">Quién le debe a quién</h2>
+    <div class="table-scroll"><table class="plan dash-table"><thead><tr><th scope="col">Persona</th><th scope="col" class="num">Le toca</th><th scope="col" class="num">Pagó</th><th scope="col" class="num">Saldo</th></tr></thead><tbody id="result-body"></tbody></table></div>
+    <ul id="moves" class="moves" aria-live="polite"></ul>
+    <label for="t-text" class="sr-only">Resumen para el chat del grupo</label><textarea id="t-text" rows="5" readonly></textarea>
+    <div class="row" style="margin-top:10px"><button id="copy" class="btn small" type="button">Copiar resumen</button><button id="csv" class="btn ghost small" type="button">Descargar CSV</button></div>
+    <p id="copy-msg" class="tiny" aria-live="polite"></p>
+  </section>
+
+  <section class="card faq">
+    <h3>¿Es más justo dividir la renta según el ingreso?</h3>
+    <p>Si ganan parecido, dividir igual es sencillo y justo. Si alguien gana mucho más, dividir según el ingreso hace que todos paguen la misma parte de lo que ganan y nadie quede apretado. Muchas casas dividen la renta según el ingreso y gastos chicos como el internet por igual: elige la división de cada gasto.</p>
+    <h3>¿Cómo funciona &quot;por ingreso&quot;?</h3>
+    <p>Cada persona paga su parte del ingreso total del grupo. Si Ana gana $6,000 y Ben y Cy $3,000 cada uno, Ana paga la mitad de cada gasto y Ben y Cy una cuarta parte cada uno.</p>
+    <h3>¿Cómo se calcula quién le paga a quién?</h3>
+    <p>Sumamos lo que le toca a cada quien y lo que de verdad pagó, y buscamos los menos pagos posibles para quedar a mano. Los montos se dividen al centavo y siempre suman el total del gasto.</p>
+  </section>
+</main>
+<footer><p><a href="../es/">Todas las herramientas</a> · <a href="presupuesto-boda.html">Presupuesto de boda</a> · No es asesoría financiera. Nada de lo que escribes sale de este navegador. Hecho por Dinero Simple.</p></footer>
+<script type="module" src="split-bills.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Calendario de pagos gratis: todos tus recibos del mes, marca lo pagado y recibe recordatorios</title>
+<meta name="description" content="Una app gratis para tus recibos. Agrégalos una vez, ve qué vence cada día del mes, márcalos al pagar y manda recordatorios que se repiten al calendario de tu teléfono. Funciona sin internet, sin cuenta y nada sale de tu dispositivo.">
+<meta property="og:title" content="Todos tus recibos del mes en un calendario">
+<meta property="og:description" content="Agrega tus recibos una vez, márcalos al pagar y recibe recordatorios en tu calendario. Gratis y privado.">
+<meta name="theme-color" content="#0b1d13">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Recibos">
+<link rel="manifest" href="manifest-es.webmanifest">
+<link rel="alternate" hreflang="en" href="./">
+<link rel="alternate" hreflang="es" href="es.html">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Calendario de pagos","applicationCategory":"FinanceApplication","operatingSystem":"Any","inLanguage":"es","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="module" src="../lib/embed-page.js"></script>
+</head>
+<body class="billcal">
+<header class="top">
+  <a class="logo" href="../../es/" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Calendario de pagos</span></a>
+  <span class="row"><button id="install" class="badge" type="button" hidden>Instalar</button><a class="badge" href="./" hreflang="en" lang="en">English</a></span>
+</header>
+<main>
+  <h1 class="page-title">Todos tus recibos del mes en un calendario</h1>
+  <p class="lede">Agrega cada recibo una vez. Ve qué vence cada día, márcalo cuando lo pagues y manda recordatorios al calendario de tu teléfono. Tus recibos se quedan en este dispositivo: sin cuenta y funciona sin internet.</p>
+
+  <section class="card" id="soon-card">
+    <h2>Próximos 14 días</h2>
+    <div id="soon" aria-live="polite"></div>
+  </section>
+
+  <section class="card" id="cal">
+    <div class="cal-head">
+      <button id="prev" class="btn ghost small" type="button" aria-label="Mes anterior">‹</button>
+      <h2 id="month" aria-live="polite"></h2>
+      <button id="next" class="btn ghost small" type="button" aria-label="Mes siguiente">›</button>
+    </div>
+    <div class="stats" id="stats"></div>
+    <div class="cal-grid">
+      <div class="weekdays" id="weekdays" aria-hidden="true"></div>
+      <div class="days" id="grid"></div>
+    </div>
+    <button id="this" class="link" type="button">Volver a este mes</button>
+    <h3>Recibos de este mes</h3>
+    <ul class="dues" id="list"></ul>
+  </section>
+
+  <form id="bill-form" class="card deal-form" autocomplete="off">
+    <h2 class="full">Agregar un recibo</h2>
+    <label>Nombre <input name="name" maxlength="60" placeholder="Renta, teléfono, seguro del carro" required></label>
+    <label>Monto ($) <input name="amount" inputmode="decimal" placeholder="85.00" required></label>
+    <label>Próxima fecha de pago <input name="start" type="date" required></label>
+    <label>Se repite <select name="freq"></select></label>
+    <label class="pick full"><input type="checkbox" name="autopay"> <span>Tiene pago automático<small>Igual aparece, para que sepas que el dinero tiene que estar ahí.</small></span></label>
+    <div class="row full"><button id="save" class="btn" type="submit" data-add="Agregar recibo" data-save="Guardar cambios">Agregar recibo</button><span id="form-msg" class="tiny" aria-live="polite"></span></div>
+  </form>
+
+  <section class="card">
+    <h2>Tus recibos <span id="bill-count" class="tiny"></span></h2>
+    <ul class="bill-rows" id="bills" tabindex="-1"></ul>
+  </section>
+
+  <section class="card">
+    <h2>Recordatorios en tu propio calendario</h2>
+    <p class="tiny">Descarga un archivo. Ábrelo en tu teléfono o computadora y cada recibo se agrega como un evento de todo el día que se repite, con recordatorio, en Google Calendar, Apple Calendar u Outlook.</p>
+    <div class="row">
+      <label class="inline">Recordarme <select id="remind"><option value="0">el mismo día</option><option value="1">1 día antes</option><option value="2" selected>2 días antes</option><option value="3">3 días antes</option><option value="7">una semana antes</option></select></label>
+      <button id="ics" class="btn small" type="button">Agregar a mi calendario (.ics)</button>
+    </div>
+    <p id="ics-msg" class="tiny" aria-live="polite"></p>
+    <details><summary class="tiny">Hacer una copia o pasarlo a otro dispositivo</summary>
+      <div class="row" style="margin-top:8px"><button id="backup" class="btn ghost small" type="button">Descargar una copia</button>
+      <label class="btn ghost small">Restaurar una copia <input id="restore" type="file" accept=".json,application/json" hidden></label></div>
+    </details>
+  </section>
+</main>
+<footer><p><a href="../../es/">Todas las herramientas</a> · Tus recibos se guardan solo en este navegador. Hecho por Money Made Simple.</p></footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

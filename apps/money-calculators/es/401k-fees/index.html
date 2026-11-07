@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revisa las comisiones de tu 401(k) en dólares | Calculadoras</title>
+<meta name="description" content="Ingresa los fondos de tu 401(k) y sus expense ratios. Mira cuánto pagas de comisiones al año, cuánto te podrían quitar en 30 años y cuál es el fondo más barato de cada tipo en tu propio plan.">
+<link rel="canonical" href="https://moneymadesimple.netlify.app/calculators/es/401k-fees/">
+<link rel="alternate" hreflang="en" href="https://moneymadesimple.netlify.app/calculators/401k-fees/">
+<link rel="alternate" hreflang="es" href="https://moneymadesimple.netlify.app/calculators/es/401k-fees/">
+<meta property="og:title" content="Revisa las comisiones de tu 401(k) en dólares">
+<meta property="og:description" content="Ingresa los fondos de tu 401(k) y sus expense ratios. Mira cuánto pagas de comisiones al año, cuánto te podrían quitar en 30 años y cuál es el fondo más barato de cada tipo en tu propio plan.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://moneymadesimple.netlify.app/calculators/es/401k-fees/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0b1d13">
+<link rel="stylesheet" href="../../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Revisa las comisiones de tu 401(k)","url":"https://moneymadesimple.netlify.app/calculators/es/401k-fees/","inLanguage":"es","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"es","mainEntity":[{"@type":"Question","name":"¿Dónde encuentro el expense ratio?","acceptedAnswer":{"@type":"Answer","text":"En el aviso anual de comisiones de tu plan (el aviso 404a-5) o en el sitio web de tu 401(k), junto a cada fondo. Aparece como porcentaje, por ejemplo 0.04% o 0.85%."}},{"@type":"Question","name":"¿Qué es un expense ratio bueno?","acceptedAnswer":{"@type":"Answer","text":"Los fondos indexados amplios suelen costar menos de 0.10% al año, y muchos fondos administrados activamente cuestan de 0.50% a 1% o más. Una comisión más alta tiene que recuperarse con mejores rendimientos, y la mayoría de los fondos no lo logra a largo plazo."}},{"@type":"Question","name":"¿Me cambio al fondo más barato?","acceptedAnswer":{"@type":"Answer","text":"No de forma automática. Compara fondos del mismo tipo y revisa qué tiene cada uno y cómo encaja en tu plan. Esta herramienta muestra costos; no te dice qué comprar. Si tienes dudas, tu plan o un asesor fiduciario de tarifa fija te pueden ayudar."}},{"@type":"Question","name":"¿Hay otras comisiones en el 401(k)?","acceptedAnswer":{"@type":"Answer","text":"Muchas veces sí: costos de administración del plan, a veces una cantidad fija en dólares. Tu aviso de comisiones los detalla. Esta herramienta solo cubre el expense ratio de los fondos."}}]}</script>
+</head>
+<body data-calc="401k-fees" data-root="../../">
+<header class="top"><a class="logo" href="../../es/"><span class="mark">MS</span> <span>Calculadoras de dinero</span></a>
+<nav class="nav"><a class="home" href="../../401k-fees/" hreflang="en">English</a></nav></header>
+<main>
+
+<h1>Revisa las comisiones de tu 401(k)</h1>
+<p class="lede">Copia cada fondo, su expense ratio y tu saldo del aviso de comisiones o del sitio web de tu plan. Convertimos los porcentajes en dólares.</p>
+<div class="layout">
+  <form id="calc-form" class="card" autocomplete="off"><div id="funds"></div>
+       <button type="button" id="add-fund" class="link">+ Agregar un fondo</button>
+       <div class="grid"><label>Aporte mensual, tuyo y de tu empleador ($)<input name="monthly" type="number" min="0" step="any" value="500"></label>
+       <label>Años hasta tu jubilación<input name="years" type="number" min="1" max="60" step="1" value="30"></label>
+       <label>Rendimiento anual antes de comisiones (%)<input name="annualReturn" type="number" min="0" max="15" step="any" value="7"></label></div>
+    <button type="button" id="share" class="link">Copiar un enlace con estos números</button>
+  </form>
+  <section class="card result" aria-live="polite"><div id="result"></div><div id="offers"></div></section>
+</div>
+
+<section class="card signup-box">
+  <h2>Un paso de dinero por semana, gratis</h2>
+  <p class="signup-pitch"></p>
+  <form class="signup" name="calculadoras-registro" method="POST" data-netlify="true" netlify-honeypot="website">
+    <input type="hidden" name="form-name" value="calculadoras-registro">
+    <p class="hp"><label>Deja esto vacío <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <label class="sr" for="signup-email">Correo</label>
+    <input id="signup-email" type="email" name="email" placeholder="tu@ejemplo.com" required autocomplete="email">
+    <button class="btn">Suscribirme</button>
+  </form>
+  <p class="tiny">Un correo útil por semana. Cancela con un clic.</p>
+</section>
+<section class="faq"><h2>Preguntas</h2><h3>¿Dónde encuentro el expense ratio?</h3><p>En el aviso anual de comisiones de tu plan (el aviso 404a-5) o en el sitio web de tu 401(k), junto a cada fondo. Aparece como porcentaje, por ejemplo 0.04% o 0.85%.</p>
+<h3>¿Qué es un expense ratio bueno?</h3><p>Los fondos indexados amplios suelen costar menos de 0.10% al año, y muchos fondos administrados activamente cuestan de 0.50% a 1% o más. Una comisión más alta tiene que recuperarse con mejores rendimientos, y la mayoría de los fondos no lo logra a largo plazo.</p>
+<h3>¿Me cambio al fondo más barato?</h3><p>No de forma automática. Compara fondos del mismo tipo y revisa qué tiene cada uno y cómo encaja en tu plan. Esta herramienta muestra costos; no te dice qué comprar. Si tienes dudas, tu plan o un asesor fiduciario de tarifa fija te pueden ayudar.</p>
+<h3>¿Hay otras comisiones en el 401(k)?</h3><p>Muchas veces sí: costos de administración del plan, a veces una cantidad fija en dólares. Tu aviso de comisiones los detalla. Esta herramienta solo cubre el expense ratio de los fondos.</p></section>
+<p class="more"><a href="../">Más calculadoras</a></p>
+</main>
+<footer>
+<p>Herramientas educativas, no asesoría financiera, fiscal ni de inversión. Los resultados son estimaciones con los números que ingresas. Revisa las reglas y tasas actuales con la fuente oficial antes de actuar.</p>
+<p>Tus números se quedan en tu navegador; nada de lo que escribes se envía a ningún lado. Algunos enlaces son de afiliado.</p>
+<p><a href="../../es/">Todas las calculadoras</a></p>
+</footer>
+<script type="module" src="../../app.js"></script>
+</body>
+</html>

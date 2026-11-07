@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Remittance Cost Calculator: Fees, Exchange-Rate Markup and the 1% Tax | Money Made Simple</title>
+<meta name="description" content="See the real cost of sending money to family abroad: the fee, the markup hidden in the exchange rate, and the new 1% federal tax on cash transfers. Uses only the numbers you type, no provider data.">
+<link rel="canonical" href="https://moneymadesimple.netlify.app/calculators/remittance-cost/">
+<link rel="alternate" hreflang="en" href="https://moneymadesimple.netlify.app/calculators/remittance-cost/">
+<link rel="alternate" hreflang="es" href="https://moneymadesimple.netlify.app/calculators/es/remittance-cost/">
+<meta property="og:title" content="Remittance Cost Calculator: Fees, Exchange-Rate Markup and the 1% Tax">
+<meta property="og:description" content="See the real cost of sending money to family abroad: the fee, the markup hidden in the exchange rate, and the new 1% federal tax on cash transfers. Uses only the numbers you type, no provider data.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://moneymadesimple.netlify.app/calculators/remittance-cost/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0b1d13">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Remittance cost calculator: how much really arrives","url":"https://moneymadesimple.netlify.app/calculators/remittance-cost/","inLanguage":"en","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","inLanguage":"en","mainEntity":[{"@type":"Question","name":"What is an exchange-rate markup?","acceptedAnswer":{"@type":"Answer","text":"Providers often give you fewer pesos (or quetzales, rupees, pesos filipinos) per dollar than the market rate and keep the difference. It is a fee you never see on the receipt. To find it, compare the provider's rate with the market rate on the same day: (market rate minus their rate) divided by the market rate."}},{"@type":"Question","name":"Where do I find the market rate?","acceptedAnswer":{"@type":"Answer","text":"Search for the currency pair (for example \"USD to MXN\") on the day you send. That mid-market rate is what banks trade at. Check it right before you pay, because rates move every minute."}},{"@type":"Question","name":"What is the 1% remittance tax?","acceptedAnswer":{"@type":"Answer","text":"From January 1, 2026, transfers abroad paid with cash, a money order or a cashier's check carry a 1% federal excise tax (Internal Revenue Code section 4475). Transfers paid from a US bank account or with a US debit or credit card are exempt. The provider collects it when you pay."}},{"@type":"Question","name":"What must the provider tell me?","acceptedAnswer":{"@type":"Answer","text":"Under the CFPB remittance rule, before you pay the provider must show the fees, the exchange rate, any taxes it collects and the amount that will arrive. You get a receipt, and you can usually cancel within 30 minutes for a full refund. If the money does not arrive, the provider must investigate when you report it within 180 days."}},{"@type":"Question","name":"Is cheaper always better?","acceptedAnswer":{"@type":"Answer","text":"Mostly, but also check how fast the money arrives, how your family picks it up (bank deposit, cash pickup or mobile wallet) and whether the provider is licensed in your state."}}]}</script>
+</head>
+<body data-calc="remittance-cost" data-root="../">
+<header class="top"><a class="logo" href="../"><span class="mark">MS</span> <span>Money Made Simple calculators</span></a>
+<nav class="nav"><a class="home" href="../es/remittance-cost/" hreflang="es">Español</a> <a class="home" data-site href="https://moneymadesimple.netlify.app">Main site</a></nav></header>
+<main>
+
+<h1>Remittance cost calculator: how much really arrives</h1>
+<p class="lede">Type the amount, the fee and either the provider's exchange rate or its markup, plus the market rate for the same day. We show how much arrives, what the transfer really costs and what that adds up to in a year.</p>
+<div class="layout">
+  <form id="calc-form" class="card" autocomplete="off"><div id="fields" class="grid"></div>
+    <button type="button" id="share" class="link">Copy a link to these numbers</button>
+  </form>
+  <section class="card result" aria-live="polite"><div id="result"></div><div id="offers"></div></section>
+</div>
+
+<section class="card signup-box">
+  <h2>Free: The 7-Day Money Reset</h2>
+  <p class="signup-pitch"></p>
+  <form class="signup" name="calculator-signup" method="POST" data-netlify="true" netlify-honeypot="website">
+    <input type="hidden" name="form-name" value="calculator-signup">
+    <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+    <label class="sr" for="signup-email">Email</label>
+    <input id="signup-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
+    <button class="btn">Send it to me</button>
+  </form>
+  <p class="tiny">One useful email a week. Unsubscribe in one click.</p>
+</section>
+<section class="faq"><h2>Questions</h2><h3>What is an exchange-rate markup?</h3><p>Providers often give you fewer pesos (or quetzales, rupees, pesos filipinos) per dollar than the market rate and keep the difference. It is a fee you never see on the receipt. To find it, compare the provider's rate with the market rate on the same day: (market rate minus their rate) divided by the market rate.</p>
+<h3>Where do I find the market rate?</h3><p>Search for the currency pair (for example &quot;USD to MXN&quot;) on the day you send. That mid-market rate is what banks trade at. Check it right before you pay, because rates move every minute.</p>
+<h3>What is the 1% remittance tax?</h3><p>From January 1, 2026, transfers abroad paid with cash, a money order or a cashier's check carry a 1% federal excise tax (Internal Revenue Code section 4475). Transfers paid from a US bank account or with a US debit or credit card are exempt. The provider collects it when you pay.</p>
+<h3>What must the provider tell me?</h3><p>Under the CFPB remittance rule, before you pay the provider must show the fees, the exchange rate, any taxes it collects and the amount that will arrive. You get a receipt, and you can usually cancel within 30 minutes for a full refund. If the money does not arrive, the provider must investigate when you report it within 180 days.</p>
+<h3>Is cheaper always better?</h3><p>Mostly, but also check how fast the money arrives, how your family picks it up (bank deposit, cash pickup or mobile wallet) and whether the provider is licensed in your state.</p></section>
+<p class="more"><a href="../">More calculators</a></p>
+</main>
+<footer>
+<p>Educational tools, not financial, tax or investment advice. Results are estimates from the numbers you enter. Check current rules and rates with the official source before acting.</p>
+<p>Your numbers stay in your browser; nothing you type into a calculator is sent anywhere. Some links are affiliate links.</p>
+<p><a href="../">All calculators</a> · <a href="../embed/">Add these calculators to your site</a></p>
+</footer>
+<script type="module" src="../app.js"></script>
+</body>
+</html>

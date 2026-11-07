@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rate My Budget: Free Budget Score in 2 Minutes | Money Made Simple</title>
+<meta name="description" content="Enter eight numbers and get a 0-100 budget score, a letter grade, and your three most useful next moves. Free and private: your numbers stay in your browser.">
+<meta property="og:title" content="Rate my budget: free score and next moves">
+<meta property="og:description" content="Eight numbers, two minutes, a budget grade and three specific next moves.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Rate My Budget","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="./" style="color:inherit;text-decoration:none"><span class="mark">MS</span><span>Rate My Budget</span></a>
+  <a class="badge" href="./">Budget app</a>
+</header>
+<main>
+  <h1 class="page-title">How healthy is your budget?</h1>
+  <p class="lede">Eight numbers, about two minutes. You get a score out of 100, a grade, and the three moves that would help most. Monthly amounts, after tax. Your numbers stay in this browser.</p>
+
+  <form id="rate-form" class="card rate-grid" autocomplete="off">
+    <label>Take-home pay per month ($)<input name="income" type="number" min="0" step="any" inputmode="decimal" value="3800" required></label>
+    <label>Rent or mortgage ($)<input name="housing" type="number" min="0" step="any" inputmode="decimal" value="1300"></label>
+    <label>Other essentials: food, bills, transport, insurance ($)<input name="essentials" type="number" min="0" step="any" inputmode="decimal" value="900"></label>
+    <label>Minimum debt payments ($)<input name="debtPayments" type="number" min="0" step="any" inputmode="decimal" value="250"></label>
+    <label>Wants: eating out, fun, shopping, subscriptions ($)<input name="wants" type="number" min="0" step="any" inputmode="decimal" value="700"></label>
+    <label>Saving and investing, including 401(k) ($)<input name="saving" type="number" min="0" step="any" inputmode="decimal" value="300"></label>
+    <label>Emergency savings you have now ($)<input name="cushion" type="number" min="0" step="any" inputmode="decimal" value="1500"></label>
+    <label>Credit card balances you carry ($)<input name="cardDebt" type="number" min="0" step="any" inputmode="decimal" value="2200"></label>
+    <label>Employer 401(k) match?
+      <select name="match"><option value="yes">I get the full match</option><option value="no">I'm not getting all of it</option><option value="na" selected>No match / not sure</option></select></label>
+    <button class="btn" type="submit">Rate my budget</button>
+  </form>
+
+  <section id="rate-result" class="card" aria-live="polite" hidden></section>
+
+  <section class="card">
+    <h2>Want a real person to look at it?</h2>
+    <p>Send your numbers anonymously and we may feature your budget (no names, ever) in our "Rate My Budget" videos, with a full breakdown of what we'd change.</p>
+    <form id="submit-form" class="tx-form" name="rate-my-budget" method="POST" data-netlify="true" netlify-honeypot="website">
+      <input type="hidden" name="form-name" value="rate-my-budget">
+      <input type="hidden" name="numbers" id="numbers-field">
+      <p class="hp"><label>Leave this empty <input name="website" tabindex="-1" autocomplete="off"></label></p>
+      <label>Age range<select name="age"><option>Under 22</option><option selected>22-29</option><option>30-39</option><option>40+</option></select></label>
+      <label>City or region (optional)<input name="region" maxlength="40" placeholder="e.g. Ohio, Toronto"></label>
+      <label style="grid-column:1/-1">Your biggest money question<input name="question" maxlength="300" placeholder="e.g. Should I pay off my card or build savings first?"></label>
+      <label style="grid-column:1/-1">Email, only to tell you if you're featured<input name="email" type="email" autocomplete="email"></label>
+      <label class="pick" style="grid-column:1/-1"><input type="checkbox" name="consent" value="yes" required><span>I'm OK with my numbers (not my name or email) being shown in a video or post.</span></label>
+      <button class="btn small" type="submit">Send my budget</button>
+    </form>
+    <p id="submit-msg" class="tiny" aria-live="polite"></p>
+    <div id="review-offer"></div>
+  </section>
+</main>
+<footer><p>Rules of thumb, not financial advice. The score uses common guides (saving 20%, 3+ months of cushion, housing near 30% of take-home) that won't fit every life. <a href="./">Free budget app</a> · <a href="subscriptions.html">Subscription finder</a></p></footer>
+<script type="module" src="rate.js"></script>
+</body>
+</html>

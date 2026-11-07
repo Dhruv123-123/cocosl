@@ -1,0 +1,22 @@
+{
+  "id": "/freelance-invoices/app/",
+  "name": "1099 Money",
+  "short_name": "1099 Money",
+  "description": "Quarterly estimated tax with 2026 and 2027 due dates, a mileage log that exports to CSV, and a deduction checklist for 1099 workers. Works offline, no account. Not tax advice.",
+  "start_url": "./?source=pwa",
+  "scope": "../",
+  "display": "standalone",
+  "background_color": "#f7f3ea",
+  "theme_color": "#14213d",
+  "categories": ["finance", "business"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Quarterly tax", "url": "quarterly.html", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] },
+    { "name": "Log miles", "url": "mileage.html", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] },
+    { "name": "Deductions", "url": "deductions.html", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] }
+  ]
+}
