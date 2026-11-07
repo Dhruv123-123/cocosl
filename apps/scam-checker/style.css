@@ -83,3 +83,5 @@ select{font:inherit;border:1px solid var(--line);border-radius:10px;padding:11px
 #vendor-form h2:first-child{margin-top:0}
 .policy{white-space:pre-wrap;background:var(--bg);border-radius:10px;padding:14px;font:14px/1.5 ui-monospace,Menlo,monospace;overflow-wrap:anywhere}
 @media print{body.print-policy main>*{display:none!important}body.print-policy main>section:has(#policy){display:block!important;border:0}body.print-policy section:has(#policy)>:not(#policy),body.print-policy header,body.print-policy footer{display:none!important}}
+/* Accessibility: dark text on the light-blue dark-mode buttons, readable links */
+@media (prefers-color-scheme:dark){.btn{color:#0b1420}a{color:#9cc4ff}a.btn{color:#0b1420}.btn.alt{color:#fff}}

@@ -15,6 +15,7 @@ HTML, CSS and JavaScript, no framework, no build step needed) and deploy free.
 | **0% deal countdown** (deferred-interest and 0% APR deals: payment that clears it a month early, back-dated interest if you miss) | Money Made Simple | Free calculator for search traffic; Pro saves every deal + calendar reminders | `budget/deals.html` |
 | **Credit dispute tracker** (30-day bureau clocks, replies, next steps, calendar reminders; tracking only, no letters) | Money Made Simple | Free tool for search traffic; deliberately no paid features, which keeps it clear of credit repair law | `budget/disputes.html` |
 | **Net worth snapshot** (own vs owe, dated snapshots and trend, PDF made in the browser, CSV, backup; localStorage only) | Money Made Simple | Free tool with a Budget Pro upsell slot | `budget/networth.html` |
+| **Money date: couples budget** (split shared bills 50/50, by income or a custom split; joint-account amounts and settle-up; 8-step monthly money date checklist with streak and notes; backup file to share; localStorage only) | Money Made Simple | Free tool for couples content, Budget Pro slot | `budget/couples.html` |
 | **Can I afford this?** (a car, a phone or anything big: cash vs loan vs buy now, pay later; all-in price with tax, fees and trade-in, monthly fit against what's left after bills, 20/4/10 car checks, months to save; localStorage only) | Money Made Simple | Free search tool ("how much car can I afford"), Budget Pro upsell slot, links to the paycheck calculator | `budget/afford.html` |
 | **Student loan repayment chooser** (2026 rules: Standard, Graduated, Extended, IBR, RAP, Tiered Standard for loans from July 2026; rules hardcoded from StudentAid.gov with sources in `lib/student-loans.js`; "verify with your servicer" note; EN + ES) | Money Made Simple | Free SEO calculator, Budget Pro box | `money-calculators/student-loans/` |
 | **Rent vs buy** (owning costs vs renting and investing the difference, break-even year; EN + ES) | Money Made Simple | Free SEO calculator, mortgage affiliate slot later | `money-calculators/rent-vs-buy/` |
@@ -123,3 +124,12 @@ The checker sells the brand's Family Scam-Proofing Kit (`launch/scam-decoded/pro
   wording is in `money-calculators/lib/text.js`) by `build.mjs`; edit the copy there.
 
 See `IDEAS.md` for what to build next.
+
+## Hub search and accessibility
+
+- The hub has a search box over every tool. `node tools/build-search.mjs` writes `search-index.json`
+  from the hub's cards plus each page's title, description and headings. Netlify runs it on deploy, and a
+  test fails if the committed index is stale. Search runs in the browser; nothing typed is sent anywhere.
+- `node tools/a11y.mjs` runs axe-core (WCAG 2.1 A and AA) on the hub and every tool it links to, in
+  light and dark mode. It needs Playwright and axe-core (`npm i -D axe-core`, or `AXE_PATH=/path/to/axe.min.js`)
+  and skips if they're missing. All 60 page checks passed on 2026-11-07, after colour contrast fixes.

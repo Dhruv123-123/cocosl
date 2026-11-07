@@ -43,7 +43,8 @@
 {"@type":"ListItem","position":25,"name":"Holiday spending planner","url":"budget/holiday.html"},
 {"@type":"ListItem","position":26,"name":"Can I afford this? Car and phone checker","url":"budget/afford.html"},
 {"@type":"ListItem","position":27,"name":"Student loan repayment chooser","url":"money-calculators/student-loans/"},
-{"@type":"ListItem","position":28,"name":"Rent vs buy calculator","url":"money-calculators/rent-vs-buy/"}
+{"@type":"ListItem","position":28,"name":"Rent vs buy calculator","url":"money-calculators/rent-vs-buy/"},
+{"@type":"ListItem","position":29,"name":"Money date: couples budget","url":"budget/couples.html"}
 ]}</script>
 <style>
 :root{--ink:#0b1d13;--paper:#f4f1e8;--card:#fffdf7;--line:#ddd6c4;--muted:#5b6b61;--gold:#f2b134;--green:#2fbf71}
@@ -76,6 +77,14 @@ a.card p{color:var(--muted);margin:6px 0 0;font-size:15px}
 .link{background:none;border:0;color:inherit;font:inherit;text-decoration:underline;cursor:pointer;padding:6px}
 button.btn{border:0;font:inherit;font-weight:700;cursor:pointer}
 .btn{display:inline-block;background:var(--gold);color:#0b1d13;border-radius:999px;padding:10px 18px;font-weight:700;text-decoration:none}
+.search{margin:18px 0 0}
+.search label{display:block;font-weight:700;margin-bottom:6px}
+.search input{width:100%;font:inherit;font-size:17px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.search input:focus{outline:3px solid var(--gold);outline-offset:1px}
+.search-count{color:var(--muted);font-size:14px;margin:6px 0 0;min-height:1em}
+.section-tag{background:none;border:1px solid var(--line);color:var(--muted);font-weight:600}
+.none{color:var(--muted)}
+@media (prefers-color-scheme:dark){.brand a,main p a{color:#9cc4ff}}
 footer{color:var(--muted);font-size:13px;text-align:center}
 footer a{color:inherit}
 </style>
@@ -88,6 +97,12 @@ footer a{color:inherit}
     <p id="install-text">Add these tools to your home screen. They open like an app, and the ones you've used work offline.</p>
     <div class="row"><button id="install-btn" class="btn" type="button">Install</button><button id="install-later" class="link" type="button">Not now</button></div>
   </div>
+  <form id="search-form" class="search" role="search">
+    <label for="q">Search all tools</label>
+    <input id="q" type="search" placeholder="Try: paycheck, couple, scam text, student loan" autocomplete="off" enterkeyhint="search">
+    <p id="search-count" class="search-count" aria-live="polite"></p>
+  </form>
+  <div id="search-results" class="grid" hidden></div>
   <ul class="jump" aria-label="Jump to">
     <li><a href="#budgeting">Budget and bills</a></li>
     <li><a href="#calculators">Calculators</a></li>
@@ -104,6 +119,7 @@ footer a{color:inherit}
       <a class="card" href="budget/bills.html"><span class="tag free">Free</span><h3>Bill negotiation tracker</h3><p>Promo end dates, call scripts for internet, phone and insurance, and a running total of what your calls saved.</p></a>
       <a class="card" href="budget/deals.html"><span class="tag free">Free</span><h3>0% deal countdown</h3><p>The monthly payment that clears a 0% or deferred-interest deal before the interest hits.</p></a>
       <a class="card" href="budget/subscriptions.html"><span class="tag free">Free</span><h3>Subscription audit</h3><p>Upload a bank export or paste your statement to see every recurring charge and what it costs you a year.</p></a>
+      <a class="card" href="budget/couples.html"><span class="tag free">Free</span><h3>Money date: couples budget</h3><p>Split shared bills 50/50 or by income, see who owes what, and run a 30-minute monthly money date together.</p></a>
       <a class="card" href="budget/afford.html"><span class="tag free">Free</span><h3>Can I afford this?</h3><p>A car, a phone or another big buy: cash vs a loan vs buy now, pay later, the true total, and whether the payment fits your budget.</p></a>
       <a class="card" href="budget/holiday.html"><span class="tag free">Free</span><h3>Holiday spending planner</h3><p>A gift list with a budget per person, a total cap, and what buy now, pay later really costs.</p></a>
       <a class="card" href="budget/networth.html"><span class="tag free">Free</span><h3>Net worth snapshot</h3><p>What you own minus what you owe, monthly snapshots to watch it grow, and a PDF to keep. Saved on your device only.</p></a>
@@ -169,5 +185,6 @@ import { initTracking } from './budget/lib/track.js';
 initTracking({ config, app: 'hub', page: 'hub' });
 </script>
 <script type="module" src="install.js"></script>
+<script type="module" src="hub-search.js"></script>
 </body>
 </html>

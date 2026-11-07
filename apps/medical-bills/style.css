@@ -143,3 +143,8 @@ textarea{font:inherit;padding:10px;border-radius:10px;border:1px solid var(--lin
 @media print{body>*:not(#print-letter){display:none!important}#print-letter{display:block!important;white-space:pre-wrap;font:12pt/1.45 Georgia,serif;color:#000;margin:0}}
 .notice{border-left:4px solid var(--gold);background:rgba(242,177,52,.12);padding:10px 14px;border-radius:8px}
 .grid .full{grid-column:1/-1}
+/* Accessibility: readable link, green and red text in both themes (axe colour contrast) */
+:root{--pos-text:#17804a;--bad-text:#a3271b}
+@media (prefers-color-scheme:dark){:root{--pos-text:#2fbf71;--bad-text:#ff8f82}}
+.pos{color:var(--pos-text)}.pill.bad{color:var(--bad-text)}
+@media (prefers-color-scheme:dark){a{color:#9cc4ff}a:visited{color:#c3b4ff}}

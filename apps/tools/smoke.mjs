@@ -20,6 +20,25 @@ const server = createServer(async (req, res) => {
 const checks = [
   // [path, selector that must contain text after load, optional action]
   ['/', 'h1'],
+  ['/', '#search-results a', async (page) => {
+    await page.fill('#q', 'my wife and I');
+    await page.waitForSelector('#search-results a');
+    if (!/couples/i.test(await page.textContent('#search-results'))) throw new Error('search did not find the couples tool');
+    if (await page.locator('#budgeting').isVisible()) throw new Error('sections should hide while searching');
+  }],
+  ['/budget/couples.html', '#split h3', async (page) => {
+    await page.fill('[name=name0]', 'Alex'); await page.fill('[name=income0]', '6000');
+    await page.fill('[name=name1]', 'Sam'); await page.fill('[name=income1]', '4000');
+    await page.fill('#expense-form [name=name]', 'Rent'); await page.fill('#expense-form [name=amount]', '2000'); await page.click('#expense-form button[type=submit]');
+    await page.fill('#expense-form [name=name]', 'Groceries'); await page.fill('#expense-form [name=amount]', '600');
+    await page.selectOption('#e-paid', 'a'); await page.click('#expense-form button[type=submit]');
+    const split = await page.textContent('#split');
+    if (!/Alex: \$1,200\.00/.test(split) || !/Sam sends Alex \$240\.00/.test(split)) throw new Error(`split wrong: ${split}`);
+    await page.check('[data-check=win]');
+    if (!/1 of 8 done/.test(await page.textContent('#streak'))) throw new Error('checklist');
+    await page.reload();
+    if ((await page.locator('#expenses li').count()) !== 2) throw new Error('not saved');
+  }],
   ['/money-calculators/', '.tiles'],
   ['/money-calculators/debt-payoff/', '#print-plan h1', async (page) => {
     await page.evaluate(() => { window.print = () => {}; });

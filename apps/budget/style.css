@@ -175,3 +175,18 @@ textarea{font:inherit;padding:10px;border-radius:10px;border:1px solid var(--lin
 .afford td,.afford th{white-space:nowrap}
 .afford td:first-child{color:var(--muted)}
 .deal-form h2.full{margin:10px 0 0;font-size:17px}
+/* Money date */
+.methods{border:0;padding:0;margin:4px 0 0}
+.methods legend{font-weight:600;font-size:14px;margin-bottom:6px}
+.method-list{display:flex;flex-wrap:wrap;gap:6px 16px;margin-bottom:8px}
+.expense-list li{display:flex;justify-content:space-between;gap:12px;align-items:center;border-top:1px solid var(--line);padding:8px 0}
+.expense-list li:first-child{border-top:0}
+.checklist{list-style:none;padding:0;margin:8px 0}
+.checklist li{padding:6px 0;border-top:1px solid var(--line)}
+.checklist li:first-child{border-top:0}
+textarea{font:inherit;width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+/* Accessibility: readable link, green and red text in both themes (axe colour contrast) */
+:root{--pos-text:#17804a;--bad-text:#a3271b}
+@media (prefers-color-scheme:dark){:root{--pos-text:#2fbf71;--bad-text:#ff8f82}}
+.pos{color:var(--pos-text)}.pill.bad{color:var(--bad-text)}
+@media (prefers-color-scheme:dark){a{color:#9cc4ff}a:visited{color:#c3b4ff}}
