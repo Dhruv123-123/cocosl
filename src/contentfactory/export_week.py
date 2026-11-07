@@ -8,7 +8,7 @@ Each zip (output/export-week/<brand>/<brand>-week-<monday>.zip) holds one folder
 so they sort in posting order (`01-Mon-0900-tiktok-post-12/`), with the same files as a post-by-hand
 package: video or pin image, caption.txt (or title/description/link for pins and YouTube), POST_AT.txt.
 At the top, WEEK.md lists every post with its time and the full caption ready to paste, and
-schedule.csv has one row per post. Only approved, scheduled publications are included (queued, manual
+schedule.csv has one row per post. Only publications whose post's review status is approved (see `factory review-gate`) are included (queued, manual
 or dry run), so nothing unreviewed goes in. Nothing is posted; publications keep their status.
 """
 from __future__ import annotations
@@ -42,6 +42,8 @@ def publications(factory, brand, monday: date, manual_only: bool = False) -> lis
             AND s.status NOT IN ('rejected', 'failed', 'in_review', 'blocked')
             AND pub.scheduled_at >= ? AND pub.scheduled_at < ? ORDER BY pub.scheduled_at, pub.id""",
         [brand.slug, *STATUSES, start.isoformat(), end.isoformat()])
+    from .review import status as review_status
+    rows = [r for r in rows if review_status(factory.db.get("posts", r["post_id"]), brand) == "approved"]
     if manual_only:
         from .manual import manual_platforms
         rows = [r for r in rows if r["platform"] in manual_platforms()]

@@ -275,3 +275,5 @@ details[open] > summary { margin-bottom: 8px; }
 /* ---------- login ---------- */
 .login { max-width: 380px; margin: 10vh auto; }
 .pub-table td:first-child { min-width: 9.5rem; }
+kbd { font: 600 .75rem ui-monospace, monospace; padding: 1px 5px; border: 1px solid var(--line, #ccc); border-bottom-width: 2px; border-radius: 4px; }
+.claim { display: inline-flex; gap: 6px; align-items: baseline; margin: 2px 0; }

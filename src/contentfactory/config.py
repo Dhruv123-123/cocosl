@@ -244,6 +244,9 @@ class BrandProfile(BaseModel):
     welcome_via: Literal["factory", "sender", "kit"] = "factory"
     realistic_synthetic_media: bool = False  # True if visuals/voices could pass as real people/events
     require_human_review: bool = True
+    # Extra reviews every post of this brand needs before you can approve it: native_review (a fluent
+    # speaker) and/or legal_review (an attorney or tax pro). See `factory review-gate`.
+    review_stages: list[Literal["native_review", "legal_review"]] = Field(default_factory=list)
     own_voice: bool = False  # videos wait for the owner's recorded narration (`factory voice`) before scheduling
 
     def account(self, platform: str) -> PlatformAccount | None:
