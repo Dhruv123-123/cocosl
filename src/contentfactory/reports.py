@@ -39,6 +39,27 @@ def weekly_report(factory: Factory, end: date | None = None) -> dict:
 
     from .insights import report as perf_report
     perf = perf_report(db, days=7)
+    # What actually went out this week, per brand and platform, with each post's latest numbers.
+    posted = db.query("""
+        SELECT s.brand, p.platform, s.title, s.format, p.url, p.published_at, p.status,
+               (SELECT m.views FROM metrics m WHERE m.publication_id = p.id ORDER BY m.captured_at DESC LIMIT 1) views,
+               (SELECT m.likes FROM metrics m WHERE m.publication_id = p.id ORDER BY m.captured_at DESC LIMIT 1) likes,
+               (SELECT m.link_clicks FROM metrics m WHERE m.publication_id = p.id ORDER BY m.captured_at DESC LIMIT 1) clicks
+        FROM publications p JOIN posts s ON s.id = p.post_id
+        WHERE p.status IN ('published', 'dry_run') AND p.published_at >= ? AND p.published_at < ?
+        ORDER BY s.brand, p.platform, p.published_at""", [s, e])
+    platforms: dict = {}
+    for row in posted:
+        k = (row["brand"], row["platform"])
+        agg = platforms.setdefault(k, {"brand": row["brand"], "platform": row["platform"], "posts": 0, "dry_run": 0,
+                                       "views": 0, "likes": 0, "clicks": 0, "measured": 0})
+        agg["posts"] += 1
+        agg["dry_run"] += row["status"] == "dry_run"
+        if row["views"] is not None:
+            agg["measured"] += 1
+            agg["views"] += row["views"] or 0
+            agg["likes"] += row["likes"] or 0
+            agg["clicks"] += row["clicks"] or 0
 
     money: dict = {
         "revenue_week": _sum(db, "SELECT SUM(amount_cents) FROM revenue WHERE date >= ? AND date < ?", [s, e]),
@@ -54,6 +75,12 @@ def weekly_report(factory: Factory, end: date | None = None) -> dict:
         money["goal"] = goal_progress(db, on=end)
     except Exception:  # business module optional
         pass
+
+    try:
+        from .funnel.analytics import revenue_by_campaign
+        money["by_campaign"] = revenue_by_campaign(db, since=s)[:10]
+    except Exception:
+        money["by_campaign"] = []
 
     sales: dict = {}
     try:
@@ -93,7 +120,10 @@ def weekly_report(factory: Factory, end: date | None = None) -> dict:
     if goal and not goal.get("on_track"):
         actions.append(f"Behind the monthly goal: need {_money(goal['needed_per_day_cents'])}/day for the rest of the month.")
 
+    if posted and not any(a["measured"] for a in platforms.values()) and not factory.settings.dry_run:
+        actions.append("No view numbers yet: check the platform connections (`factory doctor`).")
     return {"start": s, "end": end.isoformat(), "content": content, "performance": perf, "money": money,
+            "posted": posted, "platforms": list(platforms.values()),
             "sales": sales, "audience": audience, "actions": actions}
 
 
@@ -120,6 +150,22 @@ def to_markdown(r: dict) -> str:
               f"- Views this week: {perf['total_views']:,} across {perf['posts_measured']} measured posts"]
     for t in perf["top_posts"][:3]:
         lines.append(f"  - {t['title']} ({t['platform']}): {t['views']:,} views")
+    if r.get("platforms"):
+        lines += ["", "## Posted this week"]
+        for a in r["platforms"]:
+            nums = (f"{a['views']:,} views, {a['likes']:,} likes, {a['clicks']:,} link clicks"
+                    if a["measured"] else "no numbers yet")
+            dry = f" ({a['dry_run']} dry run)" if a["dry_run"] else ""
+            lines.append(f"- {a['brand']} · {a['platform']}: {a['posts']} post(s){dry}; {nums}")
+        for row in r["posted"][:15]:
+            v = f" · {row['views']:,} views" if row["views"] is not None else ""
+            link = f" ({row['url']})" if row["url"] else ""
+            lines.append(f"  - {row['title']} [{row['platform']}]{v}{link}")
+    if m.get("by_campaign"):
+        lines += ["", "## Sales by campaign (UTM)"]
+        for c in m["by_campaign"]:
+            lines.append(f"- {c['brand']} · {c['campaign']}: {c['sales']} sale(s), {_money(c['revenue_cents'])}"
+                         + (f" (from {c['source']})" if c.get("source") else ""))
     if r["audience"]:
         lines += ["", "## Funnel"]
         for a in r["audience"]:
@@ -142,5 +188,10 @@ def save_report(factory: Factory, end: date | None = None) -> str:
     out.mkdir(parents=True, exist_ok=True)
     path = out / f"week-{r['end']}.md"
     path.write_text(to_markdown(r))
+    try:  # the per-brand HTML pages from imported stats sit next to it
+        from .weekly_html import save as save_html
+        save_html(factory, end)
+    except Exception as e:  # never lose the Markdown report over the HTML one
+        factory.db.log("report.html_failed", "", None, {"error": str(e)[:300]})
     factory.db.log("report.weekly", "", None, {"path": str(path)})
     return str(path)

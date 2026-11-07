@@ -21,6 +21,8 @@ visual:
   palette: ["#1d1a16", "#efe6d2", "#c2552d", "#3e6b73"]
   image_style: vintage engraving style illustration, sepia and teal, paper texture, no text
   watermark: "@tinyhistories"
+  # Signature visual: a rust-red ring in the top-right corner, like a museum catalogue sticker.
+  signature: {device: ring, color: accent, corner: top-right, size: 0.12}
 cadence:
   shorts_per_week: 5
   long_per_week: 1
@@ -31,9 +33,11 @@ cadence:
 accounts:
   - {platform: youtube, handle: "@tinyhistories", formats: [long, short]}
   - {platform: instagram, handle: "@tinyhistories", formats: [short, carousel]}
+  - {platform: facebook, handle: "Tiny Histories", formats: [short]}   # Reels to the Page (same Meta login)
 affiliates: []
 products:
   - {name: "Tiny Histories: 50 Origin Stories (PDF)", url: "https://example.gumroad.com/l/tiny", price: 9}
-ai_disclosure: "Illustrations and narration made with AI tools. Researched and written by a human; sources in the description."
+ai_disclosure: "Illustrations and narration made with AI tools. Script drafted with AI help; researched and fact-checked by a person, sources in the description."
+scripts_by: ai_assisted
 realistic_synthetic_media: false
 require_human_review: true

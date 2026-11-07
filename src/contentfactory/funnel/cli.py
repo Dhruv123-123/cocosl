@@ -42,7 +42,20 @@ def register(sub, factory_fn) -> None:
 
     s = sub.add_parser("subscribers-export", help="CSV of confirmed subscribers (Beehiiv/ConvertKit import)")
     s.add_argument("brand")
-    s.set_defaults(func=lambda a: print(__import__('contentfactory.funnel.newsletter', fromlist=['x']).export_subscribers_csv(factory_fn(a), a.brand)))
+    s.add_argument("--for", dest="platform", choices=["any", "sender"], default="any",
+                   help="sender: two CSVs (already welcomed / not), Sender's date format")
+
+    def subscribers_export(a):
+        from .newsletter import export_subscribers_csv, export_subscribers_sender
+        f = factory_fn(a)
+        if a.platform == "sender":
+            for p in export_subscribers_sender(f, a.brand):
+                print(p)
+            print("Import -welcomed.csv with \"Trigger active automations upon import\" UNTICKED (they had the welcome); "
+                  "-not-welcomed.csv with it ticked.")
+        else:
+            print(export_subscribers_csv(f, a.brand))
+    s.set_defaults(func=subscribers_export)
 
     s = sub.add_parser("payment-link", help="create a Stripe Payment Link for a brand product")
     s.add_argument("brand")

@@ -1,0 +1,66 @@
+# Example brand. Copy this file to start a new niche channel.
+# One brand = one niche = one account per platform. Keep it to what you can personally review.
+name: Money Made Simple
+niche: practical personal finance tools for people in their 20s
+audience: students and early-career workers who feel behind on money
+promise: one money move you can make this week, explained in under a minute
+pillars:
+  - budgeting systems that actually stick
+  - first-time investing basics (index funds, retirement accounts)
+  - credit scores and debt payoff
+  - money apps and tools, honestly compared
+formats: [short, carousel, long]
+seed_topics:
+  - high yield savings account
+  - roth ira for beginners
+  - credit score
+  - budgeting app
+  - index funds
+  - student loans
+avoid_topics:
+  - crypto pumps
+  - individual stock picks
+  - get rich quick
+subreddits: [personalfinance, povertyfinance, financialindependence]
+hashtags: [personalfinance, moneytips, budgeting, investingforbeginners, financialliteracy, moneymadesimple]
+cta: Follow for one money move a week.
+link_in_bio: https://example.com/links
+voice:
+  tone: calm, specific, slightly dry humour, zero hype
+  persona: a friend who works in finance and hates jargon
+  tts_voice: ""          # your own cloned voice or a licensed stock voice id
+  banned_phrases: ["financial freedom overnight", "this one trick", "guaranteed returns"]
+visual:
+  palette: ["#0b1d13", "#f4f1e8", "#2fbf71", "#f2b134"]
+  font: Inter
+  image_style: warm flat vector illustration, muted greens and cream, simple shapes, no text, no logos
+  mascot: a small round green piggy bank character with big eyes (original design)
+  watermark: "@moneymadesimple"
+cadence:
+  shorts_per_week: 5
+  long_per_week: 1
+  carousels_per_week: 3
+  max_posts_per_day_per_platform: 2
+  post_times: ["12:30", "19:00"]
+  timezone: America/New_York
+accounts:
+  - {platform: instagram, handle: "@moneymadesimple", formats: [short, carousel, image]}
+  - {platform: youtube, handle: "@moneymadesimple", formats: [short, long]}
+  - {platform: tiktok, handle: "@moneymadesimple", formats: [short]}
+affiliates:
+  - name: Example HYSA
+    url: https://example.com/go/hysa
+    slug: hysa
+    keywords: [savings account, hysa, emergency fund]
+    commission: "$50 per funded account"
+products:   # flagship first; ladder and upsell codes: launch/products/UPSELL_PATH.md
+  - {name: "The 20-Minute Budget (guide + Excel/Sheets/Numbers template)", slug: 20-minute-budget, url: "https://example.gumroad.com/l/budget", price: 12}
+  - {name: "The Bill Cut Kit", slug: bill-cut-kit, url: "https://example.gumroad.com/l/bill-cut-kit", price: 5}
+  - {name: "The Credit Report Audit Kit", slug: credit-report-audit-kit, url: "https://example.gumroad.com/l/credit-audit-kit", price: 9}
+  - {name: "The Debt-Free Date Planner", slug: debt-free-date-planner, url: "https://example.gumroad.com/l/debt-free-date", price: 17}
+  - {name: "Start Investing With $100 a Month", slug: investing-starter-kit, url: "https://example.gumroad.com/l/start-investing", price: 19}
+  - {name: "The Money Made Simple Toolkit (all 5 kits)", slug: money-toolkit-bundle, url: "https://example.gumroad.com/l/toolkit", price: 39}
+ai_disclosure: "Visuals and voice made with AI tools. Script drafted with AI help and fact-checked by a person. Not financial advice."
+scripts_by: ai_assisted   # or person, if you write the scripts yourself (then you may say so in ai_disclosure)
+realistic_synthetic_media: false
+require_human_review: true

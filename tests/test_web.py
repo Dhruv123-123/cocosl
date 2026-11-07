@@ -103,6 +103,7 @@ def factory(tmp_path, monkeypatch) -> Factory:
                 "FACTORY_HOME", "ANTHROPIC_API_KEY"):
         monkeypatch.delenv(key, raising=False)
     monkeypatch.setenv("FACTORY_LLM", "offline")
+    monkeypatch.setenv("FACTORY_PREFLIGHT", "0")  # placeholder media
     shutil.copytree(ROOT / "brands", tmp_path / "brands")
     import contentfactory.media as media
     monkeypatch.setattr(media, "render_post", fake_render)
@@ -119,7 +120,7 @@ def client(factory) -> TestClient:
 
 # --------------------------------------------------------------------------- pages
 @pytest.mark.parametrize("path", ["/", "/ideas", f"/ideas?brand={BRAND}&show_rejected=1", "/review",
-                                  "/calendar", "/published", "/settings"])
+                                  "/calendar", "/published", "/settings", "/today"])
 def test_pages_render(client, path):
     r = client.get(path)
     assert r.status_code == 200, r.text[:500]
@@ -133,6 +134,7 @@ def test_post_detail_and_404(client, factory):
     assert r.status_code == 200
     assert "HYSA rates are around 4% APY" in r.text
     assert f"/media/posts/1/video.mp4" in r.text
+    assert "Platform check" in r.text and "video file is missing" in r.text  # placeholder media isn't on disk
     assert client.get("/posts/9999").status_code == 404
 
 
@@ -216,7 +218,7 @@ def test_form_approve_requires_every_claim(client, factory):
     assert post["status"] == "scheduled"
     assert post["meta"]["claims_verified"]["claims"][0].startswith("HYSA")
     pubs = factory.db.query("SELECT * FROM publications WHERE post_id = ?", [pid])
-    assert {p["platform"] for p in pubs} == {"instagram", "youtube", "tiktok"}
+    assert {p["platform"] for p in pubs} == {"instagram", "youtube", "tiktok", "facebook"}
     assert all(p["status"] == "queued" for p in pubs)
 
 
@@ -276,7 +278,7 @@ def test_calendar_publish_due_and_metrics(client, factory):
     assert "due now" in client.get("/calendar").text
     r = client.post("/publish/due")
     assert "dry run" in r.text
-    assert {p["status"] for p in factory.db.query("SELECT status FROM publications WHERE post_id = ?", [pid])} == {"dry_run"}
+    assert {p["status"] for p in factory.db.query("SELECT status FROM publications WHERE post_id = ?", [pid])} <= {"dry_run", "manual"}
     assert "Captured" in client.post("/metrics/collect").text
 
 
@@ -379,3 +381,49 @@ def test_deps_contract():
     assert any(d.endswith("business/templates") for d in loader_dirs)
     for f in ("money", "humanize", "pretty_json", "localtime", "media_url"):
         assert f in templates.env.filters
+
+
+def test_today_post_by_hand(client, factory):
+    from datetime import datetime, timedelta, timezone
+    pid = factory.db.insert("posts", {"brand": BRAND, "format": "short", "status": "scheduled", "title": "Hand post",
+                                      "caption": "Copy me", "script": {}, "hashtags": [], "disclosure": "",
+                                      "meta": {}, "assets": {}})
+    pub = factory.db.insert("publications", {"post_id": pid, "platform": "tiktok", "status": "queued",
+                                             "scheduled_at": (datetime.now(timezone.utc) + timedelta(days=1)).isoformat()})
+    r = client.get("/today")
+    assert "Post by hand" in r.text and "Hand post" in r.text and "Copy caption" in r.text
+    assert "post by hand" in client.get("/calendar").text
+    r = client.post(f"/manual/{pub}/done", data={"url": "https://www.tiktok.com/@x/video/1"}, follow_redirects=False)
+    assert r.status_code in (302, 303)
+    assert factory.db.get("publications", pub)["status"] == "published"
+
+
+def test_fast_review(client, factory):
+    ids = factory.seed_ids
+    r = client.get("/review/fast")
+    assert r.status_code == 200 and "Fast review" in r.text and "Approve a whole week" in r.text
+    assert "2 claim(s) not ticked" in r.text or "Not ready" in r.text
+    rid = ids["review"]
+    r = client.post(f"/review/fast/{rid}/tick", data={"claims": ["0"]})
+    assert r.json()["why"] == "1 claim(s) not ticked"
+    client.post(f"/review/fast/{rid}/tick", data={"claims": ["0", "1"]})
+    from contentfactory.web.fastreview import week_of
+    wk = week_of(factory.db.get("posts", rid)).isoformat()
+    r = client.post("/review/fast/approve-week", data={"week": wk, "brand": BRAND}, follow_redirects=False)
+    assert r.status_code == 303 and "Approved" in r.headers["location"]
+    assert factory.db.get("posts", rid)["status"] == "approved"
+    assert factory.db.get("posts", ids["blocked"])["status"] == "blocked"  # never batch-approved
+    assert "Skipped" in r.headers["location"] or "err=" in r.headers["location"]
+
+
+def test_fast_review_gate(client, factory):
+    from contentfactory import review
+    pid = add_post(factory, "Needs a native read", claims=[])
+    review.require(factory, pid, "native_review")
+    from contentfactory.web.queries import review_queue
+    idx = [p["id"] for p in review_queue(factory)].index(pid)
+    r = client.get(f"/review/fast?i={idx}")
+    assert "needs native review" in r.text and "Native review passed" in r.text
+    r = client.post(f"/review/fast/{pid}/pass", data={"stage": "native_review", "by": "Ana"}, follow_redirects=False)
+    assert r.status_code == 303
+    assert review.status(factory.db.get("posts", pid), factory.brand(BRAND)) == "draft"

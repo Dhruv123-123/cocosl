@@ -23,7 +23,7 @@ factory demo                      # renders sample posts offline, no keys needed
 factory serve                     # dashboard at http://127.0.0.1:8000
 ```
 
-New here? **`docs/QUICKSTART.md`** gets you from clone to first scheduled post in 15 minutes. Then read **`launch/LAUNCH_DAY.md`** (the plan for day one) and **`docs/CREDENTIALS.md`** (the steps
+New here? **`QUICKSTART.md`** is the one-page version (ten commands). **`docs/QUICKSTART.md`** gets you from clone to first scheduled post in 15 minutes. Then read **`launch/LAUNCH_DAY.md`** (the plan for day one) and **`docs/CREDENTIALS.md`** (the steps
 only you can do: payouts, accounts, API keys).
 
 ## What's in the box
@@ -33,7 +33,7 @@ only you can do: payouts, accounts, API keys).
 | Niche & brand | Score niches by ad value, demand, risk, saturation; generate a brand profile; brand kit (logo, banners, bios) | `niche.py`, `brandkit/` |
 | Ideas | Trend signals (YouTube autocomplete, Reddit questions), Claude pitches, scoring, de-duplication, learned re-scoring from performance | `ideas.py`, `insights.py` |
 | Writing | Research grounding, draft → editor critique → revision, claims to verify, sources | `writer.py`, `research.py` |
-| Media | TTS (Piper, espeak, ElevenLabs, OpenAI), images (ComfyUI, OpenAI, Replicate, built-in art), 9:16 and 16:9 video with burned captions, carousels, thumbnails | `media/` |
+| Media | TTS (Kokoro, Piper, espeak, ElevenLabs, OpenAI), images (ComfyUI, OpenAI, Replicate, built-in art), 9:16 and 16:9 video with burned captions, carousels, thumbnails | `media/` |
 | Repurposing | One long video → 3 standalone Shorts + a carousel | `repurpose.py` |
 | Guardrails | Originality, fake testimonials, disclosures, risky claims, engagement bait, asset rights, cadence | `guardrails.py` |
 | Review | Dashboard queue with video/slide preview, caption editing, fact-check gate, approve & schedule | `web/` |
@@ -41,7 +41,7 @@ only you can do: payouts, accounts, API keys).
 | Analytics | Metrics collection, rollups by format/pillar/platform/hour, feedback into idea scores | `insights.py` |
 | Funnel | Link-in-bio page, double opt-in email capture, weekly digest, Stripe/Gumroad sale webhooks | `funnel/` |
 | Business | UGC clients CRM, packages & quotes, ad scripts (no fake testimonials), pitch drafts, invoices (PDF), digital products (PDF), affiliate link tracking, P&L, goal tracking | `business/` |
-| Ops | CLI, Docker Compose (app, worker, media host), n8n workflow, CI | `cli.py`, `worker.py`, `integrations/` |
+| Ops | CLI, Docker Compose (app, worker, renderer, media host, optional Kokoro voice), multi-brand worker on per-brand clocks, render queue, `factory status` / `/api/status` health, n8n workflow, CI | `cli.py`, `worker.py`, `renderq.py`, `health.py`, `integrations/` |
 
 Ready-made launch material lives in `launch/`: two weeks of scripts for the example finance brand,
 a sellable product (guide PDF + spreadsheet), the ad studio's website, rate card, pitch templates,
@@ -61,6 +61,46 @@ factory clients import --file leads.csv && factory pitch draft && factory pitch 
 factory order create --client 3 --package starter && factory order invoice --id 1
 factory revenue report
 factory auth youtube | tiktok | meta        # connect accounts
+factory renderq revoice                     # re-voice silent renders once KOKORO_URL (or another voice) is set
+factory status                              # credentials, queues, worker heartbeat, anything needing you
+factory doctor [--online | --offline]       # is this install ready? --offline: fresh-laptop check, no network
+factory preflight --scheduled               # check queued media against each platform's limits (runs automatically too)
+factory cleanup --older-than 60 [--yes]     # free disk from posts live everywhere 60+ days (lists unless --yes)
+factory voice 12 take.m4a                   # your own narration for post 12 (one take, or one file per line); re-renders it
+factory recordings                           # posts waiting on your voice or a screen recording, soonest first
+factory batch-record [--days 21] [--minutes 45]  # group all recordings into sessions: shot list + teleprompter each
+factory batch-record attach <session folder>    # link recorded screen files into their posts' beats
+factory today --15min [--save]               # your daily routine (GO_LIVE R6) with today's real items
+factory export-week <brand> [--weeks 4] [--manual-only]  # one zip per week, posting order, captions ready to paste
+factory scorecard [--save] [--manual-template]  # GO_LIVE R8 weekly scorecard from your imports, stop/change/watch flags
+factory backup --archive [--with-media]       # one dated zip: database, brands, packs, recordings, notes
+factory restore <archive.zip> [--yes]        # lists first; --yes restores and keeps what it replaced
+factory sequence-export <brand> --for sender  # welcome emails as a Sender automation: one folder per step + CHECKLIST
+factory subscribers-export <brand> --for sender  # two CSVs (already welcomed / not) in Sender's date format
+factory reslot [--brand] [--yes]             # move queued posts onto current slots (TikTok 18:00, Pinterest 11:00, Shorts 12:30); zero collisions
+factory review-gate [list|pass|require|send-back]  # draft → native_review → legal_review → approved; only approved posts schedule or export
+# dashboard: /review/fast — keyboard review (A approve, R reject, E edit, 1-9 tick claims, J/K next) and approve-a-week
+factory launch-mode [two-brand|all]          # two-brand launch: today, reslot and scorecard show MMS + Scam Decoded only
+factory scorecard --gate                     # the five brand-3 gates (time, clean accounts, thresholds, queue, list growth)
+factory time [log <minutes> --what routine]  # weekly time used vs the one-hour-a-day limit (also a form on Today)
+factory broll <post> [--apply]               # optional Pexels/Pixabay B-roll (free keys), max 1 beat in 3, logo-free, credited
+scripts/smoke_fresh_clone.sh                 # fresh clone → install → init → doctor → render one post per brand → launch-check
+factory ui                                   # one local page (127.0.0.1 only): calendar, review queue, recordings, launch check
+factory manual [build|copy <pub>|done <pub> --url]  # TikTok + Pinterest post-by-hand packages
+factory numbers <post id>  (or --text "...")  # recompute loan, payoff, growth and federal tax figures (numpy-financial, Tax-Calculator)
+factory youtube-plan --brand <slug> [--write]   # playlists, end screens, Shorts related videos -> launch/<slug>/YOUTUBE_PLAN.md
+factory report --html                         # weekly one-page HTML per brand from imported stats: best/worst posts, next topics
+factory triage [--save]                       # everything waiting on you across brands, most urgent first
+factory challenge new --brand <slug> --days 30 [--kind ladder|fixed|envelope|no-spend] --import   # daily tracker posts + printable tracker
+factory whitelabel <brand> --client client.json [--posts 1,2]   # rebrand a batch for a B2B client (name, colours, links)
+factory audit-originality [--packs]           # per-channel YouTube inauthentic-content risk score (exit 2 on high)
+factory newsletter --brand <slug> --for kit|sender [--upcoming]   # a week of posts as a draft email (never sent)
+factory brand new <slug> --name ... --import  # scaffold a brand: YAML, caps, voice/footage folders, 3 sample posts
+factory brand remove <slug> --yes            # undo a scaffold (refuses if anything is scheduled or published)
+factory launch-check [--online]             # red/yellow/green: links, UTM tags, placeholders, disclosures, caption limits, originality risk
+factory stats import --brand <slug> *.csv   # YouTube Studio / TikTok / Plausible exports → weekly scorecard (`factory stats`)
+factory repurpose 12 --text-only              # blog post, newsletter section, 3 pins and a thread as drafts from a published long video
+factory calendar --export output/calendar  # all brands: calendar.ics + calendar.html, flags caps and collisions
 ```
 
 `factory --help` lists everything. Run it in production with `docker compose up -d`.

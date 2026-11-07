@@ -16,7 +16,7 @@ factory demo                   # renders a few sample posts with no keys, so you
 # 3. Add the two keys that matter most (edit .env)
 #    ANTHROPIC_API_KEY=...      real scripts instead of placeholders
 #    ELEVENLABS_API_KEY=... and ELEVENLABS_VOICE_ID=...   (your own cloned voice), or OPENAI_API_KEY
-factory status                 # shows what's connected
+factory doctor                 # checks ffmpeg, voice, keys, media URL; says what to fix
 
 # 4. Load the two weeks of finished scripts and render them with your voice
 factory import launch/money-made-simple/content.json --brand money-made-simple

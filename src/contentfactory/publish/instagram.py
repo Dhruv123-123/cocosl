@@ -4,7 +4,7 @@ Docs used:
 - Content publishing (containers, media_publish, status_code polling, limits):
   https://developers.facebook.com/docs/instagram-platform/content-publishing
 - IG User media params (media_type, share_to_feed, cover_url, is_carousel_item,
-  children <=10, caption <=2200 chars / 30 hashtags, is_ai_generated):
+  children <=10, caption <=2200 chars / 5 hashtags (since Dec 2025; was 30), is_ai_generated):
   https://developers.facebook.com/documentation/instagram-platform/instagram-graph-api/reference/ig-user/media
 - Media insights (views, reach, likes, comments, shares, saved, total_interactions,
   ig_reels_avg_watch_time, ...; `impressions` deprecated for media after 2024-07-02):
@@ -35,7 +35,7 @@ from .base import MetricsSnapshot, PublishError, PublishRequest, PublishResult
 from .oauth import instagram_login_refresh_token, meta_long_lived_user_token  # noqa: F401 (re-export)
 
 CAPTION_MAX = 2200
-HASHTAG_MAX = 30
+HASHTAG_MAX = 5  # Instagram caps hashtags at 5 per post or Reel since Dec 2025
 CAROUSEL_MIN, CAROUSEL_MAX = 2, 10
 REEL_METRICS = ["views", "reach", "likes", "comments", "shares", "saved", "total_interactions",
                 "ig_reels_avg_watch_time", "ig_reels_video_view_total_time"]

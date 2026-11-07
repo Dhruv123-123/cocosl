@@ -82,6 +82,13 @@ def health(request: Request) -> dict:
     return {"ok": True}
 
 
+@router.get("/status")
+def status(factory: Factory = Depends(get_factory)) -> dict:
+    """Worker heartbeat, publishing and render queues, and anything that needs a human."""
+    from ..health import system_status
+    return system_status(factory)
+
+
 @router.get("/posts")
 def list_posts(status: str | None = None, brand: str | None = None, limit: int = 50,
                factory: Factory = Depends(get_factory)) -> dict:

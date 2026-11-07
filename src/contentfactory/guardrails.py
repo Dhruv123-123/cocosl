@@ -80,7 +80,7 @@ def check_originality(db: DB, brand: str, text: str, exclude_post_id: int | None
     """Compare against this brand's last 200 posts. YouTube's 'inauthentic
     content' rule targets videos with only superficial differences."""
     rows = db.query(
-        "SELECT id, script FROM posts WHERE brand = ? AND id != ? ORDER BY id DESC LIMIT 200",
+        "SELECT id, script FROM posts WHERE brand = ? AND id != ? AND status != 'rejected' ORDER BY id DESC LIMIT 200",
         [brand, exclude_post_id or -1],
     )
     mine = shingles(text)
@@ -139,21 +139,143 @@ def check_assets_licensed(assets: dict) -> Check:
     return Check("asset_rights", "ok", "All assets generated or licensed")
 
 
+NO_REPOST_PLATFORMS = ("instagram",)
+_ON_PLATFORM = ("queued", "publishing", "published", "needs_check", "manual")
+
+
+def _media_fingerprint(assets: dict, output_dir) -> str:
+    """sha1 of the post's main media file (video, else first slide), '' if there's none on disk."""
+    import hashlib
+    from pathlib import Path
+    rel = assets.get("video") or next(iter(assets.get("slides") or []), None)
+    if not rel or output_dir is None:
+        return ""
+    path = Path(output_dir) / rel
+    if not path.is_file():
+        return ""
+    h = hashlib.sha1()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def check_no_repost(db: DB, post: dict, platform: str, exclude_pub_id: int | None = None,
+                    output_dir=None, block_at: float = 0.6) -> Check:
+    """Instagram stops recommending accounts that repost (Apr 2026, now photos and carousels too).
+    Blocks a second Instagram publication of the same post, the same media file posted by any of our
+    accounts, or a script that's a near-copy of one already on Instagram (any brand)."""
+    if platform not in NO_REPOST_PLATFORMS:
+        return Check("no_repost", "ok", f"{platform}: no repost rule")
+    marks = ",".join("?" * len(_ON_PLATFORM))
+    same = db.query(f"SELECT id, status FROM publications WHERE post_id = ? AND platform = ? AND id != ? "
+                    f"AND status IN ({marks})", [post["id"], platform, exclude_pub_id or -1, *_ON_PLATFORM])
+    if same:
+        return Check("no_repost", "block", f"post #{post['id']} is already on {platform} "
+                     f"(publication #{same[0]['id']}, {same[0]['status']}); Instagram penalises reposts")
+    others = db.query(f"""SELECT DISTINCT s.id, s.brand, s.script, s.assets FROM posts s JOIN publications p ON p.post_id = s.id
+                          WHERE p.platform = ? AND s.id != ? AND p.status IN ({marks})
+                          ORDER BY s.id DESC LIMIT 500""", [platform, post["id"], *_ON_PLATFORM])
+    fp = _media_fingerprint(post.get("assets") or {}, output_dir)
+    mine = shingles(script_text(post.get("script") or {}))
+    for o in others:
+        if fp and _media_fingerprint(o["assets"] or {}, output_dir) == fp:
+            return Check("no_repost", "block", f"same media file as post #{o['id']} ({o['brand']}), already on "
+                         f"{platform}; make a new cut instead of reposting")
+        if mine and jaccard(mine, shingles(script_text(o["script"] if isinstance(o["script"], dict) else {}))) >= block_at:
+            return Check("no_repost", "block", f"near-copy of post #{o['id']} ({o['brand']}), already on {platform}; "
+                         "Instagram treats that as a repost")
+    return Check("no_repost", "ok", "original on Instagram")
+
+
 def check_cadence(db: DB, brand: BrandProfile, platform: str, when: datetime) -> Check:
     """Keep posting volume human-scale. Floods of near-identical uploads are
-    exactly what spam classifiers look for."""
-    day_start = when.astimezone(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
-    day_end = day_start + timedelta(days=1)
+    exactly what spam classifiers look for. Days are the brand's local days,
+    the same days the scheduler fills."""
+    from zoneinfo import ZoneInfo
+    try:
+        tz = ZoneInfo(brand.cadence.timezone)
+    except Exception:
+        tz = timezone.utc
+    local = when.astimezone(tz)
+    day_start = local.replace(hour=0, minute=0, second=0, microsecond=0)
+    day_end = (day_start + timedelta(days=1)).replace(hour=0, minute=0, second=0, microsecond=0)
     n = db.scalar(
         """SELECT COUNT(*) FROM publications p JOIN posts s ON s.id = p.post_id
-           WHERE s.brand = ? AND p.platform = ? AND p.status IN ('queued','publishing','published')
+           WHERE s.brand = ? AND p.platform = ?
+           AND p.status IN ('queued','publishing','published','dry_run','needs_check','manual')
            AND p.scheduled_at >= ? AND p.scheduled_at < ?""",
-        [brand.slug, platform, day_start.isoformat(), day_end.isoformat()],
+        [brand.slug, platform, day_start.astimezone(timezone.utc).isoformat(),
+         day_end.astimezone(timezone.utc).isoformat()],
     ) or 0
     cap = brand.cadence.max_posts_per_day_per_platform
     if n >= cap:
         return Check("cadence", "block", f"Already {n} posts on {platform} that day (cap {cap})")
     return Check("cadence", "ok", f"{n}/{cap} posts on {platform} that day")
+
+
+def _shape(text: str, words: int = 3) -> str:
+    """'7 Ways to Save $500' -> '# ways to': the template, not the topic."""
+    toks = re.sub(r"\d[\d,.$%]*", "#", (text or "").lower()).split()
+    return " ".join(toks[:words])
+
+
+def structure(post: dict) -> dict:
+    script = post.get("script") or {}
+    segs = script.get("segments") or []
+    look = (post.get("assets") or {}).get("look") or {}
+    meta = post.get("meta") or {}
+    return {"format": post.get("format", ""), "beats": min(len(segs), 12) // 2,
+            "title": _shape(script.get("title") or post.get("title", "")), "hook": _shape(script.get("hook", ""), 4),
+            "hook_template": str(meta.get("hook_template") or meta.get("hook_id") or ""),
+            "look": "|".join(str(look.get(k, "")) for k in sorted(look))}
+
+
+def check_sameness(db: DB, brand: str, post: dict, window: int = 20, min_history: int = 6) -> Check:
+    """Channel-level sameness: does this post share its *structure* (format, beat count, title and hook
+    pattern, hook template, visual look) with more than half of the brand's recent posts? The text
+    originality check can't see this: two scripts with no shared sentences can still be the same video."""
+    rows = db.query("SELECT id, format, title, script, assets, meta FROM posts WHERE brand = ? AND id != ? "
+                    "AND status != 'rejected' AND format = ? ORDER BY id DESC LIMIT ?",
+                    [brand, post.get("id") or -1, post.get("format", ""), window])
+    if len(rows) < min_history:
+        return Check("sameness", "ok", f"only {len(rows)} earlier {post.get('format')} post(s) to compare")
+    mine = structure(post)
+    keys = [k for k in mine if k != "format" and mine[k] not in ("", "|")]
+    alike = 0
+    for r in rows:
+        other = structure(r)
+        if sum(mine[k] == other[k] for k in keys) >= max(2, len(keys) - 2):
+            alike += 1
+    if alike * 2 > len(rows):
+        same = [k for k in keys if sum(mine[k] == structure(r)[k] for r in rows) * 2 > len(rows)]
+        return Check("sameness", "warn", f"Built like {alike} of the last {len(rows)} {post.get('format')} posts "
+                     f"(same {', '.join(same) or 'structure'}). YouTube reviews whole channels for repetitive "
+                     "videos: change the opening, the title pattern or the number of beats")
+    return Check("sameness", "ok", f"structure differs from most recent posts ({alike}/{len(rows)} alike)")
+
+
+def check_original_element(post: dict) -> Check | None:
+    """Long videos need one thing a template can't make (YouTube judges whole channels for
+    'inauthentic content': slideshows with the same narration). A chart drawn from the video's own
+    numbers or the person's own footage counts; a planned element only counts once it's in the video."""
+    if post.get("format") != "long":
+        return None
+    script = post.get("script") or {}
+    segs = script.get("segments") or []
+    footage = [s for s in segs if (s.get("footage") or "").strip()]
+    charts = [s for s in segs if s.get("chart")]
+    if footage:
+        return Check("original_element", "ok", f"{len(footage)} beat(s) with your own footage")
+    if charts:
+        return Check("original_element", "ok", f"{len(charts)} chart(s) drawn from this video's numbers")
+    from .originality import element_text
+    planned = element_text(script.get("original_element"))
+    if planned:
+        return Check("original_element", "block", f"Planned original element not in the video yet: {planned[:160]}. "
+                     "Add the footage to a beat (or a chart), then re-render")
+    return Check("original_element", "block", "Long video with nothing a template can't make: add a chart with "
+                 "this video's own numbers or a beat with your own screen recording")
 
 
 def run_content_checks(db: DB, brand: BrandProfile, post: dict) -> list[Check]:
@@ -175,6 +297,12 @@ def run_content_checks(db: DB, brand: BrandProfile, post: dict) -> list[Check]:
     ]
     if post.get("assets"):
         checks.append(check_assets_licensed(post["assets"]))
+    checks.append(check_sameness(db, brand.slug, post))
+    if (orig := check_original_element(post)) is not None:
+        checks.append(orig)
+    from .numbercheck import as_check, check_script
+    if (nums := as_check(check_script(script, caption))) is not None:
+        checks.append(nums)
     unverified = script.get("claims_to_verify") or []
     if unverified:
         checks.append(Check("fact_check", "warn", f"{len(unverified)} claim(s) need a human fact-check"))

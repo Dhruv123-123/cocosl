@@ -28,6 +28,30 @@
   <div class="card">
     <div class="card-head"><h2>Media</h2></div>
     {{ m.media(post, assets) }}
+    {% if media_checks %}
+    <div class="banner {{ 'banner-block' if media_checks|selectattr('level', 'equalto', 'block')|list else 'banner-info' }} mt">
+      <strong>Platform check:</strong>
+      <ul style="margin:4px 0 0 18px">{% for i in media_checks %}<li>{{ i.platform }}: {{ i.message }}{{ '' if i.level == 'block' else ' (warning)' }}</li>{% endfor %}</ul>
+    </div>
+    {% endif %}
+    {% if post.script and (post.script.related_video or post.script.playlist) %}
+    <div class="banner banner-info mt"><strong>In YouTube Studio:</strong>
+      {% if post.script.related_video %}set the related video to “{{ post.script.related_video }}”.{% endif %}
+      {% if post.script.playlist %}Add to playlist “{{ post.script.playlist }}”.{% endif %}</div>
+    {% endif %}
+    {% if assets.thumbnail_variants and assets.thumbnail_variants|length > 1 %}
+    <h3 class="mt">Thumbnail</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px">
+      {% for t in assets.thumbnail_variants %}
+      <form method="post" action="/posts/{{ post.id }}/thumbnail" style="margin:0">
+        <input type="hidden" name="index" value="{{ loop.index0 }}">
+        <button type="submit" class="btn" style="padding:4px;width:100%;{{ 'outline:3px solid var(--accent,#22d3ee)' if t == assets.thumbnail }}"
+          {{ 'disabled' if post.status in ('scheduled', 'published') }} title="{{ 'In use' if t == assets.thumbnail else 'Use this one' }}">
+          <img src="{{ t|media_url }}" alt="Thumbnail option {{ loop.index }}" style="width:100%;display:block;border-radius:4px"></button>
+      </form>
+      {% endfor %}
+    </div>
+    {% endif %}
     {% if assets.provenance %}
     <details class="mt"><summary>Provenance ({{ assets.provenance|length }} file{{ 's' if assets.provenance|length != 1 }})</summary>
       <table class="table small"><thead><tr><th>File</th><th>Source</th><th>Tool</th></tr></thead><tbody>

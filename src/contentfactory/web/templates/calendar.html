@@ -13,7 +13,8 @@
 
 {% if approved %}
 <div class="card">
-  <div class="card-head"><h2>Approved, not scheduled</h2></div>
+  <div class="card-head"><h2>Approved, not scheduled</h2>
+    <form class="inline" method="post" action="/schedule/all"><button class="btn btn-sm btn-primary" type="submit">Schedule all</button></form></div>
   <ul class="list">
     {% for p in approved %}
     <li><span class="grow"><a href="/posts/{{ p.id }}">{{ p.title or 'Post #' ~ p.id }}</a> <span class="small muted">{{ p.brand }} · {{ p.format }}</span></span>
@@ -33,7 +34,7 @@
       <span class="time {{ 'due' if is_due(p) }}">{{ p.scheduled_at|localtime(tz, '%H:%M') }}</span>
       <span style="min-width:0"><a href="/posts/{{ p.post_id }}">{{ p.title or 'Post #' ~ p.post_id }}</a><br>
         <span class="small muted">{{ p.brand }} · {{ p.format }}{% if p.account %} · {{ p.account }}{% endif %}{% if p.error %} · <span style="color:var(--block)">{{ p.error|truncate(80) }}</span>{% endif %}</span></span>
-      <span class="pill-row">{{ m.platform(p.platform) }}{{ m.status(p.status) }}</span>
+      <span class="pill-row">{{ m.platform(p.platform) }}{{ m.status(p.status) }}{% if by_hand(p.platform) and p.status in ('queued', 'manual') %}<span class="badge badge-warn" title="The factory doesn't upload here: you post it from the app. See Today.">post by hand</span>{% endif %}</span>
     </div>
     {% endfor %}
   </section>

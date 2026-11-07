@@ -32,13 +32,23 @@ Put each approved link in the brand YAML under `affiliates` (name, url, slug, ke
 | Value | How |
 |---|---|
 | `ANTHROPIC_API_KEY` | console.anthropic.com → API keys. Without it the factory writes placeholder drafts. |
-| Voice: `ELEVENLABS_API_KEY` + `ELEVENLABS_VOICE_ID` | Clone **your own** voice (or pick a licensed library voice). Never clone someone else's. |
+| Voice, free: **Kokoro** (`KOKORO_URL`) | Easiest free option and sounds natural. On your server: `docker compose --profile kokoro up -d` and set `KOKORO_URL=http://kokoro:8880`. On a laptop: `docker run -p 8880:8880 ghcr.io/remsky/kokoro-fastapi-cpu:v0.2.4` and `KOKORO_URL=http://localhost:8880`. Pick a voice with `KOKORO_VOICE` (e.g. `af_heart`, `am_michael`, `bf_emma`). These are synthetic stock voices, so the AI-voice disclosure stays on. |
+| or your own cloned voice: `ELEVENLABS_API_KEY` + `ELEVENLABS_VOICE_ID` | Clone **your own** voice (or pick a licensed library voice). Never clone someone else's. |
 | or `OPENAI_API_KEY` | Uses OpenAI TTS (and gpt-image-1 for images). |
 | or Piper (free, local) | `pip install piper-tts`, download a voice, set `PIPER_MODEL=/path/voice.onnx`. |
 | Images: `COMFYUI_URL` or `OPENAI_API_KEY` or `REPLICATE_API_TOKEN` | Without one, the factory uses its built-in abstract art (fine for carousels). |
 | Music: `FACTORY_MUSIC_DIR` | A folder of tracks you have a licence for (YouTube Audio Library, Epidemic, etc.). Keep the licences. |
 
-After adding a voice, re-render the launch batch: `factory rerender <id>` for each short (or the Re-render button).
+After adding a voice, re-voice everything that was rendered silent in one go: `factory renderq revoice`
+(add `--include-approved` for approved posts; they go back to review). With Docker the `renderer` service
+picks the jobs up by itself; without it run `factory renderq run`. `factory status` shows progress.
+
+## Running more than one brand
+
+Each brand should post to its own accounts. App-level keys (`YT_CLIENT_ID`, `META_APP_ID`, `TIKTOK_CLIENT_KEY`...)
+are shared; account tokens go under the brand's name: run the auth commands with `--brand`, e.g.
+`factory auth youtube --brand tiny-histories`, and the tokens are saved as `TINY_HISTORIES__YT_REFRESH_TOKEN` etc.
+Any platform key can be set per brand this way (for example `TINY_HISTORIES__IG_USER_ID`); a brand without its own key falls back to the shared one. `factory doctor` lists each brand's connections.
 
 ## 5. Social accounts (create these by hand, one per platform for the brand)
 

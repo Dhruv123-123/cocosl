@@ -59,7 +59,7 @@ def _check_provenance(assets: dict, settings) -> None:
     assert all(p["source"] in ("generated", "rendered", "own", "licensed") for p in assets["provenance"])
 
 
-@pytest.mark.parametrize("fmt,size", [("short", (1080, 1920)), ("long", (1920, 1080))])
+@pytest.mark.parametrize("fmt,size", [("short", (1080, 1920)), ("mid", (1080, 1920)), ("long", (1920, 1080))])
 def test_render_video(media_env, tmp_path, fmt, size):
     settings, brand = media_env
     assets = render_post(settings, brand, make_post(1, fmt, 3))
@@ -68,12 +68,30 @@ def test_render_video(media_env, tmp_path, fmt, size):
     assert (info["width"], info["height"]) == size
     assert set(info["streams"]) == {"video", "audio"}
     # 3 lines + CTA at 160 wpm, each beat >= 1.5s plus gaps
-    assert 8 < info["duration"] < 25
+    slate = assets.get("end_slate_seconds") or 0
+    assert slate == (20 if fmt == "long" else 0)  # long videos close on a slate for the Studio end screen
+    assert 8 < info["duration"] - slate < 25
     assert abs(info["duration"] - assets["duration"]) < 0.5
     assert len(assets["images"]) == 3 and assets["slides"] == []
     assert probe(settings.output_dir / assets["thumbnail"])["width"] == 1280
+    if fmt == "long":
+        variants = assets["thumbnail_variants"]
+        assert len(variants) == 3 and variants[0] == assets["thumbnail"]
+        assert all((settings.output_dir / v).is_file() and (settings.output_dir / v[:-4]).with_suffix(".jpg").is_file()
+                   for v in variants)
+        tc = assets["test_compare"]  # A/B/C for YouTube Test & compare
+        assert [p.rsplit("/", 1)[1] for p in tc] == ["A.jpg", "B.jpg", "C.jpg"]
+        assert all((settings.output_dir / p).stat().st_size < 2 * 1024 * 1024 for p in tc)
+        from PIL import Image as _I
+        a, b = (_I.open(settings.output_dir / tc[i]).convert("L").resize((64, 36)) for i in (0, 1))
+        assert sum(abs(x - y) for x, y in zip(a.getdata(), b.getdata())) / (64 * 36) > 8  # visibly different
     srt = (settings.output_dir / assets["captions_srt"]).read_text()
     assert "Follow for one" in srt and "-->" in srt
+    if slate:  # no captions run into the end slate
+        import re as _re
+        ends = [sum(float(x) * m for x, m in zip(_re.split("[:,]", t)[:3], (3600, 60, 1))) for t in
+                _re.findall(r"--> (\d+:\d+:\d+),", srt)]
+        assert max(ends) <= info["duration"] - slate + 1
     video_prov = next(p for p in assets["provenance"] if p["path"] == assets["video"])
     assert video_prov["tool"] == "ffmpeg"
     assert not (settings.output_dir / brand.slug / "post-1" / "_work").exists()
@@ -135,3 +153,123 @@ def test_string_id_and_output_subdir(media_env):
     post["meta"] = {"output_subdir": "../escape"}
     with pytest.raises(Exception):
         render_post(settings, brand, post)
+
+
+def _chart_post(post_id: int, fmt: str, n: int) -> dict:
+    post = make_post(post_id, fmt, n)
+    post["script"]["segments"][1]["chart"] = dict(kind="bars", title="Interest on $10,000 for a year",
+                                                  labels=["Big bank", "High yield"], values=[10, 420],
+                                                  unit_prefix="$", note="Example rates; check yours")
+    return post
+
+
+def test_chart_segment_is_drawn_not_generated(media_env, monkeypatch):
+    settings, brand = media_env
+    import contentfactory.media.render as r
+    prompts = []
+    real = r.generate_images
+    monkeypatch.setattr(r, "generate_images", lambda s, b, ps, *a, **k: prompts.extend(ps) or real(s, b, ps, *a, **k))
+    assets = render_post(settings, brand, _chart_post(5, "carousel", 3))
+    _check_provenance(assets, settings)
+    assert "coins growing like plants" not in prompts and len(prompts) == 2
+    chart = next(p for p in assets["provenance"] if p.get("provider") == "chart")
+    assert chart["source"] == "rendered" and "420" in chart["prompt"]
+    from PIL import Image
+    assert Image.open(settings.output_dir / assets["slides"][1]).size == (1080, 1350)
+
+
+def test_chart_clip_used_in_video_when_available(media_env, monkeypatch):
+    settings, brand = media_env
+    import contentfactory.media.charts as charts
+    calls = []
+
+    def fake_clip(spec, size, palette, out, seconds=3.0):
+        calls.append((spec.title, size))
+        out.parent.mkdir(parents=True, exist_ok=True)
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", f"color=c=red:s={size[0]}x{size[1]}:d=1",
+                        "-pix_fmt", "yuv420p", str(out)], check=True)
+        return out
+    monkeypatch.setattr(charts, "render_chart_clip", fake_clip)
+    assets = render_post(settings, brand, _chart_post(6, "short", 3))
+    assert calls == [("Interest on $10,000 for a year", (1080, 1920))]
+    assert probe(settings.output_dir / assets["video"])["duration"] > 5
+
+
+def test_render_chart_sizes_and_line(media_env, tmp_path):
+    from PIL import Image, ImageStat
+
+    from contentfactory.media.charts import _fmt, render_chart, render_chart_clip
+    from contentfactory.media.util import Palette
+    from contentfactory.schemas import ChartSpec
+    _, brand = media_env
+    pal = Palette.from_brand(brand)
+    spec = ChartSpec(kind="line", title="$1,000 at 7% for 10 years", labels=[f"Y{i}" for i in range(11)],
+                     values=[round(1000 * 1.07 ** i, 2) for i in range(11)], unit_prefix="$")
+    for size in [(1080, 1920), (1920, 1080), (1080, 1350)]:
+        out = render_chart(spec, size, pal, brand.visual.font, tmp_path / f"c{size[0]}x{size[1]}.png")
+        img = Image.open(out)
+        assert img.size == size and ImageStat.Stat(img.convert("L")).stddev[0] > 5
+    assert _fmt(12_345, "$", "") == "$12k" and _fmt(1.5, "", "%") == "1.50%" and _fmt(2_500_000, "", "") == "2.5M"
+    assert render_chart_clip(spec, (1080, 1920), pal, tmp_path / "x.mp4") is None  # FACTORY_CHARTS unset
+
+
+def test_own_footage_beat(media_env, monkeypatch):
+    settings, brand = media_env
+    clip = settings.home / "footage" / "irs.mp4"
+    clip.parent.mkdir(parents=True, exist_ok=True)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", "testsrc=s=1280x720:d=3",
+                    "-pix_fmt", "yuv420p", str(clip)], check=True)
+    post = make_post(7, "long", 3)
+    post["script"]["segments"][1]["footage"] = "footage/irs.mp4"
+    assets = render_post(settings, brand, post)
+    own = [p for p in assets["provenance"] if p["source"] == "own"]
+    assert own and own[0]["tool"] == "footage"
+    post["script"]["segments"][1]["footage"] = "footage/missing.mp4"
+    from contentfactory.media.util import MediaError
+    with pytest.raises(MediaError, match="footage not found"):
+        render_post(settings, brand, post)
+
+
+def test_long_video_needs_original_element():
+    from contentfactory.guardrails import check_original_element
+    seg = {"heading": "h", "narration": "n", "on_screen_text": "o", "visual_prompt": "v"}
+    long = {"format": "long", "script": {"segments": [dict(seg)] * 3}}
+    assert check_original_element(long).level == "block"
+    long["script"]["original_element"] = "Record the IRS payment page"
+    c = check_original_element(long)
+    assert c.level == "block" and "not in the video yet" in c.message
+    long["script"]["segments"] = [dict(seg, footage="footage/irs.mp4"), seg]
+    assert check_original_element(long).level == "ok"
+    assert check_original_element({"format": "short", "script": {}}) is None
+
+
+def test_whisper_model_follows_brand_language(monkeypatch):
+    from contentfactory.media.tts import TTSResult, align_with_whisper, whisper_model_name
+    monkeypatch.delenv("WHISPER_MODEL", raising=False)
+    assert whisper_model_name("en") == "base.en" and whisper_model_name("es") == "base"
+    monkeypatch.setenv("WHISPER_MODEL", "small")
+    assert whisper_model_name("es") == "small"
+    import sys
+    import types
+    monkeypatch.setitem(sys.modules, "faster_whisper", types.SimpleNamespace(WhisperModel=object))
+    monkeypatch.setenv("FACTORY_ALIGN", "whisper")
+    monkeypatch.setenv("WHISPER_MODEL", "base.en")
+    res = TTSResult("x", "x", [], [], [], [])
+    align_with_whisper(res, "es")
+    assert "English-only" in res.notes[0]
+
+
+def test_stock_broll_beat(media_env):
+    import json as _json
+    settings, brand = media_env
+    clip = settings.home / "footage" / "money-made-simple" / "stock" / "b.mp4"
+    clip.parent.mkdir(parents=True, exist_ok=True)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", "testsrc=s=720x1280:d=3",
+                    "-pix_fmt", "yuv420p", str(clip)], check=True)
+    clip.with_suffix(".json").write_text(_json.dumps({"provider": "pexels", "author": "Ana", "license": "Pexels License",
+                                                      "page": "https://pexels.com/v/1", "query": "groceries"}))
+    post = make_post(8, "short", 3)
+    post["script"]["segments"][1]["broll"] = "footage/money-made-simple/stock/b.mp4"
+    assets = render_post(settings, brand, post)
+    lic = [p for p in assets["provenance"] if p["source"] == "licensed" and p["tool"] == "pexels"]
+    assert lic and "Ana" in str(lic[0])
