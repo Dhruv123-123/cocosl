@@ -10,7 +10,9 @@ soon as there's traffic, affiliates and platform money come later. Times are han
 Where something has a waiting period (verification, affiliate approval), start it early and keep going.
 
 Totals: **Stage 1–3 ≈ 5–6 hours** gets you able to take money. Stages 0–8 (one brand, fully live)
-≈ 13–16 hours over two weeks. Stage 9 adds the other brands, one at a time, ≈ 2–4 hours each.
+≈ 13–16 hours over two weeks. Stage 9 adds the other brands, one at a time, ≈ 2–4 hours each. The
+[launch runbook](#launch-runbook-after-the-merges) near the end covers the sites, placeholders, first-week
+posts and recording sessions once everything is merged.
 
 Nothing in this repo sends, posts or charges on its own. You press every button.
 
@@ -254,6 +256,361 @@ brand properly before starting the next. Order below is by how soon each can ear
 - Monday: `factory report`, do its "Next actions". 20 min
 - Daily: 15 pitches + follow-ups, 2 approved posts, reply to comments (the dashboard's `/inbox` drafts
   replies once platforms are connected; you send them). ≈ 1.5 h
+
+---
+
+## Launch runbook (after the merges)
+
+Run this once the PRs are merged. It assumes Stages 1–3 (payments, ad studio, Gumroad) are done, because
+almost every placeholder below is a Gumroad or affiliate URL. Times are hands-on.
+
+### R1 · Netlify sites to create (≈ 1 h 15 min)
+
+Each is Netlify > **Add new site > Import an existing project > GitHub > `cocosl`**, then the base
+directory below. Turn on **Forms > Enable form detection** and redeploy once on every site that collects
+emails. Rename each site (or add a domain) and write the URL down; R2 needs them.
+
+| # | Site | Base directory | PR | Collects emails | Notes | Time |
+|---|---|---|---|---|---|---|
+| 1 | Money Made Simple website | repo root (reads `netlify.toml`: base `site`) | #4 | yes | the main funnel, `/links/` is the link-in-bio page | 10 min |
+| 2 | Ad studio site + order page | `launch/ugc-service` (or drag it onto app.netlify.com/drop) | #12 | inquiry form | edit the `STUDIO` block first | 10 min |
+| 3 | Web apps, one site | `apps` (reads `apps/netlify.toml`) | #8 | yes | calculators, scam checker, budget app (needs Functions), ad script builder, invoices, medical bills. Or split them as in 3a–3c | 15 min |
+| 3a | Calculators (optional own site) | `apps/money-calculators` | #8 | yes | better SEO on its own domain | 5 min |
+| 3b | Scam checker (optional own site) | `apps/scam-checker` | #8 | yes | then run `node scam-checker/rename-brand.mjs "Scam Decoded" <url>` | 5 min |
+| 3c | Budget app (optional own site) | `apps/budget` | #8 | no | env vars `GUMROAD_PRODUCT_ID` and/or `STRIPE_SECRET_KEY` (restricted, read-only) | 10 min |
+| 4 | Scam Decoded funnel | `sites/scam-decoded` | #9 | yes | | 10 min |
+| 5 | Dinero Simple website | `sites/dinero-simple` | #11 | yes | only after the Spanish review | 10 min |
+| 6 | 1099 Money calculator + funnel | `apps/freelance-tax` | #10 | yes | | 10 min |
+
+After every site is up, submit each one's `sitemap.xml` in Google Search Console (one property per site). 15 min
+
+### R2 · Placeholders to fill (≈ 1 h 30 min)
+
+`factory triage` and `factory launch-check` list most of these for you (see R4). Fill them, then rebuild
+or redeploy. Leave affiliate slots empty until a program approves you; empty slots stay hidden.
+
+| Where | What to put in | Comes from |
+|---|---|---|
+| `.env` | `ANTHROPIC_API_KEY`, `KOKORO_URL` (or a voice key), `PUBLIC_MEDIA_BASE_URL`, `DASHBOARD_TOKEN`, `SUPPORT_EMAIL`, `FACTORY_PORTFOLIO_URL`, `FACTORY_PAYMENT_INSTRUCTIONS`, `FACTORY_SENDER_*`, `BUSINESS_ADDRESS`, `BACKUP_DIR` | Stages 6 and 8 |
+| `.env` (platform tokens) | written by `factory auth youtube` and `factory auth meta --token …`; add `--brand <slug>` for each extra brand's own accounts | Stage 8 |
+| `brands/money-made-simple.yaml` | `link_in_bio` (site 1 + `/links/`), `products[0–5].url` (the six Gumroad links), `affiliates[0].url` (first approved HYSA) | Stage 3, site 1 |
+| `brands/tiny-histories.yaml` | `products[0].url` stays a placeholder until its PDF exists; it shows yellow, which is fine | |
+| `brands/scam-decoded.yaml`, `dinero-simple.yaml`, `1099-money.yaml` | each brand's product and affiliate URLs, link in bio | Stage 9 |
+| `site/site.json` + `site/content/products/*.md` | `url`, `contact_email`, `socials`, `email` provider, each `buy_url`; delete `status: coming-soon` once live | site 1, Gumroad |
+| `site/go-links.json` | approved affiliate tracking links (the 20 affiliate articles read from here) | Stage 7 |
+| `launch/products/<slug>/guide.html` | `[your store link]` on the last page, then `python launch/products/build.py --check` and re-upload | Gumroad |
+| `launch/ugc-service/index.html` | the `STUDIO` block (name, email, owner, location, portfolio) | Stage 2 |
+| `apps/*/config.js` | `siteUrl`, `calculatorsUrl`, `email`, `product.url`, `affiliates` / `offers` (every `REPLACE_ME`), then `node money-calculators/build.mjs` | sites 3–3c |
+| `sites/scam-decoded/site.json` | `product.buy_url`, `scam_checker.url` (site 3 or 3b), `email` | site 4 |
+| `sites/dinero-simple/site.json` + `content/products/*.md` | `url`, `email`, the three Spanish `buy_url`s | site 5 |
+| `apps/freelance-tax/config.js` | `siteUrl`, tracker product URL, affiliate links, email placeholders | site 6 |
+| Email provider footer (each list) | your postal address (CAN-SPAM) | Stage 1 |
+
+### R3 · First week of posts, per brand
+
+Each plan is dated from Sat Nov 7; if you start later, keep the order and shift the dates. Before each
+post: tick its facts in Review (and `launch/VERIFY_BEFORE_POSTING.md`), keep the AI disclosure, and turn on
+the platform AI label. TikTok always goes up by hand from `factory ui` → Post by hand.
+
+**Start Money Made Simple first and alone for at least a week.** Add one brand a week after that, in the
+order below, so you're never learning two sets of accounts at once.
+
+- **Money Made Simple** (`launch/money-made-simple/POSTING_PLAN.md`, 12:30 and 19:00 ET):
+  Day 1 short *The two-account trick that stops overdrafts* + carousel *The 20-minute monthly money date* ·
+  Day 2 short *Freeze your credit for free tonight* + long *Feel behind on money? A 30-day reset plan* ·
+  Day 3 short *Budget weekly, not monthly* + carousel *$1,000 emergency fund in 8 weeks* ·
+  Day 4 short *The raise you're ignoring: your 401(k) match* ·
+  Day 5 short *Paid in full, score still dropped?* + carousel *Check your credit report like an auditor* ·
+  Days 6–7 continue the plan. Month 1 (`content-factory/month-1/`) picks up on Nov 21.
+- **Tiny Histories** (`launch/tiny-histories/POSTING_PLAN.md`, 17:00 ET, one post per platform per day):
+  Day 1 long *Why your keyboard says QWERTY* + carousel *Jeans exist because of a $68 patent fee* ·
+  Day 2 short *OK started as a misspelled joke* · Day 3 long *The fork was a scandal for 600 years* +
+  carousel *Where the dollar sign came from* · Day 4 short *The barcode was drawn in the sand* ·
+  Day 5 long *The Earl of Sandwich didn't invent the sandwich* + carousel *Nobody wanted the first shopping cart* ·
+  Day 6 short *The glue that was too weak (Post-it)*.
+- **Scam Decoded** (`launch/scam-decoded/POSTING_PLAN.md`; each day is a Short, its 60–90 s TikTok cut, and
+  sometimes a carousel): Day 1 *$0 and 10 minutes: freeze your credit* · Day 2 *1 family safe word beats an
+  AI voice clone* (kit) · Day 3 *That $3.95 'unpaid toll' text* · Day 4 *0 real banks ask you to move money* ·
+  Day 5 *$110M+ lost at Bitcoin ATMs* · Day 6 *Read back a 6-digit code…* · Day 7 *3 ways to pay only
+  scammers insist on*.
+- **1099 Money** (`launch/1099-money/POSTING_PLAN.md`, starts **Mon Nov 16**, 12:30 and 19:00 ET):
+  Day 1 short *Your first 1099 has no tax taken out* + carousel *$60K freelance income: what you actually owe* ·
+  Day 2 short *The 15.3% tax nobody warned you about* · Day 3 short *Made $400 on the side? Read this* +
+  carousel *The freelancer tax calendar for 2027* · Day 4 short *No 1099? You still owe tax on it* ·
+  Day 5 short *The tax deadline after New Year's* + carousel *Work out your quarterly payment in 5 steps* ·
+  Day 6 short *The rule that kills the underpayment penalty*.
+- **Dinero Simple** (`launch/dinero-simple/POSTING_PLAN.md`, 12:30 and 20:00 ET): the same order as Money
+  Made Simple in Spanish (Day 1 *El truco de las dos cuentas que evita sobregiros* + carrusel *Tu cita
+  mensual de 20 minutos con tu dinero*, and so on). **Nothing posts until the fluent reviewer signs off.**
+- **Ad studio** (`content-factory/ai-ad-studio-v2/CONTENT_PLAN_4_WEEKS.md`, Mon–Fri from **Mon Nov 16**):
+  posts 1–3 and 5 are ready in `social-posts/`; post 4 needs a screen recording (see R5).
+
+### R4 · What `factory triage` shows on a fresh install
+
+Ran on 2026-11-07 against `main` plus the safe PRs, with Money Made Simple's launch scripts imported and
+no keys set. Expect the same shape on your machine; it shrinks as you work through Stages 6–8 and R2.
+
+```
+Do this week (5)
+  [money-made-simple] review: #1 The two-account trick that stops overdrafts · fact_check: 2 claim(s) need a human fact-check
+      → approve, edit or reject it in Review
+  … (#2–#5 the same: 1–3 claims each)
+
+Setup (once) (18)
+  [-] media URL: PUBLIC_MEDIA_BASE_URL not set: Instagram/Threads fetch media from a public HTTPS URL
+  [-] voice: silent placeholder voice: set KOKORO_URL (free) or ELEVENLABS_*/OPENAI_API_KEY
+  [-] writing: offline placeholder drafts: set ANTHROPIC_API_KEY for real scripts
+  [money-made-simple] brand file: link_in_bio: placeholder link: https://example.com/links
+  [money-made-simple] brand file: affiliates[0].url: placeholder link: https://example.com/go/hysa
+  [money-made-simple] brand file: products[0–5].url: placeholder link: https://example.gumroad.com/l/…  (6 lines)
+  [money-made-simple] money-made-simple/facebook: missing FB_PAGE_ID, FB_PAGE_TOKEN
+  [money-made-simple] money-made-simple/instagram: missing IG_USER_ID, IG_ACCESS_TOKEN
+  [money-made-simple] money-made-simple/youtube: missing YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
+  [tiny-histories] brand file: products[0].url: placeholder link: https://example.gumroad.com/l/tiny
+  [tiny-histories] facebook / instagram / youtube: missing tokens (3 lines)
+```
+
+How to use it: clear **Setup** top to bottom once (each line names the file or key), then treat **Do this
+week** as your daily review queue. `factory triage --save` writes it to `output/triage.md`. Run
+`factory launch-check` after triage is clean; go live only on green.
+
+### R5 · Master recording schedule
+
+Every long video needs one element a template can't make (a chart, a screen recording or a part you
+record yourself), and `factory launch-check` blocks it without one. Charts are drawn automatically; the
+items below need you. One short session each **Saturday**, recording everything due the following week.
+Record at 1080p or better, never show personal data (blur account numbers, codes and names), keep clips
+10–30 s, and save each one where its brand's file says (Scam Decoded:
+`launch/scam-decoded/LONG_VIDEO_RECORDINGS.md`). `factory recordings` shows what's still missing, soonest first.
+
+⛔ = currently blocked by `factory launch-check` (Money Made Simple's 5 on PR #5). Times: about 15 min per
+screen recording, 30 min per on-camera or own-voice segment.
+
+Sources: Scam Decoded's 31 from `LONG_VIDEO_RECORDINGS.md`, Money Made Simple's and 1099 Money's from each
+brand's `ORIGINALITY.md` (1099 Money's own RECORDINGS.md, with 14, is being written and will replace those
+rows), and the ad studio's 5 from `ai-ad-studio-v2/social-posts/README.md`. Dinero Simple's 21 screen
+recordings come after its Spanish review and are not scheduled yet.
+
+**Sat Nov 14, 2026** · 3 items · ≈ 60 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 11-19 | Studio | Post 4 · Process | screen-recording: Screen-record the plan → frames → export workflow |
+| 11-22 | 1099 | Your first year freelancing: the complete money setup | human-segment: Dhruv records the monthly money hour in his own voice: the routine he actually runs, or plainly framed as the routine he's starting now (beat: Monthly hour) |
+| 11-22 | Scam | 9 holiday scams that peak before New Year (and how to beat each one) | screen-recording: Screen-record checking an unfamiliar store: search its name plus 'scam' and 'reviews', then open its contact and returns pages. (beat: 2. 1. Fake stores) |
+
+**Sat Nov 21, 2026** · 3 items · ≈ 45 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 11-24 | Studio | Post 7 · Seller tip | phone footage: Film 5 short phone clips of one product |
+| 11-29 | MMS | Credit scores explained from zero | screen-recording: Screen recording of AnnualCreditReport.com: requesting all three reports and where the account list sits (no personal data on screen) (beat: Check your reports) |
+| 11-29 | Scam | How to protect your parents from scams: the complete guide | screen-recording: Screen-record your own phone: silence unknown callers, the carrier spam filter, and adding a contact as a favorite. (beat: 5. Phone settings) |
+
+**Sat Nov 28, 2026** · 3 items · ≈ 40 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 12-02 | Studio | Post 13 · Rate the listing | permission: Get a real seller's written OK to feature their listing (not a recording) |
+| 12-03 | Studio | Post 14 · Process | screen-recording: Screen-record the delivery folder and an Etsy video upload |
+| 12-06 | Scam | Credit freeze vs fraud alert vs monitoring: what you actually need | screen-recording: Screen-record typing one credit bureau's freeze page address and finding the freeze button. Stop at sign-in. (beat: 2. Freeze) |
+
+**Sat Dec 5, 2026** · 3 items · ≈ 45 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 12-10 | Studio | Post 19 · Process + offer | screen-recording: Screen-record the Shop Trio batch |
+| 12-13 | MMS | 10 money moves to make before January 1 | screen-recording: Screen recording of the IRS Tax Withholding Estimator start page and a credit freeze page (test inputs only) (beat: 3. Withholding) |
+| 12-13 | Scam | Identity theft recovery, step by step (what to do in the first week) | screen-recording: Screen-record IdentityTheft.gov (typed in): start a report, pick a category, stop before personal details. (beat: 5. 3. Report) |
+
+**Sat Dec 12, 2026** · 1 item · ≈ 15 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 12-20 | Scam | 7 scams that hit after the holidays (returns, resales and new gadgets) | screen-recording: Screen-record typing the balance-check address printed on the back of your own gift card (blur the card number). (beat: 7. 6. Balance checks) |
+
+**Sat Dec 19, 2026** · 2 items · ≈ 45 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 12-27 | MMS | The 2027 money reset: a complete plan in one sitting ⛔ | human-segment: Dhruv records the 'When it breaks' chapter on camera or as his own voice: one honest, true restart tip (beat: When it breaks) |
+| 12-27 | 1099 | Your freelancer tax season plan: January to April | screen-recording: Screen recording of IRS Direct Pay's start page, showing the reason, form and tax-year choices for an estimated payment (nothing submitted, no personal data) (beat: Jan 15) |
+
+**Sat Dec 26, 2026** · 1 item · ≈ 15 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 01-03 | Scam | Find and cancel every subscription you forgot (a 30-minute New Year cleanup) | screen-recording: Screen-record your own phone's subscriptions screen in the app store settings (blur prices if you like). (beat: 3. Place 2: app stores) |
+
+**Sat Jan 2, 2027** · 3 items · ≈ 45 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 01-10 | MMS | Your first tax return, start to finish ⛔ | screen-recording: Screen recording of the IRS Free File landing page and the 'Do you need to file?' interactive tool (beat: Free filing) |
+| 01-10 | 1099 | Your 1099s explained: every form, every mistake, every fix | screen-recording: Screen recording of the IRS 'Understanding your Form 1099-K' page, scrolling to the thresholds and what to do if a form is wrong (beat: 1099-K) |
+| 01-10 | Scam | Tax season scams 2027: 8 to know before you file | screen-recording: Screen-record irs.gov (typed in): the Get an IP PIN page. Stop at sign-in. (beat: 10. The IP PIN) |
+
+**Sat Jan 9, 2027** · 1 item · ≈ 15 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 01-17 | Scam | How to file your taxes safely: documents, preparers and protecting your refund | screen-recording: Screen-record the IRS Directory of Federal Tax Return Preparers: search your ZIP code and show the credentials column. (beat: 4. Step 3: choose) |
+
+**Sat Jan 16, 2027** · 2 items · ≈ 45 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 01-24 | 1099 | Get your freelance taxes ready to file in one weekend | human-segment: Dhruv films his own Friday-night prep on screen or at his desk: downloading statements into one folder, using a demo account clearly labeled as a demo if he doesn't… (beat: Prep) |
+| 01-24 | Scam | How a wrong-number text becomes a $100,000 loss (crypto investment scams explained) | screen-recording: Screen-record FINRA BrokerCheck and the SEC's investor.gov search: look up a made-up 'platform' name and show that nothing comes back. (beat: 4. Stage 3: the tip) |
+
+**Sat Jan 23, 2027** · 2 items · ≈ 30 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 01-31 | 1099 | Schedule C explained, section by section, for freelancers | screen-recording: Screen recording of the blank Schedule C PDF from irs.gov, scrolled section by section with Jo's fictional numbers overlaid (beat: Header) |
+| 01-31 | Scam | Romance scams before Valentine's: how to spot one, and how to help someone in one | screen-recording: Screen-record a reverse image search of a stock photo of a person, showing where else the photo appears. (beat: 5. Video and AI) |
+
+**Sat Jan 30, 2027** · 1 item · ≈ 15 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 02-07 | Scam | Sextortion: what every parent and teen should know (and do) | screen-recording: Screen-record the Take It Down start page (takeitdown.ncmec.org, typed in) and scroll its how-it-works steps. Don't upload anything. (beat: 7. Take It Down) |
+
+**Sat Feb 6, 2027** · 3 items · ≈ 60 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 02-14 | MMS | Money and relationships: how to combine finances without fighting | human-segment: Dhruv records the 'Money date' chapter in his own voice, with his real check-in routine if he has one, or a plainly-stated suggestion (beat: Money date) |
+| 02-14 | 1099 | The mileage deduction: logs, rates, commuting rules and mistakes | screen-recording: Screen recording of a demo mileage log being filled in, plus the IRS standard mileage rates page showing the 2026 rate (beat: The log) |
+| 02-14 | Scam | Valentine's Day: the 4 ways romance scammers ask for money | screen-recording: Screen-record reportfraud.ftc.gov (typed in): pick the romance option and stop before any personal details. (beat: 8. If money's gone) |
+
+**Sat Feb 13, 2027** · 1 item · ≈ 15 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 02-21 | Scam | IRS scams 2027: every way scammers fake the IRS, and how the real IRS contacts you | screen-recording: Screen-record typing irs.gov and finding the Individual Online Account sign-in and the Payments page. Stop at sign-in. (beat: 8. Check and pay) |
+
+**Sat Feb 20, 2027** · 3 items · ≈ 60 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 02-28 | MMS | Your W-4, explained: stop overpaying (or owing) every April | screen-recording: Screen recording of the IRS Tax Withholding Estimator with made-up inputs, ending on the suggested W-4 entries (beat: Real numbers: refund) |
+| 02-28 | 1099 | 12 freelance tax mistakes that lead to IRS letters | human-segment: Dhruv reads the pre-filing routine in his own voice, saying truthfully whether he uses it or presenting it plainly as a suggestion (beat: Before you file) |
+| 02-28 | Scam | Owe the IRS? Free help first, and how to spot a tax relief scam | screen-recording: Screen-record the Taxpayer Advocate Service site and the Low Income Taxpayer Clinic list on irs.gov (find your state). (beat: 6. Free help) |
+
+**Sat Feb 27, 2027** · 2 items · ≈ 30 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 03-07 | 1099 | How to file your freelance tax return, step by step | screen-recording: Screen recording of the IRS Free File landing page and the online account's payment history view (logged-out or demo screens only) (beat: Step one) |
+| 03-07 | Scam | Government imposter scams: Social Security, Medicare, courts and more (Slam the Scam Day) | screen-recording: Screen-record ssa.gov/scam (typed in) and its 'report a scam' button. Stop before the form. (beat: 2. Social Security) |
+
+**Sat Mar 6, 2027** · 3 items · ≈ 45 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 03-14 | MMS | Where's my tax refund? How refunds work, and what slows them down ⛔ | screen-recording: Screen recording of Where's My Refund on IRS.gov (logged-out, entry screen only) and the IRS2Go app's status screen (beat: How it works) |
+| 03-14 | 1099 | Owe the IRS more than you expected? Every option, explained | screen-recording: Screen recording of the IRS Online Payment Agreement landing page, showing short-term vs long-term options (nothing submitted) (beat: Long) |
+| 03-14 | Scam | Spring break scams: fake rentals, fake booking sites and 'free trips' | screen-recording: Screen-record a search for a big hotel chain: point at the 'Sponsored' result, then type the chain's real address yourself and compare the domains. Book nothing. (beat: 3. Fake booking sites) |
+
+**Sat Mar 13, 2027** · 1 item · ≈ 15 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 03-21 | Scam | Job scams 2027: 4 fake jobs that cost you money (and how to spot them) | screen-recording: Screen-record checking a recruiter email domain against a real, public company's careers page. (beat: 5. Fake recruiters) |
+
+**Sat Mar 20, 2027** · 1 item · ≈ 15 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 03-28 | Scam | Filing last minute? How to beat the tax deadline safely (and the scams waiting for you) | screen-recording: Screen-record irs.gov (typed in): the Free File page and the extension page for Form 4868. (beat: 4. Free extensions) |
+
+**Sat Mar 27, 2027** · 3 items · ≈ 45 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 04-04 | MMS | How to Build an Emergency Fund (Even on a Tight Budget) | screen-recording: Screen recording of the FDIC BankFind tool checking a bank's insurance (any public bank) and setting a recurring transfer in a demo banking screen (beat: Where to keep it) |
+| 04-04 | 1099 | Tax extensions for freelancers: how, when, and what they really cost | screen-recording: Screen recording of IRS Direct Pay showing the 'extension' reason option (nothing submitted, no personal data) (beat: How one) |
+| 04-04 | Scam | After the storm: how home repair scams work, and how to hire safely | screen-recording: Screen-record your state's contractor license lookup: search a common business name and show the license status field. (beat: 6. Hiring safely) |
+
+**Sat Apr 3, 2027** · 3 items · ≈ 45 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 04-11 | MMS | How Credit Scores Actually Work (and How to Raise Yours) | screen-recording: Screen recording of AnnualCreditReport.com and the dispute page of one bureau (no personal data), plus a utilization bar chart (beat: Check and dispute your report free) |
+| 04-11 | 1099 | Day job, side gig or working spouse: freelance tax without quarterly payments | screen-recording: Screen recording of the IRS Tax Withholding Estimator with made-up inputs, ending on the suggested extra withholding for line 4(c) (beat: How) |
+| 04-11 | Scam | After Tax Day: the scams that follow you (and what the IRS really does next) | screen-recording: Screen-record typing irs.gov and opening Where's My Refund. Stop before entering anything. (beat: 2. Refund trackers) |
+
+**Sat Apr 10, 2027** · 1 item · ≈ 15 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 04-18 | Scam | How 1 hacked email unlocks everything (and how to lock it in 20 minutes) | screen-recording: Screen-record turning on 2-step verification in your own email account settings (blur codes and the address). (beat: 5. Two-step) |
+
+**Sat Apr 17, 2027** · 2 items · ≈ 45 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 04-25 | 1099 | Mid-year tax planning for freelancers: project 2027 now and fix it early | human-segment: Dhruv records the check-in routine in his own voice, saying truthfully when he does his own mid-year check, or plainly that he's starting one (beat: Repeat) |
+| 04-25 | Scam | Moving this spring? Rental listing scams and moving company scams, decoded | screen-recording: Screen-record the FMCSA mover search: search a moving company by name and show its USDOT number and complaint history link. (beat: 6. Check a mover) |
+
+**Sat Apr 24, 2027** · 1 item · ≈ 15 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 05-02 | Scam | Older Americans Month: the 7 scams that target older adults most | screen-recording: Screen-record your own phone's settings: silence unknown callers and the carrier's spam filter. (beat: 8. How families help) |
+
+**Sat May 1, 2027** · 1 item · ≈ 15 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 05-09 | Scam | Medicare fraud: free tests, free braces, and the card thieves want | screen-recording: Medicare's own sample Medicare Summary Notice on screen: circle where fake tests and equipment would show up (face cam intro and outro). (beat: 7. Read the statement) |
+
+**Sat May 8, 2027** · 2 items · ≈ 45 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 05-16 | MMS | Budgeting App vs Spreadsheet: Which One Should You Use? ⛔ | human-segment: Dhruv records 'Try it for 30 days' in his own voice, saying truthfully which method he uses (or that he's choosing one now) (beat: Try it for 30 days) |
+| 05-16 | Scam | Graduates' guide: fake jobs, fake landlords and scholarship scams | screen-recording: Screen-record checking a real, public company's careers page and a recruiter's email domain, then a reverse image search of a listing photo. (beat: 2. The chat interview) |
+
+**Sat May 15, 2027** · 1 item · ≈ 15 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 05-23 | Scam | Veterans' benefit scams and fake military charities: what to know before Memorial Day | screen-recording: Screen-record VA's accreditation search (search a common surname, no personal data) and a charity watchdog lookup. (beat: 3. Free help) |
+
+**Sat May 22, 2027** · 1 item · ≈ 15 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 05-30 | Scam | The summer travel scam guide: flights, bookings, rentals and road trips | screen-recording: Film a real gas pump check: wiggle the card reader, look at the seal. Then screen-record finding an airline's help number inside its own app. (beat: 5. Skimmers) |
+
+**Sat May 29, 2027** · 2 items · ≈ 30 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 06-06 | MMS | How to Freeze Your Credit (Free, 15 Minutes, All 3 Bureaus) ⛔ | screen-recording: Screen recording of each bureau's official freeze page (landing pages only, no personal data entered) (beat: Step by step: Equifax, Experian, TransUnion) |
+| 06-06 | Scam | Teens and summer money: money flips, free game coins and check-first babysitting jobs | screen-recording: Screen-record the security settings in a payment app and a game account on your own phone (2-step verification, private payments, parent PIN). (beat: 5. Settings) |
+
+**Sat Jun 5, 2027** · 1 item · ≈ 15 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 06-13 | Scam | Before Father's Day: car warranty calls, Google listing threats and the overpaying car buyer | screen-recording: Screen-record your own call log of warranty robocalls (numbers blurred), then blocking and reporting one. (beat: 6. Blocking calls) |
+
+**Sat Jun 12, 2027** · 1 item · ≈ 15 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 06-20 | Scam | Official-looking scams: jury duty warrants, deed letters and 'storage full' emails | screen-recording: Film from above: three fictional mock-ups on your desk (a call script, a deed letter, a storage email), marking the tells with a pen. Then your phone's real storage… (beat: 5. The pattern) |
+
+**Sat Jun 19, 2027** · 1 item · ≈ 15 min
+
+| Due | Brand | Video | Record |
+|---|---|---|---|
+| 06-27 | Scam | 4th of July weekend scams: lost pet texts, money 'sent by mistake' and fake celebrity ads | screen-recording: Screen-record two settings on your own phone: making a payment app private, and the 'report ad' menu in a social app. (beat: 5. Settings) |
+
+Not on a calendar yet: MMS · High-Yield Savings Accounts Explained: Are They Safe, and Are They Worth It? (screen-recording: Screen recording of FDIC BankFind, plus a $5,000 interest bar chart at 0.5% vs 4% (hypothetical)).
 
 ---
 
