@@ -650,3 +650,27 @@ def test_welcome_sequence_delivers_the_calendar_then_pitches_the_tracker(factory
     assert "$15" in last["text"] and "gumroad.com/l/quarterly-tax-tracker" in last["html"]
     body = " ".join(s.body_markdown for s in seq.steps)
     assert "January 15, 2027" in body and "Jan 18, 2028" in body and "110%" in body and "$12,037" in body
+
+
+def test_tax_season_push_fills_open_sundays_jan_3_to_apr_11():
+    items = _items("tax-season-push/content.json")
+    assert all(i["format"] == "short" for i in items) and len(items) == 15
+    days = [date.fromisoformat(i["post_on"]) for i in items]
+    assert days == [date(2027, 1, 3) + timedelta(weeks=k) for k in range(15)]  # Sundays carry only the long video
+    assert all(d.weekday() == 6 for d in days)
+    series = [i["series"] for i in items]
+    assert series[:2] == ["Jan 15 reminder 1/2", "Jan 15 reminder 2/2"]
+    assert series[2:6] == [f"1099 season {k}/4" for k in range(1, 5)]
+    assert series[6:] == [f"Deduction Hunt {k}/9" for k in range(1, 10)]
+    styles = [i["format_style"] for i in items]
+    assert all(a != b for a, b in zip(styles, styles[1:]))
+    others = {i["script"]["title"].lower() for p in LAUNCH.glob("*/content.json") if p.parent.name != "tax-season-push"
+              for i in json.loads(p.read_text())}
+    assert not others & {i["script"]["title"].lower() for i in items}
+    text = json.dumps(items)
+    assert "$2,000" in text and "$20,000" in text and "72.5" in text and "76" in text and "Feb 1, 2027" in text
+    assert "$600 or more" not in text
+    for it in items:
+        cap = it["script"]["caption"]
+        if "$60,000 of profit" in cap:
+            assert "fictional" in cap.lower()
