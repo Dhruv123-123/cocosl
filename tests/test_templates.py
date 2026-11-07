@@ -197,3 +197,15 @@ def test_twin_sheets_examples_add_up(tmp_path):
     assert d["O5"].value == 20 and d["O12"].value == "$570 to go"
     b = _recalc(TS.build_bill_tracker(tmp_path / "b.xlsx", date(2026, 11, 7)), tmp_path)["Bills"]
     assert b["M6"].value == pytest.approx(1910.99) and b["M7"].value == pytest.approx((66 / 3) + 180 / 12 * 2)
+
+
+def test_wedding_sheet_uses_the_planner_tool_categories(tmp_path):
+    import wedding_sheet as W
+    tool = ["Venue", "Catering", "Bar and drinks", "Photography", "Videography", "Attire", "Hair and makeup",
+            "Flowers and decor", "Music and DJ", "Cake and desserts", "Invitations and stationery", "Rings",
+            "Transportation", "Favors", "Officiant and license", "Rentals", "Planner or coordinator", "Gifts",
+            "Honeymoon", "Buffer for extras"]
+    assert W.CATEGORIES == tool and len(W.PLAN) == 20 and sum(W.PLAN) == 32000
+    wb = openpyxl.load_workbook(W.build_wedding(tmp_path / "w.xlsx", TODAY))
+    ws = wb["Planner paste"]
+    assert [ws.cell(r, 2).value for r in range(7, 27)] == [None] * 20   # the paste area starts empty

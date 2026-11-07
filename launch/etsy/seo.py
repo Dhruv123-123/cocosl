@@ -113,6 +113,11 @@ add("freelance-budget-bundle", "Freelance Budget Printable Bundle: Irregular Inc
     ["freelance budget", "irregular income", "side hustle tracker", "self employed budget", "variable income",
      "gig worker budget", "sinking funds", "emergency fund", "expense tracker", "bill tracker", "money review",
      "budget printable", "budget binder"], planner_type="Budget", dated="Undated")
+add("digital-budget-planner", "Digital Budget Planner, Undated Hyperlinked iPad GoodNotes Notability Template, Monthly Tabs",
+    ["digital planner", "goodnotes planner", "ipad planner", "hyperlinked planner", "notability planner", "digital budget",
+     "undated planner", "budget planner", "finance planner", "monthly budget", "goodnotes template", "budget tracker",
+     "money planner"], planner_type="Budget", dated="Undated", **{"Paper size": "iPad portrait + landscape (PDF)",
+                                                                 "Software": "GoodNotes, Notability, any PDF note app"})
 add("mega-budget-bundle", "Mega Budget Planner Bundle, 40 Printable Finance Pages: Budget, Savings, Debt Trackers",
     ["budget bundle", "budget binder", "budget planner", "finance planner", "printable bundle", "savings challenge",
      "debt tracker", "bill tracker", "sinking funds", "cash stuffing", "expense tracker", "money planner",

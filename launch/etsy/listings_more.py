@@ -261,3 +261,21 @@ DATED = [
               "Review the month and the year."],
          variants=["Sunday-start", "Monday-start"]),
 ]
+
+# Digital planner for tablet note apps (scouting's competitor-product-gaps.md, Nov 2026): undated, hyperlinked tabs.
+# Not in the undated printable bundles: it's a different format (one PDF per orientation, for an app, not a printer).
+DIGITAL = [
+    dict(slug="digital-budget-planner", pool="budget", price=12.00, name="Digital Budget Planner (undated, hyperlinked)",
+         file_stem="Digital-Budget-Planner", variants=["Portrait", "Landscape"],
+         title="Digital Budget Planner, Undated Hyperlinked iPad GoodNotes Notability Template, Monthly Tabs, Portrait Landscape",
+         tags=["digital planner", "goodnotes planner", "ipad planner", "hyperlinked planner", "notability planner",
+               "digital budget", "undated planner"],
+         hook="A budget planner made for your tablet: tap a tab on the right of any page to jump to a month, your bills, savings or debt, and write straight on the page in GoodNotes, Notability or any PDF note app.",
+         get=["47 pages: cover, home page with links to everything, how to use, year at a glance, goals, yearly bills, paychecks, savings goals, debt payoff",
+              "Every month: a write-in calendar, a monthly budget with weekly check-ins, and a spending log, linked to each other",
+              "Tabs on every page: Home, Year, Goals, Bills, Save, Debt, Jan to Dec, Notes (over 900 links)",
+              "2 PDFs: iPad portrait (3:4) and landscape (4:3). Undated, so you can start any month"],
+         how=["Download the PDF for the way you hold your tablet.", "Import it into GoodNotes, Notability or another PDF note app.",
+              "Tap Home, then your starting month.", "Write in the dates and plan the month."]),
+]
+

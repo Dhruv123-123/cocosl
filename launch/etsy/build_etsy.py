@@ -125,7 +125,13 @@ def main() -> int:
     for it in items:
         d = out / it["slug"]
         d.mkdir(parents=True, exist_ok=True)
-        if it["kind"] == "printable":
+        if it.get("digital"):
+            import digital_planner
+            for v in it["variants"]:
+                src = work / f'{it["slug"]}-{v}.html'
+                src.write_text(digital_planner.html(v, it["name"]))
+                jobs.append({"src": str(src), "pdf": str(d / f'{it["file_stem"]}-{v}.pdf')})
+        elif it["kind"] == "printable":
             for v in it.get("variants") or [None]:
                 for size in SIZES:
                     tag = f"{v}-{size}" if v else size

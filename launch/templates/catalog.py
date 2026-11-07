@@ -218,4 +218,26 @@ ITEMS = [
 from twins_catalog import ITEMS as _TWINS  # noqa: E402  (Sheets + Notion versions of five printables)
 
 ITEMS += _TWINS
+# Life-event budgets (scouting's competitor-product-gaps.md, Nov 2026). Pairs with the apps thread's wedding planner tool.
+ITEMS.append({
+    "slug": "wedding-budget-sheet", "kind": "sheets", "name": "Wedding Budget Sheet", "price": 12,
+    "xlsx": "Wedding-Budget-Sheet.xlsx", "link": "sheet_wedding",
+    "title": "Wedding Budget Spreadsheet for Google Sheets: budget vs actual, payment due dates + who's paying",
+    "tagline": "Plan every category, log each vendor payment with its due date, and see who's covering what, with RSVPs and cost per guest.",
+    "hook": "Keep the wedding money in one place: what you planned, what you've booked, what's paid, and what's due next.",
+    "gets": ["**Budget:** 20 wedding categories with planned, booked, paid, still owed and planned minus booked.",
+             "**Payments:** every deposit and balance with its due date, paid or not, and who's paying. Overdue turns red; "
+             "due in the next 30 days turns yellow.",
+             "**Due by month:** the payment calendar for the next 12 months, with a chart.",
+             "**Who's paying:** each person's promise against the payments assigned to them.",
+             "**Guests:** RSVPs and party sizes, and the cost per guest on the Dashboard."],
+    "who": "Couples (and the families helping) who want one shared sheet instead of five vendor emails.",
+    "faq": [("Do I need Excel?", "No. It's made for Google Sheets (free) so you can share it with your partner and family. "
+                                 "The .xlsx also opens in Excel and Numbers."),
+            ("Does it tell me what to spend?", "No. You type your own plan for each category; the sheet keeps the totals."),
+            ("Can I rename the categories?", "Yes. Type over them on Budget; the Payments list follows.")],
+    "tags": ["wedding budget", "wedding planner", "google sheets", "wedding spreadsheet", "budget tracker",
+             "wedding checklist", "personal finance"],
+    "next": "budget-sheet", "shots": [("Dashboard", "B1:C16"), ("Payments", "B1:J20"), ("Budget", "B1:H28")],
+})
 BY_SLUG = {i["slug"]: i for i in ITEMS}

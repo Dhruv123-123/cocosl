@@ -1,6 +1,6 @@
 # Products catalog: every product, every brand
 
-One sheet to list from. **115 listings** (Money Made Simple 92, Scam Decoded 7, 1099 Money 6, Dinero Simple 10). Nothing in this list has been uploaded, listed or
+One sheet to list from. **121 listings** (Money Made Simple 94, Scam Decoded 8, 1099 Money 6, Dinero Simple 13). Nothing in this list has been uploaded, listed or
 submitted anywhere.
 
 - **Files** and **Listing copy** paths are inside the project files folder `content-factory/` (the upload-ready copies).
@@ -13,7 +13,7 @@ submitted anywhere.
 - Regenerate after changing a price or name: `python launch/catalog/build_catalog.py`. Also as `PRODUCTS_CATALOG.csv`.
 
 
-## Money Made Simple (92)
+## Money Made Simple (94)
 
 | Product | Platform | Price | Files | Listing copy | Launch | Date | Notes |
 |---|---|---|---|---|---|---|---|
@@ -59,6 +59,7 @@ submitted anywhere.
 | Gift Budget Planner | Etsy | $3 | `etsy/gift-budget-planner/` | `etsy/gift-budget-planner/LISTING.md` | Week of Nov 9 (pin it) | calendar | Peaks before Thanksgiving. From Jan 1 2027: $4 (scheduled). |
 | Side Hustle Income Tracker | Etsy | $3 | `etsy/side-hustle-income-tracker/` | `etsy/side-hustle-income-tracker/LISTING.md` | Week of Nov 9; featured from Jan 25 | calendar | Tax-season item. From Jan 1 2027: $4 (scheduled). |
 | 2027 Budget Planner | Etsy | $12 | `etsy/2027-budget-planner/` | `etsy/2027-budget-planner/LISTING.md` | Week of Nov 9 (list first) | calendar | Dated: 4 PDFs (Sun/Mon start x Letter/A4). Drop the price after Jan 31. |
+| Digital Budget Planner (undated, hyperlinked) | Etsy | $12 | `etsy/digital-budget-planner/` | `etsy/digital-budget-planner/LISTING.md` | Week of Dec 7, for the January peak | proposed | Digital planner for tablet note apps: 2 PDFs (iPad portrait, landscape), 47 pages, about 1,000 links checked by the build. Open it in GoodNotes once and tap a few tabs before listing. |
 | Savings Challenge Pack (12 printables) | Etsy | $8 | `etsy/savings-challenge-pack/` | `etsy/savings-challenge-pack/LISTING.md` | Week of Nov 9; code BF25 Nov 27-30 | calendar | Black Friday: code only, no crossed-out price (see the BFCM section). From Jan 1 2027: $10 (scheduled). |
 | Debt Payoff Printable Bundle (5 printables) | Etsy | $8 | `etsy/debt-payoff-bundle/` | `etsy/debt-payoff-bundle/LISTING.md` | Week of Nov 16 | proposed | Goal bundle for the site's /shop/debt/ page. Full price; BF25 stays on the three launch bundles. |
 | First Paycheck Budget Bundle (6 printables) | Etsy | $9 | `etsy/first-paycheck-budget-bundle/` | `etsy/first-paycheck-budget-bundle/LISTING.md` | Week of Nov 16 | proposed | Goal bundle for the site's /shop/first-job/ page. Full price; BF25 stays on the three launch bundles. |
@@ -91,6 +92,7 @@ submitted anywhere.
 | Notion Bill Payment Tracker | Gumroad | $7 | `templates/notion-bill-tracker/` | `templates/notion-bill-tracker/LISTING.md` | Week of Dec 14, ahead of the January budgeting and savings-challenge peak | proposed | Notion: run notion_build.py once and paste the duplicate link into links.json. Digital version of the Etsy printable 'bill-payment-tracker'. |
 | Notion Paycheck Budget Planner | Gumroad | $7 | `templates/notion-paycheck-budget/` | `templates/notion-paycheck-budget/LISTING.md` | Week of Dec 14, ahead of the January budgeting and savings-challenge peak | proposed | Notion: run notion_build.py once and paste the duplicate link into links.json. Digital version of the Etsy printable 'paycheck-budget-planner'. |
 | Notion Debt Payoff Coloring Tracker | Gumroad | $7 | `templates/notion-debt-coloring/` | `templates/notion-debt-coloring/LISTING.md` | Week of Dec 14, ahead of the January budgeting and savings-challenge peak | proposed | Notion: run notion_build.py once and paste the duplicate link into links.json. Digital version of the Etsy printable 'debt-payoff-coloring-tracker'. |
+| Wedding Budget Sheet | Gumroad | $12 | `templates/wedding-budget-sheet/` | `templates/wedding-budget-sheet/LISTING.md` | Week of Dec 7 (engagement season peaks Dec-Feb) | proposed | Paste the Sheets copy link into links.json and rebuild. Pairs with the free wedding budget planner on PR #8 (same 20 categories; its Copy rows paste into the Planner paste tab). Etsy is optional: it's a spreadsheet, not a guide. |
 | 100 Envelope Challenge Poster | Etsy (print on demand) | about $22-$32 | `pod/100-envelope-challenge-poster/` | `pod/100-envelope-challenge-poster/LISTING.md` | Week of Nov 16; last orders before the print partner's mid-Dec cutoff | calendar | Connect Printify, check base price and shipping (keep $6+ per size), order one sample. |
 | 52 Week Savings Challenge Poster | Etsy (print on demand) | about $22-$32 | `pod/52-week-savings-poster/` | `pod/52-week-savings-poster/LISTING.md` | Week of Nov 16; last orders before the print partner's mid-Dec cutoff | calendar | Connect Printify, check base price and shipping (keep $6+ per size), order one sample. |
 | $1,000 Savings Bingo Poster | Etsy (print on demand) | about $22-$32 | `pod/savings-bingo-poster/` | `pod/savings-bingo-poster/LISTING.md` | Week of Nov 16; last orders before the print partner's mid-Dec cutoff | calendar | Connect Printify, check base price and shipping (keep $6+ per size), order one sample. |
@@ -110,7 +112,7 @@ submitted anywhere.
 | Money Dashboard Pro | Gumroad (Etsy optional) | $12 | `templates/money-dashboard-pro/` | `templates/money-dashboard-pro/LISTING.md` | Week of Nov 16, with the other Sheets | proposed | PR #8. Paste the Sheets copy link into launch/dashboard-pro/links.json and rebuild (python launch/dashboard-pro/kit.py). Paid step up from the free Money Dashboard maker. Starts from the bank download and adds 12-month trends, budget vs actual and sinking funds. Logging by hand month by month is the 2027 Budget Sheet; the Monthly Budget Sheet plans the month ahead, so neither is a near-duplicate. |
 | The January Reset Bundle | Gumroad | $24 | `storefront/money-made-simple/ (a Gumroad bundle of the four products; no new files)` | `storefront/money-made-simple/JANUARY_RESET.md` | Fri Jan 1 to Sun Jan 31 2027 only | proposed | Monthly Budget Sheet, Paycheck Budget Sheet, Money Dashboard Pro, No-Spend Challenge Sheet: $33 bought separately at today's prices. Needs Money Dashboard Pro (PR #8) live first. Unpublish Feb 1. |
 
-## Scam Decoded (7)
+## Scam Decoded (8)
 
 | Product | Platform | Price | Files | Listing copy | Launch | Date | Notes |
 |---|---|---|---|---|---|---|---|
@@ -118,6 +120,7 @@ submitted anywhere.
 | The Family Scam-Proofing Kit | Gumroad (site funnel) | $9 | `scam-decoded/product-family-scam-proofing-kit/` | `scam-decoded/product-family-scam-proofing-kit/LISTING.md` | With the brand launch (posting plan Day 1 is Sat Nov 7) | proposed | PR #9. Funnel emails and the scam checker sell this kit. Code LAUNCH ($5 for 7 days, only while true). |
 | Protect Your Parents (guide) | Gumroad | $29 | `scam-decoded/products/protect-your-parents/` | `scam-decoded/products/protect-your-parents/LISTING.md` | Week of Nov 16 | proposed | PR #9. Codes KITPARENTS, GUIDEKIT, LAUNCH. |
 | Scam Decoded for Seniors (large print) | Gumroad | $7 | `scam-decoded/products/seniors-pack/` | `scam-decoded/products/seniors-pack/LISTING.md` | Week of Nov 16 | proposed | PR #9. Gumroad only since Nov 7 (Etsy's AI-guide rule). See the caller ID card overlap. |
+| Scam Red Flags: Posters and Wallet Cards | Etsy + Gumroad | $7 | `scam-decoded/red-flags-printables/` | `scam-decoded/red-flags-printables/LISTING.md` | Week of Nov 16 | proposed | PR #9. 6 posters in 4 sizes and 10 wallet cards, no guide pages, so Etsy-safe. Sits beside the $6 Card Set. |
 | Scam-Proof Your Parents printable kit | Gumroad | [PRICE] (PR #9 suggests $9-$12) | `scam-decoded/parents-printable-kit/` | `scam-decoded/parents-printable-kit/LISTING.md` | Week of Nov 16 | proposed | PR #9. Gumroad only (Etsy's AI-guide rule). 9 pages to fill in with a parent: fridge card, 8 call scripts, code word guide, setup checklist. Sits between the $7 seniors pack and the $29 guide. Price not set yet. |
 | Seniors pack group print license | Gumroad | $49 (+$19 per extra site) | `scam-decoded/products/seniors-pack/` | `scam-decoded/products/seniors-pack/GROUP_LICENSE_LISTING.md` | When the first talk is booked | proposed | PR #9. For libraries and senior centers. |
 | Spot It, Stop It team training pack | Gumroad | $99 | `scam-decoded/products/team-training/` | `scam-decoded/products/team-training/LISTING.md` | Before the B2B outreach starts (Tue Nov 10) | proposed | PR #9. Code TEAMLAUNCH. |
@@ -133,7 +136,7 @@ submitted anywhere.
 | The Freelancer Money Bundle | Gumroad | $49 | `1099-money/products/bundle/` | `1099-money/products/bundle/LISTING.md` | Week of Nov 16 | proposed | PR #10. Codes LAUNCH, TRACKER15, KIT29. Scouting suggests $39, or $49 with a "worth $59 separately" line, from Jan 1 (PR #10 decides). |
 | The Quarterly Tax Tracker | Etsy | $15 | `etsy/1099-money/quarterly-tax-tracker/files/` | `etsy/1099-money/quarterly-tax-tracker/LISTING-ETSY.md` | Week of Nov 16 | proposed | PR #10. Etsy edition. |
 
-## Dinero Simple (10)
+## Dinero Simple (13)
 
 | Product | Platform | Price | Files | Listing copy | Launch | Date | Notes |
 |---|---|---|---|---|---|---|---|
@@ -142,6 +145,9 @@ submitted anywhere.
 | La Lista para Construir tu Crédito | Gumroad | $6 | `brands/dinero-simple/construir-credito/` | `brands/dinero-simple/construir-credito/LISTING.md` | After native review; target week of Dec 7 (December remittance and aguinaldo season) | proposed | Etsy's 22 Oct 2026 rule bans AI-generated functional guides (instructions buyers rely on must be the seller's own work), so this guide is sold on Gumroad only. NATIVE REVIEW PENDING: sign brands/dinero-simple/REVIEW_CHECKLIST_ES.md first. |
 | El Paquete de la Familia | Gumroad | $16 | `brands/dinero-simple/paquete-familia/` | `brands/dinero-simple/paquete-familia/LISTING.md` | After native review; target week of Dec 7 (December remittance and aguinaldo season) | proposed | Etsy's 22 Oct 2026 rule bans AI-generated functional guides (instructions buyers rely on must be the seller's own work), so this guide is sold on Gumroad only. NATIVE REVIEW PENDING: sign brands/dinero-simple/REVIEW_CHECKLIST_ES.md first. Different from El Paquete Dinero Simple ($29, the four guide kits): this bundles the three printables. |
 | Tablero de dinero Pro | Gumroad | $12 | `templates/tablero-de-dinero-pro/` | `templates/tablero-de-dinero-pro/LISTING.md` | After native review | proposed | PR #8. NATIVE REVIEW PENDING, like the rest of Dinero Simple. Spanish twin of Money Dashboard Pro. |
+| Registro de Cuentas y Pagos | Etsy | [PRICE] (PR #11 suggests $5-$7) | `dinero-simple/imprimibles-etsy/registro-de-cuentas/` | `dinero-simple/imprimibles-etsy/registro-de-cuentas/LISTING.md` | After native review | proposed | PR #11. NATIVE REVIEW PENDING. Bill tracker for the whole year, 7 pages. Labels only, no instructions, so Etsy-safe. |
+| Retos de Ahorro | Etsy | [PRICE] (PR #11 suggests $5-$7) | `dinero-simple/imprimibles-etsy/reto-de-ahorro/` | `dinero-simple/imprimibles-etsy/reto-de-ahorro/LISTING.md` | After native review | proposed | PR #11. NATIVE REVIEW PENDING. Savings challenges ($500 in 25 weeks, 52 weeks, a 100-box goal, named funds), 6 pages. Labels only, no instructions, so Etsy-safe. |
+| Registro de Renta y Reparaciones | Etsy | [PRICE] (PR #11 suggests $5-$7) | `dinero-simple/imprimibles-etsy/renta-y-reparaciones/` | `dinero-simple/imprimibles-etsy/renta-y-reparaciones/LISTING.md` | After native review | proposed | PR #11. NATIVE REVIEW PENDING. Rent and repairs log, 6 pages. Labels only, no instructions, so Etsy-safe. |
 | El Kit para Recortar Gastos | Gumroad | $5 | `dinero-simple/products/recorte-de-gastos/` | `dinero-simple/products/recorte-de-gastos/LISTING.md` | After native review (reviewer brief: cheapest path launches El Presupuesto first) | proposed | PR #11. NATIVE REVIEW PENDING. Codes RECORTE5, FECHA5, INVERTIR5. |
 | El Presupuesto de 20 Minutos | Gumroad | $12 | `dinero-simple/product/` | `dinero-simple/product/LISTING.md` | After native review (reviewer brief: cheapest path launches El Presupuesto first) | proposed | PR #11. NATIVE REVIEW PENDING. Codes RECORTE5, FECHA5, INVERTIR5. |
 | Tu Fecha Sin Deudas | Gumroad | $17 | `dinero-simple/products/fecha-sin-deudas/` | `dinero-simple/products/fecha-sin-deudas/LISTING.md` | After native review (reviewer brief: cheapest path launches El Presupuesto first) | proposed | PR #11. NATIVE REVIEW PENDING. Codes RECORTE5, FECHA5, INVERTIR5. |

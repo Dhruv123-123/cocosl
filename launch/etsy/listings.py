@@ -21,6 +21,16 @@ GOOD_TO_KNOW_PRINTABLE = """GOOD TO KNOW
 - This is an organising tool, not financial advice.
 - How it's made: designed by Money Made Simple. AI tools helped with drafting and layout; every page was checked by a human."""
 
+GOOD_TO_KNOW_DIGITAL = """GOOD TO KNOW
+- This is a DIGITAL DOWNLOAD for a tablet. Nothing is shipped. Files are available in your Etsy account right after payment (Purchases and reviews).
+- Two PDFs: iPad portrait and landscape. Works in GoodNotes, Notability, Noteshelf, Samsung Notes, Xodo and other apps that let you write on PDFs and follow links. You need the app and a stylus or finger; neither is included.
+- In some apps the links only work in read mode (in GoodNotes, tap the pen icon to switch).
+- Undated, so you can start any month of any year. You can also print it, but it's laid out for a screen.
+- For personal use only. Please don't resell, share or redistribute the files.
+- This is an organising tool, not financial advice.
+- How it's made: designed by Money Made Simple. AI tools helped with drafting and layout; every page was checked by a person.
+- GoodNotes and Notability are trademarks of their owners; this planner isn't made or endorsed by them."""
+
 GOOD_TO_KNOW_PRODUCT = """GOOD TO KNOW
 - This is a DIGITAL DOWNLOAD. Nothing is shipped. Files are available in your Etsy account right after payment (Purchases and reviews).
 - The guide is a PDF (US Letter, prints fine on A4). The spreadsheet is an .xlsx file that opens in Microsoft Excel, Google Sheets (free: upload it to Google Drive and open it) and Apple Numbers.
@@ -30,7 +40,7 @@ GOOD_TO_KNOW_PRODUCT = """GOOD TO KNOW
 - How it's made: drafted with AI help and fact-checked by a person at Money Made Simple. AI tools also helped with layout."""
 
 MORE = """MORE FROM THE SHOP
-Search "{shop}" on Etsy for the matching budget planner, savings trackers and money guides, or get everything in one of the bundles."""
+Search "{shop}" on Etsy for the matching budget planners, savings trackers and debt trackers, or get them together in one of the bundles."""
 
 
 def _good_to_know_dated(year: int, n_pdfs: int) -> str:
@@ -45,6 +55,9 @@ def _good_to_know_dated(year: int, n_pdfs: int) -> str:
 def opener(it: dict) -> str:
     """First sentence: name the item and its format, as Etsy advises ("keywords in the first few sentences")."""
     n = it["name"].split(" (")[0].removeprefix("The ")
+    if it.get("digital"):
+        return (f"This {n} is an undated digital PDF planner with hyperlinked tabs, for GoodNotes, Notability and other PDF "
+                "note apps, in iPad portrait and landscape.")
     if it.get("dated"):
         return f"This {n} is a dated {it['year']} printable PDF planner in US Letter and A4."
     if it.get("product") and it.get("bundle"):
@@ -303,6 +316,12 @@ def _more_listings() -> list[dict]:
         out.append(dict(slug=d["slug"], kind="printable", dated=True, name=d["name"], price=d["price"], file_stem=d["file_stem"],
                         title=d["title"], tags=tags(d["tags"], d["pool"]), hook=d["hook"], get=d["get"], how=d["how"],
                         year=d["year"], variants=d["variants"], hero=[11, 10, 1], grid=[1, 3, 4, 5, 6, 8, 10, 11, 12, 46]))
+    import digital_planner
+    for d in M.DIGITAL:
+        n = len(digital_planner.build())
+        out.append(dict(slug=d["slug"], kind="printable", digital=True, name=d["name"], price=d["price"], file_stem=d["file_stem"],
+                        title=d["title"], tags=tags(d["tags"], d["pool"]), hook=d["hook"], get=d["get"], how=d["how"],
+                        variants=d["variants"], hero=[2, 11, 10], grid=[2, 4, 8, 10, 11, 12, 13, 45]))
     prices = {x["slug"]: x["price"] for x in LISTINGS + out}
     names = {x["slug"]: x["name"] for x in LISTINGS + out}
     for d in M.BUNDLES:
@@ -339,7 +358,8 @@ for it in LISTINGS:
 
 for it in LISTINGS:
     it.setdefault("category", GUIDE_CAT if it["kind"] == "product" else PRINT_CAT)
-    good = _good_to_know_dated(it["year"], 2 * len(it["variants"])) if it.get("dated") else None
+    good = (_good_to_know_dated(it["year"], 2 * len(it["variants"])) if it.get("dated")
+            else GOOD_TO_KNOW_DIGITAL if it.get("digital") else None)
     it["description"] = _desc(opener(it) + " " + it["hook"], it["get"], it["how"], product=it.get("product", False), good=good)
 # Etsy's 22 Oct 2026 rules ban "AI-generated functional guides" (instructions buyers rely on must be the seller's own
 # work; scouting's research/scouting/ai-disclosure-rules-nov-2026.md, PR #2). Our guide-and-spreadsheet kits say AI

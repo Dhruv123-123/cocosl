@@ -43,6 +43,7 @@ BRANDS = {
                   ("2027 planners", ["2027 Budget Sheet", "2027 Money HQ for Notion"]),
                   ("Google Sheets templates", ["Monthly Budget Sheet", "Debt Payoff Sheet", "Savings Goals Sheet", "Money Sheets Bundle",
                                               "Money Dashboard Pro"]),
+                  ("Life events", ["Wedding Budget Sheet"]),
                   ("Challenges and trackers for Google Sheets", ["52-Week Savings Challenge Sheet", "No-Spend Challenge Sheet",
                                                                  "Bill Payment Tracker Sheet", "Paycheck Budget Sheet",
                                                                  "Debt Payoff Coloring Sheet"]),
@@ -60,7 +61,7 @@ BRANDS = {
         about=("Scam Decoded explains how today's scams work and gives families and teams a plan for the moment the phone "
                "rings: a safe word, a call-back rule, and cards by the phone. Contacts checked against the FTC, FBI and DOJ. "
                "General education, not legal or financial advice. Made with the help of AI tools and checked by a person."),
-        sections=[("For your family", ["The Family Scam-Proofing Kit", "Scam Decoded Card Set"]),
+        sections=[("For your family", ["The Family Scam-Proofing Kit", "Scam Decoded Card Set", "Scam Red Flags: Posters and Wallet Cards"]),
                   ("For your parents", ["Scam Decoded for Seniors (large print)", "Scam-Proof Your Parents printable kit",
                                         "Protect Your Parents (guide)"]),
                   ("For teams and venues", ["Spot It, Stop It team training pack", "Seniors pack group print license"])],
@@ -118,6 +119,7 @@ CROSS_SELL = {
     "Notion Money HQ": ("2027 Money HQ for Notion", "The same HQ, dated month by month for 2027.", "Email", ""),
     "Money Dashboard Pro": ("The 20-Minute Budget", "The dashboard shows where the money went; the 20-Minute Budget plans where it goes next.", "Receipt note", ""),
     "The January Reset Bundle": ("The 20-Minute Budget", "The sheets show the numbers; the 20-Minute Budget turns them into one weekly number.", "Receipt note + Jan 2 email", "BUDGET5"),
+    "Wedding Budget Sheet": ("Monthly Budget Sheet", "After the wedding: one budget for the new household.", "Receipt note", ""),
     "The Money Reset: 30-Day Challenge Workbook": ("The 20-Minute Budget", "The Week 3 budget, turned into a weekly system with a spreadsheet.", "Receipt note + email", ""),
     # printable twins (launch/templates/twins_catalog.py): the same next step as each listing's checkout upsell
     "52-Week Savings Challenge Sheet": ("Savings Goals Sheet", "Once the habit sticks, give each goal its own target and date.", "Checkout upsell", ""),
@@ -134,6 +136,7 @@ CROSS_SELL = {
     "The Family Scam-Proofing Kit": ("Protect Your Parents (guide)", "Families who make the plan usually want to help their parents next.", "Receipt note + list email 7 + buyer email 3", "KITPARENTS"),
     "Protect Your Parents (guide)": ("Scam Decoded Card Set", "The guide's plan, as cards by the phone and in the wallet. (The kit itself comes free with GUIDEKIT.)", "Receipt note", ""),
     "Scam Decoded Card Set": ("The Family Scam-Proofing Kit", "The cards are the reminders; the kit is the plan behind them.", "Receipt note", ""),
+    "Scam Red Flags: Posters and Wallet Cards": ("The Family Scam-Proofing Kit", "The posters show the signs; the kit is the family plan for when the phone rings.", "Receipt note", ""),
     "Scam Decoded for Seniors (large print)": ("Scam Decoded Card Set", "The booklet explains each scam; the cards go by the phone and in the wallet.", "Receipt note", ""),
     "Scam-Proof Your Parents printable kit": ("Protect Your Parents (guide)", "The kit is one afternoon together; the guide covers the settings and the next visits.", "Receipt note", ""),
     "Spot It, Stop It team training pack": ("Seniors pack group print license", "Teams that serve older clients can hand out the large-print pack.", "Email", ""),

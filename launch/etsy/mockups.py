@@ -43,7 +43,9 @@ def _doc(body: str, cls: str) -> str:
 
 def _pages_for(it: dict, out_dir: Path, work: Path, page_images) -> tuple[list[Path], list[Path]]:
     """(hero page images, inside page images) for a listing."""
-    if it["kind"] == "printable":
+    if it.get("digital"):
+        pdf = next(out_dir.glob("*-Portrait.pdf"))
+    elif it["kind"] == "printable":
         pdf = min(out_dir.glob("*-Letter.pdf"), key=lambda p: "Monday" in p.name)
     elif it["slug"] == "20-minute-budget":
         pdf = out_dir / "The-20-Minute-Budget.pdf"
@@ -69,6 +71,8 @@ def _pages_for(it: dict, out_dir: Path, work: Path, page_images) -> tuple[list[P
 
 
 def _chips(it: dict) -> list[str]:
+    if it.get("digital"):
+        return ["Instant download", "Hyperlinked tabs", "GoodNotes + Notability", "Undated"]
     if it.get("dated"):
         return ["Instant download", "Dated Jan-Dec", "Sun + Mon start", "Letter + A4"]
     if it["kind"] == "printable":
@@ -85,6 +89,8 @@ def render(it: dict, out_dir: Path, work: Path, run_jobs, page_images) -> list[P
     name = html.escape(it["name"]).replace("$", "&#36;")
     kick = {"printable": "Printable &middot; digital download", "bundle": "Printable bundle &middot; digital download"}.get(
         it["kind"], "Guide + spreadsheet &middot; digital download")
+    if it.get("digital"):
+        kick = "Digital planner &middot; for tablets"
     # 01 hero: three real pages fanned on the right
     pos = [(900, 400, -7, 560), (1130, 320, 0, 600), (1360, 420, 7, 560)][:len(hero)]
     pages = "".join(
@@ -109,6 +115,10 @@ def render(it: dict, out_dir: Path, work: Path, run_jobs, page_images) -> list[P
         steps = [("Download", "Your files are in Etsy &gt; Purchases right after you pay."),
                  ("Open", "Read the PDF guide. Open the spreadsheet in Excel, Google Sheets or Numbers."),
                  ("Fill in", "Type into the yellow cells. Everything else calculates for you.")]
+    elif it.get("digital"):
+        steps = [("Download", "Your files are in Etsy &gt; Purchases right after you pay."),
+                 ("Import", "Open the PDF in GoodNotes, Notability or any PDF note app."),
+                 ("Tap + write", "Tap a tab to jump to any month or section, then write on the page.")]
     else:
         steps = [("Download", "Your files are in Etsy &gt; Purchases right after you pay."),
                  ("Print", "US Letter or A4. Print at 100%, as often as you like for personal use."),

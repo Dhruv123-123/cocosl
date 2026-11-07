@@ -18,6 +18,7 @@ BOOK_WHERE = "Last page of the book (add on the next upload)"
 ETSY_NEXT = {
     "Printable Budget Binder (all 10 printables)": ("2027 Budget Planner", "The binder is undated; the 2027 planner runs the year date by date."),
     "Savings Challenge Pack (12 printables)": ("Printable Budget Binder (all 10 printables)", "The budget pages that find the money for the challenges."),
+    "Digital Budget Planner (undated, hyperlinked)": ("Savings Challenge Pack (12 printables)", "The 12 challenge pages open in GoodNotes too: add them to the planner."),
     "Debt Payoff Printable Bundle (5 printables)": ("Printable Budget Binder (all 10 printables)", "The budget pages that find the extra payment each month."),
     "First Paycheck Budget Bundle (6 printables)": ("Savings Challenge Pack (12 printables)", "Once each paycheck has a job, make saving a game."),
     "Freelance and Side Income Budget Bundle (7 printables)": ("2027 Budget Planner", "A dated year for planning around the slow months."),
@@ -29,7 +30,11 @@ ETSY_NEXT = {
     "2027 Money HQ for Notion": ("2027 Budget Planner", "The same year on paper, for the fridge or the binder."),
     "Money Dashboard Pro": ("2027 Budget Planner", "The dashboard looks back; the planner plans the year ahead on paper."),
     "El Registro de Envíos": ("El Presupuesto Familiar", "El envío es un gasto fijo; el presupuesto familiar le da su lugar."),
-    "Scam Decoded Card Set": (None, "No other Scam Decoded product is on Etsy (the guides are Gumroad only), so Etsy buyers get no recommendation."),
+    "Registro de Cuentas y Pagos": ("El Presupuesto Familiar", "Las cuentas son la mitad del presupuesto; este agrega el resto."),
+    "Retos de Ahorro": ("El Presupuesto Familiar", "El presupuesto encuentra el dinero para los retos."),
+    "Registro de Renta y Reparaciones": ("Registro de Cuentas y Pagos", "La renta es una cuenta más: llévalas todas en un lugar."),
+    "Scam Decoded Card Set": ("Scam Red Flags: Posters and Wallet Cards", "The cards go by the phone; the posters put the warning signs on the wall."),
+    "Scam Red Flags: Posters and Wallet Cards": ("Scam Decoded Card Set", "The posters show the signs; the cards hold the call-back rule and the numbers."),
 }
 # Posters point at the printable of the same challenge, so the wall chart has a pen-and-paper log.
 POSTER_NEXT = {

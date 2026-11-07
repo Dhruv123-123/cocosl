@@ -50,6 +50,10 @@ def etsy_rows() -> list[dict]:
         base = f"etsy/{s}/"
         if it.get("dated"):
             date, src, note = "Week of Nov 9 (list first)", "calendar", "Dated: 4 PDFs (Sun/Mon start x Letter/A4). Drop the price after Jan 31."
+        elif it.get("digital"):
+            date, src, note = "Week of Dec 7, for the January peak", "proposed", ("Digital planner for tablet note apps: 2 PDFs (iPad "
+                                                                              "portrait, landscape), 47 pages, about 1,000 links checked by the build. "
+                                                                              "Open it in GoodNotes once and tap a few tabs before listing.")
         elif it.get("goal"):
             date, src, note = "Week of Nov 16", "proposed", (f"Goal bundle for the site's /shop/{it['goal']}/ page. Full price; BF25 "
                                                               "stays on the three launch bundles.")
@@ -102,6 +106,10 @@ def template_rows() -> list[dict]:
         if i.get("twin_of"):  # Sheets/Notion versions of a printable: added after the calendar was made
             date, src = "Week of Dec 14, ahead of the January budgeting and savings-challenge peak", "proposed"
             note += f" Digital version of the Etsy printable '{i['twin_of']}'."
+        if s == "wedding-budget-sheet":
+            date, src = "Week of Dec 7 (engagement season peaks Dec-Feb)", "proposed"
+            note += (" Pairs with the free wedding budget planner on PR #8 (same 20 categories; its Copy rows paste into the "
+                     "Planner paste tab). Etsy is optional: it's a spreadsheet, not a guide.")
         out.append(row("Money Made Simple", i["name"], plat, money(i["price"]), f"templates/{s}/", f"templates/{s}/LISTING.md",
                        date, src, note))
     return out
@@ -184,6 +192,9 @@ OTHER_BRANCHES = [
     ("Scam Decoded", "Scam Decoded for Seniors (large print)", "Gumroad", "$7", "scam-decoded/products/seniors-pack/",
      "scam-decoded/products/seniors-pack/LISTING.md", "Week of Nov 16", "proposed",
      "PR #9. Gumroad only since Nov 7 (Etsy's AI-guide rule). See the caller ID card overlap."),
+    ("Scam Decoded", "Scam Red Flags: Posters and Wallet Cards", "Etsy + Gumroad", "$7", "scam-decoded/red-flags-printables/",
+     "scam-decoded/red-flags-printables/LISTING.md", "Week of Nov 16", "proposed",
+     "PR #9. 6 posters in 4 sizes and 10 wallet cards, no guide pages, so Etsy-safe. Sits beside the $6 Card Set."),
     ("Scam Decoded", "Scam-Proof Your Parents printable kit", "Gumroad", "[PRICE] (PR #9 suggests $9-$12)",
      "scam-decoded/parents-printable-kit/", "scam-decoded/parents-printable-kit/LISTING.md", "Week of Nov 16", "proposed",
      "PR #9. Gumroad only (Etsy's AI-guide rule). 9 pages to fill in with a parent: fridge card, 8 call scripts, code "
@@ -218,6 +229,13 @@ OTHER_BRANCHES += [
      "templates/tablero-de-dinero-pro/LISTING.md", "After native review", "proposed",
      "PR #8. NATIVE REVIEW PENDING, like the rest of Dinero Simple. Spanish twin of Money Dashboard Pro."),
 ]
+# Dinero Simple's Etsy-safe printables, PR #11 (launch/dinero-simple/imprimibles/), added Nov 7 2026. Price not set yet.
+for _slug, _n, _what in (("registro-de-cuentas", "Registro de Cuentas y Pagos", "Bill tracker for the whole year, 7 pages."),
+                         ("reto-de-ahorro", "Retos de Ahorro", "Savings challenges ($500 in 25 weeks, 52 weeks, a 100-box goal, named funds), 6 pages."),
+                         ("renta-y-reparaciones", "Registro de Renta y Reparaciones", "Rent and repairs log, 6 pages.")):
+    OTHER_BRANCHES.append(("Dinero Simple", _n, "Etsy", "[PRICE] (PR #11 suggests $5-$7)", f"dinero-simple/imprimibles-etsy/{_slug}/",
+                           f"dinero-simple/imprimibles-etsy/{_slug}/LISTING.md", "After native review", "proposed",
+                           f"PR #11. NATIVE REVIEW PENDING. {_what} Labels only, no instructions, so Etsy-safe."))
 _DS = [("El Kit para Recortar Gastos", 5, "recorte-de-gastos", "recorte-de-gastos"),
        ("El Presupuesto de 20 Minutos", 12, None, "presupuesto-20-minutos"),
        ("Tu Fecha Sin Deudas", 17, "fecha-sin-deudas", "fecha-sin-deudas"),
