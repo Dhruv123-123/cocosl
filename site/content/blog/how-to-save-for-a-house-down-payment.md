@@ -84,7 +84,7 @@ The rule of thumb: money you need within about three to five years shouldn't be 
 Good homes for house money:
 
 - **High-yield savings account:** easy access, FDIC-insured at an insured bank, rate changes with the market. The simplest choice. ([How to open one](/blog/how-to-open-a-high-yield-savings-account/).)
-- **Certificates of deposit (CDs):** a fixed rate for a fixed term. Good if you know your buying date; there's usually a penalty for withdrawing early.
+- **Certificates of deposit (CDs):** a fixed rate for a fixed term. Good if you know your buying date; there's usually a penalty for withdrawing early. ([Savings vs CDs, compared](/compare/high-yield-savings-vs-cds/).)
 - **Treasury bills:** short-term US government debt, bought through TreasuryDirect or a brokerage. Interest is exempt from state and local income tax.
 - **Money market funds:** in a brokerage account, similar yields to savings accounts but not FDIC-insured. ([Savings vs money market, compared](/blog/high-yield-savings-vs-money-market/).)
 

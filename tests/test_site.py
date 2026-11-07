@@ -78,7 +78,7 @@ def test_plausible_analytics(tmp_path):
 def test_comparison_pages_affiliate_placeholders(tmp_path):
     out = _build(tmp_path, "https://example.org")
     pages = sorted(p.parent.name for p in (out / "compare").glob("*/index.html"))
-    assert len(pages) == 8
+    assert len(pages) == 13
     hysa = (out / "compare" / "best-high-yield-savings-accounts" / "index.html").read_text()
     assert "Checked as of" in hysa and "Disclosure:" in hysa
     # No affiliate URL configured yet: plain official link, no sponsored label, and the notice says so.
@@ -699,3 +699,45 @@ def test_coming_soon_product_has_unique_form_ids(tmp_path):
     ids = re.findall(r'\sid="([^"]+)"', html)
     assert len(ids) == len(set(ids)), [i for i in ids if ids.count(i) > 1]
     assert html.count("Not on sale yet") == 2
+
+
+NEW_FEB_ARTICLES = ["how-to-file-taxes-for-the-first-time", "hsa-vs-fsa", "how-to-dispute-a-credit-report-error",
+                    "how-to-budget-with-irregular-income", "how-to-split-finances-as-a-couple", "how-much-car-can-i-afford",
+                    "how-credit-card-interest-works", "how-to-lower-your-grocery-bill"]
+NEW_VS_PAGES = ["high-yield-savings-vs-cds", "balance-transfer-vs-personal-loan", "freetaxusa-vs-taxact", "ally-vs-marcus",
+                "ynab-vs-everydollar"]
+
+
+def test_february_articles_are_long_dated_and_linked(tmp_path):
+    sys.path.insert(0, str(SITE))
+    import build
+    dates = []
+    for slug in NEW_FEB_ARTICLES:
+        meta, body = build.parse_front_matter((SITE / "content" / "blog" / f"{slug}.md").read_text())
+        prose = re.sub(r"<!--.*?-->", "", body, flags=re.S)
+        assert len(prose.split()) >= 1500, (slug, len(prose.split()))
+        assert "## A worked example" in prose and "fictional" in prose, slug
+        assert str(meta["date"]).startswith("2027-02"), slug
+        assert len(meta["seo_title"]) <= 60 and len(meta["description"]) <= 155, slug
+        dates.append(str(meta["date"]))
+    assert len(set(dates)) == 8
+    early = _build(tmp_path, "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2027-01-31")
+    assert not any((early / "blog" / s).exists() for s in NEW_FEB_ARTICLES)
+    late = _build(tmp_path / "late", "https://example.org", BLOG_SHOW_SCHEDULED="0", BUILD_DATE="2027-02-28")
+    sm = (late / "sitemap.xml").read_text()
+    for s in NEW_FEB_ARTICLES:
+        assert f"/blog/{s}/" in sm, s
+    assert 'href="/blog/how-to-dispute-a-credit-report-error/"' in (late / "blog" / "how-credit-scores-work" / "index.html").read_text()
+
+
+def test_vs_comparison_pages_have_placeholders_and_disclosure(tmp_path):
+    out = _build(tmp_path, "https://example.org")
+    for slug in NEW_VS_PAGES:
+        h = (out / "compare" / slug / "index.html").read_text()
+        assert "Disclosure:" in h and "earn anything from the companies" in h, slug
+        assert "Checked as of" in h and 'rel="noopener nofollow" data-program=' in h, slug
+        assert 'rel="sponsored' not in h and '"@type": "FAQPage"' in h, slug
+        assert "fictional" in h, slug  # worked example labelled
+        assert f"https://example.org/compare/{slug}/" in (out / "sitemap.xml").read_text()
+    # review articles point at their head-to-head page
+    assert "/compare/ally-vs-marcus/" in (out / "blog" / "ally-bank-review" / "index.html").read_text()

@@ -22,10 +22,12 @@ EXISTING = {"401k-match-explained", "budgeting-app-vs-spreadsheet", "debt-avalan
             "sinking-funds-explained"}
 COMPARE = {"best-balance-transfer-cards", "best-bill-negotiation-services", "best-budgeting-apps",
            "best-credit-builder-cards", "best-high-yield-savings-accounts", "best-identity-theft-protection",
-           "best-robo-advisors", "rocket-money-vs-ynab-vs-monarch"}
+           "best-robo-advisors", "rocket-money-vs-ynab-vs-monarch", "high-yield-savings-vs-cds",
+           "balance-transfer-vs-personal-loan", "freetaxusa-vs-taxact", "ally-vs-marcus", "ynab-vs-everydollar"}
 COMPARE_KEYWORDS = {"best high yield savings account", "best budgeting apps", "best robo advisors",
                     "best credit builder cards", "best identity theft protection", "best bill negotiation services",
-                    "best balance transfer cards", "rocket money vs ynab vs monarch"}
+                    "best balance transfer cards", "rocket money vs ynab vs monarch", "high yield savings vs cd",
+                    "balance transfer vs personal loan", "freetaxusa vs taxact", "ally vs marcus", "ynab vs everydollar"}
 INVESTING = {"betterment", "wealthfront", "acorns", "empower", "schwab", "fidelity"}
 # The site PR's go-links.json (single place to paste approved tracking links).
 GO = {"acorns", "ally", "aura", "betterment", "capital-one", "chime", "cit", "empower", "fidelity", "freetaxusa",

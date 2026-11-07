@@ -90,6 +90,7 @@
   },
   "best-tax-software-for-simple-returns": {
    "related": [
+    "how-to-file-taxes-for-the-first-time",
     "what-to-do-with-your-tax-refund",
     "401k-match-explained",
     "roth-vs-traditional-ira",
@@ -127,6 +128,7 @@
   },
   "debt-avalanche-vs-snowball": {
    "related": [
+    "how-credit-card-interest-works",
     "debt-consolidation-explained",
     "how-credit-scores-work",
     "how-to-make-a-budget-you-will-keep",
@@ -185,6 +187,7 @@
   },
   "how-credit-scores-work": {
    "related": [
+    "how-to-dispute-a-credit-report-error",
     "how-to-freeze-your-credit",
     "debt-avalanche-vs-snowball",
     "how-to-make-a-budget-you-will-keep",
@@ -212,6 +215,7 @@
   },
   "how-to-freeze-your-credit": {
    "related": [
+    "how-to-dispute-a-credit-report-error",
     "how-credit-scores-work",
     "find-and-cancel-subscriptions",
     "debt-avalanche-vs-snowball",
@@ -221,6 +225,7 @@
   },
   "how-to-make-a-budget-you-will-keep": {
    "related": [
+    "how-to-split-finances-as-a-couple",
     "50-30-20-rule",
     "sinking-funds-explained",
     "how-to-build-an-emergency-fund",
@@ -340,6 +345,7 @@
   },
   "car-repair-sinking-fund": {
    "related": [
+    "how-much-car-can-i-afford",
     "sinking-funds-explained",
     "how-to-build-an-emergency-fund",
     "how-to-make-a-budget-you-will-keep",
@@ -367,6 +373,7 @@
   },
   "50-30-20-rule": {
    "related": [
+    "how-to-lower-your-grocery-bill",
     "how-to-make-a-budget-you-will-keep",
     "sinking-funds-explained",
     "budgeting-app-vs-spreadsheet",
@@ -385,6 +392,7 @@
   },
   "how-to-stop-living-paycheck-to-paycheck": {
    "related": [
+    "how-to-budget-with-irregular-income",
     "how-to-make-a-budget-you-will-keep",
     "find-and-cancel-subscriptions",
     "how-to-build-an-emergency-fund",
@@ -398,6 +406,78 @@
     "debt-avalanche-vs-snowball",
     "roth-vs-traditional-ira",
     "best-tax-software-for-simple-returns"
+   ],
+   "tool": "budget"
+  },
+  "how-to-file-taxes-for-the-first-time": {
+   "related": [
+    "what-to-do-with-your-tax-refund",
+    "best-tax-software-for-simple-returns",
+    "how-to-budget-with-irregular-income",
+    "first-job-401k-setup"
+   ],
+   "tool": "budget"
+  },
+  "hsa-vs-fsa": {
+   "related": [
+    "how-to-build-an-emergency-fund",
+    "first-job-401k-setup",
+    "sinking-funds-explained",
+    "50-30-20-rule"
+   ],
+   "tool": "budget"
+  },
+  "how-to-dispute-a-credit-report-error": {
+   "related": [
+    "how-credit-scores-work",
+    "how-to-freeze-your-credit",
+    "how-much-car-can-i-afford",
+    "how-credit-card-interest-works"
+   ],
+   "tool": "ask"
+  },
+  "how-to-budget-with-irregular-income": {
+   "related": [
+    "how-to-stop-living-paycheck-to-paycheck",
+    "sinking-funds-explained",
+    "how-to-file-taxes-for-the-first-time",
+    "how-to-make-a-budget-you-will-keep"
+   ],
+   "tool": "budget"
+  },
+  "how-to-split-finances-as-a-couple": {
+   "related": [
+    "how-to-make-a-budget-you-will-keep",
+    "50-30-20-rule",
+    "how-to-save-for-a-house-down-payment",
+    "how-to-build-an-emergency-fund"
+   ],
+   "tool": "col"
+  },
+  "how-much-car-can-i-afford": {
+   "related": [
+    "car-repair-sinking-fund",
+    "how-to-dispute-a-credit-report-error",
+    "50-30-20-rule",
+    "debt-consolidation-explained"
+   ],
+   "tool": "budget"
+  },
+  "how-credit-card-interest-works": {
+   "related": [
+    "debt-avalanche-vs-snowball",
+    "debt-consolidation-explained",
+    "how-credit-scores-work",
+    "how-to-stop-living-paycheck-to-paycheck"
+   ],
+   "tool": "debt"
+  },
+  "how-to-lower-your-grocery-bill": {
+   "related": [
+    "how-to-make-a-budget-you-will-keep",
+    "50-30-20-rule",
+    "how-to-stop-living-paycheck-to-paycheck",
+    "find-and-cancel-subscriptions"
    ],
    "tool": "budget"
   }

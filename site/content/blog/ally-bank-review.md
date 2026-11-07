@@ -14,7 +14,7 @@ Ally Bank is one of the longest-running online banks in the US. It's not usually
 
 *How we wrote this: based on Ally's published terms, checked in November 2026. We haven't been paid for this overview and haven't tested the account. Check the current rates on Ally's site.*
 
-Comparing banks? See our **[high-yield savings comparison](/compare/best-high-yield-savings-accounts/)**.
+Comparing banks? See our **[high-yield savings comparison](/compare/best-high-yield-savings-accounts/)** and **[Ally vs Marcus](/compare/ally-vs-marcus/)**.
 
 ## The short version
 

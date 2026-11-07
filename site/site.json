@@ -396,8 +396,8 @@
   "article_compare": {
     "sofi-review": "best-high-yield-savings-accounts",
     "cit-bank-review": "best-high-yield-savings-accounts",
-    "ally-bank-review": "best-high-yield-savings-accounts",
-    "high-yield-savings-vs-money-market": "best-high-yield-savings-accounts",
+    "ally-bank-review": "ally-vs-marcus",
+    "high-yield-savings-vs-money-market": "high-yield-savings-vs-cds",
     "best-bank-account-for-college-students": "best-high-yield-savings-accounts",
     "how-to-build-an-emergency-fund": "best-high-yield-savings-accounts",
     "is-my-savings-app-fdic-insured": "best-high-yield-savings-accounts",
@@ -421,7 +421,19 @@
     "debt-avalanche-vs-snowball": "best-balance-transfer-cards",
     "are-robo-advisors-worth-it": "best-robo-advisors",
     "how-to-choose-a-budgeting-app": "best-budgeting-apps",
-    "how-to-open-a-high-yield-savings-account": "best-high-yield-savings-accounts"
+    "how-to-open-a-high-yield-savings-account": "best-high-yield-savings-accounts",
+    "how-to-file-taxes-for-the-first-time": "freetaxusa-vs-taxact",
+    "freetaxusa-review": "freetaxusa-vs-taxact",
+    "best-tax-software-for-simple-returns": "freetaxusa-vs-taxact",
+    "how-credit-card-interest-works": "balance-transfer-vs-personal-loan",
+    "debt-consolidation-explained": "balance-transfer-vs-personal-loan",
+    "how-to-save-for-a-house-down-payment": "high-yield-savings-vs-cds",
+    "how-to-budget-with-irregular-income": "ynab-vs-everydollar",
+    "how-to-split-finances-as-a-couple": "best-budgeting-apps",
+    "how-to-lower-your-grocery-bill": "best-budgeting-apps",
+    "how-to-dispute-a-credit-report-error": "best-identity-theft-protection",
+    "how-much-car-can-i-afford": "best-high-yield-savings-accounts",
+    "hsa-vs-fsa": "best-high-yield-savings-accounts"
   },
   "calculators_url": "https://moneymadesimple.netlify.app/calculators",
   "stores": {

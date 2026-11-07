@@ -14,7 +14,9 @@
     "freetaxusa-review",
     "how-to-make-a-budget-you-will-keep",
     "first-job-401k-setup",
-    "50-30-20-rule"
+    "50-30-20-rule",
+    "how-to-file-taxes-for-the-first-time",
+    "hsa-vs-fsa"
    ]
   },
   {
@@ -38,7 +40,8 @@
    "articles": [
     "how-to-make-a-budget-you-will-keep",
     "sinking-funds-explained",
-    "car-repair-sinking-fund"
+    "car-repair-sinking-fund",
+    "how-much-car-can-i-afford"
    ]
   },
   {
@@ -60,7 +63,9 @@
    "path": "/budget/bills.html",
    "blurb": "bills, promo end dates and call scripts to lower them yourself.",
    "articles": [
-    "how-to-stop-living-paycheck-to-paycheck"
+    "how-to-stop-living-paycheck-to-paycheck",
+    "how-to-budget-with-irregular-income",
+    "how-to-split-finances-as-a-couple"
    ]
   },
   {
@@ -69,7 +74,9 @@
    "title": "0% deal countdown",
    "path": "/budget/deals.html",
    "blurb": "the payment that clears a 0% or deferred-interest deal in time.",
-   "articles": []
+   "articles": [
+    "how-credit-card-interest-works"
+   ]
   },
   {
    "key": "emergency-fund",
@@ -118,7 +125,8 @@
    "articles": [
     "how-credit-scores-work",
     "self-credit-builder-review",
-    "debt-consolidation-explained"
+    "debt-consolidation-explained",
+    "how-credit-card-interest-works"
    ]
   },
   {
@@ -129,7 +137,8 @@
    "blurb": "track 30-day credit bureau deadlines for a report error.",
    "articles": [
     "how-to-freeze-your-credit",
-    "aura-review"
+    "aura-review",
+    "how-to-dispute-a-credit-report-error"
    ]
   },
   {
@@ -138,7 +147,9 @@
    "title": "Medical bill letters",
    "path": "/medical-bills/",
    "blurb": "request an itemized bill, dispute an error or ask for financial assistance.",
-   "articles": []
+   "articles": [
+    "hsa-vs-fsa"
+   ]
   },
   {
    "key": "debt-letters",
