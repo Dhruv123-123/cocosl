@@ -630,3 +630,23 @@ def test_month_9_runs_aug_19_to_sep_18_with_the_sep_14_reminder(factory):
     for figure in ("$422", "$367", "$774", "$82,920", "$58,075", "$4,966", "$4,098", "$21,000", "$31,500", "$42,000"):
         assert figure in text, figure
     assert "Jan 15, 2028" not in text and "Jan 18, 2028" in text and "Apr 18, 2028" in text
+
+
+def test_welcome_sequence_delivers_the_calendar_then_pitches_the_tracker(factory):
+    from contentfactory.funnel.sequences import load_sequence, render_step, validate_sequence
+    brand = factory.brand("1099-money")
+    assert validate_sequence(factory.settings, brand) == []
+    seq = load_sequence(factory.settings, "1099-money")
+    assert [s.day_offset for s in seq.steps] == [0, 1, 3, 5, 7]
+    assert "not tax, legal or financial advice" in seq.footer_note and "AI help" in seq.footer_note
+    raw = (ROOT / "brands" / "sequences" / "1099-money.yaml").read_text()
+    assert "{if launch}" not in raw and "{if no_launch}" not in raw  # no launch price; Sender has no date conditional
+    fake = {"id": 0, "token": "t", "email": "x@example.com"}
+    from datetime import datetime, timezone
+    now = datetime.now(timezone.utc)
+    first, *_, last = [render_step(factory.settings, brand, seq, s, fake, base="https://example.com", now=now)
+                       for s in seq.steps]
+    assert "freelancer-tax-calendar-2027.pdf" in first["html"]
+    assert "$15" in last["text"] and "gumroad.com/l/quarterly-tax-tracker" in last["html"]
+    body = " ".join(s.body_markdown for s in seq.steps)
+    assert "January 15, 2027" in body and "Jan 18, 2028" in body and "110%" in body and "$12,037" in body
