@@ -109,7 +109,7 @@ def email_html(issue: dict, brand: dict, prod: dict) -> str:
     hits_block = f'<h2 {h2}>{L["hits"]}</h2><ul style="margin:0 0 6px;padding-left:22px">{hits}</ul>' if hits else ""
     promise_foot = f'<p style="margin:0 0 6px">{html.escape(promise)}</p>' if promise else ""
     return f"""<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="{prod.get("lang", "en")}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(fill(issue["subject"], brand))}</title></head>
 <body style="margin:0;padding:0;background:#eef1f4">
 <div style="display:none;max-height:0;overflow:hidden">{html.escape(fill(issue["preheader"], brand))}</div>
@@ -140,7 +140,7 @@ def email_html(issue: dict, brand: dict, prod: dict) -> str:
 <tr><td style="padding:12px 24px 22px;font-size:12px;line-height:1.5;color:#4a5561;border-top:1px solid #e3e7eb">
   {promise_foot}
   <p style="margin:0 0 6px">{html.escape(prod["disclaimer"])}</p>
-  <p style="margin:0 0 4px">Sources:</p><ul style="margin:0 0 10px;padding-left:18px">{sources}</ul>
+  <p style="margin:0 0 4px">{html.escape(L.get("sources", "Sources"))}:</p><ul style="margin:0 0 10px;padding-left:18px">{sources}</ul>
   {footer}
   <p style="margin:8px 0 0">{html.escape(fill(brand.get("unsubscribe", ""), brand))}</p>
   {credit}
@@ -168,7 +168,7 @@ def email_text(issue: dict, brand: dict, prod: dict) -> str:
     lines += [L["job"].upper(), f(issue["job"]), "", md_text(fill(prod["cta"], brand)), "", "--"]
     if promise:
         lines.append(promise)
-    lines += [prod["disclaimer"], "Sources:"] + [f"- {s['name']}: {s['url']}" for s in issue["sources"]]
+    lines += [prod["disclaimer"], L.get("sources", "Sources") + ":"] + [f"- {s['name']}: {s['url']}" for s in issue["sources"]]
     lines += [""] + [fill(x, brand) for x in brand["footer_lines"]]
     if brand.get("unsubscribe"):
         lines.append(fill(brand["unsubscribe"], brand))
@@ -266,7 +266,7 @@ a{{color:{c}}}
 {hits_block}
 <h2>{L["job"]}</h2><p>{f(issue["job"])}</p>
 <div class="foot">{foot}</div>
-<p class="small">{html.escape(prod["disclaimer"])} Sources: {"; ".join(html.escape(s["name"]) for s in issue["sources"])}.</p>
+<p class="small">{html.escape(prod["disclaimer"])} {html.escape(prod["labels"].get("sources", "Sources"))}: {"; ".join(html.escape(s["name"]) for s in issue["sources"])}.</p>
 </body></html>"""
 
 
@@ -416,7 +416,8 @@ def sales_doc_jobs(pdir: Path) -> list[dict]:
 
 
 def products() -> list[Path]:
-    return sorted(p.parent for p in ROOT.glob("*/product.json"))
+    """Each product folder, plus language editions in <product>/<lang>/ (e.g. credit-union-alert/es)."""
+    return sorted(p.parent for p in [*ROOT.glob("*/product.json"), *ROOT.glob("*/[a-z][a-z]/product.json")])
 
 
 def main() -> None:

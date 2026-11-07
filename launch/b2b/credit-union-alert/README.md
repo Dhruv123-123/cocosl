@@ -23,6 +23,7 @@ Nothing was bought.
 | `COLD_EMAILS.md` | Email 1 (two versions), contact form, LinkedIn note, 2 follow-ups, final note, and replies to 9 common answers. |
 | `PROSPECTS.csv` + `PROSPECTS.md` | 60 credit unions from NCUA call report data (Q2 2026): batch 1 in MT/ID/OR/WA, batch 2 in WY/UT/CO. |
 | `CONTENT_CALENDAR.md` + `.csv` | 12 weeks of planned issues after the samples (member sends Feb 2 to Apr 20 2027), with delivery, fact-check and write-by dates, Scam Decoded source issue and official sources. |
+| `es/` | Spanish edition of the 4 samples (Plus tier), in Dinero Simple's style using usted. **Not yet reviewed by a native speaker**: see `es/REVIEW_CHECKLIST.md`. |
 | `onboarding/` | First-client kit: kickoff email series, brand intake form (PDF), approval workflow and sign-off log, invoice template with `{{PAYMENT_LINK}}` (PDF). |
 | `DELIVERY_WORKFLOW.md` | How each weekly issue is picked, written, checked, built, delivered and corrected; client onboarding. |
 
@@ -41,6 +42,8 @@ Python standard library only; images need Node with Playwright (already in the c
 
 ## Dhruv's next steps
 
+The full list for all three products is in `../LAUNCH_CHECKLIST.md`. For credit unions:
+
 1. Fill `{{YOUR_NAME}}`, `{{YOUR_EMAIL}}`, `{{YOUR_PHONE}}` in `sales-sheet.html` and run
    `python3 build.py credit-union-alert` from `launch/b2b/` (it also writes `out/sales-sheet.pdf` and `out/COMPLIANCE_NOTE.pdf`).
 2. Fill `website` and `contact_route` for the first 8 rows of `PROSPECTS.csv` (about 3 minutes each).
@@ -53,5 +56,5 @@ Python standard library only; images need Node with Playwright (already in the c
 - **Brand name:** this uses "Scam Decoded", which is still waiting on the name decision (Scam Decoded vs.
   other options). The member-facing packs don't show our name at all, so only the sales sheet and
   emails would change.
-- **Spanish edition and exclusivity** are in the Plus tier. Drop them from the sheet if you don't want
-  to promise them yet.
+- **Spanish edition and exclusivity** are in the Plus tier. Spanish samples exist in `es/` but need a
+  native review first. Drop Spanish from the sheet if you don't want to promise it yet.

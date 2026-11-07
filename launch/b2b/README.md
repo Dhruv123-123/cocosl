@@ -2,7 +2,7 @@
 
 Three products, one engine. Each sells a ready-made, branded monthly or weekly pack that an
 organization sends to its own people. Built from existing brand content (Scam Decoded, Money Made
-Simple, 1099 Money). **Nothing here has been sent or posted.** Dhruv sends every email by hand, payment
+Simple, 1099 Money). **Start with `LAUNCH_CHECKLIST.md`**: what to fill in, what to send first, how to follow up. **Nothing here has been sent or posted.** Dhruv sends every email by hand, payment
 links stay as placeholders, and nothing was bought.
 
 | Folder | Product | Buyer | Price | Cadence |
@@ -23,6 +23,7 @@ placeholders brand), `sales-sheet.html`, `COMPLIANCE_NOTE.md`, `COLD_EMAILS.md`,
 cd launch/b2b
 python3 build.py                                  # all products: sample + placeholder packs, sales sheet + compliance PDFs
 python3 build.py employer-wellness                # one product
+python3 build.py credit-union-alert/es            # the Spanish credit union edition (also built by plain build.py)
 python3 build.py employer-wellness --brand employer-wellness/clients/acme.json --issue 2027-02
 ```
 

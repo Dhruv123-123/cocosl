@@ -1,0 +1,285 @@
+{
+  "_about": "Spanish (es-US) edition of ../issues.json for Plus-tier clients. MACHINE-ADAPTED FROM ENGLISH. NOT REVIEWED BY A NATIVE SPEAKER. Do not deliver to a client until REVIEW_CHECKLIST.md is signed off. Register: usted. Staff brief stays in English on purpose (it's for staff, not members).",
+  "reviewed": "not yet (native review pending)",
+  "issues": [
+    {
+      "id": "2027-01-a",
+      "n": 1,
+      "send_date": "2027-01-05",
+      "deliver_by": "2026-12-29",
+      "source": "Scam Decoded newsletter #22 (breach follow-ups) and the fraud-call research behind it; Spanish adaptation of the English issue 2027-01-a",
+      "topic": "Llamadas falsas del departamento de fraudes que piden un código",
+      "subject": "Alerta de estafa: si \"nosotros\" le llamamos para pedirle un código, cuelgue",
+      "preheader": "Los estafadores se hacen pasar por nuestro equipo de fraudes. Una regla los detiene.",
+      "headline": "La llamada falsa del departamento de fraudes",
+      "example_label": "Así suena (ejemplo inventado)",
+      "example": "\"Hola, le llamo del departamento de fraudes de {{CU_SHORT}}. Acabamos de detener un cargo de $482 en una tienda de electrónicos. Para bloquearlo, le voy a enviar un código a su celular. ¿Me lo puede leer?\"",
+      "explain": [
+        "Es posible que el identificador de llamadas hasta muestre nuestro nombre. Es muy fácil falsificarlo.",
+        "Ese código no sirve para bloquear nada. Es el código que permite entrar a su cuenta o aprobar un pago. En cuanto usted lo lee, ya pueden entrar. Otra versión le pide que pase su dinero a una \"cuenta segura\" para protegerlo. Esa cuenta no existe."
+      ],
+      "tell": "Quien le pida que le lea un código, que le dé su contraseña o su PIN, o que mueva su dinero para protegerlo, no somos nosotros.",
+      "promise": true,
+      "steps": [
+        "**Cuelgue.** Luego llámenos al {{CU_PHONE}} o al número que aparece al reverso de su tarjeta. Si de verdad éramos nosotros, ahí estaremos.",
+        "**¿Ya compartió un código o movió dinero?** Llámenos de inmediato al {{CU_PHONE}}. Mientras antes lo sepamos, más podemos intentar hacer.",
+        "**Repórtelo** en [ReporteFraude.ftc.gov](https://reportefraude.ftc.gov). Ayuda a rastrear a quienes están detrás de estas llamadas."
+      ],
+      "quick_hits": [
+        "**Primero un mensaje, luego una llamada:** un texto pregunta \"¿Hizo usted esta compra? Responda SÍ o NO\" y después llama un \"agente de fraudes\". No confíe en la llamada por el mensaje. Cuelgue y llámenos.",
+        "**\"No le diga nada a la sucursal\":** si quien llama le pide que no le cuente a nuestro personal, es una estafa. Siempre."
+      ],
+      "job": "Guarde el {{CU_PHONE}} en su celular como \"{{CU_SHORT}} (número real)\" y cuéntele la regla a un familiar: nunca le pedimos que nos lea un código.",
+      "lobby": {
+        "kicker": "Alerta de estafa",
+        "headline": "Nunca le pediremos que nos lea un código.",
+        "bullets": [
+          "El identificador de llamadas se puede falsificar.",
+          "Cuelgue. Llame al número de su tarjeta.",
+          "No existe una \"cuenta segura\"."
+        ]
+      },
+      "social": {
+        "caption": "Alerta de estafa: alguien llama \"del departamento de fraudes de {{CU_SHORT}}\" y le pide que le lea un código que le acabamos de enviar. Cuelgue. Ese código les abre su cuenta. Nunca le pediremos que nos lea un código, que nos dé su PIN ni que mueva su dinero a una \"cuenta segura\". Si tiene dudas, llámenos al {{CU_PHONE}} o al número al reverso de su tarjeta.",
+        "alt": "Alerta de estafa de {{CU_SHORT}}: nunca le pediremos que nos lea un código. El identificador de llamadas se puede falsificar. Cuelgue y llame al número de su tarjeta. No existe una cuenta segura."
+      },
+      "brief": {
+        "Members may ask": "\"Did you just call me about a charge?\"",
+        "What to say": "\"We never ask members to read back a code or move money to a safe account. Let's look at your account together right now.\"",
+        "Escalate": "If they shared a code or moved money: follow our fraud procedure today, check recent sign-ins and payees, and help them change their password."
+      },
+      "sources": [
+        {
+          "name": "FTC: ¿Le llamaron por actividad sospechosa en su cuenta? Podría ser un estafador (jun. 2024, en inglés)",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2024/06/got-call-about-fraud-activity-your-bank-account-it-could-be-scammer"
+        },
+        {
+          "name": "FTC: ¿Qué es un código de verificación y por qué alguien me lo pediría? (mar. 2024, en inglés)",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2024/03/whats-verification-code-why-would-someone-ask-me-it"
+        },
+        {
+          "name": "FTC: ¿Alguien le dijo que moviera o transfiriera su dinero? Podría ser una estafa (ene. 2024, en inglés)",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2024/01/did-someone-tell-you-move-or-transfer-your-money-it-could-be-scam"
+        },
+        {
+          "name": "FTC: las estafas de impostores fueron el fraude más reportado en 2025, con más de $3,500 millones perdidos (mar. 2026, en inglés)",
+          "url": "https://www.ftc.gov/news-events/news/press-releases/2026/03/ftc-testifies-joint-economic-committee-agencys-efforts-combat-fraud"
+        },
+        {
+          "name": "FTC en español: estafas y cómo reportarlas",
+          "url": "https://consumidor.ftc.gov"
+        }
+      ],
+      "review": "pending: native es-US read + Spanish URL check (see REVIEW_CHECKLIST.md)"
+    },
+    {
+      "id": "2027-01-b",
+      "n": 2,
+      "send_date": "2027-01-12",
+      "deliver_by": "2027-01-05",
+      "source": "Scam Decoded newsletter #8 (new-year job scams); Spanish adaptation of the English issue 2027-01-b",
+      "topic": "Trabajos de \"tareas\" y el cheque falso que viene con ellos",
+      "subject": "Alerta de estafa: el trabajo que le paga y luego le pide que pague",
+      "preheader": "Estafas de empleo de enero, el cheque que rebota y cuándo llamarnos primero.",
+      "headline": "El trabajo que le pide que pague",
+      "example_label": "Así se ve (ejemplo inventado)",
+      "example": "\"¡Hola! Soy reclutadora de una agencia de marketing digital. Trabajo remoto y flexible, de 60 a 90 minutos al día calificando productos, de $300 a $800 al día. ¿Le interesa? Escríbame por WhatsApp.\"",
+      "explain": [
+        "Los primeros pagos pequeños son reales, para ganarse su confianza. Después su \"cuenta\" queda en negativo y tiene que depositar dinero, muchas veces en criptomonedas, para liberar sus ganancias. Ese dinero no regresa.",
+        "Otra versión le envía un cheque para comprar equipo con su \"proveedor\". El dinero puede aparecer en su cuenta antes de que el cheque se compense. Cuando rebota días después, usted debe lo que gastó o envió."
+      ],
+      "tell": "Un trabajo real nunca le pide que pague, deposite o compre algo para que le paguen, y nunca le manda un cheque para que le pase dinero a otra persona.",
+      "promise": false,
+      "steps": [
+        "**No responda.** Busque la empresa por su cuenta y postúlese en su página oficial de empleos.",
+        "**¿Recibió un cheque de un nuevo empleador, un comprador o un desconocido?** Llámenos al {{CU_PHONE}} antes de gastar o enviar cualquier parte. Preferimos mil veces contestar una pregunta que ayudarle a arreglar un cheque rebotado.",
+        "**¿Ya pagó?** Pare, aunque le digan que un depósito más libera su dinero. Repórtelo en [ReporteFraude.ftc.gov](https://reportefraude.ftc.gov)."
+      ],
+      "quick_hits": [
+        "**Entrevistas solo por mensaje de texto:** los empleadores reales le entrevistan por video o en persona.",
+        "**\"Reciba dinero y reenvíelo\":** un trabajo que le pide mover dinero por su cuenta está moviendo dinero robado, y a usted le pueden hacer responsable."
+      ],
+      "job": "Reenvíe esta alerta a alguien que esté buscando trabajo ahora mismo.",
+      "lobby": {
+        "kicker": "Alerta de estafa",
+        "headline": "Un trabajo real no le cobra por pagarle.",
+        "bullets": [
+          "Sin depósitos para liberar ganancias.",
+          "El cheque para reenviar dinero rebotará.",
+          "Pregúntenos antes de gastar ese cheque."
+        ]
+      },
+      "social": {
+        "caption": "¿Buscando trabajo este enero? Cuidado con el \"trabajo de tareas\": mucho dinero por dar \"me gusta\" a videos o calificar productos, y luego un depósito para liberar sus ganancias. O un cheque para comprar equipo con su proveedor, que rebota después de que usted ya envió el dinero. Un trabajo real nunca le cobra por pagarle. ¿Recibió un cheque de alguien nuevo? Llámenos al {{CU_PHONE}} antes de gastarlo.",
+        "alt": "Alerta de estafa de {{CU_SHORT}}: un trabajo real no le cobra por pagarle. Sin depósitos para liberar ganancias. El cheque para reenviar dinero rebotará. Pregúntenos antes de gastar ese cheque."
+      },
+      "brief": {
+        "Members may ask": "\"When will this check clear? My new job sent it for equipment.\"",
+        "What to say": "\"Funds showing as available doesn't mean the check is good. Can you tell me about the job? A check you're asked to send part of somewhere else is a common scam.\"",
+        "Escalate": "Follow our deposit hold and fraud procedures. If the member already sent money, note who it went to and how."
+      },
+      "sources": [
+        {
+          "name": "FTC: Estafas de empleo (en inglés)",
+          "url": "https://consumer.ftc.gov/articles/job-scams"
+        },
+        {
+          "name": "FTC: Ese mensaje con una oferta de trabajo probablemente es una estafa (abr. 2026, en inglés)",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2026/04/job-offer-text-probably-scam"
+        },
+        {
+          "name": "FTC: Cómo detectar, evitar y reportar estafas con cheques falsos (en inglés)",
+          "url": "https://consumer.ftc.gov/articles/how-spot-avoid-and-report-fake-check-scams"
+        },
+        {
+          "name": "FTC: Cómo evitar estafas de trabajo desde casa (jun. 2025, en inglés)",
+          "url": "https://consumer.ftc.gov/consumer-alerts/2025/06/how-avoid-work-home-job-scams"
+        },
+        {
+          "name": "FTC en español: estafas y cómo reportarlas",
+          "url": "https://consumidor.ftc.gov"
+        }
+      ],
+      "review": "pending: native es-US read + Spanish URL check (see REVIEW_CHECKLIST.md)"
+    },
+    {
+      "id": "2027-01-c",
+      "n": 3,
+      "send_date": "2027-01-19",
+      "deliver_by": "2027-01-12",
+      "source": "Scam Decoded newsletter #9 (wrong-number texts that turn into crypto investing); Spanish adaptation of the English issue 2027-01-c",
+      "topic": "Mensajes de \"número equivocado\" que terminan en \"inversiones\" en criptomonedas",
+      "subject": "Alerta de estafa: el número equivocado que quiere ser su amigo",
+      "preheader": "Cómo un mensaje amable se convierte en una inversión en criptomonedas, y la regla que lo detiene.",
+      "headline": "El número equivocado que se vuelve una inversión",
+      "example_label": "Así se ve (ejemplo inventado)",
+      "example": "\"Hola, Ana, ¿sigue en pie la cena del sábado? ... ¡Ay, perdón, número equivocado! Pero parece usted muy amable. ¿De dónde es?\"",
+      "explain": [
+        "Esta estafa tiene paciencia. Después de semanas de plática amistosa, su nuevo amigo le cuenta lo bien que le va en un sitio de inversión en criptomonedas y se ofrece a enseñarle.",
+        "El sitio muestra que su saldo crece. Cuando intenta sacar dinero, primero hay que pagar un \"impuesto\" o una \"comisión\". El saldo nunca fue real, y las comisiones no se acaban."
+      ],
+      "tell": "Si alguien que solo conoce por internet le habla de invertir, en un sitio o una app que esa persona eligió, es una estafa. Si le cobran para retirar su propio dinero, es que no hay dinero.",
+      "promise": false,
+      "steps": [
+        "**No invierta** por un enlace o una app que le mandó alguien que conoció por internet. Borre y bloquee los mensajes de número equivocado en vez de contestarlos.",
+        "**¿Está por comprar criptomonedas o enviar una transferencia para una inversión?** Llámenos primero al {{CU_PHONE}} o pase por una sucursal. Hablarlo con alguien de confianza es la mejor protección que existe.",
+        "**¿Ya invirtió?** Deje de pagar comisiones. Repórtelo al FBI en [IC3.gov](https://www.ic3.gov) y a la FTC en [ReporteFraude.ftc.gov](https://reportefraude.ftc.gov)."
+      ],
+      "quick_hits": [
+        "**Servicios de \"recuperación\"** que prometen devolverle sus criptomonedas por una cuota muchas veces son los mismos estafadores que regresan por más.",
+        "**Verifique antes de invertir:** puede buscar gratis a un asesor o una empresa en [Investor.gov](https://www.investor.gov) (en inglés)."
+      ],
+      "job": "Esta semana, no conteste ningún mensaje de número equivocado. Bórrelo y bloquéelo. Es la protección contra estafas más barata que hay.",
+      "lobby": {
+        "kicker": "Alerta de estafa",
+        "headline": "¿Lo conoció por internet? No invierta.",
+        "bullets": [
+          "No conteste mensajes de número equivocado.",
+          "Si cobran por retirar, no hay dinero.",
+          "Hable con nosotros antes de transferir."
+        ]
+      },
+      "social": {
+        "caption": "Empieza con \"¡Perdón, número equivocado!\" y una plática amistosa que dura semanas. Luego su nuevo amigo le enseña un sitio de criptomonedas donde su dinero parece crecer, hasta que quiere retirarlo y le cobran una comisión. No invierta con alguien que solo conoce por internet. ¿Va a comprar criptomonedas o enviar una transferencia para invertir? Hable primero con nosotros al {{CU_PHONE}}.",
+        "alt": "Alerta de estafa de {{CU_SHORT}}: ¿lo conoció por internet? No invierta. No conteste mensajes de número equivocado. Si cobran por retirar, no hay dinero. Hable con nosotros antes de transferir."
+      },
+      "brief": {
+        "Members may ask": "\"I need to send a wire to my trading account. It's urgent, there's a fee to release my profits.\"",
+        "What to say": "\"Can I ask how you found this platform? Fees to release profits are a common sign of an investment scam. Let's take a minute before we send anything.\"",
+        "Escalate": "Follow our elder and vulnerable adult procedures where they apply, and our wire and crypto-purchase fraud checks."
+      },
+      "sources": [
+        {
+          "name": "FBI: Operación Level Up (fraude de inversión en criptomonedas, en inglés)",
+          "url": "https://www.fbi.gov/how-we-can-help-you/victim-services/national-crimes-and-victim-resources/operation-level-up"
+        },
+        {
+          "name": "FBI: Cómo el FBI está rescatando a víctimas del fraude de inversión en criptomonedas (en inglés)",
+          "url": "https://www.fbi.gov/news/stories/operation-level-up-how-the-fbi-is-saving-victims-from-cryptocurrency-investment-fraud"
+        },
+        {
+          "name": "FBI IC3: aviso público sobre fraude de inversión en criptomonedas (oct. 2022, en inglés)",
+          "url": "https://www.ic3.gov/PSA/2022/psa221003"
+        },
+        {
+          "name": "SEC Investor.gov: verifique a un asesor o una empresa (en inglés)",
+          "url": "https://www.investor.gov"
+        },
+        {
+          "name": "FTC en español: estafas y cómo reportarlas",
+          "url": "https://consumidor.ftc.gov"
+        }
+      ],
+      "review": "pending: native es-US read + Spanish URL check (see REVIEW_CHECKLIST.md)"
+    },
+    {
+      "id": "2027-01-d",
+      "n": 4,
+      "send_date": "2027-01-26",
+      "deliver_by": "2027-01-19",
+      "source": "Scam Decoded newsletter #11 and #13 (IRS season texts, refund send-backs); Spanish adaptation of the English issue 2027-01-d",
+      "topic": "Mensajes falsos del IRS y estafas con reembolsos al empezar la temporada de impuestos",
+      "subject": "Alerta de estafa: el IRS no le está mandando mensajes de texto",
+      "preheader": "Ya llegaron las estafas de la temporada de impuestos. Una regla las vence todas.",
+      "headline": "El IRS no le manda mensajes de texto",
+      "example_label": "Así se ve (ejemplo inventado)",
+      "example": "\"IRS: Su cuenta en línea ha sido suspendida. Verifique su identidad en 24 horas para liberar su reembolso: [enlace]\"",
+      "explain": [
+        "El enlace abre una copia de una página real para iniciar sesión. Se queda con su usuario y contraseña, y luego le pide una foto de su licencia de manejar \"para confirmar que es usted\". Con las dos cosas, alguien puede presentar una declaración de impuestos a su nombre o entrar a su cuenta real."
+      ],
+      "tell": "El IRS no le escribe por mensaje de texto ni por correo, sin que usted lo espere, sobre su reembolso o su cuenta. Cualquier mensaje así es falso, por muy oficial que parezca.",
+      "promise": false,
+      "steps": [
+        "**No toque el enlace.** Para revisar su cuenta real, escriba usted mismo **IRS.gov** en su navegador.",
+        "**¿Ya escribió sus datos?** Cambie esa contraseña ahora y siga los pasos de la [Central de robo de identidad](https://www.irs.gov/es/identity-theft-central) del IRS. Si compartió números de tarjeta o de cuenta, llámenos al {{CU_PHONE}}.",
+        "**Repórtelo.** Reenvíe el mensaje al **7726** (SPAM) y luego repórtelo al IRS con [estos pasos](https://www.irs.gov/help/report-fraud/report-fake-irs-treasury-or-tax-related-emails-and-messages) (en inglés)."
+      ],
+      "quick_hits": [
+        "**\"Le mandamos su reembolso por error\":** si le llega a su cuenta un reembolso que no esperaba y alguien le pide que se lo devuelva a esa persona, no lo haga. Llámenos primero.",
+        "**La llamada de arresto:** el IRS de verdad no le amenaza con arrestarle ni le exige tarjetas de regalo o criptomonedas. Cuelgue."
+      ],
+      "job": "Pida un PIN de Protección de Identidad del IRS, gratis. Impide que otra persona presente una declaración con su número de Seguro Social. Empiece en la [Central de robo de identidad del IRS](https://www.irs.gov/es/identity-theft-central) y verifique que la dirección sea irs.gov.",
+      "lobby": {
+        "kicker": "Alerta: temporada de impuestos",
+        "headline": "El IRS no le manda mensajes de texto.",
+        "bullets": [
+          "No toque enlaces de impuestos en mensajes.",
+          "Escriba IRS.gov usted mismo.",
+          "¿Le piden devolver un reembolso? Pregúntenos."
+        ]
+      },
+      "social": {
+        "caption": "Alerta de estafa en temporada de impuestos: un mensaje dice que su cuenta del IRS está suspendida y que debe verificar su identidad para recibir su reembolso. Es falso. El IRS no le manda mensajes de texto sin que usted lo espere. No toque el enlace. Escriba IRS.gov usted mismo. Y si le llega un reembolso inesperado con una llamada para que lo devuelva, llámenos primero al {{CU_PHONE}}.",
+        "alt": "Alerta de estafa de {{CU_SHORT}} en temporada de impuestos: el IRS no le manda mensajes de texto. No toque enlaces de impuestos en mensajes. Escriba IRS.gov usted mismo. ¿Le piden devolver un reembolso? Pregúntenos."
+      },
+      "brief": {
+        "Members may ask": "\"The IRS deposited a refund by mistake and says I have to send it back by gift card or wire.\"",
+        "What to say": "\"The IRS won't ask you to send a refund back that way. Let's not send anything yet and look at where this deposit came from.\"",
+        "Escalate": "Check the deposit source, follow our fraud and account-takeover procedures, and point the member to IRS.gov for the real return process."
+      },
+      "sources": [
+        {
+          "name": "IRS: Reporte correos y mensajes falsos del IRS, del Tesoro o sobre impuestos (en inglés)",
+          "url": "https://www.irs.gov/help/report-fraud/report-fake-irs-treasury-or-tax-related-emails-and-messages"
+        },
+        {
+          "name": "IRS: Central de robo de identidad",
+          "url": "https://www.irs.gov/es/identity-theft-central"
+        },
+        {
+          "name": "IRS: Si fue víctima de una estafa (en inglés)",
+          "url": "https://www.irs.gov/help/tax-scams/if-you-were-scammed"
+        },
+        {
+          "name": "IRS: Un vistazo a fondo a la \"Docena Sucia\" (en inglés)",
+          "url": "https://www.irs.gov/newsroom/a-deeper-dive-into-the-dirty-dozen-taxpayers-stay-alert-in-peak-filing-season"
+        },
+        {
+          "name": "FTC en español: estafas y cómo reportarlas",
+          "url": "https://consumidor.ftc.gov"
+        }
+      ],
+      "review": "pending: native es-US read + Spanish URL check (see REVIEW_CHECKLIST.md)"
+    }
+  ]
+}

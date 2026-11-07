@@ -122,8 +122,9 @@ The full kit (emails, intake form, approval workflow, invoice) is in `onboarding
 
 Translate the finished English issue (AI-assisted is fine), then have a fluent Spanish speaker read it
 before delivery; don't ship an unreviewed translation. The Dinero Simple brand's style notes apply.
-Put the Spanish text in a second `issues.json` file and build it the same way, with a brand file whose
-copy lines are in Spanish.
+Put the Spanish text in `es/issues.json` and build it with
+`python3 build.py credit-union-alert/es --brand credit-union-alert/es/clients/<slug>.json`. The 4
+samples and the review checklist are already in `es/`.
 
 ## What not to do
 
