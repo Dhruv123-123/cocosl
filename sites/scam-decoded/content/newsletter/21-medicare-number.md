@@ -1,0 +1,43 @@
+---
+issue: 21
+send_date: 2027-04-29
+subject: Scam Alert #21: the "free" test that costs a Medicare number
+preheader: Older Americans Month starts Saturday. The scams that want your parents' Medicare number.
+---
+Hi,
+
+May is Older Americans Month, and this is a good week to talk to a parent about their Medicare number. To a scammer, it's worth more than a credit card.
+
+## This week's scam: the free genetic test
+
+**Spotted this week (fictional example):** *"Good news! Medicare now covers a free cancer screening kit. It's a simple cheek swab. I just need your Medicare number to ship it today."*
+
+Sometimes it's a call, sometimes a table at a health fair, sometimes a knock at the door. The test may never be read, but Medicare gets billed, and if your own doctor didn't order it and Medicare denies it, the bill can come back to you. The number can then be sold and billed again.
+
+## The tell
+
+**Medicare and real doctors don't cold-call to offer tests or equipment. Anyone who contacted you and wants your Medicare number is the scam.**
+
+## What to do
+
+1. Only take tests your own doctor orders. Hang up on everyone else.
+2. Already gave the number? Call 1-800-MEDICARE, tell them what happened, and watch your statements.
+3. Read your Medicare Summary Notice (or the online account) for tests, equipment or doctors you don't recognise, and report them.
+
+## Quick hits
+
+- **Free back brace calls:** a box of equipment nobody ordered means your number was billed. Refuse it and report it.
+- **"Your card is expiring":** Medicare cards don't expire, and Medicare won't call for your number.
+- **"Medicare's fraud department":** real investigators don't ask you to read your number out.
+
+## Your 5-minute job this week
+
+Next time you see your parent, sit down with their latest Medicare statement and read the list together. Ten minutes, and it's how most people find fraud.
+
+## From Scam Decoded
+
+Our printable [Scam Decoded for Seniors](/seniors/) ($7, our own product) is a large-print guide with a fridge checklist and cut-out wallet cards, made to leave with a parent.
+
+The Scam Decoded team
+
+P.S. Has a parent had one of these calls? Reply and tell us how it went. Your story helps the next family.

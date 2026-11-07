@@ -383,3 +383,29 @@ def test_weeks_31_34_june_content_rotates_formats():
             assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
     plan = (CONTENT.parent / "POSTING_PLAN_WEEKS_31-34.md").read_text()
     assert all(f"#{n} " in plan for n in range(len(items)))
+
+
+def test_breach_shorts_promote_the_checklist_on_free_saturdays():
+    import datetime as dt
+    from contentfactory.schemas import Script
+    from contentfactory import guardrails as G
+    items = json.loads((CONTENT.parent / "breach-shorts-2027.json").read_text())
+    assert len(items) == 5 and all(a["look"] != b["look"] for a, b in zip(items, items[1:]))
+    earlier, taken = set(), set()
+    for name in ("content.json", "weeks-3-6.json", "weeks-7-12.json", "weeks-13-21.json", "weeks-22-26.json",
+                 "tiktok-minute-cuts.json", "holiday-2026.json", "weeks-27-30.json", "tax-2027.json", "weeks-31-34.json"):
+        for i in json.loads((CONTENT.parent / name).read_text()):
+            earlier.add(i["script"]["title"])
+            if i.get("post_on"):
+                taken.add(i["post_on"][:10])
+    for item in items:
+        assert dt.date.fromisoformat(item["post_on"][:10]).weekday() == 5 and item["post_on"][:10] not in taken
+        sc = Script.model_validate(item["script"])
+        assert 60 <= sum(len(s.narration.split()) for s in sc.segments) <= 120, sc.title
+        assert sc.title not in earlier and any(ch.isdigit() for ch in sc.hook)
+        assert sc.sources and sc.claims_to_verify and item["original_element"]
+        assert "/breached" in sc.caption and "checker" in sc.caption
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments)
+        text = G.script_text(item["script"])
+        for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
+            assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title

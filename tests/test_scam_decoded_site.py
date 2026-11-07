@@ -100,9 +100,9 @@ def test_weekly_scam_alert_newsletter_six_issues(tmp_path, monkeypatch):
     src = ROOT / "content" / "newsletter"
     assert (src / "TEMPLATE.md").exists() and (src / "README.md").exists()
     issues = json.loads((out / "newsletter" / "issues.json").read_text())
-    assert [i["issue"] for i in issues] == list(range(1, 17))
+    assert [i["issue"] for i in issues] == list(range(1, 26))
     dates = [i["send_date"] for i in issues]
-    assert dates == sorted(dates) and len(set(dates)) == 16
+    assert dates == sorted(dates) and len(set(dates)) == 25
     sections = ["## This week's scam", "## The tell", "## What to do", "## Quick hits", "## Your 5-minute job"]
     for meta in mod.newsletter_issues():
         body = meta["body_md"]
@@ -239,3 +239,14 @@ def test_how_we_make_money_lists_every_product_and_partner():
     assert cfg["ai_disclosure"] in html and "never message you first" in html
     assert "/how-we-make-money/" in (ROOT / "public" / "index.html").read_text()
     assert "/how-we-make-money/" in (ROOT / "public" / "disclosures" / "index.html").read_text()
+
+
+def test_breach_follow_up_explainer_and_checker_rule():
+    import subprocess
+    html = (ROOT / "public" / "scams" / "breach-follow-ups" / "index.html").read_text()
+    assert "/breached/" in html and "haveibeenpwned.com" in html and "identitytheft.gov/databreach" in html
+    assert "/scams/breach-follow-ups/" in (ROOT / "public" / "breached" / "index.html").read_text()
+    js = ("const C=require(process.argv[1]);const r=C.analyze('You are owed $412 from the Acme data breach settlement. "
+          "Pay a $25 processing fee to claim now.');console.log(r.level, r.articles.join(','))")
+    out = subprocess.run(["node", "-e", js, str(ROOT / "static" / "checker.js")], capture_output=True, text=True).stdout
+    assert out.startswith("high") and "breach-follow-ups" in out
