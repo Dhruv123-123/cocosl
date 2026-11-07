@@ -126,3 +126,23 @@ def test_month3_plan_is_complete_and_sends_immigration_questions_to_attorneys():
         if "inmigra" in cap.lower():
             assert "abogado de inmigración con licencia" in cap, i["key"]
         assert "notario" not in cap.lower() or "no con un notario" in cap.lower(), i["key"]
+
+
+def test_workshop_kits_build_with_notes_and_safety_rules(tmp_path):
+    pytest.importorskip("pptx")
+    sys.path.insert(0, str(DS / "workshops"))
+    import build_workshops
+    from pptx import Presentation
+    build_workshops.main(["--out", str(tmp_path), "--no-pdf"])
+    for w in build_workshops.WORKSHOPS:
+        prs = Presentation(tmp_path / w.SLUG / f"{w.SLUG}-diapositivas.pptx")
+        assert len(prs.slides) == len(w.S) >= 12
+        assert all(s.notes_slide.notes_text_frame.text.strip() for s in prs.slides)
+        guide = (tmp_path / w.SLUG / f"{w.SLUG}-guia-para-facilitar.html").read_text()
+        assert "hablante nativa" in guide and "no asesoría" in guide
+        assert sum(int(b.split("–")[1]) - int(b.split("–")[0]) for b, _ in w.AGENDA) == w.MINUTES
+        assert (tmp_path / f"{w.SLUG}.zip").exists()
+        assert len(w.WORKSHEETS) == 2
+    scam = build_workshops.content_estafas
+    text = " ".join(str(x) for s in scam.S for x in s)
+    assert "abogado con licencia" in text and "nunca se paga a una cuenta personal" in text
