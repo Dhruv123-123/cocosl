@@ -41,7 +41,7 @@ def format_days(db: DB, brand: str, platform: str, fmt: str, tz) -> dict:
 
 
 def next_slot(db: DB, brand: BrandProfile, platform: str, after: datetime | None = None,
-              horizon_days: int = 60, fmt: str | None = None) -> datetime:
+              horizon_days: int = 60, fmt: str | None = None, weekly_cap: bool = True) -> datetime:
     """First free configured posting time after `after` that keeps the
     platform under its daily cap and, when `fmt` is given, the format under
     its weekly cadence (any 7 consecutive days). Returns an aware UTC datetime."""
@@ -52,7 +52,7 @@ def next_slot(db: DB, brand: BrandProfile, platform: str, after: datetime | None
     for t in taken:
         d = datetime.fromisoformat(t).astimezone(tz).date().isoformat()
         per_day[d] = per_day.get(d, 0) + 1
-    weekly = getattr(brand.cadence, WEEKLY_CAP.get(fmt or "", ""), None) if fmt else None
+    weekly = getattr(brand.cadence, WEEKLY_CAP.get(fmt or "", ""), None) if fmt and weekly_cap else None
     fdays = format_days(db, brand.slug, platform, fmt, tz) if weekly else {}
 
     def week_full(date) -> bool:
@@ -80,6 +80,28 @@ def next_slot(db: DB, brand: BrandProfile, platform: str, after: datetime | None
                 continue
             return slot.astimezone(timezone.utc)
     raise RuntimeError(f"No free slot in the next {horizon_days} days for {brand.slug}/{platform}")
+
+
+def same_day_slots(db: DB, brand: BrandProfile, platforms: list[str], fmt: str | None = None,
+                   after: datetime | None = None, weekly_cap: bool = True) -> dict[str, datetime]:
+    """Each platform's next free slot, moved so one post lands on the same local day everywhere.
+
+    Without this, a platform with a free evening slot took the post a day early: Day 2's Short went to
+    Facebook at 19:00 on Day 1 while YouTube and Instagram had it at 12:30 on Day 2. The latest day wins
+    (the busiest platform decides); the others take their first free slot on that day, or later."""
+    tz = ZoneInfo(brand.cadence.timezone)
+    now = datetime.now(timezone.utc)
+    after = max(after, now) if after else now  # never a slot in the past
+    slots = {p: next_slot(db, brand, p, after=after, fmt=fmt, weekly_cap=weekly_cap) for p in platforms}
+    for _ in range(5):
+        day = max(s.astimezone(tz).date() for s in slots.values())
+        early = [p for p, s in slots.items() if s.astimezone(tz).date() < day]
+        if not early:
+            break
+        start = datetime.combine(day, time(0), tzinfo=tz) - timedelta(seconds=1)
+        for p in early:
+            slots[p] = next_slot(db, brand, p, after=max(start, after), fmt=fmt, weekly_cap=weekly_cap)
+    return slots
 
 
 def platform_cap_reached(db: DB, brand: BrandProfile, platform: str, fmt: str, slot: datetime) -> int | None:
@@ -142,8 +164,12 @@ def reslot(factory, brand: str | None = None, after: datetime | None = None, app
         # take them off the calendar, place them again in order; a dry run (or an error) puts everything back
         try:
             db.execute(f"UPDATE publications SET status = 'reslotting' WHERE id IN ({','.join('?' * len(ids))})", ids)
+            tz = ZoneInfo(b.cadence.timezone)
             for r in rows:
-                slot = next_slot(db, b, r["platform"], after=after, fmt=r["format"])
+                # keep each post on its own day (or later): only the time moves, so a plan's days survive
+                day = datetime.fromisoformat(r["scheduled_at"]).astimezone(tz).date()
+                floor = datetime.combine(day, time(0), tzinfo=tz) - timedelta(seconds=1)
+                slot = next_slot(db, b, r["platform"], after=max(after, floor), fmt=r["format"])
                 cap = platform_cap_reached(db, b, r["platform"], r["format"], slot)
                 if cap is not None:
                     dropped.append({"pub": r["id"], "post": r["post_id"], "platform": r["platform"], "was": r["scheduled_at"],
