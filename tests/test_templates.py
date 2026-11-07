@@ -1,0 +1,240 @@
+"""The Google Sheets + Notion template line: workbooks build cleanly, Notion formulas only name real properties,
+the Notion API builder makes its calls in a working order, and the store catalog is consistent."""
+import math
+import re
+import shutil
+import subprocess
+import sys
+from datetime import date
+from pathlib import Path
+
+import openpyxl
+import pytest
+
+ROOT = Path(__file__).resolve().parents[1]
+TPL = ROOT / "launch" / "templates"
+sys.path.insert(0, str(TPL))
+
+import catalog as C  # noqa: E402
+import notion_build as NB  # noqa: E402
+import notion_spec as N  # noqa: E402
+import sheets_templates as ST  # noqa: E402
+
+TODAY = date(2026, 11, 7)
+
+
+@pytest.mark.parametrize("slug", list(ST.SHEETS))
+def test_sheet_builds_with_valid_cross_sheet_refs(tmp_path, slug):
+    fn, builder = ST.SHEETS[slug]
+    wb = openpyxl.load_workbook(builder(tmp_path / fn, TODAY))
+    assert wb.sheetnames[0] == "Start"
+    names = set(wb.sheetnames)
+    for ws in wb:
+        for row in ws.iter_rows():
+            for c in row:
+                if isinstance(c.value, str) and c.value.startswith("="):
+                    for ref in re.findall(r"([A-Za-z][A-Za-z0-9 ]*)!", re.sub(r'"[^"]*"', "", c.value).replace("'", "")):
+                        assert ref.strip() in names, f"{ws.title}!{c.coordinate} -> {ref}"
+    for ws in wb:
+        for dv in ws.data_validations.dataValidation:
+            m = re.match(r"([A-Za-z ]+)!", dv.formula1 or "")
+            assert not m or m.group(1) in names
+
+
+@pytest.mark.skipif(not shutil.which("soffice"), reason="LibreOffice not installed")
+def test_budget_dashboard_matches_example_data(tmp_path):
+    p = ST.build_budget_sheet(tmp_path / "b.xlsx", TODAY)
+    subprocess.run(["soffice", "--headless", "--calc", "--convert-to", "xlsx", "--outdir", str(tmp_path / "rc"), str(p)],
+                   capture_output=True, timeout=180, check=True)
+    wb = openpyxl.load_workbook(tmp_path / "rc" / "b.xlsx", data_only=True)
+    month = [t for t in ST._budget_examples(date(2026, 11, 1)) if t[0].day <= 17]
+    groups = {n: g for n, g, _ in ST.BUDGET_CATS}
+    want = {g: round(sum(a for _, _, c, a in month if groups[c] == g), 2) for g in ST.GROUPS}
+    got = {g: round(wb["Dashboard"].cell(9 + i, 3).value, 2) for i, g in enumerate(ST.GROUPS)}
+    assert got == want
+    for ws in wb:
+        for row in ws.iter_rows():
+            for c in row:
+                assert not (isinstance(c.value, str) and c.value.startswith("#")), f"{ws.title}!{c.coordinate}={c.value}"
+
+
+def test_notion_formulas_only_name_real_properties():
+    import build_templates as B
+    for slug, t in N.TEMPLATES.items():
+        assert B.check_notion(t) == [], slug
+
+
+def test_notion_twins_work_out_example_data():
+    for t in N.TEMPLATES.values():
+        rows = N.evaluate(t, TODAY)
+        assert all(rows.values())
+    debts = {r["Name"]: r for r in N.evaluate(N.DEBT, TODAY)["debts"]}
+    # minimum-only payoff time for the example credit card matches the spreadsheet's NPER (87 months from $4,200)
+    r = {"Balance now": 4200, "Monthly payment": 105, "APR %": 24.9}
+    assert N._months_py(r, TODAY) == 87 == math.ceil(-math.log(1 - 4200 * 24.9 / 1200 / 105) / math.log(1 + 24.9 / 1200))
+    assert debts["Store card"]["Balance now"] == round(900 - sum(p["Principal"] for p in debts["Store card"]["Payments"]), 2)
+    goals = {r["Name"]: r for r in N.evaluate(N.SAVINGS, TODAY)["goals"]}
+    assert goals["Car repairs"]["Saved"] == 450 + 75 + 75 - 180
+
+
+@pytest.mark.parametrize("slug", list(N.TEMPLATES))
+def test_notion_builder_call_order(slug):
+    api = NB.DryRun()
+    NB.build(api, N.TEMPLATES[slug], "0" * 32, {}, TODAY, log=lambda *_: None)
+    created, relation_done, ids_seen = {}, set(), set()
+    for i, (method, path, body) in enumerate(api.calls):
+        if method == "POST" and path == "/databases":
+            created[body["title"][0]["text"]["content"]] = i
+        if method == "PATCH" and path.startswith("/databases/"):
+            for name, cfg in body["properties"].items():
+                if "relation" in cfg:
+                    relation_done.add(path)
+                if "formula" in cfg:
+                    assert "prop(" in cfg["formula"]["expression"]
+        if method == "POST" and path == "/pages" and "database_id" in body["parent"]:
+            for v in body["properties"].values():
+                for rel in v.get("relation", []):
+                    assert rel["id"] in ids_seen, "row links to a row that doesn't exist yet"
+        ids_seen.add(f"{i + 1:032x}")
+    dbs = N.all_dbs(N.TEMPLATES[slug])
+    assert set(created) == {d["title"] for d in dbs}
+    rows = sum(1 for m, p, b in api.calls if m == "POST" and p == "/pages" and "database_id" in b["parent"])
+    assert rows == sum(len(d["rows"]) for d in dbs)
+
+
+def test_page_id_from_link():
+    assert NB.page_id("https://www.notion.so/me/Templates-0123456789abcdef0123456789abcdef?pvs=4") == "0123456789abcdef0123456789abcdef"
+
+
+def test_catalog():
+    paid = [i for i in C.ITEMS if i["price"]]
+    assert all((5 if i.get("twin_of") else 7) <= i["price"] <= (24 if "2027" in i["slug"] else 19) for i in paid)
+    assert [i["slug"] for i in C.ITEMS if i["price"] == 0] == ["notion-money-starter"]
+    for i in C.ITEMS:
+        if i["kind"] in ("notion", "notion-bundle", "free"):
+            assert i["slug"] in N.TEMPLATES
+        if i["kind"] == "sheets":
+            assert i["slug"] in ST.SHEETS
+        if i.get("bundle"):
+            assert i["price"] < sum(C.BY_SLUG[s]["price"] for s in i["bundle"])
+        if i.get("next"):
+            assert i["next"] in C.BY_SLUG
+        text = " ".join([i["title"], i["tagline"], i["hook"], *i["gets"]]).lower()
+        for banned in ("guarantee", "bestseller", "get rich", "limited time"):
+            assert banned not in text
+    assert {i["link"] for i in C.ITEMS if i.get("link")} <= set(__import__("json").loads((TPL / "links.json").read_text()))
+
+
+def test_2027_editions():
+    import calendar
+    from datetime import date as _d
+    import sheets_2027
+    import notion_spec as NS
+    import openpyxl
+    import tempfile as _t
+    from pathlib import Path as _P
+    with _t.TemporaryDirectory() as tmp:
+        p = sheets_2027.build_budget_2027(_P(tmp) / "b.xlsx")
+        wb = openpyxl.load_workbook(p)
+        assert wb.sheetnames == ["Start", "2027", "Setup"] + [f"{calendar.month_abbr[m]} 2027" for m in range(1, 13)]
+        assert wb["Jan 2027"]["C5"].value.date() == _d(2027, 1, 1) and wb["Feb 2027"]["D5"].value.date() == _d(2027, 2, 28)
+        assert "'Dec 2027'!E" in wb["2027"]["O6"].value
+    t = NS.TEMPLATES["notion-money-hq-2027"]
+    rows = NS.evaluate(t, _d(2026, 11, 7))
+    rent = next(r for r in rows["categories"] if r["Name"] == "Rent")
+    assert rent["Jan 2027"] == 1400 and rent["Feb 2027"] == 1400 and rent["Mar 2027"] == 0 and rent["2027 total"] == 2800
+    assert len(rows["months27"]) == 12 and rows["months27"][0]["Status"].startswith("✅")
+
+
+TWINS = ["52-week-savings-sheet", "no-spend-challenge-sheet", "bill-tracker-sheet", "paycheck-budget-sheet", "debt-coloring-sheet"]
+
+
+def test_printable_twins_cover_five_printables_in_both_apps():
+    sys.path.insert(0, str(TPL.parents[0] / "etsy"))
+    import listings as EL
+    twins = [i for i in C.ITEMS if i.get("twin_of")]
+    assert len(twins) == 10
+    for slug in {i["twin_of"] for i in twins}:
+        assert slug in EL.BY_SLUG                                  # a real Etsy printable
+        kinds = sorted(i["kind"] for i in twins if i["twin_of"] == slug)
+        assert kinds == ["notion", "sheets"]
+    assert all("Etsy shop" in " ".join(a for _, a in i["faq"]) for i in twins)
+
+
+def _recalc(path, tmp_path):
+    if not shutil.which("soffice"):
+        pytest.skip("LibreOffice not installed")
+    out = tmp_path / "rc"
+    subprocess.run(["soffice", "--headless", "--calc", "--convert-to", "xlsx", "--outdir", str(out), str(path)],
+                   capture_output=True, timeout=180, check=True)
+    return openpyxl.load_workbook(out / path.name, data_only=True)
+
+
+def test_paycheck_sheet_finds_bills_due_before_next_payday(tmp_path):
+    import twins_sheets as TS
+    p = TS.build_paycheck(tmp_path / "p.xlsx", date(2026, 11, 7))
+    wb = openpyxl.load_workbook(p)
+    wb["Setup"]["C6"] = TS.PAYFREQ[2]                              # 1st and 15th
+    wb["Setup"]["C5"] = date(2026, 10, 15)
+    wb.save(p)
+    ws = _recalc(p, tmp_path)["Paychecks"]
+    due = {d: a for _, a, d in TS.PBILLS}
+    for r in range(6, 12):
+        start, nxt = ws.cell(r, 3).value.date(), ws.cell(r, 4).value.date()
+        days = [start + __import__("datetime").timedelta(n) for n in range((nxt - start).days)]
+        want = sum(a for d, a in due.items() for x in days if x.day == d)
+        assert ws.cell(r, 7).value == pytest.approx(want), (start, nxt)
+        assert (start.day, nxt.day) in ((15, 1), (1, 15))
+
+
+def test_twin_sheets_examples_add_up(tmp_path):
+    import twins_sheets as TS
+    w = _recalc(TS.build_52_week(tmp_path / "w.xlsx", date(2026, 11, 7)), tmp_path)["Challenge"]
+    assert w["J5"].value == 1378 and w["J6"].value == sum(range(1, 10)) and w["J8"].value == 9
+    n = _recalc(TS.build_no_spend(tmp_path / "n.xlsx", date(2026, 11, 7)), tmp_path)["Challenge"]
+    assert (n["J5"].value, n["J6"].value, n["J7"].value, n["J8"].value) == (10, 12, 50.5, 150)
+    d = _recalc(TS.build_debt_coloring(tmp_path / "d.xlsx", date(2026, 11, 7)), tmp_path)["Color In"]
+    assert d["O5"].value == 20 and d["O12"].value == "$570 to go"
+    b = _recalc(TS.build_bill_tracker(tmp_path / "b.xlsx", date(2026, 11, 7)), tmp_path)["Bills"]
+    assert b["M6"].value == pytest.approx(1910.99) and b["M7"].value == pytest.approx((66 / 3) + 180 / 12 * 2)
+
+
+def test_wedding_sheet_uses_the_planner_tool_categories(tmp_path):
+    import wedding_sheet as W
+    tool = ["Venue", "Catering", "Bar and drinks", "Photography", "Videography", "Attire", "Hair and makeup",
+            "Flowers and decor", "Music and DJ", "Cake and desserts", "Invitations and stationery", "Rings",
+            "Transportation", "Favors", "Officiant and license", "Rentals", "Planner or coordinator", "Gifts",
+            "Honeymoon", "Buffer for extras"]
+    assert W.CATEGORIES == tool and len(W.PLAN) == 20 and sum(W.PLAN) == 32000
+    wb = openpyxl.load_workbook(W.build_wedding(tmp_path / "w.xlsx", TODAY))
+    ws = wb["Planner paste"]
+    assert [ws.cell(r, 2).value for r in range(7, 27)] == [None] * 20   # the paste area starts empty
+
+
+def test_sinking_sheet_matches_the_planner_layout(tmp_path):
+    import sinking_sheet as SS
+    assert [p[0] for p in SS.PRESETS][:2] == ["Car insurance", "Holidays and gifts"] and len(SS.PRESETS) == 8
+    assert SS.preset_date("Holidays and gifts", 0, date(2026, 11, 7)) == date(2026, 12, 1)
+    assert SS.preset_date("Back to school", 0, date(2026, 11, 7)) == date(2027, 8, 1)
+    wb = openpyxl.load_workbook(SS.build_sinking(tmp_path / "s.xlsx", TODAY))
+    f = wb["Funds"]
+    assert [f.cell(4, c).value for c in (1, 2, 3)] == ["Fund", "Target", "Needed by"]
+    assert [f.cell(4, c).value for c in (11, 12, 13)] == ["Date", "Fund", "Amount"]
+    assert f["A5"].value == "Car insurance" and "DATEDIF(TODAY(),C5" in f["F5"].value
+
+
+@pytest.mark.skipif(not shutil.which("soffice"), reason="LibreOffice not installed")
+def test_moving_sheet_uses_the_paste_for_blank_cells(tmp_path):
+    import moving_sheet as MS
+    p = MS.build_moving(tmp_path / "m.xlsx", TODAY)
+    wb = openpyxl.load_workbook(p)
+    bd, pp = wb["Budget"], wb["Planner paste"]
+    for r in range(7, 7 + MS.NB):
+        for c in "CDE":
+            bd[f"{c}{r}"].value = None
+    pp["B7"], pp["C7"], pp["D7"], pp["E7"] = "Movers or truck rental", 2000, 1900, 500
+    wb.save(p)
+    out = tmp_path / "out"
+    subprocess.run(["soffice", "--headless", "--convert-to", "xlsx", "--outdir", str(out), str(p)], capture_output=True, timeout=120)
+    v = openpyxl.load_workbook(out / "m.xlsx", data_only=True)["Budget"]
+    assert v["F7"].value == 1400 and v["G7"].value == 100 and v["H7"].value == "Planner paste" and v["C18"].value == 2000

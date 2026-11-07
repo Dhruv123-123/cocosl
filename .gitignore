@@ -10,6 +10,9 @@ output/
 *.db-wal
 *.db-shm
 node_modules/
+launch/products/dist/*/*.html
+launch/etsy/dist/
+launch/templates/dist/
 build/
 dist/
 !site/content/data/

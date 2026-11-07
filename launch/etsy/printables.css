@@ -1,0 +1,47 @@
+  :root{ --ink:#0b1d13; --cream:#f4f1e8; --green:#2fbf71; --green-d:#1e8a50; --gold:#f2b134;
+    --muted:#5b6a61; --line:#c9c3b3; --tint:#eef8f2; --w:8.5in; --h:11in; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#cfc9ba; color:var(--ink);
+    font-family:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; font-size:10pt; line-height:1.35;
+    -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:var(--w); height:var(--h); margin:20px auto; background:#fff; position:relative; overflow:hidden;
+    padding:0.55in 0.6in 0.7in; display:flex; flex-direction:column; page-break-after:always; break-after:page; }
+  .page:last-child{ page-break-after:auto; break-after:auto; }
+  @media print{ html,body{ background:none; } .page{ margin:0; } }
+  .top{ display:flex; justify-content:space-between; align-items:flex-end; border-bottom:2.5px solid var(--ink); padding-bottom:6px; margin-bottom:12px; }
+  .top h1{ font-size:24pt; font-weight:900; letter-spacing:-.02em; margin:0; line-height:1; }
+  .top h1 em{ font-style:normal; color:var(--green-d); }
+  .top .meta{ font-size:9pt; color:var(--muted); text-align:right; }
+  .kick{ text-transform:uppercase; letter-spacing:.14em; font-size:7.5pt; font-weight:800; color:var(--green-d); }
+  .foot{ position:absolute; left:0.6in; right:0.6in; bottom:0.3in; display:flex; justify-content:space-between; font-size:7pt; color:#9aa59e; }
+  .fill{ flex:1; display:flex; flex-direction:column; min-height:0; }
+  h3{ font-size:10.5pt; margin:10px 0 4px; font-weight:800; }
+  table{ width:100%; border-collapse:collapse; font-size:9pt; }
+  th{ text-align:left; font-weight:800; font-size:8pt; text-transform:uppercase; letter-spacing:.06em; background:var(--tint);
+    border-bottom:1.5px solid var(--ink); padding:4px 6px; }
+  td{ border-bottom:1px solid var(--line); padding:0 6px; height:22px; }
+  td.c, th.c{ text-align:center; } td.r, th.r{ text-align:right; }
+  tr.tot td{ font-weight:800; border-top:1.5px solid var(--ink); background:var(--tint); }
+  .box{ border:1.5px solid var(--ink); border-radius:10px; padding:8px 10px; }
+  .box .lbl{ font-size:7.5pt; font-weight:800; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); }
+  .line{ border-bottom:1px solid var(--line); height:22px; }
+  .lines{ flex:1; background:repeating-linear-gradient(#fff 0 21px, var(--line) 21px 22px); }
+  .g2{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .g3{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+  .g4{ display:grid; grid-template-columns:repeat(4,1fr); gap:8px; }
+  .cb{ display:inline-block; width:11px; height:11px; border:1.3px solid var(--ink); border-radius:2px; vertical-align:-1px; }
+  .tiles{ display:grid; gap:6px; flex:1; }
+  .tile{ border:1.5px solid var(--ink); border-radius:50%; display:flex; align-items:center; justify-content:center;
+    font-weight:800; font-variant-numeric:tabular-nums; aspect-ratio:1/1; }
+  .sq{ border:1.3px solid var(--ink); border-radius:4px; display:flex; align-items:center; justify-content:center; font-size:7.5pt; color:var(--muted); }
+  .cal{ display:grid; grid-template-columns:repeat(7,1fr); gap:0; border-top:1.5px solid var(--ink); border-left:1.5px solid var(--ink); flex:1; }
+  .cal div{ border-right:1.5px solid var(--ink); border-bottom:1.5px solid var(--ink); padding:3px 5px; font-size:8pt; font-weight:700; }
+  .cal .h{ background:var(--tint); text-align:center; font-size:7.5pt; text-transform:uppercase; letter-spacing:.08em; padding:4px; }
+  .note{ font-size:8pt; color:var(--muted); }
+  .thermo{ display:flex; flex-direction:column-reverse; border:1.5px solid var(--ink); border-radius:12px; overflow:hidden; flex:1; }
+  .thermo div{ flex:1; border-top:1px solid var(--line); font-size:6.5pt; color:#9aa59e; padding-left:4px; display:flex; align-items:center; }
+  .cover-art{ flex:1; display:flex; align-items:center; justify-content:center; }
+  .big-num{ font-size:46pt; font-weight:900; letter-spacing:-.03em; color:var(--green-d); line-height:1; }
+  .t44 td{ height:44px; }
+  .t26 td{ height:26px; } .t28 td{ height:28px; } .t30 td{ height:30px; } .t34 td{ height:34px; }
+  .thermo + table{ align-self:flex-start; }
