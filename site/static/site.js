@@ -22,7 +22,12 @@
         body: data.toString()
       }).then(function () {
         try { localStorage.setItem("mms_subscribed", "1"); } catch (e) {}
-        window.location.href = form.getAttribute("data-thanks");
+        var go = function () { window.location.href = form.getAttribute("data-thanks"); };
+        if (!window.plausible) return go();
+        // Plausible "Signup" goal (docs/UTM.md): navigate once it's sent, or after 800ms regardless.
+        var done = false, once = function () { if (!done) { done = true; go(); } };
+        window.plausible("Signup", { props: { form: form.getAttribute("data-form") || "" }, callback: once });
+        setTimeout(once, 800);
       }).catch(function () { form.submit(); });
     });
   });

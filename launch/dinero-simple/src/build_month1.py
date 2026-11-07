@@ -15,6 +15,11 @@ sys.path.insert(0, str(HERE))
 
 import month1_carousels, month1_long, month1_shorts_a, month1_shorts_b  # noqa: E402
 from build_content import MASCOT_ES, STYLE_ES  # noqa: E402
+from links import add_youtube_links  # noqa: E402
+
+# Long videos: site pages linked at the end of the YouTube description (UTM campaign = the key).
+YOUTUBE_LINKS = {"l-mandar-dinero": ["presupuesto", "gratis"],
+                 "l-diciembre-sin-deudas": ["fecha", "presupuesto", "gratis"]}
 
 NATIVE = "A fluent es-US speaker has reviewed every word (original Spanish copy, not a translation)"
 
@@ -34,7 +39,7 @@ def build() -> list[dict]:
             segs.append({"heading": heading, "narration": narration, "on_screen_text": on_screen,
                          "visual_prompt": visual(scene)})
         script = {"title": it["title"], "hook": it["hook"], "segments": segs, "cta": month1_shorts_a.CTA,
-                  "caption": it["caption"], "hashtags": it["hashtags"], "description": it["description"],
+                  "caption": it["caption"], "hashtags": it["hashtags"], "description": add_youtube_links(it["description"], it["key"], YOUTUBE_LINKS.get(it["key"], [])),
                   "thumbnail_text": it["thumbnail_text"], "sources": it["sources"],
                   "claims_to_verify": it["claims"], "title_variants": [], "hook_variants": []}
         out.append({"key": it["key"], "format": it["format"], "pillar": it["pillar"], "idea_angle": it["angle"],

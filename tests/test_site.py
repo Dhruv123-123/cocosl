@@ -116,3 +116,27 @@ def test_free_tools_hidden_until_their_url_is_set(tmp_path):
     art = (out / "blog" / "avalancha-o-bola-de-nieve" / "index.html").read_text()
     assert 'href="https://apps.example.org/money-calculators/es/debt-payoff/"' in art
     assert (out / "products" / "el-paquete-dinero-simple" / "index.html").is_file()
+
+
+def test_plausible_events_and_email_utm(tmp_path):
+    out = _build(tmp_path, "https://example.org", SITE_ROOT=str(DS))
+    pages = [p for p in out.rglob("*.html") if p.name != "email.html"]
+    snippet = 'data-domain="dinerosimple.netlify.app" src="https://plausible.io/js/script.outbound-links.tagged-events.js"'
+    assert pages and all(snippet in p.read_text() for p in pages)
+    buy = (out / "products" / "tu-fecha-sin-deudas" / "index.html").read_text()
+    assert "plausible-event-name=Product+Click" in buy and "plausible-event-link=tu-fecha-sin-deudas" in buy
+    mail = (out / "emails" / "avalancha-bola-de-nieve" / "email.txt").read_text()
+    assert "/products/el-presupuesto-de-20-minutos/?utm_source=newsletter&utm_medium=email&utm_campaign=welcome-d" in mail
+    assert ".pdf?utm" not in " ".join(p.read_text() for p in (out / "emails").rglob("email.*"))
+    # The English site has no Plausible domain set, so no script and no event classes.
+    en = _build(tmp_path / "en", "https://example.org")
+    home = (en / "index.html").read_text()
+    assert "plausible" not in home.lower() and "utm_" not in (en / "emails" / "sequence.json").read_text()
+
+
+def test_dinero_youtube_descriptions_carry_utm_links():
+    items = json.loads((DS.parents[1] / "launch" / "dinero-simple" / "content-month-1.json").read_text())
+    longs = [i for i in items if i["format"] == "long"]
+    assert longs and all(f"utm_source=youtube&utm_medium=social&utm_campaign={i['key']}" in i["script"]["description"]
+                         for i in longs)
+    assert all("utm_" not in i["script"]["description"] for i in items if i["format"] != "long")

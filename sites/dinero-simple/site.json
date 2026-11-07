@@ -64,6 +64,9 @@
   "disclaimer": "Contenido educativo. No es asesoría financiera, fiscal ni de inversión. Los ejemplos usan números supuestos, no son promesas. Revisa las reglas y tasas actuales en la fuente oficial antes de actuar.",
   "ai_disclosure": "Usamos herramientas de IA para las imágenes y los borradores. Una persona elige cada tema, revisa los datos y aprueba todo antes de publicarlo.",
   "analytics_snippet": "",
+  "plausible_domain": "dinerosimple.netlify.app",
+  "plausible_host": "",
+  "utm_emails": true,
   "ui": {
     "lang": "es-US",
     "theme_color": "#14213d",

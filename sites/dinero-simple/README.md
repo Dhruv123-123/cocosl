@@ -35,5 +35,6 @@ and `/emails/` (unlinked, noindexed preview of the sequence, with copy-paste HTM
    in your email provider (CAN-SPAM).
 3. Point the email form at a **separate Spanish list** (`email.provider` / `email.action`), so Spanish subscribers
    get the Spanish sequence.
-4. Set the brand's `link_in_bio` in `brands/dinero-simple.yaml` to `<url>/links/`.
+4. `link_in_bio` in `brands/dinero-simple.yaml` already points at `/links/`. For profiles, paste the per-platform UTM links from `launch/dinero-simple/LINKS.md`.
 5. Once PR #8's apps are deployed, set `tool_urls.calculators` and `tool_urls.scam_checker` in `site.json`, then rebuild. For example: `https://YOUR-APPS-SITE/money-calculators/es` and `https://YOUR-APPS-SITE/scam-checker/es`. The 9 entries in `free_tools` cover the scam checker, link checker, scam guides and 6 calculators. They then appear on `/links/` ("Herramientas gratis"), on the home page, and as a box on matching articles. While those URLs still contain `REPLACE_ME`, nothing is shown.
+6. Analytics: every page loads Plausible (`plausible_domain` in `site.json`, currently `dinerosimple.netlify.app`; set `plausible_host` if you self-host). Add the site in Plausible with the goals `Product Click`, `Affiliate Click`, `Signup` and `Outbound Link: Click`, and allow the custom properties `brand`, `link` and `form` (docs/UTM.md section 3, PR #8). Buy buttons send Product Click, affiliate links send Affiliate Click and the email forms send Signup. The exported welcome emails tag every link to the site with UTM (`utm_emails`).

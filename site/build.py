@@ -27,7 +27,7 @@ import shutil
 import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urlencode, urlparse
 
 ROOT = Path(os.environ.get("SITE_ROOT") or Path(__file__).resolve().parent).resolve()
 CONTENT = ROOT / "content"
@@ -129,7 +129,7 @@ def u(path: str) -> str:
     if path.startswith(("http://", "https://", "mailto:", "#")):
         return path
     if CFG.get("_absolute_links"):
-        return absu(path)
+        return tag_own(absu(path))
     return CFG["base_path"] + "/" + path.lstrip("/")
 
 
@@ -140,6 +140,23 @@ def absu(path: str) -> str:
 
 
 esc = html.escape
+
+
+def tag_own(url: str) -> str:
+    """While exporting emails with site.json "utm_emails" on, add utm_source=newsletter&utm_medium=email
+    &utm_campaign=welcome-d<day> (docs/UTM.md) to links to this site's pages. Files and links that
+    already carry UTM are left alone."""
+    utm = CFG.get("_utm")
+    if not utm or not url.startswith(CFG["url"]) or "utm_" in url:
+        return url
+    path = urlparse(url).path
+    if "." in path.rsplit("/", 1)[-1]:
+        return url
+    frag = ""
+    if "#" in url:
+        url, frag = url.split("#", 1)
+        frag = "#" + frag
+    return url + ("&" if "?" in url else "?") + urlencode(utm) + frag
 
 
 # ------------------------------------------------------------------ markdown
@@ -174,9 +191,14 @@ def inline(s: str) -> str:
         text, href = m.group(1), m.group(2)
         ext = href.startswith("http") and urlparse(href).netloc not in CFG["url"]
         rel = ' rel="noopener"' if ext else ""
+        cls = ""
         if "sponsored" in href or "/go/" in href:
             rel = ' rel="sponsored noopener"'
-        return f'<a href="{esc(u(href))}"{rel}>{text}</a>'
+            cls = event_class("Affiliate Click", link=urlparse(href).netloc or href.strip("/").split("/")[-1])
+        elif urlparse(href).netloc.endswith(("gumroad.com", "buy.stripe.com")):
+            cls = event_class("Product Click", link=urlparse(href).path.strip("/").split("/")[-1])
+        cls = f' class="{cls}"' if cls else ""
+        return f'<a href="{esc(u(href))}"{rel}{cls}>{text}</a>'
 
     s = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", link, s)
     s = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", s)
@@ -334,7 +356,7 @@ def email_form(source: str, button: str = "", compact: bool = False) -> str:
     else:
         extra += f'<input type="hidden" name="source" value="{esc(source)}">'
     note = esc(e.get("privacy_note", T("privacy_note")))
-    return f"""<form class="signup-form{' compact' if compact else ''}" method="post" action="{esc(action)}"{attrs} data-thanks="{thanks}">
+    return f"""<form class="signup-form{' compact' if compact else ''}" method="post" action="{esc(action)}"{attrs} data-thanks="{thanks}" data-form="{esc(source)}">
   {extra}
   <label class="hp" aria-hidden="true">{esc(T("honeypot"))} <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
   <label class="sr" for="em-{esc(source)}">{esc(T("email_label"))}</label>
@@ -342,6 +364,29 @@ def email_form(source: str, button: str = "", compact: bool = False) -> str:
   <button type="submit">{esc(button)}</button>
 </form>
 <p class="form-note">{note} <a href="{u('/privacy/')}">{esc(T("privacy"))}</a>.</p>"""
+
+
+def plausible_snippet() -> str:
+    """site.json "plausible_domain" (and optional "plausible_host") loads Plausible's outbound-links +
+    tagged-events script on every page, as docs/UTM.md section 3 describes. Empty: no script."""
+    domain = CFG.get("plausible_domain", "")
+    if not domain:
+        return ""
+    host = (CFG.get("plausible_host") or "https://plausible.io").rstrip("/")
+    return (f'\n<script defer data-domain="{esc(domain)}" '
+            f'src="{esc(host)}/js/script.outbound-links.tagged-events.js"></script>')
+
+
+def event_class(name: str, **props: str) -> str:
+    """Class names that make Plausible's tagged-events script send `name` (e.g. "Product Click")
+    with custom props when the link is clicked. Empty when Plausible isn't configured."""
+    if not CFG.get("plausible_domain"):
+        return ""
+    def tok(v: str) -> str:
+        return re.sub(r"[^A-Za-z0-9_.-]+", "+", str(v)).strip("+")
+    parts = [f"plausible-event-name={tok(name)}", f"plausible-event-brand={tok(CFG.get('slug', CFG['name']))}"]
+    parts += [f"plausible-event-{k}={tok(v)}" for k, v in props.items() if v]
+    return esc(" ".join(parts))
 
 
 def magnet_box(source: str) -> str:
@@ -418,7 +463,7 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
     ld = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>'
                  for x in (jsonld or []))
     soc = " · ".join(f'<a href="{esc(h)}" rel="me noopener">{esc(n)}</a>' for n, h in CFG["socials"].items())
-    analytics = CFG.get("analytics_snippet", "")
+    analytics = CFG.get("analytics_snippet", "") + plausible_snippet()
     return f"""<!doctype html>
 <html lang="{esc(T('lang'))}">
 <head>
@@ -611,7 +656,8 @@ def build() -> list[str]:
             buy = (f'<p class="buy-note">{esc(T("not_on_sale"))}</p>'
                    f'{email_form(f"waitlist-{p["slug"]}", T("waitlist_button"))}')
         else:
-            buy = (f'<a class="btn big" href="{esc(p["buy_url"])}" rel="noopener" data-buy="{esc(p["slug"])}">'
+            ev = event_class("Product Click", link=p["slug"])
+            buy = (f'<a class="btn big{" " + ev if ev else ""}" href="{esc(p["buy_url"])}" rel="noopener" data-buy="{esc(p["slug"])}">'
                    f'{esc(p.get("buy_label", T("buy_label")))}</a>'
                    f'<p class="buy-note">{esc(p.get("guarantee", ""))}</p>')
         ld = [{"@context": "https://schema.org", "@type": "Product", "name": p["title"],
@@ -703,7 +749,7 @@ def build() -> list[str]:
                     for p in products_list)
     links += f'<h2 class="lb-h">{esc(T("links_articles"))}</h2>' + "".join(f'<a class="lb-link" href="{u(f"/blog/{p["slug"]}/")}"><span>{esc(p["title"])}</span></a>'
                      for p in featured)
-    aff = "".join(f'<a class="lb-link" href="{esc(a["url"])}" rel="sponsored noopener"><span>{esc(a["name"])}</span><small>{esc(T("affiliate"))}</small></a>'
+    aff = "".join(f'<a class="lb-link {event_class("Affiliate Click", link=a["name"])}" href="{esc(a["url"])}" rel="sponsored noopener"><span>{esc(a["name"])}</span><small>{esc(T("affiliate"))}</small></a>'
                   for a in CFG.get("affiliates", []))
     write("/links/", layout(
         title=T("links_title"), path="/links/", description=CFG["tagline"],
@@ -786,8 +832,10 @@ def build() -> list[str]:
     export = []
     CFG["_absolute_links"] = True
     for e in emails:
+        if CFG.get("utm_emails"):
+            CFG["_utm"] = {"utm_source": "newsletter", "utm_medium": "email", "utm_campaign": f"welcome-d{e['day']}"}
         body_abs, _ = markdown(e["body"])
-        text = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", lambda m: f"{m.group(1)} ({absu(m.group(2))})", e["body"])
+        text = re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", lambda m: f"{m.group(1)} ({tag_own(absu(m.group(2)))})", e["body"])
         text = re.sub(r"\*\*(.+?)\*\*", r"\1", text).strip() + "\n"
         export.append({"order": int(e["order"]), "send_on_day": int(e["day"]), "subject": e["subject"],
                        "preheader": e.get("preheader", ""), "goal": e.get("goal", ""), "html": body_abs,
@@ -795,6 +843,7 @@ def build() -> list[str]:
         (OUT / "emails" / e["slug"] / "email.html").write_text(email_html(e, body_abs))
         (OUT / "emails" / e["slug"] / "email.txt").write_text(text)
     CFG["_absolute_links"] = False
+    CFG.pop("_utm", None)
     (OUT / "emails" / "sequence.json").write_text(json.dumps(export, indent=2, ensure_ascii=False))
     write("/emails/", layout(title="Email sequence preview", path="/emails/", noindex=True, description="Preview",
                              body=f'<section class="wrap"><h1>Welcome and nurture sequence</h1><p class="dek">Preview only (not linked, not indexed). Copy these into your email provider; see site/README.md.</p><div class="table"><table><thead><tr><th>#</th><th>Send</th><th>Subject</th><th>Job</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div></section>'))

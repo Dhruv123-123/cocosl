@@ -17,6 +17,11 @@ ROOT = HERE.parents[2]
 sys.path.insert(0, str(HERE))
 
 import carousels_a, carousels_b, long_videos, shorts_a, shorts_b  # noqa: E402
+from links import add_youtube_links  # noqa: E402
+
+# Long videos: UTM campaign id and the site pages linked at the end of the YouTube description.
+YOUTUBE_LINKS = {22: ("launch-invertir-100", ["invertir", "gratis"]),
+                 23: ("launch-30-dias", ["presupuesto", "paquete", "gratis"])}
 
 MASCOT_EN = "the small round green piggy bank mascot with big eyes"
 MASCOT_ES = "the small round coral piggy bank mascot with big eyes and a tiny teal scarf"
@@ -54,7 +59,8 @@ def build() -> list[dict]:
         script = {
             "title": es["title"], "hook": es["hook"], "segments": segments,
             "cta": es.get("cta", shorts_a.CTA), "caption": es["caption"], "hashtags": es["hashtags"],
-            "description": es["description"], "thumbnail_text": es["thumbnail_text"],
+            "description": add_youtube_links(es["description"], *YOUTUBE_LINKS.get(idx, ("", []))),
+            "thumbnail_text": es["thumbnail_text"],
             "sources": en_script.get("sources", []),
             "claims_to_verify": en_script.get("claims_to_verify", []) + EXTRA_CLAIMS.get(idx, []),
             "title_variants": [], "hook_variants": [],

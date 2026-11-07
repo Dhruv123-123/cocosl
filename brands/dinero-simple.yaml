@@ -32,7 +32,7 @@ avoid_topics:
 subreddits: [personalfinance, povertyfinance]   # English-language signals; the writer still writes in Spanish
 hashtags: [finanzaspersonales, educacionfinanciera, ahorro, presupuesto, invertir, dinerosimple]
 cta: Síguenos para un paso de dinero cada semana.
-link_in_bio: https://example.com/dinero
+link_in_bio: https://dinerosimple.netlify.app/links/   # per-platform UTM versions in launch/dinero-simple/LINKS.md
 voice:
   tone: tranquilo, concreto, con un toque de humor seco, cero exageración
   persona: un amigo que trabaja en finanzas y odia la jerga
@@ -64,7 +64,11 @@ affiliates:
     keywords: [cuenta de ahorro, alto rendimiento, fondo de emergencia, hysa]
     commission: "$50 per funded account"
 products:
+  - {name: "El Kit para Recortar Gastos", url: "https://example.gumroad.com/l/recortar-gastos", price: 5}
   - {name: "El Presupuesto de 20 Minutos (plantilla Notion + Sheets)", url: "https://example.gumroad.com/l/presupuesto", price: 12}
+  - {name: "Tu Fecha Sin Deudas", url: "https://example.gumroad.com/l/fecha-sin-deudas", price: 17}
+  - {name: "Empieza a Invertir con $100 al Mes", url: "https://example.gumroad.com/l/invertir-con-100", price: 19}
+  - {name: "El Paquete Dinero Simple (los 4 kits)", url: "https://example.gumroad.com/l/paquete-dinero-simple", price: 29}
 ai_disclosure: "Imágenes y voz hechas con herramientas de IA. Guion escrito y verificado por una persona. No es asesoría financiera."
 realistic_synthetic_media: false
 require_human_review: true
