@@ -23,6 +23,7 @@ STATIC_DIR = WEB_DIR / "static"
 
 NAV = [
     ("Overview", "/"),
+    ("Today", "/today"),
     ("Ideas", "/ideas"),
     ("Review", "/review"),
     ("Calendar", "/calendar"),
