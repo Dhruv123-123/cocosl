@@ -121,6 +121,7 @@ function lineChart(rows) {
 
 function offerHtml(key) {
   const blocks = [];
+  if (new URLSearchParams(location.search).get('embed') === '1' && !config.embed.showOffers) return '';
   const affBase = config.affiliates[key];
   const aff = affBase && lang === 'es' && affBase.es ? { ...affBase, ...affBase.es } : affBase;
   if (aff && isLiveUrl(aff.url)) {
@@ -180,9 +181,10 @@ function readValues(form, fields) {
   return v;
 }
 
-function writeUrl(params) {
+function writeUrl(values) {
   const url = new URL(location.href);
-  url.search = new URLSearchParams(params).toString();
+  const keep = ['embed', 'brand', 'frame'].filter((k) => url.searchParams.has(k)).map((k) => [k, url.searchParams.get(k)]);
+  url.search = new URLSearchParams([...keep, ...Object.entries(values)]).toString();
   history.replaceState(null, '', url);
 }
 
@@ -233,8 +235,25 @@ function mountCalculator(id) {
   run();
 }
 
+// Embed mode (?embed=1): just the calculator, a credit link, and height messages for embed.js.
+const params = new URLSearchParams(location.search);
+const embedded = params.get('embed') === '1';
+if (embedded) {
+  document.documentElement.classList.add('embed');
+  const credit = document.createElement('p');
+  credit.className = 'embed-credit';
+  const href = location.href.split('?')[0];
+  credit.innerHTML = params.get('brand') === '0' && config.embed.allowUnbranded
+    ? ''
+    : `<a href="${href}" target="_blank" rel="noopener">${lang === 'es' ? 'Calculadora gratis de' : 'Free calculator by'} ${escapeHtml(config.brand)}</a>`;
+  document.querySelector('main').append(credit);
+  const post = () => parent.postMessage({ type: 'mms-calc-height', id: params.get('frame') || '', height: document.documentElement.scrollHeight }, '*');
+  new ResizeObserver(post).observe(document.body);
+  post();
+}
+
 const id = document.body.dataset.calc;
-if (id) mountCalculator(id);
+if (id === 'debt-payoff' || CALCS[id]) mountCalculator(id);
 setupSignup();
 setupAnalytics();
 for (const a of document.querySelectorAll('[data-brand]')) a.textContent = config.brand;

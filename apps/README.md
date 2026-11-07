@@ -62,6 +62,18 @@ Every link containing `REPLACE_ME` is hidden automatically, so the apps are safe
 
 Nothing here takes a payment by itself, and nothing goes live until you paste in real links and keys.
 
+## Embeds and licences
+
+`money-calculators/embed/` lets any site embed a calculator with two lines of HTML (`embed.js` makes a
+self-resizing iframe; no cookies). Free embeds carry a "Free calculator by Money Made Simple" link, so each
+one is a backlink. For paying licensees (credit unions, coaches), set `embed.allowUnbranded: true` and give
+them `data-brand="0"`, or deploy a copy with their colours. Set `embed.licenceUrl` to your contact link.
+
+## Renaming the scam brand
+
+The brand name and domain live in `scam-checker/config.js`. To rename everywhere (pages, guides, kit PDF):
+`node scam-checker/rename-brand.mjs "Scam Decoded" scamdecoded.netlify.app`.
+
 ## Notes and limits
 
 - The free/Pro gate in the budget app runs in the browser, so a determined person could bypass it. That's

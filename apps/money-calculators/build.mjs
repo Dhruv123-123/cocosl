@@ -79,7 +79,7 @@ ${body}
 </main>
 <footer>
 ${t.footer.map((p) => `<p>${p}</p>`).join('\n')}
-<p><a href="${up}${t.dir}">${t.all}</a></p>
+<p><a href="${up}${t.dir}">${t.all}</a>${lang === 'en' ? ` · <a href="${up}embed/">Add these calculators to your site</a>` : ''}</p>
 </footer>
 <script type="module" src="${up}app.js"></script>
 </body>
@@ -134,14 +134,53 @@ const thanks = `<!doctype html>
 <p><a class="btn" href="../">Volver a las calculadoras</a></p></main></body></html>
 `;
 
+function embedPage() {
+  const opts = pages.map((p) => `<option value="${p.slug}">${esc(p.h1)}</option>`).join('');
+  const body = `
+<h1>Add a free calculator to your site</h1>
+<p class="lede">Bloggers, financial coaches, credit unions and schools can embed any of our calculators for free. It resizes itself, works on phones, sets no cookies, and keeps your readers on your page.</p>
+<div class="layout">
+  <form id="embed-form" class="card">
+    <label>Calculator<select id="e-calc">${opts}</select></label>
+    <label>Language<select id="e-lang"><option value="en">English</option><option value="es">Español</option></select></label>
+    <label>Paste this where you want it
+      <textarea id="e-code" rows="5" readonly></textarea></label>
+    <button type="button" class="btn small" id="e-copy">Copy code</button>
+    <p class="tiny">Free embeds show a small "Free calculator by ${esc(config.brand)}" link under the tool.</p>
+  </form>
+  <section class="card"><h2 style="margin-top:0">Preview</h2><div id="e-preview"></div></section>
+</div>
+<section class="card">
+  <h2>For credit unions, banks and financial coaches</h2>
+  <p>Want the calculators in your colours, without our link, and pointing to your own products (savings accounts, loans, coaching)? A white-label licence covers all six calculators in English and Spanish, with updates, for a flat monthly fee.</p>
+  <ul><li>Your brand colours and logo</li><li>No credit link, your own call-to-action under every result</li><li>English and Spanish versions</li><li>Hosted for you, or as files for your web team</li></ul>
+  <p><a class="btn" href="${esc(config.embed.licenceUrl)}">Ask about a licence</a></p>
+</section>
+<script type="module">
+  const $ = (s) => document.querySelector(s);
+  const base = new URL('../', location.href).href;
+  function update() {
+    const code = '<div class="mms-calc" data-calc="' + $('#e-calc').value + '" data-lang="' + $('#e-lang').value + '"></div>\\n<script src="' + base + 'embed.js" async><\\/script>';
+    $('#e-code').value = code;
+    $('#e-preview').innerHTML = '<div class="mms-calc" data-calc="' + $('#e-calc').value + '" data-lang="' + $('#e-lang').value + '"></div>';
+    const s = document.createElement('script'); s.src = base + 'embed.js?' + Date.now(); document.body.append(s);
+  }
+  $('#e-calc').addEventListener('change', update); $('#e-lang').addEventListener('change', update);
+  $('#e-copy').addEventListener('click', async () => { try { await navigator.clipboard.writeText($('#e-code').value); $('#e-copy').textContent = 'Copied'; } catch { $('#e-code').select(); } });
+  update();
+</script>`;
+  return layout({ lang: 'en', slug: 'embed', title: 'Free Money Calculators for Your Website', description: 'Embed free debt payoff, compound interest, emergency fund, savings, credit card and Roth vs Traditional calculators on your site. White-label licences for credit unions and coaches.', body });
+}
+
 const write = (rel, text) => { const f = join(root, rel); mkdirSync(dirname(f), { recursive: true }); writeFileSync(f, text); };
 if (pagesEs.map((p) => p.slug).join() !== pages.map((p) => p.slug).join()) throw new Error('pages-es.mjs must have the same slugs, in the same order, as pages.mjs');
 write('index.html', indexPage(pages, 'en'));
 write('es/index.html', indexPage(pagesEs, 'es'));
 write('es/gracias/index.html', thanks);
+write('embed/index.html', embedPage());
 for (const p of pages) write(`${p.slug}/index.html`, calcPage(p, 'en'));
 for (const p of pagesEs) write(`es/${p.slug}/index.html`, calcPage(p, 'es'));
-const urls = ['', ...pages.map((p) => p.slug + '/'), 'es/', ...pagesEs.map((p) => `es/${p.slug}/`)];
+const urls = ['', 'embed/', ...pages.map((p) => p.slug + '/'), 'es/', ...pagesEs.map((p) => `es/${p.slug}/`)];
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((s) => `  <url><loc>${base}/${s}</loc></url>`).join('\n')}\n</urlset>\n`);
 write('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${base}/sitemap.xml\n`);
 console.log(`Built ${pages.length + pagesEs.length + 2} pages`);

@@ -63,6 +63,14 @@ export default {
     },
   },
 
+  // Embeddable widgets (see /embed/). The credit link back to you is the point of the free tier:
+  // every embed is a backlink. allowUnbranded lets paying licensees add &brand=0.
+  embed: {
+    showOffers: false,
+    allowUnbranded: false,
+    licenceUrl: 'mailto:hello@example.com?subject=Calculator%20licence',
+  },
+
   // Optional privacy-friendly analytics, e.g. Plausible: set the domain and it loads.
   analytics: { plausibleDomain: '' },
 };

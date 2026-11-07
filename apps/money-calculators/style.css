@@ -65,3 +65,11 @@ footer{color:var(--muted);font-size:13px;padding-top:24px;padding-bottom:40px;bo
   #print-plan small{display:block;color:#555;font-size:9px}
   #print-plan tr{break-inside:avoid}
 }
+
+.embed body{background:transparent}
+.embed .top,.embed footer,.embed .signup-box,.embed .faq,.embed .more,.embed h1,.embed .lede,.embed #share{display:none}
+.embed main{padding:0}
+.embed .layout{margin:0}
+.embed-credit{font-size:12px;color:var(--muted);text-align:right;margin:6px 0 0}
+select,textarea{font:inherit;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--paper);color:var(--ink);width:100%}
+#embed-form label{margin-bottom:12px}
