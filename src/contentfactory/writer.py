@@ -20,6 +20,9 @@ FORMAT_SPECS = {
             "own numbers as a `chart`, and/or name in original_element a screen recording a person should make "
             "(e.g. 'record the IRS payment page while filling in the example'). Not a slideshow of generic "
             "illustrations with narration.",
+    "mid": "A 65-90 second vertical video for TikTok only (its Creator Rewards count videos over one minute). "
+           "8-11 beats; total narration 190-250 words. Hook in the first sentence, then one idea developed "
+           "with a concrete example, ending on the CTA. Must stand on its own, not a stretched short.",
     "carousel": "A 7-10 slide Instagram carousel. Slide 1 is the hook headline. Each slide: a short headline "
                 "(on_screen_text) and a 1-3 sentence body (narration). Last slide is the CTA and a save prompt.",
     "image": "A single image post: one bold on_screen_text, a caption that delivers the value.",
@@ -50,7 +53,7 @@ SYSTEM = (
 
 
 def _offline_script(brand: BrandProfile, title: str, angle: str, fmt: str) -> Script:
-    beats = {"short": 6, "long": 10, "carousel": 8, "image": 1}[fmt if fmt in FORMAT_SPECS else "short"]
+    beats = {"short": 6, "mid": 9, "long": 10, "carousel": 8, "image": 1}[fmt if fmt in FORMAT_SPECS else "short"]
     topic = title.rstrip("?.!")
     segs = []
     for i in range(beats):

@@ -32,7 +32,7 @@ LEAD = 0.1          # captions start just after the cut
 
 def render_post(settings: Settings, brand: BrandProfile, post: dict) -> dict:
     fmt = post.get("format") or "short"
-    if fmt not in ("short", "long", "carousel", "image"):
+    if fmt not in ("short", "mid", "long", "carousel", "image"):
         raise MediaError(f"Unknown post format '{fmt}'")
     script = _script(post)
     root = Path(settings.output_dir).resolve()
@@ -41,7 +41,7 @@ def render_post(settings: Settings, brand: BrandProfile, post: dict) -> dict:
     shutil.rmtree(build, ignore_errors=True)
     build.mkdir(parents=True)
     try:
-        if fmt in ("short", "long"):
+        if fmt in ("short", "mid", "long"):
             assets = _render_video(settings, brand, script, fmt, build, post)
         else:
             assets = _render_slides(settings, brand, script, fmt, build, post)
@@ -117,6 +117,9 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     if fmt == "short" and duration > SHORT_MAX_SECONDS:
         notes.append(f"WARNING: short runs {duration:.1f}s (> {SHORT_MAX_SECONDS:.0f}s); trim the script "
                      "before posting as a Reel/Short. Nothing was cut automatically.")
+    if fmt == "mid" and not 61 <= duration <= 95:
+        notes.append(f"WARNING: TikTok cut runs {duration:.1f}s; aim for 65-90s (TikTok's Creator Rewards "
+                     "only count videos over a minute).")
     thumb = render_thumbnail(images[0], script.thumbnail_text or script.title, palette, brand.visual.font,
                              brand.visual.watermark, out / "thumbnail.png")
 

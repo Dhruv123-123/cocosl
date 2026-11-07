@@ -9,7 +9,7 @@ pillars:
   - first-time investing basics (index funds, retirement accounts)
   - credit scores and debt payoff
   - money apps and tools, honestly compared
-formats: [short, carousel, long]
+formats: [short, carousel, long, mid]
 seed_topics:
   - high yield savings account
   - roth ira for beginners
@@ -46,7 +46,9 @@ cadence:
 accounts:
   - {platform: instagram, handle: "@moneymadesimple", formats: [short, carousel, image]}
   - {platform: youtube, handle: "@moneymadesimple", formats: [short, long]}
-  - {platform: tiktok, handle: "@moneymadesimple", formats: [short]}
+  - {platform: tiktok, handle: "@moneymadesimple", formats: [short, mid]}   # mid = TikTok-only 65-90 s cut
+  # Reels go natively to the Facebook Page too (same `factory auth meta` login as Instagram)
+  - {platform: facebook, handle: "Money Made Simple", formats: [short]}
 affiliates:
   - name: Example HYSA
     url: https://example.com/go/hysa

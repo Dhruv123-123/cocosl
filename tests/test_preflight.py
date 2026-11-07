@@ -10,7 +10,7 @@ def _post(output, fmt="short", seconds=30.0, slides=0, jpeg=True, video=True, si
     d = output / "b" / "post-1"
     d.mkdir(parents=True, exist_ok=True)
     assets = {"video": None, "slides": [], "images": [], "duration": seconds, "thumbnail": None}
-    if fmt in ("short", "long") and video:
+    if fmt in ("short", "mid", "long") and video:
         (d / "video.mp4").write_bytes(b"\x00" * size)
         assets["video"] = "b/post-1/video.mp4"
     for i in range(slides):
@@ -92,3 +92,22 @@ def test_publish_fails_clearly_when_media_vanished(live_factory):
     assert res and res[0]["status"] == "failed" and res[0]["retry"] is False
     row = f.db.get("publications", pub)
     assert row["status"] == "failed" and "video file is missing" in row["error"] and row["attempts"] == 0
+
+
+def test_tiktok_cut_format(tmp_path):
+    base = "https://media.example.com"
+    assert check(_post(tmp_path, "mid", seconds=75), "tiktok", tmp_path, base) == []
+    short_cut = check(_post(tmp_path, "mid", seconds=50), "tiktok", tmp_path, base)
+    assert [i.level for i in short_cut] == ["warn"] and "over a minute" in short_cut[0].message
+    assert "doesn't take mid" in msgs(check(_post(tmp_path, "mid", seconds=75), "youtube", tmp_path, base))
+    assert "doesn't take mid" in msgs(check(_post(tmp_path, "mid", seconds=75), "facebook", tmp_path, base))
+
+
+def test_mid_posts_go_to_tiktok_only_and_reels_to_facebook(factory, fake_render):
+    brand = factory.brand("money-made-simple")
+    assert [a.platform for a in brand.accounts if "mid" in a.formats] == ["tiktok"]
+    assert "facebook" in [a.platform for a in brand.accounts if "short" in a.formats]
+    from contentfactory.writer import FORMAT_SPECS, write_script
+    assert "65-90" in FORMAT_SPECS["mid"]
+    script = write_script(factory.llm, brand, "Why your budget breaks in week two", "angle", "mid")
+    assert len(script.segments) == 9

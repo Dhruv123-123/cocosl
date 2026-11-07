@@ -73,7 +73,7 @@ class TikTokPublisher(HttpPublisher):
     required_env = ["TIKTOK_ACCESS_TOKEN"]
 
     def supports(self, fmt: str) -> bool:
-        return fmt in ("short", "long")
+        return fmt in ("short", "mid", "long")
 
     def _headers(self) -> dict:
         return {"Authorization": f"Bearer {self.settings.env('TIKTOK_ACCESS_TOKEN')}",

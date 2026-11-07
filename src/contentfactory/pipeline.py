@@ -25,6 +25,14 @@ from .llm import LLM
 from .writer import write_with_review
 
 
+def voice_of_assets(assets: dict) -> str | None:
+    """The voice provider a rendered video used (human = the owner's recording)."""
+    for e in (assets or {}).get("provenance") or []:
+        if str(e.get("path", "")).endswith("audio.wav"):
+            return e.get("provider") or e.get("tool")
+    return None
+
+
 def _affiliates_in(brand: BrandProfile, caption: str, title: str) -> tuple[list[str], list[str]]:
     """(offers whose link is actually in the caption, offers that would fit by keyword)."""
     present = [a.slug or a.name for a in brand.affiliates
@@ -122,8 +130,8 @@ class Factory:
         from .media import render_post
         post = self._post(post_id)
         brand = self.brand(post["brand"])
-        if post["format"] in ("short", "long"):  # vary the look against this channel's recent videos
-            recent = self.db.query("SELECT assets FROM posts WHERE brand = ? AND id != ? AND format IN ('short','long') "
+        if post["format"] in ("short", "mid", "long"):  # vary the look against this channel's recent videos
+            recent = self.db.query("SELECT assets FROM posts WHERE brand = ? AND id != ? AND format IN ('short','mid','long') "
                                    "AND status != 'rejected' ORDER BY id DESC LIMIT 8", [brand.slug, post_id])
             post["_recent_looks"] = [(r["assets"] or {}).get("look") for r in recent if (r["assets"] or {}).get("look")]
         try:
@@ -227,6 +235,12 @@ class Factory:
                                 if a.enabled and post["format"] in a.formats]
         if not targets:
             raise ValueError(f"No enabled account in {brand.slug} accepts format '{post['format']}'")
+        if post["format"] in ("short", "mid", "long") and (brand.own_voice or (post.get("meta") or {}).get("own_voice")):
+            from .media.tts import human_voice_source
+            if human_voice_source(self.settings, brand, post_id) is None or \
+                    (voice_of_assets(assets) or "") != "human":
+                raise PermissionError("Waiting for your narration: `factory voice "
+                                      f"{post_id} <recording>` (see `factory recordings`)")
         from .publish.preflight import blocking, check_post
         stop = blocking(check_post(self, post, targets), self.settings.dry_run)
         if stop:

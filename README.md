@@ -67,6 +67,8 @@ factory doctor [--online]                   # is this install ready to make and 
 factory preflight --scheduled               # check queued media against each platform's limits (runs automatically too)
 factory cleanup --older-than 60 [--yes]     # free disk from posts live everywhere 60+ days (lists unless --yes)
 factory voice 12 take.m4a                   # your own narration for post 12 (one take, or one file per line); re-renders it
+factory recordings                           # posts waiting on your voice or a screen recording, soonest first
+factory calendar --export output/calendar  # all brands: calendar.ics + calendar.html, flags caps and collisions
 ```
 
 `factory --help` lists everything. Run it in production with `docker compose up -d`.
