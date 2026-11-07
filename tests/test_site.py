@@ -250,3 +250,44 @@ def test_salary_and_city_pages(tmp_path):
     sf = (out / "cost-of-living" / "san-francisco" / "index.html").read_text()
     assert "the highest of the 25 largest US cities" in sf
     assert (out / "budget" / "index.html").exists() and (out / "cost-of-living" / "index.html").exists()
+
+
+def test_shop_and_debt_pages(tmp_path):
+    import json
+    import re
+    sys.path.insert(0, str(SITE))
+    import pseo
+    # The debt maths is a port of debtPayoff() in the calculators' lib/calc.js; values checked against it.
+    d = pseo.debts_for(15000)
+    assert [(x["balance"], x["minPayment"]) for x in d] == [(4500, 135), (3000, 90), (750, 25), (6750, 181)]
+    a, s = pseo.payoff(d, 300, "avalanche"), pseo.payoff(d, 300, "snowball")
+    assert (a["months"], round(a["interest"], 2)) == (25, 2931.49)
+    assert (s["months"], round(s["interest"], 2)) == (25, 3005.23)
+    assert pseo.payoff(d, pseo.extra_for_months(d, 36))["months"] <= 36
+
+    out = _build(tmp_path, "https://example.org")
+    shop = (out / "shop" / "index.html").read_text()
+    items = json.loads((SITE / "content" / "shop.json").read_text())["items"]
+    assert len(items) >= 50
+    for it in items:
+        assert f'plausible-event-product={it["slug"]}' in shop, it["slug"]
+    assert shop.count("plausible-event-name=Product+Click") >= len(items)
+    assert 'id="bundles"' in shop and "$62 separately, save $23" in shop
+    assert "https://example.gumroad.com/l/bill-cut-kit" in shop  # placeholder until real links are pasted
+    assert '"@type": "ItemList"' in shop
+    assert 'href="/shop/"' in (out / "index.html").read_text()  # nav
+
+    sitemap = (out / "sitemap.xml").read_text()
+    bodies = []
+    for t in pseo.DEBT_LEVELS:
+        p = out / "debt-payoff" / f"{t}-debt" / "index.html"
+        h = p.read_text()
+        assert "/calculators/debt-payoff/?d=" in h and '"@type": "FAQPage"' in h
+        assert f"/debt-payoff/{t}-debt/" in sitemap
+        assert "Avalanche" in h and "Snowball" in h and "End of year 1" in h
+        main = re.sub(r"<[^>]+>", " ", h[h.index("<h1"):h.index('class="disclaimer"')])
+        assert len(main.split()) > 600, p
+        bodies.append(set(main.split()))
+    for i in range(len(bodies)):
+        for j in range(i + 1, len(bodies)):
+            assert len(bodies[i] & bodies[j]) / len(bodies[i] | bodies[j]) < 0.9

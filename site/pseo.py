@@ -515,3 +515,262 @@ def build_pseo(ctx: dict) -> list[tuple[str, str]]:
 </section>"""))
     urls.append(("/cost-of-living/", today))
     return urls
+
+
+# ================================================================================ debt payoff timelines
+DEBT_LEVELS = [2500, 5000, 7500, 10000, 15000, 20000, 25000, 30000, 40000, 50000]
+DETAIL_EXTRA = {2500: 100, 5000: 150, 7500: 200, 10000: 250, 15000: 300, 20000: 400, 25000: 500, 30000: 500,
+                40000: 600, 50000: 750}
+EXTRAS = [0, 100, 250, 500, 1000]
+# (name, share of total, APR %, minimum: ("card", pct) or ("loan", months left))
+MIXES = {
+    "small": [("Card A", 0.55, 24.99, ("card", 0.03)), ("Card B", 0.30, 19.99, ("card", 0.03)),
+              ("Store card", 0.15, 29.99, ("card", 0.03))],
+    "mid": [("Card A", 0.30, 24.99, ("card", 0.03)), ("Card B", 0.20, 21.99, ("card", 0.03)),
+            ("Store card", 0.05, 29.99, ("card", 0.03)), ("Personal loan", 0.45, 12.99, ("loan", 48))],
+    "large": [("Card A", 0.25, 24.99, ("card", 0.03)), ("Card B", 0.15, 21.99, ("card", 0.03)),
+              ("Personal loan", 0.20, 12.99, ("loan", 48)), ("Car loan", 0.40, 7.49, ("loan", 60))],
+    "largest": [("Card A", 0.15, 24.99, ("card", 0.03)), ("Card B", 0.10, 21.99, ("card", 0.03)),
+                ("Personal loan", 0.15, 12.99, ("loan", 48)), ("Car loan", 0.25, 7.49, ("loan", 60)),
+                ("Student loan", 0.35, 5.5, ("loan", 120))],
+}
+
+
+def mix_for(total: int) -> str:
+    return "small" if total <= 7500 else "mid" if total <= 20000 else "large" if total <= 30000 else "largest"
+
+
+def amortized(balance: float, apr: float, months: int) -> float:
+    r = apr / 100 / 12
+    return balance * r / (1 - (1 + r) ** -months)
+
+
+def debts_for(total: int) -> list[dict]:
+    out = []
+    for i, (name, share, apr, (kind, val)) in enumerate(MIXES[mix_for(total)]):
+        bal = round(total * share)
+        mn = max(25, round(bal * val)) if kind == "card" else round(amortized(bal, apr, val))
+        out.append({"index": i, "name": name, "balance": bal, "apr": apr, "minPayment": mn, "kind": kind})
+    return out
+
+
+def payoff(debts: list[dict], extra: float = 0, strategy: str = "avalanche", schedule: bool = False) -> dict:
+    """Port of debtPayoff() in the calculators' lib/calc.js: fixed monthly budget = minimums + extra,
+    freed-up minimums roll into the target debt."""
+    lst = [dict(d) for d in debts]
+    budget = sum(d["minPayment"] for d in lst) + extra
+    order = sorted(lst, key=(lambda d: (-d["apr"], d["balance"])) if strategy == "avalanche"
+                   else (lambda d: (d["balance"], -d["apr"])))
+    month, interest, paid_off, rows = 0, 0.0, {}, []
+    while any(d["balance"] > 0.005 for d in lst):
+        month += 1
+        if month > 1200:
+            return {"feasible": False, "months": math.inf, "interest": math.inf, "budget": budget}
+        for d in lst:
+            if d["balance"] > 0:
+                i = d["balance"] * d["apr"] / 100 / 12
+                d["balance"] += i
+                interest += i
+        avail = budget
+        for d in lst:
+            if d["balance"] > 0:
+                pay = min(d["minPayment"], d["balance"], avail)
+                d["balance"] -= pay
+                avail -= pay
+        for o in order:
+            if avail <= 0:
+                break
+            d = lst[o["index"]]
+            if d["balance"] > 0:
+                pay = min(d["balance"], avail)
+                d["balance"] -= pay
+                avail -= pay
+        if schedule:
+            rows.append(sum(max(0, d["balance"]) for d in lst))
+        for d in lst:
+            if d["balance"] <= 0.005 and d["name"] not in paid_off:
+                d["balance"] = 0
+                paid_off[d["name"]] = month
+    return {"feasible": True, "months": month, "interest": interest, "budget": budget,
+            "order": [o["name"] for o in order], "paid_off": paid_off, "schedule": rows}
+
+
+def extra_for_months(debts, months: int) -> float:
+    """Smallest extra (to $10) that clears everything within `months` using avalanche."""
+    lo, hi = 0, 20000
+    if payoff(debts, 0)["months"] <= months:
+        return 0
+    while hi - lo > 10:
+        mid = (lo + hi) // 2
+        if payoff(debts, mid)["months"] <= months:
+            hi = mid
+        else:
+            lo = mid
+    return hi
+
+
+def yrs(m: float) -> str:
+    if m == math.inf:
+        return "never"
+    y, r = divmod(int(m), 12)
+    parts = ([f"{y} year{'s' if y != 1 else ''}"] if y else []) + ([f"{r} month{'s' if r != 1 else ''}"] if r else [])
+    return " ".join(parts) or "0 months"
+
+
+def build_debt(ctx: dict) -> list[tuple[str, str]]:
+    cfg, u, absu, layout, write = ctx["CFG"], ctx["u"], ctx["absu"], ctx["layout"], ctx["write"]
+    org_ld, magnet_box, product_card, prod = ctx["org_ld"], ctx["magnet_box"], ctx["product_card"], ctx["product"]
+    today = ctx["today"]
+    calc = cfg.get("calculators_url", cfg["url"] + "/calculators").rstrip("/") + "/debt-payoff/"
+    shop = ctx.get("shop", {})
+    urls = []
+    path_of = lambda t: f"/debt-payoff/{t}-debt/"  # noqa: E731
+
+    for i, total in enumerate(DEBT_LEVELS):
+        debts = debts_for(total)
+        x = DETAIL_EXTRA[total]
+        mins = sum(d["minPayment"] for d in debts)
+        av = payoff(debts, x, "avalanche", schedule=True)
+        sb = payoff(debts, x, "snowball", schedule=True)
+        base = payoff(debts, 0, "avalanche")
+        saved = sb["interest"] - av["interest"]
+        first_sb = min(sb["paid_off"].values())
+        first_av = min(av["paid_off"].values())
+        e36, e24 = extra_for_months(debts, 36), extra_for_months(debts, 24)
+        rows_debts = [[esc(d["name"]), money(d["balance"]), f'{d["apr"]:.2f}%', money(d["minPayment"]),
+                       "3% of the balance (fixed here)" if d["kind"] == "card" else "Fixed loan payment"]
+                      for d in debts]
+        rows_cmp = []
+        for e in EXTRAS:
+            a, s_ = payoff(debts, e, "avalanche"), payoff(debts, e, "snowball")
+            rows_cmp.append([("Minimums only" if e == 0 else f"+{money(e)}"), money(mins + e),
+                             yrs(a["months"]), money(a["interest"]), yrs(s_["months"]), money(s_["interest"])])
+        order_rows = []
+        for d in debts:
+            order_rows.append([esc(d["name"]), f'{d["apr"]:.2f}%', money(d["balance"]),
+                               f'month {av["paid_off"][d["name"]]} ({av["order"].index(d["name"]) + 1})',
+                               f'month {sb["paid_off"][d["name"]]} ({sb["order"].index(d["name"]) + 1})'])
+        sched = []
+        for y in range(1, math.ceil(max(av["months"], sb["months"]) / 12) + 1):
+            m = y * 12
+            a_left = av["schedule"][m - 1] if m <= len(av["schedule"]) else 0
+            s_left = sb["schedule"][m - 1] if m <= len(sb["schedule"]) else 0
+            sched.append([f"End of year {y}", money(a_left), money(s_left)])
+        if abs(saved) < 50:
+            verdict = (f"With this mix the two methods end up within {money(abs(saved))} of each other, so pick the "
+                       f"one you'll stick with. Snowball clears its first debt in month {first_sb}, which is a "
+                       f"real motivational boost.")
+        elif saved > 0:
+            verdict = (f"Avalanche saves {money(saved)} in interest"
+                       + (f" and finishes {sb['months'] - av['months']} months sooner" if sb["months"] > av["months"]
+                          else "")
+                       + (f". Snowball's first win comes in month {first_sb} instead of month {first_av}. If that "
+                          f"early win is what keeps you going, it can be worth {money(saved)}; if you'll stick with "
+                          f"it anyway, avalanche is cheaper." if first_sb < first_av else
+                          f". Both methods clear their first debt in month {first_sb}, so snowball's usual head start "
+                          f"doesn't apply here: avalanche is the better pick for this mix."))
+        else:
+            verdict = f"Here snowball comes out {money(-saved)} cheaper, because the smallest debts also carry high rates."
+        cards = [d for d in debts if d["kind"] == "card"]
+        card_total = sum(d["balance"] for d in cards)
+        faq = [
+            (f"How long does it take to pay off {money(total)} of debt?",
+             f"With the debts on this page and {money(mins + x)} a month (minimums plus {money(x)} extra), about "
+             f"{yrs(av['months'])} using avalanche, paying {money(av['interest'])} in interest. Paying only the "
+             f"minimums it takes {yrs(base['months'])} and costs {money(base['interest'])}."),
+            (f"How much do I need to pay a month to clear {money(total)} in three years?",
+             f"About {money(mins + e36)} a month in total ({money(e36)} on top of the {money(mins)} of minimums) "
+             f"using avalanche. To be debt-free in two years it's about {money(mins + e24)} a month."),
+            (f"Snowball or avalanche for {money(total)} of debt?",
+             verdict),
+            ("Are these my real numbers?",
+             "No. They're a hypothetical mix of debts with typical-looking rates, to show how the maths works. "
+             "Put your own balances, rates and minimums into the debt payoff calculator for your plan."),
+        ]
+        title = f"Debt payoff timeline for {money(total)} of debt"
+        seo_title = f"Paying off {money(total)} of debt: snowball vs avalanche"
+        desc = (f"How long {money(total)} of debt takes to pay off at different monthly payments, with month-by-month "
+                f"snowball and avalanche schedules and the interest each one costs.")
+        path = path_of(total)
+        q = urlencode({"d": json.dumps([{k: d[k] for k in ("name", "balance", "apr", "minPayment")} for d in debts],
+                                       separators=(",", ":")), "extra": x})
+        pager = "".join(f'<a href="{u(path_of(t))}">{lbl}: {money(t)}</a>' for lbl, t in
+                        (("Less", DEBT_LEVELS[i - 1] if i else None),
+                         ("More", DEBT_LEVELS[i + 1] if i + 1 < len(DEBT_LEVELS) else None)) if t)
+        tool = shop.get("debt-free-date-planner")
+        tool_html = ""
+        if tool:
+            tool_html = (f'<p>Want this for your own debts, with a payment log? <strong>{esc(tool["name"])}</strong> '
+                         f'({money(tool["price"])}) is a guide plus spreadsheet that works out your debt-free date. '
+                         f'<a href="{u("/shop/#kits")}">See it in the shop</a>.</p>')
+        body = f"""<article class="wrap article">
+  <p class="crumbs"><a href="{u('/')}">Home</a> / <a href="{u('/debt-payoff/')}">Debt payoff timelines</a> / <span>{money(total)}</span></p>
+  <h1>{esc(title)}</h1>
+  <p class="dek">Paying {money(mins + x)} a month, a hypothetical {money(total)} of debt is gone in <strong>{yrs(av['months'])}</strong> with the avalanche method and {yrs(sb['months'])} with the snowball. Paying just the minimums (rolling each paid-off minimum into the next debt) takes {yrs(base['months'])}. Here's the month-by-month maths.</p>
+  <p class="meta">Hypothetical example · Computed {esc(ctx['as_of'])} · Not your actual rates</p>
+  <p class="calc-cta"><a class="btn" href="{esc(calc)}?{esc(q)}" data-calc="debt-payoff">Run these numbers with your own debts</a></p>
+  <div class="prose">
+<h2 id="the-debts">The {money(total)} in this example</h2>
+{table(["Debt", "Balance", "APR", "Minimum", "How the minimum works"], rows_debts)}
+<p>{len(cards)} credit card{'s' if len(cards) != 1 else ''} make up {money(card_total)} of it, and they carry the highest rates. Minimums here total {money(mins)} a month. Card minimums are held fixed at their starting amount, which is how you'd want to pay anyway: real card minimums shrink as the balance falls, which stretches payoff out for years.</p>
+
+<h2 id="how-long">How long it takes at different payments</h2>
+{table(["Extra a month", "Total a month", "Avalanche: time", "Avalanche: interest", "Snowball: time", "Snowball: interest"], rows_cmp)}
+<p>Every row uses a fixed monthly total: when one debt is paid off, its minimum rolls on to the next target. To be debt-free in <strong>three years</strong>, pay about {money(mins + e36)} a month; in <strong>two years</strong>, about {money(mins + e24)}.</p>
+
+<h2 id="order">Which debt goes first, at {money(mins + x)} a month</h2>
+<p>Avalanche targets the highest rate first; snowball targets the smallest balance first. Month each debt is cleared (and its place in the order):</p>
+{table(["Debt", "APR", "Balance", "Avalanche", "Snowball"], order_rows)}
+<p>{verdict}</p>
+
+<h2 id="schedule">Balance left at the end of each year</h2>
+{table(["", "Avalanche", "Snowball"], sched)}
+
+<h2 id="speed-up">Ways to speed it up</h2>
+<p>The fastest lever is the interest rate on the cards. Moving {money(card_total)} of card debt to a 0% balance transfer card would stop most of that interest for the intro period (watch the transfer fee and the rate after it ends): see <a href="{u('/compare/best-balance-transfer-cards/')}">balance transfer cards compared</a>. Or ask your card issuer for a lower APR: it's one phone call. Then find money for the extra payment in the <a href="{u('/budget/')}">budget for your salary</a>.</p>
+<p>More on choosing a method in <a href="{u('/blog/debt-avalanche-vs-snowball/')}">debt avalanche vs snowball</a>.</p>
+{tool_html}
+
+{faq_html(faq)}
+  </div>
+  <p class="disclaimer">Hypothetical debts, rates and payments for illustration. Interest is calculated monthly at the APR shown and payments are assumed to be on time with no new charges, fees or rate changes. {esc(cfg['disclaimer'])}</p>
+  <nav class="pager" aria-label="Other amounts">{pager}</nav>
+  {magnet_box(f"debt-{total}")}
+</article>"""
+        ld = [{"@context": "https://schema.org", "@type": "Article", "headline": title, "description": desc,
+               "datePublished": "2026-11-07", "dateModified": today, "mainEntityOfPage": absu(path),
+               "image": absu("/img/og-default.png"),
+               "author": {"@type": "Organization", "name": cfg["name"], "url": cfg["url"] + "/"},
+               "publisher": org_ld()},
+              {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+                  {"@type": "ListItem", "position": 1, "name": "Home", "item": cfg["url"] + "/"},
+                  {"@type": "ListItem", "position": 2, "name": "Debt payoff timelines", "item": absu("/debt-payoff/")},
+                  {"@type": "ListItem", "position": 3, "name": title, "item": absu(path)}]},
+              {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+                  {"@type": "Question", "name": q_, "acceptedAnswer": {"@type": "Answer", "text": a}}
+                  for q_, a in faq]}]
+        write(path, layout(title=seo_title, description=desc, path=path, body=body, og_type="article", jsonld=ld,
+                           og={"article:published_time": "2026-11-07", "article:modified_time": today,
+                               "article:section": "Debt payoff", "article:author": cfg["name"]}))
+        urls.append((path, today))
+
+    rows = []
+    for t in DEBT_LEVELS:
+        d = debts_for(t)
+        mins = sum(x["minPayment"] for x in d)
+        a = payoff(d, DETAIL_EXTRA[t])
+        rows.append([f'<a href="{u(path_of(t))}">{money(t)}</a>', money(mins), money(mins + DETAIL_EXTRA[t]),
+                     yrs(a["months"]), money(a["interest"])])
+    write("/debt-payoff/", layout(
+        title="Debt payoff timelines from $2,500 to $50,000",
+        description="How long it takes to pay off $2,500 to $50,000 of debt, with snowball and avalanche schedules "
+                    "and the interest each costs, worked out month by month.",
+        path="/debt-payoff/", jsonld=[org_ld()], body=f"""<section class="wrap">
+  <h1>Debt payoff timelines</h1>
+  <p class="dek">Pick the amount closest to yours. Each page works through a hypothetical mix of cards and loans, month by month, with both the snowball and the avalanche method.</p>
+  <p class="calc-cta"><a class="btn" href="{esc(calc)}" data-calc="debt-payoff">Or use your own debts in the calculator</a></p>
+  {table(["Debt", "Minimums", "Paying", "Avalanche: time", "Interest"], rows)}
+  <p class="disclaimer">Hypothetical debts and rates for illustration; each page lists them.</p>
+</section>"""))
+    urls.append(("/debt-payoff/", today))
+    return urls

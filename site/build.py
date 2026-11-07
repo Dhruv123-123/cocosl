@@ -25,7 +25,7 @@ import shutil
 import sys
 from datetime import date, datetime, timezone
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import quote, urlparse
 
 ROOT = Path(__file__).resolve().parent
 CONTENT = ROOT / "content"
@@ -401,7 +401,7 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
     nav = "".join(
         f'<a href="{u(href)}"{" aria-current=page" if path.startswith(href) and href != "/" else ""}>{esc(t)}</a>'
         for t, href in [("Start here", "/start/"), ("Articles", "/blog/"), ("Compare", "/compare/"),
-                        ("Products", "/products/"), ("Free reset", "/free/")])
+                        ("Shop", "/shop/"), ("Free reset", "/free/")])
     ld = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>'
                  for x in (jsonld or []))
     soc = " · ".join(f'<a href="{esc(h)}" rel="me noopener">{esc(n)}</a>' for n, h in CFG["socials"].items())
@@ -450,7 +450,7 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
   <div class="wrap">
     <p class="foot-brand"><strong>{esc(CFG['name'])}</strong> · {esc(CFG['tagline'])}</p>
     <p>{soc}</p>
-    <p><a href="{u('/about/')}">About</a> · <a href="{u('/resources/')}">Resources</a> · <a href="{u('/quiz/')}">Money quiz</a> · <a href="{u('/budget/')}">Budget by salary</a> · <a href="{u('/cost-of-living/')}">City budgets</a> · <a href="{u('/privacy/')}">Privacy</a> · <a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/terms/')}">Terms</a> · <a href="{u('/links/')}">Links</a> · <a href="{u('/newsletter/')}">Newsletter</a> · <a href="{u('/feed.xml')}">RSS</a></p>
+    <p><a href="{u('/about/')}">About</a> · <a href="{u('/resources/')}">Resources</a> · <a href="{u('/quiz/')}">Money quiz</a> · <a href="{u('/budget/')}">Budget by salary</a> · <a href="{u('/cost-of-living/')}">City budgets</a> · <a href="{u('/debt-payoff/')}">Debt payoff</a> · <a href="{u('/shop/')}">Shop</a> · <a href="{u('/privacy/')}">Privacy</a> · <a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/terms/')}">Terms</a> · <a href="{u('/links/')}">Links</a> · <a href="{u('/newsletter/')}">Newsletter</a> · <a href="{u('/feed.xml')}">RSS</a></p>
     <p class="small">{esc(CFG['disclaimer'])}</p>
     <p class="small">{esc(CFG['ai_disclosure'])}</p>
     <p class="small">&copy; {date.today().year} {esc(CFG['name'])}</p>
@@ -715,9 +715,16 @@ def build() -> list[str]:
   <h1>Guides and templates</h1>
   <p class="dek">Small, specific tools. One payment, no subscription, files you keep. Each one has a no-hoops refund.</p>
   <div class="product-grid">{''.join(product_card(p) for p in products_list)}</div>
+  <p><a class="btn" href="{u('/shop/')}">See the whole shop: kits, templates, printables and bundles</a></p>
   {magnet_box('products-index')}
 </section>"""))
     urls.append(("/products/", date.today().isoformat()))
+
+    # ---- shop: every product from the products thread (content/shop.json, made by tools/import_shop.py)
+    shop_file = CONTENT / "shop.json"
+    if shop_file.exists():
+        build_shop(json.loads(shop_file.read_text())["items"])
+        urls.append(("/shop/", date.today().isoformat()))
 
     # ---- static pages
     for pg in pages:
@@ -950,6 +957,12 @@ def build() -> list[str]:
                              "magnet_box": magnet_box, "product_card": product_card,
                              "product": products_list[0] if products_list else None,
                              "today": os.environ.get("BUILD_DATE") or date.today().isoformat()})
+    _shop = {i["slug"]: i for i in json.loads((CONTENT / "shop.json").read_text())["items"]} \
+        if (CONTENT / "shop.json").exists() else {}
+    urls += pseo.build_debt({"CFG": CFG, "u": u, "absu": absu, "layout": layout, "write": write, "org_ld": org_ld,
+                             "magnet_box": magnet_box, "product_card": product_card, "product": None, "shop": _shop,
+                             "today": os.environ.get("BUILD_DATE") or date.today().isoformat(),
+                             "as_of": fmt_date(os.environ.get("BUILD_DATE") or date.today().isoformat())})
 
     # ---- newsletter archive: content/newsletter/*.md, one page per issue that has gone out.
     # An issue dated in the future stays unpublished until a build on or after its date
@@ -1064,6 +1077,99 @@ def build() -> list[str]:
 """)
     # Netlify Forms needs a static copy of the form to detect it at deploy time (the pages above have it).
     return [p for p, _ in urls]
+
+
+SHOP_GROUPS = [("budget", "Budget planners"), ("savings", "Savings challenges"), ("debt", "Debt payoff"),
+               ("trackers", "Trackers and records")]
+
+
+def store_url(it: dict, store: str) -> str:
+    """An item's own link wins; otherwise a placeholder built from site.json > stores."""
+    stores = CFG.get("stores", {})
+    if store == "etsy":
+        if it.get("etsy_url"):
+            return it["etsy_url"]
+        return stores.get("etsy", "https://www.etsy.com/shop/REPLACE_ME") + "?search_query=" + quote(it["name"])
+    if it.get("url"):
+        return it["url"]
+    return stores.get("gumroad", "https://example.gumroad.com").rstrip("/") + "/l/" + it["slug"]
+
+
+def shop_buttons(it: dict) -> str:
+    out = []
+    for store in it["stores"]:
+        label = {"gumroad": "Get it" if it["price"] else "Get it free", "etsy": "On Etsy"}[store]
+        if store == "etsy" and "gumroad" in it["stores"]:
+            cls = "btn ghost"
+        else:
+            cls = "btn"
+        out.append(f'<a class="{cls} plausible-event-name=Product+Click plausible-event-product={esc(it["slug"])} '
+                   f'plausible-event-store={store}" href="{esc(store_url(it, store))}" rel="noopener" '
+                   f'data-buy="{esc(it["slug"])}">{label}</a>')
+    if it.get("page"):
+        out.insert(0, f'<a class="btn ghost" href="{u(it["page"])}">Details</a>')
+    return "".join(out)
+
+
+def shop_price(it: dict) -> str:
+    p = it["price"]
+    txt = "Free" if not p else f"${p:g}"
+    if it.get("separately"):
+        save = it["separately"] - p
+        txt += f' <span class="was">${it["separately"]:g} separately, save ${save:g}</span>'
+    return f'<p class="price">{txt}</p>'
+
+
+def shop_card(it: dict, image: bool = True) -> str:
+    img = (f'<img src="{u(it["image"])}" alt="{esc(it["name"])} cover" width="360" height="360" loading="lazy">'
+           if image and it.get("image") else "")
+    return f"""<div class="shop-card{' has-img' if img else ''}">{img}<div class="shop-body">
+  <h3>{esc(it["name"])}</h3><p>{esc(it.get("blurb", ""))}</p>{shop_price(it)}
+  <p class="shop-buy">{shop_buttons(it)}</p></div></div>"""
+
+
+def build_shop(items: list[dict]) -> None:
+    bundles = [i for i in items if i.get("bundle")]
+    kits = [i for i in items if i["kind"] == "kit" and not i.get("bundle")]
+    sheets = [i for i in items if i["kind"] == "sheets" and not i.get("bundle")]
+    notion = [i for i in items if i["kind"] == "notion" and not i.get("bundle")]
+    prints = [i for i in items if i["kind"] == "printable" and not i.get("bundle")]
+    groups = "".join(
+        f'<h3 class="shop-group" id="printables-{k}">{esc(label)}</h3><div class="shop-list">'
+        + "".join(shop_card(i, image=False) for i in prints if i.get("group") == k) + "</div>"
+        for k, label in SHOP_GROUPS if any(i.get("group") == k for i in prints))
+    ld = [{"@context": "https://schema.org", "@type": "ItemList", "name": f"{CFG['name']} shop",
+           "itemListElement": [{"@type": "ListItem", "position": n + 1, "item": {
+               "@type": "Product", "name": i["name"], "description": i.get("blurb", ""),
+               "brand": {"@type": "Brand", "name": CFG["name"]},
+               **({"image": absu(i["image"])} if i.get("image") else {}),
+               "offers": {"@type": "Offer", "price": f'{i["price"]:.2f}', "priceCurrency": "USD",
+                          "availability": "https://schema.org/InStock",
+                          "url": store_url(i, i["stores"][0])}}} for n, i in enumerate(bundles + kits)]},
+          org_ld()]
+    count = len(items)
+    body = f"""<section class="wrap shop">
+  <h1>Shop</h1>
+  <p class="dek">{count} money tools from {esc(CFG['name'])}: guide-and-spreadsheet kits, Google Sheets and Notion templates, and printables. One payment, no subscription, files you keep. Kits and templates are sold through Gumroad, printables through our Etsy shop.</p>
+  <p class="chips"><a class="chip" href="#bundles">Bundles</a><a class="chip" href="#kits">Guide kits</a><a class="chip" href="#templates">Sheets and Notion</a><a class="chip" href="#printables">Printables</a></p>
+  <h2 id="bundles">Bundles</h2>
+  <p>The best value if you want more than one. Savings are against buying the same items one by one.</p>
+  <div class="shop-grid">{''.join(shop_card(i) for i in bundles)}</div>
+  <h2 id="kits">Guide and spreadsheet kits</h2>
+  <p>Each kit is a short PDF guide plus a spreadsheet that does the maths (Excel, Google Sheets or Numbers). Start with the one that matches your problem: leaking subscriptions, no system, credit, debt or investing.</p>
+  <div class="shop-grid">{''.join(shop_card(i) for i in kits)}</div>
+  <h2 id="templates">Google Sheets and Notion templates</h2>
+  <div class="shop-list">{''.join(shop_card(i, image=False) for i in sheets + notion)}</div>
+  <h2 id="printables">Printables</h2>
+  <p>Letter and A4 PDFs to print at home or fill in on a tablet.</p>
+  {groups}
+  <p class="disclaimer">Prices in US dollars; Etsy may show local currency and add sales tax. Our products are educational tools, not financial advice. Refunds: email {esc(CFG.get('contact_email', ''))} within 14 days.</p>
+  {magnet_box('shop')}
+</section>"""
+    write("/shop/", layout(title="Shop: budget kits, templates and printables",
+                           description=f"Every {CFG['name']} product: budget and debt payoff kits, Google Sheets and "
+                                       "Notion templates, savings challenges and printables. Bundles save up to 85%.",
+                           path="/shop/", body=body, jsonld=ld))
 
 
 def email_html(e: dict, body: str) -> str:

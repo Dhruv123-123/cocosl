@@ -415,5 +415,9 @@
     "how-to-choose-a-budgeting-app": "best-budgeting-apps",
     "how-to-open-a-high-yield-savings-account": "best-high-yield-savings-accounts"
   },
-  "calculators_url": "https://moneymadesimple.netlify.app/calculators"
+  "calculators_url": "https://moneymadesimple.netlify.app/calculators",
+  "stores": {
+    "gumroad": "https://example.gumroad.com",
+    "etsy": "https://www.etsy.com/shop/REPLACE_ME"
+  }
 }

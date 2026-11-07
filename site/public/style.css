@@ -236,3 +236,15 @@ th{background:var(--tint)}
 .pager{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin:28px 0}
 .pager a{font-weight:600}
 .empty{padding:18px 20px;border:1px dashed var(--line,#d9d3c3);border-radius:12px}
+.shop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;margin:16px 0 32px}
+.shop-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;margin:12px 0 28px}
+.shop-card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.shop-card img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
+.shop-body{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}
+.shop-body h3{margin:0 0 6px;font-size:18px}
+.shop-body p{margin:0 0 10px;font-size:15px}
+.shop-body .price{font-weight:750;margin-top:auto}
+.shop-body .price .was{font-weight:500;color:var(--muted);font-size:14px;margin-left:6px}
+.shop-buy{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.shop-buy .btn{padding:8px 14px;font-size:15px}
+.shop-group{margin:24px 0 4px}

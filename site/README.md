@@ -213,6 +213,29 @@ pages:** the rents were read from sites that republish HUD's tables (HUD's own s
 build machine), so spot-check a few against HUD's FMR tool. Oklahoma City and Las Vegas are still FY2026
 figures, and Indianapolis uses Marion County's long-standing 2.02% rate; confirm both.
 
+## Shop
+
+`/shop/` lists the products thread's whole catalog (PR #6): the guide-and-spreadsheet kits and the Google
+Sheets / Notion templates (Gumroad), the printables (Etsy), and the bundles first, with "save $X" against buying
+separately. Every buy button sends a Plausible `Product Click` with `product` and `store` properties.
+
+- The catalog lives in `content/shop.json`, made by `python3 site/tools/import_shop.py <content-factory folder>`
+  from `products/`, `templates/` and `etsy/` (it also makes the 360px card images in `static/img/shop/`).
+  Re-run it when the products thread changes a name, price or blurb.
+- **Store links are placeholders** until the stores exist: Gumroad items link to
+  `site.json > stores.gumroad` + `/l/<slug>`, Etsy items to `stores.etsy` + a shop search. Set the two store
+  URLs in `site.json`, and paste exact listing links into `shop.json` as `url` (Gumroad) or `etsy_url`;
+  the import tool keeps links you've pasted.
+
+## Debt payoff timelines
+
+`/debt-payoff/<amount>-debt/` for $2,500 to $50,000 (10 pages) plus the `/debt-payoff/` hub, built by
+`pseo.py`. Each page uses a hypothetical mix of cards and loans (bigger amounts add a personal loan, car loan
+and student loan) and simulates both strategies month by month with the same maths as the calculators' debt
+payoff tool: results at five payment levels, which debt is cleared when, a yearly balance schedule, the monthly
+payment for debt-free in two or three years, and FAQ schema. The "Run these numbers" button opens the debt payoff
+calculator pre-filled with the page's debts.
+
 ## Deploy check
 
 `python3 site/tools/check_site.py` runs after every build on Netlify and GitHub Pages, and in the tests.
