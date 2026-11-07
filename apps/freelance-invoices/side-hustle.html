@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Side Hustle Profit Calculator: Real Hourly Pay for Drivers, Resellers, Etsy | 1099 Money</title>
+<meta name="description" content="What does your side hustle really pay per hour? Take off platform fees, mileage, supplies and self-employment tax for Uber, DoorDash, eBay, Poshmark and Etsy, and see your real hourly profit and what to set aside for taxes. Free.">
+<meta property="og:title" content="What does your side hustle really pay per hour?">
+<meta property="og:description" content="Platform fees, mileage and self-employment tax, taken off. Free and private.">
+<meta name="theme-color" content="#14213d">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Side hustle profit calculator","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How much should I set aside for taxes from a side hustle?","acceptedAnswer":{"@type":"Answer","text":"Self-employment tax alone is about 14% of profit (15.3% on 92.35% of it), plus federal and state income tax. Many people set aside 20% to 30% of profit and pay quarterly estimated taxes if they will owe $1,000 or more."}},
+{"@type":"Question","name":"Should I deduct mileage or actual car costs?","acceptedAnswer":{"@type":"Answer","text":"Most gig drivers use the IRS standard mileage rate: 76 cents a mile for business driving from July 1, 2026 (72.5 cents before that). Keep a mileage log with the date, miles and purpose of each trip."}},
+{"@type":"Question","name":"Do I pay self-employment tax on a small side hustle?","acceptedAnswer":{"@type":"Answer","text":"Yes, once your net earnings from self-employment for the year reach $400. Platforms send a 1099-K or 1099-NEC, but you owe tax on your profit whether or not you get a form."}}
+]}</script>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="./" style="color:inherit;text-decoration:none"><span class="mark">1099</span><span>Side hustle profit</span></a>
+  <span class="badge">Free</span>
+</header>
+<main>
+  <h1 class="page-title">What does your side hustle really pay per hour?</h1>
+  <p class="lede">Enter a typical week. We take off platform fees, your costs, driving and self-employment tax to show what you really keep for each hour. Nothing you type leaves this browser.</p>
+
+  <form id="hustle" class="card deal-form">
+    <label class="full">What's your hustle? <select name="kind" id="kind"></select></label>
+    <label><span class="t-gross">Sales in a week, including shipping charged ($)</span> <input name="gross" inputmode="decimal"></label>
+    <label>Hours in a week, including waiting, sourcing and listing <input name="hours" inputmode="decimal"></label>
+    <label class="seller">Orders in a week <input name="orders" inputmode="decimal"></label>
+    <label class="seller">Platform fee (% of sales) <input name="feePct" inputmode="decimal"></label>
+    <label class="seller">Fee per order ($) <input name="perOrder" inputmode="decimal"></label>
+    <label class="etsy">New or renewed listings in a week <input name="listings" inputmode="decimal"></label>
+    <label class="etsy">Fee per listing ($) <input name="perListing" inputmode="decimal"></label>
+    <label class="seller">Cost of what you sold: inventory or materials ($) <input name="goods" inputmode="decimal"></label>
+    <label class="seller">Shipping and packaging you paid ($) <input name="shipping" inputmode="decimal"></label>
+    <label>Business miles driven in a week <input name="miles" inputmode="decimal"></label>
+    <label>What driving really costs you per mile ($) <input name="carCost" inputmode="decimal"></label>
+    <label>Other costs in a week: phone, supplies, bags ($) <input name="other" inputmode="decimal"></label>
+    <label>Weeks you work in a year <input name="weeks" type="number" min="1" max="52"></label>
+    <label>Your federal tax bracket <select name="bracket" id="bracket"></select></label>
+    <label>State income tax rate (%) <input name="stateRate" inputmode="decimal" placeholder="0"></label>
+    <p class="tiny full" id="fee-note"></p>
+  </form>
+
+  <section id="result" class="card" aria-live="polite"></section>
+  <ul id="tips" class="warnings"></ul>
+
+  <section class="card">
+    <h2>Getting paid by clients too?</h2>
+    <p>Track invoices, late fees and polite reminders with the free <a href="./">invoice tracker</a>. Sign up for the 1099 Money emails to get quarterly tax reminders before each deadline.</p>
+  </section>
+
+  <section class="card faq">
+    <h2>Questions</h2>
+    <h3>How much should I set aside for taxes from a side hustle?</h3>
+    <p>Self-employment tax alone is about 14% of profit (15.3% on 92.35% of it), plus federal and state income tax. Many people set aside 20% to 30% of profit and pay quarterly estimated taxes if they will owe $1,000 or more.</p>
+    <h3>Should I deduct mileage or actual car costs?</h3>
+    <p>Most gig drivers use the IRS standard mileage rate: 76 cents a mile for business driving from July 1, 2026 (72.5 cents before that). Keep a mileage log with the date, miles and purpose of each trip.</p>
+    <h3>Do I pay self-employment tax on a small side hustle?</h3>
+    <p>Yes, once your net earnings from self-employment for the year reach $400. Platforms send a 1099-K or 1099-NEC, but you owe tax on your profit whether or not you get a form.</p>
+    <h3>How is this worked out?</h3>
+    <p>Profit is your sales minus platform fees, costs and what driving really costs you. Taxes use the IRS mileage rate as your car deduction, self-employment tax at 15.3% on 92.35% of profit, and income tax at your bracket after half of self-employment tax and the 20% qualified business income deduction. It's an estimate: credits, other income and your exact return will change it. Platform fees are typical rates; check yours.</p>
+  </section>
+</main>
+<footer><p>General information, not tax advice. Nothing you type is sent anywhere. Made by <a data-site href="https://1099money.netlify.app">1099 Money</a>.</p></footer>
+<script type="module" src="side-hustle.js"></script>
+</body>
+</html>

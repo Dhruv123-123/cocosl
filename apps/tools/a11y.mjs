@@ -28,7 +28,8 @@ const server = createServer(async (req, res) => {
 });
 
 const only = process.argv.includes('--only') ? process.argv[process.argv.indexOf('--only') + 1] : '';
-const pages = ['/', ...cardsFromHub(readFileSync(join(root, 'index.html'), 'utf8')).map((c) => `/${c.u}`)].filter((p) => p.includes(only));
+const hubPages = (dir) => cardsFromHub(readFileSync(join(root, dir, 'index.html'), 'utf8')).map((c) => new URL(c.u, `http://x/${dir ? `${dir}/` : ''}`).pathname);
+const pages = [...new Set(['/', '/es/', ...hubPages(''), ...hubPages('es')])].filter((p) => p.includes(only));
 
 await new Promise((r) => server.listen(0, r));
 const base = `http://127.0.0.1:${server.address().port}`;

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Herramientas de dinero gratis en español: calculadoras y verificador de estafas</title>
+<meta name="description" content="Calculadoras de dinero gratis en español (sueldo neto por estado, deudas, ahorro, préstamos estudiantiles, rentar o comprar) y un verificador de estafas. Sin registro: lo que escribes se queda en tu navegador.">
+<meta name="theme-color" content="#0b1d13">
+<link rel="alternate" hreflang="en" href="../">
+<link rel="alternate" hreflang="es" href="./">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" href="../budget/icon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Herramientas de dinero gratis en español","itemListElement":[{"@type":"ListItem","position":1,"name":"Pagar deudas","url":"../money-calculators/es/debt-payoff/"},{"@type":"ListItem","position":2,"name":"Interés compuesto","url":"../money-calculators/es/compound-interest/"},{"@type":"ListItem","position":3,"name":"Fondo de emergencia","url":"../money-calculators/es/emergency-fund/"},{"@type":"ListItem","position":4,"name":"Intereses de ahorro","url":"../money-calculators/es/savings-interest/"},{"@type":"ListItem","position":5,"name":"Pago mínimo de tarjeta","url":"../money-calculators/es/credit-card-minimum/"},{"@type":"ListItem","position":6,"name":"Salario neto","url":"../money-calculators/es/take-home-pay/"},{"@type":"ListItem","position":7,"name":"Roth vs Tradicional","url":"../money-calculators/es/roth-vs-traditional/"},{"@type":"ListItem","position":8,"name":"Préstamos estudiantiles","url":"../money-calculators/es/student-loans/"},{"@type":"ListItem","position":9,"name":"Rentar o comprar","url":"../money-calculators/es/rent-vs-buy/"},{"@type":"ListItem","position":10,"name":"Comisiones del 401(k)","url":"../money-calculators/es/401k-fees/"},{"@type":"ListItem","position":11,"name":"¿Es una estafa?","url":"../scam-checker/es/"},{"@type":"ListItem","position":12,"name":"Revisor de enlaces","url":"../scam-checker/es/enlace/"},{"@type":"ListItem","position":13,"name":"Guías de estafas comunes","url":"../scam-checker/es/estafas/"}]}</script>
+<style>
+:root{--ink:#0b1d13;--paper:#f4f1e8;--card:#fffdf7;--line:#ddd6c4;--muted:#5b6b61;--gold:#f2b134;--green:#2fbf71}
+@media (prefers-color-scheme:dark){:root{--paper:#0b1d13;--card:#12291b;--ink:#f4f1e8;--muted:#a9b8ae;--line:#24412f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main,footer{max-width:960px;margin:0 auto;padding:24px 16px}
+h1{font-size:clamp(30px,5.5vw,46px);line-height:1.1;margin:8px 0}
+.lede{color:var(--muted);font-size:18px;max-width:640px}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px;padding:0;list-style:none}
+.jump a{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 12px;color:inherit;text-decoration:none;font-size:14px}
+.jump a:hover{border-color:var(--gold)}
+section{margin-top:36px}
+h2{font-size:24px;margin:0 0 4px}
+.brand{color:var(--muted);margin:0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));margin-top:16px}
+a.card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;color:inherit;text-decoration:none}
+a.card:hover,a.card:focus-visible{border-color:var(--gold)}
+a.card h3{font-size:18px;margin:0}
+a.card p{color:var(--muted);margin:6px 0 0;font-size:15px}
+.tag{align-self:flex-start;font-size:12px;font-weight:700;border-radius:999px;padding:2px 8px;margin-bottom:8px;background:var(--gold);color:#0b1d13}
+.tag.free{background:none;border:1px solid var(--green);color:inherit}
+.feature{border:2px solid var(--gold)}
+.pro{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;background:var(--card);border:2px solid var(--gold);border-radius:16px;padding:18px;margin-top:16px}
+.pro p{margin:0;color:var(--muted)}
+[hidden]{display:none!important}
+.install{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin:18px 0 0}
+.install p{margin:0;color:var(--muted);font-size:15px}
+.install .row{display:flex;gap:8px;align-items:center}
+.link{background:none;border:0;color:inherit;font:inherit;text-decoration:underline;cursor:pointer;padding:6px}
+button.btn{border:0;font:inherit;font-weight:700;cursor:pointer}
+.btn{display:inline-block;background:var(--gold);color:#0b1d13;border-radius:999px;padding:10px 18px;font-weight:700;text-decoration:none}
+.search{margin:18px 0 0}
+.search label{display:block;font-weight:700;margin-bottom:6px}
+.search input{width:100%;font:inherit;font-size:17px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.search input:focus{outline:3px solid var(--gold);outline-offset:1px}
+.search-count{color:var(--muted);font-size:14px;margin:6px 0 0;min-height:1em}
+.section-tag{background:none;border:1px solid var(--line);color:var(--muted);font-weight:600}
+.none{color:var(--muted)}
+@media (prefers-color-scheme:dark){.brand a,main p a{color:#9cc4ff}}
+footer{color:var(--muted);font-size:13px;text-align:center}
+footer a{color:inherit}
+</style>
+</head>
+<body>
+<main>
+  <p class="brand"><a href="../" hreflang="en" lang="en">English</a></p>
+  <h1>Herramientas gratis para tu dinero y tu seguridad</h1>
+  <p class="lede">Calculadoras y un verificador de estafas, en español. Sin registro, y todo lo que escribes se queda en tu navegador.</p>
+  <form id="search-form" class="search" role="search">
+    <label for="q">Buscar en todas las herramientas</label>
+    <input id="q" type="search" placeholder="Prueba: sueldo, deudas, estafa, préstamo" autocomplete="off" enterkeyhint="search">
+    <p id="search-count" class="search-count" aria-live="polite"></p>
+  </form>
+  <div id="search-results" class="grid" hidden></div>
+  <ul class="jump" aria-label="Ir a">
+    <li><a href="#calculadoras">Calculadoras</a></li>
+    <li><a href="#estafas">Estafas</a></li>
+  </ul>
+
+  <section id="calculadoras" aria-labelledby="h-calculadoras">
+    <h2 id="h-calculadoras">Calculadoras de dinero</h2>
+    <div class="grid">
+      <a class="card" href="../money-calculators/es/debt-payoff/"><span class="tag free">Gratis</span><h3>Pagar deudas</h3><p>Anota tus deudas y ve cuándo quedarás libre de deudas, cuánto pagarás de intereses y cuánto ahorra el método avalancha frente a la bola de nieve.</p></a>
+      <a class="card" href="../money-calculators/es/compound-interest/"><span class="tag free">Gratis</span><h3>Interés compuesto</h3><p>Mira cómo podría crecer un monto inicial más un aporte mensual con el tiempo, y qué parte del total es crecimiento y no dinero que tú pusiste.</p></a>
+      <a class="card" href="../money-calculators/es/emergency-fund/"><span class="tag free">Gratis</span><h3>Fondo de emergencia</h3><p>Calcula de cuánto debe ser tu fondo de emergencia y cuántos meses te tomará juntarlo, con los intereses de una cuenta de ahorro de alto rendimiento.</p></a>
+      <a class="card" href="../money-calculators/es/savings-interest/"><span class="tag free">Gratis</span><h3>Intereses de ahorro</h3><p>Compara los intereses de una cuenta de ahorro de alto rendimiento con una cuenta típica de un banco grande, según tu saldo y tus depósitos.</p></a>
+      <a class="card" href="../money-calculators/es/credit-card-minimum/"><span class="tag free">Gratis</span><h3>Pago mínimo de tarjeta</h3><p>Mira cuánto tarda y cuánto cuesta en intereses pagar solo el mínimo de una tarjeta de crédito, comparado con un pago fijo mensual.</p></a>
+      <a class="card" href="../money-calculators/es/take-home-pay/"><span class="tag free">Gratis</span><h3>Salario neto</h3><p>Mira cuánto te queda por cheque después del impuesto federal 2026, Seguro Social, Medicare, impuesto estatal y aportes al 401(k) o seguro médico.</p></a>
+      <a class="card" href="../money-calculators/es/roth-vs-traditional/"><span class="tag free">Gratis</span><h3>Roth vs Tradicional</h3><p>Compara el valor después de impuestos de aportar a una cuenta Roth o Tradicional según tu tasa de impuestos hoy y la que esperas al jubilarte.</p></a>
+      <a class="card" href="../money-calculators/es/student-loans/"><span class="tag free">Gratis</span><h3>Préstamos estudiantiles</h3><p>Compara los planes de pago federales de 2026: Estándar, Graduado, Extendido, IBR y el nuevo Plan de Asistencia de Pago (RAP). Pago mensual, total pagado y perdón.</p></a>
+      <a class="card" href="../money-calculators/es/rent-vs-buy/"><span class="tag free">Gratis</span><h3>Rentar o comprar</h3><p>¿Te conviene rentar o comprar? Compara el costo real de ser dueño con rentar e invertir la diferencia, y ve en qué año comprar empieza a ganar.</p></a>
+      <a class="card" href="../money-calculators/es/401k-fees/"><span class="tag free">Gratis</span><h3>Comisiones del 401(k)</h3><p>Ingresa los fondos de tu 401(k) y sus expense ratios. Mira cuánto pagas de comisiones al año, cuánto te podrían quitar en 30 años y cuál es el fondo más barato de cada tipo en tu propio plan.</p></a>
+    </div>
+  </section>
+
+  <section id="estafas" aria-labelledby="h-estafas">
+    <h2 id="h-estafas">Protégete de estafas</h2>
+    <div class="grid">
+      <a class="card feature" href="../scam-checker/es/"><span class="tag free">Gratis</span><h3>¿Es una estafa?</h3><p>Pega un mensaje, correo o DM sospechoso y revisa al instante las señales de estafa.</p></a>
+      <a class="card" href="../scam-checker/es/enlace/"><span class="tag free">Gratis</span><h3>Revisor de enlaces</h3><p>¿Este sitio web es confiable? Revisa un enlace antes de abrirlo: letras cambiadas, marcas falsas y dominios riesgosos.</p></a>
+      <a class="card" href="../scam-checker/es/estafas/"><span class="tag free">Gratis</span><h3>Guías de estafas comunes</h3><p>USPS, peajes, IRS, Amazon, alertas de fraude, empleos falsos y más, explicados en español.</p></a>
+    </div>
+  </section>
+</main>
+<footer><p>No es asesoría financiera ni legal. Privado por diseño: sin cuentas, y las herramientas funcionan en tu navegador.</p></footer>
+<script type="module" src="../hub-search.js"></script>
+</body>
+</html>

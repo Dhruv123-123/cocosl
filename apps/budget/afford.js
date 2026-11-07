@@ -53,7 +53,7 @@ function render() {
        <p>${r.input.takeHome ? `None of the three ways fits comfortably right now. It costs ${money(r.upfront)} all-in.${r.saveMonths ? ` Putting aside everything left after bills (${money(r.leftover)} a month), you could pay cash in about <b>${r.saveMonths} month${r.saveMonths === 1 ? '' : 's'}</b>.` : ''}` : `It costs ${money(r.upfront)} all-in. Your pay and bills tell us whether the payments fit.`}</p>`;
 
   $('#compare').innerHTML = `<h2>Three ways to pay</h2>
-    <div class="table-scroll"><table class="plan subs afford"><thead><tr><th></th>${r.options.map((o) => `<th>${LABEL[o.key]}</th>`).join('')}</tr></thead><tbody>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Three ways to pay"><table class="plan subs afford"><thead><tr><th></th>${r.options.map((o) => `<th>${LABEL[o.key]}</th>`).join('')}</tr></thead><tbody>
       <tr><td>Verdict</td>${r.options.map((o) => `<td><span class="pill ${VERDICT[o.verdict][1]}">${VERDICT[o.verdict][0]}</span>${o.key === r.best ? ' <span class="pill muted">best</span>' : ''}</td>`).join('')}</tr>
       <tr><td>Up front</td>${r.options.map((o) => `<td class="num">${money(o.cashNow)}</td>`).join('')}</tr>
       <tr><td>Each month</td>${r.options.map((o) => `<td class="num">${o.monthly ? money(o.monthly) : '—'}${o.months ? `<small style="display:block">for ${o.key === 'bnpl' && values.bnplType === 'pay4' ? 'about 6 weeks' : `${o.months} months`}</small>` : ''}</td>`).join('')}</tr>

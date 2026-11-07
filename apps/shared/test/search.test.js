@@ -41,3 +41,18 @@ test('hub page: labelled search box, results live region, offline', () => {
   assert.match(read('netlify.toml'), /node tools\/build-search\.mjs/);
   assert.doesNotMatch(read('hub-search.js'), /fetch\('http/, 'only fetches the local index');
 });
+
+test('Spanish hub: every Spanish calculator and scam tool, links resolve, own search index', async () => {
+  const { pagesEs } = await import('../../money-calculators/pages-es.mjs');
+  const html = read('es/index.html');
+  assert.match(html, /<html lang="es">/);
+  for (const p of pagesEs) assert.ok(html.includes(`href="../money-calculators/es/${p.slug}/"`), p.slug);
+  for (const u of ['../scam-checker/es/', '../scam-checker/es/enlace/', '../scam-checker/es/estafas/']) assert.ok(html.includes(`href="${u}"`), u);
+  const es = buildIndex('es');
+  assert.equal(es.length, pagesEs.length + 3);
+  for (const item of es) assert.ok(item.k, `${item.u} resolved to a page`);
+  assert.deepEqual(JSON.parse(read('es/search-index.json')), es, 'run: node tools/build-es-hub.mjs && node tools/build-search.mjs');
+  assert.equal(search(es, 'sueldo')[0].u, '../money-calculators/es/take-home-pay/');
+  assert.match(read('index.html'), /href="es\/" hreflang="es"/);
+  assert.match(read('sw.js'), /'es\/', 'es\/search-index\.json'/);
+});

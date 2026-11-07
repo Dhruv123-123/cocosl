@@ -168,3 +168,12 @@ textarea{font:inherit;padding:10px;border-radius:10px;border:1px solid var(--lin
 @media (prefers-color-scheme:dark){:root{--pos-text:#2fbf71;--bad-text:#ff8f82}}
 .pos{color:var(--pos-text)}.pill.bad{color:var(--bad-text)}
 @media (prefers-color-scheme:dark){a{color:#9cc4ff}a:visited{color:#c3b4ff}}
+/* Side hustle profit */
+.big-num{font-size:clamp(30px,6vw,42px);font-weight:800;margin:0 0 6px;color:var(--pos-text)}
+.big-num small{font-size:16px;font-weight:600;color:var(--muted)}
+.sh-table td.num{text-align:right;white-space:nowrap}
+.sh-table .neg{color:var(--bad-text)}
+.warnings{list-style:none;padding:0;margin:8px 0}
+.warn{border-left:4px solid var(--line);background:var(--card);border-radius:8px;padding:8px 12px;margin:6px 0;font-size:15px}
+.warn.high{border-color:var(--neg)}.warn.medium{border-color:var(--gold)}.warn.info{border-color:var(--needs)}
+.plain-list{list-style:none;padding:0;margin:6px 0}.plain-list li{padding:3px 0}

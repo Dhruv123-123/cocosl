@@ -29,7 +29,7 @@ export const EXTRA = {
       const cheap = p[r.cheapest];
       return `<p class="big">${this.plan[cheap.key]}</p>
         <p>costs the least overall: <b>${money(cheap.paid)}</b>${cheap.forgiven ? `, with ${money(cheap.forgiven)} forgiven at the end` : ''}. ${low.key !== cheap.key ? `If you need the smallest payment now, <b>${this.plan[low.key]}</b> starts at <b>${money(low.first)}</b> a month but costs ${money(low.paid - cheap.paid)} more in total.` : 'It also has the smallest payment to start.'}</p>
-        <div class="table-scroll"><table class="split-table plans-table"><thead><tr><th>Plan</th><th>Monthly</th><th>Paid off in</th><th>Total paid</th><th>Forgiven</th></tr></thead><tbody>${rows}</tbody></table></div>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Plan comparison"><table class="split-table plans-table"><thead><tr><th>Plan</th><th>Monthly</th><th>Paid off in</th><th>Total paid</th><th>Forgiven</th></tr></thead><tbody>${rows}</tbody></table></div>
         <p class="note"><b>Verify with your loan servicer before you switch.</b> Your servicer (or the Loan Simulator on StudentAid.gov) uses your exact loans, rates and tax return. ${r.cohort === 'after2026' ? 'With a loan paid out on or after July 1, 2026, Tiered Standard and RAP are your only plans.' : 'SAVE ended in March 2026. PAYE and ICR close by July 1, 2028, so they are not shown. Public Service Loan Forgiveness (10 years of payments) is not modeled.'} Forgiven amounts may be taxed as income. Rules from ${SL_SOURCES}; IBR uses 150% of the 2026 poverty guideline (${money(r.poverty)} for your household size).</p>`;
     },
     rentBuy(r) {
@@ -65,7 +65,7 @@ export const EXTRA = {
       const low = p[r.lowestPayment];
       return `<p class="big">${this.plan[cheap.key]}</p>
         <p>es el que menos cuesta en total: <b>${money(cheap.paid)}</b>. ${low.key !== cheap.key ? `Si necesitas el pago más bajo ahora, <b>${this.plan[low.key]}</b> empieza en <b>${money(low.first)}</b> al mes, pero cuesta ${money(low.paid - cheap.paid)} más en total.` : 'También tiene el pago inicial más bajo.'}</p>
-        <div class="table-scroll"><table class="split-table plans-table"><thead><tr><th>Plan</th><th>Pago mensual</th><th>Se paga en</th><th>Total pagado</th><th>Perdonado</th></tr></thead><tbody>${rows}</tbody></table></div>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Comparación de planes"><table class="split-table plans-table"><thead><tr><th>Plan</th><th>Pago mensual</th><th>Se paga en</th><th>Total pagado</th><th>Perdonado</th></tr></thead><tbody>${rows}</tbody></table></div>
         <p class="note"><b>Confírmalo con tu administrador de préstamos (servicer) antes de cambiar de plan.</b> El plan SAVE terminó en marzo de 2026; PAYE e ICR cierran a más tardar el 1 de julio de 2028. No se calcula el perdón por servicio público (PSLF). Lo perdonado puede pagar impuestos. Reglas de ${SL_SOURCES}.</p>`;
     },
     rentBuy(r) {

@@ -2,7 +2,7 @@
 # (Each app folder also has its own netlify.toml if you'd rather give each brand its own site.)
 [build]
   publish = "."
-  command = "node money-calculators/build.mjs && node scam-checker/build.mjs && node tools/build-search.mjs"
+  command = "node money-calculators/build.mjs && node scam-checker/build.mjs && node tools/build-es-hub.mjs && node tools/build-search.mjs"
 
 [functions]
   directory = "functions"

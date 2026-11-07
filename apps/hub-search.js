@@ -12,11 +12,13 @@ export const SYNONYMS = {
   college: ['student', 'loan'], tuition: ['student'], rap: ['repayment'], ibr: ['income'],
   credit: ['credit', 'card', 'dispute'], collections: ['debt', 'collector'], medical: ['medical', 'bill'], hospital: ['medical'],
   freelance: ['freelancer', 'invoice'], invoice: ['invoice', 'late'], subscriptions: ['subscription'], netflix: ['subscription'],
+  sueldo: ['salario', 'neto', 'cheque'], salario: ['neto', 'cheque'], casa: ['rentar', 'comprar', 'hipoteca'], renta: ['rentar'], deuda: ['deudas', 'tarjeta'], deudas: ['deuda'],
+  estafa: ['estafas', 'enlace'], fraude: ['estafa'], universidad: ['estudiantiles', 'prestamos'], prestamo: ['prestamos'], jubilacion: ['roth', '401'], ahorro: ['ahorros', 'emergencia', 'interes'],
   savings: ['saving', 'emergency', 'interest'], retirement: ['401', 'roth'], ira: ['roth'], tax: ['tax', 'paycheck'],
 };
 
 // Small words that never decide a search.
-export const STOP = new Set(['a', 'an', 'and', 'the', 'my', 'me', 'i', 'we', 'our', 'us', 'to', 'of', 'for', 'in', 'on', 'is', 'it', 'can', 'do', 'how', 'what', 'with', 'or', 'should', 'much', 'am', 'be', 'from', 'about', 'get', 'want', 'need']);
+export const STOP = new Set(['de', 'la', 'el', 'los', 'las', 'mi', 'mis', 'un', 'una', 'y', 'o', 'que', 'en', 'para', 'por', 'con', 'como', 'cuanto', 'cuánto', 'es', 'a', 'an', 'and', 'the', 'my', 'me', 'i', 'we', 'our', 'us', 'to', 'of', 'for', 'in', 'on', 'is', 'it', 'can', 'do', 'how', 'what', 'with', 'or', 'should', 'much', 'am', 'be', 'from', 'about', 'get', 'want', 'need']);
 
 export const norm = (s) => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 const words = (s) => norm(s).split(/[^a-z0-9%$]+/).filter(Boolean);
@@ -56,6 +58,7 @@ if (typeof document !== 'undefined') {
   const count = document.querySelector('#search-count');
   const hideWhileSearching = [...document.querySelectorAll('main > section, .jump')];
   let index = null;
+  const es = document.documentElement.lang.startsWith('es');
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
   const load = () => (index ||= fetch('search-index.json').then((r) => r.json()).catch(() => []));
 
@@ -71,8 +74,10 @@ if (typeof document !== 'undefined') {
     out.hidden = false;
     out.innerHTML = list.length
       ? list.map((r) => `<a class="card" href="${esc(r.u)}"><span class="tag section-tag">${esc(r.s)}</span><h3>${esc(r.t)}</h3><p>${esc(r.d)}</p></a>`).join('')
-      : `<p class="none">No tools match "${esc(q)}". Try a simpler word, like "budget", "loan" or "scam".</p>`;
-    count.textContent = list.length ? `${list.length} tool${list.length === 1 ? '' : 's'} found` : 'No tools found';
+      : `<p class="none">${es ? `Ninguna herramienta coincide con "${esc(q)}". Prueba una palabra más simple, como "deuda", "ahorro" o "estafa".` : `No tools match "${esc(q)}". Try a simpler word, like "budget", "loan" or "scam".`}</p>`;
+    count.textContent = es
+      ? (list.length ? `${list.length} herramienta${list.length === 1 ? '' : 's'} encontrada${list.length === 1 ? '' : 's'}` : 'No se encontraron herramientas')
+      : (list.length ? `${list.length} tool${list.length === 1 ? '' : 's'} found` : 'No tools found');
   }
 
   box?.addEventListener('focus', load, { once: true });

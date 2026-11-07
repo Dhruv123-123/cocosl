@@ -26,6 +26,18 @@ const checks = [
     if (!/couples/i.test(await page.textContent('#search-results'))) throw new Error('search did not find the couples tool');
     if (await page.locator('#budgeting').isVisible()) throw new Error('sections should hide while searching');
   }],
+  ['/es/', '#search-results a', async (page) => {
+    await page.fill('#q', 'préstamo');
+    await page.waitForSelector('#search-results a');
+    if (!/herramienta/.test(await page.textContent('#search-count'))) throw new Error('Spanish count text');
+  }],
+  ['/freelance-invoices/side-hustle.html', '#result .big-num', async (page) => {
+    await page.selectOption('#kind', 'etsy');
+    if (!(await page.locator('[name=listings]').isVisible())) throw new Error('Etsy listing fields hidden');
+    await page.selectOption('#kind', 'driver');
+    if (await page.locator('[name=orders]').isVisible()) throw new Error('seller fields shown for a driver');
+    if (!/an hour, after costs and taxes/.test(await page.textContent('#result'))) throw new Error('result');
+  }],
   ['/budget/couples.html', '#split h3', async (page) => {
     await page.fill('[name=name0]', 'Alex'); await page.fill('[name=income0]', '6000');
     await page.fill('[name=name1]', 'Sam'); await page.fill('[name=income1]', '4000');

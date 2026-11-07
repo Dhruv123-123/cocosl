@@ -35,23 +35,25 @@ export function keywordsFromPage(html) {
     .filter((w) => w.length > 2 && !seen.has(w) && seen.add(w)).join(' ');
 }
 
-function pageFile(href) {
+function pageFile(href, hubDir = '') {
   const clean = href.split(/[?#]/)[0];
-  const p = join(root, clean);
+  const p = join(root, hubDir, clean);
   if (existsSync(p) && statSync(p).isDirectory()) return join(p, 'index.html');
   return p;
 }
 
-export function buildIndex() {
-  const hub = readFileSync(join(root, 'index.html'), 'utf8');
+export function buildIndex(hubDir = '') {
+  const hub = readFileSync(join(root, hubDir, 'index.html'), 'utf8');
   return cardsFromHub(hub).map((c) => {
-    const f = pageFile(c.u);
+    const f = pageFile(c.u, hubDir);
     return { ...c, k: existsSync(f) ? keywordsFromPage(readFileSync(f, 'utf8')) : '' };
   });
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  const index = buildIndex();
-  writeFileSync(join(root, 'search-index.json'), `${JSON.stringify(index)}\n`);
-  console.log(`search-index.json: ${index.length} tools`);
+  for (const dir of ['', 'es']) {
+    const index = buildIndex(dir);
+    writeFileSync(join(root, dir, 'search-index.json'), `${JSON.stringify(index)}\n`);
+    console.log(`${dir ? `${dir}/` : ''}search-index.json: ${index.length} tools`);
+  }
 }
