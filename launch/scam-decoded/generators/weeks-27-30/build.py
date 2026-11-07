@@ -15,6 +15,8 @@ from common import CTA, CTA_TIKTOK, KIT, seg  # noqa: E402
 from shorts import SHORTS  # noqa: E402
 from carousels import CAROUSELS  # noqa: E402
 from long import LONG  # noqa: E402
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from long_originals import apply as add_original_elements  # noqa: E402
 
 ROOT = HERE.parent.parent
 VOICE = "Dhruv records the narration in his own voice. No AI voice on TikTok cuts."
@@ -137,6 +139,7 @@ def plan(items):
 if __name__ == "__main__":
     items = build()
     check(items)
+    add_original_elements(items)
     (ROOT / "weeks-27-30.json").write_text(json.dumps(items, indent=1, ensure_ascii=False) + "\n")
     (ROOT / "POSTING_PLAN_WEEKS_27-30.md").write_text(plan(items))
     for n, i in enumerate(items):

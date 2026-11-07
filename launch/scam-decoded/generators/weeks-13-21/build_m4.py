@@ -1,3 +1,5 @@
+from pathlib import Path
+import sys
 import json, sys
 from common import *
 from m4_shorts_a import M4_SHORTS_A
@@ -30,6 +32,8 @@ for c in CAROUSELS:
         "thumbnail_text": c["thumb"], "sources": c["sources"], "claims_to_verify": c["claims"]}})
 
 import re
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from long_originals import apply as add_original_elements  # noqa: E402
 def chapters(c, wpm=150):
     out, t = [], 0.0
     for sg in c["segs"]:
@@ -46,6 +50,7 @@ for c in M2_LONG:
         "caption": c["caption"], "hashtags": c["hashtags"], "description": c["description"],
         "thumbnail_text": c["thumb"], "sources": c["sources"], "claims_to_verify": c["claims"],
         "title_variants": c["title_variants"]}})
+add_original_elements(items)
 json.dump(items, open(sys.argv[1], "w"), indent=2, ensure_ascii=False)
 wc = lambda it: sum(len(x["narration"].split()) for x in it["script"]["segments"])
 for i, it in enumerate(items):

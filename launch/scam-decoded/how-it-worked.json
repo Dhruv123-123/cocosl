@@ -19,7 +19,22 @@
      "heading": "Cold open",
      "narration": "Imagine the phone rings at your grandmother's house. Grandma, it's me. I was in a car accident, and I've been arrested. Please don't tell Mom. A few minutes later a lawyer calls with the amount for bail. A few hours later someone knocks on the door to collect it in cash. According to federal prosecutors, a version of that call was made again and again, for about three years, from call centers in and around Montreal. In March 2025, twenty-five Canadian nationals were charged. Prosecutors say the scheme took more than twenty-one million dollars from older Americans in Vermont and more than forty other states. These are charges, not convictions, so everyone named is presumed innocent. But the method is laid out in the public record, and it's worth knowing in detail.",
      "on_screen_text": "Cold open",
-     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "The Montreal bail-call case",
+      "labels": [
+       "People charged",
+       "Other states hit"
+      ],
+      "values": [
+       25,
+       40
+      ],
+      "unit_prefix": "",
+      "unit_suffix": "",
+      "note": "DOJ, D. Vt., Mar 2025; 'more than 40' states shown as 40"
+     }
     },
     {
      "heading": "Step 1: the grandchild",
@@ -89,7 +104,8 @@
    "title_variants": [
     "Inside a grandparent scam network: fake grandkids, fake lawyers, real cash",
     "$21 million in 'bail money': how prosecutors say a grandparent scam ran"
-   ]
+   ],
+   "original_element": "A chart of the case's own figures on the 'Cold open' beat (DOJ, D. Vt., Mar 2025; 'more than 40' states shown as 40)."
   }
  },
  {
@@ -148,7 +164,22 @@
      "heading": "What happened next",
      "narration": "The settlement requires the companies to pay twenty-six million dollars for refunds and bars them from misrepresenting security or performance problems and from deceptive telemarketing. In March 2025, the FTC announced it was sending more than twenty-five and a half million dollars to people affected. On screen is the FTC's refund page for this case.",
      "on_screen_text": "What happened next",
-     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Restoro and Reimage: the money",
+      "labels": [
+       "Settlement",
+       "Refunded"
+      ],
+      "values": [
+       26,
+       25.5
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "M",
+      "note": "FTC, Mar 2024 settlement; refunds announced Mar 2025"
+     }
     },
     {
      "heading": "Three checks",
@@ -182,7 +213,8 @@
    "title_variants": [
     "The $26 million 'free scan': a tech support case, step by step",
     "Why the scan always found something: inside an FTC tech support case"
-   ]
+   ],
+   "original_element": "A chart of the case's own figures on the 'What happened next' beat (FTC, Mar 2024 settlement; refunds announced Mar 2025)."
   }
  },
  {
@@ -235,7 +267,24 @@
      "heading": "How it ended",
      "narration": "Lithuanian authorities arrested him in March 2017, and he was extradited to New York that August. Along with the prison sentence, he was ordered to forfeit about forty-nine point seven million dollars and pay about twenty-six point five million in restitution.",
      "on_screen_text": "How it ended",
-     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Fake invoices: taken vs ordered back",
+      "labels": [
+       "Taken, 2013-15",
+       "Forfeit",
+       "Restitution"
+      ],
+      "values": [
+       120,
+       49.7,
+       26.5
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "M",
+      "note": "SDNY; 'more than $120M' shown as 120"
+     }
     },
     {
      "heading": "Why it matters to you",
@@ -276,7 +325,8 @@
    "title_variants": [
     "$120 million by email: the business email compromise case, step by step",
     "Two of the biggest tech companies paid a fake supplier. Here's how."
-   ]
+   ],
+   "original_element": "A chart of the case's own figures on the 'How it ended' beat (SDNY; 'more than $120M' shown as 120)."
   }
  },
  {
@@ -329,7 +379,20 @@
      "heading": "How it ended",
      "narration": "The FTC's 2018 action halted the calls, and in August 2020 the agency mailed more than seven hundred thousand dollars in refunds, an average of about one hundred fifty-eight dollars per business. One detail from that refund notice is worth remembering: the FTC never requires payment or information to cash a refund check. If someone says otherwise, that's a second scam.",
      "on_screen_text": "How it ended",
-     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Pointbreak refund checks, Aug 2020",
+      "labels": [
+       "Businesses refunded"
+      ],
+      "values": [
+       4467
+      ],
+      "unit_prefix": "",
+      "unit_suffix": "",
+      "note": "FTC, Aug 2020: $700K+ in all, about $158 each"
+     }
     },
     {
      "heading": "The office version",
@@ -369,7 +432,8 @@
    "title_variants": [
     "'Press 1 to speak to a Google specialist': an FTC robocall case, step by step",
     "$300 to $700 for a free listing: how the Google robocall scheme worked"
-   ]
+   ],
+   "original_element": "A chart of the case's own figures on the 'How it ended' beat (FTC, Aug 2020: $700K+ in all, about $158 each)."
   }
  },
  {
@@ -422,7 +486,22 @@
      "heading": "How it ended",
      "narration": "The investigation was led by Homeland Security Investigations, the Department of Homeland Security's inspector general, and the Treasury Inspector General for Tax Administration. Sentences ranged from probation to two hundred forty months. Twenty-two defendants were held liable for nearly nine million dollars in restitution to identified victims. Thirty-two people and five call centers in India were also charged; they're presumed innocent unless proven guilty.",
      "on_screen_text": "How it ended",
-     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "India call-center case, by Jul 2018",
+      "labels": [
+       "Sentenced",
+       "Owe restitution"
+      ],
+      "values": [
+       24,
+       22
+      ],
+      "unit_prefix": "",
+      "unit_suffix": "",
+      "note": "DOJ, S.D. Tex.; restitution nearly $9M"
+     }
     },
     {
      "heading": "Why gift cards",
@@ -462,7 +541,8 @@
    "title_variants": [
     "'You owe the IRS, pay today or be arrested': the call centers behind it",
     "From a call center in India to a gift card in Texas: one IRS scam, step by step"
-   ]
+   ],
+   "original_element": "A chart of the case's own figures on the 'How it ended' beat (DOJ, S.D. Tex.; restitution nearly $9M)."
   }
  },
  {
@@ -521,7 +601,22 @@
      "heading": "The scale",
      "narration": "For scale: the release cites the FBI's figure of more than five point eight billion dollars in reported crypto investment fraud losses in the US in 2024 alone. The US Treasury also designated Prince Group a transnational criminal organization, and the UK announced its own sanctions.",
      "on_screen_text": "The scale",
-     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Crypto fraud: one seizure vs a year",
+      "labels": [
+       "Bitcoin seized",
+       "US losses, 2024"
+      ],
+      "values": [
+       15,
+       5.8
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "B",
+      "note": "Seizure value at the time, DOJ EDNY Oct 2025; US crypto investment fraud losses, FBI 2024"
+     }
     },
     {
      "heading": "Three checks",
@@ -555,7 +650,8 @@
    "title_variants": [
     "Where the 'wrong number' texts come from: the scam compound case",
     "127,271 bitcoin: the forced-labor scam compound case, explained"
-   ]
+   ],
+   "original_element": "A chart of the case's own figures on the 'The scale' beat (Seizure value at the time, DOJ EDNY Oct 2025; US crypto investment fraud losses, FBI 2024)."
   }
  },
  {
@@ -608,7 +704,24 @@
      "heading": "The refunds",
      "narration": "Then the part most people missed: victims could get money back. The Justice Department ran a compensation program for people who sent money to scammers through Western Union, and paid it out in rounds, including about one hundred fifty-three million dollars in March 2020 and one hundred forty-seven million in September 2020. Legitimate refund programs like this never charge you a fee to claim.",
      "on_screen_text": "The refunds",
-     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "Western Union: ordered vs repaid",
+      "labels": [
+       "FTC judgment",
+       "DOJ forfeiture",
+       "Repaid, Mar 2020"
+      ],
+      "values": [
+       586,
+       586,
+       153
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "M",
+      "note": "FTC and DOJ, Jan 2017; DOJ remission round Mar 2020"
+     }
     },
     {
      "heading": "The lesson",
@@ -648,7 +761,8 @@
    "title_variants": [
     "Why scammers loved one money transfer company, and how victims got refunds",
     "$586 million: the Western Union fraud case, step by step"
-   ]
+   ],
+   "original_element": "A chart of the case's own figures on the 'The refunds' beat (FTC and DOJ, Jan 2017; DOJ remission round Mar 2020)."
   }
  },
  {
@@ -701,7 +815,24 @@
      "heading": "How it's ending",
      "narration": "The two men were extradited to the US in August 2025. One was held responsible for about twelve and a half million dollars in losses, the other for about twenty-eight and a half million. Each faces up to twenty years, though the judge decides the actual sentence. Another member was previously sentenced to eighty-five months, and one remains at large.",
      "on_screen_text": "How it's ending",
-     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people."
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Face cam with the case board and source document; see original_element No text, no logos, no real people.",
+     "chart": {
+      "kind": "bars",
+      "title": "The romance ring's losses",
+      "labels": [
+       "Ring (alleged)",
+       "Chairman 1",
+       "Chairman 2"
+      ],
+      "values": [
+       100,
+       12.5,
+       28.5
+      ],
+      "unit_prefix": "$",
+      "unit_suffix": "M",
+      "note": "SDNY; 'more than $100M' shown as 100"
+     }
     },
     {
      "heading": "For families",
@@ -741,7 +872,8 @@
    "title_variants": [
     "Fake love, real millions: a romance scam ring, step by step",
     "Two 'chairmen' plead guilty: how a romance scam ring ran"
-   ]
+   ],
+   "original_element": "A chart of the case's own figures on the 'How it's ending' beat (SDNY; 'more than $100M' shown as 100)."
   }
  }
 ]

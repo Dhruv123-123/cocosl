@@ -1,8 +1,12 @@
+from pathlib import Path
+import sys
 import json, re, sys
 from common import *
 from shorts_b import SHORTS_A, SHORTS_B
 from carousels import CAROUSELS
 from long import LONG
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from long_originals import apply as add_original_elements  # noqa: E402
 
 
 def segs(rows): return [seg(*r) for r in rows]
@@ -47,6 +51,7 @@ for c in LONG:
         "caption": c["caption"], "hashtags": c["hashtags"], "description": c["description"],
         "thumbnail_text": c["thumb"], "sources": c["sources"], "claims_to_verify": c["claims"],
         "title_variants": c["title_variants"]}})
+add_original_elements(items)
 json.dump(items, open(sys.argv[1], "w"), indent=2, ensure_ascii=False)
 wc = lambda it: sum(len(x["narration"].split()) for x in it["script"]["segments"])
 for i, it in enumerate(items):

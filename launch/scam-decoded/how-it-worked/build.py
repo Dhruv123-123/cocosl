@@ -18,6 +18,8 @@ sys.path.insert(1, str(HERE.parent / "generators" / "weeks-22-26"))
 from common import CTA_TIKTOK, P_FAMILY, P_INVEST, P_SECURITY, P_TEXT, seg  # noqa: E402
 from series import OUTLINE, PARTS as PARTS_1_3  # noqa: E402
 from parts_4_8 import PARTS_4_8  # noqa: E402
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from long_originals import apply as add_original_elements  # noqa: E402
 
 PARTS = PARTS_1_3 + PARTS_4_8
 
@@ -108,6 +110,7 @@ def main():
         (OUT / f"{p['slug']}.html").write_text(board_html(p))
     for i in items:
         assert any(ch.isdigit() for ch in i["script"]["hook"].split(".")[0][:60]), i["script"]["hook"]
+    add_original_elements(items)
     (ROOT / "how-it-worked.json").write_text(json.dumps(items, indent=1, ensure_ascii=False) + "\n")
     (ROOT / "HOW_IT_WORKED_SERIES.md").write_text(series_md(items))
     if "--png" in sys.argv:

@@ -486,3 +486,30 @@ def test_newsletter_cut_pack():
         text = G.script_text(item["script"])
         for pats in (G.HYPE_PATTERNS, G.TESTIMONIAL_PATTERNS, G.ENGAGEMENT_BAIT):
             assert G.check_patterns(text, pats, "x", "warn", "x").level == "ok", sc.title
+
+
+def test_every_long_video_has_an_original_element():
+    """YouTube's inauthentic-content rule: each long video needs a chart of its own numbers or Dhruv's footage."""
+    import glob
+    import sys
+    from contentfactory.guardrails import check_original_element
+    from contentfactory.schemas import Script
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "launch" / "scam-decoded"))
+    import long_originals
+    longs = []
+    for f in sorted(glob.glob(str(Path(__file__).resolve().parents[1] / "launch" / "scam-decoded" / "*.json"))):
+        data = json.loads(Path(f).read_text())
+        if isinstance(data, list):
+            longs += [i for i in data if isinstance(i, dict) and i.get("format") == "long"]
+    assert len(longs) >= 39
+    paths = []
+    for it in longs:
+        assert check_original_element(it).level == "ok", it["script"]["title"]
+        Script(**it["script"])
+        assert it["script"]["original_element"]
+        paths += [s["footage"] for s in it["script"]["segments"] if s.get("footage")]
+        if it["script"]["title"].startswith("How the scam actually worked"):
+            assert any(s.get("chart") for s in it["script"]["segments"])
+    assert len(paths) == len(set(paths)) and all(p.startswith("footage/scam-decoded/") for p in paths)
+    shots = (Path(long_originals.__file__).parent / "LONG_VIDEO_RECORDINGS.md").read_text()
+    assert all(p in shots for p in paths)

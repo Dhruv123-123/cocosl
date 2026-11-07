@@ -2566,7 +2566,8 @@
           "heading": "1. Fake stores",
           "narration": "Number one, fake online stores. They show up in social media ads with huge discounts: closing-down sales, seventy percent off everything, or a near-perfect copy of a brand you know. You pay, and either nothing arrives or a cheap knockoff does. The tell is a store you've never heard of, found through an ad, with prices far below everyone else. The fix: search the store name plus the word scam, look for a real address and phone number, and always pay with a credit card. Under federal law you can dispute a charge for something that never arrived. Payment apps and bank transfers rarely give you that.",
           "on_screen_text": "1. Fake online stores",
-          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a shop front with a crooked discount banner No text, no logos, no real people."
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a shop front with a crooked discount banner No text, no logos, no real people.",
+          "footage": "footage/scam-decoded/9-holiday-scams-that-peak-before-new-year-and-ho-beat2.mp4"
         },
         {
           "heading": "2. Delivery texts",
@@ -2651,7 +2652,8 @@
       "title_variants": [
         "Holiday scams 2026: the complete guide",
         "The 9 scams of the holiday season, decoded"
-      ]
+      ],
+      "original_element": "Screen-record checking an unfamiliar store: search its name plus 'scam' and 'reviews', then open its contact and returns pages. Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/9-holiday-scams-that-peak-before-new-year-and-ho-beat2.mp4."
     }
   },
   {
@@ -2693,7 +2695,8 @@
           "heading": "Phone settings",
           "narration": "Step three, the phone. While you're there, turn on the phone's built-in spam call filtering, and silence unknown callers if your parent is comfortable with that. Set an account PIN with their carrier and turn on number lock or port-out protection if offered. Update the phone's software. And look for remote access apps they didn't install on purpose; if a 'technician' put one there, remove it and change passwords. Fifteen minutes here removes a lot of scam calls before they ever ring.",
           "on_screen_text": "3. Phone settings: 15 minutes",
-          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone with a shield and toggles No text, no logos, no real people."
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone with a shield and toggles No text, no logos, no real people.",
+          "footage": "footage/scam-decoded/how-to-protect-your-parents-from-scams-the-compl-beat5.mp4"
         },
         {
           "heading": "Credit freezes",
@@ -2746,7 +2749,8 @@
       "title_variants": [
         "Protect your parents from scams in one visit",
         "The scam-proofing plan for aging parents"
-      ]
+      ],
+      "original_element": "Screen-record your own phone: silence unknown callers, the carrier spam filter, and adding a contact as a favorite. Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/how-to-protect-your-parents-from-scams-the-compl-beat5.mp4."
     }
   },
   {
@@ -2788,7 +2792,8 @@
           "heading": "3. Report",
           "narration": "Step three, report it at IdentityTheft dot gov. It's the FTC's official site. You answer questions about what happened, and it creates an FTC Identity Theft Report plus a personalised recovery plan with pre-filled letters. That report matters: it's what you'll show businesses and the credit bureaus to get fraudulent accounts and debts removed. Some creditors may also ask for a police report; your local police can take one, bring your FTC report with you.",
           "on_screen_text": "Step 3: IdentityTheft.gov",
-          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a simple government form with a check mark No text, no logos, no real people."
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a simple government form with a check mark No text, no logos, no real people.",
+          "footage": "footage/scam-decoded/identity-theft-recovery-step-by-step-what-to-do-beat5.mp4"
         },
         {
           "heading": "4. Repair",
@@ -2841,7 +2846,8 @@
       "title_variants": [
         "Someone opened a card in my name. Now what?",
         "Identity theft: the first 7 days"
-      ]
+      ],
+      "original_element": "Screen-record IdentityTheft.gov (typed in): start a report, pick a category, stop before personal details. Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/identity-theft-recovery-step-by-step-what-to-do-beat5.mp4."
     }
   },
   {
@@ -2865,7 +2871,8 @@
           "heading": "Freeze",
           "narration": "The credit freeze. It stops lenders from pulling your credit report, so most new credit accounts can't be opened in your name. It's free at Equifax, Experian and TransUnion by federal law, it doesn't affect your score, and existing accounts keep working. When you apply for credit, you lift it, online, and the bureaus must do that quickly. The downside is a little hassle when you apply for credit. For prevention, this is the strongest free tool there is.",
           "on_screen_text": "Freeze: free, strongest prevention",
-          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a vault door with a padlock No text, no logos, no real people."
+          "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a vault door with a padlock No text, no logos, no real people.",
+          "footage": "footage/scam-decoded/credit-freeze-vs-fraud-alert-vs-monitoring-what-beat2.mp4"
         },
         {
           "heading": "Fraud alert",
@@ -2936,7 +2943,8 @@
       "title_variants": [
         "Do you need to pay for identity theft protection?",
         "Freeze, lock, alert or monitor? The honest answer"
-      ]
+      ],
+      "original_element": "Screen-record typing one credit bureau's freeze page address and finding the freeze button. Stop at sign-in. Record at 1080p or better, no personal data on screen (blur account numbers, codes and names), 10-30 s. Save it as footage/scam-decoded/credit-freeze-vs-fraud-alert-vs-monitoring-what-beat2.mp4."
     }
   }
 ]
