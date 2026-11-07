@@ -43,6 +43,7 @@ that's completely fine for the first weeks, and TikTok requires it until its API
 ## Where things are
 
 - `launch/LAUNCH_DAY.md` — the day-one plan (payments, product listing, first pitches, first posts).
+- `launch/VERIFY_BEFORE_POSTING.md` — the facts only you can confirm on the day.
 - `launch/product*/` — sellable products with listing copy.
 - `launch/ugc-service/` — the ad studio's website, prices, pitches and contract.
 - `docs/CREDENTIALS.md` — every account and key, in order of how fast it makes money.
