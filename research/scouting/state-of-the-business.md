@@ -13,7 +13,7 @@ this page is the short version and adds the open decisions from the scouting res
 | **Products** | Six Money Made Simple products ($5-39), plus product ladders for Scam Decoded and 1099 Money, Etsy listings and printables | PRs #6, #9, #10 |
 | **Ad studio** (fastest money) | A portfolio, a $49/$99 listing-video order page, and written leads and pitches | PR #12, `docs/GO_LIVE.md` stage 2 |
 | **Money plan** | Financial model, affiliate application kit, and 20 affiliate articles | PRs #3, #5 |
-| **Research** | 26 research files: platform rules, email tool, launch playbook, API access, sponsors, competitors, open-source tools, Instagram growth, YouTube SEO, Actual Budget tutorials, forkable apps, product ideas | PR #2 |
+| **Research** | 28 research files: platform rules, email tool, launch playbook, API access, sponsors, competitors, open-source tools, Instagram growth, YouTube SEO, Actual Budget tutorials, forkable apps, product ideas, a receipt tracker plan, Nov 2026 formats | PR #2 |
 
 **12 pull requests are open and none are merged yet.** `docs/GO_LIVE.md` lists a merge order. PR #2 is now
 up to date with `main` and passes its tests.
