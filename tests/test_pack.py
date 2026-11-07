@@ -2,19 +2,23 @@ import json
 from datetime import date
 from pathlib import Path
 
-from contentfactory.pack import caption_txt, plan, revenue_tags
+import pytest
+
+from contentfactory.pack import caption_txt, est_seconds, plan, revenue_tags, tiktok_segments
 
 ROOT = Path(__file__).resolve().parents[1]
-MONTH = ROOT / "launch" / "money-made-simple" / "month-1" / "content.json"
+MONTHS = sorted((ROOT / "launch" / "money-made-simple").glob("month-*/content.json"))
+MONTH = MONTHS[0]
 
 
-def _items():
-    return json.loads(MONTH.read_text())
+def _items(path=MONTH):
+    return json.loads(path.read_text())
 
 
-def test_month_content_is_valid(factory):
+@pytest.mark.parametrize("path", MONTHS, ids=lambda p: p.parent.name)
+def test_month_content_is_valid(factory, path):
     from contentfactory.schemas import Script
-    items = _items()
+    items = _items(path)
     titles = [i["script"]["title"] for i in items]
     assert len(titles) == len(set(titles))
     brand = factory.brand("money-made-simple")
@@ -69,3 +73,25 @@ def test_export_writes_pack(factory, tmp_path):
     vid = next((out / "videos-need-voice").iterdir())
     assert (vid / "thumbnail.jpg").exists() or (vid / "thumbnail.png").exists()
     assert "NARRATION SCRIPT" in (vid / "caption.txt").read_text()
+
+
+def test_month2_tiktok_cuts_and_series(factory):
+    items = _items(ROOT / "launch" / "money-made-simple" / "month-2" / "content.json")
+    shorts = [i for i in items if i["format"] == "short"]
+    assert shorts and all(i.get("tiktok_extra") for i in shorts)
+    for it in shorts:
+        base = [s["narration"] for s in it["script"]["segments"]]
+        cut = [s["narration"] for s in tiktok_segments(it)]
+        assert est_seconds(base) <= 50          # Reels/Shorts cut stays short
+        assert 55 <= est_seconds(cut) <= 90     # TikTok cut lands in the 60-90s band once pauses are added
+        assert cut[-1] == base[-1]
+        assert any(ch.isdigit() for ch in it["script"]["hook"])  # number-first hooks
+    rmb = [i for i in items if i.get("series") == "Rate My Budget"]
+    assert len(rmb) >= 4
+    assert all("Fictional example" in i["script"]["caption"] for i in rmb)
+    brand = factory.brand("money-made-simple")
+    slots, leftover = plan(brand, items, date(2026, 12, 21), 31,
+                           {"carousel": "mon,tue,wed,thu,fri"})
+    assert not leftover
+    txt = caption_txt(brand, rmb[0], None)
+    assert "TikTok cut" in txt and "Reels / Shorts cut" in txt
