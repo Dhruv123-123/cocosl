@@ -53,175 +53,288 @@
       "site": "https://www.sofi.com/",
       "affiliate_url": "",
       "network": "Impact / direct",
-      "note": "$100-$150 per lead (confirm qualifying action)"
+      "note": "$100-$150 per lead (confirm qualifying action)",
+      "category": "Savings and banking",
+      "blurb": "Online checking and savings in one app; also investing and loans.",
+      "compare": "best-high-yield-savings-accounts"
     },
     "cit": {
       "name": "CIT Bank",
       "site": "https://www.cit.com/",
       "affiliate_url": "",
       "network": "CJ",
-      "note": "~$100 per order"
+      "note": "~$100 per order",
+      "category": "Savings and banking",
+      "blurb": "Online savings accounts from a division of First Citizens Bank.",
+      "compare": "best-high-yield-savings-accounts"
     },
     "ally": {
       "name": "Ally Bank",
       "site": "https://www.ally.com/",
       "affiliate_url": "",
       "network": "",
-      "note": ""
+      "note": "",
+      "category": "Savings and banking",
+      "blurb": "Online bank with savings buckets for sinking funds.",
+      "compare": "best-high-yield-savings-accounts"
     },
     "marcus": {
       "name": "Marcus by Goldman Sachs",
       "site": "https://www.marcus.com/",
       "affiliate_url": "",
       "network": "",
-      "note": ""
+      "note": "",
+      "category": "Savings and banking",
+      "blurb": "Simple online savings from Goldman Sachs Bank USA.",
+      "compare": "best-high-yield-savings-accounts"
     },
     "capital_one": {
       "name": "Capital One",
       "site": "https://www.capitalone.com/",
       "affiliate_url": "",
       "network": "",
-      "note": ""
+      "note": "",
+      "category": "Savings and banking",
+      "blurb": "Bank with online savings, some branches and cafés, and secured cards.",
+      "compare": "best-high-yield-savings-accounts"
     },
     "rocket_money": {
       "name": "Rocket Money",
       "site": "https://www.rocketmoney.com/",
       "affiliate_url": "",
       "network": "Impact",
-      "note": "$4-$10 per action"
+      "note": "$4-$10 per action",
+      "category": "Budgeting apps",
+      "blurb": "Subscription finder, spending tracker and paid bill negotiation.",
+      "compare": "rocket-money-vs-ynab-vs-monarch"
     },
     "ynab": {
       "name": "YNAB",
       "site": "https://www.ynab.com/",
       "affiliate_url": "",
       "network": "Direct (invite-only)",
-      "note": ""
+      "note": "",
+      "category": "Budgeting apps",
+      "blurb": "Zero-based budgeting method with an app.",
+      "compare": "rocket-money-vs-ynab-vs-monarch"
     },
     "monarch": {
       "name": "Monarch Money",
       "site": "https://www.monarchmoney.com/",
       "affiliate_url": "",
       "network": "Impact",
-      "note": "not published"
+      "note": "not published",
+      "category": "Budgeting apps",
+      "blurb": "Household money dashboard: budgets, net worth, sharing.",
+      "compare": "rocket-money-vs-ynab-vs-monarch"
     },
     "copilot": {
       "name": "Copilot Money",
       "site": "https://www.copilot.money/",
       "affiliate_url": "",
       "network": "",
-      "note": ""
+      "note": "",
+      "category": "Budgeting apps",
+      "blurb": "Polished budgeting app, Apple-first.",
+      "compare": "best-budgeting-apps"
     },
     "everydollar": {
       "name": "EveryDollar",
       "site": "https://www.everydollar.com/",
       "affiliate_url": "",
       "network": "",
-      "note": ""
+      "note": "",
+      "category": "Budgeting apps",
+      "blurb": "Zero-based budgeting, free manual version.",
+      "compare": "best-budgeting-apps"
     },
     "goodbudget": {
       "name": "Goodbudget",
       "site": "https://goodbudget.com/",
       "affiliate_url": "",
       "network": "",
-      "note": ""
+      "note": "",
+      "category": "Budgeting apps",
+      "blurb": "Digital envelope budgeting, free tier, no bank linking.",
+      "compare": "best-budgeting-apps"
     },
     "discover": {
       "name": "Discover",
       "site": "https://www.discover.com/",
       "affiliate_url": "",
       "network": "",
-      "note": ""
+      "note": "",
+      "category": "Building credit",
+      "blurb": "Secured credit card with upgrade reviews.",
+      "compare": "best-credit-builder-cards"
     },
     "chime": {
       "name": "Chime",
       "site": "https://www.chime.com/",
       "affiliate_url": "",
       "network": "",
-      "note": ""
+      "note": "",
+      "category": "Building credit",
+      "blurb": "Credit-builder card tied to a Chime account.",
+      "compare": "best-credit-builder-cards"
     },
     "self": {
       "name": "Self",
       "site": "https://www.self.inc/",
       "affiliate_url": "",
       "network": "",
-      "note": ""
+      "note": "",
+      "category": "Building credit",
+      "blurb": "Credit-builder loan with a secured card option.",
+      "compare": "best-credit-builder-cards"
     },
     "betterment": {
       "name": "Betterment",
       "site": "https://www.betterment.com/",
       "affiliate_url": "",
       "network": "Impact",
-      "note": "$25-$1,250 tiered; SEC Marketing Rule applies"
+      "note": "$25-$1,250 tiered; SEC Marketing Rule applies",
+      "category": "Investing",
+      "blurb": "Robo-advisor with goal planning and tax-loss harvesting.",
+      "compare": "best-robo-advisors"
     },
     "wealthfront": {
       "name": "Wealthfront",
       "site": "https://www.wealthfront.com/",
       "affiliate_url": "",
       "network": "",
-      "note": ""
+      "note": "",
+      "category": "Investing",
+      "blurb": "Robo-advisor with planning tools.",
+      "compare": "best-robo-advisors"
     },
     "empower": {
       "name": "Empower",
       "site": "https://www.empower.com/",
       "affiliate_url": "",
       "network": "Impact",
-      "note": "~$115 per lead"
+      "note": "~$115 per lead",
+      "category": "Investing",
+      "blurb": "Free net worth and retirement tracking tools; paid advisory service.",
+      "compare": ""
     },
     "acorns": {
       "name": "Acorns",
       "site": "https://www.acorns.com/",
       "affiliate_url": "",
       "network": "Impact",
-      "note": "~$10 per lead"
+      "note": "~$10 per lead",
+      "category": "Investing",
+      "blurb": "Round-up investing with a flat monthly fee.",
+      "compare": "best-robo-advisors"
     },
     "schwab": {
       "name": "Charles Schwab",
       "site": "https://www.schwab.com/",
       "affiliate_url": "",
       "network": "",
-      "note": ""
+      "note": "",
+      "category": "Investing",
+      "blurb": "Brokerage; robo portfolios with no advisory fee advertised.",
+      "compare": "best-robo-advisors"
     },
     "vanguard": {
       "name": "Vanguard",
       "site": "https://investor.vanguard.com/",
       "affiliate_url": "",
       "network": "",
-      "note": ""
+      "note": "",
+      "category": "Investing",
+      "blurb": "Brokerage known for index funds; low-fee digital advisor.",
+      "compare": "best-robo-advisors"
     },
     "aura": {
       "name": "Aura",
       "site": "https://www.aura.com/",
       "affiliate_url": "",
       "network": "Impact",
-      "note": "$65 per enrollment"
+      "note": "$65 per enrollment",
+      "category": "Fraud and identity",
+      "blurb": "Identity theft protection bundles with insurance and security tools.",
+      "compare": "best-identity-theft-protection"
     },
     "lifelock": {
       "name": "LifeLock",
       "site": "https://www.lifelock.com/",
       "affiliate_url": "",
       "network": "",
-      "note": ""
+      "note": "",
+      "category": "Fraud and identity",
+      "blurb": "Identity theft protection tiers from Gen Digital (Norton).",
+      "compare": "best-identity-theft-protection"
     },
     "identity_guard": {
       "name": "Identity Guard",
       "site": "https://www.identityguard.com/",
       "affiliate_url": "",
       "network": "",
-      "note": ""
+      "note": "",
+      "category": "Fraud and identity",
+      "blurb": "Identity theft protection, part of Aura.",
+      "compare": "best-identity-theft-protection"
     },
     "experian": {
       "name": "Experian",
       "site": "https://www.experian.com/",
       "affiliate_url": "",
       "network": "",
-      "note": ""
+      "note": "",
+      "category": "Fraud and identity",
+      "blurb": "Credit bureau with free and paid credit monitoring.",
+      "compare": "best-identity-theft-protection"
     },
     "nfcc": {
       "name": "NFCC",
       "site": "https://www.nfcc.org/",
       "affiliate_url": "",
       "network": "",
-      "note": ""
+      "note": "",
+      "category": "Debt help",
+      "blurb": "Network of nonprofit credit counselling agencies.",
+      "compare": "best-balance-transfer-cards"
     }
-  }
+  },
+  "free_tools": [
+    {
+      "name": "AnnualCreditReport.com",
+      "url": "https://www.annualcreditreport.com/",
+      "blurb": "The official site for free weekly credit reports from all three bureaus.",
+      "category": "Fraud and identity"
+    },
+    {
+      "name": "IdentityTheft.gov",
+      "url": "https://www.identitytheft.gov/",
+      "blurb": "The FTC's free recovery plan if your identity is stolen.",
+      "category": "Fraud and identity"
+    },
+    {
+      "name": "FDIC BankFind",
+      "url": "https://banks.data.fdic.gov/bankfind-suite/bankfind",
+      "blurb": "Check that a bank (or your app's partner bank) is FDIC-insured.",
+      "category": "Savings and banking"
+    },
+    {
+      "name": "Investor.gov calculators",
+      "url": "https://www.investor.gov/financial-tools-calculators",
+      "blurb": "The SEC's free compound interest and fund fee calculators.",
+      "category": "Investing"
+    },
+    {
+      "name": "IRS retirement plan pages",
+      "url": "https://www.irs.gov/retirement-plans",
+      "blurb": "Current IRA and 401(k) limits and rules.",
+      "category": "Investing"
+    },
+    {
+      "name": "Google Sheets",
+      "url": "https://sheets.google.com/",
+      "blurb": "Free spreadsheets; opens our templates.",
+      "category": "Budgeting apps"
+    }
+  ]
 }

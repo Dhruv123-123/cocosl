@@ -137,6 +137,23 @@ Links are written as `[text](aff:sofi)`. The key points to `site.json` > `progra
 - `compliance_review: required` (robo-advisors): the build prints a reminder when a broker/adviser link
   is paid, because FINRA/SEC rules mean the firm may need to approve the page first.
 
+## Start here, resources and the quiz
+
+- `/start/` (`content/pages/start.md`): hub page with five "sounds like me" paths into articles, comparisons and the reset.
+- `/resources/`: built from `site.json` > `programs` (with `category`, `blurb`, `compare`) plus `free_tools`. Each
+  tool shows "affiliate" or "no affiliation" from its affiliate slot, so the page stays truthful as you join programs.
+- `/quiz/` (`content/quiz.json` + `static/quiz.js`): "What's your money personality?", 6 questions, 4 results
+  (Avoider, Spender, Juggler, Cautious Saver), each with three linked moves and the 7-Day Money Reset signup.
+  Signups are tagged `quiz-<result>` so you can segment emails; Plausible gets a `Quiz Complete` event.
+  Linked from the home hero, the link-in-bio page and the footer.
+
+## Social sharing and Pinterest
+
+Every page has Open Graph and Twitter tags (title, description, image with size and alt text).
+Articles and comparisons add `article:published_time`, `article:modified_time`, `article:author` and
+`article:section`; products add `product:price:amount`/`currency` and availability. That's what Pinterest
+reads for article and product rich pins: claim the domain in Pinterest, then rich pins apply automatically.
+
 ## Everyday edits
 
 - **New article:** copy any file in `content/blog/`, change the front matter (`title`, `description`, `date`,

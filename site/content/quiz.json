@@ -1,0 +1,32 @@
+{
+  "title": "What's your money personality?",
+  "intro": "Six quick questions, about a minute. You'll get your money personality and the three moves that will help you most right now.",
+  "questions": [
+    {"q": "When you open your banking app, you usually...",
+     "a": {"avoider": "Don't, unless I really have to", "spender": "Check the balance before I buy something", "juggler": "Check which bill or card payment is due next", "saver": "Look at my savings and wonder if it should be doing more"}},
+    {"q": "Payday arrives. What happens to the money?",
+     "a": {"avoider": "Honestly, I'm not sure where it goes", "spender": "A little treat first, then I figure out the rest", "juggler": "Bills and card payments, in whatever order is most urgent", "saver": "Some goes to savings before I spend anything"}},
+    {"q": "A surprise $400 car repair lands. You...",
+     "a": {"avoider": "Put it on a card and try not to think about it", "spender": "Card it, and cut back... probably", "juggler": "Add it to the pile I'm already paying down", "saver": "Pay it from savings. Annoying, but fine"}},
+    {"q": "Which feeling sounds most like you?",
+     "a": {"avoider": "Low-level dread; I'd rather not look", "spender": "Money just... disappears, and I'm not sure where", "juggler": "Stress about debts and due dates", "saver": "I save, but I'm not sure I'm doing enough"}},
+    {"q": "How many subscriptions are you paying for?",
+     "a": {"avoider": "No idea, and that's a little scary", "spender": "Quite a few, and I use most of them", "juggler": "I've cut some to free up money for payments", "saver": "I know exactly, down to the dollar"}},
+    {"q": "Pick one win for the next six months:",
+     "a": {"avoider": "Finally know where I stand", "spender": "Stop running out of money before payday", "juggler": "Pay off a credit card for good", "saver": "Start investing without feeling clueless"}}
+  ],
+  "results": {
+    "avoider": {"name": "The Avoider", "emoji": "🙈",
+      "summary": "You're not bad with money; you're busy, and looking at it feels bad, so you don't. That's the most common money personality there is, and the easiest to fix, because the first step is just looking.",
+      "moves": [["Do Day 1 of the free reset: find your real take-home pay and fixed bills (15 minutes).", "/free/"], ["Hunt down forgotten subscriptions in 10 minutes.", "/blog/find-and-cancel-subscriptions/"], ["Set three bank alerts so your accounts warn you before problems happen.", "/free/"]]},
+    "spender": {"name": "The Spender", "emoji": "🛍️",
+      "summary": "You enjoy your money, which is good. The problem isn't spending; it's that you can't see the limit until it's gone. One weekly spending number fixes that without tracking every coffee.",
+      "moves": [["Set one weekly spending number instead of a dozen categories.", "/blog/how-to-make-a-budget-you-will-keep/"], ["Turn 'surprise' costs into sinking funds so they stop wrecking the month.", "/blog/sinking-funds-explained/"], ["Audit subscriptions and keep only the ones you'd sign up for again today.", "/blog/find-and-cancel-subscriptions/"]]},
+    "juggler": {"name": "The Juggler", "emoji": "🤹",
+      "summary": "You're on top of due dates, but debt is doing the steering. You don't need more willpower; you need a payoff order and an end date you can see.",
+      "moves": [["Pick avalanche or snowball with the real maths, and point every extra dollar at one debt.", "/blog/debt-avalanche-vs-snowball/"], ["Check whether a balance transfer would actually save you money.", "/compare/best-balance-transfer-cards/"], ["Build a $1,000 starter emergency fund so new surprises stop going on cards.", "/blog/how-to-build-an-emergency-fund/"]]},
+    "saver": {"name": "The Cautious Saver", "emoji": "🐢",
+      "summary": "You've got the hardest habit down: you save. Now your money could be doing more. The next step is making sure savings earn a real rate and that long-term money is invested, simply and cheaply.",
+      "moves": [["Claim your full 401(k) match if your job offers one.", "/blog/401k-match-explained/"], ["Start investing with $100 a month, step by step.", "/blog/how-to-start-investing-with-100-a-month/"], ["Make sure your savings sit in an insured, high-yield account.", "/compare/best-high-yield-savings-accounts/"]]}
+  }
+}

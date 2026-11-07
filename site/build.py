@@ -349,14 +349,31 @@ def plausible_tag() -> str:
             '<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>')
 
 
+def img_dims(image: str) -> str:
+    """og:image:width/height for local PNGs (read from the PNG header, no Pillow needed)."""
+    f = STATIC / image.lstrip("/")
+    if image.startswith("http") or f.suffix != ".png" or not f.is_file():
+        return ""
+    head = f.read_bytes()[16:24]
+    w, h = int.from_bytes(head[:4], "big"), int.from_bytes(head[4:], "big")
+    return f'<meta property="og:image:width" content="{w}">\n<meta property="og:image:height" content="{h}">\n'
+
+
+def article_og(item: dict, section: str) -> dict:
+    return {"article:published_time": item["date"], "article:modified_time": item.get("updated", item["date"]),
+            "article:author": CFG["name"], "article:section": section}
+
+
 def layout(*, title: str, description: str, path: str, body: str, og_type: str = "website",
            jsonld: list | None = None, image: str = "/img/og-default.png", noindex: bool = False,
-           extra_head: str = "") -> str:
+           extra_head: str = "", og: dict | None = None) -> str:
+    """og: extra Open Graph properties, e.g. article:published_time (article pins) or
+    product:price:amount (product pins). Pinterest rich pins read these same tags."""
     full_title = title if CFG["name"] in title else f"{title} · {CFG['name']}"
     nav = "".join(
         f'<a href="{u(href)}"{" aria-current=page" if path.startswith(href) and href != "/" else ""}>{esc(t)}</a>'
-        for t, href in [("Articles", "/blog/"), ("Compare", "/compare/"), ("Products", "/products/"), ("Free reset", "/free/"),
-                        ("About", "/about/")])
+        for t, href in [("Start here", "/start/"), ("Articles", "/blog/"), ("Compare", "/compare/"),
+                        ("Products", "/products/"), ("Free reset", "/free/")])
     ld = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>'
                  for x in (jsonld or []))
     soc = " · ".join(f'<a href="{esc(h)}" rel="me noopener">{esc(n)}</a>' for n, h in CFG["socials"].items())
@@ -376,7 +393,13 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:url" content="{esc(absu(path))}">
 <meta property="og:image" content="{esc(absu(image))}">
+{img_dims(image)}<meta property="og:image:alt" content="{esc(title)}">
+<meta property="og:locale" content="en_US">
+{"".join(f'<meta property="{esc(k)}" content="{esc(str(v))}">' + chr(10) for k, v in (og or {}).items() if v not in (None, ""))}<meta name="pinterest-rich-pin" content="true">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{esc(title)}">
+<meta name="twitter:description" content="{esc(description)}">
+<meta name="twitter:image" content="{esc(absu(image))}">
 <meta name="theme-color" content="#0b1d13">
 <link rel="icon" type="image/png" href="{u('/img/favicon.png')}">
 <link rel="apple-touch-icon" href="{u('/img/apple-touch-icon.png')}">
@@ -399,7 +422,7 @@ def layout(*, title: str, description: str, path: str, body: str, og_type: str =
   <div class="wrap">
     <p class="foot-brand"><strong>{esc(CFG['name'])}</strong> · {esc(CFG['tagline'])}</p>
     <p>{soc}</p>
-    <p><a href="{u('/privacy/')}">Privacy</a> · <a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/terms/')}">Terms</a> · <a href="{u('/links/')}">Links</a> · <a href="{u('/feed.xml')}">RSS</a></p>
+    <p><a href="{u('/about/')}">About</a> · <a href="{u('/resources/')}">Resources</a> · <a href="{u('/quiz/')}">Money quiz</a> · <a href="{u('/privacy/')}">Privacy</a> · <a href="{u('/disclosures/')}">Disclosures</a> · <a href="{u('/terms/')}">Terms</a> · <a href="{u('/links/')}">Links</a> · <a href="{u('/feed.xml')}">RSS</a></p>
     <p class="small">{esc(CFG['disclaimer'])}</p>
     <p class="small">{esc(CFG['ai_disclosure'])}</p>
     <p class="small">&copy; {date.today().year} {esc(CFG['name'])}</p>
@@ -499,7 +522,8 @@ def build() -> list[str]:
   <section class="next"><h2>Read next</h2><ul class="related">{rel_html}</ul></section>
 </article>"""
         write(path, layout(title=p.get("seo_title", p["title"]), description=p["description"], path=path,
-                           body=body, og_type="article", jsonld=ld, image=p.get("image", "/img/og-default.png")))
+                           body=body, og_type="article", jsonld=ld, image=p.get("image", "/img/og-default.png"),
+                           og=article_og(p, pillars.get(p.get("pillar", ""), "Guide"))))
         urls.append((path, p.get("updated", p["date"])))
 
     # ---- comparison pages (affiliate)
@@ -555,7 +579,7 @@ def build() -> list[str]:
   {magnet_box(f"compare-{c['slug']}-end")}
 </article>"""
         write(path, layout(title=c.get("seo_title", c["title"]), description=c["description"], path=path,
-                           body=body, og_type="article", jsonld=ld))
+                           body=body, og_type="article", jsonld=ld, og=article_og(c, "Comparisons")))
         urls.append((path, c.get("updated", c["date"])))
     if comps:
         cards = "".join(f"""<li class="post"><p class="post-pillar">Comparison · checked {esc(c['as_of'])}</p>
@@ -644,7 +668,12 @@ def build() -> list[str]:
   <p class="disclaimer">{esc(CFG['disclaimer'])}</p>
 </article>"""
         write(path, layout(title=p.get("seo_title", p["title"]), description=p["short"], path=path, body=body,
-                           og_type="product", jsonld=ld, image=p["image"]))
+                           og_type="product", jsonld=ld, image=p["image"],
+                           og={} if p.get("status") == "coming-soon" else {
+                               "product:price:amount": p.get("sale_price") or p["price"],
+                               "product:price:currency": "USD", "og:price:amount": p.get("sale_price") or p["price"],
+                               "og:price:currency": "USD", "product:availability": "in stock",
+                               "og:availability": "instock", "product:brand": CFG["name"]}))
         urls.append((path, p.get("updated", date.today().isoformat())))
     write("/products/", layout(
         title="Guides and templates", path="/products/",
@@ -664,6 +693,80 @@ def build() -> list[str]:
         write(path, layout(title=pg["title"], description=pg.get("description", pg["title"]), path=path,
                            body=f'<article class="wrap article"><h1>{esc(pg["title"])}</h1><div class="prose">{body_html}</div></article>'))
         urls.append((path, pg.get("updated", date.today().isoformat())))
+
+    # ---- resources: every tool, with its affiliate slot status
+    cats: dict[str, list[str]] = {}
+    for key, pr in CFG["programs"].items():
+        paid = bool(pr.get("affiliate_url"))
+        href = pr["affiliate_url"] if paid else pr["site"]
+        rel = 'rel="sponsored noopener" class="plausible-event-name=Affiliate+Click"' if paid else 'rel="noopener nofollow"'
+        tag = '<span class="tag aff">affiliate</span>' if paid else '<span class="tag">no affiliation</span>'
+        cmp = (f' · <a href="{u(f"/compare/{pr["compare"]}/")}">compared here</a>' if pr.get("compare") else "")
+        cats.setdefault(pr.get("category", "Other"), []).append(
+            f'<li><a href="{esc(href)}" {rel} data-program="{esc(key)}"><strong>{esc(pr["name"])}</strong></a> {tag}'
+            f'<br><span>{esc(pr.get("blurb", ""))}{cmp}</span></li>')
+    for t in CFG.get("free_tools", []):
+        cats.setdefault(t["category"], []).append(
+            f'<li><a href="{esc(t["url"])}" rel="noopener"><strong>{esc(t["name"])}</strong></a> <span class="tag free">free</span>'
+            f'<br><span>{esc(t["blurb"])}</span></li>')
+    res_html = "".join(f'<h2 id="{slug_id(k)}">{esc(k)}</h2><ul class="resources">{"".join(v)}</ul>' for k, v in cats.items())
+    ours = "".join(f'<li><a href="{u(f"/products/{p["slug"]}/")}"><strong>{esc(p["title"])}</strong></a> <span class="tag ours">ours</span><br><span>{esc(p["short"])}</span></li>'
+                   for p in products_list)
+    n_paid = sum(1 for pr in CFG["programs"].values() if pr.get("affiliate_url"))
+    res_note = (f"{n_paid} of the companies below pay us a commission if you sign up through our link; they're labelled "
+                "\"affiliate\". Everything labelled \"no affiliation\" or \"free\" pays us nothing.") if n_paid else (
+                "None of the companies below pay us right now. If that changes, each paying link will be labelled \"affiliate\".")
+    write("/resources/", layout(
+        title="Resources: every money tool we mention", path="/resources/",
+        description="Every bank, app, card and free government tool mentioned on Money Made Simple, what it's for, "
+                    "and whether we earn anything from it.",
+        body=f"""<article class="wrap article">
+  <h1>Resources</h1>
+  <p class="dek">Every tool we mention, what it's for, and where we compare it. Free government tools are included because they're often the best option.</p>
+  <div class="ftc"><p><strong>Disclosure:</strong> {esc(res_note)} <a href="{u('/disclosures/')}">How we make money</a>.</p></div>
+  <p class="asof">Listed as of {date.today().strftime('%B %-d, %Y')}. Check each provider's current terms before signing up.</p>
+  <h2>Our own tools</h2><ul class="resources">{ours}<li><a href="{u('/free/')}"><strong>The 7-Day Money Reset</strong></a> <span class="tag free">free</span><br><span>Seven 15-minute tasks, printable checklist and worksheets.</span></li></ul>
+  {res_html}
+  {magnet_box('resources')}
+</article>"""))
+    urls.append(("/resources/", date.today().isoformat()))
+
+    # ---- money personality quiz (static JS) -> 7-Day Money Reset signup
+    quiz = json.loads((CONTENT / "quiz.json").read_text())
+    for r in quiz["results"].values():
+        r["moves"] = [[t, u(href)] for t, href in r["moves"]]
+    qs = "".join(f"""<fieldset class="q" data-i="{i}"{' hidden' if i else ''}>
+  <legend><span class="qn">Question {i + 1} of {len(quiz['questions'])}</span>{esc(q['q'])}</legend>
+  {''.join(f'<button type="button" class="opt" data-v="{esc(k)}">{esc(v)}</button>' for k, v in q['a'].items())}
+</fieldset>""" for i, q in enumerate(quiz["questions"]))
+    write("/quiz/", layout(
+        title=quiz["title"], path="/quiz/", description=quiz["intro"],
+        body=f"""<section class="wrap landing quiz">
+  <p class="kicker">1-minute quiz</p>
+  <h1>{esc(quiz['title'])}</h1>
+  <p class="dek">{esc(quiz['intro'])}</p>
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <form id="quiz" onsubmit="return false">{qs}</form>
+  <noscript><p>This quiz needs JavaScript. You can go straight to <a href="{u('/start/')}">Start here</a>.</p></noscript>
+  <section id="result" hidden aria-live="polite">
+    <p class="kicker">Your money personality</p>
+    <h2 id="r-name"></h2>
+    <p class="dek" id="r-summary"></p>
+    <h3>Your next three moves</h3>
+    <ol id="r-moves" class="days"></ol>
+    <div class="magnet quiz-cta">
+      <img src="{u('/img/lead-magnet-cover.png')}" alt="" width="150" height="194" loading="lazy">
+      <div><p class="kicker">Free</p><h2 class="magnet-title">Get the 7-Day Money Reset</h2>
+      <p>Your three moves, plus four more, as seven 15-minute tasks with worksheets. Free PDF.</p>
+      {email_form('quiz', 'Send me the free reset')}</div>
+    </div>
+    <p><button type="button" class="btn ghost" id="retake">Retake the quiz</button></p>
+  </section>
+  <p class="disclaimer">For fun and orientation only, not financial advice. Your answers stay in your browser.</p>
+</section>
+<script>window.MMS_QUIZ={json.dumps(quiz['results'], ensure_ascii=False)};</script>
+<script src="{u('/quiz.js')}" defer></script>"""))
+    urls.append(("/quiz/", date.today().isoformat()))
 
     # ---- lead magnet landing + thanks
     lm = CFG["lead_magnet"]
@@ -712,6 +815,8 @@ def build() -> list[str]:
   <h1>{esc(CFG['name'])}</h1>
   <p class="dek">{esc(CFG['tagline'])}</p>
   <div class="lb-signup"><h2>Free: {esc(lm['title'])}</h2><p>{esc(lm['short'])}</p>{email_form('link-in-bio', 'Send it', compact=True)}</div>
+  <a class="lb-link" href="{u('/quiz/')}"><span>What's your money personality? (1-minute quiz)</span></a>
+  <a class="lb-link" href="{u('/start/')}"><span>New here? Start here</span></a>
   <h2 class="lb-h">Guides and templates</h2>{links}
   {f'<h2 class="lb-h">Tools we recommend</h2>{aff}<p class="small">Affiliate links: we may earn a commission at no extra cost to you.</p>' if aff else ''}
 </section>"""))
@@ -740,6 +845,7 @@ def build() -> list[str]:
       <h1>Feel behind on money? Start with one move this week.</h1>
       <p class="dek">{esc(CFG['description'])}</p>
       <div class="hero-form"><p class="hero-offer">Get <strong>{esc(lm['title'])}</strong> free: seven 15-minute tasks that get your money organised in a week.</p>{email_form('home-hero', 'Send me the free reset')}</div>
+      <p class="quiz-link">Not sure where to start? <a href="{u('/quiz/')}">Take the 1-minute money personality quiz</a> or see <a href="{u('/start/')}">Start here</a>.</p>
     </div>
     <img class="cover" src="{u('/img/lead-magnet-cover.png')}" alt="Cover of {esc(lm['title'])}" width="300" height="388">
   </div>

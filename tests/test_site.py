@@ -98,3 +98,27 @@ def test_comparison_page_names_paying_programs(tmp_path):
     hysa = (out / "compare" / "best-high-yield-savings-accounts" / "index.html").read_text()
     assert 'href="https://aff.example/sofi" rel="sponsored noopener" class="plausible-event-name=Affiliate+Click"' in hysa
     assert "through links to: SoFi" in hysa
+
+
+def test_hub_resources_quiz_and_rich_pins(tmp_path):
+    out = _build(tmp_path, "https://example.org")
+    sitemap = (out / "sitemap.xml").read_text()
+    for p in ("/start/", "/resources/", "/quiz/", "/compare/"):
+        assert f"https://example.org{p}" in sitemap
+    assert "Sitemap: https://example.org/sitemap.xml" in (out / "robots.txt").read_text()
+    res = (out / "resources" / "index.html").read_text()
+    assert 'data-program="sofi"' in res and "no affiliation" in res
+    quiz = (out / "quiz" / "index.html").read_text()
+    assert quiz.count('class="q"') == 6 and "window.MMS_QUIZ" in quiz and 'value="quiz"' in quiz
+    # Every article and comparison: Article + FAQ JSON-LD and article rich-pin tags.
+    for page in list((out / "blog").glob("*/index.html")) + list((out / "compare").glob("*/index.html")):
+        html = page.read_text()
+        if 'property="og:type" content="article"' not in html:
+            continue  # topic index pages
+        assert '"@type": "Article"' in html and '"@type": "FAQPage"' in html, page
+        assert 'property="article:published_time"' in html, page
+    for page in out.rglob("index.html"):
+        html = page.read_text()
+        assert 'property="og:image"' in html and 'name="pinterest-rich-pin"' in html, page
+    prod = (out / "products" / "the-20-minute-budget" / "index.html").read_text()
+    assert 'property="product:price:amount" content="12"' in prod
