@@ -65,7 +65,8 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
     segments = script.segments
     family = f"{brand.slug}:{script.title}"
 
-    imgs = _images_with_charts(settings, brand, segments, size, ASPECTS[fmt], out / "images", family, palette)
+    imgs = _images_with_charts(settings, brand, segments, size, ASPECTS[fmt], out / "images", family, palette,
+                               reserve_bottom=0.22 if fmt == "long" else 0.36)  # caption zone
     lines = [(s.narration or s.on_screen_text or s.heading).strip() for s in segments]
     heads = [s.on_screen_text for s in segments]
     images = [r.path for r in imgs]
@@ -83,13 +84,13 @@ def _render_video(settings: Settings, brand: BrandProfile, script: Script, fmt: 
         chart = segments[i].chart if i < len(segments) else None
         clip = render_chart_clip(chart, size, palette, work / f"chart-{i:02d}.mp4", seconds=min(slot, 4.0)) \
             if chart else None
-        beats.append(Beat(img, "" if chart else head, t, slot, clip=clip))  # charts carry their own title
+        beats.append(Beat(img, "" if chart else head, t, slot, clip=clip, still=bool(chart)))  # charts: own title, no pan
         if seg_words[i]:
             cues += time_segment_words(line, t, dur, seg_words[i])
         else:
             cues += time_segment(line, t + LEAD, max(0.4, dur - LEAD))
         slots.append(slot)
-        starts.append((t, segments[i].heading if i < len(segments) else ""))
+        starts.append((round(t, 2), segments[i].heading if i < len(segments) else ""))
         t += slot
 
     audio = out / "audio.wav"
@@ -210,7 +211,7 @@ def _script(post: dict) -> Script:
     return script
 
 
-def _images_with_charts(settings, brand, segments, size, aspect, out_dir, family, palette):
+def _images_with_charts(settings, brand, segments, size, aspect, out_dir, family, palette, reserve_bottom=0.0):
     """Illustrations for ordinary beats; exact data charts (no AI) for beats that carry a chart."""
     import json as _json
 
@@ -223,7 +224,8 @@ def _images_with_charts(settings, brand, segments, size, aspect, out_dir, family
     out = []
     for i, s in enumerate(segments):
         if s.chart:
-            path = render_chart(s.chart, size, palette, brand.visual.font, out_dir / f"chart-{i:02d}.png")
+            path = render_chart(s.chart, size, palette, brand.visual.font, out_dir / f"chart-{i:02d}.png",
+                                reserve_bottom=reserve_bottom)
             out.append(ImageResult(path, "chart", "contentfactory.charts", _json.dumps(s.chart.model_dump())[:500],
                                    note="drawn from the script's numbers; check them"))
         else:

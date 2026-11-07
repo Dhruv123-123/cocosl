@@ -453,7 +453,7 @@ def _extend(sub) -> None:
     for mod in ("contentfactory.business.cli", "contentfactory.publish.cli", "contentfactory.funnel.cli",
                 "contentfactory.community.cli", "contentfactory.site",
                 "contentfactory.renderq", "contentfactory.doctor", "contentfactory.backup",
-                "contentfactory.publish.preflight"):
+                "contentfactory.publish.preflight", "contentfactory.cleanup"):
         try:
             module = __import__(mod, fromlist=["register"])
         except ImportError:
