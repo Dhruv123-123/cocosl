@@ -27,6 +27,7 @@ YT6 = "youtube-6wk/content.json"
 JAR = "jar-challenge/content.json"
 MONTH8 = "month-8/content.json"
 BRIDGE = "july-bridge/content.json"
+MONTH9 = "month-9/content.json"
 
 
 def test_brand_loads_with_placeholder_affiliates(factory):
@@ -40,7 +41,7 @@ def test_brand_loads_with_placeholder_affiliates(factory):
 import pytest
 
 
-@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5]), (MONTH4, [22, 13, 4]), (MONTH5, [22, 13, 5]), (MONTH6, [22, 14, 4]), (MONTH7, [23, 13, 0]), (COUPLES, [6, 3, 1]), (DRIVERS, [10, 0, 0]), (YT6, [0, 0, 6]), (JAR, [10, 1, 0]), (MONTH8, [22, 14, 4]), (BRIDGE, [6, 0, 0])])
+@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5]), (MONTH4, [22, 13, 4]), (MONTH5, [22, 13, 5]), (MONTH6, [22, 14, 4]), (MONTH7, [23, 13, 0]), (COUPLES, [6, 3, 1]), (DRIVERS, [10, 0, 0]), (YT6, [0, 0, 6]), (JAR, [10, 1, 0]), (MONTH8, [22, 14, 4]), (BRIDGE, [6, 0, 0]), (MONTH9, [23, 13, 4])])
 def test_content_is_valid(factory, name, counts):
     from contentfactory.schemas import Script
     brand = factory.brand("1099-money")
@@ -593,3 +594,27 @@ def test_july_bridge_fills_jul_5_to_10_so_no_day_is_empty(factory):
     covered |= {s.when.date() for s in plan(brand, _items(COUPLES), date(2027, 7, 12), 7, spec)[0]}
     covered |= {s.when.date() for s in plan(brand, _items(MONTH8), date(2027, 7, 19), 31)[0]}
     assert {date(2027, 6, 3) + timedelta(days=k) for k in range(77)} <= covered
+
+
+def test_month_9_runs_aug_19_to_sep_18_with_the_sep_14_reminder(factory):
+    earlier = {i["script"]["title"].lower() for n in ("content.json", MONTH1, MONTH2, MONTH3, MONTH4, MONTH5, MONTH6, MONTH7, MONTH8,
+                                                     BRIDGE, COUPLES, DRIVERS, YT6, JAR) for i in _items(n)}
+    month = _items(MONTH9)
+    assert not earlier & {i["script"]["title"].lower() for i in month}
+    slots, leftover = plan(factory.brand("1099-money"), month, date(2027, 8, 19), 31)
+    assert not leftover
+    assert {s.when.date() for s in slots} == {date(2027, 8, 19) + timedelta(days=k) for k in range(31)}
+    longs = {s.when.date(): month[s.index] for s in slots if s.fmt == "long"}
+    assert sorted(longs) == [date(2027, 8, 22), date(2027, 8, 29), date(2027, 9, 5), date(2027, 9, 12)]
+    for it in longs.values():
+        assert it["original_element"]["type"] == "worked-example-chart"
+        assert any(s.get("chart") and s["heading"] == it["original_element"]["chapter"] for s in it["script"]["segments"])
+    by_day = {s.when.date(): month[s.index]["script"]["title"] for s in slots if s.fmt == "short"}
+    assert by_day[date(2027, 9, 14)].startswith("Tomorrow")  # the day before the Sep 15 payment
+    shorts = [i for i in month if i["format"] == "short"]
+    assert all(a["format_style"] != b["format_style"] for a, b in zip(shorts, shorts[1:]))
+    text = " ".join(s["narration"] + " " + s["on_screen_text"] for i in month for s in i["script"]["segments"])
+    text += " ".join(i["script"]["caption"] for i in month)
+    for figure in ("$422", "$367", "$774", "$82,920", "$58,075", "$4,966", "$4,098", "$21,000", "$31,500", "$42,000"):
+        assert figure in text, figure
+    assert "Jan 15, 2028" not in text and "Jan 18, 2028" in text and "Apr 18, 2028" in text
