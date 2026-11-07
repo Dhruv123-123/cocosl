@@ -43,4 +43,20 @@
     </table>
   </div>
 </div>
+{% if r.platforms or r.money.by_campaign %}
+<div class="grid grid-2 section">
+  <div class="card"><div class="card-head"><h2>Posted this week</h2></div>
+    <table class="table small">
+      {% for a in r.platforms %}<tr><th>{{ a.brand }} · {{ a.platform }}</th>
+        <td>{{ a.posts }} post{{ 's' if a.posts != 1 }}{% if a.dry_run %} ({{ a.dry_run }} dry run){% endif %};
+          {% if a.measured %}{{ "{:,}".format(a.views) }} views, {{ a.likes }} likes, {{ a.clicks }} link clicks{% else %}<span class="muted">no numbers yet</span>{% endif %}</td></tr>
+      {% else %}<tr><td class="muted">Nothing posted this week.</td></tr>{% endfor %}
+    </table></div>
+  <div class="card"><div class="card-head"><h2>Sales by campaign</h2></div>
+    <table class="table small">
+      {% for c in r.money.by_campaign %}<tr><th>{{ c.brand }} · {{ c.campaign }}</th><td>{{ c.sales }} sale{{ 's' if c.sales != 1 }}, {{ c.revenue_cents|money }}{% if c.source %} <span class="muted">({{ c.source }})</span>{% endif %}</td></tr>
+      {% else %}<tr><td class="muted">No tagged sales this week.</td></tr>{% endfor %}
+    </table></div>
+</div>
+{% endif %}
 {% endblock %}
