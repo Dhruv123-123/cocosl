@@ -28,6 +28,8 @@ from collections import defaultdict
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
+from .originality import element_text
+
 WPM = 150  # spoken words per minute
 STOP = set(["a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "from", "how", "i", "if", "in", "into", "is", "it", "its", "of", "on", "or", "that", "the", "this", "to", "was", "what", "when", "why", "with", "you", "your", "my", "our"])
 
@@ -82,7 +84,7 @@ def tasks(factory, brand: str = "", days: int | None = None, now: datetime | Non
                             "show": seg.get("on_screen_text") or seg.get("heading", ""),
                             "narration": seg.get("narration", "")})
             elif need.startswith("screen recording"):
-                what = (script.get("original_element") or need.split(":", 1)[1]).strip()
+                what = element_text(script.get("original_element")) or need.split(":", 1)[1].strip()
                 i = _best_beat(segs, what)
                 seg = segs[i] if i < len(segs) else {}
                 out.append({**base, "kind": "screen", "beat": i, "planned": True,
