@@ -1,4 +1,5 @@
 import json
+import re
 from datetime import date
 from pathlib import Path
 
@@ -80,3 +81,22 @@ def test_tracker_builds(tmp_path):
     assert {"Start Here", "Setup", "Quarterly", "Income", "Expenses", "Mileage", "Deadlines", "Tax Tables"} <= set(wb.sheetnames)
     q = wb["Quarterly"]
     assert any(str(c.value).startswith("=MAX(0,") for row in q.iter_rows() for c in row if c.value)
+
+
+def test_funnel_emails_and_lead_magnet():
+    app = ROOT / "apps" / "freelance-tax"
+    emails = sorted((app / "emails").glob("[0-9][0-9]-*.md"))
+    assert len(emails) == 7
+    days = []
+    for i, path in enumerate(emails, 1):
+        text = path.read_text()
+        head = text.split("---")[1]
+        meta = dict(line.split(": ", 1) for line in head.strip().splitlines())
+        assert set(meta) == {"order", "day", "subject", "preheader", "goal"}
+        assert int(meta["order"]) == i
+        days.append(int(meta["day"]))
+        assert "not tax, legal or financial advice" in text
+        assert not re.search(r"guarantee|risk-free|last chance|expires", text, re.I)
+    assert days == sorted(days) and days[0] == 0
+    assert (app / "downloads" / "freelancer-tax-calendar-2027.pdf").stat().st_size > 10_000
+    assert "tax-calendar" in (app / "free" / "index.html").read_text()

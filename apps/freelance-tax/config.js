@@ -9,11 +9,11 @@ export default {
   // 'formspree' or 'none'. For anything except netlify, paste the form action URL.
   email: {
     provider: 'netlify',
-    formName: 'tax-calculator-signup',
+    formName: 'tax-calendar',                          // one list for the calculator and the /free/ page
     action: '',
     emailField: 'email',
-    thanksUrl: 'thanks.html',
-    pitch: 'Get a reminder email a week before each quarterly deadline (Apr 15, Jun 15, Sep 15, Jan 15), plus one freelancer money move a week.',
+    // Where the form sends people: each form's data-thanks attribute (the /free/thanks/ download page).
+    pitch: 'Get the free 2027 Freelancer Tax Calendar (every federal date, a payment checklist and a set-aside table), plus a reminder a week before each quarterly deadline.',
   },
 
   // The paid product (Gumroad, Stripe Payment Link, Lemon Squeezy...).

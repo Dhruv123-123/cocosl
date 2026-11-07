@@ -2,6 +2,7 @@
 // shared, and shows the tracker, signup and (live) affiliate offers. Nothing is sent anywhere.
 import config from './config.js';
 import { quarterlyPlan, nextPayment, TAX_YEAR } from './lib/tax.js';
+import { setupSignup } from './signup.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const money = (x) => '$' + Math.round(x).toLocaleString('en-US');
@@ -65,26 +66,6 @@ function offers() {
   for (const a of affs) out.push(`<div class="offer"><h3>${esc(a.label)}</h3><p>${esc(a.blurb)}</p><a class="btn alt" href="${esc(a.url)}" rel="sponsored noopener">See the offer</a></div>`);
   if (affs.length) out.push('<p class="tiny">Affiliate links: we may earn a commission if you sign up, at no extra cost to you.</p>');
   return out.join('');
-}
-
-function setupSignup() {
-  const form = $('form.signup');
-  if (!form) return;
-  const e = config.email;
-  const pitch = $('.signup-pitch');
-  if (pitch) pitch.textContent = e.pitch;
-  if (e.provider === 'none') { form.parentElement.hidden = true; return; }
-  if (e.provider !== 'netlify') { form.removeAttribute('data-netlify'); form.action = e.action || '#'; form.querySelector('input[type=email]').name = e.emailField || 'email'; }
-  form.addEventListener('submit', async (ev) => {
-    ev.preventDefault();
-    if (form.website.value) return;
-    if (e.provider !== 'netlify' && !e.action) { alert('Email signup is not connected yet: set email.action in config.js.'); return; }
-    const btn = form.querySelector('button'); btn.disabled = true; btn.textContent = 'Sending…';
-    try {
-      await fetch(e.provider === 'netlify' ? '/' : form.action, { method: 'POST', mode: e.provider === 'netlify' ? 'same-origin' : 'no-cors', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(new FormData(form)).toString() });
-      location.href = e.thanksUrl;
-    } catch { form.submit(); }
-  });
 }
 
 function init() {

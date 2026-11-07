@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your 2027 Freelancer Tax Calendar | 1099 Money</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#14213d">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="top"><a class="logo" href="../../"><span class="mark">1M</span> <span>1099 Money</span></a>
+<span class="home">Free tools for freelancers</span></header>
+<main>
+<h1>You're in. Here's your calendar.</h1>
+<p class="lede">It's also on its way to your inbox. Print page 5 and put it where you'll see it.</p>
+<p><a class="btn" href="../../downloads/freelancer-tax-calendar-2027.pdf" download>Download the PDF</a></p>
+
+<section class="card signup-box">
+  <p class="kicker">Do this now (2 minutes)</p>
+  <ol>
+    <li>Add the bold dates on page 2 to your phone calendar with a reminder one week before.</li>
+    <li>Run your numbers in the free <a href="../../">quarterly tax calculator</a> so you know what Jan 15 should be.</li>
+    <li>Open a separate savings account for tax money if you don't have one.</li>
+  </ol>
+</section>
+
+<section class="card signup-box" id="product" hidden>
+  <p class="kicker">Optional · <span data-price></span></p>
+  <h2 data-name></h2>
+  <p data-pitch></p>
+  <p><a class="btn alt" data-url href="#">See the tracker</a></p>
+  <p class="tiny">Spreadsheet for Excel and Google Sheets. 14-day refund if it isn't for you.</p>
+</section>
+</main>
+<footer>
+<p>Educational content, not tax, legal or financial advice.</p>
+<p>1099 Money · get paid, keep more, never fear April.</p>
+</footer>
+<script type="module">
+import config from '../../config.js';
+const p = config.product, box = document.getElementById('product');
+if (p && p.url && !p.url.includes('REPLACE_ME')) {
+  box.querySelector('[data-name]').textContent = p.name;
+  box.querySelector('[data-price]').textContent = p.price;
+  box.querySelector('[data-pitch]').textContent = p.pitch;
+  box.querySelector('[data-url]').href = p.url;
+  box.hidden = false;
+}
+</script>
+</body>
+</html>

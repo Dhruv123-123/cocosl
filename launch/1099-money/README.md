@@ -8,7 +8,7 @@ Money and taxes for US freelancers. Brand file: `brands/1099-money.yaml`. Start 
 | `LAUNCH_DAY.md` | What only you can do before Day 1, the 14-day shape, per-post checklist, brand rules |
 | `AFFILIATES.md` | Placeholder affiliate links, which post uses which, disclosure wording |
 | `month-1/` | 39 more scripts for Nov 30 – Dec 29, 2026 (22 Shorts, 13 carousels, 4 long) + posting plan |
-| `../../apps/freelance-tax/` | Free quarterly estimated tax calculator (email signups → the tracker) |
+| `../../apps/freelance-tax/` | Free quarterly estimated tax calculator + funnel: free 2027 tax calendar (PDF), landing and download pages, 7-email sequence selling the tracker |
 | `product/` | The Quarterly Tax Tracker: spreadsheet builder, the built .xlsx, 10-page guide (HTML + PDF), store listing |
 
 Rebuild everything (offline, no keys needed):

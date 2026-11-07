@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const types = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.xml': 'application/xml' };
+const types = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.xml': 'application/xml', '.jpg': 'image/jpeg', '.pdf': 'application/pdf' };
 const server = createServer(async (req, res) => {
   const path = join(root, decodeURIComponent(new URL(req.url, 'http://x').pathname).replace(/\/$/, '/index.html'));
   try { res.writeHead(200, { 'Content-Type': types[extname(path)] || 'text/plain' }); res.end(await readFile(path)); }
@@ -30,6 +30,17 @@ for (const [name, viewport] of [['desktop', { width: 1280, height: 900 }], ['pho
   if (!ok) failed = true;
   console.log(name, ok ? 'ok' : 'FAIL', { big, overflow, errors });
   if (shots) await page.screenshot({ path: `${shots}/${name}.png`, fullPage: name === 'phone' });
+  // The funnel pages: landing page with the signup form, and the download page.
+  for (const [slug, sel] of [['free/', 'form.signup'], ['free/thanks/', 'a[download]']]) {
+    await page.goto(url + slug);
+    const found = await page.locator(sel).count();
+    const wide = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
+    const pdf = slug.includes('thanks') ? (await fetch(new URL(await page.getAttribute(sel, 'href'), page.url()))).status : 200;
+    const good = found === 1 && !wide && pdf === 200 && !errors.length;
+    if (!good) failed = true;
+    console.log(name, slug, good ? 'ok' : 'FAIL', { found, wide, pdf, errors });
+    if (shots) await page.screenshot({ path: `${shots}/${name}-${slug.replace(/\//g, '_')}.png`, fullPage: true });
+  }
   await page.close();
 }
 await browser.close();
