@@ -6,7 +6,8 @@ Every number on the Quarterly tab is a live formula, so the file works in Excel,
 Numbers. The method is a simplified version of the IRS annualized installment method (Form 2210
 Schedule AI): year-to-date profit is annualized at the end of each IRS period (3, 5, 8 and 12 months),
 tax is estimated on that, and the required payment so far is the lesser of 22.5/45/67.5/90% of that
-tax and the prior-year safe harbor. Tax tables are 2026 federal; update the Tax Tables tab each January.
+tax and the prior-year safe harbor. Tax tables come from YEARS (2026 default; `--year 2027` builds the 2027 edition
+into edition-2027/).
 Example rows are a fictional freelancer ("Sam") and match the brand's long video.
 """
 from __future__ import annotations
@@ -39,15 +40,39 @@ PCT = "0.0%"
 DATE = "mmm d, yyyy"
 ROWS = 300  # log capacity
 
-# 2026 federal figures (IRS Rev. Proc. 2025-32 / OBBBA; SSA wage base). Re-check each January.
-BRACKETS = {
-    "Single": [(0, .10), (12400, .12), (50400, .22), (105700, .24), (201775, .32), (256225, .35), (640600, .37)],
-    "Married filing jointly": [(0, .10), (24800, .12), (100800, .22), (211400, .24), (403550, .32),
-                               (512450, .35), (768700, .37)],
+# Federal figures by tax year. Re-check each January; build an edition with `--year`.
+YEARS = {
+    2026: {  # IRS Rev. Proc. 2025-32 / OBBBA; SSA 2026 wage base
+        "brackets": {
+            "Single": [(0, .10), (12400, .12), (50400, .22), (105700, .24), (201775, .32), (256225, .35), (640600, .37)],
+            "Married filing jointly": [(0, .10), (24800, .12), (100800, .22), (211400, .24), (403550, .32),
+                                       (512450, .35), (768700, .37)],
+        },
+        "std": {"Single": 16100, "Married filing jointly": 32200},
+        "ss_base": 184500, "mileage": 0.725, "mileage_note": "",
+        "sources": "Sources: IRS Rev. Proc. 2025-32 (2026 inflation adjustments), SSA 2026 contribution and benefit base, IRS standard mileage rates.",
+        "deadlines": None,  # formula dates from the Setup year
+    },
+    2027: {  # IRS Rev. Proc. 2026-35 (IR-2026-133, Nov 5 2026); SSA 2027 wage base $192,300
+        "brackets": {
+            "Single": [(0, .10), (12800, .12), (52025, .22), (109125, .24), (208325, .32), (264550, .35), (661375, .37)],
+            "Married filing jointly": [(0, .10), (25600, .12), (104050, .22), (218250, .24), (416650, .32),
+                                       (529100, .35), (793650, .37)],
+        },
+        "std": {"Single": 16600, "Married filing jointly": 33200},
+        "ss_base": 192300, "mileage": 0.725,
+        "mileage_note": "2026 rate: the IRS announces the 2027 rate in December. Update this cell when it does.",
+        "sources": "Sources: IRS Rev. Proc. 2026-35 (2027 inflation adjustments, Nov 5 2026), SSA 2027 contribution and benefit base ($192,300), IRS standard mileage rates.",
+        # Jan 31 2027 is a Sunday; Jan 15 2028 is a Saturday and Jan 17 2028 is MLK Day.
+        "deadlines": [date(2027, 1, 15), date(2027, 2, 1), date(2027, 4, 15), date(2027, 6, 15), date(2027, 9, 15),
+                      date(2027, 10, 15), date(2028, 1, 18)],
+    },
 }
-STD = {"Single": 16100, "Married filing jointly": 32200}
-SS_BASE = 184500
-MILEAGE = 0.725
+YEAR = 2026
+BRACKETS = YEARS[YEAR]["brackets"]
+STD = YEARS[YEAR]["std"]
+SS_BASE = YEARS[YEAR]["ss_base"]
+MILEAGE = YEARS[YEAR]["mileage"]
 
 CATEGORIES = ["Software & subscriptions", "Equipment", "Office supplies", "Phone & internet (business %)",
               "Advertising & marketing", "Contractors", "Professional fees", "Education (current work)",
@@ -86,13 +111,16 @@ def put(ws, ref, value, fmt=None, fill=None, font=BODY, bold=False):
 QUARTER = 'IF({d}="","",IF(MONTH({d})<=3,1,IF(MONTH({d})<=5,2,IF(MONTH({d})<=8,3,4))))'
 
 
-def build(out: Path) -> Path:
+def build(out: Path, year: int = 2026) -> Path:
+    global YEAR, BRACKETS, STD, SS_BASE, MILEAGE
+    Y = YEARS[year]
+    YEAR, BRACKETS, STD, SS_BASE, MILEAGE = year, Y["brackets"], Y["std"], Y["ss_base"], Y["mileage"]
     wb = Workbook()
 
     # ------------------------------------------------------------ Start Here
     ws = wb.active
     ws.title = "Start Here"
-    title(ws, "The Quarterly Tax Tracker", "1099 Money · for US freelancers · 2026 tax year edition")
+    title(ws, "The Quarterly Tax Tracker", f"1099 Money · for US freelancers · {YEAR} tax year edition")
     ws.column_dimensions["B"].width = 100
     lines = [
         ("How it works", H2),
@@ -116,7 +144,7 @@ def build(out: Path) -> Path:
         ("Sole proprietor (Schedule C), standard deduction, no credits, taxable income below the QBI phase-in threshold.", BODY),
         ("Filing statuses: Single or Married filing jointly. Federal tax only; the state line is a flat-rate estimate you choose.", BODY),
         ("If you itemise, have big credits, capital gains, an S corp, or high income, use Form 1040-ES or a tax professional.", BODY),
-        ("Tax tables are 2026 figures (Tax Tables tab). Check irs.gov each January and update them.", BODY),
+        (f"Tax tables are {YEAR} figures (Tax Tables tab). Check irs.gov each January and update them.", BODY),
         ("", BODY),
         ("Educational tool only. Not tax, legal or financial advice. © 1099 Money. For personal use; please don't resell.", MUTED),
     ]
@@ -125,7 +153,7 @@ def build(out: Path) -> Path:
 
     # ------------------------------------------------------------ Tax Tables
     tt = wb.create_sheet("Tax Tables")
-    title(tt, "Tax Tables (2026 federal)", "Update every January from irs.gov. Used by the Quarterly tab.")
+    title(tt, f"Tax Tables ({YEAR} federal)", "Update every January from irs.gov. Used by the Quarterly tab.")
     for col, w in zip("BCDEFG", (26, 16, 12, 4, 16, 12)):
         tt.column_dimensions[col].width = w
     header(tt, 5, ["Single: over", "Marginal rate", "Rate step"], 2)
@@ -162,7 +190,9 @@ def build(out: Path) -> Path:
     T = {"std_s": "'Tax Tables'!$C$15", "std_m": "'Tax Tables'!$C$16", "ssbase": "'Tax Tables'!$C$17",
          "ss": "'Tax Tables'!$C$18", "med": "'Tax Tables'!$C$19", "nef": "'Tax Tables'!$C$20",
          "qbi": "'Tax Tables'!$C$21", "mile": "'Tax Tables'!$C$22", "hi": "'Tax Tables'!$C$23"}
-    tt["B29"] = "Sources: IRS Rev. Proc. 2025-32 (2026 inflation adjustments), SSA 2026 contribution and benefit base, IRS standard mileage rates."
+    tt["B29"] = Y["sources"]
+    if Y["mileage_note"]:
+        put(tt, "D22", Y["mileage_note"], font=MUTED)
     tt["B29"].font = MUTED
 
     # ------------------------------------------------------------ Setup
@@ -172,7 +202,7 @@ def build(out: Path) -> Path:
     su.column_dimensions["C"].width = 26
     su.column_dimensions["D"].width = 60
     rows = [
-        ("Tax year", 2026, "0", "Must match the Tax Tables tab."),
+        ("Tax year", YEAR, "0", "Must match the Tax Tables tab."),
         ("Filing status", "Single", None, "Single or Married filing jointly."),
         ("Last year's total tax (Form 1040, 'total tax' line)", 6500, USD, "For the safe harbor. Enter 0 if you didn't file / owed nothing (see guide)."),
         ("Last year's AGI (Form 1040, adjusted gross income)", 52000, USD, "Over $150,000 ($75,000 if married filing separately) → 110% safe harbor."),
@@ -196,7 +226,7 @@ def build(out: Path) -> Path:
     put(su, "B17", "Prior-year safe harbor (full year)", bold=True)
     put(su, "C17", "=C8*C16", USD)
     put(su, "B18", "Tables check", bold=True)
-    put(su, "C18", "=IF(C6=2026,\"OK: 2026 tables\",\"Update the Tax Tables tab for \"&C6)")
+    put(su, "C18", f"=IF(C6={YEAR},\"OK: {YEAR} tables\",\"Update the Tax Tables tab for \"&C6)")
     S = {"status": "Setup!$C$7", "prior": "Setup!$C$17", "w2": "Setup!$C$10", "wh": "Setup!$C$11",
          "state": "Setup!$C$12", "aside": "Setup!$C$13", "bal": "Setup!$C$14"}
 
@@ -208,22 +238,22 @@ def build(out: Path) -> Path:
         inc.column_dimensions[col].width = w
     header(inc, 5, cols)
     sam_income = [
-        (date(2026, 1, 9), "Northwind Studio", "Brand refresh, deposit", "1001", 3250),
-        (date(2026, 1, 30), "Northwind Studio", "Brand refresh, balance", "1002", 3250),
-        (date(2026, 2, 13), "Juniper Bakery", "Menu + signage", "1003", 2450),
-        (date(2026, 3, 6), "Platform payout", "Template sales", "", 550),
-        (date(2026, 3, 27), "Atlas Outdoors", "Social templates", "1004", 4300),
-        (date(2026, 4, 17), "Juniper Bakery", "Website graphics", "1005", 2050),
-        (date(2026, 5, 8), "Brightline Co-op", "Annual report layout", "1006", 6200),
-        (date(2026, 5, 29), "Platform payout", "Template sales", "", 500),
-        (date(2026, 6, 19), "Atlas Outdoors", "Summer campaign", "1007", 7000),
-        (date(2026, 7, 10), "Northwind Studio", "Pitch deck", "1008", 3900),
-        (date(2026, 7, 31), "Harbor Dental", "Logo + cards", "1009", 2950),
-        (date(2026, 8, 21), "Brightline Co-op", "Event posters", "1010", 4600),
-        (date(2026, 9, 11), "Atlas Outdoors", "Retainer (Sep)", "1011", 4050),
-        (date(2026, 10, 2), "Platform payout", "Template sales", "", 800),
-        (date(2026, 10, 9), "Atlas Outdoors", "Retainer (Oct)", "1012", 4050),
-        (date(2026, 10, 23), "Harbor Dental", "Website graphics", "1013", 3650),
+        (date(YEAR, 1, 9), "Northwind Studio", "Brand refresh, deposit", "1001", 3250),
+        (date(YEAR, 1, 30), "Northwind Studio", "Brand refresh, balance", "1002", 3250),
+        (date(YEAR, 2, 13), "Juniper Bakery", "Menu + signage", "1003", 2450),
+        (date(YEAR, 3, 6), "Platform payout", "Template sales", "", 550),
+        (date(YEAR, 3, 27), "Atlas Outdoors", "Social templates", "1004", 4300),
+        (date(YEAR, 4, 17), "Juniper Bakery", "Website graphics", "1005", 2050),
+        (date(YEAR, 5, 8), "Brightline Co-op", "Annual report layout", "1006", 6200),
+        (date(YEAR, 5, 29), "Platform payout", "Template sales", "", 500),
+        (date(YEAR, 6, 19), "Atlas Outdoors", "Summer campaign", "1007", 7000),
+        (date(YEAR, 7, 10), "Northwind Studio", "Pitch deck", "1008", 3900),
+        (date(YEAR, 7, 31), "Harbor Dental", "Logo + cards", "1009", 2950),
+        (date(YEAR, 8, 21), "Brightline Co-op", "Event posters", "1010", 4600),
+        (date(YEAR, 9, 11), "Atlas Outdoors", "Retainer (Sep)", "1011", 4050),
+        (date(YEAR, 10, 2), "Platform payout", "Template sales", "", 800),
+        (date(YEAR, 10, 9), "Atlas Outdoors", "Retainer (Oct)", "1012", 4050),
+        (date(YEAR, 10, 23), "Harbor Dental", "Website graphics", "1013", 3650),
     ]
     for i in range(ROWS):
         r = 6 + i
@@ -245,18 +275,18 @@ def build(out: Path) -> Path:
     cat_dv = DataValidation(type="list", formula1="=Lists!$B$2:$B$%d" % (1 + len(CATEGORIES)), allow_blank=True)
     ex.add_data_validation(cat_dv)
     sam_exp = [
-        (date(2026, 1, 5), "Design software", "Software & subscriptions", "Annual plan", 660, 1),
-        (date(2026, 1, 20), "Electronics store", "Equipment", "Drawing tablet", 380, 1),
-        (date(2026, 2, 3), "Phone carrier", "Phone & internet (business %)", "Phone, Jan-Mar", 240, 0.6),
-        (date(2026, 3, 15), "Font foundry", "Software & subscriptions", "Font licence", 120, 1),
-        (date(2026, 4, 2), "Accountant", "Professional fees", "Last year's return", 450, 1),
-        (date(2026, 5, 4), "Phone carrier", "Phone & internet (business %)", "Phone, Apr-Jun", 240, 0.6),
-        (date(2026, 5, 20), "Payment processor", "Payment & bank fees", "Card fees, Jan-May", 310, 1),
-        (date(2026, 6, 12), "Online course", "Education (current work)", "Motion design course", 199, 1),
-        (date(2026, 7, 8), "Print shop", "Office supplies", "Portfolio prints", 85, 1),
-        (date(2026, 8, 3), "Phone carrier", "Phone & internet (business %)", "Phone, Jul-Sep", 240, 0.6),
-        (date(2026, 9, 1), "Insurance co.", "Insurance (business)", "Professional liability", 420, 1),
-        (date(2026, 10, 15), "Payment processor", "Payment & bank fees", "Card fees, Jun-Oct", 290, 1),
+        (date(YEAR, 1, 5), "Design software", "Software & subscriptions", "Annual plan", 660, 1),
+        (date(YEAR, 1, 20), "Electronics store", "Equipment", "Drawing tablet", 380, 1),
+        (date(YEAR, 2, 3), "Phone carrier", "Phone & internet (business %)", "Phone, Jan-Mar", 240, 0.6),
+        (date(YEAR, 3, 15), "Font foundry", "Software & subscriptions", "Font licence", 120, 1),
+        (date(YEAR, 4, 2), "Accountant", "Professional fees", "Last year's return", 450, 1),
+        (date(YEAR, 5, 4), "Phone carrier", "Phone & internet (business %)", "Phone, Apr-Jun", 240, 0.6),
+        (date(YEAR, 5, 20), "Payment processor", "Payment & bank fees", "Card fees, Jan-May", 310, 1),
+        (date(YEAR, 6, 12), "Online course", "Education (current work)", "Motion design course", 199, 1),
+        (date(YEAR, 7, 8), "Print shop", "Office supplies", "Portfolio prints", 85, 1),
+        (date(YEAR, 8, 3), "Phone carrier", "Phone & internet (business %)", "Phone, Jul-Sep", 240, 0.6),
+        (date(YEAR, 9, 1), "Insurance co.", "Insurance (business)", "Professional liability", 420, 1),
+        (date(YEAR, 10, 15), "Payment processor", "Payment & bank fees", "Card fees, Jun-Oct", 290, 1),
     ]
     for i in range(ROWS):
         r = 6 + i
@@ -276,13 +306,13 @@ def build(out: Path) -> Path:
         mi.column_dimensions[col].width = w
     header(mi, 5, ["Date", "From → to", "Business purpose", "Miles", "Deduction", "IRS period"])
     sam_miles = [
-        (date(2026, 2, 13), "Home → Juniper Bakery → home", "Menu photo shoot", 18),
-        (date(2026, 4, 17), "Home → Juniper Bakery → home", "Website handover", 18),
-        (date(2026, 5, 8), "Home → Brightline Co-op → home", "Kickoff meeting", 26),
-        (date(2026, 6, 19), "Home → Atlas Outdoors → home", "Campaign shoot", 42),
-        (date(2026, 7, 31), "Home → Harbor Dental → home", "Logo presentation", 14),
-        (date(2026, 8, 21), "Home → print shop → Brightline → home", "Poster proofs + delivery", 31),
-        (date(2026, 10, 9), "Home → Atlas Outdoors → home", "Retainer review", 42),
+        (date(YEAR, 2, 13), "Home → Juniper Bakery → home", "Menu photo shoot", 18),
+        (date(YEAR, 4, 17), "Home → Juniper Bakery → home", "Website handover", 18),
+        (date(YEAR, 5, 8), "Home → Brightline Co-op → home", "Kickoff meeting", 26),
+        (date(YEAR, 6, 19), "Home → Atlas Outdoors → home", "Campaign shoot", 42),
+        (date(YEAR, 7, 31), "Home → Harbor Dental → home", "Logo presentation", 14),
+        (date(YEAR, 8, 21), "Home → print shop → Brightline → home", "Poster proofs + delivery", 31),
+        (date(YEAR, 10, 9), "Home → Atlas Outdoors → home", "Retainer review", 42),
     ]
     for i in range(ROWS):
         r = 6 + i
@@ -306,6 +336,8 @@ def build(out: Path) -> Path:
                ("Apr 1 – May 31", "=DATE(Setup!$C$6,6,15)", 2, 0.45),
                ("Jun 1 – Aug 31", "=DATE(Setup!$C$6,9,15)", 3, 0.675),
                ("Sep 1 – Dec 31", "=DATE(Setup!$C$6+1,1,15)", 4, 0.90)]
+    if Y["deadlines"]:  # exact due dates (weekends and holidays moved)
+        periods = [(c, d, k, f) for (c, _, k, f), d in zip(periods, [Y["deadlines"][i] for i in (2, 3, 4, 6)])]
     labels = {}
     spec = [
         ("period", "Income covered (cumulative from Jan 1)", None, "IRS splits the year unevenly: 3, 2, 3 and 4 months."),
@@ -323,7 +355,7 @@ def build(out: Path) -> Path:
         ("pre", "Taxable income before QBI", USD, ""),
         ("qbi", "QBI deduction", USD, "Lesser of 20% of (profit − half SE tax) and 20% of taxable income."),
         ("ti", "Taxable income", USD, ""),
-        ("it", "Income tax", USD, "2026 brackets for your filing status."),
+        ("it", "Income tax", USD, f"{YEAR} brackets for your filing status."),
         ("tot", "Total federal tax for the year (at this pace)", USD, "SE tax + income tax. Your rough full-year bill."),
         ("rate", "Effective rate on profit", PCT, ""),
         ("cy", "Required so far: current-year method", USD, "22.5% / 45% / 67.5% / 90% of the line above."),
@@ -420,6 +452,8 @@ def build(out: Path) -> Path:
         ("=DATE(Setup!$C$6,10,15)", "Extended filing deadline (if you filed an extension; it extends filing, not paying)"),
         ("=DATE(Setup!$C$6+1,1,15)", "Q4 estimated payment for THIS year"),
     ]
+    if Y["deadlines"]:  # exact dates, moved for weekends and holidays
+        items = [(d, what) for d, (_, what) in zip(Y["deadlines"], items)]
     for i, (d, what) in enumerate(items):
         put(dl, f"B{6 + i}", d, DATE)
         put(dl, f"C{6 + i}", what)
@@ -440,5 +474,13 @@ def build(out: Path) -> Path:
 
 
 if __name__ == "__main__":
-    dest = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).with_name("Quarterly-Tax-Tracker.xlsx")
-    print(build(dest))
+    args = sys.argv[1:]
+    year = 2026
+    if "--year" in args:
+        k = args.index("--year")
+        year = int(args[k + 1])
+        del args[k:k + 2]
+    here = Path(__file__).parent
+    default = here / "Quarterly-Tax-Tracker.xlsx" if year == 2026 else here / f"edition-{year}" / "Quarterly-Tax-Tracker.xlsx"
+    dest = Path(args[0]) if args else default
+    print(build(dest, year))

@@ -1,7 +1,7 @@
 # Etsy listing: The Rate & Contract Kit ($29)
 
-**Title** (≤140 chars)
-Freelance Rate Calculator and Contract Template Kit, Proposal, Invoice, Change Order, Excel Google Sheets Word, Freelancer Business
+**Title** (under 15 words, no repeated words, per Etsy's title guidance)
+Freelance Rate Calculator and Contract Kit, Proposal, Invoice, Change Order Templates
 
 **Price:** $29.00 · **Type:** Digital download · **Category:** Paper & Party Supplies > Paper > Templates
 **Who made it:** I did · **What is it:** A finished product · **When made:** 2020–2026
@@ -15,9 +15,11 @@ Freelance Rate Calculator and Contract Template Kit, Proposal, Invoice, Change O
 2. Contract-and-Proposal-Templates.zip (4 Word templates)
 3. The-Rate-and-Contract-Kit-Guide.pdf
 
-**Images** (from `images/`, upload in order): 01-hero, 02-inside, 03-spreadsheet, 04-guide-pages, 05-how-it-works
+**Images** (from `images/`, upload in this order; 2700×2025): 01-clean (no text, the first photo per Etsy's advice), 02-hero, 03-inside, 04-spreadsheet, 05-pages, 06-close-up, 07-how-it-works, 08-files-and-formats
 
 ## Description
+
+This Freelance Rate Calculator and Contract Kit is a spreadsheet plus 4 Word templates (proposal, agreement, change order, invoice) and a 7-page guide.
 
 Find the hourly rate that actually covers your taxes, costs and unbilled time, then get it in writing.
 

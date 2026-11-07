@@ -26,6 +26,7 @@ DRIVERS = "drivers/content.json"
 YT6 = "youtube-6wk/content.json"
 JAR = "jar-challenge/content.json"
 MONTH8 = "month-8/content.json"
+BRIDGE = "july-bridge/content.json"
 
 
 def test_brand_loads_with_placeholder_affiliates(factory):
@@ -39,7 +40,7 @@ def test_brand_loads_with_placeholder_affiliates(factory):
 import pytest
 
 
-@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5]), (MONTH4, [22, 13, 4]), (MONTH5, [22, 13, 5]), (MONTH6, [22, 14, 4]), (MONTH7, [23, 13, 0]), (COUPLES, [6, 3, 1]), (DRIVERS, [10, 0, 0]), (YT6, [0, 0, 6]), (JAR, [10, 1, 0]), (MONTH8, [22, 14, 4])])
+@pytest.mark.parametrize("name,counts", [("content.json", [14, 8, 2]), (MONTH1, [22, 13, 4]), (MONTH2, [22, 14, 4]), (MONTH3, [22, 13, 5]), (MONTH4, [22, 13, 4]), (MONTH5, [22, 13, 5]), (MONTH6, [22, 14, 4]), (MONTH7, [23, 13, 0]), (COUPLES, [6, 3, 1]), (DRIVERS, [10, 0, 0]), (YT6, [0, 0, 6]), (JAR, [10, 1, 0]), (MONTH8, [22, 14, 4]), (BRIDGE, [6, 0, 0])])
 def test_content_is_valid(factory, name, counts):
     from contentfactory.schemas import Script
     brand = factory.brand("1099-money")
@@ -546,3 +547,49 @@ def test_freelancer_tax_kit_listing_bundles_only_existing_products_honestly():
     assert (LAUNCH / "product" / "Quarterly-Tax-Tracker.xlsx").exists()
     start = (LAUNCH / "products" / "tax-kit" / "the-freelancer-tax-kit.html").read_text()
     assert "Jan 18, 2028" in start and "also free" in start
+
+
+def test_etsy_listings_follow_the_title_and_first_line_rules():
+    etsy = LAUNCH / "etsy"
+    for f in ("quarterly-tax-tracker", "rate-and-contract-kit", "freelancer-money-bundle", "freelancer-tax-kit"):
+        text = (etsy / f"{f}.md").read_text()
+        title = re.search(r"\*\*Title\*\*.*\n(.+)\n", text).group(1)
+        words = [w.lower() for w in re.findall(r"[\w'$]+", title)]
+        assert len(words) < 15, (f, len(words))  # Etsy: fewer than 15 words
+        assert len(words) == len(set(words)), (f, title)  # and no repeated words
+        first = text.split("## Description\n\n")[1].split("\n")[0]
+        assert first.startswith("This ") and title.split(":")[0].split(",")[0].split(" Spreadsheet")[0].lower()[:20] in first.lower(), f
+        assert "01-clean" in text and "08-files-and-formats" in text
+
+
+def test_tracker_2027_edition_uses_rev_proc_2026_35():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("bt", LAUNCH / "product" / "build_tracker.py")
+    bt = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(bt)
+    y = bt.YEARS[2027]
+    assert y["std"] == {"Single": 16600, "Married filing jointly": 33200} and y["ss_base"] == 192300
+    assert [t for t, _ in y["brackets"]["Single"]][1:3] == [12800, 52025]
+    assert all(d.weekday() < 5 for d in y["deadlines"]) and y["deadlines"][-1] == date(2028, 1, 18)
+    guide = (LAUNCH / "product" / "edition-2027" / "the-quarterly-tax-tracker.html").read_text()
+    assert "$11,981.20" in guide and "$192,300" in guide and "Edition 2027.1" in guide
+    # $60K single, 2027: SE 8,477.73 + income tax on 31,328.91 (10% to 12,800, then 12%)
+    assert round(8477.73 + 1280 + 0.12 * (31328.91 - 12800), 2) == 11981.20
+
+
+def test_july_bridge_fills_jul_5_to_10_so_no_day_is_empty(factory):
+    items = _items(BRIDGE)
+    earlier = {i["script"]["title"].lower() for n in ("content.json", MONTH1, MONTH2, MONTH3, MONTH4, MONTH5, MONTH6, MONTH7, MONTH8,
+                                                     COUPLES, DRIVERS, YT6, JAR) for i in _items(n)}
+    assert not earlier & {i["script"]["title"].lower() for i in items}
+    brand = factory.brand("1099-money")
+    spec = {"short": "mon,tue,wed,thu,fri,sat", "carousel": "mon,wed,fri", "long": "sun"}
+    slots, leftover = plan(brand, items, date(2027, 7, 5), 6, spec)
+    assert not leftover and {s.when.date() for s in slots} == {date(2027, 7, 5) + timedelta(days=k) for k in range(6)}
+    # With month 7, the YouTube Sundays, the couples week and month 8, every day Jun 3 – Aug 18, 2027 has a post.
+    covered = {s.when.date() for s in slots}
+    covered |= {s.when.date() for s in plan(brand, _items(MONTH7), date(2027, 6, 3), 31)[0]}
+    covered |= {s.when.date() for s in plan(brand, _items(YT6), date(2027, 6, 6), 36)[0]}
+    covered |= {s.when.date() for s in plan(brand, _items(COUPLES), date(2027, 7, 12), 7, spec)[0]}
+    covered |= {s.when.date() for s in plan(brand, _items(MONTH8), date(2027, 7, 19), 31)[0]}
+    assert {date(2027, 6, 3) + timedelta(days=k) for k in range(77)} <= covered

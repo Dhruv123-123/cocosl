@@ -1,7 +1,7 @@
 # Etsy listing: The Freelancer Tax Kit ([PRICE])
 
-**Title** (≤140 chars)
-Freelancer Tax Kit, Quarterly Estimated Tax Spreadsheet, 2027 Tax Calendar, Self Employed Tax Checklist, Tax Savings Tracker, 1099
+**Title** (under 15 words, no repeated words, per Etsy's title guidance)
+Freelancer Tax Kit: Quarterly Estimated Payment Spreadsheet, 2027 Calendar, Checklist and Savings Log
 
 **Price:** [PRICE] (placeholder; see the pricing notes at the end) · **Type:** Digital download
 **Category:** Paper & Party Supplies > Paper > Templates · **Who made it:** I did · **What is it:** A finished product · **When made:** 2020–2026
@@ -13,9 +13,11 @@ Freelancer Tax Kit, Quarterly Estimated Tax Spreadsheet, 2027 Tax Calendar, Self
 1. 1-Start-Here.pdf
 2. Freelancer-Tax-Kit.zip (the tracker, its guide and the three printables, in numbered folders)
 
-**Images** (from `images/`, upload in order): 01-hero, 02-inside, 03-spreadsheet, 04-guide-pages, 05-how-it-works
+**Images** (from `images/`, upload in this order; 2700×2025): 01-clean (no text, the first photo per Etsy's advice), 02-hero, 03-inside, 04-spreadsheet, 05-pages, 06-close-up, 07-how-it-works, 08-files-and-formats
 
 ## Description
+
+This Freelancer Tax Kit is a quarterly estimated tax spreadsheet with a 10-page guide, plus a printable 2027 tax calendar, tax checklist and tax savings log.
 
 Everything a freelancer needs to set aside the right amount, pay the IRS on time each quarter, and be ready at filing time. In one download.
 

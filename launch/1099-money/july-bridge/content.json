@@ -1,0 +1,353 @@
+[
+ {
+  "format": "short",
+  "pillar": "separating business money",
+  "idea_angle": "The buffer that makes a steady salary work.",
+  "script": {
+   "title": "Steady pay from lumpy income: the 2-month buffer math",
+   "hook": "Sunday's video set up a steady freelance salary. Here's the one number that makes it work: the buffer.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Sunday's video set up a steady freelance salary. Here's the one number that makes it work: the buffer.",
+     "on_screen_text": "The buffer behind a steady salary",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes next to a jar marked with two lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Salary",
+     "narration": "Example, fictional: Jo pays herself four thousand dollars a month from the business account, on the first.",
+     "on_screen_text": "Salary: $4,000 a month",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with a coin on day one. No text, no logos, no real people."
+    },
+    {
+     "heading": "Buffer",
+     "narration": "The buffer is two months of that salary, eight thousand dollars, sitting in the business account after taxes are set aside.",
+     "on_screen_text": "Buffer: 2 × $4,000 = $8,000",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. two equal coin stacks. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why",
+     "narration": "A slow month comes out of the buffer. A big month refills it. Jo's pay stays the same either way.",
+     "on_screen_text": "Slow months draw it down",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a jar going down, then up. No text, no logos, no real people."
+    },
+    {
+     "heading": "Start",
+     "narration": "No buffer yet? Start with a smaller salary until it's built. Link in bio for the full video.",
+     "on_screen_text": "Start small, build it first",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes pointing at a jar. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Example (fictional): a $4,000 monthly salary with a two-month buffer of $8,000 kept in the business account, after tax savings. Slow months draw it down, big months refill it. Build the buffer before raising the salary.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "irregularincome",
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "1099money"
+   ],
+   "description": "The salary buffer for freelancers.",
+   "thumbnail_text": "2-month buffer",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping"
+   ],
+   "claims_to_verify": [
+    "Fictional example; buffer size is a planning choice, not a rule"
+   ]
+  },
+  "format_style": "real-numbers"
+ },
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "Receipts for small travel and meal costs.",
+  "script": {
+   "title": "Expenses under $75: do you still need the receipt?",
+   "hook": "A common question: do I need a receipt for every small business expense?",
+   "segments": [
+    {
+     "heading": "Common question",
+     "narration": "A common question: do I need a receipt for every small business expense?",
+     "on_screen_text": "Common question: receipts under $75?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a tiny receipt. No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "For travel, meals and gifts, the IRS generally doesn't require a receipt for an expense under seventy-five dollars. Lodging always needs one.",
+     "on_screen_text": "Travel, meals, gifts: under $75",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with a small 75. No text, no logos, no real people."
+    },
+    {
+     "heading": "But",
+     "narration": "You still need a record: the date, the amount, where, and the business purpose. A note in your log or on the card statement works.",
+     "on_screen_text": "Still log date, amount, purpose",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a notebook with four lines. No text, no logos, no real people."
+    },
+    {
+     "heading": "Other costs",
+     "narration": "For other business costs, like supplies or software, keep proof of the payment and what it was for, whatever the amount.",
+     "on_screen_text": "Other costs: keep proof",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sunday",
+     "narration": "Sunday's video covers every record worth keeping. Link in bio.",
+     "on_screen_text": "Full records video: Sunday",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes waving. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "For travel, meal and gift expenses under $75 (other than lodging), the IRS generally doesn't require a receipt, but you still need a record of the date, amount, place and business purpose (Publication 463). Keep proof for other business costs.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "recordkeeping",
+    "freelancetaxes",
+    "selfemployed",
+    "freelancing",
+    "1099money"
+   ],
+   "description": "The $75 receipt rule.",
+   "thumbnail_text": "Under $75?",
+   "sources": [
+    "https://www.irs.gov/publications/p463",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/what-kind-of-records-should-i-keep"
+   ],
+   "claims_to_verify": [
+    "Pub 463: documentary evidence not needed for expenses under $75 except lodging; adequate records still required"
+   ]
+  },
+  "format_style": "question-reply"
+ },
+ {
+  "format": "short",
+  "pillar": "separating business money",
+  "idea_angle": "A file-naming habit for receipts.",
+  "script": {
+   "title": "Name your receipt files like this and tax time takes minutes",
+   "hook": "Tax time is mostly searching for receipts. One naming habit fixes that.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Tax time is mostly searching for receipts. One naming habit fixes that.",
+     "on_screen_text": "One habit, faster tax time",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a folder. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1",
+     "narration": "Make one folder per year, with twelve month folders inside.",
+     "on_screen_text": "A folder per year, 12 inside",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a folder with small folders. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2",
+     "narration": "Name every file: date, vendor, amount, purpose. Like twenty twenty-seven, oh-seven, oh-six, print shop, eighty-five dollars, client proofs.",
+     "on_screen_text": "2027-07-06 printshop 85 proofs",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a file label. No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3",
+     "narration": "Save it the day you pay. Phone photo or email PDF, same name pattern.",
+     "on_screen_text": "Save it the day you pay",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a phone with a camera icon. No text, no logos, no real people."
+    },
+    {
+     "heading": "Why",
+     "narration": "Now a search for print shop or July finds it in seconds, and the purpose is already written down.",
+     "on_screen_text": "Search finds it in seconds",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a magnifying glass. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "A naming pattern for receipt files: one folder per year with month folders, and every file named date, vendor, amount, purpose (e.g. 2027-07-06 printshop 85 proofs). Save it the day you pay.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "recordkeeping",
+    "freelancetaxes",
+    "selfemployed",
+    "freelancing",
+    "1099money"
+   ],
+   "description": "Receipt file naming.",
+   "thumbnail_text": "Name your receipts",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping",
+    "https://www.irs.gov/businesses/small-businesses-self-employed/what-kind-of-records-should-i-keep"
+   ],
+   "claims_to_verify": [
+    "General recordkeeping practice; IRS requires records that support income and deductions"
+   ]
+  },
+  "format_style": "how-to"
+ },
+ {
+  "format": "short",
+  "pillar": "separating business money",
+  "idea_angle": "Records people discard too early.",
+  "script": {
+   "title": "3 freelance records people toss too early",
+   "hook": "Most tax records can go after about three years. Three kinds shouldn't.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Most tax records can go after about three years. Three kinds shouldn't.",
+     "on_screen_text": "3 records to keep longer",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes holding a folder close. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 3",
+     "narration": "Number three: receipts for equipment you're still using. Keep them until three years after the tax year you sell or get rid of it.",
+     "on_screen_text": "3: equipment, until 3 years after disposal",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop with a tag. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 2",
+     "narration": "Number two: anything showing income you left off. If you underreported by more than twenty-five percent, the IRS has six years.",
+     "on_screen_text": "2: big omissions = 6 years",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with six pages. No text, no logos, no real people."
+    },
+    {
+     "heading": "Number 1",
+     "narration": "Number one: your filed returns. Keep copies indefinitely. They're the first thing a lender or the IRS asks about.",
+     "on_screen_text": "1: your returns, indefinitely",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a stack of forms. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sunday",
+     "narration": "The full keep-or-toss list is Sunday's video. Link in bio.",
+     "on_screen_text": "Full list: Sunday",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes waving. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Keep longer than three years: records for property and equipment (until the limitations period expires for the year you dispose of it), records for years where income was underreported by more than 25% (six years), and copies of filed returns (many people keep them indefinitely).\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "recordkeeping",
+    "freelancetaxes",
+    "selfemployed",
+    "freelancing",
+    "1099money"
+   ],
+   "description": "Records to keep longer.",
+   "thumbnail_text": "Don't toss these",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records"
+   ],
+   "claims_to_verify": [
+    "IRS: 3 years general; 6 years if >25% income omitted; property records until limitations period expires for year of disposition"
+   ]
+  },
+  "format_style": "countdown"
+ },
+ {
+  "format": "short",
+  "pillar": "deductions with sources",
+  "idea_angle": "A small missed deduction, worked out.",
+  "script": {
+   "title": "A $40-a-month app you forgot to deduct: about $111",
+   "hook": "Forgot to log a forty-dollar monthly business app? Here's what that costs you, worked out.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Forgot to log a forty-dollar monthly business app? Here's what that costs you, worked out.",
+     "on_screen_text": "$40 a month, forgotten",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes at a whiteboard with a phone. No text, no logos, no real people."
+    },
+    {
+     "heading": "Year",
+     "narration": "Forty dollars times twelve is four hundred eighty dollars of business expense.",
+     "on_screen_text": "$40 × 12 = $480",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. twelve small coins. No text, no logos, no real people."
+    },
+    {
+     "heading": "Tax",
+     "narration": "At sixty thousand of profit, single, that four eighty lowers self-employment tax and income tax by about one hundred eleven dollars, twenty-three percent.",
+     "on_screen_text": "$60K profit: ≈ $111 saved",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a coin with a slice. No text, no logos, no real people."
+    },
+    {
+     "heading": "Fix",
+     "narration": "Check your card statement for subscriptions once a month, and log the business ones. Free calculator in the link in bio.",
+     "on_screen_text": "Check subscriptions monthly",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a calendar with a checkmark. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "Example, 2026 federal figures, single, $60,000 profit: a $480 business expense ($40 × 12) lowers federal tax by about $111 (SE tax plus income tax), from the site's tax model. Only business use counts.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFree quarterly tax calculator in the link in bio.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "freelancetaxes",
+    "selfemployed",
+    "1099",
+    "freelancing",
+    "1099money"
+   ],
+   "description": "Value of a small deduction.",
+   "thumbnail_text": "$480 → $111",
+   "sources": [
+    "https://www.irs.gov/publications/p334",
+    "https://www.irs.gov/forms-pubs/about-schedule-c-form-1040"
+   ],
+   "claims_to_verify": [
+    "Site tax model: $60K → $12,037; $59,520 → $11,926 (diff $111)"
+   ]
+  },
+  "format_style": "on-screen-calculation"
+ },
+ {
+  "format": "short",
+  "pillar": "separating business money",
+  "idea_angle": "Backing up tax records.",
+  "script": {
+   "title": "Back up your tax records with the 3-2-1 rule",
+   "hook": "Your receipts live on one laptop? One spilled coffee and they're gone. The 3-2-1 rule fixes it.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Your receipts live on one laptop? One spilled coffee and they're gone. The 3-2-1 rule fixes it.",
+     "on_screen_text": "Back up your tax records",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes with a laptop and a cup. No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "Three copies of your records: the working copy and two backups.",
+     "on_screen_text": "3 copies",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. three small folders. No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "On two different kinds of storage, like your laptop and a cloud drive.",
+     "on_screen_text": "2 kinds of storage",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a laptop and a cloud. No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "And one copy somewhere else, away from home. A cloud drive counts.",
+     "on_screen_text": "1 off-site",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. a small house and a cloud. No text, no logos, no real people."
+    },
+    {
+     "heading": "Sunday",
+     "narration": "What to keep, and for how long, is Sunday's video. Link in bio.",
+     "on_screen_text": "What to keep: Sunday",
+     "visual_prompt": "Clean flat vector illustration, deep navy and warm paper cream with a coral accent and a mint highlight, simple shapes, paper texture. the small paper receipt mascot with a folded corner, round glasses and big eyes waving. No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one freelancer money move a week.",
+   "caption": "The 3-2-1 backup rule for tax records: three copies, on two kinds of storage, with one off-site (a cloud drive counts). IRS-accepted records can be electronic if they're accurate and readable.\n\nEducational, not tax advice. 2026 federal figures; check your state.\n\nFollow for one freelancer money move a week.",
+   "hashtags": [
+    "recordkeeping",
+    "freelancetaxes",
+    "selfemployed",
+    "freelancing",
+    "1099money"
+   ],
+   "description": "Backing up tax records.",
+   "thumbnail_text": "3-2-1 backups",
+   "sources": [
+    "https://www.irs.gov/businesses/small-businesses-self-employed/recordkeeping"
+   ],
+   "claims_to_verify": [
+    "Electronic records acceptable if they meet IRS recordkeeping requirements (Rev. Proc. 97-22)"
+   ]
+  },
+  "format_style": "explainer"
+ }
+]

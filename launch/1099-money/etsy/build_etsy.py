@@ -27,6 +27,7 @@ ROOT = BRAND.parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from contentfactory.business.pdf import html_to_pdf  # noqa: E402
 
+EDITION = 2026  # `--edition 2027` packs the 2027 tax-year tracker (product/edition-2027/)
 TRACKER = BRAND / "product"
 KIT = BRAND / "products" / "rate-contract-kit"
 BUNDLE = BRAND / "products" / "bundle"
@@ -99,7 +100,7 @@ SHOT_JS = """
 const { chromium } = require('playwright');
 (async () => {
   const b = await chromium.launch();
-  const pg = await b.newPage({ viewport: { width: %d, height: %d } });
+  const pg = await b.newPage({ viewport: { width: %d, height: %d }, deviceScaleFactor: 1.125 });  // saved at 2700x2025
   for (const [src, out] of JSON.parse(process.argv[2])) {
     await pg.goto('file://' + src); await pg.waitForTimeout(150); await pg.screenshot({ path: out });
   }
@@ -126,35 +127,59 @@ def flush(tmp: Path) -> None:
 
 
 def images(name: str, kicker: str, title_html: str, chips: list[str], inside: list[str], steps: list[str],
-           cover: Path, pages: list[Path], sheet: Path | None, formats: str, out: Path, tmp: Path) -> list[Path]:
+           cover: Path, pages: list[Path], sheet: Path | None, formats: str, out: Path, tmp: Path,
+           files: list[str] | None = None) -> list[Path]:
+    """Eight listing photos at 2700x2025 (Etsy asks for 2,000 px or more on both sides).
+
+    Photo 1 is clean (real pages only, centred, no text) per Etsy's first-photo advice; the text hero is photo 2.
+    """
     out.mkdir(parents=True, exist_ok=True)
-    made = []
     chip_html = "".join(f"<span>{c}</span>" for c in chips)
-    # 1 Hero: title + real cover page
+    show = pages[1:3] if len(pages) > 2 else pages
+    # 1 Clean first photo: real pages fanned and centred on cream, no words, safe for square crops
+    fan = [show[0], cover] + show[1:2] if show and show[0] != cover else [cover]  # cover in front, centred
+    rot = [-7, 0, 7][:len(fan)]
+    fanned = "".join(
+        f'<img class="page" src="{p.as_uri()}" style="position:absolute;left:50%;top:50%;height:1380px;'
+        f'transform:translate(-50%,-50%) translateX({(k - (len(fan) - 1) / 2) * 330:.0f}px) rotate({r}deg);'
+        f'z-index:{3 - abs(k - 1)}">'
+        for k, (p, r) in enumerate(zip(fan, rot)))
+    render(f' class="cream">{fanned}', out / "01-clean.png", tmp)
+    # 2 Hero: title + real cover page
     render(f""">
       <div class="pad" style="right:1330px"><div class="k">{kicker}</div><h1 style="margin-top:40px">{title_html}</h1>
       <div class="chips">{chip_html}</div><div style="margin-top:60px"><span class="tag">INSTANT DOWNLOAD</span></div></div>
       <img class="page" src="{cover.as_uri()}" style="position:absolute;right:140px;top:170px;height:1460px;max-width:1120px">""",
-           out / "01-hero.png", tmp)
-    # 2 What's inside
+           out / "02-hero.png", tmp)
+    # 3 What's inside
     render(f""" class="cream"><div class="pad"><div class="k">What's inside</div><h2 style="margin:30px 0 40px">{name}</h2>
-      <ul>{''.join(f'<li>{i}</li>' for i in inside)}</ul></div>""", out / "02-inside.png", tmp)
-    # 3 Real pages / spreadsheet
+      <ul>{''.join(f'<li>{i}</li>' for i in inside)}</ul></div>""", out / "03-inside.png", tmp)
+    # 4 The real spreadsheet
     if sheet is not None:
         render(f"""><div class="pad"><div class="k">The real spreadsheet</div>
           <img class="page" src="{sheet.as_uri()}" style="margin-top:40px;width:2120px;height:1400px;object-fit:contain;object-position:top left;background:#fff"></div>""",
-               out / "03-spreadsheet.png", tmp)
-    show = pages[1:3] if len(pages) > 2 else pages
-    imgs = "".join(f'<img class="page" src="{p.as_uri()}" style="height:1340px;max-width:1030px">' for p in show)
-    render(f"""><div class="pad"><div class="k">Inside the guide</div>
-      <div style="display:flex;gap:50px;margin-top:50px;justify-content:center">{imgs}</div></div>""",
-           out / "04-guide-pages.png", tmp)
-    # 5 How it works + formats + disclaimer
-    render(f""" class="cream"><div class="pad"><div class="k">How it works</div><h2 style="margin:30px 0 40px">Download, open, fill in the yellow cells.</h2>
-      <ul>{''.join(f'<li>{s}</li>' for s in steps)}</ul>
-      <p style="margin-top:50px;font-size:42px"><b>Works with:</b> {formats}</p></div>
+               out / "04-spreadsheet.png", tmp)
+    # 5 Real pages side by side
+    two = "".join(f'<img class="page" src="{p.as_uri()}" style="height:1340px;max-width:1030px">' for p in show)
+    render(f"""><div class="pad"><div class="k">Real pages from the download</div>
+      <div style="display:flex;gap:50px;margin-top:50px;justify-content:center">{two}</div></div>""",
+           out / "05-pages.png", tmp)
+    # 6 Close-up: one page large enough to read
+    close = pages[3] if len(pages) > 3 else show[-1]
+    render(f""" class="cream"><img src="{close.as_uri()}" style="position:absolute;left:50%;top:-80px;width:1900px;transform:translateX(-50%);box-shadow:0 30px 80px rgba(0,0,0,.25)">
+      <div style="position:absolute;left:0;right:0;bottom:0;height:300px;background:linear-gradient(rgba(247,243,234,0),#f7f3ea 60%)"></div>
+      <div class="k" style="position:absolute;left:140px;bottom:90px">Close-up · {name}</div>""", out / "06-close-up.png", tmp)
+    # 7 How it works
+    render(f""" class="cream"><div class="pad"><div class="k">How it works</div><h2 style="margin:30px 0 40px">Download, open, fill in.</h2>
+      <ul>{''.join(f'<li>{s}</li>' for s in steps)}</ul></div>
       <div class="foot" style="color:#14213d"><span>1099 Money</span><span>Digital download · nothing is shipped · educational, not tax or legal advice</span></div>""",
-           out / "05-how-it-works.png", tmp)
+           out / "07-how-it-works.png", tmp)
+    # 8 Files and formats
+    flist = "".join(f"<li>{f}</li>" for f in (files or []))
+    render(f"""><div class="pad"><div class="k">Files and formats</div><h2 style="margin:30px 0 40px;font-size:80px">Works with {formats}</h2>
+      <ul>{flist}</ul></div>
+      <div class="foot"><span>1099 Money</span><span>Instant download from your Etsy Purchases page</span></div>""",
+           out / "08-files-and-formats.png", tmp)
     return [Path(o) for _, o in _QUEUE if Path(o).parent == out]
 
 
@@ -191,18 +216,20 @@ def build(out_root: Path) -> dict[str, list[Path]]:
         sheet = sheet_png(TRACKER / "Quarterly-Tax-Tracker.xlsx", "Suggested payment", tmp, "trx")
         imgs = images("The Quarterly Tax Tracker",
                       "Spreadsheet + 10-page guide", "Quarterly<br><em>Tax</em><br>Tracker",
-                      ["Excel", "Google Sheets", "Numbers", "2026 tax year"],
+                      ["Excel", "Google Sheets", "Numbers", f"{EDITION} tax year"],
                       ["What to pay the IRS before each deadline, from your own logs",
                        "Safe harbor vs this year's tax, side by side",
                        "Income, expense (with categories) and mileage logs",
                        "Set-aside check: is your tax savings enough?",
-                       "Every 2026 deadline + all federal tax tables",
+                       f"Every {EDITION} deadline + all federal tax tables",
                        "10-page guide with a $60,000 worked example"],
                       ["Setup tab: filing status and last year's tax (about 5 minutes)",
                        "Log income, expenses and miles as you go",
                        "Before each deadline, pay the Suggested payment row",
                        "Type what you paid; the year updates itself"],
-                      pages[0], pages, sheet, "Excel, Google Sheets, Apple Numbers (.xlsx) · PDF guide", d / "images", tmp)
+                      pages[0], pages, sheet, "Excel, Google Sheets, Apple Numbers (.xlsx) · PDF guide", d / "images", tmp,
+                      ["Quarterly-Tax-Tracker.xlsx: the spreadsheet (7 tabs)", "The-Quarterly-Tax-Tracker-Guide.pdf: 10 pages, Letter size",
+                       f"Tax tables for the {EDITION} tax year"])
         shutil.copy(HERE / "quarterly-tax-tracker.md", d / "LISTING-ETSY.md")
         made["tracker"] = sorted(files.iterdir()) + imgs
 
@@ -230,7 +257,9 @@ def build(out_root: Path) -> dict[str, list[Path]]:
                        "Sign the agreement, invoice the deposit",
                        "Invoice on delivery; the log tracks who owes you"],
                       pages[0], pages, sheet, "Excel, Google Sheets, Numbers (.xlsx) · Word, Google Docs (.docx) · PDF guide",
-                      d / "images", tmp)
+                      d / "images", tmp,
+                      ["Rate-and-Invoice-Kit.xlsx: rate calculator, project pricer, invoice log",
+                       "Contract-and-Proposal-Templates.zip: 4 Word templates", "The-Rate-and-Contract-Kit-Guide.pdf: 7 pages"])
         shutil.copy(HERE / "rate-and-contract-kit.md", d / "LISTING-ETSY.md")
         made["kit"] = sorted(files.iterdir()) + imgs
 
@@ -266,7 +295,9 @@ def build(out_root: Path) -> dict[str, list[Path]]:
                        "Rate Calculator, then the tracker's Setup tab",
                        "Put your terms into the proposal and agreement once",
                        "Save the invoice and reminder emails as templates"],
-                      pages[0], pages, sheet, "Excel, Google Sheets, Numbers · Word, Google Docs · PDF", d / "images", tmp)
+                      pages[0], pages, sheet, "Excel, Google Sheets, Numbers · Word, Google Docs · PDF", d / "images", tmp,
+                      ["1-Start-Here.pdf: 3-page setup guide", "Freelancer-Money-Bundle.zip: tracker, kit, email scripts, calendar",
+                       "Spreadsheets (.xlsx), templates (.docx), guides (PDF)"])
         shutil.copy(HERE / "freelancer-money-bundle.md", d / "LISTING-ETSY.md")
         made["bundle"] = sorted(files.iterdir()) + imgs
 
@@ -300,8 +331,10 @@ def build(out_root: Path) -> dict[str, list[Path]]:
                        "Fill in the tracker's Setup tab",
                        "Print the calendar, checklist and jar log",
                        "Before each deadline, pay the Suggested payment"],
-                      pages[0], [pages[0]] + pages[-2:], tsheet, "Excel, Google Sheets, Numbers (.xlsx) · PDF printables",
-                      d / "images", tmp)
+                      pages[0], [pages[0]] + pages[-2:] + pages[1:2], tsheet, "Excel, Google Sheets, Numbers (.xlsx) · PDF printables",
+                      d / "images", tmp,
+                      ["1-Start-Here.pdf: 3-page setup guide", "Freelancer-Tax-Kit.zip: tracker + guide, calendar, checklist, tax jar log",
+                       "Spreadsheet (.xlsx) and printable PDFs, Letter size"])
         shutil.copy(HERE / "freelancer-tax-kit.md", d / "LISTING-ETSY.md")
         made["taxkit"] = sorted(files.iterdir()) + imgs
         flush(tmp)
@@ -314,11 +347,18 @@ def check(made: dict[str, list[Path]]) -> None:
         files = [f for f in fs if f.suffix != ".png"]
         assert 1 <= len(files) <= 5, (name, files)               # Etsy: up to 5 files per listing
         assert all(f.stat().st_size < 20 * 1024 * 1024 for f in files), name  # 20 MB each
-        assert sum(f.suffix == ".png" for f in fs) >= 4, name
+        assert sum(f.suffix == ".png" for f in fs) >= 7, name
 
 
 if __name__ == "__main__":
-    out = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("/mnt/project-files/content-factory/etsy/1099-money")
+    argv = sys.argv[1:]
+    if "--edition" in argv:
+        k = argv.index("--edition")
+        EDITION = int(argv[k + 1])
+        del argv[k:k + 2]
+        if EDITION != 2026:
+            TRACKER = BRAND / "product" / f"edition-{EDITION}"
+    out = Path(argv[0]) if argv else Path("/mnt/project-files/content-factory/etsy/1099-money")
     made = build(out)
     check(made)
     for k, fs in made.items():

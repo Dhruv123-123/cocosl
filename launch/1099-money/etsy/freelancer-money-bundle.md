@@ -1,7 +1,7 @@
 # Etsy listing: The Freelancer Money Bundle ($49)
 
-**Title** (≤140 chars)
-Freelancer Business Bundle, Quarterly Tax Tracker, Rate Calculator, Contract and Invoice Templates, Client Email Scripts, Google Sheets
+**Title** (under 15 words, no repeated words, per Etsy's title guidance)
+Freelancer Business Bundle: Quarterly Tax Tracker, Rate Calculator and Contract Templates
 
 **Price:** $49.00 (shown next to $44 for the two kits bought separately, plus a bundle-only bonus) · **Type:** Digital download
 **Category:** Paper & Party Supplies > Paper > Templates · **Who made it:** I did · **What is it:** A finished product · **When made:** 2020–2026
@@ -13,9 +13,11 @@ Freelancer Business Bundle, Quarterly Tax Tracker, Rate Calculator, Contract and
 1. 1-Start-Here.pdf
 2. Freelancer-Money-Bundle.zip (everything else, in numbered folders)
 
-**Images** (from `images/`, upload in order): 01-hero, 02-inside, 04-guide-pages, 05-how-it-works
+**Images** (from `images/`, upload in this order; 2700×2025): 01-clean (no text, the first photo per Etsy's advice), 02-hero, 03-inside, 04-spreadsheet, 05-pages, 06-close-up, 07-how-it-works, 08-files-and-formats
 
 ## Description
+
+This Freelancer Business Bundle combines the Quarterly Tax Tracker spreadsheet, the Rate Calculator and Contract Kit, 14 client email scripts and a 2027 tax calendar.
 
 Everything a freelancer needs to price, contract, invoice and pay quarterly taxes, set up in one afternoon.
 
