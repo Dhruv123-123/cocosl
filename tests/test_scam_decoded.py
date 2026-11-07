@@ -113,3 +113,31 @@ def test_weeks_7_12_content_is_valid_and_routed(factory):
         assert all(brand.account(p) for p in item.get("platforms", []))
         assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments), sc.title
         assert "guarantee" not in (sc.caption + " ".join(s.narration for s in sc.segments)).lower()
+
+
+def test_weeks_13_21_content_is_valid_routed_and_new(factory):
+    from contentfactory.schemas import Script
+    brand = factory.brand("scam-decoded")
+    items = json.loads((CONTENT.parent / "weeks-13-21.json").read_text())
+    formats = [i["format"] for i in items]
+    assert formats.count("carousel") == 16 and formats.count("long") == 8
+    tiktok = [i for i in items if i.get("platforms") == ["tiktok"]]
+    shorts = [i for i in items if i.get("platforms") == ["instagram", "youtube"]]
+    assert len(tiktok) == len(shorts) == 24
+    words = lambda i: sum(len(s["narration"].split()) for s in i["script"]["segments"])
+    assert all(60 <= words(i) <= 120 for i in shorts)
+    assert all(150 <= words(i) <= 230 for i in tiktok)
+    earlier = set()
+    for name in ("content.json", "weeks-3-6.json", "weeks-7-12.json"):
+        earlier |= {i["script"]["title"] for i in json.loads((CONTENT.parent / name).read_text())}
+    for item in items:
+        sc = Script.model_validate(item["script"])
+        assert sc.title not in earlier, sc.title
+        assert any(ch.isdigit() for ch in sc.hook), sc.hook
+        assert sc.claims_to_verify and sc.sources
+        assert all(brand.account(p) for p in item.get("platforms", []))
+        assert all(len(s.on_screen_text.split()) <= 12 for s in sc.segments), sc.title
+        assert "guarantee" not in (sc.caption + " ".join(s.narration for s in sc.segments)).lower()
+    sext = [i for i in items if "sextortion" in i["script"]["hashtags"]]
+    assert sext and all("988" in (i["script"]["caption"] + i["script"]["description"] + " ".join(
+        s["narration"] for s in i["script"]["segments"])) for i in sext)
