@@ -36,7 +36,8 @@ import catalog as C  # noqa: E402
 import notion_spec as N  # noqa: E402
 import previews as V  # noqa: E402
 import sheets_templates as ST  # noqa: E402
-from build import recalc_check  # noqa: E402  (launch/products/build.py)
+from products_build import build as _PB  # noqa: E402  (launch/products/build.py, under a unique module name)
+recalc_check = _PB.recalc_check
 from build_etsy import run_jobs  # noqa: E402  (launch/etsy/build_etsy.py)
 
 LINKS = HERE / "links.json"

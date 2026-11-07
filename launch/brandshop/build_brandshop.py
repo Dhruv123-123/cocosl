@@ -271,7 +271,8 @@ def main() -> int:
               "money-made-simple": (MR, mms_jobs), "1099-money-taxhacker": (SC, schedc_jobs)}
     if a.check:
         sys.path.insert(0, str(shop.ROOT / "launch" / "products"))
-        from build import recalc_check
+        from products_build import build as _PB
+        recalc_check = _PB.recalc_check
     for key in a.brand:
         mod, make = brands[key]
         out = root / key

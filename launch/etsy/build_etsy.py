@@ -29,7 +29,8 @@ import listings  # noqa: E402
 import printables  # noqa: E402
 import planner_2027  # noqa: E402
 import printables_more  # noqa: E402
-from build import node_env, wrap_guide  # noqa: E402  (launch/products/build.py)
+from products_build import build as _PB  # noqa: E402  (launch/products/build.py, under a unique module name)
+node_env, wrap_guide = _PB.node_env, _PB.wrap_guide
 
 PRODUCTS_DIST = ROOT / "launch" / "products" / "dist"
 ALL_PRINTABLES = {**printables.PRINTABLES, **printables_more.MORE,

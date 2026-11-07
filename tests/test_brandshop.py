@@ -66,7 +66,8 @@ def test_workbook_formulas(tmp_path):
     assert any("SUMIFS" in f for f in formulas)
     if shutil.which("soffice"):
         sys.path.insert(0, str(SHOP.parents[0] / "products"))
-        from build import recalc_check
+        from products_build import build as PB
+        recalc_check = PB.recalc_check
         assert recalc_check(path) == []
 
 
@@ -94,7 +95,8 @@ def test_remittance_workbook(tmp_path):
     assert wb["Envíos"]["G5"].value.startswith("=") and "'Envíos'!" in wb["Meses"]["C5"].value
     if shutil.which("soffice"):
         sys.path.insert(0, str(SHOP.parents[0] / "products"))
-        from build import recalc_check
+        from products_build import build as PB
+        recalc_check = PB.recalc_check
         assert recalc_check(path) == []
 
 
