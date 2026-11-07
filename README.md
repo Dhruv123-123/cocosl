@@ -69,6 +69,7 @@ factory cleanup --older-than 60 [--yes]     # free disk from posts live everywhe
 factory voice 12 take.m4a                   # your own narration for post 12 (one take, or one file per line); re-renders it
 factory recordings                           # posts waiting on your voice or a screen recording, soonest first
 factory launch-check [--online]             # red/yellow/green: links, UTM tags, placeholders, disclosures, caption limits
+factory stats import --brand <slug> *.csv   # YouTube Studio / TikTok / Plausible exports → weekly scorecard (`factory stats`)
 factory calendar --export output/calendar  # all brands: calendar.ics + calendar.html, flags caps and collisions
 ```
 
