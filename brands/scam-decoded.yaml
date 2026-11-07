@@ -1,0 +1,78 @@
+# Third brand: scam, fraud and identity-theft explainers (research/04-adjacent-niches.md, pick #1).
+# Working name was "Scam Shield"; renamed because T-Mobile sells an anti-scam product called Scam Shield.
+name: Scam Decoded
+niche: scam, fraud and identity-theft explainers for everyday people and their families
+audience: adults 35-70 and their adult children who want to spot scams before they cost money
+promise: one scam, decoded in 60 seconds, so you spot it first
+pillars:
+  - text and email scams, decoded
+  - investment and crypto scams on social media
+  - identity theft and credit freezes
+  - protecting older parents and family
+  - account security basics (passwords, 2FA, SIM swap)
+formats: [short, carousel, long]
+seed_topics:
+  - toll text scam
+  - credit freeze
+  - grandparent scam voice clone
+  - bank impersonation scam
+  - pig butchering scam
+  - sim swap
+  - fake job task scam
+  - tech support pop up scam
+avoid_topics:
+  - real victims' names, numbers or screenshots
+  - panic hooks like "you've been hacked"
+  - how-to-scam instructions
+  - naming a real company as a scammer without an official source
+subreddits: [Scams, IdentityTheft, personalfinance]
+hashtags: [scamalert, scamawareness, fraudprevention, identitytheft, onlinesafety, scamdecoded]
+cta: Follow, and send this to someone who'd fall for it.
+link_in_bio: https://example.com/scamdecoded
+voice:
+  tone: calm, specific, protective, zero panic, a little dry
+  persona: a former bank fraud investigator who explains things to their own parents
+  tts_voice: ""          # your own cloned voice or a licensed stock voice id
+  banned_phrases: ["you've been hacked", "100% safe", "never get scammed again", "guaranteed protection", "hackers hate"]
+visual:
+  palette: ["#0d1b2a", "#f4f1ea", "#2ec4b6", "#ff9f1c"]
+  font: Inter
+  image_style: clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes, no text, no logos
+  mascot: a small round teal shield character with big curious eyes and a magnifying glass (original design)
+  watermark: "@scamdecoded"
+cadence:
+  shorts_per_week: 5
+  long_per_week: 1
+  carousels_per_week: 3
+  max_posts_per_day_per_platform: 2
+  post_times: ["12:00", "19:30"]
+  timezone: America/New_York
+# Shorts (30-45s) go to Reels and YouTube Shorts. TikTok gets its own 60-90s cut of each script
+# (research/03-hooks-and-formats.md: over-60s TikToks break out ~2x as often). Each launch item names
+# its platforms, so the short and its TikTok cut never double-post.
+accounts:
+  - {platform: instagram, handle: "@scamdecoded", formats: [short, carousel, image]}
+  - {platform: youtube, handle: "@scamdecoded", formats: [short, long]}
+  - {platform: tiktok, handle: "@scamdecoded", formats: [short]}
+# Placeholders. Replace each url with your tracking link once approved (research/02-affiliate-programs.md).
+affiliates:
+  - name: Aura (identity theft protection)
+    url: https://example.com/go/aura
+    slug: aura
+    keywords: [identity theft, identity monitoring, credit monitoring, data broker]
+    commission: "$65+ per enrollment via Impact (60-day cookie)"
+  - name: 1Password (password manager)
+    url: https://example.com/go/1password
+    slug: 1password
+    keywords: [password manager, passwords, passkey]
+    commission: "25% of first payment via FlexOffers (45-day cookie)"
+  - name: NordVPN
+    url: https://example.com/go/nordvpn
+    slug: nordvpn
+    keywords: [vpn, public wi-fi, wifi]
+    commission: "up to 40% new sales (30-day cookie)"
+products:
+  - {name: "The Family Scam-Proofing Kit (printable PDF)", url: "https://example.gumroad.com/l/scam-proof-kit", price: 9}
+ai_disclosure: "Visuals and voice made with AI tools. Script written and fact-checked by a human. All example messages, names and numbers are fictional."
+realistic_synthetic_media: false
+require_human_review: true

@@ -50,7 +50,9 @@ SYSTEM = (
     "omit); list every factual claim that needs checking in claims_to_verify; list every computed money figure (loan payment, "
     "interest, payoff time, growth, federal or payroll tax) in calcs with its inputs so it is recomputed; never write first-person "
     "product testimonials ('I used this and...'); no real people's likeness in visual prompts; no "
-    "logos or brand marks in visual prompts; no text inside visual prompts; no engagement bait."
+    "logos or brand marks in visual prompts; no text inside visual prompts; no engagement bait. "
+    "The first line must contain a specific number, a named mistake, or an age/situation; no greetings, "
+    "no 'This app...' or 'POV' openers. Every number shown on screen goes into claims_to_verify."
 )
 
 

@@ -1,0 +1,867 @@
+[
+ {
+  "format": "short",
+  "pillar": "tax season scams",
+  "platforms": [
+   "instagram",
+   "youtube"
+  ],
+  "post_on": "2027-01-16 12:00",
+  "topic": "IRS impersonation",
+  "look": "illustrated",
+  "original_element": "Illustrated beats; the closing beat is 5 seconds of Dhruv's screen showing IRS.gov's sign-in page (no login).",
+  "idea_angle": "Tax season 2027 pack: IRS impersonation. Why you should create your IRS Online Account yourself, not through a 'helper'.",
+  "script": {
+   "title": "'I'll set up your IRS account for you': 1 offer to refuse",
+   "hook": "1 friendly offer to set up your IRS online account is how some tax identity theft starts.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "One friendly offer. I'll set up your IRS online account for you, just send me your details.",
+     "on_screen_text": "'I'll set it up for you'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes looking at a laptop No text, no logos, no real people."
+    },
+    {
+     "heading": "Why they want it",
+     "narration": "That account shows your tax records and your IP PIN. Whoever sets it up can get in, and file in your name.",
+     "on_screen_text": "Whoever sets it up can get in",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a padlock with someone else's key No text, no logos, no real people."
+    },
+    {
+     "heading": "The tell",
+     "narration": "The IRS says create your account directly at I R S dot gov. Don't rely on a helper who contacted you.",
+     "on_screen_text": "Create it yourself at IRS.gov",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. an address bar reading IRS.gov No text, no logos, no real people."
+    },
+    {
+     "heading": "Do this",
+     "narration": "Set it up yourself, with your own email and phone. Then turn on an IP PIN while you're in there.",
+     "on_screen_text": "Your email. Your phone. Your account.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes with a shield No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "An IRS Online Account is useful: it shows what you owe, your payments and your IP PIN. That's why scammers offer to 'help' you set one up. Create it yourself at IRS.gov.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "taxseason",
+    "irs",
+    "identitytheft",
+    "taxscam",
+    "scamdecoded"
+   ],
+   "description": "Why you should create your IRS Online Account yourself, not through a 'helper'.",
+   "thumbnail_text": "Set it up yourself",
+   "sources": [
+    "https://www.irs.gov/newsroom/dirty-dozen-tax-scams-for-2026-irs-reminds-taxpayers-to-watch-out-for-dangerous-threats",
+    "https://www.irs.gov/identity-theft-central/identity-theft-guide-for-individuals"
+   ],
+   "claims_to_verify": [
+    "Scammers pose as helpers to collect information during IRS Online Account setup (IRS Dirty Dozen 2026)",
+    "Create your account directly at IRS.gov (IRS)"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "identity theft and credit freezes",
+  "platforms": [
+   "instagram"
+  ],
+  "post_on": "2027-01-23 19:30",
+  "topic": "IP PIN",
+  "look": "checklist",
+  "original_element": "Slide 3 is a screenshot of where the IP PIN lives in the IRS Online Account (Dhruv's own, PIN blurred).",
+  "idea_angle": "Tax season 2027 pack: IP PIN. Six facts about the IRS Identity Protection PIN.",
+  "script": {
+   "title": "The IRS IP PIN: 6 facts before you file",
+   "hook": "6 facts about the IRS IP PIN, the 6-digit number that blocks tax refund theft.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "",
+     "on_screen_text": "IP PIN: 6 facts",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a 6-digit card No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Anyone with an SSN or ITIN who can verify their identity can get one. You don't need to be a victim first.",
+     "on_screen_text": "1. Anyone can get one",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a 6-digit code on a shield No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "It's 6 digits, and without it nobody can e-file a federal return with your Social Security number.",
+     "on_screen_text": "2. It blocks fake returns",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a return with a stop sign No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "The fastest way is your IRS Online Account or the IRS app. There's also a paper form if your income is under the limit.",
+     "on_screen_text": "3. Get it online",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone with the IRS app No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "A new one is generated every year. Look up the current one in your account each January.",
+     "on_screen_text": "4. It changes yearly",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a calendar with January circled No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "Give it only to the preparer filing your return. Don't put it on your state return or an extension.",
+     "on_screen_text": "5. Federal return only",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a form labelled 1040 No text, no logos, no real people."
+    },
+    {
+     "heading": "6",
+     "narration": "Lost it? Look it up in your account, or call the number on IRS.gov. It isn't proof of identity on calls.",
+     "on_screen_text": "6. Lost it? Look it up",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a magnifying glass on a lock No text, no logos, no real people."
+    },
+    {
+     "heading": "Save this",
+     "narration": "Save this and get yours before you file.",
+     "on_screen_text": "Save it. Share it.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes giving a thumbs up No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "The IP PIN is a 6-digit number the IRS gives you so nobody else can file a federal return with your Social Security number. 6 facts before you file.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "ippin",
+    "taxseason",
+    "identitytheft",
+    "irs",
+    "scamdecoded"
+   ],
+   "description": "Six facts about the IRS Identity Protection PIN.",
+   "thumbnail_text": "IP PIN: 6 facts",
+   "sources": [
+    "https://www.irs.gov/identity-theft-fraud-scams/get-an-identity-protection-pin",
+    "https://www.irs.gov/identity-theft-fraud-scams/frequently-asked-questions-about-the-identity-protection-personal-identification-number-ip-pin"
+   ],
+   "claims_to_verify": [
+    "Anyone with an SSN or ITIN who can verify their identity can get an IP PIN (IRS)",
+    "A new IP PIN is generated each year (IRS)",
+    "The IP PIN is used on federal returns only, not state returns (IRS)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "tax season scams",
+  "platforms": [
+   "tiktok"
+  ],
+  "post_on": "2027-01-30 18:00",
+  "topic": "refund-theft texts",
+  "look": "walkthrough",
+  "original_element": "Walkthrough video w8-irs-refund-text (originality/out/walkthroughs/w8-irs-refund-text). Dhruv records the narration in his own voice. No AI voice on TikTok cuts.",
+  "idea_angle": "Tax season 2027 pack: refund-theft texts. The fake IRS refund text with a QR code, walked through.",
+  "script": {
+   "title": "The 'IRS refund' text with a QR code, played out",
+   "hook": "4 red flags in 1 'IRS refund' text with a QR code. Watch them light up one by one.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Four red flags in one IRS refund text, and this one has a QR code. Watch them light up one by one.",
+     "on_screen_text": "4 red flags. Watch.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough w8, blank No text, no logos, no real people."
+    },
+    {
+     "heading": "The text",
+     "narration": "IRS notice. Your federal refund of two thousand three hundred eighteen dollars is pending verification. Scan the QR code or visit the link within forty-eight hours to avoid cancellation.",
+     "on_screen_text": "'Pending verification'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough w8, first message No text, no logos, no real people."
+    },
+    {
+     "heading": "Pause",
+     "narration": "Pause. Count the red flags before I point them out.",
+     "on_screen_text": "Pause: count them",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a full-screen countdown card reading PAUSE No text, no logos, no real people."
+    },
+    {
+     "heading": "Flags 1 and 2",
+     "narration": "One: it says IRS, by text, out of the blue. The IRS doesn't start contact about your refund that way. Two: forty-eight hours or it's cancelled. Refunds don't expire like that.",
+     "on_screen_text": "1: IRS by text · 2: deadline",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough w8, flags 1 and 2 No text, no logos, no real people."
+    },
+    {
+     "heading": "Flags 3 and 4",
+     "narration": "Three: the link and the QR code go to a site that isn't I R S dot gov. Four: it wants your Social Security number, birthday and bank routing number. That's enough to file in your name and send the refund to them.",
+     "on_screen_text": "3: not IRS.gov · 4: SSN + bank",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. walkthrough w8, flags 3 and 4 No text, no logos, no real people."
+    },
+    {
+     "heading": "The fix",
+     "narration": "Check your refund only at I R S dot gov slash refunds, typed in yourself. Forward the text to seven seven two six, and report it to phishing at I R S dot gov.",
+     "on_screen_text": "IRS.gov/refunds. Report to phishing@irs.gov.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes pointing at an address bar No text, no logos, no real people."
+    },
+    {
+     "heading": "Already scanned?",
+     "narration": "Already scanned it and typed your details? Get an IP PIN now, so nobody can file with your number, and follow the steps at identity theft dot gov.",
+     "on_screen_text": "Typed your SSN? Get an IP PIN now.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a shield with six digits No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "caption": "Refund 'pending verification', a QR code and a 48-hour deadline. The IRS doesn't start contact about your refund by text. Example is fictional.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "taxrefund",
+    "irs",
+    "qrcode",
+    "taxscam",
+    "scamdecoded"
+   ],
+   "description": "The fake IRS refund text with a QR code, walked through.",
+   "thumbnail_text": "QR code from the 'IRS'? No.",
+   "sources": [
+    "https://www.irs.gov/newsroom/dirty-dozen-tax-scams-for-2026-irs-reminds-taxpayers-to-watch-out-for-dangerous-threats",
+    "https://www.irs.gov/help/report-fraud/report-fake-irs-treasury-or-tax-related-emails-and-messages",
+    "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages"
+   ],
+   "claims_to_verify": [
+    "Scammers send IRS-looking texts with QR codes that lead to fake sites (IRS Dirty Dozen 2026)",
+    "Report IRS-related phishing to phishing@irs.gov (IRS)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "tax season scams",
+  "platforms": [
+   "instagram",
+   "youtube"
+  ],
+  "post_on": "2027-02-06 12:00",
+  "topic": "fake preparers",
+  "look": "quiz pause",
+  "original_element": "Quiz format with a real 3-second pause card; Dhruv on camera for the answer.",
+  "idea_angle": "Tax season 2027 pack: fake preparers. A quick quiz on choosing a tax preparer: PTIN, signatures and fees.",
+  "script": {
+   "title": "Quiz: which of 3 tax preparers gets your W-2?",
+   "hook": "3 tax preparers, 1 you can trust. Pause and pick before I tell you.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Three tax preparers, one you can trust. Pause and pick.",
+     "on_screen_text": "Pause: A, B or C?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. three cards labelled A B C No text, no logos, no real people."
+    },
+    {
+     "heading": "The three",
+     "narration": "A charges twenty percent of your refund. B prepares it but won't sign it. C has a P T I N, signs the return and gives you a copy.",
+     "on_screen_text": "A: % cut · B: no signature · C: PTIN",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the three cards with labels No text, no logos, no real people."
+    },
+    {
+     "heading": "Answer",
+     "narration": "C. A fee based on your refund is a red flag. A preparer who won't sign is what the IRS calls a ghost preparer.",
+     "on_screen_text": "C is the only safe one",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. card C with a green check No text, no logos, no real people."
+    },
+    {
+     "heading": "Why it matters",
+     "narration": "You're legally responsible for what's on your return, even if they wrote it. Never sign a blank one.",
+     "on_screen_text": "You're responsible for your return",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a pen over a blank form No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "A: charges a percentage of your refund. B: won't sign the return. C: has a PTIN, signs the return, and gives you a copy. Only one is safe.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "taxpreparer",
+    "taxseason",
+    "ghostpreparer",
+    "irs",
+    "scamdecoded"
+   ],
+   "description": "A quick quiz on choosing a tax preparer: PTIN, signatures and fees.",
+   "thumbnail_text": "Which preparer?",
+   "sources": [
+    "https://www.irs.gov/taxtopics/tc254",
+    "https://www.irs.gov/newsroom/dirty-dozen-tax-scams-for-2026-irs-reminds-taxpayers-to-watch-out-for-dangerous-threats"
+   ],
+   "claims_to_verify": [
+    "Paid preparers must have a PTIN and sign the return (IRS)",
+    "Avoid preparers who base fees on the size of your refund (IRS)",
+    "Taxpayers are legally responsible for what's on their return (IRS)"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "tax season scams",
+  "platforms": [
+   "instagram"
+  ],
+  "post_on": "2027-02-13 19:30",
+  "topic": "fake preparers",
+  "look": "quiz",
+  "original_element": "Rendered quiz carousel q8-ghost-preparer: use the 7 PNG slides as-is (originality/out/quizzes/q8-ghost-preparer).",
+  "idea_angle": "Tax season 2027 pack: fake preparers. A quiz carousel: four red flags in a ghost preparer's ad.",
+  "script": {
+   "title": "Spot the red flags: the 'biggest refunds in town' preparer ad",
+   "hook": "4 red flags in 1 tax preparer ad. How many can you find before you swipe?",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "",
+     "on_screen_text": "Find 4 red flags",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a score card No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "'20% of your refund.' A fee based on how big your refund is.",
+     "on_screen_text": "1. A % of your refund",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. quiz slide 3 No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "'Just sign here and we'll fill in the rest.' Never sign a blank or incomplete return.",
+     "on_screen_text": "2. Sign a blank return",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. quiz slide 4 No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "'Same-day cash advance.' A pitch to get you in the door, not a reason to choose them.",
+     "on_screen_text": "3. Cash advance pitch",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. quiz slide 5 No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "'No PTIN needed.' Paid preparers must have a PTIN and sign your return.",
+     "on_screen_text": "4. No PTIN",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. quiz slide 6 No text, no logos, no real people."
+    },
+    {
+     "heading": "Save this",
+     "narration": "Use a preparer with a PTIN who signs, or free IRS-certified help. How many did you get?",
+     "on_screen_text": "Save it. Share it.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes giving a thumbs up No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "Quiz time. Count the red flags in the ad on slide 1 before you swipe. Example is fictional.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "taxpreparer",
+    "ghostpreparer",
+    "spotthescam",
+    "taxseason",
+    "scamdecoded"
+   ],
+   "description": "A quiz carousel: four red flags in a ghost preparer's ad.",
+   "thumbnail_text": "Find 4 red flags",
+   "sources": [
+    "https://www.irs.gov/taxtopics/tc254",
+    "https://www.irs.gov/newsroom/dirty-dozen-tax-scams-for-2026-irs-reminds-taxpayers-to-watch-out-for-dangerous-threats"
+   ],
+   "claims_to_verify": [
+    "Ghost preparers won't sign returns or omit their PTIN (IRS)",
+    "Never sign a blank or incomplete return (IRS)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "tax season scams",
+  "platforms": [
+   "tiktok"
+  ],
+  "post_on": "2027-02-20 18:00",
+  "topic": "refund-theft texts",
+  "look": "face cam",
+  "original_element": "Dhruv on camera reading the 'CEO' email from his phone, then the one-call rule. Dhruv records the narration in his own voice. No AI voice on TikTok cuts.",
+  "idea_angle": "Tax season 2027 pack: refund-theft texts. The W-2 phishing email aimed at payroll and HR, and the one-call rule that stops it.",
+  "script": {
+   "title": "The 'boss' who emails HR for every W-2, played out",
+   "hook": "1 email from the 'CEO' to payroll can hand every employee's W-2 to a tax thief.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "One email to payroll from the CEO can hand every employee's W-2 to a tax thief. Here's how it reads.",
+     "on_screen_text": "1 email to payroll",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv on camera holding a phone No text, no logos, no real people."
+    },
+    {
+     "heading": "The email",
+     "narration": "Hi, quick favour. I need copies of all employee W-2s for a meeting with the accountant. PDF is fine. I'm traveling, so email is best. Thanks.",
+     "on_screen_text": "'All employee W-2s, by email'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. an email on a phone screen No text, no logos, no real people."
+    },
+    {
+     "heading": "Pause",
+     "narration": "Pause. If this landed in your inbox at work, what would you do first?",
+     "on_screen_text": "Pause: what do you do?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a full-screen countdown card reading PAUSE No text, no logos, no real people."
+    },
+    {
+     "heading": "The tells",
+     "narration": "The sender's address is one letter off, or a personal email. The request is urgent and unusual. And the boss can't be reached, so you can't check. And it wants PDFs by email, the least safe way to send them.",
+     "on_screen_text": "Odd address · urgent · unreachable",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. an email address with one letter circled No text, no logos, no real people."
+    },
+    {
+     "heading": "Why it matters",
+     "narration": "W-2s hold names, Social Security numbers and wages. That's everything a thief needs to file fake returns for your whole company, before your coworkers file their own.",
+     "on_screen_text": "W-2s = SSNs + wages",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a stack of W-2s blowing away No text, no logos, no real people."
+    },
+    {
+     "heading": "The rule",
+     "narration": "One call. Before sending any W-2s, call the person who asked, on a number you already have. Not the number in the email. Payroll teams can make it a written rule: W-2s never go out by email. If it was already sent, tell your manager and the IRS right away.",
+     "on_screen_text": "Call before you send",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a phone No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "caption": "Work in payroll, HR or a small business office? The 'boss' email asking for every employee's W-2 is a classic tax season scam. Call the boss first.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "w2",
+    "smallbusiness",
+    "payroll",
+    "phishing",
+    "scamdecoded"
+   ],
+   "description": "The W-2 phishing email aimed at payroll and HR, and the one-call rule that stops it.",
+   "thumbnail_text": "Your boss didn't ask for the W-2s",
+   "sources": [
+    "https://www.irs.gov/newsroom/form-w-2-ssn-data-theft-information-for-businesses-and-payroll-service-providers",
+    "https://www.irs.gov/help/tax-scams/recognize-tax-scams-and-fraud"
+   ],
+   "claims_to_verify": [
+    "Scammers impersonate executives to request employees' Forms W-2 from payroll staff (IRS)",
+    "Stolen W-2 data is used to file fraudulent returns (IRS)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "tax season scams",
+  "platforms": [
+   "instagram",
+   "youtube"
+  ],
+  "post_on": "2027-02-27 12:00",
+  "topic": "IRS impersonation",
+  "look": "data chart",
+  "original_element": "An FTC data chart beat drawn like originality/out/charts (bars: imposters $3.5B, business ~$1B, government ~$920M).",
+  "idea_angle": "Tax season 2027 pack: IRS impersonation. FTC data on government impersonation losses, and three things the real IRS won't do.",
+  "script": {
+   "title": "$920 million to fake agents: 3 things the IRS won't do",
+   "hook": "About $920 million. That's what people reported losing to fake government agents in 2025.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "About nine hundred twenty million dollars. That's what people told the FTC they lost to fake government agents in twenty twenty-five.",
+     "on_screen_text": "~$920M to fake government agents",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. an FTC-style bar chart, government bar in amber No text, no logos, no real people."
+    },
+    {
+     "heading": "Won't 1",
+     "narration": "The real IRS won't call, text or email out of the blue demanding payment. It usually starts with a letter.",
+     "on_screen_text": "1. No surprise payment demands",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. an envelope with the IRS eagle simplified No text, no logos, no real people."
+    },
+    {
+     "heading": "Won't 2",
+     "narration": "It won't threaten arrest, and it won't ask for gift cards, crypto or a wire.",
+     "on_screen_text": "2. No arrest threats, no gift cards",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a gift card with a red X No text, no logos, no real people."
+    },
+    {
+     "heading": "Won't 3",
+     "narration": "And it won't ask you to read your details over the phone to a caller. Hang up, and check your account at I R S dot gov.",
+     "on_screen_text": "3. Check your account yourself",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes hanging up a phone No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "People told the FTC they lost about $920 million to government impersonators in 2025. Fake IRS agents are a big part of that. 3 things the real IRS won't do.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "irs",
+    "governmentimposter",
+    "taxseason",
+    "ftcdata",
+    "scamdecoded"
+   ],
+   "description": "FTC data on government impersonation losses, and three things the real IRS won't do.",
+   "thumbnail_text": "$920M to fake agents",
+   "sources": [
+    "https://www.ftc.gov/news-events/news/press-releases/2026/06/ftc-data-show-people-reported-losing-3-point-5-billion-imposter-scams-2025",
+    "https://www.irs.gov/help/how-to-know-its-the-irs",
+    "https://www.irs.gov/newsroom/dirty-dozen-tax-scams-for-2026-irs-reminds-taxpayers-to-watch-out-for-dangerous-threats"
+   ],
+   "claims_to_verify": [
+    "People reported losing about $920 million to government impersonators in 2025 (FTC, Jun 2026)",
+    "The IRS generally contacts people by mail first and doesn't demand immediate payment by phone or threaten arrest (IRS)"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "tax season scams",
+  "platforms": [
+   "instagram"
+  ],
+  "post_on": "2027-03-13 19:30",
+  "topic": "fake preparers",
+  "look": "comparison",
+  "original_element": "Slide 4 is Dhruv's screen recording still of IRS.gov's free tax prep site locator.",
+  "idea_angle": "Tax season 2027 pack: fake preparers. Free IRS-backed tax help, compared with paid lookalikes in search ads.",
+  "script": {
+   "title": "Free tax help that's real: VITA, TCE and IRS Free File vs the search ad",
+   "hook": "3 free, IRS-backed ways to get your taxes done, and 1 search ad that charges for the same thing.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "",
+     "on_screen_text": "Free tax help: 3 real options",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a 1040 No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "VITA: IRS-certified volunteers prepare basic returns for free for people who qualify, often by income.",
+     "on_screen_text": "1. VITA",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a volunteer at a desk No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "TCE: free tax help focused on people 60 and over, with volunteers who know pensions and retirement questions.",
+     "on_screen_text": "2. TCE",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. an older adult with a volunteer No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "IRS Free File: free guided tax software for eligible taxpayers, reached from IRS.gov.",
+     "on_screen_text": "3. IRS Free File",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a laptop with a free tag No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "The search ad: a lookalike 'free file' site that charges at the end, or a preparer who takes a cut. Start at IRS.gov.",
+     "on_screen_text": "Skip: the search ad",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a search result with a price tag No text, no logos, no real people."
+    },
+    {
+     "heading": "Save this",
+     "narration": "Save this, and send it to someone who pays to file every year.",
+     "on_screen_text": "Save it. Share it.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes giving a thumbs up No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "Before you pay a stranger to do your taxes, check the free options:\n1. VITA (IRS-certified volunteers)\n2. TCE (focus on people 60 and over)\n3. IRS Free File\nStart from IRS.gov, not a search ad.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "freetaxprep",
+    "vita",
+    "taxseason",
+    "irsfreefile",
+    "scamdecoded"
+   ],
+   "description": "Free IRS-backed tax help, compared with paid lookalikes in search ads.",
+   "thumbnail_text": "Free tax help: 3 real options",
+   "sources": [
+    "https://www.irs.gov/individuals/free-tax-return-preparation-for-qualifying-taxpayers",
+    "https://www.irs.gov/e-file-do-your-taxes-for-free"
+   ],
+   "claims_to_verify": [
+    "VITA and TCE offer free tax return preparation for qualifying taxpayers (IRS)",
+    "TCE focuses on taxpayers 60 and older (IRS)",
+    "IRS Free File offers free guided tax software for eligible taxpayers (IRS)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "identity theft and credit freezes",
+  "platforms": [
+   "tiktok"
+  ],
+  "post_on": "2027-03-20 18:00",
+  "topic": "IP PIN",
+  "look": "illustrated",
+  "original_element": "Illustrated explainer with Dhruv's own voice. Dhruv records the narration in his own voice. No AI voice on TikTok cuts.",
+  "idea_angle": "Tax season 2027 pack: IP PIN. What to do when your e-filed return is rejected because a dependent was already claimed, and how an IP PIN helps.",
+  "script": {
+   "title": "'Dependent already claimed': your child's SSN, what now?",
+   "hook": "1 rejection message, 'dependent already claimed', can mean someone used your child's SSN.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "One rejection message: dependent already claimed. It can mean someone used your child's Social Security number. Here's what to do.",
+     "on_screen_text": "'Dependent already claimed'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a rejected form No text, no logos, no real people."
+    },
+    {
+     "heading": "Two causes",
+     "narration": "Sometimes it's a mix-up: an ex, a grandparent or another relative claimed the same child. Sometimes it's a stranger who bought or stole the number. Either way, the e-filed return won't go through until it's sorted.",
+     "on_screen_text": "Mix-up or identity theft",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. two paths from one form No text, no logos, no real people."
+    },
+    {
+     "heading": "Pause",
+     "narration": "Pause. Before you panic, who else could have claimed your child this year? Think about it.",
+     "on_screen_text": "Pause: who else could it be?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a full-screen countdown card reading PAUSE No text, no logos, no real people."
+    },
+    {
+     "heading": "If it's family",
+     "narration": "Talk to them first. Only one person can claim a child, and the IRS has tie-breaker rules. If you're the one entitled to claim, you can file on paper and the IRS will sort it out by mail.",
+     "on_screen_text": "Family? Talk first. Then paper-file.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. two adults talking with a form No text, no logos, no real people."
+    },
+    {
+     "heading": "If it's a stranger",
+     "narration": "If nobody you know claimed them, treat it as identity theft. Follow the IRS identity theft steps, and file on paper with your correct information.",
+     "on_screen_text": "A stranger? Identity theft steps.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a shield with a child icon No text, no logos, no real people."
+    },
+    {
+     "heading": "Next year",
+     "narration": "Then lock it. A dependent can have their own IP PIN, and an e-filed return claiming them is rejected without it. Get one for each child in January. It's free, and a new one comes every year, just like yours.",
+     "on_screen_text": "Get your child an IP PIN",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a 6-digit code on a small shield No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "caption": "Your return bounces: the dependent's SSN was already used. It might be a family mix-up, or identity theft. Here's what to do, and how a child's IP PIN helps.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "taxseason",
+    "dependents",
+    "identitytheft",
+    "ippin",
+    "scamdecoded"
+   ],
+   "description": "What to do when your e-filed return is rejected because a dependent was already claimed, and how an IP PIN helps.",
+   "thumbnail_text": "Someone claimed your kid?",
+   "sources": [
+    "https://www.irs.gov/faqs/electronic-filing-e-file/age-name-or-ssn-rejects-errors-correction-procedures",
+    "https://www.irs.gov/identity-theft-fraud-scams/frequently-asked-questions-about-the-identity-protection-personal-identification-number-ip-pin",
+    "https://www.irs.gov/identity-theft-central/identity-theft-guide-for-individuals"
+   ],
+   "claims_to_verify": [
+    "E-filed returns are rejected when a dependent's SSN was already used on another return (IRS)",
+    "Dependents can have their own IP PIN, entered on the e-filed return (IRS)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "identity theft and credit freezes",
+  "platforms": [
+   "instagram",
+   "youtube"
+  ],
+  "post_on": "2027-03-27 12:00",
+  "topic": "IP PIN",
+  "look": "screen recording",
+  "original_element": "Dhruv screen-records signing in to his own IRS Online Account and finding the IP PIN section (personal details blurred).",
+  "idea_angle": "Tax season 2027 pack: IP PIN. A screen walkthrough of where to get an IRS IP PIN.",
+  "script": {
+   "title": "Getting an IP PIN takes about 10 minutes. Here's the screen.",
+   "hook": "10 minutes on IRS.gov, and nobody can e-file a federal return with your Social Security number.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Ten minutes on I R S dot gov, and nobody can e-file a federal return with your Social Security number.",
+     "on_screen_text": "10 minutes. 1 PIN.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv's screen: IRS.gov home page No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 1",
+     "narration": "Go to I R S dot gov, typed yourself, and sign in to your online account. If it's your first time, you'll verify your identity. That's most of the ten minutes.",
+     "on_screen_text": "Sign in at IRS.gov",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv's screen: sign-in page No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 2",
+     "narration": "Open your profile and find the identity protection PIN section. Choose to get one, and save it somewhere safe.",
+     "on_screen_text": "Profile → IP PIN",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. Dhruv's screen: profile page, PIN blurred No text, no logos, no real people."
+    },
+    {
+     "heading": "Step 3",
+     "narration": "Give it only to the preparer filing your federal return. A new one shows up every January.",
+     "on_screen_text": "Only your preparer. New each January.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes holding a calendar No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "Most of the work is verifying who you are. After that, the IP PIN is on your profile page, and a new one shows up every January.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "ippin",
+    "taxseason",
+    "identitytheft",
+    "irs",
+    "scamdecoded"
+   ],
+   "description": "A screen walkthrough of where to get an IRS IP PIN.",
+   "thumbnail_text": "IP PIN in 10 minutes",
+   "sources": [
+    "https://www.irs.gov/identity-theft-fraud-scams/get-an-identity-protection-pin",
+    "https://www.irs.gov/identity-theft-fraud-scams/frequently-asked-questions-about-the-identity-protection-personal-identification-number-ip-pin"
+   ],
+   "claims_to_verify": [
+    "You can get an IP PIN through your IRS Online Account or the IRS app (IRS)",
+    "A new IP PIN is generated each year (IRS)"
+   ]
+  }
+ },
+ {
+  "format": "carousel",
+  "pillar": "tax season scams",
+  "platforms": [
+   "instagram"
+  ],
+  "post_on": "2027-04-03 19:30",
+  "topic": "refund-theft texts",
+  "look": "data",
+  "original_element": "Data-style carousel: the IRS figure of 600+ social media impersonators reported in fiscal year 2025 on slide 1.",
+  "idea_angle": "Tax season 2027 pack: refund-theft texts. Five ways tax refunds get stolen, and why an IP PIN is the lock.",
+  "script": {
+   "title": "5 ways criminals steal a tax refund, and the 1 lock that blocks most of them",
+   "hook": "5 ways a tax refund gets stolen, and 1 lock that blocks most of them.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "",
+     "on_screen_text": "Refund theft: 5 ways",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes with a padlock No text, no logos, no real people."
+    },
+    {
+     "heading": "1",
+     "narration": "Fake IRS texts and emails with links or QR codes that ask for your SSN and bank details.",
+     "on_screen_text": "1. Phishing texts",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a phone with a QR code No text, no logos, no real people."
+    },
+    {
+     "heading": "2",
+     "narration": "Fake IRS accounts on social media. The IRS says it reported more than 600 impersonators in fiscal year 2025.",
+     "on_screen_text": "2. Fake IRS social accounts",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a profile with a fake badge No text, no logos, no real people."
+    },
+    {
+     "heading": "3",
+     "narration": "A 'helper' who sets up your IRS online account and keeps access.",
+     "on_screen_text": "3. Account 'helpers'",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a key changing hands No text, no logos, no real people."
+    },
+    {
+     "heading": "4",
+     "narration": "Stolen W-2s from a payroll email scam at work.",
+     "on_screen_text": "4. Stolen W-2s",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a stack of W-2s No text, no logos, no real people."
+    },
+    {
+     "heading": "5",
+     "narration": "A preparer who changes the refund's bank account to their own.",
+     "on_screen_text": "5. A crooked preparer",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a refund arrow bending away No text, no logos, no real people."
+    },
+    {
+     "heading": "Save this",
+     "narration": "The lock: an IP PIN. Get one at IRS.gov, and check refunds only at IRS.gov/refunds.",
+     "on_screen_text": "Save it. Share it.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes giving a thumbs up No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow, and send this to someone who'd fall for it.",
+   "caption": "Refund thieves need your SSN and enough details to file before you do. Here's how they get them, and the lock that stops a fake federal return.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "taxrefund",
+    "identitytheft",
+    "ippin",
+    "taxseason",
+    "scamdecoded"
+   ],
+   "description": "Five ways tax refunds get stolen, and why an IP PIN is the lock.",
+   "thumbnail_text": "Refund theft: 5 ways",
+   "sources": [
+    "https://www.irs.gov/newsroom/dirty-dozen-tax-scams-for-2026-irs-reminds-taxpayers-to-watch-out-for-dangerous-threats",
+    "https://www.irs.gov/newsroom/form-w-2-ssn-data-theft-information-for-businesses-and-payroll-service-providers",
+    "https://www.irs.gov/identity-theft-fraud-scams/get-an-identity-protection-pin",
+    "https://www.irs.gov/identity-theft-central/identity-theft-guide-for-individuals"
+   ],
+   "claims_to_verify": [
+    "Scammers use phishing texts, W-2 theft and fake account 'helpers' to get taxpayer data (IRS)",
+    "An IP PIN prevents others from e-filing a federal return with your SSN (IRS)"
+   ]
+  }
+ },
+ {
+  "format": "short",
+  "pillar": "tax season scams",
+  "platforms": [
+   "tiktok"
+  ],
+  "post_on": "2027-04-10 18:00",
+  "topic": "IRS impersonation",
+  "look": "quiz pause",
+  "original_element": "Quiz pause format with a real-looking (fictional, marked) letter on screen. Dhruv records the narration in his own voice. No AI voice on TikTok cuts.",
+  "idea_angle": "Tax season 2027 pack: IRS impersonation. Three checks for an IRS letter before you call any number on it.",
+  "script": {
+   "title": "IRS letter or fake? 3 checks before you call",
+   "hook": "3 checks tell you if an IRS letter is real, 5 days before Tax Day.",
+   "segments": [
+    {
+     "heading": "Hook",
+     "narration": "Three checks tell you if an IRS letter is real. Tax Day is in five days, so scammers are mailing too.",
+     "on_screen_text": "Real or fake? 3 checks.",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a letter on a kitchen table No text, no logos, no real people."
+    },
+    {
+     "heading": "Pause",
+     "narration": "Pause. This letter says you owe four thousand dollars and must call within ten days. What would you check first?",
+     "on_screen_text": "Pause: what do you check?",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a full-screen countdown card reading PAUSE No text, no logos, no real people."
+    },
+    {
+     "heading": "Check 1",
+     "narration": "One: the notice number, usually CP or LTR and a number, in the corner. Look it up on I R S dot gov to see what that notice is really about. If the number doesn't match a real notice, that's your answer.",
+     "on_screen_text": "1. Look up the notice number",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a corner of a letter, number circled No text, no logos, no real people."
+    },
+    {
+     "heading": "Check 2",
+     "narration": "Two: sign in to your IRS online account. If you really owe, the balance is there. If there's no balance, don't pay the letter.",
+     "on_screen_text": "2. Check your online account",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. a laptop with the account page No text, no logos, no real people."
+    },
+    {
+     "heading": "Check 3",
+     "narration": "Three: if you need to call, use the number on I R S dot gov, not the one in the letter. Fake letters copy everything except the phone number.",
+     "on_screen_text": "3. Call the number on IRS.gov",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. two phone numbers, one crossed out No text, no logos, no real people."
+    },
+    {
+     "heading": "The payment",
+     "narration": "And the real IRS takes payment through I R S dot gov or a check to the U.S. Treasury. Never gift cards, crypto or a payment app to a person. Already paid? Call your bank right away and report it at report fraud dot F T C dot gov.",
+     "on_screen_text": "Pay only through IRS.gov",
+     "visual_prompt": "Clean flat vector illustration, deep navy and cream with teal and amber warning accents, simple shapes. the small round teal shield mascot with big curious eyes with a check No text, no logos, no real people."
+    }
+   ],
+   "cta": "Follow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "caption": "The IRS usually contacts you by mail first, so scammers fake letters too. 3 checks before you call.\n\nNot sure about a message? Paste it into our free scam checker (link in bio). It runs on your phone and sends nothing anywhere.\n\nFollow for one scam decoded every day, and send this to someone who'd fall for it.",
+   "hashtags": [
+    "irs",
+    "irsletter",
+    "taxday",
+    "taxscam",
+    "scamdecoded"
+   ],
+   "description": "Three checks for an IRS letter before you call any number on it.",
+   "thumbnail_text": "Real IRS letter?",
+   "sources": [
+    "https://www.irs.gov/help/how-to-know-its-the-irs",
+    "https://www.irs.gov/help/tax-scams/recognize-tax-scams-and-fraud",
+    "https://www.irs.gov/newsroom/dirty-dozen-tax-scams-for-2026-irs-reminds-taxpayers-to-watch-out-for-dangerous-threats"
+   ],
+   "claims_to_verify": [
+    "The IRS generally contacts people by mail first (IRS)",
+    "You can confirm what you owe and see notices in your IRS Online Account (IRS)"
+   ]
+  }
+ }
+]

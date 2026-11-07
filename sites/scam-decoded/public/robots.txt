@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /emails/
+Disallow: /free/thanks/
+Disallow: /holiday/thanks/
+Sitemap: https://scamdecoded.netlify.app/sitemap.xml
