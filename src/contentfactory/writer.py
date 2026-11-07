@@ -7,6 +7,7 @@ draft plus a list of claims the human must check, not a finished product.
 from __future__ import annotations
 
 from .config import BrandProfile
+from .hooks import prompt_block as hook_patterns
 from .llm import LLM
 from .schemas import ChartSpec, ReviewVerdict, Script, Segment
 
@@ -108,7 +109,8 @@ Also give 2-3 title_variants and 2-3 hook_variants that test genuinely different
 Charts: when a beat compares numbers (fees, interest, a balance over time), you may give that segment a
 `chart` (kind "bars" or "line", 2-12 values, short labels). It is drawn exactly from your numbers, so use
 illustrative round figures, say "example" in its note, and list each chart's figures in claims_to_verify.
-At most two charts per script; leave `chart` out everywhere else."""
+At most two charts per script; leave `chart` out everywhere else.
+{hook_patterns(brand, title, fmt)}"""
     return llm.structured(Script, system=SYSTEM, prompt=prompt, purpose=f"script:{fmt}",
                           offline=lambda: _offline_script(brand, title, angle, fmt))
 

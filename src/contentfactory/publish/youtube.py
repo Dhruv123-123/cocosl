@@ -26,8 +26,10 @@ Setup / review:
 - Scopes: youtube.upload (publish) + youtube.readonly (metrics). Run
   `factory auth youtube` once to get YT_REFRESH_TOKEN.
 - While the consent screen is in "Testing", refresh tokens expire after 7
-  days; publish the consent screen (sensitive scopes => Google verification)
-  for a long-lived token.
+  days; publish the consent screen to "In production" for a long-lived token.
+  Personal use (<100 users) is exempt from Google verification
+  (support.google.com/cloud/answer/13464323). Since 2 Nov 2026, uploads from
+  unverified API projects are no longer forced private (revision history).
 - Quota: uploads use the separate video-upload bucket (default ~100/day);
   thumbnails.set ~50 units. Custom thumbnails need a verified channel.
 - Default privacy is "private" (YT_PRIVACY) so a human flips it public.
